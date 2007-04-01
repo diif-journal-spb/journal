@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.2.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\nunit\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -37,14 +41,25 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\Entity.cs" />
+    <Compile Include="src\EntityGenerator.cs" />
     <Compile Include="src\IArticle.cs" />
     <Compile Include="src\IArticleInfo.cs" />
+    <Compile Include="src\IAuthor.cs" />
     <Compile Include="src\IAuthorInfo.cs" />
     <Compile Include="src\IEntity.cs" />
     <Compile Include="src\IJournal.cs" />
+    <Compile Include="src\ILoaclizedEntity.cs" />
     <Compile Include="src\INumber.cs" />
+    <Compile Include="src\IXmlDataLoader.cs" />
     <Compile Include="src\JournalLanguage.cs" />
-    <Compile Include="src\Model.cs" />
+    <Compile Include="src\LocalizedEntity.cs" />
+    <Compile Include="src\XmlDataLoader.cs" />
+    <Compile Include="testSrc\ArticleTest.cs" />
+    <Compile Include="testSrc\AuthorInfoTest.cs" />
+    <Compile Include="testSrc\AuthorsTest.cs" />
+    <Compile Include="testSrc\AuthorTest.cs" />
+    <Compile Include="testSrc\BaseTest.cs" />
+    <Compile Include="testSrc\JournalLanguageTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

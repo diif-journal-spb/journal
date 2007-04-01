@@ -19,5 +19,20 @@ namespace EugenePetrenko.JournalGenerator
       myGenerationUrl = generationUrl;
       myGeneratePath = Path.GetFullPath(generatePath);
     }
+
+    public string Combine(char sep, string s1, string s2)
+    {
+      return s1.TrimEnd('/', '\\') + sep + s2.TrimStart('/', '\\');
+    }
+
+    public string Combine(char sep, params object[] ss)
+    {
+      string result = ss[0].ToString();
+      for (int i = 1; i < ss.Length; i++)
+      {
+        result = Combine(sep, result, ss[i].ToString());
+      }
+      return result;
+    }
   }
 }

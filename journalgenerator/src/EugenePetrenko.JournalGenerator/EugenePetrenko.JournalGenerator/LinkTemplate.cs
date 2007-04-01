@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace EugenePetrenko.JournalGenerator
 {
   public class LinkTemplate

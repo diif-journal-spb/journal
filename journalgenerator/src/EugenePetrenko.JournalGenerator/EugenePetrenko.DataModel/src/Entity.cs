@@ -1,39 +1,38 @@
 using System;
-using System.Collections.Generic;
+using System.Xml;
 
 namespace EugenePetrenko.DataModel
 {
   public class Entity : IEntity
   {
+    private readonly string myRawId;
     private readonly string myId;
 
     public Entity(string id)
     {
+      myRawId = id;
       myId = GetType().Name + ":" + id;
     }
 
     public Entity(EntityGenerator gen)
     {
-      myId = GetType().Name + ":" + gen.NextId(GetType());
+      myRawId = gen.NextId(GetType());
+      myId = GetType().Name + ":" + myRawId;
+    }
+
+    public Entity(XmlElement element)
+    {
+      myId = element.GetAttribute("id");
     }
 
     public string Id
     {
       get { return myId; }
     }
-  }
 
-  public class EntityGenerator
-  {
-    private Dictionary<Type, int> myIds = new Dictionary<Type, int>();
-
-    public string NextId(Type type)
+    public string FileId
     {
-      int id = 0;
-      myIds.TryGetValue(type, out id);
-      myIds[type] = ++id;
-
-      return id.ToString();
+      get { return myRawId; }
     }
   }
 }

@@ -6,18 +6,20 @@ namespace EugenePetrenko.DataModel
   public interface INumber : IEntity
   {
     string Year { get; }
+    int IntYear { get; }
     string Number { get; }
+    int IntNumber { get; }
 
     IArticle[] Articles { get; }
   }
 
-  public class Number : Entity, INumber
+  public class NumberImpl : Entity, INumber
   {
     private string myYear;
     private string myNumber;
     private IArticle[] myArticles;
 
-    public Number(XmlElement element, XmlDataLoader loader) : base(loader.EntityGenerator)
+    public NumberImpl(XmlElement element, IXmlDataLoader loader) : base(loader.EntityGenerator)
     {
       myYear = element.GetAttribute("year");
       myNumber = element.GetAttribute("number");
@@ -29,17 +31,27 @@ namespace EugenePetrenko.DataModel
       myArticles = articles.ToArray();
     }
 
-    string INumber.Year
+    public string Year
     {
       get { return myYear; }
     }
 
-    string INumber.Number
+    public int IntYear
+    {
+      get { return int.Parse(myYear); }
+    }
+
+    public string Number
     {
       get { return myNumber; }
     }
 
-    IArticle[] INumber.Articles
+    public int IntNumber
+    {
+      get { return int.Parse(myNumber); }
+    }
+
+    public IArticle[] Articles
     {
       get { return myArticles; }
     }

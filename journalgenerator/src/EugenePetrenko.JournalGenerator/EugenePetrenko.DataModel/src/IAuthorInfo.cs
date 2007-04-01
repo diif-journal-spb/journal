@@ -1,3 +1,4 @@
+using System;
 using System.Xml;
 
 namespace EugenePetrenko.DataModel
@@ -15,7 +16,7 @@ namespace EugenePetrenko.DataModel
   }
 
 
-  public class AuthorInfo : Entity, IAuthorInfo
+  public class AuthorInfo : Entity, IAuthorInfo, IComparable<AuthorInfo>
   {
     private JournalLanguage myJournalLanguage;
 
@@ -35,7 +36,7 @@ namespace EugenePetrenko.DataModel
       myAddress = address;
     }
 
-    public AuthorInfo(XmlElement el, XmlDataLoader loader) : base(loader.EntityGenerator)
+    public AuthorInfo(XmlElement el, IXmlDataLoader loader) : base(loader.EntityGenerator)
     {
       myJournalLanguage = loader.ParseLanguage(el);
       myFirstName = el.SelectSingleNode("FirstName/text()").Value;
@@ -74,5 +75,15 @@ namespace EugenePetrenko.DataModel
     {
       get { return myAddress; }
     }
- }
+
+    private string SortKey
+    {
+      get { return LastName + " " + FirstName + " " + MiddleName; }
+    }
+
+    int IComparable<AuthorInfo>.CompareTo(AuthorInfo other)
+    {
+      return SortKey.CompareTo(other.SortKey);
+    }
+  }
 }

@@ -1,39 +1,12 @@
-using System;
 using System.Collections.Generic;
 using System.Reflection;
+using Antlr.StringTemplate;
 
 namespace EugenePetrenko.JournalGenerator
 {
-  public class LanguageGenerationContext
+  public abstract class GenerationContext
   {
-    private readonly Dictionary<string, object> myAttributes;
-    private readonly string myDestFile;
-
-    public LanguageGenerationContext(Dictionary<string, object> attributes, string destFile)
-    {
-      myAttributes = attributes;
-      myDestFile = destFile;
-    }
-
-    public Dictionary<string, object> Attributes
-    {
-      get { return myAttributes; }
-    }
-
-    public string DestFile
-    {
-      get { return myDestFile; }
-    }
-  }
-
-  [AttributeUsage(AttributeTargets.Property)]
-  public class GenerationHiddenAttribute : Attribute
-  {    
-  }
-
-  public class GenerationContext
-  {
-    private readonly LinkTemplate myLinkTemplate;
+    protected readonly LinkManager myManager;
     private readonly string myTemplateName;
 
     [GenerationHidden]
@@ -42,54 +15,28 @@ namespace EugenePetrenko.JournalGenerator
       get { return myTemplateName; }
     }
 
-    [GenerationHidden]
-    public LinkTemplate LinkTemplate
+    protected GenerationContext(LinkManager manager, string templateName)
     {
-      get { return myLinkTemplate; }
-    }
-
-    public GenerationContext(LinkTemplate url, string templateName)
-    {
-      myLinkTemplate = url;
       myTemplateName = templateName;
-    }
-
-    public LanguageGenerationContext LanguageContext(Language language)
-    {
-      Dictionary<string, object> dic = new Dictionary<string, object>();
-
-      Language foreignLanguage = (Language)(-(int)language);
-      Link link = myLinkTemplate.ToLink(foreignLanguage);
-
-      dic["Link"] = myLinkTemplate.ToLink(language);      
-      dic["ForeignLink"] = link;
-      dic["LanguageName"] = LanguageToName(language);
-      dic["ForeignLanguageName"] = LanguageToName(foreignLanguage);
-
-      AppendLanguageContextInternal(language, dic);
-
-      return new LanguageGenerationContext(dic, link.DestFile);
-    }
-
-    private static string LanguageToName(Language l)
-    {
-      switch (l)
-      {
-        case Language.EN:
-          return "English";
-        case Language.RU:
-          return "Русский";
-      }
-      throw new ArgumentException("Unexpected language");
+      myManager = manager;
     }
 
     protected virtual void AppendLanguageContextInternal(Language language, Dictionary<string, object> ctx)
     {
       foreach (PropertyInfo info in GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance))
       {
-        if (!info.IsDefined(typeof(GenerationHiddenAttribute), true))
+        if (!info.IsDefined(typeof (GenerationHiddenAttribute), true))
           ctx.Add(info.Name, info.GetGetMethod().Invoke(this, new object[0]));
       }
+    }
+
+    public LanguageGenerationContext LanguageContext(Language language)
+    {
+      Dictionary<string, object> dic = new Dictionary<string, object>();
+      AppendLanguageContextInternal(language, dic);
+
+      StringTemplate template = Program.Instance.Templates[language].GetInstanceOf(TemplateName);
+      return new LanguageGenerationContext(template, dic);
     }
   }
 }

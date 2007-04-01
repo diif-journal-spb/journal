@@ -1,38 +1,36 @@
-using System;
 using System.Collections.Generic;
 using System.Xml;
 
 namespace EugenePetrenko.DataModel
 {
-  public interface IArticle
+  public interface IArticle : ILoaclizedEntity<IArticleInfo>
   {
-    string Id { get; }
-
-    ICollection<JournalLanguage> JournalLanguages { get; }
-    IArticleInfo ForLanguage(JournalLanguage journalLanguage);
+    IAuthor[] Authors{ get; }
   }
 
-  public class Article : Entity, IArticle
+  public class Article : LocalizedEntity<IArticleInfo>, IArticle
   {
-    private readonly Dictionary<JournalLanguage, IArticleInfo> myArticles = new Dictionary<JournalLanguage, IArticleInfo>();
+    private readonly IAuthor[] myAuthors;
 
-    public Article(XmlElement el, XmlDataLoader loader) : base(loader.EntityGenerator)
+    public Article(XmlElement el, IXmlDataLoader loader) : base(loader.EntityGenerator)
     {
+      List<IAuthor> authors = new List<IAuthor>();
+      foreach (XmlAttribute attribute in el.SelectSingleNode("authors").SelectNodes("author/@ref"))
+      {
+        authors.Add(loader.LookupAuthor(attribute.Value));
+      }
+      myAuthors = authors.ToArray();
+
       foreach (XmlElement node in el.SelectNodes("articleInfo"))
       {
-        IArticleInfo info = loader.ParseArticleInfo(node);
-        myArticles[info.JournalLanguage] = info;
+        IArticleInfo info = loader.ParseArticleInfo(this, node);
+        AddEntity(info.JournalLanguage, info);
       }
     }
 
-    public ICollection<JournalLanguage> JournalLanguages
+    public IAuthor[] Authors
     {
-      get { return myArticles.Keys; }
-    }
-
-    public IArticleInfo ForLanguage(JournalLanguage journalLanguage)
-    {
-      throw new NotImplementedException();
+      get { return myAuthors; }
     }
   }
 }

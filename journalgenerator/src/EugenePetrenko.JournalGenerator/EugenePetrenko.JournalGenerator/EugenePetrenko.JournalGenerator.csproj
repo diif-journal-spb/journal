@@ -41,15 +41,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AHref.cs" />
     <Compile Include="CommandLineParseException.cs" />
     <Compile Include="CommandLineParser.cs" />
+    <Compile Include="FileLanguageGenerationContext.cs" />
     <Compile Include="GenerationContext.cs" />
+    <Compile Include="GenerationHiddenAttribute.cs" />
+    <Compile Include="HtmlContext.cs" />
+    <Compile Include="HtmlGenerationContext.cs" />
+    <Compile Include="HtmlPageTitle.cs" />
+    <Compile Include="JournalArticle.cs" />
+    <Compile Include="JournalContentsContext.cs" />
+    <Compile Include="JournalNumberContext.cs" />
     <Compile Include="Language.cs" />
+    <Compile Include="LanguageGenerationContext.cs" />
+    <Compile Include="LanguageUtil.cs" />
     <Compile Include="Link.cs" />
     <Compile Include="LinkManager.cs" />
     <Compile Include="LinkTemplate.cs" />
+    <Compile Include="Pair.cs" />
+    <Compile Include="PdfLink.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EugenePetrenko.DataModel\EugenePetrenko.DataModel.csproj">
+      <Project>{115CFE1B-1023-42A5-99A0-60E5225F9F0D}</Project>
+      <Name>EugenePetrenko.DataModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

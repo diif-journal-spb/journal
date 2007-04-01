@@ -5,26 +5,30 @@ namespace EugenePetrenko.DataModel
 {
   public interface IJournal : IEntity
   {
-    INumber[] Numbers { get; }  
+    INumber[] Numbers { get; }
+    IAuthor[] Authors { get; }
   }
 
   public class Journal : Entity, IJournal
   {
-    private INumber[] myNumbers;
+    private readonly INumber[] myNumbers;
+    private readonly IAuthor[] myAuthors;
 
-    public Journal(XmlElement element, XmlDataLoader loader) : base(loader.EntityGenerator)
+
+    public Journal(EntityGenerator gen, INumber[] numbers, IAuthor[] authors) : base(gen)
     {
-      List<INumber> numbers = new List<INumber>();
-      foreach (XmlElement node in element.SelectNodes("number"))
-      {
-        numbers.Add(loader.ParseNumber(node));
-      }
-      myNumbers = numbers.ToArray();
+      myNumbers = numbers;
+      myAuthors = authors;
     }
 
     public INumber[] Numbers
     {
       get { return myNumbers; }
+    }
+
+    public IAuthor[] Authors
+    {
+      get { return myAuthors; }
     }
   }
 }

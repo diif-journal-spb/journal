@@ -4,7 +4,7 @@ namespace EugenePetrenko.JournalGenerator
   {
     private readonly Language myLanguage;
 
-    public Link(LinkManager linkManager, Language language, string pageName) : base(linkManager, pageName)
+    public Link(LinkManager linkManager, Language language, string pageName) : base(linkManager, pageName.Replace('\\', '/'))
     {
       myLanguage = language;
     }
@@ -21,12 +21,12 @@ namespace EugenePetrenko.JournalGenerator
 
     public string DestFile
     {
-      get { return myLinkManager.GeneratePath + "/" + myLanguage + "/" + myPageName; }
+      get { return myLinkManager.Combine('\\', myLinkManager.GeneratePath, myLanguage, myPageName); }
     }
 
     public override string ToString()
     {
-      return myLinkManager.GenerationBaseUrl + "/" + myLanguage + "/" + myPageName;
+      return myLinkManager.Combine('/', myLinkManager.GeneratePath, myLanguage, myPageName);
     }
   }
 }
