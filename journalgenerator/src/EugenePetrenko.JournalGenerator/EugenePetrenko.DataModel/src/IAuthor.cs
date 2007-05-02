@@ -2,7 +2,7 @@ using System.Xml;
 
 namespace EugenePetrenko.DataModel
 {
-  public interface IAuthor : ILoaclizedEntity<IAuthorInfo>
+  public interface IAuthor : ILocalizedEntity<IAuthorInfo>
   {
   }
 

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
@@ -21,21 +22,10 @@ namespace EugenePetrenko.JournalGenerator
     private readonly Dictionary<Language, StringTemplateGroup> myTemplates;
     private readonly IJournal myJournal;
 
-    private static void Copy(string fromDir, string toDir)
-    {
-      if (!Directory.Exists(toDir))
-        Directory.CreateDirectory(toDir);
+    private readonly Hashset<HtmlGenerationContext> myProcessedPages = new Hashset<HtmlGenerationContext>();
+    private readonly Queue<HtmlGenerationContext> myQueue = new Queue<HtmlGenerationContext>();
 
-      foreach (string file in Directory.GetFiles(fromDir))
-      {
-        File.Copy(file, Path.Combine(toDir, Path.GetFileName(file)));        
-      }
-
-      foreach (string dir in Directory.GetDirectories(fromDir))
-      {
-        Copy(dir, Path.Combine(toDir, Path.GetFileName(dir)));
-      }
-    }
+    private readonly Dictionary<string, ConvertToLanguage> myGlobalContext = new Dictionary<string, ConvertToLanguage>();
 
     public Program(CommandLineParser commandLineParser)
     {
@@ -45,8 +35,7 @@ namespace EugenePetrenko.JournalGenerator
 
       try
       {
-        if (Directory.Exists(destFile))
-          Directory.Delete(destFile, true);
+        FileUtil.SmartDelete(destFile);
       } catch
       {
         Console.Out.WriteLine("Umable to clean up output folder {0}", destFile);
@@ -64,7 +53,7 @@ namespace EugenePetrenko.JournalGenerator
 
       myTemplates = new Dictionary<Language, StringTemplateGroup>();
 
-      Copy(Path.Combine(path, "shared"), destFile);
+      FileUtil.Copy(Path.Combine(path, "shared"), destFile);
 
       myLanguages = new List<Language>();
       foreach (FieldInfo info in typeof(Language).GetFields(BindingFlags.Public | BindingFlags.Static))
@@ -82,7 +71,7 @@ namespace EugenePetrenko.JournalGenerator
     public void GeneratePage(HtmlGenerationContext ctxp)
     {
       HtmlContext ctx = new HtmlContext(myLinkManager, ctxp);
-      Console.Out.WriteLine("Generatign page {1}: {0}...", ctx, ctx.TemplateName);
+      Console.Out.WriteLine("\r\nGeneratign page {1}: {0}...", ctx, ctx.TemplateName);
 
       foreach (Language language in myLanguages)
       {
@@ -90,30 +79,44 @@ namespace EugenePetrenko.JournalGenerator
         context.GeneratePageToFile();
       }
       
-      Console.Out.WriteLine("Done");
+      Console.Out.WriteLine("Done\r\n");
     }
 
-    public void Test()
+    public void AddPredefinedProperties(IDictionary dic, Language lang)
     {
-      Queue<HtmlGenerationContext> data = new Queue<HtmlGenerationContext>();
-      data.Enqueue(new JournalContentsContext(myLinkManager, myJournal));
-
-      while(data.Count > 0 )
+      foreach (KeyValuePair<string, ConvertToLanguage> pair in myGlobalContext)
       {
-        HtmlGenerationContext ctx = data.Dequeue();
-        GeneratePage(ctx);
-        foreach (HtmlGenerationContext page in ctx.ExtraPages)
-        {
-          data.Enqueue(page);
-        }
+        if (!dic.Contains(pair.Key))
+          dic.Add(pair.Key, pair.Value(lang));
       }
-//      GenerationContext ctx = new GenerationContext(new Link(myLinkManager, Language.RU, "index.html"), "index");
-//      GeneratePage(ctx);
     }
 
-    public List<Language> Languages
+    public void BuildPages()
     {
-      get { return myLanguages; }
+      myQueue.Enqueue(new JournalContentsContext(myLinkManager, myJournal));
+      myQueue.Enqueue(new NewsGenerationContext(myJournal, myLinkManager));
+      myQueue.Enqueue(new BooksGenerationContext(myJournal, myLinkManager));
+
+      while(myQueue.Count > 0 )
+      {
+        HtmlGenerationContext ctx = myQueue.Dequeue();
+        if (myProcessedPages.Contains(ctx))
+          continue;
+
+        GeneratePage(ctx);
+
+        myProcessedPages.Add(ctx);
+      }
+    }
+
+    public void AddPage(HtmlGenerationContext page)
+    {
+      myQueue.Enqueue(page);
+    }
+
+    public void AppendGlobalContext(string name, HtmlGenerationContext ctx)
+    {
+      myGlobalContext.Add(name, ctx.LinkTemplate.ToLink);
     }
 
     public Dictionary<Language, StringTemplateGroup> Templates
@@ -125,7 +128,7 @@ namespace EugenePetrenko.JournalGenerator
     {
       string[] args = new string[] {@"/url=file:\\\c:\tmp\", @"/dest=c:\tmp\"};
       Program program = new Program(new CommandLineParser(args));
-      program.Test();
+      program.BuildPages();
     }
   }
 }

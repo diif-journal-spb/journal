@@ -3,7 +3,7 @@ using System.Xml;
 
 namespace EugenePetrenko.DataModel
 {
-  public interface IArticle : ILoaclizedEntity<IArticleInfo>
+  public interface IArticle : ILocalizedEntity<IArticleInfo>
   {
     IAuthor[] Authors{ get; }
   }

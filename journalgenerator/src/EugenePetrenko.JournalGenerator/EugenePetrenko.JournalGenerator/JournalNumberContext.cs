@@ -6,9 +6,9 @@ namespace EugenePetrenko.JournalGenerator
   public class JournalNumberContext : HtmlGenerationContext
   {
     private readonly INumber myNumber;
-    private List<JournalArticle> myArticles = new List<JournalArticle>();
+    private readonly List<JournalArticle> myArticles = new List<JournalArticle>();
 
-    public JournalNumberContext(LinkManager manager, INumber number) : base(manager, "journal_number_contents")
+    public JournalNumberContext(LinkManager manager, INumber number) : base(manager, "issue")
     {
       myNumber = number;
       foreach (IArticle article in myNumber.Articles)
@@ -21,7 +21,7 @@ namespace EugenePetrenko.JournalGenerator
 
     public override LinkTemplate GetLinkTemplate(LinkManager manager)
     {
-      string name = string.Format(@"numbers\content.{0}.{1}.html", myNumber.Year, myNumber.Number);
+      string name = string.Format(@"numbers\{0}.{1}\issue.html", myNumber.Year, myNumber.Number);
       return new LinkTemplate(manager, name);        
     }
 
@@ -42,7 +42,7 @@ namespace EugenePetrenko.JournalGenerator
 
       List<ArticleInfoContext> list = BuildInfos(language);
 
-      ctx.Add("number", myNumber);      
+      ctx.Add("issue", myNumber);      
       ctx.Add("articles", list);
     }
 

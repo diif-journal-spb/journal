@@ -1,32 +1,38 @@
-using System.Collections.Generic;
+using System;
 using Antlr.StringTemplate;
 
 namespace EugenePetrenko.JournalGenerator
 {
-  public class LanguageGenerationContext
+  public class LanguageGenerationContext : IStringTemplateErrorListener
   {
-    private readonly Dictionary<string, object> myAttributes;
+    private readonly SmartLookupDictionary myAttributes;
     private readonly StringTemplate myTemplate;
 
-    public LanguageGenerationContext(StringTemplate template, Dictionary<string, object> attributes)
+    public LanguageGenerationContext(StringTemplate template, SmartLookupDictionary attributes)
     {
       myAttributes = attributes;
       myTemplate = template;
     }
 
-    public Dictionary<string, object> Attributes
+    public string GeneratePage()
+    {
+      myTemplate.Attributes = myAttributes;
+      return myTemplate.ToString();
+    }
+
+    public SmartLookupDictionary Attributes
     {
       get { return myAttributes; }
     }
 
-    public string GeneratePage()
+    void IStringTemplateErrorListener.Error(string msg, Exception e)
     {
-      foreach (KeyValuePair<string, object> pair in Attributes)
-      {
-        myTemplate.SetAttribute(pair.Key, pair.Value);
-      }
+      Console.Out.WriteLine("[{0}] Error = {1},{2}", myTemplate.Name, msg, e);
+    }
 
-      return myTemplate.ToString();
+    void IStringTemplateErrorListener.Warning(string msg)
+    {
+      Console.Out.WriteLine("[{0}] Error = {1}", myTemplate.Name, msg);
     }
   }
 }

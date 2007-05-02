@@ -3,7 +3,7 @@ using System.Xml;
 
 namespace EugenePetrenko.DataModel
 {
-  public class LocalizedEntity<T> : Entity, ILoaclizedEntity<T> where T : IEntity
+  public class LocalizedEntity<T> : Entity, ILocalizedEntity<T> where T : IEntity
   {
     private readonly Dictionary<JournalLanguage, T> myArticles = new Dictionary<JournalLanguage, T>();
 

@@ -3,7 +3,7 @@ using Antlr.StringTemplate;
 
 namespace EugenePetrenko.JournalGenerator
 {
-  public class HtmlContext : GenerationContext
+  public class HtmlContext : GenerationContext<FileLanguageGenerationContext>
   {
     private readonly HtmlGenerationContext myContent;
 
@@ -13,27 +13,29 @@ namespace EugenePetrenko.JournalGenerator
       myContent = content;
     }
 
+    private string GeneratePage(Language lang, string template, LanguageGenerationContext parentContext)
+    {
+      return new SimplePageContext(parentContext.Attributes, myManager, template).LanguageContext(lang).GeneratePage();      
+    }
+
     protected override void AppendLanguageContextInternal(Language language, Dictionary<string, object> ctx)
     {
       base.AppendLanguageContextInternal(language, ctx);
-
-      HtmlGenerationContext.AppendLinkParams(language, ctx, myContent.LinkTemplate);
-
-      ctx.Add("title", myContent.TitlePage.LanguageContext(language).GeneratePage());
-      ctx.Add("content", myContent.LanguageContext(language).GeneratePage());
-      ctx.Add("style", myManager.GenerationBaseUrl + "/style/style.css");
+      
+      LanguageGenerationContext contentContext = myContent.LanguageContext(language);
+      ctx.Add("content", contentContext.GeneratePage());
+      ctx.Add("menu", GeneratePage(language, "menu", contentContext));
+      ctx.Add("logo", GeneratePage(language, "logo", contentContext));
+      ctx.Add("caption", GeneratePage(language, myContent.TemplateName + "_caption", contentContext));
     }
 
-    public new FileLanguageGenerationContext LanguageContext(Language language)
-    {
-      Dictionary<string, object> dic = new Dictionary<string, object>();
-      AppendLanguageContextInternal(language, dic);
 
-      StringTemplate template = Program.Instance.Templates[language].GetInstanceOf(TemplateName);
+    protected override FileLanguageGenerationContext CreateContext(StringTemplate template, SmartLookupDictionary dic,
+                                                                   Language language)
+    {
       string destFile = myContent.LinkTemplate.ToLink(language).DestFile;
       return new FileLanguageGenerationContext(template, dic, destFile);
     }
-
 
     public override string ToString()
     {

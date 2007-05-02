@@ -9,7 +9,7 @@ namespace EugenePetrenko.JournalGenerator
     private readonly IArticle myArticle;
     private readonly JournalNumberContext myBack;
 
-    public JournalArticle(INumber number, IArticle article, JournalNumberContext back, LinkManager manager) : base(manager, "journal_article")
+    public JournalArticle(INumber number, IArticle article, JournalNumberContext back, LinkManager manager) : base(manager, "article")
     {
       myNumber = number;
       myArticle = article;
@@ -35,7 +35,7 @@ namespace EugenePetrenko.JournalGenerator
       ctx.Add("article", info);
       ctx.Add("number", myNumber);
       ctx.Add("backLink", myBack.LinkTemplate.ToLink(language));
-      ctx.Add("pdf", new PdfLink(myManager, info));
+      ctx.Add("PdfLink", new PdfLink(myManager, info));
     }
   }
 }

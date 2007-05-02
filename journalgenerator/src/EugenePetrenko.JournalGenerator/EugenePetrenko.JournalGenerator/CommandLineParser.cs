@@ -5,7 +5,7 @@ namespace EugenePetrenko.JournalGenerator
 {
   public sealed class CommandLineParser
   {
-    private Hashtable myParameters = new Hashtable();
+    private readonly Hashtable myParameters = new Hashtable();
 
     public CommandLineParser(string[] commandLine)
     {

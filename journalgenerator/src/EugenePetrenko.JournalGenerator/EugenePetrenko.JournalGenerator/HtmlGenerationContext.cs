@@ -1,19 +1,17 @@
+using System;
 using System.Collections.Generic;
+using Antlr.StringTemplate;
 
 namespace EugenePetrenko.JournalGenerator
 {
-  public abstract class HtmlGenerationContext : GenerationContext
+  public abstract class HtmlGenerationContext : GenerationContext<LanguageGenerationContext>, IEquatable<HtmlGenerationContext>
   {
-    private readonly HtmlPageTitle myTitle;
     private LinkTemplate myLinkTemplate = null;
-    private readonly List<GenerationContext> myExtraPages = new List<GenerationContext>();
 
     public abstract LinkTemplate GetLinkTemplate(LinkManager manager);
 
-
     protected HtmlGenerationContext(LinkManager manager, string templateName) : base(manager, templateName)
     {
-      myTitle = new HtmlPageTitle(manager, templateName + "_title");
     }
 
     [GenerationHidden]
@@ -29,16 +27,16 @@ namespace EugenePetrenko.JournalGenerator
       }
     }
 
-    public static void AppendLinkParams(Language language, Dictionary<string, object> ctx, LinkTemplate linkTemplate)
+    public void AppendLinkParams(Language language, Dictionary<string, object> ctx, LinkTemplate linkTemplate)
     {
       Language foreignLanguage = (Language)(-(int)language);
       Link foreignLink = linkTemplate.ToLink(foreignLanguage);
-      Link link = linkTemplate.ToLink(language);
+      Link link = linkTemplate.ToLink(language);      
 
       ctx["Link"] = link;
       ctx["ForeignLink"] = foreignLink;
       ctx["LanguageName"] = LanguageUtil.LanguageToName(language);
-      ctx["ForeignLanguageName"] = LanguageUtil.LanguageToName(foreignLanguage);      
+      ctx["ForeignLanguageName"] = LanguageUtil.LanguageToName(foreignLanguage);
     }
 
     protected override void AppendLanguageContextInternal(Language language, Dictionary<string, object> ctx)
@@ -46,30 +44,27 @@ namespace EugenePetrenko.JournalGenerator
       AppendLinkParams(language, ctx, LinkTemplate);
     }
 
-    [GenerationHidden]
-    public GenerationContext TitlePage
+    protected override LanguageGenerationContext CreateContext(StringTemplate template, SmartLookupDictionary dic, Language language)
     {
-      get { return myTitle; }
+      return new LanguageGenerationContext(template, dic);
     }
 
-    [GenerationHidden]
-    public List<GenerationContext> ExtraPages
+    public bool Equals(HtmlGenerationContext htmlGenerationContext)
     {
-      get { return myExtraPages; }
+      if (htmlGenerationContext == null) return false;
+      if (!base.Equals(htmlGenerationContext)) return false;
+      return Equals(LinkTemplate, htmlGenerationContext.LinkTemplate);
     }
 
-    protected void AddContext(GenerationContext ctx)
+    public override bool Equals(object obj)
     {
-      myExtraPages.Add(ctx);
+      if (this == obj) return true;
+      return Equals(obj as HtmlGenerationContext);
     }
 
-    protected void AddContextRange<T>(ICollection<T> ctx) where T : GenerationContext
+    public override int GetHashCode()
     {
-      foreach (T t in ctx)
-      {
-        AddContext(t);
-      }
+      return base.GetHashCode() + 29*LinkTemplate.GetHashCode();
     }
-
   }
 }

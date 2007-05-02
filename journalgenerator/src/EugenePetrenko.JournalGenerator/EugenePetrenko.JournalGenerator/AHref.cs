@@ -1,6 +1,6 @@
 namespace EugenePetrenko.JournalGenerator
 {
-  public class AHref<T> where T: GenerationContext
+  public class AHref<T> where T : HtmlGenerationContext
   {
     private readonly T myContext;
     private readonly string myCaption;

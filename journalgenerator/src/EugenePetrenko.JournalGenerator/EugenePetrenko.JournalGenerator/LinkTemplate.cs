@@ -1,8 +1,9 @@
+using System;
 using System.Text;
 
 namespace EugenePetrenko.JournalGenerator
 {
-  public class LinkTemplate
+  public class LinkTemplate : IEquatable<LinkTemplate>
   {
     protected readonly LinkManager myLinkManager;
     protected readonly string myPageName;
@@ -21,6 +22,24 @@ namespace EugenePetrenko.JournalGenerator
     public Link ToLink(Language language)
     {
       return new Link(myLinkManager, language, myPageName);
+    }
+
+
+    public bool Equals(LinkTemplate linkTemplate)
+    {
+      if (linkTemplate == null) return false;
+      return Equals(myPageName, linkTemplate.myPageName);
+    }
+
+    public override bool Equals(object obj)
+    {
+      if (this == obj) return true;
+      return Equals(obj as LinkTemplate);
+    }
+
+    public override int GetHashCode()
+    {
+      return myPageName.GetHashCode();
     }
   }
 }

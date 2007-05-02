@@ -15,9 +15,9 @@ namespace EugenePetrenko.DataModel
 
   public class NumberImpl : Entity, INumber
   {
-    private string myYear;
-    private string myNumber;
-    private IArticle[] myArticles;
+    private readonly string myYear;
+    private readonly string myNumber;
+    private readonly IArticle[] myArticles;
 
     public NumberImpl(XmlElement element, IXmlDataLoader loader) : base(loader.EntityGenerator)
     {

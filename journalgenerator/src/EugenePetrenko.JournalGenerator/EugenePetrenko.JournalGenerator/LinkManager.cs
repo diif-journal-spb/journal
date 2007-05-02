@@ -34,5 +34,15 @@ namespace EugenePetrenko.JournalGenerator
       }
       return result;
     }
+
+    public string RootLink
+    {
+      get { return myGenerationUrl.Replace('\\', '/').TrimEnd('/'); }
+    }
+
+    public string GetRootLink(Language lang)
+    {
+      return Combine('/', RootLink, lang).TrimEnd('/');
+    }
   }
 }

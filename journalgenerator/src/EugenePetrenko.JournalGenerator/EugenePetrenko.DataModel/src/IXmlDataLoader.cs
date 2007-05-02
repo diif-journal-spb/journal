@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Xml;
 
@@ -13,6 +14,7 @@ namespace EugenePetrenko.DataModel
     INumber ParseNumber(XmlElement element);
     IArticle ParseArticle(XmlElement element);
     JournalLanguage ParseLanguage(XmlElement element);
+    DateTime ParseDateTime(string text);
 
     EntityGenerator EntityGenerator { get; }
 

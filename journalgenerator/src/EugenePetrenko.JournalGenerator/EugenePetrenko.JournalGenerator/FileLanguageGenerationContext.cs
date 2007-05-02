@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.IO;
 using Antlr.StringTemplate;
 
@@ -8,7 +7,7 @@ namespace EugenePetrenko.JournalGenerator
   {
     private readonly string myDestFile;
 
-    public FileLanguageGenerationContext(StringTemplate template, Dictionary<string, object> attributes, string destFile) : base(template, attributes)
+    public FileLanguageGenerationContext(StringTemplate template, SmartLookupDictionary attributes, string destFile) : base(template, attributes)
     {
       myDestFile = destFile;
     }

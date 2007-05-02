@@ -42,14 +42,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AHref.cs" />
+    <Compile Include="BooksGenerationContext.cs" />
+    <Compile Include="CollectionGenerationContext.cs" />
     <Compile Include="CommandLineParseException.cs" />
     <Compile Include="CommandLineParser.cs" />
     <Compile Include="FileLanguageGenerationContext.cs" />
+    <Compile Include="FileUtil.cs" />
     <Compile Include="GenerationContext.cs" />
     <Compile Include="GenerationHiddenAttribute.cs" />
+    <Compile Include="Hashset.cs" />
     <Compile Include="HtmlContext.cs" />
+    <Compile Include="HtmlDynamicPage.cs" />
     <Compile Include="HtmlGenerationContext.cs" />
-    <Compile Include="HtmlPageTitle.cs" />
+    <Compile Include="NewsGenerationContext.cs" />
+    <Compile Include="SimplePageContext.cs" />
     <Compile Include="JournalArticle.cs" />
     <Compile Include="JournalContentsContext.cs" />
     <Compile Include="JournalNumberContext.cs" />
@@ -63,6 +69,7 @@
     <Compile Include="PdfLink.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SmartLookupDictionary.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EugenePetrenko.DataModel\EugenePetrenko.DataModel.csproj">

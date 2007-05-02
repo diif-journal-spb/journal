@@ -9,7 +9,7 @@ namespace EugenePetrenko.JournalGenerator
     private readonly IJournal myJournal;
     private readonly Dictionary<INumber, JournalNumberContext> myNumbers = new Dictionary<INumber, JournalNumberContext>();
 
-    public JournalContentsContext(LinkManager manager, IJournal journal) : base(manager, "journal_content")
+    public JournalContentsContext(LinkManager manager, IJournal journal) : base(manager, "collection")
     {
       myJournal = journal;
       foreach (INumber number in myJournal.Numbers)
@@ -18,11 +18,13 @@ namespace EugenePetrenko.JournalGenerator
       }
 
       AddContextRange(myNumbers.Values);
+
+      Program.Instance.AppendGlobalContext("CollectionLink", this);
     }
 
     public override LinkTemplate GetLinkTemplate(LinkManager manager)
     {
-      return new LinkTemplate(manager, "journal.contents.html");
+      return new LinkTemplate(manager, "collection.html");
     }
 
     protected override void AppendLanguageContextInternal(Language language, Dictionary<string, object> ctx)
@@ -47,23 +49,67 @@ namespace EugenePetrenko.JournalGenerator
       List<int> years = new List<int>(numbers.Keys);
       years.Sort(delegate(int i1, int i2) { return i2 - i1; });
 
-      List<Pair<string, List<Pair<string, Link>>>> data = new List<Pair<string, List<Pair<string, Link>>>>();
+      List<YearToNumbers> data = new List<YearToNumbers>();
 
       foreach (int year in years)
       {
         List<INumber> list = numbers[year];
         list.Sort(cmdNumber);
-        List<Pair<string, Link>> d = new List<Pair<string, Link>>();
+        List<NumberToLink> d = new List<NumberToLink>();
         foreach (INumber number in list)
         {
-          d.Add(new Pair<string, Link>(number.Number, myNumbers[number].LinkTemplate.ToLink(language)));
+          d.Add(new NumberToLink(number.Number, myNumbers[number].LinkTemplate.ToLink(language)));
         }
-        data.Add(new Pair<string, List<Pair<string, Link>>>(year.ToString(), d));
+        data.Add(new YearToNumbers(year.ToString(), d));
       }
 
       ctx.Add("content", data);
 
       base.AppendLanguageContextInternal(language, ctx);
+    }
+
+    public struct YearToNumbers
+    {
+      private readonly string myYear;
+      private readonly List<NumberToLink> myNumbers;
+
+      public YearToNumbers(string year, List<NumberToLink> numbers)
+      {
+        myYear = year;
+        myNumbers = numbers;
+      }
+
+      public string Year
+      {
+        get { return myYear; }
+      }
+
+      public List<NumberToLink> Issues
+      {
+        get { return myNumbers; }
+      }
+    }
+
+    public struct NumberToLink
+    {
+      private readonly string myNumber;
+      private readonly Link myLink;
+
+      public NumberToLink(string number, Link link)
+      {
+        myNumber = number;
+        myLink = link;
+      }
+
+      public string IssueNumber
+      {
+        get { return myNumber; }
+      }
+
+      public Link IssueLink
+      {
+        get { return myLink; }
+      }
     }
   }
 }

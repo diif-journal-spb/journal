@@ -1,0 +1,1 @@
+Logo dx/dt
