@@ -24,7 +24,7 @@ namespace EugenePetrenko.JournalGenerator
     {
       get { return myMap; }
     }
-
+    
     public SmartLookupDictionary(string templateName, IDictionary predefined, Language language, Dictionary<string, HtmlDynamicPage> pages)
     {
       myTemplateName = templateName;

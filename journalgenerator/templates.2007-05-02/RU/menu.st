@@ -1,21 +1,7 @@
-    <a class="MenuElement" href="$TemplateAboutLink$">
-      О журнале
-    </a>
-    <a class="MenuElement" href="$TemplateEditorial_StaffLink$">
-      Редакторский состав
-    </a>
-    <a class="MenuElement" href="$NewsLink$">
-      Новости
-    </a>
-    <a class="MenuElement" href="$TemplateFor_AuthorsLink$">
-      Для авторов
-    </a>
-    <a class="MenuElement" href="$BooksLink$">
-      Книги
-    </a>
-    <a class="MenuElement" href="$CollectionLink$">
-      Коллекция номеров
-    </a>
-    <a class="MenuElement" href="$ForeignLink$">
-      English version
-    </a>
+    <a href="$TemplateAboutLink$">О журнале</a><br>
+    <a href="$TemplateEditorial_StaffLink$">Редакторский состав</a><br>
+    <a href="$NewsLink$">Новости</a><br>
+    <a href="$TemplateFor_AuthorsLink$">Для авторов</a><br>
+    <a href="$BooksLink$">Книги</a><br>
+    <a href="$CollectionLink$">Коллекция номеров</a><br>
+    <a href="$ForeignLink$">English version</a>

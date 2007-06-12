@@ -126,6 +126,7 @@ namespace EugenePetrenko.JournalGenerator
 
     static void Main(string[] _args)
     {
+//      string[] args = new string[] {@"/url=http://diff.neva.ru/site2/", @"/dest=c:\tmp\"};
       string[] args = new string[] {@"/url=file:\\\c:\tmp\", @"/dest=c:\tmp\"};
       Program program = new Program(new CommandLineParser(args));
       program.BuildPages();

@@ -6,6 +6,8 @@ namespace EugenePetrenko.JournalGenerator
 {
   public abstract class HtmlGenerationContext : GenerationContext<LanguageGenerationContext>, IEquatable<HtmlGenerationContext>
   {
+    public static readonly string[] PREDEFINED = { "Link", "ForeignLink", "LanguageName", "ForeignLanguageName" };
+
     private LinkTemplate myLinkTemplate = null;
 
     public abstract LinkTemplate GetLinkTemplate(LinkManager manager);
@@ -27,21 +29,16 @@ namespace EugenePetrenko.JournalGenerator
       }
     }
 
-    public void AppendLinkParams(Language language, Dictionary<string, object> ctx, LinkTemplate linkTemplate)
+    protected override void AppendLanguageContextInternal(Language language, Dictionary<string, object> ctx)
     {
       Language foreignLanguage = (Language)(-(int)language);
-      Link foreignLink = linkTemplate.ToLink(foreignLanguage);
-      Link link = linkTemplate.ToLink(language);      
+      Link foreignLink = LinkTemplate.ToLink(foreignLanguage);
+      Link link = LinkTemplate.ToLink(language);
 
       ctx["Link"] = link;
       ctx["ForeignLink"] = foreignLink;
       ctx["LanguageName"] = LanguageUtil.LanguageToName(language);
       ctx["ForeignLanguageName"] = LanguageUtil.LanguageToName(foreignLanguage);
-    }
-
-    protected override void AppendLanguageContextInternal(Language language, Dictionary<string, object> ctx)
-    {
-      AppendLinkParams(language, ctx, LinkTemplate);
     }
 
     protected override LanguageGenerationContext CreateContext(StringTemplate template, SmartLookupDictionary dic, Language language)

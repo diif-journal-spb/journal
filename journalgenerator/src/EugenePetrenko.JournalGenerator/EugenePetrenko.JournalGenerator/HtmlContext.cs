@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using Antlr.StringTemplate;
 
@@ -23,6 +24,9 @@ namespace EugenePetrenko.JournalGenerator
       base.AppendLanguageContextInternal(language, ctx);
       
       LanguageGenerationContext contentContext = myContent.LanguageContext(language);
+      foreach (string key in HtmlGenerationContext.PREDEFINED)
+        ctx.Add(key, ((IDictionary) contentContext.Attributes)[key].ToString());
+
       ctx.Add("content", contentContext.GeneratePage());
       ctx.Add("menu", GeneratePage(language, "menu", contentContext));
       ctx.Add("logo", GeneratePage(language, "logo", contentContext));
