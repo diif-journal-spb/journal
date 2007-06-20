@@ -21,11 +21,17 @@ namespace EugenePetrenko.JournalGenerator
     private readonly LinkManager myLinkManager;
     private readonly Dictionary<Language, StringTemplateGroup> myTemplates;
     private readonly IJournal myJournal;
+    private readonly PdfManager myPdfManager;
 
     private readonly Hashset<HtmlGenerationContext> myProcessedPages = new Hashset<HtmlGenerationContext>();
     private readonly Queue<HtmlGenerationContext> myQueue = new Queue<HtmlGenerationContext>();
 
     private readonly Dictionary<string, ConvertToLanguage> myGlobalContext = new Dictionary<string, ConvertToLanguage>();
+
+    public PdfManager PdfManager
+    {
+      get { return myPdfManager; }
+    }
 
     public Program(CommandLineParser commandLineParser)
     {
@@ -42,12 +48,14 @@ namespace EugenePetrenko.JournalGenerator
       }
 
       myLinkManager = new LinkManager(myCommandLine.GetValue("url"), destFile);
-
+      
       string path = GetType().Assembly.CodeBase.Substring("file:///".Length);
       path = Path.GetFullPath(Path.Combine(path, "../../../../../../templates"));
 
       string data = Path.Combine(Path.GetDirectoryName(path), "data");
       myJournal = XmlDataLoader.Parse(data);
+
+      myPdfManager = new PdfManager(myLinkManager, Path.Combine(Path.GetDirectoryName(path), "pdf"));
 
       Console.Out.WriteLine("Template path = {0}, exists = [{1}]", path, Directory.Exists(path));
 
@@ -56,9 +64,8 @@ namespace EugenePetrenko.JournalGenerator
       FileUtil.Copy(Path.Combine(path, "shared"), destFile);
 
       myLanguages = new List<Language>();
-      foreach (FieldInfo info in typeof(Language).GetFields(BindingFlags.Public | BindingFlags.Static))
+      foreach (Language lang in Enum.GetValues(typeof(Language)))
       {
-        Language lang = (Language) info.GetValue(null);
         myLanguages.Add(lang);
         string tpath = Path.Combine(path, lang.ToString());
 
@@ -107,6 +114,8 @@ namespace EugenePetrenko.JournalGenerator
 
         myProcessedPages.Add(ctx);
       }
+
+      myPdfManager.CopyFiles();
     }
 
     public void AddPage(HtmlGenerationContext page)

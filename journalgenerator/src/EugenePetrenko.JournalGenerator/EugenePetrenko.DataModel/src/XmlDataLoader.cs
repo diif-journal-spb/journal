@@ -36,7 +36,7 @@ namespace EugenePetrenko.DataModel
 
     IArticleInfo IXmlDataLoader.ParseArticleInfo(IArticle article, XmlElement element)
     {
-      return new ArticleInfo((Article)article, element, this);
+      return new ArticleInfo(article, element, this);
     }
 
     INumber IXmlDataLoader.ParseNumber(XmlElement element)
@@ -113,6 +113,16 @@ namespace EugenePetrenko.DataModel
                    {
                      myAuthors.AddRange(myLoader.ParseAuthors(doc.DocumentElement));
                    });
+
+      ForeachXml("*.number",
+                 delegate(XmlDocument doc)
+                   {
+                     foreach (XmlElement node in doc.SelectNodes("//authors-xml"))
+                     {
+                       myAuthors.AddRange(myLoader.ParseAuthors(node));
+                     }                     
+                   });
+
       ForeachXml("*.number", 
         delegate(XmlDocument doc)
                                {

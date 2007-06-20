@@ -12,7 +12,7 @@ namespace EugenePetrenko.DataModel
   {
     private readonly IAuthor[] myAuthors;
 
-    public Article(XmlElement el, IXmlDataLoader loader) : base(loader.EntityGenerator)
+    public Article(XmlNode el, IXmlDataLoader loader) : base(loader.EntityGenerator)
     {
       List<IAuthor> authors = new List<IAuthor>();
       foreach (XmlAttribute attribute in el.SelectSingleNode("authors").SelectNodes("author/@ref"))

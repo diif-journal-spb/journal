@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 
 namespace EugenePetrenko.JournalGenerator
@@ -18,6 +19,13 @@ namespace EugenePetrenko.JournalGenerator
     public void Remove(T t)
     {
       myDic.Remove(t);
+    }
+
+    public int Count { get { return myDic.Count; } }
+
+    public IEnumerable<T> Values
+    {
+      get { return myDic.Keys; }
     }
   }
 }

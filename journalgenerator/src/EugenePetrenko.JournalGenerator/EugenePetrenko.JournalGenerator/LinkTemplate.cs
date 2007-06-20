@@ -1,5 +1,4 @@
 using System;
-using System.Text;
 
 namespace EugenePetrenko.JournalGenerator
 {
@@ -23,7 +22,6 @@ namespace EugenePetrenko.JournalGenerator
     {
       return new Link(myLinkManager, language, myPageName);
     }
-
 
     public bool Equals(LinkTemplate linkTemplate)
     {

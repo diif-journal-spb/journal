@@ -19,15 +19,15 @@ namespace EugenePetrenko.DataModel
 
   public class ArticleInfo : Entity, IArticleInfo
   {
-    private JournalLanguage myJournalLanguage;
-    private IAuthorInfo[] myAuthors;
-    private int myFirstPage;
-    private int myLastPage;
-    private string myPdf;
-    private string myAbstract;
-    private string myTitle;
+    private readonly JournalLanguage myJournalLanguage;
+    private readonly IAuthorInfo[] myAuthors;
+    private readonly int myFirstPage;
+    private readonly int myLastPage;
+    private readonly string myPdf;
+    private readonly string myAbstract;
+    private readonly string myTitle;
 
-    public ArticleInfo(Article article, XmlElement el, IXmlDataLoader loader) : base(loader.EntityGenerator)
+    public ArticleInfo(IArticle article, XmlElement el, IXmlDataLoader loader) : base(loader.EntityGenerator)
     {
       myJournalLanguage = loader.ParseLanguage(el);
       List<IAuthorInfo> authors = new List<IAuthorInfo>();

@@ -26,6 +26,11 @@ namespace EugenePetrenko.DataModel
       return myArticles.TryGetValue(journalLanguage, out t) ? t : myArticles[JournalLanguage.EN];
     }
 
+    public IEnumerable<T> AllLanguages()
+    {
+      return myArticles.Values;
+    }
+
     protected void AddEntity(JournalLanguage lang, T t)
     {
       myArticles.Add(lang, t);

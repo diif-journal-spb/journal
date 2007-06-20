@@ -31,7 +31,8 @@ namespace EugenePetrenko.JournalGenerator
       foreach (JournalArticle article in myArticles)
       {
         IArticleInfo info = article.Article.ForLanguage(LanguageUtil.Convert(lang));
-        infos.Add(new ArticleInfoContext(info, article.LinkTemplate.ToLink(lang), new PdfLink(myManager, info)));
+        infos.Add(new ArticleInfoContext(info, article.LinkTemplate.ToLink(lang), 
+          Program.Instance.PdfManager.RegisterPdf(article.Article, lang)));
       }
       return infos;
     }
