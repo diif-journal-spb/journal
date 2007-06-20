@@ -1,7 +1,9 @@
-    <a href="$TemplateAboutLink$">О журнале</a><br>
-    <a href="$TemplateEditorial_StaffLink$">Редакторский состав</a><br>
-    <a href="$NewsLink$">Новости</a><br>
-    <a href="$TemplateFor_AuthorsLink$">Для авторов</a><br>
-    <a href="$BooksLink$">Книги</a><br>
-    <a href="$CollectionLink$">Коллекция номеров</a><br>
+    <a href="$TemplateAboutLink$">О журнале</a>
+    <a href="$TemplateAddressesLink$">Адреса</a>
+    <a href="$TemplateScopeLink$">Тематика</a>
+    <a href="$TemplateEditorial_StaffLink$">Редакторский состав</a>
+    <a href="$NewsLink$">Новости</a>
+    <a href="$TemplateFor_AuthorsLink$">Для авторов</a>
+    <a href="$BooksLink$">Книги</a>
+    <a href="$CollectionLink$">Коллекция номеров</a>
     <a href="$ForeignLink$">English version</a>

@@ -7,9 +7,30 @@ namespace EugenePetrenko.JournalGenerator
 {
   public delegate object ConvertToLanguage(Language language);
 
-  public abstract class GenerationContext<T> : IEquatable<GenerationContext<T>> where T : LanguageGenerationContext
+  public abstract class GenerationContext
   {
+    public const string CAPTION_KEY = "caption"; 
+
     protected readonly LinkManager myManager;
+
+    protected GenerationContext(LinkManager manager)
+    {
+      myManager = manager;
+    }
+
+    protected string GeneratePage(Language lang, string template, SmartLookupDictionary context)
+    {
+      return GeneratePage(myManager, lang, template, context);
+    }
+
+    public static string GeneratePage(LinkManager links, Language lang, string template, SmartLookupDictionary dic)
+    {
+      return new SimplePageContext(dic, links, template).LanguageContext(lang).GeneratePage();      
+    }
+  }
+
+  public abstract class GenerationContext<T> : GenerationContext, IEquatable<GenerationContext<T>> where T : LanguageGenerationContext
+  {        
     private readonly string myTemplateName;
     private readonly Dictionary<string, HtmlDynamicPage> myPages = new Dictionary<string, HtmlDynamicPage>();
 
@@ -19,10 +40,9 @@ namespace EugenePetrenko.JournalGenerator
       get { return myTemplateName; }
     }
 
-    protected GenerationContext(LinkManager manager, string templateName)
+    protected GenerationContext(LinkManager manager, string templateName) : base(manager)
     {
       myTemplateName = templateName;
-      myManager = manager;
     }
 
     protected virtual void AppendLanguageContextInternal(Language language, Dictionary<string, object> ctx)
@@ -49,9 +69,9 @@ namespace EugenePetrenko.JournalGenerator
 
       sdic.LookupTemplate += delegate(string item)
                                {
-                                 HtmlDynamicPage page = new HtmlDynamicPage(myManager, item);
-                                 AddContext(page);
-                                 return page;
+                                   HtmlDynamicPage page = new HtmlDynamicPage(myManager, item);
+                                   AddContext(page);
+                                   return page;
                                };
 
       StringTemplate template = Program.Instance.Templates[language].GetInstanceOf(TemplateName);

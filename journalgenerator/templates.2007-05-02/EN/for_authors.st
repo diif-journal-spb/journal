@@ -75,7 +75,7 @@ The paper is to be prepared in accordance with the journal style. For this you n
 <li>Load the file <a href="$ResourceLink$/auth-for.zip">author-for.zip</a> from the INTERNET site to your computer. Unpack it by the command: <b>pkunzip -d author-for.zip</b> and enter the directory AUTH-FOR. </li>
 <li> Select the language of the paper (Russian/English).</li>
 </ul>
-<h4>If the language is Russian:</H3>
+<h4>If the language is Russian:</h4>
 <ol>
 <li>Enter the directory AUTH-FOR\RUSSIAN\EXAMPLE.</li>
 <li>Compile the samples of a paper and an abstract using <b>LATEX 2.09</b> or <b>LATEX-2e</b>. The starting files for compilation are <b>russian.tex</b> <b>referat.tex</b></li>
@@ -105,14 +105,14 @@ The paper is to be prepared in accordance with the journal style. For this you n
 </ol>
 <h4>Papers are to be sent to</h4>
 <p>
-198504 <br> 
-Russia, Peterhof, <br>
-Universitetskii pr., 28,  <br>
-Mathematics & Mechanics faculty, <br> 
-dept. of Computer Science<br>
-Ampilova Natalya, <br>
-tel.: +7 812 776 76 11<br>
-e-mail: <a href="mailto:jodiff@mail.ru">jodiff@mail.ru</a><br>
+198504 <br /> 
+Russia, Peterhof, <br />
+Universitetskii pr., 28,  <br />
+Mathematics & Mechanics faculty, <br />  
+dept. of Computer Science<br />
+Ampilova Natalya, <br />
+tel.: +7 812 776 76 11<br />
+e-mail: <a href="mailto:jodiff@mail.ru">jodiff@mail.ru</a><br />
 <a href="http://www.neva.ru/journal">http:/www.neva.ru/journal</a>
 </p>
 
@@ -146,15 +146,15 @@ e-mail: <a href="mailto:jodiff@mail.ru">jodiff@mail.ru</a><br>
 <h4>The Editorial Board does not return matters sent by the author(s).</h4>
 <h4>Papers are to be sent to</h4>
 <p>
-198504 <br> 
-Russia, Peterhof, <br>
-Universitetskii pr., 28,  <br>
-Mathematics & Mechanics faculty, <br> 
-dept. of Computer Science<br>
-Ampilova Natalya, <br>
-tel: +7 812 776 7611, +7 921 957 5331<br>
-e-mail: <a href="mailto:nataly@is1483.spb.edu">nataly@is1483.spb.edu</a><br>
-e-mail: <a href="mailto:jodiff@mail.ru">jodiff@mail.ru</a><br>
+198504 <br /> 
+Russia, Peterhof, <br />
+Universitetskii pr., 28,  <br />
+Mathematics & Mechanics faculty, <br /> 
+dept. of Computer Science<br />
+Ampilova Natalya, <br />
+tel: +7 812 776 7611, +7 921 957 5331<br />
+e-mail: <a href="mailto:nataly@is1483.spb.edu">nataly@is1483.spb.edu</a><br />
+e-mail: <a href="mailto:jodiff@mail.ru">jodiff@mail.ru</a><br />
 <a href="http://www.neva.ru/journal">http:/www.neva.ru/journal</a>
 </p>
 
@@ -170,14 +170,14 @@ LaTeX is a module in the MikTex package.
 </p>
 <h4>English version:</h4>
 <p>
-- Anonymous ftp:<br>
-<a href="ftp://ftp.dante.de/tex-archive/systems/msdos/emtex">ftp.dante.de/tex-archive/systems/msdos/emtex</a><br>
-<a href="ftp://ftp.shsu.edu/tex-archive/systems/msdos/emtex">ftp.shsu.edu/tex-archive/systems/msdos/emtex</a><br>
-<a href="ftp://ftp.tex.ac.uk/tex-archive/systems/msdos/emtex">ftp.tex.ac.uk/tex-archive/systems/msdos/emtex</a><br>
+- Anonymous ftp:<br />
+<a href="ftp://ftp.dante.de/tex-archive/systems/msdos/emtex">ftp.dante.de/tex-archive/systems/msdos/emtex</a><br />
+<a href="ftp://ftp.shsu.edu/tex-archive/systems/msdos/emtex">ftp.shsu.edu/tex-archive/systems/msdos/emtex</a><br />
+<a href="ftp://ftp.tex.ac.uk/tex-archive/systems/msdos/emtex">ftp.tex.ac.uk/tex-archive/systems/msdos/emtex</a><br />
 </p>
 <p>
-- Mail server:<br>
-<a href="mailto:ftpmail@dante.de">ftpmail@dante.de</a><br>
+- Mail server:<br />
+<a href="mailto:ftpmail@dante.de">ftpmail@dante.de</a><br />
 <a href="mailto:ftpmail@ftp.SHSU.edu">ftpmail@ftp.SHSU.edu</a>
 </p>
 <p>

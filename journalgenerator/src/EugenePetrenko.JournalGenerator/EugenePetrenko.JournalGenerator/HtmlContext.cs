@@ -14,11 +14,6 @@ namespace EugenePetrenko.JournalGenerator
       myContent = content;
     }
 
-    private string GeneratePage(Language lang, string template, LanguageGenerationContext parentContext)
-    {
-      return new SimplePageContext(parentContext.Attributes, myManager, template).LanguageContext(lang).GeneratePage();      
-    }
-
     protected override void AppendLanguageContextInternal(Language language, Dictionary<string, object> ctx)
     {
       base.AppendLanguageContextInternal(language, ctx);
@@ -28,11 +23,10 @@ namespace EugenePetrenko.JournalGenerator
         ctx.Add(key, ((IDictionary) contentContext.Attributes)[key].ToString());
 
       ctx.Add("content", contentContext.GeneratePage());
-      ctx.Add("menu", GeneratePage(language, "menu", contentContext));
-      ctx.Add("logo", GeneratePage(language, "logo", contentContext));
-      ctx.Add("caption", GeneratePage(language, myContent.TemplateName + "_caption", contentContext));
+      ctx.Add("menu", GeneratePage(language, "menu", contentContext.Attributes));
+      ctx.Add("logo", GeneratePage(language, "logo", contentContext.Attributes));
+      ctx.Add(CAPTION_KEY, GeneratePage(language, myContent.TemplateName + "_caption", contentContext.Attributes));
     }
-
 
     protected override FileLanguageGenerationContext CreateContext(StringTemplate template, SmartLookupDictionary dic,
                                                                    Language language)

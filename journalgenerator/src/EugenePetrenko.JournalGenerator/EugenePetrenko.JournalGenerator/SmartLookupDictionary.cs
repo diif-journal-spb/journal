@@ -69,7 +69,6 @@ namespace EugenePetrenko.JournalGenerator
       }
       return null;
     }
-
     bool IDictionary.Contains(object key)
     {
       return myMap.Contains(key) && DoLookup((string) key) != null;
