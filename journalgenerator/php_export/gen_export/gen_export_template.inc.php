@@ -93,12 +93,12 @@ function printArticle($article, $year, $number) {
             <authors>
                 <? printAuthorIds($article, $year, $number); ?>
             </authors>
-          </article>
-          
-          <authors>
-             <? printAuthors($article, $year, $number); ?>
-          </authors>               
 
+          
+            <authors-xml>
+              <? printAuthors($article, $year, $number); ?>
+            </authors-xml>               
+          </article>
 
 <?
 }

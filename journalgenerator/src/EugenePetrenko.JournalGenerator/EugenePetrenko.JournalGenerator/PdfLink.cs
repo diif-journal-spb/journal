@@ -44,7 +44,7 @@ namespace EugenePetrenko.JournalGenerator
 
       PdfLink link = new PdfLink(myLinkManager, name + ".pdf");
       IArticle tmp;
-      while (myPdfLinksToArticle.TryGetValue(link, out tmp) && tmp == article)
+      while (myPdfLinksToArticle.TryGetValue(link, out tmp) && tmp != article)
       {
         name += "j";
         link = new PdfLink(myLinkManager, name + ".pdf");

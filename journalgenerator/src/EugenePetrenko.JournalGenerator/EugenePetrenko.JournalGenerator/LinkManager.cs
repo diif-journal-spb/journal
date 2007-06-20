@@ -7,7 +7,10 @@ namespace EugenePetrenko.JournalGenerator
     private readonly string myGenerationUrl;
     private readonly string myGeneratePath;
 
-    public string GenerationBaseUrl { get { return myGenerationUrl; } }
+    public string GenerationBaseUrl
+    {
+      get { return myGenerationUrl; }
+    }
 
     public string GeneratePath
     {

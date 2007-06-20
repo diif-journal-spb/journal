@@ -26,7 +26,7 @@ namespace EugenePetrenko.JournalGenerator
 
     public override string ToString()
     {
-      return myLinkManager.Combine('/', myLinkManager.GeneratePath, myLanguage, myPageName);
+      return myLinkManager.Combine('/', myLinkManager.GenerationBaseUrl, myLanguage, myPageName);
     }
   }
 }

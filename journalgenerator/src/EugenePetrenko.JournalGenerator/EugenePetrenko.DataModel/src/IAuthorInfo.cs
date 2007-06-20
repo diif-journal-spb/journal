@@ -3,7 +3,7 @@ using System.Xml;
 
 namespace EugenePetrenko.DataModel
 {
-  public interface IAuthorInfo : IEntity
+  public interface IAuthorInfo : IEntity, IComparable<IAuthorInfo>
   {
     JournalLanguage JournalLanguage { get;}
 
@@ -18,8 +18,7 @@ namespace EugenePetrenko.DataModel
 
   public class AuthorInfo : Entity, IAuthorInfo, IComparable<AuthorInfo>
   {
-    private JournalLanguage myJournalLanguage;
-
+    private readonly JournalLanguage myJournalLanguage;
     private readonly string myFirstName;
     private readonly string myMiddleName;
     private readonly string myLastName;
@@ -39,11 +38,16 @@ namespace EugenePetrenko.DataModel
     public AuthorInfo(XmlElement el, IXmlDataLoader loader) : base(loader.EntityGenerator)
     {
       myJournalLanguage = loader.ParseLanguage(el);
-      myFirstName = el.SelectSingleNode("FirstName/text()").Value;
-      myMiddleName = el.SelectSingleNode("MiddleName/text()").Value;
-      myLastName = el.SelectSingleNode("LastName/text()").Value;
-      myEMail = el.SelectSingleNode("Email/text()").Value;
-      myAddress = el.SelectSingleNode("Address/text()").Value;
+      myFirstName = SafeRead(el.SelectSingleNode("FirstName/text()"));
+      myMiddleName = SafeRead(el.SelectSingleNode("MiddleName/text()"));
+      myLastName = SafeRead(el.SelectSingleNode("LastName/text()"));
+      myEMail = SafeRead(el.SelectSingleNode("Email/text()"));
+      myAddress = SafeRead(el.SelectSingleNode("Address/text()"));
+    }
+
+    private static string SafeRead(XmlNode node)
+    {
+      return node == null ? string.Empty : node.Value;
     }
 
     public JournalLanguage JournalLanguage
@@ -84,6 +88,11 @@ namespace EugenePetrenko.DataModel
     int IComparable<AuthorInfo>.CompareTo(AuthorInfo other)
     {
       return SortKey.CompareTo(other.SortKey);
+    }
+
+    int IComparable<IAuthorInfo>.CompareTo(IAuthorInfo other)
+    {
+      return SortKey.CompareTo(((AuthorInfo)other).SortKey);
     }
   }
 }

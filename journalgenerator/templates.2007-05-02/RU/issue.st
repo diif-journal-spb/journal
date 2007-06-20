@@ -1,5 +1,5 @@
 <h2>
-  Номер $issue.Year$ #$issue.Number$
+  Номер #$issue.Number$ за $issue.Year$
 </h2>
 
 $articles:{ 
