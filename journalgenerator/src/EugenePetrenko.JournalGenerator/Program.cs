@@ -2,9 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
 using Antlr.StringTemplate;
 using EugenePetrenko.DataModel;
+using ICSharpCode.SharpZipLib.Zip;
 
 namespace EugenePetrenko.JournalGenerator
 {
@@ -49,31 +49,48 @@ namespace EugenePetrenko.JournalGenerator
 
       myLinkManager = new LinkManager(myCommandLine.GetValue("url"), destFile);
       
-      string path = GetType().Assembly.CodeBase.Substring("file:///".Length);
-      path = Path.GetFullPath(Path.Combine(path, "../../../../../../templates"));
+      string templates = GetType().Assembly.CodeBase.Substring("file:///".Length);
+      templates = Path.GetFullPath(Path.Combine(templates, "../../../../../templates"));
 
-      string data = Path.Combine(Path.GetDirectoryName(path), "data");
+      if (!Directory.Exists(templates))
+      {
+        Console.Out.WriteLine("Failed to find templates dir");
+        return;
+      }
+      string data = Path.Combine(Path.GetDirectoryName(templates), "data");
+      string version = DateTime.Now.ToString("yyyy-MM-dd");
+      
+      BackUp(data, "data-" + version + ".zip");
+      BackUp(templates, "templates-" + version + ".zip");
+
       myJournal = XmlDataLoader.Parse(data);
+      myPdfManager = new PdfManager(myLinkManager, Path.Combine(Path.GetDirectoryName(templates), "pdf"));
 
-      myPdfManager = new PdfManager(myLinkManager, Path.Combine(Path.GetDirectoryName(path), "pdf"));
-
-      Console.Out.WriteLine("Template path = {0}, exists = [{1}]", path, Directory.Exists(path));
+      Console.Out.WriteLine("Template path = {0}, exists = [{1}]", templates, Directory.Exists(templates));
 
       myTemplates = new Dictionary<Language, StringTemplateGroup>();
 
-      FileUtil.Copy(Path.Combine(path, "shared"), destFile);
+      FileUtil.Copy(Path.Combine(templates, "shared"), destFile);
 
       myLanguages = new List<Language>();
       foreach (Language lang in Enum.GetValues(typeof(Language)))
       {
         myLanguages.Add(lang);
-        string tpath = Path.Combine(path, lang.ToString());
+        string tpath = Path.Combine(templates, lang.ToString());
 
         Console.Out.WriteLine("Loading template for lang {0} from {1}", lang, tpath);
 
         myTemplates[lang] = new StringTemplateGroup("journal_" + lang, tpath);
       }
     }
+
+    private static void BackUp(string folder, string output)
+    {
+      FastZip zip = new FastZip();
+      zip.CreateEmptyDirectories = false;
+      zip.CreateZip(output, folder, true, null);
+    }
+
 
     public void GeneratePage(HtmlGenerationContext ctxp)
     {
@@ -135,8 +152,8 @@ namespace EugenePetrenko.JournalGenerator
 
     static void Main(string[] _args)
     {
-      string[] args = new string[] { @"/url=http://diff.neva.ru/j/", string.Format(@"/dest=E:\Projects\journalGenerator\release\{0}", DateTime.Now.ToString("yyyy-MM-dd--hh-mm-ss")) };
-//      string[] args = new string[] {@"/url=file:\\\c:\tmp\", @"/dest=c:\tmp\"};
+//      string[] args = new string[] { @"/url=http://diff.neva.ru/j/", string.Format(@"/dest=E:\Projects\journalGenerator\release\{0}", DateTime.Now.ToString("yyyy-MM-dd--hh-mm-ss")) };
+      string[] args = new string[] {@"/url=file:\\\c:\tmp\", @"/dest=c:\tmp\"};
       Program program = new Program(new CommandLineParser(args));
       program.BuildPages();
     }

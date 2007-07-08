@@ -1,108 +1,127 @@
 body {
-background-color: rgb(240, 248, 255);
-font-family: Helvetica, Arial, Verdana;
-color: rgb(100, 60, 40);
-font-size: 10pt;
+  background-color: rgb(240, 248, 255);
+  font-family: Helvetica, Arial, Verdana;
+  color: rgb(100, 60, 40);
+  font-size: 12pt;
+  margin:0;
+  padding:0;
 }
 
 div.Head {
-width: 100%;
-height: 160px;
-text-align: center;
+  width: 100%;
+  height: 160px;
+  text-align: center;
 }
 
 div.HeadForeignLink {
-text-align: right;
-}
-
-div.HeadForeignLink a {
-font-size: 9pt;
+  text-align: right;
+  font-size: 9pt;
 }
 
 div.HeadForeignLink a:link {
-color: rgb(100, 160, 240);
+  color: rgb(100, 160, 240);
 }
 
 div.HeadForeignLink a:visited {
-color: rgb(110, 170, 250);
+  color: rgb(110, 170, 250);
 }
 
 div.HeadForeignLink a:hover, a:active {
-color: rgb(240, 140, 0);
+  color: rgb(240, 140, 0);
 }
 
 div.Logo {
-float:left;
-width: 160px;
-height: 160px;
+  float:left;
+  width: 160px;
+  height: 160px;
 }
 
 div.Content {
-padding: 5px;
-margin-left: 200px;
-margin-right: 10px;
-border-left: rgb(220, 230, 240) 2px dotted;
+  padding: 5px;
+  margin-left: 200px;
+  margin-right: 10px;
+  border-left: rgb(220, 230, 240) 2px dotted;
 }
 
 h1 {
-font-family: Impact, Helvetica, Arial, Verdana;
-text-align: center;
-font-size: 22pt;
-font-weight: bold;
-color: rgb(120, 64, 0)
+  font-family: Impact, Helvetica, Arial, Verdana;
+  text-align: center;
+  font-size: 26pt;
+  font-weight: bold;
+  color: rgb(120, 64, 0)
 }
 
 h2 {
-font-size: 14pt;
-font-weight: bold;
-padding-left: 20px;
+  font-size: 22pt;
+  font-weight: bold;
+  padding-left: 20px;
 }
 
 h3 {
-font-size: 12pt;
-font-weight: bold;
+  font-size: 18pt;
+  font-weight: bold;
 }
 
 h4 {
-font-size: 10pt;
-font-weight: bold;
+  font-size: 12pt;
+  font-weight: bold;
 }
 
 
 a:link {
-color: rgb(100, 160, 240);
+  color: rgb(100, 160, 240);
 }
 
 a:visited {
-color: rgb(110, 170, 250);
+  color: rgb(110, 170, 250);
 }
 
 a:hover, a:active {
-color: rgb(240, 140, 0);
+  color: rgb(240, 140, 0);
 }
 
 div.MainMenu {
-width: 200px;
-font-size: 12pt;
-font-weight: bold;
-float: left;
+  width: 200px;
+  font-size: 13pt;
+  font-weight: bold;
+  float: left;
+  padding-left: 2em;
 }
 
 div.MainMenu a {
-padding-right: 0px; 
-padding-left: 0px;
-text-decoration: none;
-display:block;
+  padding-right: 0px; 
+  padding-left: 0px;
+  text-decoration: none;
+  display:block;
 }
 
 div.MainMenu a:link {
-color: (100, 160, 240);
+  color: (100, 160, 240);
 }
 
 div.MainMenu a:visited {
-color: rgb(110, 170, 250);
+  color: rgb(110, 170, 250);
 }
 
 div.MainMenu a:hover, a:active {
-color: rgb(240, 140, 0);
+  color: rgb(240, 140, 0);
+}
+
+
+div.article {
+  border-botton: rgb(220, 230, 240) 1px dotted;
+  padding-left: 10em;
+}
+
+div.article h3 {
+  padding-left: -10em;
+}
+
+div.article h5 {
+  padding: 0;
+  margin: 0;
+}
+
+div.content table > td {
+ width:15em;
 }

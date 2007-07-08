@@ -41,8 +41,10 @@ namespace EugenePetrenko.DataModel
       authors.Sort();
       myAuthors = authors.ToArray();
 
-      myFirstPage = int.Parse(el.GetAttribute("FirstPage"));
-      myLastPage = int.Parse(el.GetAttribute("LastPage"));
+      myFirstPage = 0;
+      myLastPage = 0;
+      int.TryParse(el.GetAttribute("LastPage"), out myLastPage);
+      int.TryParse(el.GetAttribute("FirstPage"), out myFirstPage);
 
       myPdf = el.SelectSingleNode("pdf/text()").Value;
       myTitle = el.SelectSingleNode("title/text()").Value;

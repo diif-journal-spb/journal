@@ -13,7 +13,7 @@
         $logo$
       </div>
       <div class="HeadForeignLink">
-        <a href="$ForeignLink$">Русская версия</a>
+        <a href="$ForeignLink$">English version</a>
      </div> 
      <h1>Differential Equations<br />and<br />Control Processes</h1>
     </div>
