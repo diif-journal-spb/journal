@@ -1,14 +1,15 @@
-<h2>About Journal</h2>
+<h2>О журнале</h2>
 
-<h3>Status</h3>
-<h4>Licensing Authority</h4>
+<h3>Статус</h3>
+<h4>Журнал зарегистрирован:</h4>
 <p>
-State Publishing Committee of the Russian Federation,<br />
-North-western Regional Department, Saint-Petersburg,<br />
-Registration number: P 2375 on March 7, 1997
+Комитетом по печати Российской Федерации.<br> 
+Северо западное региональное управление. Санкт-Петербург.<br>
+Регистрационный номер: П 2375 от 07 марта 1997г.<br>
+ISSN : 1817-2172
 </p>
-<h4>Promoter</h4>
+<h4>Учредитель:</h4>
 <p>
-Saint-Petersburg State Technical University<br />
-Saint-Petersburg State University
+Санкт-Петербургский Государственный Университет.<br>
+Санкт-Петербургский Государственный Технический Университет.
 </p>

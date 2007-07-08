@@ -1,5 +1,5 @@
 <h2>
-  Issue $issue.Year$ #$issue.Number$
+  Номер #$issue.Number$ за $issue.Year$
 </h2>
 
 $articles:{ 
@@ -8,16 +8,14 @@ $articles:{
       $it.Info.Title$
     </a>
   </h3>
-  <div class="article">
-
-    $it.Info.Authors:{ 
-      <h5><b>$it.FirstName$ $it.MiddleName$ $it.LastName$</b></h5> 
-    }$
-
-    <p>
-      <a href="$it.Pdf$">Full text (pdf)</a> 
-      |
-      <a href="$it.Link$">Abstract</a>
-    </p>
- </div>
+  $it.Info.Authors:{ 
+  <p>
+    $it.FirstName$ $it.MiddleName$ $it.LastName$
+  </p>
+  }$
+  <p>
+    <a href="$it.Pdf$">
+      Полный текст (pdf)
+    </a>
+  </p>
 }$

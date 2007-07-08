@@ -1,10 +1,9 @@
 <h2>
-  Books
+  Книги
 </h2>
+
 $books:{
-<h3>
-  $it.Title$
-</h3>
+<h3> Книга: $it.Title$ </h3>
 <p>
   $it.Abstract$
 </p>

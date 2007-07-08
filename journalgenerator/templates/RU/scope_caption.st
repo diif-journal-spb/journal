@@ -1,1 +1,1 @@
-Scope of the Journal
+Тематика журнала

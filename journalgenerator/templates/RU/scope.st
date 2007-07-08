@@ -1,37 +1,32 @@
-<h3>Scope of the Journal</h3>
+<h3>Тематика журнала</h3>
 <p>
-The scope of the journal encompasses the following fields of study:
+Журнал публикует статьи, обзоры, материалы конференций, лекции, курсы лекций, монографии, диссертации и их авторефераты, компьютерные программы, а также другие работы с подробным изложением результатов, доказательств и примеров. Принимаются для публикации научные, учебно-методические и информационные работы по следующим направлениям:
 <ul>
-<li>ordinary differential equations </li>
-<li>nonlinear oscillations </li>
-<li>differential-difference equations </li>
-<li>dynamical systems on manifolds </li>
-<li>bifurcation </li>
-<li>symbolic dynamics </li>
-<li>integro-ordinary differential equations </li>
-<li>group analysis of differential equations </li>
-<li>differential equations with randomness </li>
-<li>general control problems </li>
-<li>adaptive and robust control </li>
-<li>control problems in nonlinear and sophisticated systems </li>
-<li>filtration and identification </li>
-<li>synchronization of oscillatory and chaotic processes </li>
-<li>optimal control </li>
-<li>numerical methods </li>
-<li>computer modeling in dynamical and control systems </li>
-<li>computer software for investigation of differential </li>
-<li>equations, dynamical systems, and control processes </li>
-<li>applications to physics, electrotechnics, and electronics </li>
-<li>dynamical systems in medicine, biology, ecology, and chemistry </li>
-<li>dynamic economic models</li>
+<li>теория обыкновенных дифференциальных уравнений;</li>
+<li>теория нелинейных колебаний;</li>
+<li>дифференциально-разностные уравнения;</li>
+<li>динамические системы на многообразиях;</li>
+<li>теория бифуркаций;</li>
+<li>символическая динамика;</li>
+<li>интегро-дифференциальные системы;</li>
+<li>групповой анализ дифференциальных уравнений;</li>
+<li>стохастические дифференциальные уравнения;</li>
+<li>общая теория управления;</li>
+<li>адаптивное робастное управление;</li>
+<li>управление в нелинейных и сложных системах;</li>
+<li>фильтрация и идентификация;</li>
+<li>управление колебаниями и хаосом;</li>
+<li>стохастическое управление;</li>
+<li>оптимальное управление;</li>
+<li>численные методы;</li>
+<li>компьютерное моделирование динамических и управляемых систем;</li>
+<li>програмные продукты, предназначенные для исследования дифференциальных уравнений, динамических систем и процессов управления;</li>
+<li>приложения в физике, электротехнике и электронике;</li>
+<li>динамические системы в медицине, биологии, экологии, химии и других науках;</li>
+<li>управление в социальных и экономических системах;</li>
+<li>информационные системы и процессы;</li>
+<li>учебные курсы и программные продукты обучения по тематике журнала;</li>
+<li>материалы по методике и формам преподавания;</li>
+<li>информация об изданной литературе, диссертациях, програмных продуктах, семинарах, конференциях и прочее.</li>
 </ul>
-</p>
-<p>
-The Journal accepts original contributions, review articles, conference proceedings, monographs, lectures and courses of lectures, theses and author's abstracts, computer software, and other items with a detailed exposition of results, proofs, and examples and related to the fields listed above. 
-</p>
-<p>
-Related to the journal scope, the Editorial Board accepts educational courses and software, methodological papers, materials on teaching methods, and information about monographs, textbooks, theses, software, seminars, conferences etc. 
-</p>
-<p>
-The Editorial Board also accepts items in other fields related to the journal scope.
 </p>

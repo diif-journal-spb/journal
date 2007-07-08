@@ -1,1 +1,1 @@
-About journal
+О журнале

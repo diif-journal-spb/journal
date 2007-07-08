@@ -1,82 +1,72 @@
-<h2>Journal's Editorial Board</h2>
-
-<h3>Editor-in-Chief:</h3>
-<h4>George S. Osipenko</h4>
+<h2>Редакция журнала</h2>
+<h3>Главный редактор:</h3>
+<h4>Осипенко Георгий Сергеевич, проф.,</h4>
 <p>
-Prof., Dr.Sci., Dept. of Mathematics,<br />
-State Polytechnical University, St. Petersburg, Russia<br />
+Санкт-Петербург<br>
 e-mail: <a href="mailto:george.osipenko@mail.ru">george.osipenko@mail.ru</a>
 </p>
-
-<h3>Assistant Editors:</h3>
-<h4>Alexandr V. Flegontov</h4>
+<h3>Заместители главного редактора:</h3>
+<h4>Флегонтов Александр Владимирович, проф.,</h4>
 <p>
-Prof., Dr.Sci., Dept. of Informatics & Technology,<br />
-Herzen State Pedagogical University, St. Petersburg, Russia<br />
-tel: +7 812 492-2856, +7 812 571-44-61,<br />
+Санкт-Петербургский Государственный Педагогический Университет,<br>
+тел.: +7 812 492-2856(д), +7 812 571-44-61(р),<br>
 e-mail: <a href="mailto:aflegontoff@herzen.spb.ru">aflegontoff@herzen.spb.ru</a>
 </p>
-<h4>Sergey Yu. Pilyugin</h4>
+<h4>Пилюгин Сергей Юрьевич, проф.,</h4>
 <p>
-Prof., Dr.Sci., St.Petersburg State University,<br />
-St. Petersburg, Russia<br />
+Санкт-Петербургский Государственный Университет,<br>
 e-mail: <a href="mailto:sp@sp1196.spb.edu">sp@sp1196.spb.edu</a>
 </p>
-
-<h3>Editor:</h3>
-<h4>Natalya B. Ampilova</h4>
+<h3>Редактор:</h3>
+<h4>Ампилова Наталья Борисовна</h4>
 <p>
-Assoc.Prof., Dept. of Comp. Sci, St.Petersburg State University,<br />
-St. Petersburg, Russia<br />
-tel: +7 812 776 7611 <br />
+Санкт-Петербургский Государственный Университет,<br>
+тел.: +7 812 776 7611<br>
 e-mail: <a href="mailto:nataly@is1483.spb.edu">nataly@is1483.spb.edu</a>
 </p>
-
-<h3>Executive Secretary:</h3>
-<h4>Eugene I. Petrenko<h4>
+<h3>Секретарь:</h3>
+<h4>Петренко Евгений Игоревич,</h4>
 <p>
-Dept. of Comp. Sci, St.Petersburg State University<br />
-St. Petersburg, Russia<br />
-tel: +7 921 9575331<br />
+Санкт-Петербургский Государственный Университет,<br>
+тел.: +7 921 957-5331<br>
 e-mail: <a href="mailto:jodiff@mail.ru">jodiff@mail.ru</a>
 </p>
 
-<h3>Publishing Board:</h3>
+<h3>Издательский совет:</h3>
 <ul>
-<li>A.G. Chentzov (Dr. Sci., Ekaterinburg),</li>
-<li>A.L. Fradkov (Dr. Sci., St. Petersburg),</li>
-<li>C.K. Korovin (Dr. Sci., Moscow),</li>
-<li>N.N. Krasovskii (Dr. Sci., Ekaterinburg),</li>
-<li>A.B. Kurshanskii (Dr. Sci., Moscow),</li>
-<li>G.A. Leonov (Dr. Sci., St. Petersburg),</li>
-<li>L.A. Mironovskii (Dr. Sci., St. Petersburg),</li>
-<li>V.A. Palmov (Dr. Sci., St. Petersburg),</li>
-<li>L.A. Petrosian (Dr. Sci., St. Petersburg),</li>
-<li>V.A. Pliss (Dr. Sci., St. Petersburg),</li>
-<li>N.C. Rosov (Dr. Sci., Moscow),</li>
-<li>V.A. Yakubovitch (Dr. Sci., St. Petersburg)</li>
+<li>Коровин Сергей Константинович, чл.корр. РАН, д.ф.-м.н., Москва,</li>
+<li>Красовский Николай Николаевич, академик РАН, д.ф.-м.н., Екатеринбург,</li>
+<li>Куржанский Александр Борисович, академик РАН, д.ф.-м.н., Москва,</li>
+<li>Леонов Геннадий Алексеевич, чл.корр. РАН, д.ф.-м.н., Санкт-Петербург,</li>
+<li>Мироновский Леонид Алексеевич, проф., д.т.н., Санкт-Петербург,</li>
+<li>Пальмов Владимир Александрович, проф., д.т.н., Санкт-Петербург,</li>
+<li>Петросян Леон Аганесович, проф., д.ф.-м.н., Санкт-Петербург,</li>
+<li>Плисс Виктор Александрович, чл.корр. РАН, д.ф.-м.н., Санкт-Петербург,</li>
+<li>Розов Николай Христович, проф., д.ф.-м.н., Москва,</li>
+<li>Фрадков Александр Львович, проф., д.ф.-м.н., Санкт-Петербург,</li>
+<li>Ченцов Александр Георгиевич, чл.корр. РАН, д.ф.-м.н., Екатеринбург,</li>
+<li>Якубович Владимир Андреевич, чл.корр. РАН, д.ф.-м.н., Санкт-Петербург.</li>
 </ul>
-
-<h3>Editorial Board:</h3>
+<h3>Редакционная коллегия:</h3>
 <ul>
-<li>A.F. Andreev (Dr. Sci., St. Petersburg),</li>
-<li>N.E. Barabanov (Dr. Sci., St. Petersburg),</li>
-<li>Yu.N. Bibikov (Dr. Sci., St. Petersburg),</li>
-<li>Yu.V. Churin (Dr. Sci., St. Petersburg),</li>
-<li>V.M. Ivanov (Dr. Sci., St. Petersburg),</li>
-<li>E.K. Ershov (Assoc.Prof., St. Petersburg),</li>
-<li>V.N. Kozlov (Dr. Sci., St. Petersburg),</li>
-<li>G.G. Malinechkii (Dr. Sci., Moscow),</li>
-<li>A.S. Matveev (Dr. Sci., St. Petersburg),</li>
-<li>I.V. Miroshnik (Dr. Sci., St. Petersburg),</li>
-<li>N.N. Petrov (Dr. Sci., St. Petersburg),</li>
-<li>S.Yu. Piliugin (Dr. Sci., St. Petersburg),</li>
-<li>G.Yu. Riznichenko (Dr. Sci., Moscow),</li>
-<li>E.N. Rozenvasser (Dr. Sci., St. Petersburg),</li>
-<li>A.I. Shepeliavui (Assoc.Prof., St. Petersburg),</li>
-<li>V.B. Smirnova (Dr. Sci., St. Petersburg),</li>
-<li>A.V. Timofeev (Dr. Sci., St. Petersburg),</li>
-<li>S.M. Ustinov (Dr. Sci., St. Petersburg),</li>
-<li>V.F. Zaitsev (Dr. Sci., St. Petersburg),</li>
-<li>A.V. Zinkovskii (Dr. Sci., St. Petersburg)</li>
+<li>Андреев Алексей Федорович, проф., д.ф.-м.н., Санкт-Петербург,</li>
+<li>Барабанов Никита Евгеньевич, проф., д.ф.-м.н., Санкт-Петербург,</li>
+<li>Бибиков Юрий Николаевич, проф., д.ф.-м.н., Санкт-Петербург,</li>
+<li>Ершов Евгений Канстантинович, доц., к.ф.-м.н., Санкт-Петербург,</li>
+<li>Зайцев Валентин Федорович, проф., д.ф.-м.н., Санкт-Петербург</li>
+<li>Зинковский Анатолий Викторович, проф., д.ф.-м.н., Санкт-Петербург,</li>
+<li>Иванов Владимир Михайлович, проф., д.ф.-м.н., Санкт-Петербург,</li>
+<li>Козлов Владимир Николаевич, проф., д.ф.-м.н., Санкт-Петербург,</li>
+<li>Малинецкий Георгий Геннадьевич, проф., д.ф.-м.н., Москва,</li>
+<li>Матвеев Алексей Серафимович, проф., д.ф.-м.н., Санкт-Петербург,</li>
+<li>Мирошник Илья Васильевич, проф., д.ф.-м.н., Санкт-Петербург,</li>
+<li>Петров Николай Николаевич, проф., д.ф.-м.н., Санкт-Петербург,</li>
+<li>Пилюгин Сергей Юрьевич, проф., д.ф.-м.н., Санкт-Петербург,</li>
+<li>Ризниченко Галина Юрьевна, проф., д.ф.-м.н., Москва,</li>
+<li>Розенвассер Ефим Натанович, проф., д.ф.-м.н., Санкт-Петербург,</li>
+<li>Смирнова Вера Борисовна, проф., д.ф.-м.н., Санкт-Петербург,</li>
+<li>Тимофеев Адиль Васильевич, проф., д.т.н., Санкт-Петербург,</li>
+<li>Устинов Сергей Михайлович, проф., д.ф.-м.н., Санкт-Петербург,</li>
+<li>Чурин Юрий Васильевич, проф., д.ф.-м.н., Санкт-Петербург,</li>
+<li>Шепелявый Александр Иванович, доц., к.ф.-м.н., Санкт-Петербург,</li>
 </ul>
