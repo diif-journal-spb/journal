@@ -19,7 +19,7 @@ namespace EugenePetrenko.DataModel
     protected override void Constructor(XmlNode node, IXmlDataLoader loader)
     {
       base.Constructor(node, loader);
-      myImage = node.SelectSingleNode("image/text()").Value;
+      myImage = node.SelectSingleNode("image/text()").Value.Trim();
     }
 
     protected override ILocalizedBook CreateElement(XmlNode node, IXmlDataLoader loader)

@@ -46,9 +46,9 @@ namespace EugenePetrenko.DataModel
       int.TryParse(el.GetAttribute("LastPage"), out myLastPage);
       int.TryParse(el.GetAttribute("FirstPage"), out myFirstPage);
 
-      myPdf = el.SelectSingleNode("pdf/text()").Value;
-      myTitle = el.SelectSingleNode("title/text()").Value;
-      myAbstract = el.SelectSingleNode("abstract/text()").Value;
+      myPdf = el.SelectSingleNode("pdf/text()").Value.Trim();
+      myTitle = el.SelectSingleNode("title/text()").Value.Trim();
+      myAbstract = el.SelectSingleNode("abstract/text()").Value.Trim();
 
     }
 

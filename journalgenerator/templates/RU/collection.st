@@ -2,18 +2,12 @@
   Коллекция номеров
 </h2>
 
-<table>
-  $content:{   
+<div class="collection">
+  <table>
+    $content:{   
     <tr>
-      <td>
-        $it.Year$
-      </td> 
-      $it.Issues:{
-      <td>
-        <a href="$it.IssueLink$">
-          #$it.IssueNumber$
-        </a>
-      </td>}$ 
-    </tr>
-  }$
-</table>
+      <td class="number">$it.Year$</td> 
+      $it.Issues:{<td><a href="$it.IssueLink$">#$it.IssueNumber$</a></td>}$ 
+    </tr>}$
+  </table> 
+</div>

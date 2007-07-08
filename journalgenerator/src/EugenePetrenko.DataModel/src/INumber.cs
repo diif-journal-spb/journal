@@ -21,8 +21,8 @@ namespace EugenePetrenko.DataModel
 
     public NumberImpl(XmlElement element, IXmlDataLoader loader) : base(loader.EntityGenerator)
     {
-      myYear = element.GetAttribute("year");
-      myNumber = element.GetAttribute("number");
+      myYear = element.GetAttribute("year").Trim();
+      myNumber = element.GetAttribute("number").Trim();
       List<IArticle> articles = new List<IArticle>();
       foreach (XmlElement node in element.SelectNodes("article"))
       {

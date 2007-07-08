@@ -20,10 +20,10 @@ namespace EugenePetrenko.DataModel
 
     public LocalizedBookImpl(DateTime date, string image, XmlNode el, IXmlDataLoader loader) : base(loader.EntityGenerator)
     {
-      myAbstract = el.SelectSingleNode("abstract/text()").Value;
-      myTitle = el.SelectSingleNode("title/text()").Value;
+      myAbstract = el.SelectSingleNode("abstract/text()").Value.Trim();
+      myTitle = el.SelectSingleNode("title/text()").Value.Trim();
       myDate = date;
-      myImage = image;
+      myImage = image.Trim();
     }
 
     public DateTime Date

@@ -1,6 +1,6 @@
 body {
   background-color: rgb(240, 248, 255);
-  font-family: Helvetica, Arial, Verdana;
+  font-family: Tahoma, Verdana, Helvetica, Arial;
   color: rgb(100, 60, 40);
   font-size: 12pt;
   margin:0;
@@ -37,33 +37,33 @@ div.Logo {
 }
 
 div.Content {
-  padding: 5px;
-  margin-left: 200px;
-  margin-right: 10px;
-  border-left: rgb(220, 230, 240) 2px dotted;
+ display: block;
+ margin-left: 170pt;
+ padding-left: 1em;
+ border-left: 2px dotted rgb(220, 230, 240);
 }
 
 h1 {
   font-family: Impact, Helvetica, Arial, Verdana;
   text-align: center;
-  font-size: 26pt;
+  font-size: 22pt;
   font-weight: bold;
   color: rgb(120, 64, 0)
 }
 
 h2 {
-  font-size: 22pt;
+  font-size: 14pt;
   font-weight: bold;
   padding-left: 20px;
 }
 
 h3 {
-  font-size: 18pt;
+  font-size: 12pt;
   font-weight: bold;
 }
 
 h4 {
-  font-size: 12pt;
+  font-size: 10pt;
   font-weight: bold;
 }
 
@@ -81,11 +81,11 @@ a:hover, a:active {
 }
 
 div.MainMenu {
-  width: 200px;
   font-size: 13pt;
   font-weight: bold;
   float: left;
-  padding-left: 2em;
+  margin: 1em 0 2em 1em;
+  padding-right: 1em;
 }
 
 div.MainMenu a {
@@ -109,19 +109,29 @@ div.MainMenu a:hover, a:active {
 
 
 div.article {
-  border-botton: rgb(220, 230, 240) 1px dotted;
-  padding-left: 10em;
+  border-botton: 1px dotted rgb(220, 230, 240);
+  margin-left: 10em;
+  text-align:left;
+  
 }
 
 div.article h3 {
-  padding-left: -10em;
+  margin-left: -10em; 
 }
 
 div.article h5 {
+  font-weight:bold;
   padding: 0;
   margin: 0;
 }
 
-div.content table > td {
- width:15em;
+
+div.collection td {
+ width:5em;
+ border: 1px solid rgb(220, 230, 240);
+}
+              	
+div.collection td.number {
+ width:5em;
+ font-weight: bold;
 }

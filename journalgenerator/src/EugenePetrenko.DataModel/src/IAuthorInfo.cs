@@ -38,11 +38,11 @@ namespace EugenePetrenko.DataModel
     public AuthorInfo(XmlElement el, IXmlDataLoader loader) : base(loader.EntityGenerator)
     {
       myJournalLanguage = loader.ParseLanguage(el);
-      myFirstName = SafeRead(el.SelectSingleNode("FirstName/text()"));
-      myMiddleName = SafeRead(el.SelectSingleNode("MiddleName/text()"));
-      myLastName = SafeRead(el.SelectSingleNode("LastName/text()"));
-      myEMail = SafeRead(el.SelectSingleNode("Email/text()"));
-      myAddress = SafeRead(el.SelectSingleNode("Address/text()"));
+      myFirstName = SafeRead(el.SelectSingleNode("FirstName/text()")).Trim();
+      myMiddleName = SafeRead(el.SelectSingleNode("MiddleName/text()")).Trim();
+      myLastName = SafeRead(el.SelectSingleNode("LastName/text()")).Trim();
+      myEMail = SafeRead(el.SelectSingleNode("Email/text()")).Trim();
+      myAddress = SafeRead(el.SelectSingleNode("Address/text()")).Trim();
     }
 
     private static string SafeRead(XmlNode node)

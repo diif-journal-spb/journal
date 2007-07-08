@@ -17,7 +17,7 @@ namespace EugenePetrenko.DataModel
     public LocalizedNewsItem(DateTime date, XmlNode el, EntityGenerator gen) : base(gen)
     {
       myDate = date;
-      myText = el.SelectSingleNode("text/text()").Value;
+      myText = el.SelectSingleNode("text/text()").Value.Trim();
     }
 
     public string Text
