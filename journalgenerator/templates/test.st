@@ -1,1 +1,0 @@
-Hello $name:test2():test2()$;
