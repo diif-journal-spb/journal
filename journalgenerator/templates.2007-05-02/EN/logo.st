@@ -1,1 +1,0 @@
-<img src="$ResourceLink$/logo.gif" alt="dx/dt"></img>

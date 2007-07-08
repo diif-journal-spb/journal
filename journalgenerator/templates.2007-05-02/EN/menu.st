@@ -1,9 +1,0 @@
-<a href="$TemplateAboutLink$">About journal</a>
-<a href="$TemplateAddressesLink$">Addresses</a>
-<a href="$TemplateScopeLink$">Scope</a>
-<a href="$TemplateEditorial_StaffLink$">Editorial staff</a>
-<a href="$NewsLink$">News</a>
-<a href="$TemplateFor_AuthorsLink$">For authors</a>
-<a href="$BooksLink$">Books</a>
-<a href="$CollectionLink$">Collection</a>
-<a href="$ForeignLink$">Русская версия</a>
