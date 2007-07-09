@@ -7,11 +7,11 @@ namespace EugenePetrenko.JournalGenerator
   {
     public static void Copy(string fromDir, string toDir)
     {
-      if (!Directory.Exists(toDir))
-        Directory.CreateDirectory(toDir);
-      
       if (fromDir.EndsWith(".svn"))
         return;
+
+      if (!Directory.Exists(toDir))
+        Directory.CreateDirectory(toDir);      
 
       foreach (string file in Directory.GetFiles(fromDir))
       {

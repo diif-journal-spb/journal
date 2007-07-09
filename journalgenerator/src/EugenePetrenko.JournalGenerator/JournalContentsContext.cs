@@ -58,7 +58,7 @@ namespace EugenePetrenko.JournalGenerator
         List<NumberToLink> d = new List<NumberToLink>();
         foreach (INumber number in list)
         {
-          d.Add(new NumberToLink(number.Number, myNumbers[number].LinkTemplate.ToLink(language)));
+          d.Add(new NumberToLink(number.Number, myNumbers[number].LinkTemplate.ToLink(language, LinkTemplate)));
         }
         data.Add(new YearToNumbers(year.ToString(), d));
       }

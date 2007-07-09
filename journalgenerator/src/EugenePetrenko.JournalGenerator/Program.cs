@@ -60,8 +60,8 @@ namespace EugenePetrenko.JournalGenerator
       string data = Path.Combine(Path.GetDirectoryName(templates), "data");
       string version = DateTime.Now.ToString("yyyy-MM-dd");
       
-      BackUp(data, "data-" + version + ".zip");
-      BackUp(templates, "templates-" + version + ".zip");
+      BackUp(data, Path.Combine(destFile, "backup\\data-" + version + ".zip"));
+      BackUp(templates, Path.Combine(destFile, "backup\\templates-" + version + ".zip"));
 
       myJournal = XmlDataLoader.Parse(data);
       myPdfManager = new PdfManager(myLinkManager, Path.Combine(Path.GetDirectoryName(templates), "pdf"));
@@ -86,6 +86,10 @@ namespace EugenePetrenko.JournalGenerator
 
     private static void BackUp(string folder, string output)
     {
+      string dir = Path.GetDirectoryName(output);
+      if (!Directory.Exists(dir))
+        Directory.CreateDirectory(dir);
+
       FastZip zip = new FastZip();
       zip.CreateEmptyDirectories = false;
       zip.CreateZip(output, folder, true, null);
@@ -94,7 +98,7 @@ namespace EugenePetrenko.JournalGenerator
 
     public void GeneratePage(HtmlGenerationContext ctxp)
     {
-      HtmlContext ctx = new HtmlContext(myLinkManager, ctxp);
+      FileHtmlContext ctx = new FileHtmlContext(myLinkManager, ctxp);
       Console.Out.WriteLine("\r\nGeneratign page {1}: {0}...", ctx, ctx.TemplateName);
 
       foreach (Language language in myLanguages)
@@ -106,12 +110,12 @@ namespace EugenePetrenko.JournalGenerator
       Console.Out.WriteLine("Done\r\n");
     }
 
-    public void AddPredefinedProperties(IDictionary dic, Language lang)
+    public void AddPredefinedProperties(IDictionary dic, Language lang, LinkTemplate page)
     {
       foreach (KeyValuePair<string, ConvertToLanguage> pair in myGlobalContext)
       {
         if (!dic.Contains(pair.Key))
-          dic.Add(pair.Key, pair.Value(lang));
+          dic.Add(pair.Key, pair.Value(lang, page));
       }
     }
 

@@ -4,14 +4,20 @@ using Antlr.StringTemplate;
 
 namespace EugenePetrenko.JournalGenerator
 {
-  public class HtmlContext : GenerationContext<FileLanguageGenerationContext>
+  public class FileHtmlContext : GenerationContext<FileLanguageGenerationContext>
   {
     private readonly HtmlGenerationContext myContent;
 
-    public HtmlContext(LinkManager manager, HtmlGenerationContext content)
+    public FileHtmlContext(LinkManager manager, HtmlGenerationContext content)
       : base(manager, "html")
     {
       myContent = content;
+    }
+
+    [GenerationHidden]
+    public override LinkTemplate LinkTemplate
+    {
+      get { return myContent.LinkTemplate; }
     }
 
     protected override void AppendLanguageContextInternal(Language language, Dictionary<string, object> ctx)
@@ -31,13 +37,13 @@ namespace EugenePetrenko.JournalGenerator
     protected override FileLanguageGenerationContext CreateContext(StringTemplate template, SmartLookupDictionary dic,
                                                                    Language language)
     {
-      string destFile = myContent.LinkTemplate.ToLink(language).DestFile;
+      string destFile = myContent.LinkTemplate.ToLink(language, null).DestFile;
       return new FileLanguageGenerationContext(template, dic, destFile);
     }
 
     public override string ToString()
     {
-      return "HtmlContext: " + myContent.LinkTemplate;
+      return "FileHtmlContext: " + myContent.LinkTemplate;
     }
   }
 }

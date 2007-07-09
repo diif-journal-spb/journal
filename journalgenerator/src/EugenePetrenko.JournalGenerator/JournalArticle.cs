@@ -34,8 +34,8 @@ namespace EugenePetrenko.JournalGenerator
       IArticleInfo info = myArticle.ForLanguage(LanguageUtil.Convert(language));
       ctx.Add("article", info);
       ctx.Add("number", myNumber);
-      ctx.Add("backLink", myBack.LinkTemplate.ToLink(language));
-      ctx.Add("PdfLink", Program.Instance.PdfManager.RegisterPdf(myArticle, language));
+      ctx.Add("backLink", myBack.LinkTemplate.ToLink(language, LinkTemplate));
+      ctx.Add("PdfLink", Program.Instance.PdfManager.RegisterPdf(myArticle, language, LinkTemplate));
     }
   }
 }

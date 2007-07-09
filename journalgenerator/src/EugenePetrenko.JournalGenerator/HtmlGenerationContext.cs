@@ -17,7 +17,7 @@ namespace EugenePetrenko.JournalGenerator
     }
 
     [GenerationHidden]
-    public LinkTemplate LinkTemplate
+    public override LinkTemplate LinkTemplate
     {
       get
       {
@@ -27,13 +27,14 @@ namespace EugenePetrenko.JournalGenerator
         }
         return myLinkTemplate;
       }
-    }
+    }    
 
     protected override void AppendLanguageContextInternal(Language language, Dictionary<string, object> ctx)
     {
       Language foreignLanguage = (Language)(-(int)language);
-      Link foreignLink = LinkTemplate.ToLink(foreignLanguage);
-      Link link = LinkTemplate.ToLink(language);
+      
+      Link foreignLink = LinkTemplate.ToLink(foreignLanguage, LinkTemplate, language);
+      Link link = LinkTemplate.ToLink(language, null);
 
       ctx["Link"] = link;
       ctx["ForeignLink"] = foreignLink;

@@ -3,10 +3,23 @@ namespace EugenePetrenko.JournalGenerator
   public sealed class Link : LinkTemplate
   {
     private readonly Language myLanguage;
+    private readonly Link myPageLink;
+    private readonly string myServerPath;
 
-    public Link(LinkManager linkManager, Language language, string pageName) : base(linkManager, pageName.Replace('\\', '/'))
+    public Link(LinkManager linkManager, Language language, string pageName) : this(linkManager, language, pageName, null)
+    {      
+    }
+
+    public Link(LinkManager linkManager, Language language, string pageName, Link pageLink) : base(linkManager, pageName.Replace('\\', '/'))
     {
       myLanguage = language;
+      myPageLink = pageLink;
+
+      myServerPath = myLinkManager.Combine('/', myLinkManager.GenerationBaseUrl, myLanguage, myPageName);
+      if (myPageLink != null)
+      {
+        myServerPath = LinkManager.MakeRelative(myServerPath, pageLink.ToString());
+      }
     }
 
     public Language Language
@@ -16,7 +29,7 @@ namespace EugenePetrenko.JournalGenerator
 
     public Link ForeignLink(Language l)
     {
-      return new Link(myLinkManager, l, myPageName);
+      return new Link(myLinkManager, l, myPageName, myPageLink);
     }
 
     public string DestFile
@@ -26,7 +39,7 @@ namespace EugenePetrenko.JournalGenerator
 
     public override string ToString()
     {
-      return myLinkManager.Combine('/', myLinkManager.GenerationBaseUrl, myLanguage, myPageName);
+      return myServerPath;
     }
   }
 }

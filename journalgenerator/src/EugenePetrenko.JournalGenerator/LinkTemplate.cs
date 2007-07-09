@@ -18,9 +18,21 @@ namespace EugenePetrenko.JournalGenerator
       return string.Format("LinkTemplate: page: {0}", myPageName);
     }
 
-    public Link ToLink(Language language)
+    public Link ToLink(Language language, LinkTemplate pageLink)
     {
-      return new Link(myLinkManager, language, myPageName);
+      return ToLink(language, pageLink, language);
+    }
+
+    public Link ToLink(Language language, LinkTemplate pageLink, Language currentLang)
+    {
+      if (pageLink == null)
+      {
+        return new Link(myLinkManager, language, myPageName);
+      }
+      else
+      {
+        return new Link(myLinkManager, language, myPageName, pageLink.ToLink(currentLang, null));
+      }
     }
 
     public bool Equals(LinkTemplate linkTemplate)

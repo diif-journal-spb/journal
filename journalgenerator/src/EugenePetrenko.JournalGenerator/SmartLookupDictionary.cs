@@ -8,11 +8,12 @@ namespace EugenePetrenko.JournalGenerator
 
   public class SmartLookupDictionary : IDictionary
   {
-    private readonly Dictionary<string, HtmlDynamicPage> myPages;
+    private readonly Dictionary<string, HtmlDynamicPage> myPages = new Dictionary<string, HtmlDynamicPage>();
     private readonly IDictionary myMap;
     private readonly List<LookupItem> myEvents = new List<LookupItem>();
     private readonly Language myLanguage;
     private readonly string myTemplateName;
+    private readonly LinkTemplate myCurrentPageLink;
 
     public event LookupItem LookupTemplate
     {
@@ -25,15 +26,20 @@ namespace EugenePetrenko.JournalGenerator
       get { return myMap; }
     }
     
-    public SmartLookupDictionary(string templateName, IDictionary predefined, Language language, Dictionary<string, HtmlDynamicPage> pages)
+    public SmartLookupDictionary(string templateName, IDictionary predefined, Language language, LinkTemplate currentPageLink)
     {
       myTemplateName = templateName;
-      myMap = predefined;
-      myPages = pages;
+      myCurrentPageLink = currentPageLink;
+      myMap = predefined;      
       myLanguage = language;
     }
 
-    private HtmlDynamicPage DoLoopupTemplate(string key)
+    public LinkTemplate CurrentPageLink
+    {
+      get { return myCurrentPageLink; }
+    }
+
+    private HtmlDynamicPage DoLookupTemplate(string key)
     {
       key = key.ToLower();
       HtmlDynamicPage page;
@@ -61,9 +67,9 @@ namespace EugenePetrenko.JournalGenerator
       {
         string templateName =
           item.Substring(TEMPLATE.Length, item.Length - TEMPLATE.Length - LINK.Length);
-        HtmlDynamicPage page = DoLoopupTemplate(templateName);
+        HtmlDynamicPage page = DoLookupTemplate(templateName);
 
-        Link link = page.LinkTemplate.ToLink(myLanguage);
+        Link link = page.LinkTemplate.ToLink(myLanguage, myCurrentPageLink);
         myMap[item] = link;
         return link;
       }
