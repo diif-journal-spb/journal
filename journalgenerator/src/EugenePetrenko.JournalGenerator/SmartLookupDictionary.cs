@@ -34,11 +34,6 @@ namespace EugenePetrenko.JournalGenerator
       myLanguage = language;
     }
 
-    public LinkTemplate CurrentPageLink
-    {
-      get { return myCurrentPageLink; }
-    }
-
     private HtmlDynamicPage DoLookupTemplate(string key)
     {
       key = key.ToLower();

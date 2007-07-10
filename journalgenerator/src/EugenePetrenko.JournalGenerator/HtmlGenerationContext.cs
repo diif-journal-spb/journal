@@ -31,6 +31,8 @@ namespace EugenePetrenko.JournalGenerator
 
     protected override void AppendLanguageContextInternal(Language language, Dictionary<string, object> ctx)
     {
+      base.AppendLanguageContextInternal(language, ctx);
+
       Language foreignLanguage = (Language)(-(int)language);
       
       Link foreignLink = LinkTemplate.ToLink(foreignLanguage, LinkTemplate, language);

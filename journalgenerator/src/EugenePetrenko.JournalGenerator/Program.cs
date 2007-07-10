@@ -95,7 +95,6 @@ namespace EugenePetrenko.JournalGenerator
       zip.CreateZip(output, folder, true, null);
     }
 
-
     public void GeneratePage(HtmlGenerationContext ctxp)
     {
       FileHtmlContext ctx = new FileHtmlContext(myLinkManager, ctxp);
