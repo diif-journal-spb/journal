@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Xml;
 
 namespace EugenePetrenko.DataModel
@@ -9,6 +10,7 @@ namespace EugenePetrenko.DataModel
     string Abstract { get; }
     string Title { get; }
     string Image { get; }
+    string[] Authors { get; }
   }
 
   internal class LocalizedBookImpl : Entity, ILocalizedBook
@@ -17,6 +19,7 @@ namespace EugenePetrenko.DataModel
     private readonly string myAbstract;
     private readonly string myTitle;
     private readonly string myImage;
+    private readonly string[] myAuthors;
 
     public LocalizedBookImpl(DateTime date, string image, XmlNode el, IXmlDataLoader loader) : base(loader.EntityGenerator)
     {
@@ -24,6 +27,17 @@ namespace EugenePetrenko.DataModel
       myTitle = el.SelectSingleNode("title/text()").Value.Trim();
       myDate = date;
       myImage = image.Trim();
+      List<string> authors = new List<string>();
+      foreach (XmlNode node in el.SelectNodes("authors\author\text()"))
+      {
+        authors.Add(node.Value);
+      }
+      myAuthors = authors.ToArray();
+    }
+
+    public string[] Authors
+    {
+      get { return myAuthors; }
     }
 
     public DateTime Date

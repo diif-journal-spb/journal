@@ -24,5 +24,8 @@
     <div class="Content">
       $content$
     </div> 
+    <div class="Footer">
+      Старая версия сайта доступна <a href="http://www.neva.ru/journal/rus/r_main.htm">здесь</a>
+    </div>
   </body>
 </html>

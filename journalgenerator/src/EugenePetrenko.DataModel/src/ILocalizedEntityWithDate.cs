@@ -23,7 +23,7 @@ namespace EugenePetrenko.DataModel
       : base(el, loader)
     {      
     }
-
+      
     public DateTime Date
     {
       get { return myDate; }

@@ -23,5 +23,8 @@
     <div class="Content">
       $content$
     </div> 
+    <div class="Footer">
+      Older version of our site is <a href="http://www.neva.ru/journal/eng/e_main.htm">here</a>
+    </div>
   </body>
 </html>

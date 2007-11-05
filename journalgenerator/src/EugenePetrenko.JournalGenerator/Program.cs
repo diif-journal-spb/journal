@@ -11,6 +11,7 @@ namespace EugenePetrenko.JournalGenerator
   public class Program
   {
     private static Program myInstance = null;
+
     public static Program Instance
     {
       get { return myInstance; }
@@ -42,13 +43,14 @@ namespace EugenePetrenko.JournalGenerator
       try
       {
         FileUtil.SmartDelete(destFile);
-      } catch
+      }
+      catch
       {
         Console.Out.WriteLine("Umable to clean up output folder {0}", destFile);
       }
 
       myLinkManager = new LinkManager(myCommandLine.GetValue("url"), destFile);
-      
+
       string templates = GetType().Assembly.CodeBase.Substring("file:///".Length);
       templates = Path.GetFullPath(Path.Combine(templates, "../../../../../templates"));
 
@@ -59,7 +61,7 @@ namespace EugenePetrenko.JournalGenerator
       }
       string data = Path.Combine(Path.GetDirectoryName(templates), "data");
       string version = DateTime.Now.ToString("yyyy-MM-dd");
-      
+
       BackUp(data, Path.Combine(destFile, "backup\\data-" + version + ".zip"));
       BackUp(templates, Path.Combine(destFile, "backup\\templates-" + version + ".zip"));
 
@@ -73,26 +75,33 @@ namespace EugenePetrenko.JournalGenerator
       FileUtil.Copy(Path.Combine(templates, "shared"), destFile);
 
       myLanguages = new List<Language>();
-      foreach (Language lang in Enum.GetValues(typeof(Language)))
+      foreach (Language lang in Enum.GetValues(typeof (Language)))
       {
         myLanguages.Add(lang);
         string tpath = Path.Combine(templates, lang.ToString());
 
         Console.Out.WriteLine("Loading template for lang {0} from {1}", lang, tpath);
 
-        myTemplates[lang] = new StringTemplateGroup("journal_" + lang, tpath);
+        StringTemplateGroup group = new StringTemplateGroup("journal_" + lang, tpath);
+        group.RegisterAttributeRenderer(typeof (DateTime), new DateRenderer());
+        myTemplates[lang] = group;
       }
     }
 
     private static void BackUp(string folder, string output)
     {
+      string backup = folder + "qqq";
+      FileUtil.Copy(folder, backup);
+
       string dir = Path.GetDirectoryName(output);
       if (!Directory.Exists(dir))
         Directory.CreateDirectory(dir);
 
       FastZip zip = new FastZip();
       zip.CreateEmptyDirectories = false;
-      zip.CreateZip(output, folder, true, null);
+      zip.CreateZip(output, backup, true, null, ".svn");
+
+      FileUtil.SmartDelete(backup);
     }
 
     public void GeneratePage(HtmlGenerationContext ctxp)
@@ -105,7 +114,7 @@ namespace EugenePetrenko.JournalGenerator
         FileLanguageGenerationContext context = ctx.LanguageContext(language);
         context.GeneratePageToFile();
       }
-      
+
       Console.Out.WriteLine("Done\r\n");
     }
 
@@ -124,7 +133,7 @@ namespace EugenePetrenko.JournalGenerator
       myQueue.Enqueue(new NewsGenerationContext(myJournal, myLinkManager));
       myQueue.Enqueue(new BooksGenerationContext(myJournal, myLinkManager));
 
-      while(myQueue.Count > 0 )
+      while (myQueue.Count > 0)
       {
         HtmlGenerationContext ctx = myQueue.Dequeue();
         if (myProcessedPages.Contains(ctx))
@@ -153,7 +162,7 @@ namespace EugenePetrenko.JournalGenerator
       get { return myTemplates; }
     }
 
-    static void Main(string[] _args)
+    private static void Main(string[] _args)
     {
 //      string[] args = new string[] { @"/url=http://diff.neva.ru/j/", string.Format(@"/dest=E:\Projects\journalGenerator\release\{0}", DateTime.Now.ToString("yyyy-MM-dd--hh-mm-ss")) };
       string[] args = new string[] {@"/url=file:\\\c:\tmp\", @"/dest=c:\tmp\"};

@@ -11,7 +11,6 @@ namespace EugenePetrenko.DataModel
   {
     private string myImage;
 
-
     public BookImpl(XmlNode el, IXmlDataLoader loader) : base(el, loader)
     {      
     }
