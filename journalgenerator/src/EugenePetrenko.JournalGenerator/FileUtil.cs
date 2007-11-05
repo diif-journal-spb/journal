@@ -46,8 +46,10 @@ namespace EugenePetrenko.JournalGenerator
       foreach (string dir in Directory.GetDirectories(fromDir))
       {
         SmartDelete(dir);
-        Directory.Delete(dir);
       }
+
+      if (Directory.GetFiles(fromDir).Length == 0)
+        Directory.Delete(fromDir);
     }
   }
 }

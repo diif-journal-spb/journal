@@ -99,7 +99,7 @@ namespace EugenePetrenko.JournalGenerator
 
       FastZip zip = new FastZip();
       zip.CreateEmptyDirectories = false;
-      zip.CreateZip(output, backup, true, null, ".svn");
+      zip.CreateZip(output, backup, true, null);
 
       FileUtil.SmartDelete(backup);
     }
