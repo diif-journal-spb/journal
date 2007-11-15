@@ -23,6 +23,7 @@ namespace EugenePetrenko.JournalGenerator
     private readonly Dictionary<Language, StringTemplateGroup> myTemplates;
     private readonly IJournal myJournal;
     private readonly PdfManager myPdfManager;
+    public readonly string DataDir;
 
     private readonly Hashset<HtmlGenerationContext> myProcessedPages = new Hashset<HtmlGenerationContext>();
     private readonly Queue<HtmlGenerationContext> myQueue = new Queue<HtmlGenerationContext>();
@@ -60,6 +61,7 @@ namespace EugenePetrenko.JournalGenerator
         return;
       }
       string data = Path.Combine(Path.GetDirectoryName(templates), "data");
+      DataDir = data;
       string version = DateTime.Now.ToString("yyyy-MM-dd");
 
       BackUp(data, Path.Combine(destFile, "backup\\data-" + version + ".zip"));

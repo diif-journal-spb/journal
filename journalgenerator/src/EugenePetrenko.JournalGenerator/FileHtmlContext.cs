@@ -23,7 +23,7 @@ namespace EugenePetrenko.JournalGenerator
     protected override void AppendLanguageContextInternal(Language language, Dictionary<string, object> ctx)
     {
       base.AppendLanguageContextInternal(language, ctx);
-      
+
       LanguageGenerationContext contentContext = myContent.LanguageContext(language);
       foreach (string key in HtmlGenerationContext.PREDEFINED)
         ctx.Add(key, ((IDictionary) contentContext.Attributes)[key].ToString());
@@ -38,7 +38,10 @@ namespace EugenePetrenko.JournalGenerator
                                                                    Language language)
     {
       string destFile = myContent.LinkTemplate.ToLink(language, null).DestFile;
-      return new FileLanguageGenerationContext(template, dic, destFile);
+      string[] extraFiles = myContent.ExtraFiles;
+      if (extraFiles.Length == 0)
+        return new FileLanguageGenerationContext(template, dic, destFile);
+      return new FileLanguageGenerationContextWithExtraFiles(template, dic, destFile, extraFiles);
     }
 
     public override string ToString()

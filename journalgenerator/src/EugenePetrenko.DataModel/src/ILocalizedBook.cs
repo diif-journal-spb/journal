@@ -11,6 +11,7 @@ namespace EugenePetrenko.DataModel
     string Title { get; }
     string Image { get; }
     string[] Authors { get; }
+    string ISBN { get;}
   }
 
   internal class LocalizedBookImpl : Entity, ILocalizedBook
@@ -20,11 +21,15 @@ namespace EugenePetrenko.DataModel
     private readonly string myTitle;
     private readonly string myImage;
     private readonly string[] myAuthors;
+    private readonly string myISBN;
+    private readonly string myBoolInfoLink;
+
 
     public LocalizedBookImpl(DateTime date, string image, XmlNode el, IXmlDataLoader loader) : base(loader.EntityGenerator)
     {
       myAbstract = el.SelectSingleNode("abstract/text()").Value.Trim();
       myTitle = el.SelectSingleNode("title/text()").Value.Trim();
+      myISBN = el.SelectSingleNode("@isbn").Value.Trim();
       myDate = date;
       myImage = image.Trim();
       List<string> authors = new List<string>();
@@ -58,6 +63,11 @@ namespace EugenePetrenko.DataModel
     public string Image
     {
       get { return myImage; }
+    }
+
+    public string ISBN
+    {
+      get { return myISBN; }
     }
   }
 }

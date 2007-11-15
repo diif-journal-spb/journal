@@ -10,6 +10,12 @@ namespace EugenePetrenko.JournalGenerator
       if (fromDir.EndsWith(".svn"))
         return;
 
+      if (File.Exists(fromDir))
+      {
+        File.Copy(fromDir, toDir, true);
+        return;
+      }
+
       if (!Directory.Exists(toDir))
         Directory.CreateDirectory(toDir);      
 

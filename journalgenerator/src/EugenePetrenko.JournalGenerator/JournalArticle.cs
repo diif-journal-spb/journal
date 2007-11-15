@@ -21,6 +21,20 @@ namespace EugenePetrenko.JournalGenerator
       get { return myArticle; }
     }
 
+
+    public override string[] ExtraFiles
+    {
+      get
+      {
+        List<string> result = new List<string>();
+        foreach (IArticleInfo info in Article.AllLanguages())
+        {
+          result.AddRange(info.ExtraFiles);
+        }
+        return result.ToArray();
+      }
+    }
+
     public override LinkTemplate GetLinkTemplate(LinkManager manager)
     {
       string name = string.Format(@"numbers\{0}.{1}\article.{2}.html", myNumber.Year, myNumber.Number, myArticle.FileId);

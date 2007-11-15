@@ -29,6 +29,12 @@ namespace EugenePetrenko.JournalGenerator
       }
     }    
 
+    [GenerationHidden]
+    public virtual string[] ExtraFiles
+    {
+      get { return new string[] {};  }
+    }
+
     protected override void AppendLanguageContextInternal(Language language, Dictionary<string, object> ctx)
     {
       base.AppendLanguageContextInternal(language, ctx);

@@ -14,7 +14,9 @@ namespace EugenePetrenko.DataModel
 
     string Pdf { get; }
     string Title { get; }
-    string Abstract { get; }    
+    string Abstract { get; }
+
+    string[] ExtraFiles { get; }
   }
 
   public class ArticleInfo : Entity, IArticleInfo
@@ -26,6 +28,7 @@ namespace EugenePetrenko.DataModel
     private readonly string myPdf;
     private readonly string myAbstract;
     private readonly string myTitle;
+    private readonly string[] myExtraFiles;
 
     public ArticleInfo(IArticle article, XmlElement el, IXmlDataLoader loader) : base(loader.EntityGenerator)
     {
@@ -50,6 +53,18 @@ namespace EugenePetrenko.DataModel
       myTitle = el.SelectSingleNode("title/text()").Value.Trim();
       myAbstract = el.SelectSingleNode("abstract/text()").Value.Trim();
 
+      List<string> extraFiles = new List<string>();
+      foreach(XmlText extra in el.SelectNodes("extra-files/file/text()"))
+      {
+        string file = extra.Value.Trim();
+        extraFiles.Add(file);
+      }
+      myExtraFiles = extraFiles.ToArray();
+    }
+
+    public string[] ExtraFiles
+    {
+      get { return myExtraFiles; }
     }
 
     public JournalLanguage JournalLanguage
