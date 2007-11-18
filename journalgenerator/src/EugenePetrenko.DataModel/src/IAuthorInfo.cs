@@ -5,13 +5,13 @@ namespace EugenePetrenko.DataModel
 {
   public interface IAuthorInfo : IEntity, IComparable<IAuthorInfo>
   {
-    JournalLanguage JournalLanguage { get;}
+    JournalLanguage JournalLanguage { get; }
 
     string FirstName { get; }
     string MiddleName { get; }
     string LastName { get; }
 
-    string EMail { get;}
+    string EMail { get; }
     string Address { get; }
   }
 
@@ -24,16 +24,7 @@ namespace EugenePetrenko.DataModel
     private readonly string myLastName;
     private readonly string myEMail;
     private readonly string myAddress;
-
-    public AuthorInfo(string id, JournalLanguage journalLanguage, string firstName, string middleName, string lastName, string eMail, string address) : base(id)
-    {
-      myJournalLanguage = journalLanguage;
-      myFirstName = firstName;
-      myMiddleName = middleName;
-      myLastName = lastName;
-      myEMail = eMail;
-      myAddress = address;
-    }
+    private readonly string mySortKey;
 
     public AuthorInfo(XmlElement el, IXmlDataLoader loader) : base(loader.EntityGenerator)
     {
@@ -43,11 +34,24 @@ namespace EugenePetrenko.DataModel
       myLastName = SafeRead(el.SelectSingleNode("LastName/text()")).Trim();
       myEMail = SafeRead(el.SelectSingleNode("Email/text()")).Trim();
       myAddress = SafeRead(el.SelectSingleNode("Address/text()")).Trim();
+      mySortKey = LastName + " " + FirstName + " " + MiddleName;
+      mySortKey = SafeRead(el.SelectSingleNode("@sort-key"), mySortKey).Trim();      
     }
 
     private static string SafeRead(XmlNode node)
     {
       return node == null ? string.Empty : node.Value;
+    }
+
+    private static string SafeRead(XmlNode node, string def)
+    {
+      if (node == null)
+        return def;
+      else
+      {
+        string value = node.Value;
+        return String.IsNullOrEmpty(value) ? def : value;
+      }
     }
 
     public JournalLanguage JournalLanguage
@@ -82,7 +86,7 @@ namespace EugenePetrenko.DataModel
 
     private string SortKey
     {
-      get { return LastName + " " + FirstName + " " + MiddleName; }
+      get { return mySortKey; }
     }
 
     int IComparable<AuthorInfo>.CompareTo(AuthorInfo other)
@@ -92,7 +96,7 @@ namespace EugenePetrenko.DataModel
 
     int IComparable<IAuthorInfo>.CompareTo(IAuthorInfo other)
     {
-      return SortKey.CompareTo(((AuthorInfo)other).SortKey);
+      return SortKey.CompareTo(((AuthorInfo) other).SortKey);
     }
   }
 }
