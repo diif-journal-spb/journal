@@ -3,8 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <title>Журнал дифференциальные уравнения и процессы управления - $caption$</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    </meta>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
     <!-- Journal generator by Eugene Petrenko (eugene[dot]petrenko(at)gmail_com), thanks to Nikita Raba" -->
     <link rel="stylesheet" href="$ResourceLink$/style.css" type="text/css"></link>
   </head>
