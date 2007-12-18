@@ -187,7 +187,7 @@ namespace EugenePetrenko.JournalGenerator
 //      string[] args = new string[] { @"/url=http://diff.neva.ru/j/", string.Format(@"/dest=E:\Projects\journalGenerator\release\{0}", DateTime.Now.ToString("yyyy-MM-dd--hh-mm-ss")) };
       string[] args = new string[] {@"/url=file:\\\c:\tmp\", @"/dest=c:\tmp\"};
       Program program = new Program(new CommandLineParser(args));
-//      program.BuildPages();
+      program.BuildPages();
       program.BuildRFFI();
     }
   }
