@@ -1,0 +1,75 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C7E2F879-4FBE-49E7-8B6E-3C77136C0F5F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EugenePetrenko.RFFI</RootNamespace>
+    <AssemblyName>EugenePetrenko.RFFI</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.2.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\nunit\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\JournalInfoBean.cs" />
+    <Compile Include="src\RFFIAbstract.cs" />
+    <Compile Include="src\RFFIArticle.cs" />
+    <Compile Include="src\RFFIArticleTitle.cs" />
+    <Compile Include="src\RFFIAuthor.cs" />
+    <Compile Include="src\RFFIAuthorInfo.cs" />
+    <Compile Include="src\RFFIIssue.cs" />
+    <Compile Include="src\RFFIJournalNumber.cs" />
+    <Compile Include="src\XmlBaseAttribute.cs" />
+    <Compile Include="src\XmlAttributeAttribute.cs" />
+    <Compile Include="src\XmlAttributeProcessor.cs" />
+    <Compile Include="src\XmlElementPathAttribute.cs" />
+    <Compile Include="src\XmlForeachAttribute.cs" />
+    <Compile Include="src\XmlRootAttribute.cs" />
+    <Compile Include="src\XmlStaticAttributeAttribute.cs" />
+    <Compile Include="src\XmlTextAttribute.cs" />
+    <Compile Include="testSrc\RFFIGenTest.cs" />
+    <Compile Include="testSrc\XmlProcessorTest.cs" />
+    <Compile Include="testSrc\XmlTestBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EugenePetrenko.DataModel\EugenePetrenko.DataModel.csproj">
+      <Project>{115CFE1B-1023-42A5-99A0-60E5225F9F0D}</Project>
+      <Name>EugenePetrenko.DataModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

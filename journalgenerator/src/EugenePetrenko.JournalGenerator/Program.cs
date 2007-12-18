@@ -2,8 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Xml;
 using Antlr.StringTemplate;
 using EugenePetrenko.DataModel;
+using EugenePetrenko.RFFI;
 using ICSharpCode.SharpZipLib.Zip;
 
 namespace EugenePetrenko.JournalGenerator
@@ -24,6 +26,7 @@ namespace EugenePetrenko.JournalGenerator
     private readonly IJournal myJournal;
     private readonly PdfManager myPdfManager;
     public readonly string DataDir;
+    public readonly string DestDir;
 
     private readonly Hashset<HtmlGenerationContext> myProcessedPages = new Hashset<HtmlGenerationContext>();
     private readonly Queue<HtmlGenerationContext> myQueue = new Queue<HtmlGenerationContext>();
@@ -40,6 +43,7 @@ namespace EugenePetrenko.JournalGenerator
       myInstance = this;
       myCommandLine = commandLineParser;
       string destFile = myCommandLine.GetValue("dest");
+      DestDir = destFile;
 
       try
       {
@@ -149,6 +153,20 @@ namespace EugenePetrenko.JournalGenerator
       myPdfManager.CopyFiles();
     }
 
+    public void BuildRFFI()
+    {
+      string dir = Path.Combine(DestDir, "RFFI");
+      Directory.CreateDirectory(dir);
+
+      foreach (INumber number in myJournal.Numbers)
+      {
+        RFFIJournalNumber num = new RFFIJournalNumber(new RFFIIssue(number));
+        XmlDocument doc = XmlAttributeProcessor.Build(num);
+
+        doc.Save(Path.Combine(dir, string.Format("{0}-{1}.xml", number.Year, number.Number)));        
+      }      
+    }
+
     public void AddPage(HtmlGenerationContext page)
     {
       myQueue.Enqueue(page);
@@ -169,7 +187,8 @@ namespace EugenePetrenko.JournalGenerator
 //      string[] args = new string[] { @"/url=http://diff.neva.ru/j/", string.Format(@"/dest=E:\Projects\journalGenerator\release\{0}", DateTime.Now.ToString("yyyy-MM-dd--hh-mm-ss")) };
       string[] args = new string[] {@"/url=file:\\\c:\tmp\", @"/dest=c:\tmp\"};
       Program program = new Program(new CommandLineParser(args));
-      program.BuildPages();
+//      program.BuildPages();
+      program.BuildRFFI();
     }
   }
 }

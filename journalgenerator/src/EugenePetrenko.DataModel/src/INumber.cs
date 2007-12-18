@@ -11,6 +11,7 @@ namespace EugenePetrenko.DataModel
     int IntNumber { get; }
 
     IArticle[] Articles { get; }
+
   }
 
   public class NumberImpl : Entity, INumber
