@@ -1,4 +1,5 @@
 using System;
+using System.Text.RegularExpressions;
 using System.Xml;
 
 namespace EugenePetrenko.DataModel
@@ -26,6 +27,13 @@ namespace EugenePetrenko.DataModel
     private readonly string myAddress;
     private readonly string mySortKey;
 
+    private static string PatchAddress(string addr)
+    {
+      string next = Regex.Replace(addr, "<br[^/]*/>", "\n", RegexOptions.IgnoreCase|RegexOptions.Multiline);
+      next = Regex.Replace(next, @"\n(\s*\n)+", "\n", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      return next.Replace("\r", "").Replace("\n", "<br />");
+    }
+
     public AuthorInfo(XmlElement el, IXmlDataLoader loader) : base(loader.EntityGenerator)
     {
       myJournalLanguage = loader.ParseLanguage(el);
@@ -33,7 +41,7 @@ namespace EugenePetrenko.DataModel
       myMiddleName = SafeRead(el.SelectSingleNode("MiddleName/text()")).Trim();
       myLastName = SafeRead(el.SelectSingleNode("LastName/text()")).Trim();
       myEMail = SafeRead(el.SelectSingleNode("Email/text()")).Trim();
-      myAddress = SafeRead(el.SelectSingleNode("Address/text()")).Trim();
+      myAddress = PatchAddress(SafeRead(el.SelectSingleNode("Address/text()")).Trim());
       mySortKey = LastName + " " + FirstName + " " + MiddleName;
       mySortKey = SafeRead(el.SelectSingleNode("@sort-key"), mySortKey).Trim();      
     }
