@@ -6,7 +6,7 @@ namespace EugenePetrenko.DataModel
 {
   public interface IXmlDataLoader
   {
-    IAuthorInfo ParseAuthorInfo(XmlElement element);
+    IAuthorInfo ParseAuthorInfo(XmlElement element, IAuthor host);
     IAuthor ParseAuthor(XmlElement element);
     List<IAuthor> ParseAuthors(XmlElement element);
 

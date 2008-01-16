@@ -12,7 +12,7 @@ namespace EugenePetrenko.DataModel
     {
       foreach (XmlElement node in element.SelectNodes("author"))
       {
-        IAuthorInfo info = loader.ParseAuthorInfo(node);
+        IAuthorInfo info = loader.ParseAuthorInfo(node, this);
         AddEntity(info.JournalLanguage, info);
       }
     }

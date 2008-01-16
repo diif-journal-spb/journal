@@ -5,7 +5,7 @@ namespace EugenePetrenko.DataModel
 {
   public class EntityGenerator
   {
-    private Dictionary<Type, int> myIds = new Dictionary<Type, int>();
+    private readonly Dictionary<Type, int> myIds = new Dictionary<Type, int>();
 
     public string NextId(Type type)
     {

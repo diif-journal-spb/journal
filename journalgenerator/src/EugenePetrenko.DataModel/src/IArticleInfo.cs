@@ -30,8 +30,9 @@ namespace EugenePetrenko.DataModel
     private readonly string myTitle;
     private readonly string[] myExtraFiles;
 
-    public ArticleInfo(IArticle article, XmlElement el, IXmlDataLoader loader) : base(loader.EntityGenerator)
+    public ArticleInfo(IArticle _article, XmlElement el, IXmlDataLoader loader) : base(loader.EntityGenerator)
     {
+      Article article = (Article) _article;
       myJournalLanguage = loader.ParseLanguage(el);
       List<IAuthorInfo> authors = new List<IAuthorInfo>();
       if (article != null && article.Authors != null)
@@ -41,7 +42,17 @@ namespace EugenePetrenko.DataModel
           authors.Add(author.ForLanguage(JournalLanguage));
         }
       }
-      authors.Sort();
+      authors.Sort(delegate(IAuthorInfo x, IAuthorInfo y)
+                     {
+                       string kX = article.CompareKey(x);
+                       string kY = article.CompareKey(y);
+
+                       int v = kX.CompareTo(kY);
+                       if (v != 0)
+                         return v;
+
+                       return x.CompareTo(y);
+                     });
       myAuthors = authors.ToArray();
 
       myFirstPage = 0;

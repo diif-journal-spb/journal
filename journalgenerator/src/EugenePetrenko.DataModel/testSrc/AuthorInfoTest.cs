@@ -40,7 +40,7 @@ QQQ]]></Address>
         TEST_01,
         delegate(XmlElement root)
           {
-            IAuthorInfo info = myLoader.ParseAuthorInfo(root);
+            IAuthorInfo info = myLoader.ParseAuthorInfo(root, null);
 
             AssertXml_Test_01(info);
           }
@@ -54,7 +54,7 @@ QQQ]]></Address>
         TEST_02,
         delegate(XmlElement root)
           {
-            IAuthorInfo info = myLoader.ParseAuthorInfo(root);
+            IAuthorInfo info = myLoader.ParseAuthorInfo(root, null);
             AssertXml_Test_02(info);
           }
         );

@@ -14,9 +14,9 @@ namespace EugenePetrenko.DataModel
     protected readonly IXmlDataLoader myLoader;
     private readonly IJournal myJournal;
 
-    IAuthorInfo IXmlDataLoader.ParseAuthorInfo(XmlElement element)
+    IAuthorInfo IXmlDataLoader.ParseAuthorInfo(XmlElement element, IAuthor host)
     {
-      return new AuthorInfo(element, this);
+      return new AuthorInfo(element, this, host);
     }
 
     IAuthor IXmlDataLoader.ParseAuthor(XmlElement element)

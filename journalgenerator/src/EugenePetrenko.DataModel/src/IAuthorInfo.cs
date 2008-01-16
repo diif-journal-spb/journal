@@ -6,6 +6,7 @@ namespace EugenePetrenko.DataModel
 {
   public interface IAuthorInfo : IEntity, IComparable<IAuthorInfo>
   {
+    IAuthor Author { get;}
     JournalLanguage JournalLanguage { get; }
 
     string FirstName { get; }
@@ -20,6 +21,7 @@ namespace EugenePetrenko.DataModel
   public class AuthorInfo : Entity, IAuthorInfo, IComparable<AuthorInfo>
   {
     private readonly JournalLanguage myJournalLanguage;
+    private readonly IAuthor myAuthor;
     private readonly string myFirstName;
     private readonly string myMiddleName;
     private readonly string myLastName;
@@ -34,7 +36,7 @@ namespace EugenePetrenko.DataModel
       return next.Replace("\r", "").Replace("\n", "<br />");
     }
 
-    public AuthorInfo(XmlElement el, IXmlDataLoader loader) : base(loader.EntityGenerator)
+    public AuthorInfo(XmlElement el, IXmlDataLoader loader, IAuthor author) : base(loader.EntityGenerator)
     {
       myJournalLanguage = loader.ParseLanguage(el);
       myFirstName = SafeRead(el.SelectSingleNode("FirstName/text()")).Trim();
@@ -42,8 +44,11 @@ namespace EugenePetrenko.DataModel
       myLastName = SafeRead(el.SelectSingleNode("LastName/text()")).Trim();
       myEMail = SafeRead(el.SelectSingleNode("Email/text()")).Trim();
       myAddress = PatchAddress(SafeRead(el.SelectSingleNode("Address/text()")).Trim());
-      mySortKey = LastName + " " + FirstName + " " + MiddleName;
-      mySortKey = SafeRead(el.SelectSingleNode("@sort-key"), mySortKey).Trim();      
+      mySortKey = LastName + " " + FirstName + " " + MiddleName;      
+      myAuthor = author;
+
+      if (el.SelectSingleNode("@sort-key") != null)
+        throw new ArgumentException("sortkey is not supported for " + this);      
     }
 
     private static string SafeRead(XmlNode node)
@@ -51,15 +56,9 @@ namespace EugenePetrenko.DataModel
       return node == null ? string.Empty : node.Value;
     }
 
-    private static string SafeRead(XmlNode node, string def)
+    public IAuthor Author
     {
-      if (node == null)
-        return def;
-      else
-      {
-        string value = node.Value;
-        return String.IsNullOrEmpty(value) ? def : value;
-      }
+      get { return myAuthor; }
     }
 
     public JournalLanguage JournalLanguage
