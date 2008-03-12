@@ -3,7 +3,7 @@ using System.Xml;
 
 namespace EugenePetrenko.DataModel
 {
-  public interface IArticle : ILocalizedEntity<IArticleInfo>
+  public interface IArticle : ILocalizedEntity<IArticleInfo>, IEntity
   {
     IAuthor[] Authors{ get; }
   }
@@ -16,7 +16,7 @@ namespace EugenePetrenko.DataModel
     public Article(XmlNode el, IXmlDataLoader loader) : base(loader.EntityGenerator)
     {
       List<IAuthor> authors = new List<IAuthor>();
-      foreach (XmlElement attribute in el.SelectSingleNode("authors").SelectNodes("author[@ref]"))
+      foreach (XmlElement attribute in el.SelectNodes("authors/author[@ref]"))
       {
         IAuthor author = loader.LookupAuthor(attribute.GetAttribute("ref"));
         authors.Add(author);

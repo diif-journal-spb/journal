@@ -2,7 +2,13 @@
   Номер #$issue.Number$ за $issue.Year$
 </h2>
 
-$articles:{  
+
+$sections:{
+  $if(it.ShowTitle)$
+  <h2>$it.TitleName$</h2>
+  $endif$
+  
+  $it.articles:{ 
   <div class="article">
     <h3><a href="$it.Link$">$it.Info.Title$</a></h3>
     $it.Info.Authors:{<h5>$it.FirstName$ $it.MiddleName$ $it.LastName$</h5>}$
@@ -11,5 +17,9 @@ $articles:{
       |
       <a href="$it.Link$">Реферат</a>
     </p>
- </div>
+   </div>
+  }$
 }$
+
+
+

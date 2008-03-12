@@ -5,8 +5,8 @@ namespace EugenePetrenko.DataModel
 {
   public class LocalizedEntity<T> : Entity, ILocalizedEntity<T> where T : IEntity
   {
-    private readonly Dictionary<JournalLanguage, T> myArticles = new Dictionary<JournalLanguage, T>();
-
+    private readonly Localized<T> myLocalized = new Localized<T>();
+   
     public LocalizedEntity(EntityGenerator gen) : base(gen)
     {
     }
@@ -15,25 +15,24 @@ namespace EugenePetrenko.DataModel
     {
     }
 
-    public ICollection<JournalLanguage> JournalLanguages
-    {
-      get { return myArticles.Keys; }
-    }
-
     public T ForLanguage(JournalLanguage journalLanguage)
     {
-      T t;
-      return myArticles.TryGetValue(journalLanguage, out t) ? t : myArticles[JournalLanguage.EN];
+      return myLocalized.ForLanguage(journalLanguage);
     }
 
     public IEnumerable<T> AllLanguages()
     {
-      return myArticles.Values;
+      return myLocalized.AllLanguages();
     }
 
-    protected void AddEntity(JournalLanguage lang, T t)
+    public void AddEntity(JournalLanguage lang, T t)
     {
-      myArticles.Add(lang, t);
+      myLocalized.AddEntity(lang, t);
+    }
+
+    public ICollection<JournalLanguage> JournalLanguages
+    {
+      get { return myLocalized.JournalLanguages; }
     }
   }
 }
