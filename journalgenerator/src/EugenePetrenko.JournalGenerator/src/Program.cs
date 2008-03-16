@@ -56,15 +56,14 @@ namespace EugenePetrenko.JournalGenerator
 
       myLinkManager = new LinkManager(myCommandLine.GetValue("url"), destFile);
 
-      string templates = GetType().Assembly.CodeBase.Substring("file:///".Length);
-      templates = Path.GetFullPath(Path.Combine(templates, "../../../../../templates"));
+      string templates = Path.GetFullPath(commandLineParser.GetValue("templates"));
 
       if (!Directory.Exists(templates))
       {
         Console.Out.WriteLine("Failed to find templates dir");
         return;
       }
-      string data = Path.Combine(Path.GetDirectoryName(templates), "data");
+      string data = Path.GetFullPath(commandLineParser.GetValue("data"));
       DataDir = data;
       string version = DateTime.Now.ToString("yyyy-MM-dd");
 
@@ -206,7 +205,7 @@ namespace EugenePetrenko.JournalGenerator
     private static void Usage()
     {
       Console.Out.WriteLine("Usage:");
-      Console.Out.WriteLine("  prog.exe /url=<base_url> /dest=<path to get> [/rffi]");
+      Console.Out.WriteLine("  prog.exe /url=<base_url> /dest=<path to get> /templates=<path to templates> /data=<path to data> [/rffi]");
       Console.Out.WriteLine("  where:");
       Console.Out.WriteLine("    /rffi - to build rffi export xml files");
     }

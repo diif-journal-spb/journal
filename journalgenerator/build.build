@@ -3,7 +3,8 @@
 
   <property name="base" value="${project::get-base-directory()}" />
   <property name="release" value="${base}/../release" />
-  <property name="generator.exe" value="${base}/bin/eee.exe" />
+  <property name="debug" value="${base}/../debug" />
+  <property name="generator.exe" value="${base}/bin/EugenePetrenko.JournalGenerator.exe" />
   
 
   <target name="make">
@@ -11,19 +12,42 @@
     <msbuild project="${base}\src\EugenePetrenko.JournalGenerator.sln" target="REBUILD" />
   </target> 
 
+  <target name="debug">
+     <property name="release" value="${debug}" />
+     <call target="build" />
+  </target>
+
   <target name="build">
+    <property name="release.last" value="${release}\last.success" />
+
     <tstamp property="release.date" pattern="yyyy-MM-dd HH-mm-ss" verbose="true" />
     <property name="release.path" value="${release}/${release.date}"/>
+    <property name="release.path" value="${path::get-full-path(release.path)}"/>
 
     <delete dir="${release.path}" />
     <mkdir dir="${release.path}" />
 
     <echo message="Output folder is ${release.path}"/>
 
-    <exec program="${generator.exe}">
+    <exec program="${generator.exe}" verbose="true">
       <arg value="/url=http://www.neva.ru/journal"/>
-      <arg value="/dest=${pat::get-full-path(release.path)}" />
+      <arg value="/dest=${release.path}" />
+      <arg value="/templates=${path::get-full-path(base + '\templates')}"/>
+      <arg value="/data=${path::get-full-path(base + '\data')}" />
     </exec>
+
+    <if test="${file::exists(release.last)}">      
+      <loadfile file="${release.last}" property="to_patch" />
+      <property name="patched" value="${release.path}_patch" />
+      <exec program="${release}/patch_pure.bat" verbose="true">
+        <arg file="${to_patch}" />
+        <arg file="${release.path}" />
+        <arg file="${patched}" />
+      </exec>
+    </if>
+
+    <echo file="${release.last}">${release.path}</echo>
+
   </target>
 
 </project>
