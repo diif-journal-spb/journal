@@ -11,9 +11,6 @@ namespace EugenePetrenko.DataModel
     string Number { get; }
     int IntNumber { get; }
 
-    [Obsolete]
-    IArticle[] Articles { get; }
-
     INumberSection[] Sections { get; }
   }
 
@@ -65,11 +62,6 @@ namespace EugenePetrenko.DataModel
     public int IntNumber
     {
       get { return int.Parse(myNumber); }
-    }
-
-    public IArticle[] Articles
-    {
-      get { return new PublicationsNumberFactory().Filter(Sections); }
     }
 
     public INumberSection[] Sections

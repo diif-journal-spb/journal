@@ -27,17 +27,25 @@ namespace EugenePetrenko.RFFI
     {
       get
       {
-        foreach (IArticle article in myNumber.Articles)
+        foreach (IArticle article in Articlez)
         {
           yield return new RFFIArticle(article);
         }
+      }
+    }
+
+    private IArticle[] Articlez
+    {
+      get
+      {
+        return new PublicationsNumberFactory().Filter(myNumber.Sections);
       }
     }
     
     private int GetPages()
     {
       int sum = 0;
-      foreach (IArticle article in myNumber.Articles)
+      foreach (IArticle article in Articlez)
       {        
         foreach (IArticleInfo info in article.AllLanguages())
         {

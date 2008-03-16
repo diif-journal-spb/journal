@@ -2,7 +2,7 @@
 <project name="dontknow" default="all" basedir=".">
 
   <property name="base" value="${project::get-base-directory()}" />
-  <property name="release" value="${base}/build" />
+  <property name="release" value="${base}/../release" />
   <property name="generator.exe" value="${base}/bin/eee.exe" />
   
 
@@ -23,7 +23,7 @@
     <exec program="${generator.exe}">
       <arg value="/url=http://www.neva.ru/journal"/>
       <arg value="/dest=${pat::get-full-path(release.path)}" />
-    </exec>   
+    </exec>
   </target>
 
 </project>

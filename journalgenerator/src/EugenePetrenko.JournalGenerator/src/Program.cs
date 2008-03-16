@@ -182,13 +182,33 @@ namespace EugenePetrenko.JournalGenerator
       get { return myTemplates; }
     }
 
-    private static void Main(string[] _args)
+    private static int Main(string[] _args)
     {
 //      string[] args = new string[] { @"/url=http://diff.neva.ru/j/", string.Format(@"/dest=E:\Projects\journalGenerator\release\{0}", DateTime.Now.ToString("yyyy-MM-dd--hh-mm-ss")) };
-      string[] args = new string[] {@"/url=file:\\\c:\tmp\", @"/dest=c:\tmp\"};
-      Program program = new Program(new CommandLineParser(args));
+      if (_args.Length == 0)
+      {
+        Usage();
+        return -1;
+      }
+//      string[] args = new string[] {@"/url=file:\\\c:\tmp\", @"/dest=c:\tmp\"};
+      CommandLineParser parser = new CommandLineParser(_args);
+      Program program = new Program(parser);
+      
       program.BuildPages();
-      program.BuildRFFI();
+      if (parser.HasKey("rffi"))
+      {
+        program.BuildRFFI();
+      }
+
+      return 0;
+    }
+
+    private static void Usage()
+    {
+      Console.Out.WriteLine("Usage:");
+      Console.Out.WriteLine("  prog.exe /url=<base_url> /dest=<path to get> [/rffi]");
+      Console.Out.WriteLine("  where:");
+      Console.Out.WriteLine("    /rffi - to build rffi export xml files");
     }
   }
 }
