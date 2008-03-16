@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<project name="dontknow" default="all" basedir=".">
+
+  <property name="base" value="${project::get-base-directory()}" />
+  <property name="release" value="${base}/build" />
+  <property name="generator.exe" value="${base}/bin/eee.exe" />
+  
+
+  <target name="make">
+    <delete dir="${base}\bin" failonerror="false" />
+    <msbuild project="${base}\src\EugenePetrenko.JournalGenerator.sln" target="REBUILD" />
+  </target> 
+
+  <target name="build">
+    <tstamp property="release.date" pattern="yyyy-MM-dd HH-mm-ss" verbose="true" />
+    <property name="release.path" value="${release}/${release.date}"/>
+
+    <delete dir="${release.path}" />
+    <mkdir dir="${release.path}" />
+
+    <echo message="Output folder is ${release.path}"/>
+
+    <exec program="${generator.exe}">
+      <arg value="/url=http://www.neva.ru/journal"/>
+      <arg value="/dest=${pat::get-full-path(release.path)}" />
+    </exec>   
+  </target>
+
+</project>
