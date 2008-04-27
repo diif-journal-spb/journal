@@ -97,9 +97,13 @@ namespace EugenePetrenko.DataModel
     {
       foreach (string file in Directory.GetFiles(myPath, mask))
       {
-        XmlDocument doc = new XmlDocument();
-        doc.Load(file);
-        del(doc);
+        try {
+          XmlDocument doc = new XmlDocument();
+          doc.Load(file);
+          del(doc);
+        } catch(Exception e) {
+          throw new Exception("File " + file + ", " + e.Message, e);
+        }
       }
     }
 
