@@ -1,5 +1,3 @@
-<a href="$ResourceLink$/auth-for.zip">author-for.zip</a>
-
 <h2>Preparation of a paper</h2>
 <p>The following matters must be submitted to the Editorial Board:
 <ul>

@@ -93,6 +93,3 @@ LaTex €вл€етс€ одним из модулей в системе MikTex. </p>
   <li>—охраните документ под именем <‘амили€ автора>-<мес€ц>-<год>.doc.</li>
  </ol>
 </p>
-
-
-<a href="$ResourceLink$/auth-for.zip">author-for.zip</a>
