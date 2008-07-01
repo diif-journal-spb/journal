@@ -3,18 +3,18 @@
 <h3>Address:</h3>
 <h4>Office</h4>
 <p>
-Dept. of Mathematics, State Technical University,<br>
+Dept. of Mathematics, State Polytechnical University,<br>
 St. Petersburg, 195251, Russia<br>
 fax: 7 812 5527770<br>
 tel:7 812 5526750,<br>
-e-mail: geogre.osipenko@mail.ru 
+e-mail: george.osipenko@mail.ru 
 </p>
 <h4>Home</h4>
 <p>
 17 Polytechnicheskaya st. block 3 apt. 37,<br>
 St.Petersburg 1940021, Russia<br>
-tel/fax: 7 812 2477347<br>
-e-mail: geogre.osipenko@mail.ru
+tel/fax: 7 812 750 01 58<br>
+e-mail: george.osipenko@mail.ru
 </p>
 
 <h3>Academic title:</h3>
