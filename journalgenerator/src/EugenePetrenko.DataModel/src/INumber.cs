@@ -25,11 +25,17 @@ namespace EugenePetrenko.DataModel
       myYear = element.GetAttribute("year").Trim();
       myNumber = element.GetAttribute("number").Trim();
 
-      List<INumberSection> sections = new List<INumberSection>();
+      var sections = new List<INumberSection>();
       //todo: Load list of types from XML
-      foreach (INumberSectionFactory factory in new INumberSectionFactory[] { new PublicationsNumberFactory(), new BooksNumberFactory()})
+      var factories = new INumberSectionFactory[]
+                        {
+                          new PublicationsNumberFactory(), 
+                          new BooksNumberFactory(),
+                          new PhdNumberFactory()
+                        };
+      foreach (INumberSectionFactory factory in factories)
       {
-        List<IArticle> articles = new List<IArticle>();
+        var articles = new List<IArticle>();
         foreach (XmlElement node in element.SelectNodes(factory.ElementName))
         {
           articles.Add(loader.ParseArticle(node));
