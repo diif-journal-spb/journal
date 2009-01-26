@@ -1,0 +1,3 @@
+cd journalgenerator
+nant %*
+cd ..
