@@ -1,0 +1,17 @@
+﻿<Window x:Class="EugenePetrenko.NumberEditor.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:NumberEditor="clr-namespace:EugenePetrenko.NumberEditor"
+
+    Title="MainWindow" Height="300" Width="300">
+    <Grid>
+    <TabControl>
+      <TabItem Header="Number">
+        <NumberEditor:NumberEditor/>
+      </TabItem>
+      <TabItem Header="Authors">
+        <NumberEditor:AuthorsEditor/>
+      </TabItem>
+    </TabControl>
+  </Grid>
+</Window>
