@@ -1,28 +1,8 @@
+<img src="$ResourceLink$/osipenko.jpg" style="float:left;margin:3em" alt="Photo">
 <h2>Осипенко<br>Георгий Сергеевич</h2>	
-<img src="$ResourceLink$/osipenko.jpg" alt="Photo">
-<h3>Address:</h3>
-<h4>Office</h4>
 <p>
-Dept. of Mathematics, State Polytechnical University,<br>
-St. Petersburg, 195251, Russia<br>
-fax: 7 812 5527770<br>
-tel:7 812 5526750,<br>
-e-mail: george.osipenko@mail.ru 
+e-mail: george[dot]osipenko]at[mail.ru 
 </p>
-<h4>Home</h4>
-<p>
-17 Polytechnicheskaya st. block 3 apt. 37,<br>
-St.Petersburg 1940021, Russia<br>
-tel/fax: 7 812 750 01 58<br>
-e-mail: george.osipenko@mail.ru
-</p>
-
-<h3>Academic title:</h3>
-<ol>
-<li>Professor of Mathematics, St. Petersburg State Technical University, 1990 </li>
-<li>Doctor of Sciences, St. Petersburg State University, 1989 </li>
-<li>Phd, Leningrad State University, 1975 </li>
-</ol>
 <h3>Institutional affiliations:</h3>
 <ol>
 <li>1992 to present – Director of Laboratory of Nonlinear Analysis and Mathematical Simulation, St. Petersburg State Technical University; </li>
@@ -91,11 +71,11 @@ Publications of Prof. G.Osipenko: 75 papers.Some publications:
 <li>G.Osipenko, E.Ershov, Perturbation of invariant manifolds of ordinary differential equations, Six Lectures on Dynamical Systems, edit. B.Aulbach and F.Colonius, World Scientific, Singapore, 1996, 213-265, (monograph). </li>
 </ul>
 </p>
-<h3>Books:</h3>
-<p>
+<h3>Some Books:</h3>
+<p><ul><li>
 Lectures On Symbolic Analysis of Dynamical Systems 
-</p>
+</li></ul></p>
 <p>
-<img src="$ResourceLink$/osipenko2.jpg" alt="Photo">
+<img src="$ResourceLink$/osipenko2.jpg" alt="Photo" /> <br />
 Jim Yorke and Osipenko G.S.
 </p>

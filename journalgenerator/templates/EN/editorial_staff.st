@@ -1,7 +1,7 @@
 <h2>Journal's Editorial Board</h2>
 
 <h3>Editor-in-Chief:</h3>
-<h4>George S. Osipenko</h4>
+<h4><a href="$TemplateOsipenkoLink$">George S. Osipenko</a></h4>
 <p>
 Prof., Dr.Sci., Dept. of Mathematics,<br />
 State Polytechnical University, St. Petersburg, Russia<br />

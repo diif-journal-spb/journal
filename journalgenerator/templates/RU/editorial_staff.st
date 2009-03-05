@@ -1,6 +1,6 @@
 <h2>Редакция журнала</h2>
 <h3>Главный редактор:</h3>
-<h4>Осипенко Георгий Сергеевич, проф.,</h4>
+<h4><a href="$TemplateOsipenkoLink$">Осипенко Георгий Сергеевич</a>, проф.,</h4>
 <p>
 Санкт-Петербург<br>
 e-mail: <a href="mailto:george.osipenko@mail.ru">george.osipenko@mail.ru</a>
