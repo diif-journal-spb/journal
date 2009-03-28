@@ -78,9 +78,11 @@ Publications of Prof. G.Osipenko: 75 papers.Some publications:
 </ul>
 </p>
 <h3>Some Books:</h3>
-<p><ul><li>
-Lectures On Symbolic Analysis of Dynamical Systems 
-</li></ul></p>
+<p>
+  <ul>
+    <li><a href="$ResourceLink$/books/book_gs_ampi.pdf">Lectures On Symbolic Analysis of Dynamical Systems</a></li>
+  </ul>
+</p>
 <p>
 <img src="$ResourceLink$/osipenko2.jpg" alt="Photo" /> <br />
 Jim Yorke and Osipenko G.S.

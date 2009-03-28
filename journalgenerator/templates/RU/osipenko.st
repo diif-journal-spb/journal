@@ -1,8 +1,14 @@
-<img src="$ResourceLink$/osipenko.jpg" style="float:left;margin:3em" alt="Photo">
+<img src="$ResourceLink$/osipenko.jpg" style="float:left; margin:3em" alt="Photo">
 <h2>Осипенко<br>Георгий Сергеевич</h2>	
 <p>
 e-mail: george[dot]osipenko]at[mail.ru 
 </p>
+<h3>Academic title:</h3>
+<ol>
+<li>Professor of Mathematics, St. Petersburg State Technical University, 1990 </li>
+<li>Doctor of Sciences, St. Petersburg State University, 1989 </li>
+<li>Phd, Leningrad State University, 1975 </li>
+</ol>
 <h3>Institutional affiliations:</h3>
 <ol>
 <li>1992 to present – Director of Laboratory of Nonlinear Analysis and Mathematical Simulation, St. Petersburg State Technical University; </li>
@@ -72,9 +78,11 @@ Publications of Prof. G.Osipenko: 75 papers.Some publications:
 </ul>
 </p>
 <h3>Some Books:</h3>
-<p><ul><li>
-Lectures On Symbolic Analysis of Dynamical Systems 
-</li></ul></p>
+<p>
+  <ul>
+    <li><a href="$ResourceLink$/books/book_gs_ampi.pdf">Lectures On Symbolic Analysis of Dynamical Systems</a></li>
+  </ul>
+</p>
 <p>
 <img src="$ResourceLink$/osipenko2.jpg" alt="Photo" /> <br />
 Jim Yorke and Osipenko G.S.
