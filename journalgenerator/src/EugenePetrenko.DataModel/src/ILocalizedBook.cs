@@ -10,6 +10,7 @@ namespace EugenePetrenko.DataModel
     string Abstract { get; }
     string Title { get; }
     string Image { get; }
+    string Pdf { get; }
     string[] Authors { get; }
     string ISBN { get;}
   }
@@ -17,23 +18,22 @@ namespace EugenePetrenko.DataModel
   internal class LocalizedBookImpl : Entity, ILocalizedBook
   {
     private readonly DateTime myDate;
+    private readonly IBook myBook;
     private readonly string myAbstract;
     private readonly string myTitle;
-    private readonly string myImage;
     private readonly string[] myAuthors;
     private readonly string myISBN;
-    private readonly string myBoolInfoLink;
 
-
-    public LocalizedBookImpl(DateTime date, string image, XmlNode el, IXmlDataLoader loader) : base(loader.EntityGenerator)
+    public LocalizedBookImpl(DateTime date, IBook book, XmlNode el, IXmlDataLoader loader) : base(loader.EntityGenerator)
     {
-      myAbstract = el.SelectSingleNode("abstract/text()").Value.Trim();
-      myTitle = el.SelectSingleNode("title/text()").Value.Trim();
-      myISBN = el.SelectSingleNode("@isbn").Value.Trim();
+      myAbstract = el.ReadText("abstract/text()");
+      myTitle = el.ReadText("title/text()");
+      myISBN = el.ReadText("@isbn");
       myDate = date;
-      myImage = image.Trim();
-      List<string> authors = new List<string>();
-      foreach (XmlNode node in el.SelectNodes("authors\author\text()"))
+      myBook = book;
+
+      var authors = new List<string>();
+      foreach (XmlNode node in el.SelectNodes("authors/author/text()"))
       {
         authors.Add(node.Value);
       }
@@ -62,7 +62,12 @@ namespace EugenePetrenko.DataModel
 
     public string Image
     {
-      get { return myImage; }
+      get { return myBook.Image; }
+    }
+
+    public string Pdf
+    {
+      get { return myBook.Pdf; }
     }
 
     public string ISBN

@@ -87,7 +87,7 @@ namespace EugenePetrenko.JournalGenerator
 
         Console.Out.WriteLine("Loading template for lang {0} from {1}", lang, tpath);
 
-        StringTemplateGroup group = new StringTemplateGroup("journal_" + lang, tpath);
+        var group = new StringTemplateGroup("journal_" + lang, tpath);
         group.RegisterAttributeRenderer(typeof (DateTime), new DateRenderer());
         myTemplates[lang] = group;
       }
@@ -102,8 +102,7 @@ namespace EugenePetrenko.JournalGenerator
       if (!Directory.Exists(dir))
         Directory.CreateDirectory(dir);
 
-      FastZip zip = new FastZip();
-      zip.CreateEmptyDirectories = false;
+      var zip = new FastZip {CreateEmptyDirectories = false};
       zip.CreateZip(output, backup, true, null);
 
       FileUtil.SmartDelete(backup);
@@ -111,7 +110,7 @@ namespace EugenePetrenko.JournalGenerator
 
     public void GeneratePage(HtmlGenerationContext ctxp)
     {
-      FileHtmlContext ctx = new FileHtmlContext(myLinkManager, ctxp);
+      var ctx = new FileHtmlContext(myLinkManager, ctxp);
       Console.Out.WriteLine("\r\nGeneratign page {1}: {0}...", ctx, ctx.TemplateName);
 
       foreach (Language language in myLanguages)
@@ -159,7 +158,7 @@ namespace EugenePetrenko.JournalGenerator
 
       foreach (INumber number in myJournal.Numbers)
       {
-        RFFIJournalNumber num = new RFFIJournalNumber(new RFFIIssue(number));
+        var num = new RFFIJournalNumber(new RFFIIssue(number));
         XmlDocument doc = XmlAttributeProcessor.Build(num);
 
         doc.Save(Path.Combine(dir, string.Format("{0}-{1}.xml", number.Year, number.Number)));        
@@ -190,8 +189,8 @@ namespace EugenePetrenko.JournalGenerator
         return -1;
       }
 //      string[] args = new string[] {@"/url=file:\\\c:\tmp\", @"/dest=c:\tmp\"};
-      CommandLineParser parser = new CommandLineParser(_args);
-      Program program = new Program(parser);
+      var parser = new CommandLineParser(_args);
+      var program = new Program(parser);
       
       program.BuildPages();
       if (parser.HasKey("rffi"))

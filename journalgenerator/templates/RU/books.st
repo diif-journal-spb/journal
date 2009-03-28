@@ -8,5 +8,6 @@ $books:{
   $it.Abstract$
 </p>
 <p>$it.Date$</p>
-<!--Image $it.Image$ -->
+
+<p> $it.Image$ $it.Pdf$ </p>
 }$

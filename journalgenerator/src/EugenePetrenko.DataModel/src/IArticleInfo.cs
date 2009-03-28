@@ -32,9 +32,9 @@ namespace EugenePetrenko.DataModel
 
     public ArticleInfo(IArticle _article, XmlElement el, IXmlDataLoader loader) : base(loader.EntityGenerator)
     {
-      Article article = (Article) _article;
+      var article = (Article) _article;
       myJournalLanguage = loader.ParseLanguage(el);
-      List<IAuthorInfo> authors = new List<IAuthorInfo>();
+      var authors = new List<IAuthorInfo>();
       if (article != null && article.Authors != null)
       {
         foreach (IAuthor author in article.Authors)
@@ -64,7 +64,7 @@ namespace EugenePetrenko.DataModel
       myTitle = el.SelectSingleNode("title/text()").Value.Trim();
       myAbstract = el.SelectSingleNode("abstract/text()").Value.Trim();
 
-      List<string> extraFiles = new List<string>();
+      var extraFiles = new List<string>();
       foreach(XmlText extra in el.SelectNodes("extra-files/file/text()"))
       {
         string file = extra.Value.Trim();

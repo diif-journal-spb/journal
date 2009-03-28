@@ -28,5 +28,6 @@ namespace EugenePetrenko.DataModel
     {
       get { return myDate; }
     }
+
   }
 }

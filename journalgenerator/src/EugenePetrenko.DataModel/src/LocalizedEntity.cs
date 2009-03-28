@@ -25,7 +25,7 @@ namespace EugenePetrenko.DataModel
       return myLocalized.AllLanguages();
     }
 
-    public void AddEntity(JournalLanguage lang, T t)
+    protected void AddEntity(JournalLanguage lang, T t)
     {
       myLocalized.AddEntity(lang, t);
     }

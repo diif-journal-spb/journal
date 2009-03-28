@@ -10,7 +10,7 @@ namespace EugenePetrenko.DataModel
     {
     }
 
-    public LocalizedEntitySequence(XmlNode el, IXmlDataLoader loader)
+    protected LocalizedEntitySequence(XmlNode el, IXmlDataLoader loader)
       : base(loader.EntityGenerator)
     {
       Constructor(el, loader);

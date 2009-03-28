@@ -15,7 +15,7 @@ namespace EugenePetrenko.DataModel
 
     public Article(XmlNode el, IXmlDataLoader loader) : base(loader.EntityGenerator)
     {
-      List<IAuthor> authors = new List<IAuthor>();
+      var authors = new List<IAuthor>();
       foreach (XmlElement attribute in el.SelectNodes("authors/author[@ref]"))
       {
         IAuthor author = loader.LookupAuthor(attribute.GetAttribute("ref"));

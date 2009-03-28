@@ -10,7 +10,7 @@ namespace EugenePetrenko.JournalGenerator
     private readonly IEnumerable<T> myItems;
     private readonly string myKey;
 
-    public CollectionGenerationContext(string key, IEnumerable<T> news, LinkManager manager, string template)
+    protected CollectionGenerationContext(string key, IEnumerable<T> news, LinkManager manager, string template)
       : base(manager, template)
     {
       myKey = key;

@@ -26,7 +26,7 @@ namespace EugenePetrenko.DataModel
 
     List<IAuthor> IXmlDataLoader.ParseAuthors(XmlElement element)
     {
-      List<IAuthor> result = new List<IAuthor>();
+      var result = new List<IAuthor>();
       foreach (XmlElement node in element.SelectNodes("author"))
       {
         result.Add(myLoader.ParseAuthor(node));
@@ -63,7 +63,7 @@ namespace EugenePetrenko.DataModel
 
     public DateTime ParseDateTime(string text)
     {
-      Regex regex = new Regex(@"(\d{4})\.(\d{1,2})\.(\d{1,2})");
+      var regex = new Regex(@"(\d{4})\.(\d{1,2})\.(\d{1,2})");
       Match match = regex.Match(text);
       int year = int.Parse(match.Groups[1].Value);
       int month = int.Parse(match.Groups[2].Value);
@@ -98,7 +98,7 @@ namespace EugenePetrenko.DataModel
       foreach (string file in Directory.GetFiles(myPath, mask))
       {
         try {
-          XmlDocument doc = new XmlDocument();
+          var doc = new XmlDocument();
           doc.Load(file);
           del(doc);
         } catch(Exception e) {
@@ -109,14 +109,11 @@ namespace EugenePetrenko.DataModel
 
     public XmlDataLoader(string path) : this()
     {    
-      List<INumber> myNumbers = new List<INumber>();
+      var myNumbers = new List<INumber>();
 
       myPath = path;
       ForeachXml("*.authors",
-                 delegate(XmlDocument doc)
-                   {
-                     myAuthors.AddRange(myLoader.ParseAuthors(doc.DocumentElement));
-                   });
+                 doc => myAuthors.AddRange(myLoader.ParseAuthors(doc.DocumentElement)));
 
       ForeachXml("*.number",
                  delegate(XmlDocument doc)
@@ -127,13 +124,10 @@ namespace EugenePetrenko.DataModel
                      }                     
                    });
 
-      ForeachXml("*.number", 
-        delegate(XmlDocument doc)
-                               {
-                                 myNumbers.Add(myLoader.ParseNumber(doc.DocumentElement));
-                               });     
+      ForeachXml("*.number",
+                 doc => myNumbers.Add(myLoader.ParseNumber(doc.DocumentElement)));     
 
-      List<INewsItem> news = new List<INewsItem>();
+      var news = new List<INewsItem>();
       ForeachXml("*.news", delegate(XmlDocument doc)
                              {
                                foreach (XmlElement element in doc.SelectNodes("news/item"))
@@ -143,7 +137,7 @@ namespace EugenePetrenko.DataModel
                              });
       news.Sort(delegate(INewsItem x, INewsItem y) { return x.Date.CompareTo(y.Date); });
       
-      List<IBook> books = new List<IBook>();
+      var books = new List<IBook>();
       ForeachXml("*.books", delegate(XmlDocument doc)
                               {
                                 foreach (XmlElement element in doc.SelectNodes("books/book"))
@@ -151,7 +145,7 @@ namespace EugenePetrenko.DataModel
                                   books.Add(new BookImpl(element, this));
                                 }
                               });
-      books.Sort(delegate(IBook x, IBook y) { return x.Date.CompareTo(y.Date); });
+      books.Sort((x, y) => x.Date.CompareTo(y.Date));
 
       myJournal = new Journal(myEntityGenerator, myNumbers.ToArray(), myAuthors.ToArray(), news.ToArray(), books.ToArray());
     }
@@ -168,7 +162,7 @@ namespace EugenePetrenko.DataModel
 
     public static IJournal Parse(string path)
     {
-      XmlDataLoader loader = new XmlDataLoader(path);
+        var loader = new XmlDataLoader(path);
       return loader.Journal;
     }
   }

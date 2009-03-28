@@ -2,7 +2,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.50727</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{115CFE1B-1023-42A5-99A0-60E5225F9F0D}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -16,6 +16,7 @@
     <OldToolsVersion>2.0</OldToolsVersion>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,6 +41,9 @@
       <HintPath>..\..\..\lib\nunit\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -69,6 +73,7 @@
     <Compile Include="src\LocalizedEntitySequence.cs" />
     <Compile Include="src\Pair.cs" />
     <Compile Include="src\XmlDataLoader.cs" />
+    <Compile Include="src\XmlUtil.cs" />
     <Compile Include="testSrc\ArticleTest.cs" />
     <Compile Include="testSrc\AuthorInfoTest.cs" />
     <Compile Include="testSrc\AuthorsTest.cs" />
