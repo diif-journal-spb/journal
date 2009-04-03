@@ -135,7 +135,7 @@ namespace EugenePetrenko.DataModel
                                  news.Add(new NewsItemImpl(element, this));
                                }
                              });
-      news.Sort(delegate(INewsItem x, INewsItem y) { return x.Date.CompareTo(y.Date); });
+      news.Sort((x, y) => x.Date.CompareTo(y.Date));
       
       var books = new List<IBook>();
       ForeachXml("*.books", delegate(XmlDocument doc)
@@ -146,6 +146,9 @@ namespace EugenePetrenko.DataModel
                                 }
                               });
       books.Sort((x, y) => x.Date.CompareTo(y.Date));
+
+      Func<INumber, string> cms = x => x.Year + "|" + x.Number;
+      myNumbers.Sort((a,b) => cms(a).CompareTo(cms(b)));
 
       myJournal = new Journal(myEntityGenerator, myNumbers.ToArray(), myAuthors.ToArray(), news.ToArray(), books.ToArray());
     }

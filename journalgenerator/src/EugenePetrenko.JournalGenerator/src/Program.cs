@@ -67,8 +67,8 @@ namespace EugenePetrenko.JournalGenerator
       DataDir = data;
       string version = DateTime.Now.ToString("yyyy-MM-dd");
 
-      BackUp(data, Path.Combine(destFile, "backup\\data-" + version + ".zip"));
-      BackUp(templates, Path.Combine(destFile, "backup\\templates-" + version + ".zip"));
+      BackUp(data, Path.Combine(destFile, "backup\\data-" + version + ".zip"), x=> { });
+      BackUp(templates, Path.Combine(destFile, "backup\\templates-" + version + ".zip"), x=> FileUtil.SmartDelete(Path.Combine(x, "shared/books")));
 
       myJournal = XmlDataLoader.Parse(data);
       myPdfManager = new PdfManager(myLinkManager, Path.Combine(Path.GetDirectoryName(templates), "pdf"));
@@ -93,10 +93,12 @@ namespace EugenePetrenko.JournalGenerator
       }
     }
 
-    private static void BackUp(string folder, string output)
+    private static void BackUp(string folder, string output, Action<string> removeNotNeeded)
     {
       string backup = folder + "qqq";
       FileUtil.Copy(folder, backup);
+
+      removeNotNeeded(backup);
 
       string dir = Path.GetDirectoryName(output);
       if (!Directory.Exists(dir))

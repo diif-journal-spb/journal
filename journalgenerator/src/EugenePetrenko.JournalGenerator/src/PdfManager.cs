@@ -26,7 +26,7 @@ namespace EugenePetrenko.JournalGenerator
 
       Link pageLink = page.ToLink(lang, null);
 
-      PdfLink link = new PdfLink(myLinkManager, name + ".pdf", pageLink);
+      var link = new PdfLink(myLinkManager, name + ".pdf", pageLink);
       IArticle tmp;
       while (myPdfLinksToArticle.TryGetValue(link, out tmp) && tmp != article)
       {
@@ -45,7 +45,7 @@ namespace EugenePetrenko.JournalGenerator
 
     private static string PdfName(IArticleInfo art)
     {
-      StringBuilder sb = new StringBuilder();
+      var sb = new StringBuilder();
       foreach (char c in Path.GetFileNameWithoutExtension(art.Pdf))
       {
         if (char.IsLetterOrDigit(c))
