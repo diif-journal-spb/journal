@@ -26,7 +26,7 @@ namespace EugenePetrenko.DataModel
 
       foreach (XmlElement node in el.SelectNodes("articleInfo"))
       {
-        IArticleInfo info = loader.ParseArticleInfo(this, node);
+        var info = loader.ParseArticleInfo(this, node);
         AddEntity(info.JournalLanguage, info);
       }
     }

@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Xml;
 
@@ -33,7 +32,7 @@ namespace EugenePetrenko.DataModel
                           new BooksNumberFactory(),
                           new PhdNumberFactory()
                         };
-      foreach (INumberSectionFactory factory in factories)
+      foreach (var factory in factories)
       {
         var articles = new List<IArticle>();
         foreach (XmlElement node in element.SelectNodes(factory.ElementName))

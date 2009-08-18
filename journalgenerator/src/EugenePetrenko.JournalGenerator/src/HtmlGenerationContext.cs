@@ -8,7 +8,7 @@ namespace EugenePetrenko.JournalGenerator
   {
     public static readonly string[] PREDEFINED = { "Link", "ForeignLink", "LanguageName", "ForeignLanguageName" };
 
-    private LinkTemplate myLinkTemplate = null;
+    private LinkTemplate myLinkTemplate;
 
     public abstract LinkTemplate GetLinkTemplate(LinkManager manager);
 
@@ -39,7 +39,7 @@ namespace EugenePetrenko.JournalGenerator
     {
       base.AppendLanguageContextInternal(language, ctx);
 
-      Language foreignLanguage = (Language)(-(int)language);
+      var foreignLanguage = (Language)(-(int)language);
       
       Link foreignLink = LinkTemplate.ToLink(foreignLanguage, LinkTemplate, language);
       Link link = LinkTemplate.ToLink(language, null);

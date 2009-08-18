@@ -5,8 +5,10 @@ using System.IO;
 using System.Xml;
 using Antlr.StringTemplate;
 using EugenePetrenko.DataModel;
+using EugenePetrenko.JournalGenerator.Inforeg;
 using EugenePetrenko.RFFI;
 using ICSharpCode.SharpZipLib.Zip;
+using System.Linq;
 
 namespace EugenePetrenko.JournalGenerator
 {
@@ -32,6 +34,7 @@ namespace EugenePetrenko.JournalGenerator
     private readonly Queue<HtmlGenerationContext> myQueue = new Queue<HtmlGenerationContext>();
 
     private readonly Dictionary<string, ConvertToLanguage> myGlobalContext = new Dictionary<string, ConvertToLanguage>();
+    private string myTemplatesPath;
 
     public PdfManager PdfManager
     {
@@ -56,9 +59,9 @@ namespace EugenePetrenko.JournalGenerator
 
       myLinkManager = new LinkManager(myCommandLine.GetValue("url"), destFile);
 
-      string templates = Path.GetFullPath(commandLineParser.GetValue("templates"));
+      myTemplatesPath = Path.GetFullPath(commandLineParser.GetValue("templates"));
 
-      if (!Directory.Exists(templates))
+      if (!Directory.Exists(myTemplatesPath))
       {
         Console.Out.WriteLine("Failed to find templates dir");
         return;
@@ -68,22 +71,22 @@ namespace EugenePetrenko.JournalGenerator
       string version = DateTime.Now.ToString("yyyy-MM-dd");
 
       BackUp(data, Path.Combine(destFile, "backup\\data-" + version + ".zip"), x=> { });
-      BackUp(templates, Path.Combine(destFile, "backup\\templates-" + version + ".zip"), x=> FileUtil.SmartDelete(Path.Combine(x, "shared/books")));
+      BackUp(myTemplatesPath, Path.Combine(destFile, "backup\\templates-" + version + ".zip"), x=> FileUtil.SmartDelete(Path.Combine(x, "shared/books")));
 
       myJournal = XmlDataLoader.Parse(data);
-      myPdfManager = new PdfManager(myLinkManager, Path.Combine(Path.GetDirectoryName(templates), "pdf"));
+      myPdfManager = new PdfManager(myLinkManager, Path.Combine(Path.GetDirectoryName(myTemplatesPath), "pdf"));
 
-      Console.Out.WriteLine("Template path = {0}, exists = [{1}]", templates, Directory.Exists(templates));
+      Console.Out.WriteLine("Template path = {0}, exists = [{1}]", myTemplatesPath, Directory.Exists(myTemplatesPath));
 
       myTemplates = new Dictionary<Language, StringTemplateGroup>();
 
-      FileUtil.Copy(Path.Combine(templates, "shared"), destFile);
+      FileUtil.Copy(Path.Combine(myTemplatesPath, "shared"), destFile);
 
       myLanguages = new List<Language>();
       foreach (Language lang in Enum.GetValues(typeof (Language)))
       {
         myLanguages.Add(lang);
-        string tpath = Path.Combine(templates, lang.ToString());
+        string tpath = Path.Combine(myTemplatesPath, lang.ToString());
 
         Console.Out.WriteLine("Loading template for lang {0} from {1}", lang, tpath);
 
@@ -167,6 +170,13 @@ namespace EugenePetrenko.JournalGenerator
       }      
     }
 
+    public void BuildInforeg(string numYear)
+    {
+      var number = myJournal.Numbers.Where(x => numYear == x.Number + "-" + x.Year).Single();
+
+      new InforegArticlesReport(number, Path.Combine(DestDir, "inforeg"), myTemplatesPath, myPdfManager).GenerateReport();
+    }
+
     public void AddPage(HtmlGenerationContext page)
     {
       myQueue.Enqueue(page);
@@ -200,6 +210,11 @@ namespace EugenePetrenko.JournalGenerator
         program.BuildRFFI();
       }
 
+      if (parser.HasKey("inforeg"))
+      {
+        program.BuildInforeg(parser.GetValue("inforeg"));
+      }
+
       return 0;
     }
 
@@ -209,6 +224,7 @@ namespace EugenePetrenko.JournalGenerator
       Console.Out.WriteLine("  prog.exe /url=<base_url> /dest=<path to get> /templates=<path to templates> /data=<path to data> [/rffi]");
       Console.Out.WriteLine("  where:");
       Console.Out.WriteLine("    /rffi - to build rffi export xml files");
+      Console.Out.WriteLine("    /inforeg=<num>-<year> - to build inforeg files");
     }
   }
 }

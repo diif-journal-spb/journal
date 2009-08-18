@@ -67,6 +67,7 @@
     <Compile Include="src\DateRenderer.cs" />
     <Compile Include="src\FileHtmlContext.cs" />
     <Compile Include="src\FileLanguageGenerationContext.cs" />
+    <Compile Include="src\FileLanguageGenerationContextWithExtraFiles.cs" />
     <Compile Include="src\FileUtil.cs" />
     <Compile Include="src\GenerationContext.cs" />
     <Compile Include="src\GenerationContextT.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="src\Hashset.cs" />
     <Compile Include="src\HtmlDynamicPage.cs" />
     <Compile Include="src\HtmlGenerationContext.cs" />
+    <Compile Include="src\Inforeg\InforegArticlesReport.cs" />
     <Compile Include="src\JournalArticle.cs" />
     <Compile Include="src\JournalContentsContext.cs" />
     <Compile Include="src\JournalNumberContext.cs" />
@@ -88,8 +90,10 @@
     <Compile Include="src\PdfLink.cs" />
     <Compile Include="src\PdfManager.cs" />
     <Compile Include="src\Program.cs" />
+    <Compile Include="src\ReflectionContext.cs" />
     <Compile Include="src\SimplePageContext.cs" />
     <Compile Include="src\SmartLookupDictionary.cs" />
+    <Compile Include="src\Util\Annotations.cs" />
     <Compile Include="src\Util\UsedByStringTemplateAttribute.cs" />
     <Compile Include="testSrc\LinkManagerTest.cs" />
   </ItemGroup>
@@ -102,6 +106,11 @@
       <Project>{C7E2F879-4FBE-49E7-8B6E-3C77136C0F5F}</Project>
       <Name>EugenePetrenko.RFFI</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\templates\inforeg\articles.st">
+      <Link>src\Inforeg\articles.st</Link>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -34,6 +34,7 @@
       <arg value="/dest=${release.path}" />
       <arg value="/templates=${path::get-full-path(base + '\templates')}"/>
       <arg value="/data=${path::get-full-path(base + '\data')}" />
+      <arg value="/inforeg=1-2009" />
     </exec>
 
     <if test="${file::exists(release.last)}">      

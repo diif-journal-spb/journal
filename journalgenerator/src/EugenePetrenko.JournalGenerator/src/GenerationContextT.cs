@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Reflection;
 using Antlr.StringTemplate;
 
 namespace EugenePetrenko.JournalGenerator
@@ -8,7 +7,6 @@ namespace EugenePetrenko.JournalGenerator
   public abstract class GenerationContext<T> : GenerationContext, IEquatable<GenerationContext<T>> where T : LanguageGenerationContext
   {        
     private readonly string myTemplateName;
-    
     
     [GenerationHidden]
     public string TemplateName
@@ -25,11 +23,7 @@ namespace EugenePetrenko.JournalGenerator
 
     protected virtual void AppendLanguageContextInternal(Language language, Dictionary<string, object> ctx)
     {
-      foreach (PropertyInfo info in GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance))
-      {
-        if (!info.IsDefined(typeof (GenerationHiddenAttribute), true))
-          ctx.Add(info.Name, info.GetGetMethod().Invoke(this, new object[0]));
-      }
+      this.AppendProprerties(ctx);
 
       ctx["ResourceLink"] = myManager.GetRootLink(language, LinkTemplate);
       ctx["LanguageResourceLink"] = myManager.GetRootLinkForLanguage(language, LinkTemplate);
@@ -37,17 +31,17 @@ namespace EugenePetrenko.JournalGenerator
 
     public T LanguageContext(Language language)
     {
-      Dictionary<string, object> dic = new Dictionary<string, object>();
+      var dic = new Dictionary<string, object>();
 
       Program.Instance.AddPredefinedProperties(dic, language, LinkTemplate);
 
       AppendLanguageContextInternal(language, dic);
 
-      SmartLookupDictionary sdic = new SmartLookupDictionary(myTemplateName, dic, language, LinkTemplate);
+      var sdic = new SmartLookupDictionary(myTemplateName, dic, language, LinkTemplate);
 
       sdic.LookupTemplate += delegate(string item)
                                {
-                                 HtmlDynamicPage page = new HtmlDynamicPage(myManager, item);
+                                 var page = new HtmlDynamicPage(myManager, item);
                                  AddContext(page);
                                  return page;
                                };
@@ -65,7 +59,7 @@ namespace EugenePetrenko.JournalGenerator
 
     public void AddContextRange<TT>(ICollection<TT> ctx) where TT : HtmlGenerationContext
     {
-      foreach (TT t in ctx)
+      foreach (var t in ctx)
       {
         AddContext(t);
       }

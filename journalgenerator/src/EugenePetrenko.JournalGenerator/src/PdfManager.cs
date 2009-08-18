@@ -8,7 +8,10 @@ namespace EugenePetrenko.JournalGenerator
 {
   public class PdfManager
   {
-    private readonly Dictionary<PdfLink, string> myCopyFiles = new Dictionary<PdfLink, string>();
+    /// <summary>
+    /// Dest -> Source
+    /// </summary>
+    private readonly Dictionary<string, string> myCopyFiles = new Dictionary<string, string>();
     private readonly Dictionary<PdfLink, IArticle> myPdfLinksToArticle = new Dictionary<PdfLink, IArticle>();
     private readonly LinkManager myLinkManager;
     private readonly string myPdfStorePath;
@@ -17,6 +20,15 @@ namespace EugenePetrenko.JournalGenerator
     {
       myLinkManager = linkManager;
       myPdfStorePath = pdfStorePath;
+    }
+
+    public void RegisterPdfWithName(IArticleInfo article, string relPath)
+    {
+      string pdfFIle = Path.Combine(myPdfStorePath, article.Pdf);
+      if (!File.Exists(pdfFIle))
+        Console.Error.WriteLine("Filed to get file {0} for acticle {1}", pdfFIle, article);
+
+      myCopyFiles[relPath] = pdfFIle;
     }
 
     public PdfLink RegisterPdf(IArticle article, Language lang, LinkTemplate page)
@@ -38,7 +50,7 @@ namespace EugenePetrenko.JournalGenerator
       if (!File.Exists(pdfFIle))
         Console.Error.WriteLine("Filed to get file {0} for acticle {1}", pdfFIle, article);
 
-      myCopyFiles[link] = pdfFIle;
+      myCopyFiles[link.DestFile] = pdfFIle;
       myPdfLinksToArticle[link] = article;
       return link;
     }
@@ -64,9 +76,9 @@ namespace EugenePetrenko.JournalGenerator
     {
       Console.Out.WriteLine("Copy pdf files to the dest folder");
 
-      foreach (KeyValuePair<PdfLink, string> file in myCopyFiles)
+      foreach (KeyValuePair<string, string> file in myCopyFiles)
       {
-        string dest = file.Key.DestFile;
+        string dest = file.Key;
         string dir = Path.GetDirectoryName(dest);
         if (!Directory.Exists(dir))
           Directory.CreateDirectory(dir);
@@ -76,6 +88,8 @@ namespace EugenePetrenko.JournalGenerator
         else
           File.Copy(file.Value, dest);
       }
+
+      myCopyFiles.Clear();
     }
   }
 }
