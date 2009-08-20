@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Antlr.StringTemplate;
@@ -65,6 +66,7 @@ namespace EugenePetrenko.JournalGenerator.Inforeg
       myPdfManager.RegisterPdfWithName(info, Path.Combine(myDestFolder, url));
       aaa.Add(new Article
                 {
+                  Authors = String.Join(", ", info.Authors.Select(x=>x.FirstName + " " + x.MiddleName + " " + x.LastName).ToArray()),
                   Name = info.Title,
                   Url = url
                 });
@@ -80,6 +82,7 @@ namespace EugenePetrenko.JournalGenerator.Inforeg
 
     private class Article
     {
+      public string Authors { get; set; }
       public string Name { get; set; }
       public string Url { get; set; }
     }

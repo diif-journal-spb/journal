@@ -18,6 +18,8 @@
   </target>
 
   <target name="build">
+    <echo message="Use /t:inforegYear=&lt;number>-&lt;year> to specify articles generation for inforeg" />
+
     <property name="release.last" value="${release}\last.success" />
 
     <tstamp property="release.date" pattern="yyyy-MM-dd HH-mm-ss" verbose="true" />
@@ -34,7 +36,7 @@
       <arg value="/dest=${release.path}" />
       <arg value="/templates=${path::get-full-path(base + '\templates')}"/>
       <arg value="/data=${path::get-full-path(base + '\data')}" />
-      <arg value="/inforeg=1-2009" />
+<!--      <arg value="/inforeg=${inforefYear}" if="${property::exists('inforefYear')}" /> -->
     </exec>
 
     <if test="${file::exists(release.last)}">      
