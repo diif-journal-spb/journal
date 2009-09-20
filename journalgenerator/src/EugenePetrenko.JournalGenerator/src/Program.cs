@@ -172,9 +172,23 @@ namespace EugenePetrenko.JournalGenerator
 
     public void BuildInforeg(string numYear)
     {
-      var number = myJournal.Numbers.Where(x => numYear == x.Number + "-" + x.Year).Single();
+      var number = myJournal.Numbers.Where(x => numYear == string.Format("{0}-{1}", x.Number, x.Year)).Single();
+      BuildInfoRegData(number);
+    }
 
-      new InforegArticlesReport(number, Path.Combine(DestDir, "inforeg"), myTemplatesPath, myPdfManager).GenerateReport();
+    public void BuildInforegNumbers(int count)
+    {
+      var col = myJournal.Numbers.OrderBy(x => -x.IntYear*1000 - x.IntNumber).Take(count);
+      foreach (var number in col)
+      {
+        BuildInfoRegData(number);
+      }
+    }
+
+    private void BuildInfoRegData(INumber number)
+    {
+      var folder = Path.Combine(DestDir, string.Format("inforeg-{0}-{1}", number.Year, number.Number));
+      new InforegArticlesReport(number, folder, myTemplatesPath, myPdfManager).GenerateReport();
     }
 
     public void AddPage(HtmlGenerationContext page)
@@ -212,7 +226,15 @@ namespace EugenePetrenko.JournalGenerator
 
       if (parser.HasKey("inforeg"))
       {
-        program.BuildInforeg(parser.GetValue("inforeg"));
+        foreach (var yn in parser.GetValue("inforeg").Split(','))
+        {
+          program.BuildInforeg(yn);
+        }
+      }
+
+      if (parser.HasKey("inforegs"))
+      {
+        program.BuildInforegNumbers(int.Parse(parser.GetValue("inforegs")));
       }
 
       return 0;

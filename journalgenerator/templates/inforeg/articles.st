@@ -36,11 +36,11 @@
   <body>
   <h1>Электронный журнал "Дифференциальные Уравнения и Процессы Управления"</h1>
   <h2>Номер $Number$ $Year$</h2>
-  <ul>  
+  <ol>  
   $Articles:{    
     <li>$it.Authors$ <a href="$it.Url$">$it.Name$</a></li>
   }$
-  </ul>
+  </ol>
   
   </body>
 </html>
