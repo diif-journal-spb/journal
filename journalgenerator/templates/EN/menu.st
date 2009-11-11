@@ -1,4 +1,5 @@
 <a href="$TemplateAboutLink$">About journal</a>
+<a href="$TemplateEditodial_PageLink$">Editorial Page</a>
 <a href="$TemplateAddressesLink$">Addresses</a>
 <a href="$TemplateScopeLink$">Scope</a>
 <a href="$TemplateEditorial_StaffLink$">Editorial staff</a>
