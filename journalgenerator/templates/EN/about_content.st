@@ -7,6 +7,15 @@
 
 <h4>Publisher</h4>
 <p>
-  Saint-Petersburg State University            <br />
-  Saint-Petersburg State Technical University
+  Saint-Petersburg State University, Mathematics and Mechanics Faculty
 </p>
+  <div id="spbstu" style="visibility:hidden">
+    <p>Saint-Petersburg State Technical University</p>
+  </div>
+
+  <script type="text/javascript">
+    var addr = window.location.host.toLowerCase();
+    if (addr.indexOf('neva.ru') > 0) {
+      document.getElementById('spbstu').style.visibility = 'visible';
+    }
+  </script>

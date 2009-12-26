@@ -15,7 +15,6 @@
       <div class="HeadForeignLink">
         <a href="$ForeignLink$">English version</a>
       </div>
-      <div class="issn">ISSN 1817-2172</div>
       <h1>Дифференциальные Уравнения<br />и<br />Процессы Управления</h1>
     </div>
     <div class="MainMenu">

@@ -14,7 +14,6 @@
       <div class="HeadForeignLink">
         <a href="$ForeignLink$">Русская версия</a>
      </div> 
-     <div class="issn">ISSN 1817-2172</div>
      <h1>Differential Equations<br />and<br />Control Processes</h1>
     </div>
     <div class="MainMenu">
