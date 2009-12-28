@@ -15,6 +15,15 @@
       <div class="HeadForeignLink">
         <a href="$ForeignLink$">English version</a>
       </div>
+
+     <div class="issn" id="issn">ISSN 1817-2172</div>
+     <script type="text/javascript">
+      var addr = window.location.host.toLowerCase();
+      if (addr.indexOf('neva.ru') > 0) {
+        document.getElementById('issn').style.visibility = 'hidden';
+      }
+     </script>
+
       <h1>Дифференциальные Уравнения<br />и<br />Процессы Управления</h1>
     </div>
     <div class="MainMenu">

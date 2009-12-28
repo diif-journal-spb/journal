@@ -7,7 +7,7 @@
 
 <h4>Publisher</h4>
 <p>
-  Saint-Petersburg State University, Mathematics and Mechanics Faculty
+  Mathematics and Mechanics Faculty of Saint-Petersburg State University 
 </p>
   <div id="spbstu" style="visibility:hidden">
     <p>Saint-Petersburg State Technical University</p>
