@@ -9,6 +9,18 @@
 
 <p>
   Математико-механический факультет Санкт-Петербургского Государственного университета
+  <br />
+  <strong>Адрес:</strong>
+  <br />
+  198504, Россия, Санкт-Петербург, 
+  <br/>
+  Старый Петергоф, 
+  <br />
+  Университетский пр., дом 28.   
+  <br />
+  тел: (812) 428-4210,
+  <br />
+  факс: (812) 428-6944
 </p>
 
 <div id="spbstu" style="visibility:hidden">
@@ -17,7 +29,7 @@
       
         <script type="text/javascript">
           var addr = window.location.host.toLowerCase();
-          if (addr.indexOf('neva.ru') >= 0) {
+          if (addr.indexOf('.neva.ru') >= 0) {
             document.getElementById('spbstu').style.visibility = 'visible';
           }
         </script>
