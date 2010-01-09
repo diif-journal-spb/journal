@@ -1,1 +1,1 @@
-Editorial Page
+Издатель
