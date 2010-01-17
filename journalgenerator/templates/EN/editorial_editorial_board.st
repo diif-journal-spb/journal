@@ -7,6 +7,7 @@
 <li>V.M. Ivanov (Dr. Sci., St. Petersburg),</li>
 <li>E.K. Ershov (Assoc.Prof., St. Petersburg),</li>
 <li>V.N. Kozlov (Dr. Sci., St. Petersburg),</li>
+<li>N.V. Kuznetsov (Assoc. Prof., St. Petersburg),</li>
 <li>G.G. Malinechkii (Dr. Sci., Moscow),</li>
 <li>A.S. Matveev (Dr. Sci., St. Petersburg),</li>
 <li>I.V. Miroshnik (Dr. Sci., St. Petersburg),</li>

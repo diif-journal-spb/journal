@@ -3,12 +3,11 @@
 $about_content()$
 
 <h3>Editor-in-Chief</h3>
-<ul><li>George S. Osipenko</li></ul>
+<ul><li>Gennady A. Leonov</li></ul>
 
-<h3>Assistant Editors</h3>
+<h3>Assistant Editor</h3>
 <ul>
-  <li>Alexandr V. Flegontov</li>
-  <li>Sergey Yu. Pilyugin</li>
+  <li>Viktor A. Pliss</li>
 </ul>
 
 <h3>Editor</h3>
@@ -20,7 +19,6 @@ $about_content()$
 <ul>
   <li>Eugene I. Petrenko</li>
 </ul>
-
 
 $editorial_publishing_board()$
 
