@@ -45,7 +45,7 @@ Russia, Peterhof,
 Universitetskii pr., 28, 
 Mathematics & Mechanics faculty, 
 Dept. of Computer Science
-Ampilova Natalie, 
+Ampilova Nataly, 
 e-mail: <a href="jodiff@mail.ru">jodiff@mail.ru</a>; <a href="nataly@is1483.spb.edu">nataly@is1483.spb.edu</a>
 </pre>
 
