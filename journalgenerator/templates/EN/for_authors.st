@@ -1,60 +1,56 @@
 <h2>Preparation of a paper</h2>
-<p>The following matters must be submitted to the Editorial Board:
+<p>A paper submission MUST include:
 <ul>
-  <li>files of the paper prepared in accordance with instruction for authors (in <a href="http://www.miktex.org">MikTex 2.7(LaTeX)</a> or <a href="http://www.microsoft.com/office">Microsoft Word</a> formats);</li>
-  <li>PDF-file of the  paper;</li>
-  <li>in Russian and in English ( in Plain Text  or HTML format)  there are submitted:
+  <li>Files of the paper in <a href="http://www.miktex.org">MikTex 2.7(LaTeX)</a> 
+		or <a href="http://www.microsoft.com/office">Microsoft Word</a> formats.
+		<strong>Journal <a href="#template-files">templates</a> must be used</strong>
+		</li>
+  <li>PDF-file of the paper</li>
+  <li>Text file (in english):
     <ul>
-      <li>abstracts;</li>
-      <li>author's application form, including
-        <ul>
-           <li>surname, first name , patronymic;</li>
-           <li>postal address;</li>
-           <li>e-mail(to be published in open access)</li>
-           <li>phone, fax;</li>
-           <li>institution and position;</li>
-           <li>academic status and degree;</li>
-        </ul>
-      </li>
+	  <li>paper title</li>
+      <li>abstracts</li>      
+      <li>surname, first name, patronymic</li>
+      <li>postal address</li>
+      <li>e-mail (to be published in open access)</li>
+      <li>phone, fax</li>
+      <li>institution and position</li>
+      <li>academic status and degree</li>      
     </ul>
   </li>
-  <li>covering letter containing:
+  <li>If the paper is in Russian, the same text file in russian is required</li>
+  <li>Covering letter containing:
     <ul>
-      <li>a fields of study which the paper relates to;</li>
-      <li>Possible referees of the paper.</li>
+      <li>a fields of study which the paper relates to</li>
+      <li>possible referees of the paper</li>
     </ul>
   </li>
 </ul>
 </p>
 
-<h3>For papers written in English all the matters are submitted in English.</h3>
+<p>
+  The paper is to be prepared in accordance with the journal's style following the instruction for authors.
+  The paper size is not limited.
+</p>
 
-<p>Files may be sent by ordinary mail (on a diskette of the format 1.44Mb-3.5'' or CD/DVD) or by E-mail. Two hard copies of the paper must necessarily be sent for reviewing purposes.</p>
+<p>Note. The submitted materials are not taken back.</p>
 
-<p>The paper is to be prepared in accordance with the journal's style following the instruction for authors. Authors may appeal to the Editorial Board for aid.</p>
+<p>Papers are to be sent to e-mail:
+   <a href="mailto:jodiff@mail.ru">jodiff@mail.ru</a> 
+   and 
+   <a href="mailto:nataly@is1483.spb.edu">nataly@is1483.spb.edu</a>.
+</p>
 
-<p>The paper size is not limited.</p>
 
-<p>Note. The submitted matters are not taken back.</p>
-
-
-<h3>Papers are to be sent to</h3>
-<pre>
-198504 
-Russia, Peterhof, 
-Universitetskii pr., 28, 
-Mathematics & Mechanics faculty, 
-Dept. of Computer Science
-Ampilova Nataly, 
-e-mail: <a href="jodiff@mail.ru">jodiff@mail.ru</a>; <a href="nataly@is1483.spb.edu">nataly@is1483.spb.edu</a>
-</pre>
-
-<h2>Electronic publication is realized as follows:</h2>
-<p>Paper's abstract and pdf-file of the article are displayed at the Journal home page in INTERNET. The notification and the request to check the correctness of the paper are sent to the author.</p>
-<p>(If the Editorial Board has a problem with the pdf-file preparation the author is asked to do it.)</p>
- 
+<h2>Electronic publication contains of:</h2>
+<ul>
+  <li>Paper's abstract and pdf-file published at the Journal home page in the Internet.</li>
+  <li>The notification is sent to the author.</li>
+  <li>Author is responsible for solving any issues with preparation of the materials.</li>
+</ul> 
 
 <h2>Preparation of the article in  TEX-format</h2>
+<a name="template-files"> </a>
 <p>When preparing an article you should use <a href="http://www.miktex.org">MikTex 2.7</a> and templates.</p>
 <p>How to apply the templates for MikTex:
  <ul>
@@ -68,7 +64,6 @@ e-mail: <a href="jodiff@mail.ru">jodiff@mail.ru</a>; <a href="nataly@is1483.spb.
 </p>
 <p>Information about last versions of Tex you can find on the site <a href="http://www.miktex.org">http://www.miktex.org</a>. 
 LaTeX is a module in the MikTex package. </p>
-
 
 <h2>Preparation of the article in Microsoft Word</h2>
 <p>
