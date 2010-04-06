@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using System.Xml;
 using Antlr.StringTemplate;
 using EugenePetrenko.DataModel;
@@ -34,7 +35,7 @@ namespace EugenePetrenko.JournalGenerator
     private readonly Queue<HtmlGenerationContext> myQueue = new Queue<HtmlGenerationContext>();
 
     private readonly Dictionary<string, ConvertToLanguage> myGlobalContext = new Dictionary<string, ConvertToLanguage>();
-    private string myTemplatesPath;
+    private readonly string myTemplatesPath;
 
     public PdfManager PdfManager
     {
@@ -158,15 +159,29 @@ namespace EugenePetrenko.JournalGenerator
 
     public void BuildRFFI()
     {
-      string dir = Path.Combine(DestDir, "RFFI");
-      Directory.CreateDirectory(dir);
+      string rffi = Path.Combine(DestDir, "RFFI");
+      Directory.CreateDirectory(rffi);
 
       foreach (INumber number in myJournal.Numbers)
       {
+        var copy = myPdfManager.GetSubCopier();
+        string dir = Path.Combine(rffi, number.Year + "-" + number.Number);
+        Directory.CreateDirectory(dir);
+
         var num = new RFFIJournalNumber(new RFFIIssue(number));
         XmlDocument doc = XmlAttributeProcessor.Build(num);
 
-        doc.Save(Path.Combine(dir, string.Format("{0}-{1}.xml", number.Year, number.Number)));        
+
+        string file = Path.Combine(dir, string.Format("{0}-{1}_unicode.xml", number.Year, number.Number));
+        using (var stream = new StreamWriter(file, false, Encoding.Unicode))
+          doc.Save(stream);
+
+        num.RegisterPdfDownload((art, fileName)=>copy.RegisterPdfWithName(art, Path.Combine(dir, fileName)));
+
+        copy.CopyFiles();
+        
+        var z = new FastZip();
+        z.CreateZip(dir + ".zip", dir, true, null);
       }      
     }
 

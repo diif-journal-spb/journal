@@ -1,9 +1,11 @@
 using System;
 using System.Xml;
+using JetBrains.Annotations;
 
 namespace EugenePetrenko.RFFI
 {
   [AttributeUsage(AttributeTargets.Property|AttributeTargets.Class)]
+  [MeansImplicitUse]
   public class XmlElementPathAttribute : Attribute
   {
     private readonly string[] Path;

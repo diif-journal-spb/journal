@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using EugenePetrenko.DataModel;
 
 namespace EugenePetrenko.RFFI
@@ -47,10 +48,7 @@ namespace EugenePetrenko.RFFI
     {
       get
       {
-        foreach (IAuthor author in myArticle.Authors)
-        {
-          yield return new RFFIAuthor(author);
-        }
+        return myArticle.Authors.Select(author => new RFFIAuthor(author)).ToArray();
       }
     }
 
@@ -65,20 +63,17 @@ namespace EugenePetrenko.RFFI
 
     private int getFirstPage()
     {
-      foreach (IArticleInfo info in myArticle.AllLanguages())
-      {
-        return info.FirstPage;
-      }
-      return 0;
+      return myArticle.AllLanguages().Select(info => info.FirstPage).FirstOrDefault();
     }
-    
+
     private int getLastPage()
     {
-      foreach (IArticleInfo info in myArticle.AllLanguages())
-      {
-        return info.LastPage;
-      }
-      return 0;
+      return myArticle.AllLanguages().Select(info => info.LastPage).FirstOrDefault();
+    }
+
+    public IArticle Article
+    {
+      get { return myArticle; }
     }
   }
 }

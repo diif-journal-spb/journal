@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using EugenePetrenko.DataModel;
 
 namespace EugenePetrenko.RFFI
@@ -25,16 +26,13 @@ namespace EugenePetrenko.RFFI
     [XmlElementPath("article", Clone = true), XmlForeach]
     public IEnumerable<RFFIArticle> Articles
     {
-      get
+      get 
       {
-        foreach (IArticle article in Articlez)
-        {
-          yield return new RFFIArticle(article);
-        }
+        return Articlez.Select(article => new RFFIArticle(article)).ToArray();
       }
     }
 
-    private IArticle[] Articlez
+    private IEnumerable<IArticle> Articlez
     {
       get
       {

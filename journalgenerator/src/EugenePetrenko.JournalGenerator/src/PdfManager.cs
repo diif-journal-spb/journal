@@ -6,20 +6,14 @@ using EugenePetrenko.DataModel;
 
 namespace EugenePetrenko.JournalGenerator
 {
-  public class PdfManager
+  public class PdfFileCopier
   {
-    /// <summary>
-    /// Dest -> Source
-    /// </summary>
     private readonly Dictionary<string, string> myCopyFiles = new Dictionary<string, string>();
-    private readonly Dictionary<PdfLink, IArticle> myPdfLinksToArticle = new Dictionary<PdfLink, IArticle>();
-    private readonly LinkManager myLinkManager;
     private readonly string myPdfStorePath;
 
-    public PdfManager(LinkManager linkManager, string pdfStorePath)
+    public PdfFileCopier(string myPdfStorePath)
     {
-      myLinkManager = linkManager;
-      myPdfStorePath = pdfStorePath;
+      this.myPdfStorePath = myPdfStorePath;
     }
 
     public void RegisterPdfWithName(IArticleInfo article, string relPath)
@@ -29,47 +23,6 @@ namespace EugenePetrenko.JournalGenerator
         Console.Error.WriteLine("Filed to get file {0} for acticle {1}", pdfFIle, article);
 
       myCopyFiles[relPath] = pdfFIle;
-    }
-
-    public PdfLink RegisterPdf(IArticle article, Language lang, LinkTemplate page)
-    {
-      IArticleInfo language = article.ForLanguage(LanguageUtil.Convert(lang));
-      string name = PdfName(language);
-
-      Link pageLink = page.ToLink(lang, null);
-
-      var link = new PdfLink(myLinkManager, name + ".pdf", pageLink);
-      IArticle tmp;
-      while (myPdfLinksToArticle.TryGetValue(link, out tmp) && tmp != article)
-      {
-        name += "j";
-        link = new PdfLink(myLinkManager, name + ".pdf", pageLink);
-      }
-
-      string pdfFIle = Path.Combine(myPdfStorePath, language.Pdf);
-      if (!File.Exists(pdfFIle))
-        Console.Error.WriteLine("Filed to get file {0} for acticle {1}", pdfFIle, article);
-
-      myCopyFiles[link.DestFile] = pdfFIle;
-      myPdfLinksToArticle[link] = article;
-      return link;
-    }
-
-    private static string PdfName(IArticleInfo art)
-    {
-      var sb = new StringBuilder();
-      foreach (char c in Path.GetFileNameWithoutExtension(art.Pdf))
-      {
-        if (char.IsLetterOrDigit(c))
-        {
-          sb.Append(char.ToLower(c));
-        }
-        else
-        {
-          sb.Append('_');
-        }
-      }
-      return Path.GetFileNameWithoutExtension(sb.ToString());
     }
 
     public void CopyFiles()
@@ -90,6 +43,57 @@ namespace EugenePetrenko.JournalGenerator
       }
 
       myCopyFiles.Clear();
+    }
+
+    public PdfFileCopier GetSubCopier()
+    {
+      return new PdfFileCopier(myPdfStorePath);
+    }
+  }
+
+  public class PdfManager : PdfFileCopier
+  {
+    /// <summary>
+    /// Dest -> Source
+    /// </summary>
+    
+    private readonly Dictionary<PdfLink, IArticle> myPdfLinksToArticle = new Dictionary<PdfLink, IArticle>();
+    private readonly LinkManager myLinkManager;
+
+    public PdfManager(LinkManager linkManager, string pdfStorePath) : base(pdfStorePath)
+    {
+      myLinkManager = linkManager;
+    }
+
+    
+    public PdfLink RegisterPdf(IArticle article, Language lang, LinkTemplate page)
+    {
+      IArticleInfo language = article.ForLanguage(LanguageUtil.Convert(lang));
+      string name = PdfName(language);
+
+      Link pageLink = page.ToLink(lang, null);
+
+      var link = new PdfLink(myLinkManager, name + ".pdf", pageLink);
+      IArticle tmp;
+      while (myPdfLinksToArticle.TryGetValue(link, out tmp) && tmp != article)
+      {
+        name += "j";
+        link = new PdfLink(myLinkManager, name + ".pdf", pageLink);
+      }
+
+      RegisterPdfWithName(language, link.DestFile);
+      myPdfLinksToArticle[link] = article;
+      return link;
+    }
+
+    private static string PdfName(IArticleInfo art)
+    {
+      var sb = new StringBuilder();
+      foreach (char c in Path.GetFileNameWithoutExtension(art.Pdf))
+      {
+        sb.Append(char.IsLetterOrDigit(c) ? char.ToLower(c) : '_');
+      }
+      return Path.GetFileNameWithoutExtension(sb.ToString());
     }
   }
 }

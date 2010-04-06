@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using EugenePetrenko.DataModel;
 
 namespace EugenePetrenko.RFFI
 {
@@ -29,5 +31,14 @@ namespace EugenePetrenko.RFFI
 
     [XmlElementPath("issn"), XmlText]
     public string JournalISSN { get { return "1817-2172";}}
+
+    public void RegisterPdfDownload(Action<IArticleInfo, string> myPdfManager)
+    {
+      foreach (var article in Issue.Articles)
+      {
+        IArticle art = article.Article;
+        myPdfManager(art.ForLanguage(JournalLanguage.RU), article.Pdf);
+      }
+    }
   }
 }

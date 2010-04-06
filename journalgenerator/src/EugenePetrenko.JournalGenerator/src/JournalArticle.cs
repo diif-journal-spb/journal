@@ -26,7 +26,7 @@ namespace EugenePetrenko.JournalGenerator
     {
       get
       {
-        List<string> result = new List<string>();
+        var result = new List<string>();
         foreach (IArticleInfo info in Article.AllLanguages())
         {
           result.AddRange(info.ExtraFiles);

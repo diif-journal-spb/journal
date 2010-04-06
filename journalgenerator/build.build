@@ -20,6 +20,7 @@
   <target name="build">
     <echo message="Use -D:inforeg=&lt;number>-&lt;year> to specify articles generation for inforeg" />
     <echo message="Use -D:inforegs=&lt;count&gt; to specify number of inforeg reports to generate" />
+    <echo message="Use -D:rffi=1 to enable RFFI export generation" />
 
     <property name="release.last" value="${release}\last.success" />
 
@@ -51,6 +52,7 @@
       <arg value="/data=${path::get-full-path(base + '\data')}" />
       <arg value="/inforeg=${pInforeg}" if="${property::exists('inforeg')}" />
       <arg value="/inforegs=${pInforegs}" if="${property::exists('inforegs')}" />
+      <arg value="/rffi" if="${property::exists('rffi')}" />
     </exec>
 
     <if test="${file::exists(release.last)}">      
