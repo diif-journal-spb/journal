@@ -2,7 +2,7 @@
    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
   <head>
-    <title>Журнал дифференциальные уравнения и процессы управления - $caption$</title>
+    <title>Р–СѓСЂРЅР°Р» РґРёС„С„РµСЂРµРЅС†РёР°Р»СЊРЅС‹Рµ СѓСЂР°РІРЅРµРЅРёСЏ Рё РїСЂРѕС†РµСЃСЃС‹ СѓРїСЂР°РІР»РµРЅРёСЏ - $caption$</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
     <!-- Journal generator by Eugene Petrenko (eugene[dot]petrenko(at)gmail_com), thanks to Nikita Raba" -->
     <link rel="stylesheet" href="$ResourceLink$/style.css" type="text/css"></link>
@@ -15,16 +15,10 @@
       <div class="HeadForeignLink">
         <a href="$ForeignLink$">English version</a>
       </div>
+                                     
+      <div class="issn">ISSN 1817-2172, СЂРµРі. Р­Р». в„– Р¤РЎ77-39410</div>
 
-     <div class="issn" id="issn">ISSN 1817-2172</div>
-     <script type="text/javascript">
-      var addr = window.location.host.toLowerCase();
-      if (addr.indexOf('neva.ru') > 0) {
-        document.getElementById('issn').style.visibility = 'hidden';
-      }
-     </script>
-
-      <h1>Дифференциальные Уравнения<br />и<br />Процессы Управления</h1>
+      <h1>Р”РёС„С„РµСЂРµРЅС†РёР°Р»СЊРЅС‹Рµ РЈСЂР°РІРЅРµРЅРёСЏ<br />Рё<br />РџСЂРѕС†РµСЃСЃС‹ РЈРїСЂР°РІР»РµРЅРёСЏ</h1>
     </div>
     <div class="MainMenu">
       $menu$
@@ -33,7 +27,7 @@
       $content$
     </div> 
     <div class="Footer">
-      Старая версия сайта доступна <a href="http://www.neva.ru/journal/rus/r_main.htm">здесь</a>
+      РЎС‚Р°СЂР°СЏ РІРµСЂСЃРёСЏ СЃР°Р№С‚Р° РґРѕСЃС‚СѓРїРЅР° <a href="http://www.neva.ru/journal/rus/r_main.htm">Р·РґРµСЃСЊ</a>
     </div>
   </body>
 </html>

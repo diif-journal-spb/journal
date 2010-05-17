@@ -1,5 +1,5 @@
 <h2>
-  Номер #$issue.Number$ за $issue.Year$
+  РќРѕРјРµСЂ #$issue.Number$ Р·Р° $issue.Year$
 </h2>
 
 
@@ -13,9 +13,9 @@ $sections:{
     <h3><a href="$it.Link$">$it.Info.Title$</a></h3>
     $it.Info.Authors:{<h5>$it.FirstName$ $it.MiddleName$ $it.LastName$</h5>}$
     <p>
-      <a href="$it.Pdf$">Полный текст (pdf)</a> 
+      <a href="$it.Pdf$">РџРѕР»РЅС‹Р№ С‚РµРєСЃС‚ (pdf)</a> 
       |
-      <a href="$it.Link$">Реферат</a>
+      <a href="$it.Link$">Р РµС„РµСЂР°С‚</a>
     </p>
    </div>
   }$

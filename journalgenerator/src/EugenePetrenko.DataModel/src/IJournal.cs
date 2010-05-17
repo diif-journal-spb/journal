@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace EugenePetrenko.DataModel
 {
@@ -49,13 +50,10 @@ namespace EugenePetrenko.DataModel
       get { return myBooks; }
     }
 
-    private static IEnumerable<T> CollectionForLanguage<T>(ILocalizedEntity<T>[] data, JournalLanguage lang)
+    private static IEnumerable<T> CollectionForLanguage<T>(IEnumerable<ILocalizedEntity<T>> data, JournalLanguage lang)
       where T : IEntity
     {
-      foreach (ILocalizedEntity<T> entity in data)
-      {
-        yield return entity.ForLanguage(lang);
-      }
+      return data.Select(entity => entity.ForLanguage(lang));
     }
 
     public IEnumerable<ILocalizedNewsItem> NewsForLanguage(JournalLanguage lang)

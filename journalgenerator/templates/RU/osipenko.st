@@ -1,5 +1,5 @@
 <img src="$ResourceLink$/osipenko.jpg" style="float:left; margin:3em" alt="Photo">
-<h2>Осипенко<br>Георгий Сергеевич</h2>	
+<h2>РћСЃРёРїРµРЅРєРѕ<br>Р“РµРѕСЂРіРёР№ РЎРµСЂРіРµРµРІРёС‡</h2>	
 <p>
 e-mail: george[dot]osipenko]at[mail.ru 
 </p>
@@ -11,12 +11,12 @@ e-mail: george[dot]osipenko]at[mail.ru
 </ol>
 <h3>Institutional affiliations:</h3>
 <ol>
-<li>1992 to present – Director of Laboratory of Nonlinear Analysis and Mathematical Simulation, St. Petersburg State Technical University; </li>
-<li>1990 to present – Professor, Dept. of Higher Mathematics, St. Petersburg State Technical University; </li>
-<li>2000 – Visiting Professor, Suleyman Demirel University, Isparta, Turkey; </li>
-<li>1995 – Visiting Professor, School of Sciences, Belmont University, Nashville, USA; </li>
-<li>1993 – Visiting Professor, Institute of Science and Technology, South Korea; </li>
-<li>1975-1990 – Associated Professor, Dept. of Higher Mathematics, St. Petersburg State Technical University, St. Petersburg, Russia; </li>
+<li>1992 to present вЂ“ Director of Laboratory of Nonlinear Analysis and Mathematical Simulation, St. Petersburg State Technical University; </li>
+<li>1990 to present вЂ“ Professor, Dept. of Higher Mathematics, St. Petersburg State Technical University; </li>
+<li>2000 вЂ“ Visiting Professor, Suleyman Demirel University, Isparta, Turkey; </li>
+<li>1995 вЂ“ Visiting Professor, School of Sciences, Belmont University, Nashville, USA; </li>
+<li>1993 вЂ“ Visiting Professor, Institute of Science and Technology, South Korea; </li>
+<li>1975-1990 вЂ“ Associated Professor, Dept. of Higher Mathematics, St. Petersburg State Technical University, St. Petersburg, Russia; </li>
 </ol>
 <h3>Teaching courses:</h3>
 <ol>

@@ -12,15 +12,9 @@
         $logo$
       </div>
       <div class="HeadForeignLink">
-        <a href="$ForeignLink$">Русская версия</a>
+        <a href="$ForeignLink$">Р СѓСЃСЃРєР°СЏ РІРµСЂСЃРёСЏ</a>
      </div> 
-     <div class="issn" id="issn">ISSN 1817-2172</div>
-     <script type="text/javascript">
-      var addr = window.location.host.toLowerCase();
-      if (addr.indexOf('neva.ru') > 0) {
-        document.getElementById('issn').style.visibility = 'hidden';
-      }
-     </script>
+     <div class="issn">ISSN 1817-2172, СЂРµРі. Р­Р». в„– Р¤РЎ77-39410</div>
      <h1>Differential Equations<br />and<br />Control Processes</h1>
     </div>
     <div class="MainMenu">

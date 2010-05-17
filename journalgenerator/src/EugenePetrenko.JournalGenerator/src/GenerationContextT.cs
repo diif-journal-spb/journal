@@ -4,7 +4,8 @@ using Antlr.StringTemplate;
 
 namespace EugenePetrenko.JournalGenerator
 {
-  public abstract class GenerationContext<T> : GenerationContext, IEquatable<GenerationContext<T>> where T : LanguageGenerationContext
+  public abstract class GenerationContext<T> : GenerationContext, IEquatable<GenerationContext<T>> 
+    where T : LanguageGenerationContext
   {        
     private readonly string myTemplateName;
     
@@ -52,12 +53,13 @@ namespace EugenePetrenko.JournalGenerator
 
     protected abstract T CreateContext(StringTemplate template, SmartLookupDictionary dic, Language language);
 
-    public virtual void AddContext(HtmlGenerationContext ctx)
+    protected void AddContext(HtmlGenerationContext ctx)
     {
       Program.Instance.AddPage(ctx);
     }
 
-    public void AddContextRange<TT>(ICollection<TT> ctx) where TT : HtmlGenerationContext
+    protected void AddContextRange<TT>(IEnumerable<TT> ctx) 
+      where TT : HtmlGenerationContext
     {
       foreach (var t in ctx)
       {
@@ -87,7 +89,7 @@ namespace EugenePetrenko.JournalGenerator
       return GeneratePage(myManager, lang, template, context);
     }
 
-    public string GeneratePage(LinkManager links, Language lang, string template, SmartLookupDictionary dic)
+    private string GeneratePage(LinkManager links, Language lang, string template, SmartLookupDictionary dic)
     {
       return new SimplePageContext(dic, links, template, LinkTemplate).LanguageContext(lang).GeneratePage();
     }

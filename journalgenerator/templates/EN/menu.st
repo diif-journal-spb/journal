@@ -7,4 +7,4 @@
 <a href="$TemplateFor_AuthorsLink$">For authors</a>
 <!--<a href="$BooksLink$">Books</a>-->
 <a href="$CollectionLink$">Collection</a>
-<a href="$ForeignLink$">Русская версия</a>
+<a href="$ForeignLink$">Р СѓСЃСЃРєР°СЏ РІРµСЂСЃРёСЏ</a>

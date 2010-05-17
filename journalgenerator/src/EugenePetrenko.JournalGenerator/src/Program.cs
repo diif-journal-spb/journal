@@ -91,7 +91,9 @@ namespace EugenePetrenko.JournalGenerator
 
         Console.Out.WriteLine("Loading template for lang {0} from {1}", lang, tpath);
 
-        var group = new StringTemplateGroup("journal_" + lang, tpath);
+        //TODO: Switch to unicode templates
+        var loader = new FileSystemTemplateLoader(tpath, Encoding.UTF8);
+        var group = new StringTemplateGroup("journal_" + lang, loader);        
         group.RegisterAttributeRenderer(typeof (DateTime), new DateRenderer());
         myTemplates[lang] = group;
       }

@@ -1,5 +1,5 @@
 <h2>
-  Коллекция номеров
+  РљРѕР»Р»РµРєС†РёСЏ РЅРѕРјРµСЂРѕРІ
 </h2>
 
 <div class="collection">
@@ -11,4 +11,4 @@
     </tr>}$
   </table> 
 </div>
-<a href="http://www.neva.ru/journal/rus/r_main_c.htm">Архив статей</a>
+<a href="http://www.neva.ru/journal/rus/r_main_c.htm">РђСЂС…РёРІ СЃС‚Р°С‚РµР№</a>

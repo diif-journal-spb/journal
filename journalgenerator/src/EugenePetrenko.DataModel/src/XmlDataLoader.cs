@@ -149,6 +149,7 @@ namespace EugenePetrenko.DataModel
 
       Func<INumber, string> cms = x => x.Year + "|" + x.Number;
       myNumbers.Sort((a,b) => cms(a).CompareTo(cms(b)));
+      news.Sort((a,b) => -a.Date.CompareTo(b.Date));
 
       myJournal = new Journal(myEntityGenerator, myNumbers.ToArray(), myAuthors.ToArray(), news.ToArray(), books.ToArray());
     }
