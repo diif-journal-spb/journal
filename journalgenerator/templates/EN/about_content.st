@@ -2,7 +2,7 @@
 <p>
   State Publishing Committee of the Russian Federation,<br />
   North-western Regional Department, Saint-Petersburg,<br />
-  Registration number: <strong>Эл. № ФС77-39410 at 15 April 2010</strong><br />
+  Registration number: <strong><a href="../license.jpg">Эл. № ФС77-39410</a> at 15 April 2010</strong><br />
   ISSN: 1817-2172
 </p>
 
