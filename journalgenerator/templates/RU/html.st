@@ -6,20 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
     <!-- Journal generator by Eugene Petrenko (eugene[dot]petrenko(at)gmail_com), thanks to Nikita Raba" -->
     <link rel="stylesheet" href="$ResourceLink$/style.css" type="text/css"></link>
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-17795545-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-
+    <script type="text/javascript" src="$ResourceLink$/google.analytics.js"></script>
   </head>
   <body>
     <div class="Head"> 
