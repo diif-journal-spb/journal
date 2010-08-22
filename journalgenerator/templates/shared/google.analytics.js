@@ -10,6 +10,8 @@ if (document.location.host.indexOf('neva.ru') >= 0) {
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+
+  setTimeout(function() { window.location="http://www.math.spbu.ru/diffjournal/j"; }, 300);
 }
 
 if (document.location.host.indexOf('spbu.ru') >= 0) {
