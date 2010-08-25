@@ -4,16 +4,17 @@ using JetBrains.Annotations;
 
 namespace EugenePetrenko.RFFI
 {
-  [AttributeUsage(AttributeTargets.Property|AttributeTargets.Class)]
   [MeansImplicitUse]
+  [AttributeUsage(AttributeTargets.Property|AttributeTargets.Class)]
   public class XmlElementPathAttribute : Attribute
   {
     private readonly string[] Path;
-    private bool myClone = false;
-    private bool[] myCloneData;
+    public bool Clone { get; set; }
+    public bool[] CloneData { get; set; }
 
     public XmlElementPathAttribute(params string[] path)
     {
+      Clone = false;
       Path = path;
     }
 
@@ -23,7 +24,7 @@ namespace EugenePetrenko.RFFI
       {
         string path = Path[i];
         XmlNode node = doc.SelectSingleNode(path);
-        if (node == null || Clone || (myCloneData != null && myCloneData.Length > i && myCloneData[i]))
+        if (node == null || Clone || (CloneData != null && CloneData.Length > i && CloneData[i]))
         {
           doc = doc.AppendChild(doc.OwnerDocument.CreateElement(path));
         }
@@ -33,18 +34,6 @@ namespace EugenePetrenko.RFFI
         }
       }
       return doc;
-    }
-
-    public bool Clone
-    {
-      get { return myClone; }
-      set { myClone = value; }
-    }
-
-    public bool[] CloneData
-    {
-      get { return myCloneData; }
-      set { myCloneData = value; }
     }
   }
 }

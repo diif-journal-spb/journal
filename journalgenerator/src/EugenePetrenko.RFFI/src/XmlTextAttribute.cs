@@ -1,8 +1,10 @@
 using System;
 using System.Xml;
+using JetBrains.Annotations;
 
 namespace EugenePetrenko.RFFI
 {
+  [MeansImplicitUse]
   [AttributeUsage(AttributeTargets.Property)]
   public class XmlTextAttribute : XmlBaseAttribute
   {
@@ -11,8 +13,9 @@ namespace EugenePetrenko.RFFI
       node.AppendChild(node.OwnerDocument.CreateTextNode(data));
     }
   }
-  
-  [AttributeUsage(AttributeTargets.Property)]
+
+  [MeansImplicitUse]
+  [AttributeUsage(AttributeTargets.Property)]  
   public class XmlCDataAttribute : XmlBaseAttribute
   {
     public override void Apply(XmlNode node, string data)

@@ -62,12 +62,11 @@ namespace EugenePetrenko.RFFI
     public static XmlDocument Build(object o)
     {
       object[] attr = o.GetType().GetCustomAttributes(typeof (XmlRootAttribute), true);
-      XmlDocument doc = new XmlDocument();
+      var doc = new XmlDocument();
       XmlNode root = ((XmlRootAttribute) attr[0]).Apply(doc);
 
-      foreach (
-        XmlElementPathAttribute attribute in o.GetType().GetCustomAttributes(typeof (XmlElementPathAttribute), true))
-      {
+      var attributes = o.GetType().GetCustomAttributes(typeof (XmlElementPathAttribute), true);
+      foreach (XmlElementPathAttribute attribute in attributes){
         root = attribute.Apply(root);
       }
 

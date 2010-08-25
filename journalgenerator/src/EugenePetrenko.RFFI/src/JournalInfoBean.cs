@@ -48,8 +48,20 @@ namespace EugenePetrenko.RFFI
       get { return myPublisherLocation; }
     }
 
-    private static readonly JournalInfoBean RUS = new JournalInfoBean("rus", "Дифференциальные Уравнения и Процессы Управления", "Санкт-Петербургский государственный технический университет", "Санкт-Петербург", @"Дифференциальные уравнения и процессы управления.""Лаборатория ""Нелинейный анализ и математическое моделирование"", Главный корпус, к. 125, Санкт-Петербургский государственный технический университет, ул. Политехническая, д. 29, 195251, Санкт-Петербург, Россия");
-    private static readonly JournalInfoBean ENG = new JournalInfoBean("eng", "Electronic Journal Difference Equations and Control Processes", "Saint-Petersburg State Technical University", "Saint Petersburg", @"State Publishing Committee of the Russian Federation North-western Regional Department, Saint-Petersburg, Registration number: P 23275 on March 7, 1997");
+    private static readonly JournalInfoBean RUS = new JournalInfoBean(
+      "rus", 
+      "Дифференциальные Уравнения и Процессы Управления", 
+      "Санкт-Петербургский государственный университет", 
+      "Санкт-Петербург", 
+      "198504, Россия, Санкт-Петербург, Старый Петергоф, Университетский пр., дом 28. тел: (812) 428-4210, факс: (812) 428-6944"
+      );
+
+    private static readonly JournalInfoBean ENG = new JournalInfoBean(
+      "eng", 
+      "Electronic Journal Difference Equations and Control Processes", 
+      "Saint-Petersburg State University",
+      "Saint Petersburg", 
+      "Universitetsky prospekt, 28, 198504, Peterhof, St. Petersburg, Russia. Phone: +7 (812) 428-4210, Fax: +7 (812) 428-6944");
 
     public static readonly JournalInfoBean[] BEANS = {RUS, ENG};
   }

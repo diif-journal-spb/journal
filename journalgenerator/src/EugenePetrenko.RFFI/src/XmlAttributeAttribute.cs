@@ -1,12 +1,14 @@
 using System;
 using System.Xml;
+using JetBrains.Annotations;
 
 namespace EugenePetrenko.RFFI
 {
   [AttributeUsage(AttributeTargets.Property, AllowMultiple = true)]
+  [MeansImplicitUse]
   public class XmlAttributeAttribute : XmlBaseAttribute
   {
-    public readonly string Key;
+    private readonly string Key;
 
     public XmlAttributeAttribute(string key)
     {

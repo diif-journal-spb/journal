@@ -1,7 +1,8 @@
 using System.Collections.Generic;
+using EugenePetrenko.RFFI.testSrc;
 using NUnit.Framework;
 
-namespace EugenePetrenko.RFFI.testSrc
+namespace EugenePetrenko.RFFI
 {
   [TestFixture]
   public class XmlProcessorTest : XmlTestBase
@@ -66,7 +67,7 @@ namespace EugenePetrenko.RFFI.testSrc
     private class Class_Test_05
     {
       [XmlAttribute("Bar"), XmlForeach, XmlText, XmlElementPath("z", Clone = true)]
-      public IEnumerable<string> Foo { get { return new string[] { "Foo", "Foo2" }; } }
+      public IEnumerable<string> Foo { get { return new [] { "Foo", "Foo2" }; } }
     }    
   }
 }

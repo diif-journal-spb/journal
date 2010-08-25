@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using EugenePetrenko.DataModel;
 
 namespace EugenePetrenko.RFFI
@@ -15,15 +16,20 @@ namespace EugenePetrenko.RFFI
       myAuthor = author;
     }
 
-    [XmlElementPath("individual", "individInfo", CloneData = new bool[]{false, true}), XmlForeach]
+    [XmlElementPath("individual", "individInfo", Clone = true), XmlForeach]
     public IEnumerable<RFFIAuthorInfo> Authors
     {
       get
       {
-        IAuthorInfo en = myAuthor.ForLanguage(JournalLanguage.EN);
-        yield return new RFFIAuthorInfo("eng", en.LastName, en.FirstName + " " + en.MiddleName, en.Address, en.EMail);
-        IAuthorInfo ru = myAuthor.ForLanguage(JournalLanguage.RU);
-        yield return new RFFIAuthorInfo("eng", ru.LastName, ru.FirstName + " " + ru.MiddleName, ru.Address, ru.EMail);
+        return
+          myAuthor.AllLanguages().Select(
+            en => new RFFIAuthorInfo(
+              en.JournalLanguage.Lang(), 
+              en.LastName, 
+              en.FirstName + " " + en.MiddleName, 
+              en.Address.FilterXml(),
+              en.EMail)
+              );
       }
     }
 
@@ -32,6 +38,5 @@ namespace EugenePetrenko.RFFI
     {
       get { return myAuthorId.ToString(); }
     }
-    
   }
 }

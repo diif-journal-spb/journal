@@ -9,10 +9,10 @@ namespace EugenePetrenko.RFFI.testSrc
   {
     protected static void DoTest<T>(string gold) where T : new()
     {
-      T t = new T();
+      var t = new T();
       XmlDocument build = XmlAttributeProcessor.Build(t);
 
-      StringWriter sw = new StringWriter();
+      var sw = new StringWriter();
       build.Save(new XmlTextWriter(sw));
 
       try

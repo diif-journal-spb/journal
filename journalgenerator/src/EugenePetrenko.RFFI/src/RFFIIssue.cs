@@ -42,15 +42,7 @@ namespace EugenePetrenko.RFFI
     
     private int GetPages()
     {
-      int sum = 0;
-      foreach (IArticle article in Articlez)
-      {        
-        foreach (IArticleInfo info in article.AllLanguages())
-        {
-          sum = Math.Max(sum, info.LastPage);
-        }        
-      }
-      return sum;
+      return Articlez.SelectMany(x => x.AllLanguages()).Max(x => x.LastPage);
     }
   }
 }

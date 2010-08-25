@@ -14,36 +14,31 @@ namespace EugenePetrenko.RFFI
     }
 
     [XmlElementPath("fpageart"), XmlText]
-    public string FirstPage { get { return getFirstPage().ToString(); } }
+    public string FirstPage { get { return myArticle.AllLanguages().Min(info => info.FirstPage).ToString(); } }
 
     [XmlElementPath("lpageart"), XmlText]
-    public string LastPage { get { return getLastPage().ToString(); } }
+    public string LastPage { get { return myArticle.AllLanguages().Max(info => info.LastPage).ToString(); } }
 
-    [XmlElementPath("arttitles", "arttitle", CloneData = new bool[]{false, true}), XmlForeach]
+
+    [XmlElementPath("arttitles", "arttitle", Clone = true), XmlForeach]
     public IEnumerable<RFFIArticleTitle> Titles
     {
       get
       {
-        IArticleInfo en = myArticle.ForLanguage(JournalLanguage.EN);
-        yield return new RFFIArticleTitle(en.Title, "eng");
-        IArticleInfo ru = myArticle.ForLanguage(JournalLanguage.RU);
-        yield return new RFFIArticleTitle(ru.Title, "rus");
+        return myArticle.AllLanguages().Select(x => new RFFIArticleTitle(x.Title, x.JournalLanguage.Lang()));
       }
     }
 
-    [XmlElementPath("abstracts", "abstract", CloneData = new bool[] { false, true }), XmlForeach]
+    [XmlElementPath("abstracts", "abstract", Clone = true), XmlForeach]
     public IEnumerable<RFFIAbstract> Abstracts
     {
       get
       {
-        IArticleInfo en = myArticle.ForLanguage(JournalLanguage.EN);
-        yield return new RFFIAbstract(en.Abstract, "eng");
-        IArticleInfo ru = myArticle.ForLanguage(JournalLanguage.RU);
-        yield return new RFFIAbstract(ru.Abstract, "rus");
+        return myArticle.AllLanguages().Select(x => new RFFIAbstract(x.Abstract, x.JournalLanguage.Lang()));
       }
     }
 
-    [XmlElementPath("authors", "author", CloneData = new bool[]{false, true}), XmlForeach]
+    [XmlElementPath("authors", "author", Clone = true), XmlForeach]
     public IEnumerable<RFFIAuthor> Authors
     {
       get
@@ -59,17 +54,7 @@ namespace EugenePetrenko.RFFI
     public string NoBiblist { get { return ""; } }
     
     [XmlElementPath("fpdf"), XmlText]
-    public string Pdf { get { return myArticle.ForLanguage(JournalLanguage.EN).Pdf; } }
-
-    private int getFirstPage()
-    {
-      return myArticle.AllLanguages().Select(info => info.FirstPage).FirstOrDefault();
-    }
-
-    private int getLastPage()
-    {
-      return myArticle.AllLanguages().Select(info => info.LastPage).FirstOrDefault();
-    }
+    public string Pdf { get { return myArticle.AllLanguages().Select(x=>x.Pdf).First(); } }
 
     public IArticle Article
     {

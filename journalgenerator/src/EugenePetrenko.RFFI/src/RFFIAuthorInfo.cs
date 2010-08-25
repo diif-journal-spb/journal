@@ -37,7 +37,7 @@ namespace EugenePetrenko.RFFI
       get { return myFName; }
     }
 
-    [XmlElementPath("auwork"), XmlText]
+    [XmlElementPath("auinf"), XmlText]
     public string Auwork
     {
       get { return myauwork; }
