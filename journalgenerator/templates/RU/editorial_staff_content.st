@@ -23,6 +23,4 @@ e-mail: <a href="mailto:nataly@is1483.spb.edu">nataly@is1483.spb.edu</a>
 e-mail: <a href="mailto:jodiff@mail.ru">jodiff@mail.ru</a>
 </p>
 
-$editorial_publishing_board()$
-
 $editorial_editorial_board()$

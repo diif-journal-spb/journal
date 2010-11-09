@@ -20,6 +20,4 @@ $about_content()$
   <li>Eugene I. Petrenko</li>
 </ul>
 
-$editorial_publishing_board()$
-
 $editorial_editorial_board()$

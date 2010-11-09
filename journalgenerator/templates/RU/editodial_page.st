@@ -16,6 +16,4 @@ $about_content()$
 <h3>Секретарь</h3>
 <ul><li>Петренко Евгений Игоревич</li></ul>
 
-$editorial_publishing_board()$
-
 $editorial_editorial_board()$

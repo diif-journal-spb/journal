@@ -25,6 +25,4 @@ tel: +7 921 957 5331<br />
 e-mail: <a href="mailto:jodiff@mail.ru">jodiff@mail.ru</a>
 </p>
 
-$editorial_publishing_board()$
-
 $editorial_editorial_board()$
