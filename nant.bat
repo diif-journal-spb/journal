@@ -1,3 +1,4 @@
+
 cd journalgenerator
 nant %*
 cd ..
