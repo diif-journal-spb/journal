@@ -9,6 +9,7 @@
 
   <target name="make">
     <delete dir="${base}\bin" failonerror="false" />
+    <!-- C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild  /p:Configuration=RELEASE /t:rebuild /p:TrackFileAccess=false -->
     <msbuild project="${base}\src\EugenePetrenko.JournalGenerator.sln" target="REBUILD" />
   </target> 
 
