@@ -5,12 +5,14 @@
   <property name="release" value="${base}/../release" />
   <property name="debug" value="${base}/../debug" />
   <property name="generator.exe" value="${base}/bin/EugenePetrenko.JournalGenerator.exe" />
-  
-
-  <target name="make">
-    <delete dir="${base}\bin" failonerror="false" />
-    <!-- C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild  /p:Configuration=RELEASE /t:rebuild /p:TrackFileAccess=false -->
-    <msbuild project="${base}\src\EugenePetrenko.JournalGenerator.sln" target="REBUILD" />
+ 
+  <target name="make" verbose="true">
+    <exec program="C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe">
+      <arg value="/p:Configuration=RELEASE" />
+      <arg value="/t:build" />
+      <arg value="/p:TrackFileAccess=false" />
+      <arg path="${base}/src/EugenePetrenko.JournalGenerator.sln" />
+    </exec>
   </target> 
 
   <target name="debug">
@@ -18,7 +20,9 @@
      <call target="build" />
   </target>
 
-  <target name="build">
+  <target name="build" depends="make, run-build, patch"/>
+
+  <target name="run-build">
     <echo message="Use -D:inforeg=&lt;number>-&lt;year> to specify articles generation for inforeg" />
     <echo message="Use -D:inforegs=&lt;count&gt; to specify number of inforeg reports to generate" />
     <echo message="Use -D:rffi=1 to enable RFFI export generation" />
@@ -55,11 +59,13 @@
       <arg value="/inforegs=${pInforegs}" if="${property::exists('inforegs')}" />
       <arg value="/rffi" if="${property::exists('rffi')}" />
     </exec>
+  </target>
 
+  <target name="patch">
     <if test="${file::exists(release.last)}">      
       <loadfile file="${release.last}" property="to_patch" />
       <property name="patched" value="${release.path}_patch" />
-      <exec program="${release}/patch_pure.bat" verbose="true">
+      <exec program="${base}/..tools/patcher/bin/patcher.exe" verbose="true">
         <arg file="${to_patch}" />
         <arg file="${release.path}" />
         <arg file="${patched}" />
@@ -67,7 +73,6 @@
     </if>
 
     <echo file="${release.last}">${release.path}</echo>
-
   </target>
 
 </project>
