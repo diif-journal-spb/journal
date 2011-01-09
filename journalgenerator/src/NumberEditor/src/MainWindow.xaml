@@ -3,15 +3,20 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:NumberEditor="clr-namespace:EugenePetrenko.NumberEditor"
 
-    Title="MainWindow" Height="300" Width="300">
+    Title="MainWindow" Height="500" Width="500">
     <Grid>
     <TabControl>
       <TabItem Header="Number">
-        <NumberEditor:NumberEditor/>
+        <DockPanel>
+          <NumberEditor:NumberEditor Width="433" HorizontalAlignment="Left"/>
+        </DockPanel>
       </TabItem>
       <TabItem Header="Authors">
-        <NumberEditor:AuthorsEditor/>
+        <DockPanel>
+          <NumberEditor:AuthorsEditor DockPanel.Dock="Bottom,Left"/>
+        </DockPanel>
       </TabItem>
     </TabControl>
+    
   </Grid>
 </Window>

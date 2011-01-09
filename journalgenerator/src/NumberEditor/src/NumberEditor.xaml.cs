@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Xml.Serialization;
 
 namespace EugenePetrenko.NumberEditor
 {
@@ -23,5 +14,46 @@ namespace EugenePetrenko.NumberEditor
     {
       InitializeComponent();
     }
+
+    public string GenerateXml()
+    {
+      return new ArticleInfoXml
+               {
+                 Abstract = myAbstract.Text,
+                 FirstPage = myPageFrom.Text,
+                 LastPage = myPageTo.Text,
+                 Lang = myLanguageSelector.Text,
+                 Pdf = myPdf.Text,
+                 Title = myTitle.Text
+               }.Serialize();
+    }
+
+    private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
+    {
+      MessageBox.Show(GenerateXml());
+    }
   }
+
+  [Serializable]
+  public class ArticleInfoXml
+  {
+    [XmlAttribute("lang")]
+    public string Lang { get; set; }
+
+    [XmlAttribute("FirstPage")]
+    public string FirstPage { get; set; }
+
+    [XmlAttribute("LastPage")]
+    public string LastPage { get; set; }
+
+    [XmlElement("pdf")]
+    public string Pdf { get; set; }
+
+    [XmlElement("Abstract")]
+    public string Abstract { get; set; }
+
+    [XmlElement("Title")]
+    public string Title { get; set; }
+  }
+
 }
