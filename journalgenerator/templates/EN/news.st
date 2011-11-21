@@ -3,6 +3,8 @@
 </h2>
 
 $news:{
-  <p><small>$it.Date$</small></p>
-  <p>$it.Text$</p>
+  <p><strong>$it.Date$</strong></p>
+  <div style="padding: 1em;">
+    $it.Text$
+  </div>
 }$
