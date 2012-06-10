@@ -4,11 +4,10 @@
     xmlns:NumberEditor="clr-namespace:EugenePetrenko.NumberEditor"
 
     Title="MainWindow" Height="500" Width="500">
-    <Grid>
     <TabControl>
       <TabItem Header="Number">
         <DockPanel>
-          <NumberEditor:NumberEditor Width="433" HorizontalAlignment="Left"/>
+        <NumberEditor:NumberEditor DockPanel.Dock="Bottom,Left"/>
         </DockPanel>
       </TabItem>
       <TabItem Header="Authors">
@@ -17,6 +16,4 @@
         </DockPanel>
       </TabItem>
     </TabControl>
-    
-  </Grid>
 </Window>
