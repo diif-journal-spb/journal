@@ -72,12 +72,28 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="src\ArticleInfoXml.cs" />
+    <Compile Include="src\AuthorXml.cs" />
+    <Compile Include="src\LanguageSelector.xaml.cs">
+      <DependentUpon>LanguageSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\LanguageXml.cs" />
+    <Compile Include="src\LongTextField.xaml.cs">
+      <DependentUpon>LongTextField.xaml</DependentUpon>
+    </Compile>
     <Compile Include="src\XmlHelpers.cs" />
     <Page Include="src\AuthorsEditor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\LanguageSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\LongTextField.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="src\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

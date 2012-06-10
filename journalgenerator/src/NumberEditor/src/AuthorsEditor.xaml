@@ -1,8 +1,17 @@
 ﻿<UserControl x:Class="EugenePetrenko.NumberEditor.AuthorsEditor"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Height="300" Width="300">
-  <Grid>
-    <TextBox Text="Autor Editor"/>
-  </Grid>
+             xmlns:NumberEditor="clr-namespace:EugenePetrenko.NumberEditor">
+  <StackPanel Orientation="Vertical">
+    <NumberEditor:LanguageSelector x:Name="myLanguage"/>
+    <NumberEditor:LongTextField x:Name="myFirstName" LabelText="First Name" MultiLine="False"/>
+    <NumberEditor:LongTextField x:Name="myMiddleName" LabelText="Middle Name" MultiLine="False"/>
+    <NumberEditor:LongTextField x:Name="myLastName" LabelText="Last Name" MultiLine="False"/>
+    <NumberEditor:LongTextField x:Name="myAddress" LabelText="Address" MultiLine="True"/>
+    <NumberEditor:LongTextField x:Name="myEmail" LabelText="Email" MultiLine="False"/>
+
+
+    <Line></Line>
+    <Button Margin="10" Click="Button_Click">_Generate Xml</Button>
+  </StackPanel>
 </UserControl>

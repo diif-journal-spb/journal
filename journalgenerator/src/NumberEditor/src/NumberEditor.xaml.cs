@@ -19,7 +19,7 @@ namespace EugenePetrenko.NumberEditor
                  Abstract = myAbstract.Text,
                  FirstPage = myPageFrom.Text,
                  LastPage = myPageTo.Text,
-                 Lang = myLanguageEn.IsChecked == true ? "EN" : myLanguageRu.IsChecked == true ? "RU" : "???",
+                 Lang = myLanguage.LanguageValue,
                  Pdf = myPdf.Text,
                  Title = myTitle.Text
                }.Serialize();
@@ -27,7 +27,10 @@ namespace EugenePetrenko.NumberEditor
 
     private void Button_Click(object sender, RoutedEventArgs e)
     {
-      MessageBox.Show(GenerateXml());
+      string messageBoxText = GenerateXml();
+      Clipboard.SetText(messageBoxText, TextDataFormat.UnicodeText);
+      
+      MessageBox.Show(messageBoxText);
     }
   }
 }
