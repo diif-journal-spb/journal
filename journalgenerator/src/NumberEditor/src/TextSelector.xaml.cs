@@ -142,6 +142,8 @@ namespace EugenePetrenko.NumberEditor
                            };
     
       yield return new ACommand("Add Author", UIAction(AddAuthor)).CreateMenuItem;
+      yield return new ACommand("Add Exact Author", UIAction(() => myAuthors.Add(new LocalizedAuthorXml {Id=selection}))).CreateMenuItem;
+
       foreach (var _author in myAuthors)
       {
         var author = _author;
@@ -196,6 +198,8 @@ namespace EugenePetrenko.NumberEditor
         yield return () => new Separator();
       }
       yield return new ACommand("Set Email ", UIAction(() => author.Items.ForEach(x => x.Email = selection))).CreateMenuItem;
+      yield return () => new Separator();
+      yield return new ACommand("Remove", UIAction(() => myAuthors.Remove(author))).CreateMenuItem;
     }
 
     private Action UIAction(Action a)
