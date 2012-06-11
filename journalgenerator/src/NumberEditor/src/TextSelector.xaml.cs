@@ -107,7 +107,9 @@ namespace EugenePetrenko.NumberEditor
       s = s.Trim();
       if (s.Length == 0) return "";
 
-      return string.Join(" ", Regex.Split(s, @"\s+").Where(x=>x.Length > 0).Select(x => Char.ToUpper(x[0]) + x.Substring(1).ToLower()));
+      var x = String.Join(" ", (string[]) Regex.Split(s, @"\s+").Where(_ => _.Length > 0));
+      x = Char.ToUpper(x[0]) + x.Substring(1).ToLower();
+      return x;
     }
 
     private string EnTitleCase(string s)
