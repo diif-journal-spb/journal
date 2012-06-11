@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -101,9 +102,35 @@ namespace EugenePetrenko.NumberEditor
       myText.ContextMenu.IsOpen = true;
     }
 
+    private string RuTitleCase(string s)
+    {
+      s = s.Trim();
+      if (s.Length == 0) return "";
+
+      return string.Join(" ", Regex.Split(s, @"\s+").Where(x=>x.Length > 0).Select(x => Char.ToUpper(x[0]) + x.Substring(1).ToLower()));
+    }
+
+    private string EnTitleCase(string s)
+    {
+      return string.Join(" ", Regex.Split(s, @"\s+").Select(RuTitleCase));
+    }
+
     private IEnumerable<Func<object>> GetAvailableCommands()
     {
       var selection = (myText.SelectedText ?? "").Trim();
+
+      yield return new ACommand("To Title Case: RU", UIAction(() =>
+                                                                {
+                                                                  var text = RuTitleCase(selection);
+                                                                  myText.Text += "\r\n" + text;
+                                                                  myText.SelectedText = text;
+                                                                })).CreateMenuItem;
+      yield return new ACommand("To Title Case: EN", UIAction(() =>
+                                                                {
+                                                                  var text = EnTitleCase(selection);
+                                                                  myText.Text += "\r\n" + text;
+                                                                  myText.SelectedText = text;
+                                                                })).CreateMenuItem;
 
       yield return () => new MenuItem
                            {
@@ -150,7 +177,7 @@ namespace EugenePetrenko.NumberEditor
         yield return () => new Separator();
       }
       yield return new ACommand("Set First Page", UIAction(() => article.Items.ForEach(x => x.FirstPage = int.Parse(selection)))).CreateMenuItem;
-      yield return new ACommand("Set First Page", UIAction(() => article.Items.ForEach(x => x.LastPage = int.Parse(selection)))).CreateMenuItem;
+      yield return new ACommand("Set Last Page", UIAction(() => article.Items.ForEach(x => x.LastPage = int.Parse(selection)))).CreateMenuItem;
       yield return new ACommand("Set pdf", UIAction(() => article.Items.ForEach(x => x.Pdf = selection))).CreateMenuItem;
     }
 
@@ -222,7 +249,7 @@ namespace EugenePetrenko.NumberEditor
 
     private void CopyArticles_Click(object sender, RoutedEventArgs e)
     {
-      Clipboard.SetText(myAuthorXml.Text);
+      Clipboard.SetText(myArticleXml.Text);
     }
   }
 }

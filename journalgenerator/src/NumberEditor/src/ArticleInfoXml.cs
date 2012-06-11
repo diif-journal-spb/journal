@@ -21,10 +21,10 @@ namespace EugenePetrenko.NumberEditor
     [XmlElement("pdf")]
     public string Pdf { get; set; }
 
-    [XmlElement("Abstract")]
+    [XmlElement("abstract")]
     public string Abstract { get; set; }
 
-    [XmlElement("Title")]
+    [XmlElement("title")]
     public string Title { get; set; }
   }
 
