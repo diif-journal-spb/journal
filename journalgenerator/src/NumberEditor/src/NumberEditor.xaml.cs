@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 
 namespace EugenePetrenko.NumberEditor
 {
@@ -14,15 +15,21 @@ namespace EugenePetrenko.NumberEditor
 
     public string GenerateXml()
     {
-      return new ArticleInfoXml
-               {
-                 Abstract = myAbstract.Text,
-                 FirstPage = myPageFrom.Text,
-                 LastPage = myPageTo.Text,
-                 Lang = myLanguage.LanguageValue,
-                 Pdf = myPdf.Text,
-                 Title = myTitle.Text
-               }.Serialize();
+      try
+      {
+        return new ArticleInfoXml
+                 {
+                   Abstract = myAbstract.Text,
+                   FirstPage = int.Parse(myPageFrom.Text),
+                   LastPage = int.Parse(myPageTo.Text),
+                   Lang = myLanguage.LanguageValue,
+                   Pdf = myPdf.Text,
+                   Title = myTitle.Text
+                 }.Serialize();
+      } catch(Exception e)
+      {
+        return e.ToString();
+      }
     }
 
     private void Button_Click(object sender, RoutedEventArgs e)

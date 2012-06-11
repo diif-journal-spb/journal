@@ -12,7 +12,7 @@ namespace EugenePetrenko.NumberEditor
       var sw = new StringWriter();
       f.CreateSerializer(typeof(T)).Serialize(sw, t);
 
-      return sw.ToString();
+      return sw.ToString().Replace(" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"", "");
     }
   }
 }
