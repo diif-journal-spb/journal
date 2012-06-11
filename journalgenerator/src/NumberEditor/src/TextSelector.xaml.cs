@@ -106,15 +106,13 @@ namespace EugenePetrenko.NumberEditor
     {
       s = s.Trim();
       if (s.Length == 0) return "";
-
-      var x = String.Join(" ", (string[]) Regex.Split(s, @"\s+").Where(_ => _.Length > 0));
-      x = Char.ToUpper(x[0]) + x.Substring(1).ToLower();
-      return x;
+      var x = String.Join(" ", Regex.Split(s, @"\s+").Where(_ => _.Length > 0).ToArray()).Trim();
+      return Char.ToUpper(x[0]) + (x.Length == 1 ? "" : x.Substring(1).ToLower());
     }
 
     private string EnTitleCase(string s)
     {
-      return string.Join(" ", Regex.Split(s, @"\s+").Select(RuTitleCase));
+      return string.Join(" ", Regex.Split(s, @"\s+").Select(RuTitleCase).ToArray());
     }
 
     private IEnumerable<Func<object>> GetAvailableCommands()
