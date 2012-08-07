@@ -8,10 +8,10 @@
 	<li>Ershov E.K. (Russia)</li>
 	<li>Fradkov A.L. (Russia)</li>
 	<li>Kuznetsov N.V. (Russia)</li>
-	<li>Neittaanmaki P. (Finland)</li>
 	<li>Matveev A.S. (Russia)</li>
-	<li>Reitmann V. (Germany)</li>
+	<li>Neittaanmaki P. (Finland)</li>
 	<li>Petrov N.N. (Russia)</li>
+	<li>Reitmann V. (Germany)</li>
 	<li>Rozenvasser E.N. (Russia)</li>
 	<li>Timofeev A.V. (Russia)</li>
 	<li>Zaitsev V.F. (Russia)</li>
