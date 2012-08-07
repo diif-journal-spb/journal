@@ -6,6 +6,7 @@
 	<li>Bibikov Yu.N. (Russia)</li>
 	<li>Churin Yu.V. (Russia)</li>
 	<li>Ershov E.K. (Russia)</li>
+	<li>Fradkov A.L. (Russia)</li>
 	<li>Kuznetsov N.V. (Russia)</li>
 	<li>Neittaanmaki P. (Finland)</li>
 	<li>Matveev A.S. (Russia)</li>
