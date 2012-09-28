@@ -148,11 +148,11 @@ namespace EugenePetrenko.NumberEditor
         yield return () =>
                        {
                          var e = author.GetEN();
-                         var name = "@" + (e.FirstName ?? "") + " " + (e.MiddleName ?? "") + " " + (e.LastName ?? "");
+                         var name = "@" + (e.FirstName ?? "") + " " + (e.MiddleName ?? "") + " " + (e.LastName ?? "") + " " + (author.Id ?? "");
                          return new MenuItem
                                   {
                                     IsEnabled = selection.Length > 0,
-                                    Header = name,
+                                    Header = name.Trim(),
                                     ItemsSource = AuthorActions(author, selection).Select(x=>x()).ToArray()
                                   };
                        };
