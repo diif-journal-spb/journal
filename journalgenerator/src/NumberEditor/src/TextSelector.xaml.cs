@@ -208,12 +208,21 @@ namespace EugenePetrenko.NumberEditor
       foreach (var _lang in myLanguages)
       {
         var lang = _lang;
-        yield return new ACommand("Set _First Name " + lang, UIAction(() => aSel(lang).FirstName = selection)).CreateMenuItem;
-        yield return new ACommand("Set _Middle Name " + lang, UIAction(() => aSel(lang).MiddleName = selection)).CreateMenuItem;
-        yield return new ACommand("Set _Last Name " + lang, UIAction(() => { aSel(lang).LastName = selection; author.UpdateId(); })).CreateMenuItem;
-        yield return new ACommand("Set _Address " + lang, UIAction(() => aSel(lang).Address = selection)).CreateMenuItem;
-        yield return () => new Separator();
-      }
+        var commands = new Func<object>[] {
+          new ACommand("Set _First Name ", UIAction(() => aSel(lang).FirstName = selection)).CreateMenuItem,
+          new ACommand("Set _Middle Name ", UIAction(() => aSel(lang).MiddleName = selection)).CreateMenuItem,
+          new ACommand("Set _Last Name ", UIAction(() => { aSel(lang).LastName = selection; author.UpdateId(); })).CreateMenuItem,
+          new ACommand("Set _Address ", UIAction(() => aSel(lang).Address = selection)).CreateMenuItem,
+        };
+
+        yield return () => new MenuItem
+        {
+          Header = "_" + lang,
+          IsEnabled = true,
+          ItemsSource = commands.Select(x => x()).ToArray()
+        };
+      } 
+      yield return () => new Separator();
       yield return new ACommand("Set _Email ", UIAction(() => author.Items.ForEach(x => x.Email = selection))).CreateMenuItem;
       yield return () => new Separator();
       yield return new ACommand("Remove", UIAction(() => myAuthors.Remove(author))).CreateMenuItem;
