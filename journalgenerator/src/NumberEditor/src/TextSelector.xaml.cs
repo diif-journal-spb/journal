@@ -7,7 +7,6 @@ using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Threading;
 using Microsoft.Win32;
 
@@ -29,12 +28,14 @@ namespace EugenePetrenko.NumberEditor
 
     private void MenuItem_Click(object sender, RoutedEventArgs e)
     {
-      var dlg = new OpenFileDialog {Multiselect = true};
+      var dlg = new OpenFileDialog {Multiselect = true, RestoreDirectory = true};
       if (true != dlg.ShowDialog()) return;
 
       foreach (var file in dlg.FileNames)
       {
         myText.Text += "\r\n\r\n----" + file + "\r\n\r\n";
+
+        if (file.EndsWith(".pdf", StringComparison.CurrentCultureIgnoreCase)) continue;
         try
         {
           using (var rdr = new StreamReader(file, Encoding.GetEncoding("windows-1251")))
@@ -107,55 +108,55 @@ namespace EugenePetrenko.NumberEditor
       s = s.Trim();
       if (s.Length == 0) return "";
       var x = String.Join(" ", Regex.Split(s, @"\s+").Where(_ => _.Length > 0).ToArray()).Trim();
-      return Char.ToUpper(x[0]) + (x.Length == 1 ? "" : x.Substring(1).ToLower());
+      return Char.ToUpper(x[0]) + (x.Length == 1 ? "" : x.Substring(1).ToLower()).Trim();
     }
 
     private string EnTitleCase(string s)
     {
-      return string.Join(" ", Regex.Split(s, @"\s+").Select(RuTitleCase).ToArray());
+      return string.Join(" ", Regex.Split(s, @"\s+").Select(RuTitleCase).ToArray()).Trim();
+    }
+
+    private string TitleCase(string lang, string text)
+    {
+      if (lang == "EN") return EnTitleCase(text);
+      if (lang == "RU") return RuTitleCase(text);
+      return text;
     }
 
     private IEnumerable<Func<object>> GetAvailableCommands()
     {
       var selection = (myText.SelectedText ?? "").Trim();
 
-      yield return new ACommand("To Title Case: RU", UIAction(() =>
-                                                                {
-                                                                  var text = RuTitleCase(selection);
-                                                                  myText.Text += "\r\n" + text;
-                                                                  myText.SelectedText = text;
-                                                                })).CreateMenuItem;
-      yield return new ACommand("To Title Case: EN", UIAction(() =>
-                                                                {
-                                                                  var text = EnTitleCase(selection);
-                                                                  myText.Text += "\r\n" + text;
-                                                                  myText.SelectedText = text;
-                                                                })).CreateMenuItem;
-
       yield return () => new MenuItem
                            {
-                             Header = "Article",
+                             Header = "_Article",
                              IsEnabled = selection.Length > 0,
                              ItemsSource = ArticleActions(myArticle, selection).Select(x => x()).ToArray()
                            };
-    
-      yield return new ACommand("Add Author", UIAction(AddAuthor)).CreateMenuItem;
-      yield return new ACommand("Add Exact Author", UIAction(() => myAuthors.Add(new LocalizedAuthorXml {Id=selection}))).CreateMenuItem;
 
+      yield return () => new MenuItem
+      {
+        Header = "_New Author",
+        IsEnabled = true,
+        ItemsSource = new []
+                        {
+                          new ACommand("Add _Author", UIAction(AddAuthor)).CreateMenuItem(),
+                          new ACommand("Add _Exact Author", UIAction(() => myAuthors.Add(new LocalizedAuthorXml {Id=selection}))).CreateMenuItem()
+                        }
+      };
+
+      int cnt = 1;
       foreach (var _author in myAuthors)
       {
         var author = _author;
-        yield return () =>
-                       {
-                         var e = author.GetEN();
-                         var name = "@" + (e.FirstName ?? "") + " " + (e.MiddleName ?? "") + " " + (e.LastName ?? "") + " " + (author.Id ?? "");
-                         return new MenuItem
-                                  {
-                                    IsEnabled = selection.Length > 0,
-                                    Header = name.Trim(),
-                                    ItemsSource = AuthorActions(author, selection).Select(x=>x()).ToArray()
-                                  };
-                       };
+        var e = author.GetEN();
+        var name = "_" + cnt++ + "@" + (e.FirstName ?? "") + " " + (e.MiddleName ?? "") + " " + (e.LastName ?? "") + " " + (author.Id ?? "");
+        yield return () => new MenuItem
+                             {
+                               IsEnabled = selection.Length > 0,
+                               Header = name.Trim(),
+                               ItemsSource = AuthorActions(author, selection).Select(x=>x()).ToArray()
+                             };
       }
     }
 
@@ -173,14 +174,32 @@ namespace EugenePetrenko.NumberEditor
       foreach (var _lang in myLanguages)
       {
         var lang = _lang;
-        yield return new ACommand("Set Article Title " + lang, UIAction(() => { aSelector(lang).Title = selection; })).CreateMenuItem;
-        yield return new ACommand("Set Article Abstract " + lang, UIAction(() => { aSelector(lang).Abstract = selection; })).CreateMenuItem;
+        var commands
+          = new Func<object>[]
+              {
+                new ACommand("Set Article _Title " + lang, UIAction(() => { aSelector(lang).Title = TitleCase(lang, selection); })).CreateMenuItem,
+                new ACommand("Set Article _Abstract " + lang, UIAction(() => { aSelector(lang).Abstract = selection; })).CreateMenuItem
+              };
 
-        yield return () => new Separator();
+        yield return () => new MenuItem
+                             {
+                               Header = "_" + lang,
+                               IsEnabled = true,
+                               ItemsSource = commands.Select(x=>x()).ToArray()
+                             };
       }
+      yield return () => new Separator();
+      yield return new ACommand("Set First-Last _Pages", UIAction(() =>
+                                                                   {
+                                                                     var nums = selection.Trim().Split("-".ToArray(), StringSplitOptions.RemoveEmptyEntries);
+                                                                     if (nums.Length != 2) return;
+                                                                     article.Items.ForEach(x => x.FirstPage = int.Parse(nums[0]));
+                                                                     article.Items.ForEach(x => x.LastPage = int.Parse(nums[1]));
+                                                                   })).CreateMenuItem;
+
       yield return new ACommand("Set First Page", UIAction(() => article.Items.ForEach(x => x.FirstPage = int.Parse(selection)))).CreateMenuItem;
       yield return new ACommand("Set Last Page", UIAction(() => article.Items.ForEach(x => x.LastPage = int.Parse(selection)))).CreateMenuItem;
-      yield return new ACommand("Set pdf", UIAction(() => article.Items.ForEach(x => x.Pdf = selection))).CreateMenuItem;
+      yield return new ACommand("Set pd_f", UIAction(() => article.Items.ForEach(x => x.Pdf = selection))).CreateMenuItem;
     }
 
     private IEnumerable<Func<object>> AuthorActions(LocalizedAuthorXml author, string selection)
@@ -189,13 +208,13 @@ namespace EugenePetrenko.NumberEditor
       foreach (var _lang in myLanguages)
       {
         var lang = _lang;
-        yield return new ACommand("Set First Name " + lang, UIAction(() => aSel(lang).FirstName = selection)).CreateMenuItem;
-        yield return new ACommand("Set Middle Name " + lang, UIAction(() => aSel(lang).MiddleName = selection)).CreateMenuItem;
-        yield return new ACommand("Set Last Name " + lang, UIAction(() => { aSel(lang).LastName = selection; author.UpdateId(); })).CreateMenuItem;
-        yield return new ACommand("Set Address " + lang, UIAction(() => aSel(lang).Address = selection)).CreateMenuItem;
+        yield return new ACommand("Set _First Name " + lang, UIAction(() => aSel(lang).FirstName = selection)).CreateMenuItem;
+        yield return new ACommand("Set _Middle Name " + lang, UIAction(() => aSel(lang).MiddleName = selection)).CreateMenuItem;
+        yield return new ACommand("Set _Last Name " + lang, UIAction(() => { aSel(lang).LastName = selection; author.UpdateId(); })).CreateMenuItem;
+        yield return new ACommand("Set _Address " + lang, UIAction(() => aSel(lang).Address = selection)).CreateMenuItem;
         yield return () => new Separator();
       }
-      yield return new ACommand("Set Email ", UIAction(() => author.Items.ForEach(x => x.Email = selection))).CreateMenuItem;
+      yield return new ACommand("Set _Email ", UIAction(() => author.Items.ForEach(x => x.Email = selection))).CreateMenuItem;
       yield return () => new Separator();
       yield return new ACommand("Remove", UIAction(() => myAuthors.Remove(author))).CreateMenuItem;
     }
