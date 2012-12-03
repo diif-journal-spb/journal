@@ -113,14 +113,19 @@ namespace EugenePetrenko.NumberEditor
 
     private string EnTitleCase(string s)
     {
-      var trim = string.Join(" ", Regex.Split(s, @"\s+").Select(RuTitleCase).ToArray()).Trim();
       var pros = new[]
                    {
                      "from", "a", "to", "the", "of", "for", "any", "at", "in", "into", "this", "the", "that", "then",
-                     "them", "with", "out", "ower", "by", "an", "to", "into", "across", "below", "abowe", "without", 
-                     
-                   };
-      return pros.Aggregate(trim, (current, pro) => current.Replace(RuTitleCase(pro), pro));
+                     "them", "with", "out", "ower", "by", "an", "to", "into", "across", "below", "abowe", "without",
+                   }.ToLookup(x=>x, StringComparer.InvariantCultureIgnoreCase);
+
+      var trim = Regex.Split(s, @"\s+")
+        .Select(x => x.Trim())
+        .Where(x => x.Length > 0)
+        .Select(x => pros.Contains(x) ? x.ToLower() : RuTitleCase(x))
+        ;
+
+      return String.Join(" ", trim).Trim();
     }
 
     private string TitleCase(string lang, string text)
