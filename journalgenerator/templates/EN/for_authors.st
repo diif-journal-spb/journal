@@ -1,7 +1,7 @@
 <h2>Preparation of a paper</h2>
 <p>A paper submission MUST include:
 <ul>
-  <li>Files of the paper in <a href="http://www.miktex.org">MikTex 2.7(LaTeX)</a> 
+  <li>Files of the paper in <a href="http://www.miktex.org">MikTex 2.9 (LaTeX)</a> 
 		or <a href="http://www.microsoft.com/office">Microsoft Word</a> formats.
 		<strong>Journal <a href="#template-files">templates</a> must be used</strong>
 		</li>
@@ -38,7 +38,7 @@
 <p>Papers are to be sent to e-mail:
    <a href="mailto:jodiff@mail.ru">jodiff@mail.ru</a> 
    and 
-   <a href="mailto:nataly@is1483.spb.edu">nataly@is1483.spb.edu</a>.
+   <a href="mailto:n.ampilova@spbu.ru">n.ampilova@spbu.ru</a>.
 </p>
 
 
@@ -51,7 +51,7 @@
 
 <h2>Preparation of the article in  TEX-format</h2>
 <a name="template-files"> </a>
-<p>When preparing an article you should use <a href="http://www.miktex.org">MikTex 2.7</a> and templates.</p>
+<p>When preparing an article you should use <a href="http://www.miktex.org">MikTex 2.9</a> and templates.</p>
 <p>How to apply the templates for MikTex:
  <ul>
    <li>Download file <a href="$ResourceLink$/auth-for-tex.zip">author-for-tex.zip</a> from the journal site to your computer and unpack it. </li>
@@ -59,7 +59,7 @@
    <li>Open file Russian.tex, name your paper file, and page number, following the comments in tex-file.</li>
    <li>Open file diff_eng.sty or diff_rus.sty and name the journal number and the year of publishing.</li>
    <li>Open file diff_eng.tex or diff_rus.tex and name the journal number, the year of publishing and the field of study that the paper relates.</li>
-   <li>Check that your article is compiled  by the command "pdflatex Russian.tex"  in MikTex 2.7+.</li>
+   <li>Check that your article is compiled  by the command "pdflatex Russian.tex" in MikTex 2.9+.</li>
  </ul>
 </p>
 <p>Information about last versions of Tex you can find on the site <a href="http://www.miktex.org">http://www.miktex.org</a>. 

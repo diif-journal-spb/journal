@@ -4,7 +4,7 @@
 198504<br /> 
 Russia, Peterhof,<br /> 
 Universitetskii pr., 28,<br /> 
-Mathematics & Mechanics faculty,<br /> 
+Mathematics and Mechanics faculty,<br /> 
 dept. of Computer Science<br />
 </p>
 
@@ -13,7 +13,7 @@ Natalya B. Ampilova<br />
 Assoc.Prof., Dept. of Comp. Sci, St.Petersburg State University,<br />
 St. Petersburg, Russia<br />
 tel: +7 921 415 7762<br />
-e-mail: <a href="mailto:nataly@is1483.spb.edu">nataly@is1483.spb.edu</a>
+e-mail: <a href="mailto:n.ampilova@spbu.ru">n.ampilova@spbu.ru</a>
 </p>
 
 <h4>Executive Secretary:</h4>
