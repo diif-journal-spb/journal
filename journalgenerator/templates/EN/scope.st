@@ -12,7 +12,7 @@
    <li>dynamical systems on manifolds </li>
    <li>bifurcation </li>
    <li>symbolic dynamics </li>
-   <li>integro-ordinary differential equations </li>
+   <li>integro-differential equations </li>
    <li>group analysis of differential equations </li>
    <li>differential equations with randomness </li>
    <li>general control problems </li>

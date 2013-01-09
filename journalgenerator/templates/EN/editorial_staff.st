@@ -1,3 +1,3 @@
-<h2>Journal's Editorial Board</h2>
+<h2>Editorial Board</h2>
 
 $editorial_staff_content()$
