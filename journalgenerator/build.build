@@ -58,7 +58,7 @@
 
 
     <exec program="${generator.exe}" verbose="true">
-      <arg value="/url=http://www.neva.ru/journal"/>
+      <arg value="/url=http://www.math.spbu.ru/diffjournal"/>
       <arg value="/dest=${release.path}" />
       <arg value="/templates=${path::get-full-path(base + '\templates')}"/>
       <arg value="/data=${path::get-full-path(base + '\data')}" />

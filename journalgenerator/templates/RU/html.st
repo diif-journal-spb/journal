@@ -4,7 +4,7 @@
   <head>
     <title>Журнал дифференциальные уравнения и процессы управления - $caption$</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
-    <!-- Journal generator by Eugene Petrenko (eugene[dot]petrenko(at)gmail_com), thanks to Nikita Raba" -->
+    <!-- Journal generator by Eugene @jonnyzzz Petrenko (eugene[dot]petrenko(at)gmail_com), thanks to Nikita Raba -->
     <link rel="stylesheet" href="$ResourceLink$/style.css" type="text/css"></link>
     <script type="text/javascript" src="$ResourceLink$/google.analytics.js"></script>
   </head>
@@ -28,8 +28,6 @@
       $content$
     </div> 
     <div class="Footer">
-      Старая версия сайта доступна <a href="http://www.neva.ru/journal/rus/r_main.htm">здесь</a>
     </div>
-
   </body>
 </html>

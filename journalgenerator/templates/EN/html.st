@@ -4,6 +4,7 @@
   <head>
     <title>Journal Differential Equations and Control Processes - $caption$</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+    <!-- Journal generator by Eugene @jonnyzzz Petrenko (eugene[dot]petrenko(at)gmail_com), thanks to Nikita Raba -->
     <link rel="stylesheet" href="$ResourceLink$/style.css" type="text/css"></link>
     <script type="text/javascript" src="$ResourceLink$/google.analytics.js"></script>
   </head>
@@ -25,8 +26,6 @@
       $content$
     </div> 
     <div class="Footer">
-      Older version of our site is <a href="http://www.neva.ru/journal/eng/e_main.htm">here</a>
     </div>
-
   </body>
 </html>

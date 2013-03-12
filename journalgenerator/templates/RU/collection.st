@@ -11,4 +11,4 @@
     </tr>}$
   </table> 
 </div>
-<a href="http://www.neva.ru/journal/rus/r_main_c.htm">Архив статей</a>
+
