@@ -4,7 +4,6 @@
 <p>According to the journal scope, the Editorial Board accepts educational courses and software, methodological papers, materials on teaching methods, and information about monographs, textbooks, theses, software, seminars, and conferences.</p>
 
 <h3>The scope of the journal encompasses the following fields of study:</h3>
-<p>
  <ul>
    <li>ordinary differential equations </li>
    <li>nonlinear oscillations </li>
@@ -30,6 +29,5 @@
    <li>control in social and economical systems</li>
    <li>information systems and processes</li>
  </ul>
-</p>
 
 <h3>The working languages of the Journal are English and Russian.</h3>
