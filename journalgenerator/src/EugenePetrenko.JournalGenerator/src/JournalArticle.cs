@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using EugenePetrenko.DataModel;
 
@@ -35,9 +36,28 @@ namespace EugenePetrenko.JournalGenerator
       }
     }
 
+    private string ArticleFileId()
+    {
+      int sectionId = 0;
+      foreach (var section in myNumber.Sections)
+      {
+        sectionId++;
+        int artcleId = 0;
+        foreach (var article in section.Articles)
+        {
+          artcleId++;
+          if (article == myArticle)
+          {
+            return sectionId + "." + artcleId;
+          }
+        }
+      }
+      throw new Exception("Article not found in the number");
+    }
+
     public override LinkTemplate GetLinkTemplate(LinkManager manager)
     {
-      string name = string.Format(@"numbers\{0}.{1}\article.{2}.html", myNumber.Year, myNumber.Number, myArticle.FileId);
+      string name = string.Format(@"numbers\{0}.{1}\article.{2}.html", myNumber.Year, myNumber.Number, ArticleFileId());
       return new LinkTemplate(manager, name);        
     }
 
