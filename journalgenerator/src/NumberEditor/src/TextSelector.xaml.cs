@@ -36,6 +36,9 @@ namespace EugenePetrenko.NumberEditor
         myText.Text += "\r\n\r\n----" + file + "\r\n\r\n";
 
         if (file.EndsWith(".pdf", StringComparison.CurrentCultureIgnoreCase)) continue;
+        if (file.EndsWith(".doc", StringComparison.CurrentCultureIgnoreCase)) continue;
+        if (file.EndsWith(".docx", StringComparison.CurrentCultureIgnoreCase)) continue;
+
         try
         {
           using (var rdr = new StreamReader(file, Encoding.GetEncoding("windows-1251")))
@@ -115,14 +118,14 @@ namespace EugenePetrenko.NumberEditor
     {
       var pros = new[]
                    {
-                     "from", "a", "to", "the", "of", "for", "any", "at", "in", "into", "this", "the", "that", "then",
-                     "them", "with", "out", "ower", "by", "an", "to", "into", "across", "below", "abowe", "without",
-                   }.ToLookup(x=>x, StringComparer.InvariantCultureIgnoreCase);
+                     "and", "on", "from", "a", "to", "the", "of", "for", "any", "at", "in", "into", "this", "the", "that", "then",
+                     "them", "with", "out", "over", "by", "an", "to", "into", "across", "below", "abowe", "without",
+                   }.ToLookup(x => x, StringComparer.InvariantCultureIgnoreCase);
 
       var trim = Regex.Split(s, @"\s+")
         .Select(x => x.Trim())
         .Where(x => x.Length > 0)
-        .Select(x => pros.Contains(x) ? x.ToLower() : RuTitleCase(x))
+        .Select((x,i) => i != 0 && pros.Contains(x) ? x.ToLower() : RuTitleCase(x))
         ;
 
       return String.Join(" ", trim).Trim();
@@ -174,7 +177,7 @@ namespace EugenePetrenko.NumberEditor
 
     private void AddAuthor()
     {
-      var locId = new LocalizedAuthorXml {Id = "n2_2012_"};
+      var locId = new LocalizedAuthorXml {Id = "n_2013_"};
       locId.InitLanguages(myLanguages);
       myAuthors.Add(locId);
     }
@@ -224,6 +227,23 @@ namespace EugenePetrenko.NumberEditor
           new ACommand("Set _First Name ", UIAction(() => aSel(lang).FirstName = selection)).CreateMenuItem,
           new ACommand("Set _Middle Name ", UIAction(() => aSel(lang).MiddleName = selection)).CreateMenuItem,
           new ACommand("Set _Last Name ", UIAction(() => { aSel(lang).LastName = selection; author.UpdateId(); })).CreateMenuItem,
+          () => new Separator(),
+          new ACommand("Set F.M.Las_t Name", UIAction(() =>
+            {
+              string[] text = Regex.Split(selection, @"[\\.\\s,]+")
+                .Select(x => x.Trim())
+                .Where(x => x.Length > 0)
+                .Select(x=>x.Length <= 2 ? x + "." : x)
+                .ToArray();
+              if (text.Length == 3)
+              {
+                aSel(lang).FirstName = text[0];
+                aSel(lang).MiddleName = text[1];
+                aSel(lang).LastName = text[2];
+              }
+              author.UpdateId();
+            })).CreateMenuItem,
+          () => new Separator(),
           new ACommand("Set _Address ", UIAction(() => aSel(lang).Address = selection)).CreateMenuItem,
         };
 
