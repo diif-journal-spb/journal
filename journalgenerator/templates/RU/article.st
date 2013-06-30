@@ -9,4 +9,14 @@ $article.Authors:{
 <h3>Реферат:</h3>
 <p>$article.Abstract$</p>
 
+$if(article.HasReferences)$
+<h3>Ссылки:</h3>
+<a name="refs"></a>
+<ol>
+$article.References:{
+  <li>$it.Title$</li>
+}$
+</ol>
+$endif$
+
 <h3><a href="$PdfLink$">Полный текст (pdf)</a></h3>

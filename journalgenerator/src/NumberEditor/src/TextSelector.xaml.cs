@@ -33,11 +33,12 @@ namespace EugenePetrenko.NumberEditor
 
       foreach (var file in dlg.FileNames)
       {
-        myText.Text += "\r\n\r\n----" + file + "\r\n\r\n";
-
         if (file.EndsWith(".pdf", StringComparison.CurrentCultureIgnoreCase)) continue;
         if (file.EndsWith(".doc", StringComparison.CurrentCultureIgnoreCase)) continue;
+        if (file.EndsWith(".dot", StringComparison.CurrentCultureIgnoreCase)) continue;
         if (file.EndsWith(".docx", StringComparison.CurrentCultureIgnoreCase)) continue;
+
+        myText.Text += "\r\n\r\n----" + file + "\r\n\r\n";
 
         try
         {
@@ -52,7 +53,7 @@ namespace EugenePetrenko.NumberEditor
         }
       }
 
-      myText.Text += string.Join("\r\n", dlg.FileNames);
+      myText.Text += string.Join("\r\n", dlg.FileNames) + "\r\n";
     }
 
     private void MenuItem_Click_1(object sender, RoutedEventArgs e)
@@ -215,6 +216,9 @@ namespace EugenePetrenko.NumberEditor
       yield return new ACommand("Set First Page", UIAction(() => article.Items.ForEach(x => x.FirstPage = int.Parse(selection)))).CreateMenuItem;
       yield return new ACommand("Set Last Page", UIAction(() => article.Items.ForEach(x => x.LastPage = int.Parse(selection)))).CreateMenuItem;
       yield return new ACommand("Set pd_f", UIAction(() => article.Items.ForEach(x => x.Pdf = selection))).CreateMenuItem;
+      yield return () => new Separator();
+      yield return new ACommand("Add _reference", UIAction(() => myArticle.AddReferences(ReferencesParser.ParseReferences(selection)))).CreateMenuItem;
+      yield return new ACommand("Remove _reference", UIAction(() => myArticle.RemoveReference())).CreateMenuItem;
     }
 
     private IEnumerable<Func<object>> AuthorActions(LocalizedAuthorXml author, string selection)

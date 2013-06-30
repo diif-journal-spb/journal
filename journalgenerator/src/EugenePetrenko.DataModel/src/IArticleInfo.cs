@@ -8,6 +8,10 @@ namespace EugenePetrenko.DataModel
     JournalLanguage JournalLanguage { get;}
 
     IAuthorInfo[] Authors { get; }
+    
+    IReference[] References { get; }
+    
+    bool HasReferences { get; }
 
     int FirstPage { get; }
     int LastPage { get; }
@@ -22,6 +26,7 @@ namespace EugenePetrenko.DataModel
   public class ArticleInfo : Entity, IArticleInfo
   {
     private readonly JournalLanguage myJournalLanguage;
+    private readonly Article myArticle;
     private readonly IAuthorInfo[] myAuthors;
     private readonly int myFirstPage;
     private readonly int myLastPage;
@@ -30,9 +35,9 @@ namespace EugenePetrenko.DataModel
     private readonly string myTitle;
     private readonly string[] myExtraFiles;
 
-    public ArticleInfo(IArticle _article, XmlElement el, IXmlDataLoader loader) : base(loader.EntityGenerator)
+    public ArticleInfo(IArticle article, XmlElement el, IXmlDataLoader loader) : base(loader.EntityGenerator)
     {
-      var article = (Article) _article;
+      myArticle = (Article) article;
       myJournalLanguage = loader.ParseLanguage(el);
       var authors = new List<IAuthorInfo>();
       if (article != null && article.Authors != null)
@@ -44,8 +49,8 @@ namespace EugenePetrenko.DataModel
       }
       authors.Sort(delegate(IAuthorInfo x, IAuthorInfo y)
                      {
-                       string kX = article.CompareKey(x);
-                       string kY = article.CompareKey(y);
+                       string kX = myArticle.CompareKey(x);
+                       string kY = myArticle.CompareKey(y);
 
                        int v = kX.CompareTo(kY);
                        if (v != 0)
@@ -72,6 +77,13 @@ namespace EugenePetrenko.DataModel
       }
       myExtraFiles = extraFiles.ToArray();
     }
+
+    public IReference[] References
+    {
+      get { return myArticle.References; }
+    }
+
+    public bool HasReferences { get { return References.Length > 0; } }
 
     public string[] ExtraFiles
     {

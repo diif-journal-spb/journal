@@ -15,7 +15,10 @@ $sections:{
       <a href="$it.Pdf$">Full text (pdf)</a> 
       |
       <a href="$it.Link$">Abstract</a>
-    </p>
+      $if(it.HasReferences)$
+      |
+      <a href="$it.Link$#refs">References</a>
+      $endif$    </p>
  </div>
   }$
 }$

@@ -37,6 +37,34 @@ namespace EugenePetrenko.NumberEditor
       return new ArticleInfoXml();
     }
 
+    [XmlArray("references")]
+    [XmlArrayItem("reference")]
+    public string[] References { get; set; }
+
+    public void AddReferences(IEnumerable<string> x)
+    {
+      var refs = new List<string>();
+      if (References != null) refs.AddRange(References);
+      refs.AddRange(x);
+      References = refs.ToArray();
+    }
+
+    public void RemoveReference()
+    {
+      if (References == null) return;
+      if (References.Length <= 1)
+      {
+        References = null;
+        return;
+      }
+
+      var refs = new List<string>();
+      if (References != null) refs.AddRange(References);
+      refs.RemoveAt(refs.Count-1);
+      
+      References = refs.ToArray();
+    }
+
     [XmlElement("articleInfo")]
     public ArticleInfoXml[] Items
     {

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Xml;
 
 namespace EugenePetrenko.DataModel
@@ -12,5 +13,13 @@ namespace EugenePetrenko.DataModel
       return (xmlNode.Value ?? string.Empty).Trim();
     }
     
+    public static IEnumerable<XmlElement> Elements(this XmlNodeList nodes)
+    {
+      if (nodes == null) yield break;
+      foreach (XmlElement node in nodes)
+      {
+        yield return node;
+      }
+    }
   }
 }

@@ -122,6 +122,12 @@ namespace EugenePetrenko.JournalGenerator
       {
         get { return myPdf; }
       }
+
+      [UsedByStringTemplate]
+      public bool HasReferences
+      {
+        get { return myInfo.HasReferences; }
+      }
     }
   }
 }
