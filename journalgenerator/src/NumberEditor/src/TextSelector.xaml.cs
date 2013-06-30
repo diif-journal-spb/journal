@@ -53,7 +53,7 @@ namespace EugenePetrenko.NumberEditor
         }
       }
 
-      myText.Text += string.Join("\r\n", dlg.FileNames) + "\r\n";
+      myText.Text += "\r\n\r\n\r\n" + string.Join("\r\n", dlg.FileNames) + "\r\n\r\n\r\n";
     }
 
     private void MenuItem_Click_1(object sender, RoutedEventArgs e)
@@ -217,8 +217,8 @@ namespace EugenePetrenko.NumberEditor
       yield return new ACommand("Set Last Page", UIAction(() => article.Items.ForEach(x => x.LastPage = int.Parse(selection)))).CreateMenuItem;
       yield return new ACommand("Set pd_f", UIAction(() => article.Items.ForEach(x => x.Pdf = selection))).CreateMenuItem;
       yield return () => new Separator();
-      yield return new ACommand("Add _reference", UIAction(() => myArticle.AddReferences(ReferencesParser.ParseReferences(selection)))).CreateMenuItem;
-      yield return new ACommand("Remove _reference", UIAction(() => myArticle.RemoveReference())).CreateMenuItem;
+      yield return new ACommand("Add _references", UIAction(() => myArticle.AddReferences(ReferencesParser.ParseReferences(selection)))).CreateMenuItem;
+      yield return new ACommand("Remove reference", UIAction(() => myArticle.RemoveReference())).CreateMenuItem;
     }
 
     private IEnumerable<Func<object>> AuthorActions(LocalizedAuthorXml author, string selection)

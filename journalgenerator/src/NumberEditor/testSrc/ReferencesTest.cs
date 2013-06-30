@@ -49,6 +49,38 @@ namespace EugenePetrenko.NumberEditor
         Console.Out.WriteLine("re = {0}", re);
       }
     }
+
+
+    [Test]
+    public void parse2()
+    {
+      var text = @"[1] Cayley A. Memoire  sur les Hyperdeterminants // Journ. reine angew. Math. - 1846. - V. 30. - P. 1 - 37.
+
+[2] Hilbert D. Gesammelte Abhandlungen. Bd. 2. Algebra, Invariantentheorie, Geometrie. Zweite Auflage. - Berlin - Heidelberg - New York: Springer, 1970. - 453 с.
+
+[3] Laguerre E. Sur les equations  lineaires du troisieme ordre // C. r. Acad. sci. - 1879. - V. 88. - P. 116 - 119.
+
+[4] Halphen G. H. Syr la reduction des equations differentielles lineaires aux formes integrables // mem. pres. par divers savants a l` Acad. des Sci. - 1884. - V. 28. - P. 1 - 260.
+
+[5] Liouville R. Sur certaines equations dfferentielles du premier ordre // C. r. Acad. sci. - 1886. - V. 103. - P. 476 - 479.
+
+[6] Appel P. Sur les invariants de quelques equations differentielles // Journ. Math. pures et appl. - 1889. - V. 5. - P. 361 - 423.
+
+[7] Painleve P. Sur une transformation des equations differentielles du premier ordre // C. r. Acad. sci. - 18906. - V. 110. - P. 840 - 843.
+
+[8] Sibirskii К. S. Algebraic invariants of differential equations. - Kishinev.: Shtiinca, 1982. - 269 p.
+
+[9] Sibirskii К. S. Introduction in the algebraic theory of invariants of differential equations and matrixes. - Kishinev.: Shtiinca, 1976. - 169 p. (In Russian).
+";
+
+
+      var references = ReferencesParser.ParseReferences(text);
+
+      foreach (var re in references)
+      {
+        Console.Out.WriteLine("re = {0}", re);
+      }
+    }
  
   }
 }

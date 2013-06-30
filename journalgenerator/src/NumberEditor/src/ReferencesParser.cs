@@ -18,7 +18,7 @@ namespace EugenePetrenko.NumberEditor
 
       var result = new List<string>();
       var acc = new StringBuilder();
-      var regex = new Regex("^\\d+\\.");
+      var regex = new Regex("^\\d+\\.|^\\[\\d+\\]");
       foreach (var line in lines)
       {
         if (regex.IsMatch(line))
