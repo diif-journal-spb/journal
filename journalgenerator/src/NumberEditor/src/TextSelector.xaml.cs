@@ -212,9 +212,11 @@ namespace EugenePetrenko.NumberEditor
                                                                      article.Items.ForEach(x => x.FirstPage = int.Parse(nums[0]));
                                                                      article.Items.ForEach(x => x.LastPage = int.Parse(nums[1]));
                                                                    })).CreateMenuItem;
-
+      
       yield return new ACommand("Set First Page", UIAction(() => article.Items.ForEach(x => x.FirstPage = int.Parse(selection)))).CreateMenuItem;
       yield return new ACommand("Set Last Page", UIAction(() => article.Items.ForEach(x => x.LastPage = int.Parse(selection)))).CreateMenuItem;
+      
+      yield return () => new Separator();
       yield return new ACommand("Set pd_f", UIAction(() => article.Items.ForEach(x => x.Pdf = selection))).CreateMenuItem;
       yield return () => new Separator();
       yield return new ACommand("Add _references", UIAction(() => myArticle.AddReferences(ReferencesParser.ParseReferences(selection)))).CreateMenuItem;
@@ -223,45 +225,66 @@ namespace EugenePetrenko.NumberEditor
 
     private IEnumerable<Func<object>> AuthorActions(LocalizedAuthorXml author, string selection)
     {
-      Func<string, AuthorXml> aSel = lang => lang == "RU" ? author.GetRU() : author.GetEN();
       foreach (var _lang in myLanguages)
       {
         var lang = _lang;
-        var commands = new Func<object>[] {
-          new ACommand("Set _First Name ", UIAction(() => aSel(lang).FirstName = selection)).CreateMenuItem,
-          new ACommand("Set _Middle Name ", UIAction(() => aSel(lang).MiddleName = selection)).CreateMenuItem,
-          new ACommand("Set _Last Name ", UIAction(() => { aSel(lang).LastName = selection; author.UpdateId(); })).CreateMenuItem,
-          () => new Separator(),
-          new ACommand("Set F.M.Las_t Name", UIAction(() =>
-            {
-              string[] text = Regex.Split(selection, @"[\\.\\s,]+")
-                .Select(x => x.Trim())
-                .Where(x => x.Length > 0)
-                .Select(x=>x.Length <= 2 ? x + "." : x)
-                .ToArray();
-              if (text.Length == 3)
-              {
-                aSel(lang).FirstName = text[0];
-                aSel(lang).MiddleName = text[1];
-                aSel(lang).LastName = text[2];
-              }
-              author.UpdateId();
-            })).CreateMenuItem,
-          () => new Separator(),
-          new ACommand("Set _Address ", UIAction(() => aSel(lang).Address = selection)).CreateMenuItem,
-        };
+        
+        Func<AuthorXml> RU = () => author.GetRU();
+        Func<AuthorXml> EN = () => author.GetEN();
+        var aSel = _lang == "RU" ? RU : EN;
 
         yield return () => new MenuItem
         {
           Header = "_" + lang,
           IsEnabled = true,
-          ItemsSource = commands.Select(x => x()).ToArray()
+          ItemsSource = LangAuthorCommands(author, selection, aSel).Select(x => x()).ToArray()
         };
       } 
       yield return () => new Separator();
       yield return new ACommand("Set _Email ", UIAction(() => author.Items.ForEach(x => x.Email = selection))).CreateMenuItem;
       yield return () => new Separator();
       yield return new ACommand("Remove", UIAction(() => myAuthors.Remove(author))).CreateMenuItem;
+    }
+
+    private IEnumerable<Func<object>> LangAuthorCommands(LocalizedAuthorXml author, string selection, Func<AuthorXml> aSel)
+    {
+      yield return new ACommand("Set _First Name ", UIAction(() => aSel().FirstName = selection)).CreateMenuItem;
+      yield return new ACommand("Set _Middle Name ", UIAction(() => aSel().MiddleName = selection)).CreateMenuItem;
+      yield return new ACommand("Set _Last Name ", UIAction(() => { aSel().LastName = selection; author.UpdateId(); })).CreateMenuItem;
+      yield return () => new Separator();
+
+      Func<string[]> split3 = () => Regex.Split(selection, @"[\.\s,]+")
+          .Select(x => x.Trim())
+          .Where(x => x.Length > 0)
+          .Select(x => x.Length <= 2 ? x + "." : x)
+          .ToArray();
+
+      yield return new ACommand("Set 'First Middle Las_t' Name", UIAction(() =>
+      {
+        string[] text = split3();
+        if (text.Length == 3)
+        {
+          aSel().FirstName = text[0];
+          aSel().MiddleName = text[1];
+          aSel().LastName = text[2];
+        }
+        author.UpdateId();
+      })).CreateMenuItem;
+      
+      yield return new ACommand("Set 'Last First Middl_e' Name", UIAction(() =>
+      {
+        string[] text = split3();
+
+        if (text.Length == 3)
+        {
+          aSel().LastName = text[0];
+          aSel().FirstName = text[1];
+          aSel().MiddleName = text[2];
+        }
+        author.UpdateId();
+      })).CreateMenuItem;
+      yield return () => new Separator();
+      yield return new ACommand("Set _Address ", UIAction(() => aSel().Address = selection)).CreateMenuItem;
     }
 
     private Action UIAction(Action a)
