@@ -37,6 +37,10 @@ namespace EugenePetrenko.NumberEditor
         if (file.EndsWith(".doc", StringComparison.CurrentCultureIgnoreCase)) continue;
         if (file.EndsWith(".dot", StringComparison.CurrentCultureIgnoreCase)) continue;
         if (file.EndsWith(".docx", StringComparison.CurrentCultureIgnoreCase)) continue;
+        if (file.EndsWith(".eps", StringComparison.CurrentCultureIgnoreCase)) continue;
+        if (file.EndsWith(".jpg", StringComparison.CurrentCultureIgnoreCase)) continue;
+        if (file.EndsWith(".jpeg", StringComparison.CurrentCultureIgnoreCase)) continue;
+        if (file.EndsWith(".tex", StringComparison.CurrentCultureIgnoreCase)) continue;
 
         myText.Text += "\r\n\r\n----" + file + "\r\n\r\n";
 
