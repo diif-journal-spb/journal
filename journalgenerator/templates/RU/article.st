@@ -10,8 +10,9 @@ $article.Authors:{
 <p>$article.Abstract$</p>
 
 $if(article.HasReferences)$
-<h3>Ссылки:</h3>
 <a name="refs"></a>
+<h3>Ссылки:</h3>
+
 <ol>
 $article.References:{
   <li>$it.Title$</li>
