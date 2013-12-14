@@ -6,7 +6,31 @@ namespace EugenePetrenko.NumberEditor
   [TestFixture]
   public class ReferencesTest
   {
+
+    [Test]
+    public void parseNums()
+    {
+      var references = ReferencesParser.ParseReferences("1. foo\n2) bar\n[3] zzz");
+
+      foreach (var re in references)
+      {
+        Console.Out.WriteLine("re = {0}", re);
+      }
+    }
+
+    [Test]
+    public void parseBibitem()
+    {
+      var references = ReferencesParser.ParseReferences("   \\bibitem{aa   a} zzzz");
+
+      foreach (var re in references)
+      {
+        Console.Out.WriteLine("re = {0}", re);
+      }
+    }
+
    
+
     [Test]
     public void parse()
     {

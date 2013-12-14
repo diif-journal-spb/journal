@@ -38,6 +38,9 @@ namespace EugenePetrenko.NumberEditor
         if (file.EndsWith(".dot", StringComparison.CurrentCultureIgnoreCase)) continue;
         if (file.EndsWith(".docx", StringComparison.CurrentCultureIgnoreCase)) continue;
         if (file.EndsWith(".eps", StringComparison.CurrentCultureIgnoreCase)) continue;
+        if (file.EndsWith(".aux", StringComparison.CurrentCultureIgnoreCase)) continue;
+        if (file.EndsWith(".log", StringComparison.CurrentCultureIgnoreCase)) continue;
+        if (file.EndsWith(".sty", StringComparison.CurrentCultureIgnoreCase)) continue;
         if (file.EndsWith(".jpg", StringComparison.CurrentCultureIgnoreCase)) continue;
         if (file.EndsWith(".jpeg", StringComparison.CurrentCultureIgnoreCase)) continue;
         if (file.EndsWith(".tex", StringComparison.CurrentCultureIgnoreCase)) continue;
