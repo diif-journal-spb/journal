@@ -5,7 +5,7 @@ $about_content()$
 <h3>Editor-in-Chief</h3>
 <ul><li>Gennady A. Leonov</li></ul>
 
-<h3>Assistant Editor</h3>
+<h3>Deputy Chief Editor</h3>
 <ul>
   <li>Viktor A. Pliss</li>
 </ul>
@@ -15,7 +15,7 @@ $about_content()$
   <li>Natalya B. Ampilova</li>
 </ul>
 
-<h3>Executive Secretary</h3>
+<h3>Technical Support</h3>
 <ul>
   <li>Eugene I. Petrenko</li>
 </ul>
