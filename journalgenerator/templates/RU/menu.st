@@ -5,6 +5,7 @@
 <a href="$TemplateEditorial_StaffLink$">Редакторский состав</a>
 <a href="$NewsLink$">Новости</a>
 <a href="$TemplateFor_AuthorsLink$">Для авторов</a>
+<a href="$TemplateEthicLink$">$ethic_caption()$</a>
 <!--<a href="$BooksLink$">Книги</a>-->
 <a href="$CollectionLink$">Коллекция номеров</a>
 <a href="$ForeignLink$">English version</a>
