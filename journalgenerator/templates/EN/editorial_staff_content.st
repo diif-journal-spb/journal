@@ -3,10 +3,6 @@
 <h4>Gennady A. Leonov</h4>
 <p>St. Petersburg State University, Russia</p>
 
-<h3>Deputy Chief Editor</h3>
-<h4>Viktor A. Pliss</h4>
-<p>St. Petersburg State University, Russia</p>
-
 <h3>Editor</h3>
 <h4>Natalya B. Ampilova</h4>
 <p>

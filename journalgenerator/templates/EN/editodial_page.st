@@ -5,11 +5,6 @@ $about_content()$
 <h3>Editor-in-Chief</h3>
 <ul><li>Gennady A. Leonov</li></ul>
 
-<h3>Deputy Chief Editor</h3>
-<ul>
-  <li>Viktor A. Pliss</li>
-</ul>
-
 <h3>Editor</h3>
 <ul>
   <li>Natalya B. Ampilova</li>

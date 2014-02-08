@@ -16,7 +16,7 @@ tel: +7 921 415 7762<br />
 e-mail: <a href="mailto:n.ampilova@spbu.ru">n.ampilova@spbu.ru</a>
 </p>
 
-<h4>Technical Support:</h4>
+<h4>Technical Support</h4>
 <p>
 Eugene I. Petrenko<br />
 Dept. of Comp. Sci, St.Petersburg State University<br />
