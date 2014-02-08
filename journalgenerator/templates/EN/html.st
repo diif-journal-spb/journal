@@ -7,6 +7,8 @@
     <!-- Journal generator by Eugene @jonnyzzz Petrenko (eugene[dot]petrenko(at)gmail_com), thanks to Nikita Raba -->
     <link rel="stylesheet" href="$ResourceLink$/style.css" type="text/css"></link>
     <script type="text/javascript" src="$ResourceLink$/google.analytics.js"></script>
+    <script type="text/javascript" src="$ResourceLink$/jquery.js"></script>
+    <script type="text/javascript" src="$ResourceLink$/journal.js"></script>
   </head>
   <body>
     <div class="Head">
