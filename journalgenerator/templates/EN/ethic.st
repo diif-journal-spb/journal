@@ -2,7 +2,7 @@
 
 <h2>Publication Ethics and Malpractice Statement</h2>
 <p>
-The editorial board of the electronic journal ìDifferencialínye uravnenia I processy upravlenia (Differential equation and control processes)î follows ethics norms accepted by international scientific community and makes every endeavor to prevent any infringements of the norms. The board follows the guidelines of Committee  of  Publication Ethics. 
+The editorial board of the electronic journal ‚ÄúDifferencial‚Äônye uravnenia I processy upravlenia (Differential equation and control processes)‚Äù follows ethics norms accepted by international scientific community and makes every endeavor to prevent any infringements of the norms. The board follows the guidelines of Committee  of  Publication Ethics.
 </p>
 
 <h3>Duties of Editors</h3>
@@ -30,7 +30,7 @@ When a conflict of interests arising, all the participants of reviewing process 
 </li><li>Peer review assists the publisher in making editorial decisions and through the editorial communications with the experts form the scientific board ant the author may also assist the author in improving the paper.
 </li><li>Manuscripts received for review are treated as confidential documents and are reviewed by anonymous staff.
 </li><li>A reviewer should also call to the publisher's attention any substantial similarity or overlap between the manuscript under consideration and any other published paper of which they have personal knowledge.
-</li><ul>
+</li></ul>
 
 <h3>Duties of Authors</h3>
 <ul>

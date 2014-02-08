@@ -1,4 +1,4 @@
-<h3>Editorial Board:</h3>
+<h3>Editorial Board</h3>
 
 <div class="board">
 
