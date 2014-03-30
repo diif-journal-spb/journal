@@ -8,18 +8,18 @@
     <li>It is necessary to add the affiliation after the title</li>
   </ul>
   <li>PDF-file of the paper</li>
-  <li>Text file in Plain Text or HTML (in english):
-    <ul>
+  <li>Text file in Plain Text or HTML (in english):</li>
+  <ul>
       <li>paper title</li>
       <li>surname, first name, patronymic</li>
       <li>affiliation (work place, institution, address, position)</li>
       <li>academic status and degree</li>      
       <li>abstracts</li>      
-      <li>references</li>
       <li>e-mail (to be published in open access)</li>
       <li>phone, fax</li>
-    </ul>
-  </li>
+  </ul>
+  <li>the file containing references in HTML or Markdown format</li>
+  <ul><li>For russian paper references, see <a href="$TemplateFor_Authors_RefsLink$">Russian References</a></li></ul>
   <li>If the paper is in Russian, the same texts file in russian are required</li>
 </ul>
 </p>
