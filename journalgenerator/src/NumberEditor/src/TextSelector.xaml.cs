@@ -51,7 +51,12 @@ namespace EugenePetrenko.NumberEditor
         {
           using (var rdr = new StreamReader(file, Encoding.GetEncoding("windows-1251")))
           {
-            myText.Text += rdr.ReadToEnd().Trim();
+            var text = rdr.ReadToEnd().Trim();
+            if (file.Contains(".fix."))
+            {
+              text = HTMLHelpers.FixWordHTML(text);
+            }
+            myText.Text += text;
           }
         }
         catch (Exception ee)
@@ -181,6 +186,16 @@ namespace EugenePetrenko.NumberEditor
                                ItemsSource = AuthorActions(author, selection).Select(x=>x()).ToArray()
                              };
       }
+
+      yield return () => new Separator();
+
+      yield return new ACommand("Fix Word HTML", UIAction(() =>
+      {
+        var html = HTMLHelpers.FixWordHTML(selection);
+
+        myText.AppendText("\n\n\n" + html + "\n\n\n");
+      })).CreateMenuItem;
+
     }
 
     private void AddAuthor()
