@@ -40,6 +40,24 @@ Press, 2005. <span class=GramE>307 p.</span><o:p></o:p></span></p>";
         gold);
     }
 
+    [Test]
+    public void test_reference_html3()
+    {
+      var input = @"<p class=MsoPlainText><span lang=EN-US style='font-family:""Courier New"";
+mso-ansi-language:EN-US'>1. T.A. Burton, Stability and periodic solutions of
+ordinary and functional differential equations, Mathematics in Science and
+Engineering<span class=GramE>,178</span>. Academic Press, Inc., Orlando, FL,
+1985.<o:p></o:p></span></p>
+";
+
+      var gold = HTMLHelpers.FixWordHTML(input).Trim();
+      
+      Console.Out.WriteLine(gold);
+      Assert.AreEqual(
+        "1. T.A. Burton, Stability and periodic solutions of ordinary and functional differential equations, Mathematics in Science and Engineering,178. Academic Press, Inc., Orlando, FL, 1985.", 
+        gold);
+    }
+
     
   }
 }

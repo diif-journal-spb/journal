@@ -19,13 +19,14 @@ namespace EugenePetrenko.NumberEditor
           @"</?st1[^>]*>",
           @"(<[^>]+>)+&nbsp;(</w+>)+",
           @"s+v:w+=""[^""]+""",
-          @"\s*class=MsoNormal",
+          @"\s*class=Mso[^s>]*",
           @"\s*style='[^']*'",
           @"(nr){2,}",
           @"</p\s*>"
         }.Aggregate(html, (current, s) => Regex.Replace(current, s, "", RegexOptions.IgnoreCase))
         ;
 
+      html = Regex.Replace(html, @"\s*&nbsp;\s*", " ");
       html = Regex.Replace(html, @"<p\s*>", "\n");
       html = html.Trim();
       return html;
