@@ -6,7 +6,7 @@ $article.Authors:{
   <p><a href="mailto:$it.EMail$">$it.EMail$</a></p>
 }$
 
-<h3>Реферат:</h3>
+<h3>Аннотация:</h3>
 <p>$article.Abstract$</p>
 
 $if(article.HasReferences)$

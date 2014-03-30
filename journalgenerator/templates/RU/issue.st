@@ -15,7 +15,7 @@ $sections:{
     <p>
       <a href="$it.Pdf$">Полный текст (pdf)</a> 
       |
-      <a href="$it.Link$">Реферат</a>
+      <a href="$it.Link$">Аннотация</a>
       $if(it.HasReferences)$
       |
       <a href="$it.Link$#refs">Ссылки</a>
