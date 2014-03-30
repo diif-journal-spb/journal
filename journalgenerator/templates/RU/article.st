@@ -15,7 +15,7 @@ $if(article.HasReferences)$
 
 <ol>
 $article.References:{
-  <li>$it.Title$</li>
+  <li class="paper_reference">$it.Title$</li>
 }$
 </ol>
 $endif$
