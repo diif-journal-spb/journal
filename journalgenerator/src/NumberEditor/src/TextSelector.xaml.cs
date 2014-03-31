@@ -34,6 +34,7 @@ namespace EugenePetrenko.NumberEditor
       foreach (var file in dlg.FileNames)
       {
         if (file.EndsWith(".pdf", StringComparison.CurrentCultureIgnoreCase)) continue;
+        if (file.EndsWith(".dvi", StringComparison.CurrentCultureIgnoreCase)) continue;
         if (file.EndsWith(".doc", StringComparison.CurrentCultureIgnoreCase)) continue;
         if (file.EndsWith(".dot", StringComparison.CurrentCultureIgnoreCase)) continue;
         if (file.EndsWith(".docx", StringComparison.CurrentCultureIgnoreCase)) continue;
