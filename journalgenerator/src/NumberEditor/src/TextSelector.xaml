@@ -21,7 +21,7 @@
     </Menu>
     <DockPanel Grid.Row="1" Grid.Column="0">
       <TextBox Name="myText" DockPanel.Dock="Bottom,Top,Left,Right" TextChanged="myText_TextChanged"
-               x:FieldModifier="private" MaxWidth="1000" AcceptsReturn="True" AcceptsTab="True" ContextMenuOpening="myText_ContextMenuOpening">
+               x:FieldModifier="private" MaxWidth="1000" AcceptsReturn="True" AcceptsTab="True" ContextMenuOpening="myText_ContextMenuOpening" Text="Use '.fix.' name infix to auto-cleanup HTML files&#xD;&#xA;Use '.bib.' name infix to auto-cleanup tex's bibtex files">
         <TextBox.ContextMenu>
           <ContextMenu />
         </TextBox.ContextMenu>

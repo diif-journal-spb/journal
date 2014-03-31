@@ -20,10 +20,15 @@ namespace EugenePetrenko.NumberEditor
     private IEnumerable<string> myLanguages = new[] {"EN"};
     private LocalizedArticleXml myArticle = new LocalizedArticleXml();
     private List<LocalizedAuthorXml> myAuthors = new List<LocalizedAuthorXml>();
+    private bool myIsInitialized = false;
 
     public TextSelector()
     {
       InitializeComponent();
+      Dispatcher.Invoke(DispatcherPriority.Loaded, (Action)(() =>
+      {
+        myIsInitialized = true;
+      }));
     }
 
     private void MenuItem_Click(object sender, RoutedEventArgs e)
@@ -101,6 +106,8 @@ namespace EugenePetrenko.NumberEditor
     private int myUpdateVersion;
     private void UpdateXml()
     {
+      if (!myIsInitialized) return;
+
       //hack-style update's cleaup
       int version = ++myUpdateVersion;
       Action update = () =>
@@ -115,11 +122,14 @@ namespace EugenePetrenko.NumberEditor
 
     private void myText_TextChanged(object sender, TextChangedEventArgs e)
     {
+      if (!myIsInitialized) return;
       UpdateXml();
     }
 
     private void myText_ContextMenuOpening(object sender, ContextMenuEventArgs e)
     {
+      if (!myIsInitialized) return;
+
       var menu = new ContextMenu {ItemsSource = GetAvailableCommands().Select(x => x()).ToArray()};
       myText.ContextMenu = menu;
       myText.ContextMenu.IsOpen = true;
