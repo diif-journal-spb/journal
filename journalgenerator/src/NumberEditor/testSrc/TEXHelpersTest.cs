@@ -21,7 +21,7 @@ K.~Ahnert and M.~Abel.
 
       Console.Out.WriteLine(gold);
 
-      Assert.AreEqual("K.Ahnert and M.Abel. Numerical differentiation of experimental data: local versus global methods. <em>Computer Physics Communications</em>, 177:764-774, 2007.", gold);
+      Assert.AreEqual("\\bibitem{AhAb07}K.Ahnert and M.Abel. Numerical differentiation of experimental data: local versus global methods. <em>Computer Physics Communications</em>, 177:764-774, 2007.", gold);
 
     }
 
@@ -40,7 +40,7 @@ M.A. Demetriou.
 
       Console.Out.WriteLine(gold);
 
-      Assert.AreEqual("M.A. Demetriou. Process estimation and moving source detection in 2-D diffusion processes by scheduling of sensor networks. In <em>Proceedings of the American Control Conference</em>, New York, NY, July 2007.", gold);
+      Assert.AreEqual("\\bibitem{Demet07}M.A. Demetriou. Process estimation and moving source detection in 2-D diffusion processes by scheduling of sensor networks. In <em>Proceedings of the American Control Conference</em>, New York, NY, July 2007.", gold);
 
     }
 
@@ -60,7 +60,7 @@ A.~Mesquita, J.~Hespanha, and K.~\r{A}str\""{o}m.
 
       Console.Out.WriteLine(gold);
 
-      Assert.AreEqual("A.Mesquita, J.Hespanha, and K.Åström. Optimotaxis: a stochastic multi-agent optimization procedure with point measurements. In M.Egersted and B.Mishra, editors, <em>Hybrid Systems: Computation and Control</em>, volume 4981, pages 358-371. Springer-Verlag, Berlin, 2008.", gold);
+      Assert.AreEqual("\\bibitem{MeHeAs08}A.Mesquita, J.Hespanha, and K.Åström. Optimotaxis: a stochastic multi-agent optimization procedure with point measurements. In M.Egersted and B.Mishra, editors, <em>Hybrid Systems: Computation and Control</em>, volume 4981, pages 358-371. Springer-Verlag, Berlin, 2008.", gold);
     }
     
     [Test]
@@ -78,7 +78,7 @@ P.~Tzanos and M.~\u{Z}efran.
 
       Console.Out.WriteLine(gold);
 
-      Assert.AreEqual("P.Tzanos and M.Žefran. Locating a circular biochemical source: Modeling and control. In <em>Proceedings of the 2007 IEEE Int. Conf. on Robotics and Automation</em>, pages 523-528, Rome, Italy, 2007.", gold);
+      Assert.AreEqual("\\bibitem{TzZe07}P.Tzanos and M.Žefran. Locating a circular biochemical source: Modeling and control. In <em>Proceedings of the 2007 IEEE Int. Conf. on Robotics and Automation</em>, pages 523-528, Rome, Italy, 2007.", gold);
 
     }
 
@@ -96,7 +96,7 @@ L.~K. Vasiljevic and H.~K. Khalil.
 
       Console.Out.WriteLine(gold);
 
-      Assert.AreEqual("L.K. Vasiljevic and H.K. Khalil. Error bounds in differentiation of noisy signals by high-gain observers. <em>Systems & Control Letters</em>, 57:856-862, 2008.", gold);
+      Assert.AreEqual("\\bibitem{VaKh08}L.K. Vasiljevic and H.K. Khalil. Error bounds in differentiation of noisy signals by high-gain observers. <em>Systems & Control Letters</em>, 57:856-862, 2008.", gold);
 
     }
 
@@ -112,7 +112,7 @@ R.~B. Vinter.
 
       Console.Out.WriteLine(gold);
 
-      Assert.AreEqual("R.B. Vinter. <em>Optimal Control</em>. Birkhäuzer, Boston, 2000.", gold);
+      Assert.AreEqual("\\bibitem{Vin00}R.B. Vinter. <em>Optimal Control</em>. Birkhäuzer, Boston, 2000.", gold);
 
     }
 
@@ -129,7 +129,31 @@ P.~\""{O}gren, E.~Fiorelli, and N.~E. Leonard.
 
       Console.Out.WriteLine(gold);
 
-      Assert.AreEqual("P.Ögren, E.Fiorelli, and N.E. Leonard. Cooperative control of mobile sensor networks: Adaptive gradient climbing in a distributed environment. <em>IEEE Trans. Autom. Control</em>, 49(8):1292-1301, 2004.", gold);
+      Assert.AreEqual("\\bibitem{OgFiLe04}P.Ögren, E.Fiorelli, and N.E. Leonard. Cooperative control of mobile sensor networks: Adaptive gradient climbing in a distributed environment. <em>IEEE Trans. Autom. Control</em>, 49(8):1292-1301, 2004.", gold);
+
+    }
+
+    [Test]
+    public void test_includes_newlines()
+    {
+      var input = @"\bibitem{AhAb07}
+K.~Ahnert and M.~Abel.
+\newblock Numerical differentiation of experimental data: local versus global
+  methods.
+\newblock {\em Computer Physics Communications}, 177:764–774, 2007.
+
+\bibitem{AlSh00}
+M.E. Alpay and M.H. Shor.
+\newblock Model-based solution techniques for the source localization problem.
+\newblock {\em IEEE Transactions on Control Systems Technology}, 8(6):895--904,
+  2000.
+
+";
+      var gold = TEXHelpers.FixTexIntoHTML(input);
+
+      Console.Out.WriteLine(gold);
+
+      Assert.AreEqual("\\bibitem{AhAb07}K.Ahnert and M.Abel. Numerical differentiation of experimental data: local versus global methods. <em>Computer Physics Communications</em>, 177:764-774, 2007. \n\n\\bibitem{AlSh00}M.E. Alpay and M.H. Shor. Model-based solution techniques for the source localization problem. <em>IEEE Transactions on Control Systems Technology</em>, 8(6):895-904, 2000.", gold);
 
     }
   }

@@ -11,7 +11,7 @@ namespace EugenePetrenko.NumberEditor
       tex = Regex.Replace(tex, @"\s+", " "); 
       tex = tex.Replace("~", "");
       tex = tex.Replace("\\&", "&");
-      tex = Regex.Replace(tex, @"\\bibitem\{[^\}]*\}", "\n");
+      tex = Regex.Replace(tex, @"(\\bibitem\{[^\}]*\})\s*", "\n\n$1");
       tex = Regex.Replace(tex, @"\{\s*\\em\s*([^\}]*)\s*\}", "<em>$1</em>");
       tex = Regex.Replace(tex, @"\\uppercase\{([^\}]+)\}", match => match.Groups[1].Value.ToUpper());
       tex = Regex.Replace(tex, @"\\""\{\s*a\s*\}", "ä");
