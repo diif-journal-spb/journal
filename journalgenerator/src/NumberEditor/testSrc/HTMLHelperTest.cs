@@ -57,7 +57,5 @@ Engineering<span class=GramE>,178</span>. Academic Press, Inc., Orlando, FL,
         "1. T.A. Burton, Stability and periodic solutions of ordinary and functional differential equations, Mathematics in Science and Engineering,178. Academic Press, Inc., Orlando, FL, 1985.", 
         gold);
     }
-
-    
   }
 }

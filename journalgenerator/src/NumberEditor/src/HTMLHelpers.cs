@@ -30,7 +30,6 @@ namespace EugenePetrenko.NumberEditor
       html = Regex.Replace(html, @"<p\s*>", "\n");
       html = html.Trim();
       return html;
-    }
-    
+    }    
   }
 }
