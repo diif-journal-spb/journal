@@ -42,7 +42,12 @@ namespace EugenePetrenko.NumberEditor
 
     public void UpdateId()
     {
-      Id = "n_2013_" + (GetEN().LastName ?? "LAST_NAME").ToLower();
+      Id = DefaultIdPrefix + (GetEN().LastName ?? "LAST_NAME").ToLower();
+    }
+
+    public static string DefaultIdPrefix
+    {
+      get { return "n_" + DateTime.Now.Year + "_"; }
     }
   }
 }

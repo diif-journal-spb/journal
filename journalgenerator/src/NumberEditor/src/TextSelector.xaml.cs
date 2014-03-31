@@ -200,7 +200,7 @@ namespace EugenePetrenko.NumberEditor
 
     private void AddAuthor()
     {
-      var locId = new LocalizedAuthorXml {Id = "n_2013_"};
+      var locId = new LocalizedAuthorXml {Id = LocalizedAuthorXml.DefaultIdPrefix};
       locId.InitLanguages(myLanguages);
       myAuthors.Add(locId);
     }
