@@ -29,6 +29,18 @@ namespace EugenePetrenko.NumberEditor
       }
     }
 
+    [Test]
+    public void replaceDashes()
+    {
+      var references = ReferencesParser.ParseReferences("   1234--33345");
+
+      foreach (var re in references)
+      {
+        Console.Out.WriteLine("re = {0}", re);
+        Assert.AreEqual(re, "1234-33345");        
+      }
+    }
+
    
 
     [Test]

@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace EugenePetrenko.NumberEditor
 {
-  public class ReferencesParser
+  public static class ReferencesParser
   {
     public static IEnumerable<string> ParseReferences(string text)
     {
@@ -42,6 +42,9 @@ namespace EugenePetrenko.NumberEditor
         )
         .Select(
           x => x.Trim().Trim(",.".ToCharArray()).Trim()
+        )
+        .Select(
+          x => Regex.Replace(x, "[-–]+", "-")
         )
         .Where(x => x.Length > 0)
         .ToArray();
