@@ -28,6 +28,9 @@ namespace EugenePetrenko.NumberEditor
 
       html = Regex.Replace(html, @"\s*&nbsp;\s*", " ");
       html = Regex.Replace(html, @"<p\s*>", "\n");
+      html = Regex.Replace(html, @"</i>\s*<i>", "");
+      html = Regex.Replace(html, @"<i>", "<em>");
+      html = Regex.Replace(html, @"</i>", "</em>");
       html = html.Trim();
       return html;
     }    
