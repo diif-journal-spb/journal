@@ -57,6 +57,11 @@ namespace EugenePetrenko.NumberEditor
             {
               text = HTMLHelpers.FixWordHTML(text);
             }
+            
+            if (file.Contains(".bib."))
+            {
+              text = TEXHelpers.FixTexIntoHTML(text);
+            }
             myText.Text += text;
           }
         }
@@ -193,6 +198,13 @@ namespace EugenePetrenko.NumberEditor
       yield return new ACommand("Fix Word HTML", UIAction(() =>
       {
         var html = HTMLHelpers.FixWordHTML(selection);
+
+        myText.AppendText("\n\n\n" + html + "\n\n\n");
+      })).CreateMenuItem; 
+      
+      yield return new ACommand("Fix bibitems into HTML", UIAction(() =>
+      {
+        var html = TEXHelpers.FixTexIntoHTML(selection);
 
         myText.AppendText("\n\n\n" + html + "\n\n\n");
       })).CreateMenuItem;
