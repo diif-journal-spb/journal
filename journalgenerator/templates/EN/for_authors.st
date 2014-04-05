@@ -1,7 +1,5 @@
 <h2>Preparation of a paper in English</h2>
 
-<p>If the paper is in Russian, see <a href="$ForeignLink$">Preparation of a paper in Russian</a> </p>
-
 <p>A paper submission MUST include:
 <ul>
   <li>Files of the paper in <a href="http://www.miktex.org">MikTex 2.9 (LaTeX)</a> 
@@ -22,9 +20,6 @@
       <li>phone, fax</li>
   </ul>
   <li>The file containing references in HTML or Markdown format</li>
-  <ul>
-     <li>For russian paper references, see <a href="$TemplateFor_Authors_RefsLink$">Russian References</a></li>
-  </ul>
 </ul>
 </p>
 
