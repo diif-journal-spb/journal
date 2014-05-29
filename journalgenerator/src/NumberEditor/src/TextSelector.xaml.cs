@@ -94,7 +94,7 @@ namespace EugenePetrenko.NumberEditor
 
                   using (var rdr = new StreamReader(new MemoryStream(attach.Data), Encoding(subFile)))
                   {
-                    IncludeFileContent(file, rdr.ReadToEnd().Trim());
+                    IncludeFileContent(subFile, rdr.ReadToEnd().Trim());
                   }
                 }
               }
