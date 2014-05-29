@@ -198,7 +198,7 @@ namespace EugenePetrenko.NumberEditor
         .Select((x,i) => i != 0 && pros.Contains(x) ? x.ToLower() : RuTitleCase(x))
         ;
 
-      return String.Join(" ", trim).Trim();
+      return String.Join(" ", trim).Trim().TrimEnd(".,;! \t\r\n".ToCharArray()).Trim();
     }
 
     private string TitleCase(string lang, string text)
