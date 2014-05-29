@@ -87,6 +87,29 @@ Academic Publishing), 2011. <span class=GramE>295 p. (in Russian).</span> <o:p><
         gold);
     }
 
+    [Test]
+    public void test_reference_html5()
+    {
+      var input = @" <li class=MsoNormal style='text-align:justify;mso-list:l0 level1 lfo1;
+     tab-stops:list 36.0pt left 66.75pt'><span lang=EN-US style='mso-ansi-language:
+     EN-US'>Gelig A.Kh., </span><span lang=EN-US style='font-size:11.0pt;
+     mso-ansi-language:EN-US'>Leonov G.A.,Yakubovich V.A.<i style='mso-bidi-font-style:
+     normal'> Ustoichivost neli</i></span><i style='mso-bidi-font-style:normal'><span
+     lang=EN-US style='mso-ansi-language:EN-US'>nejnyh system s needinstvennim
+     sostoyaniem ravnovesya </span></i><span lang=EN-US style='mso-ansi-language:
+     EN-US'>[Nhe stability of nonlinear systems with nonunique equilibrium] <st1:place
+     w:st=""on""><st1:City w:st=""on""><span style='color:#444444'>Moscow</span></st1:City></st1:place><span
+     style='color:#444444'>, </span>Nauka Publ., 1978. 400 p.<o:p></o:p></span></li>
+";
+
+      var gold = HTMLHelpers.FixWordHTML(input).Trim();
+      
+      Console.Out.WriteLine(gold);
+      Assert.AreEqual(
+        "42. Gelig A.Kh., Leonov G.A.,Yakubovich V.A.<em> Ustoichivost nelinejnyh system s needinstvennim sostoyaniem ravnovesya </em>[Nhe stability of nonlinear systems with nonunique equilibrium] Moscow, Nauka Publ., 1978. 400 p.", 
+        gold);
+    }
+
 
     [Test]
     public void test_reference_html6_refs()
@@ -110,6 +133,18 @@ Academic Publishing), 2011. <span class=GramE>295 p. (in Russian).</span> <o:p><
       
       var parsed = ReferencesParser.ParseReferences(gold);
       Assert.AreEqual(parsed.Count(), 6);
+    }
+
+    [Test]
+    public void test_reference_html6_refs3()
+    {
+      var input = Res("refs3.html");
+      var gold = HTMLHelpers.FixWordHTML(input).Trim();
+      
+      Console.Out.WriteLine(gold);
+      
+      var parsed = ReferencesParser.ParseReferences(gold);
+      Assert.AreEqual(parsed.Count(), 47);
     }
 
     private string Res(string res)

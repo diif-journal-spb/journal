@@ -1,9 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Media;
 using System.Text.RegularExpressions;
-using System.Xml;
 using HtmlAgilityPack;
 
 namespace EugenePetrenko.NumberEditor
@@ -37,16 +35,18 @@ namespace EugenePetrenko.NumberEditor
           @"\s*class=Mso[^s>]*",
           @"\s*style='[^']*'",
           @"(nr){2,}",
-          @"</p\s*>"
+          @"</p\s*>",
+          @"</li\s*>",
         }.Aggregate(html, (current, s) => Regex.Replace(current, s, "", RegexOptions.IgnoreCase))
         ;
 
       html = Regex.Replace(html, @"\s*&nbsp;\s*", " ");
-      html = Regex.Replace(html, @"<p\s*>", "\n");
+      html = Regex.Replace(html, @"<p\s*>", "\n\n");
+      html = Regex.Replace(html, @"<li\s*>", "\n\n");
       html = Regex.Replace(html, @"</i>\s*<i>", "");
       html = Regex.Replace(html, @"<i>", "<em>");
       html = Regex.Replace(html, @"</i>", "</em>");
-      html = Regex.Replace(html, @"</em>\s*<em>", " ");
+      html = Regex.Replace(html, @"</em> *<em>", " ");
       html = html.Trim();
       return html;
     }
@@ -79,6 +79,7 @@ namespace EugenePetrenko.NumberEditor
     {
       if (x.Name.StartsWith("w:")) return true;
       if (x.Name.StartsWith("o:")) return true;
+      if (x.Name.StartsWith("st1:")) return true;
       if (x.Name.StartsWith("pst")) return true;
 
       switch (x.Name)
@@ -89,6 +90,8 @@ namespace EugenePetrenko.NumberEditor
         case "meta":
         case "body":
         case "div":
+        case "ol":
+        case "span":
           return true;
         default:
           return false;
@@ -131,6 +134,11 @@ namespace EugenePetrenko.NumberEditor
       {
         node.ParentNode.InsertBefore(node.OwnerDocument.CreateTextNode(href.Value), node);
         href.Remove();
+      }
+
+      if (node.Name == "li")
+      {
+        node.InsertBefore(node.OwnerDocument.CreateTextNode("  42. "), node.FirstChild);
       }
 
       if (IsProxyNode(node))

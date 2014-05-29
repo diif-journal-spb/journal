@@ -46,6 +46,12 @@ namespace EugenePetrenko.NumberEditor
         .Select(
           x => Regex.Replace(x, "[-–]+", "-")
         )
+        .Select(
+          x => Regex.Replace(x, @"</em>\s*<em>", " ")
+        )
+        .Select(
+          x => Regex.Replace(x, @"\s\s+", " ")
+        )
         .Where(x => x.Length > 0)
         .ToArray();
     } 
