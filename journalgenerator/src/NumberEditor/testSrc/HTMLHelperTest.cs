@@ -1,4 +1,8 @@
 ﻿using System;
+using System.IO;
+using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
+using System.Text;
 using NUnit.Framework;
 
 namespace EugenePetrenko.NumberEditor
@@ -82,5 +86,51 @@ Academic Publishing), 2011. <span class=GramE>295 p. (in Russian).</span> <o:p><
         "<em>Metody issledovaniya sistem s regulyarnym i khaoticheskim povedeniem traektoriy</em>. LAP (LAMBERT Academic Publishing), 2011. 295 p. (in Russian).", 
         gold);
     }
+
+
+    [Test]
+    public void test_reference_html6_refs()
+    {
+      var input = Res("refs.html");
+      var gold = HTMLHelpers.FixWordHTML(input).Trim();
+      
+      Console.Out.WriteLine(gold);
+      
+      var parsed = ReferencesParser.ParseReferences(gold);
+      Assert.AreEqual(parsed.Count(), 6);
+    }
+
+    [Test]
+    public void test_reference_html6_refs2()
+    {
+      var input = Res("refs2.html");
+      var gold = HTMLHelpers.FixWordHTML(input).Trim();
+      
+      Console.Out.WriteLine(gold);
+      
+      var parsed = ReferencesParser.ParseReferences(gold);
+      Assert.AreEqual(parsed.Count(), 6);
+    }
+
+    private string Res(string res)
+    {
+      return GetType().Assembly.GetManifestResourceStream("EugenePetrenko.NumberEditor.testData." + res).ReadAllText();
+    }
+  }
+
+
+  public static class Extensions2
+  {
+    public static string ReadAllText(this Stream s)
+    {
+      using (s)
+      {
+        using (var r = new StreamReader(s))
+        {
+          return r.ReadToEnd();
+        }
+      }
+    }
+    
   }
 }

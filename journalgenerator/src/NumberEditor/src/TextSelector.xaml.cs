@@ -9,6 +9,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Threading;
 using Microsoft.Win32;
+using MIMER.RFC2045;
 
 namespace EugenePetrenko.NumberEditor
 {
@@ -20,7 +21,7 @@ namespace EugenePetrenko.NumberEditor
     private IEnumerable<string> myLanguages = new[] {"EN"};
     private LocalizedArticleXml myArticle = new LocalizedArticleXml();
     private List<LocalizedAuthorXml> myAuthors = new List<LocalizedAuthorXml>();
-    private bool myIsInitialized = false;
+    private bool myIsInitialized;
 
     public TextSelector()
     {
@@ -30,6 +31,28 @@ namespace EugenePetrenko.NumberEditor
         myIsInitialized = true;
       }));
     }
+
+    private void IncludeFileHeader(string file)
+    {
+      myText.Text += "\r\n\r\n----" + file + "\r\n\r\n";
+    }
+
+    private void IncludeFileContent(string file, string text) 
+    {
+      if (file.Contains(".fix."))
+      {
+        text = HTMLHelpers.FixWordHTML(text);
+      }
+
+      if (file.Contains(".bib."))
+      {
+        text = TEXHelpers.FixTexIntoHTML(text);
+      }
+
+      IncludeFileHeader(file);
+      myText.Text += text;
+    }
+
 
     private void MenuItem_Click(object sender, RoutedEventArgs e)
     {
@@ -51,23 +74,36 @@ namespace EugenePetrenko.NumberEditor
         if (file.EndsWith(".jpeg", StringComparison.CurrentCultureIgnoreCase)) continue;
         if (file.EndsWith(".tex", StringComparison.CurrentCultureIgnoreCase)) continue;
 
-        myText.Text += "\r\n\r\n----" + file + "\r\n\r\n";
-
         try
         {
-          using (var rdr = new StreamReader(file, Encoding.GetEncoding("windows-1251")))
+
+          if (file.EndsWith(".mht", StringComparison.InvariantCultureIgnoreCase))
           {
-            var text = rdr.ReadToEnd().Trim();
-            if (file.Contains(".fix."))
+            IncludeFileHeader(file);
+
+            using (var s = File.OpenRead(file))
             {
-              text = HTMLHelpers.FixWordHTML(text);
+              Stream ms = s;
+              var msg = new MailReader().ReadMimeMessage(ref ms, new BasicEndOfMessageStrategy());
+
+              foreach (var attach in msg.Attachments.notNull())
+              {
+                if (attach.Type + "/" + attach.SubType == "text/html")
+                {
+                  var subFile = file + "!" + (attach.Name ?? "") + ".html";
+
+                  using (var rdr = new StreamReader(new MemoryStream(attach.Data), Encoding(subFile)))
+                  {
+                    IncludeFileContent(file, rdr.ReadToEnd().Trim());
+                  }
+                }
+              }
             }
-            
-            if (file.Contains(".bib."))
-            {
-              text = TEXHelpers.FixTexIntoHTML(text);
-            }
-            myText.Text += text;
+          }
+
+          using (var rdr = new StreamReader(file, Encoding(file)))
+          {
+            IncludeFileContent(file, rdr.ReadToEnd().Trim());
           }
         }
         catch (Exception ee)
@@ -77,6 +113,11 @@ namespace EugenePetrenko.NumberEditor
       }
 
       myText.Text += "\r\n\r\n\r\n" + string.Join("\r\n", dlg.FileNames) + "\r\n\r\n\r\n";
+    }
+
+    private static Encoding Encoding(string file)
+    {
+      return file.Contains(".utf8.") ? System.Text.Encoding.UTF8 : System.Text.Encoding.GetEncoding("windows-1251");
     }
 
     private void MenuItem_Click_1(object sender, RoutedEventArgs e)
@@ -148,7 +189,7 @@ namespace EugenePetrenko.NumberEditor
       var pros = new[]
                    {
                      "and", "on", "from", "a", "to", "the", "of", "for", "any", "at", "in", "into", "this", "the", "that", "then",
-                     "them", "with", "out", "over", "by", "an", "to", "into", "across", "below", "abowe", "without",
+                     "them", "with", "out", "over", "by", "an", "to", "into", "across", "below", "abowe", "without"
                    }.ToLookup(x => x, StringComparer.InvariantCultureIgnoreCase);
 
       var trim = Regex.Split(s, @"\s+")
@@ -274,8 +315,8 @@ namespace EugenePetrenko.NumberEditor
       {
         var lang = _lang;
         
-        Func<AuthorXml> RU = () => author.GetRU();
-        Func<AuthorXml> EN = () => author.GetEN();
+        Func<AuthorXml> RU = author.GetRU;
+        Func<AuthorXml> EN = author.GetEN;
         var aSel = _lang == "RU" ? RU : EN;
 
         yield return () => new MenuItem

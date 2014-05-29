@@ -40,6 +40,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net40\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="MIMER">
+      <HintPath>..\packages\MIMER.0.7.0\lib\MIMER.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\..\lib\nunit\nunit.framework.dll</HintPath>
     </Reference>
@@ -163,11 +169,20 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <EmbeddedResource Include="testData\refs.mht" />
+    <EmbeddedResource Include="testData\refs2.mht" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="testData\refs.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="testData\refs2.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
