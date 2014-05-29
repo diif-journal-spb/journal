@@ -100,10 +100,12 @@ namespace EugenePetrenko.NumberEditor
               }
             }
           }
-
-          using (var rdr = new StreamReader(file, Encoding(file)))
+          else
           {
-            IncludeFileContent(file, rdr.ReadToEnd().Trim());
+            using (var rdr = new StreamReader(file, Encoding(file)))
+            {
+              IncludeFileContent(file, rdr.ReadToEnd().Trim());
+            }
           }
         }
         catch (Exception ee)
