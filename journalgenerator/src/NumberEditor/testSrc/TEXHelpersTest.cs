@@ -45,6 +45,36 @@ M.A. Demetriou.
     }
 
     [Test]
+    public void test_replaces_shalsh_it()
+    {
+      var input = @"\bibitem{ShenSun} Shen, L. J. and Sun, J. T. Existence and uniqueness of mild solutions for non linear stochastic impulsive
+differential equation, {\it Abstract and Applied Anal.} vol. 2011,
+ID 439724,(2011), 1-10.";
+
+      var gold = TEXHelpers.FixTexIntoHTML(input);
+
+      Console.Out.WriteLine(gold);
+
+      Assert.AreEqual("\\bibitem{ShenSun}Shen, L. J. and Sun, J. T. Existence and uniqueness of mild solutions for non linear stochastic impulsive differential equation, <em>Abstract and Applied Anal.</em> vol. 2011, ID 439724,(2011), 1-10.", gold);
+
+    }
+
+    [Test]
+    public void test_replaces_shalsh_em()
+    {
+      var input = @"\bibitem{ShenSun} Shen, L. J. and Sun, J. T. Existence and uniqueness of mild solutions for non linear stochastic impulsive
+differential equation, {\em Abstract and Applied Anal.} vol. 2011,
+ID 439724,(2011), 1-10.";
+
+      var gold = TEXHelpers.FixTexIntoHTML(input);
+
+      Console.Out.WriteLine(gold);
+
+      Assert.AreEqual("\\bibitem{ShenSun}Shen, L. J. and Sun, J. T. Existence and uniqueness of mild solutions for non linear stochastic impulsive differential equation, <em>Abstract and Applied Anal.</em> vol. 2011, ID 439724,(2011), 1-10.", gold);
+
+    }
+
+    [Test]
     public void test_replaces_tex_symbols_1()
     {
       var input = @"\bibitem{MeHeAs08}
