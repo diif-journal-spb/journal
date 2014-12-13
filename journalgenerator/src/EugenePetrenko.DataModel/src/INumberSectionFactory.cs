@@ -76,7 +76,7 @@ namespace EugenePetrenko.DataModel
       }
     }
   }
-  
+
   public class PhdNumberFactory : INumberSectionFactory
   {
     public string ElementName
@@ -87,9 +87,9 @@ namespace EugenePetrenko.DataModel
     public INumberSection Create(IArticle[] articles)
     {
       return new PhdsSection(
-        true, 
-        articles, 
-        Pair.Create(JournalLanguage.RU, "Диссертации"), 
+        true,
+        articles,
+        Pair.Create(JournalLanguage.RU, "Диссертации"),
         Pair.Create(JournalLanguage.EN, "Phds"));
     }
 
@@ -109,6 +109,44 @@ namespace EugenePetrenko.DataModel
     private class PhdsSection : NumberSectionImpl
     {
       public PhdsSection(bool showTitle, IArticle[] articles, params Pair<JournalLanguage, string>[] section)
+        : base(showTitle, articles, section)
+      {
+      }
+    }
+  }
+
+  public class MonographNumberFactory : INumberSectionFactory
+  {
+    public string ElementName
+    {
+      get { return "monograph-article"; }
+    }
+
+    public INumberSection Create(IArticle[] articles)
+    {
+      return new MonograpSection(
+        true, 
+        articles, 
+        Pair.Create(JournalLanguage.RU, "Монографии"), 
+        Pair.Create(JournalLanguage.EN, "Monographs"));
+    }
+
+    public IArticle[] Filter(IEnumerable<INumberSection> section)
+    {
+      var art = new List<IArticle>();
+      foreach (INumberSection numberSection in section)
+      {
+        if (numberSection is MonograpSection)
+        {
+          art.AddRange(numberSection.Articles);
+        }
+      }
+      return art.ToArray();
+    }
+
+    private class MonograpSection : NumberSectionImpl
+    {
+      public MonograpSection(bool showTitle, IArticle[] articles, params Pair<JournalLanguage, string>[] section)
         : base(showTitle, articles, section)
       {
       }
