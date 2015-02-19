@@ -1,3 +1,5 @@
+using System.CodeDom;
+using System.IO;
 using System.Linq;
 using System.Xml;
 using EugenePetrenko.DataModel;
@@ -43,6 +45,12 @@ namespace EugenePetrenko.RFFI
     {
       var num = XmlDataLoader.Parse(MockData).Numbers.Single();
       var doc = GenerateRFFI(num);
+
+      var sq = new StringWriter();
+      doc.Save(sq);
+      sq.Close();
+
+      var text = sq.ToString();
 
       DoRFFI(num);
     }
