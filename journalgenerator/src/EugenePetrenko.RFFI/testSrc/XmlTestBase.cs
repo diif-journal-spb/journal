@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Reflection;
 using System.Xml;
 using NUnit.Framework;
 
@@ -7,6 +8,26 @@ namespace EugenePetrenko.RFFI
 {
   public class XmlTestBase
   {
+    private static string AssemblyDirectory
+    {
+      get
+      {
+        string codeBase = Assembly.GetExecutingAssembly().CodeBase;
+        var uri = new UriBuilder(codeBase);
+        string path = Uri.UnescapeDataString(uri.Path);
+        return Path.GetDirectoryName(path);
+      }
+    }
+
+    protected static string DataDirectory
+    {
+      get
+      {
+        var location = AssemblyDirectory;
+        var path = Path.Combine(location, "..\\data");
+        return Path.GetFullPath(path);
+      }
+    } 
     protected static void DoTest<T>(string gold) where T : new()
     {
       var t = new T();

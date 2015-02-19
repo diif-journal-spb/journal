@@ -10,14 +10,14 @@ namespace EugenePetrenko.DataModel
     public void Test_01()
     {
       DoTest("<a lang=\"EN\"/>",
-             delegate(XmlElement root) { Assert.AreEqual(JournalLanguage.EN, myLoader.ParseLanguage(root)); });
+        root => Assert.AreEqual(JournalLanguage.EN, myLoader.ParseLanguage(root)));
     }
 
     [Test]
     public void Test_02()
     {
       DoTest("<a lang=\"RU\"/>",
-             delegate(XmlElement root) { Assert.AreEqual(JournalLanguage.RU, myLoader.ParseLanguage(root)); });
+        root => Assert.AreEqual(JournalLanguage.RU, myLoader.ParseLanguage(root)));
     }
   }
 }

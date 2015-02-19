@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Xml;
 
@@ -26,12 +27,7 @@ namespace EugenePetrenko.DataModel
 
     List<IAuthor> IXmlDataLoader.ParseAuthors(XmlElement element)
     {
-      var result = new List<IAuthor>();
-      foreach (XmlElement node in element.SelectNodes("author"))
-      {
-        result.Add(myLoader.ParseAuthor(node));
-      }
-      return result;
+      return (from XmlElement node in element.SelectNodes("author") select myLoader.ParseAuthor(node)).ToList();
     }
 
     IArticleInfo IXmlDataLoader.ParseArticleInfo(IArticle article, XmlElement element)

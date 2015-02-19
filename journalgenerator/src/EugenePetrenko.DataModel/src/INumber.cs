@@ -74,5 +74,10 @@ namespace EugenePetrenko.DataModel
     {
       get { return mySections; }
     }
+
+    public override string ToString()
+    {
+      return "Number " + Number + "." + Year;
+    }
   }
 }

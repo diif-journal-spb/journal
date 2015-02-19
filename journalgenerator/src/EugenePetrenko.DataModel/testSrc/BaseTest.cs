@@ -13,7 +13,7 @@ namespace EugenePetrenko.DataModel
 
     protected static void DoTest(string xml, DTest test)
     {
-      XmlDocument doc = new XmlDocument();
+      var doc = new XmlDocument();
       doc.LoadXml(xml);
 
       test(doc.DocumentElement);
