@@ -15,7 +15,7 @@ namespace EugenePetrenko.JournalGenerator
 {
   public class Program
   {
-    private static Program myInstance = null;
+    private static Program myInstance;
 
     public static Program Instance
     {
@@ -23,7 +23,6 @@ namespace EugenePetrenko.JournalGenerator
     }
 
     private readonly List<Language> myLanguages;
-    private readonly CommandLineParser myCommandLine;
     private readonly LinkManager myLinkManager;
     private readonly Dictionary<Language, StringTemplateGroup> myTemplates;
     private readonly IJournal myJournal;
@@ -42,11 +41,11 @@ namespace EugenePetrenko.JournalGenerator
       get { return myPdfManager; }
     }
 
-    public Program(CommandLineParser commandLineParser)
+    private Program(CommandLineParser commandLineParser)
     {
       myInstance = this;
-      myCommandLine = commandLineParser;
-      string destFile = myCommandLine.GetValue("dest");
+      var commandLine = commandLineParser;
+      string destFile = commandLine.GetValue("dest");
       DestDir = destFile;
 
       try
@@ -56,10 +55,10 @@ namespace EugenePetrenko.JournalGenerator
       catch
       {
         Console.Out.WriteLine("Umable to clean up output folder {0}", destFile);
+        return;
       }
 
-      myLinkManager = new LinkManager(myCommandLine.GetValue("url"), destFile);
-
+      myLinkManager = new LinkManager(commandLine.GetValue("url"), destFile);
       myTemplatesPath = Path.GetFullPath(commandLineParser.GetValue("templates"));
 
       if (!Directory.Exists(myTemplatesPath))
@@ -81,8 +80,6 @@ namespace EugenePetrenko.JournalGenerator
 
       myTemplates = new Dictionary<Language, StringTemplateGroup>();
 
-      FileUtil.Copy(Path.Combine(myTemplatesPath, "shared"), destFile);
-
       myLanguages = new List<Language>();
       foreach (Language lang in Enum.GetValues(typeof (Language)))
       {
@@ -91,7 +88,6 @@ namespace EugenePetrenko.JournalGenerator
 
         Console.Out.WriteLine("Loading template for lang {0} from {1}", lang, tpath);
 
-        //TODO: Switch to unicode templates
         var loader = new FileSystemTemplateLoader(tpath, Encoding.UTF8);
         var group = new StringTemplateGroup("journal_" + lang, loader);        
         group.RegisterAttributeRenderer(typeof (DateTime), new DateRenderer());
@@ -116,7 +112,7 @@ namespace EugenePetrenko.JournalGenerator
       FileUtil.SmartDelete(backup);
     }
 
-    public void GeneratePage(HtmlGenerationContext ctxp)
+    private void GeneratePage(HtmlGenerationContext ctxp)
     {
       var ctx = new FileHtmlContext(myLinkManager, ctxp);
       Console.Out.WriteLine("\r\nGeneratign page {1}: {0}...", ctx, ctx.TemplateName);
@@ -139,7 +135,7 @@ namespace EugenePetrenko.JournalGenerator
       }
     }
 
-    public void BuildPages()
+    private void BuildPages()
     {
       myQueue.Enqueue(new JournalContentsContext(myLinkManager, myJournal));
       myQueue.Enqueue(new NewsGenerationContext(myJournal, myLinkManager));
@@ -157,15 +153,18 @@ namespace EugenePetrenko.JournalGenerator
       }
 
       myPdfManager.CopyFiles();
+
+      FileUtil.Copy(Path.Combine(myTemplatesPath, "shared"), DestDir);
     }
 
-    public void BuildRFFI()
+    private void BuildRFFI()
     {
       string rffi = Path.Combine(DestDir, "RFFI");
       Directory.CreateDirectory(rffi);
 
       foreach (INumber number in myJournal.Numbers)
       {
+        Console.Out.WriteLine("Number {0}-{1}", number.IntNumber, number.IntYear);
         var copy = myPdfManager.GetSubCopier();
         string dir = Path.Combine(rffi, number.Year + "-" + number.Number);
         Directory.CreateDirectory(dir);
@@ -174,26 +173,26 @@ namespace EugenePetrenko.JournalGenerator
         XmlDocument doc = XmlAttributeProcessor.Build(num);
 
 
-        string file = Path.Combine(dir, string.Format("{0}-{1}_unicode.xml", number.Year, number.Number));
-        using (var stream = new StreamWriter(file, false, Encoding.Unicode))
+        string file = Path.Combine(dir, string.Format("{0}-{1}_utf8.xml", number.Year, number.Number));
+        using (var stream = new StreamWriter(file, false, Encoding.UTF8))
           doc.Save(stream);
 
         num.RegisterPdfDownload((art, fileName)=>copy.RegisterPdfWithName(art, Path.Combine(dir, fileName)));
 
         copy.CopyFiles();
-        
-        var z = new FastZip();
-        z.CreateZip(dir + ".zip", dir, true, null);
+
+//        var z = new FastZip();
+//        z.CreateZip(dir + ".zip", dir, true, null);
       }      
     }
 
-    public void BuildInforeg(string numYear)
+    private void BuildInforeg(string numYear)
     {
-      var number = myJournal.Numbers.Where(x => numYear == string.Format("{0}-{1}", x.Number, x.Year)).Single();
+      var number = myJournal.Numbers.Single(x => numYear == string.Format("{0}-{1}", x.Number, x.Year));
       BuildInfoRegData(number);
     }
 
-    public void BuildInforegNumbers(int count)
+    private void BuildInforegNumbers(int count)
     {
       var col = myJournal.Numbers.OrderBy(x => -x.IntYear*1000 - x.IntNumber).Take(count);
       foreach (var number in col)
@@ -235,10 +234,10 @@ namespace EugenePetrenko.JournalGenerator
       var parser = new CommandLineParser(_args);
       var program = new Program(parser);
       
-      program.BuildPages();
       if (parser.HasKey("rffi"))
       {
         program.BuildRFFI();
+        return 0;
       }
 
       if (parser.HasKey("inforeg"))
@@ -253,6 +252,8 @@ namespace EugenePetrenko.JournalGenerator
       {
         program.BuildInforegNumbers(int.Parse(parser.GetValue("inforegs")));
       }
+
+      program.BuildPages();
 
       return 0;
     }

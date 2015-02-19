@@ -15,8 +15,12 @@
     </exec>
   </target> 
 
-  <target name="debug">
+  <target name="debug-init">
      <property name="release" value="${debug}" />
+  </target>
+
+  <target name="debug">
+     <call target="debug-init" />
      <call target="run-generate" />
      <call target="open"/>
   </target>
@@ -28,6 +32,12 @@
     <exec program="explorer" failonerror="false">
       <arg path="${release.path}\index.html"/>
     </exec>
+  </target>
+
+  <target name="debug-rffi">
+    <property name="rffi" value="1" />
+    <call target="debug-init" />
+    <call target="run-generate" />
   </target>
   
 

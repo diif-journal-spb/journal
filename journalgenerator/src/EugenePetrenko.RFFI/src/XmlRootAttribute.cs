@@ -15,7 +15,7 @@ namespace EugenePetrenko.RFFI
 
     public XmlNode Apply(XmlDocument doc)
     {
-      doc.AppendChild(doc.CreateXmlDeclaration("1.0", "windows-1251", "no"));      
+      doc.AppendChild(doc.CreateXmlDeclaration("1.0", "uft-8", "no"));      
       return doc.AppendChild(doc.CreateElement(RootName));
     }
   }
