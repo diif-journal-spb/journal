@@ -34,7 +34,7 @@ namespace EugenePetrenko.RFFI
 
       if (errors.Any())
       {
-        throw new Exception("Invalid XML: " + errors);
+        throw new Exception("Invalid XML: " + String.Join("\r\n", errors.ToArray()));
       }
     }
   }

@@ -27,7 +27,18 @@ namespace EugenePetrenko.RFFI
         var path = Path.Combine(location, "..\\data");
         return Path.GetFullPath(path);
       }
-    } 
+    }
+
+    protected static string MockData
+    {
+      get
+      {
+        var location = AssemblyDirectory;
+        var path = Path.Combine(location, @"..\src\EugenePetrenko.RFFI\testSrc\SampleData");
+        return Path.GetFullPath(path);
+      }
+    }
+
     protected static void DoTest<T>(string gold) where T : new()
     {
       var t = new T();

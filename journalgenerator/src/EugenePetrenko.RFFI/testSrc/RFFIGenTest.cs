@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Xml;
 using EugenePetrenko.DataModel;
 using NUnit.Framework;
@@ -11,18 +12,39 @@ namespace EugenePetrenko.RFFI
     {
       get
       {
-        var journal = XmlDataLoader.Parse(DataDirectory);
-        return journal.Numbers;
+        return XmlDataLoader.Parse(DataDirectory).Numbers;
       }
     }
 
     [Test, TestCaseSource("Numbers")]
     public void ShouldGenerateValidRFFIXML(INumber number)
     {
-      var num = new RFFIJournalNumber(new RFFIIssue(number));
-      XmlDocument doc = XmlAttributeProcessor.Build(num);
+      DoRFFI(number);
+    }
+
+    private static XmlDocument DoRFFI(INumber number)
+    {
+      var doc = GenerateRFFI(number);
 
       RFFISchemaValidator.EnsureRFFIValid(doc);
+
+      return doc;
+    }
+
+    private static XmlDocument GenerateRFFI(INumber number)
+    {
+      var num = new RFFIJournalNumber(new RFFIIssue(number));
+      XmlDocument doc = XmlAttributeProcessor.Build(num);
+      return doc;
+    }
+
+    [Test]
+    public void MockNumberShouldWork()
+    {
+      var num = XmlDataLoader.Parse(MockData).Numbers.Single();
+      var doc = GenerateRFFI(num);
+
+      DoRFFI(num);
     }
   }
 }
