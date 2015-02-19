@@ -6,6 +6,10 @@ namespace EugenePetrenko.RFFI
 {
   [MeansImplicitUse]
   [AttributeUsage(AttributeTargets.Property|AttributeTargets.Class)]
+  public class XmlIgnoreAttribute : Attribute {}
+  
+  [MeansImplicitUse]
+  [AttributeUsage(AttributeTargets.Property|AttributeTargets.Class)]
   public class XmlElementPathAttribute : Attribute
   {
     private readonly string[] Path;

@@ -18,7 +18,6 @@ namespace EugenePetrenko.RFFI
     }
 
     [XmlAttribute("lang")]
-    [XmlAttribute("fieldlang")]
     public string Lang
     {
       get { return myLang; }

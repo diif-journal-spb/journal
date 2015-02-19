@@ -13,14 +13,26 @@ namespace EugenePetrenko.RFFI
       myArticle = article;
     }
 
-    [XmlElementPath("fpageart"), XmlText]
-    public string FirstPage { get { return myArticle.AllLanguages().Min(info => info.FirstPage).ToString(); } }
+    [XmlElementPath("pages"), XmlText]
+    public string Pages { get { return FirstPage + "-" + LastPage; }}
 
-    [XmlElementPath("lpageart"), XmlText]
-    public string LastPage { get { return myArticle.AllLanguages().Max(info => info.LastPage).ToString(); } }
+    private int FirstPage { get { return myArticle.AllLanguages().Min(info => info.FirstPage); } }
+    private int LastPage { get { return myArticle.AllLanguages().Max(info => info.LastPage); } }
 
+    [XmlElementPath("artType"), XmlText]
+    public string ArtType { get { return "UNK"; } }
 
-    [XmlElementPath("arttitles", "arttitle", Clone = true), XmlForeach]
+    [XmlElementPath("authors", "author", CloneData = new []{false, true}), XmlForeach]
+    public RFFIAuthor[] Authors
+    {
+      get
+      {
+        int i = 1;
+        return myArticle.Authors.Select(author => new RFFIAuthor(i++, author)).ToArray();
+      }
+    }
+
+    [XmlElementPath("artTitles", "artTitle", CloneData = new []{false, true}), XmlForeach]
     public IEnumerable<RFFIArticleTitle> Titles
     {
       get
@@ -29,7 +41,7 @@ namespace EugenePetrenko.RFFI
       }
     }
 
-    [XmlElementPath("abstracts", "abstract", Clone = true), XmlForeach]
+    [XmlElementPath("abstracts", "abstract", CloneData = new []{false, true}), XmlForeach]
     public IEnumerable<RFFIAbstract> Abstracts
     {
       get
@@ -38,27 +50,20 @@ namespace EugenePetrenko.RFFI
       }
     }
 
-    [XmlElementPath("authors", "author", Clone = true), XmlForeach]
-    public IEnumerable<RFFIAuthor> Authors
+    [XmlElementPath("references", "reference", CloneData = new[] { false, true }), XmlForeach]
+    public IEnumerable<RFFIReference> Refererences
     {
-      get
-      {
-        return myArticle.Authors.Select(author => new RFFIAuthor(author)).ToArray();
-      }
+      get { return myArticle.References.Select(x => new RFFIReference(x)); }
     }
 
-    [XmlElementPath("nokeywords"), XmlText]
-    public string NoKeywords { get { return ""; } }
-
-    [XmlElementPath("nobiblist"), XmlText]
-    public string NoBiblist { get { return ""; } }
-    
-    [XmlElementPath("fpdf"), XmlText]
+    //TODO: generate fhtml as a link to journal web site
+    [XmlElementPath("files", "fpdf"), XmlText]
     public string Pdf { get { return myArticle.AllLanguages().Select(x=>x.Pdf).First(); } }
 
     public IArticle Article
     {
       get { return myArticle; }
     }
+
   }
 }

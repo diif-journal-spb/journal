@@ -6,17 +6,16 @@ namespace EugenePetrenko.RFFI
 {
   public class RFFIAuthor
   {
-    private static int myAuthorCount = 1;
-
     private readonly IAuthor myAuthor;
-    private readonly int myAuthorId = myAuthorCount++;
+    private readonly int myAuthorId;
 
-    public RFFIAuthor(IAuthor author)
+    public RFFIAuthor(int num, IAuthor author)
     {
+      myAuthorId = num;
       myAuthor = author;
     }
 
-    [XmlElementPath("individual", "individInfo", Clone = true), XmlForeach]
+    [XmlElementPath("individInfo", Clone = true), XmlForeach]
     public IEnumerable<RFFIAuthorInfo> Authors
     {
       get
@@ -33,7 +32,7 @@ namespace EugenePetrenko.RFFI
       }
     }
 
-    [XmlAttribute("authornum")]
+    [XmlAttribute("num")]
     public string Id
     {
       get { return myAuthorId.ToString(); }

@@ -18,38 +18,37 @@ namespace EugenePetrenko.RFFI
     }
 
     [XmlAttribute("lang")]
-    [XmlAttribute("fieldlang")]
     public string Lang
     {
       get { return myLang; }
     }
 
-    [XmlElementPath("jrntitle"), XmlText]
+    [XmlElementPath("title"), XmlText]
     public string JournalTitle
     {
       get { return myTitle; }
     }
     
-    [XmlElementPath("publ"), XmlText]
+    [XmlIgnore, XmlElementPath("publ"), XmlText]
     public string Publisher
     {
       get { return myPublisher; }
     }
 
-    [XmlElementPath("placepubl"), XmlText]
+    [XmlIgnore, XmlElementPath("placepubl"), XmlText]
     public string PublishingPlace
     {
       get { return myPublisherPlace; }
     }
 
-    [XmlElementPath("loc"), XmlText]
+    [XmlIgnore, XmlElementPath("loc"), XmlText]
     public string PlublisherLocation
     {
       get { return myPublisherLocation; }
     }
 
     private static readonly JournalInfoBean RUS = new JournalInfoBean(
-      "rus", 
+      "RUS", 
       "Дифференциальные Уравнения и Процессы Управления", 
       "Санкт-Петербургский государственный университет", 
       "Санкт-Петербург", 
@@ -57,7 +56,7 @@ namespace EugenePetrenko.RFFI
       );
 
     private static readonly JournalInfoBean ENG = new JournalInfoBean(
-      "eng", 
+      "ENG", 
       "Electronic Journal Difference Equations and Control Processes", 
       "Saint-Petersburg State University",
       "Saint Petersburg", 

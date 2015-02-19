@@ -9,31 +9,31 @@ namespace EugenePetrenko.RFFI
     [Test]
     public void Test_01()
     {
-      DoTest<Class_Test_01>("<?xml version=\"1.0\" encoding=\"utf-16\"?><aaaa />");
+      DoTest<Class_Test_01>("<aaaa />");
     }
     
     [Test]
     public void Test_02()
     {
-      DoTest<Class_Test_02>("<?xml version=\"1.0\" encoding=\"utf-16\"?><aaaa Bar=\"Foo\">Foo</aaaa>");
+      DoTest<Class_Test_02>("<aaaa Bar=\"Foo\">Foo</aaaa>");
     }
     
     [Test]
     public void Test_03()
     {
-      DoTest<Class_Test_03>("<?xml version=\"1.0\" encoding=\"utf-16\"?><aaaa><a><b><c Bar=\"Foo\">Foo</c></b></a></aaaa>");
+      DoTest<Class_Test_03>("<aaaa><a><b><c Bar=\"Foo\">Foo</c></b></a></aaaa>");
     }    
     
     [Test]
     public void Test_04()
     {
-      DoTest<Class_Test_04>("<?xml version=\"1.0\" encoding=\"utf-16\"?><aaaa><x><y><z><a><b><c Bar=\"Foo\">Foo</c></b></a></z></y></x></aaaa>");
+      DoTest<Class_Test_04>("<aaaa><x><y><z><a><b><c Bar=\"Foo\">Foo</c></b></a></z></y></x></aaaa>");
     }
     
     [Test]
     public void Test_05()
     {
-      DoTest<Class_Test_05>("<?xml version=\"1.0\" encoding=\"utf-16\"?><aaaa><z Bar=\"Foo\">Foo</z><z Bar=\"Foo2\">Foo2</z></aaaa>");
+      DoTest<Class_Test_05>("<aaaa><z Bar=\"Foo\">Foo</z><z Bar=\"Foo2\">Foo2</z></aaaa>");
     }
 
     [XmlRoot("aaaa")]

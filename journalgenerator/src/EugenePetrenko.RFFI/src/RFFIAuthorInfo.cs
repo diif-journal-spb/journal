@@ -19,7 +19,6 @@ namespace EugenePetrenko.RFFI
     }
 
     [XmlAttribute("lang")]
-    [XmlAttribute("fieldlang")]
     public string Lang
     {
       get { return myLang; }
@@ -31,19 +30,19 @@ namespace EugenePetrenko.RFFI
       get { return mySurname; }
     }
 
-    [XmlElementPath("fname"), XmlText]
+    [XmlElementPath("initials"), XmlText]
     public string FName
     {
       get { return myFName; }
     }
 
-    [XmlElementPath("auinf"), XmlText]
+    [XmlElementPath("orgName"), XmlText]
     public string Auwork
     {
       get { return myauwork; }
     }
 
-    [XmlElementPath("auemail"), XmlText]
+    [XmlElementPath("email"), XmlText]
     public string Auemail
     {
       get { return myauemail; }

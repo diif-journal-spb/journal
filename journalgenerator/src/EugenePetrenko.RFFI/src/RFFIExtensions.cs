@@ -11,9 +11,9 @@ namespace EugenePetrenko.RFFI
       switch (lang)
       {
         case JournalLanguage.EN:
-          return "eng";
+          return "ENG";
         case JournalLanguage.RU:
-          return "rus";
+          return "RUS";
         default:
           throw new NotImplementedException("Language " + lang + " is not supported");
       }

@@ -11,7 +11,7 @@ namespace EugenePetrenko.RFFI
       myLang = lang;
     }
 
-    [XmlCData]
+    [XmlText]
     public string Text
     {
       get { return myText; }

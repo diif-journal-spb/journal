@@ -1,3 +1,4 @@
+using System;
 using System.CodeDom;
 using System.IO;
 using System.Linq;
@@ -24,13 +25,13 @@ namespace EugenePetrenko.RFFI
       DoRFFI(number);
     }
 
-    private static XmlDocument DoRFFI(INumber number)
+    private void DoRFFI(INumber number)
     {
       var doc = GenerateRFFI(number);
 
-      RFFISchemaValidator.EnsureRFFIValid(doc);
+      Console.Out.WriteLine(SaveXML(doc));
 
-      return doc;
+      RFFISchemaValidator.EnsureRFFIValid(doc);
     }
 
     private static XmlDocument GenerateRFFI(INumber number)
@@ -40,19 +41,28 @@ namespace EugenePetrenko.RFFI
       return doc;
     }
 
-    [Test]
-    public void MockNumberShouldWork()
+    private XmlDocument MockDocument
     {
-      var num = XmlDataLoader.Parse(MockData).Numbers.Single();
-      var doc = GenerateRFFI(num);
-
-      var sq = new StringWriter();
-      doc.Save(sq);
-      sq.Close();
-
-      var text = sq.ToString();
-
-      DoRFFI(num);
+      get
+      {
+        var num = XmlDataLoader.Parse(MockData).Numbers.Single();
+        return GenerateRFFI(num);
+      }
     }
+
+    [Test]
+    public void MockNumberShouldBeValid()
+    {
+      Console.Out.WriteLine(SaveXML(MockDocument));
+
+      RFFISchemaValidator.EnsureRFFIValid(MockDocument);
+    }
+
+    [Test]
+    public void MockNumberShouldHaveValidDeclaration()
+    {
+      AssertXMLNode(MockDocument, "/*", @"<journal xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:noNamespaceSchemaLocation=""JournalArticulus.xsd"" />" );
+    }
+
   }
 }

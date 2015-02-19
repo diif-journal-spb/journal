@@ -14,16 +14,28 @@ namespace EugenePetrenko.RFFI
       myNumber = number;
     }
 
-    [XmlElementPath("jyear"), XmlText]
-    public string JournalYear { get { return myNumber.Year; } }
+    [XmlElementPath("volume"), XmlText] 
+    public string Volume {get { return myNumber.Year; }}
 
-    [XmlElementPath("jdateUni"), XmlText]
+    [XmlElementPath("number"), XmlText]
+    public string Number { get { return myNumber.Year + "-" + myNumber.Number; } }
+
+    [XmlElementPath("altNumber"), XmlText] 
+    public string AltNumber {get { return myNumber.Number; }}
+
+    [XmlElementPath("part"), XmlText] 
+    public string Part {get { return myNumber.Number; }}
+
+    [XmlElementPath("dateUni"), XmlText]
     public string JournalDateUni { get { return myNumber.Year + (myNumber.IntNumber*3-2) + "/" + (myNumber.IntNumber*3); } }
+
+    [XmlElementPath("issTitle"), XmlText]
+    public string IssnTitle { get { return myNumber.Year + " #" + myNumber.Number; } }
 
     [XmlElementPath("pages"), XmlText]
     public string JournalPages { get { return "1-" + GetPages(); } }
 
-    [XmlElementPath("article", Clone = true), XmlForeach]
+    [XmlElementPath("articles", "article", CloneData = new []{false, true}), XmlForeach]
     public IEnumerable<RFFIArticle> Articles
     {
       get 

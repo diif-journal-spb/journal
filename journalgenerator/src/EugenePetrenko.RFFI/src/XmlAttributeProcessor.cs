@@ -15,6 +15,8 @@ namespace EugenePetrenko.RFFI
         foreach (object getterValue in Values(info, getterValue2))
         {
           bool hasPath = false;
+          if (info.IsDefined(typeof(XmlIgnoreAttribute), true)) continue;
+
           foreach (XmlElementPathAttribute path in info.GetCustomAttributes(typeof (XmlElementPathAttribute), true))
           {
             hasPath = true;
@@ -74,7 +76,6 @@ namespace EugenePetrenko.RFFI
       Apply(root, o);
       doc.CreateXmlDeclaration("1.0", null, null);
 
-
       foreach (XmlNode node in doc)
       {
         if (node.NodeType == XmlNodeType.XmlDeclaration)
@@ -82,7 +83,17 @@ namespace EugenePetrenko.RFFI
           doc.RemoveChild(node);
         }
       }
-       
+
+      var nsmgr = new XmlNamespaceManager(doc.NameTable);
+      var xsi = "http://www.w3.org/2001/XMLSchema-instance";
+      nsmgr.AddNamespace("xsi", xsi);
+
+      doc.DocumentElement.SetAttribute("xmlns:xsi", xsi);
+
+      XmlAttribute att = doc.CreateAttribute("xsi", "noNamespaceSchemaLocation", xsi);
+      att.Value = "JournalArticulus.xsd";
+      doc.DocumentElement.Attributes.Append(att);
+      
       return doc;
     }
   }
