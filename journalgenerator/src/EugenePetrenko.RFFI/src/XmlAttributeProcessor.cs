@@ -63,14 +63,26 @@ namespace EugenePetrenko.RFFI
     {
       object[] attr = o.GetType().GetCustomAttributes(typeof (XmlRootAttribute), true);
       var doc = new XmlDocument();
+      
       XmlNode root = ((XmlRootAttribute) attr[0]).Apply(doc);
 
       var attributes = o.GetType().GetCustomAttributes(typeof (XmlElementPathAttribute), true);
       foreach (XmlElementPathAttribute attribute in attributes){
         root = attribute.Apply(root);
-      }
+      } 
 
       Apply(root, o);
+      doc.CreateXmlDeclaration("1.0", null, null);
+
+
+      foreach (XmlNode node in doc)
+      {
+        if (node.NodeType == XmlNodeType.XmlDeclaration)
+        {
+          doc.RemoveChild(node);
+        }
+      }
+       
       return doc;
     }
   }

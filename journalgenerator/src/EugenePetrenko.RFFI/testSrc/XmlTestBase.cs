@@ -3,7 +3,7 @@ using System.IO;
 using System.Xml;
 using NUnit.Framework;
 
-namespace EugenePetrenko.RFFI.testSrc
+namespace EugenePetrenko.RFFI
 {
   public class XmlTestBase
   {

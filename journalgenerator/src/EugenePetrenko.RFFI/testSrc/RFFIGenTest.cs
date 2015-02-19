@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace EugenePetrenko.RFFI.testSrc
+namespace EugenePetrenko.RFFI
 {
   [TestFixture]
   public class RFFIGenTest : XmlTestBase

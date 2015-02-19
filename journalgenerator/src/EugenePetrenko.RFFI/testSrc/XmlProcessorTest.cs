@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using EugenePetrenko.RFFI.testSrc;
 using NUnit.Framework;
 
 namespace EugenePetrenko.RFFI
