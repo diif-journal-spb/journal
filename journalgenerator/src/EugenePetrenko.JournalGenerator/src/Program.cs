@@ -172,7 +172,7 @@ namespace EugenePetrenko.JournalGenerator
         var num = new RFFIJournalNumber(new RFFIIssue(number));
         XmlDocument doc = XmlAttributeProcessor.Build(num);
 
-        string file = Path.Combine(dir, string.Format("{0}-{1}.xml", number.Year, number.Number));
+        string file = Path.Combine(dir, string.Format("{0}-{1}'_unicode.xml", number.Year, number.Number));
         using (var stream = new StreamWriter(file, false, Encoding.Unicode))
           doc.Save(stream);
 
