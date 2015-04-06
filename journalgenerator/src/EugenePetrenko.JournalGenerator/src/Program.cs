@@ -182,8 +182,11 @@ namespace EugenePetrenko.JournalGenerator
 
         copy.CopyFiles();
 
-//        var z = new FastZip();
-//        z.CreateZip(dir + ".zip", dir, true, null);
+        var totalPages = num.TotalPages;
+
+        var z = new FastZip();
+        z.CreateZip(dir + "-pp-" + totalPages + ".zip", dir, true, null);
+        FileUtil.SmartDelete(dir);
       }      
     }
 

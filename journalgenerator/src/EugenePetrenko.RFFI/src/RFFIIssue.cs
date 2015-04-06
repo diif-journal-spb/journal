@@ -35,6 +35,9 @@ namespace EugenePetrenko.RFFI
     [XmlElementPath("pages"), XmlText]
     public string JournalPages { get { return "1-" + GetPages(); } }
 
+    [XmlIgnore]
+    public int JournalTotalPages { get { return GetPages(); }}
+
     [XmlElementPath("articles", "article", CloneData = new []{false, true}), XmlForeach]
     public IEnumerable<RFFIArticle> Articles
     {

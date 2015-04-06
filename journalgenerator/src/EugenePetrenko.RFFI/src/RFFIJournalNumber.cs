@@ -61,6 +61,11 @@ namespace EugenePetrenko.RFFI
     [XmlIgnore, XmlElementPath("jrncode"), XmlText, XmlStaticAttribute("jcountry", "ru")]
     public string JournalCode { get { return "123456"; } }
 
+    public int TotalPages
+    {
+      get { return myIssue.JournalTotalPages; }
+    }
+
     public void RegisterPdfDownload(Action<IArticleInfo, string> myPdfManager)
     {
       foreach (var article in Issue.Articles)
