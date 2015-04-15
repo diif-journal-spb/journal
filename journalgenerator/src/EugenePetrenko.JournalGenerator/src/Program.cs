@@ -165,7 +165,7 @@ namespace EugenePetrenko.JournalGenerator
       foreach (INumber number in myJournal.Numbers)
       {
         Console.Out.WriteLine("Number {0}-{1}", number.IntNumber, number.IntYear);
-        var copy = myPdfManager.GetSubCopier();
+
         string dir = Path.Combine(rffi, number.Year + "-" + number.Number);
         Directory.CreateDirectory(dir);
 
@@ -178,9 +178,11 @@ namespace EugenePetrenko.JournalGenerator
 
         RFFISchemaValidator.EnsureRFFIValid(doc);
 
+        /**pdf files are not allowed to be stored in the journal **//**
+        var copy = myPdfManager.GetSubCopier();
         num.RegisterPdfDownload((art, fileName)=>copy.RegisterPdfWithName(art, Path.Combine(dir, fileName)));
-
         copy.CopyFiles();
+        **/
 
         var totalPages = num.TotalPages;
 

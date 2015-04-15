@@ -66,13 +66,15 @@ namespace EugenePetrenko.RFFI
       get { return myIssue.JournalTotalPages; }
     }
 
+/*
     public void RegisterPdfDownload(Action<IArticleInfo, string> myPdfManager)
     {
       foreach (var article in Issue.Articles)
       {
         IArticle art = article.Article;
-        myPdfManager(art.ForLanguage(JournalLanguage.RU), article.Pdf);
+        myPdfManager(art.ForLanguage(JournalLanguage.RU), article.Article.AllLanguages().Select(x=>x.Pdf));
       }
     }
+*/
   }
 }

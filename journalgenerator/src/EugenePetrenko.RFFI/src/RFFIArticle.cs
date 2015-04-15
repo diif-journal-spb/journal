@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using EugenePetrenko.DataModel;
@@ -6,10 +7,12 @@ namespace EugenePetrenko.RFFI
 {
   public class RFFIArticle
   {
+    private readonly RFFIIssue myRffiIssue;
     private readonly IArticle myArticle;
 
-    public RFFIArticle(IArticle article)
+    public RFFIArticle(RFFIIssue rffiIssue, IArticle article)
     {
+      myRffiIssue = rffiIssue;
       myArticle = article;
     }
 
@@ -56,13 +59,43 @@ namespace EugenePetrenko.RFFI
       get { return myArticle.References.Select(x => new RFFIReference(x)); }
     }
 
-    //TODO: generate fhtml as a link to journal web site
-    [XmlElementPath("files", "fpdf"), XmlText]
-    public string Pdf { get { return myArticle.AllLanguages().Select(x=>x.Pdf).First(); } }
-
-    public IArticle Article
+    [XmlElementPath("files")]
+    public RFFIArticleFiles Files
     {
-      get { return myArticle; }
+      get { return new RFFIArticleFiles(myRffiIssue, myArticle);}
+    }
+  }
+
+  public class RFFIArticleFiles
+  {
+    private const string BaseURL = "http://www.math.spbu.ru/diffjournal";
+
+    private readonly RFFIIssue myRffiIssue;
+    private readonly IArticle myArticle;
+
+    public RFFIArticleFiles(RFFIIssue rffiIssue, IArticle article)
+    {
+      myRffiIssue = rffiIssue;
+      myArticle = article;
+    }
+
+    [XmlElementPath("fhtml"), XmlText]
+    public string HTML
+    {
+      get
+      {
+        return String.Format("{2}/RU/numbers/{0}.{1}/issue.html", myRffiIssue.NumberInternal.IntYear, myRffiIssue.NumberInternal.IntNumber, BaseURL);
+      }
+    }
+    
+    [XmlElementPath("furl", CloneData = new [] {true}), XmlText]
+    public string PdfURLs
+    {
+      get
+      {
+        var x = myArticle.ForLanguage(JournalLanguage.RU);
+        return string.Format("{0}/pdf/{1}", BaseURL, x.Pdf.Replace("\\", "/"));
+      }
     }
 
   }

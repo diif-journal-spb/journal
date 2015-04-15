@@ -14,11 +14,14 @@ namespace EugenePetrenko.RFFI
       myNumber = number;
     }
 
+    [XmlIgnore]
+    public INumber NumberInternal { get { return myNumber; }}
+
     [XmlElementPath("volume"), XmlText] 
     public string Volume {get { return myNumber.Year; }}
 
     [XmlElementPath("number"), XmlText]
-    public string Number { get { return myNumber.Year + "-" + myNumber.Number; } }
+    public string Number { get { return myNumber.Number; } }
 
     [XmlElementPath("altNumber"), XmlText] 
     public string AltNumber {get { return myNumber.Number; }}
@@ -30,7 +33,7 @@ namespace EugenePetrenko.RFFI
     public string JournalDateUni { get { return myNumber.Year + (myNumber.IntNumber*3-2) + "/" + (myNumber.IntNumber*3); } }
 
     [XmlElementPath("issTitle"), XmlText]
-    public string IssnTitle { get { return myNumber.Year + " #" + myNumber.Number; } }
+    public string IssnTitle { get { return myNumber.Year + "." + myNumber.Number; } }
 
     [XmlElementPath("pages"), XmlText]
     public string JournalPages { get { return "1-" + GetPages(); } }
@@ -43,7 +46,7 @@ namespace EugenePetrenko.RFFI
     {
       get 
       {
-        return Articlez.Select(article => new RFFIArticle(article)).ToArray();
+        return Articlez.Select(article => new RFFIArticle(this, article)).ToArray();
       }
     }
 
