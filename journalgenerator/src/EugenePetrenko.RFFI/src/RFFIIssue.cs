@@ -30,7 +30,24 @@ namespace EugenePetrenko.RFFI
     public string Part {get { return myNumber.Number; }}
 
     [XmlElementPath("dateUni"), XmlText]
-    public string JournalDateUni { get { return myNumber.Year + (myNumber.IntNumber*3-2) + "/" + (myNumber.IntNumber*3); } }
+    public string JournalDateUni {
+      get
+      {
+        switch (myNumber.IntNumber)
+        {
+          case 1:
+            return myNumber.Year + "31/" + myNumber.Year;
+          case 2:
+            return myNumber.Year + "32/" + myNumber.Year;
+          case 3:
+            return myNumber.Year + "33/" + myNumber.Year;
+          case 4:
+            return myNumber.Year + "32/" + myNumber.Year;
+          default:
+            return myNumber.Year + "/" + myNumber.Year;
+        }
+      } 
+    }
 
     [XmlElementPath("issTitle"), XmlText]
     public string IssnTitle { get { return myNumber.Year + "." + myNumber.Number; } }
