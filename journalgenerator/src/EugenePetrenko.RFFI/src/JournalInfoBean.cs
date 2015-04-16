@@ -57,7 +57,7 @@ namespace EugenePetrenko.RFFI
 
     private static readonly JournalInfoBean ENG = new JournalInfoBean(
       "ENG", 
-      "Electronic Journal Difference Equations and Control Processes", 
+      "Differential Equations and Control Processes", 
       "Saint-Petersburg State University",
       "Saint Petersburg", 
       "Universitetsky prospekt, 28, 198504, Peterhof, St. Petersburg, Russia. Phone: +7 (812) 428-4210, Fax: +7 (812) 428-6944");
