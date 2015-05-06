@@ -27,13 +27,13 @@ namespace EugenePetrenko.RFFI
     [XmlElementPath("surname"), XmlText]
     public string Surname
     {
-      get { return mySurname; }
+      get { return mySurname.Trim(); }
     }
 
     [XmlElementPath("initials"), XmlText]
     public string FName
     {
-      get { return myFName; }
+      get { return myFName.Trim(); }
     }
 
     [XmlElementPath("orgName"), XmlText]
