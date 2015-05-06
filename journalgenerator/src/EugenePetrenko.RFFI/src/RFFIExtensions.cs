@@ -21,7 +21,28 @@ namespace EugenePetrenko.RFFI
 
     public static string FilterXml(this string str)
     {
-      return Regex.Replace(str, "<br[^/]*/>", "\n", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      str = Regex.Replace(str, "<br[^/>]*/?>", "\n", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      str = Regex.Replace(str, "<p>\\s*", "\n", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      str = Regex.Replace(str, "</p>", " ", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      str = Regex.Replace(str, "</?em[^/>]*/?>", " ", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      str = Regex.Replace(str, "\\s*<sup(er)?>\\s*", "^", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      str = Regex.Replace(str, "\\s*</sup(er)?>\\s*", " ", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      str = Regex.Replace(str, "\\s*<sub(script)?>\\s*", "_", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      str = Regex.Replace(str, "\\s*</sub(script)?>\\s*", " ", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      str = Regex.Replace(str, "\\s*<li>\\s*", "\n* ", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      str = Regex.Replace(str, "\\s*</li>\\s*", " ", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      str = Regex.Replace(str, "\\s*</?ul>\\s*", " ", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      str = Regex.Replace(str, "\\s*</?b>\\s*", " ", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      str = Regex.Replace(str, "\\s*</?i>\\s*", " ", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      str = Regex.Replace(str, "\\s*</?strong>\\s*", " ", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      str = Regex.Replace(str, "\\s*</?subscripn>\\s*", " ", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      str = Regex.Replace(str, "\\s*</?nobr>\\s*", " ", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      str = Regex.Replace(str, "\\s*</?center>\\s*", "\n", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      
+      //NBSP;
+      str = Regex.Replace(str, "\u00A0", " ", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      str = Regex.Replace(str, "[ ]+", " ", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      return str;
     }
   }
 }

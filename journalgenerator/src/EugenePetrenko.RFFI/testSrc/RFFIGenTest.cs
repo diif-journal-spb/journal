@@ -1,7 +1,6 @@
 using System;
-using System.CodeDom;
-using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Xml;
 using EugenePetrenko.DataModel;
 using NUnit.Framework;
@@ -32,6 +31,18 @@ namespace EugenePetrenko.RFFI
       Console.Out.WriteLine(SaveXML(doc));
 
       RFFISchemaValidator.EnsureRFFIValid(doc);
+
+      //check no XML in text
+      foreach (var text in doc.SelectNodes("//text()").Cast<XmlText>())
+      {
+        Assert.IsFalse(Regex.Matches(text.Value, "<\\w+/?>").Count > 0, "<TAG> contained in " + text.Value);
+      }
+
+      //check names trimmed
+      foreach (var text in doc.SelectNodes("//surname/text()|//initials/text()").Cast<XmlText>())
+      {
+        Assert.AreEqual(text.Value.Trim(), text.Value, "Incorrect name: " + text.Value);
+      }
     }
 
     private static XmlDocument GenerateRFFI(INumber number)
