@@ -43,7 +43,7 @@ namespace EugenePetrenko.RFFI
     public string JournalISSN { get { return "1817-2172";}}
 
     [XmlElementPath("codeNEB"), XmlText]
-    public string codeNEB { get { return "2072909X"; } }
+    public string codeNEB { get { return "18172172"; } }
    
     [XmlElementPath("journalInfo", Clone = true), XmlForeach]
     public IEnumerable<JournalInfoBean> JournalInfo

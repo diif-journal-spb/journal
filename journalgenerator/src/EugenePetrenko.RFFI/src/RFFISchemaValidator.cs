@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.IO;
 using System.Linq;
 using System.Xml;
@@ -46,6 +47,57 @@ namespace EugenePetrenko.RFFI
       if (errors.Any())
       {
         throw new Exception("Invalid XML: " + String.Join("\r\n", errors.ToArray()));
+      }
+
+      Action<XmlDocument>[] validators =
+      {
+        ValidateNo2072909X,
+        ValidateCodeNEB,
+        ValidateISSN,
+      };
+
+      foreach (var validator in validators)
+      {
+        var doc = new XmlDocument();
+        doc.LoadXml(sw.ToString());
+        validator(doc);
+      }
+    }
+
+
+    private static void ValidateCodeNEB(XmlDocument doc)
+    {
+      var neb = doc.SelectSingleNode("journal/codeNEB/text()");
+      if (neb == null)
+      {
+        throw new Exception("Document does not contain codeNEB");
+      }
+
+      if (neb.Value != "18172172")
+      {
+        throw new Exception("Document contains invalid codeNEB: " + neb.Value);
+      }
+    }
+
+    private static void ValidateISSN(XmlDocument doc)
+    {
+      var neb = doc.SelectSingleNode("journal/issn/text()");
+      if (neb == null)
+      {
+        throw new Exception("Document does not contain issn");
+      }
+
+      if (neb.Value != "1817-2172")
+      {
+        throw new Exception("Document contains invalid issn: " + neb.Value);
+      }
+    }
+
+    private static void ValidateNo2072909X(XmlDocument doc)
+    {
+      if (doc.OuterXml.Contains("2072909X"))
+      {
+        throw new Exception("Document must not contain onlder ID: '2072909X'");
       }
     }
   }
