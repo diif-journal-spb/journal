@@ -40,13 +40,16 @@ namespace EugenePetrenko.NumberEditor
         }.Aggregate(html, (current, s) => Regex.Replace(current, s, "", RegexOptions.IgnoreCase))
         ;
 
+      
       html = Regex.Replace(html, @"\s*&nbsp;\s*", " ");
       html = Regex.Replace(html, @"<p\s*>", "\n\n");
+      html = Regex.Replace(html, @"<br\s*/?\s*>", "\n\n");
       html = Regex.Replace(html, @"<li\s*>", "\n\n");
       html = Regex.Replace(html, @"</i>\s*<i>", "");
       html = Regex.Replace(html, @"<i>", "<em>");
       html = Regex.Replace(html, @"</i>", "</em>");
       html = Regex.Replace(html, @"</em> *<em>", " ");
+      html = html.Replace(@"&nbsp;", " ");
       html = html.Trim();
       return html;
     }
@@ -66,9 +69,11 @@ namespace EugenePetrenko.NumberEditor
     {
       switch (x.Name)
       {
+        case "dir":
         case "style":
         case "class":
         case "lang":
+        case "clear":
           return true;
         default:
           return false;

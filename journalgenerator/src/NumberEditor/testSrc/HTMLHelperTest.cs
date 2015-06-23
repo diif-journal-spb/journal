@@ -146,6 +146,22 @@ Academic Publishing), 2011. <span class=GramE>295 p. (in Russian).</span> <o:p><
       var parsed = ReferencesParser.ParseReferences(gold);
       Assert.AreEqual(parsed.Count(), 47);
     }
+    
+    [Test]
+    public void test_reference_html7_refs4()
+    {
+      var input = Res("refs4.html");
+      var gold = HTMLHelpers.FixWordHTML(input).Trim();
+      
+      Console.Out.WriteLine(gold);
+      
+      var parsed = ReferencesParser.ParseReferences(gold);
+      foreach (var rf in parsed)
+      {
+        Console.Out.WriteLine(">> " + rf);
+      }
+      Assert.AreEqual(parsed.Count(), 47);
+    }
 
     private string Res(string res)
     {

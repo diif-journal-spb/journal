@@ -423,12 +423,26 @@ namespace EugenePetrenko.NumberEditor
 
     private void CopyAuthors_Click(object sender, RoutedEventArgs e)
     {
-      Clipboard.SetText(myAuthorXml.Text);
+      try
+      {
+        Clipboard.SetText(myAuthorXml.Text);
+      }
+      catch
+      {
+        //NOP
+      }
     }
 
     private void CopyArticles_Click(object sender, RoutedEventArgs e)
     {
-      Clipboard.SetText(myArticleXml.Text);
+      try
+      {
+        Clipboard.SetText(myArticleXml.Text);
+      }
+      catch
+      {
+        //NOP
+      }
     }
   }
 }
