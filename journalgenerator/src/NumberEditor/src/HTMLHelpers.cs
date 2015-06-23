@@ -13,7 +13,6 @@ namespace EugenePetrenko.NumberEditor
       try
       {
         html = ProcessAsHTMLDocument(html);
-        Console.Out.WriteLine("Post processed XML: \n\n" + html);
       }
       catch(Exception e)
       {
@@ -37,11 +36,15 @@ namespace EugenePetrenko.NumberEditor
           @"(nr){2,}",
           @"</p\s*>",
           @"</li\s*>",
+          @"<em\s*>\s*</\s*em\s*>",
+          @"<u\s*>\s*</\s*u\s*>",
         }.Aggregate(html, (current, s) => Regex.Replace(current, s, "", RegexOptions.IgnoreCase))
         ;
 
       
       html = Regex.Replace(html, @"\s*&nbsp;\s*", " ");
+      html = Regex.Replace(html, @"\s*\u00a0\s*", " ");
+      html = Regex.Replace(html, @" +", " ");
       html = Regex.Replace(html, @"<p\s*>", "\n\n");
       html = Regex.Replace(html, @"<br\s*/?\s*>", "\n\n");
       html = Regex.Replace(html, @"<li\s*>", "\n\n");
@@ -49,8 +52,16 @@ namespace EugenePetrenko.NumberEditor
       html = Regex.Replace(html, @"<i>", "<em>");
       html = Regex.Replace(html, @"</i>", "</em>");
       html = Regex.Replace(html, @"</em> *<em>", " ");
-      html = html.Replace(@"&nbsp;", " ");
+      html = html.Replace("&nbsp;", " ");
+      html = html.Replace("\r", "");
       html = html.Trim();
+
+      html =
+        string.Join("\n", 
+          html
+          .Split("\n".ToCharArray(), StringSplitOptions.None)
+          .Select(x => Regex.Replace(x, @"\s+", " ")));
+
       return html;
     }
 
@@ -97,6 +108,7 @@ namespace EugenePetrenko.NumberEditor
         case "div":
         case "ol":
         case "span":
+        case "strong":
           return true;
         default:
           return false;

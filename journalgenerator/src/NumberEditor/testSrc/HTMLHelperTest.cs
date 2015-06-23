@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using System.Text;
+using System.Text.RegularExpressions;
 using NUnit.Framework;
 
 namespace EugenePetrenko.NumberEditor
@@ -160,7 +161,45 @@ Academic Publishing), 2011. <span class=GramE>295 p. (in Russian).</span> <o:p><
       {
         Console.Out.WriteLine(">> " + rf);
       }
-      Assert.AreEqual(parsed.Count(), 47);
+      Assert.AreEqual(parsed.Count(), 28);
+    }
+ 
+    [Test]
+    public void test_reference_html8_refs5()
+    {
+      var input = Res("refs5.html");
+      var gold = HTMLHelpers.FixWordHTML(input).Trim();
+      
+      Console.Out.WriteLine(gold);
+      
+      var parsed = ReferencesParser.ParseReferences(gold);
+      foreach (var rf in parsed)
+      {
+        Console.Out.WriteLine(">> " + rf);
+      }
+
+      foreach (var rf in parsed)
+      {
+        Assert.AreEqual(rf, Regex.Replace(rf, " +", " "));
+      }
+
+      Assert.AreEqual(parsed.Count(), 25); // + References as a cite
+    }
+ 
+    [Test]
+    public void test_reference_html9_refs6()
+    {
+      var input = Res("refs6.html");
+      var gold = HTMLHelpers.FixWordHTML(input).Trim();
+      
+      Console.Out.WriteLine(gold);
+      
+      var parsed = ReferencesParser.ParseReferences(gold);
+      foreach (var rf in parsed)
+      {
+        Console.Out.WriteLine(">> " + rf);
+      }
+      Assert.AreEqual(parsed.Count(), 6); // + References as cite
     }
 
     private string Res(string res)
