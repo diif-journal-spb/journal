@@ -35,12 +35,14 @@ namespace EugenePetrenko.RFFI
     {
       get { return myFName.Trim(); }
     }
+/*
 
     [XmlElementPath("orgName"), XmlText]
     public string Auwork
     {
       get { return myauwork; }
     }
+*/
 
     [XmlElementPath("email"), XmlText]
     public string Auemail
