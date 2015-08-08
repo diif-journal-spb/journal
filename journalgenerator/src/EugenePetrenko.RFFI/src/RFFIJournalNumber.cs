@@ -37,7 +37,7 @@ namespace EugenePetrenko.RFFI
     public RFFIOperCard OperCard { get { return new RFFIOperCard(myIssue.Articles.Count()); } }
 
     [XmlElementPath("titleid"), XmlText]
-    public string TitleId {get { return "25189"; }}
+    public string TitleId { get { return "7282"; } }
 
     [XmlElementPath("issn"), XmlText]
     public string JournalISSN { get { return "1817-2172";}}

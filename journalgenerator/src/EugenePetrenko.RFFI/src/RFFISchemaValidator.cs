@@ -54,6 +54,7 @@ namespace EugenePetrenko.RFFI
         ValidateNo2072909X,
         ValidateCodeNEB,
         ValidateISSN,
+        ValidatetTitleId,
       };
 
       foreach (var validator in validators)
@@ -88,6 +89,20 @@ namespace EugenePetrenko.RFFI
       }
 
       if (neb.Value != "1817-2172")
+      {
+        throw new Exception("Document contains invalid issn: " + neb.Value);
+      }
+    }
+
+    private static void ValidatetTitleId(XmlDocument doc)
+    {
+      var neb = doc.SelectSingleNode("journal/titleid/text()");
+      if (neb == null)
+      {
+        throw new Exception("Document does not contain issn");
+      }
+
+      if (neb.Value != "7282")
       {
         throw new Exception("Document contains invalid issn: " + neb.Value);
       }
