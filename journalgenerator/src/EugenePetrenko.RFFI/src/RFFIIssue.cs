@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using EugenePetrenko.DataModel;
@@ -22,16 +21,6 @@ namespace EugenePetrenko.RFFI
 
     [XmlElementPath("number"), XmlText]
     public string Number { get { return myNumber.Number; } }
-/*
-
-    [XmlElementPath("altNumber"), XmlText] 
-    public string AltNumber {get { return myNumber.Number; }}
-*/
-/*
-
-    [XmlElementPath("part"), XmlText] 
-    public string Part {get { return myNumber.Number; }}
-*/
 
     [XmlElementPath("dateUni"), XmlText]
     public string JournalDateUni {
@@ -52,11 +41,6 @@ namespace EugenePetrenko.RFFI
         }
       } 
     }
-
-/*
-    [XmlElementPath("issTitle"), XmlText]
-    public string IssnTitle { get { return myNumber.Year + "." + myNumber.Number; } }
-*/
 
     [XmlElementPath("pages"), XmlText]
     public string JournalPages { get { return "1-" + GetPages(); } }
