@@ -14,6 +14,7 @@ namespace EugenePetrenko.DataModel
               "</article>", 
              delegate(XmlElement root)
                {
+                 OrganizaionTest.LoadMockOrgs(myLoader);
                  IArticle art = myLoader.ParseArticle(root);
 
                  Assert.AreEqual(1, art.JournalLanguages.Count);
@@ -31,6 +32,8 @@ namespace EugenePetrenko.DataModel
               "</article>",
              delegate(XmlElement root)
              {
+               OrganizaionTest.LoadMockOrgs(myLoader);
+
                myLoader.LoadAuthors(root.OwnerDocument);
 
                IArticle art = myLoader.ParseArticle(root);

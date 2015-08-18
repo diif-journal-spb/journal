@@ -7,7 +7,7 @@ namespace EugenePetrenko.DataModel
   public class AuthorTest : BaseTest
   {
     public const string TEST_01 = @"
-          <authors>
+          <authors org='111'>
              " + AuthorInfoTest.TEST_01 + @"
           </authors>
 ";
@@ -19,6 +19,7 @@ namespace EugenePetrenko.DataModel
         TEST_01,
         delegate(XmlElement root)
           {
+            OrganizaionTest.LoadMockOrgs(myLoader);
             IAuthor list = myLoader.ParseAuthor(root);
             Assert_Test_01(list);
           });

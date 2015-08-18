@@ -6,6 +6,8 @@ namespace EugenePetrenko.DataModel
 {
   public interface IXmlDataLoader
   {
+    IOrganization ParseOrganization(XmlElement element);
+    IOrganizationInfo ParseOrganizationInfo(XmlElement element, IOrganization host);
     IAuthorInfo ParseAuthorInfo(XmlElement element, IAuthor host);
     IAuthor ParseAuthor(XmlElement element);
     List<IAuthor> ParseAuthors(XmlElement element);
@@ -19,6 +21,7 @@ namespace EugenePetrenko.DataModel
     EntityGenerator EntityGenerator { get; }
 
     IAuthor LookupAuthor(string id);
+    IOrganization LookupOrganization(string id);
     void LoadAuthors(XmlDocument doc);
   }
 }

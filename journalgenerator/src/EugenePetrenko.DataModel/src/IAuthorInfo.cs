@@ -7,6 +7,7 @@ namespace EugenePetrenko.DataModel
   public interface IAuthorInfo : IEntity, IComparable<IAuthorInfo>
   {
     IAuthor Author { get;}
+    IOrganizationInfo Origanization { get; }
     JournalLanguage JournalLanguage { get; }
 
     string FirstName { get; }
@@ -54,6 +55,11 @@ namespace EugenePetrenko.DataModel
     private static string SafeRead(XmlNode node)
     {
       return node == null ? string.Empty : node.Value;
+    }
+
+    public IOrganizationInfo Origanization
+    {
+      get { return Author.Organization.ForLanguage(JournalLanguage); }
     }
 
     public IAuthor Author

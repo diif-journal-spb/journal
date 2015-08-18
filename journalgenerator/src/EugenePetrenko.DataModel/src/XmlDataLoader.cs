@@ -12,8 +12,21 @@ namespace EugenePetrenko.DataModel
     private readonly string myPath;
     private readonly EntityGenerator myEntityGenerator = new EntityGenerator();
     private readonly List<IAuthor> myAuthors = new List<IAuthor>();
+    private readonly List<IOrganization> myOrganizations = new List<IOrganization>();
     protected readonly IXmlDataLoader myLoader;
     private readonly IJournal myJournal;
+
+    public IOrganization ParseOrganization(XmlElement element)
+    {
+      var org = new Organization(element, this);
+      myOrganizations.Add(org);
+      return org;
+    }
+
+    public IOrganizationInfo ParseOrganizationInfo(XmlElement element, IOrganization host)
+    {
+      return new OrganizationInfo(element, this, host);
+    }
 
     IAuthorInfo IXmlDataLoader.ParseAuthorInfo(XmlElement element, IAuthor host)
     {
@@ -83,6 +96,16 @@ namespace EugenePetrenko.DataModel
       throw new ArgumentException("Author was not found: '" + id + "'");
     }
 
+    IOrganization IXmlDataLoader.LookupOrganization(string id)
+    {
+      foreach (var organization in myOrganizations)
+      {
+        if (organization.Id == id)
+          return organization;
+      }
+      throw new ArgumentException("Organization was not found: '" + id + "'");
+    }
+
     protected XmlDataLoader()
     {
       myLoader = this;
@@ -108,6 +131,15 @@ namespace EugenePetrenko.DataModel
       var myNumbers = new List<INumber>();
 
       myPath = path;
+
+      ForeachXml("*.orgs",
+        doc => {
+                 foreach (XmlElement node in doc.SelectNodes("//org-xml"))
+                 {
+                   myLoader.ParseOrganization(node);
+                 }
+          });
+      
       ForeachXml("*.authors",
                  doc => myAuthors.AddRange(myLoader.ParseAuthors(doc.DocumentElement)));
 
@@ -121,7 +153,7 @@ namespace EugenePetrenko.DataModel
                    });
 
       ForeachXml("*.number",
-                 doc => myNumbers.Add(myLoader.ParseNumber(doc.DocumentElement)));     
+                 doc => myNumbers.Add(myLoader.ParseNumber(doc.DocumentElement)));
 
       var news = new List<INewsItem>();
       ForeachXml("*.news", delegate(XmlDocument doc)
