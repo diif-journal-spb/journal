@@ -88,20 +88,26 @@ namespace EugenePetrenko.DataModel
 
     IAuthor IXmlDataLoader.LookupAuthor(string id)
     {
-      foreach (IAuthor author in myAuthors)
+      if (id != "")
       {
-        if (author.Id == id)
-          return author;
+        foreach (IAuthor author in myAuthors)
+        {
+          if (author.Id == id)
+            return author;
+        }
       }
       throw new ArgumentException("Author was not found: '" + id + "'");
     }
 
     IOrganization IXmlDataLoader.LookupOrganization(string id)
     {
-      foreach (var organization in myOrganizations)
+      if (id != "")
       {
-        if (organization.Id == id)
-          return organization;
+        foreach (var organization in myOrganizations)
+        {
+          if (organization.Id == id)
+            return organization;
+        }
       }
       throw new ArgumentException("Organization was not found: '" + id + "'");
     }
