@@ -40,6 +40,15 @@
      <call target="run-migrate" />
   </target>
 
+  <target name="migrate-cancel" >
+     <delete dir="${path::get-full-path(base + '\data')}" />
+   
+     <exec program="git" verbose="true">
+        <arg value="checkout"/>
+        <arg value="--" />
+        <arg value="${path::get-full-path(base + '\data')}\**" />
+     </exec>
+  </target>
 
   <target name="run-generate" depends="make, run-build"/>
   <target name="build" depends="run-generate, patch"/>
