@@ -41,11 +41,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthorOrganizationProcessor.cs" />
+    <Compile Include="ExtractAuthorsToAdditionalFiles.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EugenePetrenko.DataModel\EugenePetrenko.DataModel.csproj">
+      <Project>{115cfe1b-1023-42a5-99a0-60e5225f9f0d}</Project>
+      <Name>EugenePetrenko.DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EugenePetrenko.JournalGenerator\EugenePetrenko.JournalGenerator.csproj">
+      <Project>{f5faa597-b6ea-4b93-9c50-febd820b4613}</Project>
+      <Name>EugenePetrenko.JournalGenerator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EugenePetrenko.RFFI\EugenePetrenko.RFFI.csproj">
+      <Project>{c7e2f879-4fbe-49e7-8b6e-3c77136c0f5f}</Project>
+      <Name>EugenePetrenko.RFFI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -26,6 +26,13 @@
      <call target="open"/>
   </target>
 
+
+  <target name="migrate">
+     <call target="debug-init" />
+     <call target="run-migrate" />
+  </target>
+
+
   <target name="run-generate" depends="make, run-build"/>
   <target name="build" depends="run-generate, patch"/>
 
@@ -39,6 +46,19 @@
     <property name="rffi" value="1" />
     <call target="debug-init" />
     <call target="run-generate" />
+  </target>
+
+  <target name="run-migrate">
+    <exec program="${migration.exe}" verbose="true">
+      <arg value="/url=http://www.math.spbu.ru/diffjournal"/>
+      <arg value="/dest=${release.path}" />
+      <arg value="/templates=${path::get-full-path(base + '\templates')}"/>
+      <arg value="/data=${path::get-full-path(base + '\data')}" />
+      <arg value="/pdf=${path::get-full-path(base + '\pdf')}" />
+      <arg value="/inforeg=${pInforeg}" if="${property::exists('inforeg')}" />
+      <arg value="/inforegs=${pInforegs}" if="${property::exists('inforegs')}" />
+      <arg value="/rffi" if="${property::exists('rffi')}" />
+    </exec>
   </target>
   
 
