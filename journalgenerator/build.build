@@ -6,15 +6,22 @@
   <property name="debug" value="${base}/../debug" />
   <property name="generator.exe" value="${base}/bin/EugenePetrenko.JournalGenerator.exe" />
   <property name="migration.exe" value="${base}/bin/EugenePetrenko.DataMigration.exe" />
+
+  <property name="msbuild-configuration" value="Release" />
  
   <target name="make" verbose="true">
     <exec program="C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe">
-      <arg value="/p:Configuration=RELEASE" />
+      <arg value="/p:Configuration=${msbuild-configuration}" />
       <arg value="/t:build" />
       <arg value="/p:TrackFileAccess=false" />
       <arg path="${base}/src/EugenePetrenko.JournalGenerator.sln" />
     </exec>
   </target> 
+
+  <target name="make-debug">
+  <property name="msbuild-configuration" value="Debug" />
+    <call target="make" />
+  </target>
 
   <target name="debug-init">
      <property name="release" value="${debug}" />
@@ -22,13 +29,14 @@
 
   <target name="debug">
      <call target="debug-init" />
+     <call target="make-debug" />
      <call target="run-generate" />
      <call target="open"/>
   </target>
 
 
   <target name="migrate">
-     <call target="debug-init" />
+     <call target="make-debug" />
      <call target="run-migrate" />
   </target>
 
@@ -51,13 +59,9 @@
   <target name="run-migrate">
     <exec program="${migration.exe}" verbose="true">
       <arg value="/url=http://www.math.spbu.ru/diffjournal"/>
-      <arg value="/dest=${release.path}" />
       <arg value="/templates=${path::get-full-path(base + '\templates')}"/>
       <arg value="/data=${path::get-full-path(base + '\data')}" />
       <arg value="/pdf=${path::get-full-path(base + '\pdf')}" />
-      <arg value="/inforeg=${pInforeg}" if="${property::exists('inforeg')}" />
-      <arg value="/inforegs=${pInforegs}" if="${property::exists('inforegs')}" />
-      <arg value="/rffi" if="${property::exists('rffi')}" />
     </exec>
   </target>
   
@@ -93,6 +97,7 @@
       <arg value="/dest=${release.path}" />
       <arg value="/templates=${path::get-full-path(base + '\templates')}"/>
       <arg value="/data=${path::get-full-path(base + '\data')}" />
+      <arg value="/pdf=${path::get-full-path(base + '\pdf')}" />
       <arg value="/inforeg=${pInforeg}" if="${property::exists('inforeg')}" />
       <arg value="/inforegs=${pInforegs}" if="${property::exists('inforegs')}" />
       <arg value="/rffi" if="${property::exists('rffi')}" />
