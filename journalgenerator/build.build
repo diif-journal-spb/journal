@@ -42,11 +42,12 @@
 
   <target name="migrate-cancel" >
      <delete dir="${path::get-full-path(base + '\data')}" />
+     <mkdir dir="${path::get-full-path(base + '\data')}" />
    
-     <exec program="git" verbose="true">
+     <exec program="git" verbose="true" workingdir="${path::get-full-path(base + '\data')}">
         <arg value="checkout"/>
         <arg value="--" />
-        <arg value="${path::get-full-path(base + '\data')}\**" />
+        <arg value="**" />
      </exec>
   </target>
 
