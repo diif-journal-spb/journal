@@ -36,7 +36,8 @@ namespace EugenePetrenko.DataMigration
 
 
       //Dummy re-format files
-      Util.ProcessFiles(data, "*.number", file => Util.UpdateXmlDocument(file, el => { }));
+      Util.ProcessFiles(data, "*.orgs", file => Util.UpdateXmlDocument(file, el => { }));
+      Util.ProcessFiles(data, "*.authors", file => Util.UpdateXmlDocument(file, el => { }));
       Util.ProcessFiles(data, "*.authors", file => Util.UpdateXmlDocument(file, el => { }));
 
       //new ExtractAuthorsToAdditionalFiles(data).Process();
