@@ -57,9 +57,10 @@ namespace EugenePetrenko.DataMigration
 
     private static void SaveDocument(string file, XmlDocument doc)
     {
-      using (var w = new StreamWriter(File.OpenWrite(file), Encoding.UTF8))
+      using (var w = new StreamWriter(File.OpenWrite(file), new UTF8Encoding(false)))
       {
         doc.Save(w);
+        w.WriteLine();
       }
     }
   }

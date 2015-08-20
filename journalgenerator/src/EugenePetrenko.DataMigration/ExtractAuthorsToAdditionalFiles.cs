@@ -19,6 +19,11 @@ namespace EugenePetrenko.DataMigration
       {
         if (element.Name != "number") throw new Exception(String.Format("Incorrect root element name {0} in {1}", element.Name, file));
         element.SelectNodes("//authors-xml/author").Cast<XmlElement>().ForEach(it => ProcessAuthor(file, it));
+
+        if (element.SelectNodes("*").Count == 0)
+        {
+          element.ParentNode.RemoveChild(element);
+        }
       }));
     }
 

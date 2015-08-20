@@ -34,7 +34,12 @@ namespace EugenePetrenko.DataMigration
       Console.Out.WriteLine("Using data directory: {0}", data);
       Console.Out.WriteLine("Using pdf directory: {0}", pdf);
 
-      new ExtractAuthorsToAdditionalFiles(data).Process();
+
+      //Dummy re-format files
+      Util.ProcessFiles(data, "*.number", file => Util.UpdateXmlDocument(file, el => { }));
+      Util.ProcessFiles(data, "*.authors", file => Util.UpdateXmlDocument(file, el => { }));
+
+      //new ExtractAuthorsToAdditionalFiles(data).Process();
     }
   }
 }
