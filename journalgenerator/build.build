@@ -5,6 +5,7 @@
   <property name="release" value="${base}/../release" />
   <property name="debug" value="${base}/../debug" />
   <property name="generator.exe" value="${base}/bin/EugenePetrenko.JournalGenerator.exe" />
+  <property name="migration.exe" value="${base}/bin/EugenePetrenko.DataMigration.exe" />
  
   <target name="make" verbose="true">
     <exec program="C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe">
