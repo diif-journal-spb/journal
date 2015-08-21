@@ -58,8 +58,8 @@ namespace EugenePetrenko.DataMigration
             var pagesInPdf = getNumberOfPdfPages(pdfPath);
             Console.Out.WriteLine("Pages: " + pagesInPdf + " in " + pdfFile);
 
-            var firstPageActual = prevNumberLastPage;
-            var lastPageActual = firstPageActual + pagesInPdf;
+            var firstPageActual = FirstPage.GetValueOrDefault(prevNumberLastPage + 1);
+            var lastPageActual = LastPage.GetValueOrDefault(prevNumberLastPage + pagesInPdf);
             
             First.Add(firstPageActual);
             Last.Add(lastPageActual);
