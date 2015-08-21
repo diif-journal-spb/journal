@@ -8,9 +8,17 @@ namespace EugenePetrenko.DataMigration
   {
     private static int Main(string[] args)
     {
+
       try
       {
-        MainImpl(args);
+        var cmd = new CommandLineParser(args);
+        var ec = new ErrorsCount();
+        MainImpl(cmd, ec);
+
+        Console.Out.WriteLine("");
+        Console.Out.WriteLine("Errors: {0}", ec.TotalErrors);
+
+        return ec.TotalErrors == 0 ? 0 : 2;
       }
       catch (Exception e)
       {
@@ -18,13 +26,10 @@ namespace EugenePetrenko.DataMigration
         Console.Out.WriteLine(e);
         return 1;
       }
-      return 0;
     }
 
-    private static void MainImpl(string[] args)
+    private static void MainImpl(CommandLineParser cmd, ErrorsCount ec)
     {
-      var cmd = new CommandLineParser(args);
-
       Console.Out.WriteLine("Automatic data migration");
       Console.Out.WriteLine("<app>.exe /data=<data> /pdf=<pdf>");
 
@@ -36,9 +41,9 @@ namespace EugenePetrenko.DataMigration
 
 
       //Dummy re-format files
-      Util.ProcessFiles(data, "*.orgs", file => Util.UpdateXmlDocument(file, el => { }));
-      Util.ProcessFiles(data, "*.authors", file => Util.UpdateXmlDocument(file, el => { }));
-      Util.ProcessFiles(data, "*.authors", file => Util.UpdateXmlDocument(file, el => { }));
+      Util.ProcessFiles(ec, data, "*.orgs", file => Util.UpdateXmlDocument(ec, file, el => { }));
+      Util.ProcessFiles(ec, data, "*.authors", file => Util.UpdateXmlDocument(ec, file, el => { }));
+      Util.ProcessFiles(ec, data, "*.authors", file => Util.UpdateXmlDocument(ec, file, el => { }));
 
       //new ExtractAuthorsToAdditionalFiles(data).Process();
     }

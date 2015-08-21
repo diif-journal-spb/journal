@@ -15,60 +15,65 @@ namespace EugenePetrenko.DataMigration
       }
     }
 
-    public static void ProcessFiles(string baseDir, string pattern, Action<string> processor)
+    public static void ProcessFiles(ErrorsCount ec, string baseDir, string pattern, Action<string> processor)
     {
-      foreach (var file in Directory.GetFiles(baseDir, pattern))
+      foreach (var _file in Directory.GetFiles(baseDir, pattern))
       {
+        var file = _file;
         Console.Out.WriteLine("Processing " + file);
-        try
-        {
-          processor(file);
-        }
-        catch (Exception e)
-        {
-          Console.Out.WriteLine("Failed to process {0}.\n{1}\n{2}", file, e.Message, e);
-        }
+        ec.Catch(file, 
+          () => processor(file), 
+          e => e.Log("Failed to process {0}.\n{1}\n{2}", file, e.Message));
       }
     }
 
-    public static void UpdateOrCreateXmlDocument(string file, Action<XmlElement> update, Action<XmlDocument> init)
+    public static void UpdateOrCreateXmlDocument(ErrorsCount ec, string file, Action<XmlElement> update, Action<XmlDocument> init)
     {
       if (!File.Exists(file))
       {
         var doc = new XmlDocument();
         init(doc);
-        SaveDocument(file, doc);
+        SaveDocument(ec, file, doc);
       }
 
-      UpdateXmlDocument(file, update);
+      UpdateXmlDocument(ec, file, update);
     }
 
-    public static void UpdateXmlDocument(string file, Action<XmlElement> update)
+    public static void UpdateXmlDocument(ErrorsCount ec, string file, Action<XmlElement> update)
     {
       var doc = new XmlDocument();
       doc.PreserveWhitespace = true;
 
-      doc.Load(file);
+      ec.Catch("Load " + file, 
+        () => doc.Load(file), 
+        e => e.LogAndThrow("Failed to load XML document form " + file));
 
       update(doc.DocumentElement);
 
-      SaveDocument(file, doc);
+      SaveDocument(ec, file, doc);
     }
 
-    private static void SaveDocument(string file, XmlDocument doc)
+    private static void SaveDocument(ErrorsCount ec, string file, XmlDocument doc)
     {
       var ms = new MemoryStream();
-      using (var w = new StreamWriter(ms, new UTF8Encoding(false)))
+      ec.Catch("Generate " + file, () =>
       {
-        doc.Save(w);       
-      }
+        using (var w = new StreamWriter(ms, new UTF8Encoding(false)))
+        {
+          doc.Save(w);
+        }
+      }, e => e.LogAndThrow("Failed to generate XML for " + file));
 
-      using (var w = File.Create(file))
+      ec.Catch("Save " + file, () =>
       {
-        var text = Encoding.UTF8.GetString(ms.ToArray()).Trim() + "\r\n";
-        var buff = Encoding.UTF8.GetBytes(text);
-        w.Write(buff, 0, buff.Length);
-      }
+        using (var w = File.Create(file))
+        {
+          var text = Encoding.UTF8.GetString(ms.ToArray()).Trim() + "\r\n";
+          var buff = Encoding.UTF8.GetBytes(text);
+          w.Write(buff, 0, buff.Length);
+        }
+      },
+      e => e.LogAndThrow( "Failed to save XML for " + file));
     }
   }
 }
