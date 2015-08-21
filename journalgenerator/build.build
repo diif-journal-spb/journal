@@ -41,7 +41,7 @@
   </target>
 
   <target name="migrate-cancel" >
-     <delete dir="${path::get-full-path(base + '\data')}" />
+     <delete dir="${path::get-full-path(base + '\data')}" failonerror="false"/>
      <mkdir dir="${path::get-full-path(base + '\data')}" />
    
      <exec program="git" verbose="true" workingdir="${path::get-full-path(base + '\data')}">
