@@ -45,6 +45,12 @@ namespace EugenePetrenko.DataMigration
       Util.ProcessFiles(ec, data, "*.authors", file => Util.UpdateXmlDocument(ec, file, el => { }));
       Util.ProcessFiles(ec, data, "*.authors", file => Util.UpdateXmlDocument(ec, file, el => { }));
 
+
+      //Infer/check first-last pages of all articles, 
+      //ensure PDFs are available
+      ArticlesInferPages.Process(ec, data, pdf);
+
+
       //new ExtractAuthorsToAdditionalFiles(data).Process();
     }
   }

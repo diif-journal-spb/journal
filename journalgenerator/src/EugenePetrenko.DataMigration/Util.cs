@@ -15,6 +15,15 @@ namespace EugenePetrenko.DataMigration
       }
     }
 
+    public static void ForEach<T>(this IEnumerable<T> data, ErrorsCount ec, Action<T> it)
+    {
+      foreach (var _t in data)
+      {
+        var t = _t;
+        ec.Filter("" + t, () => it(t));
+      }
+    }
+
     public static void ProcessFiles(ErrorsCount ec, string baseDir, string pattern, Action<string> processor)
     {
       foreach (var _file in Directory.GetFiles(baseDir, pattern))
@@ -23,7 +32,7 @@ namespace EugenePetrenko.DataMigration
         Console.Out.WriteLine("Processing " + file);
         ec.Catch(file, 
           () => processor(file), 
-          e => e.Log("Failed to process {0}.\n{1}\n{2}", file, e.Message));
+          e => e.Log("Failed to process {0}.\n{1}\n{2}", file, e.Message, e.Exception));
       }
     }
 
