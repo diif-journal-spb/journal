@@ -150,15 +150,6 @@ namespace EugenePetrenko.DataModel
                  doc => myAuthors.AddRange(myLoader.ParseAuthors(doc.DocumentElement)));
 
       ForeachXml("*.number",
-                 delegate(XmlDocument doc)
-                   {
-                     foreach (XmlElement node in doc.SelectNodes("//authors-xml"))
-                     {
-                       myAuthors.AddRange(myLoader.ParseAuthors(node));
-                     }                     
-                   });
-
-      ForeachXml("*.number",
                  doc => myNumbers.Add(myLoader.ParseNumber(doc.DocumentElement)));
 
       var news = new List<INewsItem>();
