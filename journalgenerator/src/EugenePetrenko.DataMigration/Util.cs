@@ -6,6 +6,15 @@ using System.Xml;
 
 namespace EugenePetrenko.DataMigration
 {
+
+  public static class XmlUtil
+  {
+    public static void RemoveSelf(this XmlElement e)
+    {
+      e.ParentNode.RemoveChild(e);
+    }
+  }
+
   public static class Util {
     public static void ForEach<T>(this IEnumerable<T> data, Action<T> it)
     {

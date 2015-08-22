@@ -43,7 +43,7 @@ namespace EugenePetrenko.DataMigration
       //Dummy re-format files
       Util.ProcessFiles(ec, data, "*.orgs", file => Util.UpdateXmlDocument(ec, file, el => { }));
       Util.ProcessFiles(ec, data, "*.authors", file => Util.UpdateXmlDocument(ec, file, el => { }));
-      Util.ProcessFiles(ec, data, "*.authors", file => Util.UpdateXmlDocument(ec, file, el => { }));
+      Util.ProcessFiles(ec, data, "*.number", file => Util.UpdateXmlDocument(ec, file, el => { }));
 
 
       //Infer/check first-last pages of all articles, 
@@ -51,7 +51,8 @@ namespace EugenePetrenko.DataMigration
       ArticlesInferPages.Process(ec, data, pdf);
 
 
-      //new ExtractAuthorsToAdditionalFiles(data).Process();
+      //make sure all authors are declared outside .number files
+      ExtractAuthorsToAdditionalFiles.Process(ec, data);
     }
   }
 }
