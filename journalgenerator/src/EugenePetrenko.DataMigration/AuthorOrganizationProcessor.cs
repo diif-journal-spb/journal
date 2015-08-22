@@ -129,10 +129,9 @@ namespace EugenePetrenko.DataMigration
             continue;
           }
 
-          if (matches.Count > 0)
+          if (matches.Count > 1)
           {
-            ec.Error("!!! Author {0} was not matched to orgs", authorId, string.Join(", ", matches.Select(x=>x.OrgId).OrderBy(x=>x)));
-            allAuthorAddresses.Add(allAddresses.ToArray());
+            ec.Error("!!! Author {0} was not matched to orgs: {1}", authorId, string.Join(", ", matches.Select(x=>x.OrgId).OrderBy(x=>x)));
             continue;
           }
 
