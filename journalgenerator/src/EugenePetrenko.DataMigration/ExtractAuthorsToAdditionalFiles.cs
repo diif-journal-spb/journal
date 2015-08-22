@@ -24,7 +24,6 @@ namespace EugenePetrenko.DataMigration
               authros =>
               {
                 var copy = authros.OwnerDocument.ImportNode(author, true);
-                authros.AppendChild(authros.OwnerDocument.CreateSignificantWhitespace("\r\n"));
                 authros.AppendChild(copy);
               },
               doc => doc.AppendChild(doc.CreateElement("authors-xml")));

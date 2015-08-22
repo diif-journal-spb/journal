@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Text;
 using System.Xml;
@@ -59,39 +60,63 @@ namespace EugenePetrenko.DataMigration
 
     public static void UpdateXmlDocument(ErrorsCount ec, string file, Action<XmlElement> update)
     {
-      var doc = new XmlDocument();
-      doc.PreserveWhitespace = true;
-
-      ec.Catch("Load " + file, 
-        () => doc.Load(file), 
-        e => e.LogAndThrow("Failed to load XML document form " + file));
+      var doc = LoadXmlDocument(ec, file, true);
 
       update(doc.DocumentElement);
 
       SaveDocument(ec, file, doc);
     }
 
-    private static void SaveDocument(ErrorsCount ec, string file, XmlDocument doc)
+    private static XmlDocument LoadXmlDocument(ErrorsCount ec, string file, bool preserveWhitespace)
     {
-      var ms = new MemoryStream();
-      ec.Catch("Generate " + file, () =>
-      {
-        using (var w = new StreamWriter(ms, new UTF8Encoding(false)))
-        {
-          doc.Save(w);
-        }
-      }, e => e.LogAndThrow("Failed to generate XML for " + file));
+      var doc = new XmlDocument();
+      doc.PreserveWhitespace = preserveWhitespace;
 
-      ec.Catch("Save " + file, () =>
+      ec.Catch("Load " + file,
+        () => doc.Load(file),
+        e => e.LogAndThrow("Failed to load XML document form " + file));
+      return doc;
+    }
+
+    private static void SaveDocument(ErrorsCount ec, string xmlFile, XmlDocument doc)
+    {
+      using (var ms = new MemoryStream())
       {
-        using (var w = File.Create(file))
+        ec.Catch("Generating XML for " + xmlFile, () =>
         {
-          var text = Encoding.UTF8.GetString(ms.ToArray()).Trim() + "\r\n";
-          var buff = Encoding.UTF8.GetBytes(text);
-          w.Write(buff, 0, buff.Length);
-        }
-      },
-      e => e.LogAndThrow( "Failed to save XML for " + file));
+          var settings = new XmlWriterSettings
+          {
+            Indent = true,
+            IndentChars = "  ",
+            NewLineChars = "\r\n",
+            NewLineHandling = NewLineHandling.Replace,
+            Encoding = new UTF8Encoding(false),
+            CheckCharacters = true,
+          };
+
+          using (var writer = XmlWriter.Create(ms, settings))
+          {
+            doc.Save(writer);
+          }
+        }, e => e.LogAndThrow("Failed to generate XML for {0}. {1}\n{2}", xmlFile, e.Message, e.Exception));
+
+        ec.Catch("Save " + xmlFile, () =>
+        {
+          using (var w = File.Create(xmlFile))
+          {
+            var text = Encoding.UTF8.GetString(ms.ToArray()).Trim() + "\r\n";
+            var buff = Encoding.UTF8.GetBytes(text);
+            w.Write(buff, 0, buff.Length);
+          }
+        },
+          e => e.LogAndThrow("Failed to save XML for " + xmlFile));
+      }
+    }
+
+    public static void BeautifyXML(ErrorsCount ec, string xmlFile)
+    {
+      var doc = LoadXmlDocument(ec, xmlFile, false);
+      SaveDocument(ec, xmlFile, doc);
     }
   }
 }
