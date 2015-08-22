@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.IO;
 using System.Text;
 using System.Xml;
@@ -17,6 +16,12 @@ namespace EugenePetrenko.DataMigration
   }
 
   public static class Util {
+
+    public static R Apply<T, R>(this T t, Func<T, R> action)
+    {
+      return action(t);
+    }
+
     public static void ForEach<T>(this IEnumerable<T> data, Action<T> it)
     {
       foreach (var t in data)

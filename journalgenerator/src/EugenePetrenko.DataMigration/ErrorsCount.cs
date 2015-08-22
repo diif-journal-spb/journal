@@ -86,5 +86,12 @@ namespace EugenePetrenko.DataMigration
         IsError = true;
       }
     }
+
+    public void Error(string tmpl, params object[] args)
+    {
+      var message = string.Format(tmpl, args);
+      Console.Out.WriteLine(message);
+      myErrors++;
+    }
   }
 }

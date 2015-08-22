@@ -53,6 +53,10 @@ namespace EugenePetrenko.DataMigration
 
       //make sure all authors are declared outside .number files
       ExtractAuthorsToAdditionalFiles.Process(ec, data);
+
+      //make sure all author organizations are included
+      AuthorOrganizationProcessor.Process(ec, data);
+
     }
   }
 }
