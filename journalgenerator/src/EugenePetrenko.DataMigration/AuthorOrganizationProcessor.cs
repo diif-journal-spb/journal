@@ -49,7 +49,12 @@ namespace EugenePetrenko.DataMigration
 
     private static IEnumerable<string> ToMatch(IEnumerable<string> input)
     {
-      return input.Select(x => x.ToLower()).Apply(Normalize).Distinct();
+      return input
+        .Select(x => x.ToLower())
+        .Select(x => x.Replace(",", " "))
+        .Select(x => x.Replace(".", " "))
+        .Apply(Normalize)
+        .Distinct();
     }
 
     private static IEnumerable<string> Normalize(IEnumerable<string> s)
@@ -117,9 +122,16 @@ namespace EugenePetrenko.DataMigration
             .Where(h => h.Matches(allAddresses))
             .ToList();
 
-          if (matches.Count != 1)
+          if (matches.Count == 0)
           {
             ec.Error("Author {0} was not matched to orgs", authorId);
+            allAuthorAddresses.Add(allAddresses.ToArray());
+            continue;
+          }
+
+          if (matches.Count > 0)
+          {
+            ec.Error("!!! Author {0} was not matched to orgs", authorId, string.Join(", ", matches.Select(x=>x.OrgId).OrderBy(x=>x)));
             allAuthorAddresses.Add(allAddresses.ToArray());
             continue;
           }
