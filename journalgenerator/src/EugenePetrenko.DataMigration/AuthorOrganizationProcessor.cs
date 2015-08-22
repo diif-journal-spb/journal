@@ -1,9 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Reflection.Emit;
 using System.Text.RegularExpressions;
 using System.Xml;
+using EugenePetrenko.RFFI;
 
 namespace EugenePetrenko.DataMigration
 {
@@ -13,7 +17,7 @@ namespace EugenePetrenko.DataMigration
     private class Hints
     {
       public string OrgId { get; private set; }
-      
+
       public IEnumerable<string> Names { get; private set; }
 
       public Hints(string orgId, IEnumerable<string> names)
@@ -53,7 +57,7 @@ namespace EugenePetrenko.DataMigration
       return s
         .Where(x => x != null)
         .Select(x => Regex.Replace(x, @"\s+", " ").Trim())
-        .Where(x=>x.Length > 0)
+        .Where(x => x.Length > 0)
         .ToArray()
         ;
     }
@@ -65,7 +69,8 @@ namespace EugenePetrenko.DataMigration
       var helpers = new List<Hints>();
       Util.ProcessFiles(ec, dataDir, "*.orgs", file => Util.UpdateXmlDocument(ec, file, root =>
       {
-        if (root.Name != "orgs") throw new Exception(String.Format("Incorrect root element name {0} in {1}", root.Name, file));
+        if (root.Name != "orgs")
+          throw new Exception(String.Format("Incorrect root element name {0} in {1}", root.Name, file));
 
         foreach (XmlElement orgElement in root.SelectNodes("org-xml"))
         {
@@ -78,16 +83,17 @@ namespace EugenePetrenko.DataMigration
             .Apply(Normalize)
             .ToArray();
 
-            
+
           if (!names.Any()) continue;
           helpers.Add(new Hints(id, names));
         }
       }));
 
-      var allAuthorAddresses = new List<string>();
+      var allAuthorAddresses = new List<IEnumerable<string>>();
       Util.ProcessFiles(ec, dataDir, "*.authors", file => Util.UpdateXmlDocument(ec, file, element =>
       {
-        if (element.Name != "authors-xml") throw new Exception(String.Format("Incorrect root element name {0} in {1}", element.Name, file));
+        if (element.Name != "authors-xml")
+          throw new Exception(String.Format("Incorrect root element name {0} in {1}", element.Name, file));
 
         foreach (XmlElement author in element.SelectNodes("author"))
         {
@@ -101,9 +107,8 @@ namespace EugenePetrenko.DataMigration
             .Apply(Normalize)
             .ToArray();
 
-          allAuthorAddresses.AddRange(allAddresses);
-
-          if (!allAddresses.Any()) {
+          if (!allAddresses.Any())
+          {
             ec.Error("Author {0} has no Addresses", authorId);
             continue;
           }
@@ -112,14 +117,16 @@ namespace EugenePetrenko.DataMigration
             .Where(h => h.Matches(allAddresses))
             .ToList();
 
-          if (matches.Count != 1) {
+          if (matches.Count != 1)
+          {
             ec.Error("Author {0} was not matched to orgs", authorId);
+            allAuthorAddresses.Add(allAddresses.ToArray());
             continue;
           }
-          
+
           var orgId = matches.Single().OrgId;
           author.SetAttribute("org", orgId);
-          Console.Out.WriteLine("Author {0} was matched to {1}", authorId, orgId);          
+          Console.Out.WriteLine("Author {0} was matched to {1}", authorId, orgId);
         }
       }));
 
@@ -129,8 +136,45 @@ namespace EugenePetrenko.DataMigration
       foreach (var loggableAddress in loggableAddresses)
       {
         Console.Out.WriteLine();
-        Console.Out.WriteLine(loggableAddress);
+        foreach (var addr in loggableAddress)
+        {
+          Console.Out.WriteLine(addr);          
+        }
       }
+
+      var template = Path.Combine(dataDir, "orgs.template");
+      if (File.Exists(template))
+      {
+        File.Delete(template);
+      }
+
+      Util.UpdateOrCreateXmlDocument(ec, template, el =>
+      {
+        foreach (var address in allAuthorAddresses)
+        {
+          var orgRootElement = el.OwnerDocument.CreateElement("org-xml");
+          orgRootElement.SetAttribute("id", "");
+
+          foreach (var addr in address)
+          {
+            var orgLangElement = el.OwnerDocument.CreateElement("org");
+            orgLangElement.SetAttribute("lang", Regex.Matches(addr, "[à-ÿ]+", RegexOptions.IgnoreCase).Count > 0 ? "RU" : "EN");
+
+            var nameElement = el.OwnerDocument.CreateElement("name");
+            nameElement.AppendChild(el.OwnerDocument.CreateTextNode(addr));
+
+            var addressElement = el.OwnerDocument.CreateElement("address");
+            addressElement.AppendChild(el.OwnerDocument.CreateTextNode(addr));
+
+            orgLangElement.AppendChild(nameElement);
+            orgLangElement.AppendChild(addressElement);
+
+            orgRootElement.AppendChild(orgLangElement);
+          }
+
+          el.AppendChild(orgRootElement);
+        }
+      }, doc => doc.AppendChild(doc.CreateElement("orgs")));
     }
   }
 }
