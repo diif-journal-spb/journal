@@ -158,6 +158,14 @@ namespace EugenePetrenko.DataMigration
         }
       }));
 
+      var template = Path.Combine(dataDir, "orgs.template");
+      if (File.Exists(template))
+      {
+        File.Delete(template);
+      }
+
+      if (!allAuthorAddresses.Any()) return;
+
       var loggableAddresses = allAuthorAddresses.Distinct().Take(5);
 
       Console.Out.WriteLine("Possible addresses to include:");
@@ -168,12 +176,6 @@ namespace EugenePetrenko.DataMigration
         {
           Console.Out.WriteLine(addr);          
         }
-      }
-
-      var template = Path.Combine(dataDir, "orgs.template");
-      if (File.Exists(template))
-      {
-        File.Delete(template);
       }
 
       Util.UpdateOrCreateXmlDocument(ec, template, el =>
