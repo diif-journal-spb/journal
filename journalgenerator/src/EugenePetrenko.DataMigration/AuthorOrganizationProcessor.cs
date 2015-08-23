@@ -69,7 +69,7 @@ namespace EugenePetrenko.DataMigration
 
     public static void Process(ErrorsCount ec, string dataDir)
     {
-//      Debugger.Launch();
+      Console.Out.WriteLine("=====");
 
       var helpers = new List<Hints>();
       Util.ProcessFiles(ec, dataDir, "*.orgs", file => Util.UpdateXmlDocument(ec, file, root =>
@@ -94,6 +94,15 @@ namespace EugenePetrenko.DataMigration
         }
       }));
 
+      var duplicateIds = helpers.Select(x=>x.OrgId).GroupBy(x=>x).Where(x=>x.Count() > 1).ToArray();
+      if (duplicateIds.Any())
+      {
+        foreach (var id in duplicateIds)
+        {
+          ec.Error("Duplicate ordId: {0}", id.First());
+        }
+      }
+
       var allAuthorAddresses = new List<IEnumerable<string>>();
       Util.ProcessFiles(ec, dataDir, "*.authors", file => Util.UpdateXmlDocument(ec, file, element =>
       {
@@ -102,9 +111,15 @@ namespace EugenePetrenko.DataMigration
 
         foreach (XmlElement author in element.SelectNodes("author"))
         {
-          if (author.HasAttribute("org")) continue;
-
           var authorId = author.GetAttribute("id");
+
+          if (author.HasAttribute("org")) {
+            var orgId = author.GetAttribute("org");
+            if (helpers.Count(h => h.OrgId == orgId) != 1) {
+              ec.Error("Author {0} has incorrect org: {1}", authorId, orgId);
+            }
+            continue;
+          }
 
           var allAddresses = author.SelectNodes(".//Address/text()")
             .Cast<XmlNode>()
@@ -112,7 +127,7 @@ namespace EugenePetrenko.DataMigration
             .Apply(Normalize)
             .ToArray();
 
-          if (!allAddresses.Any())
+          if (!allAddresses.Any() && !author.GetAttribute("allow-no-address").Equals("true", StringComparison.InvariantCultureIgnoreCase))
           {
             ec.Error("Author {0} has no Addresses", authorId);
             continue;
@@ -135,9 +150,11 @@ namespace EugenePetrenko.DataMigration
             continue;
           }
 
-          var orgId = matches.Single().OrgId;
-          author.SetAttribute("org", orgId);
-          Console.Out.WriteLine("Author {0} was matched to {1}", authorId, orgId);
+          {
+            var orgId = matches.Single().OrgId;
+            author.SetAttribute("org", orgId);
+            Console.Out.WriteLine("Author {0} was matched to {1}", authorId, orgId);
+          }
         }
       }));
 
