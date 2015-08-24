@@ -1,0 +1,1556 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 3, 2010
+Electronic Journal,
+reg. N C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+A New Approach to Solving SIEs
+and System of PFDEs Using TheL
+2
+-Transform
+A.Aghili and A.Ansari
+Department of Mathematics,Faculty of Sciences
+University of Guilan,P.O.Box 1841,Rasht,Iran
+armanaghili@yahoo.com,alireza 1038@yahoo.com
+Abstract
+In this article,we will show how we can apply complex inversion formula for the inversion of
+theL
+2
+-transform and also express some applications of the L
+2
+-transform for solving of singu-
+lar integral equation (SIEs) with trigonometric kernel and system of partial fractional differential
+equations(PFDEs).
+Mathematics Subject Classi cation:26A33;44A10;44A35;45E
+Keywords:L
+2
+-Transform,Laplace Transform,partial fractional differential equation
+1 Introduction
+The Laplace-type integral transform called theL
+2
+-transform was introduced by Yurekli and
+Sadek [9] and denoted as follows
+L
+2
+ff(t);sg =
+Z
+1
+0
+te
+ s
+2
+t
+2
+f(t)dt: (1-1)
+Many problems of mathematical interest lead to theL
+2
+-transform whose inverses are not
+readily expressed in terms of tabulated functions. In the absence of methods for inversion of
+theL
+2
+-transform, recently the authors [1-4], established a simple formula to invert theL
+2
+-
+transform for a given function. In this article,we present some new inversion techniques for the
+L
+2
+-transform and an application of generalized product theorem (Efros Theorem) for solving
+some singular integral equation with trigonometric kernel is given. At the end, we express how
+we may choose theL
+2
+-transform in the scope of integral transform methods as a powerful tool
+for solving of a system of partial fractional differential equation in the Riemann-Liouville sense.Differential Equations and Control Processes, N 3, 2010
+2 Elementary Properties of theL
+2
+-Transform
+In this section, we recall some properties of theL
+2
+-transform that will be used to solve partial
+differential equations.First,we state a lemma about theL
+2
+-transform of the  -derivatives.
+Lemma 2.1 If f;f
+0
+;    ;f
+(n 1)
+are all continuous functions with a piecewise continuous
+derivative f
+(n)
+on the interval t  0 and if all functions are of exponential order exp(c
+2
+t
+2
+) as
+t!1 for some constant c then for n = 1; 2;   
+L
+2
+f 
+n
+t
+f(t);sg = 2
+n
+s
+2n
+L
+2
+ff(t);sg  2
+n 1
+s
+2(n 1)
+f(0
++
+) (2-1)
+ 2
+n 2
+s
+2(n 2)
+( 
+t
+f)(0
++
+)      ( 
+n 1
+t
+f)(0
++
+):
+where the differential operator   is de ned as
+ 
+t
+=
+1
+t
+d
+dt
+;  
+2
+t
+= 
+t
+ 
+t
+=
+1
+t
+2
+d
+2
+dt
+2
+ 
+1
+t
+3
+d
+dt
+;
+and so on.
+Proof: See [9].
+3 Complex Inversion Formula for theL
+2
+-Transform and Efros The-
+orem
+Lemma 3.1 Let F (
+p
+s) be analytic function of s ( assuming that s = 0 is not a branch
+point) except at  nite number of poles each of which lies to the left of the vertical line Re s =c
+and if F (
+p
+s)! 0 as s!1 through the left plane Re s c , and
+L
+2
+ff(t);sg =
+Z
+1
+0
+t exp( s
+2
+t
+2
+)f(t)dt =F (s);
+then
+L
+ 1
+2
+fF (s)g =f(t) =
+1
+2 i
+Z
+c+i1
+c i1
+2F (
+p
+s)e
+st
+2
+ds =
+m
+X
+k=1
+[Resf2F (
+p
+s)e
+st
+2
+g;s =s
+k
+]: (3-1)
+Proof: See [2].
+Lemma 3.2 (The Convolution Theorem for TheL
+2
+-Transform)
+If F (s);G(s) be theL
+2
+-transform of the functions f(t);g(t) respectively, then
+F (s)G(s) =L
+2
+ff 
+t
+gg =L
+2
+f
+Z
+t
+0
+xg(x)f(
+p
+t
+2
+ x
+2
+)dxg (3-2)
+Proof: Using the de nition of theL
+2
+-transform for F (s);G(s) , we have
+Electronic Journal. http://www.math.spbu.ru/diffjournal 59Differential Equations and Control Processes, N 3, 2010
+F (s)G(s) = (
+Z
+1
+0
+ye
+ s
+2
+y
+2
+f(y)dy)(
+Z
+1
+0
+xe
+ s
+2
+x
+2
+g(x)dx)
+=
+Z
+1
+0
+Z
+1
+0
+yxe
+ s
+2
+(x
+2
++y
+2
+)
+f(y)g(x)dydx
+now, by substitutionx
+2
++y
+2
+=t
+2
+and change the order of integration in the double integral
+for the  rst case ,we yield
+F (s)G(s) =
+Z
+1
+0
+te
+ s
+2
+t
+2
+dt
+Z
+t
+0
+xg(x)f(
+p
+t
+2
+ x
+2
+)dx
+= L
+2
+f
+Z
+t
+0
+xg(x)f(
+p
+t
+2
+ x
+2
+)dxg:
+Lemma 3.3 [Generalized product Theorem (Efros Theorem)]
+Let L
+2
+(f(t)) = F (s) and assuming  (s), q(s) are analytic and such that, L
+2
+( (t; )) =
+ (s) e
+  
+2
+q
+2
+(s)
+, then one has,
+L
+2
+ Z
+1
+0
+f( ) (t; )d 
+ 
+=F (q(s)) (s): (3-3)
+Proof: By de nition of theL
+2
+-transform and changing the order of integration we get
+L
+2
+f
+Z
+1
+0
+f( ) (t; )d g =
+Z
+1
+0
+te
+ s
+2
+t
+2
+(
+Z
+1
+0
+f( ) (t; )d )dt
+=
+Z
+1
+0
+f( )dt(
+Z
+1
+0
+te
+ s
+2
+t
+2
+ (t; )d )d ;
+or equivalently
+L
+2
+f
+Z
+1
+0
+f( ) (t; )d g =  (s)
+Z
+1
+0
+f( ) e
+  
+2
+q
+2
+(s)
+d  =  (s)F (q(s)):
+Example 3.1: Solve the singular integral equation
+2
+ 
+Z
+1
+0
+f( ) sin(t )d  = Erf(
+t
+2a
+) a2R
+Solution:By applying theL
+2
+-transform followed by generalized product theorem and using
+the fact thatL
+2
+fsin(t )g =
+ 
+4s
+3
+te
+ 
+t
+2
+4s
+2
+,we obtain
+2
+ 
+F (
+1
+2s
+)
+p
+ 
+4s
+3
+=
+1
+2s
+2
+p
+1 +a
+2
+s
+2
+or,
+F (s) =
+1
+2
+r
+ 
+a
+2
++s
+2
+;
+and  nally by inversion of theL
+2
+-transform we  nd
+f(t) =
+e
+ a
+2
+t
+2
+t
+:
+In the next section, we give some illustrative examples and lemmas related to theL
+2
+-transform
+and complex inversion formula for theL
+2
+-transform.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 60Differential Equations and Control Processes, N 3, 2010
+4 Illustrative Lemmas and Examples
+Lemma 4.1 By using generalized product theorem for theL
+2
+-transform,show that
+Z
+1
+0
+Erfc(
+ 
+2
+2x
+)d  =
+p
+ 
+2 (
+5
+4
+)
+x
+1
+4
+(4-1)
+where Erfc is complementary error function.
+Proof:By applying theL
+2
+-transform on the right hand side of above relation and using the
+fact thatL
+2
+fErfc(
+ 
+2
+2x
+)g =
+e
+  
+2
+s
+2s
+2
+, we get
+L
+2
+f
+Z
+1
+0
+Erfc(
+ 
+2
+2x
+)d g =L
+2
+f
+Z
+1
+0
+ Erfc(
+ 
+2
+2x
+)
+1
+ 
+d g =
+1
+2s
+2
+ 
+L
+2
+f
+1
+ 
+g
+ 
+s!
+p
+s
+=
+p
+ 
+4s
+5
+4
+which, by using complex inversion formula for
+p
+ 
+4s
+5
+4
+we obtain
+L
+ 1
+2
+f
+p
+ 
+4s
+5
+4
+g =
+p
+ 
+2 (
+5
+4
+)
+x
+1
+4
+Lemma 4.2 The following relationship holds true.
+Pf
+lnx
+x
+;yg =
+  lny
+y
+; (4-2)
+whereP is Widder potential transform. It is well-known that second iterate of theL
+2
+-transform
+is Widder potential transform [9].
+L
+2
+fL
+2
+ff(x);ug;yg =
+1
+2
+Pff(x);yg =
+1
+2
+Z
+1
+0
+x
+x
+2
++y
+2
+f(x)dx (4-3)
+Proof: We take the functionf(z) =
+logz
+z
+2
++a
+2
+wherez =re
+i 
+, 2 ( 
+ 
+2
+;
+3 
+2
+] and consider the closed
+path   of integration consists of, two segments [ R;  ], [ ;R],of the x-axis together with the
+upper semi-circles C
+ 
+:z = e
+i 
+and C
+R
+:z =re
+i 
+with 0< < .Also, we consider the branch
+of logz which is analytic on   and its interior, hence, so is f(z). By residue theorem one has,
+I
+ 
+f(z)dz = 2 iResff(z);yig =
+  lny
+y
++
+i 
+2
+2y
+;
+or,
+Z
+  
+ R
+f(z)dz +
+Z
+ C 
+f(z)dz +
+Z
+R
+ 
+f(z)dz =
+  lny
+y
++
+i 
+2
+2y
+:
+If we take the limit as  ! 0 ,R! +1, integrals along two semi-circles tend to zero,
+therefore we get
+P:V:f
+Z
+0
+ 1
+lnjxj +i 
+x
+2
++y
+2
+dx +
+Z
++1
+0
+lnx
+x
+2
++y
+2
+dxg =
+  lny
+y
++
+i 
+2
+2y
+:
+Taking the real part of the two sides, yields
+Z
++1
+0
+lnx
+x
+2
++y
+2
+dx =
+  lny
+y
+=Pf
+lnx
+x
+;yg
+Electronic Journal. http://www.math.spbu.ru/diffjournal 61Differential Equations and Control Processes, N 3, 2010
+Example 4.1: By using the above lemma solve the following integral equation with trigono-
+metric kernel.
+Z
+1
+0
+ (x) sin xdx + =  ln :
+where  is Euler's constant.
+Solution: Taking the Laplace transform of both sides of integral equation with respect to  
+,we get
+Lf
+Z
+1
+0
+ (x) sin xdx +g = Lfln g;
+or,equivalently
+Z
+1
+0
+x
+x
+2
++s
+2
+ (x)dx +
+
+s
+=
+lns +
+s
+;
+the left hand side of the above relation is Widder potential transform of  (x) [5].Comparing
+the above integral with lemma 4.2 ,we obtain
+Pf (x);sg =
+Z
+1
+0
+x
+x
+2
++s
+2
+ (x)dx =
+lns
+s
+;
+or,
+ (x) =
+lnx
+ x
+:
+Lemma 4.3 The following relation holds true
+L
+ 1
+2
+f
+e
+ x
+p
+s
+2
++ 
+2
+2s
+2
+(s
+2
+  )
+g =
+1
+ 
+Z
+1
+1
+2
+x
+p
+t+t
+2
+e
+  
+2
+ 
+( 
+2
++1)x
+2
+4 
+2
++ (t+t
+2
+)
+d  
+1
+ 
+Z
+1
+1
+2
+x
+p
+t+t
+2
+e
+  
+2
+ 
+ 
+2
+x
+2
+4 
+2
+d : (4-4)
+Proof: By de ning F (s) =
+e
+ x
+p
+s
+2
++ 
+2
+2s
+2
+(s
+2
+  )
+we have 2F (
+p
+s) =
+e
+ x
+p
+s+ 
+2
+s(s  )
+. In order to avoid complex
+integration along complicated key-hole contour we use integral representation fore
+ r
+as follows
+e
+ r
+=
+2
+p
+ 
+Z
+1
+0
+e
+  
+2
+ 
+r
+2
+4 
+2
+d ;
+if we substitute r =x
+p
+s + 
+2
+in the above integral then
+f(x;t) =
+1
+2 i
+Z
+c+i1
+c i1
+e
+ x
+p
+s+ 
+2
+s(s  )
+e
+st
+2
+ds =
+1
+2 i
+Z
+c+i1
+c i1
+1
+s(s  )
+ Z
+1
+0
+e
+  
+2
+ 
+x
+2
+(s+ 
+2
+)
+4 
+2
+d 
+ 
+e
+st
+2
+ds
+=
+Z
+1
+0
+e
+  
+2
+ 
+ 
+2
+x
+2
+4 
+2
+d 
+0
+@
+1
+2 i
+Z
+c+i1
+c i1
+e
+ (
+x
+2
+4 
+2
+ t
+2
+)s
+s(s  )
+ds
+1
+A
+:
+By using the fact that,L
+ 1
+f
+e
+ as
+s
+g = H(t a);L
+ 1
+f
+e
+ as
+s  
+g = e
+ (t a)
+H(t a) and setting
+a =
+x
+2
+4 
+2
+ t
+2
+for inner integral ,we  nally get
+f(x;t) =
+1
+ 
+Z
+1
+0
+e
+  
+2
+ 
+ 
+2
+x
+2
+4 
+2
+[e
+ (t 
+x
+2
+4 
+2
++t
+2
+)
+  1]H(t 
+x
+2
+4 
+2
++t
+2
+)d 
+=
+1
+ 
+Z
+1
+1
+2
+x
+p
+t+t
+2
+e
+  
+2
+ 
+( 
+2
++1)x
+2
+4 
+2
++ (t+t
+2
+)
+d  
+1
+ 
+Z
+1
+1
+2
+x
+p
+t+t
+2
+e
+  
+2
+ 
+ 
+2
+x
+2
+4 
+2
+d :
+Electronic Journal. http://www.math.spbu.ru/diffjournal 62Differential Equations and Control Processes, N 3, 2010
+In the next section,we use theL
+2
+-transform for solving a system of partial fractional differ-
+ential equation in the Riemann-Liouville sense which introduced by Giona and Roman [6, 8]on
+initial-value problems in fractals.
+5 System of Partial Fractional Differential Equation
+Example 5.1: Using theL
+2
+-transform solve the following system of partial fractional differ-
+ential equation in the Riemann-Liouville sense
+(
+t
+D
+ff
+0
++
+u
+1
+(x;t) +Cx
+ 1
+@u
+1
+(x;t)
+@x
++ku
+2
+(x;t) =c
+1
+t
+D
+ff
+0
++
+u
+2
+(x;t) +Cx
+ 1
+@u
+2
+(x;t)
+@x
+ ku
+1
+(x;t) =c
+2
+; k;c
+1
+;c
+2
+2R;C > 0; 0<ff 
+1
+2
+(5-1)
+with Cauchy type initial and boundary conditions as
+t
+D
+ff 1
+0
++
+u
+1
+(x; 0
++
+) =f(x);
+t
+D
+ff 1
+0
++
+u
+2
+(x; 0
++
+) = 0 u
+1
+(0;t) =u
+2
+(0;t) = 0; x;t2R
++
+: (5-2)
+Solution: By introducing new variable w =u
+1
++iu
+2
+;  =c
+2
++c
+1
+i, we can rewrite the system
+of partial fractional differential equation (5-1) and (5-2) in the form
+t
+D
+ff
+0
++w(x;t) = Cx
+ 1
+@w(x;t)
+@x
++kiw(x;t) +  (5-3)
+with initial and boundary conditions
+t
+D
+ff 1
+0
++
+w(x; 0
++
+) =f(x); w(0;t) = 0 (5-4)
+At this point, by applying theL
+2
+-transform in x and the Laplace transform in t
+Lfw(x;t);sg = ~ w(x;s) =
+R
+1
+0
+e
+ st
+w(x;t)dt; <s> 0
+L
+2
+fw(x;t);pg = ^ w(p;t) =
+R
+1
+0
+xe
+ p
+2
+x
+2
+w(x;t)dx;<p
+2
+> 0:
+and utilizing the Cauchy type initial conditions (5-4), we get the transformed equation of (5-3)
+in the form
+^
+~ w(p;s) =
+ 
+2sp
+2
+(s
+ff
++Cp
+2
+ ki)
++
+1
+s
+ff
++Cp
+2
+ ki
+F (p) (5-5)
+where F (p) is theL
+2
+-transform of the initial condition f(x). To obtain the relation (5-5) we
+used the Laplace transform of the Riemann-Liouville derivative by the following relation [7]
+Lf
+t
+D
+ff
+0
++w(x;t);sg =s
+ff
+~ w(x;s) 
+t
+D
+ff 1
+0
++
+w(x; 0
++
+);
+and theL
+2
+-transform of the  -derivatives by setting n = 1 in (2-1).
+L
+2
+f
+1
+x
+@w(x;t)
+@x
+;pg = 2p
+2
+^ w(p;t) w(0;t):
+Now, by considering the complex inversion formula for theL
+2
+-transform (3-1) and the convo-
+lution theorem (3-2), we attain
+Electronic Journal. http://www.math.spbu.ru/diffjournal 63Differential Equations and Control Processes, N 3, 2010
+~ w(x;s) =
+1
+2 i
+Z
+c+i1
+c i1
+^
+~ w(
+p
+p;s)e
+px
+2
+dp =
+ 
+C
+L
+ 1
+2
+f
+1
+sp(
+s
+ff
+C
++p 
+ki
+C
+)
+g +
+1
+C
+L
+ 1
+2
+f
+1
+s
+ff
+C
++p 
+ki
+C
+g 
+x
+f(x)
+=
+ 
+C
+Z
+x
+0
+u
+s
+e
+(ki s
+ff
+)
+u
+2
+C
+du +
+1
+C
+e
+(ki s
+ff
+)
+x
+2
+C
+ 
+x
+f(x)
+where 
+x
+is the convolution of theL
+2
+-transform expressed by (3-2) .
+At this point, in regard to the inverse Laplace transform of the functions e
+ s
+ffx
+2
+C
+via the
+Wright function [7]
+L
+ 1
+fe
+ s
+ffx
+2
+C
+g =
+1
+t
+W ( ff; 0; 
+x
+2
+C
+t
+ ff
+);
+we obtain the explicit solution of the Cauchy type problem (5-3)-(5-4) in the following form
+w(x;t) =
+ 
+C
+Z
+x
+0
+Z
+t
+0
+u
+ 
+W ( ff; 0; 
+u
+2
+C
+ 
+ ff
+)e
+kiu
+2
+C
+d du +
+Z
+x
+0
+ G
+ff
+(x
+2
+  
+2
+;t)f( )d ; (5-6)
+where the Green function G
+ff
+is given by
+G
+ff
+(x;t) =
+1
+Ct
+W ( ff; 0; 
+x
+C
+t
+ ff
+)e
+kxi
+C
+; (5-7)
+and the Wright function is presented by
+W (ff; ;z) =
+1
+X
+k=0
+z
+k
+k! (ffk + )
+; ff> 1;  2C; z2C:
+Finally , by taking the real and imaginary part of the relation (5-6) the solution of the
+system (5-1) can be determined as
+u
+1
+(x;t) =
+1
+C
+Z
+x
+0
+Z
+t
+0
+u
+ 
+W ( ff; 0; 
+u
+2
+C
+ 
+ ff
+)(c
+2
+cos(
+ku
+2
+C
+) c
+1
+sin(
+ku
+2
+C
+))d du+
+Z
+x
+0
+ G
+ff
+1
+(x
+2
+  
+2
+;t)f( )d 
+(5-8)
+u
+2
+(x;t) =
+1
+C
+Z
+x
+0
+Z
+t
+0
+u
+ 
+W ( ff; 0; 
+u
+2
+C
+ 
+ ff
+)(c
+1
+cos(
+ku
+2
+C
+)+c
+2
+sin(
+ku
+2
+C
+))d du+
+Z
+x
+0
+ G
+ff
+2
+(x
+2
+  
+2
+;t)f( )d 
+(5-9)
+where
+G
+ff
+1
+(x;t) =
+1
+Ct
+W ( ff; 0; 
+x
+C
+t
+ ff
+) cos
+kx
+C
+; (5-10)
+G
+ff
+2
+(x;t) =
+1
+Ct
+W ( ff; 0; 
+x
+C
+t
+ ff
+) sin
+kx
+C
+: (5-11)
+6 Conclusion
+As concluding remarks,we have presented a general theoretical scheme for some singular integral
+equations and partial fractional differential equations using theL
+2
+-transform and it is hoped
+that these results and others derived from this are useful to researchers in the various branches
+of the integral transforms methods and applied mathematics.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 64Differential Equations and Control Processes, N 3, 2010
+Acknowledgment
+Authors would like to thank the referees for hosting this paper.
+References
+[1] A.Aghili,A note on Fox-singular integral equations and its application,Int. J. Contemp.
+Math. Sciences,Vol.2,2007,no.28, 1371-1378
+[2] A.Aghili,A.Ansari,A.Sedghi, An inversion technique for theL
+2
+-transform with applica-
+tions, Int. J. Contemp. Math. Sciences,Vol.2,2007,no.28, 1387-1394.
+[3] A.Aghili, A.Ansari, Solving Partial Fractional Differential Equations Using the L
+A
+-
+Transform, Asian-European Journal of mathematics Vol 3 no.2 (2010) 209-220.
+[4] A.Aghili, A.Ansari, New method for solving system of P.F.D.E. and fractional evolution
+disturbance equation of distributed order, Journal of Interdisciplinary Mathematics, April
+2010.
+[5] D.Brown et al., Identities for theE
+2;1
+-transform and their applications,Appl. Math. Com-
+put,(2006).
+[6] M. Giona, H. E. Roman, Fractional diffusion equation on fractals: One-dimensional case
+and asymptotic behaviour, J. Phys. A: Math. Gen., 25(8), (1992) 2107-2117.
+[7] A.A. Kilbas, H.M. Srivastava, J.J. Trujillo, Theory and Applications of Fractional Differ-
+ential Equations, North-Holland Mathematics Studies, 204, Elsevier Science Publishers,
+Amsterdam, Heidelberg and New York, 2006.
+[8] H. E. Roman, M. Giona, Fractional diffusion equation on fractals: three-dimensional case
+and scattering function, J. Phys. A: Math. Gen., 25(8), (1992) 2107-2117.
+[9] O.Yurekli,I.Sadek,A Parseval-Goldstein type theorem on the Widder potential transform
+and its applications, International Journal of Mathematics and Mathematical Sciences,
+14(1991)517-524.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 65

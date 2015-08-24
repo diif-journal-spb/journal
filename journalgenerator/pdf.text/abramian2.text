@@ -1,0 +1,999 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 2, 2006
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Control problems in nonlinear systems
+STABILITY OF DIFFUSIVE COUPLED NETWORKS
+AND TECHNICAL SYSTEMS UNDER RANDOM
+NOISE
+A.A.ABRAMYAN
+INSTITUTE FOR PROBLEMS OF MECHANICAL ENGINEERING
+RUSSIAN ACADEMY OF SCIENCIES,
+V.O.BOLSHOY PR.61, 199178 St.Petersburg, RUSSIA,
+e-mail: abramian@mech.ipme.ru
+S.A.VAKULENKO INSTITUTE FOR PROBLEMS OF MECHANICAL
+ENGINEERING,
+RUSSIAN ACADEMY OF SCIENCIES,
+V.O.BOLSHOY PR.61, 199178 St.Petersburg, RUSSIA,
+e-mail: abramian@mech.ipme.ru
+Abstract.
+We consider stability of special dynamical systems under a random noise.
+These systems (networks) are important in many applications. We focus our
+attention on supporting of homeostasis of these systems with respect to ﬂuctu-
+ations of an external medium (the problem is posed by M. Gromov, A.Carbone
+[7]). Using a measure of stochastic stability we show that a network with ﬁxed
+parameters is always unstable, i.e., the probability to support homeostasis con-
+verges to zero as time T →∞.Differential Equations and Control Processes, N 2, 2006
+1 Introduction
+Weconsiderstabilityofspecialdynamicalsystemsunderarandomnoise. These
+systems(networks)areimportantinmanyapplications. Wefocusourattention
+onsupportingofhomeostasisofthesesystemswithrespecttoﬂuctuationsofan
+externalmedium(theproblemisposedbyM.Gromov,A.Carbone[7]). Usinga
+measure of stochastic stability we show that a network with ﬁxed parameters is
+always unstable, i.e., the probability to support homeostasis converges to zero
+as time T → ∞.We consider stability of special dynamical systems under a
+random noise. These systems (networks) are important in many applications.
+We focus our attention on supporting of homeostasis of these systems with
+respect to ﬂuctuations of an external medium (the problem is posed by M.
+Gromov, A.Carbone [7]). Using a measure of stochastic stability we show that
+a network with ﬁxed parameters is always unstable, i.e., the probability to
+support homeostasis converges to zero as time T →∞.
+teGr). Using a measure of stochastic stability we show that a network with
+ﬁxedparametersisalwaysunstable, i.e., theprobabilitytosupporthomeostasis
+converges to zero as time T →∞.
+2 Network models
+In last decade, large attention is given to problems of global organization, sta-
+bility and evolution of complex networks such as protein and gene networks,
+networks of metabolic reactions, neural and economical circuits, Internet etc.
+(see [1] for a review). The simplest mathematical model of such network is a
+(directed) graph. For example, for a gene network we can associate with this
+network a graph where a node describes a gene, the i-th node is connected with
+the j-th one if the corresponding genes interact. Stability of these graphs can
+be examined in different contexts. For example, we can examine how much
+edges (or nodes) must be eliminated in order to destroy connectivity of the
+graph. In this paper our attention is focused on stability of the networks with
+respect to ﬂuctuations ( an internal noise and oscillations of an environment).
+Tostudythisproblem, weextendsimplegraphmodels. Infact, metabolicreac-
+tion networks or gene networks are complex dynamical system, where a scheme
+of interaction of substrats,ferments or genes can be associated with a graph. A
+part of the substrats enters this system from an external medium (input) and
+another part can be considered as an output (products). It is well known that
+Electronic Journal.  42Differential Equations and Control Processes, N 2, 2006
+these systems successfully support an output independent of ﬂuctuating input
+[9, 2].
+It is diﬃcult to describe in details such dynamical systems. Genetic circuit
+models ( [5, 4, 10] among many others, see [12] for a review) to take into
+account theoretical ideas and experimental information on gene interactions.
+We consider a model proposed by [10, 11]
+∂u
+i
+∂t
+= d
+i
+Δu
+i
++R
+i
+σ(
+m
+X
+j=1
+K
+ij
+u
+j
++θ
+i
+−ξ
+i
+(t))−λ
+i
+u
+i
+, (2.1)
+wheremisthenumberofgenesincludedinthecircuit, u
+i
+(x,t)istheconcentra-
+tion of the i-th gene, x∈ Ω, where Ω is a bounded open domain with a regular
+boundary ∂Ω, λ
+i
+are the gene decay rates, d
+i
+are diffusion coeﬃcients, the pa-
+rameters θ
+i
+are activation thresholds, ξ
+i
+(t) describe random ﬂuctuations, and σ
+is so-called sigmoidal function (see below). We assume that the ξ
+i
+are random
+processes with piecewise continuous trajectories. Real number K
+ij
+measures
+the inﬂuence of the j-th gene on the i-th one, R
+i
+> 0 are coeﬃcients.
+We set the zero Neumann conditions
+∂u
+i
+∂n
+= 0, x∈ ∂Ω, t > 0.
+The initial data are
+u
+i
+(x,0) = s
+i
+, s
+i
+≥ 0, (2.2)
+wheres
+i
+areconstants. Thefunctionσisasmooth,strictlymonotoneincreasing
+function satisfying
+lim
+z→−∞
+σ(z) = 0, lim
+z→∞
+σ(z) = 1. (2.3)
+The well known example is σ(z) =
+1+tanh(z)
+2
+.
+Model (2.1) takes into account the following fundamental processes: a) the
+decay (degradation) of gene products (the term−λ
+i
+u
+i
+); and b) gene regulation
+and synthesis, c) diffusion [10, 11]. Notice that if s
+i
+are constants, we can set
+d
+i
+= 0, since then the solution depends only on t. Then system (2.1) reduces
+to the famous Hopﬁeld model of the attractor neural network [8].
+Another possible model is a dynamical system with discrete time, for ex-
+ample, deﬁned by the following iterative process
+u
+t+1
+i
+= r
+i
+σ(
+m
+X
+j=1
+K
+ij
+u
+t
+j
++θ
+i
+−ξ
+t
+i
+)−λ
+i
+u
+t
+i
+, (2.4)
+Electronic Journal.  43Differential Equations and Control Processes, N 2, 2006
+u
+0
+i
+≡ s
+i
+, (2.5)
+where t = 0,1,2,...,T, T is an integer, ξ
+t
+i
+are random functions of discrete time
+t. Numerical procedures solving (2.1) (with d
+i
+= 0) lead to models similar to
+(2.4). This system was studied in [15, 16]. In this paper we consider system
+(2.1), more complicated, than systems (2.4).
+To conclude this section, let us make the two remarks. Notice that ξ
+i
+are involved nonlinearly in (2.1). In this case it is diﬃcult to study strongly
+discontinuous processes ξ
+i
+. However, we can consider a variant of system (2.1)
+with a multiplicative noise, which can have δ-like contributions (see Section 4).
+Notice that there also exists a case, where x∈Z
+d
+, i.e., x runs over a grid and
+Δ is a discrete approximation of the Laplace operator [11]. Our results hold for
+this case.
+Letusformulatenowmainresults. Weconsiderthequestiononthestochas-
+tic stability of genetic circuits (2.1). The stochastic stability can be deﬁned
+following the well known ideas (see below and [17, 16]). We extend on the case
+(2.1) the result obtained in [16] that the more is the valency of a node the
+stabler is the circuit with respect to perturbations in this node. We also prove
+that the survival probability of each circuit of a ﬁxed structure tends to zero as
+T →∞. Therefore, ”homeostasis” generated by a ﬁxed circuit will be broken
+as time tends to inﬁnity. We give an estimate of the survival probability.
+3 Stochastic Stability for Circuits
+The important meaning has the problem of stability of networks under random
+perturbations of different parameters. We obtain in this section some estimates
+on stability of (2.1) under noises.
+For s
+i
+independent of x we can consider problem (2.1) with d
+i
+= 0. We
+assume that random processes ξ
+i
+(t) are independent for different i. Different
+choicesofthedistributionsforξ
+t
+i
+andS
+i
+maycorrespondtodifferent”ecological
+conditions” (random environments).
+Let us introduce functions Ψ
+i
+by
+Prob{ξ
+i
+(t) > a for all t∈ [T
+1
+,T
+2
+]} = Ψ
+i
+(a,T
+1
+,T
+2
+). (3.1)
+The following assumptions play a key role. Let us suppose ﬁrst that
+Ψ
+i
+(a,T
+1
+,T
+2
+) > 0 (3.2a)
+Electronic Journal.  44Differential Equations and Control Processes, N 2, 2006
+for any i, a and T
+1
+, T
+2
+such that T
+2
+> T
+1
+. Moreover, let us assume that for any
+ﬁxed τ > 0, an index i and a number a the probability P
+i
+(a,τ,T) that there
+exists a moment t
+0
+∈ [0,T] such that ξ
+i
+(t) > a for any t∈ [t
+0
+,t
+0
++τ] satisﬁes
+P
+i
+(a,τ,T)→ 1 (T →∞). (3.2b)
+Roughly speaking, this means that ξ
+i
+(t) can take any large values within any
+bounded time periods with non-zero probabilities.
+Notice that trajectories η
+i
+(t) of the independent standard Wiener process
+satisfy (3.2a, b). One can check that the property (3.2a) holds in this case [6].
+To show (3.2b), we can use the well known results [6]. First we notice that in
+this case the probability P
+T
+(b) to attain any ﬁxed b within [0,T] converges to
+1 as T →∞. In fact, due to Theorem 2 from [6], Ch. VI, part 3, we have
+P
+T
+(b) = Prob{max
+t∈[0,T]
+η(t) > b} = 2
+1
+√
+2πT
+Z
+∞
+b
+exp(−
+x
+2
+2T
+)dx.
+This realtion shows that P
+T
+(b) → 1 as T → ∞. Given a,τ, we choose a
+suﬃciently large b = b(a,τ). The process attains, within a suﬃciently large
+time interval [0,T], this value b at some t
+0
+(b)∈ [0,T]. Moreover, let us notice
+that the process is a regular one, i.e., the probability to return on the level a
+starting from b within a time interval of a ﬁxed length τ converges to zero as
+b → ∞ [6]. This regularity property shows that the Wiener process satisﬁes
+(3.2b).
+Let Π be a closed domain in the u - phase space. We say that a system (a
+circuit (2.1)) ”survives” in Π (supports homeostasis in Π ) if the concentrations
+u
+i
+lie in Π. Notice that our conditions (2.3) on σ entail the dissipativity of
+(2.1), i.e., there is a box B⊂R
+m
+such that each solution with initial data from
+this box cannot leave the box B. Moreover, one can show that concentrations
+s
+i
+stay non-negative. It is natural, thus, to suppose that Π is contained in
+B ∩{u : u
+i
+≥ 0}. As a measure of the stochastic stability of the circuit
+homeostasis on the time interval [T
+1
+,T
+2
+], we consider the probability
+P(Π,T
+1
+,T
+2
+) = Prob{u(t)∈ Π for each t∈ [T
+1
+,T
+2
+]}, (3.3)
+where u = (u
+1
+,...,u
+m
+) (see [16]). This probability depends on the circuit pa-
+rametersP andthehomeostasisdomainΠ. Wenameitthesurvivalprobability
+on the time interval [T
+1
+,T
+2
+] and denote by P(T
+1
+,T
+2
+) omitting the dependence
+on the domain Π.
+We estimate the stability via the following parameters: the valency, |K
+∗
+|,
+the maximum b of|θ
+i
+| and some parameter N
+key
+that will be introduced below.
+Electronic Journal.  45Differential Equations and Control Processes, N 2, 2006
+It is important to take into account the valency since it is well known that
+biological circuits are far from being completely connected: for each ﬁxed node
+i we have a valency V
+i
+< m: only V
+i
+among the entries K
+ij
+are not equal zero.
+In economical, technical and biological applications one has typically V
+i
+<< m
+[1].
+To deﬁne N
+key
+, let us observe ﬁrst that
+inf
+u∈Π
+u
+i
+= W
+i
+≥ 0. (3.4)
+Denote U
+i
+= σ
+−1
+(W
+i
+). Some W
+i
+and U
+i
+may be positive. The corresponding
+indices i
+1
+,...,i
+s
+∈ [1,...,m] will be named key indices and the corresponding
+genes will be named the key ones. In fact, assumption W
+i
+> 0 means that the
+organism cannot survive if the concentration of i -th gene is small enough. The
+number of the key genes is denoted by N
+key
+. We denote by I the set of the key
+indices corresponding to the key genes.
+The ﬁrst step is a priori estimate of solutions of system (2.1). We obtain
+|u
+i
+| < μ
+i
+= max{R
+i
+λ
+−1
+i
+,s
+i
+}. (3.5)
+Let us ﬁx now a key index i∈ I and consider (2.1). Using (3.5) one obtains
+the following simple inequality
+m
+X
+j=1
+K
+ij
+u
+j
+(t)+θ
+i
+−ξ
+i
+(t)≤ V
+i
+K
+∗
+μ
+i
++b−ξ
+i
+(t). (3.6)
+Suppose t
+0
+,τ > 0. Let us take a suﬃciently large a and, using hypothesis (3.2),
+consider a trajectory ξ
+i
+(t) such that
+ξ
+i
+(t) > a, t∈ [t
+0
+,t
+0
++τ] (3.7)
+The probability to ﬁnd such a trajectory is a positive, due to (3.2a). Consider
+system (2.1) on the interval [t
+0
+,t
+0
++τ]. We choose a number a such that
+V
+i
+K
+∗
+μ
+i
++b−ξ
+i
+(t) < U
+i
+−δ, (3.8)
+where δ > 0 is a small positive number. Since σ∈ (0,W
+i
+) on this interval, and
+u
+i
+(t
+0
+) satisﬁes estimate (3.7), one derives a priori estimate of u
+i
+0 < u
+i
+(t) < μ
+i
+exp(−λ
+i
+(t−t
+0
+))+(W
+i
+−δ
+1
+)(1−exp(−λ
+i
+(t−t
+0
+)), (3.9)
+where δ
+1
+> 0 is a small number, t∈ [t
+0
+,t
+0
++τ]. For suﬃciently large τ we have
+then u
+i
+(t
+0
++τ) < W
+i
+. So, we conclude that the event
+ξ
+i
+(t) > V
+i
+K
+∗
+μ
+i
++b−U
+i
+= γ
+i
+, t∈ [t
+0
+,t
+0
++τ], (3.10)
+Electronic Journal.  46Differential Equations and Control Processes, N 2, 2006
+entails the event that the concentration u
+i
+(t
+0
++τ) is less than the critical value
+W
+i
+. Thus, the set A
+i
+of the random trajectories ξ
+i
+such that ξ
+i
+(t) > γ
+i
+on
+[t
+0
+,t
+0
++τ] is contained in the set B
+i
+of the random trajectories such that the
+corresponding solution u(t) satisﬁes u
+i
+(t
+0
++τ) < W
+i
+. Therefore, the comple-
+ments
+¯
+A
+i
+,
+¯
+B
+i
+ofA
+i
+andB
+i
+satisfy
+¯
+B
+i
+⊂
+¯
+A
+i
+. Thesameholdsfortheintersections:
+¯
+B = (∩
+i∈I
+¯
+B
+i
+)⊂ (∩
+i∈I
+¯
+A
+i
+) =
+¯
+A.
+Moreover, if at least one u
+i
+(t) is less than W
+i
+, the state u(t) is outside of
+this domain Π. This shows that the condition u(t
+0
++τ) ∈ Π is equivalent to
+u(t
+0
++τ)∈
+¯
+B. WeobtainthusthatProb
+¯
+B≤ Prob
+¯
+A. Sincewesupposethatthe
+random processes ξ
+i
+are independent, all the events {ξ
+i
+(t) > γ
+i
+on [t
+0
+,t
+0
++τ]}
+are independent. This implies Prob
+¯
+A = Prob
+¯
+A
+1
+Prob
+¯
+A
+2
+...Prob
+¯
+A
+N
+key
+. Each
+probability Prob
+¯
+A
+i
+can be expressed through Ψ
+i
+(γ
+i
+,t
+0
+,t
+0
++τ). Hence, we have
+Prob{u(t)∈ Π}≤
+Y
+i∈I
+(1−Ψ
+i
+(V
+i
+K
+∗
+μ
+i
++b−U
+i
+,t−τ,t))≡ R(t,τ). (3.11)
+Therefore, we have proved
+Proposition The survival probability satisﬁes
+P(T
+1
+,T
+2
+)≤ R(T
+1
+,τ). (3.12)
+This estimate implies the following consequence. Notice that the function R is
+a monotone increasing function of the valencies V
+i
+. So, to increase the stability,
+we can increase the valencies. Moreover, one can prove, by the same arguments
+and assumption (3.2b), that all circuits are stochastically unstable as the time
+T →∞. In fact, let us consider the arbitrary key index i∈ I. The probability
+that ξ
+i
+(t) > γ
+i
+on some [t,t + τ] ⊂ [0,T] tends to 1 as T → ∞. Thus, the
+probability that for some t+τ ∈ [0,T] the value u
+i
+(t+τ) < W
+i
+also tends to 1
+as T →∞.
+4 Stability under jump-like noises
+.
+We consider a network under jump-like multiplicative noise
+du
+i
+dt
+= R
+i
+σ(
+m
+X
+j=1
+K
+ij
+u
+j
++θ
+i
+)−λ
+i
+u
+i
++g
+i
+(u)ξ
+i
+(t), (4.1)
+Electronic Journal.  47Differential Equations and Control Processes, N 2, 2006
+where g
+i
+are smooth functions, ξ
+i
+are processes deﬁned by
+ξ
+i
+=
+X
+k
+γ
+ik
+δ(t−t
+k
+),
+where t
+k
+are random time moments, 0 < t
+1
+< t
+2
+< ... < t
+k
+< ..., γ
+ik
+are random
+numbers. We suppose that the processes ξ
+i
+are time homogeneous.
+As above, we are going to estimate the stochastic stability of the network
+deﬁned by (4.1), i.e, the probability P(T
+1
+,T
+2
+) = P(0,T), T = T
+2
+−T
+1
+.
+First we observe that the noise inﬂuence reduces to jump-like changes of
+the system trajectories. Suppose u(0) = v
+0
+. On the interval [0,t
+1
+] we have the
+trajectory u(t,u
+0
+),t∈ (0,t
+1
+] deﬁned by (4.1) with ξ
+i
+≡ 0. The jump at t
+1
+gives
+the trajectory u(t,v
+1
+), where t∈ (t
+1
+,t
+2
+] and where initial data are
+u(t
+1
+) = v
+1
++w
+1
+, v
+1
+= lim
+t→t
+1
+−0
+u(t), w
+1
+= g
+i
+(v
+1
+)γ
+i1
+, (4.2)
+etc. In general, an analysis of such jump dynamics is a diﬃcult problem. In
+order to simplify the situation, we suppose the following.
+We suppose that Π contains a unique local attractorA of (4.1), which is a
+hyperbolic set with a Bowen-Ruelle-Sinai invariant measure ρ(u). The support
+of this measure lies inA. The results of [14] shows that this situation is quite
+possibleinthenetworks: theHopﬁeldnetworkscanhaveanystructurallystable
+attractors.
+The second hypothesis is that the jumps are, in a sense, seldom in average.
+This means that the mathematical expectation
+E(t
+k
+−t
+k−1
+) = τ
+rand
+>> τ
+attr
+, (4.3)
+where τ
+attr
+is a characteristical time, which describes the rate of trajectory ap-
+proaching to the attractorA (physically, it is the relaxation time). Clearly, we
+use a rough estimate τ
+−1
+attr
+≈ min{λ
+s
+}, where λ
+s
+are negative Lyapunov expo-
+nents associated with the dynamics on the attractor. Since we assume that the
+random process is time homogeneous, the distributions of γ
+ik
+are independent
+of k.
+Thehypothesis(4.3)yieldsthefollowingresult. Suppose[0,T]timeinterval
+such that τ
+attr
+<< T << τ
+rand
+. Let us introduce the formal small parameter
+  = τ
+attr
+/τ
+rand
+. Then one can expect that
+P(0,T) =
+Z
+A
+ρ(u)q
+g,γ
+(u)du+o(1) ( → 0), (4.4)
+Electronic Journal.  48Differential Equations and Control Processes, N 2, 2006
+where q
+g,γ
+(u) is the probability that, making a jump from the point u, the
+system state leaves the domain Π:
+q
+g,γ
+(u) = Prob{u+g
+γ
+(u) / ∈ Π}, (4.5)
+where g
+γ
+is a random vector with components g
+γ
+i
+(u) = g
+i
+γ
+ik
+. This vector is
+deﬁned by the multiplicative factor g and the probabilistic law for γ
+ik
+.
+Relation (4.5) allows us to deﬁne an optimal attractor structure. Under
+above hypothesis the attractor A giving maximal survival probability is an
+equilibrium A = {u
+∗
+}. Here u
+∗
+is a point, where the function q
+g,γ
+(u) has the
+global minimum. Then ρ(u) = δ(u−u
+∗
+).
+So, we see that the optimal attractor structure is trivial. The situation
+changesdramaticallyifthesystemmaybeunderdifferentrandomperturbations
+(g,γ) ∈ G from some family G of perturbations. Suppose it is impossible to
+foresee which from them inﬂuences on our system (unpredictable environment
+). In this case we obtain (as  → 0))
+min
+(g,γ)∈G
+P
+T
+(Π) = min
+(g,γ)∈G
+Z
+A
+ρ(u)q
+g,γ
+(u)du.
+This relation leads to the following minimax problem for the optimal measure
+ρ:
+max
+ρ
+min
+(g,γ)∈G
+Z
+A
+ρ(u)q
+g,γ
+(u)du.
+Onecanshow[3]that, ingeneral, thesupportofthemeasureρislocalizedona
+certain set. Then the attractor must be chaotic or periodic, and the dynamics
+on this attractor must be complex.
+Another method to obtain a larger stability in an inpredictable environ-
+ment is a simple dynamics under a small internal noise. This noise helps to
+stabilize the system in the non-predictable environment, because there also is
+an invariant measure ρ(u) localized on a set [17]. There occurs, therefore, an
+interesting problem: that is better, for stabilization, an internal noise or chaos?
+Under which conditions the chaos is stabler?
+5 Acknowledgments
+The ﬁrst author is thankful Rennes University for hospitality, and is grateful
+to Dr. O. Radulescu for useful discussions.
+Electronic Journal.  49Differential Equations and Control Processes, N 2, 2006
+References
+[1] R. Albert and A. L. Barab´ asi, Statistical mechanics of complex networks,
+Rev. Modern Physics, 74, (2002) 47-97
+[2] B. Alberts, D. Bray, J. Lewis, M. Raff, K. Roberts, P. Walter, Molecular
+Biology of the Cell, 4nd ed. (Garland Publishing, Inc., New York, 2002)
+[3] J.P.Aubin,L’analysenonlin´ eaireetsesmotivations´ economiques,Masson,
+Paris, 1984.
+[4] R. Edwards, T.H. Siegelmann, K.Aziza and L. Glass, Symbolic dynamics
+and computation in model gene networks, Chaos, 11 , (2001) 160-169.
+[5] L. Glass and S. Kauffman, The logical analysis of continuous, nonlinear
+biochemical control networks, J. Theor. Biology, 34, (1973), 103-129.
+[6] I. I. Gichman, A. B. Scorochod, Introduction to Theory of Random Pro-
+cesses (in Russian, Nauka, Moscow, 1977).
+[7] M. Gromov and A. Carbone, Mathematical slices of molecular biology,
+Preprint IHES/M/01/03, 2001.
+[8] J. J. Hopﬁeld, Neural networks and physical systems with emergent col-
+lective computational abilities, Proc. of Natl. Acad. USA,79 (1982) 2554-
+2558.
+[9] A. L. Lehninger, D. L. Nelson and M. M. Cox, Principles of Biochemistry,
+2nd. ed. (Worth, New York, 1993).
+[10] E. Mjolness,D. H. Sharp and J. Reinitz, A connectionist Model of Devel-
+opment, J. Theor. Biol. 152, (1991) 429-453.
+[11] J. Reinitz and D. H. Sharp, Mechanism of formation of eve stripes Mech-
+anisms of Development, 49, (1995) 133-158.
+[12] P. Smolen, D. Baxter, J. H. Byrne, Mathematical modelling of gene net-
+works, Review in Neuron, 25, (2000) 247-292.
+[13] D. Thieffry and R. Thomas, Dynamical behaviour of biological regulatory
+networks, II.Immunity control in bacteriophage lambda, Bull. Math. Biol-
+ogy, 57, (1995) 277-295.
+Electronic Journal.  50Differential Equations and Control Processes, N 2, 2006
+[14] S. A. Vakulenko, Dissipative systems generating any structurally stable
+chaos, Advances in Diff. Equations, 5, (2000), 1139-1178
+[15] S. Vakulenko, D. Grigoriev, Complexity of gene circuits, Pfaﬃan functions
+andthemorphogenesisproblem,C.R.Acad.Sci,SerI.337(2003)721-724
+[16] S. Vakulenko, D. Grigoriev, Evolution in Random Environment and Struc-
+tural Stability, Zapiski nauchnich seminarov POMI, vol. 325, (2005).
+[17] A. D. Ventsel and M. I. Freidlin, Random Perturbations of Dynamic Sys-
+tems (Springer, New York, 1984).
+Electronic Journal.  51

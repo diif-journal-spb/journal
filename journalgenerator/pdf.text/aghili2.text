@@ -1,0 +1,2176 @@
+﻿DIFFERENTIAL EQUATIONS 
+AND 
+CONTROL PROCESSES 
+№  4  , 2011 
+Electronic Journal, 
+reg.Эл № ФС77-39410 at 15.04.2010 
+ISSN 1817-2172 
+ 
+http://www.math.spbu.ru/user/diffjournal 
+e-mail: jodiff@mail.ru 
+ 
+ 
+ 
+ 
+Integral transform method for solving non homogenous 
+ time fractional partial differential equations  
+ 
+A. Aghili* - A. Motahhari 
+Department of Applied Mathematics  
+Faculty of Mathematical Sciences, 
+University of Guilan. 
+P.O.Box, 1841, Rasht - Iran 
+arman.aghili@gmail.com ,  as.motahhari@gmail.com 
+ 
+Abstract 
+In this article, the authors solved certain non-homogeneous time fractional heat equations which is a 
+generalization to the problem of spin- up effects on the geo strophic and quasi – geostrophic drags on  
+a slowly rising products or drops in a rotating fluid. In the last three decades, transform methods have 
+been used for solving fractional differential equations, singular integral equations.  
+The result reveals that the transform method is very convenient and effective. 
+ 
+Mathematics Subject Classification 2010: 26A33, 34A08, 34K37, 35R11 
+ 
+Keywords: Caputo fractional derivative; Non-homogeneous time fractional heat equation; Laplace 
+transform; Singular integral equations.   
+ 
+1.             Introduction 
+Engineering and other areas of sciences can be successfully modeled by the use of  fractional 
+derivatives. That is because of the fact that, a realistic modeling of physical phenomenon having 
+dependence not only at the time instant, but also the previous time history can be successfully  
+achieved by using fractional calculus. 
+In this work, the authors implement transform method for solving the partial fractional diffusion 
+equation which arise in applications. Several methods have been introduced to solve fractional 
+differential equations, the popular Laplace transform method, [1] , [ 2 ] , [ 3 ], [11] , the Fourier 
+transform method [10], the iteration method [17] and operational method [ 10]. However most of  
+these methods are suitable for special types of fractional differential equations, mainly the linear  
+with constant coefficients. More detailed information about some of these results can be found in  
+a survey paper by Kilbas and Trujillo [ 9]. Atanackovic and Stankovic [4],[5]and Stankovic [19]  
+used the Laplace transform in a certain space of distributions to solve a system of partial differential 
+equations with fractional derivatives, and indicated that such a system may serve as a certain model for 
+a visco elastic rod. Oldham and Spanier I , [12] and [ 13] , respectively, by reducing a boundary value 
+problem involving Fick’s second low in electro analytic chemistry to a formulation based on the                                                                             Differential Equations and Control Processes, N 4,2011  
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  195 
+partial  Riemann – Liouville  fractional with half  derivative. Oldham and Spanier [ 13] gave other  
+application of such equations for diffusion problems. Uchaikin [20 ],[21 ] in which the connection 
+between solution of linear equation of fractional order and solution of the first order has been 
+established.Wyss [ 23] and Schneider [18] considered the time fractional diffusion and wave equations 
+and obtained the solution in terms of  Fox functions. 
+ 
+1.1      Definitions and notations 
+ 
+The left Caputo fractional derivatives of order 0   ( 1 , ) n n n      is defined by 
+()
+1
+1 ( )
+( ) .
+( ) ( )
+n
+t
+C
+at n
+a
+fx
+D f t dx
+n t x
+
+
+
+
+
+  
+
+ 
+Laplace transform of function () ft is as follows 
+0
+{ ( )} ( ) : ( ).
+st
+L f t e f t dt F s
+
+
+
+
+ 
+If { ( )} ( ) L f t F s  , then 
+1
+{ ( )} L F s
+
+ is given by 
+1
+( ) ( )
+2
+ci
+st
+ci
+f t e F s ds
+i 
+
+
+
+
+ 
+where Re( )sc  . For 1nn     , one  gets 
+1
+1 ( )
+0
+0
+{ ( )} ( ) (0).
+n
+C k k
+t
+k
+L D f t s F s s f
+  
+
+
+
+
+
+ 
+The differential equation 
+2 2 2 2
+( ) 0 x y xy x y         is called modified Bessel equation.  
+Its general solution is    
+12
+( ) ( ) ( ) y x cI x c K x
+
+  , 
+where (.) , (.) IK
+
+are  - order modified Bessel functions of first and second kind respectively.  
+On the other hand (.) K
+
+ is called Macdonald function. 
+The simplest Wright function is given by the series  
+0
+( , ; )
+! ( )
+n
+n
+z
+Wz
+nn
+
+
+
+
+
+
+
+ 
+For ,,z   . We have the following relationship 
+1
+1
+,
+{ ( )} (Re( ) | | ).
+s
+L t E at s a
+sa
+
+
+
+ 
+
+
+   
+Example 1.1: Let { ( )} ( ) L f t F s  and { ( , )} ( ) exp( ( )) L u t U s q s    
+and assuming ( ) , ( ) s q s  are analytic, then one has  
+ 
+0
+( ) ( , ) ( ) ( ( )). L f u t d U s F q s   
+
+
+
+ 
+ In special case, let us assume that,  
+1
+() Us
+s
+
+ and () q s s
+
+ , then one has 
+exp( )
+{ ( , )} ,
+s
+L u t
+s
+
+
+
+
+
+ 
+which leads to 
+1
+( , ) ( , ; ). u t t W t
+
+   
+
+   
+Then, we obtain 
+1
+0
+1 ( )
+( ) ( , ; ) .
+Fs
+L f W t d
+ts
+
+
+
+    
+
+
+
+
+  
+
+
+
+                                                                            Differential Equations and Control Processes, N 4,2011  
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  196 
+ 
+Provided that the integral in bracket converges absolutely. 
+ 
+1.2 :  Solution to singular integral equations with trigonometric kernel,  
+ 
+Laplace transform can be used to solve certain types of singular integral equations. 
+ 
+Lemma 1.1: Solving the following singular integral equation of the form, 
+ 
+0
+sin
+( ) ( ) ( )
+xt
+f x g x f t dt
+t
+
+
+
+
+
+                          (1.1) 
+Solution: Let ( ( ) ( ) , ( ( )) ( ) L f t F s L g t G s  be the Laplace transforms of ( ), ( ) f t g t respectively,   
+ 
+then one gets the following relation, 
+   
+11
+( ) ( ) ( ) F s G s F
+s ss
+  ,                                      (1.2 ) 
+  now, in relation ( 1.2) we replaces by 
+1
+s
+, to obtain 
+11
+( ) ( ) ( ), (1.3). F G s sF s
+ss
+  
+Combination of ( 1.3) and ( 1.2) and calculation of ) (s F leads to the following, 
+2
+1
+( ) ( )
+( ) , (1.4)
+1
+G s G
+s ss
+Fs
+
+
+
+
+
+ 
+upon using complex inversion formula, relation (1.4) leads to the following, 
+2
+1
+( ) ( )
+1
+( ) . (1.5)
+21
+ci
+st
+ci
+G s G
+s ss
+f t e ds
+i
+
+
+
+
+
+
+
+
+ 
+Example 1.2: Solve the following singular integral equation. 
+0
+sin
+( ) exp( ) ( )
+xt
+f x ax f t dt
+t
+
+
+
+  
+
+ , 0 a    ( 1.6) 
+Solution: Laplace-transform of the above integral equation, leads to the following  
+ 
+                               
+2
+1
+( ) ,
+2 (1 ) (1 )
+ci as
+ci
+e
+f t ds
+i s as
+
+ 
+
+
+
+
+
+                              (1.7) 
+the formal solution is  
+2
+0
+()
+(1 )
+ty
+t
+aa
+ee
+f t dy
+ay
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+                                                                            Differential Equations and Control Processes, N 4,2011  
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  197 
+2.       Main results 
+In this section, the authors considered certain non-homogeneous time fractional heat equations which 
+is a generalization to the problem of spin- up effects on the geostrophic and quasi – geostrophic drags 
+on a slowly rising products or  drops in a rotating fluid studied by M. Ungarish [22].  
+In [20] the fundamental solution for the fractional homogenous diffusion – wave equation using joint 
+transform method was obtained. 
+In this work, only the Laplace transformation is considered as it is easily understood and being popular 
+among engineers and scientists.The basic goal of this work has been to employ the Laplace transform 
+method for studying the above mentioned problem. The goal has been achieved by formally deriving 
+exact analytical solution.The transform - method introduces a significant improvement in this field 
+over existing techniques. 
+ 
+2.1    Non – homogenous time fractional Heat equation. 
+ 
+Problem 2.1:  Solve the non-homogeneous time fractional heat equation,  
+      
+dx x g
+t
+x
+t
+c
+r t r bu
+r
+t r u
+r
+t r u
+r r
+t r u
+a t r u D
+t
+c
+) ( )
+4
+exp( ) , ( )
+) , ( ) , ( 1 ) , (
+( 2 ) , (
+0
+2
+2 2
+2
+2
+0
+
+
+    
+
+
+
+
+
+
+
+
+ 
+                                                  , 1 0  r     0, t    1 0    (2.1) 
+with the boundary conditions:  
+0
+lim ( , )
+r
+u r t
+
+ ,   , 0 ) , 1 (  t u  and the initial condition  , ) 0 , (   r u 
+, 1 0  r R   .  Let ) (x g be Laplace transformable function. 
+Solution. 
+Step1: By taking the Laplace transform with respect to variable t of relationship (2.1), we get 
+ 
+ 
+.                                                                                                                                
+     (2.2) 
+Then, by using the fact that     ) 0 , (r u  in relation (1.2.2), we obtain        
+s
+s G
+a
+c
+s
+a s a
+r
+s r U
+a
+s b
+r
+s r U
+r
+s r U
+r r
+s r U ) (
+2 2 2
+) , ( )
+2
+(
+) , ( ) , ( 1 ) . (
+2
+1
+2 2 2 2 2
+2
+  
+
+ 
+
+
+
+
+
+ 
+
+
+    
+                                                                                                                                            (2.3)  
+Moreover, we conclude from 0 ) , 1 (  t u that   
+0
+(1, ) (1, )exp( ) 0, U s u t st dt
+
+  
+
+                                                               (2.4) 
+also,  
+0
+lim ( , )
+r
+u r t
+
+  leads to                
+
+) , ( lim
+0
+s r U
+r
+  .                                     (2.5) 
+ 
+Step2: The relation(2.3) is the boundary-value problem with the conditions (2.4) and (2.5)  
+ 
+that can be re written as follows 
+ 
+(2.6) 
+                                                                                                                                                                                                                                                           
+Then we obtain its general solution as following 
+             0 ) )
+2
+( 1 )( , (
+) , ( ) , (
+2
+2 2
+2
+2
+
+
+ 
+
+
+
+
+
+r
+a
+b s
+s r U
+r
+s r U
+r
+r
+s r U
+r
+
+.                               (2.7) 
+Introducing the change of variable                          x r
+a
+b s
+
+
+2
+2
+
+                (2.8)   
+ we get                                                
+2
+1
+2 2 2 2 2 2
+( . ) 1 ( , ) 1 ( )
+( , )( ) .
+2 2 2 2
+U rs U r s b s r c G s
+U r s s
+r r r r a a s a a s
+
+
+
+
+  
+     
+
+s
+s G
+c
+s
+r
+s r bU
+r
+s r U
+r
+s r U
+r r
+s r U
+a r u s s r U s
+) (
+) , ( )
+) , ( ) , ( 1 ) . (
+( 2 ) 0 , ( ) , (
+2 2
+2
+2 1
+   
+
+
+
+
+
+ 
+                                                                             Differential Equations and Control Processes, N 4,2011  
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  198 
+                         
+x
+U
+x
+dr
+dx
+x
+U
+b s
+a
+x
+r
+U
+r
+
+
+
+
+
+
+
+
+
+
+2
+2
+                                    (2.9),  
+2 2 2
+2
+2 2 2 2
+22
+2
+()
+2
+2
+( ) .
+2
+U s b
+x U U a s b U
+a
+r r x x
+r r r s b x x
+a
+
+
+
+
+
+     
+  
+     
+      (2.10) 
+Replacing (2.8)(2.9),(2.10) in (2.7) leads to the following equation 
+ 
+                               
+                                (2.11) 
+That is the modified Bessel equation with  1   . Its general solution is 
+                                                                          
+                                              (2.12)                                                              
+Where 
+1
+I is first order, modified Bessel function of the first kind that is equal to 
+
+
+
+
+
+
+ 
+0
+1 2
+1
+1
+1
+)! 1 ( !
+)
+2
+(
+) ( ) (
+n
+n
+n n
+x
+ix J i x I                                                        (2.13) 
+and 
+1
+K is first order, modified Bessel function of the second kind that is equal to  
+              
+11
+1 1 1
+( ) ( )
+( ) ( ) ( )
+2 sin 2
+I x I x
+K x J ix iY ix
+
+
+
+
+    .                                      (2.14) 
+With 0  x then  
+1
+K .  
+Now,  ,
+2
+2
+x r
+a
+b s
+
+
+
+ so that if 0  x then 0  r and in this case whereas ) , ( s r U is bounded, 
+therefore coefficient of ) (
+1
+x K must be equal to zero which is 0
+2
+ c . 
+Then its general solution becomes  
+                      
+ 
+ 
+and the complementary solution of the equation (2.6) is equal to the sum of the solutions of the 
+following equations                                                                                  
+ 
+(2.16) 
+  
+  
+ 
+ (2.17) 
+ 
+Now, for solving non - homogenous equation (2.16), we assume that 
+1 p
+Ur   is the solution  
+to the above equation. we have  
+ 
+ 
+                   (2.18) 
+ 
+therefore, the complementary solution becomes           
+1
+.
+()
+p
+r
+U
+s b s
+
+
+
+     (2.19) 
+Similarly, in equation (2.17), we assume that   
+2 p
+U  is the complementary solution of the 
+equation.Therefore, one has  
+2
+22
+2
+(1 ) 0.
+UU
+x x x U
+xx
+
+   
+
+1 1 2 1
+( ) ( ). U cI x c K x 
+2
+11
+( / 2 ), (2.15)    U cI r s b a
+
+
+s a
+r
+a
+s b
+r
+s r U
+r
+s r U
+r r
+s r U
+2 2 2 2
+2
+2
+)
+2
+1
+)( , (
+) , ( 1 ) . (
+
+
+ 
+
+
+
+
+
+
+2
+1
+2 2 2 2 2
+( . ) 1 ( , ) 1 ( )
+( , )( ) .
+2 2 2
+U rs U r s b s c G s
+U r s s
+r r r r a a a s
+
+
+
+
+  
+     
+
+2 2 2
+1 1 1
+( ) ,
+2 2 ( )
+b s r
+r
+r r a a s s b s
+
+
+  
+
+     
+                                                                           Differential Equations and Control Processes, N 4,2011  
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  199 
+ 
+ 
+                                    (2.20) 
+ 
+ 
+       (2.21) 
+ 
+ using the relations (2.19), (2.21), the complementary solution of equation (2.6) reads 
+  ) ( 2
+) (
+) ( 2 ) (
+2 2
+2
+2 2
+1 2
+2 1
+ 
+
+
+
+s b r a s
+s G
+cr
+s b r a
+s r
+s b s
+r
+U U U
+p p p
+ 
+
+ 
+
+
+   
+
+  ,   (2.22)                                                                                                                             
+finally, the general solution to equation (2.6) becomes 
+ 
+) 2 / (
+) ( 2
+) (
+) ( 2 ) (
+) , (
+2
+1 1
+2 2
+2
+2 2
+1 2
+a s b r I c
+s b r a s
+s G cr
+s b r a
+s r
+s b s
+r
+s r U
+
+ 
+
+
+
+ 
+ 
+
+ 
+
+
+ 
+
+  (2.23)                                                                                                                                                                 
+but, since  0 ) , 1 (  s U  we get 
+ 
+                    (2.24) 
+ 
+Consequently, 
+) 2 / (
+) 2 / ( ) 2 )( (
+) ( ) ( ) 1 )( ( 2
+) , (
+2
+1
+2
+1
+2
+2
+a s b r I
+a s b I s b a s b s
+s G s s b c s s b a
+s r U
+
+  
+  
+
+
+   
+    
+           
+          
+2 1 2
+22 22
+()
+.
+( ) 2 ( ) (2 ( ))
+r r s cr G s
+s b s a r b s s a r b s
+
+ 
+
+
+  
+   
+                        (2.25)                                                                          
+Step3: Replacing 0.5   in (2.25) results in          
+                                         
+ 
+ 
+ 
+           
+) ( 2 ) (
+2 2
+2
+s b r a
+r
+s b s
+r
+ 
+
+
+
+
+ 
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+ 
+
+) 2 / ( ) 2 (
+) 2 / (
+) ( 2
+) (
+2
+1
+2
+2
+1
+2 2
+2
+a s b I s b a
+a s b r I
+s b r a
+r
+s cG
+.
+) , (
+s
+s r F
+            (2.26)  
+Now, if we replace s withs , we obtain  
+ 
+ 
+ 
+ 
+          .
+) 2 / ( ) 2 (
+) 2 / (
+) ( 2
+) (
+2
+1
+2
+2
+1
+2 2
+2
+
+
+
+
+
+
+
+
+
+
+  
+
+
+ 
+
+a b s I s b a
+a b s r I
+s b r a
+r
+s cG                    (2.27) 
+Step 4: We may rewrite ) , ( s r F as following 
+                                          (2.28) 
+ 
+where,             
+ 
+22
+1
+1
+22
+1
+2 ( )(1 ) ( / 2 )
+( , )
+( )(2 ) ( / 2 )
+a s b s I r s b a
+F r s
+s s b a b s I s b a
+    
+
+   
+   
+ 
+s
+s G
+a
+c
+s
+a a
+s b
+r
+) (
+2 2
+)
+2
+1
+(
+2
+1
+2 2 2
+  
+
+ 
+ 
+
+
+
+21
+2
+2 2 2 2 2
+( ) 1
+,
+2 ( ) 2 ( )
+p
+r s G s
+cr U
+a r b s a r b s s
+
+
+
+
+
+   
+   
+2
+1
+22
+1
+2 ( ) ( ) ( )
+.
+( )(2 ) ( / 2 )
+a b s s b s c s b s G s
+c
+s b s a b s I b s a
+   
+  
+      
+
+   
+ 
+
+
+
+
+
+   
+   
+
+) 2 / ( ) 2 )( (
+) 2 / ( ) 1 )( ( 2 1
+) , (
+2
+1
+2
+2
+1
+2
+a s b I s b a s b s
+a s b r I s s b a
+s
+s r U
+
+ 
+) ( 2 ) (
+) 2 / ( ) 2 )( (
+) 2 / ( ) 1 )( ( 2
+) , (
+2 2
+2
+2
+1
+2
+2
+1
+2
+b s r a
+r
+b s s
+r
+a b s I b s a b s s
+a b s r I s b s a
+s r F
+ 
+
+
+
+   
+   
+
+ 
+) , ( ) ( ) , ( ) ( ) , ( ) , ( ) , ( ) , (
+5 4 3 2 1
+s r F s cG s r F s cG s r F s r F s r F s r F                                                                                Differential Equations and Control Processes, N 4,2011  
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  200 
+                 
+ 
+ 
+2 2
+1
+45 22
+22
+1
+( / 2 )
+( , ) , , ( , ) ,
+2 ( )
+(2 ) ( / 2 )
+I r s b a r
+F r s F r s
+a r b s
+a b s I s b a
+
+
+
+  
+                         (2.29)           
+5 4 3 2 1
+, , , , F F F F F are not analytic in their roots of denominators, where these roots are simple poles. 
+Now, we obtain these poles as follows, 
+In ,
+1
+F  
+2
+2 , , 0 a b s b s s       are roots of denominators.  
+Further,  if ,... 3 , 2 , 1 ,  n
+n
+ are the zeros of ,... 3 , 2 , 1 , 0 ) (
+1
+  n J
+n
+  , moreover subject to (2.13),  
+the zeros of ), (
+1
+ix J ) (
+1
+x I are simple, then one has,  
+n n
+i x ix          
+ where, ,... 3 , 2 , 1 ,    n i x
+n
+ are zeros of ). (
+1
+x I  
+Now if we set,              
+n
+i
+a
+b s
+  
+
+2
+2
+          
+2
+2
+2
+n
+a
+b s
+  
+
+ . 
+Therefore ,... 3 , 2 , 1 , 2
+2 2
+    n b a s
+n n
+ are the zeros of ). 2 / (
+2
+1
+a b s I  
+It is obvious that, 
+1
+F has the poles at ,... 3 , 2 , 1 , 2 , 2 , , 0
+2 2 2
+          n b a s a b s b s s
+n n
+ . 
+Similarly, b s s    , 0 are the poles of
+2
+F and also b
+r
+a
+s   
+2
+2
+2
+ is the pole of 
+4 3
+,F F and 
+,... 3 , 2 , 1 , 2 , 2
+2 2 2
+       n b a s a b s
+n n
+ are the poles of
+5
+F . 
+ 
+Step 5: Application of Bromwich's integral and the residue theorem, leads to 
+. ) ), , ( ) (exp( Re ) , ( ) exp(
+2
+1
+) , (
+
+
+  
+ 
+ 
+k
+k
+i c
+i c
+s s s r F st s ds s r F st
+i
+t r f
+
+                            (2.30) 
+Then subject to (2.28) and the linearity property of the inversion of Laplace transform  
+ 
+and the Laplace transform of convolution of two functions, one has 
+ 
+   
+1 2 3 4 5
+( , ) ( , ) ( , ) ( , ) ( ) ( , ) ( ) ( , ) .
+tt
+f r t f r t f r t f r t c g t f r t c g t f r t                        (2.31) 
+Therefore, to obtain 5 , 4 , 3 , 2 , 1 ), , (  m t r f
+m
+ and then ) , ( t r f , it is sufficient that we evaluate the  
+residue of  5 , 4 , 3 , 2 , 1 ), , ( ) exp(  m s r F st
+m
+ at every poles of ( , ), 1,2,3,4,5
+m
+F r s m  . 
+Finally, after performing all the calculations we get,           
+ 
+ 
+ 
+ 
+ 
+          
+ 
+
+
+
+
+ 
+   
+
+1
+2 2 2
+2
+2 2 2 2 2 2
+1
+) 1 ( ) 2 )( (
+) 2 exp( ) 2 ( 1 ) (
+2
+n n n n n
+n n n n n b t
+a b J
+t a a b r J
+e
+   
+     
+))}
+2
+( exp( ) ( {
+2
+2
+2
+r
+a
+b t t g cr
+t
+    
+              
+   
+2 2 2 1 1
+2
+1
+12
+() ()
+( ) exp( ( 2 ) 2 ( )* exp( ( 2 )
+(1) ( )(1 )
+nn
+t t n
+n
+nn
+Jr Jr
+c g t t b a c g t t b a
+JJ
+
+
+
+
+
+      
+
+
+          
+(2.32) 
+ 
+ 
+2
+23 22
+( , ) , ( , ) ,
+( ) 2 ( )
+rr
+F r s F r s
+s s b a r s b
+
+
+  
+2 2
+22 11
+2
+2
+1
+1
+( / 2 ) ( ) 2
+( , ) exp( ( 2 )) exp( ( ))
+(1)
+( / 2 )
+I r b a J r ra
+f r t t b a r t b
+J b r
+bI b a
+                                                                                    Differential Equations and Control Processes, N 4,2011  
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  201 
+Step 6: Utilizing Efros's theorem, we have  
+2 22
+1
+2
+00
+1
+( / 2 ) 11
+( , ) exp( ) ( , ) exp( )
+44
+( / 2 )
+I r b a x r x
+u r t f r x dx dx
+t b t tt
+bI b a
+
+
+
+
+    
+
+
+
+
+ 
+ 
+2 2 2 2
+2 1
+2
+00 1
+() 2
+exp( )exp( ( 2 )) exp( )exp( ( ))
+44 (1)
+Jr x r x a
+x b a dx x b dx
+t t r J t t
+
+
+
+       
+
+ 
+          
+ 
+2 2 2 2
+2
+22 1
+2 2 2
+1
+2 0
+1 ( 2 )
+()
+2 exp( )exp( ( 2 ))
+( ) 4
+( 2 ) (1 )
+n n n
+n
+n
+n
+n
+n n n
+ba
+Jr x
+x b a dx
+Jt
+b a t
+  
+
+
+
+   
+
+
+
+  
+   
+
+
+
+ 
+          
+2
+22 1
+2
+1
+00 2
+()
+2 exp( ) ( )exp( ( 2 )
+4
+( )(1 )
+x
+nn
+n
+n
+nn
+Jr x
+c g x b a d dx
+t
+Jt
+
+   
+  
+
+
+
+
+
+    
+
+
+
+
+
+
+ 
+          
+ 
+
+
+
+
+
+
+
+
+
+
+
+    
+0 0
+2
+2 2 2
+))
+2
+( exp( ) ( )
+4
+exp( dx d
+r
+a
+b x g
+t
+x
+t
+cr
+x
+  
+
+ 
+          . )) 2 ( exp( ) ( )
+4
+exp(
+) 1 (
+) (
+0 0
+2
+2
+1
+1
+ 
+
+
+
+
+
+
+
+
+
+
+
+     dx d a b x g
+t
+x
+t J
+r J
+c
+x
+  
+
+           (2.33)  
+                                                                                                       
+At this point, we calculate every one of the integrals on the right hand side of (2.33). 
+First integral: By the change of variable 
+2
+x
+w
+t
+ , we obtain 
+. ) exp( 2 )
+4
+exp(
+0
+2
+0
+2
+t dw w t dx
+t
+x
+    
+ 
+ 
+                                         (2.34) 
+Second integral: By making the change of variable    
+2
+( 2 ) ,
+2
+x
+t b a w
+t
+   we get 
+2
+2 2 2 2 2
+00
+exp ( ( 2 )) exp( ( 2 ) ) exp( ( ( 2 )) )
+4
+2
+xx
+x b a dx t b a t b a dx
+t
+t
+
+       
+
+  
+. )) 2 ( ( ) ) 2 ( exp( ) exp( ) 2 )( ) 2 ( exp(
+2 2 2
+) 2 (
+2 2 2
+2
+a b t erfc a b t t dw w t a b t
+a b t
+     
+
+
+
+            (2.35)           
+Similarly, by change of variable in the third integral, we obtain 
+2
+2
+2
+()
+2
+xa
+t b v
+r t
+   
+, ))
+2
+( ( ) )
+2
+( exp( ))
+2
+(
+4
+exp(
+2
+2
+2
+2
+2
+0
+2
+2 2
+b
+r
+a
+t erfc b
+r
+a
+t t dx
+r
+a
+b x
+t
+x
+     
+
+
+          (2.36) 
+ also, by change of variable
+22
+( 2 )
+2
+n
+x
+t b a v
+t
+    in the fourth integral, we get  
+2
+2 2 2 2 2 2 2
+0
+exp( ( ( 2 ) ) exp{ ( 2 ) } ( ( 2 ))
+4
+n n n
+x
+b a x dx t t b a erfc t b a
+t
+   
+
+     
+
+ .                 (2.37) 
+ Fifth integral: By changing the order of integration followed by the change of variable xw   
+in the inner integral ,we get                                                                             Differential Equations and Control Processes, N 4,2011  
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  202 
+ 
+
+
+
+
+
+
+
+
+
+
+
+   
+0 0
+2 2
+2
+)) 2 ( exp( ) ( )
+4
+exp( dx d a b x g
+t
+x
+x
+n
+   
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+   
+0 0
+2
+2 2
+) ( )
+4
+) (
+exp( )) 2 ( exp( 
+
+  d dw w g
+t
+w
+a b
+n
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+       
+0 0
+2 2 2 2 2 2
+2
+) ))
+2
+2 (
+2
+( exp( ) )
+2
+2 ( exp( )
+4
+exp( ) ( dw d
+t
+w
+a b t
+t
+t
+w
+a b t
+t
+w
+w g
+n n
+ 
+
+                                                                                                                                                                                     
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+   
+0
+2
+2 (
+2 2 2 2 2 2
+2 2
+) exp( 2 ) ) 2 exp(( ) ( ) ) 2 ( exp( dw dv v t w a b w g a b t
+t
+w
+a b t
+n n
+n
+
+  
+
+
+
+
+
+
+
+
+    
+0
+2 2 2 2 2 2 2
+))
+2
+2 ( ( ) ) 2 exp(( ) ( ) ) 2 ( exp( dw
+t
+w
+a b t erfc w a b w g a b t t
+n n n
+                  (2.38) 
+along with the change of variable   
+                                   
+22
+( 2 )
+2
+2
+n
+w
+t b a v
+t
+t
+
+    
+. 
+Similarly, by change of variable xw   , and then        
+2
+2
+2
+()
+2 2
+aw
+t b v
+rt t
+
+    
+ in the sixth integral ,we obtain  
+22
+2
+00
+2
+exp( ) ( )exp( ( ))
+4
+x
+xa
+g x b d dx
+tr
+  
+
+
+
+    
+
+
+
+
+ 
+. ))
+2
+2
+( ( ) )
+2
+exp(( ) ( ) )
+2
+( exp(
+0
+2
+2
+2
+2
+2
+2
+2
+
+
+
+
+
+
+
+
+     dw
+t
+w
+r
+a
+b t erfc w
+r
+a
+b w g
+r
+a
+b t t                    (2.39)                                                                                                                                                      
+ In the last integral, by the same procedure and using the change of variablexw   , we get  
+                   
+2
+( 2 )
+2 2
+w
+t b a v
+t t
+
+    , 
+so that  
+2
+2
+00
+2 2 2 2
+0
+exp( ) ( )exp( ( 2 ))
+4
+exp( ( 2 ) ) ( )exp(( 2 ) ) ( ( 2 ))
+2
+x
+x
+g x b a d dx
+t
+w
+t t b a g w b a w erfc t b a dw
+t
+  
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+
+.                                                                                                                                         
+                                                                                                                              (2.40) 
+ 
+Finally, substitution of (2.34),(2.35),(2.36),(2.37),(2.38),(2.39),(2.40)in (2.33),leads to the following 
+formal solution. 
+ 
+2
+2 2 2 11
+2
+1
+1
+( / 2 ) ( )
+( , ) exp( ( 2 ) ) ( ( 2 ))
+(1)
+( / 2 )
+I r b a J r r
+u r t t b a erfc t b a
+bJ
+bI b a
+
+      
+                                                                                    ))
+2
+( ( ) )
+2
+( exp(
+2
+2
+2
+2
+2
+2
+r
+a
+b t erfc
+r
+a
+b t r                                                                                Differential Equations and Control Processes, N 4,2011  
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  203 
+          
+ 
+
+
+
+ 
+ 
+  
+
+1
+2 2 2 2 2
+2 2 2
+2
+2 2 2 2
+1
+)) 2 ( ( ) ) 2 ( exp(
+) 1 ( ) 2 )( (
+) 2 ( 1 ) (
+2
+n
+n n
+n n n n
+n n n n
+a b t erfc a b t
+a b J
+a b r J
+ 
+   
+   
+ 
+          
+
+
+    
+0
+2
+2
+2
+2
+2
+2
+2
+2
+))
+2
+2
+( ( ))
+2
+( exp( ) ( ) )
+2
+( exp( du
+t
+u
+r
+a
+b t erfc
+r
+a
+b u u g
+r
+a
+b t cr 
+         
+
+
+    
+0
+2 2 2 2
+1
+1
+))
+2
+2 ( ( )) 2 ( exp( ) ( ) ) 2 ( exp(
+) 1 (
+) (
+du
+t
+u
+a b t erfc a b u u g a b t
+J
+r J
+c                        
+2 2 2 2 2 2 2 1
+2
+1
+2 0
+()
+2 exp( ( 2 ) ) ( )exp(( 2 ) ) ( ( 2 ))
+( )(1 ) 2
+nn
+n n n
+n
+nn
+Jr u
+c t b a g u b a u erfc t b a du
+Jt
+
+  
+
+
+
+
+    
+
+
+
+ 
+ 
+                                                                                                   (2.41)  
+ 
+3.      CONCLUSION 
+ 
+The paper is devoted to study and application of Laplace transform. The integral transform provides 
+powerful method for analyzing linear systems. The main purpose of this work is to develop a method 
+for finding formal solution of certain singular integral equation and analytic solution of the time 
+fractional heat equation which is a generalization to the problem of spin up effects on the geo strophic 
+and quasi -geostropic drags on a slowly rising products or drops in a rotating fluid.  
+We hope that it will also benefit many researchers in the disciplines of applied mathematics,  
+mathematical physics and engineering. 
+ 
+ 
+ 
+4.     Acknowledgement 
+ 
+The authors would like to thank Professor Nataly B.Amplyova  and Professor  V. A. Kostin – 
+for their valuable comments and suggestions that lead to a vast improvement in the paper. 
+ 
+ 
+ 
+References 
+[1] A.Aghili , B.Salkhordeh Moghaddam.  Laplace transform pairs of n- dimensions and a wave equation. 
+Intern. Math. Journal, Vol. 5, 2004, no. 4,377-382. 
+[2] A.Aghili , B.Salkhordeh Moghaddam. Multi-dimensional Laplace transform and systems of partial 
+differential equations. Intern. Math. Journal, Vol. 1, 2006, no. 21-24. 6 
+[3] A.Aghili , B.Salkhordeh Moghaddam. Laplace transform pairs of n-dimensions and second order linear 
+differential equations with constant coefficients, Annales Mathematicae et informaticae,35(2008) pp.3-10. 
+[4] T.M. Atanackovic , B.Stankovic . Dynamics of a visco -elastic rod of Fractional  derivative type, Z. Angew. 
+Math. Mech., 82(6), (2002) 377-386. 
+[5] T.M. Atanackovic , B.Stankovic. On a system of differential equations with fractional derivatives arising in 
+rod theory. Journal of Physics A: Mathematical and General, 37, No 4, 1241-1250 (2004). 
+[6] D.G.Duffy. Transform methods for solving partial differential equations. Chapman & Hall/CRC, 2004. 
+[7 ] R.S.Dahiya . M . Vinayagamoorthy.  Laplace transfom pairs of n – dimensions and  heat  conduction 
+problem. Math. Comput. Modelling vol. 13.No. 10 , pp,35-50 
+[8] V.A. Ditkin. A.P.Prudnikov. Operational calculus In two variables and its application ,Pergamon Press, New 
+York,1962. 
+[9] A.A.Kilbass ,J.J. Trujillo. Differential equation of fractional order: methods, results and problems. II, Appl. 
+Anal, 81(2), (2002) 435-493.                                                                            Differential Equations and Control Processes, N 4,2011  
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  204 
+[10] Y.  Luchko , H. Srivastava. The exact solution of certain differential equations of fractional Order by using 
+operational calculus.  Comput. Math. Appl. 29 (1995) 73 – 85 
+[11] S.Miller , B.Ross . An introduction to fractional differential equations, Wiley, NewYork. 
+[12] K.B.Oldham, J. Spanier . The Fractional calculus, Academic Press, NewYork, 1974. 
+[13] K.B.Oldham, J. Spanier. Fractional calculus and its applications, Bull.Inst. Politehn. Iasi. Sect. I, 24 (28)(3-
+4), (1978) 29-34. 
+[14 ] I. Podlubny. The Laplace transform method for linear differential equations of fractional order, Slovak 
+Academy of sciences. Slovak Republic,  1994. 
+[15] I. Podlubny. Fractional differential equations, Academic Press, San Diego, CA,1999. 
+[16 ] G.E.Roberts, H. Kaufman.Table of Laplace transforms, Philadelphia; W.B.Saunders Co. 1966. 
+[17] G. Samko , A.Kilbas. O.Marchiev. Fractional Integrals and derivatives theory and  applications. Gordon 
+and Breach,Amesterdam,1993. 
+[18] W. Schneider, w. Wyss. Fractional diffusion and wave equations. J. Math. Phys.30 
+(1989)134-144. 
+[19] B.A.Stankovic. System of partial differential equations with fractional derivatives, 
+Math. Vesnik, 3-4(54), (2002) 187-194. 
+[ 20 ]V.V.Uchaikin.Methods of fundamental derivative.Artishock, Ulyanovsky, Russia,2008 
+[ 21 ]V.V.Uchaikin. Subdiffusion and stable laws. Journal of experimental and theoretical physics,88 
+(1999),P.1155. 
+[22] M.Ungarish. Some spin – up effects on the geo strophic and quasi geostropic drags on a slowly rising 
+products or drops in a rotating fluid. Phys.Fluids.Ser, A,  9. 325 -336. 1997. 
+[23]W. Wyss. The fractional diffusion equation, J. Math. Phys., 27(11), (1986) 2782-2785. 
+ 

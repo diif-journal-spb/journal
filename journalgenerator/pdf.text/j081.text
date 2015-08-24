@@ -1,0 +1,1194 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 4, 2001
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Group analysis of differential equations
+FACTORIZATION
+OF FUNCTIONAL DIFFERENTIAL EQUATIONS
+L.V.LINCHUK
+Russian State Pedagogical University
+St.-Petersburg, Russia
+E-mail: lidiya@p110.f289.n5030.z2.ﬁdonet.org
+Abstract.
+In the paper we consider applications of the theory of formal operators and
+theprincipleoffactotizationtofuncionaldifferentialequations. Someexamples
+of second and ﬁrst order functional differential equations is constructed. These
+equtions are reduced to a more simple equations. Thus we simplify integration
+of some classes of functional differential equations.
+Let’s consider the class of ordinary functional differential equations
+y
+(n)
+= F
+ 
+x,y(x),y
+ 
+ϕ(x)
+ 
+,y
+0
+(x),y
+0
+ 
+ϕ(x)
+ 
+, ... ,
+y
+(n−1)
+(x),y
+(n−1)
+ 
+ϕ(x)
+ 
+,y
+(n)
+ 
+ϕ(x)
+ 
+ 
+= 0, (1)
+n ∈N. In the literature devoted to research of this equations some subclasses
+of class (1) is also refferred to as differential-delay equations, equations with
+delay, difference-differential equations.Differential Equations and Control Processes, N 4, 2001
+Functionaldifferentialequations(FDEs)havealreadybeenfoundinmathe-
+matical papers of XVIII century, for example, in the Euler solution of the prob-
+lem connected with a search of the general view of a line similar to its evilute.
+However until 1940 the number of papers devoted to these equations was not
+too large. Let’s specify, that up to 1940s the main theorems of FDEs theory
+have been not formulated and the initial problem has been not set up [20]. In
+themiddleofthe20thcenturytheriseofnumerousapplicationshasregenerated
+interest in FDEs theory.
+It is well known [2,5,18] that FDEs arise in the theory of automatic regu-
+lations, in the oscillations theory, at the investigation of processes in reactive
+motors, at the solution of problems of theoretical physics, in some tasks of
+economy and in different branches of biology [36,37]. Therefore problem of
+search of FDEs precise solutions in closed analytical form is actual enough.
+Although process of their solutions connected with numerous diﬃculties which
+are explained by extreme complexity manifolds deﬁned by FDEs.
+The fullest review of methods of search of FDEs precise solutions is repre-
+sentedinmonographiesof E.Pinney[35], L.E.Elsgolts[4]andalso inthepapers
+of other authors [1,3,6,7,10,19].
+Notice that methods based on continuous symmetries of manifolds and of-
+fered at the end of XIX century by S.Lie [8,9,11,12,21,22] were little use for
+research of FDEs. Some attempts of application of group analysis it is pos-
+sible to ﬁnd in paper of V.R.Petukhov [25–34]. It is appeared that the main
+diﬃculty for extending classical results of S.Lie to FDEs class is ambiguity of
+treatment of a prolongation of inﬁnitesimal operator to the variables such as
+ϕ(x), y(ϕ(x)) and their derivatives. Therefore all offered approaches have not
+received practical extending and have not made an uniﬁed informative theory.
+Recentlytheinteresttogroupmethodshasincreasedagain. Howeverunde-
+termined differential equations became the main object of research. For exam-
+ple, undetermined differential equations describe control processes At the same
+time such equations with ﬁxed functional relation between unknowns functions
+are functional differential equations [14,16,38].
+In this paper we give results of the research of FDEs symmetries properties
+based on classical group approach and the theory of formal operators for gener-
+alized differential equations [13]. This approach allows to extend the universal
+principle of a factorization to FDEs and increase considerably the number of
+equations of this class integrated in closed form or accepting a simpliﬁcation
+of its structures (for example, lowing of order) as factor system is a system of
+Electronic Journal.  16Differential Equations and Control Processes, N 4, 2001
+embedded in each other equations and one of these equations is solved inde-
+pendently of others.
+By generalized differential equation is meant an undetermined differential
+equations with additional functional or functional-differential relation between
+unknown functions (thus we include into the consideration class (1)). Then the
+generalized differential equation appropriate FDE (1) looks like
+y
+(n)
+= F(x,y(x),w(x),y
+0
+(x),w
+0
+(x), ... ,y
+(n−1)
+(x),w
+(n−1)
+(x),w
+(n)
+(x)), (2)
+where w(x) = y
+ 
+ϕ(x)
+ 
+is an additional functional relation between y and w.
+Note that when we use group methods this relation is taken into consideration
+only after research symmetries of equation (2). Such treatment of FDE allows
+to solve easy some problems that arise in extending of group analysis to FDEs
+class. In particular, it is becomes evidently how to construct a prolongation of
+an operator to differential variables w,w
+0
+,....
+Consider formal operators of the form
+X = Φ(x,y,w,y
+0
+,w
+0
+, ...)
+∂
+∂y
++Ψ(x,y,w,y
+0
+,w
+0
+, ...)
+∂
+∂w
+, (3)
+wherefunctions Φ and Ψ arecoordinatesoftheoperatoranddependgenerally
+onanyorderderivatives. Theclassofoperators(2), forexample, includesoper-
+ators descriptive of classical point symmetries (i.e. point operators in canonical
+form) and operators with coordinates contained nonlocal variables, for exam-
+ple,
+R
+ζdx (here by integral is meant total integral), in particular, we consider
+exponential nonlocal operators. As we proved in [13] the universal principle of
+a factorization for generalized differential equations can be formulated as the
+following two theorems.
+Theorem 1. Let a generalized differential equation (2) admits a formal
+operator (3) with one lowest invariant of the kth order (k6 n)
+z = H
+ 
+x,y,w, ... ,y
+(k)
+,w
+(k)
+ 
+∈
+¯
+J
+k
+ 
+ 
+[y
+(n)
+=F]
+.
+1) If
+D
+n−k
+x
+(z)
+ 
+ 
+[y
+(n)
+=F]
+∈
+¯
+J
+n−1
+ 
+ 
+[y
+(n)
+=F]
+then equation (1) factorized up to the system of two equations
+(
+z = H
+ 
+x,y,w, ... ,y
+(k)
+,w
+(k)
+ 
+,
+z
+(n−k)
+= G
+ 
+x,z, ... ,z
+(n−k−1)
+ 
+.
+(4)
+Electronic Journal.  17Differential Equations and Control Processes, N 4, 2001
+2) If
+D
+n−k
+x
+(z)
+ 
+ 
+[y
+(n)
+=F]
+∈
+¯
+J
+n
+ 
+ 
+[y
+(n)
+=F]
+\
+¯
+J
+n−1
+ 
+ 
+[y
+(n)
+=F]
+and exists a mapping
+z
+∗
+= H
+∗
+ 
+x,y,w, ... ,y
+(n)
+,w
+(n)
+ 
+such as z
+∗
+∈ J
+n
+ 
+ 
+[y
+(n)
+=F]
+\J
+n−1
+ 
+ 
+[y
+(n)
+=F]
+and x,z
+(0)
+, ... ,z
+(n−k)
+,z
+∗
+are func-
+tionallyindependentthenequation(1)factorizeduptothesystemofthree
+equation
+
+
+
+
+
+z = H
+ 
+x,y,w, ... ,y
+(k)
+,w
+(k)
+ 
+,
+z
+∗
+= H
+∗
+ 
+x,y,w, ... ,y
+(n)
+,w
+(n)
+ 
+,
+z
+∗
+= G
+ 
+x,z, ... ,z
+(n−k)
+ 
+.
+(5)
+Theorem 2. Let a generalized differential equation (2) admits a formal
+operator (3) with two lowest invariants of the k
+i
+th order (k
+i
+6 n)
+z
+i
+= H
+i
+ 
+x,y,w, ... ,y
+(k
+i
+)
+,w
+(k
+i
+)
+ 
+∈
+¯
+J
+k
+i
+ 
+ 
+[y
+(n)
+=F]
+, i = 1,2.
+1) If
+D
+n−k
+1
+x
+(z
+1
+)
+ 
+ 
+[y
+(n)
+=F]
+∈
+¯
+J
+n−1
+ 
+ 
+[y
+(n)
+=F]
+then equation (1) factorized up to the system
+
+
+
+
+
+
+
+z
+1
+= H
+1
+ 
+x,y,w, ... ,y
+(k
+1
+)
+,w
+(k
+1
+)
+ 
+,
+z
+2
+= H
+2
+ 
+x,y,w, ... ,y
+(k
+2
+)
+,w
+(k
+2
+)
+ 
+,
+z
+(n−k
+1
+)
+1
+= G
+ 
+x,z
+1
+, ... ,z
+(n−k
+1
+−1)
+1
+,z
+2
+, ... ,z
+(n−k
+2
+−1)
+2
+ 
+(6)
+for k
+2
+< n,
+(
+z
+1
+= H
+1
+ 
+x,y,w, ... ,y
+(k
+1
+)
+,w
+(k
+1
+)
+ 
+,
+z
+(n−k
+1
+)
+1
+= G
+ 
+x,z
+1
+, ... ,z
+(n−k
+1
+−1)
+1
+ 
+(7)
+for k
+2
+= n.
+2) If
+D
+n−k
+1
+x
+(z
+1
+)
+ 
+ 
+[y
+(n)
+=F]
+,D
+n−k
+2
+x
+(z
+2
+)
+ 
+ 
+[y
+(n)
+=F]
+∈
+¯
+J
+n
+ 
+ 
+[y
+(n)
+=F]
+\
+¯
+J
+n−1
+ 
+ 
+[y
+(n)
+=F]
+then equayion (1) factorized up to the system
+
+
+
+
+
+
+
+z
+1
+= H
+1
+ 
+x,y,w, ... ,y
+(k
+1
+)
+,w
+(k
+1
+)
+ 
+,
+z
+2
+= H
+2
+ 
+x,y,w, ... ,y
+(k
+2
+)
+,w
+(k
+2
+)
+ 
+,
+z
+(n−k
+1
+)
+1
+= G
+ 
+x,z
+1
+, ... ,z
+(n−k
+1
+−1)
+1
+,z
+2
+, ... ,z
+(n−k
+2
+)
+2
+ 
+.
+(8)
+Electronic Journal.  18Differential Equations and Control Processes, N 4, 2001
+Having constructed a generalized differential equation (2) corresponding
+the FDE (1) we can use Theorem 1 and Theorem 2. Then if we factorize FDE,
+i.e. the corresponding generalized differential equation up to the system with
+external ordinary differential equation (see (4), (7)), then we shall simplify
+an input equation, as if we solve the external equation then we shall lower
+the orde of FDE. It may appear that reducing of the generalized differential
+equation to a generalized differential with more simple structure (see (6), (8),
+(5)) is not effective for simpliﬁcation of integration and researches of the FDE.
+In this case it is necessary to use the additional condition w(x) = y
+ 
+ϕ(x)
+ 
+.
+If dependent variables of the external equation of the factor system inherit
+functional relation which exists between variables y and w then the external
+equation is a functional differential equation. This equation as the equation
+written in invariants of an admissible operator has more simple structure (as a
+rule the simpliﬁcation is a lowering order of the equation). Then knowing its
+solution we lower the order of the FDE.
+Note that we can try to apply group methods to the equation obtained
+from an initial one by factorization and reduce the process of integration and
+research of FDE to a sequence of more simple subtasks.
+Let’s show realization of the formulated group approach for search of sym-
+metries of FDE on several examples.
+Example 1. The functional differential equation
+y
+0
+= (αy+βw+γ)w
+0
++
+α
+0
+α
+(αy+βw)w+
++
+α
+0
+(2β +αγ)+α(β−β
+0
+)
+α
+2
+w+y+
++
+α
+0
+(2β +αγ)+α
+2
+(γ−γ
+0
+)+α(β−β
+0
+)
+α
+2
+where w = y(x−τ), τ ∈R, τ > 0, α = α(x), β = β(x), γ = γ(x) factorize
+up to the system
+
+
+
+z =
+α(αy+βw+γ)+β
+α
+2
+e
+−αw
+,
+z
+0
+= z
+by point symmetries. Solving the external equation of the factor system we
+lower the order of the equation and receive the functional equation
+y(x) =−
+αβy(x−τ)+β +αγ
+α
+2
++Ce
+αy(x−τ)+x
+Electronic Journal.  19Differential Equations and Control Processes, N 4, 2001
+where C ∈R. The last equation we can solve, for example, by “step method”
+[4].  
+Example 2. Consider the second order functional differential equation
+with arbitrary functional deviation h = h(x)
+y
+00
+= (h
+0
+)
+2
+y
+h
+y
+00
+h
++(h
+0
+)
+2
+[1+f(x)y
+2
+h
+](y
+0
+h
+)
+2
+−f(x)(y
+0
+−2h
+0
+y
+h
+y
+0
+h
+)y
+0
++h
+00
+y
+h
+y
+0
+h
+,
+y = y(x), y
+0
+= y
+0
+(x), y
+00
+= y
+00
+(x), y
+h
+= y(h), y
+0
+h
+= y
+0
+(x)|
+x=h
+, y
+00
+h
+= y
+00
+(x)|
+x=h
+,
+f(x)6≡ 0. The corresponding generalized differential equation has the form
+y
+00
+= ww
+00
++[1+f(x)w
+2
+](w
+0
+)
+2
+−f(x)(y
+0
+−2ww
+0
+)y
+0
+where y = y(x), w = w(x) and w(x) = y(h(x)). This equation admits the
+point operator
+X = w∂
+y
++∂
+w
+.
+Consequently, it factorized by the universal invariant up to the system
+
+
+
+
+
+z = 2y−w
+2
+,
+z
+00
+=
+1
+2
+f(x)(z
+0
+)
+2
+.
+The general solution of the external equation is
+z =−2
+Z
+dx
+R
+f(x)dx−C
+1
++C
+2
+,
+C
+1
+,C
+2
+∈ R. Therefore we can lower the order of the functional differential
+equation and write it as the functional equation
+y =
+1
+2
+y
+2
+h
+−
+Z
+dx
+R
+f(x)dx−C
+1
++C
+2
+ 
+Example 3. Research of symmetries of the second order functional differ-
+ential equation
+y
+00
+(x)+ay(−x)y
+0
+(x)−[ay(x)−c]y
+0
+(−x)+acy(x)y(−x)+b = 0
+where a,b ∈ R, c 6= 0 by searching an admissible point operator for corre-
+sponding generalized differential equation
+y
+00
++awy
+0
++(ay−c)w
+0
++acyw+b = 0
+Electronic Journal.  20Differential Equations and Control Processes, N 4, 2001
+does not lead to any signiﬁcant result. Generally the equation admits the
+exponential nonlocal operator
+X = exp
+ 
+a
+Z
+(y−w)dx
+ 
+∂
+y
+−exp
+ 
+a
+Z
+(y−w)dx
+ 
+∂
+w
+.
+Its invariants u and v allow to factorize the equation up to the system
+
+
+
+
+
+u = y
+0
++ayw+bc
+−1
+,
+v =−w
+0
++ayw+bc
+−1
+,
+u
+0
++cv = 0.
+or
+(
+u(x) = y
+0
+(x)+ay(x)w(x)+bc
+−1
+,
+u
+0
+(x)+cu(−x) = 0.
+The solution of external functional differential equation is
+u = C[sin(cx)−cos(cx)]
+C ∈R. Thus the problem of search of a solution of the input functional differ-
+ential equation is reduced to an integration of ﬁrst order functional differential
+equation
+y
+0
+(x)+ay(x)y(−x)+bc
+−1
+= C[sin(cx)−cos(cx)].
+For integration of the resulting equation it may be use the group approach or
+Sharkovsky method [17,23,24].  
+Recall that that we can not always search an admissible operator in the
+general form
+X = Φ(x,y,w,y
+0
+,w
+0
+, ...)
+∂
+∂y
++Ψ(x,y,w,y
+0
+,w
+0
+, ...)
+∂
+∂w
+,
+Φ,Ψ: Z
+k
+−→R (k ∈ {0}∪N∪{∞}), therefore we need consider a subclass
+of operators. But it is not necessary to be restricted to the class of point or
+exponential nonlocal operators. In the following example factor system was
+constructed by a formal operator with coordinate that is linear on nonlocal
+variable.
+Example 4. Research of symmetries of the second order functional differ-
+ential equation
+yy
+00
++(h
+0
+)
+2
+y
+00
+h
++(y
+0
+)
+2
++(h
+0
+y
+0
+h
+)
+2
++h
+0
+(yy
+0
++y
+h
+)y
+0
+h
++h
+00
+y
+0
+h
+= 0,
+Electronic Journal.  21Differential Equations and Control Processes, N 4, 2001
+y = y(x), y
+0
+= y
+0
+(x), y
+00
+= y
+00
+(x), y
+h
+= y(h), y
+0
+h
+= y
+0
+(x)|
+x=h
+, y
+00
+h
+= y
+00
+(x)|
+x=h
+,
+h = h(x) and apply group approach to the corresponding generalized differen-
+tial equation
+yy
+00
++w
+00
++(y
+0
+)
+2
++(w
+0
+)
+2
++(yy
+0
++w)w
+0
+= 0,
+where y = y(x), w = w(x) and w(x) = y(h(x)). Let search an admissible
+operator in the class of nonlocal operators
+X = ζ
+ Z
+ 
+ξ
+2
+(y
+0
+)
+2
++ξ
+1
+y
+0
++ξ
+0
+ 
+dx
+ 
+∂
+∂y
++η
+∂
+∂w
+,
+where η = η(x,y,w), ζ = ζ(x,y,w), ξ
+j
+= ξ
+j
+(x,y,w,w
+0
+) (j = 1,2,3). By using
+well-known algorithm of search of an admissible operator [13] we ﬁnd one of
+admissible operators
+X =
+∂
+∂w
+−y
+−1
+ Z
+ 
+yy
+0
++w
+0
++w−C
+2
+e
+−w
+ 
+dx
+ 
+∂
+∂y
+.
+This operator has two lowest invariants and consequently the generalized dif-
+ferential equation can be factorized up to the system (see Theorem 2):
+
+
+
+
+
+z
+1
+= w
+0
+,
+z
+2
+= e
+w
+(yy
+0
++w
+0
++w−1)−C
+2
+w,
+z
+0
+2
++C
+2
+z
+1
+= 0.
+By integration of the external equation we ﬁnd the ﬁrst integral of the general-
+ized differential equation:
+e
+w
+(yy
+0
++w
+0
++w−1) = C,
+where C ∈R and hence the input functional differential equation:
+e
+y
+h
+(yy
+0
++h
+0
+y
+0
+h
++y
+h
+−1) = C  
+Insummaryitmaybesaidthatconsideredsymmetriesapproachtoresearch
+andintegrationoffunctionaldifferentialequationsisuniversalasrepresentation
+offunctionaldifferentialequationintheformofgeneralizeddifferentialequation
+allowstoconsiderequationswitharbitrarydeviation. Inparticular,itispossible
+to consider a case of dependence on unknown functions and its derivatives. At
+the same time it is evidently that in solving of concrete problems it is necessary
+to use the most of all possible approaches as the group approach does not
+overlap results of application of other methods.
+Electronic Journal.  22Differential Equations and Control Processes, N 4, 2001
+References
+[1] Azbelev N.V. The Perm seminar and development of the theory of func-
+tional differential equations// functional differential equations – Perm,
+1985. – P. 3-12. (in russian)
+[2] Bellman R. Processes of regulation with adapting. – M.: “Nauka”, 1964. –
+360 p. (in russian)
+[3] Bellman R., Kuk K. Differential-difference equations. – M., 1967. (in rus-
+sian)
+[4] Elsgolts L.E. Introduction into the theory of differential-delay equations. -
+M.: “Nauka”, 1964. – 128 p. (in russian)
+[5] Elsgolts L.E. Main directions of development of the theory of differential-
+delay equations // Proceedings of seminar on theory of differential-delay
+equations, v.1, – M., 1962. – P. 3-20. (in russian)
+[6] Elsgolts L.E., Norkin S.B. Introduction to the theory of differential
+differential-delay equations. – M., 1971. (in russian)
+[7] Heil J. Theory of functional differential equations. - M., 1984. (in russian)
+[8] Ibragimov N.Kh. Ggroup analysis of ordinary differential equations and
+principle of invariancy in mathematical physics // Successes of mathemat-
+ical sciences, v. 47, 4(286), 1992. – P. 84-144. (in russian)
+[9] Ibragimov N.Kh. Transformation groups in mathematical physics. – M.:
+“Nauka”, 1983. – 280 p. (in russian)
+[10] Kirjanen A.I. Stability of systems with aftereffect and their applications. –
+Spb.: SpbSU, 1994. – 240 p. (in russian)
+[11] Lie S. Vorlesungen ¨ uber Differentialgleichungen mit bekannten in-
+ﬁnitesimalen Transformationen / Bearbeitet und herausgegben von Dr.
+G.Scheffers. – Leipzig: B.G.Teubner, 1981.
+[12] Lie S. Gesammelte Abhandlungen. – Leipzig: B.G.Teubner – Oslo:
+H.Aschehoug & Co.: Bd.1. – 1934; Bd.2 (Teil 1). – 1935; Bd.2 (Teil 2).
+– 1937; Bd.3 – 1922; Bd.4 – 1929; Bd.5 – 1924; Bd.6 – 1927.
+[13] Linhcuk L.V. Formal operators admitted by generalized differential equa-
+tions and principle of factorization // The electronic journal “Differen-
+tial equations and control processes” – Ø1, 2001. – P. 71-115. ( http: //
+www.neva.ru/journal) (in russian)
+[14] Linchuk L.V. On group analysis of functional differential equations // Pro-
+ceedings of the International Conference MOGRAN 2000 “Modern group
+analysis fo the new millennium”. – Ufa: USATU, 2001. - pp. 111-115.
+Electronic Journal.  23Differential Equations and Control Processes, N 4, 2001
+[15] Linchuk L.V. On invariants of formal operators // Proceedings of III Inter-
+national Conference “Tools for mathematical modelling”. – Spb: SpbSTU,
+2001. – pp.43-48.
+[16] Linchuk L.V. Symmetry analysis of functional-differentional equations //
+ProceedingsofIIIInternationalConference“Differentialequationsandap-
+plications”. – Spb: SpbSTU, 2000. – pp.93-99.
+[17] Majstrenko Yu.L., Sharkovsky A.N. On lowering of a number of transfor-
+mations in functional and functional differential equations. // Qualitative
+methodsoftheoryofdifferential-delayequations.–Kiev: Instituteofmath-
+ematics AS USSR, 1977. – P. 57-70. (in russian)
+[18] MitropolskyYyu.A., MartynukD.I.Periodicandquasiperiodicoscillations
+of systems with delay. – Kiev: “Vischa shkola”, 1979. – 248 p. (in russian)
+[19] Myshkis A.D. Linear differential equations with lagging argument. – M.,
+1972. – 352 p. (in russian)
+[20] Norkin S.B. Second order differential equations with lagging argument. –
+M.: “Nauka”, 1965. – 356 p. (in russian)
+[21] Ovsjannikov L.V. Group analysis of differential equations. - M.: “Nauka”,
+1978. – 400 p. (in russian)
+[22] Olver P. Applications of Lie groups to differential equations. – M.: “Mir”,
+1989. (in russian)
+[23] Peljukh G.P., Sharkovsky A.N. Introduction into the theory of functional
+equations. – Kiev: “Naukova dumka”, 1974. – 119 p. (in russian)
+[24] PeljukhG.P.,SharkovskyA.N.Onlineardifferenceequationswithperiodic
+coeﬃcients // Qualitative methods of the theory of differential differential-
+delay equations. – Kiev: Institute of mathematics AS USSR, 1977. - P.
+91-100. (in russian)
+[25] Petukhov V.R. Geometrical discret group analysis of functional and differ-
+ential equations. Preprint Ø39. – M: ITEP, 1980. – 12 p. (in russian)
+[26] Petukhov V.R. Group analysis of dynamical systems. Some problems.
+Preprint Ø94. – M: ITEP, 1983. – 24 p. (in russian)
+[27] PetukhovV.R.GroupanalysisofdynamicsystemswithBytransformation
+of invariant groups. Preprint Ø34. – M: ITEP, 1984. - 12 p. (in russian)
+[28] Petukhov V.R. Group analysis of differential equations with lagging argu-
+ment. Preprint Ø155. – M: ITEP, 1983. - 16 p. (in russian)
+[29] Petukhov V.R. Dynamical systems and invariant multiparameter groups.
+Applicationtothetheoryofphysicalstructures.PreprintØ172.–M:ITEP,
+1984. - 20 p. (in russian)
+Electronic Journal.  24Differential Equations and Control Processes, N 4, 2001
+[30] Petukhov V.R. Some analytical results of group analysis of dynamical sys-
+tems. Preprint Ø68. – M: ITEP, 1984. – 16 p. (in russian)
+[31] Petukhov V.R. On cases of integrability of some differential-functional
+equations // Proceedings of seminar on theory of differential-delay equa-
+tions, v.3. - M., 1965. – P. 133-145. (in russian)
+[32] PetukhovV.R.Extensionoftransformationgroupswithlaggingargument.
+Preprint Ø99. – M: ITEP, 1985. - 8 p. (in russian)
+[33] Petukhov V.R. Group-theoretic analysis of functional equations and its
+applications. Preprint Ø26. – M: ITEP, 1979. – 10 p. (in russian)
+[34] Petukhov V.R. Functional equations and dynamical systems. Preprint
+Ø102. – M: ITEP, 1979. – 6 p. (in russian)
+[35] Pinney E. Ordinary difference-differential equations. – University of Cali-
+fornia Press, Berkeley and Los Angelos, 1958.
+[36] Svirezhev Yu.M., Logofet D.O. Stability of biological communities. – M.,
+1978. (in russian)
+[37] Volterra V. The mathematical theory of struggle for existence. – M., 1976.
+(in russian)
+[38] Zaitsev V.F., Linchuk L.V. On algorithm of group analysis of general-
+ized differential equations // Abstracts of the II International Conference
+“Computeralgebra infundamentalandappliedresearchesandeducation”.
+– Minsk: BSU, 1999. – P. 51. (in russian)
+Electronic Journal.  25

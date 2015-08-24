@@ -1,0 +1,1072 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 4, 2008
+Electronic Journal,
+reg. N P2375 at 07.03.97
+ISSN 1817-2172
+
+http://www.math.spbu.ru/diffjournal/
+e-mail: jodiff@mail.ru
+Weak solutions of a fractional-order nonlocal boundary
+value problem in reexive Banach spaces
+El-Sayed A. M. A. & Abd El-Salam Sh. A.
+E-mail addresses: amasayed@hotmail.com & shrnahmed@yahoo.com
+Faculty of Science, Alexandria University, Alexandria, Egypt
+Abstract In this work, we establish an existence result (based on O'Regan
+ xed point theorem) for a nonlinear fractional-order nonlocal boundary value
+problem.
+Keywords: Fractional calculus; Nonlocal boundary value problem.
+1 Preliminaries and Introduction
+LetL
+1
+(I) be the space of Lebesgue integrable functions on the intervalI = [0; 1].
+Unless otherwise stated, E is a reexive Banach space with normjj:jj and dual
+E
+ 
+. We will denote byE
+w
+the spaceE endowed with the weak topology (E;E
+ 
+)
+and denote by C[I;E] the Banach space of strongly continuous functions u :
+I!E with sup-normjj:jj
+0
+.
+We recall that the fractional integral operator of order   > 0 with left-hand
+point a is de ned by (see [4], [9], [10] and [15])
+I
+ 
+a
+u(t) =
+Z
+t
+a
+(t   s)
+    1
+ ( )
+u(s) ds:
+We recall the following de nitions. LetE be a Banach space and letu :I!E.
+ThenDifferential Equations and Control Processes, N 4, 2008
+(1) u(:) is said to be weakly continuous (measurable) at t
+0
+2 I if for every
+'2E
+ 
+we have '(u(:)) continuous (measurable) at t
+0
+.
+(2) A function h : E! E is said to be weakly sequentially continuous if h
+takes weakly convergent sequences inE to weakly convergent sequences in
+E.
+If u is weakly continuous on I, then u is strongly measurable (see [3]), hence
+weakly measurable.
+Note that in reexive Banach spaces weakly measurable functions are Pettis
+integrable (see [1], [3] and [8] for the de nition) if and only if'(u(:)) is Lebesgue
+integrable on I for every '2E
+ 
+(see [3]).
+Now, we present some auxiliary results that will be needed in this paper. Firstly,
+we state O'Regan  xed point theorem ([7]).
+Theorem 1.1 Let E be a Banach space with Q a nonempty, bounded, closed,
+convex, equicontinuous subset ofC[I;E]. SupposeT :Q!Q is weakly sequen-
+tially continuous and assume TQ(t) is weakly relatively compact in E for each
+t2I, holds. Then the operator T has a  xed point in Q.
+The following theorems can be found in [2], [16] and [5] respectively.
+Theorem 1.2 (Dominated convergence theorem for Pettis integral)
+Let u : I! E. Suppose there is a sequence (u
+n
+) of Pettis integrable functions
+from I into E such that lim
+n!1
+'(u
+n
+) = '(u) a.e. for '2 E
+ 
+. If there is a
+scalar function 2 L
+1
+(I) withjju
+n
+( )jj < ( ) a.e. for all n, then u is Pettis
+integrable and
+Z
+J
+u
+n
+(s) ds !
+Z
+J
+u(s) ds weakly 8 t 2 I:
+Theorem 1.3 A subset of a reexive Banach space is weakly compact if and
+only if it is closed in the weak topology and bounded in the norm topology.
+Theorem 1.4 Let Q be a weakly compact subset of C[I;E]. Then Q(t) is
+weakly compact subset of E for each t2I.
+Finally, we state some results which is an immediate consequence of the Hahn-
+Banach theorem.
+Theorem 1.5 LetE be a normed space withu
+0
+6= 0. then there exists a'2E
+ 
+withjj'jj = 1 and '(u
+0
+) =jju
+0
+jj.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 31Differential Equations and Control Processes, N 4, 2008
+Theorem 1.6 If u
+0
+2E is such that '(u
+0
+) = 0 for every '2E
+ 
+, then u
+0
+= 0.
+In this work we study the existence of solutions, in the Banach space C[I;E],
+of the nonlocal boundary value problem
+8
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+:
+D
+ 
+u(t) + f(t;u(t)) = 0;
+  2 (1; 2);
+t 2 (0; 1);
+I
+
+u(t)j
+t=0
+= 0;
+ 2 (0; 1];
+ff u( ) = u(1);
+0 <   < 1;
+0   ff  
+  1
+< 1:
+(1)
+Now consider the fractional-order integral equation
+u(t) =   I
+ 
+f(t;u(t)) 
+ff t
+  1
+1 ff  
+  1
+R
+ 
+0
+(  s)
+  1
+ ( )
+f(s;u(s)) ds
++
+t
+  1
+1 ff  
+  1
+R
+1
+0
+(1 s)
+  1
+ ( )
+f(s;u(s)) ds;
+ 2 (1; 2);t2 (0; 1):
+In [7] the author studied the integral equation
+y(t) = x
+0
++
+Z
+t
+0
+f(s;y(s)) ds; t 2 [0;T ]; x
+0
+2 E
+where E = (E;j:j) is a real Banach space, under the assumptions that f(t;:)
+is weakly sequentially continuous for each t 2 [0;T ] and f(:;y(:)) is Pettis
+integrable on [0;T ] for each continuous function y : [0;T ]!E andjf(t;y)j 
+h
+r
+(t) for a.e. t2 [0;T ] and all y2E withjyj r;r> 0;h
+r
+2L
+1
+[0;T ].
+Also, in [6] the author studied the Volterra-Hammerstein integral equation
+y(t) = h(t) +
+Z
+t
+0
+k(t;s) f(s;y(s)) ds; t 2 [0;T ]; T > 0;
+under the assumptions that f : [0;T ] B! B is weakly-weakly continuous
+and h : [0;T ]!B is weakly continuous, where B is a reexive Banach space.
+Here we study the existence of weak solution of the fractional-order integral
+equation (2) such that the function f : I B
+r
+! E satis es the following
+conditions:
+(1) For each t2I;f
+t
+=f(t;:) is weakly sequentially continuous.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 32Differential Equations and Control Processes, N 4, 2008
+(2) For each u2E
+r
+;f(:;u(:)) is weakly measurable on I.
+(3) for anyr> 0, the weak closure of the range off(I B
+r
+) is weakly compact
+in E (or equivalently; there exists an M
+r
+such thatjjf(t;u)jj M
+r
+for all
+(t;u)2I B
+r
+).
+De nition 1.1 by a weak solution of (2) we mean a function u2C[I;E] such
+that for all '2E
+ 
+'(u(t)) =   I
+ 
+ (f(t;u(t)))  
+ff t
+  1
+1 ff  
+  1
+Z
+ 
+0
+(  s)
+  1
+ ( )
+'(f(s;u(s))) ds
++
+t
+  1
+1 ff  
+  1
+Z
+1
+0
+(1 s)
+  1
+ ( )
+'(f(s;u(s))) ds; 2 (1; 2);t2 (0; 1):
+2 Fractional-order integrals in reexive Banach spaces
+Here, we de ne the fractional-order integral operator in reexive Banach spaces.
+De nition given below is an extension of such a notion for real-valued functions.
+De nition 2.1 Let u : I ! E be a weakly measurable function, such that
+'(u(:))2 L
+1
+(I), and let ff > 0. Then the fractional (arbitrary) order Pettis
+integral (shortly FPI) I
+ff
+u(t) is de ned by
+I
+ff
+u(t) =
+Z
+t
+0
+(t   s)
+ff   1
+ (ff)
+u(s) ds:
+In the above de nition the sign "
+R
+" denotes the Pettis integral.
+Such an integral is well de ned (see [11]):
+Lemma 2.1 Let u : I ! E be a weakly measurable function, such that
+'(u(:))2L
+1
+(I), and let ff> 0. The fractional (arbitrary) order Pettis integral
+I
+ff
+u(t) =
+Z
+t
+0
+(t   s)
+ff   1
+ (ff)
+u(s) ds
+exists for almost every t2 I as a function from I into E and '(I
+ff
+u(t)) =
+I
+ff
+'(u(t)).
+The following lemma can be found in [12]
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 33Differential Equations and Control Processes, N 4, 2008
+Lemma 2.2 Let u :I!E be weakly continuous function on [0; 1]. Then, FPI
+ofu exists for almost everyt2 [0; 1] as a weakly continuous function from [0; 1]
+to E. Moreover,
+'(I
+ff
+u(t)) = I
+ff
+'(u(t)); for all ' 2 E
+ 
+:
+De nition 2.2 Let u : I ! E. We de ne the fractional-Pseudo derivative
+(shortly FPD) of u of order ff2 (n  1;n);n2N by
+d
+ff
+dt
+ff
+u(t) = D
+n
+I
+n ff
+u(t):
+In the above de nition the sign "D" denotes the Pseudo differential operator
+(see [8]).
+The following lemma can be found in [13]
+Lemma 2.3 Let u : [0; 1]! E be weakly continuous function on [0; 1] such
+that the real-valued function I
+n ff
+'u is n-times differentiable. Then, the FPD
+of u of order ff2 (n  1;n), exists.
+De nition 2.3 A function u : I! E is called Pseudo solution of (1) if u2
+C[I;E] has FPD of order 2 (1; 2);I
+
+u(t)j
+t=0
+= 0;2 (0; 1];ffu( ) =u(1); 0<
+ < 1; 0 ff 
+  1
+< 1 and satis es
+d
+2
+dt
+2
+'(I
+2  
+u(t)) + '(f(t;u(t))) = 0; a.e. on (0; 1); for each ' 2 E
+ 
+:
+Now, for the properties of the integrals of fractional-orders in reexive spaces
+we have the following lemma [11]:
+Lemma 2.4 Let u : I ! E be weakly measurable and '(u(:))2 L
+1
+(I). If
+ff;  2 (0; 1), we have:
+(1) I
+ff
+I
+ 
+u(t) =I
+ff+ 
+u(t) for a.e. t2I.
+(2) lim
+ff!1
+I
+ff
+u(t) = I
+1
+u(t) weakly uniformly on I if only these integrals exist
+on I.
+(3) lim
+ff!0
+I
+ff
+u(t) =u(t) weakly in E for a.e. t2I.
+(4) If, for a  xed t 2 I, '(u(t)) is bounded for each ' 2 E
+ 
+, then
+lim
+t!0
+I
+ff
+u(t) = 0.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 34Differential Equations and Control Processes, N 4, 2008
+3 Main result
+In this section we present our main result by proving the existence of solutions
+of the equation (2) in C[I;E].
+Let E be a reexive Banach space. And let
+E
+r
+= fu 2 C[I;E] : jjujj
+0
+<
+M
+r
+ (1 +  )
++ rg (r > 0);
+wherejj:jj
+0
+is the sup-norm. We will consider the set
+B
+r
+= fu(t) 2 E : u 2 E
+r
+; t 2 Ig:
+Now, we are in a position to formulate and prove our main result.
+Theorem 3.1 Let the assumptions (1) - (3) are satis ed.
+If
+(ff + 1) M
+r
+(1   ff  
+  1
+)  (1 +  )
+< r
+Then equation (2) has at least one weak solution u2C[I;E].
+Proof: Let us de ne the operator T as
+Tu(t) =   I
+ 
+f(t;u(t))  
+ff t
+  1
+1 ff  
+  1
+Z
+ 
+0
+(  s)
+  1
+ ( )
+f(s;u(s)) ds
++
+t
+  1
+1 ff  
+  1
+Z
+1
+0
+(1 s)
+  1
+ ( )
+f(s;u(s)) ds;   2 (1; 2); t 2 I:
+We will solve equation (2) by  nding a  xed point of the operator T .
+We claim
+T : C[I;E] ! C[I;E]:
+To prove our claim,  rst note that assumption (2) implies that for each
+u2 C[I;E], f(:;u(:)) is weakly measurable on I. The fact that f has weakly
+compact range means that '(f(:;u(:))) is Lebesgue integrable on I for ev-
+ery ' 2 E
+ 
+and thus the operator T is well de ned. Now, we show that
+if u 2 C[I;E], then Tu 2 C[I;E]. Note that there exists r > 0 with
+jjujj
+0
+= sup
+t2I
+jju(t)jj<
+M
+r
+ (1 +  )
++r.
+Now assumption (3) implies that
+jjf(t;u(t))jj   M
+r
+for t 2 [0; 1]:
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 35Differential Equations and Control Processes, N 4, 2008
+Lett; 2 [0; 1] witht> . Without loss of generality, assumeTu(t) Tu( )6=
+0. Then there exists (a consequence of Theorem 1.5)'2E
+ 
+withjj'jj = 1 and
+jjTu(t)   Tu( )jj = '(Tu(t)   Tu( )):
+Thus
+jjTu(t)   Tu( )jj 
+  j
+R
+t
+0
+(t s)
+  1
+ ( )
+'(f(s;u(s))) ds
+ 
+R
+ 
+0
+(  s)
+  1
+ ( )
+'(f(s;u(s))) dsj
++
+ff
+1 ff  
+  1
+R
+ 
+0
+(  s)
+  1
+ ( )
+'(f(s;u(s))) dsjt
+  1
+   
+  1
+j
++
+1
+1 ff  
+  1
+R
+1
+0
+(1 s)
+  1
+ ( )
+'(f(s;u(s))) dsjt
+  1
+   
+  1
+j
+  j
+R
+ 
+0
+(t s)
+  1
+  (  s)
+  1
+ ( )
+'(f(s;u(s))) dsj
++ j
+R
+t
+ 
+(t s)
+  1
+ ( )
+'(f(s;u(s))) dsj
++
+ff M
+r
+1 ff  
+  1
+R
+ 
+0
+(  s)
+  1
+ ( )
+dsjt
+  1
+  
+  1
+j
++
+M
+r
+1 ff  
+  1
+R
+1
+0
+(1 s)
+  1
+ ( )
+dsjt
+  1
+  
+  1
+j
+ 
+M
+r
+ ( )
+ 
+R
+ 
+0
+j(t s)
+  1
+  (  s)
+  1
+j ds +
+R
+t
+ 
+(t s)
+  1
+ds
+ 
++
+ff M
+r
+ 
+ 
+(1 ff  
+  1
+)  (1+ )
+jt
+  1
+   
+  1
+j
++
+M
+r
+(1 ff  
+  1
+)  (1+ )
+jt
+  1
+   
+  1
+j
+ 
+M
+r
+ (1+ )
+ 
+2 (t  )
+ 
++ jt
+ 
+  
+ 
+j
+ 
++
+M
+r
+(ff  
+ 
++ 1)
+(1 ff  
+  1
+)  (1+ )
+jt
+  1
+   
+  1
+j:
+which proves that Tu2C[I;E].
+Now, let
+Q =fu 2 E
+r
+: (8 t; 2I)
+(jju(t) u( )jj  
+M
+r
+ (1 + )
+ 
+2 (t  )
+ 
++ jt
+ 
+  
+ 
+j
+ 
++
+M
+r
+(ff  
+ 
++ 1)
+(1 ff  
+  1
+)  (1 + )
+jt
+  1
+  
+  1
+jg;
+Note thatQ is nonempty, closed, bounded, convex and equicontinuous subset of
+C[I;E]. Now, we claim thatT :Q!Q and is weakly sequentially continuous.
+If this is true then according to Theorem 1.3,TQ is bounded inC[I;E] (hence,
+Theorem 1.4, implies TQ(t) is weakly relatively compact in E for each t2 I)
+and the result follows immediately from Theorem 1.1. It remains to prove
+our claim. First we show that T maps Q into Q. To see this, note that the
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 36Differential Equations and Control Processes, N 4, 2008
+inequality (2) shows that TQ is norm continuous. Now, take u2 Q; without
+loss of generality, we may assume that I
+ff
+f(t;u(t))6= 0, then, by Theorem 1.5,
+there exists '2E
+ 
+withjj'jj = 1 andjjI
+ff
+f(t;u(t))jj ='(I
+ff
+f(t;u(t))). Thus
+jjTu(t)jj 
+  jjI
+ 
+f(t;u(t))jj + jj
+ff t
+  1
+1 ff  
+  1
+R
+ 
+0
+(  s)
+  1
+ ( )
+f(s;u(s)) dsjj
++ jj
+t
+  1
+1 ff  
+  1
+R
+1
+0
+(1 s)
+  1
+ ( )
+f(s;u(s)) dsjj
+= '(I
+ 
+f(t;u(t))) + '
+ 
+ff t
+  1
+1 ff  
+  1
+R
+ 
+0
+(  s)
+  1
+ ( )
+f(s;u(s)) ds
+ 
++ '
+ 
+t
+  1
+1 ff  
+  1
+R
+1
+0
+(1 s)
+  1
+ ( )
+f(s;u(s)) ds
+ 
+= I
+ 
+'(f(t;u(t))) +
+ff t
+  1
+1 ff  
+  1
+R
+ 
+0
+(  s)
+  1
+ ( )
+'(f(s;u(s))) ds
++
+t
+  1
+1 ff  
+  1
+R
+1
+0
+(1 s)
+  1
+ ( )
+'(f(s;u(s))) ds
+  M
+r
+R
+t
+0
+(t s)
+  1
+ ( )
+ds +
+ff M
+r
+t
+  1
+1 ff  
+  1
+R
+ 
+0
+(  s)
+  1
+ ( )
+ds
++
+M
+r
+t
+  1
+1 ff  
+  1
+R
+1
+0
+(1 s)
+  1
+ ( )
+ds
+ 
+M
+r
+t
+ 
+ (1+ )
++
+M
+r
+t
+  1
+(1 ff  
+  1
+)  (1+ )
+(ff  
+ 
++ 1)
+ 
+M
+r
+ (1+ )
++
+M
+r
+(ff + 1)
+(1 ff  
+  1
+)  (1+ )
+<
+M
+r
+ (1+ )
++ r;
+therefore
+jjTujj
+0
+<
+M
+r
+ (1 + )
++ r:
+Thus T : Q! Q. Finally, we will show that T is weakly sequentially contin-
+uous. To see this, letfu
+n
+g
+1
+n=1
+be a sequence in Q and let u
+n
+(t)! u(t) in E
+w
+for each t2 [0; 1]. Recall [5] that a sequencefu
+n
+g
+1
+n=1
+is weakly convergent in
+C[I;E] if and only if it is weakly pointwise convergent in E. Fix t2 I. From
+the weak sequential continuity of f(t;:), the Lebsegue dominated convergence
+theorem (see assumption (3)) for the Pettis integral [2] implies for each '2E
+ 
+that '(Tu
+n
+(t))!'(Tu(t)) a.e. on I, Tu
+n
+(t)!Tu(t) in E
+w
+. So T :Q!Q is
+weakly sequentially continuous. The proof is complete.
+Now, we are looking for su cient conditions to ensure the existence of Pseudo
+solution to the boundary value problem (1).
+Theorem 3.2 If f : I B
+r
+! E satis es the assumptions of Theorem 3.1,
+then the boundary value problem (1) has at least one solution u2C[I;E].
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 37Differential Equations and Control Processes, N 4, 2008
+Proof: Let us remark, that by assumptions (2), (3) the FPI off of order  > 1
+exists and
+'(I
+ 
+f(t;u(t))) = I
+ 
+'(f(t;u(t))); for all ' 2 E
+ 
+:
+Let u be a solution of equation (2), then
+u(t) =   I
+ 
+f(t;u(t))  
+ff t
+  1
+1 ff  
+  1
+Z
+ 
+0
+(  s)
+  1
+ ( )
+f(s;u(s)) ds
++
+t
+  1
+1 ff  
+  1
+Z
+1
+0
+(1 s)
+  1
+ ( )
+f(s;u(s)) ds;   2 (1; 2); t 2 (0; 1):
+It is clear that
+I
+
+u(t)j
+t=0
+= 0;  2 (0; 1]; ff u( ) = u(1):
+Furthermore, we have
+u(t) =   I
+ 
+f(t;u(t)) + K t
+  1
+; (2)
+where
+K =
+ ff
+1 ff  
+  1
+R
+ 
+0
+(  s)
+  1
+ ( )
+f(s;u(s)) ds
++
+1
+1 ff  
+  1
+R
+1
+0
+(1 s)
+  1
+ ( )
+f(s;u(s)) ds:
+since u2C[I;E], then '(I
+2  
+u(t)) =I
+2  
+'(u(t)), for all '2E
+ 
+(see Lemma
+2.2). From equation (2), we deduce that
+'u(t) =   '(I
+ 
+f(t;u(t))) + ' K t
+  1
+=   I
+ 
+'(f(t;u(t))) + ' K t
+  1
+: (3)
+Operating by I
+2  
+on both sides of the equation (3) and using the properties
+of fractional calculus in the space L
+1
+[0; 1] (see [14] and [15]) result in
+I
+2  
+'u(t) =  I
+2
+'(f(t;u(t))) + ' K  ( ) t:
+Therefore,
+'(I
+2  
+u(t)) =  I
+2
+'(f(t;u(t))) + ' K  ( ) t:
+Thus
+d
+2
+dt
+2
+'(I
+2  
+u(t)) =   '(f(t;u(t))) a.e. on (0; 1):
+That isu has the FPD of order  2 (1; 2) andu is a solution of the differential
+equation (1) which complete the proof.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 38Differential Equations and Control Processes, N 4, 2008
+References
+[1] Diestel, J. and Uhl, J. J. Jr. Vector measures. Math. Surveys Monogr. 15,
+Amer. Math. Soc., Providence, R. I., (1977).
+[2] Geitz, R. F. Pettis integration, Proc. Amer. Math. Soc. 82 (1981), 81-86.
+[3] Hille, E. and Phillips, R. S. Functional Analysis and Semi-groups. Amer.
+Math. Soc. colloq. Publ. 31, Amer. Math. Soc., Providence, R. I., (1957).
+[4] Miller, K. S. and Ross, B. An Introduction to the Fractional Calculus and
+Fractional Differential Equations, John Wiley, New York (1993).
+[5] Mitchell, A. R. and Smith, Ch. An existence theorem for weak solutions
+of differential equations in Banach spaces. Nonlinear equations in abstract
+spaces. Proc. Int. Symp., Arlington, (1977), (1978), 387-403.
+[6] O'Regan, D. Integral equations in reexive Banach spaces and weak topolo-
+gies, Amer. Math. Soc. vpl. 124, no. 2 (1996), 607-614.
+[7] O'Regan, D. Weak solutions of ordinary differential equations in Banach
+spaces, Applied Math. Letters 12 (1999), 101-105.
+[8] Pettis, B. J. On integration in vector spaces, Trans. Amer. Math. Soc. 44
+(1938), 277-304.
+[9] Podlubny, I. and EL-Sayed, A. M. A. On two de nitions of fractional
+calculus, Preprint UEF 03-96 (ISBN 80-7099-252-2), Slovak Academy of
+Science-Institute of Experimental phys. (1996).
+[10] Podlubny, I. Fractional Differential Equations, Acad. press, San Diego-New
+York-London (1999).
+[11] Salem, H. A. H. and El-Sayed, A. M. A. Weak solution for fractional order
+integral equations in reexive Banach spaces. Mathematica Slovaca, (2005),
+No. 2, 169-181.
+[12] Salem, H. A. H., El-Sayed, A. M. A. and Moustafa O. L. A note on the
+fractional calculus in Banach spaces, Studia Sci. Math. Hungar., 42 (2)
+(2005), 115-130.
+[13] Salem, H. A. H. On the nonlinear Hammerstien integral equations in Ba-
+nach spaces and application to the boundary value problem of fractional
+order, Mathematical and computer modelling, to appear.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 39Differential Equations and Control Processes, N 4, 2008
+[14] Salem, H. A. H. and V ath, M. An abstract Gronwall lemma and application
+to global existence results for functional differential and integral equations
+of fractional order, J. Integral Equations Appl., 16 (2004), 411-439.
+[15] Samko, S., Kilbas, A. and Marichev, O. L. Fractional Integrals and Deriva-
+tives, Gordon and Breach Science Publisher, (1993).
+[16] Szep, A. Existence theorem for weak solutions of differential equations in
+Banach spaces, Studia Sci. Math. Hungar. 6 (1971), 197-203.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 40

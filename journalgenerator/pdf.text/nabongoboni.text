@@ -1,0 +1,2329 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 1, 2008
+Electronic Journal,
+reg. N P2375 at 07.03.97
+ISSN 1817-2172
+
+http://www.math.spbu.ru/diffjournal/
+e-mail: jodiff@mail.ru
+Differential equations with randomness
+EXTINCTION TIME OF SOME
+STOCHASTIC DIFFERENTIAL EQUATIONS
+Diabate Nabongo
+Universite d’Abobo-Adjame, UFR-SFA,
+Departement de Mathmatiques et Informatiques,
+16 BP 372 Abidjan 16, (Cote d’Ivoire)
+E-mail:nabongo diabate@yahoo.fr
+Theodore K. Boni
+Institut National Polytechnique
+Houphouet-Boigny de Yamoussoukro,
+BP 1093 Yamoussoukro, (Cote d’Ivoire)
+E-mail:theokboni@yahoo.fr
+Abstract. This paper concerns the study of the following stochastic differ-
+ential equation:
+dX =−f(X)dt+σ(X,ε)
+0
+dW,
+X(0) =x
+0
+> 0,
+where ε is a positive parameter, f(s) ∈ C
+1
+(R) is a positive and increasing
+function for the positive values of s, σ∈ C
+1
+(R×R), W is a (one dimensional)
+Wiener process deﬁned on a given probability space (Ω,F,P) with a ﬁltration
+{F}
+t≥0
+satisfying the usual conditions. Under some conditions, we show that
+any solution of the above problem extincts in a ﬁnite time and its extinctionDifferential Equations and Control Processes, N 1, 2008
+timegoestotheoneofthesolutionofacertaindifferentialequationasεgoesto
+zero. We also extend the above results to other classes of extinction problems.
+AMS subject classifications(2000): 60H10, 60G17, 34F05
+Key-words: Stochastic differential equations, extinction, extinction time.
+1 Introduction
+In this paper, we consider the following stochastic differential equation (SDE)
+dX =−f(X)dt+σ(X,ε)
+0
+dW, (1)
+X(0) =x
+0
+> 0, (2)
+where ε is a positive parameter, f(s)∈C
+1
+(R) is a positive and increasing func-
+tion for the positive values of s, σ ∈ C
+1
+(R×R), W is a (one dimensional)
+Wiener process deﬁned on a given probability space (Ω,F,P) with a ﬁltration
+{F}
+t≥0
+satisfying the usual conditions (i.e it is right continuous and{F}
+0
+con-
+tains all P-null sets (see [11]). Let us notice that our stochastic differential
+equation is given in Stratonovich form. It is well known that if a SDE is given
+in It form, it may be rewritten in Stratonovich form. In fact, if X(t) solves
+dX =−f(X)dt+g(X)dW, where the SDE is given in It form, thenX(t) solves
+dX =−f(X)dt+b(X)
+0
+dW
+with
+b(s) =f(s)+
+1
+2
+g
+0
+(s)g(s).
+The ﬁrst SDE dates back to 1930 and has been written by Uhlenbeck and Orn-
+stein(see[17])andhasbeenusedasamodelfortheBrownianmotion(irregular
+motion of a particle suspended in a ﬂuid ﬁrst observed on the microscope by
+the botanist Brown in the XIX century). A mathematical study of SDE
+s
+is
+due to It half a century age and they have extensively used in practically all
+branches of science and technology from physics to biology (see [1], [4], [9],
+[11]–[13], [15]-[17] and the references cited therein). We know that a solution
+X(t) of the SDE in (1)–(2) may extinct in a ﬁnite time, namely there exists a
+ﬁnite time T such that X(t) > 0 for t ∈ (0,T) but X(t) = 0 for t ≥ T. The
+time T is called the extinction time of X(t). In the case of ordinary differential
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 16Differential Equations and Control Processes, N 1, 2008
+equations (ODE), one may determine easily the extinction time in a lot of sit-
+uations. In the case of SDE, the problem is more complicated because of the
+stochastic term. Our aim in this paper is to describe the extinction time when
+ε is small enough. Our work was motived by the paper of Friedman and Lacey
+in [8] and the one of Groisman and Rossi in [10], concerning the phenomenon
+of blow-up (we say that a solution blows up in a ﬁnite time if it reaches the
+value inﬁnity in a ﬁnite time). In [8], Friedman and Lacey have considered the
+following initial-boundary value problem
+u
+t
+(x,t) =εΔu(x,t)+f(u(x,t)) in Ω×(0,T),
+u(x,t) = 0 on ∂Ω×(0,T),
+u(x,0) =u
+0
+(x) in Ω,
+whereΔistheLaplacian,εisapositiveparameter,f(s)isapositive,increasing,
+convexfunctionforthenonnegativevaluesofs,
+R
++∞
+0
+ds
+f(s)
+< +∞,Ωisabounded
+domain inR
+N
+with smooth boundary ∂Ω, u
+0
+(x) is a continuous function in Ω.
+Under some additional conditions on the initial data, they have shown that
+if ε is small enough, the solution u of the above problem blows up in a ﬁnite
+time and its blow-up time goes to the one of the solution α(t) of the following
+differential equation
+α
+0
+(t) =f(α(t)), t> 0, α(0) =M,
+as ε goes to zero where M = sup
+x∈Ω
+u
+0
+(x).
+Let us notice that the blow-up time of the solution α(t) of the differential
+equation is given by T
+0
+=
+R
++∞
+M
+ds
+f(s)
+. A similar result has been obtained by
+Groisman and Rossi in [10], where they have considered the SDE below
+dX =f(X)dt+σ(X,ε)
+0
+dW,
+X(0) =x
+0
+.
+In this problem, σ(X,ε) which represents the diffusion of the SDE plays the
+same role as εΔu of the partial differential equation considered in [8]. In this
+paper, we obtain an analogous result for the problem of extinction.
+Our paper is written in the following manner. In the next section, we show
+that when ε is small enough, any solution X(t) of the SDE deﬁned in (1)–(2)
+extincts in a ﬁnite time and its extinction time goes to the one of the solution
+of a certain differential equation. Finally, in the last section, we extend the
+results of section 2 to other classes of extinction problems.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 17Differential Equations and Control Processes, N 1, 2008
+2 Extinction times
+In this section, under some conditions, we show that if ε is small enough, any
+solution X(t) of (1)–(2) extincts in a ﬁnite and its extinction time goes the one
+of the solution of a certain ordinary differential equation (ODE). For the sake
+of simplicity, let us start with an example concerning the ODEs.
+Consider the following ODE
+y
+0
+(t) =−y
+p
+(t), t> 0, (3)
+y(0) =M > 0, (4)
+where p> 0. An explicit solution of (3)–(4) is given by
+y(t) =
+1
+(M
+1−p
++(p−1)t)
+1
+p−1
+if p> 1,
+y(t) =Me
+−t
+if p = 1,
+y(t) = (M
+1−p
+−(1−p)t)
+1
+p−1
++
+if 0<p< 1,
+where (x)
++
+= max{x,0}.
+Thus, we see that if p≥ 1, 0 < y(t) < M for t≥ 0 and lim
+t→+∞
+y(t) = 0, but
+if 0 < p < 1, 0 < y(t) < M for t∈ [0,
+M
+1−p
+1−p
+) but y(t) = 0 for t≥
+M
+1−p
+1−p
+. In this
+case, we say that the solution y(t) of (3)–(4) extincts in a ﬁnite time and the
+time T
+0
+=
+M
+1−p
+1−p
+is called the extinction time of the solution y(t).
+More generally, consider the following ODE
+α
+0
+(t) =−f(α(t)), t> 0, (5)
+α(0) =M > 0 (6)
+where f(s)∈C
+1
+(R) is a positive and increasing function for the positive values
+of s. It is well known that if the integral
+R
+M
+0
+ds
+f(s)
+diverges then the solution
+α(t) of (5)–(6) satisﬁes 0<α(t)<M and lim
+t→+∞
+α(t) = 0 but if the integral
+R
+M
+0
+ds
+f(s)
+converges then the solution of (5)–(6) extincts in a ﬁnite time and its
+extinction time T
+0
+is given by T
+0
+=
+R
+M
+0
+ds
+f(s)
+.
+Thus, we see that for certain ODEs, the extinction times of solutions are given
+explicitly.
+Now, let us consider the SDE
+s
+. Our ﬁrst result is the following.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 18Differential Equations and Control Processes, N 1, 2008
+Theorem 1 Suppose that σ(X,ε) = εX and
+R
+0
+ds
+f(s)
+< +∞. Then for almost
+every ω, any solution X(t) of the SDE in (1)–(2) extincts in a ﬁnite time for
+every ε> 0 and its extinction time T
+ω
+ε
+goes to
+R
+x
+0
+0
+ds
+f(s)
+as ε tends to zero.
+Proof. Since σ(X,ε) =εX, then we have
+dX =−f(X)dt+εX
+0
+dW,
+X(0) =x
+0
+.
+Setting Z = Xe
+−εW
+, it is not hard to see that dZ = e
+−εW
+dX−εe
+−εW
+X
+0
+dW,
+which implies that
+dZ =−e
+−εW
+f(e
+εW
+Z)dt.
+This gives a non-autonomous ODE for each ω such that W(.,ω) is continuous,
+˙
+Z
+ω
+(t) =−e
+−εW(t,ω)
+f(e
+εW(t,ω)
+Z
+ω
+(t)), t> 0,
+Z
+ω
+(0) =x
+0
+.
+In the above problemω is regarded as a parameter. ConsiderM > 0and deﬁne
+A
+M
+={ω :W(.,ω) iscontinuousand max
+0≤t≤T+1
+|W(.,ω)|≤M},
+where T =
+R
+x
+0
+0
+ds
+f(s)
+. Let Z
+1
+be the solution of the following ODE
+Z
+0
+1
+(t) =−e
+−εM
+f(e
+−εM
+Z
+1
+(t)), t> 0,
+Z
+1
+(0) =x
+0
+.
+Similarly, let Z
+2
+be the solution of the ODE below
+Z
+0
+2
+(t) =−e
+εM
+f(e
+εM
+Z
+2
+(t)), t> 0,
+Z
+2
+(0) =x
+0
+.
+It is not hard to see that Z
+1
+(t) extincts at the time T
+ε
+1
+= e
+2εM
+R
+e
+−εM
+x
+0
+0
+ds
+f(s)
+and
+Z
+2
+(t) extincts at the time T
+ε
+2
+= e
+−2εM
+R
+e
+εM
+x
+0
+0
+ds
+f(s)
+. By the maximum principle
+for ODE, we discover that
+Z
+2
+(t)≤Z
+ω
+(t)≤Z
+1
+(t) for t≥ 0, ω∈A
+M
+.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 19Differential Equations and Control Processes, N 1, 2008
+Therefore, if ω ∈ A
+M
+then Z
+ω
+(t) extincts in a ﬁnite time T
+ω
+ε
+such that T
+ε
+2
+≤
+T
+ω
+ε
+≤ T
+ε
+1
+. Obviously, we have lim
+ε→0
+T
+ε
+2
+= lim
+ε→0
+T
+ε
+1
+=
+R
+x
+0
+0
+ds
+f(s)
+. Consequently,
+we obtain lim
+ε→0
+T
+ω
+ε
+=
+R
+x
+0
+0
+ds
+f(s)
+. Use the fact that P(
+S
+∞
+M=1
+A
+M
+) = 1 and X =
+e
+εW
+Z to complete the rest of the proof.  
+Consider now the SDE in to sense. It may be rewritten as follows
+dX =−f(X)dt+εXdW, (7)
+X(0) =x
+0
+. (8)
+We have the following result.
+Theorem 2 Theorem 1 remains valid if X(t) solves (7)–(8).
+Proof. Applying the formula given in the introduction, the SDE in (7)–(8)
+may be rewritten in Stratonovich sense in the following manner
+dX =−f(X)−
+ε
+2
+X
+2
++εX
+0
+dW,
+X(0) =x
+0
+.
+Setting Z =Xe
+−εW
+, it is not hard to see that
+dZ =e
+−εW
+dX−εe
+−εW
+X
+0
+dW
+which implies that
+dZ =−[e
+εW
+f(e
+εW
+Z)+
+ε
+2
+2
+e
+εW
+Z]dt.
+This gives a non-autonomous ODE for each ω such that W(.,ω) is continuous,
+˙
+Z
+ω
+(t) =−[e
+εW(t,ω)
+f(e
+εW(t,ω)
+Z
+ω
+(t))+
+ε
+2
+2
+e
+εW(t,ω)
+Z
+ω
+(t)], t> 0,
+Z
+ω
+(0) =x
+0
+.
+Consider M > 0 and deﬁne
+A
+M
+={ω :W(.,ω) iscontinuousand max
+0≤t≤T+1
+|W(.,ω)|≤M},
+where T =
+R
+x
+0
+0
+ds
+f(s)
+. Let Z
+1
+be the solution of the following ODE
+˙
+Z
+1
+(t) =−[e
+−εM
+f(e
+−εM
+Z
+1
+(t))+
+ε
+2
+2
+e
+−εM
+Z
+1
+(t)], t> 0,
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 20Differential Equations and Control Processes, N 1, 2008
+Z
+1
+(0) =x
+0
+.
+Similarly, let Z
+2
+be the solution of the ODE below
+˙
+Z
+2
+(t) =−[e
+εM
+f(e
+εM
+Z
+2
+(t))+
+ε
+2
+2
+e
+εM
+Z
+2
+(t)], t> 0,
+Z
+2
+(0) =x
+0
+.
+It is not diﬃcult to see that Z
+1
+(t) extincts at the time
+T
+ε
+1
+=e
+2εM
+Z
+e
+−εM
+x
+0
+0
+dσ
+f(σ)+
+ε
+2
+2
+e
+εM
+σ
+and Z
+2
+(t) extincts at the time
+T
+ε
+2
+=e
+−2εM
+Z
+e
+εM
+x
+0
+0
+dσ
+f(σ)+
+ε
+2
+2
+e
+−εM
+σ
+.
+We observe that the above times are ﬁnite because
+R
+0
+ds
+f(s)
+is ﬁnite. Owing to
+the maximum principle for ODE, we obtain
+Z
+2
+(t)≤Z
+ω
+(t)≤Z
+1
+(t) for t> 0, ω∈A
+M
+.
+Wededucethatifω∈A
+M
+thenZ
+ω
+(t)extinctsatthetimeT
+ω
+ε
+whichisestimated
+as follows
+T
+ε
+2
+≤T
+ω
+ε
+≤T
+ε
+1
+.
+Since
+R
+0
+ds
+f(s)
+is ﬁnite, applying the dominated convergence theorem, it is not
+hard to see that
+lim
+ε→0
+T
+ε
+1
+= lim
+ε→0
+T
+ε
+2
+=
+Z
+x
+0
+0
+dσ
+f(σ)
+.
+Hence, we have
+lim
+ε→0
+T
+ω
+ε
+=
+Z
+x
+0
+0
+ds
+f(s)
+.
+Use the fact that X = e
+εW
+Z and P(∪
+∞
+M=1
+A
+M
+) = 1 to complete the rest of the
+proof.  
+Now, let us consider the general case. We have the following result.
+Theorem 3 Let φ
+ε
+(s,x) be the ﬂux associated to the ODE ˙ y =σ(y,ε), y(0) =
+x and let H(s,x,ε) =
+f(φ
+ε
+(s,x))σ(x,ε)
+σ(φ
+ε
+(s,x),ε)
+. Suppose that
+lim
+ε→0
+H(s,x,ε) =f(x), (9)
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 21Differential Equations and Control Processes, N 1, 2008
+H(s,x,ε)≥H(t,x,ε) if s≥t (10)
+and there exists a function k
+s
+(x) such that
+1
+H(s,x,ε)
+≤k
+s
+(x)∈L
+1
+([0,x
+0
+]). (11)
+Then for almost every ω, any solution of (1)–(2) extincts in a ﬁnite time and
+its extinction time T
+ω
+ε
+satisﬁes the following relation lim
+ε→0
+T
+ω
+ε
+= T
+0
+where
+T
+0
+=
+R
+x
+0
+0
+ds
+f(s)
+. In addition if for every s∈R, there exists l
+s
+such that
+∂
+∂ε
+1
+H(s,x,ε)
+≤l
+s
+(x)∈L
+1
+([0,x
+0
+]), (12)
+then there exists a random variable K = K(ω) such that with total probability
+|T
+ε
+−T
+0
+|≤εK.
+Proof. Since φ
+ε
+(t,x) is the ﬂux of the following ODE
+˙ y =σ(y,ε),
+y(0) =x.
+we have
+(φ
+ε
+)
+t
+(t,x) =σ(φ
+ε
+(t,x),ε), (13)
+φ
+ε
+(0,x) =x. (14)
+Let Z
+ω
+(t) be the solution of the Random differential equation
+dZ
+ω
+=
+−f(φ
+ε
+(W(t,ω),Z
+ω
+(t)))
+φ
+x
+(W(t,ω),Z
+ω
+(t))
+, t> 0, (15)
+Z
+ω
+(0) =x
+0
+. (16)
+Setting X(t,ω) =φ
+ε
+(W(t,ω),Z
+ω
+(t)), we observe that
+dX = (φ
+ε
+)
+t
+(W,Z
+ω
+)dW +(φ
+ε
+)
+x
+(W,Z
+ω
+)dZ
+ω
+= σ(φ
+ε
+(W,Z
+ω
+),ε)dW +(φ
+ε
+)
+x
+(W,Z
+ω
+)dZ
+ω
+= σ(X,ε)dW −f(X)dX.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 22Differential Equations and Control Processes, N 1, 2008
+Therefore, X is a solution of the SDE deﬁned in (1)–(2). On the other hand,
+from (13)–(14), we get
+dφ
+ε
+σ(φ
+ε
+(t,x),ε)
+=dt,
+which implies that
+Z
+φ
+ε
+(t,x)
+x
+ds
+σ(s,ε)
+=t. (17)
+Take the derivative in x of (17) to obtain
+(φ
+ε
+)
+x
+(t,x)
+σ(φ
+ε
+(t,x),ε)
+−
+1
+σ(x,ε)
+= 0,
+which implies that
+(φ
+ε
+)
+x
+(t,x) =
+σ(φ
+ε
+(t,x),ε)
+σ(x,ε)
+.
+It follows from (13) that
+˙
+Z
+ω
+=
+−f(φ
+ε
+(W(t,ω),Z
+ω
+(t)))σ(Z
+ω
+(t),ε)
+σ(φ
+ε
+(W(t,ω),Z
+ω
+(t)),ε)
+.
+Take the expression of H to arrive at
+˙
+Z
+ω
+(t) =−H(W(t,ω),Z
+ω
+(t),ε), t> 0,
+Z
+ω
+(0) =x
+0
+.
+Consider M > 0 and deﬁne
+A
+M
+={ω :W(.,ω) iscontinuousand max
+0≤t≤T
+0
++1
+|W(.,ω)|≤M},
+where T
+0
+=
+R
+x
+0
+0
+ds
+f(s)
+. Let Z
+1
+(t) be the solution of the following ODE
+Z
+0
+1
+(t) =−H(−M,Z
+1
+(t),ε), t> 0,
+Z
+1
+(0) =x
+0
+and let Z
+2
+(t) be the one of the ODE below
+Z
+0
+2
+(t) =−H(M,Z
+2
+(t),ε), t> 0,
+Z
+2
+(0) =x
+0
+.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 23Differential Equations and Control Processes, N 1, 2008
+From (11), we observe that the integrals
+R
+x
+0
+0
+ds
+H(−M,s,ε)
+and
+R
+x
+0
+0
+ds
+H(M,s,ε)
+are ﬁnite.
+We deduce that the solution Z
+1
+(t) extincts in a ﬁnite time T
+ε
+1
+=
+R
+x
+0
+0
+ds
+H(−M,s,ε)
+andthesolutionZ
+2
+(t)extinctsinaﬁnitetimeT
+ε
+2
+=
+R
+x
+0
+0
+ds
+H(M,s,ε)
+. Themaximum
+principle for ODE implies that
+Z
+2
+(t)≤Z
+ω
+(t)≤Z
+1
+(t) for t≥ 0, ω∈A
+M
+.
+Therefore, if ω∈A
+M
+then Z
+ω
+(t) extincts in a ﬁnite time T
+ω
+ε
+such that
+T
+ε
+2
+≤T
+ω
+ε
+≤T
+ε
+1
+.
+Due to (11) and the dominated convergence theorem, it is not hard to see that
+lim
+ε→0
+T
+ε
+1
+= lim
+ε→0
+T
+ε
+2
+=T
+0
+=
+Z
+x
+0
+0
+ds
+f(s)
+.
+Therefore, lim
+ε→0
+T
+ω
+ε
+= T
+0
+. We observe that P(
+S
++∞
+M=1
+A
+M
+) = 1. Use Taylor’s
+expansion to obtain
+1
+H(−M,s,ε)
+=
+1
+H(−M,s,0)
++ε
+∂
+∂ε
+1
+H(−M,s,˜ ε)
+,
+where ˜ ε is an intermediate value between 0 and ε. We deduce from (12) that
+Z
+x
+0
+0
+ds
+H(−M,s,ε)
+≤
+Z
+x
+0
+0
+ds
+f(s)
++ε
+Z
+x
+0
+0
+l
+−M
+(s)ds.
+It follows that there exists a random variable K =K(ω) such that
+|T
+ε
+−T
+0
+|≤εK
+and the proof is complete.  
+Remark 1 If σ(x,ε) =εx and f(s) =s
+q
+with 0<q < 1 then
+φ
+ε
+(s,x) =xe
+εs
+and H(s,x,ε) =x
+q
+e
+−ε(1−q)s
+.
+If σ(x,ε) =εx
+p
+and f(s) =s
+q
+with 0<p≤q < 1, then
+φ
+ε
+(s,x) = (x
+1−p
++(1−p)εs)
+1
+1−p
+and H(s,x,ε) =x
+p
+(x
+1−p
++(1−p)εs)
+q−p
+1−p
+.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 24Differential Equations and Control Processes, N 1, 2008
+3 Other extinctions times
+In this section, we show the possibility to extend the results of the previous
+section to another problem of extinction which is called problem of quenching.
+To illustrate our analysis, let us consider the following ODE
+y
+0
+(t) =−y
+−p
+(t), t> 0, (18)
+y(0) =M > 0, (19)
+where p> 0. An explicit solution of (18)–(19) is given by
+y(t) = (M
+p+1
+−(p+1)t)
+1
+p+1
+for t∈ [0,
+M
+p+1
+p+1
+).
+Hence we see that if t =
+M
+p+1
+p+1
+then y(t) reaches the value zero which implies
+that y
+0
+(t) explodes at the same time. In this case, we say that the solution y(t)
+quenches in a ﬁnite time.
+More generally, consider the following ODE
+y
+0
+(t) =−f(y(t)), t> 0, (20)
+y(0) =M > 0, (21)
+where f(s) is a positive, decreasing function for the positive values of s,
+lim
+s→0
++f(s) = +∞,
+R
+M
+0
+ds
+f(s)
+< +∞. It is not hard to see that M > y(t) > 0
+for t∈ [0,T
+0
+) but lim
+t→T
+0
+y(t) = 0 where T
+0
+=
+R
+M
+0
+ds
+f(s)
+. Therefore, we discover
+that y(t) quenches in a ﬁnite time and the time T
+0
+is called the quenching time
+of y(t). Let us also notice that the derivative in t of y(t) explodes at the time
+T
+0
+.
+Now, let us consider the following SDE
+dX =−f(X)dt+σ(X,ε)
+0
+dW, (22)
+X(0) =x
+0
+> 0, (23)
+where f(s) is positive, decreasing function for the positive values of s,
+lim
+s→0
++f(s) = +∞. We have the following result.
+Theorem 4 Suppose that σ(X,ε) = εX and
+R
+0
+ds
+f(s)
+< +∞. Then for almost
+every ω, any solution X(t) of the SDE in (22)–(23) quenches in a ﬁnite time
+for every ε> 0 and its quenching time T
+ω
+ε
+goes to
+R
+x
+0
+0
+ds
+f(s)
+as ε tends to zero.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 25Differential Equations and Control Processes, N 1, 2008
+Proof. Since σ(X,ε) =εX, then we have
+dX =−f(X)dt+εX
+0
+dW,
+X(0) =x
+0
+.
+Take Z =Xe
+−εW
+. A straightforward computation yields
+dZ =dXe
+−εW
+−εXe
+−εW
+dW,
+which implies that
+dZ =−e
+−εW
+f(X)dt.
+Use the expression of X to obtain
+dZ =−e
+−εW
+f(e
+εW
+Z).
+Introduce the following Random differential equation
+˙
+Z
+ω
+(t) =−e
+−εW(t,ω)
+f(e
+εW(t,ω)
+Z
+ω
+(t)),
+Z
+ω
+(0) =x
+0
+.
+Consider M > 0 and deﬁne
+A
+M
+={ω :W(.,ω) iscontinuousand max
+0≤t≤T
+0
++1
+|W(.,ω)|≤M},
+where T
+0
+=
+R
+x
+0
+0
+ds
+f(s)
+. Let Z
+1
+(t) be the solution of the following ODE
+˙
+Z
+1
+(t) =−e
+−εM
+f(e
+−εM
+Z
+1
+(t)), t> 0,
+Z
+1
+(0) =x
+0
+,
+and let Z
+2
+(t) be the one of the ODE below
+˙
+Z
+2
+(t) =−e
+εM
+f(e
+εM
+Z
+2
+(t)), t> 0,
+Z
+2
+(0) =x
+0
+.
+Setting g
+1
+(s) = e
+−εM
+f(e
+−εM
+s) and g
+2
+(s) = e
+εM
+f(e
+εM
+s), one easily sees that
+lim
+s→0
++g
+1
+(s) = +∞, lim
+s→0
++g
+2
+(s) = +∞,
+Z
+x
+0
+0
+ds
+g
+1
+(s)
+=e
+2εM
+Z
+e
+−εM
+x
+0
+0
+dσ
+f(σ)
+< +∞,
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 26Differential Equations and Control Processes, N 1, 2008
+Z
+x
+0
+0
+ds
+g
+2
+(s)
+=e
+−2εM
+Z
+e
+εM
+x
+0
+0
+dσ
+f(σ)
+< +∞.
+On the other hand, the maximum principle for ODE implies that
+Z
+2
+(t)≤Z
+ω
+(t)≤Z
+1
+(t),
+as long as all of them are deﬁned. Hence, it is not hard to see that Z
+1
+(t)
+quenches at the time
+T
+ε
+1
+=e
+2εM
+Z
+e
+−εM
+x
+0
+0
+ds
+f(s)
+and Z
+2
+(t) quenches at the time
+T
+ε
+2
+=e
+−2εM
+Z
+e
+εM
+x
+0
+0
+ds
+f(s)
+.
+We deduce that for ω ∈ A
+M
+, Z
+ω
+(t) quenches at the time T
+ω
+ε
+which obeys the
+following estimates
+T
+ε
+2
+≤T
+ω
+ε
+≤T
+ε
+1
+.
+Letusnoticethatlim
+ε→0
+T
+ε
+2
+= lim
+ε→0
+T
+ε
+1
+=
+R
+x
+0
+0
+ds
+f(s)
+. Therefore,weconcludethat
+lim
+ε→0
+T
+ω
+ε
+=
+R
+x
+0
+0
+ds
+f(s)
+. Since P(
+S
+∞
+M=1
+A
+M
+) = 1, using the fact that X = e
+εW
+Z,
+we see that the solution X(t) of the SDE quenches in a ﬁnite time with total
+probability and its quenching time T
+ω
+ε
+goes to
+R
+x
+0
+0
+ds
+f(s)
+as ε tends to zero. This
+ends the proof.  
+When σ(X,ε) = εX, the above theorem reveals that any solution of (22)–(23)
+quenches in a ﬁnite time. In the following, we want to know what happens if
+we consider the SDE in to sense. In this case, our problem can be rewritten as
+follows
+dX =−f(X)dt+εXdW, (24)
+X(0) =x
+0
+. (25)
+The result below gives an answer when the SDE is taken in to sense.
+Theorem 5 Theorem 4 remains valid if X(t) solves (24)–(25).
+Proof. Taking into account the formula given in the introduction, the SDE in
+(24)–(25) may be rewritten in Stratonovich sense in the following manner
+dX =−f(X)−
+ε
+2
+X
+2
++εX
+0
+dW,
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 27Differential Equations and Control Processes, N 1, 2008
+X(0) =x
+0
+.
+Setting Z =Xe
+−εW
+, we easily see that
+dZ =e
+−εW
+dX−εe
+−εW
+X
+0
+dW,
+which implies that
+dZ =−[e
+εW
+f(e
+εW
+Z)+
+ε
+2
+2
+e
+εW
+Z]dt.
+This gives a non-autonomous ODE for each ω such that W(.,ω) is continuous,
+˙
+Z
+ω
+(t) =−[e
+εW(t,ω)
+f(e
+εW(t,ω)
+Z
+ω
+(t))+
+ε
+2
+2
+e
+εW(t,ω)
+Z
+ω
+(t)], t> 0,
+Z
+ω
+(0) =x
+0
+.
+Consider M > 0 and deﬁne
+A
+M
+={ω : W(.,ω) iscontinuousand max
+0≤t≤T+1
+|W(.,ω)|≤M},
+where T =
+R
+x
+0
+0
+ds
+f(s)
+. Let Z
+1
+be the solution of the following ODE
+˙
+Z
+1
+(t) =−[e
+−εM
+f(e
+−εM
+Z
+1
+(t))+
+ε
+2
+2
+e
+−εM
+Z
+1
+(t)], t> 0,
+Z
+1
+(0) =x
+0
+.
+Similarly, let Z
+2
+be the solution of the ODE below
+˙
+Z
+2
+(t) =−[e
+εM
+f(e
+εM
+Z
+2
+(t))+
+ε
+2
+2
+e
+εM
+Z
+2
+(t)], t> 0,
+Z
+2
+(0) =x
+0
+.
+Setting
+g
+1
+(s) =e
+−εM
+f(e
+−εM
+s)+
+ε
+2
+2
+e
+−εM
+s,
+and
+g
+2
+(s) =e
+εM
+f(e
+εM
+s)+
+ε
+2
+2
+e
+εM
+s,
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 28Differential Equations and Control Processes, N 1, 2008
+we observe that
+lim
+s→0
++
+g
+1
+(s) = +∞ and lim
+s→0
++
+g
+2
+(s) = +∞.
+Taking into account g
+1
+and g
+2
+, the above ODE
+s
+may be rewritten as follows
+Z
+0
+1
+(t) =−g
+1
+(Z
+1
+(t)), t> 0, Z
+1
+(0) =x
+0
+,
+Z
+0
+2
+(t) =−g
+1
+(Z
+2
+(t)), t> 0, Z
+2
+(0) =x
+0
+.
+On the other hand, a routine calculation yields
+Z
+x
+0
+0
+ds
+g
+1
+(s)
+=
+Z
+e
+−εM
+x
+0
+0
+dσ
+f(σ)+
+ε
+2
+2
+e
+εM
+σ
+≤
+Z
+e
+−εM
+x
+0
+0
+dσ
+f(σ)
+< +∞
+and
+Z
+x
+0
+0
+ds
+g
+2
+(s)
+=
+Z
+e
+εM
+x
+0
+0
+dσ
+f(σ)+
+ε
+2
+2
+e
+−εM
+σ
+≤
+Z
+e
+εM
+x
+0
+0
+dσ
+f(σ)
+< +∞.
+Hence, we easily see that Z
+1
+(t) quenches at the time
+T
+ε
+1
+=
+Z
+e
+−εM
+x
+0
+0
+dσ
+f(σ)+
+ε
+2
+2
+e
+εM
+σ
+and Z
+2
+(t) quenches at the time
+T
+ε
+2
+=
+Z
+e
+εM
+x
+0
+0
+dσ
+f(σ)+
+ε
+2
+2
+e
+−εM
+σ
+.
+According to the maximum principle for ODE, we obtain
+Z
+2
+(t)≤Z
+ω
+(t)≤Z
+1
+(t) for ω∈A
+M
+as long as all of them are deﬁned. We deduce that if ω ∈ A
+M
+then Z
+ω
+(t)
+quenches at the time T
+ω
+ε
+which satisﬁes the following estimates
+T
+ε
+2
+≤T
+ω
+ε
+≤T
+ε
+1
+.
+Since
+R
+0
+ds
+f(s)
+isﬁnite,usingthedominatedconvergencetheorem,weeasilyderive
+the following equalities
+lim
+ε→0
+T
+ε
+1
+= lim
+ε→0
+T
+ε
+2
+=
+Z
+x
+0
+0
+ds
+f(s)
+.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 29Differential Equations and Control Processes, N 1, 2008
+Hence, we have
+lim
+ε→0
+T
+ω
+ε
+=
+Z
+x
+0
+0
+ds
+f(s)
+.
+Use the fact that X = e
+εW
+Z and P(∪
+∞
+M=1
+A
+M
+) = 1 to complete the rest of the
+proof.  
+Now, let us consider the general case concerning the phenomenon of quenching.
+We can derive the following important result.
+Theorem 6 Let φ
+ε
+(s,x) be the ﬂux associated to the ODE ˙ y =σ(y,ε), y(0) =
+x and let H(s,x,ε) =
+f(φ
+ε
+(s,x))σ(x,ε)
+σ(φ
+ε
+(s,x),ε)
+. Suppose that
+lim
+x→0
++
+H(s,x,ε) = +∞, lim
+ε→0
+H(s,x,ε) =f(x), (26)
+H(s,x,ε)≥H(t,x,ε) if s≥t (27)
+and there exists a function k
+s
+(x) such that
+1
+H(s,x,ε)
+≤k
+s
+(x)∈L
+1
+([0,x
+0
+]). (28)
+Then for almost every ω, any solution of (22)–(23) quenches in a ﬁnite time
+and its quenching time T
+ω
+ε
+satisﬁes the following relation lim
+ε→0
+T
+ω
+ε
+=T
+0
+where
+T
+0
+=
+R
+x
+0
+0
+ds
+f(s)
+. In addition if for every s∈R, there exists l
+s
+such that
+∂
+∂ε
+1
+H(s,x,ε)
+≤l
+s
+(x)∈L
+1
+([0,x
+0
+]), (29)
+then there exists a random variable K = K(ω) such that with total probability
+|T
+ε
+−T
+0
+|≤εK.
+Proof. Since φ
+ε
+(t,x) is the ﬂux of the following ODE
+˙ y =σ(y,ε),
+y(0) =x,
+we easily see that
+(φ
+ε
+)
+t
+(t,x) =σ(φ
+ε
+(t,x),ε),
+φ
+ε
+(0,x) =x.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 30Differential Equations and Control Processes, N 1, 2008
+Let Z
+ω
+(t) be the solution of the Random differential equation
+dZ
+ω
+(t) =
+−f(φ
+ε
+(W(t,ω),Z
+ω
+(t))
+φ
+ε
+(W(t,ω),Z
+ω
+(t))
+, t> 0,
+Z
+ω
+(0) =x
+0
+.
+As in the proof of Theorem 3, we ﬁnd that
+˙
+Z
+ω
+(t) =−H(W(t,ω),Z
+ω
+(t),ε), t> 0,
+Z
+ω
+(0) =x
+0
+and X(t,ω) =φ
+ε
+(W(t,ω),Z
+ω
+(t)) is a solution of (22)–(23).
+Consider M > 0 and deﬁne
+A
+M
+={ω :W(.,ω) iscontinuousand max
+0≤t≤T
+0
++1
+|W(.,ω)|≤M},
+where T
+0
+=
+R
+x
+0
+0
+ds
+f(s)
+. Let Z
+1
+(t) be the solution of the following ODE
+Z
+0
+1
+(t) =−H(−M,Z
+1
+(t),ε), t> 0
+Z
+1
+(0) =x
+0
+and let Z
+2
+(t) be the one of the ODE below
+Z
+0
+2
+(t) =−H(M,Z
+2
+(t),ε), t> 0,
+Z
+2
+(0) =x
+0
+.
+Setting
+g
+1
+(s) =H(−M,s,ε) and g
+2
+(s) =H(M,s,ε),
+we easily see that
+lim
+s→0
++
+g
+1
+(s) = +∞ and lim
+s→0
++
+g
+2
+(s) = +∞.
+Wealsoobservethattheintegrals
+R
+x
+0
+0
+ds
+H(−M,s,ε)
+and
+R
+x
+0
+0
+ds
+H(M,s,ε)
+areﬁnitebecause
+of(28). Hence, wededucethatthesolutionZ
+1
+(t)quenchesinaﬁnitetimeT
+ε
+1
+=
+R
+x
+0
+0
+ds
+H(−M,s,ε)
+and the solution Z
+2
+(t) quenches in a ﬁnite time T
+ε
+2
+=
+R
+x
+0
+0
+ds
+H(M,s,ε)
+.
+On the other hand, the maximum principle for ODE implies that
+Z
+2
+(t)≤Z
+ω
+(t)≤Z
+1
+(t) for ω∈A
+M
+,
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 31Differential Equations and Control Processes, N 1, 2008
+as long as all of them are deﬁned. Therefore, if ω ∈ A
+M
+then Z
+ω
+(t) quenches
+in a ﬁnite time T
+ω
+ε
+such that
+T
+ε
+2
+≤T
+ω
+ε
+≤T
+ε
+1
+.
+Due to (26) and the dominated convergence theorem, it is not hard to see that
+lim
+ε→0
+T
+ε
+1
+= lim
+ε→0
+T
+ε
+2
+=T
+0
+=
+Z
+x
+0
+0
+ds
+f(s)
+.
+Therefore, lim
+ε→0
+T
+ω
+ε
+= T
+0
+. Obviously P(
+S
++∞
+M=1
+A
+M
+) = 1. Using Taylor’s ex-
+pansion, we ﬁnd that
+1
+H(−M,s,ε)
+=
+1
+H(−M,s,0)
++ε
+∂
+∂ε
+1
+H(−M,s,˜ ε)
+,
+where ˜ ε is an intermediate value between 0 and ε. We deduce from (29) that
+Z
+x
+0
+0
+ds
+H(−M,s,ε)
+≤
+Z
+x
+0
+0
+ds
+f(s)
++ε
+Z
+x
+0
+0
+l
+−M
+(s)ds.
+It follows that there exists a random variable K =K(ω) such that
+|T
+ε
+−T
+0
+|≤εK
+and the proof is complete.  
+Remark 2 If σ(x,ε) =εx and f(s) =s
+−q
+with q > 0, then
+φ
+ε
+(s,x) =xe
+εs
+and H(s,x,ε) =x
+−q
+e
+−ε(q+1)s
+.
+If σ(x,ε) =εx
+p
+and f(s) =s
+−q
+with q > 0, p> 1 then
+φ
+ε
+(s,x) = (x
+1−p
++(1−p)εs)
+1
+1−p
+and H(s,x,ε) =x
+p
+(x
+1−p
++(1−p)εs)
+p+q
+p−1
+.
+References
+[1] L. Arnold, Stochastic differential equations, Theory and applications,
+Wiley, New-York, (1974).
+[2] T. K. Boni, Extinction for discretizations of some semilinear parabolic
+equations, C.R.A.S, Serie I, 333 (2001), 795-800.
+[3] T. K. Boni, On the extinction of the solution for an elliptic equation in a
+cylindrical domain, Ann. Math. Blaise Pascal, 6 (1999), 13-20.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 32Differential Equations and Control Processes, N 1, 2008
+[4] C. A. Braumann, Introduction to stochastic differential equations,
+Stochastic Finance 2004.
+[5] J. Davila, J. Fernandez Bonder, J. D. Rossi, P. Groisman and M.
+Sued, Numerical analysis to stochastic differential equations with explo-
+sions, Stoch. Anal. Appl., 234 (2005), 809-825.
+[6] H. Doss, Liens entre equations differentielles stochastiques et ordinaires,
+Ann. Inst. Henri Poincar, 132 (1977), 99-125.
+[7] J. Fernandez Bonder, P. Groisman, J. D. Rossi, Continuity of the
+explosion time in stochastic differential equations, Submitted.
+[8]A.FriedmanandA.A.Lacey,Theblow-uptimeforsolutionsofnonlin-
+ear heat equations with small diffusion, SIAM J. Math. Anal., 18 (1987),
+711-721.
+[9] I. I. Gikhman and A. V. Skorohod, Introduction to the theory of
+Random processes, W. B. Sounders, Philadelphia.
+[10] P. Groisman, J. D. Rossi, Elect. Jour. Diff. Equat., Vol. 2007 (2007),
+n140, 1-9.
+[11]I.KaratzasandS.E.Shreve,Brownianmotionandstochasticcalculus,
+Volume 113 of Graduate Texts in Mathematics, Springer-Verlag, New-
+York, second edition , (1991).
+[12] H. P. Mckean, Jr. Stochastic integrals, Probability and Mathematical
+statistics, n5. Academie Press New-York, 1969.
+[13] B. φksendal, Stochastic differential equations, An introduction with ap-
+plications, (ﬁfth edition), Springer-Verlag, Berlin.
+[14] M. H. Protter and H. F. Weinberger, Maximum principles in differ-
+ential equations, Prentice Hall, Englewood Cliffs, NJ, (1967).
+[15] K. Sobczyk and B. F. Spencer, Jr. Random fatigue, Academie Press
+Inc., Boston, MA, 1992.
+[16] H. J. Sussmann, On the gap between deterministic and stochastic ordi-
+nary differential equations, Ann. Probability, 61 1978, 1941.
+[17] G. E. Uhlenbeck and L. S. Ornstein, On the theory of Brownian
+motion, Physical Review, 36 (1930), 823–841.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 33Differential Equations and Control Processes, N 1, 2008
+[18] W. Walter, Differential-und Integral-Ungleichungen, Springer,
+Berlin,(1964).
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 34

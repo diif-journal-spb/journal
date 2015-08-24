@@ -1,0 +1,1204 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 3, 2000
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Bifurcation
+GLOBAL BIFURCATIONS OF LIMIT CYCLES
+V. A. GAIKO
+Belarus, 220090 Minsk, Koltsov Str. 49-305
+Belarussian State University of Informatics and Radioelectronics
+Department of Mathematics
+E-mail: vlrgk@cit.org.by
+Abstract
+Two-dimensional polynomial dynamical systems are considered. We de-
+velop Erugin’s two-isocline method for the global analysis of such systems, con-
+struct canonical systems with ﬁeld-rotation parameters and study limit cycle
+bifurcations. Using the canonical systems, cyclicity results and Wintner–Perko
+termination principle, we outline a global approach to the solution of Hilbert’s
+Sixteenth Problem.
+1 Introduction
+We consider two-dimensional dynamical systems
+˙ x = P(x,y), ˙ y = Q(x,y), (1)
+where P(x,y) and Q(x,y) are polynomials of real variables x,y with real coeﬃ-
+cients. The main problem of the qualitative theory of such systems is Hilbert’s
+Sixteenth Problem:Differential Equations and Control Processes, N 3, 2000
+Problem. Find the maximum number and relative position of limit cycles
+of (1).
+This is the most diﬃcult problem in the qualitative theory of polynomial
+systems. There are a lot of methods and results on the study of limit cycles.
+But the Problem has not been solved completely even for the case of simplest
+(quadratic) systems. It is known only that a quadratic system has at least four
+limit cycles in (3 : 1) distribution (see [1–4]).
+There are three bifurcations of limit cycles: 1) Andronov–Hopf bifurca-
+tion (from a singular point of the center or focus type); 2) separatrix cycle
+bifurcation (from a homoclinic or heteroclinic orbit); 3) multiple limit cycle
+bifurcation. The ﬁrst bifurcation was studied completely only for quadratic
+systems. N. N. Bautin proved that the number of limit cycles bifurcating from
+a singular point (its cyclicity) was equal to three [5]. Recently H.
+˙
+Zo l¸ adek
+found out that for cubic systems the cyclicity of a singular point was not
+less than eleven [6]. The second bifurcation has been intensively studying by
+F. Dumortier, R. Roussarie and C. Rousseau. Now we have the classiﬁcation
+of separatrix cycles, know the cyclicity of the most of them (of elementary
+graphics) and have got some global results [7–9]. The last bifurcation is the
+most complicated. Multiple limit cycles were considering, for instance, by J.-
+P. Fran¸ coise, C. C. Pough [10] and L. M. Perko [11–13]. All mentioned bifurca-
+tions can be generalized for higher-dimensional dynamical systems and can be
+used for various applications [14–19].
+However all these bifurcations of limit cycle are local bifurcations. We con-
+sider only a neighborhood of either the point or the separatrix cycle, or the
+multiple limit cycle studying only the corresponding suﬃciently small neigh-
+borhood in the parameter space. It needs a qualitative investigation on the
+whole (both on the whole phase plane and on the whole parameter space), i.e.,
+it needs a global bifurcation theory. This is the ﬁrst idea introduced for the ﬁrst
+time by N. P. Erugin in [20]. Then we should connect all limit cycle bifurcations.
+This idea came from the theory of higher-dimensional dynamical systems. It
+was contained in Wintner’s principle of natural termination [21] and was used
+by L. M. Perko for the study of multiple limit cycles in two-dimensional case [11–
+13]. At last, we must understand how to control the limit cycle bifurcations.
+The best way to do it is to use ﬁeld-rotation parameters considered for the ﬁrst
+time by G. F. D. Duff in [22]. All these ideas were considered in [23–27] and will
+be developed in this paper.
+Electronic Journal.  2Differential Equations and Control Processes, N 3, 2000
+2 Previous results
+In [25] we showed how to apply the two-isocline method to the global quali-
+tative investigation of polynomial systems (1). This method was developed
+by N. P. Erugin for two-dimensional systems [20] and then was generalized by
+V. A. Pliss for the three-dimensional case [14]. An isocline portrait is the most
+natural construction in the corresponding polynomial equation. It is enough
+to have only two isoclines (isoclines of zero and inﬁnity) to obtain principal
+information on the original system, because these two isoclines correspond to
+the right-hand sides of the system. We know geometric properties of isoclines
+(conics, cubics, etc.) and can easily get all isocline portraits. By means of them
+we can obtain all topologically different qualitative pictures of integral curves to
+within a number of limit cycles and distinguishing center and focus. Hence we
+are able to carry out the rough topological classiﬁcation of the phase portraits
+for the polynomial systems.
+Using Erugin’s two-isocline method, we can give, for example, a geometric
+interpretation of all four cases of center for the corresponding quadratic equation
+dy
+dx
+=
+x +ax
+2
++bxy +cy
+2
+−y +mxy +ny
+2
+. (2)
+1) Axial symmetry:
+dy
+dx
+=
+x +ax
+2
++cy
+2
+−y +mxy
+. (3)
+2) Local symmetry (zero divergence) on the whole phase plane (Hamiltonian
+case):
+dy
+dx
+=
+x +ax
+2
++cy
+2
+−y− 2cxy +ny
+2
+. (4)
+3) Orthogonality of asymptotes of hyperbolas forming the family of isoclines
+(Lotka–Volterra case):
+dy
+dx
+=
+x +ax
+2
++bxy−ay
+2
+−y +mxy
+. (5)
+4) Orthogonality of asymptotes of saddles at inﬁnity:
+dy
+dx
+=
+x−x
+2
+− 5nxy + 2(n
+2
++ 1)y
+2
+−y + (6n
+2
++ 1)xy−ny
+2
+. (6)
+Electronic Journal.  3Differential Equations and Control Processes, N 3, 2000
+Studying contact and rotation properties of isoclines we can also construct
+the simplest (canonical) systems containing limit cycles.
+Theorem 1 [25]. Any quadratic system with limit (separatrix) cycles can
+be reduced to one of the systems either
+˙ x =−y(1 +x) +αQ(x,y), ˙ y = Q(x,y) (7)
+or
+˙ x =−y(1 +νy), ˙ y = Q(x,y), ν = 0, 1, (8)
+where
+Q(x,y) = x +λy +ax
+2
++βy(1 +x) +cy
+2
+.
+The advantage of systems (7) and (8) is that they contain the minimal
+number of the essential parameters and some of these parameters rotate the
+vector ﬁeld. More precisely, it is true
+Lemma [25]. Parameters α and β rotate the vector ﬁeld of systems (7)
+and (8) on the whole phase plane: when any of these parameters increases, the
+ﬁeld is rotated in negative direction (clockwise); when they decrease, the ﬁeld
+is rotated in positive direction (counterclockwise). Parameter λ rotates the ﬁeld
+in the half-planes x >−1 and x <−1 in opposite directions: when it increases
+(decreases), the ﬁeld is rotated in negative direction in the half-plane x > −1
+(x <−1) and in positive direction in the half-plane x <−1 (x >−1).
+Two groups of parameters can be distinguished in such systems: static (a,c)
+and dynamic (α,β,λ). Static parameters determine the behavior of the phase
+trajectories in principle, since they control the number, position and type of
+singular points in ﬁnite part of the plane (ﬁnite singularities). Parameters from
+the ﬁrst group determine also a possible behavior of separatrices and singular
+points at inﬁnity (inﬁnite singularities) under the variation of parameters from
+the second group. Dynamic parameters are rotation parameters. They typically
+do not change the number, position and index of ﬁnite singularities and involve a
+directional rotation in the vector ﬁeld (in general, ﬁnite singular points can move
+under the variation of some such parameters). The rotation parameters allow to
+control inﬁnite singularities, the behavior of limit cycles and separatrices. The
+cyclicity of singular points and separatrix cycles, the behavior of semi-stable
+and other multiple limit cycles can be studied by means of these parameters as
+Electronic Journal.  4Differential Equations and Control Processes, N 3, 2000
+well. Obviously, the number of limit cycles depends on the number of rotation
+parameters. Thus with the help of rotation parameters we can control all limit
+cycle bifurcations, i.e., we can solve the ﬁnest qualitative problems and carry
+out the global qualitative investigation of the polynomial systems.
+Basing on the center cases and applying ﬁeld-rotation parameters, we de-
+veloped a new approach to the classiﬁcation of separatrix cycles [24, 25]. The
+classiﬁcation was carried out according to the number and the type of ﬁnite sin-
+gularities of the original reversible systems and with the help of the successive
+variation of rotation parameters. We considered the following cases of singular
+points: 1) three saddles and one antisaddle; 2) two saddles and two antisad-
+dles; 3) one saddle and three antisaddles; 4) simple saddle and antisaddle; 5) two
+simple antisaddles (nondegenerate cases) and 6) degenerate cases.
+That approach allowed not only to deﬁne all possible types of separatrix
+cycles, but also to control their cyclicity and relative position, to keep the track
+of limit cycles (including multiple limit cycles), to obtain both the corresponding
+phase portraits and the corresponding division in the parameter space.
+Earlier, in [23], we studied limit cycle bifurcations of various codimensions
+for a similar quadratic system with ﬁeld-rotation parameters and introduced so-
+called a function of limit cycles: a cross-section of the Andronov–Hopf manifold
+formed by the limit cycles and the corresponding values of a rotation parameter.
+Using numerical and analytical methods, we constructed concrete examples of
+systems with different number and relative position of limit cycles. In particu-
+lar, an example of the system with at least four limit cycles in (3 : 1) distribution
+was constructed. In that work we considered the case of two singular points and
+two ﬁeld-rotation parameters and showed that in such two-parameter families
+semi-stable limit cycles always moved either to the origin or to the separatrix
+cycle under the variation of the rotation parameters. Their termination was in-
+dicated either by vanishing the ﬁrst focus quantity at the origin or by vanishing
+the divergence (or the equivalent value) at the saddle (the saddle points) lying
+on the separatrix cycle.
+In [26, 27] we used all this information and by means of the ﬁeld-rotation
+parameters and functions of limit cycles we tried to control semi-stable limit
+cycles changing the rotation parameters so that to push the semi-stable limit
+cycles either to a singular point of focus (centre) type or to some separatrix
+cycle and to obtain a contradiction with their cyclicity.
+Electronic Journal.  5Differential Equations and Control Processes, N 3, 2000
+3 Local bifurcation surfaces of multiple limit cycles
+Let us ﬁrst rewrite system (1) in the vector form
+˙ x=f(x,μ), (9)
+wherex∈R
+2
+,μ∈R
+n
+,f ∈R
+2
+(f is a polynomial vector function), then recall
+a few basic facts about multiple limit cycles and formulate Perko’s theorems [13]
+on the local existence of fold, cusp, swallow-tail and multiplicity-m limit cycle
+bifurcation surfaces for polynomial system (9).
+Assume that system (9) has a limit cycle
+L
+0
+:x =φ
+0
+(t)
+of minimal period T
+0
+at some parameter value μ = μ
+0
+∈ R
+n
+. Let l be the
+straight line normal to L
+0
+at the point p
+0
+=φ
+0
+(0) and let r denote the coor-
+dinate along l with r positive on the exterior of L
+0
+. It then follows from the
+implicit function theorem for analytic functions that there is a δ > 0 such that
+the Poincar´ e maph(r,μ) is deﬁned and analytic for|r| < δ andkμ−μ
+0
+k < δ [1].
+The displacement function for (9) along the normal line l to L
+0
+is then deﬁned
+as the function
+d(r,μ) = h(r,μ)−r.
+In term of the displacement function, a limit cycle L
+0
+of (9) is a multiple
+limitcycle iffd(0,μ
+0
+) = d
+r
+(0,μ
+0
+) = 0 and it isasimplelimitcycle (or hyperbolic
+limit cycle) if it is not a multiple limit cycle; furthermore, L
+0
+is a limit cycle of
+multiplicity m iff
+d(0,μ
+0
+) = d
+r
+(0,μ
+0
+) = ... = d
+(m−1)
+r
+(0,μ
+0
+) = 0, d
+(m)
+r
+(0,μ
+0
+)6= 0.
+The multiplicity of L
+0
+is independent of the point p
+0
+∈ L
+0
+through which we
+take the normal line l [2].
+The following formulas, which determine the derivatives of the displacement
+function in terms of integrals of the vector ﬁeldf along the periodic orbitφ
+0
+(t),
+are classical [2]:
+d
+r
+(0,μ
+0
+) = e
+R
+T
+0
+0
+∇·f(φ
+0
+(t),μ
+0
+)dt
+− 1
+and
+d
+μ
+j
+(0,μ
+0
+) =
+−ω
+0
+kf(φ
+0
+(0),μ
+0
+)k
+Z
+T
+0
+0
+e
+−
+R
+t
+0
+∇·f(φ
+0
+(s),μ
+0
+)ds
+f ∧f
+μ
+j
+(φ
+0
+(t),μ
+0
+)dt
+Electronic Journal.  6Differential Equations and Control Processes, N 3, 2000
+for j = 1,... ,n, where ω
+0
+= ±1 according to whether L
+0
+is positively or ne-
+gatively oriented, respectively, and where the wedge product of two vectors
+x = (x
+1
+,x
+2
+) andy = (y
+1
+,y
+2
+) inR
+2
+is deﬁned asx∧y = x
+1
+y
+2
+−x
+2
+y
+1
+. Similar
+formulas for d
+rr
+(0,μ
+0
+) and d
+rμ
+j
+(0,μ
+0
+) can be derived in terms of integrals of
+the vector ﬁeld f and its ﬁrst and second partial derivatives along φ
+0
+(t). The
+hypotheses of the theorems in this section will be stated in terms of conditions
+on the displacement function d(r,μ) and its partial derivatives at (0,μ
+0
+).
+In this section we formulate Perko’s theorems on the local existence of
+(n−m+1)-dimensional surfaces, C
+m
+, of multiplicity-m limit cycles for poly-
+nomial system (9) with μ ∈ R
+n
+and n ≥ m ≥ 2. These results describe the
+topological structure of the codimension (m− 1) bifurcation surfaces C
+m
+. For
+m = 2, 3, and 4, C
+2
+, C
+3
+, and C
+4
+are the familiar fold, cusp, and swallow-tail
+bifurcation surfaces; for m≥ 5, the topological structure of the surfaces C
+m
+is
+more complex. For instance, C
+5
+and C
+6
+are butterﬂy and wigwam bifurcation
+surfaces respectively. Since the proofs of the theorems in this section, describing
+the universal unfolding near a multiple limit cycles of (9), parallel the proofs in
+elementary catastrophe theory, they are not included in this paper (see also [13]
+for more details).
+Theorem 2. Suppose that n ≥ 2, that for μ =μ
+0
+∈R
+n
+system (9) has a
+multiplicity-two limit cycle L
+0
+, and that d
+μ
+1
+(0,μ
+0
+)6= 0. Then given   > 0, there
+is a δ > 0 and a unique function g(μ
+2
+,... ,μ
+n
+) with g(μ
+(0)
+2
+,... ,μ
+(0)
+n
+) = μ
+(0)
+1
+,
+deﬁned and analytic for |μ
+2
+− μ
+(0)
+2
+| < δ, ... ,|μ
+n
+− μ
+(0)
+n
+| < δ, such that for
+|μ
+2
+−μ
+(0)
+2
+| < δ,... ,|μ
+n
+−μ
+(0)
+n
+| < δ,
+C
+2
+: μ
+1
+= g(μ
+2
+,... ,μ
+n
+)
+is an (n− 1)-dimensional, analytic fold bifurcation surface of multiplicity-two
+limit cycles of (9) through the point μ
+0
+.
+Theorem 3. Suppose that n ≥ 3, that for μ = μ
+0
+∈ R
+n
+system (9) has
+a multiplicity-three limit cycle L
+0
+, that d
+μ
+1
+(0,μ
+0
+) 6= 0, d
+rμ
+1
+(0,μ
+0
+) 6= 0 and for
+j = 2,... ,n,
+Δ
+j
+≡
+∂(d,d
+r
+)
+∂(μ
+1
+,μ
+j
+)
+(0,μ
+0
+)6= 0.
+Then given   > 0, there is a δ > 0 and constants σ =±1 for j = 2,... ,n, and
+there exist unique functions h
+1
+(μ
+2
+,... ,μ
+n
+), h
+2
+(μ
+2
+,... ,μ
+n
+) and g
+±
+(μ
+2
+,... ,μ
+n
+)
+with h
+1
+(μ
+(0)
+2
+,... ,μ
+(0)
+n
+) = μ
+(0)
+1
+, h
+2
+(μ
+(0)
+2
+,... ,μ
+(0)
+n
+) = μ
+(0)
+1
+and g
+±
+(μ
+(0)
+2
+,... ,μ
+(0)
+n
+) =
+μ
+(0)
+1
+, where h
+1
+and h
+2
+are deﬁned and analytic for |μ
+j
+−μ
+(0)
+j
+| < δ, j = 2,... ,n,
+Electronic Journal.  7Differential Equations and Control Processes, N 3, 2000
+and g
+±
+are deﬁned and continuous for 0 ≤ σ
+j
+(μ
+j
+−μ
+(0)
+j
+) < δ and analytic for
+0 < σ
+j
+(μ
+j
+−μ
+(0)
+j
+) < δ, j = 2,... ,n such that
+C
+3
+:
+(
+μ
+1
+= h
+1
+(μ
+2
+,... ,μ
+n
+)
+μ
+1
+= h
+2
+(μ
+2
+,... ,μ
+n
+)
+is an (n−2)-dimensional, analytic, cusp bifurcation surface of multiplicity-three
+limit cycles of (9) through the point μ
+0
+and
+C
+±
+2
+: μ
+1
+= g
+±
+(μ
+2
+,... ,μ
+n
+)
+are two (n− 1)-dimensional, analytic, fold bifurcation surfaces of multiplicity-
+two limit cycles of (9) which intersect in a cusp along C
+3
+.
+Theorem 4. Suppose that n ≥ 4, that for μ = μ
+0
+∈ R
+n
+system (9)
+has a multiplicity-four limit cycle L
+0
+, that d
+μ
+1
+(0,μ
+0
+) 6= 0, d
+rμ
+1
+(0,μ
+0
+) 6= 0,
+d
+rrμ
+1
+(0,μ
+0
+)6= 0, and that for j = 2,... ,n,
+∂(d,d
+r
+)
+∂(μ
+1
+,μ
+j
+)
+(0,μ
+0
+)6= 0,
+∂(d,d
+rr
+)
+∂(μ
+1
+,μ
+j
+)
+(0,μ
+0
+)6= 0,
+∂(d
+r
+,d
+rr
+)
+∂(μ
+1
+,μ
+j
+)
+(0,μ
+0
+)6= 0.
+Then given   > 0, there is a δ > 0 and constants σ
+jk
+= ±1 for j = 2,... ,n,
+k = 1, 2, and there exist unique functions g
+i
+(μ
+2
+,... ,μ
+n
+), h
+±
+k
+(μ
+2
+,... ,μ
+n
+) and
+F
+i
+(μ
+2
+,... ,μ
+n
+), with g
+i
+(μ
+(0)
+2
+,... ,μ
+(0)
+n
+) = h
+±
+k
+(μ
+(0)
+2
+,... ,μ
+(0)
+n
+) = F
+i
+(μ
+(0)
+2
+,... ,μ
+(0)
+n
+) =
+μ
+(0)
+1
+, for i = 0, 1, 2 and k = 1, 2, where F
+i
+is deﬁned and analytic for i =
+0, 1, 2, and |μ
+j
+− μ
+(0)
+j
+| < δ, j = 2,... ,n, h
+±
+k
+are deﬁned and continuous for
+0 ≤ σ
+jk
+(μ
+j
+−μ
+(0)
+j
+) < δ and analytic for 0 < σ
+jk
+(μ
+j
+−μ
+(0)
+j
+) < δ, j = 2,... ,n,
+k = 1, 2, and for i = 0, 1, 2, g
+i
+is deﬁned and analytic in the cuspidal region
+between the surfaces μ
+1
+= h
+±
+2
+(μ
+2
+,... ,μ
+n
+), which intersect in a cusp, and g
+i
+is
+continuous in the closure of that region, such that
+C
+4
+:
+
+
+
+
+
+μ
+1
+= F
+0
+(μ
+2
+,... ,μ
+n
+)
+μ
+1
+= F
+1
+(μ
+2
+,... ,μ
+n
+)
+μ
+1
+= F
+2
+(μ
+2
+,... ,μ
+n
+)
+is an (n− 3)-dimensional, analytic, swallow-tail bifurcation surface of multi-
+plicity-four limit cycles of (9) through the point μ
+0
+which is the intersection of
+two (n−2)-dimensional, analytic, cusp bifurcation surfaces of multiplicity-three
+limit cycles of (9),
+C
+±
+3
+:
+(
+μ
+1
+= h
+±
+1
+(μ
+2
+,... ,μ
+n
+)
+μ
+1
+= h
+±
+2
+(μ
+2
+,... ,μ
+n
+)
+Electronic Journal.  8Differential Equations and Control Processes, N 3, 2000
+which intersect in a cusp along C
+4
+; furthermore, C
++
+3
+= C
+(0)
+2
+T
+C
+(1)
+2
+and C
+−
+3
+=
+C
+(0)
+2
+T
+C
+(2)
+2
+where for i = 0, 1, 2,
+C
+i
+2
+: μ
+1
+= g
+i
+(μ
+2
+,... ,μ
+n
+)
+are (n− 1)-dimensional, analytic, fold bifurcation surfaces of multiplicity-two
+limit cycles of (9) which intersect in cusps along C
+±
+3
+and in an (n− 2)-dimen-
+sional, analytic surface C
+(1)
+2
+T
+C
+(2)
+2
+on which (9) has two multiplicity-two limit
+cycles.
+Theorem 5. Given m ≥ 2. Suppose that n ≥ m, that for μ = μ
+0
+∈ R
+n
+polynomial system (9) has a multiplicity-m limit cycle L
+0
+, that
+∂d
+∂μ
+1
+(0,μ
+0
+)6= 0,
+∂d
+r
+∂μ
+1
+(0,μ
+0
+)6= 0, ... ,
+∂d
+(m−2)
+r
+∂μ
+1
+(0,μ
+0
+)6= 0,
+and that
+∂(d
+(i)
+r
+,d
+(j)
+r
+)
+∂(μ
+1
+,μ
+k
+)
+(0,μ
+0
+)6= 0
+for i,j = 0,... ,m− 2 with i 6= j and k = 2,... ,n. Then given   > 0 there is
+a δ > 0 such that for kμ−μ
+0
+k < δ, system (9) has
+(1) a unique (n−m+1)-dimensional analytic surface C
+m
+of multiplicity-m
+limit cycles of (9) through the point μ
+0
+;
+(2) two (n− m + 2)-dimensional analytic surfaces C
+m−1
+of multiplicity-
+(m− 1) limit cycles of (9) through the pointμ
+0
+which intersect in a cusp along
+C
+m
+;
+...
+(j) exactly j, (n−m+j)-dimensional analytic surfaces C
+m−j+1
+of multipli-
+city-(m−j +1) limit cycles of (9) through the pointμ
+0
+which intersect pairwise
+in cusps along the bifurcation surfaces C
+m−j+2
+;
+···
+(m−1) exactly (m−1), (n−1)-dimensionalanalyticfoldbifurcationsurfaces
+C
+2
+of multiplicity-two limit cycles of (9) through the point μ
+0
+which intersect
+pairwise in a cusp along the (n− 2)-dimensional cusp bifurcation surfaces C
+3
+.
+Remark. As in [13], it can be shown that the set of polynomial vector ﬁelds
+f(x,μ) satisfying the hypotheses of Theorem 5 is an open, dense subset of the
+set of all polynomial vector ﬁelds having a multiplicity-m limit cycle L
+0
+at a
+pointμ =μ
+0
+∈R
+n
+; i.e., the codimension (m− 1) bifurcation at L
+0
+, described
+in Theorem 5, is generic.
+Electronic Journal.  9Differential Equations and Control Processes, N 3, 2000
+4 Global bifurcations
+In this section we use the results from Sections 2 and 3 to develop a global
+approach to the study of limit cycle bifurcations. For instance, in [8] by means
+of Abelian integrals a complete study of quadratic three-parameter unfoldings
+of some integrable system was carried out and for small perturbations of the
+system a versal bifurcation diagram and global phase portraits including the
+precise number and conﬁguration of the limit cycles were obtained. We use more
+general Wintner–Perko termination principle [13] describing a global behaviour
+of multiple limit cycles to connect all local bifurcations of limit cycles and to
+develop a global bifurcation theory of polynomial systems (9) on the whole
+parameter space. For (9) this principle can be formulated in the following way:
+Theorem 6 (Termination Principle). Any one-parameter family of
+multiplicity-m limit cycles of a polynomial system (9) can be extended in a
+unique way to a maximal one-parameter family of multiplicity-m limit cycles
+of (9)whichiseitheropenorcyclic. Ifitisopen, thenitterminateseitherasthe
+parameterorthelimitcyclesbecomeunbounded; or, thefamilyterminateseither
+at a singular point of (9), which is typically a ﬁne focus of multiplicity m, or on
+a (compound) separatrix cycle of (9), which is also typically of multiplicity m.
+In order to obtain a one-parameter family of multiplicity-m limit cycles
+of (9), we can use the results on establishing the local existence of the corre-
+sponding bifurcation surfaces which were formulated in [13] for the case when
+n = m. To show that such a one-parameter family of multiplicity-m limit cycles
+can be uniquely continued through any bifurcation and to prove the termination
+principle, L. M. Perko used arcs and paths of (multiplicity-m) limit cycles which
+were originally introduced by J. Mallet-Paret and J. A. Yorke in their work [15].
+After deﬁning arcs and paths of multiplicity-m limit cycles of (9), he applied
+Puiseux series as in [12] to show how the Poincar´ e map or displacement function
+for (9) can be used to deﬁne a local analytic path of multiplicity-m limit cycles,
+how this path can be uniquely continued through any bifurcation and how it
+can be extended to a unique maximal one-parameter family of multiplicity-m
+limit cycles of (9) which is either open or cyclic and which satisﬁes the Termina-
+tion Principle. This principle implies that the boundary of any global multiple
+limit cycle bifurcation surface typically (generically) consists of Hopf bifurcation
+surfaces of the same multiplicity and/or homoclinic (or heteroclinic) loop bifur-
+cation surfaces also of the same multiplicity. However, there are examples [13]
+which show that in non-generic cases, a one-parameter family of multiplicity-m
+Electronic Journal.  10Differential Equations and Control Processes, N 3, 2000
+limit cycles can terminate at a singular point (focus) or on a separatrix cycle of
+multiplicity k > m; it can also terminate at a center or at a generate singular
+point in a Bogdanov–Takens (or cusp) bifurcation.
+Besides, the Termination Principle is too general to be applied directly
+to such speciﬁc problem as Hilbert’s 16th Problem. For example, we do not
+know precisely what parameters of system (9) really control the multiple limit
+cycles, we have no complete information about the boundary of the global
+bifurcation surface of multiple limit cycles, we do not know how to separate the
+case when the maximal one-parameter family of multiple limit cycles is cyclic,
+etc. Therefore it makes sense to consider, ﬁrst, the quadratic case of (9). By
+means of canonical systems (7), (8) we can outline the proof of the following
+conjecture:
+Conjecture 1. There exists no quadratic system having a swallow-tail
+bifurcation surface of multiplicity-four limit cycles in its parameter space. In
+other words, a quadratic system cannot have neither a multiplicity-four limit
+cycle nor four limit cycles around a singular point (focus) and the maximum
+multiplicity or the maximum number of limit cycles surrounding a focus is equal
+to three.
+P r o o f . Let us give a sketch of proof of this conjecture. The proof is
+carried out by contradiction. We suppose that system (7) containing three
+ﬁeld-rotation parameters α, β, λ has four limit cycles around the origin; then
+we get into some three-dimensional domain of these parameters being restricted
+by some conditions on the rest two parametersa,c corresponding to the deﬁnite
+case of singular points in the phase plane [25]. The three-parameter domain
+of four limit cycles is bounded by three fold bifurcation surfaces forming a
+swallow-tail bifurcation surface of multiplicity-four limit cycles [13]. It can be
+shown that the corresponding maximal one-parameter family of multiplicity-
+four limit cycles cannot be cyclic and terminates either at the origin or on some
+separatrix cycle surrounding the origin, because its termination is indicated
+either by vanishing the divergence and the ﬁrst focus quantity at the origin or
+by vanishing the divergence (or the equivalent value) at the saddle (or saddle
+points) lying on the separatrix cycle [23, 25]. Since we know absolutely precisely
+at least the cyclicity of the singular point (Bautin’s result) which is equal to
+three, we have got a contradiction with the Termination Principle stating that
+the multiplicity of limit cycles cannot be higher than the multiplicity (cyclicity)
+of the singular point in which they terminate [13]. This contradiction concludes
+the proof.
+Electronic Journal.  11Differential Equations and Control Processes, N 3, 2000
+Since we know the concrete properties of all ﬁeld-rotation parameters in (7),
+(8) and, besides, we are able to control simultaneously bifurcations of limit
+cycles around different singular points, we can formulate also
+Conjecture2. The maximum number of limit cycles in a quadratic system
+is equal to four and the only possible their distribution is (3 : 1).
+5 Conclusion and applications
+In a similar way cubic and more general polynomial systems can be considered.
+Thus, generalizing the obtained results and using the Termination Principle, we
+develop a global bifurcation theory of planar polynomial dynamical systems.
+Perko’s termination principle is a consequence of Wintner’s principle of
+natural termination which was stated for higher-dimensional dynamical systems
+and was applied for studying one-parameter families of periodic orbits of the
+restricted three-body problem [21]. By means of Puiseux series, it was shown
+that in the analytic case any one-parameter family of periodic orbits can be
+uniquely continued through any bifurcation except a period-doubling bifurca-
+tion. Besides, there exist higher-dimensional systems where the periods in a
+one-parameter family can become unbounded in strange ways: for example,
+the periodic orbits may belong to a strange invariant set (strange attractor)
+generated at a bifurcation value for which there is a homoclinic tangency of
+the stable and unstable manifolds of the Poincar´ e map. Such bifurcations can
+occur even in three-dimensional quadratic systems of Lorenz type. It would be
+interesting to construct a three-dimensional system with a strange attractor
+˙ x = P (x,y,εz), ˙ y = Q(x,y,εz), ε ˙ z = R(x,y,z,ε) (10)
+on the base, for example, of a planar quadratic system with two unstable foci
+and an invariant straight line.
+Applying the obtained results, we can also carry out the global qualitative
+analysis of two-dimensional polynomial dynamical systems simulating compli-
+cated generation-recombination processes in semiconductors. Basing on these
+processes, new types of transistors are worked out in micro- and nanoelectronics,
+and the qualitative analysis of the mathematical models helps to obtain more
+optimal characteristics for the transistors. We consider also possibilities of ap-
+plication of the global bifurcation theory to the study of generalized (polynomial
+and nonpolynomial) higher-dimensional Lotka–Volterra systems describing the
+dynamics in complex ecological models.
+Electronic Journal.  12Differential Equations and Control Processes, N 3, 2000
+References
+[1] A. A. Andronov, E. A. Leontovich, I. I. Gordon, A. G. Mayer, Qualitative
+Theory of Second-Order Dynamical Systems, Nauka, Moscow, 1966. (Rus-
+sian)
+[2] A. A. Andronov, E. A. Leontovich, I. I. Gordon, A. G. Mayer, Theory of Bi-
+furcations of Dynamical Systems in a Plane, Nauka, Moscow, 1967. (Rus-
+sian)
+[3] Y. Ye et al., Theory of Limit Cycles, AMS Transl. Math. Monogr. 66,
+Providence, RI, 1986.
+[4] Z. Zhang et al., Qualitative Theory of Differential Equations, AMS Transl.
+Math. Monogr. 101, Providence, RI, 1992.
+[5] N. N. Bautin, On the number of limit cycles which appear with the variation
+of the coeﬃcients from an equilibrium point of focus or center type,Matem.
+Sbor. 30 (1952), 181–196. (Russian)
+[6] H.
+˙
+Zo l¸ adek, Eleven small limit cycles in a cubic vector ﬁeld, Nonlinearity
+8 (1995), 843–860.
+[7] F. Dumortier, R. Roussarie, C. Rousseau, Hilbert’s 16th problem for
+quadratic vector ﬁelds, J. Differential Equations 110 (1994), 86–133.
+[8] F. Dumortier, C. Li, Z. Zhang, Unfolding of a quadratic integrable system
+with two centers and two unbounded heteroclinic loops, J. Differential
+Equations 139 (1997), 146–193.
+[9] R. Roussarie, Bifurcations of Planar Vector Fields and Hilbert’s Sixteenth
+Problem, Birkh¨ auser, Basel/Boston, 1998.
+[10] J.-P. Fran¸ coise, C. C. Pough, Keeping track of limit cycles, J. Differential
+Equations 65 (1986), 139–157.
+[11] L. M. Perko, Global families of limit cycles of planar analytic systems,
+Trans. Amer. Math. Soc. 322 (1990), 627–656.
+[12] L. M. Perko, Homoclinic loop and multiple limit cycle bifurcation surfaces,
+Trans. Amer. Math. Soc. 344 (1994), 101–130.
+[13] L. M. Perko, Multiple limit cycle bifurcation surfaces and global families of
+multiple limit cycles, J. Differential Equations 122 (1995), 89–113.
+Electronic Journal.  13Differential Equations and Control Processes, N 3, 2000
+[14] V. A. Pliss,NonlocalProblemsofOscillationTheory, Nauka, Moscow, 1964.
+(Russian)
+[15] J. Mallet-Paret and J. A. Yorke, Snakes: oriented families of periodic orbits,
+their sources, sinks and continuation, J. Differential Equations 43 (1982),
+419–450.
+[16] S.-N. Chow, J. K. Hale, Methods of Bifurcation Theory, Springer-Verlag,
+Berlin/New York, 1982.
+[17] J. Guckenheimer, P. Holms, Nonlinear Oscillations, Dynamical Systems,
+and Bifurcations of Vector Fields, Springer-Verlag, Berlin/New York, 1983.
+[18] M. Golubitsky, D. G. Shaeffer,Singularities and Groups in Bifurcation The-
+ory, Vol. 1, Springer-Verlag, Berlin/New York, 1985.
+[19] M. Golubitsky, I. N. Stewart, D. G. Shaeffer,SingularitiesandGroupsinBi-
+furcation Theory, Vol. 2, Springer-Verlag, Berlin/New York, 1988.
+[20] N. P. Erugin, Some questions of motion stability and qualitative theory of
+differential equations on the whole, Prikl. Mat. Mekh.14 (1950), 459–512.
+(Russian)
+[21] A. Wintner, Beweis des E. Stromgrenschen dynamischen Abschlusprinzips
+der periodischen Bahngruppen im restringierten Dreikorperproblem, Math.
+Zeitschr. 34 (1931), 321–349.
+[22] G. F. D. Duff, Limit-cycles and rotated vector ﬁelds, Ann. Math67 (1953),
+15–31.
+[23] L. A. Cherkas, V. A. Gaiko, Bifurcations of limit cycles of a quadratic sys-
+tem with two critical points and two ﬁeld-rotation parameters, Diff. Urav-
+neniya 23 (1987), 1544–1553 (Russian); Differential Equations 23 (1987),
+1062–1069.
+[24] V. A. Gaiko, Separatrix cycles of quadratic systems, Doklady Akad. Sci.
+Belarus 37 (1993), 18–21. (Russian)
+[25] V. A. Gaiko, Qualitative theory of two-dimensional polynomial dynami-
+cal systems: problems, approaches, conjectures, Nonlin. Analysis, Theory,
+Meth. Appl. 30 (1997), 1385–1394.
+Electronic Journal.  14Differential Equations and Control Processes, N 3, 2000
+[26] V. A. Gaiko, Global qualitative investigation, limit cycle bifurcations and
+applications of polynomial dynamical systems, inPapers Conf. Differential
+Equations and Their Appl., Z. Do˘ sl´ a et al., Eds, Masaryk University, Brno,
+1997, pp. 123–130.
+[27] V. A. Gaiko, Application of topological methods to qualitative investigation
+of two-dimensional polynomial dynamical systems, Univ. Iagellon. Acta
+Math. 36 (1998), 211–214.
+Electronic Journal.  15

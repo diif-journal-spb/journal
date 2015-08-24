@@ -1,0 +1,4281 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 1, 2011
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Partial Differential Equations for Wave Pockets in the Minkowski
+4-dimensional Spaces
+Zoran Majki  c
+International Society for Research in Science and Technology
+PO Box 2464 Tallahassee, FL 32316 - 2464 USA
+email: majk.1234@yahoo.com,
+http://zoranmajkic.webs.com/
+Abstract
+In this paper we presented the partial differential equations [4] for the wave-pockets in
+the Minkowski 4-dimensional spaces. In particular we considered the stationary cases for
+the matter wave-pockets, by considering that in all cases, the geometric form (the matter
+distribution  ) of a particle in a given time-instancet depends on the particular boundary
+conditions for these differential equations as well.
+In physics and mathematics, Minkowski space (or Minkowski time-space) is the
+mathematical setting in which Einstein's theory of special relativity is most
+conveniently formulated. In this setting the three ordinary dimensions of space
+are combined with a single dimension of time to form a four-dimensional man-
+ifold for representing a time-space.
+In theoretical physics, Minkowski space is often contrasted with Euclidean
+space. While a Euclidean space has only spacelike dimensions, a Minkowski
+space also has one timelike dimension. We de ne the basic time-space four
+mutually orthogonal vectors e
+j
+; 0 j  3, by the following matrix:Differential Equations and Control Processes, N 1, 2011
+0
+B
+B
+B
+B
+@
+e
+0
+e
+1
+e
+2
+e
+3
+1
+C
+C
+C
+C
+A
+=
+0
+B
+B
+B
+B
+@
+1 0 0 0
+0 i 0 0
+0 0 i 0
+0 0 0 i
+1
+C
+C
+C
+C
+A
+, with imaginary number i =
+p
+ 1.
+Note that the matrix above is a particular case of the Minkowski tensor using
+a four-dimensional time-space, which combines the real dimension of time with
+the three imaginary dimensions of space.
+Consequently, a vector of position in this space-time 4-dimensional system is
+given by
+  !
+r
+4
+= cte
+0
++xe
+1
++ye
+2
++ze
+3
+= cte
+0
++
+  !
+r , where t is the time (i.e., ct is the
+timelike component of
+  !
+r
+4
+, where c is the velocity of light in the vacuum) and
+  !
+r = xe
+1
++ye
+2
++ze
+3
+is an ordinary Euclidean vector with x;y;z three spatial
+coordinates.
+Its in nitesimal amount is de ned by d
+  !
+s =cdte
+0
++dxe
+1
++dye
+2
++dze
+3
+, where
+dt;dx;dy and dz are in nitesimal amounts of time-space dimensions.
+Thus, in this 4-dimensional system the time is real while the three orthogonal
+space coordinates are imaginary. This choice is adopted in order to have that
+the distance
+ds
+2
+=d
+  !
+sd
+  !
+s = (cdt)
+2
+ dx
+2
+ dy
+2
+ dz
+2
+,
+for all local time-space reference systems of observations of quantum events be
+the positive real value (where space dimensions are limited).
+An angular wavenumber vector in this four-dimensional time-space is given by
+  !
+k
+4
+=k
+t
+e
+0
++k
+x
+e
+1
++k
+y
+e
+2
++k
+z
+e
+3
+.
+In what follows we will denote by
+  !
+k =k
+x
+e
+1
++k
+y
+e
+2
++k
+z
+e
+3
+the spatial component
+of the angular wavenumber vector, with k
+2
+=j
+  !
+k
+  !
+kj = k
+2
+x
++k
+2
+y
++k
+2
+z
+, so that
+k
+2
+4
+=
+  !
+k
+4
+  !
+k
+4
+=k
+2
+t
+ k
+2
+.
+The mutually independent space-components are de ned as usual by k
+x
+=
+2 
+ 
+x
+; k
+y
+=
+2 
+ 
+y
+; k
+z
+=
+2 
+ 
+z
+, where 
+x
+; 
+y
+; 
+z
+are spatial wavelengths w.r.t the axesx;y
+andz respectively, and  =
+2 
+k
+is the (total) spatial wavelength. Let! = 2   be
+an angular frequency that depends on the space-components,  =
+1
+T
+with a time
+periodT . Thus, 
+t
+=cT is the time-like wavelength andk
+t
+=
+2 
+ 
+t
+=
+!(k)
+c
+depends
+on the space-components in
+  !
+k
+4
+, so that it holds that dk
+4
+= dk = dk
+x
+dk
+y
+dk
+z
+,
+and 
+  !
+k
+4
+  !
+r
+4
+=k
+x
+x +k
+y
+y +k
+z
+z !(k)t.
+Remark: from the relativistic theory we have that for each massive elemen-
+tary particle (with rest mass m
+0
+greater than zero) it holds that !(k) =
+ c
+p
+k
+2
++ (m
+0
+cn~)
+2
+, where ~ =
+h
+2 
+is the Dirac's constant, for the Planck's
+Electronic Journal. http://www.math.spbu.ru/diffjournal 49Differential Equations and Control Processes, N 1, 2011
+constant h = 6:6210
+ 34
+Js.
+Note that we assume that ! can be positive or negative (clockwise or counter-
+clockwise angular frequency), so that the energy of the particle is E = ~j!j,
+wherejj denotes the absolute value. In the rest of this paper we will consider
+the cases when ! is positive.
+Notice that if we represent an elementary particle, with energy E = ~! and
+momentum
+  !
+p = ~
+  !
+k , by a single harmonic Ae
+ i
+  !
+k
+4
+  !
+r
+4
+in this four-dimensional
+space, where
+  !
+k
+4
+=
+!
+c
+e
+0
++
+  !
+k =
+E
+~c
+e
+0
++
+  !
+p
+~
+, then we obtain thatk
+2
+4
+= (
+!
+c
+)
+2
+ k
+2
+= 0
+for particles with rest mass equal to zero (photons, gravitons, etc..), andk
+2
+4
+> 0
+for the massive particles (with rest mass m
+0
+greater than zero). In fact, we
+obtain thatjk
+4
+j =
+!
+0
+c
+where !
+0
+=
+m
+0
+c
+2
+~
+is the invariant angular frequency for
+particles (analog to the invariant rest mass m
+0
+of particles). Thus, similarly
+to the 3-dimensional angular wavenumber vector
+  !
+k that in physics means the
+particle's momentum, the 4-dimensional angular wavenumber
+  !
+k
+4
+has a physical
+meaning as the particle's relativistically invariant angular frequency.
+ 
+The plan of this paper is the following: In Section 1 we present an introduction
+to matter-events in the Minkowski's space, and we speci ed their stationary
+conditions for the massive and massless elementary particles. In Section 2
+we speci ed the formal de nition for matter-events as propagation of wave-
+pockets, and we presented an example for the propagation of photons (light).
+The main result is developed and presented in Section 3, in two propositions
+with proofs, for the  rst and for the second-order partial differential equations of
+these wave-pockets. Finally, in Section 4 are given applications of these results
+to the quantum mechanics, with two signi cant examples.
+1 Introduction to matter-events
+In any given instance of timet, any matter-event in this time-space is a partic-
+ular time-space perturbation 	(
+  !
+r
+4
+), that can be mathematically given by the
+following Fourier transformation:
+	(
+  !
+r
+4
+) = 	(x;y;z;t) =
+R
+C(k
+4
+)e
+i( 
+  !
+k
+4
+  !
+r
+4
+)
+dk
+4
+=
+=
+R
+A(k)e
+i( 
+  !
+k
+  !
+r !(k)t)
+dk = (where A(k) =C(k
+4
+) =C(
+q
+(
+!(k)
+c
+)
+2
+ k
+2
+))
+=
+RRR
++1
+ 1
+A(k)e
+i(k
+x
+x+k
+y
+y+k
+z
+z !(k)t)
+dk
+x
+dk
+y
+dk
+z
+.
+It is a space-distribution of a particle in a given instance of time t, and it
+changes in time, that is, the amplitudes A(k) are generally dependent on time
+Electronic Journal. http://www.math.spbu.ru/diffjournal 50Differential Equations and Control Processes, N 1, 2011
+as well.
+Mathematically, these matter-events are complex functions, composed by one
+real and one imaginary component. The amplitudes A(k) of the harmonics, in
+a given instance of time t, are given by inverse Fourier transformation,
+A(k) =
+RRR
++1
+ 1
+	(x;y;z;t)e
+ i(k
+x
+x+k
+y
+y+k
+z
+z !(k)t)
+dxdxdz.
+The elementary particles are pocket waves that propagate in this four-
+dimensional space.
+Thus, for such particular stationary cases we have that d!(k)=d
+  !
+k is con-
+stant (that is, it does not depend on
+  !
+k ), equal to the particle's velocity
+ 
+  !
+v = v
+x
+e
+1
+ v
+y
+e
+2
+ v
+z
+e
+3
+(negative sign is the consequence that e
+i
+;i  1
+are imaginary, thus the scalar products of (only) spatial vectors are negative),
+that can depend on the time t as well.
+Consequently, for any  xed instance of time t, by integration we obtain that,
+(0)
+R
+  !
+k
+  !
+k
+0
+d! =!(k) !(k
+0
+) = 
+R
+  !
+k
+  !
+k
+0
+  !
+vd
+  !
+k = 
+  !
+v
+R
+  !
+k
+  !
+k
+0
+d
+  !
+k = 
+  !
+v (
+  !
+k 
+  !
+k
+0
+),
+where the constant
+  !
+k
+0
+=
+  !
+p
+~
+for a given momentum
+  !
+p = p
+x
+e
+1
++p
+y
+e
+2
++p
+z
+e
+3
+of
+a particle that is collinear with the velocity
+  !
+v , that is,
+  !
+p
+  !
+v = pv. Because
+of that we can write
+  !
+p =p
+  !
+i
+v
+,
+  !
+v =v
+  !
+i
+v
+, where
+  !
+i
+v
+is unitary vector tangent to
+the trajectory of a particle (i.e.,
+  !
+i
+v
+  !
+i
+v
+= 1). Thus,
+!(k) =!
+0
++v
+x
+(k
+x
+ 
+p
+x
+~
+) +v
+y
+(k
+y
+ 
+p
+y
+~
+) +v
+z
+(k
+z
+ 
+p
+z
+~
+),
+where!
+0
+denotes the constant!(k
+0
+) that does not depend onk but may depend
+on time as we will see in what follows.
+The phase velocity of a particle's pocket-wave, observed in a given referential
+system, is de ned by # =
+!
+0
+k
+0
+.
+The constant !
+0
+is determined as follows in the following two cases, by consid-
+ering that the angular frequency !(k) for its particular values is correlated by
+De Broglie [1] to the total energy o particle E = ~!(k):
+  Case for massive particles (with rest massm
+0
+> 0), denominated as mass-
+particles as well: when
+  !
+v = 0 then the energy of this particle isE =m
+0
+c
+2
+,
+that is, the energy in the rest-state of this particle. Consequently, from (0)
+we have that !
+0
+=!(k) =
+m
+0
+c
+2
+~
+.
+Consequently, for the total energy of these mass-particles that propagates
+with velocity v =j
+  !
+vj, with   =
+v
+c
+, it holds that,
+E =
+p
+(m
+0
+c
+2
+) + (pc)
+2
+=
+p
+(~!
+0
+)
+2
++ (pc)
+2
+=
+m
+0
+c
+2
+p
+1  
+2
+= ~!
+v
+,
+where !
+v
+= !
+0
+=
+p
+1  
+2
+is a computed angular frequency relative to the
+velocity v of this particle w.r.t. the reference system of an observer (for
+different observes in different referential systems, that move with different
+Electronic Journal. http://www.math.spbu.ru/diffjournal 51Differential Equations and Control Processes, N 1, 2011
+velocities, this computed value of the same observed particle is different).
+For an observer in a given  xed position (the origin of its coordinate system,
+for example), this observed particle's frequency is by Lorentz low slowed
+down by the factor
+p
+1  
+2
+, so that the really observed particle's angular
+frequency of the observed wave-pocket 	(
+  !
+r
+4
+) given above is constant and
+equal to!
+v
+p
+1  
+2
+=!
+0
+. Thus,!
+0
+is the angular frequency of this massive
+particle equal in any inertial system (without acceleration), that is, an
+invariant as is the rest-mass m
+0
+.
+  Case for massless particles (with rest mass m
+0
+= 0): they propagate, as
+usual, with very high velocity c  v > 0 equal to the maximal velocity
+of light if this particle propagates in the vacuum, thus the zero value of
+equation (0) we can obtain when
+  !
+k =
+  !
+k
+0
+=
+  !
+p
+~
+. Consequently, the value
+of E is the total energy of this particle with the given momentum
+  !
+p , so
+that !
+0
+= !(k) = !(
+p
+~
+) =
+E
+~
+. The total energy of massless particles is
+de ned by E = ~!
+o
+= (~k
+0
+)# = p#. When a particle propagates in the
+vacuum then # =c, so that E =pc.
+When the total energy changes in time, to a  xed observer this angular
+frequency appears to change as well (for example, the relativistic effects
+for red-shifting of photons for a  xed observer). Thus, differently from
+massive particles where for a  xed observer
+@!
+0
+@t
+= 0, here!
+0
+can change in
+time, if a particle changes its total energy during the propagation.
+2 De nition of the wave-pocket in the Minkowski pseu-
+doeuclidean space
+Consequently, from the introduction to matter-events given in the previous Sec-
+tion, for the wave-pocket of an elementary particle, and given reference system,
+we have that
+(1) 	(x;y;z;t) =
+R
+A(k)e
+i( 
+  !
+k
+  !
+r !(k)t)
+dk =
+= (
+R
+A(k)e
+ i(
+  !
+k
+  !
+r 
+  !
+v (
+  !
+k 
+  !
+k
+0
+)t)
+dk)e
+ i!
+0
+t
+=
+= (
+R
+A(k)e
+ i(
+  !
+k 
+  !
+k
+0
+)(
+  !
+r 
+  !
+vt)
+dk)e
+i( 
+  !
+k
+0
+  !
+r !
+0
+t)
+=
+=  (
+  !
+r;t)e
+i( 
+  !
+p
+  !
+r
+~
+ !
+0
+t)
+=  (
+  !
+r;t)e
+i
+p
+~
+( 
+  !
+i
+v
+  !
+r #t)
+.
+In what follows we introduce the spatial vector
+  !
+u =
+  !
+r 
+  !
+vt, that is equal to
+zero for the time-space points of particle's trajectory.
+The "corpuscular" geometric wave-pocket shape (matter's distribution) of a
+particle, that appears to a  xed observer, is given by
+Electronic Journal. http://www.math.spbu.ru/diffjournal 52Differential Equations and Control Processes, N 1, 2011
+ (
+  !
+r;t) =  (x;y;z;t) =
+R
+A(k)e
+ i(
+  !
+k 
+  !
+k
+0
+)(
+  !
+r 
+  !
+vt)
+dk =
+=
+R
+A(j
+  !
+k +
+  !
+k
+0
+j)e
+ i
+  !
+k
+  !
+u
+dk =
+(here we denote by B(k) the value A(j
+  !
+k +
+  !
+k
+0
+j)),
+=
+RRR
++1
+ 1
+B(k)e
+i(k
+x
+(x v
+x
+t)+k
+y
+(y v
+y
+t)+k
+z
+(z v
+z
+t))
+dk
+x
+dk
+y
+dk
+z
+=
+=
+RRR
++1
+ 1
+B(k)e
+i(k
+x
+u
+x
++k
+y
+u
+y
++k
+z
+u
+z
+)
+dk
+x
+dk
+y
+dk
+z
+.
+In the case when a particle propagates in the vacuum with a constant velocity
+  !
+v (stationary case), then the coe cients B(k) does not change in time, i.e.
+@B(k)
+@t
+= 0, so that the "corpuscular" geometry (matter distribution) does not
+change in time and  (
+  !
+r;t) =  (
+  !
+u ) =  (
+  !
+r 
+  !
+vt) =  (x v
+x
+t;y v
+y
+t;z v
+z
+t)
+is a wave-pocket that propagates with a velocity
+  !
+v .
+For instance, in such a stationary case, for a particle with m
+0
+= 0 (for example
+boson as photon, graviton, etc..) that propagates in the vacuum with a veloc-
+ity equal to its phase velocity (when c =j
+  !
+cj =#), so that the total energy is
+E =p# =pc = 
+  !
+p
+  !
+c , we have that !
+0
+= 
+  !
+p
+  !
+c=~, so that
+	(x;y;z;t) =  (
+  !
+r 
+  !
+ct)e
+ i
+  !
+p (
+  !
+r 
+  !
+ct)=~
+= 	(
+  !
+r 
+  !
+ct).
+But in non-stationary cases, when a particle changes its velocity and total
+energy, its distribution ("corpuscular" geometry)   changes in time as well,
+because the coe cientsB(k) in the Fourier integral above change in time, that
+is,
+@B(k)
+@t
+6= 0. In such more complex cases with an acceleration of particles,
+we have both phenomena: particle changes its velocity, momentum and total
+energy (because of the interaction with another particles), and its corpuscular
+geometry as well.
+There are particular cases, when a particle does not change its total energy and
+with
+@
+@t
+(
+  !
+p
+  !
+v ) = 0, with acceleration caused only by (constant) velocity that
+changes its direction, when   does not change in time its distribution w.r.t. its
+trajectory, so that it is of the form  (
+  !
+r 
+  !
+vt). For instance in the case of the
+stationary rotation of electrons around nucleus of an atom.
+Thus, based on standard Fourier transformation, the function  (
+  !
+r;t) is a real
+function, differently from 	(x;y;z;t that is complex. The real and imaginary
+components of 	(x;y;z;t) are determined by the oscillation of the complex os-
+cillator component e
+i( 
+  !
+p
+  !
+r
+~
+ !
+0
+t)
+, that is an oscillation identical to the complex
+plain wave (like, for example, the complex electromagnetic plain wave). The
+amplitudesB(k) of the harmonics can be obtained by the inverse Fourier trans-
+formation, for each given instance of time t, by:
+B(k) =
+RRR
++1
+ 1
+ (x;y;z;t)e
+ i(k
+x
+u
+x
++k
+y
+u
+y
++k
+z
+u
+z
+)
+dk
+x
+dk
+y
+dk
+z
+.
+Thus, generally any particle is determined by the pocket-wave 	(x;y;z;t)
+composed by two sub components: by the corpuscular matter distribution
+Electronic Journal. http://www.math.spbu.ru/diffjournal 53Differential Equations and Control Processes, N 1, 2011
+ (x;y;z;t) that is a real function, and by the 'phase wave' e
+i( 
+  !
+p
+  !
+r
+~
+ !
+0
+t)
+that
+is a complex function.
+Example 1: speed of light.
+When light propagates through a material, it travels slower than the vacuum
+speed. This is a change in the phase velocity # of the light and is manifested
+in physical effects such as refraction. The ratio between c and the speed # at
+which light travels in a material is called the refractive index n of the material
+(n = c=#). Refraction occurs when light waves travel from a medium with a
+given refractive index to a medium with another at an angle. At the bound-
+ary between the media, the wave's phase velocity is altered, usually causing
+a change in direction. Its wavelength increases or decreases but its frequency
+remains constant (thus photons change their momentum and velocity but does
+not change their energy). This reduction in speed is quanti ed by the refractive
+index of the material.
+For example, for visible light the refractive index of glass is typically around
+1:5, meaning that light in glass travels at c=1:5  200; 000km=s; the refractive
+index of air for visible light is about 1:0003, so the speed of light in air is very
+close to c.
+Certain materials have an exceptionally low group velocity for light waves, a
+phenomenon called slow light. In 1999, a team of scientists led by Lene Hau
+were able to slow the speed of a light pulse to about 17 meters per second (61
+km/h; 38 mph) [3], they were able to momentarily stop a beam [2].
+ 
+It can be shown that, in the case of these massless elementary particles that
+propagate in vacuum with the velocity of light c, we have that this "corpuscu-
+lar" wave pocket in the stable(general) state corresponds to the Dirac function
+(with A(k) = B(k) = 1=(2 )
+3
+),  (
+  !
+r  
+  !
+ct) =  (x c
+x
+t;y c
+y
+t;z c
+z
+t) =
+ (x c
+x
+t) (y c
+y
+t) (z c
+z
+t). It is reasonable assumption that the volume of
+a distribution   (where it is greater than zero) of a massive particle (with rest
+mass m
+0
+greater than zero) is always greater than zero, so that it is a reason
+that such particles can not reach the limit velocity of light. In the analog way,
+the massless particles (with rest mass equal to zero) must have, in their stable
+state, this volume equal to zero, so that their distribution   is equal to Dirac
+function above, and they are able to propagate with the velocity of light in the
+vacuum. The non stable states of particles with rest mass m
+0
+= 0 can have
+more complex wave-pocket forms and it happen only in a very short instances
+of time, when the particle enters in strongly unsymmetric space region, as will
+be explained in what follows. In such situations its velocity of propagation
+Electronic Journal. http://www.math.spbu.ru/diffjournal 54Differential Equations and Control Processes, N 1, 2011
+becomes less than the velocity of light in the vacuum so that this particle can
+have a similar behavior as massive particles with   that occupies a limited but
+nonzero volume (so called spatial explosion of excited bosons). This unstable
+state of the particles withm
+0
+= 0 tends to come back into the stable state with
+Dirac function geometry for distribution  .
+For any matter-perturbation of an elementary particle that propagates in the 3-
+dimensional space with a velocity that changes in the time, because of external
+forces that inuence this particle, the 3-dimensional wave-pocket distribution
+ (x;y;z;t) changes as well, but it must satisfy the conservation matter prin-
+ciple, that is, at each given time instance t it must be satis ed the following
+invariance property:
+(2) 1
+ 
+=
+RRR
++1
+ 1
+ (x;y;z;t)dxdydz =
+RRR
++1
+ 1
+ (x;y;z; 0)dxdydz > 0,
+where 1
+ 
+is a time-invariant constant value of an elementary particle (not neces-
+sarily equal to 1), andV (t) is a  nite cube (or sphere) which contains the whole
+"corpuscular" wave-pocket in a given instance of time t, and dV =dxdydz.
+We de ne the minimal (limit) cubeV
+m
+(t) =lim(2
+3
+4X4Y4Z), such that in
+this time-instancet,  (x;y;z;t) = 0 for (x  4X orx 4X ory  4Y
+or y 4Y or z  4Z or z 4Z).
+The real function  (x;y;z;t) is the "corpuscular" geometric wave-pocket form
+of a particle that propagates in the ordinary 3-dimensional space with a veloc-
+ity
+  !
+v =v
+x
+e
+1
++v
+y
+e
+2
++v
+z
+e
+3
+). In the stationary case, when it propagates in the
+vacuum with a constant velocity, it has constant distribution, that propagates
+as pocket-wave  (
+  !
+u ) =  (
+  !
+r 
+  !
+vt) =  (x v
+x
+t;y v
+y
+t;z v
+z
+t).
+The interactions between any two pocket-waves (particles) can be obtained only
+by their local collisions, and depending on their energy and velocities they can
+produce a kind of Compton effects (elastic collisions) where they survive the
+collisions by chaining their momentum and energy (with conservation of total
+momentum and energy), or can make total fusion between them with possible
+creation of new stable particles (in Feynman's diagrams). In order to be able
+for two pocket-waves to have a collision, and mutual interference, at least one
+of them must have a volume V
+m
+(t) (in a given instance of time of mutual col-
+lision) greater than zero. So, from this point of view, it can not happen that
+the distance between any two particles becomes equal to zero, so that we avoid
+classic in nitary problems of gravitational and electronic  elds and forces where
+the particles are pointlike, so that it is possible to have the distances between
+particles equal to zero with, consequently, in nite values of gravitational (or
+electric) forces.
+The particles with V
+m
+(t) equal to zero are, for example, the particles with
+Electronic Journal. http://www.math.spbu.ru/diffjournal 55Differential Equations and Control Processes, N 1, 2011
+ (x v
+x
+t;y v
+y
+t;z v
+z
+t) equal to the Dirac function (x v
+x
+t;y v
+y
+t;z v
+z
+t) =
+ (x v
+x
+t) (y v
+y
+t) (z v
+z
+t).
+Thus, for any two particles with the "corpuscular" form given by Dirac function,
+it is impossible to have the collisions in their stable states, but only when they
+are excited and are involved in their temporary "spatial explosions". Such ex-
+plosions can happen also when two stable particles are very close one to another
+so that the ideal spatial symmetry for a free particle in the vacuum does not hold
+more: it explains why, for example, photons can interact with gravitons (i.e.,
+gravitational  eld) and may have the gravitational redshifts. Because of that,
+it will be natural consequence that the massless particles, as bosons (gravitons,
+photons, etc..) in their stable states, will have the volume V
+m
+(t) equal to zero
+(with Dirac function for their distribution  ). In that case they can be used as
+intermediators between the massive particles (that have the rest mass and the
+volumeV
+m
+(t) greater than zero), that is, to be the quantum-correspondence for
+the " elds" (the statistical events as gravitational, electromagnetic, etc., that
+are statistical results of actions of a high number of bosons), by avoiding in
+more common situations the signi cant interference between themselves.
+This situation can be obtained in the quantum level only if the collisions between
+gravitons and photons, for example, are practically improbable. Consequently,
+a number of gravitons and photons can coexist in the same small region of space
+without any signi cant direct interference between them during the contempo-
+rary collisions with particles with rest mass and volume V
+m
+(t) greater than
+zero. Also in such situation we can have the cases of the interference between
+a graviton and a photon, in the situation when they are very, very close in a
+given instance of time, so that they are involved in temporary spatial explosion
+(with their volume of distribution greater than zero in that instance of time).
+In normal situations, these interferences statistically can be neglected, while in
+the cases of very strong  eld interactions (when the local density of photons
+and gravitons is very high) these inter-boson's interactions are signi cant, so
+that the gravitation  eld has strong interactions with the electromagnetic  eld
+in a given local space region.
+3 Partial differential equations for the wave-pockets in
+the Minkowski space
+Letr = e
+1
+@
+@x
++e
+2
+@
+@y
++e
+3
+@
+@z
+be the gradient, so that the Laplasian is de ned
+by4 = r
+2
+=
+@
+2
+@x
+2
++
+@
+2
+@y
+2
++
+@
+2
+@z
+2
+. Then the derivation of the wave-pocket along
+Electronic Journal. http://www.math.spbu.ru/diffjournal 56Differential Equations and Control Processes, N 1, 2011
+its trajectory with the unitary tangent vector
+  !
+i
+v
+on the trajectory, collinear
+with the vector of its velocity
+  !
+v =v
+  !
+i
+v
+=
+  !
+i
+v
+q
+v
+2
+x
++v
+2
+y
++v
+2
+z
+, is denoted by the
+operator
+  !
+i
+v
+r.
+In what follows, byRe() andIm() we will denote the real and imaginary com-
+ponent of complex expressions, so that  = Re() +iIm() for a complex
+number .
+Proposition 1 The geometric distribution  (
+  !
+r;t) of the wave-pockets with the
+independent space-time variables
+  !
+r and t, of an elementary particle given in
+(1), is determined by the following differential equations:
+(e.1) e
+i!
+0
+t@ e
+ i!
+0
+t
+@t
+= i
+@(!
+0
+t)
+@t
+)  +
+  !
+v
+1
+r  +  
+D
+(
+  !
+r;t), where,
+  !
+v
+1
+=
+@
+@t
+(
+  !
+vt),  
+D
+(
+  !
+r;t) =
+R
++1
+ 1
+@B(k)
+@t
+e
+i(k
+x
+(x v
+x
+t)+k
+y
+(y v
+y
+t)+k
+z
+(z v
+z
+t))
+dk
+x
+dk
+y
+dk
+z
+is
+equal to zero when this particle is in a stationary state, that is, when
+@B(k)
+@t
+= 0.
+Thus,
+(e.2)
+@	
+@t
+= i!
+p
+	 +
+  !
+v
+1
+r	 + 	
+D
+(
+  !
+r;t),
+where 	
+D
+(
+  !
+r;t) =  
+D
+(
+  !
+r;t)e
+i( 
+  !
+p
+  !
+r
+~
+ !
+0
+t)
+, with !
+p
+=!
+1
++
+  !
+p
+  !
+v
+1
+~
+and !
+1
+=
+@
+@t
+(
+  !
+p
+  !
+r
+~
++
+!
+0
+t) =
+  !
+r
+~
+@
+  !
+p
+@t
++
+@
+@t
+(!
+0
+t), where the particle's velocity
+  !
+v , momentum
+  !
+p , and !
+0
+in the case of massless particles, may change in time.
+Proof: From the fact (1) we have that
+@
+@t
+( e
+ i!
+0
+t
+) = i
+@(!
+0
+t)
+@t
+ e
+ i!
+0
+t
++ (
+@ 
+@t
+)e
+ i!
+0
+t
+.
+Let us show that
+@ 
+@t
+=
+@(
+  !
+vt)
+@t
+r  +  
+D
+. We can make the following derivation:
+(a.0)
+@ 
+@t
+=
+@
+@t
+(
+RRR
++1
+ 1
+B(k)e
+i(k
+x
+(x v
+x
+t)+k
+y
+(y v
+y
+t)+k
+z
+(z v
+z
+t))
+dk
+x
+dk
+y
+dk
+z
+)
+=
+R
++1
+ 1
+( B(k)i(
+@(v
+x
+t)
+@t
+k
+x
++
+@(v
+y
+t)
+@t
+k
+y
++
+@(v
+z
+t)
+@t
+k
+z
+)+
+@B(k)
+@t
+)e
+i(k
+x
+(x v
+x
+t)+k
+y
+(y v
+y
+t)+k
+z
+(z v
+z
+t))
+dk
+= 
+@(v
+x
+t)
+@t
+RRR
++1
+ 1
+(ik
+x
+)B(k)e
+i(k
+x
+(x v
+x
+t)+k
+y
+(y v
+y
+t)+k
+z
+(z v
+z
+t))
+dk
+x
+dk
+y
+dk
+z
+ :::
+ 
+@(v
+z
+t)
+@t
+RRR
++1
+ 1
+(ik
+z
+)B(k)e
+i(k
+x
+(x v
+x
+t)+k
+y
+(y v
+y
+t)+k
+z
+(z v
+z
+t))
+dk
+x
+dk
+y
+dk
+z
++  
+D
+= 
+@(v
+x
+t)
+@t
+@ 
+@x
+ 
+@(v
+y
+t)
+@t
+@ 
+@y
+ 
+@(v
+z
+t)
+@t
+@ 
+@z
++  
+D
+=
+@(
+  !
+vt)
+@t
+r  +  
+D
+.
+Consequently, we obtain,
+(a.1)
+@
+@t
+( e
+ i!
+0
+t
+) = ( i!
+0
+  it
+@!
+0
+@t
+  +
+@(
+  !
+vt)
+@t
+r  +  
+D
+)e
+ i!
+0
+t
+,
+and the differential equation (e.1).
+From the fact that,
+(a.2) r( e
+ i
+  !
+p
+  !
+r
+~
+) = (r )e
+ i
+  !
+p
+  !
+r
+~
++  
+i
+~
+(p
+x
+e
+1
++p
+y
+e
+2
++p
+z
+e
+3
+)e
+ i
+  !
+p
+  !
+r
+~
+=
+= (r  +
+i
+~
+  !
+p  )e
+ i
+  !
+p
+  !
+r
+~
+,
+we obtain that (r )e
+ i
+  !
+p
+  !
+r
+~
+=r( e
+ i
+  !
+p
+  !
+r
+~
+) 
+i
+~
+  !
+p  e
+ i
+  !
+p
+  !
+r
+~
+, and
+(a.3) (r )e
+i( 
+  !
+p
+  !
+r
+~
+ !
+0
+t)
+=r	 
+i
+~
+  !
+p 	,
+and by substitution in (e.1) we obtain (e.2).
+Electronic Journal. http://www.math.spbu.ru/diffjournal 57Differential Equations and Control Processes, N 1, 2011
+ 
+Notice that
+@!
+0
+@t
+6= 0 only for the massless particles in their unstable states and
+very-very short interval of times4t  0, when they change their total energy
+E = ~!
+0
+during the collisions with another particles (the Compton effects). In
+what follows we will denote byE = ~!
+p
+the energy associated to this angular
+frequency !
+p
+.
+Example 2: The stationary case is obtained when a particle propagates with
+constant total energyE and constant valueE = ~!
+p
+. Thus, in such a stationary
+case we have that  
+D
+(
+  !
+r;t) = 0; 	
+D
+(
+  !
+r;t) = 0. It is easy to verify that the
+stationary case is one, for example, of the following two cases:
+1. When a particle propagates with constant momentum
+  !
+p , velocity
+  !
+v (thus,
+@
+  !
+v
+@t
+=
+@
+  !
+p
+@t
+= 0), and total energyE (in that case!
+0
+is constant for massless
+particles as well). Thus, without any acceleration. In that case !
+p
+is
+constant as well, with constantE = ~(
+  !
+r
+~
+@
+  !
+p
+@t
++
+@
+@t
+(!
+0
+t)+
+  !
+p
+  !
+v
+1
+~
+) = ~!
+0
++
+  !
+p
+  !
+v =
+~!
+0
+ pv.
+2. When a particle routes with constant radiusR around a  xed center, with
+constant angular velocity   =
+j
+  !
+vj
+R
+=
+v
+R
+, constant value of the momentum
+p =j
+  !
+vj, and total energy E. In this case we can obtain !
+p
+constant in
+a particular coordinate system: coordinate center of the reference system
+x;y of the plain in which this particles routes. Then, the position of the
+trajectory of this particle in a given momentt is equal to
+  !
+r =R
+  !
+i
+ 
+, where
+  !
+i
+ 
+is a unitary radial vector with angle   =  t w.r.t the axis x. In this
+case the acceleration
+@
+  !
+v
+@t
+= j
+@
+  !
+v
+@t
+j
+  !
+i
+ 
+, and
+@
+  !
+p
+@t
+= j
+@
+  !
+p
+@t
+j
+  !
+i
+ 
+are radial vectors
+that have the constant values and are orthogonal to the vectors of velocity
+  !
+v and momentum
+  !
+p . So that,
+  !
+p
+  !
+r = 0,
+  !
+p
+@
+  !
+v
+@t
+= 0, and
+!
+p
+=
+@
+@t
+(
+  !
+p
+  !
+r
+~
++!
+0
+t) +
+  !
+p
+  !
+v
+1
+~
+= +!
+0
++
+1
+~
+  !
+p (
+  !
+v +t
+@
+  !
+v
+@t
+) =!
+0
++
+1
+~
+  !
+p
+  !
+v =
+=!
+0
+ 
+pv
+~
+.
+Here both !
+0
+and pv are constant, and, consequently, we obtained the
+stationarity condition
+@!
+p
+@t
+= 0 in all points of the trajectory of this particle,
+with constantE = ~!
+0
++
+  !
+p
+  !
+v = ~!
+0
+ pv. This case will be applied for
+the stationary orbits of electrons in an atom, in Example 4.
+Notice that in both stationary cases above we obtained that this particular
+constant energy is equal to E = ~!
+p
+= ~!
+0
++
+  !
+p
+  !
+v = ~!
+0
+ pv.
+If !
+p
+=!
+1
++
+  !
+p
+  !
+v
+1
+~
+is computed for current space-time positions on the particle's
+trajectory, then, in this particular case, !
+1
+is taken as a derivation
+@
+@t
+of the
+current particle's phase ' =
+  !
+p
+  !
+r
+~
++!
+0
+t (we have that 	(
+  !
+r;t) =  (
+  !
+r;t)e
+i'
+)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 58Differential Equations and Control Processes, N 1, 2011
+and express the particle's phase-changing on its trajectory.  
+Notice that the energy changes only during collisions with another particles
+(Compton effects; we consider a " eld" as a statistical result of the iterations
+with bosons of this particular  eld), so that after it this particle continue to
+propagate again as a stationary particle, but with new values of total energyE,
+velocity
+  !
+v , momentum
+  !
+p , and new stable wave-pocket geometry (distribution)
+ (
+  !
+r 
+  !
+vt), so that it can be described by the simpler stationary-case (de ned
+in Example 2) differential equations:
+(e.1.1) e
+i!
+0
+t@ e
+ i!
+0
+t
+@t
+= ( i!
+0
++
+@(
+  !
+vt)
+@t
+r) 
+(e.2.1)
+@	
+@t
+= 
+i
+~
+E	 +
+@(
+  !
+vt)
+@t
+r	,
+where, when a velocity
+  !
+v is constant, we have that
+@(
+  !
+vt)
+@t
+=
+  !
+v +t
+@
+  !
+v
+@t
+=
+  !
+v .
+Notice that, as in Example 2 above, we have particular stationary cases when
+  !
+v is not constant, as for instance, for a stationary electron that rotates around
+the nucleus of an atom with a constant radial acceleration (in that case
+  !
+p
+  !
+v
+and total energy of this electron are constant, thus E =E +
+  !
+p
+  !
+v is constant
+as well).
+From the quantum state point of view, the external " eld's" forces that inter-
+fere with the particles are based on the collisions between them and a particular
+kind of " eld's" particles with rest mass equal to zero (bosons): it is possible
+because the mass-particles (or excited massless particles) have a wave-pocket's
+distribution   with a  nite space volume, and, consequently, they may mutu-
+ally collide with another particles (as bosons of this " eld").
+The bosons with rest-mass m
+0
+equal to zero can interfere between themselves
+only when they are excited, i.e., when their space volume distribution of   is
+greater than zero, so that they can collide. During these collisions, a particle
+changes its total energy as well, thus its geometric form (distribution)   as well:
+in such cases in the equations (e.1) and (e.2), the component,
+ 
+D
+(
+  !
+r;t) =
+RRR
++1
+ 1
+@B(k)
+@t
+e
+i(k
+x
+(x v
+x
+t)+k
+y
+(y v
+y
+t)+k
+z
+(z v
+z
+t))
+dk
+x
+dk
+y
+dk
+z
+,
+becomes dominant in these unstationary (unstable) short-time intervals states,
+caused by the time-changing of the harmonic amplitudes
+@B(k)
+@t
+6= 0. During
+these collisions a particle does not change only its velocity
+  !
+v , but also its ge-
+ometry (distribution) can continuously evolve. For example, as it was discussed
+about the changing of massive particle's geometry and resulting changing of the
+relativistic mass, or in "particle's explosions". This kind of explosion happens
+when, for instance, a massless particle that propagates in the vacuum with ve-
+locity of light come up against a barrier with a small slit (where it will pass),
+so that this barrier interrupts drastically the space symmetry and the bound-
+Electronic Journal. http://www.math.spbu.ru/diffjournal 59Differential Equations and Control Processes, N 1, 2011
+ary conditions for the differential equations (e.1) and (e.2) that determine the
+movement and geometry of the particles.
+From this point of view, the " elds" are only statistical results of the inuence
+that high number of bosons produce to the mass-particles. For example, the
+electromagnetic vectorial  eld is a statistic result of movements of high number
+of photons, as it will be explained in the rest of this paper, and, consequently,
+Maxwell's lows are only the statistical lows.
+The collisions of one mass-particle with bosons produce an external force
+  !
+F ,
+generated by the interacting bosons (" eld") with this particle, that determines
+the propagation and trajectory of this mass-particle. In order to be able to con-
+sider the application of these external forces to the mass-particles, we need to
+obtain the following second-order differential equations:
+Proposition 2 The propagation and geometric form of the wave-pocket
+	(x;y;z;t) =  (
+  !
+r;t)e
+i( 
+  !
+p
+  !
+r
+~
+ !
+0
+t)
+, of an elementary particle that propagates with
+velocity
+  !
+v , are de ned by the following second-order differential equations:
+(e.3) (
+v
+1
+c
+)
+2
+4	 
+1
+c
+2
+@
+2
+	
+@t
+2
+  ((
+!
+p
+c
+)
+2
++i
+1
+c
+2
+@!
+p
+@t
+ i
+  !
+v
+1
+c
+2
+~
+@
+  !
+p
+@t
+)	  (i
+2!
+p
+c
+2
+  !
+v
+1
+ 
+1
+c
+2
+@
+  !
+v
+1
+@t
+)r	 =
+=  
+D
+(
+  !
+r;t),
+where!
+p
+=
+E
+~
+=!
+1
++
+  !
+p
+  !
+v
+1
+~
+, with!
+1
+=
+@
+@t
+(
+  !
+p
+  !
+r
+~
++!
+0
+t) =
+  !
+r
+~
+@
+  !
+p
+@t
++
+@
+@t
+(!
+0
+t),
+  !
+v
+1
+=
+@(
+  !
+vt)
+@t
+,
+v
+1
+=
+p
+ 
+  !
+v
+1
+  !
+v
+1
+, can change in time during the propagation. The right side of
+(e.3),  
+D
+(
+  !
+r;t) =
+1
+c
+2
+(
+  !
+v
+1
+r 
+D
+ i2!
+1
+ 
+D
++
+@ 
+D
+@t
+)e
+i( 
+  !
+p
+  !
+r
+~
+ !
+0
+t)
+, is different from zero
+only in unstationary cases when  
+D
+(
+  !
+r;t)6= 0.
+In the stationary case, when !
+p
+and !
+1
+= !
+0
+are two constants, this equation
+can be given in a simpler D'Alambert-like form:
+(e.4) (
+v
+1
+c
+)
+2
+4	
+1
+ 
+1
+c
+2
+@
+2
+	
+1
+@t
+2
+= 
+1
+c
+2
+@
+  !
+v
+1
+@t
+r	
+1
+ i
+  !
+v
+1
+c
+2
+~
+@
+  !
+p
+@t
+	
+1
+,
+where 	
+1
+= e
+i!
+p
+t
+	(
+  !
+r;t).
+Thus, an external force
+  !
+F inuences a particle 	 as follows:
+1. Differential equation for massive particles, non-relativistic case: then we
+substitute the acceleration
+@
+  !
+v
+@t
+in the equation (e.3) by the expression
+  !
+F
+m
+0
+.
+2. Differential equation for relativistic case when ~!
+0
+is a constant: then we
+substitute
+@
+  !
+p
+@t
+in the equation (e.4) by
+  !
+F .
+3. Differential equation for a massless particle (with rest mass m
+0
+= 0) during
+its unstable state, when it changes the velocity
+  !
+v (with c > v > 0) and mo-
+mentum
+  !
+p , but does not change the total energy E = ~!
+0
+: then we substitute
+@
+  !
+p
+@t
+by
+  !
+F , !
+p
+by
+  !
+r
+~
+  !
+F +!
+0
++
+  !
+v
+1
+  !
+p
+~
+and
+@!
+p
+@t
+by
+1
+~
+(
+  !
+r
+@
+  !
+F
+@t
++
+  !
+v
+1
+  !
+F +
+  !
+p
+@
+  !
+v
+1
+@t
+), in the
+equation (e.3).
+Electronic Journal. http://www.math.spbu.ru/diffjournal 60Differential Equations and Control Processes, N 1, 2011
+Proof: From 	(x;y;z;t) =  (
+  !
+r;t)e
+i( 
+  !
+p
+  !
+r
+~
+ !
+0
+t)
+, we obtain that:
+(b.0)
+@
+@t
+(r ) =r(
+@ 
+@t
+) =r(
+  !
+v
+1
+r + 
+D
+) (from (a.0), proof of Proposition
+1)
+= 
+  !
+v
+1
+4  +r 
+D
+.
+(b.1) r(e
+ i
+  !
+p
+  !
+r=~
+r ) =
+= (
+@
+@x
+e
+1
++
+@
+@y
+e
+2
++
+@
+@z
+e
+3
+)((
+@ 
+@x
+e
+1
++
+@ 
+@y
+e
+2
++
+@ 
+@z
+e
+3
+)e
+ i
+  !
+p
+  !
+r=~
+) =
+= (
+ip
+x
+~
+@ 
+@x
++
+@
+2
+ 
+@x
+2
++
+ip
+y
+~
+@ 
+@y
++
+@
+2
+ 
+@y
+2
++
+ip
+z
+~
+@ 
+@z
++
+@
+2
+ 
+@z
+2
+)e
+ i
+  !
+p
+  !
+r=~
+=
+= ( 
+i
+  !
+p
+~
+r  +4 )e
+ i
+  !
+p
+  !
+r=~
+, and
+(b.2) 4	 = rr	 = e
+ i!
+0
+t
+r(r( e
+ i
+  !
+p
+  !
+r=~
+)) =
+= e
+ i!
+0
+t
+r((r  +
+i
+  !
+p
+~
+ )e
+ i
+  !
+p
+  !
+r=~
+) =
+= e
+ i!
+0
+t
+(r(e
+ i
+  !
+p
+  !
+r=~
+r ) +
+i
+  !
+p
+~
+r( e
+ i
+  !
+p
+  !
+r=~
+)) = (from (b.1))
+= e
+ i!
+0
+t
+(( 
+i
+  !
+p
+~
+r  +4 )e
+ i
+  !
+p
+  !
+r=~
+ 
+i
+  !
+p
+~
+(r  +
+i
+  !
+p
+~
+ )e
+ i
+  !
+p
+  !
+r=~
+) =
+= e
+i( 
+  !
+p
+  !
+r
+~
+ !
+0
+t)
+(4  
+i2
+  !
+p
+~
+r  +
+  !
+p
+  !
+p
+~
+2
+ ) =
+= e
+i( 
+  !
+p
+  !
+r
+~
+ !
+0
+t)
+4  
+i2
+  !
+p
+~
+(r	 
+i
+  !
+p
+~
+	) +
+  !
+p
+  !
+p
+~
+2
+	.
+Thus, from (b.2) we obtain that,
+(b.3) e
+i( 
+  !
+p
+  !
+r
+~
+ !
+0
+t)
+4  =4	 +
+i2
+  !
+p
+~
+r	 +
+  !
+p
+  !
+p
+~
+2
+	. Consequently,
+(b.4)
+  !
+v
+1
+@
+@t
+r	 =
+  !
+v
+1
+e
+ i!
+0
+t
+(
+@
+@t
+(r( e
+ i
+  !
+p
+  !
+r=~
+) i
+@(!
+0
+t)
+@t
+r( e
+ i
+  !
+p
+  !
+r=~
+)) =
+=
+  !
+v
+1
+e
+ i!
+0
+t
+(
+@
+@t
+((r  +
+i
+  !
+p
+~
+ )e
+ i
+  !
+p
+  !
+r=~
+) i
+@(!
+0
+t)
+@t
+(r  +
+i
+  !
+p
+~
+ )e
+ i
+  !
+p
+  !
+r=~
+) =
+(from (a.2) in the prof of Proposition 1)
+=
+  !
+v
+1
+e
+ i!
+0
+t
+((
+@
+@t
+r  +
+i
+  !
+p
+~
+@ 
+@t
++
+i
+~
+@
+  !
+p
+@t
+ )e
+ i
+  !
+p
+  !
+r=~
++ (
+@
+@t
+e
+ i
+  !
+p
+  !
+r=~
+ i
+@(!
+0
+t)
+@t
+e
+ i
+  !
+p
+  !
+r=~
+)
+(r  +
+i
+  !
+p
+~
+ )) =
+=
+  !
+v
+1
+(
+@
+@t
+r  +
+i
+  !
+p
+~
+@ 
+@t
++
+i
+~
+@
+  !
+p
+@t
+  i!
+1
+(r  +
+i
+  !
+p
+~
+ ))e
+i( 
+  !
+p
+  !
+r
+~
+ !
+0
+t)
+=
+(from (b.0), and (a.0) in the proof of Proposition 1)
+=
+  !
+v
+1
+( 
+  !
+v
+1
+4 +r 
+D
++
+i
+  !
+p
+~
+(
+  !
+v
+1
+r + 
+D
+)+
+i
+~
+@
+  !
+p
+@t
+  i!
+1
+(r +
+i
+  !
+p
+~
+ ))e
+i( 
+  !
+p
+  !
+r
+~
+ !
+0
+t)
+=
+(from (b.2), and (a.3) in the proof of Proposition 1)
+=
+  !
+v
+1
+( 
+  !
+v
+1
+(4	+
+i2
+  !
+p
+~
+r	+
+  !
+p
+  !
+p
+~
+	)+
+i
+  !
+p
+  !
+v
+1
+~
+(r	 
+i
+  !
+p
+~
+	)+
+i
+~
+@
+  !
+p
+@t
+	 i!
+1
+(r	 
+i
+  !
+p
+~
+	+
+i
+  !
+p
+~
+	)) + (
+  !
+v
+1
+r 
+D
++i
+  !
+p
+  !
+v
+1
+~
+ 
+D
+)e
+i( 
+  !
+p
+  !
+r
+~
+ !
+0
+t)
+=
+=v
+2
+1
+4	 i(
+  !
+p
+  !
+v
+1
+~
++!
+1
+)
+  !
+v
+1
+r	 +i
+  !
+v
+1
+~
+@
+  !
+p
+@t
+	 + (
+  !
+v
+1
+r 
+D
++i
+  !
+p
+  !
+v
+1
+~
+ 
+D
+)e
+i( 
+  !
+p
+  !
+r
+~
+ !
+0
+t)
+=
+=v
+2
+1
+4	 i!
+p
+  !
+v
+1
+r	 +i
+  !
+v
+1
+~
+@
+  !
+p
+@t
+	 + (
+  !
+v
+1
+r 
+D
++i
+  !
+p
+  !
+v
+1
+~
+ 
+D
+)e
+i( 
+  !
+p
+  !
+r
+~
+ !
+0
+t)
+.
+Finally,
+@
+2
+	
+@t
+2
+=
+@
+@t
+( i!
+p
+	 +
+  !
+v
+1
+r	 + 	
+D
+) =
+= i
+@!
+p
+@t
+	 i!
+p
+@	
+@t
++
+@
+  !
+v
+1
+@t
+r	 +
+  !
+v
+1
+@
+@t
+r	 +
+@	
+D
+@t
+= (from (e.2))
+=  i
+@!
+p
+@t
+	  i!
+p
+( i!
+p
+	 +
+  !
+v
+1
+r	 + 	
+D
+) +
+@
+  !
+v
+1
+@t
+r	 +
+  !
+v
+1
+@
+@t
+r	 + (
+@ 
+D
+@t
+ 
+i!
+1
+ 
+D
+)e
+i( 
+  !
+p
+  !
+r
+~
+ !
+0
+t)
+=
+(from (b.4))
+Electronic Journal. http://www.math.spbu.ru/diffjournal 61Differential Equations and Control Processes, N 1, 2011
+=v
+2
+1
+4	 !
+2
+p
+	 i2!
+p
+  !
+v
+1
+r	 i
+@!
+p
+@t
+	 +
+@
+  !
+v
+1
+@t
+r	 +i
+  !
+v
+1
+~
+@
+  !
+p
+@t
+	 + (
+  !
+v
+1
+r 
+D
+ i2!
+1
+ 
+D
++
+@ 
+D
+@t
+)e
+i( 
+  !
+p
+  !
+r
+~
+ !
+0
+t)
+.
+Thus, by dividing with c
+2
+we obtain the differential equation (e.3).
+When !
+p
+and !
+0
+are two constants, then we obtain (e.4) as follows:
+v
+2
+1
+4	
+1
+ 
+@
+2
+@t
+2
+	
+1
+=v
+2
+1
+4(	e
+i!
+p
+t
+) 
+@
+2
+@t
+2
+(	e
+i!
+p
+t
+) =
+= (v
+2
+1
+4	)e
+i!
+p
+t
+ 
+@
+@t
+((
+@
+@t
+	)e
+i!
+p
+t
++i!
+p
+	e
+i!
+p
+t
+) =
+= (v
+2
+1
+4	 
+@
+2
+@t
+2
+	 !
+2
+p
+	 i2!
+p
+  !
+v
+1
+r	)e
+i!
+p
+t
+= (from (e.3))
+= (
+@
+  !
+v
+1
+@t
+r	 +i
+  !
+v
+1
+~
+@
+  !
+p
+@t
+	)e
+i!
+p
+t
+= 
+@
+  !
+v
+1
+@t
+r	
+1
+ i
+  !
+v
+1
+~
+@
+  !
+p
+@t
+	
+1
+.
+ 
+The differential equation (e.3) describes the changing (in time) of the geometry
+  of a the "corpuscular" particle (wave-pocket) and its trajectory and velocity,
+caused by a given external force
+  !
+F (that is, caused by a total sum of given
+external " elds", as gravitational, electromagnetic, etc..).
+4 Application to quantum mechanics
+The Compton effect between any two particles with their distributions
+ 
+1
+(x;y;z;t) and  
+2
+(x;y;z;t), happens when there exists a space-time point
+(x
+1
+;y
+1
+;z
+1
+;t
+1
+) such that  
+1
+(x
+1
+;y
+1
+;z
+1
+;t
+1
+)   
+2
+(x
+1
+;y
+1
+;z
+1
+;t
+1
+)6= 0. This collision of
+these two particles is elastic if their kinetic energies are relatively small, with
+the well known lows of conservation of the total energy and total momentum
+for elastic collisions. In the high-energy collisions we obtain a fusion of these
+two particles and a creation of another, as in well-known Feynman diagrams.
+In the stationary cases, the basic equation (e.4) can be divided into following
+three cases:
+  When the velocity v = 0, we obtain a simple equation:
+(e.4.0)
+@
+2
+	
+1
+@t
+2
+= 0, that is,
+@
+2
+	
+@t
+2
+= !
+2
+0
+	,
+with a simple solution, 	(x;y;z;t) =  (x;y;z)e
+ !
+0
+t
+.
+  When the velocity
+  !
+v and the momentum
+  !
+p are constant vectors dur-
+ing the propagation, different from zero, then
+  !
+v
+1
+=
+  !
+v , so we obtain
+D'Alambert equation where v is a constant value:
+(e.4.1) 4	
+1
+ 
+1
+v
+2
+@
+2
+	
+1
+@t
+2
+= 0,
+with the solution 	
+1
+(x;y;z;t) =  (
+  !
+r 
+  !
+vt)e
+ i
+  !
+p
+~
+(
+  !
+r 
+  !
+vt)
+, thus,
+	(x;y;z;t) = 	
+1
+e
+ !
+p
+t
+=  (
+  !
+r 
+  !
+vt)e
+i( 
+  !
+p
+  !
+r
+~
+ !
+0
+t)
+.
+  The case when the velocity
+  !
+v with v > 0 and the momentum
+  !
+v change
+Electronic Journal. http://www.math.spbu.ru/diffjournal 62Differential Equations and Control Processes, N 1, 2011
+only the direction (they are collinear vectors in each instance of time)
+during a propagation, but not their values, so that 
+@(
+  !
+p
+  !
+v )
+@t
+=
+@(pv)
+@t
+= 0 and
+v
+1
+= v is constant as well (this case includes the second case in Example
+2 as well: when the velocity of massive particle with rest mass m
+0
+is
+  !
+v = v(  cos e
+1
++ sin e
+2
+), where   =  t =
+v
+R
+t is the angle w.r.t the
+axisx of a particle that routes around the coordinate center with constant
+angular velocity   =
+v
+R
+on circular orbit with constant radius R).
+Thus, from (e.4) we obtain an extended D'Alambert equation where v
+2
+=
+j
+  !
+v
+  !
+vj> 0 is a constant value:
+(e.4.2) 4	
+1
+ 
+1
+v
+2
+@
+2
+	
+1
+@t
+2
+=  (
+  !
+r;t),
+where  (
+  !
+r;t) =  
+1
+v
+2
+(
+@
+  !
+v
+1
+@t
+r	
+1
++i
+  !
+v
+1
+~
+@
+  !
+p
+@t
+	
+1
+). Thus, we obtain a general
+solution 	
+1
+(
+  !
+r 
+  !
+vt) =  (
+  !
+r 
+  !
+vt)e
+ i
+  !
+p
+~
+(
+  !
+r 
+  !
+vt)
+.
+Notice that the massive particles that does not change the total energy E dur-
+ing a propagation are always in the stationary states.
+In all cases, the geometric form (the distribution  ) of a particle in a given
+time-instance t depends on the particular boundary conditions for the differ-
+ential equations as well. In the case when they are far from another massive
+particles (usually it can be considered if another particles are far from this par-
+ticle in order of one millimeter), then   is symmetric w.r.t. the direction of
+propagation. Otherwise, the boundary conditions for these differential equa-
+tions can drastically change, with the result that   can become enormously
+bigger than in normal situations, that is, they can instantaneously "explode",
+because the single harmonics of the Fourier representation of  (x;y;z) in a
+given time-instance t are contemporarily present in the whole 3-dimensional
+Euclidean space.
+Let us consider the following well known example:
+Example 3: One-dimensional particle in a box problem.
+We assume that that the electron can move freely between two in nitely high
+potential barriers, along the x axes between 
+a
+2
+and
+a
+2
+. The appropriate po-
+tential is V (x) = 0 for 
+a
+2
+  x 
+a
+2
+and V (x) equal to the in nity otherwise,
+that is, there are in nitely high walls at x = 
+a
+2
+and x =
+a
+2
+, and the particle
+is trapped between them. This turns out to be quite a good approximation for
+electrons in a long molecule, and the three-dimensional version is a reasonable
+picture for electrons in metals. Consequently, the  eld, which is the gradient of
+this potential is equal to zero between these walls and directed into the box at
+the barriers, so that in the box we have not any  eld and any acceleration of
+the electron, so that the equation (e.4) has a simple D'Alambert form
+Electronic Journal. http://www.math.spbu.ru/diffjournal 63Differential Equations and Control Processes, N 1, 2011
+(e.4.1) 4	
+1
+ 
+1
+v
+2
+@
+2
+	
+1
+@t
+2
+= 0,
+with the solution (we consider case when the momentum and the velociries are
+collinear withx axes) 	
+1
+(x;y;z;t) =  (x vt;y;z)e
+i(
+p
+~
+(x vt)
+, where  (x vt;y;z)
+is the geometric form of electron during its propagation (notice that this elec-
+tron is at position x in the time-instance t when x vt = 0), and the constant
+velocity v can be positive and negative (opposite direction w.r.t. the x axes).
+The boundary condition at the walls is that in these points the velocity of the
+electron has to be equal to zero, and the stationary solution of the D'Alambert
+equation above has to satisfy that (after one complete oscillation, when it passes
+the distance 2a), 	
+1
+(x;y;z;t) = 	
+1
+(x;y;z;t +
+2a
+v
+), so that,
+e
+i
+p
+~
+(x vt)
+= e
+i
+p
+~
+(x v(t+
+2a
+v
+)
+, that is,
+p
+~
+(x vt) = 2n  +
+p
+~
+(x v(t +
+2a
+v
+), for n = 0; 1; 2;::
+so that we obtain that p =
+ ~
+a
+n, where n = 0; 1; 2;::, exactly as in the
+solution of the Schr odinger equation. The positive and negative values for p
+corresponds to the propagation on the left or on the right (opposite direction)
+of this electron. Consequently we obtain a constant discrete set of possible
+velocities v =
+p
+m
+0
+(we consider only non relativistic case when v<<c).
+The (non relativistic) kinetic energy of this electron can be one of the following
+discrete values:
+E =
+m
+0
+v
+2
+2
+=
+p
+2
+2m
+0
+=
+( ~)
+2
+2m
+0
+a
+2
+n
+2
+, n = 0; 1; 2;::
+Thus, the wave-pocket of this electron in the box that oscillates along the axis
+x, is given by:
+	(x;y;z;t) =  (x +la vt;y;z)e
+i(
+p(x+la)
+~
+ !
+0
+t)
+, for t2 [(l 
+1
+2
+)4t; (l +
+1
+2
+)4t],
+or, when it propagates in opposite direction,
+	(x;y;z;t) =  (x (l +1)a+vt;y;z)e
+i(
+ p(x (l+1)a)
+~
+ !
+0
+t)
+, fort2 [(l +1 
+1
+2
+)4t; (l +
+1 +
+1
+2
+)4t],
+where l = 0; 1; 2;:::,4t =
+a
+v
+, and v2fn
+4 ~
+m
+0
+a
+j n = 0; 1; 2;:::g.
+ 
+The D'Alambrt-like equation (e.4) is very important for the particles with the
+rest mass greater than zero as well, and especially to their stationary cases as
+well, when !
+p
+6= 0, as for example in the stationary orbits of electrons in the
+atoms. Based on the stationary solutions of the D'Alambert-like differential
+equation for electrons, directly from (e.4) we can derive the 3rd Bohr postulate,
+as follows:
+Example 4: 3rd Bohr postulate for the electrons.
+The electrons in the atoms have constant velocity v > 0 and momentum p, so
+that the non relativistic equation for electron's wave-pocket 	 and its propa-
+Electronic Journal. http://www.math.spbu.ru/diffjournal 64Differential Equations and Control Processes, N 1, 2011
+gation given by (e.4.2), can be obtained by substituting
+@
+  !
+v
+@t
+with
+  !
+F=m
+0
+, with
+the radial force of the electric  eld F =j
+  !
+Fj =
+Ze
+2
+4  
+0
+R
+2
+, where Z is a number of
+protons in the atom's nucleus, e is the electrical charge of the electron,  
+0
+the
+electric constant and R is the distance of the electron from the nucleus. Thus,
+we obtain the stationary case for the electron's propagation:
+(e.5) 4	
+1
+ 
+1
+v
+2
+@
+2
+	
+1
+@t
+2
+= 
+2
+m
+0
+v
+2
+  !
+Fr	
+1
+,
+with a general solution 	
+1
+(
+  !
+r  
+  !
+vt) =  (
+  !
+r  
+  !
+vt)e
+ i
+  !
+p
+~
+(
+  !
+r 
+  !
+vt)
+. The station-
+ary solutions are those for which the wave-pocket 	
+1
+obtain the same identical
+value after every full rotation of electron around the nucleus, That is when
+	
+1
+(x;y;z;t) = 	
+1
+(x;y;z;t +
+2 R
+v
+), where
+2 R
+v
+is the time period for one com-
+plete rotation of the wave-pocket 	
+1
+around the nucleus.
+Thus,  (
+  !
+r  
+  !
+v (t +
+2 R
+v
+)) =  (
+  !
+r  
+  !
+vt), where
+2 R
+v
+is the period of time for
+one revolution of electron around the nucleus, and we obtain that:
+	
+1
+(x;y;z;t +
+2 R
+v
+) =  (
+  !
+r 
+  !
+v (t +
+2 R
+v
+))e
+ i
+  !
+p
+~
+(
+  !
+r 
+  !
+v (t+
+2 R
+v
+))
+=
+=  (
+  !
+r 
+  !
+vt)e
+ i
+  !
+p
+~
+(
+  !
+r 
+  !
+vt)
+e
++i
+  !
+p
+~
+  !
+v
+2 R
+v
+=
+= 	
+1
+(x;y;z;t)e
+ i
+2 pR
+~
+= 	
+1
+(x;y;z;t), if
+2 pR
+~
+= 2n , n = 1; 2; 3;::, that is,
+when pR = n~, as in the 3rd Bohr postulate. Consequntly, for a given mo-
+mentum of the electron, the radius R can be only one of the following values
+R =n
+~
+p
+, n = 1; 2;::
+Analogously, for a  xed radius R of an electron in a stationary states, its mo-
+mentum p can have only the following discrete values p = n
+~
+R
+, with spatial
+wavelengths   =
+2 ~
+p
+=
+2 R
+n
+, n = 1; 2;::.
+Thus, for a given radius R, the wave-pocket for an electron will be given by:
+	(x;y;z;t) = e
+ i!
+p
+t
+	
+1
+=  (
+  !
+r 
+  !
+vt)e
+i( 
+  !
+p
+  !
+r
+~
+ !
+0
+t)
+=
+=  (
+  !
+r 
+  !
+vt)e
+i( 
+n
+R
+  !
+i
+v
+(t)
+  !
+r !
+0
+t)
+,
+where, if we take the plain x;y for rotation of this electron with a center in
+(0,0) and initial position of electron in t = 0 equal to
+  !
+r = Re1 + 0e2, then
+  !
+i
+v
+(t) =  cos(
+v
+R
+t)e
+1
++sin(
+v
+R
+t)e
+2
+is the unit vector of the velocity, that is, tangent
+vector to the circle with radius R.
+Consequently, these stationary cases correspond to the following values of !
+p
+:
+!
+p
+=!
+0
+ 
+pv
+~
+=!
+0
+ n
+v
+R
+, n = 1; 2;:::,
+where !
+0
+=
+m
+0
+c
+2
+~
+, and the stationary values for the energiesE = ~!
+p
+are equal
+toE =m
+0
+c
+2
+ n
+~v
+R
+, n = 1; 2;:::.
+As a consequence, for mass-particles we can have a number of different station-
+ary (stable) states for !
+p
+.
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal 65Differential Equations and Control Processes, N 1, 2011
+References
+[1] L. Broglie. Recherches sur la theorie des quanta. Ann. de Phys., 10
+e
+serie,
+t. III (Janvier-Fervier), 1925.
+[2] C.Liu, Z.Dutton, C.Behroozi, and L.Hau. Observation of coherent optical
+information storage in an atomic medium using halted light pulses. Nature
+409 (6819), pages 490{493, 2001.
+[3] L.Hau, S.Harris, Z.Dutton, and C.Behroozi. Light speed reduction to 17
+metres per second in an ultracold atomic gas. Nature 397, pages 594{598,
+1999.
+[4] Z.Majki  c. Partial differential equations for wave pockets in the
+Minkowski 4-dimensional spaces. Technical Report 02-10, Compet Research,
+http://zoranmajkic.webs.com, 2010.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 66

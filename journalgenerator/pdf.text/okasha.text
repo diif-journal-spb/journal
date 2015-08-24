@@ -1,0 +1,2346 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 3, 2012
+Electronic Journal,
+reg. N C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Existence of solutions of fractional abstract integro-differential equation with
+impulsive nonlocal conditions
+A. Al-Omari and M.H.M. Rashid
+Al al-Bayt University,Faculty of Sciences, Dept.of Mathematics
+P.O. Box 130095, Mafraq 25113,Jordan
+omarimutah1@yahoo.com
+Department of Mathematics& Statistics,Faculty of Science
+P.O. Box(7),Mutah University, Alkarak-Jordan
+malik okasha@yahoo.com
+keywords
+Existence of solution, Nonlinear fractional equation, Fractional calculus, Impulsive condi-
+tion, Nonlocal condition
+Abstract
+In this paper we prove the existence of solutions to fractional abstract integro-differential equa-
+tion with impulsive nonlocal conditions in Banach spaces. The results are obtained using fractional
+calculus and  xed point theorem. An example is provided to illustrate the theory.
+1 Introduction
+Fractional differential equations have recently been addressed by several researchers for a va-
+riety of problems. The interest in the study of differential equations of fractional order lies in
+the fact that fractional derivatives provide an excellent tool for the description of memory and
+hereditary properties of various materials and processes. With this advantage, the fractional-
+order models become more realistic and practical than the classical integer-order models, in
+which such effects are not taken into account. As a matter of fact, fractional differential equa-
+tions arise in many engineering and scienti c disciplines such as physics, chemistry, biology,Differential Equations and Control Processes, N 3, 2012
+economics, control theory, signal and image processing, biophysics, blood ow phenomena,
+aerodynamics,  tting of experimental data, etc. [17, 24, 25, 26] . For some recent development
+on the topic, see [5, 20, 19] and the references therein.
+In [14, 16] the authors have proved the existence of solutions of abstract differential equations
+by using semigroup theory and  xed point theorem. Many partial fractional differential equa-
+tions can be expressed as fractional differential equations in some Banach spaces [15].
+The study of nonlocal Cauchy problem for abstract evolution differential equations has been ini-
+tiated by Byszewski [11]. Subsequently several authors [12, 21] have discussed the problem for
+different types of nonlinear differential and integrodifferential equations including functional
+differential equations in Banach spaces. Balachandran et al. [6, 3, 4] established the exis-
+tence of solutions of quasilinear integrodifferential equations with nonlocal conditions where
+the quasilinear operator is unbounded. The existence of solutions of fractional abstract dif-
+ferential equations with nonlocal initial condition was recently investigated by
+ 
+NGu  er  ekata
+[22] and Balachandran and Park [3]. Numerical experiments for fractional models on popula-
+tion dynamics are discussed in [22]. On the other hand, the theory of impulsive differential
+equations has undergone rapid development over the years and played a very important role
+in modern applied mathematical models of real processes arising in phenomena studied in
+physics, population dynamics, chemical technology, biotechnology and economics: see for in-
+stance the monograph by Lakshmikantham et al. [18]. Benchohra and Seba [8] studied the
+existence of fractional impulsive differential equations in Banach spaces while Balachandran
+and Kiruthika [2] discussed the existence of nonlocal Cauchy problem for semilinear fractional
+evolution equations where as Chang and Nieto [13] studied the same type of problem for
+neutral integrodifferential inclusions via fractional operators. Belmekki et al. [7] proved the
+existence of periodic solutions of nonlinear fractional differential equations where as Ahmad
+and Nieto [1] discussed the existence results for nonlinear boundary value problem of frac-
+tional integrodifferential equations with integral boundary conditions. Recently, the study of
+impulsive differential equations has attracted a great deal of attention in fractional dynamics
+and its theory has been treated in several works [10, 18]. Balachandran and Trujillo [10]
+investigated the nonlocal Cauchy problem for nonlinear fractional integrodifferential equations
+in Banach spaces which motivates to study the existence of solutions of fractional quasilinear
+impulsive integrodifferential equations in Banach spaces by using the fractional calculus and
+ xed point theorems. This work initiates new avenues for obtaining numerical solutions of
+impulsive fractional integrodifferential equations.
+2 Preliminaries
+In this section, we shall introduce some basic de nitions, notations and lemmas which are used
+throughout this paper.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 112Differential Equations and Control Processes, N 3, 2012
+De nition 2.1 The fractional (arbitrary) order integral of the function h2 L
+1
+([a;b];R
++
+) of
+order ff2R
++
+is de ned by
+I
+ff
+a
+h(t) =
+Z
+t
+a
+(t s)
+ff 1
+ (ff)
+h(s)ds
+where   is the gamma function. Whena = 0; we writeI
+ff
+h(t) =h(t) '
+ff
+(t); where'
+ff
+(t) =
+t
+ff 1
+ (ff)
+for t> 0 , and '
+ff
+(t) = 0 for t  0, and '
+ff
+! (t) as ff! 0, where   is the delta function.
+De nition 2.2 For a functionh given on the interval [a;b], the Caputo fractional order deriva-
+tive of h, is de ned by,
+(
+c
+D
+ff
+a
++h)(t) =
+1
+ (n ff)
+Z
+t
+a
+(t s)
+n ff 1
+h
+(n)
+(s)ds:
+Here n = [ff] + 1 and [ff] denotes the integer part of ff:
+Let B(X) be the Banach space of all linear and bounded operators on X. Now let us consider
+the set of functions
+PC(I;X) =fu :I = [0;T ]!X :u2C((t
+k 1
+;t
+k
+];X);k = 1; 2;    ;m and
+there exist u(t
+ 
+k
+) and u(t
++
+k
+);k = 1; 2;    ;m with u(t
+ 
+k
+) =u(t
+k
+)g:
+endowed with the norm
+kuk
+PC
+= sup
+t2I
+ku(t)k
+(PC(I;X);k:k
+PC
+) is a Banach space.
+3 Semilinear Evolution problem
+Consider the linear fractional impulsive evolution equation
+u
+(ff)
+= A(t)u(t) +f(t;u(t)) t2 [0;T ]; t6=t
+k
+0<ff  1
+ uj
+t=t
+k
+= I
+k
+(u(t
+ 
+k
+)) k = 1;:::;m: (3:1)
+u(0) = u
+0
+2X
+where A(t) is a bounded linear operator on a Banach space X, I
+k
+: X! X, k = 1;:::;m:
+and u
+0
+2 X, 0 = t
+0
+< t
+1
+< t
+2
+< ::: < t
+m
+< t
+m+1
+= T .  uj
+t=t
+k
+= u(t
++
+k
+) u(t
+ 
+k
+);u(t
++
+k
+) =
+lim
+h!0
++
+u(t
+k
++h) and u(t
+ 
+k
+) = lim
+h!0
+ 
+u(t
+k
++h) represent the right and left limits of u(t) at t =t
+k
+.
+De nition 3.1 A function u(t) is said to be a solution of the abstract Cauchy problem (3.1)
+if the following conditions are satis ed
+(i) u2PC(I;X) and u2D(A(t)) for all t2I;
+Electronic Journal. http://www.math.spbu.ru/diffjournal 113Differential Equations and Control Processes, N 3, 2012
+(ii) u
+(ff)
+exists on I where 0<ff< 1;
+(iii) u satis es Eq (3.1) on I and satisfy the conditions
+ uj
+t=t
+k
+= I
+k
+(u(t
+ 
+k
+)) k = 1;:::;m:
+u(0) = u
+0
+2X
+Now, we assume the following conditions to prove the existence of a solution of the Eq.
+(3.1).
+(H1) A(t) is a bounded linear operator on X for each t2 I and the function t! A(t) is
+continuous in the uniform operator topology and there exists a constant M such that
+M = max
+t2I
+kA(t)k:
+(H2) The function I
+k
+:X!X are continuous and there exists a constant L
+1
+> 0 and  
+1
+> 0
+such that
+kI
+k
+(u) I
+k
+(v)k L
+1
+ku vk and kI
+k
+(u)k< 
+1
+kuk for each u;v2X and k = 1; 2;:::;m;
+and f :I X!X is continuous and there exists a constant L
+2
+such that
+kf(t;u) f(t;v)k L
+2
+ku vk for all u;v2X:
+For brevity let us take
+T
+ff
+ (ff + 1)
+=.
+De nition 3.2 A function u2PC(I;X) solution of the fractional integral equation
+u(t) =
+8
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+:
+u
+0
++
+1
+ (ff)
+R
+t
+0
+(t s)
+ff 1
+(A(s)u(s) +f(s;u(s))) ds; if t2 [0;t
+1
+];
+u
+0
++
+1
+ (ff)
+P
+0<t
+k
+<t
+R
+t
+k
+t
+k 1
+(t
+k
+ s)
+ff 1
+(A(s)u(s) +f(s;u(s)))ds
++
+1
+ (ff)
+R
+t
+t
+k
+(t s)
+ff 1
+(A(s)u(s) +f(s;u(s)))ds (3:2)
++
+P
+0<t
+k
+<t
+I
+k
+(u(t
+ 
+k
+)) if t2 (t
+k
+;t
+k+1
+].
+will be called a mild solution of Problem (3.1).
+Theorem 3.3 If the hypotheses (H1) and (H2) are satis ed, then Equation (3.1) has a unique
+solution onI. Moreover, the mappingu
+0
+!u is a lipschitz continuous fromX intoC([0;T ];X).
+Electronic Journal. http://www.math.spbu.ru/diffjournal 114Differential Equations and Control Processes, N 3, 2012
+Proof
+The proof is based on the application of Picards iteration method. Let M =
+max
+0 t T
+kA(t)k and de ne a mapping F :PC([0;T ] :X)!PC([0;T ] :X) by
+Fu(t) =u
+0
++
+1
+ (ff)
+X
+0<t
+k
+<t
+Z
+t
+k
+t
+k 1
+(t
+k
+ s)
+ff 1
+(A(s)u(s) +f(s;u(s)))ds
++
+1
+ (ff)
+Z
+t
+t
+k
+(t s)
+ff 1
+(A(s)u(s) +f(s;u(s)))ds
++
+X
+0<t
+k
+<t
+I
+k
+(u(t
+ 
+k
+)) if t2 (t
+k
+;t
+k+1
+] (3:3)
+Let u;v2PC(I;X). Then from Eq. (3.3), we have for each t2I
+kFu(t) Fv(t)k 
+T
+ff
+(m + 1)
+ (ff + 1)
+(M +L
+2
+)ku vk +mL
+1
+ku vk:
+Then by induction we have
+kF
+n
+u(t) F
+n
+v(t)k 
+((m + 1)(M +L
+2
+) +mL
+1
+)
+n
+n!
+ku vk:
+Since
+((m + 1)(M +L
+2
+) +mL
+1
+)
+n
+n!
+< 1 for large n, then by the well-known generalization of
+the Banach contraction principle, F has a unique  xed point u2 PC([0;T ] : X). This  xed
+point is the solution of Eq. (3.1).
+The uniqueness ofu and Lipschitz continuity of the mapu
+0
+!u are consequence of the following
+argument. Let v be a mild solution of Eq.(3.1) on [0,T] with the initial value u
+0
+. Then
+ku(t) v(t)k kT (t)u
+0
+ T (t)v
+0
+k
++
+1
+ (ff)
+X
+0<t
+k
+<t
+Z
+t
+k
+t
+k 1
+(t
+k
+ s)
+ff 1
+(kA(s)kku(s) v(s)k +kf(s;u(s)) f(s;v(s))k)ds
++
+1
+ (ff)
+Z
+t
+t
+k
+(t s)
+ff 1
+(kA(s)kku(s) v(s)k +kf(s;u(s)) f(s;v(s)k)ds
++
+X
+0<t
+k
+<t
+
+
+I
+k
+(u(t
+ 
+k
+) I
+k
+(v(t
+ 
+k
+))
+
+
+The last equation can be written in the form
+ku(t) v(t)k Mku
+0
+ v
+0
+k +M
+ 
+Z
+t
+0
+ku(s) v(s)k ds +mL
+1
+ku(t) v(t)k;
+where M
+ 
+is a suitable constant. Hence
+ku(t) v(t)k M
+1
+ku
+0
+ v
+0
+k +M
+ 
+1
+Z
+t
+0
+ku(s) v(s)k ds
+Electronic Journal. http://www.math.spbu.ru/diffjournal 115Differential Equations and Control Processes, N 3, 2012
+which implies by Grownwall's inequality, that
+ku(t) v(t)k M
+1
+e
+M
+ 
+1
+T
+ku
+0
+ v
+0
+k;
+and therefore
+ku vk
+1
+ M
+1
+e
+M
+ 
+1
+T
+ku
+0
+ v
+0
+k
+which yields both the uniqueness of u and the lipsctiz continuity of the map u
+0
+!u:
+4 Impulsive Semilinear Cauchy Problem
+Let A(t) is a bounded linear operator and the nonlinear functions f;g :I X X!X and
+h :D X!X are continuous. Here D =f(t;s)2R
+2
+: 0 s t Tg: For brevity let
+Hu(t) =
+Z
+t
+0
+h(t;s;u(s))ds:
+(H3) h is continuous function and there exist positive constants ff
+1
+;ff
+2
+and ff such that
+kh(t;s;u) h(t;s;v)k ff
+1
+ku vk
+for all u;v2C(I;X), ff
+2
+= max
+(t;s)2D
+kh(t;s; 0)k; and ff = maxfff
+1
+;ff
+2
+g:
+Lemma 4.1 If (H3) is satis ed, then the estimate
+kHu(t)k t(ff
+1
+kuk +ff
+2
+)
+kHv(t) Hw(t)k ff
+1
+tkv wk:
+is satis ed for any t2I, and u;v;w2C(I;X):
+Proof
+By (H3), we have
+kHu(t)k 
+Z
+t
+0
+kh(t;s;u(s))k ds
+ 
+Z
+t
+0
+kh(t;s;u(s)) h(t;s; 0)k ds +
+Z
+t
+0
+kh(t;s; 0k ds
+ ff
+1
+tkuk +ff
+2
+t =t(ff
+1
+kuk +ff
+2
+):
+On the other hand,
+kHv(t) Hw(t)k 
+Z
+t
+0
+kh(t;s;v(s)) h(t;s;w(s)k ds
+ ff
+1
+Z
+t
+0
+kv wk ds
+ ff
+1
+tkv wk:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 116Differential Equations and Control Processes, N 3, 2012
+We need the following additional assumptions to prove the existence of solution of the Eq.
+(3.1).
+(H4) f;g are continuous and there exist a positive constants L, L
+2
+,L
+3
+, K, K
+2
+K
+3
+and N such
+that
+kf(t;u(t);Hu(t)) f(t;v(t);Hv(t))k<L
+2
+ku vk +L
+3
+kHu Hvk
+< (L
+2
++L
+3
+ff
+1
+t)ku vk<Lku vk for all u;v2X
+kg(t;u(t);Hu(t)) g(t;v(t);Hv(t))k<K
+2
+ku vk +K
+3
+kHu Hvk
+< (K
+2
++K
+3
+ff
+1
+t)ku vk<Kku vk for all u;v2X
+and N =max
+t2I
+kf(t; 0; 0)k;  =max
+t2I
+kg(t; 0; 0)k
+(H4*) The function q : I! X is continuous and there exist constant q
+t
+such that
+R
+t
+0
+jq(t 
+s)jds =q
+t
+:
+Now consider the semilinear fractional impulsive evolution equation
+u
+(ff)
+= A(t)u(t) +f (t;u(t);Hu(t)) +
+Z
+t
+0
+q(t s)g (s;u(s);Hu(s)) ds;
+t2 [0;T ]; 0<ff  1
+ uj
+t=t
+k
+= I
+k
+(u(t
+ 
+k
+)) k = 1;:::;m:
+u(0) = u
+0
+2X (4:1)
+The Eq. (4.1) is equivalent to the integral equation
+u(t) =u
+0
++
+1
+ (ff)
+X
+0<t
+k
+<t
+Z
+t
+k
+t
+k 1
+(t
+k
+ s)
+ff 1
+[A(s)u(s) +f(s;u(s);Hu(s))
++
+Z
+s
+0
+q(s  )g( ;u( );Hu( ))d ]ds
++
+1
+ (ff)
+Z
+t
+t
+k
+(t s)
+ff 1
+[A(s)u(s) +f(s;u(s);Hu(s)))
++
+Z
+s
+0
+q(s  )g( ;u( );Hu( ))d ]ds +
+X
+0<t
+k
+<t
+I
+k
+(u(t
+ 
+k
+))
+Theorem 4.2 If the hypotheses H1, H2 and H4 are satis ed and if
+[(m + 1)(M +L +q
+t
+K) +m 
+1
+]<
+1
+2
+then the fractional impulsive equation (4.1) has a unique solution on I.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 117Differential Equations and Control Processes, N 3, 2012
+Proof Let Z =PC(I;X). De ne the mapping   :Z!Z by
+ u(t) =u
+0
++
+1
+ (ff)
+X
+0<t
+k
+<t
+Z
+t
+k
+t
+k 1
+(t
+k
+ s)
+ff 1
+[A(s)u(s) +f(s;u(s);Hu(s))
++
+Z
+s
+0
+q(s  )g( ;u( ))d ]ds
++
+1
+ (ff)
+Z
+t
+t
+k
+(t s)
+ff 1
+[A(s)u(s) +f(s;u(s);Hu(s))
++
+Z
+s
+0
+q(s  )g( ;u( );Hu( ))d ]ds +
+X
+0<t
+k
+<t
+I
+k
+(u(t
+ 
+k
+))
+and we have to show that   has a  xed point. This  xed point is the solution of Eq. (4.1).
+Choose r  2 [ku
+0
+k +(m + 1)(N +q
+t
+ )].
+Then we can show that  B
+r
+ B
+r
+, where B
+r
+:=fu2Z :kuk rg. From the assumption we
+have
+k u(t)k ku
+0
+k +
+1
+ (ff)
+X
+0<t
+k
+<t
+Z
+t
+k
+t
+k 1
+(t
+k
+ s)
+ff 1
+[kA(s)kku(s)k +kf(s;u(s);Hu(s))k
++
+
+
+
+
+Z
+s
+0
+q(s  )g( ;u( );Hu( ))d 
+
+
+
+
+]ds
++
+1
+ (ff)
+Z
+t
+t
+k
+(t s)
+ff 1
+[kA(s)kku(s)k +kf(s;u(s);Hu(s))k
++
+
+
+
+
+Z
+s
+0
+q(s  )g( ;u( );Hu( ))d 
+
+
+
+
+]ds +
+X
+0<t
+k
+<t
+
+
+I
+k
+(u(t
+ 
+k
+))
+
+
+ ku
+0
+k +
+1
+ (ff)
+X
+0<t
+k
+<t
+Z
+t
+k
+t
+k 1
+(t
+k
+ s)
+ff 1
+[kA(s)kku(s)k
++kf(s;u(s);Hu(s)) f(s; 0; 0)k +kf(s; 0; 0)k
++
+
+
+
+
+Z
+s
+0
+q(s  )[g( ;u( );Hu( )) g( ; 0; 0)]d 
+
+
+
+
++
+
+
+
+
+Z
+s
+0
+q(s  )g( ; 0; 0)d 
+
+
+
+
+]ds
++
+1
+ (ff)
+Z
+t
+t
+k
+(t s)
+ff 1
+[kA(s)kku(s)k
++kf(s;u(s);Hu(s)) f(s; 0; 0)k +kf(s; 0; 0)k
++
+
+
+
+
+Z
+s
+0
+q(s  )[g( ;u( );Hu( )) g( ; 0; 0)]d 
+
+
+
+
++
+
+
+
+
+Z
+s
+0
+q(s  )g( ; 0; 0)d 
+
+
+
+
+]ds +
+X
+0<t
+k
+<t
+
+
+I
+k
+(u(t
+ 
+k
+))
+
+
+ ku
+0
+k +kuk [(m + 1)[M +L +q
+t
+K] + 
+1
+m] +(m + 1)(N +q
+t
+ )
+ ku
+0
+k +(m + 1)(N +q
+t
+ ) +r [(m + 1)(M +L +q
+t
+K) +m 
+1
+]
+ r
+Electronic Journal. http://www.math.spbu.ru/diffjournal 118Differential Equations and Control Processes, N 3, 2012
+Thus   maps B
+r
+into itself. Now, for u
+1
+, u
+2
+2Z, we have
+k u
+1
+(t)   u
+2
+(t)k ku
+0
+k +
+1
+ (ff)
+X
+0<t
+k
+<t
+Z
+t
+k
+t
+k 1
+(t
+k
+ s)
+ff 1
+[kA(s)(u
+1
+(s) u
+2
+(s))k
++kf(s;u
+1
+(s);Hu
+1
+(s)) f(s;u
+2
+(s);Hu
+2
+(s))k
++
+
+
+
+
+Z
+s
+0
+q(s  )[g( ;u
+1
+( );Hu
+1
+( )) g( ;u
+2
+( );Hu
+2
+(s))]d 
+
+
+
+
+]ds
++
+1
+ (ff)
+Z
+t
+t
+k
+(t s)
+ff 1
+[kA(s)(u
+1
+(s) u
+2
+(s))k
++kf(s;u
+1
+(s);Hu
+1
+(s)) f(s;u
+2
+(s);Hu
+2
+(s))k
++
+
+
+
+
+Z
+s
+0
+q(s  ) [g( ;u
+1
+( );Hu
+1
+( )) g( ;u
+2
+( );Hu
+2
+( ))] d 
+
+
+
+
+]ds
++
+X
+0<t
+k
+<t
+
+
+I
+k
+(u
+1
+(t
+ 
+k
+)) I
+k
+(u
+2
+(t
+ 
+k
+))
+
+
+ 
+ 
+T
+ff
+ (ff + 1)
+(m + 1) [M +L +q
+t
+K] +mL
+1
+ 
+ku
+1
+ u
+2
+k
+  [(m + 1) [M +L +q
+t
+K] +mL
+1
+]ku
+1
+ u
+2
+k
+ 
+1
+2
+ku
+1
+ u
+2
+k:
+Hence   is a contraction mapping and therefore there exists a unique  xed point u2B
+r
+such
+that  u(t) =u(t). Any  xed point of   is the solution of Equation (4.1).
+5 Nonlocal Impulsive Semilinear Cauchy Problem
+In this section we discuss the existence of solution of the impulsive evolution equation (4.1)
+with nonlocal condition of the form
+u(0) + (u) =u
+0
+(5:1)
+where   :PC(I;X)!X is a given function which satis es the following condition
+(H5)   :PC(I;X)!X is continuous and there exists a constant G> 0 such that
+k (u)  (v)k Gku vk
+PC
+for u;v2PC(I;X):
+Theorem 5.1 If the hypotheses (H1); (H2); (H3); (H4) and (H5) are satis ed and if
+[G + [(m + 1) (M +L +q
+t
+K)] +mL
+1
+]<
+1
+2
+then the fractional impulsive evolution Equation (4.1) with nonlocal condition (5.1) has a unique
+solution on I.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 119Differential Equations and Control Processes, N 3, 2012
+Proof
+We want to prove that the operator 	 :Z!Z de ned by
+	u(t) =u
+0
+  (u) +
+1
+ (ff)
+X
+0<t
+k
+<t
+Z
+t
+k
+t
+k 1
+(t
+k
+ s)
+ff 1
+A(s)u(s)ds +
+1
+ (ff)
+Z
+t
+t
+k
+(t s)
+ff 1
+A(s)u(s)ds
++
+1
+ (ff)
+X
+0<t
+k
+<t
+Z
+t
+k
+t
+k 1
+(t
+k
+ s)
+ff 1
+ 
+f (s;u(s);Hu(s)) +
+Z
+s
+0
+q(s  )g( ;u( );Hu( ))d 
+ 
+ds
++
+1
+ (ff)
+Z
+t
+t
+k
+(t s)
+ff 1
+ 
+f (s;u(s);Hu(s)) +
+Z
+s
+0
+q(s  )g( ;u( );Hu( ))d 
+ 
+ds
++
+X
+0<t
+k
+<t
+I
+k
+(u(t
+ 
+k
+))
+has a  xed point. This  xed point is then a solution of Equation (4.1) with nonlocal condition
+(5.1). Choose r  2 (ku
+0
+k +k (0)k + (m + 1)N): Then it is easy to see that 	B
+r
+ B
+r
+.
+Further, for u;v2Z; we have
+k	u  	vk Gku(t) v(t)k +
+1
+ (ff)
+X
+0<t
+k
+<t
+Z
+t
+k
+t
+k 1
+(t
+k
+ s)
+ff 1
+kA(s)kku(s) v(s)k ds
++
+1
+ (ff)
+Z
+t
+t
+k
+(t
+k
+ s)
+ff 1
+kA(s)kku(s) v(s)k ds
++
+1
+ (ff)
+X
+0<t
+k
+<t
+Z
+t
+k
+t
+k 1
+(t
+k
+ s)
+ff 1
+[kf (s;u(s);Hu(s)) f (s;v(s);Hv(s))k
++
+Z
+s
+0
+kq(s  )kkg( ;u( );Hu( )) g( ;v( );Hv( ))k d ]ds
++
+1
+ (ff)
+Z
+t
+t
+k
+(t s)
+ff 1
+[kf (s;u(s);Hu(s)) f (s;v(s);Hv(s))k
++
+Z
+s
+0
+kq(s  )kkg( ;u( );Hu( )) g( ;v( );Hv( ))k d ]ds
++
+X
+0<t
+k
+<t
+
+
+I
+k
+(u(t
+ 
+k
+) I
+k
+(v(t
+ 
+k
+)
+
+
+ 
+ 
+G +
+T
+ff
+ (ff + 1)
+[(m + 1) (M +L +q
+t
+K)] +mL
+1
+ 
+ku vk
+  [G + [(m + 1) (M +L +q
+t
+K)] +mL
+1
+]ku vk
+ 
+1
+2
+ku vk:
+The result follows by the application of contraction mapping principle. Our next result is based
+on the following well-known  xed point theorem.
+Krasnoselskii Theorem. Let S be closed convex nonempty subset of a Banach space X. Let
+P;Q be two operators such that
+(i) Px +Qx2S whenever x;y2S;
+Electronic Journal. http://www.math.spbu.ru/diffjournal 120Differential Equations and Control Processes, N 3, 2012
+(ii) P is a contraction mapping;
+(iii) Q is compact and continuous.
+Then there exists z2S such that z =Pz +Qz:
+Now, we assume the following condition with (H4) and apply the above  xed point theorem.
+(H6) f :I X X!X is continuous and there exists a continuous function  2L
+1
+(I) such
+that
+kf(t;u;Hu)k  (t); for all (t;u;Hu)2I X X:
+(H7) g :I X X!X is continuous and there exists a continuous function  2L
+1
+(I) such
+that
+kg(t;u;Hu)k  (t); for all (t;u;Hu)2I X X:
+Theorem 5.2 Assume that (H1); (H2); (H4); (H5); (H6); and (H7) hold. IfG+(m+1)M +
+mL
+1
+< 1; then the fractional evolution Equation (4.1) with nonlocal condition (5.1) has a
+solution on I.
+Proof
+Choose
+r 
+ku
+0
+k +k (0)k +(m + 1)( 
+0
++q
+t
+ 
+0
+)
+1  (G + [(m + 1)M] +m 
+1
+)
+where  
+0
+= sup
+t2I
+ (t); 
+0
+= sup
+t2I
+ (t) and de ne the operators P and Q on B
+r
+as
+Pu(t) =u
+0
+  (u) +
+1
+ (ff)
+X
+0<t
+k
+<t
+Z
+t
+k
+t
+k 1
+(t
+k
+ s)
+ff 1
+A(s)u(s)ds
++
+1
+ (ff)
+Z
+t
+t
+k
+(t s)
+ff 1
+A(s)u(s)ds +
+X
+0<t
+k
+<t
+I
+k
+(u(t
+ 
+k
+))
+and
+Qu(t) =
+1
+ (ff)
+X
+0<t
+k
+<t
+Z
+t
+k
+t
+k 1
+(t
+k
+ s)
+ff 1
+ 
+f (s;u(s);Hu(s)) +
+Z
+s
+0
+q(s  )g( ;u( );Hu( ))d 
+ 
+ds
++
+1
+ (ff)
+Z
+t
+t
+k
+(t s)
+ff 1
+ 
+f (s;u(s);Hu(s)) +
+Z
+s
+0
+q(s  )g( ;u( );Hu( ))d 
+ 
+ds:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 121Differential Equations and Control Processes, N 3, 2012
+For any u;v2B
+r
+; we have
+kPu(t) +Qv(t)k ku
+0
+k +k (u)  (0)k +k (0)k +
+1
+ (ff)
+X
+0<t
+k
+<t
+Z
+t
+k
+t
+k 1
+(t
+k
+ s)
+ff 1
+kA(s)kku(s)k ds
++
+1
+ (ff)
+Z
+t
+t
+k
+(t s)
+ff 1
+kA(s)kku(s)k ds +
+X
+0<t
+k
+<t
+
+
+I
+k
+(u(t
+ 
+k
+))
+
+
++
+1
+ (ff)
+X
+0<t
+k
+<t
+Z
+t
+k
+t
+k 1
+(t
+k
+ s)
+ff 1
+ 
+kf(s;u(s);Hu(s))k +
+Z
+s
+0
+kq(s  )kkg( ;u( );Hu( ))k d 
+ 
+ds
++
+1
+ (ff)
+Z
+t
+t
+k
+(t s)
+ff 1
+ 
+kf(s;u(s);Hu(s))k +
+Z
+s
+0
+kq(s  )kkg( ;u( );Hu( ))k d 
+ 
+ds
+ ku
+0
+k +k (0)k +r[G + [(m + 1)M] +m 
+1
+] +(m + 1)( 
+0
++q
+t
+ 
+0
+)
+ r:
+Hence, we deduce thatkPu +Qvk r:
+Next, for any t2I, u;v2X we have
+kPu Pvk k (u)  (v)k +
+1
+ (ff)
+X
+0<t
+k
+<t
+Z
+t
+k
+t
+k 1
+(t
+k
+ s)
+ff 1
+kA(s)kku(s) v(s)k ds
++
+1
+ (ff)
+Z
+t
+t
+k
+(t s)
+ff 1
+kA(s)kku(s) v(s)k ds +
+X
+0<t
+k
+<t
+
+
+I
+k
+(u(t
+ 
+k
+)) I
+k
+(v(t
+ 
+k
+))
+
+
+ Gku vk +(m + 1)Mku vk +mL
+1
+ku vk
+  [G +(m + 1)M +mL
+1
+]ku vk:
+And since G +(m + 1)M +mL
+1
+< 1; then P is a contraction mapping.
+Now, let us prove that Q is continuous and compact.
+Letfu
+n
+g be a sequence in B
+r
+; such that u
+n
+!u in B
+r
+. Then
+f(s;u
+n
+(s);Hu
+n
+(s))!f(s;u(s);Hu(s)); and g(s;u
+n
+(s);Hu
+n
+(s))!g(s;u(s);Hu(s)) n!1
+because the functions f and g are continuous on I X X: Now, for each t2I; we have
+kQu
+n
+ Quk 
+1
+ (ff)
+X
+0<t
+k
+<t
+Z
+t
+k
+t
+k 1
+(t
+k
+ s)
+ff 1
+[kf(s;u
+n
+(s);Hu
+n
+(s)) f(s;u(s);Hu(s))k
++
+Z
+s
+0
+kq(s  )kkg( ;u
+n
+( );Hu
+n
+( )) g( ;u( );Hu( ))k d ]ds
++
+1
+ (ff)
+Z
+t
+t
+k
+(t s)
+ff 1
+[kf(s;u
+n
+(s);Hu
+n
+(s)) f(s;u(s);Hu(s))k
++
+Z
+s
+0
+kq(s  )kkg( ;u
+n
+( );Hu
+n
+( )) g( ;u( );Hu( ))k d ]ds
+Electronic Journal. http://www.math.spbu.ru/diffjournal 122Differential Equations and Control Processes, N 3, 2012
+Consequently, lim
+n!1
+kQu
+n
+(t) Qu(t)k = 0: In other word, Q is continuous.
+Let's now note that Q is uniformly bounded on B
+r
+. This follows from the inequality
+kQu(t)k 
+1
+ (ff)
+X
+0<t
+k
+<t
+Z
+t
+k
+t
+k 1
+(t
+k
+ s)
+ff 1
+ 
+kf(s;u(s);Hu(s))k +
+Z
+s
+0
+kq(s  )kkg( ;u( );Hu( ))k d 
+ 
+ds
++
+1
+ (ff)
+Z
+t
+t
+k
+(t s)
+ff 1
+ 
+kf(s;u(s);Hu(s))k +
+Z
+s
+0
+kq(s  )kkg( ;u( );Hu( ))k d 
+ 
+ds
+ [(m + 1)( 
+0
++q
+t
+ 
+0
+)]:
+Now, lets prove that Qu; u2 B
+r
+is equicontinuous. Let t
+1
+;t
+2
+2 I, t
+1
+< t
+2
+, and let B
+r
+be a
+bounded set in X. Let u2B
+r
+, we have
+kQu(t
+2
+) Qu(t
+1
+)k  +
+1
+ (ff)
+Z
+t
+2
+t
+1
+(t
+2
+ s)
+ff 1
+[kf(s;u(s);Hu(s))k
++
+Z
+s
+0
+kq(s  )kkg( ;u( );Hu( ))k d ]ds
+=
+1
+ (ff)
+X
+0<t
+k
+<t
+2
+Z
+t
+k
+t
+k 1
+(t
+k
+ s)
+ff 1
+[kf(s;u(s);Hu(s))k
++
+Z
+s
+0
+kq(s  )kkg( ;u( );Hu( ))k d ]ds
+ 
+1
+ (ff)
+Z
+t
+1
+0
+(t
+2
+ s)
+ff 1
+[kf(s;u(s);Hu(s))k
++
+Z
+s
+0
+kq(s  )kkg( ;u( );Hu( ))k d ]ds
+ 
+1
+ (ff)
+Z
+t
+1
+0
+ 
+(t
+2
+ s)
+ff 1
+  (t
+1
+ s)
+ff 1
+ 
+[kf(s;u(s);Hu(s))k
++
+Z
+s
+0
+kq(s  )kkg( ;u( );Hu( ))k d ]ds
++
+1
+ (ff)
+Z
+t
+2
+t
+1
+(t
+2
+ s)
+ff 1
+[kf(s;u(s);Hu(s))k
++
+Z
+s
+0
+kq(s  )kkg( ;u( );Hu( ))k d ]ds
+ 
+ 
+0
++q
+t
+ 
+0
+ (ff + 1)
+[2(t
+2
+ t
+1
+)
+ff
+ t
+ff
+1
++t
+ff
+2
+]
+As t
+2
+!t
+1
+, the right hand side of the above inequality tends to zero. In short we have proven
+thatQ(B
+r
+) is relatively compact fort2I: By Arzela Ascoli's theorem,Q is compact. Hence by
+the Krasnoselskii theorem there exists a solution of the problem (4.1) with nonlocal condition
+(5.1).
+Electronic Journal. http://www.math.spbu.ru/diffjournal 123Differential Equations and Control Processes, N 3, 2012
+6 Example
+In this section we provide with an example to illustrate our main result. Consider the following
+fractional integrodifferential equation with impulsive of the form.
+c
+D
+ff
+u(t) =
+1
+100
+e
+ t
+ju(t)j +f(t;u(t);Hu(t)) +
+Z
+t
+0
+q(t s)g(s;u(s)Hu(s))ds
+t2I = [0; 1]; x2 (0; ) t6=
+1
+2
+; 0<ff  1:
+ uj
+t=
+1
+2
+=
+ju(
+1
+2
+ 
+)j
+9 +ju(
+1
+2
+ 
+)j
+u(0) =u
+0
+;
+where
+A(t) =
+1
+100
+e
+ t
+I; Hu(t) =
+Z
+t
+0
+e
+ 
+1
+5
+u(s)
+ds
+f(t;u;Hu) =
+e
+ t
+juj
+(49 +e
+t
+)(1 +juj)
++
+1
+10
+Hu(t); g(t;u;Hu) =
+juj
+(t + 5)
+2
+(1 +juj)
++
+1
+20
+Hu(t)
+q(t s) =e
+t s
+and I
+k
+(u) =
+juj
+9 +juj
+; u2X
+Let u;v2C(I;X) and t2I. Then we have
+kHu Hvk =
+ 
+ 
+ 
+ 
+Z
+t
+0
+e
+ 
+1
+5
+u(s)
+ds 
+Z
+t
+0
+e
+ 
+1
+5
+v(s)
+ds
+ 
+ 
+ 
+ 
+ 
+1
+5
+ku vk
+kf(t;u;Hu) f(t;v;Hv)k =
+e
+ t
+49 +e
+t
+ 
+ 
+ 
+ 
+u
+1 +u
+ 
+v
+1 +v
+ 
+ 
+ 
+ 
++
+1
+10
+kHu Hvk
+=
+e
+ t
+ju vj
+(49 +e
+t
+)(1 +u)(1 +v)
++
+1
+10
+kHu Hvk
+ 
+e
+ t
+49 +e
+t
+ju vj +
+1
+10
+kHu Hvk
+ 
+1
+50
+[ju vj +kHu Hvk] 
+2
+50
+ku vk:
+kg(t;u;Hu) g(t;v;Hv)k =
+1
+(t + 5)
+2
+ 
+ 
+ 
+ 
+u
+1 +u
+ 
+v
+1 +v
+ 
+ 
+ 
+ 
++
+1
+20
+kHu Hvk
+=
+ju vj
+(t + 5)
+2
+(1 +u)(1 +v)
++
+1
+20
+kHu Hvk
+ 
+1
+(t + 5)
+2
+ju vj +
+1
+20
+kHu Hvk
+ 
+1
+25
+ju vj +
+1
+20
+kHu Hvk 
+5
+100
+ku vk:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 124Differential Equations and Control Processes, N 3, 2012
+Hence the condition (H1); (H4); and (H4
+ 
+) hold withM =
+1
+100
+;L =
+2
+50
+;K =
+5
+100
+;q
+t
+= 2. Let
+u;v2X. Then we have by (H2)
+kI
+k
+(u) I
+k
+(v)k =
+ 
+ 
+ 
+ 
+u
+9 +u
+ 
+v
+9 +v
+ 
+ 
+ 
+ 
+=
+9ju vj
+(9 +u)(9 +v)
+ 
+1
+9
+ju vj
+Note that L
+1
+=
+1
+9
+. Choose r = 1;m = 1 we shall check the condition
+[(m + 1)(M +L +q
+t
+K) +m 
+1
+]<
+1
+2
+is satis ed. Indeed
+[(m + 1)(M +L +q
+t
+K) +m 
+1
+]<
+1
+2
+,  (ff + 1)>
+75
+100
+; (6:1)
+which is satis ed for some 0<ff  1: Then by Theorem 4.2 the problem has a unique solution
+on [0; 1] for some values of ff satis ed condition (6,1).
+References
+[1] Ahmad, B. and Nieto, J.J.: Existence results for nonlinear boundary value problems of
+fractional integrodifferential equations with integral boundary conditions. Boundary Value
+Problems, Article ID. 708576, 1-11 (2009).
+[2] Balachandran, K. and Kiruthika S.: Existence of solutions of abstract fractional impulsive
+semilinear evolution equations, Electronic Journal of Qualitative Theory of Differential
+Equations, 4, 1-12 (2010).
+[3] Balachandran, K. and Park, D.G.: Existence of solutions of quasilinear integrodifferential
+evolution equations in Banach spaces, Bulletin of Korean Mathematical Society, 46, 691-
+700 (2009).
+[4] Balachandran, K. and Samuel, F. P.: Existence of solutions for quasilinear delay integrod-
+ifferential equations with nonlocal conditions, Electronic Journal of Differential Equations,
+6, 1-7 (2009).
+[5] Balachandran, K. and Trujillo, J.J.: The nonlocal Cauchy problem for nonlinear fractional
+integrodifferential equations in Banach spaces, Nonlinear Anal., 72, 4587-4593 (2010).
+[6] Balachandran, K. and Uchiyama, K.: Existence of solutions of quasilinear integrodifferen-
+tial equations with nonlocal condition, Tokyo Journal of Mathematics, 23, 203-210 (2000).
+[7] Belmekki, M., Nieto, J.J. and Rodrguez-Lpez R.: Existence of periodic solutions for a
+nonlinear fractional differential equation. Boundary Value Problems, Article ID. 324561,
+1-18 (2009).
+Electronic Journal. http://www.math.spbu.ru/diffjournal 125Differential Equations and Control Processes, N 3, 2012
+[8] Benchohra, M. and Seba, D.: Impulsive fractional differential equations in Banach Spaces,
+Electronic Journal of Qualitative Theory of Differential Equations, 8, 1-14 (2009).
+[9] Benchohra, M. and Slimani, B.A.: Existence and uniqueness of solutions to impulsive
+fractional differential equations, Electronic Journal of Differential Equations, 10, 1{11
+(2009).
+[10] Benchohra, M. and Slimani B. A.: Existence and uniqueness of solutions to impulsive frac-
+tional differential equations, Electronic Journal of Differential Equations, 10, 1-11 (2009).
+[11] Byszewski, L.: Theorems about the existence and uniqueness of solutions of a semilinear
+evolution nonlocal Cauchy problem, Journal of Mathematical Analysis and Applications,
+162, 494-505 (1991).
+[12] Byszewski, L. and Akca, H.: Existence of solutions of a semilinear functionaldifferential
+evolution nonlocal problem, Nonlinear Anal., 34, 65-72 (1998).
+[13] Chang, Y. K. and Nieto, J. J.: Existence of solutions for impulsive neutral integrod-
+ifferential inclusions with nonlocal initial conditions via fractional operators, Numerical
+Functional Analysis and Optimization, 30, 227-244 (2009).
+[14] El-Borai, M. M.: Semigroups and some nonlinear fractional differential equations, Applied
+Mathematics and Computation, 149, 823{831 (2004).
+[15] El-Sayed, M. A.: Fractional order diffusion wave equation, International Journal of Theo-
+retical Physics, 35, 311{322 (1996).
+[16] Jaradat, O.K., Al-Omari, A. and Momani, S.: Existence of the mild solution for fractional
+semilinear initial calue problems, Nonlinear Analysis, 69, 3153{3159 (2008).
+[17] Kilbas, A.A., Srivastava, H.M. and Trujillo, J.J.: Theory and Applications of Fractional
+Differential Equations, in: North-Holland Mathematics Studies, vol. 204, Elsevier Science
+B.V., Amsterdam, 2006.
+[18] Lakshmikantham, V., Bainov, D.D. and Simeonov, P.S.: Theory of Impulsive Differential
+Equations. Singapore: World Scienti c; 1989.
+[19] Lakshmikantham, V., Leela, S. and Vasundhara Devi, J.: Theory of Fractional Dynamic
+Systems, Cambridge Academic Publishers, Cambridge, 2009.
+[20] Lakshmikantham, V. and Vatsala, A.S.: Basic theory of fractional differential equations,
+Nonlinear Anal., 69 (8), 2677-2682 (2008).
+[21] Liang, J., Liu, J. and Xiao, T.J.: Nonlocal Cauchy problems governed by compact operator
+families. Nonlinear Anal., 57, 183-189 (2004).
+Electronic Journal. http://www.math.spbu.ru/diffjournal 126Differential Equations and Control Processes, N 3, 2012
+[22] NGurkata, G.M.: A Cauchy problem for some fractional abstract differential equation with
+non local conditions, Nonlinear Anal., 70, 1873-1886 (2009).
+[23] Pazy, A.: Semigroup of Linear Operators and Applications to Partial Differential Equa-
+tions, Springer-Verlag, New York, 1983.
+[24] Podlubny, I.: Fractional Differential Equations, Academic Press, San Diego, 1999.
+[25] Sabatier, J., Agrawal, O.P. and Machado, J.A.T.: Advances in Fractional Calculus: The-
+oretical Developments and Applications in Physics and Engineering, Springer, Dordrecht,
+2007.
+[26] Samko, S.G., Kilbas, A.A. and Marichev, O.I.: Fractional Integrals and Derivatives, Theory
+and Applications, Gordon and Breach, Yverdon, 1993.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 127

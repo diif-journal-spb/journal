@@ -1,0 +1,3293 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 3, 2011
+Electronic Journal,
+reg. N ΦC77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Schr¨ odinger Differential Equation and Wave Pockets for Elementary Particles
+in the Minkowski Spaces
+Zoran Majki´ c
+International Society for Research in Science and Technology
+PO Box 2464 Tallahassee, FL 32316 - 2464 USA
+email: majk.1234@yahoo.com,
+http://zoranmajkic.webs.com/
+Abstract
+In this paper we presented the partial differential equations for the wave-pockets in
+the Minkowski 4-dimensional spaces, and their relationship with the Schr¨ odinger equation
+for the elementary particles[7]. In this paper we show that the Schr¨ odinger equation does
+not describe the propagation of a single wave-pocket of an elementary particle but to the
+stream of particles.
+Because of that it has only a statistical meaning that can be applied to the stream of
+particles, andonly its probabilistic interpretation to asingle particle is well founded. That
+is, it is not a wave description of a single particle, but represents only its probabilistically
+determined position in a given space.
+In physics and mathematics, Minkowski space (or Minkowski time-space [4])
+is the mathematical setting in which Einstein’s theory of special relativity is
+most conveniently formulated. In this setting the three ordinary dimensions of
+space are combined with a single dimension of time to form a four-dimensional
+manifold for representing a time-space.
+In theoretical physics, Minkowski space is often contrasted with Euclidean
+space. While a Euclidean space has only spacelike dimensions, a MinkowskiDifferential Equations and Control Processes, N 3, 2011
+space also has one timelike dimension. His famous article ”Space and Time”,
+beginswiththefollowingtext: ”Theconceptionsabouttimeandspace, whichI
+hopetodevelopbeforeyouto-day,hasgrownonexperimentalphysicalgrounds.
+Hereinliesitsstrength. Thetendencyisradical. Henceforth,theoldconception
+of space for itself, and time for itself shall reduce to a mere shadow, and some
+sort of union of the two will be found consistent with facts.”
+Differentlyfromthepseudo-EuclideanMinkowskispace[4],wheretimeisimag-
+inary and Euclidean three dimensions real, here we deﬁne the basic time-space
+four mutually orthogonal vectors e
+j
+,0≤j≤ 3, by the following matrix:
+
+
+
+
+
+
+e
+0
+e
+1
+e
+2
+e
+3
+
+
+
+
+
+
+=
+
+
+
+
+
+
+1 0 0 0
+0 i 0 0
+0 0 i 0
+0 0 0 i
+
+
+
+
+
+
+, with imaginary number i =
+√
+−1.
+Note that the matrix above is a particular case of the Minkowski tensor using
+a four-dimensionaltime-space, which combines the real dimension of time with
+the three imaginary dimensions of space.
+Consequently, a vector of position in this space-time 4-dimensional system,
+w.r.t. a given referential coordinate system, is given by
+− →
+r
+4
+=cte
+0
++xe
+1
++ye
+2
++ze
+3
+=cte
+0
++
+− →
+r,
+wheret is the time (i.e.,ct is the timelike component of
+− →
+r
+4
+, wherec is the ve-
+locityof lightin the vacuum) and
+− →
+r =xe
+1
++ye
+2
++ze
+3
+is an ordinaryEuclidean
+vector with x,y,z three spatial coordinates.
+Its inﬁnitesimal amount is deﬁned by d
+− →
+s =cdte
+0
++dxe
+1
++dye
+2
++dze
+3
+, where
+dt,dx,dy and dz are inﬁnitesimal amounts of time-space dimensions.
+Thus, in this 4-dimensional system the time is real while the three orthogonal
+space coordinates are imaginary. This choice is adopted in order to have that
+the distance
+ds
+2
+=d
+− →
+sd
+− →
+s = (cdt)
+2
+−dx
+2
+−dy
+2
+−dz
+2
+,
+for all local time-space reference systems of observations of quantum events be
+the positive real value (where space dimensions are limited).
+Let us denote by
+− →
+r
+T
+(t) = x(t)e
+1
++y(t)e
+2
++z(t)e
+3
+the vector that lies on the
+Euclidean 3-dimensional particle’s trajectory. The 4-dimensional velocity of a
+given materialpoint (tangenton its trajectory)in this Minkowskispace is then
+deﬁned by
+− →
+v
+4
+=
+d
+− →
+s
+dt
+=ce
+0
++v
+x
+e
+1
++v
+y
+e
+2
++v
+z
+e
+3
+=ce
+0
++
+− →
+v,
+where
+− →
+v =
+∂
+∂t
+− →
+r
+T
+(t) = v
+x
+e
+1
++v
+y
+e
+2
++v
+z
+e
+3
+is the standard deﬁnition of the ve-
+locity in the 3-dimensional Euclidean space, with v
+x
+=
+dx
+dt
+,v
+y
+=
+dy
+dt
+,v
+z
+=
+dz
+dt
+and
+Electronic Journal. http://www.math.spbu.ru/diffjournal 47Differential Equations and Control Processes, N 3, 2011
+v = |
+− →
+v| =
+q
+v
+2
+x
++v
+2
+y
++v
+2
+z
+≤ c. The unitary 3-dimensional velocity vector is
+deﬁned by
+− →
+i
+v
+=
+− →
+v
+v
+.
+Then we have that|
+− →
+v
+4
+| =
+q
+c
+2
+−v
+2
+x
+−v
+2
+y
+−v
+2
+z
+=c
+p
+1−β
+2
+, whereβ =
+v
+c
+.
+The trajectory of a material point that moves in the Minkowski 4-dimensional
+spacebyavelocity
+− →
+v
+4
+isdeﬁned bythe unitary tangent vectorofthistrajectory
+− →
+τ =
+− →
+v
+4
+|
+− →
+v
+4
+|
+=
+− →
+v
+4
+c
+√
+1−β
+2
+=
+1
+√
+1−β
+2
+e
+0
++
+v
+x
+c
+√
+1−β
+2
+e
+1
++
+v
+y
+c
+√
+1−β
+2
+e
+2
++
+v
+z
+c
+√
+1−β
+2
+e
+3
+.
+Then the vector E
+0
+− →
+τ , where E
+0
+= m
+0
+c
+2
+is the energy of the elementary par-
+ticle with rest mass m
+0
+> 0, is the well deﬁned invariant (independent of a
+referentialsystem in specialrelativitytheory)4-dimensional energy-momentum
+vector for massive particles in the Minkowski spaces, that is,
+E
+0
+− →
+τ =mc
+2
+e
+0
++cmv
+x
+e
+1
++cmv
+y
+e
+2
++cmv
+z
+e
+3
+=Ee
+0
++c
+− →
+p,
+wherem =
+m
+0
+√
+1−β
+2
+is the relativistic mass for a given velocityv of this particle,
+E = mc
+2
+is its total relativistic energy, and
+− →
+p = m
+− →
+v is its 3-dimensional
+momentum.
+Thus, both fundamental properties of a particle, its energy and its momentum,
+are two physical values that are propagated on the particle’s trajectory with
+the velocityv. Consequently, the energy and momentum on the particle’s tra-
+jectory are the functions that depend only on the timet.
+An 4-dimensional angular wavenumber vector
+− →
+k
+4
+, and its correspondent 4-
+dimensionalmomentumvector
+− →
+p
+4
+,inthisfour-dimensionaltime-spacearegiven
+by
+− →
+k
+4
+=k
+t
+e
+0
++k
+x
+e
+1
++k
+y
+e
+2
++k
+z
+e
+3
+, and
+− →
+p
+4
+= ~
+− →
+k
+4
+.
+In whatfollowswewilldenoteby
+− →
+k =k
+x
+e
+1
++k
+y
+e
+2
++k
+z
+e
+3
+the spatialcomponent
+of the angular wavenumber vector, with k
+2
+= |
+− →
+k|
+2
+= k
+2
+x
++k
+2
+y
++k
+2
+z
+, so that
+k
+2
+4
+=
+− →
+k
+4
+− →
+k
+4
+=k
+2
+t
+−k
+2
+.
+The mutually independent space-components are deﬁned as usual by k
+x
+=
+2π
+λ
+x
+, k
+y
+=
+2π
+λ
+y
+, k
+z
+=
+2π
+λ
+z
+, whereλ
+x
+,λ
+y
+,λ
+z
+arespatialwavelengthsw.r.ttheaxesx,y
+andz respectively,andλ =
+2π
+k
+isthe(total)spatialwavelength. Letω = 2πν be
+anangularfrequencythatdependsonthespace-components,ν =
+1
+T
+withatime
+periodT. Thus,λ
+t
+=cT isthetime-likewavelengthandk
+t
+=
+2π
+λ
+t
+=
+ω(k)
+c
+depends
+on the space-components in
+− →
+k
+4
+, so that it holds that dk
+4
+= dk = dk
+x
+dk
+y
+dk
+z
+,
+and−
+− →
+k
+4
+− →
+r
+4
+=k
+x
+x+k
+y
+y+k
+z
+z−ω(k)t, and
+− →
+k
+4
+− →
+v
+4
+=ω(k)+
+− →
+k
+− →
+v.
+Remark: from the relativistic theory we have that for each massive elemen-
+tary particle (with rest mass m
+0
+greater than zero) it holds that ω(k) =
+±c
+p
+k
+2
++(m
+0
+c\~)
+2
+, where ~ =
+h
+2π
+is the Dirac’s constant, for the Planck’s
+Electronic Journal. http://www.math.spbu.ru/diffjournal 48Differential Equations and Control Processes, N 3, 2011
+constanth = 6.6210
+−34
+Js.
+Note that we assume that ω can be positive or negative (clockwise or counter-
+clockwise angular frequency), so that the energy of the particle is E = ~|ω|,
+where| | denotes the absolute value. In the rest of this paper we will consider
+the cases when ω is positive.
+Notice that if we represent an elementary particle, with energy E = ~ω and
+momentum
+− →
+p = ~
+− →
+k [1], by a singleharmonicAe
+−i
+− →
+k
+4
+− →
+r
+4
+in thisfour-dimensional
+space, where
+− →
+k
+4
+=
+ω
+c
+e
+0
++
+− →
+k =
+E
+~c
+e
+0
++
+− →
+p
+~
+, then we obtain thatk
+2
+4
+= (
+ω
+c
+)
+2
+−k
+2
+= 0
+for particleswithrest mass equal to zero (photons,gravitons,etc..), andk
+2
+4
+> 0
+for the massive particles (with rest mass m
+0
+greater than zero). In fact, we
+obtain that |k
+4
+| =
+ω
+0
+c
+where ω
+0
+=
+m
+0
+c
+2
+~
+is the invariant angular frequency for
+particles (analog to the invariant rest mass m
+0
+of particles). Thus, similarly
+to the 3-dimensional angular wavenumber vector
+− →
+k that in physics means the
+particle’smomentum,the 4-dimensionalangularwavenumber
+− →
+k
+4
+has a physical
+meaning as the particle’s relativistically invariant angular frequency.
+ 
+The plan of this paper is the following: In Section 1 is introduced the concept
+for wave-pockets of matter-events in the Minkowski space, and are deﬁned its
+integral expressions for the energy and momentum. Then in Section 2 are pre-
+sentedthedeﬁnitionsofpartialdifferentialequationsoftheﬁrstandthesecond
+order for these matter’s wave-pockets. Finally, in Section 3 is elaborated the
+relationships with the Schr¨ odinger differential equation of elementary particles
+and is demonstratedthatitcan be derivedfromdifferentialequationsforwave-
+pockets, deﬁned in Section 2, as special case of the coherent dense stream of
+particles of the same type. Consequently, it is demonstrated that Schr¨ odinger
+differential equation of elementary particles has only the well known statistical
+meaning if applied to a single elementary particle.
+1 Introduction to wave-pockets of matter-events in the
+Minkowski space
+In [8] was presented that in any given instance of time t, any matter-event in
+this time-space is a particular time-space perturbation Ψ(
+− →
+r
+4
+), can be mathe-
+matically given by the following Fourier transformation:
+Ψ(
+− →
+r
+4
+) = Ψ(x,y,z,t)=
+R
+C(k
+4
+)e
+i(−
+− →
+k
+4
+− →
+r
+4
+)
+dk
+4
+=
+=
+R
+A(k)e
+i(−
+− →
+k
+− →
+r−ω(k)t)
+dk = (whereA(k)=C(k
+4
+)=C(
+q
+(
+ω(k)
+c
+)
+2
+−k
+2
+))
+Electronic Journal. http://www.math.spbu.ru/diffjournal 49Differential Equations and Control Processes, N 3, 2011
+=
+RRR
++∞
+−∞
+A(k)e
+i(k
+x
+x+k
+y
+y+k
+z
+z−ω(k)t)
+dk
+x
+dk
+y
+dk
+z
+.
+It is a space-distribution of a particle in a given instance of time t, and it
+changes in time, that is, the amplitudesA(k) are generally dependent on time
+as well.
+Mathematically, these matter-events are complex functions, composed by one
+real and one imaginary component. The amplitudesA(k) of the harmonics, in
+a given instance of timet, are given by inverse Fourier transformation,
+A(k)=
+RRR
++∞
+−∞
+Ψ(x,y,z,t)e
+−i(k
+x
+x+k
+y
+y+k
+z
+z−ω(k)t)
+dxdxdz.
+The elementary particles are pocket waves that propagate in this four-
+dimensional space.
+Thus, for such particular stationary cases we have that dω(k)/d
+− →
+k is constant
+(thatis,itdoesnotdependonthevariablevector
+− →
+k),equaltotheparticle’sve-
+locity−
+− →
+v =−v
+x
+e
+1
+−v
+y
+e
+2
+−v
+z
+e
+3
+(negativesignis the consequence thate
+i
+,i≥ 1
+are imaginary, thus the scalar products of (only) spatial vectors are negative),
+that can depend on the timet as well.
+Consequently, for any ﬁxed instance of timet, by integration we obtain that,
+(0)
+R
+− →
+k
+− →
+k
+0
+dω =ω(k)−ω(k
+0
+) =−
+R
+− →
+k
+− →
+k
+0
+− →
+vd
+− →
+k =−
+− →
+v
+R
+− →
+k
+− →
+k
+0
+d
+− →
+k =−
+− →
+v(
+− →
+k −
+− →
+k
+0
+),
+where the constant
+− →
+k
+0
+=
+− →
+p
+~
+for a given momentum
+− →
+p = p
+x
+e
+1
++p
+y
+e
+2
++p
+z
+e
+3
+of
+a particle that is collinear with the velocity
+− →
+v, that is,
+− →
+p
+− →
+v =−pv. Because
+of that we can write
+− →
+p =p
+− →
+i
+v
+,
+− →
+v =v
+− →
+i
+v
+, where
+− →
+i
+v
+is unitary vector tangent to
+the trajectory of a particle (i.e.,
+− →
+i
+v
+− →
+i
+v
+=−1). Thus,
+ω(k)=ω
+0
++v
+x
+(k
+x
+−
+p
+x
+~
+)+v
+y
+(k
+y
+−
+p
+y
+~
+)+v
+z
+(k
+z
+−
+p
+z
+~
+),
+whereω
+0
+denotestheconstantω(k
+0
+)thatdoesnotdependonk butmaydepend
+on time as we will see in what follows.
+The phase velocity of a particle’s pocket-wave, observed in a given referential
+system, is deﬁned by ϑ =
+ω
+0
+k
+0
+.
+The constantω
+0
+is determined as follows in the following two cases, by consid-
+ering that the angular frequency ω(k) for its particular values is correlated by
+De Broglie to the total energy o particleE = ~ω(k):
+• Case for massive particles (with rest massm
+0
+> 0), denominated as mass-
+particlesaswell: when
+− →
+v = 0thentheenergyofthisparticleisE =m
+0
+c
+2
+,
+thatis, the energyinthe rest-stateofthis particle. Consequently,from(0)
+we have that ω
+0
+=ω(k)=
+m
+0
+c
+2
+~
+.
+Consequently, for the total energy of these mass-particles that propagates
+with velocityv =|
+− →
+v|, withβ =
+v
+c
+, it holds that,
+E =
+p
+(m
+0
+c
+2
+)+(pc)
+2
+=
+p
+(~ω
+0
+)
+2
++(pc)
+2
+=
+m
+0
+c
+2
+√
+1−β
+2
+= ~ω
+v
+,
+Electronic Journal. http://www.math.spbu.ru/diffjournal 50Differential Equations and Control Processes, N 3, 2011
+where ω
+v
+= ω
+0
+/
+p
+1−β
+2
+is a computed angular frequency relative to the
+velocity v of this particle w.r.t. the reference system of an observer (for
+different observes in different referential systems, that move with different
+velocities, this computed value of the same observed particle is different).
+Foranobserverinagivenﬁxedposition(theoriginofitscoordinatesystem,
+for example), this observed particle’s frequency is by Lorentz low slowed
+down by the factor
+p
+1−β
+2
+, so that the really observed particle’s angular
+frequency of the observed wave-pocket Ψ(
+− →
+r
+4
+) given above is constant and
+equaltoω
+v
+p
+1−β
+2
+=ω
+0
+. Thus,ω
+0
+istheangularfrequencyofthismassive
+particle equal in any inertial system (without acceleration), that is, an
+invariant as is the rest-massm
+0
+.
+• Case for massless particles (with rest mass m
+0
+= 0): they propagate, as
+usual, with very high velocity c ≥ v > 0 equal to the maximal velocity
+of light if this particle propagates in the vacuum, thus the zero value of
+equation (0) we can obtain when
+− →
+k =
+− →
+k
+0
+=
+− →
+p
+~
+. Consequently, the value
+of E is the total energy of this particle with the given momentum
+− →
+p, so
+that ω
+0
+= ω(k) = ω(
+p
+~
+) =
+E
+~
+. The total energy of massless particles is
+deﬁned by E = ~ω
+o
+= (~k
+0
+)ϑ = pϑ. When a particle propagates in the
+vacuum then ϑ =c, so that E =pc.
+When the total energy changes in time, to a ﬁxed observer this angular
+frequency appears to change as well (for example, the relativistic effects
+for red-shifting of photons for a ﬁxed observer). Thus, differently from
+massive particles where for a ﬁxed observer
+∂ω
+0
+∂t
+= 0, hereω
+0
+can change in
+time, if a particle changes its total energy during the propagation.
+Consequently, for the wave-pocket of an elementary particle, and given refer-
+ence system, we have that
+(1) Ψ(x,y,z,t)=
+R
+A(k)e
+i(−
+− →
+k
+− →
+r−ω(k)t)
+dk =
+= (
+R
+A(k)e
+−i(
+− →
+k
+− →
+r−
+− →
+v(
+− →
+k−
+− →
+k
+0
+)t)
+dk)e
+−iω
+0
+t
+=
+= (
+R
+A(k)e
+−i(
+− →
+k−
+− →
+k
+0
+)(
+− →
+r−
+− →
+vt)
+dk)e
+i(−
+− →
+k
+0
+− →
+r−ω
+0
+t)
+=
+= Φ(
+− →
+r,t)e
+i(−
+− →
+p
+− →
+r
+~
+−ω
+0
+t)
+= Φ(
+− →
+r,t)e
+i
+p
+~
+(−
+− →
+i
+v
+− →
+r−ϑt)
+.
+In what follows we introduce the spatial vector
+− →
+u =
+− →
+r −
+− →
+vt, that is equal to
+zero for the time-space points of particle’s trajectory.
+The ”corpuscular” geometric wave-pocket shape (matter’s distribution) of a
+particle, that appears to a ﬁxed observer, is given by
+Φ(
+− →
+r,t)= Φ(x,y,z,t)=
+R
+A(k)e
+−i(
+− →
+k−
+− →
+k
+0
+)(
+− →
+r−
+− →
+vt)
+dk =
+=
+R
+A(|
+− →
+k +
+− →
+k
+0
+|)e
+−i
+− →
+k
+− →
+u
+dk =
+Electronic Journal. http://www.math.spbu.ru/diffjournal 51Differential Equations and Control Processes, N 3, 2011
+(here we denote by B(k) the valueA(|
+− →
+k +
+− →
+k
+0
+|)),
+=
+RRR
++∞
+−∞
+B(k)e
+i(k
+x
+(x−v
+x
+t)+k
+y
+(y−v
+y
+t)+k
+z
+(z−v
+z
+t))
+dk
+x
+dk
+y
+dk
+z
+=
+=
+RRR
++∞
+−∞
+B(k)e
+i(k
+x
+u
+x
++k
+y
+u
+y
++k
+z
+u
+z
+)
+dk
+x
+dk
+y
+dk
+z
+.
+In the case when a particle propagates in the vacuum with a constant velocity
+− →
+v (stationary case), then the coeﬃcients B(k) does not change in time, i.e.
+∂B(k)
+∂t
+= 0, so that the ”corpuscular” geometry (matter distribution) does not
+changein timeand Φ(
+− →
+r,t) = Φ(
+− →
+u) = Φ(
+− →
+r −
+− →
+vt) = Φ(x−v
+x
+t,y−v
+y
+t,z−v
+z
+t)
+is a wave-pocket that propagates with a velocity
+− →
+v.
+Thus, based on standard Fourier transformation, the function Φ(
+− →
+r,t) is a real
+function, differently from Ψ(x,y,z,t that is complex. The real and imaginary
+components of Ψ(x,y,z,t) are determined by the oscillationof the complex os-
+cillator component e
+i(−
+− →
+p
+− →
+r
+~
+−ω
+0
+t)
+, that is an oscillation identical to the complex
+plain wave (like, for example, the complex electromagnetic plain wave). The
+amplitudesB(k)oftheharmonicscanbeobtainedbytheinverseFouriertrans-
+formation, for each given instance of timet, by:
+B(k)=
+RRR
++∞
+−∞
+Φ(x,y,z,t)e
+−i(k
+x
+u
+x
++k
+y
+u
+y
++k
+z
+u
+z
+)
+dk
+x
+dk
+y
+dk
+z
+.
+Thus, generally any particle is determined by the pocket-wave Ψ(x,y,z,t)
+composed by two sub components: by the corpuscular matter distribution
+Φ(x,y,z,t)thatisarealfunction,andbythe’phasewave’e
+iϕ
+thatisacomplex
+function of the particle’s phase ϕ =−
+− →
+p
+− →
+r
+~
+−ω
+0
+t.
+Foranymatter-perturbationofanelementaryparticlethatpropagatesinthe3-
+dimensional space with a velocity that changes in the time, because of external
+forces that inﬂuence this particle, the 3-dimensional wave-pocket distribution
+Φ(x,y,z,t) changes as well, but it must satisfy the conservation matter prin-
+ciple, that is, at each given time instance t it must be satisﬁed the following
+invariance property:
+(2) 1
+Φ
+=
+RRR
++∞
+−∞
+Φ(x,y,z,t)dxdydz =
+RRR
++∞
+−∞
+Φ(x,y,z,0)dxdydz> 0,
+where1
+Φ
+isatime-invariantconstantvalueofanelementaryparticle(notneces-
+sarilyequalto1),andV(t)isaﬁnitecube(orsphere)whichcontainsthewhole
+”corpuscular” wave-pocket in a given instance of timet, and dV =dxdydz.
+We deﬁne the minimal(limit)cubeV
+m
+(t) =lim(2
+3
+△X△Y △Z), such that in
+this time-instancet, Φ(x,y,z,t)= 0 for (x≤−△X orx≥△X ory≤−△Y
+or y≥△Y or z≤−△Z or z≥△Z).
+The real function Φ(x,y,z,t) is the ”corpuscular” geometric wave-pocket form
+of a particle that propagates in the ordinary 3-dimensional space with a veloc-
+ity
+− →
+v =v
+x
+e
+1
++v
+y
+e
+2
++v
+z
+e
+3
+). In the stationary case, when it propagates in the
+vacuum with a constant velocity, it has constant distribution, that propagates
+Electronic Journal. http://www.math.spbu.ru/diffjournal 52Differential Equations and Control Processes, N 3, 2011
+as pocket-wave Φ(
+− →
+u) = Φ(
+− →
+r −
+− →
+vt) = Φ(x−v
+x
+t,y−v
+y
+t,z−v
+z
+t).
+Analogously to the Schrodinger’s approach, used to derive its equation based
+ontotalenergiesofparticles,withthemappingE→i~
+∂
+∂t
+, thatdoesnottakein
+consideration the spatial matter-distribution of a particle (considering in stan-
+dard quantum theory only the pointlike particles), here, differently, we deﬁne
+the total energy E in a given time instance t, of the time-space perturbations
+deﬁned by wave-pockets (1) and (2), by taking in consideration its real spatial
+matter distribution. Thus, by deﬁnition of a spatial integral as follows [6]:
+(3) E(t) = |
+R
++∞
+−∞
+i~
+∂Φ(
+− →
+r,t)e
+−iω
+0
+t
+∂t
+dV|/1
+Φ
+= |
+H
+V
+m
+(t)
+i~
+∂Φ(
+− →
+r,t)e
+−iω
+0
+t
+∂t
+dV|/1
+Φ
+,
+wheredV =dxdydz.
+Thus, the energy of the particles is and integral over Euclidean space, so it is
+onlydependentontimeinthe4-dimensionalMinkowskispace,sothatω
+0
+=
+E(t)
+~
+is only dependent on time (for massive particles it is a constant).
+In [6] for the massive particles it was obtained that their momentum p is an
+integral over Euclidean space, thus only dependent on time, i.e.,
+(4) p(t)= |
+H
+V
+m
+(t)
+(−i~
+− →
+v
+c
+∇)Φ(x−v
+x
+t,y−v
+y
+t,z−v
+z
+t)dxdydz|/1
+Φ
+,
+and, consequently,k
+0
+(t)=
+p(t)
+~
+as well.
+2 Partial differential equations for wave-pockets
+Let ∇ = e
+1
+∂
+∂x
++e
+2
+∂
+∂y
++e
+3
+∂
+∂z
+be the gradient, so that the Laplasian is deﬁned
+by△ =−∇
+2
+=
+∂
+2
+∂x
+2
++
+∂
+2
+∂y
+2
++
+∂
+2
+∂z
+2
+. Then the derivation of the wave-pocket along
+its trajectory with the unitary tangent vector
+− →
+i
+v
+on the trajectory, collinear
+with the vector of its velocity
+− →
+v = v
+− →
+i
+v
+=
+− →
+i
+v
+q
+v
+2
+x
++v
+2
+y
++v
+2
+z
+, is denoted by
+the operator
+− →
+i
+v
+∇. The propagation and geometric form of the wave-pocket
+Ψ(x,y,z,t) = Φ(
+− →
+r,t)e
+i(−
+− →
+p
+− →
+r
+~
+−ω
+0
+t)
+, of an elementary particle that propagates
+with velocity
+− →
+v, are deﬁned by the following differential equations [8]:
+(e.1) e
+iω
+0
+t∂Φe
+−iω
+0
+t
+∂t
+=−i
+∂(ω
+0
+t)
+∂t
+)Φ+
+− →
+v
+1
+∇Φ+Φ
+D
+(
+− →
+r,t), where,
+− →
+v
+1
+=
+∂
+∂t
+(
+− →
+vt), Φ
+D
+(
+− →
+r,t) =
+R
++∞
+−∞
+∂B(k)
+∂t
+e
+i(k
+x
+(x−v
+x
+t)+k
+y
+(y−v
+y
+t)+k
+z
+(z−v
+z
+t))
+dk
+x
+dk
+y
+dk
+z
+is
+equal tozero when this particleis in a stationarystate, that is, when
+∂B(k)
+∂t
+= 0.
+(e.2)
+∂Ψ
+∂t
+=−iω
+p
+Ψ+
+− →
+v
+1
+∇Ψ+Ψ
+D
+(
+− →
+r,t),
+where Ψ
+D
+(
+− →
+r,t) = Φ
+D
+(
+− →
+r,t)e
+i(−
+− →
+p
+− →
+r
+~
+−ω
+0
+t)
+.
+(e.3) (
+v
+1
+c
+)
+2
+△Ψ−
+1
+c
+2
+∂
+2
+Ψ
+∂t
+2
+−((
+ω
+p
+c
+)
+2
++i
+1
+c
+2
+∂ω
+p
+∂t
+−i
+− →
+v
+1
+c
+2
+~
+∂
+− →
+p
+∂t
+)Ψ−(i
+2ω
+p
+c
+2
+− →
+v
+1
+−
+1
+c
+2
+∂
+− →
+v
+1
+∂t
+)∇Ψ=
+= Υ
+D
+(
+− →
+r,t),
+whereω
+p
+=ω
+1
++
+− →
+p
+− →
+v
+1
+~
+, withω
+1
+=
+∂
+∂t
+(
+− →
+p
+− →
+r
+~
++ω
+0
+t) =
+− →
+r
+~
+∂
+− →
+p
+∂t
++
+∂
+∂t
+(ω
+0
+t),v
+1
+=
+p
+−
+− →
+v
+1
+− →
+v
+1
+,
+Electronic Journal. http://www.math.spbu.ru/diffjournal 53Differential Equations and Control Processes, N 3, 2011
+can change in time during the propagation. The right side of (e.3), Υ
+D
+(
+− →
+r,t) =
+1
+c
+2
+(
+− →
+v
+1
+∇Φ
+D
+−i2ω
+1
+Φ
+D
++
+∂Φ
+D
+∂t
+)e
+i(−
+− →
+p
+− →
+r
+~
+−ω
+0
+t)
+, is different from zero only in unstation-
+ary cases when Φ
+D
+(
+− →
+r,t)6= 0.
+In the stationary case, when ω
+p
+and ω
+1
+= ω
+0
+are two constants, this equation
+can be given in a simpler D’Alambert-like form:
+(e.4) (
+v
+1
+c
+)
+2
+△Ψ
+1
+−
+1
+c
+2
+∂
+2
+Ψ
+1
+∂t
+2
+=−
+1
+c
+2
+∂
+− →
+v
+1
+∂t
+∇Ψ
+1
+−i
+− →
+v
+1
+c
+2
+~
+∂
+− →
+p
+∂t
+Ψ
+1
+,
+where Ψ
+1
+= e
+iω
+p
+t
+Ψ(
+− →
+r,t).
+Notice that
+∂ω
+0
+∂t
+6= 0 only for the massless particles in their unstable states and
+very-very short interval of times△t≈ 0, when they change their total energy
+E = ~ω
+0
+during the collisions with another particles (the Compton effects). In
+what follows we will denote by E = ~ω
+p
+the energy associated to this angular
+frequency ω
+p
+.
+The stationary case is obtained when a particle propagates with constant total
+energyE and constantvalue E = ~ω
+p
+. Thus, in such a stationarycase we have
+that Φ
+D
+(
+− →
+r,t) = 0,Ψ
+D
+(
+− →
+r,t) = 0. It is easy to verify that the stationary case
+is one, for example, of the following two cases:
+1. Whenaparticlepropagateswithconstantmomentum
+− →
+p,velocity
+− →
+v (thus,
+∂
+− →
+v
+∂t
+=
+∂
+− →
+p
+∂t
+= 0), andtotalenergyE (inthatcaseω
+0
+isconstantformassless
+particles as well). Thus, without any acceleration. In that case ω
+p
+is
+constantaswell,withconstantE = ~(
+− →
+r
+~
+∂
+− →
+p
+∂t
++
+∂
+∂t
+(ω
+0
+t)+
+− →
+p
+− →
+v
+1
+~
+) = ~ω
+0
++
+− →
+p
+− →
+v =
+~ω
+0
+−pv.
+2. When a particle routes with constant radiusR around a ﬁxed center, with
+constant angular velocity ν =
+|
+− →
+v|
+R
+=
+v
+R
+, constant value of the momentum
+p = |
+− →
+v|, and total energy E. In this case we can obtain ω
+p
+constant in
+a particular coordinate system: coordinate center of the reference system
+x,y of the plain in which this particles routes. Then, the position of the
+trajectoryof this particlein a given momentt is equal to
+− →
+r =R
+− →
+i
+θ
+, where
+− →
+i
+θ
+is a unitary radial vector with angle θ = νt w.r.t the axis x. In this
+case the acceleration
+∂
+− →
+v
+∂t
+=−|
+∂
+− →
+v
+∂t
+|
+− →
+i
+θ
+, and
+∂
+− →
+p
+∂t
+=−|
+∂
+− →
+p
+∂t
+|
+− →
+i
+θ
+are radial vectors
+that have the constant values and are orthogonalto the vectors of velocity
+− →
+v and momentum
+− →
+p. So that,
+− →
+p
+− →
+r = 0,
+− →
+p
+∂
+− →
+v
+∂t
+= 0, and
+ω
+p
+=
+∂
+∂t
+(
+− →
+p
+− →
+r
+~
++ω
+0
+t)+
+− →
+p
+− →
+v
+1
+~
+= +ω
+0
++
+1
+~
+− →
+p(
+− →
+v +t
+∂
+− →
+v
+∂t
+) =ω
+0
++
+1
+~
+− →
+p
+− →
+v =
+=ω
+0
+−
+pv
+~
+.
+Here both ω
+0
+and pv are constant, and, consequently, we obtained the
+stationaritycondition
+∂ω
+p
+∂t
+= 0inallpointsofthetrajectoryofthisparticle,
+with constantE = ~ω
+0
++
+− →
+p
+− →
+v = ~ω
+0
+−pv.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 54Differential Equations and Control Processes, N 3, 2011
+Notice that in both stationary cases above we obtained that this particular
+constantenergyis equalto E = ~ω
+p
+= ~ω
+0
++
+− →
+p
+− →
+v = ~ω
+0
+−pv. Ifω
+p
+=ω
+1
++
+− →
+p
+− →
+v
+1
+~
+is computed for current space-time positions on the particle’s trajectory, then,
+in this particular case, ω
+1
+is taken as a derivation
+∂
+∂t
+of the current particle’s
+phase ϕ = −
+− →
+p
+− →
+r
+~
+−ω
+0
+t (we have that Ψ(
+− →
+r,t) = Φ(
+− →
+r,t)e
+iϕ
+) and express the
+particle’s phase-changing on its trajectory.
+Notice that the energy changes only during collisions with another particles
+(Compton effects; we consider a ”ﬁeld” as a statistical result of the iterations
+with bosons of this particular ﬁeld), so that after it this particle continue to
+propagateagainas astationaryparticle,butwithnew valuesoftotalenergyE,
+velocity
+− →
+v,momentum
+− →
+p,andnewstablewave-pocketgeometry(distribution)
+Φ(
+− →
+r−
+− →
+vt),sothatitcanbedescribedbythesimplerstationary-casedifferential
+equations:
+(e.1.1) e
+iω
+0
+t∂Φe
+−iω
+0
+t
+∂t
+= (−iω
+0
++
+∂(
+− →
+vt)
+∂t
+∇)Φ
+(e.2.1)
+∂Ψ
+∂t
+=−
+i
+~
+EΨ+
+∂(
+− →
+vt)
+∂t
+∇Ψ,
+where, when a velocity
+− →
+v is constant, we have that
+∂(
+− →
+vt)
+∂t
+=
+− →
+v +t
+∂
+− →
+v
+∂t
+=
+− →
+v.
+Notice that we have particular stationary cases when
+− →
+v is not constant, as for
+instance, for a stationary electron that rotates around the nucleus of an atom
+with a constant radial acceleration (in that case
+− →
+p
+− →
+v and total energy of this
+electron are constant, thus E =E +
+− →
+p
+− →
+v is constant as well).
+It was shown [6] that, in the case of these massless elementary particles that
+propagateinvacuumwiththevelocityoflightc,wehavethatthis”corpuscular”
+wavepocketinthestable(general)statecorrespondstotheDiracfunction(with
+A(k) = B(k) = 1/(2π)
+3
+), δ(
+− →
+r −
+− →
+ct) = δ(x−c
+x
+t,y−c
+y
+t,z−c
+z
+t) = δ(x−
+c
+x
+t)δ(y − c
+y
+t)δ(z − c
+z
+t). It is reasonable assumption that the volume of a
+distribution Φ (where it is greater than zero) of a massive particle (with rest
+mass m
+0
+greater than zero) is always greater than zero, so that it is a reason
+that such particles can not reach the limit velocity of light. In the analog way,
+the massless particles (with rest mass equal to zero) must have, in their stable
+state, this volume equal to zero, so that their distribution Φ is equal to Dirac
+function above, and they are able to propagate with the velocity of light in the
+vacuum. The non stable states of particles with rest mass m
+0
+= 0 can have
+more complex wave-pocket forms and it happen only in a very short instances
+of time, when the particle enters in strongly unsymmetric space region, as will
+be explained in what follows. In such situations its velocity of propagation
+becomes less than the velocity of light in the vacuum so that this particle can
+have a similar behavior as massive particles with Φ that occupies a limited but
+Electronic Journal. http://www.math.spbu.ru/diffjournal 55Differential Equations and Control Processes, N 3, 2011
+nonzero volume (so called spatial explosion of excited bosons). This unstable
+state of the particleswithm
+0
+= 0 tends to come back into the stable state with
+Dirac function geometry for distribution Φ.
+Theinteractionsbetweenanytwopocket-waves(particles)canbeobtainedonly
+by their local collisions, and depending on their energy and velocities they can
+produce a kind of Compton effects (elastic collisions) where they survive the
+collisions by chaining their momentum and energy (with conservation of total
+momentum and energy), or can make total fusion between them with possible
+creation of new stable particles (in Feynman’s diagrams). In order to be able
+for two pocket-waves to have a collision, and mutual interference, at least one
+of them must have a volume V
+m
+(t) (in a given instance of time of mutual
+collision)greater than zero. So, from this point of view, it can not happen that
+the distance between any two particles becomes equal to zero, so that we avoid
+classicinﬁnitaryproblemsofgravitationalandelectronicﬁeldsandforceswhere
+the particles are pointlike, so that it is possible to have the distances between
+particles equal to zero with, consequently, inﬁnite values of gravitational (or
+electric) forces.
+The particles with V
+m
+(t) equal to zero are, for example, the particles with
+Φ(x−v
+x
+t,y−v
+y
+t,z−v
+z
+t)equaltotheDiracfunctionδ(x−v
+x
+t,y−v
+y
+t,z−v
+z
+t) =
+δ(x−v
+x
+t)δ(y−v
+y
+t)δ(z−v
+z
+t).
+Thus,foranytwoparticleswiththe”corpuscular”formgivenbyDiracfunction,
+it is impossible to have the collisions in their stable states, but only when they
+are excited and are involved in their temporary ”spatial explosions”. Such
+explosions can happen also when two stable particles are very close one to
+another so that the ideal spatial symmetry for a free particle in the vacuum
+does not hold more: it explains why, for example, photons can interact with
+gravitons (i.e., gravitational ﬁeld) and may have the gravitational redshifts.
+Because of that, it will be natural consequence that the massless particles, as
+bosons (gravitons, photons, etc..) in their stable states, will have the volume
+V
+m
+(t) equal to zero (with Dirac function for their distribution Φ). In that
+case they can be used as intermediators between the massive particles (that
+have the rest mass and the volumeV
+m
+(t) greater than zero), that is, to be the
+quantum-correspondenceforthe”ﬁelds”(thestatisticaleventsasgravitational,
+electromagnetic, etc., that are statistical results of actions of a high number of
+bosons), by avoiding in more common situations the signiﬁcant interference
+between themselves.
+In the stationary cases, the basic equation (e.4) can be divided into following
+cases:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 56Differential Equations and Control Processes, N 3, 2011
+• When the velocityv = 0, we obtain a simple equation:
+(e.4.0)
+∂
+2
+Ψ
+1
+∂t
+2
+= 0, that is,
+∂
+2
+Ψ
+∂t
+2
+=−ω
+2
+0
+Ψ,
+with a simple solution, Ψ(x,y,z,t)= Φ(x,y,z)e
+−ω
+0
+t
+.
+• When the velocity
+− →
+v and the momentum
+− →
+p are constant vectors dur-
+ing the propagation, different from zero, then
+− →
+v
+1
+=
+− →
+v, so we obtain
+D’Alambert equation wherev is a constant value:
+(e.4.1) △Ψ
+1
+−
+1
+v
+2
+∂
+2
+Ψ
+1
+∂t
+2
+= 0,
+with the solution Ψ
+1
+(x,y,z,t)= Φ(
+− →
+r −
+− →
+vt)e
+−i
+− →
+p
+~
+(
+− →
+r−
+− →
+vt)
+, thus,
+Ψ(x,y,z,t)= Ψ
+1
+e
+−ω
+p
+t
+= Φ(
+− →
+r −
+− →
+vt)e
+i(−
+− →
+p
+− →
+r
+~
+−ω
+0
+t)
+.
+• The case when the velocity
+− →
+v with v > 0 and the momentum
+− →
+v change
+only the direction (they are collinear vectors in each instance of time)
+duringapropagation,butnottheirvalues,sothat−
+∂(
+− →
+p
+− →
+v)
+∂t
+=
+∂(pv)
+∂t
+= 0and
+v
+1
+= v is constant as well (this case includes the second case in Example
+2 as well: when the velocity of massive particle with rest mass m
+0
+is
+− →
+v = v(−cosθe
+1
++ sinθe
+2
+), where θ = νt =
+v
+R
+t is the angle w.r.t the
+axisx of a particlethat routes around the coordinatecenter with constant
+angular velocityν =
+v
+R
+on circular orbit with a radiusR).
+Thus, from (e.4) we obtain an extended D’Alambert equation wherev
+2
+=
+|
+− →
+v
+− →
+v|> 0 is a constant value: (e.4.2) △Ψ
+1
+−
+1
+v
+2
+∂
+2
+Ψ
+1
+∂t
+2
+= Θ(
+− →
+r,t),
+where Θ(
+− →
+r,t) = −
+1
+v
+2
+(
+∂
+− →
+v
+1
+∂t
+∇Ψ
+1
++ i
+− →
+v
+1
+~
+∂
+− →
+p
+∂t
+Ψ
+1
+). Thus, we obtain a general
+solution Ψ
+1
+(
+− →
+r −
+− →
+vt) = Φ(
+− →
+r −
+− →
+vt)e
+−i
+− →
+p
+~
+(
+− →
+r−
+− →
+vt)
+.
+Notice that the massive particles that does not change the total energyE dur-
+ingapropagationarealwaysinthestationarystates. Inallcases,thegeometric
+form(thedistributionΦ)ofaparticleina giventime-instancet depends onthe
+particularboundaryconditionsforthedifferentialequationsaswell. Inthecase
+when they are far from another massive particles (usually it can be considered
+if another particles are far from this particle in order of one millimeter), then
+Φ is symmetric w.r.t. the direction of propagation. Otherwise, the boundary
+conditionsforthesedifferentialequationscandrasticallychange,withtheresult
+that Φ can become enormously bigger than in normal situations, that is, they
+caninstantaneously”explode”,becausethesingleharmonicsoftheFourierrep-
+resentation of Φ(x,y,z) in a given time-instance t are contemporarily present
+in the whole 3-dimensional Euclidean space.
+Let us consider, for example, the casem
+0
+= 0 of particles with rest mass equal
+to zero:
+In their stable state, enough far from another particles, they have the
+Electronic Journal. http://www.math.spbu.ru/diffjournal 57Differential Equations and Control Processes, N 3, 2011
+Dirac function for geometric wave-packet form [6], Ψ(x,y,z,t) = δ(
+− →
+r −
+− →
+vt)exp
+i(−
+− →
+p
+− →
+r−Et)/~
+.
+But there are the situations when a stable, stationary, photon becomes excited
+forashortintervaloftime,asinthesituationswhenissharplybrokenthe space
+symmetry during its propagation(thus, the boundary conditions for the differ-
+ential equations of particle’s propagation are drastically changed). In all these
+situations a photon may change its momentum, direction of propagation and
+its velocity, without changing its total energy, because these ”interactions” are
+not based on collisions with another particles (as Compton effects, or fusions),
+but on instantaneous space explosions of their geometric wave-pocket form Φ
+(which is the zero-volume Dirac function id their stable states) caused by an
+instantaneous changing of the amplitudes B(k) of its wave-pocket harmonics
+B(k)exp−i
+− →
+k(
+− →
+r −
+− →
+vt) in the presence of a local sharply broken space sym-
+metry. These ate typical cases for the particle’s ”explosions”, when we take in
+consideration the general equations (e.1) and (e.2) for movements of particles
+where the component Φ
+D
+(
+− →
+r,t) is dominant, caused by the fact that in such
+dynamic framework we have that
+∂B(k)
+∂t
+6= 0 caused by a dynamical changing
+the boundary conditions in the local space around this particle.
+3 Streamofparticles: statisticalmeaningofSchr¨ odinger
+equation
+It is well known that the relativisticversion of the Schr¨ odingerequationfor the
+elementary particles is postulated by the following Klein-Gordon second-order
+differential equation:
+(e.7) △ψ−
+1
+c
+2
+∂
+2
+∂t
+2
+ψ = (
+ω
+0
+c
+)
+2
+ψ,
+whose solution can be given by ψ =ϕ(x,y,z,t)e
+−iω
+0
+t
+.
+The solution for a propagation of the elementary particles in the stationary
+cases, when ω
+0
+and ω
+p
+are constant in time, presented previously, can be pos-
+tulatedin the similarway, by using the particle’ssecond-order D’Alambert-like
+differential equation:
+(e.4) (
+v
+1
+c
+)
+2
+△Ψ
+1
+−
+1
+c
+2
+∂
+2
+Ψ
+1
+∂t
+2
+=−
+1
+c
+2
+∂
+− →
+v
+1
+∂t
+∇Ψ
+1
+−i
+− →
+v
+1
+c
+2
+~
+∂
+− →
+p
+∂t
+Ψ
+1
+,
+where Ψ
+1
+= e
+iω
+p
+t
+Ψ(
+− →
+r,t),
+withΨ
+1
+= e
+iω
+p
+t
+Ψ,whereΨ(x,y,z,t)describesanelementaryparticlethatprop-
+agates with a velocity
+− →
+v and a momentum
+− →
+p, and, possibly, with an accelera-
+tion
+∂
+− →
+v
+∂t
+, such thatω
+p
+=
+E+
+− →
+p
+− →
+v
+~
+=
+E−pv
+~
+, whereE is the potential energy of this
+particle (equal to m
+0
+c
+2
+) if m
+0
+> 0, and total energy otherwise.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 58Differential Equations and Control Processes, N 3, 2011
+Then, the solution of (e.4) is Ψ
+1
+(
+− →
+r −
+− →
+vt) = Φ(
+− →
+r −
+− →
+vt)e
+i
+− →
+p
+~
+(
+− →
+r−
+− →
+vt)
+, where real
+function Φ(
+− →
+r −
+− →
+vt), at any ﬁxed time instance t is a geometric distribution
+of this particle in that moment. It depends on the boundary conditions for
+the differential equation (e.4) for this particle in this given time-instance t. If
+this particle propagates in the vacuum, than Φ is symmetricw.r.t the direction
+of propagation, but if in a given moment t this particle propagates nearly to
+another massive particles, than the boundary conditions change and depend
+on the spatial presence (their distributions) of these particles. Consequently,
+the geometric distribution of a massive particle can change (see the equation
+(e.3) for the general case) also when it propagates with constant velocity
+− →
+v, in
+presence of another massive particles.
+This fact is very important when a particle that propagates in the vacuum,
+encounter some material obstacle, so that Φ, in the momentum when is bro-
+ken this space symmetry, can drastically change and increment its volume, in
+a short interval of time. It is important to denote that such a changing of the
+geometric distribution is instantaneous in all points of the space, and has no
+any constraint as, for example, the maximal velocity of energy transportation,
+that is equal to the velocity of light from relativistic theory of Einstein.
+From the fact that Ψ
+1
+= e
+iω
+p
+t
+Ψ, we obtain that any elementary particle has the
+following wave-pocket geometric form (that was previously postulated in (1)):
+Ψ(x,y,z,t)= Φ(
+− →
+r −
+− →
+vt)e
+i(−
+− →
+p
+− →
+r
+~
+−ω
+0
+t)
+In the case when the velocityof propagationis constant, equal to zero, then we
+obtain the solution Ψ(x,y,z,t) = Φ(x,y,z)e
+−iω
+0
+t
+, where ω
+0
+=
+E
+~
+and E is the
+potential energy of this particle.
+There is the following relationship between Klein-Gordon and our differential
+equations:
+Proposition 1 The Klein-Gordon equation corresponds to the differential
+equation (e.4) of an elementary particle if its velocity of propagation is equal to
+zero.
+Proof: In the case when
+− →
+v = 0 and
+∂
+− →
+v
+∂t
+= 0, so thatω
+p
+=ω
+0
+is constant, then,
+from (e.4), we obtain that:
+0 =
+∂
+2
+Ψ
+1
+∂t
+2
+=
+= (−ω
+2
+0
+Ψ+
+∂
+2
+Ψ
+∂t
+2
++i2ω
+0
+∂Ψ
+∂t
+)e
+iω
+0
+t
+=
+= (−ω
+2
+0
+Ψ+
+∂
+2
+Ψ
+∂t
+2
++i2ω
+0
+(
+− →
+v∇Ψ−iω
+0
+Ψ))e
+iω
+0
+t
+=
+= (ω
+2
+0
+Ψ+
+∂
+2
+Ψ
+∂t
+2
+)e
+iω
+0
+t
+.
+Thus, we obtain the equation
+Electronic Journal. http://www.math.spbu.ru/diffjournal 59Differential Equations and Control Processes, N 3, 2011
+(e.8)
+∂
+2
+Ψ
+∂t
+2
+=−ω
+2
+0
+Ψ,
+that is equal to Klein-Gordon equation when △ψ = 0, that is, when the mo-
+mentum p = 0, and consequently, the velocity is equal to zero, and with the
+solution Ψ(x,y,z,t)= Φ(x,y,z)e
+−iω
+0
+t
+.
+Then we have that it holds the Schr¨ odinger equation for the total energy,
+EΨ =i~
+∂Ψ
+∂t
+, and the total energy formula (3) introduced in this paper,
+E = |
+R
+i~
+∂Φ(x−v
+x
+t,y−v
+y
+t,z−v
+z
+t)e
+−iω
+0
+t
+∂t
+dV|/1
+Φ
+=
+=|
+R
+i~
+∂Φ(x,y,z)e
+−iω
+0
+t
+∂t
+dV|/1
+Φ
+=
+=|
+R
+i~(−iω
+0
+)Φ(x,y,z)e
+−iω
+0
+t
+dV|/1
+Φ
+=
+= ~ω
+0
+(
+R
+Φ(x,y,z)dV)/1
+Φ
+= ~ω
+0
+,
+from the fact that for the particles is satisﬁed the normalization principle (2),
+1
+Φ
+=
+R
+Φ(x,y,z)dV.
+ 
+But, if the velocity of a particle is equal to zero, then we can not have any
+phenomena of the plain waves, and as we will see, in the interestingcases when
+− →
+v is different from zero, the equation (e.4) of propagation of particles is com-
+pletely different from the equation Klein-Gordon, and consequently, from the
+Schr¨ odinger equation.
+Thewave-particle-duality,thefundamentalcomponentofthenewquantumfor-
+malisminBohrsopinion,wasreformulatedbyincorporatingtheresultsofsome
+experiments accomplished in the last decades of twentieth century.
+The Bohrscomplementarityprinciplestatedthe mutualexclusivenessand joint
+full completeness of the two (classical) descriptions of quantum systems; af-
+ter Einstein-Podolsky-Rosenpaper, the wave-particle duality, or wave-particle
+complementarity,couldbeexpressedbystatingthatitisimpossibletobuildup
+an experimental arrangement in which we observe at the same time both cor-
+puscular and wave aspects. In a two-slit experiment, they would correspond,
+respectively, to the which-way knowledge and the observation of interference
+pattern. Bohr showed this mutual exclusivity in numerous examples [5], and
+linked it to the unavoidable disturbance inherent in any measurement event.
+Not everyone agreed with this interpretation, or with Born and Heisenberg’s
+statement about wave-particle-duality. Einstein and Schr¨ odinger were among
+the most notable dissenters. Until the ends of their lives they never fully ac-
+cepted the Copenhagen doctrine. Einstein was dissatisﬁed with the reliance
+upon probabilities. But even more fundamentally, he believed that nature ex-
+istsindependentlyoftheexperimenter,andthemotionsofparticlesareprecisely
+determined. It is the job of the physicist to uncover the laws of nature that
+Electronic Journal. http://www.math.spbu.ru/diffjournal 60Differential Equations and Control Processes, N 3, 2011
+govern these motions, which, in the end, will not require statistical theories.
+The fact that quantum mechanics did seem consistent only with statistical re-
+sults and could not fully describe every motion was for Einstein an indication
+that quantum mechanics was still incomplete.
+Recently it was demonstrated that intermediate particle-wave behaviors exist
+and, in addition to that, there are single experiments in which both classical
+wave-like and particle-like behaviors are showed total and simultaneously on
+an individual system [2]. For instance, in the Boses double-prism experiment ,
+tunneling and perfect anticoincidence were observed in single photon states.
+Consequently, the meaning of the wave-particle duality must incorporate the
+simultaneous use of the two classical descriptions in the interpretation of ex-
+periments, loosing their original mutual exclusivity , which is incorporated as
+an extreme case in the new interferometricduality, a continuous quantum con-
+cept.
+In fact, our results demonstrate that Ψ of any elementary particle is always
+a pocket-wave (with a ”corpuscular” space-geometric distribution Φ(x,y,z,t))
+delimited in the space at each time instance, but that has contemporarily an
+oscillation in the complex space (’phase wave’), expressed by its complex com-
+ponent e
+i(−
+− →
+p
+− →
+r
+~
+−ω
+0
+t)
+.
+Now we will show that each relatively dense stream of particles of the same
+type, velocity, energy and direction of propagation compose a complex plain
+wave, as, for example, an electromagnetic plain wave when these particles are
+photons.
+Proposition 2 Any dense stream of elementary particles of the same type,
+velocity, energy and direction of propagation compose a perfect plain wave.
+Proof: Let us suppose a stream of particles that propagates along the x axis,
+with the distance between two consecutive particles in this stream of particles
+is△x<<λ, whereλ =
+2π~
+p
+and p is the momentum of each particle.
+Then we have that this stream of particles in the moment t = N△t, N >> 1
+(where n =N is the last emitted particle in the source at x = 0, and n = 0 is
+the ﬁrst emitted particle from this source), is equal to:
+P
+Ψ
+n
+(x,y,z,t)=
+P
+n=0,1,..,N
+Φ
+n
+(x−v(t−n△t)e
+i(
+2π
+λ
+v(t−n△t)−ω
+0
+(t−n△t))
+=
+=
+P
+n=0,1,..,N
+Φ
+n
+(x−(N−n)v△t)e
+i(
+2π
+λ
+v(N−n)△t−ω
+0
+(N−n)△t)
+=
+=
+P
+j=N,N−1,..,0
+Φ
+n
+(x−jv△t)e
+i(
+2π
+λ
+vj△t−ω
+0
+(j△t)
+,
+Thus in the limit case when△t7→0, we obtain that:
+lim
+△t7→0
+Re(
+P
+Ψ
+n
+(x,y,z,t))=ARe(
+R
+0
+αN△t
+e
+iαt
+′
+dαt
+′
+) =
+Electronic Journal. http://www.math.spbu.ru/diffjournal 61Differential Equations and Control Processes, N 3, 2011
+(whereα =
+2π
+λ
+v−ω
+0
+, t
+′
+=j△t )
+=A
+R
+0
+αN△t
+cos(αt
+′
+)dαt
+′
+=
+=Asin(
+2π
+λ
+vt−ω
+0
+t) = (fromt =N△t)
+=Asin(
+2π
+λ
+x−ω
+0
+t) =Asin(
+p
+~
+x−ω
+0
+t),
+whereA is a constant proportional to the density of this stream of particles.
+Thus, this streamof particlesis represented by the plain waveAsin(
+2π
+λ
+x−ω
+0
+t),
+with wave-lengthλ and angular frequency ω
+0
+.
+ 
+The non dense streams will compose a kind of amplitude-modulated complex
+plain waves.
+Consequently, it is valid the following lemma:
+Lemma 1 The Schr¨ odinger equation can be obtained by application of the en-
+ergy conservation over a complex plain wave Ae
+i(
+p
+~
+x−ω
+0
+t)
+of a given stream of
+particles.
+Proof: Let us consider the stream ψ = Ae
+i(
+p
+~
+x−ω
+0
+t)
+of the massive particles,
+whereω
+0
+=
+m
+0
+c
+2
+~
+. If weapplytherelativisticenergyequationfortheelementary
+particles (the stream is composed by a ﬁnite number of them) E
+2
+= (m
+0
+c
+2
+)
+2
++
+(cp)
+2
+to this plain wave, we obtain the Klein-Gordon equation:
+(e.7) △ψ−
+1
+c
+2
+∂
+2
+∂t
+2
+ψ = (
+ω
+0
+c
+)
+2
+ψ,
+whose solution can be given by ψ =φ(x,y,z,t)e
+−iω
+0
+t
+, with△ψ = e
+−iω
+0
+t
+△φ, so
+that we obtain the ﬁrst and second time derivation:
+∂ψ
+∂t
+= (−iω
+0
+φ+
+∂φ
+∂t
+)e
+−iω
+0
+t
+,
+∂
+2
+ψ
+∂t
+2
+= (−ω
+2
+0
+φ−i2ω
+0
+∂φ
+∂t
+)e
+−iω
+0
+t
+,
+by assuming that
+∂
+2
+φ
+∂t
+2
+is inﬁnitesimal. Then, if we substitute this last equation
+into (e.7), we obtain the Schr¨ odinger equation in the absence of potential [3]:
+(e.9) △φ+i
+2m
+0
+~
+∂
+∂t
+φ = 0.
+ 
+It is easy to see that the Klein-Gordon equation (e.7) is very different from the
+equations (e.3) and (e.4) for a propagation of a single massive particle, if its
+velocityv is different from zero.
+In order to reduce the stationary case (e.4) to Klein-Gordon equation, and,
+consequently, to Schr¨ odinger equation, it would be necessary that this particle
+satisﬁes the following conditions: to propagate with velocity of light in the
+vacuum v = c, to have ω
+p
+= 0, that is ω
+0
+=
+pc
+~
+, and with−i
+− →
+c
+~
+∂
+− →
+p
+∂t
+= ω
+2
+0
+(while
+∂
+− →
+v
+∂t
+= 0 for the real component of the right part of equation (e.4)), that is
+impossible.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 62Differential Equations and Control Processes, N 3, 2011
+4 Conclusion
+Thus, Schr¨ odinger equation in any case can not represent the propagation of a
+single particle. Thus, we have to deal with the reasonable doubts about some
+of the previously obtained results for the single particles, that are based on the
+deductions from the Schr¨ odinger equation. Especially when they result with
+fundamentally non classical characters of a quantum state of a particle( as for
+example in the case of the Wigner function for a single photon with negative
+probabilities).
+Consequently, the Schr¨ odinger equation obtained by application of the energy
+conservationoveracomplexplainwaveAe
+p
+~
+x−ω
+0
+t
+, correspondstoitsapplication
+not to a single particle but to the complete stream of particles.
+Because of that it has only a statistical meaning that can be applied to the
+stream of particles, and only its probabilistic interpretation to a single particle
+is well founded. That is, it is not a wave description of a single particle, but
+represents only its probabilistically determined position in a given space.
+From this point of view, the current interpretation of Schr¨ odinger equation is
+conﬁrmed, and explains its utility,but it has only a statisticalmeaning, and its
+non-determinism is only the consequence of this statistical meaning applicable
+to single particles.
+Theunderlyingparticle’stheory,presentedinthispaperdemonstratesthatEin-
+stein’s idea was correct, and that the differential equations derived previously
+in this paper demonstrate their deterministic and classical corpuscular nature.
+Only the streams of these particles in the determined conditions (the equal en-
+ergy,momentumand directionofpropagation)resultinthesimpleplainwaves.
+References
+[1] L. Broglie. Recherches sur la theorie des quanta. Ann. de Phys., 10
+e
+serie,
+t. III (Janvier-Fervier), 1925.
+[2] B. Diaz-Pintadoand C.Maria. Updatingthe wave-particleduality. 15th UK
+and European Meeting on the Foundations of Physics, Leeds, 29-31 March,
+2007.
+[3] E.Schr¨ odinger. An undulatory theory of the mechanics of atoms and
+molecules. Physical Review 28 (6), pages 1049–1070, 1926.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 63Differential Equations and Control Processes, N 3, 2011
+[4] H.Minkowski. Raum und zeit. Jahresberichte der Deutschen Mathematiker-
+Vereinigung, pages 75–88, 1909.
+[5] N.Bohr, J.A.Wheeler, and W.H.Zurek. Quantum theory and measurement.
+Princeton, pages 9–49, 1983.
+[6] Z.Majki´ c. Energy and special relativity effects for wave pockets in the
+Minkowski4-dimensionalspaces. Technical Report 03-10, Compet Research,
+http://zoranmajkic.webs.com, 2010.
+[7] Z.Majki´ c. Schr¨ odinger equation and wave pockets for elementary parti-
+cles in theMinkowski spaces. Technical Report 06-10, Compet Research,
+http://zoranmajkic.webs.com, 2010.
+[8] Z.Majki´ c. Partial differential equations for wave pockets in the
+Minkowski 4-dimensional spaces. E-Journal Differential Equations
+and Control Processes, N.1 February 2011, Publisher: Mathematics
+and Mechanics Faculty of Saint-Petersburg State University, Russia,
+http://www.math.spbu.ru/diffjournal/j/pdf/madjkic.pdf,2011.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 64

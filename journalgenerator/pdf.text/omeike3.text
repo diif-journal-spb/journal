@@ -1,0 +1,2207 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 2, 2010
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+
+e-mail: jodiff@mail.ru
+On the Existence of a limiting regime in the sense of Demidovic for
+a certain third order nonlinear differential equation
+Anthony Uyi Afuwape
+.
+1
+Departmento de Matem  aticas, Universidad de Antioquia,
+Calle 67, No. 53-108, Medell   n AA 1226, Colombia.
+E-mail:
+1
+aafuwape@yahoo.co.uk
+and
+Mathew O. Omeike
+2
+Department of Mathematics, University of Agriculture,
+Abeokuta, Nigeria. E-mail:
+2
+moomeike@yahoo.com
+Abstract
+In this paper we prove the existence of a limiting regime in the sense of Demidovic for
+certain third order nonlinear differential equations. We also prove that such a solution is
+periodic ( or almost periodic) whenever the forcing term is periodic ( or almost periodic).
+The generalized Theorems of Demidovic are used in the proofs of our results. The results
+generalize earlier results in the literature.
+Keywords:Existence of a limiting regime in the sense of Demidovic; Uniformly periodic
+solution; Uniformly almost periodic solution; Third-order non-linear differential equations.
+AMS MOS: [2000] 34 D 25, 34 D 20.
+1
+This research was supported by University of Antioqua Research Grant CODI through
+SUI No. IN10095CE.Differential Equations and Control Processes, N 2, 2010
+1 Introduction
+In generalizing the results of Demidovic [5] on the existence of a limiting regime,
+Ezeilo [7] considered the system of equations of the form
+_
+X = f(t;X) +g(t;X) (1.1)
+where f(t;X) satis es either
+jjf(t; 0)jj m<1 for all t2 IR
+or
+Z
+1
+ 1
+jjf(t; 0)jj
+p
+dt<1; 1 p< 2;
+while g(t;X) satis es Lipschitz condition, with g(t; 0)  0:
+Precisely, the following theorem was proved:
+Theorem 1 [7], Suppose that
+i) there exists a positive de nite n n matrix A such that the eigenvalues of
+fD +D
+T
+g; where D =A
+@f
+@X
+; are all negative,
+ii) f(t; 0) satis es either
+jjf(t; 0)jj m<1 for all t;
+or
+Z
+1
+ 1
+jjf(t; 0)jj
+p
+dt<1; 1 p< 2:
+iii) g(t; 0)  0 and
+jjg(t;X) g(t;Y )jj (t)jjX Yjj
+for all X;Y;t with (t) satisfying
+Z
+1
+ 1
+
+q
+(t)dt<1; 1 q  2:
+Then, there exists a unique solution X
+ 
+(t) of (1.1) such that
+jjX
+ 
+(t)jj m; for t2 IR; (1.2)
+and every other solution X(t) of (1.1) converges to X
+ 
+(t) as t! +1:
+Electronic Journal. http://www.math.spbu.ru/diffjournal,  40Differential Equations and Control Processes, N 2, 2010
+Also, the following was proved [7]
+Theorem 2 Suppose conditions (i) and (iii) of Theorem 1 hold, and if in ad-
+dition the following conditions hold
+I) iff(t;X) andg(t;X) are uniformly almost periodic int forjjXjj m; then
+the unique solution X
+ 
+(t) of (1.1) is uniformly almost periodic (u.a.p) in
+t;
+II) if f(t;X) and g(t;X) are both periodic functions of t; forjjXjj  m and
+have the same period !, then X
+ 
+(t) is periodic in t; with a least period !:
+De nition 1 We shall say that a solution X
+ 
+(t) of (1.1) is a limiting regime
+in the sense of Demidovic, if there exists a constant m; 0<m<1 such that
+jjX
+ 
+(t)jj m;  1<t<1:
+It is known that Ezeilo in [6, 7, 8, 10] applied the ideas of these theorems
+to second order and third order nonlinear equations. Also, Afuwape [2] applied
+these theorems to a fourth order non-linear differential equation. We also note
+that Afuwape [1], Afuwape and Omeike [3, 4] and Tejumola [13, 14] studied
+the convergence of some third order nonlinear differential equations. Other
+considerations pre 1974 are also recorded in [12]. The existence of limiting
+regime in the sense of Demidovic has only been addressed by few.
+Our objective in this paper is to prove the existence of a limiting regime in
+the sense of Demidovic by applying theorems 1 and 2 to third order non-linear
+differential equations of the form
+:::
+x +a x +g( _ x) +h(x) =p(t;x; _ x;  x): (1.3)
+Our method shall be in the use of a complete Lyapunov function. This equation
+is more general than that considered by Ezeilo in [10] and unlike in [14] , we
+use a complete Lyapunov function in our proofs. We also give an example to
+illustrate the results.
+We shall assume thatp(t;x; _ x;  x) is separable in the formq(t) +r(t;x; _ x;  x):
+We shall write (1.3) in the equivalent system form
+_ x = y
+_ y = z +Q (1.4)
+_ z =  az g(y) h(x) +r(t;x;y;z +Q) aQ
+Electronic Journal. http://www.math.spbu.ru/diffjournal,  41Differential Equations and Control Processes, N 2, 2010
+withQ(t) =
+R
+t
+0
+q(s)ds; andg(y); h(x) continuous in their respective arguments.
+We shall also assume that the incrementary ratio H
+ 
+( ) =
+h( + ) h( )
+ 
+; ( 6= 0);
+of h(x) lies in a closed sub-interval [ 
+0
+;kab] of the Routh-Hurwitz interval
+(0;ab); for some constant b > 0; such that g(y)=y > b; for all y 6= 0; and
+g(0)  0; where k< 1; (this will be determined later).
+2 The Main Results
+Throughout this paper, we shall denote by D
+j
+; (j = 0; 1; 2; 3;    ) a positive
+constant.
+We shall assume that the solutions of (1.3) are uniquely determined by their
+initial conditions. Since, we can always replace q(t) by q(t) +r(t; 0; 0; 0); we
+shall assume that r(t; 0; 0; 0)  0: Moreover, we shall assume that the function
+r(t;x;y;z +Q) satis es
+jr(t;x
+2
+;y
+2
+;z
+2
++Q)   r(t;x
+1
+;y
+1
+;z
+1
++Q)j
+   (t)fjx
+2
+ x
+1
+j +jy
+2
+ y
+1
+j +jz
+2
+ z
+1
+jg; (2.1)
+for all t 2 IR and x
+1
+;y
+1
+;z
+1
+;x
+2
+;y
+2
+;z
+2
+2 IR; with  (t) a continuous function
+satisfying for 1    2
+Z
+1
+ 1
+ 
+ 
+(t)dt<1: (2.2)
+The main result of this paper on the existence of a limiting regime in the
+sense of Demidovic is the following:
+Theorem 3 Suppose that
+(i) (a) h(0) = 0 and that the incrementary ratio
+H
+ 
+( ) =
+h(  + ) h( )
+ 
+2I
+0
+  [ 
+0
+;kab]; ( 6= 0) (2.3)
+a closed sub-interval of the Routh-Hurwitz interval (0;ab); with k< 1;
+(b) g(0) = 0 and that
+G
+ 
+( ) =
+g(  + ) g( )
+ 
+2 [b;b
+0
+]; ( 6= 0); (2.4)
+Electronic Journal. http://www.math.spbu.ru/diffjournal,  42Differential Equations and Control Processes, N 2, 2010
+(ii) for some D
+0
+> 0;
+jQ(t)j =j
+Z
+t
+0
+q(s)dsj D
+0
+; (2.5)
+(iii) r(t;x; _ x;  x) satis es (2.1) with
+R
+1
+ 1
+ 
+ 
+(t)dt<1; (1    2):
+Then, there exists a unique solution x
+ 
+(t) of (1.3) satisfying
+[x
+ 
+(t)]
+2
++ [ _ x
+ 
+(t)]
+2
++ [ x
+ 
+(t)]
+2
+ D
+1
+;
+for t2 IR: Moreover, every other solution x(t) of equation (1.3) converges to
+x
+ 
+(t) as t!1:
+Our other result on the almost periodicity or periodicity of the limiting
+regime x
+ 
+(t) is as follows:-
+Theorem 4 Suppose thath(0) = 0 and that hypotheses (i) and (iii) of Theorem
+3 hold. Suppose further that there exists a solution x(t) of equation (1.3) such
+that
+[x(t)]
+2
++ [ _ x(t)]
+2
++ [ x(t)]
+2
+ D
+1
+:
+Then
+(I) ifQ(t) is almost periodic andr(t;x; _ x;  x) is almost periodic int; for [x(t)]
+2
++
+[ _ x(t)]
+2
++ [ x(t)]
+2
+ D
+1
+; then x
+ 
+(t) is almost periodic in t:
+(II) ifQ(t) andr(t;x; _ x;  x) are periodic int; with period ; for [x(t)]
+2
++[ _ x(t)]
+2
++
+[ x(t)]
+2
+ D
+1
+; then x
+ 
+(t) is periodic in t; with period  :
+Remark 1 If in equation (1.3) g( _ x) =b _ x; then the earlier results of Ezeilo in
+[10] will be obtained from Theorems 3 and 4.
+3 Some Preliminary results
+Let (x;y;z) be any solution of system (1.4). Our main tool, in the use of
+Theorems 1 and 2, for the proofs of the results is the following function, de ned
+by
+2V (x;y;z) = (1  )b
+2
+x
+2
++b(  +ffa
+ 1
+)y
+2
++ffa
+ 1
+z
+2
++(z+ay +b(1  )x)
+2
+; (3.1)
+where ff;  are constant parameters such that 0<  < 1; and 0<ff<a
+ 1
+Electronic Journal. http://www.math.spbu.ru/diffjournal,  43Differential Equations and Control Processes, N 2, 2010
+Clearly V (x;y;z) is positive de nite and satis es
+D
+2
+(x
+2
++y
+2
++z
+2
+) V (x;y;z) D
+3
+(x
+2
++y
+2
++z
+2
+) (3.2)
+where
+D
+2
+=
+1
+2
+minf (1  )b
+2
+;b(  +ffa
+ 1
+);ffa
+ 1
+g
+and
+D
+3
+=
+1
+2
+minf  (1  )(1+a+b);b(  +ffa
+ 1
+)+a[1+b(1  ) +a]; 1+ffa
+ 1
++a+b(1  )g:
+Furthermore, the derivative of V (t) = V (x(t);y(t);z(t)) with respect to t
+for all solutions (x(t);y(t);z(t)) of (1.4) gives
+dV
+dt
+j
+(1:4)
+=  b(1  )xh(x)  [ayg(y) ab(1  )y
+2
+]
+ ffz
+2
++ [b
+2
+(1  )xy ayh(x) b(1  )xg(y)]
++[b(1 +ffa
+ 1
+)yz  (1 +ffa
+ 1
+)zh(x)  (1 +ffa
+ 1
+)zg(y)]
++[(1 +ffa
+ 1
+)z +ay +b(1  )x]r(t;x;y;z +Q) (3.3)
++[b(  +ffa
+ 1
+)y ffz]Q(t)
+This we can rewrite as
+dV
+dt
+j
+(1:4)
+=  U
+1
++U
+R
++U
+Q
+(3.4)
+where, with some re-arrangements
+U
+1
+= U
+11
++U
+12
++U
+13
++U
+14
++U
+15
+(3.5)
+with
+U
+11
+= 
+1
+b(1  )H
+0
+x
+2
++ 
+1
+a(G
+0
+ b(1  ))y
+2
++ 
+1
+ffz
+2
+U
+12
+= 
+2
+b(1  )H
+0
+x
+2
++ (1 +ffa
+ 1
+)H
+0
+xz + 
+2
+ffz
+2
+U
+13
+= 
+3
+b(1  )H
+0
+x
+2
++aH
+0
+xy + 
+1
+a(G
+0
+ b(1  ))y
+2
+U
+14
+= 
+1
+b(1  )H
+0
+x
+2
++b(1  )(G
+0
+ b)xy + 
+3
+a(G
+0
+ b(1  ))y
+2
+U
+15
+=  
+4
+a(G
+0
+ b(1  ))y
+2
++ (1 +ffa
+ 1
+)(G
+0
+ b)yz + 
+3
+ffz
+2
+U
+Q
+= [b(  +ffa
+ 1
+)y ffz]Q(t)
+U
+R
+= [(1 +ffa
+ 1
+)z +ay +b(1  )x]r(t;x;y;z +Q)
+Electronic Journal. http://www.math.spbu.ru/diffjournal,  44Differential Equations and Control Processes, N 2, 2010
+for 
+j
+> 0;  
+j
+> 0; (j = 1; 2; 3; 4);  
+i
+> 0; (i = 1; 2; 3) and
+
+1
++
+2
++
+3
++
+4
+= 1;  
+1
++ 
+2
++ 
+3
++ 
+4
+= 1; and  
+1
++ 
+2
++ 
+3
+= 1;
+and H
+0
+=
+h(x)
+x
+; for x6= 0; G
+0
+=
+g(y)
+y
+for y6= 0 and as h(0) = 0 and g(0) = 0 by
+hypotheses of the Theorem.
+Lemma 3.1 Subject to a conveniently chosen value of k in (2.3), we have for
+all (x;y;z)2R
+U
+1j
+  0; (j = 2; 3; 4; 5):
+Proof We note that for any two numbers u;v and for someK > 0; we always
+have
+uv = (Ku +
+1
+2K
+v)
+2
+ K
+2
+u
+2
+ 
+1
+4K
+2
+v
+2
+:
+On a re-arrangement of U
+12
+we obtain
+U
+12
+  
+2
+b(1  )H
+0
+x
+2
+  (1 +ffa
+ 1
+)H
+0
+(K
+2
+1
+x
+2
++
+1
+4K
+2
+1
+z
+2
+) + 
+2
+ffz
+2
+= H
+0
+f
+2
+b(1  ) K
+2
+1
+(1 +ffa
+ 1
+)gx
+2
++f 
+2
+ff 
+1
+4K
+2
+1
+(1 +ffa
+ 1
+)H
+0
+gz
+2
+  0:
+whenever
+K
+2
+1
+ 
+
+2
+b(1  )
+1 +ffa
+ 1
+; and H
+0
+ 
+4 
+2
+ff
+2
+b(1  )
+(1 +ffa
+ 1
+)
+2
+: (3.6)
+Also, a re-arrangement of U
+13
+gives
+U
+13
+  
+3
+b(1  )H
+0
+x
+2
+ aH
+0
+(K
+2
+2
+x
+2
++
+1
+4K
+2
+2
+y
+2
+) + 
+2
+a(G
+0
+ b(1  ))y
+2
+= H
+0
+f
+3
+b(1  ) aK
+2
+2
+gx
+2
++af 
+2
+(G
+0
+ b(1  )) 
+1
+4K
+2
+2
+H
+0
+gy
+2
+  H
+0
+f
+3
+b(1  ) aK
+2
+2
+gx
+2
++af  
+2
+b 
+1
+4K
+2
+2
+H
+0
+gy
+2
+  0
+whenever
+K
+2
+2
+ 
+
+3
+b(1  )
+a
+and H
+0
+ 
+4 
+2
+
+3
+b
+2
+ (1  )
+a
+: (3.7)
+Electronic Journal. http://www.math.spbu.ru/diffjournal,  45Differential Equations and Control Processes, N 2, 2010
+Combining all the inequalities in (3.6) and (3.7), we have that for all (x;y;z)
+in IR; U
+12
+  0 and U
+13
+  0; if H
+0
+ kab with
+k =
+ 
+4 
+2
+ff
+2
+(1  )
+a(1 +ffa
+ 1
+)
+2
+;
+4 
+2
+
+3
+b (1  )
+a
+2
+ 
+< 1: (3.8)
+Similarly, a rearrangement of U
+14
+gives
+U
+14
+  
+4
+b(1  )H
+0
+x
+2
+ b(1  )(G
+0
+ b)(K
+2
+3
+x
+2
++
+1
+4K
+2
+3
+y
+2
+) + 
+3
+a(G
+0
+ b(1  ))y
+2
+= b(1  )f
+4
+H
+0
+ K
+2
+3
+(G
+0
+ b)gx
+2
++f 
+3
+a(G
+0
+ b(1  )) 
+b
+4K
+2
+3
+(1  )(G
+0
+ b)gy
+2
+  b(1  )f
+4
+ 
+0
+H
+0
+ K
+2
+3
+(b
+0
+ b)gx
+2
++f 
+3
+ab  
+b
+4K
+2
+3
+(1  )(b
+0
+ b)gy
+2
+  0
+whenever
+b(1  )(b
+0
+ b)
+4ab 
+3
+ 
+ K
+2
+3
+ 
+
+4
+ 
+0
+b
+0
+ b
+: (3.9)
+Finally, a re-arrangement of U
+15
+gives
+U
+15
+   
+4
+a(G
+0
+ b(1  ))y
+2
+  (1 +ffa
+ 1
+)(G
+0
+ b)(K
+2
+4
+y
+2
++
+1
+4K
+2
+4
+z
+2
+) + ffz
+2
+= f 
+4
+a(G
+0
+ b(1  )) K
+2
+4
+(1 +ffa
+ 1
+)(G
+0
+ b)gy
+2
++f 
+3
+ff 
+1
+4K
+2
+4
+(1 +ffa
+ 1
+)(G
+0
+ b)gz
+2
+  f 
+4
+ab  K
+2
+4
+(1 +ffa
+ 1
+)(b
+0
+ b)gy
+2
++f 
+3
+ff 
+1
+4K
+2
+4
+(1 +ffa
+ 1
+)(b
+0
+ b)gz
+2
+  0
+whenever
+(1 +ffa
+ 1
+)(b
+0
+ b)
+4ff 
+3
+ K
+2
+4
+ 
+ 
+4
+ab 
+(1 +ffa
+ 1
+)(b
+0
+ b)
+Lemma 3.2 For all values of (x;y;z)2R there exists a D
+4
+> 0 such that
+U
+11
+= 
+1
+b(1  )H
+0
+x
+2
++ 
+1
+a(G
+0
+ b(1  ))y
+2
++ 
+1
+ffz
+2
+  D
+4
+(x
+2
++y
+2
++z
+2
+)
+Electronic Journal. http://www.math.spbu.ru/diffjournal,  46Differential Equations and Control Processes, N 2, 2010
+whenever H
+0
+ kab; with k satisfying (3.8).
+Proof: Choose D
+4
+= minf
+1
+b(1  ) 
+0
+; 
+1
+ab ; 
+1
+ffg:
+Lemma 3.3 For all values of (x;y;z)2R
+U
+Q
+ D
+5
+(jxj +jyj +jzj); and U
+R
+ D
+6
+(jxj +jyj +jzj)jr(t;x;y;z +Q)j
+Proof: Choose D
+5
+= maxfb(  +ffa
+ 1
+);ffa
+ 1
+zgD
+0
+and
+D
+6
+= maxf(1 +ffa
+ 1
+);a;b(1  )g:
+Lemma 3.4
+dV
+dt
+j
+(1:4)
+   (D
+7
+ D
+8
+ (t))V (t) +D
+9
+V
+1=2
+(t): (3.10)
+Proof: This follows by combining Lemmas 3.1, 3.2 and 3.3, and using condi-
+tion (2.1) on equation (3.3), whereD
+7
+=D
+4
+=D
+3
+;D
+8
+=D
+6
+=D
+2
+andD
+9
+=D
+5
+=D
+2
+:
+In line with Ezeilo [7], it su ces to prove the following lemma:
+Lemma 3.5 Assume that the conditions (i), (ii), (iii) and (iv) of Theorem 1
+hold. Then, for arbitrary t
+0
+; there exist positive constants k
+1
+;k
+2
+depending on
+a;g;h and q;r such that for t t
+0
+;
+V (x(t);y(t);z(t)) k
+1
+V (x(t
+0
+);y(t
+0
+);z(t
+0
+)) +k
+2
+(3.11)
+Moreover there are  nite constants 
+0
+andk
+0
+, also dependent only ona;g;h and
+q;r, such that if
+V (x(t
+0
+);y(t
+0
+);z(t
+0
+)) k
+0
+, then
+V (x(t
+0
++ );y(t
+0
++ );z(t
+0
++ )) k
+0
+(3.12)
+for every   with  
+0
+   <1.
+Proof: If we set u(t) = V (t)
+1=2
+= V (x(t);y(t);z(t))
+1=2
+; we have from (3.10)
+that
+d
+dt
+fu(t) expfL(t)gg  
+1
+2
+D
+9
+expfL(t)g (3.13)
+where L(t) =
+1
+2
+[D
+7
+t D
+8
+R
+t
+0
+ (t)dt]:
+Electronic Journal. http://www.math.spbu.ru/diffjournal,  47Differential Equations and Control Processes, N 2, 2010
+On integration from t
+0
+to t
+0
++s; s  0; we have
+u(t
+0
++s) expfL(t
+0
++s)g u(t
+0
+) expfL(t
+0
+)g+
+1
+2
+D
+9
+Z
+t
+0
++s
+t
+0
+expfL(t)gdt:(3.14)
+Now, if we de ne
+D
+10
+= expf
+1
+2
+D
+8
+Z
+1
+ 1
+ (t)dtg<1
+we can have on some arrangements of terms that
+u(t
+0
++s)  D
+10
+u(t
+0
+) expf 
+1
+2
+D
+7
+sg +D
+11
+; (3.15)
+where D
+11
+is a positive number depending on D
+7
+; D
+9
+and D
+10
+:
+Now, if D
+10
+u(t
+0
+) D
+11
+; we have that
+u(t
+0
++s)   2D
+11
+; for s  0: (3.16)
+That is
+V (t
+0
++s) f2D
+11
+g
+2
+; provided that s  0:
+Also, if D
+10
+u(t
+0
+)>D
+11
+; we have from (3.15) that
+u(t
+0
++s)< 2D
+10
+u(t
+0
+); for s  0:
+That is
+V (t
+0
++s)<f2D
+10
+g
+2
+V (t
+0
+); provided that s  0:
+Hence in all situations, we have
+V (t
+0
++s) f2D
+10
+g
+2
+V (t
+0
+) +f2D
+11
+g
+2
+; provided that s  0:
+which is equivalent to (3.11) with k
+1
+=f2D
+10
+g
+2
+and k
+2
+=f2D
+11
+g
+2
+:
+To complete the proof of the lemma, we have to show that for some number
+ 
+0
+(to be chosen later),
+V (t
+0
++ ) k
+0
+for every  
+0
+   <1 and k
+0
+such that V (t
+0
+) k
+0
+:
+De ne D
+12
+=k
+2
+= (2D
+11
+)
+2
+:
+First, if V (t
+0
+) D
+12
+; we have that D
+11
+<
+1
+2
+u(t
+0
+):
+Thus from (3.15), we have
+u(t
+0
++s) < u(t
+0
+)D
+10
+expf 
+1
+2
+D
+7
+sg +
+1
+2
+u(t
+0
+)
+  u(t
+0
+) provided s  (log 2D
+10
+)=D
+7
+: (3.17)
+Electronic Journal. http://www.math.spbu.ru/diffjournal,  48Differential Equations and Control Processes, N 2, 2010
+That is
+V (t
+0
++s) V (t
+0
+)
+whenever V (t
+0
+)  D
+12
+: Now, if V (t
+0
+) < D
+12
+; we have that u(t
+0
+)  D
+2
+12
+: Thus
+from (3.15) we have
+u(t
+0
++s) < D
+10
+expf 
+1
+2
+D
+7
+sgD
+1
+2
+12
++D
+1
+2
+12
+  2D
+1
+2
+12
+provided s  (log
+2
+3
+D
+10
+)=D
+7
+: (3.18)
+That is
+V (t
+0
++s)< 2D
+12
+; provided s  (log 2D
+10
+)=D
+7
+:
+Thus on choosingk
+0
+= 2D
+12
+and 
+0
+  (log 2D
+10
+)=D
+7
+we complete the proof
+of the lemma.
+Combining all these, Lemma 3.5 is proved.
+To complete the proof of Theorem 3 we need to prove that any two solutions
+of (1.4) converges.
+That is
+Lemma 3.6 Suppose that conditions (i) and (iii) of Theorem 3 hold. Suppose
+further that that there exist positive constants k
+5
+and k
+6
+whose magnitudes de-
+pend ona;g;q andr; then if (x
+1
+;y
+1
+;z
+1
+); (x
+1
+;y
+1
+;z
+1
+) are any two solutions of (1.4)
+then
+S(t
+2
+) k
+5
+S(t
+1
+) expf k
+6
+(t
+2
+ t
+1
+)g (3.19)
+where
+S(t) =f[x
+2
+(t) x
+1
+(t)]
+2
++ [y
+2
+(t) y
+1
+(t)]
+2
++ [z
+2
+(t) z
+1
+(t)]
+2
+g:
+Proof Considering the function W (t) de ned as
+W (t) =V (x
+2
+(t) x
+1
+(t);y
+2
+(t) y
+1
+(t);z
+2
+(t) z
+1
+(t)) (3.20)
+where V is de ned as in (3.1), then, we easily have by (3.2) that there exists
+positive constants D
+13
+;D
+14
+such that
+D
+13
+S(t) W (t) D
+14
+S(t): (3.21)
+Also in view of , it su ces to prove that
+W (t
+2
+) W (t
+1
+) expf D
+13
+(t
+2
+ t
+1
+) +D
+14
+Z
+t
+2
+t
+1
+ 
+ 
+( )d g; ( for t
+2
+ t
+1
+):
+Electronic Journal. http://www.math.spbu.ru/diffjournal,  49Differential Equations and Control Processes, N 2, 2010
+We note that by the earlier calculations on V (t), we can easily have
+dW
+dt
+j
+1:4
+= W
+1
+(t) +W
+2
+(t)
+where W
+1
+(t) satis es
+W
+1
+(t) D
+15
+S(t)
+and W
+2
+(t) satis es
+W
+2
+(t) D
+16
+S
+1
+2
+(t)j j
+where
+  r(t;x
+1
+;y
+1
+;z
+1
++Q) r(t;x
+2
+;y
+2
+;z
+2
++Q) (3:22)
+Thus,
+dW
+dt
+j
+(1:4)
+  D
+15
+ (t))S(t) +D
+16
+S
+1
+2
+(t)j (t)j: (3:23)
+Let  be any constant in the range 1    2: Set 2  = 2  ; so that 0  2   1:
+We rewrite (3.22) in the form
+dW
+dt
+j
+(1:4)
++D
+15
+ (t))S(t) D
+16
+S
+ 
+W
+ 
+:
+where
+W
+ 
+= (j j D
+15
+D
+ 1
+16
+S
+1
+2
+)S
+(
+1
+2
+  )
+:
+Considering the two cases
+(i)j j D
+15
+D
+ 1
+16
+S
+1
+2
+and
+(ii)j j>D
+15
+D
+ 1
+16
+S
+1
+2
+separately, we  nd that in either case, there exists some constantD
+17
+such that
+W
+ 
+ D
+17
+j j
+2(1  )
+. Thus,we can rewrite inequality (3.23) as
+dW
+dt
+j
+(1:4)
++D
+15
+S D
+18
+S
+ 
+ 
+2(1  )
+S
+(1  )
+where D
+18
+  2D
+16
+D
+17
+. This immediately gives
+dW
+dt
+j
+(1:4)
++ (D
+19
+ D
+20
+ 
+ 
+(t))W  0 (3:24)
+by (3.21), with D
+19
+and D
+20
+as some positive constants. On integrating (3.24)
+from t
+1
+to t
+2
+, (t
+2
+ t
+1
+), we obtain
+W (t
+2
+) W (t
+1
+) expf D
+19
+(t
+2
+ t
+1
+) +D
+20
+Z
+t
+2
+t
+1
+ 
+ 
+( )d g:
+Electronic Journal. http://www.math.spbu.ru/diffjournal,  50Differential Equations and Control Processes, N 2, 2010
+Again, using (3.21), and since
+Z
+t
+2
+t
+1
+ 
+ 
+( )d  <1; we obtain (3.19). This com-
+pletes the proof of lemma 3.6.
+Proof of Theorem 2.1
+Having dealt with the proofs of lemmas 3.1-3.6, the proof of Theorem 2.1
+then follows exactly as in the proof of [7, Theorem 1], with the obvious changes
+as required.
+Proof of Theorem 2.2
+The method is as in [7] but with certain modi cations due to the presence
+of the perturbation r(t;x;y;z +Q) which is uniformly almost periodic (u.a.p)
+in t:
+Consider the function
+	(t) =V (x(t + ) x(t);y(t + ) y(t);z(t + ) z(t)) (3:25)
+where V is the function de ned in (3.1) with x;y;z replaced by x(t + ) 
+x(t);y(t + ) y(t) and z(t + ) z(t); respectively. Then, we easily have by
+(3.2) that there exists positive constants d
+1
+> 0;d
+2
+> 0 such that
+d
+1
+S(t)  	(t) d
+2
+S(t) (3:26)
+where
+S(t) =f[x(t + ) x(t)]
+2
++ [y(t + ) y(t)]
+2
++ [z(t + ) z(t)]
+2
+g:
+Following the approach of the proof of lemma 3.6, we have that
+d	
+dt
+j
+(1:4)
+   d
+3
+f[x(t + ) x(t)]
+2
++ [y(t + ) y(t)]
+2
++ [z(t + ) z(t)]
+2
+g
++d
+4
+fjx(t+ ) x(t)j+jy(t+ ) y(t)j+jz(t + ) z(t)jgj j
+(3:27)
+with  =r(t + ;x(t + );y(t + );z(t + ) +Q(t +r)) r(t;x;y;z +Q(t)) and
+Electronic Journal. http://www.math.spbu.ru/diffjournal,  51Differential Equations and Control Processes, N 2, 2010
+d
+3
+;d
+4
+are some  nite positive constants. Now, rewrite (3.27) thus
+d	
+dt
+j
+(1:4)
+   d
+3
+f[x(t + ) x(t)]
+2
++ [y(t + ) y(t)]
+2
++ [z(t + ) z(t)]
+2
+g
++d
+4
+fjx(t + ) x(t)j +jy(t + ) y(t)j +jz(t + ) z(t)jgj j
++fjx(t + ) x(t)j +jy(t + ) y(t)j +jz(t + ) z(t)jg 
+jr(t + ;x(t);y(t);z(t) +Q(t +r)) r(t;x(t);y(t);z(t) +Q(t))j
+(3:28)
+Assume now that r is u.a.p int: Then given arbitrary  > 0; we can  nd   > 0
+such that
+jr(t + ;x(t);y(t);z(t) +Q(t +r)) r(t;x(t);y(t);z(t) +Q(t))j ` 
+2
+; (3:29)
+where ` is a constant whose exact value will be chosen to advantage later. It
+follows that
+d	
+dt
+j
+(1:4)
+  d
+3
+S(t) +d
+5
+S
+1
+2
+(t)j j +d
+6
+S
+1
+2
+(t)` 
+2
+(3:30)
+where d
+5
+=d
+4
+p
+3 and d
+6
+=
+p
+3. Since (by Theorem 2.1)
+f[x(t + ) x(t)]
+2
++ [y(t + ) y(t)]
+2
++ [z(t + ) z(t)]
+2
+g
+1
+2
+   
+1
+; (3:31)
+then
+d	
+dt
+j
+(1:4)
++ d
+3
+S(t) fd
+5
+S
+1
+2
+(t)j j d
+7
+S(t)g +d
+6
+ 
+1
+` 
+2
+: (3:32)
+Let  be any constant such that 1    2 and set  = 1 
+1
+2
+ , so that 0    1.
+Consider (3.32) in the form
+d	
+dt
+j
+(1:4)
++d
+7
+S d
+5
+S
+ 
+J
+ 
++d
+6
+ 
+1
+` 
+2
+(3:33)
+where
+J
+ 
+=S
+1
+2
+  
+ 
+k k d
+ 1
+5
+d
+7
+S
+1
+2
+ 
+:
+Now, ifk k d
+ 1
+5
+d
+7
+S
+1
+2
+, we obtain
+J
+ 
+  0;
+on the other hand, ifk k>d
+ 1
+5
+d
+7
+S
+1
+2
+, that is,
+S < (d
+5
+d
+ 1
+7
+k k)
+2
+; we obtain
+J
+ 
+<dk k
+2(1  )
+;
+Electronic Journal. http://www.math.spbu.ru/diffjournal,  52Differential Equations and Control Processes, N 2, 2010
+where d = (d
+5
+d
+ 1
+7
+)
+2  1
+:
+Thus, (3.33) becomes,
+d	
+dt
+j
+(1:4)
++d
+7
+S dS 
+2(1  )
++d
+6
+ 
+1
+` 
+2
+:
+Since from (2.1),   satis esk k  (t)S
+1
+2
+, we obtain
+_
+	(t) +
+ 
+d
+7
+ d 
+2(1  )
+(t)
+ 
+S d
+6
+ 
+1
+` 
+2
+:
+On using inequalities (3.26), we obtain
+_
+	(t) + (d
+8
+ d 
+ 
+(t)) 	 d
+6
+ 
+1
+` 
+2
+(3:34)
+for some constant d
+8
+> 0: Following the approach in the proof of Lemma 3.6,
+there is a d
+9
+; 0<d
+9
+<1 de ned by
+d
+9
+= exp
+ 
+d
+10
+Z
+1
+ 1
+ 
+ 
+(t)dt
+ 
+:
+Then, from (3.34), we have that
+	(t) d
+9
+	(t
+0
+)e
+ d
+10
+(t t
+0
+)
++`d
+11
+ 
+2
+(3:35)
+where d
+11
+= d
+9
+d
+6
+D
+1
+=d
+10
+. This result holds for arbitrary t
+0
+. In particular, on
+letting t
+0
+! 1 in (3.35) and noting that 	(t
+0
+) is  nite, since (3.31) is true,
+one obtains that
+W (t) `d
+11
+ 
+2
+for arbitrary t. By (3.26) and by the de nition of W (t) this implies that
+[x(t + ) x(t)]
+2
++ [y(t + ) y(t)]
+2
++ [z(t + ) z(t)]
+2
+ `d
+11
+ 
+2
+d
+ 1
+1
+: (3:36)
+Suppose now that at the stage (3.29) the constant ` had been
+` =d
+1
+d
+ 1
+11
+the result (3.36) would then read
+[x(t + ) x(t)]
+2
++ [y(t + ) y(t)]
+2
++ [z(t + ) z(t)]
+2
+  
+2
+: (3:37)
+Since
+p
+3f[x(t + ) x(t)]
+2
++ [y(t + ) y(t)]
+2
++ [z(t + ) z(t)]
+2
+g 
+p
+3 
+2
+  ;
+Electronic Journal. http://www.math.spbu.ru/diffjournal,  53Differential Equations and Control Processes, N 2, 2010
+it follows that
+jx(t + ) x(t)j +jy(t + ) y(t)j +jz(t + ) z(t)j   (3:38)
+where   is chosen to satisfy (3.29) with ` = d
+1
+d
+ 1
+11
+. The set of all   satisfying
+(3.29) is relatively dense, and hence (3.38) implies that (x(t);y(t);z(t)) is u.a.p.
+This proves the  rst part of Theorem 2.2.
+To prove the second part of the theorem, assume now that r(t;x;y;z +Q)
+has the period ! in t and  x the   in the de nition of 	(t) equal to !. The
+terms on the left hand side of (3.29) is identically zero, and so proceeding as
+above we shall have, in place of (3.36) that
+[x(t +w) x(t)]
+2
++ [y(t +w) y(t)]
+2
++ [z(t +w) z(t)]
+2
+  0:
+Hence
+[x(t +w) x(t)]
+2
++ [y(t +w) y(t)]
+2
++ [z(t +w) z(t)]
+2
+= 0
+and it is readily seen that
+x(t +w) =x(t); y(t +w) =y(t) and z(t +w) =z(t)
+which is the required result. This completes the proof of Theorem 2.2.
+References
+[1] Afuwape, A. U. On the convergence of solutions of certain systems of nonlin-
+ear third-order differential equations, SIMON STEVIN, A Quarterly Journal
+of Pure and Applied Mathematics, Vol. 57, Number 4, (1983), 255-271.
+[2] Afuwape, A. U. On the existence of a limiting regime in the sense of Demi-
+dovic for a certain fourth-order nonlinear differential equation. J. Math.
+Anal. Appl., 129, (2), (1988), 389-393.
+[3] Afuwape, A.U. and Omeike, M.O. Further ultimate boundedness of solutions
+of some system of third order nonlinear ordinary differential equations, Acta
+Univ. Palacki.Olomuc., Fac. rer. nat., Mathematica 43(2004) 7-20.
+[4] Afuwape, A.U. and Omeike, M.O. Convergence of solutions of certain system
+of third order nonlinear ordinary differential equations, Ann. of Diff. Eqs.
+21 : 4 (2005), 533-540.
+Electronic Journal. http://www.math.spbu.ru/diffjournal,  54Differential Equations and Control Processes, N 2, 2010
+[5] Demidovic, B. P. On the existence of a limiting regime of a certain non-
+liner system of ordinary differential equations. Amer. Math. Soc. Transl.,(18)
+(1961),151-161.
+[6] Ezeilo, J.O.C. Some results for the solutions of a certain system of differentila
+equation. J. Math. Anal. Appl. 6, (1963), 389 - 393.
+[7] Ezeilo, J.O.C. A generalization of a result of Demidovic on the existence of
+limiting regime of a system of differential equations. Portugaliae Math. 25
+(1965),65-82.
+[8] Ezeilo J.O.C. On the convergence of solutions of certain systems of second
+order differential equations, Ann. Math. Pura Appl. (IV) 72, (1966), 239-
+252.
+[9] Ezeilo J. O. C. n-Dimensional Extensions of Boundedness and Stability The-
+orems for some Third Order Differential Equations, J. Math. Anal. Appl.
+18, (1967), 395-416.
+[10] Ezeilo J. O. C. New properties of the equation
+:::
+x +a x + b _ x +
+h(x) =  (t;x; _ x;  x) for certain special values, of the increment ra-
+tio y
+ 1
+fh(x +y) h(x)g; Equations Differentielles et functionelles non-
+lineaires. ed. P. Janssens, J. Mawhin and N. Rouche. Eds), pp. 447-462,
+Hermann, Paris, 1973.
+[11] Hara, Tadayuki On the uniform Ultimate boundedeness of solutions of
+certain third order differential equations, J. Math. Anal. Appl. 80, no.2
+(1981), 533 -544.
+[12] Reissig R., Sansone G. and Conti R. 1974. Non-linear Differential Equations
+of Higher Order, No-ordhoff International Publishing, Groningen, 1974.
+[13] Tejumola, H.O. On the convergence of solutions of certain third order dif-
+ferential equations, Ann. Mat. Pura Appl.(IV) LXXVIII, (1968), 377-386.
+[14] Tejumola, H.O. Convergence of solutions of certain ordinary third order
+differential equations. Ann. Mat. Pura Appl. (4) 94 (1972), 247 - 256.
+[15] Yoshizawa, T. Stability Theory by Liapunov's Second Method, Math. Soc.
+Japan, (1966).
+Electronic Journal. http://www.math.spbu.ru/diffjournal,  55

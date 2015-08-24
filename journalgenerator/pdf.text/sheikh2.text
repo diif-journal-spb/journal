@@ -1,0 +1,2937 @@
+﻿DIFFERENTIAL EQUATIONS 
+AND 
+CONTROL PROCESSES 
+№ 3, 2011 
+Electronic Journal, 
+reg.Эл № ФС77-39410 at 15.04.2010 
+ISSN 1817-2172 
+ 
+http://www.math.spbu.ru/user/diffjournal 
+e-mail: jodiff@mail.ru 
+ 
+On oscillation of neutral second order 
+differential equations 
+ 
+ 
+ 
+ 
+Oscillation criteria for second order nonlinear neutral 
+differential equations. 
+1
+M.M.A.El-sheikh, 
+2
+R.Sallam and 
+3
+N.Mohamady 
+1
+Department of Mathematics , Faculty of Science, Taibah University,Madinah ,Saudi Arabia. 
+1,2  
+Department of Mathematics , Faculty of Science, Menofia University, Egypt. 
+3
+ Department of Mathematics , Faculty of Science, Benha University, Egypt. 
+E-mail address: msheikh_1999@yahoo.com 
+Abstract 
+In this paper we are concerned with  the oscillatory behavior of solutions of  two general classes of 
+second order nonlinear neutral differential equations. The obtained results improve and extend some 
+known criteria in the literature.  Two illustrative examples are given to justify our results.  
+1. Introduction 
+The aim of this paper is to study the oscillatory behavior of solutions of the nonlinear differential 
+equations of the type: 
+
+
+    
+n
+j
+j j j
+t x t x f t q t x t p t x t x t r
+1
+, 0 ))) ( ( ), ( ( ) ( ] ) )) ( ( ) ( ) ( ))( ( ( ) ( [    ,
+0
+t t 
+. ,..., 2 , 1 n j                                                                                                                                                   (1.1)                                                                                                            
+and 
+0
+1
+1
+t    t , 0 ))) ( ( , ( ) ) ( ) ( ) ( (      
+
+
+
+m
+i
+j j
+t x t f t z t z t r 
+
+                                                                        (1.2)                                           
+where 
+
+
+ 
+n
+i
+i i
+t x t p t x t z
+1
+)) ( ( ) ( ) ( ) (  and α > 0. 
+Here 
+1
+( ), ( ,(0, )) r t C I  ,
+1
+( ), ( ) ( , )
+j
+p t q t C I R  and 
+2
+( , )
+j
+f C R R  . Differential Equations and Control Processes, №3, 2011 
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  2 
+Throughout the paper we assume that 
+) (
+1
+H  
+
+
+
+  ds s r ) (
+1
+  for ). , [ ,
+0
+   t I I t 
+) (
+2
+H 0 ( ) 1 pt  ,  and  0 ) (  t q
+j
+  for  . ,..., 2 , 1 n j  
+) (
+3
+H 
+0
+, ( ) 0 t t t      , t t  ) (  , and . ) ( lim  
+ 
+t
+t
+ 
+) (
+4
+H t t R I C t
+j j
+  ) ( ), , ( ) (   ,  
+ 
+) ( lim t
+j
+t
+ for  
+0
+t t  ,  and . ,..., 2 , 1 n j  
+) (
+5
+H 0 ) ( ), , ( ) (
+1
+  u R R C u   , and for any  
+0
+t t  there exist two positive constants C and 
+1
+C
+such that  
+1
+( ( )) . C u t C   
+) (
+6
+H
+( , )
+0
+j
+j
+f x y
+y
+  for 0  y , and 0 ) , (  y x f x
+j
+for 0  y x and . ,..., 2 , 1 n j  
+Following Philos [13], we shall define a class of functions X. So we first define 
+} < t < : ) , {(
+0
+   s t s t D and } < t : ) , {(
+0 0
+    s t s t D . 
+We say that a continuous function ) , 0 [ :   D H belongs to the class X denoted by X H  if 
+(i) 0 > ) , ( , 0 ) , ( s t H t t H   for 
+0
+) , ( D s t  . 
+(ii) ) , ( s t H has a continuous partial derivative with respect to s defined by 
+) , ( ) , (
+) , (
+s t H s t h
+s
+s t H
+ 
+
+
+    for some ) , (
+0
+R D C h  . 
+By a solution of Eq.(1.1), or Eq.(1.2), we mean a continuously differentiable function ) (t x which 
+has the property 
+0
+1
+), ), , ([ ] )) ( ( ) ( ) ( ))[ ( ( ) ( t T R T C t x t p t x t x t r        , and satisfies Eq.(1.1),or 
+eq.(1.2),  for all T t  . 
+We restrict our attention to those solutions ) (t x which exist on some half-line ) , [  T , 
+0
+t T  and 
+satisfy the condition 0 } : ) ( { sup  
+
+T t t x
+T t
+.  A solution ) (t x is called oscillatory if it has arbitrarily 
+large zeros, otherwise, it is called nonoscillatory. Eq.(1.1),or eq.(1.2)  is called oscillatory if all of its 
+solutions are oscillatory. 
+Recently a notable interest in obtaining sufficient conditions for oscillation of different forms of 
+neutral differential equations increased due to the importance of this class in many applications in 
+science and technology. Many contributions appeared in the literature to discuss the oscillation of 
+second order equations which are special cases of  Eq.(1.1) and Eq. (1.2) (see [1 ] ,[2],[3],[5],[7],and 
+[10]),and references therein. 
+For some related works, Travis [14] and Waltman [15] discussed the oscillstion problem of neutral 
+delay differential equation of the type Differential Equations and Control Processes, №3, 2011 
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  3 
+0 ) ( ) ( ) ) ( ) ( ) ( (          t x t q t x t p t x                                                                                           (1.3)     
+ Many other contributions  were recently offered about the oscillatory behavior of such problems of 
+second order differential equations  (see [1]-[15] ). In [4], Grammatikopoulos and Ladas extended 
+the results of [14,15].  They  proved that,  if    
+, )) ( 1 )( (    
+
+
+ds s p s q    then (1.3) is oscillatory. 
+Recently, Rogovchenko and Tuncay  [9], studied  the oscillatory behavior of solutions of second 
+order nonlinear differential equation with a damping term of the form 
+. 0 )) ( ( ) ( ) ( ) ( ) ) ( ) ( (       t x f t q t x t p t x t r 
+Very recently, Hassanbulli and Rogovchenko [7] studied the oscillation of  nonlinear neutral 
+differential equations of the type 
+0 ))) ( ( ), ( ( ) ( ] ) ) ( ) ( ) ( )( ( [       t x t x f t q t x t p t x t r                                                                        (1.4) 
+Džurina et al.[2] and  Sun et al.[10] discussed the oscillation criteria for the differential equation: 
+  0 )) ( ( )) ( ( ) ( ) ) ( ) ( ) ( (
+1 - 1
+    
+
+t x t x t q t x t x t r  
+ 
+                                                                           (1.5) 
+Lui et al. [8] and Xu et al. [11,12] extended the results of ( [2] and [10]) to Eq.(1.5). 
+In this paper, we give some new sufficient conditions  for Eq. (1.1) and Eq. (1.2) to be oscillatory 
+.We illustrate our results by two examples. The key idea in the proofs makes use of the idea used in 
+[7] and [1]. 
+2. Oscillation criteria for Eq. (1.1) 
+Suppose that there exists a function )) , 0 ( , (
+1
+  I C g , where ) , [
+0
+  t I , such that 
+ 
+ 
+
+]
+) , (
+) , (
+inf lim [ inf < 0
+0
+t s
+0 t t H
+s t H
+t
+                                                                                                            (2.1) 
+and                                                                                        
+
+
+
+ 
+< ) , (
+) (
+) ( )) ( (
+) , (
+1
+sup lim
+2
+0
+0
+ds s t h
+s
+s g s r
+t t H
+t
+t
+j
+j
+t
+
+
+                                                                              (2.2) 
+Theorem 2.1. Let the conditions ) (
+1
+H - ) (
+6
+H hold . Suppose that there exists a function 
+)) , 0 ( , (
+1
+  I C g ,  such that for some 1  m and X H  
+. ,..., 1 , ) , (
+) ( 4
+)) ( ( ) (
+) ( ) , (
+) , (
+1
+sup lim
+2
+1
+0
+0
+n j ds s t h
+s
+s r s v C m
+s s t H
+t t H
+t
+t
+j
+j j
+t
+  
+
+
+
+ 
+
+
+                               (2.3) 
+where 
+] ] ) ( ) ( [
+)) ( (
+) ( ) ( ) (
+))) ( ( 1 )( ( )[ ( ) (
+1
+2 2
+1
+ 
+
+  
+
+
+t g t r
+t r C
+t g t r t
+t p t q t v t
+j
+j
+n
+j
+j j j j
+
+
+   , Differential Equations and Control Processes, №3, 2011 
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  4 
+and    
+]
+)) ( (
+) ( ) ( ) (
+2 exp[ ) (
+
+
+ 
+t
+j
+j
+j
+ds
+s r C
+s g s r s
+t v
+
+
+, 
+then Eq. (1.1) is oscillatory. 
+Proof. Suppose the contrary that ) (t x be a nonoscillatory solution of  Eq. (1.1). Then there exists 
+0 1
+t t   such that 
+1
+0 ) ( t t t x    .  Assume that  0 ) (  t x , and 0 )) ( (  t x   for all  
+0 1
+t t t   . 
+Define 
+1
+)) ( ( ) ( ) ( ) ( t t t x t p t x t z      .  It is clear that  0 ) ( ) (   t x t z .  Now  since 
+0 ))) ( ( ), ( ( ) ( ] ) ( )) ( ( ) ( [
+1
+    
+
+
+n
+j
+j j j
+t x t x f t q t z t x t r   , 
+then  ) ( )) ( ( ) ( t z t x t r   is nonincreasing. Going through as in Theorem 2 of [6] we see that 
+1
+t t 0 ) (     t z . 
+But since from ) (
+6
+H we note that 
+0 )) ( ( ) ( ] ) ( )) ( ( ) ( [
+1
+   
+
+
+n
+j
+j j j
+t x t q t z t x t r                                                                                        (2.4) 
+Hence since ) ( )] ( 1 [ )) ( ( ) ( ) ( )) ( ( ) ( ) ( ) ( t z t p t z t p t z t x t p t z t x         , then there exists 
+1 2
+t t  
+such that . )) ( ( ))] ( ( 1 [ )) ( (
+2
+t t t z t p t x
+j j j
+                                                                              (2.5)                                  
+Therefore  
+
+
+    
+n
+j
+j j j j
+t z t p t q t z t x t r
+1
+)) ( ( ))] ( ( 1 )[ ( ] ) ( )) ( ( ) ( [                                                                        (2.6) 
+Define   )] (
+)) ( (
+) ( )) ( (
+)[ ( ) ( ) ( t g
+t z
+t z t x
+t r t v t w
+j
+j
+
+
+
+
+
+  for    . ,..., 2 , 1 n j                                                    (2.7) 
+Then using (2.6), ) (
+3
+H and ) (
+6
+H , we obtain 
+] ) ( ) ( )[ ( ) ( ) ( ) ( )
+)) ( (
+) (
+(
+) (
+) ( )) ( ( )) ( ( ) ( ) (
+)] ( ) ( ) ( ) ( [
+) (
+) (
+) ( ))] ( ( 1 )[ ( ) (
+2
+1
+ 
+
+
+
+
+
+
+
+
+
+    
+
+
+t g t r t v t v t g t r
+t z
+t z
+t z
+t t z t x t v t r
+t g t v t r t w
+t v
+t v
+t v t p t q t w
+j j
+j
+j j j
+j
+j
+j
+n
+j
+j j j j
+
+  
+ 
+               (2.8)      
+                                                                                                                                                                                                                                                                                
+Since ) ( )) ( ( ) ( t z t x t r   is nonincreasing and t t
+j
+ ) (  , then 
+))) ( ( ( )) ( (
+) ( )) ( ( ) (
+)) ( (
+t x t r
+t z t x t r
+t z
+j j
+j
+  
+
+
+
+ 
+                                                                                                        (2.9) 
+Thus substituting from (2.8) in (2.9) we get Differential Equations and Control Processes, №3, 2011 
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  5 
+) (
+)) ( ( ) (
+) (
+] ] ) ( ) ( [
+)) ( (
+) ( ) ( ) (
+))) ( ( 1 )( ( )[ ( ) (
+2
+1
+1
+2 2
+1
+t w
+t r t v C
+t
+t g t r
+t r C
+t g t r t
+t p t q t v t w
+j j
+j
+j
+j
+n
+j
+j j j j
+
+
+
+
+ 
+
+
+ 
+
+    
+
+
+ 
+i.e. 
+) (
+)) ( ( ) (
+) (
+) ( ) (
+2
+1
+t w
+t r t v C
+t
+t t w
+j j
+j
+
+
+
+
+                                                                                             (2.10) 
+Multiplying (2.10) by ) , ( s t H and integrating with respect to s from 
+2
+t to t , we get for all 1  m 
+2 2 2
+22
+2
+1
+2
+22
+1
+( ) ( )
+( ) ( , ) ( ) ( , ) ( , )
+( ) ( ( ))
+..
+( ) ( )
+( ) ( , ) ( ) ( , ) [ ( , ) ( , ) ( ) ( , )]
+( ) ( ( ))
+t t t
+j
+t t t
+jj
+tt
+j
+tt
+jj
+s w s
+w s H t s ds s H t s ds H t s ds
+Cv s r s
+ie
+s w s
+s H t s ds w t H t t h t s H t s w s H t s ds
+Cv s r s
+
+
+
+
+
+
+
+   
+
+  
+  
+
+ 
+Thus       
+ 
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+t
+t
+j
+j j
+j j
+j
+t
+t
+j
+j j
+t
+t
+j j
+j
+t
+t
+ds s t h
+s
+s r s v C m
+s w
+s r s v C m
+s s t H
+ds s t h
+s
+s r s v C m
+ds s w
+s r s v C m
+s t H s m
+ds s t H s
+2
+2 2 2
+2
+1
+1
+2
+1
+2
+1
+) , (
+) ( 4
+)) ( ( ) (
+) (
+)) ( ( ) (
+) ( ) , (
+) , (
+) ( 4
+)) ( ( ) (
+) (
+)) ( ( ) (
+) , ( ) ( ) 1 (
+) , ( ) (
+
+
+
+
+
+
+
+
+
+        (2.11)                                                                                                                                                   
+Therefore 
+  ) , ( ) ( )] , (
+) ( 4
+)) ( ( ) (
+) , ( ) ( [
+2 2
+2 1
+2
+t t H t w ds s t h
+s
+s r s v C m
+s t H s
+j
+j j
+t
+t
+
+
+
+
+
+
+ 
+] ) ( ) ( )[ , (
+) , ( ) ( )] , (
+) ( 4
+)) ( ( ) (
+) , ( ) ( [
+2
+0
+2
+2 0
+0 2
+2
+1
+
+
+ 
+
+
+
+t
+t
+j
+j j
+t
+t
+ds s t w t t H
+t t H t w ds s t h
+s
+s r s v C m
+s t H s
+
+
+
+
+ 
+Hence 
+. < ) ( ) (
+)] , (
+) ( 4
+)) ( ( ) (
+) , ( ) ( [
+) , (
+1
+sup lim
+2
+0
+2
+2
+2
+1
+0
+  
+
+
+
+
+ 
+t
+t
+j
+j j
+t
+t
+t
+ds s t w
+ds s t h
+s
+s r s v C m
+s t H s
+t t H
+
+
+
+
+                                                    
+(2.12) 
+This contradicts (2.3). Hence Eq. (1.1) is oscillatory. Differential Equations and Control Processes, №3, 2011 
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  6 
+Remark 2.1. Theorem 2.1 extends Theorem 2 of [7]. 
+Theorem 2.2. Let  (2.1) holds . Assume that there exist functions X H  , ) , (
+1
+R I C g  and 
+) , ( R I C   such that for all 
+0
+t T  .If for some  1  m ,we have 
+. ,..., 1 ), ( ) , (
+) ( 4
+)) ( ( ) (
+) ( ) , (
+) , (
+1
+sup lim
+2
+1
+n j T ds s t h
+s
+s r s v C m
+s s t H
+T t H
+t
+T
+j
+j j
+t
+  
+
+
+
+ 
+
+
+                         (2.13) 
+and 
+ 
+
+
+
+
+ 
+ds
+s r s v
+s s t
+t
+j j
+j
+t
+0
+)) ( ( ) (
+) ( ) (
+sup lim
+2
+
+
+                                                                                                     (2.14) 
+where  ) 0 ), ( max( ) ( t t   
+
+, then Eq.(1.1) is oscillatory. 
+Proof. Suppose the contrary that ) (t x is  a nonoscillatory solution of  Eq. (1.1) such that 0 ) (  t x , 
+and 0 )) ( (  t x
+j
+ . Then proceeding as in the proof of Theorem 2.1 until we arrive Eq. (2.11), then  on 
+the light of (2.13) it follows that which implies with Eq. (2.13) that  
+ds s w
+s r s v mC
+s s t H m
+t t H
+t w
+ds s t h
+s
+s r s v C m
+s t H s
+t t H
+t
+j j
+j
+t
+t
+t
+j
+j j
+t
+t
+t
+)] (
+)) ( ( ) (
+) ( ) , ( ) 1 (
+[
+) , (
+1
+inf lim ) (
+)] , (
+) ( 4
+)) ( ( ) (
+) , ( ) ( [
+) , (
+1
+sup lim ) (
+2
+1 2
+2
+2
+1
+2
+2
+2
+2
+
+
+
+
+
+
+
+ 
+
+  
+
+
+ 
+ 
+ 
+Then 
+) ( )] (
+)) ( ( ) (
+) ( ) , ( ) 1 (
+[
+) , (
+1
+inf lim ) (
+2
+2
+1 2
+2
+2
+t w ds s w
+s r s v mC
+s s t H m
+t t H
+t
+j j
+j
+t
+t
+t
+
+
+
+ 
+
+  
+
+ 
+Consequently, 
+) ( ) (
+2 2
+t w t                                                                                                                                   (2.15) 
+and 
+. < )] ( ) ( [
+1
+)] (
+)) ( ( ) (
+) ( ) , (
+[
+) , (
+1
+inf lim
+2 2
+1 2
+2
+2
+  
+
+
+
+
+ 
+t t w
+m
+C m
+ds s w
+s r s v
+s s t H
+t t H
+j j
+j
+t
+t
+t 
+
+                                     (2.16) 
+Now, assume that   
+
+
+
+ds
+s r s v
+s w s
+j j
+j
+t
+]
+)) ( ( ) (
+) ( ) (
+[
+2
+2
+
+
+     for . ,..., 2 , 1 n j                                                  (2.17) 
+Then from (2.17) it follows that for any positive constant  , there exists 
+2 3
+t t  such that 
+
+
+
+
+
+
+
+ds
+s r s v
+s w s
+j j
+j
+t
+t
+]
+)) ( ( ) (
+) ( ) (
+[
+2
+2
+    for . ,..., 2 , 1 n j                                                                                (2.18) 
+Thus by the  integration by parts we obtain  Differential Equations and Control Processes, №3, 2011 
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  7 
+2 2 2
+22
+32
+22
+22
+2
+2
+2
+2
+( ) ( ) ( ) ( )
+11
+[ ( , ) ] ( , ) [ ]
+( , ) ( ) ( ( )) ( , ) ( ) ( ( ))
+( ) ( )
+1 ( , )
+[ ][ ]
+( , ) ( ) ( ( ))
+( ) ( )
+1
+[]
+( , ) ( ) ( ( ))
+t t s
+jj
+t t t
+j j j j
+ts
+j
+tt
+jj
+s
+j
+tt
+jj
+s w s l w l
+H t s ds H t s d dl
+H t t v s r s H t t v l r l
+l w l
+H t s
+dl ds
+H t t v l r l s
+l w l
+dl
+H t t v l r l
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+3
+2
+33
+20
+( , )
+[]
+1 ( , )
+[]
+( , )
+( , ) ( , )
+(2.19)
+( , ) ( , )
+t
+t
+t
+H t s
+ds
+s
+H t s
+ds
+H t t s
+H t t H t t
+H t t H t t
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+Since  from Eq. (2.1), it is clear that there exists some 0 >  such that 
+.
+) , (
+) , (
+inf lim
+0
+t t H
+s t H
+t  
+ > 0 >       
+Then (2.19) becomes 
+
+
+
+
+
+
+ds
+s r s v
+s w s
+s t H
+t t H
+j j
+j
+t
+t
+]
+)) ( ( ) (
+) ( ) (
+) , ( [
+) , (
+1
+2
+2
+2
+                                                                                       (2.20)
+ 
+But since  is an arbitrary positive constant, then  
+. )] (
+)) ( ( ) (
+) ( ) , (
+[
+) , (
+1
+inf lim
+2
+2
+2
+ 
+
+
+ 
+ds s w
+s r s v
+s s t H
+t t H
+j j
+j
+t
+t
+t 
+
+ 
+This contradicts (2.16). 
+ Now since  from (2.17) we have  
+ds
+s r s v
+s w s
+j j
+j
+t
+]
+)) ( ( ) (
+) ( ) (
+[
+2
+2
+
+
+
+
+
+=  
+While from (2.15) we get 
+ 
+THis contradicts (2.14). So Eq. (1.1) is oscillatory.  
+Remark 2.1. Theorem 2.2 extends Theorem 5 in [7]. 
+Example 2.1. Consider the neutral differential equation 
+ . 0 , 0 ))) ( ( ), ( ( ) ( ] ) )) ( ( ) ( ( ) sin 2 [(
+2
+1
+      
+
+
+
+t t x t x f t q t x e t x x
+j
+j j j
+t
+                                   (2.21) 
+Here 
+4 /
+2
+2 /
+1 2 1
+) ( , ) ( , 4 / ) ( , 2 / ) ( , 1 ) ( , ) ( , 1 ) (
+t t t
+e t q e t q t t t t t g e t p t r       
+
+  
+ 
+ 
+
+
+
+
+
+
+2 2
+  <
+)) ( ( ) (
+) ( ) (
+)) ( ( ) (
+) ( ) (
+2 2
+t
+j j
+j
+t
+j j
+j
+ds
+s r s v
+s w s
+ds
+s r s v
+s s
+
+
+
+Differential Equations and Control Processes, №3, 2011 
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  8 
+Choosing µ
+1
+= µ
+2
+=1, then  it is clear that  
+4 / 2 /
+2
+4 / 3 2 /
+1 1
+2 2
+1
+2
+1
+1 1
+2 /
+2
+1
+1
+1 1
+12
+23
+1 ) (
+6
+11
+] ] ) ( ) ( [
+)) ( (
+) ( ) ( ) (
+))) ( ( 1 )( ( )[ ( ) (
+, ) ( , ]
+)) ( (
+) ( ) ( ) (
+2 exp[ ) ( , 3 , 1
+0
+t t
+t t t
+j
+j j j
+t t
+t
+t
+e e t
+e e e
+t g t r
+t r C
+t g t r t
+t p t q t v t
+e t v e ds
+s r C
+s g s r s
+t v C C
+ 
+  
+
+ 
+  
+  
+ 
+
+  
+ 
+
+   
+
+
+
+
+
+  
+
+
+ 
+Let 
+2
+) ( ) , ( s t s t H   ,  then  2 ) , (  s t h . Thus, from (2.3) 
+]
+54
+922
+27
+128
+6
+14
+16
+54
+138
+6
+9
+[
+1
+)] , (
+) ( 4
+)) ( ( ) (
+) ( ) , ( [
+) , (
+1
+4 / 3 2 / 2
+2
+1
+1 1 1
+1
+0
+0
+     
+
+
+  
+
+t t t
+t
+t
+e e e t t
+t
+ds s t h
+s
+s r s v C m
+s s t H
+t t H
+
+
+
+ 
+and 
+ 
+]
+12
+848
+64 16
+12
+800
+6
+100
+6
+1
+3
+1
+[
+1
+)] , (
+) ( 4
+)) ( ( ) (
+) ( ) , ( [
+) , (
+1
+4 / 4 / 2 / 2 3
+2
+2
+2 2 1
+2
+0
+0
+      
+
+
+  
+
+t t t
+t
+t
+e e t e t t t
+t
+ds s t h
+s
+s r s v C m
+s s t H
+t t H
+
+
+
+ 
+Hence  
+2 , 1 , )] , (
+) ( 4
+)) ( ( ) (
+) ( ) , ( [
+) , (
+1
+sup lim
+2
+1
+0
+0
+  
+
+
+
+ 
+j ds s t h
+s
+s r s v C m
+s s t H
+t t H
+t
+t
+j
+j j
+j
+t
+
+
+ . 
+Therefore, Eq. (2.12) is oscillatory by Theorem 2.1. 
+3. Oscillation criteria of Eq. (1.2) in the case 1 ) ( 0   t p
+i
+. 
+In this section we are concerned with oscillatory behavior of solutions of Eq. (1.2) Assume that 
+ (
+1
+I ) ) ), , ([ ) (
+0
+R t C t p
+i
+  ,and   , 1 ) (    t p
+i
+ for ) 1 , 0 (    and  . ,..., 2 , 1 n i  
+(I
+2
+)       
+ 
+) ( lim 0, ) ( , ) ( ), ), , ([ ) (
+0
+t t t t R t C t
+j
+t
+j j j
+     for  . ,..., 2 , 1 m j  
+(I
+3
+) ), , ) , ([ ) , (
+0
+R R t C x t f
+j
+   such that  
+We assume further that there exist  )) , 0 ( ), , ([ ) (
+0
+   t C t q
+j
+ such that  
+
+ 
+
+ 
+ 
+t
+m
+j
+n
+i
+j i j
+ds s p s q t Q
+1 1
+] )) ( ( 1 )[ ( ) (
+
+ ,   and    
+
+
+
+
+m
+j
+j
+j
+t r
+t
+t R
+1
+/ 1
+)) ( (
+) (
+) (
+
+ 
+
+ 
+Theorem 3.1. Suppose that Eq. (1.2) is nonoscillatory, then there exists a positive function  ) (t u 
+on ) , [
+1
+ t such that Differential Equations and Control Processes, №3, 2011 
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  9 
+, ) ( ) ( , ) (
+1
+   
+
+
+
+ds s u s R t Q
+t
+
+
+ 
+ds s u s R t Q t u
+t
+
+
+
+  ) ( ) ( ) ( ) (
+1
+
+
+,                                                                                                     (3.1) 
+and   1 ) ( ) ( sup lim
+) (
+/ 1
+0
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+t
+t
+t
+j
+ds s r t u                                                                                        (3.2) 
+Proof. Let ) (t x > 0 be a nonoscillatory solution of Eq. (1.2), )) ( ( t x
+i
+ > 0  and  )) ( ( t x
+j
+ > 0  for 
+0 1
+t t t   . Then ) (t z > 0. 
+Since from Eq. (1.1) we have  
+. 0 )) ( ( ) ( ))) ( ( , ( ) ) ( ) ( ) ( (
+1 1
+1
+ 
+ 
+
+       
+m
+i
+m
+i
+j j j j
+t x t q t x t f t z t z t r  
+
+
+                                              (3.3) 
+Thus ) ( ) ( ) (
+1
+t z t z t r  
+ 
+  is nonincreasing function. We have two cases for ) (t z  
+(i) ) (t z  < 0       or  (ii)  ) (t z  > 0   
+(i) Suppose that  ) (t z  < 0, then there exists  
+0 1 2
+t t t   such that ) (
+2
+t z  < 0. But since 
+) ( ) ( ) (
+1
+t z t z t r  
+ 
+  is nonincreasing, then  
+) ( ) ( ) ( ) ( ) ( ) (
+2
+1
+2 2
+1
+t z t z t r t z t z t r     
+   
+     for 
+2
+t t  
+Thus 
+ds s r t z t r t z t z
+t
+t
+
+
+  
+2
+) ( ) ( ) ( ) ( ) (
+/ 1
+2 2
+/ 1
+2
+ 
+ 
+Hence,  
+ 
+) ( lim t z
+t
+ which contradicts the fact that ) (t z > 0. 
+(ii) If that  ) (t z  > 0   for  
+0 1 2
+t t t t    , then since t t
+j
+ ) (  , it follows that  
+ 
+  ))] ( ( ))[ ( ( )) ( )( ( t z t r t z t r
+j j
+   
+Thus 
+
+
+
+/ 1
+]
+)) ( (
+) (
+[
+) (
+)) ( (
+t r
+t r
+t z
+t z
+j
+j
+
+
+
+                                                                                                                 (3.4) 
+Now since from (3.3), we have  
+
+
+   
+m
+i
+j j
+t x t q t z t r
+1
+0 )) ( ( ) ( ] )) ( ( ) ( [ 
+ 
+                                                                                            (3.5)                                      
+Then  by (
+3
+I ), we get  
+] )) ( ( 1 ))[ ( ( )) ( (
+1
+
+
+ 
+n
+i
+j i j j
+t p t z t x                                                                                                 (3.6) 
+Thus by  (3.5) and (3.6), it follows that Differential Equations and Control Processes, №3, 2011 
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  10 
+ 
+ 
+    
+m
+i
+n
+i
+j i j j
+t p t z t q t z t r
+1 1
+0 ] )) ( ( 1 ))[ ( ( ) ( ] )) ( ( ) ( [
+  
+  
+Thus 
+ 
+ 
+  
+ 
+m
+j
+n
+i
+j i j
+j
+t p t q
+t z
+t z t r
+1 1
+] )) ( ( 1 [ ) (
+)) ( (
+] )) ( ( ) ( [
+
+
+
+
+
+                                                                                   (3.7) 
+Now define 
+
+
+]
+)) ( (
+) (
+)[ ( ) (
+t z
+t z
+t r t u
+j
+
+    for  
+2
+t t  , 
+Then ) (t u > 0. By differentiation  using (3.4) and (3.7), we get 
+
+
+
+
+
+
+
+
+ 
+/ 1
+1
+1 1
+]
+)) ( (
+) (
+))[ ( (
+)) ( (
+) ( )) ( )( (
+] )) ( ( 1 [ ) ( ) (
+t r
+t r
+t z
+t z
+t t z t r
+t p t q t u
+j
+j
+j
+j
+m
+j
+n
+i
+j i j
+
+
+
+    
+
+ 
+ 
+ 
+i.e. 
+0 ) ( ) ( ] )) ( ( 1 [ ) ( ) (
+1
+1 1
+    
+
+ 
+ 
+t u t R t p t q t u
+m
+j
+n
+i
+j i j
+
+
+
+ 
+Integrating the above inequality, it follows that  
+0 ) ( ) ( ] )) ( ( 1 [ ) ( ) ( ) (
+3 3
+1
+1 1
+3
+    
+ 
+ 
+
+ 
+t
+t
+t
+t
+m
+j
+n
+i
+j i j
+ds s u s R ds s p s q t u t u
+
+
+
+                                       (3.8) 
+But since , ) (   t Q then 
+    ) ( ) ( ) (
+3
+t Q t u t u  as    t 
+This contradicts the fact that ) (t u > 0. 
+Similarly we can show that 
+ 
+
+
+
+ds s u s R
+t
+) ( ) (
+1
+
+
+   for  
+2
+t t  . 
+Letting   
+3
+t in  (3.8), we get (3.1). 
+Now to prove (3.2), we note that 
+ i.e. 
+2
+2
+()
+1/ 1/
+2
+()
+1/
+( ( ))
+11
+[]
+( ) ( ) ( )
+( ) ( ) ( ) ( )
+11
+( ) ( ) ( )
+1
+[ ( ) ]
+()
+j
+j
+j
+t
+t
+t
+t
+zt
+u t r t z t
+z t r s r s z s ds
+u t r t z t
+r s ds
+ut
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+Hence Differential Equations and Control Processes, №3, 2011 
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  11 
+1 ] ) ( )[ (
+) (
+/ 1
+2
+
+
+ 
+
+
+t
+t
+j
+ds s r t u 
+This implies Eq. (3.2). 
+Remark 3.1. Theorem 3.1 extends Theorem 2.1 of Dong [1]. 
+Let  
+
+0
+) (
+n n
+t y be a sequence of continuous functions on  ) , [  T defined as  
+) ( ) (
+0
+t Q t y   for  
+0
+t t  
+and  
+) ( ] ) ( )[ ( ) (
+1
+1
+t Q ds s y s R t y
+t
+n n
+ 
+
+
+
+
+
+
+   for  ,... 2 , 1  n and 
+0
+t t  .                                                  (3.9) 
+Lemma 3.1. If Eq. (1.2) is nonoscillatory, then ) ( ) ( t u t y
+n
+ where ) (t u be as defined in Theorem 
+3.1 and there exists a positive function ) (t y on  ) , [  T such that ) ( ) ( lim t y t y
+n
+t
+
+ 
+ for  
+0
+t T t   . In 
+addition,  
+) ( ] ) ( )[ ( ) (
+1
+t Q ds s y s R t y
+t
+ 
+
+
+
+
+
+ for  T t                                                                                  (3.10) 
+Proof. The proof is similar to the proof of Lemma 2.4 in [1]. 
+Corollary 3.1. Let ) (t y
+n
+ be defined as in Eq. (3.9). If there exists some ) (t y
+n
+ such that  
+ ] ) ( )[ ( sup lim
+) (
+/ 1
+2
+
+
+
+ 
+
+
+
+t
+t
+n
+t
+j
+ds s r t y 1    for ,... 2 , 1 , 0  n    and   m j ,..., 2 , 1  ,                                (3.11) 
+then Eq. (1.2) is oscillatory. 
+Proof. Suppose that Eq. (1.2) is nonoscillatory, then Eq. (3.2) holds by Theorem 3.1. Moreover by 
+Lemma 3.1 it follows that ) ( ) ( t u t y
+n
+ . Thus from Eq. (3.2) we get  
+1 ] ) ( )[ ( sup lim
+) (
+/ 1
+2
+
+
+
+ 
+
+
+
+t
+t
+n
+t
+j
+ds s r t y which contradicts Eq. (3.11). Hence Eq. (1.2) is oscillatory. 
+Putting 1  n in Corollary 3.1, we have the following corollary 
+Corollary 3.2. Assume that 
+1 ) ( ] ) ( ) ( [ ] ) ( )[ ( sup lim
+1
+2
+) (
+/ 1
+ 
+ 
+
+
+ 
+
+t Q ds s Q s R ds s r t y
+t
+t
+t
+n
+t
+j
+
+
+
+
+
+, 
+then Eq. (1.2) is oscillatory. 
+Remark 3.2. Corollaries 3.1 and 3.2 extend and improve Corollaries 2.5 and 2.6 of [1]. 
+Theorem 3.2. Let ) (t y
+n
+ be defined as in Eq. (3.9). If  there exists some ) (t y
+n
+ such that  we have 
+  
+ 
+ 
+ 
+ 
+t t
+n
+m
+j
+n
+i
+j i j
+dt ds s y s R t p t q ] ) ( ) ( exp[ ] )) ( ( 1 )[ (
+/ 1
+1 1
+ 
+                                                       
+(3.12) 
+or Differential Equations and Control Processes, №3, 2011 
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  12 
+ 
+ 
+ 
+t t
+n n
+dt ds s y s R t Q t y t R ] ) ( ) ( exp[ ) ( ) ( ) (
+/ 1 / 1  
+                                                                       (3.13) 
+then Eq. (1.2) is oscillatory. 
+Proof. Suppose that Eq. (1.2) is nonoscillatory, then from Eq. (3.10), we have 
+ 
+ 
+    
+
+m
+j
+n
+i
+j i j
+t p t q t y t R t y
+1 1
+] )) ( ( 1 )[ ( ) ( ) ( ) (
+1
+
+
+
+
+   for T t  . 
+But since ) ( ) ( t y t y
+n
+ , then  
+ 
+ 
+    
+m
+j
+n
+i
+j i j n
+t p t q t y t y t R t y
+1 1
+/ 1
+] )) ( ( 1 )[ ( ) ( ) ( ) ( ) (
+ 
+ 
+i.e. 
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+ 
+t
+T
+m
+j
+t
+T
+n
+n
+i
+j i j
+t
+T
+n
+ds du u y u R s p s q T y ds s y s R t y
+1
+/ 1
+1
+/ 1
+]] ) ( ) ( exp[ ] )) ( ( 1 )[ ( [ ) ( ] ) ( ) ( exp[ ) (
+  
+
+Then  
+ds du u y u R s p s q T y
+s
+T
+n j
+n
+i
+i
+t
+T
+m
+j
+j
+] ) ( ) ( exp[ ))] ( ( 1 )[ ( ) (
+1
+1 1
+
+
+
+
+ 
+    
+
+ , 
+which contradicts Eq. (3.12) 
+Now, define 
+ds s y s R t v
+t
+) ( ) ( ) (
+1
+
+
+
+
+
+
+ for T t  . 
+Thus  
+)] ( ) ( )[ ( ) ( ) ( ) ( ) ( ) ( ) ( ) (
+1 1 1
+'
+t Q t v t R t y t y t y t R t y t R t v
+n n n
+      
+
+  
+
+ 
+Therefore 
+] ) ( ) ( ) ( ) ( [ ) ( ) ( exp[ ) (
+0 0
+1 1
+dt t Q t y t R t v ds s y s R t v
+t
+n
+t
+t
+n
+ 
+
+ 
+ 
+ 
+Hence 
+dt ds s y s R t Q t y t R t v
+t
+t
+n
+t
+n
+] ) ( ) ( exp[ ) ( ) ( ) ( ) (
+0 0
+1 1
+ 
+
+  
+ 
+ 
+This contradicts Eq. (3.13) and therefore Eq. (1.2) is oscillatory. 
+Remark 3.3. Theorem 3.2 extends Corollary 2.7 of  [2]. 
+Note that if 0 n  in Theorem 3.2, we get the following result which improves corollary 2.8 of [1]. 
+Corollary 3.3. Let ) (t y
+n
+ be defined in Eq. (3.9) and either 
+  
+
+
+
+
+
+
+
+dt ds s Q s R t p t q
+t
+t
+j
+n
+i
+i
+t
+m
+j
+j
+] ) ( ) ( exp[ ))] ( ( 1 )[ (
+0 0
+1
+1 1
+
+
+ 
+or Differential Equations and Control Processes, №3, 2011 
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  13 
+ 
+ 
+
+
+dt ds s Q s R t Q t R
+t
+t t
+] ) ( ) ( exp[ ) ( ) (
+1
+1
+0 0
+
+
+
+. 
+Then Eq. (1.2) is oscillatory. 
+Example  3.1. Consider the D.E. 
+0    t , 0 ))) ( ( , ( ] ) ( ) ( [(
+2
+1
+1
+     
+
+
+
+
+i
+j j
+t x t f t z t z t 
+
+
+.                                                                      (3.14) 
+Here, .
+4
+2
+) ( ,
+4
+1
+) ( ,
+3
+) ( ,
+2
+) ( ,
+2
+) ( ,
+1
+) ( , ) (
+2 1 2 1 2 2 2 1
+      
+
+t p t p
+t
+t
+t
+t
+t
+t q
+t
+t q t t r  
+
+ 
+And we will let 1   . 
+It is clear that 
+t
+ds
+s s
+ds s q s q ds s q t Q
+t
+t t
+j
+j
+3
+]
+2 1
+[
+)] ( ) ( [ ) ( ) (
+2 2
+2 1
+2
+1
+  
+  
+
+ 
+
+
+ 
+
+ 
+and 
+t
+t t
+t r
+t
+t r
+t
+t r
+t
+t R
+j
+j
+j
+36
+13
+) 3 / (
+3 / 1
+) 2 / (
+2 / 1
+]
+)) ( (
+) (
+)) ( (
+) (
+[
+)) ( (
+) (
+) (
+1 1
+2
+/ 1
+2
+1
+/ 1
+1
+2
+1
+/ 1
+  
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+  
+ 
+So 
+t ds
+s
+s
+ds s Q s R I
+t t
+t
+12
+13 3
+36
+13
+) ( ) (
+0
+1
+0
+  
+ 
+
+, 
+and 
+2 2 2
+2 2 2 1 2 1 2 1 1 1
+2
+1
+2
+1
+4
+3
+]
+4
+3
+1 [
+2
+]
+4
+3
+1 [
+1
+))]] ( ( )) ( ( [ 1 )[ ( ))]] ( ( )) ( ( [ 1 )[ (
+))] ( ( 1 )[ (
+t t t
+t p t p t q t p t p t q
+t p t q
+j
+i
+i
+j
+j
+    
+     
+
+ 
+ 
+   
+
+
+ 
+Thus 
+        
+
+  
+
+
+
+
+  
+
+
+
+dt
+t t t
+t
+t
+dt e
+t
+dt e
+t
+dt ds s Q s R t p t q
+t
+I
+t
+t
+j
+i
+i
+t
+j
+j
+0
+4
+4
+3
+3
+2
+2
+2
+0
+2 2
+0
+1
+2
+1
+2
+1
+...]
+! 4
+)
+12
+13
+(
+! 3
+)
+12
+13
+(
+! 2
+)
+12
+13
+(
+12
+13
+1 [
+4
+3
+4
+3
+4
+3
+] ) ( ) ( exp[ ))] ( ( 1 )[ (
+12
+13
+0 0
+
+
+
+ 
+Hence, by Corollary 3.3 Eq. (2.14) is oscillatory. 
+4. Oscillation criteria of Eq. (1.2) for  0 ) (    t p
+i
+ Differential Equations and Control Processes, №3, 2011 
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  14 
+Define  ds s q t Q
+t
+m
+j
+j
+) ( ) (
+1
+
+
+
+
+ . We give The following theorem which partially generalizes Theorem 
+3.1 of [1]. 
+Theorem 4.1. Assume that every solution of Eq. (1.2) is neither oscillatory nor tends to zero, then 
+there exists a positive function ) (t u on ) , [  T such that  
+, ) ( ) ( , ) (
+1
+   
+
+
+
+ds s u s R t Q
+t
+
+
+ 
+ds s u s R t Q t u
+t
+
+
+
+  ) ( ) ( ) ( ) (
+1
+
+
+for 
+0
+t t  ,                                                                                       (4.1) 
+and   1 ) ( ) ( sup lim
+) (
+/ 1
+0
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+t
+t
+t
+j
+ds s r t u                                                                                        (4.2) 
+Proof. Let ) (t x be a solution of Eq. (1.2) which is neither oscillatory nor tends to zero. Such that 
+) (t x > 0, )) ( ( t x
+i
+ > 0  and  )) ( ( t x
+j
+ > 0  for 
+0 1
+t t t   . Then ) (t z > 0. 
+Now from Eq. (1.2), we have  
+. 0 )) ( ( ) ( ))) ( ( , ( ) ) ( ) ( ) ( (
+1 1
+1
+ 
+ 
+
+       
+m
+i
+m
+i
+j j j j
+t x t q t x t f t z t z t r  
+
+
+ 
+Thus ) ( ) ( ) (
+1
+t z t z t r  
+ 
+  is nonincreasing function. Then ) (t z and ) (t z  are eventually of one signe. 
+Now we have one of the two possible cases  
+(i) ) (t z > 0        (ii)  ) (t z < 0   
+(i) Assume that ) (t z > 0, then the proof will be as the proof of Theorem 3.1 until we reach Eq. (3.5) 
+in the form 
+
+
+   
+m
+i
+j j
+t z t q t z t r
+1
+0 )) ( ( ) ( ] )) ( ( ) ( [ 
+ 
+                                                                                            (4.3) 
+This completes the proof as in Theorem 3.1. 
+(ii) Assume that ) (t z < 0  eventually for 
+0 1 2
+t t t t    , then we have two cases,  
+(a) ) (t x is unbounded               (b) ) (t x is bounded 
+(a) Suppose that ) (t x is unbounded, then  
+  
+  
+    
+n
+i
+i
+n
+i
+i i
+n
+i
+i i
+t x t x t p t x t p t z t x
+1 1 1
+)) ( ( )) ( ( ) ( )) ( ( ) ( ) ( ) (                                                          (4.4) 
+Further, since  ) (t x is unbounded, then we can choose a sequence  
+
+1 n n
+T  satisfying  
+ 
+n
+n
+T lim , 
+from which  
+ 
+) ( lim
+n
+n
+T x and ) ( ) ( max
+1
+n
+T t T
+T x t x
+n
+
+ 
+ Differential Equations and Control Processes, №3, 2011 
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  15 
+By choosing N so large such that 
+1
+) ( T T
+N i
+   for  
+2
+t T
+N
+ . Thus ) ( ) ( max
+) (
+N
+T t T
+T x t x
+N N i
+
+  
+ which 
+contradicts Eq. (4.4). 
+(b) Suppose that ) (t x is bounded, then it follows that 0 ) (  t x as   t . 
+Since 0 ) ( sup lim 
+ 
+t z
+t
+, then 
+0 ) ( sup lim ) 1 (
+0 )) ( ( ) ( inf lim ) ( sup lim
+0 ] )) ( ( ) ( ) ( [ sup lim
+1
+1
+ 
+ 
+ 
+ 
+
+   
+
+ 
+
+
+t x
+t x t p t x
+t x t p t x
+t
+n
+i
+i i
+t t
+n
+i
+i i
+t
+
+
+
+ 
+This shows that 0 ) (  t x as   t , and so the proof is completed. 
+Let  
+
+0
+) (
+n n
+t y be a sequence of continuous functions on  ) , [  T defined as follows 
+) ( ) (
+0
+t Q t y   for  
+0
+t t  
+and 
+) ( ] ) ( )[ ( ) (
+1
+1
+t Q ds s y s R t y
+t
+n n
+ 
+
+
+
+
+
+
+,   for  ,... 2 , 1  n and 
+0
+t t  .                                
+Corollary 4.1. Let ) (t y
+n
+ be defined as before. If there exists some ) (t y
+n
+ such that   
+ ] ) ( )[ ( sup lim
+) (
+/ 1
+0
+
+
+
+ 
+
+
+
+t
+t
+n
+t
+j
+ds s r t y 1  ,  for ,... 2 , 1 , 0  n    and   m j ,..., 2 , 1  , 
+then every solution of Eq. (1.2) is either oscillatory or tends to zero.   
+Proof. The proof is similar to the proof of Corollary 3.1. 
+ Corollary 4.2. Assume that   
+1 )] ( ) ( ) ( [ ] ) ( [ sup lim
+1
+0
+) (
+/ 1
+ 
+ 
+
+
+ 
+
+t Q ds s Q s R ds s r
+t
+t
+t
+t
+j
+
+
+
+
+
+    for ,... 2 , 1 , 0  n    and   m j ,..., 2 , 1  , then 
+every solution of Eq. (1.2) is either oscillatory or tends to zero.  
+Remark 4.1. Corollaries 4.1 and 4.2 extend and improve Corollaries 3.4 and 3.5 of [2]. 
+Corollary 4.3. Let ) (t y
+n
+ be defined as before. If there exists some ) (t y
+n
+ such that either  
+ 
+ 
+
+
+
+0 0
+] ) ( ) ( exp[ ) (
+/ 1
+1
+t
+t
+t
+n
+m
+j
+j
+dt ds s y s R t q
+
+                                      
+or 
+ 
+ 
+
+0 0
+] ) ( ) ( exp[ ) ( ) ( ) (
+/ 1 / 1
+t
+t
+t
+n n
+dt ds s y s R t Q t y t R
+ 
+, 
+Proof.The proof is similar to that of corollary 3.3 
+Remark 4.2.Corollary 4.3 improves and extends corollary 3.6 of [1] Differential Equations and Control Processes, №3, 2011 
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  16 
+References. 
+[1] J.G. Dong, Oscillation behavior of second order nonlinear neutral differential equations with 
+deviating arguments, Comput. Math. Appl. 59 (2010) 3710-3717 
+ [2] J.Džurina, I.P.Stavroulakis, Oscillation criteria for second order delay differential equations, 
+Appl.Math.Comput. 140 (2003) 445-453. 
+ [3] J.R. Graef, M.K. Grammatikpoulos, P.W. Spikes, On the asymptotic behavior of solutions of a 
+second order nonlinear neutral delay differential equation, J. Math. Anal. Appl. 156 (1991) 23-39. 
+[4] M.K. Grammatikpoulos, G. Ladas,A. Meimaridou, Oscillation of second order neutral delay 
+differential equations, Rad. Mat. 1 (1985) 267274. 
+[5] M. Hassanbulli, Yu.V. Rogovchenko, Asymptotic behavior of nonoscillatory solutions of second 
+order nonlinear neutral differential equations, Math. Ineq. Appl. 10 (2007) 607-618. 
+[6] M. Hassanbulli, Yu.V. Rogovchenko, Oscillation of nonlinear neutral functional differential 
+equations, Dyn. Contin. Discrete Impuls. Syst. Ser. A. Math.Anal. 16 (Suppl. S1) (2009) 227-233. 
+[7] M. Hassanbulli, Yu.V. Rogovchenko, Oscillation criteria for second order nonlinear neutral 
+differential equations, Appl. Math. Comput. 215 (2010) 4392-4399. 
+[8] L. Liu, Y. Bai, New oscillation criteria for second-order nonlinear neutral delay  differential 
+equations, J. Comput. Appl. Math. 231 (2009) 657-663. 
+ [9] Yu.V. Rogovchenko, F. Tuncay, Oscillation criteria for second-order nonlinear differential 
+equations with damping, Nonlinear Anal. 69 (2008) 208-221. 
+[10] Y.G. Sun, F. W. Meng, Note on the paper of  Džurina and Stavroulakis, Appl.Math.Comput. 
+174 (2006) 1634-1641. 
+[11] R. Xu, F. Meng, Some new oscillation criteria for second order quasi-linear neutral delay  
+differential equations, Appl. Math. Comput. 182 (2006) 797-803. 
+[12] R. Xu, F. Meng, Oscillation criteria for second order quasi-linear neutral delay  differential 
+equations, Appl. Math. Comput. 192 (2007) 216-222. 
+ [13] Ch.G.Philos,"Oscillation theorems for linear differential equations of second order" Arch 
+.Math.53(1989)483-492. 
+ [14] C.C. Travis, Oscillation theorems for second differential equations with functional arguments, 
+Proc. Am. Soc. 31 (1972) 199-202. Differential Equations and Control Processes, №3, 2011 
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  17 
+[15] P. Waltman, A note on an oscillation criterion for an equation with functional arguments, Can. 
+Math. Bull. 11 (1968) 593-595. 
+                  
+ 
+ 
+ 
+ 
+ 

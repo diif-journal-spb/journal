@@ -1,0 +1,2281 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 4, 2002
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Ordinary differential equations
+Robustness of Governing Equations of Envelope Surface
+Created by Nearly Monochromatic Waves
+Ben T.Nohara
+Musashi Institute of Technology
+Department of Electronic and Computer Engineering
+Tamazutsumi, Setagaya, Tokyo 158-8557
+Japan
+Phone: (03)3703-3111 Fax: (03)5707-2147
+e-mail: drben@ac.cs.musashi-tech.ac.jp
+and
+Virginia Polytechnic Institute & State University
+Department of Engineering Science and Mechanics
+Blacksburg, VA 24061-0219
+USA
+Abstract
+In this paper the author deals with the Schr¨ odinger equation of the two-dimensi-
+onal envelope surfaces of the water waves and discusses the robustness about
+the propagation direction of this equation. In the ﬁeld of the water and/or
+the plasma, the Schr¨ odinger equation governs the envelope created by the nearly
+monochromaticwaves, whichenergyisalmostconcentratedinasinglefrequency.
+The two-dimensional Schr¨ odinger equation, which governs the envelope surface
+instead of the envelope of the one-dimensional system, is obtained through theDifferential Equations and Control Processes, N 4, 2002
+straightforward process from the one-dimensional system. The obtained two-
+dimensional Schr¨ odinger equation contains the parameter of the propagation di-
+rection. The author shows that the two-dimensional Schr¨ odinger equation is
+robust about the propagation direction, i.e., the small variation of the propaga-
+tion direction makes no change of the original equation.
+1. INTRODUCTION
+The Schr¨ odinger equation governs the envelope of the group waves [1][2], which
+propagate in the water and the plasma, etc. Moreover, the non-linear Schr¨ oding-
+er equation governs the non-linearity of the envelope. The fact that the solution
+for the non-linear Schr¨ odinger equation can be a soliton[3][4] is known and of
+interest [5]. Many studies of the group waves have been carried out in the water
+wave area and some other area as well. For example, in the ﬁber-optic commu-
+nication system, the GDV (Group Velocity Dispersion), in which problem the
+launched pulse may spread outside its timing window due to dispersion, limits
+the transmission data rate caused by the pulse overlapping between adjacent
+timing windows. Non-linear refraction of SPM (Self-Phase Modulation) can also
+limitthesystemperformancebycausingspectralbroadeningoftheopticalpulse.
+Those effects are also described by the linear or non-linear Schr¨ odinger equation
+and analyzed to achieve the optimal system performance [6].
+Inthispaper,thegoverningequationoftheenvelopesurfacecreatedbynearly
+monochromatic waves, which forms the two-dimensional Schr¨ odinger type equa-
+tion, are derived [7][8][9] and its characteristics of robustness about the propaga-
+tion direction of the representative style are discussed. The spectrum of nearly
+monochromatic waves is almost concentrated on a single frequency. Such waves
+create the envelope in a one-dimensional system. In a two-dimensional system,
+the envelope surface instead of the envelope in a one-dimensional system can
+be considered. Two-dimensional nearly monochromatic waves also create the
+envelope surface. The obtained two-dimensional Schr¨ odinger equation contains
+the parameter of the propagation direction. The author shows that the two-
+dimensional Schr¨ odinger equation is robust about the propagation direction, i.e.,
+the small variation of the propagation direction makes no change of the original
+equation.
+The following section presents the background of the envelope equation (the
+Schr¨ odinger equation) of one-dimensional nearly monochromatic waves. The
+author also gives the general form of the envelope equation and the comprehen-
+sion of the meaning of the spatial derivative of the envelope. The third section
+Electronic Journal.  54Differential Equations and Control Processes, N 4, 2002
+deals with the straightforward expansion of the Schr¨ odinger equation to the two-
+dimensional space of nearly monochromatic waves. The forth section discusses
+the robustness of the derived two-dimensional equation about the propagation
+direction. Finally, in the ﬁfth section concluding remarks are presented.
+2. REVIEW: GOVERNING EQUATIONS
+OF THE ENVELOPE OF NEARLY
+MONOCHROMATIC WAVES[10]
+Plane traveling waves with dispersive characteristics of the form:
+u(x,t) = A(x,t)e
+i{k
+0
+x−ω(k
+0
+)t}
+(1)
+are considered. Here, A,k
+0
+,ω,x and t denote amplitude, wave number, angular
+frequency, travelling direction of waves and time, respectively.
+This is based on the assumption that most of the energy is concentrated in
+one wave number k
+0
+(nearly monochromatic waves) and the amplitude A(x,t)is
+not constant but varies slowly is space and time. The amplitude A(x,t) acts as
+an envelope of the traveling wave.
+The governing Equation of the envelope is obtained as follows. The exact
+solution of u(x,t) is represented as
+u(x,t) =
+Z
+k
+S(k)e
+i{kx−ω(k)t}
+dk. (2)
+Here, S(k) is the spectrum of the waves. So, A(x,t) is derived from Eq.(1) and
+Eq.(2).
+A(x,t) =
+Z
+k
+S(k)e
+iP(x,k,t)
+dk (3)
+where
+P(x,k,t) = (k−k
+0
+)x−{ω(k)−ω(k
+0
+)}t (4)
+The time derivative of A(x,t) is
+∂A(x,t)
+∂t
+=
+Z
+k
+(−i){ω(k)−ω(k
+0
+)}S(k)e
+iP(x,k,t)
+dk. (5)
+Moreover, the spatial derivative of A(x,t) is obtained as follows.
+∂
+n
+A(x,t)
+∂x
+n
+=
+Z
+k
+(i)
+n
+(k−k
+0
+)
+n
+S(k)e
+iP(x,k,t)
+dk,n = 1,2,3··· . (6)
+Electronic Journal.  55Differential Equations and Control Processes, N 4, 2002
+On the other hand, the linear dispersion relation of ω(k) can be written as
+the following Taylor expansion:
+ω(k) = ω(k
+0
+)+ω
+0
+(k
+0
+)(k−k
+0
+)+
+1
+2!
+ω
+00
+(k
+0
+)(k−k
+0
+)
+2
++
+1
+3!
+ω
+000
+(k
+0
+)(k−k
+0
+)
+3
++··· , (7)
+where
+ω
+(n)
+(k
+0
+) =
+∂
+n
+ω(k)
+∂k
+n
+k=k
+0
+.
+(8)
+Substituting the relations of Eq.(6) and Eq.(7) into Eq.(5) leads to the following:
+∂A(x,t)
+∂t
+=
+∞
+X
+n=1
+(−1)
+n
+(i)
+n−1
+ω
+(n)
+(k
+0
+)
+n!
+∂
+n
+A(x,t)
+∂x
+n
+.
+(9)
+Eq.(9) represents the linear higher order governing equation that governs the
+amplitudeofnearlymonochromaticwaves,thatis,theequationthattheenvelope
+of nearly monochromatic waves satisﬁes. Neglecting the third and higher order
+of spatial derivatives in Eq. (9), we obtain the linear Schr¨ odinger equation [10]:
+i(
+∂A(x,t)
+∂t
++ω
+0
+(k
+0
+)
+∂A(x,t)
+∂x
+)+
+1
+2!
+ω
+00
+(k
+0
+)
+∂
+2
+A(x,t)
+∂x
+2
+= 0 (10)
+In the remainder of this section, we treat the non-linear case [11] of the
+dispersionrelation. Thenon-lineardispersionrelationisappliedtoEq.(5)instead
+of the linear dispersion relation of Eq.(7). We consider the non-linear dispersion
+relation to be the following:
+ω = ω(k,A(x,t)
+2
+) (11)
+and then we expand ω in a Taylor series about k = k
+0
+and |A(x,t)|
+2
+= 0 :
+ω
+∼
+= ω(k
+0
+)+ω
+0
+(k
+0
+)(k−k
+0
+)+
+1
+2!
+ω
+00
+(k
+0
+)(k−k
+0
+)
+2
++
+∂ω(k
+0
+,A(x,t)
+2
+)
+∂A(x,t)
+2
+A
+2
+=0
+|A(x,t)|
+2
+.
+(12)
+This equation can be applied to Eq.(2), then the following expansion for A(x,t)
+is obtained:
+A(x,t) =
+Z
+k
+S(k)e
+iP
+n
+(x,k,t)
+dk, (13)
+where
+P
+n
+(x,k,t) = (k−k
+0
+)x−{ω
+0
+(k
+0
+)(k−k
+0
+)+
+1
+2!
+ω
+00
+(k
+0
+)(k−k
+0
+)
+2
+−γ|A(x,t)|
+2
+}t, (14)
+Electronic Journal.  56Differential Equations and Control Processes, N 4, 2002
+and
+γ
+∼
+= −
+∂ω(k
+0
+,A(x,t)
+2
+)
+∂A(x,t)
+2
+A
+2
+=0
+.
+(15)
+Using the same approach described above, we obtain the following, time and
+spatial derivatives of A(x,t) in Eq.(13).
+∂A(x,t)
+∂t
+=
+Z
+k
+(−i){ω
+0
+(k
+0
+)(k−k
+0
+)
++
+i
+2!
+ω
+00
+(k
+0
+)(k−k
+0
+)
+2
+−γ|A(x,t)|
+2
+}S(k)e
+iP
+n
+(x,k,t)
+dk
+= (−i)ω
+0
+(k
+0
+)
+Z
+k
+(k−k
+0
+)S(k)e
+iP
+n
+(x,k,t)
+dk
+−
+i
+2!
+ω
+00
+(k
+0
+)
+Z
+k
+(k−k
+0
+)
+2
+S(k)e
+iP
+n
+(x,k,t)
+dk
++iγ|A(x,t)|
+2
+Z
+k
+S(k)e
+iP
+n
+(x,k,t)
+dk
+= −ω
+0
+(k
+0
+)
+∂A(x,t)
+∂x
++
+i
+2!
+ω
+00
+(k
+0
+)
+∂
+2
+A(x,t)
+∂x
+2
++iγ|A(x,t)|
+2
+A(x,t) (16)
+That is
+i(
+∂A(x,t)
+∂t
++ω
+0
+(k
+0
+)
+∂A(x,t)
+∂x
+)+
+1
+2!
+ω
+00
+(k
+0
+)
+∂
+2
+A(x,t)
+∂x
+2
++γ|A(x,t)|
+2
+A(x,t) = 0. (17)
+This is the non-linear Schr¨ odinger equation with cubic non-linearity. The cubic
+non-linear term is added to the linear Schr¨ oodinger equation of Eq.(10).
+3. EXPANSION TO EQUATIONS GOVERNING
+THE ENVELOPE SURFACE OF NEARLY
+MONOCHROMATIC WAVES
+Herethetreatmentofone-dimensional,nearlymonochromaticwavesisexpanded
+to two-dimensional space. The following equation is obtained by expanding
+Eq.(1).
+u(x,y,t) = A
+f
+(x,y,t)e
+i{k
+0
+xcosθ
+0
++k
+0
+ysinθ
+0
+−ω(k
+0
+)t}
+(18)
+Here, A
+f
+(x,y,t),(x,y) and θ
+0
+indicate the amplitude of a two-dimensional wave
+surface, thecoordinatesystemandthepropagationangle ofthe progressivewave
+u(x,y,t) respectively. Suppose θ
+0
+6= 0. The amplitude A
+f
+(x,y,t) becomes the
+Electronic Journal.  57Differential Equations and Control Processes, N 4, 2002
+envelope surface of the progressive wave.
+The exact solution of u(x,y,t) should be written as follows.
+u(x,y,t) =
+Z
+k
+S(k)e
+i{kxcosθ
+0
++kysinθ
+0
+−ω(k)t}
+dk (19)
+From Eq.(18) and Eq.(19), it follows that A
+f
+(x,y,t) is given by
+A
+f
+(x,y,t) =
+Z
+k
+S(k)e
+iP
+f
+(x,y,k,t)
+dk, (20)
+where
+P
+f
+(x,y,k,t) = (k−k
+0
+)xcosθ
+0
++(k−k
+0
+)ysinθ
+0
+−{ω(k)−ω(k
+0
+)}t. (21)
+The partial derivatives of A
+f
+(x,y,t) with respect to x and y are as follows:
+∂A
+f
+(x,y,t)
+∂x
+= cosθ
+0
+Z
+k
+i(k−k
+0
+)S(k)e
+iP
+f
+(x,y,k,t)
+dk (22)
+∂A
+f
+(x,y,t)
+∂y
+= sinθ
+0
+Z
+k
+i(k−k
+0
+)S(k)e
+iP
+f
+(x,y,k,t)
+dk (23)
+Then Eq.(22) and Eq.(23) follow
+cosθ
+0
+∂A
+f
+(x,y,t)
+∂x
++sinθ
+0
+∂A
+f
+(x,y,t)
+∂y
+=
+Z
+k
+i(k−k
+0
+)S(k)e
+iP
+f
+(x,y,k,t)
+dk. (24)
+In a similar manner, the higher order integral terms about (k −k
+0
+) are ob-
+tained as follows
+∂
+2
+A
+f
+(x,y,t)
+∂x
+2
++
+∂
+2
+A
+f
+(x,y,t)
+∂y
+2
+=
+Z
+k
+i
+2
+(k−k
+0
+)
+2
+S(k)e
+iP
+f
+(x,y,k,t)
+dk (25)
+1
+cosθ
+0
+∂
+3
+A
+f
+(x,y,t)
+∂x
+3
++
+1
+sinθ
+0
+∂
+3
+A
+f
+(x,y,t)
+∂y
+3
+=
+Z
+k
+i
+3
+(k−k
+0
+)
+3
+S(k)e
+iP
+f
+(x,y,k,t)
+dk,···
+(26)
+and so on. Moreover the general term is written as
+(
+1
+cosθ
+0
+)
+n−2
+∂
+n
+A
+f
+(x,y,t)
+∂x
+n
++(
+1
+sinθ
+0
+)
+n−2
+∂
+n
+A
+f
+(x,y,t)
+∂y
+n
+(27)
+=
+Z
+k
+i
+n
+(k−k
+0
+)
+n
+S(k)e
+iP
+f
+(x,y,k,t)
+dk.
+Electronic Journal.  58Differential Equations and Control Processes, N 4, 2002
+On the other hand, the time derivative of A
+f
+(x,y,t) is
+∂A
+f
+(x,y,t)
+∂t
+=
+Z
+k
+(−i){ω(k)−ω(k
+0
+)}S(k)e
+iP
+f
+(x,y,k,t)
+dk. (28)
+Therefore the linear higher order governing equation of the envelope surface of
+nearlymonochromaticwavesisobtainedbysubstitutingEq.(7), Eq.(24), Eq.(25)
+and Eq.(26) into Eq.(28).
+i
+∂A
+f
+(x,y,t)
+∂t
+= −iω
+0
+(k
+0
+)(cosθ
+0
+∂A
+f
+(x,y,t)
+∂x
++sinθ
+0
+∂A
+f
+(x,y,t)
+∂y
+)
+−
+1
+2!
+ω
+00
+(k
+0
+)(
+∂
+2
+A
+f
+(x,y,t)
+∂x
+2
++
+∂
+2
+A
+f
+(x,y,t)
+∂y
+2
+)
++
+i
+3!
+ω
+000
+(k
+0
+)(
+1
+cosθ
+0
+∂
+3
+A
+f
+(x,y,t)
+∂x
+3
++
+1
+sinθ
+0
+∂
+3
+A
+f
+(x,y,t)
+∂y
+3
+)+···
+(29)
+Using the general term of Eq.(27), we can rewrite Eq.(29) as follows:
+∂A
+f
+(x,y,t)
+∂t
+=
+∞
+X
+n=1
+(−1)
+n
+(i)
+n−1
+ω
+(n)
+(k
+0
+)
+n!
+{(
+1
+cosθ
+0
+)
+n−2
+∂
+n
+A
+f
+(x,y,t)
+∂x
+n
++(
+1
+sinθ
+0
+)
+n−2
+∂
+n
+A
+f
+(x,y,t)
+∂y
+n
+}
+(30)
+This equation is expanded to two-dimensional spaces and time:(x,y,t) from
+Eq.(9).
+The equation obtained by n = 2 in Eq.(30)
+i{
+∂A
+f
+(x,y,t)
+∂t
++ω
+0
+(k
+0
+)(cosθ
+0
+∂A
+f
+(x,y,t)
+∂x
++sinθ
+0
+∂A
+f
+(x,y,t)
+∂y
+)}
++
+1
+2!
+ω
+00
+(k
+0
+)(
+∂
+2
+A
+f
+(x,y,t)
+∂x
+2
++
+∂
+2
+A
+f
+(x,y,t)
+∂y
+2
+) = 0 (31)
+is the expansion of the linear Schr¨ odinger equation [7][8].
+In Eq.(30), the following relation can be obtained.
+∂
+n
+A
+f
+(x,y,t)
+∂y
+n
+/
+∂
+n
+A
+f
+(x,y,t)
+∂x
+n
+= tan
+n
+θ
+0
+, n = 1,2,3,··· (32)
+Thisshowstherelationoftheratioofthespatialslopeoftheenvelopesurfaceand
+the tangent of the wave propagation direction. Therefore Eq.(30) describes how
+Electronic Journal.  59Differential Equations and Control Processes, N 4, 2002
+the envelope surface of nearly monochromatic waves evolves, satisfying Eq.(32)
+and varying with time.
+Next, we consider the non-linear dispersion relation of Eq.(11), use Eq.(12)
+for the Taylor series of ω about k = k
+0
+and |A
+f
+(x,y,t)|
+2
+= 0, and obtain the
+following:
+A
+f
+(x,y,t) =
+Z
+k
+S(k)e
+iP
+f
+n
+(x,y,k,t)
+dk, (33)
+where
+P
+f
+n
+(x,y,k,t) = (k−k
+0
+)xcosθ
+0
++(k−k
+0
+)ysinθ
+0
+−{ω
+0
+0
+(k)(k−k
+0
+)+
+1
+2!
+ω
+00
+0
+(k)(k−k
+0
+)
+2
+−γ
+f
+|A
+f
+(x,y,t)|
+2
+}t. (34)
+The time derivative of A
+f
+(x,y,t) in Eq.(33) can be obtained as follows:
+∂A
+f
+(x,y,t)
+∂t
+=
+Z
+k
+(−i){ω
+0
+(k
+0
+)(k−k
+0
+)
++
+1
+2!
+ω
+00
+(k
+0
+)(k−k
+0
+)
+2
+−γ
+f
+|A
+f
+(x,y,t)|
+2
+}S(k)e
+iP
+f
+n
+(x,y,k,t)
+dk
+= (−i)ω
+0
+(k
+0
+)
+Z
+k
+(k−k
+0
+)S(k)e
+iP
+f
+n
+(x,y,k,t)
+dk
+−
+i
+2!
+ω
+00
+(k
+0
+)
+Z
+k
+(k−k
+0
+)
+2
+S(k)e
+iP
+f
+n
+(x,y,k,t)
+dk
++iγ
+f
+|A
+f
+(x,y,t)|
+2
+Z
+k
+S(k)e
+iP
+f
+n
+(x,y,k,t)
+dk (35)
+The forms of the partial derivatives of A
+f
+(x,y,t) in the non-linear case are
+identical to the forms given by Eq.(22) and Eq.(23) except P
+f
+n
+(x,y,k,t) appears
+instead of P
+f
+(x,y,k,t). So, applying these equations to Eq.(35), then we have
+i{
+∂A
+f
+(x,y,t)
+∂t
++ω
+0
+(k
+0
+)(cosθ
+0
+∂A
+f
+(x,y,t)
+∂x
++sinθ
+0
+∂A
+f
+(x,y,t)
+∂y
+)}
++
+1
+2!
+ω
+00
+(k
+0
+)(
+∂
+2
+A
+f
+(x,y,t)
+∂x
+2
++
+∂
+2
+A
+f
+(x,y,t)
+∂y
+2
+)+γ
+f
+|A
+f
+(x,y,t)|
+2
+A
+f
+(x,y,t) = 0
+(36)
+This is the two-dimensional, non-linear Schr¨ odinger equation with cubic non-
+linearity. Compared with the linear case of Eq.(31), the cubic non-linear term
+is just added in the non-linear case of Eq.(36) and Eq.(32) is also satisﬁed for
+n = 1 and 2.
+Electronic Journal.  60Differential Equations and Control Processes, N 4, 2002
+4. ROBUSTNESS OF THE TWO-DIMENSIONAL
+GOVERNING EQUATION OF THE ENVELOPE
+SURFACE OF NEARLY MONOCHROMATIC WAVES
+Intheprevioussection,wetreatthegoverningequationoftheenvelopesurfaceof
+nearly monochromatic waves, in which waves its propagation direction is single.
+That is, Eq. (30) presents the linear dynamics of the envelope surface of nearly
+monochromatic waves with a single propagation direction. We deal with the
+governing equation of the envelope surface of nearly monochromatic waves for
+the robustness consideration of multi-directionality of the propagation direction
+in this section.
+Here the traveling wave whose propagation direction exists in two closely
+separated angles is considered. Let A
+θ
+(x,y,t) be the amplitude of an envelope
+of the traveling wave with θ
+0
+and θ
+1
+of the propagation direction, then we have
+u(x,y,t) = A
+θ
+(x,y,t){e
+i(k
+0
+xcosθ
+0
++k
+0
+ysinθ
+0
+−ω(k
+0
+)t)
++e
+i(k
+0
+xcosθ
+1
++k
+0
+ysinθ
+1
+−ω(k
+0
+)t)
+}. (37)
+This equation is expanded to two propagation directions of Eq.(18). Here we
+suppose
+θ
+1
+= θ
+0
++Δ.(Δ : small) (38)
+The exact solution of u(x,y,t) should be written as follows.
+u(x,y,t) =
+Z
+k
+S(k){e
+i(kxcosθ
+0
++kysinθ
+0
+−ω(k)t)
++e
+i(kxcosθ
+1
++kysinθ
+1
+−ω(k)t)
+}dk (39)
+The following approximations are stood up based on Eq.(38).
+cosθ
+1
+∼
+= cosθ
+0
+−Δsinθ
+0
+(40)
+sinθ
+1
+∼
+= sinθ
+0
++Δcosθ
+0
+(41)
+Using Eq.(40) and Eq.(41), we have
+e
+i(k
+0
+xcosθ
+1
++k
+0
+ysinθ
+1
+−ω(k
+0
+)t)
+= e
+i{k
+0
+x(cosθ
+0
+−Δsinθ
+0
+)+k
+0
+y(sinθ
+0
++Δcosθ
+0
+)−ω(k
+0
+)t}
+= e
+i(k
+0
+xcosθ
+0
++k
+0
+ysinθ
+0
+−ω(k
+0
+)t)−iΔ(k
+0
+xsinθ
+0
+−k
+0
+ycosθ
+0
+)
+= e
+i(k
+0
+xcosθ
+0
++k
+0
+ysinθ
+0
+−ω(k
+0
+)t)
+e
+−iΔ(k
+0
+xsinθ
+0
+−k
+0
+ycosθ
+0
+)
+. (42)
+So, the relation of Eq.(37) and Eq.(39) becomes
+A
+θ
+(x,y,t){1+e
+−iΔ(k
+0
+xsinθ
+0
+−k
+0
+ycosθ
+0
+)
+}e
+i(k
+0
+xcosθ
+0
++k
+0
+ysinθ
+0
+−ω(k
+0
+)t)
+=
+Z
+k
+S(k){1+e
+−iΔ(kxsinθ
+0
+−kycosθ
+0
+)
+}e
+i(kxcosθ
+0
++kysinθ
+0
+−ω(k)t)
+dk. (43)
+Electronic Journal.  61Differential Equations and Control Processes, N 4, 2002
+This equation follows thatA
+θ
+(x,y,t) is given by
+A
+θ
+(x,y,t) =
+1
+1+e
+−iΔf
+0
+(x,y)
+Z
+k
+S(k){1+e
+−iΔf(x,y,k)
+}e
+iP(x,y,k,t)
+dk (44)
+where
+P(x,y,k,t) = (k−k
+0
+)xcosθ
+0
++(k−k
+0
+)ysinθ
+0
+−{ω(k)−ω(k
+0
+)}t (45)
+f(x,y,k) = kxsinθ
+0
+−kycosθ
+0
+(46)
+f
+0
+(x,y) = k
+0
+xsinθ
+0
+−k
+0
+ycosθ
+0
+(47)
+The partial derivatives of A
+θ
+(x,y,t) with respect to x and y are as follows:
+∂A
+θ
+(x,y,t)
+∂x
+=
+iΔsinθ
+0
+(1+e
+−iΔf
+0
+(x,y)
+)
+2
+Z
+k
+S(k)[k
+0
+e
+−iΔf
+0
+(x,y)
+−ke
+−iΔf(x,y,k)
+−(k−k
+0
+)e
+−iΔ{f(x,y,k)+f
+0
+(x,y)}
+]e
+iP(x,y,k,t)
+dk (48)
++
+cosθ
+0
+(1+e
+−iΔf
+0
+(x,y)
+)
+Z
+k
+i(k−k
+0
+)S(k)
+n
+1+e
+−iΔf(x,y,k)
+o
+e
+iP(x,y,k,t)
+dk
+∂A
+θ
+(x,y,t)
+∂y
+=
+−iΔcosθ
+0
+1+e
+−iΔf
+0
+(x,y)
+Z
+k
+S(k)[k
+0
+e
+−iΔf
+0
+(x,y)
+−ke
+−iΔf(x,y,k)
+−(k−k
+0
+)e
+−iΔ{f(x,y,k)+f
+0
+(x,y)}
+]e
+iP(x,y,k,t)
+dk (49)
++
+sinθ
+0
+1+e
+−iΔf
+0
+(x,y)
+Z
+k
+i(k−k
+0
+)S(k)
+n
+1+e
+−iΔf(x,y,k)
+o
+e
+iP(x,y,k,t)
+dk
+Then Eq.(48) and Eq.(49) follow
+cosθ
+0
+∂A
+θ
+(x,y,t)
+∂x
++sinθ
+0
+∂A
+θ
+(x,y,t)
+∂y
+=
+1
+1+e
+−iΔf
+0
+(x,y)
+Z
+k
+i(k−k
+0
+)S(k)
+n
+1+e
+−iΔf(x,y,k)
+o
+e
+iP(x,y,k,t)
+dk. (50)
+In a similar manner, the second partial derivatives of A
+θ
+(x,y,t)with respect
+to x and y are as follows:
+∂
+2
+A
+θ
+(x,y,t)
+∂x
+2
+=
+Δ
+2
+sin
+2
+θ
+0
+(1+e
+−iΔf
+0
+(x,y)
+)
+3
+Z
+k
+S(k)[{−k
+2
+0
+e
+−iΔf
+0
+(x,y)
+−(k
+2
+−2kk
+0
+)e
+−iΔf(x,y,k)
+−(k−k
+0
+)
+2
+e
+−iΔ{f(x,y,k)+f
+0
+(x,y)}
+}e
+−iΔf
+0
+(x,y)
++k
+2
+0
+e
+−iΔf
+0
+(x,y)
+−k
+2
+e
+−iΔf(x,y,k)
+−(k
+2
+−k
+2
+0
+)e
+−iΔ{f(x,y,k)+f
+0
+(x,y)}
+]e
+iP(x,y,k,t)
+dk
+Electronic Journal.  62Differential Equations and Control Processes, N 4, 2002
+−
+2Δsinθ
+0
+cosθ
+0
+(1+e
+−iΔf
+0
+(x,y)
+)
+2
+Z
+k
+(k−k
+0
+)S(k)[k
+0
+e
+−iΔf
+0
+(x,y)
+−ke
+−iΔf(x,y,k)
+(51)
+−(k−k
+0
+)e
+−iΔ{f(x,y,k)+f
+0
+(x,y)}
+]e
+iP(x,y,k,t)
+dk
++
+cos
+2
+θ
+0
+1+e
+−iΔf
+0
+(x,y)
+Z
+k
+i
+2
+(k−k
+0
+)
+2
+S(k)
+n
+1+e
+−iΔf(x,y,k)
+o
+e
+iP(x,y,k,t)
+dk
+∂
+2
+A
+θ
+(x,y,t)
+∂y
+2
+=
+Δ
+2
+cos
+2
+θ
+0
+(1+e
+−iΔf
+0
+(x,y)
+)
+3
+Z
+k
+S(k)[{−k
+2
+0
+e
+−iΔf
+0
+(x,y)
+−(k
+2
+−2kk
+0
+)e
+−iΔf(x,y,k)
+−(k−k
+0
+)
+2
+e
+−iΔ{f(x,y,k)+f
+0
+(x,y)}
+}e
+−iΔf
+0
+(x,y)
++k
+2
+0
+e
+−iΔf
+0
+(x,y)
+−k
+2
+e
+−iΔf(x,y,k)
+−(k
+2
+−k
+2
+0
+)e
+−iΔ{f(x,y,k)+f
+0
+(x,y)}
+]e
+iP(x,y,k,t)
+dk
++
+2Δsinθ
+0
+cosθ
+0
+(1+e
+−iΔf
+0
+(x,y)
+)
+2
+Z
+k
+(k−k
+0
+)S(k)[k
+0
+e
+−iΔf
+0
+(x,y)
+−ke
+−iΔf(x,y,k)
+(52)
+−(k−k
+0
+)e
+−iΔ{f(x,y,k)+f
+0
+(x,y)}
+]e
+iP(x,y,k,t)
+dk
++
+sin
+2
+θ
+0
+1+e
+−iΔf
+0
+(x,y)
+Z
+k
+i
+2
+(k−k
+0
+)
+2
+S(k)
+n
+1+e
+−iΔf(x,y,k)
+o
+e
+iP(x,y,k,t)
+dk
+We can obtain the following relations by neglecting the term of Δ
+2
+in Eq.(51)
+and Eq.(52).
+∂
+2
+A
+θ
+(x,y,t)
+∂x
+2
+∼
+= −
+2Δsinθ
+0
+cosθ
+0
+(1+e
+−iΔf
+0
+(x,y)
+)
+2
+Z
+k
+(k−k
+0
+)S(k)[k
+0
+e
+−iΔf
+0
+(x,y)
+−ke
+−iΔf(x,y,k)
+−(k−k
+0
+)e
+−iΔ{f(x,y,k)+f
+0
+(x,y)}
+]e
+iP(x,y,k,t)
+dk (53)
++
+cos
+2
+θ
+0
+1+e
+−iΔf
+0
+(x,y)
+Z
+k
+i
+2
+(k−k
+0
+)
+2
+S(k)
+n
+1+e
+−iΔf(x,y,k)
+o
+e
+iP(x,y,k,t)
+dk
+∂
+2
+A
+θ
+(x,y,t)
+∂y
+2
+∼
+=
+2Δsinθ
+0
+cosθ
+0
+(1+e
+−iΔf
+0
+(x,y)
+)
+2
+Z
+k
+(k−k
+0
+)S(k)[k
+0
+e
+−iΔf
+0
+(x,y)
+−ke
+−iΔf(x,y,k)
+−(k−k
+0
+)e
+−iΔ{f(x,y,k)+f
+0
+(x,y)}
+]e
+iP(x,y,k,t)
+dk (54)
++
+sin
+2
+θ
+0
+1+e
+−iΔf
+0
+(x,y)
+Z
+k
+i
+2
+(k−k
+0
+)
+2
+S(k)
+n
+1+e
+−iΔf(x,y,k)
+o
+e
+iP(x,y,k,t)
+dk
+Then Eq.(53) and Eq.(54) follow
+∂
+2
+A
+θ
+(x,y,t)
+∂x
+2
++
+∂
+2
+A
+θ
+(x,y,t)
+∂y
+2
+=
+1
+1+e
+−iΔf
+0
+(x,y)
+Z
+k
+i
+2
+(k−k
+0
+)
+2
+S(k)
+n
+1+e
+−iΔf(x,y,k)
+o
+e
+iP(x,y,k,t)
+dk (55)
+Electronic Journal.  63Differential Equations and Control Processes, N 4, 2002
+Moreover thethird spatialderivatives are obtained and letthe secondorderterm
+or higher of Δ neglect and then we have
+1
+cosθ
+0
+∂
+3
+A
+θ
+(x,y,t)
+∂x
+3
++
+1
+sinθ
+0
+∂
+3
+A
+θ
+(x,y,t)
+∂y
+3
+=
+1
+1+e
+−iΔf
+0
+(x,y)
+Z
+k
+i
+3
+(k−k
+0
+)
+3
+S(k)
+n
+1+e
+−iΔf(x,y,k)
+o
+e
+iP(x,y,k,t)
+dk (56)
+In general, the general term is written as
+ 
+1
+cosθ
+0
+ 
+n−2
+∂
+n
+A
+θ
+(x,y,t)
+∂x
+n
++
+ 
+1
+sinθ
+0
+ 
+n−2
+∂
+n
+A
+θ
+(x,y,t)
+∂y
+n
+=
+1
+1+e
+−iΔf
+0
+(x,y)
+Z
+k
+i
+n
+(k−k
+0
+)
+n
+S(k)
+n
+1+e
+−iΔf(x,y,k)
+o
+e
+iP(x,y,k,t)
+dk. (57)
+On the other hand, the time derivative of A
+θ
+(x,y,t) is
+∂A
+θ
+(x,y,t)
+∂t
+=
+1
+1+e
+−iΔf
+0
+(x,y)
+Z
+k
+(−i){ω(k)−ω(k
+0
+)}S(k)
+n
+1+e
+−iΔf(x,y,k)
+o
+e
+iP(x,y,k,t)
+dk (58)
+Therefore the two-dimensional governing equation of the envelope surface of
+nearly monochromatic waves with two closely separated propagation directions
+is obtained by substituting Eq.(7), Eq.(50), Eq.(55) and Eq.(56) into Eq.(58).
+Using the general term of Eq.(57), we have
+∂A
+θ
+(x,y,t)
+∂t
+=
+∞
+X
+n=1
+(−1)
+n
+(i)
+n−1
+ω
+(n)
+(k
+0
+)
+n!
+(
+ 
+1
+cosθ
+0
+ 
+n−2
+∂
+n
+A
+θ
+(x,y,t)
+∂x
+n
++
+ 
+1
+sinθ
+0
+ 
+n−2
+∂
+n
+A
+θ
+(x,y,t)
+∂y
+n
+)
+(59)
+Also the linear Schr¨ odinger equation for A
+θ
+(x,y,t) is obtained as follows.
+i
+ 
+∂A
+θ
+(x,y,t)
+∂t
++ω
+0
+(k
+0
+)
+ 
+cosθ
+0
+∂A
+θ
+(x,y,t)
+∂x
++sinθ
+0
+∂A
+θ
+(x,y,t)
+∂y
+  
++
+1
+2!
+w
+00
+(k
+0
+)
+ 
+∂
+2
+A
+θ
+(x,y,t)
+∂x
+2
++
+∂
+2
+A
+θ
+(x,y,t)
+∂y
+2
+ 
+= 0 (60)
+Equation (59) and Eq.(60) are expanded to two propagation directions from
+Eq.(30) and Eq.(31) with its one propagation direction, respectively. We can
+ﬁnd that Eq.(59) and Eq.(60) hold the identical forms of Eq.(30) and Eq.(31).
+Electronic Journal.  64Differential Equations and Control Processes, N 4, 2002
+This fact shows that two-dimensional governing equation of the envelope surface
+retains the robustness of directionality, that is, the governing equation of the en-
+velope surface of the nearly monochromatic waves with two closely propagation
+directions is the same of the equation with a single propagation direction. How-
+ever, this is based on the approximation of Eq.(38) and neglecting the second
+order term or higher of Δ. Moreover, Eq.(32) is not satisﬁed with in the case of
+two closely propagation directions, but stands up in the meaning of approxima-
+tion of small Δ , that is
+∂
+n
+A
+θ
+(x,y,t)
+∂y
+n
+/
+∂
+n
+A
+θ
+(x,y,t)
+∂x
+n
+∼
+= tan
+n
+θ
+0
+,for small Δ,n = 1,2,3,··· (61)
+The non-linear version considered in this section is obtained in a similar way
+of applying Eq.(12) to Eq.(58). The result is also the identical form of Eq.(36)
+using A
+θ
+(x,y,t) instead of A(x,y,t).
+5.CONCLUDING REMARK
+This paper presents that the governing equation of the envelope surface (two-
+dimensional Schr¨ odinger equation), which is created by the two-dimensional,
+nearly monochromatic waves, holds the robustness of the propagation direction
+in its representative form.
+In the early stage of this paper, the author reviews the Schr¨ odinger equa-
+tion of one-dimensional nearly monochromatic waves. Then two-dimensional
+Schr¨ odingerequation, whichisformedbythetwo-dimensional, nearlymonochro-
+maticwaveswithasinglepropagationdirection,isderivedbythestraightforward
+expansion from the one-dimensional case. In order to present the robustness in
+terms of the propagation direction of the two-dimensional Schr¨ odinger equa-
+tion, the author derives the governing equation of the envelope surface, which is
+created by the two-dimensional, nearly monochromatic waves with two closely
+separated propagation directions. The fact that two derived governing equa-
+tions, which correspond to a single propagation direction and two propagation
+directions, have the same expression is shown.
+References
+[1] Rice, S. O., ‘Mathematical analysis of random noise,’ Bell Syst. Tech. J.,
+24, 1944, pp.46-156.
+Electronic Journal.  65Differential Equations and Control Processes, N 4, 2002
+[2] Longuet-Higgins, M. S., ‘The statistical analysis of a random moving sur-
+face,’ Philos.Trans. Roy. Soc. London, Ser. A, 249, 1957, pp.321-387.
+[3] Zabusky, N. J. and Kruskal, M.D., ‘Interaction of solitons in a collision-
+less plasma and the recurrence of initial states,’ Phys. Rev. Lett., 15, 1965,
+pp.240-243.
+[4] Zabusky, N. J., ‘A synergetic approach to problems of nonlinear dispersive
+wave propagation and interaction,’ Proc. Symp. On Nonlinear Partial Dif-
+ference Equations, Academic Press, Boston, 1967, pp.223-258.
+[5] Zakharov, V.E. and Shabat, A. B., ‘Exact theory of two-dimensional self
+focusing and one-dimensional self modulation of waves in nonlinear media,’
+Soviet Phys. J.E.T.P., 34, 1972, pp.62-69.
+[6] for example, Agrawal, G. P., Fiber-Optic Communication System, 2nd ed.,
+John Wiley & Son, Inc., New York, 1997.
+[7] Nohara, B.T., “Consideration of Higher Order Governing Equations of En-
+velope Surface and Governing Equations of Envelope Surface created by
+Directionally, Nearly Monochromatic Waves,”Thirteen International Collo-
+quium on Differential Equations, pp.43, Plovdiv, Bulgaria, August 18-23,
+2002.
+[8] Nohara, B.T., “Consideration of Higher Order Governing Equations of En-
+velope Surface and Governing Equations of Envelope Surface created by
+Directional, Nearly Monochromatic Waves,” International Journal of Dif-
+ferential Equations and Applications, 2002. (in printing)
+[9] Nohara,B.T.,“DerivationandConsiderationofGoverningEquationsofEn-
+velopeSurfaceCreatedbyDirectional,NearlyMonochromaticWaves,”Inter-
+national Journal of Nonlinear Dynamics and Chaos in Engineering Systems,
+submitted.
+[10] Haberman, R., Elementary Applied Partial Differential Equations, Prentice
+Hall, 1983.
+[11] Whitham, G.B., Linear and Nonlinear Waves, John Wiley & Sons, Inc.,
+New York, 1974.
+Electronic Journal.  66

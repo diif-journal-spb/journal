@@ -1,0 +1,615 @@
+﻿dx
+dt
+ 
+ 
+ 
+ 
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 3, 2003
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Applications to physics, electrotechnics, and electronics
+Transient Motion of Electrically Conducting Fluids of Different
+Prandtl Numbers: Flow Near a Vertical Boundary
+Pallath Chandran
+Department of Mathematics and Statistics
+College of Science, Sultan Qaboos University
+PC 123, Al Khod, Muscat, Sultanate of Oman
+e-mail: chandran@squ.edu.om
+Nirmal C Sacheti
+Department of Mathematics and Statistics
+College of Science, Sultan Qaboos University
+PC 123, Al Khod, Muscat, Sultanate of Oman
+e-mail: nirmal@squ.edu.om
+1 Introduction
+Boundary layer ﬂow of electrically conducting ﬂuids ﬁnds applications in several
+industrial and technological ﬁelds such as, for example, chemical, aerospace and
+nuclear engineering. As a result, several theoretical investigations have been
+carried out in the last four decades or so to primarily analyze the inﬂuence of
+externally applied magnetic ﬁelds on a variety of ﬂows ﬁelds. In particular, a
+number of hydromagnetic ﬂow problems have been reported in the literature to
+consider the individual as well as the combined effects of magnetic, buoyancy
+and viscous forces under certain simplifying assumptions.Differential Equations and Control Processes, N 3, 2003
+It is well known that the partial differential equations which govern the ﬂow
+of electrically conducting ﬂuids under the action of the magnetic and buoyancy
+forces are highly nonlinear and coupled. However, when the ﬂow takes place
+near ﬂat plates, the quadratic convection term in the momentum equation can
+drop out, and the system thus becomes linear. It is therefore possible to obtain
+exact closed form solutions of the linearized problem in a number of practically
+important situations – for instance, when a stationary or moving bounding
+plate is subject to heating, cooling or heat ﬂux conditions [1–5]. While the
+majority of the relevant works reported in literature has emphasized the effects
+of magnetic ﬁeld and buoyancy force on speciﬁcally chosen liquid and gaseous
+media, the detailed analysis of the underlying real ﬂuid properties characterized
+by the Prandtl numbers of the ﬂuids has not received much attention. Our
+main objective in this study is thus to present exact analytical solutions for the
+transient hydromagnetic impulsive ﬂow of ﬂuids of different Prandtl numbers
+when the ﬂow takes place near a moving inﬁnite vertical plate subject to uniform
+heat ﬂux. We have shown in our analysis that one needs to consider two separate
+solutions – one for Pr  = 1 and the other for Pr = 1, Pr being the Prandtl
+number of the ﬂuid under consideration. The explicit forms of these solutions
+have been presented in a uniﬁed form for both the cases of the magnetic ﬁeld
+being ﬁxed to the ﬂuid and to the plate. The variation of the boundary layer
+velocity proﬁles with the Prandtl number has been shown for a combination of
+Grashoff and Hartmann numbers.
+2 Governing Equations
+Consider the unsteady ﬂow of an inﬁnite extent of an electrically conducting
+incompressible ﬂuid past a moving inﬁnite vertical ﬂat plate. With respect to
+the rectangular cartesian coordinate system Oxyz,the axis Oz is taken along
+the wall in the upward direction and the axis Oy is taken perpendicular to it
+into the ﬂuid. The ﬂow is assumed to take place under the inﬂuence of an
+external magnetic ﬁeld. The usual equations of motion of the ﬂuid, neglecting
+Electronic Journal.  78Differential Equations and Control Processes, N 3, 2003
+viscous dissipation and Ohmic heating, are
+∇· V =0 (1)
+ρ
+dV
+dt
+= −∇p + µ∇
+2
+V + gβ(T− T
+∞
+)k + J× B (2)
+ρc
+p
+dT
+dt
+= k∇
+2
+T (3)
+J = σ(V− U)× B (4)
+where V =(V
+x
+,V
+y
+,V
+z
+) is the ﬂuid velocity, U is the bounding plate velocity,
+ρ the density, p the pressure, T the temperature, B the magnetic ﬁeld, J the
+current density, µ the ﬂuid viscosity, g the acceleration due to gravity, β the
+volumetric coeﬃcient of thermal expansion, k the thermal conductivity of the
+ﬂuid, σ the electrical conductivity and c
+p
+is the speciﬁc heat of the ﬂuid at
+constant pressure. In equations (2) and (3), d/dt is the convective derivative
+operator.
+For the two-dimensional motion considered here, at times t≤ 0, the plate
+and the ﬂuid medium are assumed to be at rest and at the constant temperature
+T
+∞
+. At time t> 0, the plate is set into motion in its own plane with a
+velocity proportional to t
+n
+, and simultaneously, heat is also supplied to the
+plate at a constant rate. A uniform magnetic ﬁeld of strength B
+y
+is applied
+in the y direction. We consider two different ﬂow situations with respect to
+the magnetic ﬁeld: (i) the magnetic lines of force are ﬁxed relative to the
+ﬂuid, and (ii) the magnetic lines of force are ﬁxed relative to the boundary.
+These two cases will, however, be incorporated into a single momentum equation
+so as to obtain a uniﬁed solution. As is common in Stokes problems of ﬂow
+near ﬂat boundaries, we assume that the effects of the convective and pressure
+gradient terms in the momentum and energy equations are negligible. The
+density of the liquid is assumed to be constant; however, in the case of free
+convection ﬂow, it is considered variable in forming the buoyancy force. We also
+assume that the magnetic Reynolds number is very small so that the induced
+magnetic ﬁeld produced by the motion of the electrically conducting ﬂuid is
+negligible in comparison with the applied one. As a result of the boundary layer
+approximations, the physical variables become functions of the time variable
+t and the space variable y only. Moreover, the only non-zero component of
+velocity occurring in the analysis will be V
+z
+which we shall hereafter denote by
+u(y,t). Under these assumptions, the boundary layer momentum equation can
+Electronic Journal.  79Differential Equations and Control Processes, N 3, 2003
+be written in the form [6]
+∂u
+∂t
+= ν
+∂
+2
+u
+∂y
+2
++ gβ(T− T
+∞
+)−
+σB
+2
+y
+ρ
+(u− Kλt
+n
+)(5)
+where ν is the kinematic viscosity, λ a constant and
+K =
+ 
+0, if B
+y
+is ﬁxed relative to the ﬂuid
+1, if B
+y
+is ﬁxed relative to the plate.
+The boundary layer energy equation is
+∂T
+∂t
+=
+k
+ρc
+p
+∂
+2
+T
+∂y
+2
+(6)
+The initial and boundary conditions relevant to the ﬂuid ﬂow subject to a
+power-law velocity of the bounding plate then become
+u=0,T = T
+∞
+, for y≥0and t≤ 0
+u = λt
+n
+,
+∂T
+∂y
+=−
+q
+k
+at y =0 for t> 0
+u→ 0,T → T
+∞
+as y→∞ for t>0(7)
+where q is the heat ﬂux per unit area at the plate and λ is a non-zero constant.
+3 Impulsive Motion
+For impulsively moving vertical plate, we take the plate velocity as λ,which
+corresponds to n = 0. We shall solve the boundary layer equations in dimen-
+sionless forms. Using a characteristic length scale L = ν/λ, we introduce the
+non-dimensional quantities
+¯ y = y/L,
+¯
+t = λt/L, ¯ u = u/λ,
+¯
+T = k(T− T
+∞
+)/(qL)
+Pr = ρνc
+p
+/k, G = qgβL
+2
+/(kλ
+2
+),m = σLB
+2
+y
+/(ρλ)(8)
+In the above, the dimensionless parameters Pr,G, and m denote the Prandtl
+number of the ﬂuid, Grashof number and the square of Hartmann number,
+respectively.
+Electronic Journal.  80Differential Equations and Control Processes, N 3, 2003
+Using equation (8), equations (5) and (6) can be expressed in the dimen-
+sionless forms (dropping the bar, for convenience)
+∂u
+∂t
+=
+∂
+2
+u
+∂y
+2
+− m(u− K)+ GT (9)
+∂T
+∂t
+=
+1
+Pr
+∂
+2
+T
+∂y
+2
+(10)
+The initial and boundary conditions become
+u=0,T =0 for y≥0and t≤ 0
+u=1,∂T/∂y =−1at y =0 for t> 0
+u→ 0,T →0as y→∞ for t> 0 (11)
+We observe that the energy equation (10) is uncoupled from the momen-
+tum equation (9). We can therefore solve for the temperature variable T(y,t)
+whereupon u(y,t) can be obtained by solving equation (9). Taking Laplace
+transforms of equations (9) and (10) with respect to the t-variable will result
+in a set of (ordinary) differential equations for the transformed functions in
+the independent variable y. The resulting solutions of temperature and veloc-
+ity variables in the ys-plane can be inverted using standard inverses combined
+with convolution [7, 8]. The solutions in the physical yt-plane can be written
+in the form
+T(y,t)=2
+ 
+t
+π Pr
+exp
+ 
+−
+Pry
+2
+4t
+ 
+− y erfc
+ 
+√
+Pr y
+2
+√
+t
+ 
+(12)
+u(y,t)= K
+ 
+1− exp(−mt)+exp(−mt)erfc
+ 
+y
+2
+√
+t
+  
++
+1− K
+2
+ 
+exp(−y
+√
+m)erfc
+ 
+y
+2
+√
+t
+−
+√
+mt
+ 
++exp(y
+√
+m)erfc
+ 
+y
+2
+√
+t
++
+√
+mt
+  
+− α
+ 	
+t
+0
+{ϕ
+1
+(y,ξ)+ ϕ
+2
+(y,ξ)}
+
+
+t− ξ dξ
+−
+	
+t
+0
+{ϕ
+3
+(y,ξ)+ ϕ
+4
+(y,ξ)}
+
+
+t− ξ dξ
+ 
+(13)
+Electronic Journal.  81Differential Equations and Control Processes, N 3, 2003
+where
+ϕ
+1,2
+(y,t)=
+1
+2
+exp(−bt∓ iy
+√
+b Pr) erfc
+ 
+y
+2
+√
+t
+∓ i
+√
+b Prt
+ 
+ϕ
+3,4
+(y,t)=
+1
+2
+exp(−bt∓ iy
+√
+b Pr) erfc
+ 
+y
+√
+Pr
+2
+√
+t
+∓ i
+√
+bt
+ 
+α =
+2G
+√
+π Pr(1− Pr)
+,b =
+m
+1− Pr
+and erfc(x) is the complementary error function deﬁned by
+erfc(x)=1− erf(x), erf(x)=
+2
+√
+π
+	
+x
+0
+exp
+ff
+−η
+2
+ 
+dη
+In the above deﬁnitions of ϕ
+i,j
+(y,t), (i =1, 3; j =2, 4), the upper sign goes
+with i and the lower sign with j.
+In the non-magnetic case, m=0, it can be shown that
+u(y,t)=erfc
+ 
+y
+2
+√
+t
+ 
++
+α
+12
+ 
+√
+πy(y
+2
++6t)erfc
+ 
+y
+2
+√
+t
+ 
+−
+√
+π Pry(Pry
+2
++6t)erfc
+ 
+y
+2
+ 
+Pr
+t
+ 
+−
+√
+t(y
+2
++8t)exp
+ 
+−
+y
+2
+4t
+ 
++
+√
+t(Pry
+2
++8t)exp
+ 
+−
+Pry
+2
+4t
+  
+(14)
+It may be noted that the general velocity expression for the hydromagnetic ﬂow,
+as given in equation (13), is not valid when Pr = 1. The solution for this case
+Electronic Journal.  82Differential Equations and Control Processes, N 3, 2003
+is [9]
+u(y,t)= K
+ 
+1− exp(−mt)+exp(−mt)erfc
+ 
+y
+2
+√
+t
+  
++
+1− K
+2
+ 
+exp(−y
+√
+m)erfc
+ 
+y
+2
+√
+t
+−
+√
+mt
+ 
++exp(y
+√
+m)erfc
+ 
+y
+2
+√
+t
++
+√
+mt
+  
++
+2G
+m
+
+ 
+t
+π
+exp
+ 
+−
+y
+2
+4t
+ 
+− y erfc
+ 
+y
+2
+√
+t
+ 
+ 
+−
+G
+2
+√
+πm
+	
+t
+0
+ 
+exp(−y
+√
+m)erfc
+ 
+y
+2
+√
+ξ
+−
+
+
+mξ
+ 
++exp(y
+√
+m)erfc
+ 
+y
+2
+√
+ξ
++
+
+
+mξ
+  
+(t− ξ)
+−1/2
+dξ (15)
+The above solutions correspond to the special case n =0 of the power law
+velocity assumption λt
+n
+. However, the ﬂow problems involving non-uniformly
+accelerated motion of the vertical plate, (n  =0, 1), may also become impor-
+tant in certain applications. Solutions of equation (5) for such cases will be
+investigated separately.
+4 Discussion of Results
+As mentioned earlier, our main objective in this work is to analyze the variation
+of the boundary layer velocity u(y,t) with the Prandtl number. In Figures 1–3,
+we have shown the velocity proﬁles for a set of combinations of the Grashoff
+number G and the magnetic parameter m for 0.1 ≤ Pr ≤ 10.0 in the early
+stages of the onset of motion (t=0.1). The Figure 1 shows the velocity proﬁles
+close to the boundary (y =0.1) while the Figure 2 depicts the proﬁles further
+away from the bounding plate (y =0.5). The velocity proﬁles have been plotted
+for the case of the applied magnetic ﬁeld, B
+y
+, being ﬁxed relative to the ﬂuid.
+In general, velocity in the boundary layer is seen to decrease with Pr. The
+decrease in the velocity is, however, more pronounced for those ﬂuids whose
+Prandtl numbers are less than unity (e.g., air). It is also to be noted that
+velocity variations are far more sensitive to the changes in the parameters G
+or m when Pr is less than unity, as can be seen from the proﬁles in Figures
+1 and 2. In other words, one may conclude that the effects of the applied
+Electronic Journal.  83Differential Equations and Control Processes, N 3, 2003
+magnetic ﬁeld or the buoyancy forces are dominant mainly for ﬂuids whose
+Prandtl numbers are less than unity. Furthermore, in order to analyze the
+response of the boundary layer velocity to the mode of application (K)of the
+magnetic ﬁeld, we have plotted in Figure 3 the velocity proﬁles for a ﬁxed value
+of the magnetic parameter m. It can be seen that the ﬂuid velocity variations
+indeed depend upon whether the applied magnetic ﬁeld is ﬁxed relative to the
+plate (K = 1) or to the ﬂuid (K = 0); the velocity in the former case is higher
+than the one in the latter case for all values of the Prandtl number considered
+in this study. This observation holds good for both low and moderate values of
+the buoyancy parameter G.
+Figure 1: Variation of velocity with Prandtl number. K =0,y =0.1
+Electronic Journal.  84Differential Equations and Control Processes, N 3, 2003
+Figure 2: Variation of velocity with Prandtl number. K =0,y =0.5
+Electronic Journal.  85Differential Equations and Control Processes, N 3, 2003
+Figure 3: Variation of velocity with Prandtl number. K =0.1,y =0.5
+References
+[1] Rossow, V. J. (1958) NACA Rept. No. 1358 (Ames Aeronaut. Lab., Cali-
+fornia).
+[2] Georgantopoulos, G. A. (1979) Astrophys. Space Sci., 65, 433.
+[3] Soundalgekar, V. M. and Patil, M. R. (1980) Astrophys. Space Sci., 70,
+179.
+[4] Raptis, A. and Singh, A. K. (1983) Int. Comm. Heat Mass Transf., 10,
+313.
+[5] Chandran, P., Sacheti, N. C. and Singh, A. K. (1998) J. Phys. Soc. Japan,
+67, 124.
+[6] Cramer, K. R. and Pai, S. I. (1973) Magnetoﬂuid Dynamics for Engineers
+and Applied Physicists (Scripta Publ., Washington, D. C.).
+Electronic Journal.  86Differential Equations and Control Processes, N 3, 2003
+[7] Abramowitz, B. M. and Stegun, I. A. (Eds.) (1965) Handbook of Mathe-
+matical Functions (Dover, New York).
+[8] Campbell, G. A. and Foster, R. M. (1948) Fourier Integrals for Practical
+Applications (Van Nostrand, Princeton).
+[9] Chandran, P., Sacheti, N. C. and Singh, A. K. (2001) Scient. Math. Japon.,
+53, 467.
+This research was supported by the Sultan Qaboos University Research Grant
+No. IG/SCI/DOMS/02/04
+Electronic Journal.  87

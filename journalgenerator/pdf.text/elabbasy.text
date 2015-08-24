@@ -1,0 +1,2539 @@
+﻿DIFFERENTIAL EQUATIONS 
+AND 
+CONTROL PROCESSES 
+№ 4, 2008 
+Electronic Journal, 
+reg. № P2375 at 07.03.97 
+ISSN 1817-2172 
+ 
+http://www.newa.ru/journal 
+http://www.math.spbu.ru/user/diffjournal 
+e-mail: jodiff@mail.ru 
+ 
+                                                                     Oscillation, Second order, 
+Half-linear differential equations, Damping. 
+ 
+ 
+ 
+ 
+OSCILLATION CRITERIA FOR SECOND ORDER HALF-LINEAR 
+DIFFERENTIAL EQUATIONS WITH DAMPING TERM 
+ 
+ 
+E. M. Elabbasy¹, A. A. S. Zaghrout² and H. M. Elshebany³ 
+ 
+ 
+¹Department of Mathematics, Faculty of Science, 
+Mansoura University, Mansoura, 35516, Egypt. 
+E-mail: emelabbasy@mans.edu.eg. 
+2,3
+ Department of Mathematics, Faculty of Science, 
+AI-Azhar University, Nasr-city, P.O. Box 9019. 11765 Cairo, Egypt. 
+E-mail: afaf211@yahoo.com. 
+ 
+Abstract 
+      By using averaging functions, several new oscillation criteria are established for the 
+half-linear damped differential equation 
+ 
+-2 -2
+-2 -2
+r(t) (x) +p(t) |x| x,r(t) (x) +q(t)|x| x=0,
+dx dx dx dx
+dt dt dt dt
+αα
+αα
+ψϕ ψ
+⎛⎞⎛ ⎞
+⎜⎟⎜ ⎟
+⎜⎟⎜ ⎟
+⎝⎠⎝ ⎠
+ 
+and the more general equation 
+-2 -2
+r(t) (x) +p(t) g(x),r(t) (x) +q(t)g(x)=0,
+d dxdx dxdx
+dt dt dt dt dt
+αα
+ψϕψ
+⎛⎞⎛ ⎞
+⎜⎟⎜ ⎟
+⎜⎟⎜ ⎟
+⎝⎠⎝ ⎠
+ 
+where p,q ,r:[t
+0
+, ∞) →R and ψ,g: R →R are continuous, r(t)>0, p(t) ≥0 and ψ(x)>0, 
+xg(x)>0 for x ≠0, α>1 a fixed real number. Our results generalize 
+and extend some known oscillation criteria in the literature. 
+ 
+      Differential Equations and Control Processes, № 4, 2008  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  2 
+1.  INTRODUCTION 
+ 
+    We are concerned with the oscillation of solutions of second order differential 
+equations with damping terms of the following form 
+-2 -2
+-2 -2
+r(t) (x) +p(t) |x| x,r(t) (x) +q(t)|x| x=0,
+dx dx dx dx
+dt dt dt dt
+αα
+αα
+ψϕ ψ
+⎛⎞⎛ ⎞
+⎜⎟⎜ ⎟
+⎜⎟⎜ ⎟
+⎝⎠⎝ ⎠
+      (1.1)
+ 
+and the more general equation 
+-2 -2
+r(t) (x) +p(t) g(x),r(t) (x) +q(t)g(x)=0,
+d dxdx dxdx
+dt dt dt dt dt
+αα
+ψϕψ
+⎛⎞⎛ ⎞
+⎜⎟⎜ ⎟
+⎜⎟⎜ ⎟
+⎝⎠⎝ ⎠
+        (1.2)
+ 
+where r ∈C[[t
+0
+, ∞),R
++
+], p ∈C[[t
+0
+, ∞),[0, ∞)], q ∈C[[t
+0
+, ∞),R], ψ ∈C[R,R
++
+] and g ∈C¹[R,R] 
+such that xg(x)>0 for x ≠0 and g ′(x)>0 for x ≠0. φ is defined and continuous on R×R-{0} 
+with u φ(u,v)>0 for  uv ≠0 and φ( λu, λv)= λφ(u,v) for  0< λ< ∞ and (u,v) ∈R×R-{0}. 
+ 
+    By oscillation of equation (1.1)[(1.2)], we mean a function x ∈C¹([T
+x
+, ∞),R) for some 
+T
+x
+≥t
+0
+, which has the property that 
+-2
+1
+r(t) (x) ([ , ), )
+x
+dx dx
+CT R
+dt dt
+α
+ψ
+⎛⎞
+∈∞ ⎜⎟
+⎜⎟
+⎝⎠
+and satisfies equation 
+(1.1)[(1.2)] on [T
+x
+, ∞). 
+    A solution of equation (1.1)[(1.2)] is called oscillatory if it has arbitrarily large zeros 
+otherwise, it is called nonoscillatory. Finally, equation (1.1)[(1.2)] is called oscillatory if 
+all its solutions are oscillatory. 
+    In Section 2 we provide sufficient conditions for the oscillation of all solutions of 
+(1.1). Several particular cases of (1.1) have been discussed in the literature. To cite a 
+few examples, the differential equation 
+ 
+                   
+-2
+-1
+r(t) +q(t)|x| x=0,
+ddx dx
+dt dt dt
+α
+α
+⎛⎞
+⎜⎟
+⎜⎟
+⎝⎠
+                         (1.3) 
+ 
+has been studied by [5]-[12]. A more general equation than (1.3) 
+                   
+-2
+-1
+r(t) (x) +q(t)|x| x=0,
+ddxdx
+dt dt dt
+α
+α
+ψ
+⎛⎞
+⎜⎟
+⎜⎟
+⎝⎠
+                     (1.4) 
+ 
+has been considered by [2] and [20]. Our results include, as special cases, known 
+oscillation theorems for (1.3), (1.4). In particular, we extend and improve the results 
+obtained in [13], [17], [2] and [14]. 
+    In Section 3 we will establish oscillation criteria for equation (1.2). Several particular 
+cases of (1.2) have been discussed in the literature. To cite a few examples, the 
+differential equation 
+ 
+            
+-2
+r(t) (x) +q(t)g(x)=0,
+ddxdx
+dt dt dt
+α
+ψ
+⎛⎞
+⎜⎟
+⎜⎟
+⎝⎠
+                           (1.5) 
+ 
+established by [16] and [19] considered a special case of this equation as 
+ Differential Equations and Control Processes, № 4, 2008  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  3 
+                    
+-2
+r(t) +q(t)g(x)=0,
+ddx dx
+dt dt dt
+α
+⎛⎞
+⎜⎟
+⎜⎟
+⎝⎠
+                            (1.6) 
+ 
+Our results in this section generalize and improve [17], [1], [3] and [18]. 
+ 
+ 
+ 
+ 
+2.  OSCILLATION RESULTS FOR (1.1) 
+ 
+    In order to discuss our main results, we need the following well-known inequality 
+which is due to Hardy et al. [4]. 
+Lemma 2.1. If X and Y are nonnegative, then 
+ 
+1
+ X +( -1)Y - XY 0,  >1,
+λλ λ
+λλ λ
+−
+≥
+ 
+ 
+where equality holds if and only if X=Y. 
+Theorem 2.1. Suppose, in addition to conditions 
+ (1,z) z  for all z 0,                                      (2.1)
+0< (x)  for all x,                               (2.2)
+ϕ
+ψγ
+≥≠
+≤
+ 
+that there exist differentiable functions 
+ 
+0
+k,  :[t , ) (0, )   with (t) 0 ρ ρ ∞→∞ ≥   
+and the continuous function 
+ 
+H : D ≡{(t,s): t ≥s ≥t
+0
+} →R   and  h : D
+0
+≡{(t,s): t>s ≥t
+0
+} →R, 
+and H has a continuous and nonpositive partial derivative on D  with respect to the 
+second variable such that 
+ 
+H(t,t)=0  for   t ≥t
+0
+,   H(t,s)>0  for   t>s ≥t
+0
+, 
+and 
+-1
+0
+- (H(t,s)k(s))=h(t,s)(H(t,s)k(s))  for all  (t,s) D .
+s
+α
+α
+δ
+δ
+∈
+ 
+ 
+Then equation (1.1) is oscillatory if 
+ 
+0
+t t
+0
+1 (s)r(s)R ( , )
+lim sup {H(t,s) (s)k(s)q(s)- }ds= ,     (2.3)
+H(t,t )
+t
+ts
+α
+α
+γρ
+ρ
+α
+→∞
+∞
+∫
+ 
+where 
+1/
+1(s)
+R(t,s)=h(t,s)+(H(t,s)k(s)) +p(s) .
+(s)
+d
+ds
+α
+ρ
+ρ
+⎛⎞
+⎜⎟
+⎝⎠
+ 
+ 
+Proof. On the contrary we assume that (1.1) has a nonoscillatory solution x(t). We 
+suppose without loss of generality that x(t)>0  for all  t ∈ [t
+0
+, ∞). We define the function 
+ω(t) as 
+ Differential Equations and Control Processes, № 4, 2008  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  4 
+-2
+0
+-2
+r(t) (x)
+(t)= (t)    for  t t .
+|x| x
+dx dx
+dt dt
+α
+α
+ψ
+ωρ
+⎛⎞
+⎜⎟
+⎜⎟
+⎝⎠
+≥
+ 
+ 
+Thus 
+ 
+.
+-2
+-2
+r(t) (x)
+(t)r(t) (x)
+(t) 1 (t)
+= (t)+ (t) ( 1 ) .
+(t) |x| x |x|
+ddxdx
+dx
+dt dt dt
+dd dt
+dt dt
+α
+α
+αα
+ψ
+ρψ
+ωρ
+ωρ α
+ρ
+⎛⎞
+⎜⎟
+⎜⎟
+⎝⎠
+−−
+ 
+ 
+This and equation (1.1) imply 
+ 
+-1
+-1 1
+(t) 1 (t) (t)
+(t)- (t)[q(t)+p(t) (1, )] ( 1 )[ (t)r(t)] | (t)| .
+(t) (t)
+dd
+dt dt
+α
+αα
+ωρ ω
+ωρ ϕ α γρ ω
+ρρ
+−
+≤−−
+ 
+  
+From (2.1) we obtain 
+ 
+-1
+-1 1
+(t) 1 (t)
+(t)- (t)q(t)-p(t) (t) ( 1 )[ (t)r(t)] | (t)| .
+(t)
+dd
+dt dt
+α
+αα
+ωρ
+ωρ ω α γρ ω
+ρ
+−
+≤−−
+  
+Multiply the above inequality by H(t,s)k(s) and integrate from T  to t we obtain 
+ 
+TT
+1
+1/( -1)
+TT T
+1(s)
+H(t,s)k(s) (s)q(s)ds H(t,s)k(s) (s)ds
+(s)
+(s) H(t,s)k(s)| (s)|
+- H(t,s)k(s)p(s) (s)ds- H(t,s)k(s) ds ( 1) .
+[ (s)r(s)]
+tt
+tt t
+d
+ds
+d
+ds
+ds
+α
+α
+α
+ρ
+ρω
+ρ
+ωω
+ωα
+γρ
+−
+≤
+−−
+∫∫
+∫∫ ∫
+ 
+Since 
+TT
+-1
+T
+(s)
+H(t,s)k(s) ds= H (t,T)k(T) (T)+ (H(t,s)k(s)) (s)ds
+=H(t,T)k(T) (T)- h(t,s)(H(t,s)k(s)) (s)ds.
+tt
+t
+dd
+ds ds
+α
+α
+ω
+ωω
+ωω
+−
+∫∫
+∫
+ 
+ 
+The previous inequality becomes 
+ Differential Equations and Control Processes, № 4, 2008  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  5 
+T
+1
+TT
+1
+1/( -1)
+TT
+H(t,s)k(s) (s)q(s)ds H(t,T)k(T) (T)
+1(s)
++ H(t,s)k(s) (s) ds h(t,s)(H(t,s)k(s)) (s)ds
+(s)
+H(t,s)k(s)| (s)|
+H(t,s)k(s)p(s) (s) ds ( 1 ) .
+[ (s)r(s)]
+t
+tt
+tt
+d
+ds
+ds
+α
+α
+α
+α
+α
+ρω
+ρ
+ωω
+ρ
+ω
+ωα
+γρ
+−
+−
+≤
++
++−−
+∫
+∫∫
+∫∫
+ 
+ 
+Hence we have 
+T
+1
+1
+1/( -1)
+TT
+H(t,s)k(s) (s)q(s)ds H(t,T)k(T) (T)
+H(t,s)k(s)| (s)|
++ R(t,s)((H(t,s)k(s)) (s) ds ( 1 ) . (2.4)
+[ (s)r(s)]
+t
+tt
+ds
+α
+α
+α
+α
+α
+ρω
+ω
+ωα
+γρ
+−
+−
+≤
+−−
+∫
+∫∫
+ 
+Define 
+1/
+1/
+1/( 1)
+-1
+1
+[ (s)r(s)] [ ( , )],
+H(t,s)k(s)[ (s)r(s)] (s) .
+XRts
+Y
+α
+α
+α
+α
+α
+γρ
+α
+γρ ω
+−−
+=
+⎛⎞
+=
+⎜⎟
+⎝⎠
+ 
+ 
+Since  α>1, then by Lemma 2.1, 
+ 
+(1)/
+1
+1/( 1)
+( 1 )H(t,s)k(s) (s)r(s)
+R(t,s)(H(t,s)k(s)) (s) | (s)| R(t,s),
+[ (s)r(s)]
+α
+αα α
+α
+αα
+αγρ
+ωω
+γρ α
+−
+−
+−
+−
+−≤
+  
+for all t>s ≥T. Moreover, by (2.4) we also have for every t ≥T, 
+ 
+T
+(s)r(s)R (t,s)
+H(t,s)k(s) (s)q(s)ds H(t,T)k(T) (T)+ ,
+t
+α
+α
+γρ
+ρω
+α
+≤
+∫ 
+or 
+T
+0
+(s)r(s)R (t,s)
+H(t,s)k(s) (s)q(s)- ds H(t,T)k(T) (T)
+H(t,t )k(T) (T) . (2.5)
+t
+α
+α
+γρ
+ρω
+α
+ω
+⎧⎫
+≤
+⎨⎬
+⎩⎭
+≤
+∫
+ 
+We use the above inequality for T=T
+0
+ to obtain 
+ Differential Equations and Control Processes, № 4, 2008  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  6 
+0
+00 0
+T
+(s)r(s)R (t,s)
+H(t,s)k(s) (s)q(s)- ds H(t,t )k(T ) (T ) .
+t
+α
+α
+γρ
+ρω
+α
+⎧⎫
+≤
+⎨⎬
+⎩⎭
+∫  
+Therefore, 
+0
+0
+0
+0
+0
+0
+t
+t
+000
+t
+(s)r(s)R (t,s)
+H(t,s)k(s) (s)q(s)- ds
+(s)r(s)R (t,s)
+H(t,s)k(s) (s)q(s)- ds
+(s)r(s)R (t,s)
+H(t,s)k(s) (s)q(s)- ds.
+H(t,t ) k(s) (s) q(s) ds+ k(T ) (T ) ,
+t
+T
+t
+T
+T
+α
+α
+α
+α
+α
+α
+γρ
+ρ
+α
+γρ
+ρ
+α
+γρ
+ρ
+α
+ρω
+⎧⎫
+⎨⎬
+⎩⎭
+⎧⎫
+=
+⎨⎬
+⎩⎭
+⎧⎫
++
+⎨⎬
+⎩⎭
+⎧⎫
+⎪⎪
+≤
+⎨⎬
+⎪⎪
+⎩⎭
+∫
+∫
+∫
+∫
+ 
+for all  t ≥T
+0
+. This gives 
+ 
+0
+0
+0
+t
+0 t
+00
+t
+1 (s)r(s)R (t,s)
+lim sup H(t,s)k(s) (s)q(s)- ds
+H(t,t )
+k(s) (s)q(s)ds+k(T) (T) ,
+t
+T
+α
+α
+γρ
+ρ
+α
+ρω
+→∞
+⎧⎫
+⎨⎬
+⎩⎭
+⎧⎫
+⎪⎪
+≤<∞
+⎨⎬
+⎪⎪
+⎩⎭
+∫
+∫
+ 
+ 
+which contradicts the assumption (2.3). This completes the proof. 
+Corollary 2.1. If the condition (2.3) is replaced by the conditions 
+ 
+0
+0
+t
+0 t
+t
+0 t
+1
+lim sup H(t,s)k(s) (s)q(s)ds ,
+H(t,t )
+1
+lim sup (s)r(s)R (t,s)ds ,
+H(t,t )
+t
+t
+α
+ρ
+ρ
+→∞
+→∞
+= ∞
+<∞
+∫
+∫
+ 
+then the conclusion of Theorem 2.1 remains valid. 
+ 
+    Theorem 2.2. Suppose that (2.1) and (2.2) are satisfied and let the functions H, h,  
+and k be the same as in Theorem 2.1. Moreover, assume that 
+ 
+ts t
+0
+H(t,s)
+0<inf lim inf , (2.6)
+H(t,t )
+≥→∞
+⎡⎤
+≤∞
+⎢⎥
+⎣⎦
+ 
+ 
+and Differential Equations and Control Processes, № 4, 2008  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  7 
+0
+t
+0 t
+1
+lim inf (s)r(s)R (t,s)ds< , (2.7)
+H(t,t )
+t
+α
+ρ
+→∞
+∞
+∫
+ 
+ 
+hold. If there exists a function Ω∈C([t
+0
+, ∞),R) such that 
+ 
+()
+0
+/( 1)
+1/( 1)
+t
+t
+()
+lim sup , (2.8)
+k(s) (s)r(s)
+t
+s
+αα
+α
+ρ
+−
++
+−
+→∞
+Ω
+=∞
+∫ 
+ 
+and for every T ≥t
+0
+, 
+ 
+t
+T
+1 (s)r(s)R (t,s)
+lim inf { ( , ) (s)k(s)q(s)- }ds (T), (2.9)
+H(t,T)
+t
+Ht s
+α
+α
+γρ
+ρ
+α
+→∞
+≥Ω
+∫
+ 
+where () max{ (),0}, tt
++
+Ω= Ω then equation (1.1) is oscillatory. 
+ 
+    Proof. On the contrary we assume that (1.1) has a nonoscillatory solution x(t). We 
+suppose without loss of generality that x(t)>0  for all t ∈[t
+0
+, ∞). Defining ω (t) as in the 
+proof of Theorem 2.1, we obtain (2.4) then we get 
+T
+1 (s)r(s)R (t,s)
+( , ) (s)k(s)q(s)- k(T) (T)-J(t,T)
+H(t,T)
+t
+Ht s ds
+α
+α
+γρ
+ρω
+α
+⎧⎫
+≤
+⎨⎬
+⎩⎭
+∫
+  
+where 
+(-1)/
+T
+(-1)
+1/( 1)
+1 (s)r(s)R (t,s)
+( , ) { ( ( , )k(s)) R(t,s) (s)
+H(t,T)
+(1) (,)k(s)
+(s) }ds,
+(()())
+t
+JtT H t s
+Ht s
+sr s
+α
+αα
+α
+α
+α
+α
+γρ
+ω
+α
+α
+ω
+γρ
+−
+=−
+−
++
+∫
+ 
+for all T ≥T
+0
+. Thus, by (2.9), we have 
+ 
+o
+(T) k(T) (T)   for all  T T (2.10) ω Ω≤ ≥
+ 
+  
+and 
+o
+t
+limsup J(t,T)<       for all  T T . (2.11)
+→∞
+∞≥
+ 
+Let 
+ 
+0
+0
+(-1)/
+0 T
+1
+(1)
+-1
+0 T
+1
+( ) R(t,s)( ( , )k(s)) (s) ,
+H(t,T )
+(1)
+() (, )k(s)( () ()) (s) ,
+H(t,T )
+t
+t
+Ft H t s ds
+Gt H t s s r s ds
+αα
+α
+α
+α
+ω
+α
+γρ ω
+−
+−
+=
+−
+=
+∫
+∫
+ 
+ 
+for t>T
+0
+. Then by (2.4) and (2.11) we get that 
+ Differential Equations and Control Processes, № 4, 2008  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  8 
+()
+0
+-1
+1/( 1)
+tt
+0 T
+(-1)/
+0
+t
+1(-1)(,)k(s)
+lim sup|G(t)-F(t)|  lim sup { (s)
+H(t,T ) ( ( ) ( ))
+  -R(t,s)H(t,s)k(s) |(s)|}ds
+lim supJ(t,T )< . (2.12)
+t
+Ht s
+sr s
+α
+α
+α
+αα
+α
+ω
+γρ
+ω
+−
+→∞ → ∞
+→∞
+≤
+≤∞
+∫
+ 
+Now, we claim that 
+ 
+0
+/( -1)
+1/( 1)
+T
+(s)
+k(s) . (2.13)
+(( ) ( ))
+ds
+sr s
+αα
+α
+ω
+ρ
+∞
+−
+<∞
+∫ 
+ 
+Suppose to the contrary that 
+ 
+0
+/( -1)
+1/( 1)
+T
+(s)
+k(s) . (2.14)
+(( ) ( ))
+ds
+sr s
+αα
+α
+ω
+ρ
+∞
+−
+=∞
+∫ 
+By (2.6), there is a positive constant η satisfying 
+0
+t
+0
+H(t,s)
+inf lim inf . (2.15)
+H(t,t )
+st
+η
+≥→∞
+⎡⎤
+>
+⎢⎥
+⎣⎦
+ 
+On the other hand, by (2.14) for any positive number µ there exists a T
+1
+>T
+0
+ such that 
+ 
+0
+1
+/( -1)
+1
+1
+1/( 1)
+T
+(s)
+k(s) for all  t T ,
+(( ) ( )) ( 1)
+t
+ds
+sr s
+αα
+α
+α
+ω
+γµ
+ραη
+−
+−
+≥≥
+−
+∫  
+so for all t ≥T
+1 
+ 
+00
+00
+1
+/( -1)
+1
+1/( 1)
+0TT
+1
+/( -1)
+1
+1/( 1)
+0TT
+1
+1
+0
+(u)
+(1)
+() H(t,s)d ( )
+H(t,T ) ( ( ) ( ))
+(u)
+(1) H(t,s)
+d()
+H(t,T ) ( ( ) ( ))
+(1) H(t,s)
+H(t,T )
+ts
+ts
+Gt k u du
+uru
+k u du ds
+suru
+s
+αα
+α
+α
+αα
+α
+α
+α
+ω
+αγ
+ρ
+ω
+αγ δ
+δρ
+αγ δ
+δ
+−
+−
+−
+−
+−
+−
+−
+−
+⎡⎤
+−
+= ⎢⎥
+⎢⎥
+⎣⎦
+⎡⎤
+−−
+⎡⎤
+= ⎢⎥
+⎢⎥
+⎣⎦
+⎢⎥
+⎣⎦
+−−
+⎡
+≥
+⎢
+⎣
+∫∫
+∫∫
+10
+1
+/( -1)
+1/( 1)
+TT
+11
+11
+1
+00 T
+(u)
+d()
+(( ) ( ))
+(, ) (1) H(t,s)
+ds= . (2.16)
+( 1 ) H(t,T ) H(t,T )
+ts
+t
+ku du ds
+uru
+HtT
+s
+αα
+α
+αα
+ω
+ρ
+µ γµ α γ δ
+αη δ η
+−
+−
+−−
+⎡⎤
+⎤
+⎢⎥
+⎥
+⎦
+⎢⎥
+⎣⎦
+−−
+⎡⎤
+≥
+⎢⎥
+−
+⎣⎦
+∫∫
+∫
+ 
+ 
+From (2.15) we have Differential Equations and Control Processes, № 4, 2008  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  9 
+1
+t
+0
+(, )
+lim inf > >0.
+H(t,t )
+HtT
+η
+→∞
+ 
+So there exists  T
+2
+≥T
+1
+ such that  
+1
+0
+(, )
+H(t,t )
+HtT
+η ≥
+ for all  t ≥T
+2
+. Therefore by (2.16) G(t) ≥η 
+for all  t ≥T
+2
+, and since µ is arbitrary constant, we conclude that 
+t
+lim G(t)= . (2.17)
+→∞
+∞
+ 
+Next, consider a sequence 
+nn=1
+{t }
+∞
+ in (T
+0
+, ∞) with lim
+n →∞
+t
+n
+= ∞ and such that 
+ 
+[ ] [ ]
+nn
+nt
+lim G(t )-F(t ) = limsup G(t)-F(t) .
+→∞ → ∞
+ 
+In view of (2.12), there exists a constant M such that 
+nn
+G(t )-F(t ) for all sufficient large n. (2.18) M ≤
+ 
+It follows from (2.17) that 
+n
+n
+lim G(t )= . (2.19)
+→∞
+∞
+ 
+This and (2.18) give 
+n
+n
+lim F(t )= . (2.20)
+→∞
+∞
+ 
+ 
+Then, by (2.18) and (2.19), 
+ 
+n
+nn
+F(t ) -M -1
+-1 >    for n large enough.
+G(t ) G(t ) 2
+≥
+ 
+Thus, 
+ 
+n
+n
+F(t ) 1
+>    for n large enough.
+G(t ) 2
+ 
+This and (2.20) imply that 
+n
+-1
+n
+n
+F(t )
+    lim = . (2.21)
+G(t)
+α
+α
+→∞
+∞
+ 
+On the other hand, by the Holder's inequality, we have 
+ Differential Equations and Control Processes, № 4, 2008  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  10 
+0
+0
+0
+(-1)/
+nn
+n0 T
+(1)/
+/( -1)
+n
+1/( 1)
+n0 T
+1/
+n
+1
+n0 t
+(1)/
+1
+( ) R(t ,s)(H(t ,s)k(s)) (s) ds
+H(t ,T )
+(s)
+1
+H(t ,s)k(s) ds
+H(t ,T ) ( ( ) ( ))
+() () (t ,s)ds
+(1) H(t,T)
+()
+(1)
+n
+n
+n
+t
+n
+t
+t
+n
+Ft
+sr s
+sr sR
+Gt
+αα
+α α
+αα
+α
+α
+α
+α
+αα
+ω
+ω
+α
+ρ
+γ
+ρ
+α
+α
+−
+−
+−
+−
+=
+⎧⎫
+−⎪⎪
+≤
+⎨⎬
+⎪⎪
+⎩⎭
+⎧⎫
+⎪⎪
+×
+⎨⎬
+−
+⎪⎪
+⎩⎭
+≤
+−
+∫
+∫
+∫
+0
+1/
+n
+(1)/
+n0 t
+() () (t ,s)ds ,
+H(t ,T )
+n
+t
+sr sR
+α
+α
+αα
+γ
+ρ
+−
+⎧⎫
+⎪⎪
+⎨⎬
+⎪⎪
+⎩⎭
+∫
+ 
+ 
+and therefore, 
+ 
+0
+0
+n
+n
+-1 ( 1)
+nn0 t
+n
+(1)
+n0 t
+F(t )
+() () (t ,s)ds
+G(t) ( 1) H(t,T)
+() () (t ,s)ds
+(1) H(t,t)
+n
+n
+t
+t
+sr sR
+sr sR
+α
+α
+αα
+α
+α
+γ
+ρ
+α
+γ
+ρ
+αη
+−
+−
+≤
+−
+≤
+−
+∫
+∫
+ 
+  
+for all large n. It follows from (2.21) that 
+ 
+0
+n
+n
+n0 t
+1
+ lim ( ) ( ) (t ,s)ds= , (2.22)
+H(t ,t )
+n
+t
+sr sR
+α
+ρ
+→∞
+∞
+∫
+ 
+that is, 
+ 
+0
+n
+t
+0 T
+1
+ lim ( ) ( ) (t ,s)ds= ,
+H(t,t )
+t
+sr sR
+α
+ρ
+→∞
+∞
+∫  
+which contradicts (2.7). Hence, (2.13) holds. Then, it follows from (2.10) that 
+ 
+() ()
+00
+/( 1)
+/( 1)
+1/( 1) 1/( 1)
+TT
+()
+()
+() () ,
+k(s) (s)r(s) (s)r(s)
+tt
+s
+s
+ks ds ks ds
+αα
+αα
+αα
+ω
+ρρ
+−
+−
++
+−−
+Ω
+≤ <∞
+∫∫
+ 
+ 
+which contradicts (2.8). This completes the proof of Theorem 2.2. 
+ 
+    Theorem 2.3. Suppose that (2.1) and (2.2) are satisfied and let the functions H, h, ρ 
+and k be the same as in Theorem 2.1. Moreover, assume that 
+ Differential Equations and Control Processes, № 4, 2008  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  11 
+0
+t
+0 t
+1
+lim inf ( , ) (s)k(s)q(s)ds< , (2.23)
+H(t,t )
+t
+Ht s ρ
+→∞
+∞
+∫ 
+ 
+and (2.6) hold. If there exists a function Ω ∈C([t
+0
+, ∞),R) such that (2.8) and (2.9) hold, 
+then equation (1.1) is oscillatory. 
+ 
+    Proof. Without loss of generality, we may assume that there exists a solution x(t) of 
+equation (1.1) such that x(t) ≠0 on [T
+0
+, ∞) for some sufficiently large T
+0
+≥t
+0
+. Define ω(t) 
+as of Theorem 2.1. As in the proofs of Theorem 2.1 and 2.2, we can obtain (2.4), (2.5) 
+and (2.10). From (2.23) it follow that 
+0
+00
+t
+t
+0 t
+lim sup G(t)-F(t) k(t ) (t )
+1
+-lim inf ( , ) (s)k(s)q(s)ds< , (2.24)
+H(t,t )
+t
+Ht s
+ω
+ρ
+→∞
+→∞
+≤
+∞
+∫
+ 
+where F(t) and G(t) are defined as in the proof of Theorem 2.2. By (2.9) we have 
+0
+0
+0
+t
+0 t
+t
+0 t
+1
+( ) liminf ( , ) (s)k(s)q(s)ds
+H(t,t )
+1
+liminf (s)r(s)R ( , )ds.
+H(t,t )
+t
+t
+tHts
+ts
+α
+ρ
+ρ
+→∞
+→∞
+Ω≤
+−
+∫
+∫
+ 
+ 
+This and (2.9) imply that 
+ 
+0
+t
+0 t
+1
+lim inf (s)r(s)R ( , )ds .
+H(t,t )
+t
+ts
+α
+ρ
+→∞
+< ∞
+∫ 
+Considering a sequence 
+nn=1
+{t }
+∞
+ in (T
+0
+, ∞) with lim
+n →∞
+t
+n
+= ∞ and such that 
+ 
+0
+0
+n0 t
+0 t
+1
+lim (s)r(s)R ( , )ds
+H(t ,t )
+1
+liminf (s)r(s)R ( , )ds< .  (2.25)
+H(t,t )
+n
+t
+n
+n
+t
+t
+ts
+ts
+α
+α
+ρ
+ρ
+→∞
+→∞
+=∞
+∫
+∫
+ 
+Now, suppose that (2.14) holds. With the same argument as in Theorem 2.2, we 
+conclude that (2.17) is satisfied. By (2.24), there exists a constant M such that (2.18) is 
+fulfilled. Then, following the procedure of the proof of Theorem 2.2, we see that (2.22) 
+holds, which contradicts (2.25). This contradiction proves that (2.25) fails. The 
+remainder of the proof is similar to that of Theorem 2.2, so we omit the details. This 
+completes the proof of Theorem 2.3. 
+ 
+    Theorem 2.4. Suppose that (2.1) and (2.2) are satisfied and let the functions H, h, ρ 
+and k be the same as in Theorem 2.1. Moreover, suppose that Differential Equations and Control Processes, № 4, 2008  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  12 
+0
+0 t
+1
+limsup (s)r(s)R ( , )ds< ,  (2.26)
+H(t,t )
+t
+t
+ts
+α
+ρ
+→∞
+∞
+∫ 
+ 
+and (2.6) hold. If there exists a function Ω ∈C([t
+0
+, ∞),R) such that (2.8) hold for every 
+T ≥t
+0
+ and 
+T
+1 (s)r(s)R (t,s)
+limsup ( , ) (s)k(s)q(s)- (T), (2.27)
+H(t,T)
+t
+t
+Ht s ds
+α
+α
+γρ
+ρ
+α
+→∞
+⎧⎫
+≥Ω
+⎨⎬
+⎩⎭
+∫
+ 
+then equation (1.1) is oscillatory. 
+The proof of Theorem 2.4 can be carried out as the proof of Theorem 2.2 and therefore 
+it will be omitted.   
+ 
+    Remark 2.1. If α=2 and p(t) ≡0, r(t) ≡1 and ψ(x) ≡1, then Theorem 2.1, 2.2 extend and 
+improve theorem in [17]. 
+ 
+    Remark 2.2. If p(t) ≡0, r(t) ≡1 and ψ(x) ≡1, then Theorem 2.1, 2.3 and 2.4 extend and 
+improve Theorem 2, 4 and 3 of Li [13], respectively. 
+ 
+    Remark 2.3. If p(t) ≡0, then Theorem 2.1-2.4 extend and improve Theorem 2, 4, 6 
+and 5 in [2], respectively. 
+ 
+    Example 2.1. Consider the differential equation 
+ 
+() -2 -5/2
+0
+t (1 ) +t x(t)=0, t t >1.
+xt
+ddx
+e
+dt dt
+− ⎛⎞
++≥
+⎜⎟
+⎝⎠
+ 
+We note that 
+α =2 and ψ (x)=1+e
+-|x(t)|
+. 
+Let 
+ρ(s)=1, k(s)=s² and H(t,s)=(t-s)². 
+Then 
+0
+0
+t
+0 t
+11 3 2
+2
+22 2
+22
+t
+0 t
+1 (s)r(s)R (t,s)
+limsup H(t,s)k(s) (s)q(s)- ds
+H(t,t )
+196
+limsup t 2 2 ds .
+(t-t ) 2
+t
+t
+tt
+sts s
+ss
+α
+α
+γρ
+ρ
+α
+→∞
+−
+→∞
+⎧⎫
+⎨⎬
+⎩⎭
+⎛⎞
+=−+−−−=∞
+⎜⎟
+⎝⎠
+∫
+∫
+ 
+ 
+Hence, this equation is oscillatory by Theorem 2.1. while, Ayanlar and Tiryaki [2], fails. 
+ 
+    Example 2.2. Consider the differential equation 
+ 
+0 2
+11
++x=0,tt=1.
+tt
+1 2+cos²t 1+3x²
+1+3cos²t 2+x²
+ddx
+dt dt
+dx
+tdt
++≥
+⎛⎞
+⎜⎟
+⎝⎠
+ 
+We not that 
+ 
+1+3x²
+3, 2.
+2+x²
+0() x γα ψ ≤== <=
+ Differential Equations and Control Processes, № 4, 2008  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  13 
+If we take ρ(t)=t, k(t)=t, H(t,s)=(t-s)², then 
+0
+t
+0 t
+2
+2
+22
+t
+1
+2
+2
+22
+t
+1 (s)r(s)R (t,s)
+lim sup H(t,s)k(s) (s)q(s)- ds
+H(t,t )
+132+cos²s
+lim sup (t-s) 2 ds
+(t-1) 4 1+3cos²s
+11
+lim sup (t-s) 2
+(t-1) 4
+t
+t
+ts s
+ss
+ss
+ts s
+ss
+ss
+α
+α
+γρ
+ρ
+α
+→∞
+→∞
+→∞
+⎧⎫
+⎨⎬
+⎩⎭
+⎛⎞
+⎛⎞
+⎛⎞
+⎜⎟
+=− +−
+⎜⎟
+⎜⎟
+⎜⎟
+⎜⎟
+⎝⎠
+⎝⎠
+⎝⎠
+⎛⎞
+⎛⎞
+⎜⎟
+≥−+−
+⎜⎟
+⎜⎟
+⎜⎟
+⎝⎠
+⎝⎠
+∫
+∫
+1
+ds= .
+t
+∞
+∫
+ 
+ 
+Hence, this equation is oscillatory. One such solution of this equation is x(t)=cos t. 
+ 
+3.  OSCILLATION RESULTS FOR (1.2) 
+ 
+    Theorem 3.1. Suppose that (2.1) and 
+ 
+-2 1/( -1)
+g'(x)
+>0  for  x 0, (3.1)
+((x)|g(x) |)
+αα
+δ
+ψ
+≥≠
+ 
+ 
+hold, and let the functions H, h and k be the same as in Theorem 2.1. Moreover, 
+suppose that there exist ρ ∈C¹([t
+0
+, ∞),(0, ∞)). Then equation (1.2) is oscillatory if 
+ 
+0
+1
+t
+0 t
+1 (s)r(s)Q (t,s)
+lim sup H(t,s)k(s) (s)q(s)- ds= ,
+H(t,t )
+t αα
+α
+βρ
+ρ
+α
+−
+→∞
+⎧⎫
+∞
+⎨⎬
+⎩⎭
+∫
+ 
+where 
+ 
+ 
+1/
+1(s)
+=  and  Q(t,s)= h(t,s)- (s) (H(t,s)k(s)) .
+-1 (s)
+d
+p
+ds
+α
+δρ
+β
+αρ
+⎛⎞
+−
+⎜⎟
+⎝⎠
+ 
+ 
+    Proof. Without loss of generality, we may assume that there exists a solution x(t) of 
+equation (1.2) such that x(t) ≠0 on [T
+0
+, ∞) for some sufficiently large T
+0
+≥t
+0
+. Define ω(t) 
+as 
+ 
+-2
+0
+r(t) (x)
+(t)= (t)    for  t t .
+g(x)
+dx dx
+dt dt
+α
+ψ
+ωρ ≥
+ 
+ 
+Thus, Differential Equations and Control Processes, № 4, 2008  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  14 
+-2
+1
+-2 1/( -1) 1/( -1)
+r(t) (x)
+(t) 1 (t)
+= (t)+ (t)
+(t) g(x)
+g'(x) | (t)|
+.
+( (x)|g(x) |) [ (t)r(t)]
+ddxdx
+dt dt dt
+dd dx
+dt dt dt
+α
+α
+α
+αα α
+ψ
+ωρ
+ωρ
+ρ
+ω
+ψρ
+−
+⎛⎞
+⎜⎟
+⎜⎟
+⎝⎠
+−
+ 
+ 
+This and equation (1.2) imply 
+ 
+1
+-2 1/( -1) 1/( -1)
+(t) 1 (t) (t)
+(t)- (t)[q(t)+p(t) (1, )]
+(t) (t)
+g'(x) | (t)|
+.
+( (x)|g(x) |) [ (t)r(t)]
+dd
+dt dt
+α
+α
+αα α
+ωρω
+ωρ ϕ
+ρρ
+ω
+ψρ
+−
+≤
+−
+ 
+ 
+From (2.1) and (3.1) we have 
+ 
+ 
+1
+1/( -1)
+(t) 1 (t) | (t)|
+(t)- (t)q(t)-p(t) (t) .
+(t) [ (t)r(t)]
+dd
+dt dt
+α
+α
+α
+ωρ ω
+ωρ ω δ
+ρρ
+−
+≤−
+ 
+ 
+Multiply the above inequality by H(t,s)k(s) and integrate from T to t we obtain 
+ 
+TT
+-1
+-1 1
+TT
+1(s)
+H(t,s)k(s) (s)q(s)ds H(t,s)k(s) (s) (s)ds
+(s)
+(s) (s)
+- H(t,s)k(s) ds- H(t,s)k(s)[ (s)r(s)] | (s)| ds.
+tt
+tt
+d
+p
+ds
+dd
+ds ds
+α
+αα
+ρ
+ρω
+ρ
+ωω
+δγρ ω
+−
+⎛⎞
+≤−
+⎜⎟
+⎝⎠
+∫∫
+∫∫
+  
+Since 
+TT
+(-1)
+T
+(s)
+- H(t,s)k(s) ds=H(t,T)k(T) (T)+ (H(t,s)k(s)) (s)ds
+=H(t,T)k(T) (T)- ( , )(H(t,s)k(s)) (s)ds.
+tt
+t
+d
+ds s
+ht s
+α
+α
+ωδ
+ωω
+δ
+ωω
+∫∫
+∫
+ 
+The previous inequality becomes 
+ 
+(-1)
+TT
+(-1)/
+1/( -1)
+T
+H(t,s)k(s) (s)q(s)ds H(t,T)k(T) (T)+ Q(t,s)(H(t,s)k(s)) (s) ds
+H(t,s)k(s) (s)
+(1) ds. (3.2)
+[ (s)r(s)]
+tt
+t
+α
+α
+αα
+α
+ρω ω
+βω
+α
+ρ
+≤
+−−
+∫∫
+∫
+ 
+Define Differential Equations and Control Processes, № 4, 2008  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  15 
+[]
+()
+(1 )/ 1/
+1/( 1)
+(1)/
+(1 )/ 1/
+1
+[ (s)r(s)] [ ( , )],
+H(t,s)k(s) [ (s)r(s)] (s) .
+XQts
+Y
+αα α
+α
+αα
+αα α
+βρ
+α
+βρω
+−
+−
+−
+−−
+=
+=
+ 
+Then use the lemma 2.1, we have 
+/( 1) (1 )
+(1)/
+1/( 1)
+H (t,s)k(s)| (s)| (s)r(s)Q (t,s)
+Q (t,s)(H (t,s)k(s)) (s) ( 1 ) .
+[ (s)r(s)]
+αα α α
+αα
+αα
+βω βρ
+ωα
+ρα
+−−
+−
+−
+−− ≤
+ 
+From (3.2) we have 
+(1 )
+T
+(s)r(s)Q (t,s)
+H(t,s)k(s) (s)q(s)- ds H(t,T)k(T) (T).
+t
+αα
+α
+βρ
+ρω
+α
+−
+⎧⎫
+≤
+⎨⎬
+⎩⎭
+∫
+ 
+ 
+The remainder of the proof proceeds as in the proof of Theorem 2.1. The proof is 
+complete. 
+ 
+    Following the procedure of the proof of Theorem 2.2 and 2.3, we can also prove the 
+following theorems. 
+ 
+    Theorem 3.2. Suppose that (2.1) and (3.1) hold, and let the functions  H, h and k  be 
+the same as in Theorem 2.1. If there exist two functions ρ ∈C¹([t
+0
+, ∞),(0, ∞))  and 
+Ω∈C([t
+0
+, ∞),R) such that 
+ 
+0
+t
+0 t
+1
+lim inf (s)r(s)Q (t,s)ds< , (3.3)
+H(t,t )
+t
+α
+ρ
+→∞
+∞
+∫ 
+and that for every T ≥t
+0
+, 
+(1 )
+t
+T
+1 (s)r(s)Q (t,s)
+lim inf { ( , ) (s)k(s)q(s)- }ds (T), (3.4)
+H(t,T)
+t
+Ht s
+αα
+α
+βρ
+ρ
+α
+−
+→∞
+≥Ω
+∫
+ 
+and (2.8) hold, then every solution of (1.2) is oscillatory. 
+ 
+    Theorem 3.3. Suppose that (2.1) and (3.1) hold, and let the functions H, h and k be 
+the same as in Theorem 2.1. If there exist two functions ρ ∈C¹([t
+0
+, ∞),(0, ∞)) and 
+Ω∈C([t
+0
+, ∞),R) such that (2.8), (3.4) and 
+t
+T
+1
+lim inf ( , ) (s)k(s)q(s)ds< , (3.5)
+H(t,T)
+t
+Ht s ρ
+→∞
+∞
+∫ 
+hold, then every solution of (1.2) is oscillatory. 
+ 
+      Theorem 3.4. Suppose that (2.1) and (3.1) are satisfied. Let the functions H, h and k 
+be the same as in Theorem 2.1. If there exist two functions ρ ∈C¹([t
+0
+, ∞),(0, ∞)) and 
+Ω∈C([t
+0
+, ∞),R) such that 
+ Differential Equations and Control Processes, № 4, 2008  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  16 
+0
+0 t
+1
+lim sup (s)r(s)Q ( , )ds< ,  (3.6)
+H(t,t )
+t
+t
+ts
+α
+ρ
+→∞
+∞
+∫ 
+ 
+and for every T ≥t
+0
+, 
+ 
+1
+T
+1 (s)r(s)Q (t,s)
+lim sup ( , ) (s)k(s)q(s)- (T), (3.7)
+H(t,T)
+t
+t
+Ht s ds
+αα
+α
+βρ
+ρ
+α
+−
+→∞
+⎧⎫
+≥Ω
+⎨⎬
+⎩⎭
+∫
+ 
+and (2.8) hold, then every solution of (1.2) is oscillatory. 
+ 
+    Remark 3.1. If p(t) ≡0 and α=2, then Theorem 3.2 and 3.4 extend and improve 
+Theorem 4 and 3 of Grace [3]. 
+ 
+    Remark 3.2. If p(t) ≡0 and H(t,s)=(t-s) ⁿ from Theorem 3.1, we obtain Theorem 2  of 
+Agarwal and Grace [1]. 
+ 
+    Example 3.1. Consider the differential equation 
+-2 2 -1 3
+0
+t() +tx(t)=0,t t>1.
+ddx
+xt
+dt dt
+⎛⎞
+≥
+⎜⎟
+⎝⎠
+ 
+We note that 
+α=2, r(t)=t
+-2
+, q(t)=t
+-1
+ and 
+'( )
+3.
+()
+gx
+x ψ
+= 
+Let 
+ρ(s)=1, k(s)=s² and H(t,s)=(t-s)². 
+Then 
+ 
+0
+0
+1
+t
+0 t
+2
+23
+22
+t
+0 t
+1 (s)r(s)Q (t,s)
+lim sup H(t,s)k(s) (s)q(s)- ds
+H(t,t )
+131
+lim sup t 2 ds .
+(t-t ) 4 3
+t
+t
+tt
+sts s
+ss
+αα
+α
+βρ
+ρ
+α
+−
+→∞
+→∞
+⎧⎫
+⎨⎬
+⎩⎭
+⎛⎞
+=−+−+−=∞
+⎜⎟
+⎝⎠
+∫
+∫
+ 
+ 
+Hence, this equation is oscillatory by Theorem 3.1. 
+ 
+    Example 3.2. Consider the differential equation 
+ 
+3
+0 2
+11
++ (x+x )=0, t t =1.
+tt(1+3cos²t)
+1 2+cos²t 1+3x²
+1+3cos²t 2+x²
+dx
+dt
+dx
+tdt
++≥
+⎛⎞
+⎜⎟
+⎝⎠
+We not that 
+2
+'( )
+22, 2.
+()
+gx
+x
+x
+δα
+ψ
+= +≥ = =
+ 
+ 
+If we take ρ(t)=t, k(t)=t, H(t,s)=(t-s)², then 
+ Differential Equations and Control Processes, № 4, 2008  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  17 
+0
+1
+t
+0 t
+2
+2
+22
+t
+1
+2
+2
+t
+1 (s)r(s)Q (t,s)
+lim sup H(t,s)k(s) (s)q(s)- ds
+H(t,t )
+1(t-s) 12+cos²s 2
+lim sup 4 ds
+(t-1) 1+3cos²s 2 1+3cos²s
+11
+lim sup (t-s) 4
+(t-1) 4 4
+t
+t
+stsst
+s
+ss
+s
+sts
+s
+αα
+α
+βρ
+ρ
+α
+−
+→∞
+→∞
+→∞
+⎧⎫
+⎨⎬
+⎩⎭
+⎛⎞
+⎛⎞
+⎛⎞
+⎜⎟
+=− +−−
+⎜⎟
+⎜⎟
+⎜⎟
+⎜⎟
+⎝⎠
+⎝⎠
+⎝⎠
+⎛⎞
+≥−+
+⎜⎟
+⎝⎠
+∫
+∫
+2
+2
+1
+2
+ds= .
+t
+st
+ss
+s
+⎛⎞
+⎛⎞
+⎜⎟
+−− ∞
+⎜⎟
+⎜⎟
+⎜⎟
+⎝⎠
+⎝⎠
+∫
+ 
+Hence, this equation is oscillatory. One such solution of this equation is x(t)=cos t. 
+ 
+REFERENCES 
+ 
+[1] Agarwal, R.P., Grace, S.R. On the oscillation of certain order differential 
+equations, Georgian Math. J.7 (2000),201- 213.  
+[2] Ayanlar, B. and Tiryaki, A. Oscillation theorems for nonlinear second-order 
+differential equations, Computers and Mathematics  with Applications 44 (2002), 529-
+538. 
+[3] Grace, S.R. Oscillation theorems for nonlinear differential equations of second 
+order, J. Math.  Anal.  Appl. 171 (1992), 220-241.  
+[4] Hardy, G.H.; Littlewood, J.E. and Polya, G. Inequalities, 2nd edition, Cambridge 
+University Press, Cambridge, (1988).  
+[5] Hsu, H.B. and Yeh, C. C. Oscillation theorems for second order half-linear 
+differential equations, Appl. Math. Lett. 9 (1996), 71-77.  
+[6] Kusano, T. and Naito, Y.  Oscillation and nonoscillation criteria for second order 
+quasilinear differential equations, Acta Math. Hungar. 76(1-2) (1997), 81-99.  
+[7] Kusano, T. and Yoshida, N. Nonoscillation theorems for a class of quasilinear 
+differential equations of second order, J. Math. Anal. and Appl. 189(1995), 115-127.  
+[8] Li, H.J. and Yeh, C. C. An integral criterion for oscillation of nonlinear differential 
+equations, Math. Japonica 41 (1995), 185-188.  
+[9] Li, H.J. and Yeh, C.C. Nonoscillation criteria for second order half-linear 
+differential equations, Appl. Math.  Lett. 8 (1995), 63- 70.  
+[10]  Li,  H.J.  and  Yeh,  C.  C.  Nonoscillation  theorems  for  second  order  
+quasilinear  differential  equations,  Publ.  Math. Debrecen 47/3-4(1995), 271-279. 
+[11] Li, H.J. and Yeh, C. C. Oscillation criteria for nonlinear differential equations, 
+Houston Jour. Math. 21 (1995), 801-811.  
+[12] Li, H.J. and Yeh, C. C. Oscillation of half-linear second order differential 
+equations, Hiroshima Math. Jour. 25(1995), 585-594.  
+[13] Li, H.J. Oscillation criteria for half-linear second order differential equations, 
+Hiroshima Math. J.25 (1995), 571-583.  
+[14] Li, W.T. Zhong, C.K. and Fan, X.L. Oscillation criteria for second-order half-
+linear ordinary differential equations with damping, Journal of mathematics, volume 33, 
+number 3 fall (2003).   Differential Equations and Control Processes, № 4, 2008  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  18 
+[15]  Lian,  W.C.,  Yeh,  C.C.  and  Li,  H.J.  The  distance  between  zeros  of  an  
+oscillatory  solution  to  a  half-linear  differential equations, Computers Math. Applic. 
+29 (1995), 39-43.   
+[16] Manojlovic, J.  V.  Oscillation theorems for nonlinear differential equations of 
+second order, E. J. Qualitative Theory of Diff.Equ.1 (2000), 1-21.  
+[17] Philos, Ch.G. Oscillation theorems for linear differential equations of second 
+order, Arch. Math. 53 (1989), 483-492.  
+[18] Wang, J. On second order quasilinear oscillation, Funkcial. Ekvac.41 (1998), 25-
+54.  
+[19] Wong, P. J. Y. and Agarwal, R. P. Oscillatory behavior of solutions of certain 
+second order nonlinear differential equations, J. Math. Anal. and Appl. 198 (1996),337-
+354.  
+[20] Wu, H.W. Wang, Q.R. and Xu, Y.T. Oscillation and Asymptotics for nonlinear 
+second-order differential equations, computers and Mathematics with Applications 48 
+(2004), 61-72. 
+ 
+ 

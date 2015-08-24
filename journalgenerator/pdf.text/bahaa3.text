@@ -1,0 +1,1625 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 4, 2006
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: jodiff@mail.ru
+Ordinary differential equations
+Boundary Control For Cooperative Elliptic Systems
+Governed By Schr¨ odinger Operator
+G. M. BAHAA
+Mathematics Department,
+Faculty of Science,
+Beni-Suef University,
+Beni- Suef, EGYPT
+E-mail: Bahaa
+−
+gm@hotmail.com
+35K20, 49J20, 49K20, 93C20
+Abstract
+In this paper, we study the existence of solutions for a cooperative elliptic systems
+governed by Schr¨ odinger operator deﬁned onR
+n
+, then we discuss the optimal control of
+boundary type for these systems.
+Keywords: Cooperative elliptic systems inR
+n
+, Schr¨ odinger operator, Ex-
+istence of solution, Boundary control, Optimality conditions.Differential Equations and Control Processes, N 4, 2006
+1 Introduction
+We consider the following cooperative elliptic system :
+
+
+
+
+
+
+
+
+
+(−Δ+q)y
+1
+=ay
+1
++by
+2
++f
+1
+in R
+n
+(−Δ+q)y
+2
+=cy
+1
++dy
+2
++f
+2
+in R
+n
+y
+1
+=g
+1
+as |x|→∞
+y
+2
+=g
+2
+as |x|→∞,
+(1)
+where :
+(
+a,b,c andd are given numbers such that b,c> 0
+(in this case, we say that the system (1) is cooperative )
+(2)
+q(x) is a positive function and tending to∞ at inﬁnity. (3)
+In [22], Gali et al. proved the existence of optimal control for system like
+(S) with q(x) = 0 and with positive weight function. Also they found the set of
+inequalitieswhichdescribedthedistributedcontrolforsystems(S)withq(x) =
+0 and deﬁned on bounded domain [21]. The case of semilinear cooperative
+system with q(x) = 0 is discussed in [17].
+In [16] Fleckinger, obtained the necessary and suﬃcient conditions for hav-
+ing the maximum principle and the existence of positive solutions for coopera-
+tive system (1) which are:
+(
+a<λ(q), d<λ(q)
+(λ(q)−a)(λ(q)−d)>bc,
+(4)
+where λ(q) is deﬁned later.
+Here,weshallusethesameconditions(4)toprovetheexistenceofthestate
+of our system (1); then using the theory of Lions [30], we study the existence
+of boundary control for system (1). Our model in the problem is Schrodinger
+operator.
+Electronic Journal.  18Differential Equations and Control Processes, N 4, 2006
+2 Operator equation.
+To prove the existence of the state y ={y
+1
+,y
+2
+} of system (1), we state brieﬂy
+some results introduced in [15] concerning the eigenvalue problem
+(
+(−Δ+q)φ =λ(q)φ in R
+n
+φ(x)→ 0 as |x|→∞, φ> 0.
+(5)
+The associated variational space is V
+q
+(R
+n
+), the completion of D(R
+n
+), with
+respect to the norm :
+||y||
+q
+=
+ 
+Z
+R
+n
+|Δy|
+2
++q|y|
+2
+dx
+!1
+2
+Since the imbedding of V
+q
+(R
+n
+) into L
+2
+(R
+n
+) is compact. Then the operator
+(−Δ+q) considered as an operator in L
+2
+(R
+n
+) is positive self-adjoint with com-
+pact inverse. Hence its spectrum consists of an inﬁnite sequence of positive
+eigenvalue tending to inﬁnity; moreover the smallest one which is called the
+principle eigenvalue denoted by λ(q) is simple and is associated with an eigen-
+function which does not change sign inR
+n
+. It is characterized by:
+λ(q)
+Z
+R
+n
+|y|
+2
+dx≤
+Z
+R
+n
+|Δy|
+2
++q|y|
+2
+dx ∀y∈V
+q
+(R
+n
+). (6)
+Now, to study our system (1) we have the embedding
+V
+q
+(R
+n
+)×V
+q
+(R
+n
+)→L
+2
+(R
+n
+)×L
+2
+(R
+n
+)
+is continuous and compact then, we deﬁne a bilinear form
+π : (V
+q
+(R
+n
+))
+2
+×(V
+q
+(R
+n
+))
+2
+→R
+by
+π((y
+1
+,y
+2
+),(φ
+1
+,φ
+2
+)) =
+1
+b
+Z
+R
+n
+[Δy
+1
+Δφ
+1
++qy
+1
+φ
+1
+]dx+
+1
+c
+Z
+R
+n
+[Δy
+2
+Δφ
+2
++qy
+2
+φ
+2
+]dx
+−
+Z
+R
+n
+y
+1
+φ
+2
+dx−
+d
+c
+Z
+R
+n
+y
+2
+φ
+2
+dx−
+a
+b
+Z
+R
+n
+y
+1
+φ
+1
+dx−
+Z
+R
+n
+y
+2
+φ
+1
+dx.
+(7)
+It is easy to check that π is a continuous bilinear form; and then by Lax-
+Milgram Lemma, we have the following theorem:
+Electronic Journal.  19Differential Equations and Control Processes, N 4, 2006
+Theorem 2.1 Forf
+1
+,f
+2
+∈L
+2
+(R
+n
+), thereexistsauniquesolutiony ={y
+1
+,y
+2
+}∈
+(V
+q
+(R
+n
+))
+2
+of system (1) if conditions (4) are satisﬁed.
+Proof
+We choose m large enough such that a+m > 0 and d+m > 0 and deﬁne
+on V
+q
+(R
+n
+) the equivalent norm
+||y||
+2
+q,m
+=
+Z
+R
+n
+[|Δy|
+2
++(m+q)|y|
+2
+]dx
+and we write (7) as:
+π((y
+1
+,y
+2
+),(φ
+1
+,φ
+2
+)) =
+1
+b
+Z
+R
+n
+[Δy
+1
+Δφ
+1
++(q+m)y
+1
+φ
+1
+]dx−
+a+m
+b
+Z
+R
+n
+y
+1
+φ
+1
+dx
+−
+Z
+R
+n
+y
+2
+φ
+1
+dx+
+1
+c
+Z
+R
+n
+[Δy
+2
+Δφ
+2
++(q+m)y
+2
+φ
+2
+]dx
+−
+d+m
+c
+Z
+R
+n
+y
+2
+φ
+2
+dx−
+Z
+R
+n
+y
+1
+φ
+2
+dx.
+Then
+π((y
+1
+,y
+2
+),(y
+1
+,y
+2
+)) =
+1
+b
+Z
+R
+n
+[|Δy
+1
+|
+2
++(q+m)|y
+1
+|
+2
+]dx−
+a+m
+b
+Z
+R
+n
+|y
+1
+|
+2
+dx
+−
+Z
+R
+n
+y
+1
+y
+2
+dx+
+1
+c
+Z
+R
+n
+[|Δy
+2
+|
+2
++(q+m)|y
+2
+|
+2
+]dx
+−
+d+m
+c
+Z
+R
+n
+|y
+2
+|
+2
+dx−
+Z
+R
+n
+y
+1
+y
+2
+dx.
+By Cauchy Schwartz inequality, we have
+π((y
+1
+,y
+2
+),(y
+1
+,y
+2
+))≥
+1
+b
+Z
+R
+n
+[|Δy
+1
+|
+2
++(q+m)|y
+1
+|
+2
+]dx−
+a+m
+b
+Z
+R
+n
+|y
+1
+|
+2
+dx
++
+1
+c
+Z
+R
+n
+[|Δy
+2
+|
+2
++(q+m)|y
+2
+|
+2
+]dx−
+d+m
+c
+Z
+R
+n
+|y
+2
+|
+2
+dx
+−2
+ 
+Z
+R
+n
+|y
+1
+|
+2
+dx
+!1
+2
+ 
+Z
+R
+n
+|y
+2
+|
+2
+dx
+!1
+2
+,
+from (6), we deduce
+π((y
+1
+,y
+2
+),(y
+1
+,y
+2
+))≥
+1
+b
+ 
+1−
+a+m
+λ(q)+m
+!
+||y
+1
+||
+2
+q,m
++
+1
+c
+ 
+1−
+d+m
+λ(q)+m
+!
+||y
+2
+||
+2
+q,m
+2
+λ+m
+||y
+1
+||
+q,m
+||y
+2
+||
+q,m
+.
+Electronic Journal.  20Differential Equations and Control Processes, N 4, 2006
+If (5) holds, then
+π((y
+1
+,y
+2
+),(y
+1
+,y
+2
+))≥C(||y
+1
+||
+2
+q,m
++||y
+2
+||
+2
+q,m
+) (8)
+which prove the coerciveness of the bilinear form π. Then for f
+1
+,f
+2
+∈
+L
+2
+(R
+n
+), system (1) has a unique solution by Lax-Milgram lemma.
+3 Formulation of the control problem
+The space L
+2
+(Γ)×L
+2
+(Γ) is the space of controls. For a control u ={u
+1
+,u
+2
+}∈
+(L
+2
+(Γ)
+2
+, the state y(u) = {y
+1
+(u),y
+2
+(u)} of the system is given by the solution
+of:
+
+
+
+
+
+
+
+
+
+(−Δ+q)y
+1
+(u) =ay
+1
+(u)+by
+2
+(u)+f
+1
+in R
+n
+(−Δ+q)y
+2
+(u) =cy
+1
+(u)+dy
+2
+(u)+f
+2
+in R
+n
+y
+1
+=u
+1
+as |x|→∞
+y
+2
+=u
+2
+as |x|→∞,
+(9)
+The observation equation is given by z(u) = {z
+1
+(u),z
+2
+(u)} = y(u) =
+{y
+1
+(u),y
+2
+(u)}. For given z
+d
+={z
+d1
+,z
+d2
+} in (L
+2
+(R
+n
+))
+2
+; the cost function is given
+by:
+J(v) =
+Z
+R
+n
+(y
+1
+(v)−z
+d1
+)
+2
++(y
+2
+(v)−z
+d2
+)
+2
+dx+(Nv,v)
+(L
+2
+(Γ))
+2 (10)
+where N ∈L((L
+2
+(Γ))
+2
+,(L
+2
+(Γ))
+2
+) is hermitian positive deﬁnite operator:
+(Nu,u)≥η||u||
+2
+(L
+2
+(R
+n
+))
+2. (11)
+The control problem then is to ﬁnd
+(
+u ={u
+1
+,u
+2
+}∈U
+ad
+such that
+J(u)≤J(v)
+where U
+ad
+is a closed convex subset of(L
+2
+(Γ))
+2
+.
+Under the given consideration, we may apply the Theorem 2.4 of Lions [30]
+to obtain the following result:
+Theorem 3.1 Assume that (8) and (11) hold. If the cost function is given by
+(10), then there exists an optimal control u = {u
+1
+,u
+2
+}; Moreover it is charac-
+Electronic Journal.  21Differential Equations and Control Processes, N 4, 2006
+terized by the following equations and inequalities:
+
+
+
+
+
+(−Δ+q)p
+1
+(u)−ap
+2
+(u)−cp
+2
+(u) =y
+1
+(u)−z
+1d
+in R
+n
+(−Δ+q)p
+2
+(u)−bp
+1
+(u)−dp
+2
+(u) =y
+2
+(u)−z
+2d
+in R
+n
+p
+1
+(u) = 0 p
+2
+(u) = 0 on Γ
+Z
+Γ
+∂p
+1
+(u)
+∂ν
+A
+(v
+1
+−u
+1
+)+
+∂p
+2
+(u)
+∂ν
+A
+(v
+2
+−u
+2
+)dΓ+(Nu,v−u)
+(L
+2
+(Γ))
+2 ≥ 0 ∀v∈U
+ad
+,
+together with (9), where p(u) ={p
+1
+(u),p
+2
+(u)} is the adjoint state.
+Proof
+The control u is characterized by
+J
+0
+(u)(v−u)≥ 0 ∀u∈U
+ad
+which is equivalent to
+(y(u)−z
+d
+,y(v)−y(u))
+L
+2
+(R
+n
+)
+2 +(Nu,v−u)
+L
+2
+(Γ)
+2 ≥ 0
+i.e.,
+(y
+1
+(u)−z
+1d
+,y
+1
+(v)−y
+1
+(u))
+L
+2
+(R
+n
+)
+2+(y
+2
+(u)−z
+2d
+,y
+2
+(v)−y
+2
+(u))
+L
+2
+(R
+n
+)
+2+(Nu,v−u)
+L
+2
+(Γ)
+2 ≥ 0
+(12)
+Since (A
+∗
+P,Y) = (P,AY), where
+A(φ ={φ
+1
+,φ
+2
+})→Aφ ={(−Δ+q)φ
+1
+−aφ
+1
+−bφ
+2
+,(−Δ+q)φ
+2
+−cφ
+1
+−dφ
+2
+}
+for φ∈ (V
+0
+q
+(R
+n
+))
+2
+.
+Then
+(P,AY) = (p
+1
+,(−Δ+q)y
+1
+−ay
+1
+−by
+2
+)+(p
+2
+,(−Δ+q)y
+2
+−cy
+1
+−dy
+2
+)
+= (p
+1
+,(−Δ+q)y
+1
+)−a(p
+1
+,y
+1
+)−b(p
+1
+,y
+2
+)+(p
+2
+,(−Δ+q)y
+2
+)−c(p
+2
+,y
+1
+)
+−d(p
+2
+,y
+2
+)
+= ((−Δ+q)p
+1
+,y
+1
+)−a(p
+1
+,y
+1
+)−c(p
+2
+,y
+1
+)+((−Δ+q)p
+2
+,y
+2
+)−d(p
+2
+,y
+2
+)
+−b(p
+1
+,y
+2
+)
+= ((−Δ+q)p
+1
+−ap
+1
+−cp
+2
+,y
+1
+)+((−Δ+q)p
+2
+−bp
+1
+−dp
+2
+,y
+2
+)
+= (A
+∗
+P,Y),
+where
+A
+∗
+(P ={p
+1
+,p
+2
+})→{(−Δ+q)p
+1
+−ap
+1
+−cp
+2
+,(−Δ+q)p
+2
+−bp
+1
+−dp
+2
+}
+Electronic Journal.  22Differential Equations and Control Processes, N 4, 2006
+whereA
+∗
+istheadjointforA,P istheadjointstate. ThenA
+∗
+P =Y(u)−Z
+d
+can be written as
+(−Δ+q)p
+1
+−ap
+1
+−cp
+2
+=y
+1
+(u)−z
+1d
+(−Δ+q)p
+2
+−bp
+1
+−dp
+2
+=y
+2
+(u)−z
+2d
+p
+1
+(u) =p
+2
+(u) = 0.
+So (12) is equivalent to
+((−Δ+q)p
+1
+−ap
+1
+−cp
+2
+,y
+1
+(v)−y
+1
+(u))+((−Δ+q)p
+2
+−bp
+1
+−dp
+2
+,y
+2
+(v)−y
+2
+(u))
++(Nu,v−u)
+(L
+2
+(Γ))
+2 ≥ 0
+(p
+1
+(u),(−Δ+q)(y
+1
+(v)−y
+1
+(u))
+L
+2
+(R
+n
+)
+−(
+∂p
+1
+(u)
+∂ν
+A
+,y
+1
+(v)−y
+1
+(u))
+L
+2
+(Γ)
++(p
+1
+(u),
+∂
+∂ν
+A
+(y
+1
+(v)−y
+1
+(u))
+L
+2
+(Γ)
+−a(p
+1
+(u),y
+1
+(v)−y
+1
+(u))−b(p
+1
+(u),y
+2
+(v)−y
+2
+(u))+
+(p
+2
+(u),(−Δ+q)(y
+2
+(v)−y
+2
+(u))
+L
+2
+(R
+n
+)
+−(
+∂p
+2
+(u)
+∂ν
+A
+,y
+2
+(v)−y
+2
+(u))
+L
+2
+(Γ)
++(p
+2
+(u),
+∂
+∂ν
+A
+(y
+2
+(v)−y
+2
+(u)))
+L
+2
+(Γ)
+−c(p
+2
+(u),y
+1
+(v)−y
+1
+(u))
+L
+2
+(R
+n
+)
+−d(p
+2
+(u),y
+2
+(v)−y
+2
+(u))
+L
+2
+(R
+n
+)
++(Nu,v−u)
+(L
+2
+(Γ))
+2 ≥ 0.
+From (9), we obtain
+(p
+1
+(u),a(y
+1
+(v)−y
+1
+(u))+b(y
+2
+(v)−y
+2
+(u))+f
+1
+−f
+1
+−a(y
+1
+(v)−y
+1
+(u)))
+L
+2
+(R
+n
+)
++
+(
+∂p
+1
+(u)
+∂ν
+A
+,v
+1
+−u
+1
+)
+L
+2
+(Γ)
++(0,
+∂
+∂ν
+A
+(y
+1
+(v)−y
+1
+(u))
+L
+2
+(Γ)
+−c(p
+2
+(u),y
+1
+(v)−y
+1
+(u))
+L
+2
+(R
+n
+)
+(p
+2
+(u),c(y
+1
+(v)−y
+1
+(u))+d(y
+2
+(v)−y
+2
+(u))+f
+2
+−f
+2
+−c(y
+1
+−y
+1
+(u)))
+L
+2
+(R
+n
+)
++
+(
+∂p
+2
+(u)
+∂ν
+A
+,v
+2
+−u
+2
+)
+L
+2
+(Γ)
++(0,
+∂
+∂ν
+A
+(y
+2
+(v)−y
+2
+(u))
+L
+2
+(Γ)
+−d(p
+2
+(u),y
+2
+(v)−y
+2
+(u))
+L
+2
+(R
+n
+)
++
+(Nu,v−u)
+(L
+2
+(Γ))
+2 ≥ 0.
+Then we have
+(
+∂p
+1
+(u)
+∂ν
+A
+,v
+1
+−u
+1
+)
+L
+2
+(Γ)
++(
+∂p
+2
+(u)
+∂ν
+A
+,v
+2
+−u
+2
+)
+L
+2
+(Γ)
++(Nu,v−u)
+(L
+2
+(Γ))
+2 ≥ 0.
+i.e.,
+Z
+Γ
+(
+∂p
+1
+(u)
+∂ν
+A
+(v
+1
+−u
+1
+)+
+∂p
+2
+(u)
+∂ν
+A
+(v
+2
+−u
+2
+))dΓ+(Nu,v−u)
+(L
+2
+(Γ))
+2 ≥ 0 ∀u∈U
+ad
+,v∈U
+ad
+.
+Which completes the proof of the theorem.
+Electronic Journal.  23Differential Equations and Control Processes, N 4, 2006
+Remark 3.2 To study the optimal control for the scalar case
+(
+(−Δ+q)y =ay+f in R
+n
+y(x) =g in Γ,
+(13)
+we deﬁne a bilinear form π :V
+q
+(R
+n
+)×V
+q
+(R
+n
+)→R by
+π(y,φ) =
+Z
+R
+n
+(∇y∇φ+qyφ)dx−a
+Z
+R
+n
+yφdx
+As in theorem (1), we can prove π is coercive if a<λ(q) and then there exists
+a unique solution of (13) for f ∈ L
+2
+(R
+n
+). Therefore, the state of the system is
+given by the solution of
+(
+(−Δ+q)y(u) =ay(u)+f +u in R
+n
+y(u) =u in Γ,
+(14)
+where u is given in the space L
+2
+(Γ) of controls. For given z
+d
+in L
+2
+(R
+n
+), the
+cost function is given by
+J(v) =
+Z
+R
+n
+|y(v)−z
+d
+|
+2
+dx+
+Z
+Γ
+(Nv)vdΓ
+where N is a given hermitian positive deﬁnite operator. Then we have the
+following characterization of optimal control for this system :
+(
+(−Δ+q)p(u)−ap(u) =y
+1
+(u)−z
+d
+in R
+n
+p(u) = 0 in Γ,
+Z
+Γ
+∂p(u)
+∂ν
+A
+(v−u)dΓ+(Nu,v−u)
+L
+2
+(Γ)
+≥ 0, ∀ v∈U
+ad
+together with (14), where p(u) is the adjoint state.
+Acknowledgement. The author is grateful for the reviewers of the Electronic
+Journal of Differential Equations for their fruitful comments and invaluable
+suggestions.
+REFERENCES
+• [1] Adams, R. A.,“ Sobolev Spaces,” Academic Press, New York,
+(1975).
+Electronic Journal.  24Differential Equations and Control Processes, N 4, 2006
+• [2] Bahaa, G. M.,“ Quadratic Pareto optimal control of parabolic equa-
+tion with state-control constraints and an inﬁnite number of variables.”
+IMA Journal of Mathematical Control and Information, 20, 2, (2003),
+167-178.
+• [3]Bergounioux,M., “Optimalcontrolofproblemsgovernedbyabstract
+elliptic variational inequalities with state constraints.” SIAM J. Control
+Optimization, 36, 1, (1998), 273-289.
+• [4]Bergounioux, M., and Tiba, D., “ Optimal control for the obstacle
+problem with state constraints, ESAIM : Proceedings, 4, (1998),7-19.
+• [5] Bonnans, F., Casas, E., “A boundary Pontryagin’s principle for
+the optimal control of state-constrained elliptic equations,”Internat. Ser.
+Numer. Math., 107, (1992), 241-249.
+• [6] Casas, E.,“ Control of an elliptic problem with pointwise state con-
+straints.” SIAM J. Control and Optimization, 24, 6, (1986), 1309-1318.
+• [7] Casas, E.,“ Boundary Control of semilinear elliptic equations with
+pointwise state constraints.” SIAM J. Control and Optimization, 31, 4,
+(1993), 993-1006.
+• [8] Casas, E.,“ Boundary control problems for quasi-linear elliptic equa-
+tions: A Pontryagin’s principle.” Applied Mathematics and Optimization,
+33, (1996), 265-291.
+• [9]El-Saify, H. A., “ Boundary control problem with an inﬁnite number
+of variables.” IJMMS , 28, 1, (2001), 57-62.
+• [10] El-Saify H. A., and Bahaa, G. M., “Optimal control for n×n
+systems of hyperbolic types.” Revista de Mathematica Aplicadas,22, 1&2,
+(2001), 41-58.
+• [11] El-Saify, H. A. and Bahaa, G. M.,“ Optimal control for n×
+n hyperbolic systems involving operators of inﬁnite order.” Mathematica
+Slovaca, 52, 4, (2002), 409-424.
+• [12] El-Saify, H. A. and Bahaa, G. M.,“Optimal control for n× n
+coupled systems governed by Petrowsky type equations with control-
+constrained and inﬁnite number of variables”Mathematica Slovaca, 53,
+(2003), 291-311.
+Electronic Journal.  25Differential Equations and Control Processes, N 4, 2006
+• [13] El-Saify, H. A., and Bahaa, G. M.,“ Boundary control for n×n
+systemsofhyperbolictypesinvolvinginﬁniteorderoperators.”Acceptedfor
+oral in the second International Conference of Mathematics, Islamic Uni-
+versity , Gaza, Palastin, Editor. M. S. Al-Atrash, 26-28 Augusts. (2002).
+• [14] El-Saify, H. A., Serag, H. M, and Bahaa, G. M.,“ On optimal
+controlforn×nellipticsysteminvolvingoperatorswithaninﬁnitenumber
+of variables.” Advances in Modelling & Analysis, 37, 4, (2000), 47-61.
+• [15] Fleckinger, J.,“ Estimates of the number of eigenvalues for an op-
+erator of Schrodinger type.” Proceedings of the Royal Society of Edinburg,
+89A, (1981), 355-361.
+• [16]Fleckinger, J.,“ Method of sub-super solutions for some elliptic sys-
+tems deﬁned onR
+n
+.” Preprint UMR MIP, Universite Toulouse, 3, (1994).
+• [17]Fleckinger, J., and Serag, H.,“ Semilinear cooperative elliptic sys-
+tems on R
+n
+.”Rendiconti Di Mathematica Seri. VII, 15 , Roma (1995),
+89-108.
+• [18] Gali, I. M., and El-Saify, H. A., “ Optimal control of a system
+governed by hyperbolic operator with an inﬁnite number of variables.”
+JMAA, 85, 1, (1982), 24-30.
+• [19] Gali, I. M, and El-Saify, H.A.,“ Distributed control of a system
+governed by Dirichlet and Neumann problems for a self-adjoint elliptic
+operator with an inﬁnite number of variables.” Journal of Optimization
+Theory and Applications 39, 2, (1983), 293-298.
+• [20] Gali, I. M. and El-Saify, H. A., “ Control of system governed by
+inﬁnite order equation of hyperbolic type.” Proceeding of the international
+conference on ”Functional-Differential systems and related topics”. III,
+Poland, (1983), 99-103.
+• [21] Gali, I. M. and Serag, H., “ Distributed control of cooperative el-
+liptic systems.” Accepted for presentation at the UAB-Georgia Tech Inter-
+national Conference on Differential Equations and Mathematical Physics,
+Birmingham, Alabama, USA, March 13-19, (1994)
+• [22]Gali, I. M. and Serag, H.,“ Optimal control of cooperative elliptic
+systems on R
+n
+.” Journal of Egyptian Mathematics Society, 13, (1995),
+33-39.
+Electronic Journal.  26Differential Equations and Control Processes, N 4, 2006
+• [23] Gali, I. M., El-Saify, H. A. and El-Zahaby, S. A., “Distributed
+Control of a system governed by Dirichlet and Neumann Problems for El-
+liptic equations of inﬁnite order.” Proceeding of the international confer-
+ence on ”Functional -Differential systems and related topics III, Poland,”
+(1983), 83-87.
+• [24] Kotarski, W.,“ Some problems of optimal and Pareto optimal con-
+trol for distributed parameter systems.”Reports of Silesian University,
+No.1668, Katowice, Poland, (1997), 1-93.
+• [25] Kotarski, W.,“ Optimal control of a system governed by Petrowsky
+type equation with an inﬁnite number of variables.”Acta Univ. Palack.
+Olomuc. Fac. Rerum Natur. Math. 35, (1996), 73-82.
+• [26]Kotarski, W.,“ Optimal control of a system governed by a parabolic
+equation with an inﬁnite number of variables.” Journal of Optimization
+Theory and Applications, 60, (1989), 33-41.
+• [27] Kotarski, W., El-Saify, H. A. and Bahaa, G. M.,“Optimal
+control of parabolic equation with an inﬁnite number of variables for non-
+standardfunctionalandtimedelay.”IMAJournalofMathematicalControl
+and Information, 19, 4, (2002), 461-476.
+• [28]Kotarski, W., El-Saify, H.A.and Bahaa, G.M.,“Optimal con-
+trol problem for a hyperbolic system with mixed control-state constraints
+involving operator of inﬁnite order.” International Journal of Pure and
+Applied Mathematics, 1, 3, (2002), 241-254.
+• [29] Kowalewski, A. and Kotarski, W.,“ On application of Milutin-
+Dubovicki’s theorem to an optimal control problem for systems described
+by partial differential equations of hyperbolic type with time delay.” Sys-
+tems Sci. 7, 1, (1981), 55-74.
+• [30]Lions, J. L., “Optimal Control of Systems Governed by Par-
+tial Differential Equations”, Springer-Verlag, Band170, (1971).
+• [31]Tr¨ oltzsch, F.“ Optimality Conditions for Parabolic Control
+Problems and Applications.” Teubner-Texte z¨ ur Mathematik, Band
+62, Leipzig, (1984).
+• [32] Walczak, S.“ One some control problems.” Acta Universitatis
+Lodziensis. Folia Mathematica, 1, (1984), 187-196.
+Electronic Journal.  27Differential Equations and Control Processes, N 4, 2006
+• [33] Werner, J. “Optimization Theory and Applications.” Viewag,
+Advanced Lectures In Mathematics, Braunschweig, Wiesbaden, (1984).
+Electronic Journal.  28

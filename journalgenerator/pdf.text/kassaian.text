@@ -1,0 +1,1871 @@
+﻿dx
+dt
+✻
+✛
+✲
+❄
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 1, 2013
+Electronic Journal,
+reg. N ΦC77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Ordinary differential equations
+Green’s Function For Linear Differential
+Operators In One Variable
+Adel Kassaian
+e-mail: a.kassaian@gmail.com
+Abstract
+General formula for causal Green’s function of linear differential operator of given
+degree in one variable, (∂
+n
+x
++
+P
+n−1
+k=0
+P
+k
+(x)∂
+k
+x
+), is given according to coeﬃcient functions of
+differential operator as a series of integrals. The solution also provides analytic formula
+for fundamental solutions of correspondinghomogenous linear differential equation,
+ 
+∂
+n
+x
++
+P
+n−1
+k=0
+P
+k
+(x)∂
+k
+x
+ 
+y(x) = 0, as series of integrals. Furthermore, multiplicative property
+of causal Green’s functions is shown and by which explicit formulas for causal Green’s
+functionsofsomeclassesofdecomposablelineardifferentialoperatorsaregiven. Amethod
+to ﬁnd Green’s function of general linear differential operator of given degree in one
+variablewitharbitraryboundarycondition according tocoeﬃcient functionsofdifferential
+operator is demonstrated.
+1 Causal Green’s function for linear differential opera-
+tors in one variable
+Initial value problem for inhomogeneous linear differential equation of degree n
+in one variable,
+ 
+∂
+n
+x
++
+n−1
+X
+k=0
+P
+k
+(x)∂
+k
+x
+ 
+y(x) = g(x), (1)Differential Equations and Control Processes, N 1, 2013
+can be converted to Volterra’s integral equation of second kind [see [3]]. For
+initial condition ∂
+i
+x
+y(a) = 0 for i = 0,1,..,n−1, the corresponding Volterra’s
+equation is given by;
+u(x)+
+Z
+x
+a
+dzK(x,z)u(z)=g(x),
+where K(x,z) =
+ P
+n−1
+k=0
+P
+k
+(x)
+(x−z)
+n−k−1
+(n−k−1)!
+ 
+and y(x) =
+R
+x
+a
+dz
+(x−z)
+n−1
+(n−1)!
+u(z). For
+g(x)∈L
+2
+[a,b], the condition(
+R
+b
+a
+R
+b
+a
+dxdy|K(x,y)|
+2
+)<∞ issuﬃcientcondition
+for existence of unique solution in L
+2
+[a,b], given by iteration (e.g. see [2]).
+Clearly this conditions can be satisﬁed if P
+i
+(x) (i = 0,1,...,n− 1) and g(x)
+functions are taken to be continuous on [a,b]. Therefore we can state the
+following theorem;
+Theorem 1 The Green’s function for inhomogeneous linear differential equa-
+tion
+ 
+∂
+n
+x
++
+P
+n−1
+k=0
+P
+k
+(x)∂
+k
+x
+ 
+y(x) = g(x), where P
+i
+(x) (i = 0,1,...,n− 1) and
+g(x) are inC[a,b], with the boundary condition; ∂
+i
+x
+y(a) = 0 for i = 0,1,..,n−1,
+is given by;
+G(x,y) =θ(x−y)
+ 
+(x−y)
+n−1
+(n−1)!
++
+Z
+x
+y
+dz
+(x−z)
+n−1
+(n−1)!
+R(z,y)
+ 
+, (2)
+where
+R(x,y) =h(x,y)+
+∞
+X
+r=2
+Z
+x
+y
+dz
+1
+Z
+z
+1
+y
+dz
+2
+···
+Z
+z
+r−2
+y
+dz
+r−1
+h(x,z
+1
+)h(z
+1
+,z
+2
+)
+···h(z
+r−1
+,y), (3)
+and h(x,y) = −
+n−1
+X
+k=0
+P
+k
+(x)
+(x−y)
+n−k−1
+(n−k−1)!
+. The solution to inhomogeneous
+linear differential equation (1) for x ∈ [a,b] is then given by y(x) =
+R
+∞
+a
+dzG(x,z)g(z).
+Proof. In order to prove (2) is Green’s function of (1) it is enough to prove
+that for the two variables function;
+T(x,y)=
+ 
+(x−y)
+n−1
+(n−1)!
++
+Z
+x
+y
+dz
+(x−z)
+n−1
+(n−1)!
+R(z,y)
+ 
+, (4)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 51Differential Equations and Control Processes, N 1, 2013
+we have
+ 
+∂
+n
+x
++
+P
+n−1
+k=0
+P
+k
+(x)∂
+k
+x
+ 
+T(x,y) = 0 and (∂
+i
+x
+T(x,y))|
+x=y
+= 0 for i =
+0,1,..,n−2 and (∂
+n−1
+x
+T(x,y))|
+x=y
+= 1 [e.g. see [1]]. This can be easily done
+by noting;
+∂
+i
+x
+T(x,y)=
+ 
+(x−y)
+n−i−1
+(n−i−1)!
++
+Z
+x
+y
+dz
+(x−z)
+n−i−1
+(n−i−1)!
+R(z,y)
+ 
+i = 0,1,..,n−1 (5)
+∂
+n
+x
+T(x,y) =R(x,y),
+and therefore,
+(∂
+n
+x
++
+n−1
+X
+k=0
+P
+k
+(x)∂
+k
+x
+) T(x,y)= R(x,y)+
+n−1
+X
+k=0
+P
+k
+(x)(x−y)
+n−k−1
+(n−k−1)!
++
+n−1
+X
+k=0
+P
+k
+(x)
+Z
+x
+y
+dz
+(x−z)
+n−k−1
+(n−k−1)!
+R(z,y)
+= R(x,y)−h(x,y)−
+Z
+x
+y
+dzh(x,z)R(z,y)
+= R(x,y)−h(x,y)−
+ 
+R(x,y)−h(x,y)
+ 
+= 0.
+In the last line we used
+R
+x
+y
+dzh(x,z)R(z,y) =
+ 
+R(x,y)−h(x,y)
+ 
+, which
+comes from deﬁnition of R(x,y). By using (5) we have (∂
+i
+x
+T(x,y))|
+x=y
+= 0 for
+i = 0,1,..,n−2 and (∂
+n−1
+x
+T(x,y))|
+x=y
+= 1.
+The Green’s function for (1) with mentioned boundary condition is called
+causal solution which by method of variation of parameters is given by;
+G(x,y) =
+ 
+n
+X
+i=1
+W
+i
+(y)u
+i
+(x)
+W(y)
+ 
+θ(x−y), (6)
+whereu
+1
+(x),u
+2
+(x),...,u
+n
+(x) are fundamentalsolutions of correspondingho-
+mogeneous differential equation; (∂
+n
+x
++
+P
+n−1
+k=0
+P
+k
+(x)∂
+k
+x
+)u
+i
+(x) = 0. W(y) is the
+Wronskian and W
+i
+(y) is the Wronskian with its i
+th
+column in determinant is
+replace by (0,0,..,0,1). Comparing this result with (2) we have the identity;
+n
+X
+i=1
+W
+i
+(y)u
+i
+(x)
+W(y)
+=
+(x−y)
+n−1
+(n−1)!
++
+Z
+x
+y
+dz
+(x−z)
+n−1
+(n−1)!
+R(z,y). (7)
+For linear differential operator of ﬁrst degree (n=1), like ∂
+x
+− P(x), the
+causal Green’s function using [theorem 1] is equal to; (∂
+x
+−P(x))
+−1
+= θ(x−
+Electronic Journal. http://www.math.spbu.ru/diffjournal 52Differential Equations and Control Processes, N 1, 2013
+y)
+ 
+1+
+P
+∞
+k=1
+R
+x
+y
+dz
+1
+···
+R
+z
+n−2
+y
+dz
+k−1
+R
+z
+k−1
+y
+dz
+k
+P(z
+1
+)···P(z
+k−1
+)P(z
+k
+)
+ 
+=
+θ(x − y)
+ 
+1 +
+1
+k!
+P
+∞
+k=1
+R
+x
+y
+···
+R
+x
+y
+R
+x
+y
+dz
+1
+···dz
+k−1
+dz
+k
+P(z
+1
+) ···P(z
+k−1
+)P(z
+k
+)
+ 
+=
+θ(x− y)e
+R
+x
+y
+dzP(z)
+. For linear differential operator of degree two in the form
+of; (∂
+2
+x
+−P(x)), the causal Green’s function by using [theorem 1] is given by
+T
+s
+(x,y)θ(x−y) where;
+T
+s
+(x,y)=
+n
+(x−y)+
+∞
+X
+k=1
+ 
+Z
+x
+y
+dz
+1
+···
+Z
+z
+k−2
+y
+dz
+k−1
+Z
+z
+k−1
+y
+dz
+k
+(x−z
+1
+)P(z
+1
+)(z
+1
+−z
+2
+)P(z
+2
+)(z
+2
+−z
+3
+)···(z
+k−1
+−z
+k
+)P(z
+k
+)(z
+k
+−y)
+ o
+. (8)
+For example(∂
+2
+x
+−x)
+−1
+=θ(x−y)(x−y)+θ(x−y)
+R
+x
+y
+dz(x−z)z(z−y)+θ(x−
+y)
+R
+x
+y
+dt
+R
+t
+y
+dz
+ 
+(x−t)t(t−z)z(z−y)
+ 
++··· =θ(x−y)
+ 
+ 
+x−y
+ 
++
+ 
+x
+4
+12
+−
+(x
+3
+y)
+6
++
+(xy
+3
+)
+6
+−
+y
+4
+12
+ 
++
+ 
+x
+7
+504
+−
+(x
+6
+y)
+180
++
+(x
+4
+y
+3
+)
+72
+−
+(x
+3
+y
+4
+)
+72
++
+(xy
+6
+)
+180
+−
+y
+7
+504
+ 
++···
+ 
+, which is consistent
+with solution(∂
+2
+x
+−x)
+−1
+= θ(x−y)
+ 
+−Ai(x)Bi(y)+Ai(y)Bi(x)
+Ai(y)Bi
+′
+(y)−Ai
+′
+(y)Bi(y)
+ 
+derived by (6).
+Itcanbeseenfrom(2)thatifP
+i
+(x)(i = 0,1,...,n−1)functionsaresmooth
+on [a,b] then T(x,y) is smooth function on [a,b]×[a,b], in which case we state
+the following theorem;
+Theorem 2 If T
+1
+(x,y)θ(x−y) and T
+2
+(x,y)θ(x−y) are causal Green’s func-
+tions for linear differential operators O
+1
+(x,∂
+x
+) =
+ 
+∂
+n
+x
++
+P
+n−1
+k=0
+P
+k
+(x)∂
+k
+x
+ 
+and
+O
+2
+(x,∂
+x
+) =
+ 
+∂
+m
+x
++
+P
+m−1
+k=0
+q
+k
+(x)∂
+k
+x
+ 
+respectively (assuming P
+i
+(x)’s and q
+i
+(x)’s
+functions are inC
+∞
+[a,b]) then T
+3
+(x,y)θ(x−y) where,
+T
+3
+(x,y) =
+Z
+x
+y
+dzT
+2
+(x,z)T
+1
+(z,y), (9)
+is the causal Green’s function for linear differential operator O
+3
+(x,∂
+x
+) =
+O
+1
+(x,∂
+x
+).O
+2
+(x,∂
+x
+)
+Proof. By assumption; O
+1
+(x,∂
+x
+)T
+1
+(x,y) = 0 and (∂
+i
+x
+T
+1
+(x,y))|
+x=y
+= 0 for
+i = 0,1,..,n− 2 and (∂
+n−1
+x
+T
+1
+(x,y))|
+x=y
+= 1 also O
+2
+(x,∂
+x
+)T
+2
+(x,y) = 0 and
+(∂
+i
+x
+T
+2
+(x,y))|
+x=y
+= 0 for i = 0,1,..,m−2 and (∂
+m−1
+x
+T
+2
+(x,y))|
+x=y
+= 1, therefore
+we have;
+∂
+i
+x
+T
+3
+(x,y) =
+Z
+x
+y
+dz(∂
+i
+x
+(T
+2
+(x,z)))T
+1
+(z,y), i = 0,1,..,m−1 (10)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 53Differential Equations and Control Processes, N 1, 2013
+∂
+m
+x
+T
+3
+(x,y) =T
+1
+(x,y)+
+Z
+x
+y
+dz(∂
+m
+x
+(T
+2
+(x,z)))T
+1
+(z,y), (11)
+∂
+i
+x
+T
+3
+(x,y) =∂
+i−m
+x
+(T
+1
+(x,y))+∂
+i−m
+x
+ 
+Z
+x
+y
+dz (∂
+m
+x
+(T
+2
+(x,z)))T
+1
+(z,y)
+ 
+,
+i =m+1,..,m+n−1. (12)
+Concentrating on the second term in (12), we have for k = 1,2,..,n−1;
+∂
+k
+x
+  R
+x
+y
+dz(∂
+m
+x
+(T
+2
+(x,z)))T
+1
+(z,y)
+ 
+=
+n
+P
+k−1
+j=0
+∂
+j
+x
+ 
+(∂
+m+k−1−j
+x
+T
+2
+(x,z))|
+z=x
+T
+1
+(x,y)
+ o
++
+ R
+x
+y
+dz(∂
+m+k
+x
+(T
+2
+(x,z)))T
+1
+(z,y)
+ 
+={
+P
+k−1
+j=0
+P
+j
+r=0
+ 
+j
+r
+ 
+ 
+(∂
+m+k−1−j+r
+x
+T
+2
+(x,z))|
+z=x
+∂
+j−r
+x
+T
+1
+(x,y)
+ 
+}
++
+ R
+x
+y
+dz(∂
+m+k
+x
+(T
+2
+(x,z)))T
+1
+(z,y)
+ 
+(13)
+From (10),(11), (12) and (13) we have (∂
+i
+x
+T
+3
+(x,y))|
+x=y
+= 0 for i =
+0,1,...,m + n− 3,m + n− 2 and (∂
+m+n−1
+x
+T
+3
+(x,y))|
+x=y
+= 1. On the other
+hand;
+O
+2
+(x,∂
+x
+)T
+3
+(x,y) =
+ 
+∂
+m
+x
++
+m−1
+X
+k=0
+q
+k
+(x)∂
+k
+x
+ 
+Z
+x
+y
+dzT
+2
+(x,z)T
+1
+(z,y)
+= ∂
+x
+ 
+Z
+x
+y
+dz∂
+m−1
+x
+T
+2
+(x,z)T
+1
+(z,y)
+ 
++
+Z
+x
+y
+dz
+ 
+m−1
+X
+k=0
+q
+k
+(x)∂
+k
+x
+T
+2
+(x,z)
+ 
+T
+1
+(z,y)
+= T
+1
+(x,y)+
+Z
+y
+x
+dzO
+2
+(x,∂
+x
+)T
+2
+(x,z)T
+1
+(z,y)
+= T
+1
+(x,y).
+ThereforeO
+1
+(x,∂
+x
+).O
+2
+(x,∂
+x
+)T
+3
+(x,y) =O
+1
+(x,∂
+x
+)T
+1
+(x,y)= 0.
+The following corollary comes as a consequence;
+Corollary 1 Causal Green’s function for differential operator,
+O(x,∂
+x
+) =
+ 
+∂
+x
+−p
+1
+(x)
+  
+∂
+x
+−p
+2
+(x)
+ 
+···
+ 
+∂
+x
+−p
+n
+(x)
+ 
+, (14)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 54Differential Equations and Control Processes, N 1, 2013
+where p
+i
+(x)∈C
+∞
+[a,b] (for i = 1,...,n)is given by;
+G(x,y) =θ(x−y)
+R
+x
+y
+dz
+1
+R
+z
+1
+y
+dz
+2
+···
+R
+z
+r−2
+y
+dz
+n−1
+ 
+e
+R
+x
+z
+1
+dt
+n
+p
+n
+(t
+n
+)
+e
+R
+z
+1
+z
+2
+dt
+n−1
+p
+n−1
+(t
+n−1
+)
+···e
+R
+z
+n−1
+y
+dt
+1
+p
+1
+(t
+1
+)
+ 
+(15)
+For example for differential operator O(x,∂
+x
+) = ∂
+2
+x
++ 3x∂
+x
++ (2x
+2
++ 2),
+since (∂
+x
++x)(∂
+x
++2x) = ∂
+2
+x
++3x∂
+x
++(2x
+2
++2), by using result (15) one gets
+G(x,y) =
+p
+π
+2
+e
+y
+2
+−
+x
+2
+2
+{Erf(
+x
+√
+2
+)−(Erf(
+y
+√
+2
+))} θ(x−y).
+Corollary 2 Causal Green’s function for linear differential operator ;
+O(x,∂
+x
+) =
+n
+X
+k=0
+α
+k
+∂
+k
+x
+, (16)
+where α
+k
+∈C and α
+n
+6= 0, is given by;
+G(x,y) =
+θ(x−y)
+α
+n
+Z
+x
+y
+dz
+1
+Z
+z
+1
+y
+dz
+2
+···
+Z
+z
+n−3
+y
+dz
+n−2
+Z
+z
+n−2
+y
+dz
+n−1
+e
+ 
+β
+1
+(x−z
+1
+)+β
+2
+(z
+1
+−z
+2
+)···+β
+n
+(z
+n−1
+−y)
+ 
+, (17)
+where β
+1
+, β
+2
+···β
+n
+are n complex roots of equation
+n
+X
+i=0
+α
+i
+X
+i
+= 0.
+Proof. Differential operator O(x,∂
+x
+) =
+P
+n
+i=0
+α
+i
+∂
+i
+x
+, according to Funda-
+mental theorem of algebra, can be written as,
+P
+n
+i=0
+α
+i
+∂
+i
+x
+= α
+n
+(∂
+x
+−β
+1
+)(∂
+x
+−
+β
+2
+)···(∂
+x
+−β
+n
+). Therefore by using (15) the result is proved.
+For example (∂
+2
+x
+− ω
+2
+)
+−1
+= θ(x − y)
+R
+x
+y
+dz
+1
+e
+(ω(x−z
+1
+)−ω(z
+1
+−y))
+=
+sinhω(x−y)
+ω
+θ(x − y) and also (∂
+3
+x
+− iα∂
+2
+x
+− ω
+2
+∂
+x
++ iαω
+2
+)
+−1
+= θ(x −
+y)
+R
+x
+y
+dz
+1
+(
+R
+z
+1
+y
+dz
+2
+e
+(ω(x−z
+1
+)−ω(z
+1
+−z
+2
+)+iα(z
+2
+−y))
+) = θ(x − y)
+ 
+e
+ω(x−y)
+−e
+iα(x−y)
+α
+2
++ω
+2
+−
+sinh[ω(x−y)]
+iαω+ω
+2
+ 
+.
+Let us consider a differential operator in the form of
+O(x,∂
+x
+) =−∂
+2
+x
++v(x). (18)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 55Differential Equations and Control Processes, N 1, 2013
+By decomposing it into two ﬁrs degree differential operators; −(∂
+2
+x
+−v(x)) =
+−(∂
+x
+−p(x))(∂
+x
+−q(x)),wehaveconsequentlyq(x) =−p(x)andp(x)
+2
+−∂
+x
+p(x) =
+v(x). Therefore according to (15) the causal the Green’s function is given by;
+ 
+−∂
+2
+x
++v(x)
+ 
+−1
+=−θ(x−y)
+Z
+x
+y
+dze
+(−
+R
+x
+z
+dtp(t)+
+R
+z
+y
+dt
+′
+p(t
+′
+))
+, (19)
+where p(x) is solution for ﬁrst order nonlinear differential equation p(x)
+2
+−
+∂
+x
+p(x) = v(x). This is just Riccati equation, thus the answers to p(x)
+2
+−
+∂
+x
+p(x) = v(x) are given by solutions of homogenous differential equation
+(−∂
+2
+x
++ v(x))u
+1,2
+(x) = 0 where p(x) = −(
+u
+′
+1,2
+u
+1,2
+). Inserting p(x) = −(
+u
+′
+1
+u
+1
+) into
+solution (19), we have;
+ 
+− ∂
+2
+x
++ v(x)
+ 
+−1
+= −θ(x− y)u
+1
+(x)u
+1
+(y)
+R
+x
+y
+dz(
+1
+u(z)
+2
+).
+Considering the relation u
+2
+(z) = u
+1
+(z)
+R
+dz
+1
+u
+1
+(z)
+2
+(valid for homogenous differ-
+entialequation(−∂
+2
+x
++v(x))u
+1,2
+(x) = 0)thesolution(19)becomesthestandard
+solution,
+ 
+−∂
+2
+x
++v(x)
+ 
+−1
+=−θ(x−y)
+ 
+u
+2
+(x)u
+1
+(y)−u
+1
+(x)u
+2
+(y)
+ 
+.
+Considering[theorem2]onecanintroducethefollowinginﬁnitenon-abelian
+group of operators on a subspace ofC
+∞
+[a,b]. We call it ”Lalescu Group”;
+• Lalescu Group. The Group of differential operators of the form;
+ 
+∂
+n
+x
++
+P
+n−1
+k=0
+P
+k
+(x)∂
+k
+x
+ 
+of all ﬁnite order, n≥ 0, where P
+k
+(x)∈C
+∞
+[a,b] (for
+k=0,1,..,n-1) and their corresponding causal Green’s functions G(x,y) =
+T(x,y)θ(x−y) (given by (2)), on subspace ofC
+∞
+[a,b] consisting of func-
+tions which themselves and their derivatives to all orders are zero at x =a,
+creates non-abelian group with operators multiplication.
+Beside all differential operators O(x,∂
+x
+) =
+ 
+∂
+n
+x
++
+P
+n−1
+k=0
+P
+k
+(x)∂
+k
+x
+ 
+and
+their causal Green’s functions G(x,y) = T(x,y)θ(x−y), the group also con-
+tains integro-differential operators and their inverses, coming from mixing
+these two groups of operators. For example O
+1
+(x,∂
+x
+).T
+2
+(x,y)θ(x− y), act-
+ing on φ(x) in the function space as O
+1
+(x,∂
+x
+)(
+R
+x
+a
+dzT
+2
+(x,z)φ(z)), and its
+inverse O
+2
+(x,∂
+x
+).T
+1
+(x,y)θ(x− y) (where O
+−1
+1
+(x,∂
+x
+) = T
+1
+(x,y)θ(x− y) and
+O
+−1
+2
+(x,∂
+x
+) = T
+2
+(x,y)θ(x−y)).
+Electronic Journal. http://www.math.spbu.ru/diffjournal 56Differential Equations and Control Processes, N 1, 2013
+2 Green’sfunctionforlineardifferentialoperatorsinone
+variable with other boundary conditions
+InpreviouspartthecausalGreen’sfunctionwasderivedaccordingtocoeﬃcient
+functionsoflineardifferentialoperator,hereinthispartitisshownthatGreen’s
+functionofgenerallineardifferentialoperator,forotherboundaryconditionson
+[a,b](e.g. Sturm-Liouvilleproblem),canalsobederivedaccordingtocoeﬃcient
+functions of differential operator. First we note that homogeneous linear differ-
+ential equation of degree n in one variable,
+ 
+∂
+n
+x
++
+P
+n−1
+k=0
+P
+k
+(x)∂
+k
+x
+ 
+u(x) = 0, for
+initial condition ∂
+i
+x
+u(a) =c
+i
+for i = 0,1,..,n−1 can be converted to Volterra’s
+integralequationofsecondkind(see[3])as;
+ 
+μ(x)+
+R
+x
+a
+dzK(x,z)μ(z)
+ 
+= S(x),
+where K(x,z) =
+ P
+n−1
+k=0
+P
+k
+(x)
+(x−z)
+n−k−1
+(n−k−1)!
+ 
+, u(x) = D(x) +
+R
+x
+a
+dz
+(x−z)
+n−1
+(n−1)!
+μ(z),
+D(x) =
+P
+n−1
+k=0
+c
+k
+(x−a)
+k
+k!
+and S(x) = −
+P
+n−1
+i=0
+P
+i
+k=0
+c
+i
+P
+k
+(x)(x−a)
+i−k
+(i−k)!
+. Therefore we
+state the following theorem;
+Theorem 3 The solution of homogeneous linear differential equation
+ 
+∂
+n
+x
++
+P
+n−1
+k=0
+P
+k
+(x)∂
+k
+x
+ 
+u(x) = 0, where P
+i
+(x) (i = 0,1,...,n−1) are in C[a,b], with
+initial condition; ∂
+i
+x
+u(a) =c
+i
+for i = 0,1,..,n−1, is given by
+u(x)=D(x)+
+Z
+x
+a
+dzT(x,z)S(z), (20)
+where D(x) =
+n−1
+X
+k=0
+c
+k
+(x−a)
+k
+k!
+and S(x)=−
+n−1
+X
+i=0
+i
+X
+k=0
+c
+i
+P
+k
+(x)(x−a)
+i−k
+(i−k)!
+.
+It is easy to check that for boundary condition; ∂
+i
+x
+u(b) = c
+i
+for i =
+0,1,..,n−1 the answer for homogenous differential equation inC[a,b] is given
+by (20) in which a is replaced by b. One can derive solutions of homogenous
+differential equation, with speciﬁc boundary conditions on either a or b, by
+using (20). By substituting solutions of homogenous differential equation with
+suitableboundaryconditions(derivedby (20))in tothe expressionsfor Green’s
+functionsgivenbymethodofvariationofparameters,onecanderivetheGreen’s
+function according to coeﬃcient functions of differential operator. For example
+the Green’s function for Sturm-Lioville problem;
+(∂
+2
+x
+−P(x))y(x)=g(x), B.C. y(a) =y(b) = 0, (21)
+by method of variation of parameters is given by; G(x,y) = (W(y))
+−1
+ 
+u
+1
+(x)u
+2
+(y)θ(y−x)+u
+2
+(x)u
+1
+(y) θ(x−y)
+ 
+,whereu
+1
+(x)andu
+2
+(x)areanswersof
+Electronic Journal. http://www.math.spbu.ru/diffjournal 57Differential Equations and Control Processes, N 1, 2013
+correspondinghomogenousdifferentialequation,W(y)istheWronskianandwe
+haveu
+1
+(a) =u
+2
+(b) = 0. If we takeB.C.u
+1
+(a) = 0 and∂
+x
+u
+1
+(a) = 1 then accord-
+ing to (20); we have u
+1
+(x) = (x−a)+
+R
+x
+a
+dzT
+s
+(x,z)P(z)(z−a) =T
+s
+(x,a) (The
+function T
+s
+(x,y) is given by (8)). On the other hand by taking B.C. u
+2
+(b) = 0
+and ∂
+x
+u
+2
+(b) = 1 we have u
+2
+(x) = T
+s
+(x,b). The Wronskian of u
+1
+(x) and u
+2
+(x)
+is constant and can be calculated easily at point x = a as; W(y) = −T
+s
+(a,b)
+therefore;
+G(x,y) = (−T
+s
+(a,b))
+−1
+ 
+T
+s
+(x,a)T
+s
+(y,b)θ(y−x)+(x↔y)
+ 
+. (22)
+3 Conclusion
+Causal Green’s function for general linear differential operator in one variable
+wasgivenby[theorem1]as series ofintegrals. Multiplicativepropertyofcausal
+Green’s functions is shown by [theorem 2]. For differential operators which are
+equal to multiplications of ﬁrst order linear differential operators, explicit for-
+mula(15),wasgivenforcausalGreen’sfunctions. Aninﬁnitenon-abeliangroup
+of operators on a subspace ofC
+∞
+[a,b] is introduced. Analytic formula for fun-
+damental solutions of homogenous linear differential equation in one variable
+wasgivenviaequation(7)andforspeciﬁcboundaryconditionviaequation(20)
+as series of integrals. By using equation (20) and the method of variation of
+parameters a way to derive Green’s functions with arbitrary boundary condi-
+tions in one variable according to coeﬃcient functions of differential operators
+was given.
+Acknowledgements
+I acknowledge Farhang Loran for his helps and useful discussions. I dedicate
+this paper to memory of my father Iraj Kassaian.
+References
+[1] I.Stakgold,M.HolstGreen’s Functions and Boundary Value Problems
+Third edition, Wiley, 2011.
+[2] Harry Hochstadt, Integral equations, pp. 33, Wiely, 1973.
+[3] Tarjan, Lalesco, Th´ eorie Des
+´
+Equations Int´ egrales, pp. 12ff , Herman
+and ﬁls, Paris, 1912.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 58

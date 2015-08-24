@@ -1,0 +1,1251 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 3, 1998
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+ON WEAKLY NONLINEAR SHALLOW WATER
+WAVE EQUATIONS
+E.V.Krishnan and Mohamed Al-Lawatia
+Department of Mathematics and Statistics
+Sultan Qaboos University
+P.O.Box 36, Al-Khod 123
+Muscat, Sultanate of Oman
+Abstract.
+Using the method of Lie group of transformations and the direct method,
+solitarywaveandexplodedecaymodesolutionsofacombinedKdV-Boussinesq
+equation governing weakly nonlinear shallow water waves have been derived.
+1 Introduction
+Nonlinearity and dispersion are two of the most fundamental concepts in wave
+motions in nature. The nonlinear shallow water equations governed by the
+hyperbolic type lead to the wave breaking phenomena. These equations which
+neglect dispersion develop a vertical slope and a multiple-valued wave proﬁle.
+Breaking is prevented by including dispersive effects into the shallow waterDifferential Equations and Control Processes, N 3, 1998
+theory. In 1895, Korteweg and de Vries showed that long waves, in water of
+relatively shallow depth, could be described by a nonlinear equation which is
+now known as Korteweg de Vries equation
+1)
+. Periodic solutions of this equation
+were found in terms of Jacobian elliptic functions cn, known as cnoidal waves.
+The inﬁnite period counterpart of this solution is the single hump solitary wave
+solution moving with no change in shape, size and speed. Another example
+of an equation governing long waves on the surface of shallow water is the
+Boussinesq equation which include waves moving to both left and right
+2)
+.
+In this paper, we consider a combined KdV and Boussinesq equation gov-
+erning long waves in shallow water. Considering travelling wave solutions, we
+reduce the basic equations to a second order ordinary differential equation. In
+section 3, using the method of Lie group of transformations
+3,4)
+, we reduce it
+to a ﬁrst order ordinary differential equation. In section 4, we derive using
+the direct method
+5,6)
+, periodic solutions in terms of elliptic functions and the
+corresponding solitary wave and the explode decay mode solutions. In section
+5, we plot the solitary wave and the explode decay mode solutions.
+2 Weakly nonlinear shallow water equations
+We consider an inviscid and incompressible ﬂuid of constant depth h. We take
+the (x,y)− plane as the undisturbed free surface with the z− axis positive
+upward. The free surface elevation above the undisturbed depth h is z =
+η(x,y,t), so that the free surface is at z = h+η and z = 0 is the horizontal
+rigid bottom.
+If φ(x,y,z,t) is the velocity potential of an unbounded ﬂuid lying between
+the rigid bottomz = 0 and the free surfacez = η(x,y,t) as shown in the ﬁgure
+below,
+Electronic Journal.  19Differential Equations and Control Processes, N 3, 1998
+then the nonlinear system of equations for the classical water waves is,
+5
+2
+φ = 0, 0 < z < η+h, −∞ < x, y <∞, (2.1)
+φ
+t
++
+1
+2
+(5φ)
+2
++gη = 0, z = h+η, (2.2)
+η
+t
++η
+x
+φ
+x
++η
+y
+φ
+y
+−φ
+z
+= 0, z = h+η, (2.3)
+φ
+x
+h
+x
++φ
+y
+h
+y
++φ
+z
+= 0, z = 0, (2.4)
+In the linear theory of surface water waves, two parameters   =
+a
+h
+, and
+κ = ak, where a is the surface wave amplitude and k is the wave number,
+must be small. To characterize nonlinear shallow water waves, we introduce
+two fundamental parameters
+  =
+a
+h
+, δ =
+h
+2
+l
+2
+(2.5)
+where, l is a typical horizontal length like wavelength λ and the following
+non-dimensional variables:
+(x
+∗
+,y
+∗
+) =
+1
+l
+(x,y), z
+∗
+=
+z
+h
+, t
+∗
+=
+ct
+l
+, η
+∗
+=
+η
+a
+, φ
+∗
+=
+h
+alc
+φ, (2.6)
+where c =
+√
+gh is the shallow water wave speed. Using (2.5) and (2.6),
+(2.1)−(2.4) can be written, dropping the asterisks as,
+δ(φ
+xx
++φ
+yy
+)+φ
+zz
+= 0, (2.7)
+φ
+t
++
+ 
+2
+(φ
+2
+x
++φ
+2
+y
+)+
+ 
+2δ
+φ
+2
+z
++η = 0, z = 1+ η, (2.8)
+δ{η
+t
++ (φ
+x
+η
+x
++φ
+y
+η
+y
+)}−φ
+z
+= 0, z = 1+ η, (2.9)
+φ
+z
+= 0, z = 0. (2.10)
+We expand φ in terms of δ and write
+Electronic Journal.  20Differential Equations and Control Processes, N 3, 1998
+φ = φ
+0
++δφ
+1
++δ
+2
+φ
+2
++... (2.11)
+and then substitute in (2.7)−(2.9). Retaining terms upto order δ,  in (2.8)
+and δ
+2
+,  
+2
+and δ  in (2.9), we get
+φ
+0t
+−
+δ
+2
+(u
+tx
++v
+ty
+)+η+
+1
+2
+ (u
+2
++v
+2
+) = 0, (2.12)
+δ[{η
+t
++ (uη
+x
++vη
+y
+)}+(1+ η)(u
+x
++v
+y
+)] =
+δ
+2
+6
+[(5
+2
+u)
+x
++(5
+2
+v)
+y
+] (2.13)
+Differentiation of (2.12) with respect to x and then with respect to y gives
+u
+t
++ (uu
+x
++vv
+x
+)+η
+x
+−
+1
+2
+δ(u
+txx
++v
+txy
+) = 0, (2.14)
+v
+t
++ (uu
+y
++vv
+y
+)+η
+y
+−
+1
+2
+δ(u
+txy
++v
+tyy
+) = 0, (2.15)
+(2.13) can be simpliﬁed as
+η
+t
++{u(1+ η)}
+x
++{v(1+ η)}
+y
+=
+δ
+6
+{(5
+2
+u)
+x
++(5
+2
+v)
+y
+}. (2.16)
+(2.14)−(2.16) are the non-dimensional nonlinear shallow water equations.
+Considering the one-dimensional case, (2.14)−(2.16) reduce to
+u
+t
++ uu
+x
++η
+x
+−
+1
+2
+δu
+txx
+= 0, (2.17)
+η
+t
++{u(1+ η)}
+x
+−
+1
+6
+δu
+xxx
+= 0. (2.18)
+Analternativesystemequivalenttothenonlinearevolutionequations(2.17)−
+(2.18) known as Boussinesq equations can be derived from the nonlinear shal-
+low water theory, retaining both   and δ order terms with δ < 1. This system,
+in dimensional variables, is given by
+η
+t
++{(h+η)u}
+x
+= 0, (2.19)
+Electronic Journal.  21Differential Equations and Control Processes, N 3, 1998
+u
+t
++uu
+x
++gη
+x
+=
+1
+3
+h
+2
+u
+xxt
+. (2.20)
+(2.19)− (2.20) describe the evolution of long water waves that travel in
+both positive and neagative x directions. The corresponding weakly nonlinear
+shallow water equations are given by
+η
+t
++(hu)
+x
+= 0, (2.21)
+u
+t
++uu
+x
++gη
+x
+=
+1
+3
+h
+2
+u
+xxt
+. (2.22)
+3 Group invariant solutions
+We deﬁne
+hu =
+∂V
+∂t
+, η = −
+∂V
+∂x
+, (3.1)
+so that,
+∂
+2
+V
+∂t
+2
+−gh
+∂
+2
+V
+∂x
+2
++
+1
+2h
+∂
+∂x
+(
+∂V
+∂t
+)
+2
+=
+h
+2
+3
+∂
+4
+V
+∂x
+2
+∂t
+2
+. (3.2)
+Travelling wave solutions can be found by assuming z = x− Ut which
+reduces (3.2) to
+(U
+2
+−gh)
+d
+2
+V
+dz
+2
++
+U
+2
+2h
+d
+dz
+(
+dV
+dz
+)
+2
+−
+U
+2
+h
+2
+3
+d
+4
+V
+dz
+4
+= 0. (3.3)
+Integrating (3.4) once and setting
+dV
+dz
+= w, we get
+d
+2
+w
+dz
+2
+= αw
+2
++βw+γ, (3.4)
+where,
+α =
+3
+2h
+3
+, (3.5a)
+Electronic Journal.  22Differential Equations and Control Processes, N 3, 1998
+β =
+3(U
+2
+−gh)
+U
+2
+h
+2
+w, (3.5b)
+γ = −
+3B
+U
+2
+h
+2
+. (3.5c)
+We write (3.4) in the form
+w
+2
+= αw
+2
++βw +γ, (3.6)
+where,
+w
+2
+=
+d
+2
+w
+dz
+2
+. (3.7)
+Let X = ξ(z,w)
+∂
+∂z
++τ(z,w)
+∂
+∂w
+be the inﬁnitesimal generator of the one-
+parameter Lie-group of transformations, so that the invariance criterion for
+(3.6) is
+τ
+(2)
+= ατ
+2
++βτ +γ, (3.8)
+where,
+τ
+(2)
+= τ
+zz
++(2τ
+zw
+−ξ
+zz
+)w
+1
++(τ
+ww
+−2ξ
+zw
+)w
+2
+1
+−ξ
+ww
+w
+3
+1
++(τ
+w
+−2ξ
+z
+)(αw
+2
++βw+γ)
+−3ξ
+w
+w
+1
+(αw
+2
++βw+γ). (3.9)
+Here, subscripts denote differentiation with respect to the corresponding
+variables and w
+1
+=
+dw
+dz
+. The resulting set of determining equations for ξ(z,w)
+and τ(z,w) are:
+ξ
+ww
+= 0, (3.10a)
+τ
+ww
+−2ξ
+zw
+= 0, (3.10b)
+Electronic Journal.  23Differential Equations and Control Processes, N 3, 1998
+ξ
+w
+= 0, (3.10c)
+−3ξ
+w
+γ +2τ
+zw
+−ξ
+zz
+= 0, (3.10d)
+τ
+zz
++γ(τ
+w
+−2ξ
+z
+) = ατ
+2
++βτ +γ. (3.10e)
+ξ is a function of z alone from (3.10c) and (3.10a) is automatically satisﬁed.
+From (3.10b), τ
+ww
+= 0 which gives rise to
+τ = K
+1
+w+K
+2
+. (3.11)
+(3.10d) and (3.10e) give
+ξ =
+1
+2
+K
+1
+z+K
+3
+. (3.12)
+Here, K
+1
+, K
+2
+and K
+3
+are arbitrary constants. Also, (3.10e) gives rise to the
+trivial inﬁnite parameter Lie group.
+(3.11) and (3.12) give a nontrivial three-parameter Lie group of transfor-
+mations acting on (z,w)−space with inﬁnitesimal generators given by
+X
+1
+=
+1
+2
+∂
+∂z
++w
+∂
+∂w
+, X
+2
+=
+∂
+∂w
+, X
+3
+=
+∂
+∂z
+. (3.13)
+Thusthedifferentialequation(3.6)hasa3-dimensionalsolvableLie-algebra.
+Now, we reduce the second order ordinary differential equation from in-
+variance under translation (K
+3
+). Obvious invariants of the ﬁrst extension of
+z
+∗
+= z+ , w
+∗
+= w, are
+R(z,w) = w, S(z,w,w
+1
+) = w
+1
+. (3.14)
+Hence, (3.6) becomes
+SdS = (αR
+2
++βR+γ)dR. (3.15)
+Integrating (3.15),
+S
+2
+2
+=
+αR
+3
+3
++
+βR
+2
+2
++γR+μ, (3.16)
+Electronic Journal.  24Differential Equations and Control Processes, N 3, 1998
+or,
+(
+dw
+dz
+)
+2
+=
+2α
+3
+w
+3
++βw
+2
++2γw+2μ. (3.17)
+4 Solitary wave and explode decay mode solutions
+We shall consider two cases when the shallow water wave speed is the same as
+the travelling wave speed and when they are unequal.
+Case1 (U
+2
+= gh)
+When U
+2
+= gh, β = 0 and the equation (3.17) reduces to
+(
+dw
+dz
+)
+2
+=
+2α
+3
+w
+3
++2γw+2μ. (4.1)
+We assume a solution in the form
+w = A℘(z), (4.2)
+where, ℘ is the Weierstrass elliptic function which satisﬁes the well known
+differential equation
+(
+d℘
+dz
+)
+2
+= 4℘
+3
+−g
+2
+℘−g
+3
+. (4.3)
+g
+2
+and g
+3
+are known as the invariants of the Weierstrass elliptic function satis-
+fying the condition
+g
+3
+2
+−27g
+2
+3
+> 0. (4.4)
+Substituting (4.2) in (4.1) and equating the coeﬃcients of equal powers of
+℘(z), we get
+4A
+2
+=
+2α
+3
+A
+3
+, (4.5)
+−A
+2
+g
+2
+= 2γA, (4.6)
+−A
+2
+g
+3
+= 2μ. (4.7)
+Electronic Journal.  25Differential Equations and Control Processes, N 3, 1998
+(4.5)−(4.7) give rise to
+A =
+6
+α
+, (4.8)
+g
+2
+= −
+αγ
+3
+, (4.9)
+g
+3
+= −
+α
+2
+μ
+18
+. (4.10)
+Since the two invariants g
+2
+and g
+3
+satisfy (4.4), g
+2
+must always be positive
+andhenceαandγ shouldbeofoppositesigns. Thustheconstantofintegration
+B is a positive quantity.
+The condition (4.4) puts the restriction on μ as
+4γ
+3
++9αμ
+2
+< 0. (4.11)
+Therefore, the solution is
+w(z) =
+6
+α
+℘(z+ ; g
+2
+,g
+3
+), (4.12)
+where,   is an integration constant of (4.3).
+Thus the exact bounded periodic solution is
+w(z) =
+6
+α
+[e
+3
++(e
+2
+−e
+3
+)sn
+2
+(
+√
+e
+1
+−e
+3
+z+ 
+0
+)], (4.13)
+where  
+0
+is an arbitrary real constant and e
+1
+,e
+2
+,e
+3
+are real roots of the
+equation
+4y
+3
+−g
+2
+y−g
+3
+= 0, (4.14)
+with e
+1
+> e
+2
+> e
+3
+. Here, sn is the Jacobian sine elliptic function where it is
+related to the Weierstrass elliptic function by
+℘(z) = e
+3
++(e
+2
+−e
+3
+)sn
+2
+(
+√
+e
+1
+−e
+3
+z+ 
+0
+). (4.15)
+The solitary wave limits are obtained when the period is inﬁnite which
+occurs when the modulus of the Jacobian elliptic function is equal to unity.
+The modulus m and the e
+0
+s are related by
+Electronic Journal.  26Differential Equations and Control Processes, N 3, 1998
+m =
+e
+2
+−e
+3
+e
+1
+−e
+3
+, (4.16)
+and so in the solitary wave limit, e
+1
+= e
+2
+. Since, e
+1
+,e
+2
+,e
+3
+are roots of the
+cubic 4y
+3
+−g
+2
+y−g
+3
+= 0, e
+1
++e
+2
++e
+3
+= 0. So, the solitary wave solution is,
+w(z) =
+6
+α
+[e
+3
++(e
+2
+−e
+3
+)sn
+2
+(
+√
+e
+1
+−e
+3
+z+ 
+0
+)]. (4.17)
+Using (3.1), we have,
+u(x,t) = −4h
+2
+U[e
+1
+−(e
+1
+−e
+3
+)sech
+2
+{
+√
+e
+1
+−e
+3
+(x−Ut)+ 
+0
+}], (4.18)
+η(x,t) = −4h
+3
+[e
+1
+−(e
+1
+−e
+3
+)sech
+2
+{
+√
+e
+1
+−e
+3
+(x−Ut)+ 
+0
+}], (4.19)
+The corresponding explode-decay mode solutions are given by
+u(x,t) = −4h
+2
+U[e
+1
++(e
+1
+−e
+3
+)cosech
+2
+{
+√
+e
+1
+−e
+3
+(x−Ut)+ 
+0
+}], (4.20)
+η(x,t) = −4h
+3
+[e
+1
++(e
+1
+−e
+3
+)cosech
+2
+{
+√
+e
+1
+−e
+3
+(x−Ut)+ 
+0
+}], (4.21)
+Case2 (U
+2
+6= gh)
+In this case we have the equation
+(
+dw
+dz
+)
+2
+=
+2α
+3
+w
+3
++βw
+2
++2γw+2μ. (4.22)
+We assume a solution in the form
+w(z) = Ctanh
+2
+(λz), (4.23)
+where, C and λ are to be determined in terms of the coeﬃcients in (4.22).
+Substituting (4.23) in (4.22) and equating the coeﬃcients of like powers of
+tanh
+2
+(λz) on both sides of the resulting equation,
+4C
+2
+λ
+2
+=
+2α
+3
+C
+3
+, (4.24)
+Electronic Journal.  27Differential Equations and Control Processes, N 3, 1998
+−8C
+2
+λ
+2
+= βC
+2
+, (4.25)
+4C
+2
+λ
+2
+= 2γC, (4.26)
+2μ = 0. (4.27)
+From (4.24), we get C =
+6λ
+2
+α
+and λ
+2
+= −
+β
+8
+and so β should be negative
+which leads to
+U
+2
+< gh. (4.28)
+From (4.26), λ
+2
+=
+γ
+2C
+and thus the integration constant B should satisfy
+B = −
+β
+2
+U
+2
+h
+2
+16α
+. (4.29)
+In this case B is a negative quantity.
+Thus the solitary wave solution of (4.22) is
+w(z) =
+3
+2
+h(gh−U
+2
+)
+U
+2
+tanh
+2
+{
+v
+u
+u
+t
+3(gh−U
+2
+8U
+2
+h
+2
+z}. (4.30)
+Using (3.1), we have
+u(x,t) = −
+3
+2
+(gh−U
+2
+)
+U
+tanh
+2
+{
+v
+u
+u
+t
+3(gh−U
+2
+)
+8U
+2
+h
+2
+(x−Ut)}. (4.31)
+η(x,t) = −
+3
+2
+h(gh−U
+2
+)
+U
+2
+tanh
+2
+{
+v
+u
+u
+t
+3(gh−U
+2
+)
+8U
+2
+h
+2
+(x−Ut)}. (4.32)
+The corresponding explode-decay mode solutions are given by
+u(x,t) = −
+3
+2
+(gh−U
+2
+)
+U
+coth
+2
+{
+v
+u
+u
+t
+3(gh−U
+2
+)
+8U
+2
+h
+2
+(x−Ut)}. (4.33)
+η(x,t) = −
+3
+2
+h(gh−U
+2
+)
+U
+2
+coth
+2
+{
+v
+u
+u
+t
+3(gh−U
+2
+)
+8U
+2
+h
+2
+(x−Ut)}. (4.34)
+Electronic Journal.  28Differential Equations and Control Processes, N 3, 1998
+5 Numerical Results
+In case 1, β = 0. Taking h = 1 and B = 1, we have α = 1.5, γ ≈ −0.3061
+and g
+2
+≈ 0.1531. Now, g
+3
+= −
+μ
+8
+where, μ satisﬁes (4.11). For solitary wave
+solution, e
+1
+≈ 0.113, e
+2
+≈ 0.113 and e
+3
+≈ −0.226. Thus the solitary wave
+solution is given by,
+u(x,t) = −1.415+4.245sech
+2
+(0.582x−1.823t). (5.1)
+This is plotted in Fig.1.
+The corresponding explode decay mode solution is plotted in Fig.2 given by
+u(x,t) = −1.415−4.245cosech
+2
+(0.582x−1.823t). (5.2)
+In case 2, where U
+2
+< gh, we take h = 1 and U = 3. Thus the solitary
+wave solution (See Fig.3) and the corresponding explode decay mode solution
+(See Fig.4) are given respectively by
+u(x,t) = −0.4tanh
+2
+{
+x−3t
+√
+30
+}, (5.3)
+u(x,t) = −0.4coth
+2
+{
+x−3t
+√
+30
+}, (5.4)
+Electronic Journal.  29Differential Equations and Control Processes, N 3, 1998
+.
+Electronic Journal.  30Differential Equations and Control Processes, N 3, 1998
+.
+Electronic Journal.  31Differential Equations and Control Processes, N 3, 1998
+References
+1. D. J. Kortewg and G. de Vries: Phil. Mag., 39, (1895), 422.
+2. L. Debnath: Nonlinear Water Waves, Academic Press, New York, (1994).
+3. G. W. Bluman and S. Kumei: Symmetries and Differential Equations,
+Springer Verlag, New York, 81 (1989).
+4. E. V. Krishnan and B. S. Bhatt: Il Nuovo Cimento, 110B, (1995), 1177.
+5. K. Kano and T. Nakayama: J. Phys. Soc. Japan, 50, (1981), 361.
+6. L. Huibin and W. Kelin: J. Phys. A, 23, (1990), 3923.
+Electronic Journal.  32

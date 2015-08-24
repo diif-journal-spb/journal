@@ -1,0 +1,1414 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 1, 2005
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+http://www.imop.csa.ru/ diff
+e-mail: diff@osipenko.stu.neva.ru
+Ordinary differential equations
+WEAK SHADOWING PROPERTY IN
+Ω-STABLE DIFFEOMORPHISMS
+O.A.Tarakanov
+St. Petersburg State University,
+Department of Mathematics and Mechanics,
+University av., 28, 198504, St. Petersburg, RUSSIA,
+e-mail: light ln2@hotmail.com
+Abstract.
+The weak shadowing property was introduced by R.M. Corless and S.Yu.
+Pilyugin and studied by these authors, K. Sakai, O.B. Plamenevskaya and oth-
+ers. It was shown by Plamenevskaya that for omega-stable diffeomorphisms
+this property may be bount to the numerical properties of the eigenvalues of
+the hyperbolic saddle points of the diffeomorphisms.
+In this paper, we prove that if the phase diagram of an omega-stable dif-
+feomorphism of a manifold does not contain chains of length more than three,
+then it has the weak shadowing property.
+0
+This work was supported by RFBR (grant 02-01-00675) and by the Ministry of Education of Russia (grant
+A03-2.8-322).Differential Equations and Control Processes, N 1, 2005
+1 Introduction
+Theweakshadowingpropertyofdynamicalsystemswasintroducedin[1],where
+it was shown that this property is C
+0
+-generic.
+The study of the weak shadowing property for Ω-stable diffeomorphisms is
+essentially complicated: it was shown by Plamenevskaya [2] (see below) that
+this property may be bount to the numerical properties of the eigenvalues of
+hyperbolic saddle points of the diffeomorphisms.
+In this paper we prove Theorem 2.1 stating that Ω-stable diffeomorphisms
+(on manifolds of arbitrary dimension) having only “short” connections in phase
+diagrams have the weak shadowing property.
+2 Deﬁnitions and main results
+Let M be a closed smooth manifold with Riemannian metric dist. Denote by
+U(a,A) the a-neighborhood of a set A⊂M.
+Denote by Diff
+1
+(M) the space of diffeomorphisms of M with the C
+1
+topol-
+ogy. For a diffeomorphism f, we denote by O(x,f) the trajectory of x.
+A sequence ξ ={x
+k
+:k ∈Z}⊂M is called a d-pseudotrajectory of f if
+dist(f(x
+k
+),x
+k+1
+)<d, k ∈Z.
+We say that a point x∈M  -shadows the pseudotrajectory ξ if
+dist(f
+k
+(x),x
+k
+)< , k ∈Z.
+We say that a point x∈M weakly  -shadows ξ if
+ξ ⊂U( ,O(x,f)).
+Now we give deﬁnitions of the main properties which we study.
+Wesaythatadiffeomorphismf hasthe(usual) shadowing propertyif,given
+  > 0, there exists d > 0 such that any d-pseudotrajectory is  -shadowed by
+some point of M.
+We say that f has the weak shadowing property if, given  > 0, there exists
+d> 0 such that any d-pseudotrajectory is weakly  -shadowed by some point of
+M.
+Remark 2.1. Let us note that the property deﬁned above was called the ﬁrst
+weak shadowing property in [3], where the second weak shadowing property,
+Electronic Journal.  90Differential Equations and Control Processes, N 1, 2005
+“symmetric” to the ﬁrst one, was introduced: we say that f has the second
+weak shadowing property if, given   > 0, there exists d > 0 such that for any
+d-pseudotrajectory ξ of f, there is a point x such that
+O(x,f)⊂U( ,ξ).
+It was shown in [3] that any dynamical system with compact phase space has
+the second weak shadowing property, hence the study of this property in the
+context of our paper is senseless. For this reason, we use below the term “weak
+shadowing property” introduced in [1].
+Of course, if a diffeomorphism has the shadowing property, it has the weak
+shadowing property as well. An example of irrational rotation on the circle
+shows that the inverse statement does not hold.
+The following example constructed by Plamenevskaya [2] gives us useful
+information concerning weak shadowing in Ω-stable systems.
+Example. RepresentT
+2
+as the square [−2,2]×[−2,2] with identiﬁed opposite
+sides. Let g :T
+2
+→T
+2
+be a diffeomorphism with the following properties:
+(1) the nonwandering set Ω(g) of g is the union of 4 hyperbolic ﬁxed points;
+that is, Ω(g) = {p
+1
+, p
+2
+, p
+3
+, p
+4
+}, where p
+1
+is a source, p
+4
+is a sink, and p
+2
+, p
+3
+are saddles;
+(2) with respect to coordinates (v,w) ∈ [−2,2]×[−2,2], the following condi-
+tions hold:
+(2.1) p
+1
+= (1,2), p
+2
+= (1,0), p
+3
+= (−1,0), p
+4
+= (−1,2),
+(2.2) W
+u
+(p
+2
+)∪{p
+3
+} =W
+s
+(p
+3
+)∪{p
+2
+} = [−2,2]×{0},
+W
+s
+(p
+2
+) ={1}×(−2,2), W
+u
+(p
+3
+) ={−1}×(−2,2),
+where W
+s
+(p
+i
+) and W
+u
+(p
+i
+) are the stable and unstable manifolds, respectively,
+deﬁned as usual;
+(2.3) there exist neighborhoods U
+2
+, U
+3
+of p
+2
+, p
+3
+such that
+g(x) =p
+i
++D
+p
+i
+g(x−p
+i
+) if x∈U
+i
+,
+(2.4)thereexistsaneighborhoodU ofthepointz = (0,0)suchthatg(U)⊂
+U
+3
+, g
+−1
+(U)⊂U
+2
+and g
+−1
+is aﬃne on g(U),
+Electronic Journal.  91Differential Equations and Control Processes, N 1, 2005
+(2.5) the eigenvalues of D
+p
+3
+g are −μ, ν with μ > 1, 0 < ν < 1, and the
+eigenvalues of D
+p
+2
+g are −λ, κ with 0<λ< 1, κ> 1.
+It was proved in [2] that g has the weak shadowing property if and only if
+the number logλ/logμ is irrational. Note that g satisﬁes Axiom A and the no-
+cycle condition (i.e., it is Ω-stable) but does not have the shadowing property.
+Letf be an Axiom A diffeomorphism ofM. By the Smale Spectral Decom-
+position Theorem, the nonwandering set Ω(f) can be represented as a ﬁnite
+union of basic sets Ω
+i
+. Denote by W
+s
+(Ω
+i
+) and W
+u
+(Ω
+i
+) the stable and unstable
+“manifolds” of Ω
+i
+. For two different basic sets Ω
+i
+and Ω
+j
+, we write Ω
+i
+→ Ω
+j
+if
+W
+u
+(Ω
+i
+)∩W
+s
+(Ω
+j
+)6=∅.
+Let us say that the phase diagram of the diffeomorphism f contains a chain of
+length m if there exist m different basic sets Ω
+i
+1
+,...,Ω
+i
+m
+such that
+Ω
+i
+1
+→···→ Ω
+i
+m
+.
+Theorem 2.1. Assume that a diffeomorphism f satisﬁes Axiom A and
+the no-cycle condition. If its phase diagram does not contain chains of length
+m> 3, then f has the weak shadowing property.
+Note that the restriction on the lengths of chains in Theorem 2.1 is sharp:
+the Ω-stable diffeomorphism in the Plamenevskaya example has a chain p
+1
+→
+p
+2
+→ p
+3
+→ p
+4
+of length 4 in its phase diagram (and may fail to have the weak
+shadowing property).
+3 Proof of Theorem 2.1
+Let us ﬁrst introduce some notation.
+Denote byO
++
+(x,f) andO
+−
+(x,f) the positive and negative semitrajectories
+of x, respectively. Let ξ = {x
+k
+: k ∈Z} be a pseudotrajectory and let l,m be
+indices with l≤m. We denote
+ξ
+l,m
+={x
+k
+:l≤k ≤m}, ξ
+l
++
+={x
+k
+:l≤k}, ξ
+l
+−
+={x
+k
+:k ≤l},
+ξ
++
+=ξ
+0
++
+, and ξ
+−
+=ξ
+0
+−
+.
+The following three propositions are well known (Proposition 3.1 is the
+classical Birkhoff theorem, for proofs of statements similar to Propositions 3.2
+and 3.3, see [4], for example).
+Electronic Journal.  92Differential Equations and Control Processes, N 1, 2005
+Proposition 3.1. Let f be a homeomorphism of a compact topological
+space X and U be a neighborhood of its nonwandering set. Then there exists a
+positive number N such that
+card{k :f
+k
+(x) / ∈U}≤N
+for any x∈X, where cardA is the cardinality of a set A.
+In Propositions 3.2, 3.3, 3.2p and 3.3p, we assume that f is an Ω-stable
+diffeomorphismofaclosedsmoothmanifold(belowweapplythesepropositions
+both to f and f
+−1
+).
+Proposition 3.2. If Ω
+i
+is a basic set, then for any neighborhood U of Ω
+i
+we can ﬁnd its neighborhood V with the following property: if for some x ∈ V
+and m> 0, f
+m
+(x) / ∈U, then f
+m+k
+(x) / ∈V for k ≥ 0.
+Proposition 3.2. There exist neighborhoods U
+i
+of the basic sets Ω
+i
+such
+that if f
+m
+(U
+i
+)∩U
+j
+6=∅ for some m> 0, then there exist basic sets Ω
+l
+1
+,...,Ω
+l
+k
+such that
+Ω
+i
+→ Ω
+l
+1
+→···→ Ω
+l
+k
+→ Ω
+j
+.
+Obviously, these propositions have the following analogs for pseudotrajec-
+tories.
+Proposition 3.1p. Let f be a homeomorphism of a compact metric space
+X and U be a neighborhood of its nonwandering set. Then there exist positive
+numbersd,N such that ifξ ={x
+k
+}⊂X is ad-pseudotrajectory andξ
+l,m
+∩U =∅
+for some l,m with l≤m, then m−l≤N.
+Proposition 3.2p. If Ω
+i
+is a basic set, then for any neighborhood U of Ω
+i
+we
+can ﬁnd its neighborhood V and a number d> 0 with the following property: if
+ξ = {x
+k
+} is a d-pseudotrajectory of f, x
+0
+∈ V, and x
+m
+/ ∈ U for some m > 0,
+then ξ
+m
++
+∩V =∅.
+Proposition 3.3p. There exist neighborhoods U
+i
+of the basic sets Ω
+i
+and a
+number d > 0 with the following property: if ξ = {x
+k
+} is a d-pseudotrajectory
+of f such that x
+0
+∈U
+i
+and x
+m
+∈U
+j
+for some m> 0, then there exist basic sets
+Ω
+l
+1
+,...,Ω
+l
+k
+such that
+Ω
+i
+→ Ω
+l
+1
+→···→ Ω
+l
+k
+→ Ω
+j
+.
+Electronic Journal.  93Differential Equations and Control Processes, N 1, 2005
+In what follows, we assume that f is an Ω-stable diffeomorphism. We
+need the following auxiliary statement. Let us say that f has the usual shad-
+owing property on a set A if, given   > 0, there exists d > 0 such that if
+ξ = {x
+k
+} is a d-pseudotrajectory of f with ξ
+l,m
+⊂ A, then there exists x such
+that dist(x
+k
+,f
+k
+(x))<  for l≤k ≤m. Since any basic set Ω
+i
+is hyperbolic, we
+may assume that f has the usual shadowing property on all neighborhoods of
+Ω
+i
+considered below.
+Lemma. Let Ω
+i
+be a basic set and let U
+i
+be a neighborhood of Ω
+i
+such that
+U
+i
+∩Ω
+j
+=∅ for i6=j. For any positive α, there exists d> 0 with the following
+property: if ξ = {x
+k
+} is a d-pseudotrajectory of f with ξ
++
+⊂ U
+i
+, then there
+exists a point z and an open set D containing z such that
+(1) dist(x
+0
+,z)<α;
+(2) ξ
++
+⊂U(α,O
++
+(z
+0
+,f)) for any z
+0
+∈D.
+Proof. Fix arbitrary α> 0. Reducing α, if necessary, we may assume that
+U(α,U
+i
+)∩Ω
+j
+=∅
+for j 6=i. Applying the usual shadowing property on U
+i
+, let us ﬁnd d> 0 such
+that if ξ = {x
+k
+} is a d-pseudotrajectory of f with ξ
++
+⊂ U
+i
+, then there exists
+y such that dist(x
+k
+,f
+k
+(y)) < α/4 for k ≥ 0. By the choice of α, O
++
+(y,f) ⊂
+U(α,U
+i
+), hence y ∈ W
+s
+(Ω
+i
+). Thus, there exists p ∈ Ω
+i
+such that y ∈ W
+s
+(p).
+In any neighborhood of p, there is a point q such that its trajectory is dense
+in Ω
+i
+. Stable manifolds of points of a hyperbolic set depend continuously on
+the point, hence any neighborhood of y contains a point z such that O
++
+(z,f)
+is dense in Ω
+i
+.
+There exists a number K > 0 such that f
+k
+(y) ∈ U(α/4,Ω
+i
+) for k ≥ K.
+Find a point z such that
+(1) dist(f
+k
+(y),f
+k
+(z))<α/2 for 0≤k ≤K;
+(2) O
++
+(z,f) is dense in Ω
+i
+.
+There exists a numberL> 0 such that for any pointp∈ Ω
+i
+there is a point
+r ∈{f
+k
+(z) : 0≤ k ≤ L} with dist(p,r) < α/4. By the continuity of f, there is
+an open set D containing z such that Ω
+i
+⊂U(α/2,O
++
+(z
+0
+,f)) for any z
+0
+∈D.
+To complete the proof, it remains to take D so small that
+dist(f
+k
+(y),f
+k
+(z
+0
+))<α/2 for 0≤k ≤K and z
+0
+∈D.
+Electronic Journal.  94Differential Equations and Control Processes, N 1, 2005
+Remark 3.1. Let Ω
+i
+be an attractor. Fix  > 0 and ﬁnd a neighborhood U
+i
+of
+Ω
+i
+such that
+U
+i
+⊂U( /2,Ω
+i
+) (1)
+and f(U
+i
+) ⊂ U
+i
+. There exist numbers d,a > 0 (depending only on U
+i
+) such
+that if ξ ={x
+k
+} is a d-pseudotrajectory of f with x
+0
+∈U
+i
+, then ξ
++
+⊂U
+i
+, there
+is a point y ∈W
+s
+(Ω
+i
+) such that dist(f
+k
+(y),x
+k
+)< /4, and W =U(a,x
+1
+)⊂U
+i
+.
+Since points z for which O
++
+(z,f) is dense in Ω
+i
+are dense in W, the same
+reasoning as in the proof of the lemma above shows that the set
+W
+0
+={x∈W :ξ
+1
++
+⊂U( ,O
++
+(x,f))}
+is open and dense in W.
+Of course, a similar statement holds for a repeller Ω
+i
+.
+In the proof of Theorem 2.1, we have to consider d-pseudotrajectories with
+decreasing values of d. We use the same notation of points of these pseudotra-
+jectories, of their neighborhoods, etc; this will lead to no confusion.
+Let m be the maximal length of chains in the phase diagram of the con-
+sidered Ω-stable diffeomorphism f. If there are no chains of length 2, then the
+statementofourtheoremistrivial–inthiscase,f isanAnosovdiffeomorphism.
+Let us consider the case where m = 2. In this case, any basic set is either
+a repeller or an attractor. Consider a repeller Ω
+1
+and an attractor Ω
+2
+. Fix an
+arbitrary > 0. StandardreasonsshowthatthereexistneighborhoodsU
+i
+ofthe
+sets Ω
+i
+, i = 1,2, such that inclusions (1) hold, f
+−1
+(U
+1
+)⊂U
+1
+, and f(U
+2
+)⊂U
+2
+.
+The set U
+0
+2
+= f(U
+2
+)\f
+2
+(U
+2
+) is a compact subset of U
+2
+disjoint from Ω
+2
+.
+Hence, there exists a number a
+2
+∈ (0, ) and a neighborhood V
+2
+of Ω
+2
+such that
+U(a
+2
+,x)⊂U
+2
+\V
+2
+for any x∈U
+0
+2
+.
+Similarly, there exists a number a
+1
+∈ (0, ) and a neighborhood V
+1
+of Ω
+1
+such that
+U(a
+1
+,x)⊂U
+1
+\V
+1
+for any x∈U
+0
+1
+=f
+−1
+(U
+1
+)\f
+−2
+(U
+1
+).
+We may assume that these numbers and neighborhoods have also the fol-
+lowing properties. There exists a number d
+1
+> 0 such that if ξ = {x
+k
+} is
+a d
+1
+-pseudotrajectory of f and x
+m
+∈ U
+2
+, then ξ
+m
++
+⊂ U
+2
+and, in addition, if
+x
+m−1
+/ ∈U
+2
+, then
+U(a
+2
+,x
+m
+)⊂U
+2
+\V
+2
+Electronic Journal.  95Differential Equations and Control Processes, N 1, 2005
+(and similar statements hold for U
+1
+etc).
+It follows from Propositions 3.1p-3.3p that there exist numbers d
+2
+∈ (0,d
+1
+)
+and N such that if ξ ={x
+k
+} is a d
+2
+-pseudotrajectory of f, then only one of the
+following possibilities holds:
+(I) there exists a basic set Ω
+i
+such that ξ ⊂U
+i
+;
+(II) there exists a repeller Ω
+1
+and an attractor Ω
+2
+such that, for the neighbor-
+hoods described above, there exist integers l,m with 0≤m−l ≤N such
+that
+U(a
+1
+,x
+l
+)⊂U
+1
+\V
+1
+and U(a
+2
+,x
+m
+)⊂U
+2
+\V
+2
+.
+Case (I) is trivial since a basic set contains a dense trajectory (and, by
+condition (3.1), ξ belongs to the  -neighborhood of such a trajectory).
+To consider case (II), ﬁnd positive numbers a
+3
+< a
+1
+and d
+3
+< d
+2
+such that
+for any points x,y with dist(x,y) < a
+3
+and for any d
+3
+-pseudotrajectory {y
+k
+}
+with y
+0
+=y, the inequalities
+dist(f
+k
+(x),y
+k
+)<a
+2
+hold for 0≤k ≤N.
+Let ξ ={x
+k
+} be a d
+3
+-pseudotrajectory such that
+U(a
+1
+,x
+l
+)⊂U
+1
+\V
+1
+and U(a
+2
+,x
+m
+)⊂U
+2
+\V
+2
+for somel,m with 0≤m−l≤N. DenoteW
+1
+=U(a
+3
+,x
+l
+) andW
+2
+=U(a
+2
+,x
+m
+).
+The remark after the lemma implies that a
+3
+,a
+2
+,d
+3
+can be chosen in such a
+way that the sets
+W
+0
+1
+={x∈W
+1
+:ξ
+l
+−
+⊂U( ,O
+−
+(x,f))}
+and
+W
+0
+2
+={x∈W
+2
+:ξ
+m
++
+⊂U( ,O
++
+(x,f))}
+are open and dense subsets of W
+1
+and W
+2
+, respectively.
+By our choice of d
+3
+, f
+m−l
+(W
+1
+)⊂W
+2
+. Since f
+m−l
+(W
+0
+1
+) is an open and dense
+subset of f
+m−l
+(W
+1
+), there is a point x
+0
+∈f
+m−l
+(W
+0
+1
+)∩W
+0
+2
+.
+Take x =f
+l−m
+(x
+0
+). It is easy to see that
+ξ
+l
+−
+⊂N( /2,O
+−
+(x,f)), ξ
+m
++
+⊂N( /2,O
++
+(x,f)),
+Electronic Journal.  96Differential Equations and Control Processes, N 1, 2005
+and dist(f
+k−l
+(x),x
+k
+) <   for l ≤ k ≤ m, hence ξ ⊂ U( ,O(x,f)). This com-
+pletes the consideration of the case m = 2.
+Finally, we considerthe casem = 3. Fix > 0. ItfollowsfromPropositions
+3.1p – 3.3p that there exist numbers d
+0
+,N > 0 and neighborhoods U
+i
+of the
+basic sets Ω
+i
+such that inclusions (1) hold and, for any d
+0
+-pseudotrajectory
+ξ ={x
+k
+} of f, only one of the following possibilities is realized:
+(P1) there exists an index i such that ξ ⊂U
+i
+;
+(P2) there exist a repeller Ω
+i
+, an attractor Ω
+j
+, and indices l,m with l <m such
+that m−l≤N, ξ
+l
+−
+⊂U
+i
+, and ξ
+m
++
+⊂U
+j
+;
+(P3.1) there exist a repeller Ω
+i
+, a saddle basic set (i.e., a basic set that is not an
+attractor or repeller) Ω
+j
+, and indicesl,m withl <m such thatm−l≤N,
+ξ
+l
+−
+⊂U
+i
+, and ξ
+m
++
+⊂U
+j
+;
+(P3.2) there exist a saddle basic set Ω
+i
+, an attractor Ω
+j
+, and indices l,m with
+l <m such that m−l≤N, ξ
+l
+−
+⊂U
+i
+, and ξ
+m
++
+⊂U
+j
+;
+(P4) there exist a repeller Ω
+i
+, a saddle basic set Ω
+j
+, an attractor Ω
+s
+, and indices
+l,m,n,t with l < m < n < t such that m−l ≤ N, t−n ≤ N, ξ
+l
+−
+⊂ U
+i
+,
+ξ
+m,n
+⊂U
+j
+, and ξ
+t
++
+⊂U
+s
+.
+For possibilities (P1) and (P2), the proof is just the same as in the case
+m = 2.
+Let us consider possibility (P3.1) (the same reasoning is applicable for
+(P3.2)). Similarly to the proof for the case m = 2, we can ﬁnd a
+i
+,d
+1
+> 0
+such that, for any d
+1
+-pseudotrajectory ξ with x
+l
+∈ U
+i
+, W
+i
+= U(a
+i
+,x
+l−1
+) ⊂ U
+i
+.
+Afterthat, weﬁnda
+j
+∈ (0, )andd
+2
+<d
+1
+suchthatforanyd
+2
+-pseudotrajectory
+ξ with x
+l
+∈U
+i
+, x
+m
+∈U
+j
+, and 0≤m−l≤N, the inclusion
+W
+j
+=U(a
+j
+,x
+m
+)⊂f
+m−l+1
+(W
+i
+)
+and the inequalities dist(f
+k−m
+(y),x
+k
+)<  hold for any y ∈W
+j
+and l≤k ≤m.
+Applying the lemma (with α = a
+j
+), we can ﬁnd d
+3
+< d
+2
+with the following
+property: for any d
+3
+-pseudotrajectory ξ there exists an open subset D of W
+j
+such that ξ
+m
++
+⊂U( ,O
++
+(z,f)) for any z ∈D.
+Applying the remark after the lemma, we may assume that, for any d
+3
+-
+pseudotrajectory ξ, the set
+W
+0
+i
+={x∈W
+i
+:ξ
+l−1
+−
+⊂U( ,O
+−
+(x,f))}
+Electronic Journal.  97Differential Equations and Control Processes, N 1, 2005
+is open and dense in W
+i
+. Its image, f
+m−l+1
+(W
+0
+i
+), contains W
+j
+(and hence, there
+is a point x belonging to the intersection of this image with the open subset D
+of W
+j
+).
+It follows from our constructions that ξ ⊂ U( ,O(x,f)). This completes
+the consideration of possibility (P3.1).
+Finally, we have to consider possibility (P4). Fix a repeller Ω
+i
+, a saddle
+basic set Ω
+j
+, and an attractor Ω
+s
+for which there exists a d
+0
+-pseudotrajectory
+ξ and indices l,m,n,t with l < m < n < t such that m−l ≤ N, t−n ≤ N,
+ξ
+l
+−
+⊂U
+i
+, ξ
+m,n
+⊂U
+j
+, and ξ
+t
++
+⊂U
+s
+.
+We may assume that the neighborhoods U
+i
+,U
+j
+,U
+s
+satisfy inclusions (1).
+In addition, we assume that for d
+2
+-pseudotrajectories with d
+2
+< d
+1
+and for
+numbers a
+i
+,a
+s
+∈ (0, ), all of the statements similar to statements in the proof
+for the case m = 2 (II) are valid (with natural replacement of U
+1
+,U
+2
+, etc by
+U
+i
+,U
+s
+, etc).
+To be exact, we assume that if ξ is a d
+2
+-pseudotrajectory with ξ
+l
+−
+⊂ U
+i
+,
+ξ
+m,n
+⊂ U
+j
+, and ξ
+t
++
+⊂ U
+s
+, then the sets W
+i
+= U(a
+i
+,x
+l
+) and W
+s
+= U(a
+s
+,x
+t
+) are
+subsets of U
+i
+and U
+s
+, respectively, and that the sets
+W
+0
+i
+={x∈W
+i
+:ξ
+l
+−
+⊂U( ,O
+−
+(x,f))}
+and
+W
+0
+s
+={x∈W
+s
+:ξ
+t
++
+⊂U( ,O
++
+(x,f))}
+are their open and dense subsets.
+Now let us ﬁnd numbers d
+3
+< d
+2
+and a
+j
+> 0 such that, for any point x
+r
+of a d
+3
+-pseudotrajectory ξ and for any point y such that dist(y,x
+r
+) < a
+j
+, the
+inequalities
+dist(f
+k
+(y),x
+r+k
+)< min(a
+i
+,a
+s
+)
+hold if |k|≤N.
+In addition, since f has the usual shadowing property on U
+j
+and ξ
+m,n
+⊂U
+j
+,
+we may assume that there exists a point y such that dist(f
+k
+(y),x
+m+k
+)<a
+j
+for
+0≤k ≤n−m (note that the value n−m may be arbitrarily large, in contrast
+to the values m−l and t−n not exceeding N).
+Denote W
+j,1
+= U(a
+j
+,x
+m
+) and W
+j,2
+= U(a
+j
+,x
+n
+). By the choice of a
+j
+, V
+i
+=
+f
+l−m
+(W
+j,1
+) ⊂ W
+i
+and V
+s
+= f
+t−n
+(W
+j,2
+) ⊂ W
+s
+. Hence, the intersection V
+0
+i
+=
+V
+i
+∩W
+0
+i
+is open and dense in V
+i
+, and the intersection V
+0
+s
+=V
+s
+∩W
+0
+s
+is open and
+dense in V
+s
+. It follows that the image V
+0
+=f
+m−l
+(V
+0
+i
+) is open and dense in W
+j,1
+,
+and the image V
+00
+=f
+n−t
+(V
+0
+s
+) is open and dense in W
+j,2
+.
+Electronic Journal.  98Differential Equations and Control Processes, N 1, 2005
+Itremainstonotethatthepointy hasasmallneighborhoodD ⊂W
+j,1
+such
+that f
+n−m
+(D)⊂W
+j,2
+and dist(f
+k
+(x),x
+m+k
+)<  for x∈D and 0≤k ≤n−m.
+It follows from our considerations that there exists a point x ∈ D∩V
+0
+such
+that f
+n−m
+(x)⊂V
+00
+. By construction, ξ ⊂U( ,O(f,x)).
+The theorem is proved.
+Remark 3.2. Analyzing the proof of Theorem 2.1, it is easy to see that a
+similar statement holds for an Ω-stable diffeomorphism f under the following
+condition: if
+Ω
+i
+→ Ω
+l
+1
+→···→ Ω
+l
+k
+→ Ω
+j
+isachaininthephasediagramoff suchthatΩ
+i
+isarepellerandΩ
+j
+isanattrac-
+tor, then stable and unstable manifolds of points of the basic sets Ω
+l
+1
+,...,Ω
+l
+k
+are transverse.
+References
+[1] R.M. Corless and S.Yu. Pilyugin. Approximate and real trajectories for
+generic dynamical systems. J. Math. Anal. Appl, 189, 409–423 (1995).
+[2] O.B. Plamenevskaya. Weak shadowing for two-dimensional diffeomor-
+phisms. Vestnik St. Petersburg Univ. Math, 31, 49–56 (1999).
+[3] S.Yu.Pilyugin,A.A.RodionovaandK.Sakai.Orbital and weak shadowing
+properties. Discrete Contin. Dyn. Syst, 9, 287–308 (2003).
+[4] I.P. Malta. Hyperbolic Birkhoff centers. Trans. Amer. Math. Soc, 262,
+181–193 (1980).
+Electronic Journal.  99

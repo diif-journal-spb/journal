@@ -1,0 +1,1701 @@
+﻿dx
+dt
+6
+¾
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 1, 2006
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Optimal control
+Boundary Control For Cooperative Parabolic Systems
+Governed By SchrÄ odinger Operator
+G. M. BAHAA
+Mathematics Department,
+Faculty of Science,
+Beni-Suef University, Beni- Suef, Egypt
+e-mail: Bahaa
+¡
+gm @hotmail.com
+35K20, 49J20, 49K20, 93C20
+Abstract
+In this paper, we study the existence of solutions for a cooperative parabolic systems
+governed by SchrÄ odinger operator de¯ned on R
+n
+, then we discuss the optimal control of
+boundary type for this systems.
+Keywords: Cooperative parabolic systems in R
+n
+, SchrÄ odinger operator,
+Existence of solution, Boundary control, Optimality conditions.Differential Equations and Control Processes, N 1, 2006
+1 INTRODUCTION.
+Thelinearquadraticoptimalcontrolproblemdescribedbyadistributedparam-
+eter system has a variety of mechanical and technical sources and applications.
+Thefundamentalclassofoptimalcontrolsanditsmathematicalapproachescan
+be found in Lions (1971). The necessary and su±cient condition of optimality
+for systems (n£n systems) governed by different types of partial differential
+operators de¯ned on spaces of functions of in¯nitely many variables and spaces
+of in¯nite order are discussed in El-Saify & Bahaa (2001,2002a,b,2003,), Ko-
+tarski(1989,1997),Kotarski&Bahaa(2005), andKotarski&El-saify&Bahaa(
+2002a,b). Interest in the study of this class of operator is stimulated by prob-
+lems in quantum ¯eld theory. Various optimization problems associated with
+the optimal control of distributed parameter cooperative systems have been
+studied by Gali & Serag (1994,1995), Fleckinger (1981,1994) and Fleckinger &
+Serag (1995).
+We consider the following cooperative parabolic systems :
+8
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+:
+@y
+1
+@t
++(¡¢+q)y
+1
+=ay
+1
++by
+2
++f
+1
+in R
+n
+@y
+2
+@t
++(¡¢+q)y
+2
+=cy
+1
++dy
+2
++f
+2
+in R
+n
+y
+1
+=g
+1
+as jxj!1
+y
+2
+=g
+2
+as jxj!1;
+y
+1
+(x;0)=y
+1;0
+(x) in R
+n
+y
+2
+(x;0)=y
+2;0
+(x) in R
+n
+(1)
+where :
+(
+a;b;c&dare given numbers such that b;c>0
+in this case, we say that the system(1)is cooperative
+(2)
+q(x) is a positive function and tending to1at in¯nity: (3)
+In [14], Gali et al. proved the existence of optimal control for system like (1)
+with q(x) = 0 and with positive weight function. Also they found the set of
+inequalities which described the distributed control for systems (1) with q(x)=
+0 and de¯ned on bounded domain [13]. The case of semilinear cooperative
+system with q(x)=0 is discussed in [12].
+Electronic Journal.  79Differential Equations and Control Processes, N 1, 2006
+In [11] Fleckinger, obtained the necessary and su±cient conditions for hav-
+ing the maximum principle and the existence of positive solutions for coopera-
+tive system (1) which are:
+(
+a<¸(q); d<¸(q)
+(¸(q)¡a)(¸(q)¡d)>bc;
+(4)
+where ¸(q) is de¯ned later.
+Here,weshallusethesameconditions(4)toprovetheexistenceofthestate
+of our system (1); then using the theory of Lions [19], we study the existence of
+boundary control for system (1). Our model in this problem is the SchrÄ odinger
+operator.
+2 Operator equation.
+To prove the existence of the state y =fy
+1
+;y
+2
+g of system (1), we state brie°y
+some results introduced in [10] concerning the eigenvalue problem:
+(
+(¡¢+q)Á=¸(q)Á in R
+n
+Á(x)!0 as jxj!1; Á> 0:
+(5)
+The associated variational space is V
+q
+(R
+n
+), the completion of D(R
+n
+), with
+respect to the norm :
+jjyjj
+q
+=
+Ã
+Z
+R
+n
+j¢yj
+2
++qjyj
+2
+dx
+!1
+2
+:
+Since the imbedding of V
+q
+(R
+n
+) into L
+2
+(R
+n
+) is compact. Then the operator
+(¡¢+q) considered as an operator in L
+2
+(R
+n
+) is positive self-adjoint with com-
+pact inverse. Hence its spectrum consists of an in¯nite sequence of positive
+eigenvalue tending to in¯nity; moreover the smallest one which is called the
+principle eigenvalue denoted by ¸(q) is simple and is associated with an eigen-
+function which does not change sign inR
+n
+. It is characterized by:
+¸(q)
+Z
+R
+n
+jyj
+2
+dx·
+Z
+R
+n
+j¢yj
+2
++qjyj
+2
+dx 8y2V
+q
+(R
+n
+): (6)
+Now, to study our system (1) we have the embedding
+V
+q
+(R
+n
+)£V
+q
+(R
+n
+)!L
+2
+(R
+n
+)£L
+2
+(R
+n
+)
+Electronic Journal.  80Differential Equations and Control Processes, N 1, 2006
+is continuous and compact then, we de¯ne a bilinear form
+a:(V
+q
+(R
+n
+))
+2
+£(V
+q
+(R
+n
+))
+2
+!R
+by
+¼((y
+1
+;y
+2
+);(Á
+1
+;Á
+2
+))=
+1
+b
+Z
+R
+n
+[¢y
+1
+¢Á
+1
++qy
+1
+Á
+1
+]dx+
+1
+c
+Z
+R
+n
+[¢y
+2
+¢Á
+2
++qy
+2
+Á
+2
+]dx
+¡
+Z
+R
+n
+y
+1
+Á
+2
+dx¡
+d
+c
+Z
+R
+n
+y
+2
+Á
+2
+dx¡
+a
+b
+Z
+R
+n
+y
+1
+Á
+1
+dx¡
+Z
+R
+n
+y
+2
+Á
+1
+dx:
+(7)
+Itiseasytocheckthat¼ isacontinuousbilinearform; andthenbylaxMilgram
+Lemma, we have the following theorem:
+Theorem 2.1 For f
+1
+;f
+2
+2 L
+2
+(@R
+n
+), there exists a unique solution y =
+fy
+1
+;y
+2
+g2(V
+q
+(R
+n
+))
+2
+of system (1) if conditions (4) are satis¯ed.
+Proof We choose m large enough such that a+m>0 and d+m>0 and
+de¯ne on V
+q
+(R
+n
+) the equivalent norm
+jjyjj
+2
+q;m
+=
+Z
+R
+n
+[j¢yj
+2
++(m+q)jyj
+2
+]dx
+and we write (6) as:
+¼((y
+1
+;y
+2
+);(Á
+1
+;Á
+2
+))=
+1
+b
+Z
+R
+n
+[¢y
+1
+¢Á
+1
++(q+m)y
+1
+Á
+1
+]dx¡
+a+m
+b
+Z
+R
+n
+y
+1
+Á
+1
+dx
+¡
+Z
+R
+n
+y
+2
+Á
+1
+dx+
+1
+c
+Z
+R
+n
+[¢y
+2
+¢Á
+2
++(q+m)y
+2
+Á
+2
+]dx
+¡
+d+m
+c
+Z
+R
+n
+y
+2
+Á
+2
+dx¡
+Z
+R
+n
+y
+1
+Á
+2
+dx:
+Then
+¼((y
+1
+;y
+2
+);(y
+1
+;y
+2
+))=
+1
+b
+Z
+R
+n
+[j¢y
+1
+j
+2
++(q+m)jy
+1
+j
+2
+]dx¡
+a+m
+b
+Z
+R
+n
+jy
+1
+j
+2
+dx
+¡
+Z
+R
+n
+y
+1
+y
+2
+dx+
+1
+c
+Z
+R
+n
+[j¢y
+2
+j
+2
++(q+m)jy
+2
+j
+2
+]dx
+¡
+d+m
+c
+Z
+R
+n
+jy
+2
+j
+2
+dx¡
+Z
+R
+n
+y
+1
+y
+2
+dx:
+Electronic Journal.  81Differential Equations and Control Processes, N 1, 2006
+By Cauchy Schwarz inequality, we have
+¼((y
+1
+;y
+2
+);(y
+1
+;y
+2
+))¸
+1
+b
+Z
+R
+n
+[j¢y
+1
+j
+2
++(q+m)jy
+1
+j
+2
+]dx¡
+a+m
+b
+Z
+R
+n
+jy
+1
+j
+2
+dx
++
+1
+c
+Z
+R
+n
+[j¢y
+2
+j
+2
++(q+m)jy
+2
+j
+2
+]dx¡
+d+m
+c
+Z
+R
+n
+jy
+2
+j
+2
+dx
+¡2
+Ã
+Z
+R
+n
+jy
+1
+j
+2
+dx
+!1
+2
+Ã
+Z
+R
+n
+jy
+2
+j
+2
+dx
+!1
+2
+;
+from (5), we deduce
+¼((y
+1
+;y
+2
+);(y
+1
+;y
+2
+))¸
+1
+b
+Ã
+1¡
+a+m
+¸(q)+m
+!
+jjy
+1
+jj
+2
+q;m
++
+1
+c
+Ã
+1¡
+d+m
+¸(q)+m
+!
+jjy
+2
+jj
+2
+q;m
+2
+¸+m
+jjy
+1
+jj
+q;m
+jjy
+2
+jj
+q;m
+:
+If (4) holds, then
+¼((y
+1
+;y
+2
+);(y
+1
+;y
+2
+))¸C(jjy
+1
+jj
+2
+q;m
++jjy
+2
+jj
+2
+q;m
+)
+which prove the coerciveness of the bilinear form ¼. Then for f
+1
+;f
+2
+2 L
+2
+(R
+n
+),
+system (1) has a unique solution by Lax Milgram lemma.
+3 Formulation of the control problem
+The space L
+2
+(¡)£L
+2
+(¡) is the space of controls. For a control u =fu
+1
+;u
+2
+g2
+(L
+2
+(¡))
+2
+, the state y(u) =fy
+1
+(u);y
+2
+(u)g of the system is given by the solution
+of
+8
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+:
+@y
+1
+(u)
+@t
++(¡¢+q)y
+1
+(u)=ay
+1
+(u)+by
+2
+(u)+f
+1
+in R
+n
+@y
+2
+(u)
+@t
++(¡¢+q)y
+2
+(u)=cy
+1
+(u)+dy
+2
+(u)+f
+2
+in R
+n
+y
+1
+=u
+1
+as jxj!1
+y
+2
+=u
+2
+as jxj!1;
+(8)
+The observation equation is given by z(u) = fz
+1
+(u);z
+2
+(u)g = y(u) =
+fy
+1
+(u);y
+2
+(u)g. For given z
+d
+=fz
+d1
+;z
+d2
+g in (L
+2
+(R
+n
+))
+2
+; the cost function is given
+by:
+J(v)=
+Z
+R
+n
+(y
+1
+(v)¡z
+d1
+)
+2
++(y
+2
+(v)¡z
+d2
+)
+2
+dx+(Nv;v)
+(L
+2
+(¡))
+2 (9)
+Electronic Journal.  82Differential Equations and Control Processes, N 1, 2006
+where N 2L((L
+2
+(¡))
+2
+;(L
+2
+(¡))
+2
+) is hermitian positive de¯nite operator:
+(Nu;u)¸´jjujj
+2
+(L
+2
+(R
+n
+))
+2: (10)
+The control problem then is to ¯nd
+(
+u=fu
+1
+;u
+2
+g2U
+ad
+such that
+J(u)·J(v)
+(11)
+where U
+ad
+is a closed convex subset of(L
+2
+(¡))
+2
+.
+Under the given consideration, we may apply the theorem of Lions [19] to
+obtain the following result:
+Theorem 3.1 Assume that (7) and (10) hold. If the cost function is given by
+(9), then there exists an optimal control u=fu
+1
+;u
+2
+g; Moreover it is character-
+ized by the following equations and inequalities:
+8
+>
+<
+>
+:
+¡
+@p
+1
+(u)
+@t
++(¡¢+q)p
+1
+(u)¡ap
+2
+(u)¡cp
+2
+(u)=y
+1
+(u)¡z
+1d
+in R
+n
+¡
+@p
+2
+(u)
+@t
++(¡¢+q)p
+2
+(u)¡bp
+1
+(u)¡dp
+2
+(u)=y
+2
+(u)¡z
+2d
+in R
+n
+p
+1
+(u)=0 p
+2
+(u)=0 on ¡
+Z
+¡
+@p
+1
+(u)
+@º
+A
+(v
+1
+¡u
+1
+)+
+@p
+2
+(u)
+@º
+A
+(v
+2
+¡u
+2
+)d¡+(Nu;v¡u)
+(L
+2
+(¡))
+2¸0 8v2U
+ad
+together with (8), where p(u)=fp
+1
+(u);p
+2
+(u)g is the adjoint state.
+Proof
+The control u is characterized by
+J
+0
+(u)(v¡u)¸0 8u2U
+ad
+which is equivalent to
+(y(u)¡z
+d
+;y(v)¡y(u))
+(L
+2
+(R
+n
+))
+2 +(Nu;v¡u)
+(L
+2
+(¡))
+2¸0
+i.e.,
+(y
+1
+(u)¡z
+1d
+;y
+1
+(v)¡y
+1
+(u))
+L
+2
+(R
+n
+)
++(y
+2
+(u)¡z
+2d
+;y
+2
+(v)¡y
+2
+(u))
+L
+2
+(R
+n
+)
++(Nu;v¡u)
+(L
+2
+(¡))
+2¸0
+(12)
+Since (A
+¤
+P;Y)=(P;AY), where
+A(Á=fÁ
+1
+;Á
+2
+g)!AÁ=f(¡¢+q)Á
+1
+¡aÁ
+1
+¡bÁ
+2
+;(¡¢+q)Á
+2
+¡cÁ
+1
+¡dÁ
+2
+g
+Electronic Journal.  83Differential Equations and Control Processes, N 1, 2006
+for Á2(V
+0
+q
+(R
+n
+))
+2
+:
+Then
+(P;AY)=(p
+1
+;(¡¢+q)y
+1
+¡ay
+1
+¡by
+2
+)+(p
+2
+;(¡¢+q)y
+2
+¡cy
+1
+¡dy
+2
+)
+=(p
+1
+;(¡¢+q)y
+1
+)¡a(p
+1
+;y
+1
+)¡b(p
+1
+;y
+2
+)+(p
+2
+;(¡¢+q)y
+2
+)¡c(p
+2
+;y
+1
+)
+¡d(p
+2
+;y
+2
+)
+=((¡¢+q)p
+1
+;y
+1
+)¡a(p
+1
+;y
+1
+)¡c(p
+2
+;y
+1
+)+((¡¢+q)p
+2
+;y
+2
+)¡d(p
+2
+;y
+2
+)
+¡b(p
+1
+;y
+2
+)
+=((¡¢+q)p
+1
+¡ap
+1
+¡cp
+2
+;y
+1
+)+((¡¢+q)p
+2
+¡bp
+1
+¡dp
+2
+;y
+2
+)
+=(A
+¤
+P;Y)
+where
+A
+¤
+(P =fp
+1
+;p
+2
+g)!f(¡¢+q)p
+1
+¡ap
+1
+¡cp
+2
+;(¡¢+q)p
+2
+¡bp
+1
+¡dp
+2
+g
+whereA
+¤
+istheadjointforA,P istheadjointstate. ThenA
+¤
+P =Y(u)¡Z
+d
+can be written as
+¡
+@p
+1
+(u)
+@t
++(¡¢+q)p
+1
+¡ap
+1
+¡cp
+2
+=y
+1
+(u)¡z
+1d
+¡
+@p
+2
+(u)
+@t
++(¡¢+q)p
+2
+¡bp
+1
+¡dp
+2
+=y
+2
+(u)¡z
+2d
+p
+1
+(u)=p
+2
+(u)=0:
+So (12) is equivalent to
+(¡
+@p
+1
+(u)
+@t
++(¡¢+q)p
+1
+¡ap
+1
+¡cp
+2
+;y
+1
+(v)¡y
+1
+(u))+(¡
+@p
+2
+(u)
+@t
++(¡¢+q)p
+2
+¡bp
+1
+¡dp
+2
+;
+y
+2
+(v)¡y
+2
+(u))+(Nu;v¡u)
+(L
+2
+(¡))
+2¸0
+(p
+1
+(u);
+@
+@t
+(y
+1
+(v)¡y
+1
+(u))+(¡¢+q)(y
+1
+(v)¡y
+1
+(u))
+L
+2
+(R
+n
+)
+¡(
+@p
+1
+(u)
+@º
+A
+;y
+1
+(v)¡y
+1
+(u))
+L
+2
+(¡)
++
+(p
+1
+(u);
+@
+@º
+A
+(y
+1
+(v)¡y
+1
+(u))
+L
+2
+(¡)
+¡a(p
+1
+(u);y
+1
+(v)¡y
+1
+(u))¡b(p
+1
+(u);y
+2
+(v)¡y
+2
+(u))+
+(p
+2
+(u);
+@
+@t
+(y
+2
+(v)¡y
+2
+(u))+(¡¢+q)(y
+2
+(v)¡y
+2
+(u))
+L
+2
+(R
+n
+)
+¡(
+@p
+2
+(u)
+@º
+A
+;y
+2
+(v)¡y
+2
+(u))
+L
+2
+(¡)
++(p
+2
+(u);
+@
+@º
+A
+(y
+2
+(v)¡y
+2
+(u))
+L
+2
+(¡)
+¡c(p
+2
+(u);y
+1
+(v)¡y
+1
+(u))
+L
+2
+(R
+n
+)
+¡d(p
+2
+(u);
+y
+2
+(v)¡y
+2
+(u))
+L
+2
+(R
+n
+)
++(Nu;v¡u)
+(L
+2
+(¡))
+2¸0
+Electronic Journal.  84Differential Equations and Control Processes, N 1, 2006
+From (8), we obtain
+(p
+1
+(u);a(y
+1
+(v)¡y
+1
+(u))+b(y
+2
+(v)¡y
+2
+(u))+f
+1
+¡f
+1
+¡a(y
+1
+(v)¡y
+1
+(u)))
+L
+2
+(R
+n
+)
++(
+@p
+1
+(u)
+@º
+A
+;v
+1
+¡u
+1
+)
+L
+2
+(¡)
++(0;
+@
+@º
+A
+(y
+1
+(v)¡y
+1
+(u))
+L
+2
+(¡)
+¡c(p
+2
+(u);y
+1
+(v)¡y
+1
+(u))
+L
+2
+(R
+n
+)
+(p
+2
+(u);c(y
+1
+(v)¡y
+1
+(u))+d(y
+2
+(v)¡y
+2
+(u))+f
+2
+¡f
+2
+¡c(y
+1
+¡y
+1
+(u)))
+L
+2
+(R
+n
+)
++(
+@p
+2
+(u)
+@º
+A
+;v
+2
+¡u
+2
+)
+L
+2
+(¡)
++(0;
+@
+@º
+A
+(y
+2
+(v)¡y
+2
+(u))
+L
+2
+(¡)
+¡d(p
+2
+(u);y
+2
+(v)¡y
+2
+(u))
+L
+2
+(R
+n
+)
++(Nu;v¡u)
+(L
+2
+(¡))
+2¸0:
+Then we have
+(
+@p
+1
+(u)
+@º
+A
+;v
+1
+¡u
+1
+)
+L
+2
+(¡)
++(
+@p
+2
+(u)
+@º
+A
+;v
+2
+¡u
+2
+)
+L
+2
+(¡)
++(Nu;v¡u)
+(L
+2
+(¡))
+2¸0:
+i.e.,
+Z
+¡
+(
+@p
+1
+(u)
+@º
+A
+(v
+1
+¡u
+1
+)+
+@p
+2
+(u)
+@º
+A
+(v
+2
+¡u
+2
+))d¡+(Nu;v¡u)
+(L
+2
+(¡))
+2¸0 8u2U
+ad
+;v2U
+ad
+:
+Which completes the proof of the theorem.
+Remark 3.2 To study the optimal control for the scalar case
+8
+<
+:
+@y
+@t
++(¡¢+q)y =ay+f in R
+n
+y(x)=g in ¡;
+(13)
+we de¯ne a bilinear form ¼ :V
+q
+(R
+n
+)£V
+q
+(R
+n
+)!R by
+¼(y;Á)=
+Z
+R
+n
+(ryrÁ+qyÁ)dx¡a
+Z
+R
+n
+yÁdx
+As in theorem (1), we can prove ¼ is coercive if a<¸(q) and then there exists
+a unique solution of (13) for f 2 L
+2
+(R
+n
+). Therefore, the state of the system is
+given by the solution of:
+8
+<
+:
+@y
+@t
++(¡¢+q)y(u)=ay(u)+f +u in R
+n
+y(u)=u in ¡;
+(14)
+where u is given in the space L
+2
+(¡) of controls. For given z
+d
+in L
+2
+(R
+n
+), the
+cost function is given by
+J(v)=
+Z
+R
+n
+jy(v)¡z
+d
+j
+2
+dx+
+Z
+¡
+(Nv)vd¡
+Electronic Journal.  85Differential Equations and Control Processes, N 1, 2006
+where N is a given hermitian positive de¯nite operator. Then we have the
+following characterization of optimal control for this system :
+8
+<
+:
+@p(u)
+@t
++(¡¢+q)p(u)¡ap(u)=y
+1
+(u)¡z
+d
+in R
+n
+p(u)=0 in ¡;
+Z
+¡
+@p(u)
+@º
+A
+(v¡u)d¡+(Nu;v¡u)
+L
+2
+(¡)
+¸0; 8 v2U
+ad
+;
+together with (14), where p(u) is the adjoint state.
+Remark 3.3 Also it is evident that by modifying:
+- the boundary conditions,
+- the nature of the control (distributed, boundary),
+- the nature of the observation,
+- the initial differential system,
+an in¯nity of variations on the above problem are possible to study.
+Acknowledgment The author is grateful for the referees of Differential Equa-
+tion and Control Processes Electronic Journal for their fruitful comments and
+invaluable suggestions.
+REFERENCES
+[1] Bahaa, G. M.(2003) " Quadratic Pareto optimal control of parabolic
+equation with state-control constraints and an in¯nite number of variables."
+IMA Journal of Mathematical Control and Information, 20, 2, 167-178.
+[2] Bahaa, G. M.(2005)\ Time-Optimal control problem for parabolic
+equationswithcontrolconstraintsandin¯nitenumberofvariables," IMA Jour-
+nal of Mathematical Control and Information, 22, 364-375.
+[3]Bahaa, G.M.(2005)\Time-OptimalControlProblemForIn¯niteOr-
+derParabolicEquationsWithControlConstraints," Differential Equations and
+Control Processes, 4, 64-81, Electronic Journal, .
+[4] Bahaa, G. M. (2006)" Optimal control for cooperative parabolic sys-
+tems governedbySchrodinger operator with controlconstraints." IMA Journal
+of Mathematical Control and Information, 23, 4, 1-12.
+Electronic Journal.  86Differential Equations and Control Processes, N 1, 2006
+[5]El-Saify H. A., and Bahaa, G. M.(2001) "Optimal control for n£n
+systems of hyperbolic types." Revista de Mathematica Aplicadas, 22, 1&2, 41-
+58.
+[6]El-Saify, H. A. and Bahaa, G. M.(2002a)" Optimal control for n£n
+hyperbolicsystemsinvolvingoperatorsofin¯niteorder." Mathematica Slovaca,
+52, 4, 409-424.
+[7]El-Saify,H.A.,andBahaa,G.M.(2002b)"Boundarycontrolforn£
+n systems of hyperbolic types involving in¯nite order operators." Accepted for
+oral in the second International Conference of Mathematics, Islamic University
+, Gaza, Palastin, Editor. M. S. Al-Atrash, 26-28 Augusts. .
+[8]El-Saify, H. A. and Bahaa, G. M. (2003) "Optimal control for n£n
+coupledsystemsgovernedbyPetrowskytypeequationswithcontrol-constrained
+and in¯nite number of variables"Mathematica Slovaca, 53, 291-311.
+[9]El-Saify,H.A.,Serag,H.M,andBahaa,G.M.(2000)"Onoptimal
+control for n£n elliptic system involving operators with an in¯nite number of
+variables." Advances in Modelling & Analysis, 37, 4, 47-61.
+[10]Fleckinger, J.,(1981) " Estimates of the number of eigenvalues for an
+operator of Schrodinger type." Proceedings of the Royal Society of Edinburg,
+89A, 355-361.
+[11]Fleckinger, J.,(1994)" Method of sub-super solutions for some elliptic
+systems de¯ned onR
+n
+." Preprint UMR MIP, Universite Toulouse, 3.
+[12]Fleckinger, J., andSerag, H.(1995)"Semilinearcooperativeelliptic
+systems onR
+n
+."Rendiconti Di Mathematica Seri. VII, 15 , Roma , 89-108.
+[13] Gali, I. M. and Serag, H. (1994) " Distributed control of coop-
+erative elliptic systems." Accepted for presentation at the UAB-Georgia Tech
+International Conference on Differential Equations and Mathematical Physics,
+Birmingham, Alabama, USA, March 13-19.
+[14] Gali, I. M. and Serag, H.,(1995)" Optimal control of cooperative
+elliptic systems onR
+n
+." Journal of Egyptian Mathematics Society, 13, 33-39.
+[15]Kotarski, W. (1997)" Some problems of optimal and Pareto opti-
+mal control for distributed parameter systems."Reports of Silesian University,
+No.1668, Katowice, Poland, 1-93.
+Electronic Journal.  87Differential Equations and Control Processes, N 1, 2006
+[16] Kotarski, W., and Bahaa, G. M.(2005) \Optimal control prob-
+lem for in¯nite order hyperbolic system with mixed control-state constraints"
+European Journal of Control, 11, 2 , 150-156.
+[17]Kotarski, W., El-Saify, H. A. and Bahaa, G. M. (2002a) "Op-
+timal control of parabolic equation with an in¯nite number of variables for
+non-standard functional and time delay." IMA Journal of Mathematical Con-
+trol and Information, 19, 4, 461-476.
+[18]Kotarski, W., El-Saify, H. A. and Bahaa, G. M.,(2002b) " Op-
+timal control problem for a hyperbolic system with mixed control-state con-
+straints involving operator of in¯nite order." International Journal of Pure and
+Applied Mathematics, 1, 3, 241-254.
+[19] Lions, J. L.(1971) \Optimal Control of Systems Governed by
+Partial Differential Equations," Springer-Verlag, Band, 170.
+Electronic Journal.  88

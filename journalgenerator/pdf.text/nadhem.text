@@ -1,0 +1,8966 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 1, 2013
+Electronic Journal,
+reg. N C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Ordinary differential equations
+Rational solutions of Riccati differential equation
+with coe cients rational
+Nadhem ECHI
+Universit  e de Tunis El Manar, B.P. 37,
+1002-TUNIS Belv  ed  ere, Tunisie.
+E-mail address: nadhemechi fsg@yahoo.fr
+Abstract
+This paper presents a simple and e cient method for determining the solution of Riccati differ-
+ential equation with coe cients rational. In case the differential Galois group of the differential
+equation (E
+l
+) : y
+00
+= ry; r2 C(x) is reducible, we look for the rational solutions of Riccati
+differential equation 
+0
++ 
+2
+=r, by reducing the number of check to be made and by accelerat-
+ing the search for the partial fraction decomposition of the solution reserved for the poles of  
+which are false poles of r. This partial fraction decomposition of solution can be used to code
+r. The examples demonstrate the effectiveness of the method.
+1 Introduction
+The quadratic Riccati differential equation :
+(E
+R
+) : 
+0
+=p
+2
+ 
+2
++p
+1
+  +p
+0
+(1)
+where p
+0
+; p
+1
+and p
+2
+are in a differential  eld K; p
+2
+6= 0. The quadratic Riccati differential
+equation is  rst converted to a reduced Riccati differential equation :
+(E
+r
+) : 
+0
++ 
+2
+=r (2)
+where :   = p
+2
+  
+1
+2
+a, with a =
+p
+0
+2
+p
+2
++p
+1
+and r =
+1
+4
+a
+2
+ 
+1
+2
+a
+0
+ p
+2
+p
+0
+.
+Furthermore, we put:
+y
+0
+y
+= , reduced Riccati differential equation (2) is converted to a second-
+order linear ordinary differential equation :
+(E
+l
+) :y
+00
+=ry (3)Differential Equations and Control Processes, N 1, 2013
+If we have a particular solution non-zero of (E
+l
+) then general solution is : y = cu where
+c
+0
+=
+ 
+u
+2
+;   constant (see[ 6,9,14]).
+In paper, we base ourselves mainly on the work of J.J. Kova~ ci  c [9] where differential Galois
+group of the differential equation (E
+l
+) is reducible and we take : K =C(X).
+In case where every solution of (E
+l
+) is Liouvillian corresponds to the case where reduced
+Riccati differential equation (E
+r
+) have algebraic solution over K. The case where differential
+Galois group is reducible corresponds to the case where the Riccati differential equation (E
+r
+)
+have the rational solution
+u
+0
+u
+u solution of (E
+l
+). The solution u of (E
+l
+) is rational fraction if
+only if
+u
+0
+u
+the fraction of simples poles with the integers residues and negative degree.
+The  eldC(X)[u] is differential extension ofC(X) by exponential of an integral and if v
+0
+=
+1
+u
+2
+then (u;v) two solutions of (E
+l
+) linearly independent over  eld of constants C. The ordinary
+extension C(X)[u;v] is differential extension of C(X)[u], by a integral. C(X)[u;v] is Picard-
+Vessiot extension of C(X)[u] for the differential equation(E
+l
+)(see[8-9-10]). The existence of
+rational solution
+u
+0
+u
+of Riccati differential equation (E
+r
+) given all solutions of (E
+r
+) of course
+research primitive of
+1
+u
+2
+.
+This paper presents a simple and e cient method for determining the solution of Riccati
+differential equation with coe cients rational. In case the differential Galois group of the
+differential equation (E
+l
+) :y
+00
+=ry; r2C(x) is reducible, we look for the rational solutions of
+Riccati differential equation  
+0
++ 
+2
+= r, by reducing the number of check to be made and by
+accelerating the search for the partial fraction decomposition of the solution reserved for the
+poles of  which are false poles ofr. This partial fraction decomposition of solution can be used
+to code r. The examples demonstrate the effectiveness of the method.
+2 Form of rational solution of equation : (E
+r
+)
+Let r2C(x) r6= 0 rational fraction and  2C(x) the rational solution of Riccati differential
+equation (E
+r
+) :  
+0
++ 
+2
+=r.
+2.1 Study in the pole c of multiplicity   of  
+We put:
+  =
+ 
+(x c)
+ 
+; where  (c)6= 0
+We have :
+r = 
+0
++ 
+2
+= (x c)
+ 2 
+[(  
+ 
+2
+(x c)
+  1
+)
+2
+ 
+ 
+2
+4
+(x c)
+2  2
++ 
+0
+(x c)
+ 
+]
+Thus :
+(  
+ 
+2
+(x c)
+  1
+)
+2
+= (x c)
+2 
+r + (x c)
+ 
+[
+ 
+2
+4
+(x c)
+  2
+  
+0
+]
+1. Case 1 :    2
+The function (x c)
+2 
+r de ne and equal  (c)
+2
+at c.
+Thus c is pole of multiplicity 2  of r where :
+lim
+x!c
+(x c)
+2 
+r = (lim
+x!c
+(x c)
+ 
+ )
+2
+Electronic Journal. http://www.math.spbu.ru/diffjournal 2Differential Equations and Control Processes, N 1, 2013
+2. Case 2 :   = 1
+We have:
+(  
+1
+2
+)
+2
+= (x c)
+2
+r +
+1
+4
+  (x c) 
+0
+The function (x c)
+2
+r de ne and equal  (c)( (c)  1) at c.
+Situation 1 : lim
+x!c
+(x c)
+2
+r6= 0; 
+1
+4
+c is double pole of r and the residue  (c) of   at c have tow possibility values following :
+( (c) 
+1
+2
+)
+2
+= lim
+x!c
+(x c)
+2
+r +
+1
+4
+Thus, c is double pole of r and the residue of   at simple pole c equal:
+ (c) =ff
+c
++
+1
+2
+where
+ff
+2
+c
+= lim
+x!c
+(x c)
+2
+r +
+1
+4
+Situation 2 : lim
+x!c
+(x c)
+2
+r = 
+1
+4
+c is double pole of r and the residue of   at c is
+1
+2
+.
+Situation 3 : lim
+x!c
+(x c)
+2
+r = 0
+c is simple pole of r or not pole of r and the residue of   at simple pole c equal 1.
+Proposition 1 Let  2C(x) such as :  
+0
++ 
+2
+=r.
+1. The fraction : r =
+N
+D
+with N and D polynomials relatively prime.
+D =D
+1
+D
+2
+2
+D
+2
+3
+D
+2
+4
+(4)
+where D
+1
+; D
+2
+; D
+3
+and D
+4
+polynomials relatively prime pair-wise. D
+1
+; D
+2
+and D
+3
+which
+simples roots, D
+4
+without simple root.
+8c2Root(D
+2
+) lim
+x!c
+(x c)
+2
+r = 
+1
+4
+, 8c2Root(D
+3
+) lim
+x!c
+(x c)
+2
+r6= 
+1
+4
+2. (a) Let    2. c pole of multiplicity   of  ,c2Root(D
+4
+)
+(b) c simple pole of   with residue6= 1;
+1
+2
+,c2Root(D
+3
+)
+The residue of   there c equal ff
+c
++
+1
+2
+where
+ff
+2
+c
+= lim
+x!c
+(x c)
+2
+r +
+1
+4
+(5)
+(c) c simple pole of   with residue =
+1
+2
+,c2Roots(D
+2
+)
+(d) c simple pole of  with residue = 1,c2Roots(D
+1
+) orc pole of  and false pole ofr
+Corollary 2 We assume that r =
+N
+D
+with N and D polynomials relatively prime, D =
+D
+1
+D
+2
+2
+D
+2
+3
+D
+2
+4
+where D
+1
+; D
+2
+; D
+3
+and D
+4
+polynomials relatively prime pair-wise, D
+1
+; D
+2
+and
+D
+3
+which simples roots, D
+4
+without simple root.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 3Differential Equations and Control Processes, N 1, 2013
+8c2Root(D
+2
+) lim
+x!c
+(x c)
+2
+r = 
+1
+4
+, 8c2Root(D
+3
+) lim
+x!c
+(x c)
+2
+r6= 
+1
+4
+A rational fraction   Verify  
+0
++ 
+2
+=r is the shape :
+  =E( ) +
+X
+c2Roots(D
+4
+)
+ 
+c
++
+X
+c2Roots(D
+3
+)
+ff
+c
++
+1
+2
+x c
++
+1
+2
+D
+0
+2
+D
+2
++
+D
+0
+1
+D
+1
++
+D
+0
+0
+D
+0
+(6)
+with D
+0
+monic polynomial which simples roots and the roots are false poles of r.
+2.2 Study in the in nity
+Let: t2C(x); t6= 0 rational fraction such as :
+dt
+dx
++t
+2
+= 0.
+case 1 : We assume that : d
+o
+( )< 0
+We have : d
+o
+( 
+0
+)< 0 and d
+o
+( 
+2
+)< 0 thus : d
+o
+(r)< 0:
+We put:
+  =t (t)   rational fraction defined at 0:
+We have:
+ (0) = lim
+x!1
+x  =sum the residues of  ;
+r = 
+0
++ 
+2
+= ( 
+2
+  )t
+2
+  
+0
+t
+3
+and lim
+x!1
+x
+2
+r = (0)
+2
+  (0)
+Thus : d
+o
+r   2 and ( (0) 
+1
+2
+)
+2
+= lim
+x!1
+x
+2
+r +
+1
+4
+If : lim
+x!1
+x
+2
+r = 
+1
+4
+then the sum of residues of   :  (0) =
+1
+2
+If : lim
+x!1
+x
+2
+r6= 
+1
+4
+then the sum of residues of   :  (0) =ff
+1
++
+1
+2
+where
+ff
+2
+1
+= lim
+x!1
+x
+2
+r +
+1
+4
+(7)
+case 2 : We assume that: d
+o
+( ) = 0.
+E( ) constant6= 0. We put :
+  =E( ) +t (t);   rational fraction defined at 0:
+We have:
+ (0) = lim
+x!1
+x(  E( )) = the sum of residues of  
+and
+r =  
+0
++ 
+2
+= (E( ))
+2
++ 2E( )t  + ( 
+2
+  )t
+2
+  
+0
+t
+3
+So E(r) constant equal E( )
+2
+:
+2E( )[ sum the residues of  ] = sum the residues of r
+case 3 : We assume that: d
+o
+( )> 0
+We put :
+  =d
+o
+( )  1 and   =t
+  
+ (t)
+  rational fraction de ned at 0 . The scalar (0) is the dominant coe cient ofE( ). We have :
+r = 
+0
++ 
+2
+=t
+ 2 
+[ 
+2
++ t
+ +1
+  t
+ +2
+ 
+0
+]
+Electronic Journal. http://www.math.spbu.ru/diffjournal 4Differential Equations and Control Processes, N 1, 2013
+Thus:
+t
+2 
+r = (0)
+2
++o(t)
+So : d
+o
+r = 2  = 2d
+o
+  and  
+2
+(o) the dominant coe cient of E(r).
+Proposition 3 Let:  2C(x) such as :  
+0
++ 
+2
+=r.
+1. d
+o
+( )< 0 , d
+o
+(r)< 0. Thus : d
+o
+(r)  2 and :
+the sum of residues of   =
+8
+>
+<
+>
+:
+1
+2
+if lim
+x!1
+x
+2
+r = 
+1
+4
+ff
+1
++
+1
+2
+if lim
+x!1
+x
+2
+r6= 
+1
+4
+2. d
+o
+( ) = 0 ,d
+o
+(r) = 0. In the case : E( ) is square root of E(r) :
+2E( )(sum of residues of  ) = sum of residues of r
+= lim
+x!1
+x(r E(r))
+3. We have : d
+o
+( )> 0 , d
+o
+(r)> 0. In the case :
+(a) d
+o
+(r) = 2d
+o
+( )
+(b) The dominant coe cient of E( ) is square root of E(r)
+2.3 Determination of E( ); d
+o
+(r) = 2  > 0
+We assume that r is a rational fraction of degree 2  > 0 and  2C(x) such as :  
+0
++ 
+2
+=r.
+Let a the dominant coe cient of E(r). Thus: r ax
+2 
+if x tend to1:
+t
+2 
+E(r)
+a
+= 1 +a
+1
+t +::: +a
+2 
+t
+2 
+The Taylor's expansion of order   + 1 at 0 :
+(t
+2 
+E(r)
+a
+)
+1
+2
+= 1 +s
+1
+t +::: +s
+ +1
+t
+ +1
++o(t
+ +1
+)
+We have :
+t
+2 
+r = t
+2 
+E(r) +o(t
+2 
+)
+= t
+2 
+E(r) +o(t
+ +1
+)
+= a[(
+t
+2 
+E(r)
+a
+)
+1
+2
+]
+2
++o(t
+ +1
+)
+We have:   = t
+  
+ (t) with   rational fraction de ned at 0 ,  (0)
+2
+=a and
+(  +
+ 
+2
+t
+ +1
+)
+2
+= t
+2 
+r +
+ 
+2
+4
+t
+2 +2
++t
+ +2
+ 
+0
+= a[ 1 +s
+1
+t +::: +s
+ +1
+t
+ +1
+]
+2
++o(t
+ +1
+)
+  +
+ 
+2
+t
+ +1
+=  (0)[ 1 +s
+1
+t +::: +s
+ +1
+t
+ +1
+] +o(t
+ +1
+)
+Thus :
+  = t
+  
+  =  (0)[ t
+  
++s
+1
+t
+ (  1)
++::: +s
+ +1
+t] 
+ 
+2
+t +o(t)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 5Differential Equations and Control Processes, N 1, 2013
+Imply :
+8
+>
+<
+>
+:
+E( ) =  (0)[ t
+  
++s
+1
+t
+ (  1)
++::: +s
+ 
+]
+ (0)s
+ +1
+ 
+ 
+2
+= sum of residues of  
+Proposition 4 Let r is a rational fraction of degree 2  > 0;  2 C(x) such as :  
+0
++ 
+2
+= r
+and a the dominant coe cient of E(r). If :
+(t
+2 
+E(r)
+a
+)
+1
+2
+= 1 +s
+1
+t +::: +s
+ +1
+t
+ +1
++o(t
+ +1
+) (8)
+Then :
+E( ) = ff[ t
+  
++s
+1
+t
+ (  1)
++::: +s
+ 
+] (9)
+ffs
+ +1
+ 
+ 
+2
+= sum of residues of   (10)
+where
+ff
+2
+=a (11)
+3 Determination of partial fraction decomposition
+Letr =
+N
+D
+rational fraction withN andD polynomials relatively prime,D =D
+1
+D
+2
+2
+D
+2
+3
+D
+2
+4
+where
+D
+1
+; D
+2
+; D
+3
+et D
+4
+polynomials relatively prime pair-wise,D
+1
+; D
+2
+andD
+3
+which simples roots,
+D
+4
+without simple root.
+8c2Root(D
+2
+) lim
+x!c
+(x c)
+2
+r = 
+1
+4
+,8c2Root(D
+3
+) lim
+x!c
+(x c)
+2
+r6= 
+1
+4
+Let  2C(x) rational fraction Verify :  
+0
++ 
+2
+=r
+3.1 Case d
+o
+D
+3
+= 0 and d
+o
+D
+4
+= 0
+We have : r =
+N
+D
+1
+D
+2
+2
+This case corresponds to the fact that one pole c of r is or simple or double with:
+lim
+x!c
+(x c)
+2
+r = 
+1
+4
+Proposition 5 We assume d
+o
+r< 0 and d
+o
+D
+3
+=d
+o
+D
+4
+= 0. We have :
+lim
+x!1
+x
+2
+r +
+1
+4
+= (
+q
+2
+)
+2
+with q positive integer of parity against that of d
+o
+D
+2
+  =
+1
+2
+D
+0
+2
+D
+2
++
+D
+0
+1
+D
+1
++
+D
+0
+0
+D
+0
+(12)
+with D
+0
+polynomial of degree :
+d
+o
+D
+0
+=
+1
+2
+(q + 1 d
+o
+D
+2
+) d
+o
+D
+1
+(13)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 6Differential Equations and Control Processes, N 1, 2013
+Proof. We have :
+  =
+1
+2
+D
+0
+2
+D
+2
++
+D
+0
+1
+D
+1
++
+D
+0
+0
+D
+0
+Sum of residues of   equal
+1
+2
+d
+o
+D
+2
++d
+o
+D
+1
++d
+o
+D
+0
+=ff
+1
++
+1
+2
+with ff
+2
+1
+= lim
+x!1
+x
+2
+r +
+1
+4
+. In particular : ff
+1
+=
+q
+2
+with q2N
+Remark : if lim
+x!1
+x
+2
+r = 
+1
+4
+then: d
+o
+D
+2
+= 1; d
+o
+D
+1
+=d
+o
+D
+0
+= 0;   =
+1
+2
+1
+(x c)
+and r = 
+1
+4(x c)
+2
+ 
+Proposition 6 : We assume d
+o
+r = 0 and d
+o
+D
+3
+=d
+o
+D
+4
+= 0.
+1. E( ) square root of E(r) such as p =
+1
+E( )
+lim
+x!1
+x[r E(r)] positive integer of same parity
+as d
+o
+D
+2
+.
+2. We have :
+  =E( ) +
+1
+2
+D
+0
+2
+D
+2
++
+D
+0
+1
+D
+1
++
+D
+0
+0
+D
+0
+(14)
+with D
+0
+polynomial of degree:
+d
+o
+D
+0
+=
+1
+2
+p d
+o
+D
+1
+ 
+1
+2
+d
+o
+D
+2
+(15)
+Proof. We have :
+  = E( ) +
+1
+2
+D
+0
+2
+D
+2
++
+D
+0
+1
+D
+1
++
+D
+0
+0
+D
+0
+We have:
+2E( )sum of residues( ) = sum of residues(r) = lim
+x!1
+x[r E(r)]
+2E( )[
+1
+2
+d
+o
+D
+2
++d
+o
+D
+1
++d
+o
+D
+0
+] = lim
+x!1
+x[r E(r)]
+Thus :
+d
+o
+D
+2
++ 2d
+o
+D
+1
++ 2d
+o
+D
+0
+=
+1
+E( )
+lim
+x!1
+x[r E(r)]
+If r constant then D
+1
+=D
+2
+=D
+0
+= 1 and   constant.
+If r non-constant then r is not polynomial thus :
+p =
+1
+E( )
+lim
+x!1
+x[r E(r)]
+positive integer of same parity as d
+o
+D
+2
+.  
+Proposition 7 :
+We assume d
+o
+r = 2  > 0 and d
+o
+D
+3
+=d
+o
+D
+4
+= 0
+Let a the dominant coe cient of E(r) and we consider the Taylor's expansion at in nity :
+(t
+2 
+E(r)
+a
+)
+1
+2
+= 1 +s
+1
+t +::: +s
+ +1
+t
+ +1
++o(t
+ +1
+) (16)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 7Differential Equations and Control Processes, N 1, 2013
+1.
+4as
+2
+ +1
+=p
+2
+(17)
+where p positive integer, p d
+o
+D
+2
++ 2d
+o
+D
+1
++  and same parity of d
+o
+D
+2
++ 2d
+o
+D
+1
++ .
+2. We have :
+  =E( ) +
+1
+2
+D
+0
+2
+D
+2
++
+D
+0
+1
+D
+1
++
+D
+0
+0
+D
+0
+(18)
+with D
+0
+polynomial of degree :
+d
+o
+D
+0
+=
+p   d
+o
+D
+2
+2
+ d
+o
+D
+1
+(19)
+and ff the dominant coe cient of E( ) where :
+p = 2ffs
+ +1
+(20)
+Proof. We have :
+E( ) =ff[t
+  
++s
+1
+t
+ (  1)
++:: +s
+ 
+]
+ffs
+ +1
+ 
+ 
+2
+=sum of residues of 
+  = E( ) +
+1
+2
+D
+0
+2
+D
+2
++
+D
+0
+1
+D
+1
++
+D
+0
+0
+D
+0
+Thus:
+1
+2
+d
+o
+D
+2
++d
+o
+D
+1
++d
+o
+D
+0
+=ffs
+ +1
+ 
+ 
+2
+ffs
+ +1
+=
+p
+2
+with p positive integer. Thus: p  d
+o
+D
+2
++ 2d
+o
+D
+1
++  and same parity of d
+o
+D
+2
++
+2d
+o
+D
+1
++ .  
+3.2 Case: D
+3
+= X c and d
+o
+D
+4
+= 0
+This case corresponds to the fact that a pole of r is simple or double with a only double pole
+c such as :
+lim
+x!c
+(x c)
+2
+r6= 
+1
+4
+(21)
+r =
+N
+D
+1
+D
+2
+2
+(x c)
+2
+(22)
+Proposition 8 : Consider the Eq. (22) and let  2C(x) rational fraction Verify :  
+0
++ 
+2
+=r
+We assume : d
+o
+r< 0. Accordingly, in view of (5) and (7) we have :
+  =
+ff
+c
++
+1
+2
+x c
++
+1
+2
+D
+0
+2
+D
+2
++
+D
+0
+1
+D
+1
++
+D
+0
+0
+D
+0
+(23)
+with D
+0
+polynomial of degree :
+d
+o
+D
+0
+=   
+1
+2
+d
+o
+D
+2
+ d
+o
+D
+1
+(24)
+where
+  =ff
+1
+ ff
+c
+(25)
+one half positive integer of same parity as d
+o
+D
+2
+.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 8Differential Equations and Control Processes, N 1, 2013
+Proof. We have :
+lim
+x!1
+x  =ff
+c
++
+1
+2
++
+1
+2
+d
+o
+D
+2
++d
+o
+D
+1
++d
+o
+D
+0
+(ff
+c
++
+1
+2
+d
+o
+D
+2
++d
+o
+D
+1
++d
+o
+D
+0
+)
+2
+= lim
+x!1
+x
+2
+r +
+1
+4
+=ff
+2
+1
+Thus:
+1
+2
+d
+o
+D
+2
++d
+o
+D
+1
++d
+o
+D
+0
+=ff
+1
+  ff
+c
+ 
+Proposition 9 : Consider the Eq. (22) and let  2C(x) rational fraction Verify :  
+0
++ 
+2
+=r
+We assume : d
+o
+r = 0. We have :
+  =E( ) +
+ff
+c
++
+1
+2
+x c
++
+1
+2
+D
+0
+2
+D
+2
++
+D
+0
+1
+D
+1
++
+D
+0
+0
+D
+0
+(26)
+with E
+2
+( ) =E(r) and D
+0
+polynomial of degree :
+d
+o
+D
+0
+=
+1
+2
+  
+1
+2
+d
+o
+D
+2
+ d
+o
+D
+1
+ 
+1
+2
+(27)
+where
+  =
+1
+E( )
+lim
+x!1
+x[r E(r)]  2ff
+c
+(28)
+  is positive integer of parity against that of d
+o
+D
+2
+.
+Proof. We have :
+2E( )[ff
+c
++
+1
+2
++
+1
+2
+d
+o
+D
+2
++d
+o
+D
+1
++d
+o
+D
+0
+] = lim
+x!1
+x[r E(r)]
+Thus
+1 +d
+o
+D
+2
++ 2d
+o
+D
+1
++ 2d
+o
+D
+0
+=
+1
+E( )
+lim
+x!1
+x[r E(r)]  2ff
+c
+ 
+Proposition 10 : Consider the Eq. (22) and let 2C(x) rational fraction Verify :  
+0
++ 
+2
+=r
+We assume : d
+o
+r = 2  > 0. Let a the dominant coe cient of E(r), ff the dominant coe cient
+of E( ), t =
+1
+x
+and Taylors expansion :
+(t
+2 
+E(r)
+a
+)
+1
+2
+= 1 +s
+1
+t +::: +s
+ +1
+t
+ +1
++o(t
+ +1
+)
+We have :
+  =E( ) +
+ff
+c
++
+1
+2
+x c
++
+1
+2
+D
+0
+2
+D
+2
++
+D
+0
+1
+D
+1
++
+D
+0
+0
+D
+0
+(29)
+D
+0
+polynomial of degree :
+d
+o
+D
+0
+=ffs
+ +1
+ ff
+c
+ 
+1 +  +d
+o
+D
+2
+2
+ d
+o
+D
+1
+and ff
+2
+=a (30)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 9Differential Equations and Control Processes, N 1, 2013
+Proof. We have :
+E( ) =ff[t
+  
++s
+1
+t
+ (  1)
++:: +s
+ 
+]
+and
+ffs
+ +1
+ 
+ 
+2
+=sum of residues of  
+Thus :
+  =E( ) +
+ff
+c
++
+1
+2
+x c
++
+1
+2
+D
+0
+2
+D
+2
++
+D
+0
+1
+D
+1
++
+D
+0
+0
+D
+0
+ffs
+ +1
+ 
+ 
+2
+=ff
+c
++
+1
+2
++
+1
+2
+d
+o
+D
+2
++d
+o
+D
+1
++d
+o
+D
+0
+Thus :
+d
+o
+D
+0
+=ffs
+ +1
+ ff
+c
+ 
+1 +  +d
+o
+D
+2
+2
+ d
+o
+D
+1
+ 
+3.3 Case : (d
+o
+D
+3
+6= 0 and d
+o
+D
+4
+6= 0) or (d
+o
+D
+3
+  2 and d
+o
+D
+4
+= 0)
+D
+1
+D
+2
+2
+and D
+3
+D
+4
+polynomials relatively prime. Thus there are two only polynomials N
+1
+and
+N
+2
+such as :
+(
+D
+1
+D
+2
+2
+D
+2
+3
+D
+2
+4
+(r E(r)) =N
+1
+(D
+1
+D
+2
+2
+) +N
+2
+(D
+3
+D
+4
+)
+d
+o
+N
+1
+< d
+o
+(D
+3
+D
+4
+)
+Thus
+r =E(r) +
+N
+1
+D
+2
+3
+D
+2
+4
++
+N
+2
+D
+1
+D
+2
+2
+D
+3
+D
+4
+(31)
+We have :
+d
+o
+(
+N
+1
+D
+2
+3
+D
+2
+4
+) =d
+o
+(
+N
+1
+D
+3
+D
+4
+1
+D
+3
+D
+4
+)<d
+o
+(
+1
+D
+3
+D
+4
+)  2 (32)
+Because D
+4
+does not have simple roots verify : d
+o
+D
+4
+= 0 or d
+o
+D
+4
+  2. Thus: d
+o
+(D
+3
+D
+4
+)  2.
+Thus :
+lim
+x!1
+x
+2
+N
+1
+D
+2
+3
+D
+2
+4
+= 0 (33)
+d
+o
+(r E(r))< 0 (34)
+d
+o
+(
+N
+2
+D
+1
+D
+2
+2
+D
+3
+D
+4
+)< 0 (35)
+We consider the rational fraction :
+F =E(r) +
+N
+1
+D
+2
+3
+D
+2
+4
+   (36)
+where
+  =
+1
+4
+[
+1
+k
+(
+D
+0
+3
+D
+3
+)
+2
++ (
+1
+k
++ 1)(
+D
+0
+3
+D
+3
+)
+0
+] (37)
+k =d
+o
+D
+3
+6= 0 (38)
+Proposition 11 : We assume
+(
+d
+o
+D
+3
+6= 0
+d
+o
+D
+4
+6= 0
+or
+(
+d
+o
+D
+3
+  2
+d
+o
+D
+4
+= 0
+Electronic Journal. http://www.math.spbu.ru/diffjournal 10Differential Equations and Control Processes, N 1, 2013
+1. If : d
+o
+r   0 then : d
+o
+F = d
+o
+r and E(F ) =E(r)
+2. If : d
+o
+r< 0 then : d
+o
+F = 2 where lim
+x!1
+x
+2
+F =
+1
+4
+.
+3. For all c root of D
+3
+we have:
+lim
+x!c
+(x c)
+2
+F = lim
+x!c
+(x c)
+2
+r +
+1
+4
+4. For all c root of D
+4
+of multiplicity   we have:
+(x c)
+2 
+r = (x c)
+2 
+F +o((x c)
+  1
+)
+Proof.
+1. r F =
+N
+2
+D
+1
+D
+2
+2
+D
+3
+D
+4
++  is from negative degree.
+2. lim
+x!1
+x
+2
+F = lim
+x!1
+x
+2
+N
+1
+D
+2
+3
+D
+2
+4
+  lim
+x!1
+x
+2
+  =  lim
+x!1
+x
+2
+  =
+1
+4
+3. Let c root of D
+3
+.
+lim
+x!1
+(x c)
+2
+(r F ) = lim
+x!c
+N
+2
+D
+1
+D
+2
+2
+D
+4
+(x c)
+2
+D
+3
++ lim
+x!c
+(x c)
+2
+ 
+= lim
+x!c
+(x c)
+2
+  = 
+1
+4
+4. Let c root of D
+4
+.
+(x c)
+2 
+(r F ) =
+N
+2
+D
+1
+D
+2
+2
+D
+3
+(x c)
+2 
+D
+4
++ (x c)
+2 
+ 
+= o((x c)
+  1
+)
+ 
+Lemma 12 Let Z be non-zero rational fraction .   is a  nished set such as :
+ \ [Roots(Z)[poles(Z)] =; (39)
+1. ExistsO open connected on which we have a square root holomorphic ofZ, containing for
+every c2   a half-right closed by origin c.
+2. If, besides, Z is from even degree then can choose O of complementary compact.
+Proof. We  x c
+0
+not an element of  . Let  
+0
+a  nished set containing roots, poles of Z and
+c
+0
+. They consider all rights linked to the different pairs of points of  [  
+0
+.They choose a point
+w not being on these rights. For all c2  [  
+0
+, which joins right w in c does not contain any
+other point of  [  
+0
+.
+case 1 : d
+o
+Z even : Replacing Z by rational fraction:
+Z
+(x c
+0
+)
+d
+o
+Z
+.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 11Differential Equations and Control Processes, N 1, 2013
+Assume d
+o
+Z = 0. We put: K =
+[
+c2 
+0
+[w;c].K is compact connected.
+We put: O =CnK. O is open at in nity such as for all c2   reaching right w in c private of
+w is contained in O.
+If  a shoelace of O then K is in one connected component ofCn. Thus :
+1
+2i 
+Z
+
+Z
+0
+Z
+(x)dx = 
+X
+c2 
+0
+residue(
+Z
+0
+Z
+;c) = d
+o
+Z = 0
+Thus exist the primitive of
+Z
+0
+Z
+and the determination of logarithm of Z and the square root of
+Z in O.
+case 2 : d
+o
+Z odd : They use the previous case in replacing Z by rational fraction
+Z
+(x c
+0
+)
+.  
+Notation: We choose a square root of the polynomial of even degree : N
+1
++D
+2
+3
+D
+2
+4
+[E(r)  ]
+on a connected open at in nity, roots of D
+3
+and root of D
+4
+. We put :
+(F )
+1
+2
+=
+1
+D
+3
+D
+4
+(N
+1
++D
+2
+3
+D
+2
+4
+[E(r)  ])
+1
+2
+(40)
+Proposition 13 : We assume
+(
+d
+o
+D
+3
+6= 0
+d
+o
+D
+4
+6= 0
+or
+(
+d
+o
+D
+3
+  2
+d
+o
+D
+4
+= 0
+We have:
+  =E( )+
+X
+c2Root(D
+3
+)[Root(D
+4
+)
+"
+c
+(partial fractionof(F )
+1
+2
+atc)+
+1
+2
+(D
+2
+D
+3
+D
+4
+)
+0
+D
+2
+D
+3
+D
+4
++
+D
+0
+1
+D
+1
++
+D
+0
+0
+D
+0
+(41)
+where "
+c
+= 1
+Proof. For c root of multiplicity    2 of D
+4
+((x c)
+ 
+  
+ 
+2
+(x c)
+  1
+)
+2
+= ((x c)
+ 
+(F )
+1
+2
+)
+2
++o((x c)
+  1
+)
+Thus :
+(x c)
+ 
+  
+ 
+2
+(x c)
+  1
+="
+c
+(x c)
+ 
+(F )
+1
+2
++o((x c)
+  1
+)
+  
+ 
+2(x c)
+="
+c
+(F )
+1
+2
++o(
+1
+x c
+)
+Polar part of  , associated in root c of (D
+4
+), minus
+ 
+2(x c)
+, is in sign meadows that of (F )
+1
+2
+.
+For c root of D
+3
+:
+[(residue of   at c) 
+1
+2
+]
+2
+= lim
+x!c
+((x c)(F )
+1
+2
+)
+2
+Thus:
+[(residue of   at c) 
+1
+2
+] ="
+c
+(residue of (F )
+1
+2
+at c)
+Polar part of  , associated in root c of (D
+3
+), minus
+1
+2(x c)
+, is in sign meadows that of (F )
+1
+2
+.
+Thus :
+  =E( ) +
+X
+c2Root(D
+3
+)[Root(D
+4
+)
+"
+c
+(partial fraction of(F )
+1
+2
+at c) +
+1
+2
+(D
+2
+D
+3
+D
+4
+)
+0
+D
+2
+D
+3
+D
+4
++
+D
+0
+1
+D
+1
++
+D
+0
+0
+D
+0
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal 12Differential Equations and Control Processes, N 1, 2013
+Proposition 14 : We assume: d
+o
+r< 0 and
+(
+d
+o
+D
+3
+6= 0
+d
+o
+D
+4
+6= 0
+or
+(
+d
+o
+D
+3
+  2
+d
+o
+D
+4
+= 0
+We have:
+  =
+X
+c2Root(D
+3
+)[Root(D
+4
+)
+"
+c
+(partial fraction of(F )
+1
+2
+at c) +
+1
+2
+(D
+2
+D
+3
+D
+4
+)
+0
+D
+2
+D
+3
+D
+4
++
+D
+0
+1
+D
+1
++
+D
+0
+0
+D
+0
+(42)
+where D
+0
+polynomial of degree :
+[
+X
+c2Roots(D
+3
+)[Roots(D
+4
+)
+"
+c
+(residue of ((F )
+1
+2
+atc)+
+1
+2
+d
+o
+(D
+2
+D
+3
+D
+4
+)+d
+o
+D
+1
++d
+o
+D
+0
+ 
+1
+2
+]
+2
+= lim
+x!1
+x
+2
+r+
+1
+4
+(43)
+Proof. We have:
+lim
+x!1
+x  =
+X
+c2Roots(D
+3
+)[Roots(D
+4
+)
+"
+c
+(residue of ((F )
+1
+2
+at c) +
+1
+2
+d
+o
+(D
+2
+D
+3
+D
+4
+) +d
+o
+D
+1
++d
+o
+D
+0
+and lim
+x!1
+x
+2
+r +
+1
+4
+= ( lim
+x!1
+x  
+1
+2
+)
+2
+. Thus :
+[
+X
+c2Roots(D
+3
+)[Z  eros(D
+4
+)
+"
+c
+residueof (F )
+1
+2
+atc)+
+1
+2
+d
+o
+(D
+2
+D
+3
+D
+4
+)+d
+o
+D
+1
++d
+o
+D
+0
+ 
+1
+2
+]
+2
+= lim
+x!1
+x
+2
+r+
+1
+4
+ 
+Proposition 15 : We assume d
+o
+r = 0. We have:
+  =E( )+
+X
+c2Root(D
+3
+)[Root(D
+4
+)
+"
+c
+(partial fractionof(F )
+1
+2
+atc)+
+1
+2
+(D
+2
+D
+3
+D
+4
+)
+0
+D
+2
+D
+3
+D
+4
++
+D
+0
+1
+D
+1
++
+D
+0
+0
+D
+0
+(44)
+where E
+2
+( ) =E(r) and D
+0
+polynomial of degree :
+d
+o
+D
+0
+=
+1
+2E( )
+lim
+x!1
+x[r E(r)]  [
+X
+c2R(D
+3
+)[R(D
+4
+)
+"
+c
+(residueof (F )
+1
+2
+atc) +
+1
+2
+d
+o
+(D
+2
+D
+3
+D
+4
+) +d
+o
+D
+1
+]
+(45)
+Proof.
+E
+2
+( ) =E(r) and 2E( )
+X
+c
+residue of   at c =
+X
+c
+residue of r at c
+Thus:
+2E( )[
+X
+c2R(D
+3
+)[R(D
+4
+)
+"
+c
+(residueof (F )
+1
+2
+atc) +
+1
+2
+d
+o
+(D
+2
+D
+3
+D
+4
+) +d
+o
+D
+1
++d
+o
+D
+0
+] = lim
+x!1
+x(r E(r))
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal 13Differential Equations and Control Processes, N 1, 2013
+Proposition 16 : We assume d
+o
+r = 2  > 0. We have:
+  =E( )+
+X
+c2Root(D
+3
+)[Root(D
+4
+)
+"
+c
+(partial fractionof(F )
+1
+2
+atc)+
+1
+2
+(D
+2
+D
+3
+D
+4
+)
+0
+D
+2
+D
+3
+D
+4
++
+D
+0
+1
+D
+1
++
+D
+0
+0
+D
+0
+(46)
+where D
+0
+polynomial of degree :
+d
+o
+D
+0
+=ffs
+ +1
+ 
+ 
+2
+  [
+X
+c2Roots(D
+3
+)[Roots(D
+4
+)
+"
+c
+(residueof (F )
+1
+2
+atc) +
+1
+2
+d
+o
+(D
+2
+D
+3
+D
+4
+) +d
+o
+D
+1
+] (47)
+Proof. Let a dominant coe cient of E(r), and we have :
+ffs
+ +1
+ 
+ 
+2
+= sum of residues of  .
+  =E( ) +
+X
+c2Z  eros(D
+3
+)[Z  eros(D
+4
+)
+"
+c
+(partial fraction of (F )
+1
+2
+at c) +
+1
+2
+(D
+2
+D
+3
+D
+4
+)
+0
+D
+2
+D
+3
+D
+4
++
+D
+0
+1
+D
+1
++
+D
+0
+0
+D
+0
+Thus :
+ffs
+ +1
+ 
+ 
+2
+= [
+X
+c2R(D
+3
+)[R(D
+4
+)
+"
+c
+(residue of (F )
+1
+2
+at c) +
+1
+2
+d
+o
+(D
+2
+D
+3
+D
+4
+) +d
+o
+D
+1
++d
+o
+D
+0
+]
+Thus:
+d
+o
+D
+0
+=ffs
+ +1
+ 
+ 
+2
+  [
+X
+c2R(D
+3
+)[R(D
+4
+)
+"
+c
+(residue of (F )
+1
+2
+at c) +
+1
+2
+d
+o
+(D
+2
+D
+3
+D
+4
+) +d
+o
+D
+1
+]
+ 
+3.4 Case d
+o
+D
+3
+= 0 and d
+o
+D
+4
+6= 0
+D
+1
+D
+2
+2
+and D
+4
+polynomials relatively prime. Thus there are two only polynomials N
+1
+and N
+2
+such as :
+(
+D
+1
+D
+2
+2
+D
+2
+3
+D
+2
+4
+(r E(r)) =N
+1
+(D
+1
+D
+2
+2
+) +N
+2
+D
+4
+d
+o
+N
+1
+< d
+o
+D
+4
+We have :
+r =E(r) +
+N
+1
+D
+2
+4
++
+N
+2
+D
+1
+D
+2
+2
+D
+4
+(48)
+lim
+x!1
+x
+2
+N
+1
+D
+2
+4
+= 0 (49)
+We consider the rational fraction :
+F =E(r) +
+N
+1
+D
+2
+4
+ 
+1
+4d
+o
+D
+4
+(
+D
+0
+4
+D
+4
+)
+0
+(50)
+Proposition 17 : We assume
+(
+d
+o
+D
+3
+= 0
+d
+o
+D
+4
+6= 0
+1. If : d
+o
+r   0 then : d
+o
+F = d
+o
+r and E(F ) =E(r)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 14Differential Equations and Control Processes, N 1, 2013
+2. If : d
+o
+r< 0 then : d
+o
+F = 2 where lim
+x!1
+x
+2
+F =
+1
+4
+.
+3. For all c root of D
+4
+of multiplicity   we have:
+(x c)
+2 
+r = (x c)
+2 
+F +o((x c)
+  1
+)
+Proof.
+1. r F =
+N
+2
+D
+1
+D
+2
+2
+D
+4
++
+1
+4d
+o
+D
+4
+(
+D
+0
+4
+D
+4
+)
+0
+is from negative degree.
+2.
+lim
+x!1
+x
+2
+F = lim
+x!1
+N
+1
+D
+2
+4
+  lim
+x!1
+x
+2
+1
+4d
+o
+D
+4
+(
+D
+0
+4
+D
+4
+)
+0
+=   lim
+x!1
+x
+2
+1
+4d
+o
+D
+4
+(
+D
+0
+4
+D
+4
+)
+0
+=
+1
+4
+3. Let c root of D
+4
+:
+(x c)
+2 
+(r F ) =
+N
+2
+D
+1
+D
+2
+2
+(x c)
+2 
+D
+4
++ (x c)
+2  1
+4d
+o
+D
+4
+(
+D
+0
+4
+D
+4
+)
+0
+= o((x c)
+  1
+)
+ 
+Notation: We choose a square root of the polynomial of even degree : N
+1
++ D
+2
+4
+[E(r) 
+1
+4d
+o
+D
+4
+(
+D
+0
+4
+D
+4
+)
+0
+] on a connected open at in nity, root of D
+4
+. We put :
+(F )
+1
+2
+=
+1
+D
+4
+(N
+1
++D
+2
+4
+[E(r) 
+1
+4d
+o
+D
+4
+(
+D
+0
+4
+D
+4
+)
+0
+])
+1
+2
+(51)
+Proposition 18 : We assume : d
+o
+r< 0. We have :
+  =
+X
+c2Roots(D
+4
+)
+"
+c
+(partial fraction of (F )
+1
+2
+at c) +
+1
+2
+(D
+2
+D
+4
+)
+0
+D
+2
+D
+4
++
+D
+0
+1
+D
+1
++
+D
+0
+0
+D
+0
+(52)
+where "
+c
+= 1 and D
+0
+polynomial of degree :
+[
+X
+c2Root(D
+4
+)
+"
+c
+(residue of ((F )
+1
+2
+at c) +
+1
+2
+d
+o
+(D
+2
+D
+4
+) +d
+o
+D
+1
++d
+o
+D
+0
+ 
+1
+2
+]
+2
+= lim
+x!1
+x
+2
+r +
+1
+4
+(53)
+Proof.
+lim
+x!1
+x  =
+X
+c2Roots(D
+4
+)
+"
+c
+(residue of ((F )
+1
+2
+at c) +
+1
+2
+d
+o
+(D
+2
+D
+4
+) +d
+o
+D
+1
++d
+o
+D
+0
+lim
+x!1
+x
+2
+r +
+1
+4
+= ( lim
+x!1
+x  
+1
+2
+)
+2
+. Thus :
+[
+X
+c2Roots(D
+4
+)
+"
+c
+residue of (F )
+1
+2
+at c) +
+1
+2
+d
+o
+(D
+2
+D
+4
+) +d
+o
+D
+1
++d
+o
+D
+0
+ 
+1
+2
+]
+2
+= lim
+x!1
+x
+2
+r +
+1
+4
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal 15Differential Equations and Control Processes, N 1, 2013
+Proposition 19 : We assume d
+o
+r = 0. We have :
+  =E( ) +
+X
+c2Roots(D
+4
+)
+"
+c
+(partial fraction of (F )
+1
+2
+at c) +
+1
+2
+(D
+2
+D
+4
+)
+0
+D
+2
+D
+4
++
+D
+0
+1
+D
+1
++
+D
+0
+0
+D
+0
+(54)
+where "
+c
+= 1 and D
+0
+polynomial of degree :
+d
+o
+D
+0
+=
+1
+2E( )
+lim
+x!1
+x[r E(r)]  [
+X
+c2Roots(D
+4
+)
+"
+c
+(residue of (F )
+1
+2
+at c) +
+1
+2
+d
+o
+(D
+2
+D
+4
+) +d
+o
+D
+1
+]
+(55)
+Proof.
+E
+2
+( ) =E(r) and 2E( )
+X
+c
+residue of   at c =
+X
+c
+residue of r at c
+Thus :
+2E( )[
+X
+c2Roots(D
+4
+)
+"
+c
+(residue of (F )
+1
+2
+at c) +
+1
+2
+d
+o
+(D
+2
+D
+4
+) +d
+o
+D
+1
++d
+o
+D
+0
+] = lim
+x!1
+x(r E(r))
+ 
+Proposition 20 We assume d
+o
+r = 2  > 0. We have :
+  =E( ) +
+X
+c2Roots(D
+4
+)
+"
+c
+(partial fraction of (F )
+1
+2
+at c) +
+1
+2
+(D
+2
+D
+4
+)
+0
+D
+2
+D
+4
++
+D
+0
+1
+D
+1
++
+D
+0
+0
+D
+0
+(56)
+where "
+c
+= 1 and D
+0
+polynomial of degree :
+d
+o
+D
+0
+=ffs
+ +1
+ 
+ 
+2
+  [
+X
+c2Roots(D
+4
+)
+"
+c
+(residue of (F )
+1
+2
+at c) +
+1
+2
+d
+o
+(D
+2
+D
+4
+) +d
+o
+D
+1
+] (57)
+Proof. Let a dominant coe cient of E(r). E( ) = ff[t
+  
++s
+1
+t
+ (  1)
++:: +s
+ 
+]. ffs
+ +1
+ 
+ 
+2
+=
+sum residue of  , where ff
+2
+=a. Thus :
+  =E( ) +
+X
+c2Roots(D
+4
+)
+"
+c
+(partial fraction of (F )
+1
+2
+at c) +
+1
+2
+(D
+2
+D
+4
+)
+0
+D
+2
+D
+4
++
+D
+0
+1
+D
+1
++
+D
+0
+0
+D
+0
+Thus:
+ffs
+ +1
+ 
+ 
+2
+= [
+X
+c2Roots(D
+4
+)
+"
+c
+(residue of (F )
+1
+2
+at c) +
+1
+2
+d
+o
+(D
+2
+D
+4
+) +d
+o
+D
+1
++d
+o
+D
+0
+]
+Thus :
+d
+o
+D
+0
+=ffs
+ +1
+ 
+ 
+2
+  [
+X
+c2Roots(D
+4
+)
+"
+c
+(residue of (F )
+1
+2
+at c) +
+1
+2
+d
+o
+(D
+2
+D
+4
+) +d
+o
+D
+1
+]
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal 16Differential Equations and Control Processes, N 1, 2013
+4 Recurrent method at in nity
+4.1 Presentation of D
+0
+as determinant:
+Proposition 21 : Let : c
+1
+;:::;c
+m
+complexes constants . We put :
+P (x) = (x c
+1
+)::: (x c
+m
+)
+= x
+m
+ p
+1
+x
+m 1
++p
+2
+x
+m 2
+ ::: + ( 1)
+m
+p
+m
+(58)
+For j2N; we put :  
+j
+=c
+j
+1
++::: +c
+j
+m
+and   =
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1 c
+1
+: : c
+m 1
+1
+1 c
+2
+: : c
+m 1
+2
+: :
+: :
+1 c
+m
+: : c
+m 1
+m
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1.
+ 
+2
+=
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+0
+ 
+1
+: :  
+m 1
+ 
+1
+ 
+2
+: :  
+m
+: :
+: :
+ 
+m 1
+ 
+m
+: :  
+2m 2
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(59)
+2.
+ 
+2
+P (x) =
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+0
+: :  
+m 1
+1
+: : x
+: : :
+: : :
+ 
+m
+: :  
+2m 1
+x
+m
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(60)
+Proof.  ;
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+0
+ 
+1
+: :  
+m 1
+ 
+1
+ 
+2
+: :  
+m
+: :
+: :
+ 
+m 1
+ 
+m
+: :  
+2m 2
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+polynomials at c
+1
+;:::;c
+m
+with real coe cients. Thus,
+ 
+2
+P (x) and
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+0
+: :  
+m 1
+1
+: : x
+: : :
+: : :
+ 
+m
+: :  
+2m 1
+x
+m
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+polynomials at c
+1
+;:::;c
+m
+;x with real coe cients. Thus to
+have both identities we can assumec
+1
+;:::;c
+m
+;x reals. Furthermore, we can content themselves
+with the open of Zariski c
+1
+;:::;c
+m
+;x distinct real non-zero.
+We have:8j = 1;:::;m; c
+m
+j
+=p
+1
+c
+m 1
+j
+ p
+2
+c
+m 2
+j
+ :::  ( 1)
+m
+p
+m
+.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 17Differential Equations and Control Processes, N 1, 2013
+We put:
+ (x) =
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1 c
+1
+: : c
+m 1
+1
+c
+m
+1
+1 c
+2
+: : c
+m 1
+2
+c
+m
+2
+: :
+: : :
+1 c
+m
+: : c
+m 1
+m
+c
+m
+m
+1 x : : x
+m 1
+x
+m
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ (x) =
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1 c
+1
+: : c
+m 1
+1
+0
+1 c
+2
+: : c
+m 1
+2
+0
+: : :
+: : :
+1 c
+m
+: : c
+m 1
+m
+0
+1 x : : x
+m 1
+P (x)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+=  P (x)
+We put:
+v
+j
+=
+0
+B
+B
+B
+@
+c
+j 1
+1
+:
+:
+c
+j 1
+m
+1
+C
+C
+C
+A
+; pour j = 1;:::;m
+The scalar product:
+<v
+j
+; v
+k
+> = c
+j+k 2
+1
++::: +c
+j+k 2
+m
+=  
+j+k 2
+Matrix of Gram of v
+1
+;:::;v
+m
+is:
+G =
+0
+B
+B
+B
+B
+B
+@
+ 
+0
+ 
+1
+: :  
+m 1
+ 
+1
+ 
+2
+: :  
+m
+: :
+: :
+ 
+m 1
+ 
+m
+: :  
+2m 2
+1
+C
+C
+C
+C
+C
+A
+Thus :
+ 
+2
+=
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+0
+ 
+1
+: :  
+m 1
+ 
+1
+ 
+2
+: :  
+m
+: :
+: :
+ 
+m 1
+ 
+m
+: :  
+2m 2
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+We put : v
+j
+(x) =
+0
+B
+B
+B
+B
+B
+@
+c
+j 1
+1
+:
+:
+c
+j 1
+m
+x
+j 1
+1
+C
+C
+C
+C
+C
+A
+; j = 1;:::;m + 1. We notice:
+<v
+j
+(x); v
+k
+(x)> = <v
+j
+; v
+k
+> +x
+j+k 2
+=  
+j+k 2
++x
+j+k 2
+Electronic Journal. http://www.math.spbu.ru/diffjournal 18Differential Equations and Control Processes, N 1, 2013
+The j-th column of matrix of Gram of matrix de nes  (x) is :
+0
+B
+B
+B
+B
+B
+@
+ 
+j 1
+ 
+j
+:
+:
+ 
+j+m 1
+1
+C
+C
+C
+C
+C
+A
++x
+j 1
+0
+B
+B
+B
+B
+B
+@
+1
+x
+:
+:
+x
+m
+1
+C
+C
+C
+C
+C
+A
+Thus :
+ 
+2
+(x) =
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+0
+ 
+1
+: :  
+m
+ 
+1
+ 
+2
+: :  
+m+1
+: :
+: :
+ 
+m
+ 
+m+1
+: :  
+2m
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
++
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1  
+1
+: :  
+m
+x  
+2
+: :  
+m+1
+: :
+: :
+x
+m
+ 
+m+1
+: :  
+2m
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
++::: +
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+0
+:  
+m 1
+x
+m
+ 
+1
+:  
+m
+x
+m+1
+: :
+: :
+ 
+m
+:  
+2m 1
+x
+2m
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+=
+X
+i;j
+x
+i+j 2
+cofactor
+i;j
+(M)
+where
+M =
+0
+B
+B
+B
+B
+B
+@
+ 
+0
+ 
+1
+: :  
+m
+ 
+1
+ 
+2
+: :  
+m+1
+: :
+: :
+ 
+m
+ 
+m+1
+: :  
+2m
+1
+C
+C
+C
+C
+C
+A
+We obtain :  
+2
+(x) =  
+2
+P
+2
+(x) = (1 x:::x
+m
+)Com(M)
+0
+B
+B
+B
+B
+B
+@
+1
+x
+:
+:
+x
+m
+1
+C
+C
+C
+C
+C
+A
+.
+The cofactor (m + 1; m + 1) of M is  
+2
+. The adjoint of M is non-zero.
+We prove that adjoint of M of rank 1.
+det(M) = 0. Because :  
+m
+=p
+1
+ 
+m 1
+ p
+2
+ 
+m 2
+ :::  ( 1)
+m
+p
+m
+ 
+0
+et8k m;  
+k
+=p
+1
+ 
+k 1
+ p
+2
+ 
+k 2
+ :::  ( 1)
+m
+p
+m
+ 
+k m
+Thus, the (m+1)-th column of M is is a linear combination of other column.
+We consider the matrix: E
+1;1
+=
+0
+B
+B
+B
+@
+1 0 : 0
+0 :
+: :
+0 : : 0
+1
+C
+C
+C
+A
+.
+M +E
+1;1
+=
+0
+B
+B
+B
+B
+B
+@
+ 
+0
++ 1  
+1
+: :  
+m
+ 
+1
+ 
+2
+: :  
+m+1
+: :
+: :
+ 
+m
+ 
+m+1
+: :  
+2m
+1
+C
+C
+C
+C
+C
+A
+and
+Electronic Journal. http://www.math.spbu.ru/diffjournal 19Differential Equations and Control Processes, N 1, 2013
+det(M +E
+1;1
+) = det(M) +
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1  
+1
+: :  
+m
+0  
+2
+: :  
+m+1
+: :
+: :
+0  
+m+1
+: :  
+2m
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+=
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2
+ 
+3
+: :  
+m+1
+ 
+3
+ 
+4
+: :  
+m+2
+: :
+: :
+ 
+m+1
+ 
+m+2
+: :  
+2m
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+It is the determinant of Gram of
+0
+B
+B
+B
+@
+c
+1
+:
+:
+c
+m
+1
+C
+C
+C
+A
+;:::;
+0
+B
+B
+B
+@
+c
+m
+1
+:
+:
+c
+m
+m
+1
+C
+C
+C
+A
+.
+Thus:
+det(M +E
+1;1
+) =
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+c
+1
+: : : c
+m
+1
+: : : :
+: :
+: :
+c
+m
+: : : c
+m
+m
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2
+But:
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+c
+1
+: : : c
+m
+1
+: : : :
+: :
+: :
+c
+m
+: : : c
+m
+m
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+= ( 1)
+m 1
+p
+m
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+c
+1
+: : : c
+m 1
+1
+1
+: : : : 1
+: :
+: :
+c
+m
+: : : c
+m 1
+m
+1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+=p
+m
+ 
+Thus : det(M +E
+1;1
+) =p
+2
+m
+ 
+2
+. Orp
+m
+=c
+1
+:::c
+m
+is scalar non-zero,M +E
+1;1
+is invertible matrix.
+M symmetric matrix, Com(M) symmetric matrix, we have :
+MCom(M) =Com(M)M = det(M)I = 0; I matrice identit  e
+Thus:
+(M +E
+1;1
+)Com(M) = E
+1;1
+Com(M)
+Or M +E
+1;1
+is invertible and Com(M)6= 0; Com(M) of rank 1.
+Thus :
+cofactor
+i;j
+(M) =
+cofactor
+i;m+1
+(M)
+cofactor
+m+1;m+1
+(M)
+cofactor
+m+1;j
+(M)
+For i = 1;:::;m + 1; j = 1;:::;m + 1, we put : C
+i;j
+=cofactor
+i;j
+(M).
+C
+i;j
+ 
+2
+=
+C
+i;m+1
+ 
+2
+C
+m+1;j
+ 
+2
+Thus:
+P (x)
+2
+=
+X
+1 i;j m+1
+C
+i;j
+ 
+2
+x
+i+j 2
+=
+X
+1 i;j m+1
+C
+i;m+1
+ 
+2
+C
+j;m+1
+ 
+2
+x
+i+j 2
+= (
+X
+1 i m+1
+C
+i;m+1
+ 
+2
+x
+i 1
+)
+2
+Electronic Journal. http://www.math.spbu.ru/diffjournal 20Differential Equations and Control Processes, N 1, 2013
+Or P is monic polynomial and :
+C
+m+1;m+1
+ 
+2
+= 1
+P (x) =
+X
+i
+C
+i;m+1
+ 
+2
+x
+i 1
+=
+1
+ 
+2
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+0
+: : :  
+m 1
+1
+ 
+1
+: : :  
+m
+x
+: : :
+: : :
+ 
+m
+: : :  
+2m 1
+x
+m
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+We obtain :
+ 
+2
+P (x) =
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+0
+: : :  
+m 1
+1
+ 
+1
+: : :  
+m
+x
+: : :
+: : :
+ 
+m
+: : :  
+2m 1
+x
+m
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+4.2 Taylor expansion of
+P
+0
+P
+Proposition 22 : Let c
+1
+;:::;c
+m
+are pairwise distinct constant.
+We put, for j = 0;:::;m:  
+j
+=c
+j
+1
++::: +c
+j
+m
+and P (x) = (x c
+1
+):::(x c
+m
+)
+1.
+(
+P
+0
+P
+)
+0
++ (
+P
+0
+P
+)
+2
+= 2
+X
+i6=j
+1
+c
+i
+ c
+j
+1
+x c
+i
+(61)
+2. We put : t =
+1
+x
+. Taylor expansion on the neighborhood of in nity :
+(a)
+(
+P
+0
+P
+)
+0
++ (
+P
+0
+P
+)
+2
+=
+1
+X
+l=2
+[(
+l 2
+X
+ =0
+ 
+ 
+ 
+l 2  
+)  (l  1) 
+l 2
+]t
+l
+(62)
+(b)
+x
+P
+0
+P
+=
+1
+X
+l=0
+ 
+l
+t
+l
+(63)
+Proof. We have :
+P
+0
+P
+=
+m
+X
+i=1
+1
+x c
+i
+1.
+(
+P
+0
+P
+)
+0
++ (
+P
+0
+P
+)
+2
+=
+X
+i6=j
+1
+x c
+i
+1
+x c
+j
+=
+X
+i6=j
+[
+1
+c
+i
+ c
+j
+x c
+i
++
+1
+c
+j
+ c
+i
+x c
+j
+]
+= 2
+X
+i6=j
+1
+c
+i
+ c
+j
+1
+x c
+i
+Electronic Journal. http://www.math.spbu.ru/diffjournal 21Differential Equations and Control Processes, N 1, 2013
+2. We put: t =
+1
+x
+. We have :
+(
+P
+0
+P
+)
+0
++ (
+P
+0
+P
+)
+2
+= 2t
+X
+i6=j
+1
+c
+i
+ c
+j
+1
+1 c
+i
+t
+= 2t
+X
+i6=j
+1
+c
+i
+ c
+j
+1
+X
+k=0
+(c
+i
+t)
+k
+=
+1
+X
+k=0
+(2
+X
+i6=j
+c
+k
+i
+c
+i
+ c
+j
+)t
+k+1
+=
+1
+X
+k=1
+X
+i6=j
+c
+k
+i
+ c
+k
+j
+c
+i
+ c
+j
+t
+k+1
+As :
+X
+i6=j
+c
+k
+i
+ c
+k
+j
+c
+i
+ c
+j
+=
+X
+i6=j
+X
+ + =k 1; 0   k 1
+c
+ 
+i
+c
+ 
+j
+=
+X
+ + =k 1; 0   k 1
+[ 
+ 
+ 
+ 
+ 
+m
+X
+i=1
+c
+ + 
+i
+]
+= [
+X
+ + =k 1; 0   k 1
+ 
+ 
+ 
+ 
+] k 
+k 1
+Thus :
+(
+P
+0
+P
+)
+0
++ (
+P
+0
+P
+)
+2
+=
+1
+X
+k=1
+[(
+k 1
+X
+ =0
+ 
+ 
+ 
+k 1  
+) k 
+k 1
+]t
+l
+=
+1
+X
+l=2
+[(
+l 2
+X
+ =0
+ 
+ 
+ 
+l 2  
+)  (l  1) 
+l 2
+]t
+l
+ 
+4.3 Research of D
+0
+Let r =
+N
+D
+1
+D
+2
+2
+D
+2
+3
+D
+2
+4
+rational fraction and  2C(x) where :  
+0
++ 
+2
+=r.
+We put :
+  =S +
+D
+0
+0
+D
+0
+(64)
+where S =E( ) +
+X
+c poles of r
+ 
+c
+and D
+0
+monic polynomial of degree m. We have :
+ 
+0
++ 
+2
+=S
+0
++S
+2
++ (
+D
+0
+0
+D
+0
+)
+0
++ (
+D
+0
+0
+D
+0
+)
+2
++ 2S
+D
+0
+0
+D
+0
+(65)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 22Differential Equations and Control Processes, N 1, 2013
+ 
+0
++ 
+2
+=r, (
+D
+0
+0
+D
+0
+)
+0
++ (
+D
+0
+0
+D
+0
+)
+2
++ 2S
+D
+0
+0
+D
+0
+=
+R
+B
+(66)
+with B =D
+1
+D
+2
+D
+3
+D
+4
+and R polynomials as: r S
+0
+ S
+2
+=
+R
+B
+.
+case 1: d
+o
+r = 2   0
+We have: d
+o
+S =  and d
+oR
+B
+=   1. Taylors expansion of
+1
+x
+ 
+S;
+1
+x
+  1
+R
+B
+and x
+D
+0
+0
+D
+0
+at order  .
+We obtain the Taylors expansion of
+1
+x
+  1
+[
+R
+B
+  2S
+D
+0
+0
+D
+0
+] at order  .
+The Taylors expansion equal the Taylors expansion of :
+1
+x
+  1
+[(
+D
+0
+0
+D
+0
+)
+0
++ (
+D
+0
+0
+D
+0
+)
+2
+]
+Lett =
+1
+x
+. In Taylors expansion of
+1
+x
+  1
+[(
+P
+0
+P
+)
+0
++ (
+P
+0
+P
+)
+2
+] [see proposition 23] the coe cient oft
+ +1
+is :  
+2
+0
+  
+0
+=m
+2
+ m. For l  2, coe cient of t
+l+  1
+use :  
+0
+;:::; 
+l 2
+.
+Besides, we have :
+x
+D
+0
+0
+D
+0
+=
+m
+X
+i=1
+1
+1 c
+i
+t
+=
+m
+X
+i=1
+1
+X
+k=0
+c
+k
+i
+t
+k
+=
+1
+X
+k=0
+ 
+k
+t
+k
+(67)
+Thus, Taylors expansion of :
+  =
+1
+x
+  1
+[(
+D
+0
+0
+D
+0
+)
+0
++ (
+D
+0
+0
+D
+0
+)
+2
+] 
+1
+x
+  1
+[
+R
+B
+  2S
+D
+0
+0
+D
+0
+] (68)
+and the coe cient of t
+k
+is:
+ 2ff 
+k
++polynomial at  
+0
+;:::; 
+k 1
+(69)
+  = 0 determine  
+k
+by recurrence at k = .
+case 2 : d
+o
+r< 0
+The coe cient of t
+k
+in Taylors expansion of :
+	 =x
+2
+[(
+D
+0
+0
+D
+0
+)
+0
++ (
+D
+0
+0
+D
+0
+)
+2
+] x
+2
+R
+B
++ 2xS(x
+D
+0
+0
+D
+0
+) (70)
+is :
+2m 
+k
+  (k + 1) 
+k
++ (2 lim
+x!1
+xS) 
+k
++polynomial at  
+0
+;:::; 
+k 1
+(71)
+By recurrence  
+k
+at condition :
+k6= 2 lim
+x!1
+xS + 2m  1
+We have : lim
+x!1
+xS +m =ff
+2
+1
++
+1
+2
+with ff
+2
+1
+= lim
+x!1
+x
+2
+r +
+1
+4
+.
+For k6= 2ff
+1
+, to be  
+k
+at function of  
+0
+;:::; 
+k 1
+.
+If 2ff
+1
+2N then coe cient oft
+2ff1
+non-zero thus is no solution or is zero thus 
+2ff1
+is arbitrary
+and  
+k
+; k> 2ff
+1
+depend in a unique way.
+D
+0
+is polynomial determined by  
+0
+;:::; 
+2m 1
+by determinant formulae, the problem of non-
+unique suite ( 
+k
+)
+k2N
+put if 2ff
+1
+is positive integer equal to or less than 2m 1, then 4 lim
+x!1
+x
+2
+r+1
+is square of integer and :
+lim
+x!1
+x
+2
+r m
+2
+ m (72)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 23Differential Equations and Control Processes, N 1, 2013
+Example 23 In this example we consider the Riccati differential equation (2) where:
+r = 1 +
+z
+2
+ 
+1
+4
+x
+2
+; z2R
+ 
+(73)
+We have D
+1
+= 1; D
+2
+= 1; D
+3
+=x and E
+2
+( ) = 1.
+We can assume E( ) =i.
+lim
+x!0
+x
+2
+r +
+1
+4
+=z
+2
+=ff
+2
+0
+  =i +
+ff
+0
++
+1
+2
+x
++
+D
+0
+0
+D
+0
+2i(ff
+0
++
+1
+2
++d
+o
+D
+0
+) = 0. Thus : m =d
+o
+D
+0
+= ff
+0
+ 
+1
+2
+2N
+Thus : ff
+0
+= m 
+1
+2
+, r = 1 +
+(m+
+1
+2
+)
+2
+ 
+1
+4
+x
+2
+= 1 +
+m
+2
++m
+x
+2
+and   = i 
+m
+x
++
+D
+0
+0
+D
+0
+.
+  solution of Riccati equation if and only if D
+0
+verify :
+(
+D
+0
+0
+D
+0
+)
+0
++ (
+D
+0
+0
+D
+0
+)
+2
++ 2(i 
+m
+x
+)
+D
+0
+0
+D
+0
+= 2i
+m
+x
+Thus   = 0 where
+  =x[(
+D
+0
+0
+D
+0
+)
+0
++ (
+D
+0
+0
+D
+0
+)
+2
+] + 2(i 
+m
+x
+)(x
+D
+0
+0
+D
+0
+)  2im
+Taylors expansion of   = 0 at t =
+1
+x
+:
+  =
+1
+X
+k=1
+[(
+k 1
+X
+ =1
+ 
+ 
+ 
+k 1  
+) k 
+k 1
+  2m 
+k 1
++ 2i 
+k
+]t
+k
+As  
+0
+=m. Thus:
+  = 0,8k  1; (
+k 1
+X
+ =0
+ 
+ 
+ 
+k 1  
+) k 
+k 1
+  2m 
+k 1
++ 2i 
+k
+= 0
+For k = 1,  
+2
+0
+  
+0
+  2m 
+0
++ 2i 
+1
+= 0 equivalent to 2i 
+1
+=m
+2
++m.
+For all : k  2; 2i 
+k
+=k 
+k 1
+ 
+k 2
+X
+ =1
+ 
+ 
+ 
+k 1  
+For example m = 3; :
+8
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+:
+2i 
+1
+= 12
+2i 
+2
+= 2 
+1
+2i 
+3
+= 3 
+2
+  
+2
+1
+2i 
+4
+= 4 
+3
+  2 
+1
+ 
+2
+2i 
+5
+= 5 
+4
+  2 
+1
+ 
+3
+  
+2
+2
+Thus , the polynomial D
+0
+partner to :
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+0
+ 
+1
+ 
+2
+1
+ 
+1
+ 
+2
+ 
+3
+x
+ 
+2
+ 
+3
+ 
+4
+x
+2
+ 
+3
+ 
+4
+ 
+5
+x
+3
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+=
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+3  6i  6 1
+ 6i  6  9i x
+ 6  9i  54 x
+2
+ 9i  54 99i x
+3
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+= 135x
+3
++ 810ix
+2
+  2025x  2025i
+Thus
+D
+0
+=x
+3
++ 6ix
+2
+  15x  15i
+Electronic Journal. http://www.math.spbu.ru/diffjournal 24Differential Equations and Control Processes, N 1, 2013
+5 Method of last minor
+Let r =
+N
+D
+1
+D
+2
+2
+D
+2
+3
+D
+2
+4
+rational fraction and  2C(x) as :  
+0
++ 
+2
+=r.
+  solution of Eq (2) if and only if D
+0
+verify :
+BD
+00
+0
++ 2SBD
+0
+0
+=RD
+0
+(74)
+We choose a complex numberc not pole ofr and we use the expression of polynomials following
+the powers of x c.
+For the sake of simplicity, in the following we assume that c = 0. Constant coe cient constant
+of B is non-zero.
+Denote by a
+k
+; b
+k
+and r
+k
+coe cients of x
+k
+; in A; B and R respectively, k2N.
+If k2Z then : a
+k
+=b
+k
+=r
+k
+= 0 :
+5.1 Case d
+o
+r< 0
+We put : S =
+A
+B
+If d
+o
+B = 1 then r are pole unique, it is simple or double. If c simple pole of r then r of degree
+ 1 and Eq (2) has no rational solution.
+If c double pole of r then : A =ff
+c
++
+1
+2
+; r =
+ff
+2
+c
+ 
+1
+4
+(x c)
+2
+and R = 0.
+Thus, Eq (72) :
+D
+00
+0
+D
+0
+0
+=
+ 2(ff
+c
++
+1
+2
+)
+x c
+(75)
+The solutions :
+D
+0
+0
+= ( 2ff
+c
+)(x c)
+ 2ffc 1
+(76)
+D
+0
+= (x c)
+ 2ffc
++  (77)
+where   non-zero constant .
+We have, an in nity of the other rational solution when 2ff
+c
+2N
+ 
+; with the same parity ofS.
+We assume : d
+o
+B  2 and we look D
+0
+polynomial of degree m  1 verify Ed (72).
+Proposition 24 : We assume : d
+o
+r< 0;
+(
+d
+o
+B  2
+d
+o
+=m  1
+and D
+0
+verify Ed (72).
+1. We have:
+(
+d
+o
+(BD
+00
+0
++ 2AD
+0
+0
+) d
+o
+B +m  2
+d
+o
+R d
+o
+B  2
+2. We have: r
+d
+o
+B 2
+= 2a
+d
+o
+B 1
+m +m(m  1)
+3. We have:
+(
+a
+d
+o
+B 1
+=
+1
+2
+ m +ff
+1
+r
+d
+o
+B 2
+=m(2ff
+1
+ m)
+Proof.
+1. d
+o
+(BD
+00
+0
++ 2AD
+0
+0
+)  sup(d
+o
+(BD
+00
+0
+);d
+o
+(2AD
+0
+0
+))
+If d
+o
+D
+0
+= 1 then :
+sup(d
+o
+(BD
+00
+0
+);d
+o
+(2AD
+0
+0
+)) =d
+o
+(2AD
+0
+0
+) =d
+o
+A d
+o
+B  1 =d
+o
+B +d
+o
+D
+0
+  2
+Electronic Journal. http://www.math.spbu.ru/diffjournal 25Differential Equations and Control Processes, N 1, 2013
+If d
+o
+D
+0
+  2 then :
+(
+d
+o
+(BD
+00
+0
+) =d
+o
+B +m  2
+d
+o
+(2AD
+0
+0
+) =d
+o
+A +m  1 d
+o
+B +m  2
+2. We have : d
+o
+(RD
+0
+) d
+o
+B +m  2 and coe cients of x
+d
+o
+B+m 2
+in Eq (72).
+3. Accordingly, in view of : lim
+x!1
+x  =ff
+1
++
+1
+2
+.
+ 
+We put :
+v(x) =  R
+0
+B
+B
+B
+B
+B
+B
+B
+@
+1
+x
+x
+2
+:
+:
+x
+m
+1
+C
+C
+C
+C
+C
+C
+C
+A
++ 2A
+0
+B
+B
+B
+B
+B
+@
+0 1
+2x
+:
+:
+mx
+m 1
+1
+C
+C
+C
+C
+C
+A
++B
+0
+B
+B
+B
+B
+B
+B
+B
+@
+0
+0
+2
+:
+:
+m(m  1)x
+m 2
+1
+C
+C
+C
+C
+C
+C
+C
+A
+=
+0
+B
+B
+B
+B
+B
+B
+B
+@
+v
+1
+(x)
+v
+2
+(x)
+v
+3
+(x)
+:
+:
+v
+m+1
+(x)
+1
+C
+C
+C
+C
+C
+C
+C
+A
+(78)
+The k
+th
+element of v(x) is:
+v
+k
+(x) =B(k  1)(k  2)x
+k 3
++ 2A(k  1)x
+k 2
+ Rx
+k 1
+(79)
+v
+k
+(x) of degree equal to or less than d
+o
+B +k  3 and x
+d
+o
+B+k 3
+of coe cient:
+(k  1)(k  2) + 2a
+d
+o
+B 1
+(k  1) r
+d
+o
+B 2
+= (k m  1)(
+r
+d
+o
+B 2
+m
++k  1)
+= (k m  1)(2a
+d
+o
+B 1
++m +k  2)
+(80)
+For k m, the coe cient of x
+d
+o
+B+k 3
+is zero if and only if :
+2a
+d
+o
+B 1
+= (m +k  2)2f (m  1); m;:::; 2(m  1)g
+v
+m+1
+of degree equal to or less than d
+o
+B +m  3.
+Fork  3 the coe cient of more low degree of v
+k
+is coe cient of: x
+k 3
+equalb
+0
+(k  1)(k  2) .
+LetV matrix ofm+1 row andk
+th
+row is rowl
+k
+of coe cients ofv
+k
+(x) in basis ofC
+d
+o
+B+m 3
+[X]:
+l
+3
+;:::;l
+m+1
+linearly independent system.
+The Eq (72) give :
+D
+0
+=d
+0
++d
+1
+x +::: +x
+m
+; (81)
+obtained :
+d
+0
+v
+1
+(x) +::: +d
+m 1
+v
+m
+(x) +v
+m+1
+(x) = 0 (82)
+d
+0
+l
+1
++::: +d
+m 1
+l
+m
++l
+m+1
+= 0 (83)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 26Differential Equations and Control Processes, N 1, 2013
+Thus, the matrixV is rank m  1; m or m + 1 .Accordingly, existence of D
+0
+correspondent
+linearly dependent in row l
+m+1
+of l
+1
+;:::;l
+m
+.
+Let c
+1
+;:::;c
+m
+roots of D
+0
+distinct.
+We put for j2N :  
+j
+=c
+j
+1
++::: +c
+j
+m
+et  
+2
+=
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+0
+ 
+1
+: :  
+m 1
+ 
+1
+ 
+2
+: :  
+m
+: :
+: :
+ 
+m 1
+ 
+m
+: :  
+2m 2
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Them column vector
+0
+B
+B
+B
+@
+ 
+0
+:
+:
+ 
+m
+1
+C
+C
+C
+A
+:::::
+0
+B
+B
+B
+@
+ 
+m 1
+:
+:
+ 
+2m 1
+1
+C
+C
+C
+A
+, ofm+1 column of are linearly independent.
+The equation of hyperplane H engendered by vectors
+0
+B
+B
+B
+@
+ 
+0
+:
+:
+ 
+m
+1
+C
+C
+C
+A
+:::
+0
+B
+B
+B
+@
+ 
+m 1
+:
+:
+ 
+2m 1
+1
+C
+C
+C
+A
+is:
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+0
+: : :  
+m 1
+x
+1
+ 
+1
+: : :  
+m
+x
+2
+: : :
+: : :
+ 
+m
+: : :  
+2m 1
+x
+m+1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+= 0 (84)
+The coe cient of x
+m+1
+is  
+2
+6= 0 and H as equation:
+x
+m+1
+= 
+1
+x
+1
++::: + 
+m
+x
+m
+(85)
+where  
+1
+::: 
+m
+scalar satisfying :
+( 
+m
+;:::; 
+2m 1
+) = 
+1
+( 
+0
+;:::; 
+m 1
+) +::: + 
+m
+( 
+m 1
+;:::; 
+2m 2
+) (86)
+The derivative of
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+0
+: : :  
+m 1
+1
+ 
+1
+: : :  
+m
+x
+: : :
+: : :
+ 
+m
+: : :  
+2m 1
+x
+m
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+is derived last column . The Eq (72) equivalent to :
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+0
+: : :  
+m 1
+1
+ 
+1
+: : :  
+m
+v
+1
+(x)
+: : :
+: : :
+ 
+m
+: : :  
+2m 1
+v
+m+1
+(x)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+= 0 (87)
+Thus,8x; v(x)2H. Application of Taylor, this equivalent to columns of matrix V in hyper-
+plane H.
+l
+m+1
+= 
+1
+l
+1
++::: + 
+m
+l
+m
+(88)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 27Differential Equations and Control Processes, N 1, 2013
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+0
+: : :  
+m 1
+1
+ 
+1
+: : :  
+m
+x
+: : :
+: : :
+ 
+m
+: : :  
+2m 1
+x
+m
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+=
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+0
+: : :  
+m 1
+1
+ 
+1
+: : :  
+m
+x
+: : :
+ 
+m 1
+: : :  
+2m 2
+x
+m 1
+0 : : : 0 x
+m
+  
+1
+  
+2
+x :::  
+m
+x
+m 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+=  
+2
+[x
+m
+  
+1
+  
+2
+x :::  
+m
+x
+m 1
+]
+(89)
+The polynomial D
+0
+partner to
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+0
+: : :  
+m 1
+1
+ 
+1
+: : :  
+m
+x
+: : :
+: : :
+ 
+m
+: : :  
+2m 1
+x
+m
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+.Thus :
+D
+0
+(x) =x
+m
+  
+1
+  
+2
+x :::  
+m
+x
+m 1
+(90)
+For k = 1;:::;m + 1, we put:
+v
+k
+(x) = 
+k
+(x) +x
+d
+o
+B 2
+w
+k
+(91)
+where d
+o
+ 
+k
+(x) d
+o
+B  3.
+The matrix W partner to:
+0
+B
+@
+w
+1
+:
+w
+m
+1
+C
+A
+is triangulares where k
+th
+entry diagonal equal (k  1 
+m)(2a
+d
+o
+B 1
++m +k  2). The coe cient is non-zero except possibly for a single value of k.
+Thus, rank of
+0
+B
+@
+w
+1
+:
+w
+m
+1
+C
+A
+is m or m  1.
+For rank(V ) =m, the Eq (72) as solution equivalent to l
+1
+;:::;l
+m
+linearly independent.
+Hence, after, we assume : rank(V ) =m  1. In that case l
+1
+and l
+2
+are linear combinations of
+l
+3
+;:::;l
+m+1
+. One of both combinations has to express l
+m+1
+. Thus we have two situations.
+Situation 1 :
+l
+2
+linear combination ofl
+3
+;:::;l
+m+1
+where coe cient ofl
+m+1
+non-zero. By replacement ofl
+m+1
+,
+we obtain l
+1
+is linear combination of l
+2
+;:::;l
+m
+.
+Thus, w
+1
+is linear combination of w
+2
+;:::;w
+m
+. (w
+2
+;:::;w
+m
+) libre system where d
+o
+w
+k
+= k  1
+for : k = 2;:::;m. Thus : w
+1
+= 0.
+If
+l
+1
+=
+m
+X
+j=2
+ff
+j
+l
+j
+(92)
+where ff
+j
+constant, then :
+w
+1
+=
+m
+X
+j=2
+ff
+j
+w
+j
+(93)
+As w
+1
+= 0, thus for all j = 2;:::;m; ff
+j
+= 0 equivalent to l
+1
+= 0: Thus R = 0
+First way of having D
+0
+:
+D
+00
+0
+D
+0
+0
+=
+ 2A
+B
+(94)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 28Differential Equations and Control Processes, N 1, 2013
+ 2A
+B
+has to be the sum of simple elements of the shape:
+ c
+x c
+where  
+c
+greater or equal than 1.
+Thus : D
+4
+=D
+2
+=D
+1
+= 1 and D
+3
+=B.
+For all c root of D
+3
+; 2ff
+c
+= 
+c
++ 1; where ff
+2
+c
+= lim
+x!c
+(x c)
+2
+r +
+1
+4
+Thus :
+ff
+c
+< 0 and 4[lim
+x!c
+(x c)
+2
+r +
+1
+4
+] = ( 
+c
++ 1)
+2
+(95)
+Thus :
+D
+0
+0
+=m
+Y
+c2Root(D
+3
+)
+(x c)
+ c
+(96)
+D
+0
+is primitive non-zero in roots of D
+3
+.
+Second way of having D
+0
+:
+l
+m+1
+=
+m
+X
+j=2
+ 
+j
+l
+j
+(97)
+where 
+j
+constant (j = 2;:::;m) The relations linearly dependent between l
+m+1
+et l
+1
+;:::;l
+m
+are :
+l
+m+1
+= l
+1
++
+m
+X
+j=2
+ 
+j
+l
+j
+(98)
+Thus we have an in nity of solutions :
+D
+0
+=x
+m
+   
+m
+X
+j=2
+ 
+j
+x
+j 1
+(99)
+where   arbitrarily constant.
+Situation 2 :
+l
+1
+is linear combination ofl
+3
+;:::;l
+m+1
+where coe cient ofl
+m+1
+non-zero andl
+2
+is linear combina-
+tion of l
+3
+;:::;l
+m
+. Thus, w
+2
+is linear combination of w
+3
+;:::;w
+m
+. Thus, w
+2
+= 0. w
+1
+;w
+3
+;:::;w
+m
+libre system .
+If :
+l
+2
+=
+m
+X
+j=3
+ff
+j
+l
+j
+(100)
+then :
+w
+2
+=
+m
+X
+j=3
+ff
+j
+w
+j
+(101)
+As : w
+2
+= 0. Thus, for all j = 3;:::;m; ff
+j
+= 0 equivalent to l
+2
+= 0 and 2A xR = 0
+First way of having D
+0
+:
+2A
+x
+D
+0
+= 2AD
+0
+0
++BD
+00
+0
+(102)
+2A(D
+0
+ xD
+0
+0
+) =xBD
+00
+0
+(103)
+We put : Q =D
+0
+ xD
+0
+0
+.
+Q
+0
+Q
+= 
+2A
+B
+.
+D
+4
+=D
+2
+=D
+1
+= 1 and Q = (1 m)
+Y
+c2Root(D
+3
+)
+(x c)
+ c
+(104)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 29Differential Equations and Control Processes, N 1, 2013
+Thus: D
+0
+=Cx avec C
+0
+= 
+Q
+x
+2
+; C rational function.
+The coe cient of x in Q is zero. Q
+0
+(0) = 0 (A(0) = 0 ; 2A =xR)
+Second way of having D
+0
+:
+l
+m+1
+= 
+1
+l
+1
++
+m
+X
+j=3
+ 
+j
+l
+j
+(105)
+Thus :
+D
+0
+=x
+m
+ 
+m
+X
+j=1
+ 
+j
+x
+j 1
+(106)
+lambda
+2
+arbitrarily constant.
+5.2 Case d
+o
+r = 2   0
+We put : E =E( ) and S =E +
+A
+B
+. We have:
+(
+d
+o
+(BD
+00
+0
+) d
+o
+B +m  2
+d
+o
+(EB +A)D
+0
+0
+=d
+o
+B +m  1 + 
+(107)
+Thus
+d
+o
+(RD
+0
+) =d
+o
+B +m  1 +  (108)
+Thus, d
+o
+R =d
+o
+B +   1 and r
+d
+o
+B+  1
+= 2ffm where ff dominant coe cient of E.
+We put :
+v(x) =  R
+0
+B
+B
+B
+B
+B
+B
+B
+@
+1
+x
+x
+2
+:
+:
+x
+m
+1
+C
+C
+C
+C
+C
+C
+C
+A
++ 2(EB +A)
+0
+B
+B
+B
+B
+B
+B
+B
+@
+0
+1
+2x
+:
+:
+mx
+m 1
+1
+C
+C
+C
+C
+C
+C
+C
+A
++B
+0
+B
+B
+B
+B
+B
+B
+B
+@
+0
+0
+2
+:
+:
+m(m  1)x
+m 2
+1
+C
+C
+C
+C
+C
+C
+C
+A
+=
+0
+B
+B
+B
+B
+B
+B
+B
+@
+v
+1
+(x)
+v
+2
+(x)
+v
+3
+(x)
+:
+:
+v
+m+1
+(x)
+1
+C
+C
+C
+C
+C
+C
+C
+A
+(109)
+The k
+th
+element of v(x) is :
+v
+k
+(x) =B(k  1)(k  2)x
+k 3
++ 2(EB +A)(k  1)x
+k 2
+ Rx
+k 1
+(110)
+v
+k
+(x) of degree equal to or less than d
+o
+B +  +k  2 where coe cient of x
+d
+o
+B+ +k 2
+equal
+2ff(k  1 m).
+For k = 1;:::;m; the k
+th
+element of v(x) of degree: d
+o
+R +k  1.
+The (m + 1)
+th
+element of v(x) of degree equal to or less than d
+o
+R +m  1.
+Proposition 25 We put : v
+k
+(x) = 
+k
+(x) +x
+d
+o
+R
+w
+k
+(x) where d
+o
+ 
+k
+(x)<d
+o
+R.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 30Differential Equations and Control Processes, N 1, 2013
+1.
+(
+d
+o
+w
+k
+(x) =k  1 pour k = 1;:::;m
+d
+o
+w
+m+1
+(x) m  1
+(111)
+2. (w
+1
+;:::;w
+m
+) libre system and
+w
+m+1
+(x) = 
+1
+w
+1
+(x) +::: + 
+m
+w
+m
+(x) (112)
+where  
+1
+;:::; 
+m
+constants
+3.
+D
+0
+=x
+m
+  
+1
+  
+2
+x :::  
+m 1
+x
+m 1
+(113)
+is solution if and only if
+l
+m+1
+= 
+1
+l
+1
++::: + 
+m
+l
+m
+(114)
+Example 26 In this example we consider the Riccati differential equation (2) where:
+r =
+1
+(x + 1)
+4
+ 
+5
+(x + 1)
+3
++
+7
+4(x + 1)
+2
++
+1
+x + 1
++x
+2
++ 2
+D
+1
+=D
+2
+=D
+3
+= 1; D
+4
+= (x + 1)
+2
+; d
+o
+(r) = 2;   = 1. We have
+N
+1
+= 1  5(x + 1)
+F =x
+2
++ 2 +
+1  5(x + 1)
+(x + 1)
+4
++
+1
+4(x + 1)
+2
+Study at (-1): Laurent series development at 1 :
+(F )
+1
+2
+="
+ 1
+(
+1
+(x + 1)
+2
+ 
+5
+2(x + 1)
++:::); "
+ 1
+= 1
+Study at in nity: We have :
+E(r)
+x
+2
+= 1 +t
+2
+where t =
+1
+x
+;
+(1 + 2t
+2
+)
+1
+2
+= 1 +t
+2
++o(t
+2
+)
+Thus : s
+ +1
+= 1 et E( ) =ffx where ff
+2
+= 1.
+  =ffx +"
+ 1
+(
+1
+(x + 1)
+2
+ 
+5
+2(x + 1)
+) +
+1
+(x + 1)
++
+D
+0
+0
+D
+0
+d
+o
+D
+0
+=ffs
+ +1
+ 
+ 
+2
++
+5"
+ 1
+2
+  1 =ffs
+ +1
++
+5"
+ 1
+2
+ 
+3
+2
+Case :
+(
+ff = 1
+"
+ 1
+= 1
+and
+(
+ff = 1
+"
+ 1
+= 1
+are to be rejected because we obtain negative values
+of D
+0
+.
+. If : ff = 1 and "
+ 1
+= 1 then : d
+o
+D
+0
+= 2
+. If : ff = 1 et "
+ 1
+= 1 then : d
+o
+D
+0
+= 0
+Electronic Journal. http://www.math.spbu.ru/diffjournal 31Differential Equations and Control Processes, N 1, 2013
+Case 1 : ff = 1 and "
+ 1
+= 1.
+  =x +
+1
+(x + 1)
+2
+ 
+3
+2(x + 1)
++
+D
+0
+0
+D
+0
+where d
+o
+D
+0
+= 2. Research of coe cients of D
+0
+.
+S = x +
+1
+(x+1)
+2
+ 
+3
+2(x+1)
+=
+x
+3
++2x
+2
+ 
+1
+2
+x 
+1
+2
+(x+1)
+2
+r S
+0
+ S
+2
+=
+R
+B
+; where : R = 4x
+2
++ 4x and B = (1 +x)
+2
+.
+v(x) = R
+0
+B
+@
+1
+x
+x
+2
+1
+C
+A
++ 2SB
+0
+B
+@
+0
+1
+2x
+1
+C
+A
++B
+0
+B
+@
+0
+0
+2
+1
+C
+A
+=
+0
+B
+@
+ 4x  4x
+2
+ 1 x  2x
+3
+2 + 2x + 4x
+3
+1
+C
+A
+V =
+0
+B
+@
+0  4  4 0
+ 1  1 0  2
+2 2 0 4
+1
+C
+A
+l
+3
+= 2l
+2
+. Thus : D
+0
+=x
+2
++ 2x .
+  =x +
+1
+(x + 1)
+2
+ 
+3
+2(x + 1)
++
+2(x + 1)
+x
+2
++ 2x
+=x +
+1
+(x + 1)
+2
+ 
+3
+2(x + 1)
++
+1
+x
++
+1
+x + 2
+Case 2 : ff = 1 and "
+ 1
+= 1. We obtain the rational fraction :
+  = x +
+1
+(x + 1)
+2
+ 
+3
+2(x + 1)
+It cannot be solution because the sum of this fraction with the already found solution is not the
+logarithmic prime of a rational fraction.
+Example 27 : In this example we consider the Riccati differential equation (2) where:
+r =
+1
+16
++
+1
+(x  1)
+8
+ 
+4
+(x  1)
+5
+ 
+29
+6(x  1)
+4
+ 
+8
+9(x  1)
+3
+ 
+64
+27(x  1)
+2
+ 
+152
+18(x  1)
++
+30
+(x + 2)
+2
+ 
+10
+81(x + 2)
+D
+1
+=D
+2
+= 1; D
+3
+=x + 2 and D
+4
+= (x  1)
+4
+. We have :
+N
+1
+= (2418x  2454)(x  1)
+3
++ (x + 2)
+2
+;   = 
+1
+4(x + 2)
+2
+F =
+1
+16
++
+(2418x  2454)(x  1)
+3
++ (x + 2)
+2
+(x  1)
+8
+(x + 2)
+2
++
+1
+4(x + 2)
+2
+Laurent series development at 1 :
+(F )
+1
+2
+="
+1
+(
+1
+(x  1)
+4
+ 
+2
+x  1
++:::); "
+1
+= 1
+Laurent series development at 2 :
+(F )
+1
+2
+="
+ 2
+(
+11
+2(x + 2)
++:::); "
+ 2
+= 1
+Electronic Journal. http://www.math.spbu.ru/diffjournal 32Differential Equations and Control Processes, N 1, 2013
+We have :
+1
+2
+(D
+2
+D
+3
+D
+4
+)
+0
+D
+2
+D
+3
+D
+4
+=
+1
+2(x + 2)
++
+2
+x  1
+Thus :
+  =E( ) +"
+1
+[
+1
+(x  1)
+4
+ 
+2
+x  1
+] +"
+ 2
+[
+11
+2(x + 2)
+] +
+1
+2(x + 2)
++
+2
+x  1
++
+D
+0
+0
+D
+0
+where
+E
+2
+( ) =E(r) =
+1
+16
+d
+o
+D
+0
+= 
+1
+E( )
++ 2"
+1
+ 
+11"
+ 2
+2
+ 
+5
+2
+Case
+(
+"
+1
+= 1
+"
+ 2
+= 1
+and
+(
+"
+1
+= 1
+"
+ 2
+= 1
+are to be rejected because we obtain negative values of
+D
+0
+.
+Case 1 : If :"
+1
+= 1; "
+ 2
+= 1; E( ) =
+1
+4
+then : d
+o
+D
+0
+= 1.
+  =
+1
+4
++
+1
+(x  1)
+4
+ 
+5
+x + 2
++
+D
+0
+0
+D
+0
+Research of coe cients of D
+0
+.
+S =
+1
+4
++
+1
+(x  1)
+4
+ 
+5
+x + 2
+r  (S
+0
++S
+2
+) =
+R
+B
+where : R =
+1
+2
+x
+4
+  10x
+3
++ 19x
+2
+  18x +
+5
+2
+, B = (x  1)
+4
+(x + 2)
+v(x) = R
+ 
+1
+x
+!
++ 2SB
+ 
+0
+1
+!
+=
+ 
+ 
+1
+2
+x
+4
++ 10x
+3
+  19x
+2
++ 18x 
+5
+2
+ x
+4
++ 20x
+3
+  38x
+2
++ 36x  1
+!
+V =
+ 
+ 
+5
+2
+18  19 10  
+1
+2
+ 5 36  38 20  5
+!
+l
+2
+= 2l
+1
+. Thus : D
+0
+=x  2.
+ 
+1
+=
+1
+4
++
+1
+(x  1)
+4
+ 
+5
+x + 2
++
+1
+x  2
+Case 2 : If : "
+1
+= 1; "
+ 2
+= 1; E( ) =
+ 1
+4
+then : d
+o
+D
+0
+= 9.
+  =
+ 1
+4
++
+1
+(x  1)
+4
+ 
+5
+x + 2
++
+D
+0
+0
+D
+0
+She cannot be solution because the sum of this fraction with the already found solution is
+not the logarithmic prime of a rational fraction.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 33Differential Equations and Control Processes, N 1, 2013
+Case 3 : If : "
+1
+= 1; "
+ 2
+= 1; E( ) =
+ 1
+4
+then : d
+o
+D
+0
+= 5.
+ 
+3
+=
+ 1
+4
+ 
+1
+(x  1)
+4
+ 
+5
+x + 2
++
+4
+x  1
++
+D
+0
+0
+D
+0
+Research of coe cients of D
+0
+.
+S =
+ 1
+4
+ 
+1
+(x  1)
+4
+ 
+5
+x + 2
++
+4
+x  1
+R =
+ 2
+2
+x
+4
++ 36x
+3
+  137x
+2
++ 168x  88 , B = (x  1)
+4
+(x + 2)
+V =
+0
+B
+B
+B
+B
+B
+B
+B
+@
+ 37  168 137  36
+5
+2
+0 0 0 0
+ 32
+ 151
+2
+ 266 180  37 2 0 0 0
+4  78  162  368 219  36
+3
+2
+0 0
+0 12  138
+ 209
+2
+ 474 254  33 1 0
+0 0 24  212  95  584 285  28
+1
+2
+0 0 0 40  300
+ 139
+2
+ 698 312  21
+1
+C
+C
+C
+C
+C
+C
+C
+A
+We consider V
+p
+the minor 6  6 obtained by column vector 1; 2; 6; 7; 8; 9: InZ=5Z :
+V
+p
+=
+0
+B
+B
+B
+B
+B
+B
+B
+@
+ 2 2 0 0 0 0
+ 2 2 2 0 0 0
+ 1 2  1  1 0 0
+0 2  1 2 1 0
+0 0 1 0 2  2
+0 0  2 2 2  1
+1
+C
+C
+C
+C
+C
+C
+C
+A
+detV
+p
+= 1. Accordingly, row 6 is not linear combination of other row and D
+0
+he does not
+have D
+0
+.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 34Differential Equations and Control Processes, N 1, 2013
+References
+[1] B. Sturmfels: Algorithms in Invariant Theory. Springer-Verlag, New York, 1993.
+[2] E.R.Kolchin: Algebraic matric and the Picard-Vessiot theory of homogeneous linear
+ordinary differential equation, Ann. of Math, 49, 1-42(1948).
+[3] E.R.Kolchin: Differential Algebra and Algebraic groups,Volume 54 of Pure and Applied
+Math, Academic Press, New York,(1976).
+[4] E.R.Kolchin: Galois theory of differential  elds, Amer. J. of Math, 75,753-824 (1953).
+[5] F. Ulmer: Introduction to differential Galois theory. Cours de DEA, 2000.
+[6] F. Ulmer: On liouvillian solutions of linear differential equations. Appl. Algebra in
+Eng. Comm. and Comp., 226(2):171193, 1992.
+[7] I. Gozard: Th  eorie de Galois, Paris (1997).
+[8]I. Kaplansky: An introduction to differential algebra, Hermann, Paris , (1957).
+[9] J.J.Kova~ ci  c: An Algorithm for solving second ordre linear homogeneous differential equa-
+tions. Journal of symbolic computation,2:3-43,1986
+[10] M. Singer and F. Ulmer: Galois groups of second and third order linear differential
+equations. J. Symb. Comp., 16:136, 1993.
+[11] M. Singer and F. Ulmer: Linear differential equations and products of linear forms.
+J. Pure and Applied Alg., 117 - 118:549-564, (1997).
+[12] M. Singer and F. Ulmer: Liouvillian and algebraic solutions of second and third order
+linear differential equations. J. Symb. Comp., 16:3773, (1993).
+[13] M. Singer and F. Ulmer: Necessary conditions for liouvillian solutions of (third order)
+linear differential equations. J. of Appl. Alg. in Eng. Comm. and Comp., 6:122, 1995.
+[14] M. van der Put and F. Ulmer: Differential equations and  nite groups. J. of Al-
+gebra, 226:920-966, (2000).
+[15] P.A.Hendriks and M. van der Put: Galois action on solutions of a differential equa-
+tion. Journal of Symbolic Computation, 19(6): 559-576, (1995).
+Electronic Journal. http://www.math.spbu.ru/diffjournal 35

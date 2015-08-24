@@ -1,0 +1,533 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 2, 1998
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Group analysis of differential equations
+D I G R A N - COMPUTERIZED REFERENCE
+BOOK NEW GENERATION
+FOR EXACT SOLUTIONS
+OF DIFFERENTIAL EQUATIONS
+A.V.FLEGONTOV
+St.-Petersburg, Russia, Institute for Informatics and Automation of the
+Russian Academy of Science
+E-mail : aﬂeg@iias.spb.su
+Abstract.
+Computer Look-Up System DIGRAN the toolbox for students, post-gra-
+duates, teachers and also engineers, recherche, mathematician, which use the
+mathematical models of complex dynamics process. The system use for so-
+lution of the problems of mathematical modelling with this computer algebra
+systems. All the software work at workstations the ﬁrms DEC, CDSystems,
+Sun Microsystems and IBM PC’s. This is a computerized reference book which
+promotes to specify and ﬁnd models and its solutions. More than 4000 not-
+trivial solutions will be present. This software is based on the new original
+approach to differential equations solving. The basis version contain original
+solutions nonlinear differential equations ﬁrst, second and higher kinds, which
+out with the teoretical-discrete-group methodological.Differential Equations and Control Processes, N 2, 1998
+1 Major DIGRAN beneﬁts and models classes of equa-
+tions
+The collection of systems, united in a DISAM project, is essentially a math-
+ematical consultant on DIscrete Symmetry of Analytical Models, realised for
+computer and computer algebra systems.
+The system DIGRAN (DIscrete-GRoup ANalysis) is based on the new fun-
+damental mathematical theory specially developed in [1] . The number of ana-
+lyticalsolutionsalreadyobtainedwiththemethodfrom10to100timesexceeds
+thosefoundinclassicalreferencebooks, e.g. E.Kamke[1959], G.Murphy[1960],
+D.Zwillinger [1989]. For example, more than 1500 Abel equations of the second
+kind and more than 800 nonlinear equations of the 3 order and higher can be
+solved analytically.
+Transformations, symmetries and invariants can be calculated as well.
+Base of Models/Solutions is a computerized reference book which promotes
+to specify and ﬁnd models and solutions. More than 4000 nottrivial solutions
+will be present.
+Analytical Solver of Models is an interactive computer program which gives
+userawaytospecifyamodelandthenittriestoconstructananalyticalsolution
+of the model in a dialogue with the user.
+Visualization Block is a set of utility programs which helps the user to
+investigate models and qualitative properties of solutions.
+Sample List of Model Classes:
+1. Abel equation of the second kind and nonlinear oscillation equations
+yy
+0
+−y =f(x), (1)
+yy
+0
+−f(x)y =g(x), (2)
+yy
+0
+−f(x)y
+2
+−g(x)y =h(x) (3)
+y
+00
++ay
+0
++by =f(y) (4)
+2. Equations of type (k,r,s)
+(y
+0
+)
+k
+=Ay
+r
++Bx
+s
+(5)
+Electronic Journal.  15Differential Equations and Control Processes, N 2, 1998
+(y
+0
+)
+k
+=Ax
+s
+1
+y
+r
+1
++Bx
+s
+2
+y
+r
+2
+(6)
+3. Equations of type (f,g)
+(y
+0
+)
+k
+=f(y)+g(x) (7)
+4. Generalized Emden-Fowler equation
+y
+00
+=Ax
+n
+y
+m
+(y
+0
+)
+l
+(8)
+5. Generalized equations of type (4)
+y
+00
+=
+X
+k
+A
+k
+x
+n
+k
+y
+m
+k
+(y
+0
+)
+l
+k
+(9)
+6. Equations of type (f,g,h)
+y
+00
+=f(x)g(y)h(y
+0
+) (10)
+7. Generalized equations of type (6)
+y
+00
+=
+X
+k
+f
+k
+(x)g
+k
+(y)h
+k
+(y
+0
+) (11)
+8. Generalized boundary layer equation
+y
+000
+=Ax
+α
+y
+β
+(y
+0
+)
+γ
+(y
+00
+)
+δ
+(12)
+9. Generalized equations of type (8)
+y
+000
+=
+X
+k
+A
+k
+x
+α
+k
+y
+β
+k
+(y
+0
+)
+γ
+k
+(y
+00
+)
+δ
+k
+(13)
+This software may be implemented for a C or C++, and system control of
+DB Clarion.
+2 The system structure
+The system DIGRAN contain secondary information in system structure, ba-
+sis content, glossary, references, sphere of application, comparison and soft-
+ware/hardware platforms.
+(Tabl.symm.,1−int.,diff.alg.)←− (Superclass)−→ (Help)
+Electronic Journal.  16Differential Equations and Control Processes, N 2, 1998
+(Superclass)−→ (Class)−→ (Subclass)
+(Subclass)−→ (Bushes)
+(Subclass)−→ (Equations)
+(Bushes)−→ (Subset.equations)−→ (Equations)−→ (Solutions)
+(Subset.equations)−→ (Solutions)
+3 Examples.
+EXAMPLE 1. The information approach to problems of modeling nonlinear
+systems with a priori symmetry.
+The information equipment of the object domain by modeling nonlinear
+systems at the expense of special metamathematical description allow, on the
+one hand, consider the algorithms analysis symmetries and synthesis like the
+algorithms of the production rule on the expert systems and other on the in-
+formation domain introduce ”lattice concept” for utilization new information
+knowledge base like the supplementary computer look-up systems. Then the
+problem of resolution on closed view for nonlinear systems, describing ordinary
+differential equations, reformatted like the problem invariance, just exactly, the
+commutative of the diagram of information- object relations [2] . Here, for ex-
+ample, X≡F(x,y,y
+0
+,y
+00
+,~ a) – the initial system with vector of the parameters
+~ a∈ D; Y ≡ F
+1
+(t,u, ˙ u,¨ u,
+~
+b) – the transformation system with vector
+~
+b∈ D;
+Z≡ (φ
+1
+(τ),ψ
+1
+(τ)) – the multitude of recherche solutions of the transformation
+equation belong of differential ring 3 rank, give of parametric performance of
+the general solution of the initial equation (τ,φ(τ),ψ(τ)) A
+3
+[τ,φ(τ),ψ(τ)].
+ˆ
+X =X×L
+1
+x
+×L
+2
+x
+×L
+3
+x
+;
+ˆ
+Y =Y×L
+y
+;
+ˆ
+Z =Z×L
+z
+,
+where L
+1
+x
+– the classiﬁcation lattice of the types equations; L
+2
+x
+– of the forms
+transformations;L
+y
+– of the forms solutions (bush);L
+z
+– of the types functions
+on A
+3
+; L
+3
+x
+– the structure - classiﬁcation lattice admit on space R(D) of the
+group (a priori symmetry of the model).
+r
+1
+:
+ˆ
+X−→X;
+r
+2
+and r
+3
+– analogize. For c
+1
+: F → F
+1
+; if c
+2
+– operator integrating then
+ultraoperator resolution take the form:
+ˆ c = ˆ c
+2
+◦ˆ c
+1
+.
+Electronic Journal.  17Differential Equations and Control Processes, N 2, 1998
+EXAMPLE 2. Equations of ﬁrst order.
+Superclass – Differential equation of ﬁrst order.
+(Class)
+i
+– Abel equations of the second kind yy
+0
+−y =R(x).
+(Subclass)
+j
+– Equations of type yy
+0
+−y =R
+j
+(j = 1,2,...):
+yy
+0
+−y =R
+1
+=sx+Ax
+m
+,
+yy
+0
+−y =R
+2
+=sx+σA(αA
+2
+x
+−1/2
++βA+γx
+1/2
+),
+yy
+0
+−y =R
+3
+=sx+α
+q
+x
+2
++γ +β/
+q
+x
+2
++γ,
+.............................................
+where s,m,σ,α,β,γ – the parameters of the groups, A – the arbitrary param-
+eter.
+Or, equations on the forme parametric:
+pp
+0
+ξ
+−p =
+(m+l−1)u
+2
+−(m+2l−n−3)u−(n−l+2)
+(m+2l−3)u+(n−2l+3)
+u
+1−l
+,
+ξ = (
+m+2l−3
+2−l
+u+
+n−2l+3
+1−l
+)u
+1−l
+.
+EXAMPLE 3. Equations of second order.
+Superclass – Differential equation of second order.
+(Class)
+i
+– Generalized Emden-Fowler’s equation
+y
+00
+=Ax
+n
+y
+m
+y
+0l
+.
+(Subclass)
+j
+– Set of the equations [n,m,l].
+(Bushes)
+k
+– Bush of polynomial functions [3, 4, 5] , bush of EULER func-
+tions, bush of trigonometric functions, bush of elliptic integrals of the second
+kind,...
+Bush of polynomial functions and subset of the equations corresponding:
+n = 0, m =−1/2, l = 0
+y
+00
+=Ay
+−1/2
+(14)
+n = 1, m = 0, l = 0
+y
+00
+=Ax (15)
+Electronic Journal.  18Differential Equations and Control Processes, N 2, 1998
+n =−5/2, m =−1/2, l = 0
+y
+00
+=Ax
+−5/2
+y
+−1/2
+(16)
+n = 1, m =−1/2, l = 7/5
+y
+00
+=Axy
+−1/2
+y
+07/5
+(17)
+n =−5/2, m =−1/2, l = 10/7
+y
+00
+=Ax
+−5/2
+y
+−1/2
+y
+010/7
+(18)
+(Solutions)
+k1
+– Table of solution for equations:
+For (10)
+x =φ(τ) =aP
+3
+, y =ψ(τ) =bP
+2
+2
+, y
+0
+=χ(τ) = 4/3τ,
+P
+2
+=±(τ
+2
+−1), P
+3
+=τ
+3
+−3τ +C
+2
+, A =±4/9a
+−2
+b
+3/2
+;
+For (12)
+x =φ(τ) =aP
+−1
+3
+, y =ψ(τ) =bP
+2
+2
+P
+−1
+3
+, y
+0
+=χ(τ) =∓1/3P
+4
+,
+P
+4
+=±(τ
+4
+−6τ
+2
++C
+2
+τ−1), A =±4/9a
+1/2
+b
+3/2
+;
+For (13)
+x =φ(τ) =aP
+2
+P
+−1/2
+3
+, y =ψ(τ) =bP
+2
+4
+, y
+0
+=χ(τ) =±16P
+5/3
+3
+,
+A =±15a
+−2
+b
+1/2
+(a/16b)
+2/5
+;
+References
+[1] Zaitsev V.F. On discrete-group analysis of ordinary differential equations.
+Soviet Math. Dokl., Vol. 37(1988), N 2, pp. 403–406.
+[2] Flegontov A.V. The information approach to problems of modeling nonlin-
+ears systems with a priori symmetry. Abstracts, CSAM’93, St.Petersburg,
+July 19-23, 1993, pp. 74–75.
+Electronic Journal.  19Differential Equations and Control Processes, N 2, 1998
+[3] Zaitsev V.F., Polyanin A.D. Handbook on nonlinear differential equations
+(Exact Solutions and Applications in Mechanics). Fizmatlit Publishing
+Company, Nauka Publishers Moscow, 1993.
+[4] Flegontov A.V. Becklund’s transformation at bound orbites. The Methods
+and Means of Informational Technology in Science and Industry. SPb., Nau-
+ka, 1992, pp. 62–67.
+[5] Zaitsev V.F., Flegontov A.V. Terminal systems of polynomial functions cir-
+cuited at a certain class of transformations of the Emden-Fouler’s gener-
+alized equation. The Methods and Means of Informational Technology in
+Science and Industry. SPb., Nauka, 1992, pp. 67–73.
+Electronic Journal.  20

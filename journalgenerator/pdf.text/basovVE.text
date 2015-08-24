@@ -1,0 +1,4058 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 4, 2010
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Normal Forms of Hamiltonian Systems
+1
+V. V. BASOV, A. S. VAGANYAN
+Universitetsky prospekt, 28, 198504, Peterhof, Saint-Petersburg, Russia,
+Saint-Petersburg State University,
+The Faculty of Mathematics and Mechanics, Differential Equations Department,
+e-mail: vlvlbasov@rambler.ru, armay@yandex.ru
+Abstract
+Equivalence of Hamiltonian systems in the neighborhood of a critical point relatively
+to the group of formal canonical transformations is considered.
+De nitions of metanormal and normal forms of a Hamiltonian system that do not
+require restrictions on the unperturbed part of the Hamiltonian and a method of their
+ nding are introduced.
+Relationships between the introduced Hamiltonian normal forms and the normal forms
+of Hamiltonian systems de ned by A.D. Bruno and K.R. Meyer are studied.
+Hamiltonian normal forms for real single degree of freedom Hamiltonian systems are
+obtained in the case when the unperturbed part of the Hamiltonian is monomial and
+in the case when the unperturbed part of the Hamiltonian is an irreducible binomial
+with coprime indices.
+1
+This research was  nancially supported by the Russian Foundation for Basic Research
+(project no. 09{01{00734-a)Differential Equations and Control Processes, N 4, 2010
+Part I
+Hamiltonian Systems
+1 Hamiltonian Systems and Canonical Transformations
+1.1 Formal Hamiltonian Systems of Differential Equations
+In this section we give some basic facts from the theory of Hamiltonian systems. Detailed
+exposition is given for instance in [9].
+Let f be a formal power series in variables u = (u
+1
+;:::;u
+n
+); v = (v
+1
+;:::;v
+n
+) with coe -
+cients in the  eldK; whereK denotes eitherR orC:
+Further the words "formal power" will be omitted.
+Henceforth, f(u;v) =
+P
+1
+k=0
+f
+k
+(u;v) denotes the decomposition of a series f into the sum
+of homogeneous polynomials f
+k
+of degree k:
+De nition 1 The least r  0 for which f
+r
+6  0 is called the order of f: The order of f is
+denoted by ordf: If f  0; then ordf = +1:
+De nition 2 For any series f = f(u;v); ' = '(u;v); de ne a series called the Poisson
+bracket of f =f(u;v) and ' ='(u;v) by
+b
+f(') =ff;'g =
+n
+X
+j=1
+@f
+@u
+j
+@'
+@v
+j
+ 
+@f
+@v
+j
+@'
+@u
+j
+: (1)
+In particular, the variables u
+j
+;v
+k
+themselves satisfy the identities:
+fu
+j
+;v
+k
+g  
+j
+k
+;fu
+j
+;u
+k
+g  0;fv
+j
+;v
+k
+g  0 (j;k = 1;n );
+where  
+j
+k
+denotes the Kronecker delta.
+The Poisson bracket has the following properties:
+1)
+b
+f(') = b '(f) (skew-symmetry);
+2)
+b
+f(ff' +  ) =ff
+b
+f(') + 
+b
+f( ) 8ff; 2K (linearity);
+3)
+b
+f (' ) =
+b
+f(') +'
+b
+f ( ) (Leibniz's law);
+4)
+b
+f(f'; g) =f
+b
+f ('); g +f';
+b
+f ( )g (Jacobi's identity):
+Consider a Hamiltonian represented by series
+H(u;v) =H
+r
+(u;v) +
+1
+X
+k=r+1
+H
+k
+(u;v) (r  2): (2)
+The homogeneous polynomial H
+r
+of the least degree in decomposition (2) is called the
+unperturbed Hamiltonian, and the series H H
+r
+is called perturbation.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 87Differential Equations and Control Processes, N 4, 2010
+A Hamiltonian system with the Hamiltonian H is de ned as follows.
+_ u
+j
+=
+@H
+@v
+j
+; _ v
+j
+= 
+@H
+@u
+j
+(j = 1;n ): (3)
+The origin O is an equilibrium point of (3) because ordH  2:
+De nition 3 A series ' ='(u;v) is called an integral of the unperturbed Hamiltonian H
+r
+if
+b
+H
+r
+(') =fH
+r
+;'g = 0:
+Let ' =
+P
+1
+k=0
+'
+k
+; thenfH
+r
+;'g =
+P
+1
+k=0
+fH
+r
+;'
+k
+g is the decomposition offH
+r
+;'g into the
+sum of homogeneous polynomialsfH
+r
+;'
+k
+g of degree k +r  2:
+Hence, if ' is an integral of the unperturbed Hamiltonian H
+r
+; then the homogeneous
+polynomials '
+k
+are integrals of H
+r
+as well.
+1.2 Formal Canonical Transformations
+Consider arbitrary series u
+j
+(x;y); v
+k
+(x;y); where x = (x
+1
+;:::;x
+n
+); y = (y
+1
+;:::;y
+n
+) and
+ordu
+j
+; ordv
+k
+  1 (j;k = 1;n ):
+For any series f(u;v); let
+e
+f(x;y) =f(u(x;y);v(x;y)):
+Clearly, the order of
+e
+f is greater than or equal to the order of f:
+De nition 4 Series u
+j
+=e u
+j
+(x;y); v
+k
+=e v
+k
+(x;y) with orde u
+j
+; orde v
+k
+= 1 are said to de ne
+a formal canonical transformation if
+fe u
+j
+;e v
+k
+g  
+j
+k
+; fe u
+j
+;e u
+k
+g  0; fe v
+j
+;e v
+k
+g  0 (j;k = 1;n ): (4)
+This de nition is equivalent to the matrix equality
+(D(e u;e v)=D(x;y))I (D(e u;e v)=D(x;y))
+T
+=I; (5)
+where I =
+ 
+0 E
+n
+ E
+n
+0
+!
+: Hence, det (D(e u;e v)=D(x;y)) = 1:
+Proposition 1 The Poisson bracket is invariant under formal canonical transformations
+u
+j
+=e u
+j
+(x;y); v
+k
+=e v
+k
+(x;y), i. e.
+ff;'g =f
+e
+f;e 'g: (6)
+Proof By De nition 2,
+f
+e
+f;e 'g =
+n
+X
+j=1
+@
+e
+f
+@x
+j
+@e '
+@y
+j
+ 
+@
+e
+f
+@y
+j
+@e '
+@x
+j
+: (7)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 88Differential Equations and Control Processes, N 4, 2010
+Substituting
+@
+@x
+j
+=
+n
+P
+k=1
+@e u
+k
+@x
+j
+@
+@u
+k
++
+@e v
+k
+@x
+j
+@
+@v
+k
+;
+@
+@y
+j
+=
+n
+P
+k=1
+@e u
+k
+@y
+j
+@
+@u
+k
++
+@e v
+k
+@y
+j
+@
+@v
+k
+into (7) yields
+f
+e
+f;e 'g =
+=
+ 
+@e u
+k
+@x
+j
+@f
+@u
+k
++
+@e v
+k
+@x
+j
+@f
+@v
+k
+! 
+@e u
+l
+@y
+j
+@'
+@u
+l
++
+@e v
+l
+@y
+j
+@'
+@v
+l
+!
+ 
+ 
+@e u
+k
+@y
+j
+@f
+@u
+k
++
+@e v
+k
+@y
+j
+@f
+@v
+k
+! 
+@e u
+l
+@x
+j
+@'
+@u
+l
++
+@e v
+l
+@x
+j
+@'
+@v
+l
+!
+=
+=
+@f
+@u
+k
+@'
+@u
+l
+fe u
+k
+;e u
+l
+g +
+@f
+@u
+k
+@'
+@v
+l
+fe u
+k
+;e v
+l
+g +
+@f
+@v
+k
+@'
+@u
+l
+fe v
+k
+;e u
+l
+g +
+@f
+@v
+k
+@'
+@v
+l
+fe v
+k
+;e v
+l
+g
+(4)
+=
+=
+@f
+@u
+j
+@'
+@v
+j
+ 
+@f
+@v
+j
+@'
+@u
+j
+=ff;'g;
+it was understood that a repeated index was to be summed over from 1 to n:  
+Proposition 2 Formal canonical transformation u
+j
+=e u
+j
+(x;y); v
+k
+=e v
+k
+(x;y) transforms the
+system (3) to the system
+_ x
+j
+=
+@
+e
+H
+@y
+j
+; _ y
+j
+= 
+@
+e
+H
+@x
+j
+(j = 1;n ); (8)
+where according to the notation introduced,
+e
+H(x;y) =H(e u;e v):
+Proof According to (3), differentiating u
+j
+;v
+k
+with respect to t gives
+_ u
+j
+=fu
+j
+;Hg
+(6)
+=fe u
+j
+;
+e
+Hg; _ v
+k
+=fv
+k
+;Hg
+(6)
+=fe v
+k
+;
+e
+Hg:
+On the other hand,
+_ u
+j
+=
+@e u
+j
+@x
+l
+_ x
+l
++
+@e u
+j
+@y
+l
+_ y
+l
+; _ v
+k
+=
+@e v
+j
+@x
+l
+_ x
+l
++
+@e v
+j
+@y
+l
+_ y
+l
+:
+Thus, we obtain the equalities:
+@e u
+j
+@x
+l
+ 
+_ x
+l
+ 
+@
+e
+H
+@y
+l
+!
++
+@e u
+j
+@y
+l
+ 
+_ y
+l
++
+@
+e
+H
+@x
+l
+!
+= 0;
+@e v
+k
+@x
+l
+ 
+_ x
+l
+ 
+@
+e
+H
+@y
+l
+!
++
+@e v
+k
+@y
+l
+ 
+_ y
+l
++
+@
+e
+H
+@x
+l
+!
+= 0:
+The Jacobian of a formal canonical transformation is nonzero; consequently, these equalities
+imply (8):  
+1.3 Lie Transforms
+For any series f =f(x;y) with ordf  3; an operator exp(
+b
+f ) is de ned by
+exp(
+b
+f )(') =
+1
+X
+k=0
+b
+f
+k
+(')
+k!
+;
+where ' ='(x;y) is a series,
+b
+f
+k
+=
+b
+f   
+b
+f; k times, is the k
+th
+composition of
+b
+f from (1) with
+itself, and
+b
+f
+0
+(') =': Meanwhile, if
+b
+f
+k
+(')6  0; then ord
+b
+f
+k
+(') = ord' +k(ordf  2) k ;
+otherwise, ord
+b
+f
+k
+(') = +1:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 89Differential Equations and Control Processes, N 4, 2010
+Proposition 3 The operator exp(
+b
+f ) has the following properties:
+1) exp(
+b
+f )(ff' +  ) =ffexp(
+b
+f )(') + exp(
+b
+f )( ) 8ff; 2K;
+2) exp(
+b
+f )(' ) =exp(
+b
+f )(')exp(
+b
+f )( );
+3) exp(
+b
+f )(f'; g) =fexp(
+b
+f )(');exp(
+b
+f )( )g;
+4) exp( 
+b
+f )(exp(
+b
+f )(')) =';
+i. e. exp(
+b
+f ) is an automorphism of the algebra of series supplied by operationf:; :g:
+Proof 1) is an implication of the linearity of
+b
+f;
+2) is veri ed by using Leibniz's law:
+exp(
+b
+f )(' ) =
+1
+X
+k=0
+b
+f
+k
+(' )
+k!
+=
+1
+X
+k=0
+k
+X
+l=0
+C
+l
+k
+b
+f
+l
+(')
+b
+f
+k l
+( )
+k!
+=
+=
+1
+X
+k=0
+k
+X
+l=0
+b
+f
+l
+(')
+b
+f
+k l
+( )
+l! (k l)!
+=exp(
+b
+f )(')exp(
+b
+f )( );
+3) is veri ed in a similar way by using Jacobi's identity;
+4) follows by the identities
+exp( 
+b
+f )(exp(
+b
+f )(')) =
+1
+X
+k=0
+1
+k!
+( 
+b
+f )
+k
+ 
+1
+X
+l=0
+1
+l!
+b
+f
+l
+(')
+!
+=
+1
+X
+k;l=0
+( 
+b
+f )
+k
+(
+b
+f
+l
+('))
+k!l!
+=
+=
+1
+X
+k;l=0
+( 1)
+k
+b
+f
+k+l
+(')
+k!l!
+=
+1
+X
+m=0
+b
+f
+m
+(')
+m!
+m
+X
+k=0
+( 1)
+k
+m!
+k! (m k)!
+=
+b
+f
+0
+(') =': 
+Proposition 4 Series
+u
+j
+=exp(
+b
+f )(x
+j
+); v
+k
+=exp(
+b
+f )(y
+k
+) (ordf  3; j;k = 1;n ) (9)
+de ne a formal canonical transformation.
+Proof By the 3
+rd
+property of the operator exp(
+b
+f ); we have
+fe u
+j
+;e v
+k
+g =fexp(
+b
+f )(x
+j
+);exp(
+b
+f )(y
+k
+)g =exp(
+b
+f )(fx
+j
+;y
+k
+g) =exp(
+b
+f )( 
+j
+k
+) = 
+j
+k
+:
+In a similar way one getsfe u
+j
+;e u
+k
+g  0;fe v
+j
+;e v
+k
+g  0:
+Hence, by De nition 4, (9) is a formal canonical transformation.  
+According to [6, 7, 8, 9], let us introduce the following de nition.
+De nition 5 A formal canonical transformation of the form (9) is called a Lie transform.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 90Differential Equations and Control Processes, N 4, 2010
+Proposition 5 Lie transforms form a group.
+Proof By de nition,
+exp(
+b
+f )exp(b g ) =
+1
+X
+k=0
+1
+k!
+b
+f
+k
+ 
+1
+X
+l=0
+1
+l!
+b g
+l
+!
+=
+1
+X
+k;l=0
+b
+f
+k
+b g
+l
+k!l!
+:
+Substituting this operator series into the logarithm series (see [10, Lecture 4])
+lnZ = (Z E) 
+1
+2
+(Z E)
+2
++::: =
+1
+X
+k=1
+( 1)
+k 1
+k
+(Z E)
+k
+;
+where E is the identical operator, gives the operator series
+ln(exp(
+b
+f )exp(b g )) =
+1
+X
+k=1
+( 1)
+k 1
+k
+X b
+f
+p
+1
+b g
+q
+1
+   
+b
+f
+p
+k
+b g
+q
+k
+p
+1
+!q
+1
+!:::p
+k
+!q
+k
+!
+;
+where the inner sum is taken over all sets (p
+1
+;:::;p
+k
+;q
+1
+;:::;q
+k
+) of nonnegative integers satis-
+fying conditions
+p
+1
++q
+1
+  1;:::;p
+k
++q
+k
+  1:
+This series is called the Campbell-Hausdorff series. By [10, Lecture 4, Proposition B],
+each homogeneous term of the Campbell-Hausdorff series as a series in variables
+b
+f;b g can be
+represented in the form of a Lie polynomial, i. e. as a linear combination of the Lie brackets
+of these variables.
+Since by the Jacobi's identity the Lie bracket of
+b
+f andb g satis es [
+b
+f;b g ] =
+b
+fb g b g
+b
+f =
+\
+ff;gg;
+and ordff;gg  4; there exists such a series h with ordh  3 that
+exp(
+b
+f )exp(b g ) =exp(
+b
+h):
+Thus, composition of Lie transforms is a Lie transform.
+Associativity of the composition is obvious.
+Identity element is represented by exp(
+b
+0 ):
+By the 4
+th
+property of the operator exp(
+b
+f ); the inverse of the Lie transform exists and is
+also a Lie transform.  
+As it was shown in Proposition 2, the formal canonical transformations transform
+the Hamiltonian by the law
+e
+H(x;y) = H(e u;e v): In case the transformation is of the form (9);
+the last is equivalent to
+e
+H(x;y) =exp(
+b
+f )(H(x;y)) (10)
+by the 1
+st
+and the 2
+nd
+property of the operator exp(
+b
+f ):
+Let us write down the  rst few terms of the series in the right part of (10):
+e
+H =H +ff; Hg +
+1
+2
+ff;ff; Hgg +:::: (11)
+Since we assume that ord(f)   3; the Lie transforms do not change the unperturbed
+Hamiltonian, i. e. in (10)
+e
+H
+r
+=H
+r
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 91Differential Equations and Control Processes, N 4, 2010
+2 Formal Equivalence of Hamiltonian Systems
+2.1 Resonance Equation
+Denote the space of polynomials in variables x;y overK byP:
+Let z = (x
+1
+;:::;x
+n
+;y
+1
+;:::;y
+n
+); D = (@=@x
+1
+;:::;@=@x
+n
+;@=@y
+1
+;:::;@=@y
+n
+):
+Formula
+hhP;Qii =P (D)Q(z)j
+z=0
+P;Q2P;
+where Q is a polynomial obtained from Q by the complex conjugation of coe cients, de nes
+an inner product onP with the following properties (see for instance [11, Chapter 0,x5]):
+1)hhx
+p
+y
+q
+;x
+p
+0
+y
+q
+0
+ii =p!q! 
+p
+p
+0
+ 
+q
+q
+0
+;
+2)hhPQ;Rii =hhP;Q
+ 
+Rii (P;Q;R2P);
+where 
+p
+p
+0
+=
+Q
+n
+j=1
+ 
+p
+j
+p
+0
+j
+;  
+q
+q
+0
+=
+Q
+n
+j=1
+ 
+q
+j
+q
+0
+j
+are the products of the Kronecker deltas andQ
+ 
+=Q(D)
+is the differential operator adjoint of Q with respect to the inner producthh:; :ii:
+By the 1
+st
+property, the space P is the direct sum of the orthogonal subspaces P
+k
+of homogeneous polynomials of degree k:
+Consider a Hamiltonian
+H(x;y) =H
+r
+(x;y) +
+X
+jp+qj r+1
+h
+(p;q)
+x
+p
+y
+q
+(r  2): (12
+r
+)
+By the 2
+nd
+property of the inner producthh:; :ii; the operator
+b
+H
+ 
+r
+adjoint of
+b
+H
+r
+has the form
+b
+H
+ 
+r
+=
+n
+X
+j=1
+y
+j
+(@H
+r
+=@x
+j
+)
+ 
+ x
+j
+(@H
+r
+=@y
+j
+)
+ 
+or
+b
+H
+ 
+r
+=
+n
+X
+j=1
+(@H
+r
+=@x
+j
+)
+ 
+y
+j
+  (@H
+r
+=@y
+j
+)
+ 
+x
+j
+: (13)
+Here, the equality (13
+2
+) is obtained from (13
+1
+) by using Leibniz's law.
+De nition 6 Equation
+b
+H
+ 
+r
+P = 0; P2P: (14)
+is called the resonance equation for H
+r
+: Its solutions are called resonant polynomials.
+Denote the space of resonant polynomials byJ:
+Since the unperturbed Hamiltonian H
+r
+is a homogeneous polynomial, the space J is the
+direct sum of the orthogonal subspacesJ
+k
+of homogeneous resonant polynomials of degree k:
+2.2 Equivalence of Hamiltonian Systems Relatively to the Group
+of Lie Transforms
+De nition 7 We say that two Hamiltonians H and H
+0
+with ordH; ordH
+0
+=r and H
+r
+=H
+0
+r
+are equivalent in the order r +m (m  1) if there exists such a Lie transform that transformed
+Hamiltonian
+e
+H satis es
+e
+H
+k
+=H
+0
+k
+(k =r;r +m ):
+Electronic Journal. http://www.math.spbu.ru/diffjournal 92Differential Equations and Control Processes, N 4, 2010
+Denote the space of series in variables x;y overK by  :
+Consider the spaces
+J
+s
+=f 2   : ord   3;f ;H
+r+l
+g = 0 (l = 0;s )g (s = 0;m  2 ):
+Denote the subspace of homogeneous elements of J
+s
+of degree k by J
+k
+s
+:
+Lemma 1 Let f =
+P
+m+1
+k=3
+f
+k
++'; where m  1; f
+k
+2 J
+k
+m k+1
+and '2  ; ord'  m + 2:
+Then H
+r
+;:::;H
+r+m 1
+are invariant under the transformation (9) and
+e
+H
+r+m
+=H
+r+m
++
+m+1
+X
+k=3
+ff
+k
+;H
+r+m k+2
+g +f'
+m+2
+;H
+r
+g: (15)
+Proof Let 
+1
+;:::; 
+s
+(s  0) be a set of series (empty set when s = 0) such that ord 
+ 
+  3
+(  = 1;s ); and let 2J
+m k+1
+; ord =k (k2f3;:::;m + 1g): Then
+ordf 
+1
+;f 
+2
+;:::f 
+s
+;f ;H
+r+l
+gggg r +m +s (8l  0):
+Indeed, as far as ord 0 = +1; we may assume that
+f 
+1
+;f 
+2
+;:::f 
+s
+;f ;H
+r+l
+gggg6  0:
+Meanwhile, l  m k + 2 because 2 J
+m k+1
+andf ;H
+r+l
+g = 0 for all l = 0;m k + 1:
+Therefore,
+ordf 
+1
+;f 
+2
+;:::f 
+s
+;f ;H
+r+l
+gggg =
+s
+P
+ =1
+ord 
+ 
++ ord   2s  2 +r +l 
+  3s +k  2s  2 +r +m k + 2 =r +m +s:
+By the inequality obtained, all the Poisson brackets in (11) have orders greater than or
+equal to r +m; so H
+r
+;:::;H
+r+m 1
+are invariant under the considered transformation.
+In addition the multiple Poisson brackets of indices greater than one have the orders greater
+than r +m: This proves (15).  
+Theorem 1 LetH;H
+0
+2  ; ordH; ordH
+0
+=r andH
+k
+=H
+0
+k
+(k =r;r +m  1 ); and let there
+exist f
+k
+2J
+k
+m k+1
+(k = 3;m + 1 ) such that for any resonant polynomial P2J
+r+m
+;
+hhP;H
+0
+r+m
+ii =hhP;H
+r+m
+ii +hhP;
+m+1
+X
+k=3
+ff
+k
+;H
+r+m k+2
+gii: (16)
+Then H and H
+0
+are equivalent in the order r +m:
+Proof Let m = 1 andhhP;H
+r+1
+ H
+0
+r+1
+ii = 0 for all P2J
+r+1
+:
+Let us  nd a Lie transform that preserves H
+r
+and transforms H
+r+1
+to H
+0
+r+1
+:
+The subspace J
+r+1
+ P
+r+1
+is a complementary subspace to the image of the linear map
+b
+H
+r
+fromP
+3
+toP
+r+1
+: SinceP
+r+1
+is  nite-dimensional,Im(
+b
+H
+r
+j
+P
+3) = (Im(
+b
+H
+r
+j
+P
+3))
+??
+= (J
+r+1
+)
+?
+:
+Therefore, there exists such a polynomial'2P
+3
+thatfH
+r
+;'g =H
+r+1
+ H
+0
+r+1
+: By this equality
+and (15); the desired transformation has the form exp(b '):
+In case m  2; the result is proved in a similar manner.  
+Electronic Journal. http://www.math.spbu.ru/diffjournal 93Differential Equations and Control Processes, N 4, 2010
+Part II
+Hamiltonian Normal Forms
+3 Hamiltonian Metanormal Form
+De nition 8 We say that an element h
+(p;q)
+x
+p
+y
+q
+of the perturbation of Hamiltonian (12
+r
+) is
+nonresonant ifhhP;x
+p
+y
+q
+ii = 0 for all P2J: Otherwise, we say that the element h
+(p;q)
+x
+p
+y
+q
+is
+resonant.
+By De nition 8, the perturbation H H
+r
+can be uniquely decomposed into the sum of
+resonant and nonresonant parts which consist of resonant and nonresonant terms respectively.
+De nition 9 We say that a series H of the view (12
+r
+) or the corresponding Hamiltonian
+system (3) is a Hamiltonian Metanormal Form (or HMNF for short) if the perturbationH H
+r
+consists of resonant elements only.
+Theorem 2 There exists a formal canonical transformation that transforms (12
+r
+) to HMNF.
+Proof is done by induction on the order m:
+Denote the resonant part of H
+r+1
+by H
+0
+r+1
+:
+By De nition 8,hhP;H
+r+1
+ H
+0
+r+1
+ii = 0 for all P2J
+r+1
+:
+The last equality is identical to (16) withm = 1: Therefore by Theorem 1, the Hamiltonian
+H is equivalent to its HMNF in the order r + 1:
+Let us assume that H is equivalent to its HMNF in the order r +m  1: Without loss
+of generality assume that H is identical to its HMNF in the orders r +k (k = 1;m  1 ):
+Denote the resonant part of H
+r+m
+by H
+0
+r+m
+:
+By De nition 7,hhP;H
+r+m
+ H
+0
+r+m
+ii = 0 for all P2J
+r+m
+:
+The last equality is identical to (16) with f
+3
+;:::;f
+m+1
+= 0:
+Thus by Theorem 1, H is equivalent to its HMNF in the order r + m: Furthermore,
+by Lemma 1, the corresponding transformation is of the view (9) with ordf m + 2:
+Step by step, by eliminating the nonresonant elements of degreer+1;r+2;:::; we construct
+a sequence of Lie transforms exp(
+c
+f
+m
+) with f
+m
+2   and ordf
+m
+ m + 2:
+The composition of these transformations converges in  ; i. e. for any '2   the sum-
+mand '
+k
+of any  xed degree k does not change starting with a su ciently far step. Therefore
+by Propositions 4 and 5, the limit transformation :::exp(
+c
+f
+m
+):::exp(
+b
+f
+2
+)exp(
+b
+f
+1
+) is a formal
+canonical transformation.  
+Remark 1 HMNF is an intermediate normal form (meta- from Greek  "    ff = "after", "be-
+yond", "with", "adjacent"). Further we will show that not only resonant elements of the
+perturbation of (12
+r
+), but also some resonant elements can be eliminated by formal canonical
+transformations.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 94Differential Equations and Control Processes, N 4, 2010
+Remark 2 The fact that the unperturbed part H
+r
+of the Hamoltonian is of arbitrary degree
+r  2 is the advantage of the introduced de nition of HMNF. In the next two sections two
+other de nitions of Hamiltonian normal forms (HNF) will be given: HNF by Bruno and HNF
+by Meyer both of which assume that the unperturbed part of the Hamiltonian is of degree two.
+4 HNF by Bruno, Relationship to HMNF
+In [5] it is proved that the quadratic part of the Hamiltonian (12
+2
+) can be transformed to
+H
+2
+=
+1
+2
+z
+T
+Gz;
+where z = (x;y); and G =
+ 
+0 C
+T
+C D
+!
+is a block matrix in which C = fC
+(1)
+;:::;C
+(s)
+g is
+a Jordan matrix of order n with Jordan blocks C
+(k)
+of order l
+(k)
+(k = 1;s ); and D =
+fD
+(1)
+;:::;D
+(s)
+g is a block-diagonal matrix with blocksD
+(k)
+= 
+(k)
+ 
+(k)
+of orderl
+(k)
+, by complex
+linear canonical transformations. Here,  
+(k)
+= diagf1; 0;:::; 0g; and  
+(k)
+= 0 if the eigenvalue
+ 
+(k)
+corresponding to the block C
+(k)
+is nonzero. In other notation
+H
+2
+=
+n
+X
+j=1
+ 
+j
+x
+j
+y
+j
++
+n 1
+X
+j=1
+"
+j
+x
+j
+y
+j+1
++
+1
+2
+n
+X
+j=1
+ 
+j
+y
+2
+j
+; (17)
+where  
+1
+;:::; 
+n
+are the eigenvalues of C; and
+"
+j
+=
+(
+0; if  
+j
+6= 
+j+1
+;
+0 or 1; if  
+j
+= 
+j+1
+;
+ 
+j
+=
+(
+0; if  
+j
+6= 0 or "
+j 1
+6= 0;
+0 or 1; if  
+j
+= 0 and "
+j 1
+= 0
+("
+0
+= 0): (18)
+De nition 10 We say that Hamiltonian (12
+2
+) or the corresponding Hamiltonian system
+(3) is a Hamiltonian Normal Form by Bruno (HNFB) if the unperturbed Hamiltonian H
+2
+has
+the form (17); and in the perturbation H H
+2
+a coe cient h
+(p;q)
+= 0 if hp q; i6= 0; where
+  = ( 
+1
+;:::; 
+n
+) andh ; i = 
+1
+ 
+1
++::: + 
+n
+ 
+n
+:
+In [5] it is also proved that every Hamiltonian of order greater than or equal to two can
+be transformed to HNFB by a complex formal canonical transformation.
+Theorem 3 HMNF with the unperturbed Hamiltonian (17) is HNFB.
+Proof By (13) and (17), the operator
+b
+H
+ 
+2
+is of the view
+b
+H
+ 
+2
+=
+n
+X
+j=1
+ 
+j
+ 
+y
+j
+@
+@y
+j
+ x
+j
+@
+@x
+j
+!
++
+n 1
+X
+j=1
+"
+j
+ 
+y
+j
+@
+@y
+j+1
+ x
+j+1
+@
+@x
+j
+!
+ 
+n
+X
+j=1
+ 
+j
+x
+j
+@
+@y
+j
+:
+Consider the action of
+b
+H
+ 
+2
+on x
+p
+y
+q
+:
+b
+H
+ 
+2
+x
+p
+y
+q
+=hq p; ix
+p
+y
+q
++
+n 1
+X
+j=1
+"
+j
+(q
+j+1
+x
+p
+y
+q+e
+j
+ e
+j+1
+ p
+j
+x
+p e
+j
++e
+j+1
+y
+q
+) +
+n
+X
+j=1
+ 
+j
+q
+j
+x
+p+e
+j
+y
+q e
+j
+: (19)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 95Differential Equations and Control Processes, N 4, 2010
+As follows by (18) and (19); the operator
+b
+H
+ 
+2
+preserves degreejp+qj and a valuehq p; i;
+i. e. the operator
+b
+H
+ 
+2
+maps the subspace
+P
+k
+a
+=Linfx
+p
+y
+q
+:jp +qj =k;hq p; i =ag P
+k
+to itself.
+Let us introduce the following order on the set of multiple indicesA =f(p;q) :jp+qj =kg :
+(p
+0
+;q
+0
+)  (p
+00
+;q
+00
+) ifjp
+0
+j <jp
+00
+j; orjp
+0
+j =jp
+00
+j and p
+00
+precedes p
+0
+in the lexicographic order, or
+p
+0
+=p
+00
+and q
+0
+precedes q
+00
+in the lexicographic order.
+Let us choose the basis inP
+k
+a
+consisting of monomials x
+p
+y
+q
+arranged by ascending indices
+in the sense of the order introduced.
+In (19) q precedes q + e
+j
+  e
+j+1
+in lexicographic order, so (p;q)   (p;q + e
+j
+  e
+j+1
+);
+p e
+j
++e
+j+1
+precedes p in lexicographic order, so (p;q)  (p e
+j
++e
+j+1
+;q); andjpj<jp +e
+j
+j;
+so (p;q)  (p +e
+j
+;q e
+j
+):
+Thus,
+b
+H
+ 
+2
+maps every element of the considered basis into the subspace of P
+k
+a
+based on
+the basis elements with indices greater than or equal to the initial indices (in the sense of the
+order introduced). Hence, in this basis the operator
+b
+H
+ 
+2
+is represented by the upper triangular
+matrix with the entry a on the main diagonal.
+There is a resonant polynomial inP
+k
+a
+if and only if the determinant of this matrix is zero,
+which is equivalent to a = 0; and in its turn this is equivalent to the equalityhp q; i = 0:
+By De nition 8, this implies that only elements h
+(p;q)
+x
+p
+y
+q
+withhp q; i = 0 can be
+resonant.  
+Let us show now that HMNF may have a simpler form than HNFB.
+Consider an arbitrary Hamiltonian (12
+2
+) with the following quadratic unperturbed part
+H
+2
+=x
+1
+y
+2
++y
+2
+1
+=2 (n = 2): (20)
+By De nition 10, it is HNFB, since  
+1
+; 
+2
+= 0:
+Proposition 6 HMNF of the Hamiltonian (12
+2
+) with H
+2
+from (20) has the form
+H =H
+2
++
+X
+p
+2
+ q
+1
++2q
+2
+(p
+1
+;q
+1
+)6= (1;0)
+h
+(p;q)
+x
+p
+y
+q
+: (21)
+Proof In this case, the resonance equation is of the view
+b
+H
+ 
+2
+P =y
+1
+@P
+@y
+2
+ x
+1
+@P
+@y
+1
+ x
+2
+@P
+@x
+1
+= 0; P2P:
+The last equation has three independent solutions: P
+1
+= x
+2
+; P
+2
+= x
+2
+y
+1
+ x
+2
+1
+=2; P
+3
+=
+x
+2
+2
+y
+2
++x
+1
+x
+2
+y
+1
+ x
+3
+1
+=3; i. e. every resonant polynomial P 2 P is a polynomial in P
+1
+;P
+2
+;P
+3
+:
+Therefore, every resonant element of H  H
+2
+is a product of the terms of P
+1
+;P
+2
+;P
+3
+with
+nonnegative integer indices, and so every resonant element is of the form (we drop the constant
+multiplier)
+x
+i
+1
+2
+(x
+2
+y
+1
+)
+i
+2
+x
+2i
+3
+1
+(x
+2
+2
+y
+2
+)
+i
+4
+(x
+1
+x
+2
+y
+1
+)
+i
+5
+x
+3i
+6
+1
+=x
+p
+1
+1
+x
+p
+2
+2
+y
+q
+1
+1
+y
+q
+2
+2
+;
+where p
+1
+= 2i
+3
++i
+5
++ 3i
+6
+; p
+2
+=i
+1
++i
+2
++ 2i
+4
++i
+5
+; q
+1
+=i
+2
++i
+5
+; q
+2
+=i
+4
+:
+These indices satisfy the condition p
+2
+  q
+1
++ 2q
+2
+: In addition q
+1
+6= 0 when p
+1
+= 1: Thus,
+we obtain HMNF (21):  
+Electronic Journal. http://www.math.spbu.ru/diffjournal 96Differential Equations and Control Processes, N 4, 2010
+5 HNF by Meyer, Relationship to HMNF
+Consider a real Hamiltonian (12
+2
+) with the unperturbed part written in the form
+H
+2
+=
+1
+2
+z
+T
+Gz (G is a symmetric matrix); (22)
+Consider also a linear Hamiltonian system of differential equations with the Hamiltonian H
+2
+from (22):
+_ z =Az; (23)
+where A =IG and I is from (5).
+In [8] it is proved that if the matrix A is symmetric, then the Hamiltonian (12
+2
+) with
+the unperturbed part (22) can be transformed to the Hamiltonian H
+0
+such that
+H
+0
+2
+=H
+2
+; 8k  3;8t2R;8z2R
+2n
+: H
+0
+k
+(e
+At
+z) H
+0
+k
+(z)
+by a real formal canonical near-identity transformation z =w +W (w) with ordW  2:
+Later, in [9], this result was extended to the case of an arbitrary matrix A =IG:
+De nition 11 We say that a real Hamiltonian (12
+2
+) with the unperturbed part (22) or the
+corresponding Hamiltonian system (3) is a Hamiltonian Normal Form by Meyer (HNFM) if
+8k  3; 8t2R; 8z2R
+2n
+: H
+k
+(e
+A
+T
+t
+z) H
+k
+(z) (A =IG): (24)
+By [9, Theorem 10.4.2], an arbitrary real Hamiltonian (12
+2
+) can be transformed to HNFM
+by a real formal canonical near-identity transformation z =w +W (w) with ordW  2:
+Theorem 4 HNFM is an HMNF with the perturbation consisting of the resonant polynomials.
+Proof Let the Hamiltonian (12
+2
+) with the unperturbed part (22) be a HNFM.
+The linear system of differential equations adjoint of (23) is of the view
+_ z =A
+T
+z (25)
+and is Hamiltonian as well with the Hamiltonian H
+T
+2
+(z) =
+1
+2
+z
+T
+G
+0
+z; where G
+0
+=IGI:
+The equality (24) means that homogeneous summands of HNFM are the integrals of the
+linear system (25). Since the system (25) is Hamiltonian with the Hamiltonian H
+T
+2
+; the last is
+equivalent to the identities
+fH
+T
+2
+;H
+k
+g = 0 (k  3): (26)
+By [9, Lemma 10.4.2], the operator
+b
+H
+T
+2
+is the adjoint one of
+b
+H
+2
+with respect to the
+inner producthh:; :ii; i. e.
+b
+H
+T
+2
+=
+b
+H
+ 
+2
+: From this and (26) one can see that the homogeneous
+summands H
+k
+(k  3) of the perturbation of HNFM are solutions of the resonance equation
+for H
+2
+: Hence, by De nition 9 and the 1
+st
+property of the inner producthh:; :ii; the HNFM
+considered is an HMNF and its perturbation H H
+2
+consists of the resonant polynomials.  
+Coe cients of the resonant elements in the perturbation of HNFM are de ned by the
+solutions of the resonance equation, while in HMNF they have arbitrary values.
+For example, the perturbation of the HNFM of the Hamiltonian (12
+2
+) withH
+2
+from (20) is
+a series in resonant polynomialsP
+1
+;P
+2
+;P
+3
+from the proof of Proposition 6, which is a particular
+case of (21).
+Electronic Journal. http://www.math.spbu.ru/diffjournal 97Differential Equations and Control Processes, N 4, 2010
+6 Hamiltonian Normal Form
+6.1 NF of the Hamiltonian with a Homogeneous Unperturbed Part
+LetfP
+i
+g
+k
+i=1
+be a basis of the space J
+r+m
+(m  1) of homogeneous solutions of the resonance
+equation (14).
+De nition 12 We say that a set of monomialsR
+m
+=fR
+i
+=x
+p
+i
+y
+q
+i
+: jp
+i
++q
+i
+j =r +mg
+k
+i=1
+;
+wherep
+i
+; q
+i
+are multiple indices, forms a minimal resonant set in the orderr+m if determinant
+of the matrix of inner products A =fa
+ij
+=hhP
+i
+;R
+j
+iig
+k
+i;j=1
+is nonzero. We call the set R =
+[
+m 1
+R
+m
+a minimal resonant set.
+De nition 13 We say that Hamiltonian (12
+r
+) or the corresponding Hamiltonian system (3) is
+a Hamiltonian Normal Form (HNF) if the perturbationH H
+r
+contains only resonant elements
+belonging to some minimal resonant setR; i. e. h
+(p;q)
+= 0 if x
+p
+y
+q
+62R:
+Remark 3 According to the theory of nonHamiltonian normal forms, in case r = 2 and the
+unperturbed Hamiltonian is of the view (17) with 6= 0; HNF may be called resonant (RHNF),
+and in case r  3; or r = 2 and the unperturbed Hamiltonian is of the view (17) with   = 0;
+we may use the term "generalized Hamiltonian normal form" (GHNF).
+Theorem 5 LetR =[
+m 1
+R
+m
+be a minimal resonant set. Then there is a formal canonical
+transformation that transforms the Hamiltonian (12
+r
+) to HNF in which h
+(p;q)
+= 0 if x
+p
+y
+q
+62R:
+Proof Denote c =fc
+i
+=hhH
+r+m
+;P
+i
+iig
+km
+i=1
+; H
+0
+r+m
+=
+P
+km
+i=1
+b
+i
+R
+m
+i
+; where R
+m
+i
+2R
+m
+; b = A
+ 1
+c;
+and A is the matrix from De nition 12.
+ThenhhH
+0
+r+m
+ H
+r+m
+;P
+i
+ii =
+P
+km
+j=1
+a
+ij
+b
+j
+ c
+i
+= 0 for all i = 1;k
+m
+:
+The remaining part of the proof is similar to the proof of Theorem 2.  
+Let us introduce an example of HNF that has a simpler form than HMNF.
+Proposition 7 The Hamiltonian (12
+2
+) with the unperturbed part (20) can be transformed to
+the following HNF
+H =H
+2
++
+X
+p
+1
+=0; p
+2
+ q
+1
++2q
+2
+h
+(p;q)
+x
+p
+y
+q
+(27)
+by a formal canonical transformation.
+Proof Indeed, in the proof of Proposition 6 it was shown that polynomials P
+i
+1
+1
+P
+i
+2
+2
+P
+i
+3
+3
+; where
+P
+1
+=x
+2
+; P
+2
+=x
+2
+y
+1
+ x
+2
+1
+=2; P
+3
+=x
+2
+2
+y
+2
++x
+1
+x
+2
+y
+1
+ x
+3
+1
+=3; form a basis of the spaceJ:
+The minimal resonant set can be chosen as a set of monomials of the view
+x
+i
+1
+2
+(x
+2
+y
+1
+)
+i
+2
+(x
+2
+2
+y
+2
+)
+i
+3
+=x
+p
+1
+1
+x
+p
+2
+2
+y
+q
+1
+1
+y
+q
+2
+2
+;
+wherep
+1
+= 0;p
+2
+=i
+1
++i
+2
++2i
+3
+;q
+1
+=i
+2
+;q
+2
+=i
+3
+; because every such monomial has a nonzero inner
+product with the only basis elementP
+i
+1
+1
+P
+i
+2
+2
+P
+i
+3
+3
+: Hence, by Theorem 5, the proof is complete.  
+Remark 4 Unlike HMNF (21) and the corresponding HNFM which perturbation depends on
+the resonant polynomials P
+1
+;P
+2
+;P
+3
+; the perturbation of HNF (27) is independent of x
+1
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 98Differential Equations and Control Processes, N 4, 2010
+6.2 NF of the Hamiltonian with a Quasi-Homogeneous
+Unperturbed Part
+Till now a homogeneous polynomial H
+r
+of degreer  2 was chosen as the unperturbed part of
+the Hamiltonian. However, the less variables it depends on, or identically, the more components
+of the unperturbed part of the corresponding Hamiltonian system are identically zero, the less
+means for reducing the terms in each order of the perturbation do we have.
+This fact is well-known and is illustrated in the theory of generalized (nonHamiltonian)
+normal forms and will be veri ed in section 7.4.
+The situation seems perfect when the polynomial H
+r
+is ultimately simpli ed by a linear
+canonical transformation and depends on all variables. Such an unperturbed Hamiltonian will
+be naturally called a nondegenerate one.
+To obtain a nondegenerate unperturbed Hamiltonian one may use the following recipe
+that is widely used in the theory of generalized normal forms. Namely, one can arti cially
+supplement H
+r
+with some summands of the perturbation of the Hamiltonian (12
+r
+) and add
+some summands of H
+r
+to the perturbation so that after introducing new, generalized, degrees,
+the new unperturbed Hamiltonian is homogeneous in a de nite sense and is of less generalized
+degree than the generalized degrees of perturbation terms.
+Let us introduce several de nitions from [1, 3] modi ed for the case when the considered
+system of differential equations is Hamiltonian.
+De nition 14 Vector = (ff; ); whereff = (ff
+1
+;:::;ff
+n
+);  = ( 
+1
+;:::; 
+n
+); is called a weight
+of variable z = (x
+1
+;:::;x
+n
+;y
+1
+;:::;y
+n
+) if the components of are positive coprime integers such
+that ff
+i
++ 
+i
+=  (   2; i = 1;n):
+Let  = (ff; ) be a weight of variable z = (x;y):
+De nition 15 We say that a monomial Z
+(p;q)
+x
+p
+y
+q
+is of generalized degree k =hp;ffi +hq; i
+with weight :
+De nition 16 Polynomial Q(z) is called a quasi-homogeneous polynomial (QHP) of gener-
+alized degreek with weight and is denoted byQ
+[k]
+
+(z) if it consists of monomials of generalized
+degree k with weight  only.
+All de nitions of the previous sections can be transfered to the case of a quasi-homogeneous
+unperturbed Hamiltonian by the following recipe. Instead of the ordinary degrees one should
+consider generalized degrees with weight; and everywhere the term "homogeneous" should be
+replaced with "quasi-homogeneous with weight :" In particular, by the order of f one should
+understand the least r such that f
+[r]
+
+6  0:
+Further we omit the words "with weight " for short.
+The Poisson bracket of two QHPs of generalized degreesk;l is again a QHP of generalized
+degreek +l  : Hence, for every seriesf of the order greater than  the Lie transformexp(
+b
+f )
+is de ned on the space of series.
+By the introduced de nitions and by the properties of the inner producthh:; :ii; the space
+P is the direct sum of the orthogonal subspacesP
+[k]
+
+of QHPs of generalized degree k:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 99Differential Equations and Control Processes, N 4, 2010
+The resonance equation for a quasi-homogeneous unperturbed Hamiltonian H
+[ ]
+
+is of the
+form
+ 
+b
+H
+[ ]
+
+ 
+ 
+P = 0; P2P;
+and the space J of its solutions is the direct sum of the orthogonal subspaces J
+[k]
+
+of quasi-
+homogeneous solutions of generalized degree k:
+Everywhere instead of the spacesP
+k
+andJ
+k
+one should consider the spacesP
+[k]
+
+andJ
+[k]
+
+:
+In de nitions of HNF and HMNF, H
+r
+should be replaced with H
+[ ]
+
+; and in the de nition
+of the minimal resonant set,R
+m
+should be replaced with
+R
+[m]
+
+=fR
+i
+=x
+p
+i
+y
+q
+i
+: hff;p
+i
+i +h ;q
+i
+i =r +mg
+k
+i=1
+:
+With a view of the above, Theorems 2 and 5 also transfer to the case of a quasi-
+homogeneous unperturbed Hamiltonian.
+7 HNFs of Some One Degree of Freedom Systems
+Here we will consider the case of n = 1 andK =R: Still, H
+r
+is the unperturbed part of the
+Hamiltonian (12
+r
+) : H(x;y) =H
+r
+(x;y) +
+P
+jp+qj r+1
+h
+(p;q)
+x
+p
+y
+q
+(r  2):
+In the formulas for HNF and HMNF given below it is assumed that the perturbation
+summands are of greater degrees than the degree of the unperturbed Hamiltonian, so we omit
+the corresponding inequalities in the summation limits for short.
+7.1 The Unperturbed Hamiltonian is a Monomial in One Variable
+Let the unperturbed HamiltonianH
+r
+be independent of one of the variables, for example, ofx.
+Theorem 6 HNF with the degenerate unperturbed Hamiltonian H
+r
+= hy
+r
+(h 2 Rnf0g)
+coincides with the corresponding HMNF and has the form
+H =hy
+r
++
+X
+q r 2
+h
+(p;q)
+x
+p
+y
+q
+: (28)
+Proof Indeed, according to (13);
+b
+H
+ 
+r
+= x(@H
+r
+=@y)
+ 
+= hrx@
+r 1
+=@y
+r 1
+; and the resonance
+equation (14) is equivalent to @
+r 1
+P=@y
+r 1
+= 0: Its solutions are the polynomials with the
+degree of y less than or equal to r  2: Hence, by De nition 9, we obtain HMNF (28):
+MonomialsfP
+i
+= x
+p
+i
+y
+q
+i
+j p
+i
+= r +m + 1 i; q
+i
+= i  1g
+r 1
+i=1
+form a basis in the space of
+solutions of (14) of degreer +m and by De nition 11, they form a minimal resonant set in the
+order r +m: Therefore, the obtained HMNF is HNF by De nition 13.  
+Rewrite the Hamiltonian (28) as a sum of homogeneous polynomials:
+H =hy
+r
++
+1
+X
+k=r+1
+r 2
+X
+q=0
+h
+(k q;q)
+x
+k q
+y
+q
+:
+Let us consider two important particular cases of the HNF (28). Namely, r = 2 andr = 3:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 100Differential Equations and Control Processes, N 4, 2010
+1) In caser = 2; the perturbation in (28) is independent ofy; and the HNF itself coincides
+with the corresponding HNFM (see [9, p. 263]) and has the form
+H =hy
+2
++
+1
+X
+k=3
+h
+(k;0)
+x
+k
+: (28
+2
+)
+2) Let r = 3 and h = 1=3: Then HNF (28) has the form
+H =y
+3
+=3 +
+1
+X
+k=4
+(h
+(k;0)
+x
+k
++h
+(k 1;1)
+x
+k 1
+y): (28
+3
+)
+The corresponding Hamiltonian system is of the view
+_ x =y
+2
++
+1
+X
+k=3
+h
+(k;1)
+x
+k
+; _ y = 
+1
+X
+k=3
+((k + 1)h
+(k+1;0)
+x
+k
++kh
+(k;1)
+x
+k 1
+y): (28
+s
+3
+)
+According to [2, Theorem 11], arbitrary (nonHamiltonian) two-dimensional system of or-
+dinary differential equations with the unperturbed part (y
+2
+; 0) is formally equivalent to the
+following generalized normal forms (GNF):
+_ x =y
+2
++
+1
+X
+p=2
+(X
+(p+1;0)
+x
+p+1
++X
+(p;1)
+x
+p
+y); _ y =
+1
+X
+p=2
+(Y
+(p;1)
+x
+p
+y +Y
+(p+1;0)
+x
+p+1
+); (28
+gnf
+3:1
+)
+_ x =y
+2
++
+1
+X
+p=2
+X
+(p+1;0)
+x
+p+1
+; _ y =
+1
+X
+p=2
+(Y
+(p 1;2)
+x
+p 1
+y
+2
++Y
+(p;1)
+x
+p
+y +Y
+(p+1;0)
+x
+p+1
+): (28
+gnf
+3:2
+)
+The  rst component of the perturbation in (28
+s
+3
+) coincides with the  rst component of the
+perturbation in GNF (28
+gnf
+3:2
+); and the second one coincides with the second component of the
+perturbation in GNF (28
+gnf
+3:1
+):
+Thus, we come to a conclusion that due to the hamiltonicity of the initial system with the
+unperturbed part (y
+2
+; 0); it becomes possible to reduce it to a GNF with fewer resonant terms
+in each order of the perturbation.
+Note that in the de nition of HNF we consider the equivalence relatively to the group of
+formal canonical transformations, while in the de nition of GNF (see [1]) equivalence relatively
+to a wider group of invertible formal transformations is considered.
+7.2 The Unperturbed Hamiltonian is a Monomial in Two Variables
+Theorem 7 HNF with the nondegenerate unperturbed Hamiltonian H
+r
+= hx
+m
+y
+l
+; where
+m +l = r; d = gcd (m;l) (m;l  1; h2 Rnf0g); coincides with the corresponding HMNF
+and has the form
+H =hx
+m
+y
+l
++
+X
+p m 2
+h
+(p;q)
+x
+p
+y
+q
++
+X
+p m 1
+q l 2
+h
+(p;q)
+x
+p
+y
+q
++
+1
+X
+j=d
+h
+(jm=d 1;jl=d 1)
+x
+jm=d 1
+y
+jl=d 1
+: (29)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 101Differential Equations and Control Processes, N 4, 2010
+Proof According to (13);
+b
+H
+ 
+r
+= (@H
+r
+=@x)
+ 
+y  (@H
+r
+=@y)
+ 
+x = hm@
+m 1
+x
+@
+l
+y
+y hl@
+m
+x
+@
+l 1
+y
+x; and
+the resonance equation (14) is equivalent to
+@
+m 1
+x
+@
+l 1
+y
+(m@
+y
+yP l@
+x
+xP ) = 0;
+where@
+x
+=@=@x;@
+y
+=@=@y: We are looking for solutions of this equation in the formP =x
+p
+y
+q
+:
+Substituting into the resonance equation gives
+@
+m 1
+x
+@
+l 1
+y
+(m(q + 1) l(p + 1))x
+p
+y
+q
+= 0:
+This equality is satis ed in one of the following mutually exclusive cases:
+1) p m  2;
+2) p m  1; q l  2;
+3) p =jm=d  1; q =jl=d  1; where j d:
+The obtained monomial solutions form a basis of the spaceJ: Hence, by De nition 9, we obtain
+HMNF (29).
+As well as in the previous example, the minimal resonant set in each order is unique and
+consists of the monomial solutions found. Therefore, the obtained HMNF is HNF. 
+Rewrite the Hamiltonian (29) as a sum of homogeneous polynomials:
+H =hx
+m
+y
+l
++
+1
+X
+k=r+1
+ 
+m 2
+X
+p=0
+h
+(p;k p)
+x
+p
+y
+k p
++x
+m 1
+l 2
+X
+q=0
+h
+(k+m 1 q;q)
+x
+k q
+y
+q
++ 
+k
+(x;y)
+!
+;
+where
+ 
+k 2
+(x;y) =
+8
+<
+:
+h
+(km=r 1;kl=r 1)
+x
+km=r 1
+y
+kl=r 1
+; if k
+.
+.
+. (r=d);
+0; if k6 .
+.
+. (r=d):
+Let us consider two important particular cases of the HNF (29). Namely, r = 2 andr = 3:
+1) Let r = 2: Then in HNF (29) the indices l; m = 1; therefore, H
+2
+= hxy; the  rst two
+sums in the right part of (29) disappear, and the third one consists of powers of the product
+xy: Hence, HNF (29) has the form
+H =hxy +
+1
+X
+j=2
+h
+(j;j)
+x
+j
+y
+j
+: (29
+2
+)
+The obtained result agrees with [9, Corollary 10.4.1]. In this case, HNF (29
+2
+) coincides with
+HNFB and HNFM.
+2) Let r = 3; l = 1; m = 2; h = 1=2: Then H
+3
+= x
+2
+y=2; and HNF (29) has the form
+H = 
+1
+2
+x
+2
+y +
+1
+X
+k=4
+h
+(0;k)
+y
+k
++
+1
+X
+j=1
+h
+(2j+1;j)
+x
+2j+1
+y
+j
+; (29
+3
+)
+and the Hamiltonian system in normal form generated by HNF (29
+3
+) is of the view
+_ x = 
+1
+2
+x
+2
++
+1
+X
+k=3
+(k + 1)h
+(0;k+1)
+y
+k
++
+1
+X
+j=1
+jh
+(2j+1;j)
+x
+2j+1
+y
+j 1
+; _ y =xy 
+1
+X
+j=1
+(2j + 1)h
+(2j+1;j)
+x
+2j
+y
+j
+:
+(29
+s
+3
+)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 102Differential Equations and Control Processes, N 4, 2010
+It seems interesting to compare the system (29
+s
+3
+) with a GNF that has the same Hamilto-
+nian unperturbed part as in (29
+s
+3
+) and arbitrary (nonHamiltonian) perturbation.
+The unperturbed part of (29
+s
+3
+) | a vector-polynomial ( x
+2
+=2;xy) | is one of the nineteen
+linearly inequivalent canonical forms to which the unperturbed part of a two-dimensional system
+represented by an arbitrary nondegenerate vector quadratic polynomial can be reduced by
+a linear nonsingular transformation (see [4, Section 5.2], [2,x 2]). Namely, according to the
+classi cation given in [2], ( x
+2
+=2;xy) = CF
+1
+1
+with u = 1=2: In [4,x 5] all GNFs formally
+equivalent to the systems with the unperturbed part (ffx
+2
+;xy) are given explicitly.
+7.3 The Unperturbed Hamiltonian is an Irreducible Binomial
+with Coprime Indices
+Consider an irreducible binomial (h
+1
+= )x
+ 
+  (h
+2
+=ff)y
+ff
+in which h
+1
+h
+2
+6= 0 and gcd (ff; ) = 1:
+By De nition 16, such a binomial is a QHP of generalized degree ff  with weight (ff; ):
+Consider a Hamiltonian H
+
+with a quasi-homogeneous nondegenerate unperturbed part
+H
+[ ]
+
+= (h
+1
+= )x
+ 
+  (h
+2
+=ff)y
+ff
+; (30)
+where gcd (ff; ) = 1; h
+1
+h
+2
+6= 0;   =ff ;  = (ff; ):
+One can assume that it was obtained from the degenerate unperturbed Hamiltonian
+H
+r
+=hy
+r
+(if ff< ) by adding the term of the Hamiltonian (28) depending on x:
+The resonance equation for the quasi-homogeneous unperturbed Hamiltonian H
+[ ]
+(ff; )
+is of
+the form
+h
+1
+y@
+  1
+x
+P +h
+2
+x@
+ff 1
+y
+P = 0; P2P: (31)
+By the notation given in 6.2,J
+[k]
+(ff; )
+is the space of quasi-homogeneous solutions of (31) of
+generalized degree k with weight (ff; ):
+Lemma 2 x
+p
+y
+q
+2J
+[k]
+(ff; )
+if and only if k =ffp + q; p    2 and q ff  2:
+Proof The assertion is veri ed by direct substitution x
+p
+y
+q
+into (31).  
+Lemma 3 Let x
+p
+y
+q
+2J
+[k]
+(ff; )
+; x
+p
+0
+y
+q
+0
+2J
+[k
+0
+]
+(ff; )
+: Then either (p;q) = (p
+0
+;q
+0
+) or k6 k
+0
+mod  :
+Proof Let ffp +  q   ffp
+0
++  q
+0
+mod  : Then ffp   ffp
+0
+mod   and
+ q    q
+0
+mod ff: Since ff and   are relatively prime, the last equalities are equivalent to
+the following ones
+p p
+0
+mod  ; q q
+0
+mod ff: (32)
+Now let x
+p
+y
+q
+2 J
+[k]
+(ff; )
+; x
+p
+0
+y
+q
+0
+2 J
+[k
+0
+]
+(ff; )
+; and k  k
+0
+mod  : By Lemma 2, p;p
+0
+     2;
+q;q
+0
+ ff  2: From this and from (32) it follows that (p;q) = (p
+0
+;q
+0
+): 
+Electronic Journal. http://www.math.spbu.ru/diffjournal 103Differential Equations and Control Processes, N 4, 2010
+Lemma 4 Let P2J
+[k]
+(ff; )
+and P6  0: Then there exists a unique Q2J
+[k+ ]
+(ff; )
+such that
+xP =h
+1
+@
+  1
+x
+Q; yP = h
+2
+@
+ff 1
+y
+Q: (33)
+Moreover, if J
+[k]
+(ff; )
+6=f0g; then there exists such k
+0
+  0 that k  k
+0
+mod   and J
+[k
+0
+]
+(ff; )
+contains a monomial solution of the equation (31); and there is an isomorphism of the spaces
+J
+[k]
+(ff; )
+andJ
+[k
+0
+]
+(ff; )
+:
+Proof Existence of Q. Let
+Q =
+1
+h
+1
+Z
+   
+Z
+| {z }
+  1 times
+xPdx
+  1
++
+  2
+X
+j=0
+R
+j
+(y)x
+j
+;
+where R
+j
+are arbitrary polynomials. Then the  rst equality in (33) is satis ed identically, and
+after substituting Q into the second equality by the equation (31); we get
+h
+2
+@
+ff 1
+y
+Q = y
+Z
+   
+Z
+| {z }
+  1 times
+@
+  1
+x
+Pdx
+  1
++
+  2
+X
+j=0
+h
+2
+x
+j
+@
+ff 1
+y
+R
+j
+(y):
+For any primitive in the  rst term, one can choose such polynomialsR
+j
+that the second equality
+in (33) is satis ed, which proves the existence of the polynomial Q satisfying (33). In its turn,
+(33) with the quasi-homogeneity of P implies that Q can be chosen quasi-homogeneous.
+Multiplying the  rst equality from (33) byy and subtracting the second one multiplied by
+x yields that Q satis es the equation (31).
+Uniqueness of Q: Let Q;Q
+0
+2J
+[k+ ]
+(ff; )
+satisfy the relations (33) with the same P2J
+[k]
+(ff; )
+;
+P 6  0: Then @
+  1
+x
+(Q Q
+0
+) = 0 and @
+ff 1
+y
+(Q Q
+0
+) = 0: From this by Lemma 2, solutions Q
+and Q
+0
+can differ only by monomial solutions of the resonance equation (31), and from the
+quasi-homogeneity of Q Q
+0
+and from Lemma 3, we get
+Q Q
+0
+=Cx
+p
+y
+q
+; (34)
+where k +  =ffp + q; p    2 and q ff  2:
+Denote P
+1
+= P: Let us construct a sequence P
+j
+2 J
+[k (j 1) ]
+(ff; )
+by sequentially applying
+the relations (33):
+xP
+j+1
+=h
+1
+@
+  1
+x
+P
+j
+; yP
+j+1
+= h
+2
+@
+ff 1
+y
+P
+j
+:
+By the resonance equation (31), all P
+j
+are uniquely determined by P
+1
+:
+There is such a number m2f1;:::; [k= ] + 1g that P
+m
+6  0 and P
+m+1
+  0:
+It follows from the relations (33) that P
+m
+is a monomial solution of generalized degree
+k  (m  1) <k + : By Lemma 3, from this in (34) C = 0, which is equivalent to Q =Q
+0
+:
+Incidentally, for every nonmonomial QHPQ2J
+(ff; )
+(Q is nonmonomial due toP6  0 and
+Lemma 2) we have found a unique monomial solution P
+m
+such that Q is obtained from P
+m
+by
+applying relations (33)m-times, which gives the one-one correspondence between the solutions
+Q2J
+[k+ ]
+(ff; )
+and the monomial solutions of the equation (31) of generalized degreek  (m  1) :
+Since the relations (33) are linear by P and Q, this correspondence is an isomorphism
+of spaces.  
+Electronic Journal. http://www.math.spbu.ru/diffjournal 104Differential Equations and Control Processes, N 4, 2010
+Theorem 8 HMNF with the quasi-homogeneous unperturbed Hamiltonian (30) is of the view
+H = (h
+1
+= )x
+ 
+  (h
+2
+=ff)y
+ff
++
+X
+p6  1 mod 
+q6  1 modff
+h
+(p;q)
+x
+p
+y
+q
+(ffp + q   + 1); (35)
+and all the HNFs are given by
+H =H
+[ ]
+(ff; )
++
+1
+X
+k= +1
+H
+[k]
+(ff; )
+; (36)
+where H
+[k]
+(ff; )
+=h
+(p;q)
+x
+p
+y
+q
+with k =ffp + q   + 1 and p6  1 mod ; q6  1 modff:
+Proof Let the monomialx
+p
+y
+q
+appear inP2J
+[k]
+(ff; )
+(k =ffp+ q  0) with a nonzero coe cient.
+Namely,hhP;x
+p
+y
+q
+ii6= 0:
+By Lemma 4, there exists a unique Q 2 J
+[k+ ]
+(ff; )
+such that the equalities (33) are
+satis ed. Hence, hhxP;x
+p+1
+y
+q
+ii
+(33)
+= hhh
+1
+@
+  1
+x
+Q;x
+p+1
+y
+q
+ii 6= 0 and hhyP;x
+p
+y
+q+1
+ii
+(33)
+=
+hh h
+2
+@
+ff 1
+y
+Q;x
+p
+y
+q+1
+ii6= 0: By the 2
+nd
+property of the inner producthh:; :ii; we get
+hhQ;x
+p+ 
+y
+q
+ii6= 0; hhQ;x
+p
+y
+q+ff
+ii6= 0: (37)
+Let monomial x
+p+ 
+y
+q
+appear in a nonmonomial Q2J
+[k+ ]
+(ff; )
+with a nonzero coe cient, i. e.
+hhQ;x
+p+ 
+y
+q
+ii6= 0: Then by Lemma 4, there existsP2J
+[k]
+(ff; )
+;P6  0 satisfying (33). By applying
+relations (33) and the 2
+nd
+property of the inner producthh:; :ii; we gethhh
+1
+@
+  1
+x
+Q;x
+p+1
+y
+q
+ii
+(33)
+=
+hhxP;x
+p+1
+y
+q
+ii6= 0; which implieshhP;x
+p
+y
+q
+ii6= 0: Hence,hhQ;x
+p
+y
+q+ff
+ii6= 0 by (37).
+It can be proved in the same manner thathhQ;x
+p
+y
+q+ff
+ii6= 0 implieshhP;x
+p
+y
+q
+ii6= 0 and
+hhQ;x
+p+ 
+y
+q
+ii6= 0:
+Therefore, for every p and q such that ffp + q    + 1; monomials x
+p
+y
+q
+; x
+p+ 
+y
+q
+; x
+p
+y
+q+ff
+are either all in one resonant or all in one nonresonant.
+From this, in view of Lemma 4, we obtain that the resonant elements must be of the form
+x
+p+j 
+y
+q+kff
+; where x
+p
+y
+q
+2J
+(ff; )
+:
+Hence, by Lemma 2, HMNF with the unperturbed part (30) has the form (35).
+By Lemmas 3 and 4, it follows that for every k   0; the inequality dimJ
+[k]
+(ff; )
+  1 is
+satis ed.
+Hence, every minimal resonant set can be obtained by choosing the only resonant element
+in each generalized degree of the perturbation of HMNF (35). Eventually, we get HNF (36).  
+Corollary 1 The set R =fx
+p+k 
+y
+q
+j p     2; q  ff  2; k  0g represents a minimal
+resonant set for the unperturbed Hamiltonian (30); and the series
+H = (h
+1
+= )x
+ 
+  (h
+2
+=ff)y
+ff
++
+X
+p6  1 mod 
+q ff 2
+h
+(p;q)
+x
+p
+y
+q
+(38)
+is a HNF corresponding to the minimal resonant setR:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 105Differential Equations and Control Processes, N 4, 2010
+7.4 Comparison of HNFs with Degenerate and Nondegenerate
+Unperturbed Hamiltonians
+Consider the particular case of Hamiltonians from the sections 7.1, 7.3, namely, the Hamiltonian
+H =y
+2
+=2 x
+3
+=3 +h
+(2;1)
+x
+2
+y +h
+(1;2)
+xy
+2
++h
+(0;3)
+y
+3
++
+X
+p+q 4
+h
+(p;q)
+x
+p
+y
+q
+:
+The homogeneous unperturbed Hamiltonian has the form H
+2
+=y
+2
+=2: It does not depend
+on x; and hence, by Theorem 6, HNF coincides with HMNF and is of the view
+H =y
+2
+=2 +
+1
+X
+k=3
+h
+(k;0)
+x
+k
+: (39)
+On the other hand, one can choose a nondegenerate QHP H
+[6]
+(2;3)
+= y
+2
+=2 x
+3
+=3 as the
+unperturbed part ofH: Then by Theorem 8 with  = 6; (ff; ) = (2; 3); we obtain the following
+HMNF:
+H =y
+2
+=2 x
+3
+=3 +
+X
+p6  2 mod3
+q  0 mod2
+h
+(p;q)
+x
+p
+y
+q
+(2p + 3q  7):
+HNF (36) corresponding to the minimal resonant setR chosen in Corollary 1 with   = 6;
+(ff; ) = (2; 3) is of the view
+H =y
+2
+=2 x
+3
+=3 +
+1
+X
+j=1
+(h
+(3j+1;0)
+x
+3j+1
++h
+(3j+3;0)
+x
+3j+3
+) (40)
+according to (38): The corresponding system of differential equations is of the form
+_ x =y; _ y =x
+2
+ 
+1
+X
+j=1
+ 
+(3j + 1)h
+(3j+1;0)
+x
+3j
++ (3j + 3)h
+(3j+3;0)
+x
+3j+2
+ 
+: (41)
+Comparing expressions (39) and (40); one can see that accounting the term x
+3
+=3 together
+with a proper choice of a minimal resonant set allows us to strengthen the Hamiltonian normal
+form.
+In [3], two-dimensional system of ordinary differential equations with the linear-quadratic
+unperturbed part (y;x
+2
+) is considered relatively to the group of invertible formal transforma-
+tions. According to [3,x5, Theorem 4], such a system can be transformed to a GNF with the
+same unperturbed part in which for every k  1; all coe cients of the forms Y
+[6k 2]
+; Y
+[6k 1]
+;
+Y
+[6k+1]
+are zero, and all coe cients, except maybe one in each of the forms Y
+[6k 4]
+; Y
+[6k 3]
+;
+Y
+[6k]
+; are zero. Such a GNF differs from the HNF (41) in which after the reexpansion by the
+generalized degrees, by the notation given in [3], vectors Y
+[6k 3]
+and Y
+[6k+1]
+can be nonzero,
+and the other vectors are zero.
+The difference between the normal forms is explained by the fact that in one case, the
+conditions on the normal form are: the Hamiltonian character of the initial system on the
+one hand, and the equivalence relatively to the group of formal canonical transformations on
+the other hand. In other case, the condition of hamiltonicity is withdrawn, at the same time
+equivalence relatively to a wider group of invertible formal transformations is considered.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 106Differential Equations and Control Processes, N 4, 2010
+References
+[1] V. V. Basov. A Generalized Normal Form and Formal Equivalence of Systems of Differ-
+ential Equations with Zero Characteristic Numbers // Differential Equations.| 2003.|
+V. 39, No. 2.| P. 165{181. Translated from Differentsial'nye Uravneniya.| 2003.| V. 39,
+No. 2.| P. 154{170.
+[2] V. V. Basov, E. V. Fedorova. Two-dimensional Real Systems of Ordinary Differ-
+ential Equations with Quadratic Unperturbed Parts: Classi cation and Degen-
+erate Generalized Normal Forms // Differential Equations and Control Processes
+(http://www.math.spbu.ru/diffjournal).| 2010.| No. 4.| P. 49{85.
+[3] V. V. Basov, A. A. Fedotov. Generalized Normal Forms for Two-Dimensional Systems of
+Ordinary Differential Equations with Linear and Quadratic Unperturbed Parts // Vestnik
+St. Petersburg University: Mathematics.| 2007.| V. 40, No. 1.| P. 6{26. Translated
+from Vestnik Sankt-Peterburgskogo Universiteta. Seriya 1. Matematika, Mekhanika,
+Astronomiya.| 2007.| V. 40, No. 1.| P. 13{32.
+[4] V. V. Basov, A. V. Skitovich. A Generalized Normal Form and Formal Equivalence of Two-
+Dimensional Systems with Quadratic Zero Approximation: I // Differential Equations.|
+2003.| V. 39, No. 8.| P. 1067{1081. Translated from Differentsial'nye Uravneniya.|
+2003.| V. 39, No. 8.| P. 1016{1029.
+[5] A. D. Bruno. The Normal Form of a Hamiltonian System // Uspekhi Mat. Nauk| 1988.|
+Vol. 43, No. 1.| P. 23{56. (Russian)
+[6] A. Deprit. Canonical transformations depending on a small parameter // Celestial
+Mechanics.| 1969.| V. 1, No 1.| P. 12{30.
+[7] G. I. Hori. Theory of general perturbations with unspeci ed canonical variables // Astron
+Soc. Japan.| 1966.| V. 18, No 4.| P. 287{296.
+[8] K. R. Meyer. Normal forms for Hamiltonian systems // Celestial Mechanics.| 1974.|
+V. 9, No 4.| P. 517{522.
+[9] K. R. Meyer, G. R. Hall, D. O n. Introduction to Hamiltonian Dynamical Systems and the
+N-Body Problem, 2nd Edition.| Springer, 2009.| xiii+399 p.
+[10] M. M. Postnikov. Lectures in Geometry: Lie Groups and Lie Algebras (Semester V).|
+Moscow, Nauka, 1982.| 448 p. (Russian)
+[11] D. P. Zhelobenko. Representations of Reductive Lie Algebras.| Moscow, Nauka, Fizmatlit
+Publishing Company, 1994.| 352 p. (Russian)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 107

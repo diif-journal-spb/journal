@@ -1,0 +1,1367 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 3, 2014
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Stohastic differential equations
+Existence result for Stochastic Impulsive differential inclusions
+M.O. Ogundiran
+Department of Mathematics , Obafemi Awolowo University, Ile-Ife. Nigeria
+mogundiran@oauife.edu.ng, adeolu74113@yahoo.com
+Abstract
+We establish the existence of solution of Stochastic impulsive differential inclusion in
+in nite dimensional space. We employed  xed point theorem for multivalued map to
+obtain the solution.
+AMS Subject Classi cation: 34K50, 34A60 Key Words and Phrases: stochastic
+differential inclusions, mild solution, impulsive effects.
+1 Introduction
+Impulsive differential equations model problem with impulsive effects which are
+due to instantaneous perturbations at certain moments. The vast applications
+of the theory of impulsive differential equations and inclusions have attracted
+many authors both to deterministic and stochastic cases. The theory of impul-
+sive differential equations and inclusions were extensively studied in [3] , [8] and
+the references cited there. Existence of solution for integrodifferential inclusion
+in in nite dimensional space without impulse effects was established in [4]. This
+work is concerned with stochastic systems in in nite dimensional space. In [13],
+concise study of stochastic differential equation in in nite dimensional space was
+done and this will form a bedrock of this work. By Banach  xed point theo-
+rem and semigroup approach, the existence of solution of nonlinear stochastic
+differential inclusions was established in [1]. Stochastic systems with impulses
+effects were studied in [12] with non local condition while neutral stochastic
+evolution inclusions were studied in [11] both for convex and non convex cases.Differential Equations and Control Processes, N 3, 2014
+The existence of weak solution of stochastic differential inclusions has applica-
+tions in stochastic control and partial differential inclusions as established in
+[7]and references cited in it. The mild solution of Stochastic evolution inclu-
+sions with impulsive effects considered in this work has applications to transition
+semigroup and hence the Feller property of such semigroup.
+The result in this work has applications in the study of control problem for a
+stochastic dynamical system. The solution sets will be employed in the space
+of admissible controls for the system and the impulsive effects due to the effects
+of abrupt interruption of the system over certain period of time. The work also
+have practical applications in the study of models of interacting species in a
+random medium in which the impulsive effects are due to some environmental
+factors over a period of time.
+In the sequel, preliminaries necessary for the result shall be stated in section 2
+and the main result will be proved in section 3.
+2 Preliminaries
+Let H be a real separable Hilbert space with inner producth:;:i and norm
+k :k and let K be another real separable Hilbert space with inner product
+h:;:i
+K
+and normk:k
+K
+. L(K;H) denotes the space of bounded operators from
+K to H. Let (
+;F;F
+t
+;P) be a complete probability space with a  ltration
+fF
+t
+g satisfying the usual condition (i.e. the  ltration contains all P -null sets
+and is right continuous). w(t) denotes a given K-valued Brownian motion
+with a  nite trace nuclear covariance operator Q  0: For  
+1
+; 
+2
+2 L(K;H),
+de nehh 
+1
+; 
+2
+ii= traceh 
+1
+Q 
+ 
+2
+i, where  
+ 
+2
+is the adjoint of the operator  
+2
+.
+L(K;H) with the inner producthh:;:ii is a pre-Hilbert space, its completion
+with respect to the topology induced by the Q-Hilbert-Schmidt normk :k
+Q
+ 
+k k
+2
+Q
+=hh ; ii<1
+ 
+is a Hilbert space.
+We shall state some de nitions and properties of multivalued maps which will
+be employed in the sequel.
+For a nonempty set X, let (X;d) be a metric space and P (X) denote the
+nonempty family of subsets of X, we shall denote by P
+cl
+(X) (resp. P
+b;cp;cv
+(X))
+the nonempty family of closed (resp.bounded, compact and convex)subsets of
+X.
+A multivalued map F : X ! P (X) is closed (resp. convex)-valued if F (x)
+is closed (resp. convex) for all x2 X. F is said to be bounded if for every
+bounded set V2P (X), F (V ) is bounded in X.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 56Differential Equations and Control Processes, N 3, 2014
+F is said to be upper semicontinuous (u.s.c) at a point point x2X if x2X,
+F (x) is a nonempty closed subset ofX and for each open setV ofX containing
+F (x) there exists an open neighbourhood N of x such that F (N)  V . F is
+said to be u.s.c on a nonempty subsetY ofX ifF is u.s.c at every pointy2Y .
+If for every bounded subset V of X, F (V ) is relatively compact then F is said
+to be completely continuous. If F is continuous with nonempty compact values,
+then F is u.s.c if and only if F has closed graph (i.e. x
+n
+! x, y
+n
+! y implies
+y2F (x)).
+Let J R be nonempty, a multivalued map F : J! P
+bd;cl;cv
+(X) is said to be
+measurable if for each x2X the distance function Y :J!R de ned by
+Y (t) =d
+ 
+(x;F (t)) = inffd(x;z) :z2F (t)g
+is measurable. All these properties of multivalued maps can be found in [2], [5]
+and other standard books on set-valued analysis or differential inclusions.
+We shall be concerned with the existence of mild solution of the stochastic
+differential inclusions with impulsive effects:
+dx(t)2 [Ax(t) +f(t;x(t))]dt +G(t;x(t))dw(t) a:e: t2 [0;T ]; t6=t
+k
+; k = 1;:::;m
+4x(t
+k
+) =I
+k
+(x(t
+k
+)); k = 1;:::;m
+x(0) = 
+(2.1)
+where  2 H and A is the in nitesimal generator of an analytic semigroup of
+bounded linear operators S(t); t  0,
+x(t
++
+k
+) = lim
+h!0+
+x(t
+k
++h) and x(t
+k
+) = lim
+h!0 
+x(t
+k
++h):
+The t
+k
+  0 are impulsive moments satisfying t
+k
+<t
+k+1
+and lim
+k!1
+t
+k
+= +1:
+The4x(t
+k
+) =x(t
++
+k
+) x(t
+k
+) represents the jump in the state at t
+k
+:
+We assume that there exists a constantM such thatkS(t)k
+B(H)
+ M fort2J
+and 02  (A); where B(H) denotes the space of bounded linear operators on
+H and  (A) is the resolvent set of A:
+De nition 2.1 A multivalued map F : J  X ! P (X) is said to be L
+2
+-
+Caratheodory if
+(i) t!F (t;u) is measurable for each u2D;
+(ii) u!F (t;u) is u.s.c for almost all t2J;
+(iii)F is integrably bounded i.e. for eachq> 0;there existsh
+q
+2L
+1
+(J;R
++
+) such
+that
+kF (t;u)k
+2
+= supfkvk
+2
+:v2F (t;u)g h(t) for all kuk q; a:e: t2J:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 57Differential Equations and Control Processes, N 3, 2014
+Let J = [0;b] we de ne PC PC
+ 
+J;L
+2
+(
+;H)
+ 
+as
+PC =
+ 
+' : [0;b]!H such that ' is a continuous H valued stochastic
+process except for points t
+k
+; k = 1;:::;m; at which '(t
+ 
+k
+);'(t
++
+k
+) exist and
+'(t
+ 
+k
+) ='(t
+k
+) a:s: sup
+0 t b
+Ej'(t)j
+2
+<1
+	
+PC is a Banach space with normkxk
+PC
+= sup
+0 t b
+(Ejx(t)j
+2
+)
+1
+2
+For a multivalued map G, we de ne the set of selections of G; Q
+G;x
+as
+Q
+G;x
+=
+ 
+v(:)2L
+2
+(J;L
+Q
+(K;H)) :v(t)2G(t;x(t)) a:e t2J
+	
+L
+2
+(J;L
+Q
+(K;H)) denotes the L
+Q
+(K;H)-valued functions  (t) satisfying
+R
+J
+j (t)j
+2
+Q
+dt<1:
+De nition 2.2 By a mild solution of problem (2.1), we mean a processx2PC
+such that there exists a selection v(:)2Q
+G;x
+a.e. on J and
+x(t) =S(t) +
+Z
+t
+0
+S(t s)f(s;x(s))ds+
+Z
+t
+0
+S(t s)v(s)dw(s)+
+X
+0<t
+k
+<t
+S(t t
+k
+)I
+k
+(x(t
+ 
+k
+)):
+3 Main Results
+The following hypotheses shall be employed in the main result.
+Hypothesis 1 (H
+1
+): f : J H ! H is a continuous function; there exists
+L
+f
+> 0 such that
+kf(t;x)k L
+f
+kxk; x2H
+(H
+2
+): there exists constants c
+k
+;c
+k
+, k = 1;:::;m; such that
+kI
+k
+(x) I
+k
+(y)k c
+k
+kx yk; for any x;y2H and kI
+k
+(x)k c
+k
+kxk:
+(H
+3
+): A : D(A)  H ! H is the in nitesimal generator of a strongly con-
+tinuous semigroup S(t); t  0; which is compact for t > 0; and there exists a
+constant M such thatkS(t)k
+B(H)
+ M; for each t  0:
+(H
+4
+): the multivalued mapG :J H!P (L
+Q
+(K;H)) isL
+2
+-Caratheodory, com-
+pact and convex. There exists a continuous nondecreasing function' : [0;1)!
+(0;1), p2L
+1
+(J;R
++
+) such that
+kG(t;x)k
+2
+Q
+ p(t)'(kxk
+2
+); for a:e:t2J and x2H
+Electronic Journal. http://www.math.spbu.ru/diffjournal 58Differential Equations and Control Processes, N 3, 2014
+with
+Z
+b
+0
+m(s)ds<
+Z
+1
+c
+du
+u +'(u)
+;
+where
+m(t) = maxfM
+2
+L
+2
+f
+;M
+2
+p(t)g; c =M
+2
+ 
+k k
+2
++
+m
+X
+k=1
+c
+2
+k
+ 
+Our main result is based on the following Bohnenblust-Karlin (Corollary 9.8,
+[15] ) Theorem.
+Lemma 3.1 Let X be a Banach space and K be a closed and convex subset of
+X. Suppose the multivalued map 	 : K! P
+cl;cv
+(X) is upper semicontinuous
+and the set 	(K) is relatively compact in X: Then 	 has a  xed point in K:
+We shall employ the following Lasota-Opial result [9].
+Lemma 3.2 Let I be a compact interval and X be a Hilbert space. Let G be a
+L
+2
+-Caratheodory multivalued map with Q
+G;x
+6=; and   be a linear continuous
+mapping from L
+2
+(I;X) to C(I;X): Then the operator
+  Q
+G
+:C(I;X)!P
+b;cl;cv
+(C(I;X)); x! (  Q
+G
+)(x) = (Q
+G
+)(x)
+is a closed graph operator in C(I;X) C(I;X):
+We now state and the prove the existence result.
+Theorem 3.1 Assume that conditions H
+1
+;H
+2
+;H
+3
+and H
+4
+hold, then problem
+(2:1) has at least one mild solution.
+Proof 1 The problem will be transformed to a  xed point problem.
+De ne the map   :PC
+ 
+J;L
+2
+(
+;H)
+ 
+!P(PC(J;L
+2
+(
+;H))) by
+	(x) =
+ 
+h2PC(J;L
+2
+(
+;H)) :h(t) =S(t)  +
+Z
+t
+0
+S(t s)f(s;x(s))ds
++
+Z
+t
+0
+S(t s)v(s)dw(s)
++
+X
+0<t
+k
+<t
+S(t t
+k
+)I
+k
+(x(t
+ 
+k
+)); v(:)2Q
+G;x
+ 
+(3.1)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 59Differential Equations and Control Processes, N 3, 2014
+Let
+K =
+ 
+x2PC(J;L
+2
+(
+;H)) :kxk
+2
+PC
+ r(t); t2J
+ 
+where
+I(z) =
+Z
+z
+c
+du
+u +'(u)
+; I(r(t)) =
+Z
+t
+0
+m(s)ds
+K is a closed and bounded convex subset of PC(J;L
+2
+(
+;H)). Let
+k
+ 
+= supfk xk
+2
+PC
+: x2 Kg: We have to show that 	(K)  K, 	 is relatively
+compact and upper semicontinuous. The proof is divided to steps.
+Step 1: 	(K) K.
+For a  xed t2J, let x2K be arbitrarily chosen, we show that 	(x)2K: For
+each t2K; there exists v(:)2Q
+G;x
+h(t) =S(t)  +
+Z
+t
+0
+S(t s)f(s;x(s))ds +
+Z
+t
+0
+S(t s)v(s)dw(s)
++
+X
+0<t
+k
+<t
+S(t t
+k
+)I
+k
+(x(t
+ 
+k
+));
+Then
+kh(t)k
+2
+= sup
+t2J
+Ejh(t)j
+2
+  sup
+t2J
+ 
+EjS(t) j
+2
++
+Z
+t
+0
+EjS(t s)f(s;x(s))j
+2
+ds
++
+Z
+t
+0
+EjS(t s)v(s)j
+2
+dw(s) +
+X
+0<t
+k
+<t
+EjS(t t
+k
+)I
+k
+(x(t
+ 
+k
+))j
+2
+ 
+ M
+2
+k k
+2
++M
+2
+m
+X
+k=1
+c
+2
+k
++
+Z
+t
+0
+M
+2
+L
+2
+f
+kx(s)k
+2
++M
+2
+p(s)'(kx(s)k
+2
+)ds
+ M
+2
+k k
+2
++M
+2
+m
+X
+k=1
+c
+2
+k
++
+Z
+t
+0
+m(s)(kx(s)k
+2
++'(kx(s)k
+2
+))ds
+ c +
+Z
+t
+0
+m(s)(r(s) +'(r(s)))ds
+=c +
+Z
+t
+0
+r
+0
+(s)ds
+=r(t);
+ 
+since
+Z
+r(s)
+c
+du
+u +'(u)
+=
+Z
+s
+0
+m( )d 
+ 
+Hence 	(x)2 K. Since it is true for any x2 K, 	(K)  K. Therefore
+	 :K!K: Step 2.: 	(K) is relatively compact.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 60Differential Equations and Control Processes, N 3, 2014
+Let 
+1
+; 
+2
+2J, 
+1
+< 
+2
+, and > 0 with 0<   
+1
+< 
+2
+: Letx2K andh2 	(x):
+Then there exists v2Q
+G;x
+such that for each t2J we have
+kh( 
+2
+) h( 
+1
+)k
+2
+=E sup
+t2J
+jh( 
+2
+) h( 
+1
+)j
+2
+  sup
+t2J
+ 
+EjS( 
+2
+)  S( 
+1
+) j
+2
++
+Z
+ 
+1
+  
+0
+Ej (S( 
+2
+ s) S( 
+1
+ s))f(s;x(s))j
+2
+ds
++
+Z
+ 
+1
+  
+ 
+1
+Ej (S( 
+2
+ s) S( 
+1
+ s))f(s;x(s))j
+2
+ds
++
+Z
+ 
+2
+ 
+1
+EjS( 
+2
+ s)f(s;x(s))j
+2
+ds
++
+Z
+ 
+1
+  
+0
+Ej (S( 
+2
+ s) S( 
+1
+ s))v(s)j
+2
+dw(s)
++
+Z
+ 
+1
+  
+ 
+1
+Ej (S( 
+2
+ s) S( 
+1
+ s))v(s)j
+2
+dw(s)
++
+Z
+ 
+2
+ 
+1
+EjS( 
+2
+ s)v(s)j
+2
+dw(s)
++M
+2
+c
+2
+k
+( 
+2
+  
+1
+) +
+X
+0<t
+k
+< 
+1
+ 
+Ej (S( 
+2
+ t
+k
+) S( 
+1
+ t
+k
+))I
+k
+(x
+t
+ 
+k
+)j
+2
+ 
+ 
+ kS( 
+2
+)  S( 
+1
+) k
+2
++
+Z
+ 
+1
+  
+0
+k (S( 
+2
+ s) S( 
+1
+ s))f(s;x(s))k
+2
+ds
++
+Z
+ 
+1
+  
+ 
+1
+k (S( 
+2
+ s) S( 
+1
+ s))f(s;x(s))k
+2
+ds
++
+Z
+ 
+2
+ 
+1
+kS( 
+2
+ s)f(s;x(s))k
+2
+ds
++
+Z
+ 
+1
+  
+0
+k (S( 
+2
+ s) S( 
+1
+ s))k
+2
+kv(s)k
+2
+ds
++
+Z
+ 
+1
+  
+ 
+1
+k (S( 
+2
+ s) S( 
+1
+ s))k
+2
+kv(s)k
+2
+ds
++
+Z
+ 
+2
+ 
+1
+kS( 
+2
+ s)k
+2
+kv(s)k
+2
+ds
++M
+2
+c
+2
+k
+( 
+2
+  
+1
+) +
+X
+0<t
+k
+< 
+1
+c
+2
+k
+kS( 
+2
+ t
+k
+) S( 
+1
+ t
+k
+)k
+2
+Electronic Journal. http://www.math.spbu.ru/diffjournal 61Differential Equations and Control Processes, N 3, 2014
+The right hand side tends to zero as  
+2
+! 
+1
+and for   su ciently small, since
+S(t) is a strongly continuous operator and compactness of S(t); for t> 0; im-
+plies the continuity in the uniform operator topology. This proves the equicon-
+tinuity for the case t6= t
+i
+, i = 1;:::;m: To prove the equicontinuity at t = t
+i
+,
+by Arzela-Ascoli theorem, it su ces to show that 	 maps K into a precompact
+set in L
+2
+(
+;H): Let 0 < t  b be  xed and let   be a real number satisfying
+0< <t: For x2K; we de ne
+h
+ 
+(t) =S(t)  +S( )
+Z
+t  
+0
+S(t s  )f(s;x(s))ds
++S( )
+Z
+t  
+0
+S(t s  )v(s)ds
++S( )
+X
+0<t
+k
+<t  
+S(t t
+k
+  )I
+k
+(x(t
+ 
+k
+))
+where v2Q
+G;x
+: Since S(t) is a compact operator, the set H
+ 
+(t) =fh
+ 
+(t) :h
+ 
+2
+	(x)g is precompact in L
+2
+(
+;H) for every  ; 0 <   < t: Moreover, for every
+h2 	(x); we have
+kh
+ 
+(t) h(t)k
+2
+ L
+2
+f
+k
+ 
+Z
+t
+t  
+kS(t s)k
+2
+ds
++
+Z
+t
+t  
+kS(t s)k
+2
+jr(s)jds
++
+X
+t   t
+k
+<t
+c
+2
+k
+kS(t t
+k
+)k
+2
+Therefore there are precompact sets arbitrarily close to the setfh(t) :h2 	(x)g:
+Hence the setfh(t) :h2 	(x)g is precompact in L
+2
+(
+;H):
+Step 3: To show that 	 is upper semicontinuous, it su ces to show that it has
+a closed graph.
+Let x
+n
+!x
+ 
+, h
+n
+2 	(x
+n
+) and h
+n
+!h
+ 
+: We will prove that h
+ 
+2 	(x
+ 
+):
+h
+n
+2 	(x
+n
+) means that there exists v
+n
+2Q
+G(x
+n
+)
+such that, for each t2J;
+h
+n
+(t) =S(t)  +
+Z
+t
+0
+S(t s)f(s;x
+n
+(s))ds +
+Z
+t
+0
+S(t s)v
+n
+(s)ds
++
+X
+0<t
+k
+<t
+S(t t
+k
+)I
+k
+(x
+n
+(t
+ 
+k
+)):
+Electronic Journal. http://www.math.spbu.ru/diffjournal 62Differential Equations and Control Processes, N 3, 2014
+We must prove that there exists v
+ 
+2Q
+G(x
+ 
+)
+such that, for each t2J
+h
+ 
+(t) =S(t)  +
+Z
+t
+0
+S(t s)f(s;x
+ 
+(s))ds +
+Z
+t
+0
+S(t s)v
+ 
+(s)ds
++
+X
+0<t
+k
+<t
+S(t t
+k
+)I
+k
+(x
+ 
+(t
+ 
+k
+)):
+Consider the linear and continuous operator   : L
+2
+(J;L
+Q
+(K;H)) !
+PC(J;L
+2
+(
+;H)), de ned by
+( v)(t) =
+Z
+t
+0
+S(t s)v(s)dw(s):
+We have
+Ej
+ 
+h
+n
+(t) S(t)  
+Z
+t
+0
+S(t s)f(s;x
+n
+(s))ds
+ 
+X
+0<t
+k
+<t
+S(t t
+k
+)I
+k
+(x
+n
+(t
+ 
+k
+))
+ 
+ 
+ 
+h
+ 
+(t) S(t) 
+ 
+Z
+t
+0
+S(t s)f(s;x
+ 
+(s))ds 
+X
+0<t
+k
+<t
+S(t t
+k
+)I
+k
+(x
+ 
+(t
+ 
+k
+))
+ 
+j
+2
+=Ejh
+n
+(t) h
+ 
+(t) +
+Z
+t
+0
+S(t s)
+ 
+f(s;x
+n
+(s)) f(s;x
+ 
+(s))
+ 
+dsj
+2
+  2Ejh
+n
+ h
+ 
+j
+2
++2L
+2
+f
+Z
+t
+0
+kx
+n
+ x
+ 
+k
+2
+! 0 as n!1:
+Now, we have
+h
+n
+(t) S(t)  
+Z
+t
+0
+S(t s)f(s;x
+n
+(s))ds2  Q
+G(x
+n
+)
+from Lemma 3.2, so   Q
+G
+is a closed graph operator.
+Since x
+n
+!x
+ 
+; h
+n
+!h
+ 
+, there exist v
+ 
+2Q
+G;x
+ 
+such that
+h
+ 
+ S(t)  
+Z
+t
+0
+S(t s)f(s;x
+ 
+(s))ds =
+Z
+t
+0
+S(t s)v
+ 
+(s)dw(s)
+Then 	 is upper semicontinuous and by Lemma 3.1, there exists a  xed point
+which is a mild solution of problem (2.1)
+Example
+Consider for problem (2.1), G(t;X) which is lower semicontinuous and has
+Electronic Journal. http://www.math.spbu.ru/diffjournal 63Differential Equations and Control Processes, N 3, 2014
+continuous selection g(X(t)) and let f(t;X) f(X(t)). We have
+dX(t) = [AX(t) +f(X(t))]dt +g(X(t))dw(t) a:e: t2 [0;T ]; t6=t
+k
+; k = 1;:::;m
+4X(t
+k
+) =I
+k
+(X(t
+k
+)); k = 1;:::;m
+X(0) = 2H
+(3.2)
+The mild solution of the problem (3.2) is a process X(t) such that
+X(t) =S(t) +
+Z
+t
+0
+S(t s)f(X(s))ds+
+Z
+t
+0
+S(t s)g(s)dw(s)+
+X
+0<t
+k
+<t
+S(t t
+k
+)I
+k
+(X(t
+ 
+k
+)):
+We de ne the transition semigroup corresponding to this mild solution as fol-
+lows:
+Let B
+b
+(H) = f : H ! R; is bounded and Borel measurableg: For any
+'2B
+b
+; we de ne
+P
+t
+'( ) =E('(X( )(t))); t2 [0;T ];  2H; t6=t
+k
+Then P
+t
+, t2 [0;T ], t6= t
+k
+has a semigroup property, i.e. for all  2 H, and
+s;t2 [0;T ], s;t6=t
+k
+with s +t2 [0;T ], (s +t)6=t
+k
+.
+Under appropriate assumptions, the function P
+t
+' is globally Lipschitz in H,
+which means that the semigroup is strong Feller [6] .
+References
+[1] Ahmed, N. U. Non linear stochastic differential inclusions on Banach space,
+Stoch. Anal. Appl. 12, (1994),1-10.
+[2] Aubin , J. P. and Cellina, A. Differential Inclusions, Springer- Verlag,
+Berlin, 1984.
+[3] Benchohra, M. , Henderson, J. and Ntouyas, S.K. Impulsive differential
+equations and inclusions Hindawi Publishing Corporation, vol 2., New
+York, 2006.
+[4] Cernea, A. On an Evolution inclusion in non-separable Banach spaces
+Opuscula Mathematica, 2, 131-138, (2009).
+[5] Deimling, K.Multivalued differential equations, Walter de Gruyter, 1992.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 64Differential Equations and Control Processes, N 3, 2014
+[6] Es-Sarhir, A. Existence and uniqueness of invariant measures for a class of
+transition semigroups on Hilbert spaces J. Math. Anal Appl., 353, 497-507,
+(2009).
+[7] Kisielewicz, M. Stochastic representation of partial differential inclusions
+J. Math. Anal Appl., 353, (2009), 592-606.
+[8] V. Lakshmikantham, V., Bainov, D. D. and Simenov, P. S. Theorem of
+Impulsive Differential Equations , World Scienti c, Singapore, 1989.
+[9] A. Lasota, A. and Opial, Z. An application of the Kakutani-Ky-Fan theo-
+rem in the theory of ordinary differential equations. Bull. Acad. Pol. Sci.
+Ser. Sci. Math. Astronom. Phys., 13, (1965), 781-786.
+[10] Michael, E. Continuous selections, I and II, Annals of Math. 63; 64, (1956),
+361-382, 562-580.
+[11] Ning, H. W. and Liu, B. Existence results for impulsive neutral stochastic
+evolution inclusions in Hilbert space, Acta Math. Sinica, English series 27,
+7, (2011), 1405-1418.
+[12] Pan, L. Existence of mild solution for impulsive stochastic differential equa-
+tions with nonlocal conditions Diff. Equat. and Appl. 4, 3, (2012), 485-494.
+[13] Prato, G. D. and Zabczyk, J. Stochastic Equations in In nite Dimensions,
+Cambridge University Press, Cambridge, 1992.
+[14] Shen, L. J. and Sun, J. T. Existence and uniqueness of mild solutions for
+non linear stochastic impulsive differential equation, Abstract and Applied
+Anal. vol. 2011, ID 439724,(2011), 1-10.
+[15] E. Zeidler, E. Nonlinear Functional Analysis and Its Applications, I. Fixed-
+Point Theorems, Springer, New York, 1986.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 65

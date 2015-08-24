@@ -1,0 +1,1145 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 3, 2008
+Electronic Journal,
+reg. N P2375 at 07.03.97
+ISSN 1817-2172
+
+http://www.math.spbu.ru/diffjournal/
+e-mail: jodiff@mail.ru
+New results on the stability and boundedness
+of solutions of certain third order nonlinear
+vector differential equations
+Mathew Omeike
+1
+Abstract
+We investigate in this paper, the asymptotic stability of the zero solution
+and boundedness of all solutions of a certain third order nonlinear ordinary vec-
+tor differential equation. Our results revise and improve those results obtained
+by Tunc and Ates [Tunc C., Ates, M., Stability and boundedness results for so-
+lutions of certain third order nonlinear vector differential equations,Nonlinear
+Dynamics 45 (2006); 273-281].
+Keywords: boundedness, differential equation of third order, Lyapunov func-
+tion, stability
+2000 Mathematics Subject Classi cation. 34C10, 34C11.
+1. Introduction
+1
+Department of Mathematics, University of Agriculture, Abeokuta, Nigeria. E-mail: moomeike@yahoo.comDifferential Equations and Control Processes, N 3, 2008
+Recently, Tunc and Ates [11] considered the differential equation
+:::
+X
++F (X;
+_
+X;
+
+X)
+
+X +B(t)
+_
+X +H(X) =P (t;X;
+_
+X;
+
+X); (1:1)
+or the equivalent system form
+_
+X = Y
+_
+Y = Z
+_
+Z =  F (X;Y;Z)Z B(t)Y H(X) +P (t;X;Y;Z)
+(1:2)
+where F and B are n n-symmetric continuous matrix functions, H and P
+are continuous vector functions, t2 [0;1) and X2 IR
+n
+;IR
+n
+denotes the real
+n-dimensional Euclidean spaceIR IR     IR (n factors). It is also assumed
+that the Jacobian matrix J
+h
+(X) and the matrix
+_
+B(t) exist, and are symmetric
+and continuous. Hence the following theorems were proved.
+In the case P  0, the following result was established.
+Theorem A (Tunc and Ates[11]). In addition to the fundamental assump-
+tions on F;B and H suppose that:
+(i) there exists ann n-real continuous operatorA(X;Y ) for any vectorsX;Y
+in IR
+n
+such that
+H(X) =H(Y ) +A(X;Y )(X Y ); (H(0) = 0);
+whose eigenvalues  
+i
+(A(X;Y )); (i = 1; 2;    ;n), satisfy
+0< 
+h
+  
+i
+(A(X;Y ))   
+h
+for  xed constants  
+h
+and  
+h
+;
+(ii) there exists a real n n-constant symmetric matrix A such that the matri-
+ces A;B(t);
+_
+B(t); (F (X;Y;Z) A) have positive eigenvalues and pairwise
+commute with themselves as well as with operator A(X;Y ) for any X;Y
+in IR
+n
+, and that
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 27Differential Equations and Control Processes, N 3, 2008
+ 
+a
+= min
+1 i n
+f 
+i
+(A); 
+i
+(F (X;Y;Z))g;  
+a
+= max
+1 i n
+f 
+i
+(A); 
+i
+(F (X;Y;Z))g;
+ 
+b
+= min
+1 i n;t2[0;!]
+( 
+i
+(B(t)));  
+a
+= max
+1 i n;t2[0;!]
+( 
+i
+(B(t)))
+ 
+h
+  k 
+a
+ 
+b
+(where k is a positive constant);
+0    
+i
+(F (X;Y;Z) A) 
+p
+ 
+2
+and   = maxj 
+i
+(
+_
+B(t))j; (i = 1; 2;    ;n);
+where   
+1
+2
+min
+(
+ 
+ 
+b
+ 
+h
+4 
+b
++ 4
+ 
+2
+;
+ 
+ 
+a
+ 
+b
+6 
+a
++ 7
+ 
+2
+;
+ 
+2
+a
+4
+; 1
+)
+:
+Then, the zero solution of system (1.2) is asymptotically stable.
+In the case P6= 0, the following result was established.
+Theorem B (Tunc and Ates[11]). Let all the conditions of Theorem A be
+satis ed, and in addition we assume that there exist a  nite constant K > 0
+and a non-negative and continuous function   =  (t) such that the vector P
+satis es
+kP (t;X;Y;Z)k  (t) + (t)(kXk +kYk +kZk);
+where
+Z
+t
+0
+ (s)ds  K <1 for all t  0. Then the exists a constant D > 0
+such that any solution (X(t);Y (t);Z(t)) of (1.2) determined by
+X(0) =X
+0
+; Y (0) =Y
+0
+; Z(0) =Z
+0
+satis es
+kXk D; kYk D; kZk D
+for all t  0.
+These are very interesting results obtained by the authors [11]. However,
+these results contain certain conditions which are not necessary for the stability
+and boundedness of (1.2). Our aim in this paper is to further study the stability
+(when P  0) and boundedness (when P6= 0) of solutions of Eq. (1.1). In the
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 28Differential Equations and Control Processes, N 3, 2008
+next section, we establish criteria for the stability of the zero solution of Eq.
+(1.1) when P  0, and the boundedness of solutions of Eq. (1.1) when P6= 0,
+which extend and improve TheoremsA andB,respectively. An effective method
+for studying the stability and boundedness of nonlinear differential equations is
+the second method of Lyapunov (See [1-11]).
+2. Statement of the results
+LetH(0) = 0 andJ
+h
+=J
+h
+(X) denote the Jacobian matrix (@h
+i
+=@x
+j
+) derived
+from the vectorH(X) in (1.1). Our  rst theorem is given for the case in which
+P  0.
+Theorem 1. Assume thatF (X;Y;Z);B(t);
+_
+B(t) andJ
+h
+(X) are symmetric for
+all X;Y;Z in IR
+n
+and t2 [0;1), and let  
+a
+; 
+b
+; 
+h
+;  
+a
+;  
+b
+;  
+h
+and   be positive
+constants.
+(i) The matrices F (X;Y;Z);B(t);
+_
+B(t) and J
+h
+(X) are associative and com-
+mute pairwise. The eigenvalues  
+i
+(F (X;Y;Z)); 
+i
+(B(t)); 
+i
+(
+_
+B(t)), and
+ 
+i
+(J
+h
+(X)) (i = 1; 2;    ;n) of F (X;Y;Z);B(t);
+_
+B(t) and J
+h
+(X) satisfy
+0< 
+a
+< 
+i
+(F (X;Y;Z))<  
+a
+(2:1)
+0< 
+b
+  
+i
+(B(t))   
+b
+(2:2)
+0< 
+h
+  
+i
+(J
+h
+(X))   
+h
+(2:3)
+  = maxj 
+i
+(
+_
+B(t))j (2:4)
+with  
+a
+ 
+b
+   
+h
+> .
+Then, the zero solution of system (1.2) is asymptotically stable.
+In the case P6= 0 we have the following result.
+Theorem 2. Let all the conditions of Theorem 1 be satis ed, and in addition
+we assume that there exists a  nite constant K > 0 and a non-negative and
+continuous function   = (t) such that the vector P satis es
+kP (t;X;Y;Z)k  (t) + (t)(kXk +kYk +kZk); (2:5)
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 29Differential Equations and Control Processes, N 3, 2008
+where
+Z
+t
+0
+ (s)ds  K <1 for all t  0. Then there exists a constant D > 0
+such that any solution (X(t);Y (t);Z(t)) of (1.2) determined by
+X(0) =X
+0
+; Y (0) =Y
+0
+; Z(0) =Z
+0
+satis es
+kX(t)k D; kY (t)k D; kZ(t)k D
+for all t  0.
+3. Some Preliminaries
+The following results will be basic to the proofs of Theorems 1 and 2. We
+do not give the proofs since they are found in [1-7,9,10,11].
+Lemma 1. Let D be a real symmetric n n matrix, then for any X in IR
+n
+,
+we have
+ 
+d
+kXk
+2
+ hDX;Xi  
+d
+kXk
+2
+;
+where  
+d
+;  
+d
+are the least and greatest eigenvalues of D, respectively.
+Lemma 2. Let Q;D be any two real n n commuting symmetric matrices.
+Then
+(i) The eigenvalues 
+i
+(QD)(i = 1; 2;    ;n) of the product matrixQD are real
+and satisfy
+max
+1 j;k n
+ 
+j
+(Q) 
+k
+(D)  
+i
+(QD)  min
+1 j;k n
+ 
+j
+(Q) 
+k
+(D):
+(ii) The eigenvalues  
+i
+(Q +D) (i = 1; 2;    ;n) of the sum of matrices Q and
+D are real and satisfy
+ 
+max
+1 j n
+ 
+j
+(Q) + max
+1 k n
+ 
+k
+(D)
+ 
+  
+i
+(Q+D) 
+ 
+min
+1 j n
+ 
+j
+(Q) + min
+1 k n
+ 
+k
+(D)
+ 
+;
+where  
+j
+(Q) and  
+k
+(D) are, respectively, the eigenvalues of Q and D.
+4. The Function V
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 30Differential Equations and Control Processes, N 3, 2008
+Our main tool in the proof of our result is the Lyapunov function V =
+V (t;X;Y;Z) de ned by
+2V = 2 
+a
+Z
+1
+0
+hH( X);Xid  + 
+a
+Z
+1
+0
+h F (X; Y;Z)Y;Yid 
++ff  
+b
+hX;Xi +hZ;Zi +hB(t)Y;Yi + 2ff  
+a
+hX;Yi
++2ff hX;Zi + 2 
+a
+hY;Zi + 2hY;H(X)i ff hY;Yi
+(4:1)
+where   = 
+a
+ 
+b
+and ff satis es
+ff< min
+ 
+1
+ 
+a
+;
+ 
+h
+ ( 
+a
+  
+a
+)
+;
+   
+h
+  
+ [ 
+a
++ 
+ 1
+h
+( 
+b
+  
+b
+)
+2
+]
+ 
+(4:2)
+The function V above can be written thus,
+2V = kZ + 
+a
+Y +ff Xk
+2
++ 
+a
+Z
+1
+0
+h F (X; Y;Z)Y;Yid   
+2
+a
+hY;Yi
++hB(t)Y;Yi   
+ 1
+a
+hY;Yi +ff ( 
+b
+ ff )hX;Xi
++2 
+a
+Z
+1
+0
+hH( X);Xid   
+ 1
+ 
+a
+kH(X)k
+2
++ k 
+ 
+1
+2
+a
+Y + 
+ 1
+ 
+1
+2
+a
+H(X)k
+2
+(4:3)
+The following result is immediate from (4.3).
+Lemma 3. Assume that all the hypotheses on matrices F (X;Y;Z); B(t) and
+vector H(X) in Theorems 1 and 2 are satis ed. Then there exists a positive
+constant  
+1
+such that
+V (t;X;Y;Z)  
+1
+(kXk
+2
++kYk
+2
++kZk
+2
+); (4:4)
+for arbitrary X;Y;Z in IR
+n
+.
+Proof of Lemma 3. We shall make use of the result:
+H(X) =
+Z
+1
+0
+J
+h
+( 
+1
+X)Xd 
+1
+(4:5)
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 31Differential Equations and Control Processes, N 3, 2008
+for arbitrary X in IR
+n
+, which follows from integrating the equality
+d
+d 
+1
+H( 
+1
+X) =J
+h
+( 
+1
+X)X
+with respect to  
+1
+and then using the fact that H(0) = 0.
+By (4.5), we can rewrite (4.3) thus,
+2V = kZ + 
+a
+Y +ff Xk
+2
++ 
+a
+Z
+1
+0
+ hfF (X; Y;Z)  
+a
+IgY;Yid 
++hfB(t)   
+ 1
+a
+IgY;Yi +ff ( 
+b
+ ff )hX;Xi
++2 
+a
+Z
+1
+0
+Z
+1
+0
+ 
+1
+hfI J
+h
+( 
+1
+X) 
+ 1
+gJ
+h
+( 
+1
+ 
+2
+X)X;Xid 
+1
+d 
+2
++ k 
+ 
+1
+2
+a
+Y + 
+ 1
+ 
+1
+2
+a
+H(X)k
+2
+:
+By (2.1), (2.2) and (2.3) of Theorem 1, and Lemma 1, we have that
+2V kZ + 
+a
+Y +ff Xk
+2
++ff ( 
+b
+ ff )kXk
+2
++ 2 
+a
+(1   
+h
+ 
+ 1
+) 
+h
+kXk
+2
+:
+By (2.5) and (4.2), we have that there is a constant  
+2
+> 0 such that
+2V kZ + 
+a
+Y +ff Xk
+2
++ 
+2
+kXk
+2
+:
+Hence we can  nd a positive number  
+1
+small enough such that (4.4) holds.
+This completes the proof of Lemma 3.
+The following lemma is instrumental in the proof of the next result.
+Lemma 4. Subject to earlier conditions on F and H the following are true.
+(i)
+d
+dt
+Z
+1
+0
+h F (X; Y;Z)Y;Yid  =hF (X;Y;Z)Y;Zi;
+(ii)
+d
+dt
+Z
+1
+0
+hH( X);Xid  =hH(X);Yi.
+Proof. See [4,5,9].
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 32Differential Equations and Control Processes, N 3, 2008
+Lemma 5. Assume that all the conditions of Theorem 1 are satis ed.
+Then
+_ v(t)  0 for all t  0 (4:6)
+and especially
+_ v(t) =
+d
+dt
+V (t;X;Y;Z)  0 provided kXk
+2
++kYk
+2
++kZk
+2
+> 0 (4:7)
+Proof of Lemma 5. A straightforward calculation from (4.1), (1.2) and
+Lemma 4 give
+_ v =
+d
+dt
+V (t;X(t);Y (t);Z(t)) = V
+1
+ V
+2
+ V
+3
+where
+V
+1
+=  
+1
+2
+ff 
+Z
+1
+0
+hX;J
+h
+( X)Xid 
+ hY;f 
+a
+B(t) 
+_
+B(t) f[J
+h
+(X) +ff  
+a
+]gYg
+ hZ;fF (X;Y;Z)  
+a
+IgZi
+V
+2
+=  
+1
+4
+ff 
+Z
+1
+0
+fhJ
+h
+( X)X;Xi + 4hX; [B(t)  
+b
+I]Yigd 
+V
+3
+=  
+1
+4
+ff 
+Z
+1
+0
+fhJ
+h
+( X)X;Xi + 4hX;fF (X;Y;Z)  
+a
+I]gZigd :
+Since J
+h
+(X) is symmetric and positive de nite, we have that
+hJ
+h
+( X)X;Xi + 4hX; [B(t)  
+b
+I]Yi
+=kJ
+1
+2
+h
+X + 2J
+ 
+1
+2
+[B(t)  
+b
+I]Yk
+2
+ k2[B(t)  
+b
+I]J
+ 
+1
+2
+h
+Yk
+2
+and
+hJ
+h
+( X)X;Xi + 4hX;fF (X;Y;Z)  
+a
+IgZi
+=kJ
+1
+2
+h
+X + 2J
+ 
+1
+2
+h
+[F (X;Y;Z)  
+a
+I]Zk
+2
+ k2[F (X;Y;Z)  
+a
+I]J
+ 
+1
+2
+h
+Zk
+2
+:
+Using the fact that
+Z
+1
+0
+k2[B(t)  
+b
+I]J
+ 
+1
+2
+h
+Yk
+2
+d  = 4
+Z
+1
+0
+hJ
+ 1
+h
+[B(t)  
+b
+I]Y; [B(t)  
+b
+I]Yid 
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 33Differential Equations and Control Processes, N 3, 2008
+and
+Z
+1
+0
+k2[F (X;Y;Z)  
+a
+I]J
+ 
+1
+2
+h
+Zk
+2
+d 
+= 4
+Z
+1
+0
+hJ
+ 1
+h
+[F (X;Y;Z)  
+a
+I]Z; [F (X;Y;Z)  
+a
+I]Zid ;
+we have,
+_ v(t)    
+1
+2
+ff 
+Z
+1
+0
+hX;J
+h
+( X)Xid 
+ 
+Z
+1
+0
+hY;f 
+a
+B(t) J
+h
+(X)  [
+_
+B(t) +ff  
+a
+I] ff J
+ 1
+h
+[B(t)  
+b
+I]
+2
+gYid 
+ 
+Z
+1
+0
+hZ; [F (X;Y;Z)  
+a
+I]fI ff J
+ 1
+h
+[F (X;Y;Z)  
+a
+I]gZid 
+   
+1
+2
+ff  
+h
+kXk
+2
+ f 
+a
+ 
+b
+  
+h
+   ff  
+a
+ ff  
+ 1
+h
+( 
+b
+  
+b
+)
+2
+gkYk
+2
+ f1 ff  
+ 1
+h
+( 
+a
+  
+a
+)gkZk
+2
+    
+3
+kXk
+2
+  
+4
+kYk
+2
+  
+5
+kZk
+2
+where  
+3
+=
+1
+2
+ff  
+h
+; 
+4
+= 
+a
+ 
+b
+  
+h
+   ff [ 
+a
++ 
+ 1
+h
+( 
+b
+  
+b
+)
+2
+] and
+ 
+5
+= 1 ff  
+ 1
+h
+( 
+a
+  
+a
+):
+By (4.2), 
+3
+; 
+4
+and  
+5
+are positive. This completes the proof.
+Proof of Theorem 2. Consider the functionV de ned by (4.1). Then, under
+the assumptions of Theorem 2 the conclusion of Lemma 3 can be obtained, that
+is,
+V  
+1
+(kXk
+2
++kYk
+2
++kZk
+2
+) (4:8)
+and since P (t;X;Y;Z)6= 0, then the conclusion of Lemma 5 can be revised as
+follows
+_ v =
+d
+dt
+V hff X + 
+a
+Y +Z;P (t;X;Y;Z)i:
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 34Differential Equations and Control Processes, N 3, 2008
+Next, by noting the assumption of Theorem 2 on P (t;X;Y;Z) and using
+Schwarz's inequality, we obtain
+_ v   (ff kXk + 
+a
+kYk +kZk) kP (t;X;Y;Z)k
+  (ff kXk + 
+a
+kYk +kZk)  ( (t) + (t)(kXk +jjYk +kZk))
+   
+6
+(kXk +kYk +kZk)  ( (t) + (t)(kXk +jjYk +kZk))
+where  
+6
+= maxfff ; 
+a
+; 1g:
+Hence, by using the inequalities
+kXk  1 +kXk
+2
+; kYk  1 +kYk
+2
+; kZk  1 +kZk
+2
+and (4.8), we obtain
+_ v  
+7
+ (t) + 
+8
+ (t)v; (4:9)
+where  
+7
+= 3 
+6
+and  
+8
+= 4 
+6
+ 
+ 1
+1
+.
+Integrating both sides of (4.9) from 0 to t(t  0), leads to the inequality
+v(t) v(0)  
+7
+Z
+t
+0
+ (s)ds + 
+8
+Z
+t
+0
+v(s) (s)ds:
+On putting  
+9
+=v(0) + 
+7
+K, it follows that
+v(t)  
+9
++ 
+8
+Z
+t
+0
+v(s) (s)ds:
+Gronwall-Bellman inequality yields
+v(t)  
+9
+exp
+ 
+ 
+8
+Z
+t
+0
+ (s)ds
+ 
+:
+The proof of the theorem is now complete.
+5. Remarks
+(i). Clearly, Theorems 1 and 2 are improvement and extension of Theorems
+A and B respectively. Particularly, from Theorems 1 and 2, we see that
+hypothesis (i) of Theorems A and B is not necessary sinceH(X) is assumed
+differentiable.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 35Differential Equations and Control Processes, N 3, 2008
+(ii). Also, from Theorems 1 and 2, it is clear that we do not need any symmetric
+matrix A (as assumed in Theorems A and B), thus the condition 0  
+ 
+i
+(F (X;Y;Z) A) 
+p
+ 
+2
+; (i = 1; 2;:::;n); is not necessary.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 36Differential Equations and Control Processes, N 3, 2008
+References
+1. Afuwape, A.U., 'Ultimate boundedness results for a certain system of third
+order nonlinear differential equation', J. Math. Anal. Appl. 97 (1983),
+140-150.
+2. Afuwape, A. U. and Omeike, M. O., 'Further ultimate boundedness of so-
+lutions of some system of third order nonlinear ordinary differential equa-
+tions', Acta Univ. Palacki Olomuc. Fac. Rer.nat.,Mathematica, 43 (2004)
+7-20.
+3. Afuwape, A. U. and Omeike, M. O., 'Convergence of solutions of certain
+system of third order nonlinear ordinary differential equations', Ann. of
+Diff. Eqs. 21:4 (2005), 533-540.
+4. Ezeilo, J.O.C., 'n-Dimensional extensions of boundedness and stability the-
+orems for some third order differential equations', J. Math. Anal. Appl.
+18, (1967), 395-416.
+5. Ezeilo, J.O.C. and Tejumola, H. O., 'Boundedness and periodicity of solu-
+tions of a certain system of third order nonlinear differential equations',
+Annali Mat. Pura. Appl. 74 (1966),283-316.
+6. Meng, F. W.,' Ultimate boundedness results for a certain system of third
+order nonlinear differential equations', J. Math. Anal. Appl., 177 (1993)
+496-509.
+7. Omeike, M. O.,' Qualitative study of solutions of certain n-system of third
+order nonlinear ordinary differential equations', Ph.D. Thesis, University
+of Agriculture, Abeokuta (2005).
+8. Reissig, R., Sansone, G. and Conti, R., 'Non-linear differential equations of
+higher order', Nordhoff International Publishing (1974).
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 37Differential Equations and Control Processes, N 3, 2008
+9. Sadek, A. I., 'On the stability of a nonhomogeneous vector differential equa-
+tion of the fourth-order', Appl. Math. Comp. 150 (2004), 279-289.
+10. Tiryaki, A., 'Boundedness and periodicity results for a certain system of
+third-order nonlinear differential equations', Indian J. Pure Appl. Math.
+30, 4(1999), 361-372.
+11. Tunc, C. and Ates, M., 'Stability and boundedness results for solutions
+of certain third order nonlinear vector differential equations', Nonlinear
+Dynamics 45(2006), 273-281.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 38

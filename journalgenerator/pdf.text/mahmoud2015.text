@@ -1,0 +1,1322 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 2, 2015
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Stochastic differential equations
+ON THE STABILITY OF SOLUTIONS FOR CERTAIN
+SECOND-ORDER STOCHASTIC DELAY DIFFERENTIAL
+EQUATIONS
+A. M. A. Abou-El-Ela
+ 1
+, A. I. Sadek
+ 2
+and A. M. Mahmoud
+  3
+ 
+Department of Mathematics, Faculty of Science, Assiut University. Assiut 71516, Egypt.
+  
+Department of Mathematics, Faculty of Science, New Valley Branch, Assiut University. New Valley,
+El-Khargah 72111, Egypt.
+Abstract
+In this paper, by constructing Lyapunov functionals we investigate su cient condi-
+tions, for the stochastic asymptotic stability of the zero solution of certain second-order
+stochastic differential equations with delay.
+By de ning an appropriate Lyapunov functionals, we prove two new theorems on the
+stochastic asymptotic stability. Our results improve and form a complement to some
+known recent results in the literature.
+Keywords and phrases: Stochastic differential equations, delay, asymptotic
+stability, Lyapunov functional.
+1 Introduction
+Modeling of physical systems by ordinary differential equations, ignores
+stochastic effects. By adding random elements into the differential equations we
+obtain what is called a stochastic differential equation and the term stochastic
+is called noise [10].
+1
+E-mail address: a.el-ela@aun.edu.eg
+2
+E-mail address: Sadeka1961@yahoo.com
+3
+Corresponding author. E-mail address: math
+ 
+ayman27@yahoo.comDifferential Equations and Control Processes, N 2, 2015
+Stochastic differential equation is a differential equation, in which one or
+more of the terms is a stochastic process and resulting in a solution which is
+itself a stochastic process.
+Stochastic differential equations play a relevant role in many application
+areas including environmental modeling, engineering, biological modeling and
+mostly, one of more important application of stochastic differential equation is
+in the modeling of electrical networks.
+Due to statistical properties, a stochastic process can be used to de ne the
+randomness in an uncorrelated white Gaussian noise, which can be thought of
+as the derivative of Brownian motion (or the Wiener process) [20].
+In many branches of science and industry stochastic delay differential equa-
+tions have been used to model the evolution phenomena because the measure-
+ments of time-involving variables and their dynamics usually contain some de-
+lays.
+Furthermore stochastic perturbations are often introduced into these deter-
+ministic systems in order to describe the effects of uctuations in real environ-
+ment, thus yield stochastic delay differential equations.
+Mathematically stochastic delay differential equations were  rst introduced
+by It^ o and Nisio [7], in which the existence and uniqueness of the solutions have
+been investigated.
+In the last several decades, numerous studies have been developed toward
+the study of stochastic delay differential equations, such as stochastic stability,
+Lyapunov functional method, Lyapunov exponent, stochastic ow and attrac-
+tion etc. (see [5], [8], [9], [15], [16], [18], [24] and the references therein).
+Stability is one of the most important problems in the study of stochastic
+delay differential equations. One of the powerful techniques employed in the
+study of the stability problem is the method of the Lyapunov functionals.
+One general method of Lyapunov functionals constructed both for determin-
+istic and stochastic delay differential equations was proposed and developed by
+many authors, for examples, [12, 13, 19].
+The advantage of this method can judge the stability of systems without
+knowledge of the solutions. Therefore it is at all times hotpot in the study of
+the stability theory in the last century.
+On the other hand, since the introduced stochastic calculus about  fty
+years ago, the theory of stochastic differential equations have been developed
+very quickly. In particular, the Lyapunov's second method has been developed
+Electronic Journal. http://www.math.spbu.ru/diffjournal 2Differential Equations and Control Processes, N 2, 2015
+to deal with stochastic stability by many authors, for example, [14, 17].
+However it is generally much more di cult to construct the Lyapunov func-
+tionals in the case of delay, than the Lyapunov functionals in the case of non-
+delay of higher-order, for example, [1  3; 22; 23; 25  28]. Therefore anther
+useful technique has been developed, that is to compare the stochastic delay
+differential equations with the corresponding non-delay equations.
+Besides it is worth-mentioning that, there are only few papers on the same
+topic for certain  rst-order stochastic differential equations with delay, for ex-
+ample, [14, 21].
+In [14], Kolmanovskii and Shaikhet present an interesting survey of a gen-
+eral method of Lyapunov functionals construction for stochastic differential
+equations of neutral type.
+In this paper by constructing Lyapunov functionals, we investigate su cient
+conditions for the asymptotic stability of the zero solution to the following
+second-order stochastic delay differential equations
+ x(t) +a _ x(t) +bx(t h) + x(t) _ !(t) = 0 (1.1)
+and
+ x(t) +a _ x(t) +f(x(t h)) + x(t  ) _ !(t) = 0; (1.2)
+where a;b and   are positive constants, h and   are two positive constant
+delays; !(t)2 R is a standard Wiener process; f(x) is a continuous function
+and f(0) = 0.
+2 Preliminaries and stability result
+A general scalar stochastic differential equation has the following form
+dx(t) =f(t;x(t))dt +g(t;x(t))d!(t); (2.1)
+where f(t;x(t)) : [0;T ] R! R and g(t;x(t)) : [0;T ] R! R are drift
+and diffusion coe cients and !(t) is the so called Wiener process, a stochastic
+process representing the noise [11].
+Instead the appropriate stochastic chain rule, known as It^ o formula contains
+an additional term. This additional term which roughly speaking is due to the
+fact that the square of the stochastic differential (d!(t))
+2
+is equal to dt, in the
+Electronic Journal. http://www.math.spbu.ru/diffjournal 3Differential Equations and Control Processes, N 2, 2015
+mean-square sense, i.e. E[(d!(t))
+2
+] = dt. So the second-order term in d!(t)
+should really appear as a  rst-order term in dt.
+Suppose x(t) is a solution of the stochastic differential equation (2:1) for
+some suitable functions f;g. Let g(t;x(t)) : (0;1) R!R be a twice contin-
+uously differentiable function.
+Let the function
+y(t) =g(t;x(t));
+be a stochastic process, for which
+dy(t) =
+@g
+@t
+(t;x(t))dt +
+@g
+@x
+(t;x(t))dx(t) +
+1
+2
+@
+2
+g
+@x
+2
+(t;x(t))(dx(t))
+2
+; (2.2)
+where (dx(t))
+2
+=dx(t):dx(t) is computed according to the rules
+dt:dt =dt:d!(t) =d!(t):dt = 0; d!(t):d!(t) =dt:
+Hence for any given initial value x(0) =x
+0
+the stochastic differential equa-
+tion has a unique global solution denoted byx(t;x
+0
+). Assume furthermore that
+f(t; 0) = 0 and g(t; 0) = 0 for all t   0. Hence the stochastic differential
+equation admits the zero solution x(t; 0)  0.
+De nition 2.1 The zero solution of the stochastic differential equation is said
+to be stochastically stable or stable in probability, if for every pair of  2 (0; 1)
+and r> 0, there exists a   = ( ;r)> 0 such that
+Pfjx(t;x
+0
+)j<r for all t  0g  1  ; wheneverjx
+0
+j< 
+0
+:
+Otherwise, it is said to be stochastically unstable.
+De nition 2.2 The zero solution of the stochastic differential equation is said
+to be stochastically asymptotically stable, if it is stochastically stable and more-
+over for every  2 (0; 1) and r> 0, there exists a   = ( )> 0 such that
+Pflim
+t!0
+x(t;x
+0
+) = 0g  1  ; wheneverjx
+0
+j< 
+0
+:
+LetK denote the family of all continuous nondecreasing functions  :R
++
+!R
++
+such that  (0) = 0 and  (r)> 0 if r> 0.
+Forh> 0, letS
+h
+=fx2R
+m
+:jxj<hg and letC
+1;2
+(S
+h
+ R
++
+;R
++
+) denote the
+family of all continuous functions V (t;x) from S
+h
+ R
++
+toR
++
+with continuous
+ rst partial derivatives with respect to every component of x and to t.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 4Differential Equations and Control Processes, N 2, 2015
+We naturally consider the It^ o differential of the process V (t;x(t)), where
+x(t) is a solution of the stochastic differential equation and V is a Lyapunov
+function. According to the It^ o formula, we of course require V 2 C
+1;2
+(S
+h
+ 
+R
++
+;R
++
+), which denotes the family of all non-negative functions V (t;x) de ned
+on S
+h
+ R
++
+such that they are twice continuously differentiable in x and once
+in t.
+By the It^ o formula we have
+dV (t;x(t)) =LV (t;x(t))dt +V
+x
+(t;x(t))g(t;x(t))d!(t);
+where
+LV (t;x(t)) =V
+t
+(t;x(t))+V
+x
+(t;x(t))f(t;x(t))+
+1
+2
+tr[g
+T
+(t;x(t))V
+xx
+(t;x(t))g(t;x(t))]:
+We shall see that
+_
+V (t;x(t)) will be replaced by the diffusion operatorLV (t;x(t))
+in the study of stochastic stability. For example, the inequality
+_
+V (t;x(t))  0
+will sometimes by replaced by LV (t;x(t))  0 to get the stochastic stability.
+Theorem 2.1 Assume that there exist V2C
+1;2
+(S
+h
+ R
++
+;R
++
+) and  2K such
+that
+V (t; 0) = 0;  (jxj)<V (t;x) and
+LV (t;x(t))  0; for all (t;x)2S
+h
+ R
++
+:
+Then the zero solution of the stochastic differential equation is stochastically
+stable.
+Theorem 2.2 Assume that there exist V2C
+1;2
+(S
+h
+ R
++
+;R
++
+) and  
+1
+; 
+2
+; 
+3
+2
+K such that
+ 
+1
+(jxj) V (t;x)  
+2
+(jxj) and
+LV (t;x(t))   
+3
+(jxj); for all (t;x)2S
+h
+ R
++
+:
+Then the zero solution of the stochastic differential equation is stochastically
+asymptotically stable.
+Now we present the main stability results of (1:1) and (1:2).
+Theorem 2.3 Suppose that there exist positive constantsa;b;  andh withab 
+ 
+2
+> 0, then the zero solution of (1:1) is stochastically asymptotically stable,
+provided that
+h<min
+ 
+ab  
+2
+ab
+;
+a
+(4 +a)b
+ 
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 5Differential Equations and Control Processes, N 2, 2015
+Theorem 2.4 If a; ;h and   are positive constants,
+f(x)
+x
+  b > 0 for x6= 0,
+ab  
+2
+> 0 and there exists l > 0 withjf
+0
+(x)j  l, then the zero solution of
+(1:2) is stochastically asymptotically stable, provided that
+h<min
+ 
+ab  
+2
+al
+;
+a
+(4 +a)l
+ 
+:
+3 Proof of Theorem 2.3.
+We write equation (1:1) in the following equivalent form
+_ x =y;
+_ y = ay bx +b
+Z
+t
+t h
+y(s)ds  x(t) _ !(t):
+(3.1)
+De ne the Lyapunov functional V
+1
+(x
+t
+;y
+t
+) as
+V
+1
+(x
+t
+;y
+t
+) =
+1
+2
+y
+2
++bx
+2
++
+1
+2
+(y +ax)
+2
++
+Z
+0
+ h
+Z
+t
+t+s
+y
+2
+(u)duds; (3.2)
+wherex
+t
+=x(t+s); s  0 and is a positive constant, which will be determined
+later.
+From (3:2), (3:1) and by using It^ o formula, we obtain
+LV
+1
+(x
+t
+;y
+t
+) = ay
+2
+(t) abx
+2
+(t) + 2by
+Z
+t
+t h
+y(s)ds +abx
+Z
+t
+t h
+y(s)ds + 
+2
+x
+2
+(t)
++hy
+2
+(t) 
+Z
+t
+t h
+y
+2
+(u)du;
+it follows by using the inequality 2uv u
+2
++v
+2
+,
+LV
+1
+(x
+t
+;y
+t
+)  ay
+2
+ abx
+2
++bhy
+2
++b
+Z
+t
+t h
+y
+2
+(s)ds +
+abh
+2
+x
+2
++
+ab
+2
+Z
+t
+t h
+y
+2
+(s)ds
++ 
+2
+x
+2
++hy
+2
+ 
+Z
+t
+t h
+y
+2
+(s)ds:
+Then we have
+LV
+1
+(x
+t
+;y
+t
+)   (a bh h)y
+2
+  (ab 
+abh
+2
+  
+2
+)x
+2
++ (b +
+ab
+2
+ )
+Z
+t
+t h
+y
+2
+(s)ds:
+If we take
+ =
+b
+2
+(a + 2)> 0;
+Electronic Journal. http://www.math.spbu.ru/diffjournal 6Differential Equations and Control Processes, N 2, 2015
+then we  nd
+LV
+1
+(x
+t
+;y
+t
+)  fa bh 
+bh
+2
+(a + 2)gy
+2
+  (ab 
+abh
+2
+  
+2
+)x
+2
+:
+Therefore if
+h<min
+ 
+ab  
+2
+ab
+;
+a
+(4 +a)b
+ 
+;
+we obtain
+LV
+1
+(x
+t
+;y
+t
+)  
+1
+2
+fay
+2
++ (ab  
+2
+)x
+2
+g:
+Then we have
+LV
+1
+(x
+t
+;y
+t
+)  ff(x
+2
+(t) +y
+2
+(t)); for some ff> 0: (3.3)
+Since
+R
+0
+ h
+R
+t
+t+s
+y
+2
+(u)duds is non-negative, consequently we  nd
+V
+1
+(x
+t
+;y
+t
+) 
+1
+2
+y
+2
++bx
+2
++
+1
+2
+(y +ax)
+2
+:
+Then there exists a positive constant D
+1
+such that
+V
+1
+(x
+t
+;y
+t
+) D
+1
+(x
+2
+(t) +y
+2
+(t)): (3.4)
+We can write (3:2) as the following form
+V
+1
+(x
+t
+;y
+t
+) =y
+2
++bx
+2
++axy +
+1
+2
+a
+2
+x
+2
++
+Z
+0
+ h
+Z
+t
+t+s
+y
+2
+(u)duds:
+Since xy 
+1
+2
+(x
+2
++y
+2
+), then we  nd
+V
+1
+(x
+t
+;y
+t
+) y
+2
++bx
+2
++
+a
+2
+(x
+2
++y
+2
+) +
+1
+2
+a
+2
+x
+2
++
+Z
+t
+t h
+(  t +h)y
+2
+( )d :
+Therefore we obtain
+V
+1
+(x
+t
+;y
+t
+) 
+a + 2
+2
+kyk
+2
++
+2b +a +a
+2
+2
+kxk
+2
++
+h
+2
+2
+kyk
+2
+:
+Then we have
+V
+1
+(x
+t
+;y
+t
+) 
+2b +a +a
+2
+2
+kxk
+2
++
+a +h
+2
++ 2
+2
+kyk
+2
+:
+Then we can say that there exists a positive constant D
+2
+, which satis es
+V
+1
+(x
+t
+;y
+t
+) D
+2
+(x
+2
+(t) +y
+2
+(t)): (3.5)
+Hence from (3:3); (3:4) and (3:5) all the conditions of Theorem 2.2 are satis ed,
+so that the zero solution of (1:1) is stochastically asymptotically stable.
+Thus the proof of Theorem 2.3 is now complete.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 7Differential Equations and Control Processes, N 2, 2015
+4 Proof of Theorem 2.4.
+We write (1:2) as the following equivalent system
+_ x =y;
+_ y = ay f(x) +
+Z
+t
+t h
+f
+0
+(x(s))y(s)ds  x(t  ) _ !(t):
+(4.1)
+De ne the Lyapunov functional as
+V
+2
+(x
+t
+;y
+t
+) =2
+Z
+x
+0
+f( )d  +
+1
+2
+y
+2
++
+1
+2
+(y +ax)
+2
++ 
+Z
+0
+ h
+Z
+t
+t+s
+y
+2
+( )d ds
++ 
+2
+Z
+t
+t  
+x
+2
+(s)ds;
+(4.2)
+where   is a positive constant, which will be determined later.
+From (4:2), (4:1) and by using It^ o formula, we have
+LV
+2
+(x
+t
+;y
+t
+) = ay
+2
+(t) + 2y
+Z
+t
+t h
+f
+0
+(x(s))y(s)ds axf(x) +ax
+Z
+t
+t h
+f
+0
+(x(s))y(s)ds
++ 
+2
+x
+2
+(t) + y
+2
+(t)h  
+Z
+t
+t h
+y
+2
+( )d ;
+Supposejf
+0
+(x)j l, l> 0 and
+f(x)
+x
+ b> 0, then
+LV
+2
+(x
+t
+;y
+t
+)   (a  h)y
+2
+ abx
+2
++ 
+2
+x
+2
++ 2ly
+Z
+t
+t h
+y(s)ds +alx
+Z
+t
+t h
+y(s)ds
+  
+Z
+t
+t h
+y
+2
+( )d :
+Thus by using the inequality 2uv u
+2
++v
+2
+, we get
+LV
+2
+(x
+t
+;y
+t
+)   (a  h)y
+2
+  (ab  
+2
+)x
+2
++lhy
+2
++l
+Z
+t
+t h
+y
+2
+(s)ds
++
+alh
+2
+x
+2
++
+al
+2
+Z
+t
+t h
+y
+2
+(s)ds  
+Z
+t
+t h
+y
+2
+( )d :
+Then we obtain
+LV
+2
+(x
+t
+;y
+t
+)   (a lh  h)y
+2
+  (ab 
+alh
+2
+  
+2
+)x
+2
++ (l +
+al
+2
+  )
+Z
+t
+t h
+y
+2
+(s)ds:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 8Differential Equations and Control Processes, N 2, 2015
+If we take
+  =
+l
+2
+(a + 2)> 0;
+then we get
+LV
+2
+(x
+t
+;y
+t
+)  fa  2lh 
+lha
+2
+gy
+2
+  (ab 
+alh
+2
+  
+2
+)x
+2
+:
+Thus if
+h<min
+ 
+ab  
+2
+al
+;
+a
+(4 +a)l
+ 
+;
+we  nd
+LV
+2
+(x
+t
+;y
+t
+)  
+1
+2
+f(ab  
+2
+)x
+2
++ay
+2
+g:
+Therefore we have
+LV
+2
+(x
+t
+;y
+t
+)   (x
+2
+(t) +y
+2
+(t)); for some   > 0: (4.3)
+Since
+R
+0
+ h
+R
+t
+t+s
+y
+2
+( )d ds and  
+2
+R
+t
+t  
+x
+2
+(s)ds are non-negative, then we  nd
+V
+2
+(x
+t
+;y
+t
+)  2
+Z
+x
+0
+f( )d  +
+1
+2
+y
+2
++
+1
+2
+(y +ax)
+2
+:
+Since
+f(x)
+x
+ b> 0, therefore we get
+V
+2
+(x
+t
+;y
+t
+) bx
+2
++
+1
+2
+y
+2
++
+1
+2
+(y +ax)
+2
+;
+then there exists a positive constant D
+3
+such that
+V
+2
+(x
+t
+;y
+t
+) D
+3
+(x
+2
+(t) +y
+2
+(t)): (4.4)
+Sincejf
+0
+(x)j  l and f(0) = 0, then by using the mean-value theorem, we
+obtain f(x) lx. Thus we can write (4:2) as the following form
+V
+2
+(x
+t
+;y
+t
+) lx
+2
++
+1
+2
+y
+2
++
+1
+2
+(y +ax)
+2
++ 
+Z
+0
+ h
+Z
+t
+t+s
+y
+2
+( )d ds + 
+2
+Z
+t
+t  
+x
+2
+(s)ds:
+Since xy 
+1
+2
+(x
+2
++y
+2
+), then we  nd
+V
+2
+(x
+t
+;y
+t
+) lx
+2
++y
+2
++
+a
+2
+(x
+2
++y
+2
+) +
+1
+2
+a
+2
+x
+2
++ 
+Z
+t
+t h
+(  t +h)y
+2
+( )d 
++ 
+2
+Z
+t
+t  
+x
+2
+(s)ds:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 9Differential Equations and Control Processes, N 2, 2015
+Thus we obtain
+V
+2
+(x
+t
+;y
+t
+) 
+a + 2
+2
+kyk
+2
++
+2l +a +a
+2
+2
+kxk
+2
++
+ h
+2
+2
+kyk
+2
++ 
+2
+ kxk
+2
+=
+2l +a +a
+2
++ 2 
+2
+ 
+2
+kxk
+2
++
+a + 2 + h
+2
+2
+kyk
+2
+:
+Hence we have a positive constant D
+4
+satisfying
+V
+2
+(x
+t
+;y
+t
+) D
+4
+(x
+2
+(t) +y
+2
+(t)): (4.5)
+From the results (4:3); (4:4) and (4:5), we note that all the conditions of Theo-
+rem 2.2 are satis ed, so that the zero solution of (1:2) is stochastically asymp-
+totically stable.
+This completes the proof of Theorem 2.4.
+5 Conclusions
+If we allow for some randomness in some of the coe cients of a differential
+equation, we often obtain a more realistic mathematical model of the situation.
+So the study of stochastic differential equations is richer than the classical
+deterministic ones.
+By constructing Lyapunov functionals, su cient conditions for the stochas-
+tic asymptotic stability of the zero solution of two equations (1:1) and (1:2).
+The obtained results are extend existing results in the literature on determin-
+istic systems to stochastic delay systems.
+Finally, we can say that there exist a lot of applications for the second-order
+stochastic differential equations with delay or without delay.
+The importance of second-order equations is conditioned by Newton second
+low.
+References
+[1] A. M. A. Abou-El-Ela, A. I. Sadek and A. M. Mahmoud, Stability and
+boundedness of solutions of certain third-order nonlinear delay differential
+equation, International Journal on Automatic Control and Systems Engi-
+neering, 9(1), 9-15, 2009.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 10Differential Equations and Control Processes, N 2, 2015
+[2] A. M. A. Abou-El-Ela, A. I. Sadek and A. M. Mahmoud, On the stability of
+solutions of certain fourth-order nonlinear non-autonomous delay differential
+equation, International Journal of Applied Mathematics, 22(2), 245-258,
+2009.
+[3] A. M. A. Abou-El-Ela, A. I. Sadek and A. M. Mahmoud, On the stability
+criteria of linear non-autonomous time-varying delay system with applica-
+tion to control problem, Differential Equations and Control Processes, 1,
+146-163, 2012.
+[4] T. A. Burton, Stability and Periodic Solutions of Ordinary and Functional
+Differential Equations, Academic Press, 1985.
+[5] S. Gan, A. Xiao and D. Wang, Stability of analytical and numerical solutions
+of nonlinear stochastic delay differential equations, arXiv: 1301.5389, 2, 1-
+23, 2014.
+[6] J. K. Hale and S. M. Verduyn Lunel, Introduction to Functional Differential
+Equations, Springer-Verlag, New York, 1993.
+[7] K. It^ o and M. Nisio, On stationary solution of a stochastic differential equa-
+tions, J. Math. Kyoto Univ., 4, 1-75, 1964.
+[8] A. F. Ivanov, Y. I. Kazmerchuk and A. V. Swishchuk, Theory, stochastic
+stability and applications of stochastic delay differential equations: a sur-
+vey of recent results, Differential Equations and Dynamical Systems, 11(1),
+01/2003.
+[9] R. I. Kadiev, Su cient conditions for stability of linear stochastic system
+with aftereffect with respect to a part of variables, (English Russian original)
+Russ. Math., 44(6), 72-76, 2000; translation from Izv. Vyssh. Uchebn. Zaved.
+Mat., 2000(6), 75-79, 2000.
+[10] P. E. Kloeden and E. Platen, Numerical Solutions of Stochastic Differential
+Equations, Springer-Verlag, Berlin, 1995.
+[11] E. Kolarova, An application of stochastic integral equations to electrical
+networks, Acta Electrotechnica et informatica, 8(3), 14-17, 2008.
+[12] V. B. Kolmanovskii and A. D. Myshkis, Introduction to the Theory and
+Applications of Functional Differential Equations, Kluwer Academic Pub-
+lishers, Dordrecht, 1999.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 11Differential Equations and Control Processes, N 2, 2015
+[13] V. Kolmanovskii and L. Shaikhet, Construction of Lyapunov functionals for
+stochastic hereditary systems: a survey of some recent results, Mathematical
+and Computer Modelling, 36(6), 691-716, 2002.
+[14] V. Kolmanovskii and L. Shaikhet, About some features of general method
+of Lyapunov functionals construction, SACTA, 6(1), 49-76, 2004.
+[15] X. Mao, Stochastic Differential Equations and Their Applications, Hor-
+wood Publishing, Chichester, UK, 1997.
+[16] X. Mao, Attraction, stability and boundedness for stochastic differential
+delay equatioins, Nonlinear Analysis, 47, 4795-4806, 2001.
+[17] X. Mao, Some contributions to stochastic asymptotic stability and bound-
+edness via multiple Lyapunov functions, J. Math. Anal. Appl., 260(2), 325-
+340, 2001.
+[18] X. Mao and A. Shah, Exponential stability of stochastic differential delay
+equations, Stochastics and Stochastic Reports, 60(1-2), 135-153, 1997.
+[19] X. Mao and L. Shaikhet, Delay-dependent stability criteria for stochastic
+differential delay equations with Markovian switching, Stability and Control:
+Theory and Applications, 3(2), 88-101, 2000.
+[20] B. Oksendal, Stochastic Differential Equations, An introduction with ap-
+plications, Springer-Verlag, New York, 2000.
+[21] R. Rezaeyan and R. Farnoosh, Stochastic differential equations and appli-
+cation of the Kalman-Bucy iter in the modelling of RC circuit, Applied
+Mathematical Sciences, 4(23), 1119-1127, 2010.
+[22] A. I. Sadek, Stability and boundedness of a kind of third-order delay dif-
+ferential system, Appl. Math. Lett., 16(5), 657-662, 2003.
+[23] A. I. Sadek, On the stability of solutions of some non-autonomous delay
+differential equations of the third-order, Asymptot. Anal., 43, 1-7, 2005.
+[24] L. E. Shaikhet, Stability in probability of nonlinear stochastic systems
+with delay, (English Russian original) Math. notes, 57(1), 103-106, 1995;
+translation from Mat. Zametki, 57(1), 142-146, 1995.
+[25] C. Tun  c, Stability and boundedness of solutions of nonlinear differential
+equations of third-order with delay, Differntial Equations and Control Pro-
+cesses, 3, 1-13, 2007.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 12Differential Equations and Control Processes, N 2, 2015
+[26] C. Tun  c, On the stability of solutions to a certain fourth-order delay dif-
+ferential equation, J. Nonlinear Dyn., 51, 71-81, 2008.
+[27] C. Tun  c and M. Ate  s, Stability and boundedness results for solutions of cer-
+tain third-order nonlinear vector differential equations, J. Nonlinear Dyn.,
+45, 273-281, 2006.
+[28] Y. Zhu, On stability, boundedness and existence of periodic solution of a
+kind of third-order nonlinear delay differential system, Ann. of Diff. Eqs.,
+8(2), 249-259, 1992.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 13

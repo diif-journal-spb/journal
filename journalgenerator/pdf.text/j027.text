@@ -1,0 +1,1729 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 4, 1998
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Symbolic dynamics
+SYMBOLIC ANALYSIS OF THE CHAIN
+RECURRENT TRAJECTORIES OF DYNAMICAL
+SYSTEMS
+George Osipenko
+Saint-Petersburg State Technical University,
+29 Politehnicheskaja str., 195251 St.Petersburg, RUSSIA,
+Laboratory of Nonlinear Analysis
+Abstract.
+Anapplicationofanewconstructivemethodforthestudyofglobaldynam-
+ical system structure is presented. The dynamical system is associated with an
+oriented graph called a symbolic image of the system. The symbolic image can
+be considered as a ﬁnite approximation of the dynamical system. An investiga-
+tion of the symbolic image gives an opportunity to get a neighborhood of the
+chainrecurrenttrajectoriesset. Analgorithmforlocalizationofchainrecurrent
+set is described. A periodic shadowing theorem is proved.
+MSC: 58F22, 58F03, 34C35.
+Key words: dynamical system, symbolic image, chain recurrent point,
+oriented graph, periodic trajectory.Differential Equations and Control Processes, N 4, 1998
+1 Introduction
+At present the methods of symbolic dynamics have wide applications. In this
+paper one of the variants of such application is presents. Our purpose is to
+substantiate an algorithm for localization of the chain recurrent set without
+any preliminary information about the system. All needed estimates can be
+obtained by the traditional numerical methods of differential equations. The
+common scheme of our method is the following. At ﬁrst, the dynamical system
+is associated with an oriented graph called Symbolic Image of the system.
+Valuable information about the global structure of the system may come from
+the analysis of this symbolic image. By investigating the symbolic image we
+canseparatethepointsthroughwhichperiodictrajectoriesmaypassfromthose
+through which periodic trajectories do not pass. This permits the construction
+of a neighborhood of the chain recurrent set, which includes all the types of re-
+turning trajectories ( e.g., periodic, almost-periodic, recurrent, homoclinic and
+so on). Using a special sequence of symbolic images we obtain a sequence of
+embedded neighborhoods which converges to the chain recurrent set. The pro-
+posed construction of the symbolic image is close to the Cell-to-Cell Mappings
+of C.S.Hsu [6].
+We will consider a discrete dynamical system governed by a homeomor-
+phismX deﬁned on a compact manifoldM. To describe the continuous version
+of dynamic system consider a shift operator along trajectories of the system
+of differential equations which is generated as follows. Let ˙ x = f(t,x) be a
+system of ordinary differential equations, where x ∈ M, f(t,x) is a C
+1
+vector
+ﬁeld periodic in t with period ω. Denote its general solution by F(t,t
+0
+,x),
+F(t
+0
+,t
+0
+,x) = x. For investigation of the global evolution of the system, it usu-
+ally is suﬃcient to examine a Poincare map X(x) = F(ω,0,x) which is the
+shift operator along the trajectories of the system on the period ω. If the sys-
+tem of differential equations is autonomous (i.e., the vector ﬁeld f does not
+depend on t ), we ﬁx an arbitrary H 6= 0 and consider a shift operator of the
+form X(x) =F(H,x), where F(t,x) is the solution of the autonomous system,
+F(0,x) =x.
+Electronic Journal.  60Differential Equations and Control Processes, N 4, 1998
+2 Chain recurrent set
+Let us consider a homeomorphism X : M → M on a smooth compact C
+∞
+-
+manifold M.
+Deﬁnition 1 Let ε > 0 be given. An inﬁnite sequence {x
+k
+: k ∈ N} is called
+an ε-trajectory of X if for any k the distance between the image X(x
+k
+) and x
+k+1
+is less than ε :
+ρ(X(x
+k
+),x
+k+1
+)<ε,
+where ρ(x,y) is the distance between points x and y on M.
+In the majority of cases an exact trajectory is seldom known, and in fact
+we ﬁnd only ε-trajectories for suﬃciently small positive ε.
+Deﬁnition 2 If an ε-trajectory {x
+k
+} is periodic, i.e., x
+k+p
+= x
+k
+for some
+p ∈ N, then it is called a p-periodic ε-trajectory and each points x = x
+k
+is
+called (p,ε)-periodic.
+For example, on the plane R
+2
+consider a map of the form: X(x,y) =
+(y, 0.05(1− x
+2
+)y − x). Take the sequence x
+1
+= (2,0), x
+2
+= (0,−2), x
+3
+=
+(−2,0), x
+4
+= (0,2), x
+k+4
+=x
+k
+. Thisis4-periodicε-trajectorywithanyε> 0.1.
+A p-periodic sequence {x
+k
+} is deﬁned by its periodic part {x
+1
+, x
+2
+, ..., x
+p
+}
+putting x
+k+p
+= x
+k
+. We will say about ε-periodic point x if its period p is not
+ﬁxed. Denote the set of allε-periodic points byQ(ε). It is not diﬃcult to prove
+the following proposition describing the properties of Q(ε).
+Proposition 1 (i) The sets Q(ε), ε> 0 is open.
+(ii) If ε
+1
+>ε
+2
+then Q(ε
+2
+)⊂Q(ε
+1
+).
+Deﬁnition 3 A point x is called chain recurrent if x is ε-periodic for each
+positive ε, i.e., there exists a periodic ε-trajectory passing through x. A chain
+recurrent set, denoted Q, is the set of all the chain recurrent points
+It is know [3] that the chain recurrent set is invariant, closed, and contains
+periodic, nonwandering and other singular trajectories. It should be remarked
+that if a chain recurrent point is not periodic then there exists as small as one
+likes perturbation of X in C
+0
+-topology for which this point is periodic [3]. One
+Electronic Journal.  61Differential Equations and Control Processes, N 4, 1998
+may say that a chain recurrent point may become periodic under small C
+0
+-
+perturbations of the map X. From the deﬁnition of the chain recurrent set it
+immediately follows that
+Q = lim
+ε→0
+Q(ε) =
+\
+ε>0
+Q(ε) (1)
+Thus the family of open sets {Q(ε), ε > 0} forms a fundamental system of
+neighborhoods of the chain recurrent set Q.
+3 Construction of the Symbolical Image [9]
+Let C ={M(1),...,M(n)} be a ﬁnite covering of the domain M by closed sets.
+The set M(i) is named a cell of the covering. For each cell M(i) we deﬁne the
+covering C(i), i = 1,...,n, of the image X(M(i)) consisting of cells M(j)∈ C
+whose intersections with X(M(i)) are not empty :
+C(i) ={M(j) :M(j)∩X(M(i))6=∅}.
+Set
+c(i) ={j :M(j)∩X(M(i))6=∅}.
+The cells of the covering C(i) are called the image cells of M(i) under X.
+Let us construct the oriented graph G (see Fig.1) associating to each cell M(i)
+the vertex i . The vertices i and j are connected by the oriented edge i → j
+if and only if j ∈ c(i), i.e., the cell M(j) is included in the covering of the cell
+M(i).
+Deﬁnition 4 The constructed graph G is called the symbolic image of X with
+respect to the covering C.
+The oriented graph G is uniquely determined by its n×n matrix of tran-
+sitions Π = (π
+ij
+), where π
+ij
+= 1 if and only if there is the oriented edge i→ j,
+otherwiseπ
+ij
+= 0. It is easily seen that the symbolic image depends on the cov-
+ering C. By varying C one can change the symbolic image of the mapping X.
+We can consider the symbolical image as a ﬁnite approximation of the mapping
+X. It is natural to expect this approximation to be more precise provided the
+mesh of the covering is made smaller.
+Electronic Journal.  62Differential Equations and Control Processes, N 4, 1998
+ 
+ 
+ 
+ 
+i
+d e
+l k
+j
+X
+ 
+ 
+ 
+   
+-  
+ 
+ 
+ 
+   
+ 
+ 
+ 
+  *
+H
+H
+H
+H j
+@
+@
+@
+@
+@ R
+i
+d
+e
+l
+k
+j
+c(i)
+  
+  
+-
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  1
+ 
+ 
+  ff  
+A
+A
+A U
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  *
+B
+B
+B
+B
+BN
+Q
+Q
+Q
+Q
+Q s
+ 
+ 
+ 
+ 
+  	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+G
+A
+A
+A U
+  
+  
+?
+C
+C
+C
+C
+C
+C
+CCO
+ 
+ 
+ 
+  )
+6 6
+P
+P
+P
+P
+P
+P
+P i
+S
+S
+S
+S w
+A
+A
+A
+A
+A
+A
+A
+A
+A U
+
+
+
+
+
+  
+?
+q
+H
+H
+H
+H
+H
+H
+H
+H
+H j
+' $
+?
+ 
+ 
+ 
+ 
+ 
+ 
+   
+   
+H
+H
+H
+H j
+q
+q
+H
+H
+H
+H
+H
+H
+H
+H
+H Y
+Figure 1: Construction of Symbolic Image.
+Let
+diamM(i) = max(ρ(x,y) :x,y∈M(i))
+be the diameter of the cellM(i), andd be the largest diameter of the cells from
+C. Denote a union of the cells M(j) belonging to the covering C(i) by R
+i
+:
+R
+i
+=
+[
+j∈c(i)
+M(j)
+By construction, R
+i
+contains the image X(M(i)) of the cell M(i) and is con-
+tained in the closed d-neighborhood of the image X(M(i)) :
+X(M(i))⊂R
+i
+⊂{x :ρ(x,y)≤d, y∈X(M(i))}.
+Let q be the largest diameter of the images X(M(i)), i = 1,2,...,n. We deﬁne
+the number r as follows. If a cell M(k) does not belong to the covering C(i)
+then the distance
+r
+ik
+=ρ(X(M(i)),M(k)) = min(ρ(x,y) :x∈X(M(i)),y∈M(k))
+between the cell M(k) and the image X(M(i)) is positive. Let r be minimum
+of suchr
+ik
+. Since the number of pairs (i,k) described above is ﬁnite thenr > 0.
+So the number r is the smallest distance between the images X(M(i)) and the
+cells M(k) whose intersections are empty. The number r is called the lower
+bound of the symbolic image G. The lower bound depends on the covering C.
+By varying C one can construct a covering for whichr is arbitrarily small. The
+next propositions describe some properties of lower bound.
+Proposition 2 If a point x∈M(j) and ρ(x,X(M(i)))<r then the cell M(j)
+belongs to the covering C(i).
+Electronic Journal.  63Differential Equations and Control Processes, N 4, 1998
+Proof. Let x ∈ M(j). Since the distance ρ(x,X(M(i))) < r then the
+distance between the cell M(j) and the image X(M(i)) is less than r. By
+the deﬁnition of the lower bound, the number r is the smallest distance be-
+tween the images X(M(i)) and cells M(k) which do not intersect. Since
+ρ(M(j),X(M(i)))<r then the cell M(j) has to intersect the image X(M(i)).
+Consequently, the cell M(j) belongs to the covering C(i).  
+Corollary 1 The set R
+i
+={∪M(j) : j ∈ c(i)} contains r-neighborhood of the
+image X(M(i)) :
+{x : ρ(x,X(M(i))<r}⊂R
+i
+.
+Proposition 3 The lower bound r satisﬁes the inequality r≤d.
+Proof. The number of pairs (i,k) such that r
+ik
+= ρ(X(M(i)),M(k)) > 0
+is ﬁnite. Hence there exists a pair (i,m) for which r = r
+im
+and the segment
+[x
+j
+,x
+m
+] of the geodesic realizes the value r . This means that there exist points
+x
+j
+∈X(M(j)) and x
+m
+∈M(m), X(M(j))∩M(m) =∅ such that the length of
+the segment [x
+j
+,x
+m
+] is equal to r. Since the number r is the smallest distance
+between the non intersecting images X(M(i)) and cells M(k), all points of the
+open segment (x
+j
+,x
+m)
+do not belong to the cell M(m), and belong to some
+cells from the covering C(j). Since the cells are closed, the point x
+m
+belongs
+to some cell M(q) from C(j). We have r = ρ(x
+m
+,X(M(j))), x
+m
+∈ M(q),
+M(q)∩X(M(j)) 6= ∅ . Hence, there is a point x
+q
+∈ M(q)∩X(M(j)) . From
+this it follows that r =ρ(x
+m
+,X(M(j)))≤ρ(x
+m
+,x
+q
+)≤diamM(q)≤d .  
+4 Structure of the Symbolic Image
+Deﬁnition 5 A sequence{z
+k
+} of vertices of the graphG is called an admissible
+path (or simply a path) if for each k the graph G contains the oriented edge
+z
+k
+→z
+k+1
+.
+A path {z
+k
+} is said to be p-periodic if z
+k
+= z
+k+p
+for each k ∈ N. There
+is a natural connection between the admissible paths on the symbolic image
+G and the ε -trajectories of the homeomorphism X. It can be said that an
+admissible path is the trace of an ε-trajectory and vice versa. However, there
+aresomerelationshipsbetweentheparametersd,q,r ofthesymbolicimageand
+the number ε for which the connections take place.
+Electronic Journal.  64Differential Equations and Control Processes, N 4, 1998
+Proposition 4 If a sequence {z
+k
+} is a path on the symbolic image G and a
+sequence{x
+k
+} is such thatx
+k
+∈M(z
+k
+), then the sequence{x
+k
+} is anε-trajectory
+of X for any ε>q+d.
+Proof. Let{z
+k
+} be an admissible path onG. Consequently, there exists an
+oriented edge z
+k
+→z
+k+1
+for every number k. This means that the cell M(z
+k+1
+)
+belongs to the covering C(z
+k
+). Hence, the image X(M(z
+k
+)) intersects the cell
+M(z
+k+1
+) and
+ρ(X(x
+k
+),x
+k+1
+)≤diamX(M(z
+k
+))+diamM(z
+k+1
+)≤q+d.
+Therefore, the sequence {x
+k
+} is an ε-trajectory of X for each ε > q +d. Note
+thatthepointx
+k
+isdeﬁnedbytheinclusionx
+k
+∈M(z
+k
+). Hencetheconstructed
+sequence {x
+k
+} is non uniquely determined by the path {z
+k
+} 
+Corollary 2 If a sequence {z
+1
+,z
+2
+,...,z
+p
+} of vertices is a p-periodic path and a
+sequence{x
+1
+,x
+2
+,...,x
+p
+} is such thatx
+k
+∈M(z
+k
+), then the sequence{x
+1
+,x
+2
+,...,x
+p
+}
+is a p-periodic ε-trajectory for each ε>d+q.
+Proposition 5 If a sequence{z
+k
+} is a path on the symbolic image G then there
+exists a sequence{x
+k
+}, x
+k
+∈M(z
+k
+) which is anε-trajectory ofX for eachε>d.
+Proof. Let{z
+k
+}beanadmissiblepathonG. Consequently,thereistheori-
+entededgez
+k
+→z
+k+1
+foreachk. ThismeanstheintersectionX(M(z
+k
+))
+T
+M(z
+k+1
+)
+6=∅. Hence, there is a point x
+k
+∈M(z
+k
+) such that its image X(x
+k
+)∈M(z
+k+1
+),
+i.e.,
+x
+k
+∈M(z
+k
+)
+\
+X
+−1
+(M(z
+k+1
+)). (2)
+We can say the pairx
+k
+→X(x
+k
+) realizes the oriented edgez
+k
+→z
+k+1
+. Fix such
+x
+k
+for each k ∈ N, and check that the sequence {x
+k
+} is ε-trajectory for any
+ε>d. In fact, the image X(x
+k
+) and the point x
+k+1
+belong to the cell M(z
+k+1
+)
+by construction. Hence, the distance
+ρ(X(x
+k
+),x
+k+1
+)≤diamM(z
+k+1
+)≤d<ε.
+Note that in the considered case the sequence{x
+k
+} is non unique as well, how-
+ever the point x
+k
+is determined by the inclusion (2).  
+Corollary 3 If a sequence {z
+1
+, z
+2
+,..., z
+p
+} is a p-periodic path on the symbolic
+image G then there exists a sequence {x
+1
+, x
+2
+,..., x
+p
+}, x
+k
+∈ M(z
+k
+) which is
+p-periodic ε-trajectory for each ε>d.
+Electronic Journal.  65Differential Equations and Control Processes, N 4, 1998
+Proposition 6 If a sequence {x
+k
+} is an ε-trajectory of X, ε < r, and x
+k
+∈
+M(z
+k
+), then the sequence {z
+k
+} is an admissible path on the symbolic image G.
+Proof. Let the hypotheses of the proposition hold. Fix some integer k ∈
+N. Since ρ(X(x
+k
+),x
+k+1
+) < r and x
+k
+∈ M(z
+k
+) then ρ(X(M(z
+k
+)),M(z
+k+1
+)) <
+r. Because r is the smallest distance between X(M(i)) and M(k) such that
+M(k)∩X(M(i)) =∅, the cell M(z
+k+1
+) has to intersect X(M(z
+k
+)). Thus there
+exists the oriented edge z
+k
+→z
+k+1
+for each k∈N, and the sequence{z
+k
+} is an
+admissible path on the symbolic image G.  
+Corollary 4 If a sequence {x
+1
+,x
+2
+,...,x
+p
+} is a p-periodic ε-trajectory, ε < r
+and a sequence {z
+1
+,z
+2
+,...,z
+p
+} is such that x
+k
+∈ M(z
+k
+), then the sequence
+{z
+1
+,z
+2
+,...,z
+p
+} is an admissible p-periodic path on the symbolic image G.
+Deﬁnition 6 A vertex of the symbolic image is called recurrent if a periodic
+path passes through it.
+Denote by P(d) the union of the cells M(i) for which the vertex i is recur-
+rent, i.e.,
+P(d) ={∪M(i) :i is recurrent}, (3)
+where d is the largest diameter of the cells M(i). It should be noted that P
+depends generally on the covering C. However, in what follows we need only
+to consider the dependence of P on the largest diameter d. Denote by T the
+union of the cells M(k) for which the vertex k is non recurrent, i.e.,
+T ={∪M(k) : k is non recurrent}.
+The following theorem describes the properties of the sets P(d) and T.
+Theorem 1 (i) The set P(d) is a closed neighborhood of the chain recurrent
+set. Moreover, P(d) is a subset of ε-periodic point set for each ε>q+d, i.e.,
+Q⊂P(d)⊂Q(ε), ε>q+d. (4)
+(ii) If the maximum diameter d is small enough then this neighborhood is
+suﬃciently small, i.e., for any neighborhood H of Q there exists d> 0 such that
+P(d)⊂H.
+Electronic Journal.  66Differential Equations and Control Processes, N 4, 1998
+(iii) The chain recurrent set Q coincides with the intersection of the sets
+P(d) for all positive d:
+Q =
+\
+d>0
+P(d). (5)
+(iv) The points of T are not chain recurrent, i.e., T ∩Q =∅. Moreover, if
+ε<r then there is no periodic ε-trajectory passing through x∈T, i.e.,
+Q(ε)∩T =∅, ε<r.
+Proof. (i) Suppose we are given ε
+1
+,ε
+2
+, such that ε
+1
+< r < q +d < ε
+2
+. At
+ﬁrst we prove that
+Q(ε
+1
+)⊂P(d)⊂Q(ε
+2
+). (6)
+In fact, if a point x belongs to Q(ε
+1
+), then there exists a periodic ε
+1
+-
+trajectory {x
+1
+,...,x
+p
+} passing through x = x
+1
+. Consider a ﬁnite sequence
+of cells {M(z
+i
+) : i = 1,...,p} such that x
+i
+∈ M(z
+i
+). Because ε
+1
+< r, according
+to Corollary 4 the sequence{z
+i
+} is an admissible periodic path passing through
+thevertexz
+1
+. Thusthevertexz
+1
+isrecurrent. HencethecellM(z
+1
+)iscontained
+in P(d). From this it follows that Q(ε
+1
+)⊂P(d).
+Consider a point x belonging to P(d). There exists a cell M(z) such that
+x∈M(z)andthevertexz isrecurrent. InotherwordsonthesymbolicimageG
+there exists a periodic path{z
+1
+,z
+2
+,...,z
+p
+}, z
+1
+=z . Let us construct a periodic
+sequence {x
+1
+,...,x
+p
+}, such that x
+1
+= x and x
+i
+∈ M(z
+i
+). By Corollary 2, the
+sequence {x
+i
+} is a periodic ε
+2
+-trajectory for any ε
+2
+> q +d. Hence the point
+x = x
+i
+lies in Q(ε
+2
+), i.e. P(d) ⊂ Q(ε
+2
+). Thus (4) and (6) hold. From the
+inclusions Q ⊂ Q(ε
+1
+) ⊂ P(d) it follows that P(d) is a closed neighborhood of
+the chain recurrent set.
+(ii)LetH bearbitraryneighborhoodofQ. SinceX isacontinuousmapping
+and M is compact, the largest diameter q of the images X(M(i)) tends to 0
+as the largest diameter of cells d → 0. Set ε
+2
+=
+3
+2
+(q +d). We have ε
+2
+→ 0 as
+d→ 0. Because {Q(ε),ε> 0} is a fundamental system of neighborhoods of Q,
+there is ε
+∗
+> 0 such that Q(ε
+∗
+)⊂H. Take d such that ε
+2
+=
+3
+2
+(q+d)≤ε
+∗
+. By
+Proposition 1 and the inclusion (6) we have P(d)⊂Q(ε
+2
+)⊂Q(ε
+∗
+)⊂H.
+(iii) As is easily seen, equality (5) follows from the inclusions (6) and the
+equality (1). Note that generally P(d
+1
+) is not contained in P(d
+2
+) even though
+d
+1
+<d
+2
+. As we shall see later, there is an algorithm for constructing a sequence
+of imbedded neighborhoods P
+1
+⊃P
+2
+⊃... of Q.
+Electronic Journal.  67Differential Equations and Control Processes, N 4, 1998
+(iv) We prove this proposition by contradiction. Let x ∈ M(k) where k
+is a non recurrent vertex. Let {x
+1
+,...,x
+p
+} be a periodic ε -trajectory passing
+throughx =x
+1
+andε<r. Considerasequence{z
+1
+,...,z
+p
+}suchthatz
+1
+=k and
+x
+i
+∈ M(z
+i
+). As ε < r, according to Corollary 4, the sequence {z
+i
+} is periodic
+path on the symbolic image G. Because z
+1
+=k, the vertex k is recurrent. The
+resulting contradiction completes the proof of (iv) and the theorem.  
+Theorem 1 leads us to the following inclusions
+Q⊂Q(ε
+1
+)⊂M\T =P(d)\T ⊂P(d)⊂Q(ε
+2
+), (7)
+where ε
+1
+< r < q +d < ε
+2
+. By deﬁnition, the set T is closed and T ∩Q = ∅.
+Hence, the set P(d)\T is an open neighborhood of the chain recurrent set.
+Theorem 1 permits to localize the chain recurrent set without any prelimi-
+nary information about dynamic system.
+5 Localization of chain recurrent set
+In this section the algorithm localizing the chain recurrent set is described.
+1. Starting with an initial covering C, the symbolic image G of the map X is
+found. The cells of the initial covering may have arbitrarily large diameter
+d
+0
+.
+2. The recurrent vertices {i
+k
+} of the graph G are recognized. Using the
+recurrent vertices, a closed neighborhood P ={∪M(i
+k
+) : i
+k
+is recurrent}
+of the chain recurrent set is found.
+3. The cells corresponding to the recurrent vertices{M(i
+k
+) :i
+k
+isrecurrent}
+are partitioned. For example, the largest diameter of the cells may be
+divided by 2. Thus the new covering is deﬁned.
+4. The symbolic image G is constructed for the new covering. It should
+be noted that the new symbolic image may be constructed on the set
+P = {∪M(i
+k
+) : i
+k
+is recurrent}. In other words, the cells corresponding
+to non recurrent vertices do not participate in the construction of the new
+covering and the new symbolic image.
+5. Then one goes back to the second step.
+Electronic Journal.  68Differential Equations and Control Processes, N 4, 1998
+Repeating this partitioning process we obtain a sequence of neighborhoods
+P
+0
+,P
+1
+,P
+2
+,... of the chain recurrent set Q and a sequence of the largest diam-
+eters d
+0
+,d
+1
+,d
+2
+,... of cells. The following theorem substantiates the described
+algorithm for localization of the chain recurrent set.
+Theorem 2 The sequence of sets P
+0
+,P
+1
+,P
+2
+,... offers the following properties:
+(i) the neighborhoods P
+k
+are imbedded one inside the other, i.e.,
+P
+0
+⊃P
+1
+⊃P
+2
+⊃...⊃Q,
+(ii) if the largest diameters d
+k
+→ 0 as k becomes inﬁnite then
+lim
+k→∞
+P
+k
+=
+\
+k
+P
+k
+=Q. (8)
+Proof. (i) Let C ={M(i)} be a covering of M and G be the symbolic
+image for the covering C. Suppose a new covering NC is produced by taking
+a partition of C. Denote by NG the symbolic image for NC. For convenience
+the cells of the new covering NC are designated as m(i,k) so that
+S
+k
+m(i,k) =
+M(i), i.e., the cells {m(i,k) :k = 1,2,...} of the new covering form a partition
+of the cell M(i). In this case the vertices of NG are designated as (i,k). Since
+X(m(i,k))⊂X(M(i))andm(j,l)⊂M(j), theintersectionX(M(i))∩M(j)6=
+∅ provided X(m(i,k))∩m(j,l) 6= ∅. This means that there exists a mapping
+from the graph NG to the graph G such that the vertex (i,k) is mapped to the
+vertex i and the oriented edge (i,k)→ (j,l) to the oriented edge i→j . From
+this it follows that each admissible path on the new graph NG is transformed
+to some admissible path on the graph G. Particularly, the periodic paths on
+the graph NG are mapped to the periodic paths of the graph G. Hence, the
+recurrent vertices of the new symbolic image NG are mapped on the recurrent
+vertices of G. Set
+P ={∪M(i) :i is recurrent on G},
+NP ={∪m(i,k) : (i,k) is recurrent on NG}.
+From the previous it follows that NP is a subset of P :NP ⊂P. Applying
+this result to each step of the partition, we see that the algorithm gives the
+sequence of imbedded neighborhoods P
+0
+⊃P
+1
+⊃P
+2
+⊃... of the chain recurrent
+set.
+Electronic Journal.  69Differential Equations and Control Processes, N 4, 1998
+(ii) Let d
+k
+→ 0 as k → ∞. The inclusions 6 are obtained for an arbitrary
+symbolic image. Hence these inclusions hold for the neighborhoods P
+k
+. It
+follows P
+k
+⊂Q(ε) provided q
+k
++d
+k
+<ε, where q
+k
+is the largest diameter of the
+images X(M(i)). Set ε
+k
+= (3\2)(q
+k
++d
+k
+). Since X is a continuous mapping
+and M is compact, q
+k
+→ 0 as d
+k
+→ 0. Thus we have ε
+k
+→ 0 as k → ∞.
+Because the family {Q(ε), ε> 0} is a fundamental system of neighborhood of
+Q, Q⊂P
+k
+⊂Q(ε
+k
+) and lim
+k→∞
+Q(ε
+k
+) =
+T
+k
+Q(ε
+k
+) =Q we obtain Q⊂
+T
+k
+P
+k
+⊂
+T
+k
+Q(ε
+k
+) =Q, i.e.,
+lim
+k→∞
+P
+k
+=
+\
+k
+P
+k
+=Q 
+6 Example
+Let us consider the Van-der-Pol system
+x
+0
+=y,
+y
+0
+=ε(1−x
+2
+)y−x,
+where ε = 1,5. It is well known that the chain recurrent set of the Van-
+der-Pol system consists of an equilibrium point (0,0) and a periodic orbit. The
+system is studied numerically in the squareM = [−3,5;3,5]×[−3,5;3,5]. The
+initialcoveringconsistsof49cells,whichare1×1squares. Thesubsequentpar-
+titions are sub-divisions into 4 equal squares. Fig.2 presents the neighborhoods
+P
+1
+,P
+2
+,P
+3
+,P
+4
+,P
+5
+,P
+6
+of the chain recurrent set. According to Theorem 2 these
+neighborhoods are embedded one inside the other and tend to the equilibrium
+point and the periodic orbit. Notice that the initial covering does not separate
+the equilibrium point and the periodic orbit. The separation appears at the
+ﬁrst partition of P
+0
+. As seen from Fig.2, the small enough neighborhoods of
+the periodic orbit and the equilibrium point are obtained at the sixth step of
+the algorithm. A computer program realizing the algorithm described above
+has been made in St. Petersburg Technical University, 1991 by A. Moiseev and
+the author.
+Appendix. An application of the Newton method.
+This result was obtained by I.A.Komarchev and the author. The described
+algorithm gives the sequence of neighborhoods of periodic trajectories. More-
+over, according to Corollary 2 we can ﬁnd the periodic ε-trajectories in each
+step of the algorithm. So the problem of existence of true periodic trajectory
+Electronic Journal.  70Differential Equations and Control Processes, N 4, 1998
+near the periodic ε-trajectory is arisen. In this section we apply the Newton
+method to ﬁnd a suﬃcient condition for the existence of a periodic trajectory
+near a periodicε-trajectory. Besides that we get an algorithm constructing this
+trajectory. Remind brieﬂy the Newton method.
+Theorem 3 [7] Let V, W be open sets in a Banach space, F : V → W be a
+differential map, and the derivativeF
+0
+is a Lipschizian map with constantL. Let
+the operator F
+0
+(x
+0
+) be invertible at some point x
+0
+∈V and KRL< 1/4, where
+K = k(F
+0
+(x
+0
+))
+−1
+k, R = k(F(x
+0
+))
+−1
+F(x
+0
+)k. Let the ball {x : kx−x
+0
+k ≤ 2R}
+lies in V. Then there exists a unique solution x
+∗
+of the equation F(x) = 0
+and kx
+n
+−x
+∗
+k≤
+R
+2
+n−1
+, where
+x
+n+1
+=x
+n
+−(F
+0
+(x
+0
+))
+−1
+F(x
+n
+), n = 0,1,2,... .
+Now we consider our method.
+Theorem 4 Let V,W be open sets in a Banach space, F :V →W be a differ-
+ential map and the derivative F
+0
+is a Lipschizian map with a constant L. Let
+d> 0,ε> 0 be some real numbers, x
+0
+∈V such that
+1. kF(x
+0
+)k =ε; kF(x)k≥ε for x∈V \B
+d
+(x
+0
+);
+2. B
+2d
+(x
+0
+)⊂V;
+3. The operator F
+0
+(x
+0
+) is an invertible map and KLd < 1/4, where K =
+k(F
+0
+(x
+0
+))k.
+Then there exists an unique solution x
+∗
+of the equation F(x) = 0, which
+lies in B
+d
+(x
+0
+) and kx
+n
+−x
+∗
+k ≤ d/2
+n−1
+, where x
+n+1
+= x
+n
+− (F
+0
+(x
+0
+))
+−1
+F(x
+n
+),
+n = 0,1,2,....
+Proof. We prove that R =k(F
+0
+(x
+0
+))
+−1
+F(x
+0
+)k≤d and so the conditions of
+the theorem 1 are true. The proof of it is carried out by contradiction.
+LetR>d. We deﬁneδ > 0 and the vectorv by the equalitiesδ =d/R,u =
+−k(F
+0
+(x
+0
+))
+−1
+(δF(x
+0
+))k. Then kuk = δk(F
+0
+(x
+0
+))
+−1
+F(x
+0
+)k = (d/R)R = d and
+Electronic Journal.  71Differential Equations and Control Processes, N 4, 1998
+the vector x
+0
++u lies on the boundary of B
+d
+(x
+0
+). By the condition 1 and the
+continuity of F we have
+kF(x
+0
++u)k≥ε. (9)
+On the other hand,
+kF(x
+0
++u)k≤kF(x
+0
+)+F
+0
+(x
+0
+)uk+kF(x
+0
++u)−F(x
+0
+)−F
+0
+(x
+0
+)uk≤
+kF(x
+0
+)+F
+0
+(x
+0
+)uk+kF
+0
+(x
+0
++θu)−F
+0
+(x
+0
+)kkuk≤
+kF(x
+0
+)+F
+0
+(x
+0
+)uk+Lkuk
+2
+=kF(x
+0
+k(1−δ)+Lkuk
+2
+≤ε(1−δ)+Ld
+2
+.
+From this inequality and (9) we haveε≤ε(1−δ)+Ld
+2
+orεδ≤Ld
+2
+. SinceR =
+kF
+0
+(x
+0
+)F(x
+0
+)k≤kF
+0
+(x
+0
+)kkF(x
+0
+)k =Kε then εδ≤Ld·d≤LdRδ≤LdδKε or
+1≤LdK and we have the contradiction with 3. From the condition 1 it follows
+that x
+∗
+∈B
+d
+(x
+0
+) .
+SupposeX beadiffeomorphismand{x
+1
+,x
+2
+,...,x
+p
+}beap-periodicε-trajectory
+of X. SinceM is a manifold, there are neighborhoodsV(x
+i
+)≡V
+i
+which we can
+identify with the balls V
+i
+(0) of radii a
+i
+in R
+n
+. Set D =∪
+i
+V
+i
+.
+Theorem 5 Let the following conditions be satisﬁed:
+1. the derivative X
+0
+is a Lipschitz map with the constant L in the neighbor-
+hoods V
+i
+, i = 1,2,... ,p;
+2. the map C = A
+p
+A
+p−1
+...A
+1
+− I is invertible, where A
+i
+= X
+0
+(x
+i
+), i =
+1,2,... ,p;
+3. for each p-periodic ε-trajectory {z
+1
+,z
+2
+,... ,z
+p
+} in D, z
+i
+∈ B
+d
+(x
+i
+j
+), where
+(j
+1
+,... ,j
+p
+) is some permutation of1,2,... ,p andd> 0 such thatLK
+a
+p
+−1
+a−1
+d<
+1
+4
+, for K = max
+i
+|(A
+i−1
+A
+i−2
+...A
+1
+A
+p
+...A
+i
+−I)
+−1
+|, a = max
+D
+|X
+0
+(x)|,
+4. B
+2d
+(x
+i
+)⊂D for each i = 1,2... ,p.
+Then there exists the unique periodic trajectory {y
+1
+,y
+2
+,...,y
+p
+} of the diffeo-
+morphism X such that y
+i
+∈B
+d
+(x
+i
+).
+Proof. Let us identify each p-periodic ε-trajectory {x
+k
+, x
+k
+= x
+k+p
+} with
+the ﬁnite sequence{x
+1
+,x
+2
+,...,x
+p
+}. Let⊕
+p
+i=1
+R
+n
+be the Banach space of all ﬁnite
+Electronic Journal.  72Differential Equations and Control Processes, N 4, 1998
+sequences v ={v
+1
+,v
+2
+,...,v
+p
+}, v
+i
+∈ R
+n
+with the norm kvk = max
+i
+|v
+i
+|. Consider
+the set D =⊕
+p
+i=1
+V
+i
+⊂⊕
+p
+i=1
+R
+n
+and the map F on D deﬁned by
+F(v) ={X(x
+1
++v
+1
+)−(x
+2
++v
+2
+),...,X(x
+p
++v
+p
+)−(x
+1
++v
+1
+)}.
+The operator F
+0
+(0) is of the form
+F
+0
+(0) =
+
+
+
+
+
+
+A
+1
+−I 0 ... 0
+0 A
+2
+−I ... 0
+... ... ... ... ...
+−I 0 0 ... A
+p
+
+
+
+
+
+
+. (10)
+At ﬁrst we prove that the operator F
+0
+(0) is invertible. Let w = F
+0
+(0)u
+where w ={w
+1
+,w
+2
+,...w
+p
+} and u ={u
+1
+,u
+2
+,...u
+p
+}. From (10) it follows
+(A
+i−1
+A
+i−2
+...A
+1
+A
+p
+A
+p−1
+...A
+i
+−I)u
+i
+=v
+i
+where v
+i
+= (A
+i−1
+...A
+1
+A
+p
+...A
+i+1
+w
+i
++...+A
+i−1
+...A
+2
+w
+1
++...+w
+i−1
+).
+Since the operators
+C
+i
+= (A
+i−1
+A
+i−2
+...A
+1
+A
+p
+A
+p−1
+...A
+i
+−I) =A
+i−1
+A
+i−2
+...A
+1
+CA
+−1
+1
+A
+−1
+2
+...A
+−1
+i−1
+i = 1,2,...,p are invertible, then
+u
+i
+=C
+−1
+i
+v
+i
+, (11)
+and hence, F
+0
+(0) is invertible as well. From (11) we obtain
+kuk≤K(a
+p−1
++a
+p−2
++...+1)kwk. (12)
+Becausea is an estimation of the derivative norm, we can considera6= 1. From
+the inequality (12) we obtain
+
+
+(F
+0
+(0))
+−1
+
+
+≤K
+a
+p
+−1
+a−1
+.
+To ﬁnish the proof we apply the Theorem 4.
+References
+[1] V.M.Alekseev,SymbolicDynamics,11thMathematicalSchool,Kiev,1976
+(in Russian).
+Electronic Journal.  73Differential Equations and Control Processes, N 4, 1998
+[2] R.Bowen, Symbolic Dynamics , Ann.Math.Soc.Providence, R.I., vol.8,
+1982.
+[3] I.U.Bronshtein, Nonautonomous dynamical system, Kishinev, Shtinisa,
+1984 (in Russian).
+[4] B.Coomes, H.Kocak, K.Palmer, Periodic Shadowing, Chaotic Numerics,
+Contemporary Mathematics 172, 1994.
+[5] P.Hartman, Ordinary Differential Equations, N.Y., 1964.
+[6] C.S.Hsu, Cell-to-Cell Mapping, Springier-Verlag, N.Y.,1987.
+[7] A.N.Kolmogorov, S.W.Fomin, Elements of the theory of functions and the
+functional analysis. Science, Moscow, 1968 (in Russian).
+[8] Z. Nitecki, Differentiable Dynamics, London, 1971.
+[9] G.S.Osipenko,Onthesymbolicalimageofthedynamicalsystem,inBound-
+ary value problems, Perm. 1983, 101-105 (in Russian).
+[10] G.S.Osipenko. Veriﬁcation of the transversality condition by the methods
+of symbolical dynamics, Differential Equations, N 9, 1990, 1528-1536 (in
+Russian).
+[11] G.S.Osipenko, The periodic points and symbolic dynamics, in Seminar on
+Dynamical Systems, Birkhauser Verlag AG, 1993, 261-267.
+Electronic Journal.  74

@@ -1,0 +1,1240 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 4, 2009
+Electronic Journal,
+reg. N P2375 at 07.03.97
+ISSN 1817-2172
+
+http://www.math.spbu.ru/diffjournal/
+e-mail: jodiff@mail.ru
+Transient Natural Convection near a Semi-In nite
+Vertical Wall in a Rotating System
+Pallath Chandran
+Department of Mathematics and Statistics
+College of Science, Sultan Qaboos University
+PC 123, Al Khod, Muscat, Sultanate of Oman
+E-mail: chandran@squ.edu.om
+Nirmal C Sacheti
+Department of Mathematics and Statistics
+College of Science, Sultan Qaboos University
+PC 123, Al Khod, Muscat, Sultanate of Oman
+E-mail: nirmal@squ.edu.om
+Ashok K. Singh
+Department of Mathematics, Faculty of Science
+Banaras Hindu University
+Varanasi { 221005, India
+E-mail: ashok@bhu.ac.in
+Abstract
+The natural convection in an incompressible viscous uid owing near a
+semi-in nite impermeable vertical plate has been investigated. Assuming that
+the uid-plate system is undergoing a rigid-body rotation, the nonlinear set of
+governing boundary layer momentum and thermal equations has been solved
+using an appropriate implicit  nite difference numerical scheme. The effect of
+the rotation parameter on the developing ow has been discussed in detail forDifferential Equations and Control Processes, N 4, 2009
+a speci c uid. Shear stress and heat transfer parameters have also been
+computed and analysed.
+1 Introduction
+Investigation of the natural convection transport processes involving the cou-
+pling of the uid ow and heat transfer has attracted the attention of several
+researchers because of its varied applications in many engineering  elds and
+naturally occurring systems. Rotation effects on natural convection ows are
+inportant in many engineering applications such as nuclear power plants, cool-
+ing of nuclear reactors and electronic systems, atmospheric re-entry of space
+vehicles, gas turbines, spin-stabilised missiles and various propulsion devices for
+missiles, satellites and space vehicles. Natural convection in a rotating system
+also  nds applications in petroleum engineering for observing the movement
+of oil and gas through a reservoir. Among the theoretical studies related to
+natural convection in viscous incompressible uids, the convection taking place
+near vertical plates | both of in nite as well as semi-in nite extent | has
+been extensively dealt with in literature. Most of these studies have focused
+on ow near an in nite plate or between two vertical walls. However, when
+the convection takes place near a semi-in nite vertical plate, the analysis of
+the governing uid dynamical equations becomes more challenging, generally
+requiring numerical treatment.
+Steady free convection ow of a viscous incompressible uid past a semi-
+in nite vertical wall was  rst discussed by Pohlhausen [1] using an integral
+method. Decades later, Ostrach [2] studied the same problem by obtaining
+similarity solutions of the governing equations. Unsteady free convective mo-
+tion of a viscous incompressible uid bounded by a semi-in nite vertical wall
+has been presented by Siegel [3] and Gebhart [4] by incorporating the integral
+and approximation methods, respectively. Mass transfer effects on the develop-
+ing free convective ow past a semi-in nite at plate has been investigated by
+Callahan and Marner [5] using an explicit  nite difference method. This prob-
+lem has also been analysed by Soundalgekar and Ganesan [6] using an implicit
+ nite difference method. These authors have demonstrated that the two meth-
+ods yield comparable results. Raptis et al. [7] have presented numerical solution
+of transient free convective ow in a porous medium bounded by a semi-in nite
+vertical plate. They used an explicit  nite difference algorithm. Singh and Rai
+[8] solved the governing equations of free convective ow of water at 4
+ 
+C past a
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 70Differential Equations and Control Processes, N 4, 2009
+semi-in nite vertical plate. Free convection heat transfer near the leading edge
+of an isothermal semi-in nite vertical at plate with  nite thickness has been
+investigated numerically by Miyamoto and Akiyoshi [9]. The effect of variable
+surface temperature on the free convection in a viscous uid past a semi-in nite
+plate has been discussed by Takhar et al. [10]. Recently, the present authors
+[11, 12] considered the effect of temporally ramped temperature distribution
+on free convection under the same geometrical con guration, and brought out
+certain features of the ow for a range of values of Prandtl number.
+In the present work, we consider transient free convective ow of a viscous
+incompressible uid past a semi-in nite vertical wall. It is assumed that the
+convection is set up by a change in the temperature of the wall from that of the
+uid temperature. The main thrust of this study is to analyse the effect of rigid
+body rotation of the plate-uid system. The problem | formulated in terms
+of a nonlinear initial-boundary-value problem | has been solved numerically
+using an implicit  nite difference method of Crank-Nicolson type.
+2 Governing equations
+The geometrical con guration of the uid-plate system comprises a semi-in nite
+vertical wall bounding an in nite expanse of the uid. The x
+0
+-axis of the co-
+ordinate systemOx
+0
+y
+0
+z
+0
+is taken along the vertical wall in the upward direction,
+y
+0
+-axis along the wall in horizontal direction and z
+0
+-axis perpendicular to the
+wall but into the uid. The origin of the co-ordinate system is at the lower
+end of the wall. Initially the temperatures of the uid as well as the wall are
+constant, denoted byT
+0
+1
+: At timet
+0
+> 0; the temperature of the wall,z
+0
+= 0; is
+instantaneously raised or lowered to T
+0
+w
+and thereafter maintained at the same
+temperature. The whole system is assumed to be rotating with a constant angu-
+lar velocity 
+
+0
+about thez
+0
+-axis. Also, it is assumed that all the uid properties
+are constant except that the inuence of the density variation with temperature
+is included in the body force term. Under the usual Boussenesq approximation,
+the governing conservation equations for the continuity, momentum and energy,
+near the vertical plate, can be obtained from Ker and Lin [13] in the form
+@u
+0
+@x
+0
++
+@w
+0
+@z
+0
+= 0 (1)
+@u
+0
+@t
+0
++u
+0
+@u
+0
+@x
+0
++w
+0
+@u
+0
+@z
+0
+  2
+
+0
+v
+0
+= 
+@
+2
+u
+0
+@z
+0
+2
++g (T
+0
+ T
+0
+1
+) cos(
+
+0
+t
+0
+) (2)
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 71Differential Equations and Control Processes, N 4, 2009
+@v
+0
+@t
+0
++u
+0
+@v
+0
+@x
+0
++w
+0
+@v
+0
+@z
+0
++ 2
+
+0
+u
+0
+= 
+@
+2
+v
+0
+@z
+0
+2
+ g (T
+0
+ T
+0
+1
+) sin(
+
+0
+t
+0
+) (3)
+@T
+0
+@t
+0
++u
+0
+@T
+0
+@x
+0
++w
+0
+@T
+0
+@z
+0
+=
+ 
+ C
+p
+@
+2
+T
+0
+@z
+0
+2
+(4)
+with the initial and boundary conditions
+t
+0
+  0 : u
+0
+= 0; v
+0
+= 0; w
+0
+= 0; T
+0
+=T
+0
+1
+; for 0 x
+0
+; z
+0
+<1
+t
+0
+> 0 :
+8
+>
+<
+>
+:
+u
+0
+= 0; v
+0
+= 0; w
+0
+= 0; T
+0
+=T
+0
+1
+; at x
+0
+= 0
+u
+0
+= 0; v
+0
+= 0; w
+0
+= 0; T
+0
+=T
+0
+w
+; at z
+0
+= 0
+u
+0
+! 0; v
+0
+! 0; T
+0
+!T
+0
+1
+; as z
+0
+!1
+(5)
+The symbols used above and to follow later, have been de ned in the Nomen-
+clature, at the end. Introducing the non-dimensional variables
+(x; z) = (x
+0
+; z
+0
+)=L; t = t
+0
+=L
+2
+; 
+ =L
+2
+
+
+0
+= ;
+(u; v; w) = (u
+0
+v
+0
+w
+0
+)L= ; T = (T
+0
+ T
+0
+1
+)=(T
+0
+w
+ T
+0
+1
+);
+(6)
+equations (1){(4) become
+@u
+@x
++
+@w
+@z
+= 0 (7)
+@u
+@t
++u
+@u
+@x
++w
+@u
+@z
+  2
+v =
+@
+2
+u
+@z
+2
++T cos(
+t) (8)
+@v
+@t
++u
+@v
+@x
++w
+@v
+@z
++ 2
+u =
+@
+2
+v
+@z
+2
+ T sin(
+t) (9)
+@T
+@t
++u
+@T
+@x
++w
+@T
+@z
+=
+1
+Pr
+@
+2
+T
+@z
+2
+(10)
+In the above non-dimensionalisation process, we have employed a characteristic
+length L de ned by
+L =
+ 
+ 
+2
+g (T
+0
+w
+ T
+0
+1
+)
+ 
+1=3
+(11)
+The non-dimensional parameter Pr (= C
+p
+ = ) appearing in equation (10), is
+the well-known Prandtl number. The initial and boundary conditions for the
+velocity and temperature  elds given by equation (5) can be expressed in non-
+dimensional form as
+t  0 : u = 0; v = 0; w = 0; T = 0 for 0 x; z <1
+t> 0 :
+8
+>
+<
+>
+:
+u = 0; v = 0; w = 0; T = 0; at x = 0
+u = 0; v = 0; w = 0; T = 1; at z = 0
+u! 0; v! 0; T! 0; as z!1
+(12)
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 72Differential Equations and Control Processes, N 4, 2009
+3 Numerical solution procedure
+The non-linearity of the partial differential equations governing the ow suggests
+that solutions of the equations must be sought numerically. The simultaneous
+non-linear partial differential equations (7){(10) with conditions (12) are to be
+solved for the dependent variables u; v; w; T as functions of x; z and t:
+Of particular interest is also the steady state solution if it exits. We use here
+the implicit  nite difference method of Crank-Nicolson type for the numerical
+solution. The  nite difference equations corresponding to equations (8){(10) are
+transformed into a system of equations in tridiagonal form after some algebraic
+manipulations and, then, they are solved by the Thomas algorithm.
+The space under consideration has been restricted to  nite dimensions. Here
+a plate of height x
+max
+= 20 and z
+max
+= 20 have been considered. As the large
+number of grid points yield a better estimate of the dependent variables, we
+have taken a grid of size 201  201 to evaluate the variables. Computations
+have been carried out for a uid of Prandtl number 0.71 (which corresponds to
+air). During any one time step, the computed values of the previous time step
+have been used for the coe cients u and w appearing in the equations (8){(10).
+At the end of each time step,  rst the temperature  eld has been obtained
+and then the evaluated values are employed to obtain the velocity components
+in x- and y-directions. Finally, velocity component w in the z-direction is
+obtained using equation (7). Unsteady values of the velocity and temperature
+ elds corresponding to a particular time have been reported when the time is
+achieved by iterative process. The process of computation is advanced until a
+steady state is approached with respect to the temperature and velocity  elds
+by satisfying the convergence criterion
+X
+i
+X
+j
+ 
+ 
+A
+k+1
+i;j
+ A
+k
+i;j
+ 
+ 
+< 10
+ 5
+X
+i
+X
+j
+ 
+ 
+A
+k+1
+i;j
+ 
+ 
+(13)
+where A
+k
+i;j
+stands for the velocity or temperature  eld.
+In the numerical computation, special attention is required to specify  t
+in order to get a steady state solution as soon as possible, yet small enough to
+avoid instabilities. We set  t as
+ t =   min( x
+2
+;  z
+2
+) (14)
+where  x and  z are mesh sizes along the x and z directions, respectively.
+The stabiliser parameter   is guessed by numerical experimentations in order
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 73Differential Equations and Control Processes, N 4, 2009
+to achieve convergence and stability of the solution procedure. A series of
+numerical experiments has shown that assigning the value 2 to  is suitable for
+numerical computations.
+It is worth mentioning here that the numerical procedure used herein has
+been seen to be quite satisfactory as far as its accuracy is concerned. To see
+the accuracy and convergence of the results, the program was re-run by re ning
+the grid system as well as the time step. For instance, when the program was
+run with the 251  251 grid size with a smaller time step than used before, no
+signi cant changes in the results were observed. Moreover, we were also able
+to validate the numerical results for the special case when rotation was absent.
+Having solved for the velocity and temperature variables, one can compute
+the shear stress and heat transfer parameters at the vertical wall. The local
+skin friction components in the x and y directions | denoted by  
+x
+and  
+y
+|
+are de ned as
+ 
+x
+=
+L
+2
+ 
+x
+0
+  
+2
+=
+@u
+@z
+ 
+ 
+ 
+ 
+z=0
+;  
+y
+=
+L
+2
+ 
+y
+0
+  
+2
+= 
+@v
+@z
+ 
+ 
+ 
+ 
+z=0
+(15)
+The average values of the skin friction components with respect to the variable
+x are given by
+ 
+xav
+=
+1
+x
+max
+Z
+x
+max
+0
+ 
+x
+dx;  
+yav
+=
+1
+x
+max
+Z
+x
+max
+0
+ 
+y
+dx (16)
+The quantities  
+x
+and  
+y
+have been evaluated using a  ve-point forward  nite
+difference formula for  rst derivative, and then 
+xav
+and 
+yav
+have been computed
+using the Simpson's rule. In a similar way, the Nusselt number Nu and average
+Nusselt number Nu
+av
+have been computed from the temperature  eld variable
+using the formulae
+Nu =
+qL
+ (T
+0
+w
+ T
+0
+1
+)
+= 
+@T
+@z
+ 
+ 
+ 
+ 
+z=0
+; Nu
+av
+=
+1
+x
+max
+Z
+x
+max
+0
+Nu dx (17)
+4 Results
+Our main focus in this work is to determine the inuence of the rigid body
+rotation on the developing uid motion. To this end, we have computed and
+shown the effects of rotation parameter 
+ and the non-dimensional time variable
+t on various physical quantities of interest.
+In Figs 1{3, we have presented the plots of velocity components u; v; w
+versusz at a cross-sectionx = const: In these plots, the effects oft and 
+ on the
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 74Differential Equations and Control Processes, N 4, 2009
+velocity components have been shown in detail. From Fig 1, we observe that
+the velocity cmponent u increases near the vertical plate, attains a maximum,
+and then decreases to its free-stream value in conformity with the boundary
+layer feature. We further notice that 
+ has a retarding effect onu for a  xedt:
+However, ast increases, the effect of 
+ onu becomes more pronounced. It may
+also be noted that the peaks of these velocity curves shift progressively away
+from the bounding wall as t increases. The behaviour of the y-component v of
+velocity at the cross-section x = 10; is shown in Fig 2. The magnitude of v
+increases with 
+ for a  xed value of t: The behaviour ofjvj witht is similar to
+that observed for theu-pro les. In Fig 3, we have shown pro les for the normal
+velocity component w at the cross-section x = 5: Due to the rotation of the
+bounding vertical plate, the uid is drawn towards it. The effect of rotation is
+to enhance the magnitude of w; similar to that noticed for v:
+As stated before, our main aim in this work has been to investigate the
+effect of rigid body rotation on the natural convection near the semi-in nite
+vertical plate. When rotation is absent (
+ = 0), the secondary velocityv should
+vanish for all values of t: This has further been con rmed from the numerical
+solution of the system of equations (7){(10) in conjuction with equation (12).
+It was seen that for this case, v becomes zero for all t: The values of the
+other velocity components u and w undergo some variations when rotation is
+absent. For illustrative purpose, we have shown in Fig (1a) the variation of the
+velocity component u corresponding to 
+ = 0: The velocity pro les u for this
+particular case are in agreement with an earlier study reported in literature [14].
+The pro les of u for the non-rotating and rotating cases are qualitatively very
+similar, as can be seen from Figs 1 and (1a). However, the presence of rotation
+tends to diminish the velocity, in agreement with our earlier observation.
+In Fig 4, we have shown variation of the temperature of the uid for a set
+of values of 
+ andt | similar to the ones used in Figs 1{3. For a  xed value of
+the parameter t; the effect of increase of rotation parameter is to enhance the
+temperature in the boundary layer region. A similar behaviour is also observed
+for the temperature when 
+ is  xed and t increases. As a consequence, the
+thermal boundary layer thickness increases proportionate to both 
+ and t: In
+Figs 5 and 6, we have plotted a number of isotherms (T = const: curves) in
+the xz-plane corresponding to 
+ = 0:05 and 0.1, respectively. Each of these
+ gures includes the constant temperature pro les for four different temporal
+situations. It is to be noted that the increase in the thermal boundary layer
+thickness, stated earlier, is yet again conspicuous in the set of  gures 5{6.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 75Differential Equations and Control Processes, N 4, 2009
+0 2 4 6 8 10 12 14 16
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+1.2
+1.4
+1.6
+6
+5
+4
+3
+2
+1
+u
+z
+No.      :          t 
+1.       0.05       2
+2.       0.1         2
+3.       0.05       5
+4.       0.1         5
+5.       0.05      10
+6.       0.1        10
+Fig  1. Profiles of velocity  u  at x = 10 for different values of t and : The shear stress and heat transfer on the bounding plate play important
+roles in the design processes in several engineering and industrial applications.
+Thus, the variation of these quantities has been exhibited in Figs 7{9. It may
+be noted that increasing the rotation results in the desired reduction in the
+x-component of the shear stress 
+x
+(Fig 7) for a given value oft: However, such
+a monotonic behaviour is not observed with respect to the temporal parameter
+for a  xed value of 
+: On the other hand,j 
+y
+j behaves monotonically with
+respect to both 
+ and t; as can be seen from Fig 8. In the last Fig 9, we
+have shown the plot of the Nusselt number Nu with x for a combination of
+values of t and 
+: It is seen that near the leading edge, Nu drops appreciably.
+Furthermore, both parameters 
+ and t have a diminishing effect on this heat
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 76Differential Equations and Control Processes, N 4, 2009
+Fig  1a. Profiles of velocity  u  at  x = 10 for different values of t.  ( = 0) : transfer parameter.
+Finally, we have given in Table 1 the computed average values of the skin-
+friction components and the Nusselt number. For the range of parameter values
+considered in this analysis, the following observations are worth noting:
+  For a  xed value of t; the average values of all three quantities  
+xav
+;  
+yav
+and Nu
+av
+show monotonic behaviour although the variations are more no-
+ticeable for large values of t:
+  Both  
+xav
+and Nu
+av
+decrease while  
+yav
+increases with 
+ | in conformity
+with their local counterparts.
+  Both shear stress averages increase with t for a  xed value of rotation
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 77Differential Equations and Control Processes, N 4, 2009
+-3.0
+-2.5
+-2.0
+-1.5
+-1.0
+-0.5
+0.0
+0 3 6 9 12 15 18
+8
+7
+6
+5
+4
+3
+2
+1
+z
+v
+No. :           t 
+1.       0.05       2
+2.       0.1         2
+3.       0.05       5
+4.       0.1         5
+5.       0.05      10
+6.       0.1        10
+7.       0.05      13
+8.       0.1        13
+Fig  2. Profiles of velocity v at x = 10 for different values of t and : parameter while the opposite occurs for the quantity Nu
+av
+:
+Nomenclature
+c
+p
+speci c heat at constant pressure
+g acceleration due to gravity
+L characteristic length (de ned in equation (11))
+Nu Nusselt number at the bounding wall
+Nu
+av
+average Nusselt number at the wall
+Pr Prandtl number
+q rate of heat transfer
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 78Differential Equations and Control Processes, N 4, 2009
+-0.8
+-0.7
+-0.6
+-0.5
+-0.4
+-0.3
+-0.2
+-0.1
+0.0
+0 2 4 6 8 10 12 14 16
+10
+5
+10
+5
+z
+w
+: = 0.05
+: = 0.1
+Fig  3. Profiles of velocity w at x = 5 for different values of  t and : t
+0
+time
+t time in non-dimensional form
+T
+0
+temperature of the uid
+T non-dimensional temperature
+T
+0
+1
+initial temperature of the uid and wall
+T
+0
+w
+temperature of the wall for t> 0
+u
+0
+velocity component of the uid in the x
+0
+-direction
+u non-dimensional form of u
+0
+v
+0
+velocity of the uid in the y
+0
+-direction
+v non-dimensional form of v
+0
+w
+0
+velocity of the uid in the z
+0
+-direction
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 79Differential Equations and Control Processes, N 4, 2009
+0 3 6 9 12 15 18
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+6
+5
+4
+3
+2
+1
+T
+z
+No.      :           t 
+1.       0.05       1
+2.       0.1         1
+3.       0.05       10
+4.       0.1         10
+5.       0.05       13
+6.       0.1         13
+Fig  4. Profiles of temperature T at x = 10 for different values of t and : w non-dimensional form of w
+0
+x
+0
+space coordinate along the wall
+x dimensionless form of x
+0
+z
+0
+space coordinate perpendicular to the wall
+z dimensionless form of z
+0
+Greek symbols
+  coe cient of thermal expansion
+  dynamic viscosity of the uid
+  kinematic viscosity of the uid
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 80Differential Equations and Control Processes, N 4, 2009
+0.10
+0.20
+0.30
+0.40
+0.50
+0.60
+0.70
+0.80
+0 2 4 6 8 10 12
+0
+2
+4
+6
+8
+10
+(a)
+z
+x
+0.10
+0.20
+0.30
+0.40
+0.50
+0.60
+0.70
+0.80
+0.90
+0 2 4 6 8 10
+0
+2
+4
+6
+8
+10
+(b)
+z
+x
+0.10
+0.20
+0.30
+0.40
+0.50
+0.60
+0.70
+0.80
+0.90
+0 2 4 6 8 10
+0
+2
+4
+6
+8
+10
+(c)
+z
+x
+0.10
+0.20
+0.30
+0.40
+0.50
+0.60
+0.70
+0.80
+0.90
+0 2 4 6 8 10
+0
+2
+4
+6
+8
+10
+(d)
+z
+x
+Fig  5. Isotherms for : = 0.05
+(a) t = 1     (b) t = 5    (c) t = 10    (d) t = 13 
+  thermal conductivity of the uid
+ 
+x
+0 skin-friction at the wall in the x
+0
+-direction
+ 
+x
+non-dimensional skin friction in the x-direction
+ 
+xav
+average skin-friction at the wall in the x-direction
+ 
+y
+0 skin-friction at the wall in the y
+0
+-direction
+ 
+y
+non-dimensional skin friction in the y-direction
+ 
+yav
+average skin-friction at the wall in the y-direction
+
+
+0
+angular velocity of the system about the z
+0
+-axis
+
+ Non-dimensional form of 
+
+0
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 81Differential Equations and Control Processes, N 4, 2009
+0.10
+0.20
+0.30
+0.40
+0.50
+0.60
+0.70
+0.80
+0.90
+0 2 4 6 8 10
+0
+2
+4
+6
+8
+10
+(a)
+z
+x
+0.10
+0.20
+0.30
+0.40
+0.50
+0.60
+0.70
+0.80
+0.90
+0 2 4 6 8 10
+0
+2
+4
+6
+8
+10
+(b)
+z
+x
+0.10
+0.20
+0.30
+0.40
+0.50
+0.60
+0.70
+0.80
+0.90
+0 2 4 6 8 10
+0
+2
+4
+6
+8
+10
+(c)
+z
+x
+0.10
+0.20
+0.30
+0.40
+0.50
+0.60
+0.70
+0.80
+0.90
+0 2 4 6 8 10
+0
+2
+4
+6
+8
+10
+(d)
+z
+x
+Fig  6. Isotherms for : = 0.1
+ (a) t = 1    (b) t = 5    (c) t = 10    (d) t = 13 
+References
+[1] E. Pohlhausen: Der Wareastausch zwischen festen Korpenn und Flus-
+sigkeiten mit kleiner Reibung und Kleinerwarmeletung, Z. Angew. Math.
+Mech., 1 (1921) 115.
+[2] S. Ostrach: An analysis of laminar free convection ow heat transfer about
+a at plate parallel to the direction of the generating body force, NASA
+Report No. 1111 (1953).
+[3] R. Siegel: Transient free convection from a vertical at plate, Trans. Amer.
+Soc. Mech. Eng., 80 (1958) 347.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 82Differential Equations and Control Processes, N 4, 2009
+0 1 2 3 4 5 6 7
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+1.2
+1.4
+8
+7 6 5
+4 3 2 1
+W x
+x
+No.      :           t 
+1.       0.05       2
+2.       0.1         2
+3.       0.05       5
+4.       0.1         5
+5.       0.05      10
+6.       0.1        10
+7.       0.05      13
+8.       0.1        13
+Fig  7. Variation of local skin friction component 
+x
+W for different t  and : [4] B. Gebhart: Transient natural convection from vertical elements, J. Heat
+Transfer, 83C (1961) 61.
+[5] G. D. Callahan and W. J. Marner: Transient free convection with mass
+transfer on an isothermal vertical at plate, Int. J. Heat and Mass Transfer,
+19 (1976) 165.
+[6] V. M. Soundalgekar and P. Ganesan: Transient free convective ow past
+a semi-in nite vertical plate with mass transfer, Reg. J. Energy Heat Mass
+Transfer, 2 (1980) 83.
+[7] A. Raptis, A. K. Singh and K. D. Rai: Finite difference analysis of unsteady
+free convective ow through a porous medium adjacent to a semi-in nite
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 83Differential Equations and Control Processes, N 4, 2009
+0 1 2 3 4 5 6 7
+0.0
+0.5
+1.0
+1.5
+2.0
+13
+10
+5
+2
+13
+10
+5
+2
+W y
+x
+:             :           Fig  8. Variation of local skin friction component 
+y
+W for different t  and : vertical plate, Mech. Res. Comm., 14 (1987) 9.
+[8] A. K. Singh and K. D. Rai: Unsteady free convective ow of water at 4
+ 
+C
+past a semi-in nite vertical plate by  nite difference method, Model. Simul.
+Control B, 12 (1987) 9.
+[9] M. Miyamoto and T. Akiyoshi: Free convection heat transfer near leading
+edge of semi-in nite vertical at plate with  nite thickness, Bull. Jap. Soc.
+Mech. Engnrs. (JSME), 24 (1981) 1945.
+[10] H. S. Thakhar, P. Ganesan, K. Ekambavanan and V. M. Soundalgekar:
+Transient free convection past a semi-in nite vertical plate with variable
+surface temperature, Int. J. Numer. Meth. Heat Fluid Flow, 7 (1997) 280.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 84Differential Equations and Control Processes, N 4, 2009
+Table 1: Computed values of  
+xav
+;  
+yav
+and Nu
+av
+
+ t  
+xav
+ 
+yav
+Nu
+av
+0.05 0.5 0.432757 0.012970 0.670241
+1.0 0.608097 0.036200 0.479573
+2.0 0.846348 0.100639 0.349103
+5.0 1.213846 0.366043 0.255432
+10.0 1.226788 0.784113 0.250439
+13.0 1.110116 0.978816 0.243702
+0.10 0.5 0.432161 0.025927 0.670234
+1.0 0.604791 0.072261 0.479551
+2.0 0.828177 0.199769 0.348904
+5.0 1.058542 0.702454 0.251416
+10.0 0.645576 1.441580 0.212952
+13.0 0.151594 1.752780 0.179530
+[11] A. K. Singh, E. A. Hamza, P. Chandran and N. C. Sacheti: Numeri-
+cal solution of buoyancy driven unsteady ow past a semi-in nite heated
+vertical plate with ramped temperature distribution, Proc. Conference on
+Mathematics and its Applications, The University of West Indies, Trinidad
+(2006).
+[12] A. K. Singh, N. C. Sacheti and P. Chandran: Developing ow near a semi-
+in nite vertical wall with ramped temperature, Int. J. Appl. Math. Stat.,
+13 (2008) 34.
+[13] Y. T. Ker and T. F. Lin: A combined numerical and experimental study of
+air convection in a differentially heated rotating cubic cavity, Int. J. Heat
+Mass Transfer, 39 (1996) 3193.
+[14] B. Carnahan, H. A. Luther and J. O. Wilkes: Applied Numerical Methods,
+John Wiley, New York (1969).
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 85Differential Equations and Control Processes, N 4, 2009
+0 1 2 3 4 5 6 7
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1.0
+6
+5
+4
+3
+2
+1 Nu
+x
+No.      :          t 
+1.       0.05        5
+2.       0.1          5
+3.       0.05       10
+4.       0.1         10
+5.       0.05       13
+6.       0.1         13
+Fig  9. Variation of Nusselt number Nu  for different t and : Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 86

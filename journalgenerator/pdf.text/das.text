@@ -1,0 +1,1806 @@
+﻿ 
+ 
+DIFFERENTIAL EQUATIONS 
+AND 
+CONTROL PROCESSES 
+№ 4, 2012 
+Electronic Journal, 
+reg.Эл № ФС77-39410 at 15.04.2010 
+ISSN 1817-2172 
+ 
+http://www.math.spbu.ru/diffjournal 
+e-mail: jodiff@mail.ru 
+ 
+ 
+ 
+ 
+ 
+Adaptive anti-synchronization between different hyperchaotic systems 
+with uncertain parameters  
+ 
+ M. Srivastava (1), S. K. Agrawal (2) and S. Das (3) 
+ 
+Department of Applied Mathematics 
+Indian Institute of Technology (BHU),Varanasi-221 005, INDIA 
+e-mail: (1) mayanksrivastava1983@gmail.com;                                           
+(2) saurabh.goel9944@gmail.com; (3) sdas.apm@itbhu.ac.in 
+ 
+ 
+Abstract 
+This article deals with anti-synchronization between different hyperchaotic systems such as Lu system 
+and Newton-Leipnik system; and Newton-Leipnik system and Rossler system using adaptive control 
+method. Based on Lyapunov stability theory, the anti synchronization between a pair of hyperchaotic 
+systems with fully unknown parameters are derived. An adaptive control law and a parameter update 
+rule for unknown parameters are designed such that the hyperchaotic Newton-Leipnik system is 
+controlled to be the hyperchaotic Lu system and hyperchaotic Rossler system is controlled to be the 
+hyperchaotic Newton-Leipnik system. Numerical simulation results which are carried out using 
+MATLAB, show that the adaptive control method is effective, easy to implement and reliable for anti-
+synchronizing of the considered hyperchaotic systems.  
+ 
+Keywords: Hyperchaos, Lu system, Newton-Leipnik system, Rossler system, Anti-synchronization, 
+Adaptive control. 
+1. Introduction 
+In the past, modeling was restricted mainly to linear systems which would have been tackled using 
+various analytical methods. But with the advent of powerful computers and related softwares, it is Differential Equations and Control Processes, № 4, 2012  
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal  93 
+made possible to tackle nonlinear systems. Nonlinearity is the heart of dynamical systems is 
+deterministic and changes with time. The applications of dynamical systems have nowadays spread to 
+a wide spectrum of disciplines including science, engineering, biology, sociology etc. Study and 
+analysis of nonlinear dynamics have gained immense popularity during the last few decades due to its 
+important feature of any real-time dynamical system. In nonlinear systems, a small change in a 
+parameter can lead to sudden and dramatic changes in both the qualitative and quantitative behavior of 
+the system. Sometimes these may give rise to the complex behavior called chaos. In dynamical 
+systems, the term chaos is applied to deterministic systems that are aperiodic and that exhibit sensitive 
+dependence on initial conditions and parameter variations. Sensitivity means that a small change in the 
+initial state will lead to progressively larger changes in later system states. The presence of chaos in 
+physical systems has been extensively demonstrated and is very common. The main property of 
+chaotic dynamics is its critical sensitivity to initial conditions, which is responsible for initially 
+neighboring trajectories separating from each other exponentially in the course of time. The concept of 
+chaos has been used to explain how systems that should be subject to known laws of physics may be 
+predictable in the short term but are apparently random on a longer time scale. 
+A Hyperchaotic system is usually classified as a chaotic system with more than one positive Lyapunov 
+exponent. Though the positive largest Lyapunov exponent does not indicate chaos as the negative 
+largest Lyapunov exponent does not indicate stability [1], it is a fact that with the advent of computers 
+and the increasing facility to perform a number of experiments for calculating characteristic exponents 
+for the sake construction of various numerical characteristics attractors, the researchers working in 
+dynamical systems consider that the instability of the solutions of the system occurs at this largest 
+positive characteristic exponent [2]. Combine with one null exponent along the flow and one negative 
+exponent to ensure the boundness of the solution. It means that hyperchaotic systems have more 
+complex dynamical behaviours which can be used to improve the security of a chaotic communication 
+system. Firstly, Hyperchaotic system introduced by Rossler [3] in 1979. Controlling synchronization 
+of hyperchaotic system have attracted a great deal of attention from various ﬁelds and become a 
+challenging work. 
+Since the idea of synchronizing chaotic systems was introduced by Pecora and Carroll [4] in 1990, 
+they showed that it is possible to synchronize chaotic systems through a simple coupling. 
+Synchronization of chaotic dynamical systems has been intensively studied by many researchers [5-8] 
+and has attracted a great deal of interest in various field due to its important applications in ecological 
+system [9], physical system [10], chemical system [11], modeling brain activity, system identification, 
+pattern recognition phenomena and secure communications [12-14] etc. 
+In the recent years several different types of synchronization schemes have been proposed, such as 
+time delay feedback approach [15], adaptive control [16-23], active control [24], back-stepping design Differential Equations and Control Processes, № 4, 2012  
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal  94 
+method [25] and sliding mode control [26] etc, have been successfully applied to chaos 
+synchronization. The concept of synchronization can be extended to generalized synchronization [27], 
+complete synchronization [28], lag synchronization [29], phase synchronization [30], anti-
+synchronization [31], projective synchronization [32], modified projective synchronization [33] and 
+hybrid synchronization [34] etc. 
+The control of chaotic systems is to design state feedback control laws that stabilizes the chaotic 
+systems around the unstable equilibrium points. Adaptive control technique is used when the system 
+parameters are unknown.  In an adaptive method control law and a parameter update rule for unknown 
+parameters are designed in such a way that the hyperchaotic response system is controlled to be the 
+hyperchaotic master system. The idea of anti-synchronization is observed in periodic hyperchaotic 
+systems, which is a phenomenon in which the state variables of synchronized systems with different 
+initial values have the same absolute values but opposite signs. The sums of two signals are expected 
+to converge to zero when anti-synchronization occurs. 
+Most of the studies in synchronization involve two identical /non-identical systems under the 
+hypotheses that all the parameters of the master and slave systems are known a prior, a controller is 
+constructed with the known parameters and systems are free from external perturbations. But in 
+practical situations the uncertainties like parameter mismatch and external disturbances may destroy 
+the synchronization and even break it. So it is necessary to design an adaptive controller and parameter 
+update law for control and synchronization of chaotic systems consisting of unknown parameters to get 
+rid of internal and external noises. From the literature survey, it is seen that with the development of 
+nonlinear control theory, nowadays adaptive anti-synchronization method has become very much 
+effective to control and synchronize of chaotic and hyperchaotic systems both with unknown 
+parameters and external disturbances. This has motivated the authors to do significant study of the 
+adaptive anti-synchronization between two pair of two hyperchaotic systems all having unknown 
+parameters. 
+Recently, many authors have studied the control and synchronization for the chaotic and hyperchaotic 
+systems. Zhang et al. [16] studied adaptive synchronization between two different chaotic systems 
+with unknown parameters. Hu et al. [17] proposed adaptive control for anti-synchronization of Chua’s 
+chaotic system. In 2008, Salarieh and Shahrokhi [18] investigated adaptive synchronization of two 
+different chaotic systems with time varying unknown parameters. In 2008, Wu et al. [19] proposed a 
+scheme to synchronize hyperchaotic Chen system and generalized Henon-Heiles System of different 
+structures via adaptive control. Zhang and Zhu [20] proposed anti-synchronization of two different 
+hyperchaotic systems via active and adaptive control methods. Mossa et al. [21] investigated adaptive 
+anti-synchronization of chaotic systems with fully unknown parameters in 2010. Mossa et al. [22] have 
+investigated adaptive anti-synchronization of two identical and different hyperchaotic systems with Differential Equations and Control Processes, № 4, 2012  
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal  95 
+uncertain parameters in 2010.  In 2011, Li et al. [23] proposed Complete (anti-)synchronization of 
+chaotic systems with fully uncertain parameters by adaptive  control.  
+In this article, the authors have studied adaptive anti-synchronization between different hyperchaotic 
+systems using adaptive control and parameter update rule. This article has been organized as follows. 
+In Section 2, adaptive anti-synchronization method is discussed. In section 3, the system descriptions 
+of Lu, Newton-Leipnik and Rossler systems are given. In Sections 4 and 5, adaptive anti-
+synchronization between Lu and Newton-Leipnik hyperchaotic systems; and Newton-Leipnik and 
+Rossler hyperchaotic systems are discussed respectively. In Section 6, the conclusion of the work is 
+presented.  
+2. Adaptive anti-synchronization 
+Consider the drive hyperchaotic system in the form of  
+, ) ( ) (  x f x F x                                                                                                                            (1) 
+where 
+n
+R x  is the state vector of the system, 
+m
+R   is the unknown parameter vector of the system, 
+non linear term ) (x F is an 1  n matrix, ) (x f is an m n  matrix and the elements ) (x f
+ij
+in the matrix 
+) (x f satisfy
+
+ L x f
+ij
+) ( for .
+n
+R x  On the other hand, the response system is assumed as 
+), ( ) ( ) ( t x g x G y                                                                                                                    (2) 
+where 
+n
+R y  is the state vector of the system, 
+q
+R   is the unknown parameter vector of the system, 
+non linear term ) (x G is an 1  n matrix, ) (x g is an q n  matrix, 
+n
+R   is control input vector, and 
+the elements ) (x g
+ij
+in the matrix ) (x g satisfy
+
+ L x g
+ij
+) ( for .
+n
+R y  
+Let x y e   be the anti-synchronization of the error dynamical system. The purpose of hyperchaos 
+anti-synchronization is how to design the controller parameter ) (t  , such that,
+ 
+, 0 ) , ( ) , ( lim ) ( lim
+0 0
+  
+   
+x t x y t y t e
+t t
+                                                                                           
+where 
+.
+represents the Euclidean norm.  
+We add equation (2) to equation (1) and get 
+), ( ) ( ) ( ) ( ) ( t x g x G x f x F e                                                                                              (3) 
+The parameters belonging to the drive and the response systems are always unknown. Therefore, by 
+using the adaptive control and the parameter update rule techniques, the adaptive nonlinear controller 
+can be selected as 
+,
+ˆ
+) ( ) ( ˆ ) ( ) ( ke y g y G x f x F                                                                                              (4) 
+and adaptive laws of parameters are taken as Differential Equations and Control Processes, № 4, 2012  
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal  96 
+, )] ( [
+ˆ
+, )] ( [ ˆ
+e y g
+e x f
+T
+T
+
+
+
+
+
+
+                                                                                                                                (5) 
+then the response system (2) can anti-synchronize the drive system (1) globally and asymptotically, 
+where k > 0 is a constant,  ˆ  and 
+ˆ
+  are, respectively, estimations of the unknown parameters  and
+,  where  and  are constants. 
+Assume a positive Lyapunov function ], [
+2
+1
+   
+T T T
+e e V    where ).
+ˆ
+( ), ˆ (           
+With the choice of the adaptive control law and parameter update rule above for unknown parameters 
+are designed, the time derivative of V along the solution in equation (3) will be smaller than zero. In 
+other words, the error vector will approach to zero as time goes infinite and from Lyapunov stability 
+theory [35], the states of the slave system and projected master system are asymptotically anti-
+synchronized. 
+3. Systems’ descriptions 
+3.1 Lu system 
+The hyperchaotic Lu system [36] is described by 
+,
+) (
+w d z x w D
+z b y x z D
+y c z x y D
+w x y a x= D
+t
+t
+t
+t
+ 
+ 
+  
+ 
+                                                                                                                         (6)  
+where z y x , , and w are state variables, and c b a , , and d are real constants. When 
+d c b a and 20 , 3 , 36    take different values, system performance different dynamics. When 
+, 46 . 0 03 . 1     d system has a periodic orbit; when , 35 . 0 46 . 0     d system has chaotic attractor 
+and when , 30 . 1 35 . 0    d there are two index greater than zero system showing hyperchaotic 
+attractor. The hyperchaotic attractors in , z y x   w y x   , w z x   and  w z y   spaces are 
+depicted through Fig. 1. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Differential Equations and Control Processes, № 4, 2012  
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal  97 
+(a)       (b) 
+  
+(c) (d) 
+  
+Fig.1. Phase portraits of hyperchaotic Lu attractor in (a) x-y-z space (b) x-y-w space (c) x-z-w space 
+and (d) y-z-w space. 
+ 
+3.2 Newton-Leipnik system 
+The hyperchaotic Newton-Leipnik system [37] is described by 
+,
+5
+5 4 . 0
+10
+w d z x c w D
+y x z b z D
+z x y x y D
+w z y y x a x= D
+t
+t
+t
+t
+  
+ 
+   
+   
+                                                                                                           
+(7) 
+where z y x , , and w are state variables, and c b a , , and d are real constants.
+ 
+At 
+, 01 . 0 8 . 0 , 175 . 0 , 4 . 0     d and c b a system has chaotic behavior. The chaotic attractors of 
+hyperchaotic Newton-Leipnik system are depicted through Fig. 2. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+-20
+-10
+0
+10
+20
+-20
+0
+20
+-20
+0
+20
+40
+60
+x(t)
+y(t)
+z(t)
+-20
+-10
+0
+10
+20
+-20
+0
+20
+-100
+0
+100
+x(t)
+y(t)
+w(t)
+-20
+-10
+0
+10
+20
+-20
+0
+20
+40
+60
+-200
+-100
+0
+100
+200
+x(t)
+z(t)
+w(t)
+-30
+-20
+-10
+0
+10
+-20
+0
+20
+40
+-100
+0
+100
+y(t)
+z(t)
+w(t)Differential Equations and Control Processes, № 4, 2012  
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal  98 
+(a) (b) 
+  
+(c) (d) 
+  
+Fig.2. Phase portraits of hyperchaotic Newton-Leipnik attractor in (a) x-y-z space (b) x-y-w space (c) 
+x-z-w space and (d) y-z-w space. 
+ 
+3.3 Rossler system 
+The hyperchaotic Rossler system [38] is described by 
+, w s z r w D
+z x q z D
+w y p x y D
+z y x= D
+t
+t
+t
+t
+  
+ 
+  
+ 
+                                                                                                                          
+(8) 
+where w z y x , , ,
+ 
+are state variables and s r q p , , , are the real parameters. As and when 
+05 . 0 , 5 . 0 , 3 , 25 . 0     s r q p , the dynamic behavior of the system is hyperchaotic. The hyperchaotic 
+attractors in , z y x   , w y x   w z x   and w z y   spaces are depicted through Fig. 3. 
+ 
+ 
+ 
+ 
+ 
+-4
+-2
+0
+2
+4
+-6
+-4
+-2
+0
+2
+-4
+-2
+0
+2
+4
+x(t)
+y(t)
+z(t)
+-4
+-2
+0
+2
+4
+-6
+-4
+-2
+0
+2
+-1
+0
+1
+2
+3
+x(t)
+y(t)
+w(t)
+-4
+-2
+0
+2
+4
+-4
+-2
+0
+2
+4
+-1
+0
+1
+2
+3
+x(t)
+z(t)
+w(t)
+-6
+-4
+-2
+0
+2
+-4
+-2
+0
+2
+4
+-1
+0
+1
+2
+3
+y(t)
+z(t)
+w(t)Differential Equations and Control Processes, № 4, 2012  
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal  99 
+(a) (b) 
+  
+(c) (d) 
+  
+Fig.3. Phase portraits of hyperchaotic Rossler attractor in (a) x-y-z space (b) x-y-w space (c) x-z-w 
+space and (d) y-z-w space. 
+ 
+4. Adaptive anti-synchronization between Lu and Newton-Leipnik hyperchaotic systems 
+In this section, the anti-synchronization between Lu hyperchaotic system (9) and hyperchaotic 
+Newton-Leipnik system (10) is studied, we assume that Lu system with four unknown parameters 
+drives the Newton-Leipnik system with four unknown parameters.  
+The drive system is given by 
+,
+) (
+1 1 1 1
+1 1 1 1
+1 1 1 1
+1 1 1 1
+w d z x w D
+z b y x z D
+y c z x y D
+w x y a = x D
+t
+t
+t
+t
+ 
+ 
+  
+ 
+                                                                                                                     (9) 
+The response system is described by 
+), (
+) ( 5
+) ( 5 4 . 0
+) ( 10
+4 2 2 2 1
+3 2 2 2 1
+2 2 2 2 2 1
+1 2 2 2 2 2 1
+t w s z x r w D
+t y x z q z D
+t z x y x y D
+t w z y y x p = x D
+t
+t
+t
+t
+
+
+
+
+   
+  
+    
+    
+                                                                                       (10) 
+-60
+-40
+-20
+0
+20
+-40
+-20
+0
+20
+40
+0
+20
+40
+60
+80
+x(t)
+y(t)
+z(t)
+-60
+-40
+-20
+0
+20
+-40
+-20
+0
+20
+40
+10
+15
+20
+25
+30
+x(t)
+y(t)
+w(t)
+-50
+-40
+-30
+-20
+-10
+0
+10
+20
+0
+20
+40
+60
+5
+10
+15
+20
+25
+30
+x(t)
+z(t)
+w(t)
+-40
+-20
+0
+20
+40
+0
+20
+40
+60
+5
+10
+15
+20
+25
+30
+y(t)
+z(t)
+w(t)Differential Equations and Control Processes, № 4, 2012  
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal  100 
+where 
+T
+t t t t t )] ( ), ( ), ( ), ( [ ) (
+4 3 2 1
+        are  four control functions to be designed. In order to 
+determine the control functions to realize the anti-synchronization between systems (9) and (10), we 
+add equation (10) to (9) and obtain 
+), (
+) ( 5
+) ( 5 4 . 0
+) ( 10 ) (
+4 2 2 2 1 1 1 4
+3 2 2 2 1 1 1 3
+2 2 2 2 2 1 1 1 2
+1 2 2 2 2 2 1 1 1 1
+t w s z x r w d z x e D
+t y x z q z b y x e D
+t z x y x y c z x e D
+t w z y y x p w x y a = e D
+t
+t
+t
+t
+
+
+
+
+    
+    
+      
+      
+                                                               (11) 
+where ,
+1 2 1
+x x e  
+,
+1 2 2
+y y e  
+,
+1 2 3
+z z e   .
+1 2 4
+w w e   Our main aim is to find proper control 
+functions ) 4 , 3 , 2 , 1 ( ), (  i t
+i
+ and parameter update rule, such that system (10) globally anti-
+synchronizes the system (9) asymptotically , i.e.,
+ 
+. 0 ) ( lim 
+ 
+t e
+t
+ For two systems  (9) and (10) without 
+controls ), 4 , 3 , 2 , 1 , 0 ) ( (   i t
+i
+ if the initial condition  )) 0 ( ), 0 ( ), 0 ( ), 0 ( (
+1 1 1 1
+w z y x )), 0 ( ), 0 ( ), 0 ( ), 0 ( (
+2 2 2 2
+w z y x
+      
+ 
+then the trajectories of two systems will quickly separate each other and become irrelevant. However, 
+when controls are applied, the two systems will approach for anti-synchronization for any initial 
+conditions by appropriate control functions. With this idea, we propose the following adaptive control 
+law for system equation (10) as 
+4 3 2 2 2 1 1 1 4
+3 3 2 2 2 1 1 1 3
+2 2 2 2 2 2 1 1 1 2
+1 1 2 2 2 2 2 1 1 1 1
+ˆ ˆ
+ˆ
+) (
+5 ˆ
+ˆ
+) (
+5 4 . 0 ˆ ) (
+10 ˆ ) ( ˆ ) (
+e k w s z x r w d z x = t
+e k y x z q z b y x = t
+e k z x y x y c z x = t
+e k w z y y x p w x y a = t
+    
+    
+    
+       
+
+
+
+
+                                                             (12) 
+and parameters update rule for seven unknown parameters , a , b , c , d , p , q , r s are 
+
+
+
+
+
+  
+  
+, ˆ , ˆ , ˆ , ˆ
+,
+ˆ
+, ˆ ,
+ˆ
+, ) ( ˆ
+4 2 4 2 2 3 2 1 2
+4 1 2 1 3 1 1 1 1
+e w s e z x = r e z = q e x = p
+e w d e y = c e z = b e x y = a
+   
+
+
+
+
+                                                                         
+(13) 
+where ) 4 , 3 , 2 , 1 (  i k
+i
+are positive real scalars and , ˆ a ,
+ˆ
+b , ˆ c ,
+ˆ
+d , ˆ p q ˆ , ˆ r s ˆ  are estimates values of , a , b , c
+, d , p , q , r s respectively. 
+Theorem 1. For any initial conditions, the two systems (9) and (10) are globally asymptotically anti-
+synchronized by adaptive control law (12) and parameter update rule (13). 
+Proof.  Equation (12) with equation (11) yields the error dynamics as  
+,
+) (
+4 4 2 2 2 1 4
+3 3 1 2 1 3
+2 2 1 2
+1 1 2 1 1 1
+e k w s z x r w d e D
+e k z q z b e D
+e k y c e D
+e k x p x y a = e D
+t
+t
+t
+t
+   
+   
+ 
+  
+                                                                                               (14) 
+where  , ˆ a a a   ,
+ˆ
+b b b   , ˆ c c c   ,
+ˆ
+d d d   , ˆ p p p   , ˆ q q q   , ˆ r r r   . ˆ s s s   Differential Equations and Control Processes, № 4, 2012  
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal  101 
+Consider the following Lyapunov function 
+). (
+2
+1
+) (
+2 2 2 2 2 2 2 2
+s r q p d c b a e e t V
+T
+                                                                        (15) 
+The time derivative of V along the solution of error dynamical systems gives  
+   
+, 0
+) ( ) ( ) ( ) ( ) (
+) ( ) ( ) ) ( ( ] [
+] [ ] [ ] ) ( [
+) ˆ ( ) ˆ (
+) ˆ ( ) ˆ ( )
+ˆ
+( ) ˆ ( )
+ˆ
+( ) ˆ (
+) (
+2
+4 4
+2
+3 3
+2
+2 2
+2
+1 1
+4 2 4 2 2 3 2 1 2 4 1
+2 1 3 1 1 1 1 4 4 2 2 2 1 4
+3 3 1 2 1 3 2 2 1 2 1 1 2 1 1 1
+4 4 3 3 2 2 1 1
+  
+    
+       
+         
+         
+   
+               
+        
+e P e
+e k e k e k e k
+e w s e z x r e z q e x p e w d
+e y c e z b e x y a e k w s z x r w d e
+e k z q z b e e k y c e e k x p x y a e
+s s r r
+q q p p d d c c b b a a e e e e e e e e
+s s r r q q p p d d c c b b a a e e t V
+T
+T
+ 
+ 
+
+
+
+
+   
+   
+
+
+
+
+
+
+                    (16) 
+where  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4
+3
+2
+1
+4
+3
+2
+1
+0 0 0
+0 0 0
+0 0 0
+0 0 0
+,
+k
+k
+k
+k
+P
+e
+e
+e
+e
+e 
+Since V
+
+ is negative semi definite, then . ˆ , ˆ , ˆ , ˆ ,
+ˆ
+, ˆ ,
+ˆ
+, ˆ , , , ,
+4 3 2 1 
+L s r q p d c b a e e e e From error system (14), 
+we have
+
+L e e e e
+4 3 2 1
+, , ,    . Since e P e t V
+T
+  ) (
+
+ and P is a positive definite matrix, then we have 
+), 0 ( ) ( ) 0 ( ) (
+0 0
+2
+0
+min
+V t V V dt V dt e P e dt e P
+t t
+T
+t
+     
+  
+
+                                                           (17) 
+where, ) (
+min
+p  is the minimum eigenvalue of positive-definite matrix P . Thus . , , ,
+2 4 3 2 1
+L e e e e      
+According to the Barbalats lemma, we have 0 ) ( ), ( ), ( ), (
+4 3 2 1
+ t e t e t e t e as   t .Therefore, response 
+system (10) can globally anti-synchronize the drive system (9) asymptotically. This completes the 
+proof. 
+4.1 Numerical simulation and results 
+We verify and demonstrate the effectiveness of the proposed method, and discuss the simulation result 
+for the anti-synchronization behavior of two different hyperchaotic Lu and Newton-Leipnik systems. 
+In numerical simulations, the parameters of hyperchaotic Lu and Newton-Leipnik systems are taken as 
+) 1 , 20 , 3 , 36 ( ) , , , (  d c b a and ) 01 . 0 , 8 . 0 , 175 . 0 , 4 . 0 ( ) , , , (  s r q p respectively, such that both the 
+systems exhibit hyperchaotic behavior. The initial values of the drive and response systems are taken 
+as ) 2 , 1 , 4 , 3 ( )) 0 ( ), 0 ( ), 0 ( ), 0 ( ((
+1 1 1 1
+   w z y x
+ 
+and ( ) 3 , 2 , 2 , 4 ( )) 0 ( ), 0 ( ), 0 ( ), 0 ( (
+2 2 2 2
+   w z y x ) Differential Equations and Control Processes, № 4, 2012  
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal  102 
+respectively. Thus, the initial errors will be ) 1 , 1 , 2 , 1 ( )) 0 ( ), 0 ( ), 0 ( ), 0 ( (
+4 3 2 1
+    e e e e . The fourth order 
+Range-Kutta method is used to solve the two systems of equations (9) and (10) with time step size is 
+taken as 0.001. We assume that control inputs ). 1 , 1 , 1 ( ) , , (
+3 2 1
+ k k k Anti-synchronization of systems 
+(9) and (10) via adaptive control laws (12) and parameter update rule (13) with the initial estimated 
+parameters ) 6 , 4 , 1 , 5 ( )) 0 (
+ˆ
+), 0 ( ˆ ), 0 (
+ˆ
+), 0 ( ˆ (     d c b a and 2) 4, 1, (2, )) 0 ( ˆ ), 0 ( ˆ ), 0 ( ˆ ), 0 ( ˆ (    s r q p are 
+shown in Fig.4 and Fig.5. Fig.4 shows the state response and also the anti-synchronization error 
+system (14) converges to zero. Fig.5 shows that the estimated values )) (
+ˆ
+), ( ˆ ), (
+ˆ
+), ( ˆ ( t d t c t b t a and 
+ )) ( ˆ ), ( ˆ ), ( ˆ ), ( ˆ ( t s t r t q t p of unknown parameters of the systems (9) and (10) converge to 
+) 1 , 20 , 3 , 36 ( ) , , , (  d c b a and ) 01 . 0 , 8 . 0 , 175 . 0 , 4 . 0 ( ) , , , (  s r q p respectively as .   t
+ 
+ 
+ 
+(a) (b)
+ 
+(c) (d) 
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                         (e) 
+0 5 10 15 20
+-30
+-20
+-10
+0
+10
+20
+30
+t
+x
+1
+(t)   x
+2
+(t)
+x
+1
+(t)  
+x
+2
+(t)
+0 5 10 15 20
+-40
+-30
+-20
+-10
+0
+10
+20
+30
+40
+t
+y
+1
+(t)   y
+2
+(t) 
+y
+1
+(t)
+y
+2
+(t)
+0 5 10 15 20
+-50
+0
+50
+t
+z
+1
+(t)   z
+2
+(t)
+z
+1
+(t)  
+ z
+2
+(t)
+0 5 10 15 20
+-150
+-100
+-50
+0
+50
+100
+150
+t
+w
+1
+(t)   w
+2
+(t)
+w
+1
+(t)
+ w
+2
+(t)Differential Equations and Control Processes, № 4, 2012  
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal  103 
+                        
+Fig.4. Adaptive anti-synchronization of drive system (9) and response system (10): (a) between 
+2 1
+x x 
+signals (b) between 
+2 1
+y y  signals (c) between 
+2 1
+z z  signals (d) between 
+2 1
+w w  signals and (e) The 
+error functions ), ( ), (
+2 1
+t e t e ) (
+3
+t e and ) (
+4
+t e of the hyperchaotic Lu and Newton-Leipnik systems under 
+the controller (12) and the parameters update law (13) with time t. 
+ 
+ 
+Fig.5. Estimate values of parameters d c b a , , , and s r q p , , , of hyperchaotic Lu and Newton-Leipnik 
+systems with parameter update rule (13). 
+ 
+5.  Adaptive anti-synchronization between Newton-Leipnik and Rossler hyperchaotic systems 
+In this section, the anti-synchronization between Newton-Leipnik hyperchaotic system (18) and 
+hyperchaotic Rossler system (19) is studied, we assume that Newton-Leipnik system with four 
+unknown parameters drives the Rossler system with four unknown parameters.  
+The drive system is given by 
+,
+5
+5 4 . 0
+10
+1 1 1 1
+1 1 1 1
+1 1 1 1 1
+1 1 1 1 1 1
+w d z x c w D
+y x z b z D
+z x y x y D
+w z y y x a = x D
+t
+t
+t
+t
+  
+ 
+   
+   
+                                                                                                       (18) 
+The response system is described by 
+), (
+) (
+) (
+) (
+4 2 2 2
+3 2 2 2
+2 2 2 2 2
+1 2 2 2
+t w s z r w D
+t z x q z D
+t w y p x y D
+t z y = x D
+t
+t
+t
+t
+
+
+
+
+   
+  
+   
+  
+                                                                                                        (19) 
+0 5 10 15 20
+-30
+-20
+-10
+0
+10
+20
+t
+e
+1
+(t)   e
+2
+(t)   e
+3
+(t)   e
+4
+(t)
+e
+1
+(t)
+e
+2
+(t)
+e
+3
+(t)
+e
+4
+(t)
+0 5 10 15 20
+-10
+0
+10
+20
+30
+40
+50
+60
+t
+a
+b
+c
+d
+0 5 10 15 20
+-10
+-8
+-6
+-4
+-2
+0
+2
+4
+6
+t
+p
+q
+r
+sDifferential Equations and Control Processes, № 4, 2012  
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal  104 
+where 
+T
+t t t t t )] ( ), ( ), ( ), ( [ ) (
+4 3 2 1
+      are  four control functions to be designed. In order to 
+determine the control functions to realize the anti-synchronization between systems (18) and (19), we 
+add equation (19) to (18), 
+), (
+) 5
+) ( 5 4 . 0
+) ( 10
+4 2 2 1 1 1 4
+3 2 2 1 1 1 3
+2 2 2 2 1 1 1 1 2
+1 2 2 1 1 1 1 1 1
+t w s z r w d z x c e D
+t z x q y x z b e D
+t w y p x z x y x e D
+t z y w z y y x a = e D
+t
+t
+t
+t
+
+
+
+
+     
+    
+       
+      
+                                                                      (20) 
+where 
+,
+1 2 1
+x x e   ,
+1 2 2
+y y e  
+,
+1 2 3
+z z e   .
+1 2 4
+w w e   Our main aim is to find proper control 
+functions ) 4 , 3 , 2 , 1 ( ), (  i t
+i
+ and parameter update rule, such that system (19) globally anti-
+synchronizes system (18) asymptotically , i.e.
+ 
+. 0 ) ( lim 
+ 
+t e
+t
+ For two systems  (18) and (19) without 
+controls ), 4 , 3 , 2 , 1 , 0 ) ( (   i t
+i
+ if the initial condition  )), 0 ( ), 0 ( ), 0 ( ), 0 ( (
+1 1 1 1
+w z y x 
+)), 0 ( ), 0 ( ), 0 ( ), 0 ( (
+2 2 2 2
+w z y x then the trajectories of two systems will quickly separate each other and 
+become irrelevant. However, when controls are applied, the two systems will approach anti-
+synchronization for any initial conditions by appropriate control functions. With this idea, we propose 
+the following adaptive control law for system equation (19) 
+4 3 2 2 1 1 1 4
+3 3 2 2 1 1 1 3
+2 2 2 2 2 1 1 1 1 2
+1 1 2 2 1 1 1 1 1 1
+ˆ ˆ
+ˆ
+ˆ ) (
+ˆ 5
+ˆ
+) (
+ˆ 5 4 . 0 ) (
+10 ˆ ) (
+e k w s z r w d z x c = t
+e k z x q y x z b = t
+e k w y p x z x y x = t
+e k z y w z y y x a = t
+   
+    
+     
+     
+
+
+
+
+            
+                                                               (21) 
+and parameters update rule for seven unknown parameters , a , b , c , d , p , q , r s 
+
+
+
+
+
+ 
+  
+4 2 4 2 3 2 2
+4 1 4 1 1 3 1 1 1
+ˆ , ˆ , ˆ , ˆ
+ˆ
+, ˆ ,
+ˆ
+, ˆ
+e w s e z = r e = q e y = p
+e w d e z x = c e z = b e x = a
+   
+
+
+
+
+                                                                              (22)
+ 
+where ) 4 , 3 , 2 , 1 (  i k
+i
+are positive real scalars and , ˆ a ,
+ˆ
+b , ˆ c ,
+ˆ
+d , ˆ p q ˆ , ˆ r s ˆ  are estimates values of , a , b , c
+, d , p , q r s respectively. 
+Theorem 2. For any initial conditions, the two systems (18) and (19) are globally asymptotically anti-
+synchronized by adaptive control law (21) and parameter update rule (22). 
+Proof.  Equation (21) with equation (20) yields the error dynamics as  
+,
+4 4 2 2 1 1 1 4
+3 3 1 3
+2 2 2 2
+1 1 1 1
+e k w s z r w d z x c e D
+e k q z b e D
+e k y p e D
+e k x a = e D
+t
+t
+t
+t
+     
+  
+ 
+ 
+                                                                                    (23) 
+where  , ˆ a a a   ,
+ˆ
+b b b   , ˆ c c c   ,
+ˆ
+d d d   , ˆ p p p   , ˆ q q q   , ˆ r r r   s s s ˆ   Differential Equations and Control Processes, № 4, 2012  
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal  105 
+Consider the following Lyapunov function 
+). (
+2
+1
+) (
+2 2 2 2 2 2 2 2
+s r q p d c b a e e t V
+T
+                                                                        (24) 
+The time derivative of V along the solution of error dynamical systems gives that 
+, 0
+) ( ) ( ) ( ) (
+) ( ) ( ) ( ) ( ]
+[ ] [ ] [ ] [
+) ˆ ( ) ˆ ( ) ˆ (
+) ˆ ( )
+ˆ
+( ) ˆ ( )
+ˆ
+( ) ˆ (
+) ( ) (
+2
+4 4
+2
+3 3
+2
+2 2
+2
+1 1
+4 2 4 2 3 2 2
+4 1 4 1 1 3 1 1 1 4 4 2 2 1
+1 1 4 3 3 1 3 2 2 2 2 1 1 1 1
+4 4 3 3 2 2 1 1
+  
+    
+      
+         
+         
+     
+             
+        
+e P e
+e k e k e k e k
+e w s e z r e q e y p
+e w d e z x c e z b e x a e k w s z r w d
+z x c e e k q z b e e k y p e e k x a e
+s s r r q q
+p p d d c c b b a a e e e e e e e e
+s s r r q q p p d d c c b b a a e e t V t V
+T
+T
+  
+
+
+
+
+
+   
+   
+
+
+
+
+
+ 
+ 
+                   
+         
+(25) 
+where  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4
+3
+2
+1
+4
+3
+2
+1
+0 0 0
+0 0 0
+0 0 0
+0 0 0
+,
+k
+k
+k
+k
+P
+e
+e
+e
+e
+e 
+Since V
+
+ is negative semi definite. Then . ˆ , ˆ , ˆ , ˆ ,
+ˆ
+, ˆ ,
+ˆ
+, ˆ , , , ,
+4 3 2 1 
+L s r q p d c b a e e e e From error system 
+(23), we have 
+
+L e e e e
+4 3 2 1
+, , ,     Since e P e t V
+T
+  ) (
+
+ and P is a positive definite matrix, then we have 
+), 0 ( ) ( ) 0 ( ) (
+0 0
+2
+0
+min
+V t V V dt V dt e P e dt e P
+t t
+T
+t
+     
+  
+
+                                                           (26) 
+where, ) (
+min
+p  is the minimum eigenvalue of positive-definite matrix P . Thus . , , ,
+2 4 3 2 1
+L e e e e      
+According to the Barbalats lemma, we have 0 ) ( ), ( ), ( ), (
+4 3 2 1
+ t e t e t e t e as   t .Therefore, 
+response system (19) can globally anti-synchronized the drive system (18) asymptotically. This 
+completes the proof. 
+5.1 Numerical simulation and results 
+We verify and demonstrate the effectiveness of the proposed method, and discuss the simulation result 
+for the anti-synchronization behavior of two different hyperchaotic Newton-Leipnik and Rossler 
+systems. In numerical simulations, the parameters of hyperchaotic Newton-Leipnik and Rossler 
+systems are taken as ) 01 . 0 , 8 . 0 , 175 . 0 , 4 . 0 ( ) , , , (  d c b a and ) 05 . 0 , 5 . 0 , 3 , 25 . 0 ( ) , , , (  s r q p 
+respectively, such that both the systems exhibit hyperchaotic behavior. The initial values of the drive 
+and response systems are taken as ) 2 , 1 , 4 , 3 ( )) 0 ( ), 0 ( ), 0 ( ), 0 ( ((
+1 1 1 1
+   w z y x and
+) 3 , 2 , 2 , 4 ( )) 0 ( ), 0 ( ), 0 ( ), 0 ( (
+2 2 2 2
+   w z y x respectively. Thus, the initial errors will beDifferential Equations and Control Processes, № 4, 2012  
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal  106 
+) 1 , 1 , 2 , 1 ( )) 0 ( ), 0 ( ), 0 ( ), 0 ( (
+4 3 2 1
+    e e e e . The fourth order Range-Kutta method is used to solve the 
+two systems of equations (18) and (19) with time step size is taken as 0.001. We assume that control 
+inputs ). 1 , 1 , 1 ( ) , , (
+3 2 1
+ k k k Anti-synchronization of systems (18) and (19) via adaptive control laws 
+(21) and parameter update rule (22) with the initial  estimated parameters  )) 0 (
+ˆ
+), 0 ( ˆ ), 0 (
+ˆ
+), 0 ( ˆ ( d c b a  
+) 6 , 4 , 1 , 5 (    and 2) 4, 1, (2, )) 0 ( ˆ ), 0 ( ˆ ), 0 ( ˆ ), 0 ( ˆ (    s r q p are shown in Fig.6 and Fig.7. Fig.6 shows the 
+state response and also the anti-synchronization error system (23) converges to zero. Fig.7 shows that 
+the estimated values )) (
+ˆ
+), ( ˆ ), (
+ˆ
+), ( ˆ ( t d t c t b t a and  )) ( ˆ ), ( ˆ ), ( ˆ ), ( ˆ ( t s t r t q t p of unknown parameters of the 
+systems (18) and (19) converge to ) 01 . 0 , 8 . 0 , 175 . 0 , 4 . 0 ( ) , , , (  d c b a and 
+) 05 . 0 , 5 . 0 , 3 , 25 . 0 ( ) , , , (  s r q p respectively as .   t
+ 
+ 
+ 
+(a) (b) 
+  
+(c)         (d) 
+ 
+ 
+ 
+                               (e) 
+0 5 10 15 20
+-6
+-4
+-2
+0
+2
+4
+t
+x
+1
+(t)   x
+2
+(t)
+x
+1
+(t)   
+x
+2
+(t)
+0 5 10 15 20
+-6
+-4
+-2
+0
+2
+4
+t
+y
+1
+(t)   y
+2
+(t)
+y
+1
+(t)
+y
+2
+(t)
+0 5 10 15 20
+-3
+-2
+-1
+0
+1
+2
+3
+4
+t
+z
+1
+(t)   z
+2
+(t)
+z
+1
+(t)  
+ z
+2
+(t)
+0 5 10 15 20
+-8
+-6
+-4
+-2
+0
+2
+4
+t
+w
+1
+(t)   w
+2
+(t)
+w
+1
+(t) 
+w
+2
+(t)Differential Equations and Control Processes, № 4, 2012  
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal  107 
+                       
+Fig.6. Adaptive anti-synchronization of drive system (18) and response system (19): (a) between 
+2 1
+x x  signals (b) between 
+2 1
+y y  signals (c) between 
+2 1
+z z  signals (d) between 
+2 1
+w w  signals and 
+(e) The error functions ), ( ), (
+2 1
+t e t e ) (
+3
+t e and ) (
+4
+t e of the hyperchaotic Newton-Leipnik and Rossler  
+systems under the controller (21) and the parameters update law (22) with time t.       
+ 
+Fig.7. Estimate values of parameters d c b a , , , and s r q p , , , of hyperchaotic Newton-Leipnik and 
+Rossler systems with parameter update rule (22). 
+ 
+ 
+6. Conclusion 
+The present investigation has attained accomplishment in two significant capacities.  First it is  
+successfully carried out the study of anti-synchronization between Lu and Newton-Leipnik 
+hyperchaotic systems, and Newton-Leipnik and Rossler hyperchaotic systems with uncertain 
+parameters using adaptive control method. Adaptive controller and parameters update law are designed 
+properly to anti-synchronize two different pair of hyperchaotic systems based on the Lyapunov 
+stability theorem. The second one is the numerical simulation, which are carried out using Runge-
+Kutta method calls for appreciation to show that the method is reliable and effective for adaptive anti-
+synchronization of nonlinear dynamical systems. 
+Acknowledgement 
+The authors are extending their heartfelt thanks to the honourable reviewer for his valuable suggestions 
+for the improvement of the article. 
+0 5 10 15 20
+-5
+-4
+-3
+-2
+-1
+0
+1
+2
+t
+e
+1
+(t)   e
+2
+(t)   e
+3
+(t)   e
+4
+(t)
+e
+1
+(t)         
+e
+2
+(t)
+e
+3
+(t)
+e
+4
+(t)
+0 5 10 15 20
+-4
+-2
+0
+2
+4
+6
+t
+p
+q
+r
+s
+0 5 10 15 20
+-6
+-4
+-2
+0
+2
+4
+6
+t
+a
+b
+c
+dDifferential Equations and Control Processes, № 4, 2012  
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal  108 
+ 
+References 
+[1] G. A. Leonov and N. V. Kuznetsov, Time-Varying Linearization and the Perron effects, Int. J. 
+of Bifurcation and Chaos. 17 (4) (2007), 1079-1107. 
+[2] N. V. Kuznetsov and G. A. Leonov, Lyapunov exponent, chaos, Perron effects: linearization, 
+stability and instability by the first approximation.            
+http://www.math.spbu.ru/user/nk/PDF/Lyapunov_exponent.pdf. 
+[3] O. E. Rössler, An equation for hyperchaos, Phys. Lett.  A 71 (2-3) (1979), 155-157. 
+[4] L. M. Pecora and  T. L. Carroll, Synchronization in chaotic systems,  Phys. Rev. Lett. 64 
+(8)(1990), 821-824. 
+[5] E. Ott, C. Grebogi and J. A. Yorke, Controlling chaos, Phys. Rev. Lett. 64 (11) (1990),1196- 
+1199. 
+[6] G. Chen and X. Dong, From Chaos to Order: Methodologies, Perspectives and Applications, 
+World Scientific, Singapore, 1998. 
+[7] C. C. Fuh and P. C. Tung, Controlling chaos using differential geometricmethod, Phys. Rev.   
+Lett. 75 (16) (1995),  2952-2955. 
+[8] G. Chen and X. Dong, On feedback control of chaotic continuous-time systems, IEEE Trans. 
+Circuits Systems. 40 (9) (1993), 591-601. 
+[9] B. Blasius, A. Huppert and L. Stone, Complex dynamics and phase synchronization in spatially 
+extended ecological system, Nature 399 (6734) (1999),  354-359. 
+[10] M. Lakshmanan and K. Murali, Chaos in Nonlinear Oscillators: Controlling and 
+Synchronization, World Scientific, Singapore (1996). 
+[11] S. K. Han, C. Kerrer and Y. Kuramoto, Dephasing and bursting in coupled neural oscillators, 
+Phys. Rev. Lett. 75 (17) (1995), 3190-3193. 
+[12] K. M. Cuomo and A. V. Oppenheim, Circuit implementation of synchronized chaos with 
+application to communication, Phys. Rev. Lett. 71 (1) (1993),  65-68. 
+[13] L. Kocarev and U. Parlitz, General approach for chaotic synchronization with applications to 
+Communication, Phys. Rev. Lett. 74 (25) (1995),  5028-5030. 
+[14] K. Murali and M. Lakshmanan, Secure communication using a compound signal using 
+sampled-data feedback,  Appld. Math. Mech. 11 (2003),  1309-1315. 
+[15] J. H. Park and O. M. Kwon, A novel criterion for delayed feedback control of time-delay 
+chaotic systems, Chaos, Solitons & Fractals 23 (2) (2005),  495-501. 
+[16] H. Zhang, W. Huang, Z. Wang and T. Chai, Adaptive synchronization between two different 
+chaotic systems, Phys. Lett. A 350 (5-6) (2006), 363–366. Differential Equations and Control Processes, № 4, 2012  
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal  109 
+[17] J.  Hu, S. Chen and L. Chen, Adaptive control for anti-synchronization of Chua’s chaotic 
+System, Phys. Lett. A 339 (6) (2005), 455–460. 
+[18] H. Salarieha and M. Shahrokhi, Adaptive synchronization of two different chaotic systems with 
+time varying unknown parameters, Chaos, Solitons & Fractals 37 (1) (2008), 125–136. 
+[19] X.Wu, Z. Guan and Z. Wu, Adaptive synchronization between two different hyperchaotic 
+Systems, Nonlin. Anal. 68 (5) (2008), 1346-1351. 
+[20] X. Zhang and H. Zhu, Anti-s ynchronization of two different hyperchaotic systems via active 
+and adaptive control, Int. J.  Nonlin. Sci. 6 (3) (2008), 216-223. 
+[21] M. M. Al-sawalha, M.S.M. Noorani and M.M. Al-dlalah, Adaptive anti-synchronization of 
+chaotic systems with fully unknown parameters, Comput. and Math. with Applic. 59 (10) 
+(2010), 3234-3244. 
+[22] M. M. Al-sawalha and M.S.M, Noorani, Adaptive anti-synchronization of two identical and 
+different hyperchaotic systems with uncertain parameters, Commun. Nonlin. Sci.Numer. 
+Simulat. 15 (4) (2010), 1036–1047.  
+[23] X.-F. Li, A. C.-S. Leung,  X.P. Han,  X.-J. Liu and  Y.-D. Chu, Complete (anti-) 
+synchronization of chaotic systems with fully uncertain parameters by adaptive  control,Nonlin. 
+Dyn. 63 (1-2) (2011), 263-275. 
+[24] M. T. Yassen, Chaos synchronization between two different chaotic systems using active 
+Control, Chaos, Solitons & Fractals 23 (1) (2005),  131-140. 
+[25]   X. Wu and J. Lü, Parameter identification and backstepping control of uncertain Lü 
+system,Chaos, Solitons & Fractals 18 (4) (2003), 721-729. 
+[26] M. Pourmahmood and S. Khanmohammadi, G. Alizadeh, Synchronization of two different 
+uncertain chaotic systems with unknown parameters using a robust adaptive sliding mode 
+controller, Commun Nonlinear Sci Numer Simulat 16 (7) (2011), 2853–2868. 
+[27] X. S. Yang, On the existence of generalized synchronization in unidirectional coupled Systems, 
+Appl. Math. Comput. 122 (1) (2000), 71–79. 
+[28] H. J. Yu and Y. Z. Liu, Chaotic synchronization based on stability criterion of linear systems, 
+Phys. Lett.  A 314 (4) (2003), 292–298. 
+[29] M. G. Rosenblum, A. S. Pikovsky and J. Kurths, From phase to lag synchronization in coupled 
+chaotic oscillators,  Phys. Rev. Lett. 78 (22) (1997), 4193–4196. 
+[30] M. C. Ho, Y. C. Hung and C. H. Chou, Phase and anti-phase synchronization of two chaotic 
+systems by using active control, Phys. Lett. A 296 (2002), 43–48. 
+[31] G. H. Li and S. P. Zhou, An observer-based anti-synchronization, Chaos, Solitons & Fractals 
+29 (2) (2006), 495-498. Differential Equations and Control Processes, № 4, 2012  
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal  110 
+[32] D. Ghosh and S. Bhattacharya, Projective synchronization of new hyperchaotic system with 
+fully unknown parameters, Nonlin. Dyn. 61 (1-2) (2010), 11–21. 
+[33] G-H. Li, Modified projective synchronization of chaotic system, Chaos Solitons & Fractals 32 
+(5) (2007), 1786-1790. 
+[34] X. Shi and Z. Wang, The alternating between complete synchronization and hybrid 
+synchronization of hyperchaotic Lorenz system with time delay, Nonlin. Dyn. 69 (3) (2012), 
+1177-1190. 
+[35] H. K. Khalil, Nonlinear systems, 3rd ed. Englewood Cliffs (NJ), Prentice-Hall, 2002. 
+[36] A. Chen, J. Lu, J.Lu and S.Yu, Generating hyperchaotic Lu attractor via state feedback Control, 
+Physica A 364 (2006), 103–110. 
+[37] D. Ghosh and S. Bhattacharya, Projective synchronization of new hyperchaotic system with 
+fully unknown parameters, Nonlin. Dyn. 61 (1-2) (2010), 11–21. 
+[38]  S. Chen, J. Hu, C. Wang and J. Lu, Adaptive synchronization of uncertain Rössler 
+hyperchaotic system based on parameter identification, Phys. Lett.  A 321 (1) (2004),50–55.   

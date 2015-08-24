@@ -1,0 +1,594 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 1, 2000
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Dynamical systems in medicine, biology, ecology, and chemistry
+KINK-ANTIKINK SOLUTIONS OF A NERVE
+CONDUCTION EQUATION
+E.V.KRISHNAN
+Department of Mathematics and Statistics
+Sultan Qaboos University
+P.O.Box 36, Al-Khod 123, Muscat, Sultanate of Oman
+e-mail: krish@squ.edu.om
+R.P.JAJU
+Computer Science DepartmentUNISWA
+P/B 4, Kwaluseni, Swaziland
+e-mail: jajurp@science.uniswa.sz
+G.OSIPENKO
+Department of Mathematics
+St.Petersburg State Technical University
+195251 St. Petersburg, Russia
+e-mail: math@math.hop.stu.neva.ru
+Abstract
+We have solved a nerve conduction equation in terms of hyperbolic functions
+and found the restrictions on the coe cients of the governing equation and the
+solution parameters for the kink-antikink solutions to exist.Differential Equations and Control Processes, N 1, 2000
+1. Introduction
+The governing equation for wave front propagation in non-uniform axon cables
+is
+u
+xx
++ r(x) u
+x
+  u
+t
+  p(u) = 0; (1:1)
+where r(x) is a real function of cable diameter, and
+p(u) = q
+0
++ q
+1
+u + q
+2
+u
+2
++ q
+3
+u
+3
+; q
+i
+2 R: (1:2)
+The in nitesimal operators of the symmetry group of the partial differential
+equation (1:1) have already been found [1, 2] using Sophus Lie's theory of
+symmetry groups [3]. The equation (1.1) has a wide literature and applications
+[4, 5, 6, 7].
+The aim of this paper is to derive kink-antikink solutions of equation (1.1) with
+r(x) = constant, using a direct method [4,5] using the properties of hyperbolic
+functions. The method is to balance the highest nonlinear term and the deriva-
+tive term for some combination of hyperbolic functions and then to equate the
+like powers of the functions on both sides. For example, our solution will be of
+the form
+u(z) =
+m
+X
+i=0
+a
+i
+tanh
+i
+ z; (1:3)
+where the expansion coe cientfa
+i
+g
+m
+0
+, order of expansion m, and wave number
+  are to be determined. It is easy to note that a derivative term u
+nz
+of n
+th
+order
+has highest power in tanh  z of m+n. Therefore, for equations in u possessing
+a highest derivative term of order d and highest nonlinear term u
+h
+, we have,
+m =
+d
+h  1
+(1:4)
+2. Nerve Conduction Equation
+We consider the equation
+u
+xx
++ A u
+x
+  u
+t
+  (q
+0
++ q
+1
+u + q
+2
+u
+2
++ q
+3
+u
+3
+) = 0; q
+i
+2 R; (2:1)
+where, A is a constant, which is a model equation for wavefront propagation in
+uniform axon cables. A change of variable u = u
+ 
++ ff, where ff is a constant,
+Electronic Journal.  19Differential Equations and Control Processes, N 1, 2000
+transvfers the equation (2.1) to the form
+u
+ 
+xx
++ Au
+ 
+x
+  u
+ 
+t
+  (q
+ 
+1
+u
+ 
++ q
+ 
+2
+u
+ 2
++ q
+ 
+3
+u
+ 3
+) + P
+3
+(ff) = 0;
+where q
+ 
+1
+; q
+ 
+2
+; q
+ 
+3
+are the constant depending on ff and P
+3
+(ff) is a polynom of
+degree 3. If ff is a root of the polynom we get an equation of the form (2.1)
+with q
+0
+= 0. So without losss of generality we can put q
+0
+= 0 in (2.1). We look
+for travelling wave solutions of equation (2:1) in the form
+u(z) = u(x  vt); (2:2)
+where, v is the wave velocity.
+Using (2:2) in (2:1) and rearranging the terms, we get
+u
+zz
+= (v  A) u
+z
++ (q
+1
+u + q
+2
+u
+2
++ q
+3
+u
+3
+): (2:3)
+Equation (2:3) is an ordinary differential equation of second order involving
+a third degree polynomial in u. Consistent with equation (1:4), we assume a
+solution of (2:3) in the form
+u(z) = a
+0
++ a
+1
+tanh  z; (2:4)
+where, a
+0
+; a
+1
+and   are parameters to be determined. Substituting (2:4) into
+(2:3) and equating like powers of tanh  z on both sides, we get the following
+equations:
+2 a
+1
+ 
+2
+= a
+3
+1
+q
+3
+; (2:5)
+0 = (A  v) a
+1
+  + q
+2
+a
+2
+1
++ 3 a
+0
+a
+2
+1
+q
+3
+; (2:6)
+ 2 a
+1
+ 
+2
+= q
+1
+a
+1
++ 2 a
+0
+a
+1
+q
+2
++ 3 a
+2
+0
+a
+1
+q
+3
+; (2:7)
+0 = (v  A) a
+1
+  + q
+1
+a
+0
++ q
+2
+a
+2
+0
++ q
+3
+a
+3
+0
+: (2:8)
+Equations (2:5) to (2:7) give rise to
+  =  
+r
+q
+3
+2
+a
+1
+; (2:9)
+a
+0
+=
+1
+3q
+3
+ 
+ 
+r
+q
+3
+2
+(v  A)  q
+2
+ 
+; (2:10)
+Electronic Journal.  20Differential Equations and Control Processes, N 1, 2000
+a
+2
+1
+=
+1
+3q
+2
+3
+n
+q
+2
+2
+ 
+q
+3
+2
+(v  A)
+2
+o
+ 
+q
+1
+q
+3
+: (2:11)
+Equation (2:8) gives a constraint equation involving the parameters a
+0
+; a
+1
+and
+ . It is quite clear that solution in the form (2:4) is possible only when q
+3
+is
+positive.
+We set
+q
+1
+=
+q
+2
+2
+  3 q
+3
+3 q
+3
+(2:12)
+so that
+a
+2
+1
+=
+6  (v  A)
+2
+6 q
+3
+; (2:13)
+which restrict the solution to be valid only when
+jv  Aj <
+p
+6: (2:14)
+Since we are looking for kink-antikink solutions, we put a
+1
+= sa
+0
+, where s is a
+real number. Using expressions (2:10) and (2:13), we get
+a
+0
+=
+ 3 q
+2
+ 
+p
+(27 + 9s
+2
+)q
+3
+  3s
+2
+q
+2
+2
+2(9 + 3s
+2
+)q
+3
+: (2:15)
+Since q
+3
+is always positive, we take the positive sign in (2:15) when q
+2
+is positive
+and the negative sign when q
+2
+is negative. Therefore, for a
+0
+to be positive, q
+2
+should be less than
+p
+3q
+3
+when it is positive and q
+2
+should be greater than
+ 
+p
+3q
+3
+when it is negative. From (2:12) it follows that for a
+0
+to be positive, q
+1
+should be negative for a positive q
+2
+and q
+1
+should be positive for a negative q
+2
+.
+With a
+1
+= sa
+0
+, our solution u(z) can be written in the form
+u(z) = a
+0
+(1 + s tanh  z): (2:16)
+Case 1. s > 0;   > 0
+In this case, if a
+0
+is positive, a
+1
+will be positive and so   =
+r
+q
+3
+2
+a
+1
+which
+gives rise to a kink solution. If a
+0
+is negative, a
+1
+becomes negative and then
+  =  
+r
+q
+3
+2
+a
+1
+which leads to an anti-kink solution. These solutions are shown
+in Fig.1 and Fig.4.
+Electronic Journal.  21Differential Equations and Control Processes, N 1, 2000
+Case 2. s < 0;   > 0
+Here, if a
+0
+is positive, a
+1
+has negative sign and so   =  
+r
+q
+3
+2
+a
+1
+which is
+the case of an anti-kink solution. If a
+0
+is negative, a
+1
+becomes positive and so
+  =
+r
+q
+3
+2
+a
+1
+which gives rise to a kink solution. These solutions are represented
+by Fig.2 and Fig.3.
+Case 3. s > 0;   < 0
+In this case, if a
+0
+is positive, a
+1
+will be positive and so,   =  
+r
+q
+3
+2
+a
+1
+which
+leads to an anti-kink solution. If a
+0
+is negative, a
+1
+becomes negative and then
+  =
+r
+q
+3
+2
+a
+1
+which is the case of a kink solution. These solutions are again
+shown in Fig.2 and Fig.3.
+Case 4. s < 0;   < 0
+Here, if a
+0
+is positive, a
+1
+will be negative and so,   =
+r
+q
+3
+2
+a
+1
+which gives rise
+to a kink solution. If a
+0
+is negative, a
+1
+becomes positive and   =  
+r
+q
+3
+2
+a
+1
+which leads to an anti-kink solution. These solutions are again represented by
+Fig.1 and Fig.4.
+Thus when s and   have same signs, (2:16) is a kink solution when a
+0
+is positive,
+that is, when q
+1
+< 0 for positive q
+2
+and q
+1
+> 0 for negative q
+2
+. (2:16) is an
+anti-kink solution when a
+0
+is negative.
+When s and   have opposite signs, (2:16) is a kink solution when a
+0
+is negative,
+that is, when q
+1
+> 0 for positive q
+2
+and q
+1
+< 0 for negative q
+2
+. (2:16) is an
+anti-kink solution for positive a
+0
+.
+3. Conclusion
+We have derived kink-antikink solutions of a nerve conduction equation explic-
+itly in terms of hyperbolic functions. It is quite interesting to note that by
+this direct method we could obtain certain conditions involving the constant
+coe cients of the governing equation and the solution parameters for such so-
+lutions to exist. We could  nd that for a solution in the form (2:16) to exist the
+Electronic Journal.  22Differential Equations and Control Processes, N 1, 2000
+coe cients of the highest nonlinear term must be strictly positive and (2:12)
+should be satis ed.
+This is only a preliminary mathematical study of the nerve conduction equa-
+tions. An investigation about the stability of the solutions and its biological
+relevance will be done in the future. Solutions of these equations using other
+methods and comparison of solutions is also a matter of future research.
+Electronic Journal.  23Differential Equations and Control Processes, N 1, 2000
+Electronic Journal.  24Differential Equations and Control Processes, N 1, 2000
+References
+1. I. Villmann and A. Schierwagen, The symmetries of a nerve conduction
+equation, Appl. Math. Lett., 4,33-36, 1991.
+2. E.V. Krishnan and B.S. Bhatt, Group invariant solutions of a nerve con-
+duction equation, Il Nuovo Cimento, 110B, 1177-1182, 1995.
+3. F. Schwarz, Symmetries of differential equations: From Sophus Lie to
+computer-algebra, SIAM Rev., 30, 450-481, 1988.
+4. L. Huibin and W. Kelin, Exact solutions for two nonlinear equations,
+J.Phys.A, 23, 3923-3928, 1990.
+5. E.V. Krishnan, Travelling wave solutions of density dependent diffusion
+equations, Acta. Phys. Hungarica, 72, 193-202, 1992.
+6. A. N. Kolmogorov, N.G. Petrovsky, N.S. Piskunov, Investigation of diffu-
+sion equation, Questions in Cybernetics, N12, 3-30, 1975.
+7. J.D. Murray, Lectures on Nonlinear Differential Equation Models in Biol-
+ogy, Oxford, 1977.
+Electronic Journal.  25

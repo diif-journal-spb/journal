@@ -1,0 +1,1142 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 4, 2008
+Electronic Journal,
+reg. N P2375 at 07.03.97
+ISSN 1817-2172
+
+http://www.math.spbu.ru/diffjournal/
+e-mail: jodiff@mail.ru
+Exponential stabilization of linear systems
+with mixed delays in state and control
+Le Van Hien
+Dept. of Math., Hanoi National University of Education
+136 Xuan Thuy, Hanoi, Vietnam
+E-mail: Hienlv@hnue.edu.vn
+Hoang Van Thi
+Dept. of Natural Science, Hong Duc University
+307 Le Lai, Thanh Hoa City, Vietnam
+E-mail: thi3998@gmail.com
+Abstract
+This paper considers the exponential stabilization problem for a class of linear sys-
+tems with mixed time delays in both state and control. By using an improved Lyapunov-
+Krasovskii functional and memoryless controller, new conditions for the exponential sta-
+bilization of the system are derived in terms of linear matrix inequalities (LMIs). This
+approach allows to compute simultaneously the two bounds that characterize the ex-
+ponential stability rate of the solution. A numerical example is given to illustrate the
+effectiveness of our result.
+Keywords: Exponential stabilization, mixed time delays, linear matrix inequalities.
+2000MSC: 34D20, 34H05, 34K35, 93C15
+1 Introduction
+Time delays in control inputs are often encountered in many practical sys-
+tems because of transmission of the measurement information. The existenceDifferential Equations and Control Processes, N 4, 2008
+of these delays may be the source of instability and serious deterioration in the
+performance of the closed-loop systems. Therefore, the problem of stability and
+stabilization of control systems with input delays has been received consider-
+able attention from many researchers (see, e.g. [1, 3, 5, 6, 8, 12, 17, 19, 20, 22]
+and references therein). The stability problem has been considered mostly for
+linear time-invariant control systems with state and control delays. The lead
+to memoryless controllers which means control law of the form u(t) = Kx(t)
+([8, 13, 22]), or to more general controllers with memory that include, neverthe-
+less, an instantaneous feedback termu(t) =Kx(t) +
+P
+m
+i=1
+K
+i
+x(t h
+i
+): Another
+method to improve the control of linear time-invariant systems with input de-
+lay is the reduction method proposed in [1], which reduces the system under
+consideration to a delay-free ordinary system by certain state transformation.
+Based on the reduction method, Moon et. al. [12] proposed a delay feedback
+controller for the robust stability of linear uncertain systems with input delay.
+By using an improved state transformation, Chen and Zheng [3], Yue [19], Yue
+and Han [20], derived su cient conditions for the robust stabilization of linear
+uncertain systems with unknown input delay in terms of LMI's but the system
+is required to be global controllable.
+Recently, special interest has been devoted to the exponential stability and
+stabilization problem for linear time-delay systems [5, 6, 10, 11, 14, 15, 16,
+18]. Based on linear matrix inequalities approach [2], a systematic procedure
+for  nding exponential stability conditions has been proposed in [11] for LTI
+systems with constant delay. In [9, 15, 18], by using state transformation (t) =
+e
+ t
+x(t), delay-dependent conditions for robust exponential stability of linear
+uncertain systems with constant delay were given in terms of LMIs. By also
+using the state transformation method, [14] gives conditions for the exponential
+stability of non-autonomous systems with constant delay in terms of solution
+of Riccati-type differential equation, which is further improved in [16] by using
+Razumikhin method.
+In this paper, the results of [9]-[13], [18]-[20] will be extended to linear
+systems with mixed delays in both state and control:
+_ x(t) =Ax(t) +Dx(t  ) +E
+Z
+t
+t  
+x(s)ds +Bu(t) +Cu(t r) +F
+Z
+t
+t r
+u(s)ds:
+By using an improved Lyapunov-Krasovskii functional, new delay-dependent
+conditions for the exponential stabilization are derived in terms of linear ma-
+trix inequalities. The conditions do not require any assumption about the
+controllability of the nominal system, e.g., neither (A;B) nor (A +D;B) needs
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 33Differential Equations and Control Processes, N 4, 2008
+to be controllable. The approach also allows to compute simultaneously the
+two bounds that characterize the exponential stability rate of the solution.
+The paper is organized as follows. Section 2 presents notations, de nitions
+and some technical propositions needed for the proof of the main result. Delay-
+dependent conditions for exponential stabilization and an illustrated example
+are presented in Section 3. The paper ends with conclusions and cited refer-
+ences.
+2 Preliminaries
+The following notations will be used throughout this paper. R
++
+denotes the
+set of all non-negative real numbers; R
+n
+denotes the n dimensional Euclidean
+space with the Euclidean normk:k; R
+n r
+denotes the space of all matrices of
+(n r)-dimensions,I
+m
+denotes the identity matrix inR
+m m
+, 
+max
+(A); ( 
+min
+(A),
+resp.) denotes the maximal (the minimum, resp.) number of the real part of
+eigenvalues of A, A
+T
+denotes the transpose of the matrix A, A  0(A > 0,
+resp.) meansA is semi-positive de nite (positive de nite, resp.),A B means
+A B  0:
+Consider a class of linear systems with mixed delays in state and control of
+the form
+_ x(t) =Ax(t) +Dx(t  ) +E
+Z
+t
+t  
+x(s)ds +Bu(t)
++Cu(t r) +F
+Z
+t
+t r
+u(s)ds;t2R
++
+;
+x(t) = (t); t2 [ h; 0]; h = maxf ;rg;
+(1)
+wherex(t)2R
+n
+is the state,u(t)2R
+m
+is the control, ;r are time delays; (t)2
+C([ h; 0];R
+n
+) is the initial function with the normk k
+h
+= sup
+ h s 0
+k (s)k;
+A;B;C;D;E;F are given real constant matrices with appropriate dimensions.
+The unforced system (i.e. without control) is of the form
+_ x(t) =Ax(t) +Dx(t  ) +E
+Z
+t
+t  
+x(s)ds: (2)
+In this paper, a memoryless state feedback controller
+u(t) =Kx(t); t2R
++
+;
+is employed to stabilize system (1). Then, the closed-loop system of (1) is given
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 34Differential Equations and Control Processes, N 4, 2008
+by
+_ x(t) = [A +BK]x(t) +Dx(t  ) +CKx(t r)
++E
+Z
+t
+t  
+x(s)ds +F
+Z
+t
+t r
+Kx(s)ds:
+(3)
+De nition 2.1 For given ff > 0. System (2) is said to be ff-exponentially
+stable if there exists N  1 such that every solution x(t; ) of (2) satis es
+kx(t; )k Ne
+ fft
+k k
+h
+; t  0:
+System (1) is ff-exponentially stabilizable if there exists a state feedback con-
+troller u(t) = Kx(t) such that the closed-loop system (3) is ff-exponentially
+stable.
+The objective of this paper is to design the memoryless feedback control
+law that makes system (1) is exponential stabilizable. For this purpose, the
+following technical propositions are  rst introduced.
+Proposition 2.1 (Schur complement Theorem [2]) For any constant matrices
+X;Y;Z; where X =X
+T
+, Y =Y
+T
+> 0. Then X Z
+T
+Y
+ 1
+Z < 0 if and only if
+"
+X Z
+T
+Z Y
+#
+< 0 or
+"
+Y Z
+Z
+T
+X
+#
+< 0:
+Proposition 2.2 (Matrix Cauchy inequality) For any symmetric positive de -
+nite matrix M2R
+n n
+and x;y2R
+n
+; we have
+2hx;yi hMx;xi +hM
+ 1
+y;yi:
+Proposition 2.3 ([4]) For any symmetric positive de nite matrix W2R
+n n
+,
+scalar    0; and vector function ! : [0; ]! R
+n
+such that the integrals con-
+cerned are well de ned, then
+ Z
+ 
+0
+!(s)ds
+ 
+T
+W
+ Z
+ 
+0
+!(s)ds
+ 
+  
+Z
+ 
+0
+!
+T
+(s)W!(s)ds:
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 35Differential Equations and Control Processes, N 4, 2008
+3 Main result
+For ff > 0;  > 0;r > 0, symmetric positive de nite matrices P;Q;R2 R
+n n
+and matrix Y2R
+m n
+we denote
+G =BY +Y
+T
+B
+T
++e
+2ffr
+ 
+CC
+T
++rFF
+T
+ 
+;
+
+ =AP +PA
+T
++G +Q + R;
+U =
+h
+DP EP Y
+T
+i
+;   = (1 +r)
+ 1
+;
+H =diag
+ 
+e
+ 2ff 
+Q;
+1
+ 
+e
+ 2ff 
+R;  I
+m
+ 
+;
+M(P;Q;R) =
+"
+
+ U
+U
+T
+ H
+#
+; N (P ) =
+"
+P 0
+0 0
+#
+:
+The main result is stated in the following theorem.
+Theorem 3.1 Given ff> 0: System (1) is ff-exponentially stabilizable if there
+exist symmetric positive de nite matrices P;Q;R and matrix Y satisfy the fol-
+lowing LMI
+M(P;Q;R) + 2ffN (P )< 0: (4)
+The state feedback controller is given by
+u(t) =YP
+ 1
+x(t); t  0:
+Moreover, every solution x(t; ) of the closed-loop system satis es
+kx(t; )k 
+r
+ff
+2
+ff
+1
+e
+ fft
+k k
+h
+; t  0;
+where
+ff
+2
+= 
+ 1
+min
+(P ) +
+h
+  
+max
+(Q) +
+1
+2
+ 
+2
+ 
+max
+(R) +
+ 
+1 +
+1
+2
+r
+2
+ 
+ 
+max
+(Y
+T
+Y )
+i
+ 
+ 2
+min
+(P );
+ff
+1
+= 
+ 1
+max
+(P ):
+(5)
+Proof. Denote X =P
+ 1
+;
+ 
+Q =XQX;
+ 
+R =XRX and K =YX. Consider the
+following Lyapunov-Krasovskii functional
+V (x
+t
+) =V
+1
++V
+2
++V
+3
++V
+4
++V
+5
+;
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 36Differential Equations and Control Processes, N 4, 2008
+where
+V
+1
+=x
+T
+(t)Xx(t);
+V
+2
+=
+Z
+0
+  
+e
+2ffs
+x
+T
+(t +s)
+ 
+Qx(t +s)ds;
+V
+3
+=
+Z
+0
+  
+Z
+0
+s
+e
+2ff 
+x
+T
+(t + )
+ 
+Rx(t + )d ds;
+V
+4
+=
+Z
+0
+ r
+e
+2ffs
+x
+T
+(t +s)K
+T
+Kx(t +s)ds;
+V
+5
+=
+Z
+0
+ r
+Z
+0
+s
+e
+2ff 
+x
+T
+(t + )K
+T
+Kx(t + )d ds:
+It's easy to verify that
+ff
+1
+kx(t)k
+2
+ V (x
+t
+) ff
+2
+kx
+t
+k
+2
+h
+; t  0; (6)
+where ff
+1
+;ff
+2
+are de ned in (5).
+Taking derivative ofV
+1
+along solutions of the closed-loop system (3), we get
+_
+V
+1
+=x
+T
+(t)
+h
+A
+T
+X +XA +X(BY +Y
+T
+B
+T
+)X
+i
+x(t)
++ 2x
+T
+(t)XDx(t  ) + 2x
+T
+(t)XCu(t r)
++ 2x
+T
+(t)XE
+Z
+t
+t  
+x(s)ds + 2x
+T
+(t)XF
+Z
+t
+t r
+u(s)ds:
+(7)
+Applying Proposition 2.2 and 2.3 gives
+2x
+T
+(t)XDx(t  ) e
+2ff 
+x
+T
+(t)XD
+ 
+Q
+ 1
+D
+T
+Xx(t) +e
+ 2ff 
+x
+T
+(t  )
+ 
+Qx(t  );
+2x
+T
+(t)XCu(t r) e
+2ffr
+x
+T
+(t)XCC
+T
+Xx(t) +e
+ 2ffr
+ku(t r)k
+2
+:
+2x
+T
+(t)XE
+Z
+t
+t  
+x(s)ds  e
+2ff 
+x
+T
+(t)XE
+ 
+R
+ 1
+E
+T
+Xx(t)
++
+1
+ 
+e
+ 2ff 
+ Z
+t
+t  
+x(s)ds
+ 
+T
+ 
+R
+ Z
+t
+t  
+x(s)ds
+ 
+  e
+2ff 
+x
+T
+(t)XE
+ 
+R
+ 1
+E
+T
+Xx(t)
++e
+ 2ff 
+Z
+t
+t  
+x
+T
+(s)
+ 
+Rx(s)ds;
+(8)
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 37Differential Equations and Control Processes, N 4, 2008
+2x
+T
+(t)XF
+Z
+t
+t r
+u(s)ds re
+2ffr
+x
+T
+(t)XFF
+T
+Xx(t)
++
+1
+r
+e
+ 2ffr
+ Z
+t
+t r
+u(s)ds
+ 
+T
+ Z
+t
+t r
+u(s)ds
+ 
+ re
+2ffr
+x
+T
+(t)XFF
+T
+Xx(t)
++e
+ 2ffr
+Z
+t
+t r
+ku(s)k
+2
+ds:
+(9)
+Therefore, from (7) to (9) we have
+_
+V
+1
+ x
+T
+(t)
+h
+A
+T
+X +XA +X(BY +Y
+T
+B
+T
+)X
+i
+x(t)
++e
+2ff 
+x
+T
+(t)XD
+ 
+Q
+ 1
+D
+T
+Xx(t) +e
+ 2ff 
+x
+T
+(t  )
+ 
+Qx(t  )
++e
+2ffr
+x
+T
+(t)XCC
+T
+Xx(t) +e
+ 2ffr
+ku(t r)k
+2
++ e
+2ff 
+x
+T
+(t)XE
+ 
+R
+ 1
+E
+T
+Xx(t) +e
+ 2ff 
+Z
+t
+t  
+x
+T
+(s)
+ 
+Rx(s)ds
++re
+2ffr
+x
+T
+(t)XFF
+T
+Xx(t) +e
+ 2ffr
+Z
+t
+t r
+ku(s)k
+2
+ds:
+(10)
+Next, taking derivative of V;i = 2; 3; 4; 5; along solutions of the closed-loop
+system respectively, we obtain
+_
+V
+2
+=x
+T
+(t)
+ 
+Qx(t) e
+ 2ff 
+x
+T
+(t  )
+ 
+Qx(t  )  2ffV
+2
+;
+_
+V
+3
+= x
+T
+(t)
+ 
+Rx(t) 
+Z
+0
+  
+e
+2ffs
+x
+T
+(t +s)
+ 
+Rx(t +s)ds  2ffV
+3
+  x
+T
+(t)
+ 
+Rx(t) e
+ 2ff 
+Z
+t
+t  
+x
+T
+(s)
+ 
+Rx(s)ds  2ffV
+3
+;
+_
+V
+4
+=x
+T
+(t)K
+T
+Kx(t) e
+ 2ffr
+x
+T
+(t r)K
+T
+Kx(t r)  2ffV
+4
+=x
+T
+(t)XY
+T
+YXx(t) e
+ 2ffr
+ku(t r)k
+2
+  2ffV
+4
+;
+_
+V
+5
+=rx
+T
+(t)K
+T
+Kx(t) 
+Z
+0
+ r
+e
+2ffs
+x
+T
+(t +s)K
+T
+Kx(t +s)  2ffV
+5
+ rx
+T
+(t)XY
+T
+YXx(t) e
+ 2ffr
+Z
+t
+t r
+ku(s)k
+2
+ds  2ffV
+5
+:
+(11)
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 38Differential Equations and Control Processes, N 4, 2008
+Combining (10) and (11) we get
+_
+V (x
+t
+) + 2ffV (x
+t
+) x
+T
+(t)
+ 
+A
+T
+X +XA + 2ffX
+ 
+x(t)
++x
+T
+(t)X
+ 
+BY +Y
+T
+B
+T
++ (1 +r)Y
+T
+Y +Q + R
+ 
+Xx(t)
++e
+2ff 
+x
+T
+(t)X
+ 
+D
+ 
+Q
+ 1
+D
+T
++ E
+ 
+R
+ 1
+E
+T
+ 
+Xx(t)
++e
+2ffr
+x
+T
+(t)X
+ 
+CC
+T
++rFF
+T
+ 
+Xx(t)
+= 
+T
+(t)
+ 
+AP +PA
+T
++ 2ffP +G +Q + R
+ 
+ (t) + 
+T
+(t)  (t);
+= 
+T
+(t)
+ 
+
+ + 2ffP +  
+ 
+ (t);
+(12)
+where  (t) =Xx(t);   =UH
+ 1
+U
+T
+:
+By schur complement theorem (Proposition 2.1), (4) implies that
+
+ + 2ffP +UH
+ 1
+U
+T
+< 0:
+Therefore, it follows from (12)
+_
+V (x
+t
+) + 2ffV (x
+t
+)  0; 8t  0;
+and hence
+V (x
+t
+) V ( )e
+ 2fft
+ ff
+2
+k k
+2
+h
+e
+ 2fft
+; t  0:
+Taking (6) into account we  nally obtain
+kx(t; )k 
+r
+ff
+2
+ff
+1
+e
+ fft
+k k
+h
+; t  0;
+where ff
+1
+;ff
+2
+are de ned by (5). The proof is complete.
+Remark 3.1 For given ff > 0, the exponential stabilization condition is given
+in terms of LMIs, which can be solve by various e cient convex algorithms
+[2]. By iteratively solving the LMI given in Theorem 3.1 with respect to h, one
+can  nd the maximum upper bound of the delays that guarantees exponential
+stabilization of system (1) with decay rate ff.
+Remark 3.2 The linear control systems with input delay considered in previous
+works (e.g. [1, 3, 8, 12, 19, 20, 22]) are special cases of the system (1), where
+D =E = 0;F = 0:
+Numerical example. Consider the following control system:
+_ x(t) =Ax(t) +Dx(t  ) +E
+Z
+t
+t  
+x(s)ds
++Bu(t) +Cu(t r) +F
+Z
+t
+t r
+u(s)ds;
+(13)
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 39Differential Equations and Control Processes, N 4, 2008
+where   = 1;r = 1 and
+(A;D;E;B;C;F ) =
+ "
+ 4 1
+0  5
+#
+;
+"
+1 1
+0 1
+#
+;
+"
+ 1 1
+1  1
+#
+;
+"
+1
+0
+#
+;
+"
+1
+1
+#
+;
+"
+1
+1
+#!
+:
+By the Kalman rank condition [21], neither system (A;B) nor (A +D;B) is
+controllable system. However, forff = 0:5, LMI (4) is feasible using LMI toolbox
+of Matlab. Therefore the control system (13) is exponentially stabilizable with
+decay rate ff = 0:5. The LMI (4) in Theorem 3.1 is satis ed with
+P =
+"
+39:0742  5:7013
+ 5:7013 35:9471
+#
+; Q =
+"
+59:6758 29:5378
+29:5378 90:8470
+#
+;
+R =
+"
+80:9893  56:5626
+ 56:5626 85:4023
+#
+; Y =
+h
+ 1:2705 1:2689
+i
+:
+The state feedback controller which makes system (13) is exponentially stabi-
+lizable with decay rate ff = 0:5 is given by u(t) =Kx(t);t  0; where
+K =
+h
+ 0:0280 0:0309
+i
+:
+By computation we  nd that, every solution x(t; ) of the closed-loop system
+satis es
+kx(t; )k  3:0577e
+ 0:5t
+k k
+1
+; t  0:
+The time-simulation response of the solution of system (13) with initial condi-
+tion  (t) = (5; 5)
+T
+;t2 [ 1; 0] is shown by Figure 1.
+0 5 10 15 20
+−2
+−1
+0
+1
+2
+3
+4
+5
+time 
+x(t)
+Fig. 1 Time-simulation response of solution
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 40Differential Equations and Control Processes, N 4, 2008
+4 Conclusion
+This paper has proposed new conditions for the exponential stabilization of
+linear systems with mixed delays in both state and control. Based on an im-
+proved Lyapunov-Krasovskii functional, the delay-dependent exponential sta-
+bility conditions are derived in terms of linear matrix inequalities which allows
+to compute simultaneously the two bounds that characterize the exponential
+stability of the solution. A numerical example is given to show the effectiveness
+of the obtained result.
+Acknowledgements
+This work is supported by National foundation for Science and Technology
+Development, Vietnam.
+References
+[1] Z. Artstein, Linear systems with delayed controls: A reduction. IEEE Trans. Aut. Contr.,
+27(1982), 869-879.
+[2] S. Boyd, L. E. Ghaoui, E. Feron and V. Balakrishnan, Linear Matrix Inequalities in Systems
+and Control Theory, Philadenphia: SIAM, 1994.
+[3] W. H. Chen and W. X. Zheng, On improved robust stabilization of uncertain systems with
+unknown input delay. Automatica, 42(2006), 1076-1072.
+[4] K. Gu, An integral inequality in the stability problem of time delay systems, in: IEEE Control
+Systems Society and Proceedings of IEEE Conference on Decision and Control, IEEE Publisher,
+New York, 2000.
+[5] L.V. Hien, Q.P. Ha and V.N. Phat, Stability and stabilization of switched linear dynamic systems
+with time delay and uncertainties, Applied Mathematics and Computation, 210(2009), 223-231.
+[6] L.V. Hien and V.N. Phat, Delay feedback control in exponential stabilization of linear time-
+varying systems with input delay, IMA J. Math. Contr. Inf., to appear
+[7] W. H. Kwon and A. E. Pearson, Feedback stabilization of linear systems with delayed control,
+IEEE. Trans. Aut. Contr., 25(1980), 266-269.
+[8] O. M. Kwon and J. H. Park, Robust stabilization of uncertain systems with delays in control
+input: a matrix inequality approach, J. Appl. Math. Conput., 172(2006), 1067-1077.
+[9] O. M. Kwon and J. H. Park, Exponential stability of uncertain dynamic systems including state
+delay, Appl. Math. Lett., 19, (2006), 901-907.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 41Differential Equations and Control Processes, N 4, 2008
+[10] P. L. Liu, Exponential stability for linear time-delay systems with delay dependence, J. of the
+Franklin Institute, 340(2003), 481-488.
+[11] S. Mondi  e and V. L. Kharitonov, Exponential estimates for retarded time-delay systems: an
+LMI approach, IEEE Trans. Aut. Contr., 50(2005), 268-273.
+[12] Y. S. Moon, P. G. Park and K. H. Kwon, Robust stabilization of uncertain input-delayed systems
+using reduction method, Automatica, 37(2001), 307-312.
+[13] P. T. Nam and V. N. Phat, Robust stabilization of linear systems with delayed state and control,
+J. Optim. Theory Appl., 140(2009), 287-299.
+[14] V. N. Phat and P. T. Nam, Exponential stability criteria of linear non-autonomous systems with
+multiple delays, Elect. J. Diff. Equations, 2005, No. 58, 1-8
+[15] V. N. Phat and P. T. Nam, Exponential stability and stabilization of uncertain linear time-
+varying systems using parameter dependent Lyapunov function, Int. J. of Control, 80(2007),
+1333-1341
+[16] V. N. Phat and L. V. Hien, An application of Razumikhin theorem to exponential stability for
+linear non-autonomous systems with time-varying delay, Appl. Math. Lett., to appear
+[17] J. P. Richard, Time-delay systems: an overview of some resent advances and open problems,
+Automatica, 39(2003), 1667-1694.
+[18] S. Xu, J. Lam and M. Zhong, New exponential estimates for time-delay systems, IEEE Trans.
+Aut. Contr., 51(2006), 1501-1505.
+[19] D. Yue, Robust stabilization of uncertain systems with unknown input delay, Automatica,
+40(2004), 331-336.
+[20] D. Yue and Q. L. Han, Delayed feedback control of uncertain systems with time-varying input
+delay, Automatica, 41(2005), 233-240.
+[21] J. Zabczyk, Mathematical Control Theory, Birkh auser, 1992.
+[22] X. M. Zhang, M. Wu, J. H. She and Y. He, Delay-dependent stabilization of linear systems with
+time-varying state and input delays, Automatica, 41(2005), 1405-1412.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 42

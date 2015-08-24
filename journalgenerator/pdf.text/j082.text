@@ -1,0 +1,2369 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 4, 2001
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Applications to physics, electrotechnics, and electronics
+INHOMOGENEOUS, NON-LINEAR AND
+ANISOTROPIC SYSTEMS WITH RANDOM
+MAGNETISATION MAIN DIRECTIONS
+Part one: The useful form of functional 3D for computation
+the  eld created by permanent magnets
+BERE IOAN
+Assoc. Prof., \Politehnica" University,
+Department of Electrotechnics,
+Timisoara, Romania
+E-mail: ibere@et.utt.ro
+Abstract
+The paper treats the transformation of the concentrated form of the func-
+tional (associated to the  nite elements method { FEM) attached to the reso-
+lution of the three dimensional (3D)  eld from the inhomogeneous, non-linear
+and anisotropic systems that have random main directions of magnetisation.
+We have got the useful form of the functional which is used in the numerical
+computation of the distribution of the  eld created by permanent magnets.
+Key words: permanent magnets, FEM, inhomogenity, nonlinearity, anisotropy.Differential Equations and Control Processes, N 4, 2001
+1. Introduction
+In practice, there appear situations when it is necessary to establish the
+distribution of the magnetic  eld in inhomogeneous, non-linear and anisotropic
+systems (concerning both permanent magnets {  eld sources { and ferromag-
+netic yokes existing in the real technical system).
+The concentrated form of the functional, valid for the systems with perma-
+nent magnets [1, 2], written in Eq(1)
+F =
+Z
+v
+0
+B
+@
+ 
+H
+Z
+0
+ 
+B  d
+ 
+H
+1
+C
+A
+dv +
+Z
+S
+N
+ 
+B    n V
+H
+ds (1)
+must be transformed in order to be used in computations, as it follows. We
+have made the mention that v is the domain (volume) where the  eld problem
+has been analysed, and S
+N
+is its boundary with Neumann conditions. Eq(1)
+contains three unknown quantities:
+ 
+B { ux density,
+ 
+H { magnetic  eld
+intensity and V
+H
+{ magnetic scalar potential. In the process of minimising of
+the functional it is necessary an expression containing only one variable.
+The  eld sources being permanent magnets,
+ 
+H is obtained from the mag-
+netic scalar potential V
+H
+[1, 3]:
+ 
+H =   gradV
+H
+: (2)
+In Fig.1 we have considered domain (volume) v = v
+0
+[ v
+00
+, where we have
+@
+@
+@
+@
+@
+v
+0
+S
+0
+D
+ 
+ 
+   
+S
+00
+N
+ 
+ 
+   
+S
+0
+N
+ 
+ 
+ 
+ 
+ 
+v
+00
+@
+@
+S
+00
+D
+Fig.1. The study domain
+analysed the problem of the mag-
+netic  eld. The sub-domain v
+0
+is without permanent magnetisa-
+tion (
+ 
+M
+p
+= 0), and sub-domain
+v
+00
+is with permanent magnetisation
+(
+ 
+M
+p
+6= 0, the permanent magnet).
+The boundary of the 3D domain
+  = S
+0
+N
+[ S
+0
+D
+[ S
+00
+N
+[ S
+00
+D
+(3)
+is a closed surface and it contains
+{ for generality { mixed conditions,
+for both the area without perma-
+nent magnetisation S
+0
+= S
+0
+N
+[ S
+0
+D
+,
+Electronic Journal.  27Differential Equations and Control Processes, N 4, 2001
+and for that with permanent magnet S
+00
+= S
+00
+N
+[S
+00
+D
+. For S
+0
+N
+and S
+00
+N
+there have
+to be known the Neumann conditions and for S
+0
+D
+and S
+00
+D
+{ the Dirichlet condi-
+tions. In a general case there can be more zones with permanent magnetisation,
+when v
+00
+is a reunion of there and v
+0
+is the reunion of all the zones without
+permanent magnetisation, having a similar meaning as those for boundaries S
+00
+and S
+0
+.
+2. Anisotropic and non-linear 3D permanent magnets
+with random main directions of magnetisation
+For anisotropic media with permanent magnets, the law of the link between
+ 
+B;
+ 
+H and
+ 
+M has become
+ 
+B =
+ 
+   
+p
+ 
+H +  
+0
+ 
+M
+p
+; (4)
+where
+ 
+   
+p
+is tensor of magnetic permeability in the zone with permanent magnet
+[4]. For the ferromagnetic yokes, considered anisotropic,
+ 
+B =
+ 
+   
+ 
+H, and for
+the non-ferromagnetic zones (e.q. the zones with air),
+ 
+B =  
+0
+ 
+H. It is known
+that, following the main directions of magnetisation, the components of the ux
+density are collinear with the components of the magnetic  eld intensity, namely
+tensors
+ 
+   
+p
+and
+ 
+    have diagonal matrices [4, 5]. Taking into consideration a
+3D domain where the main directions of magnetisation, in random disposition,
+are noted with (u; v; w)
+0
+in the zones with
+ 
+M
+p
+= 0, and with (u; v; w)
+00
+in
+the permanent magnet, the linking relations between
+ 
+B and
+ 
+H after there
+directions are
+B
+ 
+=  
+ 
+H
+ 
+;   = u
+0
+; v
+0
+; w
+0
+(5)
+for ferromagnetic yokes, and
+B
+ 
+=  
+p 
+H
+ 
++  
+0
+M
+p 
+;   = u
+00
+; v
+00
+; w
+00
+(6)
+for the zones with permanent magnetisation. For the considered case, tensors
+ 
+   
+p
+and
+ 
+    have got non-linear components, depending on
+ 
+H. Eq(5) show
+that a component of the ux density following one of the main directions of
+magnetisation depends only on the components of the magnetic  eld intensity
+following the same direction, namely after the main directions of magnetisation
+ 
+B and
+ 
+H components are collinear. In other words, the components follow-
+ing the main directions of magnetisation do not depend one on another. For
+zones with permanent magnets (Eq.6) there also intervene the components of
+permanent magnetisation, which have to be known for a given magnet.
+Electronic Journal.  28Differential Equations and Control Processes, N 4, 2001
+Within the  nite element method (FEM), the domain of 3D analysis is
+divided in m  nite elements (e.q. tetrahedra), of su ciently small elements, so
+that the calculus accuracy be good. In this case, functional (1) can be written
+F =
+m
+X
+ =1
+F
+ 
+: (7)
+Taking into consideration Eq(7) and the mentions we have previously done,
+the functional becomes
+F =
+m
+0
+X
+ =1
+8
+>
+<
+>
+:
+Z
+v
+0
+ 
+0
+B
+@
+ 
+H
+ 
+Z
+0
+ 
+   
+ 
+ 
+H
+ 
+d
+ 
+H
+ 
+1
+C
+A
+dv
+9
+>
+=
+>
+;
++
++
+m
+00
+X
+ =1
+8
+>
+<
+>
+:
+Z
+v
+00
+ 
+2
+6
+4
+ 
+H
+ 
+Z
+0
+ 
+ 
+   
+p 
+ 
+H
+ 
++  
+0
+ 
+M
+p 
+ 
+d
+ 
+H
+ 
+3
+7
+5
+dv
+9
+>
+=
+>
+;
++
+m
+0
+N
+X
+ =1
+8
+>
+<
+>
+:
+Z
+S
+0
+N 
+ 
+ 
+   
+ 
+ 
+H
+ 
+ 
+    nV
+H 
+ds
+9
+>
+=
+>
+;
++
++
+m
+00
+N
+X
+ =1
+8
+>
+<
+>
+:
+Z
+S
+00
+N 
+ 
+ 
+   
+p 
+ 
+H
+ 
++  
+0
+ 
+M
+p 
+ 
+    nV
+H 
+ds
+9
+>
+=
+>
+;
+; (8)
+where m
+0
+is the number of  nite elements in v
+0
+, m
+00
+is the number of  nite
+elements in v
+00
+(m = m
+0
++ m
+00
+), m
+0
+N
+is the number of  nite elements adjacent
+to boundary S
+0
+N
+, m
+00
+N
+is the number of  nite elements adjacent to boundary
+S
+00
+N
+, and index   represents the fact that the quantities refer to  nite element  .
+For the ferromagnetic materials (non-linear and anisotropic) contained in
+sub-domain v
+0
+, there are not known in advance the working points (for each
+ nite element) on the magnetisation curves, curves that have to be known.
+Therefore, the components of tensors
+ 
+   
+ 
+are initially unknown. The process of
+solving the  eld problem  nally implies solving a system of equations (obtained
+through minimising the functional (8)) where the unknown quantities are mag-
+netic scalar potentials V
+Hi
+(i = 1; n) from the n nodes of the discretization
+mesh of study domain v. As
+ 
+   
+ 
+has got unknown values, solving the system
+of equations implies more iterations, starting from initially chosen values for
+the components of the tensor, and correcting them at each iteration. If the
+process is convergent, there are  nally obtained stable values for
+ 
+   
+ 
+, differing
+from one  nite element to the other. Thus, in an iteration, the resolution of
+the system obtained from Eq(8) is done for the steady components of tensors
+ 
+   
+ 
+(as against
+ 
+H
+ 
+), but different for different  .
+Electronic Journal.  29Differential Equations and Control Processes, N 4, 2001
+For the non-linear and anisotropic permanent magnets contained in subdo-
+main v
+00
+the problem is alike, but we have to take into consideration
+ 
+   
+p 
+. The
+demagnetisation curves of the magnets following each main direction have to
+be known.
+The unit vectors of the random main directions (u; v; w)
+0
+of zone v
+0
+are
+considered (  e
+1
+;   e
+2
+;   e
+3
+)
+0
+, and the unit vectors of the random main directions
+(u; v; w)
+00
+of the permanent magnet (zone v
+00
+) are considered (  e
+1
+;   e
+2
+;   e
+3
+)
+00
+(see
+Fig.2, where index
+0
+is for v
+0
+and index
+00
+for v
+00
+). If we take into consideration
+Eqs(5) and (6) and the above mentioned observations, the terms of functional
+(8) can be written as following:
+{ for zone v
+0
+ 
+H
+ 
+Z
+0
+ 
+ 
+   
+ 
+ 
+H
+ 
+d
+ 
+H
+ 
+ 
+0
+=
+ 
+H
+ 
+Z
+0
+( 
+u
+H
+u
+  e
+1
++  
+v
+H
+v
+  e
+2
++
++ 
+w
+H
+w
+  e
+3
+)
+0
+ 
+  (dH
+u
+  e
+1
++ dH
+v
+  e
+2
++ dH
+w
+  e
+3
+)
+0
+ 
+:
+Taking into consideration that cos'
+rs
+= cos'
+sr
+(where r; s = 1; 2; 3) and
+processing this term, we have got
+ 
+H
+ 
+Z
+0
+ 
+ 
+   
+ 
+ 
+H
+ 
+d
+ 
+H
+ 
+ 
+0
+=
+ 
+1
+2
+ 
+ 
+u
+H
+2
+u
++  
+v
+H
+2
+v
++  
+w
+H
+2
+w
+ 
++
++ H
+u
+H
+v
+( 
+u
++  
+v
+)cos '
+12
++ H
+v
+H
+w
+( 
+v
++  
+w
+)cos '
+23
++
++ H
+w
+H
+u
+( 
+w
++  
+u
+)cos '
+31
+]
+0
+ 
+; (9)
+{ for zone v
+00
+, similarly, we have got
+ 
+H
+ 
+Z
+0
+  
+ 
+   
+p 
+ 
+H
+ 
++ 
+0
+ 
+M
+p 
+ 
+d
+ 
+H
+ 
+ 
+00
+=
+H
+ 
+Z
+0
+[( 
+pu
+H
+u
++ 
+0
+M
+pu
+)   e
+1
++ ( 
+pv
+H
+v
++ 
+0
+M
+pv
+)   e
+2
++
++ ( 
+pw
+H
+w
++  
+0
+M
+pw
+)   e
+3
+]
+00
+ 
+  [(dH
+u
+  e
+1
++ dH
+v
+  e
+2
++ dH
+w
+  e
+3
+)]
+00
+ 
+=
+=
+ 
+1
+2
+ 
+ 
+pu
+H
+2
+u
++  
+pv
+H
+2
+v
++  
+pw
+H
+2
+w
+ 
++ H
+u
+H
+v
+( 
+pu
++  
+pv
+)cos '
+12
++
++H
+v
+H
+w
+( 
+pv
++  
+pw
+)cos '
+23
++ H
+w
+H
+u
+( 
+pw
++  
+pu
+)cos '
+31
++
++ 
+0
+[H
+u
+(M
+pu
++ M
+pv
+cos'
+12
++ M
+pw
+cos '
+31
+) + H
+v
+(M
+pu
+cos'
+12
++
++M
+pv
++ M
+pw
+cos '
+23
+) + H
+w
+(M
+pu
+cos '
+31
++ M
+pv
+cos '
+23
++ M
+pw
+)]g
+00
+ 
+: (10)
+Electronic Journal.  30Differential Equations and Control Processes, N 4, 2001
+In Eq(8) there are terms having the form (
+ 
+B     n)
+ 
+= (B
+n
+)
+ 
+, namely the
+normal components of the ux density (Neumann conditions) on boundaries
+S
+0
+N 
+and S
+00
+N 
+of  nite elements   adjacent to them. In order to write the
+equations as against a rectangular system of axes, there are going to be ex-
+pressed the components following the main directions of magnetisation of
+ 
+H
+and
+ 
+M
+p
+, depending on their components following the axes of the rectangular
+system.
+0
+  e
+3
+  e
+2
+  e
+1
+'
+23
+'
+31
+'
+12
+w
+v
+u
+0
+x
+  {
+  e
+3
+  e
+2
+ 
+k
+z
+w
+v
+y
+u
+  |
+  e
+1
+'
+uz
+'
+ux
+'
+uy
+Fig.2. The magnetisation
+main directions
+Fig.3. The position of the
+reference systems
+In this context, in Fig.3 there is taken into consideration the general case of
+relative disposal of the rectangular system (x; y; z) against the system attached
+to the main directions of magnetisation (u; v; w). The representation has been
+done by a single drawing for both subdomain v
+0
+and v
+00
+, having the following
+meaning: for v
+0
+, the system of axes (u; v; w)
+0
+and angles ('
+ux
+; '
+uy
+; '
+uz
+; : : :)
+0
+will wear index
+0
+; for v
+00
+, the axes and angles will be marked by index
+00
+, namely
+(u; v; w)
+00
+and ('
+ux
+; '
+uy
+; '
+uz
+; : : :)
+00
+. For reasons of clearness of the drawing, in
+Fig.3 we have noted only part of the angles, the rest of them being obvious.
+In order to obtain the linking relations between the components in the two
+systems of reference, in a random  nite element   we have expressed
+ 
+H
+ 
+in
+system (x; y; z) and then in system (u; v; w). The formulation is similar in
+subdomains v
+0
+and v
+00
+, thus the appropriate indices (
+0
+and
+00
+) being required
+only when the equations are completely written (22 and 29). Thus, on one hand
+ 
+H
+ 
+=
+ 
+H
+x
+ 
+i + H
+y
+ 
+j + H
+z
+ 
+k
+ 
+ 
+; (11)
+Electronic Journal.  31Differential Equations and Control Processes, N 4, 2001
+and on the other
+ 
+H
+ 
+= (H
+u
+  e
+1
++ H
+v
+  e
+2
++ H
+w
+  e
+3
+)
+ 
+: (12)
+Through identi cation, after calculus, from Eqs(11) and (12) there results:
+(H
+x
+)
+ 
+= (H
+u
+cos '
+ux
++ H
+v
+cos '
+vx
++ H
+w
+cos '
+wx
+)
+ 
+; (13)
+(H
+y
+)
+ 
+= (H
+u
+cos '
+uy
++ H
+v
+cos '
+vy
++ H
+w
+cos'
+wy
+)
+ 
+; (14)
+(H
+z
+)
+ 
+= (H
+u
+cos '
+uz
++ H
+v
+cos'
+vz
++ H
+w
+cos'
+wz
+)
+ 
+: (15)
+From (13, 14, 15), applying the rule of Cramer [6], there results (H
+u
+)
+ 
+,
+(H
+v
+)
+ 
+, (H
+w
+)
+ 
+expressed in comparison with (H
+x
+)
+ 
+, (H
+y
+)
+ 
+, (H
+z
+)
+ 
+:
+(H
+u
+)
+ 
+= (k
+ux
+H
+x
++ k
+uy
+H
+y
++ k
+uz
+H
+z
+)
+ 
+; (16)
+(H
+v
+)
+ 
+= (k
+vx
+H
+x
++ k
+vy
+H
+y
++ k
+vz
+H
+z
+)
+ 
+; (17)
+(H
+w
+)
+ 
+= (k
+wx
+H
+x
++ k
+wy
+H
+y
++ k
+wz
+H
+z
+)
+ 
+; (18)
+where coe cients k
+rs
+(r = u; v; w and s = x; y; z) result trough identi cation
+and are steady values to established systems of axes (they depend only on angles
+'
+rs
+between the two systems of axes).
+In zone v
+00
+, for
+ 
+M
+p
+we have done the same, and similar relations result,
+but using index
+00
+:
+(M
+pu
+)
+00
+ 
+= (k
+ux
+M
+px
++ k
+uy
+M
+py
++ k
+uz
+M
+pz
+)
+00
+ 
+; (19)
+(M
+pv
+)
+00
+ 
+= (k
+vx
+M
+px
++ k
+vy
+M
+py
++ k
+vz
+M
+pz
+)
+00
+ 
+; (20)
+(M
+pw
+)
+00
+ 
+= (k
+wx
+M
+px
++ k
+wy
+M
+py
++ k
+wz
+M
+pz
+)
+00
+ 
+: (21)
+If Eqs(16), (17) and (18) are replaced { written with index
+0
+{ in Eq(9), there
+results
+ 
+H
+ 
+Z
+0
+ 
+ 
+   
+ 
+ 
+H
+ 
+d
+ 
+H
+ 
+ 
+0
+=
+ 
+A
+xx
+H
+2
+x
++ A
+yy
+H
+2
+y
++ A
+zz
+H
+2
+z
++
++A
+xy
+H
+x
+H
+y
++ A
+yz
+H
+y
+H
+z
++ A
+zx
+H
+z
+H
+x
+)
+0
+ 
+; (22)
+where the following notations have been made:
+(A
+xx
+)
+0
+ 
+=
+ 
+1
+2
+ 
+ 
+u
+k
+2
+ux
++  
+v
+k
+2
+vx
++  
+w
+k
+2
+wx
+ 
++ k
+ux
+k
+vx
+( 
+u
++  
+v
+) cos '
+12
++
++k
+vx
+k
+wx
+( 
+v
++  
+w
+) cos '
+23
++ k
+wx
+k
+ux
+( 
+w
++  
+u
+)cos '
+31
+]
+0
+ 
+; (23)
+(A
+yy
+)
+0
+ 
+=
+ 
+1
+2
+ 
+ 
+u
+k
+2
+uy
++  
+v
+k
+2
+vy
++  
+w
+k
+2
+wy
+ 
++ k
+uy
+k
+vy
+( 
+u
++  
+v
+)cos '
+12
++
++k
+vy
+k
+wy
+( 
+v
++  
+w
+)cos '
+23
++ k
+wy
+k
+uy
+( 
+w
++  
+u
+)cos '
+31
+]
+0
+ 
+; (24)
+(A
+zz
+)
+0
+ 
+=
+ 
+1
+2
+ 
+ 
+u
+k
+2
+uz
++  
+v
+k
+2
+vz
++  
+w
+k
+2
+wz
+ 
++ k
+uz
+k
+vz
+( 
+u
++  
+v
+)cos '
+12
++
++k
+vz
+k
+wz
+( 
+v
++  
+w
+) cos'
+23
++ k
+wz
+k
+uz
+( 
+w
++  
+u
+)cos '
+31
+]
+0
+ 
+; (25)
+Electronic Journal.  32Differential Equations and Control Processes, N 4, 2001
+(A
+xy
+)
+0
+ 
+= [ 
+u
+k
+ux
+k
+uy
++  
+v
+k
+vx
+k
+vy
++  
+w
+k
+wx
+k
+wy
++
++ (k
+ux
+k
+vy
++ k
+vx
+k
+uy
+) ( 
+u
++  
+v
+) cos'
+12
++
++ (k
+vx
+k
+wy
++ k
+wx
+k
+vy
+) ( 
+v
++  
+w
+)cos '
+23
++
++ (k
+wx
+k
+uy
++ k
+ux
+k
+wy
+)( 
+w
++  
+u
+)cos '
+31
+]
+0
+ 
+; (26)
+(A
+yz
+)
+0
+ 
+= [ 
+u
+k
+uy
+k
+uz
++  
+v
+k
+vy
+k
+vz
++  
+w
+k
+wy
+k
+wz
++
++ (k
+uy
+k
+vz
++ k
+vy
+k
+uz
+)( 
+u
++  
+v
+)cos '
+12
++
++ (k
+vy
+k
+wz
++ k
+wy
+k
+vz
+)( 
+v
++  
+w
+) cos'
+23
++
++ (k
+wy
+k
+uz
++ k
+uy
+k
+wz
+)( 
+w
++  
+u
+) cos'
+31
+]
+0
+ 
+; (27)
+(A
+zx
+)
+0
+ 
+= [ 
+u
+k
+uz
+k
+ux
++  
+v
+k
+vz
+k
+vx
++  
+w
+k
+wz
+k
+wx
++
++ (k
+uz
+k
+vx
++ k
+vz
+k
+ux
+) ( 
+u
++  
+v
+) cos'
+12
++
++ (k
+vz
+k
+wx
++ k
+wz
+k
+vx
+)( 
+v
++  
+w
+)cos '
+23
++
++ (k
+wz
+k
+ux
++ k
+uz
+k
+wx
+) ( 
+w
++  
+u
+)cos '
+31
+]
+0
+ 
+: (28)
+Similarly, if Eqs (16), (17) and (18) { written with index
+00
+{ and Eqs (19),
+(20) and (21) are replaced in (10), we are going to obtain
+ 
+H
+ 
+Z
+0
+  
+ 
+   
+p 
+ 
+H
+ 
++  
+0
+ 
+M
+p 
+ 
+d
+ 
+H
+ 
+ 
+00
+=
+ 
+A
+xx
+H
+2
+x
++ A
+yy
+H
+2
+y
++ A
+zz
+H
+2
+z
++ A
+xy
+H
+x
+H
+y
++
++A
+yz
+H
+y
+H
+z
++ A
+zx
+H
+z
+H
+x
+)
+00
+ 
++ (K
+x
+H
+x
++ K
+y
+H
+y
++ K
+z
+H
+z
+)
+00
+ 
+; (29)
+where: (A
+xx
+)
+00
+ 
+; (A
+yy
+)
+00
+ 
+; (A
+zz
+)
+00
+ 
+; (A
+xy
+)
+00
+ 
+; (A
+yz
+)
+00
+ 
+; (A
+zx
+)
+00
+ 
+have got similar expres-
+sion with those in relations (23   28), but { being for v
+00
+{ they will contain
+the elements of matrix
+ 
+   
+p
+, and coe cients (k
+r;s
+)
+00
+ 
+with r = (u; v; w)
+00
+and
+s = (x; y; z)
+00
+are written with index
+00
+;
+(K
+x
+)
+00
+ 
+=  
+0
+[M
+pu
+(k
+ux
++ k
+vx
+cos '
+12
++ k
+wx
+cos '
+31
+)+
++M
+pv
+(k
+ux
+cos'
+12
++ k
+vx
++ k
+wx
+cos '
+23
+)+
++M
+pw
+(k
+ux
+cos '
+31
++ k
+vx
+cos '
+23
++ k
+wx
+)]
+00
+ 
+; (30)
+(K
+y
+)
+00
+ 
+=  
+0
+[M
+pu
+(k
+uy
++ k
+vy
+cos'
+12
++ k
+wy
+cos'
+31
+) +
++M
+pv
+(k
+uy
+cos'
+12
++ k
+vy
++ k
+wy
+cos '
+23
+) +
++M
+pw
+(k
+uy
+cos '
+31
++ k
+vy
+cos'
+23
++ k
+wy
+)]
+00
+ 
+; (31)
+(K
+z
+)
+00
+ 
+=  
+0
+[M
+pu
+(k
+uz
++ k
+vz
+cos '
+12
++ k
+wz
+cos '
+31
+)+
++M
+pv
+(k
+uz
+cos '
+12
++ k
+vz
++ k
+wz
+cos'
+23
+) +
++M
+pw
+(k
+uz
+cos'
+31
++ k
+vz
+cos '
+23
++ k
+wz
+)]
+00
+ 
+: (32)
+Electronic Journal.  33Differential Equations and Control Processes, N 4, 2001
+Taking into consideration Eqs (2), (22) and (29), the functional (1) can be
+written as following:
+F =
+m
+0
+X
+ =1
+8
+>
+<
+>
+:
+Z
+v
+0
+ 
+"
+A
+0
+xx
+ 
+@V
+H
+@x
+ 
+2
++ A
+0
+yy
+ 
+@V
+H
+@y
+ 
+2
++ A
+0
+zz
+ 
+@V
+H
+@z
+ 
+2
++
++A
+0
+xy
+ 
+@V
+H
+@x
+   
+@V
+H
+@y
+ 
++A
+0
+yz
+ 
+@V
+H
+@y
+   
+@V
+H
+@z
+ 
++A
+0
+zx
+ 
+@V
+H
+@z
+   
+@V
+H
+@x
+ 
+#
+dv
+9
+>
+=
+>
+;
+ 
++
++
+m
+00
+X
+ =1
+8
+>
+<
+>
+:
+Z
+v
+00
+ 
+"
+A
+00
+xx
+ 
+@V
+H
+@x
+ 
+2
++ A
+00
+yy
+ 
+@V
+H
+@y
+ 
+2
++ A
+00
+zz
+ 
+@V
+H
+@z
+ 
+2
++
++A
+00
+xy
+ 
+@V
+H
+@x
+   
+@V
+H
+@y
+ 
++A
+00
+yz
+ 
+@V
+H
+@y
+  
+@V
+H
+@z
+ 
++A
+00
+zx
+ 
+@V
+H
+@z
+   
+@V
+H
+@x
+ 
+ 
+ K
+00
+x
+ 
+@V
+H
+@x
+ 
+  K
+00
+y
+ 
+@V
+H
+@y
+ 
+  K
+00
+z
+ 
+@V
+H
+@z
+ 
+#
+dv
+9
+>
+=
+>
+;
+ 
++
++
+m
+0
+N
+X
+ =1
+8
+>
+<
+>
+:
+Z
+S
+0
+N 
+(B
+n
+V
+H
+)ds
+9
+>
+=
+>
+;
+ 
++
+m
+00
+N
+X
+ =1
+8
+>
+<
+>
+:
+Z
+S
+00
+N 
+(B
+n
+V
+H
+)ds
+9
+>
+=
+>
+;
+ 
+: (33)
+This is the useful form of the functional in calculus, the only unknown
+quantity being magnetic scalar potential V
+H
+.
+3. Conclusions
+Getting Eq (33) means an important intermediary stage in solving the
+ eld problem in inhomogeneous 3D domains, with non-linear and anisotropic
+permanent magnets and ferromagnetic yokes, having random main direction
+of magnetisation. In notations \A " and \K " (see Eqs 23-32), there inter-
+vene the  eld sources too (permanent magnetisation
+ 
+M
+p 
+), the parameters of
+magnetic circuit materials
+ 
+   
+ 
+and
+ 
+   
+p 
+(obtained from the non-linear magneti-
+sation curves of the ferromagnetic yokes, and those of the demagnetisation of
+permanent magnets), the relative disposal of the main magnetisation axes in
+Electronic Journal.  34Differential Equations and Control Processes, N 4, 2001
+comparison with a chosen rectangular system, as well as the Neumann con-
+ditions (B
+n
+)
+ 
+on the boundary of the domain. All these have to be known
+so that, for a system with a given geometry, the solution of  eld problem be
+unique.
+For the above mentioned case (inhomogeneous, non-linear and anisotropic
+system having random main direction), the transformation of the functional
+{ in order to obtain a form that can be used in the numerical computations
+{ has got an increased complexity, due to the degree of generality taken into
+consideration.
+References
+[1] P.P.Silvester, R.LFerrari, Finite elements for electrical engineers, Cam-
+bridge Univ. Press, Cambridge, 1983, pp(87-106).
+[2] Gh.Mandru, M.M.Radulescu, Analiza numerica a campului electromag-
+netic, Editura Dacia, Cluj-Napoca, 1986, pp(151-152).
+[3] C.Sora, Bazele electrotehnicii, E.D.P., Bucuresti, 1982, pp(655-660).
+[4] I.Bere, Relative permeability of non-linear and anisotropic permanent mag-
+nets, Proceedings of the scienti c communications \A. Vlaicu" University,
+Arad, 1996, pp(9-14).
+[5] I.Mocanu, Teoria campului electromagnetic, E.D.P., Bucuresti, 1981,
+pp(221-222).
+[6] K.H.Bachmann a.a., Kleine Enzyklopadie der Mathematik, Ed. Tehnica,
+Bucuresti, 1980, pp(445-446).
+Electronic Journal.  35

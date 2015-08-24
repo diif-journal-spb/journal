@@ -1,0 +1,751 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 1, 2001
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+http://www.imop.csa.ru/ diff
+e-mail: diff@osipenko.stu.neva.ru
+Control problems in nonlinear systems
+On the stability of nonlinear systems with the
+monotonic differentiable nonlinear characteristics
+N.V.Kuznetsov
+Russia, 198904 St.Petersburg, Staryi Petergof, Botanicheskaya Str.,
+St.Petersburg State University, NIIMM,
+Laboratory of Theoretical Cybernetics,
+e-mail: nick@920.spb.ru
+Abstract.
+Somenewfrequencycriteriaofstabilityofpulsesystemswiththemonotonic
+differentiable static characteristics of pulse element are obtained.
+1 Problem setting
+Suppose, nonlinear operatorM, mapping a continuous signal σ(t) on the mod-
+ulator input into a signal f(t) on its output, has the following properties.
+a)Foranyσ(t)∈C[0,+∞)thereexistsasequencet
+n
+(n = 0,1,...; t
+0
+= 0)
+such that
+δ
+0
+T ≤ t
+n+1
+−t
+n
+≤ T (0 < δ
+0
+< 1, T > 0) (1)
+0
+The work is partly supported by the Grant Board of the President of RF and of the State Support of
+Leading Science Schools (Project No 00-15-96028)Differential Equations and Control Processes, N 1, 2001
+and the function f(t) is piecewise continuous and does not change its sign on
+the interval [t
+n
+,t
+n+1
+);
+b) t
+n
+depends only on σ(t) for t≤ t
+n
+, f(t) depends only on σ(τ) for τ ≤ t;
+c) for any n there exists
+e
+t
+n
+∈ [t
+n
+,t
+n+1
+) such that the mean value of the n-th
+pulse
+v
+n
+=
+1
+t
+n+1
+−t
+n
+t
+n+1
+Z
+t
+n
+f(t)dt
+is related with σ(
+e
+t
+n
+) by formula
+v
+n
+= ϕ(σ(
+e
+t
+n
+)),
+where ϕ(σ) is a continuously differentiable function (static characteristics of
+pulse element) such that : ϕ(0) = 0,
+0 <
+ϕ(σ)
+σ
+<
+1
+σ
+∗
+for σ6= 0 (2)
+0≤
+dϕ
+dσ
+≤ l. (3)
+ϕ(σ)
+|σ|
+→ 0 for|σ|→∞. (4)
+Properties a), b), c) turn out to be ordinary for the most of modulators
+used in technology.
+Consider a pulse system described by the following functional differential
+equation
+˙ x = Ax+bf, σ = c
+0
+x, f =Mσ, (5)
+whereAisaconstantHurwitzm×m-matrix,bandcareconstantm-dimensional
+columns
+The problem is to deﬁne the properties of the transfer functions W(p) =
+c
+0
+(A−pI
+m
+)
+−1
+b, whichassuretheasymptoticsx(t)→ 0ast→ +∞foranyx(0).
+2 The formulation of result
+Consider system (5) and suppose that the following conditions
+lim
+p→∞
+pW(p) = lim
+p→∞
+p
+2
+W(p) = 0. (6)
+Electronic Journal.  11Differential Equations and Control Processes, N 1, 2001
+are satisﬁed.
+Theorem Suppose that the transfer function W(p) is nondegenerate, re-
+lations (1)-(4),(6) are valid, and there exist positive constants τ,τ
+1
+,ε
+1
+,ε
+2
+and
+κ≥ 0 such that for all ω∈ [0,+∞] the frequency condition holds
+α(ω)β(ω)−|δ(ω)|
+2
+> 0, (7)
+where
+α(ω) = τ(σ
+∗
+−ε
+2
+)−
+τ
+1
+T
+2
+3
+−ε
+3
+ω
+2
+|W(iω)|
+2
++(τ+κω
+2
+)ReW(iω)−κε
+1
+ω
+4
+|W(iω)|
+2
+,
+β(ω) = τ
+1
+−ε
+3
+ω
+4
+|W(iω)|
+2
+−κε
+1
+[κ
+1
++iω
+3
+W(iω)]
+2
+,
+δ(ω) = κκ
+1
+iω
+2
+(τ+κω
+2
+)W(iω)−ε
+3
+iω
+3
+|W(iω)|
+2
+−κε
+1
+[(κ
+1
++iω
+3
+W(iω))ω
+2
+(W(iω))]
+ν = τ(σ
+∗
+−ε
+2
+)−
+τ
+1
+T
+2
+3
+,ε
+3
+=
+T
+2
+π
+2
+(
+κl
+2
+ε
+1
++
+τ
+ε
+2
+),
+κ
+1
+= lim
+p→∞
+p
+3
+W(p).
+Then solutions of system (5) have asymptotics x(t) → 0 as t → +∞ for any
+x(0).
+This theorem extends result, obtained in [1] under condition κ
+1
+= 0, to case
+κ
+1
+6= 0.
+3 The proof of theorem
+We introduce, following [2], the functions v(t) = v
+n
+for t
+n
+≤ t < t
+n+1
+, u(t) =
+R
+t
+0
+[f(t)−v(t)]dt, and y = x−bu and transform system (5) to the form
+˙ y = Ay+bv+Abu. (8)
+The objective of such a transformation is in ﬁnding the system such that the
+function f is excluded, the function v is a ”frozen” function ϕ(σ(t)), and the
+function u is small in a certain sense.
+By (6) we have
+c
+0
+b = c
+0
+Ab = 0. (9)
+Consider now the Lyapunov function [3]
+V = y
+∗
+Hy−κc
+0
+Ayϕ(σ), (10)
+Electronic Journal.  12Differential Equations and Control Processes, N 1, 2001
+where H ∈ R
+k×k
+is a constant positively deﬁnite matrix, which will be given
+below. Differentiating (10) by using system (8) and taking into account the
+following equality
+˙ σ = c
+0
+Ay, (11)
+which is resulted from (9), we obtain
+˙
+V = W
+1
+−κc
+0
+A
+2
+yϕ−κ(˙ σ)
+2
+dϕ
+dσ
+,
+whereW
+1
+= 2y
+0
+H(Ay+bv+Abu).ApplyingtheS-procedurewiththecoeﬃcients
+τ and τ
+1
+, we transform the above relation into
+˙
+V = W
+1
+−κc
+0
+A
+2
+yϕ+W
+2
++τ(σ−σ
+∗
+v)v+
++τ
+1
+(
+T
+2
+3
+v
+2
+−u
+2
+), (12)
+where σ(t) = σ(
+e
+t
+n
+) for t
+n
+≤ t < t
+n+1
+,
+W
+2
+=−κ˙ σ
+2
+dϕ
+dσ
+−τ(σ−σ
+∗
+v)v−τ
+1
+(
+T
+2
+3
+v
+2
+−u
+2
+)
+Using (2), (3) and the property, stated in [2],
+Z
+t
+n+1
+t
+n
+u
+2
+dt≤
+(t
+n+1
+−t
+n
+)
+2
+3
+Z
+t
+n+1
+t
+n
+v
+2
+dt
+the following estimate holds
+Z
+t
+n+1
+t
+n
+W
+2
+dt≤ 0. (13)
+Havingperformedthechangesofvariablesin(12),namely,ϕ = v+(ϕ−v), σ =
+c
+0
+y+(σ−σ), we obtain
+˙
+V = W
+1
++W
+2
+−κc
+0
+A
+2
+yv+τ(c
+0
+y−σ
+∗
+v)v+W
+3
++τ
+1
+(
+T
+2
+3
+v
+2
+−u
+2
+), (14)
+where W
+3
+= κc
+0
+A
+2
+y(v−ϕ)+τ(σ−σ)v. By (3), estimate W
+3
+takes the form
+W
+3
+≤ κ[ε
+1
+(c
+0
+A
+2
+y)
+2
++
+l
+2
+(σ−σ)
+2
+4ε
+1
+)]+τ[ε
+2
+v
+2
++
+(σ−σ)
+2
+4ε
+2
+] (15)
+According to the inequality of Virtinger [2] and property (1), the following
+estimate
+Z
+t
+n+1
+t
+n
+(σ−σ)
+2
+dt≤
+4T
+2
+π
+2
+Z
+t
+n+1
+t
+n
+˙ σ
+2
+dt
+Electronic Journal.  13Differential Equations and Control Processes, N 1, 2001
+is valid. Therefore by (15) and (11)
+Z
+t
+n+1
+t
+n
+W
+3
+dt≤ τε
+2
+Z
+t
+n+1
+t
+n
+v
+2
+dt+ε
+3
+Z
+t
+n+1
+t
+n
+(c
+0
+Ay)
+2
+dt+κε
+1
+Z
+t
+n+1
+t
+n
+(c
+0
+A
+2
+y)dt. (16)
+By (13), (14), (16) we have
+Z
+t
+n+1
+t
+n
+˙
+Vdt≤
+Z
+t
+n+1
+t
+n
+(W
+1
+−G)dt, (17)
+where G is a quadratic form with the real coeﬃcients
+G(y,v,u) = [τ(σ
+∗
+−ε
+2
+)−
+τ
+1
+T
+2
+3
+]v
+2
++
++τ
+1
+u
+2
+−ε
+3
+(c
+0
+Ay)
+2
++(κc
+0
+A
+2
+y−τc
+0
+y)v−τ
+1
+|u|
+2
+−κε
+1
+|c
+0
+A
+2
+y|
+2
+.
+Extending it to the Hermitean one, we obtain
+G(y,v,u) = [τ(σ
+∗
+−ε
+2
+)−
+τ
+1
+T
+2
+3
+]|v|
+2
++τ
+1
+|u|
+2
+−ε
+3
+|c
+0
+Ay|
+2
++
++Re[(κc
+0
+A
+2
+y−τc
+0
+y)v],−τ
+1
+|u|
+2
+−κε
+1
+|c
+0
+A
+2
+y|
+2
+, (18)
+where v, u are complex numbers, v is a complex number, associated with v,
+y ∈ C
+k
+. Having performed the Laplace transformation with the zero initial
+conditions in (8) and saving a notation of variables, we arrive at a formula
+y =−(A−pI
+m
+)
+−1
+bv−(A−pI
+m
+)
+−1
+Abu.
+Using the representation A = (A−pI
+m
+)+pI
+m
+and properties (9), we ﬁnd
+c
+0
+y =−W(p)v−pW(p)u,
+c
+0
+Ay =−pW(p)v−p
+2
+W(p)u,
+c
+0
+A
+2
+y = κ
+1
+u−p
+2
+W(p)v−p
+3
+W(p)u.
+Substituting these expressions into (18) and putting p = iω, we obtain
+G|
+p=iω
+= α(ω)|v|
+2
++β(ω)|u|
+2
++2Re[δ(ω)uv].
+If the Hermitean matrix
+ 
+α δ
+δ β
+!
+Electronic Journal.  14Differential Equations and Control Processes, N 1, 2001
+is positively deﬁnite, then by the frequency theorem of V.A. Yakubovich for
+the nondegenerate case [4] there exist μ > 0 and a positively deﬁnite matrix H
+such that the term under integral sign in (17) may be estimated as follows
+W
+1
+−G <−μ(u
+2
++v
+2
++|y|
+2
+). (19)
+The Silvester criterion implies that for the positive deﬁniteness of this matrix
+it is necessary and suﬃcient that for all ω∈ [0,+∞] the inequalities
+α(ω) > 0, α(ω)β(ω)−|δ(ω)|
+2
+> 0
+were satisﬁed. The second inequality coincides with frequency condition (7)
+and therefore is also satisﬁed. The ﬁrst inequality follows directly from the
+second one. Really, as ω →∞ β → τ
+1
+, δ → 0, and, consequently, α(∞) > 0
+and α(ω) cannot be zero for any ω.
+Thus estimate (19) is proved.
+Relations (17) and (19) resulted in the inequality
+V |
+t=t
+n
++μ
+Z
+t
+n
+0
+(v
+2
++u
+2
++|y|
+2
+)dt≤ V |
+t=0
+. (20)
+By (4) and by the positive deﬁniteness of the matrix H V → +∞ as
+|y| → ∞. Therefore (20) implies that u,v ∈ L
+2
+[0,+∞). Since the matrix
+A is the Hurwitzian one, it follows from (8) that y(t)→ 0 as t→ +∞. From
+that v∈ L
+2
+[0,+∞) and from (1) the asymptotics v(t)→ 0 as t→ +∞ follows.
+In [2] it is stated that |u| ≤ T|v| and therefore u → 0 as t → +∞. Finally,
+from the relation x = y−bu it follows that x→ 0 as t→ +∞. The proof of
+theorem is completed
+References
+[1] Gelig A.Kh. , Kuznetsov N.V. ”On the stability of nonlinear systems with
+the monotonic differentiable nonlinear characteristics”, Proceedings of 5th
+IFAC Symposium ”Nonlinear Control Systems”, Saint-Petersburg, Juli,
+2001.
+[2] Gelig A.Kh. and Churilov A.N. ”Stability and Oscillations of Nonlinear
+Pulse-Modulated Systems”, Birkhauser, Boston-Basel-Berlin, 1998.
+[3] Yakubovich V.A. ” Matrix Inequalities Method in the Theory of Stability
+of Nonlinear Controlled Systems”
+Electronic Journal.  15Differential Equations and Control Processes, N 1, 2001
+II. ”Absolute Stability in a Class of Nonlinearities with the Restriction on
+the Derivative” [in Russian], Avtomatika i Telemekhanika, Vol. 26, No. 4,
+pp. 577–583, 1965.
+[4] Gelig A.Kh. , Leonov G.A. , and Yakubovich V.A. ”Stability of Nonlinear
+Systems with a Unique Equilibrium State” [in Russian], Moscow, 1978.
+Electronic Journal.  16

@@ -1,0 +1,1325 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 1, 2010
+Electronic Journal,
+reg. N P2375 at 07.03.97
+ISSN 1817-2172
+
+http://www.math.spbu.ru/diffjournal/
+e-mail: jodiff@mail.ru
+New Results on The Stability of Solution of Some Non-autonomous
+Delay Differential Equations of the Third Order
+M.O. Omeike
+Department of Mathematics,
+University of Agriculture,
+Abeokuta, Nigeria.
+E-mail: moomeike@yahoo.com
+Abstract: Su cient conditions are established for the asymptotic stability
+of the zero solution of some non-autonomous delay differential equations of the
+third order. Our result improves on Sadek's [A.I. Sadek, On the stability of so-
+lutions of some non-autonomous delay differential equations of the third order,
+Asymptotic Analysis 43(2005) 1-7].
+Keywords: Stability, Lyapunov functional, non-autonomous differential equa-
+tions of third order with delay
+1. Introduction Consider the third-order nonautonomous delay differential
+equations
+:::
+x +a(t) x +b(t) _ x +c(t)f(x(t r)) = 0 (1:1)Differential Equations and Control Processes, N 1, 2010
+or its equivalent system form
+_ x = y
+_ y = z
+_ z =  a(t)z b(t)y c(t)f(x) +c(t)
+Z
+t
+t r
+f
+0
+(x(s))y(s)ds;
+(1:2)
+where a(t);b(t) and c(t) are positive and continuously differentiable functions
+on [0;1);r is positive constant; f(x) is continuous function and f(0) = 0.
+In recent years many books and papers dealt with the delay differential
+equations and obtained many good results, for example, [1,2,3,6,4,9,5,8,7,10-20]
+, etc. In many references, the authors dealt with the problems by considering
+Lyapunov functions or functionals and obtained the criteria for the stability.
+Recently, Sadek [18] discussed the asymptotic stability of the zero solution
+of (1.1) and the following result was proved.
+Theorem A (Sadek [18]).Suppose that a(t);b(t) and c(t) are continuously dif-
+ferentiable on [0;1) and the following conditions are satis ed:
+(i) A a(t) a
+0
+> 0; B b(t) b
+0
+> 0;C c(t) c
+0
+> 0 for t2 [0;1);
+(ii) f(0) = 0;
+f(x)
+x
+ f
+0
+> 0(x6= 0), and f
+0
+(x) f
+1
+  1 for all x;
+(iii) a
+0
+b
+0
+ C > 0;
+(iv)  a
+0
+(t) +b
+0
+(t) 
+1
+ 
+c
+0
+(t)< (a
+0
+b
+0
+ C)=2;  = (a
+0
+b
+0
++C)=2b
+0
+;
+(v)
+Z
+1
+0
+jc
+0
+(t)jdt<1;c
+0
+(t)! 0 as t!1:
+Then the zero solution of (1.1) is uniformly asymptotically stable, provided that
+r< min
+ 
+2c
+0
+f
+0
+f
+1
+C
+;
+a
+0
+b
+0
+ C
+(1 +a
+0
+)b
+0
+f
+1
+C
+;
+a
+0
+b
+0
+ C + 4
+a
+0
+C(1 f
+1
+)
+2f
+1
+Cf1 + 2  + 2a
+2
+0
++a
+0
++ (a
+0
+b
+0
+ C)Cg
+ 
+:
+Obviously, this is a very interesting result but Theorem A has some hypotheses
+which are not necessary for the stability of solutions of (1.1).
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 19Differential Equations and Control Processes, N 1, 2010
+Our aim in this paper is to further study the stability of the zero solution of
+(1.1). In the next section, we establish a criterion for the asymptotic stability
+of the zero solution of (1.1), which extends and improves Theorem A.
+Our main result is the following theorem.
+Theorem 1.1.Suppose thata(t);b(t) andc(t) are continuously differentiable on
+[0;1) and the following conditions are satis ed;
+(1) 1 c(t) b(t); L b
+0
+(t) c
+0
+(t)  0; 0<a a(t) L;t2 [0;1);
+(2) f(0) = 0;
+f(x)
+x
+  
+0
+> 0 (x6= 0), and f
+0
+(x) c for all x;
+(3)
+1
+2
+a
+0
+(t)  
+1
+< 1 ffc; t2 [0;1);
+(4)
+Z
+1
+0
+jc
+0
+(t)jdt<1; c
+0
+(t)! 0 as t!1:
+Then the zero solution of (1.1) is uniformly asymptotically stable provided that
+r< min
+ 
+2 ((1 ffc)  
+1
+)
+(2 +ff)Lc
+;
+2(ffa  1)
+ffLc
+ 
+:
+From ( rst term of) (1), it follows that b(t) and c(t) are non-decreasing
+functions on [0;1) and the limit of each exists as t!1. Since L in (1) is an
+arbitrary selected bound, we can also assume that
+1 c(t) b(t) L;
+lim
+t!1
+c(t) =c
+0
+; lim
+t!1
+b(t) =b
+0
+1 c
+0
+ b
+0
+ L:
+(1:3)
+Remark 1.1. If (1.1) is the constant coe cient delay differential equation
+:::
+x +a x + _ x +cx(t r) = 0, then conditions (1)-(2) reduce to the Routh-Hurwitz
+conditions a > 0;c > 0 and a > c. To show this we let a(t) = a;b(t) = 1 and
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 20Differential Equations and Control Processes, N 1, 2010
+c(t) = 1 and f(x(t r)) =cx(t r).
+2. Preliminaries and Stability Results
+We shall in this section give the stability results for (1.1), (hence for system
+(1.2)). First, we will give the stability criteria for the general non-autonomous
+delay differential system. We consider
+_ x =f(t;x
+t
+); x
+t
+=x(t + );  r    0; (2:1)
+wheref : [0;1) C
+H
+!IR
+n
+is continuous and takes bounded sets into bounded
+sets andf(t; 0) = 0: Here (C;k k) is the Banach space of continuous functions  :
+[ r; 0]!IR
+n
+with the supremum norm,C
+H
+is the open H-ball inC. Standard
+existence theory [4]shows that if  2C
+H
+and t  0, then there is at least one
+continuous solutionx(t;t
+0
+; ) on [t
+0
+;t
+0
++ff) satisfying (2.1) fort>t
+0
+;x
+t
+(t
+0
+; ) =
+  and ff some positive constant; if there is a closed subsetB C
+H
+such that
+the solution remains inB, thenff =1. Also, (1.1) will denote the norm inIR
+n
+withjxj = max
+1 i n
+jx
+i
+j.
+We are concerned here with stability in the context of Lyapunov's direct
+method. Thus, we are concerned with continuous, strictly increasing functions
+W
+i
+: [0;1) ! [0;1) with W
+i
+(0) = 0, called wedges, and with Lyapunov
+functionals, V .
+De nition 2.1 [8]. A continuous functional V : [0;1) C
+H
+! [0;1) which
+is locally Lipschitz in   is called a Lyapunov functional for (2.1) if there is a
+wedge W with
+(i) W (j (0)j) V (t; ); V (t; 0) = 0; and
+(ii)
+_
+V
+(1:2)
+(t;x
+t
+) = lim sup
+h!0
+1
+h
+fV (t +h;x
+t+h
+(t
+0
+; )) V (t;x
+t
+(t
+0
+; ))g  0.
+We have the following fundamental de nitions:
+De nition 2.2 [8]. (Stability de nitions). Since f(t; 0) = 0; x(t)  0 is a
+solution of (2.1) and its is said to be
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 21Differential Equations and Control Processes, N 1, 2010
+(a) stable if for each   > 0 there is a   > 0 such that [t  0;k k <  ;t  t
+0
+]
+implies thatjx(t;t
+0
+; )j< ;
+(b) uniformly stable if for each  > 0;t  0 there is a   > 0 such that [k k<
+ ;t t
+0
+] implies thatjx(t;t
+0
+; )j< ;
+(c) asymptotically stable if it is stable and if for each t  0 thee is a  > 0
+such thatk k< implies thatjx(t;t
+0
+; )j! 0 as t1;
+(d) uniformly asymptotically stable if it is uniformly stable and if there is a
+ > 0 and for each   > 0 there is a T > 0 such that [t  0;k k < ;t 
+t
+0
++T ] implies thatjx(t;t
+0
+; )j< .
+The following is the classical theorem on uniform stability for the solution
+of (2.1). It goes back to Krasovskii [14].
+Theorem 2.1 [7].If there is a Lyapunov functional for (2.1) and wedges satis-
+fying:
+(i) W
+1
+(j (0)j) V (t; ) W
+2
+(k k) and
+(ii)
+_
+V
+(2:1)
+(t;x
+t
+)  0.
+Then x = 0 is uniformly stable.
+The basic conjecture for (2.1) on uniform asymptotic stability also goes back
+to Krasovskii [14] and may be stated as follows.
+Theorem 2.2 [7].If there is a Lyapunov functional for (2.1) and wedges such
+that:
+(i) W
+1
+(j (0)j) V (t; ) W
+2
+(k k) and
+(ii)
+_
+V
+(2:1)
+(t;x
+t
+)  W
+3
+(jx(t)j):
+Then the zero solution of (2.1) is uniformly asymptotically stable.
+3. Proof of Theorem 1.1.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 22Differential Equations and Control Processes, N 1, 2010
+We consider, in place of (1.1) the equivalent system form
+_ x = y
+_ y = z
+_ z =  a(t)z b(t)y c(t)f(x) +c(t)
+Z
+t
+t r
+f
+0
+(x(s))y(s)ds; (3:1)
+and denote(t) =
+Z
+t
+0
+jc
+0
+(s)jds. It may be assumed that
+Z
+1
+0
+jc
+0
+(t)jdt N <1.
+We de ne the Lyapunov functional V (t;x
+t
+;y
+t
+;z
+t
+) as:
+V (t;x
+t
+;y
+t
+;z
+t
+) =e
+ (t)
+U(t;x
+t
+;y
+t
+;z
+t
+); (3:2)
+where
+U(t;x
+t
+;y
+t
+;z
+t
+) = c(t)
+Z
+x
+0
+f( )d  +
+1
+2
+fffb(t)y
+2
++z
+2
+g +ffc(t)f(x)y
++
+1
+2
+a(t)y
+2
++yz + 
+Z
+0
+ r
+Z
+t
+t+s
+y
+2
+( )d ds; (3:3)
+ff> 0 is any number chosen such that
+1
+c
+>ff>
+1
+a
+(3:4)
+where   is a positive constant which will be determined later. So that, from
+(3.3) and (3.1),
+d
+dt
+U(t;x
+t
+;y
+y
+;z
+t
+) = c
+0
+(t)
+Z
+x
+0
+f( )d  +
+1
+2
+ffb
+0
+(t)y
+2
++ffc
+0
+(t)f(x)y +
+1
+2
+a
+0
+(t)y
+2
+ 
+ 
+b(t)y
+2
+ ffc(t)f
+0
+(x)y
+2
+  ry
+2
+	
+ fffa(t)  1gz
+2
++c(t)y
+Z
+t
+t r
+f
+0
+(x(s))y(s)ds +ffc(t)z
+Z
+t
+t r
+f
+0
+(x(s))y(s)ds
++ 
+Z
+t
+t r
+y
+2
+( )d :
+By (2) and using 2uv u
+2
++v
+2
+, we obtain
+c(t)y
+Z
+t
+t r
+f
+0
+(x(s))y(s)ds 
+1
+2
+Lcry
+2
++
+1
+2
+Lc
+Z
+t
+t r
+y
+2
+(s)ds
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 23Differential Equations and Control Processes, N 1, 2010
+and
+ffc(t)z
+Z
+t
+t r
+f
+0
+(x(s))y(s)ds 
+1
+2
+ffLcrz
+2
++
+1
+2
+ffLc
+Z
+t
+t r
+y
+2
+(s)ds:
+Therefore
+d
+dt
+U(t;x
+t
+;y
+t
+;z
+t
+)   c
+0
+(t)
+Z
+x
+0
+f( )d  +
+1
+2
+ffb
+0
+(t)y
+2
++ffc
+0
+(t)f(x)y +
+1
+2
+a
+0
+(t)y
+2
+ 
+ 
+b(t) ffc(t)f
+0
+(x) 
+1
+2
+(Lc + 2 )r
+ 
+y
+2
+ 
+ 
+ffa(t)  1 
+1
+2
+ffLcr
+	
+z
+2
++
+ 
+1
+2
+Lc(1 +ff)  
+ Z
+t
+t r
+y
+2
+( )d :
+If we take   =
+Lc(1 +ff)
+2
+> 0; we obtain
+d
+dt
+U(t;x
+t
+;y
+t
+;z
+t
+)   c
+0
+(t)
+Z
+x
+0
+f( )d  +
+1
+2
+ffb
+0
+(t)y
+2
++ffc
+0
+(t)f(x)y +
+1
+2
+a
+0
+(t)y
+2
+ 
+ 
+b(t) ffc(t)f
+0
+(x) 
+1
+2
+Lc(2 +ff)r
+ 
+y
+2
+ 
+ 
+ffa(t)  1 
+1
+2
+ffLcr
+ 
+z
+2
+:
+By (1)-(3), we obtain
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 24Differential Equations and Control Processes, N 1, 2010
+d
+dt
+U(t;x
+t
+;y
+t
+;z
+t
+)   c
+0
+(t)
+Z
+x
+0
+f( )d  +
+1
+2
+ffb
+0
+(t)y
+2
++ffc
+0
+(t)f(x)y
+ 
+ 
+c(t)
+ 
+b(t)
+c(t)
+ fff
+0
+(x)
+ 
+ 
+1
+2
+a
+0
+(t) 
+1
+2
+(2 +ff)Lcr
+ 
+y
+2
+ 
+ 
+ffa(t)  1 
+1
+2
+ffLcr
+ 
+z
+2
+  c
+0
+(t)
+Z
+x
+0
+f( )d  +
+1
+2
+ffb
+0
+(t)y
+2
++ffc
+0
+(t)f(x)y
+ 
+ 
+(1 ffc)  
+1
+ 
+1
+2
+(2 +ff)Lcr
+ 
+y
+2
+ 
+ 
+ffa  1 
+1
+2
+ffLcr
+ 
+z
+2
+:
+If we choose
+r< min
+ 
+2[(1 ffc)  
+1
+]
+(2 +ff)Lc
+;
+2(ffa  1)
+ffLc
+ 
+;
+we have that there exists  
+2
+> 0 such that
+d
+dt
+U(t;x
+t
+;y
+t
+;z
+t
+) c
+0
+(t)
+Z
+x
+0
+f( )d  +
+1
+2
+ffb
+0
+(t)y
+2
++ffc
+0
+(t)f(x)y  
+2
+(y
+2
++z
+2
+):
+Next, we show that
+c
+0
+(t)
+Z
+x
+0
+f( )d  +
+1
+2
+ffb
+0
+(t)y
+2
++ffc
+0
+(t)f(x)y  0
+for all x;y and t  0. From (1), L  b
+0
+(t)  c
+0
+(t)  0 for t  0; if c
+0
+(t) = 0,
+then
+c
+0
+(t)
+Z
+x
+0
+f( )d  +
+1
+2
+ffb
+0
+(t)y
+2
++ffc
+0
+(t)f(x)y =
+1
+2
+ffb
+0
+(t)y
+2
+  0
+since b
+0
+(t)  0. For those t's such that c
+0
+(t)< 0, we have
+c
+0
+(t)
+Z
+x
+0
+f( )d  +
+1
+2
+ffb
+0
+(t)y
+2
++ffc
+0
+(t)f(x)y
+=
+1
+2
+ffc
+0
+(t)
+ 
+2ff
+ 1
+Z
+x
+0
+f( )d  +
+b
+0
+(t)
+c
+0
+(t)
+y
+2
++ 2f(x)y
+ 
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 25Differential Equations and Control Processes, N 1, 2010
+ 
+1
+2
+ffc
+0
+(t)
+ 
+2ff
+ 1
+Z
+x
+0
+f( )d  +y
+2
++ 2f(x)y
+ 
+=
+1
+2
+ffc
+0
+(t)
+ 
+(y +f(x))
+2
++ 2ff
+ 1
+Z
+x
+0
+f1 fff
+0
+( )gf( )d 
+ 
+:
+By hypotheses (2) and (3), 1 fff
+0
+(x)  1 ffc > 0, in view of (3.4); and so
+using hypothesis (2), we  nd that
+2ff
+ 1
+Z
+x
+0
+f1 fff
+0
+( )gf( )d  ff
+ 1
+(1 ffc) 
+0
+x
+2
+:
+Hence
+c
+0
+(t)
+Z
+x
+0
+f( )d  +
+1
+2
+ffb
+0
+(t)y
+2
++ffc
+0
+(t)f(x)y  0:
+Therefore
+d
+dt
+U(t;x
+t
+;y
+t
+;z
+t
+)   
+2
+(y
+2
++z
+2
+): (3:5)
+Since
+c(t)
+Z
+x
+0
+f( )d  +
+1
+2
+fffb(t)y
+2
++z
+2
+g +ffc(t)f(x)y +
+1
+2
+a(t)y
+2
++yz
+=
+1
+2
+c(t)
+ 
+2
+Z
+x
+0
+f( )d  +ff
+b(t)
+c(t)
+y
+2
++ 2fff(x)y
+ 
++
+1
+2
+ 
+a(t)y
+2
++ 2yz +ffz
+2
+	
+:
+ 
+1
+2
+c(t)
+ 
+2
+Z
+x
+0
+f( )d  +ffy
+2
++ 2fff(x)y
+ 
++
+1
+2
+ 
+a(t)y
+2
++ 2yz +ffz
+2
+	
+=
+1
+2
+c(t)
+ 
+ff(y +f(x))
+2
++
+Z
+x
+0
+f1 fff
+0
+( )gf( )d 
+ 
++
+1
+2
+(
+a(t)
+ 
+y +
+1
+a(t)
+z
+ 
+2
++
+1
+a(t)
+(ffa(t)  1)z
+2
+)
+By (1)-(3), hence there exists some  
+3
+> 0 (small enough) such that
+c(t)
+Z
+x
+0
+f( )d  +
+1
+2
+fffb(t)y
+2
++z
+2
+g+ffc(t)f(x)y +
+1
+2
+a(t)y
+2
++yz  
+3
+(x
+2
++y
+2
++z
+2
+):
+Thus,
+U(t;x
+t
+;y
+t
+;z
+t
+)  
+3
+(x
+2
++y
+2
++z
+2
+) (3:6)
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 26Differential Equations and Control Processes, N 1, 2010
+Therefore we can  nd a continuous function W
+1
+(j (0)j) with
+W
+1
+(j (0)j)  0 and W
+1
+(j (0)j) V (t; ):
+The existence of a continuous function W
+2
+(k k) which satis es the inequality
+V (t; ) W
+2
+(k k), is easily veri ed.
+From (3.2), we  nd
+d
+dt
+V (t;x
+t
+;y
+t
+;z
+t
+) =e
+ (t)
+ 
+d
+dt
+U(t;x
+t
+;y
+t
+;z
+t
+) jc
+0
+(t)jU(t;x
+t
+;y
+t
+;z
+t
+)
+ 
+:
+Using the inequalities (3.5) and (3.6), and the fact thatjc
+0
+(t)j  0; we have
+d
+dt
+U(t;x
+t
+;y
+t
+;z
+t
+) jc
+0
+(t)jU(t;x
+t
+;y
+t
+;z
+t
+)   
+2
+(y
+2
++z
+2
+)  
+4
+(x
+2
++y
+2
++z
+2
+);
+therefore, if
+r< min
+ 
+2((1 ffc)  
+1
+)
+(2 +ff)Lc
+0
+2(ffa  1)
+ffLc
+ 
+;
+we have
+d
+dt
+V (t;x
+t
+;y
+t
+;z
+t
+)   e
+(t)
+(x
+2
+;x
+2
+y
++z
+2
+)  W
+3
+(jx(t)j) for some > 0 (3:7)
+As a result of (3.7) and the existence of the functions W
+1
+(j (0)j) and W
+2
+(k k)
+we note that the zero of (3.1) is uniformly asymptotically stable.
+Remark 3.1. Clearly, our theorem is an improvement and extension of Theo-
+rem A. In particular, from our theorem we see that (iv) assumed in Theorem
+A is not necessary, and (i) (ii) and (iii) can be replaced by (1),(2) and (3) of
+Theorem 1.1 respectively, for the uniform asymptotic stability of the zero solu-
+tion of (1.1).
+References
+[1 ] A. U. Afuwape and M. O. Omeike, On the stability and boundedness of
+solutions of a kind of third order delay differential equations, Appl. Math.
+Comput. (2007), doi:10.1016/j.amc.2007.11.037.
+[2 ] T.A. Burton, Uniform asymptotic stability in functional differential equa-
+tions, Proc. Amer. Math Soc. 68 (1978), 195-199.
+[3 ] T.A. Burton, Volterra Integral and Differential Equations, Academic Press,
+New York,1983.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 27Differential Equations and Control Processes, N 1, 2010
+[4 ] T. A. Burton, Stability and Periodic Solutions of Ordinary and Functional
+Differential Equations, Academic Press, New York, 1985.
+[5 ] T. A. Burton, An extension of Krasovskii's stability theory, Engrg. Cyber-
+netics 1 (1993), 44-51.
+[6 ] T. A. Burton and L. Hatvani, Stability theorems for nonautonomous func-
+tional differential equations by Liapunov functional, Tohoku Math. J. 41
+(1984), 295-306.
+[7 ] T. A. Burton and R. Hering, Liapunov theory for functional differential
+equations, Rocky Mountain J. Math. 24 (1994), 3-17.
+[8 ] T. A. Burton and G. Makey, Asymptotic stability for functional differential
+equations, Acta Math. Hungar, 65 (1994), 243-251.
+[9 ] T.A. Burton and S. Zhang, Uni ed boundedness, periodicity, and stability
+in ordinary and functional differential equations, Ann. Mat. Pura Appl.
+145 (1986), 129-158.
+[10 ] T. Furumochi, Stability and boundedness in functional differential equa-
+tions, J. Math. Anal. Appl. 113 (1986), 473-489.
+[11 ] K. Gopalsamy, Stability and Oscillations in Delay Differentials Equations
+of Population Dynamics, Kluwer-Academic, Dordrecht 1992.
+[12 ] J. K. Hale, Theory of Functional Differential Equations, Springer, New
+York, 1977.
+[13 ] V. Kolmanovskii and A. Myshkis, Introduction to the Theory and Appli-
+cations of Functional Differential Equations, Kluwer-Academic, Dordrecht,
+1999.
+[14 ] N. N. Krasovskii, Stability of Motion, Stanford Univ. Press, Stanford,
+CA, 1963.
+[15 ] S. Li and L. Wen, Functional Differential Equations, Human Science and
+Technology Press, 1987.
+[16 ] Y. Qin, Y. Liu and L. Wang, Stability of Motion for Dynamic Systems
+with Delay,Academic Press, Beijing, 1966.
+[17 ] A. I. Sadek, Stability and boundedness of a kind of third-order delay
+differential system, Appl. Math. Lett. 16 (2003), 657-662.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 28Differential Equations and Control Processes, N 1, 2010
+[18 ] A. I. Sadek, On the stability of solutions of some non-autonomous delay
+differential equations of the third order, Asymptotic Analysis 43 (2005)
+1-7.
+[19 ] T. Yoshizawa, Stability Theorem by Liapunov's Second Method, Mathe-
+matical Society of Japan, 1966.
+[20 ] Y. Zhu, On stability, boundedness and existence of periodic solution of a
+kind of third-order nonlinear delay differential system, Ann. Differential
+Equations 8(2), 249-259.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 29

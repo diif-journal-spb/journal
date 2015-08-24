@@ -1,0 +1,554 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 2, 1998
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Group analysis of differential equations
+DISCRETE-GROUP ANALYSIS
+AND THE CONSTRUCTION OF EXACT MODELS
+V.F.ZAITSEV
+St.Petersburg State University, Russia
+Abstract.
+At the end of XIX Century S.Lie offered group approach of integration
+of ordinary differential equations (ODE) which forced out algorithms of ﬁrst
+generation (more exactly, set of the empirical methods which based known
+E.Kamke’s reference-book) at the middle of XX Century. Now, set of algo-
+rithms of second generation were formed fully and it is able to ﬁnd symmetries
+of ODE (Lie groups, discrete groups and ﬁrst integrals) and to integrate of
+equation in analytic form in event that quantity of symmetries is suﬃciently.
+Nevertheless, a number of the equations describing real processes and phe-
+nomena don’t enjoy ”rich” of symmetries because experimental results are ab-
+solutly exact never. These results are modeled as series, moreover, transition
+to more exact approximation ”kills” even ”poor” symmetries which simpliﬁed
+model had.
+Offering algorithms of third generation permit to show necessary (some-
+times suﬃcient too) criterious of existence of the model with a priori symmetryDifferential Equations and Control Processes, N2, 1998
+(algorithms prognostic) or to discribe all models of the given form with re-
+quired symmetry (algorithms of inverse problem). As problem of modelling
+is many-valied the above set of equation is more effective for description of
+real processes and phenomena then looking over all variants and making more
+precise of concrete models by algorithms of second generation.
+The generalized problem of two motionless centres is a good example of
+algorithm of third generation for modelling of orbit of artiﬁcial Earth satellite.
+It’s well known that differential equations theory takes a central place
+among possible instruments for the modelling of different processes and phe-
+nomena. All the existing methods of exact solution of ordinary differential
+equations (ODE) can be conditionally divided in two groups:
+A)asearchfortransformationoftheoriginalODEDtosomeotherODED
+1
+which belongs to one of the ”standard” classes of ODE having known solutions;
+B) a search for transformation leaving original ODE D invariant, i.e. trans-
+formation into ”itself”, that gives independent information about solution.
+Practically all of the classic methods of exact solution of ODE use the
+approach A based on a rather restricted number of ”standard” soluble ODE,
+therefore transformations often are ”artiﬁcial”. Thus the known soluble equa-
+tions generate a set without visible logic, its classiﬁcation is diﬃcult, and their
+search was essentially a matter of art until the nearest past, the fact that can
+be perfectly illustrated with the help of [1]. To develop the approach A one
+can apply different transformations to ”standard” soluble equations inﬁnitely
+extending the set of such equations. However the probability that the ODE
+chosen for the investigation belongs to the extended set is very small.
+The approach B suggested by S.Lie in the end of the last century is based
+on a search of continuous transformation groups leaving the tested equation
+invariant. Speciﬁcally, for example, a knowledge of a two-parmetric group ad-
+mitted by a second order ODE gives a general solution of this equation (if there
+is a possibility to ﬁnd universal invariants of the group). However, as S.Lie has
+shown the search for a group admitted by a ﬁrst order ODE is as diﬃcult as
+the search for its general solution; the Lie method for higher order ODE gives
+rather non-numerous partial cases of solubility which simply had slipped from
+the attention of the researchers who were using the approach A. Nevertheless,
+the approach B allows to classify the cases of order reduction of the ODE; this
+approach has been very effective for partial differential equations (see, for ex.,
+[2]).
+Electronic Journal.  22Differential Equations and Control Processes, N2, 1998
+A wish to unite the advantages and to possibly free oneself from the ﬂaws
+of the approaches A and B in the case of ODE has led to the creating of a
+discrete-group analysis. It may seem paradoxical, but the decreed goal can be
+attainedbygivinguptwobasicprinciples–continuityandintegrability. Giving
+up continuity involves non-applicability of the inﬁnitesimal approach and as a
+consequence nonlinearity of the deﬁning system. Giving up integrability one
+would think that we deprive ourselves of the property which is the basic goal of
+our research. Yet practical applications show that on the contrary a realization
+of the idea pointed out above turns out to be very fruitful and allows one to
+describediscretesymmetriesoftheclassesofequationswhichhavenointegrable
+cases at all as well as to discover some new solvable cases on the basis of
+the known ones, which couldn’t be usually found by another regular methods
+(classical and group-theoretical ones).
+The discrete-group analysis (DGA) does not operate with a single equation
+as in applications of Lie method, but operates with a class of equations D ,
+dependingonavector~ aofparameters,containingtheinvestigatedequation;but
+contrary to the approach A one consider the transformations of the given class
+P , which are closed in itself on a chosen class of ODE, i.e. the transformations,
+which bring an element of the class D D(~ a) ∈ D
+1
+⊂ D again to an element
+of the class D : D(~ a) → D(
+~
+b) (elements ~ a and
+~
+b may either coincide, or not
+coincide).
+A set G of transformations, which possess the pointed out property, is
+named a discrete transformation group (DTG), admissible by a class D . The
+invariance of a class of ODE with respect to DTG does not directly imply the
+integrability (as in the case of approach B) due to giving up the continuity
+condition (an admissible DTG is as a rule essentially larger than a continuous
+equivalence group [2] and it can’t be found by Lie method). Nevertheless a
+knowledge of a DTG allows one to get a wide-range information about the
+properties of a class of ODE:
+1. One determines a discrete symmetry of a class D with a use of classiﬁ-
+cation parameter – vector~ a (a group classiﬁcation of a class D ).
+2. A class D splits into non-intersecting equivalence subclasses - orbits,
+which can not be connected by DTGG transformations of elements of D .
+3. Invariants of DTG are determined – these are equations and subclasses
+of equations from D , which are invariant with respect to either all or some
+transformations from G (such discrete invariants, as a rule, can’t be found by
+Lie method).
+Electronic Journal.  23Differential Equations and Control Processes, N2, 1998
+4. In some cases one can ﬁnd classes of particular solutions of ODE for a
+class D or some subclass D
+1
+⊂ D .
+Itiswellknown[2],thattheknowledgeofaone-parametricLiegroupadmis-
+sible by ordinary differential equation gives us a ﬁrst integral of this equation,
+i.e. conservation law. In this connection one has a right to ask oneself what is
+the physical meaning of a discrete transformation group. Firstly it is obvious
+that any orbit of the group can be represented by some polyhedron in the space
+of parameters and any generator of the group speciﬁes a discrete symmetry of
+this polyhedron similar to a crystallographic group. Secondly a discrete trans-
+formation group can be treated either as a similarity law for the models or,
+taking into account a discreteness of symmetry (i.e. an absence of a connectiv-
+ityoftheorbit), asa resonance ora commensurability of the models . Finally,
+in some cases (for instance, for many linear equations) a discrete group admits
+a unique interpretation as selection rules , moreover that group elements often
+act as transformations of translation of the spectruma : λ
+k
+→ λ
+k+1
+.
+The discrete-group method of integration is based on the next two princi-
+ples.
+1. Any orbit of DTG G , which contains a solvable element, is solvable as
+a whole.
+2. A substitution of a concomitant [2] of a DTG G to the invariant of a
+DTGG brings it to the integrable or canonical form.
+Therefore a set of integrable cases of a class D – ”a mesh” – has a structure
+D
+0
+S
+GD
+0
+S
+D
+∗
+, where D
+0
+, D
+∗
+⊂ D, where D
+0
+is a subset of the elements of D,
+which are integrable by classical methods (the approaches A and B),GD
+0
+is a
+set of elements of all the orbits of subset D
+0
+, D
+∗
+is a set of solvable invariants
+of a class D . Let us note that the extension of a ”classical” set D
+0
+by means
+of DGA will be the more essential the more elements ofG will belong to those
+classes of transformations the search of which is diﬃcult by classical methods
+(we mean the point transformations for ODE of the 1−st order, the Backlund
+transformations for ODE of the 2−nd order and nonlocal transformations for
+ODE of the 3−rd and of the higher orger).
+For example the generalized Emden-Fowler equation
+y
+00
+= Ax
+n
+y
+m
+(y
+0
+)
+l
+, ~ a = (n,m,l) (1)
+admits the basic (i.e. valid for arbitrary n , m , l) group D
+3
+of the order 6 [3]
+but only the subgroup of the 2−nd order consists of point transformations.
+Therefore the application of only the basic group allows us to increase the
+Electronic Journal.  24Differential Equations and Control Processes, N2, 1998
+number of integrable cases of the equation (1) in three times as compared with
+the ”classical” set. A great advantage of DGA before the approach A is the
+algorithmicity of its principal methods which are basically analogous to Lie
+method (the approach B). The most general (direct) method consists in the
+following procedure. An arbitrary equation of a class D
+y
+(n)
+= F(x,y,y
+0
+,...,y
+(n−1)
+,~ a)
+is transformed by a substitution of a general form, which belongs to a chosen
+class of transformations, for example, to the class of Backlund transformations
+of the order k
+y = f(t,u, ˙ u,...,u
+(k)
+),
+x = g(t,u, ˙ u,...,u
+(k)
+) (2)
+with the following condition of closure – the exclusion of the highest derivative
+u
+(n)
+with the help of the transformed equation, belonging to the same class D
+u
+(n)
+= F(t,u, ˙ u,...,u
+(n−1)
+,
+~
+b). (3)
+Let us note that if we change the closure condition (3) by the condition to
+belong to another class D
+1
+u
+(n)
+= F
+1
+(t,u, ˙ u,...,u
+(n−1)
+,~ α),
+then we’ll get the mappingH : D−→ D
+1
+instead of DTG, admissible by a class
+D .
+In any case the obtained differential expression splits with respect to dif-
+ferent degrees of independent variables u
+(s)
+, where k < s < n , which gives
+an overdetermined set of partial differential equations where the unknowns are
+the functions f and g from the transformation (2). In the general case the
+determining system is nonlinear as contrary to analogous linear system of Lie
+algorithm. Asuccessivespecifyingofatransformationclassleadssuccessivelyto
+the determining system of ordinary differential equations and to the algebraical
+system.
+All the following operations with the determined DTG may be fulﬁlled not
+with the equations and transformations but with their algebraical representa-
+tions – the vectors~ a and
+~
+b and the algebraical relations induced by the action
+of DTGG generators
+g
+i
+: D(~ a)−→ D(
+~
+b
+i
+),=⇒
+~
+b
+i
+= G
+i
+(~ a).
+Electronic Journal.  25Differential Equations and Control Processes, N2, 1998
+A great advantage of the discrete-group analysis is also a possibility of a prog-
+nosis of the solution structure, i.e. of its representation by speciﬁc classes of
+functions: either elementary, or special functions. For the purpose of illustra-
+tion of this statement we shall use the differential algebra technique.
+LetC
+p
+[τ,h
+1
+(τ),...,h
+p−1
+(τ)]beadifferentialring[4], generatedbyfunctions
+h
+1
+,...,h
+p−1
+,with a differentiation deﬁned as the ordinary differentiation with
+respect to the argument τ . The number p of functionally independent gener-
+ators will named the rank of the ring C
+p
+. Let us consider a subset
+˜
+C
+p
+⊂ C
+p
+which consists of products of degrees (not necessarily integer) of polynomials
+of the following form
+P
+σ
+=
+X
+(k)
+τ
+α
+k
+h
+β
+1k
+1
+...h
+β
+p−1,k
+k−1
+, (4)
+where α
+k
+,...,β
+p−1,k
+, are integers. Apparently
+˜
+C
+p
+is also a differential ring of
+the rank p . The following statement takes place.
+THEOREM. The subring
+˜
+C
+p
+is invariant with respect to any DTG G ,
+which is generated by the Backlund transformations (2) if the functions f and
+g are rational.
+CONSEQUENCE. Let a class of ODE D admits the DTGG , which meets
+the conditions of the theorem and the element D(~ a) has a general solution,
+given in a parametric form (x(τ),y(τ))∈
+˜
+C
+p
+. Then a general solution of any
+element of the orbitGD(~ a) belongs to
+˜
+C
+p
+.
+A REMARK. The limitation, that the class of Backlund transformations
+(2) must be the class of rational differential substitutions, can be omitted for
+the appropriate extension of the original differential ring C
+p
+.
+EXAMPLE. The orbit of the element (0,−1/2,0) of the pseudogroup, ad-
+missible by the class (1) has an order 16. The transformationsr,g,s are speci-
+ﬁed by the rational expressoins of new variables:
+r : (n,m,l)−→ (m,n,3−l), x = u,y = t;
+g : (n,m,l)−→ (1/(1−l),−n/(n+1),(2m+1)/m), x = u
+1/(n+1)
+,y = ˙ u
+−1/m
+;
+s : (n,m,0)−→ (−n−m−3,m,0), x = t
+−1
+,y = t
+−1
+u.
+Taking into account that the solution of the original equation (0,−1/2,0) can
+be expressed through the polynomial functions of τ : x(τ) = C
+3
+1
+(τ
+3
+− 3τ +
+C
+2
+),y(τ) = C
+4
+1
+(τ
+2
+−1)
+2
+, we reveal easily, that all the solutions of the equations
+taked out from the orbit of DTG are elements of the differential ring C
+1
+[τ] of
+rank 1; more precisely they are the elements of the subring
+˜
+C
+1
+consisting of the
+Electronic Journal.  26Differential Equations and Control Processes, N2, 1998
+products of degrees of polynomial functions of τ of the form (4). In this case a
+system of polynomials P
+σ
+has the form
+P
+0
+= 1,
+P
+1
+= τ,
+P
+2
+= τ
+2
+−1,
+P
+3
+= τ
+3
+−3τ +C
+2
+,
+P
+4
+= τ
+4
+−6τ
+2
++4C
+2
+τ−3,
+P
+5
+= τ
+5
+−10τ
+3
++10C
+2
+τ
+2
+−15τ +2C
+2
+,
+P
+6
+= τ
+6
+−15τ
+4
++20C
+2
+τ
+3
+−45τ
+2
++12C
+2
+τ−8C
+2
+2
++27.
+It is obvious, that
+˙
+P
+σ
+= σP
+σ−1
+. A ”closure” of the differential ring, generated
+by this system of polynomials, takes place as a consequence of the relations
+4P
+1
+P
+3
+−3P
+2
+2
+= P
+4
+,
+9P
+2
+P
+4
+−8P
+2
+3
+= P
+6
+,
+4P
+3
+P
+5
+−3P
+2
+4
+= P
+8
+≡ P
+2
+P
+6
+.
+note that further growth of polynomial degree breaks off as a consequence of
+the reduction P
+8
+= P
+2
+P
+6
+. A solution of any equation of the orbit can be
+represented in the form
+x(τ) = aC
+r
+1
+1
+P
+r
+2
+α
+P
+r
+3
+β
+, y(τ) = bC
+s
+1
+1
+P
+s
+2
+γ
+P
+s
+3
+δ
+.
+For example, for the equation (1,−7/4,7/5) r
+1
+= 27,r
+2
+=−1/2,r
+3
+= 1,α =
+3,β = 6;s
+1
+= 32,s
+2
+= 4/3,s
+3
+= 0,γ = 4.
+Apparently a prognosis of solvability and of the solution structure allows
+onetoinvestigateeasilyanalyticalpropertiesofsolutionsoftheequationswhich
+belong to solvable orbits and also to classify them according to their analytical
+features.
+References
+[1] Kamke E. Differentialgleichungen. Losungsmethoden und Losungen. Teil 1
+: Gewohnliche Differentialgleichungen, 6th ed., Akademische Verlag, Geest
+& Portig, Leipzig, 1959.
+Electronic Journal.  27Differential Equations and Control Processes, N2, 1998
+[2] Ovsyannikov L.V. Group analysis of differential equations. Academic Press,
+1982.
+[3] Zaitsev V.F. On discrete-group analysis of ordinary differential equations.
+Soviet Math. Dokl., Vol. 37(1988), N 2, pp. 403–406.
+[4] Kaplansky I. An introduction to differential algebra. Paris, Hermann, 1957.
+Electronic Journal.  28

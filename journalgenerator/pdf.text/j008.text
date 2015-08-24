@@ -1,0 +1,629 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 1, 1997
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Group analysis of differential equations
+CREATION OF NEW METHODS OF
+MATHEMATICAL PHYSICS,
+SEARCH OF THE EXACT SOLUTIONS
+AND FIRST INTEGRALS OF NONLINEAR
+DIFFERENTIAL EQUATIONS
+V.F.ZAITSEV
+St.Petersburg State University, Russia
+A.V.FLEGONTOV
+St.-Petersburg, Russia, Institute for Informatics and Automation of the
+Russian Academy of Science
+E-mail : aﬂeg@iias.spb.su
+Abstract.
+The symmetry is funndamental property of any phenomenon or process. In
+an equal degree it concerns and model - equation, describing this phenomenon
+orprocess. Moreover, themodelasmathematicalabstraction, asarule, moreis
+idealized, than the ﬁrst copy, and by virtue of this circumstance has symmetry
+of the higher order. The methods symmetry of research are effective practically
+for all types of equations - from algebraic up to integro-differential.Differential Equations and Control Processes, N 1, 1997
+1 Symmetry and Invariant
+Atalevelofunformalconceptssymmetry deﬁneaspropertytoremainconstant
+underactionofanytransformations. Constantorinvariant canbetheseparate
+equation or class of equations, and in the latter case each element of a class will
+be not without fail transformed ” to self ”, and can go in other element that of
+a class; transformation of equivalence on a class is thus deﬁned.
+Main problems of the practical group analysis of differential equations are:
+1) Development regular (algorithm) methods of search of all kinds of sym-
+metry of equations;
+2)Decisionofreturnproblems-searchofclassesofequations(or, thatmost
+- classes of models), having by a priori symmetry of a given kind and other by
+a priori properties;
+3) Establishment of general principles of use found symmetry in practical
+problems.
+Large advantage of the group analysis is the fact, that his methods per-
+mit to receive the solutions in a closed kind – so-called exact solutions, not
+containing of limiting transitions, iterations and norepresentation in a kind of
+the ﬁnal formulas of series. The exact solutions of differential equations always
+played and continue to play a huge role in formation of correct understanding
+of qualitative features of many phenomena and processes in various areas of
+science.
+The equations of applied and theoretical physics frequently contain param-
+eters or functions, which are experimentally and consequently are not strictly
+ﬁxed. At the same time the equations, simulating the real phenomena and
+processes, should be enough simple that they can successfully be be to be anal-
+ysed and decide. Naturally as one of possible criteria of simplicity to take the
+requirement, that the modelly equation admitted the decision in the closed
+form.
+It should note, that even the partial exact solutions of nonlinear equations
+(including that, which have not clear physical sense and do not correspond to
+the real phenomena and processes) play an important role of ”testy” problems
+at check of correctness and valuation of accuracy various numerical, asymptot-
+ical and approached methods. Besides the admitting exact solutions an mod-
+elly equation and the problems form the basis for development new numerical,
+asymptotical and approached methods, which, in turn, permit to investigate
+Electronic Journal.  253Differential Equations and Control Processes, N 1, 1997
+already more complex problems, not having of the exact analytical solution.
+2 Group analysis
+The group analysis has arisen in at the end of XIX century as result of funda-
+mentalresearchesofthenorvegianmathematicianS.Lie. Intheelementarycase
+the search of symmetry of an equation is reduced to the search of continuous
+group of transformations
+(
+x =φ(x,y,a), x|
+a=0
+=x,
+y =ψ(x,y,a), y|
+a=0
+=y
+(1)
+continuously dependent from parameter a and leaving an equation invari-
+ant. The ﬁnal transformations (1) are unequivocally deﬁned the inﬁnitesimal
+operator
+X =ξ(x,y)∂
+x
++η(x,y)∂
+y
+, (2)
+coordinates which satisfy to Lie equations
+(
+dφ
+da
+=ξ(φ,ψ), φ(0) =x,
+dψ
+da
+=η(φ,ψ), ψ(0) =y
+,
+If group (1), admissible of a differential equation, and her invariant, i.e. func-
+tion, satisfying to a parity is known
+F(x,y) =F(x,y),
+about the order of this equation it is possible to lower per unit of (and if an
+equation of the ﬁrst order - integrate him in squaring).
+S.Lie considered and contact transformation
+x =φ(x,y,y
+0
+,a),
+y =ψ(x,y,y
+0
+,a),
+y
+0
+=χ(x,y,y
+0
+,a),
+in the formulas for which, as against dot transformations (1), enter and deriva-
+tive, but has appeared, that, for example, for equations of the second order
+it is impossible to ﬁnd admissible group, not entering some of the a priori as-
+sumptions of a structure of dependence of coordinates of the operator (2) from
+Electronic Journal.  254Differential Equations and Control Processes, N 1, 1997
+derivative. At the same time on prolongation of a XX century number of equa-
+tionsnothavingdotsymmetrygrew,butintegrateinsquaringorinthetermsof
+known special functions, and more and more urgent became the problem of the
+description of such equations on the basis of uniform of symmetry principles.
+Not less important was and development regular (algorithm) methods of the
+decision of such equations and construction of models with a priori properties.
+3 Discrete-group analysis
+In 1976 was the ﬁrst publication under the discrete - group analysis, in which
+were described of discretic symmetry of a generalized equation Emden-Fowler
+y
+00
+=Ax
+n
+y
+m
+(y
+0
+)
+l
+, ~ a = (n,m,l) (3)
+which for brevity is designated by a vector of essential parameters. The group
+of equivalence of a class of equations (3) can be given of the planar graph or no-
+planar,inwhichoneofforminghastheorder2andissetbydottransformation,
+and other has the order 3 and is set by Backlund transformation
+x =y
+1
+n+1
+, y =y
+0
+1
+m
+, y
+0
+=x
+1
+1−l
+, (4)
+which is tangent, but not in all continued space (x,y,y
+0
+), and only on manifold
+of the solutions of an initial equation (3). Such transformations can translate
+dot continuous groups in Lie-Backlund groups, which it is impossible to ﬁnd by
+classical Lie algorithm.
+Forexample, theequation(−m−3,m,0)admitstwodotoperators-scaling
+X
+1
+= (m−1)x∂
+x
++(m+1)y∂
+y
+and projective group
+X
+2
+=x
+2
+∂
+x
++xy∂
+y
+.
+Transformation
+x =y
+0
+, y =x
+−m−2
+, y
+0
+=−
+m+2
+A
+y
+−m
+(5)
+translates an initial equation in an equation
+ 
+1,−
+m+3
+m+2
+,
+2m+1
+m
+ 
+, admitting the
+scaling operator
+X
+1
+= 2x∂
+x
+−(m−1)(m−2)y∂
+y
+.
+Electronic Journal.  255Differential Equations and Control Processes, N 1, 1997
+The other dot operators at this equation is not present, and second admis-
+sible operator (the operator of Lie-Backlund group) can be received only by
+transformation of the operator X
+2
+with the help of the formulas (5):
+X
+2
+= (αy
+0
+−
+1
+m
+−xy
+−
+1
+m+2
+)∂
+x
+−(m+2)y
+m+1
+m+2
+∂
+y
+,
+where
+α =
+ 
+−
+A
+m+2
+ 
+−1/m
+.
+Moreover it is obvious, that if one of equations in the graph can be inte-
+grated, the other equations are too integrated, as the discretic group (in this
+case diedre group D
+3
+) is formed by already found transformations. Thus all
+decisions of elements of a determined orbit belong some (rather narrow) to
+a differential ring of functions, that permits to predict representation of the
+decision in the given terms.
+Therefore it is important not only to ﬁnd main discretic group admissible
+by a class of equations, but also to determine all expansions of this group on
+various specializations (i.e. subclasse of equations): each expansion increases
+the order of admissible group, hence, ”makes multiple copies” quantity of the
+integrated representatives of a class. So, at n = 1, l = 0 the graph of group
+D
+3
+up to the graph of group C
+2
+×D
+6
+of the order 24 is expanded.
+4 Equations of mathematical physics
+AgeneralizedequationEmden-Fowleranumberofclassesofequations2-thand
+3-rd order, having wide application in appendices, in particular, equation of a
+boundary layer for degree liquids is reduced
+y
+000
+=yy
+00
+2−n
+, (6)
+for which until recently was known only one case be solved n = 2. Found
+discreticgroups, admissiblebyanequation(3), havegivenmuch7ofadmissible
+cases:
+1. n =
+3
+5
+(
+y(τ) =A(τ
+2
+−C
+1
+)(τ
+3
+−3C
+1
+τ +C
+2
+)
+−1/2
+,
+x(τ) =B
+R
+(τ
+3
+−3C
+1
+τ +C
+2
+)
+−3/2
+dτ +C
+3
+,
+between A and B there is a pariti
+15
+2AB
+ 
+B
+2
+2A
+ 
+2/5
+=−1.
+Electronic Journal.  256Differential Equations and Control Processes, N 1, 1997
+2. n =
+5
+7
+(
+y(τ) =AE
+−1/6
+S
+−1
+1
+S
+2
+,
+x(τ) =B
+R
+E
+1/2
+S
+−3/2
+1
+dτ +C
+3
+,
+where
+7
+√
+3
+6AB
+ 
+3B
+2
+8A
+ 
+2/7
+= −1, E = C
+1
+exp(
+√
+3τ), S
+1
+= C
+1
+exp(
+√
+3τ)+C
+2
+sinτ,
+S
+2
+= 2C
+1
+exp(
+√
+3τ)−C
+2
+sinτ +
+√
+3C
+2
+cosτ.
+3. n =
+1
+7
+(
+y(τ) =AU
+−3/2
+V,
+x(τ) =B
+R
+P
+−1
+U
+−5/2
+dτ +C
+3
+,
+4. n =
+1
+4
+(
+y(τ) =AV,
+x(τ) =B
+R
+P
+−1
+U
+2
+dτ +C
+3
+,
+where P = (4τ
+3
+−C
+1
+)
+1/2
+,
+U =τ
+ 
+2
+C
+1
+Z
+τdτ
+P
++C
+2
+ 
+−
+P
+C
+1
+, V =P
+ 
+2
+C
+1
+Z
+τdτ
+P
++C
+2
+ 
+−
+4τ
+2
+C
+1
+.
+5. n =−1
+(
+y(τ) =Aτ
+2/3
+Z
+2/3
+,
+x(τ) =B
+ 
+Z
+2/3
++
+2
+3
+R
+τ
+−1
+Z
+2/3
+dτ
+ 
++C
+3
+,
+6. n = 1/2
+(
+y(τ) =Aτ
+−2/3
+h
+τ(lnZ
+1/3
+)
+0
+τ
++1/3
+i
+,
+x(τ) =B
+R
+τ
+−1
+(Z
+1/3
+)
+−2
+dτ +C
+3
+,
+where Bessel functions J
+ν
+and Y
+ν
+ﬁrst and second sort of the order ν corre-
+spondingly for a designation Z
+ν
+=C
+1
+J
+ν
+(τ)+C
+2
+Y
+ν
+(τ) are used.
+7. n = 1/5
+(
+y(τ) =Ae
+τ
+,
+x(τ) =B
+R
+[u(τ)]
+−1/2
+e
+3τ
+dτ +C
+3
+,
+where the function u(τ) is determined by the inversion of integral
+R
+du
+uω(u)
+=
+τ +C
+2
+, and the function ω(u) is the decision of an algebraic equation:
+ω−5
+(ω−4)
+4/5
+=u
+−1/5
+ 
+C
+1
+−
+2
+5
+u
+1/2
+ 
+.
+Electronic Journal.  257Differential Equations and Control Processes, N 1, 1997
+We shall notice, that some of a regional problem for an equation (6) have the
+ununique decision, therefore in this case the search new of integrated special-
+izations of an equation (6) is especially urgent.
+5 Groups, graphs and handbooks
+The linear equations admit, as a rule, inﬁnite discretic groups, and inﬁnite
+subgroup is present till any component of a vector of essential parameters. A
+goodillustrationcanalsoserveofthegraphofdiscreticgroupoftransformations
+of an hypergeometric Gauss equation representing inﬁnite 3-d a lattice (with
+slowly, equal to unit on each of parameters of hypergeometric Gauss function
+a,b,c), in each of units of which is truncated cubooctaedr (graph of group
+C
+2
+×S
+4
+of the order 48 - maximum ﬁnal subgroup).
+Discretic groups of transformations of linear equations contain subgroup,
+which induced of transformation of shift of a spectrum T : λ −→ λ + 1 of
+Sturm’s-Liouville problems, and the elements of such transformations are the
+decisionsofnonlinearequations(discreticanalogueofainversedispersionprob-
+lem).
+Thestatementofinverseproblemsforcontinuousgroupshasallowedtoﬁnd
+a general kind of equations of any order, admitting some operator of a kind (2)
+or dot algebra of greater dimension, than unit. If the inverse problem is put
+for tangent groups or Lie-Backlund operators, a kind of an auxiliary equation
+(as a rule, partial differential equation) - his order and degree of nonlinearity
+is predicted. The decision of this auxiliary equation gives a general kind of a
+right part of an ordinary differential equation, admitting given operator, that
+permits to choose among set of possible models that, which have required a
+priori symmetry.
+The opportunities of the modern group analysis are well illustrated by the
+help literature, the creation of which has become possible only in result of wide
+application of symmetry methods.
+We shall notice, that, as against the handbook Kamke E. [1], in the new
+handbook [2] are practically away of an trivial equation, and majority of equa-
+tions including in his practically classes of equations (dependent from any func-
+tions or, as a minimum, from any parameter) represent.
+At the present stage of development of mathematical modeling a role of
+the computer analysis of complex nonlinear multiparametrical problems has
+Electronic Journal.  258Differential Equations and Control Processes, N 1, 1997
+increased. The application of algorithms of analytical calculations (computer
+algebra) on modern computer systems (Mathematica, Maple, Reduce) is the
+unique working tool of the researcher.
+The polynomial algebra, reduction a polinoms, the algorithms of formal
+integration make main algorithms of computer algebra. The polynomial calcu-
+lation and the algebraic analysis of basic functions for differential rings have a
+high degree of standardization and easily will be realized on the computer.
+Thankingadvancedopportunitiesofsystemsofanalyticalcalculations,main
+algorithms of the group analysis will be realized: Lie algorithm, algorithm of
+construction and partial decision of determining systems, algorithms of search
+of discretic groups of transformations. Such algorithms make a nucleus of soft-
+ware, which much accelerate process of scientiﬁc researches (so, for example,
+calculations on discretic group 24-th order in a system Reduce takes read out
+minutes of real time). Working with library ﬁles and programs, frequently it
+should to create new sections and software packages, to modernize old, thus
+to derivate, in a ﬁnal result, own tool of scientiﬁc researches. With increase of
+variety of soluble problems are enriched and methods of achievement of results.
+Here the already used system of analytical calculations begins to play a role of
+base of knowledge and to serve ﬁlling for systems of artiﬁcial intelligence.
+Is possible and computer support of the group analysis with use of modern
+technologies of the animation graphics, which is carried out for an illustration
+of group structures, but also for the analysis of their dynamics. Unique results
+givestheanimationgraphicforresearchesofanhypergeometricGaussequation.
+Developedcomputerbankofmodelsonthebasisofthedirectory[2]permits
+toallocatemodelfromsetallowablewiththeaccountoftheaprioriinformation:
+the conservation laws, principle of mobile balance, qualitative characteristics of
+behaviour of a system and other. The modelly classes are united on group
+principles of an equation of linear and nonlinear mechanics and mathematical
+physics, but also their new exact solutions. The additional information on the
+ﬁrst integrals, symmetry, invariant, group structures and other provides diverse
+search and analysis of mathematical models in an analytical kind.
+References
+[1] Kamke E. Differentialgleichungen. Losungsmethoden und Losungen. Teil 1
+: Gewohnliche Differentialgleichungen, 6th ed., Akademische Verlag, Geest
+Electronic Journal.  259Differential Equations and Control Processes, N 1, 1997
+& Portig, Leipzig, 1959.
+[2] Zaitsev V.F., Polyanin A.D. Handbook on ordinary differential equations.
+Exact Solutions. Nauka Publishers Moscow, 1995.
+Electronic Journal.  260

@@ -1,0 +1,1584 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 3, 2012
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+The Generalized Laplace Transform and
+Fractional Differential Equations of Distributed Orders
+Alireza Ansari
+Faculty of Mathematical Sciences
+Shahrekord University ,P.O.Box 115, Shahrekord,Iran
+alireza 1038@yahoo.com
+Abstract
+In this article, we introduce a new generalized Laplace transform and derive the complex in-
+version formula , convolution theorem and generalized product theorem for the transform. Fur-
+thermore, the fundamental solutions of two Cauchy type fractional diffusion equation of single and
+distributed order are given by means of new transform in terms of the Wright functions. Also,
+applicability of this transform in evaluation of improper integrals of special functions is stated.
+Mathematics Subject Classi cation:26A33; 44A10; 44A15; 44A35
+Keywords: Laplace transform, Fractional derivatives, Fractional diffusion equation,
+Wright functions.
+1 Introduction
+We consider the Laplace-type integral transform as follows
+L
+E
+ff(x);pg =
+Z
+1
+0
+E
+0
+(x)e
+  (p)E(x)
+f(x)dx; (1-1)
+where, f(x) is piecewise continuous and of the exponential order (i.e.jf(x)j Me
+ (c)E(x)
+) for
+some constantsc;M, complex parameterp and invertible function  (p). Also,E(x) =
+R
+e
+ a(x)
+dx
+is an integration of exponential function with invertible function a(x) .
+By the de nition (1-1), it is obvious that, the exponential Laplace transform is a generalization
+of the following well known transforms.Differential Equations and Control Processes, N 3, 2012
+i) The Laplace transform (in the case  (p) =p;E(x) =x; and the abscissa of convergence c
+0
+)
+Lff(x);pg = F (p) =
+Z
+1
+0
+e
+ px
+f(x)dx;
+f(x) =
+1
+2 i
+Z
+c+i1
+c i1
+F (p)e
+px
+dp; c =<(p)>c
+0
+(1-2)
+ii) The Mellin transform [18] (in the case  (p) = p;E(x) = ln(x))
+Mff(x);pg = F (p) =
+Z
+1
+0
+x
+p 1
+f(x)dx;
+f(x) =
+1
+2 i
+Z
+c+i1
+c i1
+F (p)x
+ p
+dp; c =<(p): (1-3)
+iii) TheL
+2
+-transform
+1
+[21-23] (in the case  (p) =E(p) =p
+2
+)
+L
+2
+ff(x);pg = F (p) =
+Z
+1
+0
+2xe
+ p
+2
+x
+2
+f(x)dx;
+f(x) =
+1
+2 i
+Z
+c+i1
+c i1
+F (
+p
+p)e
+px
+2
+dp; <(p
+2
+)>c: (1-4)
+Since the integral transform methods are applicable tools for analyzing boundary value prob-
+lems , many researchers use these methods for studing the linear partial fractional differential
+equations (LPFDEs) to  nd the fundamental solutions of these equations in terms of higher
+transcendental functions such as Fox H-function and the Wright function. For example see
+works of Goreno [9,10] and Mainardi [12-17].
+In this paper we introduce the exponential Laplace transform (L
+E
+-transform) which is
+technical merit to solve LPFDEs with non-constant coe cients by choosing the appropriate
+functionE(x).
+In this regard, in section 2, we derive a new inversion formula for theL
+E
+-transform in
+terms of Bromwich's integral. Three theorems in theL
+E
+-transform of the
+E
+ 
+x
+-derivatives ,
+convolution and generalized product properties are also established. These properties can be
+useful for obtaining the solutions of some fractional diffusion on fractals. In sections 3 and 4 , we
+ nd the fundamental solutions of single and distributed order fractional diffusion equation on
+fractals introduced by Giona and Roman [8,18] by applying theL
+x
+p
+x
+2
++1
+-transform andL
+sinh
+ 1
+(x)
+-
+transform. These solutions can be expressed in terms of the higher transcendental functions of
+the Wright type.
+In section 5, by using the generalized product theorem another application of theL
+E
+-
+transform in evaluation of in nite integrals with special function is discussed. Finally, in section
+6, the main conclusions are drawn .
+1
+At  rst , Yurekli and Sadek [23] introduced this transform and used the Parseval-Goldstein theorems involving
+the L2-transform and other transforms to obtain identities involving several in nite integrals of elementary and special
+functions. Later, Aghili and Ansari applied this transform to solve some systems of PFDEs and singular integral equations
+with the special kernels [1,2].
+Electronic Journal. http://www.math.spbu.ru/diffjournal 129Differential Equations and Control Processes, N 3, 2012
+2 Some Properties of The Exponential Laplace Transform
+In this section, we establish theorems on the exponential Laplace transform which can be useful
+for solving LPFDEs. First, we derive a complex inversion formula for this transform in terms
+of Bromwich's integral.
+Theorem 2.1 (The complex inversion formula for the exponential Laplace
+transform)
+Let F ( 
+ 1
+(p)) be analytic function of p (assuming that F ( 
+ 1
+(p)) has not the branch point)
+except at  nite number of poles and each of poles lies to the left of the vertical line<p =c . If
+F ( 
+ 1
+(p))! 0 as p!1 through the left plane<p c , and
+L
+E
+ff(x);pg =F (p) =
+Z
+1
+0
+E
+0
+(x)e
+  (p)E(x)
+f(x)dx;
+then
+L
+ 1
+E
+fF (p)g =f(x) =
+1
+2 i
+Z
+c+i1
+c i1
+F ( 
+ 1
+(p))e
+pE(x)
+dp: (2-1)
+Proof: By de nition of the exponential Laplace transform (1-1) and letting  (p) =r, we
+have
+F ( 
+ 1
+(r)) =
+Z
+1
+0
+E
+0
+(x)e
+ rE(x)
+f(x)dx;
+now, by setting t =E(x) in the above relation, we obtain
+F ( 
+ 1
+(r)) =
+Z
+1
+0
+e
+ rt
+f(E
+ 1
+(t))dt =Lff(E
+ 1
+(t));rg:
+At this point, by the complex inversion formula for the Laplace transform and setting back
+E
+ 1
+(t) =x;r =p, we get  nally
+f(x) =
+1
+2 i
+Z
+c+i1
+c i1
+F ( 
+ 1
+(p))e
+pE(x)
+dp:
+Theorem 2.2 (The exponential Laplace transform of
+E
+ 
+x
+-derivatives)
+Let f;f
+0
+;:::;f
+(n 1)
+are continuous functions with piecewise continuous derivative f
+(n)
+on the
+interval x  0 and if all functions are of exponential order e
+ (c)A(x)
+as x!1 (i.e. jf(x)j 
+Me
+ (c)A(x)
+) for some constants c;M,then for n = 1; 2;:::
+L
+E
+f
+E
+ 
+n
+x
+f(x);pg =  
+n
+(p)L
+E
+ff(x);pg   
+n 1
+(p)f(0
++
+)
+   
+n 2
+(p)(
+E
+ 
+x
+f)(0
++
+)      (
+E
+ 
+n 1
+x
+f)(0
++
+) (2-2)
+where the
+E
+ 
+x
+-derivative operator is de ned as follows
+E
+ 
+x
+=
+1
+E
+0
+(x)
+d
+dx
+=e
+a(x)
+d
+dx
+;
+Electronic Journal. http://www.math.spbu.ru/diffjournal 130Differential Equations and Control Processes, N 3, 2012
+and by notation
+E
+ 
+2
+x
+= (
+E
+ 
+x
+)(
+E
+ 
+x
+) =
+1
+E
+02
+(x)
+d
+2
+dx
+2
+ 
+E
+00
+(x)
+E
+03
+(x)
+d
+dx
+=e
+2a(x)
+d
+2
+dx
+2
+ a
+0
+(x)e
+2a(x)
+d
+dx
+;
+the
+E
+ 
+x
+-derivative for any positive integer power can be found.
+Proof: Using the de nitions of the exponential Laplace transform (1-1) and the
+E
+ 
+x
+-
+derivative, by integration by parts, we obtain
+L
+E
+f
+E
+ 
+x
+f(x);pg =
+Z
+1
+0
+e
+  (p)E(x)
+f
+0
+(x)dx =e
+  (p)E(x)
+f(x)j
+1
+0
++  (p)
+Z
+1
+0
+E
+0
+(x)e
+  (p)E(x)
+f(x)dx:
+Since f is of exponential order e
+ (c)E(x)
+as x!1, it follows that
+lim
+x!1
+e
+  (p)E(x)
+f(x) = 0
+consequently
+L
+E
+f
+E
+ 
+x
+f(x);pg =  (p)L
+E
+ff(x);pg f(0
++
+):
+Similarly by repeated application of the above relation once again, we get
+L
+E
+f
+E
+ 
+2
+x
+f(x);pg =  (p)L
+E
+f
+E
+ 
+x
+f(x);pg  (
+E
+ 
+x
+f)(0
++
+)
+=  
+2
+(p)L
+E
+ff(x);pg   (p)f(0
++
+)  (
+E
+ 
+x
+f)(0
++
+)
+and by repeating the above scheme for
+E
+ 
+n
+x
+f(x), we can readily arrive at (2-2).
+Theorem 2.3 (The convolution theorem for the exponential Laplace transform)
+IfF (p);G(p) are the exponential Laplace transform of the functionsf(x);g(x) respectively, then
+F (p)G(p) =L
+E
+ff gg =L
+E
+f
+Z
+x
+0
+E
+0
+(t)g(t)f(E
+ 1
+(E(x) E(t)))dtg (2-3)
+Proof: Using the de nition of the exponential Laplace transform for F (p);G(p) , we have
+F (p)G(p) = (
+Z
+1
+0
+E
+0
+(y)e
+  (p)E(y)
+f(y)dy)(
+Z
+1
+0
+E
+0
+(t)e
+  (p)E(t)
+g(t)dt)
+=
+Z
+1
+0
+Z
+1
+0
+E
+0
+(y)E
+0
+(t)e
+  (p)(E(t)+E(y))
+f(y)g(t)dydt:
+Now, by substitutionE(t)+E(y) =E(x) and changing the order of integration in the double
+integral ,we get
+F (p)G(p) =
+Z
+1
+0
+E
+0
+(x)e
+ (p)E(x)
+dx
+Z
+x
+0
+E
+0
+(t)g(t)f(E
+ 1
+(E(x) E(t)))dt
+= L
+E
+f
+Z
+x
+0
+E
+0
+(t)g(t)f(E
+ 1
+(E(x) E(t)))dtg:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 131Differential Equations and Control Processes, N 3, 2012
+Theorem 2.4 (Generalized product theorem)
+LetL
+E
+ff(x);pg = F (p) and assuming that 	
+1
+(p), 	
+2
+(p) are analytic functions such that,
+L
+E
+fk(x;t);pg = 	
+1
+(p)E
+0
+(t)e
+ E(t) (	
+2
+(p))
+, then the following relation holds true
+L
+E
+ Z
+1
+0
+k(x;t)f(t)dt
+ 
+= 	
+1
+(p)F (	
+2
+(p)): (2-4)
+Proof: By applying theL
+E
+-transform on the integral, we can easily get the result.
+L
+E
+ Z
+1
+0
+k(x;t)f(t)dt
+ 
+=
+Z
+1
+0
+E
+0
+(x)e
+  (p)E(x)
+Z
+1
+0
+k(x;t)f(t)dt
+=
+Z
+1
+0
+f(t)dt
+Z
+1
+0
+E
+0
+(x)e
+  (p)E(x)
+k(x;t)dx
+= 	
+1
+(p)
+Z
+1
+0
+E
+0
+(t)e
+  (	
+2
+(p))E(t)
+f(t)dt = 	
+1
+(p)F (	
+2
+(p)):
+In view of the theorems of the exponential Laplace transform expressed in this section we
+may apply this transform to LPFDEs in the next sections.
+3 The Time-Fractional Diffusion Equation of Single Order on Frac-
+tals
+Problem 3.1: In connection with initial-value problems we consider diffusion-type partial
+fractional differential equation in the Riemann-Liouville sense in the form [8,19]
+t
+D
+ff
+0
++u(x;t) = C
+p
+(x
+2
++ 1)
+3
+@u(x;t)
+@x
+; C > 0; 0<ff  1; (3-1)
+with Cauchy type initial and boundary conditions as
+t
+D
+ff 1
+0
++
+u(x; 0
++
+) =f(x); u(0;t) = 0; x;t2R
++
+; (3-2)
+since, the equation (3-1) is a LPFDE with non-constant coe cients we set
+E(x) =
+Z
+e
+ 
+3
+2
+ln(x
+2
++1)
+dx =
+x
+p
+x
+2
++ 1
+;  (p) =p (3-3)
+in the integral (1-1) and apply this new integral transform (theL
+x
+p
+x
+2
++1
+-transform) in space and
+the Laplace transform in time as follows
+Lfu(x;t);sg = ~ u(x;s) =
+Z
+1
+0
+e
+ st
+u(x;t)dt; <s> 0
+L
+x
+p
+x
+2
++1
+fu(x;t);pg = ^ u(p;t) =
+Z
+1
+0
+1
+p
+(x
+2
++ 1)
+3
+e
+ p
+x
+p
+x
+2
++1
+u(x;t)dx; <p> 0:
+Then ,by using the Laplace transform of the Riemann-Liouville derivative [18] and the
+L
+x
+p
+x
+2
++1
+-transform of the equation (3-1), we obtain
+Lf
+t
+D
+ff
+0
++u(x;t);sg = s
+ff
+~ u(x;s) 
+t
+D
+ff 1
+0
++
+u(x; 0
++
+);
+L
+x
+p
+x
+2
++1
+f
+p
+(x
+2
++ 1)
+3
+u(x;t);pg = p^ u(p;t) u(0;t)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 132Differential Equations and Control Processes, N 3, 2012
+where by utilizing the Cauchy type initial conditions (3-2), we arrive at
+^
+~ u(p;s) =
+1
+s
+ff
++Cp
+F (p) (3-4)
+where F (p) is theL
+x
+p
+x
+2
++1
+-transform of the initial conditionf(x).
+At this point, by considering the complex inversion formula for theL
+x
+p
+x
+2
++1
+-transform (2-1)
+and the convolution theorem (2-3), we obtain
+~ u(x;s) =
+1
+2 i
+Z
+c+i1
+c i1
+^
+~ u(p;s)e
+p
+x
+p
+x
+2
++1
+dp =
+1
+C
+L
+ 1
+x
+p
+x
+2
++1
+f
+1
+s
+ff
+C
++p
+g f(x) =
+1
+C
+e
+ s
+ff x
+C
+p
+x
+2
++1
+ f(x)
+where the convolution of the two functions f;g for theL
+x
+p
+x
+2
++1
+-transform ,can be expressed by
+the relation (2-3) as follows
+f g =
+Z
+x
+0
+1
+p
+(t
+2
++ 1)
+3
+g(t)f
+0
+@
+x
+p
+x
+2
++1
+ 
+t
+p
+t
+2
++1
+q
+1  (
+x
+p
+x
+2
+ 1
+ 
+t
+p
+t
+2
++1
+)
+2
+1
+A
+dt:
+Now, in regard to the inverse Laplace transform of the functionse
+ s
+ff x
+C
+p
+x
+2
++1
+via the Wright
+functions [11]
+L
+ 1
+fe
+ s
+ff x
+C
+p
+x
+2
++1
+g =
+1
+t
+W ( ff; 0; 
+x
+C
+p
+x
+2
++ 1
+t
+ ff
+);
+we get the explicit solution of the Cauchy type problem (3-1)-(3-2) as follows
+u(x;t) =
+Z
+x
+0
+1
+p
+( 
+2
++ 1)
+3
+G
+ff
+(
+x
+p
+x
+2
++ 1
+ 
+ 
+p
+ 
+2
++ 1
+;t)f( )d ; (3-5)
+where the Green function G
+ff
+is given by
+G
+ff
+(x;t) =
+1
+Ct
+W ( ff; 0; 
+x
+C
+t
+ ff
+); (3-6)
+provided that the integral on the right-hand side of (3-5) is convergent.
+4 The Time-Fractional Difussion Equation of Distributed Order
+The earlier idea of fractional derivative of distributed order was developed by Caputo [5-7]
+and later other researchers study some linear and non-linear fractional differential equations of
+distributed order by analyzing some interesting cases of the order-density function see [3], [20].
+In this paper by the notion of fractional derivative of distributed order, we consider other form
+of Giona and Roman Equation .
+Problem 4.1: The following equation
+Z
+1
+0
+b(ff)[
+C
+t
+D
+ff
+0
++u(x;t)]dff =
+p
+1 +x
+2
+@u(x;t)
+@x
+x;t> 0 ; b(ff)  0;
+Z
+1
+0
+b(ff)dff = 1 (4-1)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 133Differential Equations and Control Processes, N 3, 2012
+is called the fractional diffusion of distributed order equation subject to initial and bound-
+ary conditions u(x; 0) =f(x);u(0;t) = 0 and the order-density function b(ff) which enables us
+to determine the intensity of diffusions.
+In order to solve the equation (4-1), we extend the approach by Mainardi [13] and Naber [17]
+to  nd a general representation of the fundamental solution related to a generic order-density
+functionb(ff). In this respect, by applying the Laplace transform of fractional derivative in the
+Caputo sense with respect to t [18]
+Lf
+C
+t
+D
+ff
+0
++u(x;t);sg =s
+ff
+~ u(x;s) s
+ff 1
+u(x; 0
++
+)
+and theL
+sinh
+ 1
+(x)
+-transform with respect to x and setting n = 1;  (p) =p in (2-2)
+L
+sinh
+ 1
+(x)
+f
+p
+1 +x
+2
+@u(x;t)
+@x
+g;pg =L
+sinh
+ 1
+(x)
+f
+sinh
+ 1
+(x)
+ 
+x
+u(x;t);pg =p^ u(p;t) u(0;t)
+we obtain
+(
+Z
+1
+0
+b(ff)s
+ff
+dff)
+^
+~ u(p;s) +p
+^
+~ u(p;s) =
+1
+s
+(
+Z
+1
+0
+b(ff)s
+ff
+dff)F (p)
+from which
+^
+~ u(p;s) =
+B(s)
+s(B(s) p)
+F (p); <s> 0 (4-2)
+where F (p) is theL
+sinh
+ 1
+(x)
+-transform of the function f(x) and
+B(s) =
+Z
+1
+0
+b(ff)s
+ff
+dff:
+By inverting theL
+sinh
+ 1
+(x)
+-transform of (4-2) ,we get the remaining Laplace transform as the
+following expression
+~ u(x;s) =f(x) 
+ B(s)
+2s
+e
+sinh
+ 1
+(x)B(s)
+(4-3)
+where the convolution of the two functions f;g for theL
+sinh
+ 1
+(x)
+-transform by (2-3) ( by using
+the fact that sinh
+ 1
+(x) = ln(x +
+p
+x
+2
++ 1) ) can be written as
+f g =
+Z
+1
+ 1
+1
+p
+1 +t
+2
+g(t)f(sinh(sinh
+ 1
+(x)  sinh
+ 1
+(t))dt;
+=
+Z
+1
+ 1
+1
+p
+1 +t
+2
+g(t)f(
+1
+2
+(
+x +
+p
+x
+2
++ 1
+t +
+p
+t
+2
++ 1
+ 
+t +
+p
+t
+2
++ 1
+x +
+p
+x
+2
++ 1
+))dt: (4-4)
+By virtue of the Titchmarsh theorem [4] for the inverse Laplace transform of the function
+~ u
+1
+(x;s) =
+ B(s)
+2s
+e
+sinh
+ 1
+(x)B(s)
+which has branch cut on the real negative semiaxis we have the following
+Electronic Journal. http://www.math.spbu.ru/diffjournal 134Differential Equations and Control Processes, N 3, 2012
+u
+1
+(x;t) = 
+1
+ 
+Z
+1
+0
+e
+ rt
+=f~ u
+1
+(x;re
+i 
+)gdr: (4-5)
+In order to simplify the above relation (4-5), we need to evaluate the imaginary part of the
+function ~ u
+1
+(x;re
+i 
+) along the ray s =re
+i 
+; r > 0 where the branch cut of the function s
+ff
+is
+de ned . In this regard, by writing
+B(re
+i 
+) =  cos  +i  sin ;
+(
+  = (r) =jB(re
+i 
+)j
+ =(r) =
+1
+ 
+arg[B(re
+i 
+)]
+and substituting in the above relation, (4-5) leads to the following
+u
+1
+(x;t) = 
+1
+2 
+Z
+1
+0
+ 
+r
+e
+ rt+sinh
+ 1
+(x)  cos( )
+sin(  + sinh
+ 1
+(x)  sin( ))dr:
+Finally, by using the convolution product given by relation (4-4) ,u(x;t) is expressed as an
+integral representation
+u(x;t) =  
+1
+2 
+f(x) f
+Z
+1
+0
+ 
+r
+e
+ rt+sinh
+ 1
+(x)  cos( )
+sin(  + sinh
+ 1
+(x)  sin( ))drg
+=  
+1
+2 
+Z
+1
+0
+e
+ rt
+r
+Z
+1
+ 1
+x +
+p
+x
+2
++ 1
+  +
+p
+ 
+2
++ 1
+ e
+  cos( )
+  sin(  + ln(
+x +
+p
+x
+2
++ 1
+  +
+p
+ 
+2
++ 1
+)  sin( ))f( )d dr (4-6)
+provided that the integrals on the right-hand side of (4-6) are convergent.
+The explicit solution (4-6) of the time-fractional diffusion equation of distributed order (4-1) can
+be simpli ed in particular cases. For example if we set the order density function with respect
+to Dirac delta function b(ff) =  (ff n); 0 < n < 1 the time-fractional diffusion equation of
+distributed order (4-1) is converted to time-fractional disturbance equation of single order n,
+so that
+B(s) =s
+n
+;   = (r) =r
+n
+;  =n:
+In this case since the inverse Laplace transform of s
+n
+2
+ 1
+e
+sinh
+ 1
+(x)s
+n
+2
+in (4-3) can be easily
+obtained in terms of the Wright functions [11]
+L
+ 1
+fs
+n
+2
+ 1
+e
+sinh
+ 1
+(x)s
+n
+2
+g =
+1
+t
+n
+2
+W ( 
+n
+2
+; 1 
+n
+2
+; sinh
+ 1
+(x)t
+ 
+n
+2
+)
+and the formal solution u(x;t) (4-6), takes the form
+u(x;t) = 
+1
+2 t
+n
+2
+Z
+1
+ 1
+W ( 
+n
+2
+; 1 
+n
+2
+; ln(
+x +
+p
+x
+2
++ 1
+  +
+p
+ 
+2
++ 1
+)t
+ 
+n
+2
+)f( )d : (4-7)
+5 Evaluation of Integrals
+In this section by using the generalized product theorem forL
+E
+-transform (2-4) we may obtain
+the values of some improper integrals of elementary and special functions.The integrands of
+Electronic Journal. http://www.math.spbu.ru/diffjournal 135Differential Equations and Control Processes, N 3, 2012
+these integrals are coincident to kernels of generalized product theorem integral (2-4).
+Problem 5.1: By using generalized product theorem for theL
+x
+ -transform,show that
+Z
+1
+0
+Erfc(
+ 
+ 
+2x
+ 
+2
+)d  =
+2
+1
+ 
+p
+ 
+ (
+  + 1
+2 
+)x
+1
+2
+;
+  + 1
+2 
+6= k; k2Z (5-1)
+where Erfc is complementary error function.
+By setting  (p) =p and applying theL
+x
+ -transform on the right hand side of above relation
+and using the fact thatL
+x
+ fErfc(
+ 
+ 
+2x
+ 
+2
+)g =
+e
+  
+ 
+p
+p
+p
+, we get
+L
+x
+ f
+Z
+1
+0
+Erfc(
+1
+2
+ 
+ 
+2x
+ 
+2
+)d g = L
+x
+ f
+Z
+1
+0
+ 
+  1
+Erfc(
+ 
+ 
+2x
+ 
+2
+)
+1
+ 
+  1
+d g
+=
+1
+p
+ 
+L
+ 
+ f
+1
+ 
+  1
+g
+ 
+p!
+p
+p
+=
+ (
+1
+ 
+)
+p
+1
+2 
++1
+which, by using complex inversion formula for
+ (
+1
+ 
+)
+p
+1
+2 
++1
+we obtain
+L
+ 1
+x
+ 
+f
+ (
+1
+ 
+)
+p
+1
+2 
++1
+g = 2 
+ (
+1
+ 
+)
+ (
+1
+2 
+)
+x
+1
+2
+:
+Now, by recalling the Legendre's duplication formula for the Gamma function as follows
+ (z) (z +
+1
+2
+) = 2
+1 2z
+p
+   (2z)
+we  nally get
+Z
+1
+0
+Erfc(
+ 
+ 
+2x
+ 
+2
+)d  =
+2
+1
+ 
+p
+ 
+ (
+  + 1
+2 
+)x
+1
+2
+:
+6 Conclusions
+This paper provides some new results in the area of fractional calculus and a new integral
+transform (L
+E
+-transform ) which was implemented to solve two Cauchy type fractional diffusion
+equations of single and distributed order.
+It may be concluded that theL
+E
+-transform method is very powerful e cient technique in
+ nding exact solution for LPFDEs with non-constant coe cients and this method could lead
+to a promising approach for many applications in applied sciences.
+References
+[1] A. Aghili, A. Ansari, A new approach to solving SIEs and system PFDEs using the
+L
+2
+-transform,J. Diff. Equ. Cont. Proc., (3) 2010.
+[2] A. Aghili, A. Ansari, Solution to system of partial fractional differential equation
+using theL
+2
+-transform, Anal. Appl., World Scienti c Publishing, 9(1) (2011) 1-9.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 136Differential Equations and Control Processes, N 3, 2012
+[3] T.M. Atanackovic, L. Oparnica, S. Pilipovic, On a nonlinear distributed order frac-
+tional differential equation, J. Math. Anal. Appl., 328 (2007) 590-608.
+[4] A.V. Bobylev , C. Cercignani, The inverse laplace transform of some analytic func-
+tions with an application to the eternal solutions of the Boltzmann equation, Appl.
+Math. Lett., 15 (2002) 807-813.
+[5] M. Caputo, Linear models of dissipation whose Q is almost frequency independent.
+II, Geophys. J. Roy. Astronom. Soc., 13 (1967) 529-539.
+[6] M. Caputo, Elasticita e dissipazione, Zanichelli, Bologna, 1969 (in Italian).
+[7] M. Caputo, Distributed order differential equations modeling dielectric induction
+and diffusion, Fract. Calc. Appl. Anal., 4 (2001) 421-442.
+[8] M. Giona, H. E. Roman, Fractional diffusion equation on fractals: One-dimensional
+case and asymptotic behaviour, J. Phys. A: Math. Gen., 25(8) (1992) 2093-2105.
+[9] R. Goreno, Yu. Luchko, F. Mainardi, Analytical properties and applications of the
+Wright function, Fract. Calc. Appl. Anal., 2 (1999) 383-414.
+[10] R. Goreno, Yu. Luchko, F. Mainardi, Wright functions as scale-invariant solutions
+of the diffusion-wave equation, J. Comput. Appl. Math., 118 (2000) 175-191.
+[11] A.A. Kilbas, H.M. Srivastava, J.J. Trujillo, Theory and applications of fractional
+differential equations, North-Holland Mathematics Studies, 204, Elsevier Science
+Publishers, Amsterdam, Heidelberg and New York, 2006.
+[12] F. Mainardi, The fundamental solutions for the fractional diffusion-wave equation,
+Appl. Math. Lett., 9(6) (1996) 23-28.
+[13] F. Mainardi, G.Pagnini, The role of the Fox-Wright functions in fractional sub-
+diffusion of distributed order, J. Comput. Appl. Math., 207 (2007) 245-257.
+[14] F. Mainardi, G.Pagnini, The Wright functions as solutions of the time-fractional
+diffusion equation, J. Comput. Appl. Math., 141 (2003) 51-62.
+[15] F. Mainardi, G.Pagnini, R. Goreno, Some aspects of fractional diffusion equations
+of single and distributed order, Comput. Appl. Math., 187 (2007) 295-305.
+[16] F.Mainardi, G.Pagnini , R.K. Saxena, Fox H-functions in fractional diffusion, J.
+Comput. Appl. Math., 178 (2005) 321-331 .
+[17] M. Naber, Distributed order fractional subdiffusion, Fract., 12 (2004) 23-32.
+[18] I. Podlubny, Fractional differential equations, Academic Press, San Diego, 1999.
+[19] H.E. Roman, M. Giona, Fractional diffusion equation on fractals: three-dimensional
+case and scattering function, J. Phys. A: Math. Gen., 25(8) (1992) 2107-2117.
+[20] S. Umarov, R. Goreno, Cauchy and nonlocal multi-point problems for distributed
+order pseudo-differential equations: Part one, Z. Anal. Anwendungen, 24 (2005)
+449-466.
+[21] O. Yurekli, Theorems onL
+2
+-transforms and its applications, Comp. Var. Theo.
+Appl., 38 (1999) 95-107.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 137Differential Equations and Control Processes, N 3, 2012
+[22] O. Yurekli, New identities involving the Laplace and theL
+2
+-transforms and their
+applications, Appl. Math. Comput., 99 (1999)141-151.
+[23] O. Yurekli, I. Sadek, A Parseval-Goldstein type theorem on the Widder potential
+transform and its applications, Int. J. Math. Math. Sci., 14 (1991) 517-524.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 138

@@ -1,0 +1,868 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 4, 1998
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Symbolic dynamics
+Optimal Design of Model Following Control
+with Genetic Algorithm
+Xiaojun Zhang
+Department of Mechanical Engineering
+Ashikaga Institute of Technology
+268-1 Omae, Ashikaga-city, Tochigi-prefecture, 326-0845 Japan
+Fel:(81)284-62-0605
+Fax: (81)284-62-9802
+Email: d96105@ashitech.ac.jp
+Yuzo Yamane
+Department of Mechanical Engineering
+Ashikaga Institute of Technology
+268-1 Omae, Ashikaga-city, Tochigi-prefecture, 326-0845 Japan
+Fel:(81)284-62-0605
+Fax: (81)284-62-9802
+Email: d96105@ashitech.ac.jp
+Abstract.
+In this paper, an integral-type robust model following control for plants
+with uncertain parameters is introduced. An genetic algorithm is also designed
+for obtaining the control gains. Finally, some numerical examples are provided
+to illustrate the validity and eﬃciency of the proposed method.
+Keywords: genetic algorithm, model following control, uncertain systems.Differential Equations and Control Processes, N. 4, 1998
+1 Introduction
+Model following control system are designed to make the outputs of the plant
+having desired performance. The general steps of control system design are :
+the ﬁrst is to model the plants and then control schemes are designed based
+on the reference model. However, for a real controlled plant there exist some
+diﬃculties to construct an exact plant model which necessitates the accurate
+system parameters. Some parameters are time-varying and functions of the
+system states. When we design a control system, these uncertainties have to
+be considered.
+There are many research reports on designing robust controller for the un-
+certainty system, for example, the method by using H
+∞
+/μ control theory
+[1,2]
+,
+the method based on robust control method
+[3,4]
+, the method of gain scheduled
+controller
+[5,6]
+. Kimura and Watanabe [1, 2] assume the uncertainty of the trans-
+fer function of the controlled system being Δ(s), and the necessary condition is
+Δ(s)≤γ(s). The problem of this method is that the selection of γ(s) requires
+the character information of uncertainty. In literature
+[3,4]
+, the uncertainties of
+parameters of the controlled system are considered as perturbations. When the
+perturbation is stable a robust controller is presented by using gain scheduled
+control scheme, however, if the system is not completely observable, state ob-
+servers have to be employed. The stability of the control system can not be
+guaranteed by gain scheduled controller.
+In this paper, an integral type robust model following control scheme with
+two degrees of freedom for plants with uncertain parameters is presented. Sim-
+ulation results are given to illustrate the validity and eﬃciency of the proposed
+method.
+2 Problem Description
+Consider the following SISO systems described by n order controllable canonical
+form
+P
+p
+:
+(
+˙ x
+p
+(t) = A
+p
+x
+p
+(t) +bu
+p
+(t)
+y
+p
+(t) = c
+T
+p
+x
+p
+(t)
+(1)
+Electronic Journal. Differential Equations and Control Processes, N. 4, 1998
+P
+m
+:
+(
+˙ x
+m
+(t) = A
+m
+x
+m
+(t) +bu
+m
+y
+m
+(t) = c
+T
+m
+x
+m
+(t)
+(2)
+where
+P
+p
+is the plant,
+P
+m
+is the stable reference model, and
+A
+p
+=N +b{a
+p
++ Δa
+p
+}
+T
+A
+m
+=N +ba
+T
+m
+b = (0, 0,··· , 0, 1)
+T
+∈R
+n
+N =
+
+
+
+I
+n−1
+0
+0
+
+
+
+∈R
+n×n
+In above equations, Δa
+p
+is a term of uncertainty with known upper and lower
+boundaries. a
+T
+m
+is the parameter of the reference model, u
+m
+is a step signal.
+Parameters a
+p
+and c
+p
+are known, and x
+p
+(t) are observable.
+The stable integral type interacter polynomial of the plant is considered to
+be
+σ(s) =s
+ν
++μ
+ν
+s
+ν−1
++... +μ
+1
++
+μ
+0
+s
+where μ = (μ
+0
+,··· ,μ
+ν
+)∈R
+ν+1
+and ν is the relative degree of the system.
+In order to obtain robust model following performance when there exist
+time-varying parameters, an integral compensator is necessary. Therefore, the
+control input in equation (1) is assumed as equation (3), and the following error
+is given in equation (4).
+u
+p
+(t) =−k
+T
+p
+x
+p
+(t) +k
+T
+m
+x
+m
+(t) +mu
+m
+(t)
+−f
+T
+p
+Z
+x
+p
+(t)dt +f
+T
+m
+Z
+x
+m
+(t)dt (3)
+e(t) =y
+p
+(t)−y
+m
+(t) (4)
+where k
+p
+,f
+p
+,k
+m
+and f
+m
+are the gains of feedback and feedforward signals, re-
+spectively.
+Electronic Journal. Differential Equations and Control Processes, N. 4, 1998
+The purpose of this paper is to present an integral type linear control scheme
+with ﬁxed gains so that e(t)→ 0 for any input u
+m
+.
+When Δa
+p
+= 0, the following results are given in [7]
+k
+T
+p
+=
+1
+w
+p
+c
+T
+p
+¯ σ(A
+p
+) (5)
+f
+T
+p
+=
+μ
+0
+w
+p
+c
+T
+1
+(6)
+k
+T
+m
+m
+=
+1
+w
+m
+c
+T
+m
+¯ σ(A
+m
+) (7)
+f
+T
+m
+m
+=
+μ
+0
+w
+m
+c
+T
+m
+(8)
+where w
+p
+=c
+T
+p
+A
+ν−1
+p
+b,w
+m
+=c
+T
+m
+A
+ν−1
+m
+b,m =
+w
+m
+w
+p
+,
+and ¯ σ(s) =s
+ν
++μ
+ν
+s
+ν−1
+1
++··· +μ
+1
+Based on the above results, we introduce the following evaluation function
+CP =
+Z
+T
+0
+{e
+T
+(t)Qe(t) +u
+p
+(t)
+T
+Ru
+p
+(t)}dt (9)
+where T is the time of one test control. However,CP is essentially a stochastic
+variable because Δa
+p
+is indeed stochastic.
+According to the evaluation function, in the following section a robust model
+following scheme for Δa
+p
+6= 0 is presented based on genetic algorithm.
+3 Design of controller with GA
+In this section a genetic algorithm for the design of the robust model following
+controller is developed. The following problems will be discussed on : initializa-
+tion process, evaluation function, selection operation, crossover and mutation
+operations.
+3.1 Initialization Process
+We suppose the initial number of generation is 0 (i.e gen = 0), and the end
+number of generation is GEN, and assume following vector
+V =
+ 
+μ
+0
+μ
+1
+··· μ
+ν
+ 
+Electronic Journal. Differential Equations and Control Processes, N. 4, 1998
+being the chromosome to represent the optimal robust solution of the model
+following system, and deﬁne an integerpop size as the number of chromosomes.
+pop size chromosomes will be randomly initialized by the following steps:
+Step 1. Determine an interior point, denoted by V
+0
+, in the constraint set.
+Step 2. Select randomly a direction d in R
+2×n
+and deﬁne a chromosome V as
+V
+0
++M·d if it is feasible, otherwise, we set M as a random number in
+[0,M] untilV
+0
++M·d is feasible, whereM is a large positive number which
+ensures that all the genetic operators are probabilistically complete for the
+feasible solutions.
+Step 3. Repeat Step 2 pop size times and produce pop size initial feasible
+solutions.
+3.2 Stability and test control
+Step 1. According to Hurwitz criterion the interacter polynomial is checked,
+if it is stable then go to Step 2, otherwise, go to Step 3.
+Step 2. According to equations (5)-(8) control gains are calculated, test control
+is executed and then go to section 3.3.
+Step 3. Test control is not executed because the stability of the system is
+unknown, then go to section 3.4.
+3.3 Evaluation Function
+According to equation (9) evaluation function CP(V
+k
+) is calculated, where
+k = 1, 2,··· ,pop size, pop size are the numbers of chromosome. The big-
+ger the value of evaluation function is, the stronger the adaptation degree of
+the corresponding chromosome becomes.
+3.4 Selection Operation
+The selection process is based on spinning the roulette wheel pop size times,
+each time we select a single chromosome for a new population in the following
+way:
+Step 1. Calculate a cumulative probability a
+i
+for each chromosome V
+i
+, (i =
+1, 2,··· ,pop size).
+Electronic Journal. Differential Equations and Control Processes, N. 4, 1998
+Step 2. Generate a random real number r in [0, 1].
+Step 3. Ifr≤a
+1
+, then select the ﬁrst chromosomeV
+1
+; otherwise select thei-th
+chromosome V
+i
+(2≤i≤pop size) such that a
+i−1
+<r≤a
+i
+.
+Step 4. Repeat Steps 2 and 3 pop size times and obtain pop size copies of
+chromosomes.
+In this process, the best chromosomes get more copies, the average stay
+even, and the worst die off.
+3.5 Crossover Operation
+We deﬁne a parameter P
+c
+of a genetic process as the probability of crossover.
+This probability gives us the expected number P
+c
+·pop size of chromosomes
+which undergo the crossover operation.
+Firstly we generate a random real numberr in [0, 1]; secondly, we select the
+given chromosome for crossover ifr<P
+c
+. Repeat this operationpop size times
+and produce P
+c
+·pop size parents, averagely. For each pair of parents (vectors
+V
+1
+and V
+2
+), the crossover operator on V
+1
+and V
+2
+will produce two children as
+V
+0
+1
+= λ
+1
+·V
+1
++λ
+2
+·V
+2
+,
+V
+0
+2
+= λ
+2
+·V
+1
++λ
+1
+·V
+2
+where λ
+1
+, λ
+2
+≥ 0 and λ
+1
++λ
+2
+= 1.
+Since the constraint set is convex, this arithmetical crossover operation
+ensures that both children are feasible if both parents are.
+3.6 Mutation Operation
+We deﬁne a parameter P
+m
+of a genetic process as the probability of mutation.
+This probability gives us the expected number P
+m
+·pop size of chromosomes
+which undergo the mutation operation.
+Generating a random real numberr in [0, 1], we select the given chromosome
+for mutation if r<P
+m
+. Let a parent for mutation, denoted by a vector
+V =
+ 
+μ
+0
+μ
+1
+··· μ
+ν
+ 
+be selected. Select randomly a directiond inR
+2×n
+and deﬁne a chromosomeV
+asV
+0
++M·d if it is feasible, otherwise, we setM as a random number in [0,M]
+Electronic Journal. Differential Equations and Control Processes, N. 4, 1998
+until V
+0
++M·d is feasible, where M is a large positive number deﬁned in the
+initialization process.
+gen← gen + 1
+If gen≤ GEN then go to section 3.2, otherwise, simulation will end and
+the gain corresponding to the chromosome with maximum adaptation degree is
+used as a control gain.
+Repeat above process for all chromosomes.
+Following selection, crossover and mutation, the new population is ready
+for its next evaluation. The algorithm will terminate after a given number of
+cyclic repetitions of the above steps.
+4 Numerical Examples
+Here we will illustrate the effectiveness of proposed genetic algorithm for the
+optimal design of model following control by some numerical examples. Com-
+puter simulations are executed on NEC EWS4800/210II workstation with the
+following parameters: the population size is 30, the probability of crossover P
+c
+is 0.2, the probability of mutation P
+m
+is 0.4.
+A second order plant is described as follows
+˙ x
+p
+(t) =
+"
+0 1
+−0.5 + Δa
+p1
+−1 + Δa
+p2
+#
+x
+p
+(t) +
+"
+0
+1
+#
+u
+p
+(t)
+y
+p
+(t) = [1 0]x
+p
+(t)
+wherex
+p
+(t) = [x
+p1
+(t),x
+p2
+(t)]
+T
+is the state vector of plant andu
+p
+(t) is the control
+signal. Δa
+p1
+and Δa
+p2
+are uniformly distributed variables on the interval [-0.2,
+0.2] and [-0.4, 0.4].
+The reference model is described as follows
+˙ x
+m
+(t) =
+"
+0 1
+−2.5 −3
+#
+x
+m
+(t) +
+"
+0
+1
+#
+u
+m
+y
+m
+(t) = [1 0]x
+m
+(t)
+where x
+m
+(t) = [x
+m1
+(t),x
+m2
+(t)]
+T
+is the state vector of reference model. The
+initial state is
+x
+p
+(0) = (0.6, 0)
+T
+,x
+m
+(0) = (0, 0)
+T
+.
+Electronic Journal. Differential Equations and Control Processes, N. 4, 1998
+The input of reference model is u
+m
+= 4.
+The purpose of the control is that the output of the plant with parameters
+uncertainties can follow the output of the reference model robustly and fast,
+and the control u
+p
+(t) is oppressed within a range not to keep away into big
+signals. Here based on the method stated in section 3, the parameter μ
+i
+of the
+interacter polynomial is determined. In this simulation study the test execution
+time T is 20 second, the weights of the evaluation function CP are Q=3 and
+R=0.5, the end generation number is GEN =100.
+The programs for the proposed genetic algorithm are written in C language.
+We use it to solve above numerical example. In this example,ν = 2, we restrict
+the parameters in the following set
+ 
+(μ
+2
+,μ
+1
+,μ
+0
+)
+ 
+ 
+0≤μ
+i
+≤ 30, i = 0, 1, 2
+	
+which is clearly convex.
+The following parameters
+(μ
+2
+,μ
+1
+,μ
+0
+) = (3.77, 2.94, 3.19)
+are used and the corresponding control gains are k
+T
+p
+= (3.27, 1.94),k
+T
+m
+=
+(−3.52, 4.44),f
+T
+p
+= (3.19, 0) and f
+T
+m
+= (0.11, 0). So, the following control
+u
+p
+(t) =−(3.27, 1.94)x
+p
+(t) + (−3.52, 4.44)x
+m
+(t)
++3.19
+Z
+{x
+m1
+(t)−x
+p1
+(t)}dt
+is obtained. The total CPU time of the NEC EWS4800/210II workstation is
+786.5 seconds.
+We have ﬁgured out the results to demonstrate the evolutionary process
+of the performance index by Fifure 1. Using the proposed GA approach, the
+optimal solution is obtained to take a minimum value 182 at 10 generations.
+The plant and reference model output signals obtained by genetic algorithm
+are shown in Figure 2∼Figure 5. In Figure 2 the output of the plant is given
+when there is no parameter uncertainty, that is, Δa
+p1
+and Δa
+p2
+are zero. Figure
+3 gives the output y
+p
+(t) when Δa
+p1
+= 0, Δa
+p2
+6= 0. Figure 4 is the case when
+Δa
+p1
+6= 0, Δa
+p2
+= 0 and Figure 5 gives the output ofy
+p
+(t) when all of Δa
+p1
+, Δa
+p2
+are not zero. From these simulation results it can be concluded that the output
+of plant can fast and robustly follow the output of reference in spite of the
+existence of plant parameter uncertainties and nonlinear factors by using the
+designed control u
+p
+(t).
+Electronic Journal. Differential Equations and Control Processes, N. 4, 1998
+50
+200
+400
+CP
+1 10 20 50 100
+generations
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Figure 1: Evolutionary process by GA
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . .
+0
+1
+2
+0 5 10 15 20
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+(sec.)
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . .
+y
+p
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . .
+y
+m
+Δa
+p1
+= 0, Δa
+p2
+= 0
+Figure 2: Plant and reference model output signals
+5 Conclusion
+In this paper, based on GA a integral type robust model following control
+scheme for plants with parameters uncertainties is presented. According to
+stability criterion the stability of the system can be determined, and the control
+gains can be eﬃciently obtained. Simulation results show that system has
+satisfactory following properties.
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . .
+0
+1
+2
+0 5 10 15 20
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+(sec.)
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . .
+y
+p
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . .
+y
+m
+Δa
+p1
+6= 0, Δa
+p2
+= 0
+Figure 3: Plant and reference model output signals
+Electronic Journal. Differential Equations and Control Processes, N. 4, 1998
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . .
+0
+1
+2
+0 5 10 15 20
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+(sec.)
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . .
+y
+p
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . .
+y
+m
+Δa
+p1
+= 0, Δa
+p2
+6= 0
+Figure 4: Plant and reference model output signals
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . .
+0
+1
+2
+0 5 10 15 20
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+(sec.)
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . .
+y
+p
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . .
+y
+m
+Δa
+p1
+6= 0, Δa
+p2
+6= 0
+Figure 5: Plant and reference model output signals
+Electronic Journal. Differential Equations and Control Processes, N. 4, 1998
+References
+[1] Kimura : From LQG to H
+∞
+, Journal of The Society of Instrument and
+Control Engineers, 29-2, 111/119(1990).
+[2] Watanabe, Yoshida : Robust Vibration Control of a Flexible Structure
+Taking Account of Parameter Variations and Model Errors in Uncontrolled
+Modes, Transactions of the Society of Instrument and Control Engineers,
+32-7, 1001/1010(1996).
+[3] A.Packard : Gain scheduling via linear fractional transformations, Syst.
+Contr. Lett., 22, 79/92(1994).
+[4] P.Kokotovic, H.K.Khalil and J.O’Reilly : Singular Perturbation Methods in
+Control; Analysis and Design, Academic Press(1986).
+[5] Uchida : Gain Scheduling, Journal of The Society of Instrument and Control
+Engineers, 34-3, 182/187(1995).
+[6] Watanabe, Utida, Simura, Fujita : H
+∞
+Control for Linear System with
+Scheduling Parameter, Proc. 16
+th
+DST Symposium, 1/6(1993).
+[7] Y.Yamane, X.Zhang : Design of Robust Reference Model Control System,
+Proc. Associated Symposium On System and Information, 273/276 (1996).
+Electronic Journal. 

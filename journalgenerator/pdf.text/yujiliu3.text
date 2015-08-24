@@ -1,0 +1,4147 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 3, 2012
+Electronic Journal,
+reg. N C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Existence of solutions of resonant boundary value problems for fractional
+differential equations
+Yuji Liu, Department of Mathematics
+Hunan Institute of Science Technology,Yueyang 414000 P R China
+liuyuji888@sohu.com
+Xingyuan Liu
+Department of Mathematics
+Shaoyang University, Shaoyang 422000 P R China
+Abstract
+In this article, we establish existence results for solutions of resonant boundary value problems
+for nonlinear singular fractional differential equations
+8
+>
+>
+<
+>
+>
+:
+D
+ff
+0
++
+u(t) =f(t;u(t);D
+ 
+0
+u(t)) +e(t); t2 (0; 1); 1<ff< 2;
+ 
+I
+2 ff
+0
++
+u(t)
+ 
+0
+ 
+ 
+ 
+t=0
+= 0;
+D
+ 
+0
++
+u(1) =
+P
+m 2
+i=1
+ 
+i
+D
+ 
+0
++
+u( 
+i
+):
+Our analysis relies on the well known coincidence degree theory. Heref depends onD
+ 
+0
++
+u and may
+be singular att = 0 ort = 1. The resonance case is caused by the multi-point boundary conditions.
+keywords
+Solution, fractional differential equation, coincidence degree theory, resonant boundary
+value problem, resonant boundary value problem
+1 Introduction
+Fractional differential equations have many applications in modeling of physical and chemical
+processes and in engineering and have been of great interest recently. In its turn, mathematicalDifferential Equations and Control Processes, N 3, 2012
+aspects of studies on fractional differential equations were discussed by many authors, see the
+text books [1,2], the survey papers [3,4] and papers [5-10] and the references therein.
+Recently the coincidence degree theory [11] has been used to study the existence of solutions
+to boundary value problems for fractional differential equations [12-15].
+In [15], the existence of solutions of the resonant boundary value problems for fractional
+differential equations
+8
+>
+>
+<
+>
+>
+:
+D
+ff
+0
++
+u(t) =f(t;u(t);D
+ff 1
+0
+u(t)) +e(t); t2 (0; 1); 1<ff< 2;
+ 
+I
+2 ff
+0
++
+u(t)
+  
+ 
+t=0
+= 0;
+u(1) =
+P
+m 2
+i=1
+ 
+i
+u( 
+i
+);
+(1)
+was studied, where D
+ff
+0
++
+(D
+ff
+0
+or D
+ff
+for short) is the Riemann-Liouville fractional derivative
+of order ff, 0 <  
+1
+<    <  
+m 2
+< 1,  
+i
+(i = 1; 2;    ;m  2)2 R with
+P
+m 2
+i=1
+ 
+i
+ 
+ff 1
+i
+= 1,
+f : [0; 1] R
+2
+!R is continuous and e2L
+1
+(0; 1).
+We see that f in BVP(1.1) depends on D
+ff 1
+0
++
+x and solutions of BVP(1.1) are bounded
+on [0; 1]. To our knowledge, there exists no paper concerned with the existence of unbounded
+solutions of boundary value problems for fractional differential equations.
+We  nd that in all above mentioned papers, the solutions obtained are bounded ones
+(continuous on [0; 1], f depends on either the fractional derivatives lower than ff  1 [15,18].
+Motivated by this reason, we discuss the boundary value problem of the nonlinear fractional
+differential equation of the form
+8
+>
+>
+<
+>
+>
+:
+D
+ff
+0
++
+u(t) =f(t;u(t);D
+ 
+0
+u(t)) +e(t); t2 (0; 1); 1<ff< 2;
+ 
+I
+2 ff
+0
++
+u(t)
+ 
+0
+ 
+ 
+ 
+t=0
+= 0;
+D
+ 
+0
++
+u(1) =
+P
+m 2
+i=1
+ 
+i
+D
+ 
+0
++
+u( 
+i
+);
+(2)
+where D
+ff
+0
++
+(D
+ff
+for short) is the Riemann-Liouville fractional derivative of order ff, 0 <   
+ff  1, 0 <  
+1
+<    <  
+m 2
+< 1,  
+i
+(i = 1; 2;    ;m  2)2 R with
+P
+m 2
+i=1
+ 
+i
+ 
+ff   2
+i
+= 1,
+f : (0; 1) R
+2
+!R is continuous and e2L
+1
+(0; 1). f may be singular at t = 0 or t = 1.
+We obtain the existence results for solutions to BVP(1.2) by using the coincidence degree
+theory. The solutions obtained may be unbounded since there exists the limit lim
+t!0
+t
+2 ff
+u(t).
+BVP(1.2) happens to be at resonance in the sense that its associated linear homogeneous
+boundary value problem
+8
+>
+>
+<
+>
+>
+:
+D
+ff
+0
++
+u(t) = 0; t2 (0; 1); 1<ff< 2;
+ 
+I
+2 ff
+0
++
+u(t)
+ 
+0
+ 
+ 
+ 
+t=0
+= 0;
+D
+ 
+0
++
+u(1) =
+P
+m 2
+i=1
+ 
+i
+D
+ 
+0
++
+u( 
+i
+)
+has u(t) =ct
+ff 2
+;c2R as nontrivial unbounded solutions. When ff = 2 and   = 1 and  
+i
+= 0
+Electronic Journal. http://www.math.spbu.ru/diffjournal 71Differential Equations and Control Processes, N 3, 2012
+for alli = 1; 2;    ;m 2, BVP(1.2) becomes the well known Neumann boundary value problem
+8
+>
+>
+<
+>
+>
+:
+u
+00
+(t) =f(t;u(t);u
+0
+(t)) +e(t); t2 (0; 1);
+u
+0
+(0) = 0;
+u
+0
+(1) = 0;
+which is studied in [16,17]. The result in this paper generalizes those one in [16]. For 1<ff< 2
+and 0<  ff  1, the following BVP
+8
+>
+>
+<
+>
+>
+:
+D
+ff
+0
++
+u(t) = 0; t2 (0; 1); 1<ff< 2;
+ 
+I
+2 ff
+0
++
+u(t)
+ 
+0
+ 
+ 
+ 
+t=0
+= 0;
+D
+ 
+0
++
+u(1) = 0
+has a unique solution u(t) = 0. Hence the resonance case in BVP(1.2) is caused by the multi-
+point boundary conditions.
+2 Main results
+To obtain the main results, we need some notations and an abstract existence theorem by
+Gaines and Mawhin [11].
+Let X and Y be Banach spaces, L : D(L)  X! Y be a Fredholm operator of index
+zero, P : X!X, Q : Y!Y be projectors such that
+ImP = KerL; KerQ = ImL; X = KerL  KerP; Y = ImL  ImQ:
+It follows that
+Lj
+D(L)\KerP
+: D(L)\ KerP! ImL
+is invertible, we denote the inverse of that map by K
+p
+.
+If 
+ is an open bounded subset of X, D(L)\ 
+6=;, the map N : X!Y will be called
+L compact on 
+ if QN(
+) is bounded and K
+p
+(I Q)N : 
+!X is compact.
+Lemma 1 Let L be a Fredholm operator of index zero and let N be L compact on 
+. Assume
+that the following conditions are satis ed:
+1. Lx6= Nx for every (x; )2 [D(L)n KerL)\@
+]  (0; 1);
+2. Nx = 2 ImL for every x2 KerL\@
+;
+3. deg(^
+ 1
+QN
+ 
+ 
+KerL
+; 
+\ KerL; 0)6= 0, where^
+ 1
+: Y=ImL! KerL is the inverse of the
+isomorphism^ : KerL!Y=ImL.
+Then the equation Lx =Nx has at least one solution in D(L)\ 
+.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 72Differential Equations and Control Processes, N 3, 2012
+Let  (ff) and B(p;q) be de ned by
+ (ff) =
+Z
++1
+0
+x
+ff 1
+e
+ x
+dx; B(p;q) =
+Z
+1
+0
+x
+p 1
+(1 x)
+q 1
+dx:
+We use the Banach space L
+1
+[0; 1] with the norm
+jjujj
+1
+=
+Z
+1
+0
+ju(s)jds:
+De ne
+X =
+8
+>
+>
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+>
+>
+:
+x : (0; 1]!R
+x2C(0; 1];
+D
+ 
+0
++
+x2C(0; 1];
+there exist the limits
+lim
+t!0
+t
+2 ff
+x(t);
+lim
+t!0
+t
+ +2 ff
+x(t)
+9
+>
+>
+>
+>
+>
+>
+>
+>
+=
+>
+>
+>
+>
+>
+>
+>
+>
+;
+:
+For u2X, de ne the norm
+jjujj = max
+(
+sup
+t2(0;1]
+t
+2 ff
+ju(t)j; sup
+t2(0;1]
+t
+ +2 ff
+jD
+ 
+0
++
+u(t)j
+)
+:
+By means of the linear functional analysis theory, we can prove that X is a Banach space.
+Choose Y =L
+1
+[0; 1].
+De ne L to be the linear operator from D(L)
+T
+X to Y with
+D(L) =
+8
+>
+>
+<
+>
+>
+:
+u2X :
+D
+ff
+0
++
+u2L
+1
+(0; 1);
+ 
+I
+2 ff
+0
++
+u(t)
+ 
+0
+ 
+ 
+ 
+t=0
+= 0;
+D
+ 
+0
+u(1) =
+P
+m 2
+i=1
+ 
+i
+D
+ 
+0
+u( 
+i
+)
+9
+>
+>
+=
+>
+>
+;
+and
+(Lu)(t) =D
+ff
+0
++u(t); u2D(L):
+De ne N :X!Y by
+(Nu)(t) =f
+ 
+t;u(t);D
+ 
+0
++
+u(t)
+ 
++e(t); u2X:
+Then BVP(1.2) can be written as
+Lu =Nu; u2D(L):
+Lemma 2 It holds that
+1. KerL =fct
+ff 2
+; c2Rg;
+2. ImL =
+(
+v2Y;
+R
+1
+0
+(1 s)
+ff   1
+v(s)ds
+=
+P
+m 2
+i=1
+ 
+i
+R
+ 
+i
+0
+( 
+i
+ s)
+ff   1
+v(s)ds
+)
+;
+Electronic Journal. http://www.math.spbu.ru/diffjournal 73Differential Equations and Control Processes, N 3, 2012
+3. L is a Fredholm operator of index zero.
+Proof
+(1) One sees that D
+ff
+0
++
+u(t) = 0 has solutions
+u(t) =c
+1
+t
+ff 1
++c
+2
+t
+ff 2
+;t2 (0; 1)
+for some c
+i
+2R; i = 1; 2: We get
+I
+2 ff
+0
+u(t) =c
+1
+ (ff)t +c
+2
+ (ff  1)
+and
+[I
+2 ff
+0
++
+u(t)]
+0
+=c
+1
+ (ff);
+and
+D
+ 
+0
+u(t) =c
+1
+ (ff)
+ (ff  )
+t
+ff   1
++c
+2
+ (ff  1)
+ (ff    1)
+t
+ff   2
+:
+Since
+[I
+2 ff
+0
++
+u(t)]
+0
+ 
+ 
+t=0
+= 0;
+we get c
+1
+= 0. Since
+P
+m 2
+i=1
+ 
+i
+ 
+ff   2
+i
+= 1, we  nd that c
+2
+2R. Thus KerL =fct
+ff 2
+; c2Rg.
+(2) We see that v2 ImL if and only if there exists a function u2D(L) such that
+8
+>
+>
+<
+>
+>
+:
+D
+ff
+0
++
+u(t) =v(t); t2 (0; 1); 1<ff  2;
+ 
+I
+2 ff
+0
++
+u(t)
+ 
+0
+ 
+ 
+ 
+t=0
+= 0;
+D
+ 
+0
+u(1) =
+P
+m 2
+i=1
+ 
+i
+D
+ 
+0
+u( 
+i
+):
+Then
+u(t) =I
+ff
+0
++v(t) +c
+1
+t
+ff 1
++c
+2
+t
+ff 2
+;t2 (0; 1):
+It follows that
+D
+ 
+0
+u(t) =I
+ff  
+0
++
+v(t) +c
+1
+ (ff)
+ (ff  )
+t
+ff   1
++c
+2
+ (ff  1)
+ (ff    1)
+t
+ff   2
+;
+I
+2 ff
+0
++
+u(t) =
+Z
+t
+0
+(t s)v(s)ds +c
+1
+ (ff)t +c
+2
+ (ff  1)
+and
+[I
+2 ff
+0
++
+u(t)]
+0
+=
+Z
+t
+0
+v(s)ds +c
+1
+ (ff): (3)
+From
+ 
+I
+2 ff
+0
++
+u(t)
+ 
+0
+ 
+ 
+ 
+t=0
+= 0, we get c
+1
+= 0. Now D
+ 
+0
+u(1) =
+P
+m 2
+i=1
+ 
+i
+D
+ 
+0
+u( 
+i
+) implies that
+Z
+1
+0
+(1 s)
+ff   1
+v(s)ds =
+m 2
+X
+i=1
+ 
+i
+Z
+ 
+i
+0
+( 
+i
+ s)
+ff   1
+v(s)ds: (4)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 74Differential Equations and Control Processes, N 3, 2012
+On the other hand, suppose v2Y and satis es (2.2). Choose
+u(t) =I
+ff
+0
++v(t):
+One sees by computation that
+D
+ff
+0
++u(t) =v(t);t2 (0; 1)
+and
+I
+2 ff
+0
++
+u(t) =
+Z
+t
+0
+(t s)v(s)ds; D
+ 
+0
+u(t) =I
+ff  
+0
++
+v(t):
+So
+ 
+I
+2 ff
+0
++
+u(t)
+ 
+0
+=
+Z
+t
+0
+v(s)ds; D
+ 
+0
+u(t) =
+1
+ (ff  )
+Z
+t
+0
+(t s)
+ff   1
+v(s)ds:
+One has
+ 
+I
+2 ff
+0
++
+u(t)
+ 
+0
+ 
+ 
+ 
+t=0
+= 0; D
+ 
+0
+u(1) =
+m 2
+X
+i=1
+ 
+i
+D
+ 
+0
+u( 
+i
+):
+Furthermore, we know that t
+2 ff
+u2 C(0; 1], t
+ +2 ff
+D
+ 
+0
++
+u2 C(0; 1] and there exist the limits
+lim
+t!0
+t
+2 ff
+u(t) and lim
+t!0
+t
+ +2 ff
+D
+ 
+0
++
+u(t). Hence u2 D(L) and Lu = v. So v2 ImL. Then
+(2) follows.
+To prove (3), we  rst claim that there exists k 2 f0; 1; 2;    ;m  2g such that
+P
+m 2
+i=1
+ 
+i
+ 
+3ff+3k   3
+i
+6= 1. In fact, suppose it is true, we have
+0
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+@
+ 
+3ff   3
+1
+ 
+3ff   3
+2
+     
+3ff   3
+m 2
+ 
+3ff  
+1
+ 
+3ff  
+2
+     
+3ff  
+m 2
+         
+         
+         
+ 
+3ff+3(m 2)   3
+1
+ 
+3ff+3(m 2)   3
+2
+     
+3ff+3(m 2)   3
+m 2
+1
+C
+C
+C
+C
+C
+C
+C
+C
+C
+C
+A
+0
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+@
+ 
+1
+ 
+2
+ 
+ 
+ 
+ 
+m 2
+1
+C
+C
+C
+C
+C
+C
+C
+C
+C
+C
+A
+=
+0
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+@
+1
+1
+ 
+ 
+ 
+1
+1
+C
+C
+C
+C
+C
+C
+C
+C
+C
+C
+A
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 75Differential Equations and Control Processes, N 3, 2012
+It is equal to
+0
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+@
+ 
+3ff   3
+1
+ 
+3ff   3
+2
+     
+3ff   3
+m 2
+1
+ 
+3ff  
+1
+ 
+3ff  
+2
+     
+3ff  
+m 2
+1
+          1
+          1
+          1
+ 
+3ff+3(m 2)   3
+1
+ 
+3ff+3(m 2)   3
+2
+     
+3ff+3(m 2)   3
+m 2
+1
+1
+C
+C
+C
+C
+C
+C
+C
+C
+C
+C
+A
+0
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+@
+ 
+1
+ 
+2
+ 
+ 
+ 
+ 
+m 2
+ 1
+1
+C
+C
+C
+C
+C
+C
+C
+C
+C
+C
+C
+C
+C
+A
+=
+0
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+@
+0
+0
+ 
+ 
+ 
+0
+0
+1
+C
+C
+C
+C
+C
+C
+C
+C
+C
+C
+C
+C
+C
+A
+:
+However, it is well known that the Vandermont Determinant is not equal to zero, so there is a
+contradiction.
+(3) It follows from (1) that dim KerL = 1. Let k satisfy
+m 2
+X
+i=1
+ 
+i
+ 
+3ff+3k   3
+i
+6= 1:
+De ne the projectors Q : Y!Y and P : X!X by
+(Qv)(t) =
+R
+1
+0
+(1 s)
+ff   1
+v(s)ds 
+P
+m 2
+i=1
+ 
+i
+R
+ 
+i
+0
+(  s)
+ff   1
+v(s)ds
+B(ff +k;ff  )
+ 
+1 
+P
+m 2
+i=1
+ 
+i
+ 
+3ff+3k   3
+i
+  t
+ff+k 1
+for v2Y and
+(Pu)(t) =
+ 
+I
+2 ff
+0
++
+u(t)
+  
+ 
+t=0
+ (ff  1)
+t
+ff 2
+for u2X;
+respectively. It is easy to prove that
+ImP = KerL; KerQ = ImL: (5)
+Furthermore, for u2X, one sees
+ 
+I
+2 ff
+0
++
+u(t)
+  
+ 
+t=0
+ (ff  1)
+t
+ff 2
+2 KerL:
+The de nition of P implies
+P
+ 
+u(t) 
+ 
+I
+2 ff
+0
++
+u(t)
+  
+ 
+t=0
+ (ff  1)
+t
+ff 2
+!
+= 0:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 76Differential Equations and Control Processes, N 3, 2012
+We get
+u(t) 
+ 
+I
+2 ff
+0
++
+u(t)
+  
+ 
+t=0
+ (ff  1)
+t
+ff 2
+2 KerP:
+One can see that KerL
+T
+KerP =f0g. Then
+X = KerL  KerP: (6)
+For v2Y , denote
+V (t) =v(t) 
+R
+1
+0
+(1 s)
+ff   1
+v(s)ds 
+P
+m 2
+i=1
+ 
+i
+R
+ 
+i
+0
+(  s)
+ff   1
+v(s)ds
+B(ff +k;ff  )
+ 
+1 
+P
+m 2
+i=1
+ 
+i
+ 
+3ff+3k   3
+i
+  t
+ff+k 1
+:
+Since
+Z
+1
+0
+(1 t)
+ff   1
+V (t)dt =
+Z
+1
+0
+(1 t)
+ff   1
+v(t)dt
+ 
+R
+1
+0
+(1 s)
+ff   1
+v(s)ds 
+P
+m 2
+i=1
+ 
+i
+R
+ 
+i
+0
+(  s)
+ff   1
+v(s)ds
+B(ff +k;ff  )
+ 
+1 
+P
+m 2
+i=1
+ 
+i
+ 
+3ff+3k   3
+i
+   
+Z
+1
+0
+(1 t)
+ff   1
+t
+ff+k 1
+dt =
+Z
+1
+0
+(1 t)
+ff   1
+v(t)dt
+ 
+R
+1
+0
+(1 s)
+ff   1
+v(s)ds 
+P
+m 2
+i=1
+ 
+i
+R
+ 
+i
+0
+( 
+i
+ s)
+ff   1
+v(s)ds
+1 
+P
+m 2
+i=1
+ 
+i
+ 
+3ff+3k   3
+i
+;
+Electronic Journal. http://www.math.spbu.ru/diffjournal 77Differential Equations and Control Processes, N 3, 2012
+implies
+m 2
+X
+i=1
+ 
+i
+Z
+ 
+i
+0
+( 
+i
+ t)
+ff   1
+V (t)dt =
+m 2
+X
+i=1
+ 
+i
+Z
+ 
+i
+0
+( 
+i
+ t)
+ff   1
+v(t)dt
+ 
+R
+1
+0
+(1 s)
+ff   1
+v(s)ds 
+P
+m 2
+i=1
+ 
+i
+R
+ 
+i
+0
+(  s)
+ff   1
+v(s)ds
+B(ff +k;ff  )
+ 
+1 
+P
+m 2
+i=1
+ 
+i
+ 
+3ff+3k   3
+i
+   
+m 2
+X
+i=1
+ 
+i
+Z
+ 
+i
+0
+( 
+i
+ t)
+ff   1
+t
+ff+k 1
+dt
+=
+m 2
+X
+i=1
+ 
+i
+Z
+ 
+i
+0
+( 
+i
+ t)
+ff   1
+v(t)dt
+ 
+R
+1
+0
+(1 s)
+ff   1
+v(s)ds 
+P
+m 2
+i=1
+ 
+i
+R
+ 
+i
+0
+(  s)
+ff   1
+v(s)ds
+B(ff +k;ff  )
+ 
+1 
+P
+m 2
+i=1
+ 
+i
+ 
+3ff+3k   3
+i
+   
+m 2
+X
+i=1
+ 
+i
+Z
+ 
+i
+0
+ 
+ff   1
+i
+ 
+1 
+t
+ 
+i
+ 
+ff   1
+t
+ff+k 1
+dt
+=
+m 2
+X
+i=1
+ 
+i
+Z
+ 
+i
+0
+( 
+i
+ t)
+ff   1
+v(t)dt
+ 
+R
+1
+0
+(1 s)
+ff   1
+v(s)ds 
+P
+m 2
+i=1
+ 
+i
+R
+ 
+i
+0
+(  s)
+ff   1
+v(s)ds
+1 
+P
+m 2
+i=1
+ 
+i
+ 
+3ff+3k   3
+i
+ 
+m 2
+X
+i=1
+ 
+i
+ 
+3ff+3k   3
+i
+=
+Z
+1
+0
+(1 t)
+ff   1
+V (t)dt;
+we get
+v 
+R
+1
+0
+(1 s)
+ff   1
+v(s)ds 
+P
+m 2
+i=1
+ 
+i
+R
+ 
+i
+0
+( 
+i
+ s)
+ff   1
+v(s)ds
+B(ff +k;ff  )
+ 
+1 
+P
+m 2
+i=1
+ 
+i
+ 
+3ff+3k   3
+i
+  t
+ff+k 1
+2 ImL:
+Together with
+R
+1
+0
+(1 s)
+ff   1
+v(s)ds 
+P
+m 2
+i=1
+ 
+i
+R
+ 
+i
+0
+( 
+i
+ s)
+ff   1
+v(s)ds
+B(ff +k;ff  )
+ 
+1 
+P
+m 2
+i=1
+ 
+i
+ 
+3ff+3k   3
+i
+  t
+ff+k 1
+2 ImQ;
+and ImL
+T
+ImQ =f0g,we get
+Y = ImL  ImQ; Y=ImL = ImQ: (7)
+So dim KerL = dim Y=ImL = 1. Hence L is a Fredholm operator of index zero. The proofs
+are completed.
+Suppose that
+Electronic Journal. http://www.math.spbu.ru/diffjournal 78Differential Equations and Control Processes, N 3, 2012
+(A) f(t; ; ) : R
+2
+! R is continuous for each t2 (0; 1) and e2 L
+1
+(0; 1), for each r > 0 there
+exists  
+r
+2L
+1
+(0; 1) such that
+jf(t;t
+ff 2
+x;t
+ff   2
+y)j  
+r
+(t); t2 (0; 1);jxj r;jyj r:
+Lemma 3 Suppose that (A) holds. Let 
+ X be an open bounded subset with 
+\D(L)6=;.
+Then N is L compact on 
+.
+Proof Let P : X! X and Q : Y ! Y be de ned in the proof of (3)of Lemma 2. For
+v2 ImL, let
+(K
+P
+v)(t) =
+1
+ (ff)
+Z
+t
+0
+(t s)
+ff 1
+v(s)ds =I
+ff
+0
++v(t) for v2 ImL:
+One sees K
+P
+v2D(L) and
+P
+ 
+1
+ (ff)
+Z
+t
+0
+(t s)
+ff 1
+v(s)ds
+ 
+= P (I
+ff
+0
++v(t)) =
+ 
+I
+2 ff
+0
++
+I
+ff
+0
++
+v(t)
+  
+ 
+t=0
+ (ff  1)
+t
+ff 2
+=
+ 
+I
+2
+0
++
+v(t)
+  
+ 
+t=0
+ (ff  1)
+t
+ff 2
+= 0:
+It follows that (K
+p
+v)2 KerP . Then K
+P
+: Im L!D(L)\ KerP is well de ned.
+Furthermore, for v2 ImL, we have
+(LK
+P
+)(v) =L
+ 
+1
+ (ff)
+Z
+t
+0
+(t s)
+ff 1
+v(s)ds
+ 
+=D
+ff
+0
++ (I
+ff
+0
++v(t)) =v(t):
+On the other hand, for u2 Ker P\D(L), we have
+(Pu)(t) =
+[I
+2 ff
+0
++
+u(t)]j
+t=0
+ (ff  1)
+t
+ff 2
+= 0;t2 (0; 1):
+Suppose D
+ff
+0
++
+u =v. Then
+u(t) = I
+ff
+0
++v(t) +
+[I
+2 ff
+0
++
+u(t)]
+0
+j
+t=0
+ (ff)
+t
+ff 1
++
+I
+2 ff
+0
++
+u(t)j
+t=0
+ (ff  1)
+t
+ff 2
+= I
+ff
+0
++v(t):
+It follows from the de nition of K
+P
+that
+(K
+P
+L)u(t) = K
+P
+D
+ff
+0
++u(t) =K
+P
+v(t)
+=
+1
+ (ff)
+Z
+t
+0
+(t s)
+ff 1
+v(s)ds
+= I
+ff
+0
++v(t) =u(t):
+Electronic Journal. http://www.math.spbu.ru/diffjournal 79Differential Equations and Control Processes, N 3, 2012
+Then K
+P
+is the inverse of L :D(L)
+T
+KerL! ImL. The isomorphism^ : KerL!Y=ImL is
+given by
+^(at
+ff 2
+) =at
+ff+k 1
+; a2R:
+Furthermore, one has
+QNu(t) =Q
+ 
+f(t;u(t);D
+ 
+0
++
+u(t)) +e(t)
+ 
+=
+t
+ff+k 1
+R
+1
+0
+(1 t)
+ff   1
+ 
+f(t;u(t);D
+ 
+0
++
+u(t)) +e(t)
+ 
+dt
+B(ff +k;ff  )
+ 
+1 
+P
+m 2
+i=1
+ 
+i
+ 
+3ff+3k   3
+i
+ 
+ 
+t
+ff+k 1
+P
+m 2
+i=1
+ 
+i
+R
+ 
+i
+0
+( 
+i
+ t)
+ff   1
+ 
+f(t;u(t);D
+ 
+0
++
+u(t)) +e(t)
+ 
+dt
+B(ff +k;ff  )
+ 
+1 
+P
+m 2
+i=1
+ 
+i
+ 
+3ff+3k   3
+i
+  ;
+K
+p
+(I Q)Nx(t) =K
+p
+(I Q)
+ 
+f(t;u(t);D
+ff 1
+0
++
+u(t)) +e(t)
+ 
+=K
+P
+ 
+f(t;u(t);D
+ff 1
+0
++
+u(t)) +e(t)
+ 
+ K
+P
+Q
+ 
+f(t;u(t);D
+ff 1
+0
++
+u(t)) +e(t)
+ 
+=
+1
+ (ff)
+Z
+t
+0
+(t s)
+ff 1
+ 
+f(s;u(s);D
+ff 1
+0
++
+u(s)) +e(s)
+ 
+ds
+ 
+1
+ (ff)
+2
+4
+R
+1
+0
+(1 t)
+ff   1
+ 
+f(t;u(t);D
+ 
+0
++
+u(t)) +e(t)
+ 
+dt
+B(ff +k;ff  )
+ 
+1 
+P
+m 2
+i=1
+ 
+i
+ 
+3ff+3k   3
+i
+ 
++
+P
+m 2
+i=1
+ 
+i
+R
+ 
+i
+0
+( 
+i
+ t)
+ff   1
+ 
+f(t;u(t);D
+ 
+0
++
+u(t)) +e(t)
+ 
+dt
+B(ff +k;ff  )
+ 
+1 
+P
+m 2
+i=1
+ 
+i
+ 
+3ff+3k   3
+i
+ 
+3
+5
+ 
+Z
+t
+0
+(t s)
+ff 1
+s
+ff+k 1
+ds:
+Let 
+ be an open bounded subset inY . Firstly, we show that bothQN(
+) andK
+P
+(I Q)N(
+)
+are bounded in Y .
+Secondly, we show that both t
+2 ff
+K
+P
+(I  Q)N(
+) and t
+ +2 ff
+D
+ 
+0
++
+K
+P
+(I  Q)N(
+) are
+equicontinuous on each closed interval [ff; ]  (0; 1].
+Finally, we show that botht
+2 ff
+K
+P
+(I Q)N(
+) andt
+ +2 ff
+D
+ 
+0
++
+K
+P
+(I Q)N(
+) are equicon-
+vergent at t = 0.
+Hence K
+P
+(I Q)N(
+) is compact. Then K
+P
+(I Q)N is completely continuous. So N is
+L compact on 
+. The proofs are completed.
+Theorem 1 Suppose that (A) holds and
+(B) there exist nonnegative functionsa;b;c;r, and a constant 2 [0; 1) such that for all (x;y)2
+R
+2
+, t2 (0; 1) either
+jf(t;x;y)j a(t)jxj +b(t)jyj +c(t)jyj
+ 
++r(t) (8)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 80Differential Equations and Control Processes, N 3, 2012
+or else
+jf(t;x;y)j a(t)jxj +b(t)jyj +c(t)jxj
+ 
++r(t): (9)
+(C) there exists a constant M > 0 such that for all u 2 D(L), ifjt
+2 ff
+u(t)j > M for all
+t2 (0; 1), then
+Z
+1
+0
+(1 s)
+ff   1
+(f(s;u(s);D
+ 
+0
++
+u(s)) +e(s))ds
+6=
+m 2
+X
+i=1
+ 
+i
+Z
+ 
+i
+0
+( 
+i
+ s)
+ff   1
+(f(s;u(s);D
+ 
+0
++
+u(s)) +e(s))ds:
+(D) there exists a constant M
+ 
+> 0, then either
+c
+ Z
+1
+0
+(1 s)
+ff   1
+ 
+f
+ 
+t;ct
+ff 2
+;c
+ (ff  1)
+ (ff    1)
+t
+ff   2
+ 
++e(t)
+ 
+dt
+ 
+m 2
+X
+i=1
+ 
+i
+Z
+ 
+i
+0
+( 
+i
+ s)
+ff   1
+ 
+f
+ 
+t;ct
+ff 2
+;c
+ (ff  1)
+ (ff    1)
+t
+ff   2
+ 
++e(t)
+ 
+dt
+)
+> 0
+for alljcj>M
+ 
+or else
+c
+ Z
+1
+0
+(1 s)
+ff   1
+ 
+f
+ 
+t;ct
+ff 2
+;c
+ (ff  1)
+ (ff    1)
+t
+ff   2
+ 
++e(t)
+ 
+dt
+ 
+m 2
+X
+i=1
+ 
+i
+Z
+ 
+i
+0
+( 
+i
+ s)
+ff   1
+ 
+f
+ 
+t;ct
+ff 2
+;c
+ (ff  1)
+ (ff    1)
+t
+ff   2
+ 
++e(t)
+ 
+dt
+)
+< 0
+for alljcj>M
+ 
+.
+(E) B
+ 
+R
+1
+0
+a(s)
+s
+2 ff
+ds +
+R
+1
+0
+b(s)
+s
+ +2 ff
+ds
+ 
+< 1 with
+B = max
+ 
+1
+ (ff  )
+;
+1
+(ff  1) (ff    1)
+ 
+:
+Then for every e2L
+1
+[0; 1] BVP(1.2) has at least one solution.
+Proof
+To apply Lemma 1, we should de ne an open bounded subset 
+ of X centered at zero
+such that (1), (2) and (3) in Lemma 1 hold. To obtain 
+, we do three steps. The proof of this
+theorem is divided into four steps. Let
+A = max
+ 
+1
+ (ff  1)
+;
+1
+ (ff    1)
+ 
+M (ff  1):
+Step 1 Let 
+
+1
+=fu2 D(L)n KerL; Lu =  Nu for some  2 (0; 1)g: We prove that 
+
+1
+is
+bounded.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 81Differential Equations and Control Processes, N 3, 2012
+For u2 
+
+1
+, we get Lu = Nu and Nu2 ImL. Then
+Z
+1
+0
+(1 s)
+ff   1
+(f(s;u(s);D
+ 
+0
++
+u(s)) +e(s))ds
+=
+m 2
+X
+i=1
+ 
+i
+Z
+ 
+i
+0
+( 
+i
+ s)
+ff   1
+(f(s;u(s);D
+ 
+0
++
+u(s)) +e(s))ds:
+From (C), there exists t
+0
+2 (0; 1) such that
+jt
+2 ff
+0
+u(t
+0
+)j M:
+Denote  Nu(t) =v(t). By Lemma 2.5[4: page 74], we have
+u(t) = I
+ff
+0
++v(t) +
+ 
+I
+2 ff
+0
++
+u(t)
+ 
+0
+ 
+ 
+ 
+t=0
+ (ff)
+t
+ff 1
++
+I
+2 ff
+0
++
+u(t)j
+t=0
+ (ff  1)
+t
+ff 2
+= I
+ff
+0
++v(t) +
+I
+2 ff
+0
++
+u(t)j
+t=0
+ (ff  1)
+t
+ff 2
+:
+So
+t
+2 ff
+u(t) =t
+2 ff
+I
+ff
+0
++v(t) +
+I
+2 ff
+0
++
+u(t)j
+t=0
+ (ff  1)
+:
+Then
+ 
+ 
+I
+2 ff
+0
++
+u(t)j
+t=0
+ 
+ 
+ (ff  1)
+=
+ 
+ 
+t
+2 ff
+0
+u(t
+0
+) t
+2 ff
+0
+I
+ff
+0
++v(t
+0
+)
+ 
+ 
+  M +
+1
+ (ff)
+ 
+ 
+ 
+ 
+Z
+t
+0
+0
+(t
+0
+ s)
+ff 1
+v(s)ds
+ 
+ 
+ 
+ 
+  M +
+1
+ (ff)
+jjvjj
+1
+One has
+Pu(t) =
+ 
+I
+2 ff
+0
++
+u(t)
+  
+ 
+t=0
+ (ff  1)
+t
+ff 2
+and
+D
+ 
+Pu(t) =
+ 
+I
+2 ff
+0
++
+u(t)
+  
+ 
+t=0
+ (ff    1)
+t
+ff   2
+:
+It follows that
+jjPujj = max
+(
+sup
+t2[0;1]
+ 
+ 
+t
+2  
+Pu(t)
+ 
+ 
+; sup
+t2[0;1]
+t
+ +2 ff
+jD
+ 
+0
++
+Pu(t)j
+)
+  max
+( 
+ 
+ 
+I
+2 ff
+0
++
+u(t)
+  
+ 
+t=0
+ 
+ 
+ (ff  1)
+;
+ 
+ 
+ 
+I
+2 ff
+0
++
+u(t)
+  
+ 
+t=0
+ 
+ 
+ (ff    1)
+)
+= max
+ 
+1
+ (ff  1)
+;
+1
+ (ff    1)
+ 
+ 
+ 
+ 
+I
+2 ff
+0
++
+u(t)
+  
+ 
+t=0
+ 
+ 
+  max
+ 
+1
+ (ff  1)
+;
+1
+ (ff    1)
+  
+M (ff  1) +
+ (ff  1)
+ (ff)
+jjvjj
+1
+ 
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 82Differential Equations and Control Processes, N 3, 2012
+On the other hand, we have by the de nition of K
+P
+that K
+P
+v = I
+ff
+0
++
+v: Then D
+ 
+K
+P
+v =
+I
+ff  
+0
++
+v: Hence
+jjK
+P
+vjj = max
+(
+sup
+t2[0;1]
+jt
+2  
+K
+P
+v(t)j; sup
+t2[0;1]
+t
+ +2 ff
+jD
+ 
+K
+P
+v(t)j
+)
+= max
+(
+sup
+t2[0;1]
+ 
+ 
+ 
+ 
+t
+2  
+ (ff)
+Z
+t
+0
+(t s)
+ff 1
+v(s)ds
+ 
+ 
+ 
+ 
+;
+sup
+t2[0;1]
+t
+ +2 ff
+ (ff  )
+ 
+ 
+ 
+ 
+Z
+t
+0
+(t s)
+ff   1
+v(s)ds
+ 
+ 
+ 
+ 
+)
+  max
+ 
+1
+ (ff)
+;
+1
+ (ff  )
+ 
+jjvjj
+1
+:
+Again foru2 
+
+1
+, we haveu2D(L)n KerL, then (I P )u2D(L)
+T
+KerP andLPu = 0.
+So
+jj(I P )ujj = jjK
+P
+L(I P )ujj
+  max
+ 
+1
+ (ff)
+;
+1
+ (ff  )
+ 
+jjL(I P )ujj
+1
+= max
+ 
+1
+ (ff)
+;
+1
+ (ff  )
+ 
+jjLujj
+1
+  max
+ 
+1
+ (ff)
+;
+1
+ (ff  )
+ 
+jj Nujj
+1
+  max
+ 
+1
+ (ff)
+;
+1
+ (ff  )
+ 
+jjvjj
+1
+:
+Hence
+jjujj   jjPujj +jj(I P )ujj
+  max
+ 
+1
+ (ff  1)
+;
+1
+ (ff    1)
+  
+M (ff  1) +
+ (ff  1)
+ (ff)
+jjvjj
+1
+ 
++ max
+ 
+1
+ (ff)
+;
+1
+ (ff  )
+ 
+jjNujj
+1
+  max
+ 
+1
+ (ff  1)
+;
+1
+ (ff    1)
+ 
+M (ff  1)
++ max
+ 
+1
+ (ff  )
+;
+1
+(ff  1) (ff    1)
+ 
+jjvjj
+1
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 83Differential Equations and Control Processes, N 3, 2012
+If (2.6) holds, fromjjt
+2 ff
+ujj
+1
+ jjujj andjjt
+ +2 ff
+D
+ 
+0
++
+ujj
+1
+ jjujj, then
+jjujj   A +B
+Z
+1
+0
+jf(s;u(s);D
+ 
+0
++
+u(s)) +e(s)jds
+  A +B
+Z
+1
+0
+ 
+a(s)
+s
+2 ff
+js
+2 ff
+u(s)j +
+b(s)
+s
+ +2 ff
+js
+ +2 ff
+D
+ 
+0
++
+u(s)j
++
+s
+ ( +2 ff)
+c
+(s)js
+ +2 ff
+D
+ 
+0
++
+u(s)j
+ 
++r(s) + je(s)j
+i
+ds
+  A +B
+Z
+1
+0
+a(s)
+s
+2 ff
+dsjjt
+2 ff
+ujj
+1
++B
+Z
+1
+0
+b(s)
+s
+ +2 ff
+dsjjt
+ +2 ff
+D
+ 
+0
++
+ujj
+1
++B
+Z
+1
+0
+c(s)
+s
+ ( +2 ff)
+dsjjt
+ +2 ff
+D
+ 
+0
++
+ujj
+ 
+1
++B
+Z
+1
+0
+[r(s) +je(s)j]ds
+  A +B
+ Z
+1
+0
+a(s)
+s
+2 ff
+ds +
+Z
+1
+0
+b(s)
+s
+ +2 ff
+ds
+ 
+jjujj
++B
+Z
+1
+0
+c(s)
+s
+ ( +2 ff)
+dsjjujj
+ 
++B
+Z
+1
+0
+[r(s) +je(s)j]ds:
+It follows from (E) and  2 [0; 1) that there exists M
+1
+> 0 such that
+jjujjj M
+1
+: (10)
+If (2.7) holds, similarly to above discussion, we get that there exists M
+1
+> 0 such that
+(2.8) holds. It follows that 
+
+1
+is bounded.
+Step 2 Let 
+
+2
+=fx2 KerL : Nx2 ImLg: We prove that 
+
+2
+is bounded.
+For x2 
+
+2
+, then x(t) =ct
+ff 2
+, and
+Nx(t) =f
+ 
+t;ct
+ff 2
+;c
+ (ff  1)
+ (ff    1
+t
+ff 2  
+ 
++e(t):
+So
+Z
+1
+0
+(1 s)
+ff   1
+ 
+f
+ 
+t;ct
+ff 2
+;c
+ (ff  1)
+ (ff    1
+t
+ff 2  
+ 
++e(t)
+ 
+dt
+=
+m 2
+X
+i=1
+ 
+i
+Z
+ 
+i
+0
+( 
+i
+ s)
+ff   1
+ 
+f
+ 
+t;ct
+ff 2
+;c
+ (ff  1)
+ (ff    1
+t
+ff 2  
+ 
++e(t)
+ 
+dt:
+From (D), we get thatjcj M
+ 
+. This shows 
+
+2
+is bounded.
+Step 3 We prove that either
+
+
+3
+=fx2 Ker L :  ^x + (1  )QNx = 0;  2 [0; 1]g
+or
+
+
+3
+=fx2 Ker L :   ^x + (1  )QNx = 0;  2 [0; 1]g
+is bounded.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 84Differential Equations and Control Processes, N 3, 2012
+If the  rst inequality in (D) holds for alljcj>M
+ 
+, let
+
+
+3
+=fx2 Ker L :  ^x + (1  )QNx = 0;  2 [0; 1]g;
+where^ is the isomorphism given by^(ct
+ff 2
+) =ct
+ff+k 1
+: We prove that 
+
+3
+is bounded.
+For x(t) =ct
+ff 2
+2 Ker L, one sees that
+  ct
+ff+k 1
+=
+t
+ff+k 1
+R
+1
+0
+(1 t)
+ff   1
+h
+f
+ 
+t;ct
+ff 2
+;c
+ (ff 1)
+ (ff   1
+t
+ff 2  
+ 
++e(t)
+i
+dt
+B(ff +k;ff  )
+ 
+1 
+P
+m 2
+i=1
+ 
+i
+ 
+3ff+3k   3
+i
+ 
+ 
+t
+ff+k 1
+P
+m 2
+i=1
+ 
+i
+R
+ 
+i
+0
+( 
+i
+ t)
+ff   1
+h
+f
+ 
+t;ct
+ff 2
+;c
+ (ff 1)
+ (ff   1
+t
+ff 2  
+ 
++e(t)
+i
+dt
+B(ff +k;ff  )
+ 
+1 
+P
+m 2
+i=1
+ 
+i
+ 
+3ff+3k   3
+i
+  :
+Then
+  c =
+R
+1
+0
+(1 t)
+ff   1
+h
+f
+ 
+t;ct
+ff 2
+;c
+ (ff 1)
+ (ff   1
+t
+ff 2  
+ 
++e(t)
+i
+dt
+B(ff +k;ff  )
+ 
+1 
+P
+m 2
+i=1
+ 
+i
+ 
+3ff+3k   3
+i
+ 
+ 
+P
+m 2
+i=1
+ 
+i
+R
+ 
+i
+0
+( 
+i
+ t)
+ff   1
+h
+f
+ 
+t;ct
+ff 2
+;c
+ (ff 1)
+ (ff   1
+t
+ff 2  
+ 
++e(t)
+i
+dt
+B(ff +k;ff  )
+ 
+1 
+P
+m 2
+i=1
+ 
+i
+ 
+3ff+3k   3
+i
+  :
+If   = 1, then c = 0. If  2 [0; 1), andjcj>M
+ 
+, we get
+0   c
+2
+=
+c
+R
+1
+0
+(1 t)
+ff   1
+h
+f
+ 
+t;ct
+ff 2
+;c
+ (ff 1)
+ (ff   1
+t
+ff 2  
+ 
++e(t)
+i
+dt
+B(ff +k;ff  )
+ 
+1 
+P
+m 2
+i=1
+ 
+i
+ 
+3ff+3k   3
+i
+ 
+ 
+c
+P
+m 2
+i=1
+ 
+i
+R
+ 
+i
+0
+( 
+i
+ t)
+ff   1
+h
+f
+ 
+t;ct
+ff 2
+;c
+ (ff 1)
+ (ff   1
+t
+ff 2  
+ 
++e(t)
+i
+dt
+B(ff +k;ff  )
+ 
+1 
+P
+m 2
+i=1
+ 
+i
+ 
+3ff+3k   3
+i
+ 
+> 0;
+a contradiction. Hencejcj M
+ 
+. Then 
+
+3
+is bounded.
+If the second inequality in (D) holds for alljcj>M
+ 
+, let
+
+
+3
+=fx2 Ker L :  ^x  (1  )QNx = 0;  2 [0; 1]g;
+where^ is the isomorphism given by^(ct
+ff 2
+) =ct
+ff+k 1
+: We prove that 
+
+3
+is bounded.
+Step 4 We shall show that all conditions of Lemma 2.1 are satis ed.
+Set 
+ be a open bounded subset ofX centered at zero such that 
+ [
+3
+i=1
+
+
+i
+. By Lemma
+2.2 and Lemma 2.3, L is a Fredholm operator of index zero and N is L compact on 
+.
+By the de nition of 
+, we have
+Electronic Journal. http://www.math.spbu.ru/diffjournal 85Differential Equations and Control Processes, N 3, 2012
+(a) Lx6= Nx for x2 (D(L)n KerL)\@
+ and  2 (0; 1);
+(b) Nx = 2 ImL for x2 KerL\@
+.
+(c) deg(QNj
+KerL
+; 
+\ KerL; 0) 6= 0: In fact, let H(x; ) =   ^ x + (1   )QNx.
+According the de nition of 
+, we know H(x; )6= 0 for x2 @
+\ KerL, thus by
+homotopy property of degree,
+deg(QNj
+KerL
+; 
+\ KerL; 0) = deg(H( ; 0); 
+\ KerL; 0)
+= deg(H( ; 1); 
+\ KerL; 0)
+= deg(^; 
+\ KerL; 0)6= 0:
+Thus by Lemma 1,Lx =Nx has at least one solution inD(L)\
+, which is a solution
+of BVP(1.2). The proof is complete.
+3 An example
+Now, we present an example, which can not be covered by known results, to illustrate Theorem
+2.1.
+Example 1 Consider the boundary value problem for fractional differential equation
+8
+>
+>
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+>
+>
+:
+D
+3
+2
+0
++
+(t) =
+t
+2 ff
+24
+x(t) +
+1
+24
+sin
+ 
+t
+3
+2
+D
+1
+4
+0
++
+x(t)
+ 
++3 sin
+ 
+t
+3
+2
+D
+1
+4
+0
++
+x(t)
+ 
+1
+3
++ 1 + cos
+2
+t;
+h
+I
+1
+2
+0
++
+x(t)
+i
+0
+ 
+ 
+ 
+ 
+t=0
+= 0;
+D
+1
+4
+0
++
+x(t)
+ 
+ 
+ 
+t=1
+= 
+1
+D
+1
+4
+0
++
+x(t)
+ 
+ 
+ 
+t= 
+1
++ 
+2
+D
+1
+4
+0
++
+x(t)
+ 
+ 
+ 
+t= 
+2
+:
+(11)
+Proof
+Corresponding to BVP(1.2), ff =
+3
+2
+,   =
+1
+4
+and
+0< 
+1
+< 
+2
+< 1;  
+1
+  0;  
+2
+  0 such that  
+i
+ 
+ 
+3
+2
+1
++ 
+2
+ 
+ 
+3
+2
+2
+= 1
+f(t;x;y) =
+t
+2 ff
+24
+x +
+1
+24
+sin(t
+3
+2
+y) + 3 sin(t
+3
+2
+y)
+1
+3
+; e(t) = 1 + cos
+2
+t:
+It is easy to see that (A) holds.
+(B) choose a(t) =
+t
+2 ff
+24
+, b(t) =
+t
+3
+2
+24
+, c(t) = 3t
+3
+2
+, r(t) = 0,   =
+1
+3
+, then for all (x;y)2 R
+2
+,
+t2 (0; 1), then
+jf(t;x;y)j a(t)jxj +b(t)jyj +c(t)jyj
+ 
++r(t): (12)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 86Differential Equations and Control Processes, N 3, 2012
+(C) choose M = 122, it is easy to  nd that
+f(t;x;y) +e(t) 
+t
+2 ff
+24
+x 
+1
+24
+  3 + 1 =
+x  49
+24
+>
+1
+24
+if t
+2 ff
+x>M;
+then
+Z
+1
+0
+(1 s)
+1
+4
+(f(s;u(s);D
+ 
+0
++
+u(s)) +e(s))ds
+  
+1
+Z
+ 
+1
+0
+( 
+1
+ s)
+1
+4
+(f(s;u(s);D
+ 
+0
++
+u(s)) +e(s))ds
+  
+2
+Z
+ 
+2
+0
+( 
+2
+ s)
+1
+4
+(f(s;u(s);D
+ 
+0
++
+u(s)) +e(s))ds
+   
+1
+Z
+1
+ 
+1
+(1 s)
+1
+4
+(f(s;u(s);D
+ 
+0
++
+u(s)) +e(s))ds
++ 
+2
+Z
+1
+ 
+2
+(1 s)
+1
+4
+(f(s;u(s);D
+ 
+0
++
+u(s)) +e(s))ds
+> 0:
+It is easy to  nd that
+f(t;x;y) +e(t) 
+t
+2 ff
+24
+x +
+1
+24
++ 3 + 2 =
+x + 120
+24
+<
+ 2
+24
+if t
+2 ff
+x< M;
+then
+Z
+1
+0
+(1 s)
+1
+4
+(f(s;u(s);D
+ 
+0
++
+u(s)) +e(s))ds
+  
+1
+Z
+ 
+1
+0
+( 
+1
+ s)
+1
+4
+(f(s;u(s);D
+ 
+0
++
+u(s)) +e(s))ds
+  
+2
+Z
+ 
+2
+0
+( 
+2
+ s)
+1
+4
+(f(s;u(s);D
+ 
+0
++
+u(s)) +e(s))ds
+   
+1
+Z
+1
+ 
+1
+(1 s)
+1
+4
+(f(s;u(s);D
+ 
+0
++
+u(s)) +e(s))ds
++ 
+2
+Z
+1
+ 
+2
+(1 s)
+1
+4
+(f(s;u(s);D
+ 
+0
++
+u(s)) +e(s))ds
+< 0:
+Then u2D(L), ifjt
+2 ff
+u(t)j>M for all t2 (0; 1), it holds that
+Z
+1
+0
+(1 s)
+1
+4
+(f(s;u(s);D
+ff 1
+0
++
+u(s)) +e(s))ds
+6=  
+1
+Z
+ 
+1
+0
+( 
+1
+ s)
+1
+4
+(f(s;u(s);D
+ff 1
+0
++
+u(s)) +e(s))ds
++ 
+2
+Z
+ 
+2
+0
+( 
+2
+ s)
+1
+4
+(f(s;u(s);D
+ff 1
+0
++
+u(s)) +e(s))ds:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 87Differential Equations and Control Processes, N 3, 2012
+(D) since
+f
+ 
+t;ct
+ff 2
+;c
+ (ff  1)
+ (ff    1)
+t
+ff 2  
+ 
++e(t)
+=
+1
+24
+c +
+1
+24
+sin
+ 
+c
+ (ff  1)
+ (ff    1)
+t
+ff 2  
+ 
++3 sin
+ 
+c
+ (ff  1)
+ (ff    1)
+t
+ff 2  
+ 1
+3
++ 1 + cos
+2
+t
+(
+ 
+c
+24
+ 
+49
+24
+ 
+c
+24
++
+121
+24
+;
+we get for c> 122 that
+N = c
+ Z
+1
+0
+(1 s)
+1
+4
+ 
+f
+ 
+t;ct
+ff 2
+;c
+ (ff  1)
+ (ff    1)
+t
+ff 2  
+ 
++e(t)
+ 
+dt
+  
+1
+Z
+ 
+1
+0
+( 
+1
+ s)
+1
+4
+ 
+f
+ 
+t;ct
+ff 2
+;c
+ (ff  1)
+ (ff    1)
+t
+ff 2  
+ 
++e(t)
+ 
+dt
+  
+2
+Z
+ 
+2
+0
+( 
+2
+ s)
+1
+4
+ 
+f
+ 
+t;ct
+ff 2
+;c
+ (ff  1)
+ (ff    1)
+t
+ff 2  
+ 
++e(t)
+ 
+dt
+ 
+  c
+ 
+ 
+1
+Z
+1
+ 
+1
+(1 s)
+1
+4
+ 
+f
+ 
+t;ct
+ff 2
+;c
+ (ff  1)
+ (ff    1)
+t
+ff 2  
+ 
++e(t)
+ 
+dt
++ 
+2
+Z
+1
+ 
+2
+(1 s)
+1
+4
+ 
+f
+ 
+t;ct
+ff 2
+;c
+ (ff  1)
+ (ff    1)
+t
+ff 2  
+ 
++e(t)
+ 
+dt
+ 
+  c
+ 
+ 
+1
+Z
+1
+ 
+1
+(1 s)
+1
+4
+ 
+c
+24
+ 
+49
+24
+ 
+dt + 
+2
+Z
+1
+ 
+2
+(1 s)
+1
+4
+ 
+c
+24
+ 
+49
+24
+ 
+dt
+ 
+:
+It is easy to see that there exists M
+ 
+1
+> 0 such that N > 0 for all c > M
+ 
+1
+. Similarly we
+can prove that there exists M
+ 
+2
+> 0 such that N > 0 for all c > M
+ 
+2
+. Hence there exists
+M
+ 
+> 0 such that N > 0 for all c>M
+ 
+.
+We see that
+B = max
+ 
+1
+ (ff  )
+;
+1
+(ff  1) (ff    1)
+ 
+= max
+ 
+1
+ (5=4)
+;
+2
+ (1=4)
+ 
+:
+(E)
+max
+ 
+1
+ (5=4)
+;
+2
+ (1=4)
+  Z
+1
+0
+a(s)
+s
+2 ff
+ds +
+Z
+1
+0
+b(s)
+s
+ +2 ff
+ds
+ 
+=
+1
+12
+max
+ 
+1
+ (5=4)
+;
+2
+ (1=4)
+ 
+< 1:
+It follows from Theorem 2.1 that BVP(3.1) has at least one solution x.
+Acknowledgements
+Electronic Journal. http://www.math.spbu.ru/diffjournal 88Differential Equations and Control Processes, N 3, 2012
+The  rst author is supported by the Natural Science Foundation of Guangdong province
+(No: S2011010001900), the Foundation for High-level talents in Guangdong Higher Education
+Project and the second author by the Natural Science Foundation of Hunan province (No:
+12JJ6006) and the Science Foundation of Department of Science and Technology of Hunan
+province (No. 2012FJ3107)
+References
+[1] Miller, K.S., Ross, B.: An Introduction to the Fractional Calculus and Fractional
+Differential Equation, Wiley, New York, 1993.
+[2] Samko, S., Kilbas, A., Marichev, O.: Fractional Integral and Derivative, Theory and
+Applications, Gordon and Breach, 1993.
+[3] Agarwal, R.P., Benchohra, M., Hamani, S.: A survey on existence results for
+boundary value problems of nonlinear fractional differential equations and inclusions, Acta
+Appl Math, 109, (2011), no. , 973{1033.
+[4] Kilbas, A., Srivastava H., Trujillo, J.: Theory and applications of fractional dif-
+ferential equations, Elsevier B. V. Netherland, 2006.
+[5] Arara, A., Benchohra, M., Hamidi, N., Nieto, J.: Fractional order differential
+equations on an unbounded domain, Nonlinear Analysis TMA, 72, (2010), no. , 580{586,
+[6] Bai, Z.: On positive solutions of a nonlocal fractional boundary value problem, Nonlinear
+Analysis, 72, (2010), no. , 916{924.
+[7] Dehghant, R., Ghanbari, K.: Triple positive solutions for boundary value problem of
+a nonlinear fractional differential equation, Bulletin of the Iranian Mathematical Society,
+33, (2007), no. , 1{14.
+[8] Rida, S., El-Sherbiny, H., Arafa, A.: On the solution of the fractional nonlinear
+Schrodinger equation, Physics Letters A, 372, (2008), no. , 553{558.
+[9] Xu, X., Jiang, D., Yuan, C.: Multiple positive solutions for the boundary value problem
+of a nonlinear fractional differential equation, Nonlinear Analysis TMA, 71, (2009), no. ,
+4676{4688.
+[10] Zhang, F.: Existence results of positive solutions to boundary value problem for fractional
+differential equation, Positivity, 13, (2008), no. , 583{599.
+[11] Mawhin, J.: Topological degree methods in nonlinear boundary value problems, in: NS-
+FCBMS Regional Conference Series in Math., American Math. Soc. Providence, RI, 1979.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 89Differential Equations and Control Processes, N 3, 2012
+[12] Bai,Z.,Zhang,Y.: The existence of solutions for a fractional multi-point boundary value
+problem, Computers and Mathematics with Applications, 60, (2010), no. , 2364-2372.
+[13] Tian, Y,Bai, Z.:
+
+Existence results for the three-point impulsive boundary value problem
+involving fractional differential equations, Computers and Mathematics with Applications,
+59, (2010), no. , 2601-2609.
+[14] Zhang, Y., Bai, Z., Feng, T.: Existence results for a coupled system of nonlinear
+fractional three-point boundary value problems at resonance, Computers and Mathematics
+with Applications, 61, (2011), no. , 1032-1047.
+[15] Bai, Z.: Solvability for a class of fractional m-point boundary value problem at resonance,
+Computers and Mathematics with Applications, 62 (2011), no. 3, 1292{302.
+[16] Liu, B.: Solvability of multi-point boundary value problem at resonance (II), Applied
+Mathematics and Computation, 136 (2003), no. 2-3, 353{377.
+[17] Liu, Y.: Studies on Neumann-type boundary value problems for second-order nonlinear
+p-Laplacian-like functional differential equations, Nonlinear Analysis: Real World Appli-
+cations, 10 (2009), no. 1, 333{344.
+[18] Bai, Z.: On solutions of some fractional m point boundary value probelms at resonance,
+Elec. J. Qualitative Theory of Diff. Equas. 37, (2010), 1-15.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 90

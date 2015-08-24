@@ -1,0 +1,1869 @@
+﻿dx
+dt
+✻
+✛
+✲
+❄
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 1, 2012
+Electronic Journal,
+reg. N ΦC77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Generalization of Some Qualitative Behaviour of Solutions of Third
+Order Nonlinear Differential Equations
+A.T. Ademola
+1
+and P.O. Arawomo
+2
+Department of Mathematics,
+University of Ibadan, Ibadan, Nigeria
+Email:
+1
+ademola672000@yahoo.com;
+2
+womopeter@gmail.com
+Abstract
+Criteria for uniform asymptotic stability, boundedness, uniform ultimate boundedness
+and asymptotic behaviour of solutions of the most general third order nonlinear differen-
+tial equations with the restoring nonlinear terms depending explicitly on the independent
+real variable t are established. The construction a complete Lyapunov function, Lya-
+punov’s second method, the technique introduced by Antoisewicz [9] and the limit point
+of Yoshizawa [29] are used to obtain the results. The most recent results of Ademola and
+Arawomo [1, 2, 3, 4] and results on third order nonlinear differential equations which have
+been discussed in [18] are particular cases of our results.
+Keywords: Third order nonlinear differential equations; Uniform asymptotic stability;
+Boundedness; Asymptotic behaviour of solutions
+1 Introduction
+The theory of differential equations of higher order have been recognized to
+be invaluable tools in the modelling of many phenomena in various ﬁelds of
+science and engineering. In particular, stability, boundedness and asymptotic
+behaviour of solutions of nonlinear third order differential equations have in
+the past and also recently been researched. See for instance Reissig et al, [18],Differential Equations and Control Processes, N 1, 2012
+Rouche et al, [19], Yoshizawa [29, 30] and the papers of Ademola and Ara-
+womo[1, 2, 3, 4], Ademolaet al, [5]-[7], Afuwapeand Adesina [8], Chukwu[10],
+Ezeilo [11]-[13], Ezeilo and Tejumola [14], Mehri and Shadman [15], Ogundare
+[16], Qian [17], Swick [20, 21], Tejumola [22, 23], Tun¸ c [24, 25], Yamamoto[26]-
+[28]. These works were done with the aid of Lyapunov functions except in [7]
+where frequency domain approach was used.
+However, the problem of uniform asymptotic stability, boundedness, uni-
+form ultimate boundedness and asymptotic behaviour of solutions where the
+restoring nonlinear terms depend explicitly on the independent real variable
+t remain unresolved. The aim of this article therefore is to establish criteria
+for uniform asymptotic stability, boundedness, uniform ultimate boundedness
+and asymptotic behaviour of solutions of the third order nonlinear differential
+equation
+...
+x +f(t,x, ˙ x,¨ x)¨ x+g(t,x, ˙ x)+h(t,x, ˙ x,¨ x) =p(t,x, ˙ x,¨ x) (1.1)
+or its equivalent system
+˙ x =y, ˙ y =z, ˙ z =p(t,x,y,z)−f(t,x,y,z)z−g(t,x,y)−h(t,x,y,z), (1.2)
+where f,h,p ∈ C(R
++
+×R
+3
+,R), g ∈ C(R
++
+×R
+2
+,R), R
++
+= [0,∞) and R =
+(−∞,∞). It is assumed that the functions f,g and p depend on the argument
+shown and the derivatives: ∂f(t,x,y,z)/∂t = f
+t
+(t,x,y,z), ∂f(t,x,y,z)/∂x =
+f
+x
+(t,x,y,z), ∂f(t,x,y,z)/∂y = f
+y
+(t,x,y,z), ∂f(t,x,y,z)/∂z = f
+z
+(t,x,y,z),
+∂g(t,x,y)/∂t=g
+t
+(t,x,y), ∂g(t,x,y)/∂x= g
+x
+(t,x,y), ∂h(t,x,y,z)/∂t=
+h
+t
+(t,x,y,z), ∂h(t,x,y,z)/∂x = h
+x
+(t,x,y,z), ∂h(t,x,y,z)/∂y = h
+y
+(t,x,y,z),
+∂h(t,x,y,z)/∂z = h
+z
+(t,x,y,z), ∂
+2
+h(t,x,y,z)/∂t∂x = h
+tx
+(t,x,y,z) exist and
+arecontinuousforallt,x,yandz.Asusual,conditionforuniquenessofsolutions
+will be assumed and the dots as elsewhere stand for differentiationwithrespect
+torealvariablet.Motivationforthisstudy, comesfromtheworksofYamamoto
+[26]-[28]andtherecentworksofAdemolaandArawomo[1,2,3,4],whereresults
+on uniform stability, uniform ultimate boundedness and asymptotic behaviour
+of solutions were proved.
+2 Some Preliminaries
+Deﬁnition 1 (i) A function φ :R
++
+→R
++
+, continuous, strictly increasing with
+φ(0) = 0 is said to be a function of class K for such function, we shall write
+φ∈K.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 98Differential Equations and Control Processes, N 1, 2012
+(ii) If in addition to (i) φ(r) → +∞ as r → ∞, φ is said to be a function of
+classK
+∗
+.
+The following lemmas are very important in the proof of the main results.
+Consider the system of differential equations
+dX
+dt
+=F(t,X), (2.1)
+where X = X(t) is an n−vector. Suppose that F(t,X) is continuous in (t,X)
+onR
++
+×D, D is a connected open set inR
+n
+. Let C be the class of solutions of
+(2.1) which remain in D.
+Lemma 1 [30] Suppose that there exists a Lyapunov function V(t,X) deﬁned
+onR
++
+,kXk< H which satisﬁes the following conditions:
+(i) V(t,0)≡ 0;
+(ii) a(kXk)≤V(t,X)≤b(kXk), a,b∈K;
+(iii)
+˙
+V
+(2.1)
+(t,X)≤−c(kXk) for all (t,X)∈R
++
+×D, where c∈K.
+Then the trivial solution X(t)≡ 0 of (2.1) is uniformly asymptotically stable.
+Now consider the system (2.1) and suppose that F(t,X) is deﬁned and contin-
+uous onR
++
+×R
+n
+, we have the following lemma.
+Lemma 2 [30] Suppose that there exists a Lyapunov function V(t,X) deﬁned
+onR
++
+,kXk≥ρ where ρ may be large, which satisﬁes the following conditions:
+(i) a(kXk)≤V(t,X)≤b(kXk), a∈K
+∗
+, b∈K;
+(ii)
+˙
+V
+(2.1)
+≤−c(kXk) for all (t,X)∈R
++
+×R
+n
+, where c∈K.
+Then the solutions of (2.1) are uniformly ultimately bounded.
+Next, consider a system of differential equations
+dX
+dt
+=F(t,X)+G(t,X). (2.2)
+Let Q be an open set inR
+n
+and suppose that F,G are continuous onR
++
+×Q.
+Moreover, suppose that X is continuous and bounded on R
++
+, that is, for a
+compact set Q
+∗
+⊂Q, X ∈ Q
+∗
+for all t∈R
++
+, then we have
+Z
+∞
+0
+kG(t,X(t))kdt<∞. (2.3)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 99Differential Equations and Control Processes, N 1, 2012
+Lemma 3 Suppose that F(t,X) of the system (2.2) is bounded for all t when
+X belongstoanarbitrarycompactsetinQ.Moreover,supposethatthereexists
+a nonnegative Lyapunov function V(t,X) such that
+˙
+V
+(2.2)
+(t,X)≤−W(X), (2.4)
+where W(X) is positive deﬁnite with respect to a closed set Ω in the space Q.
+Then every bounded solution of (2.2) approaches Ω as t→∞.
+3 Statement of Results
+The main results in this paper are the following:
+Theorem 1 In addition to the basic assumptions on the functions f,g,h and
+p appearing in (1.2), suppose that a,a
+1
+,b,b
+0
+,b
+1
+,c,c
+0
+, δ,δ
+0
+are positive constants
+and for all t≥ 0 :
+(i) a≤f(t,x,y,z)≤a
+1
+for all x,y and z;
+(ii) b≤g(t,x,y)/y≤b
+1
+, g
+t
+(t,x,y)/y≤b
+0
+for all x and y6= 0;
+(iii) h(t,0,0,0) = 0, δ
+0
+≤ h(t,x,y,z)/x ≤ c, h
+t
+(t,x,0,0)/x ≤ δ for all x 6=
+0,y,z and c <ab;
+(iv) h
+t
+(t,0,0,0)= 0, c
+0
+≤h
+tx
+(t,x,0,0) for all x;
+(v) yf
+z
+(t,x,y,z)≥ 0, h
+y
+(t,x,y,0)≥ 0, h
+z
+(t,x,0,z)≥ 0 for all x,y and z;
+(vi) f
+t
+(t,x,y,0)≤ 0, g
+x
+(t,x,y)≤ 0, yf
+x
+(t,x,y,0)≤ 0 for all x and y;
+(vii)
+R
+∞
+0
+|p(t,x,y,z)|dt<∞.
+Then the solution (x(t),y(t),z(t)) of (1.2) is uniformly ultimately bounded.
+Theorem 2 If in addition to the hypotheses of Theorem 1, g(t,0,0) =
+p(t,0,0,0)= 0, then the solution (x(t),y(t),z(t)) of (1.2) is uniformly bounded
+and satisfy
+lim
+t→∞
+x(t) = 0, lim
+t→∞
+y(t) = 0, lim
+t→∞
+z(t) = 0. (3.1)
+Theorem 3 Under the hypotheses of Theorem 1, any solution (x(t),y(t), z(t))
+of (1.2) with initial condition
+x(0)=x
+0
+, y(0) =y
+0
+, z(0) = z
+0
+, (3.2)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 100Differential Equations and Control Processes, N 1, 2012
+for t
+0
+= 0 satisﬁes
+|x(t)|≤D, |y(t)|≤D, |z(t)|≤D, (3.3)
+for all t ≥ 0, where the constant D > 0 depends on a,b,c,c
+0
+,δ
+0
+as well as on
+t
+0
+= 0,x
+0
+,y
+0
+,z
+0
+and on the forcing term p appearing in (1.2).
+If p(t,x,y,z)≡ 0, Eq. (1.2) reduces to a particular case
+˙ x =y, ˙ y =z, ˙ z =−f(t,x,y,z)z−g(t,x,y)−h(t,x,y,z), (3.4)
+with the following result.
+Theorem 4 If g(t,0,0) = 0 and hypotheses (i)-(vi) of Theorem 1 hold true,
+then the trivial solution of (3.4) is uniformly asymptotically stable.
+Corollary 1 (i) If p(t,x,y,z) = p(t)6= 0, p :R
++
+→R, the results in Theorem
+1, Theorem 2 and Theorem 3 hold true for the particular case
+˙ x =y, ˙ y =z, ˙ z =p(t)−f(t,x,y,z)z−g(t,x,y)−h(t,x,y,z).
+(ii) Under the hypotheses of Theorem 1 the solutions of (1.2) are ultimately
+bounded and satisﬁes (3.3) for all t≥ 0 with D independent of the initial data.
+Remark 1 (i) If (1.1) is a constant coeﬃcient differential equation
+...
+x +
+a¨ x + b˙ x + cx = 0, then conditions (i)-(vii) of Theorem 1 reduces to the
+Routh-Hurwitz conditions a > 0, ab > c and c > 0. To see this, we set
+f(t,x,y,z)=a, g(t,x,y)= by, h(t,x,y,z) =cx and p(t,x,y,z)= 0.
+(ii) The results of Qian [17], Yamamoto [26]-[28], Tun¸ c [24] and the recent
+works of Ademola and Arawomo [1, 2, 3, 4] and Ademola et al, [6, 7] are
+particular case of these results. Besides, the main tools used in [17, 24, 26,
+27] and [28] are incomplete Lyapunov functions. Moreover, the complete
+Lyapunov functions used in [1]-[6] are special cases of the main tool used
+in this investigation.
+The main tool used in this paper is the continuously differentiable function
+V = V(t,x,y,z) deﬁned as
+V =e
+−P
+∗
+(t)
+U (3.5a)
+where
+P
+∗
+(t) =
+Z
+t
+0
+|p(μ,x,y,z)|dμ (3.5b)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 101Differential Equations and Control Processes, N 1, 2012
+and the function U =U(t,x,y,z) is deﬁned by
+2U = 2(α+a)
+Z
+x
+0
+h(t,ξ,0,0)dξ+4
+Z
+y
+0
+g(t,x,τ)dτ +2βxz
++2(α+a)yz +2(α+a)
+Z
+y
+0
+τf(t,x,τ,0)dτ +4yh(t,x,0,0)
++bβx
+2
++βy
+2
++2z
+2
++2aβxy,
+(3.5c)
+where, as usual, α and β are positive constants satisfying
+b
+−1
+c< α <a (3.5d)
+and
+0 <β < min{(ab−c)a
+−1
+,(ab−c)η
+−1
+1
+,
+1
+2
+(a−α)η
+−1
+2
+} (3.5e)
+where
+η
+1
+:= 1+a+δ
+−1
+0
+ 
+g(t,x,y)
+y
+−b
+ 
+2
+and η
+2
+:= 1+δ
+−1
+0
+[f(t,x,y,z)−a]
+2
+.
+Remark 2 Theinequalitiesin(3.5d)and(3.5e)holdtrueifbandcarereplaced
+by positive constants b
+0
+and c
+0
+respectively.
+Next, we shall show that the function V and its time derivative satisfy
+certain inequalities as discussed in the following lemma.
+Lemma 4 Under the hypotheses of Theorem 1, there exist positive constants
+D
+1
+and D
+2
+such that
+D
+1
+(x
+2
+(t)+y
+2
+(t)+z
+2
+(t))≤V(t,x,y,z)≤D
+2
+(x
+2
+(t)+y
+2
+(t)+z
+2
+(t)) (3.6a)
+and
+V(t,x(t),y(t),z(t))→ +∞ as x
+2
+(t)+y
+2
+(t)+z
+2
+(t)→∞. (3.6b)
+Furthermore, there exists a constant D
+3
+> 0 such that along a solution
+(x(t),y(t),z(t)) of (1.2)
+˙
+V(t,x,y,z)≤−D
+3
+(x
+2
+(t)+y
+2
+(t)+z
+2
+(t)). (3.6c)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 102Differential Equations and Control Processes, N 1, 2012
+Proof: Clearly V(t,0,0,0) = 0, and since h(t,0,0,0) = 0 for all t ≥ 0, the
+function U deﬁned in (3.5c) can be presented in the form
+U =b
+−1
+Z
+x
+0
+ 
+(α+a)b−2h
+x
+(t,ξ,0,0)
+ 
+h(t,ξ,0,0)dξ+
+1
+2
+β(b−β)x
+2
++2
+Z
+y
+0
+ 
+g(t,x,τ)
+τ
+−b
+ 
+τdτ +b
+−1
+(h(t,x,0,0)+by)
+2
++
+1
+2
+(αy+z)
+2
++
+Z
+y
+0
+[(α+a)f(t,x,τ,0)−(α
+2
++a
+2
+)]τdτ +
+1
+2
+βy
+2
++
+1
+2
+(βx+ay+z)
+2
+.
+(3.7)
+From the hypotheses of Theorem 1: h
+x
+(t,x,y,z)≤c for allx; h(t,x,0,0)≥δ
+0
+x
+for allx6= 0; g(t,x,y)≥by for allx,y6= 0 andf(t,x,y,0)≥a for allt≥ 0,x,y
+so that (3.7) becomes
+U ≥
+1
+2
+(αb−c+ab−c)b
+−1
+δ
+0
+x
+2
++b
+−1
+(δ
+0
+x+by)
+2
++
+β
+2
+(b−β)x
+2
++
+1
+2
+[α(a−α)+β]y
+2
++
+1
+2
+(αy+z)
+2
++
+1
+2
+(βx+ay+z)
+2
+.
+(3.8)
+By (3.5d) and (3.5e): αb > c; ab > c; a > α and b > β respectively, so that
+the right hand side of (3.8) is positive deﬁnite, hence there exists a positive
+constant δ
+1
+=δ
+1
+(a,b,c,α,β,δ
+0
+) such that
+U ≥δ
+1
+(x
+2
++y
+2
++z
+2
+) (3.9a)
+for allt≥ 0,x,y and z. Furthermore, (3.5b) and condition(vii) of the Theorem
+1, imply the existence of a positive constant P
+0
+such that
+0≤P
+∗
+(t)≤P
+0
+(3.9b)
+for all t≥ 0.Using estimates (3.9) in (3.5a), we have
+V ≥δ
+2
+(x
+2
++y
+2
++z
+2
+) (3.10a)
+for all t≥ 0,x,y and z, where δ
+2
+= δ
+1
+e
+−P
+0
+> 0. From (3.10a), V(t,x,y,z) = 0
+if and only if x
+2
++y
+2
++z
+2
+= 0, V(t,x,y,z) > 0 if and only if x
+2
++y
+2
++z
+2
+6= 0,
+it follows that
+V(t,x,y,z)→ +∞ as x
+2
++y
+2
++z
+2
+→∞. (3.10b)
+Moreover, applying f(t,x,y,0)≤ a
+1
+, g(t,x,y)≤ b
+1
+y (y 6= 0), h(t,x,0,0)≤ cx
+(x6= 0),theinequalities2|x||y|≤x
+2
++y
+2
+, 2|x||z|≤ x
+2
++z
+2
+and2|y||z|≤y
+2
++z
+2
+,
+in (3.5c) there exist positive constants η
+3
+:= (α + a + 2)c + (a + b + 1)β,
+η
+4
+:=(α+a)(a
+1
++1)+β(a+1)+2(b
+1
++c) and η
+5
+:=α+β +2 such that
+U ≤δ
+3
+(x
+2
++y
+2
++z
+2
+) (3.11a)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 103Differential Equations and Control Processes, N 1, 2012
+for all t ≥ 0,x,y and z where δ
+3
+:=
+1
+2
+max{η
+3
+,η
+4
+,η
+5
+}. In view of (3.9b) and
+(3.11a), (3.5a) yields
+V ≤δ
+3
+(x
+2
++y
+2
++z
+2
+) (3.11b)
+for all t≥ 0,x,y and z.
+Furthermore, let (x(t),y(t),z(t))be any solutionof (1.2). The derivativeof
+the function V with respect to t along a solution of (1.2) is
+˙
+V
+(1.2)
+=−e
+−P
+∗
+(t)
+ 
+U|p(t,x,y,z)|−
+˙
+U
+(1.2)
+ 
+(3.12)
+where P
+∗
+(t) and U are the functions deﬁned by (3.5b) and (3.5c) respectively
+and the derivative of the function U with respect to t along a solution of (1.2)
+is deﬁned as
+˙
+U
+(1.2)
+=U
+1
++U
+2
++aβy
+2
++2βyz+[βx+(α+a)y+2z]p(t,x,y,z)
+−U
+3
+−U
+4
+−β
+ 
+g(t,x,y)
+y
+−b
+ 
+xy−β[f(t,x,y,z)−a]xz
+(3.13)
+where
+U
+1
+:= (α+a)
+Z
+x
+0
+h
+t
+(t,ξ,0,0)dξ+2
+Z
+y
+0
+g
+t
+(t,x,τ)dτ +2yh
+t
+(t,x,0,0)
+U
+2
+:= (α+a)
+Z
+y
+0
+τf
+t
+(t,x,τ,0)dτ +2y
+Z
+y
+0
+g
+x
+(t,x,τ)dτ
++(α+a)y
+Z
+y
+0
+τf
+x
+(t,x,τ,0)dτ
+U
+3
+:= [(α+a)y+2z][h(t,x,y,z)−h(t,x,0,0)]
++(α+a)yz[f(t,x,y,z)−f(t,x,y,0)]
+and
+U
+4
+:=βxh(t,x,y,z)+
+ 
+(α+a)
+g(t,x,y)
+y
+−2h
+x
+(t,x,0,0)
+ 
+y
+2
++[2f(t,x,y,z)−(α+a)]z
+2
+Since h
+t
+(t,0,0,0)= 0, the right hand sides of U
+1
+can be recast in the form
+Z
+x
+0
+[(α+a)−2b
+−1
+0
+h
+tx
+(t,ξ,0,0)]h
+t
+(t,ξ,0,0)dξ+2
+Z
+y
+0
+ 
+g
+t
+(t,x,τ)
+τ
+−b
+0
+ 
+τdτ
++b
+−1
+0
+ 
+h
+t
+(t,x,0,0)+b
+0
+y
+ 
+2
+.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 104Differential Equations and Control Processes, N 1, 2012
+Now, sinceh
+t
+(t,x,0,0)≤δx forallx6= 0,g
+t
+(t,x,y)≤b
+0
+y forallt≥ 0,x,y6= 0,
+and c
+0
+≤h
+tx
+(t,x,0,0) for all t≥ 0 and x, we have
+U
+1
+≤
+δ
+2b
+0
+[(α+a)b
+0
+−2c
+0
+]x
+2
++b
+−1
+0
+(δx+b
+0
+y)
+2
+.
+In view of Remark2, thereexistsa constantδ
+4
+=δ
+4
+(a,b
+0
+,c
+0
+,α,δ)> 0 such that
+U
+1
+≤δ
+4
+(x
+2
++y
+2
++z
+2
+)
+for all t≥ 0,x,y and z.
+Furthermore, by hypothesis (vi) of Theorem 1, we have
+U
+2
+≤ 0
+for all t≥ 0,x and y.
+Also, by the mean value theorem, we have
+U
+3
+= (α+a)y
+2
+h
+y
+(t,x,θ
+1
+y,0)+2z
+2
+h
+z
+(t,x,0,θ
+2
+z)+(α+a)yz
+2
+f
+z
+(t,x,y,θ
+3
+z)≥ 0
+0 ≤ θ
+i
+≤ 1 (i = 1,2,3,), for all t ≥ 0,x,y 6= 0 and z 6= 0, but U
+3
+= 0
+when y = 0 = z. Finally, h(t,x,y,z) ≥ δ
+0
+x (x 6= 0), g(t,x,y) ≥ by and
+h
+x
+(t,x,0,0)≤ c for allx, andf(t,x,y,z)≥a for allt≥ 0,x,y andz, we obtain
+U
+4
+≥ βδ
+0
+x
+2
++[(α+a)b−2c]y
+2
++(a−α)z
+2
+.
+Using estimates U
+i
+(i = 1,2,3,4.) in (3.13), we obtain
+˙
+U
+(1.2)
+≤δ
+4
+(x
+2
++y
+2
++z
+2
+)+δ
+5
+(|x|+|y|+|z|)|p(t,x,y,z)|−
+1
+2
+βδ
+0
+x
+2
+−[αb−c+ab−c−β(1+a)]y
+2
+−(a−α−β)z
+2
+−
+1
+4
+βδ
+0
+x
+2
+−β
+ 
+g(t,x,y)
+y
+−b
+ 
+xy−
+1
+4
+βδ
+0
+x
+2
+−β[f(t,x,y,z)−a]xz.
+where δ
+5
+= max{β,α+a,2}. This inequality, after completing the squares, can
+be rearranged in the form
+˙
+U
+(1.2)
+≤ δ
+4
+(x
+2
++y
+2
++z
+2
+)+δ
+5
+((|x|+|y|+|z|)|p(t,x,y,z)|−
+1
+2
+βδ
+0
+x
+2
+−
+ 
+ab−c−β
+ 
+1+a+δ
+−1
+0
+ 
+g(t,x,y)
+y
+−b
+ 
+2
+  
+y
+2
+−(αb−c)y
+2
+−
+ 
+1
+2
+(a−α)−β
+ 
+1+δ
+−1
+0
+ 
+f(t,x,ty,z)−a
+ 
+2
+  
+z
+2
+−
+1
+2
+(a−α)z
+2
+−
+1
+4
+βδ
+0
+ 
+x+2δ
+−1
+0
+ 
+g(t,x,y)
+y
+−b
+ 
+y
+ 
+2
+−
+1
+4
+βδ
+0
+ 
+x+2δ
+−1
+0
+[f(t,x,y,z)−a]z
+ 
+2
+.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 105Differential Equations and Control Processes, N 1, 2012
+Using estimates (3.5d) and (3.5e) in this inequality, we obtain
+˙
+U
+(1.2)
+≤−δ
+7
+(x
+2
++y
+2
++z
+2
+)+δ
+5
+(|x|+|y|+|z|)|p(t,x,y,z)|, (3.14)
+where δ
+6
+= min{
+1
+2
+βδ
+0
+,αb−c,
+1
+2
+(a−α)} > 0 chosen suﬃciently large such that
+δ
+7
+=δ
+6
+−δ
+4
+> 0. On gathering estimates (3.9a) and (3.14) in (3.12), we have
+˙
+V
+(1.2)
+≤−e
+−P
+∗
+(t)
+ 
+δ
+1
+(x
+2
++y
+2
++z
+2
+)−δ
+5
+(|x|+|y|+|z|)
+ 
+|p(t,x,y,z)|
+−δ
+7
+e
+−P
+∗
+(t)
+(x
+2
++y
+2
++z
+2
+).
+(3.15)
+Choosing (x
+2
++y
+2
++z
+2
+)
+1/2
+≥ 3
+1/2
+δ
+−1
+1
+δ
+5
+, using hypothesis (vii) of Theorem (1),
+we have
+˙
+V
+(1.2)
+≤−δ
+8
+(x
+2
++y
+2
++z
+2
+), (3.16)
+for all t≥ 0,x,y and z, where δ
+8
+=δ
+7
+e
+−P
+∗
+(∞)
+> 0 is a constant. This completes
+the proof of the lemma.
+4 The Proof of The Main Results
+Proof of Theorem 1: Let (x(t),y(t),z(t)) be any solution of (1.2). In view
+of estimates (3.10), (3.11b) and (3.16), hypotheses of Lemma 2 are satisﬁed.
+Hence by Lemma 2, all solutions of (1.2) are uniformly ultimately bounded.
+This completes the proof of the theorem.
+Proof of Theorem 2: Let (x(t),y(t),z(t)) be any solution of (1.2). We
+shall show that all hypotheses of Lemma 3 hold true. Now, from (3.16)
+˙
+V
+(1.2)
+(t,x,y,z) ≤ 0 for all t ≥ 0,x,y and z, thus from this inequality and
+estimates (3.10) and (3.11b) the solutions of (1.2) are uniformly bounded (see
+[30] Theorem 10.2 pp. 38-39).
+Next, let W(X) =δ
+8
+(x
+2
++y
+2
++z
+2
+), obviously W(X)≥ 0 for all X = (x,y,z)∈
+R
+3
+. Consider the set
+Ω :={X ∈R
+3
+|W(X) = 0}.
+From the continuityofW(X), the set Ω is closed and W(X) is positive deﬁnite
+with respect to Ω and
+˙
+V
+(1.2)
+(t,X)≤−W(X)
+for all (t,X)∈R
++
+×R
+3
+.
+Moreover, system (1.2) can be arranged in the form (2.2) where X = (x,y,z)
+T
+,
+F(t,X) = (y,z,−zf(t,x,y,z)−g(t,x,y)−h(t,x,y,z))
+T
+and G(t,X) =
+Electronic Journal. http://www.math.spbu.ru/diffjournal 106Differential Equations and Control Processes, N 1, 2012
+(0,0,p(t,x,y,z))
+T
+.Inviewofcondition(vii)ofTheorem1,estimate(2.3)holds.
+From the continuity and boundedness of the functions f,g and h, the function
+F(t,X) is bounded for all t ∈ R
++
+when X belongs to any arbitrary compact
+set inR
+3
+. By Lemma 3 the solutions of (1.2) approaches Ω as t→∞.
+Next,weshowthattheset{(0,0,0)}iscontainedinΩast→∞.SinceW(X) =
+0 on Ω, we have x(t) = y(t) =z(t) = 0, and system (1.2) becomes
+(˙ x, ˙ y, ˙ z)
+T
+= (0,0,−g(t,0,0)−h(t,0,0,0))
+T
++(0,0,p(t,0,0,0))
+T
+. (4.1)
+Since g(t,0,0)= h(t,0,0,0)=p(t,0,0,0)= 0, (4.1) has solution
+(x(t),y(t),z(t))
+T
+= (K
+1
+,K
+2
+,K
+3
+)
+T
+, (4.2)
+whereK
+i
+(i= 1,2,3)is a constant. For (4.2)to remain in Ω as t→∞ we must
+have K
+1
+= K
+2
+=K
+3
+= 0. Hence (3.1) follows.
+Proof of Theorem 3: Let (x(t),y(t),z(t)) be any solution of (1.2), since
+|x|≤ 1+x
+2
+,|y|≤ 1+y
+2
+and|z|≤ 1+z
+2
+, estimate (3.15) becomes
+˙
+V
+(1.2)
+≤δ
+5
+e
+−P
+∗
+(t)
+[3+(x
+2
++y
+2
++z
+2
+)]|p(t,x,y,z)|.
+Using estimates (3.9b) and (3.10a) this inequality yields
+˙
+V
+(1.2)
+−δ
+−1
+2
+δ
+5
+|p(t,x,y,z)|V ≤ 3δ
+5
+|p(t,x,y,z)|.
+Solving this ﬁrst order differential inequality using integrating factor
+exp[−δ
+−1
+2
+δ
+5
+P
+∗
+(t)], we obtain
+V(t,x,y,z)≤δ
+9
+(4.3)
+where δ
+9
+= [V(t
+0
+,x
+0
+,y
+0
+,z
+0
+) + 3δ
+5
+P
+0
+]exp[δ
+−1
+2
+δ
+5
+P
+0
+] > 0 is a constant. Using
+estimate (4.3) in (3.10a) and the fact that|x|<kXk
+2
+, X ∈R
+3
+, we have
+|x(t)|≤δ
+10
+, |y(t)|≤δ
+10
+, |z(t)|≤δ
+10
+,
+for all t≥ 0, where δ
+10
+=δ
+−1
+2
+δ
+9
+. This proves the theorem.
+Proof of Theorem 4: The proof of this theorem is similar to the proof of
+Theorem 2.1 in [7], hence it is omitted.
+Example 1 Consider a particular case of (1.1) i.e the third order nonlinear
+differential equation
+...
+x +
+ 
+4+
+ 
+1+t
+2
++|x˙ x|+exp
+ 
+(1+|˙ x¨ x|)
+−1
+  
+−1
+ 
+¨ x
++5˙ x+
+ 
+1+exp
+ 
+(1+t)
+−1
+ 
++|x˙ x|
+ 
+−1
+˙ x+2x
++x
+ 
+1+exp
+ 
+(1+t+|x¨ x|˙ x
+2
+)
+−1
+  
+−1
+= ˙ x
+2
+ 
+1+t
+2
++x
+2
++ ˙ x
+2
++ ¨ x
+2
+ 
+−1
+(4.4)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 107Differential Equations and Control Processes, N 1, 2012
+or its equivalent system
+˙ x =y, ˙ y =z, ˙ z =y
+2
+/(1+t
+2
++x
+2
++y
+2
++z
+2
+)
+−
+ 
+4+
+ 
+1+t
+2
++|xy|+exp
+ 
+(1+|yz|)
+−1
+  
+−1
+ 
+z
+−
+ 
+5+
+ 
+1+exp
+ 
+(1+t)
+−1
+ 
++|xy|
+ 
+−1
+ 
+y
+−
+ 
+2+
+ 
+1+exp
+ 
+(1+t+|xz|y
+2
+)
+−1
+  
+−1
+ 
+x
+(4.5)
+Now, from (1.2) and (4.5), we obtain the following relations:
+(a) the function
+f(t,x,y,z)= 4+
+1
+1+t
+2
++|xy|+exp[
+1
+1+|yz|
+]
+,
+and we have the following inequalities:
+(i) since 0 ≤
+1
+1+t
+2
++|xy|+exp[
+1
+1+|yz|
+]
+≤ 1, for all t ≥ 0,x,y and z, this implies
+that
+4≤f(t,x,y,z)≤ 5
+for all t≥ 0,x,y and z, where a = 4 > 0 and a
+1
+= 5 > 0;
+(ii) the partial derivative of the function f with respect to t is
+f
+t
+(t,x,y,z)=
+−2t
+[1+t
+2
++|xy|+exp[
+1
+1+|yz|
+]]
+2
+≤ 0
+for all t≥ 0,x,y and z;
+(iii) for x> 0, we have
+yf
+x
+(t,x,y,z) =
+−y
+2
+[1+t
+2
++|xy|+exp[
+1
+1+|yz|
+]]
+2
+for all t≥ 0,x,y and z;
+(iv) for z > 0,
+yf
+z
+(t,x,y,z) =
+y
+2
+exp[(1+|yz|)]
+(1+|yz|)
+2
+[1+t
+2
++|xy|+exp[
+1
+1+|yz|
+]]
+2
+≥ 0
+for all t≥ 0,x,y and z;
+Electronic Journal. http://www.math.spbu.ru/diffjournal 108Differential Equations and Control Processes, N 1, 2012
+(b) the function
+g(t,x,y) = 5y+
+y
+1+exp[(1+t)
+−1
+]+|xy|
+,
+(i) noting that 0 ≤
+1
+1+exp[(1+t)
+−1
+]+|xy|
+≤ 1 for all t ≥ 0,x and y, it follows
+that
+5≤
+g(t,x,y)
+y
+≤ 6
+for all t≥ 0,x and y6= 0 from where we have b = 5> 0 and b
+1
+= 6 > 0;
+(ii) for x > 0, we have
+g
+x
+(t,x,y)=
+−y
+2
+[1+exp[(1+t)
+−1
+]+|xy|]
+2
+≤ 0
+for all t≥ 0,x and y;
+(iii) also,
+g
+t
+(t,x,y)
+y
+=
+exp[(1+t)
+−1
+]
+(1+t)
+2
+[1+exp[(1+t)
+−1
+]+|xy|]
+2
+since,
+0≤
+exp[(1+t)
+−1
+]
+(1+t)
+2
+[1+exp[(1+t)
+−1
+]+|xy|]
+2
+≤ 1
+for all t≥ 0,x and y, it follows that
+g
+t
+(t,x,y)
+y
+≤ 1
+for all t≥ 0,x and y6= 0, where b
+0
+= 1 > 0;
+(c) the function
+h(t,x,y,z) = 2x+
+x
+1+exp[(1+t+|xz|y
+2
+)
+−1
+]
+(4.6)
+is deﬁned with the following inequalities:
+(i) since 0 ≤
+1
+1+e
+u
+≤ 1 for all t ≥ 0,x,y and z where u =
+1
+1+t+|xz|y
+2
+, this
+implies that
+2≤h(t,x,y,z)/x≤ 3 (4.7)
+t≥ 0,x6= 0,y and z. Also, from (4.7) we have
+h
+x
+(t,x,y,z)≤ 3
+Electronic Journal. http://www.math.spbu.ru/diffjournal 109Differential Equations and Control Processes, N 1, 2012
+for all t ≥ 0,x,y and z, where we have δ
+0
+= 2 > 0 and c = 3 > 0 and
+ab> c implies that 20 > 3;
+(ii) it is also clear from (4.6) that h(t,0,0,0)= 0 and
+h
+t
+(t,x,y,z) =
+xe
+u
+[1+t+|xz|y
+2
+]
+2
+[1+e
+u
+]
+2
+so that
+h
+t
+(t,0,0,0)= 0
+if x =y =z = 0;
+(iii) also,
+h
+tx
+(t,x,0,0)=
+e
+v
+(1+e
+v
+)
+2
+(1+t)
+2
+for all t ≥ 0,x where v =
+1
+1+t
+. Now since 0 <
+e
+v
+(1+e
+v
+)
+2
+(1+t)
+2
+< 1 for all
+t≥ 0, it follows that the constant c
+0
+> 0 exists such that
+h
+tx
+(t,x,0,0,0)≥ c
+0
+for all ≥ 0 and x.
+(iv) furthermore,
+h
+y
+(t,x,y,z) =
+2x
+2
+|yz|e
+u
+[1+t+|xz|y
+2
+]
+2
+[1+e
+u
+]
+2
+≥ 0
+for all t≥ 0,x,y and z,
+(v) moreover,
+h
+z
+(t,x,y,z) =
+x
+2
+y
+2
+e
+u
+[1+t+|xz|y
+2
+]
+2
+[1+e
+u
+]
+2
+≥ 0
+for all t≥ 0,x,y and z.
+(vi) and
+h
+x
+(t,x,0,0)= 2+
+1
+(1+e
+v
+)(1+t)
+2
+since
+1
+(1+e
+v
+)(1+t)
+2
+≤ 1 for all t≥ 0, it follows that
+h
+x
+(t,x,0,0)≤ 3
+for all t≥ 0 and x where c = 3> 0 as deﬁned (c)(i)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 110Differential Equations and Control Processes, N 1, 2012
+(d) Finally, for the function p(t,x,y,z), we have
+p(t,x,y,z) =
+y
+2
+1+t
+2
++x
+2
++y
+2
++z
+2
+.
+Clearly, p(t,0,0,0)= 0 and it is not diﬃcult to show that
+Z
+∞
+0
+ 
+ 
+ 
+ 
+y
+2
+1+t
+2
++x
+2
++y
+2
++z
+2
+ 
+ 
+ 
+ 
+dt<∞.
+Hence, all the assumptionsof the theoremsare satisﬁedand the conclusions
+follow.
+References
+[1] Ademola, A.T. and Arawomo, P. O.; Boundedness and asymptotic be-
+haviour of solutions of a nonlinear differential equation of the third order.
+Afr. Mat. DOI 10.1007/s13370-011-0034-x.
+[2] Ademola, A.T. and Arawomo, P. O.; Stability, boundedness and asymp-
+totic behaviour of solutions of certain nonlinear differential equations of
+the third order, Kragujevac J. Math. 35 Number 3 (2011), 431-445.
+[3] A.T. Ademola, P.O. Arawomo, Stability and ultimate boundedness of so-
+lutions to certain third order differential equations, Applied Mathematics
+E-Notes. 10(2010), 61-69.
+[4] A.T.Ademola,P.O.Arawomo,Stabilityanduniformultimateboundedness
+of solutions of a third order differential equation, International Journal of
+Applied Mathematics.23 no. 1, (2010) 11-22.
+[5] A.T.Ademola,R.Kehinde,M.O.Ogunlaran,Aboundednesstheoremfora
+certain third order nonlinear differential equation, Journal of Mathematics
+and Statistics. 4 (2) (2008) 88-93.
+[6] A.T. Ademola, M.O. Ogundiran, P.O. Arawomo, O.A. Adesina, Bounded-
+ness results for a certain third order nonlinear differential equations, Appl.
+Math. Comput. 216 (2010), 3044-3049.
+[7] A.T. Ademola, M.O. Ogundiran, P.O. Arawomo, O.A. Adesina, Stability
+results for the solutions of a certain third order nonlinear differentialequa-
+tion.Mathematical Sciences Research Journal MSRJ.Vol.12,no.6, (2008)
+124-134.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 111Differential Equations and Control Processes, N 1, 2012
+[8] A.U. Afuwape, O.A. Adesina, On the bounds for mean-values of solutions
+to certain third order nonlinear differential equations, Fasciculi Mathe-
+matici, Vol. 36 (2005), 5-14.
+[9] H.A. Antoisewicz, On nonlinear differential equations of the second order
+with integrable forcing term, J. London Math. Soc., 30 (1955), 64-67.
+[10] E.N.Chukwu,Onboundednessofsolutionsofthirdorderdifferentialequa-
+tions, Ann. Mat. Pura. Appl., 104 (4) (1975), 123-149.
+[11] J.O.C. Ezeilo, A boundedness theorem for a certain third order differential
+equation, Proc. London Math. Soc. (3) 13 (1963), 99-124.
+[12] J.O.C.Ezeilo, An elementaryproof of a boundedness theorem for a certain
+third order differential equation, J. London Math. Soc., 38 (1963), 11-16.
+[13] J.O.C. Ezeilo, A note on a boundedness theorem for some third order
+differential equations, J. London Math. Soc., 36 (1961), 439-444.
+[14] J.O.C. Ezeilo, H.O. Tejumola, Boundedness theorems for certain third or-
+derdifferentialequations,Atti. Accad. Naz. Lincei Rend. Cl. Sci. Fis. Mat.
+Natur., (10) 55 (1973), 194-201.
+[15] B. Mehri, D. Shadman, Boundedness of solutions of certain third order
+differential equation, Math. Inequal. Appl. No.4, (1999) 545-549.
+[16] B.S. Ogundare, On the boundedness and stability results for the solutions
+of certainthird order nonlinear differentialequations, Kragujevac J. Math.
+29 (2006) 37-48.
+[17] C.Qian, Asymptoticbehaviourof athirdordernonlineardifferentialequa-
+tion, J. Math. Anal. Appl. 284 (2003), no.1, 191-205.
+[18] R. Reissig, G. Sansone, R. Conti, Nonlineardifferentialequationsof higher
+order, Noordhoff International Publishing Leyeden (1974).
+[19] N. Rouche, N. Habets, M. Laloy, Stability theory by Liapunov’s direct
+method. Applied Mathematical Sciences 22, Springer-Verlag New York.
+Heidelberg. Berlin (1977).
+[20] K.E. Swick, Asymptotic behaviour of the solutions of certain third order
+differential equations, SIAM J. Appl., 19 N0.1 (1970), 96-102.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 112Differential Equations and Control Processes, N 1, 2012
+[21] K.E. Swick, On the boundedness and the stability of solutions for some
+non-autonomousdifferential equations of the third order, J. London Math.
+Soc., 44 (1969), 347-359.
+[22] H.O. Tejumola, A note on the boundedness and the stability of solutions
+of certain third order differential equations. Ann. Math. Pura. Appl., 92,
+(1972) 65-75.
+[23] H.O. Tejumola, A note on the boundedness of solutions of some nonlin-
+ear differential equations of the third order, Ghana J. of Science, 11 (2),
+(1970), 117-118.
+[24] C. Tun¸ c, On the asymptotic behaviour of solutions of certain third order
+nonlinear differential equations, J. Applied Math. and Stochastic Anal. 1
+(2005) 29-35.
+[25] C. Tun¸ c, Some new results on the boundedness of solutions of a certain
+nonlineardifferentialequationof thirdorder. International J. of Nonlinear
+Science, vol. 7 No.2 (2009) 246-256.
+[26] M. Yamamoto, Remarks on the asymptotic behaviour of the solutions
+of certain third order non-autonomous differential equations. Proc. Japan
+Acad., 47 (1971), 915-920.
+[27] M. Yamamoto, On the stability of solutions of some non-autonomous dif-
+ferentialequationsofthethirdorder.Pro. Japan Acad.,47(1971),909-914.
+[28] M. Yamamoto, Further results for the solutions of certain third order non-
+autonomous differential equations. Proc. Japan Acad., No.5, 45 (1973),
+317-321.
+[29] T. Yoshizawa, Stability theory and existence of periodic solutions and
+almost periodic solutions. Springer-Verlag, New York. Heidelberg. Berlin
+(1975).
+[30] T. Yoshizawa, Stability theory by Liapunov’s second method, The Mathe-
+matical Society of Japan (1966).
+Electronic Journal. http://www.math.spbu.ru/diffjournal 113

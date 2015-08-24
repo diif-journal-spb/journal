@@ -1,0 +1,1076 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 2, 2010
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+
+e-mail: jodiff@mail.ru
+Exponential stability of linear uncertain polytopic
+systems with distributed time-varying delays
+LE VAN HIEN
+Department of Mathematics,
+Hanoi National University of Education
+136 Xuan Thuy, Cau Giay, Hanoi, Vietnam
+E-mail: Hienlv@hnue.edu.vn
+Abstract
+In this paper, a class of uncertain linear polytopic systems with distributed time vary-
+ing delays is studied. By using an improved parameter dependent Lyapunov-Krasovskii
+functional approach and linear matrix inequality technique, delay-dependent su cient
+conditions for exponential stability of the system are  rst established in terms of Mondie-
+Kharitonov type's linear matrix inequalities (LMIs). Numerical example is presented to
+demonstrate the effectiveness of the proposed conditions.
+Keywords: polytopic uncertainty; exponential stability; distributed delays; linear matrix
+inequality.
+2000MSC: 34D05, 34D20, 34K20, 34K35
+1 Introduction
+The stability analysis of linear time-delay systems is a topic of great practical
+importance, which has attracted a lot of interest over the decades (see e.g. [1, 2,
+3, 5]). Also, systems uncertainties arise from many sources such as unavoidable
+approximation, data errors and aging of systems and so the stability issue of
+uncertain time delay systems has been investigated by many researchers (seeDifferential Equations and Control Processes, N 2, 2010
+[6, 8, 9]), where the Lyapunov-Krasovskii functional method is certainly used
+as the main tool.
+Recently, the stability analysis of linear system with polytopic type uncer-
+tainties has also received much attention (see e.g. [4, 8, 10]). However, the
+distributed delays are not considered in the mentioned papers. In practice,
+systems with distributed delays have many important applications in various
+areas (see [2, 3]). Theoretically, systems with distributed delays are much more
+complicated, especially for the case where the system matrices belong to some
+convex polytope. To the best of our knowledge, so far, no result on the stability
+for uncertain linear polytopic systems with distributed delays is available in the
+literature. This motivates our present investigation.
+In this paper, we develop the robust stability problem for linear uncertain
+polytopic systems with discrete and distributed time varying delays. The novel
+feature of the results obtained in this paper is twofold. First, the system con-
+sidered in this paper is convex polytopic uncertain subjected to discrete and
+distributed time varying delays. Second, by employing an improved parameter
+dependent Lyapunov-Krasovskii functional and linear matrix inequality tech-
+nique, delay dependent su cient conditions for the exponential stability of the
+system are obtained in terms of the Mondi  e-Kharitonov type's LMI conditions
+[7]. The approach also allows to compute simultaneously the two bounds that
+characterize the exponential stability rate of the solution.
+The paper is organized as follows: Section 2 presents notations, de nitions
+and a well-known technical proposition needed for the proof of the main result.
+Delay dependent exponential stability conditions of the system and numerical
+example is presented in Section 3. The paper ends with conclusions and cited
+references.
+2 Preliminaries
+The following notations will be employed throughout this paper: A
+T
+denotes
+the transpose of A,  (A) denotes the set of all eigenvalues of A,  
+max
+(A) =
+maxfRe  : 2 (A)g, 
+min
+(A) = minfRe  : 2 (A)g; matrixQ  0 (Q> 0,
+resp.) means Q is semi positive de nite matrix i.e. hQx;xi  0;8x2 R
+n
+(positive de nite, resp. i.e. hQx;xi > 0;8x 2 R
+n
+;x 6= 0), A   B means
+A B  0; C([a;b];R
+n
+) denotes the set of all R
+n
+ valued continuous functions
+on [a;b]; the segment of the trajectory x(t) is denoted by x
+t
+=fx(t +s) : s2
+t2 [ h; 0]g with its normkx
+t
+k = sup
+s2[ h;0]
+kx(t +s)k:
+Electronic Journal. http://www.math.spbu.ru/diffjournal,  16Differential Equations and Control Processes, N 2, 2010
+Consider a linear uncertain polytopic system with discrete and distributed
+time varying delays of the form
+_ x(t) =A( )x(t) +B( )x(t h(t)) +D( )
+Z
+t
+t  (t)
+x(s)ds; t  0;
+x(t) = (t); t2 [ 
+ 
+h; 0];
+(2.1)
+where x(t)2R
+n
+is the state, h(t); (t) are time varying delay functions which
+are continuous and satisfying
+0 h(t) h; 0  (t)  
+_
+h(t)  < 1; _  (t)  < 1 (2.2)
+and
+ 
+h = maxfh; g: The system matrices [A( );B( );D( )] are subject to
+uncertainties and belong to the polytope 
+ given by
+
+ =
+(
+ 
+A;B;D]( ) =
+p
+X
+i=1
+ 
+i
+[A
+i
+;B
+i
+;D
+i
+]; 
+i
+  0;
+p
+X
+i=1
+ 
+i
+= 1
+)
+;
+where A
+i
+;B
+i
+;D
+i
+2 R
+n n
+; i = 1; 2;:::;p; are given real matrices;  (t) 2
+C([ 
+ 
+h; 0];R
+n
+) is the initial function with the normk k = sup
+ 
+ 
+h s 0
+k (s)k.
+De nition 2.1. For a given ff > 0, system (2.1)is said to be ff-exponentially
+stable if there exist a number   1 such that every solution x(t; ) of system
+(2.1) satis es the following condition
+kx(t; )k k ke
+ fft
+; 8t  0:
+3 Main result
+For positive numbers ff;h; , symmetric positive de nite matrices P
+i
+;Q
+i
+;R
+i
+2
+R
+n n
+and semi-positive de nite matrix S2R
+n n
+we denote
+P =
+p
+X
+i=1
+ 
+i
+P
+i
+; Q =
+p
+X
+i=1
+ 
+i
+Q
+i
+; R =
+p
+X
+i=1
+ 
+i
+R
+i
+;
+ 
+ij
+=P
+j
+A
+i
++A
+T
+i
+P
+j
++Q
+j
++ 
+2
+R
+j
+;
+M
+i
+(P
+j
+;Q
+j
+;R
+j
+) =
+2
+6
+6
+4
+ 
+ij
+P
+j
+B
+i
+P
+j
+D
+i
+B
+T
+i
+P
+j
+ (1  )e
+ 2ffh
+Q
+j
+0
+D
+T
+i
+P
+j
+0  
+(1  )
+ 
+e
+ 2ff 
+R
+j
+3
+7
+7
+5
+; (3.1)
+Electronic Journal. http://www.math.spbu.ru/diffjournal,  17Differential Equations and Control Processes, N 2, 2010
+S =
+2
+6
+4
+S 0 0
+0 0 0
+0 0 0
+3
+7
+5
+; N (P
+j
+) =
+2
+6
+4
+P
+j
+0 0
+0 0 0
+0 0 0
+3
+7
+5
+; i;j = 1; 2;:::;p;
+ 
+min
+(P ) = min
+i=1;2;:::;p
+f 
+min
+(P
+i
+)g;  
+max
+(P ) = max
+i=1;2;:::;p
+f 
+max
+(P
+i
+)g;
+ 
+max
+(Q) = max
+i=1;2;:::;p
+f 
+max
+(Q
+i
+)g;  
+max
+(R) = max
+i=1;2;:::;p
+f 
+max
+(R
+i
+)g;
+
+1
+= 
+min
+(P ); 
+2
+= 
+max
+(P ) +h 
+max
+(Q) +
+1
+2
+ 
+2
+ 
+max
+(R): (3.2)
+The main result is stated in the following theorem.
+Theorem 3.1. For given ff > 0. System (2.1) is ff-exponentially stable if
+there exist positive de nite matricesP
+i
+;Q
+i
+;R
+i
+;i = 1; 2;:::;p and a semi-positive
+de nite matrix S such that the following LMIs hold:
+i)M
+i
+(P
+i
+;Q
+i
+;R
+i
+) + 2ffN (P
+i
+)  S; i = 1; 2;:::;p;
+ii)M
+i
+(P
+j
+;Q
+j
+;R
+j
+) +M
+j
+(P
+i
+;Q
+i
+;R
+i
+) + 2ffN (P
+i
++P
+j
+) 
+2
+p  1
+S;
+i = 1;:::;p  1;j =i + 1;:::;p:
+Moreover, every solution x(t; ) of the system satis es
+kx(t; )k 
+r
+
+2
+
+1
+k ke
+ fft
+; t  0;
+where 
+1
+;
+2
+are de ned in (3.2).
+Proof. Because P
+i
+> 0;Q
+i
+> 0;R
+i
+> 0; 
+i
+  0;i = 1; 2;:::;p and
+P
+p
+i=1
+ 
+i
+= 1
+we have P =
+P
+p
+i=1
+ 
+i
+P
+i
+;Q =
+P
+p
+i=1
+ 
+i
+Q
+i
+;R =
+P
+p
+i=1
+ 
+i
+R
+i
+are symmetric posi-
+tive de nite matrices. Consider the following parameter dependent Lyapunov-
+Krasovskii functional for system (2.1)
+V (x
+t
+) =x
+T
+(t)Px(t) +
+Z
+t
+t h(t)
+e
+2ff(s t)
+x
+T
+(s)Qx(s)ds
++
+Z
+t
+t  (t)
+Z
+t
+s
+e
+2ff(  t)
+x
+T
+( )Rx( )d ds:
+(3.3)
+It can be veri ed from (3.3) that
+
+1
+kx(t)k
+2
+ V (x
+t
+) 
+2
+kx
+t
+k
+2
+; t  0; (3.4)
+Electronic Journal. http://www.math.spbu.ru/diffjournal,  18Differential Equations and Control Processes, N 2, 2010
+where 
+1
+;
+2
+are de ned in (3.2).
+Taking derivative of V (x
+t
+) along solutions of system (2.1), we get
+_
+V (x
+t
+) =x
+T
+(t)[A
+T
+P +PA]x(t) + 2x
+T
+(t)PBx(t h(t))
++ 2x
+T
+(t)PD
+Z
+t
+t  (t)
+x(s)ds +x
+T
+(t)Qx(t)
+  (1 
+_
+h(t))e
+ 2ffh(t)
+x
+T
+(t h(t))Qx(t h(t))
+  2ff
+Z
+t
+t h(t)
+e
+2ff(s t)
+x
+T
+(s)Qx(s)ds
++ (t)x
+T
+(t)Rx(t)  (1  _  (t))
+Z
+t
+t  (t)
+e
+2ff(s t)
+x
+T
+(s)Rx(s)ds
+  2ff
+Z
+t
+t  (t)
+Z
+t
+s
+e
+2ff(  t)
+x
+T
+( )Rx( )d ds
+ x
+T
+(t)[A
+T
+P +PA +Q + R]x(t) + 2x
+T
+(t)PBx(t h(t))
++ 2x
+T
+(t)PD
+Z
+t
+t  (t)
+x(s)ds  (1  )e
+ 2ffh
+x
+T
+(t h(t))Qx(t h(t))
++ 2x
+T
+(t)PD
+Z
+t
+t  (t)
+x(s)ds  (1  )e
+ 2ff 
+Z
+t
+t  (t)
+x
+T
+(s)Rx(s)ds
+  2ff(V (x
+t
+) x
+T
+(t)Px(t)):
+(3.5)
+By using the fact that
+ 
+Z
+t
+t  (t)
+x
+T
+(s)Rx(s)ds  
+1
+ 
+ Z
+t
+t  (t)
+x(s)ds
+ 
+T
+R
+ Z
+t
+t  (t)
+x(s)ds
+ 
+(3.6)
+then from (3.5) and (3.6) we have
+_
+V (x
+t
+) + 2ffV (x
+t
+)  
+T
+(t)  (t); (3.7)
+where
+ 
+T
+(t) =
+ 
+x
+T
+(t) x
+T
+(t h(t))
+ 
+R
+t
+t  (t)
+x(s)ds
+ 
+T
+ 
+;
+and
+  =
+2
+6
+6
+4
+A
+T
+P +PA + 2ffP +Q + R PB PD
+B
+T
+P  (1  )e
+ 2ffh
+Q 0
+D
+T
+P 0  
+1  
+ 
+e
+ 2ff 
+R
+3
+7
+7
+5
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal,  19Differential Equations and Control Processes, N 2, 2010
+By using properties
+P =
+p
+X
+i=1
+ 
+i
+P
+i
+; Q =
+p
+X
+i=1
+ 
+i
+Q
+i
+; R =
+p
+X
+i=1
+ 
+i
+R
+i
+;
+p
+X
+i=1
+ 
+i
+= 1;
+and from conditions (i) and (ii) of Theorem 3.1 we have
+  =
+p
+X
+i=1
+ 
+2
+i
+h
+M
+i
+(P
+i
+;Q
+i
+;R
+i
+) + 2 N (P
+i
+)
+i
++
+p 1
+X
+i=1
+p
+X
+j=i+1
+ 
+i
+ 
+j
+h
+M
+i
+(P
+j
+;Q
+j
+;R
+j
+) +M
+j
+(P
+i
+;Q
+i
+;R
+i
+) + 2ffN (P
+i
++P
+j
+)
+i
+  
+p
+X
+i=1
+ 
+2
+i
+S +
+2
+p  1
+p 1
+X
+i=1
+p
+X
+j=i+1
+ 
+i
+ 
+j
+S
+= 
+1
+p  1
+h
+(p  1)
+p
+X
+i=1
+ 
+2
+i
+  2
+p 1
+X
+i=1
+p
+X
+j=i+1
+ 
+i
+ 
+j
+i
+S
+It's easy to verify that
+(p  1)
+p
+X
+i=1
+ 
+2
+i
+  2
+p 1
+X
+i=1
+p
+X
+j=i+1
+ 
+i
+ 
+j
+=
+p 1
+X
+i=1
+p
+X
+j=i+1
+( 
+i
+  
+j
+)
+2
+  0:
+Therefore it follows from (3.7) that
+_
+V (x
+t
+) + 2ffV (x
+t
+)  0; 8t  0;
+and hence
+V (x
+t
+) V ( )e
+ 2fft
+ 
+2
+k k
+2
+e
+ 2fft
+; t  0:
+Taking (3.4) into account, we  nally obtain
+kx(t; )k 
+r
+
+2
+
+1
+e
+ fft
+k k; t  0;
+where 
+1
+;
+2
+are de ned in (3.2). The proof of the theorem is completed.
+Remark 3.1. It is worth noting that the condition (i) means the asymptotic
+stability of eachi
+th
+ subsystem, the condition (ii) implies the asymptotic stability
+of the ij
+th
+ subsystem and if p = 1 this condition is automatically removed.
+Remark 3.2. As a consequent of theorem 3.1, if   = 0 and D
+i
+= 0;i =
+1; 2;:::;p then the result of theorem 3.1 implies that of theorem 1 in [8].
+Electronic Journal. http://www.math.spbu.ru/diffjournal,  20Differential Equations and Control Processes, N 2, 2010
+Example 3.1. Consider uncertain linear polytopic system with distributed
+time varying delays (2.1), where
+A
+1
+=
+"
+ 20 1
+0  15
+#
+; A
+2
+=
+"
+ 30 0
+1  10
+#
+; A
+3
+=
+"
+ 40  1
+0  40
+#
+;
+B
+1
+=
+"
+1 0
+1  1
+#
+; B
+2
+=
+"
+ 1 1
+0 1
+#
+; B
+3
+=
+"
+ 2 0
+1  1
+#
+;
+D
+1
+=
+"
+ 1 1
+0  2
+#
+; D
+2
+=
+"
+ 2 0
+1  1
+#
+; D
+3
+=
+"
+1 1
+0  1
+#
+and delay functions h(t) = sin
+2
+0:5t; (t) = cos
+2
+0:5t. Then we have the upper
+boundsh =  = 1 and  = 0:5;  = 0:5. By using LMI toolbox of Matlab it can
+be veri ed that all LMIs in theorem 3.1 are satis ed with ff = 0:5 and
+P
+1
+=
+"
+0:3993 0:0024
+0:0024 0:4027
+#
+; P
+2
+=
+"
+0:3555 0:0024
+0:0024 0:4250
+#
+; P
+3
+=
+"
+0:3246 0:0025
+0:0025 0:3797
+#
+;
+Q
+1
+=
+"
+6:7947  0:1060
+ 0:1060 4:5724
+#
+; Q
+2
+=
+"
+8:4561  0:1254
+ 0:1254 3:4611
+#
+;
+Q
+3
+=
+"
+10:7188 0:2262
+0:2262 12:2987
+#
+; R
+1
+=
+"
+6:7947  0:1060
+ 0:1060 4:5724
+#
+;
+R
+2
+=
+"
+8:4561  0:1254
+ 0:1254 3:4611
+#
+; R
+3
+=
+"
+10:7188 0:2262
+0:2262 12:2987
+#
+;
+S =
+"
+0:1 0
+0 0:1
+#
+:
+By theorem 3.1, system (2.1) is exponentially stable with decay rate ff = 0:5.
+Moreover, every solution x(t; ) satis es the estimation
+kx(t; )k  7:6359k ke
+ 0:5t
+; t  0:
+4 Conclusion
+This paper has proposed new su cient conditions for exponential stability of
+linear uncertain polytopic systems with distributed time varying delays. Based
+on an improved Lyapunov-Krasovskii parameter dependent functional, delay
+Electronic Journal. http://www.math.spbu.ru/diffjournal,  21Differential Equations and Control Processes, N 2, 2010
+dependent exponential stability conditions of the system are derived in terms
+of the Mondi  e-Kharitonov type's LMIs, which allows to compute simultaneously
+the two bounds that characterize the exponential stability of the solution. A
+numerical example illustrate the effectiveness of the obtained result is given.
+Acknowledgements
+This work was supported by the National Foundation for Science and Technol-
+ogy Development of Vietnam and Hanoi National University of Education.
+References
+[1] E.N. Chukwu, Stability and Time-Optimal Control of Hereditary Systems, Boston, Academic
+Press, 1992.
+[2] K. Gu, V. L. Kharitonov and J. Chen, Stability of Time-Delay Systems, Birkh auser, Berlin, 2003.
+[3] J.K. Hale and S. M. Verduyn Lunel, Introduction to Functional Differential Equations, New York,
+Springer-Verlag, 1993.
+[4] Y. He, Min Wu, Jin-Hua She and Gou-Ping Liu, Parameter-dependent Lyapunov functional
+for stability of time-delay systems with polytopic-type uncertainties, IEEE Trans. Aut. Contr.,
+49(2004), 828{832.
+[5] L.V. Hien, Q.P. Ha and V.N. Phat, Stability and stabilization of switched linear dynamic systems
+with time delay and uncertainties, Appl. Math. Comput., 210(2009), 223{231.
+[6] L.V. Hien and V.N. Phat, Exponential stability and stabilization of a class of uncertain linear
+time-delay systems, J. Franklin Inst., 346(2009), 611{625.
+[7] S. Mondi  e and V.L. Kharitonov, Exponential estimates for retarded time-delay systems: An LMI
+approach, IEEE Trans. Aut. Contr., 50(2005), 268{273.
+[8] P.T. Nam and V.N. Phat, Robust exponential stability and stabilization of linear uncertain
+polytopic time-delay systems, J. Control Theory Appl., 6(2008), 1{8.
+[9] R.C. Oliveira and P.L. Peres, LMI conditions for robust stability analysis based on polynomially
+parameter-dependent Lyapunov functions, Syst. Control Lett., 55(2006), 52{61.
+[10] V.N. Phat and P.T. Nam, Exponential stability and stabilization of uncertain linear time-varying
+systems using parameter-dependent Lyapunov function, Int. J. of Control,80(2007), 1333{1341.
+Electronic Journal. http://www.math.spbu.ru/diffjournal,  22

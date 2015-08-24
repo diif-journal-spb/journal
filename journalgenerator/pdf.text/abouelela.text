@@ -1,0 +1,2237 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 1, 2012
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+On the stability criteria of linear non-autonomous time-varying
+delay system with application to control problem
+A. M. A. Abou-El-Ela
+1
+, A. I. Sadek
+1
+and A. M. Mahmoud
+2
+1
+Department of Mathematics, Faculty of Science, Assiut University, Assiut
+71516, Egypt.
+2
+Department of Science and Mathematics, Faculty of Education, Assiut
+University, New Valley, El-khargah 72111, Egypt.
+Abstract
+In this paper we study the stability of linear non-autonomous time-varying system with
+multiple delays. Using the Lyapunov functionals method we  nd su cient conditions
+for the exponential stability with a given convergence rate, in terms of linear matrix
+inequalities or the solution of Riccati differential equations. The results are applied to
+stabilization problem of linear non-autonomous time-varying control system with multiple
+delays.
+Keywords: Non-autonomous systems, Time-delay systems, Exponential sta-
+bility, Lyapunov functional, Matrix inequalities, Riccati differential equations.
+2000 Mathematics Subject Classi cation. 93D15, 34K20.
+1 Introduction
+Time-delay systems are frequently encountered in various areas, including
+physical and chemical processes, biology, economics, engineering, control of the
+growth of global economy, control of epidemics, etc.
+The stability problem of linear time-delay systems has attracted a lot of
+attention in the few past decades, for example, [1, 5, 6, 7, 10, 14], etc.
+1
+E-mail address: Sadeka1961@hotmail.com
+2
+E-mail address: math
+ 
+ayman27@yahoo.comDifferential Equations and Control Processes, N 1, 2012
+Stability criteria for linear time-delay systems can be divided into two cat-
+egories, delay-independent stability criteria and delay-dependent stability cri-
+teria, by whether the criteria include the information about delays or not. In
+addition linear time-delay systems can be divided into two categories by the
+number of delays. Single-delay systems which have only a single time-delay
+constant, and multiple-delay systems which have at least two time-delay con-
+stants.
+Most of exciting results of stability were derived using different theories.
+Some of the stability criteria are directly developed from the characteristic
+equation and are characterized by the location of eigenvalues and determination
+of measures and norms of matrices of the system. The main technique used
+in the stability investigation relies on the using of the Lyapunov functionals
+method, for example, [2, 16, 17, 18].
+One of the extended stability properties is the concept of ff-stability, which
+relates to the exponential stability with a convergence rateff> 0. The following
+retarded system
+_ x =f(t;x(t);x(t h)); t  0;
+x(t) = (t); t2 [ h; 0];
+is ff-stable with ff > 0, if there exists a function  (:) such that for each  (:),
+the solution x(t; ) of the system satis es
+kx(t; )k  (k k)e
+ fft
+; for all t  0;
+wherek k = maxfk (t)k : t2 [ h; 0]g. This implies that forff> 0 the system
+can be made exponentially stable with the convergence rate ff.
+For time-varying systems, the investigation of the exponential stability was
+treated in [3, 5, 8, 9, 16, 17], where stability conditions for time-varying systems
+are derived in terms of the solution of a certain Riccati differential equation
+RDE and linear matrix inequalities LMI.
+This paper deals also with the exponential stability with convergence rate
+of linear non-autonomous time-varying system with multiple delays, and then
+apply the obtained results to control problems. By using Lyapunov functionals
+method we show that the existence of the solution of certain RDE or of some
+LMI guarantees the exponential stability with a given convergence rate of linear
+non-autonomous time-varying delay systems, and how the results can be applied
+to obtain su cient conditions for the stabilizability with a given convergence
+rate of a class of linear non-autonomous time-varying control delay systems.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 147Differential Equations and Control Processes, N 1, 2012
+This paper is organized as follows. In section 2 the problem is stated and the
+required notation, de nitions and auxiliary proposition are formulated. Section
+3 presents the main results for the exponential stability problem with a con-
+vergence rate of a linear non-autonomous multiple time-varying delays system.
+Section 4 devotes to apply the obtained results to the stabilization problem.
+The paper ends with conclusion and cited references.
+2 Preliminaries and Statement of the Problem
+We start by introducing some notation and de nitions, that will be used through-
+out the paper.
+R
++
+denotes the set of all real non-negative numbers.
+R
+n
+denotes the n-dimensional space.
+A
+ 
+denotes the transpose of the matrix A.
+A is symmetric, if A =A
+ 
+.
+<x;y> or x
+ 
+y denotes the scalar product of two vectors x;y.
+kxk denotes the Euclidean vector norm of x.
+M
+n r
+denotes the space of all n r- matrices.
+I denotes the identity matrix.
+ (A) denotes the set of the eigenvalues of A.
+ 
+max
+(A) = maxfRe  : 2 (A)g.
+ (A) denotes the spectral norm of the matrixA, de ned by (A) =
+p
+ 
+max
+(A
+ 
+A):
+ (A) denotes the measure of the matrix A, de ned by  (A) =
+1
+2
+ 
+max
+(A +A
+ 
+):
+L
+2
+([0;t];R
+m
+) denotes the Hilbert space of L
+2
+-integrable and R
+m
+-valued func-
+tions on [0;t].
+MatrixA is called non-negative de niteA  0, if<Ax;x>  0, for allx2R
+n
+.
+A is called positive de niteA> 0, if<Ax;x>> 0 for allx6= 0; or equivalently
+there exists c> 0, such that
+<Ax;x> ckxk
+2
+; for all x2R
+n
+:
+Matrix function A(t) is uniformly positive de nite, if there exists c > 0, such
+that
+<A(t)x;x> ckxk
+2
+; for all t2R
++
+and x2R
+n
+:
+C([ h; 0];R
+n
+) denotes the Banach space of all piecewise-continuous vector func-
+tions mapping from [ h; 0] intoR
+n
+.
+In this paper we consider linear non-autonomous time-varying system with mul-
+Electronic Journal. http://www.math.spbu.ru/diffjournal 148Differential Equations and Control Processes, N 1, 2012
+tiple delays
+_ x(t) =A
+0
+(t)x(t) +
+m
+X
+i=1
+A
+i
+(t)x(t h
+i
+(t)); t2R
++
+;
+x(t) = (t); t2 [ h; 0]; h  0;
+(2.1)
+wherex(t)2R
+n
+is the state vector;A
+0
+(t);A
+i
+(t)2M
+n n
+,i = 1; 2;:::;m are given
+matrix functions continuous on R
++
+,  2 C([ h; 0];R
+n
+) is the initial function
+and h
+i
+(t);i = 1; 2;:::;m are the time-varying delay functions satisfying
+0 h
+i
+(t) h;
+_
+h
+i
+(t)  
+i
+< 1; for allt  0:
+De nition 2.1. Let ff > 0 be a given number. System (2:1) is said to be
+ff-stable, if there exists a function  (:) : R
++
+! R
++
+such that for each  (t)2
+C([ h; 0];R
+n
+) the solution x(t; ) of the system satis es
+kx(t; )k  (k k)e
+ fft
+; for all t2R
++
+:
+Let us consider the following free-delay linear time-varying control system
+[A(t);B(t)]
+_ x(t) =A(t)x(t) +B(t)u(t); t2R
++
+; (2.2)
+where u(t)2 L
+2
+([0;T ];R
+r
+), for all T > 0 is the control, A(t)2 M
+n n
+, B(t)2
+M
+n r
+.
+De nition 2.2. Linear control system (2:2) is said to beff-stabilizable, if there
+exists a feedback control u(t) =K(t)x(t), K(t)2M
+r n
+, such that the closed-
+loop system
+_ x(t) = [A(t) +B(t)K(t)]x(t); t  0;
+is ff-stable.
+De nition 2.3. Linear control system (2:2) is said to be globally null-controllable,
+if for everyx
+0
+2R
+n
+, there is a timeT > 0 and controlu(t)2L
+2
+([0;T ];R
+r
+) such
+that the solution x(t) of the system satis es x(0) =x
+0
+; x(T ) = 0.
+Relationship between the global null-controllability and the existence of the
+solution of Riccati differential equations is given in the following proposition.
+Proposition 2.1. [17] (Kalman condition) Assume that the linear control
+system [A(t);B(t)] is globally null-controllable. Then for every symmetric ma-
+trices Q(t)  0;P(t)  0 the Riccati differential equation
+_
+P (t) +A
+ 
+(t)P (t) +P (t)A(t) +P (t)B(t)B
+ 
+(t)P (t) +Q(t) = 0; P(0) =P
+0
+;
+has the solution P (t)  0;P(t) =P
+ 
+(t).
+Electronic Journal. http://www.math.spbu.ru/diffjournal 149Differential Equations and Control Processes, N 1, 2012
+The following technical result will be used in the proof of the main results.
+Proposition 2.2. [1] (Completing of the square) Assume that S2 M
+n n
+is a symmetric positive de nite matrix. Then for every matrix Q2 M
+n n
+we
+have
+2<Qy;x> <Sy;y> <QS
+ 1
+Q
+ 
+x;x>; for allx;y2R
+n
+:
+3 Main Results
+Consider the linear non-autonomous time-varying system with multiple delays
+(2:1), where the matrix functions A
+0
+(t);A
+i
+(t) are continuous on R
++
+. Given
+positive numbers ff; ;h
+i
+; 
+i
+, i = 1; 2;:::;m; we set
+A
+0;ff
+(t) =A
+0
+(t) +ffI; A
+i;ff
+(t) =e
+ffh
+i
+(t)
+A
+i
+(t); i = 1; 2;:::;m:
+ (A
+0;ff
+) = sup
+t2R
++
+ (A
+0;ff
+(t));  (A
+i;ff
+) = sup
+t2R
++
+ (A
+i;ff
+(t));
+Q
+i
+(t) =
+2
+1  
+i
+A
+i;ff
+(t)A
+ 
+i;ff
+(t);
+m
+X
+i=1
+ 
+i
+=m + 2  (A
+0;ff
+) +
+m
+X
+i=1
+2 
+2
+1  
+i
+ 
+2
+(A
+i;ff
+):
+The main results are stated in the following theorems.
+Theorem 3.1. Linear non-autonomous time-varying system with multiple de-
+lays (2:1) is ff-stable, if there exists a symmetric matrix function P (t) > 0
+satisfying the following Riccati differential equation
+_
+P (t) +A
+ 
+0;ff
+(t)P (t) +P (t)A
+0;ff
+(t) +
+m
+X
+i=1
+P (t)Q
+i
+(t)P (t) +
+m
+X
+i=1
+ 
+i
+I = 0: (3.1)
+Proof. Let P (t) > 0, t2R
++
+be a solution of Riccati differential equation
+(3:1). We take the following change of the state variable
+y(t) =e
+fft
+x(t);
+where ff > 0 is the convergence rate. Then the linear delay system (2:1) is
+transformed to the delay system
+_ y(t) =A
+0;ff
+(t)y(t) +
+m
+X
+i=1
+A
+i;ff
+(t)y(t h
+i
+(t));
+y(t) =e
+fft
+ (t); t2 [ h; 0]:
+(3.2)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 150Differential Equations and Control Processes, N 1, 2012
+Consider the following Lyapunov-Krasovskii functional for the system (3:2) as
+V (t;y(t)) =V
+1
++V
+2
++V
+3
+; (3.3)
+where
+V
+1
+=<P (t)y(t);y(t)>;
+V
+2
+= ky(t)k
+2
+;
+V
+3
+=
+m
+X
+i=1
+Z
+t
+t h
+i
+(t)
+ky(s)k
+2
+ds:
+Taking the derivative of V (t;y(t)) in t along the solution y(t) of system (3:2)
+we have
+_
+V (t;y(t)) <
+_
+P (t)y(t);y(t)> +2<P (t)A
+0;ff
+(t)y(t);y(t)>
++ 2
+m
+X
+i=1
+<P (t)A
+i;ff
+(t)y(t h
+i
+(t));y(t)> +2 <A
+0;ff
+(t)y(t);y(t)>
++ 2 
+m
+X
+i=1
+<A
+i;ff
+(t)y(t h
+i
+(t));y(t)> +mky(t)k
+2
+ 
+m
+X
+i=1
+(1  
+i
+)ky(t h
+i
+(t))k
+2
+=< [
+_
+P (t) +A
+ 
+0;ff
+(t)P (t) +P (t)A
+0;ff
+(t) +mI]y(t);y(t)>
++ 2
+m
+X
+i=1
+<P (t)A
+i;ff
+(t)y(t h
+i
+(t));y(t)> +2 <A
+0;ff
+(t)y(t);y(t)>
++ 2 
+m
+X
+i=1
+<A
+i;ff
+(t)y(t h
+i
+(t));y(t)> 
+m
+X
+i=1
+(1  
+i
+)ky(t h
+i
+(t))k
+2
+:
+Therefore we get
+_
+V (t;y(t)) < [
+_
+P (t) +A
+ 
+0;ff
+(t)P (t) +P (t)A
+0;ff
+(t) +mI]y(t);y(t)>
++ < [A
+0;ff
+(t) +A
+ 
+0;ff
+(t)]y(t);y(t)> +2
+m
+X
+i=1
+<P (t)A
+i;ff
+(t)y(t h
+i
+(t));y(t)>
+ 
+m
+X
+i=1
+1  
+i
+2
+<y(t h
+i
+(t));y(t h
+i
+(t))>
++ 2 
+m
+X
+i=1
+<A
+i;ff
+(t)y(t h
+i
+(t));y(t)>
+ 
+m
+X
+i=1
+1  
+i
+2
+<y(t h
+i
+(t));y(t h
+i
+(t))>:
+(3.4)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 151Differential Equations and Control Processes, N 1, 2012
+By using Proposition 2.1 we can obtain
+m
+X
+i=1
+ 
+2<P (t)A
+i;ff
+(t)y(t h
+i
+(t));y(t)> 
+1  
+i
+2
+<y(t h
+i
+(t));y(t h
+i
+(t))>
+ 
+ 
+m
+X
+i=1
+2
+1  
+i
+<P (t)A
+i;ff
+(t)A
+ 
+i;ff
+(t)P (t)y(t);y(t)>;
+m
+X
+i=1
+ 
+2 <A
+i;ff
+(t)y(t h
+i
+(t));y(t)>
+ 
+1  
+i
+2
+<y(t h
+i
+(t));y(t h
+i
+(t))>
+ 
+ 
+m
+X
+i=1
+2 
+2
+1  
+i
+<A
+i;ff
+(t)A
+ 
+i;ff
+(t)y(t);y(t)>:
+(3.5)
+Thus we can write (3:4) in the following form
+_
+V (t;y(t)) < [
+_
+P (t) +A
+ 
+0;ff
+(t)P (t) +P (t)A
+0;ff
+(t) +mI]y(t);y(t)>
++ < [A
+0;ff
+(t) +A
+ 
+0;ff
+(t)]y(t);y(t)>
++
+m
+X
+i=1
+ 
+2
+1  
+i
+<P (t)A
+i;ff
+(t)A
+ 
+i;ff
+(t)P (t)y(t);y(t)>
++
+2 
+2
+1  
+i
+<A
+i;ff
+(t)A
+ 
+i;ff
+(t)y(t);y(t)>
+ 
+:
+If we let
+< [A
+0;ff
+(t) +A
+ 
+0;ff
+(t)]y(t);y(t)>  2 (A
+0;ff
+)ky(t)k
+2
+;
+m
+X
+i=1
+<A
+i;ff
+(t)A
+ 
+i;ff
+(t)y(t);y(t)> 
+m
+X
+i=1
+ 
+2
+(A
+i;ff
+)ky(t)k
+2
+:
+(3.6)
+Then we have
+_
+V (t;y(t)) < [
+_
+P (t) +A
+ 
+0;ff
+(t)P (t) +P (t)A
+0;ff
+(t) +
+m
+X
+i=1
+P (t)Q
+i
+(t)P (t)
++mI]y(t);y(t)> +2  (A
+0;ff
+)ky(t)k
+2
++
+m
+X
+i=1
+2 
+2
+1  
+i
+ 
+2
+(A
+i;ff
+)ky(t)k
+2
+:
+Because
+m
+X
+i=1
+ 
+i
+=m + 2  (A
+0;ff
+) +
+m
+X
+i=1
+2 
+2
+1  
+i
+ 
+2
+(A
+i;ff
+):
+Electronic Journal. http://www.math.spbu.ru/diffjournal 152Differential Equations and Control Processes, N 1, 2012
+Therefore we  nd
+_
+V (t;y(t)) < [
+_
+P (t) +A
+ 
+0;ff
+(t)P (t) +P (t)A
+0;ff
+(t) +
+m
+X
+i=1
+P (t)Q
+i
+(t)P (t)
++
+m
+X
+i=1
+ 
+i
+I]y(t);y(t)>:
+Since P (t) is a solution of (3:1), it follows that
+_
+V (t;y(t))  0; for allt2R
++
+:
+By integrating both sides of this inequality from 0 to t we  nd
+V (t;y(t)) V (0;y(0))  0; for allt2R
++
+;
+then we get
+<P (t)y(t);y(t)> + ky(t)k
+2
++
+m
+X
+i=1
+Z
+t
+t h
+i
+(t)
+ky(s)k
+2
+ds
+ <P (0)y(0);y(0)> + ky(0)k
+2
++
+m
+X
+i=1
+Z
+0
+ h
+i
+(0)
+ky(s)k
+2
+ds;
+where P
+0
+=P (0)> 0 is any initial condition. Since
+<P (t)y(t);y(t)>  0;
+m
+X
+i=1
+Z
+t
+t h
+i
+(t)
+ky(s)k
+2
+ds  0;
+m
+X
+i=1
+Z
+0
+ h
+i
+(0)
+ky(s)k
+2
+ds 
+m
+X
+i=1
+Z
+0
+ h
+i
+(0)
+ke
+ffs
+ (s)k
+2
+ds k k
+2
+m
+X
+i=1
+Z
+0
+ h
+i
+(0)
+e
+2ffs
+ds
+=
+1
+2ff
+m
+X
+i=1
+(1 e
+ 2ffh
+i
+(0)
+)k k
+2
+;
+it follows that
+ky(t)k
+2
+ 
+1
+ 
+f<P (0)y(0);y(0)> + ky(0)k
+2
++
+1
+2ff
+m
+X
+i=1
+(1 e
+ 2ffh
+i
+(0)
+)k k
+2
+g:
+Therefore the solution y(t; ) of the system (3:2) is bounded, returning to the
+solution x(t; ) of system (2:1) and noting that
+ky(0)k =kx(0)k = (0) k k;
+Electronic Journal. http://www.math.spbu.ru/diffjournal 153Differential Equations and Control Processes, N 1, 2012
+we have
+kx(t; )k  (k k)e
+ fft
+; for all t2R
++
+;
+where
+ (k k) := [
+1
+ 
+fkP (0)kk k
+2
++ k k
+2
++
+1
+2ff
+m
+X
+i=1
+(1 e
+ 2ffh
+i
+(0)
+)k k
+2
+g]
+1
+2
+:
+This implies that system (2:1) is ff-stable, which completes the proof.
+Theorem 3.2. Linear non-autonomous time-varying system with multiple de-
+lays (2:1) isff-stable, if there exists a symmetric matrix functionP (t)> 0, such
+that the following condition LMI holds
+0
+B
+B
+B
+B
+B
+@
+ (t) P (t)A
+1;ff
+(t) + A
+1;ff
+(t) ::: P (t)A
+m;ff
+(t) + A
+m;ff
+(t)
+A
+ 
+1;ff
+(t)P (t) + A
+ 
+1;ff
+(t)  (1  
+1
+)I ::: 0
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+A
+ 
+m;ff
+(t)P (t) + A
+ 
+m;ff
+(t) 0 :::  (1  
+m
+)I
+1
+C
+C
+C
+C
+C
+A
+< 0;
+(3.7)
+where
+ (t) =
+_
+P (t) +A
+ 
+0;ff
+(t)P (t) +P (t)A
+0;ff
+(t) + fA
+0;ff
+(t) +A
+ 
+0;ff
+(t)g +mI:
+Then the system (2:1) is ff-stable.
+Proof. Regarding to the above condition, we can reset relation (3:4) as
+follows:
+_
+V (t;y(t)) < [
+_
+P (t) +A
+ 
+0;ff
+(t)P (t) +P (t)A
+0;ff
+(t) +mI]y(t);y(t)>
++ < [A
+0;ff
+(t) +A
+ 
+0;ff
+(t)]y(t);y(t)> +2
+m
+X
+i=1
+<P (t)A
+i;ff
+(t)y(t h
+i
+(t));y(t)>
++ 2 
+m
+X
+i=1
+<A
+i;ff
+(t)y(t h
+i
+(t));y(t)> 
+m
+X
+i=1
+(1  
+i
+)ky(t h
+i
+(t))k
+2
+=Z
+ 
+(t)
+0
+B
+B
+B
+B
+B
+@
+ (t) P (t)A
+1;ff
+(t) + A
+1;ff
+(t) ::: P (t)A
+m;ff
+(t) + A
+m;ff
+(t)
+A
+ 
+1;ff
+(t)P (t) + A
+ 
+1;ff
+(t)  (1  
+1
+)I ::: 0
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+A
+ 
+m;ff
+(t)P (t) + A
+ 
+m;ff
+(t) 0 :::  (1  
+m
+)I
+1
+C
+C
+C
+C
+C
+A
+Z(t);
+Electronic Journal. http://www.math.spbu.ru/diffjournal 154Differential Equations and Control Processes, N 1, 2012
+where
+Z(t) := [y(t); y(t h
+1
+(t));    ; y(t h
+m
+(t))]:
+Therefore by condition (3:7) there is a constant   > 0 such that
+_
+V (t;y(t))   kZ(t)k
+2
+; for all t2R
++
+:
+SincekZ(t)k
+2
+ ky(t)k
+2
+we have
+_
+V (t;y(t))   ky(t)k
+2
+; for all t2R
++
+: (3.8)
+By integrating both sides of (3:8) from 0 to t we get
+V (t;y(t)) V (0;y(0))   
+Z
+t
+0
+ky(s)k
+2
+ds:
+Hence
+<P (t)y(t);y(t)> + ky(t)k
+2
++
+m
+X
+i=1
+Z
+t
+t h
+i
+(t)
+ky(s)k
+2
+ds <P (0)y(0);y(0)>
+  ky(0)k
+2
+ 
+m
+X
+i=1
+Z
+0
+ h
+i
+(0)
+ky(s)k
+2
+ds   
+Z
+t
+0
+ky(s)k
+2
+ds:
+Since
+P
+0
+=P (0)> 0; <P (t)y(t);y(t)>  0;
+m
+X
+i=1
+Z
+t
+t h
+i
+(t)
+ky(s)k
+2
+ds  0;
+ ky(t)k
+2
+  0;
+m
+X
+i=1
+Z
+0
+ h
+i
+(0)
+ky(s)k
+2
+ds 
+1
+2ff
+m
+X
+i=1
+(1 e
+ 2ffh
+i
+(0)
+)k k
+2
+;
+it follows that
+Z
+t
+0
+ky(s)k
+2
+ds 
+1
+ 
+[<P (0)y(0);y(0)> + ky(0)k
+2
++
+1
+2ff
+m
+X
+i=1
+(1 e
+ 2ffh
+i
+(0)
+)k k
+2
+]:
+Letting t!1 and noting that P (0) > 0, we obtain that
+R
+1
+0
+ky(s)k
+2
+ds <1,
+which proves that y(t)2L
+2
+([0;1);R
+n
+) and hence the solution y(t; ) which is
+a continuously differentiable function of linear system (3:2) is bounded, there
+exists a function
+ (:) :R
++
+!R
++
+such that
+ky(t; )k  (k k); for all t  0:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 155Differential Equations and Control Processes, N 1, 2012
+Returning to the solution x(t; ) of system (2:1) and noting that
+ky(0)k =kx(0)k = (0) k k;
+we have
+kx(t; )k  (k k)e
+ fft
+; for all t2R
++
+;
+Then the system (2:1) is ff-stable.
+Thus the proof of Theorem 3.2 is now complete.
+Example 3.1. Consider the following linear non-autonomous time-varying de-
+lay system
+_ x(t) =A
+0
+(t)x(t) +A
+1
+(t)x(t h
+1
+(t)); t2R
++
+;
+with any initial function  2C([ 
+1
+2
+; 0];R
+2
+), time-varying delay h
+1
+(t) =
+1
+2
+sin
+2t
+2
+and
+A
+0
+(t) =
+ 
+ 
+1
+2
+  6e
+ t
+sin
+2
+t e
+t
+0
+0  
+1
+2
+ 
+3
+2
+e
+ t
+cos
+2
+t e
+t
+ 
+;
+A
+1
+(t) =
+ p
+3e
+ 
+1
+2
+sin
+2 t
+2
+sint 0
+0
+q
+3
+2
+e
+ 
+1
+2
+sin
+2 t
+2
+cost
+!
+:
+Therefore we have
+m = 1; h =
+1
+2
+and  
+1
+=
+1
+2
+:
+For ff = 1, we obtain
+A
+0;ff
+(t) =
+ 
+1
+2
+  6e
+ t
+sin
+2
+t e
+t
+0
+0
+1
+2
+ 
+3
+2
+e
+ t
+cos
+2
+t e
+t
+ 
+;
+A
+1;ff
+(t) =
+ p
+3sint 0
+0
+q
+3
+2
+cost
+!
+:
+Hence we  nd
+ (A
+0;ff
+) = 2;  (A
+1;ff
+) =
+p
+3 and
+Q
+1
+(t) =
+ 
+12sin
+2
+t 0
+0 6cos
+2
+t
+ 
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 156Differential Equations and Control Processes, N 1, 2012
+Let   =
+1
+2
+, we have  
+1
+= 2.
+Then the solution of the following Riccati differential equation
+_
+P (t) +A
+ 
+0;ff
+(t)P (t) +P (t)A
+0;ff
+(t) +P (t)Q
+1
+P (t) + 
+1
+I = 0;
+is found by
+P (t) =
+ 
+e
+ t
+0
+0 e
+ t
+ 
+> 0; for all t2R
++
+:
+Thus, by Theorem 3.1, the system is 1-stable.
+4 Application to control problem
+We apply the above results to the strong stabilizability problem of the follow-
+ing linear non-autonomous multiple time-varying delays system with control
+problem
+_ x(t) =A
+0
+(t)x(t) +
+m
+X
+i=1
+A
+i
+(t)x(t h
+i
+(t)) +B(t)u(t); t2R
++
+; (4.1)
+where x(t)2 R
+n
+is the state vector; u(t)2 R
+r
+is the control, A
+0
+(t);A
+i
+(t)2
+M
+n n
+;i = 1; 2;:::;m and B(t)2 M
+n r
+are given matrix functions continuous
+onR
++
+.
+Strong stabilizability means that for every given number ff > 0, there exists
+a delay-free feedback control u(t) = K(t)x(t), K(t)2 M
+r n
+such that the
+closed-loop system
+_ x(t) = [A
+0
+(t) +B(t)K(t)]x(t) +
+m
+X
+i=1
+A
+i
+(t)x(t h
+i
+(t));
+is exponentialy stable with the rate convergence ff.
+Recently the stabilization problem has been studied by using Lyapunov func-
+tionals method, for example, [2; 3], etc.
+As a direct consequence of Theorem 3.1 and Theorem 3.2 we obtain the
+following su cient conditions for the strong stabilizability in terms of Linear
+matrix inequality and the solution of Riccati differential equation.
+Theorem 4.1. Linear non-autonomous time-varying control system with mul-
+tiple delays (4:1) is ff-stabilizable, if there exists a symmetric matrix function
+P (t)> 0 satisfying the following Riccati differential equation
+_
+P (t) +A
+ 
+0;ff
+(t)P (t) +P (t)A
+0;ff
+(t) 
+m
+X
+i=1
+P (t)
+ 
+Q
+i
+(t)P (t) +
+m
+X
+i=1
+   
+i
+I = 0; (4.2)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 157Differential Equations and Control Processes, N 1, 2012
+where
+kBk = sup
+t2R
++
+kB(t)k;
+m
+X
+i=1
+ 
+Q
+i
+(t) =B(t)B
+ 
+(t) 
+m
+X
+i=1
+2
+1  
+i
+A
+i;ff
+(t)A
+ 
+i;ff
+(t);
+m
+X
+i=1
+   
+i
+=m + 
+2
+kBk
+2
++ 2  (A
+0;ff
+) +
+m
+X
+i=1
+2 
+2
+1  
+i
+ 
+2
+(A
+i;ff
+):
+Moreover the feedback control is determined by
+u(t) = 
+1
+2
+B
+ 
+(t)[P (t)  I]x(t);
+where P (t) is the solution of Riccati differential equation (4:2).
+Proof. Let us make a variable transformation
+y(t) =e
+fft
+x(t); t  0:
+Under the feedback controlu(t) =K(t)x(t), whereK(t) = 
+1
+2
+B
+ 
+(t)[P (t)  I],
+the system (4:1) is reduced to
+_ y(t) = [A
+0;ff
+(t) +B(t)K(t)]y(t) +
+m
+X
+i=1
+A
+i;ff
+(t)y(t h
+i
+(t));
+y(t) =e
+fft
+ (t); t2 [ h; 0]:
+(4.3)
+For the system (4:3), we apply the same Lyapunov-Krasovskii functional (3:3).
+Then for the derivative of V (t;y(t)) int along the solutiony(t) of system (4:3)
+we have
+_
+V (t;y(t)) < [
+_
+P (t) +A
+ 
+0;ff
+(t)P (t) +P (t)A
+0;ff
+(t) P (t)B(t)B
+ 
+(t)P (t)
++mI]y(t);y(t)> +< [ 
+2
+B(t)B
+ 
+(t) + (A
+0;ff
+(t) +A
+ 
+0;ff
+(t))]y(t);y(t)>
++ 2 
+m
+X
+i=1
+<A
+i;ff
+(t)y(t h
+i
+(t));y(t)>
++ 2
+m
+X
+i=1
+<P (t)A
+i;ff
+(t)y(t h
+i
+(t));y(t)>
+ 
+m
+X
+i=1
+(1  
+i
+)<y(t h
+i
+(t));y(t h
+i
+(t))>:
+(4.4)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 158Differential Equations and Control Processes, N 1, 2012
+From the inequalities (3:5) and (3:6), then we can obtain
+_
+V (t;y(t)) < [
+_
+P (t) +A
+ 
+0;ff
+(t)P (t) +P (t)A
+0;ff
+(t) 
+m
+X
+i=1
+P (t)
+ 
+Q
+i
+(t)P (t)
++mI]y(t);y(t)> + 
+2
+kBk
+2
+<y(t);y(t)> +2  (A
+0;ff
+)ky(t)k
+2
++
+m
+X
+i=1
+2 
+2
+1  
+i
+ 
+2
+(A
+i;ff
+)ky(t)k
+2
+:
+Let
+m
+X
+i=1
+   
+i
+=m + 
+2
+kBk
+2
++ 2  (A
+0;ff
+) +
+m
+X
+i=1
+2 
+2
+1  
+i
+ 
+2
+(A
+i;ff
+):
+Thus we get
+_
+V (t;y(t)) < [
+_
+P (t) +A
+ 
+0;ff
+(t)P (t) +P (t)A
+0;ff
+(t) 
+m
+X
+i=1
+P (t)
+ 
+Q
+i
+(t)P (t)
++
+m
+X
+i=1
+   
+i
+I]y(t);y(t)>:
+Since P (t) is a solution of (4:2), therefore
+_
+V (t;y(t))  0; for allt2R
++
+:
+Since the completion of this proof is similar to that of Theorem 3.1, which
+implies that system (4:1) is ff-stabilizable.
+Theorem 4.2. Linear non-autonomous time-varying control system with mul-
+tiple delays (4:1) is ff-stabilizable, if there exists a symmetric matrix function
+P (t)> 0, such that the following condition LMI holds
+0
+B
+B
+B
+B
+B
+@
+   (t) P (t)A
+1;ff
+(t) + A
+1;ff
+(t) ::: P (t)A
+m;ff
+(t) + A
+m;ff
+(t)
+A
+ 
+1;ff
+(t)P (t) + A
+ 
+1;ff
+(t)  (1  
+1
+)I ::: 0
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+A
+ 
+m;ff
+(t)P (t) + A
+ 
+m;ff
+(t) 0 :::  (1  
+m
+)I
+1
+C
+C
+C
+C
+C
+A
+< 0;
+(4.5)
+where
+kBk = sup
+t2R
++
+kB(t)k;
+~  
+1
+=m + 
+2
+kBk
+2
+;
+Electronic Journal. http://www.math.spbu.ru/diffjournal 159Differential Equations and Control Processes, N 1, 2012
+   (t) =
+_
+P (t) +A
+ 
+0;ff
+(t)P (t) +P (t)A
+0;ff
+(t) P (t)B(t)B
+ 
+(t)P (t)
++ fA
+0;ff
+(t) +A
+ 
+0;ff
+(t)g + ~  
+1
+I:
+Moreover the feedback control is determined by
+u(t) = 
+1
+2
+B
+ 
+(t)[P (t)  I]x(t):
+Proof. Regarding to the above condition, we can write the relation (4:4) in
+the following form:
+_
+V (t;y(t)) < [
+_
+P (t) +A
+ 
+0;ff
+(t)P (t) +P (t)A
+0;ff
+(t) P (t)B(t)B
+ 
+(t)P (t)
++ (A
+0;ff
+(t) +A
+ 
+0;ff
+(t)) + 
+2
+kBk
+2
++mI]y(t);y(t)>
++ 2 
+m
+X
+i=1
+<A
+i;ff
+(t)y(t h
+i
+(t));y(t)> +2
+m
+X
+i=1
+<P (t)A
+i;ff
+(t)y(t h
+i
+(t));y(t)>
+ 
+m
+X
+i=1
+(1  
+i
+)<y(t h
+i
+(t));y(t h
+i
+(t))>
+=Z
+ 
+(t)
+0
+B
+B
+B
+B
+B
+@
+   (t) P (t)A
+1;ff
+(t) + A
+1;ff
+(t) ::: P (t)A
+m;ff
+(t) + A
+m;ff
+(t)
+A
+ 
+1;ff
+(t)P (t) + A
+ 
+1;ff
+(t)  (1  
+1
+)I ::: 0
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+A
+ 
+m;ff
+(t)P (t) + A
+ 
+m;ff
+(t) 0 :::  (1  
+m
+)I
+1
+C
+C
+C
+C
+C
+A
+Z(t);
+where
+Z(t) := [y(t); y(t h
+1
+(t));    ; y(t h
+m
+(t))]:
+Therefore by condition (4:5) there is a constant   > 0 such that
+_
+V (t;y(t))   kZ(t)k
+2
+; for all t2R
++
+:
+Since the completion of this proof is the same to the proof of Theorem 3.2, then
+the linear non-autonomous time-varying control system with multiple delays
+(4:1) is ff-stabilizable.
+Example 4.1. Consider the following linear non-autonomous time-varying de-
+lay system with control problem
+_ x(t) =A
+0
+(t)x(t) +A
+1
+(t)x(t h
+1
+(t)) +B(t)u(t); t2R
++
+;
+Electronic Journal. http://www.math.spbu.ru/diffjournal 160Differential Equations and Control Processes, N 1, 2012
+with any initial function  2C([ 
+1
+2
+; 0];R
+2
+), the time-varying delay h
+1
+(t) is the
+same of Example 3.1, and
+A
+0
+(t) =
+ 
+ 
+1
+2
++ 4e
+ t
+sin
+2
+t 
+5
+2
+e
+t
+0
+0  
+1
+2
++e
+ t
+cos
+2
+t 
+5
+2
+e
+t
+ 
+;
+A
+1
+(t) =
+ p
+2e
+ 
+1
+2
+sin
+2 t
+2
+sint 0
+0
+q
+3
+2
+e
+ 
+1
+2
+sin
+2 t
+2
+cost
+!
+andB(t) =
+ 
+4sint 0
+0 2
+p
+2cost
+ 
+:
+For ff = 1, therefore we obtain
+m = 1; h =
+1
+2
+;  
+1
+=
+1
+2
+;  (A
+0;ff
+) = 2;  (A
+1;ff
+) =
+p
+2 andkBk = 4:
+Let   =
+1
+2
+, we  nd    
+1
+= 4 and
+ 
+Q
+1
+(t) =
+ 
+4sin
+2
+t 0
+0 2cos
+2
+t
+ 
+.
+Then the solution of the following Riccati differential equation
+_
+P (t) +A
+ 
+0;ff
+(t)P (t) +P (t)A
+0;ff
+(t) P (t)
+ 
+Q
+1
+(t)P (t) +    
+1
+I = 0;
+is found by
+P (t) =
+ 
+e
+ t
+0
+0 e
+ t
+ 
+> 0; for all t2R
++
+:
+Thus, by Theorem 4.1, the system is 1-stabilizable with feedback control
+u(t) =
+ 
+(1  2e
+ t
+)sint 0
+0
+1
+p
+2
+(1  2e
+ t
+)cost
+ 
+:
+5 Conclusion
+In this paper we have presented su cient conditions for the ff-stable (expo-
+nential stability with a given rate ff) of a class of linear non-autonomous time-
+varying system with multiple delays. The conditions are derived in terms of the
+solution of Riccati differential equation or of linear matrix inequality. The re-
+sults are applied to obtain ff-stabilizable conditions for linear non-autonomous
+time-varying control system with multiple delays.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 161Differential Equations and Control Processes, N 1, 2012
+References
+[1] S. Boyd, El-Ghaoui, E. Feron and V. Balakrishnan, Linear matrix inequali-
+ties and control theory, SIAM Studies in Applied Mathematics, 15, SIAM,
+Philadelphia, PA,1994.
+[2] E. Fridman and U. Shaked, A descriptor system approach to H-in nity
+control of linear time-delay systems, IEEE Trans. Automat. Control, 47,
+253-270, 2002.
+[3] Le. V. Hien, Delay-dependent exponential stability of linear systems with
+fast time-varying delay, Int. Math. Forum, 4(39), 1939-1947, 2009.
+[4] Le. V. Hien and V. N. Phat, Exponential stability and stabilization of a
+class of uncertain linear time-delay systems, J. Franklin Inst., 346, 611-625,
+2009.
+[5] J. D. Jefferey, Stability for time-varying linear dynamic systems on time
+scales, J. Comput. Appl. Math., 176, 381-410, 2005.
+[6] V. L. Kharitonov, Lyapunov-Krasovskii functionals for scalar time delay
+equations, Systems Control Lett., 51, 133-149, 2004.
+[7] V. B. Kolmanovskii and V. R. Nosov, Stability of functional differential
+equations, Academic Press, London, 1986.
+[8] N. M. Linh and V. N. Phat, Exponential stability of nonlinear time-varying
+differential equations and applications, Electron. J. Diff. Eqs., 34, 1-13,
+2001.
+[9] P. -L. Liu, Exponential stability for linear time-delay systems with delay
+dependence, J. Franklin Inst., 340, 481-488, 2003.
+[10] P. Niamsup and V. N. Phat, Asymptotic stability of nonlinear control
+systems described by differential equations with multiple delays, Electron.
+J. Diff. Eqs., 11, 1-17, 2000.
+[11] P. Niamsup and V. N. Phat, Linear time-varying systems in Hilbert spaces:
+Exact controllability implies complete stabilizability, Thai J. Math., 7(1),
+189-199, 2009.
+[12] P. Niamsup, K. Mukdasal and V. N. Phat, Linear uncertain non-
+autonomous time-delay systems: stability and stabilizability via Riccati
+equations, Electron. J. Diff. Eqs., 26, 1-10, 2008.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 162Differential Equations and Control Processes, N 1, 2012
+[13] V. N. Phat, Stabilization of linear continuous time-varying systems with
+state delays in Hilbert spaces, Electron. J. Diff. Eqs., 67, 1-13, 2001.
+[14] V. N. Phat and N. S. Bay, Stability analysis of nonlinear retarded difference
+equations in Banach spaces, J. Comput. Appl. Math., 45, 951-960, 2003.
+[15] V. N. Phat and P. T. Nam, Exponential stability criteria of linear non-
+autonomous systems with multiple delays, Electron. J. Diff. Eqs., 58, 1-8,
+2005.
+[16] V. N. Phat and P. T. Nam, Exponential stability and stabilization of un-
+certain linear time-varying systems using parameter dependent Lyapunov
+function, Int. J. of Control, 80, 1333-1341, 2007.
+[17] V. N. Phat and P. Niamsup, Stability of linear time-varying delay systems
+and applications to control problems, J. Comput. Appl. Math., 194, 343-356,
+2006.
+[18] T. Yoshizawa, Stability Theory by Liapunov's Second Method, The Mathe-
+matical Society of Japan, 1966.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 163

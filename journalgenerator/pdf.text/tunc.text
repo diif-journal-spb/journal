@@ -1,0 +1,2073 @@
+﻿DIFFERENTIAL EQUATIONS 
+AND 
+CONTROL PROCESSES 
+№ 3, 2007 
+Electronic Journal, 
+reg. № P2375 at 07.03.97 
+ISSN 1817-2172 
+ 
+http://www.newa.ru/journal 
+http://www.math.spbu.ru/user/diffjournal 
+e-mail: jodiff@mail.ru 
+ 
+Ordinary differential equations 
+ 
+ 
+ 
+ 
+Stability and boundedness of solutions of nonlinear differential 
+equations of third-order with delay 
+ 
+Cemil Tunç 
+ 
+Department of Mathematics, Faculty of Arts and Sciences 
+Yüzüncü Yıl University, 65080, Van -Turkey 
+E-mail:cemtunc@yahoo.com 
+ 
+ 
+ 
+Abstract 
+ 
+In this paper we investigate stability and boundedness of solutions of some nonlinear differential 
+equations of third order with delay. By constructing a Lyapunov functional, sufficient conditions for 
+the stability and boundedness of solutions for equations considered are obtained.  
+ 
+Keywords: Stability, boundedness, Lyapunov functional, differential equations of third order     
+                    with delay. 
+AMS (MOS) Subject Classification: 34K20. 
+ 
+1. Introduction 
+ 
+The results existing in the literature on the stability and boundedness of solutions of nonlinear 
+differential equations of third order with bounded delay have been developed over the last several 
+decades. After a literature survey about nonlinear equations of third order with bounded delay, one can 
+conclude that there are not so many results on the stability and boundedness of solutions. Up to this 
+moment, the investigations concerning stability and boundedness of solutions of nonlinear equations of 
+third order with bounded delay have not been fully developed. Certainly, these results should be 
+obtained to be able to benefit from the applications of the theory of stability and boundedness of 
+solutions. At the same time, we should recognize that some significant theoretical results concerning 
+the stability and boundedness of solutions of third order nonlinear differential equations with delay 
+have been achieved, see  for example the papers of  Sadek [9], Tejumola and Tchegnani [10], Tunç 
+([11], [12]), Zhu [14] and the references citied in these papers. It should be noted that, in 1969, Differential Equations and Control Processes, № 3, 2007  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal 2 
+ 
+   
+ 
+ 
+ 
+ 
+Palusinski et al. [8] applied an energy metric algorithm for the generation of a Lyapunov function for 
+third order ordinary nonlinear differential equation of the form: 
+0 ) (
+3 2 1
+= + ′ ′ + ′ ′ + ′ ′ ′ x a x x f x a x . 
+They found some conditions for the stability of zero solution of this equation as follows: 
+0
+1
+> a , 0 ) (
+3 2
+> > ′ a x f . 
+In this paper we are concerned with the third order ordinary nonlinear delay differential equations of 
+the type 
+ 
+        )) ( )), ( ( )), ( ( ), ( ), ( , ( ) ( )) ( ( ( ) ( ) (
+3 2 1
+t x t r t x t r t x t x t x t p t x a t r t x f t x a t x ′ ′ − ′ − ′ = + − ′ + ′ ′ + ′ ′ ′     (1) 
+or its equivalent system  
+ 
+) (t x ′ = ) (t y , ) (t y ′ = ) (t z , 
+) (t z ′ = ) ( )) ( ( ) (
+3 2 1
+t x a t y f t z a − − − +
+∫
+−
+′
+t
+t r t
+ds s z s y f
+) (
+2
+) ( )) (( 
+   + )) ( )), ( ( )), ( ( ), ( ), ( , ( t z t r t y t r t x t y t x t p − − ,                                        (2) 
+where r is a bounded delay, γ ≤ ≤ ) ( 0 t r , β ≤ ′ ) (t r , 1 0 < < β , β and  γ are some positive constants, 
+γ which will be determined later; 
+1
+a and 
+3
+a are some positive constants; the functions 
+2
+f  and p 
+depend only on the arguments displayed explicitly and the primes in equation (1) denote differentiation 
+with respect to t. It is principally assumed that 0 ) 0 (
+2
+= f and the functions 
+2
+f  and p are continuous 
+for all values their respective arguments on ℜ and 
+5
+ℜ × ℜ
++
+, ( ) ∞ = ℜ
++
+, 0 , respectively. This fact 
+guarantees the existence of the solution of delay differential equation (1).  Besides, it is supposed that 
+the derivative 
+dy
+df
+y f
+2
+2
+) ( ≡ ′ exists and is continuous. In addition, it is also assumed that the functions 
+))) ( ( (
+2
+t r t y f − and )) ( )), ( ( )), ( ( ), ( ), ( , ( t z t r t y t r t x t y t x t p − − satisfy a Lipschitz condition in 
+)) ( (  , )) ( ( ), (  ), ( t r t y t r t x t y t x − − and ) (t z ; throughout the paper ) (  and  ) (   ), ( t z t y t x are, 
+respectively, abbreviated as x , y and z . Then the solution is unique (See [2, pp.14].)   
+The motivation for the present work has been inspired basically by the paper of Palusinski et al. [8] 
+and the papers mentioned above. Our aim here is to discuss the result verified by Palusinski et al. [8] 
+on the stability of the solutions to the equation (1) for the stability and  boundedness of solutions of 
+this equation in the case 0 = p and 0 ≠ p , respectively.    
+ 
+ 
+2. Preliminaries 
+ 
+In order to reach our main result, we give some important basic information for the general non-
+autonomous delay differential system (see also Burton [1], Èl’sgol’ts [2], Èl’sgol’ts and Norkin [3], 
+Hale [4], Kolmanovskii and Myshkis [5], Kolmanovskii and  Nosov [6], Krasovskii  [7] and 
+ Yoshizawa [13]. 
+Now, we consider the general non-autonomous delay differential system 
+ 
+) , (
+t
+x t f x = & , ) ( ) ( θ θ + = t x x
+t
+, 0 ≤ ≤ − θ r , 0 ≥ t ,                  (3) Differential Equations and Control Processes, № 3, 2007  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal 3 
+ 
+   
+ 
+ 
+ 
+ 
+where [ )
+n
+H
+C f ℜ → × ∞ , 0 : is a continuous mapping, 0 ) 0 , ( = t f , and we suppose that f takes closed 
+bounded sets  into bounded sets of 
+n
+ℜ . Here ( ) .  , C is the Banach space of continuous function 
+[]
+n
+r ℜ → − 0 , : φ  with supremum norm, 0 > r , 
+H
+C is the open H-ball in C ; 
+[] ( ) { } H r C C
+n
+H
+< ℜ − ∈ = φ φ :  , 0 , : .  Standard existence theory, see Burton [1, pp.312], shows that if 
+H
+C ∈ φ and 0 ≥ t , then there is at least one continuous solution ) , , (
+0
+φ t t x such that on [ ) α +
+0 0
+ , t t 
+satisfying equation (3) for 
+0
+t t > ,   ) ( ) , , (
+0 0
+s t s x
+t t
+φ φ = and α is a positive constant. If there is a closed 
+subset 
+H
+C B ⊂ such that the solution remains in B , then ∞ = α . Further, the symbol  . will denote 
+the norm in 
+n
+ℜ with x = 
+i n i
+x
+≤ ≤ 1
+max . 
+ 
+Definition 1: (See [1, pp.223].) A continuous function [ ) [ ) ∞ → ∞ , 0 , 0 : W with 0 ) 0 ( = W , 
+0 ) ( > s W if 0 > s , and W strictly increasing is a wedge. (We denote wedges by W or 
+i
+W , where i an 
+integer.) 
+ 
+Definition 2:  (See [1,  pp. 260].)  Let ) , ( φ t V be a continuous functional defined for 0 ≥ t , 
+H
+C ∈ φ . The derivative of V along solutions of (3) will be denoted by 
+) 3 (
+V
+&
+ and is defined by the 
+following relation  
+ 
+h
+t x t V t x h t V
+t V
+t h t
+h
+)) , ( , ( )) , ( , (
+sup lim ) , (
+0 0
+0
+) 3 (
+φ φ
+φ
+− +
+=
++
+→
+&
+, 
+where ) , (
+0
+φ t x is the solution of (3) with φ φ = ) , (
+0
+0
+t x
+t
+. 
+ 
+Definition 3: (See [13, pp.184].) A function ) , (
+0
+φ t x is said to be a solution of (3) with the initial 
+condition 
+H
+C ∈ φ at 
+0
+t t =, 0
+0
+≥ t , if there is a constant 0 > A such that ) , (
+0
+φ t x is a function from 
+[] A t h t + −
+0 0
+ , into 
+n
+ℜ with the properties: 
+(i) 
+H t
+C t x ∈ ) , (
+0
+φ for A t t t + < ≤
+0 0
+, 
+(ii) φ φ = ) , (
+0
+0
+t x
+t
+, 
+(iii) ) , (
+0
+φ t x satisfies (3) for A t t t + < ≤
+0 0
+. 
+ 
+Theorem 1: (See [13, pp.184].) If ) , ( φ t f in (3) is continuous in t , φ , for every 
+1
+H
+C ∈ φ , H H <
+1
+, 
+and  
+0
+t , c t < ≤
+0
+0 , where c is a positive constant, then there exist a solution of (3) with  initial value 
+φ at 
+0
+t t = , and this solution has a continuous derivative for 
+0
+t t > . 
+ 
+For the general autonomous delay differential system ) (
+t
+x f x = & , which is a special case of (3), the 
+following lemma is given.  
+ 
+Proposition: (See [7].)  Suppose 0 ) 0 ( = f . Let V be a continuous functional defined on  C C
+H
+= 
+with 0 ) 0 ( = V , and let ) (s u be a function, non-negative and continuous for ∞ < ≤ s 0 , ∞ → ) (s u as 
+∞ → u such that for all C ∈ φ Differential Equations and Control Processes, № 3, 2007  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal 4 
+ 
+   
+ 
+ 
+ 
+ 
+(i)   ), ( ) ) 0 ( ( φ φ V u ≤ 0 ) ( ≥ φ V , 
+(ii) 0 ) (
+) 3 (
+< φ V
+&
+ for   0 ≠ φ . 
+Then all solutions of ) (
+t
+x f x = & approach zero as ∞ → t and the origin is globally asymptotically 
+stable. 
+Note that C C
+H
+= when ∞ = H ; and that the set R of φ in C for which 0 ) (
+) 3 (
+= φ V
+&
+ has a largest 
+invariant set {} 0 = M by the condition 0 ) (
+) 3 (
+< φ V
+&
+ for   0 ≠ φ . 
+ 
+ 
+3. Main results 
+ 
+First for the case 0 )) ( )), ( ( )), ( ( ), ( ), ( , ( = − − t z t r t y t r t x t y t x t p the following result is established. 
+ 
+Theorem 2: In addition to the basic assumptions imposed on the functions 
+2
+f and p that 
+appeared in equation (1) ,  we assume that there are positive constants 
+1
+a , 
+2
+a , 
+3
+a ,
+0
+ε , L and μ such 
+that the following conditions are satisfied  
+0
+3 2 1
+> − a a a , 0 ) 0 (
+2
+= f , 
+0 2
+2
+) (
+ε ≥ − a
+y
+y f
+, ) 0 ( ≠ y , and L y f ≤ ′ ) (
+2
+  for all y . 
+Then for sufficiently small γ the zero solution of (1) is globally asymptotically stable provided that  
+⎭
+⎬
+⎫
+⎩
+⎨
+⎧
++
+−
+<
+μ
+ε
+γ
+2
+) ( 2
+,
+2
+min
+2
+3 2 1 0
+L a
+a a a
+L
+. 
+Proof: The proof of this theorem depends on a scalar differentiable Lyapunov functional. V = 
+) , , (
+t t t
+z y x V .  The idea of Lyapunov’s method is to impose some conditions on the functional  V and 
+its time derivative ) , , (
+t t t
+z y x V
+dt
+d
+ which both imply the stability of the zero solution of equation (1). 
+We introduce the Lyapunov’s functional V=) , , (
+t t t
+z y x V : 
+ 
+) , , (
+t t t
+z y x V =
+2 2
+3
+2
+1
+x a + xy a a
+3 2
++
+2
+2
+2
+1
+z a + yz a
+3
++
+∫
+y
+d f a
+0
+2 2
+) ( ξ ξ 
+ +
+2
+3 1
+2
+1
+y a a +
+∫∫
+−+
+0
+) (
+2
+) ( 
+t r
+t
+s t
+ds d z θ θ μ ,                                                 (4) 
+where 
+1
+a , 
+2
+a , 
+3
+a and μ are some positive constants and the constant μ which will be determined 
+later in the proof. Now, the Lyapunov functional  V = ) , , (
+t t t
+z y x V defined in (4) can be rearranged in 
+the form: 
+ 
+) , , (
+t t t
+z y x V =
+2
+3
+2 2
+3
+2
+1
+⎟
+⎟
+⎠
+⎞
+⎜
+⎜
+⎝
+⎛
++ y
+a
+a
+x a +
+2
+2
+3
+2
+2
+1
+⎟
+⎟
+⎠
+⎞
+⎜
+⎜
+⎝
+⎛
++ y
+a
+a
+z a Differential Equations and Control Processes, № 3, 2007  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal 5 
+ 
+   
+ 
+ 
+ 
+ 
++ ξ ξ
+ξ
+ξ
+d
+f
+a
+a
+a
+a a a
+y
+∫
+⎥
+⎦
+⎤
+⎢
+⎣
+⎡
++ − −
+0
+2
+2
+2
+2
+3 2
+2 3 1
+) (
++
+∫∫
+−+
+0
+) (
+2
+) ( 
+t r
+t
+s t
+ds d z θ θ μ .          (5)    
+In view of the assumption 
+0 2
+2
+) (
+ε + ≥ a
+y
+y f
+, it is clear  that  
+ξ ξ
+ξ
+ξ
+d
+f
+a
+a
+a
+a a a
+y
+∫
+⎥
+⎦
+⎤
+⎢
+⎣
+⎡
++ − −
+0
+2
+2
+2
+2
+3 2
+2 3 1
+) (
+≥ () ξ ξ ε d a a
+a
+a
+a a a
+y
+∫
+⎥
+⎦
+⎤
+⎢
+⎣
+⎡
++ + − −
+0
+0 2 2
+2
+2
+3 2
+2 3 1
+ 
+= ξ ξ ε d a
+a
+a
+a a
+y
+∫
+⎥
+⎦
+⎤
+⎢
+⎣
+⎡
++ −
+0
+0 2
+2
+2
+3
+3 1
+ 
+= 0
+2
+2
+2
+0
+2
+2
+2
+3 3 2 1
+>
+⎟
+⎟
+⎠
+⎞
+⎜
+⎜
+⎝
+⎛ + −
+y
+a
+a a a a a ε
+. 
+Hence, it is evident, from the terms contained in (5), that there exist sufficiently small positive 
+constants 
+i
+D,) 3 , 2 , 1 ( = i , such that  
+V ≥
+2
+1
+x D +
+2
+2
+y D +
+2
+3
+z D +
+∫∫
+−+
+0
+) (
+2
+) ( 
+t r
+t
+s t
+ds d z θ θ μ 
+≥ ( )
+2 2 2
+4
+z y x D + + ,                                                                             (6) 
+since the integral 
+∫∫
+−+
+0
+) (
+2
+) ( 
+t r
+t
+s t
+ds d z θ θ μ is non-negative, where { }
+3 2 1 4
+, , min D D D D = .  
+Now, calculating the time derivative of the functional ) , , (
+t t t
+z y x V with respect to t along a 
+solution )) ( ), ( ), ( ( t z t y t x of the system (2), we have  
+ 
+  ) , , (
+t t t
+z y x V
+dt
+d
+= ()
+2
+3 2 1
+z a a a − −
+2
+2
+2
+3
+) (
+y a
+y
+y f
+a
+⎟
+⎟
+⎠
+⎞
+⎜
+⎜
+⎝
+⎛
+− − 
++
+∫
+−
+′
+t
+t r t
+ds s z s y f z a
+) (
+2 2
+) ( )) ((+
+∫
+−
+′
+t
+t r t
+ds s z s y f y a
+) (
+2 3
+) ( )) (( 
++
+2
+) ( z t r μ -
+∫
+−
+′ −
+t
+t r t
+ds s z t r
+) (
+2
+) ( )) ( 1 ( μ 
+= ()
+2
+3 2 1
+) ( z t r a a a μ − − −
+2
+2
+2
+3
+) (
+y a
+y
+y f
+a
+⎟
+⎟
+⎠
+⎞
+⎜
+⎜
+⎝
+⎛
+− − 
++
+∫
+−
+′
+t
+t r t
+ds s z s y f z a
+) (
+2 2
+) ( )) ((+
+∫
+−
+′
+t
+t r t
+ds s z s y f y a
+) (
+2 3
+) ( )) (( 
+-
+∫
+−
+′ −
+t
+t r t
+ds s z t r
+) (
+2
+) ( )) ( 1 ( μ .                                                            (7) Differential Equations and Control Processes, № 3, 2007  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal 6 
+ 
+   
+ 
+ 
+ 
+ 
+By noting the assumption L y f ≤ ′ ) (
+2
+ and the inequality 
+2 2
+2 b a ab + ≤ , we obtain the following 
+relations: 
+∫
+−
+′
+t
+t r t
+ds s z s y f z a
+) (
+2 2
+) ( )) ( ( ≤
+2
+2
+L a
+) ( ) (
+2
+t z t r +
+2
+2
+L a
+∫
+−
+t
+t r t
+ds s z
+) (
+2
+) ( 
+and  
+∫
+−
+′
+t
+t r t
+ds s z s y f y a
+) (
+2 3
+) ( )) ( ( ≤
+2
+3
+L a
+) ( ) (
+2
+t y t r +
+2
+3
+L a
+∫
+−
+t
+t r t
+ds s z
+) (
+2
+) (. 
+Hence, using the assumptions 
+0 2
+2
+) (
+ε ≥ − a
+y
+y f
+, γ ≤ ≤ ) ( 0 t r , β ≤ ′ ) (t r , 1 0 < < β ,  and the above 
+discussion, we get from (7) that  
+ 
+) , , (
+t t t
+z y x V
+dt
+d
+≤
+2
+2
+2
+3
+) (
+2
+) (
+y t r
+L
+a
+y
+y f
+a
+⎥
+⎦
+⎤
+⎢
+⎣
+⎡
+−
+⎟
+⎟
+⎠
+⎞
+⎜
+⎜
+⎝
+⎛
+− − 
+                              ()
+2 2
+3 2 1
+) (
+2
+2
+z t r
+L a
+a a a
+⎥
+⎦
+⎤
+⎢
+⎣
+⎡
+⎟
+⎠
+⎞
+⎜
+⎝
+⎛ +
+− − −
+μ
+ 
++()
+∫
+−
++
+t
+t r t
+ds s z
+L
+a a
+) (
+2
+3 2
+) (  
+2
+-
+∫
+−
+′ −
+t
+t r t
+ds s z t r
+) (
+2
+) ( )) ( 1 ( μ 
+≤
+2
+0 3
+2
+y
+L
+a
+⎥
+⎦
+⎤
+⎢
+⎣
+⎡
+− − γ ε ()
+2 2
+3 2 1
+2
+2
+z
+L a
+a a a
+⎥
+⎦
+⎤
+⎢
+⎣
+⎡
+⎟
+⎠
+⎞
+⎜
+⎝
+⎛ +
+− − − γ
+μ
+ 
+ +
+∫
+−
+⎥
+⎦
+⎤
+⎢
+⎣
+⎡ − − +
+t
+t r t
+ds s z
+L a a
+) (
+2 3 2
+) (  
+2
+) 1 ( ) ( β μ
+.                                          (8)  
+If we choose  
+β
+μ
+−
++
+=
+1
+) (
+3 2
+L a a
+, then we have from (8) that  
+) , , (
+t t t
+z y x V
+dt
+d
+≤
+2
+0 3
+2
+y
+L
+a
+⎥
+⎦
+⎤
+⎢
+⎣
+⎡
+− − γ ε ()
+2 2
+3 2 1
+2
+2
+z
+L a
+a a a
+⎥
+⎦
+⎤
+⎢
+⎣
+⎡
+⎟
+⎠
+⎞
+⎜
+⎝
+⎛ +
+− − − γ
+μ
+.           (9) 
+Therefore, in view of (9), one can conclude for some positive constants α and ρ that 
+) , , (
+t t t
+z y x V
+dt
+d
+≤
+2
+y α −
+2
+z ρ −                                                                        (10)                             
+provided 
+⎭
+⎬
+⎫
+⎩
+⎨
+⎧
++
+−
+<
+μ
+ε
+γ
+2
+) ( 2
+,
+2
+min
+2
+3 2 1 0
+L a
+a a a
+L
+. 
+Finally, it is followed that 0 ) , , ( ≡
+t t t
+z y x V
+dt
+d
+ if and only if 
+t
+y =
+t
+z =0, 0 ) ( < φ V
+dt
+d
+ for 0 ≠ φ and 
+0 ) ) 0 ( ( ) ( ≥ ≥ φ φ u V . Thus, in view (6), (10) and the last discussion, it is seen that all the conditions of Differential Equations and Control Processes, № 3, 2007  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal 7 
+ 
+   
+ 
+ 
+ 
+ 
+the above Proposition are satisfied. This shows that the trivial solution of equation (1) is globally 
+asymptotically stable. Hence, the proof of Theorem 2 is complete. 
+ 
+Example 1:  Consider the third order nonlinear delay differential equation  
+0 ) ( 2 )) ( ( sin )) ( ( 4 ) ( 3 ) ( = + − ′ + − ′ + ′ ′ + ′ ′ ′ t x t r t x t r t x t x t x                               (11) 
+Equation (11) is equivalent to the system  
+) (t x ′ = ) (t y , ) (t y ′ = ) (t z , 
+) (t z ′ = ) ( 3 t z − ) ( sin ) ( 4 t y t y − − ) ( 2 t x − +()
+∫
+−
++
+t
+t r t
+ds s z s y
+) (
+) ( ) ( cos 4 ,                (12) 
+where we suppose that γ ≤ ≤ ) ( 0 t r , β ≤ ′ ) (t r , 1 0 < < β , β  and  γ are  positive constants, γ  which 
+will be determined later, [ ) ∞ ∈ , 0 t . It is obvious that  
+ 
+y
+y sin
+4 3 + ≤  
+for all y, ). 0 ( ≠ y  
+Our main tool is the Lyapunov functional  
+ 
+) , , (
+t t t
+z y x V =
+2
+2
+2 ⎟
+⎠
+⎞
+⎜
+⎝
+⎛
++
+y
+x +()
+2
+2
+2
+1
+y z + + ξ ξ
+ξ
+ξ
+d
+y
+∫ ⎥
+⎦
+⎤
+⎢
+⎣
+⎡
++
+0
+sin
+5 
++
+∫∫
+−+
+0
+) (
+2
+) ( 
+t r
+t
+s t
+ds d z θ θ μ ,                                                           (13) 
+                                         
+where μ is a positive constant which will be determined later.  
+It is clear that the functional ) , , (
+t t t
+z y x V is positive definite. Hence, it is evident, from the terms 
+contained in (13), that there exist sufficiently small positive constants 
+i
+D , ) 7 , 6 , 5 ( = i , such that  
+) , , (
+t t t
+z y x V ≥
+2
+5
+x D +
+2
+6
+y D +
+2
+7
+z D +
+∫∫
+−+
+0
+) (
+2
+) ( 
+t r
+t
+s t
+ds d z θ θ μ 
+≥
+2
+5
+x D +
+2
+6
+y D +
+2
+7
+z D 
+≥ ( )
+2 2 2
+8
+z y x D + + , 
+where  
+8
+D = {}
+7 6 5
+, , min D D D .                                                                         
+Now, the time derivative of the functional  ) , , (
+t t t
+z y x V in (13) with respect to the system (12) can 
+be calculated as follows: 
+ 
+) , , (
+t t t
+z y x V
+dt
+d
+=()
+2
+) ( 1 z t r μ − −
+2
+sin
+3 2 y
+y
+y
+⎟
+⎟
+⎠
+⎞
+⎜
+⎜
+⎝
+⎛
++ − Differential Equations and Control Processes, № 3, 2007  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal 8 
+ 
+   
+ 
+ 
+ 
+ 
++
+∫
+−
++
+t
+t r t
+ds s z s y z
+) (
+) ( )) ( cos 4(+
+∫
+−
++
+t
+t r t
+ds s z s y y
+) (
+) ( )) ( cos 4 (2 
+-
+∫
+−
+′ −
+t
+t r t
+ds s z t r
+) (
+2
+) ( )) ( 1 ( μ .                                                          (14)                             
+Making use of the facts 5 cos 4 ≤ + y , 1
+sin
+≤
+y
+y
+, γ ≤ ≤ ) ( 0 t r , β ≤ ′ ) (t r , 1 0 < < β and  the 
+inequality 
+2 2
+2 v u uv + ≤ , we obtain  the following inequalities for all terms contained  in the equality 
+(14), respectively: 
+ 
+()
+2
+) ( 1 z t r μ −−≤ ( )
+2
+1 z μγ − − , 
+2
+sin
+3 2 y
+y
+y
+⎟
+⎟
+⎠
+⎞
+⎜
+⎜
+⎝
+⎛
++−≤
+2
+4y − , 
+∫
+−
++
+t
+t r t
+ds s z s y z
+) (
+) ( )) ( cos 4 ( ≤
+2
+5
+) ( ) (
+2
+t z t r +
+2
+5
+∫
+−
+t
+t r t
+ds s z
+) (
+2
+) ( 
+≤
+2
+5 γ
+) (
+2
+t z +
+2
+5
+∫
+−
+t
+t r t
+ds s z
+) (
+2
+) (, 
+∫
+−
++
+t
+t r t
+ds s z s y y
+) (
+) ( )) ( cos 4 ( 2 ≤ 5 ) ( ) (
+2
+t y t r +5
+∫
+−
+t
+t r t
+ds s z
+) (
+2
+) ( 
+≤ γ 5 ) (
+2
+t y +5
+∫
+−
+t
+t r t
+ds s z
+) (
+2
+) ( 
+and 
+-
+∫
+−
+′ −
+t
+t r t
+ds s z t r
+) (
+2
+) ( )) ( 1 ( μ ≤ -
+∫
+−
+−
+t
+t r t
+ds s z
+) (
+2
+) ( ) 1 ( β μ .    
+Gathering all of these inequalities into (14), we have  
+ 
+) , , (
+t t t
+z y x V
+dt
+d
+≤
+2
+2
+5
+2 2 y ⎟
+⎠
+⎞
+⎜
+⎝
+⎛
+− −
+γ
+2
+2
+5
+1 z
+⎟
+⎟
+⎠
+⎞
+⎜
+⎜
+⎝
+⎛
+⎟
+⎠
+⎞
+⎜
+⎝
+⎛
++ − − γ μ - 
+∫
+−
+⎟
+⎠
+⎞
+⎜
+⎝
+⎛
+− −
+t
+t r t
+ds s z
+) (
+2
+) (
+2
+15
+) 1 ( β μ . 
+Let us choose 
+) 1 ( 2
+15
+β
+μ
+−
+= . Then, it easy to see that  
+      ) , , (
+t t t
+z y x V
+dt
+d
+≤
+2
+2
+5
+2 2 y
+⎟
+⎠
+⎞
+⎜
+⎝
+⎛
+− −
+γ
+2
+2
+5
+1 z
+⎟
+⎟
+⎠
+⎞
+⎜
+⎜
+⎝
+⎛
+⎟
+⎠
+⎞
+⎜
+⎝
+⎛
++ − − γ μ .                             (15) 
+Now, in view of (15), one can conclude for some positive constants α and ρ that Differential Equations and Control Processes, № 3, 2007  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal 9 
+ 
+   
+ 
+ 
+ 
+ 
+) , , (
+t t t
+z y x V
+dt
+d
+≤
+2
+y α −
+2
+z ρ − .                                                                       (16) 
+provided 
+⎭
+⎬
+⎫
+⎩
+⎨
+⎧
++
+<
+5
+4
+,
+5 2
+2
+min
+μ
+γ . 
+It is also easy to see that 0 ) , , ( ≡
+t t t
+z y x V
+dt
+d
+ if and only if 
+t
+z =
+t
+x =0, 0 ) ( < φ V
+dt
+d
+ for 0 ≠ φ and 
+0 ) ) 0 ( ( ) ( ≥ ≥ φ φ u V . Thus all the conditions of the above Proposition are satisfied. This shows that the 
+trivial solution of equation (11) is globally asymptotically stable.  
+ 
+For the case 0 )) ( )), ( ( )), ( ( ), ( ), ( , ( ≠ − − t z t r t y t r t x t y t x t p the following result is established. 
+ 
+Theorem 3: In addition to the basic assumptions imposed on the functions 
+2
+f and p that 
+appeared in equation (1) ,  we assume that there are positive constants 
+1
+a , 
+2
+a , 
+3
+a ,
+0
+ε , L , μ , H and 
+1
+H such that the following conditions are satisfied for every x , y and z in   
+ 
+{ } H H H z H y H x z y x < < < < ℜ ∈ = Ω
+1 1 1 1
+3
+ ,  ,  , : ) , , ( : : 
+(i) 0
+3 2 1
+> − a a a , 0 ) 0 (
+2
+= f , 
+0 2
+2
+) (
+ε ≥ − a
+y
+y f
+, ) 0 ( ≠ y , and L y f ≤ ′ ) (
+2
+. 
+(ii)  ) ( )) ( )), ( ( )), ( ( ), ( ), ( , ( t q t z t r t y t r t x t y t x t p ≤ − − , 
+where max ∞ < ) (t q and ) , 0 (
+1
+∞ ∈ L q , ) , 0 (
+1
+∞ L is space of integrable Lebesgue functions. 
+Then, there exists a finite positive constant K such that the solution ) (t x of equation (1) defined by the 
+initial functions  
+ 
+) ( ) ( t t x φ =, ) ( ) ( t t x φ ′ = ′ , ) ( ) ( t t x φ ′ ′ = ′ ′ 
+satisfies the inequalities 
+K t x ≤ ) ( , K t x ≤ ′ ) ( , K t x ≤ ′ ′ ) (  
+for all 
+0
+t t ≥ , where [] () ℜ − ∈ , ,
+0 0
+2
+t r t C φ ,  provided that  
+⎭
+⎬
+⎫
+⎩
+⎨
+⎧
++
+−
+<
+μ
+ε
+γ
+2
+) ( 2
+,
+2
+min
+2
+3 2 1 0
+L a
+a a a
+L
+. 
+Proof: As in the Theorem 2, the proof of this theorem also depends on the scalar differentiable 
+Lyapunov functional V = ) , , (
+t t t
+z y x V , which is defined in (4). Now, since 
+0 )) ( )), ( ( )), ( ( ), ( ), ( , ( ≠ − − t z t r t y t r t x t y t x t p , in view of (4), (2) and (10), it can be easily followed that 
+the time derivative of the functional ) , , (
+t t t
+z y x V  satisfies the following inequality:  
+ Differential Equations and Control Processes, № 3, 2007  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal 10 
+ 
+   
+ 
+ 
+ 
+ 
+) , , (
+t t t
+z y x V
+dt
+d
+≤
+2
+y α −
+2
+z ρ − + )) ( )), ( ( )), ( ( ), ( ), ( , ( .
+2 3
+t y t r t y t r t x t y t x t p z a y a − − + 
+ ≤
+2
+y α −
+2
+z ρ − + ). (
+2 3
+t q z a y a +                                                 
+Hence, it follows that  
+) , , (
+t t t
+z y x V
+dt
+d
+≤
+2
+y α −
+2
+z ρ − + ( ) ) (
+9
+t q z y D + 
+≤ () ) (
+9
+t q z y D + 
+for a constant 0
+9
+> D ,  where { }
+3 2 9
+, max a a D = . 
+Making use of the inequalities 
+2
+1 y y + < and 
+2
+1 z z + < , it is clear  that  
+) , , (
+t t t
+z y x V
+dt
+d
+≤ ( ) ) ( 2
+2 2
+9
+t q z y D + + .                                                   
+By (6), we have  
+( )
+2 2
+z y+≤ ) , , ( 
+1
+4 t t t
+z y x V D
+−
+. 
+Hence  
+) , , (
+t t t
+z y x V
+dt
+d
+≤ ( ) ) ( ) , , ( 2
+1
+4 9
+t q z y x V D D
+t t t
+−
++ . 
+Now, integrating the last inequality from 0 to t, using the assumption ) , 0 (
+1
+∞ ∈ L q and Gronwall-
+Reid-Bellman inequality, we obtain  
+ 
+) , , (
+t t t
+z y x V ≤ ) , , (
+0 0 0
+z y x V + () ds s q z y x V D D A D
+t
+s s s
+) ( ) , , ( 2
+0
+1
+4 9 9
+∫
+−
++ 
+≤() A D z y x V
+9 0 0 0
+2 ) , , ( +
+⎟
+⎟
+⎠
+⎞
+⎜
+⎜
+⎝
+⎛
+∫
+−
+t
+ds s q D D
+0
+1
+4 9
+) ( exp 
+≤() A D z y x V
+9 0 0 0
+2 ) , , ( + ( ) ∞ < =
+−
+1
+1
+4 9
+exp K A D D ,                   (17) 
+where 0
+1
+> K is a constant,
+1
+K = () A D z y x V
+9 0 0 0
+2 ) , , ( + ( ) A D D
+1
+4 9
+exp
+−
+ and 
+∫
+∞
+=
+0
+) ( ds s q A .  
+Now, the inequalities (6) and (17) together yield that  
+) ( ) ( ) (
+2 2 2
+t z t y t x + + ≤ K z y x V D
+t t t
+≤
+−
+) , , (
+1
+4
+, 
+where 
+1
+4 1
+−
+= D K K . Thus, we conclude that  
+K t x ≤ ) ( , K t y ≤ ) ( , K t z ≤ ) ( 
+for all 
+0
+t t ≥ . That is,  
+K t x ≤ ) ( , K t x ≤ ′ ) ( , K t x ≤ ′ ′ ) ( Differential Equations and Control Processes, № 3, 2007  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal 11 
+ 
+   
+ 
+ 
+ 
+ 
+for all 
+0
+t t ≥ .  
+The proof of the theorem is now complete. 
+ 
+ 
+Example 2:  Consider the third order nonlinear delay differential equation  
+) ( 2 )) ( ( sin )) ( ( 4 ) ( 3 ) ( t x t r t x t r t x t x t x + − ′ + − ′ + ′ ′ + ′ ′ ′ 
+=
+) ( )) ( ( )) ( ( ) ( ) ( 1
+2
+2 2 2 2 2 2
+t x t r t x t r t x t x t x t ′ ′ + − ′ + − + ′ + + +
+.               (18) 
+Clearly, equation (18) is equivalent to the system  
+) (t x ′ = ) (t y , ) (t y ′ = ) (t z , 
+) (t z ′ = ) ( 3 t z − ) ( sin ) ( 4 t y t y − − ) ( 2 t x − +()
+∫
+−
++
+t
+t r t
+ds s z t y
+) (
+) ( ) ( cos4 
+             
+) ( )) ( ( )) ( ( ) ( ) ( 1
+2
+2 2 2 2 2 2
+t z t r t y t r t x t y t x t + − + − + + + +
++ ,            (19) 
+Observe that  
+) (
+1
+2
+) ( )) ( ( )) ( ( ) ( ) ( 1
+2
+2 2 2 2 2 2 2
+t q
+t t z t r t y t r t x t y t x t
+=
++
+≤
++ − + − + + + +
+ 
+for all 
++
+ℜ ∈ t , ) (t x , ) (t y, )) ( ( t r t x − , )) ( ( t r t y − , ) (t z , and  
+∞ < =
++
+=
+∫ ∫
+∞ ∞
+π
+0
+2
+0
+1
+2
+) ( ds
+s
+ds s q , that is,  ) , 0 (
+1
+∞ ∈ L q . 
+To show the boundedness of the solutions we use as a main tool the Lyapunov functional in (13). Now, 
+in view of (16), the time derivative of the functional  ) , , (
+t t t
+z y x V with respect to the system (19) can 
+be revised as follows: 
+ 
+ ) , , (
+t t t
+z y x V
+dt
+d
+=
+2
+y α −
+2
+z ρ − +
+) ( )) ( ( )) ( ( ) ( ) ( 1
+2 4
+2 2 2 2 2 2
+t z t r t y t r t x t y t x t
+z y
++ − + − + + + +
++
+.    (20)                            
+Making use of the fact  
+2 2 2 2 2 2 2
+1
+1
+) ( )) ( ( )) ( ( ) ( ) ( 1
+1
+t t z t r t y t r t x t y t x t +
+≤
++ − + − + + + +
+ 
+we get   
+) , , (
+t t t
+z y x V
+dt
+d
+≤
+2
+y α −
+2
+z ρ − +
+2
+1
+2 2
+t
+z y
++
++
+.                                                       
+Hence, it is obvious that  Differential Equations and Control Processes, № 3, 2007  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal 12 
+ 
+   
+ 
+ 
+ 
+ 
+) , , (
+t t t
+z y x V
+dt
+d
+≤
+2
+1
+2 2
+t
+z y
++
++
+≤
+( )
+2
+1
+4
+t
+z y
++
++
+ 
+≤
+()
+2
+2 2
+1
+2 4
+t
+z y
++
++ +
+  ≤
+2
+1
+8
+t +
++
+( )
+2
+2 2
+1
+4
+t
+z y
++
++
+ 
+≤
+2
+1
+8
+t +
++ ) , , (
+1
+4
+2
+1
+8
+t t t
+z y x V
+t
+D
++
+−
+.                                                       (21) 
+Now, integrating (21) from 0 to t, using the fact  ) , 0 (
+1
+1
+1
+2
+∞ ∈
++
+L
+t
+ and Gronwall-Reid-Bellman 
+inequality,  it can be easily concluded the boundedness of all solutions of equation (18). 
+ 
+References 
+[1] T.A.  Burton, Stability and periodic solutions of ordinary and functional differential equations. 
+Academic Press, Orlando, 1985. 
+[2] L. È. Èl’sgol’ts, Introduction to the theory of differential equations with deviating arguments. 
+Translated from the Russian by Robert J. McLaughlin Holden-Day, Inc., San Francisco, Calif.-
+London-Amsterdam, 1966. 
+[3]  L. È.  Èl’sgol’ts and  S. B. Norkin, Introduction to the theory and application of differential 
+equations with deviating arguments. Translated from the Russian by John L. Casti. Mathematics in 
+Science and Engineering, Vol. 105. Academic Press [A Subsidiary of Harcourt Brace Jovanovich, 
+Publishers],  New York-London, 1973. 
+[4]  J. Hale, Theory of Functional Differential Equations. Springer-Verlag, New York-Heidelberg, 
+1977. 
+[5] V. Kolmanovskii and A. Myshkis,  Introduction to the Theory and Applications of Functional 
+Differential Equations. Kluwer Academic Publishers, Dordrecht, 1999.   
+[6] V. B. Kolmanovskii and V. R.  Nosov, Stability of functional-differential equations. Mathematics 
+in Science and Engineering, 180. Academic Press, Inc. [Harcourt Brace Jovanovich, Publishers], 
+London, 1986. 
+[7]  N. N. Krasovskii, Stability of motion. Applications of Lyapunov's second method to differential 
+systems and equations with delay. Translated by  J. L. Brenner Stanford University Press, Stanford, 
+Calif. 1963. 
+[8] O. Palusinski, ; P. Stern ; E. Wall, ; M. Moe, Comments on "An energy metric algorithm for the 
+generation of Liapunov functions". IEEE Transactions on Automatic Control, Volume 14,  Issue 1,  
+(1969), 110 -111. 
+[9]  A. I. Sadek, Stability and boundedness of a kind of third-order delay differential system, Applied 
+Mathematics Letters. 16 (5),  (2003), 657-662 
+[10]   H. O. Tejumola and B. Tchegnani, Stability, boundedness and existence of periodic solutions of 
+some third and fourth order nonlinear delay differential equations. J. Nigerian Math. Soc. 19, (2000), 
+9-19. 
+[11] C. Tunç, New results about stability and boundedness of solutions of certain non-linear third-
+order delay differential equations. The Arabian Journal for Science and Engineering, , Volume 31, 
+Number 2A, (2006), 185-196. 
+[12] C. Tunç, On the boundedness of solutions of delay differential equations of third order, 
+Differetial'niye Uravneniya (Differential Equations).  (2007), (accepted for publication). 
+[13]  T. Yoshizawa, Stability theory by Liapunov's second method. The Mathematical Society of 
+Japan, Tokyo, 1966 Differential Equations and Control Processes, № 3, 2007  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal 13 
+ 
+   
+ 
+ 
+ 
+ 
+[14]  Y. F. Zhu, On stability, boundedness and existence of periodic solution of a kind of third order 
+nonlinear delay differential system. Ann. Differential Equations  8(2), (1992), 249-259. 
+ 

@@ -1,0 +1,2557 @@
+﻿dx
+dt
+✻
+✛
+✲
+❄
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 1, 2014
+Electronic Journal,
+reg. N ΦC77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Control problems in nonlinear systems
+Kinematic Navigation of a Mobile Robot to the Maximizer of an
+Environmental Field without Derivatives Estimation
+1
+A.S. Matveev,
+1
+M.C. Hoy,
+2
+and A.V. Savkin
+3
+1
+Department of Mathematics and Mechanics,
+Saint Petersburg University,
+Saint Petersburg, Russia,
+2,3
+School of Electrical Engineering and Telecommunications,
+the University of New South Wales,
+Sydney, NSW, Australia
+E-Mail:
+1
+almat1712@yahoo.com;
+2
+mch.hoy@gmail.com;
+3
+a.savkin@unsw.edu.au
+Abstract
+We consider a single kinematically controlled mobile robot traveling in a planar region
+supporting an unknown ﬁeld distribution. A single sensor provides the distribution value
+atthecurrentrobotlocation. Wepresentanovel navigation strategy thatdrivestherobot
+to the location where the ﬁeld distribution attains its maximum. The proposed control
+algorithm employs estimation of neither the entire ﬁeld gradient nor derivative-dependent
+quantities, like the rate at which the available measurement evolves over time, and is non-
+demanding with respect to both computation and motion. Its mathematically rigorous
+analysis and justiﬁcation are provided. Simulation results conﬁrm the applicability and
+performance of the proposed guidance approach.
+Keywords: Navigation, Gradient Climbing, Source Seeking, Sliding mode control.
+1
+This work was supported by the RFBR, Proj. No. 12-01-00808.Differential Equations and Control Processes, N 1, 2014
+1 Introduction
+The paper addresses the problem of driving a single robot to the maximizer
+of an unknown scalar environmental ﬁeld. This may be thermal, magnetic,
+electric, or optical ﬁeld, concentration of a chemical, physical, or biological
+agent, intensity of a spatial (electromagnetic, acoustic, etc.) signal, minus
+the distance to an unknown location, etc. Examples of missions where this
+problem is of interest include environmental studies, geological exploration,
+detecting and localizing the source of a hazardous chemicals leakage or vapor
+or radiation emission, sources of pollutants and plumes, hydrothermal vents,
+etc. This problem was studied under the names of source seeking/localizing
+[35, 29, 12] and gradient climbing/acsent [28, 7, 4, 8], though the both also
+admit wider meanings [9, 29, 2, 31, 14, 15, 32, 11, 16, 22, 6, 30, 24, 13, 21]. For
+source-seekingmissions,theinterestinmaximizersisrelevantiftheﬁelddecays
+away from the source. Such situation is typical for steady sources and static
+environments,thoughevenifitdoesnotexactlyhold,extremumseekingmaybe
+ofsenseforaprimaryadvancementinavicinityofthesource, wherealternative
+andmoreinformedmethodsmaybeutilizedtospecifythesourcelocation. The
+name‘gradientclimbing’ highlightsthedominantcontrolparadigm: trytoalign
+the velocity vector of the robot with the ﬁeld gradient. At the same time, this
+is a method of wide applicability, not conﬁned to navigation towards extrema
+of environmental ﬁelds.
+Oneofthebasicchallengesinseekingextremaofenvironmentalﬁeldsarises
+from the fact that the ﬁeld gradient is not directly measured in many typical
+scenarios. A good deal of extensive research in this area
+2
+was based on ex-
+plicit on-line gradient estimation. This approach is especially beneﬁcial for
+mobile sensor networks thanks to collaborative ﬁeld measurements in many lo-
+cations and data exchange [29, 28, 7, 4, 18]. However even in this scenario,
+data exchange degradation due to e.g., communication malfunctions and con-
+straints may require each robot in the team to operate autonomously during a
+considerable time. The single robot scenario is much more challenging, unless
+manyspatiallydistributedsensorsaremountedontherobottoprovidetheﬁeld
+values at several essentially distant locations. However this may constitute a
+separate problem, like for micro and miniature robots. In any case, multiple
+vehicle/sensor scenario means more complicated and costly hardware.
+A gooddeal of recent researchin the area was devotedto the case where no
+2
+We refer the reader to [28, 7, 12] for a survey.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 36Differential Equations and Control Processes, N 1, 2014
+multiple sensor informationis available. Then a typical method to compensate
+for the lack of data is to get extra informationvia special ‘exploration’ maneu-
+vers by systematically ‘dithering’ the sensor position around the basic path to
+theextremum,withsubsequentnon-modelbasedgradientestimation[8,35,12].
+For example, in accordance with a general approach to the wider problem of
+extremum-seekingdesign [3], the vehicle is excited withprobing high-frequency
+sinusoidal [35, 12] or stochastic [25] inputs. A similar in spirit approach is ex-
+tremum seeking by means of many robotsperforming biased random walks [27]
+or by two robots with access to relative positions of each other and rotational
+actuation [17]. However these methods rely, either implicitly or explicitly, on
+systematic side exploration maneuvers to collect rich enough data, which gives
+rise to serious concerns about waste of resources.
+Neither intentional systematic exploration maneuvers nor gradient estima-
+tion were employed in the methods from [26, 5]. In [26], a sliding-mode nav-
+igation law was proposed that steers a single Dubins-car like mobile robot to
+themaximizerofan unknownﬁeld basedononlya single-sensorand point-wise
+measurement of the ﬁeld value. A PID controllerfed by such measurement was
+presented in [5]. However, the proposed controllers numerically differentiate
+the sensor reading with respect to time, which gives rise to concerns about am-
+pliﬁcation of the measurement noises and its detrimental effects on the overall
+performance. Though these effects have been successfully avoided in the par-
+ticular scenarios examined in [5, 26], the need to ensure this puts strong extra
+burden on controller parameters tuning since reliable numerical differentiation
+of sensor data is an intricateproblem still representing a real challenge in prac-
+tical setting [1, 33, 10]. In the case of [26], this is enhanced by the need to
+handle the potential threat of the so-called chattering [23], which cannot be
+ignored whenever sliding mode control is employed.
+This paper presents a novel kinematiccontrolparadigmfor maximumseek-
+ing that is completely free from evaluation of any ﬁeld-derivative data, uses
+only ﬁnite gains instead of sliding-mode control, and at the same time retains
+the beneﬁts of the controller from [26], including monotonic, non-oscillatory
+convergence. Instead of conventionally trying to align the velocity vector with
+the gradient, it is proposed to keep the velocity orientation angle proportional
+to the discrepancy between the ﬁeld value and a given linear ascending func-
+tionof time. Mathematicallyrigorousjustiﬁcationofthis controllaw is offered.
+We also describe a domain of the controller parameters for which the objec-
+tive is achieved: the robot inevitably reaches the desired neighborhood of the
+Electronic Journal. http://www.math.spbu.ru/diffjournal 37Differential Equations and Control Processes, N 1, 2014
+maximizer in a ﬁnite time and remains there afterwards. Convergenceand per-
+formanceoftheproposedlaw,includingnon-oscillatoryclose-loopbehavior,are
+conﬁrmed by extensive computer simulations.
+For complex dynamical systems, kinematic control is often the ﬁrst step in
+controller design whose objective is to generate the velocity reference signal.
+The next step is to design a controller that tracks this signal by means of
+forces and torques. This two-stage design works well in many situations and is
+especially popular in the face of uncertainties in the dynamical loops. In this
+paper, we limit ourselves to only kinematic control and moreover, examine a
+non-restrictive holonomic model. At the same time, the proposed control law
+is such that it is directly applicable to non-holonomic Dubins-car like vehicles,
+provided that the vehicle’s feasible turning rate conforms to the recommended
+control gains.
+An algorithm somewhat similar to ours can be found in [5], which however
+uses the estimated time-derivative of the measurement. Another difference
+is that in [5], only a steady harmonic ﬁeld was examined, which is a severe
+limitation,theperformanceduringthetransientandthebehaviorafterreaching
+a vicinityofthemaximizerwerenot addressed evenfor generalharmonicﬁelds,
+and the offered conditions for convergence were partly implicit by giving no
+explicit bound on some entities that were assumed suﬃciently large. The focus
+of this paper is on generic ﬁelds (not necessarily harmonic), and we offer study
+of the entire maneuver with explicit conditions for non-local convergence.
+Thebodyofthepaperisorganizedasfollows. Section2presentsthesystem,
+problem setup, and control law. The assumptions and main results are stated
+in Section 3. In Section 4, these results and the proposed controller design are
+illustrated for the simple yet instructive case of an isotropic distribution. All
+proofsareconcentratedinSection6 andAppendix. Section5 isconcernedwith
+simulation results.
+2 System description and problem setup
+A planar point-wise robot travels in a two-dimensional workspace. The robot
+is controlled by the time-varying linear velocity ~ v whose magnitude does not
+exceed a given constantv. The workspace hosts an unknown scalar ﬁeldD(r),
+where r := (x,y)
+⊤
+andx,y are the absolute Cartesian coordinates in the plane
+R
+2
+. The objective is to drive the robot to the point r
+0
+where D(r) attains its
+maximumandthentokeepitinavicinityofr
+0
+,thusdisplayingtheapproximate
+Electronic Journal. http://www.math.spbu.ru/diffjournal 38Differential Equations and Control Processes, N 1, 2014
+location of r
+0
+. The on-board control system has access only to the ﬁeld value
+d(t) := D[r(t)] at the robot’s current location r(t) = [x(t),y(t)]
+⊤
+. No data
+about the derivatives of D are available; in particular, the robot is aware of
+neither the gradient∇D[r(t)] nor the time-derivative
+˙
+d of the measurementd.
+The kinematic model of the robot is as follows:
+˙ r =~ v, r(0) = r
+in
+k~ vk≤v, (1)
+where k·k is the Euclidian norm. The problem is to design a controller that
+drives the robot into the R
+⋆
+-neighborhood of the maximizer r
+0
+V
+⋆
+:={r :kr−r
+0
+k≤R
+⋆
+} (2)
+in a ﬁnite timet
+0
+and then t≥t
+0
+keeps the robot withinV
+⋆
+.
+In this paper, we propose and examine the following control algorithm:
+~ v(t) =v~ e
+n
+µ  
+d(t)−v
+∗
+t
+ 
++θ
+0
+o
+, where~ e(θ) := (
+cosθ
+sinθ
+) (3)
+and v
+∗
+,µ> 0,θ
+0
+∈R are tunable parameters.
+3 Assumptions and the main results
+In general setting, the problem at hand comprises problems of global optimiza-
+tion, which are typically diﬃcult to solve. In the presence of local extrema,
+NP-hardness, this mathematicalseal for intractability,was established for even
+the simplest classes of such problems [20]. To avoid intractability, it is natural
+to assumeabsence oflocalextrema. So ourﬁrst assumptionconsidersa smooth
+ﬁeld witha singleglobalspatial maximizerr
+0
+and no local extrema, whichﬁeld
+converges to a ﬁnite limitγ
+inf
+as krk→∞.
+Assumption 1
+0
+The ﬁeld D(·) is deﬁned and C
+2
+-smooth on the entire plane,
+there exists a point r
+0
+such that ∇D(r)6= 0∀r 6= r
+0
+, and ∃lim
+krk→∞
+D(r) =:
+γ
+inf
+<D(r
+0
+).
+ThereadersatisﬁedbythispostulationmayproceedtoTheorem1. Wehowever
+will in fact work with an essentially relaxed version of Assumption 1
+0
+. The
+relaxation takes into account that D(·) often results from an interplay of a
+basic ﬁeld and perturbations, and the latter are likely to cause local extrema
+in the regions where the basic ﬁeld is ﬂat enough. By the Fermat theorem, one
+such region surrounds the maximizer. For most physical ﬁelds, another region
+Electronic Journal. http://www.math.spbu.ru/diffjournal 39Differential Equations and Control Processes, N 1, 2014
+lies far enough from the maximizer,where the energyof the basic ﬁeld becomes
+distributed over large areas.
+In view of this, we assume that the plane is partitioned into a ‘vicinity’ of
+the maximizer Z
+near
+, outskirts Z
+far
+, and an intermediary Z
+reg
+. In Z
+near
+∪Z
+far
+,
+the ﬁeld D(·) is more or less arbitrary, may have local maxima or even be
+non-smooth. In Z
+reg
+, the ﬁeld is smooth and has no critical points and thus
+local extrema. To reduce technicalities, we also assume that these zones are
+separated by isolinesI(γ) :={r :D(r) =γ}, which can usually be achieved by
+properlyreducingZ
+reg
+. OnZ
+near
+,theﬁeldD(·)isassumedtotakegreatervalues
+than on the complement. So the maximizer belongs toZ
+near
+, which justiﬁes the
+above interpretation of Z
+near
+.
+Summarizing, we arrive at the following.
+Assumption 1 There exist γ
+−
+< γ
++
+such that on Z
+reg
+:= {r : γ
+−
+≤ D(r) ≤
+γ
++
+}, the distribution D(·) is identical to a C
+2
+-smooth function deﬁned on a
+larger and open set, ∇D(r)6= 0∀r ∈Z
+reg
+, the isoline I(γ
+−
+) is a Jordan curve
+and encircles I(γ
++
+). Inside I(γ
++
+), the ﬁeld D(·) is deﬁned and continuous
+everywhere, maybe except for ﬁnitely many points r
+∗
+where lim
+r→r
+∗
+D(r) =∞,
+and takes values greater than γ
++
+. Inside I(γ
+−
+), the ﬁeld is deﬁned everywhere,
+is continuous, and takes values lesser than γ
+−
+.
+Exceptionalpointsr
+∗
+occur onlyforsometheoreticaldistributions,likeD(r) =
+c/kr−r
+0
+k orD(r) =−clnkr−r
+0
+k; these points are viewed as furnishing the
+inﬁnite maximum. Modulo this, Assumption 1 implies that sup
+r∈R
+2D(r) is
+attained at some point r
+0
+. If there are several maxima, the control objective
+should be achieved for one of them.
+Assumption 2 For some maximizer r
+0
+, the isoline I(γ
++
+) lies in the interior
+of the vicinity (2). The initial location lies in the domain of D(·) and inside
+I(γ
+−
+), i.e., γ
+−
+<D(r
+in
+).
+Remark 1 Suppose that Assumption 1
+0
+holds. Then so evidently does As-
+sumptions 1, where γ
+±
+can be arbitrarily chosen subject to γ
+inf
+< γ
+−
+< γ
++
+<
+D(r
+0
+). As γ
+−
+→ γ
+inf
+and γ
++
+→ D(r
+0
+), the set Z
+reg
+covers any given annulus
+{r : 0<ε<kr−r
+0
+k<R<∞}. It follows that Assumption 2 is valid as well.
+The ﬁrst theorem shows that the control objective can always be achieved
+by means of the control law (3).
+Electronic Journal. http://www.math.spbu.ru/diffjournal 40Differential Equations and Control Processes, N 1, 2014
+Theorem 1 Suppose that either Assumption 1
+0
+or Assumptions 1 and 2 hold.
+Then there exist parametersv
+∗
+,µ,θ
+0
+of the controller (3) such that the following
+statement is true:
+(i) The controller (3) brings the robot to the desired vicinity (2) of a maxi-
+mizer in a ﬁnite timet
+0
+and subsequently keeps it there: r(t)∈V
+⋆
+∀t≥t
+0
+.
+Moreover, for any compact domain D ⊂intZ
+reg
+, there exist common values of
+the parameters for which (i) holds whenever the initial location r
+in
+∈D.
+The proofs of the results stated in this section will be given in Sect. 6.
+Figure 1: Two isolines
+In the rest of the section, we discuss controllertuning. It is orchestratedby
+two auxiliary parametersγ
+⋆⋆
+∈ (γ
+⋆
+,γ
++
+) and a> 0. Here
+γ
+⋆
+:= max
+r:kr−r
+0
+k=R
+⋆
+D(r)<γ
++
+. (4)
+and a is chosen so that (see Fig. 1)
+0<a<dist [I(γ
+⋆
+);I(γ
+⋆⋆
+)],a<dist [I(γ
+⋆⋆
+);I(γ
++
+)],
+anda<dist [I(γ
+−
+);I[D(r
+in
+)]] ifD(r
+in
+)<γ
+⋆⋆
+. (5)
+Heredist [A;B] := inf
+r
+a
+∈A,r
+b
+∈B
+kr
+a
+−r
+b
+k is the distancebetweenthe setsA and
+B. We also introduce the set:
+W(a,γ
+⋆⋆
+) :={r :γ
+in
+≤D(r)≤γ
+⋆⋆
+}, (6)
+where γ
+in
+:= min
+r:dist(r;I[D(r
+in
+)])≤aorkr−r
+0
+k=R
+⋆
+D(r).
+Due to Assumption 1, this set is compact since γ
+in
+>γ
+−
+.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 41Differential Equations and Control Processes, N 1, 2014
+The parameters θ
+0
+,v
+∗
+of the controller (3) are chosen prior to µ . Whereas
+θ
+0
+is arbitrary,v
+∗
+is such that
+0<v
+∗
+/v< Ξ := min
+r∈W(a,γ
+⋆⋆
+)
+k∇D(r)k. (7)
+Totuneµ , weusesomefunctionsthatcharacterizethegradient∇D(r)rate
+of change with respect to r. For r6= r
+0
+,α∈ (−π/2,π/2), we put
+κ(α,r) :=
+
+
+D
+′′
+(r)Φ
+π
+2
+−α
+∇D(r);Φ
+π
+2
+−α
+∇D(r)
+ff
+cosαk∇D(r)k
+3
+, (8)
+where Φ
+α
+is the matrix of rotation through angleα:
+Φ
+α
+:=
+ 
+cosα −sinα
+sinα cosα
+ 
+. (9)
+Hereκ(0,r) is the signed curvature of the isoline I :={r
+′
+:D(r
+′
+) =D(r)} at
+the point r. For α 6= 0, the following remark is illuminative; its proof is given
+in Appendix A.
+Remark 2 In any simply connected open domainD6∋ r
+0
+, the gradient can be
+represented in the form∇D(r) =ρ(r)~ e[ϕ(r)], whereρ(r) :=k∇D(r)k and the
+angle of the gradient orientationϕ(·) is C
+2
+-smooth. In these terms,
+κ(α,r) =
+
+
+∇ϕ;Φ
+π
+2
+−α
+~ e[ϕ]
+ff
++tanαh∇ϕ;~ e(ϕ)i−
+2ln10
+10
+tanαsin
+α
+2
+
+
+∇(10log
+10
+ρ);Φ
+−
+α
+2
+~ e[ϕ]
+ff
+, (10)
+where the values of all functions are taken at r.
+Formula(10)isarrangedsothatforsmallα,theorderoftheaddendascends
+from the beginning to the end. In (10),
+a) the ﬁrst addend is the curvature of the curve that transverses the gradient
+vector ﬁeld at the constant angle
+π
+2
+−α (or equivalently, transverses the
+isolines at the angle −α);
+b) the multiplierh∇ϕ;~ e(ϕ)i in the second addend is the curvature of the curve
+that goes in the gradient direction;
+c) the multiplier
+
+
+∇(10log
+10
+ρ);Φ
+−
+α
+2
+~ e[ϕ]
+ff
+in the last addend is the rate at
+which the gradient intensity k∇Dk (measured in Db) changes along the
+curves that transverse the gradient vector ﬁeld at the constant angle−
+α
+2
+.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 42Differential Equations and Control Processes, N 1, 2014
+The next function characterizes not the rate but the overall change of the
+gradientdirectionas r goes not necessarilyin special directions. For anyclosed
+disc D 6∋ r
+0
+, the angle β of rotation of the vector-ﬁeld ∇D along a curve
+D ⊂ Z
+reg
+is uniquely determined by the ordered pair of the ends of γ since
+∇D(r) 6= 0 ∀r ∈D by Assumption 2. Let β(D) be the maximum of |β| over
+all pairs inD. We put
+B(a) := max
+D
+β(D), (11)
+where the maximum is over all disks of the radiusa centered either at r
+in
+or on
+I(γ
+⋆⋆
+).
+The choice of the parameterµ is subjected to the constraint
+µ>v min
+δ≤v
+∗
+,vΞ−v
+∗
+λ(δ,a)
+δ
+, where λ(δ,a) := (12)
+max
+
+
+
+
+
+max
+r∈W(a,γ
+⋆⋆
+)
+|α|≤α(v
+∗
++δ,r)
+|κ(α,r)| ;
+2
+a
+  
+B(a)
+2π
+ 
++1
+ 
+
+
+
+
+
+,
+α(δ,r) := arcsin
+δ
+vk∇D(r)k
+, (13)
+Ξ is given by (7), and ⌈z⌉ is the integer ceiling of z. This formula shows how
+‘large’ µ should be in the last paragraph from Sect. 2.
+Theorem 2 Suppose that the assumptions of Theorem 1 hold and for some
+a obeying (5), the controller parameters satisfy (7) and (12). Then (i) from
+Theorem 1 is true.
+Remark 3 i) Consecutive choice of the parameters satisfying (5), (7), and
+(12) is always possible since the right-hand sides of the inequalities from
+(5) and (7) are positive, whereas the right-hand side of (12) is ﬁnite.
+ii) Practically, this choice is typically based on estimates of the domain
+W(a,γ
+⋆⋆
+) and the concerned characteristics of D(·) based on an a priory
+knowledge about the ﬁeld.
+iii) Now we outline a way to follow these lines in the case from Remark 1,
+assuming that D[r
+in
+] < min
+r:kr−r
+0
+k=R
+⋆
+D(r) to reduce technicalities. The
+starting step is upper estimating the isoline I[D(r
+in
+)]) ⊂ intC by a com-
+pact simply connected domain C ⊃ {r : kr− r
+0
+k ≤ R
+⋆
+}, and lower es-
+timating the distances from (5), where I(γ
+−
+) and I(γ
++
+) are replaced by
+Electronic Journal. http://www.math.spbu.ru/diffjournal 43Differential Equations and Control Processes, N 1, 2014
+the boundary of C and {r
+0
+}, respectively, in accordance with the last
+claim from Remark 1. Let ν(γ
+⋆⋆
+) be the minimum among these esti-
+mates. It is reasonable to pick γ
+⋆⋆
+as the maximizer γ
+0
+of ν(·). Then
+W(a,γ
+⋆⋆
+) ⊂
+c
+W := {r ∈ C : kr−r
+0
+k ≥ ν(γ
+0
+)}. Hence the last inequality
+from (7) is implied by
+v
+∗
+/v<
+b
+Ξ :=min
+r∈
+c
+W
+k∇D(r)k.
+This is constructiveif a lower estimateof the gradient is available, whereas
+the other inequalities regulating the choice of v,v
+∗
+are explicit. As for µ ,
+we put q(r) :=
+kD
+′′
+(r)k
+k∇D(r)k
+and note that by (11), |B(a)|≤ 2aζ(a), where
+ζ(a) := max
+r∈
+c
+W orν(γ
+0
+)−a≤kr−r
+0
+k≤ν(γ
+0
+)
+kD
+′′
+(r)k
+k∇D(r)k
+.
+Since the ﬁrst argument in the max from (12) is not affected by a and the
+second does not exceed Ω(a) := 4(
+ζ(a)
+2π
++
+1
+a
+), it is reasonable to pick a so
+that it nearly furnishes inf
+a∈(0,ν(γ
+0
+))
+Ω(a). Furthermore, in (12),
+max
+r∈W(a,γ
+⋆⋆
+)
+|α|≤α(v
+∗
++δ,r)
+|κ(α,r)|
+(8)
+≤ max
+r∈
+c
+W
+max
+|α|≤α(v
+∗
++δ,r)
+kD
+′′
+(r)k
+k∇D(r)kcosα
+(13)
+== max
+r∈
+c
+W
+vkD
+′′
+(r)k
+q
+k∇D(r)k
+2
+−
+(v
+∗
++δ)
+2
+v
+2
+≤
+vmax
+r∈
+c
+W
+kD
+′′
+(r)k
+q
+b
+Ξ
+2
+−
+(v
+∗
++δ)
+2
+v
+2
+.
+Thus we see that the requirement (12) to µ is implied by
+µ>v min
+δ≤v
+∗
+,v
+b
+Ξ−v
+∗
+max
+
+
+
+
+
+vQ
+δ
+q
+b
+Ξ
+2
+−
+(v
+∗
++δ)
+2
+v
+2
+;
+Ω(a)
+δ
+
+
+
+
+
+,
+which is constructive whenever an upper estimate Q ≥ kD
+′′
+(r)k ∀r ∈
+c
+W
+of the second derivative is available.
+Theestimatesunderlyingiii)areessentiallyrough; relativelybriefpresenta-
+tion is the main reason to discuss this method. More sophisticated approaches
+based on extra a priory knowledge are illustrated in the next section.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 44Differential Equations and Control Processes, N 1, 2014
+4 Isotropic Distribution
+Nowweillustratethediscussionoftheprevioussectioninthesimpleyetinstruc-
+tivecasewherethescalarﬁeldiscaused byenergyemanationfroma point-wise
+source, and we deal with this process at equilibrium. In isotropic media, the
+mathematical model for such ﬁelds is often as follows:
+D(r) =cf(kr−r
+0
+k), (14)
+where c characterizes the energy of the source and is unknown, whereas the
+twice continuously differentiable function f : (0,∞) → R is known, strictly
+decaying and convex
+f
+′
+(z)< 0, f
+′′
+(z)> 0 ∀z > 0, (15)
+with f(z) :=
+1
+z
+and f(z) := −lnz being typical examples. The location r
+0
+of
+the source is unknown. The objectiveis to displaythis locationby bringingthe
+robot to its vicinity (2) on the basis of the following known estimates
+c≥c
+−
+> 0,
+
+
+r
+in
+−r
+0
+
+
+≤R
+in
+. (16)
+We assume that R
+in
+>R
+⋆
+to simplify the formulas.
+Corollary 1 Suppose that (14)—(16) hold and the parameters of the controller
+(3) are chosen so that
+0<v
+∗
+/v< Ξ
+∗
+:=c
+−
+|f
+′
+(R
+in
++R
+⋆
+/2)|, (17)
+µ>v min
+δ≤v
+∗
+vΞ
+∗
+−v
+∗
+max
+ 
+8
+δR
+⋆
+; max
+R
+⋆
+/2≤z≤R
+in
++R
+⋆
+/2
+B(z,δ)
+ 
+B(z,δ) :=
+"
+1
+δz
++
+δf
+′′
+(z)
+vc
+−
+f
+′
+(z)
+2
+p
+c
+2
+−
+v
+2
+f
+′
+(z)
+2
+−δ
+2
+#
+. (18)
+Then the robot driven by the controller (3) reaches the desired vicinity (2) of
+the maximizer in a ﬁnite time and remains there afterwards.
+In the typical cases where f(z) =
+1
+z
+or f(z) = −lnz, elementary calculus
+show thatB(z,δ) is convex with respect toz and so attains its maximum over
+z ∈ [R
+⋆
+/2,R
+in
++R
+⋆
+/2] at the ends of the interval. Thus (18) shapes into
+µ>v min
+δ≤v
+∗
+vΞ
+∗
+−v
+∗
+max
+ 
+8
+δR
+⋆
+;B(R
+⋆
+/2,δ);B(R
+in
++R
+⋆
+/2,δ)
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal 45Differential Equations and Control Processes, N 1, 2014
+and for particularv
+∗
+:=λvΞ
+∗
+,λ≥ 1/2 is implied by
+µ>v max
+n
+8
+R
+⋆
+(1−λ)vΞ
+∗
+;B(R
+⋆
+/2,(1−λ)vΞ
+∗
+);
+B(R
+in
++R
+⋆
+/2,(1−λ)vΞ
+∗
+)
+o
+.
+PROOFOFCOROLLARY1: Assumption1holdswithγ
+−
+≈ 0andγ
++
+≈∞
+since
+∇D(r) =cf
+′
+(kr−r
+0
+k)
+r−r
+0
+kr−r
+0
+k
+6= 0∀r6= r
+0
+. (19)
+The isolines are circles centered at r
+0
+. In (5), I(γ
+⋆⋆
+) can have any radius
+R
+⋆⋆
+∈ (0,R
+⋆
+) modulo the freedom to manipulate γ
+⋆⋆
+and γ
++
+, and 0 < a <
+min{R
+⋆
+−R
+⋆⋆
+;R
+⋆⋆
+}. For R
+⋆⋆
+:=R
+⋆
+/2,a:=R
+⋆
+/2−ε,ε> 0,ε≈ 0, (6) yields
+W(a,γ
+⋆⋆
+)⊂
+ 
+r :R
+⋆⋆
+≤kr−r
+0
+k≤R
+in
++
+R
+⋆
+2
+ 
+. (20)
+So (7) follows from (16) and (19) (for small enough ε). As for (12), we note
+that for the radial vector-ﬁeld (19) (see Fig. 2(a)), the maximal directional
+divergenceβ(D)from(11)isachievedatthepointsr
+−
+,r
++
+fromFig.2(b)andso
+β(D) = 2arcsin
+a
+kr
+∗
+−r
+0
+k
+. Hence by (11), B(a) = 2arcsin
+a
+R
+⋆⋆
+−a
+<π and in (12),
+(a) (b)
+Figure 2: (a) Radial vector-ﬁeld, (b) Maximal directional divergence
+2
+a
+ l
+B(a)
+2π
+m
++1
+ 
+=
+8
+R
+⋆
+. To evaluateκ(α,r), we separately estimate the addends
+in (10). For the radial vector-ﬁeld (19), the curve from claim a) (following
+Remark 2) is the equiangular spiral. At a given point r, the maximal among
+such spiralscurvatureisachievedinthecasewheretheanglebetweenthecurve
+tangent and the radial line is right [19], i.e., for the circle. Hence the modulus
+Electronic Journal. http://www.math.spbu.ru/diffjournal 46Differential Equations and Control Processes, N 1, 2014
+of the ﬁrst addend in (10) does not exceed kr − r
+0
+k
+−1
+. The second addend
+is zero since the curves from b) are radial straight lines. Since the gradient
+from the third addend is evidently radial (see Fig. 2(a)), this addend is equal
+to 2tanαsin
+α
+2
+f
+′′
+(kr−r
+0
+k)
+f
+′
+(kr−r
+0
+k)
+cos
+α
+2
+. Thus
+|κ(α,r)|≤kr−r
+0
+k
+−1
++|tanα||sinα|
+|f
+′′
+(kr−r
+0
+k)|
+|f
+′
+(kr−r
+0
+k)|
+and so (12) follows from (18) and (20). Theorem 2 completes the proof.  
+5 Results of the Simulation Tests
+Simulationswerecarriedoutwiththepoint-massrobot(1)drivenbythecontrol
+law (3). Thenumericalvalues oftheparametersused forsimulationsareshown
+in Table 1 (where u
+d
+is the unit of measurement of the ﬁeld value d = D(r)).
+The control was updated with a sampling time of 0.1s.
+v 1m/s µ 0.8rad/u
+d
+v
+∗
+0.299u
+d
+/s θ
+0
+1.5rad
+Table 1: Numerical values of the parameters used for simulation.
+The ﬁrst test deals with the linear ﬁeld
+D(x,y) =n
+ 
+xcosϕ+ysinϕ
+ 
++D
+0
+,
+wheren> 0,ϕ,D
+0
+∈R are given. Since any smooth ﬁeld is well approximated
+byalinearoneinsuﬃcientlysmall(andsometimesnotsosmall)areas,thefocus
+on linear ﬁelds permits us to disclose basic behavioral primitives that underly,
+more or less, the closed-loop behavior in general ﬁelds. A typical simulation
+result is displayed in Fig. 3 for the ﬁeld with the orientation angle of 0.5 rad
+and the ascension rate of 0.3m
+−1
+. It demonstrates monotonic, non-oscillatory
+gradient climbing with the steady state angular error of ≈ 0.082rad.
+Fig. 4 presents the results of tests in the following ﬁeld with a point-wise
+source:
+D(r) =−0.8·kr−r
+0
+k.
+As can be seen, the robot succesfully converges to the source and then
+wheels around it in a close proximity, thus displaying its location.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 47Differential Equations and Control Processes, N 1, 2014
+(a)
+0 50 100 150
+0.5
+0.6
+0.7
+0.8
+0.9
+1
+1.1
+1.2
+1.3
+1.4
+1.5
+Time
+Vehicle Heading (rad)
+(b)
+Figure 3: Behavior in a linear ﬁeld: (a) Path (b) Robot’s orientation
+(a)
+0 50 100 150 200
+−25
+−20
+−15
+−10
+−5
+0
+5
+Time
+Vehicle Heading (rad)
+(b)
+Figure 4: Seeking a point source: (a) Path (b) Robot’s orientation
+In Fig. 5, the samesimulationsetup was used, except measurement noise, a
+differentﬁeldshape,andkinematicconstraintswereadded. Therobot’sheading
+was not allowed to change faster than 0.5rads
+−1
+, which in fact transforms (1)
+into the non-holonomic Dubins-car model since the robot’s speed is constant
+by (3). The ﬁeld readingswerecorruptedby a randomadditivenoiseuniformly
+distributed over the interval [−2.5,2.5],whereas the ﬁeld was corrupted by two
+perpendicular plane waves:
+D(r) =−0.8·kr−r
+0
+k+5·[sin(0.05·x)+sin(0.05·y)].
+However all these do not essentially alter the closed-loop behavior.
+Fig.6isconcernedwithevenmoreintricatescenariowhereinthesimulation
+setup from Fig. 5, the ﬁeld source moves from left to right. As can be seen,
+the vehicle still successfully reaches the source and then escorts it in a close
+proximity.
+Simulationswerealsocarriedoutfora morerealisticmodelofa ﬁeldcaused
+by a constant-rate emanation of a certain substance (heat, gas, etc.) from a
+point-wise source and its subsequent steady state diffusion in an isotropic two-
+Electronic Journal. http://www.math.spbu.ru/diffjournal 48Differential Equations and Control Processes, N 1, 2014
+(a)
+0 50 100 150 200 250
+−30
+−25
+−20
+−15
+−10
+−5
+0
+5
+Time
+Vehicle Heading (rad)
+(b)
+Figure 5: Seeking a source under measurement noise and kinematic constraints: (a) Path (b)
+Robot’s orientation
+(a)
+0 100 200 300 400 500
+−90
+−80
+−70
+−60
+−50
+−40
+−30
+−20
+−10
+0
+10
+Time
+Vehicle Heading (rad)
+(b)
+Figure 6: Simulations with a moving source.
+dimensional medium. In many cases, this process is described by the heat
+equation ∂D/∂t = ρΔD +δ[r−r
+0
+(t)]. Here Δ is the spatial Laplacian, ρ =
+16000m
+2
+s
+−1
+is the diffusion rate, δ is the spatial Dirac delta-function, r
+0
+(t)
+is the source location, and the emanation rate was set to unity. The steady
+state ﬁeld distribution was calculated prior to navigation tests by the ﬁnite
+difference method. In doing so, the time and space steps were 0.001s and 4m,
+respectively. Toapproximatelygeneratetosteadystatedistribution,thesystem
+was simulated for 100s. and only then commenced motion the results were
+stored with the sampling rate 1s. During the navigation test, the distribution
+value was obtained through bilinear interpolation over each spatial step. Like
+in the previousexperiment, thevehicleturning ratewasbounded by 0.5rads
+−1
+.
+The results of these simulations are shown in Figs. 7. It may be seen in all
+cases the correct behavior was observed.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 49Differential Equations and Control Processes, N 1, 2014
+(a)
+0 50 100 150 200 250
+−20
+−15
+−10
+−5
+0
+5
+Time
+Vehicle Heading (rad)
+(b)
+Figure 7: Simulations with a diffusion source
+6 Proofs of Theorems 1 and 2
+We examine the robot driven by the control law (3). Based on (7) and (12), we
+pick δ > 0 and η> 0 such that
+δ<v
+∗
+,v min
+r∈W(a,γ
+⋆⋆
+)
+k∇D(r)k−v
+∗
+, (21)
+µ>
+v
+δ
+max
+r∈W(a,,γ
+⋆⋆
+),|α|≤α(v
+∗
++δ,r)
+|κ(α,r)|+η, (22)
+µ>
+2v
+aδ
+  
+B(a)
+2π
+ 
++1
+ 
+(23)
+Since these inequalities are strict, they, along with (5), remain true with a+ε
+and γ
+⋆⋆
++ε put in place of a and γ
+⋆⋆
+, respectively, for small enough ε> 0.
+Weobservethattheclosed-loopsystem(1),(3)isdescribedbythefollowing
+autonomous ordinary differential equations (ode) with respect to r,θ
+˙ r =v~ e(θ),
+˙
+θ =µ  
+˙
+d−v
+∗
+ 
+,
+˙
+d =vh∇D(r);~ e(θ)i, (24)
+whereh·;·iisthestandardinnerproductForanystate(r,θ)ofthesystem(24),
+we deﬁne σ(r,θ) =σ
+σ :=
+
+
+
+
+
+0 if∇D(r) and~ e are linearly dependent
+1 if the angle from∇D(r) to~ e is positive
+−1 if the angle from∇D(r) to~ e is negative
+Theﬁrstlemmadisplaysthemajorfeatureofthecontrollaw(3)thatultimately
+ensures achievement of the objective.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 50Differential Equations and Control Processes, N 1, 2014
+Lemma 1 There exists ω > 0 such that whenever r ∈ W(a+ε,γ
+⋆⋆
++ε), the
+following implications hold
+˙
+d =v
+∗
++δ ⇒
+(
+¨
+d≤−ω ifσ = 1
+¨
+d≥ω ifσ =−1
+˙
+d =v
+∗
+−δ ⇒
+(
+¨
+d≥ω ifσ = +1
+¨
+d≤−ω ifσ =−1
+. (25)
+Proof Whenever |
+˙
+d−v
+∗
+| =|vh∇D;~ ei−v
+∗
+|≤δ, a simple trigonometry shows
+that
+~ e =k∇D(r)k
+−1
+Φ
+σ
+(
+π
+2
+−α
+)
+∇D(r),
+where
+|α|≤α(v
+∗
++δ,r) (26)
+and α(δ,r) is given by (13). Hence due to (24), we have
+¨
+d =v
+D
+∇D(r);
+˙
+~ e
+E
++vhD
+′′
+(r)˙ r;~ ei
+(1)
+==v
+˙
+θ
+
+
+∇D(r);Φ
+π
+2
+~ e
+ff
++v
+2
+hD
+′′
+(r)~ e;~ ei (27)
+=v
+˙
+θ
+D
+∇D(r);Φπ
+2
++σ
+(
+π
+2
+−α
+)
+∇D(r)
+E
+k∇D(r)k
++v
+2
+D
+D
+′′
+(r)Φ
+σ
+(
+π
+2
+−α
+)
+∇D(r);Φ
+σ
+(
+π
+2
+−α
+)
+∇D(r)
+E
+k∇D(r)k
+2
+=v
+2
+h∇D(r);Φ
+−σα
+∇D(r)i
+k∇D(r)k
+(
+−σ
+˙
+θ
+v
++
+
+
+D
+′′
+(r)Φ
+π
+2
+−σα
+∇D(r);Φ
+π
+2
+−σα
+∇D(r)
+ff
+k∇D(r)kh∇D(r);Φ
+−σα
+∇D(r)i
+)
+(8)
+= σv
+2
+cosαk∇D(r)k
+(
+−
+˙
+θ
+v
++σκ(σα,r)
+)
+; (28)
+v
+2
+cosαk∇D(r)k
+(26)
+≥ v
+p
+v
+2
+k∇D(r)k
+2
+−(v
+∗
++δ)
+2
+≥ξ :=v
+r
+v
+2
+min
+r∈W(a+ε)
+k∇D(r)k
+2
+−(v
+∗
++δ)
+2
+(21)
+> 0.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 51Differential Equations and Control Processes, N 1, 2014
+Whenever
+˙
+d =v
+∗
++δ, (24) implies that
+−
+˙
+θ
+v
++σκ
+σ
+(α,r) =−
+µ (
+˙
+d−v
+∗
+)
+v
++σκ
+σ
+(α,r)
+≤−
+µδ
+v
++
+ 
+ 
+κ
+σ
+(α,r)
+ 
+ 
+(22)
+≤ −
+µδ
+v
++
+δ(µ −η)
+v
+=−
+δη
+v
+< 0.
+Similarly whenever
+˙
+d =v
+∗
++δ,
+−
+˙
+θ
+v
++σκ
+σ
+(α,r)≥
+µδ
+v
+−
+ 
+ 
+κ
+σ
+(α,r)
+ 
+ 
+(22)
+≥
+µδ
+v
+−
+δ(µ −η)
+v
+=
+δη
+v
+> 0.
+These inequalities complete the proof.  
+Lemma 2 Suppose that
+˙
+d ≤ v
+∗
+−δ during a time interval Δ = [t
+0
+,t
+1
+]. For
+t ∈ Δ, the direction vector ~ e(θ) rotates clockwise with the angular velocity
+˙
+θ ≤ −µδ . The space deviation from the initial location and the total turning
+angle ϕ :=|θ(t)−θ(t
+0
+)| obey the inequality
+kr(t)−r(t
+0
+)k≤q(ϕ) :=
+2v
+µδ
+j
+ϕ
+2π
+k
++
+v
+µδ
+[1−cosmin{⇃ϕ⇂;π}] (29)
+where ⌊·⌋ is the integer ﬂoor and ⇃ϕ⇂:=ϕ−2π
+ 
+ϕ
+2π
+ 
+.
+Proof Withoutanylossofgenerality,itcanbeassumedthatr(t
+0
+) = 0,θ(t
+0
+) =
+0. The ﬁrst claim of the lemma is immediate from the second equation in (24):
+˙
+θ
+(24)
+= µ h
+˙
+d−v
+∗
+i
+˙
+d≤v
+∗
+−δ
+≤ −µδ.
+So s :=−θ can be taken as a new independent variable:
+dr
+ds
+=u~ e(−s), u :=−
+v
+˙
+θ
+∈
+ 
+0,
+v
+µδ
+ 
+.
+The squared distance kr(ϕ)k
+2
+does not exceed the maximal value of I in the
+following optimization problem:
+I :=kr(ϕ)k
+2
+→ max subject to
+dr
+ds
+=u~ e(−s)s∈ [0,ϕ], r(0) = 0, u(s)∈
+ 
+0,
+v
+µδ
+ 
+.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 52Differential Equations and Control Processes, N 1, 2014
+By [34], its solution r
+0
+(·),u
+0
+(·) exists and satisﬁes the Pontryagin’s maximum
+principle: there exists a differentiable function ψ(s)∈R
+2
+such that
+dψ
+ds
+=−
+∂
+∂r
+u
+0
+ψ
+⊤
+~ e(−s) = 0⇒ψ = const,
+ψ =ψ(ϕ) =−2r
+0
+(ϕ),
+u
+0
+(s) = argmax
+u∈[0,v/(µδ )]
+uψ
+⊤
+~ e(−s)
+=
+
+
+
+
+
+v/(µδ ) ifψ
+⊤
+~ e(−s)> 0
+0 ifψ
+⊤
+~ e(−s)< 0
+unclear ifψ
+⊤
+~ e(−s) = 0
+.
+If r
+0
+(ϕ) = 0, (29) is evident. Let r
+0
+(ϕ) 6= 0. Then ψ 6= 0 and so as s
+progresses, the functionu
+0
+(·) interchanges the values 0 and v/(µδ ), each taken
+onanintervaloflengthπpossiblyexceptfortheextremeintervalswhoselengths
+do not exceed π. Inequality (29) is straightforwardfrom direct computation of
+kr(ϕ)k for such controls u(·), along with picking the maximum among these
+results.  
+Lemma 3 Let the robot start at t =t
+0
+with
+˙
+d≤v
+∗
+−δ either from the isoline
+I(γ
+⋆⋆
+) or from r
+in
+, in which caseD(r
+in
+)≤γ
+⋆⋆
+. Then there exists a timet
+∗
+≥t
+0
+such that
+˙
+d(t
+∗
+) =v
+∗
+−δ,
+¨
+d(t
+∗
+)≥ 0, kr(t)−r(t
+0
+)k≤a∀t∈ [t
+0
+,t
+∗
+].
+Proof For k :=
+l
+B(a)
+2π
+m
+,ϕ := 2π(k+1)> 0, we have
+ϕ = 2π
+  
+B(a)
+2π
+ 
++1
+ 
+≥B(a)+2π, (30)
+q(ϕ)
+(29)
+==
+2v
+µδ
+(k+1)
+(23)
+< a. (31)
+If
+˙
+d(t
+0
+) =v
+∗
+−δ,
+¨
+d(t
+0
+)≥ 0, the claim is clear. Otherwise either
+˙
+d(t
+0
+)<v
+∗
+−δ or
+˙
+d(t
+0
+) =v
+∗
+−δ,
+¨
+d(t
+0
+)< 0; inbothcases, theopen setS :={t>t
+0
+:
+˙
+d(t)<v
+∗
+−δ}
+contains all t > t
+0
+that are close enough to t
+0
+. For the leftmost connected
+component (0,t
+∗
+) of the intersectionS∩{t>t
+0
+:|θ(t)−θ(t
+0
+)|<ϕ}, evidently
+either 1) |θ(t
+∗
+)−θ(t
+0
+)| =ϕ,
+˙
+d(t
+∗
+)<v
+∗
+−δ or 2)
+˙
+d(t
+∗
+) =v
+∗
+−δ. For t∈ [t
+0
+,t
+∗
+],
+the robot remains in the diskD :={r :kr−r(t
+0
+)k≤a} due to (29) and (31).
+This disk does not contain r
+0
+thanks to (5).
+1) As t runs from t
+0
+to t
+∗
+, the gradient ∇D[r(t)] turns through an angle
+thatdoesnotexceedB(a)dueto(11). Meanwhile,~ e(θ)turnsclockwisethrough
+Electronic Journal. http://www.math.spbu.ru/diffjournal 53Differential Equations and Control Processes, N 1, 2014
+the angle ϕ. By (30) and the continuity argument, ∇D[r(t)] and ~ e[θ(τ)] are
+identically directed at some time instantτ ∈ [0,t
+∗
+]. Then
+˙
+d(τ) =vh∇D[r(τ)];~ e[θ(τ)]i=vk∇D[r(τ)]k
+(7)
+> v
+∗
+,
+which is impossible since
+˙
+d(t)≤v
+∗
+−δ ∀t∈ [0,t
+∗
+]⊂S. Hence case 1) does not
+occur.
+2) The proof is completed by noting that
+˙
+d(t)<v
+∗
+−δ ∀t∈ (0,t
+∗
+)∧
+˙
+d(t
+∗
+) =
+v
+∗
+−δ ⇒
+¨
+d(t
+∗
+)≥ 0.  
+Lemma 4 In a ﬁnite time, the robot reaches the set V
+⋆⋆
+:= {r : D(r) > γ
+⋆⋆
+}
+bounded by the isoline I(γ
+⋆⋆
+).
+Proof Suppose to the contrary that the claim is incorrect
+r
+in
+6∈V
+⋆⋆
+⇔D(r
+in
+)≤γ
+⋆⋆
+∀t≥ 0 (32)
+and consider separately several cases.
+(a) v
+∗
+− δ ≤
+˙
+d(0) ≤ v
+∗
++ δ,σ(0) = 1. By (25), L := {t ≥ 0 :
+r(t) lies in the interior of W(a +ε,γ
+⋆⋆
++ ε)} and M := {t > 0 : v
+∗
+−δ <
+˙
+d(t) < v
+∗
++δ} contain all small enough t> 0. Let (0,t
+∗
+) be the leftmost con-
+nected component of L∩M. Since 0<v
+∗
+−δ <
+˙
+d(t)∀t ∈ (0,t
+∗
+), (32) implies
+thatt
+∗
+<∞. So (6) entails that either 1)
+˙
+d(t
+∗
+) =v
+∗
+±δ or 2)D[r(t
+∗
+)] =γ
+⋆⋆
++ε
+(since d(t) ascends while t ∈ (0,t
+∗
+)). However 2) does not hold by (32). As t
+runs from 0 to t
+∗
+in the case 1),
+|h∇D[r(t)];~ e[θ(t)]i| =
+|
+˙
+d(t)|
+v
+≤
+v
+∗
++δ
+v
+(21)
+< k∇D[r(t)]k.
+So∇D[r(t)] and~ e[θ(t)] are not co-linear and henceσ does not change its value
+1. Hence
+˙
+d(t) cannot arrive at the valuesv
+∗
+±δ by (25). Thus we have arrived
+at a contradiction.
+(b)
+˙
+d(0)≤v
+∗
+−δ. By Lemma 3 (with t
+0
+:= 0), there exists a time t
+∗
+≥t
+0
+such that kr(t)−r(t
+0
+)k≤a and so by (6), r(t)∈W(a,γ
+⋆⋆
+) for all t∈ [t
+0
+,t
+∗
+],
+and
+˙
+d(t
+∗
+) = v
+∗
+− δ,
+¨
+d(t
+∗
+) ≥ 0. Then σ(t
+∗
+) = 1 by (25), and retracing the
+arguments from (a) still results in a contradiction.
+(c)
+˙
+d(0) > v
+∗
+− δ. Let [0,t
+∗
+) be the leftmost connected component of
+{t≥ 0 :
+˙
+d(t)>v
+∗
+−δ}. Sincev
+∗
+>δ by (21),t
+∗
+<∞ due to (32) andD[r(t)]≥
+D[r
+in
+] ∀t ∈ [0,t
+∗
+]. By retracing the arguments from (b) (with t
+0
+: +t
+∗
+), we
+arrive at a contradiction once more.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 54Differential Equations and Control Processes, N 1, 2014
+Thecontradictionsobtainedprovethat(32)doesnothold,whichcompletes
+the proof.  
+Lemma 5 Therobotcannotleavethedesiredvicinity (2)ofthemaximizerfrom
+any location in V
+⋆⋆
+.
+Proof Suppose to the contrary that the robot leaves V
+⋆
+from some location
+r(0)∈V
+⋆⋆
+. HereD[r(0)]>γ
+⋆⋆
+by the deﬁnition ofV
+⋆⋆
+from Lemma 4, and due
+to (4), (5), the robot necessarily intersects the isolinesI(γ
+∗
+) and I(γ
+⋆⋆
+), where
+I(γ) ={r :D(r) =γ}. Lett
+1
+> 0 be theearliesttimet suchthatD[r(t)] =γ
+⋆
+,
+and lett
+0
+be the latest timet∈ (0,t
+1
+) such thatD[r(t)] =γ
+⋆⋆
+. ThenD[r(t)]<
+γ
+⋆⋆
+∀t ∈ (t
+0
+,t
+1
+) and so
+˙
+d(t
+0
+) ≤ 0 < v
+∗
+−δ. By Lemma 3, there exists a time
+t
+∗
+≥ t
+0
+such that
+˙
+d(t
+∗
+) = v
+∗
+−δ,
+¨
+d(t
+∗
+) ≥ 0, kr(t)− r(t
+0
+)k ≤ a ∀t ∈ [t
+0
+,t
+∗
+].
+The last relation and (5) imply that the robot does not reach the isolineI(γ
+⋆
+)
+for t ∈ [t
+0
+,t
+∗
+] and so γ
+⋆
+< D[r(t)] ≤ γ
+⋆⋆
+t ∈ [t
+0
+,t
+∗
+]. By (6), this yields that
+r(t
+∗
+) ∈W(a+ε,γ
+⋆⋆
++ε). Then
+˙
+d(t
+∗
+) = v
+∗
+−δ,
+¨
+d(t
+∗
+)≥ 0 imply that σ(t
+∗
+) = 1
+thanks to (25). By retracing the arguments from (a) in the proof of Lemma 4,
+weconcludethatsincet
+∗
+anduntiltherobotentersV
+⋆⋆
+oncemore,d(t)ascends.
+So D[r(t)],t ≥ t
+0
+cannot reach the value γ
+⋆
+earlier than it reaches γ
+⋆⋆
+for the
+second time, in violation of the deﬁnitions oft
+0
+,t
+1
+. The contradiction obtained
+proves the lemma.  
+PROOF OF THEOREM 2: This theorem is immediatefrom Lemmas 4
+and 5.  
+PROOFOFTHEOREM1: ThistheoremisimmediatefromTheorem2
+and Remark 3.  
+References
+[1] K. Ahnert and M. Abel. Numerical differentiation of experimental
+data: local versus global methods. Computer Physics Communications,
+177:764774, 2007.
+[2] M.E.AlpayandM.H.Shor. Model-basedsolutiontechniquesforthesource
+localization problem. IEEE Transactions on Control Systems Technology,
+8(6):895–904, 2000.
+[3] K.B. Ariyur and M. Krstic. Real-Time Optimization by Extremum-Seeking
+Feedback. Wiley-Interscience, Hoboken, NJ, 2003.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 55Differential Equations and Control Processes, N 1, 2014
+[4] R. Bachmayer and N.E. Leonard. Vehicle networks for gradient descent in
+asampledenvironment. InProceedings of the 41st IEEE Conf. on Decision
+and Control, pages 113–117, Las Vegas, NV, December 2002.
+[5] D. Baronov and J. Baillieul. Autonomous vehicle control for ascend-
+ing/descendingalongapotentialﬁeldwithtwoapplications. InProceedings
+of the American Control Conference, pages 678–683, Seattle, WA, June
+2008.
+[6] F.B.Belgacem. IdentiﬁabilityforthepointwisesourcedetectioninFisher’s
+reaction–diffusion equation. Inverse Problems, 28(6), 2012.
+[7] E. Biyik and M. Arcak. Gradient climbing in formation via extremum
+seeking and passivity-based coordination rules. In Proceedings of the 46th
+IEEE Conf. on Decision and Control, pages 3133–3138, New Orleans, LA,
+December 2007.
+[8] E. Burian, D. Yoeger, A. Bradley, and H. Singh. Gradient search with
+autonomousunderwatervehicleusing scalar measurements. In Proceedings
+of the IEEE Symposium on Underwater Vehicle Technology, pages 86–98,
+Monterey, CA, June 1996.
+[9] A. G. Butkovskiy and L. M. Pustyl’nikov. Mobile Control of Distributed
+Parameter Systems. Halsted Press, NY, 1987.
+[10] R. Chartrand. Numerical differentiation of noisy nonsmooth data. ISRN
+Appl. Math., 2011. doi: 10.5402/2011/164564.
+[11] V. Christopoulos and S. I. Roumeliotis. Multirobot trajectory generation
+forsinglesourceexplosionparameterestimation.InProceedingsofthe2005
+IEEE Int.Conf.on RoboticsandAutomation,pages2814–2820,Barcelona,
+Spain, April 2005.
+[12] J. Cochran and M. Krstic. Nonholonomic source seeking with tuning of
+angular velocity. IEEE Trans. Autom. Control, 54:717–731, 2009.
+[13] J. Cortes. Distributed gradient ascent of random ﬁelds by robotic sensor
+networks. In Proceedings of the 46th IEEE Conference on Decision and
+Control, pages 3120–3126, New Orleans, LA, December 2007.
+[14] M.A. Demetriou. Power management of sensor networks for detection of
+a moving source in 2-D spatial domains. In Proceedings of the American
+Control Conference, pages 1144–1149, Minneapolis, MN, June 2006.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 56Differential Equations and Control Processes, N 1, 2014
+[15] M.A. Demetriou. Process estimation and moving source detection in 2-D
+diffusion processes by scheduling of sensor networks. In Proceedings of the
+American Control Conference, New York, NY, July 2007.
+[16] M.A. Demetriou. Centralized and decentralized policies for the contain-
+ment of moving source in 2-D diffusion processes using sensor/actuator
+network. In Proceedings of the American Control Conference, pages 127–
+132, St. Louis, MO, June 2009.
+[17] Y. Elor and A. M. Bruckstein. Two-robot source seeking with point mea-
+surements. Theoretical Computer Sciences, 457:76–85, 2012.
+[18] V. Gazi and K. M. Passino. Stability analysis of social foraging swarms.
+IEEE Trans. on Systems, Man, and Cybernetics, 54(1):539–557, 2004.
+[19] A. Gray. Logarithmic spirals. In Modern Differential Geometry of Curves
+and Surfaces with Mathematica, pages 40–42. CRC Press, Boca Raton,
+second edition, 1997.
+[20] R. Horst and P. M. Pardalos (eds.). Handbook of Global Optimization.
+Kluwer Academic Publishers, Dordrecht, 1995.
+[21] W. Jatmiko, F. Jovan, R. Dhiemas, A. M. Sakti, F. M. Ivan, T. Fukuda,
+andK.Sekiyama.Robotsimplementationforodorsourcelocalizationusing
+PSOalgorithm. WSEAS Transactionson Circuits and Systems,10(4):115–
+125, 2011.
+[22] A. Khapalov. Source localization and sensor placement in environmental
+monitoring. International Journal of Applied Mathematics and Computer
+Science, 20(3):445–458, 2010.
+[23] H. Lee, V.I. Utkin, andA. Malinin. Chatteringreductionusing multiphase
+sliding mode control. International Journal of Control, 82:1720 – 1737,
+2009.
+[24] W. Li, J. A. Farrell, Sh. Pang, and R. M. Arrieta. Moth-inspired chemical
+plume tracing on an autonomous underwater vehicle. IEEE Transactions
+on Robotics, 22(2):292–307, 2006.
+[25] S. Liuand M. Krstic. Stochasticsourceseeking for nonholonomicunicycle.
+Automatica, 48(9):1443–1453, 2010.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 57Differential Equations and Control Processes, N 1, 2014
+[26] A.S.Matveev,H.Teimoori,andA.V.Savkin. Navigationofaunicycle-like
+mobile robot for environmental extremum seeking. Automatica, 47(1):85–
+91, 2011.
+[27] A. Mesquita, J. Hespanha, and K.
+˚
+Astr¨ om. Optimotaxis: a stochas-
+tic multi-agent optimization procedure with point measurements. In
+M. Egersted and B. Mishra, editors, Hybrid Systems: Computation and
+Control, volume 4981, pages 358–371. Springer-Verlag, Berlin, 2008.
+[28] P.
+¨
+Ogren, E. Fiorelli, and N. E. Leonard. Cooperative control of mobile
+sensor networks: Adaptivegradientclimbingin a distributedenvironment.
+IEEE Trans. Autom. Control, 49(8):1292–1301, 2004.
+[29] B. Porat and A. Neohorai. Localizing vapor-emitting sources by moving
+sensors. IEEE Trans. Signal Processing, 44(4):1018–1021, 1996.
+[30] P. Pyk, S. Badia, U. Bernardet, P. Knsel, M. Carlsson, J. Gu, E. Chanie,
+B. Hansson, T. Pearce, and P. Verschure. An artiﬁcial moth: Chemical
+source localizationusing a robot based neuronal model of moth optomotor
+anemotactic search. Autonomous Robots, 20(3):197–213, 2006.
+[31] I. F. Sivergina, M. P. Polis, and I. Kolmanovsky. Source identiﬁcation
+for parabolic equations. Mathematics of Control, Signals, and Systems,
+16(16):141–157, 2003.
+[32] P.TzanosandM.
+˘
+Zefran. Locatingacircularbiochemicalsource: Modeling
+and control. In Proceedings of the 2007 IEEE Int. Conf. on Robotics and
+Automation, pages 523–528, Rome, Italy, 2007.
+[33] L. K. Vasiljevic and H. K. Khalil. Error bounds in differentiation of noisy
+signals by high-gain observers. Systems & Control Letters, 57:856–862,
+2008.
+[34] R. B. Vinter. Optimal Control. Birkh¨ auzer, Boston, 2000.
+[35] C. Zhang, D. Arnold, N. Ghods, A. Siranosian, and M. Krstic. Source
+seeking with non-holonomic unicycle without position measurement and
+with tuning of forward velocity. Systems & Control Letters, 56:245–252,
+2007.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 58Differential Equations and Control Processes, N 1, 2014
+A Proof of Remark 2
+∇D =ρ~ e(ϕ)⇒
+D
+′
+x
+=ρcosϕ
+D
+′
+y
+=ρsinϕ
+⇒D
+′′
+=
+=
+ 
+ρ
+′
+x
+cosϕ−ρϕ
+′
+x
+sinϕ ρ
+′
+y
+cosϕ−ρϕ
+′
+y
+sinϕ
+ρ
+′
+x
+sinϕ+ρϕ
+′
+x
+cosϕ ρ
+′
+y
+sinϕ+ρϕ
+′
+y
+cosϕ
+!
+=~ e(ϕ)(∇ρ)
+⊤
++ρΦ
+π
+2
+~ e(ϕ)(∇ϕ)
+⊤
+; (33)
+D
+′′
+xy
+=D
+′′
+yx
+⇒
+
+
+∇ρ;Φ
+π
+2
+~ e(ϕ)
+ff
+=ρh∇ϕ;~ e(ϕ)i; (34)
+κ(α,r)
+(8)
+==
+
+
+D
+′′
+(r)Φ
+π
+2
+−α
+~ e(ϕ);Φ
+π
+2
+−α
+~ e(ϕ)
+ff
+ρcosα
+(33)
+==
+
+
+∇ρ;Φ
+π
+2
+−α
+~ e(ϕ)
+ff
+
+~ e(ϕ);Φ
+π
+2
+−α
+~ e(ϕ)
+ff
+ρcosα
++
+ρ
+
+
+∇ϕ;Φ
+π
+2
+−α
+~ e(ϕ)
+ff
+
+Φ
+π
+2
+~ e(ϕ);Φ
+π
+2
+−α
+~ e(ϕ)
+ff
+ρcosα
+=
+tanα
+ρ
+
+
+∇ρ;Φ
+π
+2
+−α
+~ e(ϕ)
+ff
++
+
+
+∇ϕ;Φ
+π
+2
+−α
+~ e(ϕ)
+ff
+;
+
+
+∇ρ;Φ
+π
+2
+−α
+~ e(ϕ)
+ff
+=
+
+
+∇ρ;Φ
+π
+2
+~ e(ϕ)
+ff
++
+
+
+∇ρ;
+ 
+Φ
+π
+2
+−α
+−Φ
+π
+2
+ 
+~ e(ϕ)
+ff
+(34)
+==ρh∇ϕ;~ e(ϕ)i
++2sin
+α
+2
+
+
+∇ρ;Φ
+−
+α
+2
+~ e(ϕ)
+ff
+.
+Summarizing, we arrive at (10).
+Electronic Journal. http://www.math.spbu.ru/diffjournal 59

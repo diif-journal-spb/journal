@@ -1,0 +1,1132 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 1, 2001
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Applications to physics, electrotechnics, and electronics
+SLOW EXTENSIONAL BOUNDED FLOWS
+B. S. BHATT, A. SHIRLEY
+Department Of Mathematics & Computer Science
+The University Of The West Indies, St. Augustine
+Trindad, W.I.
+E-mail: bbhatt@centre.uwi.tt
+Abstract
+Slow extensional ows past a porous sphere, liquid sphere and a solid smooth
+sphere with slip at the surface have been obtained when all the spheres are
+bounded by a sphere whose surface is stretching radially. Mass transfer to the
+uid due to the inner sphere has been evaluated in each case.
+1. Introduction
+Steady ows of Newtonian uid past a solid sphere, liquid drop and smooth
+spheres at low Reynolds numbers have been studied extensively (see Happel
+and Brenner [1]). Recently Bhatt [2] has discussed these problems when the
+ow at in nity is given by extensional  eld. Kawase and Moo-Young [3] ob-
+tained approximate solutions of power law uid ow past a solid sphere at small
+Reynolds numbers when the ow at in nity was given by the extensional  eld.Differential Equations and Control Processes, N 1, 2001
+In the present problem we have extended the results of Bhatt [2] when the
+spheres are bounded by a sphere whose surface is stretching radially. Using the
+Stokes's approximation we get exact solutions in each case. The mass transfer
+due to the presence of these spheres has been evaluated in each case. The
+results of Bhatt [2] are derived as a particular case.
+2. Extensional ow past a porous sphere
+We cosider a porous sphere of radius a and permeability k surrounded by
+a sphere of radius b whose surface is stretching such that
+u
+x
+= 
+ff
+2
+x; u
+y
+= 
+ff
+2
+y; u
+z
+=ffz; (2:1)
+where ff is constant.
+The ow in the free uid region (a<r b) for steady motion is given by
+rp =  r
+2
+v (2:2)
+and
+r:v = 0; (2:3)
+where  is the kinematic viscosity of the uid,  is the density,p is the pressure
+and v is the velocity vector. In spherical polar coordinates (r; ; ), v has
+components (u
+r
+;u
+ 
+; 0). We de ne the Stokes stream function to satisfy (2.3)
+by
+u
+r
+= 
+1
+r
+2
+sin 
+@ 
+@ 
+; u
+ 
+=
+1
+r sin 
+@ 
+@r
+(2:4)
+and (2.2) gives
+E
+4
+ = 0; (2:5)
+where
+E
+2
+=
+@
+2
+@r
+2
++
+1
+r
+2
+@
+2
+@ 
+2
+ 
+cot 
+r
+2
+@
+@ 
+: (2:6)
+The ow in the porous region(0 r<a) is given by
+U = 
+k
+  
+rP (2:7)
+and
+r:U = 0 (2:8)
+Electronic Journal.  2Differential Equations and Control Processes, N 1, 2001
+whereU is the velocity vector andP is the pressure in the porous region. Stokes
+stream function 	 can be de ned similar to in the porous region with velocity
+componentsU
+r
+, U
+ 
+as
+U
+r
+= 
+1
+r
+2
+sin 
+@	
+@ 
+; U
+ 
+=
+1
+r sin 
+@	
+@r
+(2:9)
+which satisfy (2.7) and (2.8) and we get
+E
+2
+	 = 0; (2:10)
+where E
+2
+is de ned earlier.
+The boundary conditions to be satis ed are:
+At r = 0, the solution should be  nite. (2.11)
+At r =a,
+u
+r
+=U
+r
+;
+e
+r 
+=
+ 
+p
+k
+(u
+ 
+ U
+ 
+);
+p =P:
+(2:12)
+where e
+r 
+is the strain tensor,   is the slip parameter (the second condition in
+equation (2.12) is that of Jones [4]).
+At r =b,
+u
+r
+=
+ffb
+2
+(2 cos
+2
+   sin
+2
+ );
+u
+ 
+= 
+3ffb
+2
+sin  cos :
+(2:13)
+The solutions of (2.5) and (2.10) can be obtained as
+u
+r
+=  (A
+1
+r
+ 2
++A
+2
+r +A
+3
+r
+3
++A
+4
+r
+ 4
+)(2 cos
+2
+   sin
+2
+ ); (2.14)
+u
+ 
+= (3A
+2
+r + 5A
+3
+r
+3
+  2A
+4
+r
+ 4
+) sin  cos ; (2.15)
+p =   (2A
+1
+r
+ 3
++ 7A
+3
+r
+2
+)(2 cos
+2
+   sin
+2
+ ); (2.16)
+U
+r
+=  (B
+1
+r +B
+2
+r
+ 4
+)(2 cos
+2
+   sin
+2
+ ); (2.17)
+U
+ 
+= (3B
+1
+r  2B
+2
+r
+ 4
+) sin  cos ; (2.18)
+P =
+ 
+k
+ 
+B
+1
+2
+r
+2
+ 
+B
+2
+3
+r
+ 3
+ 
+(2 cos
+2
+   sin
+2
+ ); (2.19)
+Electronic Journal.  3Differential Equations and Control Processes, N 1, 2001
+Using the boundary conditions (2.11)-(2.13) we get:
+A
+1
+=
+1
+3
+(2A
+3
+b
+5
+  5A
+4
+b
+ 2
+);
+A
+2
+=  
+ff
+2
+ 
+5
+3
+A
+3
+b
+2
++
+2
+3
+A
+4
+b
+ 5
+;
+B
+1
+=  2 
+2
+(2A
+1
+a
+ 3
++ 7A
+3
+a
+2
+);
+B
+2
+= 0;
+A
+3
+=
+ 
+3ff
+2
+ A
+4
+f 5b
+ 2
+a
+ 3
+(1 + 4 
+4
+) + 2b
+ 5
++ 3a
+ 5
+g
+ 
+ 
+f2b
+5
+a
+ 3
+(1 + 4 
+2
+)  5b
+2
++ 3a
+2
+(1 + 14 
+2
+)g
+ 1
+;
+A
+4
+=
+3ff
+2
+ 
+2b
+5
+a
+ 2
+(   8 
+3
+)  2a
+3
+(   5  + 42 
+3
+)
+ 
+ 
+[ 42a
+ 2
+(5 
+2
+  +  + 12 
+3
+) + 25b
+ 2
+( 2  + 4 
+3
++ 10 
+2
+  + ) +
+25b
+2
+a
+ 4
+(  + 2 )  4b
+5
+a
+ 7
+(  + 5  + 10  
+2
++ 32 
+3
+) 
+4b
+ 5
+a
+3
+(   5  + 42 
+3
+)]
+ 1
+where   =
+p
+k
+a
+.
+Following Bhatt [2] , the mass transfer (M) from a porous sphere at high
+Schmidt numbers can be obtained as
+u
+0
+ 
+=  
+15
+2
+ffM sin  cos 
+M = 2[ 4(  + 6  
+2
++  + 8  
+4
++ 4 
+3
+) + 10 
+3
+(  +  + 2  
+2
+) 
+2 
+5
+(14 
+3
++ 41  
+2
+  4  + 168  
+4
+  4 ) +
+10 
+7
+(     +  
+2
++ 10 
+3
++ 20  
+4
++ 56 
+5
+) +
+35 
+8
+(3  
+2
+    ) + 2 
+10
+(23  + 53  
+2
+  28 
+3
++ 23   441  
+4
+) +
+15 
+12
+(196 
+5
++ 70  
+4
+  9  
+2
+    )] 
+[2(1 + 4 
+2
+)  5 
+3
+  3 
+5
+(1 + 14 
+2
+)]
+ 1
+ 
+[ 4(  + 10  
+2
++ 5  + 32 
+3
+) + 25 
+3
+(  + 2 ) 42 
+5
+(  + 12 
+3
++ 5  
+2
+) +
+25 
+7
+( 2  + 4 
+3
++ 10  
+2
++ ) + 4 
+10
+(   + 5   42 
+3
+)]
+ 1
+For   ! 0 , the value of M agrees with Bhatt [2]. The values of M for
+various values of   and   have been given in Table 1. The  rst entry in each
+Electronic Journal.  4Differential Equations and Control Processes, N 1, 2001
+block corresponds to  =
+1
+2
+and second entry corresponds to  = 1. M increases
+as   decreases or as   increases (similar to Bhatt [2]).
+Table 1
+    = 0.5   = 1   = 2
+0 1.66399 1.71728 1.74393
+1.0061479 1.0061482 1.006148
+2 0.020886 0.0345009 0569277
+0.022689 0.0358339 0.0574771
+4 0.0084211 0.015755 0.0289445
+0.0095417 0.0108176 0.0292896
+6 0.0049393 0.0099828 0.0193588
+0.0596707 0.0108176 0.0198333
+8 0.0033196 0.00716597 0.0144419
+0.0043298 0.00802823 0.0150234
+10 0.0023856 0.0054949 0.01143986
+0.0033948 0.00638415 0.0120993
+3. Extensional ow past a liquid sphere
+For liquid sphere of radius a if we take 
+i
+(i = 1; 2) be the viscosities of the
+uid inside and outside of the sphere, the stream functions 	
+i
+, are given by
+	
+i
+= (A
+i
++B
+i
+r
+3
++C
+i
+r
+5
++D
+i
+r
+ 2
+) sin
+2
+  cos ; (3.1)
+u
+ri
+= (A
+i
+r
+ 2
++B
+i
+r +C
+i
+r
+3
++D
+i
+r
+ 4
+)(sin
+2
+   2 cos
+2
+ ); (3.2)
+u
+ i
+= (3B
+i
+r + 5C
+i
+r
+3
+  2D
+i
+r
+ 4
+) sin  cos : (3.3)
+The boundary conditions are:
+At r =b,
+u
+r1
+=
+1
+2
+ffb
+ 
+2 cos
+2
+   sin
+2
+ 
+ 
+;
+u
+ 1
+= 
+3
+2
+ffb sin  cos :
+(3:4)
+Electronic Journal.  5Differential Equations and Control Processes, N 1, 2001
+At r =a,
+u
+r1
+=u
+r2
+= 0;
+ 
+1
+@
+@r
+ 
+1
+r
+2
+@	
+1
+@r
+ 
+= 
+2
+@
+@r
+ 
+1
+r
+2
+@	
+2
+@r
+ 
+:
+u
+ 1
+=u
+ 2
+;
+(3:5)
+At r = 0,
+u
+r2
+and u
+ 2
+should be  nite: (3:6)
+Applying the boundary conditions (3.4)-(3.6) on (3.2) and (3.3), we get
+A
+2
+= D
+2
+= 0; (3.7)
+A
+1
+=  (B
+1
+a
+3
++C
+1
+a
+5
++D
+1
+a
+ 2
+); (3.8)
+B
+1
+=  
+1
+2
+ff 
+5
+3
+C
+1
+b
+2
++
+2
+3
+D
+1
+b
+ 5
+; (3.9)
+C
+1
+=
+ 
+ 
+3
+2
+ffa
+3
+ D
+1
+(5b
+ 2
+  2b
+ 5
+a
+3
+  3a
+ 2
+)
+ 
+[ 2b
+5
++5b
+2
+a
+3
+  3a
+5
+]
+ 1
+; (3.10)
+B
+2
+=  
+a
+2
+ 
+ 
+C
+1
++
+D
+1
+a
+7
+ 
+; (3.11)
+C
+2
+=
+1
+ 
+ 
+C
+1
++
+D
+1
+a
+7
+ 
+; (3.12)
+D
+1
+= [3ffafa
+5
+(   1) b
+5
+ g][42a   5(5  + 2)b
+5
+a
+ 1
++
+5(2  5 )a
+3
+b
+ 2
++ 4(   1)a
+6
+b
+ 5
++ 4(1 + )a
+ 4
+b
+5
+]
+ 1
+: (3.13)
+where   =
+ 
+2
+ 
+1
+. Here we obtain
+u
+0
+ 1
+sin  cos 
+= [ 3ff(5  + 1)f46a
+6
+  35a
+4
+b
+2
+  15a
+8
+b
+ 2
++ 8ab
+5
++ 10a
+ 1
+b
+7
+  10a
+3
+b
+3
+  4a
+ 4
+b
+10
+g][( 2b
+5
++ 5a
+3
+b
+2
+  3a
+5
+) 
+(42a   5(5  + 2)a
+ 1
+b
+2
++ 5(2  5 )a
+3
+b
+ 2
++ 4(   1)a
+6
+b
+ 5
++ 4(1 + )a
+ 4
+b
+5
+)]
+ 1
+; (3.14)
+Electronic Journal.  6Differential Equations and Control Processes, N 1, 2001
+which gives
+M =
+2(1 + 5 )
+5(2  5 
+3
++ 3 
+5
+)
+[12 
+12
+  46 
+10
++ 35 
+8
++ 10 
+7
+  8 
+5
+  10 
+3
++ 4] 
+[42 
+5
+   5 
+3
+(5  + 2)  5 
+7
+(5   2) + 4 
+10
+(   1) + 4(1 + )]
+ 1
+: (3.15)
+The behaviour of M with   and   has been given in  gure 1. M increases
+with   and  .
+4. Extensional ow past a solid smooth sphere
+Here we consider a solid smooth sphere of radius a placed in an extesional
+ow of uid of viscosity . The solution is given by
+Electronic Journal.  7Differential Equations and Control Processes, N 1, 2001
+u
+r
+=  
+1
+r
+2
+sin 
+@ 
+@ 
+; u
+ 
+=
+1
+r sin 
+@ 
+@r
+;
+ = (A +Br
+3
++Cr
+5
++Dr
+ 5
+) sin
+2
+  cos ; (4.1)
+u
+r
+= (Ar
+ 2
++Br +Cr
+3
++Dr
+ 4
+)(sin
+2
+   2 cos
+2
+ ); (4.2)
+u
+ 
+= (3Br + 5Cr
+3
+  2Dr
+ 4
+) sin  cos : (4.3)
+The boundary conditions to be satis ed are
+At r =b,
+u
+r
+=
+ffb
+2
+ 
+2 cos
+2
+   sin
+2
+ 
+ 
+;
+u
+ 
+=  
+3
+2
+ffb sin  cos : (4.4)
+At r =a,
+ = 0;  
+1
+r
+ 
+@ 
+@r
+ 
+= r
+@
+@r
+ 
+1
+r
+2
+@ 
+@r
+ 
+; (4:5)
+where   is a slip parameter.
+Using the boundary conditions we get
+A =  Bb
+3
+ Cb
+5
+ Db
+ 2
+ 
+ff
+2
+b
+3
+; (4.6)
+B =  
+ff
+2
+ 
+5
+3
+Cb
+2
++
+2
+3
+Db
+ 5
+; (4.7)
+C =
+ 
+3
+2
+ffa
+3
+ D(3a
+ 2
++ 2a
+3
+b 5  5b
+ 2
+)
+ 
+[3a
+5
+  5a
+3
+b
+2
++ 2b
+5
+]
+ 1
+; (4.8)
+D = 3ffa
+6
+b
+5
+(  a
+5
++ b
+5
++ 5a
+4
+ )[a (25a
+3
+b
+7
++ 25a
+7
+b
+3
+  42a
+5
+b
+5
+ 4a
+10
+  4b
+10
+) + 10 (2a
+10
+  5a
+7
+b
+3
++ 5a
+3
+b
+7
+  2b
+10
+)]
+ 1
+: (4.9)
+Again here M can be obtained as
+M = 2(a  + )(5 
+7
+  7 
+5
++ 2)[a (4 
+10
+  25 
+7
++ 42 
+5
+  25 
+3
++ 4)  10 (2 
+10
+  5 
+7
++ 5 
+3
+  2)]
+ 1
+; (4.10)
+where   =
+a
+b
+.
+Electronic Journal.  8Differential Equations and Control Processes, N 1, 2001
+The behaviour of M with  , a  and   is given in  gure 2. Here M is a
+monotonic increasing function of  anda  but a monotonic decreasing function
+of  . For  ! 0 The results of M given in all the three cases agree with Bhatt
+[2].
+References
+[1] J. HAPPEL and H. BRENNER, Low Reynolds Number Hydrodynamics.
+Noordhoff Int. Publ. The Netherlands (1973).
+[2] B.S.BHATT, Slow Extensional Flow Past a Sphere. Modelling Measure-
+ment Cont., B, AMSE, 51, 1(1993), p.41-47.
+[3] Y. KAWASE and M.MOO-YOUNG, Approximate Solutions for Powe-Law
+Fluid Flow Past a Particle at Low Reynolds Numbers. J.Non-Newtonian
+Fluid Mech., 21(1986), p.167-177.
+[4] I.P.JONES, Low Reynolds Number Flow Past a Porous Spherical Shell,
+Proc. Camb. Phil. Soc., 73(1973), p.231-238.
+Electronic Journal.  9

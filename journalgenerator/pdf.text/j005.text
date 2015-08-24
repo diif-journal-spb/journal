@@ -1,0 +1,780 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 1, 1997
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Control problems in nonlinear systems
+ASTATISM IN NONLINEAR CONTROL SYSTEMS
+WITH APPLICATION TO ROBOTICS
+A.A.Pervozvanski
+Saint-Petersburg State Technical University,
+Department of Mechanics and Control Processes,
+29 Politehnicheskaja str., 195251 St.Petersburg, RUSSIA,
+e-mail: control1@citadel.stu.neva.ru
+L.B.Freidovich
+Saint-Petersburg State Technical University,
+Department of Mechanics and Control Processes,
+29 Politehnicheskaja str., 195251 St.Petersburg, RUSSIA,
+e-mail: control1@citadel.stu.neva.ru
+Abstract.
+The notion of astatism broadly used in classical linear control theory is ex-
+tended to nonlinear systems. Some basic assertions concerning with the prop-
+erties of astatic systems are presented. A special attention is paid to robust
+control problems of Lagrangian systems and robotic manipulators as a partic-
+ular case. It is shown that PID control ensure robust stabilization of a desired
+position and tracking with a bounded error if the desired velocities are small
+enough.
+0
+This work was partially supported by INTAS, 94-965 and by RFBR, 97-01-01159; it will be presented at
+the International Conference on Informatics and Control (June 9-13, 1997, St.Petersburg, Russia).Differential Equations and Control Processes, N 1, 1997
+1 Introduction
+The astatism is an extensively used notion in classical linear theory. Astatic
+systems have zero steady-state error if disturbances are constant or tend to
+constant values. Moreover, for linear systems the astatism ensure a bounded
+reaction under any unbounded disturbances having bounded derivatives. In
+linearcasetheastatismconditionsareverysimple. Itisnecessaryandsuﬃcient
+to have stable transfer function with a numerator having zero root. It is of
+practical interest to show what is a nonlinear astatic system, to state some
+conditions ensuring the astatism and to clear up if the properties of linear
+astatic systems are saved in nonlinear case. The paper gives some answers for
+these questions. Moreover, it is demonstrated that the general results can be
+usedfortheexplanationofrobustnessofPIDfeedbackinnon-linearLagrangian
+systems and in robotics especially.
+2 Astatism and boundedness of reactions
+Let a system be presented in the form
+˙ x =f(x,w(t)), x(0) =x
+0
+; y =g(x,w(t)) (1)
+where x is the state vector, y is the output vector, w(t) is the vector of distur-
+bances (inputs), andf(x,w) satisﬁes conditions ensuring existence and unique-
+ness of solutions to (1) under any admissible w(t)∈W, t∈ [0,∞).
+Deﬁnition. The system (1) is internally astatic if it has an isolated
+equilibrium point x = 0 and this equilibrium is asymptotically stable under any
+w(t) =w =const,w∈W.
+The system (1) is input–output astatic if it has an asymptotically stable
+solution x =x
+∞
+(w) under any w(t) =w =const,w∈W and
+g(x
+∞
+(w),w) = 0.
+Let f and g be linear in x and w, or more precisely, let
+f(x,w) =Ax+Bw, g(x,w) =Cx+Dw
+where A,B,C,D are constant matrices. Then the deﬁnition presented above
+coincides with the deﬁnition of classical linear theory (see, f.e. [1]) and the
+astatism conditions are equivalent the following ones:
+Electronic Journal.  122Differential Equations and Control Processes, N 1, 1997
+– A is stable (Hurwitzian),
+– A
+−1
+B = 0 (for internal astatism) or D−CA
+−1
+B = 0 (for input–output
+astatism).
+However, if f is linear in x only, i.e.
+f(x,w) =A(w)x+B(w), (2)
+then the astatism conditions have to include the stability of A(w) under all
+w∈W, i.e. the parametric robustness condition.
+It is clear now that the generalized notion of astatism introduced above is
+much more sophisticated than the traditional notion of linear theory.
+Itisevidentthatifthelinearizedsystemhavingstructureofright-handside
+in the form (2) (with A(w) =
+∂f
+∂x
+(0,w),B(w) =
+∂f
+∂w
+(0,w)) is internally astatic
+then the original non-linear system (1) is internally astatic too.
+The basic problem under consideration is the following one. Let the system
+(1) be internally astatic. Is it true that the output y(t) is bounded under any
+w(t)∈W which are unbounded but have a bounded derivative?
+Theorem 1
+1
+. Let the system (1) be internally astatic on a set of time–
+constant disturbances w ∈ W and moreover, there exists a Lyapunov function
+V(x,w) such that
+V(x,w)→∞ under kxk→∞ for any w∈W (3)
+and its time derivative
+˙
+V deﬁned on trajectories of the system (1) under w =
+const satisﬁes the conditions
+˙
+V ≤−βkxk
+2
+,
+
+
+
+
+∂V
+∂w
+
+
+
+
+≤γkxk
+2
+under kxk≤R, w∈W (4)
+Let for any δ<βγ
+−1
+k ˙ w(t)k≤δ, w(t)∈W (5)
+then there exist R
+0
+> 0 such that
+kx
+0
+k≤R
+0
+=⇒ lim
+t→∞
+kx(t)k = 0.
+1
+A similar assertion is contained in [2, Ch.5]
+Electronic Journal.  123Differential Equations and Control Processes, N 1, 1997
+Theorem 2. Let x = 0 be asymptotically stable equilibrium of the system
+(1) under any constant w∈W and moreover there exists a Lyapunov function
+V(x,w) satisfying (3) (i.e. radially unbounded) and
+˙
+V ≤−Q(x), under kxk≤R
+where Q(x)> 0,kxk6= 0, Q(0) = 0,
+Q(x)
+kxk
+→∞ under kxk→∞, and
+
+
+
+
+∂V
+∂w
+
+
+
+
+≤ckxk, c =const> 0, under any w∈W (6)
+Then, under any Δ> 0, one can show δ> 0 and R
+0
+> 0 such that
+lim
+t→∞
+kxk≤ Δ
+if w(t) satisfying (5) and kx
+0
+k≤R
+0
+The Theorem 2 gives some suﬃcient conditions under which the astatism
+yields a boundedness of reactions if the disturbances have a bounded rate of
+changements. Naturally, the conditions are much harder and “more local” then
+in the linear case.
+Note that the conditions of theorems 1,2 concerning with a “regular” be-
+havior of Lyapunov functions in w are nontrivial.
+Let f(x,w) be continuously differentiable in x and w, and uniformly Lips-
+chitzianinxunderallw∈W. Letthesystem(1)haveanasymptoticallystable
+solution underw =const∈W. Then following Massera theorem (see, f.e. [3]),
+one can state only that there exists a smooth Lyapunov function V(x,w) such
+that underkxk≤R:
+a(kxk,w)≤V(x,w)≤b(kxk,w),
+˙
+V(x,w)≤−c(kxk,w),
+
+
+
+
+∂V
+∂x
+
+
+
+
+≤d(w),
+
+
+
+
+∂V
+∂w
+
+
+
+
+≤e(w),
+where a,b,c are smooth positive anywhere (except zero x) functions monoto-
+nously increasing with kxk (i.e. class K functions) and d,e are non-negative
+smooth function. Sometimes one can show a limited upper bounds which are
+independent on w; and it is possible not only for a bounded W. In those cases
+any solutions to (1) are uniformly ultimately bounded, i.e. x(t) converges
+in a ball if k ˙ wk and kx
+0
+k are small enough. In other terminology the system
+(1) is dissipative. Proof of this assertion is analogous to the proof of Malkin
+theorem on dissipativity under nonvanishing bounded disturbances (see, f.e.
+[3]).
+Electronic Journal.  124Differential Equations and Control Processes, N 1, 1997
+3 Astatic servomechanisms
+In many cases the description (1) does not allow to express completely the
+disturbance inﬂuence on the system behavior. In particular, it takes place in
+thetrackingproblemswhereadesiredtrajectoryplaysroleofadisturbance,and
+zero value of tracking errors is the desired equilibrium point (or it is required
+to ensure uniform ultimate boundedness of those errors).
+Let, f.e., it be desired that the state x(t) of the closed–loop system
+˙ x =F(x,u), u =k(x,x
+d
+),
+wherek(x,x
+d
+) is a static feedback control law (F(x
+d
+,k(x
+d
+,x
+d
+))≡ 0), converges
+to a differentiable process x
+d
+(t), i.e. the output y(t) = x(t)−x
+d
+(t) tends to
+zero. Denoting
+y =x−x
+d
+and f(x,x
+d
+) =F(x,k(x,x
+d
+))
+one obtain
+˙ y =f(y+x
+d
+,x
+d
+)− ˙ x
+d
+If one return to the symbols introduced in the astatism deﬁnition, i.e. (y→x,
+x
+d
+→w), one has
+˙ x =f(x+w,w)− ˙ w (f(w,w)≡ 0)
+One can see now that the right–hand side depends not only on w as in (1) but
+on ˙ w also.
+Note that the output coincides here with the state of the system and hence
+the notion of internal astatism coincides with the notion of input–output as-
+tatism.
+In more general case if one desires to estimate the tracking errors for the
+closed–loop system described by the differential equations of n-th order
+x
+(n)
+=F(x,... ,x
+(n−1)
+,k(x,... ,x
+(n−1)
+,x
+d
+))≡f(x,... ,x
+(n−1)
+,x
+d
+)
+one has to consider behavior of solutions to the equations of the following type
+x
+(n)
+=f(x+w,... ,x
+(n−1)
++w
+(n−1)
+,w)−w
+(n)
+where x,w stand now for the errors and the desired trajectory.
+The examples shown above demonstrate that the generalized description
+˙ x =f
+0
+(x,w)+f
+1
+(x,w,w
+0
+,... ,w
+(k)
+) (7)
+Electronic Journal.  125Differential Equations and Control Processes, N 1, 1997
+where f
+0
+(0,w)≡ 0 and f
+1
+(x,w,0,... ,0)≡ 0
+be useful in applications.
+Note that the astatism property is deﬁned by f
+0
+(x,w) only. However the
+system reaction depend on f
+1
+too.
+Theorem 3. Let the system
+˙ x =f
+0
+(x,w) (8)
+be astatic and moreover there exists a radially unbounded Lyapunov function
+V(x,w) such that
+
+
+
+
+∂V
+∂x
+
+
+
+
+≤c
+x
+kxk,
+
+
+
+
+∂V
+∂w
+
+
+
+
+≤c
+w
+kxk, w∈W, kxk≤R
+and its time derivative along trajectories of the system (8) under w =const∈
+W satisfy
+˙
+V ≤−Q(x), under kxk≤R
+where Q(x)> 0,kxk6= 0, Q(0) = 0,
+Q(x)
+kxk
+→∞ under kxk→∞.
+Let f
+1
+be Lipschitzian in all arguments.
+Then there exist δ> 0,R
+0
+> 0, such that if
+kw
+0
+,...w
+(k)
+k≤δ, w(t)∈W, kx
+0
+k≤R
+0
+,
+then for any solution to the system (7)
+lim
+t→∞
+kx(t)k≤ Δ,
+under any given Δ> 0.
+Remark. If for any w∈W andkxk≤R:
+kf
+1
+(x,w,w
+0
+,... ,w
+(k)
+)k≤ (L+β
+2
+kxk)f
+2
+(w
+0
+,... ,w
+(k)
+),
+where f
+2
+is a function such that there exists a continuous function
+¯
+f
+2
+(δ) van-
+ishing under δ→ 0 and satisfying the inequality
+kw
+0
+,...w
+k
+k≤δ =⇒ kf
+2
+(w
+0
+,... ,w
+(k)
+)k≤
+¯
+f
+2
+(δ),
+f
+1
+(x,w,... ,w
+(k)
+) is not necessary to be Lipschitzian, and Q(x) =βkxk
+2
+, then
+lim
+t→∞
+kx(t)k≤ Δ =
+¯
+f
+2
+(δ)L
+β−β
+2
+¯
+f
+2
+(δ)
+→ 0 under δ→ 0. This remark was used in [4].
+Electronic Journal.  126Differential Equations and Control Processes, N 1, 1997
+4 Integral feedback and astatism
+Consider the following system
+˙ z =f(z,u,w), z(0) =z
+0
+(9)
+where u is a control. Choose u in the form of integral feedback
+˙ u =−μψ(z); u(0) = 0 (10)
+where μ> 0, ψ(0) = 0, z
+T
+ψ(z)6= 0 under z6= 0, .
+Under w = const the closed–loop system (9), (10) has the unique equilib-
+rium
+z = 0, u =u
+∞
+(w) =const.
+The system is astatic if the equilibrium is asymptotically stable. Let under
+zero control and w =const∈W the system (9) have an asymptotically stable
+solution
+z =z
+∞
+(w), f(z
+∞
+(w),0,w)≡ 0.
+The integral feedback (10) is introduced to shift that equilibrium to the desired
+position z = 0 independently on any w =const∈W.
+First of all, as in the linear theory, one has to know if the stability is not
+destroyed.
+Theorem 4. Let f and ψ be twice differentiable functions. Let, under any
+w∈W and u∈U, U be bounded and the equation
+f(z,u,w) = 0
+have a root z
+∞
+(u,w) which is locally exponentially stable equilibrium of the
+system (9) under w =const∈W, u =const∈U. Let the system
+˙ u =−μψ(z
+∞
+(u,w)) (11)
+have a locally exponentially stable solution.
+Then there exists ¯ μ > 0, such that under any μ ∈ (0;¯ μ], the closed–loop
+system (9), (10) is input–output astatic with input w and output z.
+Proof to the theorem 4 is based on classical results by Tikhonov (see, f.e.
+[5, 1]) and Klimushev [6]. In fact, let us introduce a “slow” time τ =μt. Then
+(9), (10) can be rewritten in a singular perturbed form
+du
+dτ
+=−ψ(z), μ
+dz
+dτ
+=f(z,u,w) (12)
+Electronic Journal.  127Differential Equations and Control Processes, N 1, 1997
+Under a small μ, the control u is a “slow” variable in reference to the object
+statez(t).Thesystem(11)isthereducedoneinreferenceto(12)anditgivesan
+appropriate description of the “slow” variables. The conditions of the Theorem
+ensure that existence of the exponentially stable solution to the reduced system
+yieldstheconvergenceofu(t)deﬁnedbytheoriginalsystemtoaconstantvalue.
+However, due to the properties of ψ(z) it is possible only if z(t)→ 0.
+Remark1. If the system (9) has globally asymptotically stable and locally
+exponentially stable equilibrium (i.e. globally asymptotically stable hyperbolic
+equilibrium)underu =const∈U andthesystem(11)alsohasgloballyasymp-
+totically stable and locally exponentially stable solution under w =const∈W
+then the closed–loop system (9), (10) has globally stable equilibrium under
+positive μ, small enough. It follows from Hoppensteadt theorem [7].
+Remark 2. Under some properties of the functions f,ψ ensuring the uni-
+queness of zero equilibrium point, the condition z
+T
+ψ(z)6= 0 under z 6= 0 may
+be omitted. Moreover all results are true if f,ψ smoothly depend on μ.
+5 Astatism of controlled Lagrangian system and a slow
+tracking
+Consider a dynamical system described by the Lagrangian equation
+A(q)¨ q+C(q, ˙ q)˙ q+g(q) =Q (13)
+where, by deﬁnition, q is n-vector of generalized coordinates, A(q) is a positive
+deﬁnite inertia matrix, C(q, ˙ q)˙ q is a vector of centrifugal and Coriolis forces
+such that
+˙
+A(q) =C(q, ˙ q)+C
+T
+(q, ˙ q)
+and g(q) is a vector of gravitational forces,
+Let
+Q =w+v
+wherev isacontrolandw isanexternaldisturbance. Introduceaproportional–
+differential (PD) feedback, i.e.
+v =−K
+p
+(q−q
+d
+)−K
+v
+˙ q+ ˆ u (14)
+where K
+p
+,K
+v
+are positive deﬁnite matrix of gains and q
+d
+= const deﬁnes a
+desired position.
+Electronic Journal.  128Differential Equations and Control Processes, N 1, 1997
+Under ˆ u =const, one can show [8] that the system (13), (14) has globally
+asymptoticallystable(GAS)equilibriumq = ¯ q, ˙ q = 0,satisfyingthecondition
+g(¯ q) =w+ ˆ u−K
+p
+(¯ q−q
+d
+) (15)
+if only
+K
+p
+>αI, (16)
+where α is a Lipschitz constant for g(q).
+Introduce now ˆ u as an additional integral feedback
+ˆ u =−F(u), ˙ u =μ(q−q
+d
+) (17)
+whereF(u) = [F
+1
+(u
+1
+),... ,F
+n
+(u
+n
+)]
+T
+andF
+i
+(u
+i
+) are twice continuously differen-
+tiable functions such that
+u
+i
+F
+i
+(u
+i
+)> 0 under u
+i
+6= 0, i = 1...n
+|F
+i
+(u
+i
+)|≥
+¯
+F under |u
+i
+|>
+¯
+U and
+dF
+i
+(u
+i
+)
+du
+i
+> 0 under |u
+i
+|≤
+¯
+U
+¯
+F > max
+1≤i≤n
+{|w
+i
+|+|g
+i
+(q
+d
+)|}, w∈W ∀i = 1...n
+(18)
+Theorem 5. Under the conditions (16), (18) and μ> 0 small enough the
+closed–loop system (13), (14), (17) has GAS equilibrium (q,u) = (q
+d
+,u
+∞
+) ≡
+(q
+d
+,−F
+−1
+[g(q
+d
+)−w]).
+The result follows from the Theorem 4 and Remark 1 if one uses special
+types of Lyapunov functions (energy like one as in [9, 10, 11] and Lur’e –
+Postnikov like one:
+h
+V(u,w) =
+R
+u−u
+∞
+0
+{F(s+u
+∞
+)−F(u
+∞
+)}
+T
+ds
+i
+) for the fast
+and reduced systems corresponding to (13), (14) and (17) with q = ¯ q given by
+(15) and for their ﬁrst approximation systems.
+It proves the astatism of the Lagrangian system with PID feedback in ref-
+erence to constant external forces.
+For the particular case of linear feedback that result was shown early in
+[12].
+Using the Theorem 3 and the Lyapunov function presented in [4] one can
+show now that PID feedback ensures a tracking of a desired trajectory q
+d
+(t)
+with a bounded error if q
+d
+(t) is changed slowly enough.
+Theorem 6. Let q
+d
+(t) be twice differentiable and there exist constants
+a
+1
+> 0, α,a
+2
+,c
+1
+,c
+2
+,d
+1
+,d
+2
+≥ 0
+Electronic Journal.  129Differential Equations and Control Processes, N 1, 1997
+such that for all x,y,z∈<
+n
+a
+1
+I ≤A(x)≤ (a
+2
++c
+2
+kxk+d
+2
+kxk
+2
+)I,
+kC(x,y)zk≤ (c
+1
++d
+1
+kxk)kykkzk, kg(x)−g(y)k≤αkx−yk;
+and either the desired motion is bounded or d
+1
+,c
+2
+,d
+2
+= 0.
+Moreover, let there exist ε> 0 and R> 0 such that
+K
+v
+>εmax
+kxk≤R
+{A(x+q
+d
+)+(c
+1
++d
+1
+kx+q
+d
+k)kxkI}, ε(K
+p
+−αI)>K
+i
+> 0
+and there exist δ
+1
+,δ
+2
+> 0 such that
+k˙ q
+d
+k≤δ
+1
+, k¨ q
+d
+k≤δ
+2
+Then all solutions to the system (13), (14), (17) are uniformly ultimately
+bounded.
+6 Conclusion
+The results presented in the paper allow to extend the useful notion of astatism
+tononlinearsystems. Itisnecessarytohaveinmindthatinnon–linearsystems
+the astatism does not ensure a boundedness of tracking errors if the desired ve-
+locities are very large. However, some numerical simulations for robotic manip-
+ulators show that the upper level of admissible velocities may have practically
+reasonable high value.
+References
+[1] Pervozvanski A.A. Theory of automatic control. Nauka, Moscow, 1996,
+615pp. (In Russian).
+[2] Khalil H.W. Nonlinear systems. Macmillan, New York, 1992.
+[3] Rouche N., Habets P., Laloy M. Stability theory by Liapunov’s direct
+method. Springer–Verlag, New York, 1977, 300pp.
+[4] Freidovich L.B., Pervozvanski A.A. Some estimates of performance for
+PID-like control of robotic manipulators. Prepr. of IFAC Symposium on
+Robot Control, Nantes, 1997.
+Electronic Journal.  130Differential Equations and Control Processes, N 1, 1997
+[5] Vasil’eva A.B., Butuzov V.F. Asymptotic expansion of solutions to sin-
+gularly perturbed equations. Nauka, Moscow, 1973. (In Russian).
+[6] Klimushev A.I. Stability of nonlinear systems of differential equations
+with small parameter multiplying the derivatives // Trudy Ural’skogo
+Politekhn. Inst., 1973, N
+o
+211, pp44-54. (In Russian).
+[7] Hoppensteadt F. Asymptotic stability in singular perturbation problems.
+II // J. Diff. Equat., 1974, V.15, N
+o
+3, pp.510-521.
+[8] TomeiP.AdaptivePDControllerforRobotManipulators//IEEETrans.
+Robot. Autom, 1991, V.7, N
+o
+4, pp.565-570.
+[9] Pozharicki G.K. On asymptotic stability of equilibria and stationary
+movements of mechanical systems with partial dissipation // Prikl.
+Matem. i Mekh., 1961, V.25, N
+o
+4, pp.657-667. Engl. transl. in J. Appl.
+Mathem. and Mech.
+[10] Salvadori L. Sull’estensione ai sistemi dissipativi del criterio di stabilit` a
+del Routh // Richerche Mat., 1966, V.15, pp.162-167.
+[11] Takegaki M., Arimoto S. A new feedback method for dynamic control
+of manipulators // J. of Dyn. Syst., Meas., and Control, 1981, V.102,
+pp.109-125.
+[12] Burkov I.V., Pervozvanski A.A., Freidovich L.B. Global asymptotic sta-
+bilizationofLagrangiansystemsviaPIDregulators//Abst.of4thIntern.
+Seminar “Stability and oscillations of nonlinear control systems”, 1996,
+Moscow, p.50.
+Electronic Journal.  131

@@ -1,0 +1,4399 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 1, 2005
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Ordinary differential equations
+BIFURCATIONS AND STRANGE ATTRACTORS IN
+A CLIMATE RELATED SYSTEM
+NiklasLundstr¨ om
+Department of Mathematics,
+Lule˚ a Univeristy of Technology,
+Lule˚ a, SWEDEN,
+e-mail: niklas.lundstrom@ltu.se
+Abstract.
+R. V. Bekryaev derived a system for a horizontally baroclinic atmosphere con-
+sisting of six ordinary differential equations. We prove dissipativity and ﬁnd
+estimates for the location of the global attractor. The evolution of a compli-
+cated attractor is analysed with a Poincar´ e map showing diﬃcult bifurcation
+behaviour. Investigations in bifurcation diagrams show a rich dynamical be-
+haviourincludinga lotof knowncomplicatedbifurcations,of which a fold-Hopf
+bifurcation is examined in detail. Finally, we give some theory about the Lya-
+punov spectra and present a method for determining the exponents.Differential Equations and Control Processes, N 1, 2005
+1 Introduction
+The equations for atmospheric ﬂow are one of the most studied dynamical
+systems of the last century. Both their practical importance and their mathe-
+matical richness have attracted much attention. R. V. Bekryaev at the Arctic
+and Antarctic Research Institute of Saint Petersburg derived a model for a
+horizontally baroclinic atmosphere. In the derivation of the system a mean
+approximation of the atmosphere was used, this means that the atmosphere
+was treated as a thin layer at some height above the surface of the Earth. The
+Navier-Stokes equation, the equation for heat conduction, the continuity equa-
+tion and a Galerkin procedure were then used to obtain the continuous system
+consisting of six ordinary quadratic differential equations given by
+∂X
+∂τ
+=−BU
+T
+−PrX−BeG+2.2GH +(U
+U
+−H)
+Y
+50
++
+ 
+A+B+
+G
+50
+ 
+Z
+∂G
+∂τ
+=BeX−PrG−2.2XH +(H−U
+U
+)
+F
+50
++
+ 
+C−
+X
+50
+ 
+Z
+∂H
+∂τ
+=−PPrH−
+ 
+A+B
+P
+−
+G
+160
+ 
+F +
+ 
+X
+160
+−
+C
+P
+ 
+Y (1)
+∂F
+∂τ
+=Q
+F
+−U
+T
+G−F +(U
+U
+−H)Y +GZ
+∂Y
+∂τ
+=Q
+Y
++U
+T
+X +(H−U
+U
+)F −Y −XZ
+∂Z
+∂τ
+=−GF +XY −PZ
+Here τ is a dimensionless time, A,B,Be,C,P,Pr,Q
+F
+,Q
+Y
+,U
+T
+and U
+U
+are pa-
+rameters of which P > 0 and Pr > 0. We will refer to Bekryaev [1] for a
+derivation of the system and explanations to physical relations to the param-
+eters and variables. More theory about dynamic meteorology can be found in
+[2]. Note that, in the three-dimensional modiﬁcation of the Bekryaev model,
+G =F =H = 0,alinearchangeofvariables,
+¯
+X =X,
+¯
+Y =
+U
+U
+Y
+50Pr
+and
+¯
+Z =
+U
+U
+Z
+50Pr
+,
+allows us to reduce the system to the famous Lorenz equations
+Electronic Journal.  2Differential Equations and Control Processes, N 1, 2005
+∂
+¯
+X
+∂τ
+=Pr
+¯
+Y −Pr
+¯
+X
+∂
+¯
+Y
+∂τ
+=−
+¯
+X
+¯
+Z +
+Pe
+2
+2000Pr
+¯
+X−
+¯
+Y
+∂
+¯
+Z
+∂τ
+=
+¯
+X
+¯
+Z−
+16
+5
+¯
+Z
+where Pe is the Pecle number. This system was found by Edward N. Lorenz in
+1963, see [3]. In 1984 Lorenz published a modiﬁcation of his system, referred
+to as the Lorenz-84 model, see [4]. This system has been of great interest for
+mathematicians and yields
+∂X
+∂τ
+=−aX−Y
+2
+−Z
+2
++aF
+∂Y
+∂τ
+=−Y +XY −bXZ +G
+∂Z
+∂τ
+=−Z +bXY +XZ
+where a and b are parameters. In a later paper [5], Lorenz pointed out that F
+and G should be allowed to vary periodically, and in 2002, H. Broer, C. Sim´ o
+and R. Vitolo published an article [6] where they examined this system for
+F →F(1+ǫcos(ωt))
+G→G(1+ǫcos(ωt))
+ExceptfortheBekryaevsystem, thereis anothersix-dimensionalsystemexam-
+inedbyL.VanVeen[7]in2003,withquiteanalogousbehaviourastheBekryaev
+system. For example, both systems give rise to fold-Hopf bifurcations and the
+dynamics seems to take place on three-dimensionalinvariant manifolds in both
+systems. Also, L. Van Veen found a reduction of his six-dimensional system to
+the Lorenz-84 model. It is interesting that all of these systems have so much in
+common, even if they represent different models.
+InSection2wewillprovetheexistenceofaglobalattractorbyshowingthat
+the Bekryaev system (1) is dissipative by ﬁnding a suitable Lyapunov function.
+Electronic Journal.  3Differential Equations and Control Processes, N 1, 2005
+After this proof, seven of the parameters are given values found in [1], and
+are from now on ﬁxed when the system is investigated by changing the three
+parameters A, B and Q
+F
+. The values are
+Be =−8.5242, C = 0, P = 16/5, Pr = 1 (2)
+Q
+Y
+= 0, U
+T
+= 620.15, U
+U
+= 42.467
+Estimates for the bounds of the global attractor are found for various values of
+the parameter Q
+F
+for the case when A = 2 and B = 0.
+In Section 3 one attains knowledge about some non-wandering sets that
+occur when changing Q
+F
+for A = 2 and B = 0. The system is simulated using
+a Runge-Kutta method programmed in C-code. A complicated attractor that
+arises close to a fold bifurcation is discussed and analysed using a Poincar´ e
+map, showing diﬃcult bifurcation behaviour. The Lyapunov spectrum is also
+determined for this attractor at different values of Q
+F
+and compared to the
+results from the Poincar´ e map.
+Bifurcations in the plane of the parameters A and B will be analysed in
+Section 4 using the software package AUTO 97, which can be found on the in-
+ternet at [8]. The fold and Hopf bifurcation curves found in the AB-plane and
+different regions and their corresponding set of equilibria are discussed. Two
+bifurcations of codimension two are discovered, the Bogdanov-Takens and the
+fold-Hopf bifurcation. The fold-Hopf bifurcation will be studied in more detail.
+An approximationof the locally deﬁned three-dimensional center manifold will
+be found and the system is transformed into a normal form for fold-Hopf bi-
+furcations derived in [10], from which the behaviour near the bifurcation can
+be analysed. Some of the results are then veriﬁed by further simulations with
+AUTO.Intheendofthesectionsomeattractorsareshown,oneofwhichshows
+an invariant torus.
+The deﬁnition of the Lyapunov spectrum and some facts about the expo-
+nents can be found in Section 5, and a method for computing the spectrum
+is presented in which one augment the dynamical system with an orthonormal
+frame and a Lyapunov vector. The implementation is also described and some
+results are shown.
+Electronic Journal.  4Differential Equations and Control Processes, N 1, 2005
+2 Dissipativity
+In this section dissipativity will be proved for the Bekryaev system (1). Before
+giving the deﬁnition of dissipativity,we introduce the evolutionoperator which
+determines the state x
+t
+of a system at time t, provided the initial state x
+0
+is
+known. Assume that for each t > 0 a single-valued map ϕ
+t
+is deﬁned in the
+phase space X,
+ϕ
+t
+: X →X
+which transforms an initial statex
+0
+∈X into some statex
+t
+∈X at time t > 0
+given by
+x
+t
+= ϕ
+t
+x
+0
+We are now ready to give the following deﬁnition
+Deﬁnition 2.1 An n-dimensional dynamical system is said to be dissipative if
+there exists a bounded region S ∈ R
+n
+such that ∀x
+0
+∈ R
+n
+∃t
+0
+> 0 such that
+∀t >t
+0
+, ϕ
+t
+x
+0
+∈S.
+In words, the above deﬁnition means that, in a dissipative dynamical system
+there exists a region such that all trajectoriesenter this region after suﬃciently
+long time, and nothing can escape from this region. This means that if we can
+prove dissipativity, we have proved the existence of a global attractor. It is
+therefore of great interest knowing if a dynamical system is dissipative or not.
+2.1 Proof of dissipativity
+The dissipativity of the Bekryaev system is given by the following.
+Theorem 2.1 The Bekryaev system (1) is dissipative.
+Electronic Journal.  5Differential Equations and Control Processes, N 1, 2005
+Proof
+The idea of the proof is to ﬁnd a proper Lyapunov function V, and then prove
+that it is possible to take a constant Γ such that all regions where V is in-
+creasing in time are totally contained in the ellipsoid formed by V = Γ. This
+means that outside the ellipsoid V = Γ the Lyapunov function V is decreasing,
+and therefore, trajectories outside V = Γ tend inward this ellipsoid. Due to
+symmetries in the Bekryaev system (1), we get rid of some improper terms in
+the time derivative by considering as Lyapunov function
+V =
+1
+2
+ 
+X
+2
++G
+2
++
+16
+5
+(H−U
+U
+)
+2
++F
+2
++Y
+2
++(Z−U
+T
+)
+2
+ 
+(3)
+The level surface to (3) given by V = Γ forms an ellipsoid centered at the
+pointX =G =F =Y = 0,H = U
+U
+,Z = U
+T
+. By taking the derivative with
+respecttotimeτ oftheLyapunovfunction(3),andsubstitutingthederivatives
+from (1), we obtain
+V
+′
+= V
+′
+linear
++V
+′
+quad
++V
+′
+cross
+(4)
+where V
+′
+linear
+, V
+′
+quad
+and V
+′
+cross
+are given by
+V
+′
+linear
+=−BU
+T
+X +
+16
+5
+PPrU
+U
+H +
+ 
+(A+B)
+16U
+U
+5P
++Q
+F
+ 
+F
++
+ 
+16CU
+U
+5P
++Q
+Y
+ 
+Y +PU
+T
+Z
+V
+′
+quad
+=−PrX
+2
+−PrG
+2
+−
+16
+5
+PPrH
+2
+−F
+2
+−Y
+2
+−PZ
+2
+V
+′
+cross
+=−(A+B)
+16
+5P
+HF −
+16C
+5P
+HY +CGZ +(A+B)XZ (5)
+Since P > 0 and Pr > 0, the part V
+′
+quad
+is always negative and dominates
+V
+′
+linear
+far from the origin. The problem is the cross terms in V
+′
+cross
+, which can
+bepositiveevenfarawayfromtheorigin. Togetridoftheseterms,weconsider
+another function V
+FYZ
+in theFYZ-subspace given by
+V
+FYZ
+=
+1
+2
+ 
+F
+2
++Y
+2
++(Z−U
+T
+)
+2
+ 
+(6)
+Electronic Journal.  6Differential Equations and Control Processes, N 1, 2005
+Taking the derivative of (6) with respect to τ gives
+V
+′
+FYZ
+=FQ
+F
+−F
+2
++YQ
+Y
+−Y
+2
+−PZ
+2
++U
+t
+PZ (7)
+Clearly, expression (7) is a quadratic form only in the variables F,Y and Z.
+Further, outside of the sphere V
+′
+FYZ
+= 0, we haveV
+′
+FYZ
+< 0 due to the negative
+signs of the second order terms. This means that we can take a constant Γ
+1
+suchthatoutsidethesphereV
+FYZ
+= Γ
+1
+thefunctionV
+FYZ
+isdecreasingintime.
+This means that we have shown dissipativity in theFYZ-subspace.
+Observethatalltermsin(5)involveoneofthevariablesF,Y orZ. There-
+fore, due to the dissipativityin theFYZ-subspace, bounds for the cross terms
+can be found by replacing F,Y and Z by suﬃciently large constants, say
+F
+max
+,Y
+max
+and Z
+max
+such that
+|F | ≤ F
+max
+|Y | ≤ Y
+max
+|Z | ≤ Z
+max
+From this and the triangleinequalitywe can ﬁnd a bound for expression (5) by
+writing
+V
+′
+cross
+≤
+16
+5P
+| (A+B)HF | +
+16
+5P
+| CHY | +| CGZ | +| (A+B)XZ | ≤
+16
+5P
+| (A+B)H |F
+max
++
+16
+5P
+|CH | Y
+max
++|CG|Z
+max
++| (A+B)X | Z
+max
+Thus, V
+′
+cross
+is less than a function including only linear terms, and it follows
+that the derivative V
+′
+given by (4) becomes negative far away from the origin.
+Therefore, it is possible to take a constant Γ such that all regions where the
+Lyapunov function given by (3) is increasing in time are totally contained in
+the ellipsoidgivenby the levelsurfaceV = Γ, and we have provedthe theorem.
+2.2 Locating the attractor for a special case
+Inthissection,estimatesforthelocationoftheglobalattractorwillbefoundat
+differentQ
+F
+values forthe case whenA = 2,B = 0. Therest ofthe parameters
+Electronic Journal.  7Differential Equations and Control Processes, N 1, 2005
+are ﬁxed to the values given in (2). This case was studied by Bekryaev in [1]
+and willbe analysed furtherin Section 3. By givingQ
+F
+a value, we willbe able
+to determine the smallest possible value of the constant Γ deﬁned in Section
+2.1, say Γ
+s
+, giving the smallest boundary of the global attractor. To do so,
+consider the derivative with respect to time τ of the Lyapunov function given
+by (3). In this case it takes the simpler form
+V
+′
+=−X
+2
+−G
+2
+−F
+2
+−Y
+2
++2(ZX−HF +UuF)
+−
+256
+25
+(H
+2
++HUu)−
+16
+5
+(Z
+2
++ZUt)+FQ
+F
+(8)
+Expression (8) is negative outside the ellipsoid V
+′
+= 0. In order to ﬁnd Γ
+s
+,
+we will determine a point on both surfaces, that is, the ellipsoids V
+′
+= 0 and
+V = Γ
+s
+, of which the corresponding normals ˆ n
+V
+and ˆ n
+V
+′ are parallel. From
+this we have the equations
+ˆ n
+V
+=αˆ n
+V
+′ α > 0
+V = Γ
+s
+(9)
+V
+′
+= 0
+where the normals to the level surfaces can be calculated from
+ˆ n
+V
+=±∇V and ˆ n
+V
+′ =±∇V
+′
+The ﬁrst equation in (9) is six-dimensional, and since we have eight unknown,
+this is enough for ﬁnding solutions with the software package MAPLE. In this
+case however, we obtained three real solutions, which is natural because the
+ellipsoids may touch several times with parallel normals when Γ
+s
+is increased
+from zero. But, choosing the solution that gives the largest Γ
+s
+ensures that the
+ellipsoid V
+′
+= 0 is totally contained in the ellipsoid V = Γ
+s
+. To illustrate the
+result, we look for the maximum value each of the variablesX,G,H,F,Y,Z
+can attain on the global attractor. From the Lyapunov function (3) we ﬁnd
+by setting all except one variable equal to zero the following bounds for the
+variables
+−
+p
+2Γ
+s
+< X,G,F,Y <
+p
+2Γ
+s
+Electronic Journal.  8Differential Equations and Control Processes, N 1, 2005
+U
+U
+−
+√
+10Γ
+s
+4
+< H < U
+U
++
+√
+10Γ
+s
+4
+U
+T
+−
+p
+2Γ
+s
+< Z < U
+T
++
+p
+2Γ
+s
+ThevalueofΓ
+s
+isdeterminedforﬁxedparametervalues. Thus,toillustratehow
+the above intervalls change varying Q
+F
+, we repeat the calculations for the 401
+different parameter values, Q
+F
+=−3000,−2990,...,1000. The result is shown
+in ﬁgure 1, the curves plotted are the functions f
+1
+(Q
+F
+) =U
+T
++
+p
+2Γ
+s
+(Q
+F
+) and
+f
+2
+(Q
+F
+)=−
+p
+2Γ
+s
+(Q
+F
+). Thus,ontheglobalattractor,allvariablesarebounded
+between these curves.
+−3000 −2500 −2000 −1500 −1000 −500 0 500 1000
+−4000
+−3000
+−2000
+−1000
+0
+1000
+2000
+3000
+4000
+5000
+Q
+F
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Figure 1: The functions f
+1
+(Q
+F
+) and f
+2
+(Q
+F
+) which constitute the bounds for all variables on the
+global attractor for −3000≤Q
+F
+≤ 1000.
+3 Analysis in the parameter Q
+F
+In this section, different non-wandering sets that occur in the Bekryaev system
+(1)when changingtheparameterQ
+F
+willbe studied. The parametervalues are
+A = 2 and B = 0, the rest of the parameter values are given in (2). In Section
+2 it was proved that the Bekryaev system has a global attractor,and estimates
+for the bounds of this attractor were found especially for this case, see Section
+2.2. With these parameter values, the Bekryaev system yields
+Electronic Journal.  9Differential Equations and Control Processes, N 1, 2005
+X
+′
+=−X−BeG+2,2GH +(U
+U
+−H)
+Y
+50
++
+ 
+2+
+G
+50
+ 
+Z
+G
+′
+=BeX−G−2,2XH +(H−U
+U
+)
+F
+50
+−
+1
+50
+XZ
+H
+′
+=−
+16
+5
+H−
+ 
+5
+8
++
+G
+160
+ 
+F +
+1
+160
+XY (10)
+F
+′
+=Q
+F
+−U
+T
+G−F +(U
+U
+−H)Y +GZ
+Y
+′
+=U
+T
+X +(H−U
+U
+)F −Y −X
+Z
+′
+=−GF +XY −
+16
+5
+Z
+Here we have used the simpler notationX
+′
+=
+∂X
+∂τ
+and so on.
+3.1 Finding equilibria
+In this section we will ﬁnd equilibria to system (10) by solving the equations
+obtainedbyrequiringthederivativestobe zero. ThesoftwarepackageMAPLE
+was used in order to accomplish the following calculations. Unfortunately, the
+package was not able to solve the system of equations immediately, therefore
+symmetries in the system were used to make simpliﬁcations. By taking the
+following linear combinations
+V
+′
+= 160H
+′
+−Z
+′
+W
+′
+= 50X
+′
+−F
+′
+S
+′
+= 50G
+′
+−Y
+′
+of the equations in (10) we obtain three new equations which contain less
+quadratic terms than the previous ones. These expressions yield, after sub-
+stituting the derivatives from (10),
+Electronic Journal.  10Differential Equations and Control Processes, N 1, 2005
+V
+′
+=−512H−100F +
+16
+5
+Z
+W
+′
+=−50(X +BeG)+110GH +100Z−Q
+F
++U
+T
+G+F
+S
+′
+= 50(BeX−G)−110XH−U
+T
+X +Y
+SolvingV
+′
+= 0 forH and substitutingH into the above expressionsW
+′
+, S
+′
+,
+and intoF
+′
+,Y
+′
+andZ
+′
+from (10) gives the ﬁve differential equations
+W
+′
+=−50(X +BeG)−110G
+ 
+25F
+128
+−
+Z
+160
+ 
++100Z−Q
+F
++U
+T
+G+F
+S
+′
+= 50(BeX−G)+110X
+ 
+25F
+128
+−
+Z
+160
+ 
+−U
+T
+X +Y
+F
+′
+= Q
+F
+−U
+T
+G−F +YU
+U
++Y
+ 
+25F
+128
+−
+Z
+160
+ 
++GZ
+Y
+′
+= U
+T
+X +F
+ 
+25F
+128
+−
+Z
+160
+ 
+−FU
+U
+−Y −XZ
+Z
+′
+=−GF +XY −
+16
+5
+Z
+After solvingY
+′
+= 0 forY, andS
+′
+= 0 forG, we still have three expressions,
+W
+′
+,F
+′
+,Z
+′
+, each involving the variablesX,Z andF. InW
+′
+= 0 andF
+′
+= 0,
+X is found from ﬁrst order equations, therefore one easily obtain two expres-
+sions for X as functions of F and Z, say X
+1
+and X
+2
+. In the following step,
+substitute one of these expressions into Z
+′
+. By plotting the curves X
+2
+= X
+1
+andZ
+′
+= 0forQ
+F
+= 0inthesameplot,onecangraphicallydetermineintervals
+small enough for MAPLE to ﬁnd the intersections of the curves.
+For Q
+F
+= 0, we have found apart from the unstable equilibrium at the
+origin (F
+0
+), two equilibria, one of which is unstable (F
+1
+), and one stable (F
+2
+).
+Unfortunately,we cannot withthis method showthat these three equilibriaare
+the only existing ones.
+Electronic Journal.  11Differential Equations and Control Processes, N 1, 2005
+3.2 Analysing equilibria varying Q
+F
+The software package AUTO was used in order to examine the behaviour of
+the three equilibria F
+0
+, F
+1
+and F
+2
+when changing Q
+F
+. In ﬁgure 2, the distance
+from the origin to all three equilibria and the maximum distance from the ori-
+gin to a limit cycle marked P are plotted versus Q
+F
+. F
+0
+moves slowly when
+Q
+F
+changes, this unstable equilibrium has four contracting directions and no
+bifurcation occurs. The two other equilibria, F
+1
+and F
+2
+are created in a fold
+bifurcation at Q
+F
+= 200. For large Q
+F
+values we have the stable limit cycle P
+as an attracting set, the cycle is shown for Q
+F
+= 300 in ﬁgure 5; Section 3.3.
+This cycle loses stability in a Neimark-Sacker bifurcation at Q
+F
+= 185, and
+disappears in a subcritical Hopf bifurcation for Q
+F
+= 172 at equilibrium F
+1
+.
+Figure3illustratesthebehaviourofF
+1
+ineachcoordinate. Thefoldbifurca-
+tionsaremarkedbydottedlinesandtheHopfbifurcationsbybrokenlines. The
+ﬁrst branch of equilibrium F
+1
+(F
+1
+a) exists in the interval −61.0 < Q
+F
+< 200,
+the number of contracting directions changes from ﬁve to three in the sub-
+critical Hopf bifurcation at Q
+F
+= 172. Moreover, at Q
+F
+= −10.3 we have a
+fold bifurcation where two more equilibria, one stable (F
+1
+b) and one unstable
+(F
+1
+c) are created. Thus, from F
+1
+, there are three equilibria in the interval
+−61.0 < Q
+F
+< −10.3. In this interval the stable equilibrium F
+1
+b loses two
+contracting directions in a subcritical Hopf bifurcation at Q
+F
+= −28.6, where
+also an unstable cycle is created. Further, the branches F
+1
+b and F
+1
+a meet and
+disappear in another fold bifurcation at Q
+F
+= −61.0. Thus, for Q
+F
+< −61.0
+only F
+1
+c remains and changes slowly.
+F
+2
+consists of one stable equilibrium (F
+2
+a) when−14.4<Q
+F
+< 200. Simi-
+lartoF
+1
+, twomoreequilibria,oneunstablebranch(F
+2
+b)andonestablebranch
+(F
+2
+c)ariseinafoldbifurcationatQ
+F
+=−14,4. ThestablebranchF
+2
+closestwo
+contractingdirectionsinasupercriticalHopfbifurcationatQ
+F
+=−14,7,where
+astablelimitcycleoccurs. Further,F
+2
+aandF
+2
+baredestroyedinafoldbifurca-
+tion at Q
+F
+=−50.7, and for Q
+F
+<−50.7 only F
+2
+c remains and changes slowly.
+Figure4 illustratesthe existenceof equilibriain differentintervalsfromF
+2
+. Ta-
+ble3.1summarizesthenumberofequilibriaexistingindifferentintervalsofQ
+F
+.
+Electronic Journal.  12Differential Equations and Control Processes, N 1, 2005
+−1000 −500 0 500
+0
+200
+400
+600
+800
+1000
+1200
+1400
+Norm
+Q
+F
+F
+2
+ 
+F
+1
+ 
+F
+0
+ 
+P 
+Figure 2: The distance from the origin to the three equilibria F
+0
+, F
+1
+, F
+2
+and the maximum distance
+from the origin to a limit cycle marked P for −1000≤Q
+F
+≤ 500.
+−200 −100 0 100 200
+0
+50
+100
+G
+−200 −100 0 100 200
+−12
+−11
+−10
+−9
+−8
+H
+−200 −100 0 100 200
+50
+60
+70
+F
+−200 −100 0 100 200
+−200
+0
+200
+400
+600
+Y
+Q
+F
+−200 −100 0 100 200
+0
+100
+200
+300
+Z
+−200 −100 0 100 200
+4
+6
+8
+10
+12
+14
+X
+F
+1
+a 
+F
+1
+c 
+F
+1
+b 
+Q
+F
+Figure 3: The variation of F
+1
+in all coordinates for −200 ≤ Q
+F
+≤ 200, dotted lines show the
+location of fold bifurcations and broken lines indicate the location of Hopf bifurcations.
+Electronic Journal.  13Differential Equations and Control Processes, N 1, 2005
+−200 −100 0 100 200
+0
+500
+1000
+1500
+X
+−200 −100 0 100 200
+−500
+0
+500
+G
+−200 −100 0 100 200
+−12
+−11
+−10
+−9
+−8
+H
+−200 −100 0 100 200
+60
+65
+70
+75
+F
+−200 −100 0 100 200
+−200
+0
+200
+400
+Y
+Q
+F
+−200 −100 0 100 200
+300
+400
+500
+600
+Z
+Q
+F
+F
+2
+a 
+F
+2
+b 
+F
+2
+c 
+Figure 4: The variation of F
+2
+in all coordinates for −200 ≤ Q
+F
+≤ 200, dotted lines show the
+location of fold bifurcations and the broken line indicates the location of a Hopf bifurcation.
+Table 3.1: Equilibria in different intervals of Q
+F
+. The number of contracting di-
+rections of each equilibrium are given by the number in each square.
+Q
+F
+No F0 F1a F1b F1c F2a F2b F2c
+(1000,200) 1 4 - - - - - -
+(200,172) 3 4 5 - - 6 - -
+(172,−10.3) 3 4 3 - - 6 - -
+(−10.3,−14.4) 5 4 3 6 5 6 - -
+(−14.4,−14.7) 7 4 3 6 5 6 5 6
+(−14.7,−28.6) 7 4 3 6 5 6 5 4
+(−28.6,−50.7) 7 4 3 4 5 6 5 4
+(−50.7,−61.0) 5 4 3 4 5 - - 4
+(−61.0,−3000) 3 4 - - 5 - - 4
+3.3 Attractors at different Q
+F
+values
+In this section we will look for different attractors that occur in system (10)
+when changingQ
+F
+and takinga startingpoint close to the origin. For largeQ
+F
+values,thestablecycleP discussedinSection3.2istheattractingset,seeﬁgure
+Electronic Journal.  14Differential Equations and Control Processes, N 1, 2005
+5. By decreasingthe parameter,cycleP disappears, and the stable equilibrium
+F
+2
+a takes over.
+5 10 15 20
+75.5
+76
+76.5
+77
+X
+G
+0 50 100 150
+500
+520
+540
+560
+580
+F
+Y
+−13.5 −13 −12.5 −12 −11.5 −11
+180
+200
+220
+240
+260
+280
+H
+Z
+500 520 540 560 580
+180
+200
+220
+240
+260
+280
+Y
+Z
+Figure 5: The limit cycle P of system (10) for Q
+F
+= 300.
+A more complicated attractor (CA) occurs when F
+2
+a destroys in the fold bi-
+furcation at Q
+F
+= −50,7. Figure 6 shows this attractor for Q
+F
+= −300. The
+Z-coordinate for the ﬁve different parameter values Q
+F
+=−300,−450,
+−650,−1000 and Q
+F
+=−2500 is shown in ﬁgure 7 to give an overview of how
+the attractor changes with the parameter. For Q
+F
+= −300, the attractor CA
+clearly shows one repeating laminar and one repeating more complicated part.
+In fact, the laminar part becomes longer by increasing the parameter until we
+have the stable equilibrium. In order to explain this behaviour, consider the
+following. Figure 8 illustratesthe location of the attractingset forQ
+F
+=−50.7
+and Q
+F
+= −51.0. In the ﬁrst case, trajectories are attracted by the stable
+equilibrium F
+2
+a, and in the latter, we have the attractor CA. In ﬁgure 8 one
+cansee thatthelaminarpartliesclosetothepositionofthestableequilibrium,
+andwemayguess, duetothisandﬁgure7,thattheattractingbehaviourofF
+2
+a
+remains even for small Q
+F
+values, where the equilibrium does not exist. To see
+thatthisisthecase,thelocallinearizationfortheequilibriumF
+2
+aareevaluated
+at Q
+F
+= −50.7, that is, we calculate the eigenvalues and eigenvectors to the
+Jacobian matrix of system (10) at that point. Now, consider the eigenvector
+corresponding to the eigenvalue which is zero in the fold bifurcation where F
+2
+a
+disappears. By comparing this eigenvector to the direction of trajectories in
+the laminarpartofCA forQ
+F
+=−51.0,we conclude thattrajectoriesleavethe
+Electronic Journal.  15Differential Equations and Control Processes, N 1, 2005
+laminar part in a direction close to this eigenvector. Therefore, it is clear that
+thelaminarpartoccursduetotheearlierexistingstableequilibrium. Moreover,
+the behaviour of the more complicated parts of the attractor CA remains for
+some parameter values larger than Q
+F
+=−50.7. This can be seen by choosing
+a starting point at each side of equilibrium F
+2
+b, (which has ﬁve contracting
+directions, cf table 3.1) in the repelling direction. From both starting points,
+the trajectory arrives F
+2
+a, and one of these orbits behaves similar to the more
+complicated part of CA for nearby Q
+F
+values. From this we conclude that the
+attractorCAcreateswhenthebranchesF
+2
+aandF
+2
+bmeetanddisappearinthe
+fold bifurcation.
+−500 0 500
+−800
+−600
+−400
+−200
+0
+200
+400
+600
+X
+G
+−200 −100 0 100 200 300
+−200
+0
+200
+400
+F
+Y
+−20 −10 0 10
+400
+500
+600
+700
+800
+H
+Z
+−200 0 200 400
+400
+500
+600
+700
+800
+Y
+Z
+Figure 6: The attractor CA of system (10) for Q
+F
+= −300. In this case the attractor shows a
+limit cycle.
+3.4 Analysing CA with a Poincar´ e map
+InthissectionwewillexaminethebehaviouroftheattractorCAwhenchanging
+Q
+F
+, that is, we will investigate whether CA shows some periodic cycles or
+chaotic behaviour. For doing this, a Poincar´ e map
+1
+P
+Q
+F
+, depending on Q
+F
+is
+deﬁned.
+P
+Q
+F
+:R
+5
+→R
+5
+1
+Theory about Poincar´ e maps can be found in [9], [10] and [11].
+Electronic Journal.  16Differential Equations and Control Processes, N 1, 2005
+50 55 60 65 70 75 80 85 90 95 100
+0
+500
+1000
+50 55 60 65 70 75 80 85 90 95 100
+0
+500
+1000
+55 60 65 70 75 80 85 90 95 100
+0
+500
+1000
+55 60 65 70 75 80 85 90 95 100
+0
+500
+1000
+55 60 65 70 75 80 85 90 95 100
+0
+500
+1000
+(a) 
+(b) 
+(c) 
+(d) 
+(e) 
+Z 
+τ 
+Figure 7: The Z-coordinate of attractor CA when (a) Q
+F
+= −300, (b) Q
+F
+= −450, (c) Q
+F
+=
+−650, (d) Q
+F
+=−1000, (e) Q
+F
+=−2500.
+200 400 600 800 1000 1200 1600 1800
+500
+600
+700
+800
+900
+1000
+Norm
+τ
+1400
+Figure 8: The distance from the origin to the stable equilibria F
+2
+a at Q
+F
+=−50.7 as a broken line,
+and to the attractor CA at Q
+F
+=−51.0 as a solid curve.
+3.4.1 Construction of the Poincar´ e map
+Consider a ﬁve-dimensional plane nearly orthogonalto the direction of the tra-
+jectory when it passes the middle of the laminar part of the attractor CA at
+Q
+F
+= −51.0. The Poincar´ e map P
+Q
+F
+will be deﬁned by this plane, and when
+investigating periodicity in the laminar part, we also need another condition
+Electronic Journal.  17Differential Equations and Control Processes, N 1, 2005
+for P
+Q
+F
+, namely, that trajectories cross the plane almost perpendicular. This
+is to avoid all intersections from other parts of CA. With this deﬁnition of the
+Poincar´ e map, it is clearly not well deﬁned for all Q
+F
+values, because the be-
+haviour of the laminar part changes with Q
+F
+, but it is enough for investigating
+the attractor to approximately Q
+F
+=−400.
+To ﬁnd the plane, new coordinates (x,g,h,f,y,z) are introduced such that
+system (10) has, in these coordinates, the stable equilibrium F
+2
+a at the origin
+for Q
+F
+=−50.7. We now have system (10) written in the form
+˙ x = κ(x), x∈R
+6
+(11)
+where κ forms the right hand side of the equations and κ(0) = 0. In the next
+step, system (11) is transformed into the eigenbasis to the Jacobian matrix for
+F
+2
+a at Q
+F
+= −50.7. This is done using diagonalization in the following way.
+Let e
+1
+,...,e
+6
+denote the set of eigenvectors to the Jacobian matrix, where
+e
+1
+is the eigenvector corresponding to the eigenvalue which is zero at the fold
+bifurcation where F
+2
+a disappears. Then we put
+P = [e
+1
+,...,e
+6
+] and x = [x,g,h,f,y,z]
+T
+Now, new coordinatesu = [a,b,c,d,k,l]
+T
+are deﬁned by
+x =Pu
+System (11) can now be transformed intou coordinates by
+P ˙ u =κ(Pu)
+giving
+˙ u=P
+−1
+κ(Pu) (12)
+In system (12), variable a corresponds to the direction of the eigenvector e
+1
+,
+therefore, a will change quite fast during the laminar part of CA, where the
+rest of the variables, b,c,d,k,l will stay almost constant. The ﬁve-dimensional
+plane seeked for can now be found as a= 0.
+Electronic Journal.  18Differential Equations and Control Processes, N 1, 2005
+3.4.2 Implementation and results
+To see when a trajectory crosses the plane a = 0, we check if
+a
+i
+a
+i−1
+≤ 0, i = 1,2,3,... (13)
+whereisymbolizesthenumberofstepstakenbytheC-programme. Inwords,it
+is checked if the variable a has changed sign after every iteration. To constrain
+P
+Q
+F
+to intersections only from the laminar part, we deﬁne the norm N
+i
+in the
+variables b,c,d,k,l by
+N
+i
+= b
+2
+i
++c
+2
+i
++d
+2
+i
++k
+2
+i
++l
+2
+i
+Further, let the difference ΔN
+i
+be given by
+ΔN
+i
+=N
+i
+−N
+i−1
+We demand that ΔN
+i
+is bounded by a suﬃciently small number ǫ, that is
+ΔN
+i
+<ǫ (14)
+By testing, we found a proper value of ǫ, giving only the intersections from the
+laminar part of CA. If (13) and (14) simultaneously hold after iteration i, the
+program checks if
+a
+i
+<δ or a
+i−1
+< δ (15)
+where δ is a suﬃciently small number determining the accuracy. If (15) does
+not hold, the programmereverses one iterationand takes half the step size and
+so on, until (15) is satisﬁed.
+We show the result of 350 implementations for the parameter values Q
+F
+=
+−51,−52,...,−400. Bycomparingthetimeτ atdifferentintersectionswiththe
+plane, we found the proper value ǫ = 0.001. Further, the accuracy parameter
+wasδ = 10
+−7
+. In eachsimulation,2·10
+7
+loopswerecarriedout, (correspondsto
+integratingto about τ = 3·10
+4
+) before starting to analyse the Poincar´ emap to
+avoidtransients. Then we let the simulationsgo on until100 pointswere found
+Electronic Journal.  19Differential Equations and Control Processes, N 1, 2005
+inthemap. Withthismethodittookabout17minutestoanalyseone parame-
+ter value, which means that the whole simulation needed about 100 hours. For
+Q
+F
+= −51,−52,...,−296, we have a ﬁxed point in the Poincar´ e map, which
+means that the laminar part of CA occurs periodically with periodicity one.
+When the parameter decreases further, the attractor jumps between different
+periodicitiesandmorecomplicatedbehaviourduetounknownbifurcations. An
+overview of this behaviour is illustrated in ﬁgure 9, which shows the results for
+Q
+F
+= −280,−281,...,−400. In ﬁgure 9(a), black lines are plotted for Q
+F
+values corresponding to detected periodic solutions. In ﬁgure 9(b), solid lines
+indicate the location of periodic cycles with periodicity two, and the broken
+line indicates a periodic cycle having periodicity four.
+−400 −380 −360 −340 −320 −300 −280
+1
+1.5
+2
+2.5
+3
+Q
+F
+−400 −380 −360 −340 −320 −300 −280
+1
+1.5
+2
+2.5
+3
+Q
+F
+(a) 
+(b) 
+Figure 9: Strange bifurcation behaviour for Q
+F
+= −280,−281,...,−400. (a) A black line is
+plotted for detected periodic attractors. (b) Solid lines indicate periodicity two, and the broken line
+indicates periodicity four.
+WhendecreasingtheparameterfromQ
+F
+=−51,theﬁrstmorecomplicated
+resultisobtainedforQ
+F
+=−306. ThePoincar´ emapforthiscasetogetherwith
+the result for Q
+F
+= −305, a ﬁxed point, are shown in ﬁgure 10. Here, solid
+squares are plotted for the case Q
+F
+=−305, and dots for Q
+F
+=−306. Figure
+11showsthePoincar´ emapforQ
+F
+=−324,acyclewithperiodicitytwo,andfor
+Q
+F
+= −359, a cycle with periodicity four. The Z-coordinate of the attractor
+CA for the above cases Q
+F
+= −305,−306,−324 and Q
+F
+= −359 is shown in
+ﬁgure 12.
+To verify whether there are chaos in the more complicated attractors de-
+tected above or not, one can, in each case, determine the corresponding Lya-
+Electronic Journal.  20Differential Equations and Control Processes, N 1, 2005
+punovspectrum. In Section5, wepresentsometheoryaboutLyapunovspectra
+and a method for determining the spectrum. Calculations have been carried
+outforQ
+F
+=−300,−301,...,−400. Theresultindicatesthattherearestrange
+attractors in the cases where no period was detected in the Poincar´ e map. In
+table 5.1; Section 5.4, we show the resulting Lyapunov spectrum for the at-
+tractor CA at some parameter values between Q
+F
+= −3000 and Q
+F
+= −300,
+fromwhichweconcludethattherearechaosforQ
+F
+valuesbelowapproximately
+Q
+F
+=−600.
+−0.1 −0.05 0 0.05
+0.6
+0.65
+0.7
+0.75
+b
+c
+0.6 0.65 0.7 0.75
+−1.58
+−1.56
+−1.54
+−1.52
+−1.5
+−1.48
+−1.46
+c
+d
+−1.56 −1.54 −1.52 −1.5 −1.48 −1.46
+−0.45
+−0.4
+−0.35
+−0.3
+−0.25
+d
+e
+−0.45 −0.4 −0.35 −0.3 −0.25
+−32.6
+−32.55
+−32.5
+−32.45
+e
+f
+Figure 10: Poincar´ e map for Q
+F
+=−305 as solid squares, and Q
+F
+=−306 as dots. In each case
+100 intersections are plotted. The ﬁrst case shows a ﬁxed point while the second case shows a more
+complicated behaviour.
+Electronic Journal.  21Differential Equations and Control Processes, N 1, 2005
+−0.05 0 0.05
+0.75
+0.8
+0.85
+0.9
+0.95
+b
+c
+0.75 0.8 0.85 0.9 0.95
+−2
+−1.9
+−1.8
+−1.7
+−1.6
+c
+d
+−1.9 −1.8 −1.7 −1.6
+−0.45
+−0.4
+−0.35
+−0.3
+d
+e
+−0.4 −0.35 −0.3
+−39
+−38
+−37
+−36
+−35
+e
+f
+Figure 11: Poincar´ e map for Q
+F
+=−324 as dots, and Q
+F
+=−359 as solid squares. In each case
+100 intersections are plotted. The ﬁrst case shows a two periodic cycle while the second case shows
+a four periodic one.
+0 20 40 60 80 100 120
+200
+400
+600
+800
+1000
+0 20 40 60 80 100 120
+200
+400
+600
+800
+1000
+0 20 40 60 80 100 120
+200
+400
+600
+800
+1000
+0 20 40 60 80 100 120
+200
+400
+600
+800
+1000
+τ
+Z 
+(a) 
+(b) 
+(c) 
+(d) 
+Figure 12: Z-coordinate for the cases (a) Q
+F
+= −305, showing a periodic cycle with periodicity
+one. (b) Q
+F
+= −306, more complicated attractor. (c) Q
+F
+= −324, a two periodic cycle, (d)
+Q
+F
+=−359, a four periodic cycle.
+Electronic Journal.  22Differential Equations and Control Processes, N 1, 2005
+4 Bifurcations in the AB-plane
+In this section we will investigate the fold and Hopf bifurcations
+2
+that occur
+whenvaryingtheparametersAandB forQ
+F
+= 0andtheremainingparameters
+to the values given in (2). In this case, the Bekryaevsystem (1)takes the form
+∂X
+∂τ
+=−BU
+T
+−X−BeG+2.2GH +(U
+U
+−H)
+Y
+50
++
+ 
+A+B+
+G
+50
+ 
+Z
+∂G
+∂τ
+=BeX−G−2.2XH +(H−U
+U
+)
+F
+50
++
+1
+50
+XZ
+∂H
+∂τ
+=−
+16
+5
+H−
+ 
+5
+16
+(A+B)−
+G
+160
+ 
+F +
+1
+160
+XY (16)
+∂F
+∂τ
+=−U
+T
+G−F +(U
+U
+−H)Y +GZ
+∂Y
+∂τ
+=U
+T
+X +(H−U
+U
+)F −Y −XZ
+∂Z
+∂τ
+=−GF +XY −
+16
+5
+Z
+One can see that system (16) is symmetric in such a way that the substitution
+A =−A, B =−B, X =−X, G =−G, F =−F, Y =−Y
+leavesitinvariant. Thismeansthatweonlyneedtoconsidervariationsinsome
+values of the parameters A and B to understand the parameter plane.
+4.1 The 20 regions
+From Section 3 we know that system (16) has three equilibria for A = 2 and
+B = 0. The software package AUTO was used in order to follow these equi-
+libria under variations in the free parameters A and B. By doing this, several
+bifurcations occurred that could be followed by the program in order to ﬁnd
+the corresponding bifurcation curves in the plane of the parameters A and B.
+This analysis contains the fold and Hopf bifurcations, limit cycles are not anal-
+ysed with exception of the fold-Hopf case studied in Section 4.2, however,some
+2
+Theory about fold and Hopf bifurcations can be found in [9], [10] and [11].
+Electronic Journal.  23Differential Equations and Control Processes, N 1, 2005
+stable limit cycles that occur will be illustrated in Section 4.3. Figure 14 and
+15 show that the interesting part of the bifurcation diagram are fairly close to
+the origin in the AB-plane, therefore, an overview of all bifurcation curves and
+regionsareshowninﬁgure13, whichhasan “unreal”scaletoenableus toshow
+all 20 regions bounded by the bifurcation curves in the same ﬁgure.
+B−T
+F−H
+B
+A
+c
+3
+c
+1
+V
+f
+f
+1
+f
+1
+f
+2
+f
+2
+f
+3
+f
+3
+h
+1
+h
+1
+h
+2
+h
+3
+c
+2
+Ia
+I
+b
+I
+b
+Ic
+IIIa
+III
+′
+a
+III
+b
+III
+′
+b
+IIIc III
+′
+c
+III
+d
+III
+′
+d
+IIIe
+III
+2
+V
+d
+V
+′
+d
+Ve
+V
+′
+e
+V
+2
+V
+′
+2
+Figure 13: Overview in an unreal scale of the bifurcation diagram in the AB-plane. The Roman
+numerals symbolize the number of equilibria existing in each region. Solid curves indicate fold
+bifurcations and broken curves indicate Hopf bifurcations.
+The bifurcation diagram will be described from ﬁgure 13, but we will also refer
+to the real bifurcation diagram illustrated in ﬁgure 14 - 17. One need to men-
+tion that nothing ensures that all existing equilibria and bifurcations are found
+in this analysis.
+FarfromtheoriginintheAB-planethefourregionsI
+a
+,I
+b
+,I
+c
+andIII
+a
+dom-
+inate, and in region I
+b
+, we have only one unstable equilibrium. At the Hopf
+bifurcation curves h
+2
+and h
+3
+, this equilibrium becomes stable, therefore, we
+Electronic Journal.  24Differential Equations and Control Processes, N 1, 2005
+have one stable equilibrium in the regions I
+a
+and I
+c
+. The curves marked f
+1
+,
+meeting at the cusp bifurcation point c
+1
+, denote a fold bifurcation. By cross-
+ing f
+1
+from region I
+a
+, two equilibria are created, one stable and one unstable.
+Thus, in region III
+′
+a
+and III
+a
+, we have three equilibria, two stable and one
+unstable. Moreover,close to the fold bifurcationcurvef
+1
+we have a Hopf bifur-
+cation curve marked h
+1
+. These curves bound the narrow regionsIII
+′
+a
+, III
+′
+b
+, V
+′
+2
+,
+III
+′
+c
+, V
+′
+d
+and V
+′
+e
+. The equilibria in these regions differ from their corresponding
+regions to the rightwith respect to the number of contractingdirections on the
+unstable equilibrium created at the fold bifurcation curve f
+1
+. When crossing
+the Hopf bifurcation curve h
+1
+to the left, the number of contracting directions
+increasefromthreetoﬁve,andsimultaneouslyanunstablelimitcycleiscreated.
+From the fact that the stable equilibrium in region I
+a
+loses stability when
+entering region I
+b
+due to the Hopf bifurcation at the curve h
+2
+, we ﬁnd that in
+region III
+b
+, we have one stable and two unstable equilibria. In region III
+2
+,
+bounded by the fold bifurcation curves marked f
+2
+, meeting at the cusp bifur-
+cation c
+2
+, there are three unstable equilibria. By crossing the fold bifurcation
+curvef
+2
+fromIII
+b
+oneenters regionV
+2
+. Here wehaveﬁve equilibria,theunsta-
+ble one from I
+b
+together with the equilibria created at f
+1
+and f
+2
+respectively.
+Thus, there are one stable and four unstable equilibria in this region. In region
+III
+c
+, we have the same set of equilibria as in region III
+b
+, that is, one stable
+and two unstable ones.
+For the parameter values A = 0.23114, B = −0.023035, the Hopf bifurca-
+tion curve h
+3
+collides with the fold bifurcationcurvef
+3
+and disappears. At this
+point,wehavetwozeroeigenvalueswhichmeansaBogdanov-Takens(fold-fold)
+bifurcation (marked B-T in the ﬁgures). Figure 16 shows the location of this
+bifurcation. Moreover, the fold curves f
+1
+, joint at the cusp bifurcation c
+1
+and
+the Hopf curve h
+1
+intersect at A = 1.2426, B = −0.016664. Here we have
+one zero and a pair of pure imaginary eigenvalues which means a fold-Hopf
+bifurcation (marked F-H in the ﬁgures). Figure 17 shows the location of this
+bifurcation, which will be investigated further in Section 4.2. On the curve
+segments f
+3
+, meeting at cusp point c
+3
+, one stable and one unstable equilibrium
+arise if the curve is crossed above the Bogdanov-Takens bifurcation, otherwise,
+two unstable equilibria are created. Therefore, in region III
+d
+, we have one
+stable and two unstable equilibria. Since the stable equilibria in I
+c
+loses two
+contracting directions at the supercritical Hopf bifurcation represented by the
+Electronic Journal.  25Differential Equations and Control Processes, N 1, 2005
+curve h
+3
+, there are three unstable equilibria in region III
+′
+d
+, coexisting with the
+stable limit cycle created at the Hopf bifurcation. This cycle is shown for some
+parameter values in region III
+′
+d
+in ﬁgure 24; Section 4.3.
+In the regions V
+d
+and V
+e
+, we have the equilibria from region III
+d
+together
+with the two equilibria created at the fold bifurcation marked f
+1
+. This means
+that there are two stable and three unstable equilibria in region V
+d
+, and due
+to the Hopf bifurcation at the curve h
+1
+, there are one stable and four unstable
+equilibria in region V
+e
+. Table 4.1 summarizes the number of stable equilib-
+ria in each region, also, it tells about the number of contracting directions of
+theequilibria. TounderstandthesetofequilibriainregionV
+f
+,seeSection4.2.5.
+From table 4.1 it is clear that all equilibria found in this analysis have one
+feature in common, they all have at least three contracting directions. This
+is also true for the equilibria discovered in Section 3, cf table 3.1; Section 3.2.
+Moreover,alllimitcyclesfoundalsohavethisproperty,andfromSection5.4,it
+follows that all Lyapunov spectra determined have at least three strongly neg-
+ative exponents. From these observations one may suspect that the dynamics
+intheBekryaevsystem(1)takeplaceonathree-dimensionalinvariantmanifold.
+Electronic Journal.  26Differential Equations and Control Processes, N 1, 2005
+−100 −50 0 50 100 150
+−60
+−40
+−20
+0
+20
+40
+60
+80
+100
+120
+A
+B
+I
+a
+III
+a
+I
+c
+h
+3
+ 
+I
+b
+h
+1
+ 
+f
+1
+ 
+h
+2
+ 
+Figure 14: Bifurcation diagram in the AB-plane.
+−20 −15 −10 −5 0 5 10 15 20 25
+−5
+0
+5
+10
+15
+20
+25
+A
+B
+I
+b
+I
+a
+III
+b
+ 
+III
+2
+ 
+f
+2
+ 
+f
+2
+f
+1
+ 
+c
+2
+ 
+h
+1
+ 
+h
+2
+ 
+h
+3
+ 
+h
+2
+ 
+V
+2
+III
+a
+I
+a
+I
+c
+I
+b
+Figure 15: Magniﬁcation of part of ﬁgure 14.
+Electronic Journal.  27Differential Equations and Control Processes, N 1, 2005
+0 0.5 1 1.5 2 2.5 3 3.5 4
+−0.8
+−0.6
+−0.4
+−0.2
+0
+0.2
+0.4
+0.6
+A
+B
+III
+2
+ 
+III
+d
+ 
+III’
+d
+ 
+I
+b
+V
+2
+III
+c
+ 
+I
+c
+h
+1
+ 
+f
+1
+ 
+f
+2
+ 
+c
+3
+ 
+f
+3
+ 
+f
+3
+ 
+h
+3
+ 
+B−T 
+Figure 16: Magniﬁcation showing the location of the Bogdanov-Takens bifurcation.
+1 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2
+−0.02
+−0.015
+−0.01
+−0.005
+0
+0.005
+0.01
+A
+B
+I
+b
+III’
+c
+ 
+III
+c
+ 
+V’
+d
+ 
+III
+e
+ 
+III
+d
+ 
+V
+d
+V’
+e
+ 
+V
+e
+f
+3
+ 
+f
+1
+ h
+1
+ 
+f
+1
+ 
+c
+1
+ 
+F−H
+V
+f
+Figure 17: Magniﬁcation showing the location of the fold-Hopf bifurcation.
+Electronic Journal.  28Differential Equations and Control Processes, N 1, 2005
+Table4.1: Thenumberofequilibriaandtheirtypeineachofthe20regionsbounded
+by the fold and Hopf bifurcation curves.
+Region No Stable Unstable Contracting directions
+I
+a
+1 1 0 6
+I
+b
+1 0 1 4
+I
+c
+1 1 0 6
+III
+2
+3 0 3 4, 4, 3
+III
+a
+3 2 1 6, 6, 3
+III
+′
+a
+3 2 1 6, 6, 5
+III
+b
+3 1 2 6, 4, 3
+III
+′
+b
+3 1 2 6, 5, 4
+III
+c
+3 1 2 6, 4, 3
+III
+′
+c
+3 1 2 6, 5, 4
+III
+d
+3 1 2 6, 5, 4
+III
+′
+d
+3 0 3 5, 4, 4
+III
+e
+3 0 3 5, 4, 4
+V
+2
+5 1 4 6, 4, 4, 3, 3
+V
+′
+2
+5 1 4 6, 5, 4, 4, 3
+V
+d
+5 2 3 6, 6, 5, 4, 3
+V
+′
+d
+5 2 3 6, 6, 5, 5, 4
+V
+e
+5 1 4 6, 5, 4, 4, 3
+V
+′
+e
+5 1 4 6, 5, 5, 4, 4
+V
+f
+5 2 3 6, 6, 5, 5, 4
+Electronic Journal.  29Differential Equations and Control Processes, N 1, 2005
+4.2 The fold-Hopf bifurcation
+In this section we will start by presenting some theory from [10] about center
+manifolds that allow one to reduce the dimension of a given dynamical system
+near a local bifurcation. The three-dimensional dynamical system restricted to
+thecentermanifoldforthefold-HopfbifurcationatA = 1.2426,B =−0.016664
+will be approximated with up to second order terms. Then this system is
+transformed into a normal form for fold-Hopf bifurcations, and this normal
+form is then analysed giving the local bifurcation diagram.
+4.2.1 Center manifold theorems
+Consider a continuous dynamical system deﬁned by
+˙ x =f(x), x∈R
+n
+(17)
+wheref issuﬃcientlysmoothandf(0)= 0. LettheeigenvaluesoftheJacobian
+matrixA evaluated at the equilibrium pointx
+0
+= 0 be λ
+1
+,λ
+2
+,...,λ
+n
+. Suppose
+that there are eigenvalues with zero real part, and assume that there are n
++
+eigenvalues (counting multiplicities) with Re λ > 0 , n
+0
+eigenvalues with Re
+λ = 0 and n
+−
+eigenvalues with Re λ < 0. Let T
+c
+denote the linear eigenspace
+corresponding to the union of the n
+0
+eigenvalues on the imaginary axis and let
+ϕ
+t
+denote the ﬂow
+3
+associated with (17). Under the assumptions stated above,
+the following theorem holds.
+Theorem 4.1 (Center Manifold Theorem) There is a locally deﬁned
+smooth n
+0
+-dimensional invariant manifold W
+c
+of (17) that is tangent to T
+c
+at
+x = 0. Moreover, there is a neighborhood U of x
+0
+= 0, such that if ϕ
+t
+x ∈ U
+for all t≥ 0 (t≤ 0), then ϕ
+t
+x→W
+c
+for t→∞ (t→−∞).
+Deﬁnition 4.1 The manifold W
+c
+is called the center manifold.
+3
+A deﬁnition of ϕ
+t
+can be found in the beginning of Section 3.
+Electronic Journal.  30Differential Equations and Control Processes, N 1, 2005
+In its eigenbasis
+4
+, system (17) can be written as
+˙ u =Bu+g(u,v)
+˙ v =Cv+h(u,v)
+(18)
+where u ∈ R
+n
+0
+, v ∈ R
+n
++
++n
+−
+, B is an n
+0
+×n
+0
+matrix with all its eigenvalues
+on the imaginary axis, while C is an (n
++
++n
+−
+)×(n
++
++n
+−
+) matrix with no
+eigenvalue on the imaginary axis. Functions g and h have Taylor expansions
+starting with at least quadratic terms. Further, the center manifold W
+c
+of
+system (18) can be locally represented as a graph of a smooth function
+W
+c
+={(u,v) :v =V(u)}
+where V : R
+n
+0
+→ R
+n
++
++n
+−
+, and due to the tangent property of W
+c
+, V(u) =
+O(kuk
+2
+). Figure 18 illustrates a two-dimensional center manifold in a three-
+dimensional dynamical system as the graph of a function v =V(u).
+Figure 18: Center manifold as the graph of a function v = V(u).
+4
+Recallthattheeigenbasisisabasisformedbyall(generalized)eigenvectorsofA(ortheirlinearcombinations
+if the corresponding eigenvalues are complex). Actually, the basis used in the following may not be the true
+eigenbasis. Any basis in the noncritical eigenspace is allowed. In other words, the matrix C may not be in real
+canonical (Jordan) form.
+Electronic Journal.  31Differential Equations and Control Processes, N 1, 2005
+The following theorem ends this section.
+Theorem 4.2 (Reduction Principle) System(18)islocallytopologicallyequiv-
+alent near the origin to the system
+˙ u =Bu+g(u,V(u))
+˙ v =Cv
+(19)
+Notice that the equations foru andv are uncoupled in (19). This means that
+only the ﬁrst equation, which is the restriction of (18) to its center manifold,
+has to be analysed to understand the dynamics locally near the bifurcation. In
+Section 4.2.2, we will show how to determine this equation for the fold-Hopf
+bifurcation.
+4.2.2 Approximating the system restricted to W
+c
+The following calculations have been carried out using the software package
+MAPLE. As a ﬁrst step, it is veriﬁed by the eigenvaluesto the Jacobianmatrix
+that n
++
+= 0, n
+0
+= 3 and n
+−
+= 3, which means that the center manifold to the
+fold-Hopf bifurcation is three-dimensional and stable.
+We now deﬁne new parametersα = (α
+1
+,α
+2
+) and new coordinates (x,g,
+h,f,y,z) in system (16) such that the fold-Hopf bifurcation occurs at the pa-
+rametervaluesα = 0andattheorigininthenewcoordinates. Theseparameter
+values are called the critical parameter values and the point is referred to as
+the critical point. With these coordinates and parameters, system (16) takes
+the form
+˙ x =κ(x,α), x∈R
+6
+, α∈R
+2
+(20)
+where κ forms the right hand side of the equations and κ(0) = 0. In the next
+step, diagonalization is used to transform system (20) into the eigenbasis of
+the Jacobian matrix at the critical point. This is done in the following way,
+let e
+1
+,...,e
+6
+denote the set of eigenvectors to the Jacobian matrix, where
+e
+1
+,e
+2
+and e
+3
+are the eigenvectors corresponding to the three eigenvalues on
+the imaginary axis. Then we put
+P = [e
+1
+,...,e
+6
+], x = [x,g,h,f,y,z]
+T
+Electronic Journal.  32Differential Equations and Control Processes, N 1, 2005
+and deﬁne new coordinatesw = [u
+1
+,u
+2
+,u
+3
+,v
+1
+,v
+2
+,v
+3
+]
+T
+by
+x =Pw
+The system ˙ x = κ(x,α) can now be transformed into w coordinates by the
+transformation
+P ˙ w = κ(Pw,α)
+which gives
+˙ w =P
+−1
+κ(Pw,α) (21)
+By writing equation (21) as two vector equations in u and v respectively, we
+ﬁnd
+˙ u= a(α)+B(α)u+g(u,v,α), u∈R
+3
+˙ v =b(α)+C(α)v+h(u,v,α), v∈R
+3
+(22)
+where a(0) = b(0) = 0. By settingα = 0 in (22) we obtain the 3×3 matrices
+B, C and the two functions g and h in the representation (18) of our system
+in the eigenspace to the Jacobian matrix at the critical point.
+Our next task is to ﬁnd the functionv =V(u), where V :R
+3
+→R
+3
+, locally
+representing the center manifold W
+c
+. As mentioned before, W
+c
+is tangent to
+the critical eigenspace T
+c
+at the origin, and therefore, to obtain a second order
+approximationofthefunctionV(u),weonlyneedtoincludesecondorderterms.
+We start by making the followingapproach, including all possible second order
+terms terms
+v
+i
+=a
+i
+u
+2
+1
++b
+i
+u
+2
+2
++c
+i
+u
+2
+3
++d
+i
+u
+1
+u
+2
++e
+i
+u
+1
+u
+3
++f
+i
+u
+2
+u
+3
+i = 1,2,3 (23)
+Todeterminethe18coeﬃcientsa
+i
+,b
+i
+,...,f
+i
+,i = 1,2,3,wesubstituted(23)and
+the derivative of (23) into equation (18). Then equations for the coeﬃcients
+could be veriﬁed and solved.
+An approximation of the restriction of (18) to its center manifold given by
+the ﬁrst equation in (19) is now determined, and we will followthe theory from
+Chapter 8 in [10] to determine the normal form in Section 4.2.3.
+Electronic Journal.  33Differential Equations and Control Processes, N 1, 2005
+4.2.3 The normal form
+In Chapter 8 in [10], the following lemma is derived for fold-Hopf bifurcations.
+Lemma 4.1 Suppose that a three-dimensional system
+˙ x = f(x,α), x∈R
+3
+, α∈R
+2
+(24)
+with smooth f, has at α = 0 the equilibriumx = 0 with eigenvalues
+λ
+1
+(0)= 0, λ
+2,3
+(0)=±iω
+0
+, ω
+0
+> 0
+Let
+(ZP.1) g
+200
+6= 0, where g
+200
+is deﬁned by (29).
+(ZP.2) g
+011
+6= 0, where g
+011
+is deﬁned by (29).
+(ZP.3) E(0)6= 0, where E(0) can be calculated using (31).
+(ZP.4) the map α→(γ(α),μ(α))
+T
+is regular atα = 0.
+Then, by introducing a complex variable, making smooth and smoothly parame-
+ter dependent transformations, reparametrizing time (reversing it if E(0)< 0),
+and introducing new parameters, one can bring system (24) into the following
+form
+˙
+ξ =β
+1
++ξ
+2
++s| ζ |
+2
++O(k (ξ,ζ,
+¯
+ζ)k
+4
+)
+˙
+ζ = (β
+2
++iω
+1
+)ζ +(θ+iϑ)ξζ +ξ
+2
+ζ +O(k (ξ,ζ,
+¯
+ζ)k
+4
+)
+(25)
+where ξ ∈R, ζ ∈C are new variables; β
+1
+,β
+2
+are new parameters; θ =θ(β),ϑ=
+ϑ(β),ω
+1
+=ω
+1
+(β) are smooth real-valued functions; ω
+1
+(0)6= 0; and
+s = sign(g
+200
+g
+011
+) =±1 (26)
+θ(0)=
+Reh
+110
+g
+200
+(27)
+Only s and θ(0) are important in what follows. Assume that
+(ZP.5) θ(0)6= 0
+Electronic Journal.  34Differential Equations and Control Processes, N 1, 2005
+Four different cases of the fold-Hopf bifurcation can occur, established by the
+signs of the parameters s and θ(0). The two cases corresponding to sθ(0) < 0
+are much more complex. To determine s and θ(0), we follow parts of the
+derivation of the normal form (25). During these calculations we also verify
+the conditions (ZP.1), (ZP.2), (ZP.3) and (ZP.5). Condition (ZP.4) is not
+veriﬁed here, this because there are some printing mistakes in [10], making it
+diﬃcult to understand howγ(α) is deﬁned. Therefore, we suppose that (ZP.4)
+is satisﬁed, and applyLemma4.1on the three-dimensionalsystemrestrictedto
+the center manifold. The system is given by the ﬁrst equation in (19), that is
+˙ u =Bu+g(u,V(u)), u∈R
+3
+(28)
+where g(u,V(u))= O(kuk
+2
+). MatrixB yields
+B =
+
+
+
+0 0 0
+0 0 −ω
+0
+0ω
+0
+0
+
+
+
+, where ω
+0
+= 46.529
+and has the simple eigenvalues
+λ
+1
+= 0, λ
+2,3
+=±iω
+0
+System (28) will now be transformed into a complex form. Let q
+0
+∈ R
+3
+and
+q
+1
+∈C
+3
+be the eigenvectors toB corresponding to the eigenvalues λ
+1
+= 0 and
+λ = iω
+0
+respectively, that is
+Bq
+0
+=λ
+1
+q
+0
+, Bq
+1
+= λq
+1
+giving
+q
+0
+=
+
+
+
+1
+0
+0
+
+
+
+and q
+1
+=
+1
+√
+2
+
+
+
+0
+i
+1
+
+
+
+Moreover, the adjoint eigenvectorsp
+0
+∈R
+3
+andp
+1
+∈C
+3
+can be deﬁned by
+B
+T
+p
+0
+= λ
+1
+p
+0
+, B
+T
+p
+1
+=
+¯
+λp
+1
+Electronic Journal.  35Differential Equations and Control Processes, N 1, 2005
+which gives
+p
+0
+=
+
+
+
+1
+0
+0
+
+
+
+and p
+1
+=
+1
+√
+2
+
+
+
+0
+i
+−1
+
+
+
+These normalized eigenvectors has the property
+hq
+0
+,p
+0
+i =hq
+1
+,p
+1
+i
+5
+ThefollowingorthogonalitypropertiessimultaneouslyholdduetotheFredholm
+Alternative Theorem
+hq
+0
+,p
+1
+i=hq
+1
+,p
+0
+i = 0
+Now any real vectoru can be represented as
+u= yq
+0
++zq
+1
++ ¯ z ¯ q
+1
+with
+y =hu,p
+0
+i
+z =hu,p
+1
+i
+In the coordinates y∈R and z ∈C system (28) reads
+˙ y =g(y,z,¯ z)
+˙ z =ω
+0
+z+h(y,z,¯ z)
+where
+g(y,z,¯ z) =hF(yq
+0
++zq
+1
++ ¯ z ¯ q
+1
+),p
+0
+i
+h(y,z,¯ z) =hF(yq
+0
++zq
+1
++ ¯ z ¯ q
+1
+),p
+1
+i
+are smooth functions of y,z,¯ z whose Taylor expansions start with quadratic
+terms and are given by
+5
+As usual, hv,wi = ¯ v
+1
+w
+1
++ ¯ v
+2
+w
+2
++ ¯ v
+3
+w
+3
+for two complex vectorsv,w∈C
+3
+.
+Electronic Journal.  36Differential Equations and Control Processes, N 1, 2005
+g(y,z,¯ z) =
+X
+j+k+l≥2
+1
+j!k!l!
+g
+jkl
+y
+j
+z
+k
+¯ z
+l
+(29)
+and
+h(y,z,¯ z) =
+X
+j+k+l≥2
+1
+j!k!l!
+h
+jkl
+y
+j
+z
+k
+¯ z
+l
+(30)
+From expansions (29) and (30), the 14 coeﬃcients needed to calculate s, θ(0)
+and E(0)are veriﬁed. Table 4.2 shows these coeﬃcientsfrom which we directly
+get the conditions (ZP.1) and (ZP.2).
+Table 4.2: The 14 complex constants needed to calculate s, θ(0) and E(0).
+g
+011
+−0.00468 h
+101
+−0.0564−0.0192i
+g
+110
+−0.0260−0.0207i h
+110
+0.0131−0.0972i
+g
+111
+−0.0000461 h
+002
+0.000404+0.00253i
+g
+020
+0.0242−0.00494i h
+020
+−0.0000280+0.0209i
+g
+200
+−0.000108 h
+200
+0.197−0.131i
+g
+300
+−0.0000920 h
+021
+−0.00000679−0.0000876i
+h
+011
+−0.00221+0.00890i h
+210
+0.000220−0.000400i
+E(0) is given by the expression
+E(0)=
+1
+2
+Re
+ 
+H
+210
++h
+110
+ 
+ReH
+021
+g
+011
+−
+g
+300
+g
+200
++
+g
+111
+g
+011
+ 
+−
+H
+021
+g
+200
+2g
+011
+ 
+(31)
+where G
+300
+, G
+111
+, H
+210
+and H
+021
+are calculated from
+G
+300
+= g
+300
+−
+6
+ω
+0
+Im(g
+110
+h
+200
+)
+G
+111
+=g
+111
+−
+1
+ω
+0
+(2Im(g
+110
+h
+011
+)+Im(g
+020
+h
+101
+))
+H
+210
+=h
+210
++
+i
+ω
+0
+ 
+h
+200
+(h
+020
+−2g
+110
+)−|h
+101
+|
+2
+−h
+011
+¯
+h
+200
+ 
+Electronic Journal.  37Differential Equations and Control Processes, N 1, 2005
+H
+021
+=h
+021
++
+i
+ω
+0
+ 
+h
+011
+h
+020
+−
+1
+2
+g
+020
+h
+101
+−2|h
+011
+|
+2
+−
+1
+3
+| h
+002
+|
+2
+ 
+ThisgivesE(0)=−0.0054650. Thus,condition(ZP.3)issatisﬁed. Finally,from
+(26)and(27)weestablishthatinthenormalformgivenby(25)theparameters
+are s = 1 and θ(0) =−121.860, from which we also have the condition (ZP.5)
+satisﬁed. This means that we have one of the more complicated cases of fold-
+Hopf bifurcation.
+4.2.4 Bifurcation diagram of the normal form
+In coordinates (ξ,ρ,ϕ) with ζ = ρe
+iϕ
+, system (25) without O(k·k
+4
+) terms can
+be written as
+˙
+ξ =β
+1
++ξ
+2
++sρ
+2
+˙ ρ=ρ(β
+2
++θξ+ξ
+2
+)
+˙ ϕ= ω
+1
++ϑξ
+(32)
+the ﬁrst two equations of which are independent of the third one. The equa-
+tion for ϕ describes a rotation around the ξ-axis with almost constant angular
+velocity ˙ ϕ ≈ ω
+1
+, for | ξ | small. Thus, to understand the bifurcations in (32),
+one needs to study only the planar system for (ξ,ρ) with ρ> 0 given by
+˙
+ξ =β
+1
++ξ
+2
++sρ
+2
+˙ ρ=ρ(β
+2
++θξ+ξ
+2
+)
+(33)
+Thebifurcationdiagramof(33)correspondingtothecases = 1,θ < 0isshown
+in ﬁgure 19. The system can have between zero and three equilibria in a small
+neighborhood of the origin forkβ k small. Two equilibriawith ρ = 0 exists for
+β
+1
+< 0 and are given by
+E
+1
+=
+ 
+−
+p
+−β
+1
+,0
+ 
+and E
+2
+=
+ 
+p
+−β
+1
+, 0
+ 
+These equilibria appear at the fold bifurcation on the line
+S ={(β
+1
+,β
+2
+):β
+1
+= 0}
+Electronic Journal.  38Differential Equations and Control Processes, N 1, 2005
+The line S has two branches, S
++
+and S
+−
+, corresponding to β
+2
+> 0 and β
+2
+< 0
+respectively. CrossingthebranchS
++
+givesrisetoanunstablenodeandasaddle,
+while passing through S
+−
+implies a stable node and a saddle. The node can
+bifurcate further, namely, a nontrivial equilibrium with ρ> 0,
+E
+3
+=
+ 
+−
+β
+2
+θ
++o(β
+2
+),
+s
+−
+1
+s
+ 
+β
+1
++
+β
+2
+2
+θ
+2
++o(β
+2
+2
+)
+ 
+!
+that appears at the bifurcation curve
+H =
+ 
+(β
+1
+,β
+2
+) :β
+1
+=−
+β
+2
+2
+θ
+2
++o(β
+2
+2
+)
+ 
+The nontrivial equilibrium E
+3
+is a stable focus if β
+2
+< 0, and an unstable focus
+if β
+2
+> 0. For parameter values belonging to the line
+T ={(β
+1
+,β
+2
+):β
+2
+= 0, β
+1
+< 0}
+the nontrivial equilibrium has a nondegenerate Hopf bifurcation and a unique
+unstablelimitcycle existsfor nearbyparametervalues. The cycle coexistswith
+the two trivial equilibria E
+1,2
+which are saddles. Under parameter variation,
+the cycle can approach a heteroclinic cycle formed by the separatrices of the
+saddles, its period tends to inﬁnity and the cycle disappears. The heteroclinic
+cycle appears along a curve orginatingatβ = 0 and having the representation
+P =
+ 
+(β
+1
+,β
+2
+) :β
+2
+=
+θβ
+1
+3θ−2
++o(β
+1
+), β
+1
+< 0
+ 
+Now we can use the obtained bifurcation diagram for (33) to reconstruct bifur-
+cations in the three-dimensional truncated normal form (32) by “suspension”
+of the rotation in ϕ around the ξ-axis. The equilibria E
+1,2
+correspond to equi-
+librium points of (32). Therefore, the curve S is a fold bifurcation curve where
+two equilibria appear. Equilibrium E
+3
+corresponds to a limit cycle in (32) of
+the same stability as E
+3
+. The curve H, at which a small cycle bifurcates from
+an equilibrium, corresponds to a Hopf bifurcation in (32). Moreover, the limit
+cycle corresponds to an invariant torus. Therefore, the Hopf bifurcation curve
+T describesaNeimark-Sackerbifurcationofthecycle,atwhichitgainsstability
+and an unstable torus appears “around” it.
+Electronic Journal.  39Differential Equations and Control Processes, N 1, 2005
+Figure19: Bifurcationdiagramfor fold-Hopfbifurcation forthe cases =1,θ(0) <0 in theβ-plane.
+In the phase portraits ξ is on the horizontal axis and ρ on the vertical axis.
+Finally, the curve P corresponds to a “sphere” in (32).
+Adding higher order terms to the truncated system (32) will result in a
+nonequivalentbifurcationdiagram. Thisbecausethespherelikesurfacethatap-
+pearsforparametervaluesonthecurveP isanextremelydegeneratestructure,
+which disappears when adding higher order terms. Therefore, the torus cannot
+approach the “sphere”, since it simply does not exist, and must therefore dis-
+appear before. Instead, system (32) may have near the curve P, in addition to
+local bifurcation curves, a bifurcation set corresponding to global bifurcations
+(heteroclinic tangencies, homoclinic orbits) and bifurcations of long-periodic
+limit cycles (folds and period-doubling cascades).
+Electronic Journal.  40Differential Equations and Control Processes, N 1, 2005
+4.2.5 Comparing to simulated bifurcation diagram
+By checking the stability of the two equilibria created when crossing the fold
+bifurcation curve f
+1
+at each side of the fold-Hopf bifurcation we veriﬁed the
+branches S
++
+and S
+−
+. See ﬁgure 20, which shows the bifurcationdiagramin the
+AB-plane close to the critical parameter values A = 1.2426, B =−0.016664.
+1.2 1.21 1.22 1.23 1.24 1.25 1.26 1.27 1.28 1.29 1.3
+−0.018
+−0.0175
+−0.017
+−0.0165
+−0.016
+−0.0155
+A
+B
+III
+e
+ 
+V
+e
+ 
+III
+d
+ 
+f
+1
+ 
+f
+1
+ 
+h
+1
+ 
+t
+1
+ 
+F−H 
+c
+1
+ 
+V
+f
+ 
+V’
+e
+2
+ 
+V’
+e
+1
+ 
+S
++
+ 
+S
+−
+ 
+H
++
+ 
+H
+−
+ 
+Figure 20: Bifurcation diagram in the AB-plane close to the fold-Hopf bifurcation.
+When moving from region III
+d
+counter clockwise around the fold-Hopf
+bifurcation, we have the following. By crossing the curve f
+1
+entering region V
+e
+,
+two unstable equilibria are created, which means that we have crossed branch
+S
++
+. One of the equilibria has three (E
+2
+) and one has four (E
+1
+) contracting
+directions. E
+2
+gains two contracting directions when crossing the curve h
+1
+,
+which corresponds to branch H
++
+, and an unstable limit cycle occurs which
+corresponds to the nontrivial equilibrium E
+3
+. By following this limit cycle
+in the negative A-direction, we found the Neimark-Sacker bifurcation. The
+corresponding bifurcationcurve marked t
+1
+splits regionV
+′
+e
+into two regions,V
+′
+e
+1
+and V
+′
+e
+2
+. At the Neimark-Sacker bifurcation the cycle becomes stable and an
+unstable torus is created. Thus, the curve t
+1
+corresponds to the line T deﬁned
+in Section 4.2.4. The stable limit cycle coexisting with the unstable torus in
+regionV
+′
+e
+2
+isillustratedinﬁgure21. Thiscycledisappearsbycrossingthe curve
+Electronic Journal.  41Differential Equations and Control Processes, N 1, 2005
+h
+1
+into region V
+f
+and simultaneously, equilibrium E
+1
+becomes stable. From
+this we also conclude that in region V
+f
+, we have two stable and three unstable
+equilibria. Finally, by crossing the fold bifurcation curve f
+1
+back into region
+III
+d
+, the equilibria E
+1
+and E
+2
+destroys.
+10 12 14
+48.4
+48.6
+48.8
+49
+49.2
+49.4
+49.6
+X
+G
+50 100 150
+410
+420
+430
+440
+450
+460
+470
+F
+Y
+−11.5 −11 −10.5
+110
+120
+130
+140
+150
+160
+H
+Z
+420 430 440 450 460 470
+110
+120
+130
+140
+150
+160
+Y
+Z
+Figure 21: Limit cycle existing in region V
+′
+e
+2
+for A = 1.23, B =−0.0133.
+4.3 Some attractors in the AB-plane
+In this section, we show some attractors to system (16) that occur for different
+values of the parameters A and B. Figure 22 and 24 illustrate two limit cycles,
+one in region I
+b
+and one in III
+′
+d
+, created at the supercritical Hopf bifurcations
+represented by the bifurcation curves h
+2
+and h
+3
+respectively. The following at-
+tractorsare produced by choosing a point close to the originas an initialpoint.
+Figure 23 shows a limitcycle in regionI
+b
+forA =B = 0, in which the variables
+H and Z are constant at the values H = 3.6397 and Z = 582.3547. Figure
+25 and 26 illustrates limit cycles in region III
+2
+for A = 2, B = 1, and in I
+b
+for
+A = 0, B = 15 respectively. Recall that due to the symmetry in system (16),
+we obtain similar attractors by changing signs of A and B.
+Figure 27shows a morecomplicatedperiodicattractorthat clearlyreminds
+aboutthebehaviouroftheattractorCA,discussedinSection3. Inthiscaseitis
+veriﬁed by calculatingLyapunov spectra that the attractorbecomes chaotic by
+decreasingtheparameterB, seeSection5forhowthespectraweredetermined.
+Electronic Journal.  42Differential Equations and Control Processes, N 1, 2005
+Figure 28 illustrates a limit cycle for A = 15, B = 18. By increasing both
+parameters to A = 20, B = 25, the attractor shows a quasi-periodic behaviour,
+and the attracting set is an invariant torus, see ﬁgure 29. This was veriﬁed by
+calculating the corresponding Lyapunov spectrum, having two zero exponents.
+−20 −10 0 10
+110
+115
+120
+125
+X
+G
+−150 −100 −50 0 50 100
+400
+420
+440
+F
+Y
+8 9 10 11
+400
+450
+500
+550
+600
+H
+Z
+400 420 440
+400
+450
+500
+550
+600
+Y
+Z
+Figure 22: Limit cycle in region I
+b
+close to the Hopf bifurcation curve h
+2
+for A= 7.90 ,B =9.80.
+−40 −20 0 20 40
+−40
+−20
+0
+20
+40
+X
+G
+−200 −100 0 100 200
+−300
+−200
+−100
+0
+100
+200
+300
+F
+Y
+Figure 23: Limit cycle in region I
+b
+for A = B = 0, the variables H andZ are ﬁxed to the values
+H =3.6397 andZ =582.3547.
+Electronic Journal.  43Differential Equations and Control Processes, N 1, 2005
+1225 1230 1235
+−100
+−50
+0
+X
+G
+82.8 82.9 83 83.1 83.2 83.3
+−6
+−4
+−2
+0
+2
+4
+F
+Y
+−9.54 −9.52 −9.5 −9.48 −9.46
+616.62
+616.63
+616.64
+616.65
+616.66
+H
+Z
+−6 −4 −2 0 2 4
+616.62
+616.63
+616.64
+616.65
+616.66
+Y
+Z
+Figure24: LimitcycleinregionIII
+′
+d
+closetotheHopfbifurcationcurveh
+3
+forA =2,B =−0.3536.
+−40 −20 0 20 40 60
+80
+85
+90
+95
+100
+X
+G
+−200 0 200 400
+300
+400
+500
+F
+Y
+−15 −10 −5
+200
+300
+400
+500
+600
+H
+Z
+300 400 500
+200
+300
+400
+500
+600
+Y
+Z
+Figure 25: Limit cycle in region III
+2
+for A= 2, B = 1.
+Electronic Journal.  44Differential Equations and Control Processes, N 1, 2005
+−50 0 50
+−20
+0
+20
+40
+60
+80
+X
+G
+−100 −50 0 50
+−550
+−500
+−450
+−400
+−350
+F
+Y
+44 46 48 50 52 54
+200
+300
+400
+500
+600
+H
+Z
+−550 −500 −450 −400 −350
+200
+300
+400
+500
+600
+Y
+Z
+Figure 26: Limit cycle in region I
+b
+for A =0, B = 15.
+−5000 0 5000
+−8000
+−6000
+−4000
+−2000
+0
+2000
+4000
+6000
+X
+G
+−50 0 50
+−50
+0
+50
+F
+Y
+−20 −10 0 10
+540
+560
+580
+600
+620
+640
+660
+680
+H
+Z
+−50 0 50
+540
+560
+580
+600
+620
+640
+660
+680
+Y
+Z
+Figure 27: More complicated attractor for A= 15, B =−5.
+Electronic Journal.  45Differential Equations and Control Processes, N 1, 2005
+−50 0 50
+245
+250
+255
+260
+265
+270
+X
+G
+−100 0 100 200
+320
+340
+360
+380
+400
+F
+Y
+−30 −25 −20 −15 −10
+400
+450
+500
+550
+600
+650
+H
+320 340 360 380 400
+400
+450
+500
+550
+600
+650
+Y
+Z
+Z
+Figure 28: Limit cycle for A =15, B = 18.
+−40 −20 0 20 40 60
+290
+295
+300
+305
+X
+G
+−100 −50 0 50 100
+340
+350
+360
+370
+380
+F
+Y
+−30 −25 −20 −15
+450
+500
+550
+600
+H
+Z
+340 350 360 370 380
+450
+500
+550
+600
+Y
+Z
+Figure 29: The attracting set for A =20, B = 25, showing an invariant torus.
+Electronic Journal.  46Differential Equations and Control Processes, N 1, 2005
+5 The Lyapunov spectrum
+In this section we begin by presenting a deﬁnition and some properties of the
+Lyapunov spectrum. Then a method for computing the exponents is shown,
+andﬁnally,wedescribehowtoimplementthismethodonacomputerandshow
+some results. The theory presented here has been found in [12] and [13], and
+we refer to these papers for more details.
+5.1 The Lyapunov spectrum deﬁned
+The Lyapunov spectrum is a striking characterization of an n-dimensional dy-
+namical system. It associates a set of n real values to each orbit of the system
+which describes exponentialinstabilitiesof inﬁnitesimaldeviationsfromthe or-
+bit. Moreover, for an ergodic
+6
+dynamical system, the spectrum is independent
+of which orbit you choose. In more detail, consider a continuous n-dimensional
+dynamical system given by
+˙ x =v(x), v,x∈R
+n
+For an initial conditionx(0) =x
+0
+, we integrate the system to obtain a corre-
+sponding orbit
+x(t) =ϕ
+t
+x
+0
+Toexaminethe stabilityofthisorbit,welookatthe evolutionofanearbyorbit
+x(t)+u(t). Intheﬁrststep, welinearizetheequationsofmotioninutoobtain
+˙ u=J(x(t))u(t) (34)
+where J(x) is the Jacobian matrix at the point x. By integrating (34) along
+the orbit we obtain the tangent map
+u(t) =M
+x
+0
+(t)u
+0
+where the time dependent n×n matrixM
+x
+0
+(t) is given by
+6
+Theory about ergodic dynamical systems can be found in [14].
+Electronic Journal.  47Differential Equations and Control Processes, N 1, 2005
+M
+x
+0
+(t) =
+∂ϕ
+t
+x
+0
+∂x
+0
+The exponential instabilities of a trajectory are now reﬂected in the eigenvalue
+spectrumtothematrixM
+x
+0
+(t),orrather,sincetheLyapunovexponentsarere-
+latedtothemodulusoftheeigenvalues,thespectrumofthesymmetricproduct
+M
+T
+x
+0
+(t)M
+x
+0
+(t)
+The eigenvalues of this matrix are real and positive and we order them in the
+following way
+μ
+2
+1
+(t)≥ μ
+2
+2
+(t)≥...≥μ
+2
+n
+(t)≥ 0
+From the analysis above one realizes that these eigenvalues are dependent of
+the initial point x
+0
+chosen. To overcome this we have a theorem by Oseledec
+giving that the limit
+λ
+k
+= lim
+t→∞
+1
+t
+logμ
+k
+(t), k = 1,...,n (35)
+is independent of, and exists for almost every initial pointx
+0
+. Thus, by taking
+an arbitrary initial point and calculating the above limits, with probability 1
+you will get its unique Lyapunov spectrum, {λ
+1
+≥λ
+2
+≥ ...≥λ
+n
+}.
+5.2 Properties of the Lyapunov spectrum
+From the deﬁnition of the spectrum it can be proved that it is independent
+of the choice of coordinate system. Moreover, any continuous time dependent
+dynamical system without a ﬁxed point will have at least one zero exponent,
+corresponding to the linear changing magnitude of a principal axis tangent to
+the ﬂow. Axes that are on the average expanding correspond to positive ex-
+ponents, and contracting axes correspond to negative exponents. Also, for a
+dissipativedynamicalsystem there will be at least one negative exponent. Fur-
+ther, an attractor for a dissipative system with one or more positive exponents
+issaidtobeastrange,orachaoticattractor. Fromthisdiscussion,weconclude
+that, for example in a three-dimensional continuous dissipative dynamical sys-
+tem, we can have the following spectra; (+,0,−), a strange attractor; (0,0,−),
+Electronic Journal.  48Differential Equations and Control Processes, N 1, 2005
+a torus (quasi-periodic behaviour); (0,−,−), a limit cycle; and (−,−,−), a
+ﬁxed point.
+5.3 Determining the Lyapunov spectrum
+From the numerical point of view, the above description is insuﬃcient because
+the matrixM
+T
+x
+0
+M
+x
+0
+becomes singularratherfastsince its eigenvaluesseparate
+exponentially in time, if not all exponents are equal. This makes it diﬃcult to
+measure the spectrum, and in this section we shall present a method for doing
+this in which we augment the given dynamical system with an orthonormal
+frame and a Lyapunov vector. The method applies to any ﬁnite-dimensional
+dynamical system.
+We deﬁne a time-dependent orthonormalk-frame to be the set of k(k≤n)
+orthonormal n-dimensional vectors
+ε(t) =e
+1
+(t),...,e
+k
+(t) (e
+i
+,e
+j
+)≡ δ
+ij
+i≤ i,j ≤ k (36)
+where (.,.) is the usual Euclidean product in R
+n
+. Using this frame, we let the
+matrix elements of the Jacobian matrixJ be given by
+J
+lm
+= (e
+l
+,Je
+m
+), l,m≤k
+which depend on time both through the Jacobian and the frame. Further, we
+introduce a stability parameter β > 0, and deﬁne the symmetric stabilized
+matrix elements L
+mm
+and L
+lm
+as
+L
+mm
+=J
+mm
++β((e
+m
+,e
+m
+)−1), m≤k
+and
+L
+lm
+=J
+lm
++J
+ml
++2β(e
+l
+,e
+m
+), l6=m, l,m≤ k
+Finally, let Λ = {Λ
+1
+(t),...,Λ
+k
+(t)} be a k-dimensional real vector. The aug-
+mented dynamicalsystem is now given by the followingset of differentialequa-
+tions, of which the ﬁrst two are vector equations
+˙ x =v(x), v,x∈R
+n
+Electronic Journal.  49Differential Equations and Control Processes, N 1, 2005
+˙ e
+m
+=Je
+m
+−
+X
+l≤m
+e
+l
+L
+lm
+m = 1,...,k (37)
+˙
+Λ
+m
+= J
+mm
+m = 1,...,k
+For system (37) we have the following theorem.
+Theorem 1 Letx
+0
+be an initial point for which the associated Lyapunov spec-
+trum (cf equation 35) λ
+1
+≥λ
+2
+≥ ...≥λ
+n
+exists. Set Λ(t = 0) = 0. Choosing
+the stability parameter β > −λ
+k
+, then for almost any (i.e. with probability
+1 when choosing randomly) initial frame ε(t = 0) the time evolution of the
+dynamical system (37) yields
+lim
+t→∞
+1
+t
+Λ
+m
+(t) =λ
+m
+m = 1,...,k
+Thus, by following a trajectory of the augmented system we obtain almost
+surely the k ﬁrst exponents in the Lyapunov spectrum for the given orbit. The
+condition on the stability parameter is satisﬁed, for example by setting
+β > max
+kek=1
+(−(e,Je)) (38)
+where the maximum is over all unit-length vectorse and over the relevant re-
+gion of phase space. Dynamically, this corresponds to ﬁnding the strongest
+local contraction. For details and a proof of the above theorem, see [12].
+5.4 Implementations and results
+In order to implement the augmented dynamical system (37), we use the same
+algorithm as in the rest of the simulations on the Bekryaev system, that is, a
+Runge-Kutta method in C-code. When calculating the complete spectrum, we
+get k = n = 6, which means that the augmented system to implement gets a
+dimension of 48. As an initial frame, we chose the orthonormal set of vectors
+e
+i
+(j) =
+(
+1i =j
+0i6=j
+1≤i,j ≤ 6
+Electronic Journal.  50Differential Equations and Control Processes, N 1, 2005
+Also, we start at a point on the attractor of which we want to calculate the
+spectrum. Further, in addition to the main system to simulate, the program
+needstheJacobianmatrixexplicitlytobeabletosetuptheequationsfor ˙ x, ˙ e
+m
+and
+˙
+Λ
+m
+insystem(37). Tochoosethestabilityparameterβ suchthatcondition
+(38) is satisﬁed, we started with β = 0, and at each step in the simulation we
+check the condition
+β ≤ max(−J
+mm
+) m = 1,...,k (39)
+If (39) holds we let β = max(−J
+mm
+)+1. After completed one simulation one
+may ﬁx β as some value greater than the value obtained above to speed up
+future simulations.
+Figure 30 shows the result of a simulation of the Bekryaev system (1) with
+the parametersA = 2, B = 0, Q
+F
+=−2500and theremainingparametersas in
+(2). We have the attractor CA discussed in Section 3, the spectrum obtained
+yields (+,0,−,−,−,−) which indicates a strange attractor. In this case we
+had the stability parameter β = 416. The elapsed time for this simulation was
+approximately 20 hours. In table 5.1, we present the result of some more cal-
+culationsof the Lyapunov spectrum for the attractorCA. All spectra obtained
+for the Bekryaev system 1 include at least three strongly negative exponents.
+Table 5.1: Lyapunov spectra for the attractor CA at different values of Q
+F
+.
+Q
+F
+Lyapunov spectra Q
+F
+Lyapunov spectra
+−300 (0,−,−,−,−,−) −600 (+,0,−,−,−,−)
+−325 (+,0,−,−,−,−) −650 (+,0,−,−,−,−)
+−350 (0,−,−,−,−,−) −700 (+,0,−,−,−,−)
+−375 (+,0,−,−,−,−) −800 (+,0,−,−,−,−)
+−400 (+,0,−,−,−,−) −900 (+,0,−,−,−,−)
+−450 (0,−,−,−,−,−) −1000 (+,0,−,−,−,−)
+−500 (+,0,−,−,−,−) −2500 (+,0,−,−,−,−)
+−550 (+,0,−,−,−,−) −3000 (+,0,−,−,−,−)
+Electronic Journal.  51Differential Equations and Control Processes, N 1, 2005
+0 500 1000 1500 2000 2500 3000 3500
+2.5
+3
+3.5
+λ
+1
+0 500 1000 1500 2000 2500 3000 3500
+−0.5
+0
+0.5
+λ
+2
+0 500 1000 1500 2000 2500 3000 3500
+−1.5
+−1
+−0.5
+λ
+3
+0 500 1000 1500 2000 2500 3000 3500
+−2.5
+−2
+−1.5
+λ
+4
+0 500 1000 1500 2000 2500 3000 3500
+−4
+−3.5
+−3
+λ
+5
+0 500 1000 1500 2000 2500 3000 3500
+−7.5
+−7
+−6.5
+λ
+6
+τ
+Figure 30: The six Lyapunov exponents from a single run of the Bekryaev system (1) for the
+parameters A =2, B =0 and Q
+F
+=−2500.
+References
+[1] R.V.Bekryaev, Violation of exponential divergence of trajectories in a sys-
+tem of hydrodynamic type with a chaos, 1994, St. Petersburg: Allerton
+Press, Inc. BRAS Physics / Supplement, Physics of Vibrations: Vol. 58,
+No.1: 49-56.
+[2] James R. Holton, An Introduction to Dynamic Meteorology, 1992, San
+Diego, Academic Press, ISBN 0-12-354355-X.
+[3] Edward N. Lorenz, Deterministic Nonperiodic Flow, 1963, Journal of the
+Atmospheric sciences, Vol 20: 130-141.
+[4] EdwardN.Lorenz, Irregularity: A fundamentalproperty of the atmosphere,
+1984, Tellus 36A:98-110.
+[5] Edward N. Lorenz, Can chaos and intransitivity lead to interannual vari-
+ability?, 1990, Tellus 42A: 378-389.
+Electronic Journal.  52Differential Equations and Control Processes, N 1, 2005
+[6] H.Broer,C.Sim´ oandR.Vitolo, Bifurcations and strange attractors in the
+Lorenz-84 climate model with seasonal forcing, 2002, Nonlinearity, Vol 15:
+1205-1267.
+[7] L. Van Veen, Baroclinic ﬂow and the Lorenz-84 model, 2003, International
+Journal of Bifurcation and Chaos, Vol 13, No. 8: 2117-2139.
+[8] http://indy.cs.concordia.ca/auto/main.html
+[9] J. Guckenheimer and P. Holmes, Nonlinear Oscillations, Dynamical sys-
+tems, and Bifurcations of Vector Fields, 1983, New York: Springer-Verlag.
+ISBN 0-387-90819-6.
+[10] Yuri A. Kuznetsov, Elements of Applied Bifurcation Theory, 1995, New
+York: Springer-Verlag. ISBN 0-387-94418-4.
+[11] Stephen Wiggins, Introduction to Applied Nonlinear Dynamical Systems
+and Chaos, 1990, New York: Springer-Verlag. ISBN 0-387-97003-7.
+[12] F. Christiansen and H. H. Rugh, Computing Lyapunov spectra with con-
+tinuous Gram-Schmidt orthonormalization, 1997, Germany: Department
+of Mathematics, University of Warwick, Coverty CV4 7AL, UK.
+[13] A. Wolf, J. B. Swift, H. L. Swinney and J. A. Vastano, Determining lya-
+punov exponents from a time series, 1984, USA: Department of physics,
+University of Texas, Austin, Texas 78712.
+[14] A. Katok, B. Hasselblatt, Introduction to Modern Theory of Dynami-
+cal Systems, 1995, Cambridge: Cambridge University Press. ISBN 0-521-
+34187-6.
+Electronic Journal.  53

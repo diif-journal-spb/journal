@@ -1,0 +1,3812 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 4, 1999
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Symbolic dynamics
+SPECTRUM OF A DYNAMICAL SYSTEM AND
+APPLIED SYMBOLIC DINAMICS
+George Osipenko
+Laboratory of Nonlinear Analysis and Mathematical Modelling
+State Technical University
+St.Petersburg, 195251, Russia
+e-mail: math@math.hop.stu.neva.ru
+Abstract.
+The paper introduces a constructive method for localization of the Morse
+spectrum of a dynamical system on a vector bundle. The Morse spectrum is a
+limit set of Lyapunov exponents of periodic pseudo-trajectories. The proposed
+method does not demand any preliminary information on a system. An in-
+duced dynamical system on the projective bundle is associated with a directed
+graph called Symbolic Image. The symbolic image can be considered as a ﬁnite
+discrete approximation of a dynamical system. Valuable information about
+the system may come from the analysis of a symbolic image. In particular,
+a neighborhood of the Morse spectrum can be found. A special sequence of
+symbolicimages is consideredto obtainasequenceofembeddedneighborhoods
+which converges to the Morse spectrum. The main results of this article were
+announced in [20].
+0
+The research is supported by the Russian Foundation for Basic Researches under Grant 97-07-90088Differential Equations and Control Processes, N 4, 1999
+1 Linear extension of a homeomorphism
+Let f : M → M be a homeomorphism of the compact manifold M. Let
+(E,M,π) be a vector bundle overM, E be a total space, andπ be a projector
+from E onto the base M. Assume that for each x∈M a ﬁber E(x) =π
+−1
+(x)
+is d-dimension linear space isomorphic to R
+d
+.
+Deﬁnition 1 A homeomorphism F of the total space E is said to be a linear
+extension of f, if F takes ﬁbers to ﬁbers: f◦π =π◦F, i.e., the diagram
+E
+F
+−→ E
+π↓ ↓π
+M
+f
+−→ M
+commutes, and the restriction F|
+E(x)
+:E(x)→E(f(x)) on each ﬁber E(x) is a
+linear isomorphism.
+The investigation of linear extensions has been motivated by the study of
+the tangent mapping of a diffeomorphism on the tangent bundle of manifold
+[23, 24, 7, 8, 25, 27]. As an example of a linear extension we will keep in mind a
+diffeomorphismf :M →M and its differentialDf =F on the tangent bundle
+TM =E. In particular, by locating of the Morse spectrum, one can construc-
+tively recognize the hyperbolicity or the normal hyperbolicity of a dynamical
+system. In this section we brieﬂy show that the vector bundle E is associated
+with a projective bundleP and with an one-dimension bundleL overP, in this
+process the linear extension F : E → E induces a mapping PF : P → P and
+its linear extension LF : L → L. Recall that a projective manifold P
+d−1
+is
+a set of one-dimensional subspaces in R
+d
+. For a nonzero vector v we denote
+by [v] = y a point from P
+d−1
+corresponding to the space spanned over v. Let
+(P,M,Pπ) be a bundle over M such that each ﬁber (Pπ)
+−1
+(x) is a projective
+manifold P
+d−1
+(x) associated with the ﬁber E(x) of E. The bundle (P,M,Pπ)
+is called the projective bundle associated with the linear bundle (E,M,π). The
+linear space R
+d
+can be considered as a collection of one-dimensional subspaces
+L = {L(y), y ∈ P
+d−1
+}, where L(y) is a subspace spanned over y. So L is an
+one-dimensional bundle over P
+d−1
+. Let us ﬁx a ﬁber E(x) of E. As above,
+each linear space E(x) is considered as an one-dimensional vector bundle L(x)
+over P
+d−1
+(x) with ﬁbers L(x,y) spanned over y ∈ P
+d−1
+(x). Thus, the bundle
+(E,M,π)isassociatedwiththeone-dimensionallinearbundle(L,P,LPπ)over
+the projective spaceP, whereL ={L(x,y), x∈M, y∈P
+d−1
+(x)}, andLPπ is
+the induced projector from L onto P. The bundles E, P and L are nontrivial,
+in general. However there is a manner of trivialization of them. More precise,
+Electronic Journal.  22Differential Equations and Control Processes, N 4, 1999
+each vector bundle can be included in trivial one [2]. Hence, without a loss
+of generality, we can use the following coordinates: (x,v) on E, (x,y) on P,
+and (x,y,l) on L, where x ∈ M, v ∈ E(x), y ∈ P
+d−1
+(x), l ∈ L(y). In this
+coordinates, the projectors LPπ and Pπ are of the form:
+LPπ(x,y,l) = (x,y), Pπ(x,y) =x.
+The linear extension F :E →E of the homeomorphism f :M →M is of the
+form
+F(x,v) = (f(x),A(x)v).
+The mapping F induces the mapping PF : P → P on the projective bundle
+and its linear extension LF : L→ L on the one-dimensional linear bundle, so
+the diagram
+L
+LF
+→ L
+↓
+LPπ
+↓
+LPπ
+P
+PF
+→ P
+↓
+Pπ
+↓
+Pπ
+M
+f
+→ M
+commutes. In the coordinates (x,y,l), these mappings take the forms:
+PF(x,y) = (f(x),pF(x,y)), pF(x,y) = [A(x)e(y)],
+LF(x,y,l) = (f(x),pF(x,y),a(x,y)l) = (PF(x,y),a(x,y)l),
+where e(y) is a basis vector in the ﬁber L(y), a(x,y)l is one-dimensional linear
+mapping, i.e.,a(x,y)l isamultiplicationbythefunctiona(x,y)asbasisvectors
+are ﬁxed, and|a(x,y)| =|A(x)e(y)|.
+2 Chain-recurrent points
+Let ρ(∗,∗) be a Riemannian metric on M.
+Deﬁnition 2 An inﬁnite in both directions sequence of points {x
+i
+} ⊂ M is
+called an ε-trajectory of f if for any i the distance between the image f(x
+i
+) and
+x
+i+1
+is less than ε, i.e.,
+ρ(f(x
+i
+),x
+i+1
+)<ε.
+If the sequence {x
+i
+} is periodic then it is called a periodic ε-trajectory and the
+points x
+i
+are called ε-periodic.
+Electronic Journal.  23Differential Equations and Control Processes, N 4, 1999
+In most cases, an exact trajectory of system is seldom known, and in fact
+we ought to deal with anε-trajectory for a suﬃciently smallε> 0. Denote the
+set of all ε-periodic points by Per(ε). The set Per(ε) is open. It is clear that
+if ε
+1
+>ε
+2
+then every ε
+2
+-trajectory is an ε
+1
+-trajectory, hence
+Per(ε
+2
+)⊂Per(ε
+1
+).
+Thus, the sets Per(ε), ε> 0, are embedded one inside the other.
+Deﬁnition 3 A point x is called chain recurrent if x is ε-periodic for every
+positive ε. The set of chain recurrent points is called a chain recurrent set.
+Let us denote the chain recurrent set by CR. It is well known that the
+chain recurrent set is invariant, closed and contains the returning trajectories
+of all types such as periodic, almost periodic, recurrent, homoclinic and others.
+It should be noted that if a chain recurrent point x is not periodic then there
+exists an arbitrarily small perturbation of the mapping f in C
+0
+-topology for
+which x is periodic [22]. One may say that a chain recurrent point is either
+periodic or becomes periodic under a C
+0
+-perturbation. From deﬁnition of the
+chain recurrent set it follows that
+CR = lim
+ε→0
+Per(ε) =
+\
+ε>0
+Per(ε).
+In other words, the sets{Per(ε), ε> 0} forms a base of neighborhoods of the
+chain recurrent set CR.
+For ε> 0 a ﬁnite ε-chain ξ is deﬁned as a ﬁnite sequence x
+0
+,...,x
+m
+∈M of
+length m with ρ(f(x
+i
+),x
+i+1
+)<ε, i = 0,...m−1. The same way one can deﬁne
+an ε-semi-trajectory.
+3 Morse spectrum
+Let us consider the linear extensionF :E →E and the mapping PF :P →P
+on the projective bundle associated with F. Let ξ ={(x
+0
+,y
+0
+),...,(x
+m
+,y
+m
+)} be
+a ﬁnite ε-chain on the projective bundle P for the mapping PF. Deﬁne the
+exponential growth rate of ξ by
+λ(ξ) =
+1
+m
+m−1
+X
+i=0
+ln|F(x
+i
+,e(y
+i
+))|,
+where|F(x,v)| =|A(x)v|, e(y
+i
+)isbasisvectorinL(y
+i
+),|e(y
+i
+)| = 1.Onecansay
+that |A(x)e(y)| is a change coeﬃcient of vector length. By using the induced
+Electronic Journal.  24Differential Equations and Control Processes, N 4, 1999
+mapping LF :L→L the exponential growth rate of ξ can be rewritten in the
+form
+λ(ξ) =
+1
+m
+m−1
+X
+i=0
+ln|a(x
+i
+,y
+i
+)|.
+Recall that if ξ ={(x
+0
+,y
+0
+),(x
+1
+,y
+1
+),...} is an ε-semi-trajectory, then
+λ(ξ) = lim
+m→∞
+1
+m
+m−1
+X
+i=0
+ln|A(x
+i
+)e(y
+i
+)|
+is the characteristic or Lyapunov exponent of the ε-semi-trajectory ξ. If ξ =
+{(x
+0
+,y
+0
+),...,(x
+p
+,y
+p
+) = (x
+0
+,y
+0
+)} is a periodicε-trajectory of a periodp, then for
+the Lyapunov exponent of ξ we have
+λ(ξ) = lim
+m→∞
+1
+m
+m−1
+X
+i=0
+ln|A(x
+i
+)e(y
+i
+)| = lim
+k→∞
+1
+m
+m−1
+X
+i=0
+ln|A(x
+i
+)e(y
+i
+)| =
+1
+p
+p−1
+X
+i=0
+ln|A(x
+i
+)e(y
+i
+)|.
+The Morse spectrum of F on the chain recurrent set CR of the associated
+projective mapping PF is deﬁned as
+Σ(F) = {λ∈R : there are ε
+k
+→ 0 and finite ε
+k
+−chains ξ
+k
+of lenths m
+k
+in CR with m
+k
+→∞ and λ(ξ
+k
+)→λ as k→∞}.
+F. Colonius and Kliemann [7] showed that the Morse spectrum coincides with
+the periodic Morse spectrum which is deﬁned as
+Σ
+per
+(F) = {λ∈R : there are ε
+k
+→ 0 and periodic ε
+k
+−trajectories ξ
+k
+with λ(ξ
+k
+)→λ as k→∞}.
+Thus, to study the Morse spectrum it is suﬃcient to investigate the behavior
+of Lyapunov exponents of periodic ε-trajectories on the projective bundle as
+ε→ 0.
+4 Symbolic Image [14]
+Now we recall a construction of a symbolic image. Let f : M → M be a
+homeomorphismofmanifoldM andC ={M(1),···,M(s)}beaﬁnitecovering
+of M by closed sets. The sets M(i) are called cells of the covering.
+Deﬁnition 4 Let G be a directed graph having s vertices where each vertex i
+corresponds to the cell M(i). The vertices i and j are connected by a directed
+edge i→j if and only if M(j)∩f(M(i))6=∅. The graph G is called a symbolic
+image of f with respect to the covering C.
+Electronic Journal.  25Differential Equations and Control Processes, N 4, 1999
+ 
+ 
+ 
+ 
+i
+d e
+l k
+j
+f
+ 
+ 
+ 
+   
+-  
+ 
+ 
+ 
+   
+ 
+ 
+ 
+  *
+H
+H
+H
+H j
+@
+@
+@
+@
+@ R
+i
+d
+e
+l
+k
+j
+  
+  
+-
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  1
+ 
+ 
+  ff  
+A
+A
+A U
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  *
+B
+B
+B
+B
+BN
+Q
+Q
+Q
+Q
+Q s
+ 
+ 
+ 
+ 
+  	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+G
+A
+A
+A U
+  
+  
+?
+C
+C
+C
+C
+C
+C
+CCO
+ 
+ 
+ 
+  )
+6 6
+P
+P
+P
+P
+P
+P
+P i
+S
+S
+S
+S w
+A
+A
+A
+A
+A
+A
+A
+A
+A U
+
+
+
+
+
+  
+?
+q
+H
+H
+H
+H
+H
+H
+H
+H
+H j
+' $
+?
+ 
+ 
+ 
+ 
+ 
+ 
+   
+   
+H
+H
+H
+H j
+q
+q
+H
+H
+H
+H
+H
+H
+H
+H
+H Y
+Figure 1: Construction of a Symbolic Image.
+Denote by Ver the set of vertices of G. The graph G can be considered
+as a multi-correspondence G : Ver → Ver between the vertices. Graph G is
+uniquely determined by its s×s matrix of transitions Π = (π
+ij
+): π
+ij
+= 1 if
+and only if there is the directed edge i → j, otherwise π
+ij
+= 0. Much of an
+effective information of a dynamical system may come from the investigation
+of a symbolic image. It is easily seen that the symbolic image depends on
+the covering C. Vary the covering C one changes the symbolic image of the
+mapping f. It is natural to consider the symbolic image as a ﬁnite discrete
+approximation of the mapping f. This approximation is more precise if the
+mesh of the covering is smaller. Let
+diamM(i) =max(ρ(x
+1
+,x
+2
+) :x
+1
+,x
+2
+∈M(i))
+be a diameter of the cell M(i). Let d be the largest diameter of the cells M(i)
+of the coveringC. Denote byq the largest diameter of the imagesf(M(i)), i =
+1,...,s. We deﬁne the number r as follows. If a cell M(k) does not belong to
+the covering C(i) then the distance
+r
+ik
+=ρ(f(M(i)),M(k)) =min(ρ(x,y) :x∈f(M(i)),y6∈M(k)))
+between the cellM(k) and the imagef(M(i)) is positive. Letr be a minimum
+of suchr
+ik
+. Since the number of the pairs (i,k) described above is ﬁnite thenr
+is positive.
+Deﬁnition 5 A sequence{z
+k
+} of vertices of the graphG is called an admissible
+path or simply a path if for each k the graph G contains the edge z
+k
+→z
+k+1
+. If
+the sequence {z
+k
+} is periodic, then {z
+k
+} is called a periodic (admissible) path.
+There is a natural connection between admissible paths on the symbolic image
+Gandε-trajectoriesofthehomeomorphismf. Itcanbesaidthatanadmissible
+Electronic Journal.  26Differential Equations and Control Processes, N 4, 1999
+path is a trace ofε-trajectory and vice versa. However, there are some relation-
+ships between the parameters d,q,r of a symbolic image and the number ε for
+which the connections take place.
+Proposition 1 [16]
+1. If a sequence {z
+k
+} is a path on the symbolic image G and x
+k
+∈ M(z
+k
+)
+then the sequence {x
+k
+} is an ε-trajectory of the homeomorphism f for
+any ε > q +d. In particular, if the sequence {z
+k
+} is a periodic path on
+the symbolic image then the sequence {x
+k
+} can be chosen a periodic ε-
+trajectory.
+2. If a sequence {x
+k
+} is an ε-trajectory of the homeomorphism f , ε<r and
+x
+k
+∈ M(z
+k
+) then the sequence {z
+k
+} is an admissible path on the symbolic
+image G. In particular, if the sequence {x
+k
+} is periodic ε-trajectory then
+the sequence {z
+k
+} can be chosen a periodic path on the symbolic image G.
+Deﬁnition 6 A vertex of the symbolic image is called recurrent if there is a
+periodic path passing through it. The set of recurrent vertices is denoted byRV.
+A pair of recurrent vertices i,j are called equivalent if there is a periodic path
+through i and j.
+The recurrent vertices {i} are uniquely deﬁned by the nonzero diagonal
+elementsπ
+ii
+6= 0 of the powers of the transitions matrix Π
+m
+, m≤s, wheres is
+the number of the covering cells. By Deﬁnition 6, the set of recurrent vertices
+RV decomposes into several classes{H
+k
+} of equivalent recurrent vertices. It is
+evident that each periodic path ω is in a certain class H
+k
+= H(ω) determined
+uniquely by ω.
+5 Symbolic image of the projective mapping
+Now we apply the symbolic image construction to the mapping PF. Let us
+consider a symbolic image G(f) of the mapping f : M → M with respect to
+a covering C(M) = {m(1),···,m(q)}. To construct a symbolic image of the
+induced mapping PF : P → P it is convenient to choose a covering C(P) =
+{M(z)} of the projective space P agreed with the covering C(M) such that
+the projection of each cell is a cell: Pπ(M(z)) = m(j). The agreed covering
+generates a natural mapping h from G(PF) onto G(f) taking the vertices z
+on the vertex j: h(z) =j. Since PF(M(z
+1
+))∩M(z
+2
+)6=∅ and Pπ(M(z
+1,2
+)) =
+m(j
+1,2
+) implies f(m(j
+1
+))∩m(j
+2
+) 6= ∅, the directed edge z
+1
+→ z
+2
+on G(PF) is
+Electronic Journal.  27Differential Equations and Control Processes, N 4, 1999
+mappedbyhonthedirectededgej
+1
+→j
+2
+onG(f). Hence,themappinghtakes
+the directed graph G(PF) on the directed graph G(f) so that the diagram
+Ver
+G(PF)
+→ Ver
+↓
+h
+↓
+h
+ver
+G(f)
+→ ver
+commutes,whereVerandveraretheverticesofG(PF)andG(f),respectively.
+6 Linear extension of symbolic image and its spectrum
+Let F : E → E be a linear extension of the homeomorphism f : M → M,
+PF : P → P be the associated projective mapping and LF : L → L be the
+linearextensionofPF ontheone-dimensionbundle. Inthecoordinates(x,y,l)
+these mappings take the forms:
+LF(x,y,l) = (PF(x,y),a(x,y)l) = (f(x),pF(x,y),a(x,y)l).
+At ﬁrst, we construct a linear extension of the symbolic image by ﬁxing a
+linear mapping a[ji] to each edge i → j. Let G(PF) be the symbolic image
+of PF. The existence of an edge i → j on G(PF) guarantees the existence
+of a point (x,y) in the cell M(i) such that the image PF(x,y) is in the cell
+M(j). Obviously, such point is not unique. By setting a[ji]l = a(x,y)l we ﬁx
+a linear mapping to the edge i→j. The value |a[ji]| =|A(x)e(y)| is a change
+coeﬃcient of a vector length. We suppose each cell of the covering C(P) small
+enough to ensure the existence of a continuous basis vectors e(x,y)∈ L(x,y),
+(x,y)∈M(i). Fixing this basis we can identify the one-dimension linear spaces
+L(x,y) for (x,y) ∈ M(i). The obtained linear space is denoted by R
+i
+. Let
+(x
+∗
+,y
+∗
+)∈M(i) be a point such that PF(x
+∗
+,y
+∗
+)∈M(j). We have the estimate
+|a(x
+∗
+,y
+∗
+)−a(x,y)|<η(d),
+whereη(d) is a modulus of continuity ofa(x,y) andd is the maximal diameter
+of cellsfromthe coveringC(P). Thestructureconsisting ofthesymbolicimage
+G(PF) and the linear maps{a[ji] :R
+i
+→R
+j
+} is said to be an one-dimensional
+linear extension LG of a symbolic image G(PF).
+Each periodic path ω = {z
+0
+,z
+1
+,...,z
+p
+= z
+0
+} on G(PF) of period p induces
+a liner map
+a(ω) =a[z
+p
+z
+p−1
+]...a[z
+2
+z
+1
+]a[z
+1
+z
+0
+] :R
+z
+0
+→R
+z
+0
+.
+Electronic Journal.  28Differential Equations and Control Processes, N 4, 1999
+The number σ(ω) = (|a(ω)|)
+1
+p
+is called the multiplicator and
+λ(ω) =
+1
+p
+p
+X
+k=1
+ln|a[z
+k
+z
+k−1
+]| = ln|σ(ω)|
+is called the characteristic or the Lyapunov exponent of a periodic path ω.
+Deﬁnition 7 The spectrum of the linear extension LG on the set of recurrent
+vertices RV is deﬁned as
+Σ ={λ∈R : thereare periodicpathsω
+k
+onG(PF)withλ(ω
+k
+)→λask→∞}.
+The ﬁrst aim is to discover a constructive method for a computation of
+the spectrum of the linear extension LG. The second aim is to compare the
+spectrum of LG and the Morse spectrum of a dynamical system.
+7 Computationofspectrumofthesymbolicimagelinear
+extension
+Let us consider some class H of equivalent recurrent vertices. A periodic path
+ω = {z
+1
+,...,z
+p
+= z
+0
+} is called simple if the vertices z
+1
+,...,z
+p
+are different, i.e.,
+z
+i
+6= z
+j
+as i6= j; i,j = 1,...,p. Let ω ={z
+1
+,...,z
+p
+} be a periodic path. If ω is
+not simple, there is a vertex z
+∗
+such that z
+∗
+= z
+l
+= z
+l+p
+1
+. Consider two ﬁnite
+sequences ω
+∗
+={z
+1
+,...,z
+l−1
+,z
+l+p
+1
+,...,z
+p
+} and ω
+∗∗
+={z
+l+1
+,...,z
+l+p
+1
+}. Since there
+are the edges z
+l−1
+→ z
+l
+= z
+l+p
+1
+and z
+l+p
+1
+= z
+l
+→ z
+l+1
+, the sequences ω
+1
+and
+ω
+2
+are periodic admissible paths of periods p
+1
+and p
+2
+= p−p
+1
+, respectively.
+Obviously, p
+1
+, p
+2
+< p. We will say that the path ω is a sum of the periodic
+paths ω
+∗
+and ω
+∗∗
+and write
+ω =ω
+∗
++ω
+∗∗
+.
+By repeating this decomposition of periodic paths we come to the decomposi-
+tionofω inasumofperiodicpathsω
+1
+,...,ω
+q
+ofperiodsp
+1
+,...,p
+q
+, p
+1
++...+p
+q
+=p.
+Because the periods are positive integers, and the maximal period of compo-
+nents decreases, the decomposition process ﬁnishes. The ﬁnal decomposition
+ω =φ
+1
++φ
+2
++...+φ
+r
+consistsofsimpleperiodicpaths. Note,thesimpleperiodic
+paths φ
+1
+,...,φ
+r
+may coincide. When a periodic path ω
+∗
+repeats k times in ω,
+we write
+ω =kω
+∗
++ω
+∗∗
+.
+Since a symbolic image has a ﬁnite number of vertices, the number of simple
+periodpathsisﬁnite. ForaclassH letφ
+1
+,...,φ
+q
+betheallsimpleperiodicpaths
+Electronic Journal.  29Differential Equations and Control Processes, N 4, 1999
+of periods p
+1
+,...,p
+q
+, respectively. Let
+λ(φ
+j
+) =
+1
+p
+j
+p
+j
+X
+k=1
+ln|a[z
+j
+k
+z
+j
+k−1
+]|
+be the characteristic exponent of periodic pathφ
+j
+={z
+j
+1
+,...,z
+j
+p
+j
+}. Suppose that
+ω⊂H isaperiodicpathonG(PF),andω =k
+1
+φ
+1
++...+k
+q
+φ
+q
+isadecomposition
+of ω with the period p = k
+1
+p
+1
++...+k
+q
+p
+q
+. Without loss of generality, we can
+consider each simple periodic path φ
+j
+be contained in ω with the coeﬃcient
+k
+j
+≥ 0 (the case k
+j
+= 0 means that, actually, ω does not pass through the
+simple periodic path φ
+j
+). If so, we will say that the simple periodic path φ
+j
+is
+contained in ω with the weight μ
+j
+=
+k
+j
+p
+j
+p
+. Obviously,
+P
+q
+j=1
+μ
+j
+= 1.
+Proposition 2 The characteristic exponent of each periodic path ω = k
+1
+φ
+1
++
+...+k
+q
+φ
+q
+is given by the formula
+λ(w) =
+q
+X
+j=1
+μ
+j
+λ(φ
+j
+),
+where μ
+j
+=
+k
+j
+p
+j
+p
+.
+Proof. Let ω be a periodic path on the symbolic image G(PF). Suppose
+thatω =k
+1
+φ
+1
++...+k
+q
+φ
+q
+isadecompositionoftheperiodicpathω oftheperiod
+p = k
+1
+p
+1
++...+k
+q
+p
+q
+, where p
+1
+,...,p
+q
+are periods of the simple periodic paths
+φ
+1
+,...,φ
+q
+. For the characteristic exponent of ω ={z
+1
+,...,z
+p
+} we have
+λ(w) =
+1
+p
+p
+X
+k=1
+ln|a[z
+k
+z
+k−1
+]| =
+1
+p
+q
+X
+j=1
+k
+j
+p
+j
+X
+k=1
+ln|a[z
+j
+k
+z
+j
+k−1
+]| =
+1
+p
+q
+X
+j=1
+k
+j
+p
+j
+λ(φ
+j
+) =
+q
+X
+j=1
+μ
+j
+λ(φ
+j
+).
+Thus, the characteristic exponent of ω is an arithmetic mean of characteristic
+exponents of simple periodic paths with the weights μ
+j
+,
+P
+q
+k=1
+μ
+j
+= 1.
+2
+Let
+λ
+min
+(H) = min{λ(φ
+j
+), j = 1,...,q},
+λ
+max
+(H) = max{λ(φ
+j
+), j = 1,...,q}
+be the minimum and the maximum of characteristic exponents of simple peri-
+odic paths of the class H. From Proposition 2 it follows
+Proposition 3 Characteristic exponent λ(ω) of each periodic path ω of class
+H satisﬁes the inequality
+λ
+min
+(H)≤λ(ω)≤λ
+max
+(H).
+Electronic Journal.  30Differential Equations and Control Processes, N 4, 1999
+Proposition 4 For everyλ∈ [λ
+min
+(H),λ
+max
+(H)] there is a sequence of periodic
+paths{ω
+m
+} inH such that the characteristic exponentsλ(ω
+m
+)→λ asm→∞.
+Proof. Without loss of generality we can assume that λ
+min
+(H) < λ <
+λ
+max
+(H). Let φ
+min
+= {z
+∗
+1
+,...,z
+∗
+l
+} and φ
+max
+= {z
+∗∗
+1
+,...,z
+∗∗
+e
+} be simple periodic
+paths realizing the characteristic exponentsλ
+min
+(H) andλ
+max
+(H), respectively.
+Sincetheverticesz
+∗
+l
+andz
+∗∗
+1
+areequivalentrecurrentvertices,thereisaperiodic
+path ψ through z
+∗
+1
+and z
+∗∗
+1
+. Fix such a periodic path ψ = {z
+1
+= z
+∗
+1
+,...,z
+j
+=
+z
+∗∗
+1
+,...,z
+q
+}. In H, there is a periodic admissible path ω of the form
+ω ={
+k
+∗
+−times
+z }| {
+z }| {
+z
+∗
+1
+,...,z
+∗
+l
+,...,
+z }| {
+z
+∗
+1
+,...,z
+∗
+l
+,z
+1
+=z
+∗
+1
+,...,z
+j
+=
+k
+∗∗
+−times
+z }| {
+z }| {
+z
+∗∗
+1
+,...,z
+∗∗
+e
+,...,
+z }| {
+z
+∗∗
+1
+,...,z
+∗∗
+e
+,
+z
+∗∗
+1
+=z
+j
+,...,z
+q
+}
+with the decomposition
+ω =k
+∗
+φ
+min
++k
+∗∗
+φ
+max
++ψ.
+Letp
+∗
+, p
+∗∗
+andq beperiodsofφ
+min
+, φ
+max
+andψ,respectively. Fortheweightsof
+φ
+min
+, φ
+max
+andψ we haveμ(φ
+min
+) =
+k
+∗
+p
+∗
+p
+, μ(φ
+max
+) =
+k
+∗∗
+p
+∗∗
+p
+andμ(ψ) =
+q
+p
+, where
+p = k
+∗
+p
+∗
++k
+∗∗
+p
+∗∗
++q is period of ω. If k
+∗
+and k
+∗∗
+→ ∞ then μ(ψ) =
+q
+p
+→ 0.
+Since λ
+min
+(H) < λ < λ
+max
+(H) there is δ, 0 < δ < 1, so that λ = δλ(φ
+min
+)+
+(1−δ)λ(φ
+max
+). Let us choose a sequence of integers {V
+m
+} and {W
+m
+} so that
+V
+m
+, W
+m
+→∞ and
+V
+m
+W
+m
+→ δ as m→∞. Since 0 < δ < 1 then 0 < V
+m
+< W
+m
+.
+We construct a sequence of integers{k
+∗
+m
+} and{k
+∗∗
+m
+} so that
+k
+∗
+m
+p
+∗
+k
+∗
+m
+p
+∗
++k
+∗∗
+m
+p
+∗∗
+=
+V
+m
+W
+m
+,
+i.e.,
+k
+∗∗
+m
+=p
+∗∗
+V
+m
+, k
+∗
+m
+=p
+∗
+(W
+m
+−V
+m
+).
+Let us consider the described above sequence of periodic paths {ω
+m
+} with the
+decompositions
+ω
+m
+=k
+∗
+m
+φ
+min
++k
+∗∗
+m
+φ
+max
++ψ.
+We have
+μ
+m
+(φ
+min
+) =
+k
+∗
+m
+p
+∗
+k
+∗
+m
+p
+∗
++k
+∗∗
+m
+p
+∗∗
++q
+=
+V
+m
+W
+m
+k
+∗
+m
+p
+∗
++k
+∗∗
+m
+p
+∗∗
+k
+∗
+m
+p
+∗
++k
+∗∗
+m
+p
+∗∗
++q
+→δ as m→∞,
+μ
+m
+(φ
+max
+) =
+k
+∗∗
+m
+p
+∗∗
+k
+∗
+m
+p
+∗
++k
+∗∗
+m
+p
+∗∗
++q
+= (1−
+V
+m
+W
+m
+)
+k
+∗
+m
+p
+∗
++k
+∗∗
+m
+p
+∗∗
+k
+∗
+m
+p
+∗
++k
+∗∗
+m
+p
+∗∗
++q
+→ 1−δ as m→∞,
+μ
+m
+(ψ) =
+q
+k
+∗
+m
+p
+∗
++k
+∗∗
+m
+p
+∗∗
++q
+→ 0 as m→∞.
+Electronic Journal.  31Differential Equations and Control Processes, N 4, 1999
+Thus, the characteristic exponent of ω
+m
+=k
+∗
+m
+φ
+min
++k
+∗∗
+m
+φ
+max
++ψ is
+λ(ω
+m
+) =μ
+m
+(φ
+min
+)λ(φ
+min
+)+μ
+m
+(φ
+max
+)λ(φ
+max
+)+μ
+m
+(ψ)λ(ψ).
+So,
+λ(ω
+m
+)→δλ(φ
+min
+)+(1−δ)λ(φ
+max
+) =λ as m→∞.
+2
+From Propositions 3 and 4 it follows
+Theorem 1 The spectrum of the linear extension LG consists of the intervals
+[λ
+min
+(H
+k
+),λ
+max
+(H
+k
+)], where {H
+k
+} is the full family of classes of equivalent re-
+current vertices of the symbolic image G(PF).
+One has to emphasize that the intervals [λ
+min
+(H
+k
+),λ
+max
+(H
+k
+)] may intersect
+(see [26, 7]).
+8 Spectrum of symbolic image
+By construction, the linear extension LG depends on the choice of the linear
+mappings {a[ji] : R
+i
+→ R
+j
+} for the edges {i → j} of G(PF). The mapping
+a[ji] is determined by the choice of a point (x,y)∈ M(i), (x,y)∈ M(j) since
+a[ji]l = A(x)e(y)l, where e(y) ∈ L(y), |e(y)| = 1. It follows from here that
+the characteristic exponent depends on the choice as well. Let us examine
+the variation of exponent under admissible variations of the linear mappings
+{a[ji];R
+i
+→Rj}.
+Let ω = {z
+0
+,z
+1
+,...,z
+p
+= z
+0
+} be a periodic path on G(PF). By deﬁnition,
+the characteristic exponent of the path ω for a linear extension LG is of the
+form
+λ(w) =
+1
+p
+p
+X
+k=1
+ln|a[z
+k
+z
+k−1
+]|,
+where each|a[z
+k
+z
+k−1
+]| =|a[ji]| is determined by the edgei→j rather then the
+number k. In other words, if the path ω passes through the edge i→j twice,
+i.e. z
+k−1
+=i, z
+k
+=j andz
+l−1
+=i, z
+l
+=j, thena[z
+k
+z
+k−1
+] =a[z
+l
+z
+l−1
+] =a[ji]. Let
+us consider a more general case and deﬁne other exponent
+σ(w) =
+1
+p
+p
+X
+k=1
+ln|α[z
+k
+z
+k−1
+]|,
+where each α[z
+k
+z
+k−1
+] depends on k. In other words, if a path ω passes twice
+through an edge i→j, i.e., z
+k−1
+=i, z
+k
+=j z
+l−1
+=i, z
+l
+=j, and k 6=l, then
+Electronic Journal.  32Differential Equations and Control Processes, N 4, 1999
+α[z
+k
+z
+k−1
+] and α[z
+l
+z
+l−1
+] can be different. Moreover, a value α[z
+k
+z
+k−1
+] is deﬁned
+as
+α[z
+k
+z
+k−1
+] =a(x,y), where (x,y)∈M(z
+k−1
+),
+i.e., we do not require that the image F(x,y) is in M(z
+k
+).
+Deﬁnition 8 Let ω = {z
+0
+,z
+1
+,...,z
+p
+= z
+0
+} be an admissible periodic path on
+the symbolic image G(PF). A nonstationary exponent σ(w) of the path ω is
+deﬁned by the equality
+σ(w) =
+1
+p
+p
+X
+k=1
+ln|α[z
+k
+z
+k−1
+]|,
+where
+α[z
+k
+z
+k−1
+] =a(x,y), (x,y)∈M(z
+k−1
+), k = 1,....p.
+Itisclearthatthenonstationaryexponentσ(ω)admitsmorevariationthan
+λ(ω).
+Deﬁnition 9 The set
+Σ(G(PF)) ={σ∈R : there is a sequence of periodic paths ω
+k
+on G(PF)
+with nonstationary exponents σ(ω
+k
+) such that σ(ω
+k
+)→σ as k→∞}
+is called a spectrum of the symbolic imageG(PF) on the set of recurrent vertices
+RV.
+It is evident that the spectrum Σ(G(PF)) does not depend on linear exten-
+sion LG. To ﬁnd the spectrum of a symbolic image we introduce the following
+notations
+α(i) = min
+(x,y)∈M(i)
+|a(x,y)|, β(i) = max
+(x,y)∈M(i)
+|a(x,y)|.
+Since each cell M(i) is compact, there are points (x
+∗
+,y
+∗
+) and (x
+∗∗
+,y
+∗∗
+)∈M(i)
+such that α(i) = |a(x
+∗
+,y
+∗
+)| and β(i) = |a(x
+∗∗
+,y
+∗∗
+)|. The maximal and the
+minimal nonstationary exponents
+Λ
+min
+(ω) =
+1
+p
+p
+X
+k=1
+lnα(z
+k
+), Λ
+max
+(ω) =
+1
+p
+p
+X
+k=1
+lnβ(z
+k
+)
+are deﬁned for each periodic pathω ={z
+0
+,z
+1
+,...,z
+p
+=z
+0
+}. By pickingα[z
+k
+z
+k−1
+]
+suchthat|α[z
+k
+z
+k−1
+]| =α(z
+k−1
+), werealizeΛ
+min
+(ω)asanonstationaryexponent
+σ(w) =
+1
+p
+P
+p
+k=1
+lnα(z
+k−1
+) of the path ω. The same way, Λ
+max
+(ω) is realized as
+a nonstationary exponent of the path ω. Therefore, we obtain the estimates
+Λ
+min
+(ω)≤σ(ω)≤ Λ
+max
+(ω), (1)
+Electronic Journal.  33Differential Equations and Control Processes, N 4, 1999
+Λ
+min
+(ω)≤λ(ω)≤ Λ
+max
+(ω), (2)
+where σ(ω) is any nonstationary exponent, and λ(ω) is any characteristic ex-
+ponent of a linear extension LG. Let φ
+1
+,...,φ
+q
+be a full collection of simple
+periodic paths of class H with periods p
+1
+,...,p
+q
+, respectively. Set
+Λ
+min
+(H) = min{Λ
+min
+(φ
+j
+), j = 1,...,q},
+Λ
+max
+(H) = max{Λ
+max
+(φ
+j
+), j = 1,...,q}.
+Theorem 2 The spectrum Σ(G(PF)) of the symbolic image G(PF) consists
+of the intervals{[Λ
+min
+(H
+k
+),Λ
+max
+(H
+k
+)]}, where {H
+k
+} is the full family of classes
+of equivalent recurrent vertices on the symbolic image G(PF).
+Proof. We ﬁx a class H of equivalent recurrent vertices on the symbolic
+image. As indicated above, Λ
+min
+(φ
+j
+) and Λ
+max
+(φ
+j
+) are realized as some nonsta-
+tionaryexponentsunderacorrespondingchoiceof α[z
+k
+z
+k−1
+]. Sincethenumber
+of simple periodic paths is ﬁnite, the exponents Λ
+min
+(H) and Λ
+max
+(H) are re-
+alized as well. By repeating the proof of Proposition 2, one can show that each
+nonstationary exponent of a periodic path is an arithmetic mean of nonstation-
+ary exponents of simple periodic paths with corresponding weights. From this
+it follows that the spectrum Σ(G(PF)) of the symbolic image G(PF) is in
+S
+k
+[Λ
+min
+(H
+k
+),Λ
+max
+(H
+k
+)], where {H
+k
+} is the full family of classes of equivalent
+recurrent vertices on the symbolic image G(PF). By repeating the proof of
+Proposition 4, one can show that each λ ∈ [Λ
+min
+(H
+k
+),Λ
+max
+(H
+k
+)] belongs to
+the spectrum of a symbolic image. Thus,
+Σ(G(PF)) =
+[
+k
+[Λ
+min
+(H
+k
+),Λ
+max
+(H
+k
+)],
+where {H
+k
+} is the full family of classes of equivalent recurrent vertices of the
+symbolic image G(PF).
+2
+Theorem 3 The spectrum Σ(G(PF)) offers the properties:
+1) spectrum of any linear extension Σ(LG) is in Σ(G(PF)),
+2) Morse spectrum Σ(F) is in Σ(G(PF)).
+Proof. 1) From the deﬁnition of a nonstationary exponent it follows, that
+each characteristic exponent λ(ω) of the periodic path ω = {z
+0
+,z
+1
+,...z
+p
+= z
+0
+}
+can be realized as a nonstationary exponentσ(ω) settingα[z
+k
+z
+k−1
+] =a[z
+k
+z
+k−1
+],
+k = 1,....p. From this it follows that the characteristic exponent λ(ω) of any
+linear extension LG is in the spectrum of a symbolic image.
+Electronic Journal.  34Differential Equations and Control Processes, N 4, 1999
+2) Let us show that for any periodic ε-trajectory
+ξ ={(x
+0
+,y
+0
+),(x
+1
+,y
+1
+),...,(x
+p
+,y
+p
+) = (x
+0
+,y
+0
+)}, ε<r,
+wherer is the lower bound of a symbolic image, there is an admissible periodic
+path ω = {z
+0
+,z
+1
+,...z
+p
+= z
+0
+} such that the characteristic exponent λ(ξ) =
+1
+p
+P
+p−1
+k=0
+ln|a(x
+k
+,y
+k
+)| ofξ is realized as a nonstationary exponentσ(ω) ofω. Let a
+vertexz
+k
+be such that (x
+k
+,y
+k
+)∈M(z
+k
+). Sinceε<r, according to Proposition
+1 the path ω = {z
+0
+,z
+1
+,...,z
+p
+= z
+0
+} is an admissible periodic path on the
+symbolic image. By setting α[z
+k
+z
+k−1
+] =a(x
+k−1
+,y
+k−1
+), we obtain
+σ(ω) =
+1
+p
+p
+X
+k=1
+ln|α[z
+k
+z
+k−1
+]| =
+1
+p
+p−1
+X
+k=0
+ln|a(x
+k
+,y
+k
+)| =λ(ξ).
+Hence, a characteristic exponent of any periodic ε-trajectory, ε < r, is in
+Σ(G(PF)). Since the Morse spectrum is a limit set of periodicε-trajectories as
+ε→ 0, it is in the spectrum of symbolic image Σ(G(PF)).
+2
+9 EstimateofMorsespectrumandsymbolicimagespec-
+trum
+Inthis sectionweﬁndafamilyofintervalscontaining thedesiredspectra under
+the supposition that a spectrum Σ(LG) of a linear extension of symbolic image
+is known. Since M is compact, the mapping A(x) has a modulus of continuity
+η
+A
+(ρ) on x. Set
+η(ρ) =η
+A
+(ρ)+max
+x∈M
+|A(x)|ρ,
+θ = ( min
+x∈M, |e|=1
+|A(x)e|)
+−1
+= max
+x∈M
+|A
+−1
+(x)|.
+Proposition 5 Let ω be an admissible periodic path on a symbolic image
+G(PF), λ(ω) be a characteristic exponent for a linear extension LG, and σ(ω)
+be a nonstationary exponent of the same periodic path ω. Then
+|λ(ω)−σ(ω)|≤θη(d),
+where d is a maximal diameter of cells of covering C(P).
+Proof. Let (x,y) and (x
+∗
+,y
+∗
+) be two points from a cell M(i), a =a(x,y),
+and a
+∗
+=a(x
+∗
+,y
+∗
+). We have the estimate
+|a
+∗
+−a|≤|A(x
+∗
+)e(y
+∗
+)−A(x)e(y)|≤|A(x
+∗
+)−A(x)|+|A(x)||e(y
+∗
+)−e(y)|≤
+Electronic Journal.  35Differential Equations and Control Processes, N 4, 1999
+η
+A
+(ρ(x,x
+∗
+))+max
+x
+|A(x)|ρ
+1
+(y
+∗
+,y)≤η(d),
+where ρ
+1
+(∗) is a distance on the projective manifold, d is a maximal diameter
+of cells of the covering C(P).
+Let LG be a linear extension of the symbolic image G(PF) and ω =
+{z
+0
+,z
+1
+,...,z
+p
+=z
+0
+}beaperiodicpathonG(PF).Denotebyλ =
+1
+p
+P
+p
+k=1
+ln|a[z
+k
+z
+k−1
+]|
+and σ =
+1
+p
+P
+p
+k=1
+ln|α[z
+k
+z
+k−1
+]| a characteristic exponent and a nonstationary
+exponent of the path ω, respectively. Since a[z
+k
+z
+k−1
+] = a(x
+k−1
+,y
+k−1
+) and
+α[z
+k
+z
+k−1
+] = a(x
+∗
+k−1
+,y
+∗
+k−1
+), where the points (x
+k−1
+,y
+k−1
+) and (x
+∗
+k−1
+,y
+∗
+k−1
+) are
+in the cell M(k−1), we have the estimate
+|a[z
+k
+z
+k−1
+]−α[z
+k
+z
+k−1
+]|≤η(d).
+From this it follows the estimate
+|λ−α|≤
+1
+p
+p
+X
+k=1
+|ln|a[z
+k
+z
+k−1
+]|−ln|α[z
+k
+z
+k−1
+]||≤ (max
+P
+1
+|a(x,y)|
+)η(d) =
+η(d)
+min
+P
+|a(x,y)|
+=θη(d). (3)
+2
+According to Proposition 1, each ε-trajectory with ε < r is realized as an
+admissible path on the symbolic imageG(PF). From this and Proposition 5 it
+follows
+Proposition 6 Let ξ = {(x
+0
+,y
+0
+),(x
+1
+,y
+1
+),...,(x
+p
+,y
+p
+) = (x
+0
+,y
+0
+)} be a periodic
+ε-trajectory, ε < r, and the vertices z
+k
+are such that (x
+k
+,y
+k
+) ∈ M(z
+k
+). Then
+ω = {z
+0
+,z
+1
+,...,z
+p
+= z
+0
+} is an admissible periodic path, and for any linear
+extension LG characteristic exponent λ(ω) offers the inequality
+|λ(ω)−λ(ξ)|≤θη(d).
+According to Theorem 1, the spectrum of the linear extension
+Σ(LG) =
+[
+k
+[λ
+min
+(H
+k
+),λ
+max
+(H
+k
+)],
+where {H
+k
+} is the full family of classes of equivalent recurrent vertices of the
+symbolicimageG(PF),λ
+min
+(H
+k
+)andλ
+max
+(H
+k
+)arethemaximumandminimum
+of characteristic exponents of simple periodic paths of the class H
+k
+.
+Theorem 4 The Morse spectrum Σ(F) of the linear extensionF :E →E and
+the spectrum Σ(G(PF)) are in
+[
+k
+[λ
+min
+(H
+k
+)−θη(d),λ
+max
+(H
+k
+)+θη(d)],
+Electronic Journal.  36Differential Equations and Control Processes, N 4, 1999
+where{H
+k
+} is the full family of classes of equivalent recurrent vertices on sym-
+bolic image G(PF), d is a maximal diameter of cells of covering C(P).
+Proof. According to Theorem 3, the Morse spectrum is in the spectrum of
+a symbolic image. Thus, it is suﬃcient to prove that the last is in the described
+family of intervals. Let σ be in the spectrum of a symbolic image. This means
+that there is a sequence of periodic paths ω
+m
+= {z
+m
+0
+,z
+m
+1
+,...,z
+m
+p
+m
+= z
+m
+0
+} and
+their nonstationary exponents
+σ
+m
+=σ(ω
+m
+) =
+1
+p
+m
+p
+m
+X
+i=1
+ln|α[z
+m
+i
+z
+m
+i−1
+]|,
+such that
+σ
+m
+→σ as m→∞.
+Let a periodic path ω
+m
+be in the class H and LG be a linear extension of the
+symbolic image G(PF). According to Theorem 1 the characteristic exponent
+λ(ω
+m
+) =
+1
+p
+m
+p
+m
+X
+i=1
+ln|a[z
+m
+i
+z
+m
+i−1
+]|
+of the path ω
+m
+is in the interval I = [λ
+min
+(H),λ
+max
+(H)]. In addition, we have
+the estimate
+|α[z
+m
+i
+z
+m
+i−1
+]−a[z
+m
+i
+z
+m
+i−1
+]|≤η(d).
+Since all exponents λ(ω
+m
+) are in the interval [λ
+min
+(H),λ
+max
+(H)], by (3) each
+nonstationary exponent
+σ(ω
+m
+) =
+1
+p
+m
+p
+m
+X
+i=1
+ln|α[z
+m
+i
+z
+m
+i−1
+]|
+is in the closed interval [λ
+min
+(H)−θη(d),λ
+max
+(H)+θη(d)]. Hence, the limit
+λ = lim
+m→∞
+λ
+m
+is in this interval as well.
+2
+Wedenoteby
+g
+Σ(LG)aunionoftheintervals
+f
+I
+k
+=[λ
+min
+(H
+k
+)−θη(d),λ
+max
+(H
+k
+)+
+θη(d)] :
+g
+Σ(LG) =∪
+k
+f
+I
+k
+, wheredisamaximaldiameterofcellsontheprojective
+space and {H
+k
+} is the full family of classes of equivalent recurrent vertices.
+Recall that the Hausdorff distanceH(A,B) between setsA andB is deﬁned by
+H(A,B) = max{h(A,B), h(B,A)},
+where
+h(A,B) = sup
+u∈B
+ρ(u,A) = sup
+u∈B
+inf
+v∈A
+ρ(u,v).
+Electronic Journal.  37Differential Equations and Control Processes, N 4, 1999
+Theorem 5 Let {LG
+m
+} be a sequence of linear extensions of images {G
+m
+} of
+PF with the maximal diameters d
+m
+of cells. If d
+m
+→ 0 as m→∞ then
+H(Σ(F),Σ(LG
+m
+))→ 0,
+H(Σ(F),
+g
+Σ(LG
+m
+))→ 0,
+H(Σ(F),Σ(G
+m
+))→ 0.
+as m→∞.
+Proof. First we notice that
+H(
+g
+Σ(LG
+m
+),Σ(LG
+m
+))≤θη(d
+m
+),H(Σ(G
+m
+),Σ(LG
+m
+))≤θη(d
+m
+),
+H(
+g
+Σ(LG
+m
+),Σ(G
+m
+))≤θη(d
+m
+),
+andθη(d
+m
+)→ 0asm→∞. Fromthisitfollowsthattoprovetheoremitissuﬃ-
+cienttoestablishoneoftherequiredlimits. ForexamplethatH(Σ(F),Σ(G
+m
+))→
+0 as m→∞.
+We prove by contradiction that h(Σ(F),Σ(G
+m
+)) → 0 as m → ∞. Let us
+assume on the contrary that there are χ > 0, a sequence of symbolic images
+{G
+m
+} and σ
+m
+∈ Σ(G
+m
+) such that ρ(σ
+m
+,Σ(F))≥χ. There is a sequence {ω
+m
+j
+}
+of periodic paths on G
+m
+such that their nonstationary exponents σ(ω
+m
+j
+)→σ
+m
+as j → ∞. According to Proposition 1, each periodic path ω
+m
+j
+generates a
+periodic ε
+m
+−trajectory ξ
+m
+j
+on the projective space, ε
+m
+→ 0 as m → ∞. In
+addition, we can choose ξ
+m
+j
+such that its characteristic exponent λ
+m
+j
+coincides
+with σ(ω
+m
+j
+). One can consider that ρ(λ
+m
+j
+,Σ(F)) ≥
+1
+2
+χ > 0. Since {λ
+m
+j
+} is
+bounded, there is a convergent subsequenceλ
+m(k)
+j(k)
+→λ ask→∞. By deﬁnition
+ofthespectrum, thelimitλhastobeinΣ(F)thatcontradictstotheinequality
+ρ(λ
+m(k)
+j(k)
+,Σ(F)) ≥
+1
+2
+χ. Thus, h(Σ(F),Σ(G
+m
+)) → 0 as m → ∞. According to
+Theorem 3, Σ(F)⊂ Σ(G
+m
+). From this it follows thath(Σ(G
+m
+),Σ(F)) = 0. So,
+H(Σ(F),Σ(G
+m
+))→ 0 as m→∞.
+2
+Theorem 5 guarantees that a good estimate for Morse spectrum can be
+obtained if the largest cell diameter d of the covering C(P) is suﬃciently
+small. However, we do not have suitable estimate for the diameter d. In this
+case an algorithm constructing a monotone sequvence of sets converging to the
+Morse spectrum is of greatest practical utility. Let us consider one of them.
+Electronic Journal.  38Differential Equations and Control Processes, N 4, 1999
+10 Localization of the chain recurrent set
+Denote by RV(d) the union of cells M(i) for which the vertices i are recurrent
+:
+RV(d) ={
+[
+M(i) :i are recurrent},
+wheredisthelargestdiameterofthecellsM(i). Itshouldbenotedthatinfact
+the constructed set RV(d) depends on the covering C(P). However, in what
+follows we need only to consider the dependence of RV(d) on d.
+Theorem 6 [16]
+1. The set RV(d) is a closed neighborhood of the chain recurrent set CR.
+Moreover,RV(d) is a subset ofε-periodic points set for anyε>q+d, i.e.,
+RV(d)⊂Per(ε), ε>q+d.
+2. The chain recurrent set CR coincides with an intersection of the sets
+RV(d) for all positive d:
+CR =
+\
+d>0
+RV(d).
+Theorem 6 makes possible to localize the chain recurrent set without pre-
+liminary information on a dynamical system [16]. The subdivision is a main
+step of the construction.
+11 Subdivision process
+LetC ={M(i)}beacoveringofP andGbeasymbolicimageforC. Supposea
+newcoveringNC isproducedbytakingasubdivisionofC,i.e.,eachcellM(i)is
+subdivided. Denote byNG the symbolic image forNC. It is a convenience the
+cells of the new covering to designate as M(i,k). Thus, the cells M(i,k), k =
+1,2,... , form a partition of the cell M(i):
+[
+k
+M(i,k) =M(i).
+Theverticesofthenewsymbolicimagearedenotedas(i,k). Somecellsarenot
+excluded actually to be not subdivided, i.e., M(i,1) = M(i). The described
+subdivision generates a natural mapping S from NG on G which takes the
+vertices(i,k), k = 1,...,ontothevertexi. SincefromPF(M(i,k))∩M(j,l)6=∅
+it follows PF(M(i))∩M(j) 6= ∅, the directed edge (i,k) → (j,l) is mapped
+Electronic Journal.  39Differential Equations and Control Processes, N 4, 1999
+onto the directed edge i→j. Hence, the mapping S takes the directed graph
+NG into the directed graph G.
+An algorithm localizing the chain recurrent set CR is available in [16]. It
+consists of the following steps:
+1. Starting with an initial covering C, the symbolic image G of the map PF
+is found. The cells of the initial covering may have arbitrary diameterd
+0
+.
+2. The recurrent vertices {i
+k
+} of the graph G are recognized. Using the
+recurrent vertices, a closed neighborhoodV ={∪M(i
+k
+) : i
+k
+isrecurrent}
+of the chain recurrent set CR is found.
+3. The cells corresponding to recurrent vertices{M(i
+k
+) :i
+k
+isrecurrent} are
+subdivided. For example, the largest diameter of the cells may be divided
+by 2. Thus, the new covering is deﬁned.
+4. The symbolic image G is constructed for the new covering. It should
+be noted that the new symbolic image may be constructed on the set
+V ={∪M(i
+k
+) : i
+k
+is recurrent}. In other words, the cells corresponding
+to non recurrent vertices do not participate in the construction of the new
+covering and the new symbolic image.
+5. Then one goes back to the second step.
+Repeating this subdivision process we obtain a sequence of neighborhoods
+V
+0
+, V
+1
+, V
+2
+, ... of the chain recurrent set CR and a sequence of the largest
+diameters d
+0
+, d
+1
+, d
+2
+, ... . The following theorem substantiates the described
+algorithm for localization of the chain recurrent set.
+Theorem 7 [16] The sequence of setsV
+0
+, V
+1
+, V
+2
+, ... offers the following prop-
+erties:
+(i) the neighborhoods V
+k
+are imbedded one inside the other, i.e.,
+V
+0
+⊃V
+1
+⊃V
+2
+⊃...⊃CR,
+(ii) if the largest diameters d
+k
+→ 0 as k becomes inﬁnite then
+lim
+k→∞
+V
+k
+=
+\
+k
+V
+k
+=CR. (4)
+Electronic Journal.  40Differential Equations and Control Processes, N 4, 1999
+12 Localization of Morse spectrum
+Let us modify the subdivision process to localize the Morse spectrum of a
+dynamicalsystem. TothisendweapplythesubdivisionprocesstomappingPF
+and after the second step of the described algorithm we produce the following
+2
+∗
+. The classes {H
+m
+} of equivalent recurrent vertices are found, and the
+family of simple periodic paths{φ
+m
+j
+} is recognized for each class H
+m
+,
+2
+∗∗
+. The intervals I
+m
+= [Λ
+min
+(H
+m
+),Λ
+max
+(H
+m
+)] are determined by using the
+families{φ
+m
+j
+}.
+Then one goes to the third step. Repeating the subdivision process and the
+calculation of intervals I
+m
+we obtain
+1) a sequence of neighborhoods{V
+k
+} of the chain recurrent set,
+2) a sequence of the largest diameters of cells{d
+k
+},
+3) a sequence of families of intervals{I
+k
+m
+}.
+Theorem 8 The constructed sequence of intervals offers the following proper-
+ties:
+(i) each set Σ
+k
+=∪
+m
+I
+k
+m
+contains the Morse spectrum of F,
+(ii) the sets Σ
+k
+are embedded one inside the other, i.e.,
+Σ
+0
+⊃ Σ
+1
+⊃ Σ
+2
+⊃...⊃ Σ(F),
+(iii) if d
+k
+→ 0 as k becomes inﬁnite then
+lim
+k→∞
+Σ
+k
+=
+\
+k
+Σ
+k
+= Σ(F). (5)
+Proof. (i) follows from Theorem 3, and (iii) is a corollary of Theorem
+5. To prove the statement (ii) we consider a covering C = {M(i)} and a new
+covering NC ={m(ij)} which is a subdivision of C, i.e., ∪
+j
+m(ij) =M(i). Let
+G and NG be symbolic images for the coverings C and NC, respectively. As
+indicated above, there is the mappingS :NG→G taking the directed graphs.
+In particular, S takes a periodic path on some periodic path. However, an
+image of simple path may be not simple periodic path. Consider an interval
+NI = [Λ
+min
+(NH),Λ
+max
+(NH)] corresponding to some class NH of the new
+symbolic image. Since the mapping S takes the equivalent periodic paths into
+the equivalent periodic paths, the image S(NH) is in some class H. Let us
+prove that the interval I = [Λ
+min
+(H),Λ
+max
+(H)] contains the interval NI. In
+fact, according to Theorem 2, there is a simple periodic path φ ⊂ NG on
+Electronic Journal.  41Differential Equations and Control Processes, N 4, 1999
+which Λ
+min
+(NH) is realized as a nonstationary exponent, i.e.,
+Λ
+min
+(NH) =σ(φ) =
+1
+p
+p
+X
+k=1
+lnα(z
+k
+)
+where φ = {z
+0
+,z
+1
+,...,z
+p
+= z
+0
+}, α(z
+k
+) = min{|a(x,y)|, (x,y) ∈ m(z
+k
+)}. Let a
+periodic path ω = {z
+∗
+1
+,...,z
+∗
+p
+} be an image S(φ) of the simple periodic path φ
+with the minimal nonstationary exponent
+σ(ω) =
+1
+p
+p
+X
+k=1
+lnα
+∗
+(z
+∗
+k
+),
+where
+α
+∗
+(z
+∗
+k
+) = min
+(x,y)∈M(z
+∗
+k
+)
+|a(x,y)|.
+Fromtheinclusionm(z
+k
+)⊂M(z
+∗
+k
+)itfollowsα
+∗
+(z
+∗
+k
+)≤α(z
+k
+)andσ(ω)≤σ(φ) =
+Λ
+min
+(NH). Hence,Λ
+min
+(H)≤σ(ω)≤ Λ
+min
+(NH). Thesameway,onecanprove
+that Λ
+max
+(NH)≤ Λ
+max
+(H). Thus,
+Λ
+min
+(H)≤ Λ
+min
+(NH)≤ Λ
+max
+(NH)≤ Λ
+max
+(H),
+i.e., NI ⊂I.
+2
+13 Exponential estimates
+Let us apply of the obtained results to estimate an action of the mapping
+F along an ε-trajectory ξ = {(x
+i
+,y
+i
+)}. According to Proposition 1, if ε <
+r, r is a lower bound of symbolic image, then there is an admissible path
+ω = {z
+i
+} corresponding to the ε-trajectory ξ where z
+i
+: (x
+i
+,y
+i
+) ∈ M(z
+i
+). By
+Theorem 2, the spectrum of the symbolic image Σ(G(PF)) consists of the
+intervals {[Λ
+min
+(H
+k
+),Λ
+max
+(H
+k
+)]}, where {H
+k
+} is the full family of equivalent
+recurrentverticesclasses. Theinterval[Λ
+min
+(H),Λ
+max
+(H)]isreasonablynamed
+a spectrum of class H.
+Theorem 9 If the spectrum of class H is in an interval [a,b] then there ex-
+ist positive constants K
+∗
+and K
+∗
+such that for any ﬁnite ε-trajectory ξ =
+{(x
+0
+,y
+0
+),(x
+1
+,y
+1
+),...,(x
+p
+,y
+p
+)}, ε < r, r is a lower bound of symbolic image,
+for which the corresponding admissible path ω = {z
+i
+}, z
+i
+: (x
+i
+,y
+i
+) ∈ M(z
+i
+) is
+in H, the following estimate holds
+K
+∗
+exp(pa)≤
+p−1
+Y
+k=0
+|F(x
+k
+,e(x
+k
+,y
+k
+))|≤K
+∗
+exp(pb). (6)
+Electronic Journal.  42Differential Equations and Control Processes, N 4, 1999
+Proof. Recall that each directed edge i → j induces the value α[ji] =
+a(x,y), |a(x,y)| = |F(x,e(y))|, where (x,y) ∈ M(i), e(y) is a base vector in
+one-dimension space L(y).
+First we obtain the desired estimates for a simple periodic path. Let ψ =
+{z
+0
+,z
+1
+,...z
+p
+=z
+0
+} be a simple periodic path in the classH. By ﬁxing the values
+α[z
+k
+z
+k−1
+], k = 1,...,p, one can ﬁnd a nonstationary exponent
+σ(ψ) =
+1
+p
+p
+X
+k=1
+ln|α[z
+k
+z
+k−1
+]|.
+Since it is in the interval [a,b], we obtain the inequality
+a≤
+1
+p
+p
+X
+k=1
+ln|α[z
+k
+z
+k−1
+]|≤b.
+From this it follows the estimate
+exp(pa)≤
+p
+Y
+k=1
+|α[z
+k
+z
+k−1
+]|≤ exp(pb).
+Now, consider any path ω = {z
+0
+,z
+1
+,...,z
+p
+} in the class H. Let us decompose
+ω in a sum of simple paths as it done above. Let the path ω pass through a
+vertex z
+∗
+twice, i.e., z
+∗
+= z
+l
+= z
+l+p
+1
+, p
+1
+> 0. Consider two ﬁnite sequences
+ω
+1
+= {z
+0
+,z
+1
+,...,z
+l−1
+,z
+l
+= z
+l+p
+1
+,...,z
+p
+} and ω
+2
+= {z
+l
+,z
+l+1
+,...,z
+l+p
+1
+= z
+l
+}. By
+construction, the path ω
+2
+is an admissible periodic path of period p
+2
+. We say
+that the path ω is a sum of paths ω
+1
+and ω
+2
+, i.e.,
+ω =ω
+1
++ω
+2
+,
+where ω
+1
+is a nonperiodic path, in general. By repeating the decomposition
+process, we come to the representation
+ω =k
+1
+ψ
+1
++k
+2
+ψ
+2
++...+k
+q
+ψ
+q
++ω
+0
+of the path ω in a sum of simple periodic paths {ψ,ψ
+2
+,...,ψ
+q
+}⊂H plus some
+path ω
+0
+with different vertices of the class H. In this case p = k
+1
+p
+1
++k
+2
+p
+2
++
+...k
+q
+p
+q
++p
+0
+, k
+i
+≥ 0, p
+0
+is a length of the path ω
+0
+. Clearly, p
+0
+is less than
+the maximal period of simple periodic paths of the class H, i.e., p
+0
+≤ t =
+max{p
+j
+, j = 1,...,q}. Let us obtain an estimate of the product
+Π(ω) =
+p
+Y
+k=1
+|α[z
+k
+z
+k−1
+]|, (7)
+where α[z
+k
+z
+k−1
+] =a(x
+k−1
+,y
+k−1
+), (x
+k−1
+,y
+k−1
+)∈M(z
+k−1
+). To do this we change
+the position of factors in (7) according to the decomposition
+ω =k
+1
+ψ
+1
++k
+2
+ψ
+2
++...+k
+q
+ψ
+q
++ω
+0
+.
+Electronic Journal.  43Differential Equations and Control Processes, N 4, 1999
+We start with a product Π(ω
+0
+) consisting of factors α
+0
+[ji] = α[ji], i → j ∈
+ω
+0
+, corresponding to the path ω
+0
+. Next are k
+1
+products Π
+i
+(ψ
+1
+), i = 1,...,k
+1
+consisting of factors α
+i
+[ji] = α[ji], i → j ∈ ψ
+1
+, corresponding to the simple
+periodicpathψ
+1
+,k
+2
+productsΠ
+i
+(ψ
+2
+)correspondingtothesimpleperiodicpaths
+ψ
+2
+, and so on. As a result we get the representation of the product Π(ω) in the
+form
+Π(ω) =
+q
+Y
+j=1
+(
+k
+j
+Y
+i=1
+Π
+i
+(ψ
+j
+))·Π(ω
+0
+).
+For each factor Π
+i
+(ψ
+j
+) we have the estimate
+exp(p
+j
+a)≤ Π
+i
+(ψ
+j
+)≤ exp(p
+j
+b). (8)
+As the product Π(ω
+0
+) has no more than t factors then
+(K
+min
+)
+t
+≤ Π(ω
+0
+)≤ (K
+max
+)
+t
+, (9)
+where K
+min
+≤|α[z
+∗
+z
+∗∗
+]|≤ K
+max
+, z
+∗
+→ z
+∗∗
+∈ H, this we suppose K
+min
+≤ 1≤
+K
+max
+without a loss of generality. From inequalities (8) and (9) it follows the
+estimate
+(K
+min
+)
+t
+exp(a
+q
+X
+j=1
+k
+j
+p
+j
+)≤ Π(ω)≤ (K
+max
+)
+t
+exp(b
+q
+X
+j=1
+k
+j
+p
+j
+).
+Thus,
+K
+∗
+exp(pa)≤ Π(ω)≤K
+∗
+exp(pb), (10)
+where
+K
+∗
+=
+
+
+
+
+
+(K
+min
+)
+t
+exp(−at), ﬁΥ a> 0,
+(K
+min
+)
+t
+, ﬁΥ a≤ 0;
+K
+∗
+=
+
+
+
+
+
+(K
+max
+)
+t
+exp(−bt), ﬁΥ b< 0,
+(K
+max
+)
+t
+, ﬁΥ b≥ 0.
+(11)
+From this it follows (6).
+2
+Corollary 1 The constants K
+∗
+and K
+∗
+of the exponential estimate (6) are
+found by the formulas (11), where K
+min
+≤ |F(x,e)| ≤ K
+max
+, K
+min
+≤ 1 ≤
+K
+max
+, t is a maximal period of simple periodic paths of class H.
+Corollary 2 Let ξ = {(x
+k
+,y
+k
+) = PF
+k
+(x,y), k = 0,1,...,p} be a ﬁnite part of
+trajectory of a point (x,y) = (x
+0
+,y
+0
+)∈P such that a pathω ={z
+k
+} : (x
+k
+,y
+k
+)∈
+M(z
+k
+), k = 0,1,...,p corresponding to ξ is in H, then
+K
+∗
+exp(pa)|v|≤|F
+p
+(x,v)|≤K
+∗
+exp(pb)|v|,
+where v∈L(x,y).
+Electronic Journal.  44Differential Equations and Control Processes, N 4, 1999
+Proof. First, note that the estimate (6) holds for the trajectory ξ. If
+(x
+1
+,y
+1
+) =PF(x,y) then a basis vector in the space L(x
+1
+,y
+1
+) is of the form
+e(x
+1
+,y
+1
+) =
+A(x)e(x,y)
+|A(x)e(x,y)|
+.
+Hence, we have
+|F(x
+1
+,e(x
+1
+,y
+1
+))||F(x,e(x,y))| =|A(f(x))e(x
+1
+,y
+1
+)||A(x)e(x,y)| =
+|A(f(x))A(x)e(x,y)| =|F
+2
+(x,e(x,y))|.
+The same way we obtain the equality
+p−1
+Y
+k=0
+|F(x
+k
+,e(x
+k
+,y
+k
+))| =|F
+p
+(x,e(x,y))|,
+where e =v/|v|. Then (6) takes the form
+K
+∗
+exp(pa)|v|≤|F
+p
+(x,v)|≤K
+∗
+exp(pb)|v|.
+2
+14 Chain-recurrent components in the project bundle
+A subset Ω⊂CR is called a component of the chain-recurrent set if each two
+points from Ω can be connected by a periodic ε-trajectory for any ε> 0.
+Recallsomeinformationonattractors. AclosedinvariantLyapunovasymp-
+totically stable set is called an attractor. An attractor of the inverse mapping
+f
+−1
+is called a repeller of f. An intersection of an attractor and a repeller is
+called a Morse set.
+Proposition 7 [3, 5] An invariant set A is an attractor of f if there is a
+neighborhood U of A such that
+f(cl U)⊂U, A =
+\
+n>0
+f
+n
+(U),
+where cl stands for the closure.
+The described set U is called a fundamental neighborhood of an attractor
+A, and the set W
+s
+(A) =
+S
+n<0
+f
+n
+(U) is called an attraction domain of A.
+Deﬁnition 10 [13] A ﬁltration of f is a ﬁnite sequence{U
+0
+=∅, U
+1
+,...,U
+l
+=
+M} of open sets such that U
+0
+⊂ U
+1
+⊂ ··· ⊂ U
+l
+and f(clU
+k
+) ⊂ U
+k
+for each
+k = 0,1,...,m.
+Electronic Journal.  45Differential Equations and Control Processes, N 4, 1999
+The second condition is a property of fundamental neighborhood of an
+attractor. The next proposition describes a structure of attractors induced by
+a ﬁltration.
+Proposition 8 [5] Let {U
+0
+=∅,U
+1
+,...,U
+l
+} be a ﬁltration. The following prop-
+erties hold:
+(i) a maxilal invariant set in U
+k
+, k = 0,1,...,l
+A
+k
+={∩f
+n
+(U
+k
+) : n∈Z
++
+}
+is an attractor, and
+∅ =A
+0
+⊂A
+1
+⊂···⊂A
+l
+=M,
+(ii) a maximal invariant set in U
+k
+\U
+k−1
+:
+Ω
+k
+={∩F
+n
+(U
+k
+\U
+k−1
+) : n∈Z}, k = 1,...,l,
+is a Morse set, and the chain recurrent set CR is in ∪
+l
+k=1
+Ω
+k
+.
+The family{Ω
+1
+,...,Ω
+l
+} is called a Morse decomposition.
+Theorem 10 [5, 7, 26] Let F be a linear extension of a homeomorphism
+f :M →M on a vector bundle (E,M,π), andPF be an induced byF mapping
+on the projective bundle (P,M,Pπ). If Ω is a component of the chain-recurrent
+set of f on the base M then
+(i) the chain-recurrent set of the restriction PF|
+Pπ
+−1
+(Ω)
+has l components
+Ω
+1
+,...,Ω
+l
+, 1≤l≤ dimE(x), x∈M, which form a Morse decomposition,
+(ii) each set Ω
+i
+deﬁnes a (continuous, constant dimensional) subbundle E
+i
+over Ω
+E
+i
+={v∈π
+−1
+(Ω) : v6= 0 ⇒ [v] =y∈ Ω
+i
+},
+(iii) the following decomposition into a Whitney sum holds
+E|
+Ω
+=E
+1
+⊕...⊕E
+l
+,
+(iv) conversely, each chain-recurrent component Ω
+∗
+on the projective space
+P is projected onto a chain-recurrent component Ω of the base M, which is of
+the form described in (ii).
+In particular, from (iv) it follows that any component Ω
+∗
+of the chain-
+recurrentsetontheprojectivebundleP meetseachleafPπ
+−1
+(x)atasomepro-
+jective manifold which continuously depends on x ∈ Ω = Pπ(Ω
+∗
+). J.Selgrade
+Electronic Journal.  46Differential Equations and Control Processes, N 4, 1999
+[26] proved that the described property holds not only for a component of the
+chain-recurrent set but for each Morse set Ω
+∗
+on the projective bundle. The
+decomposition described in (i)-(iii) is called the ﬁnest Morse decomposition on
+the projective bundle.
+LetC(M) ={m(j)} be a covering of the manifoldM andC(P) ={M(z)}
+be an agreed covering of the projective space P, i.e., a natural projection of
+each cell is a cell: Pπ(M(z)) = m(j). We denote by G(f) and G(PF) the
+symbolic images of f and PF, respectively. As indicated above, for the agreed
+coverings there is a ”natural projection”h(z) =j fromG(PF) onG(f), where
+Pπ(M(z)) =m(j). Moreover, the mapping h takes the directed graph G(PF)
+on the directed graph G(f).
+Theorem 11 Let G(f) and G(PF) be the symbolic images of the mappings f
+and PF for the agreed coverings C(M) and C(P), respectively. If H is a class
+of equivalent recurrent vertices on the symbolic image G(f) and {H
+1
+,...,H
+l
+}
+is a full collection of equivalent recurrent vertices classes on G(PF) which are
+projected on H , i.e., h(H
+m
+) =H, m = 1,...,l, then
+(i) number l of classes H
+m
+: h(H
+m
+) =H is less or equal to dimE(x), x∈
+M,
+(ii) if Ω
+m
+is a maximal invariant set in V
+m
+={
+S
+M(z), z ∈H
+m
+} then the
+family {Ω
+1
+,...Ω
+l
+} is a Morse decomposition,
+(iii) each Ω
+m
+deﬁnes a (continuous, constant dimensional) subbundle E
+m
+over a component Ω being in V ={
+S
+m(j), j ∈H}:
+E
+m
+={v∈π
+−1
+(Ω) : v6= 0⇒ [v] =y∈ Ω
+m
+},
+(iv) the following decomposition into a Whitney sum holds
+E|
+Ω
+=E
+1
+⊕...⊕E
+l
+,
+(v) if the spectrum of the class H
+m
+is in an interval [a
+m
+,b
+m
+] then for each
+point (x,v)∈E
+m
+and every integer p> 0 the following estimate hold
+K
+∗
+exp(pa
+m
+) |v|≤|F
+p
+(x,v)|≤K
+∗
+exp(pb
+m
+) |v|,
+where the constants K
+∗
+and K
+∗
+are given by (11),
+(v) if 1 is not in the spectrum of classes {H
+m
+} then the linear extension F
+is hyperbolic over Ω,
+(vi) for each component Ω of the chain-recurrent set on the baseM there ex-
+istsd
+0
+> 0 such that for every coveringC(P) with the maximal diameter of cells
+Electronic Journal.  47Differential Equations and Control Processes, N 4, 1999
+d<d
+0
+the full family {H
+m
+} of equivalent recurrent vertices on G(PF) induces
+(see(ii)) a decomposition {Ω
+1
+,...,Ω
+l
+} which is the ﬁnest Morse decomposition
+over Ω.
+Proof. The statement (i) follows from (ii)-(iv). The statement (ii) follows
+from the results of the paper [18]. The statements (iii) and (iv) are proved
+in [5], p. 117. Corollary 2 guarantees the validity of (v). The statement (vi)
+follows from Theorem 6.
+2
+References
+[1] V.M.Alekseev, Symbolic Dynamics, 11th Mathematical School, Kiev, 1976
+(in Russian).
+[2] L.Auslender and R.MacKenzie, Introduction to Differentiable Manifolds,
+N.Y., 1963.
+[3] N.P.Bhatia, G.P.Szego, Stability theory of dynamical systems, New-York,
+Springer, 1970.
+[4] R.Bowen,SymbolicDynamics,Am.Math.Soc.Providence,R.I.,vol.8,1982.
+[5] I.U.Bronshtein, Nonautonomous dynamical system, Kishinev, Shtinisa,
+1984 (in Russian).
+[6] B.F.Bylov, R.E.Vinograd, D.M.Grobman, V.V.Nemytskii, Theory of Lya-
+punov exponents, Moscow, Nauka, 1966 (in Russian).
+[7] F.Colonius and W.Klieman, The Morse spectrum of linear ﬂows on vector
+bundles, report 503 Inst.of Math. Augsburg univ., 1994.
+[8] F.Colonius and W.Klieman, The Lyapunov spectrum of families of time
+varying matrices, report 504 Inst.of Math. Augsburg univ., 1994.
+[9] C.Conley, Isolated Invariant set and the Morse Index, CBMS Regional
+Conference Series, v.38, Amer.Math.Soc., Providence, 1978.
+[10] P.Hartman, Ordinary Differential Equations. N.Y., 1964.
+[11] C.S.Hsu, Cell-to-Cell Mapping. Springer-Verlag, N.Y., 1987.
+[12] Z.Nitecki, Differentiable Dynamics. London, 1971.
+Electronic Journal.  48Differential Equations and Control Processes, N 4, 1999
+[13] Z.Nitecki and M.Shub, Filtrations, decompositions, and explosions,
+Amer.J.of Math., v.97 (1975), No.4, 1029-1047.
+[14] G.S.Osipenko, On a symbolic image of dynamical system, in Boundary
+value problems, Perm, 1983, 101-105 (in Russian).
+[15] G.S.Osipenko, Veriﬁcation of the transversality condition by the symbolic-
+dynamical methods, DifferentialEquations, v.26, N9, 1126-1132; translated
+from Differentsial’nye Uravneniya, v.26, N9, 1528-1536, 1990.
+[16] G.Osipenko, The periodic points and symbolic dynamics, in Seminar on
+Dynamical Systems, Birkhauser Verlag, Basel, 1993, 261-267.
+[17] G.Osipenko and I.Komarchev, Applied Symbolic Dynamics: Construction
+of Periodic Trajectories, WSSIAA 4 (1996), 573-587.
+[18] G.Osipenko and I.Il’in, Methods of Applied Symbolic Dynamics, Proceed-
+ings of Dynamics Systems and Applications, v.2 (1996), 451-160.
+[19] G.Osipenko,Indestructibility of invariant locally nonunique manifolds,Dis-
+crete and Continuous Dynamical Systems, v.2, no.2 (1996), 203-220.
+[20] G.Osipenko, Morse Spectrum of Dynamical Systems and Symbolic Dynam-
+ics, Proceedings of 15th IMACS World Congress, v.1 (1997), 25-30.
+[21] G.Osipenko, Linearization near a locally nonunique invariant manifold,
+Discrete and Continuous Dynamical Systems, v.3, no.2 (1997), 189-205.
+[22] S.Yu.Pilyugin, The space of Dynamical Systems with C
+0
+-Topology,
+springer-Verlag, 1994, Lec. Notes in Math., 1571, 180p.
+[23] R.Sacker and G.Sell, Existence of dichotomies and invariant splitting for
+linear differential systems I-III,J.Diff.Eq.v.15, no3(1974), 429-458, v.22,
+no.2 (1976) 476-522.
+[24] R.SackerandG.Sell, A spectral theory for liner differential systems, J.Diff.
+Eq., v. 27, no. 3, (1978), 320-358.
+[25] D.Salamon and E.Zehnder, Flows on vector bundles and hyperbolic sets,
+Trans. Amer. Math. Soc., v. 306, no. 2 (1988), 623-649.
+[26] J.Selgrade,Isolated invariant sets for ﬂows on vector bundles,Trans.Amer.
+Math. Soc., v. 203 (1975), 359-390.
+[27] G.Sell, Nonautonomous differential equations and topological dynamics,
+Trans. AMS, 127 (1967), 241-283.
+Electronic Journal.  49

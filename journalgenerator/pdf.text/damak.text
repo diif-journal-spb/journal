@@ -1,0 +1,1585 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 1, 2013
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Control problems in nonlinear systems
+A separation principle of time-varying nonlinear
+dynamical systems
+H.Damak
+1
+I.Ellouze
+2
+M.A.Hammami
+3
+University of Sfax Tunisia
+E-mail:
+3
+MohamedAli.Hammami@fss.rnu.tn
+Abstract.
+This paper deals with the separation principle for a class of nonlinear dynam-
+ical systems whose dynamics are in general bounded in time. The resultant
+observer-based state feedback control guarantee the convergence of solutions
+toward a small neighborhood of the origin of the state oscillation given that the
+system is both uniformly controllable and observable. An example in dimen-
+tional two is given to illustrate the applicability of our result.
+2000 Mathematics Subject Classi cation: 34H15, 37B25.
+Keywords: Nonlinear systems, stabilization, Lyapunov functions.
+1 Introduction
+The problem of state trajectory control for nonlinear systems by output feed-
+back has received many attention. For systems with non-periodically time-
+varying parameters, an output feedback control design is proposed in [2] forDifferential Equations and Control Processes, N 1, 2013
+linear time-varying systems based on the gradient algorithm. In [9], a new
+design is proposed for the state feedback control of multivariable linear time-
+varying systems. The new design is based on inversion state transformation
+and a forward differential Riccati equation.
+The condition that we impose on the globally stabilizing state feedback control
+law are that it does not vanish asymptotically for large values. Then, we will
+give a separation principle based on analysis results for cascaded systems, as
+done for instance in ([1] , [4], [7], [8]). The author in [11] study the exponen-
+tial stabilization for a class of linear systems with mixed time delays in both
+state and control. However, in contrast to [10] we stress that our results will
+be formulated for time-varying systems and hence are applicable to tracking
+problems. Moreover as mentioned above, in [10] the author impose the more
+restrictive assumption in term of input to state stability (ISS). Our cascades
+criteria lead to milder conditions.
+The main contribution of this paper is the problem of stabilization via a state
+estimate controller. We give a separation principle for nonlinear systems by a
+linear output feedback under a generalized conditions. Furthermore, we give an
+example in dimentional two to show the applicability of the main result.
+2 General de nitions
+We consider the system
+8
+>
+<
+>
+:
+_ x(t) =F (t;x(t);u(t))
+y(t) =C(t)x(t)
+(1)
+where t 2 R
++
+, x(t) 2 R
+n
+is the state, u(t) 2 R
+m
+is the control input,
+y(t) 2 R
+p
+is the system output and C(t) 2 R
+p n
+is a matrix whose ele-
+ments are continuous or piecewise continuous functions of time. The function
+F : [0; +1[ R
+n
+ R
+m
+ !R
+n
+is piecewise continuous int and locally Lipschitz
+in x:
+Let u(t) =u(x(t)) a continuous stabilizing feedback law for (1).
+Let
+~
+F (t;x(t)) =F (t;x(t);u(t)):
+Electronic Journal. http://www.math.spbu.ru/diffjournal 37Differential Equations and Control Processes, N 1, 2013
+Let x(t) = (t;x) be the solution of
+_ x(t) =
+~
+F (t;x(t)); x(t
+0
+) =x
+0
+(2)
+We now introduce the notions of uniform boundedness and uniform ultimate
+boundedness of a trajectory of (2) (see [6]).
+De nition 1 The system (2) is uniformly bounded if for all R
+1
+> 0; there
+exists a R
+2
+=R
+2
+(R
+1
+)> 0; such that for all t
+0
+  0
+kx
+0
+k R
+1
+)kx(t)k R
+2
+; 8t t
+0
+:
+De nition 2 The system (2) is uniformly ultimately bounded if there exists
+R > 0; such that for all R
+1
+> 0; there exists a T = T (R
+1
+); such that for all
+t
+0
+  0
+kx
+0
+k R
+1
+)kx(t)k R; 8t t
+0
++T:
+Letr  0 andB
+r
+=fx2R
+n
+=kxk rg: First, we give the de nition of uniform
+stability and uniform attractivity of (2) towards a ball B
+r
+:
+De nition 3 (Uniform stability of B
+r
+) (i) B
+r
+is uniformly stable if for all
+">r; there exists   = (")> 0; such that for all t
+0
+  0
+kx
+0
+k< )kx(t)k<"; 8t t
+0
+:
+(ii) B
+r
+is globally uniformly stable if it is uniformly stable and the solutions of
+system (2) are globally uniformly bounded.
+De nition 4 (Uniform attractivity of B
+r
+) B
+r
+is globally uniformly attrac-
+tive if for all ">r and c> 0; there exists T (";c)> 0; such that for all t
+0
+  0
+kx(t)k<"; 8t t
+0
++T (";c); kx
+0
+k<c:
+De nition 5 The system (2) is globally uniformly practically asymptotically
+stable if there existsr  0; such thatB
+r
+is globally uniformly stable and globally
+uniformly attractive.
+De nition 6 B
+r
+is globally uniformly exponentially stable if there exist  > 0
+and k  0; such that for all t
+0
+2R
++
+and x
+0
+2R
+n
+kx(t)k kkx
+0
+ke
+ (t t
+0
+)
++r:
+The system (2) is globally practically uniformly exponentially stable if there
+exists r> 0; such that B
+r
+is globally uniformly exponentially stable.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 38Differential Equations and Control Processes, N 1, 2013
+We will illustrate the notion of practical exponential observer of a trajectory of
+(1)
+De nition 7 A practical exponential observer for (1) is a dynamical system
+which has the following form:
+_
+^ x(t) =F (t; ^ x(t);u(t)) L(t)(C(t)^ x(t) y(t)) (3)
+where L(t) is the gain matrix and the error equation with e(t) = ^ x(t) x(t); is
+given by
+_ e(t) =F (t; ^ x(t);u(t)) F (t;x(t);u(t)) L(t)C(t)e(t) (4)
+a Luenberger observer which is expected to produce an estimation of the state in
+the sense of global practical exponential stability. It means that, the system (4) is
+globally practically uniformly exponentially stable and the following estimation
+holds:
+ke(t)k  
+1
+ke(t
+0
+)k e
+  
+2
+(t t
+0
+)
++r; 8 t t
+0
+with  
+1
+;  
+2
+and r are positives constants.
+3 Basic results
+We consider now the following dynamical system
+8
+>
+<
+>
+:
+_ x(t) =A(t)x(t) +B(t)u(t) +f(t;x(t))
+y(t) =C(t)x(t)
+(5)
+wherex(t)2R
+n
+is the system state, y(t)2R
+p
+is the system output, u(t)2R
+m
+is the control input and A(t)2 R
+n n
+; B(t)2 R
+n m
+; C(t)2 R
+p n
+are matri-
+ces whose elements are bounded continuous or piecewise continuous functions
+of time. The function f(t;x) is continuous, locally Lipschitz in x: The corre-
+sponding nominal system is described by
+8
+>
+<
+>
+:
+_ x(t) =A(t)x(t) +B(t)u(t)
+y(t) =C(t)x(t)
+(6)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 39Differential Equations and Control Processes, N 1, 2013
+De nition 8 The pair (A(t);B(t)) is uniformly controllable if there exist  
+and another constantff depending on  ; such that the controllability grammian
+I(t   ;t) satis es
+I(t   ;t) =
+Z
+t
+t  
+ (t   ; )B( )B
+T
+( ) 
+T
+(t   ; )d  ffI > 0;
+in which (t; ) is the state transition matrix A(t) and is de ned by
+@ (t;t
+0
+)
+@t
+=A(t) (t;t
+0
+); (t;t) =I;
+ (t;t
+0
+) (t
+0
+;s) = (t;s)
+and
+ (t
+0
+;t) = 
+ 1
+(t;t
+0
+):
+We  nd from [9] the state feedback gain K(t); such that the control input
+u(t) =K(t)x(t) (7)
+with
+K(t) =R
+ 1
+1
+(t)B
+T
+(t)P (t)
+where P (t) is the solution of the forward differential Riccatti equation
+_
+P (t) = A
+T
+(t)P (t) P (t)A(t)+R
+1
+(t) P (t)B(t)R
+ 1
+2
+(t)B
+T
+(t)P (t);P(0) =P
+0
+> 0
+(8)
+in which
+A(t) = T (x)A(t)T
+ 1
+(x); B(t) =T (x)B(t);
+with
+T (x) =I  2
+x(t)x
+T
+(t)
+x
+T
+(t)x(t)
+;
+R
+1
+(t)> 0;R
+2
+(t)> 0 andR
+1
+(t);R
+2
+(t);R
+ 1
+1
+(t);R
+ 1
+2
+(t) are all uniformly bounded.
+3.1 Stabilization
+We prove in this subsection the stabilization of system (5) by a state feedback
+control candidate. It is assumed that the system (6) is uniformly controllable
+(see [5]).
+Proposition 1 (see [9]) Consider the system (6) and the state feedback control
+(7) and (8), if the system (6) is uniformly controllable, the closed-loop system
+is globally exponentially stable.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 40Differential Equations and Control Processes, N 1, 2013
+Notice that, the system (6) in closed-loop with the linear feedback
+u(t) =K(t)x(t)
+is globally exponentially stable, then from [6] we have for all positive de nite
+symmetric matrix Q
+1
+(t);
+Q
+1
+(t) c
+1
+I > 0; 8t  0
+there exists a positive de nite symmetric matrix P
+1
+(t);
+0<c
+2
+I <P
+1
+(t)<c
+3
+I; 8t  0
+which satis es
+A
+T
+K
+(t)P
+1
+(t)+P
+1
+(t)A
+K
+(t)+
+_
+P
+1
+(t) = Q
+1
+(t); whereA
+K
+(t) =A(t)+B(t)K(t) (9)
+Now, we prove the global practical uniform stabilizability of (5). We shall sup-
+pose the following assumption.
+(A
+1
+) Assume that
+kf(t;x)k (t)kxk
+1
+2
+; 8t  0;8 x2R
+n
+; (10)
+where  :R
++
+ !R is continuous non-negative function with
+Z
++1
+0
+
+2
+(s)ds M
+
+< +1
+Theorem 1 Under assumption (A
+1
+), the system (6) in closed-loop with the
+linear feedback u(t) = K(t)x(t) is globally practically uniformly exponentially
+stable.
+Proof. Let consider the Lyapunov function V (t;x(t)) = x
+T
+(t)P
+1
+(t)x(t): The
+derivative of V along the trajectories of system (5) is given by
+_
+V (t;x(t))  
+c
+1
+c
+3
+V (t;x(t)) +
+2c
+3
+(t)
+c
+3
+4
+2
+V (t;x)
+3
+4
+:
+Using the following changev(t) =V (t;x(t))
+1
+4
+: Then,v(t) satis es the following
+estimation
+v(t) v(t
+0
+)e
+ 
+c
+1
+4c
+3
+(t t
+0
+)
++
+c
+3
+2c
+3
+4
+2
+0
+@
+Z
+t
+t
+0
+(s)e
+c
+1
+4c
+3
+(s t
+0
+)
+ds
+1
+A
+e
+ 
+c
+1
+4c
+3
+(t t
+0
+)
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 41Differential Equations and Control Processes, N 1, 2013
+A simple computation shows that,
+0
+@
+Z
+t
+t
+0
+(s)e
+c
+1
+4c
+3
+(s t
+0
+)
+ds
+1
+A
+e
+ 
+c
+1
+4c
+3
+(t t
+0
+)
+ 
+r
+2c
+3
+M
+
+c
+1
+ 
+Thus, we obtain
+v(t) v(t
+0
+)e
+ 
+c
+1
+4c
+3
+(t t
+0
+)
++
+c
+3
+2c
+3
+4
+2
+r
+2c
+3
+M
+
+c
+1
+ 
+It follows that,
+kx(t)k  2
+r
+c
+3
+c
+2
+kx
+0
+ke
+ 
+c
+1
+2c
+3
+(t t
+0
+)
++
+c
+3
+3
+M
+
+c
+1
+c
+2
+2
+ 
+This implies the global uniform exponential stability of B
+ 
+; with
+  =
+c
+3
+3
+M
+
+c
+1
+c
+2
+2
+ 
+Hence, the system (5) in closed-loop with the linear feedback u(t) = K(t)x(t)
+is globally practically uniformly exponentially stable.  
+3.2 Conception of the observer
+For the concept of observer, we aim at simplifying the design of this system by
+exploiting the linear form of the nominal system. The system (6) is assumed
+to be uniformly observable (see[5]).
+De nition 9 The pair (A(t);C(t)) is uniformly observable if there exist   and
+another constantff depending on  ; such that the observability grammianJ(t 
+ ;t) satis es
+J(t   ;t) =
+Z
+t
+t  
+ (t   ; )C( )C
+T
+( ) 
+T
+(t   ; )d  ffI > 0;
+in which (t; ) is the state transition matrix A(t):
+To design an observer, we shall consider the system
+_
+^ x(t) =A(t)^ x(t) +B(t)u(t) +f(t; ^ x(t)) L(t)(C(t)^ x(t) y(t)) (11)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 42Differential Equations and Control Processes, N 1, 2013
+where ^ x(t) is the state estimate ofx(t); andL(t)2R
+n p
+is the observer feedback
+gain to be determined so that ^ x(t) tends tox(t) exponentially. One such design
+is the well known Kalman  lter design ([3]), in which the observer feedback
+gain L(t) is chosen as
+L(t) =Q(t)C
+T
+(t)V
+ 1
+2
+(t) (12)
+where Q(t) satis es a forward differential Riccati equation
+_
+Q(t) =A(t)Q(t)+Q(t)A
+T
+(t)+V
+1
+(t) Q(t)C
+T
+(t)V
+ 1
+2
+(t)C(t)Q(t); Q(0) =Q
+0
+> 0
+(13)
+in which V
+1
+(t)> 0; V
+2
+(t)> 0 and V
+1
+(t); V
+2
+(t); V
+ 1
+1
+(t); V
+ 1
+2
+(t) are all uniformly
+bounded. The error equation is given by
+_ e(t) =
+_
+^ x(t)  _ x(t) = (A(t) L(t)C(t))e(t) +f(t; ^ x(t)) f(t;x(t)) (14)
+Proposition 2 (see [9]) Consider the system (6) and the observer (12) and
+(13). If (A(t);C(t)) is uniformly observable, the closed-loop system is globally
+exponentially stable.
+Notice that, if the system (6) in closed-loop with the observer (12) and (13) is
+globally uniformly exponentially stable, then for all positive de nite symmetric
+matrix Q
+2
+(t);
+Q
+2
+(t) b
+1
+I > 0; 8t  0
+there exists a positive de nite symmetric matrix P
+2
+(t);
+0<b
+2
+I <P
+2
+(t)<b
+3
+I; 8t  0
+which satis es
+A
+T
+L
+(t)P
+2
+(t)+P
+2
+(t)A
+L
+(t)+
+_
+P
+2
+(t) = Q
+2
+(t); whereA
+L
+(t) =A(t) L(t)C(t) (15)
+(A
+2
+) Assume that
+kf(t;x) f(t;y)k (t)kx yk
+1
+2
+; 8t  0;8 x;y2R
+n
+; f(t; 0) = 0 (16)
+where  :R
++
+ !R is continuous non-negative function with
+Z
++1
+0
+
+2
+(s)ds M
+
+< +1:
+Theorem 2 Under assumption (A
+2
+), the system (11) is a practical exponential
+observer for the system (5).
+Electronic Journal. http://www.math.spbu.ru/diffjournal 43Differential Equations and Control Processes, N 1, 2013
+Proof. Let consider the Lyapunov function Y (t;e(t)) = e
+T
+(t)P
+2
+(t)e(t): The
+derivative of Y along the trajectories of system (14) is given by
+_
+Y (t;e(t))  
+b
+1
+b
+3
+Y (t;e(t)) +
+2b
+3
+(t)
+b
+3
+4
+2
+Y (t;e(t))
+3
+4
+:
+Using the following change y(t) =Y (t;e(t))
+1
+4
+: Then, y(t) satis es the following
+estimation
+y(t) y(t
+0
+)e
+ 
+b
+1
+4b
+3
+(t t
+0
+)
++
+b
+3
+2b
+3
+4
+2
+0
+B
+@
+Z
+t
+t
+0
+(s)e
+b
+1
+4b
+3
+(s t
+0
+)
+ds
+1
+C
+A
+e
+ 
+b
+1
+4b
+3
+(t t
+0
+)
+:
+A simple computation shows that,
+0
+B
+@
+Z
+t
+t
+0
+(s)e
+b
+1
+4b
+3
+(s t
+0
+)
+ds
+1
+C
+A
+e
+ 
+b
+1
+4b
+3
+(t t
+0
+)
+ 
+r
+2b
+3
+M
+
+b
+1
+ 
+Thus, we obtain
+y(t) y(t
+0
+)e
+ 
+b
+1
+4b
+3
+(t t
+0
+)
++
+b
+3
+2b
+3
+4
+2
+r
+2b
+3
+M
+
+b
+1
+ 
+Hence,
+ke(t)k  2
+r
+b
+3
+b
+2
+ke(t
+0
+)ke
+ 
+b
+1
+2b
+3
+(t t
+0
+)
++
+b
+3
+3
+M
+
+b
+1
+b
+2
+2
+ 
+This implies the global uniform exponential stability of B
+ 
+; with
+  =
+b
+3
+3
+M
+
+b
+1
+b
+2
+2
+:
+We deduce that, the system (14) is globally practically exponentially stable.
+Hence, the system (11) is a practical exponential observer for the system (5).
+ 
+3.3 Separation principle
+Now, in order to obtain a separation principle for (5). We consider the system
+(5) controlled by the linear feedback control u(t) = K(t)^ x(t) and estimated
+with the observer (11).
+Electronic Journal. http://www.math.spbu.ru/diffjournal 44Differential Equations and Control Processes, N 1, 2013
+Theorem 3 Under assumption (A
+2
+) and the fact
+b
+1
+b
+3
+<
+c
+1
+c
+3
+the system
+8
+>
+<
+>
+:
+_
+^ x(t) =A(t)^ x(t) +B(t)u(t) +f(t; ^ x(t)) L(t)C(t)e(t)
+_ e(t) = (A(t) L(t)C(t))e(t) +f(t; ^ x(t)) f(t;x(t))
+(17)
+is globally practically uniformly exponentially stable.
+Proof. In order to study the stabilization problem via an observer, we consider
+the system
+_
+^ x(t) = (t; ^ x(t)) +g(t; ^ x(t))e(t) (18)
+_ e(t) =h(t; ^ x(t);e(t)) (19)
+where,
+ (t; ^ x(t)) = (A(t) +B(t)K(t))^ x(t) +f(t; ^ x(t)); g(t; ^ x(t)) = L(t)C(t)
+and
+h(t; ^ x(t);e(t)) = (A(t) L(t)C(t))e(t) +f(t; ^ x(t)) f(t;x(t)):
+We have,
+_
+^ x(t) = (t; ^ x(t)) is globally practically uniformly exponentially stable
+with Lyapunov function associated to this system can be taken as
+v(t; ^ x(t)) :R
++
+ D !R
+n
+;
+with D =fx2R
+n
+=kxk> 1g and v(t; ^ x(t)) = (^ x
+T
+(t)P
+1
+(t)^ x(t))
+1
+4
+; which satis es
+p
+c
+2
+1
+2
+k^ x(t)k
+1
+2
+ v(t; ^ x(t)) 
+p
+c
+3
+1
+2
+k^ x(t)k
+1
+2
+@v
+@t
+(t; ^ x(t)) +
+@v
+@^ x(t)
+ (t; ^ x(t))  
+c
+1
+4c
+3
+v(t; ^ x(t)) +
+c
+3
+2c
+3
+4
+2
+(t)
+and 
+
+
+
+@v
+@^ x
+(t; ^ x(t))
+
+
+
+
+ 
+c
+3
+2c
+3
+4
+2
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal 45Differential Equations and Control Processes, N 1, 2013
+The derivative of v along the trajectories of system (18) is given by
+_ v(t; ^ x(t))  
+c
+1
+2c
+3
+v(t; ^ x(t)) +
+c
+3
+2c
+3
+4
+2
+(t) +
+c
+3
+2c
+3
+4
+2
+kL(t)C(t)k
+ 
+0
+B
+@
+2
+r
+b
+3
+b
+2
+ke(t
+0
+)ke
+ 
+b
+1
+2b
+3
+(t t
+0
+)
++
+b
+3
+3
+M
+
+b
+1
+b
+2
+2
+1
+C
+A
+:
+SinceL(t)C(t) is uniformly bounded for allt t
+0
+  0; then there existsR
+1
+> 0;
+such that
+kL(t)C(t)k R
+1
+; 8t t
+0
+  0:
+Then,
+_ v(t; ^ x(t))  
+c
+1
+2c
+3
+v(t; ^ x(t)) + ke(t
+0
+)ke
+ 
+b
+1
+2b
+3
+(t t
+0
+)
++
+c
+3
+2c
+3
+4
+2
+(t) +R
+with
+  =
+c
+3
+c
+3
+4
+2
+R
+1
+r
+b
+3
+b
+2
+;
+R =
+c
+3
+2c
+3
+4
+2
+R
+1
+b
+3
+3
+M
+
+b
+1
+b
+2
+2
+ 
+Using the following change
+y(t) =v(t)e
+c
+1
+2c
+3
+(t t
+0
+)
+:
+We obtain,
+y(t) y(t
+0
+)+
+Z
+t
+t
+0
+ ke(t
+0
+)ke
+0
+@
+ 
+b
+1
+2b
+3
++
+c
+1
+2c
+3
+1
+A
+(s t
+0
+)
+ds+
+c
+3
+2c
+3
+4
+2
+Z
+t
+t
+0
+(s)e
+c
+1
+2c
+3
+(s t
+0
+)
+ds
++
+Z
+t
+t
+0
+Re
+c
+1
+2c
+3
+(s t
+0
+)
+ds:
+Then,
+v(t) v(t
+0
+)e
+ 
+c
+1
+2c
+3
+(t t
+0
+)
++
+2 b
+3
+c
+3
+b
+3
+c
+1
+ b
+1
+c
+3
+ke(t
+0
+)ke
+ 
+b
+1
+2b
+3
+(t t
+0
+)
++
+c
+3
+2c
+3
+4
+2
+r
+c
+3
+M
+
+c
+1
++
+2Rc
+3
+c
+1
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal 46Differential Equations and Control Processes, N 1, 2013
+Then,
+k^ x(t)k  2
+r
+c
+3
+c
+2
+k^ x
+0
+ke
+ 
+b
+1
+b
+3
+(t t
+0
+)
++
+8 
+2
+b
+2
+3
+c
+2
+3
+p
+c
+2
+(b
+3
+c
+1
+ b
+1
+c
+3
+)
+2
+ke(t
+0
+)k
+2
+e
+ 
+b
+1
+b
+3
+(t t
+0
+)
++
+c
+3
+3
+M
+
+2c
+2
+2
+c
+1
++
+8R
+2
+c
+2
+3
+p
+c
+2
+c
+2
+1
+; 8t t
+0
+  0; 8k^ x
+0
+k> 1; 8ke(t
+0
+)k> 1:
+Let
+k = max
+ 
+2
+r
+c
+3
+c
+2
+;
+8 
+2
+b
+2
+3
+c
+2
+3
+p
+c
+2
+(b
+3
+c
+1
+ b
+1
+c
+3
+)
+2
+ 
+:
+Hence,
+k^ x(t)k kk(^ x
+0
+;e(t
+0
+))k
+2
+e
+ 
+b
+1
+b
+3
+(t t
+0
+)
++
+2c
+3
+3
+M
+
+c
+2
+2
+c
+1
++
+8R
+2
+c
+2
+3
+p
+c
+2
+c
+2
+1
+;
+8t  t
+0
+  0; 8k^ x
+0
+k > 1; 8ke(t
+0
+)k > 1: Then, the cascade system (17) is
+globally practically uniformly exponentially stable.  
+We give now an example to illustrate the applicability of our result.
+Example. Consider the system
+8
+>
+<
+>
+:
+_ x(t) =A(t)x(t) +B(t)u(t) +f(t;x(t))
+y(t) =C(t)x(t)
+(20)
+with x(t) = (x
+1
+(t);x
+2
+(t))
+T
+;
+A(t) =
+ 
+0 0
+0  1
+!
+; B(t) =
+ 
+1
+e
+ 2t
+!
+C(t) =
+ 
+1 e
+ 2t
+ 
+and
+f(t;x(t)) =(t)h(x)
+with(t) =e
+ t
+;h(x) satis eskh(x) h(y)k kkx yk
+1
+2
+; k> 0;8 x;y2R
+n
+and h(0) = 0: The proposed control (7) is then applied to the system with the
+following design parameters P (0) =I;R
+1
+(t) =I;R
+2
+(t) =I in (8). The matrix
+Electronic Journal. http://www.math.spbu.ru/diffjournal 47Differential Equations and Control Processes, N 1, 2013
+P (t) is calculated by solving the Ricatti equation (8). The function f(t;x(t))
+is continuous and satis es the assumption (A
+1
+) because
+Z
++1
+0
+e
+ 2t
+=
+1
+2
+:
+We conclude that the system (5) can be globally practically uniformly expo-
+nentially stable. The observer feedback gain L(t) be chosen as (12) by solving
+the Riccati equation (13). We conclude that the system (11) is a practical
+exponential observer for the system (20). Thus, if
+b
+1
+b
+3
+<
+c
+1
+c
+3
+the theorem 3 is
+satis ed. We conclude that, the system (17) is globally uniformly practically
+exponentially stable.  
+4 Conclusion
+This paper presents a separation principle of time-varying nonlinear dynamical
+systems. It is shown that the system can be globally exponentially stabilizable
+by means of an estimated state feedback control given by an observer design.
+References
+[1] M.Arcak and P.Kokotovic, Observer-based control of systems with slope-
+restricted nonlinearities, IEEE Transactions on Automatic Control (2001),
+1146-1150.
+[2] M.Chen, Control of linear time-varying systems by the gradient algorithm,
+IEEE (1997), 4549-4553.
+[3] R.E.Kalman and R.S.Bucy, New Results in Linear Filtering and Prediction
+Theory, ASME Journal of Basic Engineering (1961), 95-108.
+[4] I.Ellouze and M.Hammami, A separation principle of time-varying dynam-
+ical system: A practical approach, Mathematical Modelling and Analysis 12
+(2007), No. 2, 1-16.
+[5] W.J.Rugh, Linear System Theory, Prentice-Hall, Englewood Cliffs (1993).
+[6] H.K.Khalil, Nonlinear Systems, Prentice-Hall, New York (2002).
+Electronic Journal. http://www.math.spbu.ru/diffjournal 48Differential Equations and Control Processes, N 1, 2013
+[7] A.Loria and E.Panteley, A separation principle for Euler-Langrange sys-
+tems, In New Directions in Nonlinear Observer Design, H. Nijmeijer and
+T.I. Fossen, Eds. (London: Springer Verlag), (1999), 229-247.
+[8] A.Loria and J.de Leon Morales, On persistently exciting observers and a
+non-linear separation principle: application to the stabilization of a generator,
+International Journal of Control 76 (2003), No. 6, 607-617.
+[9] M.S.Chen and C.Y.Kao, Control of linear time-varying systems using for-
+ward Riccati equation, Journal of Dynamics systems, Measurement and Con-
+trol 119 (1997), 536-540.
+[10] J.Tsinias, Sontag's input to state stability condition and global stabiliza-
+tion using state detection, Systems and Control Letters 20 (1993), 219-226.
+[11] L.V.Hien and H.V.Thi, Exponential Stabilization of Linear Systems with
+Mixed Delays in State and Control, e-journal Differential Equations and Con-
+trol Processes (2009), No. 2, 32-42.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 49

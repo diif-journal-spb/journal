@@ -1,0 +1,1703 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 3, 1999
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+http://www.imop.csa.ru/ diff
+e-mail: diff@osipenko.stu.neva.ru
+Dynamical systems in medicine, biology, ecology, and chemistry
+Switching Effect Of Predation On Large Size
+Prey Species Exhibiting Group Defense
+B.S. BHATT
+Department Of Mathematics & Computer Science
+The University Of The West Indies, St. Augustine,
+Trindad & Tobago
+e-mail: bbhatt@centre.uwi.tt
+Q.J.A. KHAN
+Department of Mathematics & Statistics, College of Science,
+Sultan Qaboos University, P. Box 36, PC - 123, Muscat,
+Sultanate of Oman
+e-mail: qjalil@squ.edu.om
+R.P. JAJU
+Department of Computer Science, Faculty of Science,
+University Of Swaziland, P Bag 4, Kwaluseni,
+Swaziland (Southern Africa)
+e-mail: jajurp@science.uniswa.sz
+Abstract
+A Mathematical model with one prey species living in two different habitats
+and a predator where a prey exhibits group defense is studied. The prey speciesDifferential Equations and Control Processes, N. 3, 1999
+is able to migrate between two different habitats due to change in seasonal
+conditions. The stability analysis is carried out for a critical point of the system
+where all species co-exist. Using rate of conversion of the prey to predator as
+bifurcation parameter, conditions for a Hopf bifurcation to occur are derived.
+It is shown numerically that predatory rate increases at low population density
+of prey species, has not always stabilizing effect for the prey-predator system.
+1. Introduction
+In predator-prey environment, the predator prefers to feed itself in a habitat for
+some duration and changes its preference to another habitat. This preferential
+phenomenon of change of habitats from one to other is called switching. The
+mathematical models that have generally been proposed with switching are
+those involving interaction of one predator with two prey species (Holling [1],
+Takahashi [2], May [3], Murdoch and Oaten [4], Roughgarden and Feldman [5],
+Tansky [6,7], Prajneshu and Holgate [8], Khan et.al. [9,10]).
+When the prey species is relatively small in size with little or insigni cant
+defense capability with respect to predator, like small antelope, the predator
+prefers to catch prey species in a habitat where they are in abundance. Small
+size prey species lives in less cohesive and coordinated feeding groups since they
+have to search for scarce, scattered food items of high quality like new leaves,
+seeds, fruits and are also unable to communicate in vegetation. When the
+prey population in habitat starts declining due to heavy predation the predator
+switches over to other habitat where the prey species is in large number due to
+light predation.
+Large prey species like wildbeest, zebra, Thomson's gazelle feed upon abun-
+dant, evenly dispersed, easily found food items. Food items of low quality
+(nature leaves, stems) are much more in abundant than those of high quality
+within selected habitats and so they form huge and cohesive groups. Seasonal
+condition of heavy rain storms, dry season and other harsh environment force
+wildlife to migrate to other habitats for better conditions, food and surface
+water. Usually wildlife animal concentrate near permanent water during dry
+periods and disperse into neighbouring dry habitat during wet periods (Dasman
+and Mossman [11], Lamprey [12], Jarman [13], Stanley Price [14], Afolayen and
+Ajayi [15], Sinclair [16]). With the advent of dry weather the wildbeest return
+to their dry seasons range because grass growth on the wet seasons rage stops
+after a few days without rain, and there remains almost no standing crop as
+a food reservoir Mc Nayghton [17]. Free standing water is also largely absent
+Electronic Journal.  85Differential Equations and Control Processes, N. 3, 1999
+from this area. Wildbeests are thus forced to return to their dry season range
+which maintain green leaf for a long period and retains a substantial reservoir
+of grass swards due to light grazing pressure in the wet season. Free standing
+water is also available there in pools among major river systems. In this way
+herbivores maximize the growth potential of the vegetation through rotational
+grazing. Where the two concentration areas are su ciently far apart the move-
+ments are called seasonal migration. Sinclair [16] reported 3 % increment in
+mortality per year for wildbeest due to this migration.
+Large herd farmers are more likely dependent upon self defense and group
+defense, to avoid being killed by predators. Group defense is a term used
+to describe a phenomenon whereby predation is decreased or even prevented
+altogether by the ability of the prey population to better defend themselves
+when their number is large. The predators do not seek out areas with very large
+prey density (Schaller [18]). Pairs of musk- oxen can be successfully attacked by
+wolves but groups are rarely attacked (Tener [19]). There are many examples of
+group defense (Yang and Humphrey [20], May and Robinson [21], Holmes and
+Bethel [22]). Herds remain well coordinated even under attack and individuals
+may bene t from the alertness and communication. Individuals tend to conform
+with their neighbour activities and many hundreds even thousands of wildbeest
+can coordinate rapidly in response to an alarm. Large groups also bene t from
+increased probability of detection of predators. The hunting success of lions
+decline if the group size of prey is large (Van Orsdol [23]). Cheetah prefers to
+hunt single animals.
+Freedman and Wolkowicz [24], Ruan and Freedman [25] and Freedman and
+Raun [26] have studied mathematical models for the prey-predator system in
+which the prey population exhibits group defense. Khan et al [27] have analyzed
+a switching model with two habitats and a predator involving group defense.
+In this paper we have considered a system having a predator species in-
+teracting with some prey species living in two habitats separated by a barrier.
+The prey species is able to migrate among two different habitats at some cost
+to the population in the sense that the probability of survival during a change
+of habitat may be less than one. The predator can feed on either habitat. The
+prey species in both the habitats have the ability of group defense but it will be
+effective in the habitat where the population of the prey species is large. The
+predator will be attracted towards that habitat where the prey species is less
+in number. Due to seasonal migration of the prey species, none of the habitat
+population will extinct.
+Electronic Journal.  86Differential Equations and Control Processes, N. 3, 1999
+Tansky [7] investigated a mathematical model of two prey and one predator
+system which has the switching property of predation of the following form
+dx
+dt
+=
+ 
+r
+1
+ 
+az
+1 + (y=x)
+n
+ 
+x;
+dy
+dt
+=
+ 
+r
+2
+ 
+bz
+1 + (x=y)
+n
+ 
+y;
+dz
+dt
+=  r
+3
++
+a
+1
+xz
+1 + (y=x)
+n
++
+a
+2
+yz
+1 + (x=y)
+n
+; n = 1; 2; 3; :::
+where x; y and z denote the abundance of two kind of the prey species and a
+predator species respectively. The functions
+a
+1 + (y=x)
+n
+and
+b
+1 + (x=y)
+n
+have
+a characteristic property of switching mechanism. The predatory rate that
+an individual of the prey species is attacked by a predator decreases when
+the population of that species becomes rare compared with the population of
+another prey species. This property is much ampli ed for large value of n. He
+studied the model with simplest form of the function for n = 1.
+2. The Model: The prey-predator model where the prey species exhibits
+group defense is of the form:
+dx
+1
+dt
+= ff
+1
+x
+1
+  "
+1
+x
+1
++ "
+2
+p
+21
+x
+2
+ 
+ 
+1
+x
+2
+y
+1 +
+ 
+x
+1
+x
+2
+ 
+n
+;
+dx
+2
+dt
+= ff
+2
+x
+2
+  "
+2
+x
+2
++ "
+1
+p
+12
+x
+1
+ 
+ 
+2
+x
+1
+y
+1 +
+ 
+x
+2
+x
+1
+ 
+n
+;
+dy
+dt
+=
+ 
+   +
+ 
+1
+ 
+1
+x
+2
+n+1
+x
+1
+n
++ x
+2
+n
++
+ 
+2
+ 
+2
+x
+1
+n+1
+x
+1
+n
++ x
+2
+n
+ 
+y
+(2:1)
+Electronic Journal.  87Differential Equations and Control Processes, N. 3, 1999
+with n = 2, the equations become
+dx
+1
+dt
+= ff
+1
+x
+1
+  "
+1
+x
+1
++ "
+2
+p
+21
+x
+2
+ 
+ 
+1
+x
+2
+3
+y
+x
+1
+2
++ x
+2
+2
+;
+dx
+2
+dt
+= ff
+2
+x
+2
+  "
+2
+x
+2
++ "
+1
+p
+12
+x
+1
+ 
+ 
+2
+x
+1
+3
+y
+x
+1
+2
++ x
+2
+2
+;
+dy
+dt
+=
+ 
+   +
+ 
+1
+ 
+1
+x
+2
+3
+x
+1
+2
++ x
+2
+2
++
+ 
+2
+ 
+2
+x
+1
+3
+x
+1
+2
++ x
+2
+2
+ 
+y
+(2:2)
+with x
+1
+(0) > 0; x
+2
+(0) > 0; y(0) > 0.
+x
+i
+: represents the population of the prey in two different habitats
+y : represents population of predator species
+ 
+i
+: measure the feeding rates of the predator on the prey species
+in habitat 1 and habitat 2
+ 
+i
+: conversion rate of prey to predator
+"
+i
+: inverse barrier strength in going out of the  rst habitat
+p
+ij
+: the probability of successful transition from i
+th
+to j
+th
+habitat (i 6= j)
+ff
+i
+: per capita birth rate of prey species in two different habitats:
+  : the death rate of the predator
+For n = 1, the case has been studied by Khan et. al. [27] where the relative
+abundance of the prey species has a simple multiplicative effect. Here we have
+studied the same model with n = 2 where the effect of relative density is
+stronger than the simple multiplicative.
+3. Stability of Equilibria: The non-zero equilibrium point of the system
+(2.2) is given by :
+  x
+1
+=
+   x(  x
+2
++ 1)
+ 
+1
+ 
+1
++  
+2
+ 
+2
+  x
+3
+;   x
+2
+=
+ (  x
+2
++ 1)
+ 
+1
+ 
+1
++  
+2
+ 
+2
+  x
+3
+;
+  y =
+((ff
+1
+  "
+1
+)  x + "
+2
+p
+21
+)(1 +   x
+2
+)
+ 
+1
+or   y =
+((ff
+2
+  "
+2
+) +   x"
+1
+p
+12
+)(1 +   x
+2
+)
+  x
+3
+ 
+2
+:
+(3:1)
+Electronic Journal.  88Differential Equations and Control Processes, N. 3, 1999
+Where   x =   x
+1
+=   x
+2
+, is real positive root of the following fourth order equation
+ 
+2
+(ff
+1
+  "
+1
+)  x
+4
++  
+2
+"
+2
+p
+21
+  x
+3
+   
+1
+"
+1
+p
+12
+  x   
+1
+(ff
+2
+  "
+2
+) = 0: (3:2)
+For equilibrium values (   x
+1
+,   x
+2
+,   y) to be positive, a positive real root of the
+equation (3.2) must be bounded, therefore
+"
+2
+  ff
+2
+"
+1
+p
+12
+<   x <
+"
+2
+p
+21
+"
+1
+  ff
+1
+: (3:3)
+Let
+ 
+E = (   x
+1
+;   x
+2
+;   y) denote the non-zero equilibrium point where   x
+1
+;   x
+2
+;   y > 0.
+We investigate the stability of
+ 
+E and the bifurcation structure, particularly
+Hopf bifurcation, for the system (2.2) using  
+i
+(conversion rates of the prey to
+the predator) as the bifurcation parameter. We  rst obtain the characteristic
+equation for the linearization of the system (2.2) near the equilibrium. We
+consider a small perturbation about the equilibrium value i.e. x
+1
+=   x
+1
++u; x
+2
+=
+  x
+2
++ v and y =   y + w. Substituting these into the system (2.2) and neglecting
+the terms of second order in small quantities, we obtain the stability matrix
+equation
+0
+B
+B
+B
+B
+B
+B
+B
+B
+B
+@
+A   
+ A   x
+1
+  x
+2
+  
+1
+  x
+2
+3
+  x
+1
+2
++   x
+2
+2
+ D   x
+2
+  x
+1
+D   
+  
+2
+  x
+1
+3
+  x
+1
+2
++   x
+2
+2
+E F   
+1
+C
+C
+C
+C
+C
+C
+C
+C
+C
+A
+= 0; (3:4)
+which leads to the eigenvalue equation
+ 
+3
++ b
+1
+ 
+2
++ b
+2
+  + b
+3
+= 0; (3:5)
+where:
+b
+1
+= (A + D);
+b
+2
+=
+F 
+2
+  x
+1
+3
+  x
+1
+2
++   x
+2
+2
++
+E 
+1
+  x
+2
+3
+  x
+1
+2
++   x
+2
+2
+;
+Electronic Journal.  89Differential Equations and Control Processes, N. 3, 1999
+b
+3
+= 
+ 
+DF 
+1
+  x
+2
+4
+  x
+1
+(   x
+1
+2
++   x
+2
+2
+)
++
+DE 
+1
+  x
+2
+3
+  x
+1
+2
++   x
+2
+2
++
+AF 
+2
+  x
+1
+3
+  x
+1
+2
++   x
+2
+2
++
+AE 
+2
+  x
+1
+4
+  x
+2
+(   x
+1
+2
++   x
+2
+2
+)
+ 
+;
+A = (ff
+1
+  "
+1
+) +
+2  y 
+1
+  x
+1
+  x
+2
+3
+(   x
+1
+2
++   x
+2
+2
+)
+2
+;
+B = "
+2
+p
+21
++
+2  y 
+1
+  x
+2
+4
+(   x
+1
+2
++   x
+2
+2
+)
+2
+ 
+3  y 
+1
+  x
+2
+2
+  x
+1
+2
++   x
+2
+2
+;
+C = "
+1
+p
+12
++
+2  y 
+2
+  x
+1
+4
+(   x
+1
+2
++   x
+2
+2
+)
+2
+ 
+3  y 
+2
+  x
+1
+2
+  x
+1
+2
++   x
+2
+2
+;
+D = (ff
+2
+  "
+2
+) +
+2  y 
+2
+  x
+1
+3
+  x
+2
+(   x
+1
+2
++   x
+2
+2
+)
+2
+;
+E =
+3 
+2
+ 
+2
+  x
+1
+2
+  y
+  x
+1
+2
++   x
+2
+2
+ 
+2 
+1
+ 
+1
+  x
+1
+  x
+2
+3
+  y
+(   x
+1
+2
++   x
+2
+2
+)
+2
+ 
+2 
+2
+ 
+2
+  x
+1
+4
+  y
+(   x
+1
+2
++   x
+2
+2
+)
+2
+;
+F =
+3 
+1
+ 
+1
+  x
+2
+2
+  y
+  x
+1
+2
++   x
+2
+2
+ 
+2 
+1
+ 
+1
+  x
+2
+4
+  y
+(   x
+1
+2
++   x
+2
+2
+)
+2
+ 
+2 
+2
+ 
+2
+  x
+1
+3
+  x
+2
+  y
+(   x
+1
+2
++   x
+2
+2
+)
+2
+:
+(3:6)
+The Routh-Hurwitz stability criteria for the third order system is
+b
+1
+> 0; b
+3
+> 0 and b
+1
+b
+2
+> b
+3
+.
+Hence, the equilibrium
+ 
+E will be locally stable to small perturbations if it
+satis es the following conditions:
+ff
+1
++ ff
+2
++
+2   x
+1
+  x
+2
+3
+  y 
+1
+  x
+1
+2
++   x
+2
+2
++
+2   x
+1
+3
+  x
+2
+  y 
+2
+(   x
+1
+2
++   x
+2
+2
+)
+2
+> "
+1
++ "
+2
+;
+AF 
+2
+  x
+1
+3
++ DE 
+1
+  x
+2
+3
++
+DF 
+1
+  x
+2
+4
+  x
+1
++
+AE 
+2
+  x
+1
+4
+  x
+2
+< 0
+and
+(AE   x
+1
+  DF   x
+2
+)( 
+1
+  x
+2
+4
+   
+2
+  x
+1
+4
+) < 0: (3:7)
+Stability of the equilibrium point depends upon the conditions (3.3) and (3.7)
+together with various parameters.
+4. Hopf Bifurcation Analysis: We study the Hopf bifurcation for the
+system (2.2) using  
+1
+(rate of conversion of the prey in habitat 1 to the predator)
+Electronic Journal.  90Differential Equations and Control Processes, N. 3, 1999
+as the bifurcation parameter. The eigenvalue equation (3.5) has two purely
+imaginary roots if and only if b
+1
+b
+2
+= b
+3
+for some value of  
+1
+(say  
+1
+=  
+1
+?
+).
+For A < 0; D < 0; E > 0 and F > 0; b
+1
+; b
+2
+; b
+3
+are positive. There exists  
+1
+?
+such that b
+1
+b
+2
+= b
+3
+. Therefore there is only one value of  
+1
+at which we have
+a bifurcation. For some " > 0 for which  
+1
+?
+  " > 0, there is a neighbourhood
+of  
+1
+?
+, say ( 
+1
+?
+  ";  
+1
+?
++ ") in which the eigenvalue equation (3.5) cannot have
+real positive roots. For  
+1
+=  
+1
+?
+, we have
+( 
+2
++ b
+2
+)(  + b
+1
+) = 0; (4:1)
+which has three roots
+ 
+1
+= i
+p
+b
+2
+;  
+2
+= i
+p
+b
+2
+and  
+3
+= b
+1
+.
+The roots are in general of the form
+ 
+1
+( 
+1
+) = u( 
+1
+) + iv( 
+1
+);
+ 
+2
+( 
+1
+) = u( 
+1
+)  iv( 
+1
+); (4:2)
+ 
+3
+( 
+1
+) = b
+1
+( 
+1
+):
+To apply the Hopf bifurcation theorem as stated in (Marsden and McCracken
+[28]), we need to verify the transversality condition
+du
+d 
+1
+ 
+ 
+ 
+ 
+ 
+1
+= 
+1
+?
+6= 0: (4:3)
+Substituting  
+k
+( 
+1
+) = u( 
+1
+) + iv( 
+1
+) into the equation (3.5) and differentiating
+the resulting equations with respect to  
+1
+and setting u = 0 and v( 
+1
+) =   v
+1
+, we
+get
+du
+d 
+1
+( 3   v
+1
+2
++ b
+2
+) +
+dv
+d 
+1
+( 2b
+1
+  v
+1
+) = b
+0
+1
+  v
+1
+2
+  b
+0
+3
+;
+du
+d 
+1
+( 2b
+1
+  v
+1
+) +
+dv
+d 
+1
+( 3   v
+1
+2
++ b
+2
+) = b
+0
+1
+  v
+1
+; (4:4)
+where
+b
+1
+0
+=
+db
+1
+d 
+1
+= 0; b
+2
+0
+=
+db
+2
+d 
+1
+and b
+3
+0
+=
+db
+3
+d 
+1
+;
+  x is a real positive root of the equation (3.2) which is independent of  
+1
+.
+Electronic Journal.  91Differential Equations and Control Processes, N. 3, 1999
+Solving for
+du
+d 
+1
+and
+dv
+d 
+1
+, we have
+du
+d 
+1
+ 
+ 
+ 
+ 
+ 
+1
+= 
+1
+?
+= 
+2b
+2
+(b
+1
+b
+2
+0
+  b
+3
+0
+)
+4b
+2
+2
++ 4b
+1
+2
+b
+2
+: (4:5)
+To establish Hopf bifurcation at  
+1
+=  
+1
+?
+, we need to show that
+du
+d 
+1
+ 
+ 
+ 
+ 
+ 
+1
+= 
+1
+?
+6= 0; i:e: b
+1
+b
+2
+0
+  b
+3
+0
+6= 0 (4:6)
+At  
+1
+=  
+1
+?
+; b
+1
+b
+2
+= b
+3
+, gives
+( 
+1
+  x
+2
+4
+   
+2
+  x
+1
+4
+)(AE   x
+1
+  DF   x
+2
+) = 0;
+i.e.
+  x =
+DF
+AE
+(4:7)
+Substituting the values of b
+1
+; b
+2
+0
+and b
+3
+0
+in the equation (4.6) and using the
+equation (4.7), we get
+b
+1
+b
+2
+0
+  b
+3
+0
+=
+1
+1 +   x
+2
+ 
+ 
+1
+  x
+2
+   
+2
+  x
+1
+  x
+3
+ 
+ 
+D
+  x
+dF
+d 
+1
+  A
+dE
+d 
+1
+;
+ 
+where
+D
+  x
+dF
+d 
+1
+  A
+dE
+d 
+1
+< 0; i:e:
+du
+d 
+1
+ 
+ 
+ 
+ 
+ 
+1
+= 
+1
+?
+> 0
+provided
+  x
+4
+6=
+ 
+1
+ 
+2
+and  
+3
+( 
+1
+) = b
+1
+( 
+1
+)6= 0:
+We summarize the above results in the following theorem -
+THEOREM : Suppose
+ 
+E = (   x
+1
+;   x
+2
+;   y) exists, A < 0; D < 0; E > 0; F > 0 and
+ 
+1
+?
+be a positive root of the equation b
+1
+b
+2
+= b
+3
+, then a Hopf bifurcation occurs
+as  
+1
+passes through  
+1
+?
+provided
+ 
+1
+ 
+2
+6=   x
+4
+.
+Similar analysis can be carried out by varying  
+2
+(rate of conversion of the prey
+in second habitat to the predator) and we shall get the similar results.
+5. Numerical Solutions : Here we see the effect of various parameters on
+the stability. Table-I gives the behaviour of stability with respect to  's and
+ 's. In Table { I we have taken:
+Electronic Journal.  92Differential Equations and Control Processes, N. 3, 1999
+  = 0:01; ff
+1
+= 0:05; ff
+2
+= 0:25; "
+1
+= 0:1; "
+2
+= 0:3; p
+12
+= 0:5; p
+21
+= 0:2
+and see the effect of  
+1
+and  
+2
+on the stability for n = 2. We also compare the
+bifurcation points when n = 1 and n = 2
+Table - I
+Bifurcation Points
+ 
+1
+ 2  
+1
+= 
+2
+Stable n = 1 n = 2
+0.01 0.02  
+2
+= 0.3 0.78142   
+1
+  1  
+2
+= 0.75123  
+2
+= 0.78142
+0.01 0.02  
+1
+= 0.5 0   
+2
+  0.19196  
+1
+= 0.19968  
+1
+= 0.19196
+0.02 0.01  
+2
+= 0.3 0   
+1
+  0.16651  
+2
+= 0.16448  
+2
+= 0.16651
+0.02 0.01  
+1
+= 0.5 0.90083   
+2
+  1  
+1
+= 0.91196  
+1
+= 0.90083
+0.01 0.01  
+1
+= 0.5 0   
+2
+  41291  
+1
+= 0.42507  
+1
+= 0.41291
+In Table { II we see the effect of " 's and   's and we take:
+  = 0:01; ff
+1
+= 0:05; ff
+2
+= 0:25;  
+1
+= 0:01;  
+2
+= 0:02; p
+12
+= 0:5; p
+21
+= 0:2
+Table - II
+Bifurcation Point
+"
+1
+"
+2
+ 
+1
+= 
+2
+Stable n = 2
+0.04 0.03  
+1
+= 0.1 0.04331   
+2
+  1  
+2
+= 0.04331
+0.04 0.03  
+2
+= 0.3 0   
+1
+  0.69273  
+1
+= 0.69273
+0.1 0.3  
+1
+= 0.1 0   
+2
+  0.00256  
+2
+= 0.00256
+0.1 0.3  
+2
+= 0.003 0.11682   
+1
+  1  
+1
+= 0..11682
+In Tables I and II the bifurcation points are in fact the Hopf bifurcation points
+(where the model is stable, below / above these values the model is unstable
+/ stable). The set of equations given in (2.2) for n = 2 have been integrated
+numerically for four cases given in Table-III with other variables as taken in
+the Table-I.
+Table-III
+Case  
+1
+ 2  
+1
+ 
+2
+Stable / Unstable
+(i) 0.01 0.02 0.5 0.15 stable
+(ii) 0.01 0.02 0.5 0.25 unstable
+(iii) 0.02 0.01 0.5 0.95 stable
+(iv) 0.02 0.01 0.5 0.75 unstable
+Electronic Journal.  93Differential Equations and Control Processes, N. 3, 1999
+Electronic Journal.  94Differential Equations and Control Processes, N. 3, 1999
+Electronic Journal.  95Differential Equations and Control Processes, N. 3, 1999
+These sets were picked up while doing the computations of the analytical re-
+sults in the previous section. The initial conditions used are the corresponding
+equilibrium values in each case with small perturbations. Figures 1 to 4 give the
+behaviour of x
+1
+; x
+2
+; y with respect to t in above four cases and as expected we
+get stable behavior in the  gures 1 and 3 and unstable behavior in the  gures
+2 and 4. In  gures 3 and 4 we have compared the results with n = 1 also.
+REFERENCES
+[1] Holling C.S., Principles of Insects Predation, Ann. Rev. Entomol.,
+1961, V. 6, 163-182.
+[2] Takahashi F., Reproduction Curve with Two Equilibrium Points: A
+Consideration on the Fluctuation of Insect Population, Res. Pop. Ecol.,
+1964, V. 47, 733-745.
+[3]May R.M., Some Mathematical Problems in Biology, Providence, R.I.,
+Am. Math. Soc., 1974, V.4.
+[4]Murdoch W.W. and Oaten A., Predation and Population stability,
+Adv. Ecol. Res., 1975, V. 9, 1-131.
+[5]Roughgarden J. and Feldman M., Species Packing and Preadtion
+Pressure, Ecology, 1975, V. 56, 489-492.
+[6]Tansky M., Progress in Theoretical Biology, Ed. R. Rosen, London,
+Academic Press, 1976, V. 4, 205.
+[7] Tansky M., Switching Effects in Prey Predator System, J. Theor.
+Biol., 1978, V. 70, 263-271.
+[8] Prajneshu and Holgate P., A Prey- Predator Model with Switch-
+ing effect, J. Theor. Biol., 1987, V. 125, 61-66.
+[9]Khan Q.J.A., Bhatt B.S. and Jaju R.P., Stability of a Switching
+model with Two Habitats and a Predator, J. Phys. Soc. Jap., 1994, V.
+63, 1995-2001.
+Electronic Journal.  96Differential Equations and Control Processes, N. 3, 1999
+[10]Khan Q.J.A., Bhatt B.S. and Jaju R.P., Hopf bifurcation Anal-
+ysis of a Predator Prey System Involving Switching, J. Phys. Soc. Jap.,
+1996, V. 65, 864-867.
+[11]Dasman R.F. and Mossman S.A., Population Studies of Impala in
+South Rhodesia, J. Mammal, 1962, V. 42, 375-395.
+[12]LampreyH.F., Estimation of The Large Mammal Densities, Biomass
+and Energy Exchange in The Tarangire Game Reserve and The Masai
+Steppe in Tanagnyika, E. Afr. Wild. J., 1964, V. 2, 1-46.
+[13]Jarman P.J. Seasonal Distribution of Large Mammal Populations in
+The Unooded Middle Zambezi Valley, J. Appl. Ecol., 1972, V. 9, 283-299.
+[14]Stanley Price M.R., The Feeding Ecology and Energetics of Cokes
+Hartebeest, 1974, D. Phil. Thesis, University of Oxford.
+[15]Afolayan T.A. and Ajayi S.S., The Inuence of Seasonality on
+The Distribution of Large Mammals In The Yankari Game Reserve, Nige-
+ria, Afr. J. Ecol. 1980, V. 18, 87-96.
+[16]Sinclair A.R.E., The Function of Distance Movement in Verte-
+brates, In The Ecology of Animal Movement, ed. I.R. Swinglad and P.J.
+Greenwood, Oxford, Clarendon Press, 1983, 240-259.
+[17]McNayghton S.J., Ecology of a Grazing Ecosystem: The Serengeti,
+Ecol. Monogr., 1985, V. 55, 259-294.
+[18]Schaller G.B., The Serengeti Lion: A Study of Predator- Prey
+Relations, Chicago, University of Chicago Press, 1972.
+[19]Tener J.S., Muskoxen , Queen's Printer Ottawa, 1965.
+[20]YangR.D.and Huphrey A.E., Dynamics and Steady State Studies
+of Phenol Biodegration in Pure and Mixed Cultures, Biotechnol. Bioing.,
+1975, V. 17, 1121-1235.
+[21]May R.M. and Robinson S.K., Population Dynamics of Avian
+Brood Parasitsm, Amer. Nat., 1985, V. 126, 475-494.
+[22]HolmesJ.C. and Bethel W.M., Modi cation of Intermediate Host
+Behaviour by Parasites, Zool. J. Linear. Soc. Suppl., 1972, V. 51, 123-149.
+Electronic Journal.  97Differential Equations and Control Processes, N. 3, 1999
+[23]Van Orsdol K.G., Foraging Behaviour and Hunting Success of Lions
+in Queen Elizabeth National Park, Uganda, Afr. J. Ecol., 1984, V. 22, 79-
+99.
+[24]Freedman H.I. and Wolkowicz G., Predator- Prey System with
+Group Defence: The Paradox of Enrichment Revised, Bull. Math. Biol.,
+1986, V. 48, 493-508.
+[25]Shigui Raun and Freedman H.I., Persistence in Three-Species
+Food Chain Models with Group Defence, Math. Biosci., 1991, V. 107,
+111-125.
+[26]Freedman H.I. and Raun H., Interactions Leading to Persistence
+in Predator-Prey System with Group Defence, Bull. Math. Biol., 1988,
+V. 50, 517-530.
+[27]Khan Q.J.A., Bhatt B.S. and Jaju R.P., Switching Model with
+Two Habitats and a Predator Involving Group Defence, J. Non. Math.
+Phys., 1998, V. 5, 212-229.
+[28]Marsden J.E. and Mc Cracken M., The Hopf Bifurcation and
+its Application, Springer-Verlag, New York,1976.
+Electronic Journal.  98

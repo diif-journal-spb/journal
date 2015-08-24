@@ -1,0 +1,2002 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 2, 2011
+Electronic Journal,
+reg. N ΦC77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Existence of Periodic Solutions of Fourth Order Functional Differential
+Equations with p−Laplacian
+1
+Yuji Liu, Haiping Shi,
+Department of Mathematics, Guangdong University of Business Studies,
+Guangzhou 510000, P.R.China
+Basic Courses Department, Guangdong Baiyun Institute,
+Guangzhou 510450, P.R. China
+e-mail: liuyuji888@sohu.com
+Abstract. Suﬃcient conditions for the existence of at least one periodic solution of a
+nonlinear fourth order functional differential equations with p−Laplacian are established. Ex-
+amples are presented to illustrate the main result.
+Keywords. Periodic solution; fourth order functional differential equation with
+p−Laplacian; ﬁxed-point theorem; growth condition
+2000 MR subject classiﬁcation. 34B10, 34B15
+1 Introduction
+Fourth-order differential equations with or without p−Laplacian occur in beam theory [1,3].
+The solvability ofsuch equations with different boundary conditions has been studied inpapers
+[4-11,13-30,32-34]. The methods used in above mentioned papers are the ﬁxed point theorems
+in cones in Banach spaces [1,9,13,16,17,21,19,20,28,30,33], the continuation theorem of coinci-
+dence degree [11,26,23,27], the upper and lower solutions methods with the monotone iterative
+technique [4-6,8,15,32,34] and the Leray-Schauder ﬁxed point theorem [7,13,25,28,33].
+The properties of solutions of the fourth order ordinary or functional differential equations
+are also studied by many authors, for example, Amster and Mariani [2] studied the oscillatory
+properties of solutions of a fourth order differential equation. In paper [31], Tanigawa estab-
+lished oscillation and non-oscillation theorems for a class of fourth order differential equations
+with p−Laplacian.
+1
+Supported by Natural Science Foundation of Hunan province, P.R.China(No:06JJ5008) and Natural Science Foun-
+dation of Guangdong province(No:7004569)Differential Equations and Control Processes, N 2, 2011
+However, the results on the existence of periodic solutions of the fourth order functional
+differential equations with p−Laplacian have not been found in known literature.
+To ﬁll this gap, in this paper, we use Mawhin
+′
+s continuation theorem of coincidence de-
+gree (Theorem IV.13 of [12]) to establish suﬃcient conditions for the existence of at least
+one T−periodic solution of the following fourth order functional differential equations with
+p−Laplacian
+[q(t)φ(x
+′′
+(t))]
+′′
+=f(t,x(t),x(τ
+1
+(t)),··· ,x(τ
+m
+(t))), t∈R, (1-1)
+where T > 0 is a constant, τ
+k
+∈ C
+1
+(R) for all k = 1,··· ,m are invertible, the inverse function
+of τ = τ
+i
+(t) is denoted by t = μ
+i
+(τ)(i = 1,2,··· ,m), f : R×R
+m+1
+→ R is a Caratheddory
+function, i.e., f : t → f(t,x
+0
+,x
+1
+,x
+2
+,··· ,x
+m
+) is T−periodic and measurable on [0,T], f :
+(x
+0
+,x
+1
+,··· ,x
+m
+) → f(t,x
+0
+,x
+1
+,··· ,x
+m
+) is continuous and for each r > 0 there exists φ
+r
+∈
+L
+1
+[0,T] such that |f(t,x
+0
+,x
+1
+,x
+2
+,··· ,x
+m
+)| ≤ φ
+r
+(t) holds for all t ∈ [0,T] and |x
+i
+| ≤ r(i =
+0,1,2,3,··· ,m), q : R→ (0,+∞) is T−periodic, φ(x) =|x|
+p−2
+x with p > 1, which is called a
+p−Laplacian, and its inverse function is φ
+−1
+(x) =|x|
+q−2
+x with 1/q+1/p =1.
+The remainder is divided into two sections. In Section 2, we present the main results. In
+Section 3, we give some examples to illustrate the main theorems.
+2 Main Results
+Let PC
+0
+be the set of all continuous T−periodic functions on R and X = PC
+0
+×PC
+0
+, the
+norm is deﬁned by
+||(x,y)||=max
+ 
+max
+t∈[0,T]
+|x(t)|, max
+t∈[0,T]
+|y(t)|
+ 
+for (x,y)∈X. Then X is a real Banach space.
+Let PL
+1
+be the set of all T−periodic functions which are measurable on [0,T] and Y =
+PL
+1
+×PL
+1
+, the norm is deﬁned by
+||(u,v)||= max
+ Z
+T
+0
+|u(t)|dt,
+Z
+T
+0
+|v(t)|dt
+ 
+for (u,v)∈Y. Then Y is a real Banach space.
+We also use the Sobolev spaces
+PW
+2,1
+=
+(
+x :R→R
+ 
+ 
+ 
+x,x
+′
+are absolutely continuous
+and T−periodic on R with x
+′′
+∈PL
+1
+)
+and
+PW
+2,1
+q
+=
+(
+x :R→R
+ 
+ 
+ 
+qx,(qx)
+′
+are absolutely continuous
+and T−periodic on R with (qx)
+′′
+∈PL
+1
+)
+.
+Let D(L)=PW
+2,1
+×PW
+2,1
+q
+. Deﬁne the linear operator L :D(L)∩X →Y by
+L
+ 
+x(t)
+y(t)
+!
+=
+ 
+x
+′′
+(t)
+(q(t)y(t))
+′′
+!
+for all (x,y)∈D(L)∩X. (2-2)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 12Differential Equations and Control Processes, N 2, 2011
+Deﬁne the nonlinear operator N :X →Y by
+N
+ 
+x(t)
+y(t)
+!
+=
+ 
+φ
+−1
+(y(t))
+f(t,x(t),x(τ
+1
+(t)),··· ,x(τ
+m
+(t)))
+!
+for all (x,y)∈X. (2-3)
+Now, we will brieﬂy recall some notationand anabstract existence result. LetX,Y be real
+Banach spaces, L :D(L)
+T
+X →Y be a Fredholm map of index 0 and P :X →X, Q:Y →Y
+be continuous projectors such that ImP = KerL, KerQ = ImL and X = KerL
+L
+KerP,
+Y = ImL
+L
+ImQ. It follows that L
+D(L)
+T
+KerP
+: D(L)L
+T
+KerP → ImL is invertible. We
+denote the inverse of that map by K
+p
+. If Ω is an open bounded subject of X such that
+D(L)
+T
+Ω6=∅, the map N :X →Y will be called L−compact on Ω if QN(Ω) is bounded and
+K
+p
+(I−Q)N :Ω→X is compact.
+Lemma 2.1.[12] Let X and Y be Banach spaces. Let L :D(L)
+T
+X →Y be a Fredholm
+operator of index zero and Ω be an open bounded subset of X with Ω
+T
+D(L) 6= ∅. Suppose
+that N :X →Y be L−compact on Ω and the following conditions are satisﬁed:
+(i) Lx6=λNx for every (x,λ)∈ [(D(L)\KerL)∩∂Ω]×(0,1);
+(ii) Nx / ∈ ImL for every x∈ KerL∩∂Ω;
+(iii) deg(∧QN
+ 
+ 
+KerL
+, Ω∩KerL,0)6=0, where∧ : KerL→Y/ImL is the isomorphism.
+Then the equation Lx =Nx has at least one solution in D(L)∩Ω.
+Let X =PC
+0
+×PC
+0
+and Y =PL
+1
+×PL
+1
+and L,N be deﬁned by (2) and (3) respectively.
+It is easy to show the following results. We omit their proofs since the proofs are simple and
+standard.
+(i) KerL ={(a,b/q(t)):a,b∈R};
+(ii) ImL ={(u,v)∈X :
+R
+T
+0
+u(s)ds=0,
+R
+T
+0
+v(t)dt= 0};
+(iii) L is a Fredholm operator of index zero;
+(iv) there exist the projectors P : X → X and Q : X → X such that KerL = ImP and
+KerQ = ImL. There exists an isomorphism ∧ : KerL→Y/ImL.
+(v) Let Ω⊂X be an open bounded subset with Ω∩D(L)6=∅, then N is L−compact on
+Ω;
+(vi) (x,y)∈D(L) is a solution of the operator equation L(x,y) =N(x,y) implies that x
+is a T−periodic solution of equation (1).
+In fact, let F(t) = f(t,x(t),x(τ
+1
+(t)),··· ,x(τ
+m
+(t))). We have, for a,b∈ R, (x,y)∈ X and
+(u,v)∈Y, that
+Electronic Journal. http://www.math.spbu.ru/diffjournal 13Differential Equations and Control Processes, N 2, 2011
+P
+ 
+x(t)
+y(t)
+!
+=
+ 
+x(0)
+q(0)y(0)/q(t)
+!
+,
+Q
+ 
+u(t)
+v(t)
+!
+=
+ 
+1
+T
+R
+T
+0
+u(t)dt
+1
+T
+R
+T
+0
+v(t)dt
+!
+,
+K
+p
+ 
+u(t)
+v(t)
+!
+=
+ R
+t
+0
+(t−s)u(s)ds−
+1
+T
+R
+T
+0
+(T −s)u(s)ds
+1
+q(t)
+ 
+R
+t
+0
+(t−s)v(s)ds−
+1
+T
+R
+T
+0
+(T −s)v(s)ds
+ 
+!
+,
+K
+p
+(I−Q)N
+ 
+x(t)
+y(t)
+!
+= K
+p
+(I−Q)
+ 
+φ
+−1
+(y(t))
+f(t,x(t),x(τ
+1
+(t)),··· ,x(τ
+m
+(t)))
+!
+=
+ R
+t
+0
+(t−s)φ
+−1
+(y(s))ds−
+1
+T
+R
+T
+0
+(T −s)φ
+−1
+(y(s))ds
+1
+q(t)
+ 
+R
+t
+0
+(t−s)F(s)ds−
+1
+T
+R
+T
+0
+(T −s)F(s)ds
+ 
+!
+−
+ 
+t
+2
+2T
+R
+T
+0
+φ
+−1
+(y(s))ds−
+T
+2
+R
+T
+0
+φ
+−1
+(y(s))ds
+1
+q(t)
+ 
+t
+2
+2T
+R
+T
+0
+F(s)ds−
+T
+2
+R
+T
+0
+F(s)ds
+ 
+!
+,
+∧
+ 
+a
+b/q(t)
+!
+=
+ 
+b
+a
+!
+.
+Let us list some assumptions:
+(B1) there exist the numbers β > 0, θ > 1, the nonnegative functions p
+i
+∈ PC
+0
+(i =
+0,1,2,··· ,m), the function r : R → R with
+R
+T
+0
+|r(t)|
+θ+1
+θ
+dt < ∞, and the Caratheddory func-
+tions g(t,x
+0
+,··· ,x
+m
+), h(t,x
+0
+,··· ,x
+m
+) such that
+f(t,x
+0
+,··· ,x
+m
+)=g(t,x
+0
+,··· ,x
+m
+)+h(t,x
+0
+,··· ,x
+m
+),
+g(t,x
+0
+,x
+1
+,··· ,x
+m
+)x
+0
+≤−β|x
+0
+|
+θ+1
+,
+and
+|h(t,x
+0
+,··· ,x
+m
+)|≤
+m
+X
+i=0
+p
+i
+(t)|x
+i
+|
+θ
++r(t),
+for all t∈ R, (x
+0
+,x
+1
+,··· ,x
+m
+)∈R
+m+1
+.
+(B2) there exists a positive constant μ such thatq(t)>μ for allt∈ [0,T], and there exist
+nonnegative constants M
+0
+i
+such that|τ
+i
+(T)−τ
+i
+(0)|≤M
+0
+i
+T for i =1,··· ,m.
+Lemma 2.2. Let δ
+i
+= max
+t∈[0,T]
+1
+|τ
+′
+i
+(t)|
+, (i = 1,··· ,m), and Ω
+1
+= {(x,y) : L(x,y) =
+λN(x,y), ((x,y),λ)∈ [(D(L)\KerL)]×(0,1)}. Suppose that (B1) and (B2) hold. Then Ω
+1
+is
+bounded if
+sup
+t∈[0,T]
+|p
+0
+(t)|+
+m
+X
+i=1
+sup
+t∈[0,T]
+|p
+i
+(t)|M
+0
+i
+δ
+θ
+θ+1
+i
+<β. (2-4)
+Proof. For (x,y)∈ Ω
+1
+, we have L(x,y) =λN(x,y), λ∈ (0,1), i.e.
+(
+x
+′′
+(t) =λφ
+−1
+(y(t)),
+(q(t)y(t))
+′′
+=λf(t,x(t),x(τ
+1
+(t)),··· ,x(τ
+m
+(t))).
+Electronic Journal. http://www.math.spbu.ru/diffjournal 14Differential Equations and Control Processes, N 2, 2011
+It follows that
+[q(t)φ(x
+′′
+(t))]
+′′
+=φ(λ)λf(t,x(t),x(τ
+1
+(t)),··· ,x(τ
+m
+(t))). (2-5)
+Thus
+[q(t)φ(x
+′′
+(t))]
+′′
+x(t) =φ(λ)λf(t,x(t),x(τ
+1
+(t)),··· ,x(τ
+m
+(t)))x(t).
+Integrating it from 0 to T, we get
+Z
+T
+0
+q(t)φ(x
+′′
+(t))x
+′′
+(t)dt =φ(λ)λ
+Z
+T
+0
+f(t,x(t),x(τ
+1
+(t)),··· ,x(τ
+m
+(t)))x(t)dt, (2-6)
+together with (B1) and
+R
+T
+0
+q(t)φ(x
+′′
+(t))x
+′′
+(t)dt≥ 0, we get that
+β
+Z
+T
+0
+|x(t)|
+θ+1
+dt
+≤−
+Z
+T
+0
+g(t,x(t),x(τ
+1
+(t)),··· ,x(τ
+m
+(t)))x(t)dt
+≤
+Z
+T
+0
+h(t,x(t),x(τ
+1
+(t)),··· ,x(τ
+m
+(t)))x(t)dt
+≤
+Z
+T
+0
+|h(t,x(t),x(τ
+1
+(t)),··· ,x(τ
+m
+(t)))||x(t)|dt
+≤
+Z
+T
+0
+p
+0
+(t)|x(t)|
+θ+1
+dt+
+m
+X
+i=1
+Z
+T
+0
+p
+i
+(t)|x(τ
+i
+(t))|
+θ
+|x(t)|dt+
+Z
+T
+0
+r(t)|x(t)|dt
+≤ max
+t∈[0,T]
+|p
+0
+(t)|
+Z
+T
+0
+|x(t)|
+θ+1
+dt+
+ Z
+T
+0
+|r(t)|
+θ+1
+θ
+dt
+ 
+θ
+θ+1
+ Z
+T
+0
+|x(t)|
+θ+1
+dt
+ 
+1
+θ+1
++
+m
+X
+i=1
+max
+t∈[0,T]
+|p
+i
+(t)|
+ Z
+T
+0
+|x(τ
+i
+(t))|
+1+θ
+dt
+ 
+θ
+θ+1
+ Z
+T
+0
+|x(t)|
+θ+1
+dt
+ 
+1
+θ+1
+≤ max
+t∈[0,T]
+|p
+0
+(t)|
+Z
+T
+0
+|x(t)|
+θ+1
+dt+
+ Z
+T
+0
+|r(t)|
+θ+1
+θ
+dt
+ 
+θ
+θ+1
+ Z
+T
+0
+|x(t)|
+θ+1
+dt
+ 
+1
+θ+1
++
+m
+X
+i=1
+max
+t∈[0,T]
+|p
+i
+(t)|
+"
+Z
+τ
+i
+(T)
+τ
+i
+(0)
+|x(s)|
+1+θ
+dμ
+i
+(s)
+# θ
+θ+1
+ Z
+T
+0
+|x(t)|
+θ+1
+dt
+ 
+1
+θ+1
+≤ max
+t∈[0,T]
+|p
+0
+(t)|
+Z
+T
+0
+|x(t)|
+θ+1
+dt+
+ Z
+T
+0
+|r(t)|
+θ+1
+θ
+dt
+ 
+θ
+θ+1
+ Z
+T
+0
+|x(t)|
+θ+1
+dt
+ 
+1
+θ+1
++
+m
+X
+i=1
+max
+t∈[0,T]
+|p
+i
+(t)|
+ 
+ 
+ 
+ 
+ 
+Z
+τ
+i
+(T)
+τ
+i
+(0)
+|x(s)|
+1+θ
+ds
+|τ
+′
+i
+(t)|
+ 
+ 
+ 
+ 
+ 
+θ
+θ+1
+ Z
+T
+0
+|x(t)|
+θ+1
+dt
+ 
+1
+θ+1
+≤ max
+t∈[0,T]
+|p
+0
+(t)|
+Z
+T
+0
+|x(t)|
+θ+1
+dt+
+ Z
+T
+0
+|r(t)|
+θ+1
+θ
+dt
+ 
+θ
+θ+1
+ Z
+T
+0
+|x(t)|
+θ+1
+dt
+ 
+1
+θ+1
++
+m
+X
+i=1
+max
+t∈[0,T]
+|p
+i
+(t)|δ
+θ
+θ+1
+i
+M
+0
+i
+Z
+T
+0
+|x(t)|
+θ+1
+dt.
+Since
+β > max
+t∈[0,T]
+|p
+0
+(t)|+
+m
+X
+i=1
+δ
+θ
+θ+1
+i
+M
+0
+i
+max
+t∈[0,T]
+|p
+i
+(t)|, (2-7)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 15Differential Equations and Control Processes, N 2, 2011
+there is a constant M
+1
+> 0 such that
+R
+T
+0
+|x(t)|
+θ+1
+dt ≤ M
+1
+. So there is ξ ∈ [0,T] such that
+|x(ξ)|≤ (M
+1
+/T)
+1
+θ+1
+. Further more we have
+Z
+T
+0
+q(t)|x
+′′
+(t)|
+p
+dt =
+Z
+T
+0
+q(t)φ(x
+′′
+(t))x
+′′
+(t)dt
+= φ(λ)λ
+Z
+T
+0
+f(t,x(t),x(τ
+1
+(t)),··· ,x(τ
+m
+(t)))x(t)dt
+= φ(λ)λ
+Z
+T
+0
+g(t,x(t),x(τ
+1
+(t)),··· ,x(τ
+m
+(t)))x(t)dt
++φ(λ)λ
+Z
+T
+0
+h(t,x(t),x(τ
+1
+(t)),··· ,x(τ
+m
+(t)))x(t)dt
+≤ φ(λ)λ
+Z
+T
+0
+h(t,x(t),x(τ
+1
+(t)),··· ,x(τ
+m
+(t)))x(t)dt
+≤
+Z
+T
+0
+|h(t,x(t),x(τ
+1
+(t)),··· ,x(τ
+m
+(t)))||x(t)|dt
+≤ max
+t∈[0,T]
+|p
+0
+(t)|
+Z
+T
+0
+|x(t)|
+θ+1
+dt+
+ Z
+T
+0
+|r(t)|
+θ+1
+θ
+dt
+ 
+θ
+θ+1
+ Z
+T
+0
+|x(t)|
+θ+1
+dt
+ 
+1
+θ+1
++
+m
+X
+i=1
+max
+t∈[0,T]
+|p
+i
+(t)|δ
+θ
+θ+1
+i
+M
+0
+i
+Z
+T
+0
+|x(t)|
+θ+1
+dt
+≤ ||p
+0
+||M
+1
++
+ Z
+T
+0
+|r(t)|
+θ+1
+θ
+dt
+ 
+θ
+θ+1
+M
+1
+θ+1
+1
++
+m
+X
+i=1
+||p
+i
+||δ
+θ
+θ+1
+i
+M
+0
+i
+M
+1
+.
+Since there exists η∈ [0,T] such that x
+′
+(η)= 0, it is easy to see from (B2) that
+|x(t)| =
+ 
+ 
+ 
+ 
+x(ξ)+
+Z
+t
+ξ
+x
+′
+(s)ds
+ 
+ 
+ 
+ 
+≤ (M
+1
+/T)
+1
+θ+1
++
+Z
+T
+0
+|x
+′′
+(t)|dt
+≤ (M
+1
+/T)
+1
+θ+1
++
+T
+p−1
+p
+μ
+1
+p
+ 
+μ
+Z
+T
+0
+|x
+′′
+(t)|
+p
+dt
+ 
+1
+p
+≤ (M
+1
+/T)
+1
+θ+1
++
+T
+p−1
+p
+μ
+1
+p
+ Z
+T
+0
+q(t)|x
+′′
+(t)|
+p
+dt
+ 
+1
+p
+≤ (M
+1
+/T)
+1
+θ+1
++
+T
+p−1
+p
+μ
+1
+p
+ 
+||p
+0
+||M
+1
++T
+θ
+θ+1
+||r||M
+1
+θ+1
+1
++
+m
+X
+i=1
+||p
+i
+||δ
+θ
+θ+1
+i
+M
+0
+i
+M
+1
+!1
+p
+Hence there is a constant M
+2
+>0 such that||x||≤M
+2
+.
+It is easy to show that there exist numbers ξ,η∈ [0,T]such that [qy]
+′
+(ξ)=0 and [qy](η)=
+0. Hence
+|[q(t)y(t)]
+′
+| =
+ 
+ 
+ 
+ 
+Z
+t
+ξ
+[q(t)y(t)]
+′′
+dt
+ 
+ 
+ 
+ 
+≤
+Z
+T
+0
+|[q(t)y(t)]
+′′
+|dt
+≤
+Z
+T
+0
+|f(t,x(t),x(τ
+1
+(t)),··· ,x(τ
+m
+(t)))|dt
+≤ T max
+t∈[0,T],|x
+i
+|≤M
+2
+,i=0,···,m
+|f(t,x
+0
+,··· ,x
+m
+)|.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 16Differential Equations and Control Processes, N 2, 2011
+So
+|q(t)y(t)|≤
+Z
+T
+0
+|(q(t)y(t))
+′
+|dt≤T
+2
+max
+t∈[0,T],|x
+i
+|≤M
+2
+,i=0,···,m
+|f(t,x
+0
+,··· ,x
+m
+)|, t∈ [0,T].
+Then
+|y(t)|≤
+T
+2
+μ
+max
+t∈[0,T],|x
+i
+|≤M
+2
+,i=0,···,m
+|f(t,x
+0
+,··· ,x
+m
+)|, t∈ [0,T].
+This implies that
+||y||≤
+T
+2
+μ
+max
+t∈[0,T],|x
+i
+|≤M
+2
+,i=0,···,m
+|f(t,x
+0
+,··· ,x
+m
+)|, t∈ [0,T].
+It follows that, for (x,y)∈ Ω
+1
+, one has that there is H > 0 such that||(x,y)||≤ H. Hence Ω
+1
+is bounded.
+Suppose
+(B3) There exists a constant M > 0 such that
+a
+Z
+T
+0
+f(t,a,··· ,a)dt>0 for all|a|>M.
+Lemma 2.3. Suppose that (B3) holds. Then Ω
+2
+= {(x,y)∈ KerL : N(x,y)∈ ImL} is
+bounded.
+Proof. For (a,b/q(t))∈ KerL, we have N(a,b) = (φ
+−1
+(b/q(t)),f(t,a,··· ,a)). N(a,b)∈
+ImL implies that
+Z
+T
+0
+φ
+−1
+(b/q(t))dt= 0,
+Z
+T
+0
+f(t,a,··· ,a)dt= 0.
+It follows from condition (B3) that|a|≤M and b =0. Thus Ω
+2
+is bounded.
+Lemma 2.4. Suppose that (B3) holds. Then Ω
+3
+= {(x,y) ∈ KerL : λ∧(x,y)+(1−
+λ)QN(x,y) = 0, λ ∈ [0,1]} is bounded, where ∧ : KerL → Y/ImL deﬁned by ∧(a,b/q(t)) =
+(b,a).
+Proof. For (a,b/q(t))∈ Ω
+3
+, we have
+−(1−λ)
+Z
+T
+0
+φ
+−1
+(b/q(t))dt=λbT, −(1−λ)
+Z
+T
+0
+f(t,a,··· ,a)dt =λaT,
+where λ∈ [0,1].
+If λ =1, then a =b =0. If λ6= 1, and|a|>M, it follows from (B3) that
+0≥−(1−λ)a
+Z
+T
+0
+f(t,a,··· ,a)dt=λa
+2
+T >0,
+a contradiction. So|a|≤ M. Similarly, since
+0>−(1−λ)
+Z
+T
+0
+bφ
+−1
+(b/q(t))dt =λb
+2
+T ≥ 0 for λ∈ [0,1),b6=0,
+Electronic Journal. http://www.math.spbu.ru/diffjournal 17Differential Equations and Control Processes, N 2, 2011
+we get b = 0. Hence Ω
+3
+is bounded.
+Theorem L. Suppose that (B1), (B2) and (B3) hold. Then equation (1) has at least one
+T−periodic solution if (4) holds.
+Proof. SetΩbeaopenboundedsubsetofX centeredatzerosuchthatΩ⊃∪
+3
+i=1
+Ω
+i
+,where
+Ω
+1
+is deﬁned in Lemma 2.2, Ω
+2
+in Lemma 2.3 and Ω
+3
+in Lemma 2.4. By the deﬁnition of Ω,
+we have Ω⊃ Ω
+1
+and Ω⊃ Ω
+2
+, thus, from Lemma 2.2 and Lemma 2.3, that L(x,y)6= λN(x,y)
+for (x,y)∈D(L)\KerL)∩∂Ω and λ∈ (0,1); N(x,y) / ∈ ImL for (x,y)∈ KerL∩∂Ω.
+We know that L is a Fredholm operator of index zero and N is L−compact on Ω. Since
+(x,y)is asolution ofL(x,y) =N(x,y)implies thatx is a solution ofequation (1). Itsuﬃces to
+get a solution (x,y) of L(x,y) = N(x,y). To apply Lemma 2.1, we prove that (iii) of Lemma
+2.1 (Theorem IV.13 of [12]) hold.
+In fact, let H((x,y),λ) = ±λ∧(x,y)+(1−λ)QN(x,y). According the deﬁnition of Ω,
+we know Ω ⊃ Ω
+3
+, thus H((x,y),λ) 6= 0 for (x,y) ∈ ∂Ω∩ KerL, thus, from Lemma 2.3, by
+homotopy property of degree,
+deg(QN|
+KerL
+,Ω∩KerL,0) =deg(H(·,0),Ω∩KerL,0)
+= deg(H(·,1),Ω∩KerL,0)= deg(±∧,Ω∩KerL,0)6=0 since 0∈ Ω.
+Thus by Lemma 2.1 (Theorem IV.13 of [12]), L(x,y) = N(x,y) has at least one solution in
+D(L)∩Ω, then x is a T−solution of equation (1). The proof is completed.
+3 Examples
+In this section, we present examples to illustrate the main result in section 2.
+Example 3.1. Consider the equation
+x
+′′′′
+(t) =−
+[x(t)]
+3
+5
+1+2[sinx(t)]
+8
++
+m
+X
+i=1
+p
+i
+(t)[x(t−τ
+i
+)]
+3
+5
++r(t), (3-8)
+whereT =2π,p
+i
+,rareallnon-negativecontinuous2π−periodicfunctions,τ
+i
+> 0(i= 1,··· ,m)
+are constants.
+Corresponding to the assumptions of Theorem L, one sees
+f(t,x
+0
+,x
+1
+,··· ,x
+m
+) =−
+x
+3
+5
+0
+1+2(sinx
+0
+)
+8
++
+m
+X
+i=1
+p
+i
+(t)x
+3
+5
+i
++r(t),
+we set
+g(t,x
+0
+,x
+1
+,··· ,x
+m
+)=−
+x
+3
+5
+0
+1+2(sinx
+0
+)
+8
+,
+and
+h(t,x
+0
+,··· ,x
+m
+) =
+m
+X
+i=1
+p
+i
+(t)x
+3
+5
+i
++r(t)
+and β =1/3, θ = 3/5. It is easy to see that (B1) holds.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 18Differential Equations and Control Processes, N 2, 2011
+Since
+c
+Z
+2π
+0
+f(t,c,··· ,c)dt =
+Z
+2π
+0
+ 
+−
+c
+8
+5
+1+2[sinc]
+8
++
+m
+X
+i=1
+p
+i
+(t)c
+8
+5
++cr(t)
+!
+dt
+= −
+2πc
+8
+5
+1+2[sinc]
+8
++
+m
+X
+i=1
+Z
+2π
+0
+p
+i
+(t)dtc
+8
+5
++c
+Z
+T
+0
+r(t)dt
+≥
+ 
+m
+X
+i=1
+Z
+2π
+0
+p
+i
+(t)dt−2π
+!
+c
+8
+5
++c
+Z
+2π
+0
+r(t)dt
+implies that there is M > 0 such that c
+R
+2π
+0
+f(t,c,··· ,c)dt > 0 for all |c| > M if
+P
+m
+i=1
+R
+2π
+0
+p
+i
+(t)dt−2π. So (B3)holds if
+P
+m
+i=1
+R
+2π
+0
+p
+i
+(t)dt−2π.
+It is easy to see that μ =1,δ
+i
+=1,M
+0
+i
+=1, it follows that (B2) holds.
+It follows from Theorem L that (8) has at least one 2π−periodic solution if
+m
+X
+i=1
+Z
+2π
+0
+p
+i
+(t)dt>2π,
+m
+X
+i=1
+max
+t∈[0,2π]
+p
+i
+(t)<
+1
+3
+.
+Example 3.2. Consider the equation
+[((sint)
+2
++2)φ(x
+′′
+(t))]
+′′
+=−
+[x(t)]
+5
+1+2[sinx(t)]
+8
++
+m
+X
+i=1
+p
+i
+(t)[x(t−τ
+i
+)]
+5
++r(t), (3-9)
+whereT = 2π,φ(x) =|x|
+4
+x,q(t)= (sint)
+2
++2,p
+i
+,r areallnon-negativewith
+P
+m
+i=1
+R
+2π
+0
+p
+i
+(t)dt>
+2π, τ
+i
+(i =1,2,··· ,m) are constants.
+Corresponding to the assumptions of Theorem L, one sees
+f(t,x
+0
+,x
+1
+,··· ,x
+m
+) =−
+x
+5
+0
+1+2(sinx
+0
+)
+8
++
+m
+X
+i=1
+p
+i
+(t)x
+5
+i
++r(t),
+we set
+g(t,x
+0
+,x
+1
+,··· ,x
+m
+)=−
+x
+5
+0
+1+2(sinx
+0
+)
+8
+,
+and
+h(t,x
+0
+,··· ,x
+m
+) =
+m
+X
+i=1
+p
+i
+(t)x
+5
+i
++r(t)
+and β =1/3, θ = 5. It is easy to see that (B1) holds.
+It is easy to see μ= 2,δ
+i
+=1,M
+0
+i
+= 1, it follows that (B2) holds.
+Since
+c
+Z
+2π
+0
+f(t,c,··· ,c)dt =
+Z
+2π
+0
+ 
+−
+c
+6
+1+2[sinc]
+8
++
+m
+X
+i=1
+p
+i
+(t)c
+6
++cr(t)
+!
+dt
+= −
+2πc
+6
+1+2[sinc]
+8
++
+m
+X
+i=1
+Z
+2π
+0
+p
+i
+(t)dtc
+6
++c
+Z
+T
+0
+r(t)dt
+≥
+ 
+m
+X
+i=1
+Z
+2π
+0
+p
+i
+(t)dt−2π
+!
+c
+6
++c
+Z
+2π
+0
+r(t)dt
+Electronic Journal. http://www.math.spbu.ru/diffjournal 19Differential Equations and Control Processes, N 2, 2011
+implies that there is M > 0 such that c
+R
+2π
+0
+f(t,c,··· ,c)dt > 0 for all |c| > M if
+P
+m
+i=1
+R
+2π
+0
+p
+i
+(t)dt−2π >0. So (B3) holds if
+P
+m
+i=1
+R
+2π
+0
+p
+i
+(t)dt−2π >0.
+It follows from Theorem L that equation (9) has at least one solution if
+m
+X
+i=1
+Z
+2π
+0
+p
+i
+(t)dt> 2π,
+1
+3
+>
+m
+X
+i=0
+max
+t∈[0,T]
+p
+i
+(t).
+References
+1. R.P. Agarwal, H. Lu, D. O
+′
+Regan, Positive solutions for the boundary value problem
+(|x
+′′
+(t)|
+p−2
+x
+′′
+(t))
+′′
+= λq(t)f(x(t)), Memoirs on Differential Equations and Math. Physics,
+28(2003)33-44.
+2. P. Amster, M. C. Mariani, Oscillating solutions of a nonlinear fourth-order ordinary dif-
+ferential equation, J. Math. Anal. Appl., 325(2007)1133-1141.
+3. F. Bernis, Compactness of the support in convex and nonconvex fourth-order elasticity
+problems, Nonl. Anal., 6(1982)1221-1242.
+4. Z.Bai,B.Huang,W.Ge,Theiterativesolutionsforsomefourth-orderp-Laplaceequation
+boundary value problems, Appl. Math. Letters, 19(2006)8-14.
+5. A. Cabada, The monotone method for ﬁrst-order problems with linear and nonlinear
+boundary conditions, Appl. Math. Comput., 63(1994)163-186.
+6. A. Cabada, The method oflower and upper solutions forsecond, third, fourth, andhigher
+order boundary value problems, J. Math. Anal. Appl., 185(1994) 302-320.
+7. A. Cabada, R.L. Pouso, Existence theory for functional p-Laplacian equations with vari-
+able exponents. Nonl. Anal., 52(2003)557-572.
+8. A. Cabada, S. Lois, Maximum principles for fourth and sixth order periodic boundary
+value problems, Nonl. Anal., 29(1997) 1161-1171.
+9. S. Chen, W. Ni, C. Wang, Positive solution of fourth order ordinary differential equation
+with four-point boundary conditions, Appl. Math. Letters, 19(2006)161-168.
+10. J. Chaparova, Existence and numerical approximations of periodic solutions of similinear
+fourth-order differential equations, J. Math. Anal. Appl., 273(2002)121-136.
+11. X.Cai,J.Yu,Z.Guo,Existence ofperiodicsolutionsforfourthorderdifferenceequations,
+Comput. Math. Appl., 50(2005)49-55.
+12. R. Gaines, J. Mawhin, Coincidence Degree and Nonlinear Differential Equations, Lecture
+Notes in Math., 568, Springer, Berlin, 1977.
+13. M. Grossinho, L. Sanchez, S. Tersian, On the solvability of a boundary value problem for
+a fourth-order ordinary differential equation, Appl. Math. Letters, 18(2005)439-444.
+14. J. K. Hale, S. Lunel, Introduction to functional differential equations, Springer-Verlag,
+New York, 1993.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 20Differential Equations and Control Processes, N 2, 2011
+15. D. Jiang, W. Gao, A. Wan, A monotone method for constructing extremal solutions to
+fourth-orderperiodicboundaryvalueproblems,Appl. Math. Comput.,132(2002)411-421.
+16. D. Jiang, H. Liu, X. Xu, Nonresonant singular fourth-order boundary value problems,
+Appl. Math. Letters, 18(2005) 69-75.
+17. D. Jiang, H. Liu, L. Zhang, Optimal existence theory for single and multiple positive
+solutions to fourth order periodic boundary value problems, Nonl. Anal., 7(2006)841-852.
+18. V.B. Kolmanoskii, Stability of functional differential equations, Academic Press, London,
+1986.
+19. Y. Li, Positive solutions of fourth-order periodic boundary value problems, Nonl. Anal.,
+54(2003)1069-1078.
+20. Y. Li, Positive solutions of fourth-order boundary value problems with two parameters,
+J. Math. Anal. Appl., 281(2003)477-484.
+21. X. Lin, D. Jiang, X. Li, Existence and uniqueness of solutions for singular fourth-order
+boundary value problems, J. Comput. Appl. Math., 196(2006)155-161.
+22. Y. Liu, W. Ge, Existence theorems of positive solutions for fourth order four points
+boundary value problems, Anal. Appl., 2(2004)71-85.
+23. Y. Liu, W. Ge, Solvability of two-point BVPs for fourth-order differential equations at
+resonance, Zeitschrift fur Analysis und Ihre Anwendungen, 22(2003)977-989.
+24. Y. Liu, W. Ge, Solvability of nonlocal boundary value problems for ordinary differential
+equations of higher order, Nonl. Anal., 57(2004)435-458.
+25. Y. Liu, W. Ge, Positive solutions of three-point boundary value problems for fourth order
+differentialequationwithp-Laplacianoperator. Canada. Appl. Math. Qua. 12(2004)177-
+198.
+26. Y. Liu, Further results on periodic boundary value problems for nonlinear ﬁrst order
+impulsive functional differential equations, J. Math. Anal. Appl., 327(2007)435-452.
+27. Y. Liu, Solvability of periodic boundary value problems for nth-order ordinary differential
+equations, Comput. Math. Appl., 52(2006)1165-1182.
+28. R. Ma, Nodal solutions for a fourth-order two-point boundary value problem, J. Math.
+Anal. Appl., 314(2006) 254-265.
+29. A. Nurmuhammad, M. Muhammad, M. Mori, M. Sugihara, Double exponential transfor-
+mation in the Sinc-collocation method for a boundary value problem with fourth-order
+ordinary differential equation, J. Comput. Appl. Math., 182(2005) 32-50.
+30. C. Pang, W. Dong, Z. Wei, Multiple solutions for fourth-order boundary value problem,
+J. Math. Anal. Appl., 314(2006)464-476.
+31. T.Tanigawa, Oscillationandnonoscilationtheoremsforaclassoffourth-orderquasilinear
+functional differential equations, Hiroshima Math. J., 33(2003)297-316.
+32. Z. Wei and C. Pang, The method of lower and upper solutions for fourth order singular
+m-point boundary value problems, J. Math. Anal. Appl., 322(2006)675-692.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 21Differential Equations and Control Processes, N 2, 2011
+33. Q. Yao, Existence, multiplicity and inﬁnite solvability of positive solutions to a nonlinear
+fourth-order periodic boundary value problem, Nonl. Anal., 63(2005)237-246.
+34. Q. Zhang, S. Chen, J. L¨ u, Upper and lower solution method for fourth-order four-point
+boundary value problems, J. Comput. Appl. Math., 196(2006)387-393.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 22

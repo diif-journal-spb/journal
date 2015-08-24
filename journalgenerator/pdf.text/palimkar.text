@@ -1,0 +1,1086 @@
+﻿DIFFERENTIAL EQUATIONS 
+AND 
+CONTROL PROCESSES 
+№ 2, 2013 
+Electronic Journal, 
+reg.Эл № ФС77-39410 at 15.04.2010 
+ISSN 1817-2172 
+ 
+http://www.math.spbu.ru/diffjournal 
+e-mail: jodiff@mail.ru 
+ 
+Differential inclusions 
+ 
+ 
+ 
+ 
+EXISTENCE THEORY FOR RANDOM NON-CONVEX DIFFERENTIAL 
+INCLUSION  
+ 
+D. S. Palimkar 
+ 
+Department of Mathematics, Vasantrao Naik College, Nanded 
+PIN-431603 (M.S.) INDIA 
+E-mail:dspalimkar@rediffmail.com 
+ 
+ 
+ 
+In this paper, the existence  of solution for the random boundary value problem  of second order  non-
+convex ordinary functional differential inclusion  is proved through priori bound method under some 
+monotonicity conditions.  
+Keywords: Random functional differential inclusion, Carathe’odory condition, random   solution.  
+2000 Mathematics Subject Classifications:60H25, 47H10. 
+1. INTRODUCTION 
+Let X be a Banach space and let 
+  X P
+ denote the class of all subsets of X, called the power set of X. 
+Denote 
+ 
+p
+X P   | is non-empty and has the property . A X A p  
+Here, p may be p = closed (in short cl) or p = convex (in short cv) or p = bounded (in short bd) or p = 
+compact (in short cp). Thus 
+ 
+cl
+X P
+,
+ 
+cv
+X P
+, 
+ 
+bd
+X P
+and 
+ 
+cp
+X P
+denote, respectively, the 
+classes of all closed, convex, bounded and compact subsets of X.  
+Let 
+  ,,  A
+ be a complete  -finite measure space and let R be the real line. Given a closed and 
+bounded interval  
+  , J a b 
+in R , consider the functional multi-valued random boundary value 
+problem ( in short RBVP) of ordinary second order random differential inclusion Differential Equations and Control Processes, № 2, 2013  
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal  2 
+                           
+     
+   
+'' , , ( ), ,    . .    
+, 0 ' ,
+x t F s x t ae t J
+x a x b
+   
+
+ 
+
+
+ 
+
+                                  (1.1) 
+for all   , where 
+  :
+p
+F J R R    P
+and the functions :JJ   is continuous. 
+ By random solution of the multi-valued RBVP (1.1) on J  , I mean a measurable function
+ 
+1
+:, x AC J R  satisfying for each   ,     " , , x t v t   for some measurable
+ 
+1
+:, v L J R 
+satisfying 
+     
+, , ( ), , v t F t x t     
+a.e.tJ  and     , 0 ' , x a x b   
+where 
+ 
+1
+, AC J R
+ is the space of continuous real-valued functions whose first derivative exists and is 
+absolutely continuous on J.   
+The special case when 
+     
+, , , , , F t x f t x  
+ the multi-valued RBVP (1.1) reduce to the 
+boundary value problems of functional random differential equation 
+                                    
+     
+   
+" , , ( ), ,   . .   
+, 0 ' ,
+x t f t x t ae t J
+x a x b
+   
+
+ 
+
+
+ 
+
+                                   (1.2) 
+for all   where : f J R R     . The single-valued RBVP (1.2) have been discussed in 
+Dhage and Kang [2] for various aspects of the solution. The multi-valued RBVP (1.1), this type of 
+existence results are also proved in D. S. Palimkar papers and monograph see references [9-14]. In this 
+paper, I discuss the multi-valued RBVP (1.1) for the existence of random solution for non-convex case 
+under some monotonicity conditions.  
+                                               2.  AUXILIARY RESULTS 
+Let 
+  ,X  M
+ and 
+  , C J R
+ be the space of measurable X-valued functions on  and continuous 
+real-valued functions on J respectively. Let :JR       
+p
+R P be a multi-valued mapping. 
+Then for any measurable function : x J R    , let 
+                      
+           
+, ( , ) , , ( , ),  . .    (2.1) S x v M J R v t t x t ae t J
+
+          M
+ 
+And                
+   
+ 
+   
+ 
+11
+, ( , ) , , ( , ),  . .  .  (2.2) S x v L J R v t t x t ae t J
+
+          M
+ 
+This is set of selection functions for  on JR    . When there is no confusion, I denote 
+       
+11
+, S x S y
+
+ 
+ where   , yt 
+  ( ), xt   for some continuous function :JJ   . 
+The integral of the random multi-valued function  is defined as  
+   
+ 
+1
+, ( , ), , : ( )( )
+bb
+aa
+s x s ds v s ds v S x
+
+     
+
+. 
+Furthermore, if the integral 
+  , ( , ),
+b
+a
+s x s ds   
+
+ exists for every measurable function 
+: x J R    , then I say the multi-valued mapping  is Lebesgue integrable on JR    . Differential Equations and Control Processes, № 2, 2013  
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal  3 
+Lemma 2.1(Hu and Papageorgiou [4]) Let E be a Banach space. If 
+  :
+cp
+J E E  P is strong 
+Carathe’odory, then the multi-valued map 
+    , , ( ) t x t x t  is jointly measurable for every 
+measurable function :. x J E  
+                                                       3. EXISTENCE RESULTS 
+ It is more convenient to deal with the integrals than derivatives, I shall rewrite the FRBVPs into the 
+random integral inclusion; the kernels of the random integral equations are the appropriate Green’s 
+function associated with the random boundary conditions. This transformation may be done in several 
+ways. One-way of doing it is via Green’s function. 
+ Now, the multi-valued RBVP (1.1) is equivalent to the functional random integral inclusion 
+(FRII) 
+                                   
+  ( , ) ( , ) , ( ( ), ), ,    if    
+b
+a
+x t H t s F s x t ds t J     
+
+,                   (3.1) 
+where
+  , H t s
+ is a Green’s function associated with the homogeneous linear FRBVP 
+                                                  
+''( , ) 0,    . .    
+    ( , ) 0 '( , )
+x t a e t J
+x a x b
+
+
+
+
+
+
+
+
+
+                                             (3.2) 
+for a fixed   and is given by   
+ 
+,    if 
+,
+,    if .
+t a a t s b
+H t s
+s a a s t b
+   
+
+
+
+
+    
+
+  (3.3) 
+It is known that the Green’s function   , H t s is continuous and non-negative real-valued function on 
+JJ  satisfying 
+                                                          
+0 ( , ) H t s b a                                                  (3.4) 
+And                                              
+2
+()
+( , ) .
+2
+b
+a
+ab
+H t s ds
+
+
+
+                 (3.5) 
+ The key result in formulating random fixed point theorems concerning the existence of measurable 
+selector for a multi-valued mapping is the following: 
+Theorem3.1 (Kuratowskii and Ryll-Nardzewski [6]) If the multi-valued operator 
+  :
+p
+Q X X   P is measurable with closed values, then Q has a measurable selector. 
+Remark 3.1 Note that if 
+  :
+cl
+Q X X   P is a multi-valued random operator, then the set 
+( )( )
+Q
+Sx  is non-empty for each xX  . Differential Equations and Control Processes, № 2, 2013  
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal  4 
+A random fixed point theorem for the right monotone increasing multi-valued random operators on 
+separable ordered Banach spaces is  
+Theorem 3.2 (Dhage [1]) Let 
+  , A
+ be a measurable space and let 
+  , 
+ be a random interval in 
+a separable Banach space X. If  
+  :, Q      
+,
+cl
+ P
+ is a compact, upper semi-continuous 
+right monotone increasing multi-valued random operator and the cone K in X is normal, then () Q  
+has a random fixed point in 
+ 
+, ab . 
+I also need the following definitions in the sequel. 
+Definition 3.1 A multi-valued random operator 
+  :
+cl
+Q X X   P is called right monotone 
+increasing if for each   we have that 
+( )( ) ( )( )
+i
+QQ
+S x S y  
+ for all , x y X  for which 
+. xy  
+Definition 3.2 A multi-valued random operator 
+  :
+p
+Q X X   P is called strict monotone  
+increasing if for each ,  ( ) ( ) Q x Q y       for all , x y X  for which . xy  Similarly, the 
+multi-valued random operator () Q  is called monotone decreasing if for each 
+, ( ) ( ) Q x Q y       for all , x y X  for which xy  . Finally, () Q  is called monotone if it 
+is a either monotone increasing or monotone decreasing multi-valued random operator on X. 
+Definition 3.3 A multi-valued mapping 
+  :
+cp
+F J R R    P is called Carathe’odory, if for each 
+  
+(i)     , , , t F t x  is jointly measurable for each xR  , and  
+(ii)   ,, x F t x  is an upper semi-continuous almost everywhere for . tJ  
+Again, a Carathe’odory multi-valued function F is called 
+1
+L -Carathe’odory if 
+(iii) for each real number r> 0 there exists a measurable function 
+ 
+1
+:,
+r
+h L J R 
+ such 
+that for each   
+   
+( , , ) sup : , , ( , )   . .   
+r
+F t x u u F t x h t ae t J       
+P
+ 
+for all xR  with xr  . 
+Furthermore, a Carathe’odory multi-valued function F is called 
+1
+R
+L -Carathe’odory if  
+(iv) there exists a measurable function 
+ 
+1
+:, h L J R  such that  
+  , , ( , )    a.e.   F t x h t t J 
+P
+ 
+for all xR  , and the function h is called a growth function of F on  Differential Equations and Control Processes, № 2, 2013  
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal  5 
+JR    . 
+Definition 3.4 A measurable function
+  :, C J R  
+ is called a strict lower random solution for 
+the multi-valued RBVP (1.1) if for all 
+1
+( )( )
+F
+vS  
+, we have  
+''( , ) ( , ) t v t     ,  ( , ) 0 '( , ) ab      
+for all tJ  and   . Similarly, a strict upper random solution  for the multi-valued RBVP 
+(1.1) on J  is defined. 
+A random fixed-point theorem for strict monotone increasing multi-valued random operators on 
+separable ordered Banach spaces is 
+Theorem 3.3 (Dhage [1]) Let 
+  , A be a measurable space and let 
+  ,  be a random order 
+interval in a separable Banach space X. If 
+     
+: , ,
+cl
+Q       P
+ is a strict monotone 
+increasing completely continuous multi-valued random operator and the cone K in X is normal, then 
+() Q  has the least random fixed point () x 
+
+ and the greatest random fixed point () y   in 
+ 
+,  . Moreover, the sequences  
+()
+n
+x  and  
+()
+n
+y  defined by 
+01
+( ) ( ), ( ) ( ) , 0,1,2,...,
+nn
+x x Q x n     
+
+      
+and 
+0 1 ,
+( ) ( ), ( ) ( ) 0,1,2,...,
+nn
+y y Q y n     
+
+      
+converge to () x 
+
+ and () y   respectively. 
+I use the Theorems 3.2 and 3.3 for proving the main existence results of this paper. 
+Then, I have also quoted the following lemmas which are used for proving main result.   
+Lemma 3.1 (Lasota and Opial [7])Let E be a Banach space. If dim   E  and
+  :
+cp
+J E E     P
+ is strong 
+1
+L -Carathe’odory, then 
+1
+( )( ) 0 Sx
+
+  
+ for each xE  . 
+Lemma 3.2(Lasota and Opial [7]) Let E be a Banach space, F a Carathe’odory multi-valued operator 
+with 
+1
+( ) 0 S
+
+ 
+ and Let 
+   
+1
+: , , L J E C J E  L be a continuous linear mapping. Then the 
+composite operator 
+   
+1
+,
+: , ( , )
+bd cl
+S C J E C J E
+
+ LP 
+has closed graph on 
+    ( , ) ( , ) C J E C J E 
+. 
+Consider the following set of assumptions  Differential Equations and Control Processes, № 2, 2013  
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal  6 
+ 
+0
+H F   ,, tx  is closed and bounded subset of R for each   ,, tx  JR     . 
+ 
+1
+H The multi-valued map   , t 
+  , ( ), F t x t  is jointly measurable for each 
+measurable function : x J R    . 
+ 
+2
+H F is 
+1
+L -Carathe’odory.  
+ 
+3
+H The multi-valued map x
+1
+( )( )
+F
+Sx  is right monotone increasing in   , x C J R  
+almost everywhere for tJ  . 
+ 
+4
+H The multi-valued RBVP (1.1) has a strict lower random solution  and a strict upper 
+random solution  with   on . J  
+Hypotheses    
+02
+HH  are common in the literature. Some nice sufficient conditions for 
+guarantying 
+1
+( ) 0
+F
+S   
+ appear in Lasota and Opial [7]. A mild hypothesis of  
+4
+H has been used in 
+Hu and Papageorgiou [4]. Hypothesis  
+3
+H relatively new to the literature, but the special forms have 
+been appeared in the works of several authors. 
+                                           4. MAIN EXISTENCE RESULT 
+Theorem 4.1Assume that the hypotheses 
+   
+04
+HH 
+ hold. Then the multi-valued RBVP (1.1) has a 
+random solution in  
+,  defined on J  . 
+Proof  Let   , X C J R  . Define a random order interval  
+,  in X which is well defined in view 
+of hypothesis  
+4
+H . Now the multi-valued RBVP (1.1) is equivalent to the random integral inclusion 
+                                      
+   
+( , ) ( , ) , ( ), , ,  .
+b
+a
+x t H t s F s x t ds t J     
+
+                         (4.1) 
+for all   . Define a multi-valued operator 
+    :,
+cl
+QX    P
+ by 
+                            
+ 
+1
+1
+( ) ( , ) | ( , ) ( , ) ( , ) , ( )( )  (4.2)
+( ) ( )
+b
+F
+a
+F
+Q x u X u t H t s v s ds v S x
+Sx
+   
+
+
+
+    
+
+
+
+
+
+M
+K
+ 
+where 
+ 
+ 
+   
+1
+: , , , , L J R C J R    K:M M
+ is a continuous operator defined by      
+    (   ) ∫ (   ) (   )  
+ 
+ 
+                                                             (4.3) 
+Clearly, the operator () Q  is well defined in view of hypothesis  
+2
+H . I shall show that () Q  
+satisfies all the conditions of Theorem 3.2. Differential Equations and Control Processes, № 2, 2013  
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal  7 
+StepI: First, I show that Q is closed valued multi-valued random operator on 
+ 
+,   . Observe that 
+the operator () Q  is equivalent to the composition 
+1
+()
+F
+S  K of two operators on
+ 
+1
+, L J R , where 
+ 
+ 
+ 
+1
+: , , , L J R X    K M M
+is the continuous operators defined by 4.3. To show () Q  has 
+closed values, it suffices to prove that the composition operator 
+1
+()
+F
+S  K has closed values on 
+ 
+,  . Let 
+ 
+, x   be arbitrary and let 
+ 
+n
+v be a sequence in 
+1
+( )( )
+F
+Sx  converging to v in 
+measure. Then, by the definition of    
+1
+( ), ( , ) , ( ), ,
+Fn
+S v t F t x t       a.e. for tJ  . Since 
+   
+, ( ), , F t x t    is closed, 
+     
+, , ( ), , v t F t x t      a.e. for tJ  . Hence, 
+1
+( )( )
+F
+v S x   . As a result, 
+1
+( )( )
+F
+Sx 
+ is closed set in 
+ 
+1
+, L J R for each   . From the 
+continuity of , K it follows that 
+ 
+1
+( ) ( )
+F
+Sx  K
+ is a closed set in X. Therefore, () Q  is a closed-
+valued multi-valued operator on  
+,  for each   . 
+ Next, I show that () Q  is a multi-valued random operator on  
+,  . First, I show that the 
+multi-valued map 
+1
+( , ) ( )( )
+F
+x S x  is measurable. Let
+ 
+ 
+1
+,, f L J R  M
+be arbitrary. Then 
+   
+     
+     
+1
+1
+()
+, ( )( ) inf ( ) ( ) : ( )
+inf ( , ) : , ( ), ,
+( , ) , , ( ), , .
+FF
+L
+b
+a
+b
+a
+d f S x f h h S x
+f t z z F t x t dt
+d f t F t x t dt
+
+  
+   
+   
+  
+  
+
+
+
+ 
+But by hypothesis 
+1
+() H , 
+   
+, ( ), , F t x t    is jointly measurable and it is known that the multi-
+valued map 
+   
+, , , z d z F t x   is continuous. Hence the multi-valued mapping   ( , ) , d f t 
+   
+, ( ), , F t x t    is jointly measurable from 
+1
+( , ) J X L J R     in to R
+
+. Now the integral 
+is the limit of the finite sum of measurable functions, and so, 
+ 
+1
+, ( )( )
+F
+d f S x  is measurable. As a 
+result, the multi-map 
+     
+1
+,
+F
+S      is jointly measurable. 
+ Define the multi-valued map  on JX    by 
+ 
+   
+1
+( , , ) ( ) ( )( ) ( , ) , ( ), , .
+b
+F
+a
+t x S x t H t s F s x s ds       
+
+K
+ 
+I shall show that ( , , ) tx  is continuous in t in the Hausdorff metric on R . Let  
+n
+t be a sequence in 
+J converging to . tJ  Then Differential Equations and Control Processes, № 2, 2013  
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal  8 
+ 
+       
+   
+ 
+( , , ), ( , , )
+( , ) , ( ), , , ( , ) , ( ), ,
+( , ) ( , ) , ( ), ,
+( , ) ( , ) ,
+0        .
+Hn
+bb
+Hn
+aa
+b
+n
+a
+b
+nr
+a
+d t x t x
+d H t s F s x s ds H t s F s x s ds
+H t s H t s F s x s ds
+H t s H t s h s ds
+as n
+   
+     
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+P
+ 
+Thus the multi-valued map ( , , ) t t x  is continuous and hence, by Lemma 2.1, the map
+   
+( , , ) ( , ) , ( ), ,
+b
+a
+t x H t s F s x s ds    
+
+ is jointly measurable. Consequently, () Q  is a 
+random operator on  
+,  . 
+StepII: Secondly, I show that () Q  is right monotone increasing and multi-valued random operator 
+on  
+,  into itself for each   . Let  
+,, xy   be such that  . xy  Since  
+2
+H holds, I 
+have that 
+11
+( )( ) ( )( ).
+i
+FF
+S x S y  
+ Hence 
+( )( ) ( )( ).
+i
+Q x Q y  
+ From  
+3
+H it follows that 
+() Q     and () Q     for all   . Now () Q  is right monotone increasing on X, so we 
+have for each   
+( ) ( ) ( )
+ii
+Q Q x Q           
+ 
+for all  
+, x   . Hence Q defines a right monotone increasing multi-valued random operator 
+     
+: , , .
+cl
+Q       P 
+Step III: Next, I show that () Q  is completely continuous for each   . First, I show that 
+   
+( ) , Q   
+ is compact for each   . Let  
+()
+n
+y  be a sequence in 
+   
+( ) , Q    for 
+some   . I will show that  
+()
+n
+y  has a cluster point. This is achieved by showing that 
+ 
+()
+n
+y  is uniformly bounded and equi-continuous sequence in X.  
+CaseI: First, I show that  
+()
+n
+y  is uniformly bounded sequence. By the definition of  
+()
+n
+y  , I 
+have a 
+1
+( ) ( )( )
+n F n
+v S x   for some  
+,
+n
+x   such that  
+( , ) ( , ) ( , ) ,  .
+b
+nn
+a
+y t H t s v s ds t J  
+
+ Differential Equations and Control Processes, № 2, 2013  
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal  9 
+Therefore,                            
+   
+( , ) ( , ) ( , )
+( , ) , ( ), ,
+b
+nn
+a
+b
+n
+a
+y t H t s v s ds
+H t s F s x s ds
+
+  
+
+
+
+
+P
+ 
+                                                
+1
+( ) ( , )
+( ) ( )
+b
+r
+a
+r
+L
+b a h s ds
+b a h
+
+
+
+
+
+ 
+for all tJ  , where ( ) ( ) . r      Taking the supremum over t in the above inequality 
+yields 
+1
+( ) ( ) ( )
+nr
+L
+y b a h   , 
+which shows that  
+()
+n
+y  is a uniformly bounded sequence in 
+   
+( ) , Q   
+.  
+ Next, I show that  
+()
+n
+y  is an equi-continuous sequence in  
+   
+( ) , Q   
+. Let ,. tJ  
+Then  
+( , ) ( , ) ( , ) ( , ) ( , ) ( , )
+bb
+n n n n
+aa
+y t y H t s v s ds H s v s ds         
+
+ 
+  ( , ) ( , ) ( , )
+( , ) ( , ) ( , ) .
+b
+n
+a
+b
+r
+a
+H t s H s v s ds
+H t s H s h s ds
+
+
+
+
+
+
+ 
+From the above inequality, it follows that 
+( , ) ( , ) 0
+nn
+y t y     as t   . 
+This shows that  
+()
+n
+y  is an equi-continuous sequence in 
+   
+( ) , . Q   
+ Now  
+()
+n
+y  is 
+uniformly bounded and equi-continuous for each   , so it has a cluster point in view of Arzela-
+Ascoli theorem. As a result, () Q  is a compact multi-valued random operator on  
+,  . 
+CaseII: Next, I show that () Q  is an upper semi-continuous multi-valued random operator on  
+, 
+. Let  
+()
+n
+x  be a sequence in X such that ( ) ( )
+n
+xx 
+
+ . Let  
+()
+n
+y  be a sequence such that 
+( ) ( ) ,
+nn
+y Q x   and 
+*
+( ) ( ).
+n
+yy    I shall show that 
+**
+( ) ( ) . y Q x   since 
+( ) ( ) ,
+nn
+y Q x   there exists a 
+1
+()
+( ) ( )
+n F n
+v S x
+
+  such that  Differential Equations and Control Processes, № 2, 2013  
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal  10 
+( , ) ( , ) ( , ) ,    .
+b
+nn
+a
+y t H t s v s ds t J  
+
+ 
+I must prove that there is a 
+1
+( ) ( )( )
+F
+v S x 
+
+ such that  
+**
+( , ) ( , ) ( , ) ,    .
+b
+a
+y t H t s v s ds t J  
+
+ 
+Consider the continuous linear operator 
+ 
+ 
+1
+: , , L J R  LM    
+,, C J R  M
+ defined by  
+( , ) ( , ) ( , ) ,   .
+b
+a
+v t H t s v s ds t J  
+
+L
+ 
+Now   ( ) ( ) 0
+n
+yy 
+
+ as n . 
+From Lemma 3.2, it follows that 
+1
+() F
+S
+
+L
+ is a closed graph operator. Also from the definition of L I 
+have 
+ 
+ 
+1
+()
+( , ) .
+n F n
+y t S x
+
+  L 
+Since 
+*
+( ) ( )
+n
+yy   , there is a point  
+1
+* ( ) *
+()
+F
+v S x
+
+  such that 
+**
+( , ) ( , ) ( , ) ,   
+b
+a
+y t H t s v s ds t J  
+
+ 
+This show that () Q  is a upper semi-continuous multi-valued random operator on  
+,  . Thus, 
+() Q  is an upper semi-continuous and compact and hence completely continuous multi-valued 
+random operator on  
+,  . Now an application of Theorem 3.2 yields that () Q  has a random fixed 
+point, which further implies that the multi-valued RBVP (1.1) has a random solution on J  . This 
+completes the proof. 
+                                            5. EXAMPLE 
+One of the most important examples of differential inclusions comes from control theory. 
+Consider the control system  
+ 
+  (   )       where u is a control parameter.  
+It appears that the control system and differential inclusion ' ( , ) ( , )
+uU
+x f x u f x u
+
+   have the 
+some trajectories of the sets control depending on   i.e.    ( )  Then we obtain the differential 
+inclusion ' ( , ( )) x f x u x  . 
+The equivalence between the control system and the corresponding differential inclusion is the 
+central idea used to prove the existence theorem in optional control theory.  Differential Equations and Control Processes, № 2, 2013  
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal  11 
+Since the dynamics of economical, social and biological macro systems is multi-valued, 
+differential inclusions serve as natural models in macro system dynamics. Differential inclusions are 
+also used to describe some systems with hysteresis.  
+REFERENCES 
+1. B. C. Dhage, Multi-valued condensing random operators and functional random integral 
+inclusions, Opuscula Mathematica,Vol.31, No.1, 2011. 
+2. B. C. Dhage and S. M. Kang,Functional random boundary value problems of second order 
+differential equations, Pan American Mathematical Journal 15 (4), 2005, 59-72. 
+3. B. C. Dhage, S. K. Ntouyas, D. S. Palimkar, On boundary value problems of second order convex 
+and non-convex differential inclusions, Fixed point Theory, Vol. 9 No. 1,2008,89-104. 
+4. Hu and N. S. Papageorgiou, Hand Book of Multi-valued Analysis Vol.-I, Theory Kluwer 
+Academic Publisher, Dordrechet, Boston, London, 1997.  
+5. S. Itoh, Random fixed point theorems with applications to random differential equations in Banach 
+spaces, J. Math. Anal. Appl. 67, 1979, 261-273. 
+6. K. Kuratouski,C. Ryll-Nardzeuskii, A general theorem on selectors, Bull. Acad. Pol. Sci. Ser. 
+Math. Sci. Astron.Phys.13, 1965, 397-403. 
+7. A. Lasota and Z. Opial, An application of Kakutani-Ky Fan theorem in the theory of ordinary 
+differential equations, Bull. Acad. Pol. Sci. Ser. Sci. Math. Astronom. Phys. 13, 1965, 781-786. 
+8. N. S. Papageorgiou, Random Fixed points and random differential inclusions, Intern. J. Math. and 
+Math. Sci. 11(03), 1988, 551-560. 
+9. D.S. Palimkar, Existence Theory of Random Differential Equations , International Journal of 
+Scientific and Research Publications, Vol. 2, No. 7, 2012,1-6. 
+10. D.S. Palimkar, Boundary Value Problem of Second Order Differential Inclusion , International 
+Journal of Mathematics Research, Vol. 4, No. 5, 2012,527-533. 
+11. D.S. Palimkar, Existence Theory for Second Order Random Differential Inclusion, International 
+Journal of Advances in Engineering, Science and Technology, Vol. 2, No. 3, 2012, 261-266. 
+12. D.S. Palimkar, Existence Theory of Second Order Random Differential Equations, Global 
+Journal of Mathematics and Mathematical Sciences, Vol. 2, No. 1, 2012,7-15. 
+13. D.S. Palimkar, Second Order Random Differential Inclusion, Variorum Multi-Disciplinary e-
+Research Journal, Vol. 1, No. 3, 2011,1-16. 
+14. D.S. Palimkar, Some Studies in Random Differential Inclusions, Lambert Publication, Germany, 
+2012. 
+ 
+ 
+ 

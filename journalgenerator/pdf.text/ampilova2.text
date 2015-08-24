@@ -1,0 +1,807 @@
+﻿ 
+ 
+DIFFERENTIAL EQUATIONS 
+AND 
+CONTROL PROCESSES 
+№ 2, 2013 
+Electronic Journal, 
+reg.Эл № ФС77-39410 at 15.04.2010 
+ISSN 1817-2172 
+ 
+http://www.math.spbu.ru/user/diffjournal 
+e-mail: jodiff@mail.ru 
+ 
+Dynamical systems in biology and medicine 
+ 
+ 
+ 
+ 
+On Application of Fractal Analysis Methods to Biomedical Preparation Images 
+ 
+Natalya B. Ampilova, Igor P. Soloviev, Yuri V. Shupletsov 
+ 
+St. Petersburg State University , Universitetskaya nab. 7/9, St. Petersburg, 199034 Russia 
+ 
+ ampilova@math.spbu.ru 
+soloviev@math.spbu.ru 
+shupaag@mail.ru 
+ 
+Abstract: We investigate a possibility to apply fractal and multifractal methods to 
+analyze some classes of biomedical preparation images. The Modified Fractal 
+Signature method based on the calculation of the Minkovsky dimension is used. The 
+method  is alternative to well-known box dimension calculation. Generalized 
+dimensions (Regny spectrum) and multifractal spectrum are calculated to obtain 
+valuable features for multifractal sets. Different methods for multifractal spectrum 
+calculation are considered. The results of numerical experiments show that for the 
+images under study the direct calculation of multifractal spectrum (pointwise 
+dimensions calculation and the computing thermodynamic averages) is more 
+preferable than the obtaining the spectrum from generalized dimensions with the 
+following using the Legendre transform.  
+Keywords: dynamic system, attractor, self-organizing systems, chaotic behavior, image 
+analysis, fractal. 
+1. INTRODUCTION 
+It is now widely accepted that physical systems that exhibit chaotic behavior are generic 
+in Nature. Since it is possible to follow their  trajectories only for short time scales, one 
+must use suitable statistical descriptions to obtain an approximation to system 
+dynamics. 
+We may consider phase portraits of complex dynamical systems (self-organizing 
+system, for example) and analyze them as images. Stable invariant sets (attractors) of 
+the systems often have complex geometrical structure — they are fractals or Differential Equations and Control Processes, № 2, 2013 
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  52 
+multifractals (unions of several fractal sets, being everyone has own fractal dimension). 
+One can realize a multifractal set image as a result of a measure      distribution. 
+The multifractal formalism as a method of description of such sets relies on the fact that 
+highly non-uniform probability distributions arising from the nonuniformity of the 
+system often possess rich scaling properties such as self-similarity. Hence we can 
+associate a characterization of the fractal properties of a measure with the nonuniform 
+distribution. The multifractal formalism describes the statistical properties of these 
+measures in terms of their multifractal spectrum or their generalized dimensions. 
+1.1 Fractal dimension calculation 
+One of the most widely used dimensions is box-counting or box dimension.  (It has 
+been also termed capacity dimension, entropy dimension). This is due to its ease of 
+mathematical description  and empirical estimation. It is well-known that the calculation 
+of box dimension may be rather time-consuming. In 1997 Tang et al.[10] proposed the 
+Modified Fractal Signature method  based on the calculation of the Minkovsky 
+dimension that coincides with box dimension for non-empty bounded sets in  
+ 
+. The 
+basic idea of this approach is that an image is mapped onto a gray-level function. 
+Furthermore, this function can be mapped onto a gray-level surface, and from the area 
+of such a surface the fractal dimension (fractal signature) of the document image can be 
+obtained. The authors used this dimension to differ the areas of text, background and 
+pictures in digital images. The method seems to be appropriate for different subject 
+areas. So, in [1] this method was successfully applied to the classification of some 
+classes biomedical preparation images. In [7] the authors calculated the Minkovsky 
+dimension to classify (on the focusing degree) the images obtained by radars.  
+1.2 Multifractal spectrum and Regny dimensions 
+Cover the support of the measure with disjoint boxes { 
+ 
+}  of size l and define for ith 
+box a measure as  
+ 
+ 
+, where  
+ 
+  is a real number. Then the subsets of points ( 
+ 
+) for 
+which values  
+ 
+  are equal or close (level sets), are defined.  For each subset its fractal 
+dimension    
+ 
+  is calculated. So, the image is considered as a union of interwoven 
+subsets, being each of them has own fractal dimension. The set of these dimensions 
+forms multifractal spectrum (MFS). It should be noted that the finding of  
+ 
+ sets means 
+a categorization of an image points. In fact, it is the box measure that describes a 
+categorization. Different measures lead to different multifractal spectra. For digital 
+images the measure is defined through pixel intensities. The method of MFS direct 
+determination using the calculation dimensions of the level sets is described in [12]. 
+Multifractal spectrum is widely used in image analysis because it is globally invariant 
+under bi-Lipschitz transform (general transform including brightness changing, rotation, 
+scaling and general texture surface deformations). Hence it may be used as some stable 
+feature for a class of images. So, in [12] the authors apply multifractal spectrum to 
+texture analysis and classification. Differential Equations and Control Processes, № 2, 2013 
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  53 
+Another approach to analyze multifractal sets is to calculate generalized dimensions 
+(Regny spectrum). Let { 
+ 
+} be a probability measure defined on the set under 
+investigation. Generalized (Regny) dimensions  
+ 
+ provide an alternative description of 
+the singular measure. They correspond to scaling exponents for the qth moment of the 
+measure. The main idea of this approach is to use the statistical sum       
+ 
+ 
+ 
+ 
+ and 
+consider a set of dimensions  
+ 
+  defined by  
+ 
+    
+   
+      
+        
+. It was the first and 
+probably the simplest way to calculate Regny spectrum. Nonetheless, the error analysis 
+in [11] showed that such a way is not sufficiently reliable. 
+Since MFS and Regny spectrum describe the same measure, one can connect    and the 
+function      with the sum       As    is varied, different subsets, which are associated 
+with different scaling indexes, become dominant. In other words, maximum principle 
+allows us to obtain a set of numbers (for different  ) that are fractal dimensions of 
+subsets in which the sum is maximal. This reasoning technique leads to the following: 
+when      and  
+ 
+ are smooth functions of   and  , they are connected by the Legendre 
+transform. It was believed that for measures arising from real experiments it is easier to 
+calculate generalized dimensions and then obtain multifractal spectrum using the 
+Legendre transform. And vice versa — given a multifractal spectrum one can calculate 
+Regny dimensions. 
+1.3 MFS direct determination –moment based method 
+But, as was shown in [4], the  
+ 
+ corresponding to large negative q may have large error 
+bars and Legendre transforming the  
+ 
+  curve may decrease precision considerably. The 
+authors elaborated a new direct method of determining multifractal spectrum, which is 
+based on a canonical method of computing thermodynamic averages. Both      and     
+are obtained as functions of     It should be marked that well-known method for the 
+calculation of Regny spectrum considered in [11] is based on the Chhabra method [4] 
+for obtaining      with the following calculation  
+ 
+ by Legendre transform.This 
+method was successfully applied to the recognition of Carelian petroglifs [9]. 
+This work continues our investigations relating to the analysis and classification of 
+biomedical preparation images [1, 2]. We use all the described methods to analyze the 
+images of some classes of biomedical preparation and give the results of numerical 
+experiments. The Modified Fractal Signature method was successfully applied to all the 
+classes. Regny spectrum method did not demonstrate reliable results for histological 
+preparation images. At the same time, the MFS direct determination allowed us to 
+classify them.  
+2. MAIN NOTIONS AND METHODS 
+2.1 Definitions 
+Definition 1. Let F be a nonempty bounded set in  
+ 
+   { 
+ 
+          } — a 
+covering F,  
+ 
+    — the number of sets from Ω whose diameters are nongreater than Differential Equations and Control Processes, № 2, 2013 
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  54 
+. Let    
+ 
+  and    
+ 
+  denote Hausdorf and topological dimensions F respectively. 
+F is said to be fractal if    
+ 
+      
+ 
+   Box-counting (capacity) dimension is 
+defined by    
+ 
+      
+   
+   
+ 
+ 
+ 
+   
+    
+ 
+ 
+  
+Definition 2 [5]. -parallel body  
+ 
+ can be defined by  
+ 
+ {   
+ 
+ |   |     
+ }  
+Definition 3. Let F be a nonempty and bounded set in  
+ 
+,  
+ 
+ — -parallel body F, 
+   
+ 
+  
+ 
+  — n-dimensional volume of  
+ 
+   For a constant s, if →0, the limit of 
+   
+ 
+  
+ 
+  
+   
+⁄ is positive and bounded, we say that F has Minkovsky dimension s, 
+which is symbolized by    
+ 
+  .  
+Theorem 1 [5]  Let F be a nonempty bounded set in  
+ 
+.  Then    
+ 
+      
+ 
+ . 
+2.2 Modified Fractal Signature method 
+In [10] the authors call the used method “Modified Fractal Signature” to emphasize that 
+they did not use traditional  fractal dimension (capacity). Alternately the volume of  a δ-
+parallel body was estimated to approximate the Minkovsky fractal dimension. Let 
+  { 
+  
+                    } be an image with multigray level and  
+  
+ be the 
+gray level of the (i, j)th pixel. In a certain measure range, the gray-level surface of F can 
+be viewed as a fractal. In image processing the gray level function F is a nonempty 
+bounded set in  
+ 
+. The surface area  
+ 
+ may be calculated using the volume of a special 
+-parallel body — blanket with the thickness 2. Denoting this volume      
+ 
+  we 
+have  
+ 
+      
+ 
+   ⁄ .  
+But according to Definition 3 and Theorem 1 we can conclude that if 
+   
+   
+     
+ 
+  
+   
+⁄    , then       
+ 
+     
+ 
+   Therefore, when  is 
+sufficiently small, we have      
+ 
+    
+   
+. So, we have  
+ 
+ 
+     
+ 
+ 
+  
+ 
+  
+ 
+   
+ 
+     from which the fractal dimension   (fractal signature) can be obtained. It 
+should be noted that in practice it is often sufficient to calculate only  
+ 
+ values. 
+The covering blanket is defined by its upper surface  
+ 
+      and its lower surface 
+ 
+ 
+     . Initially, =0 and  
+ 
+       
+ 
+       
+   
+  
+For =1, 2,… the blanket surfaces are defined iteratively as follows:  
+ 
+ 
+         {
+ 
+   
+        
+    
+|           |  
+ 
+   
+      
+} 
+ 
+ 
+         {
+ 
+   
+        
+    
+|           |  
+ 
+   
+      
+} 
+                            (1) 
+The volume of the blanket    
+ 
+ is computed as Differential Equations and Control Processes, № 2, 2013 
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  55 
+   
+ 
+    
+ 
+       
+ 
+                                                  (2) 
+It should be noted in [8] that in practice the following formula for the surface area 
+calculation is more preferable: 
+ 
+ 
+ 
+    
+ 
+    
+   
+ 
+ 
+                                                       (3) 
+This is necessary, since    
+ 
+ depends on all smaller scales features. Subtracting    
+   
+, 
+we isolate those features that change from scale     to scale  . For a pure fractal 
+object property changes do not depend on scale, and measurement between any two 
+different scales lead to the same fractal dimension. In this case both methods for surface 
+area calculation are identical. However, for nonfractal objects we should isolate the 
+effects of smaller scale features. The last formula is applicable for both fractal and 
+nonfractal surfaces. 
+In practice, the image F is divided into several non-overlapping subimages and  
+ 
+ is 
+computed for every subimage using formulas (1)-(3). Then all  
+ 
+ are summarized. 
+Given  
+ 
+  the fractal dimension can be obtained. Sometimes it is convinient to study a 
+“map” of the image, where in every cell the corresponding  
+ 
+ (or fractal dimension) 
+value is written. 
+2.3 MFS Direct Determination – calculation of level sets 
+Let   be a measure defined through pixel intensities. For    
+ 
+ we denote        a 
+square of length r with center x. We describe             
+    
+    with      the 
+density function and   some constant. The local density function of   is defined as  
+        
+   
+           
+    
+                                                           
+The set of all image points   with local density   is  
+ 
+ 
+ {     
+ 
+       } .                                              (5) 
+Thus we obtain a point categorization { 
+ 
+      } of the image with a multifractal 
+spectrum defined as  
+{          } {     
+ 
+       }.                                      (6) 
+The density function describes how locally the measurement   satisfiers the power law 
+behavior. It measures the non-uniformity of the intensity distribution in the square 
+      . It should be noted that in this method the measurement           is the sum of 
+intensity pixels in the square. The density      is obtained as the slope of the line fitted 
+to the data {                 } by the least square method. Then we take a discrete 
+set { 
+ 
+} from an interval and find for each  
+ 
+ the point set  
+ 
+ 
+ according to (5).This set 
+contains all the pixels whose densities are close to  
+ 
+. The example of such a set near Differential Equations and Control Processes, № 2, 2013 
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  56 
+the source image is shown below with  
+ 
+          . The fractal dimension    
+ 
+  is 
+computed as the slope of the line fitted to the data {   
+ 
+ 
+         
+ 
+ 
+ }, where 
+     
+ 
+ 
+  is the smallest number of sets of diameter less than δ that cover  
+ 
+ 
+  (i.e. as 
+box dimension). 
+ 
+Fig.1 The example of  
+ 
+             
+ 
+           
+ 
+2.4 MFS direct determination — moment based method 
+Let  
+ 
+    be a normalized measure of the ith box  (the sum of box pixel intensities 
+divided by the sum of all pixel intensities),        , r is the box side. Construct a one-
+parameter family of normalized measures     , where for ith box  
+ 
+      
+  
+ 
+    
+ 
+   
+ 
+    
+ 
+   
+According to [3] the Hausdorff dimension of the support of      is given by 
+        
+   
+  
+ 
+        
+ 
+     
+ 
+   
+   
+                                                
+In addition we can compute the average value of the exponent  
+ 
+ 
+   
+ 
+   
+   
+ as  
+        
+   
+  
+ 
+        
+ 
+   
+ 
+   
+   
+                                                 
+Thus, both   and      may be obtained as explicit functions of the parameter  . 
+2.5 Regny spectrum calculation 
+Consider an irregular object embedded into Euclidean space and divide it into N boxes 
+of sizes  
+  
+             where       and the size of the object equals 1. Let { 
+ 
+}  
+be a probability measure defined on the partition. Suppose that  
+ 
+    
+ 
+ 
+  where   is a 
+scaling value that can take the values from some range with a probability density Differential Equations and Control Processes, № 2, 2013 
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  57 
+     
+     
+, and so the probability to get   from an interval   
+ 
+  
+ 
+      is 
+          
+      
+, and a continuous function    
+ 
+  shows the fractal dimensions of the 
+sets on which the exponents  
+ 
+ may lie [6]. 
+Now we consider the function        
+ 
+ 
+ 
+ 
+   
+  It follows that 
+       ∫  
+ 
+   
+ 
+  
+    
+ 
+ 
+ 
+   
+    When l is small enough       is maximal for   
+     such that   
+ 
+    
+ 
+  is minimal. On the other hand it is known [5] that there is a 
+unique finite nonzero function      , such that 
+      
+    
+         
+   
+      
+   
+⁄
+ 
+and                      ⁄   , i.e.        and       are connected by the 
+Legendre transform. 
+Regny spectrum { 
+ 
+} is defined by the equation            
+ 
+  where  
+ 
+   
+ 
+  
+ 
+ 
+are Hausdorf, information and correlation dimensions respectively. 
+There are several methods to approximate  
+ 
+. We use the method of coarsening 
+partitions developed in [11]. This method follows the idea supposed in [4] and allows us 
+to obtain multifractal spectrum in the terms       and     , and then uses Legendre 
+transform to calculate Regny dimensions. Consider K partitions of an image into boxes 
+with sizes   
+ 
+        . Let  
+  
+ be a measure of the box i for kth partition. Let  
+ 
+ be 
+the number of the boxes in kth partition for which  
+  
+  . Then      and         
+may be calculated by the formulas:  
+       
+ 
+ 
+   
+   
+ 
+,  (    )  
+ 
+ 
+   
+   
+ 
+ ,                                        (9) 
+where 
+  
+ 
+    
+    
+  
+ 
+ 
+     
+  
+  
+ 
+ 
+ 
+   
+  
+ 
+ 
+ 
+ 
+ 
+  ,                                             (10) 
+ 
+ 
+    
+ (  
+  
+ 
+ 
+   (
+( 
+  
+)
+ 
+ ( 
+  
+)
+  
+ 
+ 
+))
+ 
+ 
+ 
+   
+  
+ 
+ 
+ 
+ 
+ 
+                                        (11) 
+For a fixed   values  
+ 
+     and  
+ 
+    are calculated for all K partitions. Hence in 
+coordinate systems   
+ 
+       
+ 
+  and   
+ 
+       
+ 
+  there are K points that have to be 
+approximated by a straight line. Using above formulas and the least-squares method we 
+obtain       ,        , then      and  
+ 
+. 
+(It is easily to see that accurate within designation formulas (9)-(11) give approximate 
+values for   and      defined by (7) and (8).) 
+  Differential Equations and Control Processes, № 2, 2013 
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  58 
+3. NUMERICAL EXPERIMENTS 
+3.1 Modified fractal signature method 
+Surface areas were calculated for some kinds of connective tissues of animals. The 
+picture shows the images and the graphic illustrates the dependence of normalized 
+surface area on the size of the partition box. Partitions into boxes are chosen depending 
+on the size of the image. Method demonstrates good separability of values for different 
+classes of tissues. 
+                    
+(151)                         (156)                        (163)                          (171)                        (178) 
+ 
+Fig. 2. Normalized surface area values for 5 types of connective tissue. 
+3.2. Regny spectrum calculation 
+We used images of pharmacological solutions of Ag with different concentrations — 
+zero, small and large. The images were obtained by atomic-force microscope. For every 
+image Regny spectrum was calculated for   =0, 1, 2, 3, 4, 5, 10, 20, 30, 40, 50. The box 
+measure is defined as light level of the box concerning to the number of light pixels of 
+the whole image. 
+                                             
+Large                                                Small                                                    Zero Differential Equations and Control Processes, № 2, 2013 
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  59 
+ 
+Fig. 3. Regny spectra for Ag solutions with different concentrations 
+3.3 MFS direct determination  using level sets 
+Multifractal spectra were obtained for histological preparations — health and affected 
+liver, and the graphic illustrates their spectra. 
+                             
+Health liver                                                           Affected liver 
+ 
+. 
+Fig.4. Liver preparation images. Graphics       obtained by the calculation level sets 
+0
+0.5
+1
+1.5
+2
+2.5
+1 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9
+health tissue
+affected tissueDifferential Equations and Control Processes, № 2, 2013 
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  60 
+3.2. Moment based method  
+Multifractal spectra based on the Moment Method were calculated by using formulas 
+(7),(8) for images of 4 classes of biomedical preparations. The most reliable results 
+were obtained for bone tissue and histological preparation images. 
+                            
+Health bone tissue                                          Affected bone tissue 
+.                
+ 
+Fig.5. Bone tissue preparation images. Graphics       and      obtained by the moment based 
+method. 
+CONCLUSION 
+The results of experiments show the high efficiency of Modified Fractal Signature 
+method for all the classes of images. The MFS direct determination allows us to classify 
+the images of histological preparations, connective tissue and bone tissue. At the same 
+time Regny spectrum method did not demonstrate reliable results for histological 
+preparation images. 
+ 
+1.988
+1.99
+1.992
+1.994
+1.996
+1.998
+2
+1 3 5 7 9
+health
+bone tissue
+affected
+bone tissue
+1.97
+1.975
+1.98
+1.985
+1.99
+1.995
+2
+2.005
+2.01
+2.015
+1 2 3 4 5 6 7 8 9 10
+health bone
+tissue
+affected
+bone tissueDifferential Equations and Control Processes, № 2, 2013 
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  61 
+ Acknowledgements 
+The work was supported by RFBR grant N 13-01-00782 
+REFERENCES 
+1. Ampilova N., Gurevich E., Soloviev I. Application of Modified Fractal Signature & Regny 
+Spectrum Methods to the Analysis of Biomedical Preparations Images.Proc. 6 Int. Conf. CEMA11, 
+6-8 Oct. 2011, Sofia, Bulgaria. p. 96-100. 
+2. Ampilova N., Soloviev I., Shupletzov Y. Multifractal spectrum as a classification sign for 
+biomedical preparations images. Proc. 7 Int. Conf. CEMA12, 8-10 Nov. 2012, Athens, Greece. 
+p.98-101. 
+3. Billingsley P. (1965). Ergodic theory and information.Wiley, New-York. 
+4. Chhabra Ashvin B, Meneveau Charles, Jensen Roderick V. and Sreenivasan K.R..(1989) Direct 
+determination of the f(α) singularities spectrum and its application to fully developed turbulence. 
+Physical Review A, 40 (9), 5284-5294. 
+5. Falconer K.J. (1990). Fractal Geometry. Mathematical Foundations and Applications. John Wiley 
+& Sons, New-York. 
+6. Halsey T., Jensen M. (1986). Fractal measures and their singularities. Physical Review A, 33, 
+1141-1151. 
+7. C. Pandis, A. Malamou, P. Stefaneas, P. Frangos. Applying the modified fractal signature method 
+to image classification: some preliminary results for ISAR radar images. Proc. 7 Int. Conf. 
+CEMA12, 8-10 Nov. 2012, Athens, Greece . p. 50-52. 
+8. S. Peleg, J. Naor, R. Hartley, D. Avnir. Multiple Resolution Texture Analysis and Classification. 
+IEEE transactions on pattern analysis and machine intelligence, vol. PAMI-6, no.4, 1984. p. 518-
+523. 
+9. A.Rogov, K.Spiridonov. The application Regny Spectrum as an invariant of graphic image. (in 
+Russian). Vestnik Saint-Petersburg State University, 2008, ser. 10 N.2, p.30-43. 
+10. Tang Y. Y., Hong Ma, Dihua Xi, Xiaogang Mao, Suen. C. Y. (1997). Modified Fractal Signature 
+(MFS): A New Approach to Document Analysis for Automatic Knowledge Acquisition. IEEE 
+Trans. Knowledge and Data Eng., 9 (5), 742-762. 
+11. Vstovsky G.V. (2002). Elements of information physics, MGIU, Moscow. 
+12. Xu Y., Ji H., Fermüller C. (2009). Viewpoint Invariant Texture Description Using Fractal 
+Analysis. International Journal of Computer Vision, 83, 85–100. 
+ 
+ 
+ 
+ 

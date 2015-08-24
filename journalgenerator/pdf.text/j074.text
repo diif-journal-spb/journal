@@ -1,0 +1,992 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 2, 2001
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Control problems in nonlinear systems
+THE STRUCTURE MATRIX OF DYNAMICAL
+SYSTEM
+1
+GEORGE OSIPENKO
+St. Petersburg State Technical University, Russia
+E-mail: math@math.hop.stu.neva.ru
+SALIH AYTAR
+Suleyman Demirel University, Turkey
+E-mail: aytar@fef.sdu.edu.tr
+SERGEY KOBYAKOV
+St. Petersburg State Technical University, Russia
+E-mail: ksergeu@mail.ru
+1 De nitions and results.
+Let us consider a discrete dynamical system governed by a homeomorphism
+f : M ! M; where M is a C
+1
+ smooth compact manifold.
+De nition 1 [3] Let " > 0 be given. An in nite in both direction sequence
+fx
+k
+; k2 Zg is named an "-trajectory or pseudo-trajectory or pseudo-orbit of f
+if for any k the distance between the image f(x
+k
+) and x
+k+1
+is less than ":
+ (f(x
+k
+); x
+k+1
+) < ";
+1
+This research was supported by the Scienti c and Technical Research Council of Turkey (TUBITAK-NATO-
+PC prog.) and Russian Program "Integracia".Differential Equations and Control Processes, N 2, 2001
+where  (x; y) is the distance between x and y on M and Z is the set of integers.
+A pseudo-trajectoryfx
+k
+g is said to be "-periodic if there is p such that x
+k
+= x
+k+p
+for each k 2 Z. In this case the number p is named a period of the pseudo-
+trajectory.
+De nition 2 [11] A point x is called chain recurrent if x is "-periodic for each
+positive ", i.e., there exists a periodic "-trajectory passing through x. A chain
+recurrent set, denoted Q; is the set of all the chain recurrent points.
+It is known, that the chain recurrent set Q is invariant, closed, and contains
+periodic, homoclinic, nonwandering and other singular trajectories. It should
+be remarked that if a chain recurrent point is not periodic then there exists
+as small as one likes perturbation of f in C
+0
+-topology for which this point is
+periodic [30],[39],[40]. One may say that a chain recurrent point may become
+periodic under a small C
+0
+-perturbation of the map f.
+A subset 
+   Q is called a component of the chain-recurrent set if each
+two points from 
+ can be connected by a periodic "-trajectory for any " > 0.
+Denote by ff(x) and !(x) the ff and ! limit sets of the trajectory through
+x; respectively. Let fQ
+1
+; Q
+2
+; Q
+3
+; :::g be chain recurrent set components of a
+dynamical system. A connection Q
+i
+! Q
+j
+is said to exist if there is a point
+x such that ff(x)   Q
+i
+and !(x)   Q
+j
+: Let g : M ! M be a continuous
+mapping and a distance  (f; g) = max
+M
+ (f(x); g(x)): Denote a support of the
+difference f and g by supp(f   g) =fx2 M : f(x)6= g(x)g: The connections
+fQ
+i
+! Q
+j
+g are said to be stable if there exists " > 0 such that any perturbation
+g;  (f; g) < "; supp(f  g)  MnQ; has the same connectionsfQ
+i
+! Q
+j
+g:
+De nition 3 Let the matrix S = (s
+ij
+) be such that s
+ij
+= 1 if there is the
+connection Q
+i
+! Q
+j
+; s
+ii
+= 1 and s
+ij
+= 0 in other case. The matrix S is named
+the structure matrix of dynamical system f:
+By the de nition, the structure matrix is a topological invariant. A size
+on the structure matrix is q  q; where q is a number of components. So the
+number q may be the in nity. The main result of paper is
+Theorem 1 If the dynamical system has a  nite number of chain recurrent
+components with the stable connections then there exist a  nite algorithm for
+construction of the structure matrix.
+Electronic Journal.  33Differential Equations and Control Processes, N 2, 2001
+Example 1 A perturbed pendulum system on cylindric phase space.
+Let us consider a system of the form
+'
+0
+= y;
+y
+0
+=   sin '  "y;
+where '2 S
+1
+is an angle, 0  ' < 2 , y2 R; the parameter " > 0: So the phase
+space is the cylinder P = S
+1
+  R. The system has two equilibriums A(0; 0) and
+B( ; 0): The  rst point is a focus, and the second is a hyperbolic point. Because
+" > 0; the in nity set S
+1
+  1 can be considered as an unstable point C. The
+system do not have other chain recurrent points. So there are tree components
+of chain recurrent setfA; B; Cg: The trajectories can start at C and  nish at A
+or at B: The unstable separatrices of B  nish at A. Thus the structure matrix
+if of the form
+S =
+0
+B
+@
+1 0 0
+1 1 0
+1 1 1
+1
+C
+A
+;
+where A = Q
+1
+; B = Q
+2
+and C = Q
+3
+: Moreover these connections are stable.
+2 Symbolic image [24]
+Let C =fM(1);    ; M(n)g be a  nite covering of M by closed sets. The sets
+M(i) are called cells or boxes of the covering.
+De nition 4 Let G be a directed graph having s vertices where each vertex i
+corresponds to the cell M(i). The vertices i and j are connected by a directed
+edge i! j if and only if M(j)\f(M(i))6=;: The graph G is called a symbolic
+image of f with respect to the covering C.
+Denote by V er the set of vertices of G. The graph G can be considered as
+a correspondence G : V er ! V er between the vertices. Graph G is uniquely
+determined by its n  n matrix of transitions   = ( 
+ij
+):  
+ij
+= 1 if and only
+if there is the directed edge i ! j, otherwise  
+ij
+= 0. Indeed we can use the
+transition matrix without the symbolic image which is a convenient geometrical
+tool only. Much of an effective information of a dynamical system may come
+from the investigation of a symbolic image. It is natural to consider the symbolic
+image as a  nite discrete approximation of the mapping f.
+Electronic Journal.  34Differential Equations and Control Processes, N 2, 2001
+ 
+ 
+ 
+ 
+i
+d e
+l k
+j
+f
+ 
+ 
+ 
+   
+-  
+ 
+ 
+ 
+   
+ 
+ 
+ 
+  *
+H
+H
+H
+H j
+@
+@
+@
+@
+@ R
+i
+d
+e
+l
+k
+j
+  
+  
+-
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  1
+ 
+ 
+  ff  
+A
+A
+A U
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  *
+B
+B
+B
+B
+B N
+Q
+Q
+Q
+Q
+Q s
+ 
+ 
+ 
+ 
+  	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+G
+A
+A
+A U
+  
+  
+?
+C
+C
+C
+C
+C
+C
+C C O
+ 
+ 
+ 
+  )
+6 6
+P
+P
+P
+P
+P
+P
+P i
+S
+S
+S
+S w
+A
+A
+A
+A
+A
+A
+A
+A
+A U
+
+
+
+
+
+  
+?
+q
+H
+H
+H
+H
+H
+H
+H
+H
+H j
+' $
+?
+ 
+ 
+ 
+ 
+ 
+ 
+   
+   
+H
+H
+H
+H j
+q
+q
+H
+H
+H
+H
+H
+H
+H
+H
+H Y
+Figure 1: Construction of a Symbolic Image.
+De nition 5 An in nite in both direction sequence fz
+k
+g of vertices on the
+graph G is called an admissible path (or simply a path) if for each k the graph
+G contains the directed edge z
+k
+! z
+k+1
+. A path fz
+k
+g is said to be p-periodic if
+z
+k
+= z
+k+p
+for each k2 Z.
+There is a natural connection between the admissible paths on the symbolic
+image G and the " -trajectories of the homeomorphism f. It can be said that an
+admissible path is the trace of an "-trajectory and vice versa. However, there
+are some relationships between the parameters of the symbolic image and the
+number " for which the connections take place [26].
+De nition 6 A vertex of the symbolic image is called recurrent if there is a
+periodic path passing through it. The set of recurrent vertices is denoted by RV:
+A pair of recurrent vertices i; j are called equivalent if there is a periodic path
+through i and j.
+The recurrent vertices fig are uniquely de ned by the nonzero diagonal
+elements  
+ii
+6 =0 of the powers of the transitions matrix  
+m
+; m  n, where n is
+the number of the covering cells. By De nition 6, the set of recurrent vertices
+RV decomposes into several classes fH
+k
+g of equivalent recurrent vertices.
+Denote by P(d) the union of the cells M(i) for which the vertex i is recur-
+rent, i.e.,
+P(d) =f[M(i) : i is recurrentg; (2.1)
+where d is the largest diameter of the cells M(i): As before we consider the
+dependence of P on the largest diameter d. Denote by T(d) the union of the
+Electronic Journal.  35Differential Equations and Control Processes, N 2, 2001
+cells M(k) for which the vertex k is non recurrent, i.e.,
+T(d) =f[M(k) : k is non recurrentg:
+The following theorem describes the properties of the sets P(d) and T(d).
+Theorem 2 [26] (i) The set P(d) is a closed neighborhood of the chain recur-
+rent set., i.e., Q  P(d):
+(ii) For any neighborhood V of Q there exists d > 0 such that P(d)  V; i.e.,
+if the largest diameter d is small enough then this neighborhood is su ciently
+small.
+(iii) The chain recurrent set Q coincides with the intersection of the sets
+P(d) for all positive d:
+Q =
+\
+d>0
+P(d): (2.2)
+(iv) The points of T are not chain recurrent, i.e., T \ Q =;:
+Let us introduce a quasi-order relation between the vertices of the symbolic
+image. We consider i  j if and only if there exists an admissible path of the
+form
+i = i
+0
+; i
+1
+; i
+2
+; :::; i
+m
+= j:
+Hence, a vertex i is recurrent if and only if i  i, and a pair of recurrent vertices
+i; j are equivalent if and only if i  j   i.
+Proposition 1 [1] The vertices of a symbolic image G can be renumbered such
+that
+  the equivalent recurrent vertices are numbered with consecutive integers,
+  the new numbers i; j of other vertices are chosen such that i < j if i  j 6  i:
+In other words, the transition matrix is of the form
+  =
+0
+B
+B
+B
+B
+B
+B
+@
+( 
+1
+)                
+.
+.
+.
+0 ( 
+k
+)        
+.
+.
+.
+.
+.
+.
+0 0 ( 
+s
+)
+1
+C
+C
+C
+C
+C
+C
+A
+(2.3)
+Electronic Journal.  36Differential Equations and Control Processes, N 2, 2001
+where the elements under the diagonal blocks are zeros, each diagonal block  
+k
+corresponds to either a class of equivalent recurrent vertices H
+k
+or a nonrecur-
+rent vertex. In the last case  
+k
+coincides with a single zero. The renumbering
+described in Proposition 1 is not uniquely de ned.
+3 Algorithms.
+In order to  nd the transition matrix of the form (3) we have to renumbering
+vertices on symbolic image. For this we give an algorithm which  nds classes
+of recurrent equivalent vertices and establishes a partial order between these
+classes and nonrecurrent vertices.
+Our aim is to construct new graph by identifying equivalent vertices of the
+initial directed graph G.
+The algorithm consist of four main parts:
+1. Continuation,
+2. Comparison,
+3. Identi cation,
+4. Forbidden.
+Let us consider a path fi
+0
+; i
+1
+; i
+2
+; :::; i
+k
+g of length k.
+\Continuation" constructs a continuation of path w = fi
+0
+; i
+1
+; i
+2
+; :::; i
+k
+g on
+an edge as follows. If there is an edge i
+k
+! j, i
+k
+6= j we put i
+k+1
+= j and
+construct of a new path of the form w
+ 
+=fi
+0
+; i
+1
+; i
+2
+; :::; i
+k
+; i
+k+1
+g:
+\Comparison" compares the last vertex j with the vertices of path w =
+fi
+0
+; i
+1
+; i
+2
+; :::; i
+k
+g, i.e., we check the equality j = i
+m
+; m = k  1; k  2; :::; 1; 0.
+\Identi cation": if there exists j = i
+s
+; than we have the circlefi
+s
+; i
+s+1
+; :::; i
+k
+; jg,
+i.e., these vertices are equivalent recurrent vertices. In this case we identify the
+verticesfi
+s
+; i
+s+1
+; :::; i
+k
+; jg and replace their by new vertex j
+ 
+:
+"Forbidden" : if we can not construct the continuation, i.e., there is not
+an edge i
+k
+! j, i
+k
+6= j; we form a forbidden vertex k
+l
+= i
+k
+and put k
+l
+in the
+set of forbidden vertices N. Then we consider the pathfi
+0
+; i
+1
+; i
+2
+; :::; i
+k 1
+g: The
+"forbidden" gives a partial order between the forbidden vertices. The order is
+determined by the index l; which is increased by each step of the forbidden.
+By repeating the "continuation", "comparison", "identi cation" and "for-
+bidden" we come to a graph with recurrent vertices only of the form k! k2 N.
+Electronic Journal.  37Differential Equations and Control Processes, N 2, 2001
+Moreover a  nal recurrent vertex k
+l
+corresponds to the class of equivalent re-
+current vertices of the initial graph. In this case the transition matrix of con-
+structed graph is of the form
+ 
+ 
+=
+0
+B
+B
+B
+B
+B
+B
+@
+( 
+ 
+11
+)                
+.
+.
+.
+0 ( 
+ 
+ll
+)        
+.
+.
+.
+.
+.
+.
+0 0 ( 
+ 
+ss
+)
+1
+C
+C
+C
+C
+C
+C
+A
+; (3.4)
+where ( 
+ 
+ll
+); (1  l  s) is either 1 or 0, 1 corresponding to a recurrent vertex
+and 0 nonrecurrent vertex.The initial transition matrix takes the form (4) if we
+make the renumbering according to the constructed partial order.
+Now we give the algorithm. We will denote the forbidden vertices by N;
+at  rst N =  . Let s be number of vertices from N. Let V er = fig be a set
+of vertices of symbolic image. Consider a path w =fi
+0
+; i
+1
+; i
+2
+; :::; i
+k
+g, let k be a
+index of last vertex in w, suppose these vertices are different and i
+0
+is named
+initial vertex in graph. At  rst w =  . Let m be a index of vertex in w for
+"Comparison". Let x be a index of vertex in w for "Identi cation".
+Algorithm 1
+1. Initiation
+N =  ; w =  ; k = 0; s = 0
+2. Continuation
+If 9i = 2 N then add i in w
+Else go to 7
+3. Continuation
+If 9i
+k
+! j; j = 2 N; j 6= i
+k
+then add j in w; k = k + 1
+Else go to 6
+4. Comparison
+For m since k  1 down to 0
+If i
+m
+= i
+k
+then go to 5
+Go to 3
+5. Identi cation
+Electronic Journal.  38Differential Equations and Control Processes, N 2, 2001
+Add new vertex j
+ 
+in V er
+For x since k down to m + 1
+For all i
+x
+! i
+ 
+add new edge j
+ 
+! i
+ 
+; delete edge i
+x
+! i
+ 
+For all i
+ 
+! i
+x
+add new edge i
+ 
+! j
+ 
+; delete edge i
+ 
+! i
+x
+Delete vertex i
+x
+from V er
+Delete vertex i
+x
+from w
+Delete vertex i
+m
+from w
+Add j
+ 
+in w; k = m
+Go to 3
+6. Forbidden
+Add i
+k
+in N; s = s + 1
+Delete i
+k
+from w; k = k  1
+If w =   then go to 2
+Else go to 3
+7. End
+From the previous explanation it follows
+Proposition 2 If the directed graph G has class of equivalent recurrent vertices
+K =fi
+0
+; i
+1
+; i
+2
+; :::; i
+k
+g then the algorithm identi es K to one vertex.
+Algorithm 2
+Suppose we have a directed graph G which has a classes of equivalent recur-
+rent vertices consisting of one vertex fj
+k
+g, i.e., there exists a closed path only
+of the form j
+k
+! j
+k
+: Letfi
+0
+; i
+1
+; i
+2
+; :::; i
+s
+g be a set of nonrecurrent vertices.
+Our aim is to construct new graph NG with the same recurrent vertices
+fj
+k
+g and without nonrecurrent vertices. An edge j
+k
+! j
+l
+exists on NG if and
+only if there is a path j
+k
+! :::! j
+l
+on the initial graph G:
+Now we give the algorithm. The main idea is to replace nonrecurrent vertex
+i
+ 
+by a collection of edges j ! l if the path j ! i
+ 
+! l exists. Let k is an index
+of nonrecurrent vertices.
+1. k = 0
+2. For all j
+ 
+such that j
+ 
+! i
+k
+For all l
+ 
+such that i
+k
+! l
+ 
+Electronic Journal.  39Differential Equations and Control Processes, N 2, 2001
+Add new edge j
+ 
+! l
+ 
+Delete edge i
+k
+! l
+ 
+Delete edge j
+ 
+! i
+k
+Delete vertex i
+k
+3. If k < s then k := k + 1; go to 1
+4. End
+From the previous explanation it follows
+Proposition 3 The graphs G and NG have the same recurrent vertices and
+new graph has an edge j
+k
+! j
+l
+if and only if there is a path j
+k
+! ::: ! j
+l
+on
+the initial graph G:
+By applying the algorithm 1 and 2 to the symbolic image the structure
+matrix of dynamical system is constructed.
+4 Examples.
+Now we can present some results obtained by program realization of our algo-
+rithms. We indicate the structure matrix of two test systems and show appropri-
+ate phase portraits of these systems, where each component of chain recurrent
+set is separated from others. The links between components correspond to non-
+diagonal "1" of structure matrix. The indexes of components are de ned on
+the proper picture.
+Test system 1. The Van-der-Pol equation
+(
+x
+0
+= y
+y
+0
+= y(1  x
+2
+)  x
+The appropriate structure matrix is
+S =
+ 
+1 1
+0 1
+!
+;
+see Picture 1.
+Test system 2
+Electronic Journal.  40Differential Equations and Control Processes, N 2, 2001
+(
+x
+0
+= 2x cosx  5y
+y
+0
+= 2x
+The appropriate structure matrix is
+S =
+0
+B
+B
+B
+B
+@
+1 0 1 1
+0 1 0 1
+0 0 1 0
+0 0 0 1
+1
+C
+C
+C
+C
+A
+;
+see Picture 2.
+Acknowledgement
+Authors would like to express their thanks to TUBITAK-NATO.
+Electronic Journal.  41Differential Equations and Control Processes, N 2, 2001
+Picture 1. Test system 1. Van-der-Pol equation
+Picture 2. Test system 2
+Electronic Journal.  42Differential Equations and Control Processes, N 2, 2001
+References
+[1] V.M.Alekseev, Symbolic Dynamics, 11th Mathematical School, Kiev, 1976
+(in Russian).
+[2] A.A.Andronov and L.S.Pontryagin, Rough Systems, Doklady Academy
+Nauk SSSR, v.14, no.5, 247-250 (1937) (in Russian).
+[3] D.V. Anosov, Geodesic ow on closed Riemannian manifold of negative
+curvature, Trudy Math. Steclov Institute, v. 90, (1967) (in Russian).
+[4] L.Auslender and R.MacKenzie, Introduction to Differentiable Manifolds,
+N.Y., 1963.
+[5] N.P.Bhatia, G.P.Szego, Stability theory of dynamical systems, New-York,
+Springer, 1970.
+[6] R.Bowen, Symbolic Dynamics, Ann. Math. Soc. Providence, R.I., vol.8,
+(1982).
+[7] I.U.Bronshtein, Theorem on structural stability of smooth extension of
+cascade, in Algebraic invariants of dynamical systems, Mat. Issledovaniya,
+v. 67, Kishinev, Shtinisa, 12-29 (1980) (in Russian).
+[8] I.U.Bronshtein, Nonautonomous dynamical system, Kishinev, Shtinisa,
+1984 (in Russian).
+[9] B.F.Bylov, R.E.Vinograd, D.M.Grobman, V.V.Nemytskii, Theory of Lya-
+punov exponents, Moscow, Nauka, 1966 (in Russian).
+[10] F.Colonius and W.Kliemann, The Morse spectrum of linear ows on vector
+bundles, Trans. Amer. Math. Soc., 348, 4355-4388 (1996).
+[11] C.Conley, Isolated Invariant set and the Morse Index, CBMS Regional
+Conference Series, v.38, Amer.Math.Soc., Providence, (1978).
+[12] B.Coomes, H.Kocak, K.Palmer, Computation of long period orbits in
+chaotic dynamical systems, Aust. Math. Soc. Gaz., v.24, no.5, 183-190
+(1997).
+[13] M.Dellnitz, O.Junge, An adaptive subdivision technique for the approxi-
+mation of attractors and invariant measures, Comput. Visual. Sci. 1, 63 -
+68, (1998).
+Electronic Journal.  43Differential Equations and Control Processes, N 2, 2001
+[14] M.Dellnitz, A.Hohmann, The computation of unstable manifolds using
+subdivision and continuation Broer, H. W.; Gils, S. A. van; Hoveijn, I.;
+Takens, F. (eds.): Nonlinear Dynamical Systems and Chaos, PNLDE 19,
+Birkh auser, 449-459, 1996.
+[15] P.Hartman, Ordinary Differential Equations, N.Y., 1964.
+[16] M.Hirsch and S.Smale, Differential Equations, Dynamical Systems and
+Linear Algebra, N.Y. 1970.
+[17] C.S.Hsu, Cell-to-Cell Mapping. Springer-Verlag, N.Y., 1987.
+[18] F.Hunt, Unique ergodicity and the approximation of attractors and their
+invariant measures using Ulam s method, Nonlinearity, v. 11, no. 2, 307{
+317 (1998).
+[19] A.N.Kolmogorov, S.W.Fomin. An elements of the theory of functions and
+the functional analysis. Science, Moscow, 1968 (in Russian).
+[20] R.Mane, Characterizations of AS diffeomorphisms, Lect. Notes Math., v.
+597, 389-394 (1977).
+[21] R.Mane, A proof of the C
+1
+stability conjecture, Publ. Math., Inst. Hautes
+Etud. Sci. 66, 161-210 (1988).
+[22] Z.Nitecki, Differentiable Dynamics. London, 1971.
+[23] Z.Nitecki and M.Shub, Filtrations, decompositions, and explosions,
+Amer.J.of Math., v.97, no.4, 1029-1047 (1975).
+[24] G.S.Osipenko, On a symbolic image of dynamical system, in Boundary
+value problems, Interuniv. Collect. sci. Works, Perm 101-105, (1983), (in
+Russian).
+[25] G.S.Osipenko, Veri cation of the transversality condition by the symbolic-
+dynamical methods, Differential Equations, v.26, no.9, 1126-1132 (1990);
+translated from Differentsialnye Uravneniya, v.26, N9, 1528-1536, (1990).
+[26] G.S.Osipenko, The periodic points and symbolic dynamics, in Semi-
+nar on Dynamical Systems. Euler International Mathematical Institute,
+St.Petersburg, Russia, October and November, 1991, Birkhauser Verlag,
+Basel, Prog. Nonlinear Differ. Equ. Appl. 12, 261-267 (1994).
+Electronic Journal.  44Differential Equations and Control Processes, N 2, 2001
+[27] G.Osipenko, Morse Spectrum of Dynamical Systems and Symbolic Dynam-
+ics, Proceedings of 15th IMACS World Congress, v.1, 25-30 (1997).
+[28] G.Osipenko and S.Campbell, Applied Symbolic Dynamics: Attractors and
+Filtrations, Discrete and Continuous Dynamical Systems, v.5, no.1&2, 43-
+60 (1999).
+[29] G. Osipenko Spectrum of a Dynamical System and Applied Symbolic Dy-
+namics, Journal of Mathematical Analysis and Applications, v. 252, no. 2,
+587-616 (2000).
+[30] S.Yu.Pilyugin, The space of Dynamical Systems with C
+0
+-Topology,
+Springer-Verlag, Lec. Notes in Math., 1571, 1994.
+[31] V.A.Pliss, Integral Sets of Periodic System of Differential Equations,
+Moscow, 1977 (in Russian)
+[32] J.Robin, A structural stability theorem, Annals of Math., v.94, no.3, 447-
+493 (1971).
+[33] R.Robinson, Structural stability of C
+1
+-diffeomorphism, J. Diff. Equat.,
+v.22, no.1, 28-73 (1976).
+[34] R.Sacker and G.Sell, Existence of dichotomies and invariant splitting for
+linear differential systems I-III, J. Diff. Equat. v.15, no.3, 429-458 (1974),
+v.22, no.2, 476-522 (1976).
+[35] R.Sacker and G.Sell, A spectral theory for liner differential systems, J. Diff.
+Equat., v. 27, no. 3, 320-358 (1978).
+[36] D.Salamon and E.Zehnder, Flows on vector bundles and hyperbolic sets,
+Trans. Amer. Math. Soc., v. 306, no. 2, 623-649 (1988).
+[37] J.Selgrade, Isolated invariant sets for ows on vector bundles, Trans. Amer.
+Math. Soc., v. 203, 359-390 (1975).
+[38] G.Sell, Nonautonomous differential equations and topological dynamics,
+Trans. Amer. Math. Soc., 127, 241-283 (1967).
+[39] A.N.Sharkovsky, Structure theory of differentiable dynamical systems and
+weak nonwandering points, Abh. Akad. Wiss. DDR. Abt. Math Naturwiss.
+Techn., v.4, 193-200 (1977).
+[40] M.Shub, Stabilite globale de systems denamiques, Asterisque, v. 56, 1-21
+(1978).
+Electronic Journal.  45

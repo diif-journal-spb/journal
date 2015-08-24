@@ -1,0 +1,932 @@
+﻿dx
+dt
+✻
+✛
+✲
+❄
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 3, 2013
+Electronic Journal,
+reg. N ΦC77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+General control problems
+Demand and supply dynamics
+G.S. Osipenko
+Sevastopol Institute of Banking, Ukraine
+george.osipenko@mail.ru
+E.K. Ershov
+Saint-Petersburg State University of Architecture and Civil Engineering,
+Russia
+ershov@ee13858.spb.edu
+Abstract
+The paper is devoted to the study of a 3rd order discrete dynamical system
+modelling the dynamics of supply and demand. It was proved that there is a
+stable balans for small parameter values . The complex bifurcation were inves-
+tigated and parameter values for which periodical orbits and chaotic regimes
+exist were obtained.
+1 Mathematical model
+Demand and supply dynamics will be modeled by a discrete dynamical system.
+In modelling we will assume that the following requiremnts are satisﬁed:
+1) the supply increases when the demand exceeds the supply or the price of
+thecommoditytendstoincrease; thesupply decreaseswhenthesupply exceeds
+the demand or the price of the commodity tends to decrease;
+2)thepriceofthecommodityincreaseswhenthedemandexceedsthesupply
+and decreases when the demand is less than the supply;Differential Equations and Control Processes, N 3, 2013
+3) the demand decreases when the purchasing expense exceeds the expense
+intended; the demand increases when the expense intended is greater than the
+actual cost of the commodity.
+Let the variable x signify the volume of the commodity proposed, the vari-
+able y signify the price of a commodity unit, and the variable z signify the
+volume of the commodity demand. Then min(x,z) speciﬁes the volume of
+the commodity sold (realized) and ymin(x,z) determines the true cost of the
+commodity purchase. Let H denote the planned expenditure for commodity
+purchase. In what follows we denote by n = 1,2,... a discrete time which
+stands for the number of a time interval corresponding to the realization of de-
+mand, supply and sale of the commodity. For an n-time interval we denote by
+x
+n
+, y
+n
+and z
+n
+respectively the volume of the supply, the price, and the volume
+of the demand associated with this time interval.
+Let us consider the function
+f(x,z)=
+z−x
+z +x
+.
+Clearlyf is a zero-degree homogeneous function, i.e. f(tx,tz) =t
+0
+f(x,z). It is
+not diﬃcult to see that the function f(x,z) takes the values in the range from
+-1 to +1 since the variables x, y, z are postive. In addition, f(x,z) < 0 when
+z <x and f(x,z)> 0 when z >x. The function exp(a
+z−x
+z+x
+), where a > 0, takes
+the values in the range from e
+−a
+to e
+a
+. In addition, exp(af(x,z)) < 1, when
+the supply exceeds the demand x>z and exp(af(x,z))> 1 when the demand
+exceeds the supply z >x.
+The ratio y
+n
+/y
+n−1
+governs a tendency for changing the price as one passes
+from the n− 1-time interval of sale to the n-time interval of sale. Thus the
+supply dynamics is given by the mapping
+x
+n+1
+=x
+n
+(
+y
+n
+y
+n−1
+)
+r
+exp(a
+z
+n
+−x
+n
+z
+n
++x
+n
+),
+where the factor exp(a
+z
+n
+−x
+n
+z
+n
++x
+n
+) is the coeﬃcient of variation of the supply for
+(n + 1)-time interval depending on the relationship between de of mand and
+supply over the n-time interval. Notice that the mapping described above
+determines the volume of the future supply and consequently the volume of
+commodity production. The parametera > 0 determines the adaptation of the
+system to the variation of demand and supply. The indicator r determines the
+rate of the supply dependency on the price variation. If the supply does not
+depend on the price variation then r = 0.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 236Differential Equations and Control Processes, N 3, 2013
+In thesame manner onecan specify the dependence of the priceon demand
+and supply with some coeﬃcient of adaptation b and bearing in mind that
+the price on the (n+1)-time interval depends on supply and demand on the
+same (n+1)-timeinterval. Hence, the price dynamics is given by the (implicit)
+mapping
+y
+n+1
+=y
+n
+exp(b
+z
+n+1
+−x
+n+1
+z
+n+1
++x
+n+1
+),
+whereb> 0isthecoeﬃcientofadaptationofthepricetothevariationofsupply
+anddemand. It shouldbe notedthat theimplicitcharacterof the last mapping
+(boththeleftandrightsidesdependonthen+1-timeinterval)producescertain
+diﬃculties in the study of system dynamics.
+The demand on the (n+1)-timeinterval depends on the difference between
+the planned expenditure H and the real expenditure for commodity purchase
+onthen-timeinterval. IftheplannedexpenditureH isgreaterthantherealone
+then the demand increases; otherwise it decreases. Thus the demand dynamics
+can be represented in the form
+z
+n+1
+=z
+n
+exp(c
+H−y
+n
+min(x
+n
+,z
+n
+)
+H +y
+n
+min(x
+n
+,z
+n
+)
+),
+where c > 0 is the coeﬃcient of adaptation of the demand to the variation of
+expenditure.
+Thus we obtain the following system of difference equations
+x
+n+1
+= x
+n
+(
+y
+n
+y
+n−1
+)
+r
+exp(a
+z
+n
+−x
+n
+z
+n
++x
+n
+), (1)
+y
+n+1
+= y
+n
+exp(b
+z
+n+1
+−x
+n+1
+z
+n+1
++x
+n+1
+), (2)
+z
+n+1
+= z
+n
+exp(c
+H−y
+n
+min(x
+n
+,z
+n
+)
+H +y
+n
+min(x
+n
+,z
+n
+)
+). (3)
+Since the second equation contains (n+1)-time interval in its both sides then
+the system determines a discrete dynamical system in the implicit form. To
+obtain difference equations in the explicit form one needs to substitute x
+n+1
+z
+n+1
+from the ﬁrst and thirdequationsto the second one. As a result we obtain
+a standard discrete dynamical system.
+2 Theoretical results
+First we consider the case where the supply does not depend on the price
+variation,i.e. r = 0. It is not diﬃcult to see that the system (1,2,3)has a curve
+Electronic Journal. http://www.math.spbu.ru/diffjournal 237Differential Equations and Control Processes, N 3, 2013
+ﬁlled by the balanced states (ﬁxed points), with the balanced states given by
+the following equalities
+x = z
+H = ymin(x,z).
+(4)
+The study of the balanced states is complicated by the fact that the function
+min(x,z) is not smooth at the balanced states x = z. Let us show that for
+every balanced state there exists a surface which passes through it and consists
+of full system orbits, i.e. an invariant surface of the system.
+To this end consider the function
+U(x,y,z) =
+x
+b
+y
+a
+exp(ab
+z−x
+z+x
+).
+Proposition 1. The function U(x,y,z) is constant on each orbit of the
+system (1,2,3).
+Proof. From the second equation of the system it follows that
+y
+n+1
+exp(−b
+z
+n+1
+−x
+n+1
+z
+n+1
++x
+n+1
+) =y
+n
+.
+Raising both sides of last equality to the power a, we obtain
+y
+a
+n+1
+exp(−ab
+z
+n+1
+−x
+n+1
+z
+n+1
++x
+n+1
+) =y
+a
+n
+.
+Similarly, raising both sides of equation (1) to the power b, we obtain
+x
+b
+n+1
+=x
+b
+n
+exp(ab
+z
+n
+−x
+n
+z
+n
++x
+n
+).
+The last equality divided by the previous one yields
+x
+b
+n+1
+y
+a
+n+1
+exp(ab
+z
+n+1
+−x
+n+1
+z
+n+1
++x
+n+1
+) =
+x
+b
+n
+y
+a
+n
+exp(ab
+z
+n
+−x
+n
+z
+n
++x
+n
+). (5)
+By virtue of deﬁnition of the function U(x,y,z), (5) can be written in the form
+U(x
+n+1
+,y
+n+1
+,z
+n+1
+) =U(x
+n
+,y
+n
+,z
+n
+).
+This means that the value of the function U(x,y,z) does not vary at one iter-
+ation and thus does not vary on the full orbit. Consequently, the level surface
+U(x,y,z) =const is invariant for the system (1,2,3). This ends the proof.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 238Differential Equations and Control Processes, N 3, 2013
+It is not diﬃcult to see that each level surface intersects the balanced curve
+at just one point. In fact, it follows from the balanced equations (4) and the
+equality U(x,y,z) =h that
+H =xy, h =
+x
+b
+y
+a
+.
+ThecoordinatesofaﬁxedpointonthelevelsurfaceU(x,y,z) =harethusseen
+to be uniquely determined. By this means the system (1,2,3) has a foliation
+with invariant layers and each layer contains exactly one balanced state. It can
+be shown also that the foliation{U(x,y,z) = h} has a transverse intersection
+with the balanced curve (4).
+The existence of the function U(x,y,z) with properties stated previously
+allows to reduce the 3-dimensional system (1,2,3) into a 2-dimensional system
+by eliminating the variable y. In fact, for the level surface U(x,y,z) = h we
+have the equality
+x
+b
+y
+a
+exp(ab
+z−x
+z+x
+) =h,
+from which it follows that
+y = (1/h)
+1/a
+x
+b/a
+exp(b
+z−x
+z+x
+).
+Substitution of this presentation of y to the equation (3) yields the equation
+z
+n+1
+=z
+n
+exp(c
+H−(
+1
+h
+)
+1/a
+(x
+n
+)
+b/a
+exp(b
+z
+n
+−x
+n
+z
+n
++x
+n
+)min(x
+n
+,z
+n
+)
+H +(
+1
+h
+)
+1/a
+(x
+n
+)
+b/a
+exp(b
+z
+n
+−x
+n
+z
+n
++x
+n
+)min(x
+n
+,z
+n
+)
+), (6)
+which is independent of the price y.
+Proposition 2. For every H > 0 and h > 0 the system (1) and (6) are
+equivalent to the following system
+x
+n+1
+= x
+n
+exp(a
+z
+n
+−x
+n
+z
+n
++x
+n
+), (7)
+z
+n+1
+= z
+n
+exp(c
+1−(x
+n
+)
+b/a
+exp(b
+z
+n
+−x
+n
+z
+n
++x
+n
+)min(x
+n
+,z
+n
+)
+1+(x
+n
+)
+b/a
+exp(b
+z
+n
+−x
+n
+z
+n
++x
+n
+)min(x
+n
+,z
+n
+)
+). (8)
+Proof. The equation (6) can be written in the form
+z
+n+1
+=z
+n
+exp(c
+1−
+1
+H
+(
+1
+h
+)
+1/a
+(x
+n
+)
+b/a
+exp(b
+z
+n
+−x
+n
+z
+n
++x
+n
+)min(x
+n
+,z
+n
+)
+1+
+1
+H
+(
+1
+h
+)
+1/a
+(x
+n
+)
+b/a
+exp(b
+z
+n
+−x
+n
+z
+n
++x
+n
+)min(x
+n
+,z
+n
+)
+) (9)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 239Differential Equations and Control Processes, N 3, 2013
+In the system (1) and (9) let us perform the following change of variables
+(x,z)→ (tx,tz),
+where t is a constant determined later. This change of variables does not affect
+the equation (1). As for the equation (9), it takes the form
+z
+n+1
+= z
+n
+exp(c
+1−
+1
+H
+(
+1
+h
+)
+1/a
+t
+(a+b)/a
+(x
+n
+)
+b/a
+exp(b
+z
+n
+−x
+n
+z
+n
++x
+n
+)min(x
+n
+,z
+n
+)
+1+
+1
+H
+(
+1
+h
+)
+1/a
+t
+(a+b)/a
+(x
+n
+)
+b/a
+exp(b
+z
+n
+−x
+n
+z
+n
++x
+n
+)min(x
+n
+,z
+n
+)
+).
+Choose t > 0 such that
+1
+H
+(
+1
+h
+)
+1/a
+t
+(a+b)/a
+= 1.
+It is not diﬃcult to see that such a t exists and is unique. At t given above we
+obtain the required system. This ends the proof.
+Notice that the change of variables in the proof of Poposition 2 is substan-
+tially choosing the unit of measurement of demand and supply. Clearly, the
+system (7,8) has the ﬁxed point (1,1) which is the unique balanced state of the
+economic model.
+3 Price dependence on the supply
+Let us consider the system (1,2,3) provided that in the ﬁrst equation the pa-
+rameter r > 0, i.e. the supply depends on the price. In this case the supply
+increases provided the price in the previous period has rised and decreases oth-
+erwise. It is clear that the parameter r > 0 controls the extent to which the
+supply depends on the price.
+Proposition 3. The system (1,2,3) is equivalent to the following system
+x
+n+1
+= x
+n
+exp((a+rb)
+z
+n
+−x
+n
+z
+n
++x
+n
+), (10)
+y
+n+1
+= y
+n
+exp(b
+z
+n+1
+−x
+n+1
+z
+n+1
++x
+n+1
+), (11)
+z
+n+1
+= z
+n
+exp(c
+H−y
+n
+min(x
+n
+,z
+n
+)
+H +y
+n
+min(x
+n
+,z
+n
+)
+). (12)
+Proof. The equation (1) contains the factor
+(
+y
+n
+y
+n−1
+)
+r
+.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 240Differential Equations and Control Processes, N 3, 2013
+Using the second equation for the n-time interval
+y
+n
+=y
+n−1
+exp(b
+z
+n
+−x
+n
+z
+n
++x
+n
+),
+we can represent this factor in the form
+(
+y
+n
+y
+n−1
+)
+r
+= exp(rb
+z
+n
+−x
+n
+z
+n
++x
+n
+).
+Substituting the last equality in the ﬁrst equation we obtain the equality
+x
+n+1
+=x
+n
+exp((a+rb)
+z
+n
+−x
+n
+z
+n
++x
+n
+),
+which proves the proposition.
+From Proposition 3 it follows that the price dependence of the supply re-
+duces to the system free from such a dependence provided that the parameter
+a is replaced by a+br. Thus one needs to study only systems where the supply
+does not depend on the price.
+Figure 1: Steady balanced state for a = 1, b = 0.5, c = 1.
+4 Numerical results
+This section is devoted to the numerical study of system dynamics in relation
+to the adaptation parameters a, b, and c. In the section we use algorithms and
+computer softwares described in monographs [4] and [5]. First of all, notice
+that for small values of a, b c the system (7,8) has the steady balanced state
+(1,1), see. Fig. 1. As the values of parameters a, b c increase the balanced
+state (1,1) fails its stability and at the same time the stable 3-periodic orbit
+Electronic Journal. http://www.math.spbu.ru/diffjournal 241Differential Equations and Control Processes, N 3, 2013
+Figure2: Unsteady balanced stateO and 3-periodicstable orbitP fora = 2.5, b = 1.5, c = 2.3.
+Steady balanced state O, unstable manifold W
+u
+(H) of the 3-periodic hyperbolic orbit H, and
+3-periodic stable orbit P for a = 2.5, b = 2, c = 2.5.
+Figure 3: Unsteady balanced state O, stable 2-periodic orbit Q, unstable manifold W
+u
+(H)
+3-periodic hyperbolic orbit H and 3-periodic stable orbit P for a = 3.2, b = 2.5, c = 2.5
+arises. For example, for a = 2.5, b = 1.5, and c = 2.3 (see the left Fig. 2) the
+balancedstate(1,1)isunstable, whilethe3-periodicstableorbitP isgenerated
+by iterations of the point (1.7305, 1.8706). Moreover, the 3-periodic regime P
+attracts every orbit except for the balanced state. This means that from the
+practicalpoint of view, startingfrom any initialstatewithtimewe will observe
+only the 3-periodic regime P. A similar dynamics holds for a = 2.5, b = 1.5,
+and c = 2.5.
+As the parameterb increasesthe followingbifurcationsoccur: from the bal-
+anced stateO the hyperbolic3-periodic orbitH is split out, while the balanced
+statebecomesstable,seetherightFig. 2. TheglobalattractorAisformedfrom
+the closure of the unstable manifold W
+u
+(H) of the hyperbolic orbit H. In this
+casethelimitdynamicregimeiseitherthestablebalancedstateO orthestable
+Electronic Journal. http://www.math.spbu.ru/diffjournal 242Differential Equations and Control Processes, N 3, 2013
+Figure 4: Unstable balanced state O, stable 2-periodic orbit Q, and 3-periodic stable chaotic
+attractor P for a = 3.2, b = 2.5, c = 2.8
+3-periodic regime P depending on the choice of the initial data (x
+0
+,z
+0
+). From
+the theoretical point of view, there is a possibility to approach the hyperbolic
+orbit H by choosing an initial point on its stable manifold W
+s
+(H), however, it
+isnotfeasibletorealizesuchachoice. Fora = 2.5,b = 2,c = 2.5thehyperbolic
+orbit H is generated by iterations of the point (1.3741, 1.1532). In the course
+of a futher increase of parameters new bifurcations arise. For a = 3.2, b = 2.5,
+and c = 2.5 the balanced state O(1,1) loses stability and nearby the 2-periodic
+stable orbit Q of the point (1.2813,1.0172)occurs , see Fig. 3. There exists the
+invariant curve A
+0
+={Q
+1
+←O→Q
+2
+} between the point O and the orbit Q by
+which orbits move from the balanced state O to the stable 2-periodic orbit Q.
+The curve A
+0
+is an attractor. There is also the 3-periodic hyperbolic orbit H
+of the point (3.9442, 2.2020), whose unstable manifoldW
+u
+(H) is wound on the
+attractor A
+0
+by one end and tends to the stable 3-periodic orbit P of the point
+(3.8322, 3.3089) by the other. The closure of the unstable manifold W
+u
+(H)
+yields the global attractor A in the iterior of which the attractor A
+0
+lies, see.
+Fig. 3.
+The structure of enclosed attractors brieﬂy outlined above
+((Q⊂A
+0
+)
+[
+P)⊂A
+generatesaﬁltration[3]preservedundersmallperturbationsofthesystem. The
+structureofattractorsdescribedholdsforagreatdealofvaluesofparametersa,
+b, and c, however their topology can vary. The attractor A
+0
+may be thought of
+asoriginatingfromthestable2-periodicorbitand, asarule,issmall-sized. The
+attractorA is emergingfromthe unstablemanifoldof the 3-periodichyperbolic
+Electronic Journal. http://www.math.spbu.ru/diffjournal 243Differential Equations and Control Processes, N 3, 2013
+Figure 5: Unstable balanced state and global chaotic attractor for a = 3.5, b = 2, and c = 3.5.
+orbit. As the parameter c increases up to 2.8, instead of the stable periodic
+orbit P the 3-periodic stable chaotic attrator A
+1
+evolves, see. Fig. 4. The
+attractor A
+1
+results from the bifurcation of the stable 3-periodic orbit P.
+Recall that the entropy E of a dynamical system is a measure of its ran-
+domness. It is known that the entropy can be evaluated as a growth indicator
+of an arc length under iterations [2]. Using this reasoning, we have obtained
+that for the system on the attractor A
+1
+the entropy E = 0.382.
+Astheparametersvary, alltheattractorsoutlinedmergeintooneattractor.
+In order to describe attractors size we will use coordinates of their points most
+distant from the balanced state (1,1). As for instance, for a = 3.5, b = 2, and
+c = 3.5, the global chaotic attractor is very big in size, see. Fig. 5. Here, the
+most distant point of the global (large) attractor is (54.9, 0.85). The estimate
+of the entropy is E = 0.269.
+Fora = 3,b = 1.8andc = 3.5thebalancedstate(1,1)isunstableandthere
+exists 5-periodic stable orbit P generated by iterations of the point (1.8822,
+1.1475). All orbits (except for the balanced state) tend to P and have a suﬃ-
+ciently intricate structure.
+Thesystemdynamicsisverysensitivetothevariationofparameters. Asfor
+instance, for a = 3, b = 1.78, c = 3.5 the system has the global (large) chaotic
+attractor wherein the small attractor is located, see. Fig. 6. The estimate of
+the entropy is E = 0.108. The balanced state is unstable. For a = 3, b = 2,
+and c = 3.5 the chaotic attractor disappears. However, for a = 3, b = 2, and
+c = 3.6 the nontrivialglobal chaotic attractor(wherein the small attractorlies)
+appears again, see. Fig. 7. The estimate of the entropy on the small and large
+attractors is E = 0.04 and E = 0.312, respectively.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 244Differential Equations and Control Processes, N 3, 2013
+Figure 6: Small chaotic attractor for a = 3, b = 1.78, c = 3.5.
+Figure 7: Unstable balanced state and small chaotic attractor for a = 3, b = 2, and c = 3.6.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 245Differential Equations and Control Processes, N 3, 2013
+Figure 8: Medium-sized chaotic attractor A
+1
+⊂A for a = 4, b = 2, and c = 3.
+Figure 9: Unstable balanced state and small-sized attractor A
+0
+⊂ A
+1
+⊂ A for a = 4, b = 1.98,
+and c = 3.
+For a = 4, b = 2, and c = 3 the global chaotic attractor A becomes
+large with the extreme point (28.4, 0.9). The attractor A contains the smaller
+attractor A
+1
+⊂ A, see. Fig. 8 with the extreme point (3.5, 1.5). The estimate
+of the entropy on the latter is E = 0.161. In the interior of this attractor there
+is one more attractor A
+0
+, see. Fig. 9. It is located very close to the balanced
+state (1,1) with the extreme point (1.07, 1.02). The estimate of the entropy
+on the latter is E = 0.0008. One can see that the chaotic character of the last
+attractor is minor and within the accuracy of the analysis.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 246Differential Equations and Control Processes, N 3, 2013
+References
+[1] Lebedev V.V., Lebedev K.V. , Mathematical modeling nonstational ecom-
+ical processes, Moscow, 2011, 336 p.(in Russian).
+[2] Newhouse S. and Pignataro T. On the estimation of topological entropy,
+Journal of Statistical Physics, 72, 1993, pp. 1331-1351.
+[3] Nitecki Z., Shub M. Filtrations, decompositions, and explosions. Amer. J.
+of Math. vol. 97, 1975, 1029-1047.
+[4] Osipenko G.S., Ampilova N.B., Introduction to symbolic analysis of dy-
+namical systems, St. Petersburg, 2005 (in Russian).
+[5] Osipenko G. Dynamical systems, Graphs, and Algorithms, Lectures Notes
+in Mathematics, vol. 1889, Springer-Verlag, Berlin and New York, 2007.
+[6] G. S. Osipenko, T. N. Korzh, E. K. Ershov, Dynamics of price-level, na-
+tional income and cost of money interaction, International Conference
+”Modeling, control, and stability MCS-2012”, 10-14 Sept. 2012, Sevastopol,
+Crimea, 158-159.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 247

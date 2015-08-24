@@ -1,0 +1,1490 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 4, 2005
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Ordinary differential equations
+Doubly periodic wave solutions of some nonlinear
+evolution equations using sinh-Gordon equation
+expansion method
+Edamana Vasudevan Krishnan
+Dept. of Mathematics and Statistics, Sultan Qaboos University,
+P.O.Box 36, Al-Khod 123, Muscat, Sultanate of Oman.
+e-mail: krish@squ.edu.om
+Zhenya Yan
+Key Laboratory of Mathematics Mechanisation, Institute of Systems Science
+Chinese Academy of Sciences, Beijing 100080, P.R. China
+e-mail: zyyan@mmrc.iss.ac.cn
+Abstract
+Using the sinh-Gordon expansion method, doubly periodic solutions in terms
+of Jacobian elliptic functions have been derived for a magma equation, a new
+Hamiltonian amplitude equation and a coupled nonlinear wave equation. All
+the solutions obtained are new ones.
+1 Introduction
+Investigationofexactsolutionsofnonlinearevolutionequations
+1)
+hasbeenahot
+topic of research for several decades. The powerful methods used for this pur-
+poseareforexample,Backlundtransformation
+2)
+,inversescatteringtechnique
+3)
+,Differential Equations and Control Processes, N 4, 2005
+Hirota’s direct method
+4)
+, tanh method
+5)
+, series method
+6−7)
+, Jacobian elliptic
+function expansion method and its extension
+8−10)
+, and the algebraic method
+11)
+.
+In this paper, we employ the method developed in [12,13] which proposes
+a transformation from the sinh- Gordon equation which reveals a relationship
+with nonlinear wave equations. The transformation and the sinh-Gordon equa-
+tion are used to construct the doubly periodic Jacobian elliptic function solu-
+tions of nonlinear wave equations. We give a brief description of the method.
+The travelling wave transformation u(x,t) = u(ξ), ξ = k(x−λt) reduces
+the sinh-Gordon equation
+∂
+2
+φ
+∂x∂t
+= α sinhφ (1.1)
+to an ordinary differential equation
+d
+2
+φ
+dξ
+2
+= −
+α
+kλ
+sinhφ, (1.2)
+where α is a constant, k and λ are the wave number and wave speed
+respectively.
+Integrating (1.2) w.r.t. ξ once, we get
+ 
+d
+dξ
+φ
+2
+ 
+2
+= −
+α
+kλ
+sinh
+2
+ 
+φ
+2
+ 
++ c, (1.3)
+where c is a constant of integration.
+Setting φ = 2w, −
+α
+kλ
+= 1, (1.3) reduces to
+ 
+dw
+dξ
+ 
+2
+= sinh
+2
+w + c. (1.4)
+Taking c = 1−m
+2
+, where m(0 < m < 1) is the modulus of the Jacobian
+elliptic functions, we can easily see that (1.4) has the general solution
+sinh[w(ξ)] = cs(ξ;m), (1.5a)
+or
+cosh[w(ξ)] = ns(ξ;m), (1.5b)
+which are two of the 12 Jacobian elliptic functions given by
+14)
+Electronic Journal.  52Differential Equations and Control Processes, N 4, 2005
+cs(ξ;m) =
+cn(ξ,m)
+sn(ξ;m)
+, ns(ξ;m) =
+1
+sn(ξ;m)
+, (1.6)
+with the properties
+dcs(ξ;m)
+dξ
+= −ns(ξ;m)ds(ξ;m),
+dns(ξ;m)
+dξ
+= −cs(ξ;m)ds(ξ;m), (1.7)
+ns
+2
+(ξ;m) = 1 + cs
+2
+(ξ;m)
+For a given nonlinear partial differential equation, we seek its travelling
+wave solution which reduces it to a nonlinear ordinary differential equation. By
+using the new variable w = w(ξ), we assume that the ODE has a solution in
+the form
+u(ξ) = u(w(ξ)) = A
+0
++
+s
+X
+i=1
+cosh
+i−1
+w[A
+i
+sinhw + B
+i
+coshw], (1.8)
+where A
+i
+(i = 0,1,2,...s), B
+j
+(j = 1,2,...s) are constants to be deter-
+mined later. Substituting (1.8) in the reduced ODE and balancing the highest
+derivative term and the nonlinear term, we obtain the value of s.
+Insection2, wederivesomenewdoublyperiodicsolutionsformagmaequa-
+tions with two sets of values of the physical parameters n and m, in section 3
+we investigate the doubly periodic solutions for a new Hamiltonian amplitude
+equation and in section 4, we consider a coupled nonlinear wave equation for
+the Jacobian elliptic function solutions.
+2 Magma equations
+We consider the magma equation which describes the motion of melt in the
+Earth
+15)
+. The buoyancy force owing to the density difference of the liquid
+phase of melt and the solid phase of matrix causes the melt in the earth’s
+mantle propagate through the partially molten rock. This ﬂow of melt is like
+a porous ﬂow. Assuming that the liquid phase of melt and the solid phase of
+matrix are fully connected and incompressible, neglecting the phase transition
+and allowing only vertical motions, Scott and Stevenson proposed an equation
+Electronic Journal.  53Differential Equations and Control Processes, N 4, 2005
+u
+t
+=
+∂
+∂x
+ 
+u
+n
+ 
+∂
+∂x
+(u
+−m
+u
+t
+) − 1
+  
+, (2.1)
+where x is the vertical space coordinate and t is the time and u(x,t) is the
+mean volume fraction of the liquid phase which should be nonnegative for any
+x and t. The exponents n and m denote the dependence of permeability and
+effective viscosity. It is suggested that the reasonable values of n and m are
+2∼ 5 and 0∼ 1 respectively.
+Inthissectionwewillconsidertwodifferentsetsofvaluesoftheparameters
+n and m.
+Solutions for n = 4 and m = 0
+For this choice of parameters, equation (2.1) reduces to
+u
+t
+=
+ 
+u
+4
+(u
+xt
+−1)
+ 
+x
+(2.2)
+We seek travelling wave solutions of (2.2) in the form u(x,t) = u(z), z =
+k(x−λt) so that (2.2) reduces to
+k
+2
+λ
+2
+u
+2
+z
++ u +
+λ
+2
+u
+−2
++ Au
+−3
++ B = 0, (2.3)
+where, A and B are constants of integration.
+Using the independent variable transformation
+ξ =
+Z
+z
+u
+−3/2
+dz, (2.4)
+equation (2.3) becomes
+λ
+2
++ Cu
+2
++ 4u
+3
++ k
+2
+λu
+ξξ
+= 0, (2.5)
+where C is the integration constant.
+Assuming a solution in the form (1.8) for equation (2.5) and balancing the
+highest order derivative term with the nonlinear term, we get 3s = s + 2
+which gives s = 1.
+Therfore, we have our solution in the form
+u(ξ) = A
+0
++ A
+1
+sinhw(ξ) + B
+1
+coshw(ξ), (2.6)
+Electronic Journal.  54Differential Equations and Control Processes, N 4, 2005
+where, A
+0
+,A
+1
+,B
+1
+are constants.
+Substituting (2.6) in equation (2.5) and equating the coeﬃcients of powers
+of coshwsinhw to zero, we get
+4B
+3
+1
++ 12A
+2
+1
+B
+1
++ 2k
+2
+λB
+1
+= 0, (2.7)
+4A
+3
+1
++ 12A
+1
+B
+2
+1
++ 2k
+2
+λA
+1
+= 0, (2.8)
+CA
+2
+1
++ CB
+2
+1
++ 12A
+0
+A
+2
+1
++ 12A
+0
+B
+2
+1
+= 0, (2.9)
+2CA
+0
+A
+1
++ 12A
+2
+0
+A
+1
++ 12A
+1
+B
+2
+1
++ k
+2
+λA
+1
++ k
+2
+λcA
+1
+= 0, (2.10)
+2CA
+0
+B
+1
+− 12A
+2
+1
+B
+1
++ 12A
+2
+0
+B
+1
+− 2k
+2
+λB
+1
++ k
+2
+λcB
+1
+= 0, (2.11)
+2CA
+1
+B
+1
++ 24A
+0
+A
+1
+B
+1
+= 0, (2.12)
+λ
+2
++ CA
+2
+0
+− CA
+2
+1
++ 4A
+3
+0
+− 12A
+0
+A
+2
+1
+= 0. (2.13)
+By solving the system of equations (2.7)−(2.13), we have
+Case 1:
+A
+0
+=−
+C
+12
+, A
+1
+= 0, B
+1
+= ±
+s
+C
+2
+24(1+m
+2
+)
+, k = ±
+s
+−
+C
+2
+12λ(1+m
+2
+)
+.
+(2.14)
+For (2.14) to be valid, λ should be negative.
+Case 2:
+A
+0
+=−
+C
+12
+, B
+1
+= 0, A
+1
+= ±
+s
+−
+C
+2
+24(2−m
+2
+)
+, k = ±
+s
+C
+2
+12λ(2−m
+2
+)
+.
+(2.15)
+Equations (2.15) will be valid only for negative values of λ.
+Thus we have two new Jacobian elliptic function solutions
+u(ξ) = −
+C
+12
+±
+s
+C
+2
+24(1+m
+2
+)
+ns(ξ), (2.16)
+and
+u(ξ) = −
+C
+12
+±
+s
+−
+C
+2
+24(2−m
+2
+)
+cs(ξ). (2.17)
+Electronic Journal.  55Differential Equations and Control Processes, N 4, 2005
+Solutions for n = 3 and m = 0
+For this choice of parameters, equation (2.1) reduces to
+u
+t
+=
+ 
+u
+3
+(u
+xt
+−1)
+ 
+x
+(2.18)
+We seek travelling wave solutions of (2.18) in the form u(x,t) = u(z), z =
+k(x−λt) so that (2.18) reduces to
+k
+2
+λ
+2
+u
+2
+z
++ u +
+λ
+u
++ Au
+−2
++ B = 0, (2.19)
+where, A and B are constants of integration.
+Using the independent variable transformation
+ξ =
+Z
+z
+u
+−1
+dz, (2.20)
+equation (2.19) becomes
+λ + Cu + 3u
+2
++ k
+2
+λu
+ξξ
+= 0, (2.21)
+where C is the integration constant.
+Assuming a solution in the form (1.8) for equation (2.21) and balancing
+the highest order derivative term with the nonlinear term, we get 2s = s + 2
+which gives s = 2.
+Therefore, we have our solution in the form
+u(ξ) = A
+0
++ A
+1
+sinhw(ξ) + B
+1
+coshw(ξ) + A
+2
+coshw sinhw + B
+2
+cosh
+2
+w,
+(2.22)
+where, A
+0
+,A
+1
+,B
+1
+,A
+2
+,B
+2
+are constants.
+Substituting (2.22) into the equation (2.21) and equating the coeﬃcients
+of powers of coshwsinhw to zero, we get
+6k
+2
+λB
+2
++ 3A
+2
+2
++ 3B
+2
+2
+= 0, (2.23)
+2k
+2
+λB
+1
++ 6B
+1
+B
+2
++ 6A
+1
+A
+2
+= 0, (2.24)
+2k
+2
+λA
+1
++ 6A
+1
+B
+2
++ 6A
+2
+B
+1
+= 0, (2.25)
+6k
+2
+λA
+2
++ 6A
+2
+B
+2
+= 0, (2.26)
+Electronic Journal.  56Differential Equations and Control Processes, N 4, 2005
+−8k
+2
+λB
+2
++ 4ck
+2
+λB
+2
++ CB
+2
++ 6A
+0
+B
+2
+− 3A
+2
+2
++ 3B
+2
+1
++ 3A
+2
+1
+= 0, (2.27)
+−2k
+2
+λB
+1
++ ck
+2
+λB
+1
++ CB
+1
++ 6A
+0
+B
+1
+− 6A
+1
+A
+2
+= 0, (2.28)
+k
+2
+λA
+1
++ ck
+2
+λA
+1
++ CA
+1
++ 6A
+0
+A
+1
++ 6A
+1
+B
+2
++ 6A
+2
+B
+1
+= 0, (2.29)
+−5k
+2
+λA
+2
++ 4k
+2
+λcA
+2
++ 6A
+1
+B
+1
++ 6A
+0
+A
+2
+= 0, (2.30)
+2k
+2
+λB
+2
+− 2ck
+2
+λB
+2
++ CA
+0
+− 3A
+2
+1
++ 3A
+2
+0
++ λ = 0. (2.31)
+By solving the system of equations (2.23)−(2.31), we have
+A
+1
+= 0, A
+2
+= 0, B
+1
+= 0, (2.32)
+A
+0
+=
+4k
+2
+λ(1+m
+2
+)−C
+6
+, B
+2
+=
+C
+2
+−16k
+4
+λ
+2
+(1+m
+2
+)
+2
+−12λ
+24k
+2
+λm
+2
+,
+k =
+ 
+C
+2
+−12λ
+8λ
+2
+(2+m
+2
++2m
+4
+)
+ 
+1/4
+. (2.33)
+Therefore, the new Jacobian elliptic function solution for (2.21) is
+u(ξ) =
+4k
+2
+λ(1+m
+2
+)−C
+6
++
+C
+2
+−16k
+4
+λ
+2
+(1+m
+2
+)
+2
+−12λ
+24k
+2
+λm
+2
+ns
+2
+(ξ), (2.34)
+with k given by (2.33
+3
+).
+3 New Hamiltonian amplitude equation
+A new Hamiltonian amplitude equation
+16)
+iu
+x
++ u
+tt
++ 2σ|u|
+2
+u −  u
+xt
+= 0, (3.1)
+where σ = ±1,   << 1, was recently introduced by Wadati et al
+17)
+. This
+is an equation which governs certain instabilities of modulated wave trains,
+with the additional term − u
+xt
+overcoming the ill-posedness of the unstable
+nonlinearSchrodingerequation. ItisaHamiltoniananalogueoftheKuramoto-
+Sivashinski equation which arises in dissipative systems and is apparently not
+integrable.
+We let
+u(x,t) = φ(ξ)e
+i(Kx−Ωt)
+, ξ = k(x−λt). (3.2)
+Electronic Journal.  57Differential Equations and Control Processes, N 4, 2005
+Substituting equation (3.2) into equation (3.1), we get
+k
+2
+(λ
+2
++ λ)φ
+00
++ik(1+2λΩ+ λK+ Ω)φ
+0
+−(K+Ω
+2
++ KΩ)φ+2σφ
+3
+= 0, (3.3)
+with the prime meaning differentiation with respect to ξ.
+If we take
+λ = −
+1+ Ω
+2Ω+ K
+, (3.4)
+equation (3.3) is transformed into
+αφ
+00
++ βφ + γφ
+3
+= 0, (3.5)
+where
+α = k
+2
+(λ
+2
++ λ), β = −(K +Ω
+2
++ KΩ), γ = 2σ. (3.6)
+Assuming a solution in the form (1.8) for equation (3.5) and balancing the
+highest order derivative term with the nonlinear term, we get 3s = s + 2
+which gives s = 1.
+Therefore, we have our solution in the form
+φ(ξ) = A
+0
++ A
+1
+sinhw(ξ) + B
+1
+coshw(ξ), (3.7)
+where, A
+0
+,A
+1
+,B
+1
+are constants.
+Substituting (3.7) into equation (3.5) and equating the coeﬃcients of pow-
+ers of coshwsinhw to zero, we get
+2αB
+1
++ γB
+3
+1
++ 3γA
+2
+1
+B
+1
+= 0, (3.8)
+2αA
+1
++ γA
+3
+1
++ 3γA
+1
+B
+2
+1
+= 0, (3.9)
+3γA
+0
+A
+2
+1
++ 3γA
+0
+B
+2
+1
+= 0, (3.10)
+αA
+1
++ αcA
+1
++ βA
+1
++ 3γA
+2
+0
+A
+1
++ 3γA
+1
+B
+2
+1
+= 0, (3.11)
+−2αB
+1
++ αcB
+1
++ βB
+1
+− 3γA
+2
+1
+B
+1
++ 3γA
+2
+0
+B
+1
+= 0, (3.12)
+6A
+0
+A
+1
+B
+1
+γ = 0, (3.13)
+βA
+0
++ γA
+3
+0
+− 3γA
+0
+A
+2
+1
+= 0. (3.14)
+Electronic Journal.  58Differential Equations and Control Processes, N 4, 2005
+By solving the system of equations (3.8) − (3.14), we ﬁnd that for this
+equation, the only solution possible is when A
+0
+= 0 and A
+2
+1
+= B
+2
+1
+.
+Therefore, we have
+A
+1
+= ±
+r
+−
+α
+2γ
+, k = ±
+s
+−
+2(K + Ω
+2
++  KΩ)
+(λ
+2
++  λ)(2m
+2
+− 1)
+. (3.15)
+so that the solution is
+φ = ±
+r
+−
+α
+2γ
+(cs(ξ) ± ns(ξ)) (3.16)
+Thus the new doubly periodic solution for the equation (3.1) is,
+u(x,t) = ±
+r
+−
+α
+2γ
+[cs{k(x−λt)} ± ns{k(x−λt)}] e
+i(Kx−Ωt)
+, (3.17)
+where k is given by (3.15
+2
+).
+4 Coupled nonlinear wave equation
+We consider a coupled nonlinear wave equation
+18)
+u
+t
++ αv
+2
+v
+x
++βu
+2
+u
+x
++ λuu
+x
++ γu
+xxx
+= 0, (4.1)
+v
+t
++ δ(uv)
+x
++ v
+3
+v
+x
+= 0. (4.2)
+We seek travelling wave solutions in the form
+u(x,t) = u(ξ), v(x,t) = v(ξ), ξ = k(x−λt),
+so that equation (4.2) reduces to
+v
+3
+=
+4
+ 
+(λ − δu), (4.3)
+and we arrive at the equation for u in the form
+k
+2
+u
+ξξ
++ P +Qu + Ru
+2
++ Su
+3
+= 0, (4.4)
+Electronic Journal.  59Differential Equations and Control Processes, N 4, 2005
+where
+P =
+4αδ
+3γ 
++
+C
+γ
+, Q = −
+ 
+λ
+γ
++
+4αδ
+3 γ
+ 
+, R =
+λ
+2γ
+, S =
+β
+3γ
+, (4.5)
+with C being an integration constant.
+Assuming a solution in the form (1.8) for equation (4.4) and balancing the
+highest order derivative term with the nonlinear term, we get 3s = s + 2
+which gives s = 1.
+Therefore, we have our solution in the form
+u(ξ) = A
+0
++ A
+1
+sinhw(ξ) + B
+1
+coshw(ξ), (4.6)
+where, A
+0
+,A
+1
+,B
+1
+are constants.
+Thus we obtain the equations determining A
+0
+, A
+1
+, B
+1
+and k as
+2k
+2
+B
+1
++ SB
+3
+1
++ 3SA
+2
+1
+B
+1
+= 0, (4.7)
+2k
+2
+A
+1
++ SA
+3
+1
++ 3SA
+1
+B
+2
+1
+= 0, (4.8)
+RA
+2
+1
++ RB
+2
+1
++ 3SA
+0
+A
+2
+1
++ 3SA
+0
+B
+2
+1
+= 0, (4.9)
+k
+2
+A
+1
++ k
+2
+cA
+1
++ P A
+1
++ 2RA
+0
+A
+1
++ 3SA
+2
+0
+A
+1
++ 3SA
+1
+B
+2
+1
+= 0, (4.10)
+−2k
+2
+B
+1
++ k
+2
+cB
+1
++ P B
+1
++ 2RA
+0
+B
+1
+− 3SA
+2
+1
+B
+1
++ 3SA
+2
+0
+B
+1
+= 0, (4.11)
+2RA
+1
+B
+1
++ 6SA
+0
+A
+1
+B
+1
+= 0 (4.12)
+P + QA
+0
++ RA
+2
+0
+− RA
+2
+1
++ SA
+3
+0
+− 3SA
+0
+A
+2
+1
+= 0 (4.13)
+Solving the system of equations (4.7)−(4.13), we have
+Case 1:
+A
+0
+= −
+R
+3S
+, A
+1
+= 0,
+B
+1
+= ±
+s
+2(R
+2
+− 3P S)
+3S
+2
+(1+m
+2
+)
+, (4.14)
+k = ±
+s
+−
+(R
+2
+− 3P S)
+3S(1+m
+2
+)
+.
+Electronic Journal.  60Differential Equations and Control Processes, N 4, 2005
+Case 2:
+A
+0
+= −
+R
+3S
+, B
+1
+= 0,
+A
+1
+= ±
+s
+−
+2(R
+2
+− 3P S)
+3S
+2
+(2−m
+2
+)
+, (4.15)
+k = ±
+s
+R
+2
+− 3P S
+3S(2−m
+2
+)
+.
+Case 3:
+A
+0
+= −
+R
+3S
+, A
+2
+1
+= B
+2
+1
+,
+A
+1
+= ±
+s
+R
+2
+− 3P S
+3S
+2
+(2m
+2
+−1)
+, (4.16)
+k = ±
+s
+−
+2(R
+2
+− 3P S)
+3S(2m
+2
+−1)
+.
+Therefore, we have 3 new doubly periodic Jacobian elliptic function solu-
+tions such as
+u
+1
+(ξ) = −
+R
+3S
+±
+s
+2(R
+2
+− 3P S)
+3S
+2
+(1+m
+2
+)
+ns(ξ), (4.17)
+u
+2
+(ξ) = −
+R
+3S
+±
+s
+−
+2(R
+2
+− 3P S)
+3S
+2
+(2−m
+2
+)
+cs(ξ), (4.18)
+u
+3
+(ξ) = −
+R
+3S
+±
+s
+R
+2
+− 3P S
+3S
+2
+(2m
+2
+−1)
+(cs(ξ) ± ns(ξ)). (4.19)
+and
+v
+1
+(ξ) =
+"
+4
+ 
+(
+λ +
+δR
+3S
+∓ δ
+s
+2(R
+2
+− 3P S)
+3S
+2
+(1+m
+2
+)
+ns(ξ)
+)#1/3
+, (4.20)
+v
+2
+(ξ) =
+"
+4
+ 
+(
+λ +
+δR
+3S
+∓ δ
+s
+−
+2(R
+2
+− 3P S)
+3S
+2
+(2−m
+2
+)
+cs(ξ)
+)#1/3
+, (4.21)
+Electronic Journal.  61Differential Equations and Control Processes, N 4, 2005
+v
+3
+(ξ) =
+"
+4
+ 
+(
+λ +
+δR
+3S
+∓ δ
+s
+R
+2
+− 3P S
+3S
+2
+(2m
+2
+−1)
+(cs(ξ) ± ns(ξ))
+)#1/3
+. (4.22)
+5 Conclusion
+The sinh-Gordon equation expansion method has been used to derive doubly
+periodic solutions in terms of Jacobian elliptic functions. For the magma equa-
+tion we have derived two new Jacobian elliptic function solutions in the case
+of n = 4, m = 0 and one new solution in the case of n = 3, m = 0. A new
+solution as a combination of cs(ξ;m) and ns(ξ;m) has been derived for the
+new Hamiltonian amplitude equation. Also, we have derived 3 new solutions
+for a coupled nonlinear wave equation in terms of Jacobian elliptic functions.
+References
+[1] M.J. Ablowitz, P.A. Clarkson, Solitons, nonlinear evolution equations and
+inverse scattering, Cambridge University Press, Cambridge, 1991.
+[2] G.L. Lamb, Analytical description of ultra short optical pulse propagation
+in a resonant medium, Rev Mod Phys 43 (1971) 99-124.
+[3] C.S. Gardner, J.M. Greene, M.D. Kruskal and R.M. Miura, Method for
+solving the Korteweg-deVries equation, Phys. Rev. Lett. 19 (1967), 1095-
+1097.
+[4] R. Hirota, Exact solution of the Korteweg-de Vries equation for multiple
+collision of solitons, Phys Rev Lett 27 (1971) 1192-1194.
+[5] W. Malﬂiet, Solitary wave solutions of nonlinear wave equations, Am J
+Phys 60 (1992) 650-655.
+[6] W. Hereman, A. Korpel, P.P.Banerjee, A general physical approach to
+solitary Wave construction from linear solutions 7 (1985) 283-290.
+[7] E.V. Krishnan, Series solutions for a coupled wave equation, International
+J of Diff eqs and Applics 8 (2003) 13-22.
+[8] S.K. Liu, Z. Fu, S.D. Liu and Q. Zhao, Jacobi elliptic function method
+and periodic wave solutions of nonlinear wave equations, Phys Lett A289
+(2001) 69-74.
+Electronic Journal.  62Differential Equations and Control Processes, N 4, 2005
+[9] Z. Fu, S.K Liu, S.D. Liu and Q. Zhao, New Jacobi elliptic function expan-
+sion and new periodic solution of nonlinear wave equation, Phys Lett A
+290 (2001) 72-76.
+[10] Z.Y. Yan, New Jacobian elliptic function solutions to modiﬁed KdV equa-
+tion I, Commun Theor Physics 38 (2002) 143-146.
+[11] E.G. Fan, Multiple travelling wave solutions of nonlinear evolution equa-
+tions using a uniﬁed algebraic method, J Phys A 35 (2002) 6853-6872.
+[12] Z.Y. Yan, Chaos, A sinh-Gordon expansion method to construct doubly
+periodicsolutionsfornonlineardifferentialequations,SolitonsandFractals
+16 (2003) 291-297.
+[13] Z.Y. Yan, Jacobi elliptic function solutions of nonlinear wave equations
+via the new sinh-Gordon equation expansion method, J Phys A, 36(2003)
+1961-1972.
+[14] D.V. Patrick, Elliptic Function and Elliptic Curves, Cambridge University
+Press, Cambridge, 1973.
+[15] D. Takahashi and J. Satsuma, Explicit solutions of magma equations, J
+Phys Soc Japan 57 (1988) 417-421.
+[16] Y. Peng, Exact periodic solutions to a new Hamiltonian amplitude equa-
+tion, J Phys Soc Japan 72 (2003) 1356-1359.
+[17] M. Wadati, H. Segur and M.J. Ablowitz, A new hamiltonian amplitude
+equation governing modulated wave instabilities, J Phys Soc Japan 61
+(1992) 1187-1193.
+[18] E.V. Krishnan, Remarks on a system of coupled nonlinear wave equations,
+J Math Phys 31 (1990) 1155-1156.
+Electronic Journal.  63

@@ -1,0 +1,13545 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 4, 2010
+Electronic Journal,
+reg. N   C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+TWO-DIMENSIONAL REAL SYSTEMS
+OF ORDINARY DIFFERENTIAL EQUATIONS
+WITH QUADRATIC UNPERTURBED PARTS:
+CLASSIFICATION AND DEGENERATE GENERALIZED NORMAL FORMS
+1
+V. V. BASOV, E. V. FEDOROVA
+Universitetsky prospekt, 28, 198504, Peterhof, Saint-Petersburg, Russia,
+Saint-Petersburg State University,
+The Faculty of Mathematics and Mechanics, Differential Equations Department,
+e-mail: vlvlbasov@rambler.ru, fev.math@gmail.com
+Abstract
+Real two-dimensional autonomous systems of ordinary differential equations whose
+unperturbed parts are vector homogeneous polynomials of the second order are considered.
+As to perturbations, they are formal vector power series whose expansions don't contain
+members of order less than three.
+A normalization of the unperturbed part of the system is presented. Namely, nine-
+teen classes of equivalence of vector homogeneous polynomials with respect to any linear
+invertible transformations have been founded. Each class is represented by a canonical
+form, i.e. by a polynomial of the special representation having the maximal number of zero
+coe cients.
+Generalized normal forms for  ve types of systems whose unperturbed parts are
+degenerate canonical forms are explicitly given. These normal forms can be obtained
+by almost identical formal transformations.
+1
+This research was  nancially supported by the Russian Foundation for Basic Research
+(project no. 09{01{00734-a)Differential Equations and Control Processes, N 4, 2010
+Part I
+The set of the problem
+1 Introduction
+This work continues the series of papers ([1] { [6]) devoted to a constructive normalization of
+real two-dimensional autonomous systems
+_ x
+i
+=P
+i
+(x) +X
+i
+(x) (i = 1; 2); (1)
+where x = (x
+1
+;x
+2
+); P
+i
+=a
+i
+x
+2
+1
++2b
+i
+x
+1
+x
+2
++c
+i
+x
+2
+2
+is the unperturbed part, X
+i
+=
+P
+1
+p=2
+X
+(p+1)
+i
+(x) is
+a perturbation of the system and X
+(r)
+i
+=
+P
+r
+s=0
+X
+(s;r s)
+i
+x
+s
+1
+x
+r s
+2
+{ a form of order r (P =P
+(2)
+):
+In [1, p. 1] and [8, x 3] a method of resonance equation is stated. That makes it possible
+for any system with the  xed unperturbed part to obtain all possible formally equivalent to it
+generalized normal forms (GNF) in explicit form, on condition that we can overcome some
+technical computational problems.
+As opposed to common de nition for resonance normal forms (Poincare normal forms,
+or formerly normal forms) there are a lot of de nitions for GNF. Their concise description is
+given, for example, in [7], [8].
+Su ciently complete and containing all the proofs the theory of resonance normal forms
+(i. e. the forms where the matrix of the linear part has nonzero eigenvalues) is given in [9], and
+in a reduced variant in [10], [11].
+This paper pursues two objects.
+1) The  rst goal is to decompose the set of systems
+_ x
+1
+=a
+1
+x
+2
+1
++ 2b
+1
+x
+1
+x
+2
++c
+1
+x
+2
+2
+; _ x
+2
+=a
+2
+x
+2
+1
++ 2b
+2
+x
+1
+x
+2
++c
+2
+x
+2
+2
+(2)
+unperturbed according to (1) into equivalence classes with respect to linear invertible changes
+of variables, i. e. to select a  nite set of most simple systems: canonical forms (CF) which are
+mutually linear non-equivalent, and such systems that a system (2) may be reduced to one
+of CF by a linear invertible change of variables. Here "simplicity" of a CF means that such
+a form is the most appropriate variant to be the unperturbed part of (1) that later on will be
+normalized by means of almost identical changes. In fact, reduction to a canonical form means
+a normalization of quadratic polynomials (P
+1
+;P
+2
+) in (1) or (2).
+It is proved in part II that a unperturbed system (2) has 19 canonical forms, being all
+of them are constructively obtained, i.e. for every CF conditions on coe cients of (2) are given
+in explicit form and the linear singular change of variables reducing this system to the selected
+CF is given. It should be noted that 5 CF of 19 have two representations: main and degenerate,
+being degenerate representation differs from the main one such that one of polynomials in CF,
+for example P
+2
+; is equal to zero identically.
+A similar classi cation of quadratic canonical forms, including degenerate ones, was pre-
+viously realized in [2, x 2]. On basis of this classi cation in [2] { [6] investigations of formal
+equivalence of system (1) with 11 CF, each taken as the unperturbed part, were carried out
+and then all the GNF were constructed.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 50Differential Equations and Control Processes, N 4, 2010
+However, as it turned out that given classi cation was not complete and had some short-
+comings, because at that time the conditions (that have to be in a de nition of CF) both
+on the location of nonzero coe cients in P
+1
+; P
+2
+and polynomial normalizing were not clearly
+formulated.
+These conditions are formulated below in p. 3.3, part II. They do not effect essentially on
+the following normalization of the system (1), but allows us to extract uniquely so called 'main
+CF' and linearly equivalent to it additional canonical forms that either have the same number
+of nonzero elements which may not be located on optimal places or are normalized by other
+way.
+Indicated differences in de nition CF led to the situation when in the process of investiga-
+tion of GNF in some initial systems additional (according to the classi cation given in [2,x 2]),
+but not main CF were taken.
+In part II all mentioned shortcomings of the previous classi cation are eliminated, and
+the classi cationf is based on other principles, which allowed one to prove the pairwise linear
+nonequivalence for obtained CF and to state in explicit form the conditions on the initial system
+(1) wherein it may be reduced to a de nite CF.
+2) The second goal of the paper is to normalize all the systems (1) in which every of 5
+degenerate CF is sequentially taken as the unperturbed part.
+Generally speaking, such a normalization is less effective as compared with normaliza-
+tion the system (1) whose unperturbed part is given by a main canonical form equivalent to
+a degenerate one. But inasmuch as main canonical forms turn out to be more complex than
+degenerate ones, up to now due to considerable computational di culties there is no complete
+normalization for some of them.
+In part III for a system (1) with the unperturbed part selected from 5 degenerate CF and
+an arbitrary perturbation all GNF that may be obtained by almost identical transformation
+are written. Examples of normal forms with special structures are also given.
+For completeness it should be noted that there is one more method to normalize (1) with
+a degenerate CF in the unperturbed part. For this purpose we should take some term (or
+terms) from the perturbation X
+2
+of (1) that has order greater than two and put it on the place
+of the absent quadratic polynomial P
+2
+, so that we can justify orders by assigning a weight to
+each variable.
+The above method is described in [1, p. 1] and implemented in [8, x 6]. It is clear that in
+GNF the new (not quadratic) polynomial P
+2
+does not change (do not annul even partially),
+but using the polynomial we can annul some additional terms of the perturbation.
+At last, part IV contains results concerning the problem of obtaining all GNF (in explicit
+form) of systems having one of 19 CF as the unperturbed part.
+2 Formal system equivalence
+So, consider a two-dimensional real autonomous system (1)
+_ x
+i
+=P
+i
+(x) +X
+i
+(x) (i = 1; 2);
+where P
+i
+=a
+i
+x
+2
+1
++ 2b
+i
+x
+1
+x
+2
++c
+i
+x
+2
+2
+; X
+i
+=
+P
+1
+p=2
+X
+(p+1)
+i
+(x); X
+(p+1)
+i
+=
+P
+p+1
+s=0
+X
+(s;p s+1)
+i
+x
+s
+1
+x
+p s+1
+2
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 51Differential Equations and Control Processes, N 4, 2010
+Assume that a formal almost identical change of variables
+x
+i
+=y
+i
++h
+i
+(y) (i = 1; 2); (3)
+where y = (y
+1
+;y
+2
+); h
+i
+=
+P
+1
+p=2
+h
+(p)
+i
+(y); transforms (1) in the system
+_ y
+i
+=P
+i
+(y) +Y
+i
+(y) (i = 1; 2); (4)
+where Y
+i
+=
+P
+1
+p=2
+Y
+(p+1)
+i
+(y); Y
+(p+1)
+i
+=
+P
+p+1
+s=0
+Y
+(s;p s+1)
+i
+y
+s
+1
+y
+p s+1
+2
+:
+By differentiating the change of variables (3) with respect to t along the trajectories
+of systems (1) and (4), we obtain
+2
+X
+j=1
+ 
+@h
+i
+(y)
+@y
+j
+P
+j
+(y) 
+@P
+i
+(y)
+@y
+j
+h
+j
+(y)
+ 
+=X
+i
+(y +h) +P
+i
+(h) 
+2
+X
+j=1
+@h
+i
+(y)
+@y
+j
+Y
+j
+(y) Y
+i
+(y):
+Then for any p  2 forms h
+(p)
+i
+; Y
+(p+1)
+i
+satisfy equations
+(a
+1
+y
+2
+1
++ 2b
+1
+y
+1
+y
+2
++c
+1
+y
+2
+2
+)
+@h
+(p)
+i
+@y
+1
++ (a
+2
+y
+2
+1
++ 2b
+2
+y
+1
+y
+2
++c
+2
+y
+2
+2
+)
+@h
+(p)
+i
+@y
+2
+ 
+ 2(a
+i
+y
+1
++b
+i
+y
+2
+)h
+(p)
+1
+  2(b
+i
+y
+1
++c
+i
+y
+2
+)h
+(p)
+2
+=
+b
+Y
+(p+1)
+i
+(i = 1; 2);
+(5)
+where
+b
+Y
+(p+1)
+i
+=
+e
+Y
+(p+1)
+i
+(y) Y
+(p+1)
+i
+(y);
+e
+Y
+(p+1)
+i
+(y) =fX
+i
+(y +h) +P (h) 
+P
+2
+j=1
+Y
+j
+@h
+i
+=@y
+j
+g
+(p+1)
+and depend on only h
+(r)
+and Y
+(r+1)
+with 2 r p  1:
+Hence when in (5) forms h
+(p)
+i
+and Y
+(p+1)
+i
+are sequentially de ned for each p = 2; 3;::: ,
+forms
+e
+Y
+(p+1)
+i
+are already known.
+Equating coe cients in y
+s
+1
+y
+p+1 s
+2
+(s = 0; 1;:::;p + 1); in equations (5) we obtain
+the system of 2(p + 2) equations with 2(p + 1) unknown quantities:
+a
+2
+(p s + 2)h
+(s 2;p s+2)
+1
++ (a
+1
+(s  3) + 2b
+2
+(p s + 1))h
+(s 1;p s+1)
+1
++
++(2b
+1
+(s  1) +c
+2
+(p s))h
+(s;p s)
+1
++c
+1
+(s + 1)h
+(s+1;p s 1)
+1
+ 
+ 2b
+1
+h
+(s 1;p s+1)
+2
+  2c
+1
+h
+(s;p s)
+2
+=
+b
+Y
+(s;p s+1)
+1
+;
+a
+2
+(p s + 2)h
+(s 2;p s+2)
+2
++ (a
+1
+(s  1) + 2b
+2
+(p s))h
+(s 1;p s+1)
+2
++
++(2b
+1
+s +c
+2
+(p s  2))h
+(s;p s)
+2
++c
+1
+(s + 1)h
+(s+1;p s 1)
+2
+ 
+ 2a
+2
+h
+(s 1;p s+1)
+1
+  2b
+2
+h
+(s;p s)
+1
+=
+b
+Y
+(s;p s+1)
+2
+:
+(6)
+In what follows we assume that in system (6) coe cients of series
+b
+Y
+i
+and h
+i
+are equal
+to zero, if one of upper indices less than zero.
+For any p  2 consistency conditions for (6) may be written in the form of n
+p
+linear
+equations connecting coe cients of homogeneous polynomials Y
+(p+1)
+i
+:
+p+1
+X
+s=0
+(c
+ps
+ 1
+Y
+(s;p s+1)
+1
++c
+ps
+ 2
+Y
+(s;p s+1)
+2
+) =e c (  = 1;n
+p
+; n
+p
+  2); (7)
+where in each equation e c =
+P
+p+1
+s=0
+(c
+ps
+ 1
+e
+Y
+(s;p s+1)
+1
++c
+ps
+ 2
+e
+Y
+(s;p s+1)
+2
+):
+Electronic Journal. http://www.math.spbu.ru/diffjournal 52Differential Equations and Control Processes, N 4, 2010
+De nition 1 We will call equations (7) resonant ones.
+The main goal of the method of the same name that we describe here is to obtain resonant
+equations in explicit form, i.e. to calculate factors c
+ps
+ i
+:
+However, solving the problem often faces considerable technical obstacles, being their com-
+plexity depends on the number of nonzero coe cients in P
+1
+; P
+2
+:
+Consequently, we have to simplify the quadratic unperturbed part of system (1) as much
+as possible, reducing the system to so called canonical form (CF) by a linear invertible change
+of variables.
+In the special case that the system has the linear  rst approximation, the reducing it to
+a CF means clearly the reducing the matrix of the linear part to a Jordan form. There is no
+general accepted de nition for CF in this case.
+The principles of de nition of canonical form will be formulated below, reasoning from
+demands that arise when solving system (6) and alleviate the problem.
+As was mentioned above it is the minimization of the number of nonzero coe cients in P
+1
+and P
+2
+that is the important criterion of simplifying system (6).
+The question of considerable importance is which coe cients should be annulled in the
+ rst place. So, for P
+1
+it is the best way (if that is possible) to put c
+1
+= 0; for P
+2
+{ a
+2
+= 0:
+It turns out that it is su cient to eliminate 3 summands in left-side hands of system (6).
+It is also clear that the more residual nonzero coe cients may be normalized by 1 the
+simpler the solving (6) will be.
+In speci c cases one of polynomials in (1) (for example P
+2
+) may be transformed to
+a polynomial that is equal to zero identically. Then consequent simpli cations of P
+1
+lead to
+arising degenerate CF which are linearly equivalent to main CF and, as mentioned above, have
+advantages and disadvantages.
+In conclusion we remind some de nition from [1] that will be necessary later on.
+De nition 2 The coe cients of homogeneous polynomials Y
+(p+1)
+i
+in (4), entering at least
+in one of resonant equations (7) will be called resonant coe cients, and the other { nonresonant
+ones. The coe cients of homogeneous polynomials h
+(p)
+i
+which remain free when solving (6) will
+be called resonant ones.
+We correlate the matrix  
+p
+= f 
+p
+ k
+g
+np
+ ;k=1
+; where  
+p
+ k
+= c
+ps
+k
+ i
+k
+with an arbitrary set
+of n
+p
+coe cients Y
+(s
+k
+;p+1 s
+k
+)
+i
+k
+of homogeneous polynomials Y
+(p+1)
+1
+; Y
+(p+1)
+2
+; where k = 1;n
+p
+;
+s
+k
+2f0;:::;p + 1g; i
+k
+2f1; 2g:
+De nition 3 We call a set of n
+p
+coe cients of homogeneous polynomials Y
+(p+1)
+i
+resonant
+if det  
+p
+6= 0:
+Thus for any p  2 resonant set is a minimal set of coe cients from Y
+(p+1)
+1
+; Y
+(p+1)
+2
+; such
+that each of them is at least in one of equations (7), being resonant equations are uniquely decid-
+able with respect to (7). In this case only different resonant coe cients may be in the resonant
+set, otherwise in  
+p
+there will be equal columns or a zero column.
+De nition 4 We will call a system (4) generalized normal form (GNF), if for any p  2
+all the coe cients of homogeneous polynomials Y
+(p+1)
+i
+are equal to zero, excepting perhaps
+coe cients from a resonant set.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 53Differential Equations and Control Processes, N 4, 2010
+This de nition of GNF corresponds to the concept of generalized normal form of the  rst
+order that was entered in [12].
+Part II
+Canonical form of a unperturbed
+system
+3 Linear equivalence of quadratic systems
+3.1 Form and characteristic of quadratic systems
+Consider a two-dimensional real unperturbed system (2)
+_ x =P (x) or _ x =Aq
+[2]
+(x) (P (x)6  0; A6= 0);
+where P =
+ 
+P
+1
+(x)
+P
+2
+(x)
+!
+=
+ 
+a
+1
+x
+2
+1
++ 2b
+1
+x
+1
+x
+2
++c
+1
+x
+2
+2
+a
+2
+x
+2
+1
++ 2b
+2
+x
+1
+x
+2
++c
+2
+x
+2
+2
+!
+; A =
+ 
+a
+1
+2b
+1
+c
+1
+a
+2
+2b
+2
+c
+2
+!
+; q
+[2]
+(x) =
+0
+B
+@
+x
+2
+1
+x
+1
+x
+2
+x
+2
+2
+1
+C
+A
+:
+De nition 5 For polynomials P
+1
+and P
+2
+their common factor with maximal nonzero
+power l (l 2 f1; 2g) will be called common factor P
+0
+of the polynomials. If there is no
+common factor for P
+1
+; P
+2
+we will assume that l = 0 .
+For the polynomial P consider a function R called resultant:
+R =
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+a
+1
+2b
+1
+c
+1
+0
+0 a
+1
+2b
+1
+c
+1
+a
+2
+2b
+2
+c
+2
+0
+0 a
+2
+2b
+2
+c
+2
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+= 
+2
+ac
+  4 
+ab
+ 
+bc
+; (8)
+where  
+ab
+=a
+1
+b
+2
+ a
+2
+b
+1
+;  
+ac
+=a
+1
+c
+2
+ a
+2
+c
+1
+;  
+bc
+=b
+1
+c
+2
+ b
+2
+c
+1
+:
+Assertion 1 The polynomials P
+1
+;P
+2
+in (2) have the common factor iff R = 0
+(see [13, p. 59]).
+3.2 Linear transformations of quadratic systems
+Simplify a system (2) by a linear invertible change of variables
+x
+1
+=r
+1
+y
+1
++s
+1
+y
+2
+; x
+2
+=r
+2
+y
+1
++s
+2
+y
+2
+or x =Ly; (9)
+where y =
+ 
+y
+1
+y
+2
+!
+; L =
+ 
+r
+1
+s
+1
+r
+2
+s
+2
+!
+;   = 
+rs
+= detL6= 0:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 54Differential Equations and Control Processes, N 4, 2010
+Let (9) transform system (2) in the system
+_ y =
+e
+P (y) or _ y =
+e
+Aq
+[2]
+(y); (10)
+where
+e
+P =
+ 
+e
+P
+1
+e
+P
+2
+!
+=
+ 
+e a
+1
+y
+2
+1
++ 2
+e
+b
+1
+y
+1
+y
+2
++e c
+1
+y
+2
+2
+e a
+2
+y
+2
+1
++ 2
+e
+b
+2
+y
+1
+y
+2
++e c
+2
+y
+2
+2
+!
+;
+e
+A =
+ 
+e a
+1
+2
+e
+b
+1
+e c
+1
+e a
+2
+2
+e
+b
+2
+e c
+2
+!
+:
+For (10) analogously to (2) we enter the resultant
+e
+R by the formula (8).
+By differentiating equations (9) along the trajectories of systems (2) and (10), we obtain
+P (Ly) =L
+e
+P (y) or
+e
+P (y) =L
+ 1
+P (Ly) =L
+ 1
+Aq
+[2]
+(Ly); (11)
+where L
+ 1
+= 
+ 1
+ 
+s
+2
+ s
+1
+ r
+2
+r
+1
+!
+; L
+ 1
+A = 
+ 1
+ 
+ 
+as
+2 
+bs
+ 
+cs
+  
+ar
+ 2 
+br
+  
+cr
+!
+:
+Hence we have in (11) :
+ 
+e a
+1
+y
+2
+1
++ 2
+e
+b
+1
+y
+1
+y
+2
++e c
+1
+y
+2
+2
+e a
+2
+y
+2
+1
++ 2
+e
+b
+2
+y
+1
+y
+2
++e c
+2
+y
+2
+2
+!
+= 
+ 1
+ 
+ 
+as
+2 
+bs
+ 
+ds
+  
+ar
+ 2 
+br
+  
+cr
+!
+0
+B
+@
+(r
+1
+y
+1
++s
+1
+y
+2
+)
+2
+(r
+1
+y
+1
++s
+1
+y
+2
+)(r
+2
+y
+1
++s
+2
+y
+2
+)
+(r
+2
+y
+1
++s
+2
+y
+2
+)
+2
+1
+C
+A
+:
+Equating coe cients of y
+s
+1
+y
+2 s
+2
+(s = 0; 2); we have
+ e a
+1
+=s
+2
+P
+1
+(r
+1
+;r
+2
+) s
+1
+P
+2
+(r
+1
+;r
+2
+);   e a
+2
+=r
+2
+P
+1
+(r
+1
+;r
+2
+) r
+1
+P
+2
+(r
+1
+;r
+2
+);
+ 
+e
+b
+1
+=s
+2
+(a
+1
+r
+1
+s
+1
++b
+1
+ 
+ 
++c
+1
+r
+2
+s
+2
+) s
+1
+(a
+2
+r
+1
+s
+1
++b
+2
+ 
+ 
++c
+2
+r
+2
+s
+2
+);
+  
+e
+b
+2
+=r
+2
+(a
+1
+r
+1
+s
+1
++b
+1
+ 
+ 
++c
+1
+r
+2
+s
+2
+) r
+1
+(a
+2
+r
+1
+s
+1
++b
+2
+ 
+ 
++c
+2
+r
+2
+s
+2
+);
+ e c
+1
+=s
+2
+P
+1
+(s
+1
+;s
+2
+) s
+1
+P
+2
+(s
+1
+;s
+2
+);   e c
+2
+=r
+2
+P
+1
+(s
+1
+;s
+2
+) r
+1
+P
+2
+(s
+1
+;s
+2
+):
+(12)
+where  
+ 
+=r
+1
+s
+2
++r
+2
+s
+1
+:
+Assertion 2 In the systems (2) and (10) either R;
+e
+R = 0; or R
+e
+R> 0; i. e. the sign of R
+is invariant with respect to any linear invertible change of variables (9).
+Actually it is easy to verify that
+e
+R = 
+2
+R:
+Remark 1 For brevity in what follows we will identify system (2) (and other systems
+obtained from it) with the matrix A or polynomial P: The equations (9) will be identi ed
+with the matrix L:
+We set off two standard changes of variables from the changes (9) transforming (2) in
+the system (10) :
+ 
+r
+1
+0
+0 s
+2
+!
+{ normalizing,
+e
+A =
+ 
+a
+1
+r
+1
+2b
+1
+s
+2
+c
+1
+s
+2
+2
+r
+ 1
+1
+a
+2
+r
+2
+1
+s
+ 1
+2
+2b
+2
+r
+1
+c
+2
+s
+2
+!
+; (13)
+ 
+0 1
+1 0
+!
+{ renumbering,
+e
+A =
+ 
+c
+2
+2b
+2
+a
+2
+c
+1
+2b
+1
+a
+1
+!
+: (14)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 55Differential Equations and Control Processes, N 4, 2010
+3.3 How to de ne a canonical form
+Proposition 1 Without loss of generality we will further assume that in (2) the polynomial
+P
+1
+(x)6  0; otherwise P
+2
+(x)6  0 and we can perform (14).
+In system (2) we assign to any element of A or a coe cient of P
+1
+or P
+2
+an index equal
+to the number that is on the place of the element in the matrix
+ 
+1 2 3
+3 2 1
+!
+:
+De nition 6 For the matrix A of system (2) the sum of indices of its nonzero elements
+is said to be matrix index.
+De nition 7 The system (2) is referred to as a canonical form (CF
+l
+) or, that is the same,
+main CF
+l
+; if a linear invertible change of variables (9) does not transform (2) to a system that
+is more preferable than the initial one according to the following principles of hierarchy:
+1) The system is nondegenerate, i. e. P
+1
+;P
+2
+6  0; and, if possible, P
+1
+ P
+2
+:
+2) The matrix A has the minimal number of nonzero elements.
+3) The index of A is minimal.
+4) The number of elements of A with module equal to 1 is maximal.
+5) The arrangement of nonzero coe cients of P
+1
+is the following:
+5a) The order of the  rst nonzero coe cient in P
+1
+is minimal.
+5b) The order of the last nonzero coe cient in P
+1
+is maximal.
+6) Normalizing nonzero coe cients of the system:
+6a) In P
+2
+left nonzero element equals 1.
+6b) In P
+1
+the module of the right nonzero coe cient equals 1.
+Remark 2 When de ning CF
+l
+the principles 1 { 4 are basic. The principles 5 and 6
+allows us to select so called main CF
+l
+among existing linear equivalent canonical forms, though
+other such forms may be also selected as a  rst approximation in an arbitrary perturbed system
+when reducing it to GNF.
+Such reasonings lead to the concept of additional CF
+l
+:
+De nition 8 The system (2) is said to be additional canonical form (ACF
+l
+) if it is
+linearly equivalent to a main CF
+l
+; but the principle 5 and maybe principle 6 do not hold.
+In this case ACF
+l
+obtained from any nonsymmetrical CF
+l
+i
+by (14) will be denoted as CF
+lr
+i
+:
+4 Canonical forms of system (2) for l= 0
+Consider the system (2)
+ 
+P
+1
+P
+2
+!
+=
+ 
+a
+1
+x
+2
+1
++ 2b
+1
+x
+1
+x
+2
++c
+1
+x
+2
+2
+a
+2
+x
+2
+1
++ 2b
+2
+x
+1
+x
+2
++c
+2
+x
+2
+2
+!
+; where homogeneous polynomials
+P
+1
+;P
+2
+6  0 and do not have a common factor.
+Then by de nition 5 we have l = 0; and by the statement 1 the resultant entered in (8)
+R = 
+2
+ac
+  4 
+ab
+ 
+bc
+6= 0: Hence in particular a
+2
+1
++a
+2
+2
+6= 0 and c
+2
+1
++c
+2
+2
+6= 0:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 56Differential Equations and Control Processes, N 4, 2010
+To write all the canonical forms to which system (2) may be transformed by a linear change
+of variables (9), we have to formulate some conditions.
+Consider two cubic polynomials
+Q
+1
+(t) =t
+3
+ ut
+2
++vt  1; Q
+2
+(t) =t
+3
++ (v
+2
+  2u)t
+2
++ (u
+2
+  2v)t + 1; (15)
+where parameters u; v have the following restrictions:
+uv6= 0; 1; u6=v; u
+2
++v6= 0; u +v
+2
+6= 0: (16)
+Assertion 3 The roots of Q
+1
+; Q
+2
+satisfy one of two conditions:
+9 t
+0
+1
+; t
+00
+1
+2R : Q
+1
+(t
+0
+1
+) = 0; Q
+1
+(t
+00
+1
+) = 0; t
+0
+1
+6=t
+00
+1
+;
+9 ! t
+1
+2R : Q
+1
+(t
+1
+) = 0; 8 t
+2
+2R : Q
+2
+(t
+2
+) = 0 ) t
+2
+6=t
+1
+(t
+1
+;t
+2
+6= 0;u):
+(17)
+Proof Suppose that conditions (17) are not ful lled.
+It means that Q
+1
+(t) has the unique real root t
+1
+=   and this root is a root for Q
+2
+(t)
+as well. Then the polynomials (15) have the form
+Q
+i
+(t) = (t + )(t
+2
++b
+i
+t +c
+i
+) =t
+3
++ (  +b
+i
+)t
+2
++ ( b
+i
++c
+i
+)t + c
+i
+(i = 1; 2):
+So,
+8
+>
+<
+>
+:
+b
+1
+= u  
+c
+1
+=  
+ 1
+ b
+1
++c
+1
+=v
+and
+8
+>
+<
+>
+:
+b
+2
+=v
+2
+    2u
+c
+2
+= 
+ 1
+ b
+2
++c
+2
+=u
+2
+  2v
+: From the second system we obtain
+(u + )
+2
+= (v + 
+ 1
+)
+2
+: Hence   > 0; otherwise u =  ; v =  
+ 1
+; that contradicts (16).
+Uniqueness condition for the real root of Q
+1
+implies the inequality b
+2
+1
+  4c
+1
+  0; that is
+equivalent to the impossible inequality (u + )
+2
++ 4 
+ 1
+  0; as   > 0:  
+The list of canonical forms of the system (2) for l = 0 :
+CF
+0
+3
+=
+ 
+1 u 0
+0 0 1
+!
+; CF
+0
+1
+=
+ 
+1 0 0
+0 0 1
+!
+; CF
+0
+2
+=
+ 
+0 0 1
+1 0 0
+!
+; CF
+0
+7
+=
+ 
+0 u 1
+1 0 0
+!
+;
+CF
+0
+4
+=
+ 
+u 0 1
+0 0 1
+!
+; CF
+0
+5
+=
+ 
+u 0  
+0 1 0
+!
+; CF
+0
+6
+=
+ 
+u 0 1
+1 0 0
+!
+;
+CF
+0
+8
+=
+ 
+u 1 0
+0 1 v
+!
+; CF
+0
+9
+=
+ 
+u 0  
+0 1 v
+!
+; CF
+0
+10
+=
+ 
+1=2 u  1
+0 1 0
+!
+;
+where u;v6= 0;   = 1; in CF
+0
+3
+u  1; in CF
+0
+4
+u> 1=4; in CF
+0
+5
+u6= 1=2 for R> 0;
+in CF
+0
+9
+u6= 1=2 for R< 0; in CF
+0
+10
+0<u< 2
+1=2
+:
+Remark 3 In CF
+0
+1
+; CF
+0
+2
+; CF
+0
+3
+; CF
+0
+6
+and in CF
+0
+7
+R = 1; in CF
+0
+4
+R = u
+2
+; in CF
+0
+5
+R =u ; in CF
+0
+8
+R =u
+2
+v
+2
+ uv; in CF
+0
+9
+R =u
+2
+v
+2
++u ; in CF
+0
+10
+R = 1=2:
+Theorem 1 In case of l = 0 the canonical forms CF
+0
+1
+| CF
+0
+10
+are pairwise linearly
+nonequivalent and system (2) is reduced to one of them by a linear invertible change of vari-
+ables (9).
+Electronic Journal. http://www.math.spbu.ru/diffjournal 57Differential Equations and Control Processes, N 4, 2010
+Proof
+1) R = 
+2
+ac
+  4 
+ab
+ 
+bc
+> 0:
+We demonstrate at  rst that there is a change (9) that reduces (2) to a system (10) of the
+form
+ 
+e a
+1
+0 e c
+1
+e a
+2
+0 e c
+2
+!
+: (18)
+1a)  
+ab
+6= 0: Then for r
+1
+=t
+ 
+1
+t
+ 
+; s
+1
+=t
+ 
+2
+t
+ 
+; r
+2
+;s
+2
+=t
+ 
+; when t
+ 
+1
+= (  
+ac
++R
+1=2
+)(2 
+ab
+)
+ 1
+;
+t
+ 
+2
+= (  
+ac
+ R
+1=2
+)(2 
+ab
+)
+ 1
+; t
+ 
+= R
+1=2
+( 
+ab
+)
+ 1
+(  = t
+ 3
+); we obtain the system (18) in which
+e a
+i
+= ( 1)
+i
+(t
+ 
+3 i
+P
+2
+(t
+ 
+1
+; 1) P
+1
+(t
+ 
+1
+; 1)); e c
+i
+= ( 1)
+i
+(t
+ 
+3 i
+P
+2
+(t
+ 
+2
+; 1) P
+1
+(t
+ 
+2
+; 1)) (i = 1; 2):
+1b)  
+ab
+= 0;  
+bc
+6= 0 ( 
+ac
+= 0):
+1b1) a
+2
+6= 0: Then for r
+1
+= 1; s
+1
+= b
+2
+; r
+2
+= 0; s
+2
+= a
+2
+we obtain the system (18),
+where e a
+1
+=a
+1
++b
+2
+; e c
+1
+=a
+1
+b
+2
+2
+  2b
+1
+a
+2
+b
+2
++a
+2
+2
+c
+1
+ b
+3
+2
++a
+2
+b
+2
+c
+2
+; e a
+2
+= 1; e c
+2
+=a
+2
+c
+2
+ b
+2
+2
+:
+1b2) a
+2
+= 0 (b
+2
+= 0; a
+1
+;c
+2
+6= 0): Then for r
+1
+= a
+ 1
+1
+; s
+1
+= (a
+1
+c
+2
+)
+ 1
+b
+1
+; r
+2
+= 0;
+s
+2
+=c
+ 1
+2
+we obtain (18) with e a
+1
+= 1; e c
+1
+= (a
+1
+c
+1
+ b
+2
+1
++b
+1
+c
+2
+)c
+ 2
+2
+; e a
+2
+= 0; e c
+2
+= 1:
+1c) b
+1
+;b
+2
+= 0 ( 
+ac
+6= 0): Then in the system (18) e a
+i
+=a
+i
+; e c
+i
+=c
+i
+(i = 1; 2):
+Now a change of variables (9) reduces (18) to a system with coe cients
+e
+   a
+1
+=s
+2
+(e a
+1
+r
+2
+1
++e c
+1
+r
+2
+2
+) s
+1
+(e a
+2
+r
+2
+1
++e c
+2
+r
+2
+2
+);  
+e
+   a
+2
+=r
+2
+(e a
+1
+r
+2
+1
++e c
+1
+r
+2
+2
+) r
+1
+(e a
+2
+r
+2
+1
++e c
+2
+r
+2
+2
+);
+e
+ 
+ 
+b
+1
+=s
+2
+(e a
+1
+r
+1
+s
+1
++e c
+1
+r
+2
+s
+2
+) s
+1
+(e a
+2
+r
+1
+s
+1
++e c
+2
+r
+2
+s
+2
+);
+ 
+e
+ 
+ 
+b
+2
+=r
+2
+(e a
+1
+r
+1
+s
+1
++e c
+1
+r
+2
+s
+2
+) r
+1
+(e a
+2
+r
+1
+s
+1
++e c
+2
+r
+2
+s
+2
+);
+e
+   c
+1
+=s
+2
+(e a
+1
+s
+2
+1
++e c
+1
+s
+2
+2
+) s
+1
+(e a
+2
+s
+2
+1
++e c
+2
+s
+2
+2
+);  
+e
+   c
+2
+=r
+2
+(e a
+1
+s
+2
+1
++e c
+1
+s
+2
+2
+) r
+1
+(e a
+2
+s
+2
+1
++e c
+2
+s
+2
+2
+):
+(19)
+For brevity we will further omit the symbol e over coe cients of the system (18).
+1
+1
+) a
+1
+c
+2
+= 0: Then a
+2
+c
+1
+6= 0:
+1
+1
+1
+) a
+1
+;c
+2
+= 0: Then (19) for r
+1
+= (a
+2
+2
+c
+1
+)
+ 1=3
+; s
+1
+;r
+2
+= 0; s
+2
+=a
+2
+r
+2
+1
+is CF
+0
+2
+:
+1
+2
+1
+) a
+1
+= 0; c
+2
+6= 0: Then (19) for r
+1
+= 0; s
+1
+= c
+1
+r
+2
+2
+; r
+2
+= (a
+2
+c
+2
+1
+)
+ 1=3
+; s
+2
+= 0 is CF
+0
+6
+with u = c
+2
+(a
+2
+c
+2
+1
+)
+ 1=3
+6= 0: 1
+3
+1
+) a
+1
+6= 0; c
+2
+= 0: Then (19) for r
+1
+= (a
+2
+2
+c
+1
+)
+ 1=3
+; s
+1
+;r
+2
+= 0;
+r
+2
+=a
+2
+r
+2
+1
+is CF
+0
+6
+with u =a
+1
+(a
+2
+2
+c
+1
+)
+ 1=3
+6= 0:
+1
+2
+) a
+1
+c
+2
+6= 0:
+1
+1
+2
+) a
+2
+;c
+1
+= 0: Then (19) for r
+1
+=a
+ 1
+1
+; s
+1
+;r
+2
+= 0; s
+2
+=c
+ 1
+2
+is CF
+0
+1
+:
+1
+2
+2
+) a
+2
+= 0; c
+1
+6= 0:
+1
+2
+2
+a) 06= a
+1
+c
+1
+c
+ 2
+2
+  1=4: Then (19) for r
+1
+= a
+ 1
+1
+; s
+1
+= (2a
+1
+)
+ 1
+(1 + (1  4a
+1
+c
+1
+c
+ 2
+2
+)
+1=2
+);
+r
+2
+= 0; s
+2
+=c
+ 1
+2
+is CF
+0
+3
+with u = 1 + (1  4a
+1
+c
+1
+c
+ 2
+2
+)
+1=2
+  1:
+1
+2
+2
+b) a
+1
+c
+1
+c
+ 2
+2
+> 1=4: Then (19) for r
+1
+= c
+1
+c
+ 2
+2
+; s
+1
+;r
+2
+= 0; s
+2
+= c
+ 1
+2
+is CF
+0
+4
+with
+u =a
+1
+c
+1
+c
+ 2
+2
+> 1=4:
+1
+3
+2
+) a
+2
+6= 0; c
+1
+= 0:
+1
+3
+2
+a) 06= a
+2
+c
+2
+a
+ 2
+1
+  1=4: Then system (19) for r
+1
+= 0; s
+1
+= a
+ 1
+1
+; r
+2
+= c
+ 1
+2
+; s
+2
+=
+(2c
+2
+)
+ 1
+(1 + (1  4a
+2
+c
+2
+a
+ 2
+1
+)
+1=2
+) is CF
+0
+3
+with u = 1 + (1  4a
+2
+c
+2
+a
+ 2
+1
+)
+1=2
+  1:
+1
+3
+2
+b) a
+2
+c
+2
+a
+ 2
+1
+> 1=4: Then (19) for r
+1
+= 0; s
+1
+=a
+ 1
+1
+; r
+2
+=a
+2
+a
+ 2
+1
+; s
+2
+= 0 is CF
+0
+4
+with
+u =a
+2
+c
+2
+a
+ 2
+1
+> 1=4:
+1
+4
+2
+) a
+2
+c
+1
+6= 0:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 58Differential Equations and Control Processes, N 4, 2010
+1
+4
+2
+a) a
+1
+c
+1=3
+1
+= a
+1=3
+2
+c
+2
+: Then the system (19) for r
+1
+= a
+1
+(2a
+2
+1
+  2a
+2
+c
+2
+)
+ 1
+; s
+1
+= a
+1
+j2a
+4
+1
+ 
+2a
+2
+2
+c
+2
+2
+j
+ 1=2
+sign (a
+2
+c
+2
+); r
+2
+=a
+2
+1
+(2a
+2
+1
+c
+2
+  2a
+2
+c
+2
+2
+)
+ 1
+; s
+2
+= a
+2
+1
+c
+ 1
+2
+j2a
+4
+1
+  2a
+2
+2
+c
+2
+2
+j
+ 1=2
+sign (a
+2
+c
+2
+) { CF
+0
+5
+with u = (a
+2
+1
++a
+2
+c
+2
+)(2a
+2
+1
+  2a
+2
+c
+2
+)
+ 1
+6= 0; 1=2;   = signu: At the same time a
+2
+1
+ a
+2
+c
+2
+6= 0;
+else in (2) P
+2
+=a
+ 1
+1
+a
+2
+P
+1
+and l = 3:
+1
+4
+2
+b) a
+2
+1
++a
+2
+c
+2
+= 0: Then (19) for r
+1
+=a
+1
+(a
+3
+1
++a
+2
+2
+c
+1
+)
+ 2=3
+; s
+1
+= (a
+3
+1
++a
+2
+2
+c
+1
+)
+ 1=3
+; s
+2
+= 0;
+r
+2
+=a
+2
+(a
+3
+1
++a
+2
+2
+c
+1
+)
+ 2=3
+{ CF
+0
+7
+with u = 2a
+1
+(a
+3
+1
++a
+2
+2
+c
+1
+)
+ 1=3
+6= 0; being a
+3
+1
++a
+2
+2
+c
+1
+= a
+2
+ 
+ac
+6= 0:
+1
+4
+2
+c) c
+2
+2
++a
+1
+c
+1
+= 0: Then (19) for r
+1
+=c
+1
+(c
+3
+2
++c
+2
+1
+a
+2
+)
+ 2=3
+; s
+1
+= 0; r
+2
+=c
+2
+(c
+3
+2
++c
+2
+1
+a
+2
+)
+ 2=3
+;
+s
+2
+= (c
+3
+2
++c
+2
+1
+a
+2
+)
+ 1=3
+{ CF
+0
+7
+with u = 2c
+2
+(c
+3
+2
++c
+2
+1
+a
+2
+)
+ 1=3
+6= 0; being c
+3
+2
++c
+2
+1
+a
+2
+= c
+1
+ 
+ac
+6= 0:
+1
+4
+2
+d) a
+1
+c
+1=3
+1
+6= a
+1=3
+2
+c
+2
+; a
+2
+1
++a
+2
+c
+2
+6= 0; c
+2
+2
++a
+1
+c
+1
+6= 0: Then (19) for r
+1
+= (a
+2
+2
+c
+1
+)
+ 1=3
+;
+s
+1
+;r
+2
+= 0; s
+2
+= (a
+2
+c
+2
+1
+)
+ 1=3
+has the form
+F
+0
+1
+=
+ 
+u 0 1
+1 0 v
+!
+with u =a
+1
+(a
+2
+2
+c
+1
+)
+ 1=3
+; v =c
+2
+(a
+2
+c
+2
+1
+)
+ 1=3
+satisfying (16) and R = (uv  1)
+2
+> 0:
+Thus, it is proved that under above mentioned conditions for u and v F
+0
+1
+with R > 0
+and index 8 cannot be reduced to the system having more than two zeroes. Reduce F
+0
+1
+to CF
+0
+8
+with index 6, and if we will not succeed, then to CF
+0
+9
+with index 7.
+An arbitrary change (9) brings F
+0
+1
+to the system with
+e
+R> 0 and coe cients
+e a
+1
+= ((s
+1
+ us
+2
+)r
+2
+1
++ (vs
+1
+ s
+2
+)r
+2
+2
+) 
+ 1
+; e a
+2
+= (r
+3
+1
+ ur
+2
+1
+r
+2
++vr
+1
+r
+2
+2
+ r
+3
+2
+) 
+ 1
+;
+e
+b
+1
+= ((s
+1
+ us
+2
+)r
+1
+s
+1
++ (vs
+1
+ s
+2
+)r
+2
+s
+2
+) 
+ 1
+;
+e
+b
+2
+= ((r
+1
+ ur
+2
+)r
+1
+s
+1
++ (vr
+1
+ r
+2
+)r
+2
+s
+2
+) 
+ 1
+;
+e c
+1
+= (s
+3
+1
+ us
+2
+1
+s
+2
++vs
+1
+s
+2
+2
+ s
+3
+2
+) 
+ 1
+; e c
+2
+= ((r
+1
+ ur
+2
+)s
+2
+1
++ (vr
+1
+ r
+2
+)s
+2
+2
+) 
+ 1
+:
+Coe cients e a
+2
+;e c
+1
+in this system may be taken as zeros, if Q
+1
+(t) from (15) has two different
+real roots, i. e. the condition (17
+1
+) holds.
+In this case, assuming in (9) r
+1
+= t
+0
+1
+r
+2
+; s
+1
+= t
+00
+1
+s
+2
+; being the change remains invertible,
+we have e a
+2
+= 0 and e c
+1
+= 0; so there remains to ful ll a normalization.
+Thus, F
+0
+1
+with u = u
+ 
+; v = v
+ 
+; satisfying (16) and (17
+1
+); for selected r
+1
+;s
+1
+and
+r
+2
+= (t
+0
+1
+ t
+00
+1
+)(2(t
+02
+1
+t
+00
+1
++v
+ 
+t
+0
+1
+ u
+ 
+t
+0
+1
+t
+00
+1
+  1))
+ 1
+; s
+2
+= (t
+00
+1
+ t
+0
+1
+)(2(t
+0
+1
+t
+002
+1
+ u
+ 
+t
+0
+1
+t
+00
+1
++v
+ 
+t
+00
+1
+  1))
+ 1
+may be reduced to CF
+0
+8
+with u = (u
+ 
+t
+02
+1
+ t
+02
+1
+t
+00
+1
+ v
+ 
+t
+00
+1
++ 1)(2(t
+02
+1
+t
+00
+1
++v
+ 
+t
+0
+1
+ u
+ 
+t
+0
+1
+t
+00
+1
+  1))
+ 1
+;
+v = (u
+ 
+t
+002
+1
+ t
+0
+1
+t
+002
+1
+ v
+ 
+t
+0
+1
++ 1)(2(t
+0
+1
+t
+002
+1
+ u
+ 
+t
+0
+1
+t
+00
+1
++v
+ 
+t
+00
+1
+  1))
+ 1
+; at that uv6= 0; else R = 0:
+Let the condition (17
+2
+) ful ll instead of (17
+1
+): Then e a
+2
+2
++e c
+2
+1
+6= 0:
+Taking in (9) r
+1
+= (tv  1)(u t)
+ 1
+t
+ 1
+r
+2
+; s
+1
+=ts
+2
+; we obtain the system
+ 
+(tv  1)t
+ 1
+r
+2
+0 t(t u)r
+ 1
+2
+s
+2
+2
+Q
+2
+(t)t
+ 2
+(t u)
+ 2
+r
+2
+2
+s
+ 1
+2
+2(uv  1)(t u)
+ 1
+r
+2
+(tu +v)s
+2
+!
+;
+at that the change has to be invertible, i. e. (1 tv)(t u)
+ 1
+t
+ 1
+6=t or Q
+1
+(t)6= 0:
+In accordance with (17
+2
+) we have Q
+1
+(t
+2
+)6= 0: Hence e a
+2
+= 0 for t = t
+2
+; i. e. F
+0
+1
+with
+u = u
+ 
+; v = v
+ 
+under conditions (16); (17
+2
+); by the change (9) with t = t
+2
+for selected
+r
+1
+; s
+1
+and r
+2
+= (u
+ 
+ t
+2
+)(2u
+ 
+v
+ 
+  2)
+ 1
+; s
+2
+=j2t
+2
+(u
+ 
+v
+ 
+  1)j
+ 1=2
+is reduced to CF
+0
+9
+with   =
+ sign (t
+2
+(u
+ 
+v
+ 
+ 1)); u = (u
+ 
+ t
+2
+)(t
+2
+v
+ 
+ 1)(2t
+2
+(u
+ 
+v
+ 
+ 1))
+ 1
+; v = (t
+2
+u
+ 
++v
+ 
+)j2t
+2
+(u
+ 
+v
+ 
+ 1)j
+ 1=2
+:
+In this case uv6= 0; otherwise, if t
+2
+v
+ 
+ 1 = 0; then Q
+2
+(t
+2
+) =t
+2
+(t u)
+2
+6= 0; and if t
+2
+u
+ 
++v
+ 
+= 0;
+then Q
+2
+( u
+ 1
+ 
+v
+ 
+) = (1 u
+ 
+v
+ 
+)(1 u
+ 3
+ 
+v
+3
+ 
+)6= 0:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 59Differential Equations and Control Processes, N 4, 2010
+2) R = 
+2
+ac
+  4 
+ab
+ 
+bc
+< 0: Then  
+ab
+ 
+bc
+> 0:
+At  rst we will prove that there is a change (9) that brings (2) to a system (10) of the form
+ 
+e a
+1
+2
+e
+b
+1
+e c
+1
+0 2
+e
+b
+2
+e c
+2
+!
+(e a
+1
+e
+b
+2
+6= 0): (20)
+2a) a
+2
+6= 0: Then for r
+1
+= r
+ 
+; s
+1
+= 1; r
+2
+= 1; s
+2
+= 0; where r
+ 
+is a real root
+of the polynomial a
+2
+r
+3
+1
++ (2b
+2
+ a
+1
+)r
+2
+1
++ (c
+2
+  2b
+1
+)r
+1
+ c
+1
+; we obtain system (20), where e a
+1
+=
+a
+2
+r
+2
+ 
++ 2b
+2
+r
+ 
++c
+2
+;
+e
+b
+1
+= a
+2
+r
+ 
+ b
+2
+; e c
+1
+=a
+2
+;
+e
+b
+2
+=b
+1
++a
+1
+r
+ 
+ b
+2
+r
+ 
+ a
+2
+r
+2
+ 
+; e c
+1
+=a
+2
+r
+ 
+ a
+1
+:
+2b) a
+2
+= 0: Then in (20) e a
+i
+=a
+i
+;
+e
+b
+i
+=b
+i
+; e c
+i
+=c
+i
+(i = 1; 2):
+An arbitrary change (9) with r
+2
+= 0 brings system (20) to the system
+ 
+e a
+1
+r
+1
+2(e a
+1
+ 
+e
+b
+2
+)s
+1
++ 2
+e
+b
+1
+s
+2
+((e a
+1
+  2
+e
+b
+2
+)s
+2
+1
++ (2
+e
+b
+1
+ e c
+2
+)s
+1
+s
+2
++e c
+1
+s
+2
+2
+)r
+ 1
+1
+0 2
+e
+b
+2
+r
+1
+2
+e
+b
+2
+s
+1
++e c
+2
+s
+2
+!
+: (21)
+We further omit e over the coe cients in (20) and mark coe cients in (21) by  : 2
+1
+)
+(a
+1
+ b
+2
+)c
+2
+  2b
+1
+b
+2
+= 0 (i. e. we may take
+ 
+b
+1
+;   c
+2
+= 0): Then (21) for r
+1
+= (2b
+2
+)
+ 1
+; s
+1
+=
+ ja
+1
+j
+1=2
+c
+2
+( 2jb
+2
+jR)
+ 1=2
+signb
+2
+; r
+2
+= 0; s
+2
+=j2a
+1
+b
+2
+j
+1=2
+( R)
+ 1=2
+is a CF
+0
+5
+with   = signu;
+u =a
+1
+(2b
+2
+)
+ 1
+6= 0:
+2
+2
+) (a
+1
+ b
+2
+)c
+2
+  2b
+1
+b
+2
+6= 0: Let d
+ 
+= (2b
+1
+ c
+2
+)
+2
++ 4c
+1
+(2b
+2
+ a
+1
+):
+2
+1
+2
+) d
+ 
+  0; i. e. we may take   c
+1
+= 0: In this case b
+ 
+= 2c
+1
+(a
+1
+ b
+2
+) +b
+1
+(c
+2
+  2b
+1
++
+d
+1=2
+ 
+sign (c
+2
+ 2b
+1
+))6= 0; else for r
+1
+=a
+ 1
+1
+; s
+1
+= 2c
+1
+; r
+2
+= 0; s
+2
+= (c
+2
+ 2b
+1
++d
+1=2
+ 
+sign (c
+2
+ 2b
+1
+))
+in system (21)
+ 
+R =   c
+2
+2
+  0; that is impossible. Therefore for r
+1
+= (2b
+2
+)
+ 1
+; s
+1
+= c
+1
+b
+ 1
+ 
+;
+r
+2
+= 0; s
+2
+= (2b
+ 
+)
+ 1
+(c
+2
+  2b
+1
++d
+1=2
+ 
+sign (c
+2
+  2b
+1
+)) (21) is a CF
+0
+8
+with u = a
+1
+(2b
+2
+)
+ 1
+; v =
+(2b
+ 
+)
+ 1
+(4c
+1
+b
+2
++c
+2
+2
+ 2b
+1
+c
+2
++c
+2
+d
+1=2
+ 
+sign (c
+2
+ 2b
+1
+)) and 0<uv< 1; because R =uv(uv 1)< 0:
+2
+2
+2
+) d
+ 
+< 0:
+2
+2
+2
+a) a
+1
+6=b
+2
+: Then c
+ 
+= 2b
+2
+((a
+1
+ b
+2
+)(a
+1
+c
+1
++b
+1
+c
+2
+ c
+1
+b
+2
+) a
+1
+b
+2
+1
+)6= 0; else for r
+1
+= (2b
+2
+)
+ 1
+;
+s
+1
+=b
+1
+; r
+2
+= 0; s
+2
+=b
+2
+ a
+1
+in system (21)   c
+1
+= 0 , that is impossible for d
+ 
+< 0:
+For r
+1
+= (2b
+2
+)
+ 1
+; s
+1
+= b
+1
+jc
+ 
+j
+ 1=2
+; r
+2
+= 0; s
+2
+= (b
+2
+ a
+1
+)jc
+ 
+j
+ 1=2
+system (21) is CF
+0
+9
+with u = a
+1
+(2b
+2
+)
+ 1
+6= 0; 1=2; v = (2b
+1
+b
+2
+  (a
+1
+ b
+2
+)c
+2
+)jc
+ 
+j
+ 1=2
+6= 0;   = signc
+ 
+: At that
+ 
+R = u(uv
+2
++  ) = R(a
+1
+  b
+2
+)
+2
+b
+ 2
+2
+j4c
+ 
+j
+ 1
+< 0; hence jujv
+2
+<  sign (uc
+ 
+): It means that
+  = signu andjujv
+2
+< 1:
+2
+2
+2
+b) a
+1
+=b
+2
+(
+ 
+b
+1
+6= 0): Then (21) for r
+1
+= (2a
+1
+)
+ 1
+; s
+1
+= c
+2
+( 2R)
+ 1=2
+sign (a
+1
+b
+1
+); r
+2
+= 0;
+s
+2
+= 2
+1=2
+a
+1
+( R)
+ 1=2
+sign (a
+1
+b
+1
+) is a CF
+0
+10
+with u = 2
+3=2
+ja
+1
+b
+1
+j( R)
+ 1=2
+; at that 0 < u <
+p
+2;
+because u
+2
+  2 = 2a
+2
+1
+(4b
+2
+1
+  4b
+1
+c
+2
++c
+2
+2
++ 4a
+1
+c
+1
+)R
+ 1
+= 2a
+2
+1
+d
+ 
+R
+ 1
+< 0:  
+Remark 4 CF
+0
+3
+with u = u
+ 
+< 1 by the change (9) with r
+1
+= 1; s
+1
+= 1 u
+ 
+; r
+2
+= 0;
+s
+2
+= 1 is also may be reduced to a CF
+0
+3
+; with u = 2 u
+ 
+> 1:
+CF
+0
+4
+with u = u
+ 
+  1=4 is not a canonical one according to principle 3. Using (9) with
+r
+1
+= u
+ 1
+ 
+; s
+1
+= (1 + (1  4u
+ 
+)
+1=2
+)(2u
+ 
+)
+ 1
+; r
+2
+= 0; s
+2
+= 1 we reduce it to a CF
+0
+3
+with
+u = 1 + (1  4u
+ 
+)
+1=2
+  1:
+CF
+0
+5
+with juj = 1=2;   = signu (R = 1=2) is not a canonical form in accordance with
+principle 2. In case of u = 1=2 CF
+0
+5
+is reduced to a CF
+0
+1
+by the change (9) with r
+1
+;s
+1
+= 1;
+r
+2
+= 2
+ 1=2
+; s
+2
+= 2
+ 1=2
+: For u = 1=2 CF
+0
+5
+is reduced to a CF
+0
+2
+by the change (9) with
+r
+1
+;s
+1
+= 1;  s
+2
+;r
+2
+= 2
+ 1=2
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 60Differential Equations and Control Processes, N 4, 2010
+CF
+0
+9
+with u =u
+ 
+= 1=2;   = 1 (R = (v
+2
+  2)=4< 0) is not a canonical one according
+to principle 2. Applying (9) with r
+1
+= 1; s
+1
+= 2
+1=2
+v(2 v
+2
+)
+ 1=2
+; r
+2
+= 0; s
+2
+= 2
+1=2
+(2 v
+2
+)
+ 1=2
+we reduce it to a CF
+0
+5
+with u = 1=2;   = 1 (R = 1=2):
+CF
+0
+10
+with u = u
+ 
+62 (0; 2
+1=2
+) is not a canonical form because of principles 2 or 3.
+For ju
+ 
+j = 2
+1=2
+by the change (9) with r
+1
+= 1; s
+1
+= 0; r
+2
+= 2
+ 1=2
+signu
+ 
+; s
+2
+= signu
+ 
+CF
+0
+10
+may be reduced to a CF
+0
+9
+with u = 1;   =  1; v = 2
+ 1=2
+(R =  1=2):
+For ju
+ 
+j > 2
+1=2
+using (9) with r
+1
+= (u
+ 
++ (u
+2
+ 
+  2)
+1=2
+)u
+ 1
+ 
+; s
+1
+= (u
+ 
+  (u
+2
+ 
+  2)
+1=2
+)u
+ 1
+ 
+;
+r
+2
+;s
+2
+=u
+ 1
+ 
+CF
+0
+10
+is reduced to a CF
+0
+8
+with u = (u
+2
+ 
+  2 +u
+2
+ 
+(u
+2
+ 
+  2)
+1=2
+)u
+ 1
+ 
+(u
+2
+ 
+  2)
+ 1=2
+6= 0;
+v = ( u
+2
+ 
++ 2 +u
+2
+ 
+(u
+2
+ 
+  2)
+1=2
+)u
+ 1
+ 
+(u
+2
+ 
+  2)
+ 1=2
+6= 0; being uv = 2u
+ 2
+ 
+< 1: For  2
+1=2
+<u
+ 
+< 0
+CF
+0
+10
+by (9) with r
+1
+= 1; s
+1
+;r
+2
+= 0; s
+2
+= 1 is also brought to a CF
+0
+10
+; but with u = u
+ 
+;
+i. e. 0<u< 2
+1=2
+:
+Remark 5 Forms F
+0
+2
+=
+ 
+u
+ 
+v
+ 
+1
+1 0 0
+!
+with u
+ 
+v
+ 
+6= 0; R = 1; and F
+0
+3
+=
+ 
+u
+ 
+v
+ 
+1
+0 0 1
+!
+with u
+ 
+v
+ 
+6= 0; R = u
+2
+ 
+which are not given in the list are noncanonical ones according to
+principle 2 or 3.
+Form F
+0
+2
+for v
+3
+ 
+  4u
+ 
+v
+ 
+  8 = 0; v
+4
+ 
++ 32v
+ 
+< 0 by change (9) with r
+1
+= 4v
+ 2
+ 
+; s
+1
+= 0;
+r
+2
+= 2v
+ 1
+ 
+; s
+2
+= 2v
+ 1
+ 
+is brought to a CF
+0
+4
+with u = 8v
+ 3
+ 
+> 1=4; for v
+3
+ 
+  4u
+ 
+v
+ 
+  8 = 0;
+v
+4
+ 
++ 32v
+ 
+  0 by the change (9) with r
+1
+= v
+ 
+=2; s
+1
+= 4v
+ 1
+ 
+(v
+2
+ 
+  (v
+4
+ 
++ 32v
+ 
+)
+1=2
+)(16 +v
+3
+ 
+ 
+v
+ 
+(v
+4
+ 
++ 32v
+ 
+)
+1=2
+)
+ 1
+; r
+2
+=v
+2
+ 
+=4; s
+2
+= 32v
+ 1
+ 
+(16 +v
+3
+ 
+ v
+ 
+(v
+4
+ 
++ 32v
+ 
+)
+1=2
+)
+ 1
+is reduced to a CF
+0
+3
+with u = 16v
+ 2
+ 
+( (v
+4
+ 
++32v
+ 
+)
+1=2
+ v
+2
+ 
+)(16 +v
+3
+ 
+ v
+ 
+(v
+4
+ 
++ 32v
+ 
+)
+1=2
+)
+ 1
+6= 0: For v
+3
+ 
+  4u
+ 
+v
+ 
+  86= 0;
+if 4u
+ 
+= v
+2
+ 
+; then F
+0
+2
+is reduced to a CF
+0
+7
+by the change (9) with r
+1
+= 0; s
+1
+= 1; r
+2
+= 1;
+s
+2
+= v
+ 
+=2 with u = v
+ 
+=26= 0; if 4u
+ 
+6= v
+2
+ 
+then by the change (9) with r
+1
+= 0; s
+1
+=
+4(v
+3
+ 
+  4u
+ 
+v
+ 
+  8)
+ 2=3
+; r
+2
+= 2(v
+3
+ 
+  4u
+ 
+v
+ 
+  8)
+ 1=3
+; s
+2
+= 2v
+ 
+(v
+3
+ 
+  4u
+ 
+v
+ 
+  8)
+ 2=3
+F
+0
+2
+is
+reduced to a F
+0
+1
+with u = v
+ 
+(v
+3
+ 
+  4u
+ 
+v
+ 
+  8)
+ 1=3
+; v = (4u
+ 
+ v
+2
+ 
+)(v
+3
+ 
+  4u
+ 
+v
+ 
+  8)
+ 2=3
+; being
+uv6= 0; 1:
+Form F
+0
+3
+for v
+2
+ 
+  2v
+ 
+  4u
+ 
++ 1< 0 by the change (9) with r
+1
+= (2v
+ 
+ v
+2
+ 
++ 4u
+ 
+)(4u
+ 
+)
+ 1
+;
+s
+1
+= (2u
+ 
+)
+ 1
+v
+ 
+; r
+2
+= 0; s
+2
+= 1 is brought to a CF
+0
+4
+with u = (2v
+ 
+ v
+2
+ 
++ 4u
+ 
+)=4 > 1=4:
+But for v
+2
+ 
+  2v
+ 
+  4u
+ 
++ 1  0; if v
+2
+ 
+  2v
+ 
+  4u
+ 
+6= 0; by the change (9) with r
+1
+= u
+ 1
+ 
+;
+s
+1
+= (1 v
+ 
++ (v
+2
+ 
+  2v
+ 
+  4u
+ 
++ 1)
+1=2
+)(2u
+ 
+)
+ 1
+; r
+2
+= 0; s
+2
+= 1 F
+0
+3
+is reduced to a CF
+0
+3
+with
+u = 1 + (v
+2
+ 
+  2v
+ 
+  4u
+ 
++ 1)
+1=2
+  1; if v
+2
+ 
+  2v
+ 
+  4u
+ 
+= 0 (v
+ 
+6= 2 ), then by the change (9)
+with r
+1
+=u
+ 1
+ 
+; s
+1
+= v
+ 
+(2u
+ 
+)
+ 1
+; r
+2
+= 0; s
+2
+= 1 F
+0
+3
+is reduced to a CF
+0
+1
+:
+Remark 6 Forms F
+0
+4
+=
+ 
+u
+ 
+0 1
+1 v
+ 
+0
+!
+with u
+ 
+v
+ 
+6= 0; R = 1 +u
+ 
+v
+2
+ 
+and F
+0
+5
+=
+ 
+0 u 1
+1 v 0
+!
+with uv6= 0; R = 1 uv6= 0 are noncanonical in accordance with principles 2, 3.
+Form F
+0
+4
+with u
+ 
+= u; v
+ 
+=  2u for R > 0 by the change (9) with r
+1
+= (R +
+R
+1=2
+)(2u
+3
+)
+ 1
+s
+2
+2
+; s
+1
+= (1 +R
+1=2
+)(2u
+2
+)
+ 1
+s
+2
+; r
+2
+= (R +R
+1=2
+)(1 +R
+1=2
+)(4u
+4
+)
+ 1
+s
+2
+2
+is brought to
+the system with coe cients e a
+1
+;
+e
+b
+1
+;
+e
+b
+2
+;e c
+2
+= 0; e a
+2
+= R
+3=2
+(R
+1=2
++ 1 + 2u
+3
+)(2u
+6
+)
+ 1
+s
+3
+2
+6= 0; else
+e
+P
+2
+  0; that is impossible. For s
+2
+= 2
+1=3
+u
+2
+R
+ 1=2
+(R
+1=2
++ 1 + 2u
+3
+)
+ 1=3
+the obtained system is
+a CF
+0
+2
+:
+Form F
+0
+4
+with u
+ 
+= u; v
+ 
+= v6= 2u for R > 0 by the change (9) with r
+1
+= 2(R +
+R
+1=2
+)(uv
+2
+)
+ 1
+s
+2
+2
+; s
+1
+= (1 +R
+1=2
+)(uv)
+ 1
+s
+2
+; r
+2
+= (R +R
+1=2
+)(1 +R
+1=2
+)(uv)
+ 2
+s
+2
+2
+is brought to the
+system havinge a
+2
+=s
+ 
+(uv)
+ 3
+s
+3
+2
+; where s
+ 
+=R((uv
+2
+ 2u
+2
+v+4)(R
+1=2
++1)+2uv
+2
+);
+e
+b
+2
+;e c
+2
+= 0; be-
+ing s
+ 
+6= 0; else
+e
+P
+2
+  0; that is impossible. For s
+2
+=uvs
+ 1=3
+ 
+the obtained system is a F
+0
+2
+with
+u
+ 
+=u(2u +v)(R +R
+1=2
+)s
+ 2=3
+ 
+6= 0; v
+ 
+= (2u +v)(1 +R
+1=2
+)s
+ 1=3
+ 
+6= 0:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 61Differential Equations and Control Processes, N 4, 2010
+Form F
+0
+4
+with u
+ 
+= u; v
+ 
+= 2u for R < 0 by the change (9) with s
+1
+=j2(u
+2
+ 
+ut
+2
++ t)j
+ 1=2
+; r
+1
+= (u + t
+2
+)(2(u
+2
+  ut
+2
++ t))
+ 1
+; r
+2
+= (1  2tu)(2(u
+2
+  ut
+2
++ t))
+ 1
+; s
+2
+=
+tj2(u
+2
+ ut
+2
++t)j
+ 1=2
+; where t is a real root of the cubic polynomial t
+3
++ 6u
+2
+t
+2
+  3ut + 2u
+3
++ 1;
+is reduced to a F
+0
+6
+with u = 1=2;   = sign(u
+2
+ ut
+2
++t) = 1:
+Form F
+0
+4
+with u
+ 
+=u; v
+ 
+=v6= 2u for R< 0 by (9) with r
+1
+= (u+t
+2
+)(vt
+2
++2t uv)
+ 1
+;
+s
+1
+=jvt
+2
++ 2t uvj
+ 1=2
+; r
+2
+= (1 +tv)(vt
+2
++ 2t uv)
+ 1
+; s
+2
+=tjvt
+2
++ 2t uvj
+ 1=2
+; where t is a
+real root of the cubic polynomial t
+3
++ (v u)vt
+2
++ (u + 2v)t u
+2
+v + 1; is reduced to the system
+ 
+u
+ 
+v
+ 
+ 
+0 1 0
+!
+(22)
+with u
+ 
+= (ut
+2
+ t +u
+2
++uv)(vt
+2
++ 2t uv)
+ 1
+< 0; v
+ 
+= (2u +v)jvt
+2
++ 2t uvj
+ 1=2
+6= 0;
+  = sign (vt
+2
++ 2t uv):
+1) v
+2
+ 
++ 4 
+ 
+(1 u
+ 
+)  0: If 4 
+ 
+u
+ 
+  2 
+ 
+ v
+2
+ 
+ jv
+ 
+j(v
+2
+ 
++ 4 
+ 
+(1 u
+ 
+))
+1=2
+6= 0 then system
+(22) by (9) with r
+1
+= 1; s
+1
+= 2 
+ 
+(4 
+ 
+u
+ 
+  2 
+ 
+ v
+2
+ 
+ jv
+ 
+j(v
+2
+ 
++ 4 
+ 
+(1 u
+ 
+))
+1=2
+)
+ 1
+; r
+2
+= 0;
+s
+2
+= ( v
+ 
+  (v
+2
+ 
++ 4 
+ 
+(1 u
+ 
+))
+1=2
+signv
+ 
+)(4 
+ 
+u
+ 
+  2 
+ 
+ v
+2
+ 
+ jv
+ 
+j(v
+2
+ 
++ 4 
+ 
+(1 u
+ 
+))
+1=2
+)
+ 1
+is
+reduced to a CF
+0
+8
+with u = u
+ 
+; v = 2 
+ 
+(4 
+ 
+u
+ 
+  2 
+ 
+ v
+2
+ 
+ jv
+ 
+j(v
+2
+ 
++ 4 
+ 
+(1 u
+ 
+))
+1=2
+)
+ 1
+: If
+4 
+ 
+u
+ 
+  2 
+ 
+ v
+2
+ 
+ jv
+ 
+j(v
+2
+ 
++ 4 
+ 
+(1 u
+ 
+))
+1=2
+= 0 (for example  
+ 
+= 1; u
+ 
+= 1; v
+ 
+= 1); then
+system (22) by (9) with r
+1
+= 1; s
+1
+= u
+ 1
+ 
+; r
+2
+= ( v
+ 
+  (v
+2
+ 
++ 4 
+ 
+(1 u
+ 
+))
+1=2
+signv
+ 
+)(2 
+ 
+)
+ 1
+;
+r
+2
+= 0 is reduced to a CF
+0
+3
+with u =u
+ 1
+ 
+:
+2) v
+2
+ 
++ 4 
+ 
+(1  u
+ 
+) < 0: Using (9) with r
+1
+= 1; s
+1
+= v
+ 
+ju
+ 
+v
+2
+ 
+   
+ 
+(2u
+ 
+  1)
+2
+j
+ 1=2
+;
+r
+2
+= 0; s
+2
+= (1  2u
+ 
+)ju
+ 
+v
+2
+ 
+  (2u
+ 
+  1)
+2
+j
+ 1=2
+we bring (22) to a CF
+0
+9
+with u = u
+ 
+;   =
+ sign (u
+ 
+v
+2
+ 
+  
+ 
+(2u
+ 
+  1)
+2
+); v =v
+ 
+ju
+ 
+v
+2
+ 
+  
+ 
+(2u
+ 
+  1)
+2
+j
+ 1=2
+; being u
+ 
+v
+2
+ 
+6= 
+ 
+(2u
+ 
+  1)
+2
+; else
+v
+2
+ 
++ 4 
+ 
+(1 u
+ 
+)  0:
+Form F
+0
+5
+for u6= v by (9) with r
+1
+= v(v u
+2
+)s
+ 2=3
+ 
+; s
+1
+= us
+ 1=3
+ 
+; r
+2
+= u(u v
+2
+)s
+ 2=3
+ 
+;
+s
+2
+=  vs
+ 1=3
+ 
+; where s
+ 
+= (uv  1)(v u)(u
+2
++uv +v
+2
+) 6= 0; is reduced to a F
+0
+4
+with
+u
+ 
+=uv(1 uv)s
+ 2=3
+ 
+; v
+ 
+= (u
+3
+  2uv +v
+3
+)s
+ 2=3
+ 
+: In the case u =v =u
+ 
+by (9) with r
+1
+;r
+2
+=
+ 1=2; s
+1
+=j2u
+ 
+  2j
+ 1=2
+; s
+2
+= s
+1
+a form F
+0
+5
+is brought to a CF
+0
+5
+with u = (u
+ 
++ 1)=2;
+  = sign (C
+ 
+  1):
+In Theorem 1 all the linear invertible changes of variables (9) are given in explicit form.
+Therefore the conditions that guarantee the reducing system (2) to an appropriate CF
+1
+i
+may
+be written by using coe cients of (2). For R = 
+2
+ac
+  4 
+ab
+ 
+bc
+> 0 assume
+e a
+1
+=
+2
+6
+6
+6
+4
+P
+1
+(t
+ 
+1
+; 1) t
+ 
+2
+P
+2
+(t
+ 
+1
+; 1); if  
+ab
+6= 0;
+a
+1
++b
+2
+; if 
+ab
+= 0;  
+bc
+6= 0; a
+2
+6= 0;
+1; if  
+ab
+= 0;  
+bc
+6= 0; a
+2
+= 0;
+a
+1
+; if b
+1
+;b
+2
+= 0;
+e a
+2
+=
+2
+6
+6
+6
+4
+t
+ 
+1
+P
+2
+(t
+ 
+1
+; 1) P
+1
+(t
+ 
+1
+; 1); if 
+ab
+6= 0;
+1; if  
+ab
+= 0;  
+bc
+6= 0; a
+2
+6= 0;
+0; if  
+ab
+= 0;  
+bc
+6= 0; a
+2
+= 0;
+a
+2
+; if b
+1
+;b
+2
+= 0;
+e c
+1
+=
+2
+6
+6
+6
+6
+6
+6
+6
+6
+4
+P
+1
+(t
+ 
+2
+; 1) t
+ 
+2
+P
+2
+(t
+ 
+2
+; 1); if 
+ab
+6= 0;
+a
+1
+b
+2
+2
+  2b
+1
+a
+2
+b
+2
++a
+2
+2
+c
+1
+ b
+3
+2
++a
+2
+b
+2
+c
+2
+;
+if  
+ab
+= 0;  
+bc
+6= 0; a
+2
+6= 0;
+(a
+1
+c
+1
+ b
+2
+1
++b
+1
+c
+2
+)c
+ 2
+2
+;
+if  
+ab
+= 0;  
+bc
+6= 0; a
+2
+= 0;
+c
+1
+; if b
+1
+;b
+2
+= 0;
+e c
+2
+=
+2
+6
+6
+6
+4
+t
+ 
+1
+P
+2
+(t
+ 
+2
+; 1) P
+1
+(t
+ 
+2
+; 1); if  
+ab
+6= 0;
+1; if  
+ab
+= 0;  
+bc
+6= 0; a
+2
+6= 0;
+1; if  
+ab
+= 0;  
+bc
+6= 0; a
+2
+= 0;
+c
+2
+; if b
+1
+;b
+2
+= 0;
+(23)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 62Differential Equations and Control Processes, N 4, 2010
+where t
+ 
+1
+= (  
+ac
++R
+1=2
+)(2 
+ab
+)
+ 1
+; t
+ 
+2
+= (  
+ac
+ R
+1=2
+)(2 
+ab
+)
+ 1
+; for R< 0 we assume
+e a
+1
+=
+"
+a
+2
+r
+2
+ 
++ 2b
+2
+r
+ 
++c
+2
+; if a
+2
+6= 0;
+a
+1
+; if a
+2
+= 0;
+e
+b
+1
+=
+"
+ a
+2
+r
+ 
+ b
+2
+; if a
+2
+6= 0;
+b
+1
+; if a
+2
+= 0;
+e
+b
+2
+=
+"
+b
+1
++a
+1
+r
+ 
+ b
+2
+r
+ 
+ a
+2
+r
+2
+ 
+; if a
+2
+6= 0;
+b
+2
+; if a
+2
+= 0;
+e c
+1
+=
+"
+a
+2
+; if a
+2
+6= 0;
+c
+1
+; if a
+2
+= 0;
+e c
+2
+=
+"
+a
+2
+r
+ 
+ a
+1
+; if a
+2
+6= 0;
+c
+2
+; if a
+2
+= 0;
+(24)
+where r
+ 
+is a real root of the cubic polynomial a
+2
+r
+3
+1
++ (2b
+2
+ a
+1
+)r
+2
+1
++ (c
+2
+  2b
+1
+)r
+1
+ c
+1
+:
+Corollary 1 A system (2) in which R = 
+2
+ac
+  4 
+ab
+ 
+bc
+6= 0; by the linear invertible change
+of variables (9) is reduced to CF
+0
+i
+(i = 1; 10); if the coe cients a
+i
+;b
+i
+;c
+i
+(i = 1; 2) satisfy
+conditions:
+CF
+0
+1
+: R> 0; e a
+1
+e c
+2
+6= 0; e a
+2
+;e c
+1
+= 0;
+CF
+0
+2
+: R> 0; e a
+1
+;e c
+2
+= 0;
+CF
+0
+3
+: 1) R> 0; 06=e a
+1
+e c
+1
+e c
+ 2
+2
+  1=4; e a
+2
+= 0; then u = 1 + (1  4e a
+1
+e c
+1
+e c
+ 2
+2
+)
+1=2
+  1;
+2) R> 0; 06=e a
+2
+e c
+2
+e a
+ 2
+1
+  1=4; e c
+1
+= 0; then u = 1 + (1  4e a
+2
+e c
+2
+e a
+ 2
+1
+)
+1=2
+  1;
+CF
+0
+4
+: 1) R > 0; e a
+1
+e c
+1
+e c
+ 2
+2
+> 1=4; e a
+2
+= 0; then u = e a
+1
+e c
+1
+e c
+ 2
+2
+> 1=4; 2) R > 0;
+e a
+2
+e c
+2
+e a
+ 2
+1
+> 1=4; e c
+1
+= 0; then u =e a
+2
+e c
+2
+e a
+ 2
+1
+> 1=4;
+CF
+0
+5
+: 1) R > 0; e a
+1
+e c
+1=3
+1
+=e a
+1=3
+2
+e c
+2
+6= 0; then u = (e a
+2
+1
++e a
+2
+e c
+2
+)(2e a
+2
+1
+  2e a
+2
+e c
+2
+)
+ 1
+6= 0; 1=2;
+  = signu; 2) R< 0; (e a
+1
+ 
+e
+b
+2
+)e c
+2
+  2
+e
+b
+1
+e
+b
+2
+= 0; then u =e a
+1
+(2
+e
+b
+2
+)
+ 1
+6= 0;   = signu;
+CF
+0
+6
+: 1) R> 0; e a
+1
+= 0; e c
+2
+6= 0; then u =e c
+2
+(e a
+2
+e c
+2
+1
+)
+ 1=3
+6= 0; 2) R> 0; e a
+1
+6= 0; e c
+2
+= 0;
+then u =e a
+1
+(e a
+2
+2
+e c
+1
+)
+ 1=3
+6= 0;
+CF
+0
+7
+: 1) R> 0; e a
+1
+e a
+2
+e c
+1
+e c
+2
+6= 0; e a
+2
+1
++e a
+2
+e c
+2
+= 0; then u = 2e a
+1
+(e a
+3
+1
++e a
+2
+2
+e c
+1
+)
+ 1=3
+6= 0;
+2) R> 0; e a
+1
+e a
+2
+e c
+1
+e c
+2
+6= 0; e c
+2
+2
++e a
+1
+e c
+1
+= 0; then u = 2e c
+2
+(e c
+3
+2
++e c
+2
+1
+e a
+2
+)
+ 1=3
+6= 0;
+CF
+0
+8
+: 1) R > 0; e a
+1
+e a
+2
+e c
+1
+e c
+2
+6= 0; e a
+1
+e c
+1=3
+1
+6= e a
+1=3
+2
+e c
+2
+; e a
+2
+1
++e a
+2
+e c
+2
+6= 0; e c
+2
+2
++e a
+1
+e c
+1
+6= 0;
+ 
+e ae c
+6= 0; the condition (17
+1
+) is ful lled for polynomials Q
+1
+(t); Q
+2
+(t) from (15), being u =
+u
+ 
+=e a
+1
+(e a
+2
+2
+e c
+1
+)
+ 1=3
+; v =v
+ 
+=e c
+2
+(e a
+2
+e c
+2
+1
+)
+ 1=3
+; then in CF
+0
+8
+u = (u
+ 
+t
+02
+1
+ t
+02
+1
+t
+00
+1
+ v
+ 
+t
+00
+1
++ 1)(2(t
+02
+1
+t
+00
+1
++
+v
+ 
+t
+0
+1
+ u
+ 
+t
+0
+1
+t
+00
+1
+  1))
+ 1
+6= 0; v = (u
+ 
+t
+002
+1
+ t
+0
+1
+t
+002
+1
+ v
+ 
+t
+0
+1
++ 1)(2(t
+0
+1
+t
+002
+1
+ u
+ 
+t
+0
+1
+t
+00
+1
++v
+ 
+t
+00
+1
+  1))
+ 1
+6= 0;
+2) R< 0; (e a
+1
+ 
+e
+b
+2
+)e c
+2
+ 2
+e
+b
+1
+e
+b
+2
+6= 0; d
+ 
+= (2
+e
+b
+1
+ e c
+2
+)
+2
++4e c
+1
+(2
+e
+b
+2
+ e a
+1
+)  0; then u =e a
+1
+(2
+e
+b
+2
+)
+ 1
+6= 0;
+v = (4e c
+1
+(e a
+1
+ 
+e
+b
+2
+)+2
+e
+b
+1
+(e c
+2
+ 2
+e
+b
+1
++d
+1=2
+ 
+sign (e c
+2
+ 2
+e
+b
+1
+)))
+ 1
+(4e c
+1
+e
+b
+2
++e c
+2
+2
+ 2
+e
+b
+1
+e c
+2
++e c
+2
+d
+1=2
+ 
+sign (e c
+2
+ 2
+e
+b
+1
+))6= 0;
+CF
+0
+9
+: 1) R> 0; e a
+1
+e a
+2
+e c
+1
+e c
+2
+6= 0; e a
+1
+e c
+1=3
+1
+6=e a
+1=3
+2
+e c
+2
+; e a
+2
+1
++e a
+2
+e c
+2
+6= 0; e c
+2
+2
++e a
+1
+e c
+1
+6= 0;  
+e ae c
+6= 0; the
+condition (17
+2
+) is ful lled for polynomials Q
+1
+(t); Q
+2
+(t) from (15), with u =u
+ 
+=e a
+1
+(e a
+2
+2
+e c
+1
+)
+ 1=3
+;
+v = v
+ 
+= e c
+2
+(e a
+2
+e c
+2
+1
+)
+ 1=3
+; then in CF
+0
+9
+u = (t
+2
+ u
+ 
+)(1 t
+2
+v
+ 
+)(2t
+2
+(u
+ 
+v
+ 
+  1))
+ 1
+6= 0; v =
+(u
+ 
+t
+2
++v
+ 
+)j2t
+2
+(u
+ 
+v
+ 
+  1)j
+ 1=2
+6= 0;   = sign (t
+2
+(u
+ 
+v
+ 
+  1)); 2) R< 0; (e a
+1
+ 
+e
+b
+2
+)e c
+2
+  2
+e
+b
+1
+e
+b
+2
+6= 0;
+d
+ 
+= (2
+e
+b
+1
+ e c
+2
+)
+2
++ 4e c
+1
+(2
+e
+b
+2
+ e a
+1
+) < 0; e a
+1
+6=
+e
+b
+2
+; then u =e a
+1
+(2
+e
+b
+2
+)
+ 1
+6= 0; 1=2;   = signu;
+v = (2
+e
+b
+1
+e
+b
+2
+  (e a
+1
+ 
+e
+b
+2
+)e c
+2
+)j2
+e
+b
+2
+((e a
+1
+ 
+e
+b
+2
+)(e a
+1
+e c
+1
++
+e
+b
+1
+e c
+2
+ e c
+1
+e
+b
+2
+) e a
+1
+e
+b
+2
+1
+)j
+ 1=2
+6= 0;
+CF
+0
+10
+: R < 0; (e a
+1
+ 
+e
+b
+2
+)e c
+2
+  2
+e
+b
+1
+e
+b
+2
+6= 0; d
+ 
+= (2
+e
+b
+1
+ e c
+2
+)
+2
++ 4e c
+1
+(2
+e
+b
+2
+ e a
+1
+) < 0; e a
+1
+=
+e
+b
+2
+;
+then u = 2
+3=2
+je a
+1
+e
+b
+1
+j(4 
+e a
+e
+b
+ 
+e
+be c
+  
+2
+e ae c
+)
+ 1=2
+; at that 0<u<
+p
+2:
+Here for R > 0 coe cients of the matrix (18) e a
+1
+;e c
+1
+;e a
+2
+;e c
+2
+are de ned in (23), and for
+R< 0 coe cients of the matrix (20) e a
+1
+;
+e
+b
+1
+;e c
+1
+;
+e
+b
+2
+;e c
+2
+are de ned in (24).
+Electronic Journal. http://www.math.spbu.ru/diffjournal 63Differential Equations and Control Processes, N 4, 2010
+5 Canonical forms for system (2) in case l= 1
+5.1 Linear equivalence of systems for l = 1
+A system (2) _ x =P (x) for l = 1 may be written in the form
+ 
+P
+1
+P
+2
+!
+=P
+0
+(x)
+ 
+p
+1
+x
+1
++q
+1
+x
+2
+p
+2
+x
+1
++q
+2
+x
+2
+!
+=
+
+
+(ff; ); x
+ff
+Hx6  0 ( 
+pq
+6= 0); (25)
+i. e. in (25) a common factor P
+0
+=ffx
+1
++ x
+2
+6  0; matrix H =
+ 
+p
+1
+q
+1
+p
+2
+q
+2
+!
+:
+Hence eigenvalues of H are not equal to zero and have the form
+ 
+1;2
+= (p
+1
++q
+2
+ 
+p
+D)=2; (26)
+where D = (p
+1
++q
+2
+)
+2
+  4 
+pq
+= (p
+1
+ q
+2
+)
+2
++ 4p
+2
+q
+1
+:
+Proposition 2 For the purpose of normalizing one of nonzero coe cients of P
+0
+in system
+(25) may be taken 1. We assume that if ff6= 0; then ff = 1; and if ff = 0; then   = 1:
+Let the change (9) x = Ly (detL =  6= 0) bring a system (2) of the form (25) to
+a system (10) _ y =
+e
+P (y): Let us take
+(e ff;
+e
+ ) = (ff;  )L;
+e
+H =
+ 
+e p
+1
+e q
+1
+e p
+2
+e q
+2
+!
+=L
+ 1
+HL ( 
+e pe q
+= det
+e
+H = 
+pq
+); (27)
+i. e. e ff =ffr
+1
++ r
+2
+;
+e
+  =ffs
+1
++ s
+2
+;
+e
+H = 
+ 1
+ 
+r
+1
+ 
+ps
++r
+2
+ 
+qs
+s
+1
+ 
+ps
++s
+2
+ 
+qs
+ r
+1
+ 
+pr
+ r
+2
+ 
+qr
+ s
+1
+ 
+pr
+ s
+2
+ 
+qr
+!
+In addition, as matrix product is associative, we have:
+
+
+(ff; ); Ly
+ff
+=
+
+
+(ff; )L; y
+ff
+: (28)
+Theorem 2 The system (10) obtained form a system (2) of the form (25) by change (9)
+has the form
+ 
+e
+P
+1
+e
+P
+2
+!
+=
+e
+P
+0
+(y)
+ 
+e p
+1
+y
+1
++e q
+1
+y
+2
+e p
+2
+y
+1
++e q
+2
+y
+2
+!
+=
+
+
+(e ff;
+e
+ ); y
+ff
+e
+Hy (
+e
+P
+0
+6  0); (29)
+where coe cients of the polynomial
+e
+P
+0
+=e ffy
+1
++
+e
+ y
+2
+and matrix
+e
+H are introduced in (27).
+So, the case l = 1 is invariant with respect to change (9).
+Proof The formula (29) follows from equalities:
+e
+P (y)
+(11)
+= L
+ 1
+P (Ly)
+(25)
+= L
+ 1
+
+
+(ff; ); Ly
+ff
+HLy
+(28)
+=
+
+
+(ff; )L;y
+ff
+L
+ 1
+HLy
+(27)
+=
+
+
+(e ff;
+e
+ ); y
+ff
+e
+Hy:
+Note that the condition e ff
+2
++
+e
+ 
+2
+= 0 is equivalent to ff
+2
++ 
+2
+= 0; because  
+rs
+6= 0:  
+Electronic Journal. http://www.math.spbu.ru/diffjournal 64Differential Equations and Control Processes, N 4, 2010
+5.2 Construction of canonical forms when l = 1
+Without loss of generality we suppose that in (25) ff6= 0; as if ff = 0 then by renumbering
+(14) we have a system (29) of the form
+ 
+e
+P
+1
+e
+P
+2
+!
+= y
+1
+ 
+q
+2
+y
+1
++p
+2
+y
+2
+q
+1
+y
+1
++p
+1
+y
+2
+!
+:
+Now, following to Proposition 2 we take ff = 1; i. e. the common factor in (25) is always
+P
+0
+=x
+1
++ x
+2
+:
+To simplify (25) we take at  rst such a change (9) that reduces matrix H to a Jordan
+form
+e
+H in (29).
+It is evidently that the form of the change depends on the sign of the discriminant
+D = (p
+1
++q
+2
+)
+2
+  4 
+pq
+from the formula (26) for eigenvalues of matrix H  
+1;2
+6= 0:
+Then in (29) with Jordan matrix
+e
+H we will perform an arbitrary change (9) choosing
+its coe cients such that the obtained system be the simplest in the sense of de nition 7 {
+a canonical form (CF
+2
+):
+We will mark all the elements of obtained system by the symbol  . Similarly to (27)
+coe cients of
+ 
+P
+0
+have the form
+  ff =e ffr
+1
++
+e
+ r
+2
+;
+ 
+  =e ffs
+1
++
+e
+ s
+2
+: (30)
+The list of canonical forms of (2) in case of l = 1 :
+CF
+1
+1
+=
+ 
+u 0 0
+0 1 0
+!
+; CF
+1
+2
+=
+ 
+0   0
+1 0 0
+!
+;
+CF
+1
+3
+=
+ 
+u 1 0
+0 1 0
+!
+; CF
+1
+4
+=
+ 
+1 0 0
+1 1 0
+!
+; CF
+1
+5
+=
+ 
+u  1 0
+1 0 0
+!
+;
+where in CF
+1
+1
+u6= 0; in CF
+1
+2
+  = 1; in CF
+1
+3
+0<juj< 1 or u = 1; in CF
+1
+5
+0<u< 2:
+Theorem 3 For l = 1 system (2) of the form (25) by a linear invertible change of variables
+(9) is brought to one of 5 linearly nonequivalent CF
+1
+:
+Proof
+1) D> 0; i. e. in (26)  
+1
+; 
+2
+6= 0; are real and different. More exactly,
+ 
+1
+= (p
+1
++q
+2
++ 
+ 
+p
+D)=2;  
+2
+= (p
+1
++q
+2
+  
+ 
+p
+D)=2;  
+ 
+=p
+1
+ q
+2
++ 
+ 
+p
+D;
+where  
+ 
+=f sign (p
+1
+ q
+2
+) for p
+1
+6=q
+2
+; 1 for p
+1
+=q
+2
+g; then  
+ 
+6= 0:
+The change (9) with L =
+ 
+ 
+ 
+2q
+1
+2p
+2
+  
+ 
+!
+reduces (25) to a system (29) of the form
+ 
+e ff 
+1
+e
+  
+1
+0
+0 e ff 
+2
+e
+  
+2
+!
+with e ff = 2 p
+2
++ 
+ 
+;
+e
+  = 2q
+1
+   
+ 
+;
+e
+H =
+ 
+ 
+1
+0
+0  
+2
+!
+: (31)
+Further an arbitrary change (9) brings (31) to the system
+ 
+ 1
+ 
+  ff( 
+1
+r
+1
+s
+2
+  
+2
+r
+2
+s
+1
+)   ff( 
+1
+  
+2
+)s
+1
+s
+2
++
+ 
+ ( 
+1
+r
+1
+s
+2
+  
+2
+r
+2
+s
+1
+)
+ 
+ ( 
+1
+  
+2
+)s
+1
+s
+2
+  ff( 
+2
+  
+1
+)r
+1
+r
+2
+  ff( 
+2
+r
+1
+s
+2
+  
+1
+r
+2
+s
+1
+) +
+ 
+ ( 
+2
+  
+1
+)r
+1
+r
+2
+ 
+ ( 
+2
+r
+1
+s
+2
+  
+1
+r
+2
+s
+1
+)
+!
+(32)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 65Differential Equations and Control Processes, N 4, 2010
+with (  ff;
+ 
+ ) from (30) and
+ 
+H = 
+ 1
+ 
+ 
+1
+r
+1
+s
+2
+  
+2
+r
+2
+s
+1
+( 
+1
+  
+2
+)s
+1
+s
+2
+ ( 
+1
+  
+2
+)r
+1
+r
+2
+ 
+2
+r
+1
+s
+2
+  
+1
+r
+2
+s
+1
+!
+:
+1
+1
+) e ff = 0 (
+e
+ 6= 0): Then
+ 
+  = 0 for s
+2
+= 0 and system (32) has the form
+ 
+ 
+2
+e
+ r
+2
+0 0
+( 
+1
+  
+2
+)
+e
+ r
+1
+r
+2
+s
+ 1
+1
+ 
+1
+e
+ r
+2
+0
+!
+: For r
+1
+= 0; s
+1
+= 1; r
+2
+= ( 
+1
+)
+ 1
+e
+  this system is a CF
+1
+1
+with u = 
+ 1
+1
+ 
+2
+6= 0; 1:
+1
+2
+)
+e
+  = 0 (e ff6= 0): Then
+ 
+  = 0 for s
+1
+= 0 and the system (32) has the form
+ 
+e ff 
+1
+r
+1
+0 0
+e ff( 
+2
+  
+1
+)r
+1
+r
+2
+s
+ 1
+2
+e ff 
+2
+r
+1
+0
+!
+: For r
+1
+= (e ff 
+2
+)
+ 1
+; r
+2
+= 0; s
+2
+= 1 this system is a CF
+1
+1
+with u = 
+1
+ 
+ 1
+2
+6= 0; 1:
+1
+3
+) e ff;
+e
+ 6= 0: Then
+ 
+  = 0 for s
+2
+= e ff
+e
+ 
+ 1
+s
+1
+and (32) has the form
+ 
+ 
+1
+e ffr
+1
++ 
+2
+e
+ r
+2
+( 
+1
+  
+2
+)e ffs
+1
+0
+( 
+1
+  
+2
+)
+e
+ r
+1
+r
+2
+s
+ 1
+1
+ 
+2
+e ffr
+1
++ 
+1
+e
+ r
+2
+0
+!
+: (33)
+1
+1
+3
+)  
+1
+=  
+2
+; then in system (33)   a
+1
+= 
+ 
+b
+2
+=2 =  
+1
+(e ffr
+1
+ 
+e
+ r
+2
+); hence for r
+1
+;s
+1
+=
+(2 
+1
+e ff)
+ 1
+; r
+2
+= (2 
+1
+e
+ )
+ 1
+it is a CF
+1
+2
+with   = 1:
+1
+2
+3
+)  
+1
+6=  
+2
+; then system (33) for r
+1
+= ( 
+2
+e ff)
+ 1
+; s
+1
+= (( 
+1
+  
+2
+)e ff)
+ 1
+; r
+2
+= 0 is a CF
+1
+3
+with u =  
+1
+ 
+ 1
+2
+6= 0; 1: For r
+1
+= 0; s
+1
+= (( 
+1
+  
+2
+)e ff)
+ 1
+; r
+2
+= ( 
+1
+e
+ )
+ 1
+it is a CF
+1
+3
+with
+u = 
+ 1
+1
+ 
+2
+6= 0; 1:
+Hence, choosing a required change one can always obtain 0<juj< 1:
+2) D = 0; i. e. in (26)   = 
+1;2
+= (p
+1
++q
+2
+)=26= 0: 2
+1
+) q
+1
+6= 0: The change
+ 
+0 2q
+1
+2 q
+2
+ p
+1
+!
+brings (25) to a system (29)of the form
+ 
+ e ff  
+e
+  0
+e ff  e ff +
+e
+   
+e
+ 
+!
+with e ff = 2 ;
+e
+  = q
+2
+  p
+1
++ 2q
+1
+;
+e
+H =
+ 
+  0
+1  
+!
+: (34)
+2
+1
+1
+)
+e
+  = 0 (e ff6= 0): Then the normalizing (13) with r
+1
+= (e ff )
+ 1
+; s
+2
+=e ff
+ 1
+ 
+ 2
+brings
+(34) to a CF
+1
+4
+:
+2
+2
+1
+)
+e
+ 6= 0: Then an arbitrary change (9) brings (34) to a system
+ 
+ 1
+ 
+  ff(   r
+1
+s
+1
+)
+ 
+ (   r
+1
+s
+1
+)    ffs
+2
+1
+ 
+ 
+ s
+2
+1
+  ffr
+2
+1
+  ff(   +r
+1
+s
+1
+) +
+ 
+ r
+2
+1
+ 
+ (   +r
+1
+s
+1
+)
+!
+; (35)
+where (  ff;
+ 
+ ) are from (30), and
+ 
+H = 
+ 1
+ 
+   r
+1
+s
+1
+ s
+2
+1
+r
+2
+1
+   +r
+1
+s
+1
+!
+:
+In the system (35) assume that
+ 
+  = 0; for which purpose we take s
+2
+= e ff
+e
+ 
+ 1
+s
+1
+; then (35)
+has the form
+ 
+(e ff  +
+e
+ )r
+1
++
+e
+  r
+2
+e
+ s
+1
+0
+ 
+e
+ r
+2
+1
+s
+ 1
+1
+(e ff  
+e
+ )r
+1
++
+e
+  r
+2
+0
+!
+: For r
+1
+= 0; s
+1
+=
+e
+ 
+ 1
+; r
+2
+= (
+e
+  )
+ 1
+this is a CF
+1
+3
+with u = 1:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 66Differential Equations and Control Processes, N 4, 2010
+2
+2
+) q
+1
+= 0: Then in (26)   =p
+1
+=q
+2
+6= 0:
+2
+1
+2
+) p
+2
+= 0; i. e. in (25) H =
+ 
+p
+1
+0
+0 p
+1
+!
+: An arbitrary change (9) reduces (25) to
+the system
+ 
+e ffp
+1
+e
+ p
+1
+0
+0 e ffp
+1
+e
+ p
+1
+!
+with e ff = r
+1
++ r
+2
+;
+e
+  = s
+1
++ s
+2
+;
+e
+H = H: For r
+1
+= p
+ 1
+1
+;
+s
+1
+=  ; r
+2
+= 0; s
+2
+= 1 this is a CF
+1
+1
+with u = 1:
+2
+2
+2
+) p
+2
+6= 0; i. e. in (25) H =
+ 
+p
+1
+0
+p
+2
+p
+1
+!
+: The normalizing (13) with r
+1
+= 1; s
+2
+= p
+2
+reduces (25) to the system (34) from 2
+1
+); being e ff = 1;
+e
+  = p
+2
+and   =p
+1
+:
+3) D< 0; i. e. eigenvalues  
+1
+; 
+2
+of H are complex conjugate and p
+2
+q
+1
+< 0:
+The change
+ 
+p
+ D p
+1
+ q
+2
+0 2p
+2
+!
+reduces (25) to a system (29) of the form
+ 
+e ffp
+ 
+e ffq
+ 
++
+e
+ p
+ 
+e
+ q
+ 
+ e ffq
+ 
+e ffp
+ 
+ 
+e
+ q
+ 
+e
+ p
+ 
+!
+with e ff =
+p
+ D6= 0;
+e
+  =p
+1
+ q
+2
++2 p
+2
+;
+e
+H =
+ 
+p
+ 
+q
+ 
+ q
+ 
+p
+ 
+!
+; (36)
+where p
+ 
+= (p
+1
++q
+2
+)=2 (= Re 
+1
+); q
+ 
+= 
+p
+ D=2 (= Im 
+1
+)< 0:
+After that a change (9) brings (36) to the system
+ 
+ 1
+ 
+  ff(p
+ 
+  +q
+ 
+ 
+0
+)   ffq
+ 
+s
+0
++
+ 
+ (p
+ 
+  +q
+ 
+ 
+0
+)
+ 
+ q
+ 
+s
+0
+   ffq
+ 
+r
+0
+  ff(p
+ 
+  q
+ 
+ 
+0
+) 
+ 
+ q
+ 
+r
+0
+ 
+ (p
+ 
+  q
+ 
+ 
+0
+)
+!
+; (37)
+where (  ff;
+ 
+ ) is from (30), matrix
+ 
+H =  
+ 1
+ 
+p
+ 
+  +q
+ 
+ 
+0
+q
+ 
+s
+0
+ q
+ 
+r
+0
+p
+ 
+  q
+ 
+ 
+0
+!
+with  
+0
+= r
+1
+s
+1
++r
+2
+s
+2
+;
+r
+0
+=r
+2
+1
++r
+2
+2
+; s
+0
+=s
+2
+1
++s
+2
+2
+:
+In 1zhord3w)
+ 
+  = 0 for s
+1
+= e ff
+ 1
+e
+ s
+2
+and (37) has the form
+ 
+(e ffp
+ 
+ 
+e
+ q
+ 
+)r
+1
++ (e ffq
+ 
++
+e
+ p
+ 
+)r
+2
+e ff
+ 1
+(e ff
+2
++
+e
+ 
+2
+)q
+ 
+s
+2
+0
+ e ff(r
+2
+1
++r
+2
+2
+)q
+ 
+s
+ 1
+2
+(e ffp
+ 
++
+e
+ q
+ 
+)r
+1
+  (e ffq
+ 
+ 
+e
+ p
+ 
+)r
+2
+0
+!
+:
+3
+1
+) p
+ 
+6= 0: Then for r
+1
+=
+(e ffq
+ 
+ 
+e
+ p
+ 
+) signp
+ 
+q
+ 
+(e ff
+2
++
+e
+ 
+2
+)(p
+2
+ 
++q
+2
+ 
+)
+1=2
+; r
+2
+=
+(e ffp
+ 
++
+e
+ q
+ 
+)signp
+ 
+q
+ 
+(e ff
+2
++
+e
+ 
+2
+)(p
+2
+ 
++q
+2
+ 
+)
+1=2
+; s
+1
+=
+e
+ 
+q
+ 
+(e ff
+2
++
+e
+ 
+2
+)
+; s
+2
+= 
+e ff
+q
+ 
+(e ff
+2
++
+e
+ 
+2
+)
+; this is a CF
+1
+5
+with u = 2jp
+ 
+j(p
+2
+ 
++q
+2
+ 
+)
+ 1=2
+(0 < u < 2);
+  = 1:
+3
+2
+) p
+ 
+= 0: Then by the same change we obtain a CF
+1
+2
+with   = 1:  
+Remark 7 CF
+1
+3
+for u = 1 is not a canonical form according to principle 2. By the
+change (9) with r
+1
+;r
+2
+;s
+2
+= 1; s
+1
+= 0 it may be reduced to a CF
+1
+2
+with   = 1: As is proved
+in theorem, forjuj> 1 the system is also reduced to a CF
+1
+3
+; but with 0<juj< 1:
+Remark 8 CF
+1
+5
+forjuj  2 is not a canonical form according to principle 3. For u =u
+ 
+and ju
+ 
+j = 2 by change (9) with r
+1
+= u
+ 1
+ 
+; s
+1
+= 0; r
+2
+= 1 u
+ 1
+ 
+; s
+2
+= 1 it is reduced to
+Electronic Journal. http://www.math.spbu.ru/diffjournal 67Differential Equations and Control Processes, N 4, 2010
+a CF
+1
+3
+with u =u
+ 1
+ 
+: And forju
+ 
+j> 2 by change (9) with r
+1
+= 2(u
+ 
+  (u
+2
+ 
+  4)
+1=2
+)
+ 1
+; s
+1
+= 0;
+r
+2
+= 1; s
+2
+= 1 it is reduced to a CF
+1
+3
+with u = (u
+ 
+  (u
+2
+ 
+  4))(u
+ 
+  (u
+2
+ 
+  4)
+1=2
+)
+ 1
+; being
+0 <juj < 1: The form CF
+1
+5
+with u = u
+ 
+for  2 < u
+ 
+< 0 by change (13) with r
+1
+= 1;
+s
+2
+= 1 is also reduced to a CF
+1
+5
+with u = u
+ 
+:
+Remark 9 Forms F
+1
+1
+=
+ 
+0 u
+ 
+0
+1 1 0
+!
+and F
+1
+2
+=
+ 
+u
+ 
+1 0
+1 0 0
+!
+with the structure of CF
+1
+5
+;
+which are not listed, are not canonical forms according to principle 3.
+The form F
+1
+1
+for u
+ 
+  1=4 by change (9) with r
+1
+= (1  (4u
+ 
++ 1)
+1=2
+)(1 + 2u
+ 
+  (4u
+ 
++
+1)
+1=2
+)
+ 1
+; s
+1
+= 0; r
+2
+= 2((4u
+ 
++ 1)
+1=2
+  1  2u
+ 
+)
+ 1
+; s
+2
+= u
+ 1
+ 
+is reduced to a CF
+1
+3
+with
+u = 2u
+ 
+((4u
+ 
++ 1)
+1=2
+  1  2u
+ 
+)
+ 1
+6= 0; for u
+ 
+< 1=4 by change (9) with r
+1
+= ( u
+ 
+)
+ 1=2
+;
+s
+1
+= 0; r
+2
+= ( u
+ 
+)
+ 3=2
+; s
+2
+= u
+ 1
+ 
+is reduced to a system CF
+1
+5
+with u = ( u
+ 
+)
+ 1=2
+; being
+ 2<u< 0:
+The form F
+1
+2
+with u =u
+ 
+by change (9) with r
+1
+= ((u
+2
+ 
++ 4)
+1=2
+ u
+ 
+)=2; s
+1
+= 0; r
+2
+= 1;
+s
+2
+= 1 is brought to a system CF
+1
+3
+with u =u
+ 
+((u
+2
+ 
++ 4)
+1=2
+ u
+ 
+)=2  1< 0:
+Remark 10 The form F
+1
+3
+=
+ 
+u 0 0
+1 1 0
+!
+is a CF
+1
+4
+for u = 1; and for u 6= 1 it is
+not a canonical form according to principle 2. By change (9) with r
+1
+;s
+2
+= 1; s
+1
+= 0;
+r
+2
+= (u  1)
+ 1
+F
+1
+3
+is reduced to a CF
+1
+1
+:
+Remark 11 Every CF
+1
+i
+(i = 1; 5) by renumbering (14) is brought to CF
+1p
+i
+in accordance
+with de nition 8.
+In theorem (3) all the linear invertible changes (9) are given in explicit form. Therefore
+the conditions assuring the reduction of system (2) to a corresponding CF
+1
+i
+; may be written
+using coe cients of (25).
+Corollary 2 The system (25) in which p
+1
+q
+2
+ p
+2
+q
+1
+6= 0 by a linear invertible change (9)
+is brought to a CF
+1
+i
+(i = 1; 5); if the following parameters: the coe cient   of P
+0
+(ff = 1)
+and elements p
+1
+;q
+1
+;p
+2
+;q
+2
+of matrix H satisfy conditions:
+CF
+1
+1
+: 1) D > 0; 2 p
+2
++p
+1
+ q
+2
++ 
+ 
+p
+D = 0; then u =  
+ 1
+1
+ 
+2
+6= 0; 1; 2) D > 0;
+2q
+1
+  (p
+1
+ q
+2
++ 
+ 
+p
+D) = 0; then u = 
+1
+ 
+ 1
+2
+6= 0; 1; 3) D = 0; q
+1
+= 0; p
+2
+= 0; then u = 1;
+CF
+1
+2
+: 1) D > 0; p
+1
++q
+2
+= 0; 2 p
+2
++ 2p
+1
++ 
+ 
+p
+D; 2q
+1
+  (2p
+1
++ 
+ 
+p
+D)6= 0; then
+  = 1; 2) D< 0; p
+1
++q
+2
+= 0; then   = 1;
+CF
+1
+3
+: 1) D> 0; p
+1
++q
+2
+6= 0; 2 p
+2
++p
+1
+ q
+2
++ 
+ 
+p
+D6= 0; 2q
+1
+  (p
+1
+ q
+2
++ 
+ 
+p
+D)6= 0;
+then u =  
+ 1
+1
+ 
+2
+for j 
+1
+j >j 
+2
+j; u =  
+1
+ 
+ 1
+2
+for j 
+1
+j <j 
+2
+j; i. e. 0 <juj < 1; 2) D = 0;
+q
+1
+6= 0; 2q
+1
+  p
+1
++ q
+2
+6= 0; then u = 1; 3) D = 0; q
+1
+= 0; p
+2
+6= 0;  6= 0; then u = 1;
+CF
+1
+4
+: 1) D = 0; q
+1
+6= 0; 2q
+1
+  p
+1
++ q
+2
+= 0; 2) D = 0; q
+1
+= 0; p
+2
+6= 0;   = 0;
+CF
+1
+5
+: D< 0; p
+1
++q
+2
+6= 0; then u =jp
+1
++q
+2
+j(p
+1
+q
+2
+ p
+2
+q
+1
+)
+ 1=2
+; 0<u< 2:
+Here D = (p
+1
+ q
+2
+)
+2
++4p
+2
+q
+1
+;  
+1
+= (p
+1
++q
+2
++ 
+ 
+p
+D)=26= 0;  
+2
+= (p
+1
++q
+2
+  
+ 
+p
+D)=26= 0;
+ 
+ 
+=f sign (p
+1
+ q
+2
+) for p
+1
+6=q
+2
+; 1 for p
+1
+=q
+2
+g:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 68Differential Equations and Control Processes, N 4, 2010
+6 Canonical forms of system (2) in case of l= 2
+6.1 Linear equivalency of systems for l = 2
+Assertion 4 For system (2) the following conditions are equivalent:
+1) l = 2; 2)9k :P
+2
+ kP
+1
+(a
+2
+=ka
+1
+; b
+2
+=kb
+1
+; c
+2
+=kc
+1
+); 3)  
+ab
+; 
+ac
+; 
+bc
+= 0:
+Proof 1) , 2) by de nition 5 and proposition 1 .
+It is evidently that 2) ) 3): Inversely, let 3) hold. Then, for instance, a
+1
+6= 0: Let
+k =a
+2
+=a
+1
+: Because of a
+1
+b
+2
+ a
+2
+b
+1
+= 0; b
+2
+=kb
+1
+: In much the same way c
+2
+=kc
+1
+:  
+Assertion 5 For system (2) the condition P
+2
+(x)  0 is invariant with respect to any
+change (9) with r
+2
+= 0:
+Proof Perform in the system (2)with P
+2
+  0 a change (9). According to (12) in obtained
+system we have (10)
+e
+A = 
+ 1
+ 
+s
+2
+P
+1
+(r
+1
+;r
+2
+) s
+2
+(a
+1
+r
+1
+s
+1
++b
+1
+ 
+ 
++c
+1
+r
+2
+s
+2
+) s
+2
+P
+1
+(s
+1
+;s
+2
+)
+ r
+2
+P
+1
+(r
+1
+;r
+2
+)  r
+2
+(a
+1
+r
+1
+s
+1
++b
+1
+ 
+ 
++c
+1
+r
+2
+s
+2
+)  r
+2
+P
+1
+(s
+1
+;s
+2
+)
+!
+: (38)
+If
+e
+P
+2
+  0; then r
+2
+= 0; because otherwise common factors of
+e
+P
+1
+and
+e
+P
+2
+vanish, i. e.
+e
+P
+1
+  0: If r
+2
+= 0; then in (38)
+e
+P
+2
+  0:  
+Assertion 6 Any change (9) with r
+2
+= s
+2
+6= 0 transforms system (2) with P
+2
+(x)  0
+into the system (10) with
+e
+P
+1
+ 
+e
+P
+2
+:
+The assertion 6 immediately follows from (38).
+In accordance with assertion 4 for l = 2 there is such k; that in (2) P
+2
+= kP
+1
+: Hence
+system (2) has one of two forms:
+I) b
+1
+ a
+1
+c
+1
+:
+ 
+P
+1
+P
+2
+!
+= (ffx
+1
++ x
+2
+)
+ 
+p
+1
+x
+1
++q
+1
+x
+2
+kp
+1
+x
+1
++kq
+1
+x
+2
+! 
+ff
+2
++ 
+2
+6= 0
+p
+2
+1
++q
+2
+1
+6= 0
+!
+; (39)
+i. e. H =
+ 
+p
+1
+q
+1
+kp
+1
+kq
+1
+!
+has eigenvalues  
+1
+= p
+1
++kq
+1
+;  
+2
+= 0: Thus, (39) is the system (25)
+from the case l = 1; with p
+2
+=kp
+1
+; q
+2
+=kq
+2
+and detH = 
+pq
+= 0:
+By following to proposition 2, we assume that in system (39), if ff6= 0; then ff = 1
+and P
+0
+=x
+1
++ x
+2
+; and if ff = 0; then   = 1 and P
+0
+=x
+2
+:
+II) b
+2
+1
+<a
+1
+c
+1
+:
+ 
+P
+1
+P
+2
+!
+= (a
+1
+x
+2
+1
++ 2b
+1
+x
+1
+x
+2
++c
+1
+x
+2
+2
+)
+ 
+1
+k
+!
+: (40)
+Remark 12 The system (39) may be written in the form (40), but the form (39) is more
+preferable as it allows us to use results obtained for (25).
+Proposition 3 To eliminate an ambiguity appearing when factoring out the linear common
+factor P
+0
+from P in system (39) , we arrange for (if it is possible) to factor out such a linear
+common factor that in matrix H the eigenvalue  
+1
+=p
+1
++kq
+1
+6= 0:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 69Differential Equations and Control Processes, N 4, 2010
+6.2 Construction of degenerate canonical forms for l = 2
+Simplify system (39), following to the scheme of contraction for (25).
+By theorem 2 a change (9) brings both system (25) and system (39) to (29)
+e
+P =
+
+
+(e ff;
+e
+ ); y
+ff
+e
+Hy; where vector (e ff;
+e
+ ) and matrix
+e
+H are de ned in (27), but  
+e pe q
+= det
+e
+H = 0:
+Take a change (9) such that in system (29) matrix
+e
+H become Jordan matrix, which is
+possible due to formula (27
+2
+) .
+So, if  
+1
+= p
+1
++kq
+1
+6= 0; then change (9) with L
+1
+=
+ 
+1 q
+1
+k  p
+1
+!
+; and if  
+1
+= 0; then
+q
+1
+6= 0 and change (9) with L
+2
+=
+ 
+1 0
+k q
+ 1
+1
+!
+transforms system (39) in systems (29) of two
+following forms:
+e ff =ff + k;
+e
+  =ffq
+1
+  p
+1
+;
+e
+H =
+ 
+p
+1
++kq
+1
+0
+0 0
+!
+or
+e
+A =
+ 
+ 
+1
+e ff  
+1
+e
+  0
+0 0 0
+!
+;
+e ff =ff + k;
+e
+  = q
+ 1
+1
+;
+e
+H =
+ 
+0 1
+0 0
+!
+or
+e
+A =
+ 
+0 e ff
+e
+ 
+0 0 0
+!
+:
+(41)
+By this means the existence of zero eigenvalue  
+2
+of H resulted in
+e
+P
+2
+  0 in systems (41):
+Further by change (9) we will simplify as much as possible and normalize systems (41
+1
+)
+and (41
+2
+); such that the condition P
+2
+  0 holds. Thereby we reduce the systems to the
+canonical forms for which principle 1 is not satis ed.
+Taking into account assertion 5 we note that an arbitrary change (9) with r
+2
+= 0 brings
+systems (41
+1
+) and (41
+2
+) to systems
+ 
+1
+ 
+e ffr
+1
+2e ffs
+1
++
+e
+ s
+2
+(e ffs
+1
++
+e
+ s
+2
+)s
+1
+r
+ 1
+1
+0 0 0
+!
+and
+ 
+0 e ffs
+2
+(e ffs
+1
++
+e
+ s
+2
+)s
+2
+r
+ 1
+1
+0 0 0
+!
+: (42)
+For l = 2 the concept of degenerate CF naturally comes into existence.
+De nition 9 For l = 2 system (2) is said to be degenerate canonical form (DCF
+2
+); is it
+is a CF
+2
+with respect to de nition 7, where principle 1 is substituted for the condition P
+2
+  0:
+Remark 13 A generalized normal form of a system, where DCF
+2
+is the unperturbed part,
+is a generalization of the Belitski normal form (see [7], [14]) for the case when the unperturbed
+part is degenerate but is not linear.
+The LIST of degenerate canonical forms of system (2) in case of l = 2 :
+DCF
+2
+1
+=
+ 
+1 0 0
+0 0 0
+!
+; DCF
+2
+2
+=
+ 
+0 1 0
+0 0 0
+!
+; DCF
+2
+3
+=
+ 
+0 0 1
+0 0 0
+!
+;
+DCF
+2
+4
+=
+ 
+1 1 0
+0 0 0
+!
+; DCF
+2
+5
+=
+ 
+1 0 1
+0 0 0
+!
+:
+Theorem 4 For l = 2 system (2) of the form (39), (40) by a linear invertible change (9)
+is reduced to one of 5 linearly nonequivalent DCF
+2
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 70Differential Equations and Control Processes, N 4, 2010
+Proof I) System (2) has the form (39).
+1)  
+1
+=p
+1
++kq
+1
+6= 0: System (41
+1
+) is obtained from (39), and system (42
+1
+) is obtained
+from (41
+1
+):
+1
+1
+)
+e
+  = 0 (e ff6= 0): Then (42
+1
+) for r
+1
+= ( 
+1
+e ff)
+ 1
+; s
+1
+= 0; s
+2
+= 1 is a DCF
+2
+1
+:
+1
+2
+) e ff = 0 (
+e
+ 6= 0): Then (42
+1
+) for r
+1
+= 1; s
+1
+= 0; s
+2
+= ( 
+1
+e
+ )
+ 1
+is a DCF
+2
+2
+:
+1
+3
+) e ff;
+e
+ 6= 0: Then (42
+1
+) for r
+1
+= ( 
+1
+e ff)
+ 1
+; s
+1
+= 0; s
+2
+= ( 
+1
+e
+ )
+ 1
+is a DCF
+2
+4
+:
+2)  
+1
+=p
+1
++kq
+1
+= 0 (q
+1
+6= 0): Systems (41
+2
+) and (42
+2
+) are obtained from (39).
+2
+1
+) e ff = 0 (
+e
+ 6= 0): Then (42
+2
+) for r
+1
+=
+e
+ ; s
+1
+= 0; s
+2
+= 1 is a DCF
+2
+3
+:
+2
+2
+)
+e
+  = 0 (e ff6= 0): Then in system (41
+2
+)
+e
+P
+1
+=e ffx
+1
+x
+2
+: By proposition 3 the case 2
+2
+) is
+impossible. Such a situation applies to the case 1):
+2
+3
+) e ff;
+e
+  6= 0: Then in (41
+2
+)
+e
+P
+1
+= (e ffx
+1
++
+e
+ x
+2
+)x
+2
+: By proposition 3 the case 2
+3
+) is
+impossible. Such a situation applies to the case 1):
+II) System (2) has the form (40).
+In accordance with (12) any change (9) brings (2) with P
+2
+= kP
+1
+to a system with
+coe cients
+e a
+1
+= (s
+2
+ ks
+1
+)P
+1
+(r
+1
+;r
+2
+) 
+ 1
+; e a
+2
+= (kr
+1
+ r
+2
+)P
+1
+(r
+1
+;r
+2
+) 
+ 1
+;
+e
+b
+1
+= (s
+2
+ ks
+1
+)(a
+1
+r
+1
+s
+1
++b
+1
+(r
+1
+s
+2
++r
+2
+s
+1
+) +c
+1
+r
+2
+s
+2
+) 
+ 1
+;
+e
+b
+2
+= (kr
+1
+ r
+2
+)(a
+1
+r
+1
+s
+1
++b
+1
+(r
+1
+s
+2
++r
+2
+s
+1
+) +c
+1
+r
+2
+s
+2
+) 
+ 1
+;
+e c
+1
+= (s
+2
+ ks
+1
+)P
+1
+(s
+1
+;s
+2
+) 
+ 1
+; e c
+2
+= (kr
+1
+ r
+2
+)P
+1
+(s
+1
+;s
+2
+) 
+ 1
+:
+For r
+2
+=kr
+1
+(  =r
+1
+(s
+2
+ ks
+1
+)6= 0) the obtained system has the form
+ 
+(a
+1
++ 2b
+1
+k +c
+1
+k
+2
+)r
+1
+2(a
+1
+s
+1
++kb
+1
+s
+1
++b
+1
+s
+2
++kc
+1
+s
+2
+) P
+1
+(s
+1
+;s
+2
+)r
+ 1
+1
+0 0 0
+!
+:
+For r
+1
+= (a
+1
++ 2b
+1
+k + c
+1
+k
+2
+)
+ 1
+; s
+1
+=  (b
+1
++ kc
+1
+)(a
+1
++ 2b
+1
+k + c
+1
+k
+2
+)
+ 1
+(a
+1
+c
+1
+  b
+2
+1
+)
+ 1=2
+;
+s
+2
+= (a
+1
++kb
+1
+)(a
+1
++ 2b
+1
+k +c
+1
+k
+2
+)
+ 1
+(a
+1
+c
+1
+ b
+2
+1
+)
+ 1=2
+it is a DCF
+2
+5
+:  
+Remark 14 Forms DF
+2
+1
+=
+ 
+0 1 1
+0 0 0
+!
+and DF
+2
+2
+=
+ 
+1 0  1
+0 0 0
+!
+with the structure
+of DCF
+2
+5
+; which are not in the list, are not canonical ones according to principles 2 and 3.
+A form DF
+2
+1
+by change (9) with r
+1
+= 1; s
+1
+= 1; r
+2
+= 0; s
+2
+= 1 is reduced to a DCF
+2
+2
+: A
+form DF
+2
+2
+by change (9) with r
+1
+= 1; s
+1
+= 1=2; r
+2
+= 0; s
+2
+= 1=2 is reduced to a DCF
+2
+4
+:
+Corollary 3 I) A system (39) by a linear invertible change (9) may be brought to a DCF
+2
+i
+(i = 1; 4); if the following parameters: coe cients ff;  of the common factor P
+0
+; elements
+p
+1
+;q
+1
+of H and the proportionality coe cient k satisfy the conditions:
+DCF
+2
+1
+: 1) ff = 1; q
+1
+= p
+1
+; kq
+1
+6= p
+1
+; 2) ff = 0;   = 1; p
+1
+= 0; kq
+1
+6= 0;
+DCF
+2
+2
+: 1) ff = 1;  k = 1; kq
+1
+6= p
+1
+; 2) ff = 0;   = 1; p
+1
+6= 0; k = 0;
+DCF
+2
+3
+: 1) ff = 1;  k = 1; kq
+1
+= p
+1
+; 2) ff = 0;   = 1; p
+1
+= 0; k = 0;
+DCF
+2
+4
+: 1)ff = 1;  k6= 1; kq
+1
+6= p
+1
+; q
+1
+6= p
+1
+; 2)ff = 0;   = 1; p
+1
+6= 0; k6= 0; kq
+1
+6= p
+1
+:
+II)System (40) by a linear invertible change (9) is brought to a DCF
+2
+5
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 71Differential Equations and Control Processes, N 4, 2010
+6.3 The construction of main and additional CF for l = 2
+Generally speaking, with a view to further normalization of perturbed systems it is unsu ciently
+to bring systems (41) and together with them systems (39) or (40) to a DCF
+2
+: Principle 1 has
+to be hold for a total normalization. Hence we will transform every DCF
+2
+i
+in a nondegenerate
+CF
+2
+by change(9).
+Remark 15 A CF
+2
+obtained from a DCF
+2
+i
+has as a rule more nonzero elements, which
+is a reasonable "pay" for greater opportunities on the further normalization of perturbations.
+Remark 16 A speci cs of the case l = 2 is such that due to a proportionality
+of coe cients in polynomials P
+1
+; P
+2
+in systems (39) or (40) principle 1 in the de nition
+of canonical form is fully applied, i. e. namely for l = 2 the requirement P
+1
+ P
+2
+(k = 1) is
+actual. But principle 3 loses its value completely.
+The LIST of canonical forms of system (2) in case of l = 2 :
+CF
+2
+1
+=
+ 
+1 0 0
+1 0 0
+!
+; CF
+2
+2
+=
+ 
+1 0  
+1 0  
+!
+(  = 1); CF
+2
+3
+=
+ 
+1  2 1
+1  2 1
+!
+;
+CF
+2
+4
+=
+ 
+0 1 0
+0 1 0
+!
+; ACF
+2
+2
+=
+ 
+1  1 0
+1  1 0
+!
+:
+Theorem 5 Every DCF
+2
+i
+(i = 1; 5) by a linear invertible change (9) is reduced to a CF
+2
+:
+Proof By using the assertion 6 we will sequentially perform (9) for DCF
+2
+1
+;:::; DCF
+2
+5
+with r
+2
+= s
+2
+6= 0 and select the remaining coe cients such that to obtain a CF
+2
+: Let
+ 
+1
+= (r
+1
++s
+1
+)
+ 1
+:
+A DCF
+2
+1
+is brought to a system with a
+1
+=r
+2
+1
+ 
+1
+; b
+1
+=r
+1
+s
+1
+ 
+1
+; c
+1
+=s
+2
+1
+ 
+1
+that for r
+1
+= 1;
+s
+1
+= 0; r
+2
+= 1; s
+2
+= 1 is a CF
+2
+1
+:
+A DCF
+2
+2
+is brought to a system with a
+1
+= r
+1
+s
+2
+ 
+1
+; 2b
+1
+=s
+2
+(r
+1
+ s
+1
+) 
+1
+; c
+1
+=s
+1
+s
+2
+ 
+1
+that
+for r
+1
+= 1; s
+1
+= 1; r
+2
+= 2; s
+2
+= 2 is a CF
+2
+2
+with   = 1; and for r
+1
+= 1; s
+1
+= 0; r
+2
+= 1;
+s
+2
+= 1 is a ACF
+2
+2
+:
+A DCF
+2
+3
+is reduced to a system with a
+1
+=s
+2
+2
+ 
+1
+; b
+1
+= s
+2
+2
+ 
+1
+; c
+1
+=s
+2
+2
+ 
+1
+that for r
+1
+= 1;
+s
+1
+= 1; r
+2
+= 2
+1=2
+; s
+2
+= 2
+1=2
+is a CF
+2
+3
+:
+A DCF
+2
+4
+is reduced to a system with a
+1
+= r
+1
+(r
+1
+ s
+2
+) 
+1
+; 2b
+1
+= (2r
+1
+s
+1
++r
+1
+s
+2
+ s
+1
+s
+2
+) 
+1
+;
+c
+1
+=s
+1
+(s
+1
++s
+2
+) 
+1
+which for r
+1
+= 1; s
+1
+= 0; r
+2
+= 1; s
+2
+= 1 is a CF
+2
+4
+:
+A DCF
+2
+5
+is reduced to a system with a
+1
+= (r
+2
+1
++s
+2
+2
+) 
+1
+; b
+1
+= (r
+1
+s
+1
+ s
+2
+2
+) 
+1
+; c
+1
+= (s
+2
+1
++s
+2
+2
+) 
+1
+which for r
+1
+= 1; s
+1
+= 1; r
+2
+= 1 s
+2
+= 1 is a CF
+2
+2
+with   = 1:  
+Remark 17 As was proved, DCF
+2
+i
+are reduced to CF
+2
+i
+for i = 1; 3; 4: Forms DCF
+2
+2
+and
+DCF
+2
+5
+are reduced to a CF
+2
+2
+with   = 1 and   = 1 respectively.
+Remark 18 The form F
+2
+1
+=
+ 
+1 1 0
+1 1 0
+!
+(not in the list) is not a canonical one in accordance
+with principle 2. By the change (9) with r
+1
+= 0; s
+1
+= 1=2; r
+2
+= 1; s
+2
+= 1=2 it is reduced to
+a DCF
+2
+4
+:
+Remark 19 Forms ACF
+2
+2
+and CF
+2
+2
+in which   = 1 are connected by the change (9)
+with r
+1
+;s
+1
+= 2; r
+2
+= 4; s
+2
+= 0 , not a renumbering. At that a CF
+2
+2
+is the main one
+Electronic Journal. http://www.math.spbu.ru/diffjournal 72Differential Equations and Control Processes, N 4, 2010
+in accordance with principle 5b.
+The COMPLETE LIST of the forms having 3,4 and 6 nonzero elements
+CF
+0
+1
+=
+ 
+1 0 0
+0 0 1
+!
+2
+; CF
+1
+1
+=
+ 
+u 0 0
+0 1 0
+!
+3
+; CF
+2
+1
+=
+ 
+1 0 0
+1 0 0
+!
+4
+;
+CF
+1r
+1
+=
+ 
+0 1 0
+0 0 u
+!
+3
+; CF
+2
+4
+=
+ 
+0 1 0
+0 1 0
+!
+4
+; CF
+1
+2
+=
+ 
+0   0
+1 0 0
+!
+5
+;
+CF
+2r
+1
+=
+ 
+0 0 1
+0 0 1
+!
+4
+; CF
+1r
+2
+=
+ 
+0 0 1
+0   0
+!
+5
+; CF
+0
+2
+=
+ 
+0 0 1
+1 0 0
+!
+6
+;
+CF
+0
+3
+=
+ 
+1 u 0
+0 0 1
+!
+4
+; CF
+1
+3
+=
+ 
+u 1 0
+0 1 0
+!
+5
+; CF
+1
+5
+=
+ 
+u  1 0
+1 0 0
+!
+6
+;
+CF
+0
+4
+=
+ 
+u 0 1
+0 0 1
+!
+5
+; CF
+0
+5
+=
+ 
+u 0  
+0 1 0
+!
+6
+; CF
+0
+6
+=
+ 
+u 0 1
+1 0 0
+!
+7
+;
+CF
+1r
+4
+=
+ 
+0 1 1
+0 0 1
+!
+6
+; F
+1r
+1
+=
+ 
+0 1 1
+0 u 0
+!
+7
+; CF
+0
+7
+=
+ 
+0 u 1
+1 0 0
+!
+8
+;
+CF
+0r
+3
+=
+ 
+1 0 0
+0 u 1
+!
+4
+; CF
+1r
+3
+=
+ 
+0 1 0
+0 1 u
+!
+5
+; CF
+1r
+5
+=
+ 
+0 0 1
+0  1 u
+!
+6
+;
+CF
+0r
+4
+=
+ 
+1 0 0
+1 0 u
+!
+5
+; CF
+0r
+5
+=
+ 
+0 1 0
+  0 u
+!
+6
+; CF
+0r
+6
+=
+ 
+0 0 1
+1 0 u
+!
+7
+;
+CF
+1
+4
+=
+ 
+1 0 0
+1 1 0
+!
+6
+; F
+1
+1
+=
+ 
+0 u 0
+1 1 0
+!
+7
+; CF
+0r
+7
+=
+ 
+0 0 1
+1 u 0
+!
+8
+;
+CF
+0
+8
+=
+ 
+u 1 0
+0 1 v
+!
+6
+; CF
+0r
+9
+=
+ 
+v 1 0
+  0 u
+!
+7
+; ACF
+2
+2
+=
+ 
+1  1 0
+1  1 0
+!
+8
+;
+ACF
+0
+9
+=
+ 
+u 0  
+0 1 v
+!
+7
+; CF
+2
+2
+=
+ 
+1 0  
+1 0  
+!
+8
+; F
+0
+4
+=
+ 
+u 0 1
+1 v 0
+!
+9
+;
+ACF
+2r
+2
+=
+ 
+0  1 1
+0  1 1
+!
+8
+; F
+0r
+4
+=
+ 
+0 v 1
+1 0 u
+!
+9
+; F
+0
+5
+=
+ 
+0 u 1
+1 v 0
+!
+10
+;
+F
+0
+3
+=
+ 
+u v 1
+0 0 1
+!
+7
+; CF
+0
+10
+=
+ 
+1=2 u  1
+0 1 0
+!
+8
+; F
+0
+2
+=
+ 
+u v 1
+1 0 0
+!
+9
+;
+F
+0r
+3
+=
+ 
+1 0 0
+1 v u
+!
+7
+; CF
+0r
+10
+=
+ 
+0 1 0
+ 1 u 1=2
+!
+8
+; F
+0r
+2
+=
+ 
+0 0 1
+1 v u
+!
+9
+;
+CF
+2
+3
+=
+ 
+1  2 1
+1  2 1
+!
+12
+;
+here each matrix is marked by a subscript and symmetric forms are underlined.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 73Differential Equations and Control Processes, N 4, 2010
+Part III
+GNF of systems with degenerate CF
+in unperturbed part
+7 Normalization of systems with DCF
+2
+1
+Let in system (1) the unperturbed part P (x) by a linear invertible change be reduced to
+the DCF
+2
+1
+=
+ 
+1 0 0
+0 0 0
+!
+: We assume at once that system (1) has the form
+_ x
+1
+=x
+2
+1
++X
+1
+(x
+1
+;x
+2
+); _ x
+2
+=X
+2
+(x
+1
+;x
+2
+): (43)
+Then system (6) may be written as
+(s  3)h
+(s 1;p+1 s)
+1
+=
+b
+Y
+(s;p+1 s)
+1
+; (s  1)h
+(s 1;p+1 s)
+2
+=
+b
+Y
+(s;p+1 s)
+2
+(s = 0;p + 1; p  2): (44)
+For solvability of system (44) it is necessary and su cient the following relations were
+ful lled
+b
+Y
+(0;p+1)
+1
+= 0;
+b
+Y
+(0;p+1)
+2
+= 0;
+b
+Y
+(3;p 2)
+1
+= 0;
+b
+Y
+(1;p)
+2
+= 0;
+being there are no restrictions for coe cients h
+(2;p 2)
+1
+and h
+(0;p)
+2
+in change (9). By using denota-
+tion introduced for equations (5) and (7) we rewrite obtained resonance relations via coe cients
+of system (4):
+Y
+(0;p+1)
+1
+=e c; Y
+(3;p 2)
+1
+=e c; Y
+(0;p+1)
+2
+=e c; Y
+(1;p)
+2
+=e c: (45)
+Theorem 6 The system (43) is formally equivalent to a system (4) with the unperturbed
+part P = (y
+2
+1
+; 0) iff for any p  2 coe cients of homogeneous polynomials Y
+(p+1)
+i
+satisfy 4
+resonance equations (45).
+Corollary 4 The set consisting of Y
+(0;p+1)
+1
+; Y
+(3;p 2)
+1
+; Y
+(0;p+1)
+2
+; Y
+(1;p)
+2
+is the unique reso-
+nant set.
+Theorem 7 A system (43) by a formal change (9) may be reduced to a GNF (4), where
+for any p  2 all the coe cients Y
+(p+1)
+i
+(i = 1; 2) are equal to zero, except possibly four
+coe cients from a resonance set, i. e. any GNF has the form:
+_ y
+1
+=y
+2
+2
++
+1
+X
+p=2
+(Y
+(0;p+1)
+1
+y
+p+1
+2
++Y
+(3;p 2)
+1
+y
+3
+1
+y
+p 2
+2
+); _ y
+2
+=
+1
+X
+p=2
+(Y
+(0;p+1)
+2
+y
+p+1
+2
++Y
+(1;p)
+2
+y
+1
+y
+p
+2
+):
+Remark 20 Any GNF of system (43) has a rigid structure of orders of resonant terms,
+which is a distinctive feature of resonant normal forms and as a rule is not ful lled for generalized
+ones.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 74Differential Equations and Control Processes, N 4, 2010
+8 Normalization of systems with DCF
+2
+2
+Let in system (1) the unperturbed part P (x) by a linear invertible change be reduced to
+the DCF
+2
+2
+=
+ 
+0 1 0
+0 0 0
+!
+: We assume at once that system (1) has the form
+_ x
+1
+=x
+1
+x
+2
++X
+1
+(x
+1
+;x
+2
+); _ x
+2
+=X
+2
+(x
+1
+;x
+2
+): (46)
+Then system (6) is written as the following
+(s  1)h
+(s;p s)
+1
+ h
+(s 1;p s+1)
+2
+=
+b
+Y
+(s;p+1 s)
+1
+; sh
+(s;p s)
+2
+=
+b
+Y
+(s;p+1 s)
+2
+(s = 0;p + 1; p  2): (47)
+In the subsystem (47
+2
+) for s = 0;p + 1 we have
+b
+Y
+(0;p+1)
+2
+= 0;
+b
+Y
+(p+1;0)
+2
+= 0;
+being h
+(0;p)
+2
+is free, and for s = 1;p we have h
+(s;p s)
+2
+=s
+ 1
+b
+Y
+(s;p s+1)
+2
+:
+In the subsystem (47
+1
+) for s = 1 we obtain 0 h
+(1;p 1)
+1
+ h
+(0;p)
+2
+=
+b
+Y
+(1;p+1)
+1
+: This equation
+is uniquely decidable by using h
+(0;p)
+2
+; and h
+(1;p 1)
+1
+remains free. For s = 0; 2;p system (47
+1
+)
+is decidable by using coe cients h
+(s;p s)
+1
+: For s =p + 1 we have the relation
+p
+b
+Y
+(p+1;0)
+1
++
+b
+Y
+(p;1)
+2
+= 0:
+By using denotations introduced for equations (5) and (7), we rewrite obtained resonant
+relations via coe cients of system (4):
+Y
+(p+1;0)
+2
+=e c; Y
+(0;p+1)
+2
+=e c; pY
+(p+1;0)
+1
++Y
+(p;1)
+2
+=e c: (48)
+Theorem 8 A system (46) is formally equivalent to a system (4) with the unperturbed
+part P = (y
+1
+y
+2
+; 0) iff for any p  2 coe cients of homogeneous polynomials Y
+(p+1)
+i
+satisfy
+resonance equations (48).
+Corollary 5 There are two resonance sets containing Y
+(0;p+1)
+2
+; Y
+(p+1;0)
+2
+and either Y
+(p+1;0)
+1
+or Y
+(p;1)
+2
+:
+Theorem 9 A system (46) by a formal change (9) may be brought to a GNF (4), where for
+any p  2 all the coe cients Y
+(p+1)
+i
+(i = 1; 2) are equal to zero, except possibly 3 coe cients
+of one of two resonance sets, i. e. any GNF has one of two following structures:
+_ y
+1
+=y
+2
+2
++
+1
+X
+p=2
+Y
+(p+1;0)
+1
+y
+p+1
+1
+; _ y
+2
+=
+1
+X
+p=2
+(Y
+(0;p+1)
+2
+y
+p+1
+2
++Y
+(p+1;0)
+2
+y
+p+1
+1
+);
+_ y
+1
+=y
+2
+2
+; _ y
+2
+=
+1
+X
+p=2
+(Y
+(0;p+1)
+2
+y
+p+1
+2
++Y
+(p;1)
+2
+y
+p
+1
+y
+2
++Y
+(p+1;0)
+2
+y
+p+1
+1
+):
+Electronic Journal. http://www.math.spbu.ru/diffjournal 75Differential Equations and Control Processes, N 4, 2010
+9 Normalization of systems with DCF
+2
+3
+Let in a system (1) the unperturbed part P (x) by a linear invertible change be reduced to
+the DCF
+2
+3
+=
+ 
+0 0 1
+0 0 0
+!
+: We assume at once that system (1) has the form
+_ x
+1
+=x
+2
+2
++X
+1
+(x
+1
+;x
+2
+); _ x
+2
+=X
+2
+(x
+1
+;x
+2
+): (49)
+Then system (6) may be written in the form
+(s + 1)h
+(s+1;p s 1)
+1
+  2h
+(s;p s)
+2
+=
+b
+Y
+(s;p+1 s)
+1
+; (s + 1)h
+(s+1;p s 1)
+2
+=
+b
+Y
+(s;p+1 s)
+2
+(s = 0;p + 1): (50)
+In the subsystem (50
+2
+) for s =p;p + 1 we have relations
+b
+Y
+(p;1)
+2
+= 0;
+b
+Y
+(p+1;0)
+2
+= 0;
+and for s = 0;p  1 we obtain h
+(s+1;p s 1)
+2
+= (s + 1)
+ 1
+b
+Y
+(s;p+1 s)
+2
+; being h
+(0;p)
+2
+is free.
+In the subsystem (50
+1
+) for s =p;p + 1 there are relations
+b
+Y
+(p+1;0)
+1
+= 0;
+b
+Y
+(p;1)
+1
++ 2h
+(p;0)
+2
+= 0;
+where h
+(p;0)
+2
+=p
+ 1
+b
+Y
+(p 1;2)
+2
+; i. e. the second relation has the form p
+b
+Y
+(p;1)
+1
++ 2
+b
+Y
+(p 1;2)
+2
+= 0:
+Components h
+(0;p)
+1
+and h
+(0;p)
+2
+are free because they are not contained in system (50).
+By using denotations introduced for equations (5) and (7), we rewrite obtained resonance
+relations via coe cients of system (4):
+Y
+(p+1;0)
+1
+=e c; Y
+(p;1)
+2
+=e c; Y
+(p+1;0)
+2
+=e c; pY
+(p;1)
+1
++ 2Y
+(p 1;2)
+2
+=e c: (51)
+Theorem 10 A system (49) is formally equivalent to a system (4) with the unperturbed
+part P = (y
+2
+2
+; 0) iff for any p  2 coe cients of homogeneous polynomials Y
+(p+1)
+i
+satisfy 4
+resonant equations (51).
+Corollary 6 There are two resonance sets containing Y
+(p+1;0)
+1
+; Y
+(p;1)
+2
+; Y
+(p+1;0)
+2
+and either
+Y
+(p;1)
+1
+or Y
+(p 1;2)
+2
+:
+Theorem 11 A system (49) by a formal change (9) may be reduced to a GNF (4), where for
+any p  2 all the coe cients Y
+(p+1)
+i
+(i = 1; 2) are equal to zero, except possibly 4 coe cients
+from one of two resonance sets, i. e. any GNF has one of two structures:
+_ y
+1
+=y
+2
+2
++
+1
+X
+p=2
+(Y
+(p+1;0)
+1
+y
+p+1
+1
++Y
+(p;1)
+1
+y
+p
+1
+y
+2
+); _ y
+2
+=
+1
+X
+p=2
+(Y
+(p;1)
+2
+y
+p
+1
+y
+2
++Y
+(p+1;0)
+2
+y
+p+1
+1
+);
+_ y
+1
+=y
+2
+2
++
+1
+X
+p=2
+Y
+(p+1;0)
+1
+y
+p+1
+1
+; _ y
+2
+=
+1
+X
+p=2
+(Y
+(p 1;2)
+2
+y
+p 1
+1
+y
+2
+2
++Y
+(p;1)
+2
+y
+p
+1
+y
+2
++Y
+(p+1;0)
+2
+y
+p+1
+1
+):
+Electronic Journal. http://www.math.spbu.ru/diffjournal 76Differential Equations and Control Processes, N 4, 2010
+10 Normalization of systems with DCF
+2
+4
+Let in a system (1) the unperturbed part P (x) by a linear invertible change be reduced to
+the DCF
+2
+4
+=
+ 
+1 1 0
+0 0 0
+!
+: We assume at once that system (1) has the form
+_ x
+1
+=x
+2
+1
++x
+1
+x
+2
++X
+1
+(x
+1
+;x
+2
+); _ x
+2
+=X
+2
+(x
+1
+;x
+2
+): (52)
+Then system (6) is written in the form
+(s  3)h
+(s 1;p s+1)
+1
++ (s  1)h
+(s;p s)
+1
+ h
+(s 1;p s+1)
+2
+=
+b
+Y
+(s;p+1 s)
+1
+;
+(s  1)h
+(s 1;p s+1)
+2
++sh
+(s;p s)
+2
+=
+b
+Y
+(s;p+1 s)
+2
+(s = 0;p + 1; p  2):
+(53)
+In subsystem (53
+2
+) for s = 0 we have the relation
+b
+Y
+(0;p+1)
+2
+= 0;
+being h
+(0;p)
+2
+is free. For s = 1;p from (53
+2
+) coe cients h
+(s;p s)
+2
+= s
+ 1
+P
+s
+j=1
+( 1)
+s j
+b
+Y
+(j;p+1 j)
+2
+are uniquely determined.
+The last equation in (53
+2
+) has the form: ph
+(p;0)
+2
+=
+b
+Y
+(p+1;0)
+2
+:
+Substituting in the equation h
+(p;0)
+2
+; we obtain the second relation
+p+1
+X
+j=1
+( 1)
+j
+b
+Y
+(j;p+1 j)
+2
+= 0:
+Substituting h
+(s;p s)
+2
+from (53
+2
+) in (53
+1
+); we obtain the system
+a
+s
+h
+(s 1;p s+1)
+1
++b
+s
+h
+(s;p s)
+1
+=
+ 
+Y
+(s;p+1 s)
+1
+(s = 0;p + 1); (54)
+where a
+s
+=s  3; b
+s
+=s  1;
+ 
+Y
+(s;p+1 s)
+1
+=
+b
+Y
+(s;p+1 s)
+1
++h
+(s 1;p s+1)
+2
+:
+Take last p  1 equations of (54) and form a new subsystem
+ h
+1
+=
+ 
+Y;
+where   =
+0
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+@
+0 b
+3
+0 ::: 0 0
+0 a
+4
+b
+4
+::: 0 0
+0 0 a
+5
+::: 0 0
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+0 0 0 ::: b
+p 1
+0
+0 0 0 ::: a
+p
+b
+p
+0 0 0 ::: 0 a
+p+1
+1
+C
+C
+C
+C
+C
+C
+C
+C
+C
+C
+C
+A
+{ bidiagonal (p   1) - matrix, vectors
+h
+1
+= (h
+(2;p 2)
+1
+;:::;h
+(p;0)
+1
+);
+ 
+Y = (
+ 
+Y
+(3;p 2)
+1
+;:::;
+ 
+Y
+(p+1;0)
+1
+):
+By the Gauss method this system may be transformed in the system
+ 
+g
+h
+1
+=Y
+g
+; (55)
+where  
+g
+= diagf0; a
+4
+;:::;a
+p+1
+g; vector Y
+g
+= (Y
+(3;p 2)
+g
+;:::;Y
+(p+1;0)
+g
+) has components
+Y
+(p+1;0)
+g
+=
+ 
+Y
+(p+1;0)
+1
+; Y
+(s;p+1 s)
+g
+=
+ 
+Y
+(s;p+1 s)
+1
+ a
+ 1
+s+1
+b
+s
+Y
+(s+1;p s)
+g
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 77Differential Equations and Control Processes, N 4, 2010
+It is clear that Y
+(s;p+1 s)
+g
+= (s  2)
+ 1
+P
+p
+j=s 1
+( 1)
+j s+1
+(j  1)
+ 
+Y
+(j+1;p j)
+1
+(s =p + 1; 3):
+For s = p + 1; 4 system (55) is uniquely decidable with respect to coe cients
+h
+(p;0)
+1
+;:::;h
+(3;p 3)
+1
+; and its  rst equation (s = 3) has the form: 0 h
+(2;p 2)
+1
+= Y
+(3;p 2)
+g
+; and
+the term h
+(2;p 2)
+1
+is free.
+Substituting into this equations expressions for Y
+(3;p 2)
+g
+;
+ 
+Y
+(j+1;p j)
+1
+; h
+(j;p j)
+2
+; we obtain:
+p
+X
+j=2
+( 1)
+j
+(j  1)
+b
+Y
+(j+1;p j)
+1
++
+p
+X
+j=2
+( 1)
+j
+j  1
+j
+j
+X
+k=1
+( 1)
+j k
+b
+Y
+(k;p+1 k)
+2
+= 0
+or the resonance relation
+p
+X
+j=2
+( 1)
+j
+(j  1)
+b
+Y
+(j+1;p j)
+1
++
+p
+X
+j=1
+( 1)
+j
+p 1
+X
+k=j 1
+k
+k + 1
+b
+Y
+(j;p+1 j)
+2
+= 0:
+First 3 equations of (54) have the form:
+ h
+(0;p)
+1
+=
+b
+Y
+(0;p+1)
+1
+;  2h
+(0;p)
+1
+=
+b
+Y
+(1;p)
+1
++h
+(0;p)
+2
+;  h
+(1;p 1)
+1
++h
+(2;p 2)
+1
+=
+b
+Y
+(2;p+1)
+1
++h
+(1;p 1)
+2
+:
+We uniquely  nd h
+(0;p)
+1
+from the  rst equation and using free h
+(0;p)
+2
+uniquely decide the
+second equation. In the third equation either h
+(1;p 1)
+1
+or h
+(2;p 2)
+1
+is free. Using introduced
+denotations for (5) and (7) we rewrite obtained resonance relations via coe cients of (4):
+Y
+(0;p+1)
+2
+=e c;
+p+1
+X
+j=1
+( 1)
+j
+Y
+(j;p+1 j)
+2
+=e c;
+p
+X
+j=2
+( 1)
+j
+(j  1)Y
+(j+1;p j)
+1
++
+p
+X
+j=1
+( 1)
+j
+p 1
+X
+k=j 1
+k
+k + 1
+Y
+(j;p+1 j)
+2
+=e c:
+(56)
+Theorem 12 A system (52) is formally equivalent to (4) with the unperturbed part P =
+(y
+2
+1
++y
+1
+y
+2
+; 0) iff for any p  2 coe cients of homogeneous polynomials Y
+(p+1)
+i
+(i = 1; 2)
+satisfy 3 resonance equations (56).
+Corollary 7 Any resonance set contains 3 coe cients:
+1) the coe cient Y
+(0;p+1)
+2
+; 2) any coe cient of Y
+(s;p+1 s)
+2
+(1 s p + 1);
+3) any coe cient of Y
+(s;p+1 s)
+1
+(3 s p+1) or any coe cient of Y
+(s;p+1 s)
+2
+(1 s p+1)
+which is differ from the coe cient selected in 2), except Y
+(1;p)
+2
+and Y
+(2;p 1)
+2
+which can not be
+in a resonance set simultaneously , because for them det  
+p
+= 0:
+Theorem 13 A system (52) by a formal change (9) may be transformed in GNF (4),
+where for any p  2 all the coe cients Y
+(p+1)
+i
+(i = 1; 2) are equal to zero, except possibly 3
+coe cients from a resonance set.
+Example 1 A system (52) by a formal change (9) may be reduced to GNF (4), where in
+the  rst equation there is no perturbation term:
+_ y
+1
+=y
+2
+1
++y
+1
+y
+2
+; _ y
+2
+=
+1
+X
+p=2
+(Y
+(0;p+1)
+2
+y
+p+1
+2
++Y
+(1;p)
+2
+y
+1
+y
+p
+2
++Y
+(3;p 2)
+2
+y
+3
+1
+y
+p 2
+2
+):
+It should be noted that there is no GNF in which we could annul y
+s
+2
+(s  3); because any
+resonant set contains either Y
+(s;p+1 s)
+1
+or Y
+(s;p+1 s)
+2
+with s  3:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 78Differential Equations and Control Processes, N 4, 2010
+11 Normalization of systems with DCF
+2
+5
+Let in a system (1) the unperturbed part P (x) by a linear invertible change be reduced to
+the DCF
+2
+5
+=
+ 
+1 0 1
+0 0 0
+!
+: We assume at once that the system (1) has the form
+_ x
+1
+=x
+2
+1
++x
+2
+2
++X
+1
+(x
+1
+;x
+2
+); _ x
+2
+=X
+2
+(x
+1
+;x
+2
+): (57)
+Then system (6) is written in the form
+(s  3)h
+(s 1;p+1 s)
+1
++ (s + 1)h
+(s+1;p 1 s)
+1
+  2h
+(s;p s)
+2
+=
+b
+Y
+(s;p+1 s)
+1
+;
+(s  1)h
+(s 1;p+1 s)
+2
++ (s + 1)h
+(s+1;p 1 s)
+2
+=
+b
+Y
+(s;p+1 s)
+2
+(s = 0;p + 1; p  2):
+(58)
+Depending on the parity of the index s system (58) decomposes in two independent
+subsystems. Hence it is conveniently to consider following expansions:
+p = 2r +  (r  1;  2f0; 1g); s = 2  +  +  ( (  + )=2   r;  2f0; 1g):
+As a consequence of it, for any r  1;  2f0; 1g system (58) has the form:
+(2  +  +   3)h
+(2 + +  1;2(r  )+1  )
+1
++ (2  +  +  + 1)h
+(2 + + +1;2(r  ) 1  )
+1
+ 
+ 2h
+(2 + + ;2(r  )  )
+2
+=
+b
+Y
+(2 + + ;2(r  )+1  )
+1
+;
+(2  +  +   1)h
+(2 + +  1;2(r  )+1  )
+2
++ (2  +  +  + 1)h
+(2 + + +1;2(r  ) 1  )
+2
+=
+=
+b
+Y
+(2 + + ;2(r  )+1  )
+2
+:
+(58
+ 
+)
+Taking in (58
+ 
+1
+)   = 1 and in (58
+ 
+2
+)   = 0; and then vice versa, for any p = 2r +  from
+system (58
+ 
+) we obtain two independent systems
+(2  +   2)h
+(2 + ;2(r  ))
+1
++ (2  +  + 2)h
+(2 + +2;2(r  ) 2)
+1
+  2h
+(2 + +1;2(r  ) 1)
+2
+=
+=
+b
+Y
+(2 + +1;2(r  ))
+1
+( (1 + )=2   r);
+(2  +   1)h
+(2 +  1;2(r  )+1)
+2
++ (2  +  + 1)h
+(2 + +1;2(r  ) 1)
+2
+=
+b
+Y
+(2 + ;2(r  )+1)
+2
+(0   r);
+(59)
+(2  +   3)h
+(2 +  1;2(r  )+1)
+1
++ (2  +  + 1)h
+(2 + +1;2(r  ) 1)
+1
+  2h
+(2 + ;2(r  ))
+2
+=
+=
+b
+Y
+(2 + ;2(r  )+1)
+1
+(0   r);
+(2  + )h
+(2 + ;2(r  ))
+2
++ (2  +  + 2)h
+(2 + +2;2(r  ) 2)
+2
+=
+b
+Y
+(2 + +1;2(r  ))
+2
+( (1 + )=2   r):
+(60)
+1) Investigation of system (59) for   = 0 and system (60) for   = 1:
+A system (59) for   = 0 and a system (60) for   = 1 have the form
+(2   2)h
+(2 ;2(r  )+ )
+1
++ (2  + 2)h
+(2 +2;2(r  ) 2+ )
+1
+  2h
+(2 +1;2(r  ) 1+ )
+2
+=
+b
+Y
+(2 +1;2(r  )+ )
+1
+(0   r);
+(2(  + )  1)h
+(2( + ) 1;2(r  )+1  )
+2
++ (2(  + ) + 1)h
+(2( + )+1;2(r  ) 1  )
+2
+=
+=
+b
+Y
+(2( + );2(r  )+1  )
+2
+(     r):
+(61)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 79Differential Equations and Control Processes, N 4, 2010
+For   =  ;r  1 coe cients
+h
+(2( + )+1;2(r  ) 1  )
+2
+=
+1
+2(  + ) + 1
+ + 
+X
+j=0
+( 1)
+  j+ 
+b
+Y
+(2j;2(r j)+1+ )
+2
+are uniquely determined from (61
+2
+):
+The last equation in (61
+2
+) has the form: (2(r + )  1)h
+(2(r+ ) 1;1  )
+2
+=
+b
+Y
+(2(r+ );1  )
+2
+:
+By substituting h
+(2(r+ ) 1;1  )
+2
+into this equation we obtain the resonance relation
+r+ 
+X
+j=0
+( 1)
+j
+b
+Y
+(2j;2(r j)+1+ )
+2
+= 0: (62)
+By substituting h
+(2 +1;2(r  ) 1+ )
+2
+from (61
+2
+) into (61
+1
+) we have the system
+a
+ 
+h
+(2 ;2(r  )+ )
+1
++b
+ 
+h
+(2 +2;2(r  ) 2+ )
+1
+=
+ 
+Y
+(2 +1;2(r  )+ )
+1
+(  = 0;r); (63)
+where a
+ 
+= 2   2; b
+ 
+= 2  + 2;
+ 
+Y
+(2 +1;2(r  )+ )
+1
+=
+b
+Y
+(2 +1;2(r  )+ )
+1
++ 2h
+(2 +1;2(r  ) 1+ )
+2
+:
+Select last r equations in system (63)and form a subsystem
+ h
+1
+=
+ 
+Y;
+where   =
+0
+B
+B
+B
+B
+B
+B
+B
+B
+@
+0 b
+1
+0 ::: 0 0
+0 a
+2
+b
+2
+::: 0 0
+0 0 a
+3
+::: 0 0
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+0 0 0 ::: a
+r 1
+b
+r 1
+0 0 0 ::: 0 a
+r
+1
+C
+C
+C
+C
+C
+C
+C
+C
+A
+{ bidiagonal (r  r) - matrix, vectors h
+1
+=
+(h
+(2;2r 2+ )
+1
+;:::;h
+(2r; )
+1
+);
+ 
+Y = (
+ 
+Y
+(3;2r 2+ )
+1
+;:::;
+ 
+Y
+(2r+1; )
+1
+):
+By the Gauss method this system may be transformed in the system
+ 
+g
+h
+1
+=Y
+g
+; (64)
+where  
+g
+= diagf0; a
+2
+;:::;a
+r
+g; vector Y
+g
+= (Y
+(3;2r 2+ )
+g
+;:::;Y
+(2r+1; )
+g
+) has compo-
+nents Y
+(2r+1; )
+g
+=
+ 
+Y
+(2r+1; )
+1
+; Y
+(2 +1;2(r  )+ )
+g
+=
+ 
+Y
+(2 +1;2(r  )+ )
+1
+  a
+ 1
+ +1
+b
+ 
+Y
+(2 +3;2(r  ) 2+ )
+g
+(  =r  1; 1):
+It is clear that Y
+(2 +1;2(r  )+ )
+g
+= 
+ 1
+P
+r
+j= 
+( 1)
+j  
+j
+ 
+Y
+(2j+1;2(r j)+ )
+1
+(  =r; 1):
+For   = r; 2 system (64) is uniquely decidable with respect to coe cients
+h
+(4;2r 4+ )
+1
+;:::;h
+(2r; )
+1
+; and its  rst equation has the form 0 h
+(2;2r 2+ )
+1
+= Y
+(3;2r 2+ )
+g
+; be-
+ing h
+(2;2r 2+ )
+1
+is free. Substituting in this equation formulas for Y
+(3;p 2+ )
+g
+;
+ 
+Y
+(2j+1;2(r j)+ )
+1
+;
+h
+(2j+1;2(r j) 1+ )
+2
+; we obtain:
+r
+X
+j=1
+( 1)
+j 1
+j
+b
+Y
+(2j+1;2(r j)+ )
+1
++ 2
+r 1+ 
+X
+j=1
+j
+2j + 1
+j
+X
+k=0
+( 1)
+k+1
+b
+Y
+(2k;2(r k)+1+ )
+2
+= 0
+Electronic Journal. http://www.math.spbu.ru/diffjournal 80Differential Equations and Control Processes, N 4, 2010
+or the resonance relation
+r
+X
+j=1
+( 1)
+j 1
+j
+b
+Y
+(2j+1;2(r j)+ )
+1
++ 2
+r 1+ 
+X
+j=0
+( 1)
+j+1
+b
+Y
+(2j;2(r j)+1+ )
+2
+r 1
+X
+k=j
+k
+2k + 1
+= 0: (65)
+The  rst equation in (63) has the form:
+ 2h
+(0;2r+ )
+1
++ 2h
+(2;2r 2+ )
+1
+=
+ 
+Y
+(1;2r+ )
+1
+:
+It is evidently decidable and the coe cient h
+(0;2r+ )
+1
+(or h
+(2;2r 2+ )
+1
+) is free.
+2) Investigation of system (59) for   = 1 and system (60) for   = 0:
+The system (60) for   = 0 and the system (59) for   = 1 have the form
+(2(  + )  3)h
+(2( + ) 1;2(r  )+1  )
+1
++ (2(  + ) + 1)h
+(2( + )+1;2(r  ) 1  )
+1
+ 
+ 2h
+(2( + );2(r  )  )
+2
+=
+b
+Y
+(2( + );2(r  )+1  )
+1
+(     r);
+2 h
+(2 ;2(r  )+ )
+2
++ (2  + 2)h
+(2 +2;2(r  ) 2+ )
+2
+=
+b
+Y
+(2 +1;2(r  )+ )
+2
+(0   r):
+(66)
+For   = 0;r  1 from the subsystem (66
+2
+) coe cients h
+(2 +2;2(r  ) 2+ )
+2
+= (2  + 2)
+ 1
+ 
+P
+ 
+j=0
+( 1)
+  j
+b
+Y
+(2j+1;2(r j)+ )
+2
+are uniquely found and the coe cient h
+(0;2r+ )
+2
+is free.
+The last equation in (66
+2
+) has the form: 2rh
+(2r; )
+2
+=
+b
+Y
+(2r+1; )
+2
+:
+Substituting in it obtained h
+(2r; )
+2
+; we have the resonance relation
+r
+X
+j=0
+( 1)
+j
+b
+Y
+(2j+1;2(r j)+ )
+2
+= 0: (67)
+Further we substitute h
+(2 +2;2(r  ) 2+ )
+2
+from (66
+2
+) in (66
+1
+) and obtain the system
+a
+ 
+h
+(2( + ) 1;2(r  )+1  )
+1
++b
+ 
+h
+(2( + )+1;2(r  ) 1  )
+1
+=
+ 
+Y
+(2( + );2(r  )+1  )
+1
+(  =  ;r); (68)
+where a
+ 
+= 2(  + )  3; b
+ 
+= 2(  + ) + 1;
+ 
+Y
+(2( + );2(r  )+1  )
+1
+=
+b
+Y
+(2( + );2(r  )+1  )
+1
++
+2h
+(2( + );2(r  )  )
+2
+:
+Take last r +  equations of system (68)and form the subsystem
+ h
+1
+=
+ 
+Y;
+where   =
+0
+B
+B
+B
+B
+B
+B
+B
+B
+@
+a
+1  
+b
+1  
+0 ::: 0 0
+0 a
+2  
+b
+2  
+::: 0 0
+0 0 a
+3  
+::: 0 0
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+0 0 0 ::: a
+r 1
+b
+r 1
+0 0 0 ::: 0 a
+r
+1
+C
+C
+C
+C
+C
+C
+C
+C
+A
+{ bidiagonal (r + ) - matrix, vectors h
+1
+=
+(h
+(1;2r 1+ )
+1
+;:::;h
+(2(r+ ) 1;1  )
+1
+);
+ 
+Y = (
+ 
+Y
+(2;2r 1+ )
+1
+;:::;
+ 
+Y
+(2(r+ );1  )
+1
+):
+Electronic Journal. http://www.math.spbu.ru/diffjournal 81Differential Equations and Control Processes, N 4, 2010
+This system is uniquely decidable because the coe cients on principal diagonal satisfy
+conditions a
+ 
+= 2(  + )  36= 0 (  = 1  ;r):
+The  rst equation in (68) (  =  ) has the form: h
+(1;2r 1+ )
+1
+=
+b
+Y
+(0;2r+1+ )
+1
++ 2h
+(0;2r+ )
+2
+and is uniquely decidable by using the free coe cient h
+(0;2r+ )
+2
+:
+By using denotations introduced for equations (5) and (7), we rewrite obtained resonance
+relations (65), (62), (67) for   = 0 and   = 1 via coe cients of system (4):
+r
+X
+j=1
+( 1)
+j 1
+jY
+(2j+1;2(r j))
+1
++ 2
+r 1
+X
+j=0
+( 1)
+j+1
+Y
+(2j;2(r j)+1)
+2
+r 1
+X
+k=j
+k
+2k + 1
+=e c;
+r
+X
+j=0
+( 1)
+j
+Y
+(2j;2(r j)+1)
+2
+=e c;
+r
+X
+j=0
+( 1)
+j
+Y
+(2j+1;2(r j))
+2
+=e c (  = 0);
+(69)
+r
+X
+j=1
+( 1)
+j 1
+jY
+(2j+1;2(r j)+1)
+1
++ 2
+r
+X
+j=0
+( 1)
+j+1
+Y
+(2j;2(r j)+2)
+2
+r
+X
+k=j
+k
+2k + 1
+=e c;
+r+1
+X
+j=0
+( 1)
+j
+Y
+(2j;2(r j)+2)
+2
+=e c;
+r
+X
+j=0
+( 1)
+j
+Y
+(2j+1;2(r j)+1)
+2
+=e c (  = 1):
+(70)
+Theorem 14 A system (57) is formally equivalent to a system (4) with the unperturbed
+part P (y
+2
+1
++y
+2
+2
+; 0) iff for any p = 2r +  (r  1;  2f0; 1g) coe cients of homogeneous
+polynomials Y
+(p+1)
+i
+(i = 1; 2) satisfy 3 resonance relations, namely:
+1) for p = 2r (r   1;   = 0) coe cients Y
+(2 +1;2(r  ))
+1
+(1      r); Y
+(2 ;2(r  )+1)
+2
+(0   r) satisfy equations (69
+1
+); (69
+2
+); and coe cients Y
+(2 +1;2(r  ))
+2
+(0   r) satisfy
+equation (69
+3
+);
+2) for p = 2r + 1 (r  1;   = 1) coe cients Y
+(2 +1;2(r  )+1)
+1
+(1   r); Y
+(2 ;2(r  )+2)
+2
+(0      r + 1) satisfy equations (70
+1
+); (70
+2
+); coe cients Y
+(2 +1;2(r  )+1)
+2
+(0      r)
+satisfy equation (70
+3
+):
+Corollary 8 Any resonance set contains 3 coe cients.
+For p = 2r (r  1;   = 0) these coe cients are the following:
+1) any one of Y
+(2 ;2(r  )+1)
+2
+(0      r); 2) any one of Y
+(2 +1;2(r  ))
+2
+(0      r);
+3) any one of Y
+(2 +1;2(r  ))
+1
+(1   r) or any one of Y
+(2 ;2(r  )+1)
+2
+(0   r) which is
+differ from the coe cient selected in 1), except the pair Y
+(0;2r+1)
+2
+and Y
+(2;2r 1)
+2
+that can not be
+in the resonance set simultaneously, because for them det  
+p
+= 0:
+For p = 2r + 1 (r  1;   = 1) the resonance set contains the following coe cients:
+1) any one of Y
+(2 ;2(r  )+2)
+2
+(0   r + 1); 2) any one of Y
+(2 +1;2(r  )+1)
+2
+(0   r);
+3) any one of Y
+(2 +1;2(r  )+1)
+1
+(1   r) or any one of Y
+(2 ;2(r  )+2)
+2
+(0   r + 1) which
+is differ from the coe cient selected in 1), except the pair Y
+(0;2r+2)
+2
+and Y
+(2;2r)
+2
+that can not
+be in the resonance set simultaneously, because for them det  
+p
+= 0:
+Theorem 15 An arbitrary system (57) by a formal change (9) may be transformed in
+a GNF (4), where for any p  2 all the coe cients Y
+(p+1)
+i
+(i = 1; 2) equal zero, except
+possibly 3 coe cients from a resonance set described in corollary 8.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 82Differential Equations and Control Processes, N 4, 2010
+Example 2 A system (57) by a formal change (9) may be reduced to a GNF (4) that is
+linear in y
+2
+:
+_ y
+1
+=y
+2
+1
++y
+1
+y
+2
++
+1
+X
+r=1
+(Y
+(2r+1;0)
+1
++Y
+(2r+1;1)
+1
+y
+2
+)y
+2r+1
+1
+;
+_ y
+2
+=
+1
+X
+r=1
+(Y
+(2r+1;0)
+2
+y
+1
++Y
+(2r+2;0)
+2
+y
+2
+1
++Y
+(2r;1)
+2
+y
+2
++Y
+(2r+1;1)
+2
+y
+1
+y
+2
+)y
+2r
+1
+:
+Part IV
+Conclusion
+As was mentioned in part I, normalization of a real system (1) _ x
+i
+= P
+i
+(x) +X
+i
+(x); where
+P
+i
+=a
+i
+x
+2
+1
++ 2b
+i
+x
+1
+x
+2
++c
+i
+x
+2
+2
+is the unperturbed part, X
+i
+=
+P
+1
+p=2
+X
+(p+1)
+i
+(x) { the perturbation,
+X
+(r)
+i
+is a homogeneous polynomial by the order r (i = 1; 2); is naturally divides into 2 phase.
+I) On the  rst phase by using linear invertible changes (9) we simplify the unperturbed
+part of system (1), i. e. the vector of homogeneous quadratic polynomial P = (P
+1
+;P
+2
+):
+In part II the set of systems (2) is divided into 19 linearly nonequivalent classes. For
+each class canonical form (see de nition 7) is the simplest representative, being the form is an
+analogue to a Jordan matrix for linear systems.
+Depending on the order l of the common factor of polynomials P
+1
+and P
+2
+(see de nition
+5) the set of canonical forms is divided into 3 subsets.
+It is turned out that if P
+1
+and P
+2
+do not have a common factor (l = 0); (and
+according to assertion 1 this is equivalent to the fact that corresponding them resultant
+R 6= 0 ), then system (2) may be brought to one of 10 canonical forms: CF
+0
+1
+{ CF
+0
+10
+:
+If P
+1
+and P
+2
+have a common factor of the  rst order, then system (2) is reduced to one
+of 5 canonical forms: CF
+1
+1
+{ CF
+1
+5
+: At last, if P
+1
+and P
+2
+are proportional (l = 2); then
+system (2) is reduced to one of 4 canonical forms: CF
+2
+1
+{ CF
+2
+4
+:
+We consider two questions in detail.
+1) The renumbering (14) brings any CF
+l
+i
+(of course, if the form is not invariant with respect
+to this change) to an additional canonical form CF
+lr
+i
+(see de nition 8) for which principle 5
+from the de nition of CF is not hold.
+And for l = 2 there exists another variant of additional CF: ACF
+2
+2
+in accordance with re-
+mark 19 is obtained from a CF
+2
+2
+with   = 1 by a linear change differing from the renumbering
+and has its own ACF
+2r
+2
+:
+2) In case of l = 2 if we divide CF
+2
+2
+into two forms depending on the sign of  ; then every
+of 5 CF
+2
+is linearly equivalent to its degenerate CF (see de nition 9). The advantage of DCF
+2
+is that it has the index lesser than corresponding CF
+2
+. That easily allows us to investigate
+GNF of systems (1) with DCF
+2
+in unperturbed part. But the absence of P
+2
+does not allow us
+to annul some summands in the perturbation, which is possible for nondegenerate CF if there
+are technical tools.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 83Differential Equations and Control Processes, N 4, 2010
+II) The second phase implies that for a system (1) with the unperturbed part CF
+l
+or
+DCF
+2
+to obtain all the generalized normal forms ( see de nition 4) in explicit form by almost
+identical change of variables (3).
+In part III this problem has been solved for systems with DCF
+2
+1
+;:::; DCF
+2
+5
+in unperturbed
+part.
+Since before this article the classi cation of canonical forms introduced in [2, x 2],
+where principles 5 and 6 of the de nition of canonical forms were not clearly formulated,
+we consider results for other CF
+l
+i
+or their close analogs.
+In case of l = 0 systems (1) with the following 4 forms: with CF
+0
+1
+=
+ 
+1 0 0
+0 0 1
+!
+{
+in [2, x 6], with CF
+0
+2
+=
+ 
+0 0 1
+1 0 0
+!
+{ in [4, x 11], with CF
+0 
+4
+=
+ 
+1 0 u
+ 
+0 0 1
+!
+differing
+from CF
+0
+4
+=
+ 
+u 0 1
+0 0 1
+!
+by a normalization { in [2,x 6], with CF
+0
+5
+=
+ 
+u 0  
+0 1 0
+!
+; where
+  = signu (R< 0); { in [5,x 12] (unfortunately, CF
+0
+5
+with R> 0 have not been revealed
+yet) were investigated previously.
+In case of l = 1 systems (1) with the following 4 forms: with CF
+1
+1
+=
+ 
+u 0 0
+0 1 0
+!
+{
+in [2,x 5], with CF
+1
+2
+=
+ 
+0   0
+1 0 0
+!
+{ in [3,x 8], with CF
+1
+3
+=
+ 
+u 1 0
+0 1 0
+!
+; including u = 1;
+{ in [3,x 7], with CF
+1
+4
+=
+ 
+1 0 0
+1 1 0
+!
+{ in [4,x 9] were investigated previously.
+Thus, on one of cases two sets of formally equivalent GNF have been obtained. In the  rst
+set the unperturbed part is presented by a CF
+1
+2
+with   = 1; and in the second one { by a form
+CF
+1
+3
+; but with u = 1; and in accordance with remark 7 these CF are linearly equivalent.
+In case of l = 2 systems (1) with the following 3 forms: with CF
+2
+1
+=
+ 
+1 0 0
+1 0 0
+!
+{
+in [2, x 4], with ACF
+2 
+2
+=
+ 
+ 1  1 0
+1 1 0
+!
+differing from ACF
+2
+2
+=
+ 
+1  1 0
+1  1 0
+!
+by
+a normalization { in [4,x 10], with CF
+2
+4
+=
+ 
+0 1 0
+0 1 0
+!
+{ in [2,x 3].
+In this situation in 3 cases two sets of formally equivalent GNF were obtained. By theorem 5
+DCF
+2
+i
+is linear equivalent to a CF
+2
+i
+(i = 1; 3; 4); DCF
+2
+2
+is equivalent to a CF
+2
+2
+with   = 1
+(and ACF
+2
+2
+); and DCF
+2
+5
+is equivalent CF
+2
+2
+with   = 1:
+We also note that system (1) investigated in [4,x 10] is up to the present the unique system
+in which the unperturbed part has 4 nonzero summands (ACF
+2 
+2
+):
+Electronic Journal. http://www.math.spbu.ru/diffjournal 84Differential Equations and Control Processes, N 4, 2010
+References
+[1] Basov V. V. A Generalized Normal Form and Formal Equivalence of Systems of Differential
+Equations with Zero Characteristic Numbers // Differential Equations, 2003, Vol. 39, No. 2,
+pp. 165{181. Translated from Differentsial'nye Uravneniya, 2003, Vol. 39, No. 2, pp. 154{170.
+[2] Basov V. V. and Skitovich A. V. A Generalized Normal Form and Formal Equivalence of Two-
+Dimensional Systems with Quadratic Zero Approximation: I // Differential Equations, 2003,
+Vol. 39, No. 8, pp. 1067{1081. Translated from Differentsial'nye Uravneniya, 2003, Vol. 39, No. 8,
+pp. 1016{1029.
+[3] Basov V. V. and Skitovich A. V. A Generalized Normal Form and Formal Equivalence of Two-
+Dimensional Systems with Quadratic Zero Approximation: II // Differential Equations, 2005,
+Vol. 41, No. 8, pp. 1061{1074. Translated from Differentsial'nye Uravneniya, 2005, Vol. 41, No. 8,
+pp. 1011{1023.
+[4] Basov V. V. A Generalized Normal Form and Formal Equivalence of Two-Dimensional Systems
+with Quadratic Zero Approximation: III // Differential Equations, 2006, Vol. 42, No. 3, pp. 327{
+339. Translated from Differentsial'nye Uravneniya, 2006, Vol. 42, No. 3, pp. 308{319.
+[5] Basov V. V. and Fedorova E. V. Normalization of a System Whose Unperturbed Part is
+(ffx
+2
+1
++x
+1
+x
+2
+; x
+1
+x
+2
+) (in Russian) // Trudy XII Int. nauch. konf. po differentsial'nym. uravneniyam
+(Eruginskie chtenia), 2007, p. 24{32.
+[6] Basov V. V. and Fedorova E. V. A Generalized Normal Form and Formal Equivalence of Two-
+Dimensional Systems with Quadratic Zero Approximation: IV // Differentsial'nye Uravneniya,
+2009, v. 45, N 3, p. 297{313.
+[7] Bruno A. D., Petrovich V. Yu. Nornal forms of systems ODE (in Russian) // Preprint I.H.E.S.,
+M/2000/18.
+[8] Basov V. V. and Fedotov A. A. Generalized Normal Forms for Two-Dimensional Systems of Or-
+dinary Differential Equations with Linear and Quadratic Unperturbed Parts // Vestnik St.
+Petersburg University: Mathematics, 2007, Vol. 40, No. 1, pp. 6{26. Translated from Vest-
+nik Sankt-Peterburgskogo Universiteta. Seriya 1. Matematika, Mekhanika, Astronomiya, 2007,
+Vol. 40, No. 1, pp. 13{32.
+[9] Bruno A. D. Analitical Form of Differential Equations // Moscow Math. Soc., 1971, Vol. 25,
+pp. 131{286; 1972, Vol. 26, pp. 119{239. Translated from Trudy Moskovskogo Matematicheskogo
+Ob-va, 1971, Vol. 25, pp. 119{262; 1972, Vol. 26, pp. 7{264.
+[10] Basov V. V. Normal forms method in local qualitative theory of differential equations: the formal
+theory of normal forms (in Russian) // SPb., SPbGU, 2001. pp. 44.
+[11] Basov V. V. Normal forms method in local qualitative theory of differential equations: the
+analytical theory of normal forms (in Russian) // SPb., SPbGU, 2002, pp. 100.
+[12] Kokubu H., Oka H., Wang D. Linear grading function and further redaction of normal forms //
+J. Diff. Eq., 1996, v. 132, p. 293{318.
+[13] Sibirsky K. S. Introduction to algebraic theory of invariants of differential equations (in Russian)
+// Kishenev, "Shtinitza", 1982. pp.168.
+[14] Belitski G. R. Normal forms of formal series and germs of C
+1
+- mapping under group action
+(in Russian) // Izv. AN USSR, ser. math., 1976, v. 40, N 4, p. 855{868.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 85

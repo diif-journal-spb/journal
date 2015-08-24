@@ -1,0 +1,1557 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 2, 2000
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Group analysis of differential equations
+ON INTEGRABILITY OF ONE EVOLUTION
+SYSTEM
+Meshkov A.G., Mishin S.N.
+Oryol State University
+302015, Oryol, Komsomolskaia, 95
+e-mail: meshkov@esc.private.oryol.su
+1 Introduction
+Let us consider an evolution system of the following type
+u
+t
+= u
+3
++ F(u
+2
+; v
+2
+; u
+1
+; v
+1
+; u; v); v
+t
+= G(u
+1
+; v
+1
+; u; v); (1)
+where F and G are arbitrary functions, u
+i
+= @
+i
+u=@x
+i
+; i = 1; 2; 3; u
+t
+= @u=@t.
+The symmetry classi cation of integrable systems of the type (1) was given in
+the article [1]. We folowed there to ideas of the article [2]. But the canonical
+conserved densities were obtained by the Chinese algorithm [3]. The list of
+integrable systems that was presented in [1] consists of 15 systems. But some
+of the systems are connected by the several contact transformations. We write
+here the independent integrable systems from the article [1] for completeness:Differential Equations and Control Processes, N 2, 2000
+u
+t
+= w
+2
++ 6c
+0
+e
+u
+u
+1
+  1=2w
+3
++ c
+1
+w + c
+2
+u
+1
+; w = u
+1
+  v;
+v
+t
+= 3c
+0
+e
+u
+u
+2
+1
++ 4c
+0
+e
+u
+v
+1
++ c
+0
+e
+u
+v
+2
+  2c
+0
+c
+1
+e
+u
++ c
+2
+v
+1
+; c
+0
+6= 0:
+(2)
+u
+t
+= u
+3
++ u
+1
+v + uv
+1
+; v
+t
+= u
+1
+: (3)
+u
+t
+= u
+3
++ 3u
+1
+v + 2uv
+1
++ v
+1
+v
+2
++ c
+1
+v
+1
+  2v
+2
+v
+1
+; v
+t
+= u
+1
++ vv
+1
+: (4)
+u
+t
+= u
+3
++ 2u
+1
+v + uv
+1
+; v
+t
+= 2cuu
+1
+; c6= 0: (5)
+u
+t
+= u
+3
+ 
+u
+1
+v
+2
+v
+ 
+3u
+2
+v
+1
+2v
++
+3u
+1
+v
+2
+1
+2v
+2
++
+u
+2
+u
+1
+v
++
++
+c
+1
+u
+1
+2v
++ 2c
+2
+v
+2
+u
+1
++ 3c
+2
+uvv
+1
+; v
+t
+= 2uu
+1
+:
+(6)
+u
+t
+= u
+3
+ 
+u
+1
+v
+2
+v
+ 
+3u
+2
+v
+1
+2v
++
+3u
+1
+v
+2
+1
+2v
+2
++
+3c
+1
+uv
+2
+1
+2v
+2
++
++
+u
+2
+u
+1
+v
+  c
+1
+u
+1
+v
+1
++ uv
+2
+  u
+3
+v
++
+c
+2
+1
+uv
+1
+2v
+  c
+2
+1
+u
+1
+  c
+2
+u;
+v
+t
+= 2uu
+1
++ 2c
+1
+u
+2
+  2c
+2
+v:
+(7)
+u
+t
+= u
+3
++ 3uu
+1
++ 2c
+1
+vv
+1
+; v
+t
+= uv
+1
++ u
+1
+v; c
+1
+6= 0: (8)
+Let us mention, that the systems (3), (5) are known as the Drinfeld-Sokolov
+systems [4], [5].
+We investigate the system (8) in this article.
+2 Zero curvature representation
+If we perform the dilatation v ! v=jc
+1
+j
+1=2
+, then the system (8) takes more
+simple form
+u
+t
+= u
+xxx
++ 3uu
+x
++ 2"vv
+x
+; v
+t
+= (uv)
+x
+; (9)
+where " = c
+1
+=jc
+1
+j = 1. Now we consider the zero curvature representation for
+the system (9)
+U
+t
+  V
+x
++ [U; V ] = 0: (10)
+If we adopt that the matrix U depend on u; v, and the matrix V depend on
+u; v; u
+1
+; u
+2
+, then performing the differentiation in (10) one can easyly obtain
+Electronic Journal.  51Differential Equations and Control Processes, N 2, 2000
+the U and V matrices
+U = A
+1
++ A
+2
+u + A
+3
+v
+2
+;
+V = A
+2
+(u
+2
++ "v
+2
+) + A
+4
+u
+1
++ A
+3
+uv
+2
++
+1
+2
+[A
+2
+; A
+4
+] u
+2
++
+3
+2
+A
+2
+u
+2
++ [A
+1
+; A
+4
+] u + A
+5
+;
+where A
+i
+are constant matrices satisfying the following algebra
+[A
+2
+; A
+3
+] = 0; [A
+1
+; A
+5
+] = 0; [A
+3
+; A
+5
+] = "A
+4
+; [A
+3
+; A
+4
+] = A
+3
+;
+[A
+1
+; [A
+1
+; A
+4
+]] + [A
+2
+; A
+5
+] = 0; [A
+4
+; [A
+1
+; A
+3
+]] = 0; [A
+1
+; A
+2
+] = A
+4
+; (11)
+[A
+1
+; [A
+2
+; A
+4
+]] = A
+4
+; [A
+2
+; [A
+2
+; A
+4
+]] = 0:
+Follow to the ideas of the article [6] we set
+[A
+1
+; A
+4
+] = A
+6
+; and A
+3
+=
+"
+ 
+A
+2
+;
+where   is a parameter. Then exploiting the Jacobi identity we found the
+following 5-dimensional Lie algebra L:
+[A
+1
+; A
+5
+] = 0; [A
+1
+; A
+2
+] = A
+4
+; [A
+1
+; A
+6
+] =  A
+4
+; [A
+2
+; A
+4
+] = A
+2
+;
+[A
+1
+; A
+4
+] = A
+6
+; [A
+2
+; A
+5
+] =  A
+4
+; [A
+2
+; A
+6
+] = A
+4
+; (12)
+[A
+4
+; A
+6
+] = A
+6
++  A
+2
+; [A
+4
+; A
+5
+] =  A
+6
+; [A
+5
+; A
+6
+] =  
+2
+A
+4
+Algebra (12) possesses two dimensional center Z =fA
+5
+  A
+1
+; A
+1
++ A
+2
+ A
+6
+g.
+Therefore setting A
+5
+=  A
+1
+, and A
+6
+= A
+1
++  A
+2
+we obtain three dimensional
+algebra
+[A
+1
+; A
+2
+] = A
+4
+; [A
+2
+; A
+4
+] = A
+2
+; [A
+1
+; A
+4
+] = A
+1
++  A
+2
+; (13)
+isomorphic to the factor algebra LnZ. This algebra is sl(2) obviously. Then
+constructing a representation of the algebra (13), we found the following explicit
+form of the matrices U and V :
+U =
+ 
+0 u + ("= )v
+2
+ 
+1
+2
+ 
+ 
+1
+2
+0
+!
+;
+V =
+ 
+1
+2
+u
+1
+u
+2
++ "v
+2
++ ("= )u v
+2
++ u
+2
++
+1
+2
+ (u   )
+ 
+1
+2
+(u +  )  
+1
+2
+u
+1
+!
+:
+(14)
+Electronic Journal.  52Differential Equations and Control Processes, N 2, 2000
+3 Recursion operator and Lie-B acklund symmetries
+The recursion operator maps Lie-B acklund algebra of an evolution system into
+itself. As we found the matrices (21) that satisfy the equation (10) then we used
+the direct algorithm suggested in [10] and developed in [11] for constructing a
+recursion operator. The recursion operator of the system (9) takes the following
+form
+  =
+ 
+D
+2
++ 2 u + u
+1
+D
+ 1
+2 " v
+D v D
+ 1
+0
+!
+: (15)
+If we denote  
+0
+= fu
+1
+; v
+1
+g;  
+1
+  K = fu
+3
++ 3 u u
+1
++ 2 " v v
+1
+; u v
+1
++ u
+1
+vg then
+the following formula   
+0
+=  
+1
+can be easily checked. One can  nd the higher
+symmetries by the recusrsion formula  
+n+1
+=   
+n
+. For example,
+ 
+u
+2
+= u
+5
++ 5 u u
+3
++ 10 u
+2
+u
+1
++ 6 " v
+2
+v
+1
++ 2 " v v
+3
++ 15=2 u
+1
+u
+2
++
++ 3 u
+1
+" v
+2
++ 6 u " v v
+1
+;
+ 
+v
+2
+= v u
+3
++ 3 v u u
+1
++ 3 " v
+2
+v
+1
++ v
+1
+u
+2
++ 3=2 v
+1
+u
+2
+:
+(16)
+The direct calculation shows that the system (9) also admits another sym-
+metries:
+ 
+1
+=
+ 
+3 t (u
+3
++ 3 u u
+1
++ 2 " v v
+1
+) + 2 u + x u
+1
+3 t (u
+1
+v + u v
+1
+) + 2 v + x v
+1
+!
+;
+!
+1
+=
+ 
+2   " v
+ 2
+v
+1
+v
+ 3
+(v
+3
+  6 v
+ 1
+v
+1
+v
+2
++ 6 v
+ 2
+v
+3
+1
++ 2 u v
+1
+  v u
+1
+)
+!
+:
+(17)
+Here  
+1
+corresponds to the point symmetry with the following in nitesimal
+operator
+X = 3 t
+@
+@t
++ x
+@
+@x
+  2 u
+@
+@u
+  2 v
+@
+@v
+:
+But !
+1
+is nonclassic Lie-B acklund symmetry.  
+1
+creates the in nite sequence
+of Lie-B acklund symmetries according to the formula  
+n+1
+=   
+n
+. It can be
+checked that  
+2
+is nonlocal symmetry:
+ 
+u
+2
+= xu
+3
++ 4u
+2
++ 3xuu
+1
++ u
+1
+u
+ 1
++ 4u
+2
++ 2"(2v
+2
++ xvv
+1
+)+
++3t(u
+5
++ 5u u
+3
++ 10u
+1
+u
+2
++ 2"v v
+3
++ 6"v
+1
+v
+2
++
+15
+2
+u
+2
+u
+1
++ 3"v
+2
+u
+1
++ 6"u v v
+1
+);
+ 
+v
+2
+= 3t( v u
+3
++ v
+1
+u
+2
++ 3 " v
+2
+v
+1
++ 3 v u u
+1
++
+3
+2
+v
+1
+u
+2
+) + x v u
+1
++ 2 u v+
++ x u v
+1
++ v
+1
+u
+ 1
+;
+(18)
+Electronic Journal.  53Differential Equations and Control Processes, N 2, 2000
+where u
+ 1
+= D
+ 1
+u. The other symmetries  
+i
+are nonlocal too obviously.
+It is easy to check that  !
+1
+= 0, but  
+ 1
+!
+1
+  !
+2
+is the local 5th-order
+Lie-B acklund symmetry:
+ 
+ 1
+=
+ 
+0 D v
+ 1
+D
+ 1
+"=(2 v)  "=(2 v)(D
+3
++ 2 u D + u
+1
+) v
+ 1
+D
+ 1
+!
+; (19)
+!
+u
+2
+= 1=2 (2 v
+3
+v
+2
+  14 v
+1
+v
+2
+v + 15 v
+3
+1
+  2 u
+1
+v
+3
++ 6 u v
+1
+v
+2
+)=v
+6
+;
+!
+v
+2
+= 1=4 " (2 v
+5
+v
+4
+  30 v
+1
+v
+4
+v
+3
+  50 v
+2
+v
+3
+v
+3
++ 10 v
+3
+u v
+4
+  2 u
+3
+v
+5
++
++225 v
+2
+1
+v
+3
+v
+2
++ 20 u
+1
+v
+2
+v
+4
++ 18 v
+1
+u
+2
+v
+4
+  1050 v
+3
+1
+v
+2
+v + 630 v
+5
+1
++
++150 v
+3
+1
+u v
+2
++ 300 v
+1
+v
+2
+2
+v
+2
+  100 v
+1
+v
+2
+u v
+3
+  6 u u
+1
+v
+5
++ 4 " v
+1
+v
+6
+ 
+ 75 u
+1
+v
+2
+1
+v
+3
++ 12 u
+2
+v
+1
+v
+4
+)=v
+9
+(20)
+Hence our system admits the third sequence of Lie-B acklund symmetries: !
+n+1
+=
+ 
+ 1
+!
+n
+. !
+3
+is a local vector function and the other vector functions !
+i
+will be
+local probably.
+Let us consider the evolution system (u
+t
+; v
+t
+) = !
+1
+. If we set v = 1=w then
+this system takes the following simple form
+u
+t
+= 2 " w
+1
+; w
+t
+= w
+3
+(w
+3
++ u
+1
+w + 2 u w
+1
+): (21)
+The second equation can be rewritten as the conservation law (1=w)
+t
+= ( w w
+2
++
+w
+2
+1
+=2  u w
+2
+)
+x
+. Hence the following transformation (t; x; u; w)! ( ; y; u
+0
+; z)
+t
+0
+= t; dy = w
+ 1
+dx + ( w w
+2
++ w
+2
+1
+=2  u w
+2
+) dt;
+u
+0
+(t
+0
+; y) = u(t; x); w(t; x) = exp(z(t
+0
+; y)=2):
+(22)
+is possible for (21). Performing it we obtain the following new integrable system
+u
+t
+=
+1
+2
+u
+1
+z
+2
+ 
+1
+8
+u
+1
+z
+2
+1
++ u
+1
+e
+z
+u + " z
+1
+; z
+t
+= z
+3
+ 
+1
+8
+z
+3
+1
++ 2 e
+z
+u
+1
++ 3 e
+z
+u z
+1
+; (23)
+where u
+i
+= @
+i
+u=@y
+i
+.
+Let us mention in conclusion that the operators (15) and (19) are hereditary
+operators.
+Electronic Journal.  54Differential Equations and Control Processes, N 2, 2000
+4 Conserved densities and Noether operators
+The pair of functions ( ;  ) is called the conserved current of a partial dif-
+fetential system with two independent variables t; x and dependent variables
+u
+ff
+; ff = 1; 2; : : :; m, if D
+t
+ (t; x; u) = D  (t; x; u) for any solution of the system.
+The function   is said to be the conserved density and   be the density current.
+If we consider the evolution system u
+t
+= K(u) then gradient of any conserved
+density  = E  :
+
+ff
+=
+X
+n
+( D)
+n
+@ 
+@u
+ff
+n
+solves the following equation
+(D
+t
++ K
+0
++
+) = 0;
+where K
+0
++
+is the adjoint for K
+0
+operator (see [7], [8] or [9]).
+Operator   satisfying the equation
+(D
+t
+  K
+0
+)  =  (D
+t
+  K
+0
++
+) (24)
+is called the Noether operator [12].
+According to this de nition Noether operator of an evolution system maps
+the set of gradients of conserved densities into the set of Lie-B acklund symme-
+tries of the system.
+We solved the equation (24) and found two following Noether operators for
+the system (9):
+ 
+1
+=
+ 
+D
+3
++ D u + u D v D
+D v 0
+!
+;  
+2
+=
+ 
+D 0
+0 ("=2) D
+!
+: (25)
+The direct check shows that  
+1
+and  
+2
+are implectic and compatible (see [12],
+[13]). In other words  
+1
+and  
+2
+is the Hamiltonian pair. The recursion operator
+(15) takes the form   =  
+1
+ 
+ 1
+2
+as it can be checked. This formula implies that
+  and  
+ 1
+are hereditary operators.
+Solving the equation D
+t
+  = D   one can easyly  nd the following simplest
+Electronic Journal.  55Differential Equations and Control Processes, N 2, 2000
+conserved currents j
+k
+= [ 
+k
+;  
+k
+]:
+j
+1
+= [u; u
+2
++
+3
+2
+u
+2
++ " v
+2
+]; j
+2
+= [v; u v]:
+j
+3
+= [
+1
+2
+u
+2
++ " v
+2
+; u u
+2
+ 
+1
+2
+u
+2
+1
++ u
+3
++ 2 " u v
+2
+];
+j
+4
+= [ 
+1
+2
+u
+2
+1
++
+1
+2
+u
+3
++ " u v
+2
+;  u
+1
+u
+3
++
+3
+2
+u
+2
+u
+2
++
++" v
+2
+u
+2
++
+1
+2
+u
+2
+2
+  2 " v v
+1
+u
+1
+  3 u u
+2
+1
++
+9
+8
+u
+4
++
+5
+2
+" v
+2
+u
+2
++
+1
+2
+v
+4
+];
+j
+5
+= [
+1
+2
+v
+ 3
+v
+2
+1
+  v
+ 1
+u;  v
+ 1
+u
+2
++
+1
+2
+v
+ 3
+v
+2
+1
+u  v
+ 1
+u
+2
+  2 " v]:
+The corresponding gradients 
+k
+= [  
+k
+= u;   
+k
+= v] take the following form
+
+1
+= [1; 0]; 
+2
+= [0; 1]; 
+3
+= [u; 2 " v]; 
+4
+= [u
+2
++
+3
+2
+u
+2
++ " v
+2
+; 2 " u v];
+
+5
+= [ v
+ 1
+; v
+ 3
+v
+2
++
+3
+2
+v
+ 4
+v
+2
+1
++ u v
+ 2
+]:
+Using these expressions we found that
+ 
+1
+
+1
+=fu
+1
+; v
+1
+g   
+0
+;  
+1
+
+2
+= 0;  
+1
+
+3
+=  
+1
+;  
+1
+
+4
+=  
+2
+;  
+1
+
+5
+= 0;
+ 
+2
+
+1
+=  
+2
+
+2
+= 0;  
+2
+
+3
+=  
+0
+;  
+2
+
+4
+=  
+1
+;  
+2
+
+5
+= !
+1
+=(2 "):
+(26)
+Hence, the system (9) is the bi-Hamiltonian one:
+u
+t
+=  
+1
+E 
+3
+=  
+2
+E 
+4
+: (27)
+Here u =fu; vg.
+References
+[1] Kulemin I.V., Meshkov A.G. To the Classi cation of Integrable Systems in
+1+1 Dimensions. In Symmetry in Nonlinear Mathematical Physics. Proc.
+2nd Int. Conf., Kiev. 1977, V.1, 115{121.
+[2] Sokolov V.V. and Shabat A.B. Classi cation of integrable evolution equa-
+tios. Soviet Scienti c Revies, Section C., 1984, V.4, 221-280.
+[3] Chen H.H., Lee Y.C., Liu C.S. Integrability of nonlinear Hamiltonian sys-
+tems by inverse scattering transform. Phys. scr., 1979, V.20, N 3, 490{492.
+Electronic Journal.  56Differential Equations and Control Processes, N 2, 2000
+[4] Drinfeld V.G., Sokolov V.V. J. Sov. Math., 1985, V.30, 1975.
+[5] Drinfeld V.G., Sokolov V.V. Proceedings of S. L. Sobolev Seminar, Novosi-
+birsk, 1981, V.2, p.5.
+[6] Wahlquist H.D., Estabrook F.B. Prolongation structures of nonlinear evo-
+lution equations. J. Math. Phys., 1975, V.16, 1{7.
+[7] Ibragimov N.H. Transformation Groups in Mathematical Physics. Nauka,
+Moskow, 1983.
+[8] Olver P.J. Applications of Lie Groups to Differential Equations. Mir,
+Moskow, 1989.
+[9] CRC Handbook of Lie Group Analysis of differential equations. Ed. Ibragi-
+mov N.H. CRC Press, London, Tokio, 1994, 1995, etc.
+[10] Fokas A.S., Anderson R.L. On the use of isospectral eiganvalue problems for
+obtaining hereditary symmetries for Hamiltonian systems. J. Math. Phys.,
+1982, V.23, N 6, 1066{1073.
+[11] Meshkov A.G. Symmetries and Conservation Laws for Evolution Equa-
+tions. VINITI, N 1511{85, Moskow, 1985.
+[12] Focas A.S., Fuchssteiner B. Lett. Nuovo Cimento, 1980, v.28, 299.
+[13] Fuchssteiner B., Focas A.S. Physica, 1981, D4, 47.
+Electronic Journal.  57

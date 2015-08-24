@@ -1,0 +1,718 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 2, 2002
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Applications to physics, electrotechnics, and electronics
+RELATIVE MOTION OF FLUID SPHERES
+WITH A FREE SURFACE
+B. S. BHATT, A. SHIRLEY
+Department Of Mathematics & Computer Science
+The University Of The West Indies, St. Augustine
+Trindad, W.I.
+E-mail: bbhatt@centre.uwi.tt
+Abstract
+Relative motion of liquid spheres of different viscosities has been considered
+when the surface of the outer sphere is a free surface. The exact solution has
+been found using Stokes' approximation. Drag force experienced by the inner
+sphere has been determined and several cases of interest have been derived.
+The correction to the drag expression up to  rst order in Reynolds number has
+also been obtained. The effect of viscosity ratio and the Reynolds number on
+the drag has been shown graphically.Differential Equations and Control Processes, N 2, 2002
+1 Introduction
+Relative motion of solid and liquid spheres is of great importance to industrial
+and engineering applications, such as in the ow of uids in uidized beds or
+ xed beds, the sedimentation of  ne particulate suspensions and the ow of oil
+in oil  elds/reservoirs during oil recovery.
+A great deal of work has been carried out on the ow of Newtonian uids
+while considering the relative motion of solid/liquid spheres. One can refer
+to the problems given in the book of Happel and Brenner[1]. Some related
+problems for porous spheres have been done by Bhatt [2], Bhatt and Owen [3]
+and Neale et.al.[4].
+In the present problem we have considered the relative motion of two liquid
+spheres of viscosity  
+i
+and  
+o
+(inner and outer uid regions). The inner region
+is 0<r<a whereas the outer region is a<r<b. The surface r =b is a free
+surface. The drag force experienced by the inner sphere has been obtained and
+the result has been extended to the  rst order in Reynolds number following
+Verma and Bhatt [5].
+2 Equations of motion
+We consider the free surface cell (bounded) model of Happel [6] when a uid
+sphere (of viscosity  
+i
+) is surrounded by a uid (of viscosity  
+o
+) which is moving
+with velocity V . The two uids are taken to be immiscible. Therefore there
+are two ow regions, namely, 0 < r < a and a < r < b. Using the Stokes'
+approximation for slow motion the ows are given as follows:
+The region I: 0 < r < a is governed by the Navier-Stokes equations,
+given by
+E
+4
+ 
+i
+= 0; (2.1)
+the region II: a < r < b is governed by the Navier-Stokes equations,
+given by
+E
+4
+ 
+(o)
+= 0; (2.2)
+where 
+i
+, 
+o
+are the stream functions in the regions I and II respectively,
+Electronic Journal.  48Differential Equations and Control Processes, N 2, 2002
+given by
+(u
+r1
+;u
+r2
+) =
+1
+r
+2
+sin 
+ 
+@ 
+(i)
+@ 
+;
+@ 
+(o)
+@ 
+ 
+;
+(u
+ 1
+;u
+ 2
+) =  
+1
+r sin 
+ 
+@ 
+(i)
+@r
+;
+@ 
+(o)
+@r
+ 
+;
+(2.3)
+(u
+ri
+;u
+ i
+), i = 1; 2 are the velocity components. The boundary conditions
+used are:
+as r! 0; u
+r1
+; u
+ 1
+remain  nite; (2.4)
+u
+r1
+=u
+r2
+= 0;
+u
+ 1
+=u
+ 2
+;
+ 
+i
+@
+@r
+ 
+1
+r
+2
+@ 
+(i)
+@r
+ 
+= 
+o
+@
+@r
+ 
+1
+r
+2
+@ 
+(o)
+@r
+ 
+9
+>
+>
+>
+>
+=
+>
+>
+>
+>
+;
+at r =a; (2.5)
+u
+r2
+=V cos ;
+r
+@
+@r
+ 
+u
+ 2
+r
+ 
++
+1
+r
+@u
+r2
+@ 
+= 0
+9
+=
+;
+at r =b; (2.6)
+3 Solutions
+The solution of equations (2.1) and (2.2) can be obtained, using (see Happel
+and Brenner [1])
+( 
+(i)
+; 
+(o)
+) = (f
+(i)
+(r);f
+(o)
+(r)) sin
+2
+ ; (3.1)
+which lead to
+ 
+(i)
+=
+ 
+1
+10
+A
+1
+r
+4
+ 
+1
+2
+B
+1
+r +C
+1
+r
+2
++
+D
+1
+r
+ 
+V sin
+2
+  (3.2)
+ 
+(o)
+=
+ 
+1
+10
+A
+2
+r
+4
+ 
+1
+2
+B
+2
+r +C
+2
+r
+2
++
+D
+2
+r
+ 
+V sin
+2
+  (3.3)
+Using (2.3), (3.1) and (3.2), we obtain
+u
+ri
+= V cos 
+ 
+1
+5
+A
+i
+r
+2
+ 
+B
+i
+r
++ 2C
+i
++
+2D
+i
+r
+3
+ 
+; (3.4)
+u
+ i
+=  V sin 
+ 
+2
+5
+A
+i
+r
+2
+ 
+B
+i
+2r
++ 2C
+i
+ 
+D
+i
+r
+3
+ 
+; (3.5)
+Electronic Journal.  49Differential Equations and Control Processes, N 2, 2002
+where i = 1; 2.
+Using the boundary conditions (2.4)-(2.6) we get:
+B
+1
+= D
+1
+= 0; (3.6)
+A
+1
+=  
+10C
+1
+a
+2
+; (3.7)
+A
+2
+=  
+10D
+2
+b
+5
+; (3.8)
+C
+1
+=
+D
+2
+2a
+3
+ 
+1 + 4
+a
+5
+b
+5
+ 
++
+B
+2
+4a
+ 
+1  2
+a
+b
+ 
+ 
+1
+2
+; (3.9)
+C
+2
+=
+1
+2
+ 
+1 +
+B
+2
+b
+ 
+; (3.10)
+B
+2
+a
+2
+2
+ 
+a
+b
+  1
+ 
++D
+2
+ 
+1 
+a
+5
+b
+5
+ 
++
+a
+3
+2
+= 0; (3.11)
+B
+2
+=
+a
+ 
+3
+2
++ 
+5
++ (1  
+5
+)
+ 
+1 +  
+ 
+3
+2
++ 
+ 
+  +
+ 
+3
+2
+  
+ 
+ 
+5
+  (1  ) 
+6
+; (3.12)
+with   =
+ 
+o
+ 
+i
+and   =
+a
+b
+.
+4 Drag force
+The drag force experienced by the inner uid sphere is given by (see Happel
+and Brenner [1]):
+D
+r
+= 4 
+o
+ VB
+2
+: (4.1)
+We de ne
+
+
+1
+=
+D
+r
+ 6  
+o
+Va
+=
+1 +
+2
+3
+ 
+5
++
+2
+3
+ (1  
+5
+)
+1 +  
+ 
+3
+2
++ 
+ 
+  +
+ 
+3
+2
+  
+ 
+ 
+5
+  (1  ) 
+6
+: (4.2)
+Some special cases:
+For rigid sphere (  = 0), (4.2) gives
+
+
+1
+=
+1 +
+2
+3
+ 
+5
+1 
+3
+2
+  +
+3
+2
+ 
+5
+  
+6
+; (4.3)
+which is the well known Happel's [6] formula.
+Electronic Journal.  50Differential Equations and Control Processes, N 2, 2002
+For sphere with viscosity equal to that of external medium (  = 1), (4.2)
+gives
+
+
+1
+=
+5
+3
+2 
+5
+2
+  +
+1
+2
+ 
+5
+  
+6
+: (4.4)
+For uid sphere of vanishing viscosity (  =1), (4.2)
+
+
+1
+=
+2
+3
+(1  
+5
+)
+1    
+5
++ 
+6
+: (4.5)
+(4.5) is the drag force on a gaseous bubble rising through a liquid where
+ 
+o
+>> 
+i
+.
+Following the method of matched asymptotic technique of Proudman and
+Pearson [7] as used by Verma and Bhatt [5], we can extend the result in (4.2)
+to  rst order in the Reynolds number when the viscous terms are included in
+the equations of motion.
+We use the formula as obtained by Verma and Bhatt [5] to get the drag
+force experienced by the inner uid sphere as:
+D
+r1
+= 4 
+o
+ VB
+2
+ 
+1 +
+B
+2
+4
+R
+ 
+= 6 
+o
+ Va
+
+1
+ 
+1 +
+3
+8
+R
+
+1
+ 
+; (4.6)
+where R =
+V a
+ 
+o
+,  
+0
+is kinematic viscosity of the outer liquid.
+(4.6) leads to:
+
+ = 
+
+1
+ 
+1 +
+3
+8
+R
+
+1
+ 
+; (4.7)
+where 
+ =
+D
+r1
+ 6  
+o
+V a
+. (4.6) gives the drag force on the inner uid sphere up to
+ rst order in the Reynolds number.
+For  ! 0, (4.6) reduces to
+D
+r1
+= 6 
+o
+ Va
+1 +
+2
+3
+ 
+1 + 
+ 
+1 +
+3R(1 +
+2
+3
+ )
+8(1 + )
+ 
+: (4.8)
+(4.8) is the drag force on a uid sphere up to  rst order in the Reynolds number
+which is surrounded by an in nite extent of different liquid. For R = 0, (4.8)
+agrees with the result obtained in [1].
+Using (4.2) and (4.7) the behaviour of 
+ verses   with   and R has been
+given in  gure 1. 
+ remains constant up to   = 0:4 and then increases with
+R but decreases with   (similar behaviour has been obtained in [1]). As  
+increases  
+o
+>  
+i
+, therefore the inner sphere experiences less force, whereas
+Electronic Journal.  51Differential Equations and Control Processes, N 2, 2002
+when R increases the velocity of free surface increases and therefore the inner
+sphere experiences more force. In  gure 2 and 3 we can see the effect of R on
+
+ when   = 0 and   =1 respectively [using the equations (4.3) and (4.5)].
+
+
+0
+100
+200
+300
+400
+500
+600
+0 0:1 0:2 0:3 0:4
+ 
+0:5 0:6 0:7 0:8 0:9 1
+ =2;R=0:5
+ =2;R=1:0
+ =1;R=0:5
+ =1;R=1:0
+Fig.1
+Electronic Journal.  52Differential Equations and Control Processes, N 2, 2002
+
+
+0
+5
+10
+15
+20
+25
+0 0:1 0:2 0:3 0:4
+ 
+0:5 0:6 0:7
+R=0:5
+R=1:0
+Fig.2
+Electronic Journal.  53Differential Equations and Control Processes, N 2, 2002
+
+
+0
+5
+10
+15
+20
+25
+0 0:1 0:2 0:3 0:4
+ 
+0:5 0:6 0:7 0:8 0:9 1
+R=0:5
+R=1:0
+Fig.3
+Electronic Journal.  54Differential Equations and Control Processes, N 2, 2002
+References
+[1] Happel, J. and Brenner, H., Low Reynolds Number Hydrodynamics. No-
+ordhoff Int. Publ. The Netherlands(1973).
+[2] Bhatt,B.S., Relative motion of liquid and porous spheres. Modelling, Mea-
+surement and control B, ASME46,2(1992)55-64.
+[3] Bhatt,B.S. and Owen,D., Relative motion of uid spheres with porous core.
+To appear in Ensenanza Universitaria (2002).
+[4] Neale, G., Epstein, N. and Nadar, W., Creeping ow relative to permeable
+spheres. Chem. Eng. Sci. 28(1973) 1865-1874.
+[5] Verma, P.D. and Bhatt, B.S., Flow past a porous spherical shell using
+matched asymptotic technique. J. de Mecanique 14(1975)421-434.
+[6] Happel, J., Viscous ow in multiparticle system: slow motion of uids
+relative to beds of spherical particles. AIChE J. 4(1958)197-201.
+[7] Proudman, I. and Pearson, R.R.A., Expansions at small Reynolds numbers
+for the ow past a sphere and a circular cylinder. J. Fluid Mech. 2(1957)237-
+262.
+Electronic Journal.  55

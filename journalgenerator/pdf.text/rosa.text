@@ -1,0 +1,632 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 3, 2004
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+http://www.imop.csa.ru/ diff
+e-mail: diff@osipenko.stu.neva.ru
+Computer modeling in dynamical and control systems
+Inwards to Chaos and Complex Mapper:
+two graphical interfaces for simulations in complex analysis and dynamic
+Alessandro Rosa
+Freelance programmer and historian of mathematics
+email: zandor zz@yahoo.it
+Abstract
+This article presents the main features of two programs, Inwards to Chaos and Com-
+plex Mapper, coded by the author and aiming to support the investigations in complex
+analysis and dynamics in one complex variable via some techniques differently based
+upon colors, upon Geometry and Topology. Both programs are built on visual interfaces
+so that all integrated features can be reach through an easy and intuitive use of windows
+graphics. All has been customized for a user-friendly focus on the behavior of a given
+complex system. Their use wants to be ﬂexible and both can be offered as valid tools for
+researchers and also for teaching courses in complex analysis and dynamics, due to the
+chanceofdisplayinganyuser-deﬁnedmap,becauseacompleteparserhandlingarithmetic,
+trigonometry and hyperbolic functions is implemented. Moreover, the user can also count
+on the support of an on-line and step-by-step help. Inwards to Chaos mainly points to
+global dynamics, besides developing the chromatic aspects of fractal images in the com-
+plex plane, where colors play an enlightening role for the dynamics involved, beside the
+search for the aesthetic taste. Complex Mapper is more devoted to the investigations on
+local systems and it focuses on the geometry of the dynamics of maps. This article is
+simply descriptive and all information about the internals, the algorithms and about the
+ways they have been coded can be obtained by writing to author’s e-mail below.
+1 Introduction
+My interests in complex analysis and dynamics, together with my experience
+as programmer, led me to produce two programs as a self-help to understandDifferential Equations and Control Processes, N 3, 2004
+many topics of such ﬁelds. During their coding, I developed techniques to
+display complex (possibly iterated) maps in one complex variable and to take
+this all to quaternions just for fun. In order of time, I ﬁrst coded Inwards to
+Chaos(IC),mostlydevotedtocomplexandquaterniondynamics; somemonths
+later,anotherprogram-ComplexMapper(CM)-cameupanditsdevelopment
+recently got to the latest release 2.00
+1
+. Since the ﬁrst lines of code for IC, I
+found essential to count on a parser to input any user-deﬁned formula, either
+forcomplexnumbersandforquaternions: itisauthor’sopinionthatanyrobust
+computer program shall be based upon an high degree of freedom, with special
+regard to public domain software devoted to Mathematics. Then I developed
+methods to focus on aspects involving graphics, computation and also to play
+with fractal images which, in several occasions, look very pretty.
+2 Inwards To Chaos
+The ﬁrst rows of code were written in spring 2000
+2
+. The development of IC
+went side by side to my learning of complex dynamics so that ﬁrst the early
+coding tested my notions which, conversely, I used after to reﬁne by computing
+several different examples, thanks to the mentioned freedom of inputing. In
+that same period I saw my interests in complex dynamics rapidly increasing
+and something was urgently required to produce ﬁgures, after I also embarked
+upon the writing of a book
+3
+.
+As the program opens a window welcoming (See Figure 1) the user to ﬁve
+possible sections is shown: 1) complex; 2) complex in 3D; 3) quaternions; 4)
+domain coloring; 5) reals.
+2.1 COMPLEX
+The goal of this section is to explain how IC investigates on the iterations of
+functions in one complex variable by playing with a number of parameters. It
+opens with the dialog window in Figure 3, very simple in structure, according
+to a deliberate feature the author chose for Inwards: no much stuff at a glance,
+so that any process can be easily understood and managed. The dialog shows
+1
+As this article is in print, new features are being developed and a recent version will be released on August.
+2
+IC is included inside a package, also including another program, entitled ’IFS to Chaos’ and devoted to
+Iterated Function Systems, which will not be treated in this article.
+3
+See [1]. Currently on ﬁnal revision, it concerns the history of complex dynamics via the translations in
+English of the original works in French and German and a long historical investigation.
+Electronic Journal.  2Differential Equations and Control Processes, N 3, 2004
+Figure 1: The starting window.
+Figure 2: The palette applied to ﬁgures 3,5 and 6.
+the Mandelbrot set in the large view and a Julia set
+4
+in the little one on the
+top left corner; in addition region coordinates are displayed at the four sides.
+As anticipation of section 2.2, a 3D view of the same set is displayed on the
+ﬁgure3ontheright: givenanupperboundofiteratesforpreventingtheprocess
+to loop
+5
+, the height of the solid Mandelbrot set is computed according to the
+number of iterates which are trapped inside a ’critical’ disk of given radius
+6
+.
+Atthebottom,tworectanglesshowthecomplex xy coordinates(z = x+iy)
+of the pointer while ﬂoating over the large window. On the top right corner,
+a green button displays the tips related to this window, while the red one
+minimizes the dimensions so that some screen space is saved when multiple
+dialogwindowsareopenedalltogether. Twomenuentriesonthetop,belowthe
+caption, collect a number of basic operations for drawing, storing and resizing
+the image. At a ﬁrst glance, all might look like pour to manage robustly all
+processes and calculations here involved. Hence it is worth introducing the
+window in Figure 4 on the left.
+The fundamental parameters and tools to play with iterates are offered by
+a management panel (see ﬁgure 4) : region coordinates, methods to trap the
+iterated orbits, a number of iterations methods for solving equations
+7
+, prede-
+4
+When ‘Mandelbrot’ mode is set, the ‘J’ key shows the Julia set related to pointer position.
+5
+If, for example, it should depend on analytic properties exclusively and it might not be satisﬁed in the
+investigated region.
+6
+This method is commonly known as ’escape time’ or ’Level Set’. See [2], page 190.
+7
+Historical note: complex dynamics ﬁrst stepped to understand the behavior of such methods all over the
+Electronic Journal.  3Differential Equations and Control Processes, N 3, 2004
+Figure 3: the window of the ’complex’ section on the left and a perspective 3D view of the
+Mandelbrot set on the right.
+Figure 4: On the left the panel reporting the parameter values for the ﬁgures 3 and, on the
+right, the editor to input user-deﬁned formulas (here showing the map displayed in ﬁgures 5).
+Electronic Journal.  4Differential Equations and Control Processes, N 3, 2004
+Figure 5: A 3D shaded coloring on the left and a wireframe version on the right.
+ﬁned formulas for any beginner and mostly an input editor on the right). This
+is one of the strongest features of Inwards: the parser includes direct and in-
+verse trigonometric, hyperbolic and transcendental functions mainly
+8
+and com-
+putes symbolically the ﬁrst derivative or of higher orders by recursion. Some
+implemented iterative methods are: Julia (simply iteration), Mandelbrot (it-
+eration in one-parameter-space) and, among those ones for solving equations,
+Newton-Raphsoneitherformultipleandnon-multipleroots,Koenigs,Schr¨ oder,
+Steffensen, Halley, Collatz, secant and more.
+2.2 COMPLEX IN 3-D
+9
+Basically it deals with 3D colored histograms whose upper vertexes for each
+column are linked (Figures 5, left and right) or not (Figure 6). The height
+is computed according to a list of rules. This method turns out to be very
+enlightening for understanding the map behavior about a singularity, such as
+poles in Figures 5 where f(z) = 1/(z
+3
+− 1) is displayed with shaded colors
+(on the left) and as a wireframe (on the right). Notice that the asymptotic
+values on the unit circle are the three ’peaks’. Figure 6 displays the 3D model
+of the transformed map arising from Newton-Raphson method applied to the
+cubic equation z
+3
+−1 = 0. Basically this is like an histogram: the height per
+each seed point is set by the minimum value of the iteration index, required to
+Riemann sphere.
+8
+... and more other options. See help ﬁle of Inwards.
+9
+This option shall be managed together with the dialog in the COMPLEX section.
+Electronic Journal.  5Differential Equations and Control Processes, N 3, 2004
+Figure 6: 3D Newton’s Method for z
+3
+−1 = 0.
+reach a root at given condition
+10
+. Such index increases for closer and closer
+neighborhoods of the Julia set which splits the basins of convergence to the
+three roots, while it decreases as we get closer to the roots, as shown in the
+three ’valleys’. Any 3D plot can be rotated or viewed in perspective.
+2.3 QUATERNIONS
+Around early 80’s the ﬁeld of complex dynamics, also by means of the spectac-
+ularimagesofJuliasets, resurrectedandearnedsomuchpopularity(gettingan
+audience also outside the mathematicians circuit in those years) that became a
+mainstream scientiﬁc topic. This all let enthusiasms and aesthetic tastes grow
+up, pushing (me too!) to extend analogous graphic investigations
+11
+fromC to
+a larger numerical ﬁeld, namely to quaternions
+12
+. Practically the visualization
+of a Julia set is more laborious for quaternions and, due to a very huge number
+of computations therein involved, it runs quite slower than in C. The prob-
+lem of the immersion of this 4D object into a 3D space is of minor importance
+10
+Here an accuracy of 10e
+5
+.
+11
+see [7], [11] and [12].
+12
+Invented by Sir William Rowan Hamilton in the middle of the XIX
+th
+century, they consist of four (quater,
+in Latin) vectors h = a+ib+jc+kd, with non-commutative multiplication: in fact the quaternion ﬁeld is not
+abelian and often indicated asH. In the recent years, some software was develped to display Julia sets in the
+octonions, sedenions and in other numerical ﬁelds too.
+Electronic Journal.  6Differential Equations and Control Processes, N 3, 2004
+Figure 7: On the left, the starting panel for quaternions and a magniﬁed view of a cubic Julia
+set on the right.
+and its solution is easy and intuitive
+13
+. The main question here is how to
+accomplish a good rendering of such solid Julia sets because the images must
+evince the fractal nature of their boundary. Naive and rough computations
+might display 3D models with a ﬂat looking so that bad
+14
+images would come
+out. IC implements a solution relying on both a slightly modiﬁed version of
+Phong illumination model, see [6], p. 729, (assuring a very careful and realistic
+computation of the light rays intensity and reﬂection onto a surface) and an
+accurate scanning algorithm of the Julia set. IC opens to quaternion iterates
+by means of a parameters management panel (See Figure 7 on the left).
+Since the goal of this article is just to show the features of IC and Mapper,
+the author will not get into technical details, referring the reader to [14] for a
+deeper discussion by pseudo-code in order to illustrate the general lines on how
+13
+During the scanning of a whole 3D space - a cube for example - the three XYZ values of the ordered triplet
+in X×Y×Z coordinates are set to a, b, c quaternion components respectively, which is tested to belong to the
+Julia set or not
+14
+One important goal is to render the ’fractality’ of the Julia set boundary. Since the details are too little,
+they could easily escape: a good solution was discovered to rely into an appropriate calculus of the light per
+each boundary point, given a source somewhere in the model.
+Electronic Journal.  7Differential Equations and Control Processes, N 3, 2004
+Figure 8: Two pictures of quaternion Julia sets for cos(h) and for cos(z) on the right. Note the
+analogous shape.
+Figure 9: The Mandelbrot set inH for f(h) : h
+2
++c, where h,c∈H.
+to display and render these images. For an easier control, the author coded
+a C++ quaternion class for arithmetic and trigonometric, transcendental and
+hyperbolic operations currently solved via MacLaurin’s series expansion
+15
+. It
+can be mathematically proven that quaternion Julia sets look like analogous
+sets inC rotated along the vertical axis, say Y, as in Figures 8, where the Julia
+set associated to the iteration of the cosine map in theH (left and middle) and
+inC (right).
+Finally the author argued that this method is inspired to an analogous one
+applied inC: but it lacks in ﬂexibility and, for quaternions, works with ﬁlled-in
+15
+The author recently knew that direct formulas have been developed to compute such operations: see
+http://world.std.com/ sweetser/index.html. Their implementation will be pursued in next versions of IC.
+Electronic Journal.  8Differential Equations and Control Processes, N 3, 2004
+Figure 10: The quaternion Julia set for z
+2
++ h, where h = 0.5555r+0.5555i, h ∈ H. On the
+right, a 3D cube referencing the space position of the displayed 3D fractal.
+Figure 11: The analysis window tracking a single orbit inH.
+Julia sets
+16
+only. Plotting other classes of Julia sets is an open problem for
+the author: for example, how to plot the quaternion Julia set coming from the
+Newton-Raphson method applied to h
+3
+− 1 = 0? Inwards allows a minimal
+analysis of such Julia sets by means of a window showing the orbit of a seed
+point, given the iterated map (see Figure 11).
+2.4 TOWARDS DOMAIN COLORING ...
+Itwillbediscussedwithmoredetailsinsidethenextsectionbecausethismethod
+is more consistent with the goals of CM.
+16
+A ’ﬁlled-in Julia set’ relates to iteration of polynomials and it is deﬁned as the union of the Julia set of the
+polynomial itself and the bounded component of F. See [5], p. 65.
+Electronic Journal.  9Differential Equations and Control Processes, N 3, 2004
+2.5 REALS
+As long as IC was developed, it turned into a studio platform for reals too
+and then it came natural to implement some graphics for real maps, for sake of
+completeness and also to give the chance of studying a given case from different
+viewpoints, because it may be often required in mathematics.
+3 Complex Mapper
+AsitalsohappenedforIC,thebirthofCM wasexclusivelydictatedbypractical
+needs and by new ideas coming up into my mind while working for the book
+[1]; so I started to code another program, with some features inherited from
+but lighter than in IC, relying on different software architecture and focusing
+on new graphical aspects. At the code level, the main difference between IC
+and CM is that the latter relies on a Multi-Document Interface (MDI), giving
+the chance of handling more experiments simultaneously. The main parent
+windowisshownﬁrst, managingasetofchildviews, eachonekeepingtheinput
+formula to be examined. At a mathematical level, the basic feature (starting
+this all up) was the need of envisioning the local dynamical aspects of any
+(possibly iterated) map in one complex variable
+17
+. I mean that the graphical
+features already implemented into IC, more systematically based upon colors,
+put in evidence the ﬁnal state of a dynamical system or, regarding the Domain
+Coloring method, thevaluesdistribution. Ideliberatelymade CM evolvealong
+the analytic path. The next paragraphs will enlighten the major aspects of
+CM. CM was essentially developed for everything to be user-friendly and easy
+to understand so that, in the latter direction, a (optionally removable) report
+window was implemented to let the user follow each step of any process.
+3.1 LAYERS
+All main processes have been organized as layers piled on each other: the work-
+ing of CM is based upon a ﬁxed sequence of sub-process. Levels are managed
+insidethewindowshownatFigure12. Theleftcolumnliststhelevels, theright
+one indicates whether they are currently operative or not. The most relevant
+layers will be discussed further in details.
+17
+The most important goals for this version of CM are essentially to display the local behavior about a
+singularity (critical, pole-like, essential) and the dynamics of a given iterated orbit.
+Electronic Journal.  10Differential Equations and Control Processes, N 3, 2004
+Figure 12: The levels management window.
+Figure 13: On the left, coloringC through the identity map and the model of the RGB-color
+cube on the right.
+3.2 DOMAIN COLORING
+This is a method applied recently in complex analysis and, as far as the author
+knows, spread inside some web-sites devoted to this ﬁeld
+18
+.
+A trouble with complex numbers is that they cannot be sorted. Either
+if assumed in the standard formula z = x + iy or in the Euler’s form re
+iθ
+,
+because they consist of two components: so it is not a priori decidable which
+component shall be preferred for the sort to take place. But classiﬁcations are
+required somehow since they are often useful to evince analytical properties.
+The ’Domain Coloring’ (DC) method overcomes this trouble and, getting rid
+of any standard approach, it invents a new way which sets a one-to-one map
+fromC (see Figure 13, left plot) onto the RGB
+19
+cube (right plot) so that each
+complex point is associated to one and only one color.
+18
+See Farris at http://ricci.scu.edu/˜ffarris, Godfrey at http://winnie.ﬁt.edu/˜gabdo, Lundmark at
+http://www.mai.liu.se/˜halun.
+19
+It is the acronym of Red-Green-Blue, one of the so-called ‘additive systems’, applied by many standards in
+video-diffusion. Each color is detected by a vector of 3 primary (that is, assumed to be undecomposable in this
+system itself) colors. If the range is the same for all 3 components, a cube can be ideally modeled (Figure 13
+on the right). See [6], p. 584.
+Electronic Journal.  11Differential Equations and Control Processes, N 3, 2004
+Figure 14: Domain coloring in action.
+In particular, the left plot of Figure 13 displays how C is colored
+20
+under
+the action of the identity map f(z) : z and DC, the simplest way to show how
+DC colors the complex plane. The unit circle has been plot in yellow in order
+to gain a start point for understanding the method itself. Figure 14 (on the
+left) shows DC in action with f(z) = (z
+3
++1)/(z
+3
+−1). The black and white
+regions are located, as known, on the unit circle and they detect the zeros and
+poles respectively. The right plot shows the wild behavior about the essential
+singularity at the origin for f(z) = sin(1/z).
+Anyway, up to now, we gave nothing new about DC: these ﬁrst lines were
+only a very short survey on its use in complex analysis. My new simple idea
+consists in applying DC to complex dynamics too, in order to study the ﬁnal
+valuesdistributionafteraﬁnitenumberofiterates: ifDC isappliedtotheimage
+valuesreturnedby f(z)asusual, whycannotwedothesamewith f
+◦n
+(z), again
+a complex map where n is just the index of the n
+th
+-fold application of f(z)?
+Test showed that, if properly used in complex dynamics, DC can reveal the
+Julia sets structure, for example, if consisting of pure repelling ﬁxed points or
+poles. Let us take a couple of examples. Figures 15 display the Julia set of
+f(z) = z
+2
+−0.2+0.7i. We have two basins of attraction: the white
+21
+one to the
+point at inﬁnity and the (bounded) basin to an attracting cycle of period 3
+22
+.
+Figures 16 show the known example of the Newton-Raphson method applied
+20
+I slightly modiﬁed the original (DC) algorithm so that regions neighboring the zeros and poles are painted
+black and white respectively. The original version does the converse.
+21
+In our color convention.
+22
+We need to precise, in order to ﬁx the power scope of DC, that this feature was evinced, not found, by this
+method, that is, it came up after some tests. See conclusions inside section 4 for more details.
+Electronic Journal.  12Differential Equations and Control Processes, N 3, 2004
+Figure 15: Displaying a cycle of period 3 via domain coloring.
+Figure 16: Julia set generation for z
+3
+−1 = 0 under Newton-Raphson’s method.
+Electronic Journal.  13Differential Equations and Control Processes, N 3, 2004
+to the equation f(z): z
+3
+−1 = 0, yielding the transformed map g(z):
+2z
+3
++1
+3z
+2
+The left plot shows the state of the system after 5 iterations; notice the genera-
+tion of the Julia set at the poles (white regions). On the right, the same system
+after an higher number of iterations: now there is no sensitive dependence on
+the value of the seed point
+23
+. Only three colors are shown and this proves em-
+pirically that all orbits (except at the Julia set) converge to the attracting ﬁxed
+points of g(z), that is, to the zeros of f(z).
+3.3 GRID-MAPS
+Theconceptbehindthemethodof‘grid-maps’ (GD),asInamed
+24
+, isverysim-
+ple. Grid-maps can be displayed in three steps: (1) assume a grid
+25
+of complex
+points, (2) map (or iterate) such points, (3) link the resulting image points by
+thesameruleasat1. CM implementstheorthogonal andtheradial grid-maps,
+displayedinFigures17. Early α-versionsofCM implementedonlytheorthogo-
+nal type but their running suggested to give the user the chance of choosing the
+radial shape too, because there would be cases whose understanding requires
+different grid-maps. GD are very useful to look at the local dynamics about a
+singularity. For example, we will illustrate (locally) the ﬁnal state of two local
+dynamical systems: the ﬁrst one with a rationally indifferent ﬁxed point and
+the other with an irrationally indifferent ﬁxed point
+26
+.
+Figure 17: The source orthogonal and radial grids.
+23
+With regard to the famous expression, this is the initial condition.
+24
+I apologize myself for my lack of knowledge in the literature of methods in complex analysis: maybe this
+same method keeps already a name but I do not know any standard nomenclature yet. As far as I know, I
+found it in [10], but without any given standard nomenclature.
+25
+We do not intend a grid as only a geometrical shape but, more abstractly, as the rules linking all points.
+26
+The author assumed that the reader already keeps a basic knowledge of complex dynamics.
+Electronic Journal.  14Differential Equations and Control Processes, N 3, 2004
+The ﬁrst example is shown by iterating f(z) = z + z
+5
+: this map has a
+rationallyindifferentpointattheoriginwherefourattractingandfourrepelling
+directions branch out. Here the holomorphic germ of the Taylor expansion
+about the origin can be represented in the form z + e
+iθ
+z
+n
+, where n−1 is the
+number of attracting and repelling directions and θ is a rational number.
+Figure 18: Applying the two grids to the dynamics about a rationally indifferent point.
+Iterates give rise to the known vector ﬁeld, namely the Fatou-Leau ﬂower
+with4petals. Applyingtheorthogonalgriddoesnotdrawanyclearconclusion:
+we are just able to deduce a slower and a slower convergence rate as nearer as
+we get to the origin: the graphic result is that a new grid, quasi-orthogonal as
+the source one, is displayed (look at the left image of Figures 18): the image
+grid looks like the source orthogonal one about the origin, whereas it gets
+more and more deformed as far as we move away. On the contrary the radial
+grid works better, as we can evince from the ﬁgure 17 on the right where the
+characteristic shape of the Fatou-Leau ﬂower comes out, having four repelling
+directions localized at the four points ±1, ±i, as predicted by the theory. So
+this question comes out naturally: is there a way to determine which is the
+most suitable grid model for a given case?
+Actually no deﬁnitive response can be given and it is opined that only the
+heuristic approach rules here, therefore no straight rules can be deﬁned because
+all depends on user needs. The radial grid also helps here to understand that
+a suﬃciently small neighborhood of the rationally indifferent point can be con-
+jugated to an open disk centered at the origin and the radial grid appeared as
+the obvious solution to evince these dynamics in the best way. The second ex-
+ample shows the dynamics about an irrationally indifferent ﬁxed point, namely
+when the holomorphic germ of the Taylor expansion about the origin is in the
+form z +e
+iθ
+z
+n
+where θ is irrational and satisfying a diophantine condition. In
+Electronic Journal.  15Differential Equations and Control Processes, N 3, 2004
+Figure 19: A blow-up of a neighborhood enclosing a Siegel disk. The blue circle tracks approx-
+imately that maximal rotation simply connected domain.
+1942 C.L. Siegel proved that there exists a subset of irrational numbers enjoy-
+ing this property and allowing the linearization about the ﬁxed point so that
+a bounded neighborhood of the origin is conformally equivalent to a rotational
+disk (so called ’Siegel disk’). Irrationals which are not diophantine are deﬁned
+’Liouville numbers’, ﬁrst studied by Cremer ([3] and [4]) between 20’s and 30’s.
+Irrationally indifferent points split in Siegel and Cremer points, whether the
+linearizationappliesornot
+27
+. Theradialgridisthebesttoenlightentheexperi-
+menthereagain. Agivenneighborhood,deliberatelyexceedingthelinearization
+domain, was chosen to look at the deformation outside the maximal rotation
+domain (here conformal to a disk), as clearly shown in Figure 19.
+3.4 CIRCLE / POLYGONAL DOMAINS
+Sometimes a grid-map, in both forms, could produce too messy graphics and
+thus it is useful to have part of the source grid-map, say a circle or an n-
+side polygonal domain, whose generation is achieved by means of parameters
+managementwindowincluding,inparticular,acombo-boxlistingthreeoptions:
+‘Draw’, ‘Map’ and ‘Contour’.
+Theﬁrstoptionsimplydrawsthecircle/polygon,thesecondtrackstheorbit
+exclusively and the last one plots the contours passing through the iterated
+polygon points, step by step. We will show here four different cases where
+27
+The set of such numbers has zero Lebesgue measure. Ricardo P´ erez-Marco posed me [13] the open question
+on how to display, through digital graphics, the shape of the univalent neighborhood arising from the iterates
+of a given f(z) about a Cremer point: the ﬁnite digits computation breaks the irrationality, approximating and
+turning the same number into an algebraic one, always diophantine so that the linearization applies and the
+experiment does not make sense anymore.
+Electronic Journal.  16Differential Equations and Control Processes, N 3, 2004
+these options show to be much useful.
+Figures 20 show the Fatou-Leau ﬂower again but via polygonal domains:
+on the left, the boundary points of four circles mutually tangent at the origin
+and with very small radius are iterated
+28
+; the right picture refers the same
+example but two concentric circles are assumed. Figure 21 displays the simple
+case f(z) = z
+2
+: three (differently colored) source circles outside (r = 1.1),
+inside (r = 0.8) and on the unit disk (r = 1) have been iterated
+29
+and plot
+respectively. Finally Figure 22 shows the rotational character of the dynamics
+in the neighborhood of an Herman ring generated by iterating the complex
+map(see [9], page 150) f(z) : e
+2πiθ
+z
+2
+(z−4)
+(1−4z)
+, where θ = 0.6151732... .
+3.5 ADDITIONAL SUBSTITUTIONS
+Oftenthestudyofathebehaviorofamap(thatagivenf(z)iteratedonce)orof
+a dynamical system (iterated more than once) requires to deal with additional
+formulas in order to evince graphically some properties. CM achieves it by
+means of the additional substitutions feature: let the input map f(z) be the
+main one. Two management modes have been implemented: ‘Simple’ and
+‘Attach’. The ﬁrst one refers to a map applied to the image value of (possibly
+iterated) f(z). For example let f(z): 1/z and g(z): cos(z) be the main and the
+additional map respectively. Then CM displays the point returned by g(f(z)) :
+cos(1/z). The‘Attach’modesimplyappendsg(z)tof(z). Forexample,assume
+that the local (i.e. inside the given region) ﬁxed points are to be displayed after
+a given number of iterations: so let g(z) = −z be the additional substitution
+helping to detect the ﬁxed points. We can attach it to f
+◦n
+(z) and then have
+f
+◦n
+(z)− z, whose zeros are the required ﬁxed points. The following example
+could be more inspiring. In ﬁgures 18, we are studying the dynamical systems
+generated by the iteration of the quadratic map f(z) = z
+2
+. As known, the Julia
+set is the unit circle, which splitsC into two basins: the interior ( |z| < 1 ) and
+the exterior ( |z| > 1 ) of the unit circle.
+The left image of Figures 23 came out as we iterated f(z) = z
+2
+ﬁve times
+and attached it to g(z) = −z; thus it shows the localization of (2
+5
+= 32) ﬁxed
+points, i.e. all zeros of f
+◦5
+(z) − z = 0: z
+32
+− z = 0. What we see is one
+attracting point at the origin and 31 repelling ones, belonging to the Julia set,
+on the unit circle. The ﬁgure on the right shows the values distribution of —
+28
+Figure 20 is a computer display of the geometrical evidence of such ﬂowers: its generation is inspired from
+Julia’s related proof of ﬂowers. See [8], fourth part.
+29
+Circles with a same color are the forward images.
+Electronic Journal.  17Differential Equations and Control Processes, N 3, 2004
+f
+0
+(z) — = |2z| for f
+◦5
+(z) : z
+32
+. As expected, while the values inside the unit
+disk are black (i.e. the values of the ﬁrst derivative is very close to the origin,
+which is therefore an attracting ﬁxed point), the ﬁxed points on the unit circle
+turn into red (the value is 2 - compare to the identity map shown in ﬁgure 13),
+showing their repelling character because of |f
+0
+(z)| > 1.
+4 CONCLUSIONS
+I am very indebted to Daniel S. Alexander (Drake University, Iowa) and to
+Felice Iavernaro (University of Bari, Italy) for revising this article and giv-
+ing me many tips to improve it. The author recalls that these methods pre-
+sented are not to be assumed as a true way to do Mathematics: their goal
+is to support the understanding of results exclusively, which have to be ac-
+complished via analytic approach, based upon rigor, logic and evidence. IC
+and CM can be freely downloaded, for researching and teaching purposes, at
+http://www.malilla.supereva.it. The development of IC and CM is currently
+in progress, suggestions are very well appreciated. The reader is invited to get
+in touch with the author if further details, on ideas and algorithms computing
+all images throughout this article, will be required.
+References
+[1] Alexander D.S., Iavernaro F., Rosa A., Early days in complex dynamics,
+(in preparation).
+[2] Barnsley M.F., Devaney R.L., Mandelbrot B.B., Peitgen H.-O., Saupe D.,
+Voss R.F., The science of fractal images, Springer-Verlag, 1988.
+[3] Cremer H.,
+¨
+Uberkonvergenz und Zentrumproblem, Math. Annalen, 110,
+1935, 739-744.
+[4] Cremer H.,
+¨
+Uber die H¨ auﬁgkeit der Nichtzentren, Math. Annalen, 115,
+1937, 573-580.
+[5] Carleson L., Gamelin T.W., Complex dynamics, Springer-Verlag, 1993.
+[6] Foley J.D., van Dam A., Feiner S.K., Hughes J.F., Computer Graphics,
+principles and practice, 2
+nd
+edition in C, Addison-Wesley 1997.
+Electronic Journal.  18Differential Equations and Control Processes, N 3, 2004
+[7] Hart J.C., Sandin D.J., Kauffman L.H.,Ray Tracing Deterministic 3-D
+Fractals, Computer Graphics, 23, 3, July 1989, 289-296.
+[8] Julia G., M´ emoire sur les it´ erations des fonctions rationnelles, Journ.
+Math. Pure App., 8, (1918), 47-245.
+[9] Milnor J., Dynamics in one complex variable, Vieweg, 2000.
+[10] Needham T., Visual complex analysis, Oxford Univ. Press, 2000.
+[11] Norton V.A., Generation and rendering of geometric fractals in 3-D, Com-
+puter Graphics, 16, 3, 1982, 61-67.
+[12] Norton V.A., Melton E., A close encounter in the fourth dimension, SIG-
+GRAPH Video Review, 39, 1988, 30.
+[13] P´ erez-Marco R., an informal discussion, 2002.
+[14] Rosa A., How to plot a Quaternion Julia Set?, draft, downloadable at
+http://malilla.supereva.it/Mirror/Pages/papers.html
+Electronic Journal.  19Differential Equations and Control Processes, N 3, 2004
+Figure 20: Polygonal domains iterated by z+z
+5
+= 0 about the origin.
+Figure 21: Dynamics of z
+2
+about the origin.
+Electronic Journal.  20Differential Equations and Control Processes, N 3, 2004
+Figure 22: Dynamics inside a region around a Herman ring, viewed by domain coloring and
+polygonal domains.
+Figure 23: Illustrating Additional substitutions via Domain Coloring.
+Electronic Journal.  21

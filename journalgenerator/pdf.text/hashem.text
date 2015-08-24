@@ -1,0 +1,1552 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 1, 2012
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Coupled systems of Hammerstein and Urysohn integral
+equations in reexive Banach spaces
+El-Sayed A.M.A & Hashem H.H.G
+E-mail : amasayed@hotmail.com & hendhghashem@yahoo.com
+Faculty of Science, Alexandria University, Alexandria, Egypt
+Abstract: We present existence theorems for at least one weak solution for
+coupled systems of integral equations of Hammerstein type and of Uryshon
+type in a reexive Banach spaces relative to the weak topology.
+Keywords: Weak solution; Hammerstein integral equation; Urysohn integral
+equation; Coupled systems.
+1 Introduction and Preliminaries
+Systems occur in various problems of applied nature, for instance, see ([1]-[3]
+and [10]-[13]). Recently, Su [18] discussed a two-point boundary value problem
+for a coupled system of fractional differential equations. Ga ychuk et al. [12]
+analyzed the solutions of coupled nonlinear fractional reaction-diffusion equa-
+tions.
+Let L
+1
+(I) be the space of Lebesgue integrable functions de ned on the interval
+I = [0; 1]: Let E be a reexive Banach space with the norm jj:jj and its dual
+E
+ 
+and denote by C[I;E] the Banach space of strongly continuous functions
+x :I!E with sup-norm jj:jj
+0
+:
+The existence of weak solutions of the integral equations studied by many au-
+thors such as [4], [5], [9] and [14]-[17].Differential Equations and Control Processes, N 1, 2012
+The existence of weak solutions to the Hammerstein integral equation
+x(t) = h(t) +
+Z
+1
+0
+k(t;s) f(s;x(s)) ds; t2I
+was proved by O'Regan [15] where x takes values in reexive Banach spaces
+and f is weakly-weakly continuous.
+Recently, the existence of weak solution of the nonlinear fractional-order integral
+equation
+x(t) = g(t) +   I
+ff
+f(t;x(t)); t2I; 0<ff< 1 (1)
+was proved in [17] where x takes values in reexive Banach spaces and f is
+weakly measurable in t and weakly sequentially continuous in x .
+An existence result for (1), in the case E = R found in [8] where the real-
+valued function f satis es Carath  eodory condition.
+Also, The authors [9] proved the existence of solution x2 C[I;E] of the
+Hammerstein integral equation
+x(t) = a(t) +
+Z
+1
+0
+k(t;s) f(s;x(s)) ds; t2I;
+where x takes values in reexive Banach spaces and f is weakly measurable
+in t and weakly sequentially continuous in x .
+and the Urysohn integral equation
+x(t) = a(t) +
+Z
+1
+0
+u(t;s;x(s)) ds; t2I;
+where x takes values in reexive Banach spaces and u is weakly measurable
+in s and weakly sequentially continuous in x .
+It well known that the existence of weak solutions of the Hammerstein integral
+equation has been considered for the  rst time, by M. Cichon, I. Kubiaczyk [5].
+In this paper, we study the existence of a weak solution for the coupled systems
+x(t) = g
+1
+(t) +
+Z
+1
+0
+k
+1
+(t;s) f
+1
+(s;y(s)) ds; t2 [0; 1];
+(2)
+y(t) = g
+2
+(t) +
+Z
+1
+0
+k
+2
+(t;s) f
+2
+(s;x(s)) ds; t2 [0; 1]:
+and
+x(t) = g
+1
+(t) +
+Z
+1
+0
+u
+1
+(t;s;y(s)) ds; t2 [0; 1];
+(3)
+y(t) = g
+2
+(t) +
+Z
+1
+0
+u
+2
+(t;s;x(s)) ds; t2 [0; 1]:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 86Differential Equations and Control Processes, N 1, 2012
+Now, we shall present some auxiliary results that will be need in this work. Let
+E be a Banach space (need not be reexive) and let x : I!E; then
+(1) x(:) is said to be weakly continuous (measurable) at t
+0
+2I if for every
+ 2E
+ 
+;  (x(:)) is continuous (measurable) at t
+0
+:
+(2) A function h :E!E is said to be weakly sequentially continuous if h
+maps weakly convergent sequences in E to weakly convergent sequences
+in E:
+If x is weakly continuous on I; then x is strongly measurable and hence
+weakly measurable (see[7] and [6]). Note that in reexive Banach space weakly
+measurable functions are Pettis integrable if and only if  (x(:)) is Lebesgue
+integrable on I for every  2E
+ 
+(see[7] pp. 78).
+While it is not always possible to show that a given mapping between Ba-
+nach spaces is weakly continuous, quite often its weak sequential continuity
+and weakly sequentially continuous offers no problem. A "sequential" concept
+of continuity is more general than the continuity and moreover more useful (for
+example the Lebesgue's dominated convergence theorem is valid for sequence
+but not for nets) so we shall state a  xed point theorem and some propositions
+which will be used in the sequel (see[16]).
+Theorem 1 Let E be a Banach space and let Q be a nonempty, bounded,
+closed and convex subset of the space E and let T : Q ! Q be a weakly
+sequentially continuous and assume that TQ(t) is relatively weakly compact in
+E for each t2 [0; 1] . Then, T has a  xed point in the set Q:
+Proposition 1 A subset of a reexive Banach space is weakly compact if and
+only if it is closed in the weak topology and bounded in the norm topology.
+Proposition 2 Let E be a normed space with y6= 0: Then there exists a
+ 2E
+ 
+with jj jj = 1 and jjyjj = (y):
+Electronic Journal. http://www.math.spbu.ru/diffjournal 87Differential Equations and Control Processes, N 1, 2012
+2 Hammerstein Coupled System
+This section deals with the existence of weak solutions for the coupled system
+of Hammerstein type(2).
+LetE be a reexive Banach space and D E: Consider the following assump-
+tions:
+(1:) g
+i
+2C[I;E]; i = 1; 2;
+(2:) f
+i
+: I D!E; i = 1; 2 satisfy the following:
+(i) For each t2I; f
+i
+t
+= f
+i
+(t;:) are weakly sequentially continuous;
+(ii) For each x2D; f
+i
+(:;x(:)) are weakly measurable on I ;
+(iii) The weak closure of the range of f
+i
+(I D) are weakly compact in
+E
+(or equivalently: there exist M
+i
+such that jjf
+i
+(t;x)jj   M
+i
+(t;x)2I D;)
+(3:) k
+i
+:I I!R
++
+are integrable in s and continuous in t; the operators
+Z
+1
+0
+k
+i
+(t;s) y(s) ds
+map L
+1
+(I) into L
+1
+(I) and
+R
+1
+0
+k
+i
+(t;s)<A
+i
+:
+De nition 1 By a weak solution for the coupled system (2), we mean the pair
+of functions (x;y)2C[I;E] C[I;E] such that
+ (x(t)) =  (g
+1
+(t)) +
+Z
+1
+0
+k
+1
+(t;s)  (f
+1
+(s;y(s))) ds; t2 [0; 1];
+ (y(t)) =  (g
+2
+(t)) +
+Z
+1
+0
+k
+2
+(t;s)  (f
+2
+(s;x(s))) ds; t2 [0; 1]
+for all  2E
+ 
+:
+Theorem 2 Let the assumptions (1:)-(3:) be satis ed. Then the coupled sys-
+tem (2) has at least one weak solution (x;y)2C[I;E] C[I;E]:
+Proof: De ne the operators T
+1
+;T
+2
+by
+T
+1
+y(t) = g
+1
+(t) +
+Z
+1
+0
+k
+1
+(t;s) f
+1
+(s;y(s)) ds; t2I
+Electronic Journal. http://www.math.spbu.ru/diffjournal 88Differential Equations and Control Processes, N 1, 2012
+T
+2
+x(t) = g
+2
+(t) +
+Z
+1
+0
+k
+2
+(t;s) f
+2
+(s;x(s)) ds; t2I:
+Then the coupled system (2) may be written as:
+x(t) = T
+1
+y(t)
+y(t) = T
+2
+x(t):
+De ne the operator T by
+T (x;y)(t) = (T
+1
+y(t); T
+2
+x(t)):
+For any y 2 C[I;E]; since f
+1
+(:;y(:)) is weakly measurable on I
+and jjf
+1
+(t;y)jj   M
+1
+; then  (f
+1
+(:;y(:))) is Lebesgue integrable on
+I 8  2 E
+ 
+and since k
+1
+(t;:) is Lebesgue integrable on I; then we
+have  (k
+1
+(t;:) f
+1
+(:;y(:))) = k
+1
+(t;:)  (f
+1
+(:;y(:))) is Lebesgue integrable on
+I 8 2E
+ 
+; then k
+1
+(t;:)f
+1
+(:;y(:)) is Pettis integrable onI: Thus T
+1
+is well
+de ned.
+Now, we shall prove that T
+1
+: C[I;E]!C[I;E]:
+Let t
+1
+; t
+2
+2I and ( without loss of generality assume that
+T
+1
+y(t
+2
+) T
+1
+y(t
+1
+)6= 0)
+T
+1
+y(t
+2
+) T
+1
+y(t
+1
+) = g
+1
+(t
+2
+)   g
+1
+(t
+1
+)
++
+Z
+1
+0
+k
+1
+(t
+2
+;s) f
+1
+(s;y(s)) ds  
+Z
+1
+0
+k
+1
+(t
+1
+;s) f
+1
+(s;y(s)) ds
+= g
+1
+(t
+2
+)   g
+1
+(t
+1
+) +
+Z
+1
+0
+[k
+1
+(t
+2
+;s)   k
+1
+(t
+1
+;s)] f
+1
+(s;y(s)) ds:
+Therefore as a consequence of Proposition 2, we obtain
+jjT
+1
+y(t
+2
+) T
+1
+y(t
+1
+)jj =  (T
+1
+y(t
+2
+) T
+1
+y(t
+1
+))
+=  (g
+1
+(t
+2
+)   g
+1
+(t
+1
+)) +
+Z
+1
+0
+jk
+1
+(t
+2
+;s)   k
+1
+(t
+1
+;s)j  (f
+1
+(s;y(s))) ds
+= jjg
+1
+(t
+2
+)   g
+1
+(t
+1
+)jj +
+Z
+1
+0
+jk
+1
+(t
+2
+;s)   k
+1
+(t
+1
+;s)jjjf
+1
+(s;y(s))jj ds
+  jjg
+1
+(t
+2
+)   g
+1
+(t
+1
+)jj + M
+1
+Z
+1
+0
+jk
+1
+(t
+2
+;s)   k
+1
+(t
+1
+;s)j ds:
+As done above we can show that
+jjT
+2
+x(t
+2
+) T
+2
+x(t
+1
+)jj   jjg
+2
+(t
+2
+)   g
+2
+(t
+1
+)jj + M
+2
+Z
+1
+0
+jk
+2
+(t
+2
+;s)   k
+2
+(t
+1
+;s)jds:
+Now, we shall prove that T : C[I;E] C[I;E]!C[I;E] C[I;E]
+Tu(t
+2
+)   Tu(t
+1
+) = T (x;y)(t
+2
+)   T (x;y)(t
+1
+)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 89Differential Equations and Control Processes, N 1, 2012
+= (T
+1
+y(t
+2
+); T
+2
+x(t
+2
+))   (T
+1
+y(t
+1
+); T
+2
+x(t
+1
+)) =
+(T
+1
+y(t
+2
+)   T
+1
+y(t
+1
+); T
+2
+x(t
+2
+)   T
+2
+x(t
+1
+));
+then we have
+jj Tu(t
+2
+)   Tu(t
+1
+)jj   jjT
+1
+y(t
+2
+)   T
+1
+y(t
+1
+)jj + jjT
+2
+x(t
+2
+)   T
+2
+x(t
+1
+)jj
+  jjg
+1
+(t
+2
+)   g
+1
+(t
+1
+)jj + M
+1
+Z
+1
+0
+jk
+1
+(t
+2
+;s)   k
+1
+(t
+1
+;s)j ds
++jjg
+2
+(t
+2
+)   g
+2
+(t
+1
+)jj + M
+2
+Z
+1
+0
+jk
+2
+(t
+2
+;s)   k
+2
+(t
+1
+;s)j ds;
+and
+jjT
+1
+y(t)jj =  (T
+1
+y(t)) =  (g
+1
+(t)) +
+Z
+1
+0
+k
+1
+(t;s)  (f
+1
+(s;y(s))) ds
+= jjg
+1
+jj +
+Z
+1
+0
+k
+1
+(t;s)jjf
+1
+(s;y(s))jj ds
+  jjg
+1
+jj + M
+1
+Z
+1
+0
+k
+1
+(t;s) ds
+  jjg
+1
+jj + A
+1
+M
+1
+:
+By a similar way as done above we can prove that
+jjT
+2
+x(t)jj   jjg
+2
+jj + A
+2
+M
+2
+:
+Then, T
+1
+; T
+2
+are well de ned on the sets
+Q
+1
+=f y2C[I;E] : jjyjj  M
+1
+g; M
+1
+=jjg
+1
+jj + A
+1
+and Q
+2
+= f x2C[I;E] : jjxjj  M
+2
+g; M
+2
+=jjg
+2
+jj + A
+2
+respectively.
+Now, de ne the set Q by
+Q =fu = (x;y)2C[I;E] C[I;E] :jjujj jjg
+1
+jj +A
+1
+M
+1
++jjg
+2
+jj +A
+2
+M
+2
+g:
+Then, for any u2Q we have
+jjTu(t)jj = jjT (x;y)(t)jj = jj(T
+1
+y(t);T
+2
+x(t))jj   jjT
+1
+y(t)jj + jjT
+2
+x(t)jj
+  jjg
+1
+jj + A
+1
+M
+1
++ jjg
+2
+jj + A
+2
+M
+2
+:
+i.e. 8u2Q)Tu2Q)TQ Q: Thus T :Q!Q:
+Then Q is nonempty, uniformly bounded and strongly equi-continuous subset
+of C[I;E] C[I;E]: Also, it can be shown that Q is convex and closed.
+As a consequence of Proposition 1, then TQ is relatively weakly compact. It
+remains to prove that T is weakly sequentially continuous.
+Let fy
+n
+(t)g and fx
+n
+(t)g be two sequences in Q
+1
+; Q
+2
+converge weakly
+Electronic Journal. http://www.math.spbu.ru/diffjournal 90Differential Equations and Control Processes, N 1, 2012
+to x(t); y(t) respectively 8t2 I: Since f
+1
+(t;y(t)) and f
+2
+(t;x(t)) are
+weakly sequentially continuous in the second argument, then f
+1
+(t;y
+n
+(t)) and
+f
+2
+(t;x
+n
+(t)) converge weakly to f
+1
+(t;y(t)) and f
+2
+(t;x(t)) respectively and
+hence  (f
+1
+(t;y
+n
+(t))) and  (f
+2
+(t;x
+n
+(t))) converge strongly to  (f
+1
+(t;y(t)))
+and  (f
+2
+(t;x(t))) respectively.
+Using assumption (iii)) and applying Lebesgue Dominated Convergence Theo-
+rem for Pettis integral, then we get
+ (
+Z
+1
+0
+k
+1
+(t;s) f
+1
+(s;y
+n
+(s)) ds) =
+Z
+1
+0
+k
+1
+(t;s)  (f
+1
+(s;y
+n
+(s))) ds
+!
+Z
+1
+0
+k
+1
+(t;s)  (f
+1
+(s;y(s))) ds 8 2E
+ 
+; t2I;
+and
+ (
+Z
+1
+0
+k
+2
+(t;s) f
+2
+(s;x
+n
+(s)) ds) =
+Z
+1
+0
+k
+2
+(t;s)  (f
+2
+(s;x
+n
+(s))) ds
+!
+Z
+1
+0
+k
+2
+(t;s)  (f
+2
+(s;x(s))) ds 8 2E
+ 
+; t2I:
+Then T is weakly sequentially continuous. Since all conditions of Theorem 1
+are satis ed, then the operator T has at least one  xed point u2Q which
+competes the proof.
+3 Urysohn Coupled System
+This section deals with the existence of weak solutions for the coupled system
+of Urysohn type(3).
+Let E be a reexive Banach space and D  E: Consider the following as-
+sumptions:
+(1
+ 
+:) g
+i
+2C[I;E]; i = 1; 2;
+(2
+ 
+:) u
+i
+: I I D!E; i = 1; 2 satisfy the following:
+(i
+ 
+) For each t;s2I I; u
+i
+(t;s;:) are weakly sequentially continuous;
+(ii
+ 
+) For each x2 D and t2 I u
+i
+(t;:;x(:)) are weakly measurable on
+I ;
+(iii
+ 
+) For each x2D and s2I u
+i
+(:;s;x(s)) are continuous on I ;
+Electronic Journal. http://www.math.spbu.ru/diffjournal 91Differential Equations and Control Processes, N 1, 2012
+(3
+ 
+:) jju
+i
+(t;s;x(s))jj  k
+i
+(t;s); i = 1; 2 k
+i
+:I I!R
++
+are integrable in s
+and continuous in t , the operators
+Z
+1
+0
+k
+i
+(t;s) z(s) ds
+maps L
+1
+(I) into L
+1
+(I) and
+R
+1
+0
+k
+i
+(t;s)ds <A
+i
+; t2I:
+De nition 2 By a weak solution for the coupled system (3), we mean the pair
+of functions (x;y)2C[I;E] C[I;E] such that
+ (x(t)) =  (g
+1
+(t)) +
+Z
+1
+0
+ (u
+1
+(t;s;y(s))) ds; t2 [0; 1];
+ (y(t)) =  (g
+2
+(t)) +
+Z
+1
+0
+ (u
+2
+(t;s;x(s))) ds; t2 [0; 1]
+for all  2E
+ 
+:
+Theorem 3 Let the assumptions (1
+ 
+:)-(3
+ 
+:) be satis ed. Then the coupled
+system (3) has at least one weak solution (x;y)2C[I;E] C[I;E]:
+Proof:
+De ne the operators T
+1
+;T
+2
+by
+T
+1
+y(t) = g
+1
+(t) +
+Z
+1
+0
+u
+1
+(t;s;y(s)) ds; t2I
+T
+2
+x(t) = g
+2
+(t) +
+Z
+1
+0
+u
+2
+(t;s;x(s)) ds; t2I:
+Then the coupled system (3) may be written as:
+x(t) = T
+1
+y(t)
+y(t) = T
+2
+x(t):
+De ne the operator T by
+T (x;y)(t) = (T
+1
+y(t); T
+2
+x(t)):
+For any y2 C[I;E] and since u
+1
+(t;:;y(:)) is weakly measurable on I;
+then  (u
+1
+(t;:;y(:))) is strongly measurable on I 8  2 E
+ 
+and since
+jju
+1
+(t;s;y)jj   k
+1
+(t;s); then  (u
+1
+(t;:;y(:))) is Lebesgue integrable on
+I 8  2 E
+ 
+and hence u
+1
+(t;:;y(:)) Pettis integrable on I: Thus T
+1
+is
+Electronic Journal. http://www.math.spbu.ru/diffjournal 92Differential Equations and Control Processes, N 1, 2012
+well de ned.
+Now, we shall prove that T
+1
+: C[I;E]!C[I;E]:
+Let t
+1
+; t
+2
+2I and ( without loss of generality assume that
+T
+1
+y(t
+2
+) T
+1
+y(t
+1
+)6= 0)
+T
+1
+y(t
+2
+) T
+1
+y(t
+1
+) =
+= g
+1
+(t
+2
+)   g
+1
+(t
+1
+) +
+Z
+1
+0
+u
+1
+(t
+2
+;s;y(s)) ds  
+Z
+1
+0
+u
+1
+(t
+1
+;s;y(s)) ds
+= g
+1
+(t
+2
+)   g
+1
+(t
+1
+) +
+Z
+1
+0
+[u
+1
+(t
+2
+;s;y(s))   u
+1
+(t
+1
+;s;y(s)) ] ds
+Therefore as a consequence of Proposition 2, we obtain
+jjT
+1
+y(t
+2
+) T
+1
+y(t
+1
+)jj =  (T
+1
+y(t
+2
+) T
+1
+y(t
+1
+))
+=  (g
+1
+(t
+2
+)   g
+1
+(t
+1
+)) +
+Z
+1
+0
+ [u
+1
+(t
+2
+;s;y(s))   u
+1
+(t
+1
+;s;y(s)) ] ds
+  jjg
+1
+(t
+2
+)   g
+1
+(t
+1
+)jj +
+Z
+1
+0
+jju
+1
+(t
+2
+;s;y(s))   u
+1
+(t
+1
+;s;y(s))jj ds (4)
+As done above we can show that
+jjT
+2
+x(t
+2
+) T
+2
+x(t
+1
+)jj  
+  jjg
+2
+(t
+2
+)   g
+2
+(t
+1
+)jj +
+Z
+1
+0
+jju
+2
+(t
+2
+;s;x(s))   u
+2
+(t
+1
+;s;x(s))jj ds:
+Now, we shall prove that T : C[I;E] C[I;E]!C[I;E] C[I;E]
+Tv(t
+2
+)   Tv(t
+1
+) = T (x;y)(t
+2
+)   T (x;y)(t
+1
+); v(t) = (x;y)(t)
+= (T
+1
+y(t
+2
+); T
+2
+x(t
+2
+))   (T
+1
+y(t
+1
+); T
+2
+x(t
+1
+)) =
+= (T
+1
+y(t
+2
+)   T
+1
+y(t
+1
+); T
+2
+x(t
+2
+)   T
+2
+x(t
+1
+));
+then we have
+jj Tv(t
+2
+)   Tv(t
+1
+)jj   jjT
+1
+y(t
+2
+)   T
+1
+y(t
+1
+)jj + jjT
+2
+x(t
+2
+)   T
+2
+x(t
+1
+)jj
+  jjg
+1
+(t
+2
+)   g
+1
+(t
+1
+)jj +
+Z
+1
+0
+jju
+1
+(t
+2
+;s;y(s))   u
+1
+(t
+1
+;s;y(s))jj ds
++jjg
+2
+(t
+2
+)   g
+2
+(t
+1
+)jj +
+Z
+1
+0
+jju
+2
+(t
+2
+;s;x(s))   u
+2
+(t
+1
+;s;x(s))jj ds;
+and
+jjT
+1
+y(t)jj =  (T
+1
+y(t)) =  (g
+1
+(t)) +
+Z
+1
+0
+ (u
+1
+(t;s;y(s))) ds
+=  (g
+1
+(t)) +
+Z
+1
+0
+jju
+1
+(t;s;y(s))jj ds   jjg
+1
+jj +
+Z
+1
+0
+k
+1
+(t;s) ds
+Electronic Journal. http://www.math.spbu.ru/diffjournal 93Differential Equations and Control Processes, N 1, 2012
+  jjg
+1
+jj + A
+1
+:
+By a similar way as done above we can prove that
+jjT
+2
+x(t)jj   jjg
+2
+jj + A
+2
+:
+Then, T
+1
+; T
+2
+are well de ned on the sets
+Q
+1
+= f y2C[I;E] : jjyjj  M
+1
+g; M
+1
+=jjg
+1
+jj + A
+1
+and Q
+2
+= f x2C[I;E] : jjxjj  M
+2
+g; M
+2
+=jjg
+2
+jj + A
+2
+respectively.
+Now, let the set Q be de ned as
+Q = f v = (x;y)2C[I;E] C[I;E] : jjvjj  jjg
+1
+jj + A
+1
++ jjg
+2
+jj + A
+2
+g:
+Then, for any v2Q we have
+jjTv(t)jj = jjT (x;y)(t)jj = jj(T
+1
+y(t);T
+2
+x(t))jj   jjT
+1
+y(t)jj + jjT
+2
+x(t)jj
+  jjg
+1
+jj + A
+1
++ jjg
+2
+jj + A
+2
+:
+i.e. 8v2Q)Tv2Q)TQ Q: Thus T :Q!Q:
+Then Q is nonempty, uniformly bounded and strongly equi-continuous subset
+of C[I;E] C[I;E]: Also, it can be shown that Q is convex and closed.
+As a consequence of Proposition 1, then TQ is relatively weakly compact. It
+remains to prove that T is weakly sequentially continuous.
+Let fy
+n
+(t)g and fx
+n
+(t)g be two sequences in Q
+1
+; Q
+2
+converge weakly
+to x(t); y(t) respectively 8t2 I: Since u
+1
+(t;s;y(s)) and u
+2
+(t;;s;x(s))
+are weakly sequentially continuous in the third argument, then u
+1
+(t;s;y
+n
+(s))
+and u
+2
+(t;s;x
+n
+(s)) converge weakly to u
+1
+(t;s;y(s)) and u
+2
+(t;s;x(s)) respec-
+tively and hence  (u
+1
+(t;s;y
+n
+(s))) and  (u
+2
+(t;;s;x
+n
+(s))) converge strongly
+to  (u
+1
+(t;s;y(s))) and  (u
+2
+(t;s;x(s))) respectively.
+Using assumption (iii
+ 
+)) and applying Lebesgue Dominated Convergence The-
+orem for Pettis integral, then we get
+ (
+Z
+1
+0
+u
+1
+(t;s;y
+n
+(s)) ds) =
+Z
+1
+0
+ (u
+1
+(t;s;y
+n
+(s))) ds
+!
+Z
+1
+0
+ (u
+1
+(t;s;y(s))) ds 8 2E
+ 
+; t2I
+and
+ (
+Z
+1
+0
+u
+2
+(t;s;x
+n
+(s)) ds) =
+Z
+1
+0
+ (u
+2
+(t;s;x
+n
+(s))) ds
+!
+Z
+1
+0
+ (u
+2
+(t;s;x(s))) ds 8 2E
+ 
+; t2I:
+Then T is weakly sequentially continuous.
+Since all conditions of Theorem 1 are satis ed, then the operator T has at
+Electronic Journal. http://www.math.spbu.ru/diffjournal 94Differential Equations and Control Processes, N 1, 2012
+least one  xed point v = (x;y)2Q , which completes the proof.
+References
+[1] Bashir Ahmad, Juan J. Nieto, Existence results for a coupled system of
+nonlinear fractional differential equations with three-point boundary con-
+ditions, Computers and Mathematics with Applications, 58 (2009) 1838-
+1843.
+[2] C. Bai, J. Fang, The existence of a positive solution for a singular coupled
+system of nonlinear fractional differential equations, Appl. Math. Comput.
+150 (2004) 611-621.
+[3] Y. Chen, H. An, Numerical solutions of coupled Burgers equations with
+time and space fractional derivatives, Appl. Math. Comput. 200 (2008) 87-
+95.
+[4] M. Cichon, Weak solutions of ordinary differential equations in Banach
+spaces, Discuss. Math. Differ.Incl. Control Optim., 15(1995), 5-14.
+[5] M. Cichon, I. Kubiaczyk, Existence theorem for the Hammerstein in-
+tegral equation,Discuss. Math. Diff. Incl., Control and Optimization,
+16(2)(1996), 171-177.
+[6] N. Dunford, j. T. Schwartz, Linear operators, Interscience, Wiley, New
+York, 1958.
+[7] E. Hille, R. S. Phillips, Functional Analysis and Semi-groups Amer. Math.
+Soc. Colloq. Publ. 31,Amer. Math. Soc., Providence, R. I., 1957.
+[8] A. M. A. El-Sayed, F. M. Gaafar, H. G. H. Hashem, On the maximal
+and minimal solutions of arbitrary-orders nonlinear functional integral and
+differenbtial equations, MATH. SCi, RES.J., 8(11)(2004), 336-348.
+[9] A. M. A. El-Sayed, H. H. G. Hashem, Weak maximal and minimal solu-
+tions for Hammerstein and Urysohn integral equations in reexive Banach
+spaces, Differential Equation and Control Processes. No. 4(2008), 50-62.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 95Differential Equations and Control Processes, N 1, 2012
+[10] V. Ga ychuk, B. Datsko, V. Meleshko, Mathematical modeling of time
+fractional reaction-diffusion systems, J. Comput. Appl. Math. 220 (2008)
+215-225.
+[11] V.D. Gejji, Positive solutions of a system of non-autonomous fractional
+differential equations,J. Math. Anal. Appl. 302 (2005) 56-64.
+[12] V. Ga ychuk, B. Datsko, V. Meleshko, D. Blackmore, Analysis of the so-
+lutions of coupled nonlinear fractional reaction-diffusion equations, Chaos
+Solitons Fractals, 41 (2009) 1095-1104.
+[13] M.P. Lazarevi, Finite time stability analysis of PD
+ff
+fractional control of
+robotic time-delay systems, Mech. Res. Comm. 33 (2006) 269-279.
+[14] A. R. Mitchell, CH. Smith, An existence Theorem for weak solutions of dif-
+ferential equations in Banach spaces, In: Nonlinear Equations in Abstract
+Spaces. Proc. Int.Symp., Arlington ,(1977) 387-40314.
+[15] D. O'Regan, Integral equations in reexive Banach spaces and weak topolo-
+gioes Amer. Math. Soc., Vol. 124, No. 2, (1996), 607-614.
+[16] D. O'Regan, Fixed point theory for weakly sequentially continuous map-
+ping Math. Comput. Modeling , 27(1998), 1-14.
+[17] H. A. H. Salem, A. M. A. EL-Sayed, Fractional order integral equations in
+reexive Banach spaces Math. Slovaca., 55 , No. 2(2005), 169-181.
+[18] X. Su, Boundary value problem for a coupled system of nonlinear fractional
+differential equations,Appl. Math. Lett. 22 (2009) 64-69.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 96

@@ -1,0 +1,1507 @@
+﻿dx
+dt
+✻
+✛
+✲
+❄
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 2, 2012
+Electronic Journal,
+reg. N ΦC77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Sergey Kryzhevich
+MATHEMATICAL MODELS OF DISCONTINUOUS
+DYNAMICAL SYSTEMS AND THEIR GEOMETRIC
+INVARIANTS.
+Abstract
+An autonomous discontinuous system, deﬁned by a set of vector ﬁelds on a compact manifold
+is studied. A multigraph, describing possible transitions of trajectories from one cell to another, is
+constructed. It is shown that there exists a canonical algorithm allowing to reduce this graph to its
+canonical form which is the same for all topologically conjugated systems of vector ﬁelds and persists
+underperturbationsof general systems of vector ﬁelds. Bifurcations, leading to changing of the normal
+form of the corresponding graph, are studied.
+Keywords: Partitions, cell dynamics, discontinuous systems.
+An autonomous discontinuous system, deﬁned by a set of vector ﬁelds on
+a compact manifold is studied. A multigraph, describing possible transitions
+of trajectories from one cell to another, is constructed. It is shown that there
+exists a canonical algorithm allowing to reduce this graph to its canonical form
+which is the same for all topologically conjugated systems of vector ﬁelds and
+persists under perturbations of general systems of vector ﬁelds. Bifurcations,
+leadingto changingofthenormalformofthecorrespondinggraph, arestudied.
+1. Introduction. In many engineering applications, characteristics of the
+system can be either discontinuous or non-smooth. As well-known examples,Differential Equations and Control Processes, N 2, 2012
+one may point an oscillator with clearance analyzed in [17], piecewise linear
+oscillators [7,11,19,24], Jeffcott rotor with bearing clearances [4,8,14], systems
+with Coulomb friction [3,20] and metal cutting processes [6,21,23].
+The main trouble of dealing with such a kind of system is that even in the
+simplest cases the basic properties of solutions, such as existence, uniqueness
+and continuous dependence on initial data and parameters may be violated
+[10,12,18]. This is one of the reasons why the results, obtained by numerical
+methods (like Euler or Runge-Kutta method) may contradict to theoretical
+and experimental ones. There are three simplest reasons of non-uniqueness (of
+course,theyaremuchmoremultiple): sliding,chatteringandCoulombfriction.
+In all these cases the low velocity motions are stopped in a ﬁnite segment of
+timeandthe informationofthemotionislostor, inotherwords, thedimension
+of the dynamics declines. This is the most principle difference between the
+smooth and the piecewise continuous (piecewise smooth) dynamics.
+Thereareseveralpossibleapproachestodescribethenon-smoothdynamical
+systems.
+The ﬁrst one can be found in [22]. It includes modeling of non-smooth
+systems by discontinuous functions and modeling of discontinuities by smooth
+functions. In the latter case extra care is required as smoothing discontinuities
+can produce a ghost solution.
+The main aim of the paper is to outline a general methodology for solving
+of non-smoothdynamicalsystems andto applyit to practicalproblems. A new
+type of models of the dynamical systems on the chain complexes is offered. A
+system of smooth vector ﬁelds on cells of the highest dimension is extended
+to all the complex. A graph, corresponding to this system of vector ﬁelds is
+constructed. Actually, this graph demonstrates all possible ways of transitions
+between distinct cells. It is shown that this graph can be reduced to the so-
+called normal form and this normal form does is in general structurally stable
+and is the same for topologically equivalent systems of vector ﬁelds.
+These invariantsare calculatedfor some examples. This approachallowsto
+Electronic Journal. http://www.math.spbu.ru/diffjournal 107Differential Equations and Control Processes, N 2, 2012
+reduce the systems with discontinuousright hand sides to several o.d.e. system
+of different dimensions, see [16].
+The bifurcations of dynamical system, leading to changes of the normal
+form of the graph (the so-called spatial bifurcations), are studied.
+Periodic responses of a vibro-impact system with a drift are investigated
+through a semi-analytical method, developed by Pavlovskaia and Wiercigroch
+[15], which allows to determine the favorable operating conditions. The model
+accounts for visco-elastic impacts and is capable to mimic drift - dynamics of a
+bounded progressive motion.
+Consider a dynamical system
+˙ x =f(x,p) (1)
+where x = [x
+1
+,x
+2
+,...,x
+N
+]
+T
+∈Ω is the state space vector,
+p= [p
+1
+,p
+2
+,...,p
+m
+]
+T
+is a vector of the system parameters, and f = [f
+1
+,f
+2
+,...,f
+N
+]
+T
+is the vector
+function, whichisdependent upontheprocessbeingmodeled. Thenweassume
+that the dynamical system (1) is continuous on every one of k subsets X
+i
+of
+the global hyperspace Ω (Fig.1), therefore, the right hand side of (1) will be
+piecewise smooth. For all i = 1,...,k suppose f(x,p) = f
+i
+(x,p) if x ∈ X
+i
+.
+Here and later all vector values are denoted by bold letters.
+Adiabatic invariants of the impact systems were studied in [5].
+Thereareseveralwaystoreducethenon-smoothdynamicalsystemtomap-
+pings on the Euclidean space. One can consider a transversal section of a peri-
+odicclosedtrajectory,providedthecorrespondingperiodicsolutionisuniqueat
+least forward and this trajectory is a graph of a smooth function and consider
+the corresponding Poincar´ e mapping. Alternatively, if the solution x(t,x
+0
+,p)
+of system (1) with the initial datax(0+) =x
+0
+is unique, we may ﬁx a positive
+value T and consider the mappingP
+T
+(x
+0
+) =x(T +0,x
+0
+,p). Similarly, we may
+consider instead of system (1) a T – periodic system
+˙ x =f(t,x,p). (2)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 108Differential Equations and Control Processes, N 2, 2012
+Figure 1: A possible structure of the hyperspace Ω (adopted from [16]).
+However, there is another way, typical for the systems with a discontinuous
+right hand side. For any point x
+0
+where the right hand side of the considered
+system is discontinuous (denote the set of all such points by Λ) let L be the
+trajectory of the point x
+0
+. Suppose, the next forward-in-time intersection of L
+andΛiswell-deﬁned. Thenwemayconsidertheso-calledstroboscopic mapping
+S, supposing S(x
+0
+) =x
+1
+.
+If Λ is a smooth manifold in neighborhoods of x
+0
+and x
+1
+and the intersec-
+tionswiththetrajectoryLaretransversalatthepointsx
+0
+andx
+1
+, themapping
+S is a local diffeomorphism of a small vicinity ofx
+0
+. The nonauthonomous pe-
+riodicsystems maybe treatedby thiswayas well, by addingan equation
+˙
+t = 1,
+t ∈ S
+1
+. Let T be the period of the right hand side of system (2). For the
+simplicity we assume that the discontinuity set Λ does not depend on t (the
+general situation is not much more diﬃcult). Suppose there is a solution x(t)
+has two successive transversal intersections with the surface Λ, corresponding
+tothetimeinstantst
+0
+andt
+1
+andthepointsx
+0
+andx
+1
+∈ Λ. Letτ
+i
+=t
+i
+mod T,
+i = 0,1. Then we denote
+S(τ
+0
+,x
+0
+) = (τ
+1
+,x
+1
+).
+ThetroublesstartthenthetrajectoryLisnottransversaltoΛeitheratthe
+Electronic Journal. http://www.math.spbu.ru/diffjournal 109Differential Equations and Control Processes, N 2, 2012
+pointx
+0
+or at thepointx
+1
+. Then the mappingS nearx
+0
+or itsinverseS
+−1
+near
+x
+1
+may be not deﬁned or at least not smooth. If the corresponding solution
+x(t) is periodic, this situation is called grazing [13]. The Lyapunov exponents
+of the periodic solution tend to inﬁnity as the parameter value approaches
+to one, corresponding to the grazing. At the critical value of parameters the
+Poincar´ e mapping is still continuous but non-smooth. There are several cases
+then the normal forms for this type of bifurcation may be written down [1]
+(see also the references therein). The Poincar´ e mapping may be presented
+as a composition of one, which has a ﬁnite limit while the parameter tends
+to the critical value and the so-called discontinuity mapping [2], which has a
+square root type singularity in the case of impulse type conditions and the 2/3
+type singularity for piecewise-smooth systems. The stroboscopic mapping is,
+generally speaking, discontinuous.
+2. General model of piecewise continuous systems. We consider a
+piecewise continuous dynamical system on a smooth manifold, described by a
+system of vector ﬁelds. Provided some non-degeneracy conditions are satisﬁed,
+we can classify the discontinuity points. The points of different type form
+unions of smooth submanifolds (we call them cells) of the initial manifolds. We
+construct the multigraph, which shows how the solutions of the discontinuous
+systems may pass from one cell to others. Some of the points of discontinuity
+arereducibleinthesenseoftopologicalequivalenceofdynamicalsystems,some
+of them are irreducible. If we delete all the nodes and arrows, corresponding to
+the reducible points from the constructed multigraph, we obtain the so-called
+normal form of the multigraph of the dynamical system, which is a topological
+invariant of the system and describes the structure of the phase space. New
+bifurcations, corresponding to the changes of the structure of this multigraph,
+aredescribed. The introducedmodel is appliedto studyone of importantcases
+of discontinuousdynamics – the vibro-impactsystems. The experimental data,
+justifying the offered approach, are provided.
+Let Ω be a smooth manifold of the dimension N. Later on, we assume for
+Electronic Journal. http://www.math.spbu.ru/diffjournal 110Differential Equations and Control Processes, N 2, 2012
+Figure 2: A cell division of the unit sphere.
+thesimplicitythateitherΩisaC
+∞
+smoothcompactmanifoldM oraEuclidean
+space R
+N
+or a product M ×R
+q
+of these two sets. Then it can be artiﬁcially
+compactiﬁedbyaddingthesetM×{∞}andbecomesdiffeomorphictoM×S
+q
+,
+whereS
+q
+istheunit sphereinR
+q+1
+. Suppose, thatΩ consistsofa ﬁnitenumber
+of non-intersecting cells
+Ω =
+N
+[
+n=0
+K
+n
+[
+k=1
+X
+k,n
+,
+K
+n
+∈Z
++
+, such that every X
+k,n
+is an n – dimensional submanifold of Ω. Let
+Ω
+n
+=
+n
+[
+m=0
+K
+m
+[
+k=1
+X
+k,m
+.
+Denote I = {(k,n) : n ∈ {0,...,N},k ∈ {1,...,K
+n
+}}. We say that the set
+Ω, endowed with this structure is a complex. Unlike the classical case of the
+simplicial complex we deﬁne a cell X
+k,n
+as an n-dimensional manifold (not
+necessarily a ball) with a piecewise smooth boundary. Also, we suppose by
+deﬁnition that for any two cells the intersection of their closures is either the
+empty set or a union of some other cells.
+In Figure 2 the partition of the 2D sphere is given. Here we have 2 cells
+of the dimension 2 (X
+1,2
+and X
+2,2
+), 2 cells of the dimension 1 (X
+1,1
+and X
+2,1
+)
+and 2 cells of the dimension 0 (X
+1,0
+and X
+2,0
+). For this case Ω = Ω
+2
+, Ω
+1
+is the
+equator circle and Ω
+0
+is the union of the ”west pole” X
+1,0
+and the ”east pole”
+X
+2,0
+.
+Denote by ∂
+t
+X the topological boundary of X. For any pair (k,n) ∈ I
+Electronic Journal. http://www.math.spbu.ru/diffjournal 111Differential Equations and Control Processes, N 2, 2012
+Figure 3: Structure of vector ﬁelds on boundaries of cells.
+deﬁne
+I
+k,n
+={(l,m):m∈{0,...,n−1},l∈{1,...,K
+m
+} :X
+l,m
+⊂∂
+t
+X
+k,n
+}.
+Due to the deﬁnition of the chain complex, ∂
+t
+X
+k,n
+=
+S
+(l,m)∈I
+k,n
+X
+l,m
+and
+∂
+t
+X
+k,n
+T
+X
+l,m
+=∅ if (l,m) / ∈I
+k,n
+.
+Deﬁnition 1. We say that the set of vector ﬁelds f
+n
+on the complex Ω is
+regular if the cellsX
+k,n
+are chosen in such a way that for anyx∈ Ω
+N−1
+, except
+∞, and any k such that (k,N)∈I
+x
+,
+f
+k
+(x) / ∈TΩ
+m
+if x / ∈ Ω
+m−1
+, m = 1,...,N−1. (3)
+Theseconditionimpliesthatthecellstructureanditsrelationswithvectorﬁelds
+are not sensitive with respect to small perturbations of the system parameters.
+Later on we suppose that either the set Ω
+N−1
+is compact or we artiﬁcially
+compactify it, adding ∞. Then, grace to the Sard theorem, the existence of
+the ﬁnite cell structure, providing regularity, can be obtained by a C
+1
+small
+perturbation of arbitrary set of smooth functionsf
+k
+.
+In the part A) of Figure 3 we show how a regular set of vector ﬁelds may
+look like in a neighborhood of the border between two 2D cells. The part B)
+shows how Condition (3) may be violated.
+3. Constructing the discontinuous system. Suppose that the consid-
+ered system is deﬁned by equations
+˙ x =f
+k
+(x) (4)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 112Differential Equations and Control Processes, N 2, 2012
+Figure 4: Non-sliding and sliding cells.
+providedx∈X
+k,N
+,k = 1,...,K
+N
+. Denotebyx
+k
+(t,x
+0
+) thesolutionsofsystems
+(4) for ﬁxed values of k with the initial data x
+k
+(0) = x
+0
+provided they are
+correctly deﬁned.
+Deﬁnition 2. We call the point x
+0
+∈ Ω
+N−1
+non-sliding or there exist two
+values k
+−
+,k
++
+∈{1,...,K
+N
+}, such that
+1. x
+0
+∈∂
+k
+−
+,k
++
+= ∂
+t
+X
+k
+−
+,N
+T
+∂
+t
+X
+k
++
+,N
+,
+2. the set ∂
+k
++
+,k
+−
+is a local smooth manifold in a neighborhood of the point
+x
+0
+,
+3. For any k such that (k,N)∈I
+x
+there is Δ> 0 such that
+x
+k
+(t,x
+0
+)∈X
+k
++
+,N
+for all t∈ (0,Δ) and x
+k
+(t,x
+0
+)∈X
+k
+−
+,N
+for all t∈ (−Δ,0).
+Thoughthetrajectoryofthenon-slidingpointx
+0
+maybenon-smoothinthis
+point, the generalpropertiesof solutionsof a smoothsystem, such as existence,
+uniqueness, continuity etc. held true in a neighborhood ofx
+0
+. The behavior of
+solutions in neighborhoods of non-sliding points is quite similar to one of the
+smooth systems.
+We say the point x
+0
+∈ Ω
+N−1
+is sliding if it is not non-sliding. The left and
+the right side of Figure 4 demonstrate the difference between the non-sliding
+(A.) and the sliding (B.) type of boundary points.
+Consider the orthogonal projections f
+m
+k
+(x) of vector ﬁelds f
+k
+(x) to TΩ
+m
+(this tangent space is deﬁned on the m-dimensional cells only).
+Electronic Journal. http://www.math.spbu.ru/diffjournal 113Differential Equations and Control Processes, N 2, 2012
+Deﬁnition 3. We call the point x
+0
+∈ Ω ﬁrst order sliding if it is sliding
+with respect to the initial set of vector ﬁelds and non-sliding with respect to
+set of vector ﬁelds f
+N−1
+k
+(x) on the complex Ω
+N−1
+.
+We say the point is is of the m – th order sliding (m = 1,...,N −1) if is
+not sliding of any order l ∈ {0,...,m−1}, but is non-sliding with respect to
+the system of vector ﬁelds f
+N−m
+k
+(x) on the complex Ω
+N−m
+.
+4. Filippov’s method. We construct the set of vector ﬁelds f
+k,n
+on the
+cells X
+k,n
+⊂ Ω
+N−1
+by the following procedure. Any cell X
+k,N−1
+appertains to
+borders of exactly twoN – dimensional cells ∂
+t
+X
+k
+±
+,N
+. If this cell is non-sliding,
+we deﬁnef
+k,N−1
+(x) =f
+k
+0
+(x), where k
+0
+is the minimum of k
+−
+and k
++
+. If the cell
+is sliding, we deﬁne
+f
+k,N−1
+(x) =α(x)f
+k
++
+(x)+(1−α(x))f
+k
+−
+(x)
+so that α(x) ∈ (0,1) and f
+k,N−1
+(x) for all x ∈ X
+k,N−1
+. These functions α are
+uniquely deﬁned and smooth due to the regularity of the considered system
+of vector ﬁelds. We have constructed the piecewise smooth system of vector
+ﬁelds on N − 1 – dimensional cells. Then we regularize it, if possible (an
+additional division of N −1 dimensional cells may be needed) and apply the
+similarprocedureto deﬁnethe dynamicsonthecellsofthecomplexΩ
+N−2
+. The
+only difference is that considering Ω
+N−2
+, we consider the ﬁrst order sliding cells
+as non-sliding (they are non-sliding with respect to the system of vector ﬁeld
+on Ω
+N−1
+). Then we similarlytreat Ω
+N−3
+and so on. Finally, we get a collection
+of vector ﬁelds f
+k,n
+for all the cells of the complex Ω.
+Select a pointx
+0
+∈X
+k,n
+(n< N). We say that the point x
+0
+is of
+a) the 0 type if it is non-sliding or its sliding order is less than N−n (see the
+part A. of Fig. 5);
+b) the + type if there is a local solution x(t,x
+0
+) of the considered system
+with the initial data (0,x
+0
+) and Δ > 0 such that x(t,x
+0
+) ∈ X
+k,N
+for all
+t ∈ (−Δ,0) and ϕ
+k
+(t,x
+0
+) / ∈ Ω
+n
+for all t ∈ (0,Δ) (see the part B. of Fig.
+5);
+Electronic Journal. http://www.math.spbu.ru/diffjournal 114Differential Equations and Control Processes, N 2, 2012
+Figure 5: Dynamics on non-sliding and sliding cells.
+c) the − type if there is a local solution x(t,x
+0
+) of the considered system
+with the initial data (0,x
+0
+) and Δ > 0 such that x(t,x
+0
+) ∈ X
+k,N
+for all
+t ∈ (0,Δ) and ϕ
+k
+(t,x
+0
+) / ∈ Ω
+n
+for all t ∈ (−Δ,0) (see the part C. of Fig.
+5).
+All the points of the complex Ω
+N−1
+are of one of these three types due to
+Condition (3). Two last types correspond to the points of non-uniqueness. We
+divide the cells in such a way that for any cell all the points of any cell are of
+the same type. This can be done due to the regularityof the considered system
+of vector ﬁelds.
+We divide the cells in such a way that for any cell al the points are of
+the same type. This partition can be done because of the regularity of the
+considered system of vector ﬁelds.
+5. Deﬁnition of the multigraph. Construct the oriented multigraphG,
+joiningthecellsX
+k,m
+⊂ Ω
+N
+byarrows(orientedlines)accordingtothefollowing
+principle.
+Let for a ﬁxed cellX
+0
+there exist a pointx
+0
+∈X
+0
+, a positive value ε, a cell
+X
+−
+6=X
+0
+and a solution x(t,x
+0
+) such that x(0,x
+0
+) =x
+0
+, x(t,x
+0
+)∈X
+−
+for all
+t ∈ (−ε,0). Then we draw the arrow from X
+−
+to X
+0
+. If there exist a point
+x
+0
+∈ X
+0
+, a positive value ε, cell X
++
+6= X
+0
+and a solution x(t,x
+0
+) such that
+x(0,x
+0
+) =x
+0
+,x(t,x
+0
+)∈X
++
+forallt∈ (0,ε)wedrawthearrowfromX
+0
+toX
++
+.
+Note that neither two non-sliding nor two cells of the same order of sliding can
+be linked directly.
+An example of the dynamical system on the 2D sphere with the cell struc-
+Electronic Journal. http://www.math.spbu.ru/diffjournal 115Differential Equations and Control Processes, N 2, 2012
+Figure 6: A discontinuous system on the unit sphere.
+Figure 7: The corresponding multigraph.
+ture from Fig. 2 is given at Figure 6. Here the north and the south pole of
+the sphere Ω are the sources, both the 1D cells are of the − type and the cor-
+responding dynamics is given at the part B of the ﬁgure. The points X
+1,0
+and
+X
+2,0
+are equilibria. This happens due to the sliding phenomena despite all the
+vector ﬁelds f
+k
+are non-zero at these points.
+The multigraph, corresponding to the considered system, is given at Figure
+7.
+Anyperiodic(ornon-wandering)orbitoftheconsideredsystemcorresponds
+to a cycle in this oriented multigraph. If this cycle consists of the cells, whose
+dimension is not greater than n, the considered system may have a periodic
+solution, corresponding to the dynamics of the dimension, which is not less
+than n.
+We prove that the oriented multigraph G does not change if we C
+1
+slightly
+change the regular set of vector ﬁelds f
+k
+. As we show at the section 3, the
+Electronic Journal. http://www.math.spbu.ru/diffjournal 116Differential Equations and Control Processes, N 2, 2012
+dynamical system may be smoothed in neighborhoods of non-sliding points.
+Thismeansthatsomeofthe0 typecellsmaybeerasedandsomenew onesmay
+be added. So, themultigraphG doesdepend on thechoiceofthemathematical
+model, we shall ﬁnd an invariant, which does not.
+In the theory of dynamical systems, one usually say that two systems are
+equivalent if there exists a homeomorphism, which transfers the trajectories of
+one system to ones of another system [9]. Homeomorphisms may transfer the
+smooth trajectories of ordinary dynamical systems to non-smooth trajectories
+of the discontinuous systems. In the other words, sometimes, the topologically
+equivalent discontinuous systems may have a different cell structure. We prove
+thatinthiscasetherearesomeinvariantsforthesesystemswhicharethesame,
+anyway.
+Notethatthecellstructuremaybenotuniqueforaﬁxeddynamicalsystem.
+For example, we may split an interval (a,b) ⊂ R with the dynamical system
+˙ x = 1 in the following way
+(a,b) = (a,(a+b)/2)
+[
+{(a+b)/2}
+[
+((a+b)/2,b).
+We start with an obvious statement.
+For any cell X
+k,N
+we consider a neighborhood U
+k
+, homeomorphic to a do-
+main inR
+N
+and so small that for any k,l = 1,...K
+N
+the corresponding neigh-
+borhoods intersect if and only if the closures of the cells do. For any point
+x∈ Ω, we deﬁne the set I
+x
+={(k,n)∈I :x∈U
+k
+}.
+Letf
+k
+(x) : Ω→TΩ (k = 1,...,K
+N
+) be a system of smooth vector ﬁelds on
+neighborhoodsU
+k,N
+. The followingresult showsthestabilityoftheconstructed
+structure.
+Theorem 1. Let the complex Ω
+N−1
+be a compact set (without the point∞)
+and let the set of functionsf
+k
+on Ω be regular. Then there exists suchε> 0 such
+that for any set g
+k
+of vector ﬁelds, regular with respect to the same complex Ω
+such that
+kf
+k
+−g
+k
+k
+C
+1
+(U
+k
+)
+< ε
+Electronic Journal. http://www.math.spbu.ru/diffjournal 117Differential Equations and Control Processes, N 2, 2012
+Figure 8: Erasing the non-sliding boundary cells. Case 1.
+the multigraph G, corresponding to the complex Ω and vector ﬁeldsf
+k,n
+coincide
+with one, corresponding to the complex Ω and vector ﬁelds g
+k,n
+.
+Corollary. If the complex Ω is a compact set and the functions f
+k,n
+(x,p)
+are C
+1
+smooth on the set {(x,p) :x∈ Ω,p∈D}, where D is a domain inR
+m
+,
+then for any ﬁxed oriented multigraph G the set of parametersp, corresponding
+to G, is open.
+6. Normal forms for multigraphs of discontinuous systems.
+Deﬁnition 4. We say that two dynamical systems
+˙ x =F
+1
+(x) (5)
+and
+˙ y =F
+2
+(y) (6)
+deﬁnedontwocomplexesΩ
+1
+andΩ
+2
+,areequivalentifthereisahomeomorphism
+h : Ω
+1
+→ Ω
+2
+such that the image of any trajectoryof system (5) is a trajectory
+of (6).
+The homeomorphismh is not necessarily an isomorphism of complexes, so
+in general it does not transfer cells to cells.
+Fix a complex Ω with a regular system of vector ﬁelds f. Let G be the
+corresponding multigraph. We say that the multigraph G
+0
+is the normal form
+of G if it is obtained by the following procedure (Fig. 8 or Fig. 9).
+Step 1. Let X
++
+and X
+−
+be two cells of the dimension N, such that the
+intersection of their boundaries contains at least one non-sliding cell X
+0
+of the
+Electronic Journal. http://www.math.spbu.ru/diffjournal 118Differential Equations and Control Processes, N 2, 2012
+Figure 9: Erasing the non-sliding boundary cells. Case 2.
+dimension N −1. Suppose that either X
++
+6= X
+−
+or X
+0
+does not appertain to
+a boundary of any other cell except the cell X
++
+= X
+−
+= X
+1
+. Then we erase
+the lines of the graph G, joining X
+0
+with X
++
+and X
+−
+, consider the new cell
+X =X
++
+S
+X
+−
+S
+X
+0
+instead of the initial three and redirect all the lines which
+weregoingto/fromX
++
+andX
+−
+, except theraisedones, to/fromthe cellX. We
+repeat this procedure while it is possible to ﬁnd such a triple of cells X
++
+, X
+−
+and X
+0
+.
+Steps 2,... Then we apply, while possible, the same procedure to the
+order 1 sliding N −1 dimensional cells of the complex Ω
+N−1
+, separated by a
+order1slidingN−2dimensionalcell. Thenwesimilarlytreatwiththecomplex
+Ω
+N−3
+and so on.
+Let G
+n
+(n= 0,...,N−1) be subgraphs of G, corresponding to the dynam-
+ical system on the sliding cells of the order>N−n for complexes Ω
+n
+, endowed
+with the vector ﬁelds f
+k,n
+.
+Similarly,wedeﬁnesubgraphsG
+n,0
+ofthenormalformG
+0
+ofthemultigraph
+G.
+The graph at Figure 7 coincide with its normal form. To have a non-trivial
+example of the normal form, see Figure 12 below.
+Remark 1. If G
+0
+is the normal form for G then for all n = 0,...N −1
+the multigraphG
+n,0
+is the normal form for G
+n
+, concerning the system of vector
+ﬁelds f
+n
+on complexes Ω
+n
+.
+Theorem 2. Let the vector ﬁelds of systems (5) and (6) be regular and
+Electronic Journal. http://www.math.spbu.ru/diffjournal 119Differential Equations and Control Processes, N 2, 2012
+Figure 10: Merging of two cell structures.
+equivalent and the normal forms of the corresponding multigraphs G
+i
+be G
+i
+0
+,
+i = 1,2. Then G
+1
+0
+=G
+2
+0
+.
+Proof. SupposethateverycellofΩ
+1
+intersectstransversallyeverycellofΩ
+2
+and the intersection consists of a ﬁnite number of connected components. We
+may obtain this by a C
+1
+small diffeomorphicperturbationof the complex Ω
+1
+N−1
+and the related perturbation of vector ﬁelds. The normal forms of multigraphs
+are obviously invariant with respect to the complex isomorphisms, providing
+equivalence of vector ﬁelds, so we may consider two different cell partitions Ω
+1
+and Ω
+2
+of the same manifold endowed with the same discontinuous dynamical
+system
+˙ x =F(x).
+Let Ω
+3
+be the ”merged” complex, consisting of all nonempty intersections of
+cells of the complexes Ω
+1
+and Ω
+2
+. The illustration is given in Figure 10, where
+we show how we construct step by step the merged complex from initial ones.
+Weshowthatthenormalforms,correspondingtocomplexesΩ
+1
+andΩ
+3
+with
+the same dynamical system coincide. Then by transitivity, ones, corresponding
+to the complexes Ω
+1
+and Ω
+2
+, do.
+The complex Ω
+3
+may be obtained from Ω
+1
+by a ﬁnite number q of cell
+divisions and cell inserts. In the ﬁrst case we take a cell X
+k,n
+of the dimension
+n and replace it with the union of two cells X
++
+k,n
+and X
+−
+k,n
+of the dimension n
+and one cell X
+0
+k,n−1
+of the dimension n−1. In the second one we insert some
+low dimensional cells inside the interior of an initial one.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 120Differential Equations and Control Processes, N 2, 2012
+Suppose without loss of generality that q = 1. Since Condition (3) is
+satisﬁed for the complexes Ω
+1
+and Ω
+2
+, it is true for the complex Ω
+3
+as well.
+Denote the multigraph, corresponding to the complexes Ω
+3
+by G
+3
+.
+Note that the new cell X
+0
+k,n−1
+is same order of sliding as the cells X
++
+k,n
+and X
+−
+k,n
+and is of the 0 type with respect to the system of vector ﬁelds on
+the complex Ω
+3
+n
+. If it was of the + or of the − type then every point of this
+cell would be the non-uniqueness point for the system on the complex Ω
+3
+n
+and,
+consequently, one on the complex Ω
+2
+n
+. However, it is a uniqueness point for the
+same vector ﬁeld on the complex Ω
+1
+n
+. Hence, the sets of non-uniqueness points
+for (5) and (6) are not be homeomorphic and these two systems may not be
+equivalent.
+The types and orders of sliding for the cells X
++
+k,n
+and X
+−
+k,n
+coincide and
+are the same with ones of the cell X
+k,n
+. If these new cells are non-sliding, we
+just add two more nodes and two more lines to the multigraph G
+1
+and either,
+replacing Figure 8B with 8A if X
++
+k,n
+6=X
+−
+k,n
+or 9B with 9A if X
++
+k,n
+=X
+−
+k,n
+.
+So,whatwearedoingwhilepassingfromG
+1
+toG
+3
+isexactlyinversetowhat
+we are doing, obtaining the normal form. Then, if we ﬁnd a normal form for
+the multigraph G
+3
+, we may obtain G
+1
+in one of the intermediate steps. All the
+fartherstepsarethesameand, hencethenormalformsofmultigraphscoincide.
+ 
+If we have a general type system (1), the normal forms of multigraphs may
+change in a neighborhood of a ﬁxed value p
+0
+of the parameter p. We call this
+phenomena spatial bifurcation of Eq. (1), because not only the topological
+structure of the solutions, but even one of the phase space changes. One of the
+simplest examples of this bifurcation is the following.
+Consider the equation
+˙ x =
+p
+x
+2
++p, x,p∈R. (7)
+For positive values of the parameter p Eq. (7) is deﬁned on all the real
+line. If p is negative, the phase space consists of two disjoint components
+Electronic Journal. http://www.math.spbu.ru/diffjournal 121Differential Equations and Control Processes, N 2, 2012
+(−∞,−
+√
+−p] and [
+√
+−p,∞). So, p = 0 corresponds to the spatial bifurcation.
+Remark 2. We can smooth the considered system on all the complex
+Ω. Consider the functions χ
+k
+: Ω → [0,1], k = 1,...,K
+N
+with the following
+properties.
+1. χ
+k
+∈C
+∞
+for all k = 1,...,K
+N
+;
+2. χ
+k
+(x) = 0 if x / ∈U
+k
+;
+3. for allx∈ Ω
+K
+N
+X
+k=1
+χ
+k
+(x) = 1.
+We consider the system
+˙ x =g(x) =
+K
+N
+X
+k=1
+χ
+k
+(x)f
+k
+(x). (8)
+The right hand side g is as smooth as the vector ﬁelds f
+k
+in this case. This
+procedurecanbedonelocallyinneighborhoodsofnon-slidingpoints. However,
+system (8) is not equivalent to the initial discontinuous system, since all their
+solutions are unique.
+Remark 3. Alternatively we may smooth not the vector ﬁelds but the
+solutions of the discontinuous system. For any point x
+0
+∈ Ω we ﬁnd solutions
+ϕ
+k
+(t,x
+0
+) of systems (4) with the initialdata (0,x
+0
+) such thatx
+0
+∈U
+k
+. Suppose
+all of them are well-deﬁned for t∈ [−Δ,Δ]. Then we deﬁne the solution of our
+system with initial data 0,x
+0
+by the formula
+x(t) =
+K
+N
+X
+k=1
+x
+k,N
+(t)ϕ(x
+k,N
+(t)).
+If the domains U
+k
+and the constant Δ (uniform for all x
+0
+) are chosen small
+enough, we may not care of the additives, that correspond to (k,N) / ∈ I
+x
+0
+.
+This model has two ”contradictive”properties: the solutionis uniquely deﬁned
+and continuouslydepends on the initialdata and parameters,but theremaybe
+Electronic Journal. http://www.math.spbu.ru/diffjournal 122Differential Equations and Control Processes, N 2, 2012
+troubles to extend it and the trajectoriesof different points may intersect since
+the group property of autonomous systems may be violated.
+7. Example. Let us use this construction to describe a simple mathemat-
+ical model of a linear s.d.f dynamical system with impacts.
+We consider a linear differential equation of the form
+¨ x+p˙ x+qx = f(t) =asint+b. (9)
+Assume that p> 0, p
+2
+< 4q.
+Eq. (9) is deﬁned forx> 0 and the followingimpact conditionstake place:
+1. if x(t
+0
+) = 0 then
+˙ x(t
+0
++0) =−˙ x(t
+0
+−0); (10)
+2. if x(t
+0
+− 0) = ˙ x(t
+0
+− 0) = 0 then x(t) = ˙ x(t) = 0 for any t, such that
+f|
+[t
+0
+,t]
+6 0.
+We take a small value e
+0
+, corresponding to the Coulomb friction in the
+considered system of the considered system and suppose that−a<b−e
+0
+<a,
+the function f(t)−e
+0
+has exactly two zeros over the period: sin
+−1
+(b−e
+0
+)/a
+and π−sin
+−1
+(b−e
+0
+)/a.
+Reduce the introduced system to an autonomous piecewise continuous one
+in the 3–dimensional space. Let the complex Ω =R
+2
+×S
+1
+S
+{∞} consist of the
+following cells (Fig. 11):
+X
++
+3
+={(x,y,t):x> 0}, X
+−
+3
+={(x,y,t):x< 0},
+X
++
+2
+={(0,y,t):y > 0}, X
+−
+2
+={(0,y,t):y < 0},
+X
++
+1
+={(0,0,t):f(t)> e
+0
+}, X
+−
+1
+={(0,0,t):f(t)<e
+0
+},
+X
++
+0
+={(0,0,t
++
+) :f(t
++
+) =e
+0
+, f
+′
+(t
++
+)> 0},
+X
+−
+0
+={(0,0,t
+−
+) :f(t
+−
+) =e
+0
+, f
+′
+(t
+−
+)< 0}.
+We consider the systems
+˙ x =y, ˙ y =−qx−py+f(t),
+˙
+t = 1
+Electronic Journal. http://www.math.spbu.ru/diffjournal 123Differential Equations and Control Processes, N 2, 2012
+Figure 11: An example of a discontinuous dynamical system.
+if (x,y,t)∈X
++
+3
+;
+˙ x =y, ˙ y =−x,
+˙
+t = 0 (11)
+if (x,y,t)∈X
+−
+3
+S
+X
+−
+2
+S
+X
++
+2
+(this is the replacement of Condition (10)); and
+˙ x = 0, ˙ y = f(t),
+˙
+t = 1
+if x =y = 0, f(t)>e
+0
+,
+˙ x = 0, ˙ y = f(t),
+˙
+t = 1
+if x =y = 0, f(t)>e
+0
+;
+˙ x = 0, ˙ y = 0,
+˙
+t = 1
+if x =y = 0, f(t)<e
+0
+.
+The equation
+˙
+t = 0 in system (11) reﬂects the fact that the jump of the
+velocity during the impact is instantaneous.
+We have 2 cells of every dimension: ones of the dimension 2 are of the 0
+type, the cell X
+−
+1
+is of the i type, X
++
+1
+and X
+±
+0
+are of the 0 type.
+ThecorrespondingmultigraphGanditsnormalformaregivenatFig. 12A
+and 12B respectively.
+Here X
+3
+=X
++
+3
+S
+X
+−
+3
+S
+X
++
+2
+S
+X
+−
+2
+S
+X
++
+1
+.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 124Differential Equations and Control Processes, N 2, 2012
+Figure 12: The corresponding multigraph and its normal form. Case 1.
+Figure 13: The corresponding multigraph and its normal form. Case 2.
+Similarly, one may consider the case b > a +e
+0
+when f(t) > e
+0
+for all t.
+For this case, we have the cells X
+±
+3
+, X
+±
+2
+, and X
++
+1
+only. Moreover, the cell X
++
+1
+is of the 0 type and we do not have no 1 dimensional dynamics any more. The
+multigraph G (and its normal form) in this case have a more simple structure
+(Fig. 13.).
+The normal form of this multigraph is the graph, which contains the single
+node Ω and no lines.
+The case b<e
+0
+−a is a bit different. There is no morecellX
++
+1
+and no more
+0 dimensional cells. The graph and its normal form are given at Fig. 14A and
+Fig. 14B respectively.
+Here X
+3
+=X
++
+3
+S
+X
+−
+3
+S
+X
++
+2
+S
+X
+−
+2
+.
+Consequently, the values b =±a+e
+0
+correspond to spatial bifurcations.
+Acknowledgements. This work was supported by the UK Royal Society,
+by the Russian Federal Program ”Scientiﬁc and pedagogical cadres”, grant no.
+2010-1.1-111-128-033and by the Chebyshev Laboratory(Department of Math-
+ematics and Mechanics, Saint-Petersburg State University) under the grant
+Electronic Journal. http://www.math.spbu.ru/diffjournal 125Differential Equations and Control Processes, N 2, 2012
+Figure 14: The corresponding multigraph and its normal form. Case 3.
+11.G34.31.0026 of the Government of the Russian Federation.
+References
+[1] di Bernardo M., Budd C.J., Champneys A.R., Kowalczyk P., Nordmark
+A. B., Olivar G., Piirionen P.T. Bifurcations in Nonsmooth Dynamical
+Systems. SIAM Review,50 (2008). P. 629−701.
+[2] Dankowicz H., Piiroinen P., Nordmark A.B. Low-velocity impacts of
+quasiperiodicoscillations.Chaos,Solitons,Fractals,14(2002).P.241−255.
+[3] Feeny B. Non-smooth Coulomb Friction Oscillator. Physica D, 59 (1992).
+P.25−38.
+[4] Gonsalves D.H., Neilson R.D., Barr A.D.S. A Study of Response of a
+Discontinuously Nonlinear Rotor System. Nonlinear Dynamics, 7 (1995).
+P. 451−470.
+[5] GorelyshevI.V.,NeishtadtA.I.Jump in adiabatic invariant at a transition
+between modes of motion for systems with impacts Nonlinearity,21 (2008).
+P.661-676.
+[6] Grabec I. Chaotic Dynamics of the Cutting Process. Int. J. Mach. Tools
+Manufact.28 (1988). P. 19−32.
+[7] Grebogi C., Pavlovskaia E., Wiercigroch M. Modeling of an impact system
+with a drift. Physical Review E, 64 (2001) 056224.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 126Differential Equations and Control Processes, N 2, 2012
+[8] Karpenko E.V., Wiercigroch M., Cartmell M.P. Regular and Chaotic Dy-
+namics of a Discontinuously Nonlinear Rotor System. Chaos, Solitons and
+Fractals,13 (2002). P. 1231−1242.
+[9] Katok A., Hasselblatt B. Introduction to the modern theory of dynamical
+systems. Cambridge University press. 1998.
+[10] Kunze M. Non-Smooth Dynamical Systems. Springer, 2000.
+[11] Leonov G.A., Ponomarenko D.V., Smirnova V. B. Local Instability and
+Localization of Attractors. From Stochastic Generator to Chua’s Systems
+// Acta Applicandae Mathematicae. 1995. V. 40. P. 179–243.
+[12] Moreau J.-J. Nonsmooth Mechanics and Applications, CISM lectures,
+Springer, Berlin-New York, 1988.
+[13] Nordmark A.B. Non-periodic motion caused by grazing incidence in an
+impact oscillator. J. Sound Vib. 145 (1991). P.279−297.
+[14] Pavlovskaia E.E., Karpenko E. V., Wiercigroch M. Non-linear dynamic
+interactions of a Jeffcott rotor with preloaded snubber ring. J. Sound Vib.
+276 (2004). P. 361−379.
+[15] Pavlovskaia E.E., Wiercigroch M. Periodic Solutions Finder for Vibro-
+Impact Oscillator with a Drift. J. Sound Vib. 267 (2003). P. 893−911.
+[16] Pavlovskaia E., M. Wiercigroch M. Low-dimensional maps for piecewise
+smooth oscillators. J. Sound Vibr. 305 (2007). P. 750−771.
+[17] Peterka F., Vacik J. Transition to chaotic motion in mechanical systems
+with impacts. J. Sound Vib. 154 (1992) P.95−115.
+[18] Schatzman M. Uniqueness and continuous dependence on data for one-
+dimensional impact problem. Math. Comput. Modelling. 28 (1998).
+P.1−18.
+[19] Shaw S.W., Holmes P.J. A periodically forced piecewise linear oscillator.
+J. Sound Vib. 90 (1983). P.129−155.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 127Differential Equations and Control Processes, N 2, 2012
+[20] Wiercigroch M. A Note on the Switch Function for the Stick-Slip Phe-
+nomenon. J. Sound Vib. 175 (1994). P. 700.
+[21] WiercigrochM. Chaotic Vibrations of a Simple Model of the Machine Tool-
+Cutting Process System. Trans. ASME, J. Vibr. Acoust., 119 (1997). P.
+468−475.
+[22] WiercigrochM., deKrakerB.eds. Applied Nonlinear Dynamics and Chaos
+of Mechanical Systems with Discontinuities.NonlinearScienceSeriesA,28
+(2000). Singapore: World Scientiﬁc.
+[23] Wiercigroch M., Krivtsov A.M. Frictional Chatter in Orthogonal Metal
+Cutting. Philosophical Transactions of the Royal Society of London: Part
+A, 359 (2001). P. 713−738.
+[24] WiercigrochM. Sin V.T.W. Experimental study of base excited symmetri-
+cally piecewise linear oscillator. ASME J. Appl. Mech. 65 (1998). P. 657.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 128

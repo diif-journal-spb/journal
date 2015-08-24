@@ -1,0 +1,1962 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 4, 2003
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Ordinary differential equations
+AZBELEV’S W-TRANSFORM
+AND ITS APPLICATIONS IN MATHEMATICAL
+MODELING
+Arcady Ponosov
+Agricultural University of Norway,
+Dept. of Mathematical Science and Technology,
+N-1430 Es-NLH, NORWAY,
+e-mail: matap@imf.nlh.no
+Andrei Shindiapin
+Eduardo Mondlane University,
+Department of Mathematics and Informatics,
+C.P. 257 Maputo, MOZAMBIQUE,
+e-mail: andrei@nambu.uem.mz
+Abstract.
+We propose a general method of reducing differential equations with a
+distributed delay function to ﬁnite or inﬁnite systems of ordinary differential
+equations. The idea of the method goes back to the so-called ”W-method”
+developed by N. V. Azbelev and his students (see e. g. [1] and references
+therein). As particular cases we obtain the famous ”linear chain trick”, on one
+hand, and the Krasovskii - Hale form of delay equations, on the other.
+0
+This work was partially supported by NUFU - Norwegian Council for Higher Education’s Programme for
+Development Research and Education, grant no. PRO 06/02.Differential Equations and Control Processes, N 4, 2003
+In the paper, we explain also how this method can be used in mathematical
+modelling. We consider two examples: stability of delay differential equations
+and singular perturbations of delay differential equations.
+1 Introduction
+The W-method was primarily developed by N.V. Azbelev and his students to
+study boundary value problems and asymptotic properties of functional differ-
+ential equations (see e. g. [1], [2] and references therein). The underlying idea
+is to represent a property of the solutions of the studied functional differential
+equation in terms of certain properties of an integral operator coming from an-
+other differential equation, which already has the required property. In case of
+asymptotic properties this idea is also combined with admissibility of the pairs
+of the appropriate functional spaces. The method is well-known to be eﬃcient
+in both cases. The resulting integral transforms are sometimes called ”the W -
+transforms”.
+In the two next sections we will give a short presentation of the method in
+its two (of the three known) forms.
+2 Stability, admissibility and the W-transform
+The ﬁrst version of the W-transform is mainly used in the stability theory.
+Suppose we are studying a linear functional (delay) equation which, in
+general, can be represented in the following form:
+˙ x(t) = (Vx)(t), t> 0
+x(s) =ϕ(s), s≤ 0,
+(1)
+where V is a continuous Volterra operator.
+If we want to apply Lyapunov’s method we usually need to rewrite Eq. (1)
+in the Hale-Krasovskii form:
+˙ x(t) =
+˜
+Vx
+t
+, t> 0 (2)
+where
+˜
+V is a certain functional on the space of the initial functions ϕ.
+To apply the W-method we need another representation of Eq. (1) based
+on a certain splitting of the operator V, which moves the initial function ϕ to
+the right hand side of Eq. (1).
+Electronic Journal.  53Differential Equations and Control Processes, N 4, 2003
+Setting
+(V
++
+x)(t) := (Vx
++
+)(t), t> 0
+(V
+−
+x)(s) := (Vx
+−
+)(s), s< 0,
+where
+x
++
+:=x1
+[0,+∞)
+, x
+−
+:=x1
+(−∞,0)
+=ϕ1
+(−∞,0)
+,
+we obtain the following form of Eq. (1):
+˙ x =V
++
+x+V
+−
+ϕ, t> 0
+x(0) =x
+0
+:=ϕ(0).
+(3)
+Example 2.1
+˙ x =
+Z
+t
+−∞
+x(s)d
+s
+R(t,s) =
+Z
+t
+0
+x(s)d
+s
+R(t,s)+
+Z
+0
+−∞
+ϕ(s)d
+s
+R(t,s).
+ 
+Denoting f :=V
+−
+ϕ we obtain
+˙ x =V
++
+x+f, t> 0
+x(0) =x
+0
+:=ϕ(0).
+(4)
+By this, the initial function ϕ becomes a part of the right hand side of Eq.
+(4).
+Deﬁnition 1 . We say that the pair of normed functional spaces (D,B) is
+admissible for Eq. ˙ x =V
++
+x+f if for any f ∈B and any x
+0
+∈R
+n
+the solution
+x of (4) belongs to the space D and
+||x
+f
+(·,x
+0
+)||
+D
+≤ ¯ c(||x
+0
+||
+R
+n +||f||
+B
+).
+Asymptotic properties of Eq. (1) can be now replaced by admissibility
+properties for Eq. (4), which can be studied by the W-transform. To do it, we
+introduce another, simpler equation that already has the required admissibility
+property:
+˙ x =Q
++
+x+g, t> 0
+x(0) =x
+0
+.
+(5)
+The representation formula for solutions of Eq. (5) gives
+x(t) =U(t)x
+0
++(Wg)(t), (6)
+Electronic Journal.  54Differential Equations and Control Processes, N 4, 2003
+where
+(Wg)(t) =
+Z
+t
+0
+C(t,s)g(s)ds.
+This operator deﬁnes essentially the W-transform which is to be applied to (4).
+This can be done in two manners.
+The left W-transform.
+˙ x =Q
++
+x+V
++
+x−Q
++
+x+f
+⇒ x =Ux
+0
++W(V
++
+−Q
++
+)x+Wf,
+or (I−Θ)x =Ux
+0
++Wf,
+where Θ :=W(V
++
+−Q
++
+).
+The right W-transform.
+Q
++
+x+g = ˙ x =V
++
+x+f
+⇒ g = (V
++
+−Q
++
+)(Ux
+0
++Wg)+f,
+or (I−
+˜
+Θ)g =f +(V
++
+−Q
++
+)Ux
+0
+,
+where
+˜
+Θ := (V
++
+−Q
++
+)W.
+Proposition 1 . Assume that I−Θ is invertible in D (or I−
+˜
+Θ is invertible
+in B). Then (D,B)-admissibility for Eq. (5) implies (D,B)-admissibility for
+Eq. (4).
+Proof. Consider the simpler case of the left W-transform. The result is
+then readily seen from the formula (I − Θ)x = Ux
+0
++Wf. Indeed, if the
+pair (D,B) is admissible for the reference equation (5), then, according to the
+representation (6), Ux
+0
++Wf ∈D. Invertibility of the operator (I−Θ) shows
+that any solution x of Eq. (4) belongs to the space D, too.
+A similar argument can be used in the case of the right W-transform.  
+3 Reference equations in a different state space
+In [6] a different approach to applying the W-transform to functional differ-
+ential equations was suggested. The purpose was to justify a general method
+of reducing differential equations with a distributed delay function to ﬁnite
+or inﬁnite systems of ordinary differential equations. This mens that the W-
+transformed equation will not be an integral equation any more, but a system
+Electronic Journal.  55Differential Equations and Control Processes, N 4, 2003
+of ordinary differential equations. The price we should pay for this is that the
+reference equations should be deﬁned in a different state space.
+Let us shortly describe this approach.
+We are assumed given a nonlinearn-dimensional delay differential equation
+x
+0
+(t) =f(t,(<x)(t)), t∈I
++
+, (7)
+x(τ) =ϕ(τ), τ ∈I
+−
+, (8)
+with a delay operator < to be speciﬁed below. Here I
++
+is either (0,T], or
+(0,∞), whileI
+−
+is either [−H,0], or (−∞,0], whereT andH are both positive
+numbers. The interval I
+−
+, where the ”initial function”ϕ is deﬁned, is deter-
+mined by the delay operator <: if e.g. Equation (7) includes only expressions
+like x(t−h
+i
+), i = 1,...,m, then H = maxh
+i
+.
+The state variable x is an n-vector, that is x(t) ∈ R
+n
+for any t. Any
+solution x(t) of (7) is supposed to be absolutely continuous for positive t.
+We will also write
+I :=I
+−
+∪I
++
+. (9)
+In order to describe assumptions on the delay operator< we, as in the previous
+section, have to split it into two parts:
+< =<
+−
++<
++
+, (10)
+where
+(<
++
+x)(t) =
+Z
+t
+0
+d
+s
+R(t,s)x(s), t∈I
++
+, (11)
+and
+(<
+−
+ϕ)(t) =
+Z
+I
+−
+d
+s
+R(t,s)ϕ(s), t∈I
++
+. (12)
+The measurable ν×n-matrix R(t,s), t∈I
++
+,s∈I is assumed to have two
+properties.
+R1. The function
+ϕ
+R
+(t) :=
+Z
+I
+−
+d
+s
+R(t,s)ϕ(s) (13)
+is locally Lebesgue-integrable on the interval I
++
+.
+R2. For any ﬁnite s,A ∈ I
++
+the entries r
+ij
+(·,s)(1 ≤ i ≤ ν, 1 ≤ j ≤ n)
+of the matrix R(·,s) as well as the functions Var
+s∈[0,A]
+r
+ij
+(·,s) are Lebesgue-
+integrable on I
++
+.
+Electronic Journal.  56Differential Equations and Control Processes, N 4, 2003
+If PropertyR2 is fulﬁlled, then the operator<
++
+will be bounded as a linear
+operator from the space D
+1
+([0,A];R
+n
+) (of all absolutely continuous functions
+from [0,A] to R
+n
+) to the Lebesgue spaceL
+1
+([0,A];R
+ν
+) (see [1] for the details).
+We will denote the norm of this operator by R
+A
+. It can easily be checked (see
+again [1]) that
+R
+T
+≤R
+A
+(T ≤A) and lim
+A→+0
+R
+A
+= 0. (14)
+The function f(·,·) : [0,T]×R
+ν
+→ R
+n
+will in the sequel be assumed to
+have three properties.
+f1. The function f(·,u) is measurable for any u∈R
+ν
+.
+f2. The function f(·,0) is bounded on I
++
+, i. e. |f(t,0)| ≤ C, for some
+constant C.
+f3. f is Lipschitz: there exists a constant L such that
+|f(t,u)−f(t,v)|≤L|u−v| (15)
+for all t∈I
++
+.
+Note that Conditionsf2 - f3 imply that|f(t,u)|≤L|u|+C for anyt∈I
++
+and u∈R
+ν
+.
+In what follows we assume that the initial functions ϕ are taken from a
+ﬁxed Banach spaceS, called in the sequel ”the space of initial functions”.
+In contrast to the previous section, the reference equation
+(Lz)(t) =y(t), t∈I
++
+. (16)
+will now be deﬁned in a given separable Banach space B, so that z(t)∈B
+for any t∈I
++
+. We assume L to be a linear operator generating an ordinary
+differential equation in the space B. This situation admits a rigorous de-
+scription if one uses the notion of a local operator. The deﬁnition below is a
+slight modiﬁcation of that used in [9] (see also [10]).
+Deﬁnition 2 An operator L : D → L
+1
+loc
+(I
++
+, B), deﬁned on a subset D of the
+space C
+loc
+(I
++
+, B) is called local if for any x,y ∈D, t
+0
+∈ I
++
+, ε > 0 satisfying
+x(t) =y(t) for t∈ [t
+0
+−ε,t
+0
++ε]∩I
++
+, one has (Lx)(t) = (Ly)(t) for almost all
+t∈ [t
+0
+−ε,t
+0
++ε]∩I
++
+.
+The deﬁnition gives a precise meaning to the intuitive expression ”indepen-
+dence from the past” and covers e. g. differentiation and multiplications by
+Electronic Journal.  57Differential Equations and Control Processes, N 4, 2003
+linear operators. The most typical example of a linear equation with a local
+operator is therefore an ordinary differential equation of the form
+z
+0
+(t) =A(t)z(t)+y(t), t∈I
++
+, (17)
+where A(t) : B → B, t ∈ I
++
+is a family of bounded linear operators. In this
+section we will mostly deal with this equation, but the usage of more general
+reference equations can also be of interest (see e. g. Section 6 for further
+details).
+The reference equation 16 is supplied with the usual initial condition
+z(0) =z
+0
+∈B. (18)
+In the sequel we shall assume that for any admissible function y and any
+z
+0
+∈B the reference equation (16) has the unique solution
+z(t) :=W
+t
+(y,z
+0
+) (19)
+We do not describe here a functional space of all possible y, nor specify we a
+nature of dependence of z on y and z
+0
+, as it is not important for the general
+scheme.
+Remark 3.1 The nature of the W-transform just deﬁned is somewhat different
+from what we had in Section 2. Indeed, the space state of the reference equation
+(16) does not coincide with that of Equation (7).
+Now we explain how the reference equation (16) can be related to the delay
+equation (7). The idea is to use (16) for a representation of the delay operator
+<.
+Givenanoperator<inEquation(7)andaninitialcondition(8),weassume
+that there exist
+W1. A reference equation (16), supplied with an initial condition (18),
+which generates a bounded operator W
+t
+(y,z
+0
+) for any t∈I
++
+;
+W2. A family of linear vector-functionals l
+t
+:B→R
+ν
+, t∈I
++
+;
+W3. Linear bounded maps p : R
+n
+→B and q : S →B;
+such that
+(<x)(t) =l
+t
+W
+t
+(px,qϕ), t∈I
++
+, (20)
+for any x∈C(I
++
+,R
+n
+) and any ϕ satisfying R1.
+Electronic Journal.  58Differential Equations and Control Processes, N 4, 2003
+We claim that if the representation (20) holds true, one can apply the W-
+method to reduce the delay equation (7) to a system of ordinary differential
+equations (in a Banach space).
+Theorem 1 Under assumptionsW1-W3 Equation (7), supplied with the ini-
+tial condition (8), is equivalent to the following system of ordinary differential
+equations in the space B×R
+n
+:
+(Lz)(t) =px(t)
+x
+0
+(t) =f(t,l
+t
+z(t))
+(t∈I
++
+) (21)
+with the initial conditions
+z(0) =qϕ
+x(0) =ϕ(0).
+(22)
+System (21) - (22) is related to Equation (7) via
+z(t) =W
+t
+(px,z
+0
+), z
+0
+=qϕ.
+Proof. If x(t) satisﬁes (21) for t∈I
++
+and equals ϕ(t) for t∈I
+−
+, then by (20)
+and (19) we have
+x
+0
+(t) =f(t,l
+t
+z(t)) =f(t,l
+t
+W
+t
+(px,z
+0
+)) =f(t,(<x)(t)).
+Ifx(t)satisﬁes(7)and(8), then, puttingz(t) =W
+t
+(px,qϕ)weobservethat
+z(t) solves the reference equation (16) with y = px and the initial condition
+z(0) =qϕ, whilex(t) solves the second equation of System (21) with the initial
+condition x(0) =ϕ(0).  
+Below we consider some examples illustrating this general framework.
+4 An example: the linear chain trick
+This is a well-known algorithm (see e.g. [5]) to reduce speciﬁc delay differential
+equations of the form (7) to ﬁnite dimensional systems of ordinary differential
+equations. The idea of the method is to represent the delay operator < as a
+ﬁnite linear combination of ”elementary”delay operators which admit a simple
+description. We present here a slightly modiﬁed version of the ”trick”which is
+adjusted to our objectives.
+Electronic Journal.  59Differential Equations and Control Processes, N 4, 2003
+In this section we demonstrate how the linear chain trick ﬁts into the
+general scheme of the W-method described in the previous section.
+Assume that the kernel R(t,s) of the integral operator< (see (11)) can be
+represented as follows:
+d
+s
+R(t,s) =G(t−s)ds, (23)
+where
+G(u) =
+m
+X
+i=1
+c
+i
+G
+i
+α
+(u) (24)
+and
+G
+i
+α
+(u) =
+α
+i
+u
+i−1
+(i−1)!
+e
+−αu
+(25)
+The coeﬃcients c
+i
+are supposed to be ν×n-matrices and α> 0.
+Inpracticetheseassumptionsmeanthatweexcludedelaytermslikex(t−h)
+as the corresponding kernel in the integral representation (11) is discontinuous.
+The linear chain trick is only applicable to some classes of smooth delay func-
+tions and differential equations with distributed delays.
+We also assume given a set I
+−
+being either (−∞,0], or [−H,0], where H
+is a positive number. The case of a ﬁnite H describes bounded time lags,
+otherwise one obtains equations with an unbounded time lag.
+Clearly, the basis functions G
+i
+α
+have the following properties:
+1. G
+i
+α
+(∞) = 0,
+2. G
+i
+α
+(0) = 0, i≥ 2.
+3. G
+1
+α
+(0) =α
+(26)
+It is also straightforward that
+d
+du
+G
+i
+α
+(u) =αG
+i−1
+α
+(u)−αG
+i
+α
+(u) (i≥ 2)
+d
+du
+G
+i
+α
+(u) =−αG
+i
+α
+(u) (i = 1).
+(27)
+We proceed with deﬁning the reference equation for the linear chain trick.
+It will be an equation in the ﬁnite-dimensional Banach space B = R
+mn
+given
+by
+z
+0
+(t) =Az(t)+y(t), (28)
+Electronic Journal.  60Differential Equations and Control Processes, N 4, 2003
+where
+A =
+
+
+
+
+
+
+
+
+−αE
+n
+0 0 ... 0
+αE
+n
+−αE
+n
+0 ... 0
+0 αE
+n
+−αE
+n
+... 0
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+0 0 ... αE
+n
+−αE
+n
+
+
+
+
+
+
+
+
+(29)
+is a block matrix with E
+n
+being the n×n-identity matrix.
+The linear vector-functional l : B =R
+mn
+→R
+ν
+will be independent of t:
+l = (c
+1
+, c
+2
+,...,c
+m
+), (30)
+where c
+i
+are the ν×n- matrices in the representation (24) of the kernel of the
+delay operator, so that lz =
+P
+m
+i=1
+c
+i
+z
+i
+(z
+i
+∈R
+n
+).
+The linear operators p : R
+n
+→B and q : S →B will be deﬁned as
+px =
+
+
+
+
+
+
+αx
+0
+.
+.
+.
+0
+
+
+
+
+
+
+(31)
+and
+qϕ =
+
+
+
+(qϕ)
+1
+...
+(qϕ)
+m
+
+
+
+, (32)
+respectively, where
+z
+i
+(0) = (qϕ)
+i
+:= (−1)
+i−1
+α
+i
+(i−1)!
+Z
+0
+−∞
+τ
+i−1
+e
+ατ
+ϕ(τ)dτ, i = 1,...,m. (33)
+These expressions also show that we can for instance choose the space S of
+initial functions to consist of all bounded measurable functions ϕ deﬁned on
+the interval (∞,0] (ifI
+−
+= [−H,0] we may assume thatϕ(τ) = 0 forτ <−H).
+As the matrix A in (28) is quasi-diagonal, we can explicitly ﬁnd (see e.g.
+[4, Ch. 5.3]) the fundamental solution Z(t) of the homogeneous equation cor-
+Electronic Journal.  61Differential Equations and Control Processes, N 4, 2003
+responding to the reference equation (28):
+Z(t) =e
+At
+=e
+−αt
+
+
+
+
+
+
+
+
+E
+n
+0 0 ... 0
+αtE
+n
+E
+n
+0 ... 0
+(αt)
+2
+2!
+E
+n
+αtE
+n
+E
+n
+... 0
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+(αt)
+m−1
+(m−1)!
+E
+n
+(αt)
+m−2
+(m−2)!
+E
+n
+... αtE
+n
+E
+n
+
+
+
+
+
+
+
+
+, (34)
+so that the general solution of the reference equation (28) will be
+z(t) =W
+t
+(y,z
+0
+) =W
+t
+0
+(y)+Z(t)z
+0
+, (35)
+where
+W
+t
+0
+(y) =
+Z
+t
+0
+Z(t−s)y(s)ds =
+Z
+t
+0
+e
+A(t−s)
+y(s)ds.
+To set up the W-transform of the solutionx(t) we notice that according to (33)
+and (34) we can write
+z
+0
+=qϕ =
+Z
+0
+−∞
+e
+A(−τ)
+(pϕ)(τ)dτ,
+as p drops all but the ﬁrst coordinate of the block vector z = (z
+1
+,...,z
+m
+)
+T
+(see
+the deﬁnition 31). As x(τ) =ϕ(τ) for τ < 0, we obtain
+z(t) =W
+t
+(px,qϕ) =
+R
+t
+0
+Z(t−s)px(s)ds+Z(t)qϕ
+=
+R
+t
+0
+e
+A(t−s)
+px(s)ds+
+R
+0
+−∞
+e
+A(t−τ)
+(pϕ)(τ)dτ
+=
+R
+t
+−∞
+e
+A(t−s)
+px(s)ds.
+(36)
+>From (23)-(25) and (34) it is now clear that
+(<x)(t) =
+R
+t
+−∞
+d
+s
+R(t,s)x(s)
+=
+R
+t
+−∞
+ 
+P
+m
+p=1
+c
+p
+G
+p
+α
+(t−s)
+ 
+x(s)ds
+=
+R
+t
+−∞
+(c
+1
+, c
+2
+,...,c
+m
+)
+ 
+e
+A(t−s)
+px(s)
+ 
+ds
+=l
+ 
+R
+t
+−∞
+e
+A(t−s)
+px(s)ds
+ 
+=lW
+t
+(px,qϕ)
+Electronic Journal.  62Differential Equations and Control Processes, N 4, 2003
+due to Deﬁnition (30) of the vector-functional l.
+These calculations explain why the delay operator < admits the required
+representation (20), which implies that Equation (7) can be reduced to the
+system of ordinary differential equation (21). At the same time the calculations
+showhowtheinitialcondition(8)canberewrittenastheinitialconditions(22).
+We have therefore shown that the classical linear chain trick is a particular
+case of the general W-transform described in the previous subsection. In what
+follows we will consider more examples of how the W-method can be used.
+5 Another example: an alternative approach to stability
+In this section we explain how the W-transform, described in Section 3, can
+be used in the stability theory. Not intending to analyze here all possible
+notions of stability, we just outline the algorithm and give its justiﬁcation in
+two particular (though important) cases. We notice also that the method was
+used in the paper [3] to investigate stability of nonlinear integro-differential
+equations.
+Inthe restofthe sectionwe assume thatI
++
+= (0,∞)andthatthe reference
+equation (16) has the following representation of its solutions:
+z(t) =
+Z
+t
+0
+Z(t,s)y(s)ds+Z(t,0)z
+0
+, (37)
+where the kernel Z(t,s) is bounded in B for any t≥s≥ 0.
+Theorem 2 Assume that the operator Z(t,s) in (37) admits the following
+exponential estimate
+kZ(t,s)k≤Me
+−γ(t−s)
+, γ > 0, t≥s≥ 0. (38)
+The global uniform asymptotical (resp., global exponential) stability of solutions
+of Equation (7) is then equivalent to the global uniform asymptotical (resp.,
+global exponential) stability of solutions of System (21).
+Proof. Let us ﬁx an arbitrary positive numberK and assume thatkϕk
+S
+≤
+K.
+Considerﬁrstthecaseofexponentialstability. Clearly, weareonlytocheck
+that if a solution x(t) of Equation (7) satisﬁes
+kx(t)k≤Ce
+−ct
+Electronic Journal.  63Differential Equations and Control Processes, N 4, 2003
+for any ϕ such that kϕk
+S
+≤K, then its W-transform z(t) =W
+t
+(px,qϕ) satis-
+ﬁes:
+kz(t)k≤De
+−dt
+, (39)
+where the constants d and D are independent of ϕ.
+Using (38) we have
+kz(t)k ≤Mkpk
+R
+t
+0
+e
+−γ(t−s)
+e
+−cs
+ds+KMkqke
+−γt
+=
+1
+γ−c
+(e
+−ct
+−e
+−γt
+)+KMkqke
+−γt
+≤De
+−dt
+,
+where d = min{c,γ} and D = max{KMkqk,|γ−c|
+−1
+}.
+Now, let us consider the case of the uniform asymptotic stability. Again it
+is suﬃcient to show that if x(t) := sup
+kϕk≤K
+|x(t)| goes to 0 as t → ∞, then
+this also holds for z(t) =W
+t
+(px,qϕ). As
+kz(t)k≤Mkpk
+Z
+t
+0
+e
+−γ(t−s)
+x(t)ds+KMkqke
+−γt
+,
+the result will be implied from the following
+Lemma 5.1 Givenγ > 0 and a scalar integrable functionv(t) such thatv(t)→
+0 as t→∞, one has
+u(t) :=
+Z
+t
+0
+e
+−γ(t−s)
+v(s)ds→ 0 (40)
+as t→∞.
+To prove the lemma we notice ﬁrst that the function u(t) satisﬁes the
+differential equation
+u
+0
+(t)+γu(t) =v(t) (41)
+and the initial condition u(0) = 0. The deﬁnition of the function u(t) given
+in (40) shows that u(t) is bounded on [0,∞) as v(t) is bounded there. This
+implies, inparticular, thatthereexistsasequencet
+k
+→∞suchthatu
+0
+(t
+k
+)→ 0,
+k→∞. At the same time v(t
+k
+)→ 0, and we obtain that u(t
+k
+)→ 0, too. Now
+we use another integral representation of the solution u(t):
+u(t) =u(σ)+
+Z
+t
+σ
+e
+−γ(t−s)
+v(s)ds, t≥σ.
+Electronic Journal.  64Differential Equations and Control Processes, N 4, 2003
+>From this we get the following estimate:
+|u(t)−u(σ)|≤γ
+−1
+sup
+t≥σ
+|v(t)|. (42)
+On the other hand, since v(t)→ 0 as t→∞ and u
+0
+(t
+k
+)→ 0 as k →∞, then,
+given a positive ε, there exists a natural number N for which
+|u(t
+N
+)|<
+ε
+2
+and |v(t)|<
+εγ
+2
+for t≥t
+N
+.
+Setting σ = t
+N
+in (42) we obtain that |u(t)| < ε for t ≥ t
+N
+. The lemma and
+hence Theorem 2 are proved.  
+6 The Hale-Krasovskii form of delay equations
+By the Hale-Krasovskii form (we do not insist on this terminology) of the delay
+equation (7) we mean the following representation:
+x
+0
+(t) =
+˜
+f(t,x
+t
+), (43)
+where x
+t
+(τ) = x(t+τ) and
+˜
+f(t,ψ) = f
+ 
+t,
+R
+I
+−
+d
+τ
+R(t,t+τ)ψ(τ)
+ 
+. The initial
+condition for this equation looks as usual, i.e. as in (8).
+This form itself is not an ordinary differential equation, but it is well-
+known that the solutions of (43) have a number of properties that are typical
+for solutions of ordinary differential equations. The aim of this section is to
+show that the representation (43) can be rewritten as an ordinary differential
+equation in the space S of initial functions. This result can for instance be
+used to explain rigorously why the solutions of (43) have the same properties
+as solutions of ordinary differential equations. Also in this section we are again
+going to apply a properly chosen W-transform. Let us only stress that it is not
+the aim of this paper to treat the Hale-Krasovskii representation in its general
+form. Nor will we treat general spaces of initial functions. Our intension
+is much more modest: we just want to show how one can derive the Hale-
+Krasovskii form from the delay equation (7) by making use of the W-method,
+what kind of ordinary differential equation one will get, and how one should
+deﬁne an appropriate reference equation.
+We start with the Banach space B. Informally speaking, this space will
+consist of bounded functions ϕ, deﬁned on I
+−
+, that are continuous for all
+Electronic Journal.  65Differential Equations and Control Processes, N 4, 2003
+t ∈ I
+−
+except probably t = 0, where ϕ is supposed to have a left-hand limit
+ϕ(−0). Formally we can write
+B =C(I
+−
+, R
+n
+)×R
+n
+, (44)
+meaning that the values at t = 0 are taken from the second factor. The ﬁrst
+factor is endowed with the uniform norm.
+Such a B is quite a natural choice as in the Hale-Krasovskii paradigm it
+also serves as the space S of initial functions, so that we, in general, do not
+have continuity att = 0 and have therefore to split the initial condition as it is
+described in Remark 3.1. Of course, continuous initial functions are included
+in this representation as a special case.
+The operator p : R
+n
+→B just drops the ﬁrst component (making it zero)
+in (44) and by this isometrically maps the space R
+n
+onto the second factor in
+this representation. The operator
+q : S(=B)→B
+is simply the identity.
+The family l
+t
+of linear vector functionals l
+t
+: B → R
+ν
+will be deﬁned as
+follows:
+l
+t
+ψ =
+Z
+I
+−
+d
+τ
+R(t,t+τ)ψ(τ) =
+Z
+I
+−
+d
+τ
+R(t,t+τ)
+˜
+ψ(τ)+R(t,t)ψ
+0
+, (45)
+where
+˜
+ψ ∈ C(I
+−
+, R
+n
+) and ψ
+0
+∈ R
+n
+. This is a crucial step in the Hale-
+Krasovskiiapproach. ThekernelR(t,s)isassumedheretomakethisfunctional
+bounded (see for instance Properties R1-R2 from Section 1).
+In what follows we will also useτ as the variable of the functions belonging
+to the space B as in the Hale-Krasovskii approach it is always assumed that
+S = B. Thus, functions z : I
++
+→ B can be regarded as functions of two
+variables t and τ, as any such function z(t,τ) generates a function t7→ z(t,·)
+mapping I
++
+into B.
+Now, the reference equation (16) will be deﬁned via a unbounded, linear
+and local operator L acting on functions z : I
++
+→ B, treated as functions of
+two variables z(t,τ), in the following way:
+(Lz)(t,τ) =
+
+
+
+
+
+∂z(t,τ)
+∂t
+−
+∂z(t,τ)
+∂τ
+, if t∈I
++
+,τ ∈I
+−
+,τ < 0,
+z(t,0), if t∈I
++
+,τ = 0.
+(46)
+Electronic Journal.  66Differential Equations and Control Processes, N 4, 2003
+It is important to stress once again that according to the deﬁnition of the
+underlying space B the values z(t,0) for all t are taken from the second factor
+in the representation 44.
+A shorter way to deﬁne the operatorL reads as follows
+Lz :=χ
+{τ<0}
+ 
+∂z
+∂t
+−
+∂z
+∂τ
+ 
++zχ
+{τ=0}
+, (47)
+where χ
+A
+(s) = 1 for s∈A and χ
+A
+(s) = 0 otherwise. s:
+It is straightforward thatL is a local operator in the sense of Deﬁnition 2.
+A linear subspace where L is formally deﬁned consists of z for which Lz
+belongs to the spaceL
+1
+loc
+(I
++
+,B). As we will see, this unbounded linear operator
+generates a bounded W-transform which can be described explicitly.
+Summing up and using the deﬁnition of the operator p gives the following
+form of the reference equation:
+∂z(t,τ)
+∂t
+−
+∂z(t,τ)
+∂τ
+=y(t,τ)χ, if t∈I
++
+,τ ∈I
+−
+, τ < 0,
+z(t,0) =y(t,0), if t∈I
++
+,τ = 0.
+(48)
+Itiswell-knownthatthegeneralsolutiontothepartialdifferentialequation
+∂z(t,τ)
+∂t
+=
+∂z(t,τ)
+∂τ
+is given by z(t,τ) = Φ(t+τ) for some Φ. Of course, one has to
+interpret this solution as generalized if Φ is not smooth.
+To set up the associated W-transform we put y =px which gives
+∂z(t,τ)
+∂t
+−
+∂z(t,τ)
+∂τ
+= 0, if t∈I
++
+,τ ∈I
+−
+, τ < 0,
+z(t,0) =x(t), if t∈I
++
+,τ = 0.
+(49)
+Initial conditions to (49) can be obtained from the deﬁnition of the operator q
+in this section:
+z(0,τ) =ϕ(τ), τ ∈I
+−
+, τ < 0,
+z(0,0) =x
+0
+(=ϕ(0)), τ = 0.
+(50)
+In order to ﬁnd Φ in the general representation z(t,τ) = Φ(t+τ) we use the
+second equation in (49) and the initial conditions (50). This results in two
+equalities: Φ(t) =x(t) for t∈I
++
+and Φ(τ) =ϕ(τ) for τ ∈I
+−
+.
+Electronic Journal.  67Differential Equations and Control Processes, N 4, 2003
+Thus, we obtain the W-transform of the solution x(t) of Equation (7):
+z(t,τ) :=W
+t
+(px,qϕ)(τ) =x(t+τ), (51)
+where z(t,τ) and x(t+τ) should be understood as functions of the variable t
+with the values in the functional spaceB of functions of the variableτ, i. e. as
+the functions z(t,·) and x(t+·), respectively. One should also remember that
+in (51) one has x(τ) =ϕ(τ) for τ ≤ 0.
+The W-transformed delay equation (7) becomes then
+∂z(t,τ)
+∂t
+−
+∂z(t,τ)
+∂τ
+= 0, if t∈I
++
+,τ ∈I
+−
+, τ < 0,
+z(t,0) =x(t), if t∈I
++
+,τ = 0,
+x
+0
+(t) =f
+ 
+t,
+R
+I
+−
+d
+τ
+R(t,t+τ)x(t+τ)
+ 
+(52)
+(see also the general description of the W-transformed system given in (21)).
+The last equation in this system (without delay) is the Hale-Krasovskii form as
+it is deﬁned in (43).
+Also the initial conditions to (52) can be obtained from the general for-
+mulas (22). In particular, the component z(t) satisﬁes (50), which in this case
+immediately implies that x(τ) =ϕ(τ) if τ < 0 and x(0) =x
+0
+.
+7 Singular perturbed delay differential equations in bio-
+logical applications
+Singular perturbed systems of delay differential equations arise in many appli-
+cations. In the paper we demonstrate how Azbelev’s transform can be applied
+to a system of delay equations coming from gene regulatory networks.
+Assumewearegivenasystemofdelaydifferentialequationsofthefollowing
+form
+˙ x =f(x,Z) =F(Z)+G(Z)x. (53)
+Following [8] we assume F and G to be the vectors of multilinear polynomials
+(i.e. linear in each variable), and Z to be a vector of the Hill-type switching
+functions S
+i
+(<(x
+i
+),θ
+i
+,q
+i
+) with values in [0,1]. Here θ
+i
+> 0 is a threshold of
+<(x
+i
+), < is a time delay operator and q
+i
+is a parameter characterizing the
+Electronic Journal.  68Differential Equations and Control Processes, N 4, 2003
+steepness of the switching functions (when q
+i
+→ 0 then S
+i
+approaches the
+Heaviside function).
+As the real switches occur in short but nonzero time intervals we consider
+system (53) in the case where 0 < q   1. Of a particular interest is the case
+when q→ 0.
+As an example of (53) one can consider a system
+˙ x
+1
+= S(<
+1
+(x
+1
+),θ
+1
+,q)+S(<
+2
+(x
+2
+),θ
+2
+,q)
+−2S(<
+1
+(x
+1
+),θ
+1
+,q)S(<
+2
+(x
+2
+),θ
+2
+,q)−γ
+1
+x
+1
+˙ x
+2
+= S(<
+1
+(x
+1
+),θ
+1
+,q)S(<
+2
+(x
+2
+),θ
+2
+,q))−γ
+2
+x
+2
+.
+(54)
+It is shown in [8] that even in the case of no delays involved (<
+i
+x = x) it
+is necessary to use two time-scales to deﬁne a solution for the limit equation
+(q = 0), as there occur the so-called ”sliding motions” parallel to switching
+domains (x
+i
+= θ
+i
+in this example). In the same paper it was shown how this
+diﬃculty can be tackled for ordinary differential equations.
+Here we propose to use the W-transform to overcome the diﬃculties that
+arise in this model. Below we illustrate our approach by looking at a special
+delay function. More general functions can easily treated, too, but we omit
+this analysis for the sake of simplicity. Let us only remark that considering
+distributed delays for the operator< is more realistic from the biological point
+of view.
+It is also natural from the biological point of view to assume that the delay
+operator is regular, i. e.
+d
+s
+R(t,s) =G(t−s)ds, (55)
+for some kernel (”the memory function”) G(u) ≥ 0, deﬁned on [0,+∞). This
+form of delay preserves smoothness of solutions on the whole time interval,
+which can break down even in the case of ”simple”delays like x(t−h).
+Usually, the kernel is assumed to be normalized:
+Z
+∞
+0
+G(u)du = 1.
+A simple (though of practical importance) example of such a kernel is given by
+G(u) =ae
+−au
+, (56)
+Electronic Journal.  69Differential Equations and Control Processes, N 4, 2003
+where a> 0.
+If one uses two time scales: slow and fast, then it is easy to check how the
+delayoperator(<x)(t) =
+R
+t
+−∞
+G(t−s)x(s)dswiththekernel(56)behavesunder
+the transition from the fast to the slow time τ =qt with a small q. Intuitively,
+it will give a ”big”delay. Indeed,< becomes (<
+h
+x)(t) =
+R
+τ
+−∞
+G
+q
+(τ−σ)x(σ)dσ,
+where G
+q
+(u) = aqe
+−aqu
+. The normalization condition
+R
+∞
+0
+G
+q
+(u)du = 1 holds
+true for all q, but the memory function G(u) will go to 0 slower, so that the
+time-delay will be bigger.
+Letusexplainourapproachbyconsideringa2×2-systemgeneralizing(54):
+˙ x
+1
+=f
+1
+(x
+1
+,x
+2
+,Z
+1
+,Z
+2
+)
+˙ x
+2
+=f
+2
+(x
+1
+,x
+2
+,Z
+1
+,Z
+2
+).
+(57)
+We study a piece of the trajectory (x
+1
+(t),x
+2
+(t)) in the vicinity of the threshold
+t = θ
+2
+. This means that the variable x
+2
+can be subject to rapid changes (we
+say that it is a switching variable), while x
+1
+is a regular variable, as nothing
+dramatic can happen to it near the threshold t =θ
+2
+.
+We denotedZ
+i
+=S(<
+i
+x
+i
+,θ
+i
+,q), whereS(x
+i
+,θ
+i
+,q) are the Hill functions (see
+[8]). As q → 0, the Hill function S(x,θ,q) converges to the Heaviside function
+with the unit jump which occurs at t =θ.
+The delay operators<
+i
+are given by
+<
+i
+(x) =
+Z
+t
+−∞
+G
+i
+(t−s)x(s)ds =a
+i
+Z
+t
+−∞
+e
+−a
+i
+(t−s)
+x(s)ds,
+where a
+i
+> 0, i = 1,2 are two given constants.
+Applying the linear chain trick to (57) one gets the following system
+˙ x
+1
+=f
+1
+(x
+1
+,x
+2
+,Z
+1
+(y
+1
+),Z
+2
+(y
+2
+))
+˙ x
+2
+=f
+2
+(x
+1
+,x
+2
+,Z
+1
+(y
+1
+),Z
+2
+(y
+2
+))
+˙ y
+1
+=−a
+1
+y
+1
++x
+1
+˙ y
+2
+=−a
+2
+y
+2
++x
+2
+.
+(58)
+To simplify the notation we put S
+i
+= S(x
+1
+,θ
+i
+,q), q > 0. Then, changing
+Electronic Journal.  70Differential Equations and Control Processes, N 4, 2003
+variables Z
+2
+=S
+2
+(x
+2
+) yields the system
+˙ x
+1
+=f
+1
+(x
+1
+,S
+−1
+2
+(Z
+2
+),Z
+1
+(y
+1
+),Z
+2
+)
+˙ y
+1
+=−a
+1
+y
+1
++x
+1
+˙ y
+2
+=−a
+2
+y
+2
++S
+−1
+2
+(Z
+2
+)
+q
+˙
+Z
+2
+=
+Z
+2
+(1−Z
+2
+)
+S
+−1
+2
+(Z
+2
+)
+f
+2
+(x
+1
+,S
+−1
+2
+(Z
+2
+),Z
+1
+(y
+1
+),Z
+2
+).
+(59)
+Now we let q → 0. This results in two different systems which complete each
+other. The ﬁrst system (”the reduced equations”) is obtained from (59) by
+setting q = 0. This gives the dynamics of the regular variable x
+(
+t) near the
+threshold θ
+2
+. According to the classical Tikhonov’s theory this passage to
+the limit is possible if, roughly speaking, there exists an asymptotically stable
+stationary point of the last equation in (59). This is the case for the system
+(54).
+Another system is derived from (59) by making use of the stretching trans-
+formation t =qτ producing the corresponding boundary layer system:
+x
+1
+0
+=qf
+1
+(x
+1
+,S
+−1
+2
+(Z
+2
+),Z
+1
+(y
+1
+),Z
+2
+)
+y
+1
+0
+=q(−a
+1
+y
+1
++x
+1
+)
+y
+2
+0
+=q(−a
+2
+y
+2
++S
+−1
+2
+(Z
+2
+))
+Z
+2
+0
+=
+Z
+2
+(1−Z
+2
+)
+x
+2
+f
+2
+(x
+1
+,S
+−1
+2
+(Z
+2
+),Z
+1
+(y
+1
+),Z
+2
+)
+(60)
+where the derivative is taken with respect to the ”slow”time τ.
+Although this system involves two more equations, as compared to the
+original system (58), all the additional equations include the small parameter
+q. This means that settingq = 0 gives the boundary layer equation of the same
+dimension as if the system were without delays. This boundary layer equation
+is identical with the last equation in (60), where x
+2
+is replaced by θ
+2
+.
+As it is shown in [8] the combination of the boundary layer equation and
+the reduced equations gives a consistent description of the system’s dynamics
+when q = 0. The aim of our presentation in this paragraph was to show that a
+similar result under similar assumptions is true for delay systems with regular
+kernels.
+Electronic Journal.  71Differential Equations and Control Processes, N 4, 2003
+References
+[1] Azbelev N.V., Maksimov V.P., and Rakhmatullina L.F. Introduction to
+the theory of functional differential equations, World Federation Publish-
+ers Inc., Atlanta, 1996, 300p.
+[2] Azbelev N.V., Simonov P.M. Stability of Differential Equations with
+Aftereffect. Taylor and Francis, Lonodon, 2002, 256p.
+[3] Goltser Ya., Domoshnitsky A. Bifurcation and stability of integro-
+differential equations // Nonlinear Analysis, 2001, N47, pp953-967.
+[4] Lancaster P. Theory of matrices, Academic Press, NY - London, 1969,
+156p.
+[5] McDonald N. Time lags in biological models, Lect. Notes in Biomathe-
+matics, Springer-Verlag, Berlin-Heidelberg-New York, 1978, 217p.
+[6] Miguel J.J., Ponosov A., Shindiapin A. The W-transform links delay and
+ordinary differential equations // Funcional Differential Equations., 2002,
+V. 9, N3-4, pp40-73.
+[7] Øyehaug L., Plahte E., Omholt S. Targeted reduction of complex models
+with time-scale hierarchy - a case study // To appear in Mathematical
+Biosciences, pp 32.
+[8] Plahte E., Kjoglum S. Analysis and genetic properties of gene regulatory
+networks with graded response functions. Preprint, Agricultural Univer-
+sity of Norway, 2002, pp 35.
+[9] Vrkoˇ c I. The representation of Carath´ eodory operators // Czechoslovak
+Math. J., 1964, N19(94),pp 99-109.
+[10] Schragin I. V. Abstract Nemytskii operators are locally deﬁned operators
+// Soviet Math. Dokl., 1976, N17, pp 47-49.
+Electronic Journal.  72

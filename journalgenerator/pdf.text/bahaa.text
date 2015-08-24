@@ -1,0 +1,1687 @@
+﻿dx
+dt
+6
+¾
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 4, 2005
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Optimal control
+Time-Optimal Control Problem For In¯nite Order
+Parabolic Equations With Control Constraints
+G. M. Bahaa
+Mathematics Department,
+Faculty of Science,
+Beni-Suef University, Beni- Suef, Egypt e-mail: Bahaa
+¡
+gmhotmail.com
+35K20, 49J20, 49K20, 93C20
+Abstract
+A time optimal control problem for in¯nite order parabolic equations is
+considered. A time optimal control problem is replaced by an equivalent one
+with a performance index in the form of integral form. Constraints on controls
+are assumed. To obtain the optimality conditions for the Neumann problem,
+the generalization of the Dubovitskii-Milyutin Theorem given by Walczak in
+Refs.[41,42] was applied.
+1 Introduction
+In recent years, signi¯cant emphasis has been given to the study of optimal
+control for systems governed by parabolic and hyperbolic partial differential
+equations with ¯rst boundary conditions or with Cauchy conditions. In these
+studies, the differential equations are either in general form or in divergence
+form. Questions concerning necessary conditions for optimality and existenceDifferential Equations and Control Processes, N 4, 2005
+of optimal controls for these problems have been investigated for example in
+[8-19,22-43].
+In (Refs. [15,18,19,29,32]), the optimal control problems for systems de-
+scribed by parabolic and hyperbolic operators with in¯nite order and consist
+of one equation have been discussed. Also we extended the discussion in [9-12]
+to n£n coupled systems of elliptic, parabolic and hyperbolic types involving
+different types of operators. To obtain optimality conditions the arguments of
+(Ref.[38]) have been applied.
+MakinguseoftheDubovitskii-Milyutintheoremfrom[20]),following(Refs.
+[22-35])Kotarskihaveobtainednecessaryandsu±cientconditionsofoptimality
+for similar systems governed by second order operator with an in¯nite number
+ofvariablesandwithDirichletandNeumannboundaryconditions. Theinterest
+in the study of this class of operators is stimulated by problems in quantum
+¯eld theory.
+In [1] a distributed Pareto optimal control problem for the parabolic opera-
+torwithanin¯nitenumberofvariablesandwithNeumannboundaryconditions
+is considered. In [2] a time optimal control problem for parabolic equations
+with an in¯nite number of variables is considered. In [29] a distributed control
+problem for a hyperbolic system with mixed control state constraints involving
+operatorofin¯niteorderisconsidered. In[31]adistributedcontrolproblemfor
+Neumann parabolic problem with time delay is considered. Also in [32], a dis-
+tributed control problem for a hyperbolic system involving operator of in¯nite
+order with Dirichlet conditions is considered.
+In this paper, the application of the generalized Dubovitskii- Milyutin The-
+orem from [41,42] will be demonstrated on an optimization Neumann problem
+for system described by parabolic operator with in¯nite order. A time optimal
+control problem for in¯nite order parabolic equations is considered. A time
+optimal control problem is replaced by an equivalent one with a performance
+index in the form of integral form. Constraints on controls are assumed.
+This paper is organized as follows. In section 2, we introduce some func-
+tional spaces with an in¯nite order. In section 3, we formulate the optimal
+control problem and we introduce the main results of this paper. In section 4,
+we introduce a real example for this problem.
+Electronic Journal.  65Differential Equations and Control Processes, N 4, 2005
+2 Some Functional Spaces (Refs.[3-5]).
+The object of this section is to give the de¯nition of some function spaces
+of in¯nite order, and the chains of the constructed spaces which will be used
+later. Wede¯netheSobolevspace W
+1
+fa
+ff
+;2g(R
+n
+)(whichweshalldenotedby
+W
+1
+fa
+ff
+;2g) of in¯nite order of periodic functions Á(x) de¯ned on all boundary
+¡ ofR
+n
+;n¸1; as follows,
+W
+1
+fa
+ff
+;2g=
+8
+<
+:
+Á(x)2C
+1
+(R
+n
+):
+1
+X
+jffj=0
+a
+ff
+jjD
+ff
+Ájj
+2
+2
+<1
+9
+=
+;
+where a
+ff
+¸ 0 is a numerical sequence and jj:jj
+2
+is the canonical norm in the
+space L
+2
+(R
+n
+)( all functions are assumed to be real valued), and
+D
+ff
+=
+@
+jffj
+(@x
+1
+)
+ff
+1
+::::(@x
+n
+)
+ff
+n
+;
+where ff =(ff
+1
+;:::;ff
+n
+) is a multi-index for differentiation,jffj=
+n
+X
+i=1
+ff
+i
+.
+ThespaceW
+¡1
+fa
+ff
+;2gisde¯nedastheformalconjugatespacetothespace
+W
+1
+fa
+ff
+;2g, namely:
+W
+¡1
+fa
+ff
+;2g=fÃ(x):Ã(x)=
+1
+X
+jffj=0
+a
+ff
+D
+ff
+Ã
+ff
+(x)g;
+where Ã
+ff
+2L
+2
+(R
+n
+) and
+1
+X
+jffj=0
+a
+ff
+jjÃ
+ff
+jj
+2
+2
+<1::
+ThedualitypairingofthespacesW
+1
+fa
+ff
+;2gandW
+¡1
+fa
+ff
+;2gispostulated
+by the formula
+(Ã;Ã)=
+1
+X
+jffj=0
+a
+ff
+Z
+R
+n
+Ã
+ff
+(x)D
+ff
+Ádx;
+where
+Á2W
+1
+fa
+ff
+;2g; Ã2W
+¡1
+fa
+ff
+;2g:
+From above, W
+1
+fa
+ff
+;2g is everywhere dense in L
+2
+(R
+n
+) with topological
+inclusions and W
+¡1
+fa
+ff
+;2g denotes the topological dual space with respect to
+L
+2
+(R
+n
+), so we have the following chain:
+W
+1
+fa
+ff
+;2gµL
+2
+(R
+n
+)µW
+¡1
+fa
+ff
+;2g:
+Electronic Journal.  66Differential Equations and Control Processes, N 4, 2005
+WenowintroduceL
+2
+(0;T;L
+2
+(R
+n
+))whichweshalldenotedbyL
+2
+(Q);where
+Q=R
+n
+£]0;T[; denotes the space of measurable functions t!Á(t) such that
+jjÁjj
+L
+2
+(Q)
+=(
+Z
+T
+0
+jjÁ(t)jj
+2
+2
+dt)
+1
+2
+<1;
+endowed with the scalar product (f;g) =
+Z
+T
+0
+(f(t);g(t))
+L
+2
+(R
+n
+)
+dt, L
+2
+(Q) is a
+Hilbert space. In the same manner we de¯ne the spaces L
+2
+(0;T;W
+1
+fa
+ff
+;2g),
+and L
+2
+(0;T;W
+¡1
+fa
+ff
+;2g), as its formal conjugate resp.
+Finally we have the following chains:
+L
+2
+(0;T;W
+1
+fa
+ff
+;2g)µL
+2
+(Q)µL
+2
+(0;T;W
+¡1
+fa
+ff
+;2g);
+Finally, let us introduce the space
+W(0;T):=
+½
+y; y2L
+2
+(0;T;W
+1
+fa
+ff
+;2g);
+@y
+@t
+2L
+2
+(0;T;W
+¡1
+fa
+ff
+;2g)
+¾
+;
+in which a solution of a parabolic equation with an in¯nite order will be con-
+tained.The spaces considered in this paper are assumed to be real.
+3 Time-Optimal Control Problem For Parabolic Equa-
+tions
+Let us take into account the following optimization problem:
+@y
+@t
++A(t)y =u; x2R
+n
+; t2(0;T); (1)
+y(x;0)=y
+p
+(x); x2R
+n
+; (2)
+@
+!
+y(x;t)
+@º
+!
+A
+=0; x2¡; t2(0;T); (3)
+y(x;T)2K; x2R
+n
+; (4)
+u2U
+ad
+; (5)
+T !min; (6)
+Electronic Journal.  67Differential Equations and Control Processes, N 4, 2005
+where y
+p
+is a given element in L
+2
+(R
+n
+), A(t) is a bounded in¯nite order self-
+adjoint elliptic partial differential operator mapping W
+1
+(R
+n
+) onto W
+¡1
+(R
+n
+),
+which takes the form [18-19]
+(A©)(x)=
+1
+X
+jffj=0
+(¡1)
+jffj
+a
+ff
+D
+2ff
+©(x;t);
+and
+@
+!
+@º
+!
+A
+is the co-normal derivatives with respect to A, forj!j=0;1;2;::;j!j·
+ff¡1:
+For each t2]0;T[, we de¯ne the following bilinear form on W
+1
+(R
+n
+):
+¼(t;Á;Ã)=(A(t)Á;Ã)
+L
+2
+(R
+n
+)
+; Á;Ã2W
+1
+(R
+n
+):
+Then
+¼(t;Á;Ã)=
+¡
+A(t)Á;Ã
+¢
+L
+2
+(R
+n
+)
+=
+¡
+A(t)Á(x);Ã(x)
+¢
+L
+2
+(R
+n
+)
+=
+¡
+1
+X
+jffj=0
+(¡1)
+jffj
+a
+ff
+D
+2ff
+Á(x;t);Ã(x)
+¢
+L
+2
+(R
+n
+)
+=
+Z
+R
+n
+1
+X
+jffj=0
+(¡1)
+jffj
+D
+ff
+Á(x)D
+ff
+Ã(x)dx
+(7)
+Thebilinearform(3.7)iscoerciveonW
+1
+fa
+ff
+;2gthatis,thereexists´2R;
+such that:
+¼(t;Á;Á)=´jjÁjj
+2
+W
+1
+(R
+n
+)
+; ´ >0: (8)
+It is well known that the ellipticity of A(t) is su±cient for the coercitivness of
+¼(t;Á;Ã) on W
+1
+(R
+n
+) [38]. Then
+¼(t;Á;Á)=
+µ
+1
+X
+jffj=0
+(¡1)
+jffj
+a
+ff
+D
+2ff
+Á(x;t);Á(x;t)
+¶
+¸
+µ
+1
+X
+jffj=0
+(¡1)
+jffj
+a
+ff
+jjD
+ff
+Á(x)jj
+2
+L
+2
+(R
+n
+)
+¶
+=´jjÁ(x)jj
+2
+W
+1
+(R
+n
+)
+:
+Electronic Journal.  68Differential Equations and Control Processes, N 4, 2005
+(
+8Á;Ã2W
+1
+(R
+n
+)the functiont!¼(t;Á;Ã)is continuously differentiable in
+]0;T[;and
+¼(t;Á;Ã)=¼(t;Ã;Á) (9)
+Note. The operator
+@
+@t
++ A(t) is an in¯nite order parabolic operator which
+maps L
+2
+(0;T;W
+1
+fa
+ff
+;2g) onto L
+2
+(0;T;W
+¡1
+fa
+ff
+;2g):
+Remark 3.1 The equations (3.1)-(3.3) have the unique generalized solution
+such as
+y2W(0;T):=
+½
+yjy2L
+2
+(0;T;W
+1
+(R
+n
+));
+@y
+@t
+2L
+2
+(0;T;W
+¡1
+(R
+n
+))
+¾
+continuously dependent on the right-hand side of (3.1) and the initial condi-
+tion (3.2). Moreover, y 2 W(0;T) is a continuous function [0;T] ! L
+2
+(R
+n
+)
+(compare with Theorems 1.1 and 1.2 Chapt. 3 [38])
+Let us denote by U :=L
+2
+(0;T;L
+2
+(R
+n
+))=L
+2
+(Q), the space of controls and
+by Y :=L
+2
+(0;T;W
+1
+(R
+n
+)) the space of states.
+We assume that U
+ad
+is a closed, convex subset of U and K is a closed,
+convex subset of L
+2
+(R
+n
+) with non-empty interior.
+3.1 An equivalent optimization problem
+Theoptimizationproblem(3.1)-(3.6)canbereplacedbyanotherequivalentone
+with a ¯xed time T and a performance index in a form of integral (compare
+with [40]). To show that we need two auxiliary theorems.
+Theorem 3.2 Let T
+0
+> 0 be the optimal time for the problem (3.1)-(3.6). If
+intK6=;; then
+y(x;T
+0
+)2@K (boundary ofK) (10)
+for any y satisfying (3.1)-(3.4).
+Proof Any solution of (3.1)-(3.3) is continuous with respect to t. If (3.10)
+is not true, then there exists an admissible state y such as y(x;T
+0
+) 2 intK:
+Thus a
+^
+T < T
+0
+exists so that y(x;
+^
+T)2 K: This contradicts the optimality of
+T
+0
+and hence (3.10) must be ful¯lled.
+Electronic Journal.  69Differential Equations and Control Processes, N 4, 2005
+Theorem 3.3 Let T
+0
+> 0 be the optimal time for the problem (3.1)-(3.6), let
+u
+0
+and y
+0
+be an optimal control and the corresponding state, respectively. Then
+with the assumptions given above there exists a non-trivial element g2L
+2
+(R
+n
+)
+so that the pair (y
+0
+;u
+0
+) is optimal for the following control problem with the
+¯xed time T
+0
+:
+I(y;u):=
+Z
+R
+n
+g(x)y(x;T
+0
+)dx!min (11)
+subject to the constraints (3.1)-(3.3).
+Proof The linearity of the equations (3.1)-(3.3) implies that the endpoints
+y(x;T
+0
+) of all admissible states y form a convex set Y
+T
+0. From Theorem (3.1)
+we have Y
+T
+0\intK =; and y
+0
+(0;T
+0
+)2 @K. Since intK 6=; thus there exists
+a closed hyperplane separating Y
+T
+0 and K containing y
+0
+(x;T
+0
+), i.e. there is a
+nonzero g2[L
+2
+(R
+n
+)]
+¤
+=L
+2
+(R
+n
+)
+sup
+y2Y
+T
+0
+Z
+R
+n
+g(x)y(x;T
+0
+)dx·
+Z
+R
+n
+g(x)y
+0
+(x;T
+0
+)dx
+· inf
+y2K
+Z
+R
+n
+g(x)y(x;T
+0
+)dx:
+This completes the proof.
+Remark 3.4 If the set K has a special form i.e.
+K =fyg(x;T); jjy¡zjj
+L
+2
+(R
+n
+)
+·²;
+where ² > 0 and z 2 L
+2
+(R
+n
+) are given, then g is known explicitly and is
+expressed by g(x)=2(y
+0
+(x;T)¡z(x)):
+Remark 3.5 The method fails if intK =;; e:g. in the case when K consists
+of a single point.
+3.2 Optimality conditions
+Now based on Theorem (3.2) we can be ready to formulate the necessary con-
+dition of optimality for problem (3.1)-(3.6).
+Theorem 3.6 Assuming that T
+0
+>0 is the optimal time for the problem (3.1)-
+(3.6),u
+0
+andy
+0
+aretheoptimalcontrolandthecorrespondingstate,respectively.
+Then with the assumptions given above at the beginning of section 3, there exist
+Electronic Journal.  70Differential Equations and Control Processes, N 4, 2005
+an element g2 L
+2
+(R
+n
+) and the adjoint state p2 W(0;T) so that the following
+system of partial differential equations and inequalities must be satis¯ed:
+State equations:
+@y
+0
+@t
++A(t)y
+0
+=u
+0
+; x2R
+n
+; t2(0;T
+0
+) (12)
+@
+!
+y
+0
+(x;t)
+@º
+!
+A
+=0; x2¡; t2(0;T
+0
+); (13)
+y
+0
+(x;0)=y
+p
+(x); x2R
+n
+; (14)
+y
+0
+(x;T
+0
+)2K; x2R
+n
+: (15)
+Adjoint equations:
+¡
+@p
+@t
++A(t)p=0; x2R
+n
+; t2(0;T
+0
+); (16)
+@
+!
+p(x;t)
+@º
+!
+A
+=0; x2¡; t2(0;T
+0
+); (17)
+p(x;T
+0
+)=g(x); x2R
+n
+: (18)
+Maximum conditions:
+Z
+Q
+p(u¡u
+0
+)dxdt¸0 8u2U
+ad
+; (19)
+Z
+R
+n
+g(x)(y¡y
+0
+)dx¸0 8y2K: (20)
+Proof According to Theorem (3.2) our problem is equivalent to the one
+with the ¯xed time T
+0
+and the performance index in the integral form (3.11).
+For such a new problem we formulate the necessary conditions of optimality
+by applying the generalized Dubovitskii-Milyutin Theorem (Theorem 1.8.1 in
+[26]). Let us denote by Q
+1
+;Q
+2
+;Q
+3
+the sets in the space E :=Y £U as follows
+Q
+1
+:=
+8
+>
+>
+>
+>
+<
+>
+>
+>
+>
+:
+(y;u)2E;
+@y
+@t
++A(t)y =u
+y(x;0)=y
+p
+(x)
+@
+!
+y(x;t)
+@º
+!
+A
+=0;
+9
+>
+>
+>
+>
+=
+>
+>
+>
+>
+;
+Electronic Journal.  71Differential Equations and Control Processes, N 4, 2005
+Q
+2
+:=
+(
+(y;u)2E; y2Y;u2U
+ad
+)
+;
+Q
+3
+:=
+(
+(y;u)2E; y(x;T
+0
+)2K;u2U
+ad
+)
+:
+Thus the optimization problem may be formulated in such a form
+I(y;u)!min subject to (y;u)2Q
+1
+\Q
+2
+\Q
+3
+:
+We approximate the sets Q
+1
+, and Q
+2
+by the regular tangent cones (RTC), Q
+3
+by the regular admissible cone (RAC) and the performance functional by the
+regular cone of decrease (RFC).
+The tangent cone to the set Q
+1
+at (y
+0
+;u
+0
+) has the form
+RTC(Q
+1
+;(y
+0
+;u
+0
+))=
+(
+(~ y;~ u)2E; P
+0
+(y
+0
+;u
+0
+)(~ y;~ u)=0
+)
+=
+8
+>
+>
+>
+>
+<
+>
+>
+>
+>
+:
+(~ y;~ u)2E;
+@~ y
+@t
++A(t)~ y = ~ u
+~ y(x;0)=0
+@
+!
+~ y(x;t)
+@º
+!
+A
+=0;
+9
+>
+>
+>
+>
+=
+>
+>
+>
+>
+;
+where P
+0
+(y
+0
+;u
+0
+)(~ y;~ u) is the Frµ echet differential of the operator
+P(y;u):=(
+@y
+@t
++A(t)y¡u;y(x;0)¡y
+p
+(x))
+mapping from the space
+W :=L
+2
+(0;T;W
+1
+(R
+n
+))£L
+2
+(Q)
+into the space
+Z :=L
+2
+(0;T;W
+¡1
+(R
+n
+))£L
+2
+(R
+n
+):
+Applying theorem on the existence of the solution to the equation (3.1)-(3.3)
+Remark (3.1) it is easy to prove that P
+0
+(y
+0
+;u
+0
+) is the mapping from the space
+W onto Z as required in the Lusternik Theorem (Theorem 9.1 in [20]).
+The tangent cone RTC(Q
+2
+;(y
+0
+;u
+0
+)) to the set Q
+2
+at (y
+0
+;u
+0
+) has the form
+Y £RTC(U
+ad
+;u
+0
+), where RTC(U
+ad
+;u
+0
+) is the tangent cone to the set U
+ad
+at
+the point u
+0
+. It is known that the tangent cones are closed [36].
+Electronic Journal.  72Differential Equations and Control Processes, N 4, 2005
+Then we can show that:-
+RTC(Q
+1
+\Q
+2
+;(y
+0
+;u
+0
+))=RTC(Q
+1
+;(y
+0
+;u
+0
+))\RTC(Q
+2
+;(y
+0
+;u
+0
+)):
+FurthertakingintoaccountTheorem3.3in[42]itiseasytoseethatthead-
+joint cones [RTC(Q
+1
+;(y
+0
+;u
+0
+))]
+¤
+and [RTC(Q
+2
+;(y
+0
+;u
+0
+))]
+¤
+are of the same sense.
+TheadmissibleconeRAC(Q
+3
+;(y
+0
+;u
+0
+))tothesetQ
+3
+at(y
+0
+;u
+0
+)hastheform
+RAC(K;y
+0
+(x;T
+0
+))£U;whereRAC(K;y
+0
+(x;T
+0s
+))istheadmissibleconetothe
+set K at the point y
+0
+(x;T
+0
+).
+According to Theorem 7.5 [20] the regular cone of decrease for the perfor-
+mance functional is given by
+RFC(I;(y
+0
+;u
+0
+))=
+(
+(~ y;~ u)2E;
+Z
+R
+n
+g(x)~ y(x;T
+0
+)dx< 0
+)
+:
+If RFC(I;(y
+0
+;u
+0
+)) 6= ;, then the adjoint cone consists of the elements of
+the form (Theorem 10.2 [20])
+f
+4
+(~ y;~ u)=¡¸
+0
+Z
+R
+n
+g(x)~ y(x;T
+0
+)dx; where ¸
+0
+¸0:
+Thefunctionalsbelongingto[RTC(Q
+1
+;(y
+0
+;u
+0
+))]
+¤
+havetheform(Theorem10.1
+[20])
+f
+1
+(~ y;~ u)=0 8(~ y;~ u)2RTC(Q
+1
+;(y
+0
+;u
+0
+)):
+The functionals
+f
+2
+(~ y;~ u)2[RTC(Q
+2
+;(y
+0
+;u
+0
+))]
+¤
+andf
+3
+(~ y;~ u)2[RAC(Q
+3
+;(y
+0
+;u
+0
+))]
+¤
+can be expressed as follows
+f
+2
+(~ y;~ u)=f
+1
+2
+(~ y)+f
+2
+2
+(~ u);
+f
+3
+(~ y;~ u)=f
+1
+3
+(~ y)+f
+2
+3
+(~ u)
+where f
+1
+2
+(~ y) = 08~ y and f
+2
+3
+(~ y) = 08~ u 2 U (Theorem 10.1 in [20]), f
+2
+2
+(~ u) is
+the support functional to the set U
+ad
+at the point u
+0
+and f
+1
+3
+(~ y) is the support
+functional to the set K at the point y
+0
+(x;T
+0
+) (Theorem 10.5 in [20]).
+Since all assumptions of the Dubovitskii-Milyutin Theorem are satis¯ed
+and we know suitable adjoint cones then we are ready to write down the Euler-
+Lagrange Equation in the following form
+f
+2
+2
+(~ u)+f
+1
+3
+(~ y)=¸
+0
+Z
+R
+n
+g(x)~ y(x;T
+0
+)dx;8(~ y;~ u)2RTC(Q
+1
+;(y
+0
+;u
+0
+)): (21)
+Electronic Journal.  73Differential Equations and Control Processes, N 4, 2005
+Introducting the adjoint variable p by the equation (3.16)-(3.18) and taking
+into account that ~ y is the solution of P
+0
+(y
+0
+;u
+0
+)(~ y;~ u) = 0 for any ¯xed ~ u, we
+obtain
+0=
+Z
+Q
+µ
+@p
+@t
++A(t)p
+¶
+~ ydxdt =
+Z
+R
+n
+µ
+¡p(x;T
+0
+)~ y(x;T
+0
+)
+¶
+dx
++
+Z
+R
+n
+p(x;0)~ y(x;0)dx+
+Z
+Q
+p
+µ
+@~ y
+@t
++A(t)~ y
+¶
+dxdt
+=¡
+Z
+R
+n
+p(x;T
+0
+)~ y(x;T
+0
+)dx+
+Z
+Q
+p~ udxdt:
+Hence
+Z
+R
+n
+g(x)~ y(x;T
+0
+)dx=
+Z
+Q
+p~ udxdt: (22)
+From (3.21) and (3.22) we get
+f
+2
+2
+(~ u)+f
+1
+3
+(~ y)=
+1
+2
+¸
+0
+Z
+Q
+p~ udxdt+
+1
+2
+¸
+0
+Z
+R
+n
+g(x)~ y(x;T
+0
+)dx (23)
+A number ¸
+0
+cannot be equal to 0 because in such a case all functionals in
+theEuler-LagrangeEquationwouldbezerowhichisimpossibleaccordingtothe
+Dubovitskii-Milyutin Theorem. Using the de¯nition of the support functional
+and dividing both members of the obtained inequalities by ¸
+0
+from (3.23) we
+obtain the maximum conditions (3.19)-(3.20).
+If RFC(I;(y
+0
+;u
+0
+))=; then the optimality conditions (3.12)-(3.20) are ful-
+¯lled with equality in the maximum conditions (3.19)-(3.20). This last remark
+completes the proof.
+4 Real example
+We shall us the following notation:
+Q=Q
+T
+=­£]0;T[; ­ an open subset of R
+n
+;
+§=§
+T
+=¡£]0;T[;
+¡=boundary of ­; §=lateral boundary of Q;
+V ½H ½V
+0
+:
+Let us consider the system whose state is given by
+d
+dt
+y(t;v)+A(t)y(t;v)=f +Bv (24)
+Electronic Journal.  74Differential Equations and Control Processes, N 4, 2005
+y(0;v)=y
+0
+(25)
+where A(t)y =¡
+n
+X
+i;j=1
+@
+@x
+i
+(a
+ij
+(x;t)
+@y
+@x
+j
+), a
+ij
+be given functions in ­£]0;T[= Q
+with 8
+>
+>
+>
+>
+<
+>
+>
+>
+>
+:
+a
+ij
+2L
+1
+(Q);
+n
+X
+i;j=1
+a
+ij
+(x;t)»
+i
+»
+j
+¸ff(»
+2
+1
++:::::+»
+2
+n
+) ff> 0; »
+i
+2R;
+almost everywhere in ­;
+B2L(U;L
+2
+(0;T;V
+0
+)) (26)
+Let U
+ad
+be a given closed, convex subset of U and let y
+1
+be a given element in
+H.
+We assume that
+(
+there exists a v2U
+ad
+such that
+y(¿;v)=y
+1
+for an appropriate ¿ 2[0;T] and ¿ ·T
+(27)
+The optimal time is de¯ned by
+¿
+0
+=inf¿; ¿ such that (4.4) holds (28)
+The Problem which we shall study are :
+existence of an optimal control, that is, existence of u2U
+ad
+such that
+y(¿
+0
+;u)=y
+1
+; (29)
+Lemma 4.1 We assume that
+(
+8Á;Ã2W
+1
+(R
+n
+)the function t!¼(t;Á;Ã)is continuously differentiable in
+]0;T[;and
+¼(t;Á;Ã)=¼(t;Ã;Á) (30)
+and there exists a ¸ such that
+¼(t;Á;Á)+¸jÁj
+2
+¸ffjjÁjj
+2
+; ff>0; 8Á2V;t2]0;T[; (31)
+(4.4) and (4.3) hold and that U
+ad
+is bounded. Then there exists an optimal
+control, that is u2U
+ad
+such that (4.6) is satis¯ed.
+Electronic Journal.  75Differential Equations and Control Processes, N 4, 2005
+Proof See Theorem 17.1 in [38] Chapter III, section 17.2.
+Example Take U =L
+2
+(§). Let the state y(v) be given by
+@
+@t
+y(v)+A(t)y(v)=f;
+@y
+@º
+A
+(v)=v;
+y(x;0;v)=y
+0
+(x):
+Theorem 17.1 [38] may be applied to this example. Hence the theorem covers
+the case of boundary control.
+Remark 4.2 Theorem 17.1 [38] may be modi¯ed without any di±culty to cover
+the case of systems with Dirichlet boundary conditions (cf [38] section 9) and
+where the control is exercised through the boundary.
+Comments
+The main result of the paper contains necessary and su±cient conditions of
+optimality (of Pontryagin's type) for in¯nite order parabolic system that give
+characterization of optimal control. But it is easily seen that obtaining ana-
+lytical formulas for optimal control is very di±cult. This results from the fact
+that state equations (3.12)-(3.15), adjoint equations (3.16)-(3.18) and maxi-
+mumconditions (3.19)-(3.20) are mutuallyconnected that cause that the usage
+ofderivedconditionsisdi±cult. Thereforewemustresignfromtheexactdeter-
+miningoftheoptimalcontrolandthereforeweareforcedtouseapproximations
+methods. Those problems need further investigations and form tasks for future
+research.
+Also it is evident that by modifying:
+- the boundary conditions,
+- the nature of the control (distributed, boundary),
+- the nature of the observation,
+- the initial differential system,
+an in¯nity of variations on the above problem are possible to study with
+the help of Dubovitskii-Milyutin formalism.
+Acknowledgment The author is grateful for the referees of Differential Equa-
+tion And Control Process Electronic Journal for their fruitful comments and
+invaluable suggestions.
+Electronic Journal.  76Differential Equations and Control Processes, N 4, 2005
+REFERENCES
+[1]Bahaa,G.M.,\QuadraticParetooptimalcontrolofparabolicequation
+withstate-controlconstraintsandanin¯nitenumberofvariables,"IMAJournal
+of Mathematical Control and Information, 20, 2, (2003), 167-178.
+[2]Bahaa,G.M.,\Time-Optimalcontrolproblemforparabolicequations
+with control constraints and in¯nite number of variables," IMA Journal of
+Mathematical Control and Information, 21, (2005), 364-375.
+[3] Dubinskii, Ju. A.,\About one method for solving partial differential
+equation,", Dokl. Akad. Nauk SSSR 258, (1981), 780-784.
+[4]Dubinskii, Ju. A., \Non-triviality of Sobolev spaces of in¯nite order
+for a full Euclidean space and a Tours,"Math . USSR. Sb. 29, (1976), 393-401.
+[5] Dubinskii, Ju. A., \ Sobolev spaces of in¯nite order and behavior
+of solution of some boundary value problems with unbounded increase of the
+order of the equation," Math. USSR. Sb. 27, (1975), 143-162.
+[6] Dubovitskii, A., Milyutin, M.,\ Extremal problems with con-
+straints," Doklady Akademii Nauk SSSR, 149, 4, (1963), 759-762.
+[7] Dubovitskii, A., Milyutin, M.,\ Extremal problems with con-
+straints," Zhurnal Vycislitelnoi Mathematiki i Matematiceskoi Fiziki, 5, 5,
+(1965), 395-453.
+[8] El-Saify, H. A., \ Boundary control problem with an in¯nite number
+of variables,"International Journal of Mathematics and Mathematics Science,
+28, 1, (2001), 57-62.
+[9]El-SaifyH.A.,andBahaa,G.M.,\Optimalcontrolforn£nsystems
+ofhyperbolictypes,"RevistadeMatem¶ aticasAplicadas,22,1&2,(2001),41-58.
+[10] El-Saify, H. A. and Bahaa, G. M.,\ Optimal control for n£ n
+hyperbolic systems involving operators of in¯nite order,"Mathematica Slovaca,
+52, 4, (2002), 409-424.
+[11]El-Saify, H. A., and Bahaa, G. M.,\Optimal control for n£n cou-
+pled systems of Petrowsky type with an in¯nite number of Variables," Mathe-
+matica Slovaca, 53, 3, (2003), 291-311.
+[12] El-Saify, H. A., and Bahaa, G. M.,\ Boundary control for n£n
+Electronic Journal.  77Differential Equations and Control Processes, N 4, 2005
+systems of hyperbolic types involving in¯nite order operators,"Accepted in the
+second International Conference of Mathematics, Islamic University , Gaza,
+Palastin, Editor. M. S. Al-Atrash, 26-28 Augustus. (2002).
+[13] El-Saify, H. A., Serag, H. M, and Bahaa, G. M., \On optimal
+control for n£n elliptic system involving operators with an in¯nite number of
+variables," Advances in Modelling & Analysis, 37, 4, (2000), 47-61.
+[14]El-Zahaby,S.A.\Necessaryconditionsforcontrolproblemsgoverned
+byellipticvariationalinequalitieswithanin¯nitenumberofvariables," Journal
+Information and Optimization Science, 15, (1994), 2, 171-178.
+[15] El-Zahaby, S. A. \Optimal control of systems governed by in¯nite
+order operators," Proceeding ( Abstracts ) of the International Conference of
+Mathematics(TrendsandDevelopments)oftheEgyptianMathematicalSociety,
+Cairo, Egypt, 28-31 Dec. (2002), and Submitted for Publication in Journal of
+Egyptian Mathematical Society.
+[16] Gali, I. M., and El-Saify, H. A., \Optimal control of a system
+governed by hyperbolic operator with an in¯nite number of variables," Journal
+of Mathematical Analysis and Applications, 85, 1, (1982), 24-30.
+[17] Gali, I. M, and El-Saify, H.A.,\ Distributed control of a system
+governed by Dirichlet and Neumann problems for a self-adjoint elliptic opera-
+tor with an in¯nite number of variables,"Journal of Optimization Theory and
+Applications, 39, 2, (1983), 293-298.
+[18] Gali, I. M. and El-Saify, H. A., \ Control of system governed by
+in¯niteorderequationofhyperbolictype,"Proceeding of the International Con-
+ference on \Functional-Differential Systems and Related Topics," III, Poland,
+(1983), 99-103.
+[19] Gali, I. M., El-Saify, H. A. and El-Zahaby, S. A., \ Distributed
+Control of a system governed by Dirichlet and Neumann problems for ellip-
+tic equations of in¯nite order," Proceeding of the International Conference on
+\Functional-Differential Systems and Related Topics", III, Poland, (1983), 83-
+87.
+[20] Girsanov, I. V.\Lectures on Mathematical Theory of Ex-
+tremum Problems,"New York: Springer-Verlag, (1972).
+[21] Ioffe A.D., Tikhomirov W. M.,\Theory of Extremal Prob-
+Electronic Journal.  78Differential Equations and Control Processes, N 4, 2005
+lems,"North Holland, Amsterdam, (1979).
+[22]Kotarski, W.,\ Optimal control of a system governed by a parabolic
+equationwithanin¯nitenumberofvariables," Journal of Optimization Theory
+and Applications, 60, (1989), 33-41.
+[23] Kotarski, W.,\ Optimal control of a system governed by a parabolic
+equation with an in¯nite number of variables and time delay," Journal of Op-
+timization Theory and Applications, 63, (1989), 91-101.
+[24] Kotarski,W.,\Characterization of Pareto optimal points in problems
+with multi-equality constraints,"Optimization, 20, 1,(1989), 93-106.
+[25] Kotarski, W.,\ On some speci¯cation of Milyutin-Dubovitskii's the-
+orem for Pareto optimal problems," Nonlinear Analysis, Theory, Methods and
+Applications, 14, 3, (1990), 287-291.
+[26] Kotarski, W.,\ Some Problems of Optimal and Pareto Opti-
+mal Control for Distributed Parameter Systems," Reports of Silesian
+University, No.1668, Katowice, Poland, (1997), 1-93.
+[27] Kotarski, W.,\ Quadratic Pareto-optimal control problem for a
+parabolic equation," Proc. European Control Conference ECC' 97, Brussels,
+(CD-ROM Ref) 711, (1997).
+[28]Kotarski,W.,\ On Pareto and Salukwadze optimization problems. "
+Int. J. Appl. Math. Comput. Sci. 10, 3, (2000), 465-485.
+[29] Kotarski, W., and Bahaa, G. M.\Optimal control problem for
+in¯niteorderhyperbolicsystemwithmixedcontrol-stateconstraints"European
+Journal of Control, to appear.
+[30] Kotarski, W., and Kowalewski, A.,\ An optimal control problem
+with initial state not a priori given," Problems of Control and Information
+Theory, 12, (1983), 349-359
+[31]Kotarski, W., El-Saify, H. A. and Bahaa, G. M., \Optimal con-
+trol of parabolic equation with an in¯nite number of variables for non-standard
+functional and time delay," IMA Journal of Mathematical Control and Infor-
+mation, 19, 4, (2002), 461-476.
+[32] Kotarski, W., El-Saify, H. A. and Bahaa, G. M.,\ Optimal
+control problem for a hyperbolic system with mixed control-state constraints
+Electronic Journal.  79Differential Equations and Control Processes, N 4, 2005
+involving operator of in¯nite order," International Journal of Pure and Applied
+Mathematics, 1, 3, (2002), 241-254.
+[33] Kotarski, W., El-Saify, H. A. and Bahaa, G. M.,\ Optimality
+conditions for n£ n parabolic systems with control constraints and general
+performanceindex." Proceeding(Abstracts)oftheInternationalConferenceof
+Mathematics(TrendsandDevelopments)oftheEgyptianMathematicalSociety,
+Cairo, Egypt, 28-31 Dec. (2002), and Submitted for Publication in Journal of
+Egyptian Mathematical Society.
+[34] Kowalewski, A. and Kotarski, W.,\ Application of the Milyutin-
+Dubovicki's method to solving an optimal control problem of hyperbolic sys-
+tems,"Problems of Control and Information Theory, 9, (1980), 183-193.
+[35] Kowalewski, A. and Kotarski, W., \On application of Milutin-
+Dubovicki's theorem to an optimal control problem for systems described by
+partial differential equations of hyperbolic type with time delay," Systems Sci-
+ence, 7, 1, (1981), 55-74.
+[36] Lasiecka, I.,\ Conical approximations of sets with application to op-
+timization,"Technical University, Warsaw, Poland, Ph.D. Thesis 1974 (in Pol-
+ish).
+[37] Laurent, P.J., \ Approximation et Optimization," Paris: Her-
+mann, (1972).
+[38]Lions,J.L.,\OptimalControlofSystemsGovernedbyPartial
+Differential Equations," Springer-Verlag, Band, 170, (1971).
+[39] Luenberger, D. G.,\ Optimization by Vector Space Meth-
+ods,"Wiley, New York, (1969).
+[40] TrÄ oltzsch, F. \ Optimality Conditions for Parabolic Control
+Problems and Applications," Teubner-Texte zÄ ur Mathematik, Band 62,
+Leipzig, (1984).
+[41]Walczak,S.\Onesomecontrolproblems,"ActaUniversitatisLodzien-
+sis. Folia Mathematica, 1, (1984), 187-196.
+[42] Walczak, S.\ Some properties of cones in normed spaces and their
+application investigating extremal problems," Journal Of Optimization Theory
+and Applications, 42, 2, (1984), 561-582.
+Electronic Journal.  80Differential Equations and Control Processes, N 4, 2005
+[43] Werner, J. \Optimization Theory and Applications,"Viewag,
+Advanced Lectures In Mathematics, Braunschweig, Wiesbaden, (1984).
+Electronic Journal.  81

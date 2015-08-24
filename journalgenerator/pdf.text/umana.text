@@ -1,0 +1,713 @@
+﻿DIFFERENTIAL EQUATIONS 
+AND 
+CONTROL PROCESSES 
+№ 2,2011 
+Electronic Journal, 
+reg.Эл № ФС77-39410 at 15.04.2010 
+ISSN 1817-2172 
+ 
+http://www.math.spbu.ru/user/diffjournal 
+e-mail: jodiff@mail.ru 
+ 
+ 
+ 
+ 
+ 
+Null Controllability Of Nonlinear Neutral Volterra Integrodifferential Systems  
+With Infinite Delay 
+R. A. Umana 
+Department of Mathematics 
+Federal University of Technology, Owerri, Imo State, Nigeria 
+E-mail: reubenandy@yahoo.com 
+ 
+Abstract 
+In this paper, sufficient conditions for the null controllability of nonlinear neutral Volterra 
+integrodifferential systems with infinite delay are developed. It is shown that if the uncontrolled 
+system is uniformly asymptotically stable, and if the linear system is controllable, then the nonlinear 
+infinite neutral system is null controllable. 
+Keywords: Controllability, neutral Volterra integrodifferential system, infinite delay, uniform 
+asymptotic stability. 
+1.  Introduction 
+It is well known that the future state of realistic models in the natural sciences, economics and 
+engineering depend not only on the present but on the past state and the derivative of the past state [7]. 
+Such models which contain past information are called hereditary system.           
+Neutral functional differential equations are characterized by a delay in the derivative. Equations of 
+this type have applications in many areas of applied mathematics [10]. For instance, it is well known Differential Equations and Control Processes, № 2,2011  
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  49 
+that the mixed initial-boundary hyperbolic partial differential equations which arise in the study of 
+lossless transmission lines can be replaced by neutral differential systems [3]. This equivalence has 
+been the basis of a number of investigations on the stability of distributed networks which is of 
+immense importance to systems models in the control of fluctuation of current. Furthermore, most 
+economic models for the control of capital stock from an initial capital endowment to the desired stock 
+are governed by neutral systems [8]. 
+Controllability is the property of being able to steer between two arbitrary points in the state space. On 
+the other hand, null controllability is the property of being able to steer all points exactly to the origin. 
+This has important connections with the concept of stabilizability. 
+Investigation into the controllability of functional differential systems to the origin has attracted great 
+attention in recent years with the growing interest in disease control models in which the number of 
+infected individuals is desired to be controlled to zero [11]. Balachandran and Dauer [4] studied the 
+null controllability of nonlinear infinite delay systems with time varying multiple delays in control 
+whereas Balachandran and Leelamani [6] investigated the null controllability of neutral evolution 
+integrodifferential systems with infinite delay. Iyai [12] discussed the Euclidean null controllability of 
+infinite neutral differential systems. Sinha [15] derived a set of sufficient conditions for the 
+nullcontrollability of nonlinear infinite delay systems with restrained controls. Onwuatu [14] studied 
+the null controllability of nonlinear infinite neutral system. Eke [9] established a set of conditions for 
+the null controllability of linear control systems. Umana and Nse [17] studied the null controllability of 
+nonlinear integrodifferential systems with delays whereas Umana [16] discussed the relative null 
+controllability of linear systems with multiple delays in state and control. 
+The aim of this paper is to study the null controllability of nonlinear neutral Volterra 
+integrodifferential systems with infinite delay on a finite interval 
+01
+[ , ] J t t  , 
+10
+tt  , when its linear 
+system is assumed controllable and its uncontrolled system is uniformly asymptotically stable with the 
+assumption that the perturbation function satisfies some smoothness and growth conditions. Differential Equations and Control Processes, № 2,2011  
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  50 
+Volterra integrodifferential equations occur often in applied mathematics [3]. For instance, a simplified 
+model for compartmental systems with pipes is represented by nonlinear neutral Volterra 
+integrodifferential equation. Compartmental models are frequently used in theoretical epidemiology, 
+physiology, population dynamics, analysis of ecosystems, and chemical reaction kinetics [5]. 
+2.  Preliminaries 
+Let n and m be positive integers, R the real line   ,    . We denote by 
+n
+R , the space of real n 
+tuples with the Euclidean norm defined by  . If J is any interval of R , the usual Lebesgue space of 
+square integrable functions from J to 
+n
+R will be denoted by 
+ 
+2
+,
+n
+L J R . 
+Let 0 h  be a given real number and let 
+ 
+[ ,0],
+n
+B B R   be the Banach space of functions 
+which are continuous and bounded on [ , ] o   with 
+0
+sup ( )
+s
+s
+
+
+  
+ , 
+ 
+[ ,0],
+n
+BR   . 
+Consider the nonlinear neutral Volterra integrodifferential systems with infinite delay of the following 
+form 
+               ( ) ( ) ( ) ( ) ( ) ( ) ( )
+tt
+d
+x t C t s x s ds g t Ax t G t s x s ds
+dt
+   
+
+     
+
+
+
+ 
+                                                                            ( ) ( ) , ( ), ( ) B t u t f t x t u t                       (2.1)  
+                                                          ( ) ( ) x t t   ,     ( ,0] t    
+where the initial function  is continuous and bounded on 
+n
+R and where 
+n
+xR  , 
+m
+uR  , () Ct is an 
+nn  continuously differentiable matrix valued function whose elements are square integrable on 
+( ,0]  , () Gt is an nn  continuous matrix whose elements are square integrable on ( ,0]  , and 
+() Bt is a continuous nm  matrix function, A is a constant nn  matrix and f and g are 
+respectively continuous and absolutely continuous n  vector functions. 
+Balachandran [1], Balachandran and Balasubramaniam [2] and Balachandran and Dauer [3] studied 
+the 
+controllability of the system (2.1) using the Schauder fixed point theorem. Our aim in this paper is to Differential Equations and Control Processes, № 2,2011  
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  51 
+study the null controllability problem for the system (2.1). We shall show that if the free system                        
+( ) ( ) ( ) ( ) ( ) ( ) ( )
+tt
+d
+x t C t s x s ds g t Ax t G t s x s ds
+dt
+   
+
+     
+
+
+
+                                  (2.2) 
+is uniformly asymptotically stable, and if the linear control system   
+( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( )
+tt
+d
+x t C t s x s ds g t Ax t G t s x s ds B t u t
+dt
+   
+
+      
+
+
+
+                  (2.3) 
+is completely controllable, then system (2.1) is null controllable provided the continuous function f 
+satisfies some smoothness and growth conditions. 
+Equivalently, system (2.1) takes the form  
+0
+( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( )
+tt
+d
+x t C t s x s ds g t C t s s ds Ax t G t s x s ds
+dt
+
+     
+
+       
+
+
+  
+ 
+                                                   
+0
+( ) ( ) ( ) ( ) , ( ), ( ) G t s s ds B t u t f t x t u t 
+
+   
+
+                  (2.4)  
+The solution of (2.4) can be written as in Wu [18]: 
+00
+( ) ( ) (0) (0) ( ) ( ) ( ) ( ) ( ) x t Z t x g C s s ds g t C t s s ds 
+   
+
+      
+
+
+
+ 
+ 
+00
+00
+( ) ( ) ( ) ( ) ( ) ( )
+tt
+Z t s g s C s d ds Z t s G s d ds      
+   
+   
+      
+   
+   
+   
+  
+ 
+0
+( ) ( ) ( ) , ( ), ( )
+t
+Z t s B s u s f s x s u s ds   
+ 
+                                                          (2.5) 
+where ( ) ( ) Z t s Z t s
+t
+
+  
+
+ and () Zt is an nn  continuously differential matrix satisfying the 
+equation 
+        
+0
+0
+( ) ( ) ( ) ( ) ( ) ( ) ( ) ( )
+tt
+d
+Z t C t s Z s ds C t s Z s ds AZ t G t s Z s ds
+dt
+   
+
+      
+
+
+  
+ 
+                                                                                              
+0
+( ) ( ) G t s Z s ds
+
+
+
+  
+with (0) ZI  , the identity matrix. 
+In (2.5) set the matrix function ( ) ( ) ( , ) Z t s B s Y t s  and define the controllability matrix W by 
+             
+0
+0
+( , ) ( , ) ( , )
+t
+T
+t
+W t t Y t s Y t s ds 
+
+ Differential Equations and Control Processes, № 2,2011  
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  52 
+where ᴛ denotes matrix transpose. 
+Definition 2.1: The system (2.1) is said to be null controllable on J if for each 
+ 
+[ ,0],
+n
+BR   , 
+there exists a 
+10
+tt  ,  
+2 0 1
+[ , ], u L t t IU  , IU a compact convex subset of 
+n
+R , such that the solution 
+ 
+0
+( ) , , , , x t x t t u f   of (2.1) satisfies  
+0
+0
+, , , ,
+t
+x t u f   and  
+10
+, , , , 0 x t t u f   . 
+3.  Main Results 
+Theorem 3.1: For system (2.1) assume that the constraint set IU is an arbitrary compact subset of 
+n
+R
+, and that 
+    (i) the solution (2.2) is uniformly asymptotically stable so that the solution of (2.2) satisfies                          
+ 
+ 
+0
+0
+, , ,0,0
+tt
+x t t Me
+
+
+
+ for some 0   , 0 M  , 
+   (ii) the linear control system (2.3) is controllable, 
+   (iii) the continuous function f satisfies the following smoothness and growth conditions 
+      , (), () exp (), () f t x u t x u        , for all  
+02
+, (), () [ , ) t x u t B L       , 
+where 
+              
+0
+(), ()
+t
+t
+x u ds K      
+
+ and 0   , 
+then the system (2.1) is Euclidean null controllable. 
+Proof: By (ii), 
+1
+01
+( , ) W t t
+
+ exists for each 
+10
+tt  . Suppose the pair of functions x , u form a solution 
+pair to the set of integral equations 
+           
+
+0
+1
+10
+( ) ( , ) ( , ) ( ) (0) (0) ( ) ( ) ( )
+T
+u t Y t t W t t Z t x g C s s ds g t 
+
+
+
+     
+
+
+
+ 
+                         
+0
+00
+( ) ( ) ( ) ( ) ( ) ( )
+t
+t
+C t s s ds Z t s g s C s d ds     
+   
+
+     
+
+
+  
+ 
+                   
+
+00
+0
+( ) ( ) ( ) ( ) , ( ), ( )
+tt
+tt
+Z t s G s d ds Z t s f s x s u s ds    
+
+
+    
+
+
+  
+           (3.1) 
+for some suitably chosen 
+10
+t t t  , and Differential Equations and Control Processes, № 2,2011  
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  53 
+           
+00
+( ) ( ) (0) (0) ( ) ( ) ( ) ( ) ( ) x t Z t x g C s s ds g t C t s s ds 
+   
+
+      
+
+
+
+ 
+ 
+00
+00
+( ) ( ) ( ) ( ) ( ) ( ) ( )
+tt
+tt
+Z t s g s C s d ds Z t s G s d ds        
+   
+   
+      
+   
+   
+   
+ 
+                 
+ 
+00
+( , ) ( ) ( ) , ( ), ( )
+tt
+tt
+Y t s u s ds Z t s f s x s u s ds   
+
+                                                  (3.2) 
+               ( ) ( ) x t t   ,  
+00
+[ , ] t t t   . 
+Then u is square integrable on 
+01
+[ , ] tt   and x is a solution of (2.1) corresponding to u with initial 
+state 
+0
+() xt   . Also, 
+1
+( ) 0 xt  . Now it is shown that 
+01
+:[ , ] u t t IU  is in a compact constraint subset 
+of 
+m
+R , that is ua  for some constant 0 a  .By (i), 
+1
+1 0 0 1 1
+( , ) ( , )
+T
+Y t t W t t k
+
+ for some 
+1
+0 k  , and 
+ 
+0
+2 1 0
+( ) (0) (0) ( ) ( ) ( ) exp ( , ) Z t x g C s s ds g t k t t 
+
+
+     
+
+
+
+ for some 
+2
+0 k  . Hence, 
+             
+1
+0
+1 2 1 0 1
+( ) exp ( , ) exp ( ) exp( ) (), ()
+t
+t
+u t k k t t M t s s x u ds    
+
+       
+
+
+
+. 
+Then 
+                  
+1 2 1 0 1
+( ) exp ( ) exp( ) u t k k t t KM t      
+
+,                                                      (3.3) 
+since 0   and 
+0
+0 st  . From (3.3), 
+1
+t can be chosen so large that () u t a  , 
+01
+[ , ] t t t  which 
+proves that u is an admissible control for this choice of 
+1
+t . 
+We now prove the existence of a solution pair of the integral equations (3.1) and (3.2). Let B be the 
+Banach space of all functions 
+                       
+0 1 0 1
+( , ):[ , ] [ , ]
+nm
+x u t h t t h t R R      
+where 
+ 
+01
+[ , ],
+n
+x B t h t R  and 
+ 
+2 0 1
+[ , ],
+m
+u L t h t R  with the norm defined by 
+22
+( , ) x u x u  , 
+where     
+                 
+ 
+1
+0
+1
+2
+2
+2
+()
+t
+th
+x x s ds
+
+
+
+ and 
+ 
+1
+0
+1
+2
+2
+2
+()
+t
+th
+u u s ds
+
+
+
+. 
+Define the operator : T B B  by ( , ) ( , ) T x u y v  , where Differential Equations and Control Processes, № 2,2011  
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  54 
+               
+
+0
+1
+1 0 1
+( ) ( , ) ( , ) ( ) (0) (0) ( ) ( ) ( )
+T
+v t Y t t W t t Z t x g C s s ds g t 
+
+
+
+     
+
+
+
+ 
+                      
+0
+00
+( ) ( ) ( ) ( ) ( ) ( )
+t
+t
+C t s s ds Z t s g s C s d ds     
+   
+
+     
+
+
+  
+ 
+                        
+
+00
+0
+( ) ( ) ( ) ( ) , ( ), ( )
+tt
+tt
+Z t s G s d ds Z t s f s x s u s ds    
+
+
+    
+
+
+  
+                     (3.4) 
+for 
+01
+[ , ] t J t t  ; 
+          
+00
+( ) ( ) (0) (0) ( ) ( ) ( ) ( ) ( ) y t Z t x g C s s ds g t C t s s ds 
+   
+
+      
+
+
+
+ 
+                        
+00
+00
+( ) ( ) ( ) ( ) ( ) ( ) ( )
+tt
+tt
+Z t s g s C s d ds Z t s G s d ds        
+   
+   
+      
+   
+   
+   
+ 
+                     
+00
+( , ) ( ) ( ) , ( ), ( )
+tt
+tt
+Y t s v s ds Z t s f s x s u s ds   
+
+                                                         (3.5) 
+for tJ  and ( ) ( ) y t t   , 
+00
+[ , ] t t t   . 
+From equation (3.3) it is clear that () v t a  , tJ  and also 
+00
+:[ , ] v t h t IU  , so () v t a  . Hence 
+                    
+1
+2
+1 0 0
+2
+() v a t h t      . 
+Next  
+                   
+ 
+0
+2 1 0 4 1
+( ) exp ( ) ( ) exp( )
+t
+t
+y t k t t k v s ds KM t       
+
+ 
+where 
+4
+sup ( , ) k Y t s  . Since 0   , 
+0
+0 tt  , we deduce that 
+                        
+2 4 1 0
+() y t k k a t t KM       , tJ  
+and 
+ 
+                         ( ) sup ( ) y t t   , 
+00
+[ , ] t t t   . 
+Hence, if   max ,     , then 
+                     
+1
+2
+1 0 1
+2
+() y t h t      . 
+Let  
+01
+max , r   . Then if we let Differential Equations and Control Processes, № 2,2011  
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  55 
+                    
+ 
+22
+( ) ( , ) : , Q r x u B x r u r     
+we have proved that : ( ) ( ) T Q r Q r  . Since () Qr is closed, bounded and convex, by Riesz’s theorem 
+[13], it is relatively compact under the transformation T . The Schauder theorem implies that T has a 
+fixed point ( , ) ( ) x u Q r  . This fixed point ( , ) xu of T is a solution pair of the set of integral equations 
+(3.4) and (3.5), hence, the system (2.1) is Euclidean null controllable. 
+Conclusion 
+The paper contains sufficient conditions for the null controllability of nonlinear neutral Volterra 
+integrodifferential systems with infinite delay. These conditions are given with respect to the uniform 
+asymptotic stability of the free linear base system and the controllability of the linear controllable base 
+system, with the assumption that the perturbation function f satisfies some smoothness and growth 
+conditions. 
+References 
+[1] K. Balachandran, Controllability of neutral Volterra integrodifferential systems, J. Austral. Math. 
+Soc. Ser. B, 34 (1992), 18 – 25. 
+[2] K. Balachandran and P. Balasubramaniam, A note on controllability of neutral Volterra 
+integrodifferential systems, J. Applied Math. and Stochastic Anal., 6 (1993), 153 – 160. 
+[3] K. Balachandran and J. P. Dauer, Relative controllability of nonlinear neutral Volterra 
+integrodifferential systems, J. Austral. Math. Soc. Ser. B 37 (1996), 346 – 353. 
+[4] K. Balachandran and J. P. Dauer, Null controllability of nonlinear infinite delay systems with time 
+varying multiple delays in control, Appl. Math. Lett., 9 (1996), 115 – 121. 
+[5] K. Balachandran, J. P. Dauer and P. Balasubramaniam, Asymptotic null controllability of nonlinear 
+neutral Volterra integrodifferential systems, J. Math. Systems, Estimation, and Control, 7 (1997), 1 – 
+14. 
+[6] K. Balachandran and A. Leelamani, Null controllability of neutral evolution integrodifferential 
+systems with infinite delay, Math. Prob. Engineering, 2006 (2006), 1 – 18. Differential Equations and Control Processes, № 2,2011  
+ 
+Electronic Journal. http://www.math.spbu.ru/user/diffjournal  56 
+[7] E. N. Chukwu, Stability and Time-Optimal Control of Hereditary Systems, Academic Press, New 
+York, 1992. 
+[8] E. N. Chukwu, Differential Models and Neutral Systems for Controlling the Wealth of Nations, 
+Series on Advances in Mathematics for Applied Sciences, 54 World Scientific, New Jersey, 2001. 
+[9] A. N. Eke, Null controllability for linear control systems, J. Inst. Math. Comp. Sci. (Math. Ser.), 3 
+(1990), 149 – 154. 
+[10] E. Hernandez, A remark on neutral partial differential equations, Cadernos De Mathematica, 4 
+(2003), 311 – 318. 
+[11] V. A. Iheagwam and J. U. Onwuatu, Relative controllability and null controllability of linear 
+delay systems with distributed delays in the state and control, J. Nigerian Asso. Math. Physics, 9 
+(2005), 221 – 238. 
+[12] D. Iyai, Euclidean null controllability of infinite neutral differential systems, ANZIAM J., 48 
+(2006), 285 – 293. 
+[13] L. V. Kantarovich and G. P. Akilov, Functional Analysis, Pergamon Press, Oxford, 1982. 
+[14] J. U. Onwuatu, Null controllability of nonlinear infinite neutral system, Kybernetika, 29 (1993), 
+325 – 336. 
+[15] A. S. C. Sinha, Null controllability of nonlinear infinite delay systems with restrained controls, 
+Int. J. Control, 42 (1985), 735 – 741. 
+[16] R. A. Umana, Relative null controllability of linear systems with multiple delays in state and 
+control, J. Nigerian Asso. Math. Physics, 10 (2006), 517 – 522. 
+[17] R. A. Umana and C. A. Nse, Null controllability of nonlinear integrodifferential systems with 
+delays, Advances in Modelling (Automatic Control), 61 (2006), 73 – 84. 
+[18] J. Wu, Globally stable periodic solutions of linear neutral Volterra integrodifferential equations, J, 
+Math. Anal. Appl., 130 (1988), 474 – 483.   
+ 
+ 
+ 

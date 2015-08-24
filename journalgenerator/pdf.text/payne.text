@@ -1,0 +1,2388 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 4, 2009
+Electronic Journal,
+reg. N P2375 at 07.03.97
+ISSN 1817-2172
+
+http://www.math.spbu.ru/diffjournal/
+e-mail: jodiff@mail.ru
+Multiple Solutions for Nonlinear Eigenvalue Problem
+1
+Victor F. Payne
+Senior Lecturer,
+Department of Mathematics,
+University of Ibadan,
+Ibadan, Nigeria.
+E-mail: vfolayapayne@yahoo.com
+Tel: +2348023902335
+Abstract: We obtain a sequence of eigenvaluesf 
+j
+g
+1
+j=1
+for which there exist
+countably many positive solutions of a fourth-order, singular boundary value
+problem. These positive eigenfunctions correspond to the sequence of eigen-
+values    1 (counting multiplicity). The methods involve application of the
+ xed point arguments of the Krasnosel'skii cone expansion-compression type
+and Holder's inequality.
+Keywords: Singular boundary-value problem, Eigenvalue, Positive Solution,
+Holder's inequality, Multiple solution.
+AMS(MOS) subject classi cation: 34B15, 34B16, 74K10.
+Introduction
+1
+This work was done while the author was visiting Matematiska institutionen of Stockholms Universitet,
+S-106 91, Sweden. He extends his thanks to all members of the Department for their warm hospitality during
+his stay.Differential Equations and Control Processes, N 4, 2009
+In this work, we are concerned with the determination of a sequence of eigen-
+values 0 <  
+1
+<  
+2
+<    <  
+j 1
+<  
+j
+    (counting multiplicity) for which the
+following singular boundary value problem which describes deformation of sim-
+ply supported beam loaded uniformly in the transverse direction has countably
+many positive solutions:
+u
+(4)
+(t) = a(t)f(t;u(t);u
+00
+(t)); t2 (0; 1) (1:1)
+u(0) =u(1) = 0; u
+00
+(0) =u
+00
+(1) = 0 (1:2):
+where
+(
+P
+1
+)f2C[(0; 1)  (0;1)  (0;1); [0;1)] satis es certain oscillatory growth
+condition
+(
+P
+2
+) a(t) 2 L
+p
+[(0; 1)] for some p   1 has countably many non-isolated
+singularities of the form j
+1
+2
+  tj
+  
+;     0 in [0;
+1
+2
+) which include the se-
+quence ft
+j
+g
+1
+j=1
+such that
+1
+2
+> t
+1
+> t
+j
+! t
+0
+  0; t
+0
+2 [0;
+1
+2
+) with
+a(t
+0
+)> 0 and lim
+t!t
+0
+a(t)<18j =i; 2   
+(
+P
+3
+)a(t) c > 0 8 t2 [t
+0
+; 1 t
+0
+]
+and   is a positive parameter whose values depend on t
+j
+(j = 1; 2;    ):
+Singular boundary value problems describe many phenomena in applied sci-
+ences,particularly a vast class of elastic deections. Equally numerous is the
+nature of techniques applied in the analysis of such problems by investigators.
+These techniques are dictated by the conditions imposed on the inhomogeneous
+term in the equation as well as the boundary conditions. The ancillary condi-
+tions in turn are prescribed by the mechanics of the problem. The literature
+reveals several forms of the equation studied. Amongst these is the existence
+and uniqueness result by Usmani (see [14] ) for the solution of the boundary
+value problem of the type:
+u
+(4)
+(t) =f(t)u(t) +g(t); t2 (0; 1) (1:3)
+u(0) =u
+0
+; u(1) =u
+1
+; u
+00
+(0) =   u
+0
+; u
+00
+(0) =   u
+1
+(1:4)
+under the restriction supjf(t)j <  
+4
+. In his own case Afterbizadeh [1] proved
+an existence result under the sharp condition that f is a bounded function.
+The study has progressed to include the works of Del Pino and Manasevich
+[4], Yang [16], Hao [5], Ma and Wang [10], Agrawal and O'Regan [2] and other
+outstanding authors. Most of the contributions extended earlier works by im-
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 43Differential Equations and Control Processes, N 4, 2009
+posing stricter conditions on the inhomogeneous term in the equations. Various
+methods employed include monotone [13], lower and upper solution techniques
+(11, [12]), operator approximation and degree theory ([6], [15]) and  xed point
+arguments of Leray-Schauder and Krasnosel'skii [8].
+Recently there appears to be a fast growing interest in the investigation of
+existence result of countably many positive solutions of boundary value prob-
+lems (see [5], [9], [13] and references therein). Therefore our motivation for this
+paper is in the direction of this trend. We obtain a sequence of eigenvalues
+for countably many positive solutions of (1.1)-(1.2) using Krasnosel'skii's cone
+type  xed point theorem and Holder's inequality. This work complements and
+extends known results. The outline of the paper continues in Section 2 with a
+presentation of preliminary notes involving the Green's function of (1.1)-(1.2).
+We also state a  xed point theorem due to Krasnosel'skii [7] which will be used
+to yield the multiple solutions of (1.1)-(1.2). We furnish an appropriate Banach
+space framework of cones in order to apply the  xed point arguments. Addi-
+tional assumptions onf and standard results using Holder's inequality are also
+stated here. In the concluding Section, we state and prove the main result of
+the paper as well as furnish an example of functions a(t) that satis es condi-
+tions ( 
+1
+)  ( 
+3
+)
+2. Preliminary notes
+We begin this Section by de ning a positive solution of (1.1) as a function
+u(t)2 C
+2
+[0; 1]\C
+4
+(0; 1) which satis es (1.l)-(1.2) and u(t)  0 for t2 (0; 1).
+We assume additional conditions on a(t) and f as follows:
+(
+P
+4
+)9ff
+i
+(t)2C[(0; 1); [0;1)] (i = 1; 2) andh(u)2C[[0;1); [0;1)] such that
+ff
+i
+(t)a(t)  max
+t2[0;1]
+ 
+i
+(t) for  
+i
+(t)2L
+p
+; p  1 (i = 1; 2) with
+ 
+1
+(t)h(u) f(t;u(t);u
+00
+(t))  
+2
+(t)h(u); u(t);u
+00
+(t) : [0;
+1
+2
+)! [0;1)
+The Green's function G(t;s) for
+u
+(4)
+(t) = 0; t2 (0; 1) (2:1)
+u(0) =u(1); u
+00
+(0) =u
+00
+(1) = 0 (2:2)
+is
+G(t;s) =
+(
+s(1 t); 0 s t  1
+t(1 s); 0 t s  1
+satisfying the following property:
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 44Differential Equations and Control Processes, N 4, 2009
+(
+P
+5
+)G(t;s) G(s;s); 0 s;t  1
+It is well known that the solutions of (1.1)-(1.2) are  xed points of the integral
+operator:
+Nu(t) =
+Z
+1
+0
+Z
+1
+0
+G(t;s)G(s; )a( )f( ;u( );u
+00
+( ))d ds;
+t2 [0; 1]
+(2:3)
+Then the following statements are consequences of (
+P
+1
+)  (
+P
+5
+) :
+(
+P
+6
+) 0<
+Z
+1
+0
+Z
+1
+0
+G(s;s)G(s; ) 
+1
+( )d ds;
+Z
+1
+0
+Z
+1
+0
+G(s;s)G(s; ) 
+2
+( )d ds<1
+(
+P
+7
+)9 t
+0
+2 (0; 1) such that 
+i
+(t
+0
+)> 0 (i = 1; 2)
+(
+P
+8
+) min
+t2[0;1]
+G(t;s) t
+0
+G(s;s) t
+0
+G(t
+0
+;s)  0; t
+0
+2 [0;
+1
+2
+]:
+It can than be seen that establishing the existence of positive solutions of (1.1)
+- (1.2) is equivalent to proving the existence of  xed points of the operator
+equation:
+u(t) = Nu(t) (2:4)
+We apply the following  xed point theorem to obtain positive solutions of (2.1)-
+(2.2) for certain values of   :
+Theorem 1: (Krasnosel'skii) Let K be a cone in a Banach space E. Suppose
+
+
+1
+; 
+
+2
+are open subsets of E with 02 
+
+1
+2
+ 
+
+
+1
+  
+
+2
+and
+N :K\ (
+ 
+
+
+2
+n
+
+1
+) !K
+is a completely continuous operator such that, either
+(i)kNuk kuk; u2K\ 
+
+1
+; andkNuk kuk; u2K\ 
+
+2
+, or
+(ii)kNuk kuk; u2K\ 
+
+1
+; andkNuk kuk; u2K\ 
+
+2
+.
+Then N has a  xed point in K\ (
+ 
+
+
+2
+n
+
+1
+)
+Using (
+P
+8
+), we de ne a set of cones on the Banach spaceE =C
+2
+[0; 1] endowed
+with the normkuk = max
+t2[0;1]
+(ju(t)j;ju
+0
+(t)j;ju
+00
+(t)j). This is done by  xing
+t
+0
+2 [0;
+1
+2
+) and then de ning K
+t
+0
+ E by
+K
+t
+0
+=fu(t)2E :u(t)  0; t2 [0; 1]; min
+t2[0;1]
+u(t)  t
+0
+kukg
+In the sequel, we claim in Lemmas 2 and 3 that the integral operator N is
+completely continuous and cone preserving i.e.
+N :K
+t
+0
+ !K
+t
+0
+; t
+0
+2 [0;
+1
+2
+)
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 45Differential Equations and Control Processes, N 4, 2009
+is continuous and compact.
+Lemma 2. The integral operator N : K
+t
+0
+ ! K
+t
+0
+is continuous for every
+t
+0
+2 [0;
+1
+2
+).
+Proof Assume u2K
+t
+0
+and a  xed value of t
+0
+2 [0;
+1
+2
+:)
+Let ff
+i
+(s)a(s)f(s;u(s);u
+00
+(s))  max
+s2[0;1]
+ 
+i
+(s)f(s;u(s);u
+00
+(s))  0 (i = 1; 2)
+and G(t;s)  08 t;s2 [0; 1]; then using (
+P
+6
+) we have,
+Nu(t)  0 8 t2 [0; 1]; u2K
+t
+0
+By (2.3) and (
+P
+8
+) and for u2K
+t
+0
+the following inequalities hold:
+min
+t2[0;1]
+ Nu(t)   min
+t2[0;1]
+ 
+Z
+1
+0
+Z
+1
+0
+G(t;s)G(s; ) 
+2
+( )h(u)( )d ds (2:5)
+  min
+t2[0;1]
+ 
+Z
+1
+0
+Z
+1
+0
+G(t;s)G(s; ) 
+1
+( )h(u)( )d ds
+   
+R
+1
+0
+R
+1
+0
+G(t;s)G(s; ) 
+1
+( )h(u)( )d ds
+   t
+0
+R
+1
+0
+R
+1
+0
+G(t
+0
+;s)G(s; ) 
+1
+( )h(u)( )d ds
+=  t
+0
+Nu(t
+0
+)8t
+0
+2 [0; 1] t
+0
+6=t
+0
+(2:6)
+Therefore, min
+t2[0;1]
+ Nu(t)   t
+0
+kNuk: It follows that  Nu : K
+t
+0
+ ! K
+t
+0
+is
+continuous and this concludes the proof of the Lemma.  
+Lemma 3. The operator N :K
+t
+0
+ !K
+t
+0
+is compact for each t
+0
+2 [0;
+1
+2
+)
+Proof: We prove this assertion by taking any family of bounded sets of E and
+show that N(K
+t
+0
+) is uniformly bounded and equicontinuous. Without loss of
+generality, we assume that R > 0 withkuk  R 8 u2 K
+0
+t
+0
+  E. Now set
+m = max
+u2[0;R]
+jh(u)j for each u2K
+0
+t
+0
+and we have
+kNuk j
+Z
+1
+0
+G(s;s) 
+2
+(s)h(u)(s))dsj m
+Z
+1
+0
+G(s;s)G(s; )d 
+This means N(K
+t
+0
+  N(K
+0
+t
+0
+) is uniformly bounded. Next we have that
+8u2K
+0
+t
+0
+,
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 46Differential Equations and Control Processes, N 4, 2009
+j(Nu)
+0
+(t)j = j
+Z
+t
+0
+Z
+1
+0
+sG(s; )a( )f( ;u( );u
+00
+( )d ds
+ 
+Z
+1
+t
+Z
+1
+0
+(1 s)G(s; )a( )f( ;u( );u
+00
+( )d dsj (2:7)
+  j
+Z
+1
+t
+Z
+1
+0
+sG(s; )a( )f( ;u( );u
+00
+( )d ds
++
+Z
+t
+0
+Z
+1
+0
+(1 s)G(s; )a( )f( ;u( );u
+00
+( ))d dsj
+  j
+Z
+1
+t
+Z
+1
+0
+sG(s; ) 
+2
+( )h(u( ))d ds
++
+Z
+1
+t
+Z
+1
+0
+(1 s)G(s; ) 
+2
+( )h(u( ))d dsj
+  max
+u2[0;R]
+h(u( ))j
+Z
+t
+0
+Z
+1
+0
+sG(s; ) 
+2
+( )d ds
++
+Z
+1
+t
+Z
+1
+0
+(1 s)G(s; ) 
+2
+( )d dsj (2:8)
+Now set
+ (t) =
+Z
+1
+0
+Z
+1
+0
+sG(s; ) 
+2
+( )d ds +
+Z
+1
+t
+Z
+1
+0
+(1 s)G(s; ) 
+2
+( )d ds
+Integrating the last expression and reversing the order of integration in the
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 47Differential Equations and Control Processes, N 4, 2009
+resulting expression we obtain:
+Z
+1
+0
+j (t)jdt  
+Z
+1
+0
+Z
+1
+s
+Z
+1
+0
+G(s; ) 
+2
+( )d dsdt
++
+Z
+1
+0
+ds
+Z
+s
+0
+Z
+1
+0
+G(s; ) 
+2
+( )d dt
+  2
+Z
+1
+0
+s(1 s)
+Z
+1
+0
+G(s; ) 
+2
+( )d ds
+  2
+Z
+1
+0
+G(s;s)G(s; ) 
+2
+( )d ds<1 (2:9)
+From (2.6) and (2.7), we have 0 
+Z
+1
+0
+j(Nu)
+0
+(t)j<1. This shows that the last
+integral is absolutely continuous and for 0 t
+1
+ t
+2
+  1; u2K
+0
+t
+0
+ E we have
+jN(u)(t
+1
+) N(u)(t
+2
+)j =j
+Z
+t
+2
+t
+1
+N(u)
+0
+(t)dtj 
+Z
+t
+2
+t
+1
+j(N(u)
+0
+(t)jdt:
+Thus N(K
+t
+0
+)   N(K
+0
+t
+0
+) is equicontinuous. An appeal to the Arzela-Ascoli
+theorem then results in N being compact as claimed.  .
+In the main result, we will require the notion of the Holder's inequality so
+as to establish certain norm inequalities in our proof. The reader is referred to
+the details of the theory in Deimling [3]. Some useful properties of the Green's
+function in L
+q
+[0; 1] is stated hereunder.
+Lemma 4 Given q> 0; (q
+ 1
++p
+ 1
+= 1) with G(t;:)2L
+q
+, then
+max
+t2[0;1]
+kG(t;:)k
+q
+=
+1
+4
+ 
+1
+1 +q
+ 1
+q
+(2:10)
+and
+max
+t2[0;1]
+kG(t;:)k
+1
+=
+1
+4
+(2:11)
+Proof Assume that t
+0
+2 [0;
+1
+2
+). This yields
+Z
+1 t
+0
+t
+0
+(G(t;s))
+q
+ds =
+ 
+1
+1 +q
+ 
+(t
+q
+(1 t)
+q
+)  (t
+0
+)
+(q+1)
+((1 t)
+q
++t
+q
+)) (2:12)
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 48Differential Equations and Control Processes, N 4, 2009
+which on setting t
+0
+= 0, yields
+Z
+1
+0
+G(t;s))
+q
+ds =
+ 
+1
+1 +q
+ 
+t
+q
+(1 t)
+q
+(2:13)
+from whence (2.10) follows. Letting q !1 in (2.10) yields (2.11)  
+3. Main Result
+In this section, we state and prove our main result as the following:
+Proposition 1. Let ff
+i
+(t)a(t) =  
+i
+(t) (i = 1; 2) satisfy (
+P
+2
+)  (
+P
+4
+) and let
+the sequencef(t
+0
+)
+j
+g
+1
+j=1
+be de ned by t
+j
+> (t
+0
+)
+j
+>t
+j+1
+;j = 1; 2;    .
+Furthermore, suppose the sequencesf 
+j
+g
+1
+j=1
+;f 
+j
+g
+1
+j=1
+are such that
+ 
+j
+>D 
+j
+> 
+j
+> (t
+0
+)
+j
+ 
+j
+> 
+j+1
+; j = 1; 2    where
+D = max
+ 
+4
+c
+1
+t
+0
+(
+1
+4
+ t
+2
+1
+)
+2
+;
+16
+t
+0
+k 
+1
+k
+p
+; 4
+ 
+; t
+0
+2 [0; 1] (3:1)
+and f(t;u;u
+00
+)  h(u) satis es the following oscillatory growth condition for
+each j2IN:
+(
+P
+9
+)f(t;u;u
+00
+) h(u) M 
+j
+8u2 [0; 
+j
+; ] where M 
+16
+t
+0
+k 
+1
+k
+p
+and
+(
+P
+10
+)D 
+j
+ f(t;u;u
+00
+) h(u)8u2 [(t
+0
+)
+j
+ 
+j
+; 
+j
+]
+Then the boundary value problem (1.1) - (1.2) has in nitely many solutions
+fu
+j
+g
+1
+j=1
+. Moreover,  
+j
+ ku
+j
+k  
+j
+for every j = 1; 2;    and
+1
+Z
+1 (t
+0
+)
+j
+(t
+0
+)
+j
+Z
+1
+0
+G(t;s)G(s; ) 
+2
+( )(h  )(u( ))d ds
+<  
+j
+<
+1
+Z
+1
+0
+Z
+1
+0
+G(s;s)G(s; ) 
+1
+( )(h  )(u( ))d ds
+2  : (3:2)
+where   =f  : 0< 
+1
+< 
+2
+<   < 
+j
+<   g for each t
+j
+.
+Proof: The proof of the proposition is in two parts :
+(I) existence of countably many positive solutionsfu
+j
+g
+1
+j=1
+and
+(II) existence result for in nitely many corresponding eigenvaluesf 
+j
+g
+1
+j=1
+Part I
+De ne the sequences of open subsets of E by
+
+
+1;j
+= fu2E :kuk< 
+j
+g
+
+
+2;j
+= fu2E :kuk< 
+j
+g
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 49Differential Equations and Control Processes, N 4, 2009
+Supposef(t
+0
+)
+j
+g
+1
+j=1
+is as in the hypothesis and
+1
+2
+>t
+j
+> (t
+0
+)
+j
+>t
+j+1
+>t
+0
+8 j2IN. Next de ne the cone K
+j
+by
+K
+j
+=fu(t)2E :u(t)  0; t2 [0; 1); min
+t2[(t
+0
+)
+j
+;1 (t
+0
+)
+j
+]
+u(t)  (t
+0
+)
+j
+kukg
+Keep j  xed and let u2K
+j
+\ 
+
+2;j
+. For s2 [(t
+0
+)
+j
+; 1  (t
+0
+)
+j
+]
+ 
+j
+=kuk u(s)  min
+t2[(t
+0
+)
+j
+;1 (t
+0
+)
+j
+]
+u(s)  (t
+0
+)
+j
+kuk = (t
+0
+)
+j
+b
+ 
+(3:3)
+Using (
+P
+10
+), we have
+k Nuk =   max
+t2[0;1]
+Z
+1
+0
+Z
+1
+0
+G(t;s)G(s; )ff
+i
+( )a( )f( ;u( );u
+00
+( ))d ds
+    max
+t2[0;1]
+Z
+1 (t
+0
+)
+j
+(t
+0
+)
+j
+Z
+1
+0
+G(t;s)G(s; ) 
+i
+( )h(u( ))d ds (3:4)
+    max
+t2[0;1]
+Z
+1 (t
+0
+)
+j
+(t
+0
+)
+j
+Z
+1
+0
+G(t;s)G(s; )d ds 
+2
+( )D 
+j
+   
+Z
+1 (t
+0
+)
+j
+(t
+0
+)
+j
+max
+t2[0;1]
+ 
+2
+( )D 
+j
+d 
+Z
+1
+0
+G(t;s)G(s;s)ds
+=  
+Z
+1
+0
+max
+t2[0;1]
+ 
+2
+D 
+j
+d 
+Z
+1 (t
+0
+)
+j
+(t
+0
+)
+j
+G(t;s)G(s;s)ds
+    max
+t2[0;1]
+ 
+2
+( )D 
+j
+Z
+1 (t
+0
+)
+j
+(t
+0
+)
+j
+G(s;t)d 
+Z
+1
+0
+t
+0
+G(t
+0
+;s)ds
+   D 
+j
+c
+1
+max
+t2[0;1]
+Z
+1 (t
+0
+)
+j
+(t
+0
+)
+j
+G(t;s)G(t
+0
+;s)ds
+Z
+1
+0
+t
+0
+d  (3:5)
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 50Differential Equations and Control Processes, N 4, 2009
+Using (
+P
+4
+), (2.12) with q = 1, we have
+ kNuk =   max
+t2[0;1]
+Z
+1 (t
+0
+)
+j
+(t
+0
+)
+j
+G(t;s)t
+0
+G(t
+0
+;s)ds
+Z
+1
+0
+D 
+j
+c
+1
+d 
+=   max
+t2[0;1]
+1
+4
+[t(1 t)  ((t
+0
+)
+j
+)
+2
+][t
+0
+(1 t
+0
+)  ((t
+0
+)
+j
+)
+2
+]D 
+j
+c
+1
+Z
+1
+0
+t
+0
+d 
+=  
+1
+4
+ 
+1
+4
+  ((t
+0
+)
+j
+)
+2
+ 
+D 
+j
+c
+1
+t
+0
+(3:6)
+But (t
+0
+)
+j
+<t
+1
+<
+1
+2
+, and as such (
+1
+4
+  ((t
+0
+))
+j
+)
+2
+)  (
+1
+4
+  (t
+1
+)
+2
+)> 0:
+Since we have D 
+ 
+4
+(c
+1
+t
+0
+(
+1
+4
+  (t
+1
+)
+2
+)
+ 
+, it therefore follows that
+ kNukk 
+1
+4
+c
+1
+t
+0
+ 
+1
+4
+  (t
+1
+)
+2
+ 
+D 
+j
+  
+j
+=kuk (3:7)
+The next step proceeds as follows:
+Let u2 K
+j
+\ 
+
+1;j
+then u(s) kuk =  
+j
+8 s2 [0; 1]. Using (
+P
+9
+), we have
+that
+ kNuk =   max
+t2[0;1]
+Z
+1
+0
+Z
+1
+0
+G(t;s)G(s; )ff
+i
+( )a( )f( ;u( );u
+00
+( ))d ds
+    max
+t2[0;1]
+Z
+1 (t
+0
+)
+j
+(t
+0
+))
+j
+Z
+1
+0
+G(t;s)G(s; ) 
+1
+( )h(u( ))d ds
+    max
+t2[0;1]
+Z
+1 (t
+0
+)
+j
+(t
+0
+)
+j
+G(t;s)G(s; )ds
+Z
+1
+0
+ 
+1
+( )d M 
+j
+   M 
+j
+max
+t2[0;1]
+Z
+1 (t
+0
+)
+j
+(t
+0
+)
+j
+G(t;s)G(t
+0
+;s)ds
+Z
+1
+0
+ 
+1
+( )t
+0
+d  (3:8)
+There are two cases to consider:
+Case 1, p6= 1
+Let p6= 1, so that q =
+p
+p 1
+. Using Lemma 4, we have
+ kNuk   max
+t2[0;1]
+kG(t;:)k
+q
+kG(t
+0
+;:)k
+q
+k 
+1
+k
+q
+k 
+1
+k
+p
+M 
+j
+t
+0
+(3:9)
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 51Differential Equations and Control Processes, N 4, 2009
+Using (2.10) and (
+P
+9
+), we obtain
+ kNuk  
+1
+16
+ 
+1
+1 +q
+ 2
+q
+k 
+1
+k
+p
+M 
+j
+  
+k 
+1
+k
+p
+16
+M 
+j
+t
+0
+   
+j
+(3:10)
+Case 2, p = 1.
+By (2.11) and (
+P
+9
+), we obtain
+ kNuk =     max
+t2[0;1]
+Z
+1
+0
+( 
+1
+)
+1
+2
+( )( 
+1
+)
+1
+2
+( )t
+0
+d kG(t;:)k
+1
+kG(t
+0
+;:)k
+1
+k
+1
+16
+M 
+j
+   k 
+1
+k
+p
+t
+0M
+16
+ 
+j
+   
+j
+ 
+M 
+16
+kt
+0
+ 
+1
+k
+p
+ 
+(3:11)
+In either case and becausekuk = 
+j
+8 u2K
+j
+\ 
+
+1;j
+, we have
+ kNuk kuk: (3:12)
+But 02 
+
+2;j
+ 
+ 
+
+
+2;j
+  
+
+1;j
+. Therefore by (3.7), (3.12) and Theorem 1
+N has a  xed pointu
+j
+2K
+j
+\ (
+ 
+
+
+1;j
+n
+
+2;j
+) such that 
+j
+ ku
+j
+k  
+j
+. Butj2IN
+is arbitrary thus completing the proof of the  rst part of the Proposition.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 52Differential Equations and Control Processes, N 4, 2009
+Part II.
+The arguments in the second part run as follows:
+Let  
+j
+be given as in (3.2) and choose  > 0 such that
+1
+Z
+1 (t
+0
+)
+j
+(t
+0
+)
+j
+Z
+1
+0
+G(t;s)G(s; ) 
+1
+( )(h  )d ds
+  
+j
+ 
+1
+Z
+1
+0
+Z
+1
+0
+G(s;s)G(s; ) 
+2
+( )(h + )d ds
+Let N be the cone preserving, continuous and compact operator de ned in
+(2.3). Assume9H
+1
+> 0 such that h(u)  (h + )u whenever h(u)2 [0;1) for
+u2 [0;H
+1
+]. We then obtain for u2K
+t
+0
+; kuk =H
+1
+; t
+j
+2 [0; 1];
+ Nu(t)    
+Z
+1
+0
+Z
+1
+0
+G(s;s)G(s; ) 
+2
+( )h(u( ))d ds
+   
+Z
+1
+0
+Z
+1
+0
+G(s;s)G(s; ) 
+2
+( )(h + )u( )d ds
+   
+Z
+1
+0
+Z
+1
+0
+G(s;s)G(s; ) 
+2
+( )(h + )d dskuk kuk
+(3:13)
+De neE
+1
+ E =fu2E :kuk H
+1
+g. We have kNuk  kuk8 u2K
+t
+0
+\ E
+1
+It remains to consider the case when 9 H
+2
+> 0 such that h(u)   (h 
+ )u; (h is bounded), whenever h 2 [0;1), for u 2 [0;H
+2
+). We have that
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 53Differential Equations and Control Processes, N 4, 2009
+u2K
+t
+0
+;kuk<H
+2
+8t
+j
+2 [(t
+0
+)
+j
+; 1  (t
+0
+)
+j
+] which leads to
+ Nu(t)    
+Z
+1
+0
+Z
+1
+0
+G(t;s)G(s; ) 
+1
+( )h(u( ))d ds
+   
+Z
+1 (t
+0
+)
+j
+(t
+0
+)
+j
+Z
+1
+0
+G(t;s)G(s; ) 
+1
+( )h(u( ))d ds
+   
+Z
+1 (t
+0
+)
+j
+(t
+0
+)
+j
+Z
+1
+0
+G(t;s)G(s; ) 
+1
+( )(h  )u( )d ds
+   
+Z
+1 (t
+0
+)
+j
+(t
+0
+)
+j
+Z
+1
+0
+G(s;s)G(s; ) 
+1
+( )(h  )d kuk kuk:(3:14)
+De ne E
+2
+  E =fu2 E :kuk < H
+2
+g, hence by the above inequality, we
+obtain, 8 t
+j
+2 [(t
+0
+)
+j
+; 1  (t
+0
+)
+j
+] u2K
+t
+0
+\ 
+
+2
+and  kNuk kuk from which
+the result follows by (3.13) and (3.14).  
+Example : As our example, we de ne a 1-parameter class of functions
+a(t; ) : [0; 1]!I R
++
+by
+a(t; ) =
+1
+X
+j=1
+ [ 
+j
+; 
+j 1
+]
+jt t
+j
+j
+ 
+where we have set  
+j
+= (t
+0
+)
+j
+and
+t
+j
+=
+1
+3
+2
++
+1
+j + 3
+2
+; j  1
+ 
+0
+= 1 and 
+j
+=
+1
+2
+(t
+j
++t
+j+1
+) =
+1
+3
+2
++
+1
+2
+(
+1
+j + 3
+2
++
+1
+j + 1
+2
++ 3
+2
+); j  1
+We have that
+a(t : ) a(1; ) = (
+90
+71
+)
+ 
+> 0 =)t
+j
+#
+1
+9
+Now if 0< <
+1
+3
+; we show that
+a(t)2L
+1
+(0; 1) (and so ff
+i
+a(t)2L
+1
+(0; 1) (i = 1; 2) as follows:
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 54Differential Equations and Control Processes, N 4, 2009
+Consider
+1
+X
+j=1
+Z
+1
+0
+ [ 
+j
+; 
+j 1
+]
+jt t
+j
+j
+ 
+dt =
+1
+X
+j=1
+Z
+ 
+j 1
+ 
+j
+jt t
+j
+j
+  
+dt
+=
+1
+X
+j=1
+[
+Z
+t
+j
+ 
+j
+(t
+j
+ t)
+  
+dt +
+Z
+ 
+j 1
+t
+j
+(t t
+j
+)
+  
+dt]
+=
+1
+1  
+[(
+21
+220
+)
+1  
++ (
+71
+90
+)
+1  
+]
++
+1
+1  
+(
+1
+2
+)
+1  
+1
+X
+j=2
+[(
+1
+j + 3
+2
+ 
+1
+j + 1
+2
++ 3
+2
+)
+1  
++ (
+1
+j+2
+2
+ 
+1
+j+3
+2
+)
+1  
+]
+ 
+2
+1  
++
+2
+ 
+2(1  )
+1
+X
+j=2
+[
+1
+(j + 3
+2
+)
+1  
+(
+1
+(j+1
+2
++3
+2
+)
+1  
++
+1
+(j+2
+2
+)
+1  
+)]
+ 
+2
+1  
++
+2
+ 
+1  
+1
+X
+j=2
+1
+(j + 3
+2
+)
+1  
+1
+(j + 2
+2
+)
+1  
+ 
+2
+1  
++
+2
+ 
+1  
+1
+X
+j=2
+1
+j
+3
+2
+(1  )
+We have that
+2
+ 
+1  
+1
+X
+j=2
+1
+j
+3
+2
+(1  )
+converges since
+3
+2
+(1  )> 1 for  <
+1
+3
+and it therefore follows that
+1
+X
+j=1
+Z
+1
+0
+ [ 
+j
+  
+j 1
+]
+jt t
+j
+j
+ 
+dt
+converges. Thus
+1
+X
+j=1
+Z
+1
+0
+ [ 
+j
+  
+j 1
+]
+jt t
+j
+j
+ 
+dt
+=
+Z
+1
+0
+1
+X
+j=1
+ [ 
+j
+  
+j 1
+]
+jt t
+j
+j
+ 
+dt
+=
+Z
+1
+0
+a(t)dt;
+showing that a(t; )2L
+1
+[0; 1]: By induction on p2IN; it can be shown that
+a(t; )2 L
+p
+[0; 1] for  2 (0;
+1
+3
+p): In this general framework, it is also necessary
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 55Differential Equations and Control Processes, N 4, 2009
+to relax condition ( 
+3
+) to read 0 < c  a(t) on A (of positive measure) 
+[0; 1] such that
+1
+3
+2 A: We next de ne
+f(t;u;u
+00
+) h(u) =
+8
+>
+>
+>
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+>
+>
+>
+:
+M; u> 
+1
+D 
+j
++
+M 
+j
+ D 
+j
+ 
+j
+  
+j
+(u  
+j
+);  
+j
+ u  
+j
+; j2IN
+M 
+j+1
++
+D 
+j
+ M 
+j+1
+ 
+j
+ 
+j
+  
+j+1
+;  
+j+1
+<u  
+j
+ 
+j
+; j2IN
+0; u = 0
+where  
+1
+= 1;  
+j+1
+=
+1
+3 + (j + 1)
+2
+;  
+j
+=
+1
+3
+2
++ (3
+2
++j
+2
++ 1)
+; j 2 IN and
+since the conditions  
+j
+> D 
+j
+>  
+j
+ 
+j
+>  
+j+1
+j   1 on the sequences
+f 
+j
+g
+1
+j=1
+and f 
+j
+g
+1
+j=1
+)  
+j
+# 0; and  
+j
+# 0; we thus have that for
+    1; the solutions u
+j
+of (1.1) - (1.2) satisfy jju
+j
+jj # 0 and (3.2) holds
+for each t
+j
+4. Acknowledgement.
+The author appreciates immensely the useful comments and suggestions of
+Professor A. Szulkin of Matematiska institutionen, Stockholm University. He
+is also grateful to him for his help in facilitating his stay in Stockholm. The
+author also immensely appreciates the useful corrections of the referees.
+5. References
+1. A.R. Aftabizadeh, Existence and uniqueness theorems for fourth order
+boundary
+value problems, J. Math. Anal. Appl. 116 (1986) 415-426.
+2. R.P. Agrawal, D. O'Regan and P.J.Y. Wong, Positive Solutions of Differen-
+tial,
+Difference and Integral Equations. Kluwer, Dordrecht, 1999.
+3. K. Deimling, Ordinary Differential Equations in Banach Spaces, Lecture
+Notes in
+Mathematics (edited by A. Dold and B. Eckmann), Springer-Verlag, 1977.
+4. M. A. Del Pino and R.F. Manasevich, Existence for fourth order boundary
+value
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 56Differential Equations and Control Processes, N 4, 2009
+problem under a two-parameter resonance condition, Proc. Amer. Math.
+Soc. 112 (1991) 81-86.
+5. Z.C. Hao, On eigenvalue intervals and eigenfunction of nonresonance singu-
+lar
+Dirichlet boundary value problems, Acta Math. Appl. Sinica 18(2002)
+596-578.
+6. Z. C. Hao, L. Liu and L. Debnath, A necessary and su cient condition for
+the
+existence of positive solutions of fourth-order singular boundary value
+problems,
+Appl. Math. Lett., 16 (2003) 279-285.
+7. M. A. Krasnosel'skii, Topological Methods in the Theory of Nonlinear Inte-
+gral
+Equations, Pergamon Press/MacMillan, New York, 1964.
+8. M. A. Krasnosel'skii, Positive Solutions of Operator Equations, Noordhoff,
+Groningen, 1964.
+9. R. Leggett, L. Williams, Multiple positive  xed points of nonlinear operators
+on
+ordered Banach spaces, Indiana Univ. J. 28 (1979) 673-688.
+10. Y. Li, Positive solutions of fourth-order boundary value problems with two
+parameters, J. Math. Anal. Appl. 281 (2003) 477-484.
+11. R. Ma, H. Wang, On the existence of positive solutions of fourth-order or-
+dinary
+differential equations, Appl. Anal. 59 (1995) 225-231.
+12. R. Ma, Z. Jihui, F. Shengmao, The method of lower and upper solutions
+for
+fourth-order, two-point boundary value problems, J. Math. Anal. Appl.
+215 (1997) 414-422.
+13. D. O'Regan, Fourth (and higher) order singular boundary value problems,
+Nonlinear Anal. 14 (1990) 1001-1038.
+14. R.A. Usmani, A uniqueness theorem for a boundary value problem, Proc.
+Amer.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 57Differential Equations and Control Processes, N 4, 2009
+Math. Soc. 77 (1979) 327-335.
+15. J.R.L. Webb, Positive solutions of some three-point boundary value prob-
+lems via
+ xed point index theory, Nonlinear Anal. 47(2001) 4319-4332.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 58

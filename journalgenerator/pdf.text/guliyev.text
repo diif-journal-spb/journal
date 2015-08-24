@@ -1,0 +1,1597 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 3, 2010
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+THE EXACT CONTROLLABILITY PROBLEM FOR THE
+SECOND ORDER LINEAR HYPERBOLIC EQUATION
+H.F. GULIYEV
+1
+, K.Sh. JABBAROVA
+2
+Abstract
+We consider a problem of exact controllability in the processes described by the second
+order linear hyperbolic equation with boundary control. Using Hilbert uniqueness method
+[1], we introduce an auxiliary boundary value problem. By means of this problem it is
+shown that after certain threshold time moment the considered system is controllable. Un-
+like [2] we consider nonhomogeneous hyperbolic equation. Note that different approaches
+have been applied to the solution of such kind of problems in, for instance, [3, 4].
+Key words: controllability problem, linear hyperbolic equation, Hilbert uniqueness
+method.
+1. Problem Statement
+Let 
+ R
+n
+be a bounded domain with smooth boundary  , x = (x
+1
+;:::x
+n
+)
+be an arbitrary point of domain 
+. Let T > 0 be a given number, 0  t  T;
+Q = 
+  (0;T ) be a cylinder,S =    (0;T ) be a lateral surface of the cylinder
+Q.
+Let some process be described by the initial boundary value problem in Q
+for the hyperbolic equation
+@
+2
+u
+@t
+2
+ 
+n
+X
+i;j=1
+@
+@x
+i
+ 
+a
+ij
+(x;t)
+@u
+@x
+j
+ 
+=f (x;t); (x;t)2Q; (1)
+1
+Baku State University, 23, Z.Khalilov str., AZ1148, Baku, Azerbaijan, e-mail: hkuliyev@rambler:ru
+2
+Institute of Mathematics and Mechanics of NAS of Azerbaijan, 9, F.Agayev str., AZ1141, Baku, AzerbaijanDifferential Equations and Control Processes, N 3, 2010
+uj
+S
+=v (x;t); (x;t)2S; (2)
+uj
+t=0
+=u
+0
+(x);
+@u
+@t
+ 
+ 
+ 
+ 
+t=0
+=u
+1
+(x); x2 
+: (3)
+The exact controllability problem for (1)-(3) is formulated as follows:
+GivenT  nd a Hilbert spaceH, such that for each initial pairfu
+0
+;u
+1
+g2H
+there exists a control v2 L
+2
+(S) such that the solution of (1)-(3) satis es the
+stabilization conditions
+uj
+t=T
+= 0;
+@u
+@t
+ 
+ 
+ 
+ 
+t=T
+= 0; x2 
+: (4)
+Note that the similar problem has been considered in [5], where the equation
+(1) contains additional terms, which are the solution and its  rst derivatives.
+However the coe cients of (1) in [5] do not depend ont. The technique of proofs
+in [5] is based on the results of the theory of pseudodifferential operators. As it
+is known this technique is enough complicated. We use the Hilbert uniqueness
+method introduced by Lions [1] and applied in [2] which is more practical and
+simple. We  nd the concrete value for the threshold time moment T
+0
+, whereas
+in [5] the existence of T
+0
+is shown theoretically.
+2. Denotations and some assumptions
+Let R
+n
+be an n - dimensional Euclidean space and let be
+x
+0
+2R
+n
+; m (x) =x x
+0
+=
+ 
+x
+1
+ x
+0
+1
+;:::;x
+n
+ x
+0
+n
+ 
+; m
+k
+(x) =x
+k
+ x
+0
+k
+:
+Let R
+ 
+x
+0
+ 
+be a radius of the minimal ball with center at x
+0
+, contain-
+ing 
+. By   (x) we denote the unit exterior normal to  . Denote
+ 
+ 
+x
+0
+ 
+= fx2  j (m (x);  (x))> 0g,  
+ 
+ 
+x
+0
+ 
+= fx2  j (m (x);  (x))  0g,
+where (m (x);  (x)) is an inner product in R
+n
+,
+S
+ 
+x
+0
+ 
+=  
+ 
+x
+0
+ 
+  (0;T );S
+ 
+ 
+x
+0
+ 
+=  
+ 
+ 
+x
+0
+ 
+  (0;T );S =S
+ 
+x
+0
+ 
+[S
+ 
+ 
+x
+0
+ 
+:
+Denote
+A (t)u  
+n
+X
+i;j=1
+@
+@x
+i
+ 
+a
+ij
+(x;t)
+@u
+@x
+j
+ 
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 11Differential Equations and Control Processes, N 3, 2010
+Assume that a
+ij
+(x;t) = a
+ji
+(x;t), for all (x;t) 2 Q and for all   2
+R
+n
+; (x;t)2Q,
+n
+P
+i;j=1
+a
+ij
+(x;t) 
+i
+ 
+j
+ ff
+n
+P
+i=1
+ 
+2
+i
+; ff =const> 0 and a
+ij
+2C
+1
+ 
+Q
+ 
+,
+i;j = 1;:::;n.
+Let there exist a number  ; 0< < 1 such that
+(1  )
+n
+X
+i;j=1
+a
+ij
+(x;t) 
+i
+ 
+j
+ 
+1
+2
+n
+X
+k=1
+n
+X
+i;j=1
+@
+@x
+k
+a
+ij
+(x;t)m
+k
+ 
+i
+ 
+j
+  0 (see [6])
+for all  2R
+n
+; (x;t)2Q.
+Assume that f 2 L
+2
+(Q), u
+0
+2 L
+2
+(
+), u
+1
+2 H
+ 1
+(
+). Here we use the
+denotations from [7].
+By a (t;  ; 	) we denote the following bilinear form:
+a (t;  ; 	) =
+n
+X
+i;j=1
+Z
+
+
+a
+ij
+@ 
+@x
+i
+@	
+@x
+j
+dx:
+Let
+  (t)  max
+1 i; j n
+
+
+
+
+@a
+ij
+@t
+
+
+
+
+C
+(
+
+
+)
+; T
+0
+=
+R
+ 
+x
+0
+ 
+ 
+C
+ff
+C
+2
+1
+;
+C
+ff
+= max
+ 
+1;
+1
+ff
+ 
+;C
+1
+=exp(
+n
+ff
+T
+Z
+0
+  (t)dt):
+Below we show that for T > T
+0
+the system is controllable, therefore T
+0
+is
+called a threshold time moment.
+By a solution of problem (1)-(3), for the given control v2L
+2
+(S) we mean
+a function u =u (x;t) from L
+2
+(Q) satisfying the integral identity
+Z
+Q
+u
+ 
+@
+2
+g
+@t
+2
++A (t)g
+ 
+dxdt =
+=
+Z
+Q
+fgdxdt 
+Z
+S
+v
+@g
+@ 
+A
+ds +hu
+1
+(x);g (x; 0)i 
+Z
+
+
+u
+0
+(x)
+@g (x; 0)
+@t
+dx;
+8g2C
+2
+ 
+Q
+ 
+;g (x;T ) =
+@g (x;T )
+@t
+= 0; gj
+S
+= 0:
+Here h:;:i means the value of the functional fromH
+ 1
+(
+) on the element from
+H
+1
+0
+(
+),
+Electronic Journal. http://www.math.spbu.ru/diffjournal 12Differential Equations and Control Processes, N 3, 2010
+@
+@ 
+A
+ 
+n
+X
+i;j=1
+a
+ij
+(x;t)
+@
+@x
+j
+cos ( ;x
+i
+)
+is co-normal with respect to A derivative, cos ( ;x
+i
+) is the i-th direction cosine
+of the exterior normal to the boundary   of the domain 
+.
+Problem (1)-(3) has a unique weak solution u (x;t), determined by means
+of transposition (see [8]). Note that such a solution possesses the following
+properties
+u2C
+ 
+[0;T ] ;L
+2
+(
+)
+ 
+;
+@u
+@t
+2C
+ 
+[0;T ] ;H
+ 1
+(
+)
+ 
+(see [9]):
+3. Main result
+Theorem3.1. Let T >T
+0
+. Then for each pairfu
+0
+;u
+1
+g2L
+2
+(
+) H
+ 1
+(
+)
+there exists a control v2L
+2
+(S) such that the corresponding solution of problem
+(1)-(3) satis es the conditions (4).
+Proof. To prove the theorem we use Hilbert uniqueness method [1]. Let
+as take '
+0
+2H
+1
+0
+(
+); '
+1
+2L
+2
+(
+) and consider the problem
+@
+2
+'
+@t
+2
++A (t)' = 0 in Q; (5)
+'j
+S
+= 0; (6)
+'j
+t=0
+='
+0
+(x);
+@'
+@t
+ 
+ 
+ 
+ 
+t=0
+='
+1
+(x) in 
+: (7)
+Then for the unique solution of problem (5)-(7) the condition
+@'
+@ 
+2L
+2
+(S)
+(see [9]; [10]) is satis ed.
+Consider the following problem
+@
+2
+ 
+@t
+2
++A (t) =f in Q; (8)
+ =
+8
+>
+<
+>
+:
+@'
+@ 
+on S
+ 
+x
+0
+ 
+;
+0 on S
+ 
+ 
+x
+0
+ 
+;
+(9)
+ j
+t=T
+= 0;
+@ 
+@t
+ 
+ 
+ 
+ 
+t=T
+= 0 in 
+: (10)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 13Differential Equations and Control Processes, N 3, 2010
+Problem (8)-(10) also possesses a unique weak solution (x;t) determined
+by means of transposition (see [8]), and moreover
+ 2C
+ 
+[0;T ] ;L
+2
+(
+)
+ 
+;
+@ 
+@t
+2C
+ 
+[0;T ] ;H
+ 1
+(
+)
+ 
+(see [9]): (11)
+For '
+0
+2 H
+1
+0
+(
+);'
+1
+2 L
+2
+(
+) we solve problem (5)-(7) and obtain
+@'
+@ 
+2
+L
+2
+(S). Then we solve problem (8)-(10) and show that (11) is valid. Therefore
+we determine the mapping
+^ :H
+1
+0
+(
+) L
+2
+(
+)!H
+ 1
+(
+) L
+2
+(
+);
+given by the equality
+^f'
+0
+;'
+1
+g =
+ 
+@ (x; 0)
+@t
+;  (x; 0)
+ 
+: (12)
+Smoothing all the data of the problems (5)-(7) and (8)-(10), we obtain that
+the solutions of the smoothed problems belong at least to space H
+2
+(Q). Then
+multiplying the both hand sides of the smoothed equation (5) by the (x;t),
+solution of the smoothed problem (8)-(10), integrating on the domainQ, taking
+into account the boundary conditions (6),(7),(9),(10) and then passing to the
+limit with respect to the smoothing parameter, we obtain
+ 
+@ (x; 0)
+@t
+;'
+0
+(x)
+ 
+ 
+Z
+
+
+ (x; 0)'
+1
+(x)dx =
+=
+Z
+S(x
+0
+)
+n
+X
+i;j=1
+a
+ij
+ 
+i
+ 
+j
+ 
+@'
+@ 
+ 
+2
+ds 
+Z
+Q
+f (x;t)' (x;t)dxdt: (13)
+It follows from (12) and (13) that
+h^f'
+0
+;'
+1
+g;f'
+0
+;'
+1
+gi =
+Z
+S(x
+0
+)
+n
+X
+i;j=1
+a
+ij
+ 
+i
+ 
+j
+ 
+@'
+@ 
+ 
+2
+ds 
+Z
+Q
+f'dxdt; (14)
+whereh^f'
+0
+;'
+1
+g;f'
+0
+;'
+1
+gi means duality relation between H
+ 1
+(
+) L
+2
+(
+)
+and H
+1
+0
+(
+) L
+2
+(
+).
+In H
+1
+0
+(
+) L
+2
+(
+); consider the quadratic form
+kf'
+0
+;'
+1
+gk
+2
+F
+=
+Z
+S(x
+0
+)
+n
+X
+i;j=1
+a
+ij
+ 
+i
+ 
+j
+ 
+@'
+@ 
+ 
+2
+ds:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 14Differential Equations and Control Processes, N 3, 2010
+Let as show that there exist such constants M
+1
+;M
+2
+> 0 that
+(T T
+0
+)M
+1
+kf'
+0;
+'
+1
+gk
+2
+H
+1
+0
+(
+) L
+2
+(
+)
+ 
+R
+S(x
+0
+)
+n
+P
+i;j=1
+a
+ij
+ 
+i
+ 
+j
+ 
+@'
+@ 
+ 2
+ds 
+ M
+2
+kf'
+0;
+'
+1
+gk
+2
+H
+1
+0
+(
+) L
+2
+(
+)
+:
+(15)
+In lemma 3.2 (section 3, [2] ) it is proved that
+Z
+S(x
+0
+)
+n
+X
+i;j=1
+a
+ij
+ 
+i
+ 
+j
+ 
+@'
+@ 
+ 
+2
+ds Ckf'
+0;
+'
+1
+gk
+2
+H
+1
+0
+(
+) L
+2
+(
+)
+: (16)
+And in lemma 3.3 (section 3, [2] ) it is shown that
+(T T
+0
+)E
+0
+ 
+R(x
+0
+)C
+1
+2 
+Z
+S(x
+0
+)
+n
+X
+i;j=1
+a
+ij
+ 
+i
+ 
+j
+ 
+@'
+@ 
+ 
+2
+ds
+or
+(T T
+0
+)
+2 E
+0
+R(x
+0
+)C
+1
+ 
+Z
+S(x
+0
+)
+n
+X
+i;j=1
+a
+ij
+ 
+i
+ 
+j
+ 
+@'
+@ 
+ 
+2
+ds: (17)
+Let as denote an energy integral corresponding to the equation (5) by
+E(t) =
+1
+2
+Z
+
+
+"
+ 
+ 
+ 
+ 
+@' (x;t)
+@t
+ 
+ 
+ 
+ 
+2
++
+n
+X
+i;j=1
+a
+ij
+(x;t)
+@'(x;t)
+@x
+i
+@'(x;t)
+@x
+j
+#
+dx;
+similarly to [8]. Then
+E
+0
+=E (0) =
+1
+2
+Z
+
+
+('
+2
+1
+(x) +
+n
+X
+i;j=1
+a
+ij
+(x; 0)
+@'
+0
+(x)
+@x
+i
+@'
+0
+(x)
+@x
+j
+)dx:
+>From the coerciveness condition on the coe cients a
+ij
+(x;t) it follows that
+E
+0
+ 
+1
+2
+Z
+
+
+"
+'
+2
+1
+(x) +ff
+n
+X
+i=1
+ 
+@'
+0
+(x)
+@x
+ 
+2
+#
+dx M
+ff
+Z
+
+
+"
+'
+2
+1
+(x) +
+n
+X
+i=1
+ 
+@'
+0
+(x)
+@x
+ 
+2
+#
+dx;
+Electronic Journal. http://www.math.spbu.ru/diffjournal 15Differential Equations and Control Processes, N 3, 2010
+where
+M
+ff
+=
+1
+2
+minf1;ffg:
+Then
+E
+0
+ M
+ff
+kf'
+0
+;'
+1
+gk
+2
+H
+1
+0
+(
+) L
+2
+(
+)
+:
+From (17) one can get
+(T T
+0
+)
+2 M
+ff
+R(x
+0
+)C
+1
+kf'
+0
+;'
+1
+gk
+H
+1
+0
+(
+) L
+2
+(
+)
+ 
+Z
+n
+X
+i;j
+a
+ij
+ 
+i
+ 
+j
+ 
+@'
+@ 
+ 
+2
+ds: (18)
+Thus from (16) and (18) the validity of the inequalities (15) follows.
+Inequalities (15) show that for T > T
+0
+the normkf'
+0
+;'
+1
+gk
+2
+F
+is equivalent
+(see [11]) to the norm in H
+1
+0
+(
+) L
+2
+(
+) de ned by the equality
+kf'
+0
+;'
+1
+gk
+2
+H
+1
+0
+(
+) L
+2
+(
+)
+=
+Z
+
+
+n
+X
+i=1
+ 
+@'
+0
+(x)
+@x
+i
+ 
+2
+dx +
+Z
+
+
+('
+1
+(x))
+2
+dx:
+Also the inequalities (15) show that F = H
+1
+0
+(
+)  L
+2
+(
+) for T > T
+0
+.
+Note that F
+0
+=H
+ 1
+(
+) L
+2
+(
+) is a space conjugated to F; the operator^ is
+continuous by the normk k
+F
+.
+Considering (5)-(7) we obtain the existence of such M
+3
+> 0 that
+k'k
+X
+ M
+3
+ 
+k'
+0
+k
+H
+1
+0
+(
+)
++k'
+1
+k
+L
+2
+(
+)
+ 
+; (19)
+where
+X =
+ 
+'j'2C
+ 
+[0;T ] ;H
+ 1
+(
+)
+ 
+;
+@'
+@t
+2C
+ 
+[0;T ] ;L
+2
+(
+)
+ 
+ 
+(see [8]; [9]):
+Since  
+ 
+ 
+ 
+ 
+ 
+ 
+Z
+Q
+f'dxdt
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ kfk
+L
+2
+(Q)
+ k'k
+L
+2
+(Q)
+;
+then by (19) it follows that there exists such M
+4
+> 0 that
+ 
+Z
+Q
+f'dxdt  kfk
+L
+2
+(Q)
+ k'k
+L
+2
+(Q)
+  M
+4
+ 
+k'
+0
+k
+H
+1
+0
+(
+)
++k'
+1
+k
+L
+2
+(
+)
+ 
+: (20)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 16Differential Equations and Control Processes, N 3, 2010
+Then as one may obtain from (14),(15) and (20) the operator^ : F! F
+0
+is coercive, therefore it is an isomorphism between F and conjugated F
+0
+. This
+shows that for the given pairfu
+1
+(x); u
+0
+(x)g2F
+0
+=H
+ 1
+(
+) L
+2
+(
+) there
+exists a unique pairf'
+0
+;'
+1
+g2F =H
+1
+0
+(
+) L
+2
+(
+) satisfying
+^f'
+0
+;'
+1
+g =fu
+1
+(x); u
+0
+(x)g: (21)
+Then from (12) and (21)we obtain that the solution (x;t) of problem
+(8)-(10) satis es to the conditions
+ (x; 0) =u
+0
+(x);
+@ (x; 0)
+@t
+=u
+1
+(x):
+Thus, the unique solution (x;t) of problem (8)-(10) corresponding to the
+control
+v =
+8
+>
+>
+<
+>
+>
+:
+@'
+@ 
+on S
+ 
+x
+0
+ 
+;
+0 on S
+ 
+ 
+x
+0
+ 
+coincides with the solution u (x;t) of problem (1)-(3). It shows that u (x;t)
+satis es the stabilization conditions (4). The theorem 3.1 is proved.
+In the theorem 3.1 it is assumed that T >T
+0
+. It may be shown that for a
+certain class of functionsa
+ij
+(x;t) this inequality has a solution. For example, if
+a
+ij
+(x;t), i;j = 1;n do not depend on t, then   (t)  0, therefore C
+1
+= 1. Then
+the inequality T >T
+0
+turns to T >
+R
+(
+x
+0
+)
+ 
+C
+ff
+.
+Remark3.1. In the paper, some inaccuracies of the paper [2] are corrected,
+namely, on page 478 of that paper, in formula (5) for the value of the constant
+T
+0
+the multiplier 2 is unnecessary, the value of the constant C
+1
+is not shown.
+In formula (10) on page 479, instead of
+ =
+8
+>
+>
+<
+>
+>
+:
+a
+ij
+ 
+i
+ 
+j
+@'
+@ 
+on S
+ 
+x
+0
+ 
+;
+0 on S
+ 
+ 
+x
+0
+ 
+should be
+ =
+8
+>
+>
+<
+>
+>
+:
+@'
+@ 
+on S
+ 
+x
+0
+ 
+;
+0 on S
+ 
+ 
+x
+0
+ 
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 17Differential Equations and Control Processes, N 3, 2010
+4. Proof of the formula for C
+1
+Let
+E (t) =
+1
+2
+Z
+
+
+"
+ 
+ 
+ 
+ 
+@' (x;t)
+@t
+ 
+ 
+ 
+ 
+2
++
+n
+X
+i;j=1
+a
+ij
+(x;t)
+@' (x;t)
+@x
+i
+@' (x;t)
+@x
+j
+#
+dx
+be an energy integral corresponding to the equation (5). Using the equality
+([8], page 297)
+2E (t) = 2E
+0
++
+t
+Z
+0
+n
+X
+i;j=1
+@a
+ij
+(x;t)
+@t
+@' (x;t)
+@x
+i
+@' (x;t)
+@x
+j
+dx
+and coerciveness condition on the coe cients a
+ij
+(x;t);i;j = 1;n we obtain
+E (t) E
+0
++
+n
+ff
+t
+Z
+0
+  (s)E (s)ds:
+>From this considering Gronwall's lemma one can get
+E (t) C
+1
+E
+0
+;8t2 [0;T ];
+where
+C
+1
+= exp
+0
+@
+n
+ff
+T
+Z
+0
+  (t)dt
+1
+A
+:
+REFERENCES
+1. Lions J.L., Exact Controllability - Stabilization and Perturbations for
+distributed systems. J. Von Neumann Lecture, Boston 1986, SIAM Review,
+March, 1988, pp.1-68.
+2. Apolaya R.F., Exact controllability for temporally wave equation. Portu-
+galiae Matematica, Vol.51 Fasc., 4-1994, pp.475-488.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 18Differential Equations and Control Processes, N 3, 2010
+3. Avdonin S.A., Ivanov S.A., Joo I., Exponential series in the problems of
+initial and pointwise control of a rectangular vibrating membrane. Stud. Sci.
+Math. Hung., Vol.30, No.3-4,1995, pp.243-259.
+4. Vancostenoble Judith, Exact controllability of a damped wave equation
+with distributed controls. Acta Math. Hung., Vol.89, No.1-2, 2000, pp.71-92.
+5.Emanuilov O.Yu., Boundary controllability of hyperbolic equations.
+Siberian Mathematical Journal, Vol.41, No.4, 2000, pp.785-799.
+6. Komornik V., Exact controllability in short time for the wave equation.
+Ann. Inst. Henri Poincare, Vol.6, No.2, 1989, pp.153-164.
+7. Lions J.L., Optimal control of systems described by partial equations. M.:
+Mir, 1972 (Russian).
+8. Lions J.L., Magenes E., Non-homogeneous boundary value problems and
+their apllications. M.: Mir, 1971 (Russian).
+9. Lasiecka I., Lions J. L. and Triggiani R., Non-homogeneous boundary
+value problems for second order hyperbolic operators, J. Math. Pures et Appl.,
+Vol.65, 1986, pp.149-192.
+10. Lions J.L., Control of singular distributed systems. M.: Nauka, 1987
+(Russian).
+11. Mikhailov V.P., Partial differential equations. M.: Nauka, 1983 (Rus-
+sian).
+Electronic Journal. http://www.math.spbu.ru/diffjournal 19

@@ -1,0 +1,610 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 1, 2003
+Electronic Journal,
+reg. N P2375 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Group analysis of differential equations
+SYMMETRIES and CONSERVATION LAWS of
+NONVARIATIONAL EQUATIONS SYSTEM
+Alexander Kusyumov
+Russia, 420111 Kazan, Karl Marks Str. 10
+Kazan State Technical University, Department of Aerohydrodynamics
+e-mail: postbox7@mail.ru
+Summary
+The second order ordinary differentialequations systems thatgenerallycan-
+not be obtain from the variational principle are considered. Each equation of
+thatsystemcanbepresentedasthesumoftwoexpressions. Theﬁrstexpression
+follows from the variational principle. The second expression does not follow
+from the variational principle. Such system we shall call the quasi Euler - La-
+grange system. Under a certain requirements to the Lie transformations group
+the quasi Euler - Lagrange system conservation laws can be obtained in explicit
+form (similarly to the Noether theorem).
+1 Introduction
+One of the most known techniques of construction of conservation laws of dif-
+ferential equations system uses the Noether theorem or the generalization of
+Noether’s theorem [1]. For using of the Noether theorem is necessary to obtain
+the initial equations system as the Euler - Lagrange equations system for someDifferential Equations and Control Processes, N 1, 2003
+functional. We shall call the system of such class as the variational system or
+as the EL system.
+The conservation laws of the EL system can be write if the functional vari-
+ational symmetries are known [2].
+The condition of the functional of initial equations system existence is cer-
+tain restriction on using of the Noether theorem. Using of divergent symmetries
+of the functional [2] loosens this restriction. However, the initial equations sys-
+tem also should be the EL system.
+Inthepresentpaperthesecondorderordinarydifferentialequationssystems
+are considered. Thus the equations systems that generally cannot be obtain
+from the variational principle are considered. Each equation of that system
+can be presented as the sum of two expressions. The ﬁrst expression follows
+from the variational principle. The second expression does not follow from the
+variational principle. Such system we shall call the system with EL part or
+QEL (”quasi Euler -Lagrange”) system. Under a certain requirements to the
+Lie transformations group the QEL system conservation laws can be obtained
+in explicit form (as well as for a system obtained from the variational principle).
+The conservation laws of some class of QEL systems were considered also in
+[3].
+2 Second order QEL systems
+Let us write an ordinary differential equations system of second order as
+F
+j
+(t,x,p
+1
+,p
+2
+) = 0. (j = 1,...,m) (1)
+Here t is independent variable, x
+j
+are coordinates of m-dimensional vector of
+dependent variables, p
+j
+1
+and p
+j
+2
+are ﬁrst and second order derivatives of coordi-
+nates x
+j
+.
+A conservation law of system (1) is the expression
+θ
+j
+F
+j
+(t,x,p
+1
+,p
+2
+) =
+d
+dt
+P(t,x,p
+1
+). (3)
+Here P(t,x,p
+1
+) is a smooth function (conservation law component). The func-
+tions θ
+j
+(t,x,p
+1
+) satisfying to expression (3) are called conservation law charac-
+teristics [2].
+Electronic Journal.  94Differential Equations and Control Processes, N 1, 2003
+Is known, that if the system (1) is the EL system, then the functions
+F
+j
+(t,x,p
+1
+,p
+2
+) can be write in the form
+F
+j
+(t,x,p
+1
+,p
+2
+) =E
+j
+(g), (4)
+where the function g(t,x,p
+1
+) is the Lagrangian of certain functional
+I[x] =
+Z
+t
+1
+t
+0
+g(t,x,p
+1
+)dt. (5)
+The operator of the EL E
+j
+with number j by the formula
+E
+j
+=
+1
+X
+J=0
+(−D)
+J
+∂
+∂p
+j
+J
+(6)
+is determined [2]. Here (−D)
+0
+= 1; (−D)
+1
+=−D
+t
+, and
+D
+t
+=
+∂
+∂t
++p
+j
+1
+∂
+∂x
+j
++p
+j
+2
+∂
+∂p
+j
+1
++...
+Besides we suppose p
+j
+0
+=x
+j
+. If (1) is EL system and the variational symmetries
+of the functional (5) are known, then the conservation laws of system (1) are
+determined by the Noether theorem [2].
+Let us present now the functions F
+j
+(t,x,p
+1
+,p
+2
+) as
+F
+j
+(t,x,p
+1
+,p
+2
+) =E
+j
+(g)+F
+j
+n
+(t,x,p
+1
+,p
+2
+). (7)
+Here g(t,x,p
+1
+) is certain function, which is considered as the Lagrangian of
+functional (5); functions F
+j
+n
+(t,x,p
+1
+,p
+2
+) determine nonvariational part of the
+system (1).
+The functions F
+j
+n
+(t,x,p
+1
+,p
+2
+) determine ”deviations” of the initial system
+from the EL system. In accordance with this ”deviations” the divergent in-
+variance condition, which in the Noether theorem is used, should be write in a
+changedform. LetusdeﬁnetheQELsystem(1)invarianceconditions,whichare
+allowedtodeterminethesystem(1)conservationlawsinexplicitform(similarly
+to the Noether theorem).
+3 Symmetries and conservation laws of QEL systems
+Let a transformations group G is determined by the vector ﬁeld
+X =ξ
+t
+∂
+∂t
++ξ
+j
+∂
+∂x
+j
+,
+Electronic Journal.  95Differential Equations and Control Processes, N 1, 2003
+where ξ
+t
+(t,x),ξ
+j
+(t,x) are certain smooth functions. Let us deﬁne also the Lie
+vector ﬁeld X as the continued vector ﬁeld X [2].
+If(1)istheELsystem, thentheconditions(4)areholdandthefunctiong is
+the Lagrangian of functional I[x]. The vector ﬁeldX is called the inﬁnitesimal
+variational symmetry of functional I[x], if the following condition hold:
+Xg+gD
+t
+(ξ
+t
+) =D
+t
+(B) (8)
+where B(t,x,p
+1
+) is certain function. [2].
+According to the Noether theorem, if the functional I[x] has a variational
+symmetries group, then there is a function P such that
+d
+dt
+P(t,x,p
+1
+) =Q
+j
+E
+j
+(g).
+Here the functions Q
+j
+are vector ﬁeld X characteristics deﬁned by expression
+Q
+j
+=ξ
+j
+−ξ
+t
+p
+j
+1
+.
+The function P(t,x,p
+1
+) has the form [2]
+P =B−A−ξ
+t
+g, (9)
+where
+A =Q
+j
+∂g
+∂p
+j
+1
+. (10)
+Now we give the following deﬁnition.
+Deﬁnition. The vector ﬁeld X is called an inﬁnitesimal variational sym-
+metry of QEL systems (1) or the QEL symmetry if on integrgral manifold of (1)
+be fullﬁeld
+Xg+Q
+j
+F
+j
+n
++gD
+t
+(ξ
+t
+) =D
+t
+(B). (11)
+The condition (11) is generalization of the divergent invariance condition
+[2] used by formulation of the Noether theorem. If the initial system is the
+EL system, then F
+j
+n
+= 0 and the expression (11) is the divergent invariance
+condition. If the initial system does not include the variational part (g = 0),
+then from (11) follows the expression (3).
+Theorem 1. Let the system (1) is the QEL system and the functions F
+j
+are determined by expressions (7). If the vector ﬁeld X is the QEL symmetry of
+system (1), then the vector ﬁeld X characteristics Q
+j
+are the characteristics of
+Electronic Journal.  96Differential Equations and Control Processes, N 1, 2003
+the conservation law of system (1). In this case the conservation law component
+P deﬁned by expression (9).
+Proof: The proof of this theorem follows from expression [2]
+Xg =Q
+j
+E
+j
+(g)+D
+t
+(A)+ξ
+t
+D
+t
+(g), (12)
+whereA(t,x,p
+1
+) is determined by expression (10). Substituting (12) in (11), we
+have
+Q
+j
+E
+j
+(g)+D
+t
+(A)+ξ
+t
+D
+t
+(g)+Q
+j
+F
+j
+n
++gD
+t
+(ξ
+t
+) =D
+t
+(B),
+whence, taking account of (7), follows
+Q
+j
+F
+j
+=D
+t
+(B−A−ξ
+t
+g)
+and the theorem is proved.
+This theorem is allowed to determine the system (1) conservation laws in
+explicit form (similarly to the Noether theorem).
+4 Second order ordinary differential equation
+Let
+p
+2
+−H(t,u,p
+1
+) = 0 (13)
+beasecondorderordinarydifferentialequation,whereH(t,u,p
+1
+)isthearbitrary
+function. Is known that we can transform this equation into the EL form if we
+multiply the initial equation by some function, which is called the integrating
+factor.
+The problem of the integrating factor determination is reduced to a partial
+differential equation integration problem [2]. Let us consider a second order
+equations having the integrating factor in the form of certain function φ(t,u).
+Using the Theorem 1, we can obtain the equation conservation laws without
+integrating factor determination.
+Let us present the equation (13) in the form of QEL equation
+E(g)+F
+n
+= 0. (14)
+Here g(t,u,p
+1
+), F
+n
+(t,u,p
+1
+,p
+2
+) are functions satisfying to the expression E(g)+
+F
+n
+=p
+2
+−H(t,u,p
+1
+).
+Proposition 1. Let Q is the characteristic of vector ﬁeld X, determining
+the QEL symmetry of equation (14). Let also φ(t,u) be the integrating factor of
+Electronic Journal.  97Differential Equations and Control Processes, N 1, 2003
+the equation (14). Then Q
+∗
+=Q/φ is characteristic of vector ﬁeld X
+∗
+, deﬁning
+the inﬁnitesimal variational symmetry of EL equation
+φ(E(g)+F
+n
+) = 0. (15)
+Proof: Let the proposal conditions are hold and let Q =ξ
+u
+(t,u)−ξ
+t
+(t,u)p
+1
+be the characteristic of the vector ﬁeld X. Then we can write
+Q(E(g)+F
+n
+) =
+Q
+φ
+φ(E(g)+F
+n
+) =
+dP
+dt
+. (16)
+Sinse φ is the integrating factor, then
+φ(E(g)+F
+n
+) =E(g
+∗
+),
+where g
+∗
+(t,u,p
+1
+) is certain function (Lagrangian). Let us consider the function
+Q
+∗
+= ξ
+∗
+u
+(t,u)−ξ
+∗
+t
+(t,u)p
+1
+, where ξ
+∗
+u
+(t,u) = ξ
+u
+/φ, ξ
+∗
+t
+(t,u) = ξ
+t
+/φ. Taking into
+account (16), we have that Q
+∗
+is characteristic of the vector ﬁeld deﬁning the
+inﬁnitesimal variational symmetry of the EL equation (15). The proposition is
+proved.
+From the proof of this proposition follows, that all vector ﬁelds obtained as
+multiplicationthevectorﬁeldX
+∗
+byarbitraryfunctionsφ(t,u)canbeconsidered
+as equivalent vector ﬁelds. These vector ﬁelds determine the QEL symmetries
+of equivalent QEL equations having the same conservation law.
+As example we consider the Emden - Fowler equation [2]
+u
+tt
++2u
+t
+/t+u
+5
+= 0.
+We present this equation in the form
+p
+2
++2p
+1
+/t+u
+5
+= 0. (17)
+Integrating factor for equation (17) is the function φ = t
+2
+. Hence we have the
+EL equation
+t
+2
+p
+2
++2tp
+1
++t
+2
+u
+5
+= 0. (18)
+For Lagrangiang =−t
+2
+p
+2
+1
+/2+t
+2
+u
+6
+/6 of functional (5) we see, that the equation
+(18)istheELequation. Thevectorﬁeldcharacteristicdeﬁningtheinﬁnitesimal
+variational symmetry of functional has the form Q =−u/2−tp
+1
+. Thus in (8)
+the function B≡ 0 and the conservation law component is
+P =−(t
+3
+u
+6
+/3+t
+2
+up
+1
++t
+3
+(p
+1
+)
+2
+)/2.
+Electronic Journal.  98Differential Equations and Control Processes, N 1, 2003
+HoweverconservationlawofEmden-Fowlerequationcanbeobtainedwith-
+out integrating factor using. We write the Emden - Fowler equation in the form
+tp
+2
++2p
+1
++tu
+5
+= 0. (19)
+The ﬁeld vector characteristic determining QEL symmetry of the equation (19)
+has the form Q =−ut/2−t
+2
+p
+1
+. Let us present (19) as the QEL equation and
+apply the Theorem 1.
+The function F
+n
+in (14) and the function B in (16) are determined by the
+form of Lagrangian g. For example if g ≡ 0, then F
+n
+= tp
+2
++ 2p
+1
++tu
+5
+and
+B =P. For g =−t(p
+1
+)
+2
+/2 we obtain F
+n
+=p
+1
++tu
+5
+and B =−t
+3
+u
+6
+/6.
+Let us note that the Theorem 1 can be generalized on a case of partial
+differential equations sets of an arbitrary order.
+Author is grateful to Garaev K.G. and Pavlov V.G. for useful discussions.
+References
+[1] N. Kh. Ibragimov, Invariant variational problems and conservation laws,
+Teor. Mat. Fiz., V. 1, No 3 (1969), pp. 350-359.
+[2] P.Olver,ApplicationsofLiegroupstodifferentialequations,Springer,New
+York, 1986.
+[3] A.N. Kusyumov, A functional with ﬁxed limits of integration and con-
+servation laws of systems of ordinary differential equations, Differ. Uravn.
+Protsessy Upr., No. 2 (2000), pp. 37-49 (electronic).
+Electronic Journal.  99

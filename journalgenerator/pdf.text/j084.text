@@ -1,0 +1,5222 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 1, 2002
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Computer software
+for the investigation of differential equations,
+dynamical systems, and control processes
+TOOLS for SYMMETRY ANALYSIS of PDEs
+A.G. MESHKOV
+Oryol State University
+95 Komsomolskaya str., 302015, Oryol, Russia
+e-mail: meshkov@orel.ru
+Abstract
+The package of routines JET and help ﬁles for it are presented. There are html- and
+mws-ﬁles for help. The package contains more than 30 Maple routines for the symme-
+try analysis of evolution partial differential systems with two independent variables and
+related problems: computation of Lie-B¨ acklund symmetries and conserved densities, com-
+putation of canonical densities and investigation of the complete integrability, computa-
+tion of differential substitutions and B¨ acklund transformations, computation of recursion
+operators and Noether operators; several computations in matrix Lie algebras, the check
+of the antisymmetry, symplectic and cosymplectic conditions of linear integrodifferential
+operators and some others. All routines and algorithms are described in the article. It
+can be used as the user’s guide.Differential Equations and Control Processes, N 1, 2002
+Contents
+1 Introduction 11
+2 Differentiation and Integration 12
+3 Lie-B¨ acklund Symmetries 16
+4 Conserved Densities and Covariants 19
+5 Canonical conserved densities 24
+6 Differential Substitutions and B¨ acklund transformations 27
+7 Zero curvature representations 30
+8 Recursion operators 36
+9 Noether operators 44
+10 Auxiliary Routines 54
+Bibliography 58
+Index 60
+1 Introduction
+Package JET is free. The unique restriction is to cite each use of the package. The author will
+be grateful everyone for any critical remarks and offers.
+We wrote and tested our routines during 5 years approximately [1], [2]. The package is
+had written for investigation of partial differential systems with two independent variables. We
+called this package JET because the jet space language is used. The package includes more
+than thirty procedures for Maple 6
+1
+. The main our intent was to create the full collection of
+tools for investigations of the completely integrable evolution systems. But the package can be
+used for other purposes as well. We use the same notions and notations as in the known books
+[3], [4], [5], [6].
+For the independent variables we used the ﬁxed (global) names: t is the temporal variable
+and x is the spatial one. For the dependent variables one may use any names but they must
+be speciﬁed in the global listvard. For example, if you deal with the jet spaceJ
+∞
+(R,R
+2
+) with
+the local coordinates x, u
+i
+, v
+i
+, then you must assign vard:=[u,v]. Then all input and output
+expressions will depend on t, x, u0, v0, u1, v1 and so on.
+1
+Maple V.5 also can read and compile these routines.
+Electronic Journal.  11Differential Equations and Control Processes, N 1, 2002
+Let us mention that all procedures work in the interactive mode as a rule. The auto-
+matic mode is undesirable in the real problems in view of the following reasons.
+1. Equations for the higher conserved densities or Lie-B¨ acklund higher symmetries of non-
+linear systems is reduced to very cumbersome partial differential systems. Solutions of
+that huge systems with dozens thousands terms in the automatic mode would require a
+huge RAM of a computer and very long time for computations. Solution of such systems
+is an art but not the mechanical process.
+2. Probablyanysoftwarecontainsthebags. Mapleisoneofthebestpakages,butitcontains
+the bags too. Here is only two examples:
+> int(x^n,x);
+x
+n+1
+n+1
+Here the function int ignores the branch n =−1.
+> z:=diff(f(x),x)-1/x*f(x)+2*f(x)^2;
+z :=
+∂f(x)
+∂x
+−
+f(x)
+x
++2f(x)
+2
+> dsolve(z,{f(x)});
+f(x) =
+x
+x
+2
++ C1
+So, the solution f = 0 is lost. Of course, everybody see that the limit C1 → ∞ is possible
+here. But using the automatic mode you can not know which equations were solved and how
+much solutions were lost.
+2 Differentiation and Integration
+Our procedures for differentiation and integration are calleddif andINT. There are the built-
+in procedures diff and int for differentiation and integration in Maple. Nevertheless we wrote
+our own procedures in order to make all expressions more compact. Everybody who computed
+Lie-B¨ acklund symmetries or conserved densities knows that you are forced to deal with a lot
+of arbitrary functions. Equations arising in such problems are often very long. The procedure
+depend gives you possibility to hide all arguments of all functions. It creates two sets of
+substitutions: var={f1=f1( x1, x2), ... , fn=fn(y1, ... ,yk)} and rav={f1( x1, x2)=f1, ... ,
+fn(y1,... ,yk)=fn}. Thenamesvarandravareglobal. Substitutionsvarareperformedbefore
+the differentiation or integration of an expression. Substitutions rav are performed after the
+differentiation or integration of an expression to make the output shorter. depend protects
+the names of its arguments f1, ... , fn and returns the set NamesOfdeps={f1, ... , fn} that
+is used in other routines.
+Electronic Journal.  12Differential Equations and Control Processes, N 1, 2002
+ATTENTION: Nothing will work in JET until vard and depend are entered.
+When we enter the command dif(f,x) the substitutionsvar are performed and the built-in
+procedurediff is called. Therefore the procedures dif possesses the same facilities as the built-
+in diff. The following example shows the difference between the built-in and our procedures:
+> vard:=[u, v]: depend(f(u0,v0,u1,v1)):
+> a:=dif(f,v0)*dif(f,u0$3,v0),
+> b:=diff(f(u0,v0,u1,v1),v0)*diff(f(u0,v0,u1,v1),u0$3,v0);
+a :=
+∂f
+∂v0
+∂
+4
+f
+∂u0
+3
+∂v0
+, b :=
+∂f(u0,v0,u1,v1)
+∂v0
+∂
+4
+f(u0,v0,u1,v1)
+∂u0
+3
+∂v0
+The ﬁrst expression is a 3-4 times shorter then the second one. It is very important if you deal
+with a long expression. The derivatives of arbitrary functions are returned in the inert form:
+a:=Diff(f,v0)*Diff(f,v0,‘$‘(u0,3)), for instance. If you wish to assign f:=u0^2+v0^2 for
+example, you must enter depend(...) without f beforehand to unprotect the name f:
+> depend(g(x) ):f:=u0^2+v0^2:
+> a;
+ 
+∂
+∂v0
+(u0
+2
++v0
+2
+)
+  
+∂
+4
+∂u0
+3
+∂v0
+(u0
+2
++v0
+2
+)
+ 
+To compute this expression the substitution Diff=dif is necessary:
+> a:=expand(eval(subs(Diff=dif,a)));
+a := 0
+The procedure dif admits the functional assignment and it is very useful property.
+> dif(f,x):=f^3+f-1;
+> a:=dif(x^2*f,x);
+dif(f,x) :=f
+3
++f−1
+a := 2xf +x
+2
+∂f
+∂x
+> a:=expand(eval(subs(Diff=dif,a)));
+a := 2xf +x
+2
+f
+3
++x
+2
+f−x
+2
+The procedure INT possesses not only the same facilities as the built-in int but many
+others for operating with arbitrary functions using the integration by parts. Examples:
+> f:=’f’: depend(f(x,y,z)):
+> InT(dif(f,y)*dif(f,x$3,y),x)=INT(dif(f,y)*dif(f,x$3,y),x);
+Electronic Journal.  13Differential Equations and Control Processes, N 1, 2002
+Z
+∂f
+∂y
+∂
+4
+f
+∂x
+3
+∂y
+dx =
+∂f
+∂y
+∂
+3
+f
+∂x
+2
+∂y
+−
+1
+2
+ 
+∂
+2
+f
+∂x∂y
+ 
+2
+> InT(x^2*dif(f,x$3,y),x)=INT(x^2*dif(f,x$3,y), x);
+Z
+x
+2
+∂
+4
+f
+∂x
+3
+∂y
+dx =x
+2
+∂
+3
+f
+∂x
+2
+∂y
+−2x
+∂
+2
+f
+∂x∂y
++2
+∂f
+∂y
+> InT(x^2*dif(f,x),x)=INT(x^2*dif(f,x), x);
+Z
+x
+2
+∂f
+∂x
+dx =x
+2
+f−2x
+Z
+fdx
+The built-in procedure int returns integrals with arbitrary functions without computation. In
+these examples InT is the inert version of the integration procedure. We wrote the new inert
+version because the built-in Int possesses one undesirable property:
+> expand(Int(f,x));
+f
+Z
+1dx
+The next procedure DF computes the total derivative with respect to x on a jet space
+and DN computes the n-fold total derivative. The syntax is DF(F) and DN(F,n) where F is an
+expression, n is an integer or a name:
+> vard:=[u]: depend(f(x,u0,u1), g(u0) ):
+> DF(f), DF(g), DN(g,2);
+∂f
+∂x
++
+∂f
+∂u0
+u1+
+∂f
+∂u1
+u2,
+∂g
+∂u0
+u1,
+∂g
+∂u0
+u2+
+∂
+2
+g
+∂u0
+2
+u1
+2
+DN(g,n) is computed as DN(DF(g), n-1) and DN(F,0)=F, DN(F,1)=DF(F); DN(F,-1) is the
+inverse to DF operator. If the control variable ﬂag is zero then the minimal computations are
+performed (in the previous example flag was not assigned):
+> flag:=0:DF(2*f-k*g), DN(g^2-c*f,2),DF(u3),DN(u2,3),DN(u3,-2);
+2DF(f)−DF(kg),DN(g
+2
+,2)−DN(cf,2), u4, u5, u1
+To compute DF(u3) or DN(u2,3) the routines DF and DN create the global set Var =
+{u
+0
+,u
+1
+,...,u
+n
+}, where the numbern=maxord may be entered by user. If maxord is not entered
+then it is set 50 by default.To simplify the expressions with parameters one can enter the global
+set const:
+> const:={c,k}: DF(2*f-k*g), DN(g^2-c*f,2);
+2DF(f)−kDF(g), DN(g
+2
+,2)−cDN(f,2)
+There are three more control variables ﬂdf, ﬂdn and ﬂpt. If one of them is assigned 1 when
+flag=0 then DF and DN acquire the new facilities:
+Electronic Journal.  14Differential Equations and Control Processes, N 1, 2002
+> fldf:=1: DF(2*f*g),DF(g^2*f);
+2DF(f)g+2fDF(g), 2gDF(g)f +g
+2
+DF(f)
+> fldn:=1: DN(f*g,3); DN(g^2*f,2); DN(u3*u0,-1),DN(u4*u0,-1);
+fDN(g,3)+3DF(f)DN(g,2)+3DN(f,2)DF(g)+DN(f,3)g
+g
+2
+DN(f,2)+4gDF(g)DF(f)+(2DF(g)
+2
++2gDN(g,2))f
+u0u2−1/2u1
+2
+, u0u3−u2u1+DN(u2
+2
+,−1)
+> fldn:=0:flpt:=1:DN(DN(f,3)*g,-1);DN(DN(f,5)*g,-1);
+DN(f,2)g−DN(DN(f,2)DF(g),−1)
+gDN(f,4)−DF(g)DN(f,3)+DN(DN(f,3)DN(g,2),−1)
+The simultaneous usage fldn=1 and flpt=1 is undesirable in large expressions because
+of too large number of levels of the recursion. One can apply the call DN(F,-1) when ﬂag=1
+too:
+> fldn:=’fldn’:flpt:=’flpt’:flag:=1:vard:=[u]:depend(g(u0)):DN(DN(g,3),-1);
+∂
+2
+g
+∂u0
+2
+u1
+2
++
+∂g
+∂u0
+u2
+Argument of dif, INT, DF, DN and the next routine ED may be any algebraic expression,
+array, Vector set, equation or list. The procedure ED computes the evolution derivative
+ED(F)→D
+t
+(F) =
+∂F
+∂t
++
+X
+i,α
+∂F
+∂u
+α
+i
+D
+i
+K
+α
+,
+whereD isthetotalderivativewithrespecttoxandK
+α
+aretherighthandsidesofanevolution
+system
+u
+α
+t
+=K
+α
+(u).
+One has to enter the vector ﬁeld K beforehand as the list sys (sys is the global name). For
+example, if you deal with the system u
+t
+=F, v
+t
+=G you must enter the following commands:
+> vard:=[u, v]: depend(F(u0,v0,...), G(u0,v0,...) ): sys:=[F, G]:
+If flag:=0 then the minimal simpliﬁcations are executed:
+> flag:=0: ED(f1=c*f2), ED(DN(g,k)), ED(DF(g));
+ED(f1) =cED(f2), DN(ED(g),k), DF(ED(g))
+Herec is the element of the set const. When flag:=1 or flag:=’flag’ all expressions DF(f),
+DN(f,n), and ED(f) will be computed completely. There is one more control variables ﬂed. If
+fled=1 then ED(f) will be computed completely, but expanding DF(f) and DN(f,k) depend on
+their control variables:
+Electronic Journal.  15Differential Equations and Control Processes, N 1, 2002
+> vard:=[u]: depend(F(u0,u1),G(u0,u1),f(u0,u1),g(u0,u1)):
+> flag:=0:fldf:=’fldf’:fldn:=’fldn’:flpt:=’flpt’:fled:=1:
+> sys:=[F, G]: ED(f);
+∂f
+∂u0
+F +
+∂f
+∂u1
+DF(F)
+Arguments of DF,DNandEDmaydepend onnonlocalvariablesw
+i
+=D
+−1
+x
+ρ
+i
+, whereρ
+i
+are
+conserved densities andθ
+i
+are the conserved ﬂuxes of an evolution system under consideration:
+D
+t
+ρ
+i
+= D
+x
+θ
+i
+. Such variables w
+i
+are called the weakly nonlocal one, they were heuristically
+introduced in [7] and more punctually in [8]. The nonlocal variablesw
+i
+, densitiesρ
+i
+and ﬂuxes
+θ
+i
+must be speciﬁed in the global lists nlo, densities and ﬂuxes respectively. For example,
+the KdV equation u
+t
+=u
+xxx
++6uu
+x
+admits the following conserved densities u and u
+2
+:
+D
+t
+(u
+0
+) =D(u
+2
++3u
+2
+0
+), D
+t
+(u
+2
+0
+) =D(2u
+0
+u
+2
+−u
+2
+1
++4u
+3
+0
+).
+Therefore the new variables w1 =D
+−1
+u
+0
+and w2 =D
+−1
+u
+2
+0
+may be introduced:
+> nlo:=[w1,w2]: densities:=[u0,u0^2]:
+> fluxes:=[u2+3*u0^2,2*u0*u2-u1^2+4*u0^3]:
+> depend(f(x,u0,u1,w1,w2) ): vard:=[u]: sys:=[u3+6*u0*u1]:
+Now DF, DN and ED are prolonged on w1 and w2:
+> flag:=1:DF(f);ED(f);
+∂f
+∂x
++
+∂f
+∂u0
+u1+
+∂f
+∂u1
+u2+
+∂f
+∂w1
+u0+
+∂f
+∂w2
+u0
+2
+∂f
+∂u0
+(u3+6u0u1)+
+∂f
+∂u1
+(u4+6u1
+2
++6u0u2)+
+∂f
+∂w1
+(u2+3u0
+2
+)
++
+∂f
+∂w2
+(2u0u2−u1
+2
++4u0
+3
+)
+3 Lie-B¨ acklund Symmetries
+Lie-B¨ acklund symmetries for the evolution systemu
+t
+=K(u) satisfy the following determining
+equation (see [3], [4] or [5] for instance):
+(D
+t
+−K
+0
+)F = 0, (1)
+where the prime means the Frechet derivative
+(K
+0
+)
+α
+β
+=
+∂K
+α
+∂u
+β
+i
+D
+i
+. (2)
+For example, for the KdV equation u
+t
+= u
+xxx
++6uu
+x
+the determining equation (1) takes the
+following form
+(D
+t
+−6u
+1
+−6u
+0
+D−D
+3
+)F = 0.
+Electronic Journal.  16Differential Equations and Control Processes, N 1, 2002
+The procedure LBsymm computes the left hand side of the equation (1) and splits it with
+respect to higher order variables. The syntax is LBsymm(F) or LBsymm(F,dialog), where F is a
+list (a symmetry) and dialog is the keyword. The routine performs a preliminary splitting of
+the equations (1) and calls the package diffalg for additional splitting. But sometimes diffalg
+worksverylongtimeandthekeyword dialogwasintroducedtopreventthecallofdiffalg. The
+outputisasetoralistofsetsofsplitequations. Ifalistarisethenyouhavethebranching. The
+initial (unsplit) equations are stored in the global set zero. One can use it to check whether
+the solution is true or not. The check is necessary because the split system may be incomplete.
+Forexample,inordertocalculatetheﬁrstorderLie-B¨ acklundsymmetriesforthenonlinear
+Schr¨ odinger like system you must enter the following commands:
+> vard:=[u,v]:
+> depend(F1(t,x,u0,u1,v0,v1), F2(t,x,u0,u1,v0,v1),
+f(u0,v0), g(u0,v0) ):
+> sys:=[u2+f, -v2+g]: a1:=LBsymm([F1,F2]);
+a1 :=
+n
+∂
+2
+F2
+∂v1∂x
+= 0,
+∂
+2
+F1
+∂u1∂x
+= 0,
+∂
+2
+F1
+∂u1
+2
+= 0,
+∂F1
+∂v0
+= 0,
+∂F1
+∂v1
+= 0,
+∂
+2
+F2
+∂v0∂v1
+= 0,
+∂
+2
+F2
+∂v1
+2
+= 0,
+∂F2
+∂u0
+= 0,
+∂F2
+∂u1
+= 0,
+∂
+2
+F1
+∂u0∂u1
+= 0
+o
+Solving this system we ﬁnd
+F1 =u1h1(t)+g1(t,x,u0), F2 =v1h2(t)+g2(t,x,v0)
+and call LBsymm again.
+> depend(h1(t),h2(t),g1(t,x,u0),g2(t,x,v0), f(u0,v0),g(u0,v0) ):
+> a1:=LBsymm([u1*h1+g1,v1*h2+g2]);
+Common subsystem
+ 
+∂h2
+∂t
+=−2
+∂
+2
+g2
+∂x∂v0
+,
+∂
+2
+g2
+∂v0
+2
+= 0,
+∂
+3
+g2
+∂x
+2
+∂v0
+= 0,
+∂
+2
+g1
+∂u0
+2
+= 0
+ 
+for the branches:
+a1 :=
+hn
+∂h1
+∂t
+= 2
+∂
+2
+g1
+∂u0∂x
+,
+∂
+2
+g2
+∂v0
+2
+= 0,
+∂
+2
+g1
+∂u0
+2
+= 0,
+∂f
+∂v0
+= 0,
+∂g
+∂u0
+= 0,
+∂
+3
+g1
+∂x∂u0∂x
+= 0,
+∂h2
+∂t
+=−2
+∂
+2
+g2
+∂v0∂x
+,
+∂
+3
+g2
+∂x∂v0∂x
+= 0
+o
+,
+n
+h1 =h2,
+∂
+2
+g2
+∂v0
+2
+= 0,
+∂
+2
+g1
+∂u0
+2
+= 0,
+∂h2
+∂t
+=−2
+∂
+2
+g2
+∂v0∂x
+,
+∂
+2
+g1
+∂u0∂x
+=−
+∂
+2
+g2
+∂v0∂x
+,
+∂
+3
+g2
+∂x∂v0∂x
+= 0
+oi
+These two cases are obtained from the following system:
+Electronic Journal.  17Differential Equations and Control Processes, N 1, 2002
+> zero=0;
+n
+v1
+∂h2
+∂t
++
+∂g2
+∂t
++
+∂g2
+∂v0
+g+h2
+∂g
+∂u0
+u1−
+∂g
+∂u0
+u1h1−
+∂g
+∂u0
+g1−
+∂g
+∂v0
+g2+
++
+∂
+2
+g2
+∂x
+2
++2
+∂
+2
+g2
+∂v0∂x
+v1+
+∂
+2
+g2
+∂v0
+2
+v1
+2
+, u1
+∂h1
+∂t
++
+∂g1
+∂t
++
+∂g1
+∂u0
+f +h1
+∂f
+∂v0
+v1−
+−
+∂f
+∂u0
+g1−
+∂
+2
+g1
+∂x
+2
+−2
+∂
+2
+g1
+∂u0∂x
+u1−
+∂
+2
+g1
+∂u0
+2
+u1
+2
+−
+∂f
+∂v0
+v1h2−
+∂f
+∂v0
+g2
+o
+= 0
+The name zero is global. When the object zero is large the automatic splitting of it requires
+a long time. In such situations one can use the dialogue mode. To do this call the routine with
+additional argument dialog:
+> vard:=[u,v]:
+> depend(F1(t,x,u0,u1,v0,v1,u2,v2,u3,v3,u4,v4,u5,v5),
+F2(t,x,u0,u1,v0,v1,u2,v2,u3,v3,u4,v4,u5,v5),f(u0,v0),g(u0,v0) ):
+> sys:=[u2+f, -v2+g]:
+> a:=LBsymm([F1,F2],dialog):
+> a1:=a[1]:
+> nops(a1), ord(a1);
+248, [7, 6]
+Here ord is the routine for computing of the order of an expression. It begin the search of
+the variables u
+i
+in an expression from the highest order maxord to zero. The name maxord
+is global, if it is not entered by user, then the routines ord, DF or DN stand maxord=50 by
+default.The previous output means that the expression a1 consists of 248 terms and contains
+u7,u6, ... ,v6,v5, ... , but does not contain u8, u9, ... , v7,v8, ... In general case the call
+ord(a) returns a list [m, n, ... ], with partial orders of the expression a. That is, m is the
+order with respect to variable vard[1], n is the order with respect to variable vard[2], etc.
+More detail information about any expression you can obtain with the help of the built-in
+procedure indets. Let us remember that the obtained expression a1 is a polynomial with
+respect to the highest order variables u7, u6, and v6 (but others are contained in F), therefore
+the built-in procedure degree is useful as well. To extract the terms with u7 one can use the
+procedure chn (choose name):
+> b1:=chn(a1,u7);
+b1 := 2u7
+∂F2
+∂u5
+The syntax of chn is chn(expr, a,b,...,z) where expr is any expression, a,b,...,z
+are any names or powers of names or functions. When type of expr is not ‘+‘ then chn returns
+expr if all the objects a,b,...,z are contained in the expr, else chn returns zero. If type of
+expr is ‘+‘ then chn returns the sum of those terms what contain all the objects. The initial
+expression expr is not changed by chn.
+It is easy to see that F2 does not depend on u5 in our example. And the terms with u6
+give rise that F2 does not depend on u4. And moreover it follows from zero[2] that F1 does
+not depend on v5 and v4. To continue the calculation you must enter the following commands:
+Electronic Journal.  18Differential Equations and Control Processes, N 1, 2002
+> depend(F1(t,x,u0,u1,v0,v1,u2,v2,u3,v3,u4,u5),
+F2(t,x,u0,u1,v0,v1,u2,v2,u3,v3,v4,v5),f(u0,v0),g(u0,v0)):
+> a1:=expand(eval(subs(Diff=dif,a1))): nops(a1), ord(a1);
+165, [5, 6]
+ThesubstitutionDiff=difisnecessaryforrecalculationofallderivativesbecausethecommand
+dif(F,x) returns the result in the inert form Diff(F,x) ifF is an indeﬁnite function as it was
+mentioned above.
+One can also use in such calculations the procedure cho (choose order) instead of chn:
+> depend(f(t,x,u0,u1,u2) ):
+> A:=2*u1+f+u3+u4:
+> chn(A,u4), cho(A,4);
+u4, u4
+But
+> chn(A,u3), cho(A,3);
+u3, u3+u4
+The call cho(A, n) collects and returns those terms from the expression A whose orders>n.
+The both cho and chn can ﬁnd the implicit variables as well:
+> chn(A,u2), cho(A,2);
+f, f +u3+u4
+The routine cho works faster than chn.
+4 Conserved Densities and Covariants
+Thevectorfunction(ρ, θ)onthejetspaceiscalledtheconservedcurrentforasystemu
+t
+=K(u)
+if it solves the equation
+D
+t
+ρ =Dθ, (3)
+where D
+t
+is the evolution derivative along the trajectories of the system and D is the total
+derivative with respect to x. The function ρ is said to be the conserved density and θ is said
+to be the ﬂux. The current (Df, D
+t
+f) is the conserved one for any system and it is called the
+trivial conserved current. If one add a trivial current to any other conserved current then the
+sum will be the conserved current too. The transformation (ρ, θ) −→ (ρ+Df, θ +D
+t
+f) is
+called the equivalence transformation.
+One can investigate equation (3) with the help of the Euler operator E
+E
+α
+=
+∞
+X
+n=0
+(−D)
+n
+∂
+∂u
+α
+n
+, α = 1,...,m, (4)
+Electronic Journal.  19Differential Equations and Control Processes, N 1, 2002
+wheremisnumberofdependentvariables(m=nops(vard)). OperatorE possessesanimportant
+property: Ef = 0 if and only if f =D(F) [10]. Applying the operator E to the equation (3)
+we obtain the following equation for the conserved densities
+E(D
+t
+ρ) = 0. (5)
+JET-package contains the procedure EU that computes the variational derivatives according
+to the formula (4):
+EU(F,k)−→E
+k
+F.
+So, to obtain the left hand side of the equation (5) you must call EU(ED(rho),k), where
+k = 1, 2,..., m, and m is the number of the dependent variables. These equations can be
+solved by splitting in higher order variables. But if the order of the densityρ is large (> 3) the
+object E(D
+t
+ρ) may be too large for your computer.
+Another way for solving the equation (3) is to apply the procedure pot (potential). The
+command pot(ED(rho)) integrates the equation (3) and computes the ﬂux θ. Let us denote
+ϕ = D
+t
+ρ and suppose that the order of ϕ is n+1, then the order of θ is n and the equation
+under consideration takes the following form
+Dθ≡
+∂θ
+∂u
+α
+n
+u
+α
+n+1
++
+∂θ
+∂u
+α
+n−1
+u
+α
+n
++··· =ϕ. (6)
+Here and below the summation rule over the repeated indices is implied. If the function ϕ is
+nonlinear with respect tou
+α
+n+1
+the equation (6) is impossible. Hence one must check vanishing
+of all second derivatives
+∂
+2
+ϕ
+∂u
+α
+n+1
+∂u
+β
+n+1
+= 0. (7)
+If this is true and ϕ is linear, ϕ =f
+α
+(u
+n
+)u
+α
+n+1
++g(u
+n
+), then
+∂θ
+∂u
+α
+n
+=f
+α
+(u
+n
+) (8)
+and the compatibility conditions
+∂f
+α
+∂u
+β
+n
+=
+∂f
+β
+∂u
+α
+n
+(9)
+must be satisﬁed. Setting
+F
+1
+=
+Z
+f
+1
+du
+1
+n
+, θ =θ
+1
++F
+1
+,
+we obtain from (8)
+∂θ
+1
+∂u
+1
+n
+= 0,
+∂θ
+1
+∂u
+α
+n
+=
+˜
+f
+α
+≡f
+α
+−
+∂F
+1
+∂u
+α
+n
+, α> 1. (10)
+Now the compatibility conditions for (10) take the form
+∂
+˜
+f
+α
+∂u
+1
+n
+= 0,
+∂
+˜
+f
+α
+∂u
+β
+n
+=
+∂
+˜
+f
+β
+∂u
+α
+n
+, α,β > 1. (11)
+Electronic Journal.  20Differential Equations and Control Processes, N 1, 2002
+We can represent this process in the following form
+θ→θ
+1
+=θ−F
+1
+, ϕ→ϕ
+1
+=ϕ−DF
+1
+,
+Dθ
+1
+=ϕ
+1
+=f
+α
+u
+α
+n+1
++g−DF
+1
+=
+˜
+f
+2
+u
+2
+n+1
++···+
+˜
+f
+m
+u
+m
+n+1
++˜ g,
+(12)
+where the functions
+˜
+f
+α
+=f
+α
+−
+∂F
+∂u
+α
+n
+, ˜ g =g−DF +
+∂F
+∂u
+α
+n
+u
+α
+n+1
+donotdependonthevariablesu
+α
+n+1
+. Iftheﬁrstoftheequations(11)issatisﬁedwecanprolong
+the chain (12)
+θ
+1
+→θ
+2
+=θ
+1
+−F
+2
+, ϕ
+1
+→ϕ
+2
+=ϕ
+1
+−DF
+2
+,
+Dθ
+2
+=ϕ
+2
+=
+˜
+f
+2
+u
+2
+n+1
++···+
+˜
+f
+m
+u
+m
+n+1
++˜ g−DF
+2
+=
+ˆ
+f
+3
+u
+3
+n+1
++···+
+ˆ
+f
+m
+u
+m
+n+1
++ˆ g,
+where
+F
+2
+=
+Z
+˜
+f
+2
+du
+2
+n
+,
+and so on. After m steps we obtain Dθ
+m
+=ϕ
+m
+, ordϕ
+m
+6n and the process is repeated.
+When the command pot(phi) is entered the procedure pot checks all conditions (7), (9),
+(11), ... and performs the integrations and all equivalence transformations
+th := 0 : th :=th+F : ϕ :=ϕ−DF(F) :
+If some condition is broken the process is stopped, the reminderϕ−DF
+1
+−DF
+2
+−···−DF
+k
+is saved under the global namerm, the message ”Break, rm contains, expr” is printed and the
+resultF
+1
++F
+2
++···+F
+k
+isreturned. Theexpression”exp”maybeu
+1
+3
+2
+oru
+1
+2
+&u
+2
+3
+andallthat. The
+senseofsuchmessagesisthatthereminder rmisnonlinearfunctionwithrespecttou
+1
+3
+oru
+1
+2
+and
+u
+2
+3
+(it may be arbitrary function but not the second power) and some compatibility condition
+is not satisﬁed. If rm6= 0 the outputG of the command pot(phi) means thatϕ =D(G)+rm
+and rm is not the total derivative. Notice that the call DN(phi,–1) returns the same result
+in another form G+DN(rm,–1). When all compatibility conditions are satisﬁed we obtain an
+output and the message ”Finish, rm=0”.
+Let us consider, for example, the conserved densities for the KdV equation:
+> vard:=[u]: depend( ): sys:=[u3 + 6*u0*u1]:
+> pot(ED(u0^2));
+Finish, rm=0
+2u0u2−u1
+2
++4u0
+3
+And more example
+> th:=pot(ED(u0^3)):
+Break, rm contains, u1
+2
+> th:=th; rm:=rm;
+Electronic Journal.  21Differential Equations and Control Processes, N 1, 2002
+th := 3u0
+2
+u2−3u0u1
+2
++
+9
+2
+u0
+4
+rm := 3u1
+3
+Hence D
+t
+u0
+3
+=Dth+3u1
+3
+and u0
+3
+is not a conserved density.
+Notice that there is more short version of pot with the name pt. It works without any
+text messages. This quality is necessary to call the routine from another one.
+The function pot may be useful for computing of nonlocal conserved densities too. Let us
+consider the example.
+> vard:=[u]: sys:=[u3+6*u0*u1]:
+> nlo:=[w1,w2]: densities:=[u0,u0^2]:
+> fluxes:=[u2+3*u0^2,2*u0*u2-u1^2+4*u0^3]:
+> depend(f(x,u0,u1,w1,w2) ):
+> a1:=DF(f);
+∂f
+∂x
++
+∂f
+∂u0
+u1+
+∂f
+∂u1
+u2+
+∂f
+∂w1
+u0+
+∂f
+∂w2
+u0
+2
+> pot(a1);
+Finish,rm = 0
+f
+The result will be just so for any arbitrary function and for some concrete functions:
+> a2:=DF(u1^2+u0*u1*w1+w2^2*u2);
+a2 :=u1
+2
+w1+2u2u1+u2u0w1+w2
+2
+u3+u0
+2
+u1+2w2u2u0
+2
+> pot(a2};
+Finish,rm = 0
+u1
+2
++u0u1w1+w2
+2
+u2
+But often it is not so
+> a3:=DF(u1^2+u0*u1*w1+w2^2);
+a3 :=u1
+2
+w1+2u2u1+u2u0w1+u0
+2
+u1+2w2u0
+2
+> pot(a3}; rm;
+See rm, ord(rm) =, [0]
+u1
+2
++u0u1w1
+2w2u0
+2
+Electronic Journal.  22Differential Equations and Control Processes, N 1, 2002
+There is another way to construct the conserved densities. Let ρ be a conserved density
+of the evolution system (1). Then the covector ﬁeld γ = Eρ, where E is the Euler operator,
+satisﬁes the following equation [11]
+(D
+t
++K
+0
++
+)γ = 0, (13)
+where K
+0
++
+is the adjoint to K
+0
+operator.
+If a covector ﬁeld γ is differentiable in a starlike neighbourhood of the point u = 0 ∈
+J
+∞
+(R,R
+m
+) and
+γ
+0
+=γ
+0
++
+(14)
+in this neighbourhood then γ =E˜ ρ [9], [10], where
+˜ ρ =
+1
+Z
+0
+γ
+α
+(ξu)u
+α
+dξ. (15)
+Hence if a solution of (13) satisﬁes to the condition (14) then the formula (15) gives the
+conserved density of the evolution system.
+Solutionsoftheequation(13)arecalledtheconservedcovariants. Theyappliednotonlyfor
+computation the conserved densities but for constructing the recursion and the inverse Noether
+operators. There is the routine covariant for solving the equation (13). The syntax is the
+same as for LBsymm: covariant(G) or covariant(G,dialog), where G is a list of expressions
+and dialog is the keyword. The routine performs the preliminary splitting of equations (13)
+andcallthepackagediffalgforadditionalsplitting. Sometimesdiffalgworksverylongtimeand
+to prevent the call of diffalg the keyword dialog is introduced. The initial (unsplit) equations
+are stored in the global set zero. One can use it to check whether the solution is true or not.
+The check is necessary because the split system may be incomplete.
+Let us consider the Schr¨ odinger system for example.
+> vard:=[u,v]: sys:=[u2+u0^2*v0,-v2-v0^2*u0]:
+> depend(f(u0,v0,u1,v1), g(u0,v0,u1,v1) ):
+> a:=covariant([f,g]);
+a :=
+ 
+∂
+2
+g
+∂u0∂u1
+= 0,
+∂
+2
+g
+∂u1
+2
+= 0,
+∂g
+∂v0
+= 0,
+∂g
+∂v1
+= 0,
+∂
+2
+f
+∂v0∂v1
+= 0,
+∂
+2
+f
+∂v1
+2
+= 0,
+∂f
+∂u0
+= 0,
+∂f
+∂u1
+= 0
+ 
+Solving these equations call the routine again:
+> depend(f1(v0), g1(u0) ):
+> a:=covariant([f1+c1*v1,g1+c2*u1]);
+a :=
+ 
+∂
+2
+f1
+∂v0
+2
+= 0, c1 =−c2,
+∂
+2
+g1
+∂u0
+2
+= 0
+ 
+Electronic Journal.  23Differential Equations and Control Processes, N 1, 2002
+> a:=covariant([c1*v1+c3*v0+c4,-c1*u1+c5*u0+c6]);
+a :={−2c5u0+2u0c3−2c6, −u0(−u0c3+c5u0+2c6),
+−v0(−c3v0+v0c5−2c4), −2c5u0v0+2u0c3v0+2u0c4−2v0c6,
+−2v0c5+2c3v0+2c4, −2c5+2c3}
+We have c5 =c3, c4 =c6 = 0 obviously:
+> covariant([c1*v1+c3*v0,-c1*u1+c3*u0]), zero;
+{}, {}
+So, we obtain two covariants for the Schr¨ odinger system
+> gamma1=<v1,-u1>, gamma2=<v0,u0>;
+γ
+1
+=
+"
+v1
+−u1
+#
+,γ
+2
+=
+"
+v0
+u0
+#
+(16)
+and two conserved densities
+ρ
+1
+=
+1
+2
+(u
+0
+v
+1
+−u
+1
+v
+0
+), ρ
+2
+=u
+0
+v
+0
+according to the formula (15).
+5 Canonical conserved densities
+In the articles [12] were introduced the canonical conserved densities for completely integrable
+systems and the necessary conditions of the complete integrability of an evolution system was
+formulated. Then this approach was developed in [13], [6] and many others articles. In cited
+papers and books they applied a powerful but diﬃcult for computations operator technique for
+obtaining the canonical densities. Another easy way for obtaining the same canonical densities
+was presented in [14]. Later this (”Chinese”) technique was explained and generalized on a
+wide class systems with two independent variables in [15]. Below we follow this article. Let the
+system
+F(u) = 0 (17)
+can be transformed to the Cauchy-Kowalewski normal form with the help of transformation
+of independent variables. Let us denote Φ(D
+t
+, D
+x
+) = F
+0
+, where D
+t
+and D
+x
+are the total
+differentiation operators. Then let us consider the following system
+Φ(D
+t
++θ, D
+x
++ρ)ψ
+ 
+ 
+F=0
+= 0, (c,ψ) = 1, (18)
+where (c,ψ) is the Euclidean scalar product and c is a constant vector. The main result is
+Electronic Journal.  24Differential Equations and Control Processes, N 1, 2002
+If the system (17) is integrable by the inverse spectral transform method then the system
+(18) possesses a formal solution in the following form
+ρ =
+∞
+X
+i=−n
+ρ
+i
+k
+i
+, θ =
+∞
+X
+i=−m
+θ
+i
+k
+i
+, ψ =
+∞
+X
+i=0
+a
+i
+k
+i
+, (19)
+where k is a parameter, n > 0, ρ
+−n
+6= 0 or m > 0, θ
+−m
+6= 0 and (ρ
+i
+, θ
+i
+), i> min(−m,−n)
+are local or weakly nonlocal conserved currents of the system (17). The conserved densities ρ
+i
+obtained from the equations (18) coincide with the canonical densities constructed by means of
+the original algorithm developed in [6], [12]. But the ”Chinese” technique is simpler from the
+computational viewpoint because it deals with the commutative series (19) but not with the
+operatorseries. Thereisawideclassoftheevolutionsystemsforwhichn = 1intheexpansions
+(19). We call these systems as regular. There is an example of the irregular (but nonintegrable)
+system when n> 1 [15].
+Let us consider the example
+u
+t
+=u
+3
++f(u,u
+1
+). (20)
+A simple calculation gives F
+0
+=D
+3
++f
+1
+D+f
+0
+−D
+t
+, where f
+k
+=∂f/∂u
+k
+. Hence the equation
+(18) takes the following form [−D
+t
+−θ+(D+ρ)
+3
++f
+0
+−(D+ρ)f
+1
+]·1 = 0, or
+ρ
+3
+−θ+(D
+2
++f
+1
+)ρ+
+3
+2
+Dρ
+2
++f
+0
+= 0.
+Setting
+ρ =k
+−1
++
+∞
+X
+i=0
+ρ
+i
+k
+i
+, θ =k
+−3
++
+∞
+X
+i=0
+θ
+i
+k
+i
+,
+we obtain the required recursion formula
+ρ
+i+2
+=
+1
+3
+θ
+i
+−
+i+1
+X
+j=0
+ρ
+j
+ρ
+i−j+1
+−
+1
+3
+i
+X
+j,k=0
+ρ
+j
+ρ
+k
+ρ
+i−j−k
+−
+1
+3
+(D
+2
++f
+1
+)ρ
+i
+−D
+ 
+ρ
+i+1
++
+1
+2
+i
+X
+j=0
+ρ
+j
+ρ
+i−j
+ 
+−
+1
+3
+f
+0
+δ
+i0
+,
+(21)
+where i> 0, ρ
+0
+= 0, θ
+0
+= 0, ρ
+1
+= −
+1
+3
+f
+1
+and δ
+ij
+is the Kronecker δ-symbol. The recursion
+formula (21) can be easily coded in Maple:
+> r:=proc(n)
+local i;
+i:=n-2; if n <= 0 then RETURN(0) fi;
+if n = 1 then RETURN(-1/3*dif(f,u1)) fi;
+cat(th,i)/3-SU(r,r,0,i+1)-1/3*SU(r,r,r,0,i)
+- ’DF’(r(i+1)) -1/2*’DF’(SU(r,r,0,i))-’DN’(r(i),2)/3
+- dif(f,u0)*DLT(i,0)/3-dif(f,u1)*r(i)/3
+end;
+Electronic Journal.  25Differential Equations and Control Processes, N 1, 2002
+Here DLT is the auxiliary procedure for the Kronecker δ-symbol and SU is the procedure for
+the multiple sums. For example, the call SU(A,B,C,n,m) returns the sum of the monomials
+A(i)*B(j)*C(k) where i,j,k > n and besides i +j +k = m. Number of arguments of SU
+may be any and arguments of SU may be under DF or DN operators. That is the expressions of
+the type SU(A,DF(B),DN(C,p),n,m) are admissible. Moreover we assume here that the ﬂuxes
+θ
+0
+, θ
+1
+,... will be saved under the names th0,th1, ... .
+It was proved in the papers [6], [12] that there is another series of conserved densities for
+any integrable evolution system. We call them adjoint densities for brevity because they are
+obtained from the adjoint to (18) equation. Let us denote the adjoint densities as ˜ ρ
+k
+, then
+˜ ρ
+i
+−ρ
+i
+∈ ImD as it was proved in the cited works. This condition is stronger thanD
+t
+ρ
+i
+∈ ImD
+obviously. That is why the both ρ
+i
+and ˜ ρ
+i
+are applied in the symmetry analysis of integrable
+systems.
+Let us consider the quasi-linear evolution system with m equations
+u
+t
+=A(u)u
+n
++F(u
+0
+,...,u
+n−1
+), ∂A/∂u
+n
+= 0.
+If all eigenvalues of the main matrix A are different then one can obtain explicit recursion
+formulasformsequencesofρ
+i
+andmsequencesof ˜ ρ
+i
+choosingdifferentnormalizationconditions
+(c,ψ) = 1: ψ = (1,ψ
+2
+,...,ψ
+m
+) or ψ = (ψ
+1
+,1,ψ
+3
+,...,ψ
+m
+) and so on. In the case of multiple
+eigenvaluesexplicitrecursionformulaisimpossible. Andinsteadofitsomedifferentialequations
+arise for ρ
+i
+and a
+i
+[15].
+The package JET contains two routines that compute the canonical and adjoint canonical
+densities forNth orderregular evolution systems,N > 1 . They arecd andacd respectively.
+The both cd and acd use the following algorithm. The routine substitutes the ﬁnite series
+(19) into system (18) (or its adjoint), collect the obtained polynomials with respect to powers
+of k and extract coeﬃcients of the polynomials. These coeﬃcients must be zeroes and they
+are stored under the global name EQS. Then the routines, solve the obtained systems with
+respect to ρ
+i
+and a
+i
+(or ˜ ρ
+i
+and ˜ a
+i
+) and return results. If it is impossible to solve the system
+forρ
+i
+, a
+i
+(because of branches for example) then the routines suggest you to enter some values
+or to choose a branch. It is important remember in this moment that the scale transformation
+k → kλ is admitted in (19). Therefore when ρ
+−1
+= const one may choose ρ
+−1
+= 1 or −1
+without loss of generality.
+The call cd(n,m) returns m canonical densities from nth sequence as a rule. But for
+some systems the routines may ask you to choose the constant C and the function ρ
+[−1]
+= r
+and repeat the call with the additional argument cd(n,m,[C,r]). One may also use several
+substitutions (such asa
+[n,m]
+=value for example) with the help of another optional argument:
+cd(n,m,[C,r],S) or cd(n,m,S,[C,r]) or cd(n,m,S), where S is a set of substitutions. The
+both routines assign flag:=0 in order to obtain the shortest expressions for the densities and
+save the auxiliary functions a[i,k] (or b[i,k]) in the global set SOL. The syntax for acd is the
+same.
+Let us consider examples. The single equation:
+> vard:=[u]: depend(f(u0,u1,u2)): sys:=[u3 + f];
+sys := [u3+f]
+> cd(1,2);
+Electronic Journal.  26Differential Equations and Control Processes, N 1, 2002
+ 
+ρ
+0
+=−
+1
+3
+∂f
+∂u2
+, ρ
+1
+=
+1
+9
+ 
+∂f
+∂u2
+ 
+2
++
+1
+3
+DF
+ 
+∂f
+∂u2
+ 
+−
+1
+3
+∂f
+∂u1
+ 
+The Schr¨ odinger like system:
+> vard:=[u,v]: depend(f(u0,u1,v0,v1),g(u0,u1,v0,v1)):
+> sys:=[u2+f, -v2-g];
+sys := [u2+f,−v2−g]
+> cd(2,2);
+ 
+ρ
+[2,0]
+=−
+1
+2
+∂g
+∂v1
+, ρ
+[2,1]
+=
+1
+8
+ 
+∂g
+∂v1
+ 
+2
+−
+1
+2
+th
+[2,0]
++
+1
+4
+∂f
+∂v1
+∂g
+∂u1
+−
+1
+2
+∂g
+∂v0
++
+1
+4
+DF
+ 
+∂g
+∂v1
+ 
+ 
+This output is differ from the previous. For a single differential equation we have a single
+sequence of canonical densities ρ
+n
+,n = 0,1,... and for the m-component system we have m
+sequences ρ
+[1,j]
+, ρ
+[2,j]
+,...,ρ
+[m,j]
+.
+The nonlinear diffusion system as a case of the multiple roots:
+> vard:=[u,v]: > depend(f(u0,u1,v0,v1), g(u0,u1,v0,v1)):
+> sys:=[u2+f, v2-g];
+sys := [u2+f,v2−g]
+> cd(1,1);
+ED(rho[i,k] =DF(th[i,k])
+SOL =
+ 
+a2
+1,0
+= RootOf
+ 
+2DF( Z)− Z
+∂f
+∂u1
+−
+∂f
+∂v1
+Z
+2
+−
+∂g
+∂v1
+Z−
+∂g
+∂u1
+  
+Be careful, multiple roots
+h
+ρ
+1,0
+=−
+1
+2
+∂f
+∂u1
+−
+1
+2
+∂f
+∂v1
+RootOf
+ 
+2DF( Z)− Z
+∂f
+∂u1
+−
+∂f
+∂v1
+Z
+2
+− Z
+∂g
+∂v1
+−
+∂g
+∂u1
+ i
+So, ρ
+[1,0]
+and a2
+[1,0]
+are nonlocal functions in general case.
+For the systems with two and more equations the canonical densities may consist of the
+dozen hundred terms. The evolution derivative of such long expression consists of dozen thou-
+sand terms. Processing a large expression requires very long time. And moreover if the number
+ofaddendsinanexpressionismorethen40000thenMapleV.4orMapleV.5ﬁnishcomputation
+and inform: ”Object too large”. In Maple 6 no restriction on the size of the object probably
+but the time of an computation exponentially depend on the size of the object. To solve this
+problem we apply the procedure entry. The command z:=entry(F,N) returns the list z so
+that each entry of z contains N addends from F; number of addends in the last entry of z will
+be less or equal to N. After obtaining the list z one can perform the required operations with
+each element z[i] separately and obtain the ﬁnal result. This approach requires less time and
+memory than the direct computation. Another method is based on using the procedure cho.
+As the terms with the greatest order are most interesting then the procedure cho is very useful.
+Electronic Journal.  27Differential Equations and Control Processes, N 1, 2002
+6 Differential Substitutions and B¨ acklund transforma-
+tions
+Let us consider a pair of an evolution differential systems
+u
+t
+=K(u) (22)
+and
+v
+t
+=H(v), (23)
+where u :R
+2
+−→R
+m
+, v :R
+2
+−→R
+m
+and K, H are some smooth vector differential operators.
+Let we also have a smooth vector differential operatorf :C
+∞
+(R
+2
+,R
+m
+)−→C
+∞
+(R
+2
+,R
+m
+). If for
+any solution v of the system (23) the function u deﬁned by the formula
+u =f(v) (24)
+satisﬁes the system (22) then the equation (24) is called the differential substitution. The order
+of the operator f is called the order of the differential substitution.
+The ﬁrst order differential substitutions are considered as a rule, the well-known example
+is the Miura substitution. But the higher order substitutions exist as well [16].
+Let the operator K be known. To compute the substitution (24) one has to differentiate
+the equation (24) with respect to t
+K(u)−
+∂f
+∂v
+n
+D
+n
+H(v) = 0 (25)
+and substitute u = f(v), u
+1
+= Df(v), u
+2
+= D
+2
+f(v),... into this equation. As a result we
+obtain a system containing only variables v
+i
+. After spiting this system with respect to the
+higher order variables v
+i
+we obtain suﬃciently many differential equations to ﬁnd f and H.
+B¨ acklund transformations can be considered as the implicit differential substitution. The
+ﬁrst order B¨ acklund transformation between systems (22) and (23) takes the following general
+form F(u,u
+1
+,v,v
+1
+) = 0. If ∂F/∂u
+1
+= 0 we have the simple differential substitution (24). And
+if ∂F/∂u
+1
+6= 0 we can solve the equation F = 0 with respect to u
+1
+and write the B¨ acklund
+transformation in the following form
+u
+1
+=f(u,v,v
+1
+). (26)
+To ﬁnd the explicit form of the function f one must to differentiate the equation (26) with
+respect to t. This gives
+DK(u)−
+∂f
+∂u
+K(u)−
+∂f
+∂v
+α
+n
+D
+n
+H(v) = 0. (27)
+Substituting into this equationu
+1
+=f(u,v,v
+1
+), u
+2
+=Df(u,v,v
+1
+),..., we obtain a system con-
+tainingvariablesv
+i
+andu. Thissystemismuchmorecumbersomethanthatobtainedfrom(25)
+but algorithm is the same. Therefore the both (25) and (27) can be obtained with the help of
+one and the same proceduredifsub. The syntax is difsub({u=f}) or difsub({u=f},dialog)
+for a differential substitution and difsub({u1=f}) or difsub({u1=f},dialog) for a B¨ acklund
+Electronic Journal.  28Differential Equations and Control Processes, N 1, 2002
+transformation. Here f is a vector function on the jet space, dialog is the keyword. If difsub
+is called with one argument then the equation (25) or (27) is preliminary split by means of the
+differentiation and then the packagediffalg is called. But this require very long time especially
+for computation the B¨ acklund transformations. When difsub is called with two argument
+then the preliminary split system is returned. In the both these cases the original system is
+stored in the global setzero. For the scalar equation (22) the ﬁrst argument may be equation:
+difsub(u=f,dialog).
+Let us consider the B¨ acklund transformation for the nonlinear Schr¨ odinger system.
+> vard:=[u,v,U,V]:
+> depend(f1(u0,v0,U0,V0,U1),f2(u0,v0,U0,V0,V1) }:
+> sys:=[u2+u0^2*v0,-v2-u0*v0^2,U2+U0^2*V0,-V2-U0*V0^2]:
+> a:=difsub({u1=f1,v1=f2},dialog): ord(%);
+[0, 0, 2, 2]
+If one do not use dialog then the routine works a very long time.
+> dif(a,U2); dif(a,V2);
+ 
+0,−2
+∂
+2
+f2
+∂U1∂V1
+,2
+∂
+2
+f1
+∂U1∂V1
+,−2
+∂
+2
+f2
+∂U1
+2
+,2
+∂
+2
+f1
+∂U1
+2
+ 
+,
+ 
+0,2
+∂
+2
+f1
+∂V1
+2
+,−2
+∂
+2
+f2
+∂U1∂V1
+,2
+∂
+2
+f1
+∂U1∂V1
+,−2
+∂
+2
+f2
+∂V1
+2
+ 
+So, the functions f1 and f2 are linear with respect to U1, V1. To abridge the example let us
+follow to [17] and set
+f1 =U1+(u0+U0)h+k(u0−U0), f2 =V1+(v0+V0)h−k(v0−V0),
+where the function h depend on (u0−U0)(v0−V0) only and k is a constant.
+> depend(h(u0,v0,U0,V0)):
+> dif(h,U0):=-dif(h,u0): dif(h,V0):=-dif(h,v0):
+> a:=difsub({u1=U1+(u0+U0)*h+k*(u0-U0),
+v1=V1+(v0+V0)*h-k*(v0-V0)},dialog):
+> a:=factor(eval(subs(Diff=dif,a))):ord(%);
+[0, 0, 0, 0]
+> a[2], a[5];
+(u0+U0)
+ 
+u0+4h
+∂h
+∂v0
+−U0
+ 
+,−(v0+V0)
+ 
+v0+4h
+∂h
+∂u0
+−V0
+ 
+These equations give rise the solution h =
+q
+c−
+1
+2
+(u0−U0)(v0−V0) where c is a constant.
+If one substitutes this result into the set zero then{0} is returned.
+The next example will be a ﬁrst order differential substitution for the mKdV equation
+u
+t
+=u
+3
++2u
+2
+0
+u
+1
+. Let another equation be unknown v
+t
+=F(v
+0
+,v
+1
+,v
+2
+,v
+3
+):
+Electronic Journal.  29Differential Equations and Control Processes, N 1, 2002
+> vard:=[u,v]: depend(f(v0,v1),F(v0,v1,v2,v3) ):
+> sys:=[u3+2*u0^2*u1, F];
+sys := [u3+2u0
+2
+u1,F]
+> a:=difsub(u0=f);
+There is a branching
+a :=
+  
+∂f
+∂v1
+= 0
+ 
+,
+ 
+∂F
+∂v3
+= 1
+  
+As ∂f/∂v16= 0 then F =v3+G(v0,v1,v2) and we enter the new command.
+> depend(f(v0,v1),G(v0,v1,v2) ): sys:=[u3+2*u0^2*u1, v3+G]:
+> a:=difsub(u0=f, dialog);
+ 
+3
+∂
+2
+f
+∂v0∂v1
+v1+3
+∂
+2
+f
+∂v1
+2
+v2−
+∂f
+∂v1
+∂G
+∂v2
+ 
+If one do not use dialog here then the time of computation is around one second but too much
+branches occur. Integrating the obtained equation one can deﬁne more precisely the input
+parameter and repeat the call, etc.
+There is another type of substitutions. When the zero order conserved densityρ exists for
+an evolution system one can perform the following nonlocal contact transformation [18], [19]
+(t, x, u(t, x))→ (τ, y, U(τ, y))
+τ =t, dy =ρdx+θdt, U(τ, y) =u(t, x), (28)
+where θ is the ﬂux corresponding to the density ρ. This means that
+∂y
+∂x
+=ρ,
+∂y
+∂t
+=θ, D
+x
+u =ρD
+y
+U, D
+t
+u = (D
+τ
++θD
+y
+)U
+This transformation is analogous to the transformation between Lagrange and Euler variables
+in the ﬂuid dynamics. Therefore the procedure executing the transformation (28) was called
+as L E. The syntax is L_E(rho,theta,VARD), where rho=ρ is a conserved density, theta=θ
+(optional) is the ﬂux corresponding to the density ρ and VARD is a list of new dependent
+variables. If vard=[u, v], then you may choose VARD=[U, V] for instance. Let us transform
+the KdV equation taking ρ =u0, for example:
+> L_E(u0,[U]);
+[U τ =U0
+3
+U3+3U0
+2
+U1U2+3U0
+2
+U1]
+If one call the procedure L E with the three parameters then it works slightly faster because
+the θ is entered but is not computed.
+Electronic Journal.  30Differential Equations and Control Processes, N 1, 2002
+7 Zero curvature representations
+Let us consider the following linear matrix system
+Ψ
+x
+=UΨ, Ψ
+t
+=V Ψ, (29)
+where Ψ is a column,U andV are the square matrices depending on the jet space coordinates
+t, x, u
+α
+n
+and a parameterλ. The system (29) is compatible if and only if the following equation
+is valid
+U
+t
+−V
+x
++[U, V ] = 0. (30)
+If the equation (30) is satisﬁed on the solutions manifold of an evolution partial differential
+system
+u
+t
+=K(u), (31)
+but not identically then they say the system (31) possesses the zero curvature representation.
+The systems (29) and (30) are covariant under the gauge transformation:
+Ψ→
+˜
+Ψ =SΨ, U →
+˜
+U =SUS
+−1
++S
+x
+S
+−1
+, V →
+˜
+V =SV S
+−1
++S
+t
+S
+−1
+.
+This transformation may be used for simpliﬁcation the matrices U and V.
+There are several functions in the package JET for manipulating with commutators. The
+ﬁrst of them iscom (commutator). Arguments of com may be both symbolic matrices (names)
+and arrays. If F and G are linear forms of some symbolic matrices then the call com(F,G)
+returns the expanded expression, but the symbolic matrices must be speciﬁed in the global
+set matrices. If F and G are arrays then the explicit value of the commutator [F,G] will be
+returned as array. Procedure com knows all properties of commutators. For example,
+> matrices:={A,B,C,E,U,V}:
+> a:=com(c1*A+2*B, c2*A+3*B+U);
+a := 3c1
+0
+[A,B]
+0
++c1
+0
+[A,U]
+0
+−2c2
+0
+[A,B]
+0
++2
+0
+[B,U]
+0
+The strange primes appeared here because of the undesirable property of lists in the recent
+versions of Maple (V.5 or 6):
+> 2*[A,B];
+[2A, 2B]
+Therefore we were forced introduce the additional primes in the auxiliary procedure
+‘print/com‘:
+> ‘print/com‘:=proc(a,b) ’’[a,b]’’ end:
+But you can remove this procedure from the package if you wish. We omit all primes below for
+brevity. Let us continue our examples.
+Electronic Journal.  31Differential Equations and Control Processes, N 1, 2002
+> vard:=[u]:depend(U(u0), V(u0)):
+> com(U, 2*U+3*V}, com(V,U), dif(com(U,V),u0);
+3[U,V], −[U,V],
+h
+∂U
+∂u0
+,V
+i
++
+h
+U,
+∂V
+∂u0
+i
+com orders its arguments in the alphabetical order. Integration of com(A,B) is possible only if
+A and B are constants, but it is suﬃcient for analysis of the equations (30). Let us consider now
+operations with the arrays.
+> a:=com(A,B)+C; A:=array(1..2,1..2,[[1,0],[0,-1]]);
+B:=array(1..2,1..2,[[c1,c2],[c3,c4]]);
+a := [A,B]+C
+A :=
+"
+1 0
+0 −1
+#
+B :=
+"
+c1 c2
+c3 c4
+#
+> a;
+"
+0 2c2
+−2c3 0
+#
++C
+> evalm(%);
+"
+C 2c2
+−2c3 C
+#
+That’s why all arrays must be substituted simultaneously:
+> C:=array(1..2,1..2,[[a1,0],[0,a2]]): evalm(a);
+"
+a1 2c2
+−2c3 a2
+#
+The better way is to create the set of substitutions
+> A:=’A’: B:=’B’: C:=’C’:
+> s:={A=array(1..2,1..2,[[1,0],[0,-1]]),
+B:=array(1..2,1..2,[[c1,c2],[c3,c4]]),
+C:=array(1..2,1..2,[[a1,0],[0,a2]])}:evalm(eval(subs(s,a)));
+Electronic Journal.  32Differential Equations and Control Processes, N 1, 2002
+"
+a1 2c2
+−2c3 a2
+#
+It is possible to abbreviate the last command:
+> evsub(s,a);
+"
+a1 2c2
+−2c3 a2
+#
+The procedure of JET evsub havethefollowing syntax evsub(expr) or evsub(s,expr), where
+exprisanalgebraicexpressionorsquarematrix, sisanequationorasetofequations. Theﬁrst
+calling sequence is applied for computation the expression or matrix expr. The second calling
+sequence is applied for two purposes. The ﬁrst purpose is the substitution of the matrices into
+the expression expr as in our example and the second one is to substitute some parameters
+into the matrix expr.
+Let (31) be the KdV equation. Let us consider how one can solve the equation (30).
+> vard:=[u]:depend(U(u0), V(u0,u1,u2) ):
+> matrices:={U,V}: sys:=[u3+6*u0*u1]:
+> z:=ED(U) - DF(V) + com(U, V);
+z :=
+∂U
+∂u0
+(u3+6u0u1)−
+∂V
+∂u0
+u1−
+∂V
+∂u1
+u2−
+∂V
+∂u2
+u3+[U,V]
+Here all the ﬂags are unassigned or ﬂag=1. Splitting this equation with respect tou
+3
+we obtain
+> dif(z,u3), F1+ INT(dif(z,u3),u2);
+∂U
+∂u0
+−
+∂V
+∂u2
+, F1+
+∂U
+∂u0
+u2−V
+> depend(U(u0), V(u0,u1,u2), F1(u0,u1) ):
+> matrices:={U,V,F1}: s:={V= dif(U,u0)*u2+F1};
+z:=expand(eval(subs(s,Diff=dif,z)));
+s :=
+n
+V =
+∂U
+∂u0
+u2+F1
+o
+z := 6
+∂U
+∂u0
+u0u1−u1
+∂
+2
+U
+∂u0
+2
+u2−u1
+∂F1
+∂u0
+−
+∂F1
+∂u1
+u2−u2
+ 
+∂U
+∂u0
+,U
+ 
+−[F1,U]
+Finding now F1 as we ﬁnd V
+F
+1
+=F
+2
+−
+1
+2
+u
+2
+1
+∂
+2
+U
+∂u0
+2
+−u
+1
+ 
+∂U
+∂u
+0
+,U
+ 
+,
+substitute it into the expression z:
+Electronic Journal.  33Differential Equations and Control Processes, N 1, 2002
+> depend(U(u0), V(u0,u1,u2), F1(u0,u1), F2(u0) ):
+> matrices:={U,V,F1,F2}:
+> s:={V= dif(U,u0)*u2+F1,
+F1=F2-1/2*u1^2*dif(U,u0$2)-com(dif(U,u0),U)*u1}:
+> z:=expand(eval(subs(s,Diff=dif,z)));
+z := 6
+∂U
+∂u0
+u0u1−u1
+∂F2
+∂u0
++
+1
+2
+u1
+3
+∂
+3
+U
+∂u0
+3
++
+3
+2
+u1
+2
+h
+∂
+2
+U
+∂u0
+2
+,U
+i
+−[F2,U]+u1
+hh
+∂U
+∂u0
+,U
+i
+,U
+i
+It is obvious from this equation that U is the second degree polynomial of u
+0
+. But it is known
+that U is the ﬁrst degree polynomial of u
+0
+. Substituting U =A
+1
+u
+0
++A
+2
+into z one can ﬁnd
+U =A
+1
+u
+0
++A
+2
+, V =A
+1
+u
+2
++A
+3
++3A
+1
+u
+2
+0
+−
+1
+2
+u
+2
+0
+[A
+1
+,[A
+1
+,A
+2
+]]
+−[A
+2
+,[A
+1
+,A
+2
+]]u
+0
+−[A
+1
+,A
+2
+]u
+1
+where the constant matrices A
+i
+satisfy the following equations
+2[[A2,[A1,A2]],A1]−6[A1,A2]−[A2,[A1,[A1,A2]]] = 0,
+[A1,[A1,[A1,A2]]] = 0,[A2,A3] = 0,
+[A1,A3]+[[A2,[A1,A2]],A2] = 0.
+(32)
+Tosimplifysuchequationsonemaydenotesomeofthecommutatorsasnewmatrices([A
+1
+,A
+2
+] =
+A
+4
+, for example) and use the Jacoby identity. There is the procedure Jac that transforms the
+nested commutators according to the Jacobi identity:
+> matrices:={U,V,A,B,C,E}:
+> z1:=com(A, com(B, E)) + com(C, com(A, B));
+z1 := [A,[B,E]]+[C,[A,B]]
+> Jac(z1,A,B,C);
+[A,[B,E]]−[A,[B,C]]+[B,[A,C]]
+> Jac(z1,A,B,B);
+[C,[A,B]]+[B,[A,E]]−[E,[A,B]]
+Jac searches the ﬁrst nested commutator containing A, B and C in z1, transforms it and return
+the result, but the arguments may coincide. In the ﬁrst example A, B and C are contained in
+the second term and it was transformed. In the second example A and B are contained in the
+ﬁrst term that’s why the different results are obtained. The procedure Jac has two optional
+arguments:
+Jac(expr,A,B,C,N), Jac(expr,A,B,C,nested),
+Jac(expr,A,B,C,nested,N)=Jac(expr,A,B,C,N,nested),
+Electronic Journal.  34Differential Equations and Control Processes, N 1, 2002
+where expr is an algebraic expression, A, B, C are matrices, N is a number of the position in
+expr from which the search is begun, nested is the keyword. If the 5th or 6th argument is
+nested then Jac transforms the internal commutator. Here is one more example
+> z2:=com(A,com(B,C)) + com(E,com(C,com(A,B)));
+z2 := [A,[B,C]]+[E,[C,[A,B]]]
+> Jac(z2,A,B,C,2); Jac(z1,A,B,C,nested,2);
+[A,[B,C]]+[C,[E,[A,B]]]+[[A,B],[C,E]]
+[A,[B,C]]−[E,[A,[B,C]]]+[E,[B,[A,C]]]
+The 5th argument 2 in the ﬁrst case make Jac begin the search from the second addend. If one
+calls Jac(z1,A,B,C,nested) then Jac try to transform the internal commutator [B, C] in the
+ﬁrstaddendandtheinformationontheerrorwillbereturned. ThecallJac(z1,A,B,C,2,nested)
+gives the same result as Jac(z1,A,B,C,nested,2).
+When the equation (30) is solved the next problem is to construct Lie algebra. Let us
+consider for example the equations (32), where [A
+1
+,A
+2
+] =A
+4
+:
+[A
+1
+,[A
+2
+,A
+4
+]]+2A
+4
+= 0, [A
+1
+,A
+2
+] =A
+4
+,
+[A
+1
+,[A
+1
+,A
+4
+]] = 0, [A
+2
+,[A
+2
+,A
+4
+]] = [A
+1
+,A
+3
+], [A
+2
+,A
+3
+] = 0.
+(33)
+There are different ways to solve this system. For example, one can choose one of the matrices
+in the Jordan normal form and try to solve the equations directly. But this way is diﬃcult for
+large matrix dimensions and the better way is to investigate the equations (33) in the spirit of
+the ideas by H.D. Wahlquist and F.B. Estabrook [21]. They suggested to introduce the new
+matrices and reduce the problem to the Lie algebra. Introducing in our example matrices
+A
+5
+= [A
+2
+, A
+4
+], A
+6
+= [A
+1
+, A
+4
+], A
+7
+= [A
+1
+, A
+3
+]
+weobtain7matricesand8commutatorrelations. ThisisunclosedLiealgebraas7-dimensional
+algebra has 21 independent commutator relations. The main idea is: if a commutator [A
+i
+, A
+j
+]
+is unknown then
+or [A
+i
+, A
+j
+] is a linear combination of known elements of the Lie algebra,
+or [A
+i
+, A
+j
+] is a new element linear independent with the previous elements.
+So, for (33) the following suggestions are possible:
+or A
+1
+,...,A
+7
+are linear dependent,
+or A
+1
+,...,A
+7
+are linear independent and form the basis,
+or A
+1
+,...,A
+7
+are linear independent but do not form the basis.
+Electronic Journal.  35Differential Equations and Control Processes, N 1, 2002
+Investigating these possibilities step by step with the help of the Jacobi identity one can close
+the algebra. To investigate the second step when we know the basis the following algorithm is
+useful. To obtain the closed table of commutators
+[A
+i
+, A
+j
+] =C
+k
+ij
+A
+k
+(34)
+let us deﬁne some of commutators [A
+i
+, A
+j
+] = x
+1
+ij
+A
+1
++··· +x
+n
+ij
+A
+n
+, where x
+k
+ij
+are the indef-
+inite coeﬃcients. Then we can construct the adjoint representation A
+i
+→ C
+i
+. It is known
+that the matrices C
+i
+satisfy the same relations (34). Therefore substituting A
+i
+= C
+i
+into the
+commutator relations (34) we can obtain the complete set of equations forx
+k
+ij
+and can ﬁnd the
+structural constants C
+i
+jk
+. This algorithm is realized in the procedure struct. The syntax is:
+struct(bas, s, x), where bas is the list of the basis elements A
+i
+of an algebra, s is the set
+of equations (34) and x is a free name. The procedure creates the global array C, global set
+EQ for the closed table (34) and the global set S for substitutions bas
+i
+= C
+i
+. If a system for
+the indeﬁnite coeﬃcients x
+i
+is satisﬁed identically or if the algebra is closed then the empty
+set is returned. If the set of equations contains the explicit contradictions then the message
+Contradiction, 1=0 is returned. In all other cases the system for x
+i
+is returned.
+Let us consider the following simple example:
+> s:={com(A1,A2)=A4}: bas:=[A1,A2,A4]:
+> z:=struct(bas,s,x);
+Structural constants are given by array C[i][kj]=Cˆk {ij}
+Table of commutators [e i,e n]=Cˆk {in}∗e k is given by set EQ
+Substitutions bas[i]=C[i] are set S, and constraints are:
+z :=[[[−x
+4
+x
+3
++x
+6
+x
+1
+,x
+1
+x
+3
++x
+6
+x
+2
+,x
+2
+1
++x
+2
+x
+4
+,x
+1
++x
+5
+], plex(x
+5
+,x
+2
+,x
+1
+,x
+4
+,x
+3
+,x
+6
+),{}],
+[[x
+6
+,x
+3
+,x
+1
++x
+5
+],plex(x
+5
+,x
+2
+,x
+1
+,x
+4
+,x
+3
+,x
+6
+),{x
+2
+1
++x
+2
+x
+4
+}]]
+> EQ;
+{[A1,A4] =x
+1
+A1+x
+2
+A2+x
+3
+A4, [A2,A4] =x
+4
+A1+x
+5
+A2+x
+6
+A4, [A1,A2] =A4}
+The obtained list z contains two variants:
+(a) x
+1
+x
+6
+−x
+3
+x
+4
+= 0, x
+3
+x
+1
++x
+2
+x
+6
+= 0, x
+2
+1
++x
+2
+x
+4
+= 0, x
+5
+=−x
+1
+,
+(b) x
+5
+=−x
+1
+, x
+3
+=x
+6
+= 0, x
+2
+1
++x
+2
+x
+4
+6= 0.
+Setting in (b) x
+1
+=−x
+5
+= 2, x
+2
+= 0 for example, we ﬁnd the sl(2) algebra
+[A
+1
+,A
+2
+] =A
+4
+, [A
+1
+,A
+4
+] = 2A
+1
+, [A
+2
+,A
+4
+] =x
+4
+A
+1
+−2A
+2
+. (35)
+These equations andA
+3
+=−x
+4
+A
+2
+solve the equations (33). Constructing then a representation
+of the obtained Lie algebra we can ﬁnd an explicit form of the matrices U and V.
+For solving the considered in this section problems the following two proceduresCmetric
+andKillingareuseful. ThecallCmetric()returnstheCartanmetrictensorg
+ij
+ofaLiealgebra.
+And the call Cmetric(y) returns the quadratic form g
+ij
+y
+i
+y
+j
+. The command Killing(A,B)
+returns the value of the Killing form < A,B >=trace(adAadB) of the pair elements A,B of
+a Lie algebra. In order to these routines Cmetric and Killing can work the program struct
+must be run beforehand.
+Electronic Journal.  36Differential Equations and Control Processes, N 1, 2002
+8 Recursion operators
+The recursion operator R for the evolution system u
+t
+= K(u) (31) satisﬁes the following
+equation
+[D
+t
+−K
+0
+, R] = 0 (36)
+by deﬁnition (see [3]–[5]). There are three algorithms for constructing the recursion operators
+of the evolution systems at least. The ﬁrst one is the direct solving of the equation (36). The
+second approach uses the equation for the gradient of the spectral parameter [22], it was late
+developed in [23] and independently in [24]. The third algorithm [25] is based on the perfectly
+other ideas. It is more powerful but it is not realized in routines now.
+Let us remind the results of the gradient algorithm. If an evolution system (31) possesses
+the zero curvature representation (30) then the system (29) and its adjoint
+h
+x
+=−hU, h
+t
+=−hV (37)
+are compatible. In view of these equations the function
+g
+α
+=
+δ
+δu
+α
+<h, Uψ>, α = 1,...,m, (38)
+where the angle brackets denote the Euclidean scalar product, satisﬁes the equation for con-
+served covariants
+(D
+t
++K
+0
++
+)g = 0.
+Here+denotestheformalconjugation. IfordU6 1thenwehavethefollowingexplicitformula
+g
+α
+=
+ 
+h,
+  
+U,
+∂U
+∂u
+α
+1
+ 
++
+δU
+δu
+α
+ 
+ψ
+ 
+.
+IfU depend on higher order variables the analogous formulas exist. We adopt that the matrix
+U is embedded into some Lie algebra
+U =
+n
+X
+i=1
+f
+i
+(u,λ)A
+i
+, (39)
+where
+[A
+i
+, A
+j
+] =C
+k
+ij
+A
+k
+, i,j,k = 1,2,...,N>n. (40)
+and λ is a parameter. It is obvious from these formulas that the function (38) is a linear form
+on the Lie algebra
+g
+α
+=
+N
+X
+i=1
+G
+i
+(u)e
+i
+, e
+i
+=<h, A
+i
+ψ>. (41)
+Using (29), (37) and (39) one can easily to see that the functions e
+i
+satisfy the following
+equations
+De
+i
+=<h,[A
+i
+,U]ψ>=
+N
+X
+j,k=1
+C
+k
+ij
+f
+j
+(u,λ)e
+k
+. (42)
+Electronic Journal.  37
+Differential Equations and Control Processes, N 1, 2002
+This is the well-known Lenart operator.
+When the matrices U and V are embedded in the Lie algebra of a small dimension then
+the gradient algorithm works satisfactory. But when the matrixU is embedded in a Lie algebra
+with dimension> 15 then the equation L(u,k)g = 0 is too large object. In this case you can
+try use the third argument of triada, but it will be better to compute the recursion operator
+solving the equation (36) directly.
+It is known (see [25] for instance) that the recursion operators for evolution systems take
+the following form
+R =
+n
+X
+i=0
+F
+n−i
+(u)D
+i
++S(u)D
+−1
+Gt(u), (46)
+where F
+n−i
+are square matrices, the matrices S and Gt may be rectangular. In particular it
+is possible that S is a column and Gt is a row. For a single evolution equation S and Gt are
+vectors in general case. One can prove that the columns ofS are Lie-B¨ acklund symmetries and
+the rows of Gt are conserved covariants. That is,
+(D
+t
+−K
+0
+)S = 0, (D
+t
++K
+0
++
+)Gt
+T
+= 0 (47)
+and these equations can be solved beforehand. Let us mention that the integral term in (46)
+may be transformed according to the formula
+S(u)D
+−1
+Gt(u) = (S(u)C)D
+−1
+(C
+−1
+Gt(u))≡
+˜
+S(u)D
+−1
+˜
+Gt(u),
+whereC is any non-singular constant matrix. This means that one may take the basis symme-
+triesforcolumnsofS thentherowsofGtwillbethelinearcombinationsofthebasiscovariants.
+And vice versa rows of theGt may be the basis covariants then columns of theS are the linear
+combinations of the basis symmetries.
+To obtain from (36) equations for the coeﬃcients F
+i
+, S and Gt of the recursion operator
+the following formula for integration by parts is used
+D
+−1
+FD
+k
+=
+k
+X
+s=1
+(−1)
+s−1
+(D
+s−1
+F)D
+k−s
++(−1)
+k
+D
+−1
+(D
+k
+F). (48)
+The equations for the coeﬃcients F
+i
+, S and Gt are coded in our procedure recursion. One
+can call it with one or two input parameters, the call recursion(m) is possible if m=0 only,
+m is the number of the calling equation. If the order n of the operator (46) is known then
+another calling sequence is possible recursion(m,n), in this case the complete sequence of
+values m=0,1, ... , n+N are allowed where N=ord(K). If one assume n > k then the third
+calling sequence is useful recursion(m,C>=k), where C is a free name. The ﬁrst parameter m
+may be in this case 0,1, ... ,k.
+Let us consider the KdV equation for example:
+> vard:=[u]: sys:=[u3+6*u0*u1]: depend():
+> a:=recursion(0);
+a := 0
+Electronic Journal.  39Differential Equations and Control Processes, N 1, 2002
+> b:=recursion(1);
+Error, (in recursion) First argument is too large
+> b:=recursion(1,n>=1); c:=recursion(2,n>=2);
+b :=−3K3DF(F0)+nF0DF(K3)
+c :=−2K2DF(F0)−3K3DN(F0,2)+nF0DF(K2)−3K3DF(F1)
++(n−1)F1DF(K3)+
+1
+2
+n(n−1)F0DN(K3,2)
+Here n is the order of the recursion operator, F0, F1,... are exactly the coeﬃcients of the
+operator (46). The name n is global. K0, K1,... are the coeﬃcients of the operator
+K
+0
+=
+N
+X
+i=0
+K
+i
+D
+i
+,
+The number N is determined from the list sys (N=3 in our example). To solve the equations
+for F0, F1,... you must create and perform the following set ot substitutions
+> s:={seq(cat(K,i)=Frechet(sys)[i],i=0..3)};
+s :={K2 = 0,K0 = 6u1,K1 = 6u0,K3 = 1}
+where Frechet is the routine for the Frechet derivative of the scalar and vector ﬁelds on the
+jet space. The syntax is Frechet(F) where F is an algebraic expression or a list of expressions.
+ATTENTION: All substitutions are allowed when ﬂag=0 only! The routines
+recursion, Noether and INoether, stand ﬂag=0 automatically.
+Continuing the previous dialog we ﬁnd
+> b:=expand(eval(subs(s,b)));
+b :=−3DF(F0)
+This means that F0 =F0(t). Let us assume that F0 = 1 and n = 2, then
+> s:=s union {F0=1}:
+> c:=recursion(2,2): c:=expand(eval(subs(s,c)));
+c :=−3DF(F1)
+Assuming F1 = 0, one can ﬁnd F2 = 4u0 from the third equation, and the fourth is
+Electronic Journal.  40Differential Equations and Control Processes, N 1, 2002
+> s:=s union {F1=0,F2=4*u0}:
+> a:=recursion(4,2): a:=expand(eval(subs(s,a/3)));
+a := 12DF(u1)−6DN(u0,2)−3(DF( S)&∗ Gt)−3( S&∗DF( Gt))
+To solve such equations one must ﬁnd S and Gt from the equations (D
+t
+−K
+0
+) S = 0, (D
+t
++
+K
+0
++
+) Gt
+T
+= 0. But in our example the solution is obvious S = 2u1, Gt = 1 and we obtain
+Lenart’s operator (45).
+Let us consider now the Kupershmidt equation
+u
+t
+=u
+5
++5u
+1
+u
+3
++5u
+2
+2
+−5u
+2
+0
+u
+3
+−20u
+0
+u
+1
+u
+2
+−5u
+3
+1
++5u
+4
+0
+u
+1
+. (49)
+This equation possesses the six order recursion operator in the form (46) where S and Gt are
+two-dimensional vectors [29], [30].
+> vard:=[u]: depend(F1(x),F2(x) ):
+> sys:=[u5+5*u1*u3+5*u2^2-5*u0^2*u3-20*u0*u1*u2-5*u1^3+5*u0^4*u1]:
+> s:={seq(cat(K,i)=Frechet(sys)[i],i=0..5),F0=1,F1=0}:
+If one use the shown substitution s, then the equations 0−2 are satisﬁed and the next is
+> a:=recursion(3,6): a:=expand(eval(subs(s,a)));
+6DF(u1)−6DF(u0
+2
+)−DF(F2)
+> pot(%);
+Finish,rm = 0
+6u1−F2−6u0
+2
+> solve(%,{F2});
+{F2 = 6u1−6u0
+2
+}
+> s:=s union %:
+Noticethattheroutinepotstandsﬂag=1andrestoresthepreviousvalueofﬂagbeforereturning
+the result. Therefore one must declare all functions in depend before calling pot. One can ﬁnd
+F3,...,F6 by the same way and the next commands are
+> depend(_Gt(x),_S(x)):
+> a:=recursion(8,6): a:=expand(eval(subs(s,a))):
+> flag:=1: a:=expand(eval(subs(s,a/5)));
+a :=−30u2u0u3−10u0u1u4+10u0
+3
+u4+50u0
+2
+u2
+2
++20u1
+4
+−20u1
+2
+u3
+−30u1u2
+2
++160u0u1
+2
+u2−60u0
+4
+u1
+2
++80u0
+2
+u1u3−2u4u2−2u0u6
+−12u0
+5
+u2− S&∗
+∂ Gt
+∂x
+−
+∂ S
+∂x
+&∗ Gt−4u5u1
+Electronic Journal.  41Differential Equations and Control Processes, N 1, 2002
+ATTENTION: It will be the error if you enter ﬂag=1 immediately after
+a:=recursion(8,6).
+> b:=pot(a);
+Can not integrate
+b :=−2u0u5−2u1u4−10u3u0u1+10u3u0
+3
+−10u0u2
+2
+−10u1
+2
+u2+50u0
+2
+u1u2+20u0u1
+3
+−12u0
+5
+u1
+> rm;
+− S&∗
+∂ Gt
+∂x
+−
+∂ S
+∂x
+&∗ Gt
+The routine pot can not integrate rm, but everybody can do it by hand and the result is
+< S, Gt >= b, where the angle brackets denote the scalar product < S, Gt >= S
+1
+Gt
+1
++
+S
+2
+Gt
+2
+. Equation (49) is time independent and it possesses the symmetry S
+1
+=u
+t
+=sys[1] =
+u
+5
++... and u
+0
+is the conserved covariant. Hence one can try set S
+1
+=sys[1], Gt
+1
+=−2u
+0
+:
+> c:=factor(b+2*u0*sys[1]);
+c :=−2u1
+ 
+−5u0u1
+2
++5u1u2+u4−5u0
+2
+u2+u0
+5
+ 
+Theﬁeldu
+1
+isthesymmetrywithrespecttotranslationsalongtheaxisX andtheexpressionin
+the brackets is the conserved covariant as it can be easily checked with the help of the routine
+covariant. If one add to the set s two more equations
+> s:=s union {_S=<-2*op(sys),-2*u1>,
+_Gt=<u0,u4-5*u0^2*u2-5*u0*u1^2+5*u1*u2+u0^5>}:
+then this set contains the solution of all equations for the recursion operator.
+Our next example is the Schr¨ odinger system
+u
+t
+=u
+2
++u
+2
+0
+v
+0
+, v
+t
+=−v
+2
+−v
+2
+0
+u
+0
+. (50)
+To ﬁnd the recursion operator one must enter the following commands:
+> vard:=[u,v]: depend( ):
+> sys:=[u2+u0^2*v0,-v2-v0^2*u0]:
+> s:={K0=Frechet(sys)[0],K1=Frechet(sys)[1],K2=Frechet(sys)[2]};
+K0 =
+"
+2u0v0 u0
+2
+−v0
+2
+−2u0v0
+#
+, K1 =
+"
+0 0
+0 0
+#
+, K2 =
+"
+1 0
+0 −1
+#
+Let us call now the routine recursion.
+Electronic Journal.  42Differential Equations and Control Processes, N 1, 2002
+> a:=recursion(0);
+a := (F0&∗K2)−(K2&∗F0)
+As K2 is the diagonal matrix with the different elements then F0 is diagonal too. Follow to
+[31] we set n = 1, F0 =K2, F1 = 0, then a = 0 and the next equation is
+> const:={F0,K2}:
+> s:=s union {F0=Frechet(sys)[2],F1=0}:
+> a:=recursion(2,1):a:=eval(subs(F1=0,K1=0,a));
+a := (F0&∗K0)−(K0&∗F0)−&∗(K2, S, Gt)+&∗( S, Gt,K2)
+One can prove that if one set
+> {_S=array(1..2,1..2,[[u0,0],[-v0,0]]),
+_Gt=array(1..2,1..2,[[v0,u0],[0,0]])};
+(
+S =
+"
+u0 0
+−v0 0
+#
+, Gt =
+"
+v0 u0
+0 0
+#)
+then all equatons are satisﬁed and the well known operator is obtained.
+Recursion operators for many important equations are hereditary. Operator R is called
+hereditary one if the bilinear form Φ(f,g) =R
+0
+[Rf]g−RR
+0
+[f]g is symmetric [26] – [28]. The
+routineheredcomputes and simpliﬁes the expressionΦ(f,g)−Φ(g,f)using the differentiation
+rules and the formula (48). If zero is obtained then true is returned else false is returned
+and the simpliﬁed expression is stored under the name rm.The syntax is hered(L,k) where
+L = [F
+0
+,F
+1
+,...,F
+n
+,S,Gt] is the list of the coeﬃcients of the operator in the form (46),k is the
+matrix dimension of the operator. Let us consider the examples.
+For the Lenart operator (45) one has to enter the following commands:
+> vard:=[u]:hered([1,0,4*u0,2*u1,1],1);
+true
+One more example is the recursion operator for the potential Sawada-Kotera equation [29]
+R =D
+6
++6u
+1
+D
+4
++3u
+2
+D
+3
++(8u
+3
++9u
+2
+1
+)D
+2
++(2u
+4
++3u
+2
+u
+1
+)D
++3u
+5
++13u
+3
+u
+1
++3u
+2
+2
++4u
+3
+1
+−2u
+1
+D
+−1
+(u
+4
++u
+2
+u
+1
+)
+−2D
+−1
+(u
+6
++3u
+4
+u
+1
++6u
+3
+u
+2
++2u
+2
+u
+2
+1
+)
+> vard:=[u]: L:=[1,0,6*u1,3*u2,8*u3+9*u1^2,2*u4+3*u2*u1, 3*u5+13u3*u1
++3*u2^2+4*u1^3,<-2*u1,-2>,<u4+u2*u1,u6_3*u4*u1+6*u3*u2+2*u2*u1^2>]:
+> hered(L,1);
+true
+It was the diﬃcult test, to perform it the Intel processor at 400 Mhz worked 67 s.
+Electronic Journal.  43Differential Equations and Control Processes, N 1, 2002
+If the routine returns false the transformed expression Φ(f,g)−Φ(g,f) is stored under
+the name rm for the visual control and moreover the integral terms in the form D
+−1
+FD
+−1
+G
+or D
+−1
+F are stored separately under the name zero.
+The next example is the recursion operator for the nonlinear Schr¨ odinger system:
+R =
+"
+1 0
+0 −1
+#
+D+2
+"
+u0 0
+−v0 0
+#
+D
+−1
+"
+v0 u0
+0 0
+#
+> L:=[matrix([[1,0],[0,-1]]),0,2*matrix([[u0,0],[-v0,0]]),
+matrix([[v0,u0],[0,0]])];
+> vard:=[u,v]:hered(L,2);
+true
+9 Noether operators
+The Noether operator Θ maps the set of conserved covariants of an evolution system
+u
+t
+=K(u) (51)
+into the set of its Lie-B¨ acklund symmetries. The operator J performing the inverse map is
+called the inverse Noether operator.
+TheNoetheroperatorΘandtheinverseNoetheroperatorJ satisfythefollowingequations
+(D
+t
+−K
+0
+)Θ = Θ(D
+t
++K
+0
++
+), (52)
+(D
+t
++K
+0
++
+)J =J(D
+t
+−K
+0
+). (53)
+Of course, if Θ satisﬁes the equation (52) and Θ
+−1
+exists then it satisﬁes the equation (53).
+But one can not ﬁnd Θ
+−1
+(or J
+−1
+) explicitly as a rule.
+Let us consider the following operators
+Θ
+s
+=
+1
+2
+(Θ+Θ
++
+), Θ
+a
+=
+1
+2
+(Θ−Θ
++
+),
+J
+s
+=
+1
+2
+(J +J
++
+), J
+a
+=
+1
+2
+(J−J
++
+).
+Θ
+s
+(J
+s
+) and Θ
+a
+(J
+a
+) are called the symmetric and antisymmetric parts of the operator Θ (J)
+respectively. It follows from the deﬁnitions (52) and (53) that the both Θ
+s
+and Θ
+a
+are the
+Noether operators; J
+s
+and J
+a
+are the inverse Noether operators. There is the observation that
+Noether and inverse Noether operators are antisymmetric for the systems possessing the zero
+curvature representations. Nevertheless we consider below the operators Θ and J in general
+form.
+If an evolution system admits two Noether operators Θ
+1
+and Θ
+2
+and Θ
+2
+is invertible then
+Θ
+1
+Θ
+−1
+2
+is the recursion operator. If two inverse Noether operators J
+1
+and J
+2
+exist and J
+2
+is
+invertible then J
+−1
+2
+J
+1
+is the recursion operator. Some of the evolution systems possess the
+Electronic Journal.  44Differential Equations and Control Processes, N 1, 2002
+Noether operator Θ and the inverse Noether operator J (6= Θ
+−1
+) then ΘJ is the recursion
+operator [35].
+The most general form of the Noether operators known today is
+Θ =
+n
+X
+i=0
+F
+n−i
+D
+i
++SD
+−1
+St, (54)
+J =
+n
+X
+i=0
+J
+n−i
+D
+i
++GD
+−1
+Gt. (55)
+whereF
+i
+, J
+i
+, S, St, G andGt are matrices depending on the jet space variables. The columns
+of S and rows of St are Lie-B¨ acklund symmetries of the evolution system; the columns of G
+and rows ofGt are conserved covariants of the system. This means that for the system writing
+in the form (51) the following equations must be satisﬁed
+(D
+t
+−K
+0
+)S = 0, (D
+t
+−K
+0
+)St
+T
+= 0, (56)
+(D
+t
++K
+0
++
+)G = 0, (D
+t
++K
+0
++
+)Gt
+T
+= 0, (57)
+whereT is the transposition symbol. It’s happened sometimes thatS = 0 orG = 0 in (54) and
+(55).
+Let us mention that the integral term in (54) (and (55)) may be transformed according to
+the formula
+SD
+−1
+St = (SC)D
+−1
+(C
+−1
+St)≡
+˜
+SD
+−1
+˜
+St,
+whereC is any non-singular constant matrix. This means that one may take the basis symme-
+tries for columns ofS then the rows ofSt are the linear combinations of the basis symmetries.
+And vice versa rows of the St may be the basis symmetries then the columns of the S are the
+linear combinations of the basis symmetries. By analogy one may take for the columns ofG or
+for the rows of Gt the basis conserved covariants.
+There are two procedures in JET for ﬁnding the operators (54) and (55). The procedure
+Noether returns the equations for the matrices F
+i
+of the operator (54). The equations (56)
+must be solved beforehand. The procedure INoether returns the equations for the matrices
+J
+i
+of the operator (55). The equations (57) must be solved beforehand. The both procedures
+Noether and INoether have the same syntax as the procedure recursion. They may be
+called with one or two parameters, but the call Noether(m) is possible for m=0 only; m is the
+number of returned equation. If you know that the order n of Θ is greater or equal to k you
+can call Noether(m,C>=k), where C is any free name. In this case m = 0,1,...,k and output
+depend on parameter n that is the global variable. When you know exactly that the order
+of Θ is n the call Noether(m,n) is possible for m=0,1, ... , n+N, N=ord(sys) and gives the
+complete system of equations (52).
+The coeﬃcients F
+i
+and J
+i
+of the operators (54) and (55) take in our routines the same
+names F
+i
+. The coeﬃcients S, St, G and Gt are denoted as S, St, G and Gt respectively,
+these coeﬃcients are declared as the matrices in the global set matrices automatically.The
+coeﬃcients F
+i
+of Θ and J are square matrices and S, St, G, Gt may be rectangular. But in
+the scalar case F
+i
+are scalar functions, S, St, G and Gt may be scalars or vectors. The
+coeﬃcients of the operators K
+0
+=
+P
+K
+i
+D
+i
+and K
+0
++
+=
+P
+(−D)
+i
+K
+T
+i
+are coded as K0, K1, ...
+and tK0, tK1, ... respectively. That is, tK0 is the transposed of K0, etc.
+Let us consider examples. The ﬁrst will be the KdV equation:
+Electronic Journal.  45Differential Equations and Control Processes, N 1, 2002
+> vard:=[u]: depend( ): sys:=[u3+6*u0*u1]:
+> s:={seq(cat(K,i)=Frechet(sys)[i],i=0..3)}; a:=Noether(0);
+s :=K0 = 6u1,K1 = 6u0,K2 = 0,K3 = 1
+a := 0
+> a:=Noether(1,C>=1);
+a := 2F0K2−(n+3)F0DF(K3)+3K3DF(F0)
+> a:=expand(eval(subs(s,a)));
+3DF(F0)
+Let us take F0 = 1 and n = 3, then
+> s:=s union {F0=1}:
+> a:=Noether(2,3): a:=expand(eval(subs(s,a)));
+a := 3DF(F1)
+Assuming that operator Noether does not depend on t we obtain F1 =c1 =const,
+> s:={K0=6*u1,K1=6*u0,K2=0,K3=1,F0=1,F1=c1}: const:={c1}:
+> a:=Noether(3,3): a:=expand(eval(subs(s,a)));
+a := 12u1−24DF(u0)+3DF(F2)
+To ﬁnd F2 one can apply pot:
+> depend(F2(u0,u1),F3(u0,u1) ):
+> pot(-a/3);
+Finish, rm = 0
+−F2+4u0
+This means that F2 = 4u0+c2.
+> s:=s union {F2=4*u0+c2}: const:={c1,c2}:
+> a:=Noether(4,3): a:=expand(eval(subs(s,a)));
+a := 12u1c1+18DF(u1)−24DN(u0,2)−18c1DF(u0)+3DF(F3)+2 S&∗ St
+Assuming S = 0 one can ﬁnd as above F3 = 2u1+2c1u0+c3. The 5th equation is satisﬁed
+identically and the 6th gives c1 =c3 = 0. So, we obtained the well known operator
+Θ =D
+3
++(4u
+0
++c
+2
+)D+2u
+1
+=D
+3
++2(u
+0
+D+Du
+0
+)+c
+2
+D, (58)
+where c
+2
+is arbitrary parameter.
+Let us consider now the Kupershmidt equation.
+u
+t
+=u
+5
++5u
+1
+u
+3
++5u
+2
+2
+−5u
+2
+0
+u
+3
+−20u
+0
+u
+1
+u
+2
+−5u
+3
+1
++5u
+4
+0
+u
+1
+. (59)
+This equation admits Noether operator Θ =D and the inverse Noether operator J. Operator
+J takestheform(55)wheren=5,GandGtarevectors. Thefollowingcommandsarenecessary
+Electronic Journal.  46Differential Equations and Control Processes, N 1, 2002
+> depend(F1(u0,u1),F2(u0,u1) ): vard:=[u];
+> sys:=[u5+5*u1*u3+5*u2^2-5*u0^2*u3-20*u0*u1*u2-5*u1^3+5*u0^4*u1]:
+> s:={seq(cat(K,i)=Frechet(sys)[i],i=0..5)}: a:=INoether(0);
+0
+The ﬁrst and the second equations give F0 = 1 and F1 = c1 respectively. To ﬁnd the third
+equation one must enter the commands
+> s:=s union {F0=1,F1=c1}: const:={c1,F0,F1,K5}:
+> a:=INoether(3,5): a:=expand(eval(subs(s,a)));
+a := 20u2−40u0u1+10DF(u1)−10DF(u0
+2
+)−5DF(F2)
+To integrate this and the next equations enter the command
+> depend(F2(u0),F3(u0),F4(u0),F5(u0)):
+Then
+> solve(c2+pt(a/5),{F2}); s:=s union %:
+> const:=const union {c2}:
+{F2 =c2+6u1−6u0
+2
+}
+OnecanﬁndbythesamewayF3, F4andF5fromthe4th, 5thand6thequationsrespectively.
+These functions contain arbitrary constantsc3, c4 andc5. The 7th equation contains the term
+DF(G&∗Gt) and the order of this equation is equal 5. Hence the covariants G and Gt have
+the fourth order. Applying the routine covariant one can ﬁnd that the general fourth order
+covariant takes the following form
+g =a
+1
+ 
+u4+5(u
+1
+−u
+2
+0
+)u
+2
+−5u
+0
+u
+2
+1
++u
+5
+0
+ 
++a
+2
+u
+0
++a
+3
+, (60)
+where a
+i
+are constants. So, one can set
+> {_G=<u4+5*(u1-u0^2)*u2-5*u0*u1^2+u0^5,u0,1>, _Gt=<g1,g2,g3>};
+
+
+
+
+
+
+
+G =
+
+
+
+
+u4+5
+ 
+u1−u0
+2
+ 
+u2−5u0u1
+2
++u0
+5
+u0
+1
+
+
+
+
+, Gt =
+
+
+
+
+g1
+g2
+g3
+
+
+
+
+
+
+
+
+
+
+
+where g
+i
+are the covariants in the general form (60). Including this set in the set s, we found
+from the seventh and eighth equations all previous constants c
+i
+= 0 and the covariants g
+i
+:
+g
+1
+=−2u0, g
+2
+=−2(u4+5(u1−u0
+2
+)u2−5u0u1
+2
++u0
+5
+), g
+3
+=const
+The operator D is the Noether operator for the Kupershmidt equation and D
+−1
+is the inverse
+Noether operator. Therefore one may set g
+3
+= 0 as this constant gives the trivial term g
+3
+D
+−1
+Electronic Journal.  47Differential Equations and Control Processes, N 1, 2002
+in the operator J. Extracting the coeﬃcients F
+i
+from the set s we obtain
+J =D
+5
++6(u
+1
+−u
+2
+0
+)D
+3
++9(u
+2
+−2u
+0
+u
+1
+)D
+2
++(5u
+3
+−22u
+0
+u
+2
+−13u
+2
+1
+−6u
+1
+u
+2
+0
++9u
+4
+0
+)D
++u
+4
+−8u
+0
+u
+3
+−15u
+1
+u
+2
+−3u
+2
+0
+u
+2
+−6u
+0
+u
+2
+1
++18u
+3
+0
+u
+1
+−2(u
+4
++5(u
+1
+−u
+2
+0
+)u
+2
+−5u
+0
+u
+2
+1
++u
+5
+0
+)D
+−1
+u
+0
+−2u
+0
+D
+−1
+(u
+4
++5(u
+1
+−u
+2
+0
+)u
+2
+−5u
+0
+u
+2
+1
++u
+5
+0
+).
+(61)
+The computed operator coincides with the operator J from [29].
+One more example is the Drinfeld-Sokolov-Hirota-Satsuma system [32], [33]
+u
+t
+=
+1
+2
+u
+3
++3uu
+1
+−6vv
+1
+, v
+t
+=−v
+3
+−3uv
+1
+. (62)
+This system is often cited in the West as Hirota-Satsuma system. It possesses the ﬁrst order
+inverse Noether operator (see [29], for example).
+> vard:=[u,v]: sys:=[1/2*u3+3*u0*u1-6*v0*v1,-v3-3*u0*v1]:
+> depend(F1(u0),F2(u0),F3(u0),F4(u0),F5(u0),F6(u0),_Gt(x),_G(x)):
+> s:={}:for i from 0 to 3 do s:=s union {cat(K,i)=Frechet(sys)[i],
+cat(tK,i)=linalg[transpose](Frechet(sys)[i])} od:
+> a:=INoether(0);
+a := &∗(F0,K3)−&∗(tK3,F0)
+As K
+3
+is the diagonal matrix and tK
+3
+= K
+3
+= diag(1/2,−1) then F0 is also diagonal. We
+assume that F0 is a constant matrix:
+> s:=s union {F0=matrix([[c1,0],[0,c2]])}:
+> const:={F0,K3,tK3,c1,c2}:
+> a:=INoether(1,C>=1);
+a := &∗(F0,K2)+&∗(tK2,F0)+&∗(F1,K3)−&∗(tK3,F1)−3DF(&∗(tK3,F0))
+As this is the algebraic equation then no need to declare any functions
+> s:=s union {F1=matrix([[c3,c4],[c5,c6]])}:
+> a:=evsub(s,a);
+a :=
+"
+0 −3/2c4
+3/2c5 0
+#
+> s:=s minus {F1=array(1..2,1..2,[[c3,c4],[c5,c6]])} union
+{F1=array(1..2,1..2,[[c3,0],[0,c6]])}:
+But the command minus does not work here. There are two ways to solve this problem: or
+copy the output and remove the old expression for F1 by hand or add to s two equations
+c4 = 0,c5 = 0. The next equation contains the covariants G and Gt therefore one must ﬁnd
+themnow. Verysimplecomputationgivesthatg = [c1u0+c2,−2c1v0]isthegeneralﬁrstorder
+covariant:
+Electronic Journal.  48Differential Equations and Control Processes, N 1, 2002
+> covariant([c1*u0+c2,-2*c1*v0]), zero;
+{}, {}
+Let us try to set
+> {_G=matrix([[u0,1],[-2*v0,0]]),
+_Gt=matrix([[k1*u0+k2,-2*k1*v0],[k3*u0+k4,-2*k3*v0]])};
+> s:=s union %: const:=const union {c3,c6,k1,k2,k3,k4}:
+(
+G =
+"
+u0 1
+−2v0 0
+#
+, Gt =
+"
+k1u0+k2 −2k1v0
+k3u0+k4 −2k3v0
+#)
+Then we obtain the following equations
+> a:=INoether(2,1); a:=evsub(s,a);
+a :=−&∗(tK3,
+G
+,
+G
+t)+&∗(F0,K1)−&∗(tK1,F0)+&∗(F1,K2)
++&∗(tK2,F1)+&∗(F0,DF(K2))+2DF(&∗(tK2,F0))
+−3DF(&∗(tK3,F1))−3DN(&∗(tK3,F0),2)+&∗( G, Gt,K3)
+a :=
+"
+0 3u0k1v0+3k3v0−6c1v0
+−3u0k1v0−3v0k2+6c1v0 0
+#
+> s1:={k1=0,k2=2*c1,k3=2*c1}:
+> s:=s union s1: a:=evsub(s,a);
+a :=
+"
+0 0
+0 0
+#
+> a:=INoether(3,1): a:=evsub(s,a):flag:=1:a:=evsub(s,a);
+a :=
+"
+0 −12c1v1−3c2v1−6c3v0
+−12c1v1−3c2v1+6c3v0 0
+#
+> s1:=s1 union {c3=0,c2=-4*c1}:
+> s:=s union {c3=0,c2=-4*c1}: a:=evsub(s,a);
+a :=
+"
+0 0
+0 0
+#
+> a:=INoether(4,1): a:=evsub(s,a):flag:=1:a:=evsub(s,a);
+Electronic Journal.  49Differential Equations and Control Processes, N 1, 2002
+"
+0 −3c6v1−6v0k4
+−3c6v1+6v0k4 3c6u1
+#
+> s1:=s1 union {c6=0,k4=0}:
+> s:=s union {c6=0,k4=0}:
+> a:=evsub(s,a);
+a :=
+"
+0 0
+0 0
+#
+It was the last equation. Let us extract now the solution from the set s.
+> z:={F0,F1,_G,_Gt}:S:={}:
+for i in s do if has(z,lhs(i)) then S:=S union {i} fi od;
+> S:=evsub(s1,S);
+S :=
+(
+G =
+"
+u0 1
+−2v0 0
+#
+,F1 =
+"
+0 0
+0 0
+#
+,F0 =
+"
+c1 0
+0 −4c1
+#
+,
+Gt =
+"
+2c1 0
+2c1u0 −4c1v0
+#)
+If we set c
+1
+= 1/2 this solution coincides with one that is presented in [29]:
+J =
+"
+1/2 0
+0 −2
+#
+D+
+"
+u0 1
+−2v0 0
+#
+D
+−1
+"
+1 0
+u0 −2v0
+#
+(63)
+Often it is important to know whether the Noether or inverse Noether operator antisym-
+metric. The routine asymm checks the antisymmetry condition (L+L
++
+)F = 0, ∀F for the
+operators taking the following form
+L =L
+0
+D
+n
++L
+1
+D
+n−1
++···+L
+n
++AD
+−1
+B, (64)
+where L
+i
+are n×n matrices, A and B are such matrices that AB is n×n matrix. When
+n = 1 A and B may be scalars or vectors. The syntax is asymm(L,n), where L is the list
+L = [L
+0
+,L
+1
+,...,L
+n
+,A,B], andn is the matrix dimension of the coeﬃcientsL
+i
+. If the operator
+is antisymmetric then true is returned, else is returned false. The routine stands ﬂag=1 and
+restore the previous value of ﬂag before returning the result. Let us consider the examples. If
+we have
+L =D
+3
++uD+Du =D
+3
++2uD+u
+1
+,
+then
+> vard:=[u]: asymm([1,0,2*u0,u1,0,0],1);
+Electronic Journal.  50Differential Equations and Control Processes, N 1, 2002
+true
+Let us add the integral terms uD
+−1
+u+D
+−1
+or uD
+−1
++D
+−1
+u:
+> asymm([1,0,2*u0,u1,<u0,1>,<u0,1>],1);
+true
+> asymm([1,0,2*u0,u1,<u0,1>,<1,u0>],1);
+true
+But adding D
+2
+, we obtain
+> asymm([1,1,2*u0,u1,0,0],1);
+false
+In such cases the expression (L+L
++
+)F is stored under the global name rm
+> rm;
+2
+∂
+2
+F01
+∂x
+2
+for the visual control.
+Let us consider the matrix operator (63):
+> L:=[matrix([[1/2,0],[0,-2]]),matrix([[0,0],[0,0]]),
+matrix([[u0,1],[-2*v0,0]]),matrix([[1,0],[u0,-2*v0]])]:
+> vard:=[u,v]: asymm(L,2);
+true
+Noether operator of an integrable evolution system is the implectic (Hamiltonian, cosym-
+plectic) operator as a rule and the inverse Noether operator is the symplectic operator as a
+rule. We follow below to the deﬁnitions from [34], [35].
+The operator Θ is called the implectic one if it is antisymmetric Θ
++
+=−Θ and the bracket
+{f,g,h;Θ} =<f, Θ
+0
+[Θg]h> satisﬁes the Jacobi identity
+{f,g,h;Θ}+{g,h,f;Θ}+{h,f,g;Θ}∈ ImD. (65)
+TheoperatorJ iscalledthesymplecticoneifitisantisymmetricJ
++
+=−J andthebracket
+[f,g,h;J] =<f, J
+0
+[g]h> satisﬁes the Jacobi identity
+[f,g,h;J]+[g,h,f;J]+[h,f,g;J]∈ ImD. (66)
+The angle brackets denote here the Euclidean scalar product and f, g, h are arbitrary
+functions on the jet space. But it is suﬃcient to consider thatf, g, h depend onx only. Let us
+mention that there exists the powerful technique of the functional multivectors [4] for the check
+Electronic Journal.  51Differential Equations and Control Processes, N 1, 2002
+the identity (65). This technique is very useful for the hand computation, but it was simpler
+for us to code the direct reduction of (65) and (66) with the help of the integration by parts.
+The procedure implectic checks the identity (65). The syntax is the same as for asymm:
+implectic(L,n), L=[L
+0
+,L
+1
+,...,L
+n
+,A,B] is the list of the coeﬃcients of the operator (64),
+the second parameter n is the matrix dimension of the operator L. But if n 6= nops(vard),
+then the message on the error is returned. The parameter n was introduced for the control of
+correctness.
+Theroutinesymplecticchecksontheidentity(66). Thesyntaxis symplectic(L,n)with
+the same parameters as for implectic. The output is true or false, for the both implectic
+and symplectic. If false is returned the reminder of integration is stored under the global
+name rm for additional control.
+Let us consider, for example, the Noether operator (58). It is antisymmetric as it was
+shown above. Let us check the identity (65).
+> vard:=[u]: implectic([1,0,4*u0+c2,2*u1,0,0],1);
+true
+Theboth identities (65) and (66) are satisﬁed for anylinear operatorwithconstantcoeﬃcients.
+For example, for the operators D and D
+3
+we have:
+> implectic([1,0,0,0],1),implectic([1,0,0,0,0,0],1);
+true, true
+The potential Sawada-Kotera equation u
+t
+= u
+5
++5u
+1
+u
+3
++(5/3)u
+3
+1
+admits the following
+implectic Noether operator Θ =D+2(u
+1
+D
+−1
++D
+−1
+u
+1
+) (see [29]). Let us check this
+> implectic([1,0,2*<u1,1>,2*<1,u1>],1);
+true
+The DSHS system (62) admits the following Noether operator (see [29])
+Θ =
+"
+1 0
+0 1
+#
+ 
+1
+2
+D
+3
++2uD+u
+1
+ 
++
+"
+0 1
+1 0
+#
+(2vD+v
+1
+).
+Let us check is it implectic or not:
+> vard:=[u,v]: L:=[1/2*matrix([[1,0],[0,1]]), 0, 2*matrix([[u0,v0],[v0,u0]]),
+matrix([[u1,v1],[v1,u1]]),0,0]:
+> implectic(L,2);
+true
+The nonlinear Schr¨ odinger system (50) admits the following Noether operator
+Θ =
+"
+0 1
+1 0
+#
+D+
+"
+u 0
+−v 0
+#
+D
+−1
+"
+u −v
+0 0
+#
+Electronic Journal.  52Differential Equations and Control Processes, N 1, 2002
+> vard:=[u,v]: L:=[matrix([[0,1],[1,0]]),0,matrix([[u0,0],[-v0,0]]),
+matrix([[u0,-v0],[0,0]])]:
+> implectic(L,2);
+true
+Let us consider now the examples with inverse Noether operators. The Kupershmidt
+equation (59) possesses the inverse Noether operator (61). The check of the symplecticness:
+> L:=[1,0,6*u1-6*u0^2,9*u2-18*u0*u1,
+5*u3-22*u0*u2-13*u1^2-6*u1*u0^2+9*u0^4,
+u4-8*u0*u3-15*u1*u2-3*u0^2*u2-6*u0*u1^2+18*u0^3*u1,
+<u4+5*(u1-u0^2)*u2-5*u0*u1^2+u0^5,u0>,
+-2*<u0,u4+5*(u1-u0^2)*u2-5*u0*u1^2+u0^5>]:
+> vard:=[u]: symplectic(L,1);
+true
+The Sawada-Kotera equation
+u
+t
+=u
+5
++5uu
+3
++5u
+1
+u
+2
++5u
+2
+u
+1
+possesses the following inverse Noether operator
+J =D
+3
++2uD+u
+1
++
+ 
+u
+2
++
+1
+2
+u
+2
+ 
+D
+−1
++D
+−1
+ 
+u
+2
++
+1
+2
+u
+2
+ 
+.
+The check of the symplecticness:
+> L:=[1, 0,2*u0,u1,<u2+u0^2/2,1>,<1,u2+u0^2/2>]:
+> vard:=[u]: symplectic(L,1);
+true
+ATTENTION: We coded in implectic and symplectic integration of the most
+typical expressions. If the integral terms in an operator are cumbersome then
+we do not sure that integration will be completely performed. Therefore in such
+cases the message ”Probably false”, see rm is typed and simpliﬁed
+expression (65) or (66) is stored in rm. In such cases you have to look at the
+reminder rm and investigate it by hand.
+Let we have, for example
+J =
+"
+1 0
+0 2
+#
+D
+3
++
+"
+u0 v0
+v0 u0
+#
+D+1/2
+"
+u1 v1
+v1 u1
+#
+−
+"
+1 u0
+2
++v0
+2
+0 ku0v0
+#
+D
+−1
+"
+u0
+2
++v0
+2
+ku0v0
+1 0
+#
+then entering vard:=[u,v]: L:=[...]: we have
+Electronic Journal.  53Differential Equations and Control Processes, N 1, 2002
+> asymm(L,2); symplectic(L,2);
+true
+Probably false, see rm
+> factor(rm);
+v0(k−2)
+ 
+∂G01
+∂x
+F02H01−
+∂G01
+∂x
+F01H02+
+∂F01
+∂x
+H02G01
++
+∂H01
+∂x
+G02F01−
+∂F01
+∂x
+H01G02−
+∂H01
+∂x
+G01F02
+ 
+It is obvious that J is symplectic if and only if k = 2.
+10 Auxiliary Routines
+The routine Desol is useful for solving the ordinary differential equations or systems in the
+JET notations:
+> vard:=[u,v]: depend(f(x,u0,v0) );
+> a:=dif(f,x$2)+f;
+a :=
+∂
+2
+f
+∂x
+2
++f
+> Desol(a,{f(x)});
+f = C1sin(x)+ C2cos(x)
+DesoltransformsaninputequationintostandardMapleform,callsthebuilt-infunctiondsolve
+and returns the result in the notations of the package JET. The ﬁrst parameter of Desol is an
+equation or set of equations, the second parameter is the set of functions.
+The routine entry transform the sums into lists:
+> a:=b-c+d+e-f+g*x^2+k*y-r*sin(x):
+> entry(a,3);
+[b+d−c, −f +gx
+2
++e, ky−rsin(x)]
+The ﬁrst parameter of entry is an expression, the second parameter is an integer number,
+number of addends of elements in the output list.
+The routine vrd returns the sequences of the dependent variables:
+> vard:=[u]:vrd(4);
+u0, u1, u2, u3, u4
+Electronic Journal.  54Differential Equations and Control Processes, N 1, 2002
+> vard:=[u,v]:vrd(4);
+u0, v0, u1, v1, u2, v2, u3, v3, u4, v4
+> vard:=[u,v]:vrd(4,2);
+v0, v1, v2, v3, v4
+The routine DLT returns unit or zero:
+> DLT(1,2),DLT(1,-1),DLT(-2,-2),DLT(1,1);
+0, 0, 1, 1
+The routine InT is the inert form of the integration routine. It differs from the built-in
+Int:
+> expand(InT(f^2,x)), expand(Int(f^2,x));
+Z
+f
+2
+dx, f
+2
+Z
+1dx
+The routine ‘print/InT‘ provides output of the integrals in the mathematical form.
+> InT(sin(x),x)=INT(sin(x),x);
+Z
+sin(x)dx =−cos(x)
+The routine ‘print/com‘ provides output of the commutators in the mathematical form
+and the routine ‘diff/com‘ introduces the rule of differentiation of the commutators (see p.
+31).
+The routine pr can multiply two matrices, or two vectors, or matrix and vector, or scalar
+and vector, or scalar and matrix, or two scalars. It processes the both arrays and symbolic
+matricesorvectorsandsymbolicvectors. Itiscalledfromtheroutinesrecursion, Noetherand
+INoether. The routine ‘print/pr‘ provides output as the noncommutative product: A&∗B.
+The routine binom computes the binomial coeﬃcients with the both numerical and sym-
+bolic arguments:
+> binom(5,0), binom(5,1), binom(k,2);
+1, 5, binom(k,2)
+> notneg:={k,n}: binom(k,2), binom(n,3);
+1/2k(k−1), 1/6n(n−1)(n−2)
+The name notneg is global. If k ∈notneg then k> 0. The name n is global for recursion,
+Noether, Inoether and binom, it is assumed n > 0 always. There is the third optional
+argument, the calls binom(n,m,k) or binom(m,n,k) means that n > k, where k is a non-
+negative integer number:
+Electronic Journal.  55Differential Equations and Control Processes, N 1, 2002
+> notneg:={k,n}: binom(k,k-2), binom(n-1,3), binom(n-1,3,2);
+1/2k,(k−1),binom(n−1,3),1/6(n−1)(n−2)(n−3)
+The routine rec computes the coeﬃcients F
+i
+of recursion or Noether or inverse Noether
+operators.The call rec(i) returns cat(F,i) if 06i6n or 0 in all other cases. Here n is the
+order of the operator.
+The routine rsys computes the coeﬃcients K
+i
+of the operator K
+0
+= K
+0
++K
+1
+D +···+
+K
+N
+D
+N
+, where K is the list sys. The call rsys(i) returns cat(K,i) if 06i6N or 0 in all
+other cases.
+The routine trsys computes the coeﬃcientstK
+i
+of the operatorK
+0
++
+=K
+T
+0
+−DK
+T
+1
++···+
+(−D)
+N
+K
+T
+N
+, (tK
+i
+= K
+T
+i
+). The call trsys(i) returns cat(K,i) for a single evolution equation
+and cat(tK,i) for a system if 06i6N or 0 in all other cases.
+The routine newmatr helps to enter the square matrices with arbitrary elements:
+> A:=newmatr(3,k);
+A :=
+
+
+
+
+k1 k2 k3
+k4 k5 k6
+k7 k8 k9
+
+
+
+
+The routine eqord is used for sorting the equations x[i] =H
+i
+with respect to the index i
+of the indexed variable x[i]:
+> sort([x[2]=0,x[4]=f,x[1]=1,x[3]=g],eqord);
+[x[1] = 1, x[2] = 0, x[3] =g, x[4] =f]
+The routine eqord2 is used for sorting the equations x[i,j] = H
+ij
+with respect to the second
+index j of x[i,j]. The both eqord and eqord2 are called from cd and acd.
+Theroutinenumdifcomputesthedifferentialorderofamonomialwithrespecttoindicated
+variable:
+> depend(f(x,y),g(x,y)): a:=2*f*dif(f,x,y$3)*dif(g,x$2,y):
+> numdif(a,x),numdif(a,y);
+2, 3
+This routine is called from INT, implectic and symplectic.
+The routine moddif computes the differential polynomial by modulo∂/∂x (x is the global
+name):
+> depend(f(x),g(x),h(x)):
+> a:=5*f*dif(g,x$4)*dif(h,x);
+a := 5f
+∂h
+∂x
+∂
+4
+g
+∂x
+4
+Electronic Journal.  56Differential Equations and Control Processes, N 1, 2002
+> b:=moddif(a,x); b[2]+dif(b[1],x);
+b :=
+ 
+5f
+∂h
+∂x
+∂
+3
+g
+∂x
+3
+−5
+∂h
+∂x
+∂f
+∂x
+∂
+2
+g
+∂x
+2
+−5f
+∂
+2
+h
+∂x
+2
+∂
+2
+g
+∂x
+2
+, 10
+∂
+2
+h
+∂x
+2
+∂f
+∂x
+∂
+2
+g
+∂x
+2
++5
+∂h
+∂x
+∂
+2
+f
+∂x
+2
+∂
+2
+g
+∂x
+2
++5f
+∂
+3
+h
+∂x
+3
+∂
+2
+g
+∂x
+2
+ 
+5f
+∂h
+∂x
+∂
+4
+g
+∂x
+4
+It is obvious from this example that the initial expression a is equivalent to b[2]. The routine
+is called from implectic and symplectic.
+Theroutinedfperformsthedifferentiationaccordingtotheformula(42)whereweidentify
+the functions e
+i
+and elements of the basis A
+i
+of lie algebra.
+> df(f,0), df(f,1), df(f,2);
+f, DF(f), DN(f,2)
+> matrices:={A1,A2,U}:
+> df(A1,1),df(U,1),df(com(A1,A2),1),df(A1,2);
+[A1,U], 0, [[A1,A2],U], [[A1,U],U]
+This routine is called from triada. The name U is global for df (U is one of the matrices of
+the zero curvature representation).
+The routine opt optimizes the process of solving the linear algebraic system so that large
+denominators do not arise. It is called from triada.
+Acknowledgements
+Some of the routines were written in collaboration with I. Kulemin and D. Demskoy. Author
+is grateful to them for the help.
+Author is also grateful to Dr. Jan Sanders for hospitality and stimulating discussions
+during February 2001.
+Electronic Journal.  57Differential Equations and Control Processes, N 1, 2002
+References
+[1] Meshkov A.G., Kulemin I.V. Package JET for computation the conserved densities and
+symmetries. Algebraic and Analytic Methods in the Differential Equations Theory. Proc.
+Int. Conf. Orel, 14-19 November 1996. Orel, 1996, 99–103 [in Russian].
+[2] Meshkov A.G. Computer Package for Investigation of the Complete Integrability. Proc. of
+the Third Int. Conf. Symmetry in Nonlinear Physics. Kyiv, 12-18 July 1999. Part 1. Kyiv,
+2000, p.35-46.
+[3] Ibragimov N.H. Transformation Groups in Mathematical Physics. Nauka, Moskow, 1983
+[in Russian].
+[4] Olver P.J. Applications of Lie Groups to Differential Equations. Springer-Verlag, 1986. (In
+Russian Mir, Moskow, 1989).
+[5] CRC Handbook of Lie Group Analysis of differential equations. Ed. Ibragimov N. H. CRC
+Press, London, Tokio, 1994, 1995.
+[6] Mikhailov A. V., Shabat A. B. and Sokolov V. V. The symmetry approach to the clas-
+siﬁcation of integrable equations in: Integrability and kinetic equations for solitons, 1990,
+213–279, Naukova Dumka, Kiev, [in Russian]; in English see What is Integrability ?/
+Springer-Verlag (Springer Series in Nonlinear Dynamics), 1991, 115–184.
+[7] Akhatov I. S., Gazizov R. K. and Ibragimov N H. Nonlocal Symmetries. Heuristic Ap-
+proach. In Sovrem. Probl. Math. 1989, V. 34, Moscow: VINITI, P. 3. (In Russian).
+[8] SokolovV.V.andSvinolupovS.I.Weaknonlocalitiesinevolutionequations. Mat. Zamet-
+ki, 1990, V. 48, no. 6, 91–97 (in Russian); translation in Math. Notes, 1990, 48, no.5-6,
+1234–1239, (1991).
+[9] Volterra V. Theory of Functionals and Integrodifferential equations. London, 1929
+(reprinted in 1959 by Dover).
+[10] GalindoA.,MartinezL.Kernelsandrangesinthevariationalformalism.Lett. Math. Phys.,
+1978, V.2, no.5, 385–390.
+[11] Lax P.D. Integrals of nonlinear equations of evolution and solitary waves. Commun. Pure
+and Appl. Math. 1968, V.21, 467–490.
+[12] N. H. Ibragimov and A. B. Shabat. Evolution equations with nontrivial Lie-B¨ acklund
+groups. Functs. Anal., 1980, V.14, no.1, 25–36 [in Russian]; N. H. Ibragimov and A. B.
+Shabat. On the inﬁnite Lie-B¨ acklund algebras. Functs. Anal., 1980, V.14, no.4, 79–80 [in
+Russian].
+[13] V. V. Sokolov and A. B. Shabat. Classiﬁcation of integrable evolution equations. Soviet
+Sci. Rev. C, 1984, V.4, 221–280. Harwood Academic Publ.
+[14] Chen H.H., Lee Y.C., Liu C.S. Integrability of nonlinear Hamiltonian systems by inverse
+scattering transform. Phys. scr., 1979, V.20, N 3, 490–492.
+Electronic Journal.  58Differential Equations and Control Processes, N 1, 2002
+[15] Meshkov A.G. Necessary conditions of the integrability. Inverse Problems, 1994, V.10,
+635–653.
+[16] V. V. Sokolov. Pseudosymmetries and differential substitutions. Functs. Anal. i ego Pril.,
+1988, V.22, no.2, 47–56 [in Russian]; translation in Functional Anal. Appl., 1988,22, no.2,
+121–129.
+[17] Lamb G. L., Jr. B¨ acklund transformations for certain nonlinear evolution equations. J.
+Math. Phys., 1974, V.15, no. 12, 2157–2165.
+[18] RogersC.ApplicationofreciprocalB¨ acklundtransformationstoaclassofnonlinearbound-
+ary value problems. J. Phys. A.,1983, V.16, no. 14, L493–L495.
+[19] HolmD.D., KupershmidtB.A., LevermoreC.D.CanonicalmapsbetweenPoissonbrack-
+ets in Eulerian and Lagrangian descriptions of continuum mechanics.
+
+Phys. Lett., 1983, V.
+A98, no. 8-9, 389–395.
+[20] Mikhailov A. V., Shabat A. B. and Yamilov R. I. Extension of the module of invertible
+transformations. Dokl. AN SSSR, 1987, V.295, no.2, 288–291 [in Russian]; Extension of
+the module of invertible transformations. Classiﬁcation of integrable systems. Commun.
+Math. Phys., 1988, V.115, no.1, 1–19.
+[21] Wahlquist H.D., Estabrook F.B. Prolongation structures of nonlinear evolution equations.
+J. Math. Phys., 1975, V.16, 1–7.
+[22] Fokas A.S., Anderson R.L. On the use of isospectral eigenvalue problems for obtaining
+hereditary symmetries for Hamiltonian systems. J. Math. Phys., 1982, V.23, N 6, 1066–
+1073.
+[23] Meshkov A.G. Symmetries and Conservation Laws for Evolution Equations. VINITI, no.
+1511–85, Moskow, 1985 [in Russian].
+[24] Prikarpatsky A.K. Gradient algorithm for constructing the criteria of integrability of non-
+linear dynamical systems. Dokl. AN SSSR, 1986, V.287, no.4, 827–832 [in Russian].
+[25] Gurses M., Karasu A. and Sokolov V. V. On constructing of recursion operator from Lax
+representation, J. Math. Phys., 1999. G¨ urses M. and Sokolov V. V. On constructing of
+recursion operator from Lax representation. ibid. 2000.
+[26] AsanoN.,KatoY.Spectrummethodforageneralevolutionequation.Progr. Theor. Phys.,
+1977, V. 58, no. 1, 161–174.
+[27] Fuchssteiner B. Application of hereditary symmetries to nonlinear evolution equations.
+Nonlinear Anal. Theor. Meth. Appl., 1979, V. 3, no. 6, 849–862.
+[28] Fuchssteiner B. The Lie algebra structure of nonlinear evolution equations admitting in-
+ﬁnite dimensional Abelian symmetry groups. Progr. Theor. Phys., 1981, V. 65, no. 3,
+861–876.
+[29] Wang Jing Ping. Symmetries and Conservation Laws of Evolution Equations. PhD thesis,
+de Vrije Univrsiteit te Amsterdam, 1998.
+Electronic Journal.  59Differential Equations and Control Processes, N 1, 2002
+[30] Fordy A. P., Gibbons J. Integrable nonlinear Klein-Gordon equations and Toda lattice.
+Commun. Math. Phys.,1980, V.77, 21–30.
+[31] OevelW.Rekursionsmechanismen f¨ ur Symmetrien und Erhaltungss¨ atze in Integrablen Sys-
+temen. PhD thesis, Universit¨ at-Gesamthochschule Paderborn, 1984.
+[32] DrinfeldV.G.andSokolovV.V.New evolution equations having(L-A)-pairs,TrudySem.
+S. L. Soboleva, Inst. Mat. Novosibirsk, 1981, 2, 5-9 [in Russian].
+[33] Hirota R., Satsuma J. Soliton solutions of a coupled Korteweg-de Vries equations. Phys.
+Lett. 1981, V. A85, no. 8, 407–408.
+[34] Focas A.S., Fuchssteiner B. On the structure of symplectic operators and hereditary sym-
+metries. Lett. Nuovo Cimento, 1980, v.28, no.8, 299-303.
+[35] Fuchssteiner B., Focas A.S. Symplectic structures, their B¨ acklund transformations and
+hereditary symmetries. Physica, 1981, V. D4, no.1, 47–66.
+Electronic Journal.  60Index
+acd, computation of adjoint canonical den-
+sities for evolution systems 17
+asymm, the check of antisymmetry of an
+operator 41, 43
+binom, binomial coeﬃcients 46
+C, global variable 27
+cd, computation of canonical densities for
+evolution systems 17
+chn, extracting of similar terms from an ex-
+pression 9
+cho, extracting of the higher order terms
+from an expression 10, 18
+Cmetric, Cartan metric of Lie algebra 27
+com, commutator of linear symbolic matrix
+expressions 22
+const, global variable 5, 6
+covariant,computationofconservedcovari-
+ants for evolution systems 14, 33, 38
+densities, global variable 7
+depend, declaration of arguments of any
+functions 3–5
+Desol,solvingodeequationsintheJETno-
+tations 45
+DF,totaldifferentiationwithrespecttospa-
+tial variable x 5, 16
+df, auxiliary routine for struct 29, 48
+dialog, keyword 8, 9, 14, 19
+dif, partial differentiation 3
+Diff, inertformofthepartial differentiation
+4
+diff/com, differentiation rule for the com-
+mutators 46
+difsub,computationofdifferentialsubstitu-
+tions and B¨ acklund transformations
+19, 20
+DLT, Kronecker delta symbol 16, 46
+DN, multiple total differentiation with re-
+spect to spatial variable x 5, 16
+ED,evolutiondifferentiation(differentiation
+alongthetrajectoriesofanevolution
+system) 6
+entry, splitting of an expression into the
+parts 18, 45
+EQ, global variable 27
+eqord, auxiliary routine for acd and cd 47
+eqord2, auxiliary routine for acd and cd 47
+EQS, global variable 17
+EU, Euler operator (variational derivative)
+11
+evsub, substitution of expressions and ar-
+rays into expressions and arrays and
+computation them 23, 24
+ﬂag, control variable 5, 6, 31, 32
+ﬂdf, control variable 5
+ﬂdn, control variable 5
+ﬂpt, control variable 5
+ﬂuxes, global variable 7
+Frechet,computationoftheFrechetderiva-
+tive on the jet space 31
+hered, the check of heredity of on operator
+34
+implectic, the check of implecticness of on
+operator 43
+INoether,directcomputationoftheinverse
+Noether operator for evolution sys-
+tem 36
+INT, indeﬁnite integration 3, 4
+InT, inert form of the indeﬁnite integration
+5, 46
+Jac, reduction of the multiple commutators
+with the help of the Jacobi identity
+25
+Killing, Killing scalar product of a pair el-
+ements of Lie algebra 27
+L E, performingthe contact transformation
+like the transformation between La-
+grange and Euler variables in con-
+tinuum mechanics 21
+LBsymm,computationoftheLie-B¨ acklund
+symmetries 8
+matrices, global variable 22, 36
+61Differential Equations and Control Processes, N 1, 2002
+maxord, global variable 5, 9
+moddif, 47
+n, global variable 31, 36, 46
+NamesOfdeps, global variable 3
+nested, keyword 25
+newmatr,enteringthesquarematriceswith
+arbitrary elements 47
+nlo, global variable 7, 13
+Noether, computation of the Noether op-
+erator of an evolution system 36
+notneg, global variable 46
+numdif, computation of the order of a dif-
+ferential monomial 47
+opt, auxiliary routine for triada 48
+ord,computationoftheorderofanyexpres-
+sions on a jet space 9
+pot, inverse of DF on the jet space 11, 12,
+32
+pr, auxiliary routine for recursion, Noether
+and INoether 46
+print/com, prettyprint for commutator 22,
+46
+print/InT, prettyprint for integral 46
+pt, almost the same as pot 13
+rav, global variable 3
+rec, auxiliary routine for recursion, Noether
+and INoether 47
+recursion,computationoftherecursionop-
+erator of an evolution system 30
+rm, global variable 12, 34, 42, 43
+rsys,auxiliaryroutineforrecursion,Noether
+and INoether 47
+S, global variable 27
+SOL, global variable 17
+struct, computation of the structural con-
+stants of (unclosed) Lie algebras 26
+SU, computation of the multiple sums 16
+SUB, global variable 29
+SUB1, global variable 29
+symplectic, the check of symplecticness of
+on operator 43
+triada, computation of the recursion oper-
+ator by the eigenvalue system 29
+trsys,auxiliaryroutineforrecursion,Noether
+and INoether 47
+U, global variable 29, 48
+Var, global variable 5
+var, global variable 3
+vard, global variable 2
+vrd, fast typing of the sequences of depen-
+dent variables 45
+zero, global variable 9, 14, 19, 34
+Electronic Journal.  62

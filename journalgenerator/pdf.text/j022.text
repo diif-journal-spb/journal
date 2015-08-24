@@ -1,0 +1,932 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 3, 1998
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+LIE GROUP OF TRANSFORMATIONS FOR
+MAGMA EQUATIONS
+E.V.Krishnan and Q.J.A.Khan
+Department of Mathematics and Statistics
+Sultan Qaboos University
+P.O.Box 36, Al-Khod 123
+Muscat, Sultanate of Oman
+Abstract.
+Group invariant solutions of the magma equation have been investigated
+for different values of two physical parameters.
+1 Introduction
+The ﬂow of melt in the earth’s mantle which is like a porous ﬂow is effected by
+the buoyant force caused by the density difference between melt and matrix.
+The model equation describing this motion and the phase transition have been
+investigated by many authors
+1,2)
+. Neglecting the phase transition and allowing
+only vertical motions, Scott and Stevenson
+3)
+proposed an equation assuming
+that the melt and matrix are fully connected and incompressible, which was
+given by
+u
+t
+= [u
+n
+{(u
+−m
+u
+t
+)
+x
+−1}]
+x
+. (1.1)
+0
+This work was supported by the Sultan Qaboos University, College of Science research grant no. MS/98/04.Differential Equations and Control Processes, N 3, 1998
+x andt denote vertical space co-ordinate and time respectively, andu =u(x,t)
+is the mean volume fraction of the liquid phase which is non-negative for any
+x and t. The parameters n and m denote the dependency of permeability and
+effective viscosity. Scott and Stevenson suggested that the reasonable values of
+n and m are 2∼ 5 and 0∼ 1 respectively. Equation (1.1) is called the magma
+equation.
+Weassumeatravellingwavesolutionu =u(z),z =x−ctforequation(1.1).
+Integrating equation (1.1) twice, we get the ordinary differential equation
+c
+2
+u
+2
+z
++
+1
+1−m
+u
+m+1
++
+2A
+1−m−n
+u
+m−n+1
+−
+c
+2−m−n
+u
+m−n+2
+−Bu
+2m
+= 0, (1.2)
+where c is the wave velocity, A and B are integration constants. Equation
+(1.2) is not valid for m = 1 or m+n = 1,2.
+Takahashi and Satsuma
+4)
+obtained the explicit form of travelling wave so-
+lutions of equation (1.2) by using the transformation from z to ζ given by
+ζ =
+Z
+z
+u
+α
+dz,
+where α is determined by the values of n and m. They found solitary wave
+solutions and periodic wave solutions in terms of ζ for n = 3, m = 0 ; n =
+4, m = 0 and n =
+5
+2
+, m =
+1
+2
+.
+An n
+th
+order ordinary differential equation which admits an r-parameter
+Lie group of transformations, 2≤r ≤n, can be reduced to an (n−r)
+th
+order
+ODE if the Lie group is solvable. The reduced (n−r)
+th
+order ODE can be
+obtained directly from the givenn
+th
+order ODE without the need to determine
+any intermediate ODEs of orders n − r + 1 to n − 1. Solvable Lie groups
+play an important role in the study of group invariance of ordinary and partial
+differentialequations
+5−7)
+. Inthispaper, weshallinvestigatethegroupinvariant
+solutions of the magma equation for different values of the parameters n and
+m.
+2 Group Invariant solutions for n = 3 and m = 0
+When n = 3 and m = 0, the equation (1.1) becomes
+u
+t
+= [u
+3
+(u
+xt
+−1)]
+x
+(2.1)
+Electronic Journal.  34Differential Equations and Control Processes, N 3, 1998
+and (1.2) reduces to
+c
+2
+u
+2
+z
+= −u+B−
+c
+u
++
+A
+u
+2
+. (2.2)
+We consider the wave velocity c> 0.
+Introducing the independent variable ζ deﬁned by
+ζ =
+Z
+z
+u
+−1
+dz, (2.3)
+we get,
+c
+2
+u
+2
+ζ
+= −u
+3
++Bu
+2
+−cu+A. (2.4)
+Differentiating equation (2.4) twice with respect to ζ, we have
+u
+ζζζ
+= −
+6
+c
+uu
+ζ
++
+2B
+c
+u
+ζ
+. (2.5)
+We write equation (2.5) in the form
+u
+3
+= (αu + β)u
+1
+(2.6)
+where,
+u
+1
+= u
+ζ
+, u
+3
+= u
+ζζζ
+, α = −
+6
+c
+, β =
+2B
+c
+(2.7)
+The invariance criterion for (2.6) is,
+η
+(3)
+= αuη
+(1)
++ αu
+1
+η + βη
+(1)
+, (2.8)
+where,X = ξ(ζ,u)
+∂
+∂ζ
++η(ζ,u)
+∂
+∂u
+is the inﬁnitesimal generator of the one
+parameter Lie group of transformations and η
+(1)
+and η
+(3)
+are given by
+η
+(1)
+= η
+ζ
++ (η
+u
+−ξ
+ζ
+)u
+1
+−ξ
+u
+(u
+1
+)
+2
+, (2.9a)
+η
+(3)
+= η
+ζζζ
++ (3η
+ζζu
+−ξ
+ζζζ
+)u
+1
++ +3(η
+ζuu
+−ξ
+ζζu
+)(u
+1
+)
+2
++(η
+uuu
+− ξ
+ζuu
+)(u
+1
+)
+3
+− ξ
+uuu
+(u
+1
+)
+4
++ 3(η
+ζu
+− ξ
+ζζ
+)u
+2
+Electronic Journal.  35Differential Equations and Control Processes, N 3, 1998
++3(η
+uu
+− 3ξ
+ζu
+)u
+1
+u
+2
+− 6ξ
+uu
+(u
+1
+)
+2
+u
+2
+−3ξ
+u
+(u
+2
+)
+2
++ (η
+u
+− 3ξ
+ζ
+)u
+3
+− 4ξ
+u
+u
+1
+u
+3
+. (2.9b)
+The resulting set of determining equations for ξ(ζ,u) and η(ζ,u) are:
+η
+ζζζ
+− (αu + β)η
+ζ
+= 0 (2.10a)
+3η
+ζζu
+− ξ
+ζζζ
+− 2ξ
+ζ
+(αu+β) − αη = 0 (2.10b)
+3η
+ζuu
+− 3ξ
+ζζu
+−3ξ
+u
+(αu + β) = 0 (2.10c)
+η
+uuu
+− 3ξ
+ζuu
+= 0 (2.10d)
+ξ
+uuu
+= 0 (2.10e)
+3η
+ζu
+− 3ξ
+ζζ
+= 0 (2.10f)
+3η
+uu
+− 9ξ
+ζu
+= 0 (2.10g)
+ξ
+uu
+= 0 (2.10h)
+ξ
+u
+= 0 (2.10i)
+ξ is a function of ζ alone from (2.10i) and (2.10e) and (2.10h) are auto-
+matically satisﬁed. From (2.10g), we have η
+uu
+=0. Differentiating (2.10b) with
+respect to u, we have,
+−2αξ
+ζ
+− αη
+u
+= 0 (2.11)
+which leads to
+η
+u
+= −2ξ
+ζ
+(2.12)
+Electronic Journal.  36Differential Equations and Control Processes, N 3, 1998
+Substituting (2.12) in (2.10f), we get
+ξ
+ζζ
+= 0 (2.13)
+giving rise to
+ξ = K
+1
++ K
+2
+ζ (2.14)
+Now, using (2.12) and (2.14) in (2.10b), we obtain
+η = −2K
+2
+u −
+2β
+α
+K
+2
+= −2K
+2
+u + K
+3
+(2.15)
+where K
+1
+, K
+2
+and K
+3
+are arbitrary constants.
+(2.14) and (2.15) give a nontrivial three-parameter Lie group of transfor-
+mations acting on (ζ,u)-space with inﬁnitesimal generators given by
+X
+1
+=
+∂
+∂ζ
+, X
+2
+= ζ
+∂
+∂ζ
+− 2u
+∂
+∂u
+, X
+3
+=
+∂
+∂u
+. (2.16)
+Itcanbeeasilyveriﬁedthatthedifferentialequation(2.6)hasa3-dimensional
+solvable Lie algebra.
+Now, we reduce the third order ordinary differential equation to a second
+order from invariance under translations (K
+1
+). Obvious invariants of the ﬁrst
+extension of ζ
+∗
+= ζ +  , u
+∗
+= u, are
+U(ζ,u) = u, V(ζ,u,u
+1
+) = u
+1
+. (2.17)
+So,
+u
+2
+= V
+dV
+dU
+, u
+3
+= V
+2
+d
+2
+V
+dU
+2
++ V(
+dV
+dU
+)
+2
+. (2.18)
+Hence the ordinary differential equation (2.6) reduces to
+V
+d
+2
+V
+dU
+2
++ (
+dV
+dU
+)
+2
+= αU +β. (2.19)
+In particular, if
+V = ψ(U;C
+1
+,C
+2
+) (2.20)
+Electronic Journal.  37Differential Equations and Control Processes, N 3, 1998
+is the general solution of (2.19), then the ﬁrst order ODE
+V = u
+1
+= ψ(u;C
+1
+,C
+2
+) (2.21)
+admitsζ
+∗
+= ζ + , u
+∗
+= u.Consequently, thegeneralsolutionofequation
+(2.6) is given by
+Z
+dz
+ψ(z;C
+1
+,C
+2
+)
+= ζ + C
+3
+, (2.22)
+where C
+1
+, C
+2
+, C
+3
+are arbitrary constants.
+3 Group Invariant solutions for n = 4 and m = 0
+When n = 4 and m = 0, the equation(1.1) becomes
+u
+t
+= [u
+4
+(u
+xt
+− 1)]
+x
+, (3.1)
+and (1.2) reduces to
+c
+2
+u
+2
+z
+= −u + B −
+c
+2u
+2
++
+2A
+3u
+3
+. (3.2)
+Introducing the independent variable ζ deﬁned by
+ζ =
+Z
+z
+u
+−3/2
+dz, (3.3)
+we get
+c
+2
+u
+2
+ζ
+= −u
+4
++ Bu
+3
+−
+c
+2
+u +
+2A
+3
+. (3.4)
+Differentiating (3.4) w.r.t. ζ twice, we have,
+u
+ζζζ
+= −
+12
+c
+u
+2
+u
+ζ
++
+6B
+c
+uu
+ζ
+. (3.5)
+We write equation (3.5) in the form
+u
+3
+= (αu
+2
++ βu)u
+1
+, (3.6)
+where,
+Electronic Journal.  38Differential Equations and Control Processes, N 3, 1998
+u
+1
+= u
+ζ
+, u
+3
+= u
+ζζζ
+, α = −
+12
+c
+, β =
+6B
+c
+. (3.7)
+The invariance criterion for (3.6) is,
+η
+(3)
+= (αu
+2
++ βu)η
+(1)
++ βu
+1
+η + 2αuu
+1
+η, (3.8)
+where,X = ξ(ζ,u)
+∂
+∂ζ
++η(ζ,u)
+∂
+∂u
+istheinﬁnitesimalgeneratoroftheone-
+parameter Lie group of transformations and η
+(1)
+and η
+(3)
+are given by (2.9a)
+and (2.9b).
+The resulting set of determining equations for ξ(ζ,u) and η(ζ,u) are:
+η
+ζζζ
+− (αu
+2
++ βu)η
+ζ
+= 0 (3.9a)
+3η
+ζζu
+− ξ
+ζζζ
+− 2ξ
+ζ
+(αu
+2
++ βu) − (2αu + β)η = 0 (3.9b)
+3η
+ζuu
+− 3ξ
+ζζu
+− 3ξ
+u
+(αu
+2
++ βu) = 0 (3.9c)
+η
+uuu
+− 3ξ
+ζuu
+= 0 (3.9d)
+ξuuu = 0 (3.9e)
+3η
+ζu
+− 3ξ
+ζζ
+= 0 (3.9f)
+3η
+uu
+− 9ξ
+ζu
+= 0 (3.9g)
+ξuu = 0 (3.9h)
+ξ
+u
+= 0 (3.9i)
+From(3.9i),ξisafunctionofζ aloneand(3.9e)and(3.9h)areautomatically
+satisﬁed. From (3.9g), η
+uu
+= 0. Differentiating (3.9b) with respect to u twice,
+we getη
+u
+= −ξ
+ζ
+. Using this in (3.9f), it leads toξ
+ζζ
+= 0. So,ξ = L
+1
++ L
+2
+ζ.
+Electronic Journal.  39Differential Equations and Control Processes, N 3, 1998
+From (3.9f) again, η
+ζu
+= 0 which gives rise to η = −L
+2
+u + L
+3
+. Here, L
+1
+, L
+2
+and L
+3
+are arbitrary constants. Thus,
+ξ = L
+1
++ L
+2
+ζ (3.10)
+η = −L
+2
+u + L
+3
+(3.11)
+give a nontrivial three-parameter Lie group of transformations acting on
+(ζ,u) - space with inﬁnitesimal generators given by
+X
+1
+=
+∂
+∂ζ
+, X
+2
+= ζ
+∂
+∂ζ
+− u
+∂
+∂u
+, X
+3
+=
+∂
+∂u
+. (3.12)
+Onecaneasilyverifythatthedifferentialequation(3.6)hasa3-dimensional
+solvable Lie algebra.
+Now, we reduce the third order ordinary differential equation to a second
+order ODE from invariance under translations (L
+1
+). Obvious invariants of the
+ﬁrst extension ζ
+∗
+= ζ +  , u
+∗
+= u are
+U(ζ,u) = u, V(ζ, u, u
+1
+) = u
+1
+. (3.13)
+So, using (2.18), the ODE (3.6) reduces to
+V
+d
+2
+V
+dU
+2
++ (
+dV
+dU
+)
+2
+= αU
+2
++ βU. (3.14)
+In particular, ifV = ψ(U; C
+1
+C
+2
+) is the general solution of (3.14), then the
+ﬁrst order ODE
+V = u
+1
+= ψ(u; C
+1
+C
+2
+) (3.15)
+admits ζ
+∗
+= ζ +  , u
+∗
+= u. Thus the general solution of (3.6) is given by
+Z
+dz
+ψ(z; C
+1
+, C
+2
+)
+= ζ + C
+3
+, (3.16)
+where, C
+1
+, C
+2
+, C
+3
+are arbitrary constants.
+Electronic Journal.  40Differential Equations and Control Processes, N 3, 1998
+4 Group Invariant solutions for n =
+5
+2
+and m = 0
+When n =
+5
+2
+and m =
+1
+2
+, the equation (1.2) reduces to
+c
+2
+u
+2
+z
++ 2u
+3/2
+− Au
+−1
++ c − Bu = 0. (4.1)
+Transforming the dependent variable u inti v by
+u = v
+2
+, (4.2)
+(4.1) can be written as
+2cv
+2
+z
++ 2v − Av
+−4
++ cv
+−2
+− B = 0. (4.3)
+Introducing the independent variable ζ deﬁned by
+ζ =
+Z
+z
+v
+−1
+dz, (4.4)
+and assuming that the integration constantA is zero, equation (4.2) will be
+reduced to
+2cv
+2
+ζ
+= −2v
+3
++ Bv
+2
+− c. (4.5)
+Differentiating equation (4.5) twice with respect to ζ, we get
+v
+ζζζ
+= −
+3
+c
+vv
+ζ
++
+B
+2c
+v
+ζ
+. (4.6)
+We write equation (4.6) in the form
+v
+3
+= (
+α
+2
+v +
+β
+4
+)v
+1
+, (4.7)
+where,
+v
+1
+= v
+ζ
+, v
+3
+= v
+ζζζ
+and α and β are as deﬁned in (2.7).
+Therefore, using the same notations as in section 2, the ODE (4.7) will
+reduce to
+V
+d
+2
+V
+dU
+2
++ (
+dV
+dU
+)
+2
+=
+α
+2
+U +
+β
+4
+, (4.8)
+Electronic Journal.  41Differential Equations and Control Processes, N 3, 1998
+where,
+U(ζ,v) = v, V(ζ,v,v
+1
+) = v
+1
+. (4.9)
+The general solution of (4.7) can be got as in previous sections.
+References
+1. D. J. Stevenson: Trans. Amer. Geophys. Un. EOS. 61 (1980) 1021.
+2. A. C. Fowler: Geophys. Astrophys. Fluid Dynamics 28 (1984) 99.
+3. D. R. Scott and D. J. Stevenson: Geophys. Res. Lett. 11 (1984) 1161.
+4. D. Takahashi and J. Satsuma: J. Phys. Soc. Japan 57 (1988) 417
+5. P. J. Olver: Applications of Lie Groups to Differential Equations, Springer
+Verlag, New York, 107 (1986).
+6. G. W. Bluman and S. Kumei: Symmetries and Differential Equations,
+Springer Verlag, New York, 81 (1989).
+7. B. S. Bhatt and E. V. Krishnan: Advances in Modelling and Analysis, 29
+(1995) 1.
+Electronic Journal.  42

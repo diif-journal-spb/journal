@@ -1,0 +1,2289 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 3, 2009
+Electronic Journal,
+reg. N P2375 at 07.03.97
+ISSN 1817-2172
+
+http://www.math.spbu.ru/diffjournal/
+e-mail: jodiff@mail.ru
+Existence of Three Bounded Positive Solutions of Quasi-linear
+functional differential equations
+1
+Yuji Liu
+e-mail: liuyuji888@sohu.com
+Department of Mathematics,
+Hunan Institute of Science and Technology,
+Yueyang 414000, P.R.China
+Shenping Chen
+Department of Mathematics,
+Guangdong University of Business Studies,
+Guangzhou 510320, P.R.China
+Changyou Wang
+College of Mathematics and Physics,
+Chongqing University of Posts and Telecommunications,
+Chongqing 400065 P.R. China
+Lihu Deng
+Institute Applied Mathematics,
+Dongguan University of Technology,
+Dongguan, 523106, China
+Abstract. By applying Leggett-Williams  xed-point theorem in cones in
+Banach spaces, we obtain existence results of at least three bounded positive
+solutions for a functional differential equation with p-Laplacian.
+Keywords and phrases. Second order functional differential equation on
+half line; bounded positive solution.
+AMS Subject Classi cation. 34B10, 34B15, 35B10Differential Equations and Control Processes, N 3, 2009
+1 Introduction
+Recently an increasing interest has been observed in investigating the oscilla-
+tions of solutions of second order differential equations on half line.
+For example, Kamenev [2], Philos [3] and Yang [4] dealt with the oscilla-
+tory behavior of second order differential equations. Indeed, they extensively
+investigated the oscillation of the following second order differential equations
+without or with damping
+(r(t)x
+0
+(t))
+0
++p(t)x(t) = 0:
+Several authors including Li and Yeh [5], Hsu and Yeh [6], Wong and Agar-
+wal [7] have investigated the oscillation criteria of second order half-linear dif-
+ferential equations of the form
+(r(t)jx
+0
+(t)j
+p 2
+x
+0
+(t))
+0
++p(t)jx(t)j
+p 2
+x(t) = 0:
+Takasi and Yoshida [8] considered the oscillation of the following second order
+quasilinear differential equation
+(r(t)jx
+0
+(t)j
+p 2
+x
+0
+(t))
+0
++p(t)jx(t)j
+q 2
+x(t) = 0:
+In recent papers [10-12], by comparing with the oscillatory behavior of a
+certain associated linear second-order differential equation, the authors stud-
+ied the oscillatory properties of solutions of the following nonlinear differential
+equation
+(r(t) (x
+0
+(t)))
+0
++c(t) (x(t)) = 0;
+where  (x) =jxj
+p 2
+x with p> 1.
+However, the existence of multiple positive solutions of above mentioned
+equations have received much less attention.
+In this paper, we consider the following functional differential equation with
+p-Laplacian on half line
+(
+[p(t) (x
+0
+(t))]
+0
++q(t)f(t;x(t);x( (t)) = 0; t2 (0; +1);
+x(t) = (t); t2 [ r; 0];
+(1)
+where
+  : [ r; 0]!R is continuous with (0) = 0;
+    : [0; +1)! [ r; +1) with  (t) t;
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 2Differential Equations and Control Processes, N 3, 2009
+  f : [0; +1)  [0; +1) R! [0; +1) is an S-Carath  eodory function and
+f(t; 0; 0)6= 0 on each subinterval of [0; +1);
+  p : [0; +1)! (0; +1) with p2 C
+1
+[0; +1) and there exists the limit
+lim
+t!+1
+p(t) and
+R
++1
+0
+ 
+ 1
+ 
+1
+p(s)
+ 
+ds = +1;
+  q : [0; +1)! [0; +1) with q2C
+0
+[0; +1) and 0<
+R
++1
+0
+q(s)ds< +1;
+    :R!R is called quasi-linear operator satisfying that  
+0
+(x)> 0 for all
+t2R;t6= 0, its inverse function is denoted by  
+ 1
+(x).
+The purpose of this paper is to establish existence results for at least three
+bounded positive solutions of equation (1) by applying  xed point theorem in
+cones in Banach spaces. Based on the results in this paper, the existence of
+three bounded positive solutions of the equation
+[p(t) (x
+0
+(t))]
+0
++f(t;x(t)) = 0
+subjected to the initial condition
+x(t) = (t); t2 [ r; 0]
+is established.
+We call a function x : [ r; +1)!R is a positive solution of equation (1)
+if x satis es equation
+[p(t) (x
+0
+(t))]
+0
++q(t)f(t;x(t);x( (t)) = 0; t2 (0; +1)
+and the initial conditions
+x(t) = (t); t2 [ r; 0]
+and x(t)> 0 for all t> 0.
+The remainder of this paper is organized as follows: the main result and an
+example to illustrate the main result are presented in Section 2. The proof of
+the main result is given in Section 3.
+2 Main Results and Examples
+In this section, we present the main result of the paper, an example is given to
+illustrate the main theorem. whereas the known results in the current literature
+do not cover that example.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 3Differential Equations and Control Processes, N 3, 2009
+De nition 2.1. f : [0; +1) R
+2
+!R is called an S-Carath  eodory function
+if
+(i) for each u;v2R, t!f(t;u;v) is measurable on [0; +1);
+(ii) for a.e. t2 [0; +1), (u;v)!f(t;u;v) is continuous on [0; +1) R;
+(iii) for each r > 0, there exists  
+r
+2 L
+1
+[0; +1) satisfying  
+r
+(t) >
+0;t 2 (0; +1) and
+R
++1
+0
+ 
+r
+(s)ds < +1 such that juj;jvj   r implies
+jf(t; (1+t)u; (t)v)j  
+r
+(t), a.e. t2 [0; +1), where (t) = 1 + (t) if (t)  0
+and  (t) = (t) if  (t)  0.
+Suppose k> 1. Denote
+M = 
+ 1
+ 
+1
+p(0)
+Z
++1
+0
+q(u)du
+ 
+;
+L =
+k
+1 +k
+Z
+1=k
+0
+ 
+ 1
+ 
+1
+p(s)
+Z
+k
+1=k
+q(u)du
+ 
+ds:
+Theorem 2.1. Suppose thatf is an nonnegative S-Carath  eodory function,
+k> 1 a constant and there exist constants e
+1
+;e
+2
+and c such that
+0<e
+1
+<e
+2
+=k< (1 +k)e
+2
+<c
+and
+(A1) f(t; (1 +t)u; (1 + (t))v)< 
+ 
+c
+M
+ 
+for t2 [0; +1), u;v2 [0;c];
+(A2) f(t; (1 +t)u; ( (t))) <  
+ 
+c
+M
+ 
+for t2 [0; +1) with  (t)  0, u2
+[0;c];
+(A3) f(t; (1 +t)x; (1 + (t))v)< 
+ 
+e
+1
+M
+ 
+for t2 [0; +1) and x;v2 [0;e
+1
+];
+(A4) f(t; (1 +t)x; ( (t))) <  
+ 
+e
+1
+M
+ 
+for t2 [0; +1) with  (t)  0 and
+x2 [0;e
+1
+];
+(A5) f(t; (1 + t)x; (1 +  (t))v) >  
+ 
+e
+2
+L
+ 
+for t 2 [1=k;k] and x;v 2
+ 
+e
+2
+k
+; (1 +k)e
+2
+ 
+;
+(A6) f(t; (1 +t)x; ( (t))) >  
+ 
+e
+2
+L
+ 
+for t2 [1=k;k] with  (t)  0 and
+x2
+ 
+e
+2
+k
+; (1 +k)e
+2
+ 
+.
+Then equation (1) has at least three positive solutions y
+1
+;y
+2
+and y
+3
+such that
+y
+i
+(t) =
+(
+x
+i
+(t); t  0;
+ (t); t2 [ r; 0];
+i = 1; 2; 3
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 4Differential Equations and Control Processes, N 3, 2009
+with x
+1
+, x
+2
+and x
+3
+satisfying
+sup
+t2[0;+1)
+x
+1
+(t)
+1 +t
+<e
+1
+; min
+t2[1=k;k]
+x
+2
+(t)>
+1 +k
+k
+e
+2
+and
+sup
+t2[0;+1)
+x
+3
+(t)
+1 +t
+>e
+1
+; min
+t2[1=k;k]
+x
+3
+(t)<
+1 +k
+k
+e
+2
+:
+Now, we present an example, which can not be covered by known results,
+to illustrate the main results.
+Example 2.1. Consider the following BVP
+(
+ 
+[x
+0
+(t)]
+3
+ 
+0
++e
+ t
+f(t;x(t);x(t  2)) = 0; t2 (0; +1);
+x(t) = t
+2
+; t2 [ 2; 0];
+(2)
+where f is de ned by
+f
+0
+(x) =
+8
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+:
+500; x2 [0; 10];
+500 + (x  10)
+5 10
+23
++
+101
+3
+ 5 10
+11
+e
+ 0:01
+ e
+ 100
+ 500
+100 10
+; x2 [10; 100];
+5  10
+23
++
+101
+3
+ 5 10
+11
+e
+ 0:01
+ e
+ 100
+; x2 [100; 10
+8
+];
+ 
+5  10
+23
++
+101
+3
+ 5 10
+11
+e
+ 0:01
+ e
+ 100
+ 
+e
+x 10
+8
+; x  10
+8
+and
+f(t;x;y) =
+t
+10
+29
++f
+0
+ 
+x
+1 +t
+ 
++
+1
+10
+29
++y
+2
+:
+Corresponding to equation (1), one sees that (x) =x
+3
+,p(t) = 1,q(t) =e
+ t
+,
+ (t) =t  2 and (t) = t
+2
+. Then  
+ 1
+(x) =x
+1
+3
+.
+Choose k = 100. One  nds that
+M = 
+ 1
+ 
+1
+p(0)
+Z
++1
+0
+q(u)du
+ 
+= 1;
+L =
+k
+1 +k
+Z
+1=k
+0
+ 
+ 1
+ 
+1
+p(s)
+Z
+k
+1=k
+q(u)du
+ 
+ds =
+3
+p
+e
+ 0:01
+ e
+ 100
+101
+:
+Choose e
+1
+= 10;e
+2
+= 10000;c = 10
+8
+. One sees that
+  f(t; (1 +t)u; (t  1)v)< 
+ 
+c
+M
+ 
+= 10
+24
+for t  2, u;v2 [0; 10
+8
+];
+  f(t; (1 +t)u; (t  2)
+2
+)< 
+ 
+c
+M
+ 
+= 10
+24
+for 0 t  2, u2 [0; 10
+8
+];
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 5Differential Equations and Control Processes, N 3, 2009
+  f(t; (1 +t)x; (t  1)v)< 
+ 
+e
+1
+M
+ 
+= 1000 for t  2 and x;v2 [0; 10];
+  f(t; (1 +t)x; (t  2)
+2
+)< 
+ 
+e
+1
+M
+ 
+= 1000 for 0 t  2 and x2 [0; 10];
+  f(t; (1 +t)x; (t  1)v) >  
+ 
+e
+2
+L
+ 
+=
+101
+3
+ 10
+12
+e
+ 0:01
+ e
+ 100
+for t2 [2;k] and x;v2
+[100; 1010000];
+  f(t; (1 + t)x; (t  2)
+2
+) >  
+ 
+e
+2
+L
+ 
+=
+101
+3
+ 10
+12
+e
+ 0:01
+ e
+ 100
+for t 2 [0:01; 2] and
+x2 [100; 1010000]:
+It is easy to see that (A1)  (A6) hold. Theorem 2.1 implies that equation
+(2) has at least three positive solutions y
+1
+;y
+2
+and y
+3
+such that
+y
+i
+(t) =
+(
+x
+i
+(t); t  0;
+ t
+2
+; t2 [ 2; 0];
+i = 1; 2; 3
+with x
+1
+, x
+2
+and x
+3
+satisfying
+sup
+t2[0;+1)
+x
+1
+(t)
+1 +t
+< 10; min
+t2[0:01;100]
+x
+2
+(t)> 10100
+and
+sup
+t2[0;+1)
+x
+3
+(t)
+1 +t
+> 10; min
+[0:01;100]
+x
+3
+(t)< 10100:
+Remark. It is easy to see that Example 2.1 can not be covered by the
+theorems in [1-26].
+3 Proofs of Theorem 2.1
+In this section, we  rst present some background de nitions in Banach spaces
+and then theorem 2.1 is proved.
+As usual, letX be a semi-ordered real Banach space. The nonempty convex
+closed subsetP ofX is called a cone inX ifax2P andx+y2P for allx;y2P
+and a  0, and x2 X and x2 X imply x = 0. A map : P! [0; +1) is
+a nonnegative continuous concave ( or convex ) functional map provided is
+nonnegative, continuous and satis es
+ (tx + (1 t)y)  ( or   ) t (x) + (1 t) (y) for all x;y2P;t2 [0; 1]:
+An operator T ;X! X is completely continuous if it is continuous and maps
+bounded sets into pre-compact sets.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 6Differential Equations and Control Processes, N 3, 2009
+Let X be a Banach space, P be a cone of X, :P!P be a nonnegative
+convex continuous functional. Denote the sets by
+P
+c
+=fx2P :jjxjj<cg; P
+c
+=fx2P :jjxjj cg
+and
+P ( ;b;d) =fx2P : (x) b;jjxjj dg:
+Theorem 3.1[1]. Suppose that X is a Banach space and P is a cone of
+X. Let T : P
+c
+! P
+c
+be a completely continuous operator and let be a
+nonnegative continuous concave functional on P such that (y) jjyjj for all
+y2P
+c
+. Suppose that there exist 0<a<b<d c such that
+(C1) fy2P ( ;b;d)j (y)>bg6=; and (Ty)>b for y2P ( ;b;d);
+(C2) jjTyjj<a forjjyjj a;
+(C3) (Ty)>b for y2P ( ;b;c) withjjTyjj>d.
+Then T has at least three  xed points y
+1
+, y
+2
+and y
+3
+such thatjjy
+1
+jj < a,
+ (y
+2
+)>b andjjy
+3
+jj>a with (y
+3
+)<b.
+Choose
+X =
+ 
+x2C
+0
+[0; +1) : there exists the limt lim
+t!+1
+x(t)
+ 
+:
+We call x  y for x;y2 X if x(t)  y(t) for all t2 [0; +1). Since x2 X
+implies that there exists the limit lim
+t!+1
+x(t). Then lim
+t!+1
+x(t)
+1+t
+= 0. De ne
+the norm
+jjxjj = sup
+t2[0;+1)
+jx(t)j
+1 +t
+for x2X:
+It is easy to see that X is a semi-ordered real Banach space. Choose k > 1.
+De ne the cone in X by
+P =
+8
+>
+<
+>
+:
+x2X :x(t)  0 for all t2 [0; +1)
+and is increasing, concave on [0; +1);
+x
+ 
+1
+k
+ 
+ 
+1
+k
+sup
+t2[0;+1)
+x(t)
+1+t
+:
+9
+>
+=
+>
+;
+:
+De ne the functionals on P!R by
+ (y) =
+k
+1 +k
+min
+t2[1=k;k]
+jy(t)j; y2P:
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 7Differential Equations and Control Processes, N 3, 2009
+It is easy to see that be a nonnegative continuous concave functional on P
+such that (y) jjyjj for all y2P .
+Lemma 3.1. Suppose that x2X is a solution of equation (1). Then
+x(t) =
+(
+R
+t
+0
+ 
+ 1
+ 
+1
+p(s)
+R
++1
+s
+q(u)f(u;x(u);x( (u)))du
+ 
+ds; t2 [0; +1)
+ (t); t2 [ r; 0]:
+Proof. Since x2 X, we get that lim
+t!+1
+x
+0
+(t) = 0 and x is bounded.
+Sincef : [0; +1)  [0; +1) R! [0; +1) is an S-Carath  eodory function, we
+have
+R
++1
+0
+f(u;x(u);x( (u)))du< +1. Integrating (1) from t to +1, We get
+p(t) (x
+0
+(t)) =
+Z
++1
+t
+q(u)f(u;x(u);x( (u)))du; t2 [0; +1):
+Then
+x(t) =
+Z
+t
+0
+ 
+ 1
+ 
+1
+p(s)
+Z
++1
+s
+q(u)f(u;x(u))du
+ 
+ds; t2 [0; +1):
+Then
+x(t) =
+(
+R
+t
+0
+ 
+ 1
+ 
+1
+p(s)
+R
++1
+s
+q(u)f(u;x(u);x( (u)))du
+ 
+ds; t2 [0; +1)
+ (t); t2 [ r; 0]:
+The proof is completed.
+Lemma 3.2. Suppose that x2 X is a solution of equation (1). Then
+x
+0
+(t)  0 for all t2 [0; +1) and x(t) is positive and concave on (0; +1).
+Proof. First, we prove that x
+0
+is positive on [0; +1). Since x2 X is a
+solution of (1), we get from Lemma 3.1 thatx
+0
+(+1) = 0. Sincef is nonnegative,
+we gat that [p(t) (x
+0
+(t))]
+0
+  0 for all t2 [0; +1). Then
+p(+1) (x
+0
+(+1)) p(t) (x
+0
+(t))  0; t2 [0; +1):
+It follows that p(t) (x
+0
+(t))  0. Then x
+0
+(t)  0 for all t2 [0; +1).
+Second, we prove that x
+0
+(t) is decreasing on [0; +1). For t2 [0; +1), let
+ (t) =
+Z
+t
+0
+ 
+ 1
+ 
+1
+p(s)
+ 
+ds:
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 8Differential Equations and Control Processes, N 3, 2009
+It is easy to see that  2C([0; +1); [0; +1)) and
+d 
+dt
+= 
+ 1
+ 
+1
+p(t)
+ 
+> 0:
+Thus
+dx
+dt
+=
+dx
+d 
+d 
+dt
+=
+dx
+d 
+ 
+ 1
+ 
+1
+p(t)
+ 
+:
+It follows that
+p(t) 
+ 
+dx
+dt
+ 
+= 
+ 
+dx
+d 
+ 
+:
+Hence
+ 
+p(t) 
+ 
+dx
+dt
+  
+0
+= 
+0
+ 
+dx
+d 
+ 
+d
+2
+x
+d 
+2
+d 
+dt
+:
+So
+d
+2
+x
+d 
+2
+=
+ 
+p(t) 
+ 
+dx
+dt
+  
+0
+ 
+0
+ 
+dx
+d 
+ 
+d 
+dt
+:
+Since [p(t) (x
+0
+(t))]
+0
+  0,  
+0
+(x) > 0(x > 0) and
+d 
+dt
+  0, we get that
+d
+2
+x
+d 
+2
+  0.
+Hence x
+0
+( ) is decreasing on [0; +1). So x is concave on [0; +1).
+Finally, we prove that x is positive on [0; +1). From above discussion, we
+get that x
+0
+(t)  0 and x
+0
+(t) is decreasing on [0; +1). Then x(0) = 0 implies
+that x(t)> 0 on (0; +1). We get that x(t) is positive on (0; +1). The proof
+is completed.
+De ne the nonlinear operator T :X!X by
+(Tx)(t) =
+Z
+t
+0
+ 
+ 1
+ 
+1
+p(s)
+Z
++1
+s
+q(u)f(u;x(u);x( (u)))du
+ 
+ds; t2 [0; +1):
+Lemma 3.3. Suppose that k> 1. It is easy to show that
+(i) Tx satis es
+[p(t) ((Tx)
+0
+(t))]
+0
++q(t)f (t;x(t);x( (t))) = 0; t2 [0; +1)
+and
+(Tx)(0) = 0;
+(ii) Ty2P for each y2P ;
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 9Differential Equations and Control Processes, N 3, 2009
+(iii) If x is a solution of the operator equation x =Tx in P , then
+x
+1
+(t) =
+(
+x(t); t2 [0; +1);
+ (t); t2 [ r; 0]
+is a positive solution of equation (1).
+Proof. The proofs of (i) and (iii) are simple and are omitted.
+For x2P , by the de nition of T , we know that Tx is de ned on [0; +1).
+It follows from Lemma 3.1 and 3.2 that Tx is increasing, concave and positive
+on [0; +1). It is easy to see that the function (Tx)(t)=(1 +t) achieves its
+maximum at [0; +1), then
+sup
+t2[0;+1)
+(Tx)(t)=(1 +t) = (Tx)( )=(1 + ):
+Then
+(Tx)
+ 
+1
+k
+ 
+= x
+ 
+k  1 +k 
+k +k 
+1
+k  1 +k 
++
+1
+k +k 
+ 
+ 
+ 
+1
+k
+(Tx)( )=(1 + ):
+Then Tx2P . The proof of (ii) is completed.
+Lemma 3.4[26]. Let V =fx2 X :jjxjj < lg(l > 0). If
+n
+x(t)
+1+t
+:x2V
+o
+is equicontinuous on any compact intervals of [0; +1) and equiconvergent at
+in nity, where
+V
+1
+=:
+ 
+x(t)
+1 +t
+:x2V
+ 
+is called equiconvergent at in nity if and only if for all   > 0; there exists
+T =T ( )> 0 such that for all x2V
+1
+, it holds
+ 
+ 
+ 
+ 
+x(t
+1
+)
+1 +t
+1
+ 
+x(t
+2
+)
+1 +t
+2
+ 
+ 
+ 
+ 
+< ; t
+1
+;t
+2
+>T:
+Then V is relatively compact on X.
+Lemma 3.5. T :P!P is completely continuous;
+Proof. It is easy to verify that T :P!P is well de ned. Now we prove
+that T is continuous and compact respectively.
+Let x
+n
+! x
+0
+as n ! +1 in P , then there exists r
+0
+such that
+sup
+n2N[f0g
+jjx
+n
+jj<r
+0
+andj (t)j r
+0
+for all t2 [ r; 0]. Set
+B
+r
+0
+(t) = sup
+u;jvj2[0;r
+0
+]
+q(t)f(t; (1 +t)u; (t)v);
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 10Differential Equations and Control Processes, N 3, 2009
+where
+ (t) =
+(
+(1 + (t));  (t)  0;
+1;  (t)< 0;
+and we have
+Z
++1
+0
+jq(s)f(s;x
+n
+(s);x
+n
+( (s))) q(s)f(s;x
+0
+(s);x
+0
+( (s)))jds  2
+Z
++1
+0
+B
+r
+0
+(s)ds:
+Therefore by the Lebesgue dominated convergence theorem, one arrives at
+jp(t) ((Tx
+n
+)
+0
+(t)) p(t) ((Tx
+0
+)
+0
+(t))j
+=
+Z
++1
+t
+jq(s)f(s;x
+n
+(s);x
+n
+( (s)) q(s)f(s;x
+0
+(s);x
+0
+( (s))jds
+ 
+Z
++1
+0
+q(s)jf(s;x
+n
+(s);x
+n
+( (s)) f(s;x
+0
+(s);;x
+0
+( (s))jds
+! 0 as n! +1:
+Since p(+1)< +1, we get
+j ((Tx
+n
+)
+0
+(t))  ((Tx
+0
+)
+0
+(t))j! 0 as n! +1:
+Furthermore (Tx
+n
+)(0) = (Tx
+0
+)(0) = 0 imply that
+0  
+[(Tx
+n
+)  (Tx
+0
+)](t)
+1 +t
+=
+1
+1 +t
+ Z
+t
+0
+[(Tx
+n
+)  (Tx
+0
+)]
+0
+(s)ds + [(Tx
+n
+)  (Tx
+0
+)](0)
+ 
+ 
+1
+1 +t
+Z
+t
+0
+j(Tx
+n
+)
+0
+(s)  (Tx
+0
+)
+0
+(s)jds
+  max
+t2[0;+1)
+j[(Tx
+n
+)  (Tx
+0
+)]
+0
+(t)j:
+It follows that
+jj(Tx
+n
+)  (Tx
+0
+)jj  max
+t2[0;+1)
+jj(Tx
+n
+)
+0
+  (Tx
+0
+)]
+0
+jj! 0
+as n! +1: So, T is continuous.
+T is compact provided that it maps bounded sets into pre-compact sets.
+Let 
+ be any bounded subset of P . Then there exists r> 0 such thatjjxjj r
+for all x2 
+ andj (t)j r. Denote
+B
+r
+(t) = sup
+u;v2[0;r]
+q(t)f(t; (1 +t)u; (t)v):
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 11Differential Equations and Control Processes, N 3, 2009
+Obviously, Lemma 3.1 implies that
+0  (Tx)
+0
+(t) =
+1
+p(t)
+ 
+ 1
+ Z
++1
+t
+q(s)f(s;x(s);x( (s)))ds
+ 
+ 
+1
+p(t)
+ 
+ 1
+ Z
++1
+t
+q(s)f(s;x(s);x( (s)))ds
+ 
+ 
+1
+p(t)
+ 
+ 1
+ Z
++1
+0
+q(s)f(s;x(s);x( (s)))ds
+ 
+ 
+1
+min
+t2[0;+1)
+p(t)
+ 
+ 1
+ Z
++1
+0
+B
+r
+(s)ds
+ 
+:
+Therefore,
+jjTxjj  sup
+t2[0;+1)
+(Tx)
+0
+(t) 
+1
+min
+t2[0;+1)
+p(t)
+ 
+ 1
+ Z
++1
+0
+B
+r
+(s)ds
+ 
+; x2 
+:
+So T 
+ is bounded.
+Moreover, for any T2 (0; +1) and t
+1
+;t
+2
+2 [0;T ], one has from Lemma 2.1
+that
+ 
+ 
+ 
+ 
+(Tx)(t
+1
+)
+1 +t
+1
+ 
+(Tx)(t
+2
+)
+1 +t
+2
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(Tx)(t
+2
+)  (Tx)(t
+1
+)
+1 +t
+1
+ 
+ 
+ 
+ 
++
+ 
+ 
+ 
+ 
+1
+1 +t
+1
+ 
+1
+1 +t
+2
+ 
+ 
+ 
+ 
+j(Tx)(t
+2
+)j
+ 
+1
+1 +t
+1
+ 
+ 
+ 
+ 
+Z
+t
+2
+t
+1
+(Tx)
+0
+(s)ds
+ 
+ 
+ 
+ 
++
+ 
+ 
+ 
+ 
+1
+1 +t
+1
+ 
+1
+1 +t
+2
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Z
+t
+2
+0
+ 
+ 1
+ 
+1
+p(s)
+Z
++1
+s
+q(u)f(u;x(u);x( (u)))du
+ 
+ds
+ 
+ 
+ 
+ 
+ 
+1
+1 +t
+1
+ 
+ 
+ 
+ 
+Z
+t
+2
+t
+1
+ 
+ 1
+ 
+1
+p(s)
+Z
++1
+s
+q(u)f(u;x(u);x( (u)))du
+ 
+ds
+ 
+ 
+ 
+ 
++
+ 
+ 
+ 
+ 
+1
+1 +t
+1
+ 
+1
+1 +t
+2
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Z
+t
+2
+0
+ 
+ 1
+ 
+1
+p(s)
+Z
++1
+s
+q(u)f(u;x(u);x( (u)))du
+ 
+ds
+ 
+ 
+ 
+ 
+ 
+1
+1 +t
+1
+ 
+ 
+ 
+ 
+Z
+t
+2
+t
+1
+ 
+ 1
+ 
+1
+p(s)
+ 
+ds
+ 
+ 
+ 
+ 
+ 
+ 1
+ Z
++1
+0
+B
+r
+(u)du
+ 
++
+ 
+ 
+ 
+ 
+1
+1 +t
+1
+ 
+1
+1 +t
+2
+ 
+ 
+ 
+ 
+Z
+T
+0
+ 
+ 1
+ 
+1
+p(s)
+ 
+ds 
+ 1
+ Z
++1
+0
+B
+r
+(u)du
+ 
+! 0 uniformly as t
+1
+!t
+2
+for all x2 
+. So T is equicontinuous on any compact interval of [0; +1).
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 12Differential Equations and Control Processes, N 3, 2009
+Finally, for any x2 
+, one has
+lim
+t!+1
+(Tx)
+0
+(t) = 0:
+We get that
+lim
+t!+1
+(Tx)(t)
+1 +t
+= lim
+t!+1
+(Tx)
+0
+(t) = 0 for all x2 
+:
+So T is equiconvergent at in nity. By using Lemma 3.4, we obtain that T is
+pre-compact, that is, T is a compact operator. Above all T : P! P is com-
+pletely continuous. The proof is completed.
+Proof of Theorem 2.1. By the de nition of , it is easy to see that is
+a nonnegative convex continuous functional on the cone P . (y) jjyjj for all
+y2P . For x2P , it follows from Lemma 3.3 that TP P . From Lemma 3.5,
+T :P!P is completely continuous.
+Choose
+c =e; d = (1 +k)e
+2
+; b =e
+2
+; a =e
+1
+:
+We divide the remainder of the proof into four steps.
+Step 1. Prove that T (P
+e
+) P
+e
+.
+For x2P
+e
+, one hasjjxjj e. Then
+0 
+x(t)
+1 +t
+ e; t2 [0; +1):
+It follows from (A1) and (A2) that
+f(t;x(t);x( (t))) =f
+ 
+t; (1 +t)
+x(t)
+1 +t
+; (1 + (t))
+x( (t))
+1 + (t)
+ 
+ 
+ 
+ 
+c
+M
+ 
+;t2 [0; +1); (t)  0
+and
+f(t;x(t);x( (t))) =f
+ 
+t; (1 +t)
+x(t)
+1 +t
+; ( (t))
+ 
+ 
+ 
+ 
+c
+M
+ 
+;t2 [0; +1); (t)  0:
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 13Differential Equations and Control Processes, N 3, 2009
+Then Tx2P implies that
+jjTxjj = sup
+t2[0;+1)
+(Tx)(t)
+1 +t
+= sup
+t2[0;+1)
+R
+t
+0
+(Tx)
+0
+(s)ds + (Tx)(0)
+1 +t
+  sup
+t2[0;+1)
+t sup
+t2[0;+1)
+j(Tx)
+0
+(t)j
+1 +t
+  sup
+t2[0;+1)
+j(Tx)
+0
+(t)j
+= sup
+s2[0;+1)
+ 
+ 1
+ 
+1
+p(s)
+Z
++1
+s
+q(u)f(u;x(u);x( (u)))du
+ 
+   
+ 1
+ 
+1
+p(0)
+Z
++1
+0
+q(u)f(u;x(u);x( (u)))du
+ 
+   
+ 1
+0
+B
+@
+1
+p(0)
+Z
+u2[0;+1) with  (u) 0
+q(u) 
+f
+ 
+u; (1 +u)
+x(u)
+1 +u
+; (1 + (u))
+x( (u))
+1 + (u)
+ 
+du
+ 
++ 
+ 1
+0
+B
+@
+1
+p(0)
+Z
+u2[0;+1) with (u)<0
+q(u) 
+f
+ 
+u; (1 +u)
+x(u)
+1 +u
+; ( (u))
+ 
+du
+ 
+   
+ 1
+ 
+1
+p(0)
+Z
++1
+0
+q(u) 
+ 
+c
+M
+ 
+du
+ 
+= e:
+Then Tx2P
+e
+, Hence T (P
+e
+) P
+e
+. This completes the proof of Step 1.
+Step 2. Prove that
+fy2P ( ;b;d)j (y)>bg =fy2P ( ;e
+2
+; (1 +k)e
+2
+)j (y)>e
+2
+g6=;
+and (Ty)>b =e
+2
+for y2P ( ;b;d) =P ( ;e
+2
+; (1 +k)e
+2
+):
+It is easy to see thatfx2P ( ;e
+2
+; (1 +k)e
+2
+); (x)>e
+2
+g6=;.
+For x2P ( ;e
+2
+; (1 +k)e
+2
+), then (x) e
+2
+andjjxjj  (1 +k)e
+2
+. Then
+k
+1 +k
+min
+t2[1=k;k]
+x(t) e
+2
+; sup
+t2[0;+1)
+x(t)
+1 +t
+  (1 +k)e
+2
+:
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 14Differential Equations and Control Processes, N 3, 2009
+Hence
+x(t)
+1 +t
+  (1 +k)e
+2
+; t2 [0; +1)
+and
+x(t)
+1 +t
+ 
+1 +k
+k
+e
+2
+1
+1 +t
+ 
+1 +k
+k
+e
+2
+1
+1 +k
+=
+e
+2
+k
+; t2 [1=k;k]:
+It follows that
+e
+2
+k
+ 
+x(t)
+1 +t
+  (1 +k)e
+2
+; t2 [1=k;k]:
+Hence (A5) and (A6) imply that
+f(t;x(t);x( (t)))  
+ 
+e
+2
+L
+ 
+;t2 [0; +1); (t)  0
+and
+f(t;x(t); ( (t)))  
+ 
+e
+2
+L
+ 
+;t2 [0; +1); (t)  0:
+Then
+ (Tx) =
+k
+1 +k
+min
+t2[1=k;k]
+(Tx)(t) =
+k
+1 +k
+(Tx)
+ 
+1
+k
+ 
+=
+k
+1 +k
+ 
+Z
+1=k
+0
+ 
+ 1
+ 
+1
+p(s)
+Z
++1
+s
+q(u)f(u;x(u);x( (u)))du
+ 
+ds
+!
+ 
+k
+1 +k
+Z
+1=k
+0
+ 
+ 1
+0
+B
+@
+1
+p(s)
+Z
+u2[1=k;k]; (u) 0
+q(u) 
+f
+ 
+u; (1 +u)
+x(u)
+1 +u
+; (1 + (u))
+x( (u))
+1 + (u)
+ 
+du
+ 
+ds
++
+k
+1 +k
+Z
+1=k
+0
+ 
+ 1
+0
+B
+@
+1
+p(s)
+Z
+u2[1=k;k]; (u) 0
+q(u) 
+f
+ 
+u; (1 +u)
+x(u)
+1 +u
+; ( (u))
+ 
+du
+ 
+ds
+ 
+k
+1 +k
+Z
+1=k
+0
+ 
+ 1
+ 
+1
+p(s)
+Z
+k
+1=k
+q(u) 
+ 
+e
+2
+L
+ 
+du
+ 
+ds
+= e
+2
+:
+This completes the proof of Step 2.
+Step 3. Prove thatjjTyjj<a =e
+1
+for y2P withjjyjj a.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 15Differential Equations and Control Processes, N 3, 2009
+For x2P
+e
+1
+, we have
+sup
+t2[0;+1)
+x(t)
+1 +t
+ e
+1
+=a:
+It follows from (A3); (A4) and Tx2P that
+f(t; (1 +t)x; (1 + (t))v) 
+e
+1
+M
+; t2 [0; +1); (t)  0; 0 x;v e
+1
+and
+f(t; (1 +t)x; ( (t))) 
+e
+1
+M
+; t2 [0; +1); (t)  0; 0 x e
+1
+:
+Then
+jjTxjj = sup
+t2[0;+1)
+(Tx)(t)
+1 +t
+= sup
+t2[0;+1)
+j(Tx)
+0
+(t)j
+= sup
+t2[0;+1)
+ 
+ 1
+ 
+1
+p(s)
+Z
++1
+s
+q(u)f(u;x(u);x( (u))du
+ 
+   
+ 1
+0
+B
+@
+1
+p(0)
+Z
+u2[0;+1); (u) 0
+q(u) 
+f
+ 
+u; (1 +u)
+x(u)
+1 +u
+; (1 + (u))
+x( (u))
+1 + (u)
+ 
+du
+ 
++ 
+ 1
+0
+B
+@
+1
+p(0)
+Z
+u2[0;+1); (u) 0
+q(u) 
+f
+ 
+u; (1 +u)
+x(u)
+1 +u
+; (1 + (u))
+x( (u))
+1 + (u)
+ 
+du
+ 
+<
+e
+1
+M
+ 
+ 1
+ 
+1
+p(0)
+Z
++1
+0
+q(u)du
+ 
+= e
+1
+:
+ThenjjTyjj<e
+1
+forjjyjj e
+1
+. This completes that proof of Step 3.
+Step 4. Prove that (Ty)>b for y2P ( ;b;c) withjjTyjj>d.
+For x2P ( ;b;c) =P ( ;e
+2
+;e) andjjTxjj>d = (1 +k)e
+2
+, then
+sup
+t2[0;+1)
+(Tx)(t)
+1 +t
+  (1 +k)e
+2
+andjjxjj = sup
+t2[0;+1)
+x(t)
+1 +t
+ e:
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 16Differential Equations and Control Processes, N 3, 2009
+Hence we have from Tx2P that
+ (Tx) =
+k
+1 +k
+min
+t2[1=k;k]
+(Tx)(t)
+=
+k
+1 +k
+(Tx)
+ 
+1
+k
+ 
+ 
+k
+1 +k
+1
+k
+sup
+t2[0;+1)
+(Tx)(t)
+1 +t
+=
+1
+1 +k
+(1 +k)e
+2
+=e
+2
+=b:
+This completes the proof of Step 4.
+From above steps, (C1), (C2) and (C3) of Theorem 3.1 are satis ed. Then,
+by Theorem 3.1, T has three  xed points x
+1
+, x
+2
+and x
+3
+2P
+e
+such that
+jjx
+1
+jj<e
+1
+; (x
+2
+)>e
+2
+;jjx
+3
+jj e
+1
+; (x
+3
+) e
+2
+;jjx
+i
+jj e for i = 1; 2; 3;
+i.e., x
+1
+, x
+2
+and x
+3
+satisfy
+sup
+t2[0;+1)
+x
+1
+(t)
+1 +t
+<e
+1
+; min
+t2[1=k;k]
+x
+2
+(t)>
+1 +k
+k
+e
+2
+and
+sup
+t2[0;+1)
+x
+3
+(t)
+1 +t
+>e
+1
+; min
+t2[1=k;k]
+x
+3
+(t)<
+1 +k
+k
+e
+2
+:
+Hence equation (1) has at least three positive solutions
+y
+i
+(t) =
+(
+x
+i
+(t); t  0;
+ (t); t2 [ r; 0];
+i = 1; 2; 3:
+The proof is completed.
+REFERENCES
+1. R. I. Avery and A. C. Peterson, Three Positive Fixed Points of Nonlinear
+Operators on Ordered Banach Spaces, Comput. Math. Appl., 42(2001),
+313-322.
+2. I. V. Kamenev, An integral criterion for oscillation of linear differential
+equations of second order, Mat. Zametki. 23 (1978)249-251.
+3. Ch. G. Philos, Oscillation theorems for linear differential equations of
+second order, Arch. Math (Basel). 53 (1989)482-492.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 17Differential Equations and Control Processes, N 3, 2009
+4. X. Yang, Oscillation criteria for nonlinear differential equations with damp-
+ing, Appl. Math. Comput. 136 (2003)549-557.
+5. H. Li, and C. Yeh, Oscillation criteria for nonlinear differential equations,
+Houston J. Math. 21 (1995)801-811.
+6. H. Hsu, and C. Yeh, Oscillation theorems for second order half-linear dif-
+ferential equations, Appl. Math. Lett. 9 (1996)71-77.
+7. P. J. Y. Wong, and R. P. Agarwal, Oscillation criteria for half-linear dif-
+ferential equations, Adv. Math. Sci. Appl. 9 (1999)649-663.
+8. K. Takasi, and N. Yoshida, Nonoscillation theorems for a class of quasi-
+linear differential equations of second order, J. Math. Anal. Appl. 189
+(1995)115-127.
+9. Y. Liu, Boundary value problem for second order differential equations on
+unbounded domain, Acta Anal. Funct. Appl. 4(3)(2002), pp 211C216(in
+Chinese).
+10. O. Dosly, M. Unal, Half-linear differential equations: Linearization tech-
+nique and its application, J. Math. Anal. Appl., 335(2007)450-460.
+11. Y. V. Rogovchenko, F. Tuncay, Oscillation criteria for second-order nonlin-
+ear differential equations with damping, Nonl. Anal. TMA, 69(2008)208-
+221.
+12. O. G. Mustafa, On oscillatory solutions of certain forced EmdenCFowler
+like equations, J. Math. Anal. Appl., 348(2008)211-219.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 18

@@ -1,0 +1,1933 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 3, 2011
+Electronic Journal,
+reg. N ΦC77-39410 at 15.04.2012
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Guaranteed cost control of neural networks with
+various activation functions and mixed
+time-varying delays in state and control
+MAI VIET THUAN
+College of Sciences, Thainguyen university,
+Thainguyen City, Vietnam
+Corresponding author: maithuank1@gmail.com
+Abstract
+This article studies a guaranteed cost control problem for a class of neural networks
+with various activation functions and mixed time-varying delays in state and control.
+Attention is focused on the design of memory feedback controller such that the resulting
+closed-loop system is exponentially stable and an adequate level of performance is also
+guaranteed. UsingtheLyapunovmethodandlinearmatrixinequalitytechnique, acriteria
+for the existence of the controller are derived in terms of LMIs. A numerical example is
+included to illustrate the effectiveness of our results.
+Keywords: Cellular neutral networks; guaranteed cost control; mixed delay; Lyapunov
+function; Linear matrix inequalities (LMIs).
+2000MSC: 34D05, 34D20, 34K20, 34K35
+1 Introduction
+Cellularneuralnetworkswithtime-varyingdelayshavebeenextensivelystudied
+over the past two decades and have found many application in variety of areas
+suchassignalprocessing,patternrecognition,staticimageprocessing,associate
+memory, and combinatorial optimization. Since time delay effects are often aDifferential Equations and Control Processes, N 3, 2011
+source of instabilityand poor performance of the neural networks, the problem
+ofstabilityanalysisorstabilizationofneural networkswithtime-varyingdelays
+has attracted many researcher [5, 6, 8, 12, 13]. On the other hand, in many
+practical system, it is desirable to design the control system which is not only
+stable but also guarantee an adequate level of performance. One approach to
+this problem is the so-called guaranteed cost control approach ﬁrst introduced
+byChangandPeng[2]. Thisapproachhastheadvantageofprovidinganupper
+bound on a given performance index and thus the system performance degra-
+dation incurred by time delays is guaranteed to be less than this bound. Base
+on this idea, some results have been proposed for discrete-time with constant
+delays systems [3, 10, 11], and for continuous-time with constant delays sys-
+tems [2, 7, 9]. To the best of our knowledge, so far, no result on the guaranteed
+cost control of the neural networks with mixed time-varying delay in state and
+control is available in literature. This motivates our present investigation.
+In this paper, we consider the problem of guaranteed cost control of neu-
+ral networks with various activation functions and mixed time-varying delays
+in state and control. The novel feature of the results obtained in this paper is
+twofold. First,thesystemconsideredinthispaperismixedtime-varyingdelays
+instateandcontrol. Second, byusing improvedLyapunov-Krasovskiifunction-
+als combined with LMIs technique, a delay-dependent criterion for existence of
+the guaranteed cost controller is derived in terms of LMIs. The approach also
+allows to compute simultaneously the two bounds the characterize the expo-
+nential stability rate of the solution and design a upper bound of cost function
+for the system.
+The paper is organized as follows. Section 2 presents deﬁnitions and
+somewell-knowntechnicalpropositionsneededfortheproofofthemainresults.
+Guaranteed cost control of neural networks with various activation functions
+and mixed time-varying delays in state and control are presented in Section 3.
+Numerical examples showing the feasibility and effectiveness of the conditions
+are given in Section 4. The paper ends with conclusions and cited references.
+2 Preliminaries
+The following notation will be used in this paper: R
++
+denotes the set of all
+realnon-negativenumbers;R
+n
+denotesthen−dimensionalspacewiththescalar
+producth.,.i and the vector normk.k;R
+n×r
+denotes the space of all matrices
+of(n×r)−dimensions;A
+T
+denotesthetransposeofmatrixA;Aissymmetricif
+Electronic Journal. http://www.math.spbu.ru/diffjournal 19Differential Equations and Control Processes, N 3, 2011
+A =A
+T
+; I denotes the identity matrix; λ(A) denotes the set of all eigenvalues
+of A; λ
+max
+(A) = max{Reλ;λ ∈ λ(A)}.; x
+t
+:= {x(t+s) : s ∈ [−h,0]},k x
+t
+k=
+sup
+s∈[−h,0]
+kx(t+s)k; C([0,t],R
+n
+) denotes the set of allR
+n
+−valued continuous
+functions on [0,t]; L
+2
+([0,t],R
+m
+) denotes the set of all the R
+m
+−valued square
+integrable functions on [0,t]; Matrix A is called semi-positive deﬁnite (A≥ 0)
+if hAx,xi ≥ 0, for all x ∈ R
+n
+;A is positive deﬁnite (A > 0) if hAx,xi > 0
+for all x 6= 0;A > B means A−B > 0. The notation diag{...} stands for a
+block-diagonal matrix. The symmetric term in a matrix is denoted by∗.
+Consider the following cellular neural networks with mixed time-varying
+delays in state and control of the form
+˙ x(t) =−Ax(t)+W
+0
+f(x(t))+W
+1
+g(x(t−τ
+1
+(t)))+W
+2
+Z
+t
+t−τ
+2
+(t)
+h(x(s))ds
++B
+0
+u(t)+B
+1
+u(t−τ
+3
+(t))+B
+2
+Z
+t
+t−τ
+4
+(t)
+u(s)ds
+x(t) =φ(t),t∈ [−d,0], d = max{τ
+1
+,τ
+2
+,τ
+3
+,τ
+4
+},
+(1)
+where x(t) = [x
+1
+(t),x
+2
+(t),...,x
+n
+(t)]
+T
+∈ R
+n
+is the state vector of the neural
+networks; u(t)∈L
+2
+([0,s],R
+m
+),∀s> 0, is the control input vector of the neural
+networks; n is the number of neurals, and
+f(x(t))= [f
+1
+(x
+1
+(t)),f
+2
+(x
+2
+(t)),...,f
+n
+(x
+n
+(t))]
+T
+,
+g(x(t)) = [g
+1
+(x
+1
+(t)),g
+2
+(x
+2
+(t)),...,g
+n
+(x
+n
+(t))]
+T
+,
+h(x(t)) = [h
+1
+(x
+1
+(t)),h
+2
+(x
+2
+(t)),...,h
+n
+(x
+n
+(t))]
+T
+are the neural activation functions. The diagonal matrix A =
+diag(a
+1
+,a
+2
+,...,a
+n
+)representstheself-feedbacktermandW
+0
+,W
+1
+,W
+2
+,B
+0
+,B
+1
+,B
+2
+aregivenrealconstantmatriceswithappropriatedimensions. Thetime-varying
+delay functions τ
+1
+(t),τ
+2
+(t),τ
+3
+(t),τ
+4
+(t) satisfy the condition
+0≤τ
+1
+(t)≤τ
+1
+, ˙ τ
+1
+(t)≤δ
+1
+< 1,
+0≤τ
+2
+(t)≤τ
+2
+,
+0≤τ
+3
+(t)≤τ
+3
+, ˙ τ
+3
+(t)≤δ
+2
+< 1,
+0≤τ
+4
+(t)≤τ
+4
+.
+The initial functions φ(t)∈ C([−d,0],R
+n
+),d = max{τ
+1
+,τ
+2
+,τ
+3
+,τ
+4
+}, with the
+uniform norm k φ k= max
+t∈[−d,0]
+k φ(t) k . We assume that the activation
+Electronic Journal. http://www.math.spbu.ru/diffjournal 20Differential Equations and Control Processes, N 3, 2011
+functions f(x),g(x),h(x) are Lipschitz with the Lipschitz constains f
+i
+,g
+i
+,h
+i
+>
+0 :
+|f
+i
+(ξ
+1
+)−f
+i
+(ξ
+2
+)|≤f
+i
+|ξ
+1
+−ξ
+2
+|, i = 1,2,...,n,∀ξ
+1
+,ξ
+2
+∈R,
+|g
+i
+(ξ
+1
+)−g
+i
+(ξ
+2
+)|≤g
+i
+|ξ
+1
+−ξ
+2
+|, i = 1,2,...,n,∀ξ
+1
+,ξ
+2
+∈R,
+|h
+i
+(ξ
+1
+)−h
+i
+(ξ
+2
+)|≤h
+i
+|ξ
+1
+−ξ
+2
+|, i = 1,2,...,n,∀ξ
+1
+,ξ
+2
+∈R.
+(2)
+Deﬁnition 2.1 Givenα> 0. The system (1) isα−exponentiallystable if there
+exist a positive number γ > 0 such that every solution x(t,φ) satisﬁes the
+following condition:
+kx(t,φ)k≤γe
+−αt
+kφk, ∀t≥ 0.
+Deﬁnition 2.2 Given α > 0. The system (1) is globally α−exponentially sta-
+bilizable if there is a feedback control u(t) = Kx(t), such that the closed-loop
+time-delay system
+˙ x(t) =−[A
+0
+−B
+0
+K]x(t)+W
+0
+f(x(t))+W
+1
+g(x(t−τ
+1
+(t)))+B
+1
+Kx(t−τ
+3
+(t))
++W
+2
+Z
+t
+t−τ
+2
+(t)
+h(x(s))ds+B
+2
+Z
+t
+t−τ
+4
+(t)
+Kx(s)ds
+x(t) =φ(t),t∈ [−d,0], d = max{τ
+1
+,τ
+2
+,τ
+3
+,τ
+4
+}
+(3)
+is α−exponentially stable.
+Associated with the system (1) is the cost function
+J =
+Z
+∞
+0
+[x
+T
+(t)M
+1
+x(t)+u
+T
+(t)M
+2
+u(t)]dt, (4)
+whereM
+1
+∈R
+n×n
+andM
+2
+∈R
+m×m
+are given symmetric positive-deﬁnitematri-
+ces.
+Here, the objective of this article is to develop a procedure to design a
+memory state feedback controller u(t) for the system (1) and cost function (4)
+such that the resulting closed-loop system is α−exponentially stable and the
+closed-loop value of the cost function (4) satisﬁes J ≤ J
+∗
+, where J
+∗
+is some
+speciﬁed constant.
+Deﬁnition 2.3 For the system (1) and cost function(4),if there exist a control
+law u
+∗
+(t) and a positive J
+∗
+such that for all admissible delays, the system (1)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 21Differential Equations and Control Processes, N 3, 2011
+is α−exponentially stable and the closed-loop value of the cost function (4)
+satisﬁes J ≤J
+∗
+, then J
+∗
+is said to be a guaranteed cost and u
+∗
+(t) is said to be
+a guaranteed cost control law of the system (1) and cost function (4).
+We introduce the following technical well-known propositions, which will
+be used in the proof of our results.
+Proposition 2.1 Let P,Q be matrices of appropriate dimensions andQ is sym-
+metric positive deﬁnite. Then
+2hPy,xi−hQy,yi≤hPQ
+−1
+P
+T
+x,xi, ∀(x,y).
+Proposition2.2 (Gu,2000). ForanysymmetricpositivedeﬁnitematrixM > 0,
+scalar γ > 0 and vector function ω : [0,γ] → R
+n
+such that the integrations
+concerned are well deﬁned, the following inequality holds
+ Z
+γ
+0
+ω(s)ds
+ 
+T
+M
+ Z
+γ
+0
+ω(s)ds
+ 
+≤γ
+ Z
+γ
+0
+ω
+T
+(s)Mω(s)ds
+ 
+Proposition 2.3 (Schur complement lemma). Given constant symmetric ma-
+trices X,Y,Z with appropriate dimensions satisfying X = X
+T
+,Y = Y
+T
+> 0.
+Then X +Z
+T
+Y
+−1
+Z < 0 if and only if
+ 
+X Z
+T
+Z −Y
+!
+< 0 or
+ 
+−Y Z
+Z
+T
+X
+!
+< 0.
+3 Main result
+Let us denote
+Σ =−AP −PA
+T
+−(B
+0
+Y +Y
+T
+B
+T
+0
+)+2αP +W
+0
+D
+0
+W
+T
+0
++(1−δ
+1
+)
+−1
+e
+2ατ
+1
+W
+1
+D
+1
+W
+T
+1
++(1−δ
+2
+)
+−1
+e
+2ατ
+3
+B
+1
+B
+T
+1
++τ
+2
+e
+2ατ
+2
+W
+2
+D
+2
+W
+T
+2
++τ
+4
+e
+2ατ
+4
+B
+2
+B
+T
+2
+,
+G = diag{g
+i
+,i = 1,2,...,n}, H = diag{h
+i
+,i= 1,2,...,n},
+F = diag{f
+i
+,i = 1,2,...,n,}
+g
+2
+= max{g
+2
+i
+,i = 1,2,...,n}, h
+2
+= max{h
+2
+i
+,i = 1,2,...,n},K =−YP
+−1
+,
+λ
+1
+=λ
+min
+(P
+−1
+),
+λ
+2
+=λ
+max
+(P
+−1
+)+λ
+max
+(D
+−1
+1
+)g
+2
+τ
+1
++λ
+max
+(D
+−1
+2
+)h
+2
+τ
+2
+2
++(τ
+3
++
+1
+2
+τ
+2
+4
+)λ
+max
+(K
+T
+K)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 22Differential Equations and Control Processes, N 3, 2011
+Theorem 3.1. For given α > 0,M
+1
+> 0 and M
+2
+> 0,u(t) = −YP
+−1
+x(t) is a
+guaranteed cost controller for the system (1) if there exists a symmetric positive
+deﬁnite matrix P ∈R
+n×n
+, three diagonal positive matrices D
+i
+,i = 0,1,2 and a
+matrix Y with appropriate dimension such that the following LMI holds:
+Ξ =
+
+
+
+
+
+
+
+
+
+
+
+
+
+Σ PF PG τ
+2
+PH PM
+1
+Y
+T
+M
+2
+(1+τ
+4
+)Y
+T
+FP −D
+0
+0 0 0 0 0
+GP 0 −D
+1
+0 0 0 0
+τ
+2
+HP 0 0 −D
+2
+0 0 0
+M
+1
+P 0 0 0 −M
+1
+0 0
+M
+2
+Y 0 0 0 0 −M
+2
+0
+(1+τ
+4
+)Y 0 0 0 0 0 −(1+τ
+4
+)I
+m
+
+
+
+
+
+
+
+
+
+
+
+
+
+< 0. (5)
+Then, the upper bound of cost function for the system (2.1) is
+J ≤J
+∗
+=λ
+2
+kφk
+2
+.
+Proof. Let us denote X = P
+−1
+. With the feedback control u(t) =−YP
+−1
+, we
+consider the Lyapunov-Krasovskii functional for closed-loop system
+V(t,x
+t
+) =
+5
+X
+i=1
+V
+i
+(t,x
+t
+),
+where
+V
+1
+=x
+T
+(t)Xx(t),
+V
+2
+=
+Z
+t
+t−τ
+1
+(t)
+e
+2α(s−t)
+g
+T
+(x(s))D
+−1
+1
+g(x(s))ds,
+V
+3
+=
+Z
+0
+−τ
+2
+Z
+t
+t+s
+e
+2α(θ−t)
+h
+T
+(x(θ))D
+−1
+2
+h(x(θ))dθds,
+V
+4
+=
+Z
+t
+t−τ
+3
+(t)
+e
+2α(s−t)
+x
+T
+(s)K
+T
+Kx(s)ds,
+V
+5
+=
+Z
+0
+−τ
+4
+Z
+t
+t+s
+e
+2α(θ−t)
+x
+T
+(θ)K
+T
+Kx(θ)dθds.
+It is easy to check that
+λ
+1
+kx(t)k
+2
+≤V(t,x
+t
+)≤λ
+2
+kx
+t
+k
+2
+, t∈R
++
+. (6)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 23Differential Equations and Control Processes, N 3, 2011
+Taking derivative of V
+1
+along solutions of the closed-loop system (3), we get
+˙
+V
+1
+=x
+T
+(t)[−XA−A
+T
+X−X(B
+0
+Y +Y
+T
+B
+T
+0
+)X]x(t)
++2x
+T
+(t)XW
+0
+f(x(t))+2x
+T
+(t)XW
+1
+g(x(t−τ
+1
+(t)))
++2x
+T
+(t)XB
+1
+u(t−τ
+3
+(t))
++2x
+T
+(t)XW
+2
+Z
+t
+t−τ
+2
+(t)
+h(x(s))ds+2x
+T
+(t)XB
+2
+Z
+t
+t−τ
+4
+(t)
+u(s)ds
+Applying Proposition 2.1 and Proposition 2.2 gives
+2x
+T
+(t)XW
+0
+f(x(t))≤x
+T
+(t)XW
+0
+D
+0
+W
+T
+0
+Xx(t)+f
+T
+(x(t))D
+−1
+0
+f(x(t));
+2x
+T
+(t)XW
+1
+g(x(t−τ
+1
+(t))≤(1−δ
+1
+)
+−1
+e
+2ατ
+1
+x
+T
+(t)XW
+1
+D
+1
+W
+T
+1
+Xx(t)
++(1−δ
+1
+)e
+−2ατ
+1
+g(x(t−τ
+1
+(t)))
+T
+D
+−1
+1
+g(x(t−τ
+1
+(t)));
+2x
+T
+(t)XB
+1
+u(t−τ
+3
+(t))≤ (1−δ
+2
+)
+−1
+e
+2ατ
+3
+x
+T
+(t)XB
+1
+B
+T
+1
+Xx(t)
++(1−δ
+2
+)e
+−2ατ
+3
+ku(t−τ
+3
+(t))k
+2
+;
+2x
+T
+(t)XW
+2
+Z
+t
+t−τ
+2
+(t)
+h(x(s))ds≤τ
+2
+e
+2ατ
+2
+x
+T
+(t)XW
+2
+D
+2
+W
+T
+2
+Xx(t)
++
+1
+τ
+2
+e
+−2ατ
+2
+ Z
+t
+t−τ
+2
+(t)
+h(x(s))ds
+ 
+T
+D
+−1
+2
+ Z
+t
+t−τ
+2
+(t)
+h(x(s))ds
+ 
+≤τ
+2
+e
+2ατ
+2
+x
+T
+(t)XW
+2
+D
+2
+W
+T
+2
+Xx(t)+e
+−2ατ
+2
+Z
+t
+t−τ
+2
+(t)
+h
+T
+(x(s))D
+−1
+2
+h(x(s))ds
+≤τ
+2
+e
+2ατ
+2
+x
+T
+(t)XW
+2
+D
+2
+W
+T
+2
+Xx(t)+e
+−2ατ
+2
+Z
+t
+t−τ
+2
+h
+T
+(x(s))D
+−1
+2
+h(x(s))ds;
+2x
+T
+(t)XB
+2
+Z
+t
+t−τ
+4
+(t)
+u(s)ds≤τ
+4
+e
+2ατ
+4
+x
+T
+(t)XB
+2
+B
+T
+2
+Xx(t)
++
+1
+τ
+4
+e
+−2ατ
+4
+ Z
+t
+t−τ
+4
+(t)
+u(s)ds
+ 
+T
+ Z
+t
+t−τ
+4
+(t)
+u(s)ds
+ 
+≤τ
+4
+e
+2ατ
+4
+x
+T
+(t)XB
+2
+B
+T
+2
+Xx(t)+e
+−2ατ
+4
+Z
+t
+t−τ
+4
+(t)
+ku(s)k
+2
+ds
+≤τ
+4
+e
+2ατ
+4
+x
+T
+(t)XB
+2
+B
+T
+2
+Xx(t)+e
+−2ατ
+4
+Z
+t
+t−τ
+4
+ku(s)k
+2
+ds.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 24Differential Equations and Control Processes, N 3, 2011
+Therefor
+˙
+V
+1
+≤x
+T
+(t)[−XA−A
+T
+X−X(B
+0
+Y +Y
+T
+B
+T
+0
+)X]x(t)
++x
+T
+X(t)
+ 
+W
+0
+D
+0
+W
+T
+0
++(1−δ
+1
+)
+−1
+e
+2ατ
+1
+W
+1
+D
+1
+W
+T
+1
++(1−δ
+2
+)
+−1
+e
+2ατ
+3
+B
+1
+B
+T
+1
++τ
+2
+e
+2ατ
+2
+W
+2
+D
+2
+W
+T
+2
++τ
+4
+e
+2ατ
+4
+B
+2
+B
+T
+2
+ 
+Xx(t)
++f
+T
+(x(t))D
+−1
+0
+f(x(t))+(1−δ
+1
+)e
+−2ατ
+1
+g(x(t−τ
+1
+(t)))
+T
+D
+−1
+1
+g(x(t−τ
+1
+(t)))
++(1−δ
+2
+)e
+−2ατ
+3
+ku(t−τ
+3
+(t))k
+2
++e
+−2ατ
+2
+Z
+t
+t−τ
+2
+h
+T
+(x(s))D
+−1
+2
+h(x(s))ds
++e
+−2ατ
+4
+Z
+t
+t−τ
+4
+ku(s)k
+2
+ds
+(7)
+Next, the derivatives of V
+k
+,k = 2,...,5 give
+˙
+V
+2
+≤−2αV
+2
++(g(x(t)))
+T
+D
+−1
+1
+(g(x(t)))
+−(1−δ
+1
+)e
+−2ατ
+1
+(g(x(t−τ
+1
+(t))))
+T
+D
+−1
+1
+(g(x(t−τ
+1
+(t))));
+˙
+V
+3
+≤−2αV
+3
++τ
+2
+(h(x(t)))
+T
+D
+−1
+2
+(h(x(t)))
+−e
+−2ατ
+2
+Z
+t
+t−τ
+2
+(h(x(s)))
+T
+D
+−1
+2
+(h(x(s)))ds;
+˙
+V
+4
+≤−2αV
+4
++x
+T
+(t)XY
+T
+YXx(t)−(1−δ
+2
+)e
+−2ατ
+3
+ku(t−τ
+3
+(t))k
+2
+;
+˙
+V
+5
+≤−2αV
+5
++τ
+4
+x
+T
+(t)XY
+T
+YXx(t)−e
+−2ατ
+4
+Z
+t
+t−τ
+4
+ku(s)k
+2
+ds.
+(8)
+From (7)−(8), we obtain
+˙
+V +2αV
+≤x
+T
+(t)
+ 
+−XA−A
+T
+X−X(B
+0
+Y +Y
+T
+B
+T
+0
+)X +2αX +XW
+0
+D
+0
+W
+T
+0
+X
++(1−δ
+1
+)
+−1
+e
+2ατ
+1
+XW
+1
+D
+1
+W
+T
+1
+X +(1−δ
+2
+)
+−1
+e
+2ατ
+3
+XB
+1
+B
+T
+1
+X
++τ
+2
+e
+2ατ
+2
+XW
+2
+D
+2
+W
+T
+2
+X +τ
+4
+e
+2ατ
+4
+XB
+2
+B
+T
+2
+X +(1+τ
+4
+)XY
+T
+YX
+ 
+x(t)
++f
+T
+(x(t))D
+−1
+0
+f(x(t))+g
+T
+(x(t))D
+−1
+1
+g(x(t))+τ
+2
+h
+T
+(x(t))D
+−1
+2
+h(x(t)).
+(9)
+Using the condition (2) and since the matrices D
+i
+> 0,i = 0,1,2 are diagonal,
+Electronic Journal. http://www.math.spbu.ru/diffjournal 25Differential Equations and Control Processes, N 3, 2011
+we have
+f
+T
+(x(t))D
+−1
+0
+f(x(t))≤x
+T
+(t)FD
+−1
+0
+Fx(t),
+g
+T
+(x(t))D
+−1
+1
+g(x(t))≤x
+T
+(t)GD
+−1
+1
+Gx(t),
+τ
+2
+h
+T
+(x(t))D
+−1
+2
+h(x(t))≤τ
+2
+x
+T
+(t)HD
+−1
+2
+Hx(t).
+(10)
+Since (9) and (10), we obtain
+˙
+V +2αV ≤x
+T
+(t)Ωx(t)−x
+T
+(t)Mx(t),
+where
+Ω =−XA−A
+T
+X−X(B
+0
+Y +Y
+T
+B
+T
+0
+)X +2αX +XW
+0
+D
+0
+W
+T
+0
+X
++(1−δ
+1
+)
+−1
+e
+2ατ
+1
+XW
+1
+D
+1
+W
+T
+1
+X +(1−δ
+2
+)
+−1
+e
+2ατ
+3
+XB
+1
+B
+T
+1
+X
++τ
+2
+e
+2ατ
+2
+XW
+2
+D
+2
+W
+T
+2
+X +τ
+4
+e
+2ατ
+4
+XB
+2
+B
+T
+2
+X +(1+τ
+4
+)XY
+T
+YX
++FD
+−1
+0
+F +GD
+−1
+1
+G+τ
+2
+HD
+−1
+2
+H +M
+1
++XY
+T
+M
+2
+YX,
+(11)
+M =M
+1
++XY
+T
+M
+2
+YX.
+Therefor, if Ω< 0, then
+˙
+V +2αV ≤−x
+T
+(t)Mx(t).
+Since M> 0, we obtain
+˙
+V +2αV ≤ 0, (12)
+which guarantees the exponentially stabilition of the system by Lyapunov sta-
+bility theory and the solution x(t,φ) of the system satisfy
+kx(t,φ)k≤
+r
+λ
+2
+λ
+1
+e
+−αt
+kφk, ∀t≥ 0.
+Pre- and post-multiplying both sides of Ω by P, and note that Ω< 0 is equiva-
+lenttoPΩP < 0.ApplyingtheSchurcomplementyieldlinearmatrixinequality
+(5). Since V(t,x
+t
+)> 0, we have
+˙
+V(t,x
+t
+)≤−x
+T
+(t)Mx(t) (13)
+Integrating both sides of (13) from 0 to s, we obtain
+V(s,x
+s
+)−V(0,φ)≤−
+Z
+s
+0
+x
+T
+(t)Mx(t)dt.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 26Differential Equations and Control Processes, N 3, 2011
+Hence
+Z
+s
+0
+x
+T
+(t)Mx(t)dt≤V(0,φ)=λ
+2
+kφk
+2
+.
+Given s→∞, we obtain
+J =
+Z
+∞
+0
+x
+T
+(t)Mx(t)dt≤λ
+2
+kφk
+2
+=J
+∗
+.
+This completes the proof.
+Remark 3.1. For given α > 0,M
+1
+> 0,M
+2
+> 0, the criteria for existence of
+the guaranteed cost control of neural networks with various activation functions
+and mixed time-varying delays in state and control is derived in terms of LMIs,
+which can be solve by various eﬃcient covex algorithms [1, 4].
+Remark 3.2. The neural networks system with various activation functions
+and mixed time-varying delays considered in previous works (e.g. [5, 6, 8, 12,
+13]) are special cases of the system (1).
+4 Numerical examples
+Example 4.1. Consider the system (1), where
+φ(t) = 5sin5t, τ
+1
+(t) = sin0.5t, τ
+3
+(t) = sin0.6t,τ
+4
+(t) = 0.5|sint|,
+(
+τ
+2
+(t) = 0.8sin
+2
+t if t∈I =∪
+k≥0
+[2kπ,(2k+1)π]
+τ
+2
+(t) = 0 if t∈R
++
+\I,
+A =
+ 
+27 0
+0 26
+!
+, W
+0
+=
+ 
+3 0.15
+1 2
+!
+, W
+1
+=
+ 
+0 1
+1 0
+!
+, W
+2
+=
+ 
+0.1 0.4
+0.5 0.2
+!
+,
+B
+0
+=
+ 
+0
+3
+!
+, B
+1
+=
+ 
+2
+−3
+!
+, B
+2
+=
+ 
+−1
+2
+!
+,
+F =
+ 
+0.1 0
+0 0.4
+!
+, G =
+ 
+0.5 0
+0 0.8
+!
+, H =
+ 
+0.1 0
+0 0.6
+!
+.
+We see that the time delay functions τ
+2
+(t),τ
+4
+(t) are bounded but non-
+differentiable and τ
+1
+= 1,τ
+2
+= 0.8,τ
+3
+= 1,τ
+4
+= 0.5,δ
+1
+= 0.5,δ
+2
+= 0.6.
+Given
+α = 0.5,M
+1
+=
+ 
+3 1
+1 4
+!
+, M
+2
+= [9],
+Electronic Journal. http://www.math.spbu.ru/diffjournal 27Differential Equations and Control Processes, N 3, 2011
+using MATLABs LMI Toolbox, the LMI (5) is feasible with the following ma-
+trices:
+P =
+ 
+3.6537 −0.5970
+−0.5970 4.1381
+!
+,D
+0
+=
+ 
+4.4254 0
+0 4.4794
+!
+,D
+1
+=
+ 
+3.5888 0
+0 8.6180
+!
+,
+D
+2
+=
+ 
+17.5413 0
+0 24.7486
+!
+,Y =
+h
+−0.0023 0.1878
+i
+.
+and accordingly the feedback control is u(t) =
+h
+−0.0069 −0.0464
+i
+x(t). More-
+over, the solution of closed-loop system satisfy
+kx(t,φ)k≤ 2.2760e
+−0.5t
+kφk, ∀t≥ 0,
+and the optimal guaranteed cost of the closed-loop system is as follows:
+J ≤J
+∗
+= 11.38.
+5 Conclusions
+In thispaper, wehavepresenteda solutionto theguaranteedcost controlprob-
+lem for a class of neural networks with various activation functions and mixed
+time-varying delays in state and control in a LMI framework. The existence
+condition for guaranteed cost memory feedback controllers has been derived
+in terms of linear matrix inequalities which allows to compute simultaneously
+the two bounds that characterize the exponential stability of the solution of
+closed-loop system and design the upper bound of cost function for the system.
+A numerical example is given to show the effectiveness of the obtained result.
+Acknowledgements. This work is supported by the National Foundation for
+Science and Technology Development, Vietnam.
+References
+[1] S.Boyd, E.L.Ghaoui, E.Feron, V.Balakrishnan, LinearMatrix Inequalities andControlTheory,
+SIAM Studies in Applied Mathematic, vol.15. SIAM, Philadelphia, 1994.
+[2] S.S.L. Chang, T.K.C. Peng, Adaptive guaranteed cost control of systems with uncertain param-
+eters, IEEE Transaction on Automatic Control, 17(1972), 474-483.
+[3] W.H. Chen, Z.H. Guan, X. Lu, Delay-dependent guaranteed cost control for uncertain discrete-
+time systems with both state and input delay, J. Franklin Institute, 341(2004), 419-430.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 28Differential Equations and Control Processes, N 3, 2011
+[4] P. Galinet, A. Nemirovskii, A. Laub , M. Chilali, LMI Control Toolbox for Use with MATLAB,
+The MathWorks, Inc., MA, 1995.
+[5] Y.KaoandC.Gao,Globalexponentialstabilityanalysisforcellulerneuralnetworkswithvariable
+coeﬃcients and delays, Neural comp. Appl., 17(2008), 291-295.
+[6] D.Y. Liu, J.H. Zhang, X.P. Guan and X.D. Xiao, Generalized LMI-based approach to global
+asymptotic stability of celluler networks with delay, App. Math. Mechanics, 29(2008), 811-816.
+[7] H.Li,S.L.Niculescu,L.DugardandJ.M.Dion,Robustguaranteedcostcontrolofuncertainlinear
+time-delay systems using dynamic output feedback, Mathematics and Computers in Simulation,
+45(1998), 349-358.
+[8] V.N. Phat and H. Trinh, Exponential stabilization of neural networks with various activation
+functionsandmixedtime-varyingdelays, IEEE Transactions on neural networks,21(2010), 1180-
+1184.
+[9] J.H. Park and K. Choi, Guaranteed cost control of nonlinear uncertain neutral systems via mem-
+ory stat feedback, Chaos, Solitons and Fractals, 24(2005), 183-190.
+[10] P. Shi, E.K. Boukas, Y. Shi and R. Kagarwal, Optimal guaranteed cost control of uncertain
+discrete time-delay systems, J. Comput. Appl. Math., 157(2003), 435-451.
+[11] Z.Q. Zuo and Y.J. Wang, Novel optimal guaranteed cost control of uncertain discrete systems
+with both state and input delays, J. Optim. Theory. Appl. 139(2008), 159-170.
+[12] Z.S. Wang and H. Zhang, Delay dependent stability criteria for recurrent neural networks with
+time-varying delays, J. control Theo. Appl., 1(2009), 9-13.
+[13] Y.Y. Wu, T. Li and Y.Q. Wu, Improved exponential stability criteria for recurrent neural net-
+works with time-varying discrete anddistributed delays, International journal of automation and
+computing, 7(2010), 199-204.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 29

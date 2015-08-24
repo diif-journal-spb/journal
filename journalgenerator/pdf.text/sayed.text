@@ -1,0 +1,1028 @@
+﻿dx
+dt
+6
+¾
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 4, 2008
+Electronic Journal,
+reg. N P2375 at 07.03.97
+ISSN 1817-2172
+
+http://www.math.spbu.ru/diffjournal/
+e-mail: jodiff@mail.ru
+Weak maximal and minimal solutions for Hammerstein and
+Urysohn integral equations in re°exive Banach spaces
+El-Sayed A.M.A & Hashem H.H.G
+E-mail : amasayed@hotmail.com & hendhghashem@yahoo.com
+Faculty of Science, Alexandria University, Alexandria, Egypt
+Abstract: We present existence theorem of weak solutions for Hammerstein
+and Urysohn integral equations. Also, we shall de¯ne the weak maximal and
+weak minimal solutions for these integral equations and ¯nally prove the exis-
+tence of the weak maximal and minimal solutions.
+Keywords: Weak solution; Urysohn integral equation ; Hammerstein integral
+equation; Weak maximal and weak minimal solutions.
+1 Introduction and Preliminaries
+Let L
+1
+(I) bethespaceofLebesgueintegrablefunctionsde¯nedontheinterval
+I = [0;1]: Let E be a re°exive Banach space with the norm jj:jj and dual
+E
+¤
+and denote by C[I;E] the Banach space of strongly continuous functions
+x:I !E withsup-norm jj:jj
+0
+: Theexistenceofweaksolutionsoftheintegral
+equation
+x(t) = x
+0
++
+Z
+t
+0
+f(s;x(s)) ds; t2I
+was proved by O'Regan [9] where f :I£E!E; x
+0
+2E: .
+The existence of weak solutions to the Hammerstein integral equation
+x(t) = h(t) +
+Z
+1
+0
+k(t;s) f(s;x(s)) ds; t2[0;1]Differential Equations and Control Processes, N 4, 2008
+was proved by O'Regan ( see[8]) where x takes values in re°exive Banach
+spaces and f is weakly-weakly continuous.
+Inthispaper,weshallstudytheexistenceofaweaksolutiontotheHammerstein
+integral equation
+x(t) = g(t) +
+Z
+1
+0
+k(t;s) f(s;x(s)) ds; t2[0;1] (1)
+and Urysohn integral equation
+x(t) = g(t) +
+Z
+1
+0
+u(t;s;x(s)) ds; t2[0;1] (2)
+Where x takesvaluesinre°exiveBanachspacesand f :I£E!E isweakly
+measurable in t and weakly sequentially continuous in x .
+The function u : I £I £E ! E is weakly measurable in s and weakly
+sequentially continuous in x. Also, the existence of the weak maximal and
+minimal solutions will be proved.
+Now, we shall present some auxiliary results that will be need in this work.
+Let E be a Banach space (need not be re°exive) and let x: I !E; then
+(1) x(:) is said to be weakly continuous (measurable) at t
+0
+2I if for every
+Á2E
+¤
+; Á(x(:)) is continuous (measurable) at t
+0
+:
+(2) A function h : E ! E is said to be sequentially continuous if h maps
+weakly convergent sequences in E to weakly convergent sequences in E:
+If x is weakly continuous on I; then x is strongly measurable and hence
+weakly measurable (see[3] and [2]). Note that in re°exive Banach space weakly
+measurable functions are Pettis integrable if and only if Á(x(:)) is Lebesgue
+integrable on I for every Á2E
+¤
+(see[3] pp. 78). Now we state a ¯xed point
+theorem and some propositions which will be used in the sequel (see[9]).
+Theorem1.1. Let E beaBanachspaceandlet Q beanonempty,bounded,
+closed and convex subset of the space E and let T : Q ! Q be a weakly
+sequentially continuous and assume that TQ(t) is relatively weakly compact
+in E for each t2[0;1] . Then, T has a ¯xed point in the set Q:
+proposition 1.1. A subset of a re°exive Banach space is weakly compact if
+andonlyifit isclosed in the weaktopology andboundedin thenormtopology.
+proposition 1.2. Let E be a normed space with y6=0: Then there exist a
+Á2E
+¤
+with jjÁjj =1 and jjyjj =Á(y):
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 52Differential Equations and Control Processes, N 4, 2008
+2 Hammerstein integral equation
+Let E be a re°exive Banach space and D½E: Consider the following assump-
+tions
+(1) g2C[I;E] ;
+(2) f : I£D!E satis¯es the following
+(i) For each t2I; f
+t
+= f(t;:) is weakly sequentially continuous;
+(ii) For each x2D; f(:;x(:)) is weakly measurable on I ;
+(iii) The weak closure of the range of f(I£D) is weakly compact in E
+(or equivalently: there exists an M such that jjf(t;x)jj · M
+(t;x)2I£D; )
+(3) k :I£I !R
++
+is integrable in s and continuous in t , the operator
+Ky(t) =
+Z
+1
+0
+k(t;s) y(s) ds
+maps L
+1
+(I) into L
+1
+(I) and
+R
+1
+0
+k(t;s) ds<M
+1
+; t2I:
+De¯nition 2.1. By a weak solution of (1) we mean a function x2 C[I;E]
+such that
+Á(x(t)) = Á(g(t)) +
+Z
+1
+0
+k(t;s) Á(f(s;x(s))) ds; t2[0;1]
+for all Á2E
+¤
+:
+Theorem2.1. Lettheassumptions(1)-(3)besatis¯ed. Thenequation(1)has
+at least one weak solution x2C[I;E]:
+Proof: De¯ne the operator T by
+Tx(t) = g(t) +
+Z
+1
+0
+k(t;s) f(s;x(s)) ds; t2I:
+For any x 2 C[I;E] and since f(:;x(:)) is weakly measurable on I
+and jjf(t;x)jj · M; then Á(f(:;x(:))) is Lebesgue integrable on
+I 8Á 2 E
+¤
+and since k(t;:) is Lebesgue integrable on I; then we have
+Á(k(t;:)f(:;x(:))) = k(t;:)Á(f(:;x(:))) isLebesgueintegrableon I 8Á2E
+¤
+;
+then k(t;:) f(:;x(:)) is Pettis integrable on I: Thus T is well de¯ned.
+We shall prove that T : C[I;E]!C[I;E]:
+Let t
+1
+; t
+2
+2 I and t
+1
+< t
+2
+( without loss of generality assume that
+Tx(t
+2
+)¡Tx(t
+1
+)6=0)
+Tx(t
+2
+)¡Tx(t
+1
+) = g(t
+2
+)¡g(t
+1
+)+
+Z
+1
+0
+k(t
+2
+;s)f(s;x(s))ds¡
+Z
+1
+0
+k(t
+1
+;s)f(s;x(s))ds
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 53Differential Equations and Control Processes, N 4, 2008
+= g(t
+2
+) ¡ g(t
+1
+) +
+Z
+1
+0
+[k(t
+2
+;s) ¡ k(t
+1
+;s) ]f(s;x(s)) ds
+Therefore as a consequence of proposition 1.2, we obtain
+jjTx(t
+2
+)¡Tx(t
+1
+)jj = Á(Tx(t
+2
+)¡Tx(t
+1
+))
+= Á(g(t
+2
+) ¡ g(t
+1
+)) +
+Z
+1
+0
+[k(t
+2
+;s) ¡ k(t
+1
+;s) ]Á(f(s;x(s))) ds
+= jjg(t
+2
+) ¡ g(t
+1
+)jj +
+Z
+1
+0
+[k(t
+2
+;s) ¡ k(t
+1
+;s) ]jjf(s;x(s))jj ds
+· jjg(t
+2
+) ¡ g(t
+1
+)jj + M
+Z
+1
+0
+jk(t
+2
+;s) ¡ k(t
+1
+;s)j ds:
+let the set Q be de¯ned as
+Q = f x2C[I;E]: jjxjj· M
+2
+g; M
+2
+=jjgjj + M:M
+1
+:
+Let x2Q; then we have
+jjTx(t)jj = Á(Tx(t)) = Á(g(t)) +
+Z
+1
+0
+k(t;s) Á(f(s;x(s))) ds
+jjgjj +
+Z
+1
+0
+k(t;s)jjf(s;x(s))jjds · jjgjj + M
+Z
+1
+0
+k(t;s)ds · jjgjj + M M
+1
+and hence Tx2Q implies TQ½Q (i.e. T : Q!Q )
+Then Q is nonempty, uniformly bounded and strongly equi-continuous subset
+of C[I;E]: also it can be shown that Q is convex and closed.
+As a consequence of Proposition 1.1, then TQ is relatively weakly compact.
+It remains to prove that T is weakly sequentially continuous.
+Let fx
+n
+g be a sequence in Q converges weakly to x 8t 2 I and since
+f(t;x(t)) is weakly sequentially continuous in x; then f(t;x
+n
+(t)) converges
+weakly to f(t;x(t)) thus Á(f(t;x
+n
+(t))) converges strongly to Á(f(t;x(t)))
+( see assumption (iii)). Applying Lebesgue Dominated Convergence Theorem
+for Pettis integral, we get
+Á(
+Z
+1
+0
+k(t;s) f(s;x
+n
+(s)) ds) =
+Z
+1
+0
+k(t;s) Á(f(s;x
+n
+(s))) ds
+!
+Z
+1
+0
+k(t;s) Á(f(s;x(s))) ds 8Á2E
+¤
+; t2I:
+Then T is weakly sequentially continuous. ( i.e. Tx
+n
+(t) ! Tx(t) weakly
+8t 2 I ) Since all conditions of Theorem 1.1 are satis¯ed, then the operator
+T has at least one ¯xed point x2Q which competes the proof.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 54Differential Equations and Control Processes, N 4, 2008
+3 Urysohn integral equation
+Let E be a re°exive Banach space and D½E: Consider the following assump-
+tions:
+(1) g2C[I;E] ;
+(2) u: I£I£D!E satis¯es the following
+(i) For each t;s2I£I; u(t;s;:) is weakly sequentially continuous;
+(ii) For each x2D and t2I u(t;:;x(:)) is weakly measurable on I ;
+(iii) For each x2D and s2I u(:;s;x(s)) is continuous on I ;
+(3) jju(t;s;x(s))jj · k(t;s); k : I £ I ! R
++
+is integrable in s and
+continuous in t , the operator
+Ky(t) =
+Z
+1
+0
+k(t;s) y(s) ds
+maps L
+1
+(I) into L
+1
+(I) and
+R
+1
+0
+k(t;s)ds <M
+1
+; t2I:
+De¯nition 3.1. By a weak solution of (2) we mean a function x2 C[I;E]
+such that
+Á(x(t)) = Á(g(t)) +
+Z
+1
+0
+Á(u(t;s;x(s))) ds; t2[0;1]
+for all Á2E
+¤
+:
+Theorem3.1. Lettheassumptions(1)-(3)besatis¯ed. Thenequation(2)has
+at least one weak solution x2C[I;E]:
+Proof: De¯ne the operator T by
+Tx(t) = g(t) +
+Z
+1
+0
+u(t;s;x(s)) ds; t2I:
+For any x 2 C[I;E] since u(t;:;x(:)) is weakly measurable on I;
+then Á(u(t;:;x(:))) is strongly measurable on I 8Á 2 E
+¤
+and since
+jju(t;s;x)jj · k(t;s); then Á(u(t;:;x(:))) is Lebesgue integrable on
+I 8Á 2 E
+¤
+and hence u(t;:;x(:)) Pettis integrable on I: Thus T is well
+de¯ned.
+We shall prove that T : C[I;E]!C[I;E]:
+Let t
+1
+; t
+2
+2 I; t
+1
+< t
+2
+( without loss of generality assume that
+Tx(t
+2
+)¡Tx(t
+1
+)6=0)and x2C[I;E]
+Tx(t
+2
+)¡Tx(t
+1
+) = g(t
+2
+) ¡ g(t
+1
+) +
+Z
+1
+0
+u(t
+2
+;s;x(s)) ds ¡
+Z
+1
+0
+u(t
+1
+;s;x(s)) ds
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 55Differential Equations and Control Processes, N 4, 2008
+= g(t
+2
+) ¡ g(t
+1
+) +
+Z
+1
+0
+[u(t
+2
+;s;x(s)) ¡ u(t
+1
+;s;x(s)) ] ds
+Therefore as a consequence of proposition 1.2, we obtain
+jjTx(t
+2
+)¡Tx(t
+1
+)jj = Á(Tx(t
+2
+)¡Tx(t
+1
+))
+= Á(g(t
+2
+) ¡ g(t
+1
+)) +
+Z
+1
+0
+Á[u(t
+2
+;s;x(s)) ¡ u(t
+1
+;s;x(s)) ] ds
+· jjg(t
+2
+) ¡ g(t
+1
+)jj +
+Z
+1
+0
+jju(t
+2
+;s;x(s)) ¡ u(t
+1
+;s;x(s))jj ds (3)
+let the set Q be de¯ned as
+Q = f x2C[I;E]: jjxjj· M
+2
+g; M
+2
+=jjgjj + M:
+Let x2Q; then we have
+jjTx(t)jj = Á(Tx(t)) = Á(g(t)) +
+Z
+1
+0
+Á(u(t;s;x(s))) ds
+= Á(g(t)) +
+Z
+1
+0
+jju(t;s;x(s))jj ds · jjgjj +
+Z
+1
+0
+k(t;s) ds · jjgjj + M
+and hence Tx2Q implies TQ½Q (i.e. T : Q!Q ).
+Then Q is nonempty, uniformly bounded and strongly equi-continuous subset
+of C[I;E]: also it can be shown that Q is convex and closed.
+As a consequence of Proposition 1.1, then TQ is relatively weakly compact.
+It remains to prove that T is weakly sequentially continuous.
+Let fx
+n
+g be a sequence in Q converges weakly to x 8t 2 I and since
+u(t;s;x(s)) is weakly sequentially continuous in x; then u(t;s;x
+n
+(s)) con-
+verges weakly to u(t;s;x(s)) thus Á(u(t;s;x
+n
+(s))) converges strongly to
+Á(u(t;s;x(s))): using assumption (3) and applying Lebesgue Dominated Con-
+vergence Theorem for Pettis integral, we get
+Á(
+Z
+1
+0
+u(t;s;x
+n
+(s)) ds) =
+Z
+1
+0
+Á(u(t;s;x
+n
+(s))) ds
+!
+Z
+1
+0
+Á(u(t;s;x(s))) ds 8Á2E
+¤
+; t2I:
+Then T is weakly sequentially continuous. ( i.e. Tx
+n
+(t) ! Tx(t) weakly
+8t 2 I ) Since all conditions of Theorem 1.1 are satis¯ed, then the operator
+T has at least one ¯xed point x2Q which competes the proof.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 56Differential Equations and Control Processes, N 4, 2008
+4 The weak maximal and weak minimal solutions
+Now we give the following de¯nition
+De¯nition 4.1 Let q(t) be a weak solution of (1) Then q(t) is said to be a
+weak maximal solution of (1) if every weak solution x(t) of (1) satis¯es the
+inequality
+Á(x(t)) < Á(q(t)); 8Á2E
+¤
+: A weak minimal solution s(t) can be de¯ned
+bysimilarwaybyreversingtheaboveinequalityi.e. Á(x(t)) > Á(s(t)); 8Á2
+E
+¤
+:
+In this section f assumed to satisfy the following assumption:
+(4) for any x; y2 E satisfying Á(x(t)) < Á(y(t)); 8Á2 E
+¤
+implies that
+Á(f(s;x(s)))< Á(f(s;y(s)))
+Lemma 4.1 Let f(t;x); k(t;s) satisfy assumptions of Theorem 2.1
+and let x(t); y(t) 2C[I;E] on I satisfying
+Á(x(t)) · Á(g(t)) +
+Z
+1
+0
+k(t;s) Á(f(s;x(s))) ds
+Á(y(t)) ¸ Á(g(t)) +
+Z
+1
+0
+k(t;s) Á(f(s;y(s))) ds; 8Á2E
+¤
+where one of them is strict.
+If (f(t;x)) satis¯es assumption (4). Then
+Á(x(t)) < Á(y(t)): (4)
+proof: Let the conclusion (4) be false, then there exists t
+1
+such that
+Á(x(t
+1
+)) = Á(y(t
+1
+)) t
+1
+> 0
+and
+Á(x(t)) < Á(y(t)) 0 < t < t
+1
+:
+Since (f(t;x)) satis¯es assumption (4), we get
+Á(x(t
+1
+)) · Á(g(t
+1
+)) +
+Z
+1
+0
+k(t
+1
+;s) Á(f(s;x(s))) ds
+< Á(g(t
+1
+)) +
+Z
+1
+0
+k(t
+1
+;s) Á(f(s;y(s))) ds
+< Á(y(t
+1
+)):
+Which contradicts the fact that Á(x(t
+1
+)) = Á(y(t
+1
+)); then
+Á(x(t)) < Á(y(t)):
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 57Differential Equations and Control Processes, N 4, 2008
+Theorem 4.1 Let the assumptions of Theorem 2.1 be satis¯ed. If f(t;x)
+satis¯es assumption (4), then there exist a weak maximal and weak minimal
+solutions of (1).
+Proof Firstly we shall prove the existence of the weak maximal solution of
+(1). Let ²>0 be given. Now consider the integral equation
+x
+²
+(t) = g(t) +
+Z
+1
+0
+k(t;s) f
+²
+(s;x
+²
+(s))ds; (5)
+where
+f
+²
+(t;x
+²
+(t)) = f(t;x
+²
+(t)) + ²:
+Clearly the function f
+²
+(t;x
+²
+) satis¯es the conditions (1)-(3) of Theorem 2.1
+and
+jj f
+²
+(t;x
+²
+)jj · M + ² = M
+0
+:
+Thereforeequation(5)hasaweaksolution x
+²
+2C[I;E] accordingtoTheorem
+2.1. Let ²
+1
+and ²
+2
+be such that 0<²
+2
+<²
+1
+<²: Then
+x
+²
+1
+(t) = g(t) +
+Z
+1
+0
+k(t;s) f
+²
+1
+(s;x
+²
+1
+(s)) ds;
+x
+²
+1
+(t) = g(t) +
+Z
+1
+0
+k(t;s) ( f(s;x
+²
+1
+(s)) + ²
+1
+) ds;
+implies that
+Á(x
+²
+1
+(t)) > Á(g(t)) +
+Z
+1
+0
+k(t;s) ( Á(f(s;x
+²
+1
+(s))) + ²
+2
+) ds; (6)
+Á(x
+²
+2
+(t)) = Á(g(t)) +
+Z
+1
+0
+k(t;s) ( Á(f(s;x
+²
+2
+(s))) + ²
+2
+) ds (7)
+Using Lemma 4.1, then (6) and (7) implies
+Á(x
+²
+2
+(t))<Á(x
+²
+1
+(t)) for t2 [0;1]:
+As shown before in the proof of Theorem 2.1 the family of functions x
+²
+(t)
+de¯ned by (5) is uniformly bounded and of strongly equi-continuous functions.
+Hence by Arzela-Ascoli Theorem , there exists a decreasing sequence ²
+n
+such
+that ² ! 0 as n ! 1; and lim
+n!1
+x
+²
+n
+(t) exists uniformly in [0;1]
+and denote this limit by q(t): from the weakly sequentially continuity of
+the function f
+²
+n
+in the second argument and applying Lebesgue Dominated
+Convergence Theorem for Pettis integral, we get
+q(t) = lim
+n ! 1
+x
+²
+n
+(t) = g(t) +
+Z
+1
+0
+k(t;s) f(s;q(s)) ds
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 58Differential Equations and Control Processes, N 4, 2008
+which proves that q(t) as a solution of (1).
+Finally, we shall show that q(t) is the weak maximal solution of (1). To do
+this, let x(t) be any weak solution of (1). Then
+Á(x
+²
+(t)) = Á(g(t)) +
+Z
+1
+0
+k(t;s) (Á(f(s;x
+²
+(s))) + ²) ds
+> Á(g(t)) +
+Z
+1
+0
+k(t;s) Á(f(s;x
+²
+(s))) ds
+and
+Á(x(t)) = Á(g(t)) +
+Z
+1
+0
+k(t;s) Á(f(s;x(s))) ds
+applying Lemma 4.1, we get
+Á(x
+²
+(t)) > Á(x(t)) for t 2 [0;1]:
+fromtheuniquenessofthemaximalsolution(see[2]),itisclearthat x
+²
+(t) tends
+to q(t) uniformly in t 2 [0;1] as ²!0:
+By similar way as done above we can prove that s(t) is the weak minimal
+solution of (1).
+The weak maximal and minimal solutions of (2) can be de¯ned in the same
+fashion as done above.
+Now, the function u assumed to satisfy the following assumption:
+(4
+¤
+) for any x; y2 E satisfying Á(x(t)) < Á(y(t)); 8Á2 E
+¤
+implies that
+Á(u(t;s;x(s)))< Á(u(t;s;y(s)))
+Now the following lemma can be proved.
+Lemma 4.2 Let u(t;s;x) satis¯es assumptions of Theorem 3.1
+and let x(t); y(t) 2C[I;E] on I satisfying
+Á(x(t)) · Á(g(t)) +
+Z
+1
+0
+Á(u(t;s;x(s))) ds
+Á(y(t)) ¸ Á(g(t)) +
+Z
+1
+0
+Á(u(t;s;y(s))) ds; 8Á2E
+¤
+where one of them is strict.
+If (u(t;s;x)) satis¯es assumption (4
+¤
+). Then
+Á(x(t)) < Á(y(t)):
+Theorem 4.2 Let the assumptions of Theorem 3.1 be satis¯ed. If u(t;s;x)
+satis¯es assumption (4
+¤
+), then there exists a weak maximal and weak minimal
+solutions of (2).
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 59Differential Equations and Control Processes, N 4, 2008
+Proof Firstly we shall prove the existence of the weak maximal solution of
+(2). Let ²>0 be given. Now consider the integral equation
+x
+²
+(t) = g(t) +
+Z
+1
+0
+u
+²
+(t;s;x
+²
+(s))ds; (8)
+where
+u
+²
+(t;s;x
+²
+(t)) = u(t;s;x
+²
+(t)) + ²:
+Clearly the function u
+²
+(t;s;x
+²
+) satis¯es the conditions (1)-(3) of Theorem
+3.1 and
+jj u
+²
+(t;s;x
+²
+)jj · k(t;s) + ² = k
+1
+(t;s)2L
+1
+:
+Thereforeequation(8)hasaweaksolution x
+²
+2C[I;E] accordingtoTheorem
+3.1. Let ²
+1
+and ²
+2
+be such that 0<²
+2
+<²
+1
+<²: Then
+x
+²
+1
+(t) = g(t) +
+Z
+1
+0
+u
+²
+1
+(t;s;x
+²
+1
+(s)) ds;
+x
+²
+1
+(t) = g(t) +
+Z
+1
+0
+(u(t;s;x
+²
+1
+(s)) + ²
+1
+) ds;
+implies that
+Á(x
+²
+1
+(t)) > Á(g(t)) +
+Z
+1
+0
+(Á(u(t;s;x
+²
+1
+(s))) + ²
+2
+) ds; (9)
+Á(x
+²
+2
+(t)) = Á(g(t)) +
+Z
+1
+0
+(Á(u(t;s;x
+²
+2
+(s))) + ²
+2
+) ds (10)
+Using Lemma 4.2, then (9) and (10) implies
+Á(x
+²
+2
+(t))<Á(x
+²
+1
+(t)) for t2 [0;1]:
+As shown before in the proof of Theorem 3.1 the family of functions x
+²
+(t)
+de¯ned by (8) is uniformly bounded and of strongly equi-continuous functions.
+Hence by Arzela-Ascoli Theorem , there exists a decreasing sequence ²
+n
+such
+that ² ! 0 as n ! 1; and lim
+n!1
+x
+²
+n
+(t) exists uniformly in [0;1]
+and denote this limit by q(t): from the weakly sequentially continuity of the
+function u
+²
+n
+in x and applying Lebesgue Dominated Convergence Theorem
+for Pettis integral, we get
+q(t) = lim
+n ! 1
+x
+²
+n
+(t) = g(t) +
+Z
+1
+0
+u(t;s;q(s)) ds
+which proves that q(t) as a solution of (2).
+Finally, we shall show that q(t) is the weak maximal solution of (2). To do
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 60Differential Equations and Control Processes, N 4, 2008
+this, let x(t) be any weak solution of (2). Then
+Á(x
+²
+(t)) = Á(g(t)) +
+Z
+1
+0
+(Á(u(t;s;x
+²
+(s))) + ²) ds
+> Á(g(t)) +
+Z
+1
+0
+Á(u(t;s;x
+²
+(s))) ds
+and
+Á(x(t)) = Á(g(t)) +
+Z
+1
+0
+Á(u(t;s;x(s))) ds
+applying Lemma 4.2, we get
+Á(x
+²
+(t)) > Á(x(t)) for t 2 [0;1]:
+fromtheuniquenessofthemaximalsolution(see[2]),itisclearthat x
+²
+(t) tends
+to q(t) uniformly in t 2 [0;1] as ²!0:
+By similar way as done above we can prove that s(t) is the weak minimal
+solution of (2).
+References
+[1] M. Cichon, Weak solutions of ordinary differential equations in Banach
+spaces, Discuss. Math. Differ.Incl. Control Optim., 15(1995), 5-14.
+[2] N. Dunford, j.T. Schwartz, Linear operators, Interscience, Wiley, New
+York, 1958.
+[3] E. Hille, R.S. Phillips, Functional Analysis and Semi-groups Amer. Math.
+Soc. Colloq. Publ. 31,Amer. Math. Soc., Providence, R. I., 1957.
+[4] A.M.A. EL-Sayed, F.M. Gaafar, H.G.H. Hashem, On the maximal and
+minimal solutions of arbitrary-orders nonlinear functional integral and dif-
+ferenbtial equations, MATH. SCi, RES.J., 8(11)(2004), 336-348.
+[5] A.M.A. EL-Sayed, H.H.G. Hashem, Carath¶ eodory type theorem for a non-
+linearquadraticintegralequation,MATH.SCI.RES.J.12(4),(2008)71-95.
+[6] A.M.A. EL-Sayed, H.H.G. Hashem, Integrable and continuous solutions of
+nonlinear quadratic integral equation , Electronic Journal of Qualitative
+Theory of Differential Equations 25(2008), 1-10.
+[7] A.R. Mitchell, CH. Smith, An existence Theorem for weak solutions of dif-
+ferential equations in Banach spaces, In: Nonlinear Equations in Abstract
+Spaces. Proc. Int.Symp., Arlington ,(1977) 387-40314.
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 61Differential Equations and Control Processes, N 4, 2008
+[8] D.O'Regan,Integralequationsinre°exiveBanachspacesandweaktopolo-
+gioes Amer. Math. Soc., Vol. 124, No. 2, (1996), 607-614.
+[9] D. O'Regan, Fixed point theory for weakly sequentially continuous map-
+ping Math. Comput. Modeling , 27(1998), 1-14.
+[10] H.A.H. Salem, A.M.A. EL-Sayed, Fractional order integral equations in
+re°exive Banach spaces Math. Slovaca., 55 , No. 2(2005), 169-181.
+[11] B. Ross, K. S. Miller, An Introduction to Fractional Calculus and Frac-
+tional Differential Equations. John Wiley, New York (1993).
+[12] I.Podlubny . Fractional Differential equations . San Diego-NewYork-
+London.1999.
+[13] S. G. Samko, A. A. Kilbas, O. Marichev, Integrals and Derivatives of Frac-
+tional Orders and Some of their Applications. Nauka i Teknika, Minsk
+(1987).
+Electronic Journal. , http://www.math.spbu.ru/diffjournal/ 62

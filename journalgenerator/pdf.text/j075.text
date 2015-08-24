@@ -1,0 +1,1196 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 3, 2001
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Control problems in nonlinear systems
+VERIFICATION OF STRUCTURAL STABILITY
+1
+GEORGE OSIPENKO
+St. Petersburg State Technical University, Russia
+E-mail: math@math.hop.stu.neva.ru
+SERPIL PEHLIVAN
+Suleyman Demirel Univrsity, Turkey
+E-mail: serpil@sdu.edu.tr
+1 Introduction
+The structural stability was originated by A.A.Andronov and L.S.Pontryagin
+1937 [2].
+Letf :M →M beadiffeomorphismofacompactRemannianmanifoldM,
+andρ(∗,∗)bethedistanceonM.WesupposethatthemanifoldM isinR
+n
+.The
+space of diffeomorphisms has the following topology. The C
+0
+-distance between
+f and g is ρ(f,g) = max
+x∈M
+ρ(f(x),g(x)). The differential Df : TM → TM
+has a norm
+kDfk= max
+x∈M
+|Df(x)|= max
+x∈M
+max
+|v|=1
+|Df(x)v|.
+The C
+1
+-distance ρ
+1
+(f,g)=ρ(f,g)+kDf −Dgk.
+1
+The research was supported by the Scientiﬁc and Technical Council of Turkey (NATO-CP).Differential Equations and Control Processes, N 3, 2001
+Deﬁnition 1 The diffeomorphism f is structurally stable if for each ε > 0
+there is δ > 0 that from the inequality ρ
+1
+(f,g) < δ it follows the existence a
+homeomorphism h : M → M such that fh = hg and C
+0
+-distance ρ(h,id) < ε,
+where id is the identity mapping on M.
+Let x be a point of M and TM(x) be the tangent space at x. The stable
+and unstable subspaces at x is deﬁned as
+S(x) = {v ∈TM(x): |Df
+n
+(x)v|→ 0 as n→+∞},
+U(x) = {v ∈TM(x): |Df
+n
+(x)v|→ 0 as n→−∞},
+respectively.
+Deﬁnition 2 The transversality condition holds on the manifold M if
+TM(x)=S(x)+U(x)
+at each point x∈M.
+By summing results by J.Robin [26], C.Robinson [27] and R.Mane [16, 17]
+we can formulate the following theorem.
+Theorem 1 In order to the diffeomorphism f be structurally stable it is neces-
+sary and suﬃcient that the transversality condition holds on the manifold M.
+Thus Theorem 1 solves the problem of structural stability. However appli-
+cation of this result is limited by diﬃculties of veriﬁcation of the transversality
+condition [19]. Even an application of the classical result by A.A.Andronov
+and L.S.Pontryagin requires to recognize a structure of dynamics governed by
+the system of differential equations. In this paper we describe equivalent nec-
+essary and suﬃcient conditions for the structural stability and prove that these
+conditions can be test by a ﬁnite algorithm.
+2 Needed results
+2.1 Linear extension.
+Let (E,M,π) be a vector bundle over M, E be a total space, and π be a
+projector from E onto the base M. Assume that for each x ∈ M a ﬁber
+E(x) =π
+−1
+(x) is d-dimension linear space isomorphic to R
+d
+.
+Electronic Journal.  2Differential Equations and Control Processes, N 3, 2001
+Deﬁnition 3 A homeomorphism F of the total space E is said to be a linear
+extension of f, if F takes ﬁbers to ﬁbers: f ◦π = π ◦F and the restriction
+F|
+E(x)
+:E(x)→E(f(x)) on each ﬁber E(x) is a linear isomorphism.
+As an example of a linear extension we will keep in mind a diffeomorphism
+f : M → M and its differential Df = F on the tangent bundle TM = E. The
+vector bundle E is associated with a projective bundle P, in this process the
+linear extension F : E → E induces a mapping PF : P → P. For a nonzero
+vectorvwedenoteby[v] =yapointfromP correspondingtothespacespanned
+over v. Let (P,M,Pπ) be a bundle over M such that each ﬁber (Pπ)
+−1
+(x) is a
+projective manifold P
+d−1
+(x) associated with the ﬁber E(x) of E. The bundle
+(P,M,Pπ) is called the projective bundle associated with the linear bundle
+(E,M,π). We use the following coordinates: (x,v) or (x,y,l) on E and (x,y)
+on P, where x∈M, v ∈E(x), y ∈P
+d−1
+(x), l∈L(y). In this coordinates the
+linear extension F : E → E of f is of the form F(x,v) = (f(x),A(x)v). The
+mapping F induces the mapping PF : P → P on the projective bundle that
+the diagram
+E
+F
+→ E
+↓
+L
+↓
+L
+P
+PF
+→ P
+↓
+Pπ
+↓
+Pπ
+M
+f
+→ M
+commutes.
+2.2 Dual differential.
+The adjoint of an operator T : E → E is the operator T
+∗
+: E → E deﬁned by
+the equality hTv,ui = hv,T
+∗
+ui, where hv,ui is an inner produc. As mention
+above the differential Df : TM → TM of diffeomorphism f is an example of
+linear extension of f. The differential Df takes the tangent space TM(x) at
+point x onto TM(f(x)) at point f(x). Let us consider a cascade conjugate to
+the differential, which deﬁned as
+b
+Df(x)= ((Df(x))
+∗
+)
+−1
+:TM(x)→TM(f(x)).
+By the deﬁnition, the conjugate cascade covers the diffeomorphism f. We can
+consider the mapping
+b
+Df : TM → TM as the dual differential. The main
+Electronic Journal.  3Differential Equations and Control Processes, N 3, 2001
+property of the conjugate cascade is
+D
+Dfv,
+b
+Dfu
+E
+=hv,ui,
+i.e. the inner product does not change under the actions of the differential and
+the dual differential [6]. Let Z ={...−2,−1,0,1,2,...} be the set of integers.
+Deﬁnition 4 [6, 32] The dual differential is said to have only trivial bounded
+trajectory, if any trajectory {(x
+n+1
+,v
+n+1
+) = (f(x
+n
+),
+b
+Df(x
+n
+)v
+n
+, n ∈ Z} that is
+bounded, is the zero trajectory, i.e., v
+n
+= 0.
+Theorem 2 [5] The transversality condition holds if and only if the dual dif-
+ferential has only trivial bounded trajectory.
+2.3 Chain recurrent set
+Deﬁnition 5 [3] Let ε > 0 be given. An inﬁnite in both direction sequence
+{x
+k
+, k ∈Z} is named an ε-trajectory if for any k the distance
+ρ(f(x
+k
+),x
+k+1
+)<ε. (2.1)
+If the squence {x
+k
+} is periodic, the points are called ε-periodic.
+Denote the set of ε-periodic points by Q(ε).
+Deﬁnition 6 [9] A point x is called chain recurrent if x is ε-periodic for each
+positive ε, i.e., there exists a periodic ε-trajectory passing through x. A chain
+recurrent set, denoted Q, is the set of all the chain recurrent points.
+It should be remarked that if a chain recurrent point is not periodic then
+there exists as small as one likes perturbation of f in C
+0
+-topology for which
+this point is periodic [25]. One may say that a chain recurrent point generates
+periodic trajectory by C
+0
+-perturbation [33].
+From the deﬁnition of the chain recurrent set it follows immediately that
+Q = lim
+ε→0
+Q(ε)=
+\
+ε>0
+Q(ε).
+Thus the family of open sets {Q(ε), ε > 0} forms a fundamental system of
+neighborhoods of the chain recurrent set.
+Electronic Journal.  4Differential Equations and Control Processes, N 3, 2001
+2.4 Hyperbolicity.
+The diffeomorphism f is said to be hyperbolic on Λ⊂M if there are invariant
+subspaces E
+s
+, E
+u
+⊂TM|
+Λ
+and positive d and α such that
+TM|
+Λ
+= E
+s
+⊕E
+u
+,
+|Df
+n
+(x)v| ≤ d|v|exp(−αn), x∈Λ, v ∈E
+s
+(x) n> 0,
+ 
+ 
+Df
+−n
+(x)v
+ 
+ 
+≤ d|v|exp(−αn), x∈Λ, v ∈E
+u
+(x) n> 0.
+TheconditionTM|
+Λ
+=E
+s
+⊕E
+u
+isequivalentTM|
+Λ
+=E
+s
++E
+u
+andE
+s
+∩E
+u
+=∅.
+The invariance of subbundle E
+∗
+means Df(x)E
+∗
+(x)=E
+∗
+(f(x)).
+Theorem 3 [6, 16] If the transversality condition holds, then
+i) the set Λ ={x∈M :TM(x)=S(x)⊕U(x)} is closed and invariant,
+ii) the diffeomorphism f is hyperbolic on Λ, and S(x) = E
+s
+(x), U(x) =
+E
+u
+(x), x∈Λ,
+iii) the chain recurrent set Q⊂Λ.
+2.5 Morse spectrum.
+Let us consider the linear extension F :E →E and the mapping PF :P →P
+on the projective bundle associated with F. If ξ = {(x
+0
+,y
+0
+),...,(x
+p
+,y
+p
+) =
+(x
+0
+,y
+0
+)} is a periodic ε-trajectory of a period p, then the Lyapunov exponent
+of ξ
+λ(ξ)=
+1
+p
+p−1
+X
+i=0
+ln|A(x
+i
+)e(y
+i
+)|,
+where |e(y
+i
+)|= 1.
+Deﬁnition 7 The Morse spectrum of F is
+Σ(F)={λ∈R : there are ε
+k
+→ 0 and periodic
+ε
+k
+−trajectories ξ
+k
+with λ(ξ
+k
+)→λ as k →∞}.
+Thus, the Morse spectrum is the limit set of Lyapunov exponents of ε-
+periodic trajectories under ε→0.
+Electronic Journal.  5Differential Equations and Control Processes, N 3, 2001
+2.6 Attractor and repeller.
+AsubsetΩiscalledacomponentofthechain-recurrentsetifΩisamaximalset
+such that each two points from Ω can be connected by a periodic ε-trajectory
+foranyε> 0. RecallthataclosedinvariantasymptoticallystablebyLyapunov
+set is called an attractor. An attractor of the inverse mapping f
+−1
+is called a
+repeller of f. An intersection of an attractor and a repeller is called a Morse
+set.
+Proposition 1 An invariant set Λ is an attractor of f if and only if there is a
+neighborhood U of Λ such that
+f(cl U)⊂U, Λ =
+\
+n>0
+f
+n
+(U),
+where cl· stands for the closure.
+The described set U is called a fundamental neighborhood of an attractor
+Λ, and the set W
+s
+(Λ) =
+S
+n<0
+f
+n
+(U) is called an attraction domain of Λ. The
+closed set Λ
+∗
+=M\W
+s
+(Λ) is a repeller which is named the dual repeller to Λ.
+3 Theorems
+Theorem 4 The following conditions are equivalent
+(i) f is hyperbolic on the chain recurrent set Q,
+(ii) the dual differential is hyperbolic on the chain recurrent set Q,
+(iii) the Morse spectrum of the differential does not contain 0,
+(iv) the Morse spectrum of the dual differential does not contain 0,
+Suppose that one of the conditions of the previous Theorem holds. Then
+the Morse spectrum of the dual differential consists of two separated parts
+positive Σ
++
+and negative Σ
+−
+. The chain recurrent set CR ⊂ P is divided on
+twoseparatedpartsCR
++
+andCR
+−
+suchthatCR
++
++CR
+−
+=CRandtheMorse
+spectrum Σ(
+b
+Df|
+CR
++)= Σ
++
+of the restriction
+b
+Df|
+CR
++ is positive and the Morse
+spectrumΣ(
+b
+Df|
+CR
+−) = Σ
+−
+isnegative. LetW
+u
+(CR
++
+)betheunstablemanifold
+ofCR
++
+andW
+s
+(CR
+−
+)bethestablemanifoldofCR
+−
+fortheprojectivemapping
+P
+b
+Df.
+Electronic Journal.  6Differential Equations and Control Processes, N 3, 2001
+ 
+ 
+ 
+ 
+i
+d e
+l k
+j
+f
+ 
+ 
+ 
+   
+-  
+ 
+ 
+ 
+   
+ 
+ 
+ 
+  *
+H
+H
+H
+H j
+@
+@
+@
+@
+@ R
+i
+d
+e
+l
+k
+j
+  
+  
+-
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  7
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  1
+ 
+ 
+  ff  
+A
+A
+A U
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  *
+B
+B
+B
+B
+BN
+Q
+Q
+Q
+Q
+Q s
+ 
+ 
+ 
+ 
+  	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+G
+A
+A
+A U
+  
+  
+?
+C
+C
+C
+C
+C
+C
+CCO
+ 
+ 
+ 
+  )
+6 6
+P
+P
+P
+P
+P
+P
+P i
+S
+S
+S
+S w
+A
+A
+A
+A
+A
+A
+A
+A
+A U
+
+
+
+
+
+  
+?
+q
+H
+H
+H
+H
+H
+H
+H
+H
+H j
+' $
+?
+ 
+ 
+ 
+ 
+ 
+ 
+   
+   
+H
+H
+H
+H j
+q
+q
+H
+H
+H
+H
+H
+H
+H
+H
+H Y
+Figure 1: Construction of a Symbolic Image.
+Theorem 5 The diffeomorphism f is structurally stable if and only if the
+Morse spectrum of the dual differential does not contain0, the unstable manifold
+W
+u
+(CR
++
+) is an attractor and the stable manifold W
+s
+(CR
+−
+) is its dual repeller.
+4 Symbolic Image
+In this section we describe a ﬁnite algorithm for veriﬁcation of Theorem 5
+conditions by applied symbolic dynamics methods. The veriﬁcation consists
+of two main parts: a calculation of Morse spectrum of
+b
+Df and a construction
+of the attractor W
+u
+(CR
++
+) and its dual repeller W
+s
+(CR
+−
+). A ﬁnite algorithm
+for calculation of Morse spectrum is available in [24], and a ﬁnite algorithm
+for construction of an attractor, its domain of attraction and dual repeller is
+given in [23]. Let f : M → M be a homeomorphism of manifold M and
+C ={M(1),··· ,M(s)} be a ﬁnite covering of M by closed sets. The sets M(i)
+are called cells of the covering.
+Deﬁnition 8 [18] Let G be a directed graph having s vertices where each vertex
+i corresponds to the cell M(i). The vertices i and j are connected by a directed
+edge i→j if and only if M(j)∩f(M(i))6=∅. The graph G is called a symbolic
+image of f with respect to the covering C.
+Denote by Ver the set of vertices of G. The graph G can be considered as
+a correspondence G : Ver → Ver between the vertices. Graph G is uniquely
+determined by its s×s matrix of transitions Π = (π
+ij
+): π
+ij
+= 1 if and only
+if there is the directed edge i → j, otherwise π
+ij
+= 0. Let d be the largest
+diameter of the cells M(i) of the covering C.
+Electronic Journal.  7Differential Equations and Control Processes, N 3, 2001
+Deﬁnition 9 A sequence{z
+k
+} of vertices of the graph G is called an admissible
+path or simply a path if for each k the graph G contains the edge z
+k
+→z
+k+1
+. If
+the sequence {z
+k
+} is periodic, then {z
+k
+} is called a periodic (admissible) path.
+There is a natural connection between admissible paths on the symbolic
+image G and ε-trajectories of the homeomorphism f.
+Deﬁnition 10 A vertex of the symbolic image is called recurrent if there is a
+periodic path passing through it. The set of recurrent vertices is denoted by RV.
+A pair of recurrent vertices i,j are called equivalent if there is a periodic path
+through i and j.
+By Deﬁnition 10, the set of recurrent vertices RV decomposes into several
+classes {H
+k
+} of equivalent recurrent vertices.
+Consider a linear bundle (E,M.π) and a linear extension F(x,v) = (f(x),
+A(x)v). Letusapplythesymbolicimageconstructiontotheprojectivemapping
+PF.LetG(f)beasymbolicimageoff toacoveringC(M) ={m(1),··· ,m(q)}.
+To construct a symbolic image of the induced mapping PF : P → P it is
+convenient to choose a covering C(P) = {M(z)} of the projective bundle P
+agreed with the covering C(M) such that the projection of each cell is a cell:
+Pπ(M(z)) = m(j). The agreed covering generates a natural mapping h from
+G(PF) onto G(f) taking the vertices z on the vertex j: h(z) = j. Since
+PF(M(z
+1
+))∩M(z
+2
+)6=∅andPπ(M(z
+1,2
+))=m(j
+1,2
+)impliesf(m(j
+1
+))∩m(j
+2
+)6=
+∅, the directed edge z
+1
+→ z
+2
+on G(PF) is mapped by h on the directed edge
+j
+1
+→ j
+2
+on G(f). Hence, the mapping h takes the directed graph G(PF) on
+the directed graph G(f) so that the diagram
+Ver
+G(PF)
+→ Ver
+↓
+h
+↓
+h
+ver
+G(f)
+→ ver
+commutes,whereVerandveraretheverticesofG(PF)andG(f),respectively.
+4.1 Spectrum of symbolic image.
+Let F : E → E be a linear extension of f, PF : P → P be the associated
+projective mapping and G(PF) be the symbolic image of PF. The existence
+of an edge i→j on G(PF) guarantees the existence of a point (x,y) in the cell
+Electronic Journal.  8Differential Equations and Control Processes, N 3, 2001
+M(i) such that the imagePF(x,y) is in the cellM(j). Obviously, such point is
+not unique. By setting a[ji] = |A(x)e(y)|, |e| = 1 we ﬁx a framing of the edge
+i→ j. The value a[ji] is a change coeﬃcient of a vector length. The structure
+consisting of the symbolic image G(PF) and the values {a[ji], i → j} is said
+to be the framed symbolic image G(PF).
+Each periodic path ω = {z
+0
+,z
+1
+,...,z
+p
+= z
+0
+} on G(PF) of period p induces
+the Lyapunov exponent
+λ(ω) =
+1
+p
+p
+X
+k=1
+lna[z
+k
+z
+k−1
+].
+Deﬁnition 11 The spectrum of the symbolic image on the set of recurrent ver-
+tices RV is
+Σ(G(PF))=
+{λ∈R : there are periodic paths ω
+k
+with λ(ω
+k
+)→λ as k →∞}.
+4.2 Computation of spectrum.
+Let us consider some class H of equivalent recurrent vertices. A periodic path
+ω = {z
+1
+,...,z
+p
+= z
+0
+} is called simple if the vertices z
+1
+,...,z
+p
+are different, i.e.,
+z
+i
+6= z
+j
+as i 6= j; i,j = 1,...,p. Since a symbolic image has a ﬁnite number of
+vertices, the number of simple period paths is ﬁnite. For a class H let φ
+1
+,...,φ
+q
+be the all simple periodic paths of periods p
+1
+,...,p
+q
+, respectively. Let
+λ(φ
+j
+)=
+1
+p
+j
+p
+j
+X
+k=1
+lna[z
+j
+k
+z
+j
+k−1
+]
+be the characteristic exponent of periodic path φ
+j
+={z
+j
+1
+,...,z
+j
+p
+j
+}. Let
+λ
+min
+(H) = min{λ(φ
+j
+), j = 1,...,q},
+λ
+max
+(H) = max{λ(φ
+j
+), j = 1,...,q}
+be the minimum and the maximum of characteristic exponents of simple peri-
+odic paths of the class H.
+Theorem 6 [24] The spectrum of the symbolic image consists of the intervals
+[λ
+min
+(H
+k
+),λ
+max
+(H
+k
+)], where {H
+k
+} is the full family of classes of equivalent re-
+current vertices of the symbolic image G(PF).
+Electronic Journal.  9Differential Equations and Control Processes, N 3, 2001
+Since M is compact, the mapping A(x) has a modulus of continuity η
+A
+(ρ)
+on x. Set
+η(ρ)=η
+A
+(ρ)+max
+x∈M
+|A(x)|ρ,
+θ = ( min
+x∈M, |e|=1
+|A(x)e|)
+−1
+= max
+x∈M
+|A
+−1
+(x)|.
+Theorem 7 [24] The Morse spectrum Σ(F) of the linear extension F is in the
+union
+[
+k
+[λ
+min
+(H
+k
+)−θη(d),λ
+max
+(H
+k
+)+θη(d)],
+where {H
+k
+} is the full family of classes of equivalent recurrent vertices on sym-
+bolic image G(PF), d is a maximal diameter of cells of covering C(P).
+Thus Theorem 7 lets to estimate the Morse spectrum.
+4.3 Localization of the chain recurrent set.
+Denote by RV(d) the union of cells M(i) for which the vertices i are recurrent
+RV(d) ={
+[
+M(i):i is recurrent},
+wheredisthelargestdiameterofthecellsM(i). Itshouldbenotedthatinfact
+the constructed set RV(d) depends on the covering C(P). However, in what
+follows we need only to consider the dependence of RV(d) on d.
+Theorem 8 [20, 21]
+1. The set RV(d) is a closed neighborhood of the chain recurrent set CR,
+i.e.,
+CR⊂RV(d).
+2. The chain recurrent set CR coincides with the intersection of the sets
+RV(d) for all positive d:
+CR =
+\
+d>0
+RV(d).
+Theorem 8 makes possible to localize the chain recurrent set without pre-
+liminary information on a dynamical system. The subdivision is a main step of
+the localizing algorithm.
+Electronic Journal.  10Differential Equations and Control Processes, N 3, 2001
+4.4 Subdivision process.
+LetC ={M(i)}beacoveringofM andGbethesymbolicimagetoC. Suppose
+anewcoveringNC isasubdivisionofC.Itisaconveniencetodesignatethecells
+of the new covering as m(i,k). This means that each cell M(i) is subdivided
+such that new cells m(i,k), k = 1,2,... , form a subdivision of the cell M(i)
+[
+k
+m(i,k)=M(i).
+Denote by NG the symbolic image to the new covering NC. In this case
+the vertices of the new symbolic image are designed as (i,k). The described
+subdivision generates a natural mapping h
+∗
+from NG onto G which takes the
+vertices (i,k) onto the vertex i. Since from f(m(i,k))∩m(j,l) 6= ∅ it follows
+that f(M(i))∩M(j) 6= ∅, the directed edge (i,k) → (j,l) is mapped onto the
+directed edge i → j. Hence, the mapping h
+∗
+takes the directed graph NG on
+the directed graph G. From this it follows that every path on the new graph
+NG is transformed on some path on the graph G.
+4.5 Localizing algorithm.
+We apply the process of adoptive subdivision. Here the adaptive subdivision
+means that some cells are excluded from consideration, but other are subdi-
+vided. AnalgorithmlocalizingthechainrecurrentsetCRisavailablein[20,21].
+It consists of the following steps:
+1. Starting with an initial covering C, the symbolic image G of the map PF
+is found. The cells of the initial covering may have arbitrary diameter d
+0
+.
+2. The recurrent vertices {i
+k
+} of the graph G are recognized. Using the
+recurrent vertices, a closed neighborhood V ={∪M(i
+k
+) : i
+k
+is recurrent}
+of the chain recurrent set CR is found.
+3. Theclasses{H
+m
+}ofequivalentrecurrentverticesarefound,andthefamily
+of simple periodic paths {φ
+m
+j
+} is recognized for each class H
+m
+.
+4. The intervals I
+m
+= [λ
+min
+(H
+m
+)−θη(d),λ
+max
+(H
+m
+)+θη(d)] are determined
+by the families {φ
+m
+j
+}.
+5. The cells corresponding to recurrent vertices{M(i
+k
+): i
+k
+is recurrent} are
+subdivided. The new covering is deﬁned.
+Electronic Journal.  11Differential Equations and Control Processes, N 3, 2001
+6. The symbolic image G is constructed for the new covering. It should
+be noted that the new symbolic image may be constructed on the set
+V = {∪M(i
+k
+) : i
+k
+is recurrent}. In other words, the cells corresponding
+to non recurrent vertices do not participate in the construction of the new
+covering and the new symbolic image.
+7. Then one goes back to the second step.
+Repeating this subdivision process we obtain we obtain
+1) a sequence of neighborhoods {V
+k
+} of the chain recurrent set,
+2) a sequence of the largest diameters of cells {d
+k
+},
+3) a sequence of families of intervals Σ
+k
+= {I
+k
+m
+}. The following theorem
+substantiates the described algorithm.
+Theorem 9 [20, 21] The sequence of sets V
+0
+, V
+1
+, V
+2
+, ... offers the following
+properties:
+(i) the neighborhoods V
+k
+are imbedded one inside the other, i.e.,
+V
+0
+⊃V
+1
+⊃V
+2
+⊃...⊃CR,
+(ii) each set Σ
+k
+=∪
+m
+I
+k
+m
+contains the Morse spectrum of F,
+(ii) if d
+k
+→0 as k becomes inﬁnite then
+lim
+k→∞
+V
+k
+=
+\
+k
+V
+k
+=CR.
+lim
+k→∞
+Σ
+k
+= Σ(F).
+Corollary 1 If the diffeomorphism is hyperbolic on the chain recurrent set then
+a ﬁnite steps is enough to verify that 0 is not in the Morse spectrum.
+4.6 Attractor on symbolic image.
+Consider a symbolic image G of the homeomorphism f. A set of vertices L is
+invariant if for each vertex i ∈ L there exist the edges j → i and i → k such
+that j, k ∈ L. Let L be an invariant set of vertices on the symbolic image G.
+The set of vertices
+En(L)={j ∈L : there exists an edge i→j, i / ∈L}
+Electronic Journal.  12Differential Equations and Control Processes, N 3, 2001
+is called the entrance of L. The set of vertices
+Ex(L)={i∈L, there exists an edge i→j, j / ∈L}
+is called the exit of L.
+Deﬁnition 12 • An invariant set L⊂Ver is an attractor if Ex(L) =∅.
+• An invariant set L⊂Ver is a repeller if En(L)=∅.
+Let L be an attractor. A basin or domain of attraction is the set of vertices
+D(L) ={j : each path through j finishes in L},
+i.e., for each admissible path{...,j,...,i
+k
+,...} there exists a numberk
+∗
+such that
+the vertices i
+k
+with k >k
+∗
+, belongs to L.
+If L⊂ Ver is an attractor, the repeller L
+∗
+= Ver\D(L) is named as dual
+for the attractorL. As one would expect, there is a natural correlation between
+the attractors of a dynamical system and the attractors of its symbolic image.
+Theorem 10 [23] If L and D(L) are an attractor and its domain of attraction
+on a symbolic image G, then there are an attractor Λ of the homeomorphism f
+and its basin W
+s
+(Λ) such that
+(i) the set
+U =int{
+[
+M(i), i∈L},
+where int· denotes the interior, is a fundamental neighborhood of Λ,
+(ii) the set W ={
+S
+M(j), j ∈D(L)} is in the basin W
+s
+(Λ),
+(iii) the set V =int{
+S
+M(k), k ∈L
+∗
+} is a neighborhood of the dual repeller
+Λ
+∗
+.
+The following theorem shows that an attractor of a dynamical system and
+its domain of attraction can be deﬁned as precisely as one likes by employing a
+symbolic image with covering cells of small enough diameter.
+Theorem 11 [23] Let Λ⊂M be an attractor, V
+1
+be its arbitrarily small neigh-
+borhood, and V
+2
+be an arbitrarily large neighborhood such that
+Λ⊂V
+1
+⊂V
+2
+⊂clV
+2
+⊂W
+s
+(Λ).
+Electronic Journal.  13Differential Equations and Control Processes, N 3, 2001
+Then there exists d
+0
+> 0 such that each symbolic image G, with the maximal di-
+ameter of covering cells d<d
+0
+, has an attractor L and its domain of attraction
+D(L) such that
+Λ⊂{∪M(i), i∈L}⊂V
+1
+⊂V
+2
+⊂{∪M(j), j ∈D(L)}⊂W
+s
+(Λ).
+Thus the construction of a dynamic system attractor and its domain of
+attraction is reduced by Theorem 11 to the same task on symbolic image.
+References
+[1] V.M.Alekseev, Symbolic Dynamics, 11th Mathematical School, Kiev, 1976
+(in Russian).
+[2] A.A.Andronov and L.S.Pontryagin, Rough Systems, Doklady Academy
+Nauk SSSR, v.14, no.5, 247-250 (1937) (in Russian).
+[3] D.V. Anosov, Geodesic ﬂow on closed Riemannian manifold of negative
+curvature, Trudy Math. Steclov Institute, v. 90, (1967) (in Russian).
+[4] R.Bowen, Symbolic Dynamics, Ann. Math. Soc. Providence, R.I., vol.8,
+(1982).
+[5] I.U.Bronshtein, Theorem on structural stability of smooth extension of
+cascade, in Algebraic invariants of dynamical systems, Mat. Issledovaniya,
+v. 67, Kishinev, Shtinisa, 12-29 (1980) (in Russian).
+[6] I.U.Bronshtein, Nonautonomous dynamical system, Kishinev, Shtinisa,
+1984 (in Russian).
+[7] B.F.Bylov, R.E.Vinograd, D.M.Grobman, V.V.Nemytskii, Theory of Lya-
+punov exponents, Moscow, Nauka, 1966 (in Russian).
+[8] F.ColoniusandW.Kliemann,TheMorsespectrumoflinearﬂowsonvector
+bundles, Trans. Amer. Math. Soc., 348, 4355-4388 (1996).
+[9] C.Conley, Isolated Invariant set and the Morse Index, CBMS Regional
+Conference Series, v.38, Amer.Math.Soc., Providence, (1978).
+[10] B.Coomes, H.Kocak, K.Palmer, Computation of long period orbits in
+chaotic dynamical systems, Aust. Math. Soc. Gaz., v.24, no.5, 183-190
+(1997).
+Electronic Journal.  14Differential Equations and Control Processes, N 3, 2001
+[11] M.Dellnitz, O.Junge, An adaptive subdivision technique for the approxi-
+mation of attractors and invariant measures, Comput. Visual. Sci. 1, 63 -
+68, (1998).
+[12] P.Hartman, Ordinary Differential Equations, N.Y., 1964.
+[13] M.Hirsch and S.Smale, Differential Equations, Dynamical Systems and
+Linear Algebra, N.Y. 1970.
+[14] C.S.Hsu, Cell-to-Cell Mapping. Springer-Verlag, N.Y., 1987.
+[15] F.Hunt, Unique ergodicity and the approximation of attractors and their
+invariant measures using Ulam s method, Nonlinearity, v. 11, no. 2, 307–
+317 (1998).
+[16] R.Mane, Characterizations of AS diffeomorphisms, Lect. Notes Math., v.
+597, 389-394 (1977).
+[17] R.Mane, A proof of the C
+1
+stability conjecture, Publ. Math., Inst. Hautes
+Etud. Sci. 66, 161-210 (1988).
+[18] G.S.Osipenko, On a symbolic image of dynamical system, in Boundary
+value problems, Interuniv. Collect. sci. Works, Perm 101-105, (1983), (in
+Russian).
+[19] G.S.Osipenko,Veriﬁcationofthetransversalityconditionbythesymbolic-
+dynamical methods, Differential Equations, v.26, no.9, 1126-1132 (1990);
+translated from Differentsialnye Uravneniya, v.26, N9, 1528-1536, (1990).
+[20] G.S.Osipenko, The periodic points and symbolic dynamics, in Semi-
+nar on Dynamical Systems. Euler International Mathematical Institute,
+St.Petersburg, Russia, October and November, 1991, Birkhauser Verlag,
+Basel, Prog. Nonlinear Differ. Equ. Appl. 12 (1994), 261-267.
+[21] G.S.Osipenko,Localizationofthechainrecurrentsetbysymbolicdynamics
+methods,ProceedingsofDynamicSystemsandApplications, Atlanta, 1993,
+v. 1 (1994), 277-282.
+[22] G.Osipenko,MorseSpectrumofDynamicalSystemsandSymbolicDynam-
+ics, Proceedings of 15th IMACS World Congress, v.1, 25-30 (1997).
+[23] G.Osipenko and S.Campbell, Applied Symbolic Dynamics: Attractors and
+Filtrations, Discrete and Continuous Dynamical Systems, v.5, no.1&2, 43-
+60 (1999).
+Electronic Journal.  15Differential Equations and Control Processes, N 3, 2001
+[24] G. Osipenko, Spectrum of a Dynamical System and Applied Symbolic Dy-
+namics, Journal of Mathematical Analysis and Applications, v. 252, no. 2,
+587-616 (2000).
+[25] S.Yu.Pilyugin, The space of Dynamical Systems with C
+0
+-Topology,
+Springer-Verlag, Lec. Notes in Math., 1571, 1994.
+[26] J.Robin, A structural stability theorem, Annals of Math., v.94, no.3, 447-
+493 (1971).
+[27] C.Robinson, Structural stability of C
+1
+-diffeomorphism, J. Diff. Equat.,
+v.22, no.1, 28-73 (1976).
+[28] R.Sacker and G.Sell, Existence of dichotomies and invariant splitting for
+linear differential systems I-III, J. Diff. Equat. v.15, no.3, 429-458 (1974),
+v.22, no.2, 476-522 (1976).
+[29] R.SackerandG.Sell,Aspectraltheoryforlinerdifferentialsystems,J. Diff.
+Equat., v. 27, no. 3, 320-358 (1978).
+[30] D.Salamon and E.Zehnder, Flows on vector bundles and hyperbolic sets,
+Trans. Amer. Math. Soc., v. 306, no. 2, 623-649 (1988).
+[31] J.Selgrade,Isolatedinvariantsetsforﬂowsonvectorbundles,Trans. Amer.
+Math. Soc., v. 203, 359-390 (1975).
+[32] G.Sell, Nonautonomous differential equations and topological dynamics,
+Trans. Amer. Math. Soc., 127, 241-283 (1967).
+[33] M.Shub, Stabilite globale de systems denamiques, Asterisque, v. 56, 1-21
+(1978).
+Electronic Journal.  16

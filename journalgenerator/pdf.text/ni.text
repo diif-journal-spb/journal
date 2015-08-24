@@ -1,0 +1,876 @@
+﻿DIFFERENTIAL EQUATIONS 
+AND 
+CONTROL PROCESSES 
+№ 2, 2010 
+Electronic Journal, 
+reg.Эл № ФС77-39410 at 15.04.2010 
+ISSN 1817-2172 
+ 
+http://www.math.spbu.ru/user/diffjournal 
+http://www.newa.ru/journal 
+e-mail: jodiff@mail.ru 
+ 
+ 
+ 
+ 
+Classification on Herman Rings of Extended Blaschke Equations 
+ 
+David C. Ni 
+ 
+Direxion Technology, 9F, 177-1 Ho-Ping East Road Section 1, 
+Taipei, Taiwan, R.O.C. 
+ 
+Chou Hsin Chin
+ 
+ 
+Department of Electro-Physics, National 
+Chiao Tung University, Hsin Chu, Taiwan, R.O.C. 
+ 
+Abstract.  This paper presents some interesting results of numerical analysis of the Extended Blaschke 
+functions, which are constructed by extending Blaschke product. On the complex plane, the convergent 
+domains of the functions form fractal patterns of constrained Herman rings with limited-layered structures, 
+which demonstrate skip-symmetry, symmetry broken, chaos, and degeneracy in conjunction with 
+parameter space. 
+ 
+ 
+1. Introduction 
+ 
+The family {Fn} of complex analytic functions defined on an open set U is a normal family if every infinite 
+sequence of maps from {Fn} has a subsequence, which converges uniformly on compact subsets of U, or 
+converges uniformly to ∞ on U. The Fatou set, F(f), on the Riemann sphere is the largest open set such that the 
+iterates {f
+n
+ ∣F : n ≧ 1} form a normal family. The Julia set, J(f), is the complement of the Fatou set. In this 
+paper, we adopt the definition of absolute and bounded convergence since the iteration on computer is finite. 
+ 
+Herman rings represent a class in meromorphic dynamical systems [1, 2]. A periodic component U of Fatou set, 
+with f
+n
+ (U) = U, is an annulus and f
+n
+ acts on U as an irrational rotation, U is then classified as a Herman ring. 
+Herman used Arnold’s theorem about real analytical conjugations of real analytic diffeomorphism of circle to 
+rigid rotations when the rotation number is like a Siegel number [3]. Herman indicated that the map z → 
+exp(iθ)z
+-1
+[(a-z)/( 1-āz)]
+2
+ includes such regions with appropriate values of θ and a [4]. 
+ 
+In our previous efforts we extended this map by studying h(z)=Π
+4 
+{exp(g
+i
+(z))[(a
+i
+-z)/(1-ā
+i
+z)]}, which have been 
+further generalized and defined hereby as extended Blaschke products [5]. This set of products reveals some 
+interesting characteristics. We have also adopted our studies for the applications in the antenna areas [6, 7] and 
+elaborated the mathematical foundation [8]. In addition, we have discussed the special hierarchical structures of 
+Herman rings and their chaotic behavior [9, 10]. 
+ 
+In this paper we classify this class of functions and equations in the form of iterated maps by means of 
+numerical analysis. We present a set of special features, such as limited number of high-degree Herman rings, Differential Equations and Control Processes, № 2, 2010  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  2 
+skip-symmetry, symmetry broken, chaos, and degeneracy of the rings in conjunction with the parameter space 
+of the functions and equations. 
+ 
+2. Function Construction and Class Formation 
+ 
+2.1 Functions and Equations 
+ 
+We define the set of functions  f = z
+q 
+ΠC
+i
+ , where z is a complex variable, q is a rational number, and Ci has the 
+following form:  
+ 
+Ci = exp(gi(z))[(ai-z)/( 1-āiz)]         (1) 
+ 
+Here āi  is the complex conjugate of a complex number ai. The function f defined hereby can be viewed as 
+extended Blaschke products. The degree of f(z) = P(z)/Q(z) is defined as Max{deg P, deg Q}. This function 
+explicitly includes the formulas of three important theories in physics. The first one concerns the special 
+relativity theory by A. Einstein:  
+ 
+ux’ = ( ux - v ) / ( 1 - vux/c
+2 
+)         (2) 
+ 
+The term z 
+q 
+is related to the potential energy of Newtonian mechanics. In this paper we focus on q = -1 case. 
+We also illustrate the cases of q = -0.5 and q = -1.5 for discussing fractal and chaos comparing with the q = -1 
+case. The term exp(gi(z)) represents the phase parameter which has the form of a solution of Maxwell’s 
+equations for electromagnetism. The term g i(z) is a complex function and is assigned by Σ
+n
+2πinz.  
+ 
+The extended Blaschke equation is defined as follows: 
+ 
+f(z) – z = z
+q 
+ΠC
+i
+ 
+– z = 0        (3) 
+ 
+2.2 Parameter Space 
+ 
+To characterize the original and the mapped domains, we define a set of parameters called parameter space. The 
+parameter space includes six parameters: (1) z, (2) a, (3) exp(gi(z)), (4) q, (5) iteration, and (6) degree. In the 
+context of the paper we use {z, a, exp(gi(z)), q, iteration, degree} to represent this parameter space. For 
+example, {a}, is one of the subsets of the parameter space. 
+ 
+2.3 Original and Mapped Domains 
+ 
+A domain can be the entire complex plane, C
+∞
+, or a set of complex numbers, such as z = x+yi, with (x
+2 
++y
+2
+)
+1/2 
+≦ 
+R, and R is a real number. For solving the extended Blaschke equations a function f will go through iteration as:  
+ 
+f 
+n
+(z) = f ◦ f 
+n-1
+(z),         (4) 
+ 
+Where n is a positive integer indicating the number of iteration. The function operates on a domain called 
+original domain and the set of f 
+n
+(z)  is  mapped domain. In the figures, the regions in black color represent 
+Fatou sets, and the blank (white) regions correspond to Julia sets. In the paper we discuss the following 
+functions: 
+ 
+ (1) Z
+-1
+C – second degree of the functions 
+(2) Z
+-1
+C1C2 – third degree the functions 
+(3) Z
+-1
+C1C2C3 – fourth degree of the functions 
+(4) Z
+-1
+C1C2C3C4 – fifth degree of the functions.  Differential Equations and Control Processes, № 2, 2010  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  3 
+(5) degrees higher  fifth degree are shown as complementary examples 
+ 
+2.4 Constrained Herman Rings 
+ 
+As defined in Section 1, we have examined the Fatou components that are conformally isomorphic to an 
+annulus and the action of some f 
+n
+is conjugate to irrational rotation. Figure 1(a) and 1(b) show the original and 
+the mapped domains of f 
+n
+of 11
+th
+ degree respectively. Both domains are at scale of 10
+10
+. The rings at larger and 
+smaller scales are not shown. Due to the complexity of multiple-layered rings we are not able to verify the 
+existence of an irrational rotation as defined for Herman rings. We therefore adopt the term of constrained 
+Herman rings for these sets.  
+   
+  (a) Original Domain     (b) Mapped Domain 
+Fig. 1 (a) Original Domain and (b) Mapped domain of Z
+-1
+C
+10
+. 
+3. Classification  
+ 
+3.1 Herman Rings of Original Domains  
+ 
+We classify the original domains of functions: Z
+-1
+C, Z
+-1
+C1C2, Z
+-1
+C1C2C3, and Z
+-1
+C1C2C3C4 with some extension 
+to the functions of higher degrees.  
+ 
+ 
+(a) R
+1 
+~ 10
+1
+     (b) R
+1
+ ~ 10
+1
+ 
+Fig. 2 Original Domains of function Z
+-1
+C. 
+ 
+Figure 2 shows the original domains of the function Z
+-1
+C. Figure 2 (a) and (b) show that  Fatou and Julia sets 
+form a group of 2-layer constrained Herman rings in conjunction with parameter subset {a, iteration}. These 2-
+layer domains are in the range of R1 ~10
+1 
+scale.  Beyond of scale of 10
+1
+, we have not observed any other existing 
+Fatou sets. Fig 2(a) and (b) show fractal patterns for two different values of the parameter {a}. 
+ Differential Equations and Control Processes, № 2, 2010  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  4 
+ 
+     (a) R
+2
+ ~ 10
+-2
+     (b) R
+2
+ ~ 10
+1
+     (c) R
+2
+ ~ 10
+3
+ 
+Fig. 3 Original Domains of function of Z
+-1
+C1C2 
+ 
+Figure 3 shows the original domains of the function Z
+-1
+C1C2. Figure 3 (a), (b) and (c) show that Fatou and Julia 
+sets form a group of 3-layer constrained Herman rings in conjunction with the parameter subset {a, iteration}. 
+Figure 3(a) shows several disconnected Fatou sets at scale of R2 ~ 10
+-2
+. Figure 3(b) shows several Fatou and 
+Julia sets at scale of R2 ~ 10
+1
+. The sets in Figure 3(a) are around the point z = 0 at Figure 3(b). Figure 3(c) shows 
+several disconnected Fatou sets at scale of R2 ~ 10
+3
+. Figure 3(b) is actually the leftmost set on the Figure 3(c).  
+ 
+Figure 4 shows the original domains of the function Z
+-1
+C1C2C3. Figure 4 (a), (b), (c), (d), and (e) show that the 
+Fatou and Julia sets form a group of 5-layer partial Herman-Ring fractal domains in conjunction with parameter 
+subset {a, iteration}. 
+ 
+  (a) R3 ~10
+-5
+   (b) R3 ~10
+-2
+        (c) R3 =1 
+ 
+      (d) R3 ~ 10
+2
+     (e) R3 ~10
+4
+ 
+Fig. 4 Original Domains of function of  the form Z
+-1
+C1C2C3. 
+ 
+Figure 4(a) shows a constrained Herman ring at scale of 10
+-5
+. Figure 4(b) shows a constrained Herman ring at 
+scale of R3 ~10
+-2
+. Figure 4(c) shows a constrained Herman ring at scale of R3 =1. The sets in Figure 4(b) can be 
+seen locating around z = 0 in Figure 4(c). Figure 4(d) shows a constrained Herman-Ring at scale of R3 ~ 10
+2
+. 
+Figure 4(c) can be seen locating around z = 0 at Figure 4(d). Figure 4(e) shows a constrained Herman ring at 
+scale of R3 ~10
+4
+. Figure 4(d) is locating around z = 0 at Figure 4(e). We have explored possibly existing Fatou 
+sets beyond the scales of 4(a) and 4(e), namely, R3 < 10
+-5
+and R3 >10
+4 
+as in the cases of the functions of Z
+-1
+C and 
+Z
+-1
+C1C2. For the lower bound beyond R3 ~10
+-5
+, the result is straightforward since there are no blank regions ( the 
+Julia sets) existing for forming Herman rings at smaller scales around z = 0 . For the upper bound we have 
+elaborated up to 10
+100 
+range and could not find any existing Fatou sets (black regions). We have hereby 
+observed only five layers of constrained Herman rings for this function. Differential Equations and Control Processes, № 2, 2010  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  5 
+ 
+Figure 5 shows the original domains of the function Z
+-1
+C1C2C3C4. Figure 5 (a), (b), (c), (d) and (e) show that the 
+Fatou and Julia sets also form a group of 5-layer constrained Herman rings in conjunction with parameter subset 
+{a, iteration}. Figure 5(a) shows a constrained Herman ring at scale of R4 ~10
+-6
+. Figure 5(b) shows a constrained 
+Herman ring at scale of R4 ~10
+-2
+. Figure 5(c) shows a constrained Herman ring at scale of R4 = 1. The sets in 
+Figure 5(b) can be seen locating around z = 0 point at Figure 5(c). Figure 5(d) shows a constrained Herman ring 
+at scale of R4 ~ 10
+2
+. Figure 5(c) can be seen locating around z = 0 point at Figure 5(d). Figure 5(e) shows a 
+constrained Herman ring at scale of R4 ~10
+6
+. Figure 5(d) is locating around z = 0  at Figure 5(e). The constrained 
+Herman ring at scale of 10
+-6 
+is topologically similar to that at scale of 10
+2 
+and the Herman ring at scale of 10
+-2 
+is 
+topologically similar to that at 10
+6
+. This portrait is similar to the Herman rings for both Z
+-1
+C1C2 and Z
+-1
+C1C2C3 
+functions. We call the symmetry that a skip-layer symmetry. This symmetry is important to understand the 
+mapping between original and mapped domains. 
+ 
+We have explored several functions with degrees higher than the 5
+th
+-degree and found that the number of layers 
+keeps the same as  for Z
+-1
+C1C2C3, namely, only 5 layers constrained Herman rings are observed at 12
+th 
+degree as 
+an example. The skip-layer symmetry is also observed in the higher-degree sets.  
+ 
+ 
+  (a) R4 ~10
+-6
+     (b) R4 ~10
+-2
+            (c) R4 = 1 
+ 
+       (d) R4 ~ 10
+2
+      (e) R4 ~10
+6
+ 
+Fig. 5 Original Domains of the functions of the form Z
+-1
+C1C2C3C4  
+ 
+Figure 6 shows the constrained Herman rings at R = 1 scale for different function degrees. The number of 
+branches of the central portion of the fractals is two less than the functional degree. For example, the 7
+th
+-degree 
+domain has 5 branches, and each branch extends into 5 bulbs. The individual bulb further extends into 5 second-
+level bulbs on the 2
+nd
+ layer and so on. The high-level bulbs will further close to the boundary of unit circle with 
+radius = 1. 
+ 
+ 
+    (a) 6
+th
+ Degree    (b) 7
+th
+ Degree      (c) 8
+th
+ Degree Differential Equations and Control Processes, № 2, 2010  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  6 
+ 
+                    (d)  9
+th
+ Degree    (e) 12
+th
+ Degree 
+ 
+Fig. 6 Herman Rings for different function degrees for R = 1 scale. 
+ 
+Table 1 shows the layers and corresponding scales of the sets for different function degrees. 
+ 
+Z
+-1
+ ∏
+i
+C
+i
+ d = 2 d= 3 d= 4 d = 5 d = 6 d = 7 d = 8 d = 9 
+Layers 2 3 5 5 5 5 5 5 
+Scale 1 10
+1
+ 10
+-2
+ 10
+-5
+ 10
+-6
+ 10
+-7
+ 10
+-9
+ 10
+-10
+ 10
+-11
+ 
+Scale 2 10
+1
+ 10
+1
+ 10
+-2
+ 10
+-2
+ 10
+-2
+ 10
+-3
+ 10
+-4
+ 10
+-5
+ 
+Scale 3  10
+3
+ 1 1 1 1 1 1 
+Scale 4   10
+2
+ 10
+2
+ 10
+3
+ 10
+3
+ 10
+3
+ 10
+4
+ 
+Scale 5   10
+4
+ 10
+6
+ 10
+7
+ 10
+9
+ 10
+9
+ 10
+11
+ 
+Table 1 Scales of Fatou Sets for different degrees (d) for a particular parameter {a} 
+3.2 Mapped Domains 
+ 
+There are several scenarios to examine the mapped domains. We have chosen the following three scenarios: 
+ 
+1. The mapped domains of the Fatou sets in the original domains. 
+2. The mapped domains of a special set of the original domain. This set includes both Fatou and Julia sets. 
+For example, a circle on complex plane with radius = 0.5. 
+3. The trace of each step of the iteration of a specific point in a Fatou or a Julia set. 
+ 
+Fig. 7 shows the mapped domain of the original domain of the function Z
+-1
+C1C2C3 (Fig. 4(c)) with R
+3
+ = 1. This 
+mapped domain is obtained through 20  iteration and with points distributed within circle with radius = 1 on the 
+complex plane. Further examining on this mapped domain, we find that the point set in the region defined by (x
+2 
++y
+2
+)
+1/2 
+< 1 is symmetrical to the real axis, y =0; while the point set on (x
+2 
++y
+2
+)
+1/2 
+= 1 is randomly distributed. We 
+will discuss this observation in the next section. 
+ 
+ 
+Fig. 7 A mapped domain of a original convergent domain (Fatou sets) of the function Z
+-1
+C1C2C3 (Fig. 4(c)) with 
+scale of R =1. 
+ Differential Equations and Control Processes, № 2, 2010  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  7 
+ 
+(a) 2
+nd
+ Degree   (b) 3
+rd
+ Degree         (c) 4
+th
+ Degree 
+ 
+(d) 5
+th
+ Degree    (e) 12
+th
+ Degree        (f) 21
+th
+ Degree 
+ 
+Figure 8 Mapped domains for different degrees. 
+ 
+For the second scenario, we define a circle on the complex plane as an original domain and compute the mapped 
+domain. Figure 8 shows some mapped domains for different function degrees. From geometrical perspective, 
+the algebraic curves in Fig. 8(a) and 8(b) can be the trajectories on torus with genus = 1, while the ones of 3
+rd
+ 
+degree or higher can not be projections of trajectories on torus with genus = 1. 
+ 
+For the third scenario, we select a point in the original domain and compute the trajectories generated by 
+iteration. We select points on the original domain of the function Z
+-1
+C1C2C3. 
+ 
+Fig. 9 shows the trajectories. The start point is marked by a square symbol and the end point is marked by a 
+diamond symbol. Fig. 9(a) shows a point on the circle with radius = 1 that converges to another point and Fig. 
+9(b) shows a fast convergent point inside the circle with radius = 1. All the points on an original convergent 
+domain will be mapped to a set of points which are subjected to the precision of computer platform. Periodic 
+solutions corresponding to iteration steps are observed. 
+ 
+ 
+         (a) Trace of a point on the circle           (b) Trace of a point inside circle 
+ 
+Figure 9 Traces of points generated by a given number of iteration (a) point on a circle with radius = 1 (b) point 
+inside a circle with radius = 1. The trace starts from the point marked by square symbol and stops at the point 
+marked by diamond symbol. 
+ 
+ 
+4. Symmetry Broken and Chaos 
+ 
+From geometrical perspective, we have observed that both original and mapped domains are symmetrical to the Differential Equations and Control Processes, № 2, 2010  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  8 
+real axis. This symmetry can be influenced by the parameters which can transform a stable domain (Herman 
+ring with stable Fatou and Julia sets) to a chaotic domain (disconnected Fatou and Julia sets). A chaotic domain 
+shows random patterns of Fatou sets after consecutive iterations and eventually Fatou sets disappear, namely, 
+the domain will become a Julia set or connected Julia sets only, and Herman rings do not exist anymore.  
+However, the proper selections of the parameters can prevent stable domains from evolving to chaotic ones. 
+ 
+4.1 Symmetry Broken in Original and Mapped Domains 
+ 
+Fig. 10 shows four original domains, including Fatou and Julia sets, of the function Z
+-1
+C1C2C3 with different 
+values of parameter {a}. Fig. 10(a) is with a = 0.01, Fig. 10(b) is with a = 0.1, Fig. 10(c) is with a = 0.2, and 
+10(d) is with a = 1.  
+ 
+As the value of the parameter {a} increases, the Julia sets in the Herman rings become asymmetric to the 
+imaginary axis. When a = 1, the original domain becomes chaotic, namely, disconnected and randomized Fatou 
+and Julia sets. 
+ 
+ 
+ 
+           (a) a = 0.01        (b) a = 0.1 
+ 
+              (c) a = 0.2        (d) a = 1 
+ 
+Figure 10 The original domains with different values of parameter {a}.  
+(a) a = 0.01 (b) a = 0.1 (c) a = 0.2 and (d) a = 1 
+ 
+For the mapped domain as shown in Fig. 7 we can divide the original domain with radius = 1 of the function  
+Z
+-1
+C1C2C3 into two regions: one region includes all point with (x
+2 
++y
+2
+)
+1/2 
+< 1 and the other includes the points on 
+the perimeter of the region, namely, (x
+2 
++y
+2
+)
+1/2 
+= 1. Figure 11 shows mapped domain obtained from the original 
+domain defined by (x
+2 
++y
+2
+)
+1/2 
+≦ 0.99 that form a set of points which are symmetrical to the real axis. As the 
+iteration number increases to a threshold value of computer accuracy, we observe that a set of periodic points 
+are still symmetrical to the real axis (as shown in Fig. 11(a) through 11(c) with different iteration numbers). 
+This set includes the solutions of the extended Blaschke equations.   
+ 
+The set of points mapped from the original domain (x
+2 
++y
+2
+)
+1/2 
+= 1 does not have  real-axis symmetry. The set of 
+points converges to two groups of points (as shown in Fig. 11 (d) through 11(f)). Fig. 11(d) shows all points that 
+are still on the circle wit radius = 1. Fig. 10(e) shows random distribution. Fig. 11(f) shows two convergent 
+points A and B which are not symmetrical to the real axis. The symmetry broken on the original domains occurs 
+gradually, while the symmetry broken on the mapped domains occurs abruptly. 
+ 
+4.2 Chaos and Compensation Differential Equations and Control Processes, № 2, 2010  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  9 
+ 
+We have illustrated in the section 4.1 (Fig. 10) that when the value of the parameter {a} increases, the original 
+domains become asymmetric to the imaginary axis. We further define this parameter as follows: 
+ 
+a = k ( cosθ + i*sinθ )         (5) 
+ 
+Here k is a constant value. Now we can rotate the original domain on the angle θ. Fig. 12 shows that when the 
+bulbs extending from the central portion of the fractal pattern (i.e., Julia sets) have a phase lag against the 
+central portion, the rotation creates symmetry broken as soon as the angle θ does not equal to zero. When the 
+rotation angle θ increases, bulbs are moving almost to the central regions of two consecutive fractal branches of 
+the central portion. The central portion begins to form ramifications and it is the divergent region (Julia sets) 
+that grows. As the number of  iterations increases, a spiral pattern forms  connecting bulbs back to the original 
+branches. This connection will prevent the divergent regions from further growing and the fractal pattern will 
+sustain as the iteration increases. When the rotation angle θ increases further, the bulbs are  connected to the 
+ramifications through spiral patterns (Fig. 12(d) and 12 (e)),  the divergence regions  grow continuously and 
+eventually the original domain becomes chaotic. 
+ 
+ 
+(a) R ≦0.99 and Iteration = 10                    (b) R ≦0.99 and Iteration = 30 
+   
+         (c) R ≦ 0.99 and Iteration = 50    (d) R = 1 and Iteration = 40 
+ Differential Equations and Control Processes, № 2, 2010  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  10 
+              (e) R = 1 and Iteration = 50     (f) R = 1 and Iteration = 100 
+ 
+Figure 11 (a), (b) and (c) are mapped domains with different iterations and symmetry to real axis, 11 (d), (e) and 
+(f) are mapped domains with different iterations and no symmetry to real or imaginary axis. Point set A and B 
+are convergent points 
+ 
+The symmetry broken and chaos formation can be compensated due to domain rotation. The parameter 
+{exp(gi(z))} plays the key role to offset the phase lag. Fig. 13 shows that when gi(z) is designated as a function 
+of angle θ, the phase lag is corrected and the entire original domain in fractal patterns  rotates in 
+synchronization. By doing so, the symmetry will be maintained and chaos will not occur. Fig. 13(a) shows a 
+phase lag occurring among the central branches and corresponding bulbs as rotation angle is approaching to 80
+ο 
+for the function  
+Z
+-1
+C1C2C3C4C5,, which has 4 branches on the central portion. Fig. 13(b) shows the bulbs connected with the 
+ramification branches and chaos occurring at θ = 90
+ο
+. When θ = 100
+ο
+, the bulbs are connected to the neighboring 
+branches and the domain becomes stable once again. With compensation, we can observe that stable domains 
+maintain through different rotation angles as shown at Figure 13 (d) through 13(f). 
+ 
+ 
+ 
+ 
+(a) Iteration = 50             (b) Iteration = 70     (c) Iteration = 80 
+ 
+(d) Iteration = 100   (e) Iteration = 200     (f) Iteration = 1000 
+ 
+Figure 12 Symmetry broken and Chaos formation induced by domain rotation. 12(a) through (f) shows the 
+divergence of a stable domain  
+ Differential Equations and Control Processes, № 2, 2010  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  11 
+ 
+ 
+(a) θ = 80
+ο
+    (b) θ = 90
+ο
+         (c)  θ = 100
+ο
+ 
+ 
+        (d) θ = 45
+ο
+    (e) θ = 60
+ο
+          (f) θ = 240
+ο
+ 
+ 
+Figure 13 Phase compensation by parameter exp(gi(z)) for maintaining symmetrical and stable Herman ring. 
+13(a) through (c) has no compensation and 13(d) through (f) is compensated. 
+ 
+ 
+4.3 Fractals and Chaos related to Z
+q
+  
+ 
+In the previous sections we selected q = -1 for the term z
+q
+. We can also examine the original domains when 
+selecting other values. Fig. 14 shows that the original domain becomes chaotic after few iteration with  a = 0.01 
+and q = -1.5 for the function Z
+-1
+C1C2C3C4. It also shows that extra branches form the central portion (i.e., Julia 
+sets). On the other hand, we select q = -0.5 and a = 0.3 for the original domain (as shown at Fig. 15). In this 
+case, only simple fractals, or Julia sets, are developed and the domains are rather insensitive to the number of 
+parameter subset {a, iteration}. 
+ 
+Figure 14 Original domain with q = -1.5, a = 0.01, and iteration = 11 
+ Differential Equations and Control Processes, № 2, 2010  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  12 
+ 
+                 (a) Iteration = 20     (b) Iteration = 1000 
+ 
+Figure 15 Original domains with q = -0.5, a = 0.3 (a) iteration = 20 (b) iteration = 1000 
+ 
+5. Degeneracy 
+ 
+Under certain combinations of the values of the parameters, we have observed that a specific set of original 
+domains show the fractal patterns of the constrained Herman-ring of other classes with different function 
+degrees. We call these types of topological variations as degeneracy. 
+ 
+5.1 Phase Degeneracy 
+ 
+For the function of Z
+-1
+C1C2C3 we add an additional phase item to the formula (5), namely, a phase shift δ
+i 
+added 
+to C
+i
+ term 
+ 
+a
+i
+ = k ( cos(θ+δ
+i
+ )+ i*sin(θ+δ
+i
+ ) )       (6) 
+ 
+Fig. 16(a) shows the normal case and Fig. 16(b) the degenerate one. For each of six branches of the central 
+portion (i.e., Julia sets), there are two bulbs extended toward the boundary of the Herman rings. This figure can 
+be compared with the Herman ring of 8
+th
+ degree (Fig. 6(c)) which shows the  six-branch pattern from central 
+portion that  extends to the corresponding 6 bulbs. 
+ 
+ 
+Figure 16 Original domains of the function Z
+-1
+C1C2C3 (a) normal (b) degenerate 
+ 
+ 
+5.2 Energy Degeneracy 
+ 
+For the case in section 5.1, the original domain is at scale R ~ 10
+2
+. Fig. 17 shows a normal case with a = 0.01 
+and a degenerate case with a = 0.99. The degenerate domains show the fractal patterns that are similar to the 
+sets of the function Z
+-1
+C. This type of degeneracy is also observed in other high-degree Herman rings, namely, Differential Equations and Control Processes, № 2, 2010  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  13 
+when the value {a} is approaching to unity, the fractal patterns of high-degree Herman rings transform into  the 
+structures  that are similar to the patterns of the function Z
+-1
+C ( Fig.2). 
+ 
+ 
+  (a) a = 0.01      (b) a = 0.99 
+Figure 17 Original domains of the function Z
+-1
+C1C2C3 (a) a = 0.01 (b) a = 0.99 
+ 
+ 
+ 
+6. Conclusions 
+ 
+(1) There are at most five layers of constrained Herman rings at different z scales with appropriate parameter 
+set. Skip symmetry shows interesting scheme of the rational maps. 
+ 
+(2) Symmetry broken occurs both  in original  and mapped domains. The symmetry broken of the mapped 
+domains occurs abruptly at the boundary, while the symmetry broken of the original domains evolves gradually 
+depending on the specific parameters. 
+  
+(3) There are several mechanisms inducing chaotic domains in conjunction with parameter space. The chaos 
+induced by domain rotation with parameter {a} can be compensated by the adjusting other parameter 
+{exp(gi(z))}.  
+ 
+(4) The patterns of original domains of a specific degree can be transformed to the patterns of other degrees by 
+manipulating parameter space. A case of degeneracy occurs when the parameter {a} approaches to unity. In this 
+case the domain patterns of high-degree will degenerate to the patterns of the function Z
+-1
+C with degree = 2. 
+ 
+The richness of these extended Blaschke functions and equations may be valuable to other fields of mathematics 
+and physics. In the future we will continue the exploration of these interesting characteristics in the parameter 
+space and the development their applications to related fields.  
+ 
+ 
+ 
+References 
+ 
+[1] Benoit B. Mandelbrot, “The Fractal Geometry of Nature”, New York, W.H. Freeman and Company, 1983. 
+[2] J. Milnor, “Dynamics in One Complex Variable”, Vieweg, 2000. 
+[3] Arnol’d V.I., Small denominators. I: Mappings of the circumference onto itself, Am. 
+Math. Soc., Transl., II. Ser. 46, 213-284 (1965); translation from Izv. Akad. Nauk SSSR, 
+Ser. Mat. 25, 21-86 (1961). 
+[4] M. Herman, Uniformit´e de la distortion de Swiatek pour les familles compactes de produits 
+de Blaschke, manuscript, 1987; and the references therein. 
+[5] David C. Ni and C. H. Chin, Z
+-1
+C
+1
+C
+2
+C
+3
+C
+4
+ System and Application, TIENCS workshop, Singapore, August 1-
+5, 2006. Differential Equations and Control Processes, № 2, 2010  
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  14 
+[6] David C. L. Ni and C. H. Chin, A Novel Approach for Designing Fractal Antennas, Proc. of International 
+Conference on Wireless Information Networks and Systems, pp. 157-160, (Eds. S.O. Mohammand et al.), 
+Barcelona, Spain, July 2007. 
+[7] David C. Ni and C. H. Chin, Broadband Fractal Antennas, Proc. of International Symposium on Antennas 
+and Propagation, Taipei, Taiwan, pp. 68 (Abstract), October 27-30, 2008. 
+[8] C. H. Chin, Hypertranscendental Geometry, Preprint NCTU-IMS-0801, Taiwan, R.O.C.. 
+[9] David C. Ni and C. H. Chin, Symmetry Broken in Low Dimensional N-body Chaos, Proc. (CD format) of 
+Chaos 2009 Conference, Chania, Crete, Greece, pp. 53 (Abstract), June 1-5, 2009. 
+[10] David C. Ni and C. H. Chin, Herman Ring Classification on Function 
+h(z) ∏
+i
+ {exp(g
+i
+(z))[(a
+i
+-z)/(1-ā
+i
+z)]}, Proc. (CD format) of 5th International Conference 2009 - Dynamical 
+Systems and Applications, Constantza, Romania, pp. 48-49 (Abstract), June 15-18, 2009. 

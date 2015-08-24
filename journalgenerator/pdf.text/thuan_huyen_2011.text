@@ -1,0 +1,2097 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 4, 2011
+Electronic Journal,
+reg. N ΦC77-39410 at 15.04.2012
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Exponential stabilization of linear systems with
+interval nondifferentiable time-varying delays in
+state and control
+Mai Viet Thuan and Nguyen Thi Thanh Huyen
+College of Sciences, Thainguyen university,
+Thainguyen City, Vietnam,
+maithuank1@gmail.com, thanhhuyenhb@gmail.com
+Abstract
+This paper presents new exponentially stabilization conditions for a class of linear
+systems with time-varying delays in state and control. The time-delays function is as-
+sumed to be continuously belonging to a given interval in which the lower bound of delay
+is not restricted to zero. New delay-dependent, based on the constructing of improved
+Lyapunov-Krasovskii functionals combined with Leibniz-Newton’s formula, suﬃcientcon-
+ditions for the exponential stabilization via memoryless control are established in terms
+of LMIs. That allows us to compute simultaneously the two bounds that characterize
+exponential stability of the solution. Numerical examples are given to demonstrate that
+the derived conditions are much less conservative than those given in the literature.
+Keywords: Interval nondifferentiable time-varying delay, Exponentially stabilization,
+Linear matrix inequalities.
+2000MSC: 34D05, 34D20, 34K20, 34K35
+1 Introduction
+Time-varyingdelaysin controlinputareoftenencounteredin manypractical
+systems because of transmission of the measurement information. The exis-
+tence of these delays may be the source of instability and poor performanceDifferential Equations and Control Processes, N 4, 2011
+of the closed-loop systems. Therefor, the problem of stabilization of control
+system with input delays has been received considerable attention from many
+researchers [4, 5, 6, 7, 9, 10, 11]. By using an improved state transformation,
+Chen and Zheng [3], Yue [19], Yue and Han [20] derived suﬃcent conditions for
+the robust stabilization of linear uncertain systems with unknown input delay
+in terms of LMI’s but the system is required to be global controllable. In [8]
+Hien by using an improved Lyapunov-Krasovskiifunctional, a delay-dependent
+conditions for exponential stabilization are derived in terms of LMI. The con-
+ditions do not require any assumption about the controllability of the nominal
+system. However, the stabilization condition reported in this work require the
+delay functions to be constans.
+Ontheotherhand,thestabilizationofdynamicsystemwithintervaltime-
+varying delays has been a focused topic of theoreticaland practicalimportance
+[2, 14, 15, 17, 18] in very recent years. Interval time-varying delay is a time
+delay that varies in an interval which the lower bound is not restricted to be
+0. Delay-dependent robust exponential stabilization criteria for interval time-
+varyingdelaysystemswithnorm-boundeduncertaintiesareproposedin[17],by
+usingLyapunov-Krasovskiifunctionalscombinedwiththefree-weightingmatri-
+cesbutthetime-varyingdelaysarerequiredtobedifferentiable. Itisnotedthat
+theformerhasmorematrixvariablesthanoursesult,butoursesulthaslesscon-
+servativeandmatrixvariablesthan[17]. Recent,in[2]T.Botmart,P.Niamsup
+and V. N. Phat, based on the constructing of improved Lyapunov-Krasovskii
+functionalscombinedwithLeibniz-Newton’sformulaandthetechniqueofdeal-
+ing with some integral terms, a delay-dependent suﬃcient conditions for the
+exponential stabilization via memoryless control are established in terms of
+LMIs withoutintroducinganyfree-weightingmatrices. However,in the results,
+the interval time-varying delayed control input was not considered there. In
+addition, the approach used in paper [2] can not be applied to the system is
+studied by us.
+In this paper, the problem of exponential stabilization for a class of lin-
+ear systems with interval time-varying delays in state and control is studied.
+The time delays is a continuous functions belonging to a given interval, which
+means that the lower and upper bounds for the time-varying delay are avail-
+able, but the delay function is not necessary to be differentiable. Based on
+the constructing of improved Lyapunov-Krasovskii functionals combined with
+Leibniz-Newton’sformula,newdelay-dependentsuﬃcientconditionsfortheex-
+ponentialstabilizationviamemorylesscontrolareestablishedintermsofLMIs.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 179Differential Equations and Control Processes, N 4, 2011
+Theapproachallowsustocomputesimultaneouslythetwoboundsthatcharac-
+terizetheexponentialstabilityofthesolution. Numericalexamplesaregivento
+demonstrate that the derived conditions are much less conservative than those
+given in the literature.
+2 Preliminaries
+The following notation will be used in this paper. R
++
+denotes the
+set of all real non-negative numbers; R
+n
+denotes the n−dimensional space
+and the vector norm k . k; M
+n×r
+denotes the space of all matrices of
+(n × r)−dimensions. A
+T
+denotes the transpose of matrix A; A is sym-
+metric if A = A
+T
+; I denotes the identity matrix; λ(A) denotes the set of
+all eigenvalues of A; λ
+max
+(A) = max{Reλ;λ ∈ λ(A)}. x
+t
+:= {x(t + s) :
+s ∈ [−h,0]},kx
+t
+k = sup
+s∈[−h,0]
+p
+kx(t+s)k
+2
++k˙ x(t+s)k
+2
+; C
+1
+([0,t],R
+n
+) de-
+notes the set of all R
+n
+−valued continuously differentiable functions on [0,t];
+L
+2
+([0,t],R
+m
+) denotes the set of all theR
+m
+−valued square integrable functions
+on [0,t]. Matrix A is called semi-positive deﬁnite (A≥ 0) ifhAx,xi≥ 0, for all
+x∈R
+n
+;A is positive deﬁnite (A> 0) ifhAx,xi> 0 for all x6= 0;A>B means
+A−B > 0. The symmetric term in a matrix is denoted by ∗.
+Consider a linear control system with interval time-varying delays in state
+and control of the form
+˙ x(t) =Ax(t)+Dx(t−h(t))+Bu(t)+B
+1
+u(t−d(t)),
+x(t) =φ(t),t∈ [−h,0],h={h
+2
+,d
+2
+},
+(1)
+where the time-varying delays functions h(t),d(t) satisﬁes
+0≤h
+1
+≤h(t)≤h
+2
+,
+0≤d
+1
+≤d(t)≤d
+2
+,
+x(t)∈R
+n
+is the state; u(t)∈R
+m
+is the control, A,D,B,B
+1
+are given matrices
+of appropriate dimensions and φ(t) ∈ C
+1
+([−h
+2
+,0],R
+n
+) is the initial function
+with the norm
+kφk = sup
+−
+¯
+h≤t≤0
+q
+kφ(t)k
+2
++k
+˙
+φ(t)k
+2
+.
+It is worth noting that the time delays are assumed to be a continuous
+function belonging to a given interval, which means that the lower and up-
+per bounds for the time-varying delay are available, but the delay function is
+bounded but not restricted to being zero.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 180Differential Equations and Control Processes, N 4, 2011
+Deﬁnition2.1. Givenα> 0.Thesystem(1),whereu(t)= 0,isα−exponential
+stable if there exist a positive number β > 0 such that every solution x(t,φ)
+satisﬁes the following condition:
+kx(t,φ)k≤βe
+−αt
+kφk, ∀t≥ 0.
+Deﬁnition 2.2. Given α > 0. The system (1) is α−exponential stabilizable if
+there exists a feedback control u(t) = Kx(t),K ∈R
+m×n
+such that the closed-
+loop system
+˙ x(t)= [A+BK]x(t)+Dx(t−h(t))+B
+1
+Kx(t−d(t))
+x(t)=φ(t), t∈ [−h,0].
+(2)
+is α−exponential stable.
+We introduce the followingtechnical well-known propositions, which will
+be used in the proof of our results.
+Proposition 2.1. (Gu, [4]) For any symmetric positive deﬁnite matrix M > 0,
+scalar γ > 0 and vector function ω : [0,γ] → R
+n
+such that the integrations
+concerned are well deﬁned, the following inequality holds
+ Z
+γ
+0
+ω(s)ds
+ 
+T
+M
+ Z
+γ
+0
+ω(s)ds
+ 
+≤γ
+ Z
+γ
+0
+ω
+T
+(s)Mω(s)ds
+ 
+Proposition 2.2. ( Matrix Cauchy inequality)For any symmetric possitive def-
+inite matrix M ∈R
+n×n
+and x,y∈R
+n
+, we have
+±2x
+T
+y ≤x
+T
+Mx+y
+T
+M
+−1
+y.
+Proposition 2.3. (Schur complementlemma) Given constant symmetric matri-
+cesX,Y,Z withappropriatedimensionssatisfyingX =X
+T
+,Y =Y
+T
+> 0.Then
+X +Z
+T
+Y
+−1
+Z < 0 if and only if
+ 
+X Z
+T
+Z −Y
+!
+< 0 or
+ 
+−Y Z
+Z
+T
+X
+!
+< 0.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 181Differential Equations and Control Processes, N 4, 2011
+3 Main result
+Let us denoted
+X =T
+−1
+,P =XPX,Q =XQX,R =XRX,S =XSX,Z =XZX,
+G =XGX,U =XUX,
+λ =λ
+min
+(P),
+Λ =λ
+max
+(P)+h
+1
+λ
+max
+(Q)+
+1
+2
+h
+3
+2
+λ
+max
+(R)+
+1
+2
+(h
+2
++h
+1
+)(h
+2
+−h
+1
+)
+2
+λ
+max
+(S),
++d
+1
+λ
+max
+(Z)+
+1
+2
+d
+3
+2
+λ
+max
+(U)+
+1
+2
+(d
+2
++d
+1
+)(d
+2
+−d
+1
+)
+2
+λ
+max
+(G),
+Ξ
+11
+=Q+Z +2αP −e
+−2αh
+2
+R−e
+−2αd
+2
+U +AT +TA
+T
++BY +Y
+T
+B
+T
+,
+Ξ
+12
+=DT +TA
+T
++Y
+T
+B
+T
++e
+−2αh
+2
+R,
+Ξ
+13
+=TA
+T
++Y
+T
+B
+T
+,
+Ξ
+14
+=B
+1
+Y +TA
+T
++Y
+T
+B
+T
++e
+−2αd
+2
+U,
+Ξ
+15
+=TA
+T
++Y
+T
+B
+T
+,
+Ξ
+16
+=TA
+T
++Y
+T
+B
+T
++P −T,
+Ξ
+22
+=DT +TD
+T
+−e
+−2αh
+2
+R−e
+−2αh
+2
+S,
+Ξ
+23
+=e
+−2αh
+2
+S +TD
+T
+,Ξ
+24
+=B
+1
+Y +TD
+T
+,Ξ
+26
+=−T +TD
+T
+,
+Ξ
+33
+=−e
+−2αh
+1
+Q−e
+−2αh
+2
+S,
+Ξ
+44
+=−e
+−2αd
+2
+U −e
+−2αd
+2
+G+B
+1
+Y +Y
+T
+B
+T
+1
+,
+Ξ
+45
+=Y
+T
+B
+T
+1
++e
+−2αd
+2
+G,Ξ
+46
+=Y
+T
+B
+T
+1
+−T,
+Ξ
+55
+=−e
+−2αd
+1
+Z−e
+−2αd
+2
+G,
+Ξ
+66
+=h
+2
+2
+R+d
+2
+2
+U +(h
+2
+−h
+1
+)
+2
+S +(d
+2
+−d
+1
+)
+2
+G−2T,
+Theorem 3.1. Given α > 0. The system (1) is α−exponential stabilization if
+there exists symmetric positive deﬁnite matrices T,P,Q,R,S,Z,U,G and ma-
+trice Y, such that the following LMI holds:
+Ξ =
+
+
+
+
+
+
+
+
+
+
+Ξ
+11
+Ξ
+12
+Ξ
+13
+Ξ
+14
+Ξ
+15
+Ξ
+16
+∗ Ξ
+22
+Ξ
+23
+Ξ
+24
+TD
+T
+Ξ
+26
+∗ ∗ Ξ
+33
+B
+1
+Y 0 −T
+∗ ∗ ∗ Ξ
+44
+Ξ
+45
+Ξ
+46
+∗ ∗ ∗ ∗ Ξ
+55
+−T
+∗ ∗ ∗ ∗ ∗ Ξ
+66
+
+
+
+
+
+
+
+
+
+
+< 0. (3)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 182Differential Equations and Control Processes, N 4, 2011
+The memoryless feedback control is given by
+u(t)=YT
+−1
+x(t), t∈R
++
+and the solution x(t,φ) satisﬁes
+kx(t,φ)k≤
+r
+Λ
+λ
+e
+−αt
+kφk, t∈R
++
+.
+Proof. We consider the following Lyapunov-Krasovskii functional
+V(t,x
+t
+)=
+7
+X
+i=1
+V
+i
+(t,x
+t
+),
+where
+V
+1
+=x
+T
+(t)Px(t), V
+2
+=
+Z
+t
+t−h
+1
+e
+2α(s−t)
+x
+T
+(s)Qx(s)ds,
+V
+3
+=h
+2
+Z
+0
+−h
+2
+Z
+t
+t+s
+e
+2α(τ−t)
+˙ x
+T
+(τ)R˙ x(τ)dτds,
+V
+4
+= (h
+2
+−h
+1
+)
+Z
+−h
+1
+−h
+2
+Z
+t
+t+s
+e
+2α(τ−t)
+˙ x
+T
+(τ)S˙ x(τ)dτds,
+V
+5
+=
+Z
+t
+t−d
+1
+e
+2α(s−t)
+x
+T
+(s)Zx(s)ds,
+V
+6
+=d
+2
+Z
+0
+−d
+2
+Z
+t
+t+s
+e
+2α(τ−t)
+˙ x
+T
+(τ)U˙ x(τ)dτds,
+V
+7
+= (d
+2
+−d
+1
+)
+Z
+−d
+1
+−d
+2
+Z
+t
+t+s
+e
+2α(τ−t)
+˙ x
+T
+(τ)G˙ x(τ)dτds.
+It is easy to check that
+λkx(t)k
+2
+≤V(t,x
+t
+)≤ Λkx
+t
+k
+2
+, t∈R
++
+. (4)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 183Differential Equations and Control Processes, N 4, 2011
+TakingthederivativeofV
+i
+,i = 1,...,7alongthesolutionofsystem(2)wehave
+˙
+V
+1
+= 2x
+T
+(t)P ˙ x(t),
+˙
+V
+2
+=−2αV
+2
++x
+T
+(t)Qx(t)−e
+−2αh
+1
+x
+T
+(t−h
+1
+)Qx(t−h
+1
+),
+˙
+V
+3
+=−2αV
+3
++h
+2
+2
+˙ x
+T
+(t)R˙ x(t)−h
+2
+e
+−2αh
+2
+Z
+t
+t−h
+2
+˙ x
+T
+(s)R˙ x(s)ds,
+˙
+V
+4
+=−2αV
+4
++(h
+2
+−h
+1
+)
+2
+˙ x
+T
+(t)S˙ x(t)−(h
+2
+−h
+1
+)e
+−2αh
+2
+Z
+t−h
+1
+t−h
+2
+˙ x
+T
+(s)S˙ x(s)ds,
+˙
+V
+5
+=−2αV
+5
++x
+T
+(t)Zx(t)−e
+−2αd
+1
+x
+T
+(t−d
+1
+)Zx(t−d
+1
+),
+˙
+V
+6
+=−2αV
+6
++d
+2
+2
+˙ x
+T
+(t)U˙ x(t)−d
+2
+e
+−2αd
+2
+Z
+t
+t−d
+2
+˙ x
+T
+(s)U˙ x(s)ds,
+˙
+V
+7
+=−2αV
+7
++(d
+2
+−d
+1
+)
+2
+˙ x
+T
+(t)G˙ x(t)−(d
+2
+−d
+1
+)e
+−2αd
+2
+Z
+t−d
+1
+t−d
+2
+˙ x
+T
+(s)G˙ x(s)ds.
+(5)
+Applying Proposition 2.1 and the Leibniz - Newton formula, we have
+−h
+2
+Z
+t
+t−h
+2
+˙ x
+T
+(s)R˙ x(s)ds≤−h(t)
+Z
+t
+t−h(t)
+˙ x
+T
+(s)R˙ x(s)ds
+≤−
+ Z
+t
+t−h(t)
+˙ x(s)ds
+ 
+T
+R
+ Z
+t
+t−h(t)
+˙ x(s)ds
+ 
+=−[x(t)−x(t−h(t))]
+T
+R[x(t)−x(t−h(t))]
+=−x
+T
+(t)Rx(t)+2x
+T
+(t)Rx(t−h(t))
+−x
+T
+(t−h(t))Rx(t−h(t))
+(6)
+−d
+2
+Z
+t
+t−d
+2
+˙ x
+T
+(s)U˙ x(s)ds≤−d(t)
+Z
+t
+t−d(t)
+˙ x
+T
+(s)U˙ x(s)ds
+≤−
+ Z
+t
+t−d(t)
+˙ x(s)ds
+ 
+T
+U
+ Z
+t
+t−d(t)
+˙ x(s)ds
+ 
+=−[x(t)−x(t−d(t))]
+T
+U[x(t)−x(t−d(t))]
+=−x
+T
+(t)Ux(t)+2x
+T
+(t)Ux(t−d(t))
+−x
+T
+(t−d(t))Ux(t−d(t))
+(7)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 184Differential Equations and Control Processes, N 4, 2011
+−(h
+2
+−h
+1
+)
+Z
+t−h
+1
+t−h
+2
+˙ x
+T
+(s)S˙ x(s)ds≤−(h(t)−h
+1
+)
+Z
+t−h
+1
+t−h(t)
+˙ x
+T
+(s)S˙ x(s)ds
+≤−
+ Z
+t−h
+1
+t−h(t)
+˙ x(s)ds
+ 
+T
+S
+ Z
+t−h
+1
+t−h(t)
+˙ x(s)ds
+ 
+=−[x(t−h
+1
+)−x(t−h(t))]
+T
+S[x(t−h
+1
+)−x(t−h(t))]
+=−x
+T
+(t−h
+1
+)Sx(t−h
+1
+)+2x
+T
+(t−h
+1
+)Sx(t−h(t))
+−x
+T
+(t−h(t))Sx(t−h(t)),
+(8)
+−(d
+2
+−d
+1
+)
+Z
+t−d
+1
+t−d
+2
+˙ x
+T
+(s)G˙ x(s)ds≤−(d(t)−d
+1
+)
+Z
+t−d
+1
+t−d(t)
+˙ x
+T
+(s)G˙ x(s)ds
+≤−
+ Z
+t−d
+1
+t−d(t)
+˙ x(s)ds
+ 
+T
+G
+ Z
+t−d
+1
+t−d(t)
+˙ x(s)ds
+ 
+=−[x(t−d
+1
+)−x(t−d(t))]
+T
+G[x(t−d
+1
+)−x(t−d(t))]
+=−x
+T
+(t−d
+1
+)Gx(t−d
+1
+)+2x
+T
+(t−d
+1
+)Gx(t−d(t))
+−x
+T
+(t−d(t))Gx(t−d(t)).
+(9)
+Therefor
+˙
+V(t,x
+t
+)+2αV(t,x
+t
+)
+≤x
+T
+(t)[Q+Z +2αP −e
+−2αh
+2
+R−e
+−2αd
+2
+U]x(t)
++ ˙ x
+T
+(t)[h
+2
+2
+R+d
+2
+2
+U +(h
+2
+−h
+1
+)
+2
+S +(d
+2
+−d
+1
+)
+2
+G]˙ x(t)
++x
+T
+(t−h
+1
+)[−e
+−2αh
+1
+Q−e
+−2αh
+2
+S]x(t−h
+1
+)
++x
+T
+(t−h(t))[−e
+−2αh
+2
+R−e
+−2αh
+2
+S]x(t−h(t))
++x
+T
+(t−d
+1
+)[−e
+−2αd
+1
+Z−e
+−2αd
+2
+G]x(t−d
+1
+)
++x
+T
+(t−d(t))[−e
+−2αd
+2
+U −e
+−2αd
+2
+G]x(t−d(t))
++2x
+T
+(t)P ˙ x(t)+2e
+−2αh
+2
+x
+T
+(t)Rx(t−h(t))+2e
+−2αh
+2
+x
+T
+(t−h
+1
+)Sx(t−h(t))
++2e
+−2αd
+2
+x
+T
+(t)Ux(t−d(t))+2e
+−2αd
+2
+x
+T
+(t−d
+1
+)Gx(t−d(t)).
+(10)
+By using the following identity relation
+−˙ x(t)+[A+BK]x(t)+Dx(t−h(t))+B
+1
+Kx(t−d(t))= 0,
+Electronic Journal. http://www.math.spbu.ru/diffjournal 185Differential Equations and Control Processes, N 4, 2011
+we obtain
+2
+ 
+x
+T
+(t)X +x
+T
+(t−h(t))X +x
+T
+(t−h
+1
+)X +x
+T
+(t−d(t))X +x
+T
+(t−d
+1
+)X+
+˙ x
+T
+(t)X
+ 
+×
+ 
+− ˙ x(t)+[A+BK]x(t)+Dx(t−h(t))+B
+1
+Kx(t−d(t))
+ 
+= 0.
+(11)
+Adding the zero item of (11) into (10), we have
+˙
+V(t,x
+t
+)+2αV(t,x
+t
+)≤ξ
+T
+(t)Ωξ(t), (12)
+where
+Ω =
+
+
+
+
+
+
+
+
+
+
+Ω
+11
+Ω
+12
+Ω
+13
+Ω
+14
+Ω
+15
+Ω
+16
+∗ Ω
+22
+Ω
+23
+Ω
+24
+Ω
+25
+Ω
+26
+∗ ∗ Ω
+33
+Ω
+34
+Ω
+35
+Ω
+36
+∗ ∗ ∗ Ω
+44
+Ω
+45
+Ω
+46
+∗ ∗ ∗ ∗ Ω
+55
+Ω
+56
+∗ ∗ ∗ ∗ ∗ Ω
+66
+
+
+
+
+
+
+
+
+
+
+,
+Ω
+11
+=XA+A
+T
+X +XBK +K
+T
+B
+T
+X +Q+Z +2αP −e
+−2αh
+2
+R−e
+−2αd
+2
+U,
+Ω
+12
+=XD+A
+T
+X +K
+T
+B
+T
+X +e
+−2αh
+2
+R,
+Ω
+13
+=A
+T
+X +K
+T
+B
+T
+X,
+Ω
+14
+=XB
+1
+K +A
+T
+X +K
+T
+B
+T
+X +e
+−2αd
+2
+U,
+Ω
+15
+=A
+T
+X +K
+T
+B
+T
+X,
+Ω
+16
+=−X +A
+T
+X +K
+T
+B
+T
+X +P,
+Ω
+22
+=XD+D
+T
+X−e
+−2αh
+2
+R−e
+−2αh
+2
+S,
+Ω
+23
+=e
+−2αh
+2
+S +D
+T
+X,
+Ω
+24
+=XB
+1
+K +D
+T
+X,Ω
+25
+=D
+T
+X,Ω
+26
+=−X +D
+T
+X,
+Ω
+33
+=−e
+−2αh
+1
+Q−e
+−2αh
+2
+S, Ω
+34
+=XB
+1
+K,Ω
+35
+= 0,Ω
+36
+=−X,
+Ω
+44
+=−e
+−2αd
+2
+U −e
+−2αd
+2
+G+XB
+1
+K +K
+T
+B
+T
+1
+X,
+Ω
+45
+=K
+T
+B
+T
+1
+X +e
+−2αd
+2
+G,Ω
+46
+=−X +K
+T
+B
+T
+1
+X,
+Ω
+55
+=−e
+−2αd
+1
+Z−e
+−2αd
+2
+G,Ω
+56
+=−X,
+Ω
+66
+=h
+2
+2
+R+d
+2
+2
+U +(h
+2
+−h
+1
+)
+2
+S +(d
+2
+−d
+1
+)
+2
+G−2X,
+ξ
+T
+(t) =
+h
+x
+T
+(t) x
+T
+(t−h(t)) x
+T
+(t−h
+1
+) x
+T
+(t−d(t)) x
+T
+(t−d
+1
+) ˙ x
+T
+(t)
+i
+.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 186Differential Equations and Control Processes, N 4, 2011
+Pre- and post-multiplying both sides of Ω with
+Θ = diag{T,T,T,T,T,T},
+and using the memoryless feedback control
+u(t)=Kx(t),K =YT
+−1
+,
+we have
+Ξ = ΘΩΘ.
+Note that Ω< 0 if and only if Ξ< 0. Therefor, from condition (3), we obtain
+˙
+V(t,x
+t
+)+2αV(t,x
+t
+)≤ 0. (13)
+Integrating both sides of (13) from 0 to t, we obtain
+V(t,x
+t
+)≤V(0,x
+0
+)e
+−2αt
+, ∀t∈R
++
+.
+Furthermore, taking condition (4) into account, we have
+λkx(t,φ)k
+2
+≤V(t,x
+t
+)≤V(0,x
+0
+)e
+−2αt
+≤ Λe
+−2αt
+kφk
+2
+,
+then the solution x(t,φ) of the system satisfy
+kx(t,φ)k≤
+r
+Λ
+λ
+e
+−αt
+kφk, ∀t≥ 0,
+which implies the closed-loop system is α−exponential stable. This completes
+the proof of the theorem.
+Remark 3.1. Based on the constructing of improved Lyapunov-Krasovskii
+functionalscombinedwithLeibniz-Newton’sformulaandthetechniqueofdeal-
+ing with some integral terms, new delay-dependent suﬃcient conditions for the
+exponential stabilization via memoryless control are established in terms of
+LMIs without introducing any free-weighting matrices. In addition, the time
+varying functions considered in this paper is not necessary differentiable and
+interval time-varying delays in state and control. So, the proposed stabiliza-
+tion criterion is independent of the derivative of time delay which can reduce
+the conservatism. Moreover, our results extend the results of T. Botmart, P.
+Niamsup and V. N. Phat [2].
+Finally, as an application for Theorem 3.1, we give a suﬃcient condition
+for exponential stability of the class system without delayed control input was
+studied in [2].
+Electronic Journal. http://www.math.spbu.ru/diffjournal 187Differential Equations and Control Processes, N 4, 2011
+Considerthecontrollinearsystemwithintervaltime-varyingdelaysinstate
+˙ x(t)=Ax(t)+Dx(t−h(t))+Bu(t),
+x(t)=φ(t), t∈ [−h
+2
+,0].
+(14)
+Where the delay function h(t) satisﬁes
+0≤h
+1
+≤h(t)≤h
+2
+.
+Let us denote
+X =T
+−1
+,P =XPX,Q =XQX,R =XRX,S =XSX,
+λ
+1
+=λ
+min
+(P),
+λ
+2
+=λ
+max
+(P)+h
+1
+λ
+max
+(Q)+
+1
+2
+h
+3
+2
+λ
+max
+(R)+
+1
+2
+(h
+2
++h
+1
+)(h
+2
+−h
+1
+)
+2
+λ
+max
+(S),
+Γ
+11
+=AT +TA
+T
++BY +Y
+T
+B
+T
++Q+2αP −e
+−2αh
+2
+R,
+Γ
+12
+=DT +TA
+T
++Y
+T
+B
+T
++e
+−2αh
+2
+R,
+Γ
+14
+=TA
+T
++Y
+T
+B
+T
++P −T,
+Γ
+22
+=DT +TD
+T
+−e
+−2αh
+2
+R−e
+−2αh
+2
+S,
+Γ
+23
+=e
+−2αh
+2
+S +TD
+T
+,
+Γ
+33
+=−e
+−2αh
+1
+Q−e
+−2αh
+2
+S,
+Γ
+44
+=h
+2
+2
+R+(h
+2
+−h
+1
+)
+2
+S−2T.
+Corollary 3.1. Given α > 0. The system (14) is α−exponential stabilization
+if there exists symmetric positive deﬁnite matrices T,P,Q,R,S and matrice Y,
+such that the following LMI holds:
+
+
+
+
+
+
+Γ
+11
+Γ
+12
+TA
+T
++Y
+T
+B
+T
+Γ
+14
+∗ Γ
+22
+Γ
+23
+−T +TD
+T
+∗ ∗ Γ
+33
+−T
+∗ ∗ ∗ Γ
+44
+
+
+
+
+
+
+< 0 (15)
+The memoryless feedback control is given by
+u(t)=YT
+−1
+x(t), t∈R
++
+and the solution x(t,φ) satisﬁes
+kx(t,φ)k≤
+r
+λ
+2
+λ
+1
+e
+−αt
+kφk, t∈R
++
+.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 188Differential Equations and Control Processes, N 4, 2011
+Proof. We consider the following Lyapunov-Krasovskii functional
+V(t,x
+t
+)=
+4
+X
+i=1
+V
+i
+(t,x
+t
+),
+for the system (14) where
+V
+1
+=x
+T
+(t)Px(t), V
+2
+=
+Z
+t
+t−h
+1
+e
+2α(s−t)
+x
+T
+(s)Qx(s)ds,
+V
+3
+=h
+2
+Z
+0
+−h
+2
+Z
+t
+t+s
+e
+2α(τ−t)
+˙ x
+T
+(τ)R˙ x(τ)dτds,
+V
+4
+= (h
+2
+−h
+1
+)
+Z
+−h
+1
+−h
+2
+Z
+t
+t+s
+e
+2α(τ−t)
+˙ x
+T
+(τ)S˙ x(τ)dτds,
+By the same technique as in theorem 3.1, it is easy to prove this result.
+4 Numerical examples
+In this section, we provide numerical examples to show the effectiveness of our
+result.
+Example 4.1. Consider the linear system with interval nondifferentiable time-
+varying delays in state and control (1), where
+(
+h(t) = 0.1+0.1cos
+2
+t if t∈I =∪
+k≥0
+[2kπ,(2k+1)π]
+h(t) = 0 if t∈R
++
+\I,
+(
+d(t)=β(t), if t∈ [0,1]
+d(t)=β(t−k), if t∈ [k,k+1],k = 1,2,...,
+Electronic Journal. http://www.math.spbu.ru/diffjournal 189Differential Equations and Control Processes, N 4, 2011
+where
+β(t)=
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+t+0.2, t∈[0,0.1]
+−t+0.4, t∈ (0.1,0.2]
+t, t∈ (0.2,0.3]
+−t+0.1, t∈ (0.3,0.4]
+t−0.2, t∈ (0.4,0.5],
+−t+0.8, t∈ (0.5,0.6],
+t−0.4, t∈ (0.6,0.7],
+−t+0.5, t∈ (0.7,0.8],
+t−0.6, t∈ (0.8,0.9],
+−t+0.7, t∈ (0.9,1]
+,
+A =
+"
+0.2 0
+0 −1
+#
+,D =
+"
+−0.5 0
+0.3 0.2
+#
+,B =
+"
+0
+1
+#
+,B
+1
+=
+"
+0.2
+0
+#
+.
+It is worth noting that, the delay functions h(t),d(t) are non-differentiable.
+Therefore, the mothods is used in [8, 19, 20, 21] are not applicable to this
+system. We have
+0.1≤h(t)≤ 0.2,0.2≤d(t)≤ 0.3.
+Given α = 0.1. By using LMI toolbox of Matlab, we can verify that, the LMI
+(3) is satisﬁed with h
+1
+= 0.1,h
+2
+= 0.2,d
+1
+= 0.2,d
+2
+= 0.3 and
+T =
+"
+1.4836 −0.0810
+−0.0810 1.1414
+#
+,P =
+"
+3.8637 −0.3304
+−0.3304 3.5628
+#
+,Q =Z =
+"
+1.0616 0.1174
+0.1174 4.3953
+#
+,
+R =S =U =G =
+"
+635.2305 0
+0 635.2305
+#
+,Y =
+h
+−0.4186 −1.8474
+i
+,
+with a memoryless feedback controller
+u(t)=
+h
+−0.3720 −1.6449
+i
+x(t).
+Thus, the system is 0.1−exponential stabilization and the value
+q
+Λ
+λ
+= 2.8890,
+so the solution of the closed-loop system satisﬁes
+kx(t,φ)k≤ 2.8890e
+−0.1t
+kφk, ∀t≥ 0.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 190Differential Equations and Control Processes, N 4, 2011
+Example 4.2. Consider the linear system with interval nondifferentiable time-
+varying delay in state (14), where
+(
+h(t) = 0.1+0.25sin
+2
+t if t∈I =∪
+k≥0
+[2kπ,(2k+1)π]
+h(t) = 0 if t∈R
++
+\I,
+A =
+"
+−0.2 0.1
+0 1
+#
+, D =
+"
+−0.2 −0.1
+0 0.1
+#
+, B =
+"
+0
+1
+#
+.
+Itisworthnotingthat,thedelayfunctionsh(t)isnon-differentiable. Therefore,
+the mothodsis used in [ 3, 6, 12, 13]arenot applicabletothis system. We have
+0.1≤h(t)≤ 0.35.
+Given α = 0.5. By using LMI toolbox of Matlab, we can verify that, the LMI
+(15) is satisﬁed with h
+1
+= 0.1,h
+2
+= 0.35 and
+T =
+"
+0.7764 −0.0784
+−0.0784 1.3692
+#
+,P =
+"
+1.5968 −0.2093
+−0.2093 2.6627
+#
+,Q =
+"
+0.1767 −0.0962
+−0.0962 1.9114
+#
+,
+R =S =
+"
+82.3741 0
+0 82.3741
+#
+,Y =
+h
+0.2160 −4.0323
+i
+,
+with a memoryless feedback controller
+u(t)=
+h
+−0.0195 −2.9460
+i
+x(t).
+Thus, the system is 0.5−exponentialstabilizationand the value
+q
+λ
+2
+λ
+1
+= 2.3398,
+so the solution of the closed-loop system satisﬁes
+kx(t,φ)k≤ 2.3398e
+−0.5t
+kφk, ∀t≥ 0.
+Givenα = 0.5. Whenh
+1
+= 0.1, the maximumallowablebounds forh
+2
+obtained
+from Corrollary 3.1 of the system is 0.405 and from [2] is 0.3. Therefor, the
+maximumallowableboundsforh
+2
+obtainedfromCorrollary3.1aremuchbetter
+than that obtained in [2]. Moreover, the method is used in [1, 3, 6, 12, 13] are
+not applicable to this system.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 191Differential Equations and Control Processes, N 4, 2011
+5 Conclusions
+In this paper, we have investigated the exponential stabilization via memory-
+less control for a class of linear systems with interval time-varying delays in
+state and control. The interval time-varying delay function is not necessary
+to be differentiable which allows time-delay function to be a fast time-varying
+function. AnewclassofLyapunov-Krasovskiifunctionalisconstructedtoprove
+delay-dependentsuﬃcientconditionsfortheexponentialstabilizationviamem-
+oryless control in terms of LMIs. Numerical examples are given to illustrate
+the effectiveness of the theoretical results.
+Acknowledgements. This work is supported by the National Foundation
+for Science and Technology Development, Vietnam. The author would like to
+thank anonymouns reviewer for valuable comments and suggestions to improve
+the paper.
+References
+[1] I. Amri, D. Soudani and M. Benrejeb, Exponential stability and stabilizaion of linear systems
+with time varying delays, 6th International Multi-Conference on Systems, Signals and Devices,
+(2009), 1-6.
+[2] T. Botmart, P. Niamsup and V.N. Phat, Delay-dependent exponential stabilization for uncer-
+tain linear systems with interval nondifferentiable time-varying delays, Applied Mathematics and
+Computation, To appear.
+[3] W.H.ChenandW.X.Zheng,Onimprovedrobuststabilization ofuncertainsystemswithunknown
+input delay, Automatica, 42 (2006), 1072-1076.
+[4] K. Gu, V.L. Kharitonov and J.Chen, Stability of time-delay system, Boston: Birkhauser; 2003.
+[5] J.K. Hale and S.M. Verduyn Lunee, Introduction to Functional Differential Equations, Springer-
+Verlag, New York, 1993.
+[6] Q.-L. Han, Robust stability for a class of linear systems with time varying delay and nonlinear
+perturbations, Comput. Math. Appl., 47 (2004), 1201-1209.
+[7] Q.-L. Han and K. Gu, Stability of linear systems with time-varying delay: A generalized dis-
+cretized Lyapunov functional approach, Asian J. Control, 3 (2001), 170-180.
+[8] L.V. Hien and H.V. Thi, Exponential stabilization of linear systems with mixed delays in state
+and control, Differential equations and Control processes, 4 (2008), 32-42.
+[9] L.V. Hien and V.N. Phat, Exponential stability and stabilizaion of a class of uncertain linear
+time-delay systems, 6J. Franklin Inst., 346 (2009), 611-625.
+[10] V.L. Kharitonov and D. Hinrichsen, Exponential estimates for time-delay systems, Systems and
+Control Letters, 53 (2004), 395-405.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 192Differential Equations and Control Processes, N 4, 2011
+[11] V.B. Kolmanovskii, S. Niculescu and J. P. Richard, On the Lyapunov-Krasovskii functionals for
+stability analysis of linear delay systems, Int. J. Control, 72 (1999), 374-384.
+[12] O.M. Kwon, and J.H. Park, Delay-range-dependent stabilization of uncertain dynamic systems
+with interval time-varying delays, Appl. Math. Comput., 208 (2009), 58-68.
+[13] X.LiandC.E.deSouza,Delay-Dependent RobustStabilityandStabilization ofUncertainLinear
+Delay Systems: ALinearMatrixInequalityApproach, IEEE Trans. Automat. Control, 42(1997),
+1144-1148.
+[14] H.-Y. Shao, New delay-dependent stability criteria for systems with interval delay, Automatica,
+45 (2009), 744-749.
+[15] M. V. Thuan, Novel expoenetial estimate for nonlinear systems with mixed interval time-varying
+nondifferentiable delays, African Diaspora Journal of Mathematics, 11 (2011), 110-123.
+[16] Y. Wang, L. Xie and C.E. de SOUZA, Robust control of a class of uncertain nonlinear systems,
+Syst. control. Lett. 19 (1992), 139-149.
+[17] D. Wang and W. Wang, Delay-dependent robust exponential stabilization for uncertain systems
+with interval time-varying delays, J. Control Theory Appl., 7(3) (2009), 257-263.
+[18] K.-Y. Yu, C.-H. Lien, Stability criterion for uncertain neutral systems with interval time-varying
+delays, Chaos Solitons Fractals, 38 (2008), 650-657.
+[19] D.Yue, Robust stabilization of uncertain systems with unknown input delay, Automatica, 40
+(2004), 331-336.
+[20] D. Yue and Q.L. Han, Delayed feedback control of uncertain systems with time-varying input
+delay, Automatica, 41 (2005), 233-240.
+[21] X.-M.Zhanga,M.Wua,J.-H.ShecandY.He,Delay-dependentstabilizationoflinearsystemswith
+time-varying state and input delays, Automatica, 41 (2005), 1405-1412.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 193

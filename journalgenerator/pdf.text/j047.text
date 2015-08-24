@@ -1,0 +1,2993 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 3, 1999
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+http://www.imop.csa.ru/ diff
+e-mail: diff@osipenko.stu.neva.ru
+Applications to physics, electrotechnics, and electronics
+NONLINEAR BOUNDARY VALUE PROBLEMS
+DESCRIBING MOBILE CARRIER TRANSPORT IN
+SEMICONDUCTOR DEVICES
+E.Z.Borevich, V.M.Chistyakov
+Abstract.
+The present paper describes mobile carrier transport in semiconductor de-
+vices with constant densities of ionized impurities. For this purpose we use
+one-dimensional system of partial differential equations.The work considers the
+proofs of: global existence of solutions of systems of such kind, their bifurcations
+and their stability under corresponding assumptions.
+Key words: Nonlinear boundary value problem, asymptotic behaviour of
+solutions, semiconductors, carrier transport, constant densities of ionized im-
+purities, interior transition layer phenomena.
+Classiﬁcation: 35Q20, 35D05, 35B40.
+1. Introduction
+ThisarticleintedstoextendthetheoryofL.Recke[1].Inhispaperheconsidersa
+simple mathematical model decribing mobile carrier transport in semiconductorDifferential Equations and Control Processes, N. 3, 1999
+devices.TwofunctionsE(x)andn(x)describleelectricfeldstrengthanddensity
+of mobile electrons and satisty under 0<x< 1 the system
+(D(|E|)(n
+0
++nE))
+0
+= 0, (1)
+E
+0
+=f −n,
+and boudary conditions
+E(0) =E(1) =E
+0
+, D(|E(0)|)(n
+0
+(0)+n(0)E(0)) =j
+0
+. (2)
+Here the constant f > 0 represents a homogeneons density of ionized impu-
+rutues, D(|E|) is the diffusion coeﬃcient, j
+0
+is the electron currien density for
+x = 0. For sake of deﬁniteness we shall presumeE
+0
+> 0. The article [1] proposes
+j
+0
+=D(E
+0
+)E
+0
+f. (3)
+Under such conditions the problem (1)–(3) has a trivial solution E(x) =
+E
+0
+, n(x) = f. If K(E
+0
+) < 0 ( where K(E
+0
+) = 1 +D
+0
+(E
+0
+)E
+0
+D
+−1
+(E
+0
+)) then
+there exists a denumerable set of points f
+k
+(E
+0
+) = −K(E
+0
+)
+−1
+ 
+E
+2
+0
+/4+π
+2
+k
+2
+ 
+,
+k = 1,2,..., in the neighborhood of which appear small bifurcational solutions
+of the problem (1)–(3) [1]. In this paper we prove that the conditionK(E
+0
+)< 0
+implies that the diffusion coeﬃcient D as a function of ﬁeldstrength has N–
+shaped form and contains an interval (E
+1
+,E
+2
+), in which this function has a
+negative derivative andD(E
+0
+)+E
+0
+D
+0
+(E
+0
+)< 0, i.e. so called condition of nega-
+tive differential conductivity (NDC) is valid. In section 1 we prove that NDC–
+condition is necessary and suﬃcient for the existance of bifurcational solutions
+of the problem (1)–(3). Then in section 2 the extendability of all bifurcational
+solutions on the parameterf is demonstrated. The corresponding bifurcational
+problem can be considered as an eigenvalue nonlinear problem; in section 3
+we discuss forms of eigenfunctions of this problem. It appears that asymptotic
+behavior of bifurcational solutions under large values of parameter f depends
+essentially on the parameter E
+0
+. In section 4 we prove that a unique point E
+∗
+0
+exists on the interval (E
+1
+,E
+2
+) such that there arise so called interior transition
+layer phenomena [2,3] in the problem (1)–(3). If E
+0
+∈ (E
+1
+,E
+2
+), but E
+0
+6= E
+∗
+0
+,
+then asymptotic behavior of bifurcational solutions has a completely different
+nature. In section 5 the existence and uniqueness of solutions of nonstationary
+initial–boundaru value problem for (1)–(3 for everyt> 0 is discussed; this the-
+ory is applied to investigate stability and instability of bifurcational solutions.
+It appears that the stability of the ﬁrst (positive ) and the second (negative )
+eigenfunctions depends also on the parameterE
+0
+. In section 6 ti is proved that:
+Electronic Journal.  66Differential Equations and Control Processes, N. 3, 1999
+if E
+0
+= E
+∗
+0
+, then the pair eigenfunctions are stabile; if E
+1
+< E
+0
+< E
+∗
+0
+, then
+only the negative function is stable, and if E
+∗
+0
+< E
+0
+< E
+2
+or vise versa, only
+positive one is stable. Other eigenfunctions are unstabile for any E
+0
+∈ (E
+1
+,E
+2
+)
+for those values of the parameter f for which they exist. In the last section
+7 the existence of parabolic travelling wave for E
+0
+= E
+∗
+0
+and its stability for
+suﬃciently large f are proved.
+2. Existence of bifurcational solutions dependent on the
+parameter E
+0
+The problem(1)–(3) is equivalent to the following boundary value problem
+E
+00
++E
+0
+E =fH(E,E
+0
+), 0<x< 1,
+E(0) =E(1) =E
+0
+,
+(4)
+whereH(E,E
+0
+) =E−E
+0
+D(E
+0
+)D
+−1
+(|E|).Thelastproblemhasatrivialsolution
+E(x) =E
+0
+for any f. Let the diffusion coeﬃcient satisfy the conditions:
+1) D(y)∈C
+(2)
+(R
++
+), D: R
++
+→R
++
+;
+2) D(y) has a unique local maximum and a unique point of inﬂection for
+y> 0;
+3) lim
+y→+∞
+D(y) =D
+0
+> 0.
+Let E(x) = E
+0
++u(x) and g(u) = D(E
+0
+)D
+−1
+(|E
+0
++u|)− 1. The function
+g(u) is continiously differentiable for u6=−E
+0
+and
+0<g
+i
+= sup
+u
+ 
+ 
+ g
+(i)
+(u)
+ 
+ 
+ < +∞, i = 0,1.
+Proposition 2.1 If the inequality f <
+π
+2
+E
+0
+g
+1
+, is valid, then the problem (4)
+has a unique (trivial) solution.
+Let us write the problem (4) in the form
+−u
+00
+−E
+0
+u
+0
++fu−u
+0
+u =E
+0
+fg(u);
+u(0) =u(1) = 0,
+(5)
+and letu be a nontrivial solution of this problem. Multiplying the second equa-
+tion (5) by u(x) and integrating by parts we obtain
+1
+Z
+0
+u
+0
+2
+(x)dx≤E
+0
+fg
+1
+1
+Z
+0
+u
+2
+(x)dx,
+Electronic Journal.  67Differential Equations and Control Processes, N. 3, 1999
+and since
+π
+2
+1
+Z
+0
+u
+2
+(x)dx≤
+1
+Z
+0
+u
+0
+2
+(x)dx, (6)
+then the estimate f ≥
+π
+2
+E
+0
+g
+1
+holds, which gives the proposition 1.1.
+Let C
+(2)
+0
+([0,1]) be the space of functions u(x) which are continious on[0,1],
+have the second continious derivatives on (0,1) and for u(x) the conditions
+u(0) = u(1) = 0 are fulﬁlled; let C([0,1]) be the space of continious functions
+on [0,1]. We shall consider the problem (5) as a nonlinear eigenvalues problem:
+Lu+fK(E
+0
+)u+N(E
+0
+,f,u) = 0;
+u(0) =u(1) = 0,
+(7)
+where Lu = −u
+00
+−E
+0
+u
+0
+is the linear operator mapping from X = C
+(2)
+0
+([0,1])
+into Y =C([0,1]), K(E
+0
+) = 1+D
+0
+(E
+0
+)E
+0
+D
+−1
+(E
+0
+), and N(E
+0
+,f,u) =−u
+0
+u−
+E
+0
+f
+ 
+D(E
+0
+)
+D(|E
+0
++u|)
++
+D
+0
+(E
+0
+)u
+D(E
+0
+)
+−1
+ 
+is the nonlinear one mapping fromR
+2
+×X
+intoY. ByS we denote the closure of the set of all nontrivial solutions (f,u)∈
+R×X to (7) with u6=0, and let S
+k
+be the maximal connected component of S
+containing (f
+k
+,0), ΘΛΞ f
+k
+=−K(E
+0
+)
+−1
+ 
+E
+2
+0
+/4+π
+2
+k
+2
+ 
+, k = 1,2,...
+Theorem 1.1 Suppose K(E
+0
+)< 0. Then the following holds:
+(i) S
+k
+is unbounded;
+(ii) suppose (f,u)∈S
+k
+and u6≡ 0. Then u(x) has exactly (k +1) zeros in
+[0,1], and all zeros are simple;
+(iii) for allk∈N there exist a constants
+k
+> 0, a neighbourhoodU
+k
+⊂R×X
+of (f
+k
+,0) and two C
+1
+-mappings
+ˆ
+f
+k
+: (−s
+k
+,s
+k
+) → R, ˆ u
+k
+: (−s
+k
+,s
+k
+) → X such
+that
+ˆ
+f
+k
+(s) = f
+k
++O(s), ˆ u
+k
+(s) = su
+k
+(x) +O(s
+2
+) for s → 0 and S ∩U
+k
+=
+n
+(
+ˆ
+f
+k
+(s),ˆ u
+k
+(s)): |s|<s
+k
+o
+, where u
+k
+(x) =e
+−E
+0
+x/2
+sin(πkx).
+These solutions are called bifurcational ones [4].
+ItisfairlyevidentthattheconditionK(E
+0
+)< 0isequvalenttothecondition
+of negative differentional conductivity (NDC) (see Introduction).
+Proposition 2.2 ([5]) Let D(|E|) satiafy the NDC. Then there exists a
+unique E
+∗
+0
+such, that
+a) 0<G(E
+min
+)<G(E
+∗
+0
+)<G(E
+max
+), where E
+max
+, E
+min
+– the local extrema
+of function G(E) =ED(E) for E > 0;
+Electronic Journal.  68Differential Equations and Control Processes, N. 3, 1999
+b) the derivative G
+0
+(E
+0
+)< 0 for E
+0
+∈ (E
+max
+,E
+min
+) which is equvalent to the
+condition K(E
+0
+)< 0;
+c) the equation H(E,E
+0
+) = 0 for E
+0
+∈ (E
+max
+,E
+min
+) has only three positive
+solutions 0<E
+1
+(E
+0
+)<E
+0
+<E
+2
+(E
+0
+), moreover H
+0
+E
+(E
+i
+(E
+0
+),E
+0
+)> 0, i = 1,2;
+d)
+E
+Z
+E
+1
+(E
+∗
+0
+)
+H(s,E
+∗
+0
+)ds
+(
+> 0, for E ∈ (E
+1
+(E
+∗
+0
+),E
+2
+(E
+∗
+0
+)),
+= 0, for E =E
+2
+(E
+∗
+0
+).
+Let us analyse for which values of the parameter E
+0
+nontrivial solutions of
+problem (4) exist.
+Proposition 2.3 If 0<E
+0
+≤E
+max
+or E
+0
+≥E
+min
+thenthe problem (4) has
+only trivial solution E(x) =E
+0
+. If E
+0
+∈ (E
+max
+,E
+min
+) then the problem (4) has
+nontrivial (bifurcaational) solutions.
+If E
+0
+∈ (E
+max
+,E
+min
+), then G
+0
+(E
+0
+) < 0, i.e. K(E
+0
+) < 0 and from theorem
+1.1 the problem (4) has nontrivial solution. If 0 < E
+0
+≤ E
+max
+or E
+0
+≥ E
+min
+then K(E
+0
+) ≥ 0. Let us consider the problem (7). Further we prove that if
+K(E
+0
+) ≥ 0 then thia problem has no small nontrivial solutions; from this and
+from Rabinowitz’s results (see theorem 2.3 [6]) it follows that the problem (7)
+can not have any nontrivial solutions. The problem (7) can be linearized in the
+neighbourhood of a zero-solution
+Lu =−fK(E
+0
+)u;
+u(0) =u(1) = 0.
+Since the last form of the problem has only a zero-solution, then the problem
+(7) has no nontrivial solutions .
+3. Extendability of bifurcational solutions on
+parameter f
+We show in this section that every bifurcational solution is extendable on the
+parameter f > f
+k
+, where f
+k
+= −K(E
+0
+)
+−1
+ 
+E
+2
+0
+/4+π
+2
+k
+2
+ 
+, k = 1,2,.... Let us
+prove the following proposition.
+Proposition 3.1 Let E
+0
+∈ (E
+max
+,E
+min
+). Then there exists such a positive
+continius fuiction ϕ(f): R
++
+→ R
++
+, that for any solution (u,f) of the problem
+(7) the inequality:
+kuk
+X
+(f)≤ϕ(f) (8)
+Electronic Journal.  69Differential Equations and Control Processes, N. 3, 1999
+is fulﬁlled.
+Proof. From the form of differential equation and the inequality (6) we
+have an estimate
+ku
+0
+k
+L
+2
+≤π
+−1
+E
+0
+fg
+0
+, (9)
+This estimate gives an analogous estimate in the normC
+0
+([0,1]). The estimate
+of u
+00
+(x) is based on (7) and inequalities (6) and (9). As a result we have
+ku
+00
+k
+L
+2
+≤c
+1
+f
+2
++c
+2
+f
+3
++c
+3
+f
+4
+,
+whereconstantsc
+i
+dependonlyonE
+0
+andg
+0
+.Thesameestimateisvalidforu(x)
+in the norm C
+(1)
+([0,1]). To estimate the uniform norm of u
+00
+(x) the equation
+(7) can be used; it gives the estimate (8).
+Now return to the problem (7). If E
+0
+∈ (E
+max
+,E
+min
+), then form the propo-
+sition
+a) of Theorem 1.1 and proposition 3.1 it follows that the bifurcational so-
+lutions which were obtained in the proposition
+b) of theorem 1.1 are extendable on the parametr f for any f > f
+k
+, k =
+1,2,...
+To synthesize these results we denoteU
++
+k
+to be set ofu(x)∈X, which have
+(k +1) simple zeros and sign
+x→0+0
+u(x) = 1; let U
+−
+k
+=−U
++
+k
+, k∈N.
+Theorem3.1GivenE
+0
+∈ (E
+max
+,E
+min
+). Then for everyk∈N, everyν = +
+or − and for every f > f
+k
+there exists at least one solution u(x) of boundary
+value problem (7) such that u∈U
+ν
+k
+.
+In further text the functionsu
+ν
+k
+(x)∈U
+ν
+k
+will be called eigenfunctions of the
+nonlinear operator of the problem (7).
+4. Forms of eigenfunctions.
+To investigate the forms of these eigenfunctions let the problem (4) be refor-
+mulated as:
+−E
+00
+−E
+0
+E =f(G(E
+0
+)−G(E))D
+−1
+(|E|),
+E(0) =E(1) =E
+0
+.
+(10)
+If E
+0
+∈ (E
+max
+,E
+min
+) and (f,E) is a nontrivial solution of the problem (10)
+the for each x ∈ [0,1] the inequality E
+1
+(E
+0
+) < E(x) < E
+2
+(E
+0
+) is fulﬁlled. In
+Electronic Journal.  70Differential Equations and Control Processes, N. 3, 1999
+this inequality E
+i
+(E
+0
+) (i = 1,2) is the solution of the equation H(E,E
+0
+) = 0,
+which was mentioned in the proposition 2.2, i = 1,2. This result follows from
+the fast that constants E
+0
+, E
+1
+(E
+0
+) and E
+2
+(E
+0
+) are the solutions of differential
+equation (10).
+The solutions E(x) of the problem (10) will be called a positive one if a
+corresponding function u(x) =E(x)−E
+0
+is positive on (0,1).
+Let E(x) be the positive solution of the problem (10). Let us prove that
+E(x) has only one maximum. If it is not so then there exists such x
+0
+∈ (0,1)
+that E(x
+0
+) is a localminimum. However that given
+0≥−E
+00
+(x
+0
+) =f(G(E
+0
+)−G(E(x
+0
+)))D
+−1
+(E(x
+0
+))> 0,
+wich is impossible.
+Theorem 2.1 shows that each solution from S
+k
+has (k + 1) simple zeros
+on[0,1]; similar reasoning gives next result.
+Proposition 4.1 Let E(x) = u(x)+E
+0
+be such a solution of the boudary
+value problem (10) that (f,u)∈S
+k
+, k = 1,2,.... Then:
+a) if k = 2n, then E(x) has n maxima and n minimuma;
+b) if k = 2n+1 then the numbers of minima and maxima differ by 1.
+5. Asymptotic behaviour of the eigenfunctions for large
+values of parameter f
+The case of large concentrations of ionized impurities is of gread interest for
+physical application. Mathematically this fact can be associated with asymp-
+totical behaviour of the eigenfunctions for large values of parameterf. Let the
+problem (4) be formulatrd as:
+εE
+00
++εE
+0
+E =H(E,E
+0
+),
+E(0) =E(1) =E
+0
+,
+(11)
+where ε =f
+−1
+, H(E,E
+0
+) =E−E
+0
+D(E
+0
+)D
+−1
+(|E|).
+Let u
+ν
+k
+(x,f) be the bifurcational solutions of the problem (7), f > f
+k
+,
+k = 1,2,..., ν = +,−. Then E
+ν
+k
+(x,ε) = u
+ν
+k
+(x,ε
+−1
+) +E
+0
+are the solutions of
+the problem (11), which are deﬁned for 0 < ε < ε
+k
+, where ε
+k
+= f
+−1
+k
+. We shall
+call these the eigenfunctions of the problem (11). Let E
+0
+∈ (E
+max
+,E
+min
+) and
+E
+i
+(E
+0
+), i = 1,2 be two positive solutions of the equation H(E,E
+0
+) = 0 from
+theproposition2.2.Themainresultsofthissectionarethenextthreetheorems.
+Electronic Journal.  71Differential Equations and Control Processes, N. 3, 1999
+Theorem 5.1 Given E
+0
+∈ (E
+max
+,E
+∗
+0
+). The problem (11) has families of
+solutions E
+−
+1
+(x,ε), E
+±
+k
+(x,ε),k = 2,3,..., deﬁned for suﬃciently small ε; these
+families have the following properties:
+lim
+ε→0+0
+E
+−
+1
+(x,ε) =E
+1
+(E
+0
+) uniformly for every compact set from (0,1);
+lim
+ε→0+0
+E
+±
+k
+(x,ε) =E
+1
+(E
+0
+) almost everywhere on (0,1).
+Theorem 5.2 Given E
+0
+∈ (E
+∗
+0
+,E
+min
+). The problem (11) has families of
+solutions E
++
+1
+(x,ε), E
+±
+k
+(x,ε), k = 2,3,..., deﬁned for suﬃciently small ε; these
+families have the following properties: lim
+ε→0+0
+E
++
+1
+(x,ε) = E
+2
+(E
+0
+) uniformly for
+every compact set from (0,1);
+lim
+ε→0+0
+E
+±
+k
+(x,ε) =E
+2
+(E
+0
+) almost everywhere on (0,1).
+The asymptotic behaviour of the eigenfunctions of the problem (11) sharply
+changes when E
+0
+= E
+∗
+0
+. In this case the families of solutions have interior
+transition points.
+Deﬁnition 5.1 [2]. Let E(x,ε) be the famili of solutions for the problem
+(10), deﬁned for suﬃciently smallε> 0. Pointx
+0
+∈ (0,1) is called the transition
+point(interior transition one), if for some suﬃciently eni δ> 0 the condition
+lim
+ε→0+0
+E(x,ε) =
+(
+E
+1
+(E
+0
+) uniformlu for 0<x<x
+0
+−δ,
+E
+2
+(E
+0
+) uniformly for x
+0
++δ<x< 1
+is fulﬁlled (or an analogous condition where E
+2
+(E
+0
+) and E
+1
+(E
+0
+) are inserted in
+place of E
+1
+(E
+0
+) and E
+2
+(E
+0
+)).
+Theorem 5.3 states that there exists a family of solutions of the problem
+(11) with an arbitrary large number of transition points of such solutions.
+Theorem 5.3 Given E
+0
+=E
+∗
+0
+. The problem (11) has families of solutions
+E
+±
+k
+(x,ε), k = 1,2,... deﬁned for suﬃciently small ε; moreover every family
+E
+±
+k
+(x,ε) has exactly k−1 transition points on the interval (0,1).
+The proves of these theorems follow from some results of R.O’Malley [7].
+It appears that the asymptotic behaviour of the solutions of the problem (11)
+depends essentially on the properties of such differential equations as
+¨ y +
+√
+ε˙ yy−H(y,E
+0
+) = 0, (12)
+¨ u−H(u,E
+0
+) = 0. (13)
+Proposition 5.1 Given E
+0
+∈ (E
+max
+,E
+∗
+0
+). For suﬃciently small ε > 0
+the differential equation (12) has a solution y(t,ε) such that lim
+t→+∞
+y(t,ε) =
+Electronic Journal.  72Differential Equations and Control Processes, N. 3, 1999
+lim
+t→−∞
+y(t,ε) =E
+1
+(E
+0
+), and
+lim
+ε→0+0
+y(t,ε) =y
+0
+(t), t∈R,
+where y
+0
+(t) is the solution of the equation (13); for this solution
+lim
+t→+∞
+y
+0
+(t) = lim
+t→−∞
+y
+0
+(t) =E
+1
+(E
+0
+).
+Proof.SinceE
+0
+∈ (E
+max
+,E
+∗
+0
+),thenproposition2.2gives
+E
+2
+(E
+0
+)
+Z
+E
+1
+(E
+0
+)
+H(s,E
+0
+)ds<
+0.Thereforefromtheproposition5(seethetheoremfrom[7])itcanbeobtained
+that the equation(13) has a solutiony
+0
+(t) with the properties mentioned above.
+Rewrite for convienience the equation (12) as
+G
+1
+(¨ y, ˙ y,y,ε) = ¨ y +ε˙ yy−H(y,E
+0
+) = 0. (14)
+Substitation y−y
+0
+=v gives
+G
+1
+(¨ y
+0
++ ¨ v, ˙ y
+0
++ ˙ v,y
+0
++v,ε) = ¨ y
+0
++ ¨ v +ε(˙ y
+0
++ ˙ v)(y
+0
++v)−H(y
+0
++v) = 0,
+(15)
+where lim
+|t|→∞
+v(t,ε) = 0.
+Lemma 4.2 [3] states that the left–hand part of (12) deﬁnes on operator
+˜
+G
+1
+(v,ε) fromX×R
+1
+intoY, whereX =H
+2
+∩C
+2
+,Y =H
+0
+∩C
+0
+with the norms
+kvk
+X
+=|v|
+2
++
+
+
+2
+X
+k=0
++∞
+Z
+−∞
+|v
+(k)
+(η)|
+2
+dη
+
+
+1/2
+,kvk
+Y
+=|v|
+0
++
+
+
++∞
+Z
+−∞
+v
+2
+(η)dη
+
+
+1/2
+. Let us
+verify the condition of lemma 3.1 [3]:
+(i) M ≡
+˜
+G
+1
+, m(v,ε)≡v(0),
+˜
+G
+1
+(0,0) = 0, m(0,0) = 0;
+(ii) Φ = ˙ y
+0
+∈X, hΦ
+∗
+,vi =
++∞
+Z
+−∞
+˙ y
+0
+vdη,
+R(M
+1
+(0,0)) ={v∈Y : hΦ
+∗
+,vi = 0}, ΘΛΞ M
+1
+(0,0)w = ¨ w−H
+0
+(y
+0
+)w;
+(iii) hΦ
+∗
+,M
+2
+(0,0;1)i =
++∞
+Z
+−∞
+˙ y
+0
+˙ y
+0
+y
+0
+dη 6= 0;
+(iv) m
+1
+(0,0;Φ) = Φ(0)6= 0.
+Electronic Journal.  73Differential Equations and Control Processes, N. 3, 1999
+From this lemma follows proposition 4.1. The next proposition is proved by
+the same way.
+Proposition 5.2 Given E
+0
+∈ (E
+∗
+0
+,E
+min
+). For suﬃcientlu small ε > 0
+the differential equation (12) has a solution y(t,ε) such that lim
+t→+∞
+y(t,ε) =
+lim
+t→−∞
+y(t,ε) =E
+2
+(E
+0
+), and lim
+ε→0+0
+y(t,ε) =y
+0
+(t), t∈R, where y
+0
+(t) is the solu-
+tion of the equation (13); for this solution lim
+t→+∞
+y
+0
+(t) = lim
+t→−∞
+y
+0
+(t) =E
+2
+(E
+0
+).
+We have on hands the situation where E
+0
+=E
+∗
+0
+.
+Proposition 5.3 Given E
+0
+= E
+∗
+0
+. For suﬃcientlu small ε > 0 the dif-
+feretial equation (12) has the solution y(t,ε) such that lim
+t→+∞
+y(t,ε) = E
+2
+(E
+∗
+0
+),
+lim
+t→−∞
+y(t,ε) = E
+1
+(E
+∗
+0
+) and lim
+ε→0+0
+y(t,ε) = y
+0
+(t), t ∈ R, where y
+0
+(t) is the solu-
+tion of (13), for which lim
+t→+∞
+y
+0
+(t) =E
+2
+(E
+∗
+0
+), lim
+t→−∞
+y
+0
+(t) =E
+1
+(E
+∗
+0
+).
+Proof. We shall use the results of P.Fife [3]. The equation εE
+00
++εE
+0
+E−
+H(E,E
+∗
+0
+) = 0 can be rewritten as F(εE
+00
+,
+√
+εE
+0
+,E,ε) = 0. Substitution t =
+x−c
+√
+ε
+, where c is an arbitrary constant gives
+F(εE
+00
+,
+√
+εE
+0
+,E,ε)≡G(¨ y, ˙ y,y,ε) = ¨ y +
+√
+ε˙ yy−H(y,E
+∗
+0
+) = 0. (16)
+The function y
+0
+(t) =y(t,0) satisﬁes the equation
+G(¨ y
+0
+, ˙ y
+0
+,y
+0
+,0) = ¨ y
+0
+−H(y,E
+∗
+0
+) = 0. (17)
+The properties c) and d) of proposition 2.2 are equvalent to the fast that the
+equation (17) has the solutiony
+0
+(t) satisfying the conditionsy
+0
+(−∞) =E
+1
+(E
+∗
+0
+),
+y
+0
+(+∞) =E
+2
+(E
+∗
+0
+).Itappearsthattheconditionsc)andd)fromproposition2.2
+are suﬃcient for the existence of the solution y(t,ε) of the equation (16). This
+solution is deﬁned for suﬃciently small ε > 0 and has properties y(−∞,ε) =
+E
+1
+(E
+∗
+0
+), y(+∞,ε) = E
+2
+(E
+∗
+0
+). This fact can be obtained from the following
+cpecisl case of theorem 5.1 [3].
+Proposition 5.4 ([3]) The conditions
+1) H
+0
+E
+(E
+i
+(E
+∗
+0
+),E
+∗
+0
+)> 0, i = 1,2;
+2)
+E
+Z
+E
+1
+(E
+∗
+0
+)
+H(s,E
+∗
+0
+)ds
+(
+> 0, for E ∈ (E
+1
+(E
+∗
+0
+),E
+2
+(E
+∗
+0
+)),
+= 0, for E =E
+2
+(E
+∗
+0
+)
+are suﬃcient for the existence of the family of solutionsy(t,ε) of the differental
+equation (16); these solutions are deﬁned for t ∈ R and for suﬃcientlu small
+Electronic Journal.  74Differential Equations and Control Processes, N. 3, 1999
+ε> 0 and are uniformly continious on ε ; for them the properties y(−∞,ε) =
+E
+1
+(E
+∗
+0
+), y(+∞,ε) =E
+2
+(E
+∗
+0
+) are fulﬁlled.
+Let us return to the proof of 5.1. It is raiher easy to prove that the rest point
+(E
+0
+,0) is a stable focus for suﬃciently small ε> 0. By C
+ε
+we detnote a closed
+loop which circles the point (E
+0
+,0), coming out from the point (E
+1
+(E
+0
+),0) and
+returningt
+0
+it. Then there exists the trajectoryy(t,ε) within the domain which
+is formed by the loop C
+ε
+; this trajectory has properties: ω(y(t,ε)) = (E
+0
+,0),
+α(y(t,ε)) =C
+ε
+, where α(y) and ω(y) are α–limit set and ω–limit set of y(t,ε)
+[8]. Consider an arbitrary solution E(x,ε) of the problem (11). The function
+y(t,ε) is a solution for the boundary value problem
+¨ y +
+√
+ε˙ yy−H(y,E
+0
+) = 0,
+y(0) =E
+0
+, y
+ 
+−
+1
+√
+ε
+ 
+=E
+0
+(18)
+Sinceα(y(t,ε)) =C
+ε
+⊃ (E
+1
+(E
+0
+),0) and the point (E
+1
+(E
+0
+),0) is a unique saddle
+point with a separatrix C
+ε
+then theorem 5.1 can be obtained by the reasoning
+used in the 5–th proposition of R.’Malley’s theorem [7]. Proof of theorem 5.2
+completely repeats that of theorem 5.1.
+The closed loop C
+ε
+is an α-limit set for any solution of the problem (18).
+When E
+0
+=E
+∗
+0
+C
+ε
+has two saddle points (E
+1
+(E
+∗
+0
+),0) and (E
+2
+(E
+∗
+0
+),0), this fact
+and the 4-th proposition of ’Malley’s theorem [7] give theorem 5.3.
+6. Nonstationary initial-boundary value problem. Exis-
+tence and uniqueness of solutions for t> 0
+It is easy to prove that the problem (4) is a stationary problem for the following
+nonstationary problem [8]:
+D(|E|)
+−1
+∂E
+∂t
+=
+∂
+2
+E
+∂x
+2
++
+∂E
+∂x
+E−fH(E,E
+0
+),
+E(0,t) =E(1,t) =E
+0
+,
+E(x,0) =
+˜
+E(x).
+(19)
+The problem (19) is equvalent to the following boundary value problem
+D(|u+E
+0
+|)
+−1
+∂u
+∂t
+=
+∂
+2
+u
+∂x
+2
++E
+0
+∂u
+∂x
++
+∂u
+∂x
+u−fh(u,E
+0
+),
+u(0,t) =u(1,t) = 0,
+u(x,0) =u
+0
+(x),
+(20)
+Electronic Journal.  75Differential Equations and Control Processes, N. 3, 1999
+where h(u,E
+0
+) =H(u+E
+0
+,E
+0
+), u
+0
+(x) =
+˜
+E(x)−E
+0
+.
+Consider the spaceX =L
+2
+(0,1) and the operatorA =−
+d
+2
+dx
+2
+−−E
+0
+d
+dx
+with
+the domain of deﬁnition D(A) = H
+2
+(0,1)∩H
+1
+0
+(0,1) Υ D(A
+1/2
+) = = X
+1/2
+=
+H
+1
+0
+(0,1). It is to prove that for the operator F : H
+1
+0
+(0,1) → L
+2
+(0,1), which
+deﬁned by the formyla
+F(ϕ)(x) =ϕ(x)ϕ
+0
+(x)−fh(ϕ(x),E
+0
+), 0<x< 1,
+the conditions of theorems 3.3.3 and 3.3.4 [8] are fulﬁlled. To this end it is
+suﬃciently to prove that
+1)kF(ϕ)k
+L
+2
+≤ckϕk
+2
+H
+1
+0
+, i.e.F maps bounded subsetsH
+1
+0
+(0,1) into bounded
+subsets L
+2
+(0,1);
+2) F is Lipschitzian locally.
+Using the theorems 3.3.3 and 3.3.4 [8] we can formulate the following propo-
+sition.
+Proposition 6.1 A unique solution u(x,t) of Cauchi problem (20) exists
+on some maximal interval 0≤t≤
+¯
+t.Moreover this solution exists for any initial
+condition and either
+¯
+t = +∞ or ku(x,t)k
+H
+1
+0
+→ +∞ for t→
+¯
+t.
+To prove the following proposition we need the theorem 3.5.2. [8] on a
+smoothing differential operator.
+Proposition 6.2 The solution u(x,t) of the nonstationary problem (20) is
+a classical solution.
+Proof. u(t;u
+0
+) ∈ D(A) for t > 0. The function t 7→
+du
+dt
+∈ ∈ H
+1
+0
+(0,1) is
+G¨ olderian locally (see the theorem 3.5.2 [8]). There fore the function
+(x,t)7→u(x,t;u
+0
+),
+∂u
+∂t
+(x,t;u
+0
+)
+are continions for t
+0
+< t <
+¯
+t and x ∈ [0,1]. Since u ∈ D(A), then u
+0
+∈
+W
+1
+2
+(0,1) ⊂ C(0,1). There exists some δ > 0 that F(u) ∈ C
+δ
+(0,1) u(·,t) ∈
+C
+2+δ
+(0,1). Thus, when t > 0 the function (x,t) 7→ u(x,t;u
+0
+) is continiously
+differentiable by t and twice continiouslu differentiable by x; therefore it is a
+classical solution of the (20).
+The main item of this section is the following proposition which based on
+the concept of the dynamical system for parabolic equations [8].
+Proposition 6.3 The nonstationary problem (20) deﬁnes the dynamical
+Electronic Journal.  76Differential Equations and Control Processes, N. 3, 1999
+system in the set C =
+(
+u ∈ H
+1
+0
+(0,1)
+ 
+ 
+ 
+ 
+σ
+1
+(E
+0
+) ≤ u(x) ≤ σ
+2
+(E
+0
+) almost every-
+where on [0,1]
+)
+, where σ
+i
+(E
+0
+) =E
+i
+(E
+0
+)−E
+0
+, i = 1,2.
+Proof. First consider the fact that the solution u(x,t) of the problem (20)
+with the initial condition u
+0
+∈ C can not leave the set C on the interval of
+its existence. For this we use a version of the maximum principle. Let t
+1
+be a
+minimal value t
+1
+∈ (0,
+¯
+t), so that the solution u(x,t
+1
+) of the problem (20) has
+a local maximum. σ = u(x
+1
+,t
+1
+), where x
+1
+∈ (0,1) and σ > σ
+2
+(E
+0
+) > 0, i.e.
+∂u
+∂x
+(x
+1
+,t
+1
+) = 0,
+∂
+2
+u
+∂x
+2
+(x
+1
+,t
+1
+) ≤ 0. Then from the differential equation (20) we
+obtain that since (−h(σ,E
+0
+))< 0 then ˙ u(x
+1
+,t
+1
+)< 0.
+Furthermore, the solution u(x,t) of the problem (20) can not have a local
+minimum, which value is less thanσ
+1
+(E
+0
+)< 0 ( a proof is quite similar). Prove
+that the solution of (20) exists for anyt≥ 0. Let it be not so. Then proposition
+6.1 gives that
+1
+Z
+0
+u
+0
+2
+(x,t)dx is unbounded for t →
+¯
+t. Multiplying the equation
+(20) by u and integrating its parts on [0,1] gives
+1
+Z
+0
+˙ uu
+D(|u+E
+0
+|)
+dx =−
+1
+Z
+0
+u
+0
+2
+dx−f
+1
+Z
+0
+h(u,E
+0
+)udx.
+But
+
+
+−f
+1
+Z
+0
+h(u,E
+0
+)udx
+
+
+isuniformlyboundedfort;then
+1
+Z
+0
+˙ uu
+D(|u+E
+0
+|)
+dx→
+−∞fort→
+¯
+t.ButthelatterstatementisimpossiblebecauseGronuolloinequal-
+ity ˙ ϕ≤−c
+1
+ϕ+c
+2
+(c
+i
+> 0, i = 1,2) is valid for function ϕ(t) =
+1
+Z
+0
+g(u(x,t))dx,
+where g(u) =
+u
+Z
+0
+sD
+−1
+(|s+E
+0
+|)ds.
+Electronic Journal.  77Differential Equations and Control Processes, N. 3, 1999
+7. Stability and instability of eigenfunctions
+This section deals with stability of solutions for the stationary problem (4)
+by the linear approximetion. For this aim we need two theorems ( 5.1.1 and
+5.1.3) from [8], which give suﬃcient conditions of stability and instability of
+such solutions. Let E
+ν
+k
+(x,ε) be the solutions of the problem (11) from section
+4 deﬁned for suﬃcienly small ε, ν = +,−; k = 1,2,... Two following theorems
+form the main subject of this section.
+Theorem 7.1
+1) If E
+max
+< E
+0
+< E
+∗
+0
+, then the solution E
+−
+1
+(x,ε) of the problem (11) is
+stable for suﬃciently small ε;
+2) if E
+∗
+0
+< E
+0
+< E
+min
+, then the solution E
++
+1
+(x,ε) of the problem (11) is
+stable for suﬃciently small ε;
+3) if E
+0
+= E
+∗
+0
+, then both solutions E
+±
+1
+(x,ε) of the problem (11) are stable
+for suﬃciently small ε;
+Theorem 7.2 The solution E
+±
+k
+(x,ε) are unstable for E
+±
+k
+(x,ε), for every
+E
+0
+∈ (E
+max
+,E
+min
+) and for each k = 2,3,....
+Remark. Theorem 7.1 states thates that the solutions are stable only for
+suﬃciently small ε > 0. Apparently this fact is assignable; it is quite possible
+that the solutions E
+±
+1
+(x,ε) can be unstable when ε is not small.
+Proves of Theorems 6.1 and 6.2 must be preceeded by rather spacious
+preambula. First discuss the case where E
+max
+<E
+0
+<E
+∗
+0
+. For such E
+0
+E
+2
+(E
+0
+)
+Z
+E
+1
+(E
+0
+)
+H(s,E
+0
+)ds< 0
+and the problem
+ˆ z
+00
+0
+=H(E
+1
+(E
+0
+)+ ˆ z
+0
+,E
+0
+),
+ˆ z
+0
+(0) =E
+0
+−E
+1
+(E
+0
+), ˆ z
+0
+(+∞) = 0
+(21)
+has a unique solution ˆ z
+0
+(t) which is a strong monotonous function [7]. Letζ(y)
+is a cut-off function from C
+∞
+-class and the conditions 0 ≤ ζ ≤ 1, ζ ≡ 1 for
+0≤y ≤ 1/4, ζ ≡ 0 for y ≥
+1
+2
+, are fulﬁlled for it. Let z
+0
+(x,ε) = ˆ z
+0
+ 
+x
+√
+ε
+ 
+ζ(x),
+z
+1
+(x,ε) = ˆ z
+0
+ 
+1−x
+√
+ε
+ 
+ζ(1−x), 0≤x≤ 1. Consider the function
+U
+0
+(x,ε) =E
+1
+(E
+0
+)+z
+0
+(x,ε)+z
+1
+(x,ε).
+Electronic Journal.  78Differential Equations and Control Processes, N. 3, 1999
+This function (see theorem 5.1) is a ﬁrst approximation on ε for E
+−
+1
+(x,ε).
+When E
+∗
+0
+<E
+0
+<E
+max
+the function U
+0
+(x,ε) can be formed quite analogically(
+E
+2
+(E
+0
+) stands in the place of E
+1
+(E
+0
+)) and it is a ﬁrst approximation on ε for
+E
++
+1
+(x,ε).
+We have on hands the case E
+0
+= E
+∗
+0
+. So as
+E
+2
+(E
+∗
+0
+)
+Z
+E
+1
+(E
+∗
+0
+)
+H(s,E
+∗
+0
+)ds = 0 only for
+this condition each of the problems
+ˆ z
+00
+0
+=H(E
+i
+(E
+∗
+0
+)+ ˆ z
+0
+,E
+∗
+0
+),
+ˆ z
+0
+(0) =E
+∗
+0
+−E
+i
+(E
+∗
+0
+), ˆ z
+0
+(+∞) = 0, i = 1,2
+has a unique solution ˆ z
+(i)
+0
+(t) (i = 1,2) which is a stroug monotonous [7]. Let
+z
+(i)
+0
+(x,ε) = ˆ z
+(i)
+0
+ 
+x
+√
+ε
+ 
+ζ(x) and ˆ z
+(i)
+1
+(t) is the unique strong monotonous solution
+of the problem
+ˆ z
+00
+1
+=H(E
+i
+(E
+∗
+0
+)+ ˆ z
+1
+,E
+∗
+0
+),
+ˆ z
+1
+(0) =E
+∗
+0
+−E
+i
+(E
+∗
+0
+), ˆ z
+1
+(+∞) = 0, i = 1,2
+Let z
+(i)
+1
+(x,ε) = ˆ z
+(i)
+1
+ 
+1−x
+√
+ε
+ 
+ζ(1 − x), 0 ≤ x ≤ 1. Consider the function
+U
+(i)
+0
+(x,ε) = E
+i
+(E
+∗
+0
+) +z
+(i)
+0
+(x,ε) +z
+(i)
+1
+(x,ε), i = 1,2. Theorem4.1 states that
+they are the ﬁrst approximation on ε for the solutions E
+±
+1
+(x,ε) of the problem
+(11). For ε> 0 and u∈C
+(2)
+0
+the norm
+|u|
+(ε)
+2
+=|u|
+0
++
+√
+ε|u
+0
+|
+0
++ε|u
+00
+|
+0
+can be introduced, where |·|
+0
+is a norm in C
+(0)
+; let the corresponding Banach
+space be denoted byC
+(2)
+0,ε
+. The linear operator mapping fromC
+(2)
+0,ε
+intoC
+(0)
+can
+be constructed:
+L
+ε
+u =εu
+00
++εU
+0
+0
+u+εU
+0
+u
+0
+−H
+0
+(U
+0
+,E
+0
+)u,
+(the function U
+0
+(x,ε) is constructed according to the value of E
+0
+by means
+which where used above). The linear operators
+L
+(i)
+ε
+u =εu
+00
++εU
+(i)
+0
+0
+u+εU
+(i)
+0
+u
+0
+−H
+0
+(U
+(i)
+0
+,E
+∗
+0
+)u, (i = 1,2)areformedsimilarly.
+Lemma 71.. Operators L
+(i)
+ε
+, i = 1,2 and L
+ε
+have inverse ones, which are
+uniformly bounded on ε for suﬃciently small ε> 0.
+Electronic Journal.  79Differential Equations and Control Processes, N. 3, 1999
+Proof. For the proof it is suﬃcient to show that there exists a constant c
+independent of ε, shuch that for any continuous function F with |F|
+0
+≤ 1 and
+for any suﬃciently small ε> 0 there exists solution u
+ε
+for
+L
+ε
+u
+ε
+=F(x), 0≤x≤ 1,
+u
+ε
+(0) =u
+ε
+(1) = 0,
+(22)
+satisfying |u
+ε
+|
+(ε)
+2
+≤ c. This can be done by constructing supersolutions u
+ε
+and
+subsolutions u
+ε
+. For this supersolution the conditions L
+ε
+u
+ε
+≤ F, u
+ε
+≥ 0,
+u
+ε
+(1) ≥ 0 must be valid by deﬁnition. The opposite inequalities must be valid
+for the subsolution. If the positive supersolution can be constructed, then we
+merely take |u
+ε
+|
+0
+≤ |u
+ε
+|
+0
+. By a theorem of Nagumo [9], there exists an ex-
+act solution (22) with |u
+ε
+|
+(ε)
+2
+≤ const|u
+ε
+|
+0
+. This inequality and equation (22)
+together with interpolation inequality relating |u
+00
+|
+0
+, |u
+0
+|
+0
+and |u|
+0
+given that
+|u
+ε
+|
+2
+≤const|u
+ε
+|
+0
+. The positive supersolution u
+ε
+with |u
+ε
+|
+0
+uniformly bounded
+on ε can be constructed like that in the Lemma 2.1 [2].
+Proof of theorem 7.1. For deﬁniteness we shall presume that E
+max
+<
+E
+0
+< E
+∗
+0
+and prove stability of solution E
+−
+1
+(x,ε) = E
+−
+1
+(x,f
+−1
+) =
+˜
+E
+−
+1
+(x,f).
+Consider the followig boudary value problem
+v
+00
+0
++
+˜
+E
+−
+1
+0
+v
+0
++
+˜
+E
+−
+1
+v
+0
+0
+−fH
+0
+(
+˜
+E
+−
+1
+,E
+0
+)v
+0
++α
+0
+v
+0
+= 0,
+v
+0
+(0) =v
+0
+(1) = 0,
+where v
+0
+is the ﬁrst positive eigenfunction of the linear operator L
+f
+u = u
+00
++
+˜
+E
+−
+1
+0
+u +
+˜
+E
+−
+1
+u
+0
+−fH
+0
+(
+˜
+E
+−
+1
+,E
+0
+)u. It is easy to show that the spectrum of the L
+f
+operator is real. Theorem 5.1.1 [8] states that, ifα
+0
+> 0 then solution
+˜
+E
+−
+1
+(x,f)
+is stable. Consider the problem
+ψ
+00
++
+˜
+E
+−
+1
+0
+ψ +
+˜
+E
+−
+1
+ψ
+0
+−fH
+0
+(
+˜
+E
+−
+1
+,E
+0
+)ψ = 0. (23)
+From 7.1 it followes that for suﬃciently largef the problem(23) has only trivial
+solution. Theorem of Nagumo [9] states thatα
+0
+> 0 in fast, suppose thatα
+0
+< 0
+than we haveL
+f
+v
+0
+≥L
+f
+ψ = 0. Hencev
+0
+≤ψ(x)≡ 0 which is impossible. Cases
+when E
+∗
+0
+<E
+0
+<E
+min
+and E
+0
+=E
+∗
+0
+can be prove similarly.
+Proof of the theorem 7.2. We use here the following proposition.
+Proposition 7.1 ([8]) it Let the function ϕ(x), ψ(x) ∈ C
+2
+satisfy the
+conditions ϕ(0) = ψ(0) = 0, ϕ
+0
+(0) = ψ
+0
+(0) = 1, ϕ
+00
++ b(x)ϕ
+0
++ +a(x)ϕ >
+ψ
+00
++b(x)ψ
+0
++a(x)ψ for 0 < x < x
+1
+and ψ(x) > 0 for 0 < x < x
+1
+. Then it
+follows ϕ(x)>ψ(x) for 0<x≤x
+1
+.
+Electronic Journal.  80Differential Equations and Control Processes, N. 3, 1999
+Let ϕ
+±
+k
+(x,f) = E
+±
+k
+0
+(x,f
+−1
+) =
+˜
+E
+±
+k
+0
+(x,f), k = 2,3,... If ψ(x) is the solution
+of this problem
+ψ
+00
++
+˜
+E
+ν
+k
+0
+ψ +
+˜
+E
+ν
+k
+ψ
+0
+−fH
+0
+(
+˜
+E
+ν
+k
+,E
+0
+)ψ = 0,
+ψ(0) = 0, ψ
+0
+(0) = 1,
+ν = +,−, k≥ 2 then
+ψ(x)ϕ
+ν
+k
+0
+(x)−ψ
+0
+(x)ϕ
+ν
+k
+(x) =ce
+−
+x
+R
+0
+˜
+E
+ν
+k
+(s)ds
+,
+wherec = const. So far asϕ
+ν
+k
+(0)> 0, thenc< 0. Hencex∈ [0,1] ψ(x)ϕ
+ν
+k
+0
+(x)−
+ψ
+0
+(x)ϕ
+ν
+k
+(x) < 0. Let x
+0
+be the minimum point of the function
+˜
+E
+ν
+k
+(x). Conse-
+quentlyψ(x
+0
+)ϕ
+ν
+k
+0
+(x
+0
+)< 0 becauseϕ
+ν
+k
+(x
+0
+) = 0,ϕ
+ν
+k
+0
+(x
+0
+)> 0. Therefore,ψ(x
+0
+)< 0
+and ψ(x) has negative values on [0,1]. Consider the following problem
+v
+00
+0
++
+˜
+E
+ν
+k
+0
+v
+0
++
+˜
+E
+ν
+k
+v
+0
+0
+−fH(
+˜
+E
+ν
+k
+,E
+0
+)v
+0
++α
+0
+v
+0
+= 0,
+v
+0
+(0) =v
+0
+(1) = 0,
+where v
+0
+is the ﬁrst positive eigenfunction of the linear operator L
+f
+u = u
+00
++
+˜
+E
+ν
+k
+0
+u+
+˜
+E
+ν
+k
+u
+0
+−fH
+0
+(
+˜
+E
+ν
+k
+,E
+0
+)u. Suppose that v
+0
+0
+(0) = 1. Theorem 5.1.3 [8] states
+that if α
+0
+< 0, then the solution
+˜
+E
+ν
+k
+(x,f) is unstabile. In fact, let α
+0
+> 0,
+then proposition 7.1 it follows that v
+0
+(x) < ψ(x) for every x ∈ [0,1] because
+L
+f
+v
+0
+<L
+f
+ψ. This is impossible.
+8. A parabolic traveling wave. Stability of the traveling
+wave
+Consider the parabolic equation of the problem (19) for E
+0
+=E
+∗
+0
+D(|E|)
+−1
+∂E
+∂t
+=
+∂
+2
+E
+∂x
+2
++
+∂E
+∂x
+E−fH(E,E
+∗
+0
+), x∈R, t> 0. (24)
+It is easy to show that, if ϕ(s) is solution of the equation
+ϕ
+00
++
+ 
+ϕ−
+V
+D(|ϕ|)
+ 
+ϕ
+0
+=fH(ϕ,E
+∗
+0
+), s∈R, (25)
+than E(x,t) =ϕ(x+Vt) is a traveling wave (V =const). We shall prove that
+for suﬃciently large f, there exists a solution of (25) such that ϕ(s)→E
+1
+(E
+∗
+0
+)
+Electronic Journal.  81Differential Equations and Control Processes, N. 3, 1999
+for s → −∞, ϕ(s) → E
+2
+(E
+∗
+0
+) for s → +∞. Divide f the equation (25) , let
+ε =f
+−1
+and suppose τ =
+s
+√
+ε
+. Then we have
+¨ y +
+√
+ε
+ 
+y−
+V
+D(|y|)
+ 
+˙ y =H(y,E
+∗
+0
+). (26)
+Theorem 4.1 [3] states that for suﬃciently small ε the equition (26) has a
+solution y(τ,ε) such that y(τ,ε)→E
+1
+(E
+∗
+0
+) for τ →−∞, y(τ,ε)→E
+2
+(E
+∗
+0
+) for
+τ → +∞. The folloving interesting result [8] states the stability of parabolic
+traveling wave. Suppose that there exists a solution ϕ(x)
+ϕ
+00
+(x)+f (ϕ(x),ϕ
+0
+(x)) = 0, x∈R,
+shuch that ϕ(x) → α for x → −∞, ϕ(x) → β for x → +∞ f(u,p) ∈ C
+1
+and
+f(α,0) =f(β,0) = 0. The linearized problem of ϕ is
+−Lv =v
+00
++a(x)v
+0
++b(x)v,
+where a(x) =
+∂f
+∂p
+(ϕ(x),ϕ
+0
+(x)), b(x) =
+∂f
+∂u
+(ϕ(x),ϕ
+0
+(x)). Let a
+±
+, b
+±
+be the
+limits of these functions for x→±∞. Denote by σ
+e
+(L) the essential spectrum
+of operator L [8].
+Proposition8.1([8]) The essential spectrumσ
+e
+(L) lies in right semiplane
+if and only ifb
++
+< 0 andb
+−
+< 0, i.e. where the solutionϕ(x) connects two saddle
+points.
+Proposition8.2([8]) If the solutionϕ(x) connects two saddle points, then
+the solution ϕ(x) is stabile.
+Since E
+1
+(E
+∗
+0
+), E
+2
+(E
+∗
+0
+) are saddle points, then proposition 8.1 and proposi-
+tion 8.2 state that for suﬃciently small ε the solution y(τ,ε) of the equation
+(26) connects two saddle points. The exercise 6 in§ 5.1 [8] gives the result that
+the solutionE(x,t) expotentially approximatesϕ by norm inϕ Δ Ωff¬Ξ ﬁff ΩΔ 
+W
+1
+p
+(R), p ≥ 1. It means that for every solution E(x,t), such that the norm
+kE(·,0)−ϕk in W
+1
+p
+(R), p ≥ 1 is suﬃciently small, there exists a real c for
+whichkE(·,t)−ϕ(·+c+Vt)k =O
+ 
+e
+−βt
+ 
+,t> 0,β > 0. Finally, we obtain the
+stability of the parabolic traveling wave for suﬃciently largef and for arbitrary
+velocity V.
+Electronic Journal.  82Differential Equations and Control Processes, N. 3, 1999
+References
+1. Recke L. An Example for Bifurcation of Solutions of the Basic Equations
+for Carrier Distributions in Semiconductors. Z. Angew. Math. Mech. 67, 1987,
+p.269-271.
+2. Fife P. Boundary and Interior Transition Layer Phenomena for Pairs of
+Second–OrderDifferentialEquations.J.Math.Anal.Appl.,54,1976,p.497-521.
+3. Fife P. Transition Layers in Singular Perturbation Problems. J. Diff. Eq.
+15, 1974, p.77-105.
+4. Crandall M. G., Rabinowitz P.H. Bifurcation from simple eigenvalues. J.
+Funct. Anal. 8, 1971, p.321-340.
+5. Bonch-Bruevich V.L. Domennaja elektricheskaja neustojchivost’ v polu-
+provodnikakh. Nauka,1972.
+6. Rabinowitz P.H. Some global results for nonlinear eigenvalue problems.
+J. Funct. Anal. 7, 1971, p.487-513.
+7. O’Malley R.J. Phase-plane solutions to some perturbation problems. J.
+Math. Anal. Appl. 54, 1976, p.449-466.
+8. Henry D. Geometric theory of semilinear parabolic equations. Springer-
+Verlag, 1981.
+9. Chang K.W., Howes F.A. Nonlinear singular perturbation phenomena.
+Theory and Applications. Springer-Verlag, 1984.
+Electronic Journal.  83

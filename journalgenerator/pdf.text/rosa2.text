@@ -1,0 +1,1166 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 4, 2005
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Ordinary differential equations
+METHODS AND APPLICATIONS TO DISPLAY
+QUATERNION JULIA SETS
+Alessandro Rosa
+Freelance programmer
+c/o Locatelli,
+Via Cappuccini 116/A,
+I-72100 Brindisi, Italy
+e-mail: zandor zz@yahoo.it
+Abstract
+After explaining the details of an eﬃcient technique, developed in early
+1980s, to plot digital images of quaternion ﬁlled-in Julia sets, later considera-
+tions on it will introduce a new modiﬁcation for displaying such sets with no
+interior too. A step by step description via pseudo-C++ is given. The reader is
+assumed to be familiar with advanced programming and quaternion calculus.
+1 History
+In the turn of 1970s and 1980s, consequently to the worldwide revival of inter-
+ests in the theory of holomorphic dynamics
+1
+, digital imaging started to play a
+relevant role in this ﬁeld thanks to the detailed pictures offered; more widely
+1
+This term gathers the iterations of functions in one and in several complex variables.Differential Equations and Control Processes, N 4, 2005
+speaking, this same impulse contributed to deﬁnitely show how computers can
+be regarded as essential to aid experimental mathematics so that, besides the
+developments in the related analysis, rendering methods were produced for
+highly detailed images of these Julia sets.
+Achievements ﬁrst stepped inC. Not
+Filled-in Julia set
+Basin to ∞
+Figure 1.1: The typical topological conﬁg-
+uration for a ﬁlled-in Julia set.
+casually: this was the original numerical
+ﬁeld where local holomorphic dynamics
+arose during 1870-80s with Schr¨ oder and
+Koenigs. During 1910-20s, global results
+came from the pioneering works by Fa-
+tou and Julia. Along few developments
+over later decades, holomorphic dynam-
+ics ﬁnally reached 1980s when, on a re-
+vival wave, new enthusiasms drove efforts
+to resume deep and old results: for computer imagery, this trend begun with
+plots inC. In 1982 Alan Norton deﬁnitely opened to quaternions [14] and im-
+plicitly showed that, contrary to the same graphics computed for complexes,
+clear views of Julia sets require to be rendered via ray-tracing here: otherwise
+they
+2
+would be ﬂat looking and their complicated topological structure would
+not be evinced. During 1983-87 John Holbrook’s works [8, 9] followed, where
+the inverse iteration, exported fromC, was also tried. In 1989-90 Norton came
+back [15] to the topic. We also mention the collaborative results [6, 7] by Hart,
+Kauffman and Sandin, developing either Holbrook’s and Norton’s results to-
+getherwithamorereﬁnedray-tracingaswellassomeadditionalconsiderations
+on how to improve that inverse method. In 1996, on the front of Algebra, Bed-
+ding and Briggs [2] showed that differentiation for quaternions is less obvious
+as for reals and complexes, because of susceptible to different approaches
+3
+; they
+also focused on related consequences in iteration theory, such as the generation
+of the Mandelbrot setM
+H
+for the classic quaternion quadratic iterator
+h
+2
++c (h,c∈H) (1.1)
+and on ‘regularly iterable linear quaternion maps’, i.e. quaternionic functions
+whose iterates preserve regularity under iteration. Latest results, for dynamics
+of quaternion maps, are due to Jazek and Petek [10], by Lakner and Petek
+[11] and by Petek [16] during mid 1990s, where either analytical and dynami-
+cal properties are deepened: for example, one mentions the ‘equator’ concept,
+2
+Existing in 4 dimensions, they require to be submersed fromR
+4
+toR
+3
+, or toR
+2
+, for drawing purposes.
+3
+See also Cullen-Rinehart’s [3, 17], Fueter’s [5], Sudbery’s [18].
+Electronic Journal.  2Differential Equations and Control Processes, N 4, 2005
+already noted by Holbrook in late 1980s and referring to the distribution, in-
+side M
+H
+for (1.1), of Julia sets intersecting the imaginary axis at least twice
+or more often. In the same spirit as original Norton’s, one sees a recent soft-
+ware production, devoted to display Julia sets in higher dimensions, such as for
+hyper-complex numbers and octonions.
+2 Basics
+2.1 The pixel grid
+The computer generation of Julia sets inC is mainly based upon a ‘walk’ along
+the screen rows and columns. For each screen point P, one deﬁnes an ordered
+and unique pair of coordinates (x,y), associated to the complex ρ = x+iy. Let
+f be a given map, so the goal is to set a color, related to the value of the n-fold
+iterate ρ
+n
+= f
+◦n
+(ρ), at P. This algorithm resumes below into pseudo-C++
+code. The two nested for loops allow to walk through the screen:
+for ( int y = 0 ; y < h ; y++ )
+{
+for ( int x = 0 ; x < w ; x++ )
+{
+find the complex value z
+of the ordered pair (x,y);
+iterate(z) ;
+plot(x,y,color) ;
+}
+}
+Y
+X
+u -
+?
+Figure 2.1: TheWalk. It starts from
+the top left corner (0,0), according to
+the standard computer display, up to
+the bottom right point (w−1,h−1).
+Let also w and h be the screen width and height respectively. This process
+can be exported to quaternion Julia sets J
+H
+, but at the cost of some proper
+changes. A quaternion q ∈H (
+4
+) is a wider numerical extension of a complex
+value and consists of 4 components
+5
+r,m,n,p∈R. Then one has:
+q = r+im+jn+kp (2.1)
+wherei
+2
+= j
+2
+= k
+2
+=−1andmultiplicationisnon-commutative;soquaternions
+are not an abelian group.
+4
+The letter ‘H’ refers to the ﬁrst letter of ‘Hamilton’, the inventor of quaternions.
+5
+From latin ‘quater’ : four.
+Electronic Journal.  3Differential Equations and Control Processes, N 4, 2005
+3 The algorithm
+3.1 Tips for the 3-D model
+How can 4 coordinates ﬁt the 3-D rendering model of a quaternion Julia set ?
+From a mathematical viewpoint, these sets cannot show fully up in R
+4
+,
+so digital pictures of submersions to R
+2
+or R
+3
+have to be produced. R
+3
+was
+the most widespread solution adopted: each screen point will be displayed
+according to any triplet within the 4 components; these 3 values are set as
+X-Y-Z coordinates. While walking through the axes, one matches R
+3
+-points
+to quaternions q (2.1); the remaining fourth vector is initially set to 0. Every
+q is now ready to be iterated and colored. Situation slightly complicates as
+one moves later from 3-D to the 2-D screen. The two points below refer to
+the simplest approach, which has to be dropped off for the considerable loss of
+numerical accuracy as one re-scales ...
+1. ... the original 3-D model into the unit cube C, with side l = 1. Here
+old coordinates are normalized: i.e. one gets a common basis to re-scale the
+model to new arbitrary dimensions.
+2. ... while moving from R
+3
+to Z
+2
++
+(the bi-dimensional computer screen
+with positive integer coordinates).
+Best and fastest results come if these two steps are no longer regarded.
+Aﬁrsteﬃcientsolutioncomesfrombasicconsid-
+u
+u
+u
+'
+&
+$
+%
+'
+&
+$
+%
+u
+u
+u
+z
+z
+:
+Figure 3.1: Injectivity.
+erationsinGeneralTopology. Giventwotopological
+spaces A,B, let f : A→ B be a one-to-one map (or
+injection), so f(x
+1
+)6= f(x
+2
+) for any pair x
+1
+,x
+2
+∈ A
+where x
+1
+6= x
+2
+. This new model will help to match
+each quaternion number (in 4-D) to a screen point
+(in 2-D). For not losing numerical precision in the way, one suggests to apply
+the reverse path from the screen to quaternion space:
+Z
+2
+→R
+3
+→H;
+the graphical aspects concern Z
+2
+and R
+3
+exclusively, while precision more
+involves with H. Things will get far more interesting as one notices that the
+escape method [1] cannot be solely applied to displayJ
+H
+because it just colors
+those points whose orbit is trapped into the complement set H
+F
+= H\H
+J
+: the
+‘Fatou set’. But the problem here is that, since several points of J
+H
+relate
+to the same iteration index by means of the escape method, they condense
+Electronic Journal.  4Differential Equations and Control Processes, N 4, 2005
+into a cloud with a same color; thus details of J
+H
+will not come out and the
+index cannot be applied to deﬁne a color as inC. A good solution is to apply
+an illumination model, like the eﬃcient ‘Phong’: this is a good compromise
+between fast computations and an artiﬁcial light rendering with high quality.
+3.2 Iterations
+Theexamplecodebelowisoneofthefewelementsincommonwiththecomplex
+case. The point q is iterated under q
+2
++c (q,c∈H) and a test, if q∈ H
+J
+6
+, is
+performed. In computational terms, the while loop arrests as the orbit escapes
+the test ball of given radius or when the maximal iterative index is attained
+to prevent endless looping. This function returns a boolean value in order to
+know if conditions, for q to be plot on the screen, are met.
+Figure 3.1: Rotated slice of the ﬁlled-
+in Julia set for h7→ h
+2
+−1.5.
+Figure 3.2: A ‘papillon’ Julia set for h 7→
+1
+h
+2
++q,q = 0.19−0.5i+0.1k.
+BOOL quIterate( quaternion q, quaternion c,
+int& count, double& length,
+double radius, int comp_limit )
+{
+quaternion next_q ; // next point in the orbit
+count = 0 ; // set the iteration index for start
+BOOL bDraw = TRUE ;
+while ( bDraw )
+{
+length = qu.abs() ; // computes the absolute value
+next_q = q * q + c ;
+count++ ; // the iterative index
+if ( length > radius ) return bDraw = FALSE ;
+else if ( count == comp_limit ) break ;
+else q = next_q ;
+}
+6
+In this topological conﬁguration, the orbit does not escape to ∞.
+Electronic Journal.  5Differential Equations and Control Processes, N 4, 2005
+return bDraw ;
+}
+3.3 Plotting the screen
+Assume the screen at the logical machine level: a grid of pixels, where each
+element is uniquely deﬁned by one ordered pair of coordinates (x,y). Let the
+quaternion hyper-cube be an ideal 3-D metric model of the geometric locus we
+are going to scan and ﬁnd which seed points therein belong to H
+F
+. As one
+drops the fourth coordinate p and sets it always to 0, the Quaternion hyper-
+cube turns into a real 3-D cube and becomes an optimal descriptor for our
+purposes in geometrical terms exclusively: the resulting space is homeomorphic
+to any cube inR
+3
+, but quaternion calculus still holds here.
+Figure 3.1: Mapping onto the screen. On the left, a matrix rep-
+resenting the screen. On the right, a perspective model of the cube.
+Colors denote the matching between 2-D and 3-D models.
+The exploration needs both metrics and a way to run through the three
+dimensions. All this is supplied by a pair of minimum and maximum values per
+each cube side X-Y-Z. For example:
+double x_interval = x_max - x_min ;
+double y_interval = y_max - y_min ;
+double z_interval = z_max - z_min ;
+at this point, we also assume three discretization (dx, dy, dz) values for the
+x,y,z axes for locating any point within the quaternion cube.
+double dx = x_interval / (double)window_client_area_width ;
+double dy = y_interval / (double)window_client_area_height ;
+double dz = z_interval / (double)discretization ;
+So a one-to-one map from the screen onto the 3-D model is set. The walk
+can be now performed:
+Electronic Journal.  6Differential Equations and Control Processes, N 4, 2005
+for ( int py = 0 ; py < img_h ; py++ )
+{
+for ( int px = 0 ; px < img_w ; px++ )
+{
+x = x_min + (double)px * dx ;
+y = y_min + (double)py * dy ;
+z = z_min ;
+...
+}
+}
+As in ﬁgure (3.1), the routine re-
+Figure 3.2: Piles of visibility.
+Screenandcubeareideallygluedhere
+to lessen the association as in ﬁgure
+(3.1). The black arrow indicates the
+scanning direction and the blue one
+refers to the found J
+H
+-point within
+that same pile in the 3-D model.
+lates each a 2-D point to one pile
+of contiguous sub-cubes in the 3-D
+model; onerunsthroughthepileuntil
+a point ofJ
+H
+is (possibly) met. If so,
+therunstopsandonedoesnotcareof
+next sub-cubes
+7
+: they are discarded
+from computation since being invis-
+ible from the pile start (the screen
+surface, in our terms); in fact they
+are hidden by the color of the related
+screen point, like in ﬁgure (3.2).
+3.4 The scanning direction
+It consists in running from (x,y,z = Zmin) to (x,y,z = Zmax): so z ranges
+through the interval | Zmax − Zmin |. According to the discretization of the
+interval, one attains every single point step by step and tests if it belongs to
+the H
+F
+by calculating the orbit via the function coded in section (3.2). If so,
+J
+H
+is met and one stops the scan for that pile. Otherwise z increments by dz
+again and again up to Zmax.
+3.5 A prime Boundary Detection and reﬁnements
+Now the heart of the whole process. First we recall a deﬁnition from General
+Topology: for any subset A of a topological set X, the boundary ∂A is the set
+A∩X\A. See ﬁgure (3.2). In our terms, X and A are played by the quaternion
+cube and the ﬁlled-inJ
+H
+respectively.
+7
+They are assumed transparent.
+Electronic Journal.  7Differential Equations and Control Processes, N 4, 2005
+w
+w
+test it !
+test it !
+ 
+  3
+ 
+  3
+ 
+  3
+Zmin
+Zmax
+Figure 3.1: The testing walk.
+X
+A
+r
+  
+  
+U
+Figure 3.2: A boundary example.
+Therefore the necessary and suﬃcient condition to detect J
+H
+is to ﬁnd
+suﬃciently small regions intersecting with more than one basin. An higher
+Figure 3.3: Slices of the Julia set for h7→ h
+2
+−(0.55+0.55i).
+discretization level assures a stronger graphic reﬁnement, even if at the cost of
+huger computations. The approach relies on a two-steps boundary recognition,
+in order to ﬁnd a suﬃciently close neighborhood and set the ground for a next
+test-based upon analogous rules: actually one has to check if two contiguous
+points lie inside different basins. A ﬁrst detection is quite easy. Since the
+typical basins distribution for generic polynomials always assumes a region of
+convergence to ∞, one can resume as follows:
+1. if two contiguous points are seeds of bounded orbits to a same attracting
+ﬁxed point, then they are inside the ﬁlled-inJ
+H
+;
+2. if one point is seed of a bounded orbit, but the next one does not, then
+J
+H
+was crossed by the scanning path;
+3. if bothcontiguouspointsarenotseedsofboundedorbits,then theybelong
+to the basin to∞, i.e. outside the ﬁlled-inJ
+H
+;
+In coding terms, boundary is detected as the logical xor operator returns
+true: at most one condition is to be met. In practice, one assumes a path
+running from zmin up to zmax, so that the routine quIterate, returning false
+until z is inside the basin to ∞, ﬁnally yields true as one enters the ﬁlled-in
+Electronic Journal.  8Differential Equations and Control Processes, N 4, 2005
+z z -
+OUTSIDE INSIDE
+z z -
+INSIDE INSIDE
+No boundary
+Figure 3.4: Meeting the boundary.
+y
+Zmin
+ 
+   
+ 
+   
+ 
+   	
+	
+1
+2
+s
+H
+H
+H
+Julia set
+the Pile
+Figure3.5: CrossingtheJuliaset(see-
+ing through piles of pixels).
+J
+H
+(see ﬁg. (3.4)). As the boundary is trespassed, we get one step back to the
+previous point (see ﬁgure (3.5)). Here the second reﬁnement process begins.
+do{
+Take on three temporary x,y,z
+(actually only z would range over the interval,
+i.e. x, y are fixed per each pile);
+Set them into a quaternion for the further test ;
+Then iterate it !
+Is the n-th image point z_n trapped
+into the filled-in Julia set?
+NO: set the minimal bounding value of the interval at z_n ;
+YES: set the maximal bounding value of the interval at z_n ;
+}while( z <= z_max );
+Algorithm for a ﬁrst boundary detection.
+Figure 3.6: Boundary Detection. The points of the side,
+having z = zmin, are ﬁred towards the set until they crash
+onto it. This process behaves as a sort of envelope and it
+models the 3-D space as the Quaternion Julia set shape.
+Things slightly get more complicate (but even more appealing for program-
+mers!) as the boundary locus is reﬁned by turning the above routine into a
+Electronic Journal.  9Differential Equations and Control Processes, N 4, 2005
+new recursive loop until the interval shrinks under a limit value, when the
+given accuracy is reached. The graphical discussion appears in ﬁg. (3.7). Let
+interval dz be our interval. Really one does not ﬁnd the exact locus of J
+H
+,
+but just very close points to it.
+do{
+Take on three temporary x,y,z
+(really only z would range over
+the interval; i.e. x, y are fixed);
+Set them into a quaternion for the further test;
+Then iterate it !
+Is the n-th image point z_n trapped
+into the filled-in Julia set?
+NO: set the minimal bounding value of the interval at z_n ;
+YES: set the maximal bounding value of the interval at z_n ;
+ADDITIONAL CODE:
+... then shrink interval_dz somehow;
+}while( test if interval_dz is sufficiently
+wide to keep this code in progress ) ;
+The reﬁnement algorithm.
+u u U   w
+steps
+1
+st
+2
+nd
+3
+rd
+4
+th
+= ff ^   ^U
+Figure 3.7: A scheme resuming the algorithm work
+to progressively reﬁne the position of the boundary
+locus by changing the ends of the test interval.
+Figure 3.8: A quaternion ‘Dendrite’ for h7→ h
+2
++i and two blow-ups.
+Electronic Journal.  10Differential Equations and Control Processes, N 4, 2005
+3.6 Turning on the light
+Since we adopted a 3-D model to draw J
+H
+, an illumination model is required.
+We will not explain the technical details, because it is not a goal of this work
+(see [4]). The Phong model was adopted here because of granting good results
+and fast computations. Lambertian approach was also tried, but we do not
+ﬁnally push for it because details
+8
+are not suﬃciently enhanced (see (3.1, 3.2)).
+  
+  
+S
+  
+  
+W
+  
+  
+E
+  
+  
+N
+  
+  
+Pt
+Figure 3.1: The four movements
+from a given point.
+Figure 3.2: Slice of the Julia set
+for h7→ h
+2
++q,q =−0.8+0.4i.
+Suggestions will be given. As a J
+H
+-point is found, take on 4 neighboring
+points (see ﬁg. (3.1)). Each point of the neighborhood has to be tested via
+the previous boundary detection method for assuring that points may be inside
+or out of J
+H
+. These points are required to generate a neighboring ‘surface’
+and compute the related normal vector: precision is crucial for the light ray
+intensity and assesses the rendering quality of the illumination model. The
+code to compute the normal vector is given below. Let each point be deﬁned
+by a triplet (x, y, z) and that n, s, w, e are neighboring points, then:
+n_v.x = ( e.z - w.z ) * ( dy + dy );
+n_v.y = -( s.z - n.z ) * ( dx + dx );
+n_v.z = ( dx + dx ) * ( dy + dy ) ;
+These are the normal vector n v coordinates, later applied to ﬁnd out the
+light ray intensity I according to the illumination model. Values of n v are
+normalized
+9
+.
+3.7 Comparing the illumination models
+The different light management is the most evident issue between the following
+two ﬁgures: ambient parameters being equal, the ﬁgure (3.1), rendered by the
+8
+Here required to point out to this complicate boundary.
+9
+Ranging the intensity I between 0.0 and 1.0, they can be easily re-scaled into other color systems. For
+example, let an indexed palette of 256 (= 2
+8
+) entries; the value of I multiplies by the possible palette colors
+(here, 256) to ﬁnd the color index: color index = (int)( I * 255.0 ) (indexes are zero based.).
+Electronic Journal.  11Differential Equations and Control Processes, N 4, 2005
+Figure 3.1: Lambertian. Figure 3.2: Phong.
+Lambertian approach, looks ﬂatter than (3.2), processed by Phong shading.
+Hence one prefers the latter for detailed renderings. Refer to [4] for technical
+details and code implementation.
+4 A new approach: the cut-off rate
+4.1 Limitations of the standard method
+In C, three are the different topologies
+Figure4.1: PlottingtheJuliaset
+for iterates of equation (4.3) by
+the standard method. In ﬁgure
+(4.7), the same was plot by the
+cut-off rate method.
+of Julia sets: connected, totally disconnected
+and two dimensional (here J ≡
+b
+C). The ﬁrst
+twocasescomeupforquaternionstooandone
+wonders if J might be analogously an hyper-
+volumein4dimensionsﬁllingHcompletely
+10
+.
+With regard to quaternions, one notices that
+the standard method is not easily extendable:
+it just covers the case ofJ
+H
+homeomorphic to
+a closed surface (possibly with curves of mul-
+tiple points), i.e. a bounded object and sur-
+roundedbythebasinto∞: seecaseslistedat
+page 8. This always applies to non-linear polynomials because of the attracting
+point at ∞. By deﬁnition, the ﬁlled-in J
+H
+includes all h for which |f
+n
+(h)| is
+bounded as n→±∞ ([13], p. 71). The inverse iterates, for n→−∞, suggest
+theextensionrequiredbecausethey
+11
+mightalsorunthroughunboundedbasins
+of convergence to ﬁnite attracting points. Inside such basins, inverse iterates
+escape to J which extends to ∞: thus the ﬁnite test (hyper-) ball of ﬁnite ra-
+dius becomes obsolete to perform a full boundary scan. The standard method
+10
+And, in general, being n-dimensional with regard to the n vectors of the numerical ﬁeld involved for the
+generation of J. As far as the author knows, there is no such work devoted to ﬁx this question in details.
+11
+As for the iterates of (4.3).
+Electronic Journal.  12Differential Equations and Control Processes, N 4, 2005
+(A) (B)
+Figure 4.2: (A) shows the iteration of the rational map
+2h
+3
++1
+3h
+2
++1
+inC;
+(B) shows the same method in H. As predicted from the theory,
+the second ﬁgure can be intended as the 2π-rotation, around the
+X-axis, of the ﬁrst one. One also notices that, according to the
+goal of the extended approach, the interior of the basins was not
+drawn in (B) in order to evince the Julia set exclusively.
+strictly depends on the functionality of such ball (a disc inC) testing if orbits
+areboundedortheyescapeto∞: oneimplicitlyassumesherethatthereisonly
+oneﬁniteattractingpointandthatitslocation, togetherwiththerelatedbasin,
+is a priori known to lie inside that test ball. In addition, the standard method
+applies to just one attracting point or to one basin: another limitation concerns
+the heuristics because, for non ﬁlled-in J
+H
+, the previous considerations on the
+metrics, related to the test ball radius, no longer apply and they are differently
+accounted to check each iterate. As the problem generalizes for n attracting
+points δ, one immediately realizes that:
+a. checking n trap-balls gets more and more computationally expensive;
+b. the locations of all δ cannot be calculated via direct formulas for equations
+of degree d > 4 and thus one cannot count on an a priori knowledge: then
+(a.) would be unapplicable however.
+Slice for h
+2
+−(0.66+0.55i). Julia set for h
+2
+−(0.66j +0.55k).
+Overcoming these two points will drive to the extension required: once the
+test ball is dropped off, the method improves and extends to J
+H
+with zero
+interior or where the neighboring basins also extend to∞.
+Electronic Journal.  13Differential Equations and Control Processes, N 4, 2005
+4.2 The extension
+It mainly relies on a re-elaboration, in metric terms, of the basics of the theory
+on normal families
+12
+. Let p be a point very close to a given Julia set J and let
+the point-set distance be
+m = ρ(p,J) = inf{ρ(p,a) : a∈ J}.
+Higher order iterates p
+k
+= f
+k
+(p) converge closer and closer to the attracting
+points δ, so one ﬁnds that
+lim
+k→∞
+ρ(p
+k
+,J)→ A = ρ(δ,J) (4.1)
+holds non-uniformly. The reverse statement can be easily deduced too,
+assuming non-uniformity again; so, given a value q > 0 of the iteration index
+k for forward
+13
+images (k = 0,...,q,...,+∞), in general q splits this whole
+sequence into two subsets so that, metrically speaking, if k < q and for very
+close p toJ
+H
+, the images p
+k
+are closer toJ
+H
+than the forward images p
+k
+,k≥ q.
+This usually rules for orbits entrapped inside ﬁlled-in Julia sets: in fact, for
+boundedbasins,|p
+k
+|remainboundedtooinsideaﬁniteradiusdisctrappingthe
+orbits and helping to detectJ. One solution is to apply a uniform convergence
+property in the neighborhood of each δ, allowing to get rid of the location of
+any δ (b. in§4.1). Orbits will enter a suﬃciently close neighborhood A(δ, ) as
+given numerical properties are met, namely when
+|h
+n
+−h
+n+1
+| <  , (4.2)
+where h ∈ H,n ∈ Z
++
+and a ﬁxed   > 0,lim  = 0. Now one needs to ‘ﬁlter’
+those iterates being closer and closer to J
+H
+: in this sense, the screen points,
+associated to quaternion values taking higher and higher iteration indexes to
+converge and enter A(δ, ), shall be plot exclusively. This extension is then
+deﬁned ‘cut-off rate’.
+4.3 Application to iterates
+Abasinsconﬁguration,oftenarisingfromrationalmapsresultingfromNewton-
+Raphson’s method applied to an entire f(h), will be examined. For example
+12
+Authored by Paul Montel (1876-1975) and playing a fundamental role in the ground-breaking researches by
+Fatou and Julia in holomorphic dynamics in one complex variable over
+b
+C, from late 1910s to 1920s.
+13
+On the contrary, negative values refer to backward iterates of a map f. They were not deliberately take
+into account here for sake of ambiguity, because they can be also regarded as forward iterates of inverse map
+f
+−1
+: since the new algorithm does not work on their direct formulas, they have been left out of the discussion.
+The algorithm itself is based upon the playing with forward iterates exclusively.
+Electronic Journal.  14Differential Equations and Control Processes, N 4, 2005
+let f(h) : h
+3
+−1, the transformed map is
+T
+f
+= h−
+f(h)
+f
+0
+(h)
+=
+2h
+3
++1
+3h
+2
+. (4.3)
+Let f be an holomorphic function, then
+f
+0
+(z) = z,f
+1
+= f(z),...f
+n
+(z) = f
+n−1
+(f(z))
+are said to be the iterates of rank 0,1,...,n. The same concept can be applied
+to the successive iterates T
+n
+f
+. In iteration theory, one knows that, for any
+c
+γ
+p
+2
+r
+r
+r
+r
+p
+n
+p
+1
+...
+9
+ 
+)
+Figure 4.3: Zoom on the neighboring
+curves D
+n
+, all converging to the at-
+tracting ﬁxed point γ.
+1
+NO
+YES YES
+D
+n
+D
+n−1
+r
+Figure 4.4: Iterates whose distance is
+smallerthanagivenvaluearenotcon-
+sidered for the ﬁnal plot.
+attracting ﬁxed point
+14
+γ
+k
+, the total basin B
+γ
+k
+of attraction is the union set of
+all the points whose images, under iterations, converge to γ
+k
+:
+lim
+n→∞
+f
+n
+(z) = γ, ∀z∈B
+γ
+k
+.
+Let D
+1
+,D
+2
+,...D
+n
+, be Jordan curves bounding simply connected domains
+D
+1
+,D
+2
+, ...,D
+n
+around γ
+k
+respectively, so that D
+n
+⊃ D
+n+1
+; one would see
+that, in metric terms, the point-set distance d
+n
+, between the forward iterates
+p
+1
+∈ D
+1
+,p
+2
+∈ D
+2
+,...,p
+n
+∈ D
+n
+, shrinks to 0 (see ﬁgure (4.3)) and one ﬁnds
+again the inequality (4.2): d
+n
+=|p
+n
+−p
+n−1
+| <  ,  > 0,lim  = 0. So, generally
+speaking, one can state that, given a seed point w ∈B
+γ
+k
+and close to J
+H
+, the
+distance d
+n
+→ 0 as n → ∞. Conversely, if d
+n
+is constant, then n → ∞ for
+|f
+n
+(w)−f
+n+1
+(w)| < d
+n
+to hold, as w gets closer and closer to J. The goal is
+to ‘isolate’ the points closer to J
+H
+and plot them exclusively, but with regard
+to other basins distributions where the test ball, strictly depending on the lo-
+cation, cannot work for granting good results any longer. Figure (4.5) comes
+from the iterates of (4.3): the basins location, as well as the attracting points,
+14
+This extends to such cycles of higher order too: not considered here for sake of simplicity.
+Electronic Journal.  15Differential Equations and Control Processes, N 4, 2005
+Figure 4.5: Julia set for (4.3) inC.
+Figure 4.6: The front side inH.
+The cut on the background is
+duetothecoordinatesofthein-
+vestigation cube.
+Figure 4.7: The rear side. The grey region at
+the front accidentally appeared due to the cut
+for the coordinates of the investigation cube,
+but helps to ﬁnd similarities with the analogous
+experiment inC and displayed in ﬁgure (4.5).
+might be out of the ball. According to the theory, J
+H
+show up as 2π-rotation
+of the analogues sets inC and around the X-axis. This approach works like a
+wall and it is ruled by the condition:
+|P
+n
+−P
+n−1
+| > r, (4.4)
+where r is the ball radius as in ﬁgure (4.4). In C++ coding terms, if qu and
+next qu are two successive iterates with given indexes n and n+1 respectively,
+then the bailout condition of the trapping disc in the standard method:
+next_qu.abs() <= bailout
+is ﬁnally replaced by
+next_qu.distancefrom( qu ) >= bailout
+where the bailout is set > 1 in former inequality but ranges from 0 to 1 in
+the second one. The operator ‘≥’ achieves a reverse task by arresting the orbits
+outoftheballitself,preventingpointsinsidetheballfromfurthercomputations,
+namely the forward iterated domains D
+n
+whose distances is d
+n
+> r.
+Electronic Journal.  16Differential Equations and Control Processes, N 4, 2005
+Figure 4.8: Standard method. Figure 4.9: Cut-off rate method.
+4.4 Considerations
+The cut-off rate shall not be confused with the test ball radius. The metrics
+here involved do not regard the areas of forward domains, but their distances.
+SoonlycloserpointstoJ
+H
+areplot,likeinﬁgures(4.6)and(4.7). Bestgraphics
+are retrieved as the bailout radius r and the maximal iterative index are more
+ﬁnely tuned. This new method is also able to yield good plots for ﬁlled-in J
+H
+(see comparison ﬁgures (4.8), (4.9)). Cut-off rate runs a bit slower than the
+standard one but can be applied for different conﬁgurations forJ
+H
+.
+Figure 4.10: Julia set for h7→ sin(h). Figure 4.11: Mandelbrot set for h
+2
++c.
+5 The internals of QHD
+R
+3
+-submersions are solid models and they just wrap the visible slice of J
+H
+in
+order to reduce computation times. In technical terms, the scan splits the
+given cubic region into a 3-D grid of l
+3
+sub-cubes and runs through rows and
+columns, but does not scan the whole cube: it just stops, per each row, when
+the boundary is met and then restarts from the next row.
+5.1 The visual interface
+Qhdisanapplicationopeningwithauser-friendly, smallinterfacetochoose
+thesettobedrawn(‘Julia’or‘Mandelbrot’),thedrawingalgorithm(‘Standard’
+Electronic Journal.  17Differential Equations and Control Processes, N 4, 2005
+or ‘Extended’), a default set of formulas and the chosen illumination method
+(‘Simple Lambertian’, ‘Lambertian’ and ‘Phong’). When properties are dis-
+played, the same window expands and shows additional parameters: the details
+level (sensibly incrementing the computation times), number of iterates, the
+degree of predeﬁned maps, the region coordinates and the value of parameter c
+which works differently as formulas are input to plot Julia or Mandelbrot sets.
+Input features also list the load/save of metrics related to the displayed object,
+the bailout value playing as the radius of the disc entrapping the orbits in the
+standard method or as the value   in the inequality (4.2) of the extended ap-
+proach. The main windows offers a small preview for quick plots, but one can
+display a larger magniﬁcation window. Additional features include a player to
+stop the drawing process manually, a window to rotate the given object along
+thethreeX-Y-Z axestogetherwithapaneltomanageallparametersrelatedto
+the illumination models (location of light points, intensity, ambient diffusion).
+Theoutputallowstosavethecurrentpictureintoagraphicsﬁleortobecopied
+into the clipboard and exchange it with other applications.
+6 Experiments
+In this section, we try to apply the cut-off rate algorithm and display what
+happens inH for other basins distributions which are typical in complex holo-
+morphic dynamics. The same examples will be processed through the standard
+method, in order to compare the related results.
+6.1 Wandering domains
+One special conﬁguration occurring for transcendental maps is the wandering
+domain. In 1983, Sullivan proved that it cannot occur for rational maps.
+Deﬁnition 1 Given the Fatou set F, ‘Wandering domains’ are components
+U ⊂F such that f
+m
+(U)∩f
+n
+(U) =∅ for any integer m6= n, with m,n > 0.
+As empirically shown in (6.1/B), such domains appear for quaternion iter-
+ates too. One sees the large ﬁlaments in (B) are just due to a little iteration
+index: for higher order iterates, they will get thinner and thinner but it was
+deliberately kept small here for enhancing those details which would be hardly
+visible instead. The largest two nuclei, being clear in the 2-D picture in (A),
+are less visible in (B) because wrapped by a cloud of 3-D dust arising from the
+analogous wandering distribution in the submersion ofH intoR
+3
+.
+Electronic Journal.  18Differential Equations and Control Processes, N 4, 2005
+(A) (B) (C)
+Figure 6.1: Wandering domains in C and in H for the function h + sin(2πh). The
+picture (C) displays (B) as computed by the standard method: results are insuﬃcient
+here. Colors in (C) have been inverted to set the few points more visible.
+6.2 Baker domains and Siegel disks ?
+The dynamics of transcendental maps inC include a basins distribution which
+cannot occur for rational ones: the ‘Baker domain’, in honor of his ﬁrst discov-
+erer Noel Baker. Given the Fatou set F, it is a bounded invariant component
+U = f(U) ⊂ F, where there is an essential singularity a ∈ ∂U such that all
+iterated orbits inside U converge to a. Displays of Baker domains were not
+provided here because examples, where the related essential singularity is close
+to inﬁnity, are the only ones known to the author; since region coordinates are
+ﬁnite, QHD cannot reach any suﬃciently close look-up
+15
+. Siegel discs, whose
+existence was already conjectured in early 1900s but proven by Carl L. Siegel
+only in 1942, are components of F and conformally isomorphic to a disc; the
+dynamics therein are rotational and the discs come up either for polynomials,
+rational and transcendental maps. They arise when the ﬁrst order derivative of
+the non-linear iterated map is, at the indifferent point, in the form |e
+2πiθ
+| = 1,
+where θ ∈R\C and enjoys a diophantine condition. Siegel discs in H are not
+displayed here due to this early version of the program: the generation of J
+H
+depends on a wrapping around such object, that is, it is not processed and
+displayed in its full solidity but only from the exterior up to J. The related
+visualization requires here the dissection of the basin.
+6.3 Deforming the Mandelbrot set
+TheMandelbrotsetM
+H
+isgeneratedfromaparameterizedfunctionintheform
+h
+n+1
+= f(h
+n
+,q), h,q∈H, (6.1)
+15
+For example, this comes easier on the Riemann sphere, which is the compactiﬁcation ofC; but there is no
+analogue trick inH !
+Electronic Journal.  19Differential Equations and Control Processes, N 4, 2005
+where h
+0
+is set at one element of the critical points set
+C ={c : f
+0
+(c,q) = 0}
+of this function itself and q ranges over a given region. One assumes that
+(6.1) is the quadratic iterator
+h
+2
+n
++q. (6.2)
+In general, if the iterates of (6.1) are bounded, they belong to M
+H
+and,
+according to the theory, every critical point c belongs to a basin of attraction.
+Since, speciﬁcally, J from (6.2) are a priori known to be totally disconnected
+or ﬁlled-in objects, then each bounded orbit implies that J, related to a given
+q, is connected and ﬁlled-in; otherwise, it is totally disconnected.
+(A) (B) (C)
+Figure 6.1: (A) showsM
+H
+when h
+0
+is the critical point of equation (6.2); h
+0
+was
+slightly modiﬁed in (B) and (C), producing distortions of the original object.
+With the goal of playing with parameters and let them get at any level of
+computation, QHD can parametrize h
+0
+too and let it range inside a neighbor-
+hood of a critical point c. We noticed thatM
+H
+turns into a ‘quasi-M
+H
+’
+16
+. In
+the spirit of the experiments in ﬁgures (6.1), we just empirically noticed that
+the quasi-M sets related to close-to-critical points – see ﬁgures (B) and (C)
+– are not only subjected to distortion, but they are disconnected too. So we
+wondered if such quasi-M
+H
+sets are always disconnected, that is, they always
+show discontinuity regions for the parameter q when h
+0
+is close-to-critical. If
+so and with no pretension of deepening this topic, we could pose two questions
+to advance a strategy to attack the so-called MLC (Mandelbrot set Local Con-
+nectivity) conjecture: is M
+H
+locally connected when h
+0
+∈C exclusively ? Is it
+always disconnected if h
+0
+∈H\C ?
+16
+Really this naming convention can be longer applied and a new one should be found because, without the
+exact value of the critical point, this same computer experiment, on which M relies, makes no sense anymore.
+Electronic Journal.  20Differential Equations and Control Processes, N 4, 2005
+7 Acknowledgements
+I am indebted to Keith Briggs, John Holbrook, Mitja Lakner, Alan Norton and
+PeterPetekforsendingmecopiesoftheirworks,aswellastoDougSweetserfor
+helping to improve my code routines computing the quaternion transcendental
+functions – for example, applied to plot ﬁgure (4.10).
+8 Conclusions
+AllimagesofJuliaandMandelbrotsetsinthisarticlehavebeenplotbyauthor’s
+freeware ‘QHD’, downloadable from http://www.malilla.supereva.it.
+Alessandro Rosa
+Freelance programmer
+Brindisi, Italy
+zandor zz@yahoo.it
+References
+[1] Peitgen H.-O., Saupe D., The Science of Fractals Images, Springer &
+Verlag, 1988.
+[2] Bedding S., Briggs K., Iterations of quaternion functions, American
+Mathematical Monthly, 103, 1996, pp. 654-664.
+[3] Cullen C.G., Duke Math J., 32, 139, 1965.
+[4] Foley J.D., van Dam A., Feiner S.K., Hughes J.F., Computer Graphics,
+principles and practice, 2
+nd
+edition in C, Addison-Wesley 1997.
+[5] Fueter R., Commentarii Mathematici Helvetici, 4, 9, 1932; 7, 307, 1934;
+8, 371, 1935-6.
+[6] Hart J.C., Sandin D.J., Kauffman L.H., Ray tracing deterministic 3-D
+fractals, Computer Graphics 23 (3), (Proc. SIGGRAPH 89,) July 1989, pp.
+289-296.
+[7] HartJ.C.,SandinD.J.,KauffmanL.H.,Interactivevisualizationofquater-
+nion Julia sets, Proc. of Visualization ’90, IEEE Computer Society Press,
+Oct. 1990, pp. 209-218.
+Electronic Journal.  21Differential Equations and Control Processes, N 4, 2005
+[8] Holbrook J.A.R., Quaternionic Astroids and starﬁelds, Applied Mathe-
+matical Notes, 8 (2), 1983, pp. 1-34.
+[9] Holbrook J.A.R., Quaternionic Fatou-Julia sets, Annals of Science and
+Math Quebec, (1), 1987, pp. 79-94.
+[10] KozakJ.,PetekP.,OntheiterationofaQuadraticFamilyinQuaternions,
+V: Mpoyntes, Tasos (ur.), Pneymatikos, Spyros (ur.). Taxe kai chaos.
+Tomos 4, Polyplokotetas kai chaotikes dynamikes me grammikon system-
+aton, (Dynamikasystemata).Athena: EkdoseisG.A.Pneymatikos, 1998,
+pp. 121-148. [COBISS.SI-ID 9375833].
+[11] LaknerM.,PetekP.,Complex and Quaternionic Dynamics – One Equator
+property, Exp. math., 1997, let. 6, ˇ st. 2, pp. 109-115. [COBISS.SI-ID
+7522393].
+[12] Mandelbrot B.B., The fractal geometry of Nature, W.H. Freeman and
+Company, New York, 1983.
+[13] McMullen C., Complex Dynamics and Renormalization, Annals of Math-
+ematics Studies, Priceton University Press, 1994.
+[14] NortonA.V.,Generationandrenderingofgeometricfractalsin3-D,Com-
+puter Graphics 16 (3), 1982, pp. 61-67.
+[15] Norton A.V., Julia sets in the quaternions, Computers and Graphics 13
+(2), 1989, pp. 267-278.
+[16] Petek P., Circles and Periodic points in the Quaternic Julia sets, Open
+Sys. & Information Dyn., 4, 1997, pp. 487-492.
+[17] Rinehart R.F., Duke Math J., 27, 1, 1960.
+[18] Sudbery A., Proc. Camb. Phil. Soc., 85, 1979, 199.
+Electronic Journal.  22

@@ -1,0 +1,1533 @@
+﻿DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+№ 1,2008
+reg. № P2375 at 07.03.97
+ISSN 1817-2172
+http://www.newa.ru/journal
+http://www.math.spbu.ru/user/diffjournal
+e-mail: jodiff@mail.ru
+Applications to physics, electrotechnics, and 
+electronics
+Establishment of an ordinary generating function and a 
+Christoffel-Darboux type first-order differential equation 
+for the heat equation related Boubaker-Turki  polynomials 
+Hedi LABIADH 
+ALMAS,  1135 Naassan   TUNISIA
+e-mail : almastiunisia@yahoo.fr
+Micahel DADA, O. Bamidele AWOJOYOGBE
+Department of Physics, Federal University of Technology, 
+Minna,   Niger-State, NIGERIA
+e-mail : awojoyogbe@yahoo.com
+Karem B. BEN MAHMOUD
+ESSTT/ 63 Rue Sidi Jabeur 5100 Mahdia,  TUNISIA
+e-mail : mmbb11112000@yahoo.fr
+Amine BANNOUR
+FMD,  Cluj-Napoca. ROUMANIA.
+e-mail : managing_office069@yahoo.frDifferential Equations and Control Processes, № 1, 2008
+: , http://www.math.spbu.ru/user/diffjournal
+52
+Abstract
+In this study, we try to find a generating function for the Boubaker-Turki polynomials (or 
+the modified Boubaker polynomials).  Since their first definition as an applied physics 
+study, the Boubaker polynomials have been dealt with as non-orthogonal sequences that 
+don’t obey to any known Legendre-Laguerre type characteristic differential equation. This 
+generating function is given parallel to a Christoffel-Darboux type first-order differential 
+equation as  a guide to further studies.
+PACS . : 02.30.Jr  <Partial differential equations> - 02.30.Sa <Functional analysis>.
+Mathematics Subject Classification 2000 : 33E20, 33E30, 35K05, 41A30, 41A55. 
+1   Introduction
+The Boubaker polynomials were proposed in a physics study that yielded 
+a thermal model of a pyrolysis spray device [1]. They represent a 
+mathematical tool for solving the heat transfer equation inside a given 
+domain. The resolution process yielded a formula that led to a sequence of 
+polynomial functions [1] with particular proprieties. These functions, 
+which allowed the formulation of a concrete solution to the heat equation, 
+were officially exposed to the local mathematics community as a new 
+polynomial class [2]. The Boubaker polynomials expansion method was 
+used in the model of blood vessels presented by works of O. Bamidele 
+Awojoyogbe et al. in the field of organic tissues modeling [3]. A recent 
+work presented by S. Slama et al.[4] presented  also  a numerical model    of 
+the spatial time-dependant evolution of A3 melting point in steel material 
+during a particular sequence of resistance spot welding [4]. While 
+investigating eventual differential equations to these polynomials, the 
+Boubaker-Turki polynomials (modified Boubaker polynomials) were 
+proposed as an improved form that was doted with a characteristic 
+differential equation [5].Differential Equations and Control Processes, № 1, 2008
+: , http://www.math.spbu.ru/user/diffjournal
+53
+2. Historical appearance of the Boubaker-Turki  
+    polynomials 
+2.1 The Boubaker polynomials 
+The Boubaker polynomials emerged from an attempt to yield a solution to 
+heat equation. In fact, in a calculation step during resolution process [1], an 
+intermediate calculus sequence raised an interesting recursive formula 
+leading to a class of polynomial functions that performs differently  with 
+common classes.
+The heat equation [1] inside glass layer medium (g) and deposited layer (s) 
+was expressed by (1):
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+s
+s
+s
+s
+s
+s b
+g
+g
+g
+g
+P
+k t
+t z T
+D z
+t z T
+P P
+k t
+t z T
+D z
+t z T
+.
+1 ) , ( 1
+²
+) , ( ²
+) .(
+1
+) , (
+1
+²
+) , ( ²
+        (1)
+   
+where T
+g
+  is the  absolute temperature inside glass medium, T
+s 
+is  the 
+absolute temperature inside deposited layer, D
+g
+ and D
+s
+  are respectively  
+the  glass medium and the deposited layer thermal diffusivities, P
+b  
+and P
+s  
+are the  powers transmitted respectively from bulk to glass and from glass 
+to layer, and finally k
+g
+ and k
+s
+ are respectively  the  glass medium and the 
+deposited layer thermal conductivities. 
+According to bulk size and thermal supply, lower heat conduction toward 
+glass layer (z = H) could be considered as issued from an infinite source 
+under constant temperature T
+b
+. Boundary conditions concerned mainly 
+temperature distribution continuity at median plane (z = H) and glass-
+layer contact plane (z = 0). Differential Equations and Control Processes, № 1, 2008
+: , http://www.math.spbu.ru/user/diffjournal
+54
+After proposing a general expression (2) for temperature distribution [1]
+inside the glass sample:
+0 : for   ) ( .
+1
+) , (
+0
+1
+   
+
+
+
+
+
+z H t J e
+N
+t z T
+m
+m m
+z
+H
+A
+n
+
+(2)
+where J
+m
+ is the m-th order first kind Bessel function,  N  is a fixed integer 
+parameter, A and 
+m
+ are constants to be found; the application of Boundary 
+conditions, and truncation  of the infinite sum down to the integer order  N  
+lead to the system (3) :
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+   
+  
+
+
+ 
+ 
+0 ) (
+) (
+...
+  1 : for    ) (
+2 ) (
+) (
+1
+2 1 1
+1 1 1
+2 0 1 1
+1 0 1
+z
+z Q
+N m z Q
+z Q
+z Q
+N
+N N N
+m m m
+
+  
+  
+  
+ 
+(3)
+Finally, coefficients 
+m
+ are calculated for  z = 0, and for the given 
+parameters values. 
+For larger values of N, and when  z = 0, a sequence of polynomial functions 
+B
+m
+(X) was defined according to the structure of the relation (3), and 
+resumed in the relation (4): 
+(4)
+
+
+
+
+
+
+
+  
+ 
+
+
+ 
+2 m : for      ) ( ) ( . ) (
+2 ² ) (
+) (
+1 ) (
+2 1
+2
+1
+0
+X B X B X X B
+X X B
+X X B
+X B
+m m mDifferential Equations and Control Processes, № 1, 2008
+: , http://www.math.spbu.ru/user/diffjournal
+55
+Using the recursive relations (4) and results from the previous study [1] , 
+the authors established, an explicit monomial form (eq. 5 and 6) and a 
+recursive definition of the Boubaker polynomials coefficients (7). 
+Demonstrations of equations (5-6) are available in appendices of previous 
+studies [2-4].
+4
+1 1 2
+:   with ; . ) 1 .( ) (
+!
+) 4 (
+). 4 ( . 1 ) (
+2
+2
+1 2
+1
+2
+) ) (( n
+ξ(n) X j n
+p
+p n
+X n X X B
+n
+p n p
+ξ(n)
+p
+p
+p j
+n n
+n
+  
+ 
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+ 
+
+ 
+(5)
+. ) 1 .(
+) (
+) 4 (
+  ) (
+2
+0
+p n p
+ξ(n)
+p
+p
+p n n
+X C
+p n
+p n
+X B
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       (6)
+where :
+   
+        
+(The symbol  :   designates  the floor function, introduced by Iverson  in
+1962)
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+ 
+
+  
+  
+
+   
+  
+ 
+
+  
+
+
+
+
+odd n if      ) 2 ( ) 1 (
+even n if              2 ) 1 (
+) 4 (
+) 4 4 (
+) 1 )( 1 (
+) 1 2 )( 2 (
+); 4 (          ; 1
+4
+1 1 2
+; ) (
+2
+1
+2
+4
+) 1 ) 1 (( 2
+,
+, 1 ,
+1 , 0 ,
+0
+2
+,
+n
+b
+b
+j n
+j n
+j n j
+j n j n
+b
+n b b
+) ) (( n
+ξ(n) X b X B
+n
+n
+n
+n
+j n j n
+n n
+n
+ξ(n)
+j
+j n
+j n n
+n
+(7)
+4
+1 1 2
+2
+) ) (( n n
+ξ(n)
+n
+  
+
+
+
+
+
+
+
+Differential Equations and Control Processes, № 1, 2008
+: , http://www.math.spbu.ru/user/diffjournal
+56
+According to the relations (4-7), the first Boubaker polynomials are given 
+by (8) :
+                                             .             (8)
+                                                                                                              
+          
+                                                                                                                        
+2.2. The Modified Boubaker polynomials 
+Later, the authors proposed, through a specialized study [5], a new version 
+of these polynomials. As opposed to the earlier defined polynomials, the 
+modified Boubaker polynomials, defined by (9): 
+4
+1 1 2
+; . ) 1 ( 2 . ) (
+!
+) 4 (
+   ). 4 ( 2 . 2 ) (
+2 2
+2
+1 2
+1
+2 2
+) ) (( n
+ξ(n) X j n
+p
+p n
+X n X X B
+n
+p n p p n
+ξ(n)
+p
+p
+p j
+n n n n
+n
+  
+ 
+
+
+
+
+
+
+
+
+
+
+   
+ 
+
+
+ 
+ 
+
+ 
+(9)
+are solutions to a second order characteristic, but non proper equation (10):
+2 n      ); ( ) 1 .( 32 ) ( ) ( . 4 ) ( ) 1 .( 16
+2
+2 ' ' ' 2
+     
+
+  
+for X T n X B n X B X X B X
+n n n n
+(10)
+where T
+n
+(X), for n > 2, are the Chebyshev [6,7] first order polynomials.
+This definition allowed an establishment of a quasi-polynomial expression 
+(11) of the Boubaker-Turki polynomials [5]:
+         
+
+
+
+
+
+
+     
+
+
+
+
+
+
+     
+
+1 8 3 8 1 1 8 3 8 1 ) (
+2 2 2 2 2 2
+X X X X X X X X X X X B
+n n
+n
+    (11)
+.....
+; 2 8 4 (X) ; 5 2 3 (X)
+; 2 3 2 (X)               ; 3 (X)
+; 2 (X)                          ; (X)
+; 2 (X)        ; (X)                                      ; 1 (X)
+2 6 8
+8
+3 5 7
+7
+2 4 6
+6
+3 5
+5
+4
+4
+3
+3
+2
+2 1 0
+       
+      
+   
+   
+X X X B X X X X B
+X X X B X X X B
+X B X X B
+X B X B BDifferential Equations and Control Processes, № 1, 2008
+: , http://www.math.spbu.ru/user/diffjournal
+57
+or by setting the simplified forms (12) :
+1 '         and     1
+2 1 2
+      
+
+X X X X   
+(12)
+with the properties expressed by (13): 
+1  ' .     and     2 '         X
+(13)
+we obtain the simplified analytic relation, (14) :
+        3 8 3 ' 8 ) (
+'
+   
+
+    X X X B
+n
+n
+n
+(14)
+3. Investigations of the Boubaker-Turki  polynomials
+3.1 Second kind Chebyshev polynomial expansion of the Boubaker-
+Turki polynomials
+The main purpose of this section is to solve the system (15):
+ 
+
+
+
+
+ 
+n
+j
+j n j
+n
+j
+j n j n
+X T X Q X U X P X B
+0 0
+) ( ). ( ) ( ). ( ) (
+~
+                     (15)                                                               
+where  T
+n
+  and   U
+n
+  are respectively  the Chebyshev[6,7] polynomials of the 
+first and  second kind, P
+j
+  and  Q
+j
+ are unknown polynomials of degree j.
+In fact, the early defined Boubaker polynomials could not be expressed in 
+function of the Chebyshev polynomials since they obeyed to different 
+recursive relations. As opposed to this, the Boubaker-Turki polynomials 
+presented some similarities with the Dickson polynomials that are easily 
+expressed in function of Chebyshev ones.Differential Equations and Control Processes, № 1, 2008
+: , http://www.math.spbu.ru/user/diffjournal
+58
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+0 ; 0 ) (
+2 ) (
+            and       
+. 1 ; 0 ) (
+4 ) (
+0 ) (
+0
+1
+0
+j X Q
+X Q
+j X P
+x X P
+X P
+j
+j
+Using the first terms of the evoked polynomials we obtained the empirical 
+solution (16-17):
+                                                                 (16-17)
+                                                
+                       
+We conjectured hence that we have the relation:
+) ( 2 ) ( . 4 ) (
+~
+1
+X T X U X X B
+n n n
+ 
+
+(18)  
+We set an analytical demonstration to this relation (see Appendix) using 
+the expressions (19-20) given by Abramowitz et al. [8] :
+ 
+p n
+ξ(n)
+p
+p n p
+n
+X
+p n p
+p n n
+X T
+2
+0
+2
+.
+)! 2 ( !
+)! 1 (
+2 . ) 1 (
+2
+) (
+
+
+
+
+
+ 
+ 
+                               (19)
+   
+ 
+p n
+ξ(n)
+p
+p n p
+n
+X
+p n p
+p n
+X U
+2
+0
+2
+.
+)! 2 ( !
+)! (
+2 . ) 1 ( ) (
+
+
+
+
+
+
+ 
+         (20)                                                
+where:
+ 
+4
+1 ) 1 ( 2
+2
+  
+  
+
+
+
+
+
+
+
+
+n
+n n
+ξ(n)
+3.2 Establishment of an ordinary generating function for the defined 
+Boubaker-Turki polynomials
+An ordinary generating function  f(X,t)  for a polynomial sequence P
+n
+(X) is 
+the function that verifies (21):
+
+
+
+
+0 n
+n
+n
+(X). ) , ( t P t X f
+(21)Differential Equations and Control Processes, № 1, 2008
+: , http://www.math.spbu.ru/user/diffjournal
+59
+Thanks to the established relation (§ 3.1) and to the known[9] generating 
+functions (22) and (23):
+2
+0 n
+n
+n
+. 2 1
+. 1
+(X).
+t t X
+X t
+t T
+ 
+
+
+
+
+
+(22)
+2
+0 n
+n
+n
+. 2 1
+1
+(X).
+t t X
+t U
+ 
+
+
+
+
+(23)
+we can calculate (24):
+    
+
+
+
+
+
+
+
+
+
+
+
+   
+1 n
+n
+n
+0 n
+1 n
+n
+1 n
+n
+n
+1 n
+n
+1 - n
+1 n
+n
+(X). 2 (X). 4 (X). 2 (X). 4 . ) (
+~
+t T t U X t T t U X t X B
+n
+(24)
+we can write: 
+
+
+
+
+
+
+
+ 
+
+
+ 
+ 
+
+
+
+(X)
+. 2 1
+. 1
+2
+. 2 1
+1
+4 ) (
+~
+. ) (
+~
+0
+2 2
+0
+0 n
+n
+T
+t t X
+X t
+t t X
+Xt X B t X B
+n
+             (25)
+and then : 
+2
+2
+2 2
+0 n
+n
+. 2 1
+3 1
+1 1
+. 2 1
+. 1
+2
+. 2 1
+1
+4 . ) (
+~
+t t X
+t
+t t X
+X t
+t t X
+Xt t X B
+n
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+ 
+
+
+
+
+(26)
+This yields finally the ordinary generating function (27) :  
+                           
+
+
+
+
+ 
+
+
+0 n
+n
+2
+2
+.t ) (
+~
+. 2 1
+3 1
+) , ( X B
+t t X
+t
+t X f
+n B
+(27)
+For values of  t  close to unity, and  X = 0,  we can verify that this sum has 
+the mean value 2. In fact we have demonstrated that:
+
+
+
+
+
+
+
+ 
+ 
+  
+
+  
+
+
+q n
+q n
+q q n
+n
+B n
+n
+B
+n n
+4 for     , 2
+2 4 for         , 2
+3 4 , 1 4 for         , 0
+0 for          ; 1
+) 0 (
+~
+1 );
+2
+2
+cos( 2 ) 0 (
+~
+Differential Equations and Control Processes, № 1, 2008
+: , http://www.math.spbu.ru/user/diffjournal
+60
+it is obvious that due to the symmetrical values, 2 and -2 :
+0
+2
+2
+1
+0 n
+n
+1
+0
+0 n
+n
+1
+. 2 1
+3 1
+lim 2 . 2 lim 1 . ) (
+~
+lim
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+    
+ 
+X
+t t
+X
+n
+t
+t t X
+t
+t t X B
+A similar result can be demonstrated for t = -1.
+3.3 A Christoffel-Darboux type first-order differential equation for the  
+Boubaker-Turki polynomials
+The main relation (4), the equations (9) and (11) allow writing  (28): 
+  ) (
+~
+) (
+~
+) (
+~
+) (
+~
+) (
+~
+) (
+~
+) ( 2 ) (
+~
+) (
+~
+) (
+~
+) (
+~
+1 1 1 1
+Y B X B Y B X B Y B X B Y X Y B X B Y B X B
+j j j j j j j j j j    
+         (28)
+which gives (29):
+) ( 2
+) (
+~
+) (
+~
+1
+Y X
+Y B X B
+j j
+j j
+
+
+
+
+ 
+(29)
+where  (30):
+) (
+~
+) (
+~
+) (
+~
+) (
+~
+1 1
+Y B X B Y B X B
+j j j j j  
+     (30)Differential Equations and Control Processes, № 1, 2008
+: , http://www.math.spbu.ru/user/diffjournal
+61
+By adding the expressions (30) for j=0 to n, we obtain the  equation (31):
+) ( 2
+) (
+~
+) (
+~
+) (
+~
+) (
+~
+) (
+~
+) (
+~
+1 1
+0
+Y X
+Y B X B Y B X B
+Y B X B
+n n n n
+n
+j
+j j
+
+  
+
+ 
+
+
+(31)
+Finally, by imposing X  Y, we obtain Christoffel-Darboux[10] type first-
+order differential equation (32)
+                 
+2
+) (
+~
+) (
+~
+) (
+~
+) (
+~
+~
+1
+' '
+1
+0
+2
+X B X B X B X B
+B
+n n n n
+n
+j
+j
+ 
+
+  
+
+            (32)
+5. Conclusion 
+This work presents an ordinary generating function for the established 
+Boubaker-Turki polynomials [1-5, 11-13], as a guide to establish a second 
+order characteristic differential equation to these polynomials. The yielded 
+Christoffel-Darboux type first-order differential equation seems to be an 
+important supply for further investigations on properties that may lead to 
+a characteristic homogenous second order equation.Differential Equations and Control Processes, № 1, 2008
+: , http://www.math.spbu.ru/user/diffjournal
+62
+References
+[1] A. Chaouachi, K. Boubaker,  M. Amlouk and H. Bouzouita, 
+Enhancement of pyrolysis spray disposal performance using thermal time-
+response to precursor uniform deposition, Eur. Phys. J. Appl. Phys. 37 (2007) 
+pp.105-109
+[2] K. Boubaker, The Boubaker polynomials, a new function class for 
+solving bi-varied second order differential equations, F. E. J. of Applied 
+Mathematics, in press  (2008).
+[3] O. B. Awojoyogbe  and K. Boubaker, A solution to Bloch NMR 
+flow equations for the analysis of homodynamic functions of blood flow 
+system using m-Boubaker polynomials, International Journal of Current 
+Applied Physics, Elsevier, (2008), DOI : 10.1016/j.cap.2008.01.0193.
+[4] S. Slama, J. Bessrour, B. Karem and M.Bouhafs, Investigation of A3 
+point maximal front spatial evolution during  resistance spot welding 
+using 4q-Boubaker polynomial sequence, Proceedings of COTUME 2008, pp 
+79-80,(2008)
+[5] K. Boubaker, On modified Boubaker polynomials: some differential 
+and analytical properties of the new polynomials issued from an attempt 
+for solving bi-varied heat equation. Intenational Journal of Trends in Applied 
+Science Research, by Academic Journals, ‘aj’ New York; USA, ISSN : 1819-
+3579. 2(6) , (2007), 540-544.
+[6] B. Chen, R. García-Bolós, L. Jódar, M. Roselló, Chebyshev 
+polynomial approximations for nonlinear differential initial value 
+problems.  Nonlinear Analysis, 63, Issue 5-7,(2005), pp: e629-e637.
+[7] P.   Kabal and R.P.  Ramachandran, The computation of line 
+spectral frequencies using Chebyshev polynomials, IEEE Transactions on 
+Acoustics, Speech, and Signal Processing , 34,  Issue: 6, (1986), pp: 1419- 1426.Differential Equations and Control Processes, № 1, 2008
+: , http://www.math.spbu.ru/user/diffjournal
+63
+[8] M. Abramowitz and I. A. Stegun, Handbook of Mathematical 
+Functions, National Bureau of Standards, Applied Math. Series 55, Tenth 
+Printing, December 1972; Chapter 22.
+[9] H. Labiadh et al. :  A Sturm-Liouville shaped characteristic 
+differential equation as a guide to establish a quasi-polynomial expression 
+to the Boubaker polynomials, Journal of Differential equations and control 
+processes, № 2, (2007),reg. № P2375, ISSN 1817-2172.pp:118-133
+[10] E. Daems and   A. B. J. Kuijlaars, A Christoffel-Darboux formula 
+for multiple orthogonal polynomials, Journal of Approximation Theory, 130 ,  
+Issue 2  (2004),  ISSN:0021-9045,pp: 190 - 202   
+[11] Neil J. A. Sloane, Triangle read by rows of  coefficients of Boubaker 
+polynomial B_n(x) in order of decreasing exponents, OEIS (Encyclopedia of 
+Integer Sequences), A138034 (2008).
+[12] Roger L. Bagula and Gary Adamson, Triangle of coefficients of 
+Recursive Polynomials for Boubaker polynomials, OEIS (Encyclopedia of 
+Integer Sequences), A137276 (2008).
+[13] The Boubaker polynomials, Planet-Math Encyclopedia, The 
+Mathematics worldwide Encyclopedia 
+ (available also online at : http://planetmath.org/encyclopedia/BoubakerPolynomials.html )Differential Equations and Control Processes, № 1, 2008
+: , http://www.math.spbu.ru/user/diffjournal
+64
+APPENDIX
+In this appendix we demonstrate the conjectured relation   (A.1):
+) ( 2 ) ( . 4 ) (
+~
+1
+X T X U X X B
+n n n
+ 
+
+                                                                          (A.1)
+ where U
+n
+ are the Chebyshev polynomials of the second kind,   T
+n
+ are the 
+Chebyshev polynomials of the first kind and 
+) (
+~
+X B
+n
+denotes the Boubaker-
+Turki polynomials (A.2)  :
+ 
+ 
+4
+1 ) 1 ( 2
+2
+   :   where ; .
+)! 2 (
+)! 1 (
+!
+) 4 (
+2 . ) 1 ( ) (
+~
+2
+0
+2
+  
+
+
+
+
+
+
+
+
+
+  
+ 
+
+
+
+
+n
+p n
+ξ(n)
+p
+p n p
+n
+n n
+ξ(n) X
+p n
+p n
+p
+p n
+X B
+(A.2)
+We knew that Chebyshev polynomials of the first and second kind are 
+expressed by (A.3) and (A.4):
+ 
+p n
+ξ(n)
+p
+p n p
+n
+X
+p n p
+p n n
+X T
+2
+0
+2
+.
+)! 2 ( !
+)! 1 (
+2 . ) 1 (
+2
+) (
+
+
+
+
+
+ 
+ 
+                                                        (A.3)
+ 
+p n
+ξ(n)
+p
+p n p
+n
+X
+p n p
+p n
+X U
+2
+0
+2
+.
+)! 2 ( !
+)! (
+2 . ) 1 ( ) (
+
+
+
+
+
+
+ 
+                                                        (A.4)
+Let’s calculate the expression (A.5):Differential Equations and Control Processes, № 1, 2008
+: , http://www.math.spbu.ru/user/diffjournal
+65
+   
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+
+ 
+
+
+  
+
+
+ 
+
+ 
+p n
+ξ(n)
+p
+p n p p n
+) ξ(n
+p
+p n p
+n n
+X
+p n p
+p n n
+X
+p n p
+p n
+X
+X T X U X
+2
+0
+2 1 2
+1
+0
+1 2
+1
+.
+)! 2 ( !
+)! 1 (
+2 . ) 1 (
+2
+2 .
+)! 1 2 ( !
+)! 1 (
+2 . ) 1 ( . . 4                    
+) ( 2 ) ( . 4
+(A.5)
+The coefficient of the  (n-2p)-order term of the sum (A.4) is hence:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+)! 2 ( !
+)! 1 (
+)! 2 ( !
+)! .( 2
+2 ) 1 (                 
+2
+p n p
+p n
+n
+p n p
+p n
+c
+p n p
+p
+(A.6)
+Due to the proprieties of the factorials we obtain (A.7): 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+  
+ 
+
+)! 2 ( !
+)! 1 (
+)! 2 ( !
+) 2 ( )! 1 .( 2
+2 ) 1 (                 
+2
+p n p
+p n
+n
+p n p
+p n p n
+c
+p n p
+p
+. (A.7)
+We can notice that : 
+   
+)! 2 ( !
+4 ( )! 1 (
+)! 2 ( !
+) 4 2 ( )! 1 (
+)! 2 ( !
+)! 1 ( ) 2 ( )! 1 .( 2
+p n p
+p n p n
+p n p
+n p n p n
+p n p
+p n n p n p n
+
+  
+
+
+   
+
+
+     
+                         (A.8)
+Finally we obtain  (A.9):
+)! 2 (
+)! 1 (
+!
+) 4 (
+2 . ) 1 (
+2
+p n
+p n
+p
+p n
+c
+p n p
+p
+
+  
+ 
+
+(A.9)
+and (A.10): 
+   
+ 
+
+ 
+
+
+
+
+
+  
+   
+ξ(n)
+p
+n
+p n p n p
+ξ(n)
+p
+p n
+p n n
+X B X
+p n
+p n
+p
+p n
+X c X T X U X
+0
+2 2
+0
+2
+1
+) (
+~
+)! 2 (
+)! 1 (
+!
+) 4 (
+2 . ) 1 ( . ) ( 2 ) ( . 4
+          (A.10)Differential Equations and Control Processes, № 1, 2008
+: , http://www.math.spbu.ru/user/diffjournal
+66

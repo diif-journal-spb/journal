@@ -1,0 +1,1807 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 2, 2003
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Applications to physics, electrotechnics, and electronics
+A Note on the Derivation of Governing Equations of
+Envelopes Created by Nearly Bi-chromatic Waves
+|The modi ed Schr odinger equation and
+the modi ed Schr odinger-Nohara equation|
+Ben T.Nohara
+Musashi Institute of Technology
+Department of Electronic and Computer Engineering
+Tamazutsumi, Setagaya, Tokyo 158-8557
+Japan
+Phone: (03)3703-3111 Fax: (03)5707-2147
+e-mail: drben@ac.cs.musashi-tech.ac.jp
+and
+Virginia Polytechnic Institute & State University
+Department of Engineering Science and Mechanics
+Blacksburg, VA 24061-0219
+USA
+Abstract
+In this paper, two concepts of directional waves: directional, nearly monochro-
+matic waves and directional, nearly bi-chromatic waves are presented. Di-
+rectional, nearly monochromatic waves are propagation-direction-based nearly
+monochromatic waves, whose energy is almost concentrated in a single prop-
+agation direction. Directional, nearly bi-chromatic waves are the ones whoseDifferential Equations and Control Processes, N 2, 2003
+energy is almost concentrated in two wave propagation directions and the ap-
+proach of these directions is very close. We show that the modi ed Schr odinger
+equation, which is modi ed from the Schr odinger equation, governs the envelope
+created by nearly bi-chromatic waves and also the modi ed Schr odinger-Nohara
+equation modi ed from the Schr odinger-Nohara equation governs the envelope
+surface created by directional, nearly bi-chromatic waves.
+1. INTRODUCTION
+In the course of studying the physical characteristics of group waves (wave
+packets)[1][2] in the water, the Schr odinger equation has played an important
+role in the mathematical and physical analysis. The envelope, which is cre-
+ated by group waves, has been considered to model them. We can consider
+two types of model of group waves as nearly monochromatic waves and nearly
+bi-chromatic waves. In the former waves, the energy is almost concentrated in
+a single wavenumber (De nition 1). Whereas in the latter waves, the energy is
+almost concentrated in two wavenumbers and the approach of these wavenum-
+bers is very close (De nition 3). The Schr odinger equation basically governs
+the envelope created by nearly monochromatic waves [3]. The past studies of
+modeling of group waves almost focused on nearly monochromatic waves [4][5].
+This paper deals with nearly bi-chromatic waves in the model of group waves.
+We present two concepts of directional waves: directional, nearly monochro-
+matic waves and directional, nearly bi-chromatic waves. Directional, nearly
+monochromatic waves are propagation-direction-based nearly monochromatic
+waves, whose energy is almost concentrated in a single propagation direction
+(De nition 2). The Schr odinger-Nohara equation governs the envelope surface
+created by directional, nearly monochromatic waves [6][7]. Directional, nearly
+bi-chromatic waves are the ones whose energy is almost concentrated in two
+wave propagation directions and the approach of these directions is very close
+(De nition 4).
+We show that the modi ed Schr odinger equation, which is modi ed from
+the Schr odinger equation, governs the envelope created by nearly bi-chromatic
+waves and also the modi ed Schr odinger-Nohara equation modi ed from the
+Schr odinger-Nohara equation governs the envelope surface created by direc-
+tional, nearly bi-chromatic waves in this paper.
+Electronic Journal.  24Differential Equations and Control Processes, N 2, 2003
+The following section presents preliminaries of the envelope equations of
+nearly monochromatic waves (the Schr odinger equation) and directional, nearly
+monochromatic waves (the Schr odinger-Nohara equation) as well. The third
+section de nes nearly bi-chromatic waves and directional, nearly bi-chromatic
+waves and then presents main results.
+2. Preliminaries
+De nition 1 Nearly monochromatic waves u(x; t) [3] are de ned by the waves
+whose energy is almost concentrated in one wavenumber as follows [10]:
+u(x; t) =
+Z
+k
+S
+1
+(k)e
+ifkx !(k)tg
+dk: (1)
+Here k, t, x, ! and S
+1
+denote wavenumber, time, space, angular frequency
+of dispersive characteristics with respect to wavenumber and spectrum of nearly
+monochromatic waves, respectively. The pro le of the spectrum of nearly monochro-
+matic waves has a peak at k = k
+0
+and spreads  
+k
+(su ciently small) around k
+0
+.
+Remark 1 Nearly monochromatic waves create an envelope and we can see it
+as swell in ocean.
+Theorem 1 The envelope created by nearly monochromatic waves satis es the
+following linear Schr odinger equation.[3][6]
+i
+ 
+@A(x; t)
+@t
++ !
+0
+(k
+0
+)
+@A(x; t)
+@x
+ 
++
+1
+2!
+!
+00
+(k
+0
+)
+@
+2
+A(x; t)
+@x
+2
+= 0 (2)
+Remark 2 Here A(x; t) is the amplitude of nearly monochromatic waves of the
+function of space x and time t. A(x; t) acts as the envelope of traveling waves.
+!
+(n)
+(k) means the n-th derivative of ! with respect to k.
+proof We consider plane traveling waves u(x; t) with dispersive characteristics
+of the form:
+u(x; t) = A(x; t)e
+ifk
+0
+x !(k
+0
+)tg
+(3)
+as an approximation of the class of u(x; t) in Equation (1). This is based on
+the assumption that most of the energy is concentrated in one wavenumber k
+0
+Electronic Journal.  25Differential Equations and Control Processes, N 2, 2003
+(nearly monochromatic waves) and the amplitude A(x; t) is not constant but
+varies slowly in space and time. So, A(x; t) is derived from Equations (1) and
+(3) as follows:
+A(x; t) =
+Z
+k
+S
+1
+(k)e
+iP
+1
+(x;k;t)
+dk; (4)
+where
+P
+1
+(x; k; t) = (k  k
+0
+)x f!(k)  !(k
+0
+)gt: (5)
+The time derivative of A(x; t) is
+@A(x; t)
+@t
+=
+Z
+k
+( i)f!(k)  !(k
+0
+)gS
+1
+(k)e
+iP
+1
+(x;k;t)
+dk: (6)
+Moreover, the spatial derivative of A(x; t) is obtained as follows:
+@
+n
+A(x; t)
+@x
+n
+=
+Z
+k
+i
+n
+(k  k
+0
+)
+n
+S
+1
+(k)e
+iP
+1
+(x;k;t)
+dk; n = 1; 2; 3;    : (7)
+Equation (7) shows the spatial derivative of the envelope equals an envelope of
+the modi ed spectrum S
+(n)
+1;m
+(k), i.e.,
+@
+n
+A(x; t)
+@x
+n
+=
+Z
+k
+S
+(n)
+1;m
+(k)e
+iP
+1
+(x;k;t)
+dk; (8)
+where
+S
+(n)
+1;m
+(k) = i
+n
+(k  k
+0
+)
+n
+S
+1
+(k): (9)
+On the other hand, the dispersion relation of !(k) can be written as the
+following Taylor expansion based on the pro le of the spectrum de ned by
+De nition 1:
+!(k) = !(k
+0
+)+!
+0
+(k
+0
+)(k k
+0
+)+
+1
+2!
+!
+00
+(k
+0
+)(k k
+0
+)
+2
++
+1
+3!
+!
+000
+(k
+0
+)(k k
+0
+)
+3
++    : (10)
+Substituting the relations of Equations (7) and (10) into Equation (6) leads to
+the following:
+@A(x; t)
+@t
+=
+1
+X
+n=1
+( 1)
+n
+i
+n 1
+!
+(n)
+(k
+0
+)
+n!
+@
+n
+A(x; t)
+@x
+n
+: (11)
+Electronic Journal.  26Differential Equations and Control Processes, N 2, 2003
+Equation (11) represents the higher order governing equation that governs the
+amplitude of nearly monochromatic waves, namely, the equation that the enve-
+lope of nearly monochromatic waves satis es. Neglecting the third and higher
+order of spatial derivatives in Equation (11), we obtain the linear Schr odinger
+equation of Theorem 1.
+qed
+Theorem 2 The envelope surface created by two-dimensional nearly monochro-
+matic waves with a propagation direction ( 
+0
+) satis es the following Schr odinger
+equation.[6][7]
+i
+ 
+@A
+f
+(x; y; t)
+@t
++ !
+0
+(k
+0
+)
+ 
+cos 
+0
+@A
+f
+(x; y; t)
+@x
++ sin  
+0
+@A
+f
+(x; y; t)
+@y
+  
++
+1
+2!
+!
+00
+(k
+0
+)
+ 
+@
+2
+A
+f
+(x; y; t)
+@x
+2
++
+@
+2
+A
+f
+(x; y; t)
+@y
+2
+ 
+= 0 (12)
+Remark 3 Here A
+f
+(x; y; t) is the amplitude of two-dimensional nearly monochro-
+matic waves of the function of two dimensional spaces x, y and time t. A
+f
+(x; y; t)
+acts as the envelope surface of traveling waves. Equation (12) has the robustness
+about the propagation direction; namely, the small variation of the propagation
+direction makes no change of the original equation [8].
+proof Simple expansion from Theorem 1 [6].
+qed
+De nition 2 Directional, nearly monochromatic waves u(x; y; t) are de ned by
+the waves whose energy is almost concentrated in one propagation direction of
+waves as follows [6]:
+u(x; y; t) =
+Z
+ 
+G
+1
+( )e
+ifk
+0
+x cos +k
+0
+y sin  !(k
+0
+)tg
+d ; (13)
+where G
+1
+( ) denotes the directional spectrum of waves considered here. The
+pro le of the directional spectrum of waves has a peak at   =  
+0
+and spreads  
+ 
+(su ciently small) around  
+0
+.
+Remark 4 Directional, nearly monochromatic waves also create an envelope
+surface.
+Theorem 3 The envelope surface created by directional, nearly monochromatic
+waves satis es the following Schr odinger-Nohara equation. [6][7]
+cos  
+0
+@A
+ 
+(x; y)
+@x
++ sin 
+0
+@A
+ 
+(x; y)
+@y
+=
+i
+2k
+0
+ 
+@
+2
+A
+ 
+(x; y)
+@x
+2
++
+@
+2
+A
+ 
+(x; y)
+@y
+2
+ 
+(14)
+Electronic Journal.  27Differential Equations and Control Processes, N 2, 2003
+Remark 5 Here A
+ 
+(x; y) is the amplitude of directional, nearly monochromatic
+waves of the function of two dimensional spaces x and y. A
+ 
+(x; y) acts as the
+time-invariant envelope surface of traveling waves.  
+0
+denotes an almost con-
+centrated wave propagation direction. The Schr odinger-Nohara equation shows
+the steady state of Equation (12). Therefore, the envelope surface created by
+directional, nearly monochromatic waves equals the steady state of the enve-
+lope surface created by two-dimensional wavenumber-based nearly monochro-
+matic waves.
+proof Directional, nearly monochromatic waves have the  xed wavenumber k
+0
+but spread over small propagating directions  
+ 
+around the direction  
+0
+, so most
+of the wave energy is concentrated in one propagating direction  
+0
+. We then
+can assume that two-dimensional plane traveling waves u(x; y; t) have the form
+as:
+u(x; y; t) = A
+ 
+(x; y; t)e
+ifk
+0
+x cos  
+0
++k
+0
+y sin  
+0
+ !(k
+0
+)tg
+: (15)
+HereCA
+ 
+(x; y; t) indicates the amplitude of nearly monochromatic waves in
+terms of the directionality. A
+ 
+(x; y; t) is immediately obtained from Equations
+(13) and (15) as follows:
+A
+ 
+(x; y; t) =
+Z
+ 
+G
+1
+( )e
+iP
+ 
+1
+(x;y; )
+d 
+= A
+ 
+(x; y); (16)
+P
+ 
+1
+(x; y;  ) = k
+0
+x(cos   cos 
+0
+) + k
+0
+y(sin   sin  
+0
+): (17)
+We can  nd that A
+ 
+(x; y; t) becomes time-invariant, i.e., A
+ 
+(x; y) from Equa-
+tions (16) and (17).
+The partial derivatives of A
+ 
+(x; y) with respect to x and y are as follows:
+@A
+ 
+(x; y)
+@x
+= ik
+0
+cos  
+0
+A
+ 
+(x; y) + ik
+0
+Z
+ 
+cos  G
+1
+( )e
+iP
+ 
+1
+(x;y; )
+d ; (18)
+@A
+ 
+(x; y)
+@y
+= ik
+0
+sin  
+0
+A
+ 
+(x; y) + ik
+0
+Z
+ 
+sin  G
+1
+( )e
+iP
+ 
+1
+(x;y; )
+d : (19)
+In general, we obtain the following relations.
+Electronic Journal.  28Differential Equations and Control Processes, N 2, 2003
+Z
+ 
+cos
+n
+ G
+1
+( )e
+iP
+ 
+1
+(x;y; )
+d  =
+ 
+cos
+n
+ 
+0 n
+C
+1
+cos
+n 1
+ 
+0
+( 
+i
+k
+0
+)
+n
+C
+2
+cos
+n 2
+ 
+0
+( 
+i
+k
+0
+)
+2
+    ( 
+i
+k
+0
+)
+n
+ 
+(20)
+ 
+ 
+A
+ 
+(x; y)
+@A
+ 
+(x;y)
+@x
+@
+2
+A
+ 
+(x;y)
+@x
+2
+   
+@
+n
+A
+ 
+(x;y)
+@x
+n
+ 
+T
+Z
+ 
+sin
+n
+ G
+1
+( )e
+iP
+ 
+1
+(x;y; )
+d  =
+ 
+sin
+n
+ 
+0 n
+C
+1
+sin
+n 1
+ 
+0
+( 
+i
+k
+0
+)
+n
+C
+2
+sin
+n 2
+ 
+0
+( 
+i
+k
+0
+)
+2
+     (
+i
+k
+0
+)
+n
+ 
+(22)
+ 
+ 
+A
+ 
+(x; y)
+@A
+ 
+(x;y)
+@y
+@
+2
+A
+ 
+(x;y)
+@y
+2
+   
+@
+n
+A
+ 
+(x;y)
+@y
+n
+ 
+T
+where the superscript of T means the transpose of vectors. The Schr odinger-
+Nohara equation is obtained by n = 2 in Equations (20) and (21). qed
+3. Main Results
+De nition 3 Nearly bi-chromatic waves u(x; t) are de ned by the waves whose
+energy is almost concentrated in two wavenumbers and the approach of these
+wavenumbers is very close as follows:
+u(x; t) =
+Z
+k
+S
+2
+(k)e
+ifkx !(k)tg
+dk: (24)
+Here S
+2
+denotes the spectrum of nearly bi-chromatic waves. The pro le of the
+spectrum of nearly bi-chromatic waves has two peaks at k = k
+0
+and k = k
+1
+and
+spreads  
+k
+(su ciently small) around k
+0
+and k
+1
+. Moreover, k
+0
+and k
+1
+are very
+closely approached with each other as follows:
+k
+1
+= k
+0
++  
+k
+( 
+k
+=k
+0
+  1): (25)
+Remark 6 Nearly bi-chromatic waves create an envelope and we can see it as
+beat in ocean.
+Theorem 4 The envelope created by nearly bi-chromatic waves satis es the
+following modi ed Schr odinger equation.
+Electronic Journal.  29Differential Equations and Control Processes, N 2, 2003
+i
+ 
+@A(x; t)
+@t
++
+ 
+!
+0
+(k
+0
+) +
+ 
+k
+e
+ig(x;t)
+1 + e
+ig(x;t)
+!
+00
+(k
+0
+)
+ 
+@A(x; t)
+@x
+ 
++
+1
+2!
+ 
+!
+00
+(k
+0
+) +
+ 
+k
+e
+ig(x;t)
+1 + e
+ig(x;t)
+!
+000
+(k
+0
+)
+ 
+@
+2
+A(x; t)
+@x
+2
+= 0; (26)
+where
+g(x; t) =  
+k
+ 
+x 
+!(k
+0
+)
+2k
+0
+t
+ 
+=  
+k
+(x  !
+0
+(k
+0
+)t):
+1
+(27)
+Remark 7 The modi ed Schr odinger equation becomes the Schr odinger equa-
+tion of Theorem 1 when  
+k
+= 0; namely,  
+k
+= 0 means that nearly bi-chromatic
+waves change to nearly monochromatic waves.
+proof The following equation can be assumed by the de nition of nearly bi-
+chromatic waves.
+u(x; t) = A(x; t)
+n
+e
+i(k
+0
+x !(k
+0
+)t)
++ e
+i(k
+1
+x !(k
+1
+)t)
+o
+(28)
+This is based on the assumption that most of the energy is concentrated in two
+wavenumbers k
+0
+and k
+1
+, which are very closely approached with each other as
+described De nition 3. !(k
+1
+) is also written by
+!(k
+1
+) = !(k
+0
+) +  
+!
+; (29)
+where
+ 
+!
+= !
+0
+(k
+0
+) 
+k
+:
+2
+(30)
+A(x; t) is derived from Equations (22) and (26) using Equations (23) and (27)
+as follows:
+A(x; t) =
+1
+1 + e
+ig(x;t)
+Z
+k
+S
+2
+(k)e
+iP
+2
+(x;k;t)
+dk: (31)
+where P
+2
+(x; k; t) = P
+1
+(x; k; t).
+The time derivative of A(x; t) is
+@A(x; t)
+@t
+= !
+0
+(k
+0
+)
+i 
+k
+e
+ig(x;t)
+(1 + e
+ig(x;t)
+)
+2
+Z
+k
+S
+2
+(k)e
+iP
+2
+(x;k;t)
+dk
++
+1
+1 + e
+ig(x;t)
+Z
+k
+( i)(!(k)  !(k
+0
+))S
+2
+(k)e
+iP
+2
+(x;k;t)
+dk: (32)
+1
+The dispersion relation of !(k) is presented by !(k) =
+p
+gk tanh(hk) in water waves [9]. Here g and h denote
+acceleration due to gravity and uniform water depth, respectively. If hk   1 (deep water), then !(k) =
+p
+gk.
+So, !
+0
+(k
+0
+) =
+1
+2
+q
+g
+k0
+=
+!(k0)
+2k0
+.
+2
+!(k
+1
+) =
+p
+gk
+1
+=
+p
+g(k
+0
++  
+k
+) =
+p
+gk
+0
+q
+1 +
+ 
+k
+k0
+ 
+= !(k
+0
+)(1 +
+ 
+k
+2k0
+). So,  
+!
+=
+!(k0)
+2k0
+ 
+k
+= !
+0
+(k
+0
+) 
+k
+.
+Electronic Journal.  30Differential Equations and Control Processes, N 2, 2003
+Moreover, the spatial derivative of A(x; t) is obtained by neglecting the second
+and higher order of  
+k
+as follows:
+@
+n
+A(x; t)
+@x
+n
+ 
+=
+ in 
+k
+e
+ig(x;t)
+(1 + e
+ig(x;t)
+)
+2
+Z
+k
+i
+n 1
+(k  k
+0
+)
+n 1
+S
+2
+(k)e
+iP
+2
+(x;k;t)
+dk
++
+1
+1 + e
+ig(x;t)
+Z
+k
+i
+n
+(k  k
+0
+)
+n
+S
+2
+(k)e
+iP
+2
+(x;k;t)
+dk; n = 1; 2; 3;    : (33)
+Substituting the relations of Equations (10) and (31) into Equation (30) leads
+to the following:
+@A(x; t)
+@t
+=
+1
+X
+n=1
+( 1)
+n
+i
+n 1
+!
+(n)
+(k
+0
+)
+n!
+@
+n
+A(x; t)
+@x
+n
++
+ 
+k
+e
+ig(x;t)
+1 + e
+ig(x;t)
+1
+X
+n=1
+( i)
+n+1
+!
+(n+1)
+(k
+0
+)
+n!
+@
+n
+A(x; t)
+@x
+n
+(34)
+Equation (32) represents the higher order governing equation, which governs
+the amplitude of nearly bi-chromatic waves; namely, the equation that the
+envelope of nearly bi-chromatic waves satis es. Neglecting the third and higher
+order of spatial derivatives in Equation (32), we obtain the modi ed Schr odinger
+equation of Theorem 4. qed
+Remark 8 Equation (32) becomes to be identical with Equation (11) when
+ 
+k
+= 0 (namely, when nearly bi-chromatic waves change to nearly monochro-
+matic waves).
+De nition 4 Directional, nearly bi-chromatic waves u(x; y; t) are de ned by
+the waves whose energy is almost concentrated in two wave propagation direc-
+tions and the approach of these directions is very close as follows:
+u(x; y; t) =
+Z
+ 
+G
+2
+( )e
+ifk
+0
+x cos +k
+0
+y sin  !(k
+0
+)tg
+d : (35)
+Here the directional spectrum G
+2
+has two peaks at   =  
+0
+and   =  
+1
+and spreads
+ 
+ 
+(su ciently small) around  
+0
+and  
+1
+. Moreover,  
+0
+and  
+1
+are very closely
+approached with each other as follows:
+ 
+1
+=  
+0
++  
+ 
+( 
+ 
+= 
+0
+  1): (36)
+Theorem 5 The envelope created by directional, nearly bi-chromatic waves sat-
+is es the following modi ed Schr odinger-Nohara equation.
+Electronic Journal.  31Differential Equations and Control Processes, N 2, 2003
+ 
+1
+  
+ 
+e
+ i 
+ 
+h(x;y)
+1+e
+ i 
+ 
+h(x;y)
+ 
+ 
+cos 
+0
+sin 
+0
+sin  
+0
+  cos 
+0
+! 
+@A
+ 
+(x;y)
+@x
+@A
+ 
+(x;y)
+@y
+!
+=
+i
+2k
+0
+ 
+@
+2
+A
+ 
+(x; y)
+@x
+2
++
+@
+2
+A
+ 
+(x; y)
+@y
+2
+ 
+; (37)
+where
+h(x; y) = k
+0
+x sin  
+0
+  k
+0
+y cos 
+0
+: (38)
+Remark 9 The modi ed Schr odinger-Nohara equation becomes to be identi-
+cal with the Schr odinger-Nohara equation of Theorem 3 when  
+ 
+= 0 (namely,
+when directional, nearly bi-chromatic waves change to directional, nearly monochro-
+matic waves).
+proof The following equation can be assumed by the de nition of directional,
+nearly bi-chromatic waves.
+u(x; y; t) = A
+ 
+(x; y; t)
+n
+e
+i(k
+0
+x cos 
+0
++k
+0
+y sin  
+0
+ !(k
+0
+)t)
++ e
+i(k
+0
+x cos  
+1
++k
+0
+y sin  
+1
+ !(k
+0
+)t)
+o
+(39)
+HereCA
+ 
+(x; y; t) indicates the amplitude of nearly bi-chromatic waves in terms
+of the directionality. This is based on the assumption that most of the energy is
+concentrated in two wave propagation directions  
+0
+and  
+1
+as described De ni-
+tion 4. Then A
+ 
+(x; y; t) is immediately obtained from Equations (33) and (37)
+using Equation (34) as follows:
+A
+ 
+(x; y; t) =
+1
+1 + e
+ i 
+ 
+h(x;y)
+Z
+ 
+G
+2
+( )e
+iP
+ 
+2
+(x;y; )
+d 
+= A
+ 
+(x; y) (40)
+where P
+ 
+2
+(x; y;  ) = P
+ 
+1
+(x; y;  ). A
+ 
+(x; y; t) becomes to be a time-invariant form
+of A
+ 
+(x; y) same as Equation (16). Here we obtain the  rst order partial deriva-
+tives of A
+ 
+(x; y) with respect to x and y as follows:
+@A
+ 
+(x; y)
+@x
+=  
+ 
+ik
+0
+cos 
+0
+ 
+i 
+ 
+k
+0
+sin  
+0
+e
+ i 
+ 
+h(x;y)
+1 + e
+ i 
+ 
+h(x;y)
+ 
+A
+ 
+(x; y)
++
+ik
+0
+1 + e
+ i 
+ 
+h(x;y)
+Z
+ 
+cos G
+2
+( )e
+iP
+ 
+2
+(x;y; )
+d ; (41)
+@A
+ 
+(x; y)
+@y
+=  
+ 
+ik
+0
+sin 
+0
++
+i 
+ 
+k
+0
+cos  
+0
+e
+ i 
+ 
+h(x;y)
+1 + e
+ i 
+ 
+h(x;y)
+ 
+A
+ 
+(x; y)
++
+ik
+0
+1 + e
+ i 
+ 
+h(x;y)
+Z
+ 
+sin G
+2
+( )e
+iP
+ 
+2
+(x;y; )
+d : (42)
+Electronic Journal.  32Differential Equations and Control Processes, N 2, 2003
+Moreover, the second order derivatives of A
+ 
+(x; y) are obtained through the
+neglection of the second and higher order of  
+ 
+as follows:
+@
+2
+A
+ 
+(x; y)
+@x
+2
+=  
+ 
+k
+2
+0
+cos
+2
+ 
+0
+ 
+ 
+ 
+k
+2
+0
+sin 2 
+0
+e
+ i 
+ 
+h(x;y)
+1 + e
+ i 
+ 
+h(x;y)
+ 
+A
+ 
+(x; y)
++
+ 
+2k
+2
+0
+cos  
+0
+1 + e
+ i 
+ 
+h(x;y)
+ 
+2 
+ 
+k
+2
+0
+sin 
+0
+e
+ i 
+ 
+h(x;y)
+(1 + e
+ i 
+ 
+h(x;y)
+)
+2
+ 
+ 
+Z
+ 
+cos  G
+2
+( )e
+iP
+ 
+2
+(x;y; )
+d  (43)
+ 
+k
+2
+0
+1 + e
+ i 
+ 
+h(x;y)
+Z
+ 
+cos
+2
+ G
+2
+( )e
+iP
+ 
+2
+(x;y; )
+d ;
+@
+2
+A
+ 
+(x; y)
+@y
+2
+=  
+ 
+k
+2
+0
+sin
+2
+ 
+0
++
+ 
+ 
+k
+2
+0
+sin 2 
+0
+e
+ i 
+ 
+h(x;y)
+1 + e
+ i 
+ 
+h(x;y)
+ 
+A
+ 
+(x; y)
++
+ 
+2k
+2
+0
+sin 
+0
+1 + e
+ i 
+ 
+h(x;y)
++
+2 
+ 
+k
+2
+0
+cos  
+0
+e
+ i 
+ 
+h(x;y)
+(1 + e
+ i 
+ 
+h(x;y)
+)
+2
+ 
+ 
+Z
+ 
+sin G
+2
+( )e
+iP
+ 
+2
+(x;y; )
+d  (44)
+ 
+k
+2
+0
+1 + e
+ i 
+ 
+h(x;y)
+Z
+ 
+sin
+2
+ G
+2
+( )e
+iP
+ 
+2
+(x;y; )
+d :
+From Equations (39) and (40) the following relations are obtained.
+cos  
+0
+@A
+ 
+(x; y)
+@x
++ sin 
+0
+@A
+ 
+(x; y)
+@y
+=
+ ik
+0
+A
+ 
+(x; y) +
+ik
+0
+1 + e
+ i 
+ 
+h(x;y)
+Z
+ 
+cos(    
+0
+)G
+2
+( )e
+iP
+ 
+2
+(x;y; )
+d  (45)
+sin  
+0
+@A
+ 
+(x; y)
+@x
+  cos 
+0
+@A
+ 
+(x; y)
+@y
+=
+i 
+ 
+k
+0
+e
+ i 
+ 
+h(x;y)
+1 + e
+ i 
+ 
+h(x;y)
+A
+ 
+(x; y)  
+ik
+0
+1 + e
+ i 
+ 
+h(x;y)
+Z
+ 
+sin(    
+0
+)G
+2
+( )e
+iP
+ 
+2
+(x;y; )
+d  (46)
+We also obtain the following relation from Equations (41) and (42).
+@
+2
+A
+ 
+(x; y)
+@x
+2
++
+@
+2
+A
+ 
+(x; y)
+@y
+2
+=
+ 2k
+2
+0
+A
+ 
+(x; y) +
+2k
+2
+0
+1 + e
+ i 
+ 
+h(x;y)
+Z
+ 
+cos(    
+0
+)G
+2
+( )e
+iP
+ 
+2
+(x;y; )
+d  (47)
++
+2 
+ 
+k
+2
+0
+e
+ i 
+ 
+h(x;y)
+(1 + e
+ i 
+ 
+h(x;y)
+)
+2
+Z
+ 
+sin(    
+0
+)G
+2
+( )e
+iP
+ 
+2
+(x;y; )
+d 
+Electronic Journal.  33Differential Equations and Control Processes, N 2, 2003
+The modi ed Schr odinger-Nohara equation is obtained from Equations (43),
+(44) and (45). qed
+References
+[1] Rice, S. O., \Mathematical analysis of random noise," Bell Syst. Tech. J.,
+24, 1944, pp.46-156.
+[2] Longuet-Higgins, M. S., \The statistical analysis of a random moving sur-
+face," Philos.Trans. Roy. Soc. London, Ser. A, 249, 1957, pp.321-387.
+[3] Haberman, R., Elementary Applied Partial Differential Equations, Prentice
+Hall, 1983.
+[4] for example, Tucker, M. J., Waves in Ocean Engineering, Ellis Horwood,
+1991.
+[5] Hashimoto, H. and Ono, H., \Nonlinear Modulation of Gravity Waves," J.
+Phys. Soc. Japan, 33, 3, 1972, pp.805-811.
+[6] Nohara, B.T., \Consideration of Higher Order Governing Equations of En-
+velope Surface and Governing Equations of Envelope Surface created by
+Directional, Nearly Monochromatic Waves," International Journal of Dif-
+ferential Equations and Applications, 6, 2, 2002, pp.209-225.
+[7] Nohara, B. T., \Derivation and Consideration of Governing Equations of
+Envelope Surface Created by Directional, Nearly MonochromaticWaves,"
+International Journal of Nonlinear Dynamics and Chaos in Engineering
+Systems, to appear.
+[8] Nohara, B. T., \Robustness of Governing Equations of Envelope Surface
+Created by Nearly Monochromatic Waves," J. Differential Equations and
+Control Processes, 4, 2002, pp.53-66.
+[9] Whitham, G. B., Linear and Nonlinear Waves, John Wiley & Sons, Inc.,
+New York, 1974.
+[10] Lighthill, J., Waves in Fluids, Cambridge University Press, Cambridge,
+1978.
+Electronic Journal.  34

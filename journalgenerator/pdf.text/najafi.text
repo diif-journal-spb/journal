@@ -1,0 +1,1236 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 2, 2011
+Electronic Journal,
+reg. N ΦC77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+New Numerical Method for Analyzing BIBO Stability
+of the Continuous Time Linear System
+H.S.Najaﬁ and A.H.Refahi
+Department of Mathematics,Faculty of Sciences
+University of Guilan,P.O.Box 1841,Rasht,Iran
+hnajaﬁ@guilan.ac.ir,ah refahi@yahoo.com
+Abstract
+In this paper we prove a new theorem for computing inertia of symmetric large sparse matrix.
+Based on this theorem, we develop an robust algorithm for determining the inertia and BIBO
+stability of a continuous-time linear system. The most important property of these methods is
+determining the inertia and BIBO stability without computing the poles of transfer function.
+Mathematics Subject Classiﬁcation:65F30; 65F50
+Keywords: Krylov subspace, stability, exact inertia, symmetric, tridiagonal form.
+1 Introduction
+A classical approach to determine the stability and inertia is to ﬁnd the characteristic poly-
+nomial of the of the state matrix A followed by application of the Routh-Hurwitz criterion in
+the continuous-time case and the Schur-Cohn criterion in the discrete-time case. These ap-
+proaches are historically important and were developed at a time when numerically ﬁnding the
+eigenvalues of a matrix was a diﬃcult problem. In view of the above statement, it is clear
+that the best way to numerically check the stability and inertia is to explicitly compute all the
+eigenvalues. However, by computing the eigenvalues, one gets more than stability and inertia.
+Furthermore if the eigenvalues of A are very ill-conditioned the eigenvalue problem may be
+misleading. If A is a symmetric matrix (complex Hermitian) then the Sylvester law of inertia
+providesuswithdiagonalpivoting factorizationforcomputetheinertiaofA. Thisfactorization
+requiresn
+3
+/6ﬂops,whenAisalargeandsparsematrix, thisfactorizationisnotuseful(see[1-3]).
+K.V.Fernando describe an algorithm in ﬂoating point arithmetic to compute the exact inertia
+of a real symmetric tridiagonal matrix (see[6]). Our main task in this paper is using Lanczos,
+weighted Arnoldi and block Arnoldi processes to develop an eﬃcient algorithm for determining
+the inertia and BIBO stability of symmetric state matrix, not necessarily tridiagonal matrix.Differential Equations and Control Processes, N 2, 2011
+2 Stability of a Continuous-Time System
+Deﬁnition 2.1 An equilibrium state of the system
+˙ x(t) =Ax(t), x(0) =x
+0
+, (2-1)
+is the vector x
+e
+satisfying
+Ax
+e
+= 0.
+Clearly, x
+e
+= 0 is an equilibrium state and it is the unique equilibrium state if and only if A is
+nonsingular.
+Deﬁnition 2.2 An equilibrium state x
+e
+is asymptotically stable if for initial state, the state
+vector x(t) approaches x
+e
+as time increases.
+The system (2.1) is asymptotically stable if and only if the equilibrium state x
+e
+= 0 is asymp-
+totically stable. Thus the system (2.1) is asymptotically stable if and only if x(t) → 0 as
+t→∞.
+Theorem 2.3 The system (2.1) is asymptotically stable if and only if all the eigenvalues of
+A have negative real parts.
+Proof. see[5].
+Deﬁnition 2.4 A matrix A is called a stable matrix if all of the eigenvalues of A have
+negative real parts.
+2.1 Bounded-Input Bounded-Output Stability
+The continuous-time linear system:
+˙ x(t) = Ax(t)+Bu(t),
+y(t) = Cx(t) (2-2)
+is said to be bounded-input bounded output (BIBO) stable if for any bounded input, the
+output is also bounded.
+The (BIBO) stability is governed by the poles of the transfer function G(s) =C(sI−A)
+−1
+B.
+Theorem 2.5 The system (2.2) is (BIBO) stable if and only if every pole of G(s) has a
+negative real part.
+Remark 2.6 Since every pole of G(s) is also an eigenvalue of A, an asymptotically stable
+system is also (BIBO) stable.However, the converse is not true.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 2Differential Equations and Control Processes, N 2, 2011
+2.2 Inertia
+Deﬁnition 2.7 The inertia of a matrix order n,denoted by In(A),is the triplet
+(π(A),ν(A),δ(A)) where π(A),ν(A) and δ(A) are, respectively, the number of eigenvalues of A
+with positive, negative and zero real parts.
+Not that π(A)+ν(A)+δ(A) =n, andA is a stable matrix if and only if In(A) = (0,n,0).
+Theorem 2.8 (The Sylvester law of inertia)
+Let A be a Hermitian matrix and P be a nonsingular matrix. Then In(A) =In(PAP
+T
+).
+Proof. see[4].
+Remark 2.9 using the Sylvester law of inertia, the inertia of a given Hermitian matrix A
+can be computed in terms of the diagonal matrix D associated with its triangular factorization
+A = LDL
+∗
+, where L is a nonsingular lower triangular matrix, and D is diagonal matrix with
+p positive, q negative, and r zero diagonal entries (p+q+r =n). Then by the Sylvester law of
+inertia, In(A) = (p,q,r).
+Let
+T =
+
+
+
+
+
+
+
+
+
+α
+1
+β
+1
+β
+1
+α
+2
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+. α
+n−1
+β
+n−1
+β
+n−1
+α
+n
+
+
+
+
+
+
+
+
+
+n×n
+And
+Z
+i
+=β
+2
+i
+(i = 1,··· ,n−1)
+K.V.Fernando makes the UDU
+T
+factorization of a shifted symmetric triangular matrixT−τI.
+He uses ν to denote the number of negative diagonal elements of D, which according to the
+Sylvester inertia theorem gives the number of negative eigenvalues ofT−τI. Similarly, π is the
+number of positive elements of D and it indicates the number of positive eigenvalues of T−τI.
+A simple algorithm exists for computing the diagonal elements of the matrix D. (See[7,8]).
+3 Inertia and BIBO Stability of a Continuous-Time System
+There are reliable algorithms to transform real symmetric matrices and complex Hermitian
+matrices to the real symmetric tri-diagonal format. On of the most important methods for
+doing this work,in the case that matrix is large and sparse, are the Krylov subspace methods
+Electronic Journal. http://www.math.spbu.ru/diffjournal 3Differential Equations and Control Processes, N 2, 2011
+such as Hermitian Lanczos and Block Arnoldi process. From combination of these algorithms
+by algorithm described in [4] we can obtain new algorithms for determination the inertia of a
+large sparse matrices without computing the eigenvalues.
+Remark 3.1 Let A is a symmetric matrix of order n and the matrix H
+n
+∈ R
+n×n
+be the
+tri-diagonal matrix whose nonzero entries as the scalars t
+i,j
+constructed by the Lanczos process.
+Let us deﬁne the matrix
+¯
+H
+n
+∈R
+(n+1)×n
+by
+¯
+H
+n
+=
+ 
+H
+n
+h
+n+1,n
+e
+T
+n
+!
+It is known that the matrices built by the Lanczos process satisfy the following relations
+V
+T
+n
+V
+n
+=I
+n
+,
+AV
+n
+=V
+n+1
+¯
+H
+n
+,
+H
+n
+=V
+T
+n
+AV
+n
+.
+Now by using the Sylvester law of inertia (Theorem 2.8), we have
+In(A) =In(V
+T
+n
+AV
+n
+) =In(H
+n
+).
+Remark3.1 suggests the following algorithm for computing the inertia and determination the
+BIBO stability of a continuous-time linear system.
+Algorithm 1 (Lanczos Krylov subspace method)
+choose vector v
+1
+of norm 1 and set β
+1
+= 0,v
+0
+= 0
+choose scalar τ (shift parameter)
+for j = 1,...,n do
+w
+j
+=Av
+j
+−β
+j
+v
+j−1
+α
+j
+= (w
+j
+,v
+j
+)
+w
+j
+=w
+j
+−α
+j
+v
+j
+β
+j+1
+=kw
+j
+k
+2
+v
+j+1
+=w
+j
+/β
+j+1
+end for
+α = (α
+1
+,...,α
+n
+)
+for i = 1,...,n−1 do
+z
+i
+=β
+2
+i+1
+and z = (z
+1
+,z
+2
+,...,z
+n−1
+)
+(π,ν,δ) =inertia(α,z,τ) see([3])
+End
+Example 3.2 Consider the symmetric matrix A as the form:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 4Differential Equations and Control Processes, N 2, 2011
+Table 1: Shows implementation of Lanczos Krylov subspace method with different value of n
+n
+
+
+V
+T
+n
+AV
+n
+−T
+n
+
+
+In
+0
+(A) Situation BIBO stability Time
+10 3.311 (0,10,0) exact yes 0.0006
+16 3.971 (0,16,0) exact yes 0.0014
+32 4.98 (1,31,0) fail fail 0.0029
+64 8.22 (2,62,0) fail fail 0.0063
+128 13.16 (6,122,0) fail fail 0.0209
+256 13.65 (9,247,0) fail fail 0.1223
+400 14.19 (13,387,0) fail fail 0.4314
+512 14.38 (13,499,0) fail fail 0.9658
+A=
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+−7.33 −.21 −1.2 1.5 −.13 −1.42 0 ... ... 0
+−.21 −7.33 −.21 −1.2 1.5 −.13 1.42 0
+.
+.
+. 0
+−1.2 −.21
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+. 0
+.
+.
+.
+1.5 −1.2
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+. −1.42 0
+−.13 1.5
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+. −.13 −1.42
+−1.42 −.13
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+. 1.5 −.13
+0 −1.42
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+. −1.2 1.5
+.
+.
+. 0
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+. −.21 −1.2
+.
+.
+.
+.
+.
+. 0 −1.42 −.13 1.5 −1.2 −.21 −7.33 −.21
+0 0 ... 0 −1.42 −.13 1.5 −1.2 −.21 −7.33
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+n×n
+We apply Lanczos Krylov subspace method to compute the exact inertia of A. This algorithm
+has been tested when the dimension of matrix A increases. The results are shown in table 1.
+In table 1 the column of error is the precision of transforming the matrix A to a tri-diagonal
+matrix. Note that if the error is small, then the inertia of A can be computed correctly. But
+if the error is not small, this dose not mean that the inertia of A cannot be computed, in this
+case by choosing a proper shift (τ) the inertia of A will be computed. The best case is when
+the shifted parameter is zero. In this case the amount of computation is less. Thus is why we
+have a column called In
+0
+(A) in table 1 to have more information. As the results show for any
+n the value of In
+0
+(A) is fail. Now we prove the main theorem of the paper.
+Theorem 3.3 Assume that the basis V
+n
+= [v
+1
+,...,v
+m
+] and
+˜
+V
+n
+= [˜ v
+1
+,...,˜ v
+m
+] are constructed
+by Arnoldi and weighted Arnoldi process respectively, such that
+V
+T
+n
+V
+n
+=I
+n
+H
+n
+=V
+T
+n
+AV
+n
+˜
+V
+T
+n
+D
+˜
+V
+n
+=I
+n
+˜
+H
+n
+=
+˜
+V
+T
+n
+DA
+˜
+V
+n
+where
+Electronic Journal. http://www.math.spbu.ru/diffjournal 5Differential Equations and Control Processes, N 2, 2011
+AV
+n
+=V
+n+1
+¯
+H
+n
+A
+˜
+V
+n
+=
+˜
+V
+n+1
+¯
+˜
+H
+n
+(3-1)
+and
+¯
+H
+n
+=
+ 
+H
+n
+h
+n+1,n
+e
+T
+n
+!
+¯
+˜
+H
+n
+=
+ 
+˜
+H
+n
+˜
+h
+n+1,n
+e
+T
+n
+!
+.
+If v
+n+1
+and ˜ v
+n+1
+are linearly dependent then
+In(A) =In(H
+n
+) =in(
+˜
+H
+n
+) .
+Proof. As V
+j
+and
+˜
+V
+j
+are two basis of the Krylov subspace K
+j
+(A,v) for all j∈{1,2,...,m}, we
+can express
+˜
+V
+n
+in terms of V
+n
+as
+˜
+V
+n
+=V
+n
+U
+n
+(3-2)
+where U
+n
+is a m×m upper triangular matrix.
+If we multiply (3.2) on the left by V
+T
+n
+, we obtain
+U
+n
+=V
+T
+n
+˜
+V
+n
+,
+and if we multiply (3.2) on the left by
+˜
+V
+T
+n
+D, we get
+U
+−1
+n
+=
+˜
+V
+T
+n
+DV
+n
+.
+Using the relations (3.1) and (3.2), we obtain
+AV
+n
+U
+n
+=V
+n+1
+U
+n+1
+¯
+˜
+H
+n
+V
+n+1
+¯
+H
+n
+U
+n
+=V
+n+1
+U
+n+1
+¯
+˜
+H
+n
+.
+As V
+n+1
+is orthonormal, we get
+¯
+H
+n
+U
+n
+=U
+n+1
+¯
+˜
+H
+n
+Multiplying the last equality on the left by the matrix U
+−1
+n+1
+, we obtain
+¯
+˜
+H
+n
+=U
+−1
+n+1
+¯
+H
+n
+U
+n
+. (3-3)
+Now we denote by z
+i,j
+(1≤i,j≤n) the entries of the matrix U
+−1
+n
+. We split the matrix U
+−1
+n+1
+as
+U
+−1
+n+1
+=
+ 
+U
+−1
+n
+z
+n+1
+0...0 z
+n+1,n+1
+!
+=
+ 
+ˆ
+U
+−1
+n+1
+0...0 z
+n+1,n+1
+!
+where z
+n+1
+= (z
+1,n+1
+,z
+2,n+1
+,...,z
+n,n+1
+)
+T
+. So, the matrix
+ˆ
+U
+−1
+n+1
+is obtained from the matrixU
+−1
+n+1
+by removing its last row.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 6Differential Equations and Control Processes, N 2, 2011
+From the relation (3.2), we can write
+˜
+H
+n
+=
+ˆ
+U
+−1
+n+1
+˜
+H
+n
+U
+n
+,
+then, we have the relations
+˜
+H
+n
+=
+ 
+U
+−1
+n
+z
+n+1
+ 
+ 
+H
+n
+h
+n+1,n
+e
+T
+n
+!
+U
+n
+,
+= U
+−1
+n
+H
+n
+U
+n
++h
+n+1,n
+z
+n+1
+e
+T
+n
+U
+n
+.
+As the matrix U
+n
+is upper triangular, the matrix product e
+T
+n
+U
+n
+is equal to u
+n,n
+e
+T
+n
+. There-
+fore, we obtain
+˜
+H
+n
+=U
+−1
+n
+H
+n
+U
+n
++h
+n+1,n
+z
+n+1
+e
+T
+n
+,
+where z
+n+1
+∈ R
+n
+is obtained from the column n + 1 of the matrix U
+−1
+n+1
+by deleting its last
+component. As v
+n+1
+and ˜ v
+n+1
+are linearly dependent, z
+n+1
+= 0. Therefor the matrix H
+n
+and
+˜
+H
+n
+are similar and we have In(A) =In(H
+n
+) =In(
+˜
+H
+n
+).  
+Theorem3.3 suggests the following method for computing the inertia and determination the
+BIBO stability of a continuous-time linear system.
+Algorithm 2 (Weighted Krylov method)
+choose a vector d = (d
+1
+,...,d
+n
+) and set D =diag(d)
+choose a vector v and set ˆ v
+1
+=v/kvk
+D
+choose scalar τ (shift parametr)
+for j = 1,...,n do
+w =Aˆ v
+j
+for i = 1,...,j do
+ˆ
+h
+i,j
+= (w,ˆ v
+i
+)
+D
+w =w−
+ˆ
+h
+i,j
+ˆ v
+i
+endfor
+ˆ
+h
+j+1,j
+=kwk
+D
+, if
+ˆ
+h
+j+1,j
+= 0 stop
+ˆ v
+j+1
+=w/
+ˆ
+h
+j+1,j
+end for
+for i = 1,...,n do
+α
+i
+=
+ˆ
+h
+i,i
+and α = (α
+1
+,...,α
+n
+)
+for i = 1,...,n−1 do
+z
+i
+=
+ˆ
+h
+2
+i,i+1
+and z = (z
+1
+,z
+2
+,...,z
+n−1
+)
+(π,ν,δ) =inertia(α,z,τ) see([3])
+End
+Example 3.4 Let A is the same matrix that used in numerical Example 3.2 and we increase
+its dimension orderly. We apply Weighted Krylov method to ﬁnd the exact inertia of A. The
+result has been shown in Table 3.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 7Differential Equations and Control Processes, N 2, 2011
+Table 2: Shows implementation of Weighted Krylov method with different value of n
+n
+
+
+V
+T
+n
+AV
+n
+−T
+n
+
+
+In
+0
+(A) Situation BIBOstability Time
+10 1.66 (0,10,0) exact yes 0.0011
+16 1.89 (0,16,0) exact yes 0.0025
+32 2.21 (0,32,0) exact yes 0.0094
+64 2.90 (0,64,0) exact yes 0.0376
+128 4.43 (0,128,0) exact yes 0.1418
+256 5.13 (0,256,0) exact yes 0.7419
+400 5.45 (0,400,0) exact yes 1.598
+512 8.89 (13,499,0) fail fail 2.965
+As the results show although by increasing the dimension of the matrix the error also increases
+but still the result completely better than the results of Lanczos Krylov subspace method. The
+other good point in Weighted Krylov subspace method is that when τ = 0 then In(A) can be
+computed very accurately. Note that when n = 256 then τ = 10E−13. Recall that for any τ
+belong in shift interval the value of In(A) can be computed, but the most important point is
+that when τ = 0,In(A) must be computed (zero is in the shift interval). Now we modify the
+algorithm 3 in the way that when n is large, works accurate. Our scheme for doing this work is
+to use Block Arnoldi process instead of Arnoldi process. In this way the error of similarization
+decreases. We must also use Arnoldi or Weighted Arnoldi process in new algorithm to have a
+tri-diagonal form.
+Algorithm 3 (Block Krylov method)
+Choose an unitary matrix V
+1
+of dimension n×r
+for j = 1,...,m do
+for i = 1,...,j do
+H
+i,j
+=V
+T
+i
+AV
+j
+W
+j
+=AV
+j
+−
+P
+j
+k=1
+V
+k
+H
+k,j
+Compute the QR decomposition W
+j
+=V
+j+1
+H
+j+1,j
+end for end for.
+choose a vector v and scalar τ(shift parameter) and set ˆ v
+1
+=
+v
+kvk
+D
+for j = 1,...,n do
+w =Hˆ v
+j
+for i = 1,...,j do
+ˆ
+h
+i,j
+= (w.ˆ v
+i
+)
+D
+w =w−
+ˆ
+h
+i,j
+ˆ v
+i
+end for
+ˆ
+h
+j+1,j
+=kwk
+D
+if
+ˆ
+h
+j+1,j
+= 0 stop
+ˆ v
+j+1
+=
+w
+ˆ
+h
+j+1,j
+end for
+for i = 1,...,n do
+α
+i
+=
+ˆ
+h
+i,i
+and α = (α
+1
+,...,α
+n
+)
+for i = 1,...,n−1 do
+z
+i
+=
+ˆ
+h
+2
+i,i+1
+and z = (z
+1
+,z
+2
+,...,z
+n−1
+)
+(π,ν,δ) =inertia(α,z,τ) see([3])
+End
+Example 3.5 In this test we set n = 512, which is the dimension of A, and use Block
+Electronic Journal. http://www.math.spbu.ru/diffjournal 8Differential Equations and Control Processes, N 2, 2011
+Table 3: Shows implementation of Block Krylov subspace method for n = 512 with different value of
+r, m
+r m error In
+0
+(A) Situation BIBO stability Time
+1 512 94.43 (10,500,2) fail fail 6.8784
+2 256 46.91 (7,503,2) fail fail 4.0820
+4 128 13.11 (3,508,1) fail fail 3.1079
+8 64 0.09 (2,510,0) fail fail 2.6852
+16 32 5.32E−06 (0,512,0) exact yes 2.5816
+32 16 3.12E−08 (0,512,0) exact yes 2.5676
+64 8 4.52E−11 (0,512,0) exact yes 2.5408
+128 4 1.30E−11 (0,512,0) exact yes 2.5225
+256 2 3.67E−12 (0,512,0) exact yes 2.5013
+Table 4: Implementation of Block Krylov and Weighted Block Krylov methods for large values of n
+n Block Krylov method Weighted Block Krylov method
+In
+0
+(A) situation Time In
+0
+(A) situation Time BIBO stability
+512 (0,512,0) exact 2.50 (12,4,0) exact 2.11 yes
+800 (0,800,0) exact 9.34 (0,800,0) exact 8.358 yes
+1000 (0,1000,0) exact 23.37 (0,1000,0) exact 19.51 yes
+1200 (0,1200,0) exact 39.09 (0,1200,0) exact 31.862 yes
+1400 (11,1385,4) fail 54.62 (0,1400,0) exact 44.286 yes
+1800 (19,1778,3) fail 82.19 (0,1800,0) exact 66.342 yes
+2000 (23,1976,1) fail 101.33 (0,2000,0) exact 81.654 yes
+Krylov method to compute In(A). The results are shown in Table 3.
+As the results show when m decreases or r increases the error decreases. Thus for computing
+In(A
+(512×512)
+) by algorithm 4 it is suﬃcient to have m = 2 and r = 256. In table 4 the results
+show that when higher dimensions used the model works well.
+Example 3.6 Let A is the same matrix that used in Example 3.2 and we increase its di-
+mension orderly. We apply Block Krylov and Weighted Block Krylov methods to ﬁnd the exact
+inertia and determination BIBO stability of A with different value of n. the result has been
+shown in Table 4.
+4 COMMENTS AND CONCLUSION
+1. Two new methods presented in this paper can compute In
+(
+A) in the case that A is a
+symmetric large sparse matrix. Mean while, other methods such as diagonal pivoting
+factorization do not have this capability.
+2. As the results show algorithm 2 for large dimensions takes a lot of time to do the job,
+Electronic Journal. http://www.math.spbu.ru/diffjournal 9Differential Equations and Control Processes, N 2, 2011
+but Weighted Block Krylov method works fast and very accurate. Not that in algorithm
+3 we select m = 2 and r = n/2 for any value of n. for example when n = 1024 for
+computing the inertia of A with algorithm 3, it is suﬃcient m = 2 and r = 512 and
+it is a computation remarkable point in this algorithm. Since weighted Arnoldi process
+requires 2mN
+nz
++5/2m
+2
+nﬂopsand blockArnoldiprocess requires2mN
+nz
++2m
+2
+nthatN
+nz
+is the number of nonzero elements of the matrix A, thus the total number of operations
+for Block Krylov subspace method is approximately 8N
+nz
++ 18n that with comparison
+diagonal pivoting factorization method,that requires n
+3
+/6 ﬂops, Block Krylov subspace
+method is a robust algorithm for computing the inertia of a large and sparse symmetric
+matrices.
+Acknowledgment
+Authors would like to thank the referees for hosting this paper.
+References
+[1] J.R.Bunch, Analysis of the diagonalpivoting method,SIAMJ.Numer.Anal.8(1971)656-680.
+[2] J.R.Bunch, L.Kaufman, Some stable method for inertia calculating and solving symmetric
+linear system, Math.Comp.31 (1977) 162-179.
+[3] J.R.Bunch, L.Kaufman, B.Parlett, Decomposition of a symmetric matrix, Numer. Math.
+27(1976) 95-109.
+[4] B.E.Cain, Inertia theory, Linear Algebra Appl. 30 (1980) 211-240.
+[5] B.N.Datta, Stability and inertia, Linear Algebra and Its Applications, 302-303 (2000) 563-
+600.
+[6] K.V. Fernando, Computing of inertia and inclusions of eigenvalues of tridiagonal matrices,
+Linear Algebra and Its Applications, 422(2007) 77-97.
+[7] K.V. Fernando, Computing an eigenvector of a tridiagonal when the eigenvalue is known,
+Z.Angew, Math. Mech, 76 (suppl,1) (1996) 299-302.
+[8] K.V. Fernando, Accurately counting singular values of bidiagonal matrices and eigenvalues
+of skew-symmetric tridiagonal matrices, SIAM J.Matrix Anal, APPL,20 (1998) 373-399.
+[9] Y.SAAD, Krylov subspace method for solving large unsymmetric linear system, Math. Com-
+put,37 (1981) 105-126.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 10

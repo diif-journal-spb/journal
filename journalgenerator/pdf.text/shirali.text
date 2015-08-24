@@ -1,0 +1,1004 @@
+﻿DIFFERENTIAL EQUATIONS 
+AND 
+CONTROL PROCESSES 
+№ 1, 2009 
+Electronic Journal, 
+reg. № P2375 at 07.03.97 
+ISSN 1817-2172 
+ 
+http://www.newa.ru/journal
+http://www.math.spbu.ru/user/diffjournal
+e-mail: jodiff@mail.ru
+ 
+Control Theory 
+ 
+ 
+ 
+ 
+CHARACTERIZING A CONTROL VIA AN INITIAL VALUE 
+PROBLEM 
+ 
+Satish Shirali 
+House No.899, Sector 21, Panchkula, Haryana 134116, India 
+Abstract 
+For a controllable autonomous linear system, an initial value problem is presented, which depends only 
+on (a) the matrices in the system (b) the initial state and (c) duration of control, such that its (unique) 
+solution provides one possible control function. The dependence need not determine the initial value 
+uniquely. 
+Keywords: Control, linear autonomous, initial value problem. 
+2000MSC: 34H05, 34K35, 93C15. 
+1. Introduction 
+Let B be an n×m matrix and A and n×n matrix such that the pair (A,B) is controllable in the usual sense that the 
+autonomous initial value problem 
+0
+',(0) x xAx Bu x =+= 
+on has the property that, for any n×1 vector x [0, ) ∞
+0
+ and any positive T, there exists an m×1 vector function u, 
+called control, such that the solution vanishes at T. We shall show that one possible control is the unique 
+solution of an n
+th
+ order differential equation that depends on A, B, x
+0
+ as well as T. In fact, the coefficients in the 
+differential equation are the same as in the characteristic polynomial of A but alternate in sign. 
+2. Notation 
+Throughout this article, A will denote a real n×n matrix with characteristic polynomial 
+12
+12
+det( ) ,
+nn n
+nn
+IA b b b
+0
+− −
+−−
+λ− =λ − λ − λ − − L 
+where I is the identity matrix. The transpose of a matrix will be indicated by a superscript tr. By 
+01 1
+,, ,
+n
+pp p
+−
+K , 
+we shall mean the functions whose existence is asserted by Theorem 3.1. 
+3. Background results 
+ 
+We begin with a result about ex which is essentially proved in [3]. p( ) tA
+3.1. Theorem. There exist real valued functions 
+01 1
+,,,
+n
+ppp
+−
+K on R such that Differential Equations and Control Processes, № 1,2009 
+ 
+1
+01 1
+exp( ) ( ) ( ) ( ) ,
+n
+n
+tA p t I p t A p t A
+−
+−
+=+ ++ L …………………………………(1) 
+and 
+01 1
+,,,
+n
+ppp
+−
+K have Wronskian matrix I at t = 0. ………………………………(2) 
+Moreover 
+() ( 1)
+10
+00
+nn
+jj j n
+1 p bp b p for j n
+−
+−
+−−− = ≤≤ L − ………………………………(3) 
+and 
+01 1
+,, ,
+n
+ppp
+−
+K are linearly independent.……………………………………(4) 
+PROOF: The initial value problem 
+0
+'() p t =  
+01
+()
+n
+bp t
+−
+1
+'( ) p t =
+0
+() p t +  
+11
+()
+n
+bp t
+−
+2
+'() p t = 
+1
+() p t +  
+21
+()
+n
+bp t
+−
+… … … … 
+1
+'()
+n
+p t
+−
+= 
+2
+()
+n
+p t
+−
++ 
+11
+()
+nn
+bp t
+−−
+, 
+01 1
+(0) 1, (0) 0, , (0) 0,
+n
+pp p
+−
+== K = 
+has a (unique) solution. A computation from the differential equations and the initial condition shows that the 
+Wronskian matrix of the solution at t = 0 is the identity matrix I. Thus (2) holds. 
+Now, by the Cayley-Hamilton Theorem, 
+1
+01 1
+.
+nn
+n
+AbI bA b A
+−
+−
+=+ + + L 
+Therefore the n×n matrix valued function 
+1
+01
+() () ()
+n
+n
+ut p t I p t A
+−
+−
+=++ L 
+satisfies 
+'( ) ut =
+1
+01
+'() ' ()
+n
+n
+p tI p t A
+−
+−
+++ L 
+=
+1
+01 0 1 1 2 1 1
+() () () () () ()(
+n
+nn nnn
+bp t I p t bp t A p t b p t A)
+−
+−− −−−
+++ ++ + L 
+= 
+11
+02 101
+( ) () ()( )
+nn
+nn n
+ptA p tA p t bI bA b A
+−−
+−− −
+++ + + + + LL
+1
+1
+=
+1
+01
+() ( ) ()
+nn
+nn
+p tA p tA p tA
+−
+−−
+++ + L 
+= (). Aut 
+Since u(0) = I, it follows that (1) and (4) hold. 
+Finally, the characteristic polynomial of the constant matrix on the right side of the linear system, through 
+which the functions 
+01 1
+,,,
+n
+ppp
+−
+K have been set up, is the same at that of A and the secular equation [1; see 
+definition on p.115] of the system is 
+() ( 1)
+10
+0.
+nn
+n
+yb y by
+−
+−
+− −− = L 
+However, each solution of the linear system must satisfy the secular equation [1, Theorem 3, p.116]. Thus (3) 
+must hold.  
+3.2. Proposition. Any element of can be regarded as 
+mn
+R
+0
+1
+1 n
+c
+c
+c
+−
+⎡ ⎤
+⎢ ⎥
+⎢ ⎥
+⎢ ⎥
+⎢ ⎥
+⎢ ⎥
+⎣ ⎦
+M
+, or equivalently as , where 
+ are columns in . Therefore there is an associated valued function 
+01 1
+[, , , ]
+tr tr tr tr
+n
+cc c
+−
+K
+0
+,,
+n
+cc
+−
+K
+1
+m
+R
+m
+R
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  2 Differential Equations and Control Processes, № 1,2009 
+ 
+1
+0
+() ( ) .
+n
+j
+j
+ut p t c
+j
+−
+=
+=−
+∑ ………………………………………………(5). 
+The linear transformation  defined by :
+mn mn
+Λ→ RR
+0 0
+1 0
+01 1
+1 0
+()()
+()()
+([ , , , ] )
+()()
+T
+T
+tr tr tr tr
+n
+T
+n
+p tu t dt
+p tu t dt
+cc c
+p tu t dt
+−
+−
+⎡ ⎤
+⎢ ⎥
+⎢ ⎥
+⎢ ⎥
+⎢ ⎥
+⎢ ⎥
+⎢ ⎥
+⎣ ⎦
+−
+∫
+−
+∫
+Λ=
+−
+∫
+K
+M
+, 
+where T is a fixed positive number, is onto and hence one-to-one. 
+PROOF: If Λ is not onto, then there exist n columns 
+01
+,,
+n −
+γγ K in  such that the mn-vector 
+ is nonzero and is orthogonal to every vector in . Thus for every 
+ and u given by (5), 
+m
+R
+01 1
+[, , ,
+n
+γ ]
+tr tr tr tr
+−
+γγ K
+mn
+Λ
+[, , , ]
+tr tr tr tr mn
+cc c ∈R
+( ) R
+01 1 n −
+K
+00 1 1
+00
+()() ()() 0,
+TT
+nn
+p t u t dt p t u t dt
+−−
+γ⋅ − + +γ ⋅ − =
+∫∫
+L 
+that is to say, 
+1
+0
+0
+() () 0.
+n T
+jj
+j
+pt utdt
+−
+=
+− γ⋅ =
+∑
+∫
+ 
+Choosing  for each j, we get 
+j
+c =γ
+j
+0
+(() ()) 0
+T
+ut ut dt ⋅ =
+∫
+, i.e. u(t) = 0 on [0 . Reading this componentwise and 
+applying (4) of Theorem 3.1, we conclude that for every j. This is a contradiction, showing that 
+, ] T
+0
+j
+γ= Λ must 
+be onto and hence also one-to-one.  
+3.3. Remark. By (3) of Theorem 3.1, any function u given by (5) satisfies the n
+th
+ order differential equation 
+() 1 ( 1)
+10
+(1) (1) 0,
+nn n n
+n
+ubu bu
+− −
+−
+−−− −− = L ………………………………(6) 
+and by (2), it also satisfies 
+(1) 1
+01
+(0) , '(0) , , ( 1) ,
+nn
+n
+ucu c u c
+1
+− −
+−
+==− =− K ………………………………(7) 
+where 
+01
+ are the vectors in the representation (5). However, this initial value problem defines the 
+function u uniquely. Consequently, the function u of (5) has an alternative description as the solution of this 
+initial value problem. Thus fact will turn out to be significant in Theorem 4.1. 
+,,
+n
+cc
+−
+K
+4. Main result 
+Now we come to the result that describes an initial value problem, the unique solution of which steers the 
+controllable system x' Ax Bu =+ from initial state 
+0
+x to terminal state 0 at time T. In order for such a control to 
+exist for every initial value 
+0
+x , it is necessary and sufficient that the rank of the n×mn matrix 
+1
+[, , , ]
+n
+BAB AB
+−
+K
+1
+[, , , ]
+n
+BAB AB
+−
+K
+1
+, , ]
+n
+BAB AB
+ 
+be n (Kalman controllability criterion). When this is the case, the matrix has a right inverse, that is, an mn×n 
+matrix C such that C is the n×n identity matrix. 
+1
+[, , , ]
+n
+BAB AB
+−
+K
+Although the hypothesis in Theorem 4.1 takes all this for granted, parts of the argument can be harvested for 
+justifying the Kalman controllability criterion; see Remark 4.2 below. 
+4.1. Theorem. Let B be an n×m matrix such that the pair (A,B) is controllable, so that the rank of the matrix 
+ is n. Denote by C any right inverse of [,
+−
+K
+mn mn
+→ RR
+ and let L be the mn×mn matrix of 
+the linear map  of Proposition 3.2. Then the unique solution of the differential equation (6) and 
+the initial condition 
+:Λ
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  3 Differential Equations and Control Processes, № 1,2009 
+ 
+1
+0
+1( 1)
+(0)
+'(0)
+(1) (0)
+nn
+u
+u
+LCx
+u
+−
+−−
+⎡⎤
+⎢⎥
+⎢⎥
+⎢⎥
+⎢⎥
+⎢⎥
+⎣⎦
+−
+=−
+−
+M
+……………………………………………(8) 
+is a control that steers the system ' x Ax Bu =+ from initial state 
+0
+x to terminal state 0 at time T. In other words, 
+the solution 
+x
+u
+⎡⎤
+⎢⎥
+⎣⎦
+ of 
+0
+',(0) x Ax Bu x x =+ = ………………………………………(9) 
+has the property that () 0 xT = . 
+PROOF: By Remark 3.3, u is of the form (5) with  given by (7). Recall that the scalar functions  of (5) are 
+as in Theorem 3.1 and therefore satisfy (1). Now, the solution of (9) is given by the variation of parameters 
+formula [2, p.269, eq.(8)] or [3, p.15] as 
+j
+c
+j
+p
+0
+0
+( ) exp( ) exp( ) exp( ) ( ) .
+t
+xttAx tA sABus =+ −
+∫
+ds ……………………………(10) 
+Using (1) of Theorem 3.1, we find that this solution satisfies () 0 xT = if and only if 
+0
+x − =
+0
+exp( ) ( )
+T
+sABu s ds −
+∫
+ 
+=
+1
+01
+0
+[( ) ( ) ] ()
+T
+n
+n
+p sI p s A Bus ds
+−
+−
+−+ + −
+∫
+L 
+=
+1
+01 1
+0
+[( ) ( ) ( ) ]
+T
+n
+n
+p sB p s AB p s A B ds
+−
+−
+−+ − + + −
+∫
+L 
+=
+0 0
+1 1 0
+1 0
+()()
+()()
+[, , , ]
+()()
+T
+T
+n
+T
+n
+p su s ds
+p su s ds
+BAB AB
+p su s ds
+−
+−
+⎡⎤
+⎢⎥
+⎢⎥
+⎢
+⎢⎥
+⎢⎥
+⎢⎥
+⎣⎦
+−
+∫
+−
+∫
+−
+∫
+K
+M
+⎥
+. …………………………………………………(11) 
+By definition of L, this is equivalent to 
+1
+0
+1( 1)
+(0)
+'(0)
+[, , , ]
+(1) (0)
+n
+nn
+u
+u
+x B AB AB L
+u
+−
+−−
+⎡ ⎤
+⎢ ⎥
+⎢ ⎥
+⎢ ⎥
+⎢ ⎥
+⎢ ⎥
+⎣ ⎦
+−
+−=
+−
+K
+M
+, 
+and this is true whenever (8) holds.  
+4.2. Remark. The rank condition was not used until after (11). Once this equation is derived, one can easily 
+prove the equivalence of the rank condition and the existence of a suitable control. In fact, it is clear from 
+equation (11) that if a suitable control exists, then every 
+0
+x is in the range of the linear transformation given by 
+the matrix in the equation. The converse also follows from equation (11) because the column vector on the 
+extreme right in the equation can be chosen to be any vector in  by virtue of Proposition 3.2. 
+mn
+R
+ 
+5. Illustration 
+We illustrate Theorem 4.1 in a simple instance. 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  4 Differential Equations and Control Processes, № 1,2009 
+ 
+5.1. Example. Let A =  and B = 
+01
+10
+⎡
+⎢
+−
+⎣⎦
+⎤
+⎥
+10
+01
+⎡ ⎤
+⎢ ⎥
+⎣ ⎦
+, so that m = n = 2. Take T =  and x 2 π
+0
+ = 
+1
+0
+⎡ ⎤
+⎢ ⎥
+⎣ ⎦
+. The 
+characteristic polynomial of A is  and therefore 
+2
+1 λ+
+0
+1 b = − and 
+1
+0 b = . The familiar linearly independent 
+solutions of uu have Wronskian matrix equal to the identity matrix at "0 += 0 t = . Therefore 
+0
+cos ( ) tp t = and 
+. By Theorem 3.1 (or otherwise), 
+1
+sin ( ) tpt =
+exp( ) ( ) ( )
+01 1 0 sin cos
+tA p t p t
+tt
+01
+10 0 1 cos sin tt ⎡ ⎤⎡ ⎤⎡ ⎤
+=+ =
+⎢ ⎥⎢ ⎥⎢ ⎥
+−−
+⎣ ⎦⎣ ⎦⎣ ⎦
+. 
+Now 
+10 0 1
+01 1 0
+[, ] BAB
+⎡ ⎤
+⎢ ⎥
+−
+⎣ ⎦
+= , 
+which has rank 2. So the system is controllable. Moreover, the matrices 
+1
+10
+11
+10
+00
+C
+⎡ ⎤
+⎢ ⎥
+⎢ ⎥
+=
+⎢ ⎥
+⎢ ⎥
+⎣ ⎦
+ and 
+2
+00
+11
+10
+10
+C
+⎡ ⎤
+⎢ ⎥
+⎢ ⎥
+=
+⎢ ⎥
+⎢ ⎥
+⎣ ⎦
+ 
+are both right inverses for [, ] B AB . Next, Λ maps 
+0
+1
+2
+3
+c
+c
+c
+c
+⎡ ⎤
+⎢ ⎥
+⎢ ⎥
+⎢ ⎥
+⎢ ⎥
+⎣ ⎦
+ into 
+2
+0 0
+2
+1 0
+2
+2 0
+2
+3 0
+cos( )(cos( ) sin( ))
+cos( )(cos( ) sin( ))
+sin( )(cos( ) sin( ))
+sin( )(cos( ) sin( ))
+ct t t
+ct t t
+ct t t
+ct t t
+π
+π
+π
+π
+⎡⎤
+−−+ −
+∫
+⎢⎥
+−−+ − ⎢⎥
+∫
+⎢⎥
+−−+ −
+∫⎢⎥
+⎢⎥
+−−+ −
+∫
+⎣⎦
+dt
+dt
+dt
+dt
+, 
+which works out to be . Therefore the matrix L of Λ is 
+0
+1
+2
+3
+c
+c
+c
+c
+⎡⎤
+⎢⎥
+⎢⎥
+π
+⎢⎥
+⎢⎥
+⎣⎦
+π times the 4×4 identity matrix. So, 
+1
+L
+−
+ is 
+1
+π
+ 
+times the 4×4 identity matrix. 
+Now , so that 
+10
+10
+11 1
+10 0
+00
+Cx
+⎡⎤
+⎢⎥
+⎡⎤
+⎢⎥
+=
+⎢⎥
+⎢⎥
+⎣⎦
+⎢⎥
+⎣⎦
+1
+10
+1
+1
+1
+1
+0
+LCx
+−
+⎡ ⎤
+⎢ ⎥
+⎢ ⎥
+=
+π ⎢ ⎥
+⎢ ⎥
+⎣ ⎦
+. 
+Therefore according to Theorem 4.1, one possible control that makes (2 ) 0 x π = is the solution of 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  5 Differential Equations and Control Processes, № 1,2009 
+ 
+1
+22
+"
+"
+uu
+uu
+⎡⎤ ⎡
+=−
+⎢⎥ ⎢
+⎣⎦ ⎣
+1
+⎤
+⎥
+⎦
+ with 
+1
+2
+(0) 1
+1
+(0) 1
+u
+u
+− ⎡⎤ ⎡ ⎤
+=
+⎢⎥ ⎢ ⎥
+π
+−
+⎣ ⎦ ⎣⎦
+ and 
+1
+2
+'(0) 1
+1
+'(0) 0
+u
+u
+⎡⎤ ⎡⎤
+=
+⎢⎥ ⎢⎥
+π
+⎣⎦ ⎣⎦
+. 
+The unique solution of this IVP is 
+cos sin
+()
+cos
+tt
+ut
+t
+−+ ⎡ ⎤
+=
+⎢ ⎥
+−
+⎣ ⎦
+. 
+This u satisfies 
+cos sin cos sin
+1
+exp( ) ( )
+sin cos cos
+s ss
+sA u s
+ss s
+−− +s ⎡ ⎤⎡ ⎤
+−=
+⎢ ⎥⎢ ⎥
+π
+−
+⎣ ⎦⎣ ⎦
+ 
+1
+2
+1
+2
+(cos 2 1) sin 2
+1
+cos2 sin 2
+s s
+s s
+⎡⎤ ++
+=
+⎢⎥
+π
+−−
+⎣⎦
+. 
+Therefore 
+0
+2
+0
+1
+0
+exp( ) ( ) x sA u s ds
+π ⎡⎤
+=−=−
+⎢⎥
+⎣⎦
+−
+∫
+. 
+The variation of parameters formula (10) now shows that (2 ) 0 x π = , as required. 
+Similar computations using the other right inverse lead to the control 
+sin
+()
+cos sin
+t
+ut
+tt
+⎡ ⎤
+=
+⎢ ⎥
+−+
+⎣ ⎦
+. 
+6. Concluding Remarks 
+6.1. Remark. Both controls computed in Example 5.1 satisfy 
+2
+0
+3
+() () ut ut dt
+π
+⋅ =
+∫
+π
+. 
+6.2. Remark. If in Example 5.1, we change B to the 2×1 matrix 
+0
+1
+⎡ ⎤
+⎢ ⎥
+⎣ ⎦
+, then the control system becomes the same 
+as [4, p.109]. The solution computed there agrees with what Theorem 4.1 here yields. 
+References 
+1. G. Birkhoff and G-C. Rota, "Ordinary Differential Equations", 3
+rd
+ ed, John Wiley & Sons, New York, 1978 
+2. M. Braun, "Differential Equations and Their Applications, Short Version", Springer Verlag, New York, 
+1978 
+3. L. Markus, "Basic concepts of control theory" in Control Theory and Topics in Functional Analysis, Vol.1, 
+International Atomic Energy Agency, Vienna, 1976, pp.1-52 
+4. E. D. Sontag, "Mathematical Control Theory: Deterministic Finite Dimensional Systems", Springer Verlag, 
+New York, 1998. 
+ 
+ 
+ 
+ 
+Electronic Journal. , http://www.math.spbu.ru/user/diffjournal  6 

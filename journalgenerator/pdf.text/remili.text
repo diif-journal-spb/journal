@@ -1,0 +1,1793 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 1, 2014
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Ordinary differential equations
+ON THE STABILITY OF SOLUTIONS FOR
+NON-AUTONOMOUS DELAY DIFFERENTIAL EQUATIONS
+OF THIRD-ORDER
+Lynda OUDJEDI
+1
+, Djamila BELDJERD
+2
+and Moussadek REMILI
+3 
+Department of Mathematics. University of Oran. Algeria
+1
+email: oudjedi@yahoo.fr
+2
+email: beldjerd2011@yahoo.com
+3
+email: remilimous@gmail.com
+* Corresponding Author
+Abstract
+In this paper we give su cient conditions for the asymptotic stability and uniform
+boundedness for certain third order delay differential equation by constructing Lyapounov
+functionnals. This result generalizes some asymptotic stability and uniform boundedness
+for certain third order delay differential equation.
+Keywords: Stability; Boundedness; Lyapunov functional; Delay differential
+equations; Third-order differential equations.
+AMS 2010 Subject Classi cation: 34C11.
+1 Introduction
+In this paper we investigate the asymptotic stability of the zero solution of the
+delays differential equations
+(q(t)(p(t)x
+0
+(t))
+0
+)
+0
++a(t)x
+00
+(t) +b(t)x
+0
+(t) +c(t)f(x(t r)) = 0; (1.1)Differential Equations and Control Processes, N 1, 2014
+and
+(q(t)(p(t)x
+0
+(t))
+0
+)
+0
++a(t)x
+00
+(t) +b(t)x
+0
+(t) +c(t)f(x(t r)) =R(t): (1.2)
+Wherea(t);b(t);c(t);p(t);q(t);R(t); andf(x) are real valued functions contin-
+uous in their respective argument, f(0) = 0:
+In recent years, the asymptotic stability and boundedness of solutions of
+non-autonomous delay differential equation of the third order have been stud-
+ied by a variety of authors, and we mention only a sampling of such papers
+[1{13] and other references therein.
+Omeike, in 2009 [4], considered the following nonlinear differentiable of
+third order, with a constant deviating argument r ensure the stability and the
+boundedness of system
+x
+000
++a(t)x
+00
++b(t)x
+0
++c(t)f(x(t r)) =R(t): (1.3)
+He discussed the stability and boundedness of solutions of this equation when
+R(t) = 0 and R(t)6= 0:
+Our objective in this paper is to show that Omeike results obtained in [3, 4]
+do hold equally well in the case of the more general third order nonlinear delay
+differential equation (1.1). Thus, our theorems contain the results of Omeike
+[3, 4] as special case (p(t) =q(t) = 1).
+We shall use appropriate Lyapounov function and impose suitable condi-
+tions on the functions p;q and f.
+2 Preliminaries
+First, we will give the preliminary de nitions and the stability criteria for the
+general non-autonomous delay differential system. We consider
+_ x =f(t;x
+t
+); x
+t
+=x(t + ) ;  r    0; t  0; (2.1)
+Where f :I C
+H
+!R
+n
+is a continuous mapping, f(t; 0) = 0, and we suppose
+that f takes closed bounded sets into bounded sets ofR
+n
+. Here (C;k:k) is the
+Banach space of continuous function   : [ r; 0]! R
+n
+with supremum norm,
+r> 0; C
+H
+is the open H-ball in C; C
+H
+:=f 2 (C[ r; 0]; R
+n
+) :k k Hg.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 23Differential Equations and Control Processes, N 1, 2014
+De nition 2.1 [12] A function x(t
+0
+; ) is said to be a solution of the system
+(2.1) with the initial condition  2 C
+H
+at t = t
+0
+;t
+0
+  0, if there is a constant
+A > 0 such that x(t
+0
+; ) is a function from [t
+0
+ r;t
+0
++A] into R
+n
+with the
+properties:
+1. x(t;t
+0
+; )2C
+H
+for t
+0
+ t t
+0
++A,
+2. x
+t
+(t; ) = ,
+3. x
+t
+(t; ) satis es (2.1) for t
+0
+ t t
+0
++A.
+Standard existence theory, see Burton [1], shows that if  2 C
+H
+and t  0,
+then there is at least one continuous solution x(t;t
+0
+; ) such that on [t
+0
+;t
+0
++ff)
+satisfying Equation (2.1) for t>t
+0
+, x
+t
+(t; ) =  and ff is a positive constant.If
+there is a closed subsetB C
+H
+such that the solution remains inB, thenff =
+1. Further, the symbolj:j will denote the norm inR
+n
+withjxj = max
+1 i n
+jxj.
+De nition 2.2 A setQ C
+H
+is an invariant set if for any 2Q, the solution
+of (2.1), x(t; 0; ), is de ned on [0;1) and x
+t
+( )2Q for t2 [0;1).
+Lemma 2.3 If  2 C
+H
+is such that the solution x
+t
+( ) of (1,3) with x
+0
+( ) =  
+is de ned on [0;1) andkx
+t
+( )k  H
+1
+< H for t2 [0;1), then 
+( ) is a
+non-empty, compact, invariant set and
+dist(x
+t
+( ); 
+( ))! 0 as t!1:
+Lemma 2.4 let V (t; ) :I C
+H
+!R be a continuous functional satisfying a
+local Lipschitz condition.V (t; 0) = 0, and such that:
+(i) W
+1
+(j (0)j) V (t; ) W
+2
+(k k) where W
+1
+(r), W
+2
+(r) are wedges.
+(ii)
+_
+V
+(2;1)
+(t; )  0, for   C
+H
+.
+Then the zero solution of (2.1) is uniformly stable.
+If Z =f 2C
+H
+:
+_
+V
+(2;1)
+(t; ) = 0g, then the zero solution of (2.1) is asymptoti-
+cally stable, provided that the largest invariant set in Z is Q =f0g.
+3 Assumptions and main results
+We shall state here some assumptions which will be used on the functions that
+appeared in equation (1.1):
+Electronic Journal. http://www.math.spbu.ru/diffjournal 24Differential Equations and Control Processes, N 1, 2014
+i) p(t) and q(t) are positives and continuously differentiable functions on
+[0; +1[, and f(x) is continuously differentiable for x2R,
+ii) 0<m p(t) M; 0<m q(t) M,
+iii)  L p
+0
+(t)  0, L q
+0
+(t)  0; and p
+00
+(t)  0, t  0,
+iv) f(0) = 0; 0< 
+0
+ 
+f(x)
+x
+with x6= 0 andjf
+0
+(x)j  
+1
+;
+v) 0<a
+0
+ a(t) a
+1
+, t  0,
+vi) 0<n c(t) b(t) N, N b
+0
+(t) c
+0
+(t)  0, t  0,
+vii) (p(t)c(t))
+0
+  (q(t)c(t))
+0
+  0, t  0.
+To simplify the notation in what follows, we let
+A(t) =
+a(t)
+p(t)q(t)
+; B(t) =
+b(t)p(t) a(t)p
+0
+(t)
+p
+2
+(t)
+;
+D(t) =
+ffM
+2
+ 
+2a
+1
+p
+02
+(t) a
+2
+p(t)p
+0
+(t)
+p
+3
+(t)
+ a
+3
+c
+0
+(t)
+ 
+  0;
+where a
+2
+=
+1
+ffM
+a
+1
++ 2n(1 ffM 
+1
+) +N; and a
+3
+=
+N
+nm
++
+a
+1
+L
+nm
+2
+.
+Theorem 3.1 Suppose that the assumptions (i)-(vii) hold. Then every solution
+of (1.1) is uniformly asymptotically stable, provided that there existsff satisfying
+M
+a
+0
+<ff<
+1
+M 
+1
+such that
+1
+2
+a
+0
+(t) d
+0
+<n(1 ffM 
+1
+);
+and
+r< min(
+2c
+2
+m
+2
+N 
+1
+(1 +ff +m
+2
+)
+;
+2c
+3
+ff 
+1
+N
+);
+where c
+2
+=
+1
+M
+[n(1 ffM 
+1
+) d
+0
+]> 0, and c
+3
+=
+1
+M
+(
+ffa
+0
+M
+  1)> 0:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 25Differential Equations and Control Processes, N 1, 2014
+Proof: We write the equation (1.1) as the following equivalent system:
+x
+0
+=
+1
+p(t)
+y;
+y
+0
+=
+1
+q(t)
+z; (3.1)
+z
+0
+=  A(t)z B(t)y c(t)f(x) +c(t)
+Z
+t
+t r
+y(s)
+p(s)
+f
+0
+(x(s))ds;
+and denote (t) =
+R
+t
+0
+D(s)ds. We can see that sincep(t) andq(t) are continuous
+bounded functions, then  (t) =
+R
+t
+0
+D(s)ds<1; for all t  0. Indeed,
+Z
+t
+0
+D(s)ds = ffM
+Z
+t
+0
+ 
+a
+1
+p
+02
+(s)
+p
+3
+(s)
+ 
+a
+2
+p
+0
+(s)
+2p
+2
+(s)
+ 
+a
+3
+2
+c
+0
+(s)
+ 
+ds
+  a
+1
+ffM
+Z
+t
+0
+(
+ p
+0
+(s)
+p
+2
+(s)
+)( 
+p
+0
+(s)
+p(s)
+)ds +
+ffa
+2
+M
+2m
++
+ffa
+3
+MN
+2
+ 
+a
+1
+ffML
+m
+2
++
+ffa
+2
+M
+2m
++
+ffa
+3
+MN
+2
+ !<1:
+We de ne the Lyapounov functional W (t;x;y;z) as
+W (t;x
+t
+;y
+t
+;z
+t
+) = exp( 
+ (t)
+ 
+)V (t;x
+t
+;y
+t
+;z
+t
+); (3.2)
+where
+V (t;x
+t
+;y
+t
+;z
+t
+) = p(t)c(t)F (x) +ffq(t)B(t)
+y
+2
+2
++ffq(t)c(t)f(x)y (3.3)
++
+1
+2
+ 
+a(t)
+p(t)
+y
+2
++ffz
+2
++ 2yz
+ 
++ 
+Z
+0
+ r
+Z
+t
+t+s
+y
+2
+( )d ds;
+such that F (x) =
+R
+x
+0
+f(u)du;   and   are positives constants which will be
+determined later. From the de nition of V in (3.3), we observe that the above
+Lyapounov functional can be rewritten as follows
+V =V
+1
++V
+2
++ 
+Z
+0
+ r
+Z
+t
+t+s
+y
+2
+( )d ds;
+where
+V
+1
+=p(t)c(t)F (x) +ffq(t)B(t)
+y
+2
+2
++ffq(t)c(t)f(x)y;
+and
+V
+2
+=
+1
+2
+ 
+a(t)
+p(t)
+y
+2
++ffz
+2
++ 2yz
+ 
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 26Differential Equations and Control Processes, N 1, 2014
+First consider
+V
+2
+=
+1
+2
+ 
+a(t)
+p(t)
+y
+2
++ffz
+2
++ 2yz
+ 
+=
+ff
+2
+(z +
+y
+ff
+)
+2
++
+1
+2
+y
+2
+(
+a(t)
+p(t)
+ 
+1
+ff
+):
+By (ii), (v) and since ff>
+M
+a
+0
+we have
+a(t)
+p(t)
+ 
+1
+ff
+ 
+a
+0
+M
+ 
+1
+ff
+> 0:
+Thus there exist positives constants such that
+V
+2
+  
+2
+y
+2
++ 
+3
+z
+2
+: (3.4)
+On the other hand, using the assumptions (i)-(vi), and since
+n b(t) p(t)B(t), after some rearrangements we obtain
+V
+1
+= p(t)c(t)F (x) +
+ff
+2
+q(t)B(t)
+ 
+y +
+c(t)f(x)
+B(t)
+ 
+2
+ 
+ffq(t)f
+2
+(x)c
+2
+(t)
+2B(t)
+  p(t)c(t)
+Z
+x
+0
+ 
+1 
+ffq(t)c(t)
+p(t)B(t)
+f
+0
+(u)
+ 
+f(u)du
+  p(t)c(t)
+Z
+x
+0
+(1 ffM 
+1
+)f(u)du
+   
+4
+F (x);
+where
+ 
+4
+=nm(1 ffM 
+1
+)>nm(1 
+1
+M 
+1
+M 
+1
+) = 0:
+Thus from (iv) we obtain,
+V
+1
+ 
+ 
+4
+ 
+0
+2
+x
+2
+: (3.5)
+Clearly, from (3.5),(3.4) and (3.3), we have
+V (t;x
+t
+;y
+t
+;z
+t
+)  
+2
+y
+2
++ 
+3
+z
+2
++
+ 
+4
+ 
+0
+2
+x
+2
++ 
+Z
+0
+ r
+Z
+t
+t+s
+y
+2
+( )d ds:
+Hence, it is evident, from the terms contained in the last inequality, that there
+exist su ciently small positive constant k, such that
+V (t;x
+t
+;y
+t
+;z
+t
+) k(x
+2
++y
+2
++z
+2
+); (3.6)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 27Differential Equations and Control Processes, N 1, 2014
+since the integral
+R
+t
+t+s
+y
+2
+( )d  is nonnegative, where k =min( 
+2
+; 
+3
+;
+ 
+4
+ 
+0
+2
+).
+Therefore we can  nd a continuous function W
+1
+(j (0)j) with
+W
+1
+(j (0)j)  0 and W
+1
+(j (0)j) W (t; ):
+The existence of a continuous function W
+2
+(k k) which satis es the inequality
+W (t; ) W
+2
+(k k), is easily veri ed.
+For the time derivative of the Lyapunov functional V (t;x
+t
+;y
+t
+;z
+t
+), along the
+trajectories of the system (3.1), we have
+d
+dt
+V (t;x
+t
+;y
+t
+;z
+t
+) = (p(t)c(t))
+0
+F (x) +
+ff
+2
+q
+0
+(t)B(t)y
+2
++ff(q(t)c(t))
+0
+f(x)y
++
+ 
+ff
+2
+q(t)B
+0
+(t) 
+a(t)p
+0
+(t)
+2p
+2
+(t)
++G(t) + r
+ 
+y
+2
++
+ 
+1
+q(t)
+ ffA(t)
+ 
+z
+2
++ c(t)(y +ffz)
+Z
+t
+t r
+y(s)
+p(s)
+f
+0
+(x(s))ds  
+Z
+t
+t r
+y
+2
+( )d :
+Where
+G(t) =
+a
+0
+(t)
+2p(t)
++ffc(t)
+q(t)
+p(t)
+f
+0
+(x) B(t):
+Since q
+0
+c = (qc)
+0
+ qc
+0
+, we obtain the following:
+ff
+2
+q
+0
+(t)B(t)y
+2
+=
+ff
+2
+q
+0
+(t)c(t)
+c(t)
+B(t)y
+2
+=
+ff
+2c(t)
+(q(t)c(t))
+0
+B(t)y
+2
+ 
+ff
+2c(t)
+q(t)c
+0
+(t)B(t)y
+2
+;
+consequently, we have
+d
+dt
+V = (p(t)c(t))
+0
+F (x) +
+ff
+2c(t)
+(q(t)c(t))
+0
+B(t)y
+2
++ff(q(t)c(t))
+0
+f(x)y
++
+ 
+ffq(t)B
+0
+(t)
+2
+ 
+ffq(t)c
+0
+(t)B(t)
+2c(t)
+ 
+a(t)p
+0
+(t)
+2p
+2
+(t)
++G(t) + r
+ 
+y
+2
++
+ 
+1
+q(t)
+ ffA(t)
+ 
+z
+2
+(3.7)
++ c(t)(y +ffz)
+Z
+t
+t r
+y(s)
+p(s)
+f
+0
+(x(s))ds  
+Z
+t
+t r
+y
+2
+( )d :
+Now, we verify
+H(t;x;y) = (p(t)c(t))
+0
+F (x) +
+ff
+2c(t)
+(q(t)c(t))
+0
+B(t)y
+2
++ff(q(t)c(t))
+0
+f(x)y  0;
+Electronic Journal. http://www.math.spbu.ru/diffjournal 28Differential Equations and Control Processes, N 1, 2014
+for all x;y and t  0: If (q(t)c(t))
+0
+= 0, then
+H(t;x;y) = (p(t)c(t))
+0
+F (x)  0:
+If (q(t)c(t))
+0
+< 0, the quantity in the brackets above can be written as,
+H(t;x;y) = (q(t)c(t))
+0
+ 
+(p(t)c(t))
+0
+(q(t)c(t))
+0
+F (x) +
+ff
+2c(t)
+B(t)y
+2
++fff(x)y
+ 
+= (q(t)c(t))
+0
+"
+(p(t)c(t))
+0
+(q(t)c(t))
+0
+F (x) +
+ffB(t)
+2c(t)
+ 
+y +
+c(t)f(x)
+B(t)
+ 
+2
+ 
+ffc(t)f
+2
+(x)
+2B(t)
+#
+also by assumption (vii) we have
+(p(t)c(t))
+0
+(q(t)c(t))
+0
+  1 this implies
+H(t;x;y)  (q(t)c(t))
+0
+Z
+x
+0
+ 
+1 
+ffc(t)
+B(t)
+f
+0
+(u)
+ 
+f(u)du:
+From (ii) and (vi) we get c(t) MB(t), thus
+H(t;x;y)   (q(t)c(t))
+0
+Z
+x
+0
+(1 ffM 
+1
+)f(u)du
+  (q(t)c(t))
+0
+ 
+4
+nm
+F (x)  0:
+Thus, on combining the two cases, we have H(t;x;y)  0 for all t  0, x and
+y. Using the assumptions of theorem, we get
+B(t) 
+N
+m
++
+a
+1
+L
+m
+2
+;
+and
+B
+0
+(t) =
+b
+0
+(t)p
+2
+(t)  (b(t) +a
+0
+(t))p(t)p
+0
+(t) a(t)p(t)p
+00
+(t) + 2a(t)p
+0
+2
+(t)
+p
+3
+(t)
+ 
+2a
+1
+p
+02
+(t)  [2n(1 ffM 
+1
+) +N]p(t)p
+0
+(t)
+p
+3
+(t)
+;
+hence, it is easy to see that
+ffq(t)B
+0
+(t)
+2
+ 
+ffq(t)c
+0
+(t)B(t)
+2c(t)
+ 
+a(t)p
+0
+(t)
+2p
+2
+(t)
+ 
+ffM
+2
+ 
+2a
+1
+p
+02
+(t) a
+2
+p(t)p
+0
+(t)
+p
+3
+(t)
+ a
+3
+c
+0
+(t)
+ 
+=D(t);
+Electronic Journal. http://www.math.spbu.ru/diffjournal 29Differential Equations and Control Processes, N 1, 2014
+and
+G(t)  
+1
+p(t)
+ 
+d
+0
++b(t)(ff
+c(t)
+b(t)
+q(t) 
+1
+  1)
+ 
+ 
+1
+M
+[d
+0
++n(ffM 
+1
+  1)] = c
+2
+< 0;
+we have also,
+1
+q(t)
+ ffA(t) =
+1
+q(t)
+(1 
+ffa(t)
+p(t)
+)
+ 
+1
+M
+h
+1 
+ffa
+0
+M
+i
+= c
+3
+< 0:
+Therefore (3.7) becomes
+d
+dt
+V (t;x
+t
+;y
+t
+;z
+t
+)   [D(t) c
+2
++ r]y
+2
+ c
+3
+z
+2
+  
+Z
+t
+t r
+y
+2
+( )d 
++ c(t)(y +ffz)
+Z
+t
+t r
+y(s)
+p(s)
+f
+0
+(x(s))ds:
+Using the Schwartz inequalityjuvj 
+1
+2
+(u
+2
++v
+2
+) and sincejf
+0
+(x)j  
+1
+; we obtain
+c(t)y
+Z
+t
+t r
+y(s)
+p(s)
+f
+0
+(x(s))ds 
+ 
+1
+Nr
+2
+y
+2
++
+ 
+1
+N
+2m
+2
+Z
+t
+t r
+y
+2
+( )d ;
+and
+ffc(t)z
+Z
+t
+t r
+y(s)
+p(s)
+f
+0
+(x(s))ds ffN
+ 
+1
+r
+2
+z
+2
++
+ffN 
+1
+2m
+2
+Z
+t
+t r
+y
+2
+( )d :
+We rearrange
+d
+dt
+V (t;x
+t
+;y
+t
+;z
+t
+)   
+ 
+c
+2
+ D(t) r(  +
+ 
+1
+N
+2
+)
+ 
+y
+2
+ 
+ 
+c
+3
+ ff
+ 
+1
+Nr
+2
+ 
+z
+2
++
+ 
+ 
+1
+N
+2m
+2
+(1 +ff)  
+ Z
+t
+t r
+y
+2
+( )d :
+If we take
+ 
+1
+N
+2m
+2
+(1 +ff) =  the last inequality becomes
+d
+dt
+V (t;x
+t
+;y
+t
+;z
+t
+)   
+ 
+c
+2
+ D(t) 
+ 
+1
+N
+2
+(
+1 +ff
+m
+2
++ 1)r
+ 
+y
+2
+ 
+ 
+c
+3
+ ff
+N 
+1
+r
+2
+ 
+z
+2
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 30Differential Equations and Control Processes, N 1, 2014
+Using (3.6), (3.2) and taking   =k we obtain:
+d
+dt
+W (t;x
+t
+;y
+t
+;z
+t
+) = exp( 
+ (t)
+k
+)(
+d
+dt
+V (t;x
+t
+;y
+t
+;z
+t
+) 
+D(t)
+k
+V (t;x
+t
+;y
+t
+;z
+t
+))
+  exp( 
+ (t)
+k
+)[ (c
+2
+ 
+ 
+1
+N
+2
+(
+1 +ff
+m
+2
++ 1)r)y
+2
+ (c
+3
+ ff
+ 
+1
+Nr
+2
+)z
+2
+]:
+Therefore, if
+r< min(
+2c
+2
+m
+2
+ 
+1
+N(1 +ff +m
+2
+)
+;
+2c
+3
+ff 
+1
+N
+);
+we have
+d
+dt
+W (t;x
+t
+;y
+t
+;z
+t
+)    exp( 
+!
+k
+)(y
+2
++z
+2
+); for some   > 0:
+It is clear that the largest invariant set in Z is Q =f0g, where
+Z =f 2C
+H
+:
+d
+dt
+W ( ) = 0g:
+Namely, the only solution of system (3.1) for which
+d
+dt
+W (t;x
+t
+;y
+t
+;z
+t
+) = 0 is the
+solution x = y = z = 0. Thus, under the above discussion, we conclude that
+the trivial solution of equation (1.1) is uniformly asymptotically stable. This
+fact completes the proof.
+In the case R(t)6= 0 we establish the following result:
+Theorem 3.2 In addition to the assumptions of Theorem 3.1, If we assume
+that R(t) is continuous inR and
+Z
+t
+0
+R(s)ds<1 for all t  0;
+then all solutions of the perturbed equation (1.2) are bounded.
+Proof: The proof of this theorem is similar to that of the proof of Theorem
+2 in [4] and hence it is omitted.
+We give an example to illustrate our main results:
+Example: We consider the following third order non-autonomous delay differ-
+Electronic Journal. http://www.math.spbu.ru/diffjournal 31Differential Equations and Control Processes, N 1, 2014
+ential equation
+((
+1
+1 +t
+2
++
+1
+2
+)((
+2
+1 +t
+2
++
+1
+2
+)x
+0
+(t))
+0
+)
+0
++ (
+1
+4
+sint + 10)x
+00
+(t) (3.8)
++(
+1
+1 +t
++
+1
+2
+)x
+0
+(t) + (
+1
+4(1 +t)
++
+1
+4
+)(x(t r) +
+x(t r)
+1 +x
+2
+(t r)
+) =e
+ t
+:
+Now, it is easy to see that
+1
+2
+ p(t) =
+2
+1 +t
+2
++
+1
+2
+ 
+3
+2
+;
+1
+2
+ q(t) =
+1
+1 +t
+2
++
+1
+2
+ 
+3
+2
+;
+ 1 p
+0
+(t)  0; 1 q
+0
+(t)  0; and p
+00
+(t)  0 for all t2 [1; +1[:
+1 
+f(x)
+x
+= 1 +
+1
+1 +x
+2
+with x6= 0; andjf
+0
+(x)j  2 = 
+1
+:
+1
+4
+ c(t) =
+1
+4(1 +t)
++
+1
+4
+ b(t) =
+1
+1 +t
++
+1
+2
+  1;
+ 1 b
+0
+(t) c
+0
+(t)  0; for all t2 [1; +1[:
+(p(t)c(t))
+0
+  (q(t)c(t))
+0
+  0 for all t2 [1; +1[:
+39
+4
+ a(t) =
+1
+4
+sint + 10 
+41
+4
+; t2 [1; +1[;
+M
+a
+0
+=
+2
+13
+<ff<
+1
+3
+=
+1
+M 
+1
+:
+1
+2
+a
+0
+(t) =
+1
+8
+cost<n(1 ffM 
+1
+)<
+7
+52
+;
+and
+R(t) =e
+ t
+;
+hence
+Z
+1
+1
+e
+ t
+<1:
+All the assumptions (i) through (vii) are satis ed, we can conclude using The-
+orem 3.2 that every solution of (3.8) is bounded.
+Remark 3.3 Equation(1.1) can be rewritten as
+x
+000
+(t) +ff(t)x
+00
+(t) + (t)x
+0
+(t) +(t)f(x(t r)) = 0; (3.9)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 32Differential Equations and Control Processes, N 1, 2014
+where
+ff(t) =
+p(t)q
+0
+(t) + 2q(t)p
+0
+(t) +a(t)
+p(t)q(t)
+; (t) =
+q
+0
+(t)p
+0
+(t) +q(t)p
+00
+(t) +b(t)
+p(t)q(t)
+, and
+(t) =
+c(t)
+p(t)q(t)
+:
+If we apply Omeike theorem [3] to show that every solution x(t) of (3.9) is
+uniform-bounded and satis es x(t)! 0;x
+0
+(t)! 0 and x
+00
+(t)! 0 as t!1,
+then the differentiability of ff and   is needed, which implies the use of the sec-
+ond derivative of q and the third derivative of p. However in our theorem this
+latter conditions are not required since we just need to deal with p
+0
+;p
+00
+and q
+0
+:
+References
+[1] T.A. Burton, Stability and periodic solutions of ordinary and functional dif-
+ferential equations, Mathematics in Science and Engineering, 178. Academic
+Press, Inc., Orlando, FL, 1985
+[2] John.R.Graef and Moussadek.Remili, Some properties of monotonic solu-
+tions of x
+000
++p(t)x
+0
++q(t)f(x) = 0. Pan. American Mathematical journal
+V22(2012) number2, 31-39.
+[3] M.O. Omeike, New results on the stability of solution of some non-
+autonomous delay differential equations of the third order, Differential Equa-
+tions and Control Processes 2010 1, (2010), 18{29.
+[4] M.O. Omeike, Stability and boundedness of solutions of some non-
+autonomous delay differential equation of the third order, An. Stiint. Univ.
+Al. I. Cuza Iasi. Mat. (N.S.), 55(1) (2009), 49-58.
+[5] A. I. Sadek, On the Stability of Solutions of Some Non-Autonomous Delay
+Differential Equations of the Third Order, Asymptot. Anal., 43 no (1-2)
+(2005), pp. 1-7.
+[6] A. I. Sadek, Stability and Boundedness of a Kind of Third-Order Delay
+Differential System, Applied Mathematics Letters, 16(5) (2003), pp. 657-
+662.
+[7] C. Tun  c, On asymptotic stability of solutions to third order nonlinear differ-
+ential equations with retarded argument, Communications in Applied Anal-
+ysis, 11 (2007), no (4), pp. 515{528.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 33Differential Equations and Control Processes, N 1, 2014
+[8] C. Tun  c, On the asymptotic behavior of solutions of certain third-order non-
+linear differential equations, J. Appl. Math. Stoch. Anal. 2005: 1 (2005),
+2935.
+[9] C. Tun  c, On the stability and boundedness of solutions to third order non-
+linear differential equations with retarded argument, Nonlinear Dynam. 57
+(2009), no. 1-2, 97-106. EJQTDE, 2010 No. 12, p. 18.
+[10] C. Tun  c, Some stability and boundedness conditions for non-autonomous
+differential equations with deviating arguments, E. J. Qualitative Theory of
+Diff. Equ., No. 1. (2010), pp. 1{12.
+[11] C. Tun  c, Stability and boundedness of solutions of nonlinear differential
+equations of third-order with delay, Journal Differential Equations and Con-
+trol Processes (Differentsialprimnye Uravneniyai Protsessy Upravleniya),
+No.3, 1{13, (2007).
+[12] T. Yoshizawa, Stability theory by Liapunov's second method, The Mathe-
+matical Society of Japan, Tokyo, 1966.
+[13] Y.F. Zhu, On stability, boundedness and existence of periodic solution of
+a kind of third order nonlinear delay differential system, Ann. Differential
+Equations 8 (2) (1992), 249{259.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 34

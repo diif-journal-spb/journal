@@ -1,0 +1,2653 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 1, 2002
+Electronic Journal,
+reg. N P23275 at 07.03.97
+
+e-mail: diff@osipenko.stu.neva.ru
+Applications to physics, electrotechnics, and electronics
+INHOMOGENEOUS, NON-LINEAR AND
+ANISOTROPIC SYSTEMS WITH RANDOM
+MAGNETISATION MAIN DIRECTIONS
+Part two: Minimisation of functional issue and FEM
+equations for 3D  eld produced by permanent magnets
+BERE IOAN
+Assoc. Prof., \Politehnica" University,
+Department of Electrotechnics,
+Timisoara, Romania
+E-mail: ibere@et.utt.ro
+Abstract
+The paper presents the minimization of functional issue, associated to the
+ nite elements method (FEM) and establish on detail the equations to solve the
+problem of the three-dimensional (3D) magnetic  eld, in inhomogeneous, non-
+linear and anisotropic domains with random main directions of magnetization.
+Numerical computation of the algebraic equations system obtained, it could be
+established the state quantities of the magnetic  eld or other quantities which
+are interested in.
+Key words: permanent magnets, FEM, inhomogenity, nonlinearity, anisotropy.Differential Equations and Control Processes, N 1, 2002
+4. The minimization of the energy functional
+On FEM, the functional must be minimized to get the equations system
+which follow to solve the  eld problem. If the  nite elements of 3D discretization
+mesh are small enough, the relation (33) from [1] become
+F =
+m
+0
+X
+ =1
+"
+A
+0
+xx
+ 
+@V
+H
+@x
+ 
+2
++ A
+0
+yy
+ 
+@V
+H
+@y
+ 
+2
++ A
+0
+zz
+ 
+@V
+H
+@z
+ 
+2
++
++A
+0
+xy
+ 
+@V
+H
+@x
+  
+@V
+H
+@y
+ 
++A
+0
+yz
+ 
+@V
+H
+@y
+  
+@V
+H
+@z
+ 
++A
+0
+zx
+ 
+@V
+H
+@z
+  
+@V
+H
+@x
+ 
+#
+ 
+  v
+ 
++
++
+m
+00
+X
+ =1
+"
+A
+00
+xx
+ 
+@V
+H
+@x
+ 
+2
++ A
+00
+yy
+ 
+@V
+H
+@y
+ 
+2
++ A
+00
+zz
+ 
+@V
+H
+@z
+ 
+2
++
++A
+00
+xy
+ 
+@V
+H
+@x
+  
+@V
+H
+@y
+ 
++A
+00
+yz
+ 
+@V
+H
+@y
+  
+@V
+H
+@z
+ 
++A
+00
+zx
+ 
+@V
+H
+@z
+  
+@V
+H
+@x
+ 
+ 
+ K
+00
+x
+ 
+@V
+H
+@x
+ 
+  K
+00
+y
+ 
+@V
+H
+@y
+ 
+  K
+00
+z
+ 
+@V
+H
+@z
+ 
+#
+ 
+  v
+ 
++
++
+m
+0
+N
+X
+ =1
+(B
+n
+)
+ 
+(V
+H
+)
+ 
+(S
+0
+N
+)
+ 
++
+m
+00
+N
+X
+ =1
+(B
+n
+)
+ 
+(V
+H
+)
+ 
+(S
+00
+N
+)
+ 
+; (34)
+where v
+ 
+is the volume of the  nite element  .
+The magnetic scalar potential (V
+H
+)
+ 
+{ unknown function in a current point
+P(x; y; z) inside the  nite element   = 1; m { could be written depending on
+the magnetic scalar potentials V
+Hi
+, V
+Hj
+, V
+Hk
+, V
+H`
+of the i; j; k; ` nodes ( g.4)
+which determine an irregular tetrahedron ( nite element). The expression of
+(V
+H
+)
+ 
+, for random  , may be written [2] under the form
+(V
+H
+)
+ 
+=
+1
+6v
+ 
+[(c
+ii
++ c
+ji
+x + c
+ki
+y + c
+`i
+z) V
+Hi
++
++ (c
+ij
++ c
+jj
+x + c
+kj
+y + c
+`j
+z) V
+Hj
++ (c
+ik
++ c
+jk
+x + c
+kk
+y + c
+`k
+z) V
+Hk
++
++ (c
+i`
++ c
+j`
+x + c
+k`
+y + c
+``
+z) V
+H`
+ 
+ 
+(35)
+where: v
+ 
+=   det(C)
+ 
+=6; v
+ 
+> 0; c
+rs
+(r; s = i; j; k; `) are the algebraic
+complements (cofactors) in the matrix (C)
+ 
+of the nodes coordinates which
+Electronic Journal.  2Differential Equations and Control Processes, N 1, 2002
+determine the tetrahedron  :
+(C)
+ 
+=
+0
+B
+B
+B
+B
+@
+1 x
+i
+y
+i
+z
+i
+1 x
+j
+y
+j
+z
+j
+1 x
+k
+y
+k
+z
+k
+1 x
+`
+y
+`
+z
+`
+1
+C
+C
+C
+C
+A
+ 
+: (36)
+From (35), for the terms of relation (34), results:
+z
+y
+x
+P(x; y; z)
+,
+,
+,
+`
+i
+k
+j
+Fig.4. Finite element
+ 
+@V
+H
+@x
+ 
+ 
+=
+1
+6v
+ 
+(c
+ji
+V
+Hi
++c
+jj
+V
+Hj
++c
+jk
+V
+Hk
++c
+j`
+V
+H`
+)
+ 
+; (37)
+ 
+@V
+H
+@y
+ 
+ 
+=
+1
+6v
+ 
+(c
+ki
+V
+Hi
++c
+kj
+V
+Hj
++c
+kk
+V
+Hk
++c
+k`
+V
+H`
+)
+ 
+;(38)
+ 
+@V
+H
+@z
+ 
+ 
+=
+1
+6v
+ 
+(c
+`i
+V
+Hi
++c
+`j
+V
+Hj
++c
+`k
+V
+Hk
++c
+``
+V
+H`
+)
+ 
+: (39)
+The last two sums of expression (34) may be not
+detailed in a general treatment, because the boundary
+conditions for the possible concrete cases are different.
+In practice we can also have cases when the Neumann conditions are equal
+to zero what correspond to canceling of the last two sums. With the object
+of continuing the general analysis of the minimization process of functional,
+we will detail only the  rst two sums of relation (34), following to take into
+account, for concrete cases, the terms corresponding to the Neumann boundary
+conditions too. With these mentions, taking into account the relations (37, 38,
+39), the functional (34) become
+F =
+m
+0
+X
+ =1
+1
+36v
+ 
+h
+A
+0
+xx
+(c
+ji
+V
+Hi
++c
+jj
+V
+Hj
++c
+jk
+V
+Hk
++c
+j`
+V
+H`
+)
+2
++A
+0
+yy
+(c
+ki
+V
+Hi
++
++ c
+kj
+V
+Hj
++c
+kk
+V
+Hk
++c
+k`
+V
+H`
+)
+2
++A
+0
+zz
+(c
+`i
+V
+Hi
++c
+`j
+V
+Hj
++c
+`k
+V
+Hk
++c
+``
+V
+H`
+)
+2
++
++A
+0
+xy
+(c
+ji
+V
+Hi
++c
+jj
+V
+Hj
++c
+jk
+V
+Hk
++c
+j`
+V
+H`
+) (c
+ki
+V
+Hi
++c
+kj
+V
+Hj
++c
+kk
+V
+Hk
++c
+k`
+V
+H`
+)+
++A
+0
+yz
+(c
+ki
+V
+Hi
++c
+kj
+V
+Hj
++c
+kk
+V
+Hk
++c
+k`
+V
+H`
+)(c
+`i
+V
+Hi
++c
+`j
+V
+Hj
++c
+`k
+V
+Hk
++c
+``
+V
+H`
+)+
+Electronic Journal.  3Differential Equations and Control Processes, N 1, 2002
++A
+0
+zx
+(c
+`i
+V
+Hi
++c
+`j
+V
+Hj
++c
+`k
+V
+Hk
++c
+``
+V
+H`
+) (c
+ji
+V
+Hi
++c
+jj
+V
+Hj
++c
+jk
+V
+Hk
++c
+j`
+V
+H`
+)]
+ 
++
++
+m
+00
+X
+ =1
+ 
+1
+36v
+ 
+h
+A
+00
+xx
+(c
+ji
+V
+Hi
++c
+jj
+V
+Hj
++c
+jk
+V
+Hk
++c
+j`
+V
+H`
+)
+2
++A
+00
+yy
+(c
+ki
+V
+Hi
++
++ c
+kj
+V
+Hj
++c
+kk
+V
+Hk
++c
+k`
+V
+H`
+)
+2
++A
+00
+zz
+(c
+`i
+V
+Hi
++c
+`j
+V
+Hj
++c
+`k
+V
+Hk
++c
+``
+V
+H`
+)
+2
++
++A
+00
+xy
+(c
+ji
+V
+Hi
++c
+jj
+V
+Hj
++c
+jk
+V
+Hk
++c
+j`
+V
+H`
+) (c
+ki
+V
+Hi
++c
+kj
+V
+Hj
++c
+kk
+V
+Hk
++c
+k`
+V
+H`
+)+
++A
+00
+yz
+(c
+ki
+V
+Hi
++c
+kj
+V
+Hj
++c
+kk
+V
+Hk
++c
+k`
+V
+H`
+)(c
+`i
+V
+Hi
++c
+`j
+V
+Hj
++c
+`k
+V
+Hk
++c
+``
+V
+H`
+)+
++A
+00
+zx
+(c
+`i
+V
+Hi
++c
+`j
+V
+Hj
++c
+`k
+V
+Hk
++c
+``
+V
+H`
+)(c
+ji
+V
+Hi
++c
+jj
+V
+Hj
++c
+jk
+V
+Hk
++c
+j`
+V
+H`
+)]
+ 
+ 
+ 
+1
+6
+ 
+K
+00
+x
+(c
+ji
+V
+Hi
++c
+jj
+V
+Hj
++c
+jk
+V
+Hk
++c
+j`
+V
+H`
+)+K
+00
+y
+(c
+ki
+V
+Hi
++c
+kj
+V
+Hj
++c
+kk
+V
+Hk
++
++ c
+k`
+V
+H`
+) + K
+00
+z
+(c
+`i
+V
+Hi
++c
+`j
+V
+Hj
++c
+`k
+V
+Hk
++c
+``
+V
+H`
+)]
+ 
+ 
+: (40)
+The expression (40) could be written more concentrated, in the following
+way
+F =
+m
+0
+X
+ =1
+F
+0
+ 
++
+m
+00
+X
+ =1
+ 
+F
+00
+ 
+  F
+00
+p 
+ 
+; (41)
+where: F
+0
+ 
+is the general term of the  rst sum;
+F
+00
+ 
+is the general term of the second sum;
+F
+00
+p 
+is the second general term of the second sum.
+To minimize the functional we have to cancel its derivatives by magnetic scalar
+potential of the n nodes from the discretization mesh. Using the concentrated
+form (41), results
+m
+0
+X
+ =1
+@F
+0
+ 
+@V
+Hi
++
+m
+00
+X
+ =1
+@F
+00
+ 
+@V
+Hi
+ 
+m
+00
+X
+ =1
+@F
+00
+p 
+@V
+Hi
+= 0; i = 1; n: (42)
+The system (42) contains n algebraic equations, where the unknowns are the
+magnetic scalar potentials V
+Hi
+(i = 1; n) the 3D discretization mesh of the
+Electronic Journal.  4Differential Equations and Control Processes, N 1, 2002
+studied domain. In particular cases, where the studied domain has not perma-
+nent magnetization zones (permanent magnets), the terms of the last sum are
+canceled
+ 
+K
+00
+x
+= K
+00
+y
+= K
+00
+z
+= 0
+ 
+.
+5. The establish of FEM equations
+For every node of the discretization mesh, it must be known the coordinates
+(x; y; z), the adjacent  nite elements and the neighboring nodes. In order to
+establish the rules for writing the equations system, two local numbering are
+introduced: N
+vi
+is the number of the neighbor nodes to the node i; M
+ai
+is the
+number of adjacent elements to the node i. The concrete values for N
+vi
+and
+M
+ai
+depends on the position of every node i = 1; n in the discretization mesh.
+For instance, for any node i from inside of the tetrahedral mesh, N
+vi
+= 12 and
+M
+ai
+= 20 [3]. The magnetic scalar potential V
+Hi
+of the node i appears only
+in elementary functionless F
+0
+ 
+, F
+00
+ 
+and F
+00
+p 
+which belong to the tetrahedral
+adjacent to the node i. Thus, the equation from the system (42) concerning to
+any node i from inside of the discretization mesh, which has M
+ai
+  a adjacent
+elements, will be
+@
+@V
+Hi
+ 
+a
+X
+ =1
+F
+0
+ 
+!
++
+@
+@V
+Hi
+ 
+a
+X
+ =1
+F
+00
+ 
+!
+ 
+@
+@V
+Hi
+ 
+a
+X
+ =1
+F
+00
+p 
+!
+= 0; (43)
+where are made the notations
+8
+>
+<
+>
+:
+CV j = c
+ji
+V
+Hi
++ c
+jj
+V
+Hj
++ c
+jk
+V
+Hk
++ c
+j`
+V
+H`
+CV k = c
+ki
+V
+Hi
++ c
+kj
+V
+Hj
++ c
+kk
+V
+Hk
++ c
+k`
+V
+H`
+CV ` = c
+`i
+V
+Hi
++ c
+`j
+V
+Hj
++ c
+`k
+V
+Hk
++ c
+``
+V
+H`
+; (44)
+with which the expressions of elementary functionless are:
+8
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+:
+F
+0
+1
+=
+1
+36v
+1
+h
+(A
+0
+xx
+)
+1
+(CV j)
+2
+1
++
+ 
+A
+0
+yy
+ 
+1
+(CV k)
+2
+1
++(A
+0
+zz
+)
+1
+(CV `)
+2
+1
++
++
+ 
+A
+0
+xy
+ 
+1
+(CV j)
+1
+(CV k)
+1
++
+ 
+A
+0
+yz
+ 
+1
+(CV k)
+1
+(CV `)
+1
++
++(A
+0
+zx
+)
+1
+(CV `)
+1
+(CV j)
+1
+i
+;
+.........................................................
+F
+0
+a
+=
+1
+36v
+a
+h
+(A
+0
+xx
+)
+a
+(CV j)
+2
+a
++
+ 
+A
+0
+yy
+ 
+a
+(CV k)
+2
+a
++(A
+0
+zz
+)
+a
+(CV `)
+2
+a
++
++
+ 
+A
+0
+xy
+ 
+a
+(CV j)
+a
+(CV k)
+a
++
+ 
+A
+0
+yz
+ 
+a
+(CV k)
+a
+(CV `)
+a
++
++(A
+0
+zx
+)
+a
+(CV `)
+a
+(CV j)
+a
+i
+;
+(45)
+Electronic Journal.  5Differential Equations and Control Processes, N 1, 2002
+8
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+:
+F
+00
+1
+=
+1
+36v
+1
+h
+(A
+00
+xx
+)
+1
+(CV j)
+2
+1
++
+ 
+A
+00
+yy
+ 
+1
+(CV k)
+2
+1
++(A
+00
+zz
+)
+1
+(CV `)
+2
+1
++
++
+ 
+A
+00
+xy
+ 
+1
+(CV j)
+1
+(CV k)
+1
++
+ 
+A
+00
+yz
+ 
+1
+(CV k)
+1
+(CV `)
+1
++
++(A
+00
+zx
+)
+1
+(CV `)
+1
+(CV j)
+1
+i
+;
+.........................................................
+F
+00
+a
+=
+1
+36v
+a
+h
+(A
+00
+xx
+)
+a
+(CV j)
+2
+a
++
+ 
+A
+00
+yy
+ 
+a
+(CV k)
+2
+a
++(A
+00
+zz
+)
+a
+(CV `)
+2
+a
++
++
+ 
+A
+00
+xy
+ 
+a
+(CV j)
+a
+(CV k)
+a
++
+ 
+A
+00
+yz
+ 
+a
+(CV k)
+a
+(CV `)
+a
++
++(A
+00
+zx
+)
+a
+(CV `)
+a
+(CV j)
+a
+i
+;
+(46)
+8
+>
+>
+>
+<
+>
+>
+>
+:
+F
+00
+p1
+=
+1
+6
+h
+(K
+00
+x
+)
+1
+(CV j)
+1
++
+ 
+K
+00
+y
+ 
+1
+(CV k)
+1
++(K
+00
+z
+)
+1
+(CV `)
+1
+i
+;
+......................................................
+F
+00
+pa
+=
+1
+6
+h
+(K
+00
+x
+)
+a
+(CV j)
+a
++
+ 
+K
+00
+y
+ 
+a
+(CV k)
+a
++(K
+00
+z
+)
+a
+(CV `)
+a
+i
+:
+(47)
+In the relations (45, 46, 47) the subscripts (1; 2; 3; : : : ; a) written af-
+ter the parenthesis show that the quantities ( CV j; CV k; CV `), (V
+Hi
+, V
+Hj
+,
+V
+Hk
+, V
+H`
+), c
+rs
+(r = j; k; `; s = i; j; k; `),
+ 
+A
+0
+xx
+; A
+0
+yy
+; A
+0
+zz
+; A
+0
+xy
+; A
+0
+yz
+; A
+0
+zx
+ 
+,
+ 
+A
+00
+xx
+; A
+00
+yy
+; A
+00
+zz
+; A
+00
+xy
+; A
+00
+yz
+; A
+00
+zx
+ 
+, correspond to the  nite element with the same
+index, and (v
+1
+; v
+2
+; : : : ; v
+a
+) are the adjacent tetrahedral volumes of the node i
+for what the relation is written. The algebraic complements c
+rs
+of the matrix
+(C)
+ 
+{ written with the nodes coordinates i; j; k; ` which determine the  nite
+element   { are constant quantities for an established discretization mesh. The
+elementary functionals F
+00
+ 
+and F
+00
+p 
+are different by zero only for the  nite ele-
+ments from the zone with permanent magnetization, where the functionals F
+0
+ 
+are null. If the element   is in the zone without permanent magnet, F
+0
+ 
+6= 0
+and F
+00
+ 
+= F
+00
+p 
+= 0.
+Derive the relations (45, 46, 47), the general forms of these three kind of
+terms from functional becomes:
+@F
+0
+ 
+@V
+Hi
+=
+1
+18v
+ 
+n
+ 
+A
+0
+xx
+c
+2
+ji
++A
+0
+yy
+c
+2
+ki
++A
+0
+zz
+c
+2
+`i
++A
+0
+xy
+c
+ji
+c
+ki
++A
+0
+yz
+c
+ki
+c
+`i
++A
+0
+zx
+c
+`i
+c
+ji
+ 
+V
+Hi
++
++
+ 
+A
+0
+xx
+c
+ji
+c
+jj
++A
+0
+yy
+c
+ki
+c
+kj
++A
+0
+zz
+c
+`i
+c
+`j
++
+1
+2
+A
+0
+xy
+(c
+ji
+c
+kj
++c
+ki
+c
+jj
+)+
++
+1
+2
+A
+0
+yz
+(c
+ki
+c
+`j
++c
+`i
+c
+kj
+)+
+1
+2
+A
+0
+zx
+(c
+`i
+c
+jj
++c
+ji
+c
+`j
+)
+ 
+V
+Hj
++
++
+ 
+A
+0
+xx
+c
+ji
+c
+jk
++A
+0
+yy
+c
+ki
+c
+kk
++A
+0
+zz
+c
+`i
+c
+`k
++
+1
+2
+A
+0
+xy
+(c
+ji
+c
+kk
++c
+ki
+c
+jk
+)+
+Electronic Journal.  6Differential Equations and Control Processes, N 1, 2002
++
+1
+2
+A
+0
+yz
+(c
+ki
+c
+`k
++c
+`i
+c
+kk
+)+
+1
+2
+A
+0
+zx
+(c
+`i
+c
+jk
++c
+ji
+c
+`k
+)
+ 
+V
+Hk
++
++
+ 
+A
+0
+xx
+c
+ji
+c
+j`
++A
+0
+yy
+c
+ki
+c
+k`
++A
+0
+zz
+c
+`i
+c
+``
++
+1
+2
+A
+0
+xy
+(c
+ji
+c
+k`
++c
+ki
+c
+j`
+)+
++
+1
+2
+A
+0
+yz
+(c
+ki
+c
+``
++c
+`i
+c
+k`
+)+
+1
+2
+A
+0
+zx
+(c
+`i
+c
+j`
++c
+ji
+c
+``
+)
+ 
+V
+H`
+o
+ 
+; (48)
+@F
+00
+ 
+@V
+Hi
+=
+1
+18v
+ 
+n
+ 
+A
+00
+xx
+c
+2
+ji
++A
+00
+yy
+c
+2
+ki
++A
+00
+zz
+c
+2
+`i
++A
+00
+xy
+c
+ji
+c
+ki
++A
+00
+yz
+c
+ki
+c
+`i
++A
+00
+zx
+c
+`i
+c
+ji
+ 
+V
+Hi
++
++
+ 
+A
+00
+xx
+c
+ji
+c
+jj
++A
+00
+yy
+c
+ki
+c
+kj
++A
+00
+zz
+c
+`i
+c
+`j
++
+1
+2
+A
+00
+xy
+(c
+ji
+c
+kj
++c
+ki
+c
+jj
+)+
++
+1
+2
+A
+00
+yz
+(c
+ki
+c
+`j
++c
+`i
+c
+kj
+)+
+1
+2
+A
+00
+zx
+(c
+`i
+c
+jj
++c
+ji
+c
+`j
+)
+ 
+V
+Hj
++
++
+ 
+A
+00
+xx
+c
+ji
+c
+jk
++A
+00
+yy
+c
+ki
+c
+kk
++A
+00
+zz
+c
+`i
+c
+`k
++
+1
+2
+A
+00
+xy
+(c
+ji
+c
+kk
++c
+ki
+c
+jk
+)+
++
+1
+2
+A
+00
+yz
+(c
+ki
+c
+`k
++c
+`i
+c
+kk
+)+
+1
+2
+A
+00
+zx
+(c
+`i
+c
+jk
++c
+ji
+c
+`k
+)
+ 
+V
+Hk
++
++
+ 
+A
+00
+xx
+c
+ji
+c
+j`
++A
+00
+yy
+c
+ki
+c
+k`
++A
+00
+zz
+c
+`i
+c
+``
++
+1
+2
+A
+00
+xy
+(c
+ji
+c
+k`
++c
+ki
+c
+j`
+)+
++
+1
+2
+A
+00
+yz
+(c
+ki
+c
+``
++c
+`i
+c
+k`
+)+
+1
+2
+A
+00
+zx
+(c
+`i
+c
+j`
++c
+ji
+c
+``
+)
+ 
+V
+H`
+o
+ 
+; (49)
+@F
+00
+p 
+@V
+Hi
+=
+1
+6
+ 
+K
+00
+x
+c
+ji
++ K
+00
+y
+c
+ki
++ K
+00
+z
+c
+`i
+ 
+ 
+; (50)
+where   = 1; 2; 3; : : : ; a.
+We notice that for specify equation i of the system (42), the term having the
+form (50) represents the free terms of the equation, because it doesn't contain
+the magnetic scalar potentials of the nodes (the unknowns of the problem).
+After the introduction of the terms (48, 49, 50) in relation (43), results the
+general form of an equation from the system (42), written for any node i from
+inside of the discretization mesh
+C
+i
+V
+Hi
++
+N
+vi
+X
+t=1
+C
+it
+V
+Ht
+= TL
+i
+; i = 1; n; (51)
+where we note that:
+C
+i
+=
+a
+X
+t=1
+1
+18v
+t
+ 
+A
+xx
+c
+2
+ji
++A
+yy
+c
+2
+ki
++A
+zz
+c
+2
+`i
++A
+xy
+c
+ji
+c
+ki
++A
+yz
+c
+ki
+c
+`i
++A
+zx
+c
+`i
+c
+ji
+ 
+t
+; (52)
+Electronic Journal.  7Differential Equations and Control Processes, N 1, 2002
+C
+it
+=
+w
+X
+t=1
+1
+18v
+t
+ 
+A
+xx
+c
+ji
+c
+jj
++A
+yy
+c
+ki
+c
+kj
++A
+zz
+c
+`i
+c
+`j
++
+1
+2
+A
+xy
+(c
+ji
+c
+kj
++c
+ki
+c
+jj
+)+
++
+1
+2
+A
+yz
+(c
+ki
+c
+`j
++c
+`i
+c
+kj
+)+
+1
+2
+A
+zx
+(c
+`i
+c
+jj
++c
+ji
+c
+`j
+)
+ 
+t
+; (53)
+TL
+i
+=
+1
+6
+a
+X
+t=1
+ 
+K
+00
+x
+c
+ji
++K
+00
+y
+c
+ki
++K
+00
+z
+c
+`i
+ 
+t
+: (54)
+In relations (52, 53) { obtained by writing more concentrated the relations
+(48, 49) { the terms (A
+xx
+)
+t
+, (A
+yy
+)
+t
+, (A
+zz
+)
+t
+, (A
+xy
+)
+t
+, (A
+yz
+)
+t
+, (A
+zx
+)
+t
+contain the
+components of the tensors of the ferromagnetic materials permeability ( 
+u
+,  
+v
+,
+ 
+w
+), of the air { gap ( 
+u
+=  
+v
+=  
+w
+=  
+0
+), or of the permanent magnet ( 
+pu
+,
+ 
+pv
+,  
+pw
+) ( s.[1]), as the  nite element t { adjacent to the node i for which is
+written the relation (51) { is situated in the ferromagnetic material zone, in air
+{ gap or in permanent magnet. The current index t from the expressions (52,
+53, 54) refers to the  nite element   = t, which could particularized for all the
+nodes i = 1; n of the discretization mesh, identifying the elements (1  M
+ai
+)
+from around of each node. The quantity w from the relation (53) represent
+the number of  nite element (of the M
+ai
+adjacent to the node i) to which any
+neighbor node (of the N
+vi
+neighbor to the node i) is adjacent. For the analyzed
+case (i { an inner node) w = 5 [3]. The coe cients c
+rs
+from the relations (52,
+53, 54) are obtained by identifying the nodes j; k and ` of each  nite element
+around the common node i for what the relation (51) is written. Therefore,
+for each node i with unknown magnetic scalar potential an equation having
+the form (51) could be written. In relation with the concrete position of each
+node i, the number of the neighbor nodes N
+vi
+, respectively of the adjacent
+elements M
+ai
+of the node i, gets particularly values. For the nodes on the
+boundary surface with non-null Neumann conditions of the studied domain, in
+equation (43) we introduce supplementary particular terms correspond to these
+conditions (the last two sums from energetic functional (34)).
+6. Conclusions
+If we write the equation (51) for all the nodes i = 1; n with unknowns mag-
+netic scalar potentials of the 3D discretization mesh in which the  eld problem
+is analyzed, a compatible system of algebraic equations is obtained. The val-
+ues of the magnetic scalar potentials are gotten by numerical computation of
+Electronic Journal.  8Differential Equations and Control Processes, N 1, 2002
+the system. After that, we can get (s.eq. 37, 38, 39) the components of the
+magnetic  eld intensity for each  nite element   = 1; m:
+(H
+x
+)
+ 
+=  
+ 
+@V
+H
+@x
+ 
+ 
+= 
+1
+6v
+ 
+(c
+ji
+V
+Hj
++ c
+jj
+V
+Hj
++ c
+jk
+V
+Hk
++ c
+j`
+V
+H`
+)
+ 
+; (55)
+(H
+y
+)
+ 
+=  
+ 
+@V
+H
+@y
+ 
+ 
+= 
+1
+6v
+ 
+(c
+ki
+V
+Hi
++ c
+kj
+V
+Hj
++ c
+kk
+V
+Hk
++ c
+k`
+V
+H`
+)
+ 
+; (56)
+(H
+z
+)
+ 
+=  
+ 
+@V
+H
+@z
+ 
+ 
+= 
+1
+6v
+ 
+(c
+`i
+V
+Hi
++ c
+`j
+V
+Hj
++ c
+`k
+V
+Hk
++ c
+``
+V
+H`
+)
+ 
+: (57)
+The components of the magnetic ux density
+ 
+B
+ 
+are determined from
+ 
+H
+ 
+and the tensors of magnetic permeability, in the following way: in air-gap
+ 
+B
+ 
+=  
+0
+ 
+H
+ 
+; in ferromagnetic materials
+ 
+B
+ 
+=
+ 
+   
+ 
+ 
+H
+ 
+; in permanent magnets
+ 
+B
+ 
+=
+ 
+   
+p 
+ 
+H
+ 
+.
+In conclusion, by numerical computation of equation system (51), we get
+ 
+H
+ 
+and
+ 
+B
+ 
+(  = 1; m) in each  nite element of the studied domain which is
+3D, inhomogeneous, nonlinear and anisotrop. After we know
+ 
+H
+ 
+and
+ 
+B
+ 
+, we
+can determine other quantities which we are interested in, such as: magnetic
+voltage, magnetic ux through certain surfaces, forces (torque) applied on coils
+or electric conductors placed within the air-gap and so on.
+References
+[1] I.Bere, Inhomogeneous, non-linear and anisotropic systems with random
+magnetisation main directions. Part one: The useful form of functional 3D
+for computation the  eld created by permanent magnets, Electronic journal
+\Differential equations and control processes", N 4, 2001, pp(26-35).
+()
+[2] I.Bere, Relative permeability of nonlinear and anisotrop permanent mag-
+nets, Proceedings of the scienti c communications \A. Vlaicu" University,
+Arad, 1996, pp(9-14).
+[3] K.H.Bachmann a.a., Kleine Enzyklopadie der Mathematik, Ed. Tehnica,
+Bucuresti, 1980, pp(239-240).
+Electronic Journal.  9
