@@ -8,7 +8,7 @@ using NUnit.Framework;
 namespace EugenePetrenko.RFFI
 {
   [TestFixture]
-  public class RFFIGenTest : XmlTestBase
+  public class RFFIGenTest : XmlTestBase, IPdfTextManager
   {
     public INumber[] Numbers
     {
@@ -24,6 +24,22 @@ namespace EugenePetrenko.RFFI
       DoRFFI(number);
     }
 
+    public string PdfText(IArticleInfo article)
+    {
+      return "mock <pdf> text " + article.Id;
+    }
+
+    private string Path(XmlNode node)
+    {
+      if (node is XmlElement)
+      {
+        return Path(node.ParentNode) + "/" + node.Name;
+      }
+
+      if (node == null) return "";
+      return Path(node.ParentNode);
+    }
+
     private void DoRFFI(INumber number)
     {
       var doc = GenerateRFFI(number);
@@ -33,8 +49,9 @@ namespace EugenePetrenko.RFFI
       RFFISchemaValidator.EnsureRFFIValid(doc);
 
       //check no XML in text
-      foreach (var text in doc.SelectNodes("//text()").Cast<XmlText>())
+      foreach (var text in doc.SelectNodes("//text()").Cast<XmlNode>())
       {
+        if (Path(text).EndsWith("article/text")) continue;
         Assert.IsFalse(Regex.Matches(text.Value, "<\\w+/?>").Count > 0, "<TAG> contained in " + text.Value);
       }
 
@@ -45,9 +62,9 @@ namespace EugenePetrenko.RFFI
       }
     }
 
-    private static XmlDocument GenerateRFFI(INumber number)
+    private XmlDocument GenerateRFFI(INumber number)
     {
-      var num = new RFFIJournalNumber(new RFFIIssue(number));
+      var num = new RFFIJournalNumber(new RFFIIssue(number, this));
       XmlDocument doc = XmlAttributeProcessor.Build(num);
       return doc;
     }

@@ -6,15 +6,17 @@ namespace EugenePetrenko.RFFI
     private readonly string mySurname;
     private readonly string myFName;
     private readonly string myauwork;
+    private readonly string myAuworkaddr;
     private readonly string myauemail;
 
 
-    public RFFIAuthorInfo(string lang, string surname, string fName, string auwork, string auemail)
+    public RFFIAuthorInfo(string lang, string surname, string fName, string auwork, string auworkaddr, string auemail)
     {
       myLang = lang;
       mySurname = surname;
       myFName = fName;
       myauwork = auwork;
+      myAuworkaddr = auworkaddr;
       myauemail = auemail;
     }
 
@@ -35,19 +37,23 @@ namespace EugenePetrenko.RFFI
     {
       get { return myFName.Trim(); }
     }
-/*
 
     [XmlElementPath("orgName"), XmlText]
     public string Auwork
     {
       get { return myauwork; }
     }
-*/
 
     [XmlElementPath("email"), XmlText]
     public string Auemail
     {
       get { return myauemail; }
+    }
+
+    [XmlElementPath("address"), XmlText]
+    public string AuworkAddr
+    {
+      get { return myAuworkaddr; }
     }
   }
 }

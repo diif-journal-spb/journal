@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using EugenePetrenko.DataModel;
+using JetBrains.Annotations;
 
 namespace EugenePetrenko.RFFI
 {
@@ -10,11 +11,13 @@ namespace EugenePetrenko.RFFI
   {
     private readonly RFFIIssue myRffiIssue;
     private readonly IArticle myArticle;
+    private readonly IPdfTextManager myPdfManager;
 
-    public RFFIArticle(RFFIIssue rffiIssue, IArticle article)
+    public RFFIArticle(RFFIIssue rffiIssue, IArticle article, IPdfTextManager pdfManager)
     {
       myRffiIssue = rffiIssue;
       myArticle = article;
+      myPdfManager = pdfManager;
     }
 
     [XmlElementPath("pages"), XmlText]
@@ -54,6 +57,12 @@ namespace EugenePetrenko.RFFI
       }
     }
 
+    [XmlElementPath("text")]
+    public RFFIArticleText PdfText
+    {
+      get { return new RFFIArticleText(myPdfManager, myArticle); }
+    }
+
     [XmlElementPath("references", "reference", CloneData = new[] { false, true }), XmlForeach]
     public IEnumerable<RFFIReference> Refererences
     {
@@ -64,6 +73,38 @@ namespace EugenePetrenko.RFFI
     public RFFIArticleFiles Files
     {
       get { return new RFFIArticleFiles(myRffiIssue, myArticle);}
+    }
+  }
+
+  public class RFFIArticleText
+  {
+    private readonly IPdfTextManager myPdfText;
+    private readonly IArticle myArticle;
+
+    public RFFIArticleText(IPdfTextManager pdfText, IArticle article)
+    {
+      myPdfText = pdfText;
+      myArticle = article;
+    }
+
+    [XmlAttribute("lang")]
+    public string Lang
+    {
+      get
+      {
+        return myArticle.AllLanguages().Select(x => x.JournalLanguage).Contains(JournalLanguage.RU)
+          ? JournalLanguage.RU.Lang()
+          : JournalLanguage.EN.Lang();
+      }
+    }
+
+    [XmlText]
+    public string Text
+    {
+      get
+      {
+        return myPdfText.PdfText(myArticle.AllLanguages().First());
+      }
     }
   }
 

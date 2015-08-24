@@ -169,7 +169,8 @@ namespace EugenePetrenko.JournalGenerator
         string dir = Path.Combine(rffi, number.Year + "-" + number.Number);
         Directory.CreateDirectory(dir);
 
-        var num = new RFFIJournalNumber(new RFFIIssue(number));
+        myPdfManager.CopyFiles();
+        var num = new RFFIJournalNumber(new RFFIIssue(number, myPdfManager));
         XmlDocument doc = XmlAttributeProcessor.Build(num);
 
         string file = Path.Combine(dir, string.Format("{0}-{1}_unicode.xml", number.Year, number.Number));

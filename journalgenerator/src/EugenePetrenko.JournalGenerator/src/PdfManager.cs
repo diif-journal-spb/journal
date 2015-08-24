@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using EugenePetrenko.DataModel;
+using EugenePetrenko.RFFI;
 
 namespace EugenePetrenko.JournalGenerator
 {
@@ -51,7 +52,7 @@ namespace EugenePetrenko.JournalGenerator
     }
   }
 
-  public class PdfManager : PdfFileCopier
+  public class PdfManager : PdfFileCopier, IPdfTextManager
   {
     /// <summary>
     /// Dest -> Source
@@ -59,13 +60,23 @@ namespace EugenePetrenko.JournalGenerator
     
     private readonly Dictionary<PdfLink, IArticle> myPdfLinksToArticle = new Dictionary<PdfLink, IArticle>();
     private readonly LinkManager myLinkManager;
+    private readonly string myPdfStorePath;
 
     public PdfManager(LinkManager linkManager, string pdfStorePath) : base(pdfStorePath)
     {
       myLinkManager = linkManager;
+      myPdfStorePath = pdfStorePath;
     }
 
-    
+    public string PdfText(IArticleInfo article)
+    {
+      var file = Path.Combine(myPdfStorePath + ".text", Path.GetFileNameWithoutExtension(article.Pdf) + ".text");
+      using (var t = new StreamReader(File.OpenRead(file), Encoding.UTF8))
+      {
+        return t.ReadToEnd();
+      }
+    }
+
     public PdfLink RegisterPdf(IArticle article, Language lang, LinkTemplate page)
     {
       IArticleInfo language = article.ForLanguage(LanguageUtil.Convert(lang));

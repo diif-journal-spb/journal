@@ -7,10 +7,12 @@ namespace EugenePetrenko.RFFI
   public class RFFIIssue
   {
     private readonly INumber myNumber;
+    private readonly IPdfTextManager myPdfManager;
 
-    public RFFIIssue(INumber number)
+    public RFFIIssue(INumber number, IPdfTextManager pdfManager)
     {
       myNumber = number;
+      myPdfManager = pdfManager;
     }
 
     [XmlIgnore]
@@ -53,7 +55,7 @@ namespace EugenePetrenko.RFFI
     {
       get 
       {
-        return Articlez.Select(article => new RFFIArticle(this, article)).ToArray();
+        return Articlez.Select(article => new RFFIArticle(this, article, myPdfManager)).ToArray();
       }
     }
 

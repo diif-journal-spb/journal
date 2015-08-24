@@ -26,7 +26,8 @@ namespace EugenePetrenko.RFFI
               en.JournalLanguage.Lang(), 
               en.LastName, 
               en.FirstName + " " + en.MiddleName, 
-              en.Address.FilterXml(),
+              en.Origanization.Name,
+              en.Origanization.Address,
               en.EMail)
               );
       }

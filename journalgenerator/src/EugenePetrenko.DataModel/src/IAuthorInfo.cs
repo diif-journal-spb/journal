@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Xml;
 
@@ -59,7 +60,11 @@ namespace EugenePetrenko.DataModel
 
     public IOrganizationInfo Origanization
     {
-      get { return Author.Organization.ForLanguage(JournalLanguage); }
+      get { 
+        return Author.Organization.AllLanguages()
+          .FirstOrDefault(x=>x.JournalLanguage == JournalLanguage) 
+          ?? Author.Organization.AllLanguages().First(); 
+      }
     }
 
     public IAuthor Author
