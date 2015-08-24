@@ -1,8 +1,12 @@
 using System;
 using System.IO;
+using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
+using System.Xml;
 using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.parser;
+using iTextSharp.text.pdf.qrcode;
 using Path = System.IO.Path;
 
 namespace EugenePetrenko.DataMigration
@@ -30,20 +34,57 @@ namespace EugenePetrenko.DataMigration
 
           for (int page = 1; page <= pdfReader.NumberOfPages; page++)
           {
-            ITextExtractionStrategy strategy = new SimpleTextExtractionStrategy();
-            
-            string currentText = PdfTextExtractor.GetTextFromPage(pdfReader, page, strategy);
+            try
+            {
+              ITextExtractionStrategy strategy = new SimpleTextExtractionStrategy();
 
-            /* http://stackoverflow.com/questions/2550796/reading-pdf-content-with-itextsharp-dll-in-vb-net-or-c-sharp
+              string currentText = PdfTextExtractor.GetTextFromPage(pdfReader, page, strategy);
+
+              /* http://stackoverflow.com/questions/2550796/reading-pdf-content-with-itextsharp-dll-in-vb-net-or-c-sharp
              * Encoding.UTF8.GetString(Encoding.Convert(Encoding.Default, Encoding.UTF8, Encoding.Default.GetBytes(currentText)))
              */
 
-            text.Append(currentText);
+              text.Append(currentText);
+            }
+            catch
+            {
+              text.Append("\n");
+            }
           }
+
+          var actualText = text.ToString();
+          actualText = Regex.Replace(actualText,
+            @"Электронный журнал.\s+http://www.math.spbu.ru/di..?journal\s+\d+Дифференциальные уравнения и процессы управления,N.\s+\d+,\s+\d+",
+            "");
+          actualText = Regex.Replace(actualText,
+            @"Электронный журнал.\s+\d+Дифференциальные уравнения и процессы управления,N.\s+\d+,\s+\d+",
+            "");
+          actualText = Regex.Replace(actualText,
+            @"Электронный журнал.\s+http://www.neva.ru/journal\s+\d+Дифференциальные уравнения и процессы управления,\s+N.\s+\d+,\s+\d+",
+            "");
+          actualText = Regex.Replace(actualText,
+            @"Electronic Journal.\s+http://www.math.spbu.ru/di..?journals+\d+Di..?erential Equations and Control Processes,s+Ns+d+,\s+d+",
+            "");
+          actualText = Regex.Replace(actualText,
+            @"Electronic Journal.\s+http://www.neva.ru/journal+\d+Di..?erential Equations and Control Processes,s+Ns+d+,\s+d+",
+            "");
+          actualText = Regex.Replace(actualText,
+            @"Electronic Journal.\s+http://www.neva.ru/journal,\s+http://www.math.spbu.ru/user/di®journal/?\s+\d+Di..?erential Equations and Control Processes,\s+N\s+\d+,\s+\d+",
+            "");
+          actualText = Regex.Replace(actualText,
+            @"Electronic Journal.\s+\d+Differential Equations and Control Processes,\s+N\s+\d+,\s+\d+",
+            "");
+          actualText = Regex.Replace(actualText,
+            @"http://www.neva.ru/journal",
+            "");
+          actualText = actualText.Replace("®", "ff");
+          actualText = actualText.Replace("ﬀ", "ff");
+          actualText = actualText.Replace("", "ff");
+          actualText = new string(actualText.ToCharArray().Select(x=> !XmlConvert.IsXmlChar(x) ? ' ' : x).ToArray());
 
           using (var w = new StreamWriter(File.Create(marker), Encoding.UTF8))
           {
-            w.WriteLine(text);
+            w.WriteLine(actualText);
           }
         }
       });
