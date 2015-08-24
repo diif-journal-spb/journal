@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace EugenePetrenko.DataModel
@@ -24,6 +25,7 @@ namespace EugenePetrenko.DataModel
 
     public void AddEntity(JournalLanguage lang, T t)
     {
+      if (myEntities.ContainsKey(lang)) throw new Exception("Duplicate language: " + lang + " for " + t ); 
       myEntities.Add(lang, t);
     }
   }

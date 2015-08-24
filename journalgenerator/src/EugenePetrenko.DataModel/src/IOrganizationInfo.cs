@@ -17,7 +17,7 @@ namespace EugenePetrenko.DataModel
     private readonly IOrganization myOrganization;
     private readonly string myName;
     private readonly string myAddress;
-   
+
     public OrganizationInfo(XmlElement el, IXmlDataLoader loader, IOrganization organization)
       : base(loader.EntityGenerator)
     {
@@ -50,6 +50,11 @@ namespace EugenePetrenko.DataModel
     public string Name
     {
       get { return myName; }
+    }
+
+    public override string ToString()
+    {
+      return "POrganizationInfp{Id=" + Id + ", Name=" + Name + "}";
     }
   }
 }
