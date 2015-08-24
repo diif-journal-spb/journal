@@ -1,6 +1,6 @@
 ﻿using System;
-using System.IO;
 using EugenePetrenko.JournalGenerator;
+using Path = System.IO.Path;
 
 namespace EugenePetrenko.DataMigration
 {
@@ -57,6 +57,8 @@ namespace EugenePetrenko.DataMigration
       //make sure all author organizations are included
       AuthorOrganizationProcessor.Process(ec, data);
 
+      //generate text file index for all .pdf files
+      PdfToTextProcessor.Process(ec, pdf);
     }
   }
 }
