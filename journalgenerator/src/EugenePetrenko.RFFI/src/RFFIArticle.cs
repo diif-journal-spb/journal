@@ -120,15 +120,6 @@ namespace EugenePetrenko.RFFI
       myRffiIssue = rffiIssue;
       myArticle = article;
     }
-
-    [XmlElementPath("fhtml"), XmlText]
-    public string HTML
-    {
-      get
-      {
-        return ArticleLinkExtensions.getArticleURL(BaseURL, myRffiIssue.NumberInternal, myArticle);
-      }
-    }
     
     [XmlElementPath("furl", CloneData = new [] {true}), XmlText]
     public string PdfURLs
