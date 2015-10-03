@@ -6,7 +6,6 @@ using System.Text.RegularExpressions;
 using System.Xml;
 using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.parser;
-using iTextSharp.text.pdf.qrcode;
 using Path = System.IO.Path;
 
 namespace EugenePetrenko.DataMigration
