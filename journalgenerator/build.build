@@ -6,6 +6,7 @@
   <property name="debug" value="${base}/../debug" />
   <property name="generator.exe" value="${base}/bin/EugenePetrenko.JournalGenerator.exe" />
   <property name="migration.exe" value="${base}/bin/EugenePetrenko.DataMigration.exe" />
+  <property name="editor.exe" value="${base}/bin/EugenePetrenko.NumberEditor.exe" />
 
   <property name="msbuild-configuration" value="Release" />
  
@@ -38,6 +39,11 @@
   <target name="migrate">
      <call target="make-debug" />
      <call target="run-migrate" />
+  </target>
+
+  <target name="ui">
+     <call target="make-debug" />
+     <call target="run-ui" />
   </target>
 
   <target name="migrate-cancel" >
@@ -74,7 +80,13 @@
       <arg value="/pdf=${path::get-full-path(base + '\pdf')}" />
     </exec>
   </target>
-  
+
+
+  <target name="run-ui">
+    <exec program="${editor.exe}" verbose="true" spawn="true">
+    </exec>
+  </target>
+ 
 
   <target name="run-build">
     <echo message="Use -D:inforeg=&lt;number>-&lt;year> to specify articles generation for inforeg" />
