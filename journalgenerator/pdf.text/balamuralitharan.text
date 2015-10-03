@@ -1,0 +1,4010 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 3, 2015
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Ordinary differential equations
+PERIODIC SOLUTIONS FOR THIRD AND FOURTH ORDER
+DELAY DIFFERENTIAL EQUATION
+IMPULSES WITH FREDHOLM OPERATOR OF INDEX ZERO
+S.Balamuralitharan
+Faculty of Engineering and Technology, Department of Mathematics,
+SRM University, Kattankulathur - 603 203,Tamil Nadu, INDIA.
+Email:balamurali.maths@gmail.com
+Abstract
+The purpose of this paper is to study the periodic solution of a certain class of third
+and fourth order delay differential equation impulses with Fredholm operator of index
+zero. We obtain the existence of periodic solution and Mawhin's continuation theorem.
+The delay conditions for the Schwarz inequality of the periodic solutions are also obtained.
+An example is also furnished which demonstrates validity of main result. We establish
+some new su cient conditions which ensure that every solution of this equation impulses
+to at least one periodic solution.
+Keywords and phrases: third and fourth order delay differential equations; Im-
+pulses; Periodic solutions; Mawhin's continuation theorem; Fredholm operator of index
+zero.
+1 Introduction
+The theory of impulsive delay differential equations is promising as an important
+role of investigation, since it is better than the corresponding theory of delay
+differential equation without impulse effects. Furthermore, such equations may
+demonstrate several real-world phenomena in physics,chemistry, biology, engi-
+neering, etc. In the last few years the theory of periodic solutions and delayDifferential Equations and Control Processes, N 3, 2015
+differential equations with impulses has been studied by many authors, respec-
+tively [3, 5, 7, 8]. There are several books and a lot of papers dealing with the
+periodic solution of delay differential equations [1, 2, 4, 6, 9]. Periodic solutions
+of impulsive delay differential equations is a new research area and there are
+many publications in this  eld. The paper deals with impulsive equations with
+constant delay and Fredholm operator of index zero. We obtain the theorems
+of existence of periodic solution based on the Mawhin's continuation theorem.
+In [11, 22, 23], the periodic solution of delay differential equations was
+considered. Also, boundedness of solutions was investigated in [22]. Afterward,
+many books and papers dealt with the delay differential equations and given
+many results, for example, [10, 12, 13, 14, 18, 19], etc.In recent years, the
+periodic solutions for some types of second and third-order delay differential
+equation with deviating argument were investigated; see [15, 16, 17, 21]. In
+[19], Sadek obtained stability and boundedness of a kind of third-order delay
+differential equation system. By using the continuation theorem of Mawhin's
+coincidence degree theory [14], we obtain some new results which complement
+and extend the corresponding works already known; see[15, 16, 17, 20, 21].
+2 Preliminaries
+LetPC(R;R) =fx :R!R;x(t) be continuous everywhere except for some t
+k
+at which x(t
++
+k
+) and x(t
+ 
+k
+) exist and x(t
+ 
+k
+) =x(t
+k
+)g,
+PC
+1
+(R;R) =fx :R!R;x(t) is continuous everywhere except for some t
+k
+at
+which x
+0
+(t
++
+k
+) and x
+0
+(t
+ 
+k
+) exist and x
+0
+(t
+ 
+k
+) =x
+0
+(t
+k
+)g, as the space of continuous
+everywhere and continuously differentiable everywhere functions excluding t
+k
+points.
+PC
+2
+(R;R) =fx :R!R;x(t) is continuous everywhere except for some t
+k
+at
+whichx
+00
+(t
++
+k
+) andx
+00
+(t
+ 
+k
+) exist andx
+00
+(t
+ 
+k
+) =x
+00
+(t
+k
+)g, as the space of continuous
+everywhere and continuously differentiable everywhere functions excluding t
+k
+points.
+Let X = fx(t) 2 PC
+1
+(R;R);x(t + T ) = x(t)g with norm kxk =
+maxfjxj
+1
+;jx
+0
+j
+1
+g, wherejxj
+1
+= sup
+t2[0;T ]
+jx(t)j,
+Y = PC(R;R) R
+n
+ R
+n
+, with norm kyk = maxfjuj
+1
+;jcjg, where u 2
+PC(R;R);c = (c
+1
+;:::c
+2n
+)2R
+n
+ R
+n
+,jcj = max
+1 k 2n
+fjc
+k
+jg.
+Z = PC(R;R) R
+n
+ R
+n
+, with norm kzk = maxfjvj
+1
+;jdjg, where v 2
+PC(R;R);d = (d
+1
+;:::d
+2n
+)2R
+n
+ R
+n
+,jdj = max
+1 k 2n
+fjd
+k
+jg.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 17Differential Equations and Control Processes, N 3, 2015
+Then X, Y and Z are Banach spaces. L : D(L)  X! Y and L : D(L) 
+Y!Z are a Fredholm operator of index zero, whereD(L) denotes the domain
+of L. P :X!X;Q :Y!Y;R :Z!Z are projectors such that
+ImP = kerL; kerQ = ImL; kerR = ImL;
+X = kerL  kerP; Y = ImL  ImQ; Z = ImL  ImR:
+It continues that
+Lj
+D(L)\kerP
+:D(L)\ kerP! ImL
+is invertible and we assume the inverse of that map by K
+p
+. Let 
+ be an open
+bounded subset of X, D(L)\ 
+6=;, the map N : X ! Y will be called
+L-compact in 
+, if QN(
+) is bounded and K
+p
+(I Q)N : 
+!X is compact.
+Similarly it follows that
+Lj
+D(L)\kerQ
+:D(L)\ kerQ! ImL
+is invertible and we assume the inverse of that map by K
+q
+. Let 
+ be an open
+bounded subset of Y , D(L)\ 
+6=;, the map N : Y ! Z will be called L-
+compact in 
+, if RN(
+) is bounded and K
+q
+(I R)N : 
+!Y is compact.
+This paper obtains the existence of periodic solutions for the third-order
+delay differential equations with impulses
+x
+000
+(t) +f(t;x
+00
+(t)) +g(t;x
+0
+(t)) +h(x(t  (t)) =p(t);t  0;t6=t
+k
+;
+ x(t
+k
+) =I
+k
+;
+ x
+0
+(t
+k
+) =J
+k
+;
+ x
+00
+(t
+k
+) =K
+k
+:
+(1)
+wheref(t+T;x) =f(t;x),g(t+T;x) =g(t;x),h(t+T ) =h(t), (t+T ) = (t),
+p(t +T ) =p(t) ,  (t)  0;
+ x(t
+k
+) = x(t
++
+k
+) x(t
+ 
+k
+), x(t
++
+k
+) = lim
+t!t
++
+k
+x(t), x(t
+ 
+k
+) = lim
+t!t
+ 
+k
+x(t), x(t
+ 
+k
+) =
+x(t
+k
+);
+ x
+0
+(t
+k
+) = x
+0
+(t
++
+k
+)  x
+0
+(t
+ 
+k
+), x
+0
+(t
++
+k
+) = lim
+t!t
++
+k
+x
+0
+(t), x
+0
+(t
+ 
+k
+) = lim
+t!t
+ 
+k
+x
+0
+(t),
+x
+0
+(t
+ 
+k
+) =x
+0
+(t
+k
+);
+ x
+00
+(t
+k
+) = x
+00
+(t
++
+k
+)  x
+00
+(t
+ 
+k
+), x
+00
+(t
++
+k
+) = lim
+t!t
++
+k
+x
+00
+(t), x
+00
+(t
+ 
+k
+) = lim
+t!t
+ 
+k
+x
+00
+(t),
+x
+00
+(t
+ 
+k
+) =x
+00
+(t
+k
+).
+The results is related to not only f, g, and h parameters with the impulses
+I
+k
+;J
+k
+;K
+k
+and the delay  . We assume that the following conditions:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 18Differential Equations and Control Processes, N 3, 2015
+(H1) f(t +T;x) = f(t;x), f2 C(R
+2
+;R) and g(t +T;x) = g(t;x), h(t +T ) =
+h(t); h;g2 C(R;R), with  (t +T ) =  (t),  (t)  0, p(t +T ) = p(t) ,
+p; 2C(R;R);
+(H2)ft
+k
+g satis es t
+k
+<t
+k+1
+and lim
+k! 1
+t
+k
+= 1, k2Z,
+I
+k
+(x;y);J
+k
+(x;y);K
+k
+(x;y)2 C(R
+2
+;R), and there is a positive n such that
+ft
+k
+g\ [0;T ] =ft
+1
+;t
+2
+;:::;t
+n
+g;t
+k+n
+=t
+k
++T ,
+I
+k+n
+(x;y) =I
+k
+(x;y);J
+k+n
+(x;y) =J
+k
+(x;y);K
+k+n
+(x;y) =K
+k
+(x;y).
+(H3) There are constants  ;   0 such that
+jf(t;x)j  jxj; 8(t;x)2 [0;T ] R; (2)
+xf(t;x)  jxj
+2
+; 8(t;x)2 [0;T ] R; (3)
+(H4) There are constants  ;   0 such that
+jg(t;x)j  jxj; 8(t;x)2 [0;T ] R; (4)
+x
+2
+g(t;x)  jxj
+2
+; 8(t;x)2 [0;T ] R; (5)
+(H5) there are constants  
+i
+  0 (i = 1; 2; 3) such that
+jh(x)j  
+1
++ 
+2
+jxj; (6)
+jh(x) h(y)j  
+3
+jx yj; (7)
+(H6) there are constants 
+i
+> 0 (i = 1; 2; 3), such thatj
+R
+x+ J
+k
+(x;y)
+x
+h(s)dsj 
+jJ
+k
+(x;y)j(
+1
++
+2
+jxj +
+3
+jJ
+k
+(x;y)j); 8 2 (0; 1);
+(H7) there are constantsa
+k
+;a
+0
+k
+;a
+00
+k
+  0 such thatjK
+k
+(x;y)j a
+k
+jxj
+2
++a
+0
+k
+jxj +a
+00
+k
+;
+(H8) zK
+k
+(x;y)  0 and there are constants b
+k
+  0 such thatjK
+k
+(x;y)j b
+k
+.
+Lemma 1 [[4]] Let L be a Fredholm operator of index zero and let N be L-
+compact on 
+. We assume that the following conditions are satis ed:
+(i) Lx6= Nx;8x2@
+\D(L); 2 (0; 1);
+(ii) RNx6= 0, for all x2@
+\ kerL;
+(iii) degfKRNx; 
+
+T
+kerL; 0g6= 0, where K : ImR! kerL is an isomor-
+phism.
+Then the abstract equation Lx =Nx has at least one solution in 
+
+T
+D(L).
+Electronic Journal. http://www.math.spbu.ru/diffjournal 19Differential Equations and Control Processes, N 3, 2015
+We assume the operators L :D(L) X!Y and L :D(L) Y!Z by
+Lx = (x
+000
+;  x(t
+1
+);:::;  x(t
+n
+);  x
+0
+(t
+1
+);:::;  x
+0
+(t
+n
+);  x
+00
+(t
+1
+);:::;  x
+00
+(t
+n
+));
+(8)
+and N :X!Y , N :Y!Z by
+Nx = ( f(t;x
+00
+(t)) g(t;x
+0
+(t)) h(x(t  (t))) +p(t);
+I
+1
+(x(t
+1
+));:::;I
+n
+(x(t
+n
+));J
+1
+(x
+0
+(t
+1
+));:::;J
+n
+(x
+0
+(t
+n
+));K
+1
+(x
+00
+(t
+1
+));:::;K
+n
+(x
+00
+(t
+n
+))):
+(9)
+Lemma 2 [[4]] L is a Fredholm operator of index zero with
+kerL =fx(t) =c;t2Rg; (10)
+and
+ImL(y;z;a
+1
+;:::;a
+n
+;b
+1
+;:::;b
+n
+)
+=
+Z
+T
+0
+(y(s) +z(s))ds +
+n
+X
+k=1
+b
+k
+(T t
+k
+) +
+n
+X
+k=1
+a
+k
++x
+0
+(0)T = 0:
+(11)
+Let the linear operators P :X!X, Q :Y!Y and R :Z!Z be de ned by
+Px =x(0); (12)
+Q(y;a
+1
+;:::;a
+n
+;b
+1
+;:::;b
+n
+)
+=
+2
+T
+2
+[
+Z
+T
+0
+(T s)y(s)ds +
+n
+X
+k=1
+b
+k
+(T t
+k
+) +
+n
+X
+k=1
+a
+k
++x
+0
+(0)T ]; 0;:::; 0);
+(13)
+and
+R(z;a
+1
+;:::;a
+n
+;b
+1
+;:::;b
+n
+)
+=
+2
+T
+2
+[
+Z
+T
+0
+(T s)z(s)ds +
+n
+X
+k=1
+b
+k
+(T t
+k
+) +
+n
+X
+k=1
+a
+k
++x
+0
+(0)T ]; 0;:::; 0):
+(14)
+Lemma 3 [[8]] If ff> 0, x(t)2PC
+2
+(R;R) with x(t +T ) =x(t), then
+Z
+T
+0
+Z
+t
+t ff
+jx
+0
+(s)j
+2
+dsdt =ff
+Z
+T
+0
+jx
+0
+(t)j
+2
+dt (15)
+and
+Z
+T
+0
+Z
+t+ff
+t
+jx
+0
+(s)j
+2
+dsdt =ff
+Z
+T
+0
+jx
+0
+(t)j
+2
+dt: (16)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 20Differential Equations and Control Processes, N 3, 2015
+Let
+A
+1
+(t;ff) =
+X
+t ff t
+k
+ t
+a
+k
+; A
+2
+(t;ff) =
+X
+t t
+k
+ t+ff
+a
+k
+;
+B
+1
+(t;ff) =
+X
+t ff t
+k
+ t
+a
+0
+k
+; B
+2
+(t;ff) =
+X
+t t
+k
+ t+ff
+a
+0
+k
+;
+C
+1
+(t;ff) =
+X
+t ff t
+k
+ t
+a
+00
+k
+; C
+2
+(t;ff) =
+X
+t t
+k
+ t+ff
+a
+00
+k
+;
+I
+1
+=
+ 
+Z
+T
+0
+A
+2
+1
+(t;ff)dt
+ 
+1=2
++
+ 
+Z
+T
+0
+A
+2
+2
+(t;ff)dt
+ 
+1=2
+;
+I
+2
+=
+ 
+Z
+T
+0
+B
+2
+1
+(t;ff)dt
+ 
+1=2
++
+ 
+Z
+T
+0
+B
+2
+2
+(t;ff)dt
+ 
+1=2
+;
+I
+3
+=
+Z
+T
+0
+A
+2
+1
+(t;ff)dt +
+Z
+T
+0
+A
+2
+2
+(t;ff)dt;
+I
+4
+=
+Z
+T
+0
+A
+1
+(t;ff)B
+1
+(t)dt +
+Z
+T
+0
+A
+2
+(t;ff)B
+2
+(t)dt;
+I
+5
+=
+Z
+T
+0
+B
+2
+1
+(t;ff)dt +
+Z
+T
+0
+B
+2
+2
+(t;ff)dt
+The following Lemma is important for us to the delay  (t).
+Lemma 4 Suppose  (t)2C(R;R) with  (t +T ) = (t) and  (t)2 [ ff;ff] for
+all t2 [0;T ], x(t)2 PC
+1
+(R;R) with x(t +T ) = x(t) and there is a positive
+n such thatft
+k
+g\ [0;T ] =ft
+1
+;t
+2
+;:::;t
+n
+g,  x(t
+k
+) =  I
+k
+(x(t
+k
+);x
+0
+(t
+k
+)) for all
+ 2 (0; 1) and t
+k+n
+= t
+k
++T;I
+k+n
+(x;y) = I
+k
+(x;y). Furthermore there exist
+nonnegative constants a
+k
+;a
+k
+such thatjI
+k
+(x;y)j a
+k
+jxj +a
+0
+k
+. Then
+Z
+T
+0
+jx(t) x(t  (t))j
+2
+dt
+  2ff
+2
+Z
+T
+0
+jx
+0
+(t)j
+2
+dt + 2ffI
+1
+jx(t)j
+1
+ 
+Z
+T
+0
+jx
+0
+(t)j
+2
+dt
+ 
+1=2
++ 2ffI
+2
+ 
+Z
+T
+0
+jx
+0
+(t)j
+2
+dt
+ 
+1=2
++I
+3
+jx(t)j
+2
+1
++I
+4
+jx(t)j
+1
++I
+5
+:
+(17)
+3 Third-order delay differential equation
+We establish the theorems of existence of periodic solution based on the follow-
+ing two conditions.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 21Differential Equations and Control Processes, N 3, 2015
+Theorem 1 We assume that (H1){(H8) hold. Then (1) has at least one T -
+periodic solution and
+n
+X
+k=1
+a
+k
+< 1; (18)
+h
+
+2
+(
+n
+X
+k=1
+a
+k
+) +
+3
+(
+n
+X
+k=1
+a
+2
+k
+)
+i
+M
+2
++ 
+3
+h
+2j (t)j
+2
+1
++ 2j (t)j
+1
+I
+1
+(j (t)j
+1
+)M +I
+3
+(j (t)j
+1
+)M
+2
+i
+1=2
+< ;
+(19)
+where
+M =
+1
+1 
+P
+n
+k=1
+a
+k
+(
+ 
+ 
+2
+T
+1=2
++T
+1=2
+):
+proof: Consider the abstract equation Lx =  Nx, with  2 (0; 1), where
+L and N are given by (8) and (9). Let
+
+
+1
+=fx2D(L) : kerL;Lx = Nx for some  2 (0; 1)g:
+For x2 
+
+1
+, (1) Integrating the interval on [0;T ], using Schwarz inequality,
+we get
+j
+Z
+T
+0
+h(x(t  (t))dtj
+=j
+Z
+T
+0
+p(t)dt 
+Z
+T
+0
+f(t;x
+00
+(t))dt 
+Z
+T
+0
+g(t;x
+0
+(t))dt +
+n
+X
+k=1
+K
+k
+(x(t
+k
+);x
+00
+(t
+k
+))j
+ Tjp(t)j
+1
++ 
+Z
+T
+0
+jx
+00
+(t)jdt +
+n
+X
+k=1
+b
+k
+  T
+1=2
+ 
+Z
+T
+0
+jx
+00
+(t)j
+2
+dt
+ 
+1=2
++Tjp(t)j
+1
++
+n
+X
+k=1
+b
+k
+:
+From the above formula, there is a interval on t
+0
+2 [0;T ] such that
+jh(x(t
+0
+  (t
+0
+))j 
+ 
+T
+1=2
+(
+Z
+T
+0
+jx
+00
+(t)j
+2
+dt)
+1=2
++jp(t)j
+1
++
+1
+T
+n
+X
+k=1
+b
+k
+:
+From (6),we get
+ 
+1
++ 
+2
+jx(t
+0
+  (t
+0
+))j 
+ 
+T
+1=2
+(
+Z
+T
+0
+jx
+00
+(t)j
+2
+dt)
+1=2
++jp(t)j
+1
++
+1
+T
+n
+X
+k=1
+b
+k
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 22Differential Equations and Control Processes, N 3, 2015
+Then
+jx(t
+0
+  (t
+0
+))j 
+ 
+ 
+2
+T
+1=2
+ 
+Z
+T
+0
+jx
+00
+(t)j
+2
+dt
+ 
+1=2
++d;
+where d =
+ 
+jjp(t)j
+1
++
+1
+T
+P
+n
+k=1
+b
+k
+  
+1
+j
+ 
+= 
+2
+. So there is an integer m and an
+interval t
+1
+2 [0;T ] such that t
+0
+  (t
+0
+) =mT +t
+1
+. Therefore
+jx(t
+1
+)j =jx(t
+0
+  (t
+0
+))j 
+ 
+ 
+2
+T
+1=2
+ 
+Z
+T
+0
+jx
+00
+(t)j
+2
+dt
+ 
+1=2
++d;
+x(t) =x(t
+1
+) +
+Z
+t
+t
+1
+x
+00
+(s)ds +
+X
+t
+1
+ t
+k
+<t
+K
+k
+(x(t
+k
+);x
+00
+(t
+k
+)):
+Thus
+jx(t)j
+1
+ jx(t
+1
+)j +
+Z
+t
+t
+1
+jx
+00
+(s)jds +
+X
+t
+1
+ t
+k
+<t
+jK
+k
+(x(t
+k
+))j
+ 
+ 
+ 
+2
+T
+1=2
+(
+Z
+T
+0
+jx
+00
+(t)j
+2
+dt)
+1=2
++d +
+Z
+T
+0
+jx
+00
+(t)jdt +
+n
+X
+k=1
+a
+k
+jxj
+1
++
+n
+X
+k=1
+a
+0
+k
++
+n
+X
+k=1
+a
+00
+k
+ jxj
+1
+n
+X
+k=1
+a
+k
++ (
+ 
+ 
+2
+T
+1=2
++T
+1=2
+)
+ 
+Z
+T
+0
+jx
+00
+(t)j
+2
+dt
+ 
+1=2
++d +
+n
+X
+k=1
+a
+0
+k
++
+n
+X
+k=1
+a
+00
+k
+:
+It continues that
+jx(t)j
+1
+ 
+d +
+P
+n
+k=1
+a
+00
+k
+1 
+P
+n
+k=1
+a
+k
++
+1
+1 
+P
+n
+k=1
+a
+k
+(
+ 
+ 
+2
+T
+1=2
++T
+1=2
+)(
+Z
+T
+0
+jx
+00
+(t)j
+2
+dt)
+1=2
+=c
+1
++M(
+Z
+T
+0
+jx
+00
+(t)j
+2
+dt)
+1=2
+;
+(20)
+where c
+1
+is a positive constant. On the other hand, multiplying both side of
+(1) by x
+0
+(t), we have
+Z
+T
+0
+x
+000
+(t)x
+00
+(t)dt + 
+Z
+T
+0
+f(t;x
+00
+(t))x
+0
+(t)dt
++ 
+Z
+T
+0
+g(t;x
+0
+(t))x
+0
+(t)dt + 
+Z
+T
+0
+h(t;x(t  (t))x
+0
+(t)dt
+= 
+Z
+T
+0
+p(t)x
+0
+(t)dt:
+Since
+Z
+T
+0
+x
+000
+(t)x
+00
+(t)dt = 
+1
+2
+n
+X
+i=1
+[(x
+00
+(t
++
+k
+))
+2
+  (x
+00
+(t
+k
+))
+2
+];
+Electronic Journal. http://www.math.spbu.ru/diffjournal 23Differential Equations and Control Processes, N 3, 2015
+Our assumption (H7) that
+(x
+0
+(t
++
+k
+))
+2
+  (x
+0
+(t
+k
+))
+2
+= (x
+0
+(t
++
+k
+) +x
+0
+(t
+k
+))(x
+0
+(t
++
+k
+)  (x
+0
+(t
+k
+))
+=  x
+0
+(t
+k
+)(2x
+0
+(t
+k
+) +  x
+0
+(t
+k
+))
+= K
+k
+(x(t
+k
+);x
+0
+(t
+k
+))(2x
+0
+(t
+k
+) + K
+k
+(x(t
+k
+);x
+0
+(t
+k
+))
+= 2 K
+k
+(x(t
+k
+);x
+0
+(t
+k
+))x
+0
+(t
+k
+) + [ K
+k
+(x(t
+k
+);x
+0
+(t
+k
+))]
+2
+ b
+2
+k
+:
+In (5), by use Schwarz inequality
+ 
+Z
+T
+0
+jx
+00
+(t)j
+2
+dt
+  
+Z
+T
+0
+h(x(t  (t))x
+0
+(t)dt +
+Z
+T
+0
+p(t)x
+0
+(t)dt +
+1
+2
+n
+X
+k=1
+b
+2
+k
+=
+Z
+T
+0
+[h(x(t) h(x(t  (t))]x
+0
+(t)dt 
+Z
+T
+0
+h(x(t))x
+0
+(t)dt
++
+Z
+T
+0
+p(t)x
+0
+(t)dt +
+1
+2
+n
+X
+i=1
+b
+2
+k
+ 
+Z
+T
+0
+jh(x(t)) h(x(t  (t))jjx
+0
+(t)jdt +jp(t)j
+1
+Z
+T
+0
+jx
+0
+(t)jdt
++j
+Z
+T
+0
+h(x(t))x
+0
+(t)dtj +
+1
+2
+n
+X
+i=1
+b
+2
+k
+ 
+h 
+Z
+T
+0
+jh(x(t)) h(x(t  (t)))j
+2
+dt
+ 
+1=2
++jp(t)j
+1
+T
+1=2
+i 
+Z
+T
+0
+jx
+0
+(t)j
+2
+dt
+ 
+1=2
++j
+Z
+T
+0
+h(x(t))x
+0
+(t)dtj +
+1
+2
+n
+X
+i=1
+b
+2
+k
+:
+(21)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 24Differential Equations and Control Processes, N 3, 2015
+From (H5) and (H6), we get
+j
+Z
+T
+0
+h(x(t))x
+0
+(t)dtj
+=j
+Z
+x(t
+1
+)
+x(0)
+h(s)ds +
+Z
+x(t
+2
+)
+x(t
++
+1
+)
+h(s)ds +    +
+Z
+x(T )
+x(t
++
+n
+)
+h(s)dsj
+=j
+Z
+x(T )
+x(0)
+h(s)ds 
+n
+X
+k=1
+Z
+x(t
++
+k
+)
+x(t
+k
+)
+h(s)dsj
+ 
+n
+X
+k=1
+j
+Z
+x(t
+k
+)+ K
+k
+(x(t
+k
+);x
+0
+(t
+k
+))
+x(t
+k
+)
+h(s)dsj
+ 
+n
+X
+k=1
+[jK
+k
+(x(t
+k
+);x
+0
+(t
+k
+))j(
+1
++
+2
+jx(t
+k
+)j +
+3
+jK
+k
+(x(t
+k
+);x
+0
+(t
+k
+))j)]
+  [
+2
+(
+n
+X
+k=1
+a
+k
+) +
+3
+(
+n
+X
+k=1
+a
+2
+k
+)]jx(t)j
+2
+1
++c
+2
+jx(t)j
+1
++c
+3
+;
+where c
+2
+;c
+3
+are constants. From (20), we get
+j
+Z
+T
+0
+h(x(t))x
+0
+(t)dtj
+  [
+2
+(
+n
+X
+k=1
+a
+k
+) +
+3
+(
+n
+X
+k=1
+a
+2
+k
+)]M
+2
+Z
+T
+0
+jx
+0
+(t)j
+2
+dt +c
+4
+(
+Z
+T
+0
+jx
+0
+(t)j
+2
+dt)
+1=2
++c
+5
+;
+(22)
+where c
+4
+;c
+5
+are constants. From Lemma 4, we get
+Z
+T
+0
+jh(x(t) h(x(t  (t)))j
+2
+dt
+  
+2
+3
+Z
+T
+0
+jx(t) x(t  (t))j
+2
+dt
+  
+2
+3
+[2j (t)j
+2
+1
+Z
+T
+0
+jx
+0
+(t)j
+2
+dt + 2j (t)j
+1
+I
+1
+(j (t)j
+1
+)jx(t)j
+1
+ 
+Z
+T
+0
+jx
+0
+(t)j
+2
+dt
+ 
+1=2
++ 2j (t)j
+1
+I
+2
+(j (t)j
+1
+)
+ 
+Z
+T
+0
+jx
+0
+(t)j
+2
+dt
+ 
+1=2
++I
+3
+(j (t)j
+1
+)jx(t)j
+2
+1
++I
+4
+(j (t)j
+1
+)jx(t)j
+1
++I
+5
+(j (t)j
+1
+)]:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 25Differential Equations and Control Processes, N 3, 2015
+Substituting (20) into the above inequality, we get
+Z
+T
+0
+jh(x(t) h(x(t  (t)))j
+2
+dt
+  
+2
+3
+[2j (t)j
+2
+1
++ 2j (t)j
+1
+I
+1
+(j (t)j
+1
+)M
++I
+3
+(j (t)j
+1
+)M
+2
+]
+Z
+T
+0
+jx
+0
+(t)j
+2
+dt +c
+6
+ 
+Z
+T
+0
+jx
+0
+(t)j
+2
+dt
+ 
+1=2
++c
+7
+;
+where c
+6
+;c
+7
+are constants. From above inequality
+(a +b)
+1=2
+ a
+1=2
++b
+1=2
+for a  0;b  0; (23)
+we get
+ 
+Z
+T
+0
+jh(x(t)) h(x(t  (t)))j
+2
+dt
+ 
+1=2
+  
+3
+[2j (t)j
+2
+1
++ 2j (t)j
+1
+I
+1
+(j (t)j
+1
+)M
++I
+3
+(j (t)j
+1
+)M
+2
+]
+1=2
+ 
+Z
+T
+0
+jx
+0
+(t)j
+2
+dt
+ 
+1=2
++c
+1=2
+6
+ 
+Z
+T
+0
+jx
+0
+(t)j
+2
+dt
+ 
+1=4
++c
+1=2
+7
+:
+Substituting the above formula and (22) in (21), we get
+ 
+   [
+2
+(
+n
+X
+k=1
+a
+k
+) +
+3
+(
+n
+X
+k=1
+a
+2
+k
+)]M
+2
+  
+3
+[2j (t)j
+2
+1
++ 2j (t)j
+1
+I
+1
+(j (t)j
+1
+)M +I
+3
+(j (t)j
+1
+)M
+2
+]
+1=2
+	
+Z
+T
+0
+jx
+0
+(t)j
+2
+dt
+ c
+8
+(
+Z
+T
+0
+jx
+0
+(t)j
+2
+dt)
+3
+4
++c
+9
+(
+Z
+T
+0
+jx
+0
+(t)j
+2
+dt)
+1=2
++c
+10
+;
+where c
+8
+;c
+9
+;c
+10
+are constants. There is a constant M
+1
+> 0 such that
+Z
+T
+0
+jx
+0
+(t)j
+2
+dt M
+1
+: (24)
+From (20), we get
+jx(t)j
+1
+ d +M(
+Z
+T
+0
+jx
+0
+(t)j
+2
+dt)
+1=2
+ d +M(M
+1
+)
+1=2
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 26Differential Equations and Control Processes, N 3, 2015
+Then there is a constantM
+2
+> 0 such thatjx(t)j
+1
+ M
+2
+. Therefore, integrating
+(1) on the interval [0;T ], using Schwarz inequality, we get
+Z
+T
+0
+jx
+000
+(t)jdt =
+Z
+T
+0
+j f(t;x
+00
+(t)) g(t;x
+0
+(t)) h(x(t  (t))) +p(t)jdt
+ 
+Z
+T
+0
+jf(t;x
+00
+(t))jdt +
+Z
+T
+0
+jg(t;x
+00
+(t))jdt +
+Z
+T
+0
+jh(x(t  (t)))jdt +
+Z
+T
+0
+jp(t)jdt
+  
+Z
+T
+0
+jx
+00
+(t)jdt +h
+ 
+T +Tjp(t)j
+1
+  T
+1=2
+(
+Z
+T
+0
+jx
+00
+(t)j
+2
+dt)
+1=2
++h
+ 
+T +Tjp(t)j
+1
+  T
+1=2
+(M
+1
+)
+1=2
++h
+ 
+T +Tjp(t)j
+1
+;
+where h
+ 
+= max
+jxj  
+jg(x)j. Then there is a constant M
+3
+> 0 such that
+Z
+T
+0
+jx
+00
+(t)jdt M
+3
+: (25)
+From (24),then there aret
+2
+2 [0;T ] andc> 0 such thatjx
+0
+(t
+2
+)j c fort2 [0;T ]
+jx
+0
+(t)j
+1
+ jx
+0
+(t
+2
+)j +
+Z
+T
+0
+jx
+00
+(t)jdt +
+n
+X
+k=1
+b
+k
+: (26)
+Then there is a constant M
+4
+> 0 such that
+jx
+0
+(t)j
+1
+ M
+4
+: (27)
+It follows that there is a constantI
+2
+> maxfM
+2
+;M
+4
+g such thatkxk I
+2
+, Thus
+
+
+1
+is bounded.
+Let 
+
+2
+=fx2 kerL;RNx = 0g. If x2 
+
+2
+, then x(t) =c2R and satis es
+RN(x; 0) = ( 
+2
+T
+2
+Z
+T
+0
+[f(t; 0) +g(t; 0) +h(c) p(t)]dt; 0;:::; 0) = 0: (28)
+we get
+Z
+T
+0
+[f(t; 0) +g(t; 0) +h(c) p(t)]dt = 0: (29)
+In (29),there must be a interval t
+0
+2 [0;T ] such that
+h(c) = f(t
+0
+; 0) g(t
+0
+; 0) +p(t
+0
+): (30)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 27Differential Equations and Control Processes, N 3, 2015
+From (30) and assumption (H3), (H4), we get
+ 
+1
++ 
+2
+jcj jh(c)j jf(t
+0
+; 0)j +jg(t
+0
+; 0)j +jp(t
+0
+)j    0 +jp(t)j
+1
+: (31)
+Then
+jcj 
+jjp(t)j
+1
+  
+1
+j
+ 
+2
+(32)
+which implies 
+
+2
+is bounded. Let 
+ be a non-empty open bounded subset ofX
+such that 
+  
+
+1
+[ 
+
+2
+[ 
+
+3
+, where 
+
+3
+=fx2X :jxj<jjp(t)j
+1
+  
+1
+j= 
+2
++ 1g.
+By Lemmas 2, we can see that L is a Fredholm operator of index zero and N
+is L-compact on 
+. Then by the above argument,
+(i) Lx6= Nx for all x2@
+\D(L); 2 (0; 1);
+(ii) RNx6= 0 for all x2@
+\ kerL.
+Finally we prove that (iii) of Lemma 1 is satis ed. We takeH(x; ) : 
+ [0; 1]!
+X,
+H(x; ) = x +
+2(1  )
+T
+2
+Z
+T
+0
+[ f(t;x
+00
+(t)) g(t;x
+0
+(t)) +h(x(t  (t)) +p(t)]dt:
+From assumptions (H3) and (H4), we can easily verify H(x; )6= 0, for all
+(x; )2@
+\ kerL  [0; 1], which results in
+degfKRNx; 
+\ kerL; 0g = degfH(x; 0); 
+\ kerL; 0g
+= degfH(x; 1); 
+\ kerL; 0g6= 0;
+where K(x; 0;:::; 0) = x. Therefore, by Lemma 1, Equation (1) has at least
+one T -periodic solution.
+4 Fourth-order delay differential equation
+We establish criteria for the existence of positive periodic solutions to the fol-
+lowing fourth-order delay differential equation. The simpli ed model takes the
+form
+....
+x (t) +a
+...
+x(t) +f
+1
+( x(t  (t))) +g
+1
+( _ x(t  (t))) +h
+1
+(x(t  (t))) =p
+1
+(t): (33)
+where f
+1
+(t +T;x) = f
+1
+(t;x), g
+1
+(t +T;x) = g
+1
+(t;x), h
+1
+(t +T ) = h
+1
+(t),
+ (t +T ) = (t), p
+1
+(t +T ) =p
+1
+(t) ,  (t)  0.
+We assume that the following conditions:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 28Differential Equations and Control Processes, N 3, 2015
+(H9)jf
+1
+(x)j K + 
+1
+jxj for x2R
+(H10) xg
+1
+(x)> 0 andjg
+1
+(x)j>K +jp
+1
+j
+0
++ 
+1
+jxj forjxj D
+(H11) x
+2
+h
+1
+(x)> 0 andjh
+1
+(x)j>K +jp
+1
+j
+0
++ 
+2
+jxj forjxj D
+(H12) lim
+x! 1
+h
+1
+(x)
+x
+2
+  
+3
+.
+The main purpose of this paper is to establish the existence of positive
+periodic solutions to (33). An example to compute the main result is given.
+Lemma 5 [[4]] Let X and Z be two Banach space. Consider a Fredholm oper-
+ator equation
+Lx = N(x; ); (34)
+whereL : DomL\X!Z is a operator of index zero, 2 (0; 1) is a parameter.
+Let P and Q denote two projectors such that
+P :X! kerL; and Q :Z!Z=ImL:
+Assume that N :
+ 
+
+  (0; 1)! Z is L-compact on
+ 
+
+  (0; 1), where 
+ is open
+bounded in X. In addition, suppose that
+(a) For each  2 (0; 1) and x2@
+\ DomL, Lx6= N(x; )
+(b) For each x2@
+\ kerL, QNx6= 0,
+(c) degfQN; 
+\ kerL; 0g6= 0.
+Then Lx =N(x; 1) has at least one solution in
+ 
+
+.
+Theorem 2 Suppose that exist positive constants  
+1
+; 
+2
+; 
+3
+  0, K > 0 and
+D > 0, such that (H9{H12).Then (33) has at least one !-periodic solution for
+a! + 2 
+1
+jbj
+2
+!
+3
+2
++ 2 
+2
+jbj
+2
+!
+5
+2
++ 2!
+2
+(1 +!) 
+3
+< 1.
+Proof: To use Lemma 5 for (33), we take X =fx2C
+3
+(R;R) :x(t +!) =
+x(t) for all t2Rg and Z =fz2 C(R;R) : z(t +!) = z(t) for all t2Rg and
+denotejxj
+0
+= max
+t2[0;!]
+jx(t)j and
+kxk = maxfjxj
+0
+;j _ xj
+0
+;j xj
+0
+j
+...
+xj
+0
+g. Then X and Z are Banach spaces, for x2X
+and z2Z, able with the norm formsk k andj j
+0
+, respectively. Let
+Lx(t) =
+....
+x; x2X; t2R;
+N(x(t); ) = a
+...
+x(t)  f
+1
+( x(t  (t)))  g
+1
+( _ x(t  (t))) h
+1
+(x(t  (t)))
++ p
+1
+(t); x2X; t2R;
+Px(t) =
+1
+!
+Z
+!
+0
+x(t)dt; Qz(t) =
+1
+!
+Z
+!
+0
+z(t)dt; x2X; t2R;
+Electronic Journal. http://www.math.spbu.ru/diffjournal 29Differential Equations and Control Processes, N 3, 2015
+where x2X, z2Z, t2R,  2 (0; 1).
+We prove that L is a Fredholm mapping of index 0, that P : X! kerL
+and Q!Z= ImL are projectors, and that N is L-compact on
+ 
+
+ for any given
+open and bounded subset 
+ in X.
+The equivalent differential equation for the operator Lx =  N(x; ),  2
+(0; 1), takes the form
+....
+x (t)+ a
+...
+x(t)+ 
+2
+f
+1
+( x(t  (t)))+ 
+2
+g
+1
+( _ x(t  (t)))+ h
+1
+(x(t  (t))) = 
+2
+p
+1
+(t):
+(35)
+Let x2 X be a solution of (35) for a certain  2 (0; 1). Integrating (35) over
+[0;!], we obtain
+Z
+!
+0
+ 
+ 
+2
+f
+1
+( x(t  (t))) + 
+2
+g
+1
+( _ x(t  (t))) + h
+1
+(x(t  (t)))  
+2
+p
+1
+(t)
+ 
+dt = 0:
+(36)
+Thus, there is a point  2 [0;!], such that
+ 
+2
+f
+1
+( x(   ( ))) + 
+2
+g
+1
+( _ x(   ( ))) + h
+1
+(x(   ( )))  
+2
+p
+1
+( ) = 0
+Thus using the condition (H9),
+jh
+1
+(x(   ( )))j jf
+1
+( x(   ( )))j +jg
+1
+( _ x(   ( )))j +jp
+1
+( )j
+ K + 
+1
+j x(   ( ))j + 
+2
+j _ x(   ( ))j +jp
+1
+j
+0
+ K +jp
+1
+j
+0
++ 
+2
+j xj
+0
++ 
+1
+j _ xj
+0
+:
+(37)
+We will prove that there is a point t
+0
+2 [0;!] such that
+jx(t
+0
+)<j xj
+0
++j _ xj
+0
++D: (38)
+Case 1:  
+1
+; 
+2
+= 0. Ifjx(   ( ))j>D, (H9){(H12) and (37) ensureK+jp
+1
+j
+0
+<
+jh
+1
+(x(   ( )))j K +jp
+1
+j
+0
+, which is a contradiction. So
+jx(   ( ))j D: (39)
+Case 2:  
+1
+; 
+2
+> 0. Ifjx(   ( ))j > D, then K +jp
+1
+j
+0
++ 
+1
+j _ x(   ( ))j +
+ 
+2
+jx(   ( ))j<jh
+1
+(x(   ( )))j K +jp
+1
+j
+0
++ 
+1
+j xj
+0
++ 
+2
+j _ xj
+0
+. So that
+jx(   ( ))j j xj
+0
+: (40)
+Hence from (39) and (40), we see in either case 1 or case 2 that
+jx(   ( ))j j xj
+0
++D:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 30Differential Equations and Control Processes, N 3, 2015
+Let    ( ) = 2k  +t
+0
+, where k is an integer and t
+0
+2 [0;!]. Then
+jx(t
+0
+)j =jx(   ( ))j<j xj
+0
++D:
+So (38) holds, and then
+jxj
+0
+ j _ x(t
+0
+)j +
+Z
+!
+0
+j x(s)jds< (! + 1)j xj
+0
++D: (41)
+LetG( ) =a! +2 
+1
+jbj
+2
+!
+3
+2
++2 
+2
+jbj
+2
+!
+5
+2
++2!
+2
+(1+!)( 
+3
++ ); 2 [0;1). From the
+assumption G(0) =a! + 2 
+1
+jbj
+2
+!
+3
+2
++ 2 
+2
+jbj
+2
+!
+5
+2
++ 2!
+2
+(1 +!) 
+3
+< 1 and G( ) is
+continuous on [0;1), we know that there must be a small constant 
+0
+> 0 such
+thatG( ) =a! + 2 
+1
+jbj
+2
+!
+3
+2
++ 2 
+2
+jbj
+2
+!
+5
+2
++ 2!
+2
+(1 +!)( 
+3
++ )< 1;  2 (0; 
+0
+]. Let
+" = 
+0
+=2, once we can obtain thata!+2 
+1
+jbj
+2
+!
+3
+2
++2 
+2
+jbj
+2
+!
+5
+2
++2!
+2
+(1+!)( 
+3
++")<
+1 For such a small "> 0, in view of assumption (H
+4
+), we  nd that there must
+be a constant  >D, which is independent of   and x, such that
+h
+1
+(x)
+x
+2
+< ( 
+3
++"); for x<  : (42)
+Thus putting  
+1
+=ft : t2 [0;!];x(t  (t)) >  g,  
+2
+=ft : t2 [0;!];x(t 
+ (t))<  g,  
+3
+=ft :t2 [0;!];jx(t  (t))j  g ,  
+4
+=ft :t2 [0;!];jx(t 
+ (t))j  g and h
+ 
+= sup
+jxj  
+h
+1
+(x), we have
+Z
+ 
+1
+jh
+1
+(t  (t))jdt<!( 
+1
++")jxj
+0
+;
+Z
+ 
+2
+jh
+1
+(t  (t))jdt<!( 
+2
++")jxj
+0
+;
+Z
+ 
+3
+jh
+1
+(t  (t))jdt<!( 
+3
++")jxj
+0
+;
+Z
+ 
+4
+jh
+1
+(t  (t))jdt !h
+ 
+:
+From (36), we have
+Z
+!
+0
+h
+1
+(x(t  (t)))dt =
+ 
+Z
+E
+1
++
+Z
+E
+2
++
+Z
+E
+3
++
+Z
+E
+4
+ 
+h
+1
+(x(t  (t)))dt
+ 
+Z
+!
+0
+jf
+1
+( x(t  (t)))jdt
++
+Z
+!
+0
+jg
+1
+( _ x(t  (t)))jdt +
+Z
+!
+0
+jh
+1
+(x(t  (t)))jdt +
+Z
+!
+0
+jp
+1
+(t)jdt:
+(43)
+That is
+Z
+E
+1
+jh
+1
+(x(t  (t)))jdt 
+Z
+E
+2
+jh
+1
+(x(t  (t)))jdt +
+Z
+E
+3
+jh
+1
+(x(t  (t)))jdt
++
+Z
+E
+4
+jh
+1
+(x(t  (t)))jdt
++
+Z
+!
+0
+jf
+1
+( x(t  (t)))jdt +
+Z
+!
+0
+jg
+1
+( _ x(t  (t)))jdt +
+Z
+!
+0
+jh
+1
+(x(t  (t)))jdt +!jp
+1
+j
+0
+:
+(44)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 31Differential Equations and Control Processes, N 3, 2015
+Using the condition (H9), we have
+Z
+!
+0
+jf
+1
+( x(t  (t)))jdt =
+Z
+!  (!)
+  (0)
+1
+1    ( (s))
+jf
+1
+( x(s))jds
+=
+Z
+!
+0
+1
+1    ( (s))
+jf
+1
+( x(s)jds
+ 
+Z
+!
+0
+ 
+1
+1    ( (s))
+j x(s)jds +
+Z
+!
+0
+K
+1    ( (s))
+ds
+  
+1
+jbj
+2
+ 
+Z
+!
+0
+j x(s)jds
+ 
+1=2
++jbj
+2
+K
+p
+!:
+(45)
+Thus, by (44) and (45), we have
+Z
+!
+0
+j
+....
+x (s)jds a
+Z
+!
+0
+j
+...
+x(s)jds +
+Z
+!
+0
+jf
+1
+( x(t  (t)))jdt +
+Z
+!
+0
+jg
+1
+( _ x(t  (t)))jdt
++
+Z
+!
+0
+jh
+1
+(x(t  (t)))jdt +!jp
+1
+j
+0
+=a
+Z
+!
+0
+j
+...
+x(s)jds +
+Z
+!
+0
+jf
+1
+( x(t  (t)))jdt +
+Z
+!
+0
+jg
+1
+( _ x(t  (t)))jdt
++
+ 
+Z
+ 
+1
++
+Z
+ 
+2
++
+Z
+ 
+3
++
+Z
+ 
+4
+ 
+jh
+1
+(x(t  (t)))jdt +!jp
+1
+j
+0
+ a
+p
+!
+ 
+Z
+!
+0
+j
+...
+x(s)j
+2
+ds
+ 
+1=2
++ 2 
+1
+jbj
+2
+ 
+Z
+!
+0
+j x(s)j
+2
+ds
+ 
+1=2
++ 2 
+2
+jbj
+2
+ 
+Z
+!
+0
+j _ x(s)j
+2
+ds
+ 
+1=2
++2!( 
+3
++")jxj
+0
++ 2K
+p
+!jbj
+2
++ 2!f
+ 
++ 2jp
+1
+j
+0
+:
+(46)
+Since x(0) = x(!), there exists t
+1
+2 [0;!], such that  x(t
+1
+) = 0, Hence for
+t2 [0;!],
+j xj
+0
+ 
+Z
+!
+0
+j
+...
+x(t)jdt 
+p
+!
+ 
+Z
+!
+0
+j
+...
+x(s)j
+2
+ds
+ 
+1=2
+; (47)
+ 
+Z
+!
+0
+j x(s)j
+2
+ds
+ 
+1=2
+ 
+p
+! max
+t2[0;!]
+j x(t)j !
+ 
+Z
+!
+0
+j
+...
+x(s)j
+2
+ds
+ 
+1=2
+: (48)
+Since x(t) is periodic function, for t2 [0;!], we have
+j
+...
+x(t)j 
+Z
+!
+0
+j
+....
+x (t)jdt; (49)
+ 
+Z
+!
+0
+j x(s)j
+2
+ds
+ 
+1=2
+ 
+p
+! max
+t2[0;!]
+j
+...
+x(t)j 
+p
+!
+Z
+!
+0
+j
+....
+x (t)jdt: (50)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 32Differential Equations and Control Processes, N 3, 2015
+Substituting (50) in (47), we have
+j xj
+0
+ !
+Z
+!
+0
+j
+....
+x (t)jdt: (51)
+Substituting (51) in (41),
+jxj
+0
+ D +!(1 +!)
+Z
+!
+0
+j
+....
+x (t)jdt: (52)
+Substituting (48),(50) and (52) in (46), and using inequality (49), we have
+j
+...
+xj
+0
+ 
+Z
+!
+0
+j
+....
+x (t)jdt 
+2K
+p
+!jbj
+2
++ 2!h
+ 
++ 2!jp
+1
+j
+0
++ 2!( 
+2
++")D
+1 a!  2 
+1
+jbj
+2
+!
+3
+2
+  2 
+2
+jbj
+2
+!
+5
+2
+  2!
+2
+(1 +!)( 
+3
++")
+ A
+3
+:
+(53)
+Substituting (53) in (51) and (52), we have
+jxj
+0
+ D +!(1 +!)A
+3
+ A
+1
+; j _ xj
+0
+ !A
+3
+ A
+2
+: (54)
+Let A
+0
+= maxfA
+1
+;A
+2
+;A
+3
+;A
+4
+g and take 
+ =fx2 X :kxk  A
+0
+g. The priori
+bounds show that condition (a) of Lemma 5 is satis ed. If x2 @
+\ kerL =
+@
+\R, then x is a constant with x(t) =A
+0
+or x(t) = A
+0
+. Then
+QN(x; 0) =
+1
+!
+Z
+!
+0
+ 
+ a
+...
+x(t) h
+1
+(x(t  (t))
+ 
+dt
+=
+1
+!
+Z
+!
+0
+ f
+1
+(x)dt =
+1
+!
+Z
+!
+0
+ f
+1
+A
+0
+dt6= 0
+Finally, consider the homotopy mapping
+H(x; ) = x +
+1  
+!
+Z
+!
+0
+h
+1
+(x)dt;  2 [0; 1]:
+Since for every  2 [0; 1] and x in the intersection of kerL and @
+, we have
+xH(x; ) = x
+2
++
+1  
+!
+Z
+!
+0
+xh
+1
+(x)dt> 0;
+This continues that
+degfQN(x; 0); 
+\ kerL; 0g = degf h
+1
+(x); 
+\ kerL; 0g
+= degf x; 
+\ kerL; 0g
+= degf x; 
+\R; 0g6= 0:
+All conditions in Lemma 5 are satis ed; therefore, (33) has at least one solution
+in 
+. Our results complement and extend known results and are given with
+examples.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 33Differential Equations and Control Processes, N 3, 2015
+Example 1
+Consider the third order delay differential equation with impulses
+x
+000
+(t) +
+1
+3
+x
+00
+(t) +
+1
+6
+x
+0
+(t) +
+1
+21
+x(t 
+1
+10
+cost) = sint; t6=k;
+I
+k
+(x;y) =
+sin
+k 
+3
+120
+x +
+y
+1 +y
+2
+;
+J
+k
+(x;y) = 
+2x
+2
+y
+1 +x
+4
+y
+2
+;
+K
+k
+(x;y) = 
+4x
+4
+y
+1 +x
+8
+y
+2
+;
+(55)
+wheret
+k
+=k,f(t;x) =
+1
+3
+x
+2
+,g(t;x) =
+1
+6
+x,h(y) =
+1
+21
+y,p(t) = sint, (t) =
+1
+10
+cost,
+it is easy to see thatj (t)j
+1
+=
+1
+10
+, T = 2 ;fkg\ [0; 2 ] =f1; 2; 3; 4; 5; 6; 7; 8g,
+  =  =
+1
+3
+,  
+1
+= 0,  
+2
+= 
+3
+=
+1
+21
+. SincejI
+k
+(x;y)j 
+1
+120
+jxj +
+1
+2
+;
+jJ
+k
+(x;y)j  1,j
+R
+x+I
+k
+(x;y)
+x
+h(s)dsj jI
+k
+(x;y)j(
+1
+21
+jxj +
+1
+42
+jI
+k
+(x;y)j),
+jK
+k
+(x;y)j  1,j
+R
+x+J
+k
+(x;y)
+x
+h(s)dsj jJ
+k
+(x;y)j(
+1
+21
+jxj +
+1
+42
+jJ
+k
+(x;y)j),
+then we takea
+k
+=
+1
+120
+,a
+0
+k
+=
+1
+2
+,b
+0
+k
+= 1 (k = 1; 2; 3; 4; 5; 6; 7; 8),
+1
+= 0,
+2
+= 1=21,
+
+3
+= 1=42.
+8
+X
+k=1
+a
+k
+=
+1
+20
+< 1;
+M =
+1
+1 
+P
+n
+k=1
+a
+k
+(
+ 
+ 
+2
+T
+1=2
++T
+1=2
+) =
+1
+1 
+1
+20
+(
+1
+3
+1
+21
+(2 )
+1=2
++ (2 )
+1=2
+)< 8:
+By Theorem 1, Equation (55) has at least one 2 -periodic solution.
+Example 2
+Consider the fourth order delay differential equation with impulses
+....
+x (t) +
+1
+2 
+...
+x(t) +
+7
+3 
+2
+ x(t  cos 2t)) +
+7
+2 
+2
+_ x(t  cos 2t))
++
+3
+2
+e
+ ( _ x(t cos 2t))
+2
++h
+1
+(x(t  cos 2t)) =
+1 + sin 2t
+4
+where p
+1
+(t) = (1 + sin 2t)=4;  (t) = cos 2t, f
+1
+(u) =
+7
+3 
+2
+u +
+3
+2
+e
+ u
+2
+;g
+1
+(u) =
+Electronic Journal. http://www.math.spbu.ru/diffjournal 34Differential Equations and Control Processes, N 3, 2015
+7
+2 
+2
+u +
+3
+2
+e
+ u
+2
+and
+h
+1
+(u) =
+8
+>
+<
+>
+:
+7
+3 
+2
+u +
+3
+2
++tan
+ 1
+u; for u>D;
+ 
+7
+2 
+2
++
+3
+2
++
+ 
+2
+ 
+; forjuj D;
+7
+3 
+2
+u 
+3
+2
++tan
+ 1
+u; for u< D:
+So we can chose  
+1
+= 
+2
+= 
+3
+= 7=(3 
+2
+), D = 1, K = 1,jp
+1
+j
+0
+= 1=2,jbj
+2
+<
+p
+!,
+! =  =4. Therefore, fourth order delay differential equation has at least one
+periodic solution.
+Acknowledgments
+The authors would like to thank the referees for their helpful comments, which
+improved the presentation of the paper.
+References
+[1] Zhimin He and Weigao Ge,Oscillations of second-order nonlinear impul-
+sive ordinary differential equations, Journal of Computational and Applied
+Mathematics, 158 (2),397-406, 2003.
+[2] Jiaowan Luo and Lokenath Debnath ,Oscillations of Second-Order Nonlin-
+ear Ordinary Differential Equations with Impulses, Journal of Mathemat-
+ical Analysis and Applications, 240 (1),105-114, 1999.
+[3] C. Fabry, J. Mawhin, M. Nkashama; A multiplicity result for periodic
+solutions of forced nonlinear second order ordinary differential equations,
+Bull. London Math. soc., 18, 173-180, 1986.
+[4] K. Gopalsamy, B. G. Zhang; On delay differential equations with impulses,
+J. Math. Anal. Appl., 139, 110-122, 1989.
+[5] I. T. Kiguradze, B. Puza; On periodic solutions of system of differential
+equations with deviating arguments, Nonlinear Anal., 42, 229-242, 2000.
+[6] V. Lakshmikantham, D. D. Bainov, P. S. Simeonov;Theory of impulsive
+differential equations, World Scienti c Singapore, 1989.
+[7] Lijun Pan,Periodic solutions for higher order differential equations with
+deviating argument, Journal of Mathematical Analysis and Applications,
+343 (2), 904-918, 2008.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 35Differential Equations and Control Processes, N 3, 2015
+[8] S. Lu, W. Ge; Su cient conditions for the existence of periodic solutions
+to some second order differential equation with a deviating argument, J.
+Math. Anal. Appl., 308, 393-419, 2005.
+[9] J. H. Shen; The nonoscillatory solutions of delay differential equations with
+impulses, Appl. Math. comput., 77, 153-165, 1996.
+[10] Hale, J.K. and S.M. Verduyn Lunel, Introduction to Functional Differential
+Equations, Springer- Verlag, New York, Applied Mathematical Sciences, 99,
+1993.
+[11] Li, L.M., Stability of linear neutral delay-differential systems, Bull. Aust.
+Math. Soc., 38, 339-344, 1998.
+[12] Mahmoud, MS. and Al-Muthairi NF, Quadratic stabilization of continuous
+time systems with state-delay and norm- bounded time-varying uncertain-
+ties, Automatica, 32 , 2135-2139, 1994.
+[13] Park, Ju-H. and Won, S, A note on stability of neutral delay-differential
+system, Journal of the Franklin Institute, 336 , 543-548, 1999.
+[14] R.E Gaines, J.L Mawhin, Coincidence Degree and Nonlinear Differential
+Equations, Springer-Verlag, Berlin, 1977.
+[15] S Lu, W Ge, On the existence of periodic solutions of second order differen-
+tial equations with deviating arguments, Acta. Math. Sinica, 45, 811-818,
+2002.
+[16] S Lu, W Ge, Periodic solutions for a kind of second order differential equa-
+tions with multiple deviating arguments, Applied Mathematics and Com-
+putation, 146 , 195-209, 2003.
+[17] S. Lu, W. Ge, Some new results on the existence of periodic solutions to a
+kind of Rayleigh equation with a deviating argument, Nonlinear Anal., 56
+, 501-514, 2004.
+[18] S.W Ma, Z.C Wang, J.S Yu, Coincidence degree and periodic solutions of
+Du ng equations, Nonlinear Analysis, 34 , 443-460, 1998.
+[19] Sadek AI, Stability and bovndedness of a kind of Third-order Delay Dif-
+ferential System, Appl. Math. Letters, 91 , 657-662, 2003.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 36Differential Equations and Control Processes, N 3, 2015
+[20] Shiping Lu, Weigao Ge, Su cient conditions for the existence of periodic
+solutions to some second order differential equations with a deviating argu-
+ment , Journal of Mathematical Analysis and Applications, 308, 393-419,
+2005.
+[21] Shiping Lu, Weigao Ge, Zuxiou Zheng, Periodic solutions for a kind of
+Rayleigh equation with a deviating argument, , Applied Mathematics Let-
+ters, 17, 443-449, 2004.
+[22] Wang, GQ. A priori bounds for periodic solutions of a delay Rayleigh
+equation, Applied Mathematics Letters, 12 , 41-44, 1999.
+[23] Yoshizawa, T, Stability Theorem by Liapvnov's Second Method, The Math-
+ematical Society of Japan, 1966.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 37
