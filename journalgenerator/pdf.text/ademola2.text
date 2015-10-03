@@ -1,0 +1,1399 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 3, 2015
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Ordinary differential equations
+Boundedness and stability of solutions to certain second order
+differential equations
+ADEMOLA, A.T
+Department of Mathematics, Obafemi Awolowo University, Ile-Ife,
+Nigeria
+Email:ademola672000@yahoo.com; atademola@oauife.edu.ng
+Abstract
+In this paper, the behaviour of solutions of certain second order nonlinear non-
+autonomous differential equations is considered. By employing the Lyapunov's second
+method, a suitable complete Lyapunov function is constructed and used to establish su -
+cient conditions that guarantee existence of solutions that are periodic, uniformly asymp-
+totically stable and uniformly ultimately bounded. Obtained results are not only new but
+also include many outstanding recent results in the literature.
+Keywords: Second order; Nonlinear differential equation; Uniform stability; Uniform
+ultimate boundedness; Periodic solutions
+1 Introduction
+The investigation of the problems of qualitative behaviour of solutions such as
+stability, boundedness, convergence, periodicity, to mention few, is an impor-
+tant subject in the theory of ordinary differential equations. In this regards up
+till today, Lyapunovs direct (or second) method is the most effective method
+when dealing with these problems. Of course, when one applies this method,
+ nding a suitable complete Lyapunov function in general is always a big chal-
+lenge. The major advantage of this method is that the behaviour of solutionsDifferential Equations and Control Processes, N 3, 2015
+of the equation in question can be obtained without any prior knowledge of
+solutions.
+So far, there have been many results about the qualitative behavior of solu-
+tions of nonlinear differential equations see for instance the books of Yoshizawa
+[11, 12] which contain general results on the subject matters other eminent au-
+thors that have contributed immensely to the study of stability, boundedness,
+asymptotic behaviour, existence and uniqueness of solutions of second order
+ordinary differential equations include Alaba and Ogundare [1], Grigoryan [2],
+Kroopnick [3], Ogundare and Afuwape [4], Ogunadare and Okecha [5], Tun  c [6]
+- [9], Yoshizawa [10] and the references cited therein.
+Meanwhile, in 2011, Kroopnick [3], discussed conditions under which all
+solutions of the second order differential equation
+x
+00
++q(t)b(x) =f(t)
+are bounded on R
++
+= [0;1): The results obtained are the generalizations of
+the linear case.
+In 2013, Grigoryan [2] established criteria for boundedness and stability for the
+ordinary differential equation of the form
+ 
+00
+(t) +p(t) 
+0
+(t) +q(t) (t) = 0; t t
+0
+:
+Recently in 2014, Ogundare and Afuwape [4] studied conditions which guar-
+antee boundedness and stability properties of solutions of generalized Lienard
+equations
+x
+00
++f(x)x
+0
++g(x) =p(t;x;x
+0
+):
+Furthermore, in [7] Tun  c discussed boundedness of solutions to the second order
+ordinary differential equation
+x
+00
++c(t;x;x
+0
+) +q(t)b(x) =f(t):
+Finally, Alaba and Ogundare [1] gave conditions for asymptotic behaviour of
+solutions of certain second order non-autonomous nonlinear ordinary differential
+equation
+x
+00
++a(t)f(x;x
+0
+)x
+0
++b(t)g(x) =p(t;x;x
+0
+):
+Most of these works were done by constructing suitably Lyapunov functions
+except in [3] where the integral test was used.
+However, the problem of stability, boundedness and existence of periodic
+solutions of second order nonlinear non-autonomous ordinary differential equa-
+tion
+[ (x(t))x
+0
+(t)]
+0
++g(t;x(t);x
+0
+(t))x
+0
+(t) +'(t)h(x(t)) =p(t;x(t);x
+0
+(t)); (1.1)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 39Differential Equations and Control Processes, N 3, 2015
+is yet to be considered. Setting x
+0
+(t) = 
+ 1
+(x(t))y(t);  (x(t))6= 0; Eq. (1.1) is
+equivalent to system of  rst order ordinary differential equations
+x
+0
+(t) = 
+ 1
+(x(t))y(t);
+y
+0
+(t) =  
+ 1
+(x(t))y(t)g(t;x(t); 
+ 1
+(x(t))y(t)) '(t)h(x(t))
++p(t;x(t); 
+ 1
+(x(t))y(t));
+(1.2)
+where' :R
++
+!R; ;h :R!R;g;p :R
++
+ R
+2
+!R are continuous functions in
+their respective argument and the derivatives 
+0
+(x(t));g
+t
+(t;x(t); 
+ 1
+(x(t))y(t));
+g
+x
+((t;x(t); 
+ 1
+(x(t))y(t)));g
+y
+(t;x(t); 
+ 1
+(x(t))y(t)) and'
+0
+exist and are contin-
+uous for all values of t  0;x and y: Motivation for this work comes from the
+papers in [1], [4] and [7], where stability, boundedness and asymptotic behaviour
+of solutions of second order ordinary differential equation were proved.
+2 Preliminaries
+Consider the system of the form
+X
+0
+(t) =F (t;X(t)) (2.1)
+where F2C(R
++
+ R
+n
+;R
+n
+) andR
+n
+is the n dimensional Euclidean space.
+De nition 1 A solution X(t;t
+0
+;X
+0
+) of Eq. (2.1) is bounded, if there exists a
+  > 0 such thatkX(t;t
+0
+;X
+0
+)k<  for all t t
+0
+where   may depend on each
+solution.
+De nition 2 The solutions X(t;t
+0
+;X
+0
+) of Eq. (2.1) are uniformly bounded, if
+for any ff > 0 and t
+0
+2 R
++
+; there exists a  (ff) > 0 such that ifkX
+0
+k < ff
+kX(t;t
+0
+;X
+0
+)k<  for all t t
+0
+:
+De nition 3 The solutions of Eq. (2.1) are uniformly ultimately bounded for
+boundB if there exists aB > 0 and if corresponding to anyff> 0 andt
+0
+2R
++
+;
+there exists a T (ff)> 0 such that ifkX
+0
+k<ff implies thatkX(t;t
+0
+;X
+0
+)k<B
+for all t t
+0
++T (ff):
+De nition 4 (i) A function   :R
++
+!R
++
+; continuous, strictly increasing with
+ (0) = 0; is said to be a function of class K for such function, we shall write
+ 2K:
+(ii) If in addition to (i)  (r)! +1 as r!1;   is said to be a function of
+classK
+ 
+and we write  2K
+ 
+.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 40Differential Equations and Control Processes, N 3, 2015
+If F (t; 0) = 0; and F2C(R
++
+ D;R
+n
+); D is an open set inR
+n
+; in Eq. (2.1)
+we have the following de nitions
+De nition 5 [12] The zero solution X(t)  0 of Eq. (2.1) is stable, if for any
+  > 0 and any t
+0
+2 R
++
+; there exists a  (t
+0
+; ) > 0 such thatkX
+0
+k <  (t
+0
+; )
+implies
+kX(t;t
+0
+;X
+0
+)k<  for all t t
+0
+where X(t;t
+0
+;X
+0
+) denotes the solution of Eq. (2.1) through the point (t
+0
+;X
+0
+):
+De nition 6 [12] The zero solution X(t)  0 of Eq. (2.1) is uniformly stable,
+if the   in De nition 5 is independent of t
+0
+:
+De nition 7 [12] The zero solution X(t)  0 of Eq. (2.1) is asymptotically
+stable, if it is stable, and if there exists a  (t
+0
+) > 0 such thatkX
+0
+k <  
+0
+(t
+0
+)
+implies that
+kX(t;t
+0
+;X
+0
+)k! 0 as t!1:
+De nition 8 [11] The zero solution X(t)   0 of Eq. (2.1) is quasi-
+equiasymptotically stable, if given any   > 0 and any t
+0
+2 R
++
+; there exist
+a  
+0
+(t
+0
+)> 0 and a T (t
+0
+; )> 0 such that ifkX
+0
+k< 
+0
+(t
+0
+);
+kX(t;t
+0
+;X
+0
+)k<  for all t t
+0
++T (t
+0
+; )
+De nition 9 [12] The zero solution X(t)  0 of Eq. (2.1) is quasi-uniformly
+asymptotically stable, if the 
+0
+and theT in De nition 8 are independent oft
+0
+:
+De nition 10 [12] The zero solutionX(t)  0 of Eq. (2.1) is uniformly asymp-
+totically stable, if it is uniformly stable and is quasi-uniformly asymptotically
+stable.
+The following lemmas are very important in the proofs of our results.
+Lemma 1 [10] Suppose that there exists a Lyapunov function V (t;X) de ned
+on R
++
+;kXk<H which satis es the following conditions:
+(i) V (t; 0)  0;
+(ii) a(kXk) V (t;X) b(kXk); a;b are continuous and increasing;
+(iii) V
+(2.1)
+(t;X)  c(kXk) for all (t;X)2R
++
+ D:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 41Differential Equations and Control Processes, N 3, 2015
+Then the trivial solution X(t)  0 of Eq. (2.1) is uniformly asymptotically
+stable.
+Lemma 2 [10, 11] Suppose that there exists a Lyapunov function V (t;X) de-
+ ned on R
++
+;kXk  R; where R may be large, which satis es the following
+conditions:
+(i) a(kXk)   V (t;X)   b(kXk); where a(r) and b(r) are continuous and
+increasing and a(r)!1 as r!1;
+(ii) V
+0
+(2.1)
+(t;X)  c(kXk); where c(r) is positive and continuous,
+then solutions of Eq. (2.1) are uniformly ultimately bounded.
+Lemma 3 [10, 11] If there exists a Lyapunov function satisfying the condition
+of Lemma 2, then Eq. (2.1) has at least a periodic solution of period !:
+3 Main Results
+We shall use the following notations. Let x(t) = x; y(t) = y;
+g(t;x(t); 
+ 1
+(x(t))y(t)) =g( ) andp(t;x(t); 
+ 1
+(x(t))y(t)) =p( ): First, we shall
+consider the case when p(t;x;x
+0
+) = 0 = p( ) so that equations (1.1) and (1.2)
+become
+[ (x(t))x
+0
+(t)]
+0
++g(t;x(t);x
+0
+(t))x
+0
+(t) +'(t)h(x(t)) = 0 (3.1)
+and
+x
+0
+(t) = 
+ 1
+(x(t))y(t);
+y
+0
+(t) =  
+ 1
+(x(t))y(t)g(t;x(t); 
+ 1
+(x(t))y(t)) '(t)h(x(t));
+(3.2)
+respectively where the functions  ;g;h and ' are de ned in Section 1. Let
+(x(t);y(t)) be any solution of (3.2), the continuously differentiable function
+employed in the proof of our results is the function V =V (t;x;y) de ned as
+2V = 2'(t) (x)
+Z
+x
+0
+h(s)ds + (a
+2
++b
+2
+ 
+2
+(x))x
+2
++ (b (x) + 1)y
+2
++ 2xyg( ); (3.3)
+where a and b are positive constants. We have the following result.
+Theorem 1 Further to the basic assumptions of the functions  ;';g and h;
+suppose that a;b; 
+0
+; 
+1
+;'
+0
+;'
+1
+;A;B are positive constants such that
+Electronic Journal. http://www.math.spbu.ru/diffjournal 42Differential Equations and Control Processes, N 3, 2015
+(i) '
+0
+ '(t) '
+1
+for all t  0;  
+0
+  (x)  
+1
+for all x;
+(ii) b 
+h(x)
+x
+ B x6= 0;
+(iii) a g( ) A for all t  0; x;y; and
+(iv) '
+0
+(t)  0 for all t  0; xyg
+t
+( )  0; xg
+x
+( )  0;  
+0
+(x)  0; xyg
+y
+( )  0 for
+all t  0;x;y:
+Then the trivial solution of (3.2) is uniformly asymptotically stable.
+Remark 1 (i) When [ 
+0
+(x)x
+0
++g( )]x
+0
+= ax
+0
+; '(t)h(x) = b;  (x) = 1 and
+p( ) = 0 (1.1) reduces to a linear constant coe cients differential equation
+and hypotheses (i) to (iv) of Theorem 1 reduce to the corresponding Routh-
+Hurwitz criterion a> 0; b> 0:
+(ii) If  (x)x
+00
+=  
+00
+(t); [ 
+0
+(x)x
+0
++g( )]x
+0
+= p(t) 
+0
+(t) and '(t)h(x) = q(t) (t)
+(3.2) specializes to linear ordinary differential equation of the second order
+discussed in [2].
+(iii) Whenever  (x) = 1 = '(t); g( ) = f(x); h(x) = g(x) and p( ) = 0 (3.2)
+becomes the second order autonomous differential equation discussed in [4].
+(iv) When  (x) = 1;  
+0
+(x) = 0; g( ) =a(t)f(x;y) and p( ) = 0 (3.2) reduces to
+the second order non autonomous differential equation studied in [1].
+(v) Thus, the result of Theorem 1 includes and extends the stability results
+discussed in [1, 2] and [4].
+Next, we shall state and prove a result that would be useful in the proof of
+Theorem 1 and the preceding results.
+Lemma 4 Under the hypotheses of Theorem 1, there exist constants D
+0
+=
+D
+0
+(a;b; 
+0
+;'
+0
+)> 0 and D
+1
+=D
+1
+(a;b; 
+1
+;'
+1
+;A;B)> 0 such that
+D
+0
+(x
+2
+(t) +y
+2
+(t)) V (t;x(t);y(t)) D
+0
+(x
+2
+(t) +y
+2
+(t)); (3.4)
+for allt  0;x andy: Furthermore, there exists a constantD
+2
+=D
+2
+(a;b;'
+0
+)> 0
+such that
+dV
+dt
+ 
+ 
+ 
+ 
+(3.2)
+=V
+0
+(3.2)
+(t;x;y)  D
+2
+(x
+2
+(t) +y
+2
+(t)) (3.5)
+for all t  0;x and y:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 43Differential Equations and Control Processes, N 3, 2015
+Proof 1 (Proof) Let (x(t);y(t)) be any solution of (3.2), if x(t) = 0 = y(t),
+it follows from (3.3) that
+V (t; 0; 0) = 0: (3.6)
+From the hypotheses of Theorem 1 we have '(t) '
+0
+for all t  0;  (x)  
+0
+for all x; h(x)  bx; x6= 0 and g( )  a for all t  0;x and y so that the
+function V de ned in (3.3) becomes
+V  (ax +y)
+2
++b 
+0
+(b 
+0
++'
+0
+)x
+2
++b 
+0
+y
+2
+  
+0
+(x
+2
++y
+2
+) (3.7)
+for all t  0;x and y; where
+ 
+0
+:=
+1
+2
+min
+ 
+minfa; 1g +b 
+0
+(b 
+0
++'
+0
+); minfa; 1g +b 
+0
+ 
+:
+From the inequality (3.7), we observed thatV (t;x;y) = 0 if and only ifx
+2
++y
+2
+=
+0 and V (t;x;y)> 0 if and only if x
+2
++y
+2
+6= 0; it follows that
+V (t;x;y)! +1 as x
+2
++y
+2
+!1: (3.8)
+Moreover, applying the upper estimates, de ned in Theorem 1, for each of the
+functions '(t);  (x); h(x) and g( ); (3.3) yields
+V  (a
+2
++b
+2
+ 
+2
+1
++B'
+1
+ 
+1
++A)x
+2
++ (1 +A +b 
+1
+)y
+2
+  
+1
+(x
+2
++y
+2
+) (3.9)
+for all t  0;x and y where
+ 
+1
+:= maxfa
+2
++b
+2
+ 
+2
+1
++B'
+1
+ 
+1
++A; 1 +A +b 
+1
+g:
+Hence, from estimates (3.7) and (3.9) the inequality (3.4) is established with
+ 
+0
+=D
+0
+and  
+1
+=D
+1
+respectively.
+Next, we shall establish the inequality (3.5). To see this, let (x(t);y(t)) be
+any solution of (3.2), the derivative of the function V de ned in (3.3), with
+respect to the independent variable t along the solution path of (3.2) after sim-
+pli cation is
+V
+0
+(3.2)
+=
+3
+X
+i=1
+U
+i
+ U
+4
+ 
+ 
+b (x)
+ 
+'(t)
+h(x)
+x
+ b
+ 
++ 
+ 1
+(x)
+ 
+g
+2
+( ) a
+2
+  
+xy (3.10)
+where:
+U
+1
+:='
+0
+(t) (x)
+Z
+x
+0
+h(s)ds +xyg
+t
+( );
+U
+2
+:=y 
+0
+(x)
+ 
+b
+2
+x
+2
++
+1
+2
+b 
+ 1
+(x)y
+2
++'(t) 
+ 1
+(x)
+Z
+x
+0
+h(s)ds
+ 
+;
+U
+3
+:=xg
+x
+( ) 
+ 4
+(x) 
+0
+(x)y
+4
+; and
+U
+4
+:=
+ 
+'(t)g( )
+h(x)
+x
++yg
+y
+( )'(t) 
+ 1
+(x)
+h(x)
+x
+ 
+x
+2
++
+ 
+xg
+y
+( ) 
+ 1
+(x) +bg( )
+ 
+y
+2
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 44Differential Equations and Control Processes, N 3, 2015
+Now since '
+0
+(t)  0 for all t  0;  (x)  
+0
+for all x; h(x) bx for x6= 0; and
+xyg
+t
+( )  0 for all t  0;x and y; it follows that
+U
+1
+='
+0
+(t) (x)
+Z
+x
+0
+h(s)ds +xyg
+t
+( )  0
+for all t  0;x and y:
+Also, from the hypotheses of Theorem 1  
+0
+(x)  0 for all x;  (x)   
+1
+for all
+x; '(t) '
+0
+for all t  0; and h(x) bx for all x6= 0; so that
+ 
+0
+(x)
+ 
+b
+2
+x
+2
++
+1
+2
+b 
+ 1
+(x)y
+2
++'(t) 
+ 1
+(x)
+Z
+x
+0
+h(s)ds
+ 
+  0
+for all t  0;x and y: Recall y< 1 +y
+2
+it follows that
+U
+2
+:=y 
+0
+(x)
+ 
+b
+2
+x
+2
++
+1
+2
+b 
+ 1
+(x)y
+2
++'(t) 
+ 1
+(x)
+Z
+x
+0
+h(s)ds
+ 
+  0
+for all t  0;x and y:
+Moreover, xg
+x
+( )  0 for all t  0;x;y;  (x)   
+1
+for all x and  
+0
+(x)  0 for
+all x; we have
+U
+3
+=xg
+x
+( ) 
+ 4
+(x) 
+0
+(x)y
+4
+  0
+for all t  0;x and y:
+Finally, since xyg
+y
+( )  0 for all t  0;x and y we  nd that
+U
+4
+ ab('
+0
+x
+2
++y
+2
+)
+for all t  0;x and y: Using estimates U
+i
+(i = 1; 2; 3; 4) in (3.10) we obtain
+V
+0
+(3.2)
+  
+1
+2
+ab('
+0
+x
+2
++y
+2
+) 
+6
+X
+i=5
+U
+i
+(3.11)
+where
+U
+5
+:=
+ab
+4
+ 
+'
+0
+x
+2
++ 4a
+ 1
+ (x)
+ 
+'(t)
+h(x)
+x
+ b
+ 
+xy +y
+2
+ 
+and
+U
+6
+:=
+ab
+4
+ 
+'
+0
+x
+2
++ 4a
+ 1
+b
+ 1
+ 
+ 1
+(x)
+ 
+g
+2
+( ) a
+2
+ 
+xy +y
+2
+ 
+:
+Employing the inequalities
+16a
+ 2
+ 
+2
+(x)
+ 
+'(t)
+h(x)
+x
+ b
+ 
+2
+<'
+0
+and 16a
+ 2
+b
+ 2
+ 
+ 2
+(x)
+ 
+g
+2
+( ) a
+2
+ 
+2
+<'
+0
+Electronic Journal. http://www.math.spbu.ru/diffjournal 45Differential Equations and Control Processes, N 3, 2015
+in U
+5
+and U
+6
+respectively we obtain,
+U
+5
+ 
+ab
+4
+ 
+p
+'
+0
+jxj jyj
+ 
+2
+  0 and U
+6
+ 
+ab
+4
+ 
+p
+'
+0
+jxj jyj
+ 
+2
+  0; (3.12)
+for allt  0;x;y: Using the inequalities (3.12) in (3.11), there exists a constant
+ 
+2
+> 0 such that
+V
+0
+(3.2)
+   
+2
+(x
+2
++y
+2
+) (3.13)
+for all t  0;x and y where
+ 
+2
+:=
+ab
+2
+minf'
+0
+; 1g:
+From the inequality (3.13) estimate (3.5) is established with  
+2
+  D
+2
+respec-
+tively. This completes the proof of Lemma 4.
+Proof 2 (Proof of Theorem 1) Let (x(t);y(t)) be any solution of system of
+ rst order Eq. (3.2). From Eq. (3.6), the inequalities (3.7), (3.9) and (3.13) all
+hypotheses of Lemma 1 hold hence, by Lemma 1 the trivial solution X(t)  0
+of (3.2) is uniformly asymptotically stable where X = (x;y)2R
+2
+:
+Next, if p( )6= 0 in Eq. (1.1) (in particular Eq. (1.2)) we have the following
+result.
+Theorem 2 In addition to the assumptions of Theorem 1, suppose that
+jp( )j M; 0<M <1; (3.14)
+then the solutions of (1.2) are uniformly ultimately bounded.
+Remark 2 (i) If  (x) = 1; g( ) =f(x) and '(t) = 1: Equation (1.1) reduces
+to that discussed in [4].
+(ii) Whenever  (x) = 1; x
+0
+(t) = 1 and p( ) = f(t); (1.1) specializes to that
+studied in [7].
+(iii) When  (x) = 1 and g( ) = a(t)f(x;x
+0
+); then (1.1) reduces to the second
+order non-autonomous non linear ordinary differential equation discussed
+in [1].
+(iv) The boundedness result presented in Theorem 2 includes and extends the
+results in [1], [4] and [7].
+Electronic Journal. http://www.math.spbu.ru/diffjournal 46Differential Equations and Control Processes, N 3, 2015
+Proof 3 (Proof of Theorem 2) Let (x(t);y(t)) be any solution of Eq. (1.2).
+The Lyapunov's function de ned in Eq. (3.3) gives rise to the inequalities (3.7),
+(3.9) and the expression in (3.8) hold for Eq. (1.2). Furthermore, the derivative
+of the function V de ned by Eq. (3.3) with respect to the independent variable
+t along the solution path of Eq. (1.2) is
+V
+0
+(1.2)
+=V
+0
+(3.2)
++
+ 
+x
+ 
+yg
+y
+( ) +g( )
+ 
++y
+ 
+b (x) + 1
+  
+p( ): (3.15)
+From the inequality (3.13) V
+0
+(3.2)
+   
+2
+(x
+2
++y
+2
+) for all t  0;x;y and in view
+of hypotheses Theorem 1 we  nd Eq. (3.15) to be
+V
+0
+(1.2)
+   
+2
+(x
+2
++y
+2
+) +K
+0
+(jxj +jyj)jp( )j (3.16)
+for all t  0;x and y where
+K
+0
+:= max
+ 
+A; b 
+1
++ 1
+ 
+:
+Now by estimate (3.14) and noting the fact that (jxj +jyj)
+2
+  2(x
+2
++y
+2
+), it
+follows from the inequality (3.16) that
+V
+0
+(1.2)
+   
+3
+(x
+2
++y
+2
+) (3.17)
+for all t  0;x and y where  
+3
+:=
+ 
+2
+2
+> 0 provided that
+(x
+2
++y
+2
+)
+1=2
+=kXk K
+1
+= 2
+3=2
+K
+0
+M 
+ 1
+2
+> 0
+for all X = (x;y)2 R
+2
+; where K
+1
+may be large. Now from the inequalities
+(3.7), (3.9) and (3.17) the hypotheses of Lemma 2 hold. Hence, by Lemma 2
+the solutions of Eq. (1.2) are uniformly ultimately bounded.
+Next, we shall state and prove a result on the periodic solutions of the system
+of Eq. (1.2).
+Theorem 3 If all the assumptions of Theorem 2 hold, then Eq. (1.2) has at
+least a periodic solution of period !:
+Proof 4 (Proof) Let (x(t);y(t)) be any solution of Eq. (1.2). Since the Lya-
+punov's function de ned in (3.3) satis es the assumptions of Theorem 2, which
+in turn satisfy the assumptions of Lemma 2. Thus by Lemma 2 and Lemma 3
+equation (1.2) has at least a periodic solution of period !: This completes the
+proof of Theorem 3.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 47Differential Equations and Control Processes, N 3, 2015
+Finally, if the forcing termp( ) is replaced with the functionp(t);p2C[R
++
+;R]
+in Eq. (1.1) we have
+[ (x(t))x
+0
+(t)]
+0
++g(t;x(t);x
+0
+(t))x
+0
+(t) +'(t)h(x(t)) =p(t); (3.18)
+and Eq. (3.18) is equivalent to system of  rst order ordinary differential equa-
+tions
+x
+0
+(t) = 
+ 1
+(x(t))y(t);
+y
+0
+(t) =  
+ 1
+(x(t))y(t)g(t;x(t); 
+ 1
+(x(t))y(t)) '(t)h(x(t)) +p(t):
+(3.19)
+We have the following result.
+Theorem 4 Further to the assumptions of Theorem 1, suppose that
+Z
+x
+0
+jp( )jd  N; 0 N <1; (3.20)
+then there exists a constant D
+4
+= D
+4
+(x
+0
+;y
+0
+;a;b; 
+0
+; 
+1
+;'
+0
+;'
+1
+) > 0 such that
+any solution (x(t);y(t)) of Eq. (3.19) determined by x(0) = x
+0
+;y(0) = y
+0
+; for
+t = 0; satis es
+jx(t)j D
+4
+; jy(t)j D
+4
+; 8 t> 0: (3.21)
+Proof 5 (Proof) Let (x(t);y(t)) be any solution of Eq.(3.19). In view of the
+Lyapunov's function de ned in Eq. (3.3), estimate (3.7) holds for Eq. (3.19).
+The derivative of the function V with respect to t along the solution path of Eq.
+(3.19) is
+V
+0
+(3.19)
+=V
+0
+(3.2)
++
+ 
+x
+ 
+yg
+y
+( ) +g( )
+ 
++y
+ 
+b (x) + 1
+  
+p(t): (3.22)
+Now from the inequality (3.13), V
+0
+(3.2)
+  0 for all t  0;x;y and by the assump-
+tions of Theorem 1, Eq. (3.22) yields
+V
+0
+(3.19)
+ K
+0
+(jxj +jyj)jp(t)j
+for all t  0;x and y: From the inequality (3.7), the fact thatjxj< 1 +x
+2
+and
+jyj< 1 +y
+2
+we  nd that
+V
+0
+(3.19)
+ K
+2
+jp(t)jV  2K
+0
+jp(t)j (3.23)
+for all t  0;x and y; where K
+2
+= k
+0
+ 
+ 1
+0
+: Solving this  rst order differential
+inequality using the integrating factor
+exp
+ 
+ K
+2
+Z
+x
+0
+jp(s)jds
+ 
+;
+Electronic Journal. http://www.math.spbu.ru/diffjournal 48Differential Equations and Control Processes, N 3, 2015
+together with estimate (3.20), Eq. (3.23) becomes
+V (t;x;y)  (V (0) + 1)e
+K
+2
+N
+  1 (3.24)
+where V (0) =V (0;x
+0
+;y
+0
+) for t = 0: Engaging estimate (3.7) in the right hand
+side of the inequality (3.24) we obtain
+jx(t)j K
+3
+; jy(t)j K
+3
+for all t> 0; where
+K
+3
+:=
+ 
+(V (0) + 1)e
+K
+2
+N
+  1
+ 
+1=2
+ 
+ 1=2
+0
+:
+This establish the inequalities (3.21) with K
+3
+=D
+4
+: The proof of Theorem 4 is
+established.
+References
+[1] Alaba, J.G., and Ogundare, B.S.; Asymptotic behaviour of solutions of
+certain second order non-autonomous nonlinear ordinary differential equa-
+tion, International Journal of Pure and Applied Mathematics, vol. 90,
+no.4, (2014), 467 - 483.
+[2] Grigoryan, G.A.; Boundedness and stability criteria for linear ordinary
+differential equations of the second order, Russian Mathematics (Iz. VUZ),
+vol. 57, no. 12, (2013), 8 - 15.
+[3] Kroopnick, A.J.; Bounded solutions to x
+00
++q(t)b(x) =f(t); Int. J. Math.
+Edu. Sci. Tec. 41, 6, (2010), 829 - 836.
+[4] Ogundare, S.B., and Afuwape, A.U.; Boundedness and stability properties
+of solutions of generalized Lienard equation, Kochi J. Math., 9, (2014), 97
+- 108.
+[5] Ogundare, S.B., and Okecha, G.E.; Boundedness, periodicity and stability
+of solution  x +a(t)g( _ x) +b(t)h(x) =p(t;x; _ x); Math. Sci. Res. J., vol. 11
+no. 5, (2007), 432 - 443.
+[6] Tun  c, C.; A note on boundedness of solutions to a class of non-autonomous
+differential equations of second order, Applicable Analysis and Discrete
+Mathematics, vol. 4, no. 2 (2010), 361 - 372.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 49Differential Equations and Control Processes, N 3, 2015
+[7] Tun  c, C.; A note on the bounded solutions, Appl. Math. Inf. Sci., vol. 8,
+no. 1, (2014), 393 - 399.
+[8] Tun  c, C.; Boundedness analysis for certain two-dimensional differential
+systems via a Lyapunov approach, Bull. Math. Soc. Sci. Math. Roumanie
+(N.S.) 53, (101), (2010), 61 - 68.
+[9] Tun  c, C.; Boundedness results for solutions of certain nonlinear differential
+equations of the second order, Journal of the Indonesian Mathematical
+Society, vol. 16, no. 2, (2010), 115 - 126.
+[10] Yoshizawa, T.; Liapunov's function and boundedness of solutions, Funk-
+cialaj Ekvacioj 2, (1958), 71-103.
+[11] Yoshizawa, T.; Stability theory by Liapunov's second method, The Math-
+ematical Society of Japan (1966).
+[12] Yoshizawa, T.; Stability theory and existence of periodic solutions and
+almost periodic solutions, Spriger-Verlag, New York. Heidelberg. Berlin
+(1975).
+Electronic Journal. http://www.math.spbu.ru/diffjournal 50
