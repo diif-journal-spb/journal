@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace EugenePetrenko.DataMigration
 {
@@ -43,5 +44,13 @@ namespace EugenePetrenko.DataMigration
         
       });
     }
+
+    public static void CheckIsText(string text)
+    {
+      int whitespaces = Regex.Matches(text, "\\s", RegexOptions.IgnoreCase).Count;
+      int textChars = Regex.Matches(text, "[a-zà-ÿ0-9\\-]", RegexOptions.IgnoreCase).Count;
+      int totalChars = text.Length;
+    }
+      
   }
 }
