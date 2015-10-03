@@ -1,0 +1,257 @@
+﻿DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+№ 3, 2015
+Electronic Journal,
+reg.Эл № ФС77-39410 at 15.04.2010
+ISSN 1817-2172
+
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+
+Integrodifferential Equations
+
+
+
+
+Controllability Results for general Integrodifferential Evolution Equations in Banach Space
+
+Kamalendra Kumar1, Rakesh Kumar2 and Manoj Karnataka2, *
+
+1Department of Mathematics, SRMS CET, Bareilly, U.P. – 243001, India
+E-mail: kamlendra.14kumar@gmail.com
+2Department of Mathematics, Hindu College, Moradabad, U.P.-244001, India
+E-mail: rakeshnaini1@gmail.com
+*E-mail: karnatak.manoj@gmail.com
+
+ABSTRACT. The sufficient conditions for controllability of general class of nonlinear evolution integrodifferential equations in Banach space are established. The results are obtained by using the resolvent operator and Schaefer fixed point theorem.
+
+Keywords: Controllability, Nonlinear integrodifferential evolution equation, Resolvent operator, Schaefer’s fixed point theorem.
+
+Mathematics Subject Classification: 34G20, 93B05.
+
+1.	Introduction
+Pazy [15] has discussed the existence and uniqueness of mild, strong and classical solution of semilinear evolution equations by using semigroup theory. The nonlocal problem for the same equation has been first studied by Byszewski [8]. Then it has been extensively studied by many authors, see for example, Byszewski and Acka [7] and Balachandran and Chandrasekaran [3]. Lin and Liu [13] studied the nonlocal Cauchy problem for semilinear integrodifferential equations by using resolvent operators. Balachandran and Ravikumar [4] studied the existence of mild solutions of nonlinear integrodifferential equations with time varying delays in Banach spaces.
+The first step in the study of the problem of controllability is to determine if an objective can be reached by some suitable control function. The problem of controllability happens when a system described by a state   is controlled by a given law such as a differential equation  . We discuss the possibility of driving the solution for a given system from an initial state to a final state by an adequate choice of the control function  . Roughly speaking, controllability means, that is possible to steer a dynamical system from an arbitrary initial state to an arbitrary final state using the set of admissible controls. So, the notion of controllability is a great importance in mathematical control theory such as pole assignment, stabilization and optimal control may be solved under the assumption that the system is controllable.
+Controllability of nonlinear systems represented by ordinary differential equations in infinite dimensional space has been extensively studied by several authors, [5, 6, 14]. Sakthivel, Choi and Anthoni [16] derived sufficient conditions for controllability of nonlinear neutral evolution integrodifferential systems in a Banach space by using the resolvent operators and Schaefer fixed point theorem. Sakthivel, Choi and Anthoni [17] establish the sufficient conditions for the controllability of nonlinear evolution integrodifferential system by using resolvent operator and Schaefer fixed point theorem. Atmania and Mazouri [1] established the controllability results for some semilinear integrodifferential system with nonlocal condition in a Banach space by using semigroup theory and Schaefer theorem. Kumar and Kumar [11, 12] established a set of sufficient conditions for the controllability of Sobolev type nonlocal impulsive mixed functional integrodifferential evolution systems with finite delay by using semigroup theory and fixed point theorem. Hazi and Bragdi [10] established the controllability results of fractional integrodifferential systems in Banach space by using fractional calculus, semigroup theory and fixed point theorem.
+Motivated by the above mentioned works and the work of Sakthivel, Choi and Anthoni [16], Balachandaran and Kumar [4], K. Balachandran, N. Annapoorani and J.K. Kim [2] and Sathiyanathan and Gopal [18], we study the controllability for time varying delay integrodifferential evolution equation in Banach space by using the resolvent operators and Schaefer fixed point theorem.
+2.	Preliminaries
+Consider the nonlinear delay integrodifferential equation with nonlocal condition of the form
+     
+       	(1)
+ 										(2)        
+where the state   takes values in a Banach space with the norm  , and the control function   is given in  , a Banach space of admissible control functions with  as a Banach space. Here   and   are closed linear operators on   with dense domain   which is independent of   is a bounded linear operator from   into  ,     ,  ,   and   are given functions. Here  .
+We shall make the following assumption [9].
+(I)	  generates a strongly continuous semigroup of evolution operators.
+(II)	Suppose   is a Banach space formed from   with the graph norm.   and   are closed operators, it follows that   and   are in the set of bounded operators from   to     for   and  , respectively.   and   are continuous on   and   , respectively, into  .
+Definition 2.1. A resolvent operator for (1) and (2) is a bounded operator valued function  ,   the space of bounded linear operators on   having the following properties:
+(i)	  is strongly continuous in   and  ,   for some constants   and  .
+(ii)	  is strongly continuous in   and   on  .
+(iii)	For   is continuously differentiable in   and  , and for  ,
+ 
+and 	 
+with   and   are strongly continuous on  . Here   can be extracted from the evolution operator of the generator  . The resolvent operator is similar to the evolution operator for nonautonomous differential equation in Banach spaces. It will not, however, be an evolution operator because it will not satisfy an evolution or semigroup property. Because a number of results follow directly from the definition of the resolvent operator.
+Definition 2.2. A continuous function   is said to be a mild solution of the nonlocal Cauchy problem (1) and (2), if
+           
+ 
+ 
+ 			(3)
+is satisfied.
+Schaefer’s Theorem [19].  Let   be a normed linear space. Let   be a completely continuous operator, i.e. it is continuous and the image of any bounded set is contained in a compact set, and let
+ 
+Then either   is unbounded or   has a fixed point.
+Definition 2.3. The system (1) is said to be controllable with nonlocal condition (2) on the interval  if for every  , there exists a control   such that the mild solution   of (1) - (2) satisfies   and  .
+To establish the result, we need the following additional hypothesis:
+ 	The resolvent operator   is compact and there exists constant   such that  
+ 	The linear operator   defined by
+         
+has an induced inverse operator   which takes values in   and there exists a positive constants   such that   and  .
+ 	The function   is completely continuous and there exists a constant   such that   for any   and is equicontinuous in  .
+  	For each   the function   is continuous and for each   the function   is strongly measurable.
+ 	There exists an integrable function   such that   for any  where   is a continuous nondecreasing function.
+ 	There exists an integrable function   such that
+  for any  
+where   is a continuous nondecreasing function.
+ 	The function   is completely continuous and there exists a constant   such that   for any   and is equicontinuous in  .
+ 	There are functions   such that
+ 
+ 	The function
+ 
+ 
+such that 	 ;  see [7]
+ 	The function   is continuous and there exists a constant   such that   for any  .
+Then the system (1) – (2) has a mild solution of the following form
+ 
+ 
+ 
+ 			(4)
+3.	Controllability Result 
+Theorem 3.1. If the hypotheses  are satisfied, then the system (1) - (2) is controllable on  .
+Proof . Using the hypotheses   for an arbitrary function  , we define the control
+ 
+ 
+ 
+   	         (5)
+We now show that when using the control  , the operator  , defined by
+ 
+ 
+ 
+ 
+       
+ 	 			(6)
+has a fixed point. This fixed point is then a solution of equation (1) – (2).
+Clearly  , which means that the control   steers the system (1) – (2) from the initial state   to   in time  , provided we can obtain a fixed point of the nonlinear operator  
+In order to study the controllability problem of (1) – (2), we introduce a parameter   and consider the following system
+         
+                            		 	(7)
+       	 										(8)
+First we obtain a priori bounds for the mild solution of (7) – (8). Then from
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+We have
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ .
+ 
+ 
+ 
+ 
+where 
+ 
+ 
+ 
+ ; 
+ 
+ 
+ 
+Implies that
+ 
+ 
+ 
+ 
+Denoting by   the right hand side of the above inequality as  . Then 
+ ,
+ ,
+ 
+ 
+ 
+        	         .
+This implies 
+ 
+where  .
+This inequality implies that there is a constant   such that   and hence we have   where   depends only on   and on the functions   and  . 
+Next we must prove that the operator   is a completely continuous operator. Let   for some  . We first show that  maps   into an equicontinuous family. Let   and   Then if  , we have
+  
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 	 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The right hand side tends to zero as  , since   is completely continuous and by    for   is continuous in the uniform operator topology. Thus   maps   into an equicontinuous family of functions. It is easy to see that the family   is uniformly bounded.
+Next, we show   is compact. Since we have shown   is an equicontinuous collection, it suffice by the Arzela – Ascoli theorem to show   is precompact in   for any  . Let   be fixed and   a real number satisfying  . For   we define
+ 
+             
+ 
+ 
+ 
+ 
+ 
+ 
+Since   is a compact operator, the set   is precompact in  for every  ,  . Moreover, for every   we have
+ 
+ 
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Therefore there are precompact sets arbitrarily close to the set  . Hence, the set   is precompact in  . 
+It remains to show that   is continuous. Let   with   in  . Then there is an integer   such that   for all   and  , so   and  . By   
+ 
+ , for each   
+and since
+ 
+ ;
+ ;
+ 
+and
+ 
+ .
+Now by dominated convergence theorem, we have
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  as  .
+Thus   is continuous. This completes the proof that   is completely continuous.
+Finally the set   is bounded, as we prove in the first step. Consequently, by Schaefer’s theorem, the operator   has a fixed point in  . This means that any fixed point of   is a mild solution of (1) and (2) on   satisfying  .
+References
+[1]	R. Atmania and S. Mazouri, Controllability of semilinear integrodifferential equations with nonlocal conditions, EJDE 2005 (2005), 75, pp. 1-9. 
+[2]	K. Balachandran, N. Annapoorani and J.K. Kim, Existence of mild solutions of neutral evolution integrodifferential equations, Nonlinear Functional Analysis and Applications, Vol. 16, No. 2 (2011), pp. 141-153
+[3]	K. Balachandran and M. Chandrasekaran, Existence of solution of a delay differential equation with nonlocal condition, Indian J. Pure Appl. Math., 27 (1996), pp. 443-449.
+[4]	K. Balachandran and R. Ravikumar, Existence of solutions of integrodifferential evolution equations with time varying delays, Applied Mathematics E-Notes, 7 (2007), pp. 1-8.
+[5]	K. Balachandran and R. Sakthivel, Controllability of semilinear functional integrodiffeential systems in Banach spaces, Kybernetika 36 (2000), 465-476.
+[6]	K. Balachandran and R. Sakthivel, Controllability of integrodifferential systems in Banach spaces, Appl. Math. Comput. 118 (2001), pp. 63-71.
+[7]	L. Byszewski and H. Acka, Existence of solutions of a semilinear functional differential evolution nonlocal problem, Nonlinear Analysis, 34 (1) (1998), pp. 65-72.
+[8]	L. Byszewski, Theorems about the existence and uniqueness of solutions of a semilinear evolution nonlocal Cauchy problem, J. Math. Anal. Appl., 162 (1992), pp. 494-505.
+[9]	R. Grimmer, Resolvent operators for integral equations in a Banach space, Trans. Amer. Math. Soc. 273 (1982), pp. 333-349.
+[10]	M. Hazi and M. Bragdi, Controllability of fractional integrodifferential systems via semigroup theory in Banach spaces, Math. J. Okayama Univ. 54 (2012), 133-143.
+[11]	K.  Kumar and R. Kumar, Existence of Solutions of Quasilinear Mixed Volterra-Fredholm Integrodifferential Equations with Nonlocal Conditions, Differential Equations and Control Processes, 3 (2013), pp. 77-84.
+[12]	K.  Kumar and R. Kumar, Controllability of Sobolev type nonlocal impulsive mixed functional integrodifferential evolution systems, Electronic Journal of Mathematical Analysis and Applications, 3 (1) (2015), pp. 122-132.
+[13]	Y. Lin and J. H. Liu, Semilinear integrodifferential equations with nonlocal Cauchy problem, Nonlinear Analysis; Theory, Methods and Applications, 26 (1996), pp. 1023-1033.
+[14]	J. Y. Park and H. K. Han, Controllability of nonlinear functional integrodifferential systems in Banach spaces, Nihonkai Math. J. 8 (1997), pp. 47-53.
+[15]	A. Pazy, Semigroups of Linear Operators and Applications to Partial Differential Equations, Springer-Verlag, New York, 1983.
+[16]	R. Sakthivel, Q. H. Choi and S.M. Anthoni, Controllability of nonlinear neutral evolution integrodifferential systems, J. Math. Anal. Appl. 275 (2002), pp. 402-417.
+[17]	R. Sakthivel, Q. H. Choi and S.M. Anthoni, Controllability result for nonlinear evolution integrodifferential systems, Applied Mathematics Letters, 17 (2004), 1015-1023.
+[18]	K. Sathiyanathan and T. Nandha Gopal, Existence results on general integrodifferential evolution equations in Banach space, Applied Mathematics, 4 (2013), pp. 149-154.
+[19]	H. Schaefer, Uber Die Methods der a Priori Schranken, Mathematische Annalem 129 (1955), pp. 415-416.
