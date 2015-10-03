@@ -25,7 +25,7 @@ namespace EugenePetrenko.DataMigration
       Util.ProcessFiles(ec, pdfDir, "*.pdf", pdfFile =>
       {
         var marker = Path.Combine(homeDir, Path.GetFileNameWithoutExtension(pdfFile) + ".text");
-        if (File.Exists(marker)) return;
+        if (File.Exists(marker) && File.GetLastWriteTime(marker) >= File.GetLastWriteTime(pdfFile)) return;
 
         var text = new StringBuilder();
         using (var pdfReader = new PdfReader(pdfFile))
