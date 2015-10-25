@@ -50,8 +50,7 @@
 </div>
 <div class="editor">
 <span class="name">George S. Osipenko</span>
-<span class="work">Sevastopol Institute of Banking of the Ukrainian Academy of Banking
-of the National Bank of Ukraine</span>
+<span class="work">Lomonosov Moscow State University, Sevastopol branch (Russia)</span>
 <span class="email">george.osipenko@mail.ru</span>
 </div>
 <div class="editor">
@@ -70,7 +69,7 @@ of the National Bank of Ukraine</span>
 <span class="email">valentin_zaitsev@mail.ru </span>
 </div>
 <div class="editor">
-<span class="name">Mikhail Zakrževskis </span>
+<span class="name">Mikhail Zakrževskis</span>
 <span class="work">Riga Technical University (Latvia)</span>
 <span class="email">mzakr@latnet.lv</span>
 </div>
@@ -79,4 +78,5 @@ of the National Bank of Ukraine</span>
 <span class="work">Technical University of Ostrava (Check Republic)</span>
 <span class="email">ivan.zelinka@vsb.cz</span>
 </div>
+
 </div>
