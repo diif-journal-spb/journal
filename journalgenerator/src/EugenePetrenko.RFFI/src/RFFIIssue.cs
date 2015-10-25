@@ -18,8 +18,10 @@ namespace EugenePetrenko.RFFI
     [XmlIgnore]
     public INumber NumberInternal { get { return myNumber; }}
 
+/*
     [XmlElementPath("volume"), XmlText] 
     public string Volume {get { return myNumber.Year; }}
+*/
 
     [XmlElementPath("number"), XmlText]
     public string Number { get { return myNumber.Number; } }
