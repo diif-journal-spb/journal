@@ -1,7 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
+using System.Xml;
 using EugenePetrenko.DataModel;
 using EugenePetrenko.RFFI;
 
@@ -73,7 +76,10 @@ namespace EugenePetrenko.JournalGenerator
       var file = Path.Combine(myPdfStorePath + ".text", Path.GetFileNameWithoutExtension(article.Pdf) + ".text");
       using (var t = new StreamReader(File.OpenRead(file), Encoding.UTF8))
       {
-        return t.ReadToEnd();
+          var text = t.ReadToEnd();
+          text = new string(text.Select(x => XmlConvert.IsXmlChar(x) ? x : ' ').ToArray());
+          text = Regex.Replace(text, @"\s+", " ");
+          return text;
       }
     }
 
