@@ -14,9 +14,10 @@
 </p><p>These publications are distributed by Springer company (http://www.springer.com/mathematics/dynamical+systems/journal/10625) and indexed in Scopus and Web of Science.
 </p>
 
-    <p>2011- <a href="http://link.springer.com/journal/10625/47/13/page/1">http://link.springer.com/journal/10625/47/13/page/1</a>
-</p><p>2012- <a href=http://link.springer.com/journal/10625/48/13/page/1">http://link.springer.com/journal/10625/48/13/page/1></a>
-</p><p>2013- <a href="http://link.springer.com/journal/10625/49/13/page/1">http://link.springer.com/journal/10625/49/13/page/1</a>
+    <p>2011 - <a href="http://link.springer.com/journal/10625/47/13/page/1">http://link.springer.com/journal/10625/47/13/page/1</a>
+</p><p>2012 - <a href=http://link.springer.com/journal/10625/48/13/page/1">http://link.springer.com/journal/10625/48/13/page/1></a>
+</p><p>2013 - <a href="http://link.springer.com/journal/10625/49/13/page/1">http://link.springer.com/journal/10625/49/13/page/1</a>
+</p><p>2014 - <a href="http://link.springer.com/journal/10625/50/13/page/1"http://link.springer.com/journal/10625/50/13/page/1"></a>
 </p>
 
     <p>The journal is indexed in Russian Science Citation Index system.
