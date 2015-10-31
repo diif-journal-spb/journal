@@ -1,4 +1,4 @@
-﻿<div style="text-align:justify; width:80%">
+﻿<div>
 
 
     <p>In 1996 St. Petersburg Technical University organized the international conference “Differential Equations and Their Applications”. At the initiative of the chief of organizing committee Prof. G. S. Osipenko the decision was made to organize the electronic journal “Differential Equations and Control Processes”.  The situation in Russia in those years was rather difficult: financial support of scientific research practically stopped, many journals closed because the stress of money.
@@ -14,10 +14,10 @@
 </p><p>These publications are distributed by Springer company (http://www.springer.com/mathematics/dynamical+systems/journal/10625) and indexed in Scopus and Web of Science.
 </p>
 
-    <p>2011 - <a href="http://link.springer.com/journal/10625/47/13/page/1">http://link.springer.com/journal/10625/47/13/page/1</a>
-</p><p>2012 - <a href="http://link.springer.com/journal/10625/48/13/page/1">http://link.springer.com/journal/10625/48/13/page/1></a>
-</p><p>2013 - <a href="http://link.springer.com/journal/10625/49/13/page/1">http://link.springer.com/journal/10625/49/13/page/1</a>
-</p><p>2014 - <a href="http://link.springer.com/journal/10625/50/13/page/1">http://link.springer.com/journal/10625/50/13/page/1</a>
+    <p>2011 - <a target="_blank" href="http://link.springer.com/journal/10625/47/13/page/1">http://link.springer.com/journal/10625/47/13/page/1</a>
+</p><p>2012 - <a target="_blank" href="http://link.springer.com/journal/10625/48/13/page/1">http://link.springer.com/journal/10625/48/13/page/1</a>
+</p><p>2013 - <a target="_blank" href="http://link.springer.com/journal/10625/49/13/page/1">http://link.springer.com/journal/10625/49/13/page/1</a>
+</p><p>2014 - <a target="_blank" href="http://link.springer.com/journal/10625/50/13/page/1">http://link.springer.com/journal/10625/50/13/page/1</a>
 </p>
 
     <p>The journal is indexed in Russian Science Citation Index system.

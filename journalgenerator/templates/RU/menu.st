@@ -3,7 +3,8 @@
 <a href="$TemplateAddressesLink$">Адреса</a>
 <a href="$TemplateScopeLink$">Тематика</a>
 <a href="$TemplateEditorial_StaffLink$">Редакторский состав</a>
-<a href="$NewsLink$">Новости</a>
+<a href="$TemplateReviewLink$">Рецензирование</a>
+<!--<a href="$NewsLink$">Новости</a>-->
 <a href="$TemplateFor_AuthorsLink$">Для авторов</a>
 <a href="$TemplateEthicLink$">$ethic_caption()$</a>
 <!--<a href="$BooksLink$">Книги</a>-->

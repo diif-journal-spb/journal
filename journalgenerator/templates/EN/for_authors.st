@@ -69,3 +69,5 @@ LaTeX is a module in the MikTEX package</p>
     <li>Save the document as <em>YOUR_NAME-art.doc</em></li>
  </ul>
 </p>
+
+$review()$
