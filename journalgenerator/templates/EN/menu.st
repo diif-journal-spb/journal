@@ -1,4 +1,5 @@
 <a href="$TemplateAboutLink$">About</a>
+<a href="$TemplateAbout_HistoryLink$">History</a>
 <a href="$TemplateEditodial_PageLink$">Editorial Page</a>
 <a href="$TemplateAddressesLink$">Addresses</a>
 <a href="$TemplateScopeLink$">Scope</a>

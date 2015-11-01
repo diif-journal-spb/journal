@@ -23,3 +23,8 @@
   <br/>
   Fax: +7 (812) 428-6944 
 </p>
+
+
+<p class="jounal-index">
+  The journal is indexed in Russian Science Citation Index and EBSCO
+</p>

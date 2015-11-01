@@ -4,17 +4,17 @@ $about_content()$
 
 <h3>Editor-in-Chief</h3>
 <ul>
-  <li>Gennadii Alexeevich Leonov, corresponding member of RAS, professor, Doctor of Science</li>
+  <li><strong>Gennadii Alexeevich Leonov</strong><br />corresponding member of RAS, professor, Doctor of Science</li>
 </ul>
 
 <h3>Editor</h3>
 <ul>
-  <li>Natalia Borisovna Ampilova, Assoc.prof., PhD</li>
+  <li><strong>Natalia Borisovna Ampilova</strong><br />Assoc.prof., PhD</li>
 </ul>
 
 <h3>Technical Support</h3>
 <ul>
-  <li>Eugene Igorevich Petrenko, PhD</li>
+  <li><strong>Eugene <!-- @jonnyzzz --> Igorevich Petrenko</strong><br />PhD</li>
 </ul>
 
 $editorial_editorial_board()$

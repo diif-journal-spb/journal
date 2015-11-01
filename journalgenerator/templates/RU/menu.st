@@ -1,4 +1,5 @@
 <a href="$TemplateAboutLink$">О журнале</a>
+<a href="$TemplateAbout_HistoryLink$">История Журнала</a>
 <a href="$TemplateEditodial_PageLink$">Издатель</a>
 <a href="$TemplateAddressesLink$">Адреса</a>
 <a href="$TemplateScopeLink$">Тематика</a>

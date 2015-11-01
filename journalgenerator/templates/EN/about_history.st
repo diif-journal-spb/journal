@@ -1,4 +1,5 @@
-﻿<div>
+﻿<h2>$about_history_caption()$</h2>
+<div>
 
 
     <p>In 1996 St. Petersburg Technical University organized the international conference “Differential Equations and Their Applications”. At the initiative of the chief of organizing committee Prof. G. S. Osipenko the decision was made to organize the electronic journal “Differential Equations and Control Processes”.  The situation in Russia in those years was rather difficult: financial support of scientific research practically stopped, many journals closed because the stress of money.
