@@ -9,6 +9,17 @@ $article.Authors:{
 <h3>Аннотация:</h3>
 <p>$article.Abstract$</p>
 
+$if(article.HasKeywords)$
+<a name="keywords"></a>
+<h3>Ключевые слова</h3>
+
+<ul>
+$article.Keywords:{
+  <li class="paper_keyword">$it$</li>
+}$
+</ul>
+$endif$
+
 $if(article.HasReferences)$
 <a name="refs"></a>
 <h3>Ссылки:</h3>

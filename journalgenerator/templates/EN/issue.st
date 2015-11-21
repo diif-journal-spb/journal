@@ -18,7 +18,12 @@ $sections:{
       $if(it.HasReferences)$
       |
       <a href="$it.Link$#refs">References</a>
-      $endif$    </p>
+      $endif$
+      $if(it.HasKeywords)$
+      |
+      <a href="$it.Link$#keywords">Keywords</a>
+      $endif$   
+    </p>
  </div>
   }$
 }$

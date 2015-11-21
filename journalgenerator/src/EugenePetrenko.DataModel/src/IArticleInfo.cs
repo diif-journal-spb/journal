@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
 using System.Xml;
 
 namespace EugenePetrenko.DataModel
@@ -21,6 +23,9 @@ namespace EugenePetrenko.DataModel
     string Abstract { get; }
 
     string[] ExtraFiles { get; }
+
+    bool HasKeywords { get;  }
+    string[] Keywords { get;  }
   }
 
   public class ArticleInfo : Entity, IArticleInfo
@@ -34,6 +39,7 @@ namespace EugenePetrenko.DataModel
     private readonly string myAbstract;
     private readonly string myTitle;
     private readonly string[] myExtraFiles;
+    private readonly string[] myKeywords;
 
     public ArticleInfo(IArticle article, XmlElement el, IXmlDataLoader loader) : base(loader.EntityGenerator)
     {
@@ -69,6 +75,17 @@ namespace EugenePetrenko.DataModel
       myTitle = el.SelectSingleNode("title/text()").Value.Trim();
       myAbstract = el.SelectSingleNode("abstract/text()").Value.Trim();
 
+      myKeywords =
+        el.SelectNodes("keywords/text()")
+          .Cast<XmlText>()
+          .Select(x => x.Value)
+          .SelectMany(x => Regex.Split(x, @"[\r\n,;.]+"))
+          .Select(x => Regex.Replace(x, @"\s+", " "))
+          .Select(x => x.Trim())
+          .Where(x=>x.Length > 0)
+          .Distinct()
+          .ToArray();
+
       var extraFiles = new List<string>();
       foreach(XmlText extra in el.SelectNodes("extra-files/file/text()"))
       {
@@ -82,6 +99,9 @@ namespace EugenePetrenko.DataModel
     {
       get { return myArticle.References; }
     }
+
+    public bool HasKeywords { get { return Keywords.Length > 0; }}
+    public string[] Keywords { get { return myKeywords; } }
 
     public bool HasReferences { get { return References.Length > 0; } }
 

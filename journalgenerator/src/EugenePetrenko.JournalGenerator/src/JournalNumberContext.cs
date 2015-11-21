@@ -128,6 +128,12 @@ namespace EugenePetrenko.JournalGenerator
       {
         get { return myInfo.HasReferences; }
       }
+
+      [UsedByStringTemplate]
+      public bool HasKeywords
+      {
+        get { return myInfo.HasKeywords; }
+      }
     }
   }
 }

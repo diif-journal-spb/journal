@@ -20,6 +20,10 @@ $sections:{
       |
       <a href="$it.Link$#refs">Ссылки</a>
       $endif$
+      $if(it.HasKeywords)$
+      |
+      <a href="$it.Link$#keywords">Ключевые слова</a>
+      $endif$
     </p>
    </div>
   }$
