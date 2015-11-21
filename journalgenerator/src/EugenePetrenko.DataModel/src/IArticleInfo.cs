@@ -76,7 +76,7 @@ namespace EugenePetrenko.DataModel
       myAbstract = el.SelectSingleNode("abstract/text()").Value.Trim();
 
       myKeywords =
-        el.SelectNodes("keywords/text()")
+        el.SelectNodes("keywords/word/text()")
           .Cast<XmlText>()
           .Select(x => x.Value)
           .SelectMany(x => Regex.Split(x, @"[\r\n,;.]+"))
@@ -84,6 +84,7 @@ namespace EugenePetrenko.DataModel
           .Select(x => x.Trim())
           .Where(x=>x.Length > 0)
           .Distinct()
+          .OrderBy(x=>x.ToLower())
           .ToArray();
 
       var extraFiles = new List<string>();
