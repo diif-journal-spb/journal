@@ -1,0 +1,50 @@
+\documentclass[12pt,diff_rus]{article} % for LaTeX 2e
+\usepackage[cp866]{inputenc}        % LaTeX distr. specific
+\usepackage[english,russian]{babel} % LaTeX distr. specific
+\usepackage{amssymb,amscd,amsmath}    % стиль AMS и русские переносы
+\usepackage{diff_rus}                  % стиль для колонтитулов журнала
+
+
+\setlength{\textwidth}{170mm}          % ширина текста
+\setlength{\textheight}{240mm}         % высота текста (без учета колонтитула)
+\setlength{\topmargin}{-20mm }         % расстояние от верхнего обреза листа
+\setlength{\evensidemargin}{0mm}       % до колонтитула
+\setlength{\oddsidemargin}{0mm}        % до колонтитула = 1 дюйм + значение
+                                       % параметра
+\setlength{\parskip}{4pt}              % абзацный пропуск
+\setlength{\parindent}{2em}            % абзацный отступ
+\setlength{\arrayrulewidth}{0.8pt}     % толщина линий разграфки
+\setlength{\doublerulesep}{6pt}        % ширина пробела между соседними
+                                       % параллельными линиями таблицы
+\renewcommand{\arraystretch}{1.15}     % коэффициент увеличения межстрочного
+                                       % интервала в таблице
+
+\tolerance=10000
+\hbadness=10000
+\vbadness=10000
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%% Внесите исправления в файлы DIFF_RUS.TEX и DIFF_RUS.STY
+%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Выставите номер страницы
+\setcounter{page}{1}                   % номер первой страницы
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\refname}{Литература}
+\newtheorem{definition}{Определение}
+\newtheorem{theorem}{Теорема}
+\newtheorem{proposition}{Утверждение}
+\newtheorem{corollary}{Следствие}
+
+
+\begin{document}
+\input{diff_rus.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Имя файла Вашей статьи
+\input{art_name.tex}
+\end{document}
