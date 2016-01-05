@@ -282,7 +282,10 @@ namespace EugenePetrenko.NumberEditor
           = new Func<object>[]
               {
                 new ACommand("Set Article _Title " + lang, UIAction(() => { aSelector(lang).Title = TitleCase(lang, selection); })).CreateMenuItem,
-                new ACommand("Set Article _Abstract " + lang, UIAction(() => { aSelector(lang).Abstract = selection; })).CreateMenuItem
+                new ACommand("Set Article _Abstract " + lang, UIAction(() => { aSelector(lang).Abstract = selection; })).CreateMenuItem,
+                () => new Separator(), 
+                new ACommand("Set Keywords " + lang, UIAction(() => { aSelector(lang).SetKeywords(KeywordsParser.ParseKeywords(selection)); })).CreateMenuItem, 
+                new ACommand("Remove Keywords " + lang, UIAction(() => { aSelector(lang).Keywords = null; })).CreateMenuItem, 
               };
 
         yield return () => new MenuItem

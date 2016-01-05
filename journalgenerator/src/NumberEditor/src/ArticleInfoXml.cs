@@ -26,8 +26,22 @@ namespace EugenePetrenko.NumberEditor
 
     [XmlElement("title")]
     public string Title { get; set; }
-  }
 
+    [XmlArray("keywords"), XmlArrayItem("word")]
+    public Keyword[] Keywords { get; set; }
+
+    public void SetKeywords(IEnumerable<string> texts)
+    {
+      Keywords = texts.Select(x => new Keyword {Text = x}).ToArray();
+    }    
+  }
+  
+  [Serializable, XmlRoot("word")]
+  public class Keyword
+  {
+    [XmlText]
+    public string Text { get; set; }
+  }
 
   [Serializable, XmlRoot("article")]
   public class LocalizedArticleXml : LocalizableHolder<ArticleInfoXml>
