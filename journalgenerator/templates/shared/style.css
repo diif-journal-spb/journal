@@ -9,9 +9,15 @@ body {
   padding-right: 1em;
 }
 
-div.issn, div.issn a {
+div.issn, 
+div.issn a {
   color: rgb(100, 60, 40);
   font-size: 12pt;
+  text-decoration: none;
+}
+
+div.issn a:hover {
+  text-decoration: underline;
 }
 
 div.Head {
@@ -189,4 +195,8 @@ p.jounal-index a {
   color: rgb(100, 60, 40);
   font-weight: bold;
   text-decoration: none;
+}
+
+p.jounal-index a:hover {
+  text-decoration: underline;
 }
