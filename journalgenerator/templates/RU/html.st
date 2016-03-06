@@ -19,7 +19,7 @@
         <a href="$ForeignLink$">English version</a>
       </div>
                                      
-      <div class="issn">ISSN 1817-2172, рег. Эл. № ФС77-39410</div>
+      <div class="issn"><a href="$TemplateAboutLink$#fromLogo">ISSN 1817-2172, рег. Эл. № ФС77-39410, ВАК</a></div>
 
       <h1>Дифференциальные Уравнения<br />и<br />Процессы Управления</h1>
     </div>

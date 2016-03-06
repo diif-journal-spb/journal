@@ -6,6 +6,15 @@
   ISSN: 1817-2172
 </p>
 
+<a name="fromLogo"></a>
+<p class="jounal-index">
+  The journal is indexed in Russian Science Citation Index and EBSCO
+</p>
+
+<p class="jounal-index">
+  The journal is in <a href="http://vak.ed.gov.ru">Higher Attestation Commission of the Ministry of Education and Science of Russian Federation</a> list
+</p>
+
 <h4>Publisher</h4>
 <p>
   Mathematics and Mechanics Faculty of Saint-Petersburg State University 
@@ -24,7 +33,3 @@
   Fax: +7 (812) 428-6944 
 </p>
 
-
-<p class="jounal-index">
-  The journal is indexed in Russian Science Citation Index and EBSCO
-</p>
