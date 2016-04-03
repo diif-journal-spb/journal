@@ -43,7 +43,7 @@ namespace EugenePetrenko.NumberEditor
 
     public void UpdateId()
     {
-      Id = DefaultIdPrefix + Regex.Replace((GetEN().LastName ?? "LAST_NAME").ToLower(), @"[a-z0-9_]", "_");
+      Id = DefaultIdPrefix + Regex.Replace((GetEN().LastName ?? "LAST_NAME").ToLower(), @"[^a-z0-9_]", "_");
     }
 
     public static string DefaultIdPrefix
