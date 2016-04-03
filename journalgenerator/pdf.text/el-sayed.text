@@ -1,0 +1,1194 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 1, 2016
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Functional differential equations
+On the weakly continuous solutions of a coupled system of
+functional integral equations
+A.M.A El-Sayed
+1
+, R. O. Abd El Rahman
+2
+Fatma M. Gaffar
+2
+and Nesreen F. M. El-haddad
+2
+E-mail : amasayed@alexu.edu.eg & nesreen fawzy20@yahoo.com
+1
+Faculty of Science, Alexandria University, Alexandria, Egypt
+2
+Faculty of Science, Damanhour University, Behera, Egypt
+Abstract
+The existence of weak solutions of integral equations and some coupled systems
+of integral equations have been studied, on some suitable assumptions, by some
+authors. In this work we concern with a coupled system of nonlinear Volterra-
+Urysohn functional integral equations in the reexive Banach space E. The
+existence of weakly continuous solutions, in the Banach space C[I;E]; will
+be proved under some certain assumptions concerning the functional equations
+that under the integral sign.
+As an application, the coupled system of nonlinear Volterra-Hammerstien func-
+tional integral equations is also studied.
+Keywords: Weak solutions, Coupled system, Functional integral equations,
+Fixed point theorem.Differential Equations and Control Processes, N 1, 2016
+1 Introduction and Preliminaries
+Let I = [0;T ]; and let L
+1
+(I) be the class of all Lebesgue integrable functions
+de ned on the intervalI. LetE be a reexive Banach space with normk:k and
+dual E
+ 
+:
+Denote C[I;E] the Banach space of strongly continuous functions x : I! E
+with sup-norm.
+Indeed the existence of weak solutions of the integral and differential equations
+and the coupled systems of integral equations have been extensively investigated
+by a number of authors and there are many interesting results concerning this
+problems (see[1]-[3], [5]-[7], [9]-[11] and [13]).
+The existence of at least one weak solutions for the coupled systems of integral
+equations of Uryshon type in a reexive Banach spaces was proved in (see[6]),
+where x takes values in reexive Banach spaces, f
+i
+are weakly sequentially
+continuous and weakly measurable on I and
+kf
+i
+(t;s;x(s))k k
+i
+(t;s); i = 1; 2:
+In this paper, we study the existence of weak continuous solutions x;y2C[I;E]
+of the the coupled system of nonlinear Volterra-Urysohn integral equations
+x(t) =h
+1
+(t) +
+Z
+t
+0
+f
+1
+(t;s;y(m
+1
+(s)))ds; t2I (1)
+y(t) =h
+2
+(t) +
+Z
+t
+0
+f
+2
+(t;s;x(m
+2
+(s)))ds; t2I (2)
+under another suitable assumptions of the functions f
+i
+; i = 1; 2 where m
+i
+:
+[0;T ]! [0;T ]; m
+i
+(t) t
+i
+; i = 1; 2 are continuous.
+As an application, we set f
+i
+(t;s;y(m
+i
+(s))) by k
+i
+(t;s)g
+i
+(s;y(m
+i
+(s))); i = 1; 2;
+and we study the existence of weak continuous solutions x;y2C[I;E] of the
+coupled system of nonlinear Volterra-Hammerstien integral equations
+x(t) =h
+1
+(t) +
+Z
+t
+0
+k
+1
+(t;s)g
+1
+(s;y(m
+1
+(s)))ds; t2I (3)
+y(t) =h
+2
+(t) +
+Z
+t
+0
+k
+2
+(t;s)g
+2
+(s;x(m
+2
+(s)))ds; t2I: (4)
+Now we present some auxiliary results that will be need in this work.
+Let E be a Banach space and let x :I!E, then
+Electronic Journal. http://www.math.spbu.ru/diffjournal 2Differential Equations and Control Processes, N 1, 2016
+(1) x(:) is said to be weakly continuous (measurable) at t
+0
+2 I if for every
+ 2X
+ 
+;  (x(:)) is continuous (measurable) at t
+0
+.
+(2) A function h : E! E is said to be sequentially continuous if h maps
+weakly convergent sequence in E to weakly convergent sequence in E .
+If x is weakly continuous on I , then x is strongly measurable and hence
+weakly measurable (see[4] and[8]). Note that in reexive Banach spaces weakly
+measurable functions are pettis integrable (see[8] and [12] for the de nition) if
+and only if  (x(:)) is Lebesgue integrable on I for every  2E
+ 
+.
+Now we state a  xed point theorem and some propositions which will be used
+in the sequal (see[10]).
+Theorem 1 "O'Regan  xed point theorem"
+Let E be a Banach space and let Q be a nonempty, bounded, closed and
+convex subset of the space (C[0;T ];E) and let A : Q! Q be a weakly
+sequentially continuous and assume that AQ(t) is relatively weakly compact
+in E for each t2 [0;T ]. Then A has a  xed point in the set Q.
+Proposition 1 A subset of a reexive Banach space is weakly compact if and
+only if it is closed in the weak topology and bounded in the norm topology.
+Proposition 2 Let E be a normed space with y 6= 0. Then there exists a
+ 2E
+ 
+withk k = 1 andkyk = (y).
+2 Existence of weak solutions
+This section deals with the existence of weak continuous solutions for the cou-
+pled system of nonlinear Volterra-Urysohn integral equations (1)-(2).
+Let f
+i
+: I E! E; i = 1; 2 be a nonlinear single-valued maps, assume that
+f
+i
+; i = 1; 2 satisfy the following assumptions:
+(I) f
+i
+(t;s;:); i = 1; 2 are weakly sequentially continuous in x2 E for each
+t;s2I I.
+(II) f
+i
+(t;:;x(:)); i = 1; 2 are weakly measurable on I for each x2E.
+(III) f
+i
+(:;s;x(:)); i = 1; 2 are continuous on I for each x2E.
+(IV)kf
+i
+(t;s;x(s))k a
+i
+(t;s) +b
+i
+kx(s)k; i = 1; 2; a
+i
+:I I!R
++
+is integrable
+in s and continuous in t; b
+i
+are constants,
+and
+R
+t
+0
+a
+i
+(t;s)ds<M
+i
+; i = 1; 2 ;t2I.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 3Differential Equations and Control Processes, N 1, 2016
+(V) h
+i
+(t) :I!I; i = 1; 2 are continuous functions.
+(VI) b
+i
+T < 1; i = 1; 2.
+De nition 1 LetX be the class of all ordered pairs (u;v); u;v2C[I;E], with
+normk(u;v)k =kuk +kvk.
+De nition 2 By a weak solution of the coupled system (1)-(2) we mean the
+ordered pair of functions (x;y)2X; x;y2C[I;E] such that
+ (x(t)) = (h
+1
+(t)) +
+Z
+t
+0
+ (f
+1
+(t;s;y(m
+1
+(s))))ds; t2I
+ (y(t)) = (h
+2
+(t)) +
+Z
+t
+0
+ (f
+2
+(t;s;x(m
+2
+(s))))ds; t2I
+for all  2E
+ 
+:
+Now for the existence of a weak continuous solution of (1)-(2) we have the
+following theorem
+Theorem 2 Let the assumptions (I)-(VI) be satis ed. Then the coupled sys-
+tem of the nonlinear functional integral equations (1)-(2) has at least one weak
+continuous solution (x;y)2X; x;y2C[I;E].
+Proof. Let
+U(t) = (x(t);y(t))
+= (h
+1
+(t) +
+Z
+t
+0
+f
+1
+(t;s;y(m
+1
+(s)))ds; h
+2
+(t) +
+Z
+t
+0
+f
+2
+(t;s;x(m
+2
+(s)))ds); t2I
+Let A be de ned by
+AU(t) =A(x(t);y(t)) = (A
+1
+y(t);A
+2
+x(t))
+where
+A
+1
+y(t) =h
+1
+(t) +
+Z
+t
+0
+f
+1
+(t;s;y(m
+1
+(s)))ds; t2I
+A
+2
+x(t) =h
+2
+(t) +
+Z
+t
+0
+f
+2
+(t;s;x(m
+2
+(s)))ds; t2I
+Now let the set Q
+r
+be de ned by
+Q
+r
+=fU = (x;y) :x;y2C[I;E]; ky(t)k r
+1
+;kx(t)k r
+2
+; r =r
+1
++r
+2
+g
+Electronic Journal. http://www.math.spbu.ru/diffjournal 4Differential Equations and Control Processes, N 1, 2016
+Let U2Q
+r
+be an arbitrary ordered pair, then we have from proposition 2
+kA
+1
+y(t)k =  (A
+1
+y(t))
+=  (h
+1
+(t)) +
+Z
+t
+0
+ (f
+1
+(t;s;y(m
+1
+(s))))ds
+= kh
+1
+k +
+Z
+t
+0
+kf
+1
+(t;s;y(m
+1
+(s)))kds
+  kh
+1
+k +
+Z
+t
+0
+fa
+1
+(t;s) +ky(m
+1
+(s))kgds
+  kh
+1
+k +
+Z
+t
+0
+a
+1
+(t;s)ds +b
+1
+Z
+t
+0
+ky(m
+1
+(s))kds
+  kh
+1
+k +M
+1
++b
+1
+Z
+t
+0
+ky(m
+1
+(s))kds
+  kh
+1
+k +M
+1
++b
+1
+r
+1
+T
+Therefore,
+kA
+1
+y(t)k kh
+1
+k +M
+1
++b
+1
+r
+1
+T =r
+1
+; where r
+1
+=
+kh
+1
+k + M
+1
+1 (b
+1
+T )
+:
+Similarly,
+kA
+2
+x(t)k kh
+2
+k +M
+2
++b
+2
+r
+2
+T =r
+2
+; where r
+2
+=
+kh
+2
+k+M
+2
+1 (b
+2
+T )
+:
+Since
+kAU(t)k = kA
+1
+y(t)k +kA
+2
+x(t)k
+  kh
+1
+k +kh
+2
+k +M
+1
++M
+2
++b
+1
+r
+1
+T +b
+2
+r
+2
+T
+Then
+kAUk r
+Hence,AU2Q
+r
+; which proves thatAQ
+r
+ Q
+r
+; i.e. A :Q
+r
+!Q
+r
+, and the class
+of functionsfAQ
+r
+g is uniformly bounded.
+Now Q
+r
+is nonempty, closed, convex and uniformly bounded.
+As a consequence of proposition 1, then AQ
+r
+is relatively weakly compact.
+Now, we prove that A : X ! X. For this, let x;y 2 C[I;E]: Let t
+1
+;t
+2
+2
+I; t
+1
+< t
+2
+(without loss of generality assume thatkAU(t
+2
+) AU(t
+1
+)k6= 0)),
+Electronic Journal. http://www.math.spbu.ru/diffjournal 5Differential Equations and Control Processes, N 1, 2016
+then
+A
+1
+y(t
+2
+) A
+1
+y(t
+1
+) = (h
+1
+(t
+2
+) h
+1
+(t
+1
+)) +
+Z
+t
+2
+0
+f
+1
+(t
+2
+;s;y(m
+1
+(s)))ds
+ 
+Z
+t
+1
+0
+f
+1
+(t
+1
+;s;y(m
+1
+(s)))ds
+= (h
+1
+(t
+2
+) h
+1
+(t
+1
+)) +
+Z
+t
+1
+0
+f
+1
+(t
+2
+;s;y(m
+1
+(s)))ds
++
+Z
+t
+2
+t
+1
+f
+1
+(t
+2
+;s;y(m
+1
+(s)))ds 
+Z
+t
+1
+0
+f
+1
+(t
+1
+;s;y(m
+1
+(s)))ds
+= (h
+1
+(t
+2
+) h
+1
+(t
+1
+))
++
+Z
+t
+1
+0
+[f
+1
+(t
+2
+;s;y(m
+1
+(s))) f
+1
+(t
+1
+;s;y(m
+1
+(s)))]ds
++
+Z
+t
+2
+t
+1
+f
+1
+(t
+2
+;s;y(m
+1
+(s)))ds
+Therefore as a consequence of proposition 2, we obtain
+kA
+1
+y(t
+2
+) A
+1
+y(t
+1
+)k =  (A
+1
+y(t
+2
+) A
+1
+y(t
+1
+))
+=  (h
+1
+(t
+2
+) h
+1
+(t
+1
+)) +
+Z
+t
+1
+0
+ (f
+1
+(t
+2
+;s;y(m
+1
+(s)))
+  f
+1
+(t
+1
+;s;y(m
+1
+(s))))ds +
+Z
+t
+2
+t
+1
+ (f
+1
+(t
+2
+;s;y(m
+1
+(s))))ds
+= kh
+1
+(t
+2
+) h
+1
+(t
+1
+)k
++
+Z
+t
+1
+0
+kf
+1
+(t
+2
+;s;y(m
+1
+(s))) f
+1
+(t
+1
+;s;y(m
+1
+(s)))kds
++
+Z
+t
+2
+t
+1
+kf
+1
+(t
+2
+;s;y(m
+1
+(s)))kds
+  kh
+1
+(t
+2
+) h
+1
+(t
+1
+)k
++
+Z
+t
+1
+0
+kf
+1
+(t
+2
+;s;y(m
+1
+(s))) f
+1
+(t
+1
+;s;y(m
+1
+(s)))kds
++
+Z
+t
+2
+t
+1
+a
+1
+(t
+2
+;s)ds +b
+1
+Z
+t
+2
+t
+1
+ky(m
+1
+(s)))kds
+Electronic Journal. http://www.math.spbu.ru/diffjournal 6Differential Equations and Control Processes, N 1, 2016
+Similarly,
+kA
+2
+x(t
+2
+) A
+2
+x(t
+1
+)k   kh
+2
+(t
+2
+) h
+2
+(t
+1
+)k
++
+Z
+t
+1
+0
+kf
+2
+(t
+2
+;s;x(m
+2
+(s))) f
+2
+(t
+1
+;s;x(m
+2
+(s)))kds
++
+Z
+t
+2
+t
+1
+a
+2
+(t
+2
+;s)ds +b
+2
+Z
+t
+2
+t
+1
+kx(m
+2
+(s)))kds
+Therefore,
+kAU(t
+2
+) AU(t
+1
+)k = k(A
+1
+y(t
+2
+);A
+2
+x(t
+2
+))  (A
+1
+y(t
+1
+);A
+2
+x(t
+1
+))k
+= k((A
+1
+y(t
+2
+) A
+1
+y(t
+1
+)); (A
+2
+x(t
+2
+);A
+2
+x(t
+1
+)))k
+= kA
+1
+y(t
+2
+) A
+1
+y(t
+1
+)k +kA
+2
+x(t
+2
+) A
+2
+x(t
+1
+)k
+which proves that A :X!X.
+It remains to prove that A is weakly sequentially continuous.
+LetfU
+n
+g be a sequence in Q
+r
+converges weakly to U 8t2I, thenfy
+n
+g;fx
+n
+g
+converges weakly to y; x, respectively, i.e. y
+n
+(t) * y; x
+n
+(t) * x; 8t2 I
+weakly.
+Sincef
+1
+(t;s;y(m
+1
+(s))) andf
+2
+(t;s;x(m
+2
+(s))) are weakly sequentially continuous
+in y and x, then f
+1
+(t;s;y
+n
+(m
+1
+(s))) and f
+2
+(t;s;x
+n
+(m
+2
+(s))) converges weakly to
+f
+1
+(t;s;y(m
+1
+(s))) and f
+2
+(t;s;x(m
+2
+(s))) respectively.
+Thus  (f
+1
+(t;s;y
+n
+(m
+1
+(s)))) and  (f
+2
+(t;s;x
+n
+(m
+2
+(s)))) converges strongly to
+f
+1
+(t;s;y(m
+1
+(s))) and  (f
+2
+(t;s;x(m
+2
+(s)))) respectively.
+By applying Lebesgue dominated convergence theorem for Pettis integral, then
+we get
+ (
+Z
+t
+0
+f
+1
+(t;s;y
+n
+(m
+1
+(s)))ds) =
+Z
+t
+0
+ (f
+1
+(t;s;y
+n
+(m
+1
+(s))))ds
+!
+Z
+t
+0
+kf
+1
+(t;s;y(m
+1
+(s)))kds; 8  2E
+ 
+; t2I
+and
+ (
+Z
+t
+0
+f
+2
+(t;s;x
+n
+(m
+2
+(s)))ds) =
+Z
+t
+0
+ (f
+2
+(t;s;x
+n
+(m
+2
+(s))))ds
+!
+Z
+t
+0
+kf
+2
+(t;s;x(m
+2
+(s)))kds; 8  2E
+ 
+; t2I:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 7Differential Equations and Control Processes, N 1, 2016
+Then  (AU
+n
+((t)))!  (AU((t))); 8 2 E
+ 
+; t2 I. Hence, A is weakly
+sequentially continuous (i.e. AU
+n
+(t)!AU(t);8t2I weakly).
+Since all conditions of O'Regan theorem are satis ed, then the operator A has
+at least one  xed point U 2 Q
+r
+, and hence the coupled system of nonlinear
+functional integral equations (1)-(2) has at least one weak solution.
+3 Application
+This section, as an application, deals with the existence of weak continuous so-
+lution for the coupled system of nonlinear Volterra-Hammerstien integral equa-
+tions (3)-(4).
+Let g
+i
+: I E! E; i = 1; 2 be a nonlinear single-valued maps, assume that
+g
+i
+;k
+i
+i = 1; 2 satisfy the following assumptions:
+(i) g
+i
+(t;:); i = 1; 2 are weakly sequentially continuous in x2E for each t2I.
+(ii) g
+i
+(:;x); i = 1; 2 are weakly measurable on I.
+(iii) There exists an integrable functions a
+i
+(t) and a constants b
+i
+> 0 such that
+kg
+i
+(t;x(m
+i
+(t)))k a
+i
+(t) +b
+i
+kx(m
+i
+(t))k; i = 1; 2.
+(iv) k
+i
+: I  I ! R
++
+are integrable in s and continuous in t and
+R
+t
+0
+k
+i
+(t;s)a
+i
+(s)ds<M
+i
+;
+R
+t
+0
+k
+i
+(t;s)ds<K
+i
+; i = 1; 2 ;t2I.
+(v) h
+i
+(t) :I!I; i = 1; 2 are continuous functions.
+De nition 3 By a weak solution of the coupled system (3)-(4) we mean the
+ordered pair of functions (x;y)2X; x;y2C[I;E] such that
+ (x(t)) = (h
+1
+(t)) +
+Z
+t
+0
+k
+1
+(t;s) (g
+1
+(s;y(m
+1
+(s))))ds; t2I
+ (y(t)) = (h
+2
+(t)) +
+Z
+t
+0
+k
+2
+(t;s) (g
+2
+(s;x(m
+2
+(s))))ds; t2I
+for all  2E
+ 
+:
+Now for the existence of a weak continuous solution of (3)-(4) we have the
+following theorem
+Theorem 3 Let the assumptions (i)-(v) be satis ed. Then the coupled sys-
+tem of the nonlinear functional integral equations (3)-(4) has at least one weak
+continuous solution (x;y)2X; x;y2C[I;E].
+Electronic Journal. http://www.math.spbu.ru/diffjournal 8Differential Equations and Control Processes, N 1, 2016
+Proof. Let
+f
+i
+(t;s;y(m
+i
+(s))) =k
+i
+(t;s)g
+i
+(s;y(m
+i
+(s))); i = 1; 2:
+From the assumptions on g
+i
+; k
+i
+, we  nd that the assumptions of Theorem 2.2
+are satis ed. Then result follows.
+References
+[1] Bugajewski D. , On The existence of Weak Solutions of Integral Equations
+in Banach Spaces, Comment. Math. Univ. Carolin. 35,1(1994),35-41.
+[2] Cichon M. , Weak Solutions of Ordinary Differential Equations in Banach
+Spaces, Discuss. Math. Diff. Incl. Control optim., 15(1995), 5-14.
+[3] Cichon M. , I. Kubiaczyk, Existence Theorem for The Hammerstien
+Integral Equation, Discuss. Math. Diff. Incl. Control and optimization,
+16(2)(1996), 171-177.
+[4] Dunford N. , Schwartz J. T. , Linear Operators, Interscience, Wiley, New
+York, 1958.
+[5] El-Sayed A. M. A. , Hashem H. H. G. , Weak Maximal and Minimal Solu-
+tions for Hammerstien and Urysohn Integral Equations in Reexive Banach
+Spaces, Differential equations and control processes, No. 4(2008), 51-62.
+[6] El-Sayed A. M. A. , Hashem H. H. G. , A coupled System of Fractional
+Order Integral Equations in Reexive Banach Spaces, Comment. Math.
+Vol. 52, No. 1(2012), 21-28.
+[7] El-Sayed A. M. A. , Hashem H. H. G. , Coupled Systems of Hammerstien
+and Urysohn Integral Equations in Reexive Banach Spaces,Differential
+equations and control processes, No. 1(2012), 85-96.
+[8] Hille E. , Phillips R. S., Functional Analysis and Semi-groups, Amer. Math.
+Soc. Colloq. Publ. 31,Amer. Math. Soc., Providence, R. I., 1957.
+[9] O'Regan D. , Integral equations in reexive Banach spaces and weak
+topologies, Amer. Mah. Soc., Vol. 124, No. 2, (1996), 607-614.
+[10] O'Regan D., Fixed Point Theory for Wealy Sequentially Continuous Map-
+ping, Math. Comput. Modeling, 27(1998), 1-14.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 9Differential Equations and Control Processes, N 1, 2016
+[11] O'Regan D., Weak Solutions of Ordinary Differential Equations in Banach
+Spaces, Applied Mathematics Letters, 12(1999), 101-105.
+[12] Pettis B. J., On Integration in Vector Spacecs, Trans. Amer. Math. Soc.
+44(1938), 277-304.
+[13] Salem H.A.H., El-Sayed A. M. A., Fractional Order Integral Equations in
+Reexive Banach Spaces, Math. Slovaca, 55, No. 2(2005), 169-181.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 10
