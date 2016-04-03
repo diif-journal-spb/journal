@@ -59,9 +59,11 @@ namespace EugenePetrenko.NumberEditor
 
     private static void LoadDOCX(string file, StringBuilder sb)
     {
-      var copy = file + "auto." + DateTime.Now.Ticks + ".fix.html";
-
-      DOCXConverter.DocToHTML(file, copy);
+      var copy = file + ".jonnyzzz.auto.fix.html";
+      if (!File.Exists(copy))
+      {
+        DOCXConverter.DocToHTML(file, copy);
+      }
 
       LoadFile(copy, sb);
     }
