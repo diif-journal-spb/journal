@@ -34,7 +34,7 @@ e-mail: jodiff@mail.ru
 запаздывания, стабилизация
 Abstract
 The problem of design of dynamic controllers for systems with delay in the
-state and control variables is studied. Prediction-based controllers are describedДифференциальные уравнения и процессы управления,N. ?, 2015
+state and control variables is studied. Prediction-based controllers are describedДифференциальные уравнения и процессы управления,N. 4, 2015
 by integral equations. It is known that in such equations the replacing integrals by
 ﬁnite sums leads to instability of the closed-loop system when integral equations
 are not internally stable. To avoid this technical deﬃculty we suggest to apply
@@ -70,7 +70,7 @@ keywords: difference-differential systems, delay compensation,stabilization
 в состоянии, была показана в работах [6], [7], [14]. Новые регуляторы описы-
 ваются интегральными уравнениями, аналогичными полученным для систем
 с запаздыванием в управлении. Только теперь правые части этих уравнений
-Электронный журнал. http://www.math.spbu.ru/diffjournal 53Дифференциальные уравнения и процессы управления,N. ?, 2015
+
 включают дополнительно интегралы от переменных состояния системы. Это
 значит, что и эти интегралы в приложениях должны быть заменены конеч-
 ными суммами. В работе [14] предложено добавить переменные управления
@@ -124,7 +124,7 @@ x(t
 + ;t
 0
 ;') ='( );  2 [ h; 0]:
-Электронный журнал. http://www.math.spbu.ru/diffjournal 54Дифференциальные уравнения и процессы управления,N. ?, 2015
+
 Когда это не затрудняет понимание, аргументы t
 0
 и ' будем опускать и пи-
@@ -193,7 +193,7 @@ x(t + )d
 Z
   
 K(  )Bu(t + )d ; t  0;
-Электронный журнал. http://www.math.spbu.ru/diffjournal 55Дифференциальные уравнения и процессы управления,N. ?, 2015
+
 и в момент t +  h,
 x(t +  h) = K(  h)x(t) (3)
 +
@@ -248,7 +248,7 @@ x(t + ) +F
 x(t +  h); t  0: (6)
 Он зависит от x(t + ) и x(t +  h), поэтому не может быть реализован
 непосредственно. Однако, если заменить эти значения, используя предиктор,
-Электронный журнал. http://www.math.spbu.ru/diffjournal 56Дифференциальные уравнения и процессы управления,N. ?, 2015
+
 получим регулятор, заданный интегральным уравнением вида
 u(t) =
 0
@@ -329,7 +329,7 @@ x(t);
 +F
 1
 , и совпадает с регулятором, полученным в работе [11].
-Электронный журнал. http://www.math.spbu.ru/diffjournal 57Дифференциальные уравнения и процессы управления,N. ?, 2015
+
 4 Задача реализации
 В приложениях интегралы в правой части уравнения (7) заменяются конеч-
 ными суммами. В результате интегральное уравнение заменяется разност-
@@ -443,7 +443,7 @@ dt
 x(t + ) +F
 1
 x(t +  h)]:
-Электронный журнал. http://www.math.spbu.ru/diffjournal 58Дифференциальные уравнения и процессы управления,N. ?, 2015
+
 Воспользовавшись системой (1) для замены в этом равенстве производных,
 придём к регулятору вида
 du(t)
@@ -550,7 +550,7 @@ Z
 Q(  h  )A
 1
 x(t + )d ; t  0:
-Электронный журнал. http://www.math.spbu.ru/diffjournal 59Дифференциальные уравнения и процессы управления,N. ?, 2015
+
 Замечание 3 Система (11)-(12) принадлежит к классу систем запазды-
 вающего типа.
 Теорема 1 Характеристическая функция q(s) замкнутой системы (11)-
@@ -739,7 +739,7 @@ m m
  G
 !
 :
-Электронный журнал. http://www.math.spbu.ru/diffjournal 60Дифференциальные уравнения и процессы управления,N. ?, 2015
+
 В итоге, искомая характеристическая функция
 q(s) = det
  
@@ -853,7 +853,7 @@ C
  
 ff
 =fsjRe(s)<ffg:
-Электронный журнал. http://www.math.spbu.ru/diffjournal 61Дифференциальные уравнения и процессы управления,N. ?, 2015
+
 Теорема 2 Пусть все собственные числа системы (13) лежат в полуплос-
 кости C
  
@@ -1009,7 +1009,7 @@ F
 +
 ff
 : (19)
-Электронный журнал. http://www.math.spbu.ru/diffjournal 62Дифференциальные уравнения и процессы управления,N. ?, 2015
+
 Обратимся ко второму множителюk (s)k. Из (16) следует, что
  (s) =
 N
@@ -1138,7 +1138,7 @@ jsj
 R  
 0
 < 1:
-Электронный журнал. http://www.math.spbu.ru/diffjournal 63Дифференциальные уравнения и процессы управления,N. ?, 2015
+
 Из (18) и (20) следует, что условие (17) выполнено на множестве
 fsjs2C
 +
@@ -1205,7 +1205,7 @@ on Automatic Control, 1982, 27, pp. 869–879.
 Academic Press, 1963. 462 p.
 [3] GuK.Areviewofsomesubtletiesofpracticalrelevancefortimedelaysystems
 of neutral type. ISRN Applied Mathematics, 2012, Article ID 725783, 46 p.
-Электронный журнал. http://www.math.spbu.ru/diffjournal 64Дифференциальные уравнения и процессы управления,N. ?, 2015
+
 [4] Engelborghs K., Dambrine M., Roos D. Limitation of a class of stabilization
 methods for delay systems. IEEE Trans. on Automatic Control, 2001, 64, pp.
 336–339.
