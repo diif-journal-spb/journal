@@ -47,6 +47,7 @@
     <Reference Include="HtmlAgilityPack">
       <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net40\HtmlAgilityPack.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="MIMER">
       <HintPath>..\packages\MIMER.0.7.0\lib\MIMER.dll</HintPath>
     </Reference>
@@ -89,7 +90,9 @@
     </ApplicationDefinition>
     <Compile Include="src\ArticleInfoXml.cs" />
     <Compile Include="src\AuthorXml.cs" />
+    <Compile Include="src\DOCXConverter.cs" />
     <Compile Include="src\Extensions.cs" />
+    <Compile Include="src\FileLoader.cs" />
     <Compile Include="src\HTMLHelpers.cs" />
     <Compile Include="src\KeywordsParser.cs" />
     <Compile Include="src\LanguageSelector.xaml.cs">
@@ -106,9 +109,11 @@
       <DependentUpon>TextSelector.xaml</DependentUpon>
     </Compile>
     <Compile Include="src\XmlHelpers.cs" />
+    <Compile Include="testSrc\DOCXConverterTest.cs" />
     <Compile Include="testSrc\HTMLHelperTest.cs" />
     <Compile Include="testSrc\ReferencesTest.cs" />
     <Compile Include="testSrc\SerializationTest.cs" />
+    <Compile Include="testSrc\TestFiles.cs" />
     <Compile Include="testSrc\TEXHelpersTest.cs" />
     <Page Include="src\AuthorsEditor.xaml">
       <SubType>Designer</SubType>
@@ -183,6 +188,7 @@
     <AppDesigner Include="Properties\" />
     <EmbeddedResource Include="testData\refs.mht" />
     <EmbeddedResource Include="testData\refs2.mht" />
+    <EmbeddedResource Include="testData\docx.docx" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="testData\refs.html" />

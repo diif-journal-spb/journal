@@ -32,95 +32,15 @@ namespace EugenePetrenko.NumberEditor
       }));
     }
 
-    private void IncludeFileHeader(string file)
-    {
-      myText.Text += "\r\n\r\n----" + file + "\r\n\r\n";
-    }
-
-    private void IncludeFileContent(string file, string text) 
-    {
-      if (file.Contains(".fix."))
-      {
-        text = HTMLHelpers.FixWordHTML(text);
-      }
-
-      if (file.Contains(".bib."))
-      {
-        text = TEXHelpers.FixTexIntoHTML(text);
-      }
-
-      IncludeFileHeader(file);
-      myText.Text += text;
-    }
-
 
     private void MenuItem_Click(object sender, RoutedEventArgs e)
     {
       var dlg = new OpenFileDialog {Multiselect = true, RestoreDirectory = true};
       if (true != dlg.ShowDialog()) return;
 
-      foreach (var file in dlg.FileNames)
-      {
-        if (file.EndsWith(".pdf", StringComparison.CurrentCultureIgnoreCase)) continue;
-        if (file.EndsWith(".dvi", StringComparison.CurrentCultureIgnoreCase)) continue;
-        if (file.EndsWith(".doc", StringComparison.CurrentCultureIgnoreCase)) continue;
-        if (file.EndsWith(".dot", StringComparison.CurrentCultureIgnoreCase)) continue;
-        if (file.EndsWith(".docx", StringComparison.CurrentCultureIgnoreCase)) continue;
-        if (file.EndsWith(".eps", StringComparison.CurrentCultureIgnoreCase)) continue;
-        if (file.EndsWith(".aux", StringComparison.CurrentCultureIgnoreCase)) continue;
-        if (file.EndsWith(".log", StringComparison.CurrentCultureIgnoreCase)) continue;
-        if (file.EndsWith(".sty", StringComparison.CurrentCultureIgnoreCase)) continue;
-        if (file.EndsWith(".jpg", StringComparison.CurrentCultureIgnoreCase)) continue;
-        if (file.EndsWith(".jpeg", StringComparison.CurrentCultureIgnoreCase)) continue;
-        if (file.EndsWith(".tex", StringComparison.CurrentCultureIgnoreCase)) continue;
-
-        try
-        {
-
-          if (file.EndsWith(".mht", StringComparison.InvariantCultureIgnoreCase))
-          {
-            IncludeFileHeader(file);
-
-            using (var s = File.OpenRead(file))
-            {
-              Stream ms = s;
-              var msg = new MailReader().ReadMimeMessage(ref ms, new BasicEndOfMessageStrategy());
-
-              foreach (var attach in msg.Attachments.notNull())
-              {
-                if (attach.Type + "/" + attach.SubType == "text/html")
-                {
-                  var subFile = file + "!" + (attach.Name ?? "") + ".html";
-
-                  using (var rdr = new StreamReader(new MemoryStream(attach.Data), Encoding(subFile)))
-                  {
-                    IncludeFileContent(subFile, rdr.ReadToEnd().Trim());
-                  }
-                }
-              }
-            }
-          }
-          else
-          {
-            using (var rdr = new StreamReader(file, Encoding(file)))
-            {
-              IncludeFileContent(file, rdr.ReadToEnd().Trim());
-            }
-          }
-        }
-        catch (Exception ee)
-        {
-          myText.Text += ee.ToString();
-        }
-      }
-
-      myText.Text += "\r\n\r\n\r\n" + string.Join("\r\n", dlg.FileNames) + "\r\n\r\n\r\n";
+      myText.Text += FileLoader.LoadAllFiles(dlg.FileNames.ToList());
     }
 
-    private static Encoding Encoding(string file)
-    {
-      return file.Contains(".utf8.") ? System.Text.Encoding.UTF8 : System.Text.Encoding.GetEncoding("windows-1251");
-    }
 
     private void MenuItem_Click_1(object sender, RoutedEventArgs e)
     {

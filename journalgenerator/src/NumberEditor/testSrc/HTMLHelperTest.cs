@@ -220,7 +220,6 @@ Academic Publishing), 2011. <span class=GramE>295 p. (in Russian).</span> <o:p><
           return r.ReadToEnd();
         }
       }
-    }
-    
+    }    
   }
 }
