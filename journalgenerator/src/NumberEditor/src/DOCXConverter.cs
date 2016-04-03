@@ -1,5 +1,7 @@
 using System;
+using System.IO;
 using System.Runtime.InteropServices;
+using System.Threading;
 
 namespace EugenePetrenko.NumberEditor
 {
@@ -10,7 +12,34 @@ namespace EugenePetrenko.NumberEditor
       Extensions.ExecuteUnderSTA(() =>
       {
         DocToHTMLImpl(file, copy);
-        return 42;
+
+        for (int i = 0; i < 20; i++)
+        {
+          GC.Collect();
+          GC.WaitForPendingFinalizers();
+
+          try
+          {
+            //File is locked if Word object is still around
+            using (File.Open(copy, FileMode.Append))
+            {
+              return 42;
+            }
+
+            //File is locked if Word object is still around
+            using (File.Open(file, FileMode.Append))
+            {
+              return 42;
+            }
+          }
+          catch
+          {
+            //NOP. Have to wait for Word to exit
+          }
+
+          Thread.Sleep(TimeSpan.FromMilliseconds(100));
+        }
+        throw new Exception("Failed to wait for Word to exit");
       });
     }
 
@@ -22,19 +51,35 @@ namespace EugenePetrenko.NumberEditor
       {
         dynamic wordFile = wordObject.Documents.Open(file);
         try
-        {
-          const int wdFormatHTML = 8;
-          wordFile.SaveAs(copy, wdFormatHTML);
+        {            
+          wordFile.SaveAs(FileName: copy, FileFormat: /*wdFormatHTML*/8);
         }
         finally
         {
-          Marshal.ReleaseComObject(wordFile);
+          wordFile.Close(SaveChanges: /*wdSaveChanges*/ -1);
+          Call(() => { Marshal.ReleaseComObject(wordFile); });
+        }
+        foreach (dynamic doc in wordObject.Documents)
+        {
+          doc.Close(SaveChanges: /*wdDoNotSaveChanges*/ 0);
         }
       }
       finally
       {
-        wordObject.Quit();
-        Marshal.ReleaseComObject(wordObject);
+        wordObject.Quit(SaveChanges: /*wdDoNotSaveChanges*/ 0);
+        Call(() => { Marshal.ReleaseComObject(wordObject); });
+      }
+    }
+
+    private static void Call(Action a)
+    {
+      try
+      {
+        a();
+      }
+      catch
+      {
+        //NOP
       }
     }
   }

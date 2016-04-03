@@ -37,7 +37,7 @@ namespace EugenePetrenko.NumberEditor
 
     private static void LoadFile(string file, StringBuilder sb)
     {
-      if (file.Extension(file, ".pdf",".dvi",".doc",".dot",".docx",".eps", ".aux", ".log", ".sty", ".jpg", ".jpeg", ".tex")) return;
+      if (file.Extension(".pdf", ".dvi", ".dot", ".eps", ".aux", ".log", ".sty", ".jpg", ".jpeg", ".tex")) return;
 
       if (file.Extension(".mht"))
       {
@@ -57,7 +57,7 @@ namespace EugenePetrenko.NumberEditor
       }
     }
 
-    public static void LoadDOCX(string file, StringBuilder sb)
+    private static void LoadDOCX(string file, StringBuilder sb)
     {
       var copy = file + "auto." + DateTime.Now.Ticks + ".fix.html";
 

@@ -16,7 +16,10 @@ namespace EugenePetrenko.NumberEditor
         DOCXConverter.DocToHTML(file, html);
 
         //Make sure file is not locked my a running MSWord
-        File.OpenText(html).ReadToEnd();
+        using (var s = File.OpenText(html))
+        {
+          s.ReadToEnd();
+        }
       });
     }
 

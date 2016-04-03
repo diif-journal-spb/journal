@@ -27,11 +27,17 @@ namespace EugenePetrenko.NumberEditor
       {
         var target = Path.Combine(dir, res);
 
-        using(var t = File.OpenWrite(target))
-        using (var s = typeof(TestFiles).Assembly.GetManifestResourceStream("EugenePetrenko.NumberEditor.testData." + res))
+        using (var t = File.OpenWrite(target))
         {
-          s.CopyTo(t);
+          using (
+            var s = typeof (TestFiles).Assembly.GetManifestResourceStream("EugenePetrenko.NumberEditor.testData." + res)
+            )
+          {
+            s.CopyTo(t);
+          }
         }
+
+        action(dir, target);
       });
     }
   }
