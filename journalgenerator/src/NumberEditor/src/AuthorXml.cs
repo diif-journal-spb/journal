@@ -1,4 +1,5 @@
 using System;
+using System.Text.RegularExpressions;
 using System.Xml.Serialization;
 
 namespace EugenePetrenko.NumberEditor
@@ -42,7 +43,7 @@ namespace EugenePetrenko.NumberEditor
 
     public void UpdateId()
     {
-      Id = DefaultIdPrefix + (GetEN().LastName ?? "LAST_NAME").ToLower();
+      Id = DefaultIdPrefix + Regex.Replace((GetEN().LastName ?? "LAST_NAME").ToLower(), @"[a-z0-9_]", "_");
     }
 
     public static string DefaultIdPrefix
