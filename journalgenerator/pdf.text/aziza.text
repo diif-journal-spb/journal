@@ -1,0 +1,542 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 1, 2016
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Integro-differential equations
+On the existence of weakly continuous solutions of the nonlinear
+functional equations and functional differential equations in
+reexive and nonreexive Banach spaces
+A.M.A El-Sayed
+1
+, W. G. El-Sayed
+1
+A. A. H. Abd El-Mowla
+2
+E-mail : amasayed@alexu.edu.eg & wagdygoma@alexu.edu.eg
+1
+Faculty of Science, Alexandria University, Alexandria, Egypt
+2
+Faculty of Science, Omar Al-Mukhtar University, Derna, Libya
+Abstract
+The existence of solution of the functional equations and functional integral
+and differential equations, in different spaces of functions, have been studied
+by some authors. Here, we are concerned with an initial value problem of the
+nonlinear functional differential equation and present two theorems for the ex-
+istence of at least one weak solution for this functional differential equation in
+the reexive and nonreexive Banach spaces relative to the weak topology.
+For this aim we study,  rstly, the existence of weakly continuous solutions for a
+nonlinear functional equation in the reexive and nonreexive Banach spaces.
+Keywords: Weak solution, functional equation,  xed point theorem, measure
+of weak noncompactness.Differential Equations and Control Processes, N 1, 2016
+1 Introduction and preliminaries
+Let L
+1
+(I) be the space of Lebesgue integrable functions de ned on the in-
+terval I = [0;T ]. Let E be a Banach space with norm k : k and its
+dual E
+ 
+and denote by C[I;E] the Banach space of strongly continuous func-
+tions x :I!E with sup-norm.
+The existence of weak solutions of the integral and differential equations has
+been studied by many authors such as [2], [3], [5], [8-10] and [12].
+Let ff2 (0; 1): In [12], the authors studied, in the reexive Banach space,
+the existence of week continuous solution of the initial value problem of the
+arbitrary (fractional) orders differential equation
+d
+dx
+x(t) = f(t;D
+ff
+x(t)); t2 (0;T ]
+where D
+ff
+is the fractional order derivative in the Caputo sense.
+The case when ff = 0
+d
+dx
+x(t) = f(t;x(t)); t2 (0;T ]
+have been proved, before, by D. O'Regan in [10].
+In this paper we study (the case whenff = 1) the existence of weak continuous
+solutions for the initial value problem of functional differential equation
+dx
+dt
+=f(t;
+dx
+dt
+); t2 (0;T ]; (1)
+x(0) =x
+0
+: (2)
+in the reexive and nonreexive Banach space E.
+For this aim we study,  rstly, the existence of weak continuous solutions of
+the nonlinear functional equation
+x(t) = f(t;x(t)); t2I = [0;T ] (3)
+in the nonreexive and also reexive Banach space E.
+Now, we shall present some auxiliary results that will be needed in this work.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 32Differential Equations and Control Processes, N 1, 2016
+(1) A function h : E ! E is said to be weakly Lipschitz if for every  2
+E
+ 
+there exists a positive constant K such that
+ (h(x(:)) h(y(:))) K  (x(:) y(:)):
+(2) h(:) is said to be weakly continuous if for every  2E
+ 
+;  (h(:)) is contin-
+uous see ([7] and [9]).
+(3) A functionh :E!E is said to be weakly sequentially continuous ifh maps
+weakly convergent sequences in E to weakly convergent sequences in E.
+It is clear that (1) implies (2) and (2) implies (3). If h linear, then (2) and (3)
+are equivalent. The relation between weak and weak sequentially continuous of
+mapping is studied in details in [1].
+Now, we have the following theorem due to Rubin (see[11]) and some proposi-
+tions which will be used in the sequel (see [5]-[12]).
+Theorem 1 IfX is metrizable (i.e., the topology is induced by a metric). Then
+the weakly sequentially continuous functions are weakly continuous.
+Proposition 1.1 A subset of a reexive Banach space is weakly closed if and
+only if it is closed in the weak topology and bounded in the norm topology.
+Proposition 1.2 LetE be a normed space with y2E andy6= 0. Then there
+exists a  2E
+ 
+withk k= 1 and kyk= (y).
+Also, we have the following  xed point theorem, due to O'Regan, in reex-
+ive Banach space (see [9]).
+Theorem 2 (O'Regan  xed point theorem)
+Let E be a Banach space and let Q be a nonempty, bounded, closed and convex
+subset of the space E and let F :Q!Q be a weakly sequentially continuous
+and assume that FQ(t) is relatively weakly compact inE for eacht2I . Then,
+F has a  xed point in the set Q.
+Here we apply the O'Regan  xed point theorem, in reexive Banach space, to
+prove the existence of weak solutions to the functional equation (3).
+In nonreexive Banach space, our main condition that guarantees the exis-
+tence of weak solutions of (3) will be formulated in terms of measure of weak
+noncompactness   introduced by De Blasi in [4].
+Electronic Journal. http://www.math.spbu.ru/diffjournal 33Differential Equations and Control Processes, N 1, 2016
+Further on, denote by m
+E
+the family of nonempty and bounded subsets of
+E. Let us recall that for any subset A2 m
+E
+of a Banach space E,
+ (A) = inffr > 0 : there exists a weakly compact set C such that A 
+C +rB
+1
+g,
+whereB
+1
+is the closed unit ball in E. Recall that  has the following properties
+:
+(1)  (A) = 0 iff A is weakly relatively compact;
+(2) If A B, then  (A)  (B);
+(3)  (A) = (ConvA);
+(4)  ( A + (1  )A)   A + (1  ) A;  2 [0; 1];
+(5) If X
+n
+2 m
+E
+; X
+n
+=X
+w
+n
+and X
+n+1
+ X
+n
+for n = 1; 2;:::
+and if lim
+n!1
+ (X
+n
+) = 0, then X
+1
+=\
+1
+n=1
+X
+n
+6= :
+A measure of weak noncompactness   is said to be sublinear whenever
+it ful ls the two conditions
+(6)  (A +B)  (A) + (B);
+(7)  ( A) =j j (A), for all  2R.
+Moreover,
+(8)  (x +A) = (A), for all x2E.
+Theorem 3 [6] Let E be a metrizable locally convex topological vector space
+and let Q be a closed convex subset of E , and let K be a weakly sequentially
+continuous mapping of Q into itself. If for some y2Q the implication
+V = conv(K(V )[fyg))V is relatively weakly compact
+holds, for every subset V of Q, then K has a  xed point.
+2 Weak solutions in reexive Banach space
+In this section we discuss the existence of weak solution of the functional equa-
+tion (3) in the reexive Banach spaces E.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 34Differential Equations and Control Processes, N 1, 2016
+Now, Let B
+r
+=fx2C[I;E] :kxk  rg, r> 0.
+The functional equation (1) will be investigated under the assumptions:
+f :I B
+r
+!E such that
+(i) for each x2B
+r
+; f(:;x(:)) is weakly continuous on I;
+(ii) for each t2I; f(t;:) is weakly Lipschitz in x with Lipschitz constant K.
+De nition 1. A function x2C[I;E] is called a weakly continuous solution
+of the functional equation (3) if
+ (x(t)) =  (f(t;x(t))); t2I
+is satis ed for all  2E
+ 
+.
+Now, we can prove the following theorem.
+Theorem 4 Under the assumptions (i)-(ii) the functional equation (3) has at
+least one weak solution x2C[I;E].
+Proof. De ne the operator A by
+Ax(t) =f(t;x(t)); t2I:
+Now we shall prove that A :C[I;E]!C[I;E]:
+Lett
+1
+;t
+2
+2I and (without loss of generality) assume that Ax(t
+2
+) A
+x
+(t
+1
+)6= 0
+Ax(t
+2
+)   Ax(t
+1
+) = f(t
+2
+;x(t
+2
+)) f(t
+1
+;x(t
+1
+))
+= f(t
+2
+;x(t
+2
+)) f(t
+1
+;x(t
+1
+)) f(t
+2
+;x(t
+1
+)) +f(t
+2
+;x(t
+1
+)):
+Therefore, as a consequence of proposition 1.2, we obtain
+kAx(t
+2
+)   Ax(t
+1
+)k =  (Ax(t
+2
+)   Ax(t
+1
+))
+=  (f(t
+2
+;x(t
+2
+)) f(t
+1
+;x(t
+1
+)) f(t
+2
+;x(t
+1
+)) +f(t
+2
+;x(t
+1
+)))
+=  (f(t
+2
+;x(t
+2
+)) f(t
+2
+;x(t
+1
+))) + (f(t
+2
+;x(t
+1
+)) f(t
+1
+;x(t
+1
+)))
+  K  (x(t
+2
+) x(t
+1
+)) + (f(t
+2
+;x(t
+1
+)) f(t
+1
+;x(t
+1
+)))
+  K kx(t
+2
+) x(t
+1
+)k +kf(t
+2
+;x(t
+1
+)) f(t
+1
+;x(t
+1
+))k:
+This prove that Ax2C[I;E].
+Now, for any x2B
+r
+we have
+kAx(t)k= (Ax(t)) = (f(t;x(t))) =kf(t;x(t))k
+Electronic Journal. http://www.math.spbu.ru/diffjournal 35Differential Equations and Control Processes, N 1, 2016
+ jf(t; 0)j +K kxk
+  a +K r; r =
+a
+1 K
+where a = supfjf(t; 0)j:t2Ig
+i.e.,8x2B
+r
+)Ax2B
+r
+)AB
+r
+ B
+r
+. Thus A :B
+r
+!B
+r
+.
+Then B
+r
+is nonempty, uniformly bounded subset of C[I;E]. Also, it can be
+shownB
+r
+is convex and closed. As consequence of proposition 1.1, thenAB
+r
+is
+relatively weakly compact.
+It remains to prove that A is weakly sequentially continuous.
+Let fx
+n
+(t)g be a sequence in B
+r
+converges weakly to x(t);8t 2 I.
+Since f(t;x(t)) is weakly Lipschitz ) f(t;x(t)) is weakly continu-
+ous) f(t;x(t)) is weakly sequentially continuous in the second argument,
+then f(t;x
+n
+(t)) converges weakly to f(t;x(t)) and hence  (f(t;x
+n
+(t))) con-
+verges strongly to  (f(t;x(t))).
+Then A is weakly sequentially continuous. Since all conditions of Theorem 1.2
+are satis ed, then the operator A has at least one  xed point x2 B
+r
+which
+completes the proof.
+2.1 Uniqueness of the solution
+Now we prove the uniqueness solution of the functional equation (3).
+Theorem 5
+Let the assumptions of Theorem 2.1 are satis ed withK < 1, then the solution
+of the functional equation (3) is unique.
+Proof. Letx
+1
+;x
+2
+be two weak solutions of (3) in the reexive Banach spaceE.
+Then
+kx
+1
+ x
+2
+k =  (x
+1
+ x
+2
+) = (f(t;x
+1
+(t)) f(t;x
+2
+(t)))
+  K  (x
+1
+(t) x
+2
+(t))
+  K kx
+1
+ x
+2
+k;
+then
+kx
+1
+ x
+2
+k (1 K)   0; K < 1
+implies that
+kx
+1
+ x
+2
+k  0)kx
+1
+ x
+2
+k = 0
+Electronic Journal. http://www.math.spbu.ru/diffjournal 36Differential Equations and Control Processes, N 1, 2016
+and
+x
+1
+(t) =x
+2
+(t); t2I
+which implies that the uniqueness of a weak solution.
+3 Weak solutions in nonreexive Banach space
+Here we shall discuss the existence of the weak solutions of the functional equa-
+tion (3) in the nonreexive Banach spaces E. Now, Let B
+r
+=fx2C[I;E] :k
+xk  rg, r> 0.
+The functional equation (1) will be investigated under the assumptions:
+f :I B
+r
+!E such that
+(i:) for each x2B
+r
+; f(:;x(:)) is weakly continuous on I;
+(ii:) for each t2I; f(t;:) is weakly Lipschitz in x with Lipschitz constant K;
+(iii:) for any bounded set X B
+r
+there exists a constant ff2 [0; 1) such that
+ (f(I X)) ff (X):
+A function x2C[I;E] is a solution of the functional equation (3) if
+ (x(t)) =  (f(t;x(t))); t2I
+is satis ed for all  2E
+ 
+.
+Theorem 6 Under the assumptions (i)-(iii) the functional equation (3) has at
+least one weak solution x2C[I;E].
+Proof. De ne the operator A by
+Ax(t) =f(t;x(t)); t2I:
+As done above in Theorem 2.1 we have
+1- A :C[I;E]!C[I;E];
+2- B
+r
+is nonempty, uniformly bounded, closed and convex ;
+3- A :B
+r
+!B
+r
+is weakly sequentially continuous.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 37Differential Equations and Control Processes, N 1, 2016
+Now, let V   B
+r
+, be such that V = conv(A(V )[fx(:)g) for some x(:)2 B
+r
+.
+We prove that V is weakly relatively compact in C[I;E].
+Using the properties of   we get
+ (V (t)) = (conv(A(V (t))[fx(t)g)) = (A(V )(t)) for t2I
+Ax(t) =f(t;x(t))2convf(I V (I))
+where f(I V (I)) =ff(t;x(t)) :t2I;x2Vg
+AV (t) convf(I V (I))
+and
+ (AV (t))  (convf(I V (I)))
+  (f(I V (I))) ff (V (I)):
+Thus
+ (V (t)) ff (V (t)); for t2I; ff< 1:
+Then  (V (t)) = 0 for each t2 I. Hence V (t) is relatively weakly com-
+pact in E for t2 I, and by Ascoli's theorem, V is relatively weakly compact
+in C[I;E].
+Since all conditions of Theorem 1.3 are satis ed then A has at least one  xed
+point x2B
+r
+which complement the proof.
+Also, as in Theorem 2.2, we can prove the following Theorem.
+Theorem 7
+Let the assumptions of Theorem 3.1 withK < 1 are satis ed, then the solution
+of the functional equation (3) is unique.
+4 Application
+Consider now the initial value problem (1)-(2)
+Theorem 8 Under the assumptions (i)-(ii) of Theorem 2.1 the initial value
+problem (1)-(2) has at least one weakly differentiable solution in C[I;E].
+Proof. Let
+dx
+dt
+=y2C[I;E] weakly, then
+x(t) =x
+0
++
+Z
+t
+0
+y(s)ds2C[I;E]
+Electronic Journal. http://www.math.spbu.ru/diffjournal 38Differential Equations and Control Processes, N 1, 2016
+and weakly differentiable in C[I;E].
+And, then y will be the solution of the functional equation
+y(t) =f(t;y(t)); t2 [0;T ]:
+Also, we can prove the following Theorem
+Theorem 9 Let the assumptions of Theorem 3.1 are satis ed then the initial
+value problem (1)-(2) has at least one weakly differentiable solution in C[I;E].
+References
+[1] J. M. Ball, Weak continuity properties of mapping and semi-groups, Proc.
+Royal Soc.Edinbourgh Sect. A 72 (1973-1974), 275-280.
+[2] M. Cicho  n, Weak solutions of ordinary differential equations in Banach
+spaces, Discuss. Math. Differ.Incl. Control Optim., 15 (1995), 5-14.
+[3] M. Cicho  n, I. Kubiaczyk, Existence theorem for the Hammerstein integral
+equation, Discuss. Math. Differ.Incl. Control Optim., 16(2) (1996), 171-
+177.
+[4] F. S. De Blasi, On a property of the unit sphere in Banach spaces, Bull.
+Math. Sot. Sci. Math. Roum. 21, 259-262 (1977).
+[5] A. M. A. EL-Sayed, H.H.G. Hashem, Weak maximal and minimal solu-
+tions for Hammerstein and Urysohn integral equations in reexive Banach
+spaces, Differential Equation and Control Processes, No. 4(2008), 50-62.
+[6] I. Kubiaczyk: On a  xed point theorem for weakly sequentially continuous
+mapping. Discuss. Math., Differ. Incl. 15, 15-20 (1995).
+[7] W. J. Knight, Solutions of differential equations in B-spaces, Duke Math.
+J. 41(1974), 437-442.
+[8] D. O'Regan, Integral equations in reexive Banach spaces and weak topolo-
+gies, Amer. Math. Soc., Vol. 124, No. 2, (1996), 607-614.
+[9] D. O'Regan, Fixed point theory for weakly sequentially continuous mapping,
+Math. Comput. Modeling, 27 (1998), 1-14.
+[10] D. O'Regan, Weak solutions of ordinary differential equations in Banach
+spaces, Appl.Math. Lett ., 12 (1999), 101-105.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 39Differential Equations and Control Processes, N 1, 2016
+[11] W. Rubin, Functional Analysis, McGraw-Hill, Inc. New york, Harlow,
+(1991).
+[12] H. A. H. Salem, A. M. A. El-Sayed, Fractional order integral equations in
+reexive Banach spaces, Math. Slovaca., 55 , No. 2 (2005), 169-181.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 40
