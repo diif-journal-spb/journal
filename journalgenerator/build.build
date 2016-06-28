@@ -61,7 +61,10 @@
   <target name="build" depends="run-generate, patch"/>
 
   <target name="open">
-    <exec program="explorer" failonerror="false">
+    <exec program="cmd" failonerror="false">
+      <arg value="/c" />
+      <arg value="start" />
+      <arg value="chrome" />
       <arg path="${release.path}\index.html"/>
     </exec>
   </target>
