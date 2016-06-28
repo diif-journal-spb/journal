@@ -1,0 +1,14073 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 2, 2016
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Fractional differential equations
+Existence of solutions of IVPs of singular multi-term
+fractional differential equations with impulse effects
+1
+Xiaohui Yang
+1
+and Yuji Liu
+2
+e-mail: liuyuji888@sohu.com
+1. Department of Computer, Guangdong Police College, Guangzhou, 510230, P. R. China
+2. Department of Mathematics, Guangdong University of Fiance and Economics,
+Guangzhou 510320, P. R. China
+Corresponding author: Yuji Liu
+Abstract. This paper is devoted to studying the existence of solutions of
+two classes of initial value problems for nonlinear fractional differential equa-
+tions with impulse effects. Firstly we transform initial value problems into
+integral equations. Then by constructing a special Banach space and employ-
+ing  xed-point theorem, we obtain some su cient conditions that guarantee
+the existence of solutions of these problems of fractional differential equations
+involving Caputo fractional derivatives. One equation is involved in multiple
+base points and the other one is involved in a single base point.
+Keywords. Initial value problem, impulsive fractional differential equa-
+tion, single base point FDE, multiple base points FDE, Caputo fractional
+derivative,  xed-point theorem
+2000 MR subject classi cation 92D25, 34A37, 34K15
+1
+Supported by the Natural Science Foundation of Guangdong province (No: S2011010001900) and the
+Guangdong Higher Education Foundation for High-level talentsDifferential Equations and Control Processes, N 2, 2016
+1 Introduction
+In recent years many investigations on fractional differential equations have
+been made since it was shown that many physical systems can be represented
+more accurately through fractional derivative formulation [17]. Fractional dif-
+ferential equations, therefore  nd numerous applications in the  eld of visco-
+elasticity, feed back ampli ers, electrical circuits, electro analytical chemistry,
+fractional multi-poles, neuron modelling encompassing different branches of
+physics, chemistry and biological sciences [22]. There have been many excellent
+books and monographs available on this  eld such as [6, 7, 8, 10, 20, 21, 19, 23].
+In the literature,
+c
+D
+ff
+0
++
+u(t)+f(t;u(t)) = 0 is known as a single term equa-
+tion. In certain cases, we  nd equations containing more than one differential
+terms. These equations are called multi-term equations. A classical example
+is the so-called Basset equation
+AD
+1
+0
++y(x) +bD
+n
+0
++y(x) +cy(x) =f(x); y(0) =y
+0
+;
+where 0 < n < 1. This equation is most frequently, but not exclusively, used
+with n =
+1
+2
+. It describes the forces that occur when a spherical object sinks in
+a (relatively dense) incompressible viscous uid, see [1, 19].
+In the left and right fractional derivatives D
+ff
+a
++
+x andD
+ff
+b
+ 
+x,a is called a left
+base point andb right starting point. Botha andb are called starting points of
+fractional derivatives. An FDE containing more than one base point is called a
+multiple stsrting points FDE. An FDE containing only one starting point
+is called a single starting point FDE.
+In [10], Liu discussed existence of positive solutions to the initial value
+problems of the nonlinear multi-order fractional differential equation on half
+line
+D
+ff
+0
++
+D
+ 
+0
++
+D
+
+0
++
+x(t) +f(t;x(t);D
+p
+0
++
+x(t)) = 0; t2 (0;1);
+lim
+t!0
+t
+1 
+x(t) =
+R
++1
+0
+g
+0
+(t;x(t);D
+p
+0
++
+x(t))dt;
+lim
+t!0
+t
+1  
+D
+
+0
++
+x(t) =
+R
++1
+0
+g
+1
+(t;x(t);D
+p
+0
++
+x(t))dt;
+lim
+t!0
+t
+1 ff
+D
+ 
+0
++
+D
+
+0
++
+x(t) =
+R
++1
+0
+g
+2
+(t;x(t);D
+p
+0
++
+x(t))dt;
+where x
+0
+;x
+1
+;x
+2
+2 I R, ff; ;;p2 (0; 1), D
+0
++ is the standard Riemann-Liouville
+fractional derivative, and f : (0;1)  I R
+3
+! I R is a Caratheodory function,
+Electronic Journal. http://www.math.spbu.ru/diffjournal 73Differential Equations and Control Processes, N 2, 2016
+g
+0
+;g
+1
+;g
+2
+: (0; +1) I R
+2
+! I R are strong Caratheodory functions andf;g
+0
+;g
+1
+;g
+2
+may be singular at t = 0.
+In [11], authors studied the solvability of the following initial value problems
+for singular fractional differential equation with multiple starting points
+c
+D
+ff
+ 
++
+x(t) =m(t)f(t;x(t);
+c
+D
+p
+ 
++
+x(t));a:e:;t2 (0;1);
+x(0) =x
+0
+:
+In [15], authors studied existence and uniqueness of the following two initial
+value problems (IVPs for short) of nonlinear multi-term FDEs with impulses
+on half lines:
+c
+D
+ff
+0
++
+x(t) =q(t)f(t;x(t);
+c
+D
+p
+0
++
+x(t));a:e:;t2 (t
+s
+;t
+s+1
+];s2Z Z
+0
+;
+x(0) =x
+0
+;
+ x(t
+s
+) = lim
+t!t
++
+s
+x(t) x(t
+s
+) =I(t
+s
+;x(t
+s
+));s2Z Z;
+and
+c
+D
+ff
+ 
++
+x(t) =q(t)f(t;x(t);
+c
+D
+p
+ 
++
+x(t));a:e:;t2 (t
+s
+;t
+s+1
+];s2Z Z
+0
+;
+x(0) =x
+0
+;
+ x(t
+s
+) = lim
+t!t
++
+s
+x(t) x(t
+s
+) =I(t
+s
+;x(t
+s
+));s2Z Z;
+where x
+0
+2 I R, ff2 (0; 1], 0 < p < ff, Z Z
+0
+=f0; 1; 2;   g and Z Z =f1; 2;   g,
+0 = t
+0
+<t
+1
+<t
+2
+<t
+3
+<    with lim
+s!+1
+t
+s
+= +1,
+c
+D
+ 
++ is the standard Caputo
+fractional derivative at the base points t = , q : (0; +1)! I R satis es that
+there exists l > ff such thatjq(t)j  t
+l
+for all t2 (0; +1), f : (0; +1) 
+I R
+2
+! I R is a Carath  eodory function and I :
++1
+S
+s=0
+(t
+s
+;t
+s+1
+)  I R! I R a discrete
+Carath  eodory function. The recent studies on solvability of boundary value
+problems for impulsive fractional differential equations may be found in [12, 13,
+14] and the references therein.
+In applications, our equation can be interpreted as the standard Malthus
+population model y
+0
+=  y subject to a perturbation f(t;y). That is y
+0
+=
+Electronic Journal. http://www.math.spbu.ru/diffjournal 74Differential Equations and Control Processes, N 2, 2016
+ y +f(t;y). This situation makes us to study fractional differential equation
+D
+ff
+y  y =f(t;y) with ff2 (0; 1] see [2, 24].
+Motivated by mentioned papers, in this paper, we study the following initial
+value problems (IVPs for short) of the nonlinear multi-term fractional differen-
+tial equation on half line
+8
+>
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+>
+:
+c
+D
+ff
+0
++
+x(t)  x(t) =m(t)f(t;x(t);
+c
+D
+p
+0
++
+x(t));a:e:;t2 (0; +1);
+x(0) =x
+0
+;
+ x(t
+s
+) = lim
+t!t
++
+s
+x(t) x(t
+s
+) =I(t
+s
+;x(t
+s
+);
+c
+D
+p
+0
++
+x(t
+s
+));s2Z Z;
+(1)
+and
+8
+>
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+>
+:
+c
+D
+ff
+t
++
+s
+x(t)  x(t) =n(t)g(t;x(t);
+c
+D
+p
+t
++
+s
+x(t));a:e:;t2 (t
+s
+;t
+s+1
+);s2Z Z
+0
+;
+x(0) =x
+0
+;
+ x(t
+s
+) = lim
+t!t
++
+s
+x(t) x(t
+s
+) =J(t
+s
+;x(t
+s
+);
+c
+D
+p
+t
++
+s 1
+x(t
+s
+));s2Z Z;
+(2)
+where
+(i) x
+0
+2 I R, ff2 (0; 1], 0 < p < ff,   > 0, Z Z
+0
+=f0; 1; 2;   g and Z Z =
+f1; 2;   g, 0 =t
+0
+<t
+1
+<t
+2
+<t
+3
+<    with lim
+s!+1
+t
+s
+= +1,
+(ii)
+c
+D
+ 
++ is the standard Caputo fractional derivative at the starting points
+t = ,
+(iii) m : (0; +1) ! I R satis es that there exists k
+1
+>  ff such that
+jm(t)j t
+k
+1
+for all t2 (0; +1),
+(iv) n :
++1
+S
+s=0
+(t
+s
+;t
+s+1
+)! I R satis es that there exists 0  l
+2
+> ff;k
+2
+>
+p ff l
+2
+such thatjn(t)j  (t t
+s
+)
+k
+2
+(t
+s+1
+ t)
+l
+2
+for all t2 (t
+s
+;t
+s+1
+)(s2Z Z
+0
+),
+(v) f : (0; +1) I R
+2
+! I R are I-Carath  eodory function andI :ft
+s
+g I R
+2
+!
+I R discrete I-Carath  eodory function,
+(vi) g :
++1
+S
+s=0
+(t
+s
+;t
+s+1
+)  I R
+2
+! I R are II-Carath  eodory function and J :
+ft
+s
+g  I R
+2
+! I R discrete II-Carath  eodory functions. .
+Electronic Journal. http://www.math.spbu.ru/diffjournal 75Differential Equations and Control Processes, N 2, 2016
+A function x : (0; +1) ! I R is called a solution of IVP(1) if xj
+(t
+s
+;t
+s+1
+]
+;
+c
+D
+p
+0
++
+xj
+t
+s
+;t
+s+1
+]
+2 C
+0
+(t
+s
+;t
+s+1
+] (s2 Z Z
+0
+), the limits lim
+t!t
++
+s
+x(t); lim
+t!t
++
+s
+c
+D
+p
+0
++
+x(t)(s2 Z
+0
+)
+exist,
+c
+I
+ff
+0
++
+c
+D
+ff
+0
++
+x(t) exists almost every point on (0; +1) and all equations in
+(1) are satis ed. A function x : (0; +1)! I R is called a solution of IVP(2)
+if xj
+(t
+s
+;t
+s+1
+]
+;
+c
+D
+p
+t
++
+s
+x2 C
+0
+(t
+s
+;t
+s+1
+] (s2 Z Z
+0
+), the limits lim
+t!t
++
+s
+x(t); lim
+t!t
++
+s
+c
+D
+p
+t
++
+s
+x(t) (s2
+Z Z
+0
+) exist,
+c
+I
+ff
+t
++
+s
+c
+D
+ff
+t
++
+s
+x(t) exists almost every point on (t
+s
+;t
+s+1
+)(s2 Z Z
+0
+) and all
+equations in (2) are satis ed.
+Our purpose of this paper is to establish su cient conditions for the exis-
+tence and uniqueness of solutions (positive solutions) of IVP(1) (under assump-
+tions (i), (ii), (iii) and (v)) and IVP(2) (under assumptions (i), (ii), (iv) and
+(vi)), respectively. Existence results for IVP(2) generalizes those ones (Theo-
+rem 3.1) obtained in [11]. Existence results for IVP(1) generalizes Theorem 11
+in [15].
+The remainder of this paper is organized as follows: the preliminary results
+are given in Section 2, the main results are presented in Section 3. In Section
+4, examples are presented.
+2 Preliminary results
+For the convenience of the reader, we present here the necessary de nitions
+from  xed point theory and fractional calculus theory. These de nitions and
+properties can be found in the literatures [18, 20, 23]. Denote the Gamma
+function, Beta function and Mittag-Le er functions respectively by
+ (ff
+1
+) =
+R
++1
+0
+s
+ff
+1
+ 1
+e
+ s
+ds;
+B(ff
+2
+; 
+2
+) =
+R
+1
+0
+(1 x)
+ff
+2
+ 1
+x
+ 
+2
+ 1
+dx;ff
+1
+> 0;ff
+2
+; 
+2
+> 0;
+E
+ff
+1
+(x) =
++1
+P
+s=0
+x
+s
+ (ff
+1
+s+1)
+;ff
+1
+> 0;x2 I R;
+E
+ff
+1
+;ff
+2
+(x) =
++1
+P
+s=0
+x
+s
+ (ff
+1
+s+ff
+2
+))
+;ff
+1
+> 0;ff
+2
+> 0;x2 I R:
+De nition 1 [20]. Let c  0. The Riemann-Liouville fractional integral of
+Electronic Journal. http://www.math.spbu.ru/diffjournal 76Differential Equations and Control Processes, N 2, 2016
+order ff> 0 of a function f : (c;1)! I R is given by
+I
+ff
+c
++
+f(t) =
+1
+ (ff)
+R
+t
+c
+(t s)
+ff 1
+f(s)ds;
+provided that the right-hand side exists.
+De nition 2 [20]. Letc  0. The Caputo's derivative of orderff for a function
+f : (c;1)! I R is de ned as
+c
+D
+ff
+c
++
+f(t) =
+1
+ (n ff)
+R
+t
+c
+(t s)
+n ff 1
+f
+(n)
+(s)ds;
+for n  1<ff<n; n2 I N. If 0<ff  1, then
+D
+ff
+c
++
+f(t) =
+1
+ (1 ff)
+R
+t
+c
+(t s)
+ ff
+f
+(1)
+(s)ds:
+Obviously, the Caputo's derivative of a constant is equal to zero.
+De nition 3 Choose   > maxf k
+1
+;ff +k
+1
+;ffg. h : (0; +1)  I R
+2
+! I R is
+called a I-Carath  eodory function if it satis es the following assumptions:
+(i) t ! h
+ 
+t; (1 +t
+ 
+)E
+ff;ff
+( t
+ff
+)x;
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+t
+p
+y
+ 
+is continuous on
+(t
+s
+;t
+s+1
+](s2Z Z
+0
+) and is bounded on I R,
+(ii) (x;y)! h
+ 
+t; (1 +t
+ 
+)E
+ff;ff
+( t
+ff
+)x;
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+t
+p
+y
+ 
+is continuous on
+I R;
+(iii) for each r > 0 there exists a constant M
+r
+  0 such thatjxj;jyj  r
+imply
+ 
+ 
+ h
+ 
+t; (1 +t
+ 
+)E
+ff;ff
+( t
+ff
+)x;
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+t
+p
+y
+  
+ 
+  M
+r
+;t2 (0; +1):
+De nition 4 Choose   > maxf k
+1
+;ff +k
+1
+;ffg. H :ft
+s
+:s2Zg  I R
+2
+! I R
+is called a discrete I-Carath  eodory function if it satis es the following assump-
+tions:
+(i) (x;y)! H
+ 
+t
+s
+; (1 +t
+ 
+s
+)E
+ff;ff
+( t
+ff
+s
+)x;
+(1+t
+ 
+s
+)E
+ff;ff p
+( t
+ff
+s
+)
+t
+p
+s
+y
+ 
+is continuous on
+I R for all s2Z Z;
+(ii) for each r > 0 there exists a constant M
+rs
+  0 such thatjxj;jyj  r
+imply
+ 
+ 
+ H
+ 
+t
+s
+; (1 +t
+ 
+s
+)E
+ff;ff
+( t
+ff
+s
+)x;
+(1+t
+ 
+s
+)E
+ff;ff p
+( t
+ff
+s
+)
+t
+p
+s
+y
+  
+ 
+  M
+rs
+;s2Z;
++1
+P
+s=1
+M
+rs
+< +1:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 77Differential Equations and Control Processes, N 2, 2016
+Choose  > maxf k
+1
+;ff +k
+1
+;ffg. Let
+X =
+8
+>
+>
+>
+<
+>
+>
+>
+:
+x :
+xj
+(t
+s
+;t
+s+1
+]
+;
+c
+D
+p
+0
++
+xj
+(t
+s
+;t
+s+1
+]
+2C
+0
+((t
+s
+;t
+s+1
+]; I R);s2Z Z
+0
+;
+lim
+t!t
++
+s
+x(t); lim
+t!t
++
+s
+c
+D
+p
+0
++
+x(t) exist, s2Z Z
+0
+;
+lim
+t!+1
+x(t)
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+; lim
+t!+1
+t
+p
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+c
+D
+p
+0
++
+x(t) exists
+9
+>
+>
+>
+=
+>
+>
+>
+;
+:
+For x2X, de ne the norm by
+jjxjj = jjxjj
+X
+= max
+(
+sup
+t2(0;+1)
+jx(t)j
+(1 +t
+ 
+)E
+ff;ff
+( t
+ff
+)
+;
+sup
+t2(0;+1)
+t
+p
+(1 +t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+j
+c
+D
+p
+0
++
+x(t)j
+)
+:
+Lemma 2.1. X is a Banach space withjj jj
+X
+de ned.
+Proof. It is easy to see thatX is a normed linear space. Letfx
+u
+g be a Cauchy
+sequence in X. Thenjjx
+u
+ x
+v
+jj! 0; u;v! +1: We will prove that there
+exists x
+0
+2X such that x
+u
+!x
+0
+as u! +1.
+It follows from x
+u
+2X andfx
+u
+g a Cauchy sequence that
+sup
+t2(0;+1)
+jx
+u
+(t) x
+v
+(t)j
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+! 0;u;v! +1; lim
+t!+1
+x
+u
+(t)
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+=A
+xu
+exists;
+and
+sup
+t2(0;+1)
+t
+p
+j
+c
+D
+p
+0
++
+x
+u
+(t) 
+c
+D
+p
+0
++
+x
+v
+(t)j
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+! 0;u;v! +1; lim
+t!+1
+t
+pc
+D
+p
+0
++
+x
+u
+(t)
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+=B
+xu
+exists:
+It follows that
+ 
+ 
+ 
+ 
+lim
+t!+1
+x
+u
+(t)
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+  lim
+t!+1
+x
+v
+(t)
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+ 
+ 
+ 
+ 
+! 0;u;v! +1
+and
+ 
+ 
+ 
+ 
+lim
+t!+1
+t
+pc
+D
+p
+0
++
+x
+u
+(t)
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+  lim
+t!+1
+t
+pc
+D
+p
+0
++
+x
+v
+(t)
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+ 
+ 
+ 
+ 
+! 0;u;v! +1:
+Thus both lim
+u!+1
+A
+xu
+and lim
+u!+1
+B
+xu
+exist.
+Since lim
+t!t
++
+s
+x(t) and lim
+t!t
++
+s
+c
+D
+p
+0
++
+x(t) exist, we know both
+x(t)
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+and
+t
+pc
+D
+p
+0
++
+x(t)
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+are continuous on [t
+s
+;t
+s+1
+]. Thus there exist two functions
+Electronic Journal. http://www.math.spbu.ru/diffjournal 78Differential Equations and Control Processes, N 2, 2016
+x
+0s
+;y
+0s
+(s2Z Z
+0
+) de ned on [t
+s
+;t
+s+1
+] such that
+lim
+u!+1
+x
+u
+(t)
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+=x
+0s
+(t);
+lim
+u!+1
+t
+pc
+D
+p
+0
++
+x
+u
+(t)
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+=y
+0s
+(t);t2 [t
+s
+;t +s + 1];s2Z Z
+0
+:
+Let x
+0
+(t) = x
+0s
+(t) and y
+0
+(t) = y
+0s
+(t) for t2 (t
+s
+;t
+s+1
+](s2 Z Z
+0
+). It follows that
+bothx
+0
+andy
+0
+are de ned on [0; +1) and the limits lim
+t!t
++
+s
+x
+0
+(t); lim
+t!t
++
+s
+y
+0
+(t)(s2Z Z
+0
+)
+exist.
+Furthermore, we have
+sup
+t2(0;+1)
+ 
+ 
+ 
+x
+u
+(t)
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+ x
+0
+(t)
+ 
+ 
+ ! 0;u! +1;
+sup
+t2(0;+1)
+ 
+ 
+ 
+t
+pc
+D
+p
+0
++
+x
+u
+(t)
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+ y
+0
+(t)
+ 
+ 
+ ! 0;u! +1:
+We have that
+lim
+t!+1
+x
+0
+(t) = lim
+t!+1
+lim
+u!+1
+x
+u
+(t)
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+= lim
+u!+1
+lim
+t!+1
+x
+u
+(t)
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+= lim
+u!+1
+A
+xu
+;
+lim
+t!+1
+y
+0
+(t) = lim
+t!+1
+lim
+u!+1
+t
+pc
+D
+p
+0
++
+x
+u
+(t)
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+= lim
+u!+1
+lim
+t!+1
+t
+pc
+D
+p
+0
++
+x
+u
+(t)
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+= lim
+u!+1
+B
+xu
+:
+Denote
+x
+0
+(t) = ((1 +t
+ 
+)E
+ff;ff
+( t
+ff
+))x
+0
+(t); y
+0
+(t) =
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+t
+p
+y
+0
+(t):
+We prove that y
+0
+(t) =
+c
+D
+p
+0
++
+x
+0
+(t) for t2 (t
+s
+;t
+s+1
+]. In fact, there exists c
+u
+=
+lim
+t!t
++
+s
+x
+u
+(t) such that
+jx
+u
+(t) +c
+u
+ 
+c
+I
+p
+0
++
+y
+0
+(t)j =
+ 
+ 
+c
+I
+p
+0
++
+c
+D
+p
+0
++
+x
+u
+(t) 
+c
+I
+p
+0
++
+y
+0
+(t)
+ 
+ 
+=
+ 
+ 
+ 
+R
+t
+0
+(t s)
+p 1
+ (p)
+[
+c
+D
+p
+0
++
+x
+u
+(s) y
+0
+(s)]ds
+ 
+ 
+ 
+ 
+R
+t
+0
+(t s)
+p 1
+ (p)
+ 
+ 
+ 
+c
+D
+p
+0
++
+x
+u
+(s) 
+(1+s
+ 
+)E
+ff;ff p
+( s
+ff
+)
+s
+p
+y
+0
+(s)
+ 
+ 
+ ds
+ 
+R
+t
+0
+(t s)
+p 1
+ (p)
+s
+p
+(1+s
+ 
+)E
+ff;ff p
+( s
+ff
+)
+ 
+ 
+ 
+(1+s
+ 
+)E
+ff;ff p
+( s
+ff
+)
+s
+p
+c
+D
+p
+0
++
+x
+u
+(s) y
+0
+(t)
+ 
+ 
+ ds
+Electronic Journal. http://www.math.spbu.ru/diffjournal 79Differential Equations and Control Processes, N 2, 2016
+ 
+R
+t
+0
+(t s)
+p 1
+ (p)
+(1+s
+ 
+)E
+ff;ff p
+( s
+ff
+)
+s
+p
+ds sup
+t2(0;+1)
+ 
+ 
+ 
+t
+p
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+c
+D
+p
+0
++
+x
+u
+(s) y
+0
+(t)
+ 
+ 
+ 
+! 0 as u! +1:
+Hence lim
+u!+1
+[x
+u
+(t) +c
+u
+ 
+c
+I
+p
+0
++
+y
+0
+(t)] = 0. Then x
+0
+(t) +c
+0
+=
+c
+I
+p
+0
++
+y
+0
+(t). Hence
+y
+0
+(t) =D
+p
+0
++
+x
+0
+(t). Then x
+0
+2X and x
+u
+!x
+0
+as u! +1 in X. It follows that
+X is a Banach space. Lemma 2.1 is proved.
+Lemma 2.2. Let M be a subset of X. Then M is relatively compact if and
+only if the following conditions are satis ed:
+(i) both
+n
+t!
+x(t)
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+:x2M
+o
+and
+n
+t!
+t
+pc
+D
+p
+0
++
+x(t)
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+:x2M
+o
+are uniformly bounded,
+(ii) both
+n
+t!
+x(t)
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+:x2M
+o
+and
+n
+t!
+t
+pc
+D
+p
+0
++
+x(t)
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+:x2M
+o
+are equicontinuous in any subinterval (t
+s
+;t
+s+1
+](s2Z Z
+0
+),
+(iii) both
+n
+t!
+x(t)
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+:x2M
+o
+and
+n
+t!
+t
+pc
+D
+p
+0
++
+x(t)
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+:x2M
+o
+are equi-convergent as t! +1.
+Proof. "( ". From Lemma 2.1, we know X is a Banach space. In order to
+prove that the subset M is relatively compact in X, we only need to show M
+is totally bounded in X, that is for all  > 0, M has a  nite  -net.
+For any given  > 0, by (i)-(iii), then there exists t
+s
+0
+and  > 0 such that
+ 
+ 
+ 
+x(t
+1
+)
+(1+t
+ 
+1
+)E
+ff;ff
+( t
+ff
+1
+)
+ 
+x(t
+2
+)
+(1+t
+ 
+2
+)E
+ff;ff
+( t
+ff
+2
+)
+ 
+ 
+  
+ 
+3
+;t
+1
+;t
+2
+ t
+s
+0
+;x2M;
+ 
+ 
+ 
+ 
+t
+p
+1
+c
+D
+p
+)
++
+x(t
+1
+)
+(1+t
+ 
+1
+)E
+ff;ff p
+( t
+ff
+1
+)
+ 
+t
+p
+2
+c
+D
+p
+0
++
+x(t
+2
+)
+(1+t
+ 
+2
+)E
+ff;ff p
+( t
+ff
+2
+)
+ 
+ 
+ 
+ 
+ 
+ 
+3
+;t
+1
+;t
+2
+ t
+s
+0
+;x2M;
+ 
+ 
+ 
+x(t
+1
+)
+(1+t
+ 
+1
+)E
+ff;ff
+( t
+ff
+1
+)
+ 
+x(t
+2
+)
+(1+t
+ 
+2
+)E
+ff;ff
+( t
+ff
+2
+)
+ 
+ 
+  
+ 
+3
+;t
+1
+;t
+2
+  (t
+s
+;t
+s+1
+];jt
+1
+ t
+2
+j< ;x2M;
+ 
+ 
+ 
+t
+p
+1
+c
+D
+p
+0
++
+x(t
+1
+)
+(1+t
+ 
+1
+)E
+ff;ff p
+( t
+ff
+1
+)
+ 
+t
+p
+2
+c
+D
+p
+0
++
+x(t
+2
+)
+(1+t
+ 
+2
+)E
+ff;ff p
+( t
+ff
+2
+)
+ 
+ 
+  
+ 
+3
+;t
+1
+;t
+2
+  (t
+s
+;t
+s+1
+];jt
+1
+ t
+2
+j< ;x2M:
+De ne
+Xj
+(0;t
+s
+0
+]
+=
+8
+<
+:
+x :
+xj
+(t
+s
+;t
+s+1
+]
+;
+c
+D
+p
+0
++
+xj
+(t
+s
+;t
+s+1
+]
+2C
+0
+((t
+s
+;t
+s+1
+]; I R);s = 0; 1;    ;s
+0
+;
+lim
+t!t
++
+s
+x(t); lim
+t!t
++
+s
+c
+D
+p
+0
++
+x(t) exist, s = 0; 1;    ;s
+0
+9
+=
+;
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 80Differential Equations and Control Processes, N 2, 2016
+For x2Xj
+(0;t
+s
+0
+]
+, de ne
+jjxjj
+s
+0
+= max
+(
+sup
+t2(0;t
+s
+0
+]
+jx(t)j
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+; sup
+t2(0;t
+s
+0
+]
+t
+p
+j
+c
+D
+p
+0
++
+x(t)j
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+)
+:
+Similarly to Lemma 2.1, we can prove that X
+(0;t
+s
+0
+]
+is a Banach space.
+Let Mj
+(0;t
+s
+0
+]
+=ft!x(t);t2 (0;t
+s
+0
+] :x2Mg. Then Mj
+(0;t
+s
+0
+]
+is a subset of
+Xj
+(0;t
+s
+0
+]
+. By (i) and (ii), and Ascoli-Arzela theorem, we can know thatMj
+(0;t
+s
+0
+]
+is relatively compact. Thus, there exist x
+1
+;x
+2
+;    ;x
+k
+2 M such that, for any
+x2M, we have that there exists some i = 1; 2;    ;k such that
+jjx x
+i
+jj
+s
+0
+= max
+(
+sup
+t2(0;t
+s
+0
+]
+jx(t) x
+i
+(t)j
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+; sup
+t2(0;t
+s
+0
+]
+t
+p
+j
+c
+D
+p
+0
++
+x(t) 
+c
+D
+p
+0
++
+x
+i
+(t)j
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+)
+ 
+ 
+3
+:
+Therefore, for x2M, we have that
+sup
+t2(0;+1)
+jx(t) x
+i
+(t)j
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+= max
+(
+sup
+t2(0;t
+s
+0
+]
+jx(t) x
+i
+(t)j
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+; sup
+t t
+s
+0
+jx(t) x
+i
+(t)j
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+)
+  max
+(
+ 
+3
+; sup
+t t
+s
+0
+ 
+ 
+ 
+x(t)
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+ 
+x(t
+s
+0
+)
+(1+t
+ 
+s
+0
+)E
+ff;ff
+( t
+ff
+s
+0
+)
+ 
+ 
+ 
++
+ 
+ 
+ 
+x(t
+s
+0
+)
+(1+t
+ 
+s
+0
+)E
+ff;ff
+( t
+ff
+s
+0
+)
+ 
+x
+i
+(t
+s
+0
+)
+(1+t
+ 
+s
+0
+)E
+ff;ff
+( t
+ff
+s
+0
+)
+ 
+ 
+ ; sup
+t t
+s
+0
+ 
+ 
+ 
+x
+i
+(t
+s
+0
+)
+(1+t
+ 
+s
+0
+)E
+ff;ff
+( t
+ff
+s
+0
+)
+ 
+x
+i
+(t)
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+ 
+ 
+ 
+)
+<
+ 
+3
++
+ 
+3
++
+ 
+3
+= :
+Similarly we can get
+sup
+t2(0;+1)
+t
+p
+j
+c
+D
+p
+0
++
+x(t) 
+c
+D
+p
+0
++
+x
+i
+(t)j
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+< :
+So, for any > 0,M has a  nite -netfU
+x
+1
+;U
+x
+2
+;    ;U
+x
+k
+g, that is,M is totally
+bounded in X. Hence M is relatively compact in X.
+). Assume that M is relatively compact, then for any   > 0, there exists
+a  nite  -net of M. Let the  nite  -net befU
+x
+1
+;U
+x
+2
+;    ;U
+x
+k
+g with x
+i
+  M.
+Then for any x2M, there exists U
+x
+i
+such that x2U
+x
+i
+and
+jjxjj jjx x
+i
+jj +jjx
+i
+jj   + maxfjjx
+i
+jj :i = 1; 2;    ;kg:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 81Differential Equations and Control Processes, N 2, 2016
+It follows that M is uniformly bounded. Then (i) holds.
+Furthermore, there exists t
+s
+0
+> 0 such that
+ 
+ 
+ 
+x
+i
+(t
+1
+)
+(1+t
+ 
+1
+)E
+ff;ff
+( t
+ff
+1
+)
+ 
+x
+i
+(t
+2
+)
+(1+t
+ 
+2
+)E
+ff;ff
+( t
+ff
+2
+)
+ 
+ 
+ < ;
+ 
+ 
+ 
+t
+p
+1
+c
+D
+p
+0
++
+x
+i
+(t
+1
+)
+(1+t
+ 
+1
+)E
+ff;ff p
+( t
+ff
+1
+)
+ 
+t
+p
+2
+c
+D
+p
+0
++
+x
+i
+(t
+2
+)
+(1+t
+ 
+2
+)E
+ff;ff p
+( t
+ff
+2
+)
+ 
+ 
+ < 
+for all t
+1
+;t
+2
+  t
+s
+0
+or all t
+1
+;t
+2
+2 (t
+s
+;t
+s+1
+] withjt
+1
+ t
+2
+j <  . Then we have for
+t
+1
+;t
+2
+ t
+s
+0
+that
+ 
+ 
+ 
+x(t
+1
+)
+(1+t
+ 
+1
+)E
+ff;ff
+( t
+ff
+1
+)
+ 
+x(t
+2
+)
+(1+t
+ 
+2
+)E
+ff;ff
+( t
+ff
+2
+)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+x(t
+1
+)
+(1+t
+ 
+1
+)E
+ff;ff
+( t
+ff
+1
+)
+ 
+x
+i
+(t
+1
+)
+(1+t
+ 
+1
+)E
+ff;ff
+( t
+ff
+1
+)
+ 
+ 
+  +
+ 
+ 
+ 
+x
+i
+(t
+1
+)
+(1+t
+ 
+1
+)E
+ff;ff
+( t
+ff
+1
+)
+ 
+x
+i
+(t
+2
+)
+(1+t
+ 
+2
+)E
+ff;ff
+( t
+ff
+2
+)
+ 
+ 
+ 
++
+ 
+ 
+ 
+x
+i
+(t
+2
+)
+(1+t
+ 
+2
+)E
+ff;ff
+( t
+ff
+2
+)
+ 
+x(t
+2
+)
+(1+t
+ 
+2
+)E
+ff;ff
+( t
+ff
+2
+)
+ 
+ 
+ 
+  3 ; x2M;t
+1
+;t
+2
+ t
+s
+0
+or all t
+1
+;t
+2
+2 (t
+s
+;t
+s+1
+] withjt
+1
+ t
+2
+j< :
+Similarly we have
+ 
+ 
+ 
+x(t
+1
+)
+(1+t
+ 
+1
+)E
+ff;ff
+( t
+ff
+1
+)
+ 
+x(t
+2
+)
+(1+t
+ 
+2
+)E
+ff;ff
+( t
+ff
+2
+)
+ 
+ 
+ < 3 ;
+t
+1
+;t
+2
+ t
+s
+0
+or all t
+1
+;t
+2
+2 (t
+s
+;t
+s+1
+] withjt
+1
+ t
+2
+j< :
+Thus (ii) and (iii) hold. Consequently, Lemma 2.2 is proved.
+Lemma 2.3. Suppose that x2X. Then u2X is a solution of
+8
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+:
+c
+D
+ff
+0
++
+u(t)  u(t) =m(t)f(t;x(t);
+c
+D
+p
+0
++
+x(t));a:e:;t2 (t
+s
+;t
+s+1
+];s2Z Z
+0
+;
+u(0) =x
+0
+;
+ u(t
+s
+) =I(t
+s
+;x(t
+s
+);
+c
+D
+p
+0
++
+x(t
+s
+));s2Z Z;
+(3)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 82Differential Equations and Control Processes, N 2, 2016
+if and only if
+u(t) =
+R
+t
+0
+(t v)
+ff 1
+E
+ff;ff
+( (t v)
+ff
+)m(v)f(v;x(v);
+c
+D
+p
+0
++
+x(v))dv +x
+0
+E
+ff
+( t
+ff
+)
++
+s
+P
+j=1
+E
+ff
+( (t t
+j
+)
+ff
+)I(t
+j
+;x(t
+j
+);
+c
+D
+p
+0
++
+x(t
+s
+));t2 (t
+s
+;t
+s+1
+];s2Z Z
+0
+:
+(4)
+Proof. Step 1. Let x2X. We prove that u satis es (4) if u is a solution of
+(3).
+From x2 X, we have that there exists r > 0 such thatjjxjj = r < +1:
+Sincef is Carath  eodory function andI a discrete Carath  eodory function, then
+there exist M
+r
+;M
+rs
+  0 such that
+jf(t;x(t);
+c
+D
+p
+0
++
+x(t))j =
+ 
+ 
+ f
+ 
+t;
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)x(t)
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+  
+ 
+  M
+r
+; t2 [0;1);
+jI(t
+s
+;x(t
+s
+);
+c
+D
+p
+0
++
+x(t
+s
+))j M
+rs
+;s2Z Z;
++1
+P
+s=1
+M
+rs
+< +1:
+Firstly, we have for t2 (t
+s
+;t
+s+1
+] that
+ 
+ 
+ 
+R
+t
+0
+(t v)
+ff 1
+E
+ff;ff
+( (t v)
+ff
+)m(v)f(v;x(v);
+c
+D
+p
+0
++
+x(v))dv
+ 
+ 
+ 
+ M
+r
+R
+t
+0
+(t v)
+ff 1
+E
+ff;ff
+( (t v)
+ff
+)v
+k
+1
+dv
+ M
+r
++1
+P
+j=0
+ 
+j
+ ((j+1)ff)
+R
+t
+0
+(t v)
+ff 1
+(t v)
+ffj
+v
+k
+1
+dv
+ M
+r
++1
+P
+j=0
+ 
+j
+ ((j+1)ff)
+R
+t
+0
+(t v)
+ff+ffj 1
+v
+k
+1
+dv
+=M
+r
++1
+P
+j=0
+ 
+j
+ ((j+1)ff)
+t
+ff+ffj+k
+1
+R
+1
+0
+(1 w)
+ff+ffj 1
+w
+k
+1
+dw
+ M
+r
+t
+ff+k
+1
+E
+ff;ff
+( t
+ff
+)B(ff;k
+1
++ 1):
+So
+R
+t
+0
+(t v)
+ff 1
+E
+ff;ff
+( (t v)
+ff
+)m(v)f(v;x(v);
+c
+D
+p
+0
++
+x(v))dv is convergent.
+Assume u is a solution of (3). We will prove (4). For t2 (t
+0
+;t
+1
+] = (0;t
+1
+],
+Electronic Journal. http://www.math.spbu.ru/diffjournal 83Differential Equations and Control Processes, N 2, 2016
+from Example 4.9 in [8], then
+u(t) =
+R
+t
+0
+(t v)
+ff 1
+E
+ff;ff
+( (t v)
+ff
+)m(v)f(v;x(v);
+c
+D
+p
+0
++
+x(v))dv +x
+0
+E
+ff
+( t
+ff
+)
+for ;t2 (t
+0
+;t
+1
+]: Then (4) holds for s = 0. Now we suppose that (4) holds for
+s k. That is
+u(t) =
+R
+t
+0
+(t v)
+ff 1
+E
+ff;ff
+( (t v)
+ff
+)m(v)f(v;x(v);
+c
+D
+p
+0
++
+x(v))dv +x
+0
+E
+ff
+( t
+ff
+)
++
+s
+P
+j=1
+E
+ff
+( (t t
+j
+)
+ff
+)I(t
+j
+;x(t
+j
+);
+c
+D
+p
+0
++
+x(t
+s
+));t2 (t
+s
+;t
+s+1
+];s k:
+For t2 (t
+k+1
+;t
+k+2
+], we let
+u(t) =
+R
+t
+0
+(t v)
+ff 1
+E
+ff;ff
+( (t v)
+ff
+)m(v)f(v;x(v);
+c
+D
+p
+0
++
+x(v))dv +x
+0
+E
+ff
+( t
+ff
+)
++
+k
+P
+j=1
+E
+ff
+( (t t
+j
+)
+ff
+)I(t
+j
+;x(t
+j
+);
+c
+D
+p
+0
++
+x(t
+s
+)) +  (t);t2 (t
+k+1
+;t
+k+2
+];
+(5)
+where   : (t
+k+1
+;t
+k+2
+] ! R is a differentiable function. By  u(t
+k+1
+) =
+I(t
+k+1
+;x(t
+k+1
+);
+c
+D
+p
+0
++
+x(t
+k+1
+)), we get
+lim
+t!t
++
+k+1
+ (t) =I(t
+k+1
+;x(t
+k+1
+);
+c
+D
+p
+0
++
+x(t
+k+1
+)):
+(6)
+For ease expression, denote G
+x
+(t) = G(t;x(t);
+c
+D
+p
+0
++
+x(t)) for a function G :
+(0; +1) R
+2
+!R and x2X. Then (3) implies for t2 (t
+k+1
+;t
+k+2
+] that
+m(t)f(t;x(t);
+c
+D
+p
+0
++
+x(t)) + u(t) =
+c
+D
+ff
+0
++
+u(t) =
+1
+ (1 ff)
+R
+t
+0
+(t s)
+ ff
+(u(s))
+0
+ds
+=
+k
+P
+j=0
+R
+t
+j+1
+t
+j
+(t v)
+ ff
+ 
+R
+v
+0
+(v w)
+ff 1
+E
+ff;ff
+( (v w)
+ff
+)m(w)f
+x
+(w)dw+x
+0
+E
+ff
+( v
+ff
+)+
+j
+P
+i=1
+E
+ff
+( (v t
+i
+)
+ff
+)I
+x
+(t
+i
+)
+ 0
+dv
+ (1 ff)
++
+R
+t
+t
+k+1
+(t v)
+ ff
+ 
+R
+v
+0
+(v w)
+ff 1
+E
+ff;ff
+( (v w)
+ff
+)m(w)f
+x
+(w)dw+x
+0
+E
+ff
+( v
+ff
+)+
+k+1
+P
+i=1
+E
+ff
+( (v t
+i
+)
+ff
+)I
+x
+(t
+i
+)+ (v)
+ 
+0
+dv
+ (1 ff)
+=
+R
+t
+0
+(t v)
+ ff
+(
+R
+v
+0
+(v w)
+ff 1
+E
+ff;ff
+( (v w)
+ff
+)m(w)f
+x
+(w)dw
+)
+0
+dv
+ (1 ff)
++
+k
+P
+j=0
+j
+P
+i=1
+I
+x
+(t
+i
+)
+R
+t
+j+1
+t
+j
+(t v)
+ ff
+(E
+ff
+( (v t
+i
+)
+ff
+))
+0
+dv
+ (1 ff)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 84Differential Equations and Control Processes, N 2, 2016
++
+x
+0
+R
+t
+0
+(t v)
+ ff
+(E
+ff
+( v
+ff
+))
+0
+dv
+ (1 ff)
++
+k+1
+P
+i=1
+I
+x
+(t
+i
+)
+R
+t
+t
+k+1
+(t v)
+ ff
+(E
+ff
+( (v t
+i
+)
+ff
+))
+0
+dv
+ (1 ff)
++
+R
+t
+t
+k+1
+(t v)
+ ff
+ 
+0
+(v)dv
+ (1 ff)
+=
+R
+t
+0
+(t s)
+ ff
+ 
+R
+s
+0
+(s w)
+ff 1
++1
+P
+v=0
+ 
+v
+(s w)
+ffv
+ (ff(v+1))
+m(w)f
+x
+(w)dw
+ 
+0
+ds
+ (1 ff)
++
+k
+P
+j=0
+j
+P
+i=1
+I
+x
+(t
+i
+)
+R
+t
+j+1
+t
+j
+(t s)
+ ff
+ 
++1
+P
+v=0
+ 
+v
+(s t
+i
+)
+ffv
+ (ffv+1)
+ 
+0
+ds
+ (1 ff)
++
+x
+0
+R
+t
+0
+(t s)
+ ff
+ 
++1
+P
+v=0
+ 
+v
+s
+ffv
+ (ffv+1)
+ 
+0
+ds
+ (1 ff)
++
+k+1
+P
+i=1
+I
+x
+(t
+i
+)
+R
+t
+t
+k+1
+(t s)
+ ff
+ 
++1
+P
+v=0
+ 
+v
+(s t
+i
+)
+ffv
+ (ffv+1)
+ 
+0
+ds
+ (1 ff)
++
+c
+D
+ff
+t
++
+k+1
+ (t)
+=
+1
+(1 ff) (1 ff)
++1
+P
+v=0
+ 
+v
+ (ff(v+1))
+h
+R
+t
+0
+(t s)
+1 ff
+ R
+s
+0
+(s w)
+ff(v+1) 1
+m(w)f
+x
+(w)dw
+ 
+0
+ds
+i
+0
++
+k
+P
+j=0
+j
+P
+i=1
+I
+x
+(t
+i
+)
++1
+P
+v=1
+ 
+v
+ (ffv)
+R
+t
+j+1
+t
+j
+(t s)
+ ff
+(s t
+i
+)
+ffv 1
+ds
+ (1 ff)
++
+x
+0
++1
+P
+v=1
+ 
+v
+ (ffv)
+R
+t
+0
+(t s)
+ ff
+s
+ffv 1
+ds
+ (1 ff)
++
+k+1
+P
+i=1
+I
+x
+(t
+i
+)
++1
+P
+v=1
+ 
+v
+ (ffv)
+R
+t
+t
+k+1
+(t s)
+ ff
+(s t
+i
+)
+ffv 1
+ds
+ (1 ff)
++
+c
+D
+ff
+t
++
+k+1
+ (t):
+By variable changing
+s t
+i
+t t
+i
+= w in second and fourth term and
+s
+t
+= w in third
+term, interchanging the sum order of the second term, integration by parts for
+the  rst term, we get
+m(t)f(t;x(t);
+c
+D
+p
+0
++
+x(t)) + u(t)
+=
+1
+ (2 ff)
++1
+P
+v=0
+ 
+v
+ (ff(v+1))
+h
+(1 ff)
+R
+t
+0
+(t s)
+ ff
+R
+s
+0
+(s w)
+ff(v+1) 1
+m(w)f
+x
+(w)dwds
+i
+0
++
+k
+P
+i=1
+k
+P
+j=i
+I
+x
+(t
+i
+)
++1
+P
+v=1
+ 
+v
+(t t
+i
+)
+ff(v 1)
+ (ffv)
+R
+t
+j+1
+ t
+i
+t t
+i
+t
+j
+ t
+i
+t t
+i
+(1 w)
+ ff
+w
+ffv 1
+dw
+ (1 ff)
++
+x
+0
++1
+P
+v=1
+ 
+v
+t
+ff(v 1)
+ (ffv)
+R
+1
+0
+(1 w)
+ ff
+w
+ffv 1
+ds
+ (1 ff)
++
+k+1
+P
+i=1
+I
+x
+(t
+i
+)
++1
+P
+v=1
+ 
+v
+(t t
+i
+)
+ff(v 1)
+ (ffv)
+R
+1
+t
+k+1
+ t
+i
+t t
+i
+(1 w)
+ ff
+w
+ffv 1
+dw
+ (1 ff)
++
+c
+D
+ff
+t
++
+k+1
+ (t)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 85Differential Equations and Control Processes, N 2, 2016
+=
+1
+ (2 ff)
++1
+P
+v=0
+ 
+v
+ (ff(v+1))
+h
+(1 ff)
+R
+t
+0
+(t s)
+ ff
+R
+s
+0
+(s w)
+ff(v+1) 1
+m(w)f
+x
+(w)dwds
+i
+0
++
+k
+P
+i=1
+I
+x
+(t
+i
+)
++1
+P
+v=1
+ 
+v
+(t t
+i
+)
+ff(v 1)
+ (ffv)
+R
+t
+k+1
+ t
+i
+t t
+i
+0
+(1 w)
+ ff
+w
+ffv 1
+dw
+ (1 ff)
++
+k+1
+P
+i=1
+I
+x
+(t
+i
+)
++1
+P
+v=1
+ 
+v
+(t t
+i
+)
+ff(v 1)
+ (ffv)
+R
+1
+t
+k+1
+ t
+i
+t t
+i
+(1 w)
+ ff
+w
+ffv 1
+dw
+ (1 ff)
++x
+0
++1
+P
+v=1
+ 
+v
+t
+ff(v 1)
+ (ff(v 1)+1)
++
+c
+D
+ff
+t
++
+k+1
+ (t)
+=
+1
+ (1 ff)
++1
+P
+v=0
+ 
+v
+ (ff(v+1))
+h
+R
+t
+0
+R
+t
+s
+(t s)
+ ff
+(s w)
+ff(v+1) 1
+dsm(w)f
+x
+(w)dw
+i
+0
++
+k
+P
+i=1
+I
+x
+(t
+i
+)
++1
+P
+v=1
+ 
+v
+(t t
+i
+)
+ff(v 1)
+ (ffv)
+R
+1
+0
+(1 w)
+ ff
+w
+ffv 1
+dw
+ (1 ff)
++
+I
+x
+(t
+k+1
+)
++1
+P
+v=1
+ 
+v
+(t t
+i
+)
+ff(v 1)
+ (ffv)
+R
+1
+0
+(1 w)
+ ff
+w
+ffv 1
+dw
+ (1 ff)
++x
+0
++1
+P
+v=1
+ 
+v
+t
+ff(v 1)
+ (ff(v 1)+1)
++
+c
+D
+ff
+t
++
+k+1
+ (t)
+=
+1
+ (1 ff)
++1
+P
+v=0
+ 
+v
+ (ff(v+1))
+h
+R
+t
+0
+(t s)
+ffv
+R
+1
+0
+(1 u)
+ ff
+u
+ff(v+1) 1
+dum(w)f
+x
+(w)dw
+i
+0
++
+k+1
+P
+i=1
+I
+x
+(t
+i
+)
++1
+P
+v=1
+ 
+v
+(t t
+i
+)
+ff(v 1)
+ (ff(v 1)+1)
++ x
+0
+E
+ff
+( t
+ff
+) +
+c
+D
+ff
+t
++
+k+1
+ (t)
+=
++1
+P
+v=0
+ 
+v
+ (ffv+1)
+h
+R
+t
+0
+(t s)
+ffv
+m(w)f
+x
+(w)dw
+i
+0
++ 
+k+1
+P
+i=1
+I
+x
+(t
+i
+)E
+ff
+( (t t
+i
+)
+ff
+)
++ x
+0
+E
+ff
+( t
+ff
+) +
+c
+D
+ff
+t
++
+k+1
+ (t)
+=m(t)f
+x
+(t) + 
+R
+t
+0
+(t s)
+ff 1
+E
+ff;ff
+( (t s)
+ff
+)m(s)f
+x
+(s)ds + x
+0
+E
+ff
+( t
+ff
+)
++ 
+k+1
+P
+j=1
+E
+ff
+( (t t
+j
+)
+ff
+)I
+x
+(t
+j
+) +
+c
+D
+ff
+t
++
+k+1
+ (t):
+It follows from (5) that
+c
+D
+ff
+t
++
+k+1
+ (t)   (t) = 0 for t2 (t
+k+1
+;t
+k+2
+]. Then (6)
+and Example 4.9 in [8] imply that  (t) =I(t
+k+1
+;x(t
+k+1
+);
+c
+D
+p
+0
++
+x(t
+k+1
+))E
+ff
+( (t 
+Electronic Journal. http://www.math.spbu.ru/diffjournal 86Differential Equations and Control Processes, N 2, 2016
+t
+k+1
+)
+ff
+). Substituting   into (5), we know that (4) holds for s = k + 1. By
+mathematical induction method, we know that (4) holds for all s2Z Z
+0
+.
+Step 2. Now assume u satis es (4). We will prove that u is a solution of
+(3) and u2X.
+We  rstly prove that u2X. In fact, we have
+ 
+ 
+ 
+R
+t
+0
+(t s)
+ff 1
+E
+ff;ff
+( (t s)
+ff
+)m(s)f
+x
+(s)ds
+ 
+ 
+ 
+ M
+r
+t
+ff+k
+1
+E
+ff;ff
+( t
+ff
+)B(ff;k
+1
++ 1)! 0;t! 0
++
+;
+ 
+ 
+ 
+R
+t
+0
+(t s)
+ff p 1
+E
+ff;ff p
+( (t s)
+ff
+)m(s)f
+x
+(s)ds
+ 
+ 
+ 
+ M
+r
+t
+ff p+k
+1
+E
+ff;ff p
+( t
+ff
+)B(ff p;k
+1
++ 1)! 0;t! 0
++
+:
+We know that lim
+t!0
++
+u(t) exists and is  nite. By a direct computation, it follows
+for t2 (t
+s
+;t
+s+1
+] that
+c
+D
+p
+0
++
+u(t) =
+1
+ (1 p)
+R
+t
+0
+(t s)
+ p
+u
+0
+(s)ds
+=
+s 1
+P
+j=0
+R
+t
+j+1
+t
+j
+(t s)
+ p
+ 
+R
+s
+0
+(s u)
+ff 1
+E
+ff;ff
+( (s u)
+ff
+)m(u)f
+x
+(u)du+x
+0
+E
+ff
+( s
+ff
+)+
+j
+P
+i=1
+I
+x
+(t
+i
+)E
+ff
+( (s t
+i
+)
+ff
+)
+ 0
+ds
+ (1 p)
++
+R
+t
+ts
+(t s)
+ p
+ 
+R
+s
+0
+(s u)
+ff 1
+E
+ff;ff
+( (s u)
+ff
+)m(u)f
+x
+(u)du+x
+0
+E
+ff
+( s
+ff
+)+
+s
+P
+i=1
+I
+x
+(t
+i
+)E
+ff
+( (s t
+i
+)
+ff
+)
+ 
+0
+ds
+ (1 p)
+=
+1
+ (1 p)
+R
+t
+0
+(t s)
+ p
+ R
+s
+0
+(s u)
+ff 1
+E
+ff;ff
+( (s u)
+ff
+)m(u)f
+x
+(u)du
+ 
+0
+ds
++
+1
+ (1 p)
+x
+0
+R
+t
+0
+(t s)
+ p
+[E
+ff
+( s
+ff
+)]
+0
+ds
++
+1
+ (1 p)
+s 1
+P
+j=0
+R
+t
+j+1
+t
+j
+(t s)
+ p
+ 
+j
+P
+i=1
+E
+ff
+( (s t
+i
+)
+ff
+)I
+x
+(t
+i
+)
+ 
+0
+ds
++
+1
+ (1 p)
+R
+t
+t
+s
+(t s)
+ p
+ 
+s
+P
+i=1
+E
+ff
+( (s t
+i
+)
+ff
+)I
+x
+(t
+i
+)
+ 
+0
+ds
+Electronic Journal. http://www.math.spbu.ru/diffjournal 87Differential Equations and Control Processes, N 2, 2016
+=
+1
+(1 p) (1 p)
+h
+R
+t
+0
+(t s)
+1 p
+ R
+s
+0
+(s u)
+ff 1
+E
+ff;ff
+( (s u)
+ff
+)m(u)f
+x
+(u)du
+ 
+0
+ds
+i
+0
++
+1
+ (1 p)
+x
+0
+R
+t
+0
+(t s)
+ p
+ 
++1
+P
+v=0
+ 
+v
+s
+ffv
+ (ffv+1)
+ 
+0
+ds
++
+1
+ (1 p)
+s 1
+P
+j=0
+R
+t
+j+1
+t
+j
+(t s)
+ p
+ 
+j
+P
+i=1
++1
+P
+v=0
+ 
+v
+(s t
+i
+)
+ff
+v
+ (ffv+1)
+I
+x
+(t
+i
+)
+ 
+0
+ds
++
+1
+ (1 p)
+R
+t
+t
+s
+(t s)
+ p
+ 
+s
+P
+i=1
++1
+P
+v=0
+ 
+v
+(s t
+i
+)
+ffv
+ (ffv+1)
+I
+x
+(t
+i
+)
+ 
+0
+ds
+(use integration by parts for  rst term)
+=
+1
+ (1 p)
+h
+R
+t
+0
+(t s)
+ p
+R
+s
+0
+(s u)
+ff 1
+E
+ff;ff
+( (s u)
+ff
+)m(u)f
+x
+(u)duds
+i
+0
++
+1
+ (1 p)
+x
+0
++1
+P
+v=1
+R
+t
+0
+(t s)
+ p 
+v
+s
+ffv 1
+ (ffv)
+ds
++
+1
+ (1 p)
+s 1
+P
+j=0
+j
+P
+i=1
+R
+t
+j+1
+t
+j
+(t s)
+ p
++1
+P
+v=1
+ 
+v
+(s t
+i
+)
+ffv 1
+ (ffv)
+I
+x
+(t
+i
+)ds
++
+1
+ (1 p)
+R
+t
+t
+s
+(t s)
+ p
+s
+P
+i=1
++1
+P
+v=1
+ 
+v
+(s t
+i
+)
+ffv 1
+ (ffv)
+I
+x
+(t
+i
+)ds
+=
+1
+ (1 p)
+h
+R
+t
+0
+R
+t
+u
+(t s)
+ p
+(s u)
+ff 1
+E
+ff;ff
+( (s u)
+ff
+)dsm(u)f
+x
+(u)du
+i
+0
++
+1
+ (1 p)
+x
+0
++1
+P
+v=1
+t
+ffv p
+R
+1
+0
+(1 w)
+ p 
+v
+w
+ffv 1
+ (ffv)
+dw
++
+1
+ (1 p)
+s 1
+P
+i=1
+s 1
+P
+j=i
+(t t
+i
+)
+ffv p
+R
+t
+j+1
+ t
+i
+t t
+i
+t
+j
+ t
+i
+t t
+i
+(1 w)
+ p
++1
+P
+v=1
+ 
+v
+w
+ffv 1
+ (ffv)
+I
+x
+(t
+i
+)dw
++
+1
+ (1 p)
+s
+P
+i=1
+(t t
+i
+)
+ffv p
+R
+1
+ts t
+i
+t t
+i
+(1 w)
+ p
++1
+P
+v=1
+ 
+v
+w
+ffv 1
+ (ffv)
+I
+x
+(t
+i
+)dw
+Electronic Journal. http://www.math.spbu.ru/diffjournal 88Differential Equations and Control Processes, N 2, 2016
+=
+1
+ (1 p)
+ 
++1
+P
+v=0
+ 
+v
+ (ff(v+1))
+R
+t
+0
+(t u)
+ff(v+1) p
+R
+1
+0
+(1 w)
+ p
+w
+ff(v+1) 1
+dwm(u)f
+x
+(u)du
+ 
+0
++ x
+0
+t
+ff p
+E
+ff;ff+1 p
+( t
+ff
+)
++
+1
+ (1 p)
+s 1
+P
+i=1
+(t t
+i
+)
+ffv p
+R
+ts t
+i
+t t
+i
+0
+(1 w)
+ p
++1
+P
+v=1
+ 
+v
+w
+ffv 1
+ (ffv)
+I
+x
+(t
+i
+)dw
++
+1
+ (1 p)
+s
+P
+i=1
+(t t
+i
+)
+ffv p
+R
+1
+ts t
+i
+t t
+i
+(1 w)
+ p
++1
+P
+v=1
+ 
+v
+w
+ffv 1
+ (ffv)
+I
+x
+(t
+i
+)dw
+=
+1
+ (1 p)
+ 
++1
+P
+v=0
+ 
+v
+ (ff(v+1))
+R
+t
+0
+(t u)
+ff(v+1) p
+R
+1
+0
+(1 w)
+ p
+w
+ff(v+1) 1
+dwm(u)f
+x
+(u)du
+ 
+0
++ x
+0
+t
+ff p
+E
+ff;ff+1 p
+( t
+ff
+) + 
+s
+P
+i=1
+I
+x
+(t
+i
+)(t t
+i
+)
+ff p
+E
+ff;ff+1 p
+( (t t
+i
+)
+ff
+)
+=
+R
+t
+0
+(t u)
+ff p 1
+E
+ff;ff p
+( (t u)
+ff
+)m(u)f
+x
+(u)du
++ x
+0
+t
+ff p
+E
+ff;ff+1 p
+( t
+ff
+) + 
+s
+P
+i=1
+I
+x
+(t
+i
+)(t t
+i
+)
+ff p
+E
+ff;ff+1 p
+( (t t
+i
+)
+ff
+);
+t2 (t
+s
+;t
+s+1
+];s2Z Z
+0
+:
+So lim
+t!0
++
+c
+D
+p
+0
++
+u(t) exists and is  nite.
+It is easy to see that uj
+(t
+s
+;t
+s+1
+]
+;
+c
+D
+p
+0
++
+uj
+(t
+s
+;t
+s+1
+]
+2 C
+0
+((t
+s
+;t
+s+1
+])(s 2 Z Z
+0
+) and
+limits lim
+t!t
++
+s
+u(t), lim
+t!t
++
+s
+c
+D
+p
+0
++
+u(t)(s2Z Z
+0
+) exist. Note
+E
+ff
+( t
+ff
+) =
++1
+P
+v=0
+ 
+v
+t
+ffv
+ (ffv+1)
+= 1 +
++1
+P
+v=1
+ 
+v
+t
+ffv
+ffv (ffv)
+  1 +
+ t
+ff
+ff
+E
+ff;ff
+( t
+ff
+);
+E
+ff;ff+1 p
+( t
+ff
+) =
++1
+P
+v=0
+ 
+v
+t
+ffv
+ (ffv+ff+1 p)
+ 
++1
+P
+v=0
+ 
+v
+t
+ffv
+(ffv+ff p) (ffv+ff p)
+ 
++1
+P
+v=0
+ 
+v
+t
+ffv
+(ff p) (ffv+ff p)
+=
+1
+ff p
+E
+ff;ff p
+( t
+ff
+):
+Electronic Journal. http://www.math.spbu.ru/diffjournal 89Differential Equations and Control Processes, N 2, 2016
+It follows that
+E
+ff
+( t
+ff
+)
+E
+ff;ff
+( t
+ff
+)
+   (ff) +
+ t
+ff
+ff
+;
+E
+ff;ff+1 p
+( t
+ff
+)
+E
+ff;ff p
+( t
+ff
+)
+ 
+1
+ff p
+: (7)
+Hence, we have, for t2 (t
+s
+;t
+s+1
+], use (7), that
+ju(t)j
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+ 
+1
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+R
+t
+0
+(t s)
+ff 1
+E
+ff;ff
+( (t s)
+ff
+)s
+k
+1
+M
+r
+ds
++
+jx
+0
+jE
+ff
+( t
+ff
+)
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
++
+1
+(1+t
+ 
+)E
+ff
+( t
+ff
+)
+s
+P
+j=1
+E
+ff
+( (t t
+j
+)
+ff
+)M
+rj
+ 
+E
+ff;ff
+( t
+ff
+)
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+R
+t
+0
+(t s)
+ff 1
+s
+k
+1
+M
+r
+ds +
+jx
+0
+jE
+ff
+( t
+ff
+)
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
++
+1
+(1+t
+ 
+)E
+ff
+( t
+ff
+)
+s
+P
+j=1
+E
+ff
+( t
+ff
+)M
+rj
+ 
+M
+r
+1+t
+ 
+t
+ff+k
+1
+B(ff;k
+1
++ 1) +
+jx
+0
+j
+1+t
+ 
+ 
+ (ff) +
+ t
+ff
+ff
+ 
++
+ (ff)+
+ t
+ff
+ff
+1+t
+ 
++1
+P
+j=1
+M
+rj
+:
+So lim
+t!+1
+ju(t)j
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+= 0: Similarly we get, fort2 (t
+s
+;t
+s+1
+] and using (7), that
+t
+p
+j
+c
+D
+p
+0
++
+u(t)j
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+ 
+t
+p
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+R
+t
+0
+(t u)
+ff p 1
+E
+ff;ff p
+( (t u)
+ff
+)u
+k
+1
+M
+r
+du
++
+ jx
+0
+jt
+ff
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+E
+ff;ff+1 p
+( t
+ff
+)
++ 
+t
+p
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+s
+P
+j=1
+M
+rj
+(t t
+j
+)
+ff p
+E
+ff;ff+1 p
+( (t t
+i
+)
+ff
+)
+ 
+t
+p
+E
+ff;ff p
+( t
+ff
+)
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+R
+t
+0
+(t u)
+ff p 1
+u
+k
+1
+M
+r
+du
++
+ jx
+0
+jt
+ff
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+E
+ff;ff+1 p
+( t
+ff
+) + 
+t
+ff
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
++1
+P
+j=1
+M
+rj
+E
+ff;ff+1 p
+( t
+ff
+)
+ 
+t
+ff+k
+1
+(ff p)(1+t
+ 
+)
+B(ff p;k
+1
++ 1)M
+r
++
+ jx
+0
+jt
+ff
+(ff p)(1+t
+ 
+)
++
+ t
+ff
+(ff p)(1+t
+ 
+)
++1
+P
+j=1
+M
+rj
+:
+So lim
+t!+1
+t
+p
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+c
+D
+p
+0
++
+u(t) = 0. Then u2X.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 90Differential Equations and Control Processes, N 2, 2016
+We secondly prove that u satis es the system (3). We know easily that
+u(0) =x
+0
+. From (4), it is obviously that  u(t
+s
+) =I(t
+s
+;x(t
+s
+);
+c
+D
+p
+0
++
+x(t
+s
+)) for all
+s2 Z. By direct computation, we have for t2 (t
+j
+;t
+j+1
+](j2 Z) similarly to
+above discussion that
+c
+D
+ff
+0
++
+u(t) =
+1
+ (1 ff)
+R
+t
+0
+(t s)
+ ff
+u
+0
+(s)ds
+=
+1
+ (1 ff)
+j
+P
+i=1
+R
+t
+i
+t
+i 1
+(t s)
+ ff
+u
+0
+(s)ds +
+1
+ (1 ff)
+R
+t
+t
+j
+(t s)
+ ff
+u
+0
+(s)ds
+=
+1
+ (1 ff)
+j
+P
+i=1
+R
+t
+i
+t
+i 1
+(t s)
+ ff
+ R
+s
+0
+(s u)
+ff 1
+E
+ff;ff
+( (s u)
+ff
+)m(u)f
+x
+(u)du
++x
+0
+E
+ff
+( s
+ff
+) +
+i 1
+P
+j=1
+E
+ff
+( (t t
+j
+)
+ff
+)I
+x
+(t
+j
+)
+!
+0
+ds
++
+1
+ (1 ff)
+R
+t
+t
+j
+(t s)
+ ff
+ R
+s
+0
+(s u)
+ff 1
+E
+ff;ff
+( (s u)
+ff
+)m(u)f
+x
+(u)du
++x
+0
+E
+ff
+( s
+ff
+) +
+j
+P
+i=1
+E
+ff
+( (s t
+i
+)
+ff
+)I
+x
+(t
+i
+)
+ 
+0
+ds
+=
+R
+t
+0
+(t s)
+ ff
+(
+R
+s
+0
+(s u)
+ff 1
+E
+ff;ff
+( (s u)
+ff
+)m(u)f
+x
+(u)du
+)
+0
+ds
+ (1 ff)
++
+j
+P
+i=1
+i 1
+P
+j=1
+I
+x
+(t
+j
+)
+R
+t
+i
+t
+i 1
+(t s)
+ ff
+(E
+ff
+( (t t
+j
+)
+ff
+))
+0
+ds
+ (1 ff)
++
+x
+0
+R
+t
+0
+(t s)
+ ff
+(E
+ff
+( s
+ff
+))
+0
+ds
+ (1 ff)
++
+j
+P
+i=1
+I
+x
+(t
+i
+)
+R
+t
+t
+j
+(t s)
+ ff
+(E
+ff
+( (s t
+i
+)
+ff
+))
+0
+ds
+ (1 ff)
+= u(t) +m(t)f(t;x(t);
+c
+D
+p
+0
++
+x(t)):
+Thus u2X and u is a solution of (3). This completes the proof.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 91Differential Equations and Control Processes, N 2, 2016
+Let us de ne an operator T on X by
+(Tx)(t) =
+R
+t
+0
+(t u)
+ff 1
+E
+ff;ff
+( (t u)
+ff
+)m(u)f(u;x(u);
+c
+D
+p
+0
++
+x(u))du
++x
+0
+E
+ff
+( t
+ff
+) +
+s
+P
+j=1
+E
+ff
+( (t t
+j
+)
+ff
+)I(t
+j
+;x(t
+j
+);
+c
+D
+p
+0
++
+x(t
+j
+)
+(8)
+for t2 (t
+s
+;t
+s+1
+];s2Z Z
+0
+:
+Lemma 2.4. Suppose that f is a I-Carath  eodory function and I a discrete
+I-Carath  eodory function. Then
+(i) T :X!X is well de ned;
+(ii) the  xed point of the operatorT coincides with the solution of IVP(1);
+(iii) T :X!X is completely continuous.
+Proof. From Lemma 2.1,X is a Banach space. (i) the proof comes from Step
+2 in the proof of Lemma 2.3. (ii) from Lemma 2.3, the proof is obvious. (iii)
+the proof is divided into following three steps:
+Step 1. Prove thatT is continuous. Use the facts thatf is a Carath  eodory
+function and I a discrete Carath  eodory function.
+Step 2. LetM be a bounded subset ofX. Prove thatTM is bounded set.
+Use the facts thatf is a Carath  eodory function and I a discrete Carath  eodory
+function.
+Step 3. Let M be a bounded subset of X. Use Lemma 2.2, prove that
+TM is relatively compact based upon Lemma 2.2. Use the facts that f is a
+Carath  eodory function andI a discrete Carath  eodory function. The details are
+omitted.
+Let
+ 
+0
+(t) =
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff+k
+2
++l
+2
+E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)
+s+1
+Q
+v=1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+);
+t2 (t
+s
+;t
+s+1
+];s2Z Z
+0
+;
+and
+ 
+1
+(t) = [ (t
+s+1
+ t
+s
+)
+ff p
++ 1]
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff p+k
+2
++l
+2
+ 
+[E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+) + E
+ff;ff p
+( (t
+j+1
+ t
+j
+)
+ff
+)] 
+Electronic Journal. http://www.math.spbu.ru/diffjournal 92Differential Equations and Control Processes, N 2, 2016
+s
+Q
+v=1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)E
+ff;ff+1 p
+( (t t
+s
+)
+ff
+); t2 (t
+s
+;t
+s+1
+];s2Z Z
+0
+: (9)
+Y =
+8
+>
+>
+>
+<
+>
+>
+>
+:
+x :
+yj
+(t
+s
+;t
+s+1
+]
+;
+c
+D
+p
+ 
++
+yj
+(t
+s
+;t
+s+1
+]
+=
+c
+D
+p
+t
++
+s
+y2C
+0
+((t
+s
+;t
+s+1
+]; I R);s2Z Z
+0
+;
+lim
+t!t
++
+s
+y(t); lim
+t!t
++
+s
+c
+D
+p
+t
++
+s
+y(t) exist, s2Z Z
+0
+;
+lim
+t!+1
+y(t)
+ 
+0
+(t)
+; lim
+t!+1
+c
+D
+p
+ 
++
+y(t)
+ 
+1
+(t)
+exists
+9
+>
+>
+>
+=
+>
+>
+>
+;
+:
+For y2Y , let z
+0
+;z
+1
+be de ned by de ned by (11), the norm by
+jjyjj =jjyjj
+Y
+= max
+(
+sup
+t2(0;+1)
+jy(t)j
+ 
+0
+(t)
+; sup
+t2(0;+1)
+j
+c
+D
+p
+ 
++
+y(t)j
+ 
+1
+(t)
+)
+:
+De nition 2.5. h : (0; +1)  I R
+2
+! I R is called a II-Carath  eodory function
+if it satis es the following assumptions:
+(i) t!h (t;  
+0
+(t)x; 
+1
+(t)y) is continuous on (t
+s
+;t
+s+1
+](s2Z Z
+0
+) and bounded
+on I R,
+(ii) (x;y)!h (t;  
+0
+(t)x; 
+1
+(t)y) is continuous on I R;
+(iii) for each r > 0 there exists a constant M
+r
+  0 such thatjxj;jyj  r
+imply
+jh (t;  
+0
+(t)x; 
+1
+(t)y)j M
+r
+;t2 (0; +1):
+De nition 2.6. H :ft
+s
+:s2Z Zg I R
+2
+! I R is called a discrete II-Carath  eodory
+function if it satis es the following assumptions:
+(i) (x;y)!H (t
+s
+;  
+0
+(t
+s
+)x; 
+1
+(t
+s
+)y) is continuous on I R for all s2Z Z;
+(ii) for each r > 0 there exists a constant M
+rs
+  0 with
++1
+P
+s=1
+M
+rs
+< +1
+such thatjxj;jyj r imply
+jH (t
+s
+;  
+0
+(t
+s
+)x; 
+1
+(t
+s
+)y)j M
+rs
+;s2Z Z:
+Lemma 2.6. Y is a Banach space withjj jj
+Y
+de ned.
+Proof. The proof is similar to that used in the proof of Lemma 2.1. The details
+are omitted.
+Lemma 2.7. Let M be a subset of Y . Then M is relatively compact if and
+only if the following conditions are satis ed:
+(i) both
+n
+t!
+y(t)
+ 
+0
+(t)
+:y2M
+o
+and
+n
+t!
+c
+D
+p
+ +
+y(t)
+ 
+1
+(t)
+:y2M
+o
+are uniformly
+bounded,
+Electronic Journal. http://www.math.spbu.ru/diffjournal 93Differential Equations and Control Processes, N 2, 2016
+(ii) both
+n
+t!
+y(t)
+ 
+0
+(t)
+:y2M
+o
+and
+n
+t!
+c
+D
+p
+ +
+y(t)
+ 
+1
+(t)
+:y2M
+o
+are equicontinu-
+ous in any subinterval (t
+s
+;t
+s+1
+](s2Z Z
+0
+),
+(iii) both
+n
+t!
+y(t)
+ 
+0
+(t)
+:y2M
+o
+and
+n
+t!
+c
+D
+p
+ +
+y(t)
+ 
+1
+(t)
+:y2M
+o
+are equi-
+convergent as t! +1.
+Proof. The proof is similar to that used in the proof of Lemma 2.2. The details
+are omitted.
+Lemma 2.8. Suppose that x2Y . Then u2Y is a solution of
+8
+>
+>
+<
+>
+>
+:
+c
+D
+ff
+t
++
+s
+u(t)  u(t) =n(t)g(t;x(t);
+c
+D
+p
+t
++
+s
+x(t));a:e:;t2 (t
+s
+;t
+s+1
+);s2Z Z
+0
+;
+u(0) =x
+0
+;  u(t
+s
+) =J(t
+s
+;x(t
+s
+);
+c
+D
+p
+t
++
+s 1
+x(t
+s
+));s2Z Z:
+(10)
+if and only if
+u(t) =
+8
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+:
+R
+t
+0
+(t v)
+ff 1
+E
+ff;ff
+( (t v)
+ff
+)n(v)g(v;x(v);
+c
+D
+p
+0
++
+x(v))dv +x
+0
+E
+ff
+( t
+ff
+);
+t2 (t
+0
+;t
+1
+];
+R
+t
+t
+s
+(t v)
+ff 1
+E
+ff;ff
+( (t v)
+ff
+)n(v)g(v;x(v);
+c
+D
+p
+t
++
+s
+x(v))dv
++
+ 
+x
+0
+s
+Q
+v=1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
++
+s
+P
+j=1
+ 
+s
+Q
+v=j+1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+!
+J(t
+j
+;x(t
+j
+);
+c
+D
+p
+t
++
+j 1
+x(t
+j
+))
++
+s
+P
+j=1
+ 
+s
+Q
+v=j+1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+!
+ 
+R
+t
+j
+t
+j 1
+(t
+j
+ v)
+ff 1
+E
+ff;ff
+( (t
+j
+ v)
+ff
+)n(v)g(v;x(v);
+c
+D
+p
+t
++
+j 1
+x(v))dv
+i
+ 
+E
+ff
+( (t t
+s
+)
+ff
+);
+t2 (t
+s
+;t
+s+1
+];s2Z Z;x2X:
+(11)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 94Differential Equations and Control Processes, N 2, 2016
+Proof. In fact, forx2Y , we havejjyjj =r< +1. Sinceg is a II-Carath  eodory
+function and J a discrete II-Carath  eodory function, we know that there exists
+M
+r
+  0, M
+rs
+  0 such that
+jf(t;x(t);
+c
+D
+p
+t
++
+s
+x(t))j M
+r
+;t2 (t
+s
+;t
+s+1
+];s2Z Z
+0
+;
+jJ(t
+s
+;x(t
+s
+);
+c
+D
+p
+t
++
+s 1
+x(t
+s
+))j M
+rs
+;s2Z Z
+0
+:
+Then
+ 
+ 
+ 
+R
+t
+t
+s
+(t v)
+ff 1
+E
+ff;ff
+( (t v)
+ff
+)n(v)g(v;x(v);
+c
+D
+p
+t
++
+s
+x(v))dv
+ 
+ 
+ 
+ M
+r
+R
+t
+t
+s
+(t v)
+ff 1
+E
+ff;ff
+( (t v)
+ff
+)(v t
+s
+)
+k
+2
+(t
+s+1
+ v)
+l
+2
+dv
+ M
+r
+R
+t
+t
+s
+(t v)
+ff+l
+2
+ 1
+E
+ff;ff
+( (t
+s+1
+ t
+s
+)
+ff
+)(v t
+s
+)
+k
+2
+dv
+ M
+r
+(t
+s+1
+ t
+s
+)
+ff+k
+2
++l
+2
+E
+ff;ff
+( (t
+s+1
+ t
+s
+)
+ff
+)B(ff +l
+2
+;k
+2
++ 1):
+Furthermore, we have
+ 
+ 
+ 
+R
+t
+t
+s
+(t v)
+ff p 1
+E
+ff;ff p
+( (t v)
+ff
+)n(v)g(v;x(v);
+c
+D
+p
+t
++
+s
+x(v))dv
+ 
+ 
+ 
+ M
+r
+(t
+s+1
+ t
+s
+)
+ff+k
+2
++l
+2
+ p
+E
+ff;ff p
+( (t
+s+1
+ t
+s
+)
+ff
+)B(ff +l
+2
+ p;k
+2
++ 1):
+If u is a solution of (10), then from Example 4.9 in [8] we have
+u(t) =
+R
+t
+0
+(t v)
+ff 1
+E
+ff;ff
+( (t v)
+ff
+)n(v)g(v;x(v);
+c
+D
+p
+t
++
+s
+x(v))dv +x
+0
+E
+ff
+( t
+ff
+);
+t2 (t
+0
+;t
+1
+]:
+When t2 (t
+s
+;t
+s+1
+](s  1), we have similarly that there exist numbers c
+s
+2 I R
+such that
+u(t) =
+R
+t
+t
+s
+(t v)
+ff 1
+E
+ff;ff
+( (t v)
+ff
+)n(v)g(v;x(v);
+c
+D
+p
+t
++
+s
+x(v))dv
++c
+s
+E
+ff
+( (t t
+s
+)
+ff
+); t2 (t
+s
+;t
+s+1
+]:
+By  u(t
+s
+) =J(t
+s
+;x(t
+s
+);
+c
+D
+p
+t
++
+s 1
+x(t
+s
+)), we see
+c
+s
+=c
+s 1
+E
+ff
+( (t
+s
+ t
+s 1
+)
+ff
+) +J(t
+s
+;x(t
+s
+);
+c
+D
+p
+t
++
+s 1
+x(t
+s
+))
++
+R
+t
+s
+t
+s 1
+(t
+s
+ v)
+ff 1
+E
+ff;ff
+( (t
+s
+ v)
+ff
+)n(v)g(v;x(v);
+c
+D
+p
+t
++
+s 1
+x(v))dv:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 95Differential Equations and Control Processes, N 2, 2016
+It follows that
+c
+s
+=x
+0
+s
+Q
+v=1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
++
+s
+P
+j=1
+ 
+s
+Q
+v=j+1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+!
+J(t
+j
+;x(t
+j
+);
+c
+D
+p
+t
++
+j 1
+x(t
+j
+))
++
+s
+P
+j=1
+ 
+s
+Q
+v=j+1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+!
+ 
+R
+t
+j
+t
+j 1
+(t
+j
+ w)
+ff 1
+E
+ff;ff
+( (t
+j
+ w)
+ff
+)n(w)g(w;x(w);
+c
+D
+p
+t
++
+j 1
+x(w))dw:
+Then u satis es (11). We have furthermore that
+c
+D
+p
+t
++
+s
+u(t) =
+8
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+:
+R
+t
+0
+(t w)
+ff p 1
+E
+ff;ff p
+( (t w)
+ff
+)n(w)g(w;x(w);
+c
+D
+p
+0
++
+x(w))dw
++ x
+0
+t
+ff p
+E
+ff;ff+1 p
+( t
+ff
+); t2 (t
+0
+;t
+1
+];
+R
+t
+t
+s
+(t w)
+ff p 1
+E
+ff;ff p
+( (t w)
+ff
+)n(w)g(w;x(w);
+c
+D
+p
+t
++
+s
+x(w))dw
++ (t t
+s
+)
+ff p
+ 
+x
+0
+s
+Q
+v=1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
++
+s
+P
+j=1
+ 
+s
+Q
+v=j+1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+!
+J(t
+j
+;x(t
+j
+);
+c
+D
+p
+t
++
+j 1
+x(t
+j
+))
++
+s
+P
+j=1
+ 
+s
+Q
+v=j+1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+!
+ 
+R
+t
+j
+t
+j 1
+(t
+j
+ w)
+ff 1
+E
+ff;ff
+( (t
+j
+ w)
+ff
+)n(w)g(w;x(w);
+c
+D
+p
+t
++
+j 1
+x(w))dw
+i
+ 
+E
+ff;ff+1 p
+( (t t
+s
+)
+ff
+);t2 (t
+s
+;t
+s+1
+];s2Z Z;x2X:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 96Differential Equations and Control Processes, N 2, 2016
+If u satis es (11), we have
+yj
+(t
+s
+;t
+s+1
+]
+;
+c
+D
+p
+ 
++
+yj
+(t
+s
+;t
+s+1
+]
+=
+c
+D
+p
+t
++
+s
+y2C
+0
+((t
+s
+;t
+s+1
+]; I R);
+lim
+t!t
++
+s
+y(t); lim
+t!t
++
+s
+c
+D
+p
+t
++
+s
+y(t) exist, s2Z Z
+0
+:
+Note
+s+1
+Q
+v=1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)  1, we have
+ju(t)j
+ 
+0
+(t)
+ 
+M
+r
+ 
+0
+(t)
+R
+t
+t
+s
+(t w)
+ff 1
+E
+ff;ff
+( (t w)
+ff
+)(w s
+s
+)
+k
+2
+(t
+s+1
+ w)
+l
+2
+dw
++
+1
+ 
+0
+(t)
+"
+jx
+0
+j
+s
+Q
+v=1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+) +
+s
+P
+j=1
+M
+rj
+ 
+s
+Q
+v=j+1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+!
++M
+r
+s
+P
+j=1
+ 
+s
+Q
+v=j+1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+!
+ 
+R
+t
+j
+t
+j 1
+(t
+j
+ w)
+ff 1
+E
+ff;ff
+( (t
+j
+ w)
+ff
+)(w s
+s
+)
+k
+2
+(t
+s+1
+ w)
+l
+2
+dw
+i
+E
+ff
+( (t
+s+1
+ t
+s
+)
+ff
+)
+ 
+M
+r
+E
+ff;ff
+( (t
+s+1
+ t
+s
+)
+ff
+)
+R
+t
+ts
+(t w)
+ff 1
+(w s
+s
+)
+k
+2
+(t
+s+1
+ w)
+l
+2
+dw
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff+k
+2
++l
+2
+E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)
++
+jx
+0
+j+
++1
+P
+j=1
+M
+rj
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff+k
+2
++l
+2
+E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)
++
+M
+r
+s
+P
+j=1
+E
+ff;ff
+( (t
+j
+ t
+j 1
+)
+ff
+)
+R
+t
+j
+t
+j 1
+(t
+j
+ w)
+ff 1
+(w s
+s
+)
+k
+2
+(t
+s+1
+ w)
+l
+2
+dw
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff+k
+2
++l
+2
+E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)
+ 
+jx
+0
+j+
++1
+P
+j=1
+M
+rj
++M
+r
+s+1
+P
+j=1
+E
+ff;ff
+( (t
+j
+ t
+j 1
+)
+ff
+)(t
+j
+ t
+j 1
+)
+ff+k
+2
++l
+2
+B(ff+l
+2
+;k
+2
++1)
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff+k
+2
++l
+2
+E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 97Differential Equations and Control Processes, N 2, 2016
+Use Stolz theorem, we have
+lim
+s!+1
+jx
+0
+j+
++1
+P
+j=1
+M
+rj
++M
+r
+s+1
+P
+j=1
+E
+ff;ff
+( (t
+j
+ t
+j 1
+)
+ff
+)(t
+j
+ t
+j 1
+)
+ff+k
+2
++l
+2
+B(ff+l
+2
+;k
+2
++1)
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff+k
+2
++l
+2
+E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)
+= lim
+s!+1
+E
+ff;ff
+( (t
+s+1
+ t
+s
+)
+ff
+)(t
+s+1
+ t
+s
+)
+ff+k
+2
++l
+2
+B(ff+l
+2
+;k
+2
++1)
+t
+s+1
+(t
+s+1
+ t
+s
+)
+ff+k
+2
++l
+2
+E
+ff;ff
+( (t
+s+1
+ t
+s
+)
+ff
+)
+= lim
+s!+1
+B(ff+l
+2
+;k
+2
++1)
+t
+s+1
+= 0;
+we know that lim
+t!+1
+ju(t)j
+ 
+0
+(t)
+= 0. Similarly we can prove that
+jcD
+p
+ 
++
+u(t)j
+ 
+1
+(t)
+ 
+jx
+0
+j+
++1
+P
+j=1
+M
+rj
++M
+r
+s+1
+P
+j=1
+[E
+ff;ff p
+( (t
+j
+ t
+j 1
+)
+ff
+)+E
+ff;ff
+( (t
+j
+ t
+j 1
+)
+ff
+)](t
+j
+ t
+j 1
+)
+ff+k
+2
++l
+2
+B(ff+l
+2
+;k
+2
++1)
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff p+k
+2
++l
+2
+[E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)+E
+ff;ff p
+( (t
+j+1
+ t
+j
+)
+ff
+)]
+:
+Then Stolz theorem implies that lim
+t!+1
+j
+c
+D
+p
+ 
++
+u
+(ts;t
+s+1
+]
+(t)j
+ 
+1
+(t)
+= 0: It follows that
+u2 Y . The remainder of the proof is similar to that used in the proof of
+Lemma 2.3. The details are omitted.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 98Differential Equations and Control Processes, N 2, 2016
+Let us de ne T
+1
+:Y!Y by
+(T
+1
+x)(t) =
+8
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+:
+R
+t
+0
+(t u)
+ff 1
+E
+ff;ff
+( (t u)
+ff
+)n(u)g(u;x(u);
+c
+D
+p
+t
++
+0
+x(u))du +x
+0
+E
+ff
+( t
+ff
+);
+t2 (t
+0
+;t
+1
+];
+R
+t
+t
+s
+(t u)
+ff 1
+E
+ff;ff
+( (t u)
+ff
+)n(u)g(u;x(u);
+c
+D
+p
+t
++
+s
+x(u))du
++
+ 
+x
+0
+s
+Q
+v=1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
++
+s
+P
+j=1
+ 
+s
+Q
+v=j+1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+!
+J(t
+j
+;x(t
+j
+);
+c
+D
+p
+t
++
+j 1
+x(t
+j
+))
++
+s
+P
+j=1
+ 
+s
+Q
+v=j+1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+!
+ 
+R
+t
+j
+t
+j 1
+(t
+j
+ u)
+ff 1
+E
+ff;ff
+( (t
+j
+ u)
+ff
+)n(u)g(u;x(u);
+c
+D
+p
+t
++
+j 1
+x(u))du
+i
+E
+ff
+( (t t
+s
+)
+ff
+);
+t2 (t
+s
+;t
+s+1
+];s2Z Z;x2X:
+(12)
+Lemma 2.9. Suppose that g is a II-Carath  eodory function and J a discrete
+II-Carath  eodory function. Then
+(i) T
+1
+:Y!Y is well de ned;
+(ii) the  xed point of the operatorT
+1
+coincides with the solution of IVP(2);
+(iii) T
+1
+:Y!Y is completely continuous.
+Proof. By Lemma 2.6, Y is a Banach space. Use Lemma 2.7 and Lemma
+2.8, it is similar to those of the proofs of (i), (ii) and (iii) in Lemma 2.4 and
+details are omitted.
+3 Main theorems
+In this section, we are in the position to prove the existence and uniqueness
+results for solutions of IVP(1) and IVP(2) respectively. We  rstly present the
+Electronic Journal. http://www.math.spbu.ru/diffjournal 99Differential Equations and Control Processes, N 2, 2016
+main assumptions which will be used in Theorem 3.1 and Theorem 3.2 for
+existence of solutions IVP(1).
+(H1). Let   > maxf k
+1
+;ff + k
+1
+;ffg. Suppose that there exist non-
+decreasing functions  ; 	 : [0; +1)  [0; +1)! [0; +1) such that
+f is a I-Carath  eodory function and there exists a piecewise continuous
+bounded function r : (0; +1)! I R such that
+ 
+ 
+ f
+ 
+t; (1 +t
+ 
+)E
+ff;ff
+( t
+ff
+)u;
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+t
+p
+v
+ 
+ r(t)
+ 
+ 
+    (juj;jvj);
+t2 (0; +1);u;v2 I R:
+I is a discrete I-Carath  eodory function and there exists a sequencefI
+s
+g and
+a sequencef 
+s
+g with
++1
+P
+s=1
+ 
+s
+< +1 such that
+ 
+ 
+ I
+ 
+t
+s
+; (1 +t
+ 
+s
+)E
+ff;ff
+( t
+ff
+s
+)u;
+(1+t
+ 
+s
+)E
+ff;ff p
+( t
+ff
+s
+)
+t
+p
+s
+v
+ 
+ I
+s
+ 
+ 
+   
+s
+	(juj;jvj);
+s2Z Z;u;v2 I R:
+(H2). Let   > maxf k
+1
+;ff +k
+1
+;ffg. Suppose that  
+1i
+(i = 1; 2;    ;m)
+with  
+i
+=  
+1i
++ 
+2i
+> 0(i = 1; 2;:::;m) and  
+1
+   
+2
+       
+m
+. The following
+assumptions are satis ed:
+f is a I-Carath  eodory function and there exist nonnegative numbersA
+i
+(i =
+1; 2;:::;m), piecewise continuous bounded functionr : (0; +1)!R such that
+ 
+ 
+ f
+ 
+t; (1 +t
+ 
+)E
+ff;ff
+( t
+ff
+)u;
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+t
+p
+v
+ 
+ r(t)
+ 
+ 
+  
+m
+P
+i=1
+A
+i
+juj
+ 
+1i
+jvj
+ 
+2i
+hold for all t2 (0; +1);u;v2 I R.
+I is a discrete I-Carath  eodory function and there exist nonnegative numbers
+B
+i
+(i = 1; 2;:::;m), a sequencefI
+s
+g and a sequencef 
+s
+g with
++1
+P
+j=1
+ 
+j
+< +1
+such that
+ 
+ 
+ I
+ 
+t
+s
+; (1 +t
+ 
+s
+)E
+ff;ff
+( t
+ff
+s
+)u;
+(1+t
+ 
+s
+)E
+ff;ff p
+( t
+ff
+s
+)
+t
+p
+s
+v
+ 
+ I
+s
+ 
+ 
+   
+s
+m
+P
+i=1
+B
+i
+juj
+ 
+1i
+jvj
+ 
+2i
+hold for all s2Z Z;u;v2 I R.
+Let
+ (t) =
+R
+t
+0
+(t s)
+ff 1
+E
+ff;ff
+( (t s)
+ff
+)m(s)r(s)ds +x
+0
+E
+ff
+( t
+ff
+)
++
+s
+P
+j=1
+E
+ff
+( (t t
+j
+)
+ff
+)I
+j
+;t2 (t
+s
+;t
+s+1
+];s2Z Z
+0
+:
+(13)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 100Differential Equations and Control Processes, N 2, 2016
+Then
+c
+D
+p
+0
++
+ (t) =
+R
+t
+0
+(t u)
+ff p 1
+E
+ff;ff p
+( (t u)
+ff
+)m(u)r(u)du
++ x
+0
+t
+ff p
+E
+ff;ff+1 p
+( t
+ff
+) + 
+s
+P
+i=1
+I
+i
+(t t
+i
+)
+ff p
+E
+ff;ff+1 p
+( (t t
+i
+)
+ff
+);
+t2 (t
+s
+;t
+s+1
+];s2Z Z
+0
+:
+(14)
+Denote
+M = max
+n
+(  ff k
+1
+)B(ff;k
+1
++1)
+ 
+;
+(  ff k
+1
+)B(ff p;k
+1
++1)
+ (ff p)
+o
+;
+N = max
+ 
+ 
+ (ff) +
+ 
+ff
+  ff
+ 
+ 
+ff
+  ff
+ 
+ff= 
+ 
+;
+ (  p)
+ (ff p)
+ 
+p
+  p
+ 
+p= 
+ 
+:
+Theorem 3.1. Suppose that (H1) holds. Then IVP(1) has at least one solution
+if
+M
+ 
+ff+k
+1
+  ff k
+1
+ 
+(ff+k
+1
+)= 
+  (r +jj jj;r +jj jj) +N
++1
+P
+j=1
+ 
+j
+	 (r +jj jj;r +jj jj) r
+(15)
+has a positive solution r
+0
+> 0.
+Proof. Let X and T be de ned in Section 2. From Lemma 2.3 and 2.4, we
+need to prove that T has at least one  xed point in X. By (7) and direct
+computation, we have
+c
+D
+p
+0
++
+(Tx)(t) =
+R
+t
+0
+(t u)
+ff p 1
+E
+ff;ff p
+( (t u)
+ff
+)m(u)f
+x
+(u)du
++ x
+0
+t
+ff p
+E
+ff;ff+1 p
+( t
+ff
+) + 
+s
+P
+i=1
+I
+x
+(t
+i
+)(t t
+i
+)
+ff p
+E
+ff;ff+1 p
+( (t t
+i
+)
+ff
+);
+t2 (t
+s
+;t
+s+1
+];s2Z Z
+0
+:
+(16)
+It is easy to show that
+sup
+t2(0;+1)
+t
+a
+1+t
+b
+=
+b a
+b
+ 
+a
+b a
+ 
+a=b
+; b>a> 0;
+E
+ff
+( (t t
+j
+)
+ff
+)
+E
+ff;ff
+( t
+ff
+)
+   (ff) +
+ t
+ff
+ff
+:
+(17)
+One has for t2 (t
+s
+;t
+s+1
+] from (8) and (12), (16) and (7), that
+j(Tx)(t)  (t)j
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+ 
+1
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+R
+t
+0
+(t s)
+ff 1
+E
+ff;ff
+( (t s)
+ff
+)jm(s)jf
+x
+(s) r(s)jds
+Electronic Journal. http://www.math.spbu.ru/diffjournal 101Differential Equations and Control Processes, N 2, 2016
++
+1
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+s
+P
+j=1
+E
+ff
+( (t t
+j
+)
+ff
+)jI
+x
+(t
+j
+) I
+j
+j
+ 
+1
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+R
+t
+0
+(t s)
+ff 1
+E
+ff;ff
+( (t s)
+ff
+)s
+k
+1
+ 
+ 
+jx(s)j
+(1+s
+ 
+)E
+ff;ff
+( s
+ff
+)
+;
+s
+p
+j
+c
+D
+p
+0
++
+x(s)j
+(1+s
+ 
+)E
+ff;ff
+( s
+ff
+)
+ 
+ds
++
+1
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+s
+P
+j=1
+E
+ff
+( (t t
+j
+)
+ff
+)	
+ 
+jx(t
+j
+)j
+(1+t
+ 
+j
+)E
+ff;ff
+( t
+ff
+j
+)
+;
+t
+p
+j
+j
+c
+D
+p
+0
++
+x(t
+j
+)j
+(1+t
+ 
+j
+)E
+ff;ff
+( t
+ff
+j
+)
+ 
+ 
+1
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+R
+t
+0
+(t s)
+ff 1
+E
+ff;ff
+( (t s)
+ff
+)s
+k
+1
+ds  (jjxjj;jjxjj)
++
+1
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+s
+P
+j=1
+E
+ff
+( (t t
+j
+)
+ff
+) 
+j
+	 (jjxjj;jjxjj)
+ 
+1
+1+t
+ 
+R
+t
+0
+(t s)
+ff 1
+s
+k
+1
+ds  (jjxjj;jjxjj) +
+ (ff)+
+ t
+ff
+ff
+1+t
+ 
+	 (jjxjj;jjxjj)
++1
+P
+j=1
+ 
+j
+ 
+t
+ff+k
+1
+1+t
+ 
+B(ff;k
+1
++ 1)  (jjxjj;jjxjj) +
+ 
+ (ff) +
+ t
+ff
+ff(1+t
+ 
+)
+ 
+	 (jjxjj;jjxjj)
++1
+P
+j=1
+ 
+j
+ 
+  ff k
+1
+ 
+ 
+ff+k
+1
+  ff k
+1
+ 
+(ff+k
+1
+)= 
+B(ff;k
+1
++ 1)  (jjxjj;jjxjj)
++
+ 
+ (ff) +
+ 
+ff
+  ff
+ 
+ 
+ff
+  ff
+ 
+ff= 
+ 
+	 (jjxjj;jjxjj)
++1
+P
+j=1
+ 
+j
+:
+Furthermore, we have from (13) and (15), (16) and (7), that
+t
+p
+j
+c
+D
+p
+0
++
+(Tx)(t) 
+c
+D
+p
+0
++
+ (t)j
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+ 
+t
+p
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+R
+t
+0
+(t s)
+ff p 1
+E
+ff;ff p
+( (t s)
+ff
+)jm(s)jjf
+x
+(s) r(s)jds
++
+t
+p
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+ 
+s
+P
+j=1
+E
+ff;ff+1 p
+( (t t
+j
+)
+ff
+)jI
+x
+(t
+j
+) I
+j
+j
+ 
+t
+p
+(ff p)(1+t
+ 
+)
+R
+t
+0
+(t s)
+ff p 1
+s
+k
+1
+ds  (jjxjj;jjxjj) +
+t
+p
+(ff p)(1+t
+ 
+)
+ 	 (jjxjj;jjxjj)
+s
+P
+j=1
+ 
+j
+Electronic Journal. http://www.math.spbu.ru/diffjournal 102Differential Equations and Control Processes, N 2, 2016
+ 
+t
+ff+k
+1
+(ff p)(1+t
+ 
+)
+B(ff p;k
+1
++ 1)  (jjxjj;jjxjj) +
+t
+p
+(ff p)(1+t
+ 
+)
+ 	 (jjxjj;jjxjj)
++1
+P
+j=1
+ 
+j
+ 
+  ff k
+1
+ (ff p)
+ 
+ff+k
+1
+  ff k
+1
+ 
+(ff+k
+1
+)= 
+B(ff p;k
+1
++ 1)  (jjxjj;jjxjj)
++
+ (  p)
+ (ff p)
+ 
+p
+  p
+ 
+p= 
+	 (jjxjj;jjxjj)
++1
+P
+j=1
+ 
+j
+:
+Hence
+jjTx  jj M
+ 
+ff+k
+1
+  ff k
+1
+ 
+(ff+k
+1
+)= 
+  (jjxjj;jjxjj) +N
++1
+P
+j=1
+ 
+j
+	 (jjxjj;jjxjj):
+(18)
+It is easy to show that   2 X. Let r > 0 and de ne 
+
+r
+=
+fx2X :kx  k rg: For x 2 
+
+r
+, we havekx   k   r. Thenjjxjj  
+jjx  jj +jj jj  r +jj jj: Let r
+0
+> 0 be a solution of (14). From above
+discussion, we have
+jjTx  jj M
+ 
+ff+k
+1
+  ff k
+1
+ 
+(ff+k
+1
+)= 
+  (r
+0
++jj jj;r
+0
++jj jj)
++N
++1
+P
+j=1
+ 
+j
+	 (r
+0
++jj jj;r
+0
++jj jj) r
+0
+:
+It is easy to see that T 
+
+r
+0
+  
+
+r
+0
+. Then, Schauder  xed point theorem implies
+that T has a  xed point x2 
+
+r
+0
+, which is a solution of IVP(1). The proof is
+completed.
+Theorem 3.2. Suppose that (H2) holds. Then IVP(1) has at least one solution
+x2X if
+ 
+m
+< 1 or  
+m
+= 1 with N
+0
+< 1 or  
+m
+> 1 with
+k k
+1  m
+( 
+m
+ 1)
+ m 1
+ 
+ m
+m
+ N
+0
+; (19)
+where
+N
+0
+=
+m
+P
+i=1
+ 
+max
+n
+(  ff k
+1
+)B(ff;k
+1
++1)
+ 
+;
+(  ff k
+1
+)B(ff p;k
+1
++1)
+ (ff p)
+o 
+ff+k
+1
+  ff k
+1
+ 
+(ff+k
+1
+)= 
+A
+i
++ max
+ 
+ 
+ (ff) +
+ 
+ff
+  ff
+ 
+ 
+ff
+  ff
+ 
+ff= 
+ 
+;
+ (  p)
+ (ff p)
+ 
+p
+  p
+ 
+p= 
+ 
+B
+i
++1
+P
+j=1
+ 
+j
+#
+jj jj
+ 
+i
+  
+m
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 103Differential Equations and Control Processes, N 2, 2016
+Proof. LetX andT be de ned in Section 2. By Lemma 2.3 and Lemma 2.4 we
+seek solutions of IVP(1) by getting the  xed point of T inX. Let  be de ned
+by (11). We can get (12). Let r> 0 and de ne 
+
+r
+=fx2X :kx  k rg:
+For x2 
+
+r
+, we havekx  k r. Thenjjxjj jjx  jj +jj jj r +jj jj:
+Using (H2), we  nd similarly to the proof of Theorem 3.1 that
+j(Tx)(t)  (t)j
+(1+t
+ 
+)E
+ff;ff
+( t
+ff
+)
+ 
+m
+P
+i=1
+ 
+(  ff k
+1
+)B(ff;k
+1
++1)
+ 
+ 
+ff+k
+1
+  ff k
+1
+ 
+(ff+k
+1
+)= 
+A
+i
++
+ 
+ (ff) +
+ 
+ff
+  ff
+ 
+ 
+ff
+  ff
+ 
+ff= 
+ 
+B
+i
++1
+P
+j=1
+ 
+j
+#
+jjxjj
+ 
+1i
++ 
+2i
+:
+Furthermore, we have
+t
+p
+(1+t
+ 
+E
+ff;ff p
+( t
+ff
+)
+j
+c
+D
+p
+0
++
+(Tx)(t) 
+c
+D
+p
+0
++
+ (t)j
+ 
+m
+P
+i=1
+ 
+(  ff k
+1
+)B(ff p;k
+1
++1)
+ (ff p)
+ 
+ff+k
+1
+  ff k
+1
+ 
+(ff+k
+1
+)= 
+A
+i
++
+ (  p)
+ (ff p)
+ 
+p
+  p
+ 
+p= 
+B
+i
++1
+P
+j=1
+ 
+j
+:
+#
+jjxjj
+ 
+1i
++ 
+2i
+:
+It follows that
+jjTx  jj 
+m
+P
+i=1
+ 
+max
+n
+(  ff k
+1
+)B(ff;k
+1
++1)
+ 
+;
+(  ff k
+1
+)B(ff p;k
+1
++1)
+ (ff p)
+o 
+ff+k
+1
+  ff k
+1
+ 
+(ff+k
+1
+)= 
+A
+i
++ max
+ 
+ 
+ (ff) +
+ 
+ff
+  ff
+ 
+ 
+ff
+  ff
+ 
+ff= 
+ 
+;
+ (  p)
+ (ff p)
+ 
+p
+  p
+ 
+p= 
+ 
+B
+i
++1
+P
+j=1
+ 
+j
+#
+ 
+[r +jj jj]
+ 
+i
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 104Differential Equations and Control Processes, N 2, 2016
+Then
+jjTx  jj  [r +jj jj]
+ 
+m
+ 
+m
+P
+i=1
+ 
+max
+n
+(  ff k
+1
+)B(ff;k
+1
++1)
+ 
+;
+(  ff k
+1
+)B(ff p;k
+1
++1)
+ (ff p)
+o 
+ff+k
+1
+  ff k
+1
+ 
+(ff+k
+1
+)= 
+A
+i
++ max
+ 
+ 
+ (ff) +
+ 
+ff
+  ff
+ 
+ 
+ff
+  ff
+ 
+ff= 
+ 
+;
+ (  p)
+ (ff p)
+ 
+p
+  p
+ 
+p= 
+ 
+B
+i
++1
+P
+j=1
+ 
+j
+#
+jj jj
+ 
+i
+  
+m
+=N
+0
+[r +jj jj]
+ 
+m
+:
+(i) If  
+m
+< 1, we can choose r
+0
+> 0 su ciently large such that [r
+0
++
+jj jj]
+ 
+m
+N
+0
+< r
+0
+. Let 
+
+r
+0
+=fx2 Y :jjx  jj < r
+0
+g. It is easy to see that
+T 
+
+r
+0
+  
+
+r
+0
+. Then, Schauder  xed point theorem implies that T has a  xed
+point x2 
+
+r
+0
+; which is a bounded solution of IVP (1).
+(ii) If  
+m
+= 1, we choose
+r
+0
+ 
+jj jjN
+0
+1 N
+0
+:
+Let 
+
+r
+0
+=fx2 Y :jjx  jj < r
+0
+g. It is easy to see that T 
+
+r
+0
+  
+
+r
+0
+. Then,
+Schauder  xed point theorem implies that T has a  xed point x2 
+
+r
+0
+; which
+is a bounded solution of IVP (1).
+(iii) If  
+m
+> 1, we choose r =r
+0
+=
+k k
+ 
+m
+ 1
+. By assumption,
+r
+0
+(r
+0
++k k)
+ m
+=
+k k
+1  m
+( 
+m
+ 1)
+ m 1
+ 
+ m
+m
+ N
+0
+:
+Let 
+
+r
+0
+=fx2 Y :jjx  jj < r
+0
+g. It is easy to see that T 
+
+r
+0
+  
+
+r
+0
+. Then,
+Schauder  xed point theorem implies that F has a  xed point x2 
+
+r
+0
+, which
+is a solution of IVP(1). The proof is completed.
+Now, we establish existence results for IVP(2) under some suitable assump-
+tions. Let  
+0
+(t) and  
+1
+(t) be de ned by (9).
+(H3). Suppose that there exist non-decreasing functions  ; 	 : [0; +1) 
+[0; +1)! [0; +1) such that
+g is a II-Carath  eodory function and there exists a piecewise continuous
+bounded function r : (0; +1) ! R such thatjg (t; 
+0
+(t)u; 
+1
+(t)v) r(t)j  
+ (juj;jvj);t2 (0; +1);u;v2 I R:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 105Differential Equations and Control Processes, N 2, 2016
+J is a discrete II-Carath  eodory function and there exists sequencefJ
+s
+g and
+f 
+s
+g with
++1
+P
+s=1
+J
+s
+< +1 and
++1
+P
+s=1
+ 
+s
+< +1 such thatjI (t
+s
+; 
+0
+(t)u; 
+1
+(t)v) J
+s
+j 
+ 
+s
+	(juj;jvj);s2Z Z;u;v2 I R:
+(H4). Suppose that  
+1i
+(i = 1; 2;    ;m) with  
+i
+=  
+1i
++  
+2i
+> 0(i =
+1; 2;:::;m) and  
+1
+  
+2
+      
+m
+. The following assumptions are satis ed:
+g is a II-Carath  eodory function and there exist nonnegative numbers
+A
+i
+(i = 1; 2;:::;m), a piecewise continuous bounded function r : (0; +1)!
+R such that jg (t; ( 
+0
+(t)u; 
+1
+(t)v) r(t)j  
+m
+P
+i=1
+A
+i
+juj
+ 
+1i
+jvj
+ 
+2i
+hold for all t 2
+(0; +1);u;v2 I R.
+J is a discrete II-Carath  eodory function and there exist nonnegative num-
+bersB
+i
+(i = 1; 2;:::;m), sequencesfJ
+s
+g andf 
+s
+g with
++1
+P
+s=1
+J
+s
+;
++1
+P
+s=1
+ 
+s
+< +1 such
+thatjJ (t
+s
+; 
+0
+(t
+s
+)u; 
+1
+(t
+s
+)v) J
+s
+j  
+s
+m
+P
+i=1
+B
+i
+juj
+ 
+1i
+jvj
+ 
+1i
+hold for all s2 Z Z;u;v2
+I R.
+Denote
+ (t) =
+8
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+:
+R
+t
+0
+(t u)
+ff 1
+E
+ff;ff
+( (t u)
+ff
+)n(u)r(u)du +x
+0
+E
+ff
+( t
+ff
+); t2 (t
+0
+;t
+1
+];
+R
+t
+t
+s
+(t u)
+ff 1
+E
+ff;ff
+( (t u)
+ff
+)n(u)r(u)du +
+ 
+x
+0
+s
+Q
+v=1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
++
+s
+P
+j=1
+ 
+s
+Q
+v=j+1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+!
+J
+j
++
+s
+P
+j=1
+ 
+s
+Q
+v=j+1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+!
+ 
+R
+t
+j
+t
+j 1
+(t
+j
+ u)
+ff 1
+E
+ff;ff
+( (t
+j
+ u)
+ff
+)n(u)r(u)du
+i
+E
+ff
+( (t t
+s
+)
+ff
+);
+t2 (t
+s
+;t
+s+1
+];s2Z Z;x2X:
+(20)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 106Differential Equations and Control Processes, N 2, 2016
+Then
+c
+D
+p
+t
+s
++
+ (t) =
+8
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+:
+R
+t
+0
+(t u)
+ff p 1
+E
+ff;ff p
+( (t u)
+ff
+)n(u)r(u)du
++ x
+0
+t
+ff p
+E
+ff;ff+1 p
+( t
+ff
+); t2 (t
+0
+;t
+1
+];
+R
+t
+t
+s
+(t u)
+ff p 1
+E
+ff;ff p
+( (t u)
+ff
+)n(u)r(u)du
++ (t t
+s
+)
+ff p
+ 
+x
+0
+s
+Q
+v=1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
++
+s
+P
+j=1
+ 
+s
+Q
+v=j+1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+!
+J
+j
++
+s
+P
+j=1
+ 
+s
+Q
+v=j+1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+!
+ 
+R
+t
+j
+t
+j 1
+(t
+j
+ u)
+ff 1
+E
+ff;ff
+( (t
+j
+ u)
+ff
+)n(u)r(u)du
+i
+E
+ff;ff+1 p
+( (t t
+s
+)
+ff
+);
+t2 (t
+s
+;t
+s+1
+];s2Z Z;x2X:
+(21)
+Theorem 3.3 Suppose that (H3) holds. Then IVP(2) has at least one solution
+if
+A  (r +jj jj;r +jj jj) +B	 (r +jj jj;r +jj jj) r (22)
+has a positive solution r
+0
+> 0, where
+A = max
+8
+<
+:
+sup
+s2Z Z
+0
+s+1
+P
+j=1
+E
+ff;ff
+( (t
+j
+ t
+j 1
+)
+ff
+)(t
+j
+ t
+j 1
+)
+ff+k
+2
++l
+2
+B(ff+l
+2
+;k
+2
++1)
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff+k
+2
++l
+2
+E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)
+;
+sup
+s2Z Z
+0
+s+1
+P
+j=1
+[E
+ff;ff p
+( (t
+j
+ t
+j 1
+)
+ff
+)+E
+ff;ff
+( (t
+j
+ t
+j 1
+)
+ff
+)](t
+j
+ t
+j 1
+)
+ff+k
+2
++l
+2
+B(ff+l
+2
+;k
+2
++1)
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff p+k
+2
++l
+2
+[E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)+E
+ff;ff p
+( (t
+j+1
+ t
+j
+)
+ff
+)]
+9
+=
+;
+;
+Electronic Journal. http://www.math.spbu.ru/diffjournal 107Differential Equations and Control Processes, N 2, 2016
+B = max
+8
+<
+:
+sup
+s2Z Z
+0
++1
+P
+j=1
+ 
+j
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff+k
+2
++l
+2
+E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)
+;
+sup
+s2Z Z
+0
++1
+P
+j=1
+ 
+j
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff p+k
+2
++l
+2
+[E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)+E
+ff;ff p
+( (t
+j+1
+ t
+j
+)
+ff
+)]
+9
+=
+;
+:
+Proof. Let Y and T
+1
+be de ned in Section 2. From Lemma 2.8 and 2.9, we
+need to prove that T
+1
+has at least one  xed point in Y .One gets
+c
+D
+p
+t
++
+s
+(T
+1
+x)(t) =
+8
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+:
+R
+t
+0
+(t s)
+ff p 1
+E
+ff;ff p
+( (t s)
+ff
+)n(s)g(s;x(s);
+c
+D
+p
+t
++
+s
+x(s))ds
++ x
+0
+t
+ff p
+E
+ff;ff+1 p
+( t
+ff
+); t2 (t
+0
+;t
+1
+];
+R
+t
+t
+s
+(t s)
+ff p 1
+E
+ff;ff p
+( (t s)
+ff
+)n(s)g(s;x(s);
+c
+D
+p
+t
++
+s
+x(s))ds
++ (t t
+s
+)
+ff p
+ 
+x
+0
+s
+Q
+v=1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
++
+s
+P
+j=1
+ 
+s
+Q
+v=j+1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+!
+J(t
+j
+;x(t
+j
+);
+c
+D
+p
+t
++
+j 1
+x(t
+j
+))
++
+s
+P
+j=1
+ 
+s
+Q
+v=j+1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+!
+ 
+R
+t
+j
+t
+j 1
+(t
+j
+ s)
+ff 1
+E
+ff;ff
+( (t
+j
+ s)
+ff
+)n(s)g(s;x(s);
+c
+D
+p
+t
++
+j 1
+x(s))ds
+i
+ 
+E
+ff;ff+1 p
+( (t t
+s
+)
+ff
+);t2 (t
+s
+;t
+s+1
+];s2Z Z;x2X:
+(23)
+By (H3) and direct computation, from (9), (12) and (20), we have for t 2
+(t
+s
+;t
+s+1
+] that
+j(Tx)(t)  (t)j
+ 
+0
+(t)
+ 
+R
+t
+ts
+(t u)
+ff 1
+E
+ff;ff
+( (t u)
+ff
+)jn(u)jjg(u;x(u);
+c
+D
+p
+t
++
+s 1
+x(u)) r(u)jdu
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff+k
+2
++l
+2
+E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)
+s+1
+Q
+v=1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 108Differential Equations and Control Processes, N 2, 2016
++
+E
+ff
+( (t t
+s
+)
+ff
+)
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff+k
+2
++l
+2
+E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)
+s+1
+Q
+v=1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+ 
+"
+s
+P
+j=1
+ 
+s
+Q
+v=j+1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+!
+jJ(t
+j
+;x(t
+j
+);
+c
+D
+p
+t
++
+j 1
+x(t
+j
+)) J
+j
+j
++
+s
+P
+j=1
+ 
+s
+Q
+v=j+1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+!
+ 
+R
+t
+j
+t
+j 1
+(t
+j
+ u)
+ff 1
+E
+ff;ff
+( (t
+j
+ u)
+ff
+)jn(u)jjg(u;x(u);
+c
+D
+p
+t
++
+j 1
+x(u)) r(u)jdu
+i
+ 
+E
+ff;ff
+( (t
+s+1
+ t
+s
+)
+ff
+)
+R
+t
+ts
+(t u)
+ff 1
+(u t
+s
+)
+k
+2
+(t
+s+1
+ u)
+l
+2
+ (jjxjj;jjxjj)du
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff+k
+2
++l
+2
+E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)
+s+1
+Q
+v=1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
++
+E
+ff
+( (t
+s+1
+ t
+s
+)
+ff
+)
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff+k
+2
++l
+2
+E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)
+s+1
+Q
+v=1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+ 
+"
+s
+P
+j=1
+ 
+s
+Q
+v=j+1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+!
+ 
+j
+	(jjxjj;jjxjj)
++
+s
+P
+j=1
+ 
+s
+Q
+v=j+1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+!
+E
+ff;ff
+( (t
+j
+ t
+j 1
+)
+ff
+) 
+R
+t
+j
+t
+j 1
+(t
+j
+ u)
+ff 1
+(u t
+j 1
+)
+k
+2
+(t
+j
+ u)
+l
+2
+ (jjxjj;jjxjj)du
+i
+ 
+E
+ff;ff
+( (t
+s+1
+ t
+s
+)
+ff
+)
+R
+t
+ts
+(t u)
+ff+l
+2
+ 1
+(u t
+s
+)
+k
+2
+du (jjxjj;jjxjj)
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff+k
+2
++l
+2
+E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)
++
++1
+P
+j=1
+ 
+j
+	(jjxjj;jjxjj)+
+s
+P
+j=1
+E
+ff;ff
+( (t
+j
+ t
+j 1
+)
+ff
+)
+R
+t
+j
+t
+j 1
+(t
+j
+ u)
+ff+l
+2
+ 1
+(u t
+j 1
+)
+k
+2
+du (jjxjj;jjxjj)
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff+k
+2
++l
+2
+E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)
+ 
+E
+ff;ff
+( (t
+s+1
+ t
+s
+)
+ff
+)(t t
+s
+)
+ff+k
+2
++l
+2
+R
+1
+0
+(1 w)
+ff+l
+2
+ 1
+w
+k
+2
+dw (jjxjj;jjxjj)
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff+k
+2
++l
+2
+E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 109Differential Equations and Control Processes, N 2, 2016
++
++1
+P
+j=1
+ 
+j
+	(jjxjj;jjxjj)+
+s
+P
+j=1
+E
+ff;ff
+( (t
+j
+ t
+j 1
+)
+ff
+)(t
+j
+ t
+j 1
+)
+ff+k
+2
++l
+2
+R
+1
+0
+(1 w)
+ff+l
+2
+ 1
+w
+k
+2
+dw (jjxjj;jjxjj)
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff+k
+2
++l
+2
+E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)
+ 
++1
+P
+j=1
+ 
+j
+	(jjxjj;jjxjj)+
+s+1
+P
+j=1
+E
+ff;ff
+( (t
+j
+ t
+j 1
+)
+ff
+)(t
+j
+ t
+j 1
+)
+ff+k
+2
++l
+2
+B(ff+l
+2
+;k
+2
++1) (jjxjj;jjxjj)
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff+k
+2
++l
+2
+E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)
+  sup
+s2Z Z
+0
++1
+P
+j=1
+ 
+j
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff+k
+2
++l
+2
+E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)
+	(jjxjj;jjxjj)
++ sup
+s2Z Z
+0
+s+1
+P
+j=1
+E
+ff;ff
+( (t
+j
+ t
+j 1
+)
+ff
+)(t
+j
+ t
+j 1
+)
+ff+k
+2
++l
+2
+B(ff+l
+2
+;k
+2
++1)
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff+k
+2
++l
+2
+E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)
+ (jjxjj;jjxjj):
+Furthermore, from (9), (21) and (23), we have
+j
+c
+D
+p
+ 
++
+(Tx)(t) 
+c
+D
+p
+ 
++
+ (t)j
+ 
+1
+(t)
+ 
+R
+t
+ts
+(t u)
+ff p 1
+E
+ff;ff p
+( (t u)
+ff
+)jn(u)jjg(u;x(u);
+c
+D
+p
+t
++
+s
+x(u)) r(u)jdu
+ 
+1
+(t)
++
+ (t t
+s
+)
+ff p
+ 
+1
+(t)
+"
+s
+P
+j=1
+ 
+s
+Q
+v=j+1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+!
+jJ(t
+j
+;x(t
+j
+);
+c
+D
+p
+t
++
+j 1
+x(t
+j
+)) J
+j
+j
++
+s
+P
+j=1
+ 
+s
+Q
+v=j+1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+!
+ 
+R
+t
+j
+t
+j 1
+(t
+j
+ u)
+ff 1
+E
+ff;ff
+( (t
+j
+ u)
+ff
+)jn(u)jjg(u;x(u);
+c
+D
+p
+t
++
+j 1
+x(u)) r(u)jdu
+i
+ 
+E
+ff;ff+1 p
+( (t t
+s
+)
+ff
+)
+ 
+E
+ff;ff p
+( (t
+s+1
+ t
+s
+)
+ff
+)
+R
+t
+ts
+(t u)
+ff p 1
+u t
+s
+)
+k
+2
+(t
+s+1
+ u)
+l
+2
+du (jjxjj;jjxjj)
+[ (t
+s+1
+ t
+s
+)
+ff p
++1]
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff p+k
+2
++l
+2
+[E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)+E
+ff;ff p
+( (t
+j+1
+ t
+j
+)
+ff
+)]
++
+ (t t
+s
+)
+ff p
+[ (t
+s+1
+ t
+s
+)
+ff p
++1]
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff p+k
+2
++l
+2
+[E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)+E
+ff;ff p
+( (t
+j+1
+ t
+j
+)
+ff
+)]
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal 110Differential Equations and Control Processes, N 2, 2016
+"
++1
+P
+j=1
+ 
+j
+	(jjxjj;jjxjj)
++
+s
+P
+j=1
+E
+ff;ff
+( (t
+j
+ t
+j 1
+)
+ff
+)
+R
+t
+j
+t
+j 1
+(t
+j
+ u)
+ff 1
+(u t
+j 1
+)
+k
+2
+(t
+j
+ u)
+l
+2
+du (jjxjj;jjxjj)
+i
+ 
+E
+ff;ff p
+( (t
+s+1
+ t
+s
+)
+ff
+)(t
+s+1
+ t
+s
+)
+ff p+k
+2
++l
+2
+B(ff p+l
+2
+;k
+2
++1)
+[ (t
+s+1
+ t
+s
+)
+ff p
++1]
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff p+k
+2
++l
+2
+[E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)+E
+ff;ff p
+( (t
+j+1
+ t
+j
+)
+ff
+)]
+ (jjxjj;jjxjj)
++
+ (t
+s+1
+ t
+s
+)
+ff p
+s
+P
+j=1
+E
+ff;ff
+( (t
+j
+ t
+j 1
+)
+ff
+)(t
+j
+ t
+j 1
+)
+ff+k
+2
++l
+2
+B(ff+l
+2
+;k
+2
++1)
+[ (t
+s+1
+ t
+s
+)
+ff p
++1]
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff p+k
+2
++l
+2
+[E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)+E
+ff;ff p
+( (t
+j+1
+ t
+j
+)
+ff
+)]
+ (jjxjj;jjxjj)
++
+ (t
+s+1
+ t
+s
+)
+ff p
++1
+P
+j=1
+ 
+j
+[ (t
+s+1
+ t
+s
+)
+ff p
++1]
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff p+k
+2
++l
+2
+[E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)+E
+ff;ff p
+( (t
+j+1
+ t
+j
+)
+ff
+)]
+	(jjxjj;jjxjj)
+ 
+s+1
+P
+j=1
+[E
+ff;ff p
+( (t
+j
+ t
+j 1
+)
+ff
+)+E
+ff;ff
+( (t
+j
+ t
+j 1
+)
+ff
+)](t
+j
+ t
+j 1
+)
+ff+k
+2
++l
+2
+B(ff+l
+2
+;k
+2
++1)
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff p+k
+2
++l
+2
+[E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)+E
+ff;ff p
+( (t
+j+1
+ t
+j
+)
+ff
+)]
+ (jjxjj;jjxjj)
++
++1
+P
+j=1
+ 
+j
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff p+k
+2
++l
+2
+[E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)+E
+ff;ff p
+( (t
+j+1
+ t
+j
+)
+ff
+)]
+	(jjxjj;jjxjj)
+  sup
+s2Z Z
+0
+s+1
+P
+j=1
+[E
+ff;ff p
+( (t
+j
+ t
+j 1
+)
+ff
+)+E
+ff;ff
+( (t
+j
+ t
+j 1
+)
+ff
+)](t
+j
+ t
+j 1
+)
+ff+k
+2
++l
+2
+B(ff+l
+2
+;k
+2
++1)
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff p+k
+2
++l
+2
+[E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)+E
+ff;ff p
+( (t
+j+1
+ t
+j
+)
+ff
+)]
+ (jjxjj;jjxjj)
++ sup
+s2Z Z
+0
++1
+P
+j=1
+ 
+j
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff p+k
+2
++l
+2
+[E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)+E
+ff;ff p
+( (t
+j+1
+ t
+j
+)
+ff
+)]
+	(jjxjj;jjxjj):
+Hence
+jjT
+1
+x  jj A (jjxjj;jjxjj) +B	(jjxjj;jjxjj): (24)
+It is easy to show that   2 X. Let r > 0 and de ne 
+
+r
+=
+fx2X :kx  k rg: For x 2 
+
+r
+, we havekx   k   r. Thenjjxjj  
+Electronic Journal. http://www.math.spbu.ru/diffjournal 111Differential Equations and Control Processes, N 2, 2016
+jjx  jj +jj jj  r +jj jj: Let r
+0
+> 0 be a solution of (14). From above
+discussion, we have
+jjTx  jj A  (r
+0
++jj jj;r
+0
++jj jj) +B	 (r
+0
++jj jj;r
+0
++jj jj): r
+0
+:
+It is easy to see that T 
+
+r
+0
+  
+
+r
+0
+. Then, Schauder  xed point theorem implies
+that T has a  xed point x2 
+
+r
+0
+, which is a solution of IVP(2). The proof is
+completed.
+Theorem 3.4 Suppose that (H4) holds. Let N
+0
+=
+m
+P
+i=1
+[AA
+i
++BB
+i
+]jj jj
+ 
+i
+  
+m
+and A;B are de ned in Theorem 3.3. Then IVP(2) has at least one solution
+x2Y if
+ 
+m
+< 1 or  
+m
+= 1 with N
+0
+< 1 or  
+m
+> 1 with
+k k
+1  m
+( 
+m
+ 1)
+ m 1
+ 
+ m
+m
+ N
+0
+; (25)
+Proof. LetY andT
+1
+be de ned in Section 2. By Lemma 2.8 and Lemma 2.9 we
+seek solutions of IVP(2) by getting the  xed point ofT
+1
+inY . Let  be de ned
+by (20). We can get (21). Let r> 0 and de ne 
+
+r
+=fx2X :kx  k rg:
+For x2 
+
+r
+, we havekx  k r. Thenjjxjj jjx  jj +jj jj r +jj jj:
+Using (H4), use (9), (20) and (12), we  nd similarly to the proof of Theorem
+3.3 that
+j(Tx)(t)  (t)j
+ 
+0
+(t)
+ 
+m
+P
+i=1
+2
+4
+sup
+s2Z
+0
+s+1
+P
+j=1
+E
+ff;ff
+( (t
+j
+ t
+j 1
+)
+ff
+)(t
+j
+ t
+j 1
+)
+ff+k
+2
++l
+2
+B(ff+l
+2
+;k
+2
++1)
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff+k
+2
++l
+2
+E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)
+A
+i
++ sup
+s2Z Z
+0
++1
+P
+j=1
+ 
+j
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff+k
+2
++l
+2
+E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)
+B
+i
+3
+5
+jjxjj
+ 
+1i
++ 
+2i
+:
+Furthermore, use (9), (21) and (23), similarly to the proof of Theorem 3.3, we
+have
+j
+c
+D
+p
+t
++
+s
+(Tx)(t) 
+c
+D
+p
+t
++
+s
+ (t)j
+ 
+1
+(t)
+ 
+m
+P
+i=1
+2
+4
+sup
+s2Z Z
+0
+s+1
+P
+j=1
+[E
+ff;ff p
+( (t
+j
+ t
+j 1
+)
+ff
+)E
+ff;ff
+( (t
+j
+ t
+j 1
+)
+ff
+)](t
+j
+ t
+j 1
+)
+ff+k
+2
++l
+2
+B(ff+l
+2
+;k
+2
++1)
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff p+k
+2
++l
+2
+[E
+ff;ff p
+( (t
+j+1
+ t
+j
+)
+ff
+)+E
+ff;ff p
+( (t
+j+1
+ t
+j
+)
+ff
+)]
+A
+i
++ sup
+s2Z Z
+0
++1
+P
+j=1
+ 
+j
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff p+k
+2
++l
+2
+[E
+ff;ff p
+( (t
+j+1
+ t
+j
+)
+ff
+)+E
+ff;ff p
+( (t
+j+1
+ t
+j
+)
+ff
+)]
+B
+i
+3
+5
+jjxjj
+ 
+1i
++ 
+2i
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 112Differential Equations and Control Processes, N 2, 2016
+It follows that
+jjTx  jj 
+m
+P
+i=1
+[AA
+i
++BB
+i
+] [r +jj jj]
+ 
+i
+:
+  [r +jj jj]
+ 
+m
+m
+P
+i=1
+[AA
+i
++BB
+i
+]jj jj
+ 
+i
+  
+m
+=N
+0
+[r +jj jj]
+ 
+m
+:
+The remainder of the proof is similar to that of Theorem 3.2 and is omitted.
+The proof is complete.
+4 Examples
+In this section, we present examples to illustrate Theorem 3.2 and Theorem 3.4.
+Example 4.1. Consider the following IVP
+8
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+:
+c
+D
+2
+3
+0
++
+x(t) x(t) =
+t
+ 
+1
+6
+"
+B +A
+ 
+jx(t)j
+(1+t
+2
+)E
+2=3;2=3
+(t
+2=3
+)
+ 
+ 
+ 
+t
+1=6
+j
+c
+D
+1
+6
+0
++
+x(t)j
+(1+t
+2
+)E
+2=3;5=6
+(t
+2=3
+)
+!
+ 
+#
+;a:e:;t2 (0; +1);
+x(0) =x
+0
+;
+ x(s) = 2
+ s
+"
+b +a
+ 
+jx(s)j
+(1+s
+2
+)E
+2=3;2=3
+(s
+2=3
+)
+ 
+ 
+ 
+s
+1=6
+j
+c
+D
+1
+6
+0
++
+x(s)j
+(1+s
+2
+)E
+2=3;5=6
+(s
+2=3
+)
+!
+ 
+#
+;s2Z Z;
+(26)
+where A;B;a;b2 I R are constants.
+Corresponding to IVP(1), we have ff =
+2
+3
+, p =
+1
+6
+,   = 1, k
+1
+= 
+1
+6
+, m(t) =
+t
+ 
+1
+6
+, t
+s
+=s;s2Z, and
+f(t;u;v) =B +A
+ 
+u
+(1+t
+2
+)E
+2=3;2=3
+(t
+2=3
+)
+ 
+ 
+ 
+t
+1=6
+jvj
+(1+t
+2
+)E
+2=3;5=6
+(t
+2=3
+)
+ 
+ 
+;
+I(s;u;v) = 2
+ s
+h
+b +a
+ 
+u
+(1+s
+2
+)E
+2=3;2=3
+(s
+2=3
+)
+ 
+ 
+ 
+s
+1=6
+jv
+(1+s
+2
+)E
+2=3;5=6
+(s
+2=3
+)
+ 
+ 
+i
+:
+Hence (i), (ii) and (iii) in Section 1 are satis ed.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 113Differential Equations and Control Processes, N 2, 2016
+Choose   = 2. Then  > maxf k
+1
+;ff +k
+1
+;ffg and
+f
+ 
+t; (1 +t
+2
+)E
+2=3;2=3
+(t
+2=3
+)u;
+(1+t
+2
+)E
+2=3;5=6
+(t
+2=3
+)
+t
+1=6
+v
+ 
+=B +Ajuj
+ 
+jvj
+ 
+;
+I
+ 
+s; (1 +s
+2
+)E
+2=3;2=3
+(s
+2=3
+)u;
+(1+s
+2
+)E
+2=3;5=6
+(s
+2=3
+)
+s
+1=6
+v
+ 
+= 2
+ s
+[b +ajuj
+ 
+jvj
+ 
+]:
+Then (v) in Section 1 holds.
+Choose m = 1,  
+11
+=  ,  
+21
+=  ,  
+1
+=   + , r(t) = A and I
+s
+= 2
+ s
+b,
+ 
+s
+= 2
+ s
+, A
+1
+=jAj and B
+1
+=jbj. Then
+ 
+ 
+ f
+ 
+t; (1 +t
+ 
+)E
+ff;ff
+(t
+ff
+)u;
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+t
+p
+v
+ 
+ r(t)
+ 
+ 
+  A
+1
+juj
+ 
+11
+jvj
+ 
+21
+;
+ 
+ 
+ I
+ 
+s; (1 +s
+ 
+)E
+ff;ff
+(s
+ff
+)u;
+(1+t
+ 
+s
+)E
+ff;ff p
+(s
+ff
+)
+s
+p
+v
+ 
+ I
+s
+ 
+ 
+   
+s
+B
+1
+juj
+ 
+11
+jvj
+ 
+21
+:
+Hence (H2) in Section 3 holds.
+By direct computation we have
+N
+0
+= max
+n
+(  ff k
+1
+)B(ff;k
+1
++1)
+ 
+;
+(  ff k
+1
+)B(ff p;k
+1
++1)
+ (ff p)
+o 
+ff+k
+1
+  ff k
+1
+ 
+(ff+k
+1
+)= 
+jAj
++ max
+ 
+ 
+ (ff) +
+ 
+ff
+  ff
+ 
+ 
+ff
+  ff
+ 
+ff= 
+ 
+;
+ (  p)
+ (ff p)
+ 
+p
+  p
+ 
+p= 
+ 
+jaj
++1
+P
+j=1
+2
+ s
+=
+max
+f
+3B(2=3;5=6)
+4
+;
+3B(1=2;5=6)
+2
+g
+4
+p
+3
+jAj + max
+n
+ (2=3) +
+1
+3
+p
+2
+;
+11
+6
+1
+12
+p
+11
+o
+jaj:
+Using Mathlab7.0, we have N
+0
+< 2:6jAj + 2:2jbj:
+Furthermore, we have for t2 (s;s + 1] that
+j (t)j
+(1+t
+2
+)E
+2=3;2=3
+(t
+2=3
+)
+ 
+jAj
+(1+t
+2
+)E
+2=3;2=3
+(t
+2=3
+)
+R
+t
+0
+(t s)
+ 
+1
+3
+E
+2=3;2=3
+((t s)
+2=3
+)s
+ 
+1
+6
+ds
++
+jx
+0
+j
+(1+t
+2
+)E
+2=3;2=3
+(t
+2=3
+)
+E
+2=3
+(t
+2=3
+) +
+jbj
+(1+t
+2
+)E
+2=3;2=3
+(t
+2=3
+)
+s
+P
+j=1
+E
+2=3
+((t j)
+2=3
+)2
+ s
+ 
+jAj
+1+t
+2
+R
+t
+0
+(t s)
+ 
+1
+3
+s
+ 
+1
+6
+ds +
+jx
+0
+j
+(1+t
+2
+)
++
+jbj
+(1+t
+2
+)
+s
+P
+j=1
+2
+ s
+ 
+jAj
+1+t
+2
+t
+1
+2
+B(2=3; 5=6) +jx
+0
+j +jbj
+  1:8jAj +jx
+0
+j +jbj
+Electronic Journal. http://www.math.spbu.ru/diffjournal 114Differential Equations and Control Processes, N 2, 2016
+and use (7), we have
+t
+p
+j
+c
+D
+1
+6
+0
++
+ (t)j
+(1+t
+2
+)E
+2=3;1=2
+(t
+2=3
+)
+ jAj
+t
+p
+1+t
+2
+R
+t
+0
+(t u)
+ 
+1
+2
+u
+ 
+1
+6
+du +jx
+0
+j
+t
+1=6
+1+t
+2
+t
+1
+2
+1
+2=3 1=6
++jbj
+t
+1=6
+1+t
+2
+s
+P
+i=1
+2
+ s
+(t i)
+1
+2
+1
+2=3 1=6
+  2:3jAj + 2jx
+0
+j + 2jbj:
+Then
+k k = max
+(
+sup
+t2(0;+1)
+j (t)j
+(1+t
+2
+)E
+2=3;2=3
+(t
+2=3
+)
+; sup
+t2(0;+1)
+t
+1=6
+(1+t
+2
+)E
+2=3;11=6
+(t
+2=3
+)
+j
+c
+D
+1
+6
+0
++
+ (t)j
+)
+  2:3jAj + 2jx
+0
+j + 2jbj:
+Since
+  +  < 1 or
+  +  = 1 with 2:6jAj + 2:2jaj< 1 or
+  +  > 1 with
+(2:3jAj+2jx
+0
+j+2jbj)
+1    
+( +  1)
+ +  1
+( + )
+ + 
+  2:6jAj + 2:2jaj
+(27)
+implies (19) holds, by Theorem 3.2, IVP(26) has at least one solution x2X if
+(27) holds. This example is ended.
+Example 4.2. Consider the following IVP
+8
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+:
+c
+D
+2
+3
+s
++
+x(t) x(t)
+= (t s)
+ 
+1
+2
+(s + 1 t)
+ 
+1
+12
+"
+B +A
+ 
+jx(t)j
+ 
+0
+(t)
+ 
+ 
+ 
+j
+c
+D
+1
+6
+s
++
+x(t)j
+ 
+1
+(t)
+!
+ 
+#
+;
+a:e:;t2 (s;s + 1);s2Z Z
+0
+;
+x(0) =x
+0
+;
+ x(s) = 2
+ s
+"
+b +a
+ 
+jx(s)j
+ 
+0
+(s)
+ 
+ 
+ 
+j
+c
+D
+1
+6
+(s 1)
++
+x(s)j
+ 
+1
+(s)
+!
+ 
+#
+;s2Z Z;
+(28)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 115Differential Equations and Control Processes, N 2, 2016
+where a;b;A;B2 I R,  ;   0 and
+ 
+0
+(t) =
+E
+2=3;2=3
+(1)(s+1)(s+2)
+[
+E
+2=3
+(1)
+]
+s+1
+2
+; t2 (s;s + 1];s2Z Z
+0
+;
+ 
+1
+(t) = (E
+2=3;1=2
+(1) + E
+2=3;2=3
+(1))(s + 1)(s + 2)
+ 
+E
+2=3
+(1)
+ 
+s
+E
+2=3;3=2
+((t t
+s
+)
+2=3
+);
+t2 (s;s + 1];s2Z Z
+0
+:
+Corresponding to IVP(2), we have ff =
+2
+3
+, p =
+1
+6
+, k
+2
+= l
+2
+= 
+1
+12
+,   = 1,
+t
+s
+=s for s2Z Z
+0
+, n(t) = (t s)
+ 
+1
+2
+(s + 1 t)
+ 
+1
+12
+for t2 (s;s + 1) and
+g(t;u;v) =B +A
+ 
+juj
+ 
+0
+(t)
+ 
+ 
+ 
+jvj
+ 
+1
+(t)
+ 
+ 
+;
+J(s;u;v) = 2
+ s
+h
+b +a
+ 
+juj
+ 
+0
+(s)
+ 
+ 
+ 
+jvj
+ 
+1
+(s)
+ 
+ 
+i
+:
+Choose m = 1, r(t) =B and J
+s
+= 2
+ s
+b. Then
+jJ (t
+s
+; 
+0
+(t
+s
+)u; 
+1
+(t
+s
+)v) J
+s
+j jaj 
+s
+juj
+ 
+jvj
+ 
+;
+jg (t; ( 
+0
+(t)u; 
+1
+(t)v) r(t)j jAjjuj
+ 
+jvj
+ 
+:
+One sees that (i), (ii) (iv), (vi) and (H4) hold. By Mathlab 7.0, we have
+A = max
+ 
+sup
+s2Z Z
+0
+2E
+2=3;2=3
+(1)B(7=12;11=12)
+(s+2)E
+2=3;2=3
+(1)
+; sup
+s2Z Z
+0
+2[E
+2=3;1=2
+(1)+E
+2=3;2=3
+(1)]B(7=12;11=12)
+(s+2)[E
+2=3;2=3
+(1)+E
+2=3;1=2
+(1)]
+ 
+< 1:9;
+B = max
+8
+<
+:
+sup
+s2Z Z
+0
+2
++1
+P
+j=1
+2
+ j
+(s+1)(s+2)E
+2=3;2=3
+(1)
+; sup
+s2Z Z
+0
+2
++1
+P
+j=1
+2
+ j
+(s+1)(s+2)[E
+2=3;2=3
+(1)+E
+2=3;1=2
+(1)]
+9
+=
+;
+ 
+1
+E
+2=3;2=3
+(1)
+< 0:8:
+We have for t2 (s;s + 1] that
+j (t)j
+ 
+0
+(t)
+ 
+1
+ 
+0
+(t)
+ 
+ 
+ 
+ 
+R
+t
+t
+s
+(t u)
+ff 1
+E
+ff;ff
+( (t u)
+ff
+)n(u)Bdu +
+ 
+x
+0
+s
+Q
+v=1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 116Differential Equations and Control Processes, N 2, 2016
++
+s
+P
+j=1
+ 
+s
+Q
+v=j+1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+!
+2
+ j
+b +
+s
+P
+j=1
+ 
+s
+Q
+v=j+1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+!
+ 
+R
+t
+j
+t
+j 1
+(t
+j
+ u)
+ff 1
+E
+ff;ff
+( (t
+j
+ u)
+ff
+)n(u)Bdu
+i
+E
+ff
+( (t t
+s
+)
+ff
+)
+ 
+ 
+ 
+ 
+jx
+0
+j+
++1
+P
+j=1
+2
+ j
+jbj+jBj
+s+1
+P
+j=1
+E
+ff;ff
+( (t
+j
+ t
+j 1
+)
+ff
+)(t
+j
+ t
+j 1
+)
+ff+k
+2
++l
+2
+B(ff+l
+2
+;k
+2
++1)
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff+k
+2
++l
+2
+E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)
+=
+2jx
+0
+j+2jbj+4(s+1)jBjE
+2=3;2=3
+(1)B(7=12;11=12)
+(j+1)(s+2)E
+2=3;2=3
+(1)
+ 
+jx
+0
+j+jbj+2jBjE
+2=3;2=3
+(1)B(7=12;11=12)
+E
+2=3;2=3
+(1)
+and
+j
+c
+D
+p
+ts
++
+ (t)
+ 
+1
+(t)
+ 
+1
+ 
+1
+(t)
+ 
+ 
+ 
+R
+t
+t
+s
+(t u)
+ff p 1
+E
+ff;ff p
+( (t u)
+ff
+)n(u)Bdu
++ (t t
+s
+)
+ff p
+ 
+x
+0
+s
+Q
+v=1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+) +
+s
+P
+j=1
+ 
+s
+Q
+v=j+1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+!
+J
+j
++
+s
+P
+j=1
+ 
+s
+Q
+v=j+1
+E
+ff
+( (t
+v
+ t
+v 1
+)
+ff
+)
+!
+ 
+R
+t
+j
+t
+j 1
+(t
+j
+ u)
+ff 1
+E
+ff;ff
+( (t
+j
+ u)
+ff
+)n(u)r(u)du
+i
+E
+ff;ff+1 p
+( (t t
+s
+)
+ff
+)
+ 
+ 
+ 
+ 
+jx
+0
+j+
++1
+P
+j=1
+2
+ j
+jbj+jBj
+s+1
+P
+j=1
+[E
+ff;ff p
+( (t
+j
+ t
+j 1
+)
+ff
+)+E
+ff;ff
+( (t
+j
+ t
+j 1
+)
+ff
+)](t
+j
+ t
+j 1
+)
+ff+k
+2
++l
+2
+B(ff+l
+2
+;k
+2
++1)
+s
+P
+j=0
+t
+j+1
+(t
+j+1
+ t
+j
+)
+ff p+k
+2
++l
+2
+[E
+ff;ff
+( (t
+j+1
+ t
+j
+)
+ff
+)+E
+ff;ff p
+( (t
+j+1
+ t
+j
+)
+ff
+)]
+ 
+jx
+0
+j+jbj+jBj
+s+1
+P
+j=1
+[E
+2=3;1=2
+(1)+E
+2=3;2=3
+(1)]B(7=12;11=12)
+s
+P
+j=0
+(j+1)[E
+2=3;2=3
+(1)+E
+2=3;1=2
+(1)]
+ 
+jx
+0
+j+jbj+2jBj[E
+2=3;1=2
+(1)+E
+2=3;2=3
+(1)]B(7=12;11=12)
+E
+2=3;2=3
+(1)+E
+2=3;1=2
+(1)
+:
+It follows that
+jj jj  max
+n
+jx
+0
+j+jbj+2jBjE
+2=3;2=3
+(1)B(7=12;11=12)
+E
+2=3;2=3
+(1)
+;
+Electronic Journal. http://www.math.spbu.ru/diffjournal 117Differential Equations and Control Processes, N 2, 2016
+jx
+0
+j+jbj+2jBj[E
+2=3;1=2
+(1)+E
+2=3;2=3
+(1)]B(7=12;11=12)
+E
+2=3;2=3
+(1)+E
+2=3;1=2
+(1)
+o
+< 0:8jx
+0
+j + 0:8jbj + 3:7jBj:
+Then N
+0
+=AjAj +Bjaj. Since
+  +  < 1 or   +  = 1 with 1:9jAj + 0:8jaj< 1 or
+  +  > 1 with
+(0:8jx
+0
+j+0:8jbj+3:7jBj)
+1 ( + )
+( + )
+ +  1
+( + )
+ + )
+  1:9jAj + 0:8jaj
+(29)
+imply (25) hold, we know from Theorem 3.4 that IVP(28) has at least one so-
+lution x2Y if (29) holds. This example is ended.
+Remark 4.1. We can prove that IVP(1) has at least one solution if
+(i), (ii), (iii), (v) hold, f
+ 
+t; (1 +t
+ 
+)E
+ff;ff
+( t
+ff
+)x;
+(1+t
+ 
+)E
+ff;ff p
+( t
+ff
+)
+t
+p
+y
+ 
+is bounded
+and there exists positive sequence f 
+s
+g with
++1
+P
+s=1
+ 
+s
+< +1 such that
+I
+ 
+t
+s
+; (1+t
+ 
+s
+)E
+ff;ff
+( t
+ff
+s
+)x;
+(1+t
+ 
+s
+)E
+ff;ff p
+( t
+ff
+s
+)
+t
+p
+s
+y
+ 
+ 
+s
+is bounded.
+Remark 4.2. It is easy to prove that IVP(2) has at least one solution if (i), (ii),
+(iv), (vi) hold, g(t; 
+0
+(t)u; 
+1
+(t)v) is bounded and there exists positive sequence
+f 
+s
+g with
++1
+P
+s=1
+ 
+s
+< +1 such that
+J(t
+s
+; 
+0
+(t
+s
+)u; 
+1
+(t
+s
+)v)
+ 
+s
+is bounded.
+References
+[1] A. B. Basset, On the descent of a sphere in a vicous liquid, Q. J. Pure
+Appl. Math. 41 (1910), 369-381.
+[2] M. Belmekki, Juan J. Nieto, Rosana Rodriguez-Lopez, Existence of so-
+lution to a periodic boundary value problem for a nonlinear impulsive
+fractional differential equation, Electron. J. Qual. Theory Differ. Equ. 16
+(2014), 1-27.
+[3] J. S. Cramer, The origins and development of the logit model, Uni-
+versity of Amsterdam and Tinbergen Institute Manuscript, Available
+at http://www.cambridge.org/resources/ 0521815886/1208
+ 
+default.pdf,
+2003.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 118Differential Equations and Control Processes, N 2, 2016
+[4] F. Chen, Y. Zhou, Attractivity of fractional functional differentiaL equa-
+tions, Comput. Math. Appl. 62(2011) 1359-1369.
+[5] S. Das, P.K. Gupta and K. Vishal, Approximate Approach to the Das
+Model of Fractional Logistic Population Growth, 5(10)(2010) 1702-1708.
+[6] R. Hilfer, Applications of fractional calculus in physics, World Scienti c
+Publishing Co. Inc. River Edge. NJ 2000.
+[7] Z. Hu, W. Liu, W. Rui, Periodic boundary value problem for fractional
+differential equation, International Journal of Mathematics, (2012) DOI:
+10.1142/S0129167X12501005.
+[8] A. A. Kilbas, H. M. Srivastava, J. J. Trujjilo, Theory and applications of
+fractional differential equations, North-Holland Mathematics Studies 204,
+Edited by J. Mill, Amsterdam Boston Heidelberg, London, 2006.
+[9] C. Kou, H. Zhou, Y. Yan, Existence of solutions of initial value problems
+for nonlinear fractional differential equations on the half-axis, Nonlinear
+Anal. 74(2011) 5975-5986.
+[10] Y. Liu, Existence and uniqueness of solutions for initial value problems of
+multi-order fractional differential equations on the half lines (in Chinese),
+Sci. Sin. Math. 42(7)(2012) 735-756.
+[11] Y. Liu, IVPs for singular multi-term fractional differential equations with
+multiple base points and applications, Appl. Math. 41(4)(2014) 361-384.
+[12] Y. Liu, Boundary value problems of singular multi-term fractional differen-
+tial equations with impulse effects, Mathematische Nachrichten, 5(3)(2016)
+409-472.
+[13] Y. Liu, Studies on impulsive differential models with multi-term Rieman-
+nCLiouville fractional derivatives, J. Appl. Math. Computing, 2015: 1-37.
+[14] Y. Liu, Existence of Solutions of IVPs for Differential Systems on Half Line
+with Sequential Fractional Derivative Operators, 18(1)(2015) 27-54.
+[15] Y. Liu, B. Ahmad, A Study of Impulsive Multiterm Fractional Differential
+Equations with Single and Multiple Base Points and Applications, The
+Scienti c World Journal, 2014(2014), Article ID 194346, 28 page.
+[16] H. Maagli, Existence of positive solutions for a nonlinear fractional differ-
+ential equation, Electron. J. Diff. Equ. 29 (2013), 1-5.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 119Differential Equations and Control Processes, N 2, 2016
+[17] F. Mainardi, Fractional Calculus: Some basic problems in continuum and
+statistical mechanics. In Fractals and Fractional Calculus in Continuum
+Mechanics (Eds.: A. Carpinteri and F. Mainardi). New York. Springer
+1997.
+[18] J. Mawhin, Topological degree methods in nonlinear boundary value prob-
+lems, In NSFCBMS Regional Conference Series in Math. American Math.
+Soc. Providence, RI 1979.
+[19] F. Mainardi, Fraction Calculus: Some basic problems in continuum and
+statistical machanics, In: A. Carpinteri, F. Mainardi (eds.) Fractals and
+Fractional Calculus in Continuum Machanics, Springer, Vien, 1997, PP.
+291-348.
+[20] K. S. Miller, B. Ross, An Introduction to the Fractional Calculus and
+Fractional Differential Equations, New York. John Wiley and Sons Inc.
+1993.
+[21] L. Mahto, S. Abbas, A. Favini, Analysis of Caputo impulsive fractional or-
+der differential equations with applications, Adv. Differ. Equ. 2013 (2013),
+Article ID 704547, 11 pages.
+[22] I. Podlubny, Geometric and physical interpretation of fractional integration
+and frac-tional differentiation, Dedicated to the 60th anniversary of Prof.
+Francesco Mainardi. Fract. Calc. Appl. Anal. 5(2002) 367-386.
+[23] I. Podlubny, Fractional Differential Equations, London. Academic Press
+1999.
+[24] X. Wang, C. Bai, Periodic boundary value problems for nonlinear impulsive
+fractional differential equations, Electron. J. Qual. Theory Differ. Equ. 3
+(2011), 1-15.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 120
