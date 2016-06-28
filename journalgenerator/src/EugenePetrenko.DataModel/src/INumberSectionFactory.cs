@@ -152,4 +152,44 @@ namespace EugenePetrenko.DataModel
       }
     }
   }
+
+  public class ConfNumberFactory : INumberSectionFactory
+  {
+    public string ElementName
+    {
+      get { return "conf-article"; }
+    }
+
+    public INumberSection Create(IArticle[] articles)
+    {
+      return new ConfSection(
+        true, 
+        articles, 
+        Pair.Create(JournalLanguage.RU, "Материалы Конференций"), 
+        Pair.Create(JournalLanguage.EN, "Conference Papers"));
+    }
+
+    public IArticle[] Filter(IEnumerable<INumberSection> section)
+    {
+      var art = new List<IArticle>();
+      foreach (INumberSection numberSection in section)
+      {
+        if (numberSection is ConfSection)
+        {
+          art.AddRange(numberSection.Articles);
+        }
+      }
+      return art.ToArray();
+    }
+
+    private class ConfSection : NumberSectionImpl
+    {
+      public ConfSection(bool showTitle, IArticle[] articles, params Pair<JournalLanguage, string>[] section)
+        : base(showTitle, articles, section)
+      {
+      }
+    }
+  }
+
+
 }

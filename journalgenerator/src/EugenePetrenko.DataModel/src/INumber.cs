@@ -32,6 +32,7 @@ namespace EugenePetrenko.DataModel
                           new BooksNumberFactory(),
                           new PhdNumberFactory(),
                           new MonographNumberFactory(),
+                          new ConfNumberFactory(),
                         };
       foreach (var factory in factories)
       {
