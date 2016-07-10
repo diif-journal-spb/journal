@@ -25,12 +25,6 @@ namespace EugenePetrenko.NumberEditor
             {
               return 42;
             }
-
-            //File is locked if Word object is still around
-            using (File.Open(file, FileMode.Append))
-            {
-              return 42;
-            }
           }
           catch
           {

@@ -45,7 +45,7 @@ namespace EugenePetrenko.NumberEditor
         return;
       }
 
-      if (file.Extension(".doc",".docx"))
+      if (file.Extension(".doc",".docx", ".rtf"))
       {
         LoadDOCX(file, sb);
         return;
