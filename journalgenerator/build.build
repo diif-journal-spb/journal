@@ -20,9 +20,15 @@
   </target> 
 
   <target name="make-debug">
-  <property name="msbuild-configuration" value="Debug" />
+    <property name="msbuild-configuration" value="Debug" />
     <call target="make" />
   </target>
+
+  <target name="make-ui-debug">
+    <property name="msbuild-configuration" value="NumberEditor-Debug" />
+    <call target="make" />
+  </target>
+
 
   <target name="debug-init">
      <property name="release" value="${debug}" />
@@ -42,7 +48,7 @@
   </target>
 
   <target name="ui">
-     <call target="make-debug" />
+     <call target="make-ui-debug" />
      <call target="run-ui" />
   </target>
 
