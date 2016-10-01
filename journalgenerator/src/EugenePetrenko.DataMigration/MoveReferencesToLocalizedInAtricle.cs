@@ -15,7 +15,7 @@ namespace EugenePetrenko.DataMigration
       Util.ProcessFiles(ec, dataDir, "*.number", file => Util.UpdateXmlDocument(ec, file, root =>
       {
         if (root.Name != "number") throw new Exception(String.Format("Incorrect root element name {0} in {1}", root.Name, file));
-        foreach (var article in root.SelectNodes("article").Elements())
+        foreach (var article in root.SelectNodes("*").Elements().Where(a => a.Name == "article" || a.Name.EndsWith("-article")))
         {
           var references = article.SelectNodes("references").Elements().ToList();
           if (references.IsEmpty()) continue;
