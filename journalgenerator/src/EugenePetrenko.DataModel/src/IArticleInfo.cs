@@ -40,6 +40,7 @@ namespace EugenePetrenko.DataModel
     private readonly string myTitle;
     private readonly string[] myExtraFiles;
     private readonly string[] myKeywords;
+    private readonly List<IReference> myReferences = new List<IReference>();
 
     public ArticleInfo(IArticle article, XmlElement el, IXmlDataLoader loader) : base(loader.EntityGenerator)
     {
@@ -94,11 +95,30 @@ namespace EugenePetrenko.DataModel
         extraFiles.Add(file);
       }
       myExtraFiles = extraFiles.ToArray();
+
+      int counter = 1;
+      foreach (XmlElement element in el.SelectNodes("references/reference").Elements())
+      {
+        string id = "" + counter++;
+        string title = element.InnerText.Trim();
+
+        myReferences.Add(new Reference(id, title));
+      }
     }
 
     public IReference[] References
     {
-      get { return myArticle.References; }
+      get
+      {
+        if (JournalLanguage == JournalLanguage.RU && myReferences.Count == 0)
+        {
+          return myArticle.ForLanguage(JournalLanguage.EN).References;
+        }
+        else
+        {
+          return myReferences.ToArray();
+        }
+      }
     }
 
     public bool HasKeywords { get { return Keywords.Length > 0; }}
