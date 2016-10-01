@@ -59,6 +59,9 @@ namespace EugenePetrenko.DataMigration
 
       //generate text file index for all .pdf files
       PdfToTextProcessor.Process(ec, pdf);
+
+      //convert to localized references
+      MoveReferencesToLocalizedInAtricle.Process(ec, data);
     }
   }
 }

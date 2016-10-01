@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Xml;
 
 namespace EugenePetrenko.DataModel
@@ -20,6 +21,11 @@ namespace EugenePetrenko.DataModel
       {
         yield return node;
       }
+    }
+
+    public static bool IsEmpty<T>(this IEnumerable<T> nodes)
+    {
+      return nodes == null || !nodes.Any();
     }
   }
 }
