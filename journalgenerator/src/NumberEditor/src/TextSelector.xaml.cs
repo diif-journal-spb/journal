@@ -206,6 +206,9 @@ namespace EugenePetrenko.NumberEditor
                 () => new Separator(), 
                 new ACommand("Set Keywords " + lang, UIAction(() => { aSelector(lang).SetKeywords(KeywordsParser.ParseKeywords(selection)); })).CreateMenuItem, 
                 new ACommand("Remove Keywords " + lang, UIAction(() => { aSelector(lang).Keywords = null; })).CreateMenuItem, 
+                () => new Separator(),
+                new ACommand("Add _references " + lang, UIAction(() => aSelector(lang).AddReferences(ReferencesParser.ParseReferences(selection)))).CreateMenuItem,
+                new ACommand("Remove reference " + lang, UIAction(() => aSelector(lang).RemoveReference())).CreateMenuItem
               };
 
         yield return () => new MenuItem
@@ -229,9 +232,6 @@ namespace EugenePetrenko.NumberEditor
       
       yield return () => new Separator();
       yield return new ACommand("Set pd_f", UIAction(() => article.Items.ForEach(x => x.Pdf = selection))).CreateMenuItem;
-      yield return () => new Separator();
-      yield return new ACommand("Add _references", UIAction(() => myArticle.AddReferences(ReferencesParser.ParseReferences(selection)))).CreateMenuItem;
-      yield return new ACommand("Remove reference", UIAction(() => myArticle.RemoveReference())).CreateMenuItem;
     }
 
     private IEnumerable<Func<object>> AuthorActions(LocalizedAuthorXml author, string selection)

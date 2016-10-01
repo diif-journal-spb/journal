@@ -33,22 +33,6 @@ namespace EugenePetrenko.NumberEditor
     public void SetKeywords(IEnumerable<string> texts)
     {
       Keywords = texts.Select(x => new Keyword {Text = x}).ToArray();
-    }    
-  }
-  
-  [Serializable, XmlRoot("word")]
-  public class Keyword
-  {
-    [XmlText]
-    public string Text { get; set; }
-  }
-
-  [Serializable, XmlRoot("article")]
-  public class LocalizedArticleXml : LocalizableHolder<ArticleInfoXml>
-  {
-    protected override ArticleInfoXml NewT()
-    {
-      return new ArticleInfoXml();
     }
 
     [XmlArray("references")]
@@ -74,9 +58,25 @@ namespace EugenePetrenko.NumberEditor
 
       var refs = new List<string>();
       if (References != null) refs.AddRange(References);
-      refs.RemoveAt(refs.Count-1);
-      
+      refs.RemoveAt(refs.Count - 1);
+
       References = refs.ToArray();
+    }
+  }
+  
+  [Serializable, XmlRoot("word")]
+  public class Keyword
+  {
+    [XmlText]
+    public string Text { get; set; }
+  }
+
+  [Serializable, XmlRoot("article")]
+  public class LocalizedArticleXml : LocalizableHolder<ArticleInfoXml>
+  {
+    protected override ArticleInfoXml NewT()
+    {
+      return new ArticleInfoXml();
     }
 
     [XmlElement("articleInfo")]
