@@ -1,0 +1,822 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 3, 2016
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Dynamical systems on manifolds
+On absolute nonshadowability of transitive maps
+Sergey Tikhomirov
+1
+Abstract
+We study shadowing property for random in nite pseudotrajectories of a continuous
+mapf of a compact metric space. For the cases of transitive maps and transitive attractors
+we prove a dichotomy: either f satis es shadowing property or random pseudotrajectory
+is shadowable with probability 0.
+Keywords: shadowing, transitivity, attractor, Markov chain
+1 Introduction
+The theory of shadowing of approximate trajectories (pseudotrajectories) of dy-
+namical systems is now a well-developed part of the global theory of dynamical
+systems (see the monographs [10, 11] and [13] for a survey of modern results).
+The shadowing problem is related to the following question: under which con-
+ditions, for any pseudotrajectory of f does there exist a close trajectory?
+It is known that a diffeomorphismf has the shadowing property in a neigh-
+borhood of a hyperbolic set [3, 4]. Moreover if f is structurally stable (see
+de nition for example in [7, 12]) then it has the shadowing property on the
+whole manifold. At the same time, it is easy to give an example of a diffeomor-
+phism that is not structurally stable but has the shadowing property (see [17],
+for instance). Thus, structural stability is not equivalent to shadowing.
+1
+Max Planck Institute for Mathematics in the Science Inselstrasse 22, 04103 Leipzig, Germany. Chebyshev
+Laboratory, Saint-Petersburg State University 14th lane 29B, Vasilievsky Island, St. Petersburg, 199178, Russia.
+email:sergey.tikhomirov@gmail.comDifferential Equations and Control Processes, N 3, 2016
+At the same time it was proved that in several contexts shadowing and
+structural stability are equivalent. Sakai prove that the C
+1
+-interior of the set
+of diffeomorphisms having the shadowing property coincides with the set of
+structurally stable diffeomorphisms [16] (see [14] for a similar result for the
+orbital shadowing property). Abdenur and Diaz conjectured that a C
+1
+-generic
+diffeomorphism with the shadowing property is structurally stable; they have
+proved this conjecture for the so-called tame diffeomorphisms [2]. Jointly with
+S. Pilyugin the author proved that so-called Lipschitz shadowing is equivalents
+to structural stability [15]. Thus, set of not structurally stable diffeomorphisms
+satisfying shadowing property is not very reach.
+It is a natural problem to  nd a shadowing property which is satis ed for
+a broader class of diffeomorphisms. One of the possible approaches is to con-
+sider random pseudotrajectories: endow the space of pseudotrajectories with a
+probability measure and  nd su cient conditions for probability of a pseudo-
+trajectory to be shadowable to be close to 1 or at least positive.
+Such studies were initiated in [19]. In this work Yuan, Yorke constructed an
+open set of diffeomorphisms for which probability of a pseudotrajectory to be
+shadowable is 0. In a recent work [18] the author considered a special example
+of linear skew product and found probability of a  nite pseudotrajectory to be
+shadowable.
+Despite the naturalness of randomness approach currently consideration of
+ nite pseudotrajectories is more developed [5, 6, 17, 18]. One of the reasons is
+lack of positive results about shadowing of random pseudotrajectories.
+In the present paper we prove that such a positive result is not possible:
+under transitivity assumption either all pseudotrajectories are shadowable or
+probability of a pseudotrajectory to be shadowable is 0. Precise statements
+of the results for transitive maps and transitive attractors are formulated in
+Theorems 1, 2 respectively.
+2 Transitive maps
+Let (M; dist) be a compact metric space endowed with a  nite Borel measure ,
+such that for any open set U the inequality  (U)> 0 holds. For a> 0, x2M
+denote by B(a;x) the open ball of radius a centered at x. Let f :M!M be
+a homeomorphism.
+Let I = [0;N] or I = [0; +1). For d> 0 we say that sequencefy
+n
+g
+n2I
+is a
+Electronic Journal. http://www.math.spbu.ru/diffjournal 58Differential Equations and Control Processes, N 3, 2016
+d-pseudotrajectory if
+dist(y
+n+1
+;f(y
+n
+)) d; n;n + 12I: (1)
+We say that a d-psedotrajectoryfy
+n
+g
+n2I
+can be "-shadowed for " > 0 if there
+exists x
+0
+2M such that
+dist(y
+n
+;f
+n
+(x
+0
+)) "; n2I: (2)
+We say that f has shadowing property if for any "> 0 there exists d> 0 such
+that any d-pseudotrajectoryfy
+n
+g
+n 0
+can be "-shadowed.
+Remark 1. In the de nitions of pseudotrajectories and shadowing in equations
+(1), (2) usually are used strict inequalities. The de nition of the shadowing
+property with not strict inequalities is equivalent to the classical one and allows
+us to simplify the notation in the proofs of main results.
+For y
+0
+2 M, d > 0, N 2 N[f+1g denote by 
+
+N
+(y
+0
+;d) the set of all
+d-pseudotrajectoriesfy
+n
+g
++1
+n=0
+starting at y
+0
+. Let us consider point y
+n+1
+being
+chosen at random in B(d;f(y
+n
+)) uniformly with respect to the measure  : for
+a measurable set A M the equality
+P (y
+n+1
+2Ajy
+n
+) =
+ (A\B(d;f(y
+n
+)))
+ (B(d;f(y
+n
+)))
+holds. Then 
+
+N
+(y
+0
+;d) forms a Markov chain. This naturally endows 
+
+N
+(y
+0
+;d)
+with a probability measure P
+y
+0
+;d
+N
+. For simplicity for N = +1 we will omit it:
+
+(y
+0
+;d), P
+y
+0
+;d
+.
+Remark 2. This concept was introduced in [19] for in nite pseudotrajectories,
+see also [18] for a similar concept for  nite pseudotrajectories.
+For any y
+0
+2M, d> 0, "> 0, N2N[f+1g consider set Sh
+N
+(y
+0
+;d;") 
+
+
+N
+(y
+0
+;d) of pseudotrajectoriesfy
+n
+g which can be "-shadowed. For N = +1
+we denote the set as Sh(y
+0
+;d;"). Note that each of the sets Sh
+N
+(y
+0
+;d;") is
+closed forN2N and is measurable with respect to P
+y
+0
+;d
+N
+. HenceSh(y
+0
+;d;") is
+a countable intersection of measurable events and is measurable itself.
+Denote
+p(y
+0
+;d;") =P
+y
+0
+;d
+(Sh(y
+0
+;d;"))
+the probability that a d-pseudotrajectory starting at y
+0
+can be "-shadowed.
+We say that a map f is absolutely not shadowable if there exists " > 0
+such that for any y
+0
+2 M, d > 0, p(y
+0
+;d;") = 0. Speaking informally almost
+Electronic Journal. http://www.math.spbu.ru/diffjournal 59Differential Equations and Control Processes, N 3, 2016
+any trajectory of f cannot be "-shadowed. In [19] Yuan and Yorke provided a
+class of examples of absolutely not shadowable diffeomorphism. Based on the
+same technique Abdenur and Diaz proved that absolute nonshadowability isC
+1
+generic among not structurally stable maps.
+We say that f is transitive if there exists r2M such that
+O
++
+(r;f) =M: (3)
+In [2] Abdenur and Diaz proved thatC
+1
+-robustly transitive and not hyper-
+bolic diffeomorphisms are absolutely not shadowable. Their proof is based on
+construction of periodic orbits with different indices.
+In the present paper we remove the differentiability assumption, and what
+is more important, do not assume any properties of the perturbation of f.
+Theorem 1. If f is a transitive map then one of the following holds
+(i) f has the shadowing property;
+(ii) f is absolutely not shadowable.
+In the proof we will use the following folklore result.
+Lemma 1. If for any " > 0 there exists d > 0 such that any  nite d-
+pseudotrajectoryfy
+n
+g
+N
+n=0
+, N > 0 can be "-shadowed then f satis es the shad-
+owing property.
+Proof of Theorem 1. Assume that f does not satisfy shadowing property.
+Lemma 1 implies that there exists"> 0 such that for anyd> 0 there exists
+N and a d=2-pseudotrajectoryfp
+n
+g
+N
+n=0
+which cannot be "-shadowed.
+Take this"> 0 and  x arbitrarily d> 0 and corresponding N andfp
+n
+g
+N
+n=0
+a not "-shadowable d=2-pseudotrajectory. Below we will show that
+p(y
+0
+;d;"=2) = 0: (4)
+Let us note that any sequencefz
+n
+g
+N
+n=0
+satisfying
+dist(p
+n
+;z
+n
+)<"=2
+is not "=2-shadowable.
+Since f is continuous there exists   > 0 such that for any x2 M, y2
+B(d=2;f(x)), z2B( ;x) the inclusion
+B( ;y) B(d;f(z)) (5)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 60Differential Equations and Control Processes, N 3, 2016
+holds.
+Denote
+  =
+inf
+x2M
+ (B( ;x))
+sup
+x2M
+ (B(d;x))
+6= 0; (6)
+B =ffq
+n
+g
+N
+n=0
+: q
+n
+2B( ;p
+n
+)g:
+Let us show that for any z
+0
+2B( ;p
+0
+) the inequality
+P
+N
+(
+
+N
+(z
+0
+;d)\B)  
+N
+(7)
+holds. Indeed, let z
+0
+;z
+1
+;:::;z
+N
+be a random d-pseudotrajectory. Then for any
+z
+k
+2B( ;p
+k
+) the inequality
+P
+N
+(z
+k+1
+2B( ;p
+k
+)jz
+k
+) 
+ (B( ;p
+k+1
+))
+ (B(d;f(z
+k
+)))
+  
+holds. Multiplying those inequalities for k = 0;:::;N  1 and using Markov
+property we conclude that
+P
+N
+(z
+k+1
+2B( ;p
+k+1
+); k = 0;:::;N  1)  
+N
+;
+which proves (7).
+Let us consider  nite coveringfU
+i
+g of M by open balls of radius  
+1
+= =4.
+Letr2M satis es (3). Trajectory of pointr visits each offU
+i
+g in nitely many
+times. LetK
+1
+be such thatff
+n
+(r)g
+K
+1
+n=0
+visits each offU
+i
+g andK
+2
+be such that
+ff
+n
+(f
+K
+1
++1
+(r))g
+K
+2
+n=0
+visits each offU
+i
+g. Set K =K
+1
++K
+2
++ 1. For any z
+0
+2M
+there exists 0 n
+1
+ n
+2
+ K such that
+dist(z
+0
+;f
+n
+1
+(r))< 2 
+1
+; dist(p
+0
+;f
+n
+2
+(r))< 2 
+1
+: (8)
+Consider sequence
+fq
+n
+g
+n
+2
+ n
+1
++N
+n=0
+=ff
+n
+1
+(r);:::;f
+n
+2
+ 1
+(r);p
+0
+;p
+1
+;:::;p
+N
+g:
+Due to inequalities (8) sequencefq
+n
+g is a d=2-pseudotrajectory. Since it con-
+tainsfp
+n
+g
+N
+n=0
+it cannot be "=2-shadowed. Similarly to (7)
+P
+z
+0
+;d
+(z
+n
+2B( ;q
+n
+);n2 [0;n
+2
+ n
+1
++N])  
+n
+2
+ n
+1
++N
+  
+K+N
+:
+Denote L =K +N + 1. Hence for any z
+0
+P
+z
+0
+;d
+(fz
+n
+g
+L 1
+n=0
+is not "=2-shadowablejz
+0
+)  
+L 1
+  
+L
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 61Differential Equations and Control Processes, N 3, 2016
+Similarly for any k  0 and y
+kL
+2M
+P
+y
+0
+;d
+(fy
+n
+g
+(k+1)L 1
+n=kL
+is not "=2-shadowablejy
+kL
+)  
+L
+:
+Combining those inequalities we conclude that for any k  0
+P
+y
+0
+;d
+(fy
+n
+g
+(k+1)L 1
+n=0
+is not "=2-shadowable)  1  (1  
+L
+)
+k
+:
+The right-hand side of the letter expression tends to 1 as k!1 hence
+P
+y
+0
+;d
+(fy
+n
+g is not "=2-shadowable) = 1:
+Theorem is proved.
+3 Transitive attractors
+We say that an invariant compact set   is an attractor if there exists an open
+neighborhoodU of   such thatf(U) U and\
+n 0
+f
+n
+(U) =A, see for instance
+[8]. See book [9] for systematic studies of properties of attractors.
+We will use the following two properties of an attractor:
+1. dist(f
+n
+(x);  )! 0 as n!1 for any x2U;
+2. for any neighborhood V   U of   there exists a neighborhood W   V
+such that
+f(W ) W: (9)
+Denote by D( ) the domain of attraction of  :
+D( ) :=fx2M : dist(f
+n
+(x);  )! 0g:
+Note that D( ) =[
+n 0
+f
+ n
+(U).
+We say thatf has the shadowing property on   if for any"> 0 there exists
+d > 0 such that for any d-pseudotrajectoryfy
+n
+g
+n 0
+    there exists x
+0
+2 M
+(not necessarily belonging to  ) such that inequalities (2) hold.
+We say that set   is transitive if there exists r2   such that
+  =O
++
+(r;f):
+The assumption for a map to be transitive is quite restrictive. At the same
+time it is quite common for attractors. In some works transitivity is included
+in the de nition of attractor [1]. In this work it was proved that transitive
+attractors persists under C
+1
+-generic perturbations.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 62Differential Equations and Control Processes, N 3, 2016
+Theorem 2. Let   be a transitive attractor not satisfying shadowing property
+then there exists "
+0
+> 0 such that for any y
+0
+2 D( ) there exists d
+0
+> 0 such
+that for any d < d
+0
+the probability of a d-pseudotrajectory starting at y
+0
+to be
+"
+0
+-shadowed is 0:
+p(y
+0
+;d;"
+0
+) = 0:
+Remark 3. Note that in Theorem 1 the choice of d was uniform with respect
+to y
+0
+and hence Theorem 1 does not follow from Theorem 2.
+Proof. Similarly to Lemma 1 there exists " > 0 such that for any d > 0 there
+exists N > 0 and a d-pseudotrajectoryfp
+n
+g
+N
+n=0
+which cannot be "-shadowed.
+Fix "
+0
+="=4, V =B("
+0
+;  )\U and W , satisfying (9).
+Fixy
+0
+2D( ). There existsn
+0
+such thatf
+n
+0
+(y
+0
+)2W . Taked
+0
+<"=4 such
+that
+1. for anyfy
+n
+g
+n
+0
+n=0
+2 
+(y
+0
+;d
+0
+) the inclusion
+y
+n
+0
+2W (10)
+holds;
+2. B(d
+0
+;f(W )) W .
+Then for any d<d
+0
+andfy
+n
+g2 
+(y
+0
+;d) the inclusions
+y
+n
+2W; for n n
+0
+(11)
+holds.
+Fix arbitrarilyd<d
+0
+and  ndN > 0 and ad-pseudotrajectoryfp
+n
+g
+N
+n=0
+   
+which cannot be "-shadowed.
+Take   <d=4 such that inclusion (5) holds. Due to compactness of M and
+hence compactness of W there exists S > 0 such that
+f
+n
+(z)2B( =4;  ); n S;z2W:
+Arguing similarly to the proof of Theorem 1 there exists K > 0 such that for
+any z
+0
+2W there exists 0<n
+1
+<n
+2
+<K such that
+dist(f
+S
+(z
+0
+);f
+n
+1
+(r))< =2; dist(f
+n
+2
+(r);p
+0
+)< =2:
+Hence the sequence
+fq
+n
+g
+S+n
+2
+ n
+1
++N
+n=0
+=fz
+0
+;f(z
+0
+);:::;f
+S 1
+(z
+0
+);f
+n
+1
+(r);:::;f
+n
+2
+ 1
+(r);p
+0
+;:::;p
+N
+g:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 63Differential Equations and Control Processes, N 3, 2016
+De ne   by (6) and L = S +K +N + 1. Arguing similarly to the proof of
+Theorem 1 we conclude that
+P
+z
+0
+;d
+(z
+n
+2B( ;q
+n
+);n2 [0;S +n
+2
+ n
+1
++N])  
+n
+2
+ n
+1
++N
+  
+K+S+N
+:
+Again arguing similarly to Theorem 1 and using inclusion (11) we conclude that
+for any z
+0
+2W the equality
+P
+z
+0
+;d
+(fz
+n
+g is "-shadowable) = 0
+holds. Combining the latter with inclusion (10) we conclude that
+P
+y
+0
+;d
+(fy
+n
+g is "-shadowable) = 0;
+which completes the proof of Theorem 2.
+Acknowledgement. Research of the author is supported by the Rus-
+sian Science Foundation grant 14-21-00035, Saint-Petersburg State University
+research grant 6.38.223.2014, and RFBR 15-01-03797a.
+References
+[1] Abdenur F. Attractors of generic diffeomorphisms are persistent. Nonlin-
+earity 16 (2003), no. 1, 301311.
+[2] Abdenur F., Diaz L. J. Pseudo-orbit shadowing in theC
+1
+topology. Discrete
+Contin. Dyn. Syst., 7 (2003), 223-245.
+[3] Anosov D. V. On a class of invariant sets of smooth dynamical systems.
+Proc. 5th Int. Conf. on Nonlin. Oscill. 2 (1970), 39-45.
+[4] Bowen R. Equilibrium States and the Ergodic Theory of Anosov Diffeomor-
+phisms. Lecture Notes Math., vol. 470, Springer, Berlin, 1975.
+[5] Hammel S. M., Yorke J. A., Grebogi C. Do numerical orbits of chaotic
+dynamical processes represent true orbits. J. of Complexity 3 (1987), 136-
+145.
+[6] Hammel S. M., Yorke J. A., Grebogi C. Numerical orbits of chaotic pro-
+cesses represent true orbits. Bulletin of the American Mathematical Society
+19 (1988), 465-469.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 64Differential Equations and Control Processes, N 3, 2016
+[7] Hasselblatt B., Katok A. Introduction to the modern theory of dynamical
+systems. Encyclopedia of Mathematics and its Applications, 54. Cambridge
+University Press, Cambridge, 1995.
+[8] Hasselblatt B., Katok A. A  rst course in dynamics. With a panorama of
+recent developments. Cambridge University Press, New York, 2003.
+[9] Leonov G. A. Strange Attractors and Classical Stability Theory. St. Peters-
+burg University Press, 2009.
+[10] Palmer K. Shadowing in Dynamical Systems. Theory and Applications.
+Kluwer, Dordrecht, 2000.
+[11] Pilyugin S. Yu. Shadowing in Dynamical Systems. Lecture Notes Math.,
+vol. 1706, Springer, Berlin, 1999.
+[12] Pilyugin S. Yu. Spaces of dynamical systems. De Gruyter Studies in Math-
+ematical Physics, 3. De Gruyter, Berlin, 2012.
+[13] Pilyugin S. Yu. Theory of pseudo-orbit shadowing in dynamical systems.
+Diff. Eqs. 47 (2011), 1929{1938.
+[14] Pilyugin S. Yu., Rodionova A. A., Sakai K. Orbital and weak shadowing
+properties. { Discrete Contin. Dyn. Syst., 9 (2003), 287-308.
+[15] Pilyugin S. Yu., Tikhomirov S. B. Lipschitz Shadowing implies structural
+stability. Nonlinearity 23 (2010), 2509-2515
+[16] Sakai K. Pseudo orbit tracing property and strong transversality of diffeo-
+morphisms of closed manifolds. Osaka J. Math., 31 (1994), 373-386.
+[17] Tikhomirov S. Holder Shadowing on  nite intervals. Ergodic Theory Dy-
+nam. Systems, 35 (2015), no. 6, 2000-2016.
+[18] Tikhomirov S. Shadowing in linear skew products. J. Math. Sci. (N.Y.),
+209 (2015), no. 6, 979-987.
+[19] Yuan G., Yorke J. An open set of maps for which every point is absolutely
+nonshadowable. Proc. Amer. Math. Soc. 128 (2000), 909-918.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 65
