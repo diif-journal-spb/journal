@@ -15,64 +15,69 @@ namespace EugenePetrenko.DataMigration
       {
         if (el.Name != "number") throw new Exception("<number> element is expected as root");
 
-        int prevNumberLastPage = 0;
-        el.SelectNodes("article").Cast<XmlElement>().ForEach(ec, artile =>
+        foreach (String elementName in new[] { "article", "book-article", "conf-article", "monograph-article", "phd-article"})
         {
-          var First = new Hashset<int>();
-          var Last = new Hashset<int>();
-
-          artile.SelectNodes("articleInfo").Cast<XmlElement>().ForEach(ec, info =>
+          int prevNumberLastPage = 0;
+          el.SelectNodes(elementName).Cast<XmlElement>().ForEach(ec, artile =>
           {
-            int? FirstPage = null;
-            int? LastPage = null;
+            var First = new Hashset<int>();
+            var Last = new Hashset<int>();
 
-            var FirstPageText = info.GetAttribute("FirstPage");
-            var LastPageText = info.GetAttribute("LastPage");
-
-            if (FirstPageText != "" && FirstPageText != "0")
+            artile.SelectNodes("articleInfo").Cast<XmlElement>().ForEach(ec, info =>
             {
-              FirstPage = int.Parse(FirstPageText);
-              First.Add(FirstPage.Value);
-            }
+              int? FirstPage = null;
+              int? LastPage = null;
 
-            if (LastPageText != "" && LastPageText != "0")
-            {
-              LastPage = int.Parse(LastPageText);
-              Last.Add(LastPage.Value);
-            }
+              var FirstPageText = info.GetAttribute("FirstPage");
+              var LastPageText = info.GetAttribute("LastPage");
 
-            var pdfFileNode = info.SelectSingleNode("pdf/text()");
-            if (pdfFileNode == null) throw new Exception("No PDF for article");
-            var pdfFile = pdfFileNode.Value.Trim();
+              if (FirstPageText != "" && FirstPageText != "0")
+              {
+                FirstPage = int.Parse(FirstPageText);
+                First.Add(FirstPage.Value);
+              }
 
-            var pdfPath = Path.Combine(pdf, pdfFile);
-            if (!File.Exists(pdfPath)) throw new Exception("Failed to find PDF: " + pdfFile);
+              if (LastPageText != "" && LastPageText != "0")
+              {
+                LastPage = int.Parse(LastPageText);
+                Last.Add(LastPage.Value);
+              }
+
+              var pdfFileNode = info.SelectSingleNode("pdf/text()");
+              if (pdfFileNode == null) throw new Exception("No PDF for article");
+              var pdfFile = pdfFileNode.Value.Trim();
+
+              var pdfPath = Path.Combine(pdf, pdfFile);
+              if (!File.Exists(pdfPath)) throw new Exception("Failed to find PDF: " + pdfFile);
 
 
-            if (FirstPage != null && LastPage != null)
-            {
-              if (FirstPage > LastPage) throw new Exception("Invalid pages: " + FirstPage + " => " + LastPage);
-              return;
-            }
+              if (FirstPage != null && LastPage != null)
+              {
+                if (FirstPage > LastPage) throw new Exception("Invalid pages: " + FirstPage + " => " + LastPage);
+                return;
+              }
 
-            var pagesInPdf = getNumberOfPdfPages(pdfPath);
-            Console.Out.WriteLine("Pages: " + pagesInPdf + " in " + pdfFile);
+              var pagesInPdf = getNumberOfPdfPages(pdfPath);
+              Console.Out.WriteLine("Pages: " + pagesInPdf + " in " + pdfFile);
 
-            var firstPageActual = FirstPage.GetValueOrDefault(prevNumberLastPage + 1);
-            var lastPageActual = LastPage.GetValueOrDefault(prevNumberLastPage + pagesInPdf);
-            
-            First.Add(firstPageActual);
-            Last.Add(lastPageActual);
+              var firstPageActual = FirstPage.GetValueOrDefault(prevNumberLastPage + 1);
+              var lastPageActual = LastPage.GetValueOrDefault(prevNumberLastPage + pagesInPdf);
 
-            info.SetAttribute("FirstPage", "" + firstPageActual);
-            info.SetAttribute("LastPage", "" + lastPageActual);
+              First.Add(firstPageActual);
+              Last.Add(lastPageActual);
+
+              info.SetAttribute("FirstPage", "" + firstPageActual);
+              info.SetAttribute("LastPage", "" + lastPageActual);
+            });
+
+            if (First.Count != 1)
+              throw new Exception("Invalid FirstPage values: " + string.Join(", ", First.Values.OrderBy(x => x)));
+            if (Last.Count != 1)
+              throw new Exception("Invalid LastPage values: " + string.Join(", ", Last.Values.OrderBy(x => x)));
+
+            prevNumberLastPage = Last.Values.Max();
           });
-
-          if (First.Count != 1) throw new Exception("Invalid FirstPage values: " + string.Join(", ",  First.Values.OrderBy(x=>x)));
-          if (Last.Count != 1) throw new Exception("Invalid LastPage values: " + string.Join(", ", Last.Values.OrderBy(x=>x)));
-
-          prevNumberLastPage = Last.Values.Max();
-        });
+        }
       }));
     }
 
