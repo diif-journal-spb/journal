@@ -104,6 +104,7 @@ namespace EugenePetrenko.DataMigration
       }
 
       var allAuthorAddresses = new List<IEnumerable<string>>();
+      var allAuthorIDs = new Dictionary<String, String>();
       Util.ProcessFiles(ec, dataDir, "*.authors", file => Util.UpdateXmlDocument(ec, file, element =>
       {
         if (element.Name != "authors-xml")
@@ -112,6 +113,16 @@ namespace EugenePetrenko.DataMigration
         foreach (XmlElement author in element.SelectNodes("author"))
         {
           var authorId = author.GetAttribute("id");
+
+          if (allAuthorIDs.ContainsKey(authorId))
+          {
+            ec.Error("Author ID {0} is used in {1} and {2}", authorId, file, allAuthorIDs[authorId]);
+            allAuthorIDs[authorId] += ", " + file;
+          }
+          else
+          {
+            allAuthorIDs[authorId] = file;
+          }
 
           if (author.HasAttribute("org")) {
             var orgId = author.GetAttribute("org");
