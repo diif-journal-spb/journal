@@ -17,7 +17,6 @@ namespace EugenePetrenko.DataModel
   {
     private readonly string myYear;
     private readonly string myNumber;
-    private readonly INumberSection[] mySections;
 
     public NumberImpl(XmlElement element, IXmlDataLoader loader) : base(loader.EntityGenerator)
     {
@@ -28,7 +27,7 @@ namespace EugenePetrenko.DataModel
       //todo: Load list of types from XML
       var factories = new INumberSectionFactory[]
                         {
-                          new PublicationsNumberFactory(), 
+                          new PublicationsNumberFactory(),
                           new BooksNumberFactory(),
                           new PhdNumberFactory(),
                           new MonographNumberFactory(),
@@ -37,6 +36,7 @@ namespace EugenePetrenko.DataModel
       foreach (var factory in factories)
       {
         var articles = new List<IArticle>();
+        // ReSharper disable once PossibleNullReferenceException
         foreach (XmlElement node in element.SelectNodes(factory.ElementName))
         {
           articles.Add(loader.ParseArticle(node));
@@ -47,34 +47,19 @@ namespace EugenePetrenko.DataModel
           sections.Add(factory.Create(articles.ToArray()));
         }
       }
-      
-      mySections = sections.ToArray();
+
+      Sections = sections.ToArray();
     }
 
-    public string Year
-    {
-      get { return myYear; }
-    }
+    public string Year => myYear;
 
-    public int IntYear
-    {
-      get { return int.Parse(myYear); }
-    }
+    public int IntYear => int.Parse(myYear);
 
-    public string Number
-    {
-      get { return myNumber; }
-    }
+    public string Number => myNumber;
 
-    public int IntNumber
-    {
-      get { return int.Parse(myNumber); }
-    }
+    public int IntNumber => int.Parse(myNumber);
 
-    public INumberSection[] Sections
-    {
-      get { return mySections; }
-    }
+    public INumberSection[] Sections { get; }
 
     public override string ToString()
     {
