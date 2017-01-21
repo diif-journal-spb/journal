@@ -12,6 +12,7 @@
  
   <target name="make" verbose="true">
     <exec program="C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe">
+      <arg value="/m" />
       <arg value="/p:Configuration=${msbuild-configuration}" />
       <arg value="/t:build" />
       <arg value="/p:TrackFileAccess=false" />
