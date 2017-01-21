@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using EugenePetrenko.DataModel;
@@ -13,6 +14,11 @@ namespace EugenePetrenko.RFFI
     {
       myNumber = number;
       myPdfManager = pdfManager;
+
+      if (number.Sections.Length > 1)
+      {
+        Console.WriteLine("  Number contains extra sections: " + string.Join(", ", number.Sections.Select(x=>x.GetType().Name).Distinct().OrderBy(x=>x).ToList()));
+      }
     }
 
     [XmlIgnore]
