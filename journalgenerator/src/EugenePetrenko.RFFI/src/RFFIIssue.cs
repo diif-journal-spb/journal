@@ -16,15 +16,10 @@ namespace EugenePetrenko.RFFI
     }
 
     [XmlIgnore]
-    public INumber NumberInternal { get { return myNumber; }}
-
-/*
-    [XmlElementPath("volume"), XmlText] 
-    public string Volume {get { return myNumber.Year; }}
-*/
+    public INumber NumberInternal => myNumber;
 
     [XmlElementPath("number"), XmlText]
-    public string Number { get { return myNumber.Number; } }
+    public string Number => myNumber.Number;
 
     [XmlElementPath("dateUni"), XmlText]
     public string JournalDateUni {
@@ -47,10 +42,10 @@ namespace EugenePetrenko.RFFI
     }
 
     [XmlElementPath("pages"), XmlText]
-    public string JournalPages { get { return "1-" + GetPages(); } }
+    public string JournalPages => "1-" + GetPages();
 
     [XmlIgnore]
-    public int JournalTotalPages { get { return GetPages(); }}
+    public int JournalTotalPages => GetPages();
 
     [XmlElementPath("articles", "article", CloneData = new []{false, true}), XmlForeach]
     public IEnumerable<RFFIArticle> Articles
@@ -61,14 +56,8 @@ namespace EugenePetrenko.RFFI
       }
     }
 
-    private IEnumerable<IArticle> Articlez
-    {
-      get
-      {
-        return new PublicationsNumberFactory().Filter(myNumber.Sections);
-      }
-    }
-    
+    private IEnumerable<IArticle> Articlez => new PublicationsNumberFactory().Filter(myNumber.Sections);
+
     private int GetPages()
     {
       return Articlez.SelectMany(x => x.AllLanguages()).Max(x => x.LastPage);
