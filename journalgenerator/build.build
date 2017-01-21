@@ -11,7 +11,7 @@
   <property name="msbuild-configuration" value="Release" />
  
   <target name="make" verbose="true">
-    <exec program="C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe">
+    <exec program="C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe">
       <arg value="/p:Configuration=${msbuild-configuration}" />
       <arg value="/t:build" />
       <arg value="/p:TrackFileAccess=false" />
