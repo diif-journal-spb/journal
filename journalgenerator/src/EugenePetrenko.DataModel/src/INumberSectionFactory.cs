@@ -52,7 +52,7 @@ namespace EugenePetrenko.DataModel
 
     public INumberSection Create(IArticle[] articles)
     {
-      return new BooksSection(true, articles, Pair.Create(JournalLanguage.RU, "Новые книги"), Pair.Create(JournalLanguage.EN, "New Books"));
+      return new BooksSection(true, articles, Pair.Create(JournalLanguage.RU, "РќРѕРІС‹Рµ РєРЅРёРіРё"), Pair.Create(JournalLanguage.EN, "New Books"));
     }
 
     public IArticle[] Filter(IEnumerable<INumberSection> section)
@@ -89,7 +89,7 @@ namespace EugenePetrenko.DataModel
       return new PhdsSection(
         true,
         articles,
-        Pair.Create(JournalLanguage.RU, "Диссертации"),
+        Pair.Create(JournalLanguage.RU, "Р”РёСЃСЃРµСЂС‚Р°С†РёРё"),
         Pair.Create(JournalLanguage.EN, "Phds"));
     }
 
@@ -127,7 +127,7 @@ namespace EugenePetrenko.DataModel
       return new MonograpSection(
         true, 
         articles, 
-        Pair.Create(JournalLanguage.RU, "Монографии"), 
+        Pair.Create(JournalLanguage.RU, "РњРѕРЅРѕРіСЂР°С„РёРё"), 
         Pair.Create(JournalLanguage.EN, "Monographs"));
     }
 
@@ -165,7 +165,7 @@ namespace EugenePetrenko.DataModel
       return new ConfSection(
         true, 
         articles, 
-        Pair.Create(JournalLanguage.RU, "Материалы Конференций"), 
+        Pair.Create(JournalLanguage.RU, "РњР°С‚РµСЂРёР°Р»С‹ РљРѕРЅС„РµСЂРµРЅС†РёР№"), 
         Pair.Create(JournalLanguage.EN, "Conference Papers"));
     }
 
