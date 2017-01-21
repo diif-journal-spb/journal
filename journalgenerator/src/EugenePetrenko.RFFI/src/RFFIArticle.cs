@@ -1,7 +1,5 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.RegularExpressions;
 using EugenePetrenko.DataModel;
 
 namespace EugenePetrenko.RFFI
@@ -20,20 +18,20 @@ namespace EugenePetrenko.RFFI
     }
 
     [XmlElementPath("pages"), XmlText]
-    public string Pages { get { return FirstPage + "-" + LastPage; }}
+    public string Pages => FirstPage + "-" + LastPage;
 
-    private int FirstPage { get { return myArticle.AllLanguages().Min(info => info.FirstPage); } }
-    private int LastPage { get { return myArticle.AllLanguages().Max(info => info.LastPage); } }
+    private int FirstPage => myArticle.AllLanguages().Min(info => info.FirstPage);
+    private int LastPage => myArticle.AllLanguages().Max(info => info.LastPage);
 
     [XmlElementPath("artType"), XmlText]
-    public string ArtType { get { return "RAR"; } }
+    public string ArtType => "RAR";
 
     [XmlElementPath("authors", "author", CloneData = new []{false, true}), XmlForeach]
     public RFFIAuthor[] Authors
     {
       get
       {
-        int i = 1;
+        var i = 1;
         return myArticle.Authors.Select(author => new RFFIAuthor(i++, author)).ToArray();
       }
     }
@@ -57,10 +55,7 @@ namespace EugenePetrenko.RFFI
     }
 
     [XmlElementPath("text")]
-    public RFFIArticleText PdfText
-    {
-      get { return new RFFIArticleText(myPdfManager, myArticle); }
-    }
+    public RFFIArticleText PdfText => new RFFIArticleText(myPdfManager, myArticle);
 
     [XmlElementPath("references", "reference", CloneData = new[] { false, true }), XmlForeach]
     public IEnumerable<RFFIReference> Refererences
@@ -69,97 +64,6 @@ namespace EugenePetrenko.RFFI
     }
 
     [XmlElementPath("files")]
-    public RFFIArticleFiles Files
-    {
-      get { return new RFFIArticleFiles(myRffiIssue, myArticle);}
-    }
-  }
-
-  public class RFFIArticleText
-  {
-    private readonly IPdfTextManager myPdfText;
-    private readonly IArticle myArticle;
-
-    public RFFIArticleText(IPdfTextManager pdfText, IArticle article)
-    {
-      myPdfText = pdfText;
-      myArticle = article;
-    }
-
-    [XmlAttribute("lang")]
-    public string Lang
-    {
-      get
-      {
-        return myArticle.AllLanguages().Select(x => x.JournalLanguage).Contains(JournalLanguage.RU)
-          ? JournalLanguage.RU.Lang()
-          : JournalLanguage.EN.Lang();
-      }
-    }
-
-    [XmlText]
-    public string Text
-    {
-      get
-      {
-        return myPdfText.PdfText(myArticle.AllLanguages().First());
-      }
-    }
-  }
-
-  public class RFFIArticleFiles
-  {
-    private const string BaseURL = "http://www.math.spbu.ru/diffjournal";
-
-    private readonly RFFIIssue myRffiIssue;
-    private readonly IArticle myArticle;
-
-    public RFFIArticleFiles(RFFIIssue rffiIssue, IArticle article)
-    {
-      myRffiIssue = rffiIssue;
-      myArticle = article;
-    }
-    
-    [XmlElementPath("furl", CloneData = new [] {true}), XmlText]
-    public string PdfURLs
-    {
-      get
-      {
-        var x = myArticle.ForLanguage(JournalLanguage.RU);
-        return $"{BaseURL}/pdf/{x.Pdf.Replace("\\", "/")}";
-      }
-    }
-
-    private static class ArticleLinkExtensions
-    {
-      private static string getArticleLink(INumber number, IArticle article)
-      {
-        return $@"numbers\{number.Year}.{number.Number}\article.{ArticleFileId(number, article)}.html";
-      }
-
-      public static string getArticleURL(string baseURL, INumber number, IArticle article)
-      {
-        return Regex.Replace($"{baseURL}/{getArticleLink(number, article)}", @"[\\/]+", "/");
-      }
-
-      private static string ArticleFileId(INumber myNumber, IArticle myArticle)
-      {
-        int sectionId = 0;
-        foreach (var section in myNumber.Sections)
-        {
-          sectionId++;
-          int artcleId = 0;
-          foreach (var article in section.Articles)
-          {
-            artcleId++;
-            if (article == myArticle)
-            {
-              return sectionId + "." + artcleId;
-            }
-          }
-        }
-        throw new Exception("Article not found in the number");
-      }
-    }
+    public RFFIArticleFiles Files => new RFFIArticleFiles(myRffiIssue, myArticle);
   }
 }
