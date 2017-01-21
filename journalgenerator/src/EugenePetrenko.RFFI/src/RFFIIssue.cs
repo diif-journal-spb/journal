@@ -52,7 +52,7 @@ namespace EugenePetrenko.RFFI
     {
       get 
       {
-        return Articlez.Select(article => new RFFIArticle(this, article, myPdfManager)).ToArray();
+        return Articlez.Select(article => new RFFIArticle(this, article, myPdfManager, RFFIArtType.RAR)).ToArray();
       }
     }
 

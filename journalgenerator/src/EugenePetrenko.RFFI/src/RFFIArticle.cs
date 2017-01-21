@@ -9,12 +9,14 @@ namespace EugenePetrenko.RFFI
     private readonly RFFIIssue myRffiIssue;
     private readonly IArticle myArticle;
     private readonly IPdfTextManager myPdfManager;
+    private readonly RFFIArtType myArtType;
 
-    public RFFIArticle(RFFIIssue rffiIssue, IArticle article, IPdfTextManager pdfManager)
+    public RFFIArticle(RFFIIssue rffiIssue, IArticle article, IPdfTextManager pdfManager, RFFIArtType artType)
     {
       myRffiIssue = rffiIssue;
       myArticle = article;
       myPdfManager = pdfManager;
+      myArtType = artType;
     }
 
     [XmlElementPath("pages"), XmlText]
@@ -24,7 +26,7 @@ namespace EugenePetrenko.RFFI
     private int LastPage => myArticle.AllLanguages().Max(info => info.LastPage);
 
     [XmlElementPath("artType"), XmlText]
-    public string ArtType => "RAR";
+    public string ArtType => myArtType.Type;
 
     [XmlElementPath("authors", "author", CloneData = new []{false, true}), XmlForeach]
     public RFFIAuthor[] Authors
