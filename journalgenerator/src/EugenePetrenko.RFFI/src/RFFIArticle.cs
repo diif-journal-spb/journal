@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using EugenePetrenko.DataModel;
-using JetBrains.Annotations;
 
 namespace EugenePetrenko.RFFI
 {
@@ -127,7 +126,7 @@ namespace EugenePetrenko.RFFI
       get
       {
         var x = myArticle.ForLanguage(JournalLanguage.RU);
-        return string.Format("{0}/pdf/{1}", BaseURL, x.Pdf.Replace("\\", "/"));
+        return $"{BaseURL}/pdf/{x.Pdf.Replace("\\", "/")}";
       }
     }
 
@@ -135,12 +134,12 @@ namespace EugenePetrenko.RFFI
     {
       private static string getArticleLink(INumber number, IArticle article)
       {
-        return string.Format(@"numbers\{0}.{1}\article.{2}.html", number.Year, number.Number, ArticleFileId(number, article));
+        return $@"numbers\{number.Year}.{number.Number}\article.{ArticleFileId(number, article)}.html";
       }
 
       public static string getArticleURL(string baseURL, INumber number, IArticle article)
       {
-        return Regex.Replace(baseURL + "/" + getArticleLink(number, article), @"[\\/]+", "/");
+        return Regex.Replace($"{baseURL}/{getArticleLink(number, article)}", @"[\\/]+", "/");
       }
 
       private static string ArticleFileId(INumber myNumber, IArticle myArticle)
