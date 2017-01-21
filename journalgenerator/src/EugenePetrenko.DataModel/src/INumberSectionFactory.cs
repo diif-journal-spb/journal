@@ -12,10 +12,7 @@ namespace EugenePetrenko.DataModel
 
   public class PublicationsNumberFactory : INumberSectionFactory
   {
-    public string ElementName
-    {
-      get { return "article"; }
-    }
+    public string ElementName => "article";
 
     public INumberSection Create(IArticle[] articles)
     {
@@ -45,10 +42,7 @@ namespace EugenePetrenko.DataModel
   
   public class BooksNumberFactory : INumberSectionFactory
   {
-    public string ElementName
-    {
-      get { return "book-article"; }
-    }
+    public string ElementName => "book-article";
 
     public INumberSection Create(IArticle[] articles)
     {
@@ -79,10 +73,7 @@ namespace EugenePetrenko.DataModel
 
   public class PhdNumberFactory : INumberSectionFactory
   {
-    public string ElementName
-    {
-      get { return "phd-article"; }
-    }
+    public string ElementName => "phd-article";
 
     public INumberSection Create(IArticle[] articles)
     {
@@ -117,10 +108,7 @@ namespace EugenePetrenko.DataModel
 
   public class MonographNumberFactory : INumberSectionFactory
   {
-    public string ElementName
-    {
-      get { return "monograph-article"; }
-    }
+    public string ElementName => "monograph-article";
 
     public INumberSection Create(IArticle[] articles)
     {
@@ -155,10 +143,7 @@ namespace EugenePetrenko.DataModel
 
   public class ConfNumberFactory : INumberSectionFactory
   {
-    public string ElementName
-    {
-      get { return "conf-article"; }
-    }
+    public string ElementName => "conf-article";
 
     public INumberSection Create(IArticle[] articles)
     {
@@ -190,6 +175,4 @@ namespace EugenePetrenko.DataModel
       }
     }
   }
-
-
 }
