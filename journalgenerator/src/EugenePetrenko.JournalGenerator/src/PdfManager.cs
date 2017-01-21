@@ -31,8 +31,6 @@ namespace EugenePetrenko.JournalGenerator
 
     public void CopyFiles()
     {
-      Console.Out.WriteLine("Copy pdf files to the dest folder");
-
       foreach (KeyValuePair<string, string> file in myCopyFiles)
       {
         string dest = file.Key;
