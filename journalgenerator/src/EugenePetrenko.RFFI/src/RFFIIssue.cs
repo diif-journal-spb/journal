@@ -53,29 +53,84 @@ namespace EugenePetrenko.RFFI
     [XmlIgnore]
     public int JournalTotalPages => GetPages();
 
-    [XmlElementPath("articles", "article", CloneData = new []{false, true}), XmlForeach]
-    public IEnumerable<RFFIArticle> Articles
+    [XmlElementPath("articles"), XmlForeach]
+    public IEnumerable<RFFIArticles> Articles
     {
       get
       {
-        var result = new List<RFFIArticle>();
         foreach (var section in myNumber.Sections)
         {
           var type = RFFIArtType.FromSection(section);
           if (type == null) continue;
 
-          foreach (var article in section.Articles)
-          {
-            result.Add(new RFFIArticle(this, article, myPdfManager, type));
-          }
+          var rffiArticles = section.Articles
+            .Select(x => new RFFIArticle(this, x, myPdfManager, type))
+            .ToList();
+
+          yield return
+            section.ShowTitle
+              ? new RFFISectionArticles(rffiArticles, new RFFISection(section))
+              : new RFFIArticles(rffiArticles);
         }
-        return result;
       }
     }
 
     private int GetPages()
     {
-      return Articles.Select(x => x.LastPage).Max();
+      return Articles.Sum(a => a.Articles.Select(x => x.LastPage).Max());
     }
+  }
+
+  public class RFFISection
+  {
+    private readonly INumberSection mySection;
+
+    public RFFISection(INumberSection section)
+    {
+      mySection = section;
+    }
+
+    [XmlElementPath("secTitle", Clone = true), XmlForeach]
+    public IEnumerable<RFFISectionTitle> SecTitle => mySection.JournalLanguages.Select(l => new RFFISectionTitle(l, mySection.ForLanguage(l)));
+  }
+
+  public class RFFISectionTitle
+  {
+    private readonly JournalLanguage myLang;
+    private readonly ILocalizedNumberSection mySection;
+
+    public RFFISectionTitle(JournalLanguage lang, ILocalizedNumberSection section)
+    {
+      myLang = lang;
+      mySection = section;
+    }
+
+    [XmlText]
+    public string SecTitle => mySection.Name;
+
+    [XmlAttribute("lang")]
+    public string SetLang => myLang.Lang();
+  }
+
+  public class RFFIArticles
+  {
+    public RFFIArticles(IList<RFFIArticle> articles)
+    {
+      Articles = articles;
+    }
+
+    [XmlElementPath("article", Clone = true), XmlForeach]
+    public IList<RFFIArticle> Articles { get; }
+  }
+
+  public class RFFISectionArticles : RFFIArticles
+  {
+    public RFFISectionArticles(IList<RFFIArticle> articles, RFFISection section) : base(articles)
+    {
+      Section = section;
+    }
+
+    [XmlElementPath("section")]
+    public RFFISection Section { get; }
   }
 }
