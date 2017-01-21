@@ -6,8 +6,6 @@ namespace EugenePetrenko.DataModel
   {
     string ElementName { get; }
     INumberSection Create(IArticle[] articles);
-
-    IArticle[] Filter(IEnumerable<INumberSection> section);    
   }
 
   public class PublicationsNumberFactory : INumberSectionFactory
@@ -19,20 +17,7 @@ namespace EugenePetrenko.DataModel
       return new PubSection(false, articles, Pair.Create(JournalLanguage.RU, ""), Pair.Create(JournalLanguage.EN, ""));
     }
 
-    public IArticle[] Filter(IEnumerable<INumberSection> section)
-    {
-      var art = new List<IArticle>();
-      foreach (INumberSection numberSection in section)
-      {
-        if (numberSection is PubSection)
-        {
-          art.AddRange(numberSection.Articles);
-        }
-      }
-      return art.ToArray();
-    }
-
-    private class PubSection : NumberSectionImpl
+    public class PubSection : NumberSectionImpl
     {
       public PubSection(bool showTitle, IArticle[] articles, params Pair<JournalLanguage, string>[] section) : base(showTitle, articles, section)
       {
@@ -49,20 +34,7 @@ namespace EugenePetrenko.DataModel
       return new BooksSection(true, articles, Pair.Create(JournalLanguage.RU, "Новые книги"), Pair.Create(JournalLanguage.EN, "New Books"));
     }
 
-    public IArticle[] Filter(IEnumerable<INumberSection> section)
-    {
-      var art = new List<IArticle>();
-      foreach (INumberSection numberSection in section)
-      {
-        if (numberSection is BooksSection)
-        {
-          art.AddRange(numberSection.Articles);
-        }
-      }
-      return art.ToArray();
-    }
-
-    private class BooksSection : NumberSectionImpl
+    public class BooksSection : NumberSectionImpl
     {
       public BooksSection(bool showTitle, IArticle[] articles, params Pair<JournalLanguage, string>[] section)
         : base(showTitle, articles, section)
@@ -84,20 +56,7 @@ namespace EugenePetrenko.DataModel
         Pair.Create(JournalLanguage.EN, "Phds"));
     }
 
-    public IArticle[] Filter(IEnumerable<INumberSection> section)
-    {
-      var art = new List<IArticle>();
-      foreach (INumberSection numberSection in section)
-      {
-        if (numberSection is PhdsSection)
-        {
-          art.AddRange(numberSection.Articles);
-        }
-      }
-      return art.ToArray();
-    }
-
-    private class PhdsSection : NumberSectionImpl
+    public class PhdsSection : NumberSectionImpl
     {
       public PhdsSection(bool showTitle, IArticle[] articles, params Pair<JournalLanguage, string>[] section)
         : base(showTitle, articles, section)
@@ -119,20 +78,7 @@ namespace EugenePetrenko.DataModel
         Pair.Create(JournalLanguage.EN, "Monographs"));
     }
 
-    public IArticle[] Filter(IEnumerable<INumberSection> section)
-    {
-      var art = new List<IArticle>();
-      foreach (INumberSection numberSection in section)
-      {
-        if (numberSection is MonograpSection)
-        {
-          art.AddRange(numberSection.Articles);
-        }
-      }
-      return art.ToArray();
-    }
-
-    private class MonograpSection : NumberSectionImpl
+    public class MonograpSection : NumberSectionImpl
     {
       public MonograpSection(bool showTitle, IArticle[] articles, params Pair<JournalLanguage, string>[] section)
         : base(showTitle, articles, section)
@@ -154,20 +100,7 @@ namespace EugenePetrenko.DataModel
         Pair.Create(JournalLanguage.EN, "Conference Papers"));
     }
 
-    public IArticle[] Filter(IEnumerable<INumberSection> section)
-    {
-      var art = new List<IArticle>();
-      foreach (INumberSection numberSection in section)
-      {
-        if (numberSection is ConfSection)
-        {
-          art.AddRange(numberSection.Articles);
-        }
-      }
-      return art.ToArray();
-    }
-
-    private class ConfSection : NumberSectionImpl
+    public class ConfSection : NumberSectionImpl
     {
       public ConfSection(bool showTitle, IArticle[] articles, params Pair<JournalLanguage, string>[] section)
         : base(showTitle, articles, section)

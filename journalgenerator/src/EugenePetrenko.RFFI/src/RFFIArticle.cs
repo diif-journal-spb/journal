@@ -22,8 +22,11 @@ namespace EugenePetrenko.RFFI
     [XmlElementPath("pages"), XmlText]
     public string Pages => FirstPage + "-" + LastPage;
 
-    private int FirstPage => myArticle.AllLanguages().Min(info => info.FirstPage);
-    private int LastPage => myArticle.AllLanguages().Max(info => info.LastPage);
+    [XmlIgnore]
+    public int FirstPage => myArticle.AllLanguages().Min(info => info.FirstPage);
+
+    [XmlIgnore]
+    public int LastPage => myArticle.AllLanguages().Max(info => info.LastPage);
 
     [XmlElementPath("artType"), XmlText]
     public string ArtType => myArtType.Type;

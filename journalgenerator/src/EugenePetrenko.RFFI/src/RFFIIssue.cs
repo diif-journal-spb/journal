@@ -50,17 +50,26 @@ namespace EugenePetrenko.RFFI
     [XmlElementPath("articles", "article", CloneData = new []{false, true}), XmlForeach]
     public IEnumerable<RFFIArticle> Articles
     {
-      get 
+      get
       {
-        return Articlez.Select(article => new RFFIArticle(this, article, myPdfManager, RFFIArtType.RAR)).ToArray();
+        var result = new List<RFFIArticle>();
+        foreach (var section in myNumber.Sections)
+        {
+          var type = RFFIArtType.FromSection(section);
+          if (type == null) continue;
+
+          foreach (var article in section.Articles)
+          {
+            result.Add(new RFFIArticle(this, article, myPdfManager, type));
+          }
+        }
+        return result;
       }
     }
 
-    private IEnumerable<IArticle> Articlez => new PublicationsNumberFactory().Filter(myNumber.Sections);
-
     private int GetPages()
     {
-      return Articlez.SelectMany(x => x.AllLanguages()).Max(x => x.LastPage);
+      return Articles.Select(x => x.LastPage).Max();
     }
   }
 }

@@ -20,19 +20,16 @@ namespace EugenePetrenko.DataModel
       myName = name;
     }
 
-    public string Name
-    {
-      get { return myName; }
-    }    
+    public string Name => myName;
   }
 
 
-  public class NumberSectionImpl : Localized<ILocalizedNumberSection>, INumberSection
+  public abstract class NumberSectionImpl : Localized<ILocalizedNumberSection>, INumberSection
   {        
     private readonly bool myShowTitle;    
     private readonly IArticle[] myArticles;
 
-    public NumberSectionImpl(bool showTitle, IArticle[] articles, params Pair<JournalLanguage, string>[] section)
+    protected NumberSectionImpl(bool showTitle, IArticle[] articles, params Pair<JournalLanguage, string>[] section)
     {
       myShowTitle = showTitle;
       myArticles = articles;

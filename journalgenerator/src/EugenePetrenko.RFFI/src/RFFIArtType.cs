@@ -1,3 +1,8 @@
+using System;
+using System.IO;
+using EugenePetrenko.DataModel;
+using JetBrains.Annotations;
+
 namespace EugenePetrenko.RFFI
 {
   public class RFFIArtType
@@ -9,18 +14,49 @@ namespace EugenePetrenko.RFFI
       Type = type;
     }
 
-    public static RFFIArtType RAR = new RFFIArtType("RAR", "научная статья");
-    public static RFFIArtType EDI = new RFFIArtType("EDI", "редакторская заметка");
-    public static RFFIArtType BRV = new RFFIArtType("BRV", "рецензия");
-    public static RFFIArtType CNF = new RFFIArtType("CNF", "материалы конференции");
-    public static RFFIArtType THS = new RFFIArtType("THS", "тезисы доклада на конференции");
-    public static RFFIArtType SCO = new RFFIArtType("SCO", "краткое сообщение");
-    public static RFFIArtType REV = new RFFIArtType("REV", "обзорная статья");
-    public static RFFIArtType ABS = new RFFIArtType("ABS", "аннотация");
-    public static RFFIArtType REP = new RFFIArtType("REP", "научный отчет");
-    public static RFFIArtType COR = new RFFIArtType("COR", "переписка");
-    public static RFFIArtType PER = new RFFIArtType("PER", "персоналии");
-    public static RFFIArtType MIS = new RFFIArtType("MIS", "разное");
-    public static RFFIArtType UNK = new RFFIArtType("UNK", "неопределен");
+    private static RFFIArtType RAR = new RFFIArtType("RAR", "научная статья");
+    private static RFFIArtType EDI = new RFFIArtType("EDI", "редакторская заметка");
+    private static RFFIArtType BRV = new RFFIArtType("BRV", "рецензия");
+    private static RFFIArtType CNF = new RFFIArtType("CNF", "материалы конференции");
+    private static RFFIArtType THS = new RFFIArtType("THS", "тезисы доклада на конференции");
+    private static RFFIArtType SCO = new RFFIArtType("SCO", "краткое сообщение");
+    private static RFFIArtType REV = new RFFIArtType("REV", "обзорная статья");
+    private static RFFIArtType ABS = new RFFIArtType("ABS", "аннотация");
+    private static RFFIArtType REP = new RFFIArtType("REP", "научный отчет");
+    private static RFFIArtType COR = new RFFIArtType("COR", "переписка");
+    private static RFFIArtType PER = new RFFIArtType("PER", "персоналии");
+    private static RFFIArtType MIS = new RFFIArtType("MIS", "разное");
+    private static RFFIArtType UNK = new RFFIArtType("UNK", "неопределен");
+
+    [CanBeNull]
+    public static RFFIArtType FromSection(INumberSection section)
+    {
+      if (section is PublicationsNumberFactory.PubSection)
+      {
+        return RAR;
+      }
+
+      if (section is ConfNumberFactory.ConfSection)
+      {
+        return CNF;
+      }
+
+      if (section is MonographNumberFactory.MonograpSection)
+      {
+        return UNK;
+      }
+
+      if (section is PhdNumberFactory.PhdsSection)
+      {
+        return UNK;
+      }
+
+      if (section is BooksNumberFactory.BooksSection)
+      {
+        return UNK;
+      }
+
+      throw new Exception("Unknown section: " + section.GetType().Name);
+    }
   }
 }
