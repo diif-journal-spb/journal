@@ -21,11 +21,8 @@ namespace EugenePetrenko.JournalGenerator
       remove { myEvents.Remove(value);}
     }
 
-    public IDictionary StaticDictionary
-    {
-      get { return myMap; }
-    }
-    
+    public IDictionary StaticDictionary => myMap;
+
     public SmartLookupDictionary(string templateName, IDictionary predefined, Language language, LinkTemplate currentPageLink)
     {
       myTemplateName = templateName;
@@ -41,7 +38,7 @@ namespace EugenePetrenko.JournalGenerator
       if (myPages.TryGetValue(key, out page))
         return page;
 
-      foreach (LookupItem item in myEvents)
+      foreach (var item in myEvents)
       {
         page = item(key);
         if (page != null)
@@ -126,15 +123,9 @@ namespace EugenePetrenko.JournalGenerator
       get { throw new NotImplementedException(); }
     }
 
-    bool IDictionary.IsReadOnly
-    {
-      get { return true; }
-    }
+    bool IDictionary.IsReadOnly => true;
 
-    bool IDictionary.IsFixedSize
-    {
-      get { return true; }
-    }
+    bool IDictionary.IsFixedSize => true;
 
     void ICollection.CopyTo(Array array, int index)
     {
@@ -146,15 +137,9 @@ namespace EugenePetrenko.JournalGenerator
       get { throw new NotImplementedException(); }
     }
 
-    object ICollection.SyncRoot
-    {
-      get { return this; }
-    }
+    object ICollection.SyncRoot => this;
 
-    bool ICollection.IsSynchronized
-    {
-      get { return false; }
-    }
+    bool ICollection.IsSynchronized => false;
 
     IEnumerator IEnumerable.GetEnumerator()
     {

@@ -20,10 +20,7 @@ namespace EugenePetrenko.JournalGenerator
       return myTemplate.ToString();
     }
 
-    public SmartLookupDictionary Attributes
-    {
-      get { return myAttributes; }
-    }
+    public SmartLookupDictionary Attributes => myAttributes;
 
     void IStringTemplateErrorListener.Error(string msg, Exception e)
     {

@@ -12,15 +12,9 @@ namespace EugenePetrenko.RFFI
     }
 
     [XmlText]
-    public string Title
-    {
-      get { return myTitle; }
-    }
+    public string Title => myTitle;
 
     [XmlAttribute("lang")]
-    public string Lang
-    {
-      get { return myLang; }
-    }
+    public string Lang => myLang;
   }
 }

@@ -30,25 +30,13 @@ namespace EugenePetrenko.DataModel
       myBooks = books;
     }
 
-    public INumber[] Numbers
-    {
-      get { return myNumbers; }
-    }
+    public INumber[] Numbers => myNumbers;
 
-    public IAuthor[] Authors
-    {
-      get { return myAuthors; }
-    }
+    public IAuthor[] Authors => myAuthors;
 
-    public INewsItem[] News
-    {
-      get { return myNews; }
-    }
+    public INewsItem[] News => myNews;
 
-    public IBook[] Books
-    {
-      get { return myBooks; }
-    }
+    public IBook[] Books => myBooks;
 
     private static IEnumerable<T> CollectionForLanguage<T>(IEnumerable<ILocalizedEntity<T>> data, JournalLanguage lang)
       where T : IEntity

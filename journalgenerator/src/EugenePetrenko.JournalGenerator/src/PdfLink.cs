@@ -10,10 +10,7 @@ namespace EugenePetrenko.JournalGenerator
       myPageLink = pageLink;
     }
 
-    public string DestFile
-    {
-      get { return myLinkManager.Combine('\\', myLinkManager.GeneratePath, "pdf", myPageName); }
-    }
+    public string DestFile => myLinkManager.Combine('\\', myLinkManager.GeneratePath, "pdf", myPageName);
 
     public override string ToString()
     {

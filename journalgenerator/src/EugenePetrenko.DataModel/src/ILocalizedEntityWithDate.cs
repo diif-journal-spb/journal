@@ -24,10 +24,6 @@ namespace EugenePetrenko.DataModel
     {      
     }
       
-    public DateTime Date
-    {
-      get { return myDate; }
-    }
-
+    public DateTime Date => myDate;
   }
 }

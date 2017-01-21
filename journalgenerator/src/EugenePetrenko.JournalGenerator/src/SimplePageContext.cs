@@ -14,10 +14,7 @@ namespace EugenePetrenko.JournalGenerator
       myPageLink = pageLink;
     }
 
-    public override LinkTemplate LinkTemplate
-    {
-      get { return myPageLink; }
-    }
+    public override LinkTemplate LinkTemplate => myPageLink;
 
     protected override void AppendLanguageContextInternal(Language language, Dictionary<string, object> ctx)
     {

@@ -7,10 +7,7 @@ namespace EugenePetrenko.DataModel
   {
     private readonly Dictionary<JournalLanguage, T> myEntities = new Dictionary<JournalLanguage, T>();
 
-    public ICollection<JournalLanguage> JournalLanguages
-    {
-      get { return myEntities.Keys; }
-    }
+    public ICollection<JournalLanguage> JournalLanguages => myEntities.Keys;
 
     public T ForLanguage(JournalLanguage journalLanguage)
     {

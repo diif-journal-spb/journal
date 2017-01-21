@@ -1,13 +1,9 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Linq.Expressions;
-using System.Reflection.Emit;
 using System.Text.RegularExpressions;
 using System.Xml;
-using EugenePetrenko.RFFI;
 
 namespace EugenePetrenko.DataMigration
 {
@@ -75,7 +71,7 @@ namespace EugenePetrenko.DataMigration
       Util.ProcessFiles(ec, dataDir, "*.orgs", file => Util.UpdateXmlDocument(ec, file, root =>
       {
         if (root.Name != "orgs")
-          throw new Exception(String.Format("Incorrect root element name {0} in {1}", root.Name, file));
+          throw new Exception($"Incorrect root element name {root.Name} in {file}");
 
         foreach (XmlElement orgElement in root.SelectNodes("org-xml"))
         {
@@ -108,7 +104,7 @@ namespace EugenePetrenko.DataMigration
       Util.ProcessFiles(ec, dataDir, "*.authors", file => Util.UpdateXmlDocument(ec, file, element =>
       {
         if (element.Name != "authors-xml")
-          throw new Exception(String.Format("Incorrect root element name {0} in {1}", element.Name, file));
+          throw new Exception($"Incorrect root element name {element.Name} in {file}");
 
         foreach (XmlElement author in element.SelectNodes("author"))
         {
@@ -199,7 +195,7 @@ namespace EugenePetrenko.DataMigration
           foreach (var addr in address)
           {
             var orgLangElement = el.OwnerDocument.CreateElement("org");
-            orgLangElement.SetAttribute("lang", Regex.Matches(addr, "[à-ÿ]+", RegexOptions.IgnoreCase).Count > 0 ? "RU" : "EN");
+            orgLangElement.SetAttribute("lang", Regex.Matches(addr, "[Ð°-Ñ]+", RegexOptions.IgnoreCase).Count > 0 ? "RU" : "EN");
 
             var nameElement = el.OwnerDocument.CreateElement("name");
             nameElement.AppendChild(el.OwnerDocument.CreateTextNode(addr));

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Xml;
 
 namespace EugenePetrenko.DataMigration
@@ -10,7 +9,7 @@ namespace EugenePetrenko.DataMigration
     {
       Util.ProcessFiles(ec, dataDir, "*.number", file => Util.UpdateXmlDocument(ec, file, root =>
       {
-        if (root.Name != "number") throw new Exception(String.Format("Incorrect root element name {0} in {1}", root.Name, file));
+        if (root.Name != "number") throw new Exception($"Incorrect root element name {root.Name} in {file}");
 
         foreach (XmlElement authors in root.SelectNodes("//authors-xml"))
         {

@@ -17,10 +17,7 @@ namespace EugenePetrenko.JournalGenerator
   {
     private static Program myInstance;
 
-    public static Program Instance
-    {
-      get { return myInstance; }
-    }
+    public static Program Instance => myInstance;
 
     private readonly List<Language> myLanguages;
     private readonly LinkManager myLinkManager;
@@ -36,10 +33,7 @@ namespace EugenePetrenko.JournalGenerator
     private readonly Dictionary<string, ConvertToLanguage> myGlobalContext = new Dictionary<string, ConvertToLanguage>();
     private readonly string myTemplatesPath;
 
-    public PdfManager PdfManager
-    {
-      get { return myPdfManager; }
-    }
+    public PdfManager PdfManager => myPdfManager;
 
     private Program(CommandLineParser commandLineParser)
     {
@@ -66,9 +60,9 @@ namespace EugenePetrenko.JournalGenerator
         Console.Out.WriteLine("Failed to find templates dir");
         return;
       }
-      string data = Path.GetFullPath(commandLineParser.GetValue("data"));
+      var data = Path.GetFullPath(commandLineParser.GetValue("data"));
       DataDir = data;
-      string version = DateTime.Now.ToString("yyyy-MM-dd");
+      var version = DateTime.Now.ToString("yyyy-MM-dd");
 
       BackUp(data, Path.Combine(destFile, "backup\\data-" + version + ".zip"), x=> { });
       BackUp(myTemplatesPath, Path.Combine(destFile, "backup\\templates-" + version + ".zip"), x=> FileUtil.SmartDelete(Path.Combine(x, "shared/books")));
@@ -84,7 +78,7 @@ namespace EugenePetrenko.JournalGenerator
       foreach (Language lang in Enum.GetValues(typeof (Language)))
       {
         myLanguages.Add(lang);
-        string tpath = Path.Combine(myTemplatesPath, lang.ToString());
+        var tpath = Path.Combine(myTemplatesPath, lang.ToString());
 
         Console.Out.WriteLine("Loading template for lang {0} from {1}", lang, tpath);
 
@@ -97,12 +91,12 @@ namespace EugenePetrenko.JournalGenerator
 
     private static void BackUp(string folder, string output, Action<string> removeNotNeeded)
     {
-      string backup = folder + "qqq";
+      var backup = folder + "qqq";
       FileUtil.Copy(folder, backup);
 
       removeNotNeeded(backup);
 
-      string dir = Path.GetDirectoryName(output);
+      var dir = Path.GetDirectoryName(output);
       if (!Directory.Exists(dir))
         Directory.CreateDirectory(dir);
 
@@ -117,9 +111,9 @@ namespace EugenePetrenko.JournalGenerator
       var ctx = new FileHtmlContext(myLinkManager, ctxp);
       Console.Out.WriteLine("\r\nGeneratign page {1}: {0}...", ctx, ctx.TemplateName);
 
-      foreach (Language language in myLanguages)
+      foreach (var language in myLanguages)
       {
-        FileLanguageGenerationContext context = ctx.LanguageContext(language);
+        var context = ctx.LanguageContext(language);
         context.GeneratePageToFile();
       }
 
@@ -128,7 +122,7 @@ namespace EugenePetrenko.JournalGenerator
 
     public void AddPredefinedProperties(IDictionary dic, Language lang, LinkTemplate page)
     {
-      foreach (KeyValuePair<string, ConvertToLanguage> pair in myGlobalContext)
+      foreach (var pair in myGlobalContext)
       {
         if (!dic.Contains(pair.Key))
           dic.Add(pair.Key, pair.Value(lang, page));
@@ -143,7 +137,7 @@ namespace EugenePetrenko.JournalGenerator
 
       while (myQueue.Count > 0)
       {
-        HtmlGenerationContext ctx = myQueue.Dequeue();
+        var ctx = myQueue.Dequeue();
         if (myProcessedPages.Contains(ctx))
           continue;
 
@@ -159,21 +153,21 @@ namespace EugenePetrenko.JournalGenerator
 
     private void BuildRFFI()
     {
-      string rffi = Path.Combine(DestDir, "RFFI");
+      var rffi = Path.Combine(DestDir, "RFFI");
       Directory.CreateDirectory(rffi);
 
-      foreach (INumber number in myJournal.Numbers)
+      foreach (var number in myJournal.Numbers)
       {
         Console.Out.WriteLine("Number {0}-{1}", number.IntNumber, number.IntYear);
 
-        string dir = Path.Combine(rffi, number.Year + "-" + number.Number);
+        var dir = Path.Combine(rffi, number.Year + "-" + number.Number);
         Directory.CreateDirectory(dir);
 
         myPdfManager.CopyFiles();
         var num = new RFFIJournalNumber(new RFFIIssue(number, myPdfManager));
-        XmlDocument doc = XmlAttributeProcessor.Build(num);
+        var doc = XmlAttributeProcessor.Build(num);
 
-        string file = Path.Combine(dir, string.Format("{0}-{1}_unicode.xml", number.Year, number.Number));
+        var file = Path.Combine(dir, string.Format("{0}-{1}_unicode.xml", number.Year, number.Number));
         using (var stream = new StreamWriter(file, false, Encoding.Unicode))
           doc.Save(stream);
 
@@ -224,10 +218,7 @@ namespace EugenePetrenko.JournalGenerator
       myGlobalContext.Add(name, ctx.LinkTemplate.ToLink);
     }
 
-    public Dictionary<Language, StringTemplateGroup> Templates
-    {
-      get { return myTemplates; }
-    }
+    public Dictionary<Language, StringTemplateGroup> Templates => myTemplates;
 
     private static int Main(string[] _args)
     {

@@ -10,15 +10,9 @@ namespace EugenePetrenko.JournalGenerator
     private readonly string myGenerationUrl;
     private readonly string myGeneratePath;
 
-    public string GenerationBaseUrl
-    {
-      get { return myGenerationUrl; }
-    }
+    public string GenerationBaseUrl => myGenerationUrl;
 
-    public string GeneratePath
-    {
-      get { return myGeneratePath; }
-    }
+    public string GeneratePath => myGeneratePath;
 
     public LinkManager(string generationUrl, string generatePath)
     {
@@ -78,10 +72,7 @@ namespace EugenePetrenko.JournalGenerator
       return MakeRelative(RootLink, page.ToLink(lang, null).ToString());
     }
 
-    public string RootLink
-    {
-      get { return myGenerationUrl.Replace('\\', '/').TrimEnd('/'); }
-    }
+    public string RootLink => myGenerationUrl.Replace('\\', '/').TrimEnd('/');
 
     public string GetRootLinkForLanguage(Language lang, LinkTemplate paht)
     {

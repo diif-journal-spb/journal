@@ -11,14 +11,8 @@ namespace EugenePetrenko.JournalGenerator
       myCaption = caption;
     }
 
-    public T Context
-    {
-      get { return myContext; }
-    }
+    public T Context => myContext;
 
-    public string Caption
-    {
-      get { return myCaption; }
-    }
+    public string Caption => myCaption;
   }
 }

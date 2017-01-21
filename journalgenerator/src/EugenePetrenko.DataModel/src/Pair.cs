@@ -19,14 +19,8 @@ namespace EugenePetrenko.DataModel
       myB = b;
     }
 
-    public TA A
-    {
-      get { return myA; }
-    }
+    public TA A => myA;
 
-    public TB B
-    {
-      get { return myB; }
-    }
+    public TB B => myB;
   }
 }

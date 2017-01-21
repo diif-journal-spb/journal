@@ -21,11 +21,8 @@ namespace EugenePetrenko.JournalGenerator
       myDic.Remove(t);
     }
 
-    public int Count { get { return myDic.Count; } }
+    public int Count => myDic.Count;
 
-    public IEnumerable<T> Values
-    {
-      get { return myDic.Keys; }
-    }
+    public IEnumerable<T> Values => myDic.Keys;
   }
 }

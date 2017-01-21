@@ -22,20 +22,14 @@ namespace EugenePetrenko.JournalGenerator
       }
     }
 
-    public Language Language
-    {
-      get { return myLanguage; }
-    }
+    public Language Language => myLanguage;
 
     public Link ForeignLink(Language l)
     {
       return new Link(myLinkManager, l, myPageName, myPageLink);
     }
 
-    public string DestFile
-    {
-      get { return myLinkManager.Combine('\\', myLinkManager.GeneratePath, myLanguage, myPageName); }
-    }
+    public string DestFile => myLinkManager.Combine('\\', myLinkManager.GeneratePath, myLanguage, myPageName);
 
     public override string ToString()
     {

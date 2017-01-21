@@ -26,9 +26,6 @@ namespace EugenePetrenko.DataModel
       }
     }
 
-    public IOrganization Organization
-    {
-      get { return myOrganization; }
-    }
+    public IOrganization Organization => myOrganization;
   }
 }

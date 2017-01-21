@@ -24,7 +24,7 @@ namespace EugenePetrenko.JournalGenerator
         case Language.EN:
           return "English";
         case Language.RU:
-          return "Русский";
+          return "Р СѓСЃСЃРєРёР№";
       }
       throw new ArgumentException("Unexpected language");
     }

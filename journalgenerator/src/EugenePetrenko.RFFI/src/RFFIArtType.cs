@@ -4,7 +4,7 @@ namespace EugenePetrenko.RFFI
   {
     public readonly string Type;
 
-    public RFFIArtType(string type)
+    private RFFIArtType(string type)
     {
       Type = type;
     }

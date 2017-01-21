@@ -14,9 +14,9 @@ namespace EugenePetrenko.JournalGenerator
         string param = commandLine[i];
         if (!param.StartsWith("/")) throw new CommandLineParseException("Unexpected key. All keys should starts from '/'");
 
-        string key = param.Substring(1);
+        var key = param.Substring(1);
 
-        String[] data = key.Split('=');
+        var data = key.Split('=');
 
         if (data.Length > 2) throw new CommandLineParseException("Unexpected key style. Was :" + commandLine[i] + " but expected /key[=value]");
 

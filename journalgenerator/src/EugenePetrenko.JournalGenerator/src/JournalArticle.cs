@@ -17,10 +17,7 @@ namespace EugenePetrenko.JournalGenerator
       myBack = back;
     }
 
-    public IArticle Article
-    {
-      get { return myArticle; }
-    }
+    public IArticle Article => myArticle;
 
 
     public override string[] ExtraFiles
@@ -57,7 +54,7 @@ namespace EugenePetrenko.JournalGenerator
 
     public override LinkTemplate GetLinkTemplate(LinkManager manager)
     {
-      string name = string.Format(@"numbers\{0}.{1}\article.{2}.html", myNumber.Year, myNumber.Number, ArticleFileId());
+      string name = $@"numbers\{myNumber.Year}.{myNumber.Number}\article.{ArticleFileId()}.html";
       return new LinkTemplate(manager, name);        
     }
 

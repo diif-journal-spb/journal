@@ -10,10 +10,7 @@ namespace EugenePetrenko.JournalGenerator
     private readonly string myTemplateName;
     
     [GenerationHidden]
-    public string TemplateName
-    {
-      get { return myTemplateName; }
-    }
+    public string TemplateName => myTemplateName;
 
     protected GenerationContext(LinkManager manager, string templateName) : base(manager)
     {

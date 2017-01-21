@@ -40,39 +40,18 @@ namespace EugenePetrenko.DataModel
       myAuthors = authors.ToArray();
     }
 
-    public string[] Authors
-    {
-      get { return myAuthors; }
-    }
+    public string[] Authors => myAuthors;
 
-    public DateTime Date
-    {
-      get { return myDate; }
-    }
+    public DateTime Date => myDate;
 
-    public string Abstract
-    {
-      get { return myAbstract; }
-    }
+    public string Abstract => myAbstract;
 
-    public string Title
-    {
-      get { return myTitle; }
-    }
+    public string Title => myTitle;
 
-    public string Image
-    {
-      get { return myBook.Image; }
-    }
+    public string Image => myBook.Image;
 
-    public string Pdf
-    {
-      get { return myBook.Pdf; }
-    }
+    public string Pdf => myBook.Pdf;
 
-    public string ISBN
-    {
-      get { return myISBN; }
-    }
+    public string ISBN => myISBN;
   }
 }

@@ -30,9 +30,6 @@ namespace EugenePetrenko.DataModel
       myLocalized.AddEntity(lang, t);
     }
 
-    public ICollection<JournalLanguage> JournalLanguages
-    {
-      get { return myLocalized.JournalLanguages; }
-    }
+    public ICollection<JournalLanguage> JournalLanguages => myLocalized.JournalLanguages;
   }
 }

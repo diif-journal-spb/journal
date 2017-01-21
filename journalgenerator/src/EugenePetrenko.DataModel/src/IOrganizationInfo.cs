@@ -32,25 +32,13 @@ namespace EugenePetrenko.DataModel
       return node == null ? string.Empty : node.Value;
     }
 
-    public JournalLanguage JournalLanguage
-    {
-      get { return myJournalLanguage; }
-    }
+    public JournalLanguage JournalLanguage => myJournalLanguage;
 
-    public IOrganization Organization
-    {
-      get { return myOrganization; }
-    }
+    public IOrganization Organization => myOrganization;
 
-    public string Address
-    {
-      get { return myAddress; }
-    }
+    public string Address => myAddress;
 
-    public string Name
-    {
-      get { return myName; }
-    }
+    public string Name => myName;
 
     public override string ToString()
     {

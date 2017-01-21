@@ -4,7 +4,6 @@ namespace EugenePetrenko.RFFI
   {
     private readonly string myLang;
     private readonly string myTitle;
-    private readonly string myPublisher;
     private readonly string myPublisherPlace;
     private readonly string myPublisherLocation;
 
@@ -12,47 +11,32 @@ namespace EugenePetrenko.RFFI
     {
       myLang = lang;
       myTitle = title;
-      myPublisher = publisher;
+      Publisher = publisher;
       myPublisherPlace = publisherPlace;
       myPublisherLocation = publisherLocation;
     }
 
     [XmlAttribute("lang")]
-    public string Lang
-    {
-      get { return myLang; }
-    }
+    public string Lang => myLang;
 
     [XmlElementPath("title"), XmlText]
-    public string JournalTitle
-    {
-      get { return myTitle; }
-    }
-    
+    public string JournalTitle => myTitle;
+
     [XmlIgnore, XmlElementPath("publ"), XmlText]
-    public string Publisher
-    {
-      get { return myPublisher; }
-    }
+    public string Publisher { get; }
 
     [XmlIgnore, XmlElementPath("placepubl"), XmlText]
-    public string PublishingPlace
-    {
-      get { return myPublisherPlace; }
-    }
+    public string PublishingPlace => myPublisherPlace;
 
     [XmlIgnore, XmlElementPath("loc"), XmlText]
-    public string PlublisherLocation
-    {
-      get { return myPublisherLocation; }
-    }
+    public string PlublisherLocation => myPublisherLocation;
 
     private static readonly JournalInfoBean RUS = new JournalInfoBean(
       "RUS", 
-      "Дифференциальные Уравнения и Процессы Управления", 
-      "Санкт-Петербургский государственный университет", 
-      "Санкт-Петербург", 
-      "198504, Россия, Санкт-Петербург, Старый Петергоф, Университетский пр., дом 28. тел: (812) 428-4210, факс: (812) 428-6944"
+      "Р”РёС„С„РµСЂРµРЅС†РёР°Р»СЊРЅС‹Рµ РЈСЂР°РІРЅРµРЅРёСЏ Рё РџСЂРѕС†РµСЃСЃС‹ РЈРїСЂР°РІР»РµРЅРёСЏ", 
+      "РЎР°РЅРєС‚-РџРµС‚РµСЂР±СѓСЂРіСЃРєРёР№ РіРѕСЃСѓРґР°СЂСЃС‚РІРµРЅРЅС‹Р№ СѓРЅРёРІРµСЂСЃРёС‚РµС‚", 
+      "РЎР°РЅРєС‚-РџРµС‚РµСЂР±СѓСЂРі", 
+      "198504, Р РѕСЃСЃРёСЏ, РЎР°РЅРєС‚-РџРµС‚РµСЂР±СѓСЂРі, РЎС‚Р°СЂС‹Р№ РџРµС‚РµСЂРіРѕС„, РЈРЅРёРІРµСЂСЃРёС‚РµС‚СЃРєРёР№ РїСЂ., РґРѕРј 28. С‚РµР»: (812) 428-4210, С„Р°РєСЃ: (812) 428-6944"
       );
 
     private static readonly JournalInfoBean ENG = new JournalInfoBean(

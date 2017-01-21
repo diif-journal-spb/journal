@@ -1,6 +1,6 @@
 /*
  * Created by: 
- * Created: 14 марта 2007 г.
+ * Created: 14 РјР°СЂС‚Р° 2007 Рі.
  */
 
 using System.Xml;

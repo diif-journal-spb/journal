@@ -1,4 +1,3 @@
-using System.Xml;
 using NUnit.Framework;
 
 namespace EugenePetrenko.DataModel

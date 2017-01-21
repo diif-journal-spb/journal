@@ -16,8 +16,8 @@ namespace EugenePetrenko.JournalGenerator
     {
       base.GeneratePageToFile();
 
-      string path = Path.GetDirectoryName(DestFile);
-      foreach(string file in myExtraFiles)
+      var path = Path.GetDirectoryName(DestFile);
+      foreach(var file in myExtraFiles)
       {
         FileUtil.Copy(Path.Combine(Program.Instance.DataDir, file), Path.Combine(path, Path.GetFileName(file)));
       }

@@ -15,10 +15,7 @@ namespace EugenePetrenko.JournalGenerator
     }
 
     [GenerationHidden]
-    public override LinkTemplate LinkTemplate
-    {
-      get { return myContent.LinkTemplate; }
-    }
+    public override LinkTemplate LinkTemplate => myContent.LinkTemplate;
 
     protected override void AppendLanguageContextInternal(Language language, Dictionary<string, object> ctx)
     {
@@ -37,11 +34,9 @@ namespace EugenePetrenko.JournalGenerator
     protected override FileLanguageGenerationContext CreateContext(StringTemplate template, SmartLookupDictionary dic,
                                                                    Language language)
     {
-      string destFile = myContent.LinkTemplate.ToLink(language, null).DestFile;
-      string[] extraFiles = myContent.ExtraFiles;
-      if (extraFiles.Length == 0)
-        return new FileLanguageGenerationContext(template, dic, destFile);
-      return new FileLanguageGenerationContextWithExtraFiles(template, dic, destFile, extraFiles);
+      var destFile = myContent.LinkTemplate.ToLink(language, null).DestFile;
+      var extraFiles = myContent.ExtraFiles;
+      return extraFiles.Length == 0 ? new FileLanguageGenerationContext(template, dic, destFile) : new FileLanguageGenerationContextWithExtraFiles(template, dic, destFile, extraFiles);
     }
 
     public override string ToString()

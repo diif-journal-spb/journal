@@ -31,10 +31,10 @@ namespace EugenePetrenko.JournalGenerator
 
     public void CopyFiles()
     {
-      foreach (KeyValuePair<string, string> file in myCopyFiles)
+      foreach (var file in myCopyFiles)
       {
-        string dest = file.Key;
-        string dir = Path.GetDirectoryName(dest);
+        var dest = file.Key;
+        var dir = Path.GetDirectoryName(dest);
         if (!Directory.Exists(dir))
           Directory.CreateDirectory(dir);
 
@@ -83,10 +83,10 @@ namespace EugenePetrenko.JournalGenerator
 
     public PdfLink RegisterPdf(IArticle article, Language lang, LinkTemplate page)
     {
-      IArticleInfo language = article.ForLanguage(LanguageUtil.Convert(lang));
-      string name = PdfName(language);
+      var language = article.ForLanguage(LanguageUtil.Convert(lang));
+      var name = PdfName(language);
 
-      Link pageLink = page.ToLink(lang, null);
+      var pageLink = page.ToLink(lang, null);
 
       var link = new PdfLink(myLinkManager, name + ".pdf", pageLink);
       IArticle tmp;
@@ -104,7 +104,7 @@ namespace EugenePetrenko.JournalGenerator
     private static string PdfName(IArticleInfo art)
     {
       var sb = new StringBuilder();
-      foreach (char c in Path.GetFileNameWithoutExtension(art.Pdf))
+      foreach (var c in Path.GetFileNameWithoutExtension(art.Pdf))
       {
         sb.Append(char.IsLetterOrDigit(c) ? char.ToLower(c) : '_');
       }

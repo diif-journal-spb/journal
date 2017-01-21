@@ -34,9 +34,6 @@ namespace EugenePetrenko.RFFI
     }
 
     [XmlAttribute("num")]
-    public string Id
-    {
-      get { return myAuthorId.ToString(); }
-    }
+    public string Id => myAuthorId.ToString();
   }
 }

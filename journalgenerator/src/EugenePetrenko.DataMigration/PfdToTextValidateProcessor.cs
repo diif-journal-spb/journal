@@ -48,7 +48,7 @@ namespace EugenePetrenko.DataMigration
     public static void CheckIsText(string text)
     {
       int whitespaces = Regex.Matches(text, "\\s", RegexOptions.IgnoreCase).Count;
-      int textChars = Regex.Matches(text, "[a-z‡-ˇ0-9\\-]", RegexOptions.IgnoreCase).Count;
+      int textChars = Regex.Matches(text, "[a-z–∞-—è0-9\\-]", RegexOptions.IgnoreCase).Count;
       int totalChars = text.Length;
     }
       

@@ -12,6 +12,6 @@ namespace EugenePetrenko.RFFI
     }
 
     [XmlText]
-    public string RefText { get { return myReference.Title.FilterXml(); }}
+    public string RefText => myReference.Title.FilterXml();
   }
 }

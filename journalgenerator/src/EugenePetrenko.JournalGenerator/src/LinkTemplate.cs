@@ -15,7 +15,7 @@ namespace EugenePetrenko.JournalGenerator
 
     public override string ToString()
     {
-      return string.Format("LinkTemplate: page: {0}", myPageName);
+      return $"LinkTemplate: page: {myPageName}";
     }
 
     public Link ToLink(Language language, LinkTemplate pageLink)

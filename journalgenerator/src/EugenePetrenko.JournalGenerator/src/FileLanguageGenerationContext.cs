@@ -22,9 +22,6 @@ namespace EugenePetrenko.JournalGenerator
         tw.WriteLine(GeneratePage());
     }
 
-    public string DestFile
-    {
-      get { return myDestFile; }
-    }
+    public string DestFile => myDestFile;
   }
 }

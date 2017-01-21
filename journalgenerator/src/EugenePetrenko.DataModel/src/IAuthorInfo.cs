@@ -67,54 +67,30 @@ namespace EugenePetrenko.DataModel
       }
     }
 
-    public IAuthor Author
-    {
-      get { return myAuthor; }
-    }
+    public IAuthor Author => myAuthor;
 
-    public JournalLanguage JournalLanguage
-    {
-      get { return myJournalLanguage; }
-    }
+    public JournalLanguage JournalLanguage => myJournalLanguage;
 
-    public string FirstName
-    {
-      get { return myFirstName; }
-    }
+    public string FirstName => myFirstName;
 
-    public string MiddleName
-    {
-      get { return myMiddleName; }
-    }
+    public string MiddleName => myMiddleName;
 
-    public string LastName
-    {
-      get { return myLastName; }
-    }
+    public string LastName => myLastName;
 
-    public string EMail
-    {
-      get { return myEMail; }
-    }
+    public string EMail => myEMail;
 
-    public string Address
-    {
-      get { return myAddress; }
-    }
+    public string Address => myAddress;
 
-    private string SortKey
-    {
-      get { return mySortKey; }
-    }
+    private string SortKey => mySortKey;
 
     int IComparable<AuthorInfo>.CompareTo(AuthorInfo other)
     {
-      return SortKey.CompareTo(other.SortKey);
+      return String.Compare(SortKey, other.SortKey, StringComparison.Ordinal);
     }
 
     int IComparable<IAuthorInfo>.CompareTo(IAuthorInfo other)
     {
-      return SortKey.CompareTo(((AuthorInfo) other).SortKey);
+      return String.Compare(SortKey, ((AuthorInfo) other).SortKey, StringComparison.Ordinal);
     }
   }
 }

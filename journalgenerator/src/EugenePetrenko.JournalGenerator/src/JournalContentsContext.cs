@@ -79,15 +79,9 @@ namespace EugenePetrenko.JournalGenerator
         myNumbers = numbers;
       }
 
-      public string Year
-      {
-        get { return myYear; }
-      }
+      public string Year => myYear;
 
-      public List<NumberToLink> Issues
-      {
-        get { return myNumbers; }
-      }
+      public List<NumberToLink> Issues => myNumbers;
     }
 
     public struct NumberToLink
@@ -101,15 +95,9 @@ namespace EugenePetrenko.JournalGenerator
         myLink = link;
       }
 
-      public string IssueNumber
-      {
-        get { return myNumber; }
-      }
+      public string IssueNumber => myNumber;
 
-      public Link IssueLink
-      {
-        get { return myLink; }
-      }
+      public Link IssueLink => myLink;
     }
   }
 }

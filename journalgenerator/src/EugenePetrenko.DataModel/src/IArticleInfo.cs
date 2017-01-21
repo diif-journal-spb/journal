@@ -121,49 +121,25 @@ namespace EugenePetrenko.DataModel
       }
     }
 
-    public bool HasKeywords { get { return Keywords.Length > 0; }}
-    public string[] Keywords { get { return myKeywords; } }
+    public bool HasKeywords => Keywords.Length > 0;
+    public string[] Keywords => myKeywords;
 
-    public bool HasReferences { get { return References.Length > 0; } }
+    public bool HasReferences => References.Length > 0;
 
-    public string[] ExtraFiles
-    {
-      get { return myExtraFiles; }
-    }
+    public string[] ExtraFiles => myExtraFiles;
 
-    public JournalLanguage JournalLanguage
-    {
-      get { return myJournalLanguage; }
-    }
+    public JournalLanguage JournalLanguage => myJournalLanguage;
 
-    public IAuthorInfo[] Authors
-    {
-      get { return myAuthors; }
-    }
+    public IAuthorInfo[] Authors => myAuthors;
 
-    public int FirstPage
-    {
-      get { return myFirstPage; }
-    }
+    public int FirstPage => myFirstPage;
 
-    public int LastPage
-    {
-      get { return myLastPage; }
-    }
+    public int LastPage => myLastPage;
 
-    public string Pdf
-    {
-      get { return myPdf; }
-    }
+    public string Pdf => myPdf;
 
-    public string Title
-    {
-      get { return myTitle; }
-    }
+    public string Title => myTitle;
 
-    public string Abstract
-    {
-      get { return myAbstract; }
-    }
+    public string Abstract => myAbstract;
   }
 }

@@ -38,9 +38,6 @@ namespace EugenePetrenko.DataModel
       return mySortKeys.TryGetValue(author.Author, out key) ? key : string.Empty;
     }
 
-    public IAuthor[] Authors
-    {
-      get { return myAuthors; }
-    }
+    public IAuthor[] Authors => myAuthors;
   }
 }

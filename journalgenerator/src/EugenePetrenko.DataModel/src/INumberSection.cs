@@ -43,14 +43,8 @@ namespace EugenePetrenko.DataModel
       }
     }
 
-    public bool ShowTitle
-    {
-      get { return myShowTitle; }
-    }
+    public bool ShowTitle => myShowTitle;
 
-    public IArticle[] Articles
-    {
-      get { return myArticles; }
-    }
+    public IArticle[] Articles => myArticles;
   }  
 }

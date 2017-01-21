@@ -15,12 +15,12 @@ namespace EugenePetrenko.RFFI
       myCount = count;
     }
 
-    [XmlElementPath("operator"), XmlText] public string Operator {get { return "jonnyzzz"; }}
-    [XmlElementPath("pid"), XmlText] public string Pid { get { return "42"; } }
-    [XmlElementPath("date"), XmlText] public string Date { get { return DateTime.UtcNow.ToString(CultureInfo.InvariantCulture); } }
-    [XmlElementPath("cntArticle"), XmlText] public string CntArticle { get { return "" + myCount; } }
-    [XmlElementPath("cntNode"), XmlText] public string CntNode { get { return "0\r\n"; } }
-    [XmlElementPath("cs"), XmlText] public string CS { get { return "0"; } }
+    [XmlElementPath("operator"), XmlText] public string Operator => "jonnyzzz";
+    [XmlElementPath("pid"), XmlText] public string Pid => "42";
+    [XmlElementPath("date"), XmlText] public string Date => DateTime.UtcNow.ToString(CultureInfo.InvariantCulture);
+    [XmlElementPath("cntArticle"), XmlText] public string CntArticle => "" + myCount;
+    [XmlElementPath("cntNode"), XmlText] public string CntNode => "0\r\n";
+    [XmlElementPath("cs"), XmlText] public string CS => "0";
   }
 
   [XmlRoot("journal")]
@@ -34,35 +34,26 @@ namespace EugenePetrenko.RFFI
     }
     
     [XmlElementPath("operCard"), XmlText]
-    public RFFIOperCard OperCard { get { return new RFFIOperCard(myIssue.Articles.Count()); } }
+    public RFFIOperCard OperCard => new RFFIOperCard(myIssue.Articles.Count());
 
     [XmlElementPath("titleid"), XmlText]
-    public string TitleId { get { return "7282"; } }
+    public string TitleId => "7282";
 
     [XmlElementPath("issn"), XmlText]
-    public string JournalISSN { get { return "1817-2172";}}
+    public string JournalISSN => "1817-2172";
 
     [XmlElementPath("codeNEB"), XmlText]
-    public string codeNEB { get { return "18172172"; } }
-   
+    public string codeNEB => "18172172";
+
     [XmlElementPath("journalInfo", Clone = true), XmlForeach]
-    public IEnumerable<JournalInfoBean> JournalInfo
-    {
-      get { return JournalInfoBean.BEANS; }
-    }
+    public IEnumerable<JournalInfoBean> JournalInfo => JournalInfoBean.BEANS;
 
     [XmlElementPath("issue")]
-    public RFFIIssue Issue
-    {
-      get { return myIssue; }
-    }
+    public RFFIIssue Issue => myIssue;
 
     [XmlIgnore, XmlElementPath("jrncode"), XmlText, XmlStaticAttribute("jcountry", "ru")]
-    public string JournalCode { get { return "123456"; } }
+    public string JournalCode => "123456";
 
-    public int TotalPages
-    {
-      get { return myIssue.JournalTotalPages; }
-    }
+    public int TotalPages => myIssue.JournalTotalPages;
   }
 }

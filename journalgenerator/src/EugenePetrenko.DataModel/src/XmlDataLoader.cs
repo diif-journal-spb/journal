@@ -179,10 +179,7 @@ namespace EugenePetrenko.DataModel
       myJournal = new Journal(myEntityGenerator, myNumbers.ToArray(), myAuthors.ToArray(), news.ToArray(), books.ToArray());
     }
 
-    public IJournal Journal
-    {
-      get { return myJournal; }
-    }
+    public IJournal Journal => myJournal;
 
     void IXmlDataLoader.LoadAuthors(XmlDocument doc)
     {

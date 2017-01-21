@@ -10,13 +10,7 @@ namespace EugenePetrenko.RFFI
   [TestFixture]
   public class RFFIGenTest : XmlTestBase, IPdfTextManager
   {
-    public INumber[] Numbers
-    {
-      get
-      {
-        return XmlDataLoader.Parse(DataDirectory).Numbers;
-      }
-    }
+    public INumber[] Numbers => XmlDataLoader.Parse(DataDirectory).Numbers;
 
     [Test, TestCaseSource("Numbers")]
     public void ShouldGenerateValidRFFIXML(INumber number)

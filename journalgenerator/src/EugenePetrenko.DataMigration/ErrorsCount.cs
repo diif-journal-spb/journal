@@ -7,10 +7,7 @@ namespace EugenePetrenko.DataMigration
   {
     private int myErrors = 0;
 
-    public int TotalErrors
-    {
-      get { return myErrors; }
-    }
+    public int TotalErrors => myErrors;
 
     public void Filter(string name, Action action)
     {
@@ -61,10 +58,7 @@ namespace EugenePetrenko.DataMigration
         throw new Exception(message, Exception);
       }
 
-      public string Message
-      {
-        get { return Exception.Message;  }
-      }
+      public string Message => Exception.Message;
 
       public IErrorHelper Log(string tmpl, params object[] args)
       {

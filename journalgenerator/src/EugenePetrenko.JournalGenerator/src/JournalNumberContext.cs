@@ -15,7 +15,7 @@ namespace EugenePetrenko.JournalGenerator
 
     public override LinkTemplate GetLinkTemplate(LinkManager manager)
     {
-      string name = string.Format(@"numbers\{0}.{1}\issue.html", myNumber.Year, myNumber.Number);
+      string name = $@"numbers\{myNumber.Year}.{myNumber.Number}\issue.html";
       return new LinkTemplate(manager, name);        
     }
     
@@ -73,22 +73,13 @@ namespace EugenePetrenko.JournalGenerator
       }
 
       [UsedByStringTemplate]
-      public List<ArticleInfoContext> Articles
-      {
-        get { return myArticles; }
-      }
+      public List<ArticleInfoContext> Articles => myArticles;
 
       [UsedByStringTemplate]
-      public bool ShowTitle
-      {
-        get { return myShowTitle; }
-      }
+      public bool ShowTitle => myShowTitle;
 
       [UsedByStringTemplate]
-      public string TitleName
-      {
-        get { return myTitleName; }
-      }
+      public string TitleName => myTitleName;
     }
 
     public class ArticleInfoContext
@@ -106,34 +97,19 @@ namespace EugenePetrenko.JournalGenerator
       }
 
       [UsedByStringTemplate]
-      public IArticleInfo Info
-      {
-        get { return myInfo; }
-      }
+      public IArticleInfo Info => myInfo;
 
       [UsedByStringTemplate]
-      public Link Link
-      {
-        get { return myLink; }
-      }
+      public Link Link => myLink;
 
       [UsedByStringTemplate]
-      public PdfLink Pdf
-      {
-        get { return myPdf; }
-      }
+      public PdfLink Pdf => myPdf;
 
       [UsedByStringTemplate]
-      public bool HasReferences
-      {
-        get { return myInfo.HasReferences; }
-      }
+      public bool HasReferences => myInfo.HasReferences;
 
       [UsedByStringTemplate]
-      public bool HasKeywords
-      {
-        get { return myInfo.HasKeywords; }
-      }
+      public bool HasKeywords => myInfo.HasKeywords;
     }
   }
 }

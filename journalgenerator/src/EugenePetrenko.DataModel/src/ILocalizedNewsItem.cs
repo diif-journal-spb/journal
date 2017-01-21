@@ -20,14 +20,8 @@ namespace EugenePetrenko.DataModel
       myText = el.SelectSingleNode("text/text()").Value.Trim();
     }
 
-    public string Text
-    {
-      get { return myText; }
-    }
+    public string Text => myText;
 
-    public DateTime Date
-    {
-      get { return myDate; }
-    }
+    public DateTime Date => myDate;
   }
 }
