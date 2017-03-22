@@ -209,6 +209,9 @@
     <EmbeddedResource Include="testData\refs5.html" />
     <EmbeddedResource Include="testData\refs6.html" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="testData\refs7.html" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

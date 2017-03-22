@@ -1,10 +1,9 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
-using System.Text;
 using System.Text.RegularExpressions;
 using NUnit.Framework;
+using NUnit.Framework.Constraints;
 
 namespace EugenePetrenko.NumberEditor
 {
@@ -200,6 +199,22 @@ Academic Publishing), 2011. <span class=GramE>295 p. (in Russian).</span> <o:p><
         Console.Out.WriteLine(">> " + rf);
       }
       Assert.AreEqual(parsed.Count(), 6); // + References as cite
+    }
+
+
+    [Test]
+    public void test_reference_html9_refs7()
+    {
+      var input = Res("refs7.html");
+      var gold = HTMLHelpers.FixWordHTML(input).Trim();
+
+      Console.Out.WriteLine(gold);
+
+      var parsed = ReferencesParser.ParseReferences(gold);
+      Assert.AreEqual(parsed.Count(), 14);
+      Assert.That(gold, new NotConstraint(new ContainsConstraint("<b>")));
+      Assert.That(gold, new NotConstraint(new ContainsConstraint("</b>")));
+      Assert.That(gold, new NotConstraint(new ContainsConstraint("<table>")));
     }
 
     private string Res(string res)

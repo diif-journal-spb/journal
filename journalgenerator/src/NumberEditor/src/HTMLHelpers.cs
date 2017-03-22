@@ -14,13 +14,24 @@ namespace EugenePetrenko.NumberEditor
       {
         html = ProcessAsHTMLDocument(html);
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Console.Out.WriteLine("FUCUUUCUCUCK: " + e);
         //NOP
       }
 
       html = Regex.Replace(html, "[\\r\\n\\s]+", " ");
+      while (true)
+      {
+        var next = FixWordHTMLImpl(html);
+        if (next == html) return next;
+        html = next;
+      }
+    }
+
+    private static string FixWordHTMLImpl(string html)
+    {
+      
       html = new List<string>
         {
           @"<!--(w|W)+?-->",
@@ -38,22 +49,28 @@ namespace EugenePetrenko.NumberEditor
           @"</li\s*>",
           @"<em\s*>\s*</\s*em\s*>",
           @"<u\s*>\s*</\s*u\s*>",
-        }.Aggregate(html, (current, s) => Regex.Replace(current, s, "", RegexOptions.IgnoreCase))
+          @"</?\s*(tr|td|th|table|style)\s*>",
+        }.Aggregate(html, (current, s) => Regex.Replace(current, s, "", RegexOptions.IgnoreCase| RegexOptions.Multiline))
         ;
 
       
-      html = Regex.Replace(html, @"\s*&nbsp;\s*", " ");
-      html = Regex.Replace(html, @"\s*\u00a0\s*", " ");
+      html = Regex.Replace(html, @"\s*&nbsp;\s*", " ", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      html = Regex.Replace(html, @"\s*\u00a0\s*", " ", RegexOptions.IgnoreCase | RegexOptions.Multiline);
       html = Regex.Replace(html, @" +", " ");
-      html = Regex.Replace(html, @"<p\s*>", "\n\n");
-      html = Regex.Replace(html, @"<br\s*/?\s*>", "\n\n");
-      html = Regex.Replace(html, @"<li\s*>", "\n\n");
-      html = Regex.Replace(html, @"</i>\s*<i>", "");
-      html = Regex.Replace(html, @"<i>", "<em>");
-      html = Regex.Replace(html, @"</i>", "</em>");
-      html = Regex.Replace(html, @"</em> *<em>", " ");
+      html = Regex.Replace(html, @"<p\s*>", "\n\n", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      html = Regex.Replace(html, @"<br\s*/?\s*>", "\n\n", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      html = Regex.Replace(html, @"<li\s*>", "\n\n", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      html = Regex.Replace(html, @"</i>\s*<i>", "", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      html = Regex.Replace(html, @"<i>", "<em>", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      html = Regex.Replace(html, @"</i>", "</em>", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      html = Regex.Replace(html, @"<b>\s*</b>", " ", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      html = Regex.Replace(html, @"</em> *<em>", " ", RegexOptions.IgnoreCase | RegexOptions.Multiline);
       html = html.Replace("&nbsp;", " ");
       html = html.Replace("\r", "");
+      html = Regex.Replace(html, @"\n\n+", "\n", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      html = Regex.Replace(html, @"[^\S\n]{2,}", " ", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      html = Regex.Replace(html, @"\n[^\S\n]+\n", "\n", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      html = Regex.Replace(html, @"\n\s*<b>\s*(\[\d+\])\s*</\s*b>", "\n$1 ", RegexOptions.IgnoreCase | RegexOptions.Multiline);
       html = html.Trim();
 
       html =
@@ -109,6 +126,10 @@ namespace EugenePetrenko.NumberEditor
         case "ol":
         case "span":
         case "strong":
+        case "table":
+        case "tr":
+        case "th":
+        case "td":
           return true;
         default:
           return false;
@@ -144,6 +165,12 @@ namespace EugenePetrenko.NumberEditor
       {
         node.Remove();
         return;
+      }
+
+      if (node.Name == "img")
+      {
+        node.ParentNode.InsertBefore(node.OwnerDocument.CreateTextNode("!!!!ERROR!!! IMAGE IS NOT ALLOWERD!"), node);
+        node.Remove();        
       }
 
       var href = node.Attributes["href"];
