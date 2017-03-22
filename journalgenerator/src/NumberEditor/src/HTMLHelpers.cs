@@ -24,9 +24,11 @@ namespace EugenePetrenko.NumberEditor
       while (true)
       {
         var next = FixWordHTMLImpl(html);
-        if (next == html) return next;
+        if (next == html) break;
         html = next;
       }
+
+      return html;
     }
 
     private static string FixWordHTMLImpl(string html)
@@ -82,6 +84,39 @@ namespace EugenePetrenko.NumberEditor
       return html;
     }
 
+    public class MagicLinksEscape
+    {
+      internal readonly Dictionary<string, string> TokenToLink = new Dictionary<string, string>();
+
+      public string InstertHTMLLinks(string text)
+      {
+        foreach (var e in TokenToLink)
+        {
+          var t = e.Value;
+          var link = " <a href=\"" + t + "\">" + t + "</a> ";
+          text = text.Replace(e.Key, link);
+        }
+        return text;
+      }
+    }
+
+    public static string ExcapeLinksWithMagic(string text, out MagicLinksEscape e)
+    {
+      var ml = new MagicLinksEscape();
+      e = ml;
+
+      var regex = new Regex(@"[\s]+(?<url>(http://|https://|ftp://)[^,""\s<)]*)", RegexOptions.IgnoreCase | RegexOptions.Compiled);
+
+      int keyId = 42;
+      return regex.Replace(text, match =>
+      {
+        var key = "LINK_" + keyId++ + "_LINK";
+        var t = match.Groups["url"].Value.Trim().TrimEnd('.').Trim();
+        ml.TokenToLink[key] = t;
+        return key;
+      });     
+    }
+
     private static string ProcessAsHTMLDocument(string html)
     {
       var doc = new HtmlDocument();
@@ -130,6 +165,7 @@ namespace EugenePetrenko.NumberEditor
         case "tr":
         case "th":
         case "td":
+        case "pre":
           return true;
         default:
           return false;
@@ -170,14 +206,24 @@ namespace EugenePetrenko.NumberEditor
       if (node.Name == "img")
       {
         node.ParentNode.InsertBefore(node.OwnerDocument.CreateTextNode("!!!!ERROR!!! IMAGE IS NOT ALLOWERD!"), node);
-        node.Remove();        
+        node.Remove(); 
+        return;
       }
 
       var href = node.Attributes["href"];
-      if (node.Name == "a" && href != null)
+      if (node.Name == "a" && href != null && node.InnerText.Trim() == href.Value.Trim())
       {
-        node.ParentNode.InsertBefore(node.OwnerDocument.CreateTextNode(href.Value), node);
-        href.Remove();
+        var url = href.Value;
+        if (url.StartsWith("http://") || url.StartsWith("https://") || url.StartsWith("ftp://"))
+        {
+          node.ParentNode.InsertBefore(node.OwnerDocument.CreateTextNode(url), node);
+        }
+        else
+        {
+          node.ParentNode.InsertBefore(node.OwnerDocument.CreateTextNode("!!!!ERROR!!! INVALID URL: !" + url), node);          
+        }
+        node.Remove();      
+        return;
       }
 
       if (node.Name == "li")

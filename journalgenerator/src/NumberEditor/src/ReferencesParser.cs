@@ -10,7 +10,8 @@ namespace EugenePetrenko.NumberEditor
   {
     public static IEnumerable<string> ParseReferences(string text)
     {
-      var lines = text.Trim().Split("\r\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries)
+      HTMLHelpers.MagicLinksEscape e;
+      var lines = HTMLHelpers.ExcapeLinksWithMagic(text, out e).Trim().Split("\r\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries)
                       .Select(x => x.Trim())
                       .Where(x => x.Length > 0)
                       .ToArray();
@@ -53,6 +54,8 @@ namespace EugenePetrenko.NumberEditor
           x => Regex.Replace(x, @"\s\s+", " ")
         )
         .Where(x => x.Length > 0)
+        .Select( 
+          x => e.InstertHTMLLinks(x))
         .ToArray();
     } 
 

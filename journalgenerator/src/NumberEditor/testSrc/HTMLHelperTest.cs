@@ -217,6 +217,32 @@ Academic Publishing), 2011. <span class=GramE>295 p. (in Russian).</span> <o:p><
       Assert.That(gold, new NotConstraint(new ContainsConstraint("<table>")));
     }
 
+
+    [Test]
+    public void test_reference_html10_refs8()
+    {
+      var input = Res("refs9.html");
+      var gold = HTMLHelpers.FixWordHTML(input).Trim();
+
+      Console.Out.WriteLine(gold);
+
+      var parsed = ReferencesParser.ParseReferences(gold).ToList();
+      Assert.AreEqual(parsed.Count, 18);
+
+      Console.Out.WriteLine("===");
+      foreach (var p in parsed)
+      {
+        Console.Out.WriteLine("  " + p);
+      }
+
+      var gold2 = String.Join("\n\n", parsed);
+
+      Assert.That(gold, new NotConstraint(new ContainsConstraint("<pre>")));
+      Assert.That(gold2, new ContainsConstraint("http://www.math.spbu.ru/diffjournal/RU/numbers/2014.3/article.1.1.html"));
+      Assert.That(gold2, new ContainsConstraint(@"<a href=""http://www.math.spbu.ru/diffjournal/RU/numbers/2014.2/article.1.1.html"">http://www.math.spbu.ru/diffjournal/RU/numbers/2014.2/article.1.1.html</a>"));
+    }
+
+
     private string Res(string res)
     {
       return GetType().Assembly.GetManifestResourceStream("EugenePetrenko.NumberEditor.testData." + res).ReadAllText();
