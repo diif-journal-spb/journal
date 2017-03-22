@@ -137,6 +137,13 @@ Type `nant debug` to preview local version of the journal in `Google Chrome`.
 Check if the publication looks good. Fix XML if necessary and repeat.
 
 
+Commit change to Git repository
+===============================
+
+Check all changed files are included into Git, call `git status`. Use `git add` to add missing or not staged 
+for commit files.
+
+Call `git commit -m "<AUTHOR> <YEAR> <ISSUE>"` command to commit changes.
 
  
 
