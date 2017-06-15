@@ -58,15 +58,18 @@ namespace EugenePetrenko.RFFI
     {
       get
       {
+        int sectionOffset = 0;
         foreach (var section in myNumber.Sections)
         {
           var type = RFFIArtType.FromSection(section);
           if (type == null) continue;
 
           var rffiArticles = section.Articles
-            .Select(x => new RFFIArticle(this, x, myPdfManager, type))
+            .Select(x => new RFFIArticle(this, x, myPdfManager, type, sectionOffset))
             .ToList();
 
+          sectionOffset = (999 + rffiArticles.Max(x => x.LastPage)) / 1000 * 1000;   
+          
           yield return
             section.ShowTitle
               ? new RFFISectionArticles(rffiArticles, new RFFISection(section))

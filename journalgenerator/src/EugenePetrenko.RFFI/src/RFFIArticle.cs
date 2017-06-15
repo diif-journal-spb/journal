@@ -10,23 +10,25 @@ namespace EugenePetrenko.RFFI
     private readonly IArticle myArticle;
     private readonly IPdfTextManager myPdfManager;
     private readonly RFFIArtType myArtType;
+    private readonly int myPageOffset;
 
-    public RFFIArticle(RFFIIssue rffiIssue, IArticle article, IPdfTextManager pdfManager, RFFIArtType artType)
+    public RFFIArticle(RFFIIssue rffiIssue, IArticle article, IPdfTextManager pdfManager, RFFIArtType artType, int pageOffset = 0)
     {
       myRffiIssue = rffiIssue;
       myArticle = article;
       myPdfManager = pdfManager;
       myArtType = artType;
+      myPageOffset = pageOffset;
     }
 
     [XmlElementPath("pages"), XmlText]
     public string Pages => FirstPage + "-" + LastPage;
 
     [XmlIgnore]
-    public int FirstPage => myArticle.AllLanguages().Min(info => info.FirstPage);
+    public int FirstPage => myPageOffset + myArticle.AllLanguages().Min(info => info.FirstPage);
 
     [XmlIgnore]
-    public int LastPage => myArticle.AllLanguages().Max(info => info.LastPage);
+    public int LastPage => myPageOffset + myArticle.AllLanguages().Max(info => info.LastPage);
 
     [XmlElementPath("artType"), XmlText]
     public string ArtType => myArtType.Type;
