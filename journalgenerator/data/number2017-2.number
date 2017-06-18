@@ -787,4 +787,791 @@ methods for modeling inhomogeneous Poisson flows.</abstract>
   </articleInfo>
 </article>
 
+
+<book-article>
+  <articleInfo lang="EN" FirstPage="0" LastPage="0">
+    <pdf>kuznetsov_book3.pdf</pdf>
+    <abstract>This monograph is devoted to the problem of numerical integration
+of stochastic differential equations (SDE). The case of Ito
+SDE is systematically analized and the case of SDE with jump component 
+is also considered. It is well known, that SDE are adequate mathematical 
+models of dynamic systems under the influence of random 
+disturbances. One of the effective 
+approaches to numerical integration of Ito SDE is an 
+approach based on Taylor-Ito and Taylor-Stratonovich expansions. In the
+presented book this approach is systematically analized.
+ 
+
+The book consist of 4 parts and 17 chapters.
+
+Let's deal with the content of this monograph according to chapters.
+
+In chapter 1 we gathered a support material which may be used 
+while reading this book. We provided concepts of Markov processes,
+Ito and Stratonovich stochastic integrals, Ito formula, Ito SDE and
+SDE with jump component, stochastic integrals according to 
+Poisson random measures and martingales.
+
+
+In chapter 2 we consider the mathematical models 
+of dynamic systems of different physical nature under the influence of random 
+disturbances on the base of SDE. Some mathematical problems for SDE also 
+described in this chapter. We considered the problem of filtering 
+(linear and non-linear), the problem of stochastic stability, the problem 
+of stochastic control, the problem of estimation of parameters of 
+stochastic systems and the probubilistic representations of solutions 
+of Cauchy and Dirichlet problems for differential equations with 
+partial derivatives or second order.
+
+ 
+Chapter 3 is devoted to some properties and formulas for stochastic
+integrals. We determined the class of multiple Ito
+stochastic integrals, for which with probability 1 the 
+formulas of integration order replacement corresponding to 
+the rules of classical integral calculus are reasonable.
+We proved the theorem of integration order replacement for 
+the class of multiple Ito stochastic integrals. 
+We analyzed many examples of this theorem usage.
+These results are generalized for the case of multiple stochastic integrals 
+according to martingale. The formula of connection between multiple Ito 
+and Stratonovich stochastic integrals of any fixed multiplicity k is proven.
+We brought out two families of analytical formulas 
+for calculation of stochastic integrals on Ito processes 
+of sufficiently general form.
+
+
+In chapter 4 we discuss the stochastic Taylor expansions.
+We consider the classical Taylor-Ito and Taylor-Stratonovich
+expansions and 4 new (so called) unified Taylor-Ito and Taylor-Stratonovich
+expansions. The most important feature of mentioned expansions is presence 
+in them of multiple Ito or Stratonovich stochastic integrals, which
+play the key role for solving the problem of numerical integration of 
+Ito SDE and SDE with jump component. The unified Taylor-Ito and 
+Taylor-Stratonovich expansions are built on the base of theorem about 
+integration order replacement in multiple Ito stochastic integrals (chapter 3).
+The unified Taylor-Ito and Taylor-Stratonovich expansions contains 
+the minimal collections of multiple Ito and Stratonovich stochastic 
+integrals, which can't be connected by linear relations. We called 
+such collections as stochastic basises.
+
+
+Chapters 5 and 6 are devoted to strong (mean-square) approximations
+of collections of multiple Ito and Stratonovich stochastic
+integrals from the Taylor-Ito and Taylor-Stratonovich expansions.
+
+In chapters 5 we successfully use the tool 
+of multiple and iterative Fourier series, built in the space L2 
+and pointwise, for the strong approximation of multiple Ito and 
+Stratonovich stochastic integrals.
+We obtained a general result connected with expansion of multiple 
+Ito stochastic integrals of any fixed multiplicity k, based on 
+generalized multiple Fourier series converging in the space 
+L2([t, T] x ... x [t, T]) (k-times). This result is adapted 
+for multiple Stratonovich stochastic integrals of 1-4 multiplicity 
+for Legendre polynomial system and system of trigonometric functions, 
+as well as for other types of multiple stochastic integrals. The theorem 
+on expansion of multiple Stratonovich stochastic integrals with any 
+fixed multiplicity k, based on generalized iterative Fourier series 
+converging pointwise is proven.
+
+
+In chapter 6 we obtained the expressions for mean-square 
+errors of approximation of multiple Ito stochastic integrals in exact form
+for the case of
+multiplicity 1-5 and in general form for the case of any fixed multiplicity k.
+The evaluation for mean-square 
+errors of approximation of multiple Ito stochastic integrals
+of any fixed multiplicity k
+is also obtained.
+We provided a significant practical material devoted to  
+approximation of specific multiple Ito and Stratonovich stochastic 
+integrals of 1-5 multiplicity from the Taylor-Ito and 
+Taylor-Stratonovich expansions using the system of Legendre polynomials 
+and the system of trigonometric functions.
+We compared the methods formulated in this book with existing methods.
+The last part of the chapter 6 is devoted to the weak approximations of 
+multiple Ito stochastic integrals from the Taylor-Ito expansion.
+
+
+In chapters 7-9 we construct strong numerical methods for Ito SDE.
+
+Chapter 7 is devoted to explicit one-step strong numerical 
+methods of orders of accuracy 0.5, 1.0, 1.5, 2.0, 2.5 and 3.0.
+The finite-difference modifications of Runge-Kutta type for
+some of mentioned methods are considered.
+The new step in this scientific field is connected with
+the use of methods of approximation of multiple
+Ito and Stratonovich stochastic integrals from the chapters 5 and 6
+and with the use of unified Taylor-Ito and Taylor-Stratonovich 
+expansions from cheapter 4.
+
+In chapter 8 we construct implicit one-step strong numerical methods 
+for Ito SDE and in chapter 9 we construct explicit and implicit two-step 
+and three-step strong numerical methods for Ito SDE 
+of orders of accuracy 1.0, 1.5, 2.0 and 2.5. The Runge-Kutta type methods
+are also presented.
+
+
+In chapter 10 we consider weak numerical methods for Ito SDE.
+The most of them are well know, but we also constract several new 
+numerical methods. In this chapter explicit, implicit, extrapolation and
+"predictor-corrector" methods as well as Runge-Kutta type methods 
+are presented.
+
+
+
+Chapter 11 is devoted to numerical integration of linear stationary 
+systems of Ito SDE. The numerical method, based on integral 
+representation of solution of linear stationary system of Ito SDE
+and spectral expansion of diffusion matrix is considered. 
+The order of accuracy of this method is investigated. 
+At the second part of this chapter we consider another numerical
+methods for linear stationary systems of Ito SDE: method, based on
+approxmation of Wiener process by piecewise constant stochastic
+process and method, based on Taylor-Ito expansion and Legendre plynomials.
+
+
+
+In chapter 12 we consider the theory of numerical integration
+of SDE with jump component. We discuss the well known concept,
+which consider SDE with jump component as Ito SDE
+on the time intervals between the jumps of Poisson process.
+This approach allows to model separately of jump and diffusion components of 
+the solution of SDE with jump component. For numerical
+modeling of diffusion component we can use the methods from the chapters
+5-10.
+
+
+In chapter 13 we provide the library of MATLAB programs for 
+numerical integration of linear stationary systems of Ito SDE,
+based on atgorithms from chapter 11. Numerical examples of use of
+this library is considered.
+
+
+In chapters 14-16 we demonstrate by numerical modeling the application of 
+numerical methods, constructed in this monograph, to modeling of sample paths 
+of solutions of systems of non-linear Ito SDE (chapter 14) and to numerical 
+solution of mathematical problems by strong (chapter 15) and by weak 
+(chapter 16) numerical methods. For the first time the numerical modeling 
+of multiple Ito and Stratonovich stochastic integrals is realized with use of
+system of Legendre polynomials.
+
+
+Chapter 17 contains full texts of MATLAB programs, realizing the 
+numerical experiments along the text of the book in whole.</abstract>
+    <title>Stochastic Differential Equations: Theory and Practice of Numerical Solution. with Programs on Matlab</title>
+    <keywords>
+      <word>explicit numerical method</word>
+      <word>finite-difference numerical method</word>
+      <word>implicit numerical method</word>
+      <word>Ito stochastic differential equation</word>
+      <word>Ito stochastic integral</word>
+      <word>Legendre polynomial</word>
+      <word>MATLAB program</word>
+      <word>mean-square convergence</word>
+      <word>multiple Fourier series</word>
+      <word>multiple Fourier-Legemdre series</word>
+      <word>multiple Ito stochastic integral</word>
+      <word>multiple stochastic integral expansion</word>
+      <word>multiple Stratonovich stochastic integral</word>
+      <word>multiple trigonometric Fourier series</word>
+      <word>numerical integration</word>
+      <word>numerical method</word>
+      <word>numerical method of Runge-Kutta type</word>
+      <word>numerical modeling</word>
+      <word>one-step numerical method</word>
+      <word>Parseval equality</word>
+      <word>stochastic differential equation</word>
+      <word>stochastic differential equation with jump component</word>
+      <word>stochastic integral on martingale</word>
+      <word>stochastic integral on Poisson measure</word>
+      <word>stochastic Taylor expansion</word>
+      <word>Stratonovich stochastic integral</word>
+      <word>strong approximation</word>
+      <word>strong convergence</word>
+      <word>strong numerical method</word>
+      <word>Taylor-Ito expansion</word>
+      <word>Taylor-Stratonovich expansion</word>
+      <word>three-step numerical method</word>
+      <word>two-step numerical method</word>
+      <word>unified Taylor-Ito expansion</word>
+      <word>unified Taylor-Stratonovich expansion</word>
+      <word>weak approximation</word>
+      <word>weak convergence</word>
+      <word>weak numerical method</word>
+    </keywords>
+    <references>
+      <reference>Boyce W. E. Approximate solution of random ordinary differential equations. &lt;em&gt;Adv. in Appl. Probab&lt;/em&gt;. 10 (1978), 172-184</reference>
+      <reference>Kushner H. J. Probubility methods for approximations in stochastic control and for elliptic equations. N. Y., San Francisco, London, Academic Press, 1977. 242 p</reference>
+      <reference>Il’in V. A., Poznyak E. G. &lt;em&gt;Osnovy matematicheskogo analiza. Chast’ 2&lt;/em&gt; [Foundations of mathematical analysis. Part II]. Moscow, Nauka Publ., 1973. 448 p</reference>
+      <reference>Gihman I. I., Scorokhod A. V. &lt;em&gt;Vvedenie v teoriu sluchainyh processov&lt;/em&gt; [Introduction to the theory of stochastic processes]. Moscow, Nauka Publ., 1977. 660 p</reference>
+      <reference>Gihman I. I., Scorokhod A. V. &lt;em&gt;Stokhasticheskie differencial’nye uravnenia&lt;/em&gt; [Stochastic differential equations]. Kiev, Naukova Dumka Publ., 1968. 354 p</reference>
+      <reference>Gihman I. I., Scorokhod A. V. &lt;em&gt;Teoria sluchainyh processov. T. 3&lt;/em&gt; [The theory of stochastic processes. V. 3]. Moscow, Nauka Publ., 1975. 469 p</reference>
+      <reference>Gihman I. I., Scorokhod A. V. &lt;em&gt;Stokhasticheskie differencial’nye uravnenia i ih prilozhenia&lt;/em&gt; [Stochastic differential equations and its applications]. Kiev, Naukova Dumka Publ., 1982. 612 p</reference>
+      <reference>Scorokhod A. V. &lt;em&gt;Sluchainye processy s nezavisimymi proraschenyami&lt;/em&gt; [Stochastic processes with independent increments]. Moscow, Nauka Publ., 1964. 280 p</reference>
+      <reference>Dynkin E. B. &lt;em&gt;Markovskie processy&lt;/em&gt; [Markov processes] Moscow, Nauka Publ., 1963. 860 p</reference>
+      <reference>Koroluk V. S., Portenko N. I., Skorokhod A. V., Turbin A. F. &lt;em&gt;Spravochnik po teorii veroyatnostei i matematicheskoi statistike&lt;/em&gt; [Handbook on the probability theory and mathematical statistics]. Moscow, Nauka Publ., 1985. 640 p</reference>
+      <reference>Shirjaev A. N. &lt;em&gt;Veroyatnost’&lt;/em&gt; [Probability]. Moscow , Nauka Publ., 1989. 640 p</reference>
+      <reference>Shirjaev A. N. &lt;em&gt;Osnovy stokhasticheskoi finansovoi matematiki. T. 2&lt;/em&gt; [Foundations of the stochastic financial mathematics. V. 2]. Moscow, Fazis Publ., 1998. 544 p</reference>
+      <reference>Liptser R. Sh., Shirjaev A. N. &lt;em&gt;Statistika sluchainyh processov: nelineinaya fil’tracia i smezhnye voprosy &lt;/em&gt;[Statistics of stochastic processes: nonlinear filtering and related problems]. Moscow, Nauka Publ., 1974. 696 p</reference>
+      <reference>Rozanov Yu. A. &lt;em&gt;Stacionarnye sluchainye processy&lt;/em&gt; [Stationary stochastic processes]. Moscow, Fiznatgiz Publ., 1963. 284 p</reference>
+      <reference>Stratonovich R. L. &lt;em&gt;Uslovnye markpvskie processy i ih primenenie k teorii optimal’nogo upravlenia &lt;/em&gt; [Conditional Markov’s processes and its application to the theory of optimal control]. Moscow, Moscow St. Univ. Publ, 1966. 320 p</reference>
+      <reference>Stratonovich R. L., Polyakova M. S. &lt;em&gt;Elementy molekulyarnoi fiziki, termodinamiki i statisticheskoi fiziki &lt;/em&gt;[Elements of molecular physics, thermodynamics and statistical physics]. Moscow, Moscow St. Univ. Publ, 1981. 176 p</reference>
+      <reference>Stratonovich R. L&lt;em&gt;. Izbrannye voprosy teorii fluctuacii v radiotekhnike&lt;/em&gt; [Selected questions of the theory of fluctuacions in radio engineering]. Moscow, Soviet Radio Publ., 1961. 556 p</reference>
+      <reference>Hardy G. H., Rogosinski W. W. Fourier series. N. Y., Dover Publ., 1999. 112 p</reference>
+      <reference>Hobson E. W. The theory of spherical and ellipsoidal harmonics. Cambridge, Cambridge Univ. Press, 1931. 502 p</reference>
+      <reference>Tolstov G. P. &lt;em&gt;Rjady Fur’e&lt;/em&gt; [Fourier series]. Moscow-Leningrad, State Publ. House of Techn. and. Theor. Lit, 1951. 396 p</reference>
+      <reference>Chung K. L., Williams R. J. Introduction to Stochastic Integration. Progress in Probability and Stochastics. Vol. 4, Ed. Huber P., Rosenblatt M. Boston, Basel, Stuttgart, Birkhauser Publ., 1983. 152 p</reference>
+      <reference>Ryzhik I. M., Gradstein I. S. &lt;em&gt;Tablicy integralov, sum, ryadov i proizvedenii. Izd. 3-e&lt;/em&gt; [Tables of integrals, sums, series, and products. 3-rd Ed. ]. Moscow-Leningrad, State Publ. House of Techn. and. Theor. Lit, 1951. 464 p</reference>
+      <reference>Kamke E. &lt;em&gt;Spravochnik po obyknovennym differencial’nym uravneniam. &lt;/em&gt; T. 1 [Handbook on ordinary differential equations. Vol. 1]. Moscow, Nauka Publ., 1971. 576 p</reference>
+      <reference>Ermakov S. M., Mikhailov G. A. &lt;em&gt;Kurs statisticheskogo modelirovania&lt;/em&gt; [The course of statistical modeling]. Moscow, Nauka Publ., 1976. 320 p</reference>
+      <reference>Friedman A. Partial differential equations of parabolic type. Englewood Cliffs, Prentice-Hall Publ., 1964. 347 p</reference>
+      <reference>Smoluhovski M. V. Drei Vortrage uber Diffusion Brownsche Bewegung und Koagulation von Kolloidteilchen. &lt;em&gt;Phys. Zeit&lt;/em&gt;. 17 (1916), 557-585</reference>
+      <reference>Ladyzhenskaya O. A., Solonnikov V. A., Ural’ceva N. N. &lt;em&gt;Lineinye i kvazilineinye uravnenia parabolicheskogo tipa &lt;/em&gt;[Linear and quasilinear equations of parabolic type]. Moscow, Nauka Publ., 1967. 736 p</reference>
+      <reference>Tikhonov A. N., Samarskii A. A. &lt;em&gt;Uravnenia matematicheskoi fiziki. Izd. 5-e&lt;/em&gt; [Equations of mathematical physics. 5-th Ed]. Moscow, Nauka Publ., 1977. 735 p</reference>
+      <reference>Arsenin V. Ya. &lt;em&gt;Metody matematicheskoi fiziki i special’nye funkcii&lt;/em&gt; [Methods of mathematical physics and special functions]. Moscow, Nauka Publ., 1974. 431 p</reference>
+      <reference>Gantmacher F. R. The theory of matrices. New York, Chelsea Publ., 1959. Vol. 1: 374 p., Vol. 2: 277 p</reference>
+      <reference>Bjork T., Kabanov Yu., Runggaldier W. Bond market structure in the presence of marked point processes. &lt;em&gt;Math. Finance&lt;/em&gt;. 7: 2 (1997), 211-239</reference>
+      <reference>Hull J., White A. The pricing of options as assets with stochastic volatilities. &lt;em&gt;J. Finance&lt;/em&gt;. 42 (1987), 281-300</reference>
+      <reference>Merton R. C. Option pricing when underlying stock returns and discontinuous. &lt;em&gt;J. Financial Economics&lt;/em&gt;. 3 (1976), 125-144</reference>
+      <reference>Merton R. C. Continuous-time finance. Oxford; N. Y., Blackwell Publ., 1990. 453 p</reference>
+      <reference>Hull J. Options, futures and other derivatives securities. N. Y., J. Willey and Sons Publ., 1993. 368 p</reference>
+      <reference>Bachelier L. Theorie de la speculation. &lt;em&gt;Ann. Sci. Ecol. Norm. Sup&lt;/em&gt;. Ser. 3. 17 (1900), 21-86</reference>
+      <reference>Einstein A. Investigations on the theory of the Brownien movement. N. Y., Dover, 1956. 122 p</reference>
+      <reference>Pontrjagin L. S. &lt;em&gt;Obyknovennye differencial’nye uravnenia. Izd. 5-e&lt;/em&gt;. [Ordinary differential equations. 5-th Ed. ]. Moscow, Nauka Publ., 1982. 331 p</reference>
+      <reference>Bahvalov N. S. &lt;em&gt;Chislennye metody &lt;/em&gt;[Numerical methods]. Moscow, Fizmatgiz Publ., 1973. 631 p</reference>
+      <reference>Pontrjagin L. S., Andronov A. A., Witt A. A. Statistische Auffassung dynamischer Systeme. &lt;em&gt;Phys. Zeit. &lt;/em&gt; 6: (1934), 1-24</reference>
+      <reference>Van der Ziel A. Fluctuation phenomena in semi-conductors. London, Butterworths Scientific Publ., 1959, 168 p</reference>
+      <reference>Nyquist H. Thermal agittation of electric charge in conductors. &lt;em&gt;Phys. Rev. &lt;/em&gt; 32 (1928), 110-113</reference>
+      <reference>Arato M. Linear Stochastic Systems with Constant Coefficients. A Statistical Approach. Berlin, Heidelberg, N. Y., Springer-Verlag Publ., 1982. 289 p</reference>
+      <reference>Arato M., Kolmogorov A. N., Sinay Ja. G. About estimates of parameters of complex stationary Gaussian Markov process. &lt;em&gt;Dokl. Akad. Nauk SSSR. &lt;/em&gt; 146: 4 (1962), 747-750. (In Russ. )</reference>
+      <reference>Orlov A. &lt;em&gt;Sluzhba Shiroty &lt;/em&gt;[Service of Latitude], Moscow, Akad. Nauk SSSR Publ., 1958. 126 p</reference>
+      <reference>Neymark Yu. I., Landa P. S. &lt;em&gt;Stokhasticheskie i haoticheskie kolebaniya &lt;/em&gt;[Stochastic and chaotic oscillations], Moscow, Nauka Publ., 1987. 424 p</reference>
+      <reference>Lotka A. J. Undamped oscillations derived from the law of mass action. &lt;em&gt;J. Amer. Chem. Soc&lt;/em&gt;. 42: 8 (1920), 1595-1599</reference>
+      <reference>Volterra V. &lt;em&gt;Matematicheskaya teoriya bor’by za suschestvovanie&lt;/em&gt; [Mathematical theory of struggle for existence], Moscow, Nauka Publ., 1976. 286 p</reference>
+      <reference>Belousov B. P. [Periodically acting reaction and its mechanism] &lt;em&gt;Sb. referatov po radiacionnoi medicine &lt;/em&gt;[A collection of abstracts on radiation medicine], Moscow, Medgiz Publ., 1959, pp. 145-148 (In Russ. )</reference>
+      <reference>Zhabotinsky A. M&lt;em&gt;. Koncentracionnye avtokolebaniya&lt;/em&gt; [Concentration self-oscillations], Moscow, Nauka Publ., 1974. 178 p</reference>
+      <reference>Romanovsky Yu. M., Stepanova N. V., Chernavsky D. S. &lt;em&gt;Matematicheskaya biofizika &lt;/em&gt;[Mathematical biophysics], Moscow, Nauka Publ., 1984. 304 p</reference>
+      <reference>Obukhov A. M. Description of turbulence in Lagrangian variables. &lt;em&gt;Adv. Geophis. &lt;/em&gt; 3 (1959), 113-115</reference>
+      <reference>Pervozvansky A. A. &lt;em&gt;Rynok: raschet i risk&lt;/em&gt; [Market: calculation and risk], Moscow, INFRA Publ., 1994. 210 p</reference>
+      <reference>Wolf J. R. Neue Untersuchungen uber die Periode der Sonnenflecken und ihre Bedeutung. &lt;em&gt;Mit. Naturforsch. Ges. Bern. &lt;/em&gt; 255, (1852), 249-270</reference>
+      <reference>Slucky E. E. About 11-year periodicity of sunspots, &lt;em&gt; Dokl. Akad. Nauk SSSR&lt;/em&gt;, 4: 9, 1-2 (1935), 35-38. (In Russ. )</reference>
+      <reference>Henrici P. Discrete variable methods in ordinary differential equations. N. Y., Wiley Publ., 1962. 407 p</reference>
+      <reference>Rossler O. E. An equation for continuous chaos. &lt;em&gt;Phys. Lett. &lt;/em&gt; 57A (1976), 397-398</reference>
+      <reference>Has’minsky R. Z&lt;em&gt;. Ustoichivost’ system differencial’nyh uravnenii pri sluchainyh vozmuscheniyah ih parametrov&lt;/em&gt; [Stability of systems of differential equations under random disturbances of their parameters], Moscow, Nauka Publ., 1969. 365 p</reference>
+      <reference>Kushner H. J. Stochastic stability and control. N. Y., London, Academic Press, 1967. 162 p</reference>
+      <reference>Barkin A. I., Zelentsovsky A. L., Pakshin P. V. &lt;em&gt;Absol’utnaya ustoichivost’ determinirovannyh i stokhasticheskih system upravleniya&lt;/em&gt; [Absolute stability of deterministic and stochastic control systems]. Moscow, MAI Publ., 1992. 303 p</reference>
+      <reference>Kozin F. Introduction to stability of stochastic systems. &lt;em&gt;Avtomatika. &lt;/em&gt;5 (1969), 95-112. (In Russ. )</reference>
+      <reference>Samarsky A. A., Galaktionov V. A., Kurd’umov S. P. &lt;em&gt;Rezhimy s obostreniem v zadachah dl’a kvazilineinyh parabolicheskih uravnenii&lt;/em&gt;. [Regimes with aggravation in the problems for quasilinear parabolic equations], Moscow, Nauka Publ,, 1987. 476 p</reference>
+      <reference>Samarsky A. A. &lt;em&gt;Teoriya raznostnyh skhem. Izd. 3-e. &lt;/em&gt; [Theory of difference schemes. 3rd Ed. ], Moscow, Nauka Publ., 1989. 614 p</reference>
+      <reference>Kac M. On distribution of certain Wiener functionals. &lt;em&gt;Trans. Amer. Math. Soc. &lt;/em&gt; 65 (1949), 1-13</reference>
+      <reference>Kac M. On some connections between probability theory and differential and integral equations. &lt;em&gt;Proc. Second Berkley Symp. Math. Stat. Probab&lt;/em&gt;. 1 (1951), 189-215</reference>
+      <reference>Philips H. B., Wiener N. Nets and Dirichlet problem. &lt;em&gt;J. Math. Phys&lt;b&gt;. &lt;/b&gt;&lt;/em&gt; 2 (1923), 105-124</reference>
+      <reference>Petrovski I. G. Uber das Irrfahrtproblem. &lt;em&gt;Math. Ann&lt;/em&gt;. 109 (1934), 425-444</reference>
+      <reference>Doob J. L. Semimartingales and subharmonic functions. &lt;em&gt;Trans. Amer. Math. Soc&lt;/em&gt;. 77 (1954), 86-121</reference>
+      <reference>Ueno T. The diffusion satisfying Wentzell's boundary conditions and the Markov processes on the boundary. &lt;em&gt;Proc. Japan Akad&lt;/em&gt;. 36 (1960), 533-538</reference>
+      <reference>Blumenthal R. M., Getoor R. K., McKean H. P. Markov processes with identical hitting distributions. &lt;em&gt;Illinois J. Math&lt;/em&gt;. 6 (1962), 402-421</reference>
+      <reference>Strook D. W., Varadhan S. R. S. Multidimensional diffusion processes. Berlin, Springer Publ., 1979. 338 p</reference>
+      <reference>Ito K. &lt;em&gt;Veroyatnostnye processy. Vyp. 2&lt;/em&gt; [Probubilistic processes. Vol. 2], Moscow, IL Publ., 1963. 135 p</reference>
+      <reference>Arnold L. Stochastic differential equations: Theory and applications. N. Y., Wiley Publ., 1974. 228 p</reference>
+      <reference>Ikeda N., Watanabe S,. Stochastic differential equations and diffusion processes. Amsterdam, Oxford, N. Y., North Holland Publ. Co., 1981. 480 p</reference>
+      <reference>Pugachev V. S., Sinitsin I. N. &lt;em&gt;Stokhasticheskie differencial’nye sistemy: analiz i fil’traciya&lt;/em&gt;. [Stochastic differential systems: analysis and filtration], Moscow, Nauka Publ., 1985. 559 p</reference>
+      <reference>Girsanov I, V. About the conversion of one class of stochastic processes with absolutely continuous substitution of measure. &lt;em&gt;Teor. Veroyatn. i prim. &lt;/em&gt;. 5: 3 (1960), 314-330. (In Russ. )</reference>
+      <reference>Maruyama G. Continuous Markov processes and stochastic equations. &lt;em&gt;Rend. Circ. Math. Palermo&lt;/em&gt;. 4 (1955), 48-90</reference>
+      <reference>Dzagnidze Z. A., Chitashvili R. Ya. [Approximate integration of stochastic differential equations]. &lt;em&gt;Sb. Nauchn. Trudov Inst. Prikl. Mat. Tbil. Gos. Univ&lt;/em&gt;. &lt;em&gt;”Trudy IV”&lt;/em&gt; [Proc. of the Inst. of Appl. Math. of the Tbil. St. Univ. ], 1975, pp. 267-279. (In Russ. )</reference>
+      <reference>Atalla M. A. [Finite-difference approximations for stochastic differential equations]. &lt;em&gt; Sb. Nauchn. Trudov Inst. Mat. Ak. Nauk. Ukr. SSR “Veroyatnostnye metody issledovaniya system s beskonechnym chislom stepenei svobody” &lt;/em&gt;[Proc. of the Inst. of Math. of the Akad. of Sc. of Ukr. SSR “Probabilistic methods for the study of systems with an infinite number of degrees of freedom”], Kiev, 1986, pp. 11-16. (In Russ. )</reference>
+      <reference>Nikitin N. N., Razevig V. D. Methods of digital modeling of stochastic differential equations and estimate of their errors. &lt;em&gt;Zh. Vychisl. Mat. i Mat. Phiz&lt;/em&gt;. 18: 1 (1978), 106-117. (In Russ. )</reference>
+      <reference>Razevig V. D. Digital modeling of multidimensional dynamic systems under stochastic disturbances. &lt;em&gt;Avtomat. i Telemekh. &lt;/em&gt;. 4 (1980), 177-186. (In Russ. )</reference>
+      <reference>Maghsoodi Y., Harris C. J. In-probubility approximation and simulation of nonlinear jump-diffusion SDE. &lt;em&gt;IMA J. Math. Control Inform&lt;/em&gt;. 4 (1987), 65-92</reference>
+      <reference>Maghsoodi Y. Mean-square efficient numerical solution of jump-diffusion SDE. 1994. Preprint OR72. Univ. of Southampton. 26 p</reference>
+      <reference>Talay D. Convergence pour chaque trajectoire d'un scheme d'approximation des EDS. &lt;em&gt;ComputesRendus Acad. Sci. Paris. Ser. I. Math&lt;/em&gt;. 295 (1982), 249-252</reference>
+      <reference>Talay D., Tubaro L. Expansion of the global error for numerical schemes solving stochastic differential equations. &lt;em&gt;Stoch. Anal. Appl. &lt;/em&gt; 8: 4 (1990), 483-509</reference>
+      <reference>Talay D. Efficient numerical schemes for the approximation of expectations of functionals of the solution of an SDE and applications. &lt;em&gt;Springer Lecture Notesin Control and Inform. Sci. &lt;/em&gt;61 (1984), 294-313</reference>
+      <reference>Milstein G. N. Approximate integration of stochastic differential equations. &lt;em&gt;Teor. Veroyatn. i Primen. &lt;/em&gt;19 (1974), 557-562. (In Russ. )</reference>
+      <reference>Milstein G. N. A Method of second-order accuracy of integration of stochastic differential equations. &lt;em&gt;Teor. Veroyatn. i Primen &lt;/em&gt;23 (1978), 396-401. (In Russ. )</reference>
+      <reference>Milstein G. N. Weak approximation of solutions of systems of stochastic differential equations. &lt;em&gt;Teor. Veroyatn. i Primen&lt;/em&gt;. 30 (1985), 750-766. (In Russ. )</reference>
+      <reference>Milstein G. N. &lt;em&gt;Chislennoye integrirovaniye stokhasticheskih differencial’nyh uravnenii&lt;/em&gt; [Numerical integration of stochastic differential equations], Sverdlovsk, Ural. Univ. Publ., 1988. 225 с</reference>
+      <reference>Milstein G. N. The Solution of the first boundary problem for equations of parabolic type by integrating of stochastic differential equations. &lt;em&gt;Teor. Veroyatn. i Primen. &lt;/em&gt;40 (1995), 657-665. (In Russ. )</reference>
+      <reference>Auslender E. I., Milstein G. N. Asymptotic expansion of Lyapunov exponent for linear stochastic systems with small noises. &lt;em&gt;Prikl. Mat. i Mekh. &lt;/em&gt; 46: 3 (1982), 358-365. (In Russ. )</reference>
+      <reference>Gladyshev S. A., Milstein G. N. Method Runge-Kutta for calculating of Wiener integrals of exponential type. &lt;em&gt;Zh. Vychisl. Mat. i Mat. Phiz. &lt;/em&gt;. 24 (1985), 1136-1149. (In Russ. )</reference>
+      <reference>Milstein G. N. The probability approach to numerical solution of nonlinear parabolic equations. 1997. Preprint No. 380, WIAS. 29 p</reference>
+      <reference>Milstein G. N., Tretyakov M. V. Stochastic numerics for mathematical physics. Berlin, Springer-Verlag Publ., 2004. 596 p</reference>
+      <reference>Milstein G. N., Tretyakov M. V. Numerical integration of stochastic differential equations with nonglobally lipschitz coefficients. &lt;em&gt;SIAM J. Numer. Anal&lt;/em&gt;. 43: 3 (2005), 1139-1154</reference>
+      <reference>Milstein G. N., Tretyakov M. V. Numerical algorithms for forward-backward stochastic differential equations. &lt;em&gt;SIAM J. Sci. Comput&lt;/em&gt;. 28: 2 (2006), 561-582</reference>
+      <reference>Milstein G. N., Tretyakov M. V. Practical variance reduction via regression for simulating diffusions. &lt;em&gt;Rseach Reports in Mathematics&lt;/em&gt;. Report No. MA-06-019, University of Leicester, 2006. 24 p</reference>
+      <reference>Milstein G. N., Tretyakov M. V. Solving linear parabolic stochastic partial differential equations via averaging over characteristics. &lt;em&gt;Reseach Reports in Mathematics&lt;/em&gt;. Report No. MA-07-009, University of Leicester, 2007. 26 p</reference>
+      <reference>Milstein G. N., Platen E., Schurz H. Balanced implicit methods for stiff stochastic systems. &lt;em&gt;SIAM J. Numer. Anal&lt;/em&gt;. 35: 3 (1998), 1010-1019</reference>
+      <reference>Platen E. A Taylor-Ito formula for semimartingales solving a stochastic differential equation. &lt;em&gt;Springer Lecture Notesin Control and Inform. Sci&lt;/em&gt;. 36 (1981), 157-164</reference>
+      <reference>Platen E. A generalized Taylor formula for solutions of stochastic differential equations. &lt;em&gt;Sankhya. &lt;/em&gt; 44A (1982), 163-172</reference>
+      <reference>Platen E. An approximation method for a class of Ito processes with jump component. &lt;em&gt;Lietuvos Mat. Rink&lt;/em&gt;. 22 (1982), 124-136</reference>
+      <reference>Platen E. Zur zeitdiskreten Approximation von Itoprozessen. Diss. B., IMath. Akad. der Wiss. der DDR, 1984. Berlin</reference>
+      <reference>Platen E. Higher-order weak approximation of Ito diffusions by Markov chains. &lt;em&gt; Probab. Eng. Inform. Sci. &lt;/em&gt; 6 (1992), 391-408</reference>
+      <reference>Platen E. On weak implicit and predictor-corrector methods. &lt;em&gt;Math. Comput. Simulation. &lt;/em&gt; 38 (1995), 69-76</reference>
+      <reference>Platen E. An introduction to numerical methods for stochastic differential equations. &lt;em&gt;Acta Numerica&lt;/em&gt;. 8 (1999), 197-246</reference>
+      <reference>Platen E., Wagner W. On a Taylor formula for a class of Ito processes. &lt;em&gt;Probab. Math. Statist&lt;/em&gt;. 3 (1982), 37-51</reference>
+      <reference>Wagner W., Platen E. Approximation of Ito integral equations. Preprint ZIMM Akad. Wiss. DDR. Berlin. 1978. 27 p</reference>
+      <reference>Mikulevicius R., Platen E. Time discrete Taylor approximations for Ito processes with jump component. &lt;em&gt;Math. Nachr. &lt;/em&gt; 138 (1988), 93-104</reference>
+      <reference>Mikulevicius R., Platen E. Rate of convergence of the Euler approximation for diffusion processes. &lt;em&gt;Math. Nachr. &lt;/em&gt; 151 (1991), 233-239</reference>
+      <reference>Hofmann N., Platen E. Stability of weak numerical schemes for stochastic differential equations. &lt;em&gt;Comput. Math. Appl&lt;/em&gt;. 28: 10-12 (1994), 45-57</reference>
+      <reference>Hofmann N., Platen E. Stability of superimplisit numerical methods for stochastic differential equations. &lt;em&gt;Fields Inst. Communications&lt;/em&gt;. 9 (1996), 93-104</reference>
+      <reference>Kloeden P. E., Platen E. The Stratonovich and Ito-Taylor expansions. &lt;em&gt;Math. Nachr&lt;/em&gt;. 151 (1991), 33-50</reference>
+      <reference>Kloeden P. E., Platen E. Numerical solution of stochastic differential equations. Berlin, Springer-Verlag Publ., 1992. 632 p</reference>
+      <reference>Kloeden P. E., Platen E., Wright I. W. The approximation of multiple stochastic integrals. &lt;em&gt;Stoch. Anal. Appl&lt;/em&gt;. 10: 4 (1992), 431-441</reference>
+      <reference>Kloeden P. E., Platen E. Higher-order implicit strong numerical schemes for stochastic differential equations. &lt;em&gt;J. Statist. Phisics. &lt;/em&gt; 66 (1992), 283-314</reference>
+      <reference>Kloeden P. E., Platen E., Schurz H. Numerical solution of SDE through computer experiments. Berlin, Springer-Verlag Publ., 1994. 292 p</reference>
+      <reference>Kloeden P. E., Platen E., Hofmann N. Extrapolation methods for the weak approximation of Ito diffusions. &lt;em&gt;SIAM J. Numer. Anal. &lt;/em&gt; 32 (1995), 1519-1534</reference>
+      <reference>Kloeden P. E., Platen E., Schurz H., Sorensen M. On effects of discretization on estimators of drift parameters for diffusion processes. &lt;em&gt;J. Appl. Probab&lt;/em&gt;. 33 (1996), 1061-1076</reference>
+      <reference>Arnold L., Kloeden P. E. Explicit formulae for the Lyapunov exponents and rotation number of two-dimensional systems with telegraphic noise. &lt;em&gt;SIAM J. Appl. Math&lt;/em&gt;. 49 (1989), 1242-1274</reference>
+      <reference>Kulchitsky O. Yu., Kuznetsov D. F. Expansion of Ito processes into Taylor-Ito series at the neighborhood of the fixed time moment. &lt;em&gt;VINITI&lt;/em&gt;, 2637-В93 (1993), 26 p. (In Russ. )</reference>
+      <reference>Kulchitsky O. Yu., Kuznetsov D. F. Approximation of multiple Ito stochastic integrals. &lt;em&gt;VINITI, &lt;/em&gt; 1678-В94 (1994), 42 p. (In Russ. )</reference>
+      <reference>Kuznetsov D. F. Finite-difference approximation of Taylor-Ito expansion and finite-difference methods for numerical integration of Ito stochastic differential equations. &lt;em&gt;VINITI&lt;/em&gt;, 3509-В96 (1996), 24 p. (In Russ. )</reference>
+      <reference>Kuznetsov D. F. Finite-difference method with local mean-square error of order 3 for numerical integration of Ito stochastic differential equations. &lt;em&gt;VINITI&lt;/em&gt;, 3510-В96 (1996), 27 p. (In Russ. )</reference>
+      <reference>Kuznetsov D. F. Theorems about integration order replacement in multiple stochastic integrals. &lt;em&gt;VINITI&lt;/em&gt;, 3607-V97 (1997), 31 p. (In Russ. )</reference>
+      <reference>Kuznetsov D. F. [A method of expansion and approximation of repeated stochastic Stratonovich integrals based on multiple Fourier series on full orthonormal systems]. &lt;em&gt;Differencial’nie uravnenia i processy upravlenia, &lt;/em&gt; 1997, no. 1 (In Russ. ) Available at: &lt;a href="http://www.math.spbu.ru/diffjournal/pdf/j002.pdf"&gt;http://www.math.spbu.ru/diffjournal/pdf/j002.pdf&lt;/a&gt; </reference>
+      <reference>Kulchitsky O. Yu., Kuznetsov D. F. The Unified Taylor-Ito expansion. &lt;em&gt;Zap. Nauchn. Sem. POMI im. V. A. Steklova. &lt;/em&gt; 244 (1997), 186-204. (In Russ. )</reference>
+      <reference>Kuznetsov D. F. &lt;em&gt;Nekotorye voprosy teorii chislennogo resheniya stokhasticheskih differencial’nyh uravnenii Ito&lt;/em&gt; [Some problems of the theory of numerical solution of Ito stochastic differential equations]. St. -Petersburg, SPbGTU Publ., 1998, 203 p</reference>
+      <reference>Kuznetsov D. F. [Method of expansion and approximation of repeated stochastic Stratonovich integrals, which is based on multiple Fourier series on full orthonormal systems]. &lt;em&gt;Trudi Mezhdunarodnoi Konferencii &amp;quot; Asymptotichaeskie metody v veroyatnosti i matematicheskoi statistike”&lt;/em&gt; [Proc. Int. Conf. &amp;quot; Asymptotic methods in probability and mathematical statistics&amp;quot; ], St. -Petersburg, 1998, pp. 146-149</reference>
+      <reference>Kuznetsov D. F. [Application of different full orthonormal systems of functions for numerical solution of Ito stochastic differential equations] &lt;em&gt;Trudi Mezhdunarodnoi Konferencii &amp;quot; Differencial’nye Uravnenia i ih Primenenia&amp;quot; &lt;/em&gt;[Proc. Int. Conf. “Differential Equations and its Applications”], St. -Petersburg, 1998, pp. 128-129 (In Russ. )</reference>
+      <reference>Kulchitsky O. Yu., Kuznetsov D. F. [Numerical simulation of stochastic systems of linear stationary differential equations]. &lt;em&gt;Differencial’nie uravnenia i processy upravlenia, &lt;/em&gt; 1998, no. 1 (In Russ. ) Available at: &lt;a href="http://www.math.spbu.ru/diffjournal/pdf/j010.pdf"&gt;http://www.math.spbu.ru/diffjournal/pdf/j010.pdf&lt;/a&gt; </reference>
+      <reference>Kuznetsov D. F. Application of approximation methods of iterated Stratonovich and Ito stochastic integrals to numerical simulation of controlled stochastic systems. &lt;em&gt;ProblemyUpravleniya i Informatiki&lt;/em&gt; 4 (1999), 91-108 (In Russ. )</reference>
+      <reference>Kuznetsov D. F. An expansion of multiple Stratonovich stochastic integrals, based on multiple Fourier expansion. &lt;em&gt;Zap. Nauchn. Sem. POMI im. V. A. Steklova. &lt;/em&gt;260 (1999), 164-185. (In Russ. )</reference>
+      <reference>Kuznetsov D. F. On problem of numerical modeling of stochastic systems. &lt;em&gt;Vestnik Molodykh Uchenyh. Serya: Prikl. Mat. i Mekh. &lt;/em&gt;1 (1999), 20-32. (In Russ. )</reference>
+      <reference>Kuznetsov D. F. &lt;em&gt;Chislennoye modelirovanie stokhasticheskih differencial’nyh uravnenii i stokhasticheskih integralov&lt;/em&gt; [Numerical modeling of stochastic differential equations and stochastic integrals]. St. -Petersburg, Nauka Publ., 1999. 460 p</reference>
+      <reference>Kuznetsov D. F. Mean-square approximation of solutions of stochastic differential equations using Legendre’s polynomials. &lt;em&gt;Problemy Upravleniya i Informatiki &lt;/em&gt;5 (2000), 84-104 (In Russ. )</reference>
+      <reference>Kuznetsov D. F Weak numerical method of order 4. 0 for stochastic differential Ito equations. &lt;em&gt;Vestnik Molodykh Uchenyh. Serya: Prikl. Mat. i Mekh. &lt;/em&gt;. 4 (2000), 47-52. (In Russ. )</reference>
+      <reference>Kuznetsov D. F Chislennoye &lt;em&gt;integrirovanie stokhasticheskih differencial’nyh uravnenii&lt;/em&gt; [Numerical Integration of Stochastic Differential Equations], St. -Petersburg, State Univ. Publ.,. 2001. 712 p</reference>
+      <reference>Kuznetsov D. F. New representations of explicit one-step numerical methods for jump-diffusion stochastic differential equations. &lt;em&gt;Zh. Vychisl. Mat. i Mat. Phiz&lt;/em&gt;. 41: 6 (2001), 922-937. (In Russ. )</reference>
+      <reference>Kuznetsov D. F. New representations of the Taylor-Stratonovich expansion. &lt;em&gt;Zap. Nauchn. Sem. POMI im. V. A. Steklova. &lt;/em&gt; 278 (2001), 141-158. (In Russ. )</reference>
+      <reference>Kuznetsov D. F. Finite-difference strong numerical methods of order 1. 5 and 2. 0 for stochastic differential Ito equations with nonadditive multidimensional noise. &lt;em&gt;Problemy Upravleniya i Informatiki&lt;/em&gt; 4 (2001), 59-73. (In Russ. )</reference>
+      <reference>Kuznetsov D. F. Combined method of strong approximation of multiple stochastic integrals. &lt;em&gt;Problemy Upravleniya i Informatiki&lt;/em&gt; 4 (2002), 141-147. (In Russ. )</reference>
+      <reference>Kuznetsov D. F. The three-step strong numerical methods of the orders of accuracy 1. 0 and 1. 5 for Ito stochastic differential equations &lt;em&gt;Problemy Upravleniya i Informatiki. &lt;/em&gt; 6 (2002), 104-119. (In Russ. )</reference>
+      <reference>Kuznetsov D. F. &lt;em&gt;Chislennoye integrirovanie stokhasticheskih differencial’nyh uravnenii. 2. &lt;/em&gt; [Numerical Integration of Stochastic Differential Equations. 2. ], St. -Petersburg, Polytechnic Univ. Publ., 2006. 764 p</reference>
+      <reference>Kuznetsov D. F. &lt;em&gt;Stokhasticheskie differencial’nye uravnenia: teoriya i practika chislennogo resheniya. Izd. 4-e. &lt;/em&gt;[Stochastic Differential Equations: Theory and Practice of Numerical Solution. 4-th Ed. ], St. -Petersburg, Polytechnic Univ. Publ., 2010. 816 p</reference>
+      <reference>Kuznetsov D. F. [Multiple Stochastic Ito and Stratonovich Integrals and Multiple Fourier Serieses]. &lt;em&gt;Differencial’nie uravnenia i processy upravlenia, &lt;/em&gt; 2010, no. 3. 257 p. (In Russ. ) Available at: &lt;a href="http://www.math.spbu.ru/diffjournal/pdf/kuznetsov_book.pdf"&gt;http://www.math.spbu.ru/diffjournal/pdf/kuznetsov_book.pdf&lt;/a&gt; </reference>
+      <reference>Kuznetsov D. F. Multiple Ito and Stratonovich Stochastic Integrals: Approximations, Properties, Formulas. St. -Petersburg, Polytechnic Univ. Publ., 2013. 382 p</reference>
+      <reference>Kuznetsov D. F. [Multiple Ito and Stratonovich Stochastic Integrals: Fourier-Legendre and Trigonometric Expansions, Approximations, Formulas]. &lt;em&gt;Differencial’nie uravnenia i processy upravlenia, &lt;/em&gt; 2017, no. 1. 385 p. Available at: &lt;a href="http://www.math.spbu.ru/diffjournal/EN/numbers/2017.1/article.2.1.html"&gt;http://www.math.spbu.ru/diffjournal/EN/numbers/2017.1/article.2.1.html&lt;/a&gt; </reference>
+      <reference>Arsen’ev D. G., Kulchitsky O. Yu. Optimization of algorithms of numerical integration of stiff linear systems of differential equations with constant coefficients. &lt;em&gt;VINITI&lt;/em&gt;, 732-B86 (1986), 32 p. (In Russ. )</reference>
+      <reference>Schurz H. Asymptotical mean square stability of an equilibrium point of some linear numerical solutions with multiplicative noise. &lt;em&gt;Stoch. Anal. Appl. &lt;/em&gt; 14 (1996), 313-354</reference>
+      <reference>Pettersson R. The Stratonovich-Taylor expansion and numerical methods. &lt;em&gt;Stoch. Anal. Appl&lt;/em&gt;. 10: 5 (1992), 603-612</reference>
+      <reference>Mikulevicius R. On some properties of solutions of stochastic differential equations. &lt;em&gt;Lietuvos Mat. Rink. &lt;/em&gt;4 (1983), 18-31</reference>
+      <reference>Clements D. J., Anderson B. D. O. Well behaved Ito equations with simulations that always misbehave. &lt;em&gt;IEEE Trans. Automat. Control&lt;/em&gt;. AC-18 (1973), 676-677</reference>
+      <reference>Wright D. J. The digital simulation of stochastic differential equations. &lt;em&gt;IEEE Trans. Automat. Control&lt;/em&gt;. AC-19 (1974), 75-76</reference>
+      <reference>Wright D. J. Digital simulation of Poisson stochastic differential equations. &lt;em&gt;Internat. J. Systems Sci. &lt;/em&gt; 6 (1980), 781-785</reference>
+      <reference>Rumelin W. Numerical treatment of stochastic differential equations. &lt;em&gt;SIAM J. Numer. Anal&lt;/em&gt;. 19 (1982), 604-613</reference>
+      <reference>Gard T. C. Introduction to stochastic differential equations. N. Y., Marcel Dekker Publ., 1988. 324 p</reference>
+      <reference>Chang C. C. Numerical solution of stochastic differential equations with constant diffusion coefficients. &lt;em&gt;Math. Comput&lt;/em&gt;. 49 (1987), 523-542</reference>
+      <reference>Allen E. Modeling with Ito stochastic differential equations. Dordrecht, Springer Publ., 2007. 240 p</reference>
+      <reference>Allen E. Approximation of Triple Stochastic Integrals Through Region Subdivision. &lt;em&gt;Communications in Applied Analysis&lt;/em&gt;. (Special Tribute Issue to Professor V. Lakshmikantham), 17 (2013), 355-366</reference>
+      <reference>Greenside H. S., Helfand E. Numerical integration of stochastic differential equations. II. &lt;em&gt;Bell SystemTech. J&lt;/em&gt;. 60 (1981), 1927-1940</reference>
+      <reference>Klauder J. R., Petersen W. P. Numerical integration of multiplicative-noise stochastic differential equations. &lt;em&gt;SIAM J. Numer. Anal&lt;/em&gt;. 22 (1985), 1153-1166</reference>
+      <reference>Hernandez D. B., Spigler R. Convergence and stability of implicit Runge-Kutta methods for systems with multiplicative noise. &lt;em&gt;BIT&lt;/em&gt;. 33 (1993), 654-669</reference>
+      <reference>Haworth D. C., Pope S. B. A second-order Monte-Carlo method for the solution of the Ito stochastic differential equation. &lt;em&gt;Stoch. Anal. Appl&lt;/em&gt;. 4 (1986), 151-186</reference>
+      <reference>Artem’ev S. S., Shkurko I. O. [Numerical solution of linear systems of stochastic differential equations] &lt;em&gt;Trudy VII Vsesoyuzn. Soveschaniya “Metody Monte-Karlo v vychislitel’noi matematike i matematicheskoi fizike”&lt;/em&gt; [Proc. Conf “Monte-Carlo methods in computational mathematics and mathematical physics”], Novosibirsk, 1985. pp. 144-146. (In Russ. )</reference>
+      <reference>Artem’ev S. S., Yakunin M. A. &lt;em&gt;Matematicheskoye i statisticheskoye modelirovanie v finansah &lt;/em&gt;[Mathematical and statistical modeling in finances], Novosibirsk, IVMMG SO RAN Publ., 2008. 174 p</reference>
+      <reference>Shkurko I. O. Numerical solution of linear systems of stochastic differential equations. &lt;em&gt;Numer. Methods Statist. Modeling. &lt;/em&gt;Collected Scientific Works. Novosibirsk, 1987. p. 101-109</reference>
+      <reference>Averina T. A., Artem’ev S. S. New family of numerical methods for solving of stochastic differential equations. &lt;em&gt;Dokl. Ak. Nauk SSSR, &lt;/em&gt; 288: 4 (1986), 777-780. (In Russ. )</reference>
+      <reference>Wagner W. Unbiased Monte-Carlo evaluation of certain functional integrals. &lt;em&gt;J. Comput. Phys. &lt;/em&gt; 71 (1987), 21-33</reference>
+      <reference>Wagner W. Monte-Carlo evaluation of functionals of solutions of stochastic differential equations. Variance reduction and numerical examples. &lt;em&gt;Stoch. Anal. Appl. &lt;/em&gt;6 (1988), 447-468</reference>
+      <reference>Richardson J. M. The application of truncated hierarchy techniques in the solution of a stochastic linear differential equation. In Stochastic Processes in Mathematical Phisics and Engineering. &lt;em&gt;Proc. Symp. Appl. Math&lt;/em&gt;. Ed. R. Bellman. Amer. Math. Soc. Providence RI. 16 (1964), 290-302</reference>
+      <reference>McKenna J., Morrison J. A. Moments and correlation functions of a stochastic differential equation. &lt;em&gt;J. Math. Phys. &lt;/em&gt; 11 (1970), 2348-2360</reference>
+      <reference>McKenna J., Morrison J. A. Moments of solutions of a class of stochastic differential equations. &lt;em&gt;J. Math. Phys. &lt;/em&gt; 12 (1971), 2126-2136</reference>
+      <reference>Klauder J. R., Petersen W. P. Spectrum of certain non-self-adjoint operators and solutions of Langevin equations with complex drift. &lt;em&gt;J. Statist. Phys&lt;/em&gt;. 39 (1985), 53-72</reference>
+      <reference>Newton N. J. An asymptotically efficient difference formula for solving stochastic differential equations. &lt;em&gt;Stochastics. &lt;/em&gt; 19 (1986), 175-206</reference>
+      <reference>Newton N. J. Asymptotically optimal discrete approximations for stochastic differential equations. In theory and applications of nonlinear control systems. Ed. C. Byrnes, A. Lindquist. Amsterdam, 1986, p. 555-567</reference>
+      <reference>Newton N. J. Asymptotically efficient Runge-Kutta methods for a class of Ito and Stratonovich equations. &lt;em&gt;SIAM J. Appl. Math&lt;/em&gt;. 51 (1991), 542-567</reference>
+      <reference>D. J. Higham, X. Mao, A. M. Stuart. Strong convergence of Euler-type methods for nonlinear stochastic differential equations. &lt;em&gt;SIAM J. Numer. Anal. &lt;/em&gt; 40 (2002), 1041-1063</reference>
+      <reference>Korenevsky M. L. [About optimization of one method of approximate calculation of matrix exponent]. &lt;em&gt;Trudy Mezhdunarodnoi Konferencii “Sredstva matematicheskogo modelirovania”&lt;/em&gt; [Proc. Int. Conf. “Tools of Mathematical Modeling”], St. -Petersburg, 1997, pp. 125-134. (In Russ. )</reference>
+      <reference>Djakonov V. P. &lt;em&gt;Spravochnic po primeneniu sistemy PC MatLab&lt;/em&gt; [Handbook on application of PC MatLab]. Moscow, Nauka Publ., 1993. 111 p</reference>
+      <reference>Djakonov V, P. &lt;em&gt;MATLAB 6. 5 SP1/7. 0 + Simulink 5/6. Osnovy primeneniya. &lt;/em&gt; [MATLAB 6. 5 SP1/7. 0 + Simulink 5/6. The Basics of application]. Moscow, SOLON-press Publ., 2005. 800 p</reference>
+    </references>
+  </articleInfo>
+  <articleInfo lang="RU" FirstPage="0" LastPage="0">
+    <pdf>kuznetsov_book3.pdf</pdf>
+    <abstract>Книга посвящена проблеме численного интегрирования стохастических
+дифференциальных уравнений (СДУ). Подробно изучен случай СДУ Ито, а 
+также кратко рассмотрены СДУ со скачкообразной компонентой.
+Хорошо известно, что СДУ являются адекватными математическими моделями
+динамических систем, находящихся под воздействием случайных возмущений.
+Одним из эффективных подходов к численному интегрированию СДУ Ито
+является подход, основанный на разложениях Тейлора-Ито
+и Тейлора-Стратоновича. В предствленной книге данный подход изучен 
+систематически.
+
+Монография состоит из 4 частей и 17 глав.
+
+Коснемся содержания монографии по главам.
+
+В главе 1 собран вспомогательный материал, который может быть полезен при 
+чтении книги. Мы приводим концепции марковских процессов, стохастических 
+интегралов Ито и Стратоновича, формулы Ито, СДУ Ито и СДУ со скачкообразной 
+компонентой, стохастических интегралов по пуассоновским случайным мерам и 
+по мартингалам.
+
+В главе 2 рассматриваются математические модели динамических систем
+различной физической природы, находящихся под влиянием случайных возмущений,
+на основе СДУ. В данной главе также рассмотрены некоторые задачи для СДУ.
+Рассмотрена задача фильтрации (линейная и нелинейная), задача о стохастической 
+устойчивости, задача о стохастическом управлении, задача об оценке параметров 
+стохастических систем, а также вероятностные представления задач Коши и 
+Дирихле для уравнений в частных производных второго порядка.
+
+
+Глава 3 посвящена некоторым свойствам и формулам для стохастических интегралов.
+Выявлен класс повторных стохастических интегралов Ито, для которого 
+справедливы с вероятностью 1 формулы замены порядка интегрирования,
+согласующиеся с правилами классического интегрального исчисления.
+Доказана теорема о замене порядка интегрирования для класса повторных 
+стохастических интегралов Ито. Приведены примеры применения данной теоремы.
+Эти результаты обобщены на случай повторных стохастических интегралов по 
+мартингалам. Доказана формула, связывающая повторные стохастические
+интегралы Ито и Стратоновича произвольной фиксированной кратности k.
+Выведено 2 семейства аналитических формул для вычисления стохастических 
+интегралов по процессам Ито достаточно общего вида.
+
+
+В главе 4 обсуждаются стохастические разложения Тейлора.
+Мы рассматриваем классические разложения Тейлора-Ито и Тейлора-Стратоновича, 
+а также 4 новых (так называемых) унифицированных разложения Тейлора-Ито и 
+Тейлора-Стратоновича. Наиболее важной особенностью отмеченных разложений 
+является присутствие в них повторных стохастических интегралов Ито
+и Стратоновича, которые играют ключевую роль для решения
+проблемы численного интегрирования СДУ Ито и СДУ со скачкообразной 
+компонентой. Унифицированные разложения Тейлора-Ито и Тейлора-Стратоновича
+строятся на основе теоремы о замене порядка интегрирования в повторных 
+стохастических интегралах Ито (глава 3). Унифицированные разложения 
+Тейлора-Ито и Тейлора-Стратоновича содержат минимальные наборы повторных 
+стохастических интегралов Ито и Стратоновича, которые не могут быть связаны 
+линейными соотноешнеиями. Мы назвали эти наборы стохастическими базисами.
+
+
+Главы 5 и 6 посвящены сильной (среднеквадратической) аппроксимации
+наборов повторных стохатстических интегралов Ито и Стратоновича
+из разложений Тейлора-Ито и Тейлора-Стратоновича.
+
+
+В главе 5 успешно применен аппарат кратных и повторных обобщенных рядов Фурье,
+построенных в пространстве L2 и поточечно, для сильной аппроксимации повторных
+стохастических интегралов Ито и Стратоновича. Нами получен общий результат, 
+связанный с разложением повторных стохастических интегралов Ито любой 
+фиксированной катности k, основанный на обощенных рядах Фурье, сходящихся в 
+пространстве L2([t, T] x ... x [t, T]) (k-раз). Этот результат адаптирован
+для повторных стохастических интегралов Стратоновича 1-4 кратности для 
+системы полиномов Лежандра и системы тригонометрических функций, а также 
+для некоторых других типов повторных стохастических интегралов.
+Доказана терема о разложении повторных стохастических интегралов
+Стратоновича любой фиксированой кратности k, основанном
+на обобщенных повторных рядах Фурье, сходящихся поточечно.
+
+
+В главе 6 получены точные выражения среднеквадратических погрешностей 
+аппроксимации для повторных стохастических интегралов Ито кратностей 1-5
+в явной форме и для повторных стохастических интегралов Ито 
+произвольной фиксированной кратности k в общей форме.
+Также получена оценка для этих погрешностей для интегралов любой фиксированной 
+кратности k. Приведен существенный практический материал,
+посвященный аппроксиациии конкретных повторных стохастических интегралов 
+Ито и Стратоновича кратностей 1-5 из разложений
+Тейлора-Ито и Тейлора-Стратоновича с использованием системы полиномов 
+Лежандра и системы тригонометрических функций. Произведено сравнение методов,
+представленных в данной книге, с другми существующими методами.
+Последний раздел главы 6 посвящен слабым аппроксимациям повторных 
+стохастических интегралов Ито из разложения Тейлора-Ито.
+
+
+В главах 7-9 конструируются сильные численные методы для СДУ Ито.
+
+
+Глава 7 посвящена явным одношаговым численным методам порядков точности 
+0.5, 1.0, 1.5, 2.0, 2.5 and 3.0. Рассмотрены конечно-разностные модификации 
+типа Рнге-Кутта для некоторых из упомянутых методов. Новый шаг в данной 
+научной области связан с применением методов аппроксимации повторных 
+стохастических интегралов Ито и Стратоновича из глав 5 и 6, а также с 
+использованием унифицированных разложений Тейлора-Ито и Тейлора-Стратоновича
+из главы 4.
+
+В главе 8 строятся неявные одношаговые сильные численные методы для СДУ Ито, 
+а в главе 9 строятся явные и неявные двухшаговые и трехшаговые численные 
+методы для СДУ Ито порядков точности 1.0, 1.5, 2.0 and 2.5. В главах 8 и 9 
+также представлены методы типа Рунге-Кутта для СДУ Ито.
+
+
+В главе 10 рассматриваются слабые численные методы для СДУ Ито.
+Большинство из них являются хорошо известными, однако мы строим 
+несколько новых численных методов. В данной главе представлены явные, неявные 
+и экстраполяционные методы, методы типа "предсказатель-корректор", а также 
+методы типа Рунге-Кутта для СДУ Ито.
+
+
+Глава 11 посвящена численному интегрированию линейных стационарных систем 
+СДУ Ито. Рассмотрен численный метод, основанный на интегральном 
+представлении решения линейной стационарной системы СДУ Ито и спектральном 
+разложении диффузионной матрицы. Исследован порядок точности данного метода.
+Во второй части 11 главы рассматриваются другие численные методы для линейных 
+стационарных систем СДУ Ито: метод, основаный на аппроксимации винеровского 
+процесса специальным кусочно-постоянным случайным процессом и метод,
+основанный на разложении Тейлора-Ито и полиномах Лежандра.
+
+
+В главе 12 рассматривается теория численного интегрирования СДУ со 
+скачкообразной компонентой. Обсуждается хорошо известная концепция,
+согласно которой СДУ со скачкообразной компонентой рассматривается как СДУ 
+Ито на временных интервалах между скачками процесса Пуассона.
+Этот подход позволяет раздельно моделировать скачкообразную
+и диффузионную компоненты решения СДУ со скачкообразной компонентой.
+Для численного моделирования диффузионной компонеты предлагается использовать 
+методы из глав 5-10 настоящей монографии.
+
+
+В главе 13 приведена библиотека MATLAB-программ для численного
+интегрирования линейных стационарных систем СДУ Ито, основаная на алгоритмах 
+главы 11. Рассмотрены численные примеры применения указанной библиотеки.
+
+
+В главах 14-16 путем численных экспериментов демонстрируется
+применение численных методов, построенных в монографии, к 
+моделированию выборочных траекторий решений систем нелинейных СДУ Ито
+(глава 14) и к численному решению математических задач для СДУ Ито
+сильными (глава 15) и слабыми (глава 16) численными методами.
+Вперывые численное моделирование повторных стохастических интегралов Ито и 
+Стратоновича реализовано с использованием системы полиномов Лежандра.
+
+
+Глава 17 содержит полные тексты MATLAB-программ, реализующих
+численные эксперименты по тексту книги в целом.</abstract>
+    <title>Стохастические дифференциальные уравнения: теория и практика численного решения. с программами в среде matlab</title>
+    <keywords>
+      <word>MATLAB программа</word>
+      <word>двухшаговый численный метод</word>
+      <word>Ито</word>
+      <word>конечно-разностный численный метод</word>
+      <word>кратный ряд Фурье</word>
+      <word>кратный ряд Фурье-Лежандра</word>
+      <word>кратный тригонометрический</word>
+      <word>мере</word>
+      <word>метод типа Рунге-Кутта</word>
+      <word>моделирование</word>
+      <word>неявный численный метод</word>
+      <word>одношаговый численный метод</word>
+      <word>повторный стохастический интеграл</word>
+      <word>повторный стохастический интеграл Стратоновича</word>
+      <word>полином Лежандра</word>
+      <word>равенство Парсеваля</word>
+      <word>разложение повторного стохастического интеграла</word>
+      <word>разложение Тейлора-Ито</word>
+      <word>разложение Тейлора-Стратоновича</word>
+      <word>ряд Фурье</word>
+      <word>сильная аппроксимация</word>
+      <word>сильная сходимость</word>
+      <word>сильный численный метод</word>
+      <word>слабая аппроксимация</word>
+      <word>слабая сходимость</word>
+      <word>слабый численный метод</word>
+      <word>среднеквадратическая сходимость</word>
+      <word>стохастический интеграл Ито</word>
+      <word>стохастический интеграл по мартингалу</word>
+      <word>стохастический интеграл по пуассоновской</word>
+      <word>стохастический интеграл Стратоновича</word>
+      <word>стохастическое дифференциальное</word>
+      <word>стохастическое дифференциальное уравнение</word>
+      <word>стохастическое дифференциальное уравнение Ито</word>
+      <word>стохастическое разложение Тейлора</word>
+      <word>трехшаговый численный метод</word>
+      <word>унифицированное разложение Тейлора-Ито</word>
+      <word>унифицированное разложение Тейлора-Стратоновича</word>
+      <word>уравнение со скачкообразной компонентой</word>
+      <word>численное</word>
+      <word>численное интегрирование</word>
+      <word>численный метод</word>
+      <word>явный численный метод</word>
+    </keywords>
+    <references>
+      <reference>Boyce W. E. Approximate solution of random ordinary differential equations. &lt;em&gt;Adv. in Appl. Probab&lt;/em&gt;. 10 (1978), 172-184</reference>
+      <reference>Kushner H. J. Probubility methods for approximations in stochastic control and for elliptic equations. N. Y., San Francisco, London, Academic Press, 1977. 242 p</reference>
+      <reference>Ильин В. А., Позняк Э. Г. Основы математического анализа. Часть II. Москва, Наука, 1973. 448 c</reference>
+      <reference>Гихман И. И., Скороход А. В. Введение в теорию случайных процессов. Москва, Наука, 1977. 660 с</reference>
+      <reference>Гихман И. И., Скороход А. В. Стохастические дифференциальные уравнения. Киев, Наукова думка, 1968. 354 с</reference>
+      <reference>Гихман И. И., Скороход А. В. Теория случайных процессов. Т. 3. Москва, Наука, 1975. 469 с</reference>
+      <reference>Гихман И. И., Скороход А. В. Стохастические дифференциальные уравнения и их приложения. Киев, Наукова думка, 1982. 612 с</reference>
+      <reference>Скороход А. В. Случайные процессы с независимыми приращениями. Москва, Наука, 1964. 280 с</reference>
+      <reference>Дынкин Е. Б. Марковские процессы. Москва, Наука, 1963. 860 с</reference>
+      <reference>Королюк В. С., Портенко Н. И., Скороход А. В., Турбин А. Ф. Справочник по теории вероятностей и математической статистике. Москва, Наука, 1985. 640 с</reference>
+      <reference>Ширяев А. Н. Вероятность. Москва, Наука, 1989. 640 c</reference>
+      <reference>Ширяев А. Н. Основы стохастической финансовой математики. Т. 2. Москва, Фазис, 1998. 544 с</reference>
+      <reference>Липцер Р. Ш., Ширяев А. Н. Статистика случайных процессов: Нелинейная фильтрация и смежные вопросы. Москва, Наука, 1974. 696 с</reference>
+      <reference>Розанов Ю. А. Стационарные случайные процессы. Москва, Физматгиз, 1963. 284 с</reference>
+      <reference>Стратонович Р. Л. Условные марковские процессы и их применение к теории оптимального управления. Москва, Изд-во МГУ, 1966. 320 с</reference>
+      <reference>Стратонович Р. Л., Полякова М. С. Элементы молекулярной физики, термодинамики и статистической физики. Москва, Изд-во МГУ, 1981. 176 с</reference>
+      <reference>Стратонович Р. Л. Избранные вопросы теории флуктуаций в радиотехнике. Москва, Советское радио, 1961. 556 c</reference>
+      <reference>Hardy G. H., Rogosinski W. W. Fourier series. N. Y., Dover Publ., 1999. 112 p</reference>
+      <reference>Hobson E. W. The theory of spherical and ellipsoidal harmonics. Cambridge, Cambridge Univ. Press, 1931. 502 p</reference>
+      <reference>Толстов Г. П. Ряды Фурье. Москва-Ленинград, Гос. изд-во техн. -теор. лит., 1951. 396 с</reference>
+      <reference>Chung K. L., Williams R. J. Introduction to Stochastic Integration. Progress in Probability and Stochastics. Vol. 4, Ed. Huber P., Rosenblatt M. Boston, Basel, Stuttgart, Birkhauser Publ., 1983. 152 p</reference>
+      <reference>Рыжик И. М., Градштейн И. С. Таблицы интегралов, сумм, рядов и произведений. Изд. 3-е. Москва-Ленинград, Гос. изд-во техн. -теор. лит., 1951. 464 с</reference>
+      <reference>Камке E. Справочник по обыкновенным дифференциальным уравнениям. Т. 1. Москва, Наука, 1971. 576 p</reference>
+      <reference>Ермаков С. М., Михайлов Г. А. Курс статистического моделирования. Москва, Наука, 1976. 320 с</reference>
+      <reference>Friedman A. Partial differential equations of parabolic type. Englewood Cliffs, Prentice-Hall Publ., 1964. 347 p</reference>
+      <reference>Smoluhovski M. V. Drei Vortrage uber Diffusion Brownsche Bewegung und Koagulation von Kolloidteilchen. &lt;em&gt;Phys. Zeit&lt;/em&gt;. 17 (1916), 557-585</reference>
+      <reference>Ладыженская О. А., Солонников В. А., Уральцева Н. Н. Линейные и квазилинейные уравнения параболического типа. Москва, Наука, 1967. 736 с</reference>
+      <reference>Тихонов А. Н., Самарский А. А. Уравнения математической физики. Изд. 5-е. Москва, Наука, 1977. 735 с</reference>
+      <reference>Арсенин В. Я. Методы математической физики и специальные функции. Москва, Наука, 1974. 431 с</reference>
+      <reference>Gantmacher F. R. The theory of matrices. New York, Chelsea Publ., 1959. Vol. 1: 374 p., Vol. 2: 277 p</reference>
+      <reference>Bjork T., Kabanov Yu., Runggaldier W. Bond market structure in the presence of marked point processes. &lt;em&gt;Math. Finance&lt;/em&gt;. 7: 2 (1997), 211-239</reference>
+      <reference>Hull J., White A. The pricing of options as assets with stochastic volatilities. &lt;em&gt;J. Finance&lt;/em&gt;. 42 (1987), 281-300</reference>
+      <reference>Merton R. C. Option pricing when underlying stock returns and discontinuous. &lt;em&gt;J. Financial Economics&lt;/em&gt;. 3 (1976), 125-144</reference>
+      <reference>Merton R. C. Continuous-time finance. Oxford; N. Y., Blackwell Publ., 1990. 453 p</reference>
+      <reference>Hull J. Options, futures and other derivatives securities. N. Y., J. Willey and Sons Publ., 1993. 368 p</reference>
+      <reference>Bachelier L. Theorie de la speculation. &lt;em&gt;Ann. Sci. Ecol. Norm. Sup&lt;/em&gt;. Ser. 3. 17 (1900), 21-86</reference>
+      <reference>Einstein A. Investigations on the theory of the Brownien movement. N. Y., Dover, 1956. 122 p</reference>
+      <reference>Понтрягин Л. С. Обыкновенные дифференциальные уравнения. Изд. 5-е. Москва, Наука, 1982. 331 c</reference>
+      <reference>Бахвалов Н. С. Численные методы. Москва, Физматгиз, 1973. 631 с</reference>
+      <reference>Pontrjagin L. S., Andronov A. A., Witt A. A. Statistische Auffassung dynamischer Systeme. &lt;em&gt;Phys. Zeit. &lt;/em&gt; 6: (1934), 1-24</reference>
+      <reference>Van der Ziel A. Fluctuation phenomena in semi-conductors. London, Butterworths Scientific Publ., 1959, 168 p</reference>
+      <reference>Nyquist H. Thermal agittation of electric charge in conductors. &lt;em&gt;Phys. Rev. &lt;/em&gt; 32 (1928), 110-113</reference>
+      <reference>Arato M. Linear Stochastic Systems with Constant Coefficients. A Statistical Approach. Berlin, Heidelberg, N. Y., Springer-Verlag Publ., 1982. 289 p</reference>
+      <reference>Арато М., Колмогоров А. Н., Синай Я. Г. Об оценках параметров комплексного стационарного гауссовского марковского процесса. &lt;em&gt;Докл. АН СССР. &lt;/em&gt; 146: 4 (1962), 747-750</reference>
+      <reference>Орлов А. Служба Широты. Москва, Изд-во АН СССР, 1958. 126 с</reference>
+      <reference>Неймарк Ю. И., Ланда П. С. Стохастические и хаотические колебания. Москва, Наука, 1987. 424 с</reference>
+      <reference>Lotka A. J. Undamped oscillations derived from the law of mass action. &lt;em&gt;J. Amer. Chem. Soc&lt;/em&gt;. 42: 8 (1920), 1595-1599</reference>
+      <reference>Вольтерра В. Математическая теория борьбы за существование. Москва, Наука, 1976. 286 с</reference>
+      <reference>Белоусов Б. П. Периодически действующая реакция и ее механизм&lt;em&gt;. Сб. рефератов по радиационноймедицине&lt;/em&gt;. Москва, Медгиз, 1959, 145-148</reference>
+      <reference>Жаботинский А. М. Концентрационные автоколебания. Москва, Наука, 1974. 178 с</reference>
+      <reference>Романовский Ю. М., Степанова Н. В., Чернавский Д. С. Математическая биофизика. Москва, Наука, 1984. 304 с</reference>
+      <reference>Obuhov A. M. Description of turbulence in Lagrangian variables. &lt;em&gt;Adv. Geophis. &lt;/em&gt; 3 (1959), 113-115</reference>
+      <reference>Первозванский А. А. Рынок: Расчет и риск. Mосква, ИНФРА, 1994. 210 с</reference>
+      <reference>Wolf J. R. Neue Untersuchungen uber die Periode der Sonnenflecken und ihre Bedeutung. &lt;em&gt;Mit. Naturforsch. Ges. Bern. &lt;/em&gt; 255, (1852), 249-270</reference>
+      <reference>Слуцкий Е. Е. О 11-летней периодичности солнечных пятен. &lt;em&gt;Докл. АН СССР&lt;/em&gt;. 4: 9, 1-2 (1935), 35-38</reference>
+      <reference>Henrici P. Discrete variable methods in ordinary differential equations. N. Y., Wiley Publ., 1962. 407 p</reference>
+      <reference>Rossler O. E. An equation for continuous chaos. &lt;em&gt;Phys. Lett. &lt;/em&gt; 57A (1976), 397-398</reference>
+      <reference>Хасьминский Р. З. Устойчивость систем дифференциальных уравнений при случайных возмущениях их параметров. Москва, Наука, 1969. 365 с</reference>
+      <reference>Kushner H. J. Stochastic stability and control. N. Y., London, Academic Press, 1967. 162 p</reference>
+      <reference>Баркин А. И., Зеленцовский А. Л., Пакшин П. В. Абсолютная устойчивость детерминированных и стохастических систем управления. Москва, Изд-во МАИ, 1992. 303 с</reference>
+      <reference>Козин Ф. Введение в устойчивость стохастических систем. &lt;em&gt;Автоматика. &lt;/em&gt; 5 (1969), 95-112</reference>
+      <reference>Самарский А. А., Галактионов В. А., Курдюмов С. П., Михайлов А. П. Режимы с обострением в задачах для квазилинейных параболических уравнений. Москва, Наука, 1987. 476 с</reference>
+      <reference>Самарский А. А. Теория разностных схем. Изд. 3-е. Москва, Наука, 1989. 614 с</reference>
+      <reference>Kac M. On distribution of certain Wiener functionals. &lt;em&gt;Trans. Amer. Math. Soc. &lt;/em&gt; 65 (1949), 1-13</reference>
+      <reference>Kac M. On some connections between probability theory and differential and integral equations. &lt;em&gt;Proc. Second Berkley Symp. Math. Stat. Probab&lt;/em&gt;. 1 (1951), 189-215</reference>
+      <reference>Philips H. B., Wiener N. Nets and Dirichlet problem. &lt;em&gt;J. Math. Phys&lt;b&gt;. &lt;/b&gt;&lt;/em&gt; 2 (1923), 105-124</reference>
+      <reference>Petrovski I. G. Uber das Irrfahrtproblem. &lt;em&gt;Math. Ann&lt;/em&gt;. 109 (1934), 425-444</reference>
+      <reference>Doob J. L. Semimartingales and subharmonic functions. &lt;em&gt;Trans. Amer. Math. Soc&lt;/em&gt;. 77 (1954), 86-121</reference>
+      <reference>Ueno T. The diffusion satisfying Wentzell's boundary conditions and the Markov processes on the boundary. &lt;em&gt;Proc. Japan Akad&lt;/em&gt;. 36 (1960), 533-538</reference>
+      <reference>Blumenthal R. M., Getoor R. K., McKean H. P. Markov processes with identical hitting distributions. &lt;em&gt;Illinois J. Math&lt;/em&gt;. 6 (1962), 402-421</reference>
+      <reference>Strook D. W., Varadhan S. R. S. Multidimensional diffusion processes. Berlin, Springer Publ., 1979. 338 p</reference>
+      <reference>Ито К. Вероятностные процессы. Вып. 2. Москва, ИЛ, 1963. 135 с</reference>
+      <reference>Arnold L. Stochastic differential equations: Theory and applications. N. Y., Wiley Publ., 1974. 228 p</reference>
+      <reference>Ikeda N., Watanabe S,. Stochastic differential equations and diffusion processes. Amsterdam, Oxford, N. Y., North Holland Publ. Co., 1981. 480 p</reference>
+      <reference>Пугачев В. С., Синицын И. Н. Стохастические дифференциальные системы: Анализ и фильтрация. Москва, Наука, 1985. 559 с</reference>
+      <reference>Гирсанов И. В. О преобразовании одного класса случайных процессов с помощью абсолютно непрерывной замены меры. &lt;em&gt;Теория вероятн. и ее прим&lt;/em&gt;. 5: 3 (1960), 314-330</reference>
+      <reference>Maruyama G. Continuous Markov processes and stochastic equations. &lt;em&gt;Rend. Circ. Math. Palermo&lt;/em&gt;. 4 (1955), 48-90</reference>
+      <reference>Дзагнидзе З. А., Читашвили Р. Я. Приближенное интегрирование стохастических дифференциальных уравнений. &lt;em&gt;Труды IV&lt;/em&gt;. Тбил. гос. ун-т. Ин-т прикл. мат. (1975), 267-279</reference>
+      <reference>Аталла М. А. Конечно-разностные аппроксимации для стохастических дифференциальных уравнений. &lt;em&gt;Вероятностные методы исследования систем с бесконечным числом степеней свободы. &lt;/em&gt; Сб. научн. трудов. Киев, Институт математики АН УССР (1986), 11-16</reference>
+      <reference>Никитин Н. Н., Разевиг В. Д. Методы цифрового моделирования стохастических дифференциальных уравнений и оценка их погрешностей. &lt;em&gt;Журн. вычисл. мат. и мат. физики&lt;/em&gt;. 18: 1 (1978), 106-117</reference>
+      <reference>Разевиг В. Д. Цифровое моделирование многомерных динамических систем при случайных воздействиях. &lt;em&gt;Автоматика и телемеханика&lt;/em&gt;. 4 (1980), 177-186</reference>
+      <reference>Maghsoodi Y., Harris C. J. In-probubility approximation and simulation of nonlinear jump-diffusion SDE. &lt;em&gt;IMA J. Math. Control Inform&lt;/em&gt;. 4 (1987), 65-92</reference>
+      <reference>Maghsoodi Y. Mean-square efficient numerical solution of jump-diffusion SDE. 1994. Preprint OR72. Univ. of Southampton. 26 p</reference>
+      <reference>Talay D. Convergence pour chaque trajectoire d'un scheme d'approximation des EDS. &lt;em&gt;ComputesRendus Acad. Sci. Paris. Ser. I. Math&lt;/em&gt;. 295 (1982), 249-252</reference>
+      <reference>Talay D., Tubaro L. Expansion of the global error for numerical schemes solving stochastic differential equations. &lt;em&gt;Stoch. Anal. Appl. &lt;/em&gt; 8: 4 (1990), 483-509</reference>
+      <reference>Talay D. Efficient numerical schemes for the approximation of expectations of functionals of the solution of an SDE and applications. &lt;em&gt;Springer Lecture Notesin Control and Inform. Sci. &lt;/em&gt;61 (1984), 294-313</reference>
+      <reference>Мильштейн Г. Н. Приближенное интегрирование стохастических дифференциальных уравнений. &lt;em&gt;Теория вероятн. и ее прим. &lt;/em&gt;19 (1974), 557-562</reference>
+      <reference>Мильштейн Г. Н. Метод второго порядка точности интегрирования стохастических дифференциальных уравнений. &lt;em&gt;Теория вероятн. и ее прим. &lt;/em&gt;23 (1978), 396-401</reference>
+      <reference>Мильштейн Г. Н. Слабая аппроксимация решений систем стохастических дифференциальных уравнений. &lt;em&gt;Теория вероятн. и ее прим&lt;/em&gt;. 30 (1985), 750-766</reference>
+      <reference>Мильштейн Г. Н. Численное интегрирование стохастических дифференциальных уравнений. Свердловск, Изд-во Уральск. ун-та, 1988. 225 с</reference>
+      <reference>Мильштейн Г. Н. Решение первой краевой задачи для уравнений параболического типа с помощью интегрирования стохастических дифференциальных уравнений. &lt;em&gt;Теория вероятн. и ее прим. &lt;/em&gt;40 (1995), 657-665</reference>
+      <reference>Ауслендер Э. И., Мильштейн Г. Н. Асимптотические разложения показателя Ляпунова для линейных стохастических систем с малыми шумами. &lt;em&gt;Прикл. матем. и мех. &lt;/em&gt; 46: 3 (1982), 358-365</reference>
+      <reference>Гладышев С. А., Мильштейн Г. Н. Метод Рунге-Кутта для вычисления винеровских интегралов экспоненциального типа. &lt;em&gt;Журн. вычисл. мат. и мат. физики&lt;/em&gt;. 24 (1985), 1136-1149</reference>
+      <reference>Milstein G. N. The probability approach to numerical solution of nonlinear parabolic equations. 1997. Preprint No. 380, WIAS. 29 p</reference>
+      <reference>Milstein G. N., Tretyakov M. V. Stochastic numerics for mathematical physics. Berlin, Springer-Verlag Publ., 2004. 596 p</reference>
+      <reference>Milstein G. N., Tretyakov M. V. Numerical integration of stochastic differential equations with nonglobally lipschitz coefficients. &lt;em&gt;SIAM J. Numer. Anal&lt;/em&gt;. 43: 3 (2005), 1139-1154</reference>
+      <reference>Milstein G. N., Tretyakov M. V. Numerical algorithms for forward-backward stochastic differential equations. &lt;em&gt;SIAM J. Sci. Comput&lt;/em&gt;. 28: 2 (2006), 561-582</reference>
+      <reference>Milstein G. N., Tretyakov M. V. Practical variance reduction via regression for simulating diffusions. &lt;em&gt;Rseach Reports in Mathematics&lt;/em&gt;. Report No. MA-06-019, University of Leicester, 2006. 24 p</reference>
+      <reference>Milstein G. N., Tretyakov M. V. Solving linear parabolic stochastic partial differential equations via averaging over characteristics. &lt;em&gt;Reseach Reports in Mathematics&lt;/em&gt;. Report No. MA-07-009, University of Leicester, 2007. 26 p</reference>
+      <reference>Milstein G. N., Platen E., Schurz H. Balanced implicit methods for stiff stochastic systems. &lt;em&gt;SIAM J. Numer. Anal&lt;/em&gt;. 35: 3 (1998), 1010-1019</reference>
+      <reference>Platen E. A Taylor-Ito formula for semimartingales solving a stochastic differential equation. &lt;em&gt;Springer Lecture Notesin Control and Inform. Sci&lt;/em&gt;. 36 (1981), 157-164</reference>
+      <reference>Platen E. A generalized Taylor formula for solutions of stochastic differential equations. &lt;em&gt;Sankhya. &lt;/em&gt; 44A (1982), 163-172</reference>
+      <reference>Platen E. An approximation method for a class of Ito processes with jump component. &lt;em&gt;Lietuvos Mat. Rink&lt;/em&gt;. 22 (1982), 124-136</reference>
+      <reference>Platen E. Zur zeitdiskreten Approximation von Itoprozessen. Diss. B., IMath. Akad. der Wiss. der DDR, 1984. Berlin</reference>
+      <reference>Platen E. Higher-order weak approximation of Ito diffusions by Markov chains. &lt;em&gt; Probab. Eng. Inform. Sci. &lt;/em&gt; 6 (1992), 391-408</reference>
+      <reference>Platen E. On weak implicit and predictor-corrector methods. &lt;em&gt;Math. Comput. Simulation. &lt;/em&gt; 38 (1995), 69-76</reference>
+      <reference>Platen E. An introduction to numerical methods for stochastic differential equations. &lt;em&gt;Acta Numerica&lt;/em&gt;. 8 (1999), 197-246</reference>
+      <reference>Platen E., Wagner W. On a Taylor formula for a class of Ito processes. &lt;em&gt;Probab. Math. Statist&lt;/em&gt;. 3 (1982), 37-51</reference>
+      <reference>Wagner W., Platen E. Approximation of Ito integral equations. Preprint ZIMM Akad. Wiss. DDR. Berlin. 1978. 27 p</reference>
+      <reference>Mikulevicius R., Platen E. Time discrete Taylor approximations for Ito processes with jump component. &lt;em&gt;Math. Nachr. &lt;/em&gt; 138 (1988), 93-104</reference>
+      <reference>Mikulevicius R., Platen E. Rate of convergence of the Euler approximation for diffusion processes. &lt;em&gt;Math. Nachr. &lt;/em&gt; 151 (1991), 233-239</reference>
+      <reference>Hofmann N., Platen E. Stability of weak numerical schemes for stochastic differential equations. &lt;em&gt;Comput. Math. Appl&lt;/em&gt;. 28: 10-12 (1994), 45-57</reference>
+      <reference>Hofmann N., Platen E. Stability of superimplisit numerical methods for stochastic differential equations. &lt;em&gt;Fields Inst. Communications&lt;/em&gt;. 9 (1996), 93-104</reference>
+      <reference>Kloeden P. E., Platen E. The Stratonovich and Ito-Taylor expansions. &lt;em&gt;Math. Nachr&lt;/em&gt;. 151 (1991), 33-50</reference>
+      <reference>Kloeden P. E., Platen E. Numerical solution of stochastic differential equations. Berlin, Springer-Verlag Publ., 1992. 632 p</reference>
+      <reference>Kloeden P. E., Platen E., Wright I. W. The approximation of multiple stochastic integrals. &lt;em&gt;Stoch. Anal. Appl&lt;/em&gt;. 10: 4 (1992), 431-441</reference>
+      <reference>Kloeden P. E., Platen E. Higher-order implicit strong numerical schemes for stochastic differential equations. &lt;em&gt;J. Statist. Phisics. &lt;/em&gt; 66 (1992), 283-314</reference>
+      <reference>Kloeden P. E., Platen E., Schurz H. Numerical solution of SDE through computer experiments. Berlin, Springer-Verlag Publ., 1994. 292 p</reference>
+      <reference>Kloeden P. E., Platen E., Hofmann N. Extrapolation methods for the weak approximation of Ito diffusions. &lt;em&gt;SIAM J. Numer. Anal. &lt;/em&gt; 32 (1995), 1519-1534</reference>
+      <reference>Kloeden P. E., Platen E., Schurz H., Sorensen M. On effects of discretization on estimators of drift parameters for diffusion processes. &lt;em&gt;J. Appl. Probab&lt;/em&gt;. 33 (1996), 1061-1076</reference>
+      <reference>Arnold L., Kloeden P. E. Explicit formulae for the Lyapunov exponents and rotation number of two-dimensional systems with telegraphic noise. &lt;em&gt;SIAM J. Appl. Math&lt;/em&gt;. 49 (1989), 1242-1274</reference>
+      <reference>Кульчицкий О. Ю., Кузнецов Д. Ф. Разложение процессов Ито в ряд Тейлора-Ито в окрестности фиксированного момента времени. &lt;em&gt;ВИНИТИ&lt;/em&gt;, 2637-В93 (1993), 26 с</reference>
+      <reference>Кульчицкий О. Ю., Кузнецов Д. Ф. Аппроксимация кратных стохастических интегралов Ито. &lt;em&gt;ВИНИТИ&lt;/em&gt;, 1678-В94 (1994), 42 с</reference>
+      <reference>Кузнецов Д. Ф. Конечно-разностная аппроксимация разложения Тейлора-Ито и конечно-разностные методы численного интегрирования стохастических дифференциальных уравнений Ито. &lt;em&gt;ВИНИТИ&lt;/em&gt;, 3509-В96 (1996), 24 с</reference>
+      <reference>Кузнецов Д. Ф. Конечно-разностный метод численного интегрирования стохастических дифференциальных уравнений Ито с локальной среднеквадратической погрешностью третьего порядка малости. &lt;em&gt;ВИНИТИ&lt;/em&gt;, 3510-В96 (1996), 27 с</reference>
+      <reference>Кузнецов Д. Ф. Теоремы о замене порядка интегрирования в повторных стохастических интегралах. &lt;em&gt;ВИНИТИ&lt;/em&gt;, 3607-V97 (1997), 31 с</reference>
+      <reference>Кузнецов Д. Ф. Метод разложения и аппроксимации повторных стохастических интегралов Стратоновича, основанный на кратных рядах Фурье по полным ортонормированным системам функций. &lt;em&gt;Электронный журнал &amp;quot; Дифференциальные Уравнения иПроцессы Управления&amp;quot;. &lt;/em&gt; 1997, no. 1. Доступно по ссылке: &lt;a href="http://www.math.spbu.ru/diffjournal/pdf/j002.pdf"&gt;http://www.math.spbu.ru/diffjournal/pdf/j002.pdf&lt;/a&gt; </reference>
+      <reference>Кульчицкий О. Ю., Кузнецов Д. Ф. Унифицированное разложение Тейлора-Ито. &lt;em&gt;Зап. науч. сем. ПОМИ им. В. А. Стеклова. &lt;/em&gt; 244 (1997), 186-204</reference>
+      <reference>Кузнецов Д. Ф. Некоторые вопросы теории численного решения стохастических дифференциальных уравнений Ито. С. -Петербург, Изд-во СПбГТУ, 1998. 203 с</reference>
+      <reference>Kuznetsov D. F. Method of expansion and approximation of repeated stochastic Stratonovich integrals, which is based on multiple Fourier series on full orthonormal systems. &lt;em&gt;Abstracts of the international conference &amp;quot; Asymptotic methods in probabilityand mathematical statistics&amp;quot; &lt;/em&gt;. St. -Petersburg, 1998, pp. 146-149</reference>
+      <reference>Кузнецов Д. Ф. Использование различных полных ортонормированных систем функций для численного решения стохастических дифференциальных уравнений Ито. &lt;em&gt;Тезисы докладов второй междунар. конф. &amp;quot; Дифференц. уравнения и их прим. &amp;quot; &lt;/em&gt; С. -Петербург, 1998, с. 128-129</reference>
+      <reference>Кульчицкий О. Ю., Кузнецов Д. Ф. Численное моделирование решений стохастических систем линейных стационарных дифференциальных уравнений. &lt;em&gt;Электронный журнал &amp;quot; Дифференциальные Уравнения иПроцессы Управления&amp;quot;. &lt;/em&gt; 1998, no. 1. Доступно по ссылке: &lt;a href="http://www.math.spbu.ru/diffjournal/pdf/j010.pdf"&gt;http://www.math.spbu.ru/diffjournal/pdf/j010.pdf&lt;/a&gt; </reference>
+      <reference>Кузнецов Д. Ф. Применение методов аппроксимации повторных стохастических интегралов Стратоновича и Ито к численному моделированию управляемых стохастических систем. &lt;em&gt;Проблемы управления и информатики&lt;/em&gt;. 4 (1999), 91-108</reference>
+      <reference>Кузнецов Д. Ф. Разложение повторных стохастических интегралов Стратоновича, основанное на кратных рядах Фурье. &lt;em&gt;Зап. науч. сем. ПОМИ им. В. А. Стеклова. &lt;/em&gt; 260 (1999), 164-185</reference>
+      <reference>Кузнецов Д. Ф. К проблеме численного моделирования стохастических систем. &lt;em&gt;Вестн. молодых ученых. Сер. прикл. мат. и мех&lt;/em&gt;. 1 (1999), 20-32</reference>
+      <reference>Кузнецов Д. Ф. Численное моделирование стохастических дифференциальных уравнений и стохастических интегралов. С. -Петербург, Наука, 1999. 460 с</reference>
+      <reference>Кузнецов Д. Ф. Применение полиномов Лежандра к среднеквадратической аппроксимации решений стохастических дифференциальных уравнений. &lt;em&gt;Проблемы управления и информатики. &lt;/em&gt; 5 (2000), 84-104</reference>
+      <reference>Кузнецов Д. Ф. Слабый численный метод четвертого порядка для стохастических дифференциальных уравнений Ито. &lt;em&gt;Вестн. молодых ученых. Сер. прикл. мат. и мех&lt;/em&gt;. 4 (2000), 47-52</reference>
+      <reference>Кузнецов Д. Ф. Численное интегрирование стохастических дифференциальных уравнений. С. -Петербург, Изд-во СПбГУ, 2001. 712 с</reference>
+      <reference>Кузнецов Д. Ф. Новые представления явных одношаговых численных методов для стохастических дифференциальных уравнений со скачкообразной компонентой. &lt;em&gt;Журн. вычисл. мат. и мат. физики&lt;/em&gt;. 41: 6 (2001), 922-937</reference>
+      <reference>Кузнецов Д. Ф. Новые представления разложения Тейлора-Стратоновича. &lt;em&gt;Зап. науч. сем. ПОМИ им. В. А. Стеклова&lt;/em&gt;. 278 (2001), 141-158</reference>
+      <reference>Кузнецов Д. Ф. Конечно-разностные сильные численные методы порядков точности 1. 5 и 2. 0 для стохастических дифференциальных уравнений Ито с неаддитивным многомерным шумом. &lt;em&gt;Проблемы управления и информатики&lt;/em&gt;. 4 (2001), 59-73</reference>
+      <reference>Кузнецов Д. Ф. Комбинированный метод сильной аппроксимации повторных стохастических интегралов. &lt;em&gt;Проблемы управления и информатики&lt;/em&gt;. 4 (2002), 141-147</reference>
+      <reference>Кузнецов Д. Ф. Трехшаговые сильные численные методы для стохастических дифференциальных уравнений Ито. &lt;em&gt;Проблемы управления и информатики&lt;/em&gt;. 6 (2002), 104-119</reference>
+      <reference>Кузнецов Д. Ф. Численное интегрирование стохастических дифференциальных уравнений. 2. С. -Петербург, Изд-во Политехнического университета, 2006. 764 с</reference>
+      <reference>Кузнецов Д. Ф. Стохастические дифференциальные уравнения: теория и практика численного решения. Изд. 4-е. С. -Петербург, Изд-во Политехнического университета, 2010. 816 с</reference>
+      <reference>Д. Ф. Кузнецов. Повторные стохастические интегралы Ито и Стратоновича и кратные ряды Фурье. &lt;em&gt;Электронный журнал &amp;quot; Дифференциальные Уравнения иПроцессы Управления&lt;/em&gt;&amp;quot;. 2010, no. 3. 257 c. Доступно по ссылке: &lt;a href="http://www.math.spbu.ru/diffjournal/pdf/kuznetsov_book.pdf"&gt;http://www.math.spbu.ru/diffjournal/pdf/kuznetsov_book.pdf&lt;/a&gt; </reference>
+      <reference>Kuznetsov D. F. Multiple Ito and Stratonovich Stochastic Integrals: Approximations, Properties, Formulas. St. -Petersburg, Polytechnical University Publishing House, 2013. 382 p</reference>
+      <reference>Kuznetsov D. F. Multiple Ito and Stratonovich Stochastic Integrals: Fourier-Legendre and Trigonometric Expansions, Approximations, Formulas. &lt;em&gt;Electronic Journal &amp;quot; Differential Equations and Control Processes&amp;quot;. &lt;/em&gt; 2017, no. 1. 385 p. Available at: &lt;a href="http://www.math.spbu.ru/diffjournal/EN/numbers/2017.1/article.2.1.html"&gt;http://www.math.spbu.ru/diffjournal/EN/numbers/2017.1/article.2.1.html&lt;/a&gt; </reference>
+      <reference>Арсеньев Д. Г., Кульчицкий О. Ю. Оптимизация алгоритмов численного интегрирования жестких линейных систем дифференциальных уравнений с постоянными коэффициентами. &lt;em&gt;ВИНИТИ&lt;/em&gt;, 732-B86 (1986), 32 с</reference>
+      <reference>Schurz H. Asymptotical mean square stability of an equilibrium point of some linear numerical solutions with multiplicative noise. &lt;em&gt;Stoch. Anal. Appl. &lt;/em&gt; 14 (1996), 313-354</reference>
+      <reference>Pettersson R. The Stratonovich-Taylor expansion and numerical methods. &lt;em&gt;Stoch. Anal. Appl&lt;/em&gt;. 10: 5 (1992), 603-612</reference>
+      <reference>Mikulevicius R. On some properties of solutions of stochastic differential equations. &lt;em&gt;Lietuvos Mat. Rink. &lt;/em&gt;4 (1983), 18-31</reference>
+      <reference>Clements D. J., Anderson B. D. O. Well behaved Ito equations with simulations that always misbehave. &lt;em&gt;IEEE Trans. Automat. Control&lt;/em&gt;. AC-18 (1973), 676-677</reference>
+      <reference>Wright D. J. The digital simulation of stochastic differential equations. &lt;em&gt;IEEE Trans. Automat. Control&lt;/em&gt;. AC-19 (1974), 75-76</reference>
+      <reference>Wright D. J. Digital simulation of Poisson stochastic differential equations. &lt;em&gt;Internat. J. Systems Sci. &lt;/em&gt; 6 (1980), 781-785</reference>
+      <reference>Rumelin W. Numerical treatment of stochastic differential equations. &lt;em&gt;SIAM J. Numer. Anal&lt;/em&gt;. 19 (1982), 604-613</reference>
+      <reference>Gard T. C. Introduction to stochastic differential equations. N. Y., Marcel Dekker Publ., 1988. 324 p</reference>
+      <reference>Chang C. C. Numerical solution of stochastic differential equations with constant diffusion coefficients. &lt;em&gt;Math. Comput&lt;/em&gt;. 49 (1987), 523-542</reference>
+      <reference>Allen E. Modeling with Ito stochastic differential equations. Dordrecht, Springer Publ., 2007. 240 p</reference>
+      <reference>Allen E. Approximation of Triple Stochastic Integrals Through Region Subdivision. &lt;em&gt;Communications in Applied Analysis&lt;/em&gt;. (Special Tribute Issue to Professor V. Lakshmikantham), 17 (2013), 355-366</reference>
+      <reference>Greenside H. S., Helfand E. Numerical integration of stochastic differential equations. II. &lt;em&gt;Bell SystemTech. J&lt;/em&gt;. 60 (1981), 1927-1940</reference>
+      <reference>Klauder J. R., Petersen W. P. Numerical integration of multiplicative-noise stochastic differential equations. &lt;em&gt;SIAM J. Numer. Anal&lt;/em&gt;. 22 (1985), 1153-1166</reference>
+      <reference>Hernandez D. B., Spigler R. Convergence and stability of implicit Runge-Kutta methods for systems with multiplicative noise. &lt;em&gt;BIT&lt;/em&gt;. 33 (1993), 654-669</reference>
+      <reference>Haworth D. C., Pope S. B. A second-order Monte-Carlo method for the solution of the Ito stochastic differential equation. &lt;em&gt;Stoch. Anal. Appl&lt;/em&gt;. 4 (1986), 151-186</reference>
+      <reference>Артемьев С. С., Шкурко И. О. Численное решение линейных систем стохастических дифференциальных уравнений. &lt;em&gt;Тезисы докладов VII Всесоюз. совещания &amp;quot; Методы Монте-Карлов вычислительной математике и математической физике&lt;/em&gt;&amp;quot;, 1985, Новосибирск, с. 144-146</reference>
+      <reference>Артемьев С. С., Якунин М. А. Математическое и статистическое моделирование в финансах. Новосибирск, Изд-во ИВМиМГ СО РАН, 2008. 174 с</reference>
+      <reference>Shkurko I. O. Numerical solution of linear systems of stochastic differential equations. &lt;em&gt;Numer. Methods Statist. Modeling. &lt;/em&gt;Collected Scientific Works. Novosibirsk, 1987. p. 101-109</reference>
+      <reference>Аверина Т. А., Артемьев С. С. Новое семейство численных методов для решения стохастических дифференциальных уравнений. &lt;em&gt;Докл. АН СССР. &lt;/em&gt; 288: 4 (1986), 777-780</reference>
+      <reference>Wagner W. Unbiased Monte-Carlo evaluation of certain functional integrals. &lt;em&gt;J. Comput. Phys. &lt;/em&gt; 71 (1987), 21-33</reference>
+      <reference>Wagner W. Monte-Carlo evaluation of functionals of solutions of stochastic differential equations. Variance reduction and numerical examples. &lt;em&gt;Stoch. Anal. Appl. &lt;/em&gt;6 (1988), 447-468</reference>
+      <reference>Richardson J. M. The application of truncated hierarchy techniques in the solution of a stochastic linear differential equation. In Stochastic Processes in Mathematical Phisics and Engineering. &lt;em&gt;Proc. Symp. Appl. Math&lt;/em&gt;. Ed. R. Bellman. Amer. Math. Soc. Providence RI. 16 (1964), 290-302</reference>
+      <reference>McKenna J., Morrison J. A. Moments and correlation functions of a stochastic differential equation. &lt;em&gt;J. Math. Phys. &lt;/em&gt; 11 (1970), 2348-2360</reference>
+      <reference>McKenna J., Morrison J. A. Moments of solutions of a class of stochastic differential equations. &lt;em&gt;J. Math. Phys. &lt;/em&gt; 12 (1971), 2126-2136</reference>
+      <reference>Klauder J. R., Petersen W. P. Spectrum of certain non-self-adjoint operators and solutions of Langevin equations with complex drift. &lt;em&gt;J. Statist. Phys&lt;/em&gt;. 39 (1985), 53-72</reference>
+      <reference>Newton N. J. An asymptotically efficient difference formula for solving stochastic differential equations. &lt;em&gt;Stochastics. &lt;/em&gt; 19 (1986), 175-206</reference>
+      <reference>Newton N. J. Asymptotically optimal discrete approximations for stochastic differential equations. In theory and applications of nonlinear control systems. Ed. C. Byrnes, A. Lindquist. Amsterdam, 1986, p. 555-567</reference>
+      <reference>Newton N. J. Asymptotically efficient Runge-Kutta methods for a class of Ito and Stratonovich equations. &lt;em&gt;SIAM J. Appl. Math&lt;/em&gt;. 51 (1991), 542-567</reference>
+      <reference>D. J. Higham, X. Mao, A. M. Stuart. Strong convergence of Euler-type methods for nonlinear stochastic differential equations. &lt;em&gt;SIAM J. Numer. Anal. &lt;/em&gt; 40 (2002), 1041-1063</reference>
+      <reference>Кореневский М. Л. Об оптимизации одного метода приближенного вычисления матричной экспоненты. &lt;em&gt;Труды междунар. конф. &amp;quot; Средства математического моделирования&amp;quot;. &lt;/em&gt; С. -Петербург, 1997, с. 125-134</reference>
+      <reference>Дьяконов В. П. Справочник по применению системы PC MatLab. Москва, Наука, 1993. 111 с</reference>
+      <reference>Дьяконов В. П. MATLAB 6. 5 SP1/7. 0 + Simulink 5/6. Основы применения. Москва, СОЛОН-пресс, 2005. 800 c</reference>
+    </references>
+  </articleInfo>
+  <authors>
+    <author ref="n_2017_kuznetsov" sort-key="1" />
+  </authors>
+</book-article>
+
 </number>
