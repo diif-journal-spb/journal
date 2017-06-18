@@ -10,13 +10,6 @@
 </div>
 
 <div class="editor">
-<span class="name">Alexey F. Andreev</span>
-<span class="title">professor, Doctor of Science</span>
-<span class="work">St.Peterburg State University (Russia)</span>
-<span class="email">irandr124@gmail.com</span>
-</div>
-
-<div class="editor">
 <span class="name">Jan Awrejcewicz</span>
 <span class="title">professor</span>
 <span class="work">The Lodz University of Technology (Poland)</span>

@@ -9,13 +9,6 @@
 </div>
 
 <div class="editor">
-<span class="name">Андреев А. Ф.</span>
-<span class="title">профессор, дфмн</span>
-<span class="work">Санкт-Петербургский Государственный университет</span>
-<span class="email">irandr124@gmail.com</span>
-</div>
-
-<div class="editor">
 <span class="name">Аврицевич Я.</span>
 <span class="title">профессор</span>
 <span class="work">Технологический университет, Лодзь (Польша)</span>
