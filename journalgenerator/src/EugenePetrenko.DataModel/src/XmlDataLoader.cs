@@ -45,7 +45,14 @@ namespace EugenePetrenko.DataModel
 
     IArticleInfo IXmlDataLoader.ParseArticleInfo(IArticle article, XmlElement element)
     {
-      return new ArticleInfo(article, element, this);
+      try
+      {
+        return new ArticleInfo(article, element, this);
+      }
+      catch (Exception e)
+      {
+        throw new Exception("Failed to process " + element.OuterXml + ". " + e.Message, e);
+      }
     }
 
     INumber IXmlDataLoader.ParseNumber(XmlElement element)
