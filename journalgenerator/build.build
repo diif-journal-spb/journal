@@ -9,6 +9,19 @@
   <property name="editor.exe" value="${base}/bin/EugenePetrenko.NumberEditor.exe" />
 
   <property name="msbuild-configuration" value="Release" />
+
+  <target name="all">
+   <echo><![CDATA[
+     Hello to journal-generator project.
+
+      'nant debug'      generate and open next site preview
+      'nant build'      prepare spbgu publising (a delta will be created)
+      'nant ui`         start GUI journal number editing tool
+      'nant migrate'    perform automated maintenance of the data
+      'nant debug-rffi' generate e-library export files
+   ]]></echo>
+
+  </target>
  
   <target name="make" verbose="true">
     <exec program="C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe">
