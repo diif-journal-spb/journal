@@ -109,6 +109,9 @@ namespace EugenePetrenko.JournalGenerator
       public bool HasReferences => myInfo.HasReferences;
 
       [UsedByStringTemplate]
+      public bool HasAbstracts => myInfo.HasAbstracts;
+
+      [UsedByStringTemplate]
       public bool HasKeywords => myInfo.HasKeywords;
     }
   }

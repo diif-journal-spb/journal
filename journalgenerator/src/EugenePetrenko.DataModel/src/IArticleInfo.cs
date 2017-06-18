@@ -13,6 +13,9 @@ namespace EugenePetrenko.DataModel
     
     IReference[] References { get; }
     
+    bool HasAuthors { get; }
+    bool HasAbstracts { get; }
+    
     bool HasReferences { get; }
 
     int FirstPage { get; }
@@ -74,7 +77,7 @@ namespace EugenePetrenko.DataModel
 
       myPdf = el.SelectSingleNode("pdf/text()").Value.Trim();
       myTitle = el.SelectSingleNode("title/text()").Value.Trim();
-      myAbstract = el.SelectSingleNode("abstract/text()").Value.Trim();
+      myAbstract = el.SelectSingleNode("abstract/text()")?.Value?.Trim() ?? "";
 
       myKeywords =
         el.SelectNodes("keywords/word/text()")
@@ -120,6 +123,11 @@ namespace EugenePetrenko.DataModel
         }
       }
     }
+
+
+    public bool HasAuthors => Authors.Any();
+    
+    public bool HasAbstracts => Abstract.Trim().Length > 0;
 
     public bool HasKeywords => Keywords.Length > 0;
     public string[] Keywords => myKeywords;
