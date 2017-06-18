@@ -1,0 +1,2573 @@
+﻿dx
+dt
+✻
+✛
+✲
+❄
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 2, 2017
+Electronic Journal,
+reg. N ΦC77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Stohastic differential equations
+STABILITY, BOUNDEDNESS AND UNIQUENESS OF
+SOLUTIONS TO CERTAIN THIRD ORDER STOCHASTIC
+DELAY DIFFERENTIAL EQUATIONS
+ADEMOLA, A.T.
+Department of Mathematics, Faculty of Science
+Obafemi Awolowo University, Ile-Ife, Nigeria
+Email:ademola672000@yahoo.com; atademola@oauife.edu.ng
+Abstract
+The behaviour of solutions to certain third order nonlinear non autonomous stochastic
+delay differential equations with constant deviating arguments is considered. The main
+procedure lies on the construction of a perfect Lyapunov functional which is used to
+obtain suitable conditions which guarantee uniformstability, boundednessand uniqueness
+of global solution for t > 0. The obtained results are new and complement related second
+order stochastic differential equations that have appeared in the literature. Moreover,
+examples are given to illustrate the feasibility and correctness of the main results.
+Keywords: Third order; Nonlinear stochastic delay differential equation; Uniform sta-
+bility; Boundedness of solutions
+1 Introduction
+In the applications, the future behavior of many phenomena, in science, econ-
+omy, medicine, information theory, engineering and so on, are assumed to be
+described by the solutions of an ordinary differential equation (ODE). In fact,
+the investigation of qualitative behavior of solutions, especially, the discussionDifferential Equations and Control Processes, N 2, 2017
+of uniform stability, boundedness and existence of unique solutions are crucial
+problems in the theory and applications of ODEs. Many interesting work on
+qualitative behaviour of solutions of second-, third- and higher order ODEs,
+have been discussed and are still receiving the attention of authors, see for
+instance the book of Burton [21, 22], Yoshizawa [60, 61] which contain the
+background to the study and the papers of Ademola et al. [3]-[10],[13, 16],
+Burton and Hatvani [20], Ogundare et al. [36, 37], Raffoul [40], Tun¸ c [49],
+Yoshizawa [59], Wang and Zhu [55] and the references cited therein.
+A more general type of differential equations often called a “functional dif-
+ferential equation” is one in which the unknown functions occur with various
+different arguments. In the Russian literature these are refereed to as “differ-
+ential equationswith deviatingargument.” The simplest and perhaps the most
+naturaltypeoffunctionaldifferentialequationsisa“delaydifferentialequation”
+(DDE)(or“differentialequationwithretardedargument”),(seeDriver[26]). In
+this direction many authors have proposed different approach to discuss qual-
+itative behaviour of solutions of second-, third- and higher order DDEs with
+deviating arguments(single or multiple, constant or variable). We can mention
+the survey books of Burton [21], Hale [25], Yoshizawa [61], and the papers of
+Ademola et al. [11, 12, 14, 17, 18], Cahlon and Schmidt [23], Caraballo et al.
+[24], Domoshnitsky [27], Mahmoud [33], Ogundare et al. [35], Olutimo and
+Adams [39], Remili et al. [41, 42, 43], Tun¸ c et al. [46]-[48], [50]-[54], Xianfeng
+and Wei [56], Yeni¸ cerio˘ glu [57, 58], Zhu [63] and the references cited therein to
+mention few.
+“Since Itˆ o introduced his stochastic calculus about 50 years ago, the the-
+ory of stochastic differential equation (SDE) has been developed very quickly,”
+(see Mao [34]). In particular, the randomness or stochastic effects (a con-
+cept beyond the scope of ODE and DDE) introduced to ODE and DDE gives
+birth tostochasticdifferentialequations(SDE) and stochasticdelaydifferential
+equation (SDDE) respectively. In this direction, interesting articles have been
+publishedbyauthorsusingdifferentapproach,seeforinstanceArnold[19],Kol-
+manovskii and Shaikhet [30], Oksendal [38], Shaikhet [45], which contain the
+general results on the subject matters and the dazzling papers of Abou-El-Ela
+et al. [1, 2], Ademolaet al. [15], Ivanov et al. [28], Kolarova[29], Kolmanovskii
+and Shaikhet [30, 31], Liu and Raffoul [32], Mao [34], Zhu et al. [62] and the
+references cited therein.
+In their contribution the authors in [1] discussed the stability of solutions
+Electronic Journal. http://www.math.spbu.ru/diffjournal 25Differential Equations and Control Processes, N 2, 2017
+for certain second order SDDE
+¨ x(t)+a˙ x(t)+bx(t−h)+σx(t)˙ ω(t) = 0
+and
+¨ x(t)+a˙ x(t)+f(x(t−h))+σx(t−τ)˙ ω(t) = 0,
+where a,b and σ are positive constants, h and τ are two positive constant
+delays, ω(t) ∈ R is a standard Wiener Process, the function f is continuous
+with respect to x with f(0) = 0.
+Moreover, the authors in [2] considered a more general problem (including
+and extending the results in [1]) by introducing more nonlinear functions and
+they discussed stochastic stability and boundedness of solutions for the SDDE
+¨ x(t)+g(˙ x(t))+bx(t−h)+σx(t)˙ ω(t) =p(t,x(t), ˙ x(t),x(t−h)),
+where a and b are positive constants and h > 0 is a constant delay, g and
+p are continuous functions with g(0) = 0, ω(t) = (ω
+1
+(t),··· ,ω
+n
+(t)) ∈ R
+m
+an
+m−dimensional standard Brownian motion deﬁned on the probability space.
+Recently, the authorsin [15] investigatedstabilityand boundedness of solu-
+tions to a certain second order nonautonomous stochastic differential equation
+x
+′′
+(t)+g(x(t),x
+′
+(t))x
+′
+(t)+f(x(t))+σx(t)ω
+′
+(t) =p(t,x(t),x
+′
+(t)),
+where σ is a positive constant, the functions g,f and p are continuous in their
+respective arguments onR
+2
+,R andR
++
+×R
+2
+.
+Motivatedbytheabovediscussion,usingLyapunovsecondmethod,wepro-
+ceedtostudytheproblemsofstability,boundednessanduniquenessofsolutions
+of certain third order stochastic delay differential equations
+...
+x(t)+a¨ x(t)+b˙ x(t)+h(x(t−τ))+σx(t)˙ ω(t) = p(t,x(t), ˙ x(t),¨ x(t)), (1.1)
+where a,b,σ are positives constants, h,p are nonlinear continuous functions in
+theirrespective argumentswithh(0) = 0,τ > 0 isa constantdelaywhose value
+will be determined later and ω(t) is deﬁned above. The continuity and local
+Lipschitz conditions on the functions h and p are suﬃcient for the existence
+and uniqueness of solutions of equation (1.1) respectively. Also, the dots as
+usual stands for the differentiation with respect to the independent variable t.
+Suppose that ˙ x(t) = y(t) and ¨ x(t) = z(t), then equation (1.1) is equivalent to
+Electronic Journal. http://www.math.spbu.ru/diffjournal 26Differential Equations and Control Processes, N 2, 2017
+system
+˙ x(t) = y(t),
+˙ y(t) = z(t),
+˙ z(t) = −h(x)−by−az−σx(t)˙ ω(t)+
+Z
+t
+t−τ
+h
+′
+(x(s))y(s)ds
++p(t,x(t), ˙ x(t),¨ x(t)),
+(1.2)
+where h
+′
+(the derivative of the function h with respect to x) exists and con-
+tinuous for all x. However, to the best of our knowledge, there is no previous
+literature on stochastic stability and stochastic boundedness of solutions of
+nonlinear non autonomous third order SDDE (1.1). The rest of this paper is
+organized as follows. In Section 2, we present deﬁnition of terms and some pre-
+liminary results on SDDEs. Results and their proofs on stability, boundedness
+and uniqueness of solutions of the SDDE (1.1) are discussed in Section 3, while
+illustrative special cases of the SDDE (1.1) are presented in the last section.
+2 Preliminaries
+Let (Ω,F,{F
+t
+}
+t>0
+,P) be a complete probability space with a ﬁltration {F
+t
+}
+t>0
+satisfying the usual conditions (i.e. it is right continuous and{F
+0
+} contains all
+P−null sets). Let B(t) = (B
+1
+(t),··· ,B
+m
+(t))
+T
+be an m−dimensional Brownian
+motiondeﬁnedontheprobabilityspace. Letk·k denotestheEuclideannormin
+R
+n
+. If A is a vector or matrix, its transpose is denoted by A
+T
+. If A is a matrix,
+its trace norm is denoted by
+||A|| =
+q
+trace (A
+T
+A).
+FormoreinformationseeArnold[19]andMao[34]. Consideranonautonomous
+n−dimensional SDDE
+dx(t) =F(t,x(t),x(t−τ))dt+G(t,x(t),x(t−τ))dB(t) (2.1)
+on t > 0 with initial data {x(θ) : −τ ≤ θ ≤ 0},x
+0
+∈ C([−τ,0];R
+n
+). Here
+F : R
++
+×R
+2n
+→ R
+n
+and G : R
++
+×R
+2n
+→ R
+n×m
+are measurable functions.
+Suppose that the functions F,G satisfy the local Lipschitz condition, given any
+b > 0, p ≥ 2, F(t,0,0) ∈ C
+1
+([0,b];R
+n
+) and g(t,0,0) ∈ C
+p
+([0,b];R
+m×n
+). Then
+there must be a stopping time β = β(ω) > 0 such that equation (2.1) with
+x
+0
+∈ C
+p
+F
+t
+0
+[class of F
+t
+-measurable C([−τ,0];R
+n
+)-valued random variables ξ
+t
+and
+Electronic Journal. http://www.math.spbu.ru/diffjournal 27Differential Equations and Control Processes, N 2, 2017
+Ekξ
+t
+k
+p
+<∞] has a unique maximal solution on t∈ [t
+0
+,β) which is denoted by
+x(t,x
+0
+). Assume further that
+F(t,0,0)=G(t,0,0)= 0
+for all t ≥ 0. Hence, the SDDE admits zero solution x(t,0) ≡ 0 for any given
+initial value x
+0
+∈ C([−τ,0];R
+n
+).
+Deﬁnition 2.1 The zero solution of the stochastic differential equation (2.1)
+is said to be stochastically stable or stable in probability, if for every pair
+ǫ∈ (0,1) and r > 0, there exists a δ
+0
+=δ
+0
+(ǫ,r)> 0 such that
+Pr{kx(t;x
+0
+)k< r for all t≥ 0}≥ 1−ǫ whenever kx
+0
+k<δ
+0
+.
+Otherwise, it is said to be stochastically unstable.
+Deﬁnition 2.2 The zero solution of the stochastic differential equation (2.1) is
+said to be stochastically asymptotically stable if it is stochastically stable and
+in addition if for every ǫ ∈ (0,1) and r > 0, there exists a δ = δ(ǫ) > 0 such
+that
+Pr{lim
+t→∞
+x(t;x
+0
+) = 0}≥ 1−ǫ whenever kx
+0
+k<δ.
+Deﬁnition 2.3 A solution x(t,x
+0
+) of the SDDE (2.1) is said to be stochasti-
+cally bounded or bounded in probability, if it satisﬁes
+E
+x
+0
+kx(t,x
+0
+)k≤N(t
+0
+,kx
+0
+k), ∀ t≥ t
+0
+(2.2)
+where E
+x
+0
+denotes the expectation operator with respect to the probability law
+associated with x
+0
+, N :R
++
+×R
++
+→R
++
+is a constant function depending on t
+0
+and x
+0
+.
+Deﬁnition 2.4 The solutions x(t
+0
+,x
+0
+) of the SDDE (2.1) is said to be uni-
+formly stochastically bounded if N in (2.2) is independent of t
+0
+.
+LetKdenotethefamilyofallcontinuousnon-decreasingfunctionsρ :R
++
+→
+R
++
+suchthatρ(0) = 0andρ(r) > 0ifr6= 0.Inaddition,K
+∞
+denotesthefamily
+of all functions ρ∈K with
+lim
+r→∞
+ρ(r) =∞.
+Suppose that C
+1,2
+(R
++
+×R
+n
+,R
++
+), denotes the family of all non negative func-
+tions V = V(t,x
+t
+) (Lyapunov functional) deﬁned onR
++
+×R
+n
+which are twice
+continuously differentiable in x and once in t. By Itˆ o’s formula we have
+dV(t,x
+t
+) =LV(t,x
+t
+)dt+V
+x
+(t,x
+t
+)G(t,x
+t
+)dB(t),
+Electronic Journal. http://www.math.spbu.ru/diffjournal 28Differential Equations and Control Processes, N 2, 2017
+where
+LV(t,x
+t
+) =
+∂V(t,x
+t
+)
+∂t
++
+∂V(t,x
+t
+)
+∂x
+i
+F(t,x(t))
++
+1
+2
+trace [G
+T
+(t,x
+t
+)V
+xx
+(t,x
+t
+)G(t,x
+t
+)]
+(2.3)
+with
+V
+xx
+(t,x
+t
+) =
+ 
+∂
+2
+V(t,x
+t
+)
+∂x
+i
+∂x
+j
+ 
+n×n
+, i,j = 1,··· ,n
+In this study we will use the diffusion operator LV(t,x
+t
+) deﬁned in (2.3) to
+replace V
+′
+(t,x(t))=
+d
+dt
+V(t,x(t)). We now present the basic results that will be
+used in the proofs of the main results.
+Lemma 2.1 (See [19]) Assume that there exist V ∈ C
+1,2
+(R
++
+×R
+n
+,R
++
+) and
+φ∈K such that
+(i) V(t,0) = 0, for all t≥ 0;
+(ii) V(t,x
+t
+)≥φ(kx(t)k), φ(r)→∞ as r→∞; and
+(iii) LV(t,x
+t
+)≤ 0 for all (t,x)∈R
++
+×R
+n
+.
+Then the zero solution of SDDE (2.1) is stochasticallystable. If conditions (ii)
+and (iii) hold then (2.1) with x
+0
+∈ C
+p
+F
+t
+0
+has a unique global solution for t > 0
+denoted by x(t;x
+0
+).
+Lemma 2.2 (See [19]) Suppose that there exist V ∈ C
+1,2
+(R
++
+×R
+n
+,R
++
+) and
+φ
+0
+,φ
+1
+,φ
+2
+∈K such that
+(i) V(t,0) = 0, for all t≥ 0;
+(ii) φ
+0
+(kx(t)k)≤ V(t,x
+t
+)≤φ
+1
+(kx(t)k), φ
+0
+(r)→∞ as r→∞; and
+(iii) LV(t,x
+t
+)≤−φ
+2
+(kx(t)k) for all (t,x
+t
+)∈R
++
+×R
+n
+.
+ThenthezerosolutionofSDDE (2.1)is uniformlystochasticallyasymptotically
+stable in the large
+Assumption 2.1 (See [32, 40]) Let V ∈ C
+1,2
+(R
++
+×R
+n
+;R
++
+), suppose that for
+any solutions x(t
+0
+,x
+0
+) of SDDE (2.1) and for any ﬁxed 0 ≤ t
+0
+≤ T < ∞, we
+have
+E
+x
+0
+ Z
+T
+t
+0
+V
+2
+x
+i
+(t,x
+t
+)G
+2
+ik
+(t,x
+t
+)dt
+ 
+<∞, 1≤i≤n, 1≤k≤m. (2.4)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 29Differential Equations and Control Processes, N 2, 2017
+Assumption 2.2 (See [32, 40]) A special case of the general condition (2.4)
+is the following condition. Assume that there exits a function σ(t) such that
+|V
+x
+i
+(t,x
+t
+)G
+ik
+(t,x
+t
+)|< σ(t), x∈R
+n
+1≤i≤n, 1≤k≤m, (2.5)
+for any ﬁxed 0≤t
+0
+≤T <∞,
+Z
+T
+t
+0
+σ
+2
+(t)dt<∞. (2.6)
+Lemma 2.3 (See [32, 40]) Assume there exists a Lyapunov function V ∈
+C
+1,2
+(R
++
+×R
+n
+;R
++
+),satisfyingAssumption2.1, such thatfor all (t,x
+t
+)∈R
++
+×R
+n
+,
+(i) kx(t)k
+p
+≤ V(t,x
+t
+)≤kx(t)k
+q
+,
+(ii) LV(t,x
+t
+)≤−α(t)kx(t)k
+r
++β(t),
+(iii) V(t,x
+t
+)−V
+r/q
+(t,x
+t
+)≤γ,
+where α,β ∈ C(R
++
+;R
++
+), p,q,r are positive constants, p ≥ 1 and γ is a non
+negative constant. Then all solutions of SDDE (2.1) satisfy
+E
+x
+0
+kx(t,x
+0
+)k≤
+ 
+V(t
+0
+,x
+0
+)e
+−
+R
+t
+t
+0
+α(s)ds
++A
+ 
+1/p
+, (2.7)
+for all t≥t
+0
+, where
+A :=
+Z
+t
+t
+0
+ 
+γα(u)+β(u)
+ 
+e
+−
+R
+t
+u
+α(s)ds
+du.
+Lemma 2.4 (See [32, 40]) Assume there exists a Lyapunov function V ∈
+C
+1,2
+(R
++
+×R
+n
+;R
++
+), satisfying Assumption 2.1, such that for all (t,x)∈R
++
+×R
+n
+,
+(i) kx(t)k
+p
+≤ V(t,x
+t
+),
+(ii) LV(t,x
+t
+)≤−α(t)V
+q
+(t,x
+t
+)+β(t),
+(iii) V(t,x
+t
+)−V
+q
+(t,x
+t
+)≤γ,
+where α,β ∈ C(R
++
+;R
++
+), p,q are positive constants, p ≥ 1 and γ is a non
+negative constant. Then all solutions of SDDE (2.1) satisfy (2.7) for all t≥t
+0
+.
+Corollary 2.1 (See [32, 40])
+Electronic Journal. http://www.math.spbu.ru/diffjournal 30Differential Equations and Control Processes, N 2, 2017
+(i) Assume that hypotheses (i) to (iii) of Lemma 2.3 hold. In addition
+Z
+t
+t
+0
+ 
+γα(u)+β(u)
+ 
+e
+−
+R
+t
+u
+α(s)ds
+du≤ M,∀ t≥t
+0
+≥ 0, (2.8)
+for some positive constant M, then all solution of SDDE (2.1) are uni-
+formly stochastically bounded.
+(ii) Assume the hypotheses (i) to (iii) of Lemma 2.4 hold. If condition (2.8) is
+satisﬁed, then all solutions of SDDE (2.1) are stochastically bounded.
+3 Main Results
+Let x(t) =x,y(t) =y,z(t) = z and X
+t
+= (x
+t
+,y
+t
+,z
+t
+)∈R
+3
+be any solution of the
+SDDE (1.2). The Lyapunov functional employed in the proofs of our results is
+V(t,X
+t
+) =V(t,x
+t
+,y
+t
+,z
+t
+) deﬁned as
+2V(t,X
+t
+) = 2(α+a)
+Z
+x
+0
+h(ξ)dξ+2by
+2
++4yh(x)+2(α+a)yz +2z
+2
++(α
+2
++a
+2
++β)y
+2
++βbx
+2
++2aβxy+2βxz
++
+Z
+0
+−τ
+Z
+t
+t+s
+ 
+λ
+1
+y
+2
+(θ)+λ
+2
+z
+2
+(θ)
+ 
+dθds,
+(3.1)
+where a,b are positive constants, α,β are constants satisfying
+b
+−1
+l <α < a, l > 0, (3.2)
+0 <β < min
+ 
+b,
+ab−l
+2(1+a)
+,
+a−α
+4
+ 
+, (3.3)
+λ
+1
+and λ
+2
+are non-negative constants which will be determined later. In what
+follows we will state the main results of the paper and give their proofs.
+Theorem 3.1 If a,b,c,l,δ,σ,τ and M
+0
+are positive constants such that
+(i) h(0) = 0,
+(ii) δx≤h(x)≤cx for all x6= 0, |h
+′
+(x)|≤l for all x,
+(iii) σ
+2
+<βδ, l < ab and (α+β +a+2)c<ab−l,
+(iv) |p(t,x,y,z)|≤ M
+0
+,
+Electronic Journal. http://www.math.spbu.ru/diffjournal 31Differential Equations and Control Processes, N 2, 2017
+then the solution (x
+t
+,y
+t
+,z
+t
+) of the SDDE (1.2) is uniformly stochastically
+bounded provided that
+τ < min
+ 
+2(βδ−σ
+2
+)
+βc
+,
+(ab−l)−(α+β +a+2)c
+(α+a)c
+,
+a−α
+4c
+ 
+. (3.4)
+Remark 3.1 We give the following observations
+(i) Wheneverh(x(t−τ)) =cx andσx˙ ω =p(t,x, ˙ x,¨ x) = 0, then equation (1.1)
+specializes to a linear ﬁrst order homogenous ODE
+...
+x +a¨ x+b˙ x+cx = 0, (3.5)
+and assumptions (i) to (iv) of Theorem 3.1 reduces to Routh Hurwitz crite-
+ria a > 0,b> 0,c> 0,ab >c for asymptotic stability of the trivial solution
+of the equation (3.5).
+(ii) If σx˙ ω = 0 = p(t,x, ˙ x,¨ x), then equation (1.1) specializes to a DDE dis-
+cussed in [63]. Thus Theorem 3.1 includes and extends the stability result
+discussed in [63].
+(iii) The term σx˙ ω in SDDE (1.1) extends all results on third order differential
+equation with or without delay.
+(iv) The obtained results in [1, 2] and [15] are on second order stochastic dif-
+ferential equations.
+(v) This is the ﬁrst paper on nonlinear non-autonomous SDDE as there is no
+previous literature on third order.
+Next,wewillstateandproofaresultthatwillbehelpfulintheproofofTheorem
+3.1 and the subsequent results.
+Lemma 3.1 Subject to the assumptions of Theorem 3.1, there exist positive
+constants D
+0
+=D
+0
+(a,b,l,α,β,δ) and D
+2
+=D
+2
+(a,b,c,α,β,λ
+1
+,λ
+2
+) such that
+D
+0
+(x
+2
+(t)+y
+2
+(t)+z
+2
+(t))≤ V(t,X
+t
+)≤D
+1
+(x
+2
+(t)+y
+2
+(t)+z
+2
+(t)), (3.6)
+for all t ≥ 0,x,y and z. Furthermore, there exist positive constants D
+2
+=
+D
+2
+(a,b,c,α,β,δ,τ) and D
+3
+=D
+3
+(a,α,β) such that
+LV(t,X
+t
+)≤ −D
+2
+(x
+2
+(t)+y
+2
+(t)+z
+2
+(t))+D
+3
+(|x(t)|+|y(t)|+|z(t)|)×
+|p(t,x,y,z)|,
+(3.7)
+for all t≥ 0,x,y and z.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 32Differential Equations and Control Processes, N 2, 2017
+Proof. Suppose that (x
+t
+,y
+t
+,z
+t
+) is any solution of the SDDE (1.2). Putting
+X
+t
+=0 = (0,0,0)∈R
+3
+in equation (3.1) clearly
+V(t,0) = V(t,0,0,0)= 0, (3.8)
+for all t≥ 0. Furthermore, since h(0) = 0 equation (3.1) becomes
+V(t,X
+t
+) = b
+−1
+Z
+x
+0
+ 
+(a+α)b−2h
+′
+(ξ)
+ 
+h(ξ)dξ+b
+−1
+ 
+h(x)+by
+ 
+2
++
+1
+2
+ 
+βx+ay+z
+ 
+2
++
+1
+2
+(αy+z)
+2
++
+1
+2
+β(b−β)x
+2
++
+1
+2
+βy
+2
++
+Z
+0
+−τ
+Z
+t
+t+s
+ 
+λ
+1
+y
+2
+(θ)+λ
+2
+z
+2
+(θ)
+ 
+dθds.
+(3.9)
+Now since the double integrals in equation (3.9) is non-negative, the fact that
+δx≤ h(x) for all x6= 0, h
+′
+(x)≤ l for all x, applying the inequalities (3.2) and
+(3.3), there exists a constant δ
+0
+> 0 such that
+V(t,X
+t
+)≥δ
+0
+(x
+2
++y
+2
++z
+2
+), (3.10)
+for all t≥ 0,x,y and z, where
+δ
+0
+:= min
+ 
+δ
+2b
+[(α+a)b−2l]+
+1
+2
+β(b−β)+
+1
+b
+min{δ,b}+
+1
+2
+min{a,β,1},
+1
+b
+min{δ,b}+
+1
+2
+min{a,β,1}+
+1
+2
+min{α,1}+
+1
+2
+β,
+1
+2
+min{a,β,1}+
+1
+2
+min{α,1}
+ 
+.
+Inequality (3.10) gives rise to equation
+V(t,X
+t
+) = 0 ⇔ x
+2
++y
+2
++z
+2
+= 0 (3.11)
+and the inequality
+V(t,X
+t
+) > 0 ⇔ x
+2
++y
+2
++z
+2
+6= 0, (3.12)
+and that
+V(t,X
+t
+)→ +∞ as x
+2
++y
+2
++z
+2
+→∞. (3.13)
+Estimate(3.13)showsthatthefunctionalV(t,X
+t
+)isradiallyunbounded. More-
+over, using assumption (ii) of Theorem 3.1 and the fact that 2x
+1
+x
+2
+≤ x
+2
+1
++x
+2
+2
+,
+in equation (3.1) there exists a constant δ
+1
+> 0 such that
+V(t,X
+t
+)≤δ
+1
+(x
+2
++y
+2
++z
+2
+), (3.14)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 33Differential Equations and Control Processes, N 2, 2017
+for all t≥ 0,x,y and z, where
+δ
+1
+:= max
+ 
+(a+b+1)β+(α+β)c+2δ, α(α+1)+(a+β)(a+1)
++2(b+δ)+
+1
+2
+τ
+2
+max{λ
+1
+,λ
+2
+}, α+β +a+2
++
+1
+2
+τ
+2
+max{λ
+1
+,λ
+2
+}
+ 
+,
+thustheinequality(3.14)impliesthatthefunctionalV(t,X
+t
+)deﬁnedby(3.1)is
+decrescent. Inequalities (3.10) and (3.14) combined give the following inequal-
+ities
+δ
+0
+(x
+2
++y
+2
++z
+2
+)≤V(t,X
+t
+)≤ δ
+1
+(x
+2
++y
+2
++z
+2
+), (3.15)
+forallt≥ 0,x,y andz.Inequalities(3.15)satisfy(3.6)withδ
+0
+andδ
+1
+equivalent
+to D
+0
+and D
+1
+respectively.
+Next, applying Itˆ o’s formula (2.3) in equation (3.1) using system (1.2), we
+ﬁnd that
+LV(t,X
+t
+) = −βx
+2
+h(x)
+x
+−
+ 
+(α+a)b−2h
+′
+(x)
+ 
+y
+2
+−(a−α)z
+2
+−α(a−α)yz−
+Z
+t
+t−τ
+ 
+λ
+1
+y
+2
+(θ)+λ
+2
+z
+2
+(θ)
+ 
+dθ+σ
+2
+x
+2
++λ
+1
+y
+2
++λ
+2
+z
+2
++aβy
+2
++2βyz+
+ 
+βx+(α+a)y+2z
+ 
+×
+ 
+p(t,x,y,z)+
+Z
+t
+t−τ
+h
+′
+(x(s))y(s)ds
+ 
+.
+(3.16)
+In view of assumption (ii) of Theorem 3.1 |h
+′
+(x)| ≤ l for all x and employing
+the inequality
+α
+2
+(a−α)
+2
+< (αb−l)(a−α)
+it follows that
+(αb−l)y
+2
++α(a−α)yz+
+1
+4
+(a−α)z
+2
+≥
+ 
+p
+(αb−l)|y|−
+1
+2
+p
+(a−α)|z|
+ 
+2
+≥ 0
+(3.17)
+forally andz. Usinginequality(3.17)andthefactthath(x)≥δxforallx6= 0,
+Electronic Journal. http://www.math.spbu.ru/diffjournal 34Differential Equations and Control Processes, N 2, 2017
+equation (3.16) becomes
+LV(t,X
+t
+)≤−βδx
+2
+−
+1
+2
+(ab−l)y
+2
+−
+1
+4
+(a−α)z
+2
+−
+ 
+1
+2
+(ab−l)−(a+1)β
+ 
+y
+2
+−
+ 
+1
+4
+(a−α)−β
+ 
+z
+2
+−
+ 
+λ
+1
+−
+c
+2
+(α+β +a+2)
+ Z
+t
+t−τ
+y
+2
+(θ)dθ+λ
+2
+Z
+t
+t−τ
+z
+2
+(θ)dθ
++σ
+2
+x
+2
++λ
+1
+y
+2
++λ
+2
+z
+2
++
+c
+2
+ 
+βx
+2
++(α+a)y
+2
++2z
+2
+ 
+τ
++(β|x|+(α+a)|y|+2|z|)|p(t,x,y,z)|,
+(3.18)
+for all t ≥ 0,x,y and z. Choose λ
+1
+:= 2
+−1
+c(α+β +a+2), λ
+2
+:= 0, using the
+inequalities(3.2), (3.3)and(3.4)inestimate(3.18), thereexistconstantsδ
+2
+> 0
+and δ
+3
+> 0 such that
+LV(t,X
+t
+)≤−δ
+2
+(x
+2
++y
+2
++z
+2
+)+δ
+3
+(|x|+|y|+|z|)|p(t,x,y,z)|, (3.19)
+for all t≥ 0,x,y and z, where
+δ
+2
+:= min
+ 
+βδ−σ
+2
+−
+1
+2
+βcτ,
+1
+2
+ 
+ab−l−(α+β +a+2)c
+−(α+a)cτ
+ 
+,
+1
+4
+(a−τ)−cτ
+ 
+(3.20)
+and
+δ
+3
+:= max{α+a, β, 2}.
+Inequality (3.19) satisﬁes inequality (3.7) with δ
+2
+and δ
+3
+equivalent to D
+2
+and
+D
+3
+respectively. This completes the proof of Lemma 3.1.
+ProofofTheorem3.1. Let (x
+t
+,y
+t
+,z
+t
+) be anysolutionof theSDDE (1.2). Us-
+ing assumption (iii) in estimate (3.19), noting that δ
+2
+, δ
+3
+are positive constants
+and the fact that
+ 
+|x|+δ
+−1
+2
+δ
+3
+M
+0
+ 
+2
++
+ 
+|y|+δ
+−1
+2
+δ
+3
+M
+0
+ 
+2
++
+ 
+|z|+δ
+−1
+2
+δ
+3
+M
+0
+ 
+2
+≥ 0
+for all x,y and z, there exist constants δ
+4
+> 0 and δ
+5
+> 0 such that
+LV(t,X
+t
+)≤−δ
+4
+(x
+2
++y
+2
++z
+2
+)+δ
+5
+(3.21)
+for all t ≥ 0,x,y,z where δ
+4
+:= 2
+−1
+δ
+2
+and δ
+5
+:= 3×2
+−1
+δ
+−1
+2
+δ
+2
+3
+M
+2
+0
+. Inequalities
+(3.15)and(3.21)fulﬁllassumptions(i)to(iii)ofLemma2.3withp = q =r = 2,
+Electronic Journal. http://www.math.spbu.ru/diffjournal 35Differential Equations and Control Processes, N 2, 2017
+α(t) =δ
+4
+, β(t) = δ
+5
+and γ = 0. It follows from the inequality (2.8) that
+δ
+5
+Z
+t
+t
+0
+ 
+e
+−δ
+4
+R
+t
+u
+ds
+ 
+du≤δ
+−1
+4
+δ
+5
+, (3.22)
+where M := δ
+−1
+4
+δ
+5
+. Furthermore, from system (1.2) and equation (3.1) there
+exists a constant δ
+6
+> 0 such that
+ 
+ 
+ 
+ 
+V
+x
+i
+(t,X)G
+ik
+(t,X)
+ 
+ 
+ 
+ 
+≤δ
+6
+(x
+2
++y
+2
++z
+2
+), X ∈R
+3
+, 1≤ i,k≤ 3, (3.23)
+where
+δ
+6
+:=
+σ
+2
+max{α+a,β,α+β +a+4}
+and for any ﬁxed 0≤t
+0
+≤T <∞
+Z
+T
+t
+0
+σ
+2
+(t)dt =
+Z
+T
+t
+0
+δ
+2
+6
+(x
+2
++y
+2
++z
+2
+)
+2
+dt <∞. (3.24)
+In view of inequalities (3.23) and (3.24) inequalities (2.5) and (2.6) of Assump-
+tion 2.2 hold with σ(t) = δ
+6
+< ∞, and hence Assumption 2.1 follows immedi-
+ately. Finally, from inequalities (3.14) and (3.22), we have
+E
+x
+0
+kx(t,x
+0
+)k≤
+ 
+δ
+1
+X
+2
+0
++δ
+−1
+4
+δ
+5
+ 
+1/2
+, (3.25)
+for all t≥t
+0
+, whereX
+0
+=
+ 
+x
+2
+0
++y
+2
+0
++z
+2
+0
+ 
+∈R
+3
+. Assumption of Corollary2.1 (i)
+hold, hence by Corollary 2.1 (i) all solutions (x
+t
+,y
+t
+,z
+t
+) of the SDDE (1.2) are
+uniformly stochastically bounded. This completes the proof of Theorem 3.1.
+Theorem 3.2 Ifassumptions(i)to(iv)ofTheorem3.1andtheinequality (3.4)
+hold, then the solutions (x
+t
+,y
+t
+,z
+t
+) of the SDDE (1.2) are stochastically bounded.
+Proof. Let (x
+t
+,y
+t
+,z
+t
+) be any solution of the SDDE (1.2). In view of (3.14) and
+(3.19) there exists a constant δ
+∗
+> 0 such that
+LV(t,X
+t
+)≤−δ
+∗
+V(t,X
+t
+)+δ
+5
+, (3.26)
+for all t≥ 0,x,y,z where
+δ
+∗
+:=δ
+−1
+1
+δ
+4
+.
+From inequalities (3.10) and (3.26), assumptions (i) to (iii) of Lemma 2.4 hold
+with p = 2, q = 1, γ = 0, α(t) =δ
+4
+and β(t) =δ
+5
+. Also, the inequalities (3.22),
+Electronic Journal. http://www.math.spbu.ru/diffjournal 36Differential Equations and Control Processes, N 2, 2017
+(3.23), (3.24) and (3.25) hold, so that assumption (ii) of Corollary 2.1 hold,
+then by assumption (ii) of Corollary 2.1 all solutions of the SDDE (1.2) are
+stochastically bounded. This completes the proof of Theorem 3.2.
+Next, if p(t,x, ˙ x,¨ x) = 0 and p(t,x,y,z) = 0 in equations (1.1) and system
+(1.2) respectively, we have
+...
+x +a¨ x+b˙ x+h(x(t−τ))+σx(t)˙ ω(t) = 0 (3.27)
+and equation (3.27) is equivalent to the system
+˙ x = y,
+˙ y = z,
+˙ z = −h(x)−by−az−σx(t)˙ ω(t)+
+Z
+t
+t−τ
+h
+′
+(x(s))y(s)ds
+(3.28)
+where h and ω are deﬁned in Section 1.
+Theorem 3.3 Suppose that assumptions (i) to (iii) of Theorem 3.1 and in-
+equality (3.4) hold, then the trivial solution of the SDDE (3.28) is uniformly
+stochastically asymptotically stable in the large.
+Proof. Let (x
+t
+,y
+t
+,z
+t
+) be any solution of the SDDE (3.28). Equation (3.8),
+estimate (3.13) and the inequalities (3.15) satisfy assumptions (i) and (ii) of
+Lemma 2.2. Next, using Itˆ o’s formula (2.3) and the system (3.28), we have
+LV(t,X
+t
+)≤−δ
+2
+(x
+2
++y
+2
++z
+2
+) (3.29)
+for all t≥ 0,x,y and z, where δ
+2
+is deﬁned in (3.20). Inequality (3.29) satisﬁes
+assumption (iii) of Lemma 2.2, thus by Lemma 2.2 the trivial solution of the
+SDDE(3.28)isuniformlystochasticallyasymptoticallystableinthelarge. This
+completes the proof of Theorem 3.3.
+Theorem 3.4 Suppose that assumptions (i) to (iii) of Theorem 3.1 and the
+inequality (3.4) are satisﬁed, then the trivial solution of the SDDE (3.28) is
+stochastically stable.
+Proof. Suppose that (x
+t
+,y
+t
+,z
+t
+) be any solution of the SDDE (3.28). From
+equation (3.8) and inequality (3.10), assumptions (i) and (ii) of Lemma 2.1 are
+satisﬁed. Also, from inequality (3.29) we have
+LV(t,X
+t
+)≤ 0, (3.30)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 37Differential Equations and Control Processes, N 2, 2017
+for all t ≥ 0, X = (x,y,z) ∈ R
+3
+. Inequality (3.30) fulﬁlls assumption (iii) of
+Lemma 2.1, hence by Lemma 2.1 the trivial solution of the SDDE (3.28) is
+stochastically stable. This completes the proof of Theorem 3.4.
+Theorem 3.5 If assumption(i) to (iii) of Theorem 3.1 and the inequality (3.4)
+are satisﬁed, then system (3.28) with X
+0
+∈ C
+p
+F
+t
+0
+has a unique global solution for
+t> 0.
+Proof. Let(x
+t
+,y
+t
+,z
+t
+)beanysolutionoftheSDDE(3.28),inviewofinequalities
+(3.10) and (3.30) assumptions (ii) and (iii) of Lemma 2.1 are satisﬁed, thus by
+Lemma2.1assumptions(ii)and(iii)system(3.28)withX
+0
+∈ C
+p
+F
+t
+0
+,hasaunique
+global solution for t > 0. This completes the proof of Theorem 3.5.
+Next, if the functionp(t,x, ˙ x,¨ x) is replaced by p(t) deﬁned onR
++
+, equation
+(1.1) specializes to
+...
+x +a¨ x+b˙ x+h(x(t−τ))+σx(t)˙ ω(t) = p(t) (3.31)
+and equation (3.31) is equivalent to the system
+˙ x = y,
+˙ y = z,
+˙ z = −h(x)−by−az−σx(t)˙ ω(t)+
+Z
+t
+t−τ
+h
+′
+(x(s))y(s)ds+p(t).
+(3.32)
+We have the following results
+Corollary 3.1 Suppose that assumptions (i) to (iii) of Theorem 3.1 are satis-
+ﬁed, assumption (iv) is replaced by
+|p(t)|≤M
+1
+, 0 <M
+1
+<∞
+and inequality (3.4) holds, then the solutions of the SDDE (3.32) are
+(i) uniformly stochastically bounded, and
+(ii) stochastically bounded.
+Proof. The proof of Corollary 3.1 is similar to the proofs of Theorem 3.1 and
+Theorem 3.2, hence it is omitted. This completes the proof of Corollary 3.1.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 38Differential Equations and Control Processes, N 2, 2017
+4 Examples
+In this section, we present examples to check the validity and effectiveness of
+our results obtained in the previous section.
+Example 4.1 Consider a third order scalar SDDE
+...
+x + ¨ x+20˙ x+x(t−τ)+
+sinx
+2
+(t−τ)
+x(t−τ)
++
+1
+11
+x˙ ω =
+2+t
+2
++x
+2
++ ˙ x
+2
++ ¨ x
+2
+1+t
+2
++x
+2
++ ˙ x
+2
++ ¨ x
+2
+. (4.1)
+Equation (4.1) can be written in the equivalent form
+˙ x = y,
+˙ y = z,
+˙ z = −
+ 
+x+
+sinx
+2
+x
+ 
+−20y−z−
+1
+11
+x˙ ω+
+2+t
+2
++x
+2
++y
+2
++z
+2
+1+t
+2
++x
+2
++y
+2
++z
+2
++
+Z
+t
+t−τ
+ 
+1+2cosx
+2
+(s)−
+sinx
+2
+(s)
+x
+2
+(s)
+ 
+y(s)ds.
+(4.2)
+Comparing system (1.2) with system (4.2) we have the following relations
+(i) a = 1, b = 20;
+Figure 1: The Behaviour of functions H(x) and x
+−1
+h(x)
+(ii) the nonlinear function
+h(x) :=x+
+sinx
+2
+x
+or
+h(x)
+x
+= 1+
+sinx
+2
+x
+2
+,
+Electronic Journal. http://www.math.spbu.ru/diffjournal 39Differential Equations and Control Processes, N 2, 2017
+for all x6= 0. Let
+H(x) =
+sinx
+2
+x
+2
+for all x6= 0, since
+−0.3≤H(x)≤ 1
+for all x6= 0, it follows that
+0.7≤
+h(x)
+x
+≤ 2
+for all x6= 0, where δ := 0.7 and c := 2. See the behaviour of and bounds
+on functions H(x) and
+h(x)
+x
+in Figure 1. Furthermore, the derivative of the
+function h(x) with respect to x is
+h
+′
+(x) := 1+2cosx
+2
+−
+sinx
+2
+x
+2
+.
+It is not diﬃcult to show that
+|h
+′
+(x)|≤ 3.5
+for all x, where l := 3.5. The behaviour of |h
+′
+(x)| is shown in Figure 2.
+The estimated values of a,b,c,δ and l facilitate the determination of α,β in
+(3.2), (3.3), λ
+1
+and λ
+2
+as
+Figure 2: The Behaviour of function |h
+′
+(x)| for all x
+(iii) 0.2<α < 1, we choose α = 0.3;
+(iv) 0 <β < min{20,4.1,0.2}= 0.2, we choose β = 0.1;
+(v) λ
+1
+:= 3.4, λ
+2
+:= 0;
+Substituting the values of a,b,c,l,α,β and δ, inequality (3.4) becomes
+Electronic Journal. http://www.math.spbu.ru/diffjournal 40Differential Equations and Control Processes, N 2, 2017
+(vii) τ < min{0.65,0.09,3.78}= 0.09 and we choose τ = 0.01.
+(vi) Finally, the function
+p(t,x,y,z):= 1+
+1
+1+t
+2
++x
+2
++y
+2
++z
+2
+.
+Clearly
+|p(t,x,y,z)|≤ 2 =M
+0
+<∞,
+for all t≥ 0,x,y and z.
+Next, the functional V(t,X
+t
+) deﬁned in equation (3.1) becomes
+2V(t,X
+t
+) = 2.6
+Z
+x
+0
+(ξ+sinξ
+2
+)dξ+2x
+2
++41.19y
+2
++2z
+2
++4(x+sinx
+2
+)y
++2.6yz+0.2(xy+xz)+3.4
+Z
+0
+−0.01
+Z
+t
+t+s
+y
+2
+(θ)dθds.
+(4.3)
+From (4.3) it is not diﬃcult to show that
+0.2(x
+2
++y
+2
++z
+2
+)≤V(t,X
+t
+)≤ 44(x
+2
++y
+2
++z
+2
+) (4.4)
+for all x,y,z where δ
+0
+:= 0.2 and δ
+1
+= 44. Inequalities (4.4) satisfy the inequal-
+ities (3.15). It must be noted that the ﬁrst inequality in (4.4) satisﬁes estimates
+(3.11), (3.12) and (3.13) in the proof of Lemma 3.1.
+Moreover, applying Itˆ o’s formula using system (4.2), we have
+LV(t,X
+t
+) = [1.3(x+sinx
+2
+)+2y(1+2cosx
+2
+−x
+−2
+sinx
+2
+)+2x
++0.1(y+z)]y+[0.1x+41.19y+1.3z+2(x+sinx
+2
+)]z
++
+1
+121
+x
+2
++0.034y
+2
+−3.4
+Z
+t
+t−0.01
+y
+2
+(θ)dθ
++(0.1x+1.3y+2z)
+ 
+2+t
+2
++x
+2
++y
+2
++z
+2
+1+t
+2
++x
+2
++y
+2
++z
+2
+−
+ 
+(x+sinx
+2
+)+20y+z
+ 
++
+Z
+t
+t−0.01
+ 
+1+2cosx
+2
+(s)−
+sinx
+2
+(s)
+x
+2
+(s)
+ 
+ds
+ 
+(4.5)
+Simplifying equation (4.5), noting that
+1+
+sinx
+2
+x
+2
+≥ 0.7
+Electronic Journal. http://www.math.spbu.ru/diffjournal 41Differential Equations and Control Processes, N 2, 2017
+for all x6= 0 and
+1+2cosx
+2
+−
+sinx
+2
+x
+2
+≤
+ 
+ 
+ 
+ 
+1+2cosx
+2
+−
+sinx
+2
+x
+2
+ 
+ 
+ 
+ 
+≤ 3.5
+for all x, we obtain
+LV(t,X
+t
+)≤−0.06(x
+2
++y
+2
++z
+2
+)+2(|x|+|y|+|z|)
+ 
+ 
+ 
+ 
+2+t
+2
++x
+2
++y
+2
++z
+2
+1+t
+2
++x
+2
++y
+2
++z
+2
+ 
+ 
+ 
+ 
+(4.6)
+for all t ≥ 0,x,y and z. Inequality (4.6) satisﬁes inequality (3.19) with δ
+2
+:=
+0.06 and δ
+3
+:= 2. Next, using item (vi) above, inequality (4.6) becomes
+LV(t,X
+t
+)≤−0.03(x
+2
++y
+2
++z
+2
+)+24000 (4.7)
+for all t ≥ 0,x,y and z. Inequality (4.7) satisﬁes (3.21) with δ
+4
+:= 0.03 and
+δ
+5
+:= 24000. Also, with the values of δ
+4
+and δ
+5
+inequality (3.22) becomes
+24000
+Z
+t
+t
+0
+ 
+e
+−0.03
+R
+t
+u
+ds
+ 
+du = 8.0×10
+5
+ 
+1−e
+−0.03(t−t
+0
+)
+ 
+< 8.0×10
+5
+, (4.8)
+where 8.0×10
+5
+=δ
+−1
+4
+δ
+5
+. Furthermore, inequality (3.23) specializes to
+|V
+x
+3
+(t,X
+t
+)G
+33
+(t,X
+t
+)|≤ 0.24(x
+2
++y
+2
++z
+2
+), (4.9)
+for all t ≥ 0,x,y,z where δ
+6
+= 0.24. Inequality (3.24) likewise follows from
+(4.9) for any ﬁxed 0≤ t
+0
+≤T <∞. In view of estimate (4.9) Assumptions 2.2
+and 2.1 hold immediately. By Corollary 2.1 (i), all solutions of system (4.2)
+are uniformly stochastically bounded and satisfy
+E
+X
+0
+kX(t,X
+0
+)k≤
+ 
+44X
+2
+0
++8.0×10
+5
+ 
+1/2
+. (4.10)
+Also, to apply Theorem 3.2, since the functional V(t,X
+t
+) deﬁned by (4.3)
+is positive deﬁnite (i.e. V(t,0) = 0 and V(t,X
+t
+)≥ 0.2(x
+2
++y
+2
++z
+2
+)). It follows
+from the upper inequality (4.4) that
+V(t,X
+t
+)≤ 44(x
+2
++y
+2
++z
+2
+),
+for all t≥ 0,x,y and z. Using this inequality in (4.7) we obtain
+LV(t,X
+t
+)≤−6.8×10
+−4
+V(t,X
+t
+)+2.4×10
+4
+, (4.11)
+for all t≥ 0,x,y,z where δ
+∗
+:= 6.8×10
+−4
+and δ
+5
+= 2.4×10
+4
+. In view of inequal-
+ities (4.8), (4.9) and (4.11) assumptions of Lemma 2.4 and Corollary 2.1 (ii)
+hold, thus by Corollary 2.1 (ii), all solutions of system (4.2) are stochastically
+bounded and satisfy estimate (4.10).
+Electronic Journal. http://www.math.spbu.ru/diffjournal 42Differential Equations and Control Processes, N 2, 2017
+Example 4.2 As an applicationof Theorems 3.3 and 3.4, we consider the third
+order SDDE
+...
+x + ¨ x+20˙ x+x(t−τ)+
+sinx
+2
+(t−τ)
+x(t−τ)
++
+1
+11
+x˙ ω = 0. (4.12)
+Equation (4.12) is equivalent to system
+˙ x = y,
+˙ y = z,
+˙ z = −(x+
+sinx
+2
+x
+)−20y−z−
+1
+11
+x˙ ω
++
+Z
+t
+t−τ
+ 
+1+2cosx
+2
+(s)−
+sinx
+2
+(s)
+x
+2
+(s)
+ 
+y(s)ds.
+(4.13)
+Items (i) to (vi) of Example 4.1 and the Lyapunov functional V(t,X
+t
+) of equa-
+tion (4.3) are still valid for system (4.13), and that
+V(t,0) = 0, (4.14)
+for all t≥ 0 where 0 = (0,0,0)∈R
+3
+. Furthermore, inequalities (4.4) hold and
+from the ﬁrst inequality in (4.4) we have
+V(t,X
+t
+)→ +∞ as x
+2
++y
+2
++z
+2
+→∞,
+so that from estimates (4.4) and (4.14), conditions (i) and (ii) of Lemma 2.2
+hold.
+Applying Itˆ o’s formula using equation (4.3) and system (4.13), we have
+LV(t,X
+t
+)≤−0.06(x
+2
++y
+2
++z
+2
+) (4.15)
+for all t ≥ 0,x,y and z. Inequality (4.15) fulﬁlls condition (iii) of Lemma
+2.2, thus by Lemma 2.2 the trivial solution of the SDDE (4.13) is uniformly
+stochastically stable in the large. This completes the veriﬁcation of Theorem
+3.3.
+Next, to apply Theorem 3.4 we employed the functional V(t,X
+t
+) deﬁned
+by equation (4.3), this function is positive deﬁnite (see (4.14) and the ﬁrst
+inequality in (4.4)). In addition, from inequality (4.15) we have
+LV(t,X
+t
+)≤ 0, (4.16)
+for all t ≥ 0,x,y and z. Inequality (4.16) satisﬁes (3.30). All conditions of
+Lemma 2.1 hold hence by Lemma 2.1 the trivial solution of system (4.13) is
+stochastically stable. This completes the veriﬁcation of Theorem 3.4.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 43Differential Equations and Control Processes, N 2, 2017
+Acknowledgments
+The author is grateful to the anonymous referee(s) and the handling editor for
+their valuable comments and useful suggestions that have improved the quality
+of this work.
+References
+[1] Abou-El-Ela, A.M.A, Sadek, A.I. and Mahmoud, A.M. On the stability
+of solutionsfor certain second-order stochastic delay differentialequations,
+Differential Equations and Control Processes, No. 2, (2015), 1-13.
+[2] Abou-El-Ela, A.M.A., Sadek, A.I., Mahmoud, A.M. and Taie, R.O.A. On
+the stochastic stability and boundedness of solutions for stochastic delay
+differential equation of the second order, Chinese Journal of Mathematics,
+Vol. 2015, Article ID 358936, 8 pages, DOI.10.1155/2015/358936.
+[3] Ademola, A.T. and Arawomo, P.O. Asymptotic behaviour of solutions of
+third order nonlinear differential equations, Acta Univ. Sapientiae, Math-
+ematica, 3, No. 2, (2011), 197-211.
+[4] Ademola, A.T. and Arawomo, P.O. Boundedness and asymptotic be-
+haviour of solutions of a nonlinear differential equation of the third order,
+Afr. Mat. Afr. Mat., 23, No. 2, (2012), 261-271.
+[5] Ademola, A.T. and Arawomo, P.O. Generalization of some qualitative be-
+haviour of solutions of third order nonlinear differential equations, Differ-
+ential Equations and Control Processes, No. 1, (2012), 88-113.
+[6] Ademola, A.T. and Arawomo, P.O. On the asymptotic behaviour of so-
+lutions of certain differential equations of the third order, Proyecciones
+Journal of Mathematics, Vol. 33, No. 1, (2014), 111-132.
+[7] Ademola, A.T. and Arawomo, P.O. Stability and ultimate boundedness of
+solutionsto certainthird orderdifferentialequations, Applied Mathematics
+E-Notes, 10, (2010), 61-69.
+[8] Ademola, A.T. and Arawomo, P.O. Stability and uniform ultimate bound-
+ednessofsolutionsofathirdorderdifferentialequation,InternationalJour-
+nal of Applied Mathematics, 23 No. 1, (2010), 11-22.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 44Differential Equations and Control Processes, N 2, 2017
+[9] Ademola, A.T. and Arawomo, P.O. Stability and uniform ultimate bound-
+edness of solutions of some third order differential equations, Acta Mathe-
+matica Academiae Paedagogicae Ny´ ıregyh´ aziensis 27, (2011), 51-59.
+[10] Ademola, A.T. and Arawomo,P.O. Stability,boundedness and asymptotic
+behaviourofsolutionsofcertainnonlineardifferentialequationsofthethird
+order, Kragujevac Journal of Mathematics, 35, No. 3, (2011), 431-445.
+[11] Ademola, A.T. and Arawomo, P.O. Uniform stability and boundedness
+of solutions of nonlinear delay differential equations of the third order,
+Mathematical Journal Okayama University, 55, (2013), 157-166.
+[12] Ademola, A.T., Arawomo, P.O, Ogunlaran, O.M. and Oyekan, E.A. Uni-
+form stability, boundedness and asymptotic behaviour of solutions of some
+third order nonlinear delay differential equations, Differential Equations
+and Control Processes, No. 4, (2013), 43-66.
+[13] Ademola, A.T. Boundedness and stability of solutions to certain second
+order differential equations, Differential Equations and Control Processes,
+No. 3, (2015), 38-50.
+[14] Ademola, A.T. Existence and uniqueness of a periodic solution to certain
+third order nonlinear delay differential equation with multiple deviating
+arguments, Acta Univ. Sapientiae, Mathematica, 5, 2, (2013), 113-131.
+[15] Ademola, A.T., Moyo, S., Ogundiran, M.O., Arawomo, P.O. and Adesina,
+O.A. Stability and boundedness of solutions to a certain second-order
+nonautonomous stochastic differential equation, International Journal of
+Analysis,2016, ArticleID 2012315,11pages, DOI:10.1155/2016/2012315.
+[16] Ademola, A.T., Ogundiran, M.O., Arawomo, P.O. and Adesina, O.A.
+Boundedness results for a certain third order nonlinear differential equa-
+tion, Appl. Math. Comput. 216, No. 10, (2010), 3044-3049.
+[17] Ademola, A.T., Ogundare, B.S. Ogundiran, M.O. and Adesina, O.A. Peri-
+odicity,stabilityandboundednessofsolutionstocertainsecondorderdelay
+differentialequations,InternationalJournal of DifferentialEquations,Vol.
+2016, Article ID 2843709, 10 pages, DIO:10.1155/2016/284370.
+[18] Ademola, A.T., Ogundare, B.S. Ogundiran, M.O. and Adesina, O.A. Sta-
+bility, boundedness, and existence of periodic solutions to certain third
+Electronic Journal. http://www.math.spbu.ru/diffjournal 45Differential Equations and Control Processes, N 2, 2017
+orderdelaydifferentialequationswithmultipledeviatingarguments,Inter-
+national Journal of Differential Equations, Vol. 2015, Article ID 213935,
+12 pages DOI:10.1155/2015/213935.
+[19] Arnold,L.Stochasticdifferentialequations: Theoryandapplications,John
+Wiley & Sons, 1974.
+[20] Burton, T.A. and Hatvani, L. Asymptotic stability of second order ordi-
+nary, functional and partial differential equations. J. Math. Anal. Appl.
+176 (1993), 261-281.
+[21] Burton, T.A. Stability and periodic solutions of ordinary and functional
+differential equations, Mathematics in Science and Engineering, 178 Aca-
+demic Press. Inc., Orlando, FL, 1985.
+[22] Burton, T.A. Volterra integral and differential equations, New York: Aca-
+demic Press, 1983.
+[23] Cahlon,C.andSchmidt,D.Stabilitycriteriaforcertainsecondorderdelay
+differentialequationswithmixedcoeﬃcients,J.Comput.Appl.Math.,170,
+(2004), 79-102.
+[24] Caraballo, T., Diop, M. A. and Ndoye, A. S. Fixed points and exponential
+stability for stochastic partial integro-differential equations with delays,
+Advances in Dynamical Systems and Applications, Vol. 9, No. 2, (2014),
+133147.
+[25] Hale, J. K. Theory of functional differential equations, Applied Mathemat-
+ical Sciences 3. Springer-Verlag New York, (1977).
+[26] Driver, R. D. Ordinary and delay differential equations, Applied Mathe-
+matical Sciences 20. Springer-Verlag New York, Heidelberg Berlin (1977).
+[27] Domoshnitsky, A. Non oscillation, maximum principles, and exponential
+stabilityofsecondorderdelaydifferentialequationswithoutdampingterm,
+Journal of Inequalities and Applications, 2014, 2014:361, 1-26.
+[28] Ivanov, A. F., Kazmerchuk, Y. I., and Swishchuk, A. V. Theory, stochas-
+tic stability and applications of stochastic delay differential equations: a
+survey of recent results, Differential Equations and Dynamical Systems 11
+No. 1, Jan., (2003), 1-43.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 46Differential Equations and Control Processes, N 2, 2017
+[29] Kolarova, E. An application of stochastic integral equations to electrical
+networks,Acta Electrotechnicaet Informatica,Vol.8,No.3,(2008),14-17.
+[30] Kolmanovskii, V.B. and Shaikhet, L.E. A method for constructing Lya-
+punov functionals for stochastic systems with after effect, Differentsial
+′
+nye
+Uravneniya, 29(11): 2022, (1993), 1909 - 1920.
+[31] Kolmanovskii, V.B. and Shaikhet, L. E. Construction of Lyapunov func-
+tionals for stochastic hereditary systems: A survey of some recent results,
+Mathematical and Computer Modelling, 36 (2002) 691-716.
+[32] Liu, R. and Raffoul, Y. Boundedness and exponential stability of highly
+nonlinear stochastic differential equations, Electronic Journal of Differen-
+tial Equations, Vol. 2009(2009), No. 143, 110.
+[33] Mahmoud, A. M. On the asymptotic stability of solutions for a certain
+non-autonomous third-order delay differential equation,British Journal of
+Mathematics & Computer Science, 16 No. 3, 1-12, (2016).
+[34] Mao, X. Some contributions to stochastic asymptotic stability and bound-
+edness via multiple Lyapunov functions, Journal of Mathematical Analysis
+and Applications, 260, 325 340 (2001) doi:10.1006/jmaa.2001.7451.
+[35] Ogundare, B.S., Ademola, A.T., Ogundiran, M.O. and Adesina, O.A.
+On the qualitative behaviour of solutions to certain second order non-
+linear differential equation with delay. Ann Univ Ferrara, (2016), DOI
+10.1007/s11565-016-0262-y.
+[36] Ogundare, S.B. and Afuwape, A.U. Boundedness and stability properties
+of solutions of generalized Li´ enard equation, Kochi J. Math., 9, (2014),
+97-108.
+[37] Ogundare, S.B. and Okecha, G.E. Boundedness, periodicity and stability
+of solution ¨ x+a(t)g(˙ x)+b(t)h(x) =p(t;x, ˙ x), Math. Sci. Res. J., Vol. 11
+No. 5, (2007), 432-443.
+[38] Oksendal, B. Stochastic differential equations, an introduction with appli-
+cations, Springer-Verlage, (2000).
+[39] Olutimo, A.L. and Adams, D.O. On the stabilityand boundedness of solu-
+tions of certain non-autonomous delay differential equation of third order,
+Applied Mathematics,2016, 7, 457-467.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 47Differential Equations and Control Processes, N 2, 2017
+[40] Raffoul, Y.N. Boundedness and exponential asymptotic stability in dy-
+namical systems with applications to nonlinear differential equations with
+unbounded terms, Advances in Dynamical Systems and Applications,Vol.
+2 No. 1, (2007), 107-121.
+[41] Remili, M. and Beldjerd, D.A. Boundedness and stability results for a
+kind of third order delay differential equations Applications and Applied
+Mathematics: An International Journal Vol. 10, No. 2 (December 2015),
+772-782.
+[42] Remili,M.andOudjedi,L.D.Boundednessandstabilityinthirdordernon-
+linear differential equations with multiple deviating arguments, Archivum
+Mathematicum,Vol. 52, No. 2, (2016), 79-90.
+[43] Remili,M.andOudjedi, L.D.Stabilityandboundednessofthesolutionsof
+non autonomous third order differential equations with delay, Acta Univ.
+Palacki. Olomuc., Fac. rer. nat., Mathematica 53, 2, (2014), 139-147.
+[44] Rezaeyan, R. and Farnoosh, R. Stochastic differential equations and ap-
+plication of the Kalman-Bucy ﬁlter in the modeling of RC circuit, Applied
+Mathematical Sciences, Vol. 4, (2010), No. 23, 1119-1127.
+[45] Shaikihet, L. Lyapunov functionals and stability of stochastic differential
+equations, Springer, http://www.springer.com/978-3-319-00100-5.
+[46] Tun¸ c, C. and Ayhan, T. Global existence and boundedness of solutions of
+a certain nonlinear integro-differential equation of second order with mul-
+tiple deviating arguments, Journal of Inequalities and Applications, (2016)
+2016:46 DOI: 10.1186/s13660-016-0987-2.
+[47] Tun¸ c, C. and Erg¨ oren, H. Uniformly boundedness of a class of non-linear
+differential equations of third order with multiple deviating arguments,
+CUBO A Mathematical Journal, Vol.14, No. 3, (2012), 63-69.
+[48] Tun¸ c, C. A note on the stability and boundedness of non-autonomous
+differential equations of second order with a variable deviating argument,
+Afr. Math., 25 No.2, (2014), 417-425.
+[49] Tun¸ c,C.Anoteontheboundedsolutionstox
+′′
++c(t,x,x
+′
+)+q(t)b(x)=f(t),
+Appl. Math. Inf. Sci., Vol. 8, No. 1, (2014), 393-399.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 48Differential Equations and Control Processes, N 2, 2017
+[50] Tun¸ c, C. Boundedness of solutions to certain system of differential equa-
+tions with multiple delays, Mathematical Modeling and Applications in
+Nonlinear Dynamics, Springer Book Series, Chapter 5, (2016), 109-123.
+[51] Tun¸ c, C.Globalstabilityandboundednessofsolutionstodifferentialequa-
+tions of third order with multiple delays. Dynam. Systems Appl., 24,
+(2015), 467478.
+[52] Tun¸ c, C. New Results on the existence of periodic solutions for Rayleigh
+equation with state-dependent delay, J. Math. Fund. Sci., Vol. 45, No. 2,
+(2013), 154-162.
+[53] Tun¸ c, C. On the stability and boundedness of certain third order non-
+autonomous differential equations of retarded type. Proyecciones, 34, No.
+2, (2015), 147159.
+[54] Tun¸ c,C.StabilityandboundednessinmultidelayvectorLi´ enardequation,
+Filomat 27, No. 3, (2013), 435-445.
+[55] Wang, F. and Zhu, H. Existence, uniqueness and stability of periodic so-
+lutions of a duﬃng equation under periodic and anti-periodic eigenvalues
+conditions, Taiwanese Journal of Mathematics, Vol. 19, No. 5, (2015),
+1457 - 1468.
+[56] Xianfeng, Z. and Wei, J. Stability and boundedness of a retarded Li´ enard-
+type equation, Chin. Q. J. Math., 18, No. 1, (2003), 7-12.
+[57] Yeni¸ cerio˘ glu, A.F. The behavior of solutions of second order delay differ-
+ential equations, J. Math. Anal. Appl., 332, (2007), 1278-1290.
+[58] Yeni¸ cerio˘ glu, A.F. Stability properties of second order delay integro-
+differential equations, Computers and Mathematics with Applications, 56,
+(2008), 3109-3117.
+[59] Yoshizawa, T. Liapunov’s function and boundedness of solutions, Funk-
+cialaj Ekvacioj, 2, (1958), 71-103.
+[60] Yoshizawa, T. Stability theory and existence of periodic solutions and
+almost periodic solutions, Spriger-Verlag, New York. Heidelberg. Berlin,
+(1975).
+[61] Yoshizawa, T. Stability theory by Liapunov’s second method, The Mathe-
+matical Society of Japan, (1966).
+Electronic Journal. http://www.math.spbu.ru/diffjournal 49Differential Equations and Control Processes, N 2, 2017
+[62] Zhu,W.,Huang,J.Ruan,X.andZhao,Z.Exponentialstabilityofstochas-
+ticdifferentialequationwithmixeddelay,Journal of Applied Mathematics,
+Vol. 2014, Article ID 187037, 11 pages, DOI:10.1155/2014/187037.
+[63] Zhu, Y. On stability, boundedness and existence of periodic solution of a
+kind of third-order nonlinear delay differential system. Ann. of Diff. Eqs.
+8 No. 2, (1992), 249-259.
+May 25, 2017
+Electronic Journal. http://www.math.spbu.ru/diffjournal 50
