@@ -14,8 +14,10 @@ $sections:{
     $it.Info.Authors:{<h5>$it.FirstName$ $it.MiddleName$ $it.LastName$</h5>}$
     <p>
       <a href="$it.Pdf$">Полный текст (pdf)</a> 
+      $if(it.HasAbstracts)$
       |
       <a href="$it.Link$">Аннотация</a>
+      $endif$
       $if(it.HasReferences)$
       |
       <a href="$it.Link$#refs">Ссылки</a>

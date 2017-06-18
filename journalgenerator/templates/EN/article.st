@@ -1,13 +1,17 @@
 <h2>$article.Title$</h2>
+$if(article.HasAuthors)$
 <h3>Author(s):</h3>
 $article.Authors:{
   <p><b>$it.FirstName$ $it.MiddleName$ $it.LastName$</b></p>
   <p>$it.Address$</p>
   <p><a href="mailto:$it.EMail$">$it.EMail$</a></p>
 }$
+$endif$
 
+$if(article.HasAbstracts)$
 <h3>Abstract:</h3>
 <p>$article.Abstract$</p>
+$endif$
 
 $if(article.HasKeywords)$
 <a name="keywords"></a>
