@@ -1,0 +1,1614 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 3, 2017
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Differential equations with randomness
+Solvability of a stochastic differential equation with nonlocal and
+integral conditions
+A.M.A. El-Sayed
+1
+and M. E. I. El-Gendy
+2
+E-mail : amasayed@alexu.edu.eg & maysa elgendy@yahoo.com
+1
+Faculty of Science, Alexandria University, Alexandria, Egypt
+2
+Faculty of Science, Damanhour University, Behera, Egypt
+Abstract
+In this paper we are concerned with a stochastic differential equation with non-
+local condition. We study the existence of a unique mean square continuous
+solution. The continuous dependencies of the solution with respect to the ran-
+dom initial value and deterministic coe cients of the nonlocal condition are
+shown. A stochastic differential equation with an integral condition is consid-
+ered as well.
+Keywords: Nonlocal condition, unique mean square solution, continuous depen-
+dence, random data, nonlocal coe cients, integral condition.
+1 Introduction
+Problems with nonlocal conditions have been extensively studied by several
+authors in the last decades for ordinary differential equations. The reader is re-
+ferred to ([3]-[4]) and ([6]-[8]), and references therein. Also problems of stochas-
+tic differential equations have been extensively studied by several authors in the
+last decades, especially those contain the noisy term of Brownian motionW (t).Differential Equations and Control Processes, N 3, 2017
+The reader is referred to ([1]-[2]) and ([10]-[17]) and references therein.
+Here we are concerned with the stochastic differential equation
+dX(t)
+dt
+=f(t;X(t)) +W (t); t2 (0;T ] (1)
+with the nonlocal random initial condition
+X(0) +
+n
+X
+k=1
+a
+k
+X( 
+k
+) =X
+0
+;  
+k
+2 (0;T ); (2)
+where X
+0
+is a second order random variable independent of the Brownian mo-
+tion (or Wiener process) W (t) and a
+k
+are positive real numbers.
+The existence of a unique mean square continuous solution will be studied. The
+continuous dependencies with respect to random initial valueX
+0
+and determin-
+istic coe cients of the nonlocal condition a
+k
+will be established. The problem
+(1) with the mean square Riemann-Stieltjes integral condition
+X(0) +
+T
+Z
+0
+X(s)dv(s) =X
+0
+: (3)
+will be considered.
+2 Integral representation
+Let I = [0;T ], (
+;F;P ) be a  xed probability space, where 
+ is a sample
+space, F is a   algebra and P is a probability measure. We denote by L
+2
+(
+)
+the Banach space of random variables X : 
+!R such that
+Z
+
+
+X
+2
+dP <1:
+Let X(t;!) =fX(t);t2I;!2 
+g be a second order stochastic process, i.e.,
+E(X
+2
+(t))<1;t2I:
+Now let C = C(I;L
+2
+(
+)) be the class of all mean square continuous second
+order stochastic processes with the norm
+kXk
+C
+= sup
+t2[0;T ]
+kX(t)k
+2
+= sup
+t2[0;T ]
+p
+E(X(t))
+2
+:
+Throughout the paper we assume that the following assumptions hold
+Electronic Journal. http://www.math.spbu.ru/diffjournal 48Differential Equations and Control Processes, N 3, 2017
+(i) The function f : [0;T ] L
+2
+(
+)!L
+2
+(
+) is mean square continuous.
+(ii) There exists an integrable deterministic function k : [0;T ]!R
++
+with
+sup
+t2[0;T ]
+t
+Z
+0
+k(s)ds m
+where m is a positive real number such that the function f satis es the
+mean square Lipschitz condition
+kf(t;X
+1
+(t)) f(t;X
+2
+(t))k
+2
+ k(t)kX
+1
+(t) X
+2
+(t)k
+2
+:
+(iii) There exists a positive real number m
+1
+such that
+sup
+t2[0;T ]
+kf(t; 0)k
+2
+ m
+1
+where m
+1
+is a positive real number.
+Now we have the following lemma.
+Lemma 1 The solution of the problem (1)-(2) can be expressed by the stochastic
+Riemann integral equation
+X(t) = a
+0
+@
+X
+0
+ 
+n
+X
+k=1
+a
+k
+ 
+k
+Z
+0
+f(s;X(s))ds 
+n
+X
+k=1
+a
+k
+ 
+k
+Z
+0
+W (s)ds
+1
+A
++
+t
+Z
+0
+f(s;X(s))ds +
+t
+Z
+0
+W (s)ds
+(4)
+where a =
+ 
+1 +
+n
+P
+k=1
+a
+k
+ 
+ 1
+.
+Proof. Integrating equation (1), we obtain
+X(t) = X(0) +
+t
+Z
+0
+f(s;X(s))ds +
+t
+Z
+0
+W (s)ds
+and
+X( 
+k
+) =X(0) +
+ 
+k
+Z
+0
+f(s;X(s))ds +
+ 
+k
+Z
+0
+W (s)ds;
+Electronic Journal. http://www.math.spbu.ru/diffjournal 49Differential Equations and Control Processes, N 3, 2017
+then
+n
+X
+k=1
+a
+k
+X( 
+k
+) =
+n
+X
+k=1
+a
+k
+X(0) +
+n
+X
+k=1
+a
+k
+ 
+k
+Z
+0
+f(s;X(s))ds +
+n
+X
+k=1
+a
+k
+ 
+k
+Z
+0
+W (s)ds
+X
+0
+ X(0) =
+n
+X
+k=1
+a
+k
+X(0) +
+n
+X
+k=1
+a
+k
+ 
+k
+Z
+0
+f(s;X(s))ds +
+n
+X
+k=1
+a
+k
+ 
+k
+Z
+0
+W (s)ds
+and
+ 
+1 +
+n
+X
+k=1
+a
+k
+!
+X(0) =X
+0
+ 
+n
+X
+k=1
+a
+k
+ 
+k
+Z
+0
+f(s;X(s))ds 
+n
+X
+k=1
+a
+k
+ 
+k
+Z
+0
+W (s)ds;
+then
+X(0) =
+ 
+1 +
+n
+X
+k=1
+a
+k
+!
+ 1
+0
+@
+X
+0
+ 
+n
+X
+k=1
+a
+k
+ 
+k
+Z
+0
+f(s;X(s))ds 
+n
+X
+k=1
+a
+k
+ 
+k
+Z
+0
+W (s)ds
+1
+A
+:
+Hence
+X(t) =a
+0
+@
+X
+0
+ 
+n
+X
+k=1
+a
+k
+ 
+k
+Z
+0
+f(s;X(s))ds 
+n
+X
+k=1
+a
+k
+ 
+k
+Z
+0
+W (s)ds
+1
+A
++
+t
+Z
+0
+f(s;X(s))ds +
+t
+Z
+0
+W (s)ds;
+where a =
+ 
+1 +
+n
+P
+k=1
+a
+k
+ 
+ 1
+.
+Now de ne the mapping
+FX(t) = a
+0
+@
+X
+0
+ 
+n
+X
+k=1
+a
+k
+ 
+k
+Z
+0
+f(s;X(s))ds 
+n
+X
+k=1
+a
+k
+ 
+k
+Z
+0
+W (s)ds
+1
+A
++
+t
+Z
+0
+f(s;X(s))ds +
+t
+Z
+0
+W (s)ds
+then we can prove the following lemma.
+Lemma 2 F :C!C.
+Proof. Let X2C, t
+1
+; t
+2
+2 [0;T ] such thatjt
+2
+ t
+1
+j< , then
+kFX(t
+2
+) FX(t
+1
+)k
+2
+ 
+t
+2
+Z
+t
+1
+jjf(s;X(s))jj
+2
+ds +
+t
+2
+Z
+t
+1
+jjW (s)jj
+2
+ds:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 50Differential Equations and Control Processes, N 3, 2017
+From assumption (ii) we have
+kf(t;X(t))k
+2
+ kf(t; 0)k
+2
+ kf(t;X(t)) f(t; 0)k
+2
+ k(t)kX(t)k
+2
+;
+then we have
+kf(t;X(t))k
+2
+  k(t)kX(t)k
+2
++m
+1
+  k(t)kXk
+C
++m
+1
+:
+So,
+kFX(t
+2
+) FX(t
+1
+)k
+2
+  kXk
+C
+t
+2
+Z
+t
+1
+k(s)ds +m
+1
+(t
+2
+ t
+1
+) +
+t
+2
+Z
+t
+1
+p
+sds;
+which proves that F :C!C:
+3 Existence and uniqueness
+For the existence of a unique solution X2 C of the problem (1)-(2), we have
+the following theorem.
+Theorem 1 Let the assumptions (i)-(iii) be satis ed. If 2m < 1, then the
+problem (1)-(2) has a unique solution X2C.
+Proof. Let X and X
+ 
+2C, then
+kFX(t) FX
+ 
+(t)k
+2
+ 
+t
+Z
+0
+jjf(s;X(s)) f(s;X
+ 
+(s))jj
+2
+ds
++ a
+n
+X
+k=1
+a
+k
+ 
+k
+Z
+0
+jjf(s;X(s)) f(s;X
+ 
+(s))jj
+2
+ds
+  kX X
+ 
+k
+C
+t
+Z
+0
+k(s)ds
++ a
+n
+X
+k=1
+a
+k
+kX X
+ 
+k
+C
+ 
+k
+Z
+0
+k(s)ds:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 51Differential Equations and Control Processes, N 3, 2017
+Then
+kFX FX
+ 
+k
+C
+  m
+ 
+1 +a
+n
+X
+k=1
+a
+k
+!
+kX X
+ 
+k
+C
+:
+  2mkX X
+ 
+k
+C
+:
+Now if 2m< 1, then the operator F :C!C is contraction.
+Then by Banach's  xed point theorem [2], there exists a unique solutionX2C
+of the problem (1)-(2) can be expressed by (4).
+4 Continuous dependence
+Consider the random differential equation (1) with the nonlocal condition
+X(0) +
+n
+X
+k=1
+a
+k
+X( 
+k
+) =
+~
+X
+0
+; 
+k
+2 (0;T ) (5)
+De nition 1 The solution X2 C of the nonlocal problem (1)-(2) is continu-
+ously dependent (on the random initial value X
+0
+) if8  > 0; 9  > 0 such that
+kX
+0
+ 
+~
+X
+0
+k
+2
+   implies thatkX 
+~
+Xk
+C
+  .
+Consider now the two problems (1)-(2) and (1),(5).
+Here, we study the continuous dependence (on the random initial value X
+0
+) of
+the solution of the random differential equation (1) and (2).
+Theorem 2 Let the assumptions (i)-(iii) be satis ed. Then the solution of the
+nonlocal problem (1)-(2) is continuously dependent on the random initial value
+X
+0
+.
+Proof. Let X(t) as de ned in equation (4) be the solution of the nonlocal
+problem (1)-(2) and
+~
+X(t) = a
+0
+@ ~
+X
+0
+ 
+n
+X
+k=1
+a
+k
+ 
+k
+Z
+0
+f(s;
+~
+X(s))ds 
+n
+X
+k=1
+a
+k
+ 
+k
+Z
+0
+W (s)ds
+1
+A
++
+t
+Z
+0
+f(s;
+~
+X(s))ds +
+t
+Z
+0
+W (s)ds
+Electronic Journal. http://www.math.spbu.ru/diffjournal 52Differential Equations and Control Processes, N 3, 2017
+be the solution of the nonlocal problem (1) and (5). Then
+X(t) 
+~
+X(t) = a[X
+0
+ 
+~
+X
+0
+] a
+n
+X
+k=1
+a
+k
+ 
+k
+Z
+0
+[f(s;X(s)) f(s;
+~
+X(s))]ds
++
+t
+Z
+0
+[f(s;X(s)) f(s;
+~
+X(s))]ds:
+Using our assumptions, we get
+kX(t) 
+~
+X(t)k
+2
+  akX
+0
+ 
+~
+X
+0
+k
+2
++ a
+n
+X
+k=1
+a
+k
+ 
+k
+Z
+0
+kf(s;X(s)) f(s;
+~
+X(s))k
+2
+ds
++
+t
+Z
+0
+kf(s;X(s)) f(s;
+~
+X(s))k
+2
+ds
+  a  + 2mkX 
+~
+Xk
+C
+;
+then
+kX 
+~
+Xk
+C
+ 
+a 
+1  2m
+= :
+This completes the proof.
+Now consider the random differential equation (1) with the nonlocal condition
+X(0) +
+n
+X
+k=1
+~ a
+k
+X( 
+k
+) =X
+0
+; 
+k
+2 (0;T ) (6)
+De nition 2 The solution X2 C of the nonlocal problem (1)-(2) is continu-
+ously dependent (on the coe cientsa
+k
+of the nonlocal condition) if8 > 0;9 >
+0 such thatja
+k
+  ~ a
+k
+j   implies thatkX 
+~
+Xk
+C
+  .
+Consider now the two problems (1)-(2) and (1),(6).
+Here, we study the continuous dependence (on the coe cientsa
+k
+of the nonlocal
+condition) of the solution of the random differential equation (1) and (2).
+Theorem 3 Let the assumptions (i)-(iii) be satis ed. Then the solution of the
+nonlocal problem (1)-(2) is continuously dependent on the coe cients a
+k
+of the
+nonlocal condition.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 53Differential Equations and Control Processes, N 3, 2017
+Proof.LetX(t) as de ned in equation (4) be the solution of the nonlocal prob-
+lem (1)-(2) and
+~
+X(t) = ~ a
+0
+@
+X
+0
+ 
+n
+X
+k=1
+~ a
+k
+ 
+k
+Z
+0
+f(s;
+~
+X(s))ds 
+n
+X
+k=1
+~ a
+k
+ 
+k
+Z
+0
+W (s)ds
+1
+A
++
+t
+Z
+0
+f(s;
+~
+X(s))ds +
+t
+Z
+0
+W (s)ds
+be the solution of the nonlocal problem (1) and (6). Then
+X(t) 
+~
+X(t) = [a  ~ a]X
+0
++
+t
+Z
+0
+[f(s;X(s)) f(s;
+~
+X(s))]ds
+  a
+n
+X
+k=1
+a
+k
+ 
+k
+Z
+0
+f(s;X(s))ds + ~ a
+n
+X
+k=1
+~ a
+k
+ 
+k
+Z
+0
+f(s;
+~
+X(s))ds:
+ 
+"
+a
+n
+X
+k=1
+a
+k
+  ~ a
+n
+X
+k=1
+~ a
+k
+#
+ 
+k
+Z
+0
+W (s)ds:
+Now
+ja  ~ aj =
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1
+1 +
+n
+P
+k=1
+a
+k
+ 
+1
+1 +
+n
+P
+k=1
+~ a
+k
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+=
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+n
+P
+k=1
+(~ a
+k
+ a
+k
+)
+ 
+1 +
+n
+P
+k=1
+a
+k
+  
+1 +
+n
+P
+k=1
+~ a
+k
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+n
+X
+k=1
+(~ a
+k
+ a
+k
+)
+ 
+ 
+ 
+ 
+ 
+ n ;
+Electronic Journal. http://www.math.spbu.ru/diffjournal 54Differential Equations and Control Processes, N 3, 2017
+and
+ 
+ 
+ 
+ 
+ 
+a
+n
+X
+k=1
+a
+k
+  ~ a
+n
+X
+k=1
+~ a
+k
+ 
+ 
+ 
+ 
+ 
+=
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+n
+P
+k=1
+a
+k
+1 +
+n
+P
+k=1
+a
+k
+ 
+n
+P
+k=1
+~ a
+k
+1 +
+n
+P
+k=1
+~ a
+k
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+=
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+n
+P
+k=1
+(a
+k
+  ~ a
+k
+)
+ 
+1 +
+n
+P
+k=1
+a
+k
+  
+1 +
+n
+P
+k=1
+~ a
+k
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+n
+X
+k=1
+(a
+k
+  ~ a
+k
+)
+ 
+ 
+ 
+ 
+ 
+ n ;
+also
+~ a
+n
+X
+k=1
+~ a
+k
+ 
+k
+Z
+0
+f(s;
+~
+Xs))ds a
+n
+X
+k=1
+a
+k
+ 
+k
+Z
+0
+f(s;X(s))ds
+= ~ a
+ 
+1 +
+n
+X
+k=1
+~ a
+k
+!
+ 
+k
+Z
+0
+f(s;
+~
+X(s))ds a
+ 
+1 +
+n
+X
+k=1
+a
+k
+!
+ 
+k
+Z
+0
+f(s;X(s))ds
+  ~ a
+ 
+k
+Z
+0
+f(s;
+~
+X(s))ds +a
+ 
+k
+Z
+0
+f(s;X(s))ds
+= ~ a(~ a
+ 1
+)
+ 
+k
+Z
+0
+f(s;
+~
+X(s))ds a(a
+ 1
+)
+ 
+k
+Z
+0
+f(s;X(s))ds
+  ~ a
+ 
+k
+Z
+0
+f(s;
+~
+X(s))ds +a
+ 
+k
+Z
+0
+f(s;X(s))ds
+=  
+ 
+k
+Z
+0
+[f(s;X(s)) f(s;
+~
+X(s))]ds +a
+ 
+k
+Z
+0
+f(s;X(s))ds
+  ~ a
+ 
+k
+Z
+0
+f(s;
+~
+X(s))ds  ~ a
+ 
+k
+Z
+0
+f(s;X(s))ds + ~ a
+ 
+k
+Z
+0
+f(s;X(s))ds
+Electronic Journal. http://www.math.spbu.ru/diffjournal 55Differential Equations and Control Processes, N 3, 2017
+=  
+ 
+k
+Z
+0
+[f(s;X(s)) f(s;
+~
+X(s))]ds + [a  ~ a]
+ 
+k
+Z
+0
+f(s;X(s))ds
++ ~ a
+ 
+k
+Z
+0
+[f(s;X(s)) f(s;
+~
+X(s))]ds:
+Then
+kX(t) 
+~
+X(t)k
+2
+  n kX
+0
+k
+2
++
+t
+Z
+ 
+k
+kf(s;X(s)) f(s;
+~
+X(s))k
+2
+ds
++ n [mkXk
+C
++m
+1
+T ]n 
+ 
+k
+Z
+0
+kW (s)k
+2
+ds
++ ~ a
+ 
+k
+Z
+0
+kf(s;X(s)) f(s;
+~
+X(s))k
+2
+ds;
+and
+kX 
+~
+Xk
+C
+  n kX
+0
+k
+2
++mkX 
+~
+Xk
+C
++n [mkXk
+C
++m
+1
+T ]
++ ~ amkX 
+~
+Xk
+C
++n 
+ 
+k
+Z
+0
+p
+sds;
+then
+kX 
+e
+Xk
+C
+  n 
+ 
+kX
+0
+k
+2
++mkXk
+C
++m
+1
+T +
+2
+3
+ 
+3
+2
+k
+ 
++ (1 + ~ a)mkX X
+ 
+k
+C
+  n 
+ 
+kX
+0
+k
+2
++mkXk
+C
++m
+1
+T +
+2
+3
+T
+3
+2
+ 
++ 2mkX X
+ 
+k
+C
+:
+Hence
+kX 
+e
+Xk
+C
+ 
+n 
+ 
+kX
+0
+k
+2
++mkXk
+C
++m
+1
+T +
+2
+3
+T
+3
+2
+ 
+1  2m
+= :
+This completes the proof.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 56Differential Equations and Control Processes, N 3, 2017
+5 Nonlocal integral condition
+Let v : [0;T ]! [0;T ] be nondecreasing function such that
+a
+k
+=v(t
+k
+) v(t
+k 1
+);  
+k
+2 (t
+k 1
+;t
+k
+)
+where (0< t
+1
+< t
+2
+< t
+3
+<::::<T ):
+Then, the nonlocal condition (2) will be in the form
+X(0) +
+n
+X
+k=1
+X( 
+k
+)(v(t
+k
+) v(t
+k 1
+)) =X
+0
+:
+From the mean square continuity of the solution of the nonlocal problem (1)-(2),
+we obtain from [15]
+l:i:m
+n!1
+n
+X
+k=1
+X( 
+k
+)(v(t
+k
+) v(t
+k 1
+)) =
+Z
+T
+0
+X(s)dv(s):
+That is, the nonlocal conditions (2) is transformed to the mean square Riemann-
+Stieltjes integral condition
+X(0) +
+T
+Z
+0
+X(s)dg(s) =X
+0
+;
+Now, we have the following corollary.
+Corollary 1 Let the assumptions (i)-(iii) be satis ed, then the random differ-
+ential equation (1) with the nonlocal integral condition (3) has a unique solution
+given by the solution of
+X(t) = a
+?
+0
+@
+X
+0
+ 
+T
+Z
+0
+s
+Z
+0
+f( ;X( ))d dv(s) 
+T
+Z
+0
+s
+Z
+0
+W ( )d dv(s)
+1
+A
++
+t
+Z
+0
+f( ;X( ))d  +
+t
+Z
+0
+W ( )d ;
+where a
+?
+= (1 +v(T ) v(0))
+ 1
+:
+Proof. Taking the limit of equation (4) we get the proof.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 57Differential Equations and Control Processes, N 3, 2017
+References
+[1] P. Balasubramaniam, J.Y. Parkand and A.V.A. Kumar, Existence of solu-
+tions for semilinear neutral stochastic functional differential equations with
+nonlocal conditions, Nonlinear Anal., 71(2009), 1049-1058.
+[2] A. T. Bharucha-Reid, Fixed point theorems in probabilistic analysis, Bul-
+letin of the American Mathematical Society , 82, 5(1976).
+[3] A. Boucherif and Radu Precup, On the nonlocal initial value problem for
+ rst order differential equations, Fixed Point Theory, 4, 2(2003), 205-212.
+[4] L.Byszewski and V.Lakshmikantham, Theorem about the existence and
+uniqueness of a solution of a nonlocal abstract Cauchy problem in a Banach
+space, Applicable analysis, 40(1991), 11-19.
+[5] P. Chen and Y. Li, Existence and uniqueness of strong solutions for non-
+local evolution equations, Electronic Journal of Differential Equations,
+2014(2014), 1-9.
+[6] A.M. A. El-Sayed, R. O. Abd El-Rahman and M. El-Gendy, Uniformly
+stable solution of a nonlocal problem of coupled system of differential equa-
+tions, Differ. Equ. Appl., 5, 3(2013), 355-365.
+[7] A.M. A. El-Sayed, R. O. Abd El-Rahman and M. El-Gendy, Existence of
+solution of a coupled system of differential equation with nonlocal condi-
+tions, Malaya Journal Of Matematik, 2, 4(2014), 345-351.
+[8] A. M. A. EL-Sayed and E. O. Bin-Tahir, An arbitraty fractional order dif-
+ferential equation with internal nonlocal and integral conditions, advances
+in Pure Mathematics, 1, 3(2011), 59-62.
+[9] D. Gordeziani and G. Avalishvili, Investigation of the nonlocal initial
+boundary value problems for some hyperbolic equations, Hiroshima Math.
+J., 31(2001), 345-366.
+[10] D. Isaacson, Stochastic integrals and derivatives, The Annals of Mathe-
+matical Statistics, 40, 5(1969), 1610-1616.
+[11] S. Itoh, Random  xed point theorems with an application to random dif-
+ferential equations in Banach spaces, Journal Of Mathematical Analysis
+And Applications, 67(1979), 261-273.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 58Differential Equations and Control Processes, N 3, 2017
+[12] B. Oksendal, Stochastic differential equations (An introduction with appli-
+cations), Springer-Verlag Berlin Heidelberg New York, (2013).
+[13] M. Rockner, R. Zhu and X. Zhu, Existence and uniqueness of solutions to
+stochastic functional differential equations in in nite dimensions, Nonlinear
+Analysis: Theory, Methods and Applications, 125(2015), 358-397.
+[14] R. Sakthivel, P. Revathi and Y. Ren, Existence of solutions for nonlinear
+fractional stochastic differential equations, Nonlilear Anal., 81(2013), 70-
+86.
+[15] T. T. Soong, Random differential equations in science and engineering,
+Mathematics in Science and Engineering, 103, (1973).
+[16] D. W. Stroock, Topics in stochastic differential equations, Tata Institute
+of Fundamental Research Bombay, (1982).
+[17] S. Watanabe and T. Yamada, On uniqueness of solutions of stochastic
+differential equations, J.Math. Kyoto Univ., (1971), 155-167 and 553-563.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 59
