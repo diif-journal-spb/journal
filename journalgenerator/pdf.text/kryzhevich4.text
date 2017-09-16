@@ -1,0 +1,1239 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 3, 2017
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Dynamical systems on manifolds
+SETSOFINVARIANTMEASURESAND
+CESAROSTABILITY
+S. G. Kryzhevich
+Saint-Petersburg State University,
+Universitetskaya nab., 7-9, Saint-Petersburg, Russia, 199034,
+University of Nova Gorica,
+Vipavska cesta, 13, Nova Gorica, Slovenia, SI-5000,
+kryzhevicz@gmail.com.
+Abstract. We take a space X of dynamical systems that could be: homeomorphisms or continuous
+maps of a compact metric spaceK or diffeomorphisms of a smooth manifold or actions of an amenable
+group. We demonstrate that a typical dynamical system of X is a continuity point for the set of
+probability invariant measures considered as a function of a map, letY be the set of all such continuity
+points. As a corollary we prove that for dynamical systems of the residual set Y average values of
+continuous functions calculated along trajectories do not drastically change if the system is perturbed.
+Keywords: topological dynamics, invariant measures, ergodic theory, stability, shadowing, tolerance
+stability.
+MSC 2010: Primary: 37B05, Secondary: 37B20, 37A05.
+1 Introduction.
+We consider the problem of structural stability of general dynamical systems
+that can be continuous maps/homeomorphisms of a metric compact space, dif-
+feomorphisms of a smooth manifold or actions of a  nitely generated group.Differential Equations and Control Processes, N 3, 2017
+We are interested in questions related to structural stability of such systems.
+For example, could we say that a generic dynamical system is structurally sta-
+ble in a sense? If structural stability means topological conjugacy with close
+maps, then for C
+1
+diffeomorphisms of a smooth manifold, the answer is "no"
+[1]. However, individual stability of all periodic points is generic since Kupka {
+Smale diffeomorphisms are generic [2].
+An approach to study structural stability is given by the so-called Shadow-
+ing Theory [3] . Here both shadowing and inverse shadowing [4], [5] phenomena
+are important. Shadowing implies existence of exact trajectories in neighbour-
+hoods of approximate ones and the inverse shadowing implies existence of tra-
+jectories of a  xed method in neighbourhoods of solutions. Observe that shad-
+owing and inverse shadowing do not imply existence of a periodic solution in a
+neighbourhood of a periodic pseudotrajectory. However, sometimes, shadowing
+implies robustness of periodic solutions. Sakai [6] demonstrated that the C
+1
+-
+interior of the set of all diffeomorphisms with shadowing coincides with the set
+of all structurally stable diffeomorphisms. Osipov, Pilyugin and Tikhomirov
+[7] demonstrated that the so-called Lipschitz periodic shadowing property is
+equivalent to 
+ { stability, see also [8]. Moreover, the corresponding set of dy-
+namical systems coincides with the interior of the set of systems with periodic
+shadowing property and with the set of systems with orbital limit shadowing
+property. Pilyugin and Tikhomirov [9] demonstrated that Lipschitz shadowing
+is equivalent to structural stability. In all quoted cases periodic solutions are
+preserved. It was proved that shadowing is generic in the space of homeomor-
+phisms of compact manifolds [10]. However, it is not generic in the space ofC
+1
+- diffeomorphisms [11] see also [12] for C
+r
+- case.
+F. Takens (see [13], [14], [15] and references therein) offered another ap-
+proach, called tolerance stability. He proved that for a generic homeomorphism
+(or diffeomorphism) any trajectory of a perturbed map belongs to a neighbour-
+hood of a trajectory of the non-perturbed one. We give precise formulation of
+corresponding theorems in Section 4.
+The aim of this paper is the following. It is proved that for a generic
+dynamical system all points are orbit-wise weakly structurally stable. This
+means that for any trajectory of the initial system there is a trajectory of
+the perturbed system that lies in a neighbourhood of the initial trajectory.
+Moreover, for an a priori selected observable, we can say that its average value
+along the given trajectory does not drastically change if the system is slightly
+perturbed. In a sense, the weak shadowing, we obtain, is close to statistical
+Electronic Journal. http://www.math.spbu.ru/diffjournal 134Differential Equations and Control Processes, N 3, 2017
+shadowing, introduced by M. Blank [16], see also [17].
+To prove this result methods of Ergodic Theory are applied. Also, the
+approach developed by author in [18] is used. First of all, we consider sets of
+Borel probability invariant measures and prove that a generic dynamical system
+is a "point of continuity" for such sets.
+Since this is true for measures, associated with trajectories, there must be a
+solution that engenders an invariant measure, close to initial one. This implies
+that there is a point such that its perturbed trajectory is close to the non-
+perturbed one "in average". This approach is very close to the Takens' theory.
+We discuss and compare results in Section 4.
+2 Stability of the set of invariant measures
+Let (K; ) be a compact metric set, consider the space of all continuous maps
+X := C
+0
+(K ! K). Let dist
+X
+be the standard metrics in X. LetM(K)
+be the set of all Borel probability measures on K endowed with the topology
+of  { weak convergence. This topology can be engendered by the so called
+Kantorovich - Rubinstein distance. Let us recall one of equivalent de nitions
+of this metrics
+W
+1
+( ; ) = sup
+ Z
+K
+fd  
+Z
+K
+fd 
+ 
+;
+where the supremum is taken over the all 1 - Lipschitz continuous functions
+f : K! R. Observe that the setM(K) becomes compact in that metrics.
+Later on, we use the same notionW
+1
+( ; ) for distance between a compact subset
+P M(K) and a point q2M(K). This distance turns to zero if and only if
+q2P .
+Recall the notion of Hausdorff metrics. Let given the space K consider
+compact subsets P;Q M(K;T ). Then we can de ne
+d
+H
+(P;Q) = max
+p2P
+W
+1
+(p;Q) + max
+q2Q
+W
+1
+(q;P):
+This distance turns to zero if and only if sets P and Q coincide.
+For all metric spaces we deal with in this paper, we introduce following
+notions: B
+"
+(x) stands for the " - ball centered at x and U
+"
+(A) stands for " -
+neighbourhood of a compact subset A.
+Given a map T 2 X introduce the setM(K;T ) of all Borel probability
+measures, invariant with respect to T . This set is also compact in the metrics
+Electronic Journal. http://www.math.spbu.ru/diffjournal 135Differential Equations and Control Processes, N 3, 2017
+W
+1
+and non-empty by Krylov { Bogolyubov Theorem.
+Consider the mapM : T!M(K;T ) that is a map from X to the set Z
+of all compact subsets ofM(K) endowed with the Hausdorff metrics d
+H
+.
+De nition 2.1. We say that the mapM is upper semicontinuous at the point
+T
+0
+if for any " > 0 there exists a   > 0 such that dist
+X
+(T
+0
+;T
+1
+) <   implies
+M(K;T
+1
+) U
+"
+(M(K;T
+0
+)).
+Here we order subsets of K by inclusion. As usually, "upper semicontinu-
+ity" means that that the value of the function cannot drastically increase in a
+neighbourhood of the point.
+Recall that a setY X is called residual if it is a countable intersection of
+open dense subsets of X.
+The main objective of this section is the following statement.
+Theorem 2.2. For any compact metric space K there exists a residual subset
+Y X such that any T2Y is a continuity point for the map M.
+We start with the following statement that is almost evident.
+Lemma 2.3. The mapM is upper semicontinuous.
+Proof. Fix a map T 2 X. Consider a sequence of maps T
+k
+: X ! X,
+converging toT . Let 
+k
+be the sequence of Borel probability measures, invariant
+with respect to T
+k
+. Suppose that the sequence  
+k
+  { wealky converges to  .
+Check that   is invariant with respect to T that is
+Z
+K
+'d  =
+Z
+K
+' Td ; 8'2C
+0
+(K!R): (1)
+Fix a test function '2C
+0
+(K!R):
+Z
+K
+'d  = lim
+k!1
+Z
+K
+'d 
+k
+= lim
+k!1
+Z
+K
+' T
+k
+d 
+k
+=
+lim
+k!1
+Z
+K
+' Td 
+k
++ lim
+k!1
+Z
+K
+(' T
+k
+ ' T )d 
+k
+(2)
+SinceT
+k
+converges toT uniformly, the second term in the right hand side of (2)
+tends to zero. Since the sequence  
+k
+converges  { weakly to  , the  rst term
+in that right-hand side converges to
+R
+K
+' Td . This proves equality (1).  
+To  nish the proof of Theorem 2.2 it su ces to apply the following result
+ rst given in [13], see also [19, Corollary 11.1]. We provide this statement here
+reformulating it in our terms.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 136Differential Equations and Control Processes, N 3, 2017
+Lemma 2.4 (Takens). Let X be a metric space,M : X! Z be an upper
+semicontinuous (or lower semicontinuous) map of X to Z that is a set of all
+closed subset of a compact metric space. Then there is a residual set Y   X
+such that any point of Y is a point of continuity for the mapM.
+Together with Lemma 2.3, the last statement  nishes the proof of Theorem
+2.2.
+Remark 2.5. Instead of C
+0
+(K ! K) we may consider any subspace X of
+that space with a topology that is not coarser than the topology induced by the
+metric of C
+0
+(this means that convergence in the topology considered implies
+convergence in the standard topology ofC
+0
+(K)). For instance, we may consider
+the space of homeomorphisms of a compact metric space K. Or, we can take a
+C
+r
+smooth manifoldK (r  1) and consider a set ofC
+r
+smooth diffeomorphisms
+of K (later on, whenever speaking of smooth maps with r> 0, we assume that
+K is a compact manifold). A statement, similar to Theorem 2.2, is still valid
+in the considered case.
+We can also expand the obtained result to actions of  nitely generated
+groups. For any group G, we consider C
+r
+actions (r  0) of that group that is
+the set of all homomorphisms h : G! Diff
+r
+(K) of G to the set of C
+r
+smooth
+diffeomorphisms of K. If the group G is amenable, the Krylov-Bogolyubov
+theorem is still applicable [20] and the set of Borel invariant measures is non-
+empty.
+Fixing  =fg
+1
+;:::g
+n
+g that is the generating set of the group G, we intro-
+duce the distance d
+G
+between actions h
+1
+and h
+2
+by the formula
+d
+
+(h
+1
+;h
+2
+) =
+n
+X
+j=1
+(d
+r
+(h
+1
+(e
+j
+);h
+2
+(e
+j
+)) +d
+r
+(h
+1
+(e
+ 1
+j
+);h
+2
+(e
+ 1
+j
+))) (3)
+where d
+r
+in the right hand side of Eq. (3) stands for C
+r
+{ distance between
+maps.
+Corollary 2.6. Let r2 N
+S
+f0g. Take a compact metric space K that is a
+C
+r
+{ smooth Riemannian manifold if r > 0. Let G be an amenable  nitely
+generated group and X be the set of all C
+r
+actions of G with the metrics d
+G
+given by Eq. (3). Consider the set Z of all compact subsets in the set of
+all Borel probability measures on K with the Hausdorff metrics engendered by
+Kantorovich - Rubinstein distance between measures. Given an action h2 X,
+considerM(h) that is the set of all Borel probability h { invariant measures.
+Then there exists a residual subset Y X such that any h2Y is a continuity
+point for the map M.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 137Differential Equations and Control Processes, N 3, 2017
+One can get a result similar to Corollary 2.5, for actions of a  nitely gen-
+erated non-amenable groups (for instance, free groups). Then, we have to take
+the spaceX of all actions that have a Borel probability invariant measure (e.g.
+actions of free groups that have a  nite orbit).
+3 Cesaro structural stability.
+Let r2N
+S
+f0g. Consider a compact set K that is a C
+r
+{ smooth manifold if
+r> 0. Let X be the set of all C
+r
+{ diffeomorphisms of K (homeomorphisms if
+r = 0). Fix the set Y that exists by Theorem 2.2 or by Corollary 2.5. Given
+a point p2K and a map T2C
+0
+(K!K), we introduce a positive semiorbit
+O
++
+T
+(p) :=fT
+k
+(p) : k  0g. If T is homeomorphism, we also consider the orbit
+of p: O
+T
+(p) :=fT
+k
+(p) :k2Zg.
+Next statement gives a "statistical" version of the so-called Zeeman's toler-
+ance stability conjecture, see [13].
+Given a function '2C
+0
+(K!R) and a point p we consider two values:
+'
+ 
+p
+= lim inf
+n!1
+1
+2n + 1
+n
+X
+k= n
+'(T
+k
+(p)) and '
++
+p
+= lim sup
+n!1
+1
+2n + 1
+n
+X
+k= n
+'(T
+k
+(p)):
+(4)
+Lemma 3.1. LetT2X be a continuity point of the mapM,'2C
+0
+(K!R).
+For any"; > 0 there exists > 0 such that the following statement is satis ed.
+For any p2K, and any S2X such that
+d
+C
+0(S;T )< ; d
+C
+0(S
+ 1
+;T
+ 1
+)<  (5)
+there exists points q
+ 
+such that
+lim inf
+n!1
+#fk = n;:::;n :S
+k
+(q
+ 
+)2U
+ 
+(O
+T
+(p))g
+2n + 1
+  1 "; (6)
+and there exists limit
+lim
+n!1
+1
+2n + 1
+n
+X
+k= n
+'(S
+k
+(q
+ 
+)) '
+ 
+p
+ "; lim
+n!1
+1
+2n + 1
+n
+X
+k= n
+'(S
+k
+(q
++
+)) '
++
+p
++":
+(7)
+Proof. Step 1. Fix a map T , positive values "< 1 and   and the function '.
+Without loss of generality, we may assume that sup
+K
+j'(x)j  1.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 138Differential Equations and Control Processes, N 3, 2017
+Fix a value ff2 (0; 1=2), now this value is not important, we need it later.
+Fix a C
+1
+smooth function   :R!R such that
+ (t) = 1 for all t  1 ff;
+ (t) = 0 for all t  1;
+ 
+0
+(t)2 ( 2=ff; 0) for all t2 (1 ff; 1):
+Consider a function (x) =  ( (x;O
+T
+(p))= ). Observe that this function is
+Lipschitz continuous with the constant L
+0
+:= 2=(ff ).
+There exists an increasing sequencefn
+m
+2 Ng and a Borel T { invariant
+Borel probability measure 
+T
+such that for any continuous functionf :K!R
+we have
+lim
+n!1
+1
+n
+m
+n
+m
+ 1
+X
+k=0
+f(T
+k
+(p)) =
+Z
+K
+fd 
+T
+(8)
+(see [21, Theorem 4.4.1]). Evidently, 0  (x)  1 for all x and
+Z
+K
+ d 
+T
+= 1:
+Take   > 0 so small that for any S, satisfying Eq. (5), there is an S {
+invariant measure  
+S
+such that
+Z
+K
+ d 
+S
+  1 
+"
+2
+8
+: (9)
+This can be done by Corollary 2.5.
+By two-side Birkhoff Ergodic Theorem [21, Theorem 4.1.3] there exists a
+function
+^
+ 2L
+1
+( 
+S
+) that equals to
+lim
+n!1
+1
+2n + 1
+n
+X
+k= n
+  S
+k
+ 
+S
+almost everywhere. Observe that
+Z
+K
+ d 
+S
+=
+Z
+K
+^
+ d 
+S
+:
+Proposition 3.2. For any measurable setA such that 
+S
+(A) "=4 there exists
+a point q2A such that
+^
+ (q)> 1 ".
+Electronic Journal. http://www.math.spbu.ru/diffjournal 139Differential Equations and Control Processes, N 3, 2017
+Proof. Recall that   1 almost everywhere w.r.t.  
+S
+. If the statement of the
+lemma is wrong, we have
+Z
+K
+^
+ d 
+S
+=
+Z
+A
+^
+ d  +
+Z
+KnA
+^
+ d   (1 ") "=4 + 1  (1 "=4) = 1 "
+2
+=4
+that contradicts to Eq. (9).  
+Observe that the function vanishes out of the setU
+ 
+(O
+T
+(p)) which demon-
+strates that any set A:  
+S
+(A)  " contains a point q such that the formula
+similar to (6) is satis ed.
+Step 2. Suppose that   is so small that if Eq. (5) is satis ed then  
+S
+,
+satisfying requirements of Step 1, could be taken so that
+ 
+ 
+ 
+ 
+Z
+K
+'d 
+S
+ 
+Z
+K
+'d 
+T
+ 
+ 
+ 
+ 
+ "=4: (10)
+Now let us prove existence of the point q
++
+satisfying conditions of the the-
+orem. Existence of the point q
+ 
+can be proved similarly. Apply the two-side
+Birkhoff Ergodic Theorem to the function'. There exists a function ^ '2L
+1
+( 
+S
+)
+that equals
+lim
+n!1
+1
+2n + 1
+n
+X
+k= n
+' S
+k
+almost everywhere. Also we have
+Z
+K
+^ 'd 
+S
+=
+Z
+K
+'d 
+S
+andj ^ '(x)j  1 almost everywhere. It follows from equations (4), (8) and (10)
+that Z
+K
+^ 'd 
+S
+ '
+ 
+p
+ "=4:
+Let A =fx2K : ^ '(x) '
+ 
+p
+ "g. Then  
+S
+(A) "=4. Otherwise, since ^ '  1
+a.e., '
+ 
+p
+  1 and "< 1 we have
+Z
+K
+^ 'd 
+S
+=
+Z
+A
+^ 'd  +
+Z
+KnA
+^ 'd  
+"
+4
++
+ 
+1 
+"
+4
+ 
+ 
+'
+ 
+p
+ "
+ 
+<'
+ 
+p
+ 
+"
+4
+that gives a contradiction. Hence, by Lemma 3.2 there exists a point q
++
+that
+satis es requirements of the theorem.  
+Let us list some versions of Theorem 3.1. The next one concerns actions
+of non-invertible continuous maps, so this is a one-side version of Theorem 3.1.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 140Differential Equations and Control Processes, N 3, 2017
+We formulate it for C
+0
+{ maps of a compact set to itself but it can also be
+formulated for C
+r
+{ maps.
+Theorem 3.3. Let X =C
+0
+(K!K), Y be the set of continuity points of the
+mapM (that is residual by Theorem 2.2). Take T2Y , '2C
+0
+(K!R). For
+any ";  > 0 there exists   > 0 such that the following statement is satis ed.
+For any p2 K, and any S2 X satisfying Eq. (5) there exist two points q
+ 
+and q
++
+such that
+lim inf
+n!1
+#fk = 0:::;n  1 :S
+k
+(q
+ 
+)2U
+ 
+(O
+T
+(p))g
+n
+  1 ";
+and there exist limits
+lim
+n!1
+1
+n
+n 1
+X
+k=0
+'(S
+k
+(q
++
+)) '
+ 
+p
+ "; lim
+n!1
+1
+n
+n 1
+X
+k=0
+'(S
+k
+(q
+ 
+)) '
++
+p
++":
+The proof is similar to proof of Theorem 3.1 with the only difference: we
+use one-side Birkhof Ergodic Theorem [21, Theorem 4.1.2].
+Basing on Corollary 2.6, we could prove a similar result for actions of  nitely
+generated amenable groups. Such actions could be treated as actions of  nitely
+generated free groups where the existence of Borel probability invariant mea-
+sures is guaranteed. The Birkhoff's theorem for actions of free groups was
+provided by Stein and Nevo [22].
+In the rest of this section we always deal with homeomorphisms of compact
+metric spaces having in mind all possible generalisations.
+For Lipschitz continuous functions ', we have the following "uniform" ver-
+sion of Theorem 3.1:
+Theorem 3.4. For all T2 Y and all "; ;L > 0 there exists   > 0 such that
+the following statement is satis ed. For any L { Lipschitz continuous function
+' : K! R, any point p2 K, and any S2 X satisfying Eq. (5) there exist
+two points q
+ 
+'
+and q
++
+'
+such that
+lim inf
+n!1
+#fk = n;:::;n :S
+k
+(q
+ 
+'
+)2U
+ 
+(O
+T
+(p))g
+2n + 1
+  1 ";
+and there exist limits
+lim
+n!1
+1
+2n + 1
+n
+X
+k= n
+'(S
+k
+(q
++
+'
+)) '
+ 
+p
+ "; lim
+n!1
+1
+2n + 1
+n
+X
+k= n
+'(S
+k
+(q
+ 
+'
+)) '
++
+p
++":
+Electronic Journal. http://www.math.spbu.ru/diffjournal 141Differential Equations and Control Processes, N 3, 2017
+We proof repeats one of Theorem 3.1 due to de nition of Kantorovich metric
+W
+1
+.
+Finally, we give a result on visiting a domain by iterations of a trajectory.
+Let V (K be an open nonempty set, @V be the boundary of V .
+Given   > 0, we de ne two open sets:
+V
+ 
++
+=U
+ 
+(V ); V
+ 
+ 
+=VnU
+ 
+(KnV ):
+Introduce two Lipschitz continuous functions  
+ 
++
+and  
+ 
+ 
+such that
+ 
+ 
++
+j
+V
+= 1;  
+ 
+ 
+j
+V
+ 
+ 
+= 1;
+ 
+ 
++
+j
+KnV
+ 
++
+= 0;  
+ff
+ 
+j
+KnV
+= 0;
+ 
+ 
++
+(x) = 
+ 
+ (x;@V )
+ff
+ 
+; for all x2V
+ 
++
+nV ;
+ 
+ 
+ 
+(x) = 
+ 
+ (x;@V )
+ff
+ 
+; for all x2VnV
+ 
+ 
+;
+where   is the function de ned in the proof of Theorem 3.1. Finally, we intro-
+duce the function (x) that is the characteristic function of the setV . Evidently,
+for any   > 0 we have
+ 
+ 
++
+    
+ 
+ 
+everywhere in K.
+Given a point p2 K and an open set V   K, similarly to Eq. (4) we
+introduce values
+ 
+ 
+p
+= lim inf
+n!1
+1
+2n + 1
+n
+X
+k= n
+ (T
+k
+(p)) and  
++
+p
+= lim sup
+n!1
+1
+2n + 1
+n
+X
+k= n
+ (T
+k
+(p)):
+Applying Theorem 3.1 to functions 
+ 
++
+and 
+ 
+ 
+, we get the following statement.
+Theorem 3.5. For all T2 Y , any open set V and all "; ;  > 0 there exists
+  > 0 such that the following statement is satis ed. For any point p2K, and
+any S2X satisfying Eq. (5) there exist two points q
+ 
+V
+and q
++
+V
+such that
+lim inf
+n!1
+#fk = n;:::;n :S
+k
+(q
+ 
+V
+)2U
+ 
+(O
+T
+(p))g
+2n + 1
+  1 ";
+and there exist limits
+lim
+n!1
+#fk = n;:::;n :S
+k
+(q
++
+V
+)2Vg
+2n + 1
+  
+ 
+p
+ ";
+Electronic Journal. http://www.math.spbu.ru/diffjournal 142Differential Equations and Control Processes, N 3, 2017
+lim
+n!1
+#fk = n;:::;n :S
+k
+(q
+ 
+V
+)2Vg
+2n + 1
+  
+ 
+p
++":
+4 Takens' theory.
+In this section we compare our results with closely related statements of Takens'
+Theory [13], [14], [15], [19] (see also references therein) and compare them with
+the result of our paper.
+De nition 4.1. Let (K; ) be a compact metric space, H(K) be the set of all
+homeomorphisms of K. Fix "> 0. We say that two homeomorphisms S and T
+are orbitally " { equivalent if the following conditions are satis ed:
+1. For any trajectoryO
+S
+(p) of the homeomorphismS there exists a trajectory
+O
+T
+(q) of the homeomorphism T such that
+1.1. O
+S
+(p) U
+"
+(O
+T
+(q)),
+1.2. O
+T
+(q) U
+"
+(O
+S
+(p));
+2. for any trajectory O
+T
+(q) of the homeomorphism T there exists a trajectory
+O
+S
+(p) of the homeomorphism S such that
+2.1. O
+T
+(q) U
+"
+(O
+S
+(p)),
+2.2. O
+S
+(p) U
+"
+(O
+T
+(q)).
+De nition 4.2. Let D  H(M) be a subset with the inherited topology. We
+say that a homeomorphism T2D is tolerance D { stable if for any "> 0 there
+exists a neighbourhood V of T in D such that any diffeomorphism S2V is " {
+equivalent to T .
+F. Takens [13] formulated the following conjecture.
+Conjecture 4.3. (Zeeman's tolerance stability conjecture). For any D  
+H(M) there exists a residual (in the topology of D) subset D
+0
+  D such that
+any homeomorphism T2D
+0
+is tolerance D { stable.
+In this form the statement is wrong, a counterexample was provided by W.
+White in [14] (see also [24]) proved that generally, speaking, tolerance stability
+conjecture is wrong. However, Takens proved a weaker version of the conjecture.
+He considered two weakened variants of the property of tolerance D-
+stability. As above,  x " > 0. We say that two homeomorphisms f and g
+Electronic Journal. http://www.math.spbu.ru/diffjournal 143Differential Equations and Control Processes, N 3, 2017
+are minimally " { equivalent (maximally " { equivalent) if conditions 1.1 and
+2.1 of De nition 4.1 (respectively, conditions 1.2 and 2.2) are omitted in the
+above de nition of orbital " { equivalence.
+Denote by D
+max
+the subset of D which consists of homeomorphisms T
+having the following property: For any " > 0 there exists a neighbourhood V
+ofT inD such that any homeomorphismS2V is maximally" { equivalent to
+f (recall that we consider the set D with a topology that is not coarser than
+the standard C
+0
+topology).
+Similarly, we denote by D
+min
+the subset of D which consists of homeomor-
+phisms f having the following property: For any " > 0 there exists a neigh-
+bourhood V of T in D such that any homeomorphism S2W is minimally " -
+equivalent to T . Takens proved the following statement.
+Theorem 4.4 (Takens) Any of the sets D
+max
+and D
+min
+is residual in D.
+A. Mazur [15] demonstrated that for the complete space of homeomorphisms
+of a compact manifold Conjecture 4.3 is valid in a stronger form. Before for-
+mulating the statement we give one more de nition.
+De nition 4.5. A homeomorphism T2 H(M) is strongly tolerance stable if
+for every "> 0 there exists  > 0 such that for every S2B
+ 
+(T ) eachS { orbit
+is " { traced (see De nition 3.6) by some T { orbit and each S {orbit is " {
+traced by some T { orbit.
+Theorem 4.6 (Mazur). LetK be a compact smooth manifold with the metric
+d induced by the Riemanian structure. A generic f 2 H(K) has the strong
+tolerance stability property.
+For periodic points we can say a bit more.
+De nition 4.7. Let " > 0, S be a homeomorphism of a metric compact set
+(K; ). We say that a sequencefx
+i
+:i2Ng is " { traced by a trajectory O
+S
+(p)
+if for any i we have  (x
+i
+;S
+i
+(p))<".
+Theorem 4.8. Let X be a subset of H(K) { the space of all homeomorphisms
+of K with the topology not coarser than one, inherited from H(K). Suppose
+that any homeomorphismT X has a  xed point (or a point with a period less
+or equal than a given number n
+0
+). Then there exists a residual set Y such that
+for anyT2Y , any"> 0 and anyn2N (n n
+0
+) there exists a neighbourhood
+V
+n
+of T in X such that for any S2 V
+n
+and any m
+p
+{ periodic point p of T
+(m  n) there is a periodic point q2 K with a period m
+q
+  n such that the
+orbit O
+T
+(p) is " { traced by O
+S
+(q).
+To prove this statement, it su ces to consider a map of the set X to the
+Electronic Journal. http://www.math.spbu.ru/diffjournal 144Differential Equations and Control Processes, N 3, 2017
+set of all point with period n. This map is upper semicontinuous so we could
+apply Takens' result (Lemma 2.4) similarly to the proof of Theorem 2.2.
+Observe that, for instance typical diffeomorphism of a smooth manifold has
+periodic points, as it was proved by Bonatti and Crovisier [23]. Moreover, they
+demonstrated that for a typical diffeomorphism the set of periodic points is
+dense in the set of all chain recurrent points.
+Let us compare results of Theorems 4.4 and 4.6 with Theorems 3.1 { 3.5.
+Theorem 4.4 works for a very wide class of dynamical systems and, unlike our
+formula (6), it claims that the whole set of one trajectory (not the majority of
+points) belongs to a neighbourhood of another one. However, only closeness of
+sets is provided and no "statistical" or "Cesaro average" properties like (7) can
+be provided or derived strictly from the statement of Takens' theorem.
+For homeomorphisms of manifolds, Mazur's statement (one of Theorem 4.6)
+is much stronger than ones of our results. Pointwise " { tracing is much more
+than all statistical properties, we are studying. However, the proof, provided
+in [15] and, more generally, ideas of the paper [10], crucially depend on the
+manifold structure of the considered set. Moreover, the proof uses the fact that
+the complete set of homeomorphisms is considered, not a subset. For instance,
+it cannot be easily transformed to a statement onC
+r
+{ diffeomorphisms (r  1).
+We believe that our result stands in the middle between Takens' and Mazur's
+ones and thus completes the Takens' tolerance stability theory.
+Acknowledgements. This work was supported by Russian Foundation for Ba-
+sic Researches, grant 15-01-03797-a. Author is grateful to Prof. Sergei Pilyugin
+for attracting attention to tolerance stability approach.
+References
+[1] S. Smale, Structurally stable systems are not dense. Amer J Math, 1966,
+88, 491{496.
+[2] I. Kupka, Contribution   a la th  eorie des champs g  en  eriques, Contributions
+to differential equations, 2 (1963), 457 { 484. (French).
+[3] S. Yu. Pilyugin, Shadowing in Dynamical Systems, Lect. Notes Math., Vol.
+1706, Springer-Verlag, 1999.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 145Differential Equations and Control Processes, N 3, 2017
+[4] R. Corless, S. Yu. Plyugin, Approximate and Real Trajectories for Generic
+Dynamical Systems, Journal of Mathematical Analysis and Applications,
+Vol. 189, No. 2, 1995, pp. 409-423. doi:10.1006/jmaa.1995.1027
+[5] B. Honary, A. Bahabadi, Inverse Shadowing and Weak Inverse Shadow-
+ing Property, Applied Mathematics, Vol. 3, No. 5, 2012, pp. 478-483. doi:
+10.4236/am.2012.35072.
+[6] K. Sakai, Shadowing property and transversality condition, Dynamical Sys-
+tems and Chaos (World Sci., Singapore). 1995. - V. 1, P. 233{238.
+[7] A. V. Osipov, S. Yu. Pilyugin, S. B. Tikhomirov, Periodic shadowing and
+" - stability, Regular and Chaoitc Dynam. 15 (2010), 404{417.
+[8] K. J. Palmer, S. Yu. Pilyugin, S. B. Tikhomirov, Lipschitz shadowing and
+structural stability of ows, Journ. Differ. Equat., 252 (2012), 1723{1747.
+[9] S. Yu. Pilyugin, S. B. Tikhomirov, Lipschitz Shadowing implies structural
+stability, Nonlinearity 23 (2010) 2509{2515 = arXiv:1010.3688.
+[10] S. Yu. Pilyugin, O. B. Plamenevskaya, Shadowing is generic, Topol.
+Appl., 97:3, 253{266 (1999).
+[11] C. Bonatti, L. G. Diaz, G. Turcat, Pas de shadowing lemma pour des
+dynamiques partiellement hyperboliques, C. R. Acad. Sci. Paris S  er. I Math.
+330 (2000), no. 7, 587{592 (French).
+[12] C.-C. Yuan, J. A. Yorke, An open set of maps for which every point is
+absolutely nonshadowable, Proc. Amer. Math. Soc., 128 (2000), 909{918.
+[13] F. Takens, On Zeeman's tolerance stability conjecture. In: Manifolds {
+Amsterdam 1970. Lect. Notes Math, 197, Berlin, Heidelberg, New York,
+Springer-Verlag, 1971, 209 { 219.
+[14] W. White, On the tolerance stability conjecture. Salvador Symp. Dyn. Syst.
+1971, Univ of Bahia, 663{665.
+[15] M. Mazur, Tolerance stability conjecture revisited, Topology and its Appli-
+cations 131 (2003) 33{38.
+[16] M. L. Blank, Metric properties of " { trajectory of dynamical systems with
+stochastic behavior, Ergodic Theory and Dynamical Systems, 8, 1988, 365{
+378.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 146Differential Equations and Control Processes, N 3, 2017
+[17] P. Oprocha, X. Wu, On average tracing of periodic average pseudo orbits,
+Discrete Continuous Dyn. Sys., 37:9 (2017), 4943{4057.
+[18] S. G. Kryzhevich, Shadowing along subsequences for continuous mappings,
+Vestnik St. Petersburg University: Mathematics, 47:3 (2014), 102{104.
+[19] S. Yu. Pilyugin, Spaces of Dynamical Systems, De Gruyter, 2012, ISBN
+978-3-11-025595-9.
+[20] R. Grigorchuk, P. de la Harpe, Amenability and ergodic properties of topo-
+logical groups: from Bogolyubov onwards, arXiv:1404.7030.
+[21] A. Katok, B. Hasselblatt, Introduction to the Modern Theory of Dynamical
+Systems, Cambridge University Press, 1997.
+[22] A. Nevo, E. M. Stein, A generalization of Birkhoff's pointwise ergodic
+theorem, Acta Math. 1994. Vol. 173. P. 135{154.
+[23] C. Bonatti, S. Crovisier, R  ecurrence et g  en  ericit  e, Invent. Math. 158
+(2004), 33{104 (French).
+[24] S. Yu. Pilyugin, The space of dynamical systems with theC
+0
+topology, Lect
+Notes Math, 1571. Berlin, Heidelberg, New York, Springer-Verlag, 1994.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 147
