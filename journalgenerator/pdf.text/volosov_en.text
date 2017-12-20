@@ -1,0 +1,2929 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 4, 2017
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Nonlinear partial differential equations
+Integration of the Harry Dym and Korteweg{de Vries
+Equations in Parametric Form
+K. A. Volosov, N. K. Volosova, A. K. Volosova
+Moscow State University of Railway Transport
+Obraztsova 9, Moscow, 127994 Russia
+Abstract
+In the present work we for the  rst time apply a relatively new method
+of constructive un xed change of variables to the Harry Dym (HD) and the
+Korteweg{de Vries (KdV) equations. We construct two dynamical systems
+and formulate necessary conditions for the stability of phase trajectories. A
+system of functional algebraic equations is constructed and it is proved that
+two formal solvability conditions for a system of  rst order partial differential
+equations have one non{trivial common factor. An important feature of the
+HD and KdV equations was found: after an un xed constructive change of
+variables, a new "hidden" key equation for the function of the partial  rst
+derivative can be separated from the other equations. The exact solutions
+constructed with the help of a non-autonomous dynamical system coincide with
+global solutions. That is not the case for equations with dissipation. Two classes
+of exact solutions are found for the HD and for the KdV equation. A possibility
+arises to construct new asymptotic solutions.
+Keywords: the Harry Dym and Korteweg{de Vries equations, dynamical sys-
+tems, stability of phase trajectoriesDifferential Equations and Control Processes, N 4, 2017
+1. Introduction
+In the 80s of the XX century, in a cycle of works made under the guidance of
+the member of the USSR Academy of Sciences V.P. Maslov [1{7, 24{34], new
+original methods were proposed for the analysis of nonlinear partial differential
+equations (NLPDE's). These works dealt with semilinear parabolic equations,
+as well as with quasilinear parabolic equations with dissipation and with quadric
+and cubic nonlinearities. These equations could also contain a small parameter
+0<"< 1.
+The solutions studied belong not only to the type of deformed simple waves
+1
+, but also to those arising from their small disturbances. Some solutions to the
+equations connected with the liquid and gas dynamics, to the Burgers equation
+in particular, evolve to those close to shock waves. In the limit, as a small
+parameter tends to 0, they transform into shock waves [3, 6, 7].
+An analysis of such solutions for the Burgers equation is presented in detail
+in Appendix of [1]. Solutions of smoothed shock wave type for semilinear and
+quasilinear parabolic partial differential equations (PDE) are constructed, in
+particular, in Appendices of [10{16, 24, 25]. The solutions of the said type have
+the following interesting feature: they tend to 0 ast! 1 on any  nite interval
+of x{axis. According to a  gure of speech by V.P. Maslov,\solutions originate
+from nothing". Such \0 { initial conditions" were used in the inverse problem
+of scattering, in particular, for Korteweg { de Vries, Kadomtsev{Petviashvili,
+sine{Gordon NLPDE's [24{34]. In other situation, they were also considered,
+for example, in [4].
+The present study is based on a generalisation of a transformation proposed
+for the  rst time in [5]. Consider a quasilinear (actually strongly nonlinear)
+NLPDE
+Z
+0
+t
+  (K(Z)Z
+0
+x
+)
+0
+x
++F (Z) = 0
+and put
+K(Z) = ( )  
+k
+> 0; Z(x;t) = ( );
+  = x +bt: Thus we get a  rst ordinary differential equation (ODE
+1
+): b
+d 
+d 
+ 
+d
+d 
+ 
+ ( )
+d 
+k
+d 
+ 
+ F ( ( )) = 0, where  ( )> 0;  (0)> 0;  (1)> 0; k> 1.
+Consider a semilinear (actually also nonlinear) NLPDE
+u
+0
+t
+ u
+00
+xx
++R(u) = 0
+1
+It is known that equations invariant under the translation group have a solution, commonly called the simple
+wave, which is described by a function of the argument Z(x;t) =Z( )
+ 
+ 
+ 
+ =x+bt
+with the invariant  ; b = const.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 195Differential Equations and Control Processes, N 4, 2017
+and put
+u(x;t) =  ( );   =x +bt:
+Thus we get a second ordinary differential equation (ODE
+2
+): b
+d 
+d 
+ 
+d
+2
+ 
+d 
+2
+ R( ) =
+0, where
+dR
+d 
+( ) is the continuously differentiable function  2 [ 0; 1], with the
+conditions  
+ 
+ 
+ 
+ ! 1
+! 0;  
+ 
+ 
+ 
+ !1
+! 1: Then the transformation  ( )
+d 
+k
+d 
+=
+d 
+d 
+( ( )) relates ODE
+2
+with ODE
+1
+, where the functions of the source and of
+dissipation F ( );R( ) are related to each other in the following way: F ( ) =
+R( ) 
+1 k
+k ( )
+:
+This transformation was used in the cited works to study the reference
+equation with the scope to establish properties of asymptotic solutions [5{7,
+24, 25]. The idea of the method called by us \the method of un xed constructive
+change of variables" (the UCCV method) was for the  rst time proposed in
+[10]. In the cited above second order quasilinear parabolic partial differential
+equation QLPDE, the variables of the unknown function Z(x;t) and its  rst
+partial derivatives, as well as the independent variables x =x( ; ); t =t( ; )
+were changed by arbitrary twice continuously differentiable functions [10{16].
+At  rst, three relations were studied. Namely, two arbitrary functions were
+introduced to change the partial derivatives
+@Z(x;t)
+@t
+,
+@Z(x;t)
+@x
+in new independent
+variables. One more relation follows from the QLPDE. They generalize the de-
+scribed above transformation for the case of two independent variables. These
+relations were studied in [10, 7]. Later, these relations were completed by the
+fourth condition of the equality of mixed derivatives of the unknown function
+in both old and new variables for different QLPDE's for the case of two inde-
+pendent variables. These relations were studied in [11{16].
+Note that the addition of the fourth relation cardinally changes the situa-
+tion. In [11{16], it is proved that the four relations make a system of functional
+linear algebraic equations (SFLAE's) in new variables. The derivatives of the
+old variables x = x( ; ); t = t( ; ) with respect to the new ones,  ;  , are
+chosen as new variables.
+The work [15] also gives a solution of a model optimal control problem for
+the Hamilton{Jacobi{Bellman equation. The solution is constructed by the
+UCCV method for the case of three independent variables. In a simpli ed way,
+it is described in [22, 23].
+Problems connected with the KdV equation have long been subject of in-
+terest of the scienti c school by the academician V.P. Maslov. Asymptotic
+Electronic Journal. http://www.math.spbu.ru/diffjournal 196Differential Equations and Control Processes, N 4, 2017
+solutions were studied in [3, 32{34] and in a number of V.P.Maslov's works
+made together with his pupils [26{34]. For example, in [6, p. 180], [7, pp. 47{
+51], a rational soliton solution and a two-soliton solution of the KdV equation
+were found. The UCCV method was defended as a D.Sc. thesis [15]. Formulas
+for a nonlinear dynamical system (NLDS) and variants of SFLAE's for the KdV
+equation were for the  rst time obtained in [18{20]. In the cycle of works [8{9,
+17], other authors developed methods applicable to different NLPDE's, such as
+the HD, the KdV equations, and others.
+Our work is based on a new method (the UCCV method), which, when
+applied to the HD and KdV equations, permits us to reveal, separately for each
+of them, a \hidden" new key NLPDE that allows us to construct new solutions.
+The main results of this work were presented in [21].
+2. A system of functional linear algebraic equations for the KdV
+equation
+Consider together the whole set of the KdV equations:
+@Z(x;t)
+@t
++Z
+n
+@Z(x;t)
+@x
++ 
+@
+3
+Z
+@x
+3
+= 0: (1)
+Commonly, one distinguishes the case of n = 1 (weak dispersion) and that of
+(n = 2) corresponding to a modi ed KdV equation and to a strong dispersion.
+Let's assume that the all functions involved are smooth, namely, they are trice
+continuously differentiable in their arguments.
+It is well known [8{9] that the group of translation transformationsZ(x;t) =
+u( ) with the invariant   = x Vt allows one to reduce the KdV equation
+to a third order ODE. The  rst integral of this ODE describes a nonlinear
+anharmonic oscillator. Multiplying the second order ODE obtained by the  rst
+derivative u
+0
+( ) and integrating once more, we get
+(u
+0
+( ))
+2
+=E  2 (u( ))
+n+2
+=( (n + 1)(n + 2)) +V (u( ))
+2
+=  C
+1
+u( );
+ ; n6= 1; 2: The last equation means that an ODE for the function of the
+ rst derivative may be separated from the other equations. In the case of an
+ODE, this conclusion is trivial and well known. It is known that, at different
+values of the constants, the cited ODE has the C. Jacobi soliton solution or
+different solutions describing nonlinear oscillations.
+In the present work we found variables for the HD and KdV equations,
+in which an equation for the  rst derivative can be separated from the other
+equations. We call this NLPDE a \hidden" one. All other functions can be
+Electronic Journal. http://www.math.spbu.ru/diffjournal 197Differential Equations and Control Processes, N 4, 2017
+expressed in terms of the solution of this equation. This new property of the said
+equations is connected with integrability. Then the initial NLPDE is integrable
+in parametric form. It is important that these new in the theory of the HD
+and KdV equations nonlinear differential equations for the functions of the  rst
+derivative are partial differential equations. This permits us to construct exact
+and asymptotic formulas for the  rst derivative, the functionY ( ; ). All other
+functions (derivatives) can be expressed in Y ( ; ).
+Let's apply the UCCV method to equation (1). Let's make an un xed
+constructive change of variables for the solution of this equation Z(x;t) using
+a smooth unknown function of new variables U( ; ):
+Z(x;t)
+ 
+ 
+ 
+x=x ( ;  ); t=t ( ;  )
+=U( ; ): (2)
+Suppose that the Jacobian of the transformation detJ = x
+0
+ 
+t
+0
+ 
+ t
+0
+ 
+x
+0
+ 
+is
+neither zero nor in nity (otherwise this method is not applicable). Then there
+exists, at least locally, an inverse transformation   =  (x;t);  =  (x;t), and
+Z(x;t) =U( ; )
+ 
+ 
+ 
+ = (x;t);  = (x;t)
+:
+The Jacobian matrix of the inverse transformation has the form
+J
+ 1
+=
+ 
+ 
+0
+x
+(x;t)  
+0
+x
+(x;t)
+ 
+0
+t
+(x;t)  
+0
+t
+(x;t)
+!
+:
+The equality JJ
+ 1
+=E must be satis ed. The derivatives of old variables
+x;t with respect to new variables  ;  are connected by the relations
+@x
+@ 
+= detJ
+@ 
+@t
+;
+@t
+@ 
+= detJ
+@ 
+@x
+;
+@x
+@ 
+= detJ
+@ 
+@t
+;
+@t
+@ 
+= detJ
+@ 
+@x
+: (3)
+Analogously, we make three more changes of variables:
+@Z
+@t
+ 
+ 
+ 
+x=x( ;  ); t=t ( ;  )
+=T ( ; )
+@Z
+@x
+ 
+ 
+ 
+x=x( ;  ); t=t( ;  )
+=Y ( ; );
+@Y ( (x;t); (x;t))
+@x
+ 
+ 
+ 
+x=x( ;  ); t=t( ;  )
+=M( ; ): (4)
+Using (2) and (3),(4), we get the three equations
+ 
+@U
+@ 
+@x
+@ 
++
+@U
+@ 
+@x
+@ 
+=T ( ; ) (x
+0
+ 
+t
+0
+ 
+ t
+0
+ 
+x
+0
+ 
+); (5)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 198Differential Equations and Control Processes, N 4, 2017
+@U
+@ 
+@t
+@ 
+ 
+@U
+@ 
+@t
+@ 
+=Y ( ; ) (x
+0
+ 
+t
+0
+ 
+ t
+0
+ 
+x
+0
+ 
+); (6)
+@Y
+@ 
+@t
+@ 
+ 
+@Y
+@ 
+@t
+@ 
+=M( ; ) (x
+0
+ 
+t
+0
+ 
+ t
+0
+ 
+x
+0
+ 
+): (7)
+Equation (1) in new variables takes the form
+@M
+@ 
+@t
+@ 
+ 
+@M
+@ 
+@t
+@ 
+= T
+1
+( ; ) (x
+0
+ 
+t
+0
+ 
+ t
+0
+ 
+x
+0
+ 
+)= ;
+T
+1
+( ; ) =T ( ; ) +U( ; )
+n
+Y ( ; ); (8)
+Necessarily, for the function Z(x;t), the equality of mixed derivatives
+Z
+00
+tx
+=Z
+00
+xt
+(9)
+must hold in new variables  ;  .
+Using (2){(4), we get one more equation
+@x
+@ 
+@Y
+@ 
+ 
+@x
+@ 
+@Y
+@ 
++
+@t
+@ 
+@T
+@ 
+ 
+@t
+@ 
+@T
+@ 
+= 0: (10)
+The KdV equation is equivalent to the system of NLPDE's (5){(8), (10).
+We will analyse this system in two stages. At the  rst stage, we consider
+the system of NLPDE's (5),(6),(8),(10) as an algebraic system with respect to
+the derivatives
+x
+0
+ 
+; x
+0
+ 
+; t
+0
+ 
+; t
+0
+ 
+: (11)
+Theorem 1.
+Let the system of the four NLPDE's (5), (6), (8), (10) with respect to
+the variables (11) be given. Then it is a system of linear functional algebraic
+equations with respect to the variables (11) and it has a unique nontrivial
+solution
+@x
+@ 
+def
+= z
+1
+( ; ) = (  Y ( ; )
+ 
+T
+0
+ 
+( ; ) M
+0
+ 
+( ; ) T
+0
+ 
+( ; ) M
+0
+ 
+( ; )
+ 
+U
+0
+ 
+( ; ) +
++T
+1
+( ; )
+ 
+T
+0
+ 
+( ; ) U
+0
+ 
+( ; ) T
+0
+ 
+( ; ) U
+0
+ 
+( ; )
+ 
+U
+0
+ 
+( ; ) +
++  T ( ; )
+ 
+M
+0
+ 
+( ; ) U
+0
+ 
+( ; ) M
+0
+ 
+( ; ) U
+0
+ 
+( ; )
+ 
+Y
+0
+ 
+( ; ))=	; (12)
+@x
+@ 
+def
+= z
+2
+( ; ) = (  Y ( ; )
+ 
+T
+0
+ 
+( ; ) M
+0
+ 
+( ; ) T
+0
+ 
+( ; ) M
+0
+ 
+( ; )
+ 
+U
+0
+ 
+( ; ) +
++T
+1
+( ; )
+ 
+T
+0
+ 
+( ; ) U
+0
+ 
+( ; ) T
+0
+ 
+( ; ) U
+0
+ 
+( ; )
+ 
+U
+0
+ 
+( ; ) +
++  T ( ; )
+ 
+M
+0
+ 
+( ; ) U
+0
+ 
+( ; ) M
+0
+ 
+( ; ) U
+0
+ 
+( ; )
+ 
+Y
+0
+ 
+( ; ))=	; (13)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 199Differential Equations and Control Processes, N 4, 2017
+@t
+@ 
+def
+= z
+3
+( ; ) =
+ 
+  Y ( ; ) M
+0
+ 
+( ; ) +T
+1
+( ; ) U
+0
+ 
+( ; )
+ 
+ 
+ 
+ 
+Y
+0
+ 
+( ; ) U
+0
+ 
+( ; ) Y
+0
+ 
+( ; ) U
+0
+ 
+( ; )
+ 
+=	; (14)
+@t
+@ 
+def
+= z
+4
+( ; ) = (  Y ( ; ) M
+0
+ 
+( ; ) +T
+1
+( ; ) U
+0
+ 
+( ; )) 
+ 
+ 
+Y
+0
+ 
+( ; ) U
+0
+ 
+( ; ) Y
+0
+ 
+( ; ) U
+0
+ 
+( ; )
+ 
+=	;
+	 =  Y
+2
+ 
+T
+0
+ 
+( ; ) M
+0
+ 
+( ; ) T
+0
+ 
+( ; ) M
+0
+ 
+( ; )
+ 
++
++T T
+1
+ 
+Y
+0
+ 
+( ; ) U
+0
+ 
+( ; ) Y
+0
+ 
+( ; ) U
+0
+ 
+( ; )
+ 
++
++Y (T
+1
+ 
+U
+0
+ 
+( ; ) T
+0
+ 
+( ; ) U
+0
+ 
+( ; ) T
+0
+ 
+( ; )
+ 
++
++  T
+ 
+Y
+0
+ 
+( ; ) M
+0
+ 
+( ; ) Y
+0
+ 
+( ; ) M
+0
+ 
+( ; )
+ 
+): (15)
+The Jacobian has the form
+detJ = ( 
+ 
+M
+0
+ 
+( ; ) U
+0
+ 
+( ; ) M
+0
+ 
+( ; ) U
+0
+ 
+( ; )
+ 
+ 
+ 
+ 
+U
+0
+ 
+( ; ) Y
+0
+ 
+( ; ) U
+0
+ 
+( ; ) Y
+0
+ 
+( ; )
+ 
+)=	: (16)
+The function T ( ; ) is found from (7) and has the form
+T ( ; ) = (  M( ; )
+ 
+M
+0
+ 
+( ; ) U
+0
+ 
+( ; )   M
+0
+ 
+( ; ) U
+0
+ 
+( ; )
+ 
++
++Y ( ; ) ( Y
+0
+ 
+( ; )
+ 
+U
+0
+ 
+( ; ) U
+n
++  M
+0
+ 
+( ; )
+ 
++
++Y
+0
+ 
+( ; ) ( U
+0
+ 
+( ; ) U
+n
++  M
+0
+ 
+( ; ))))=	
+0
+;
+	
+0
+=Y
+0
+ 
+( ; ) U
+0
+ 
+( ; ) Y
+0
+ 
+( ; ) U
+0
+ 
+( ; ): (17)
+Proof. At  rst, using elementary transformations, as in the Gaussian
+method for solving systems of linear algebraic equations, we eliminate the Ja-
+cobian from equations (5), (6), (8) and get two linear equations. Equation (10)
+is linear. Using (11), we express any three derivatives of old variables with
+respect to new ones and substitute them into the remaining fourth equation.
+After the reduction of similar terms, the resulting equation turns out to be lin-
+ear. Then we get (12){(15). Afterwards, we calculate (16), (17). Substituting
+the function of the Jacobian into the right sides of equations (5){(8), we get a
+classical form of the SFLAE.
+Theorem 1 is proved.
+3. The possibilities to study the stability of solutions
+Let the system of equations (12){(15) be given. One can construct the
+ rst nonlinear dynamical system (NLDS) (12), (14), and the second NLDS
+Electronic Journal. http://www.math.spbu.ru/diffjournal 200Differential Equations and Control Processes, N 4, 2017
+(13), (15). Actually, new variables   and   may be interpreted as a new time
+along trajectories.
+a. The system (12), (14) may be considered as a NLDS. It has a  xed point
+(14), in which there is no degeneration (16): detJ6= 0.
+M
+0
+ 
+( ; ) = U
+0
+ 
+( ; ) T
+1
+=(  Y ): (18)
+Thus t
+0
+ 
+( ; ) = 0. Then t( ; ) =  ( ). From (6) we obtain x
+0
+ 
+( ; ) =
+U
+0
+ 
+( ; )=Y ( ; ) and from (7) it follows that
+M( ; ) =Y
+0
+ 
+Y ( ; )=U
+0
+ 
+( ; ): (19)
+Equating (18) to the partial derivative of (19) with respect to the variable
+ , we get
+T ( ; ) = U
+n
+Y   Y
+ 
+@
+@  
+ 
+Y Y
+0
+ 
+=U
+0
+ 
+ 
+ 
+=U
+0
+ 
+: (20)
+Then we can calculate the elements of a new Jacobian matrix J
+1
+for the
+system (12), (14), its eigenvalues and trace, a new Jacobian, as well as the
+information on the phase ow and other characteristics.
+b. The system (13), (15) may be also considered to be a NLDS. It also has
+a  xed point (15), in which there is no degeneration: detJ6= 0.
+Analogously to case (a) we have
+M
+0
+ 
+( ; ) = U
+0
+ 
+( ; ) T
+1
+=(  Y ): (21)
+Then t
+0
+ 
+( ; ) = 0. Let t( ; ) =   . From (6) we obtain x
+0
+ 
+( ; ) =
+U
+0
+ 
+( ; )=Y ( ; ); and from (7) it follows that
+M( ; ) =Y
+0
+ 
+Y ( ; )=U
+0
+ 
+( ; ): (22)
+Equating (21) to the partial derivative of (22) with respect to  , we get
+T ( ; ) = U
+n
+Y   Y
+ 
+@
+@ 
+(Y Y
+0
+ 
+=U
+0
+ 
+)
+ 
+=U
+0
+ 
+: (23)
+Taking into consideration the equality t
+0
+ 
+= 1, we can write equation (14)
+in the form
+@
+@ 
+( T ( ; )=Y ( ; )) +
+ 
+Y
+0
+ 
+U
+0
+ 
+ Y
+0
+ 
+U
+0
+ 
+ 
+=Y
+2
+= 0: (24)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 201Differential Equations and Control Processes, N 4, 2017
+Then one can calculate the elements of a new Jacobian matrix J
+2
+for the
+system (13), (15), etc. Note a symmetry in (18){(20) and (21){(23) under the
+change of   by  . The study of the stability of solutions to the KdV equation
+is out of the scope of the present work.
+4. The property of solvability conditions for the system (12){(15)
+At the second stage, we consider a system of  rst order NLPDE's with
+respect to the functions x = x( ; ), t = t( ; ). It is well known that the
+solvability condition of such type of system is the equality of mixed second
+partial derivatives of the functions x = x( ; ) and t = t( ; ) with respect to
+the arguments   and  . Equations (12){(15) are a basis to calculate these
+derivatives. We have then
+@
+2
+x( ; )
+@  @ 
+=
+@
+2
+x( ; )
+@  @ 
+;
+@
+2
+t( ; )
+@  @ 
+=
+@
+2
+t( ; )
+@  @ 
+: (25)
+The following theorem is one of the central results of the UCCV method.
+Theorem 2. Let the system of equations (12){(15) be given. Then
+a. we have two solvability conditions
+@z
+1
+( ; )
+@ 
+ 
+@z
+2
+( ; )
+@ 
+=TQ = 0;
+@z
+3
+( ; )
+@ 
+ 
+@z
+4
+( ; )
+@ 
+=Y 	
+0
+2
+Q = 0; (26)
+for which there exists a nontrivial common multiplyer Q( ; ) for any smooth
+function M( ; ).
+b. the two solvability conditions (12){(15) reduce to an equality to zero of
+the common multiplier
+Q( ; ) = 0 (27)
+for any smooth functions U( ; ); Y ( ; ); T ( ; ); M( ; ).
+Proof. This feature of NLPDE's was not known before. It was published for
+the  rst time in [11] for the NLPDE cited in the Introduction. A new NLPDE
+Q = 0 depends on the unknown functions Y ( ; ); T ( ; ); M( ; ); U( ; )
+and their  rst derivatives. Equation (27) can be obtained by direct calculations
+of (26). In its initial form, this equation is very cumbersome
+2
+, however, after
+the construction of an exact solution, it becomes essentially simpler and, as a
+result, we get a \hidden" key equation containing a sum of only three terms.
+The equation of the type indicated in the formulation of the theorem for the
+2
+It occupies more that three pages in font 14. To check it we used the mathematical symbolic computation
+program Wolfram Mathematica.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 202Differential Equations and Control Processes, N 4, 2017
+KdV equation in the  rst case was for the  rst time proposed in a report at a
+conference [21] and is published for the  rst time in the present work. If any
+four smooth functions U;Y;T;M satisfy (27), then the system (12){(15) and
+(5), (6), (8), (10) is solvable. With the added equation (7) the solution of the
+initial NPDE KdV (1) is recovered by (2). Theorem 2 is proved.
+5. Exact solutions of the Korteweg{de Vries equation.
+The construction, for the functionsU( ; ); Y ( ; );T ( ; ); M( ; ), of ex-
+act solutions to the KdV equation by the UCCV method allows us to prove
+that if the function of the  rst derivative Y ( ; ) is found, then all the other
+functions can also be found. Then we can return to the initial solutions (2){(4)
+of the KdV equation (1) in parametric form.
+Theorem 3.
+Let the system (5){(8), (10) be given. Then the change of variables (2){(4)
+allows us to obtain, in new variables, an equation for the function of the  rst
+derivativeY ( ; ). This equation may be separated from all the other equations
+and depends only on the function U( ; ) and its derivatives:
+@
+@ 
+ 
+U
+n
+( ; ) + 
+ 
+@
+@ 
+(Y Y
+0
+ 
+=U
+0
+ 
+)
+ 
+=U
+0
+ 
+ 
+= (Y
+0
+ 
+U
+0
+ 
+ Y
+0
+ 
+U
+0
+ 
+)=Y
+2
+: (28)
+One more change of variables for the function Y ( ; ) has the form
+3
+Y ( ; ) =
+p
+G( ; )
+ 
+ 
+ 
+ =U( ; )
+;   =U( ; ); t( ; ) = : (29)
+Thus, a new class of exact solutions of the KdV equation is described by
+the formulas
+M( ; ) =G
+0
+ 
+( ; )=2
+ 
+ 
+ 
+ =U( ; )
+;
+T ( ; ) = 
+p
+G( ; ) (2  
+n
++  G
+00
+  
+( ; ))=2
+ 
+ 
+ 
+ =U( ; )
+;
+x( ; ) =X( ; )
+ 
+ 
+ 
+ =U( ; )
+;
+@ X( ; )
+@ 
+= 
+n
++  G
+00
+  
+=2;
+@ X( ; )
+@  
+= 1=
+p
+G( ; );
+detJ = U
+0
+ 
+( ; )=G( ; )
+1=2
+ 
+ 
+ 
+ =U( ; )
+; (30)
+3
+In the present work, for the sake of simplicity in the presentation of formulas, they are given for a positive
+branch of the solution,except for an example, in which they need to be presented otherwise.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 203Differential Equations and Control Processes, N 4, 2017
+and the function G( ; ) can be found from the equation
+@G( ; )
+@ 
+=(  G( ; )
+3=2
+) +
+@
+3
+G( ; )
+@ 
+3
++ 2n 
+n 1
+=  = 0: (31)
+new in the theory of the KdV equation.
+The Jacobian has the form detJ = U
+0
+ 
+=
+p
+G( ; )
+ 
+ 
+ 
+ =U( ; )
+. The function
+U( ; ) remains an arbitrary, smooth, and trice continuously differentiable func-
+tion.
+Proof. Consider case (b) in Section 3. Let t( ; ) =  , then we ob-
+tain relations (21){(24). Then the solvability condition (25) reduces to equa-
+tion (24). The equation t
+0
+ 
+= 1 follows from (14) and also takes the form
+(24). Combining relations (23) and (24)and excluding the function T , we
+get (24). After the change of variables (29) we again obtain equation (31).
+From (12), (13) we get the following relations for derivatives: x
+0
+ 
+( ; ) =
+ 
+U
+0
+ 
+=
+p
+G( ; ) + 
+n
++  G
+00
+  
+=2
+  
+ 
+ 
+ =U( ; )
+; x
+0
+ 
+( ; ) =U
+0
+ 
+=
+p
+G( ; )
+ 
+ 
+ 
+ =U( ; )
+:
+Putx( ; ) =X(U( ; ); ). Then relations (30) hold. For the solvability of
+(25) in the variables  ;  , the relations
+@
+2
+X( ; )
+@  @ 
+=
+@
+2
+X( ; )
+@  @ 
+must hold. Then we again obtain equation (31). This means
+that the exact solution (28){(31) does exist. Theorem 3 is proved.
+Example. Now we briey describe a new non-trivial exact solution of
+(31) and, consequently, also of (1). At n = 1 , equation (31) has the solution
+G( ; ) = =  ( ) with the invariant G( ; ) = =  ( ) . Then (31) implies an
+ordinary differential equation (ODE
+3
+). The  rst integral of ODE
+3
+has the form
+ODE
+4
+:
+ 
+00
+( )  2V=( 
+p
+ ( )) = C
+4
+  2 = ,
+Here C
+4
+is a constant. This is a nonlinear ODE with a right{hand side. One
+can multiply ODE
+4
+by the function  
+0
+( ). After the integration we get the
+quadrature
+( 
+0
+( ))
+2
+=2 +C
+5
++C
+4
+ ( ) + 2(   
+R
+ ( )d )=   4V
+p
+ ( )=  = 0,
+Here C
+5
+;C
+4
+are constants. Put X( ; ) = X
+1
+(  +V ). Then (30) implies
+X( ) = 
+R
+(1=
+p
+ ( ))d . This is an implicit equation for the calculation of
+the function  ( ).
+Note, besides, that ODE
+4
+implies a non-autonomous dynamical system
+ 
+0
+( ) =p( ); p
+0
+( ) = C
+4
+  2 =   2V= 
+p
+ ( )).
+Let's calculate
+Electronic Journal. http://www.math.spbu.ru/diffjournal 204Differential Equations and Control Processes, N 4, 2017
+d 
+d ( )
+= 1=
+ 
+d ( )
+d 
+ 
+= 1=p( ). Then the Jacobian matrix
+2
+has the form
+ 
+0 1
+ 2=( p) V=(  
+3=2
+) 0
+!
+:
+A  xed point is determined by the expressions p = 0;   = 4V
+2
+=(C
+4
+ +2 )
+2
+.
+Hence it follows that on the equator of the Poincar  e sphere there can exist,at
+different values of parameters, critical points of center or saddle type. Then one
+should analyse the existence of bifurcations. A detailed study shows that the
+obtained new exact solution describes an asymmetrical wave with a big value
+of the derivative on the leading edge that differs from C.Jacobi's solution. This
+solution is mentioned in Section 2 and is studied in detail, for instance, in [8,
+9, 17].
+Obviously, a complete study of this solution should be the subject of a
+separate work. The other solution has the form G( ; ) =  
+n+2
+(	('))
+0
+, ' =
+ 
+3ns=2
+ 
+s
+, s6= 0.
+Note that equations (28), (31) are new in the theory of the KdV equation.
+Remark 1. For the Korteweg{de Vries{Burgers equation [1{3, 9, 17], in
+which second derivatives are added to equation (1) (dissipation), there is no
+solution constructed by the UCCV method, which would be analogous to the
+solution constructed in Theorem 3. When proving Theorem 3 we three times
+obtain the same equation (28), (31). In the case of the equation with dissipation
+it is not so, because we obtain equations that differ in the terms connected with
+dissipation.
+6. Possibility to construct, with functional arbitrariness, asymp-
+totic solutions of equation (31) and, on the whole, of the KdV equa-
+tion.
+Remark 2. Let's show that, in a degenerate case, the formulas of The-
+orem 3 imply classic results. The Jacobian (16) equals zero on the group of
+translation transformations U( ; ) = U
+0
+(   V ); or if the function of the
+ rst derivative Y ( ; ) =
+= Y
+0
+(U( ; )) depends only on the function Y ( ; ) =
+= Y
+0
+(U( ; )). This is a degenerate case, and the UCCV method is not ap-
+plicable here.
+If Y ( ; ) = Y
+0
+(U( ; )), then G( ; ) = G( ). Thus from (28), (31)
+we obtain the equation for the function of the  rst derivative Y ( ; ) (4)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 205Differential Equations and Control Processes, N 4, 2017
+Y
+2
+( ) = 2  
+2+n
+=( (n + 1)(n + 2)) +C
+1
++C
+2
+  +C
+3
+ 
+2
+; n6= 1; 2:
+This is an analogue of the ODE in the beginning of section 2.
+As an example, we choose a draft for the construction of an approximate,
+asymptotic in a small parameter 0 < " < 1 , solution of equation (31) using
+a method similar to the Poincar  e{Lighthill{Kuo method, which was actively
+applied in [6, 7] in the form
+G( ; ;") = 2 
+n+2
+=( (n + 1)(n + 2)) (1 +s "  
+  n 2
+ ( ; ) +O("
+2
+)) +
++C
+1
+(1 +"  
+ 
+ ( ; ) +O("
+2
+)) +C
+2
+  (1 +"  
+ 1+ 
+'( ; ) +O("
+2
+)) +
++C
+3
+ 
+2
+(1 +"  
+ 2+ 
+ ( ; ) +O("
+2
+)): (32)
+Heres;   are constants. There exist correction functions ( ; ), ( ; ),'( ; ),
+ ( ; ) of the order ", which satisfy a linear PDE. The coe cient in these
+functions can be chosen by different ways.
+When solving this linear PDE, one can express one of the functions in terms
+of the others. The arbitrariness in the choice of such function can be used to
+ nd a solution of the Cauchy problem. One can consider a variant, in which
+one should equate all the four correction functions. A detailed calculation of
+asymptotic solutions of the KdV equation deserves a separate study.
+7. A second class of exact solutions to the Korteweg{de Vries
+equation We describe this class only briey. It is more complicated than the
+ rst one.
+Theorem 4. Let the system (5){(8), (10) be given. Then an exact solution
+of the KdV equation (1) has the form
+Y ( ; ) =
+p
+G( ; )
+ 
+ 
+ 
+ =U( ; )
+;   =U( ; ); x( ; ) = ; (33)
+M( ; ) =M
+0
+( ; )
+ 
+ 
+ 
+ =U( ; )
+; t( ; ) = ( ; )
+ 
+ 
+ 
+ =U( ; )
+; (34)
+M
+0
+( ; ) =G
+0
+ 
+( ; )=(2
+p
+G( ; )) +G
+0
+ 
+( ; )=2: (35)
+The function T ( ; ) is given in (17). After the change of
+variables T ( ; ) we get T ( ; ) = T
+0
+(U( ; ); )
+ 
+ 
+ 
+U( ; )= 
+: Then
+T
+0
+( ; ) = 
+ 
+p
+G( ; )( M
+0
+0  
+(2M
+0
+ G
+0
+ 
+( ; )) +G
+0
+ 
+( ; )( 
+n
++ M
+0
+0  
+)=G
+0
+ 
+( ; )
+ 
+Electronic Journal. http://www.math.spbu.ru/diffjournal 206Differential Equations and Control Processes, N 4, 2017
+=   
+n
+p
+G( ; ) +  (G
+0
+ 
+)
+2
+=(4
+p
+G
+3
+)   G
+00
+  
+=(2
+p
+G) +  
+@G( ; )
+@ 
+@G( ; )
+@ 
+=(4G) 
+  
+@
+2
+G( ; )
+@ @ 
+  
+p
+G
+@
+2
+G( ; )
+@ 
+2
+=2.
+Then the equation for the function of the  rst derivative Y ( ; ) =
+p
+G( ; )
+ 
+ 
+ 
+ =U( ; )
+Y ( ; ) =
+p
+G( ; )
+ 
+ 
+ 
+ =U( ; )
+in new variables can be separated
+from the other equations. It depends only on the function U( ; ) and its
+derivatives:
+@
+3
+G( ; )
+@ 
+3
++ 3
+@
+3
+G( ; )
+@ @ 
+2
+=G + 3
+@
+3
+G( ; )
+@ 
+2
+@ 
+=
+p
+G( ; ) 
+ 3
+ 
+G
+0
+ 
++
+p
+GG
+0
+ 
+ 
+@
+2
+G( ; )
+@ @ 
+=(2G
+2
+) + 3
+@G( ; )
+@ 
+ 
+@G( ; )
+@ 
+ 
+2
+=(4
+p
+G
+5
+) 
+ 3
+ 
+ (G
+0
+ 
+)
+2
++GG
+00
+  
+ 
+@G( ; )
+@ 
+=(2G
+3
+) +
+@
+3
+G( ; )
+@ 
+3
+=
+p
+G
+3
++
++2n 
+n 1
+=   3G
+0
+ 
+G
+00
+  
+=(2
+p
+G
+5
+) + 3(G
+0
+ 
+)
+3
+=(4
+p
+G
+7
+) + 
+n
+G
+0
+ 
+=( 
+p
+G
+3
+) = 0:(36)
+The derivatives of the function  ( ; ) have the form  
+0
+ 
+( ; ) =
+4 G
+2
+( ; )=	
+2
+;  
+0
+ 
+( ; ) = 4
+p
+G
+3
+( ; )=	
+2
+;
+	
+2
+= 4 
+n
+G
+2
+( ; )  (G
+0
+ 
+)
+2
++ 2 GG
+00
+  
+  
+p
+GG
+0
+ 
+G
+0
+ 
++ 4 
+p
+G
+3
+G
+00
+  
++ 2 G
+2
+G
+00
+  
+:
+The function U( ; ) is an arbitrary trice continuously differentiable func-
+tion.
+Proof. Put x( ; ) =  ; x
+0
+ 
+( ; ) = 0; x
+0
+ 
+( ; ) = 1. Then (12),(13) imply
+equations
+  Y ( ; )
+ 
+T
+0
+ 
+( ; ) M
+0
+ 
+( ; ) T
+0
+ 
+( ; ) M
+0
+ 
+( ; )
+ 
+U
+0
+ 
+( ; ) +
++T
+1
+( ; )
+ 
+T
+0
+ 
+( ; ) U
+0
+ 
+( ; ) T
+0
+ 
+( ; ) U
+0
+ 
+( ; )
+ 
+U
+0
+ 
+( ; ) +
++  T ( ; )
+ 
+M
+0
+ 
+( ; ) U
+0
+ 
+( ; ) M
+0
+ 
+( ; ) U
+0
+ 
+( ; )
+ 
+Y
+0
+ 
+( ; ) = 0; (37)
+(  Y ( ; )
+ 
+T
+0
+ 
+( ; ) M
+0
+ 
+( ; ) T
+0
+ 
+( ; ) M
+0
+ 
+( ; )
+ 
+U
+0
+ 
+( ; ) +
++T
+1
+( ; )
+ 
+T
+0
+ 
+( ; ) U
+0
+ 
+( ; ) T
+0
+ 
+( ; ) U
+0
+ 
+( ; )
+ 
+U
+0
+ 
+( ; ) +
++  T ( ; )
+ 
+M
+0
+ 
+( ; ) U
+0
+ 
+( ; ) M
+0
+ 
+( ; ) U
+0
+ 
+( ; )
+ 
+Y
+0
+ 
+( ; ))=	 = 1;(38)
+The expression for the function T ( ; ) follows from (17). Using (37),(38),
+after the change of variables (37),(38) we get relation (35). Taking into account
+Electronic Journal. http://www.math.spbu.ru/diffjournal 207Differential Equations and Control Processes, N 4, 2017
+(37)and(38), after the change of variables (33)-(35), using (36), we obtain rela-
+tions connecting the derivatives 
+0
+ 
+( ; );  
+0
+ 
+( ; ). Then we make some simpli -
+cations. Let's express the third derivative
+@
+3
+G( ; )
+@ 
+3
+by using (36) and eliminating
+the third derivative from the relation between  rst derivatives 
+0
+ 
+( ; );  
+0
+ 
+( ; ).
+In the present case, besides the solvability condition (25) in variables  ;  ,
+the condition
+@
+2
+ ( ; )
+@  @ 
+=
+@
+2
+ ( ; )
+@  @ 
+must hold. Here, after the change of variables
+(33){ (35) we again get equation (36). This means that the exact solution
+(33){(36) does exist.
+From the equation x
+0
+ 
+= 1, which has the form (38), with the help of (33){
+(35), we again obtain equation (36). Theorem 4 is proved.
+Note that, when proving Theorem 4, we trice obtain the same equation (36).
+This does not occur in the case of the Korteweg{de Vries{Burgers equation with
+dissipation.
+8. A new class of exact solutions to the Harry Dym equation.
+In analogy with Teorems 1{4, we for the  rst time apply the UCCV method
+to the Harry Dym equation.
+@Z(x;t)
+@t
++Z
+ff
+@
+3
+Z
+@x
+3
+= 0: (39)
+Let's make the change of variables (2){(7). Equation (8) follows from (39)
+and has the form
+@M
+@ 
+@t
+@ 
+ 
+@M
+@ 
+@t
+@ 
+= T ( ; ) detJ U
+ ff
+: (40)
+Thus we obtain the system (5), (6), (40), (10). Theorems analogous to
+Theorems 1{4 are true.
+Theorem 5.
+Let the system of the four equations (5), (6), (40), (10) with respect to the
+derivatives (11) be given. Then the SFLAE (5), (6), (40), (10) has a unique
+solution
+@x
+@ 
+= ((Y ( ; )
+ 
+M
+0
+ 
+( ; ) T
+0
+ 
+( ; ) M
+0
+ 
+( ; ) T
+0
+ 
+( ; )
+ 
+U
+0
+ 
+( ; ) +
++T ( ; )
+ 
+U
+0
+ 
+( ; ) M
+0
+ 
+( ; ) U
+0
+ 
+( ; ) M
+0
+ 
+( ; )
+ 
+U
+ff
++T ( ; ) U
+0
+ 
+( ; ) 
+ 
+ 
+U
+0
+ 
+( ; ) T
+0
+ 
+( ; ) U
+0
+ 
+( ; ) T
+0
+ 
+( ; )
+ 
+)=	
+1
+; (41)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 208Differential Equations and Control Processes, N 4, 2017
+@x
+@ 
+= (T ( ; ) U
+0
+ 
+( ; )
+ 
+T
+0
+ 
+( ; ) U
+0
+ 
+( ; ) T
+0
+ 
+( ; ) U
+0
+ 
+( ; )
+ 
++
++U
+ff
+(Y ( ; )
+ 
+T
+0
+ 
+( ; ) M
+0
+ 
+( ; ) T
+0
+ 
+( ; ) M
+0
+ 
+( ; )
+ 
+U
+0
+ 
+( ; ) +
++T ( ; )
+ 
+M
+0
+ 
+( ; ) U
+0
+ 
+( ; ) M
+0
+ 
+( ; ) U
+0
+ 
+( ; )
+ 
+Y
+0
+ 
+( ; ))=	
+1
+; (42)
+@t
+@ 
+=
+ 
+Y ( ; ) M
+0
+ 
+( ; ) U
+ff
++T ( ; ) U
+0
+ 
+( ; )
+ 
+ 
+ 
+ 
+Y
+0
+ 
+( ; ) U
+0
+ 
+( ; ) Y
+0
+ 
+( ; ) U
+0
+ 
+( ; )
+ 
+=	
+1
+; (43)
+@t
+@ 
+= (Y ( ; ) M
+0
+ 
+( ; ) U
+ff
++T ( ; ) U
+0
+ 
+( ; )) 
+ 
+ 
+Y
+0
+ 
+( ; ) U
+0
+ 
+( ; ) Y
+0
+ 
+( ; ) U
+0
+ 
+( ; )
+ 
+=	
+1
+;
+	
+1
+= (Y (Y
+ 
+M
+0
+ 
+( ; ) T
+0
+ 
+( ; ) M
+0
+ 
+( ; ) T
+0
+ 
+( ; )
+ 
++
++T
+ 
+Y
+0
+ 
+( ; ) M
+0
+ 
+( ; ) Y
+0
+ 
+( ; ) M
+0
+ 
+( ; )
+ 
+) U
+ff
++
++T (Y
+ 
+U
+0
+ 
+( ; ) T
+0
+ 
+( ; ) U
+0
+ 
+( ; ) T
+0
+ 
+( ; )
+ 
++
++T
+ 
+Y
+0
+ 
+( ; ) U
+0
+ 
+( ; ) Y
+0
+ 
+( ; ) U
+0
+ 
+( ; )
+ 
+)): (44)
+Analogously to (17), the function T ( ; ) can be found from (7). Theorem
+5 is analogous to Theorem 1 and can be proved in a complete analogy with it.
+Theorem 6.
+Let the system (5){(7), (10), (40) be given. Then, after the change of
+variables, the equation for the function of the  rst derivative Y ( ; ) in new
+variables can be separated from the other equations and depends only on the
+function U( ; ) and its derivatives:
+@
+@ 
+ 
+U( ; )
+ff
+ 
+@
+@ 
+(YY
+0
+ 
+)=U
+0
+ 
+ 
+=U
+0
+ 
+ 
+= (Y
+0
+ 
+U
+0
+ 
+ Y
+0
+ 
+U
+0
+ 
+)=Y
+2
+: (45)
+The change of variables for the function Y ( ; ) has the form
+Y ( ; ) =
+p
+G( ; )
+ 
+ 
+ 
+ =U( ; )
+;   =U( ; ); t( ; ) = : (46)
+Then there exists an exact solution of the Harry Dym equation (39) de-
+scribed by the formulas
+M( ; ) =G
+0
+ 
+( ; )=2
+ 
+ 
+ 
+ =U( ; )
+; T ( ; ) =  
+ff
+p
+G( ; )G
+00
+  
+( ; )=2
+ 
+ 
+ 
+ =U( ; )
+;
+x( ; ) =X( ; )
+ 
+ 
+ 
+ =U( ; )
+;
+@ X( ; )
+@ 
+= 
+ff
+G
+00
+  
+=2;
+@X( ; )
+@ 
+= 1=
+p
+G( ; );
+detJ = U
+0
+ 
+( ; )=G( ; )
+1=2
+ 
+ 
+ 
+ =U( ; )
+; (47)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 209Differential Equations and Control Processes, N 4, 2017
+after the change of variables (46) with a smooth function Y ( ; ) determined
+by the equations
+G( ; )
+ 3=2
+@G( ; )
+@ 
++
+@
+@ 
+ 
+ 
+ff
+@
+2
+G( ; )
+@ 
+2
+ 
+= 0: (48)
+Here U( ; ) is an arbitrary trice continuously differentiable function.
+Proof. The proof of Theorem 6 is analogous to that of Theorem 3. Consider
+a  xed point t( ; ) = ; t
+0
+ 
+= 0 in (44). Then from (40) we get relations
+M
+0
+ 
+( ; ) = U
+0
+ 
+( ; )TU
+ ff
+=Y; t( ; ) = ; M( ; ) =Y
+0
+ 
+Y ( ; )=U
+0
+ 
+( ; ): (49)
+Equating the derivatives M
+0
+ 
+ M
+0
+ 
+from (49), we get
+T ( ; ) = U
+ff
+Y
+ 
+@
+@ 
+(YY
+0
+ 
+=U
+0
+ 
+)
+ 
+=U
+0
+ 
+: (50)
+Using equation (43) t
+0
+ 
+= 1, we obtain
+@
+@ 
+(T ( ; )=Y ( ; )) +
+ 
+Y
+0
+ 
+U
+0
+ 
+ Y
+0
+ 
+U
+0
+ 
+ 
+=Y
+2
+= 0: (51)
+Eliminating the function T from (50) and (51), one obtains (45) and (51).
+The solvability conditions (25) again imply equations (45) and (48). Put
+x( ; ) =X(U( ; ); ). Then we get relations (47) for derivatives. From equa-
+tions (47) one can also obtain the solvability condition
+@
+2
+X( ; )
+@ @ 
+=
+@
+2
+X( ; )
+@ @ 
+that
+must hold. This again imply equations (45), (48). Theorem 6 is proved.
+Note that equation (45), (48) are new in the theory of the HD equation and
+that they trice appear in the proof of Theorem 6. This is not so in the case of
+the Harry Dym{Burgers equation with dissipation.
+7. A second class of exact solutions to the Harry Dym equation.
+This class is more complicated than a  rst one.
+Theorem 7.
+Let the system (5), (6), (40), (10) be given. Then an exact solution of the
+HD equation has the form
+Y ( ; ) =
+p
+G( ; )
+ 
+ 
+ 
+ =U( ; )
+;   =U( ; ); x( ; ) = ; (52)
+M( ; )
+def
+= M
+0
+(U( ; ); )
+ 
+ 
+ 
+U( ; )= 
+;
+M
+0
+( ; ) =
+ 
+G
+0
+ 
+( ; )=
+p
+G( ; ) +G
+0
+ 
+( ; )
+ 
+=2;
+t( ; ) = (U( ; ); ): (53)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 210Differential Equations and Control Processes, N 4, 2017
+The function T ( ; )
+is determined from (7): T ( ; ) = T
+0
+(U( ; ); )
+ 
+ 
+ 
+U( ; )= 
+: Then T
+0
+( ; ) =
+= (1=G
+0
+ 
+( ; ))
+ 
+ 
+ff
+p
+G( ; )(M
+0
+0 
+( ; )( 2M
+0
++G
+0
+ 
+( ; )) G
+0
+ 
+( ; )M
+0
+0 
+( ; ))
+ 
+=
+= 
+n
+(G
+0
+ 
+)
+2
+=(4
+p
+G( ; )
+3
+  
+ff
+G
+00
+  
+=(2
+p
+G)+ 
+ff
+G
+0
+ 
+G
+0
+ 
+=(4G)  
+ff
+G
+00
+  
+  
+ff
+p
+GG
+00
+  
+=2:
+Then,in
+new variables, the equation for the function of the  rst derivative Y ( ; ) =
+=
+p
+G( ; )
+ 
+ 
+ 
+U( ; )= 
+can be separated from the other equations and depends
+only on the function U( ; ) and its derivatives:
+@
+3
+G( ; )
+@ 
+3
++ 3
+@
+3
+G( ; )
+@ @ 
+2
+=G + 3
+@
+3
+G( ; )
+@ 2@ 
+=
+p
+G( ; ) +ffG
+00
+  
+=  +
++
+ 
+2ff=( 
+p
+G)  3G
+0
+ 
+=(2G
+2
+)  3G
+0
+ 
+=(2
+p
+G
+3
+)
+ 
+@
+2
+G( ; )
+@ @ 
++
++3
+@G( ; )
+@ 
+ 
+@G( ; )
+@ 
+ 
+2
+=(4
+p
+G
+5
+) +
+@
+3
+G( ; )
+@ 
+3
+=
+p
+G
+3
+ ff(G
+0
+ 
+)
+2
+=(2   G
+2
+) +
++
+ 
+ ffG
+0
+ 
+=(2 
+p
+G
+3
+) + 3(G
+0
+ 
+)
+2
+=(2G
+3
+)  3G
+00
+  
+=(2G
+2
+)
+ 
+@G( ; )
+@ 
++
++
+ 
+ff=( G)  3G
+0
+ 
+=(2G
+5=2
+)
+ 
+G
+00
+  
++ 3(G
+0
+ 
+)
+3
+=(4
+p
+G
+7
+) = 0: (54)
+The derivatives of the function  ( ; ) have the form
+ 
+0
+ 
+( ; ) = 4 
+ ff
+G
+3=2
+( ; )=	
+3
+;  
+0
+ 
+( ; ) = 4 
+ ff
+p
+G
+2
+( ; )=	
+3
+;
+	
+3
+= (G
+0
+ 
+)
+2
++
+p
+GG
+0
+ 
+G
+0
+ 
+  2G
+ 
+G
+00
+  
++ 2
+p
+GG
+00
+  
++GG
+00
+  
+ 
+: (55)
+Here U( ; ) is an arbitrary trice continuously differentiable function.
+Proof. The proof is analogous to that of Theorem 4.
+Put x( ; ) =  ; x
+0
+ 
+( ; ) = 0; x
+0
+ 
+( ; ) = 1. Then (41) and (42) imply two
+equations. The expression for the function T ( ; ) follows from (7) analogously
+to (37), (38). Using the changes of variables (52),(53) we get the relation
+T
+0
+( ; ) and then (53), as well as equation (54). We calculate the  rst and
+the second derivatives of these functions, which will be later used to simplify
+the expressions obtained. Using the changes of variables (52), (53), we get
+relations between the derivatives 
+0
+ 
+( ; ),  
+0
+ 
+( ; ) in (55).  
+0
+ 
+( ; ),  
+0
+ 
+( ; ). The
+solvability conditions (25) in variables  ;   also must hold:
+@
+2
+ ( ; )
+@ @ 
+=
+@
+2
+ ( ; )
+@ @ 
+.
+Thus, we once more obtain equation (54). Theorem 7 is proved.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 211Differential Equations and Control Processes, N 4, 2017
+Remark 3. Theorems 4, 5, 7, 8 deal only with one branch of the so-
+lution, with the exception of the example, where it was necessary to de-
+scribe the both branches. The formulas for a negative branch of the solution
+Y ( ; ) = 
+p
+G( ; ) are deduced analogously.
+Acknowledgements
+The authors are grateful to V.P. Maslov, M.V. Karasev, V.G.Danilov, and
+V.F. Zaitsev for their attention to this work and useful discussions.
+References
+[1] Maslov V.P. Asymptotic and perturbation Theory. Nauka, Moscow. 1988.
+(in Russian)
+[2] Maslov V.P., Tsupin V.A. Sovrem. problems of Math., 1977, N.8, p. 273.
+[3] Maslov V.P., Omel'yanov G.A. Geometric Asymptotics for Nonlinear
+PDE. Amer. Math. Soc. Providence 2001, v. 202, 360 p.
+[4] Maslov V.P. Quantum Economics, Nauka, Moscow, 2007, 80 . (in Russian)
+[5] Maslov V.P., Danilov V.G., Volosov K.A. Mathematical Modeling of Tech-
+nological Processes on LSI Circuil Production. (MIEM, Moscow, 1984,
+Moscow, MIEM, 1984.) (in Russian)
+[6] Maslov V.P., Danilov V.G., Volosov K.A. Mathematical Modeling of Heat
+and Mass Transfer Processes. (Evolution of Dissipative Structures, addition
+of Kolobov N. A.) (Nauka, Moscow, 1987.) (in Russian)
+[7] Maslov V.P., Danilov V.G., Volosov K.A. Mathematical Modelling of Heat
+and Mass Transfer Processes. Kluver Academic Publishers. Dordrecht,
+Boston, London, 1995. { 316 p.
+[8] Clarkson P.A., Kruskal M.D. New similarity reduction of the Boussinesq
+equation. J. Math. Phys., 1989, V. 30, N.10, pp. 2201{2213.
+[9] Solitons. Edited by R.K. Bullough, P.J. Caudrey (with contributions by
+R.K. Bullought, F Calogero, P.J. Caudrey, A. Degasperis, L.D. Faddev,
+H.M. Gibbs, R. Hirota, G.L. Lamb, Jr,A.H. Luther, D.W. McLaughlin,
+A.C. Newell, S.P. Novikov, M. Toda, M. Wadati, V.E. Zakharov). New
+Yurk. 1980.
+[10] Volosov K.A. Transformation of Approximate solutions of liner parabolic
+equations into asymptotic solutions of quasilinear parabolic equations.
+Mathematical Notes. { 1994. { Vol.56. N.5-6, P. 1295{1299. English transl.
+in Mat. Zametki 56 (6) 122{126 (1994).
+Electronic Journal. http://www.math.spbu.ru/diffjournal 212Differential Equations and Control Processes, N 4, 2017
+[11] Volosov K.A. Differential Equations. Pleiades Publishing Ltd., ISSN 0012-
+2661. Vol. 43, No. 4, p. 507{512, 2007.
+[12] Volosova A. K., Volosov K. A. Construction Solutions of PDE in Para-
+metric Form. Hindawi Publishing Corporation. International Journal of
+Mathematics and Mathematical Sciences. V. 2009, Article ID 319269,
+17 p., http:// www.hindawi.com=journals=ijmms=2009=319269.htmt.
+doi:10.1155/2009/319269
+[13] Volosova A. K., Volosov K. A. Stochastic systems under periodic and white
+noise external excitation. The 3rd International Conference on Nonlinear
+Dynamics Nd{KhPI 2010, Khakov, Ukraine, p. 437{442.
+[14] Volosov K. A. Construction of solutions of PDE. Journal of Applied and
+Industtrial Mathematics, 2009, V. 3, N. 4, pp. 519{527.
+[15] Volosov K. A. Doctorial dissertation, MIEM, Moscow, Russia, MIIT, 2007,
+http://eqworld.ipmnet.ru dis volosov Doc2007.pdf
+[16] Volosov K.A. Implicit formulas for exaxt solutions of quasilinear partial dif-
+ferential equations. (Russian) Dokl. Akad. Nauk 2008, V.418, No. 1, p.11{
+14. Engl. tran. in Doklady Mathematics. 2008, V.77, No.1, pp. 1{4.
+[17] Kudrashov N.A. From singular manifold to integrable evolution equations.
+J.Phys.A: Math. Gen. 27, (1994) 2457{2470. print in the UK
+[18] Volosov K. A., Vdovina E. K., Volosova A. K. Accompany matrix of the
+Korteweg { de Vries equation. International conference on the differen-
+tial equations. Samara{Diff 2011, 26-30 june 2011, p.32{33. Math-Net.Ru,
+Google Schoar, ZentralBlatt.
+[19] Volosov K. A., Vdovina E. K., Volosova A. K. Accompany matrix of the
+Korteweg { de Vries equation. 8th International ISAAC Congress. Moscow,
+22{27 august 2011, p. 278 Math-Net.Ru, Google Schoar, ZentralBlatt.
+[20] Volosov K. A., Vdovina E. K. About expansion of number of models which
+have pairs of Lax's. International Journal Equation and Applications. 2012,
+v. 11, N.1 p. 27{30.
+[21] Volosov K. A., Volosova N. K., Volosova A. K., Vakulenko S.P. The the-
+ory adding to equation of Korteweg { de Vries. LXX International jubilee
+conference. St. Peterburg. Herzen State Pedagogical University of Russia,
+10{15 April 2017, p. 38{52.
+[22] Bratus A. S., Volosov .A. Exact solutions of the Hamilton{Jacobi{Bellman
+equation for problems of optimal correction with an integral constraint on
+the total control resources. (Russian) Dokl. Akad. Nauk 385 (2002), No.
+3, p. 319{322. Engl. tran. in Doklady Mathematics. V.66, No.1, 2002, pp.
+148{151.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 213Differential Equations and Control Processes, N 4, 2017
+[23] Bratus A. S., Volosov . A. Exact solutions of the Hamilton{Jacobi{Bellman
+equation for problems of optimal correction with a constrained overall con-
+trol resourse. (Russian) Prikl. Mat. Mekh. V.68 (2004) { No.5, pp. 819{832.
+Engl. tran. in J.Appl.Math. and Mech. V.68, (2004), pp. 731{742.
+[24] Volosov K. A., Danilov V. G., Maslov V. P. Combustion wave asymptotics
+in nonlinear inhomogeneous media with slowly varying properties. Dokl.
+Akad. Nauk SSSR 290:5 (1986), 1089{1094 (Russian); English transl. in
+Soviet Math. Dokl.
+[25] Volosov K. A., Danilov V. G., Maslov V. P. Weak discontinuity structure
+of solutions of quasilinear parabolic equations. Mat. Zametki 43:6 (1988),
+829{838 (Russian); English transl. in Math. Notes.
+[26] Maslov V. P., Tsupin V. A.  -shaped Sobolev generalized solutions of
+quasilinear equations. Russian mathematical Surveys. 1979. V. 34, No. 1
+(205), 231{236. http://dx.doi. org/10. 1070/RM1979v034n01ABEH002884
+[27] Maslov V. P., Omel'yanov G. A., Tsupin V. A. Asymptotics of some differ-
+ential and pseudodifferential equations, and dynamical systems with small
+dispersion. Math. USSR { Sb. 50:1 (1985), 191{212.
+[28] Maslov V. P., Tsupin V. A. Propagation of a shock wave in an isentropic
+gas with small viscosity. Journal of Soviet Mathematics. 1980, V. 13, No.
+1, pp. 163{185.
+[29] Maslov V. P., Omel'yanov G. A. Asymptotic soliton { form solutions
+of equations with small dispersion. Russian math. Surveys, V.36, No. 3,
+(1981), pp. 73{149.
+[30] Dobrochotov S., Maslov V. Multyphase asymptotics of nonlinear partial
+equations with a small parameter. Tn. Sov. Science rev., Phys. Rev., 1981.
+Amsterdam: Over Publ. Ass, 1982.
+[31] Maslov V. P., Omel'yanov G. A. Soliton { like asymptotics of internal
+waves in a strati ed uid with small dispersion (Russian) Differentsial'nye
+Uravneniya V. 21. (1985), No.10, 1766{1775, 1837.
+[32] Maslov V. P. Three algebras corresponding to nonsmooth solutions of
+quasilinear hiperbolic equations, Uspekhi Math. Nauk, V.35, (1980) (Rus-
+sian); Englis transl. in Russian Math. Surveys.
+[33] Maslov V. P. The Complex WKB Method for Nonlinear Equations. I. Lin-
+ear Theory, Birkh auser, Basel { Boston { Berlin, 1994.
+[34] Maslov V. P. Nonstandard characteristics in asymptotic problems, Uspeki
+Mat. Nauk V. 38:6 (1983), pp. 3{36.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 214
