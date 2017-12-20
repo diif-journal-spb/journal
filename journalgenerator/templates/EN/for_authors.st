@@ -2,11 +2,12 @@
 
 <p>A paper submission MUST include:
 <ul>
-  <li>Files of the paper in <a href="http://www.miktex.org">MikTex 2.9 (LaTeX)</a> 
+  <li>Files of the paper in <a href="http://www.miktex.org">MikTex 2.9+ (LaTeX)</a> 
 		or <a href="http://www.microsoft.com/office">Microsoft Word</a> formats</li>
   <ul>
     <li><strong>Journal <a href="#template-files">templates</a> must be used</strong></li>
     <li>It is necessary to add the affiliation after the title</li>
+    <li>After title and affiliation should follow abstract and keywords</li>
   </ul>
   <li>PDF-file of the paper</li>
   <li>Text file in Plain Text or HTML containing:</li>
@@ -19,13 +20,29 @@
       <li>e-mail (to be published in open access)</li>
       <li>phone, fax</li>
   </ul>
-  <li>The file containing references in HTML or Markdown format</li>
+  <li>The file containing references in HTML format</li>
 </ul>
 </p>
 
 <p>
-  The paper is prepared in accordance with the journal style following the instruction for authors.
-  The paper size is not limited.
+The abstract is an independent part of the paper relating the most important 
+ideas and results of the research. It should be a short description of the 
+paper and has to contain the problem statement, the author’s approach and principal 
+results. 
+</p>
+<p><strong>The abstract should not contain formulas.</strong></p>
+<p>
+The introduction provides background information and serves as a guide to the 
+author's approach. The introduction does not present a replication 
+of the abstract.
+</p>
+
+<p>
+The paper is prepared in accordance with the journal style. 
+</p><p>
+Submissions not prepared according to the rules are not considered.
+</p><p>
+The paper size is not limited.
 </p>
 
 <p>Please send your prepared paper to both e-mail addresses:
@@ -38,7 +55,6 @@
 <h2>Electronic publication</h2>
 <ul>
   <li>The paper abstract, pdf-file and references are published at the Journal home page in the Internet</li>
-  <li>Author is responsible for solving any issues with preparation of the materials</li>
 </ul> 
 
 <h2>Preparation of the article in TEX-format</h2>
