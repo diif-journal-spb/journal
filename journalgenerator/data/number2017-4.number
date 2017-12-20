@@ -319,4 +319,143 @@ Pyatnitskii are applied.</abstract>
   </authors>
 </article>
 
+<article>
+  <articleInfo lang="EN" FirstPage="0" LastPage="0">
+    <pdf>rogoza4.pdf</pdf>
+    <abstract>In this paper we consider some projection methods 
+for solving a certain class of singular Fredholm integral equations 
+of the second kind ( including  a perturbed integral operator), 
+which are relevant for robust control problems. 
+An investigation the properties of these methods and implementation of algorithms 
+for their solution were performed.  Estimates of the method error 
+are obtained in the norms of Lebesgue and continuous 
+functions spaces for various smoothness 
+classes of  right-hand side functions of the singular integral equation. 
+Estimates are obtained both for an arbitrary 
+nonuniform grid and for equations, including equations with nondifferentiable kernel.
+ 
+The approximate model of the initial problem is a system of interval algebraic equations. 
+The existence and uniqueness of this system solution is proved 
+within the framework of standard assumptions of interval analysis. 
+An effective computer-aided algorithm 
+for numerical realization of the projection methods under consideration was developed. 
+The proposed method allows parallelization and may be rather simply 
+implemented on network platforms of the Grid system.</abstract>
+    <title>Based on Inteval Methods Solving a Singular Integral Fredholm Equation with Perturbed Operator</title>
+    <keywords>
+      <word>finite functions</word>
+      <word>interval algebraic systems of equations</word>
+      <word>iterated Galerkin method</word>
+      <word>Iterated Kantorovich method</word>
+      <word>Kantorovich method</word>
+      <word>singular integral equation of the second kind with perturbed operator</word>
+    </keywords>
+    <references>
+      <reference>Egupov N. D., Pupkov K. A., Rogoza A. A., Trofimov M. A. &lt;em&gt;Algoritmicheskaya teoria system upravlenia, osnovannaya na spektralnih methodah. V dvuh tomah. Tom 2. Matrichno-vichislitelnie tehnologii na baze integralnih uravnenii&lt;/em&gt; [Algorithmic theory of control systems based on spectral methods. In two volumes. Volume 2. Matrix-computing technology based on integral equations]. Мoscow, MGTU Bauman, 2014. 464 p</reference>
+      <reference>Sarii S. P. On the characterization of the joint set of solutions of interval linear algebraic systems, 1990; (3): 20 p. (In Russ. )</reference>
+      <reference>Kreinovich V., Lakeyev A., Rohn J., Kahi p. Computational Complexity and Feasibility of Data Processing and Interval Computations. Dordrecht: Kluwer, 1997</reference>
+      <reference>Li B., Markys L. &lt;em&gt;Osnovi teorii optimalnogo upravlenia&lt;/em&gt; [Foundations of optimal control theory]. Moscow. Nauka publ, 1972. 270 p</reference>
+      <reference>Kalman R., Falb P., Arbib M. &lt;em&gt;Ocherki po matematichescoi teorii system&lt;/em&gt; [Essays on mathematical systems theory]. Moscow: Mir publ, 1971</reference>
+      <reference>Alefeld G., Herchberger U. &lt;em&gt;Vvedenie v intervalnie vichislenia&lt;/em&gt; [Introduction to interval computation]. Moscow: Mir publ, 1987. 230 p</reference>
+      <reference>Oettli W. On the solution set of a linear system with inaccurate coefficients. SIAM Jornal on Numerical Analysis. 1965 Vol. 2, №1 pp. 115-118</reference>
+      <reference>Lakeev А. V. The computational complexity of estimation of generalized sets of solutions of interval linear systems. Trudi XI mezdunarodnoi Baikalskoi skoli-seminara «Metodi optimizacii I ih prilozenia», Irkutsk, Baikal, 5 - 12 iulia 1998 г., sekcia 4. Irkutsk: ISEM, 1998. p. 115-118</reference>
+      <reference>Geri М., Dzonson D. Vichislitelnie mashini i trudnoresaemie zadachi [Computers and trudnoreshaemyh tasks]. Moscow: Mir publ, 1982</reference>
+      <reference>Kaucher E. Interval analysis in the extended interval space IR. Computing Supplement. 1980, Vol. 2. p. 33-49</reference>
+      <reference>Kollatc L. Fynctionalnii analiz I vichislitelnai matematika [Functional analysis and computational mathematics]. Moscow: Mir publ, 1969</reference>
+      <reference>Ortega Dz., Reinbolt В. Iteracionnie methodi reshenia nelineinih system yravnenii co mhogimi neizvestnimi [Iterative methods for solving nonlinear systems of equations with many unknowns]. Moscow: Mir publ, 1975</reference>
+      <reference>Neumaer A. Interval methods for systems of equations. - Cambridge: Cambridge University Press, 1990</reference>
+      <reference>Sarii S. P. External evaluation of generalized sets of solutions of interval linear system. Vichislitelnie tehnologii. 1999. vol. 4, №4. p. 82 - 110</reference>
+      <reference>Fadeev D. К., Fadeeva D. K. Vichislitelnie methodi lineinoi algebri [Computational methods of linear algebra]. М. : Physmathlit, 1960. 656 p</reference>
+      <reference>Rutily B., Chevallier L. Why is so difficult to solve the radiative transfer equation? EAS Publications Series, 2006. Vol. 18, pp. 1-23</reference>
+      <reference>Ahues M., Largillier A., Titaud O. The roles of a week singularity and the grid uniformity in relative error bounds. Numer. Funct. Anal. and Optimiz. 2001. Vol. 22, 7-8, pp. 789-814</reference>
+      <reference>Ahues M., d’Almeida F. D., Largillier A., Titaud O., Vasconcelos P. An !!!! ERROR!!! IMAGE IS NOT ALLOWERD! refined projection approximate solution of the radiation transfer equation in stellar atmospheres. Journal of Computational and Applied Mathematics, 2002, Vol. 140, 1-2, pp. 13-26</reference>
+      <reference>Panasenko G., Rutily B. Titaud O. Asymptotic analysis of integral equations for a great interval and its application to stellar radiative transfer. C. R. Acad. Sci. Paris. Ser. Mecanique. 2002, Vol. 330, pp. 735-740</reference>
+      <reference>Amosov A., Panasenko G., Rutily B. An approximate solution to the integral radiative transfer equation in an optically thick slab. C. R. Acad. Sci. Paris. Ser. Mecanique. 2003. Vol. 331, pp. 823-828</reference>
+      <reference>Rutily B. Multiple scattering theory and integral equations. Integral Methods in Science and Engineering (C. Constanda, M. Ahues, and A. Largillier, eds. ). Birkhauser, Boston, pp. 211-232, 2004</reference>
+      <reference>Rutily B., Chevallier L. The finite Laplace transform for solving a weakly singular integral equation occurring in transfer theory. Journal of Integral Equations and Applications. 2004, Vol. 16, 4, pp. 389 409</reference>
+      <reference>Ahues M., Amosov A., Largillier A., Titaud O. L p error estimates for projection approximations. Applied Mathematics Letters. 2005. Vol. 18, pp. 381-386</reference>
+      <reference>Amosov A., Panasenko G. Asymptotic analysis and asymptotic domain decomposition for an integral equation of the radiative transfer type. J. Math. Pure Appl. 2005. Vol. 84, pp. 1813-1831</reference>
+      <reference>d’Almeida F., Titaud O., Vasconcelos P. B. A numerical study of iterative renement schemes for weakly singular integral equations. Applied Mathematics Letters. 2005, Vol. 18, 5, pp. 571 - 576</reference>
+      <reference>Amosov A., Panasenko G. An approximate solution to the integral radiative transfer equation in an optically thick slab. Mathematical Methods in the Applied Sciences. 2007. Vol. 30, pp. 1593-1608</reference>
+      <reference>Amosov A., Ahues M., Largillier A. Superconvergence of projection methods for weakly singular integral operators. Integral Methods in Science and Engineering: Techniques and Applications (Constanda C., Potapenko S. eds). Birthauser, Boston. 2008, pp. 17</reference>
+      <reference>Amosov A., Ahues M., Largillier A. Supercovergence of some projection approximations for weakly singular integral equations using general grids. SIAM Journal on Numerical Analysis, 2009, Vol. 47, Issue 1, pp. 646-674</reference>
+      <reference>Ahues M., d’ Almeida F., Fernandes R. Piecewise constant Galerkin approximations of weakly singular integral equations. Int. J. Pure Appl. Math. 2009. Vol. 55, 4, pp. 569-580</reference>
+      <reference>Nunes A. L., Vasconcelos P. B., Ahues M. Error Bounds for Low-Rank Approximations of the First Exponential Integral Kernel. Numerical Functional Analysis and Optimization. 2013. Vol. 34, 1, pp. 74 - 93</reference>
+      <reference>d’Almeida F. D., Ahues M., Fernandes R. Errors and grids for projected weakly singular integral equations. Int. J. Pure Appl. Math. 2013. Vol. 89, 2, pp. 203-213</reference>
+      <reference>Marchyk G. I., Agoshkov V. I. Vvedenie v proekcionno-setochnie methodi [Introduction to projection-grid methods]. Moscow: Nauka Publ., 1981. 416 p</reference>
+      <reference>Kantorovich L. V. Functional analysis and applied mathematics. YMN. 1948. Vol. 3, vip. 6 (28), p. 89 - 185. (In Russ)</reference>
+      <reference>Kantorovich L. V., Krilov V. I. Priblizennie metodi vicshego analiza [Approximate methods of higher analysis]. Physmatlit. М.; 1962</reference>
+    </references>
+  </articleInfo>
+  <articleInfo lang="RU" FirstPage="0" LastPage="0">
+    <pdf>rogoza4.pdf</pdf>
+    <abstract>В настоящей статье рассмотрены некоторые проекционные методы 
+решения одного класса сингулярных интегральных уравнений Фредгольма второго рода, 
+(в том числе в условиях возмущенного интегрального оператора), возникающих
+в задачах робастного управления. 
+Проведено исследование свойств этих методов и разработаны алгоритмы 
+их численной реализации.  Для случаев различных классов гладкостей функции 
+в правой части сингулярного интегрального уравнения получены оценки погрешности 
+рассмотренных методов в нормах пространств Лебега и непрерывных функций.
+Оценки получены как для произвольной неравномерной сетки, так и для уравнений, 
+в том числе с недифференцируемыми ядрами.  
+
+Приближенная модель исходной задачи представляет собой систему интервальных 
+алгебраических уравнений. Доказаны существование и единственность решения 
+этой системы в рамках стандартных  допущений интервального анализа. 
+Разработан эффективный алгоритм численной реализации рассматриваемых проекционных 
+методов, ориентированный в первую очередь на применение ЭВМ. Предложенный метод допускает 
+распараллеливание и достаточно просто реализуется на сетевых платформах системы Grid.</abstract>
+    <title>Решение одного сингулярного интегрального уравнения фредгольма с возмущенным оператором на основе интервальных методов</title>
+    <keywords>
+      <word>возмущенным оператором</word>
+      <word>интервальные алгебраические системы уравнений</word>
+      <word>итерированный метод Галеркина</word>
+      <word>итерированный метод Канторовича</word>
+      <word>метод Канторовича</word>
+      <word>сингулярное интегральное уравнение второго рода с</word>
+      <word>финитные функции</word>
+    </keywords>
+    <references>
+      <reference>Егупов Н. Д., Пупков К. А., Рогоза А. А., Трофимов М. А. Алгоритмическая теория систем управления, основанная на спектральных методах. В двух томах. Том 2. Матрично-вычислительные технологии на базе интегральных уравнений. Под ред. Матвеева В. А. - М. : Издательство МГТУ им. Н. Э. Баумана, 2014. - 464 с</reference>
+      <reference>Шарый С. П. О характеризации объединенного множества решений интервальной линейной алгебраической системы. - Красноярск, 1990. - 20 с. - Депонировано в ВИНИТИ, № 726-И91</reference>
+      <reference>Kreinovich V., Lakeyev A., Rohn J., Kahi p. Computational Complexity and Feasibility of Data Processing and Interval Computations. Dordrecht: Kluwer, 1997</reference>
+      <reference>Ли Э. Б., Маркус Л. Основы теории оптимального управления. Москва: Наука, 1972</reference>
+      <reference>Калман Р., Фалб П., Арбиб М. Очерки по математической теории систем. - Москва: Мир, 1971</reference>
+      <reference>Алефельд Г., Херцбергер Ю. Введение в интервальные вычисления. - Москва: Мир, 1987</reference>
+      <reference>Oettli W. On the solution set of a linear system with inaccurate coefficients. SIAM Jornal on Numerical Analysis. 1965 Vol. 2, №1 pp. 115-118</reference>
+      <reference>Лакеев А. В. Вычислительная сложность оценивания обобщенных множеств решений интервальных линейных систем. Труды XI международной Байкальской школы-семинара «Методы оптимизации и их приложения», Иркутск, Байкал, 5 - 12 июля 1998 г., секция 4. Иркутск: ИСЭМ, 1998. с. 115-118</reference>
+      <reference>Гэри М., Джонсон Д. Вычислительные машины и труднорешаемые задачи. Москва: Мир, 1982</reference>
+      <reference>Kaucher E. Interval analysis in the extended interval space IR. Computing Supplement. - 1980. - Vol. 2. - p. 33-49</reference>
+      <reference>Коллатц Л. Функциональный анализ и вычислительная математика. Москва: Мир, 1969</reference>
+      <reference>Ортега Дж., Рейнболт В. Итерационные методы решения нелинейных систем уравнений со многими неизвестными. - Москва: Мир, 1975</reference>
+      <reference>Neumaer A. Interval methods for systems of equations. Cambridge: Cambridge University Press, 1990</reference>
+      <reference>Шарый С. П. Внешнее оценивание обобщенных множеств решений интервальных линейных систем. Вычислительные технологии. 1999. Т. 4, №4. - с. 82 - 110</reference>
+      <reference>Фадеев Д. К., Фадеева В. Н. Вычислительные методы линейной алгебры. М. : Физматлит, 1960. - 656 с</reference>
+      <reference>Rutily B., Chevallier L. Why is so difficult to solve the radiative transfer equation? EAS Publications Series, 2006. Vol. 18, pp. 1-23</reference>
+      <reference>Ahues M., Largillier A., Titaud O. The roles of a week singularity and the grid uniformity in relative error bounds . Numer. Funct. Anal. and Optimiz. 2001. Vol. 22, 7-8, pp. 789-814</reference>
+      <reference>Ahues M., d’Almeida F. D., Largillier A., Titaud O., Vasconcelos P. An L 1 refined projection approximate solution of the radiation transfer equation in stellar atmospheres. Journal of Computational and Applied Mathematics, 2002, Vol. 140, 1-2, pp. 13-26</reference>
+      <reference>Panasenko G., Rutily B. Titaud O. Asymptotic analysis of integral equations for a great interval and its application to stellar radiative transfer. C. R. Acad. Sci. Paris. Ser. Mecanique. 2002, Vol. 330, pp. 735-740</reference>
+      <reference>Amosov A., Panasenko G., Rutily B. An approximate solution to the integral radiative transfer equation in an optically thick slab. C. R. Acad. Sci. Paris. Ser. Mecanique. 2003. Vol. 331, pp. 823-828</reference>
+      <reference>Rutily B. Multiple scattering theory and integral equations. Integral Methods in Science and Engineering (C. Constanda, M. Ahues, and A. Largillier, eds. ). Birkhauser, Boston, pp. 211-232, 2004</reference>
+      <reference>Rutily B., Chevallier L. The nite Laplace transform for solving a weakly singular integral equation occurring in transfer theory. Journal of Integral Equations and Applications. 2004, Vol. 16, 4, pp. 389 409</reference>
+      <reference>Ahues M., Amosov A., Largillier A., Titaud O. L p error estimates for projection approximations. Applied Mathematics Letters. 2005. Vol. 18, pp. 381-386</reference>
+      <reference>Amosov A., Panasenko G. Asymptotic analysis and asymptotic domain decomposition for an integral equation of the radiative transfer type. J. Math. Pures Appl. 2005. Vol. 84, pp. 1813-1831</reference>
+      <reference>d’Almeida F., Titaud O., Vasconcelos P. B. A numerical study of iterative renement schemes for weakly singular integral equations. Applied Mathematics Letters. 2005, Vol. 18, 5, pp. 571 - 576</reference>
+      <reference>Amosov A., Panasenko G. An approximate solution to the integral radiative transfer equation in an optically thick slab. Mathematical Methods in the Applied Sciences. 2007. Vol. 30, pp. 1593-1608</reference>
+      <reference>Amosov A., Ahues M., Largillier A. Superconvergence of projection methods for weakly singular integral operators. Integral Methods in Science and Engineering: Techniques and Applications (Constanda C., Potapenko S. eds). Birthauser, Boston. 2008, pp. 17</reference>
+      <reference>Amosov A., Ahues M., Largillier A. Supercovergence of some projection approximations for weakly singular integral equations using general grids. Siam Journal on Numerical Analysis, 2009, Vol. 47, Issue 1, pp. 646-674</reference>
+      <reference>Ahues M., d’ Almeida F., Fernandes R. Piecewise constant Galerkin approximations of weakly singular integral equations. Int. J. Pure Appl. Math. 2009. Vol. 55, 4, pp. 569-580</reference>
+      <reference>Nunes A. L., Vasconcelos P. B., Ahues M. Error Bounds for Low-Rank Approximations of the First Exponential Integral Kernel. Numerical Functional Analysis and Optimization. 2013. Vol. 34, 1, pp. 74 - 93</reference>
+      <reference>d’Almeida F. D., Ahues M., Fernandes R. Errors and grids for projected weakly singular integral equations. Int. J. Pure Appl. Math. 2013. Vol. 89, 2, pp. 203-213</reference>
+      <reference>Марчук Г. И., Агошков В. И. Введение в проекционно-сеточные методы. Москва: Наука, Главная редакция физико-математической литературы, 1981. 416 c</reference>
+      <reference>Канторович Л. В. Функциональный анализ и прикладная математика. УМН. 1948. Т. 3, Вып. 6 (28), С. 89 - 185</reference>
+      <reference>Канторович Л. В., Крылов В. И. Приближенные методы высшего анализа. Физматлит. М.; 1962</reference>
+    </references>
+  </articleInfo>
+  <authors>
+    <author ref="n_2015_rogoza" sort-key="1" />
+  </authors>
+</article>
+
 </number>
