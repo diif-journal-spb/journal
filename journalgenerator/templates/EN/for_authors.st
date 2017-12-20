@@ -28,7 +28,7 @@
 <p>
 The abstract is an independent part of the paper relating the most important 
 ideas and results of the research. It should be a short description of the 
-paper and has to contain the problem statement, the author’s approach and principal 
+paper and has to contain the problem statement, the author's approach and principal 
 results. 
 </p>
 <p><strong>The abstract should not contain formulas.</strong></p>
@@ -54,9 +54,9 @@ The paper size is not limited.
 
 
 <h2>Electronic publication</h2>
-<ul>
-  <li>The paper abstract, pdf-file and references are published at the Journal home page in the Internet</li>
-</ul> 
+<p>
+The paper abstract, pdf-file and references are published at the Journal home page in the Internet</li>
+</p>
 
 <h2>Preparation of the article in TEX-format</h2>
 <a name="template-files"> </a>
