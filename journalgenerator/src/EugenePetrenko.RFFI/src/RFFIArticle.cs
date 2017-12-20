@@ -67,7 +67,7 @@ namespace EugenePetrenko.RFFI
     [XmlElementPath("references", "reference", CloneData = new[] { false, true }), XmlForeach]
     public IEnumerable<RFFIReference> Refererences
     {
-      get { return myArticle.ForLanguage(JournalLanguage.EN).References.Select(x => new RFFIReference(x)); }
+      get { return myArticle.ForLanguage(JournalLanguage.RU).References.Select(x => new RFFIReference(x)); }
     }
 
     [XmlElementPath("files")]
