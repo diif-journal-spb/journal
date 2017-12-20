@@ -6,7 +6,7 @@
 		or <a href="http://www.microsoft.com/office">Microsoft Word</a> formats</li>
   <ul>
     <li><strong>Journal <a href="#template-files">templates</a> must be used</strong></li>
-    <li>It is necessary to add the affiliation after the title</li>
+    <li>It is necessary to add the affiliation (work place, institution, address) after the title</li>
     <li>After title and affiliation should follow abstract and keywords</li>
   </ul>
   <li>PDF-file of the paper</li>
@@ -17,10 +17,11 @@
       <li>affiliation (work place, institution, address, position)</li>
       <li>academic status and degree</li>      
       <li>abstract</li>      
+      <li>keywords</li>
       <li>e-mail (to be published in open access)</li>
       <li>phone, fax</li>
   </ul>
-  <li>The file containing references in HTML format</li>
+  <li>The file containing references in HTML or Microsoft Word format</li>
 </ul>
 </p>
 
@@ -40,7 +41,7 @@ of the abstract.
 <p>
 The paper is prepared in accordance with the journal style. 
 </p><p>
-Submissions not prepared according to the rules are not considered.
+<strong>Submissions not prepared according to the rules are not considered.</strong>
 </p><p>
 The paper size is not limited.
 </p>
