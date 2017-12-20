@@ -2,7 +2,7 @@
 
 <p>A paper submission MUST include:
 <ul>
-  <li>Files of the paper in <a href="http://www.miktex.org">MikTex 2.9+ (LaTeX)</a> 
+  <li>File of the paper in <a href="http://www.miktex.org">MikTex 2.9+ (LaTeX)</a> 
 		or <a href="http://www.microsoft.com/office">Microsoft Word</a> formats</li>
   <ul>
     <li><strong>Journal <a href="#template-files">templates</a> must be used</strong></li>
