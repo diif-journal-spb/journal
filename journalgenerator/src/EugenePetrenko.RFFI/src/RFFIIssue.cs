@@ -34,15 +34,15 @@ namespace EugenePetrenko.RFFI
         switch (myNumber.IntNumber)
         {
           case 1:
-            return myNumber.Year + "31/" + myNumber.Year;
+            return myNumber.Year + "31";
           case 2:
-            return myNumber.Year + "32/" + myNumber.Year;
+            return myNumber.Year + "32";
           case 3:
-            return myNumber.Year + "33/" + myNumber.Year;
+            return myNumber.Year + "33";
           case 4:
-            return myNumber.Year + "32/" + myNumber.Year;
+            return myNumber.Year + "34";
           default:
-            return myNumber.Year + "/" + myNumber.Year;
+            return myNumber.Year;
         }
       } 
     }
