@@ -46,6 +46,6 @@ namespace EugenePetrenko.NumberEditor
       Id = DefaultIdPrefix + Regex.Replace((GetEN().LastName ?? "LAST_NAME").ToLower(), @"[^a-z0-9_]", "_");
     }
 
-    public static string DefaultIdPrefix => "n_" + DateTime.Now.Year + "_";
+    public static string DefaultIdPrefix => "n_" + DateTime.Now.Year + "_" + DateTime.Now.Month + "_";
   }
 }
