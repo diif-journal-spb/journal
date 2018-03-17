@@ -1,5 +1,9 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Security.AccessControl;
 using System.Text.RegularExpressions;
 using System.Xml;
 using EugenePetrenko.DataModel;
@@ -12,10 +16,22 @@ namespace EugenePetrenko.RFFI
   {
     public INumber[] Numbers => XmlDataLoader.Parse(DataDirectory).Numbers;
 
-    [Test, TestCaseSource("Numbers")]
+    [Test, TestCaseSource(nameof(Numbers))]
     public void ShouldGenerateValidRFFIXML(INumber number)
     {
       DoRFFI(number);
+    }
+    
+    [Test, TestCaseSource(nameof(Numbers))]
+    public void UniqueReferences(INumber number)
+    {
+      var num = new RFFIJournalNumber(new RFFIIssue(number, this));
+
+      foreach (var article in num.Issue.Articles.SelectMany(x=>x.Articles))
+      {
+        var allReferences = article.Refererences.Select(x => x.RefText.Substring(0, Math.Min(x.RefText.Length, 100000))).ToList();
+        Assert.AreEqual(allReferences.Count, new HashSet<String>(allReferences, StringComparer.InvariantCultureIgnoreCase).Count, "" + article.Titles.First().Title);
+      }
     }
 
     public string PdfText(IArticleInfo article)

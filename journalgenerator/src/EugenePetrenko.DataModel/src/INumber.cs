@@ -63,7 +63,7 @@ namespace EugenePetrenko.DataModel
 
     public override string ToString()
     {
-      return "Number " + Number + "." + Year;
+      return "Number " + Year + "." + Number;
     }
   }
 }
