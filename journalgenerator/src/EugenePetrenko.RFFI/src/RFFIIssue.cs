@@ -40,7 +40,7 @@ namespace EugenePetrenko.RFFI
           case 3:
             return myNumber.Year + "33";
           case 4:
-            return myNumber.Year + "34";
+            return myNumber.Year + "32";
           default:
             return myNumber.Year;
         }
