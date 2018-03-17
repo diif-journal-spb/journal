@@ -32,6 +32,8 @@ namespace EugenePetrenko.RFFI
       str = Regex.Replace(str, "\\s*<li>\\s*", "\n* ", RegexOptions.IgnoreCase | RegexOptions.Multiline);
       str = Regex.Replace(str, "\\s*</li>\\s*", " ", RegexOptions.IgnoreCase | RegexOptions.Multiline);
       str = Regex.Replace(str, "\\s*</?ul>\\s*", " ", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      str = Regex.Replace(str, "\\s*</?ol>\\s*", " ", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+      str = Regex.Replace(str, "\\s*</?u>\\s*", " ", RegexOptions.IgnoreCase | RegexOptions.Multiline);
       str = Regex.Replace(str, "\\s*</?b>\\s*", " ", RegexOptions.IgnoreCase | RegexOptions.Multiline);
       str = Regex.Replace(str, "\\s*</?i>\\s*", " ", RegexOptions.IgnoreCase | RegexOptions.Multiline);
       str = Regex.Replace(str, "\\s*</?strong>\\s*", " ", RegexOptions.IgnoreCase | RegexOptions.Multiline);
