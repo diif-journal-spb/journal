@@ -79,10 +79,10 @@
 </div>
 
 <div class="editor">
-<span class="name">Зайцев В. Ф.</span>
+<span class="name">Флегонтов А. В.</span>
 <span class="title">профессор, дфмн</span>
 <span class="work">Российский государственный педагогический университет им. А.И.Герцена</span>
-<span class="email">valentin_zaitsev@mail.ru</span>
+<span class="email">flegontoff@yandex.ru</span>
 </div>
 
 <div class="editor">

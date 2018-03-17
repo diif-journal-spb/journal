@@ -81,10 +81,10 @@
 </div>
 
 <div class="editor">
-<span class="name">Valentin F. Zaitsev</span>
+<span class="name">Alexander Vladimirovich Flegontov</span>
 <span class="title">professor, Doctor of Science</span>
-<span class="work">St.Petersburg Herzen State Pedagogical University of Russia </span>
-<span class="email">valentin_zaitsev@mail.ru </span>
+<span class="work">St.Petersburg Herzen State Pedagogical University of Russia</span>
+<span class="email">flegontoff@yandex.ru</span>
 </div>
 
 <div class="editor">
