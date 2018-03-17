@@ -37,7 +37,7 @@
 
 <div class="editor">
 <span class="name">Кузнецов Н. В.</span>
-<span class="title">доцен, кфмн</span>
+<span class="title">доцен, дфмн</span>
 <span class="work">Университет Ювяскюля (Финляндия)</span>
 <span class="work">Санкт-Петербургский Государственный университет (Россия)</span>
 <span class="email">kuznetsov@math.spbu.ru</span>
