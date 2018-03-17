@@ -34,7 +34,7 @@ namespace EugenePetrenko.RFFI
     }
     
     [XmlElementPath("operCard"), XmlText]
-    public RFFIOperCard OperCard => new RFFIOperCard(myIssue.Articles.Count());
+    public RFFIOperCard OperCard => new RFFIOperCard(myIssue.Articles.Select(x=>x.Articles.Count).Sum());
 
     [XmlElementPath("titleid"), XmlText]
     public string TitleId => "7282";
