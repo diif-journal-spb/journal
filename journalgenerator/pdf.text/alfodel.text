@@ -1,0 +1,1359 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 2, 2018
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Integral equations
+On a coupled system of Urysohn-Stieltjes integral equations in
+reexive Banach space
+A.M.A El-Sayed
+1
+, M. M. A. Al-Fadel
+2
+E-mail : amasayed@alexu.edu.eg
+& najemeoe1234@gmail.com
+1
+Faculty of Science, Alexandria University, Alexandria, Egypt
+2
+Faculty of Science, Omar Al-Mukhtar University, Libya
+Abstract
+Urysohn-Stieltjes integral operators and Urysohn-Stieltjes integral equations
+have been studied by some authors. In this paper we prove the existence of at
+least one weak solution of a coupled system of Urysohn-Stieltjes integral equa-
+tions in the reexive Banach space. We used the O'Regan  xed point theorem
+and some propositions. As an application, the coupled system of Hammerstien-
+Stieltjes integral equations is also studied.
+Keywords: Weak solution, weakly Riemann-Stieltjes integral, coupled system,
+weakly relatively compact.
+1 Introduction and preliminaries
+The Volterra-Stieltjes integral equations and Urysohn-Stieltjes integral equa-
+tions have been studied by J. Bana  s and some other authors (see [1]-[9] and
+[18]- [20]).Differential Equations and Control Processes, N 2, 2018
+Consider the Urysohn-Stieltjes integral equation
+x(t) =p(t) +
+Z
+1
+0
+f(t;s;x(s)) d
+s
+g(t;s); t2I = [0; 1]: (1)
+J. Bana  s (see [5]) proved the existence of at least one solution x2C(I) to the
+equation (1), where g :I I!R is nondecreasing in the second argument on
+I and the symbol d
+s
+indicates the integration with respect to s.
+For the de nition, background and properties of the Stieltjes integral we re-
+fer to Bana  s [1]. However, the coupled system of integral equations have been
+studied, recently, by some authors (see [13]-[14],[16]).
+In this paper, we generalize this results to study the existence of weak solu-
+tions (x;y) 2 C[I;E] C[I;E] for the coupled system of Urysohn-Stieltjes
+integral equations
+x(t) = a
+1
+(t) +
+Z
+1
+0
+f
+1
+(t;s;y(s)) d
+s
+g
+1
+(t;s); t2I
+(2)
+y(t) = a
+2
+(t) +
+Z
+1
+0
+f
+2
+(t;s;x(s)) d
+s
+g
+2
+(t;s); t2I
+in reexive Banach space E under the weak-weak continuity assumption im-
+posed on f
+i
+:I I E!E; i = 1; 2:
+As an application, we study the existence of weak solutions x;y2 C[I;E] for
+the coupled system of Hammerstien-Stieltjes integral equations
+x(t) = a
+1
+(t) +
+Z
+1
+0
+k
+1
+(t;s)h
+1
+(s;y(s)) d
+s
+g
+1
+(t;s); t2I
+(3)
+y(t) = a
+2
+(t) +
+Z
+1
+0
+k
+2
+(t;s)h
+2
+(s;x(s)) d
+s
+g
+2
+(t;s); t2I
+Throughout this paper, if otherwise is not stated,E denotes a reexive Banach
+space with normk :k and dual E
+ 
+. Denote by C[I;E] the Banach space of
+strongly continuous functions x :I!E with sup-norm. Let
+X = C[I;E] C[I;E] =fu(t) = (x(t);y(t)) : x2 C[I;E];y2 C[I;E];t2 Ig
+be a Banach space with the norm de ned as
+k (x;y)k
+X
+= maxfkxk
+C[I;E]
++kyk
+C[I;E]
+g; 8(x;y)2X:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 143Differential Equations and Control Processes, N 2, 2018
+Now, we shall present some auxiliary results that will be needed in this work.
+Let E be a Banach space (need not be reexive) and let x : [a;b]!E, then
+(1-) x(:) is said to be weakly continuous (measurable) at t
+0
+2 [a;b] if for every
+ 2E
+ 
+;  (x(:)) is continuous (measurable) at t
+0
+.
+(2-) A function h : E! E is said to be weakly sequentially continuous if h
+maps weakly convergent sequences in E to weakly convergent sequences
+in E.
+Ifx is weakly continuous onI, thenx is strongly measurable and hence weakly
+measurable (see [17] and [11]). It is evident that in reexive Banach spaces,
+ifx is weakly continuous function on [a;b], thenx is weakly Riemann integrable
+(see [17]). Since the space of all weakly Riemann-Stieltjes integrable functions
+is not complete, we will restrict our attention to the existence of weak solutions
+of the coupled system (2) in the space C[I;E] C[I;E].
+De nition 1 Let f : I E ! E. Then f(t;u) is said to be weakly-weakly
+continuous at (t
+0
+;u
+0
+) if given   > 0;  2 E
+ 
+there exists   > 0 and a weakly
+open set U containing u
+0
+such that
+j (f(t;u) f(t
+0
+;u
+0
+))j< 
+whenever
+jt t
+0
+j<  and u2U:
+Now, we have the following  xed point theorem, due to O'Regan, in the
+reexive Banach space (see [21]) and some propositions which will be used in
+the sequel (see [12]).
+Theorem 1 LetE be a Banach space and letQ be a nonempty, bounded, closed
+and convex subset of C[I;E] and let F :Q!Q be a weakly sequentially con-
+tinuous and assume that FQ(t) is relatively weakly compact inE for eacht2I.
+Then, F has a  xed point in the set Q.
+Proposition 1 In reexive Banach space, the subset is weakly relatively com-
+pact if and only if it is bounded in the norm topology.
+Proposition 2 Let E be a normed space with y2 E and y6= 0. Then there
+exists a '2E
+ 
+withk'k= 1 and kyk='(y).
+Electronic Journal. http://www.math.spbu.ru/diffjournal 144Differential Equations and Control Processes, N 2, 2018
+2 Main results
+In this section, we present our main result by proving the existence of weak
+solutions for the coupled system of Urysohn-Stieltjes integral equations (2) in
+the reexive Banach space E. Let us  rst state the following assumptions:
+(i) a
+i
+2C[I;E]; i = 1; 2:
+(ii) f
+i
+: I I D! E; where D  E and i = 1; 2 satisfy the following
+condtions:
+(1) f
+i
+(:;s;x(s))is continuous function, 8s2I;x2D E:
+(2) f
+i
+(t;:;:) is weakly-weakly continuous function, 8t2I:
+(3) The weak closure of the range off
+i
+(I I D) are weakly compact in
+E (or equivalently: there exists a constantM such thatkf
+i
+(t;s;x)k 
+M:
+(iii) The functions g
+i
+: I I ! R and the functions t! g
+i
+(t; 1) and t!
+g
+i
+(t; 0) (i = 1; 2) are continuous onI; and   = maxfsupjg
+i
+(t; 1)j + supj
+g
+i
+(t; 0)j on Ig:
+(iv) For allt
+1
+;t
+2
+2I such thatt
+1
+<t
+2
+the functionss!g
+i
+(t
+2
+;s) g
+i
+(t
+1
+;s) are
+nondecreasing on I.
+(v) g
+i
+(0;s) = 0 for any s2I.
+Remark 1. Observe that assumptions (iv) and (v) imply that the functions!
+g(t;s) is nondecreasing on the intervalI, for any  xedt2I (Remark 1 in [6]).
+Indeed, putting t
+2
+= t; t
+1
+= 0 in (iv) and keeping in mind (v), we obtain
+the desired conclusion. From this observation, it follows immediately that, for
+every t2I, the function s!g(t;s) is of bounded variation on I.
+De nition 2 By a weak solution for the coupled system (2), we mean the pair
+of functions (x;y)2C[I;E] C[I;E] such that
+'(x(t)) = '(a
+1
+(t)) +
+Z
+1
+0
+'(f
+1
+(t;s;y(s))) d
+s
+g
+1
+(t;s); t2I
+'(y(t)) = '(a
+2
+(t)) +
+Z
+1
+0
+'(f
+2
+(t;s;x(s))) d
+s
+g
+2
+(t;s); t2I
+for all '2E
+ 
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 145Differential Equations and Control Processes, N 2, 2018
+Theorem 2 Under assumptions (i)-(v), the coupled system of Urysohn-
+Stieltjes integral equation (2) has at least one weak solution (x;y)2C[I;E] 
+C[I;E].
+Proof. De ne an operator A by
+A(x;y) = (A
+1
+y;A
+2
+y)
+where
+A
+1
+y(t) =a
+1
+(t) +
+Z
+1
+0
+f
+1
+(t;s;y(s)) d
+s
+g
+1
+(t;s); t2I
+A
+2
+x(t) =a
+2
+(t) +
+Z
+1
+0
+f
+2
+(t;s;x(s)) d
+s
+g
+2
+(t;s); t2I
+For every x
+i
+2 C[I;E], f
+i
+(:;s;x(s)) is continuous on I; and f
+i
+(t;:;x(:)) are
+weakly continuous on I; then '(f
+i
+(t;:;x(:))) are continuous for every '2E
+ 
+.
+Hence, in view of bounded variational of g
+i
+it follows, f
+i
+(t;s;x(s)) is weakly
+Riemann-Stieltjes integrable on I with respect to s! g
+i
+(t;s). Thus A
+i
+make
+sense.
+De ne the sets Q
+1
+and Q
+2
+by
+Q
+1
+=fy2C[I;E] :kyk H
+1
+g; H
+1
+=ka
+1
+k +M ;
+And
+Q
+2
+=fx2C[I;E] :kxk H
+2
+g; H
+2
+=ka
+2
+k +M :
+Now, de ne the set Q by
+Q =fu = (x;y)2X : kuk H
+1
++H
+2
+g
+Next, let y 2 Q
+1
+and x 2 Q
+2
+. Without loss of generality we may assume
+that A
+1
+y6= 0;A
+2
+x(t)6= 0; t2I. By proposition 2, we have
+kA
+1
+y(t)k = '(A
+1
+y(t))
+  j'(a
+1
+(t))j +j'(
+Z
+1
+0
+f
+1
+(t;s;y(s)) d
+s
+g
+1
+(t;s))j
+  ka
+1
+k +
+Z
+1
+0
+j'(f
+1
+(t;s;y(s)))j d
+s
+(
+s
+_
+z=0
+g
+1
+(t;z))
+  ka
+1
+k +
+Z
+1
+0
+kf
+1
+(t;s;y(s))k d
+s
+(
+s
+_
+z=0
+g
+1
+(t;z))
+Electronic Journal. http://www.math.spbu.ru/diffjournal 146Differential Equations and Control Processes, N 2, 2018
+  ka
+1
+k +M
+Z
+1
+0
+d
+s
+g(t;s)
+  ka
+1
+k +M[ g(t; 1) g(t; 0) ]
+  ka
+1
+k +M[ sup
+t2I
+jg(t; 1)j + sup
+t2I
+jg(t; 0)j ]
+  ka
+1
+k +M 
+Then
+kA
+1
+y(t)k ka
+1
+k +M  =H
+1
+Similarly we can prove that
+kA
+2
+x(t)k ka
+2
+k +M  =H
+2
+:
+Therefore, for any u2Q
+kAu(t)k = kA(x;y)(t)k=k (A
+1
+y(t);A
+2
+x(t))k
+  kA
+1
+y(t)k +kA
+2
+x(t)k
+  ka
+1
+k +M +ka
+2
+k +M  =H
+1
++H
+2
+:
+i.e., 8 u2Q)Au2Q)AQ Q: Thus A :Q!Q:
+Also, we can prove that A
+1
+: C[I;E]! C[I;E] and for t
+1
+;t
+2
+2 I; t
+1
+<
+t
+2
+(without loss of generality, we may assume that Ax(t
+2
+) Ax(t
+1
+)6= 0) and
+there exists '2E
+ 
+, such that
+kA
+1
+y(t
+2
+)   A
+1
+y(t
+1
+)k  '(A
+1
+y(t
+2
+) A
+1
+y(t
+1
+))
+  j'(a
+1
+(t
+2
+) a
+1
+(t
+1
+))j +j
+Z
+1
+0
+'(f
+1
+(t
+2
+;s;y(s))) d
+s
+g
+1
+(t
+2
+;s)
+ 
+Z
+1
+0
+'(f
+1
+(t
+1
+;s;y(s))) d
+s
+g
+1
+(t
+1
+;s)j
+  ka
+1
+(t
+2
+) a
+1
+(t
+1
+)k +j
+Z
+1
+0
+'(f
+1
+(t
+2
+;s;y(s))) d
+s
+g
+1
+(t
+2
+;s)
+ 
+Z
+1
+0
+'(f
+1
+(t
+1
+;s;y(s))) d
+s
+g
+1
+(t
+2
+;s)j +j
+Z
+1
+0
+'(f
+1
+(t
+1
+;s;y(s))) d
+s
+g
+1
+(t
+2
+;s)
+ 
+Z
+1
+0
+'(f
+1
+(t
+1
+;s;y(s))) d
+s
+g
+1
+(t
+1
+;s)j
+  ka
+1
+(t
+2
+) a
+1
+(t
+1
+)k
+Electronic Journal. http://www.math.spbu.ru/diffjournal 147Differential Equations and Control Processes, N 2, 2018
++
+Z
+1
+0
+j'(f
+1
+(t
+2
+;s;y(s)) f
+1
+(t
+1
+;s;y(s)))j d
+s
+(
+s
+_
+z=0
+g
+1
+(t
+2
+;z))
++
+Z
+1
+0
+j'(f
+1
+(t
+1
+;s;y(s)))j d
+s
+(
+s
+_
+z=0
+[g
+1
+(t
+2
+;z) g
+1
+(t
+1
+;z))])
+  ka
+1
+(t
+2
+) a
+1
+(t
+1
+)k +kf
+1
+(t
+2
+;s;y(s)) f
+1
+(t
+1
+;s;y(s))k
+Z
+1
+0
+d
+s
+g
+1
+(t
+2
+;s)
++
+Z
+1
+0
+kf
+1
+(t
+1
+;s;y(s))k d
+s
+[g
+1
+(t
+2
+;s) g
+1
+(t
+1
+;s))]
+  ka
+1
+(t
+2
+) a
+1
+(t
+1
+)k
++ kf
+1
+(t
+2
+;s;y(s)) f
+1
+(t
+1
+;s;y(s))k [g
+1
+(t
+2
+; 1) g
+1
+(t
+2
+; 0)]
++ M[(g
+1
+(t
+2
+; 1) g
+1
+(t
+1
+; 0))  (g
+1
+(t
+2
+; 0) g
+1
+(t
+1
+; 0))]
+  ka
+1
+(t
+2
+) a
+1
+(t
+1
+)k
++ kf
+1
+(t
+2
+;s;y(s)) f
+1
+(t
+1
+;s;y(s))k [g
+1
+(t
+2
+; 1) g
+1
+(t
+2
+; 0)]
++ M[jg
+1
+(t
+2
+; 1) g
+1
+(t
+1
+; 0)j +jg
+1
+(t
+2
+; 0) g
+1
+(t
+1
+; 0)j]
+Similarly we can show that
+kA
+2
+x(t
+2
+)   A
+2
+x(t
+1
+)k ka
+2
+(t
+2
+) a
+2
+(t
+1
+)k
++ kf
+2
+(t
+2
+;s;x(s)) f
+2
+(t
+1
+;s;x(s))k [g
+2
+(t
+2
+; 1) g
+2
+(t
+2
+; 0)]
++ M[jg
+2
+(t
+2
+; 1) g
+2
+(t
+1
+; 0)j +jg
+2
+(t
+2
+; 0) g
+2
+(t
+1
+; 0)j]
+Now, we obtain
+A(x;y)(t
+2
+) A(x;y)(t
+1
+) = (A
+1
+y(t
+2
+);A
+2
+x(t
+2
+))  (A
+1
+y(t
+1
+);A
+2
+x(t
+1
+))
+= ((A
+1
+y(t
+2
+) A
+1
+y(t
+1
+)); (A
+2
+x(t
+2
+) A
+2
+x(t
+1
+)))
+and
+kA(x;y)(t
+2
+)   A(x;y)(t
+1
+)k kA
+1
+y(t
+2
+) A
+1
+y(t
+1
+)k +kA
+2
+x(t
+2
+) A
+2
+x(t
+1
+)k
+  ka
+1
+(t
+2
+) a
+1
+(t
+1
+)k
++ kf
+1
+(t
+2
+;s;y(s)) f
+1
+(t
+1
+;s;y(s))k [g
+1
+(t
+2
+; 1) g
+1
+(t
+2
+; 0)]
++ M[jg
+1
+(t
+2
+; 1) g
+1
+(t
+1
+; 0)j +jg
+1
+(t
+2
+; 0) g
+1
+(t
+1
+; 0)j]
+  ka
+2
+(t
+2
+) a
+2
+(t
+1
+)k
++ kf
+2
+(t
+2
+;s;x(s)) f
+2
+(t
+1
+;s;x(s))k [g
+2
+(t
+2
+; 1) g
+2
+(t
+2
+; 0)]
++ M[jg
+2
+(t
+2
+; 1) g
+2
+(t
+1
+; 0)j +jg
+2
+(t
+2
+; 0) g
+2
+(t
+1
+; 0)j]
+Note thatQ is nonempty, uniformly bounded and strongly equi-continuous sub-
+set of X; by the uniform boundedness of AQ: Thus, according to propositions
+Electronic Journal. http://www.math.spbu.ru/diffjournal 148Differential Equations and Control Processes, N 2, 2018
+1, AQ is relatively weakly compact.
+It remains to prove that A is weakly sequentially continuous.
+Letfy
+n
+(t)g andfx
+n
+(t)g be sequence in C[I;E] weakly convergent to y(t) and
+x(t) respectively (8t2I), sincef
+1
+(t;s;:) andf
+2
+(t;s;:) are weakly continuous.
+Then f
+1
+(t;s;y
+n
+(s)) and f
+2
+(t;s;x
+n
+(s)) converge weakly to f
+1
+(t;s;y(s)) and
+f
+2
+(t;s;x(s)) respectively. Furthermore, (8 ' 2 E
+ 
+) '(f
+1
+(t;s;y
+n
+(s))) and
+'(f
+2
+(t;s;x
+n
+(s))) converge strongly to '(f
+1
+(t;s;y(s))) and '(f
+2
+(t;s;x(s))) re-
+spectively. Using assumption (3) and applying Lebesgue dominated conver-
+gence theorem, we get
+'(
+Z
+1
+0
+f
+1
+(t;s;y
+n
+(s)) d
+s
+g
+1
+(t;s)) =
+Z
+1
+0
+'(f
+1
+(t;s;y
+n
+(s))) d
+s
+g
+1
+(t;s)
+!
+Z
+1
+0
+'(f
+1
+(t;s;y(s))) d
+s
+g
+1
+(t;s);8'2E
+ 
+; t2I:
+Moreover, we have
+'(
+Z
+1
+0
+f
+2
+(t;s;x
+n
+(s)) d
+s
+g
+2
+(t;s)) =
+Z
+1
+0
+'(f
+2
+(t;s;x
+n
+(s))) d
+s
+g
+2
+(t;s)
+!
+Z
+1
+0
+'(f
+2
+(t;s;x(s))) d
+s
+g
+2
+(t;s);8'2E
+ 
+; t2I:
+Thus, A is weakly sequentially continuous on Q.
+Since all conditions of Theorem 1 are satis ed, then the operatorA has at least
+one  xed point (x;y) = u2 Q and the coupled system of Urysohn-Stieltjes
+integral equations (2) has at least one weak solution.
+3 Hammerstien-Stieltjes coupled system
+This section, as an application, deals with the existence of weak continuous
+solution for the coupled system of Hammerstien-Stieltjes integral equations (3),
+consider the following the assumption:
+(ii)
+ 
+Let h
+i
+: I E! E and k
+i
+: I I! R
++
+are such that h
+i
+;k
+i
+satisfy the
+following assumptions:
+(1)
+ 
+h
+i
+(s;x(s)) are weakly-weakly continuous functions.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 149Differential Equations and Control Processes, N 2, 2018
+(2)
+ 
+There exists a constant M such thatkh
+i
+(s;x)k M:
+(3)
+ 
+k
+i
+(t;s) is continuous function such thatK = sup
+t
+jk
+i
+(t;s)j; whereK
+is positive constant.
+De nition 3 By a weak solution for the coupled system (3), we mean the pair
+of functions (x;y)2C[I;E] C[I;E] such that
+'(x(t)) = '(a
+1
+(t)) +
+Z
+1
+0
+k
+1
+(t;s)'(h
+1
+(s;y(s))) d
+s
+g
+1
+(t;s); t2I
+'(y(t)) = '(a
+2
+(t)) +
+Z
+1
+0
+k
+2
+(t;s)'(h
+2
+(s;x(s))) d
+s
+g
+2
+(t;s); t2I
+for all '2E
+ 
+:
+Now, to prove the existence of a weak solutions of (3), we have the following
+theorem
+Theorem 3 Let the assumptions (i),(iii)-(v)and (ii)
+ 
+be satis ed. Then the
+coupled system of Hammerstien-Stieltjes integral equations (3) has at least one
+weak solution (x;y)2X:
+Proof. Let
+f
+i
+(t;s;x(s)) =k
+i
+(t;s)h
+i
+(s;x(s)):
+Then from the assumption (ii)
+ 
+, we  nd that the assumptions of Theorem 2
+are satis ed and result follows.
+Example : Consider the functions g
+i
+:I I!R de ned by the formula
+g
+1
+(t;s) =
+(
+t ln
+t+s
+t
+; for t2 (0; 1]; s2I;
+0; for t = 0; s2I:
+g
+2
+(t;s) = t(t +s  1); t2I:
+It can be easily seen that the functions g
+1
+(t;s) and g
+2
+(t;s) satisfy assumptions
+(iii)-(v) given in Theorem 2. In this case, the coupled system of Urysohn-
+Electronic Journal. http://www.math.spbu.ru/diffjournal 150Differential Equations and Control Processes, N 2, 2018
+Stieltjes integral equations (2) has the form
+x(t) = a
+1
+(t) +
+Z
+1
+0
+t
+t +s
+f
+1
+(t;s;y(s) ds; t2I
+(4)
+y(t) = a
+2
+(t) +
+Z
+1
+0
+tf
+2
+(t;s;x(s)) ds; t2I
+Therefore, the coupled system (4) has at least one weak solutionu = (x;y)2X:
+References
+[1] J. Bana  s, Some properties of Urysohn-Stieltjes integral operators, Intern.
+J. Math. and Math. Sci. 21(1998) 78-88.
+[2] J. Bana  s, J.R. Rodriguez and K. Sadarangani, On a class of Urysohn-
+Stieltjes quadratic integral equations and their applications, J. Comput.
+Appl. Math. I13(2000) 35-50.
+[3] J. Bana  s and J. Dronka, Integral operators of Volterra-Stieltjes type,
+their properties and applications, Math. Comput. Modelling. 32(2000) (11-
+13)1321-1331.
+[4] J. Bana  s and K. Sadarangani, Solvability of Volterra-Stieltjes operator-
+integral equations and their applications, Comput Math. Appl. 41(12)(2001)
+1535-1544.
+[5] J. Bana  s, J.C. Mena, Some Properties of Nonlinear Volterra-Stieltjes Inte-
+gral Operators, Comput Math. Appl. 49(2005) 1565-1573.
+[6] J. Bana  s, D. O'Regan, Volterra-Stieltjes integral operators, Math. Comput.
+Modelling. 41(2005) 335-344.
+[7] C.W. Bitzer, Stieltjes-Volterra integral equations, Illinois J. Math.
+14(1970) 434-451.
+[8] J.M. Ball, Weak continuity properties of mappings and semigroups, Proc.
+Royal. Soc. Edinbourgh Sect. A 72(1973-1974), 275-280. MR 53]1354.
+[9] S. Chen, Q. Huang and L.H. Erbe, Bounded and zero-convergent solutions
+of a class of Stieltjes integro-differential equations, Proc. Amer. Math. Soc.
+113(1991) 999-1008.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 151Differential Equations and Control Processes, N 2, 2018
+[10] J. Diestel, J.J. Uhl Jr., Vector Measures, in: Math. Surveys, vol. 15, Amer.
+Math. Soc, Providence, RI, (1977).
+[11] N. Dunford, J. T. Schwartz, Linear operators, Interscience, Wiley, New
+York. (1958).
+[12] A.M.A. EL-Sayed, H.H.G. Hashem, Weak maximal and minimal solu-
+tions for Hammerstein and Urysohn integral equations in reexive Banach
+spaces, Differential Equation and Control Processes. 4(2008) 50-62.
+[13] A.M.A. El-Sayed, H.H.G. Hashem, Existence Results for Coupled Systems
+of Quadratic Integral Equations of Fractional Orders, Optimization Letters,
+7(2013) 1251-1260.
+[14] A.M.A. El-Sayed, H.H.G. Hashem, Solvability of coupled systems of
+fractional order integro-differential equations, J. Indones. Math. Soc.
+19(2)(2013) 111121.
+[15] R.F. Geitz, Pettis integration, Proc. Amer. Math. Soc. 82(1981) 81-86.
+[16] H.H.G. Hashem, On successive approximation method for coupled systems
+of Chandrasekhar quadratic integral equations, Journal of the Egyptian
+Mathematical Society. 23(2015) 108112.
+[17] E.Hille and R. S. Phillips, Functional Analysis and Semi-groups, Amer.
+Math. Soc. Colloq. Publ. Providence, R. I. (1957).
+[18] J.S. Macnerney, Integral equations and semigroups, Illinois J. Math.
+7(1963) 148-173.
+[19] A.B. Mingarelli, Volterra-Stieltjes integral equations and generalized ordi-
+nary differential expressions, Lecture Notes in Math., 989, Springer (1983).
+[20] I.P. Natanson, Theory of Functions of a Real Variable, Ungar, New York.
+(1960).
+[21] D. O'Regan, Fixed point theory for weakly sequentially continuous map-
+ping, Math. Comput. Modeling. 27(1998) 1-14.
+[22] H.A.H. Salem, Quadratic integral equations in reexive Banach spaces,
+Discuss. Math. Differ. Incl. Control Optim. 30(2010) 61-69.
+[23] A. Szep, Existence theorem for weak solutions of ordinary differential equa-
+tions in reexive Banach spaces, Studia Sci. Math. Hungar. 6(1971) 197-
+203.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 152Differential Equations and Control Processes, N 2, 2018
+[24] S. Szua, Kneser's theorem for weak solutions of ordinary differential equa-
+tion in reexive Banach spaces, Bull. Polish Acad. Sci. Math. 26(1978)
+407-413.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 153
