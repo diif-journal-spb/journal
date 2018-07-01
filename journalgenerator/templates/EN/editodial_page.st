@@ -4,7 +4,7 @@ $about_content()$
 
 <h3>Editor-in-Chief</h3>
 <ul>
-  <li><strong>Gennadii Alexeevich Leonov</strong><br />corresponding member of RAS, professor, Doctor of Science</li>
+  <li><strong>Nikolay V. Kuznetsov</strong><br />professor, Doctor of Science</li>
 </ul>
 
 <h3>Editor</h3>

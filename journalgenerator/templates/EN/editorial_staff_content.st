@@ -1,8 +1,8 @@
 
 <h3>Editor-in-Chief</h3>
-<h4>Gennady A. Leonov</h4>
+<h4>Nikolay V. Kuznetsov</h4>
 <p>
-corresponding member of RAS, professor, Doctor of Science<br />
+Dr. of Sci., Professor<br />
 St. Petersburg State University, Russia
 </p>
 
@@ -17,8 +17,7 @@ e-mail: <a href="mailto:n.ampilova@spbu.ru">n.ampilova@spbu.ru</a>
 
 <h3>Technical Support</h3>
 <h4>Eugene I. Petrenko</h4>
-<p>
-PhD<br />
+<p>PhD<br />
 St. Petersburg State University, Russia<br />
 e-mail: <a href="mailto:jodiff@mail.ru">jodiff@mail.ru</a>
 </p>

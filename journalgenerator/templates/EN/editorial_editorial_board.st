@@ -38,14 +38,6 @@
 </div>
 
 <div class="editor">
-<span class="name">Nikolay V. Kuznetsov</span>
-<span class="title">professor, Doctor of Science</span>
-<span class="work">University of Jyvaskyla (Finland)</span>
-<span class="work">St. Petersburg State University (Russia)</span>
-<span class="email">kuznetsov@math.spbu.ru</span>
-</div>
-
-<div class="editor">
 <span class="name">Pekka Neittaanmäki</span>
 <span class="title">professor</span>
 <span class="work">University of Jyvaskyla (Finland)</span>
