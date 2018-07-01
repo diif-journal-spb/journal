@@ -44,7 +44,7 @@ namespace EugenePetrenko.DataMigration
       foreach (var _file in Directory.GetFiles(baseDir, pattern))
       {
         var file = _file;
-        Console.Out.WriteLine("Processing " + file);
+        // Console.Out.WriteLine("Processing " + file);
         ec.Catch(file, 
           () => processor(file), 
           e => e.Log("Failed to process {0}.\n{1}\n{2}", file, e.Message, e.Exception));
