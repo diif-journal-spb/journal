@@ -20,7 +20,6 @@ e-mail: <a href="mailto:n.ampilova@spbu.ru">n.ampilova@spbu.ru</a>
 <p>
 кфмн<br />
 Санкт-Петербургский Государственный Университет<br />
-тел.: +7 921 957 5331<br />
 e-mail: <a href="mailto:jodiff@mail.ru">jodiff@mail.ru</a>
 </p>
 
