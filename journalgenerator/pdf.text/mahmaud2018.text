@@ -1,0 +1,2405 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 2, 2018
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/diffjournal
+e-mail: jodiff@mail.ru
+Functional differential equations
+EXISTENCE AND UNIQUENESS OF PERIODIC SOLUTIONS
+FOR A KIND OF THIRD-ORDER FUNCTIONAL
+DIFFERENTIAL EQUATION WITH A TIME-DELAY
+A. M. MAHMOUD
+Department of Mathematics, Faculty of Science, New Valley Branch,
+Assiut University. New Valley, El-Khargah 72111, Egypt.
+Email address: math ayman27@yahoo.com
+Abstract
+In this paper, by using the Mawhin coincidence degree theory and analysis techniques,
+we establish new results on the existence and uniqueness of T-periodic solutions for a kind
+of third-order functional differential equation (FDE) with a time-delay.
+The obtained results are new and complement the related results of third-order (FDE)
+with a time-delay that have appeared in the literature. In the last section, we give an
+example to illustrate our main results of periodic solutions.
+Mathematics Subject Classi cation. 34C25, 34K09.
+Keywords and phrases: Periodic solutions, Existence and uniqueness,
+Third-order (FDE), Coincidence degree, Mawhin's continuation theorem.
+1 Introduction
+In recent years numerous methods have been developed to study the dif-
+ferential equations (DEs). Exact methods (quantitative), in which all the so-
+lutions are known and could be written in closed form in terms of elementary
+functions or sometime special functions. There are also some other type of
+methods, called analytical methods (qualitative), in which one can describe theDifferential Equations and Control Processes, N 2, 2018
+behaviour of a differential equation's solution, such as existence of solutions,
+uniqueness, stability, instability, chaotic or asymptotic character, boundedness,
+periodicity, etc., without actually solving it exactly. This is an important and
+relatively new step in the theory of (DEs), because most of the (DEs) cannot
+be solved exactly.
+The investigation of the qualitative properties of solutions of (FDEs) for
+higher-order of solutions play an important role in many real world phenomena
+related to the sciences and engineering technique  elds. (FDEs) of higher-
+order can serve as excellent tools for description of mathematical modeling of
+systems and processes in population dynamics, stochastic processes, physics,
+control theory, neural networks, mechanics, etc.
+Existence and uniqueness of periodic solutions for (FDEs) are of great in-
+terest in mathematics and its applications to the modeling of various practical
+problems.
+In recent years, many books and papers dealt with the existence and unique-
+ness of periodic solutions for (FDEs) with applications and obtained many good
+results, for example, [3, 7, 8, 11, 12], etc.
+Continuation theorem of coincidence degree theory plays a signi cant role
+in the investigation of the existence of periodic solutions for (FDEs) of higher-
+order.
+The existence and uniqueness of periodic solutions of third-order (FDEs)
+with a or more deviating arguments have been widely investigated and are still
+being investigated, for example, (see [1, 2, 5, 6, 9, 10, 13, 14, 15, 16, 17, 18, 19,
+20, 21], and the references therein).
+In 2010, Tun  c [15] established certain su cient conditions by using the
+Lyapunov functional approach for the existence of a periodic solution of the
+nonlinear differential equation of the third-order with constant deviating argu-
+ment (  > 0)
+...
+x + ( _ x)  x +g( _ x(t  )) +f(x) =p(t;x;x(t  ); _ x; _ x(t  );  x):
+Moreover, In 2011, Abou-El-Ela, Sadek and Mahmoud [1] studied the existence
+and uniqueness of periodic solutions to third-order delay differential equation
+with a deviating argument of the form
+...
+x(t) +f(t;x(t))  x(t) +g(x(t)) _ x(t) +h(t;x(t r(t))) =p(t):
+The main objective of this work is to establish criteria to guarantee the existence
+and uniqueness of aT -periodic solution for third-order (FDE) with a time-delay
+Electronic Journal. http://www.math.spbu.ru/diffjournal 193Differential Equations and Control Processes, N 2, 2018
+as the following form
+...
+x(t) +f( _ x(t))( x(t))
+2
++g(t;x(t)) _ x(t) +h(t;x(t  (t))) =p(t): (1.1)
+We can write Equation (1.1) in the following equivalent system
+_ x =y; _ y =z;
+_ z = f(y)z
+2
+ g(t;x(t))y h(t;x(t  (t))) +p(t);
+(1.2)
+wheref; ;p :R!R andh;g :R R!R are continuous functions;f(0) = 0,
+  and p are T -periodic, and g is T -periodic in the  rst argument with period
+T > 0.
+By applying the continuation theorem of the coincidence degree theory, we
+obtain new results, which complement previously known results. An illustrative
+example is given in the last section.
+The rest of this paper is organized as follows. In section 2 we state some
+preliminary results and other technical details and we shall prove the main
+existence results and in section 3 we shall establish main result s of uniqueness.
+We will give an example of an application in section 4.
+2 Preliminary Results
+In this section we give some technical, yet elementary results, that will serve
+us well in the section that follows.
+For ease of exposition throughout this article we shall adopt the following
+notation:
+jxj
+k
+= (
+Z
+T
+0
+jx(t)j
+k
+dt)
+1
+k
+;k  1; jxj
+1
+= max
+t2[0;T ]
+jx(t)j
+and
+jpj
+1
+= max
+t2[0;T ]
+jp(t)j:
+Let
+X =fxjx2C
+2
+(R;R);x(t +T ) =x(t); for allt2Rg
+and
+Y =fyjy2C(R;R);y(t +T ) =y(t); for allt2Rg;
+be two Banach spaces with the norms
+kxk
+X
+= maxfjxj
+1
+;j _ xj
+1
+;j xj
+1
+g andkyk
+Y
+=jyj
+1
+:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 194Differential Equations and Control Processes, N 2, 2018
+De ne a linear operator L :D(L) X!Y by setting
+D(L) =fxjx2X;
+...
+x(t)2C(R;R)g;
+and for x2D(L)
+Lx =
+...
+x(t): (2.1)
+We also de ne a nonlinear operator N :X!Y by setting
+Nx = f( _ x(t))( x(t))
+2
+ g(t;x(t)) _ x(t) h(t;x(t  (t))) +p(t): (2.2)
+Then we notice that
+KerL =R and ImL =fyjy2Y;
+Z
+T
+0
+y(s)ds = 0g:
+Thus the operator L is a Fredholm operator with index zero.
+De ne the continuous projectorP :X!KerL and the averaging projector
+Q :Y!Y by setting
+Px(t) =
+1
+T
+Z
+T
+0
+x(s)ds and Qy(t) =
+1
+T
+Z
+T
+0
+y(s)ds:
+Hence ImP = KerL and KerQ = ImL. Denoting by L
+ 1
+P
+: ImL! D(L)\
+KerP the inverse of Lj
+D(L)\KerP
+, we have
+L
+ 1
+P
+y(t) =
+Z
+T
+0
+ 
+(s t T=2)
+3
+6T
+ 
+Ts
+24
+ 
+y(s)ds +
+Z
+T
+0
+(t s)
+2
+2
+y(s)ds:
+Therefore we can see from (2.2) and the above equation, that N is L-compact
+on
+ 
+
+, where 
+ is an open bounded subset in X.
+To prove the main result of existence and uniqueness of a T-periodic solution
+for the third-order functional differential equation with a deviating argument,
+we use the continuation theorem of coincidence degree theory and analysis tech-
+niques.
+For convenience of use, we introduce the continuation theorem of coinci-
+dence degree theory formulated in [4] as follows.
+Theorem 2.1 let X and Y be two Banach spaces. Suppose that L : D(L) 
+X! Y is a Fredholm operator with index zero and N : X! Y is L-compact
+on
+ 
+
+, where 
+ is an open bounded subset in X. In addition, if the following
+conditions hold:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 195Differential Equations and Control Processes, N 2, 2018
+(1) Lx6= Nx; for all x2@
+\D(L) and  2 (0; 1);
+(2) QNx6= 0; for all x2@
+\KerL;
+(3) degfQN; 
+\KerL; 0g6= 0:
+Then equation Lx =Nx has at least one solution on
+ 
+
+.
+It is convenient to introduce the following assumption.
+(A
+0
+) Assume that there exist non-negative constants c
+1
+and c
+2
+such that
+f2C
+1
+(R;R); f
+0
+(y)  0;jf(y
+1
+) f(y
+2
+)j c
+1
+jy
+1
+ y
+2
+j; f(0) = 0;
+for all y;y
+1
+;y
+2
+2R; andjg(t;x)j c
+2
+, for all t;x2R.
+In view of (2.1) and (2.2) the operator equation
+Lx = Nx;
+is equivalent to the following equation
+...
+x(t) + ff( _ x(t))( x(t))
+2
++g(t;x(t)) _ x(t) +h(t;x(t  (t)))g = p(t); 2 (0; 1):
+(2.3)
+The following lemmas are very important to prove the existence of the most
+one T-periodic solution of (1.1).
+Lemma 2.1 Suppose that there exists a constant d> 0 such that
+(A
+1
+) xfh(t;x) p(t)g< 0; for all t2R and jxj d:
+If x(t) is a T -periodic solution of (2.3), then
+jxj
+1
+ d +
+1
+2
+p
+Tj _ xj
+2
+: (2.4)
+Proof. Let x(t) be a T -periodic solution of (2.3) for a certain  2 (0; 1). Set
+x(t
+1
+) = max
+t2R
+x(t); x(t
+2
+) = min
+t2R
+x(t); where t
+1
+;t
+2
+2R;
+therefore we obtain
+_ x(t
+1
+) = 0;  x(t
+1
+)  0;
+...
+x(t
+1
+)  0; and _ x(t
+2
+) = 0;  x(t
+2
+)  0;
+...
+x(t
+2
+)  0:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 196Differential Equations and Control Processes, N 2, 2018
+It follows from (2.3) that
+h(t
+1
+;x(t
+1
+  (t
+1
+))) p(t
+1
+)  0; and h(t
+2
+;x(t
+1
+  (t
+2
+))) p(t
+2
+)  0:
+Taking this together with (A
+1
+) as appropriate we have
+x(t
+1
+  (t
+1
+))<d and x(t
+2
+  (t
+2
+))> d:
+Since x(t  (t)) is a continuous function on R, this implies that there exists
+ 2R such that
+jx(   ( ))j d:
+let    ( ) =mT +t
+0
+, where t
+0
+2 [0;T ] and m be an integer then we obtain
+jx(t)j =jx(t
+0
+) +
+Z
+t
+t
+0
+_ x(s)dsj d +
+Z
+t
+t
+0
+j _ x(s)jds; t2 [t
+0
+;t
+0
++T ];
+and
+jx(t)j =jx(t T )j =jx(t
+0
+) 
+Z
+t
+0
+t T
+_ x(s)dsj d +
+Z
+t
+0
+t T
+j _ x(s)jds; t2 [t
+0
+;t
+0
++T ]:
+Combining the above two inequalities, we have
+jxj
+1
+= max
+t2[t
+0
+;t
+0
++T ]
+jx(t)j
+  max
+t2[t
+0
+;t
+0
++T ]
+ 
+d +
+1
+2
+ Z
+t
+t
+0
+j _ x(s)jds +
+Z
+t
+0
+t T
+j _ x(s)jds
+  
+= max
+t2[t
+0
+;t
+0
++T ]
+ 
+d +
+1
+2
+Z
+t
+t T
+j _ x(s)jds
+ 
+=d +
+1
+2
+Z
+T
+0
+j _ x(s)jds d +
+1
+2
+p
+Tj _ xj
+2
+:
+This completes the proof of Lemma 2.1.
+Lemma 2.2 Suppose that (A
+0
+) and (A
+1
+) hold, and the following condition is
+satis ed:
+(A
+2
+) There exists a non-negative constant b such that
+jh(t;x
+1
+) h(t;x
+2
+)j bjx
+1
+ x
+2
+j; for all t;x
+1
+;x
+2
+2R
+and
+c
+2
+T
+2
+4
++b
+T
+3
+8
+< 1:
+If x(t) is a T -periodic solution of (1.1), then
+j xj
+1
+ 
+1
+2
+[bd + maxfjh(t; 0)j : 0 t Tg +jpj
+1
+]T
+1  (c
+2
+T
+2
+4
++b
+T
+3
+8
+)
+:=D:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 197Differential Equations and Control Processes, N 2, 2018
+Proof. Let x(t) be a T-periodic solution of (1.1). Multiplying (1.1) by
+...
+x(t)
+and then integrating it over [0;T ], implies
+Z
+T
+0
+j
+...
+x(t)j
+2
+dt = 
+Z
+T
+0
+f( _ x(t))( x(t))
+2
+...
+x(t)dt 
+Z
+T
+0
+g(t;x(t)) _ x(t)
+...
+x(t)dt
+ 
+Z
+T
+0
+h(t;x(t  (t)))
+...
+x(t)dt +
+Z
+T
+0
+p(t)
+...
+x(t)dt
+=
+1
+3
+Z
+T
+0
+f
+0
+( _ x(t))( x(t))
+4
+dt 
+Z
+T
+0
+g(t;x(t)) _ x(t)
+...
+x(t)dt
+ 
+Z
+T
+0
+h(t;x(t  (t)))
+...
+x(t)dt +
+Z
+T
+0
+p(t)
+...
+x(t)dt:
+By using condition (A
+0
+) we  nd
+j
+...
+x(t)j
+2
+2
+ 
+Z
+T
+0
+fjh(t;x(t  (t))) h(t; 0)j +jh(t; 0)jgj
+...
+x(t)jdt
++c
+2
+Z
+T
+0
+j _ x(t)jj
+...
+x(t)jdt +
+Z
+T
+0
+jp(t)jj
+...
+x(t)jdt:
+Then from condition (A
+2
+), we obtain
+j
+...
+x(t)j
+2
+2
+ b
+Z
+T
+0
+jx(t  (t))jj
+...
+x(t)jdt +
+Z
+T
+0
+jh(t; 0)jj
+...
+x(t)jdt
++c
+2
+Z
+T
+0
+j _ x(t)jj
+...
+x(t)jdt +
+Z
+T
+0
+jp(t)jj
+...
+x(t)jdt
+ c
+2
+Z
+T
+0
+j _ x(t)jj
+...
+x(t)jdt +bjxj
+1
+Z
+T
+0
+j x(t)jdt
++ maxfjh(t; 0)j : 0 t Tg
+Z
+T
+0
+j
+...
+x(t)jdt +jpj
+1
+Z
+T
+0
+j
+...
+x(t)jdt:
+Thus from (2.4) and by using Cauchy-Schwarz inequality, we have
+j
+...
+xj
+2
+2
+  [bd + maxfjh(t; 0)j : 0 t Tg +jpj
+1
+]
+p
+Tj
+...
+xj
+2
++c
+2
+j _ xj
+2
+j
+...
+xj
+2
++
+1
+2
+bTj _ xj
+2
+j
+...
+xj
+2
+:
+(2.5)
+Since x(0) =x(T ) there exists a constant  2 [0;T ] such that _ x( ) = 0 and
+j _ x(t)j =j _ x( ) +
+Z
+t
+ 
+ x(s)dsj 
+Z
+t
+ 
+j x(s)jds; t2 [ ;T + ]: (2.6)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 198Differential Equations and Control Processes, N 2, 2018
+Again
+j _ x(t)j =j _ x(  +T ) +
+Z
+t
+ +T
+ x(s)dsj
+ j _ x(  +T )j +
+Z
+ +T
+t
+j x(s)jds =
+Z
+ +T
+t
+j x(s)jds; t2 [0;T ]:
+(2.7)
+The inequalities (2.6) and (2.7) imply that
+2j _ x(t)j 
+Z
+t
+ 
+j x(s)jds +
+Z
+ +T
+t
+j x(s)jds =
+Z
+T
+0
+j x(s)jds; t2 [0;T ]:
+Therefore by using Cauchy-Schwarz inequality we have
+j _ x(t)j 
+1
+2
+p
+T (
+Z
+T
+0
+j x(s)j
+2
+ds)
+1
+2
+; for all t2 [0;T ]; (2.8)
+so
+j _ xj
+1
+ 
+1
+2
+p
+Tj xj
+2
+; (2.9)
+j _ xj
+2
+ 
+p
+T max
+t2[0;T ]
+j _ x(s)j 
+1
+2
+T (
+Z
+T
+0
+j x(s)j
+2
+ds)
+1
+2
+=
+1
+2
+Tj xj
+2
+: (2.10)
+Since x(t) is periodic function for t2 [0;T ] and by using the above similar
+technique we  nd
+j x(t)j 
+1
+2
+Z
+T
+0
+j
+...
+x(t)jdt:
+Which together with Cauchy-Schwarz inequality implies
+j xj
+1
+ 
+1
+2
+p
+T (
+Z
+T
+0
+j
+...
+x(s)j
+2
+ds)
+1
+2
+=
+1
+2
+p
+Tj
+...
+xj
+2
+; (2.11)
+j xj
+2
+ 
+p
+T max
+t2[0;T ]
+j x(s)j 
+1
+2
+p
+T
+Z
+T
+0
+j
+...
+x(s)jds 
+1
+2
+Tj
+...
+xj
+2
+: (2.12)
+By substituting from (2.12) in (2.10) we get
+j _ xj
+2
+ 
+1
+4
+T
+2
+j
+...
+xj
+2
+: (2.13)
+By substituting from (2.12) in (2.9) we have
+j _ xj
+1
+ 
+1
+4
+T
+3
+2
+j
+...
+xj
+2
+: (2.14)
+Electronic Journal. http://www.math.spbu.ru/diffjournal 199Differential Equations and Control Processes, N 2, 2018
+From (2.4) and (2.13) we obtain
+jxj
+1
+ d +
+1
+8
+T
+5
+2
+j
+...
+xj
+2
+: (2.15)
+Then by substituting from (2.13) in (2.5) we  nd
+j
+...
+xj
+2
+2
+  (c
+2
+T
+2
+4
++b
+T
+3
+8
+)j
+...
+xj
+2
+2
++ [bd + maxfjh(t; 0)j : 0 t Tg +jpj
+1
+]
+p
+Tj
+...
+xj
+2
+:
+(2.16)
+Thus we get
+(1 c
+2
+T
+2
+4
+ b
+T
+3
+8
+)j
+...
+xj
+2
+2
+  [bd + maxfjh(t; 0)j : 0 t Tg +jpj
+1
+]
+p
+Tj
+...
+xj
+2
+:
+Therefore we  nd
+j
+...
+xj
+2
+ 
+[bd + maxfjh(t; 0)j : 0 t Tg +jpj
+1
+]
+p
+T
+1 c
+2
+T
+2
+4
+ b
+T
+3
+8
+: (2.17)
+By substituting from (2.17) in (2.14) and (2.11) we obtain
+j _ xj
+1
+ 
+1
+4
+[bd + maxfjh(t; 0)j : 0 t Tg +jpj
+1
+]T
+2
+1  (c
+2
+T
+2
+4
++b
+T
+3
+8
+)
+:=
+T
+2
+D; (2.18)
+and
+j xj
+1
+ 
+1
+2
+[bd + maxfjh(t; 0)j : 0 t Tg +jpj
+1
+]T
+1  (c
+2
+T
+2
+4
++b
+T
+3
+8
+)
+:=D: (2.19)
+This completes the proof of Lemma 2.2.
+Theorem 2.2 Suppose that assumption (A
+1
+) holds, and the following condition
+is satis ed:
+(A
+3
+) Assume that (A
+0
+) holds, g(t;x) g(t) for all t;x
+1
+;x
+2
+2R and h(t;x) is
+a strictly monotone decreasing function in x such that
+c
+2
+T
+2
+4
++c
+1
+D
+2
+T
+4
+8
++c
+1
+D
+2
+T
+2
+4
++b
+T
+3
+8
+< 1;
+and
+jh(t;x
+1
+) h(t;x
+2
+)j bjx
+1
+ x
+2
+j; for all t;x
+1
+;x
+2
+2R:
+Then equation (1.1) has at most one T-periodic solution.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 200Differential Equations and Control Processes, N 2, 2018
+Proof. Suppose thatx
+1
+(t) andx
+2
+(t) are two T-periodic solutions of (1.1), then
+we have
+...
+x
+1
+(t) 
+...
+x
+2
+(t) +f( _ x
+1
+(t))( x
+1
+(t))
+2
+ f( _ x
+2
+(t))( x
+2
+(t))
+2
++g(t) _ x
+1
+(t) g(t) _ x
+2
+(t)
++h(t;x
+1
+(t  (t))) h(t;x
+2
+(t  (t))) = 0:
+Let u(t) =x
+1
+(t) x
+2
+(t): Then we get
+...
+u(t) +f( _ x
+1
+(t))( x
+1
+(t))
+2
+ f( _ x
+2
+(t))( x
+2
+(t))
+2
++g(t)f _ x
+1
+(t)  _ x
+2
+(t)g
++h(t;x
+1
+(t  (t))) h(t;x
+2
+(t  (t))) = 0:
+(2.20)
+Set
+u(
+ 
+t
+1
+) = max
+t2R
+u(t); u(
+ 
+t
+2
+) = min
+t2R
+u(t); where t
+1
+;t
+2
+2R:
+Therefore we  nd
+_ u(
+ 
+t
+1
+) = _ x
+1
+(
+ 
+t
+1
+)  _ x
+2
+(
+ 
+t
+1
+) = 0;  u(
+ 
+t
+1
+)  0;
+...
+u(
+ 
+t
+1
+)  0; (2.21)
+and the following
+_ u(
+ 
+t
+2
+) = _ x
+1
+(
+ 
+t
+2
+)  _ x
+2
+(
+ 
+t
+2
+) = 0;  u(
+ 
+t
+2
+)  0;
+...
+u(
+ 
+t
+2
+)  0: (2.22)
+Now we shall prove that there exists a constant    2R such that
+u(   ) = 0: (2.23)
+Contrarily, one of the following cases satis es:
+(i) u(t) =x
+1
+(t) x
+2
+(t)> 0, for all t2R.
+(ii) u(t) =x
+1
+(t) x
+2
+(t)< 0, for all t2R.
+If (i) holds, from (2.20) together with condition (A
+3
+), _ x
+1
+(
+ 
+t
+1
+) = _ x
+2
+(
+ 
+t
+1
+), we get
+...
+u(
+ 
+t
+1
+) = f( _ x
+1
+(
+ 
+t
+1
+))( x
+1
+(
+ 
+t
+1
+))
+2
++f( _ x
+2
+(
+ 
+t
+1
+))( x
+2
+(
+ 
+t
+1
+))
+2
+ g(
+ 
+t
+1
+)f _ x
+1
+(
+ 
+t
+1
+)  _ x
+2
+(
+ 
+t
+1
+)g
+ h(t;x
+1
+(
+ 
+t
+1
+  (
+ 
+t
+1
+))) +h(t;x
+2
+(
+ 
+t
+1
+  (
+ 
+t
+1
+)))
+= ( x
+1
+(
+ 
+t
+1
+))
+2
+ff( _ x
+1
+(
+ 
+t
+1
+)) f( _ x
+2
+(
+ 
+t
+1
+))g
+ fh(
+ 
+t
+1
+;x
+1
+(
+ 
+t
+1
+  (
+ 
+t
+1
+))) h(
+ 
+t
+1
+;x
+2
+(
+ 
+t
+1
+  (
+ 
+t
+1
+)))g
+> 0;
+which contradicts (2.21), so we have that (2.23) is true.
+If (ii) holds, in view of (2.20) and condition (A
+3
+), and _ x
+1
+(
+ 
+t
+2
+) = _ x
+2
+(
+ 
+t
+2
+), we obtain
+...
+u(
+ 
+t
+2
+) = f( _ x
+1
+(
+ 
+t
+2
+))( x
+1
+(
+ 
+t
+2
+))
+2
++f( _ x
+2
+(
+ 
+t
+2
+))( x
+2
+(
+ 
+t
+2
+))
+2
+ g(
+ 
+t
+2
+)f _ x
+1
+(
+ 
+t
+2
+)  _ x
+2
+(
+ 
+t
+2
+)g
+ h(t;x
+1
+(
+ 
+t
+2
+  (
+ 
+t
+2
+))) +h(t;x
+2
+(
+ 
+t
+2
+  (
+ 
+t
+2
+)))
+= ( x
+1
+(
+ 
+t
+2
+))
+2
+ff( _ x
+1
+(
+ 
+t
+2
+)) f( _ x
+2
+(
+ 
+t
+2
+))g
+ fh(
+ 
+t
+2
+;x
+1
+(
+ 
+t
+2
+  (
+ 
+t
+2
+))) h(
+ 
+t
+2
+;x
+2
+(
+ 
+t
+2
+  (
+ 
+t
+2
+)))g
+< 0;
+Electronic Journal. http://www.math.spbu.ru/diffjournal 201Differential Equations and Control Processes, N 2, 2018
+which contradicts of (2.22), thus (2.23) is true.
+Let     =nT +   , where   2 [0;T ] and n is an integer. Then u(  ) = 0:
+Thus
+ju(t)j =ju(  ) +
+Z
+t
+  
+_ u(s)dsj 
+Z
+t
+  
+j _ u(s)jds:
+Again
+ju(t)j =ju(   +T ) +
+Z
+t
+  +T
+_ u(s)dsj 
+Z
+  +T
+t
+j _ u(s)jds:
+Hence by using Cauchy-Schwarz inequality we have
+2ju(t)j 
+Z
+  +T
+  
+j _ u(s)jds =
+Z
+T
+0
+j _ u(s)jds 
+p
+T (
+Z
+T
+0
+j _ u(s)j
+2
+ds)
+1
+2
+=
+p
+Tj _ uj
+2
+:
+Therefore
+juj
+1
+ 
+1
+2
+p
+Tj _ uj
+2
+: (2.24)
+Multiplying (2.20) by
+...
+u(t) and then integrating it over [0;T ] it follows
+j
+...
+u(t)j
+2
+2
+= 
+Z
+T
+0
+ff(y
+1
+)( x
+1
+(t))
+2
+ f(y
+2
+)( x
+2
+(t))
+2
+g
+...
+u(t)dt
+ 
+Z
+T
+0
+g(t)f _ x
+1
+(t)  _ x
+2
+(t)g
+...
+u(t)dt
+ 
+Z
+T
+0
+fh(t;x
+1
+(t  (t))) h(t;x
+2
+(t  (t)))g
+...
+u(t)dt:
+From (A
+3
+) we get
+j
+...
+u(t)j
+2
+2
+ 
+Z
+T
+0
+jf(y
+1
+) f(y
+2
+)jj( x
+2
+(t))
+2
+jj
+...
+u(t)jdt +
+Z
+T
+0
+jg(t)jj _ x
+1
+(t)  _ x
+2
+(t))jj
+...
+u(t)jdt
++b
+Z
+T
+0
+jx
+1
+(t  (t)) x
+2
+(t  (t))jj
+...
+u(t)jdt
++
+Z
+T
+0
+jf(y
+1
+)jj( x
+1
+(t))
+2
+  ( x
+2
+(t))
+2
+jj
+...
+u(t)jdt:
+It follows from (A
+0
+) and (A
+3
+) that
+j
+...
+u(t)j
+2
+2
+ c
+1
+Z
+T
+0
+jy
+1
+ y
+2
+jj x
+2
+(t)j
+2
+j
+...
+u(t)jdt +c
+2
+Z
+T
+0
+j _ u(t)jj
+...
+u(t)jdt
++b
+Z
+T
+0
+jx
+1
+(t  (t)) x
+2
+(t  (t))jj
+...
+u(t)jdt
++c
+1
+j _ x
+1
+j
+1
+Z
+T
+0
+j _ x
+1
++ _ x
+2
+jj _ x
+1
+  _ x
+2
+jj
+...
+u(t)jdt:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 202Differential Equations and Control Processes, N 2, 2018
+Therefore from (2.18) and (2.19) and by using Cauchy-Schwarz inequality, we
+have
+j
+...
+uj
+2
+2
+ c
+1
+D
+2
+j _ uj
+2
+j
+...
+uj
+2
++c
+2
+j _ uj
+2
+j
+...
+uj
+2
++bjuj
+1
+p
+Tj
+...
+uj
+2
++
+1
+2
+c
+1
+T
+2
+D
+2
+j _ uj
+2
+j
+...
+uj
+2
+:
+From (2.13) and (2.24) we obtain
+j
+...
+uj
+2
+2
+ 
+1
+4
+c
+2
+T
+2
+j
+...
+uj
+2
+2
++
+1
+8
+c
+1
+D
+2
+T
+4
+j
+...
+uj
+2
+2
++
+1
+4
+c
+1
+D
+2
+T
+2
+j
+...
+uj
+2
+2
++
+1
+8
+bT
+3
+j
+...
+uj
+2
+2
+:
+It follows that
+ 
+1 
+ 
+c
+2
+T
+2
+4
++c
+1
+D
+2
+T
+4
+8
++c
+1
+D
+2
+T
+2
+4
++b
+T
+3
+8
+  
+j
+...
+uj
+2
+2
+  0: (2.25)
+Sinceu(t); _ u(t);  u(t) and
+...
+u(t) are T-periodic and continuous functions, in view
+of (A
+3
+), (2.10), (2.23) and (2.25) we have
+u(t)  _ u(t)   u(t) 
+...
+u(t) = 0; for all t2R:
+Thus
+x
+1
+(t) x
+2
+(t); for all t2R:
+Therefore (1.1) has at most one T-periodic solution.
+This completes the proof of Theorem 2.2.
+3 Main Result
+The following theorem is the main result of the uniqueness of a T-periodic
+solution of (1.1).
+Theorem 3.1 Suppose that (A
+0
+) (A
+3
+) hold, then (1.1) has a unique T-periodic
+solution.
+Proof. By Theorem 2.2 states that (1.1) has at most one T-periodic solution.
+Thus to prove Theorem 3.1 it su ces to show that (1.1) has at least one T-
+periodic solution. To do this, we shall apply Theorem 2.1.
+First we shall claim that the set of all possible T-periodic solutions of (2.3) is
+bounded.
+Let x(t) be a T-periodic solution of (2.3). Multiplying (2.3) by
+...
+x(t) and then
+integrating it from 0 to T in view of (A
+1
+)  (A
+3
+) we obtain
+Z
+T
+0
+j
+...
+x(t)j
+2
+dt =  
+Z
+T
+0
+f( _ x(t))( x(t))
+2
+...
+x(t)dt  
+Z
+T
+0
+g(t) _ x(t)
+...
+x(t)dt
+  
+Z
+T
+0
+h(t;x(t  (t)))
+...
+x(t)dt + 
+Z
+T
+0
+p(t)
+...
+x(t)dt:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 203Differential Equations and Control Processes, N 2, 2018
+In view of (A
+0
+) we have
+Z
+T
+0
+j
+...
+x(t)j
+2
+dt =
+1
+3
+ 
+Z
+T
+0
+ 
+f( _ x(t))( x(t))
+4
+dt  
+Z
+T
+0
+g(t) _ x(t)
+...
+x(t)dt
+  
+Z
+T
+0
+h(t;x(t  (t)))
+...
+x(t)dt + 
+Z
+T
+0
+p(t)
+...
+x(t)dt
+ 
+Z
+T
+0
+fjh(t;x(t  (t))) h(t; 0)j +jh(t; 0)jgj
+...
+x(t)jdt
++c
+2
+Z
+T
+0
+j _ x(t)j
+...
+x(t)jdt +
+Z
+T
+0
+jp(t)jj
+...
+x(t)jdt:
+Therefore from (A
+2
+), (2.4), (2.5) and the inequality of Cauchy-Schwarz, we
+obtain
+j
+...
+xj
+2
+2
+ c
+2
+j _ xj
+2
+j
+...
+xj
+2
++
+1
+2
+bj _ xj
+2
+j
+...
+xj
+2
++ [bd + maxfjh(t; 0)j : 0 t Tg +jpj
+1
+]
+p
+Tj
+...
+xj
+2
+:
+Which together with (A
+2
+), implies that there exist positive constants D
+1
+;D
+2
+and D
+3
+such that
+j xj
+1
+ 
+1
+2
+p
+Tj
+...
+xj
+2
+:=D
+1
+; j _ xj
+1
+ 
+T
+2
+D
+1
+:=D
+2
+; jxj
+1
+ d +
+T
+2
+4
+D
+1
+:=D
+3
+:
+Let D
+0
+= maxfD
+1
+;D
+2
+;D
+3
+g and take 
+ =fxjx2X; kxk<D
+0
+g.
+Ifx2@
+\KerL =@
+\R, thenx is a constant withx(t) =D
+0
+orx(t) = D
+0
+.
+Then
+QNx =
+1
+T
+Z
+T
+0
+f f( _ x(t))( x(t))
+2
+ g(t) x(t) h(t;x(t  (t))) +p(t)gdt
+=
+1
+T
+Z
+T
+0
+f h(t; D
+0
+) +p(t)gdt6= 0:
+So the conditions (1) and (2) in Theorem 2.1 hold.
+Furthermore de ne a continuous function H(x; ) by setting
+H(x; ) = (1  )x  :
+1
+T
+Z
+T
+0
+fh(t;x) p(t)gdt;  2 [0; 1]:
+It follows from (A
+1
+) that
+xH(x; )6= 0; for allx2@
+\KerL:
+Thus H(x; ) is a homotopy.
+Hence by using the homotopy invariance theorem we have
+degfQN; 
+\KerL; 0g =degf 
+1
+T
+Z
+T
+0
+[h(t;x) p(t)]dt; 
+\KerL; 0g
+=degfx; 
+\KerL; 0g6= 0:
+Electronic Journal. http://www.math.spbu.ru/diffjournal 204Differential Equations and Control Processes, N 2, 2018
+So condition (3) of Theorem 2.1 is satis ed.
+In view of all the discussions above, we conclude from Theorem 2.1 that the
+main Theorem 3.1 is proved.
+4 Example
+In this section we shall provide an example to validate the main results.
+Example 4.1. Let h(t;x) = 
+1
+6 
+x, for all t;x2 R. Then we get the
+third-order (FDE) with a time-delay as the following form
+...
+x(t) 
+1
+8
+(arctan _ x(t))( x(t))
+2
++
+1
+8
+(sin 4t) _ x(t) +
+x(t  sin
+2
+t)
+6 
+=
+1
+6 
+e
+  cos
+2
+t
+; (4.1)
+has a unique  -periodic solution.
+Proof. By (4.1) we obtain
+g(t;x) =
+1
+8
+sin 4t; f(y) = arctany; h(t;x(t  (t)) = 
+x(t sin
+2
+t)
+6 
+;
+ (t) = sin
+2
+t; T =  and p(t) =
+1
+6 
+e
+  cos
+2
+t
+:
+Then from the condition (A
+0
+), we  nd
+c
+1
+=c
+2
+=
+1
+8
+; b =
+1
+6 
+; (d =
+1
+3
+is an arbitrary small positive constant):
+Therefore we get
+D : =
+1
+2
+[bd + maxfjh(t; 0)j : 0 t Tg +jpj
+1
+]T
+1  (c
+2
+T
+2
+4
++b
+T
+3
+8
+)
+=
+1
+2
+(
+1
+6 
+1
+3
++
+1
+6 
+) 
+1  (
+1
+8
+ 
+2
+4
+ 
+1
+6 
+ 
+3
+8
+)
+ 
+= 0:23;
+and
+c
+2
+T
+2
+4
++c
+1
+D
+2
+T
+4
+8
++c
+1
+D
+2
+T
+2
+4
++b
+T
+3
+8
+=
+1
+8
+ 
+2
+4
++
+1
+8
+(
+23
+100
+)
+2
+ 
+4
+8
++
+1
+8
+(
+23
+100
+)
+2
+ 
+2
+4
++
+1
+6 
+ 
+3
+8
+ 
+= 0:61< 1:
+It is obvious that the assumptions (A
+0
+)  (A
+3
+) hold.
+Hence by Theorem 3.1, equation (4.1) has a unique  -periodic solution.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 205Differential Equations and Control Processes, N 2, 2018
+5 Conclusion
+Based on the coincidence degree theory and analysis techniques, new results
+on the existence and uniqueness of a T-periodic solution for the third-order
+functional differential equation, with a time-delay have been established. The
+obtained results extend existing results in the literature on deterministic sys-
+tems. In addition an example is given to illustrate the new main results, which
+we obtain in this paper.
+Acknowledgments
+The author is grateful to the anonymous referee(s) and the handling editor
+for their valuable comments and useful suggestions that have improved the
+quality of this work.
+References
+[1] A. M. A. Abou-El-Ela, A. I. Sadek and A. M. Mahmoud, Periodic solu-
+tions for a kind of third-order delay differential equations with a deviating
+argument, J. Math. Sci. Univ. Tokyo, 18, 35-49, 2011.
+[2] A. M. A. Abou-El-Ela, A. I. Sadek and A. M. Mahmoud, Existence and
+uniqueness of a periodic solution for third-order delay differential equation
+with two deviating arguments, IAENG International Journal of Applied
+Mathematics, 42(1), 7-12, 2012.
+[3] T. A. Burton, Stability and Periodic Solutions of Ordinary and Functional
+Differential Equations, Academic Press, 1985.
+[4] R. E. Gaines and J. Mawhin, Coincidence Degree and Nonlinear Differ-
+ential Equations, Lecture Notes in Math., Springer-Verlag, Berlin, 568,
+1977.
+[5] Z. Gui, Existence of positive periodic solutions to third-order delay differ-
+ential equations, Electron. J. Differential Equations, 91, 1-7, 2006.
+[6] S. A. Iyase and O. J. Adeleke, On the existence and uniqueness of periodic
+solution for a third-order neutral functional differential equation, Int. J.
+Math. Anal., 10(17), 817-831, 2016.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 206Differential Equations and Control Processes, N 2, 2018
+[7] V. Kolmanovskii and A. Myshkis, Introduction to the theory and appli-
+cations of functional differential equations, Kluwer Academic Publishers,
+Dordrecht, 1999.
+[8] Y. Kuang, Delay Differential Equations with Applications in Population
+Dynamical system, Academic Press, New York, 1993.
+[9] B. Liu, L. Huang and Y. Li, Existence of periodic solutions of a third-order
+functional differential equation, Acta Math. Appl. Sin., 29(2), 226-233,
+2006.
+[10] H. P. Long and X. H. Hou, Existence of periodic solutions of a third-order
+functional differential equation, Math. Theory Appl., 28(1), 82-85, 2008.
+[11] G. Makay, Periodic solutions of linear functional differential and integral
+equations, Differential Integral Equations, 8(8), 2177-2187, 1995.
+[12] G. Makay, Periodic solutions of dissipative functional differential equations
+with in nite delay, Tohoku Math. J., 48, 355-362, 1996.
+[13] H. O. Te
+.
+jumo
+.
+la and B. Tchegnani, Stability, boundedness and existence of
+periodic solutions of some third and fourth-order nonlinear delay differen-
+tial equations, J. Nigerian Math. Soc., 19, 9-19, 2000.
+[14] C. Tun  c, On existence of periodic solution to certain nonlinear third-order
+differential equations, Proyecciones, 28(2), 125-132, 2009.
+[15] C. Tun  c, On the existence of periodic solutions to nonlinear third-order
+ordinary differential equations with delay, J. Comput. Anal. Appl., 12(1-
+B), 191-201, 2010.
+[16] C. Tun  c, Existence of periodic solutions to nonlinear differential equations
+of third-order with multiple deviating arguments, International Journal of
+Differential Equations, 2012, 1-13, 2012.
+[17] C. Tun  c, On existence of periodic solutions of functional differential equa-
+tions of the third-order, Appl. Comput. Math., 15(2), 189-199, 2016.
+[18] Z. Zhang and Z. Wang, Periodic solutions of third-order functional differ-
+ential equations with variable coe cients, Appl. Math. J. Chinese Univ.
+Ser. B, 17(2), 145-154, 2002.
+[19] Z. Zhang and Z. Wang, Periodic solutions of the third-order functional
+differential equations, J. Math. Anal. Appl., 292(1), 115-134, 2004.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 207Differential Equations and Control Processes, N 2, 2018
+[20] Z. Zhang, Z. Wang and J. Yu, On the existence of periodic solutions of
+third-order functional differential equations, Funkcial. Ekvac., 43(3), 461-
+469, 2000.
+[21] Y. Zhu, On stability, boundedness and existence of periodic solution of a
+kind of third-order nonlinear delay differential system, Ann. Differential
+Equations, 8(2), 249-259, 1992.
+Electronic Journal. http://www.math.spbu.ru/diffjournal 208
