@@ -4,17 +4,17 @@ $about_content()$
 
 <h3>Editor-in-Chief</h3>
 <ul>
-  <li><strong>Nikolay V. Kuznetsov</strong><br />professor, Doctor of Science</li>
+  <li><strong>Nikolay Kuznetsov</strong><br />professor, Doctor of Science</li>
 </ul>
 
 <h3>Editor</h3>
 <ul>
-  <li><strong>Natalia Borisovna Ampilova</strong><br />Assoc.prof., PhD</li>
+  <li><strong>Natalia Ampilova</strong><br />Assoc.prof., PhD</li>
 </ul>
 
 <h3>Technical Support</h3>
 <ul>
-  <li><strong>Eugene <!-- @jonnyzzz --> Igorevich Petrenko</strong><br />PhD</li>
+  <li><strong>Eugene <!-- @jonnyzzz --> Petrenko</strong><br />PhD</li>
 </ul>
 
 $editorial_editorial_board()$
