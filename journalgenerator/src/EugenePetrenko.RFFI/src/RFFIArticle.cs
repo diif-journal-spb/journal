@@ -65,10 +65,11 @@ namespace EugenePetrenko.RFFI
     public RFFIArticleText PdfText => new RFFIArticleText(myPdfManager, myArticle);
 
     [XmlElementPath("references", "reference", CloneData = new[] { false, true }), XmlForeach]
-    public IEnumerable<RFFIReference> Refererences
-    {
-      get { return myArticle.ForLanguage(JournalLanguage.RU).References.Select(x => new RFFIReference(x)); }
-    }
+    public IEnumerable<RFFIReference> Refererences => myArticle
+      .ForLanguage(JournalLanguage.RU)
+      .References
+      .Select(x => new RFFIReference(x))
+      .Distinct(RFFIReference.Comparer);
 
     [XmlElementPath("files")]
     public RFFIArticleFiles Files => new RFFIArticleFiles(myRffiIssue, myArticle);
