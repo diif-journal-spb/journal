@@ -28,24 +28,8 @@ namespace EugenePetrenko.RFFI
     public string Number => myNumber.Number;
 
     [XmlElementPath("dateUni"), XmlText]
-    public string JournalDateUni {
-      get
-      {
-        switch (myNumber.IntNumber)
-        {
-          case 1:
-            return myNumber.Year + "31";
-          case 2:
-            return myNumber.Year + "32";
-          case 3:
-            return myNumber.Year + "33";
-          case 4:
-            return myNumber.Year + "32";
-          default:
-            return myNumber.Year;
-        }
-      } 
-    }
+    // A change proposed by Сергей Дурнев on Apr 6
+    public string JournalDateUni => myNumber.Year;
 
     [XmlElementPath("pages"), XmlText]
     public string JournalPages => "1-" + GetPages();
