@@ -1,0 +1,2046 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 3, 2018
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Functional differential equations
+Existence of positive periodic solutions for two
+types of third-order nonlinear neutral
+differential equations with variable coe cients
+Bouzid Mansouri
+1
+, Abdelouaheb Ardjouni
+2
+, Ahcene Djoudi
+1
+1
+Faculty of Sciences, Department of Mathematics, Univ Annaba, P.O. Box 12,
+Annaba 23000, Algeria
+E-mail: mansouri.math@yahoo.fr, adjoudi@yahoo.com
+2
+Faculty of Sciences and Technology, Department of Mathematics and
+Informatics, Univ Souk Ahras, P.O. Box 1553, Souk Ahras, 41000, Algeria
+E-mail: abd ardjouni@yahoo.fr
+Abstract
+In this work, we study the existence of positive periodic solutions for two types of
+third-order nonlinear neutral differential equations with variable coe cients. The results
+are established by using the Krasnoselskii's  xed point theorem. The results obtained here
+extend the work of Ren, Siegmund and Chen [30]. Two examples are given to illustrate
+this work.
+Mathematics Subject Classi cation. Primary 34K13, 34A34; Secondary 34K30,
+34L30.
+Keywords and phrases. Fixed point, positive periodic solutions, third-order neutral
+differential equations.
+1 Introduction
+Third order differential equations arise from in a variety of different areas of
+applied mathematics and physics, as the deection of a curved beam having aDifferential Equations and Control Processes, N 3, 2018
+constant or varying cross section, three layer beam, electromagnetic waves or
+gravity driven ows and so on [2, 16, 23, 28, 30].
+Delay differential equations have received increasing attention during recent
+years since these equations have been proved to be valuable tools in the mod-
+eling of many phenomena in various  elds of science and engineering, see the
+monograph [10, 24] and the papers [1]-[6], [9], [11]-[22], [26]-[28], [30], [32], [33],
+[35], [36] and the references therein.
+Ren, Siegmund and Chen [30] discussed the existence of positive!-periodic
+solutions for the following neutral functional differential equation
+(x(t) cx(t  (t)))
+000
+= a(t)x(t) +f(t;x(t  (t)));
+wherejcj < 1. By employing Krasnoselskii's  xed point theorem, the authors
+obtained existence results for positive !-periodic solutions.
+In the present article, we study the existence of positive!-periodic solutions
+for the following two types of third-order nonlinear neutral differential equations
+(x(t) c(t)x(t  ))
+000
+=a(t)x(t) f(t;x(t  )); (1)
+and
+(x(t) c(t)x(t  ))
+000
+= a(t)x(t) +f(t;x(t  )); (2)
+where c2 C(R;R); a2 C(R; (0;1)); f2 C(R R;R);  ;! > 0, and c, a are
+!-periodic functions,f is!-periodic with respect to  rst variable. To show the
+existence of positive !-periodic solutions, we transform (1) and (2) into inte-
+gral equations and then use Krasnoselskii's  xed point theorem. The obtained
+integral equations split in the sum of two mappings, one is a contraction and
+the other is compact.
+In this paper, we have two main contributions comparing with the existing
+results. First, instead of constant c we take variable coe cient c(t). Second,
+in addition tojc(t)j < 1, we consider the rangejc(t)j > 1 for c(t), which is
+new in the literature. Also, the results obtained here extend the work of Ren,
+Siegmund and Chen [30].
+The organization of this paper is as follows. In section 2, we introduce
+some notations and lemmas, and state some preliminary results needed in later
+sections. Then we give the Green's function of (1) and (2) which plays an
+important role in this paper. Also, we present the inversions of (1) and (2), and
+Krasnoselskii's  xed point theorem. For details on Krasnoselskii's theorem we
+refer the reader to [7, 8, 25, 29, 31, 34]. In section 3, we present our main results
+Electronic Journal. http://diffjournal.spbu.ru 47Differential Equations and Control Processes, N 3, 2018
+on existence of positive !-periodic solutions of (1) and (2). Two examples are
+also given to illustrate this work.
+2 Preliminaries
+For ! > 0, let C
+!
+be the set of all continuous scalar functions x, periodic in t
+of period !. Then (C
+!
+;k:k) is a Banach space with the supremum norm
+kxk = sup
+t2R
+jx(t)j = sup
+t2[0;!]
+jx(t)j:
+De ne
+C
++
+!
+=fu2C
+!
+:u> 0g; C
+ 
+!
+=fu2C
+!
+:u< 0g:
+Denote
+M = supfa(t) :t2 [0;!]g; m = inffa(t) :t2 [0;!]g;   =
+3
+p
+M:
+Lemma 1 ([30]) The equation
+u
+000
+(t) Mu (t) =h(t); h2C
+ 
+!
+;
+u(0) =u(!); u
+0
+(0) =u
+0
+(!); u
+00
+(0) =u
+00
+(!);
+has a unique !-periodic solution
+u(t) =
+Z
+!
+0
+G
+1
+(t;s)( h(s))ds;
+where
+G
+1
+(t;s) =
+8
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+:
+2 exp(
+1
+2
+ (s t))[sin(
+p
+3
+2
+ (t s)+
+ 
+6
+) exp( 
+1
+2
+ !) sin(
+p
+3
+2
+ (t s !)+
+ 
+6
+)]
+3 
+2
+(1+exp(  !) 2 exp( 
+ !
+2
+) cos(
+p
+3
+2
+ !))
++
+exp( (t s))
+3 
+2
+(exp( !) 1)
+; if 0 s t !;
+2 exp(
+1
+2
+ (s t !))[sin(
+p
+3
+2
+ (t s+!)+
+ 
+6
+) exp( 
+1
+2
+ !) sin(
+p
+3
+2
+ (t s)+
+ 
+6
+)]
+3 
+2
+(1+exp(  !) 2 exp( 
+ !
+2
+) cos(
+p
+3
+2
+ !))
++
+exp( (t+! s))
+3 
+2
+(exp( !) 1)
+; if 0 t s !:
+Corollary 1 Green's function G
+1
+satis es the following properties
+Z
+!
+0
+G
+1
+(t;s)ds =
+1
+M
+;
+and if
+p
+3 !< 4 =3 holds, then
+0<A<G
+1
+(t;s) B; 0<A<G
+1
+(t + ;s) B;
+Electronic Journal. http://diffjournal.spbu.ru 48Differential Equations and Control Processes, N 3, 2018
+where
+A =
+1
+3 
+2
+(exp( !)  1)
+; B =
+3 + 2 exp( 
+ !
+2
+)
+3 
+2
+(1  exp( 
+ !
+2
+))
+2
+:
+Lemma 2 ([30]) The equation
+u
+000
+(t) +Mu (t) =h(t); h2C
++
+!
+;
+u(0) =u(!); u
+0
+(0) =u
+0
+(!); u
+00
+(0) =u
+00
+(!);
+has a unique !-periodic solution
+u(t) =
+Z
+!
+0
+G
+2
+(t;s)h(s)ds;
+where
+G
+2
+(t;s) =
+8
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+:
+2 exp(
+1
+2
+ (t s))[sin(
+p
+3
+2
+ (t s) 
+ 
+6
+) exp(
+1
+2
+ !) sin(
+p
+3
+2
+ (t s !) 
+ 
+6
+)]
+3 
+2
+(1+exp( !) 2 exp(
+1
+2
+ !) cos(
+p
+3
+2
+ !))
++
+exp( (s t))
+3 
+2
+(1 exp(  !))
+; if 0 s t !;
+2 exp(
+1
+2
+ (t+! s))[sin(
+p
+3
+2
+ (t+! s) 
+ 
+6
+) exp(
+1
+2
+ !) sin(
+p
+3
+2
+ (t s) 
+ 
+6
+)]
+3 
+2
+(1+exp( !) 2 exp(
+1
+2
+ !) cos(
+p
+3
+2
+ !))
++
+exp( (s t !))
+3 
+2
+(1 exp(  !))
+; if 0 t s !:
+Corollary 2 Green's function G
+2
+satis es the following properties
+Z
+!
+0
+G
+2
+(t;s)ds =
+1
+M
+;
+and if
+p
+3 !< 4 =3 holds, then
+0<A<G
+2
+(t;s) B; 0<A<G
+2
+(t + ;s) B:
+Lemma 3 ([30]) The equation
+u
+000
+(t) a(t)u (t) =h(t); h2C
+ 
+!
+;
+has a unique positive !-periodic solution
+(P
+1
+h)(t) = (I T
+1
+B
+1
+)
+ 1
+(T
+1
+h)(t);
+where
+(T
+1
+h)(t) =
+Z
+!
+0
+G
+1
+(t;s)( h(s))ds; (B
+1
+u)(t) = ( M +a(t))u(t):
+Electronic Journal. http://diffjournal.spbu.ru 49Differential Equations and Control Processes, N 3, 2018
+Lemma 4 ([30]) If
+p
+3 !< 4 =3 holds, then P
+1
+is completely continuous and
+0< (T
+1
+h)(t)  (P
+1
+h)(t) 
+M
+m
+k(T
+1
+h)(t)k; 8h2C
+ 
+!
+:
+The following theorem is essential for our results on existence of positive
+periodic solution of (1).
+Theorem 1 If x2C
+!
+then x is a solution of (1) if and only if
+x(t) =c(t)x(t  ) +P
+1
+( f(t;x(t  )) +c(t)a(t)x(t  )): (3)
+Proof. Let x2C
+!
+be a solution of (1). Rewrite (1) as
+(x(t) c(t)x(t  ))
+000
+ M(x(t) c(t)x(t  ))
+= ( M +a(t))(x(t) c(t)x(t  )) f(t;x(t  )) +c(t)a(t)x(t  )
+=B
+1
+(x(t) c(t)x(t  )) f(t;x(t  )) +c(t)a(t)x(t  ):
+From Lemmas 1 and 3, we have
+x(t) c(t)x(t  )
+=T
+1
+B
+1
+(x(t) c(t)x(t  )) +T
+1
+( f(t;x(t  )) +c(t)a(t)x(t  )):
+This yields
+(I T
+1
+B
+1
+)(x(t) c(t)x(t  )) =T
+1
+( f(t;x(t  )) +c(t)a(t)x(t  )):
+Therefore
+x(t) c(t)x(t  ) = (I T
+1
+B
+1
+)
+ 1
+T
+1
+( f(t;x(t  )) +c(t)a(t)x(t  ))
+=P
+1
+( f(t;x(t  )) +c(t)a(t)x(t  )):
+Obviously,
+x(t) =c(t)x(t  ) +P
+1
+( f(t;x(t  )) +c(t)a(t)x(t  )):
+Corollary 3 If x2C
+!
+then x is a solution of (1) if and only if
+x(t) =
+1
+c(t + )
+[x(t + ) +P
+1
+( c(t + )a(t + )x(t) +f(t + ;x(t)))]: (4)
+Electronic Journal. http://diffjournal.spbu.ru 50Differential Equations and Control Processes, N 3, 2018
+Lemma 5 ([30]) The equation
+u
+000
+(t) +a(t)u (t) =h(t); h2C
++
+!
+;
+has a unique positive !-periodic solution
+(P
+2
+h)(t) = (I T
+2
+B
+2
+)
+ 1
+(T
+2
+h)(t);
+where
+(T
+2
+h)(t) =
+Z
+!
+0
+G
+2
+(t;s)h(s)ds; (B
+2
+u)(t) = (M a(t))u(t):
+Lemma 6 ([30]) If
+p
+3 !< 4 =3 holds, then P
+2
+is completely continuous and
+0< (T
+2
+h)(t)  (P
+2
+h)(t) 
+M
+m
+k(T
+2
+h)(t)k; 8h2C
++
+!
+:
+The following theorem is essential for our results on existence of positive
+periodic solution of (2).
+Theorem 2 If x2C
+!
+then x is a solution of (2) if and only if
+x(t) =c(t)x(t  ) +P
+2
+(f(t;x(t  )) c(t)a(t)x(t  )): (5)
+Proof. Let x2C
+!
+be a solution of (2). Rewrite (2) as
+(x(t) c(t)x(t  ))
+000
++M(x(t) c(t)x(t  ))
+= (M a(t))(x(t) c(t)x(t  )) +f(t;x(t  )) c(t)a(t)x(t  )
+=B
+2
+(x(t) c(t)x(t  )) +f(t;x(t  )) c(t)a(t)x(t  ):
+From Lemmas 2 and 5, we have
+x(t) c(t)x(t  )
+=T
+2
+B
+2
+(x(t) c(t)x(t  )) +T
+2
+(f(t;x(t  )) c(t)a(t)x(t  )):
+This yields
+(I T
+2
+B
+2
+)(x(t) c(t)x(t  )) =T
+2
+(f(t;x(t  )) c(t)a(t)x(t  )):
+Therefore,
+x(t) c(t)x(t  ) = (I T
+2
+B
+2
+)
+ 1
+T
+2
+(f(t;x(t  )) c(t)a(t)x(t  ))
+=P
+2
+(f(t;x(t  )) c(t)a(t)x(t  )):
+Obviously,
+x(t) =c(t)x(t  ) +P
+2
+(f(t;x(t  )) c(t)a(t)x(t  )):
+Electronic Journal. http://diffjournal.spbu.ru 51Differential Equations and Control Processes, N 3, 2018
+Corollary 4 If x2C
+!
+then x is a solution of (2) if and only if
+x(t) =
+1
+c(t + )
+[x(t + ) +P
+2
+(c(t + )a(t + )x(t) f(t + ;x(t)))]: (6)
+Lastly in this section, we state Krasnoselskii's  xed point theorem which
+enables us to prove the existence of positive!-periodic solutions to (1) and (2).
+For its proof we refer the reader to [25, 31, 34].
+Lemma 7 (Krasnoselskii [25, 31, 34]) Let D be a closed convex nonempty
+subset of a Banach space (B;k k). Suppose that A and B map D intoB such
+that
+(i) Ax +By2D; 8x;y2D,
+(ii) A is completely continuous,
+(iii) B is a contraction mapping.
+Then there exists z2D with z =Az +Bz.
+3 Positive periodic solutions
+To apply Lemma 7, we need to de ne a Banach space B, a closed con-
+vex subset D ofB and construct two mappings, one is contraction and the
+other is a completely continuous. So we let (B;k k) = (C
+!
+;k k) and D =
+f'2C
+!
+:M
+1
+ ' M
+2
+g, where M
+1
+is non-negative constant and M
+2
+is posi-
+tive constant.
+3.1 Positive periodic solutions in the casejc(t)j> 1
+In this subsection, we obtain the existence of positive !-periodic solution for
+(1) and (2) by considering the two cases: 1 <c(t) <1 and 1 <c(t) < 1
+for all t2 [0;!].
+Theorem 3 Suppose that
+p
+3 !< 4 =3, 1<c
+1
+ c(t) c
+2
+<1 and
+m c(t)a(t)x f(t;x) c
+1
+M;8(t;x)2 [0;!] 
+ 
+m
+(c
+2
+  1)M
+;
+c
+1
+M
+(c
+1
+  1)m
+ 
+: (7)
+Then (1) has at least one positive !-periodic solution x in the subset D
+1
+ofB
+where D
+1
+=
+n
+'2C
+!
+:
+m
+(c
+2
+ 1)M
+ ' 
+c
+1
+M
+(c
+1
+ 1)m
+o
+.
+Electronic Journal. http://diffjournal.spbu.ru 52Differential Equations and Control Processes, N 3, 2018
+Proof. We express (4) as
+'(t) = (B
+1
+')(t) + (A
+1
+')(t) := (H
+1
+')(t);
+where A
+1
+;B
+1
+:D
+1
+!B are de ned by
+(A
+1
+')(t) =
+1
+c(t + )
+P
+1
+( c(t + )a(t + )'(t) +f(t + ;'(t)));
+and
+(B
+1
+')(t) =
+'(t + )
+c(t + )
+:
+It is obvious that A
+1
+' and B
+1
+' are continuous and !-periodic. Now we prove
+that A
+1
+x +B
+1
+y2D
+1
+,8x;y2D
+1
+. By Corollary 1, Lemma 4 and the condition
+(7) we obtain
+(A
+1
+x) (t) + (B
+1
+y) (t)
+=
+1
+c(t + )
+[P
+1
+( c(t + )a(t + )x(t) +f(t + ;x(t))) +y(t + )]
+ 
+1
+c
+1
+ 
+M
+m
+T
+1
+( c(t + )a(t + )x(t) +f(t + ;x(t))) +
+c
+1
+M
+(c
+1
+  1)m
+ 
+ 
+M
+mc
+1
+max
+t2[0;!]
+ 
+ 
+ 
+ 
+ 
+ 
+!
+Z
+0
+G
+1
+(t;s)(c(s + )a(s + )x(s) f(s + ;x(s)))ds
+ 
+ 
+ 
+ 
+ 
+ 
++
+M
+(c
+1
+  1)m
+ 
+M
+mc
+1
+!
+Z
+0
+G
+1
+(t;s)c
+1
+Mds +
+M
+(c
+1
+  1)m
+ 
+M
+mc
+1
+c
+1
+M
+1
+M
++
+M
+(c
+1
+  1)m
+=
+c
+1
+M
+(c
+1
+  1)m
+: (8)
+Electronic Journal. http://diffjournal.spbu.ru 53Differential Equations and Control Processes, N 3, 2018
+On the other hand
+(A
+1
+x) (t) + (B
+1
+y) (t)
+=
+1
+c(t + )
+[P
+1
+( c(t + )a(t + )x(t) +f(t + ;x(t))) +y(t + )]
+ 
+1
+c
+2
+ 
+T
+1
+( c(t + )a(t + )x(t) +f(t + ;x(t))) +
+m
+(c
+2
+  1)M
+ 
+ 
+1
+c
+2
+!
+Z
+0
+G
+1
+(t;s)(c(s + )a(s + )x(s) f(s + ;x(s)))ds +
+1
+c
+2
+m
+(c
+2
+  1)M
+ 
+1
+c
+2
+!
+Z
+0
+G
+1
+(t;s)mds +
+1
+c
+2
+m
+(c
+2
+  1)M
+ 
+1
+c
+2
+m
+1
+M
++
+1
+c
+2
+m
+(c
+2
+  1)M
+=
+m
+(c
+2
+  1)M
+: (9)
+Combining (8) and (9), we obtain A
+1
+x +B
+1
+y2D
+1
+,8x;y2D
+1
+. For '; 2D
+1
+,
+we have
+j(B
+1
+')(t)  (B
+1
+ )(t)j =
+ 
+ 
+ 
+ 
+'(t + )
+c(t + )
+ 
+ (t + )
+c(t + )
+ 
+ 
+ 
+ 
+ 
+1
+c
+1
+j'(t + )  (t + )j
+ 
+1
+c
+1
+k'  k;
+which implies thatkB
+1
+' B
+1
+ k 
+1
+c
+1
+k'  k. Since 0 <
+1
+c
+1
+< 1, B
+1
+is a
+contraction onD
+1
+. From Lemma 4, we know that P
+1
+is completely continuous,
+so is A
+1
+. By Lemma 7, we obtain that A
+1
++B
+1
+has a  xed point x2D
+1
+, i.e.
+(1) has a positive !-periodic solution x2D
+1
+.
+Corollary 5 Assume that the hypotheses of Theorem 3 hold. Then (2) has at
+least one positive !-periodic solution x in the subset D
+1
+ofB.
+Theorem 4 Suppose that
+p
+3 !< 4 =3, 1<c
+3
+ c(t) c
+4
+< 1 and
+c
+3
+c
+4
+M <f(t;x) c(t)a(t)x  c
+4
+m; 8(t;x)2 [0;!]  [0; 1]: (10)
+Then (1) has at least one positive !-periodic solution x in the subset
+e
+D
+2
+ofB,
+where
+e
+D
+2
+=f'2C
+!
+: 0<'  1g.
+Electronic Journal. http://diffjournal.spbu.ru 54Differential Equations and Control Processes, N 3, 2018
+Proof. LetD
+2
+=f'2C
+!
+: 0 '  1g. We de ne A
+1
+;B
+1
+:D
+2
+!B as follows
+(A
+1
+')(t) =
+ 1
+c(t + )
+P
+1
+(c(t + )a(t + )'(t) f(t + ;'(t)));
+and
+(B
+1
+')(t) =
+'(t + )
+c(t + )
+:
+Now we prove thatA
+1
+x +B
+1
+y2D
+2
+;8x;y2D
+2
+. By Corollary 1, Lemma 4 and
+the condition (10) we obtain
+(A
+1
+x) (t) + (B
+1
+y) (t)
+=
+ 1
+c(t + )
+P
+1
+(c(t + )a(t + )x(t) f(t + ;x(t))) +
+y(t + )
+c(t + )
+ 
+ 1
+c
+4
+M
+m
+T
+1
+(c(t + )a(t + )x(t) f(t + ;x(t)))
+ 
+ M
+mc
+4
+max
+t2[0;!]
+ 
+ 
+ 
+ 
+ 
+ 
+!
+Z
+0
+G
+1
+(t;s)(f(s + ;x(s)) c(s + )a(s + )x(s))ds
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ M
+mc
+4
+!
+Z
+0
+G
+1
+(t;s)( c
+4
+m)ds
+ 
+ M
+mc
+4
+( c
+4
+m)
+1
+M
+= 1: (11)
+On the other hand
+(A
+1
+x) (t) + (B
+1
+y) (t)
+=
+ 1
+c(t + )
+P
+1
+(c(t + )a(t + )x(t) f(t + ;x(t))) +
+y(t + )
+c(t + )
+ 
+ 1
+c
+3
+T
+1
+(c(t + )a(t + )x(t) f(t + ;x(t))) +
+1
+c
+4
+ 
+ 1
+c
+3
+!
+Z
+0
+G
+1
+(t;s)(f(s + ;x(s)) c(s + )a(s + )x(s))ds +
+1
+c
+4
+ 
+ 1
+c
+3
+!
+Z
+0
+G
+1
+(t;s)(
+c
+3
+c
+4
+M)ds +
+1
+c
+4
+ 
+ 1
+c
+3
+(
+c
+3
+c
+4
+M)
+1
+M
++
+1
+c
+4
+= 0: (12)
+Electronic Journal. http://diffjournal.spbu.ru 55Differential Equations and Control Processes, N 3, 2018
+Combining (11) and (12), we obtain A
+1
+x +B
+1
+y2 D
+2
+, for all x;y2 D
+2
+. For
+'; 2D
+2
+, we have
+j(B
+1
+')(t)  (B
+1
+ )(t)j =
+ 
+ 
+ 
+ 
+'(t + )
+c(t + )
+ 
+ (t + )
+c(t + )
+ 
+ 
+ 
+ 
+ 
+ 1
+c
+4
+j'(t + )  (t + )j
+ 
+ 1
+c
+4
+k'  k;
+which implies thatkB
+1
+' B
+1
+ k 
+ 1
+c
+4
+k'  k. Since 0 <
+ 1
+c
+4
+< 1, B
+1
+is a
+contraction onD
+2
+. From Lemma 4, we know that P
+1
+is completely continuous,
+so is A
+1
+. By Lemma 7, we obtain that A
+1
++B
+1
+has a  xed point x2 D
+2
+,
+i.e. (1) has a nonnegative !-periodic solution x with 0  x(t)  1. Since
+f(t;x) c(t)a(t)x >
+c
+3
+c
+4
+M, it is easy to see that x(t) > 0, i.e. (1) has positive
+!-periodic solution x2
+e
+D
+2
+.
+Corollary 6 Assume that the hypotheses of Theorem 4 hold. Then (2) has at
+least one positive !-periodic solution x in the subset
+e
+D
+2
+ofB.
+3.2 Positive periodic solutions in the casejc(t)j< 1
+In this subsection, we obtain the existence of a positive periodic solution for
+(1) and (2) by considering the three cases; 0 < c(t) < 1, 1 < c(t)  0 and
+c(t) = 0 for all t2 [0;!].
+Theorem 5 Suppose that
+p
+3 !< 4 =3, 0<c
+5
+ c(t) c
+6
+< 1, and
+c
+5
+m f(t;x) c(t)a(t)x M;8(t;x)2 [0;!] 
+ 
+c
+5
+m
+(1 c
+5
+)M
+;
+M
+(1 c
+6
+)m
+ 
+: (13)
+Then (1) has at least one positive !-periodic solution x(t) in the subset D
+3
+of
+B, where D
+3
+=
+n
+'2C
+!
+:
+c
+5
+m
+(1 c
+5
+)M
+ ' 
+M
+(1 c
+6
+)m
+o
+.
+Proof. We express (3) as
+'(t) = (B
+2
+')(t) + (A
+2
+')(t) := (H
+2
+')(t);
+where A
+2
+;B
+2
+:D
+3
+!B are de ned by
+(A
+2
+')(t) =P
+1
+(c(t)a(t)'(t  ) f(t;'(t  )));
+Electronic Journal. http://diffjournal.spbu.ru 56Differential Equations and Control Processes, N 3, 2018
+and
+(B
+2
+')(t) =c(t)'(t  ):
+It is obvious that A
+2
+' and B
+2
+' are continuous and !-periodic. Now we prove
+that A
+2
+x +B
+2
+y2D
+3
+;8x;y2D
+3
+. By Corollary 1, Lemma 4 and the condition
+(13) we obtain
+(A
+2
+x) (t) + (B
+2
+y) (t)
+=P
+1
+(c(t)a(t)x(t  ) f(t;x(t  ))) +c(t)y(t  )
+ 
+M
+m
+T
+1
+(c(t + )a(t + )x(t) f(t + ;x(t))) +c
+6
+M
+(1 c
+6
+)m
+ 
+M
+m
+max
+t2[0;!]
+ 
+ 
+ 
+ 
+ 
+ 
+!
+Z
+0
+G
+1
+(t;s)(f(s + ;x(s)) c(s + )a(s + )x(s))ds
+ 
+ 
+ 
+ 
+ 
+ 
++c
+6
+M
+(1 c
+6
+)m
+ 
+M
+m
+!
+Z
+0
+G
+1
+(t;s)Mds +c
+6
+M
+(1 c
+6
+)m
+ 
+M
+m
+M
+1
+M
++c
+6
+M
+(1 c
+6
+)m
+=
+M
+(1 c
+6
+)m
+: (14)
+On the other hand
+(A
+2
+x) (t) + (B
+2
+y) (t)
+=P
+1
+(c(t)a(t)x(t  ) f(t;x(t  ))) +c(t)y(t  )
+ T
+1
+(c(t + )a(t + )x(t) f(t + ;x(t))) +c
+5
+c
+5
+m
+(1 c
+5
+)M
+ 
+!
+Z
+0
+G
+1
+(t;s)(f(s + ;x(s)) c(s + )a(s + )x(s))ds +c
+5
+c
+5
+m
+(1 c
+5
+)M
+ 
+!
+Z
+0
+G
+1
+(t;s)c
+5
+mds +c
+5
+c
+5
+m
+(1 c
+5
+)M
+ c
+5
+m
+1
+M
++c
+5
+c
+5
+m
+(1 c
+5
+)M
+=
+c
+5
+m
+(1 c
+5
+)M
+: (15)
+Combining (14) and (15), we obtainA
+2
+x+B
+2
+y2D
+3
+,8x;y2D
+3
+. For'; 2D
+3
+,
+Electronic Journal. http://diffjournal.spbu.ru 57Differential Equations and Control Processes, N 3, 2018
+we have
+j(B
+2
+')(t)  (B
+2
+ )(t)j
+=jc(t)'(t  ) c(t) (t  )j
+ c
+6
+j'(t  )  (t  )j
+ c
+6
+k'  k;
+which implies thatkB
+2
+' B
+2
+ k  c
+6
+k'  k. Since 0 < c
+6
+< 1, B
+2
+is a
+contraction onD
+3
+. From Lemma 4, we know that P
+1
+is completely continuous,
+so isA
+2
+. By Lemma 7 we obtain thatA
+2
++B
+2
+has a  xed pointx2D
+3
+, i.e. (1)
+has a positive !-periodic solution x2D
+3
+.
+Corollary 7 Assume that the hypotheses of Theorem 5 hold. Then (2) has at
+least one positive !-periodic solution x in the subset D
+3
+ofB.
+Theorem 6 Suppose that
+p
+3 !< 4 =3, 1<c
+7
+ c(t) c
+8
+< 0 and
+ c
+7
+M <f(t;x) c(t)a(t)x m; 8(t;x)2 [0;!]  [0; 1]: (16)
+Then (1) has at least one positive !-periodic solution x in the subset
+e
+D
+4
+ofB,
+where
+e
+D
+4
+=f'2C
+!
+: 0<'  1g.
+Proof. Let D
+4
+=f'2C
+!
+: 0 '  1g. Now we prove that A
+2
+x +B
+2
+y2D
+4
+;
+8x;y2D
+4
+. By Corollary 1, Lemma 4 and the condition (16) we obtain
+(A
+2
+x) (t) + (B
+2
+y) (t)
+=P
+1
+(c(t)a(t)x(t  ) f(t;x(t  ))) +c(t)y(t  )
+ 
+M
+m
+T
+1
+(c(t + )a(t + )x(t) f(t + ;x(t)))
+ 
+M
+m
+max
+t2[0;!]
+ 
+ 
+ 
+ 
+ 
+ 
+!
+Z
+0
+G
+1
+(t;s)(f(s + ;x(s)) c(s + )a(s + )x(s))ds
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+M
+m
+!
+Z
+0
+G
+1
+(t;s)mds
+ 
+M
+m
+m
+1
+M
+= 1: (17)
+Electronic Journal. http://diffjournal.spbu.ru 58Differential Equations and Control Processes, N 3, 2018
+On the other hand
+(A
+2
+x) (t) + (B
+2
+y) (t)
+=P
+1
+(c(t)a(t)x(t  ) f(t;x(t  ))) +c(t)y(t  )
+ T
+1
+(c(t + )a(t + )x(t) f(t + ;x(t))) +c
+7
+ 
+!
+Z
+0
+G
+1
+(t;s)(f(s + ;x(s)) c(s + )a(s + )x(s))ds +c
+7
+ 
+!
+Z
+0
+G
+1
+(t;s)( c
+7
+M)ds +c
+7
+  ( c
+7
+M)
+1
+M
++c
+7
+= 0: (18)
+Combining (17) and (18), we obtain A
+2
+x +B
+2
+y2D
+4
+; 8x;y2D
+4
+. Obviously,
+B
+2
+' is continuous and it is easy to show that (B
+2
+')(t +!) = (B
+2
+')(t). So, for
+'; 2D
+4
+, we have
+j(B
+2
+')(t)  (B
+2
+ )(t)j =jc(t)'(t  ) c(t) (t  )j
+  c
+7
+j'(t  )  (t  )j
+  c
+7
+k'  k;
+which implies thatkB
+2
+' B
+2
+ k  c
+7
+k'  k. Since 0 < c
+7
+< 1, B
+2
+is a
+contraction onD
+4
+. From Lemma 4, we know that P
+1
+is completely continuous,
+so is A
+2
+. By Lemma 7, we obtain that A
+2
++B
+2
+has a  xed point x2 D
+4
+,
+i.e. (1) has a nonnegative !-periodic solution x with 0  x(t)  1. Since
+f(t;x) c(t)a(t)x> c
+7
+M, it is easy to see that x(t)> 0, i.e. (1) has positive
+!-periodic solution x2
+e
+D
+4
+.
+Corollary 8 Assume that the hypotheses of Theorem 6 hold. Then (2) has at
+least one positive !-periodic solution x in the subset
+e
+D
+4
+ofB.
+Theorem 7 ([30]) If
+p
+3 !< 4 =3 holds, c(t) = 0 and
+0<f(t;x) M; 8(t;x)2 [0;!] 
+ 
+0;
+M
+m
+ 
+:
+Then (1) has at least one positive !-periodic solution x with 0<x(t) 
+M
+m
+.
+Remark 1 In a similar way of Theorem 7 we can prove that the (2) has at
+least one positive !-periodic solution x when c(t) = 0.
+Electronic Journal. http://diffjournal.spbu.ru 59Differential Equations and Control Processes, N 3, 2018
+Example 1 Consider the third-order nonlinear neutral differential equation
+ 
+x(t) 
+ 
+2 + sin
+2
+t +
+1
+0:9 + 8 sin
+2
+t
+ 
+x(t  6 )
+ 
+000
+=
+1
+10
+3
+(1 
+1
+10
+2
+sin
+2
+t)x(t) 
+1
+10
+4
+(6 + sint) 
+1
+10
+3
+exp(cos(x(t  6 ))): (19)
+Note that (19) of the form (1) with ! = 2 ; c(t) = 2 + sin
+2
+t +
+1
+0:9+8 sin
+2
+t
+;
+a(t) =
+1
+10
+3
+(1 
+1
+10
+2
+sin
+2
+t);f(t;x(t 6 )) =
+1
+10
+4
+(6+sint)+
+1
+10
+3
+exp(cos(x(t 6 )));
+and   = 6 . It is easy to verify that the conditions of Theorem 3 are satis ed
+with m =
+99
+10
+5
+and M =
+1
+10
+3
+. Thus (19) has at least one positive !-periodic
+solution.
+Example 2 Consider the third-order nonlinear neutral differential equation
+ 
+x(t) + (3 +
+sint
+10
+)x(t  4 )
+ 
+000
+= 
+1
+10
+3
+(1 
+1
+2
+sin
+2
+t)x(t) +
+1
+10
+4
+(2 + sint) +
+1
+10
+3
+sin(x(t  4 )): (20)
+Note that (20) of the form (2) with ! = 2 ; c(t) = (3 +
+sint
+10
+); a(t) =
+1
+10
+3
+(1 
+1
+2
+sin
+2
+t); f(t;x(t  4 )) =
+1
+10
+4
+(2 + sint) +
+1
+10
+3
+sin(x(t  4 )) and   = 4 . It is
+easy to verify that the conditions of Corollary 6 are satis ed with m =
+1
+2 10
+3
+and M =
+1
+10
+3
+. Thus (20) has at least one positive !-periodic solution.
+Acknowledgment. The authors would like to thank the anonymous referee
+for his valuable comments.
+References
+[1] A. Ardjouni and A. Djoudi, Existence of periodic solutions for a second-
+order nonlinear neutral differential equation with variable delay, Palestine
+Journal of Mathematics, Vol. 3(2) (2014), 191{197.
+[2] A. Ardjouni, A. Djoudi and A. Rezaiguia, Existence of positive periodic so-
+lutions for two types of third-order nonlinear neutral differential equations
+with variable delay, Applied Mathematics E-Notes, 14 (2014), 86{96.
+[3] A. Ardjouni and A. Djoudi, Existence of positive periodic solutions for a
+nonlinear neutral differential equations with variable delay, Applied Math-
+ematics E-Notes, 12 (2012), 94{101.
+Electronic Journal. http://diffjournal.spbu.ru 60Differential Equations and Control Processes, N 3, 2018
+[4] A. Ardjouni and A. Djoudi, Existence of periodic solutions for a second or-
+der nonlinear neutral differential equation with functional delay, Electronic
+Journal of Qualitative Theory of Differential Equations, 2012, No. 31, 1{9.
+[5] A. Ardjouni and A. Djoudi, Periodic solutions for a second-order nonlinear
+neutral differential equation with variable delay, Electron. J. Differential
+Equations, Vol. 2011 (2011), No. 128, pp. 1{7.
+[6] A. Ardjouni and A. Djoudi, Periodic solutions in totally nonlinear dynamic
+equations with functional delay on a time scale, Rend. Sem. Mat. Univ.
+Politec. Torino Vol. 68, 4(2010), 349{359.
+[7] C. Avramescu, On a  xed point theorem, Studii si Cercetari Matematice,
+9, Tome 22, 2 (1970), pp. 215{220.
+[8] C. Avramescu and C. Vladimirescu, Some remarks on Krasnoselskii's  xed
+point theorem, Fixed Point Theory, Volume 4, No. 1, 2003, 3-13.
+[9] T. A. Burton, Liapunov functionals,  xed points and stability by Krasnosel-
+skii's theorem, Nonlinear Stud. 9 (2002), No. 2, 181{190.
+[10] T. A. Burton, Stability by Fixed Point Theory for Functional Differential
+Equations, Dover Publications, New York, 2006.
+[11] T. Candan, Existence of positive periodic solutions of  rst-order neutral
+differential equations, Math. Methods Appl. Sci. 40 (2017), 205{209.
+[12] T. Candan, Existence of positive periodic solutions of  rst-order neutral dif-
+ferential equations with variable coe cients, Applied Mathematics Letters
+52 (2016), 142{148.
+[13] F. D. Chen, Positive periodic solutions of neutral Lotka-Volterra system
+with feedback control, Appl. Math. Comput. 162 (2005), No. 3, 1279{1302.
+[14] F. D. Chen and J. L. Shi, Periodicity in a nonlinear predator-prey system
+with state dependent delays, Acta Math. Appl. Sin. Engl. Ser. 21 (2005),
+no. 1, 49{60.
+[15] Z. Cheng and J. Ren, Existence of positive periodic solution for variable-
+coe cient third-order differential equation with singularity, Math. Meth.
+Appl. Sci. 2014, 37, 2281{2289.
+Electronic Journal. http://diffjournal.spbu.ru 61Differential Equations and Control Processes, N 3, 2018
+[16] Z. Cheng and Y. Xin, Multiplicity Results for variable-coe cient singular
+third-order differential equation with a parameter, Abstract and Applied
+Analysis, Vol. 2014, Article ID 527162, 1{10.
+[17] S. Cheng and G. Zhang, Existence of positive periodic solutions for
+non-autonomous functional differential equations, Electron. J. Differential
+Equations, Vol. 2001 (2001), No. 59, 1{8.
+[18] H. Deham and A. Djoudi, Periodic solutions for nonlinear differential equa-
+tion with functional delay, Georgian Mathematical Journal 15 (2008), No.
+4, 635{642.
+[19] H. Deham and A. Djoudi, Existence of periodic solutions for neutral non-
+linear differential equations withvariable delay, Electronic Journal of Dif-
+ferential Equations, Vol. 2010 (2010), No. 127, pp. 1{8.
+[20] Y. M. Dib, M. R. Maroun and Y. N. Rafoul, Periodicity and stability in
+neutral nonlinear differential equations with functional delay, Electronic
+Journal of Differential Equations, Vol. 2005 (2005), No. 142, pp. 1{11.
+[21] M. Fan and K. Wang, P. J. Y. Wong and R. P. Agarwal, Periodicity and sta-
+bility in periodic n-species Lotka-Volterra competition system with feedback
+controls and deviating arguments, Acta Math. Sin. Engl. Ser. 19 (2003),
+no. 4, 801{822.
+[22] H. I. Freedman, J. Wu, Periodic solutions of single-species models with
+periodic delay, SIAM J. Math. Anal. 23 (1992) 689{701.
+[23] M. Gregus, Third Order Linear Differential Equations, Reidel, Dordrecht,
+1987.
+[24] Y. Kuang, Delay Differential Equations with Application in Population
+Dynamics, Academic Press, New York, 1993.
+[25] M. A. Krasnoselskii, Some problems of nonlinear analysis, American Math-
+ematical Society Translations, Ser. 2, 10 (1958), pp. 345{409.
+[26] W. G. Li and Z. H. Shen, An constructive proof of the existence Theorem
+for periodic solutions of Duffng equations, Chinese Sci. Bull. 42 (1997),
+1591{1595.
+[27] Y. Liu, W. Ge, Positive periodic solutions of nonlinear Du ng equations
+with delay and variable coe cients, Tamsui Oxf. J. Math. Sci. 20 (2004)
+235{255.
+Electronic Journal. http://diffjournal.spbu.ru 62Differential Equations and Control Processes, N 3, 2018
+[28] F. Nouioua, A. Ardjouni, A. Djoudi, Periodic solutions for a third-order
+delay differential equation, Applied Mathematics E-Notes, 16 (2016), 210{
+221.
+[29] D. O'Regan, Fixed-point theory for the sum of two operators, Appl. Math.
+Lett. 9 (1) (1996), 1{8.
+[30] J. Ren, S. Siegmund and Y. Chen, Positive periodic solutions for third-
+order nonlinear differential equations, Electron. J. Differential Equations,
+Vol. 2011 (2011), No. 66, 1{19.
+[31] D. R. Smart, Fixed Points Theorems, Cambridge University Press, Cam-
+bridge, 1980.
+[32] Q. Wang, Positive periodic solutions of neutral delay equations (in Chi-
+nese), Acta Math. Sinica (N.S.) 6(1996), 789{795.
+[33] Y. Wang, H. Lian and W. Ge, Periodic solutions for a second order nonlin-
+ear functional differential equation, Applied Mathematics Letters 20 (2007)
+110{115.
+[34] E. Zeidler, Nonlinear analysis and its applications I: Fixed point theorems,
+Springer-Verlag, 1985.
+[35] W. Zeng, Almost periodic solutions for nonlinear Du ng equations, Acta
+Math. Sinica (N.S.) 13(1997), 373{380.
+[36] G. Zhang, S. Cheng, Positive periodic solutions of non autonomous func-
+tional differential equations depending on a parameter, Abstr. Appl. Anal.
+7 (2002) 279{286.
+Electronic Journal. http://diffjournal.spbu.ru 63
