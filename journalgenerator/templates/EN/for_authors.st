@@ -79,7 +79,7 @@ LaTeX is a module in the MikTEX package</p>
  <ul>
     <li>Download file <a href="$ResourceLink$/auth-for-doc.zip">author-for-doc.zip</a> from the journal site and unpack it</li>
     <li>Select folder <em>eng</em></li>
-    <li>Open <em>Dif_eng.dot</em> in the Microsoft Word</li>
+    <li>Open <em>Dif_eng.dotx</em> in the Microsoft Word</li>
     <li>In obtained file fill in the fields: <b>[number], [year], [Theme], [Title], [AUTHOR NAME], [address]</b></li>
     <li>Copy the text of your article in to the file. At the top and the bottom of each page (but cover page) running titles appear</li>
     <li>On the second page double click by mouse left button on the string "Differential Equations and Control Processes, [ number], [year]") and fill in the fields</li>
