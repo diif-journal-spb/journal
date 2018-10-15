@@ -150,7 +150,7 @@ namespace EugenePetrenko.NumberEditor
       if (x.Name.StartsWith("st1:")) return true;
       if (x.Name.StartsWith("pst")) return true;
 
-      switch (x.Name)
+      switch (x.Name.ToLower())
       {
         case "a":
         case "style":
@@ -166,6 +166,8 @@ namespace EugenePetrenko.NumberEditor
         case "th":
         case "td":
         case "pre":
+        case "del":
+        case "ins":
           return true;
         default:
           return false;
