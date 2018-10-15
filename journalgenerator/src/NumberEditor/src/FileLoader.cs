@@ -37,7 +37,7 @@ namespace EugenePetrenko.NumberEditor
 
     private static void LoadFile(string file, StringBuilder sb)
     {
-      if (file.Extension(".pdf", ".dvi", ".dot", ".eps", ".aux", ".log", ".sty", ".jpg", ".jpeg", ".tex", ".png")) return;
+      if (file.Extension(".pdf", ".dvi", ".dot", ".eps", ".aux", ".log", ".sty", ".jpg", ".jpeg", ".tex", ".png", ".gz")) return;
 
       if (file.Extension(".mht"))
       {
