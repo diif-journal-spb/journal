@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Windows.Data;
 using NUnit.Framework;
 using NUnit.Framework.Constraints;
 
@@ -242,6 +243,21 @@ Academic Publishing), 2011. <span class=GramE>295 p. (in Russian).</span> <o:p><
       Assert.That(gold2, new ContainsConstraint(@"<a href=""http://www.math.spbu.ru/diffjournal/RU/numbers/2014.2/article.1.1.html"">http://www.math.spbu.ru/diffjournal/RU/numbers/2014.2/article.1.1.html</a>"));
     }
 
+    [Test]
+    public void test_import_krim_html() {
+      TestFiles.WithResource("refs-krim.html", (dir, file) =>
+      {
+        var html = file;
+
+        //Make sure file is not locked my a running MSWord
+        using (var s = File.OpenText(html))
+        {
+          var text = HTMLHelpers.FixWordHTML(s.ReadToEnd());
+
+          Console.Out.WriteLine(text);                    
+        }
+      });    
+    }
 
     private string Res(string res)
     {

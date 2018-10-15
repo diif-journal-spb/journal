@@ -205,7 +205,7 @@ namespace EugenePetrenko.NumberEditor
 
       if (node.Name == "img")
       {
-        node.ParentNode.InsertBefore(node.OwnerDocument.CreateTextNode("!!!!ERROR!!! IMAGE IS NOT ALLOWERD!"), node);
+        node.ParentNode.InsertBefore(node.OwnerDocument.CreateTextNode("!!!!ERROR!!! IMAGE IS NOT ALLOWED!"), node);
         node.Remove(); 
         return;
       }
@@ -229,24 +229,30 @@ namespace EugenePetrenko.NumberEditor
       if (node.Name == "li")
       {
         node.InsertBefore(node.OwnerDocument.CreateTextNode("  42. "), node.FirstChild);
+      } 
+      
+      if (node.Name == "pre")
+      {
+        node.InsertBefore(node.OwnerDocument.CreateElement("br"), node.FirstChild);
       }
 
       if (IsProxyNode(node))
       {
-        node.ChildNodes.notNull()
+        var clone = node.ChildNodes.notNull()
           .Select(child => child.CloneNode(true))
           .Select(copy => node.ParentNode.InsertBefore(copy, node))
-          .ToArray()
-          .ForEach(CleanupRecursive);
-        
+          .ToArray();
+
         node.Remove();
+
+        clone.ForEach(CleanupRecursive);        
         return;
       }
 
       node.Attributes.notNull().Where(IsInvalidAttribute).ForEach(x=>x.Remove());
       if (node.HasChildNodes)
       {
-        node.ChildNodes.notNull().ForEach(CleanupRecursive);
+        node.ChildNodes.notNull().ToArray().ForEach(CleanupRecursive);
       }
     }
   }

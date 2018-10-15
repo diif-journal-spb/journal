@@ -1,5 +1,8 @@
 ﻿using System;
+using System.IO;
+using System.Linq;
 using NUnit.Framework;
+using NUnit.Framework.Constraints;
 
 namespace EugenePetrenko.NumberEditor
 {
@@ -118,5 +121,59 @@ namespace EugenePetrenko.NumberEditor
       }
     }
  
+    [Test]
+    public void test_import_krim_docx() {
+      TestFiles.WithResource("refs-krim.docx", (dir, file) =>
+      {
+        var html = file + ".html";
+
+        DOCXConverter.DocToHTML(file, html);
+
+        //Make sure file is not locked my a running MSWord
+        using (var s = File.OpenText(html))
+        {
+          var rawHTML = s.ReadToEnd();
+          Console.Out.WriteLine(rawHTML);
+          
+          var text = HTMLHelpers.FixWordHTML(rawHTML);
+
+          Console.Out.WriteLine(text);
+          
+          var references = ReferencesParser.ParseReferences(text).ToList();
+
+          
+          foreach (var re in references)
+          {
+            Console.Out.WriteLine("re = {0}", re);
+          }
+          
+          Assert.That(references.Count, new GreaterThanConstraint(1));          
+        }
+      });    
+    }
+    
+    [Test]
+    public void test_import_krim_html() {
+      TestFiles.WithResource("refs-krim.html", (dir, file) =>
+      {
+        var html = file;
+
+        //Make sure file is not locked my a running MSWord
+        using (var s = File.OpenText(html))
+        {
+          var text = HTMLHelpers.FixWordHTML(s.ReadToEnd());
+          
+          var references = ReferencesParser.ParseReferences(text).ToList();
+
+          
+          foreach (var re in references)
+          {
+            Console.Out.WriteLine("re = {0}", re);
+          }
+          
+          Assert.That(references.Count, new GreaterThanConstraint(1));          
+        }
+      });    
+    }
   }
 }
