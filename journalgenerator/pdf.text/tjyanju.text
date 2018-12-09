@@ -1,0 +1,2261 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 4, 2018
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Ordinary differential equations
+Existence of a Limiting Regime in the Sense of Demidovic for a
+Certain Class of Second Order Nonlinear Vector Differential
+Equations
+1
+Adetunji A. Adeyanju
+Department of Mathematics,
+Federal University of Agriculture,
+Abeokuta, Nigeria.
+e-mail: tjyanju2000@yahoo.com
+Phone number: +2348060006227
+Abstract
+In this paper, we employ a complete Lyapunov function, Demidovic theorem
+and the generalized theorems of Ezeilo to establish su cient conditions for the
+existence of a limiting regime in the sense of Demidovic for certain second
+order nonlinear vector differential equation. We equally prove that the limiting
+regime is periodic or almost periodic with respect to variable t, uniformly in
+X;Y whenever the forcing term is periodic or almost periodic. The results of
+this paper are quiet new with respect to second order differential equations.
+Keywords and phrases: second order nonlinear differential equation,
+limiting regime, uniformly periodic (or almost periodic) solution, Lyapunov
+function, convergence.
+1
+2000 Mathematics Subject Classi cation:34D20, 34D20 , 34C25.Differential Equations and Control Processes, N 4, 2018
+1. Introduction
+We shall consider the following second order nonlinear vector differential equa-
+tion:
+
+X +A
+_
+X +H(X) =P (t;X;
+_
+X); (1:1)
+where t2 R
++
+, X : R
++
+! R
+n
+; H : R
+n
+! R
+n
+; P : R
++
+ R
+n
+ R
+n
+! R
+n
+, A
+is an n n symmetric, positive de nite matrix and the dots as usual indicate
+differentiation with respect tot: It is also assumed that the functionsH andP
+are continuous in their respective arguments displayed explicitly.
+On the qualitative properties of second order differential equations, many in-
+teresting results have been obtained. For results on stability [see: 1,2,3,10,11,
+18,21,23,30,31], boundedness [see, 3,10,18,19,20,25,26,27,29] and convergence[
+17,22,28]. But on the subject of a limiting regime in the sense of Demidovic,
+as far as we know, nothing seems to have been done regarding second order
+differential equations. The followings are some of the results on existence of a
+limiting regime for third, fourth and  fth order differential equations.
+In [15], Ezeilo used the ideas of Demidovic[12] and Ezeilo[16] to establish su -
+cient conditions on the existence of a limiting regime to the third order nonlinear
+differential equation of the form
+x
+000
++ax
+00
++bx
+0
++h(x) =p(t;x;x
+0
+;x
+00
+)
+where a; b are constants and h;p are continuous functions of their arguments.
+Later, Afuwape and Omeike [8] considered a more general form of the equation
+above which is of the form
+x
+000
++ax
+00
++g(x
+0
+) +h(x) =p(t;x;x
+0
+;x
+00
+)
+the authors improved on the earlier results on the subject of discussion. Fur-
+thermore, Olutimo[24] extended the results of Afuwape and Omeike [8] to the
+corresponding vector version by considering a differential equation of the form
+...
+X
++A
+
+X +G(
+_
+X) +H(X) =P (t;X;
+_
+X;
+
+X)
+Afuwape[9] also extended the results of Ezeilo[15] to the fourth order nonlinear
+differential equation
+x
+iv
++ax
+000
++bx
+00
++cx
+0
++h(x) =p(t;x;x
+0
+;x
+00
+;x
+000
+)
+where a;b;c are constants. Much later, Adesina[5] went further to consider a
+more general fourth order nonlinear differential equation of the form
+x
+iv
++ (x
+000
+) +f(x
+00
+) +g(x
+0
+) +h(x) =p(t;x;x
+0
+;x
+00
+;x
+000
+):
+Adeina and Ukpera[4] on their part dealt with  fth order differential equation
+of the form
+x
+v
++ax
+iv
++bx
+000
++cx
+00
++dx
+0
++h(x) =p(t;x;x
+0
+;x
+00
+;x
+000
+;x
+(iv)
+)
+Electronic Journal. http://diffjournal.spbu.ru 64Differential Equations and Control Processes, N 4, 2018
+where a;b;c;d are constants.
+Our goal in this paper is to establish su cient conditions for the existence
+of a limiting regime in the sense of Demidovic and also prove that the limit-
+ing regime is periodic or almost periodic for a second order non-linear vector
+differential equations de ned in (1.1) whenever the forcing function P (t;X;
+_
+X)
+is periodic or almost periodic in t uniformly with respect to X and
+_
+X. In es-
+tablishing our results, we shall employ the direct method of Lyapunov coupled
+with the approach of Demidovic[12] and theorems of Ezeilo[16].
+2. Preliminary results and de nition
+Demidovic[12] in 1961 considered a nonlinear system given by
+_
+X =F (X) +G(t) (2:1)
+where F (X) and G(t) are continuous functions of their respective arguments
+displayed explicitly. He gave su cient conditions which ensure the convergence
+of all solutions of equation (2.1) to a periodic solution ( i.e limiting regime)
+for t! 1. About four years later, Ezeilo[16] considered a more generalized
+differential system of the form
+_
+X =f(t;X) +g(t;X) (2:2)
+and came up with the following results.
+Let f(t;X) in the equation (2.2) above satis es either
+kf(t; 0)k m<1 for all t2R
+or
+Z
+1
+ 1
+kf(t; 0)k
+p
+dt<1; 1 p< 2;
+whileg(t;X) satis es Lipschitz condition, withg(t; 0)  0: Then, Ezeilo in [16]
+stated and proved the following theorems for equation (2.2) above.
+Theorem 2.1 [16]
+Suppose that:
+(i) there exists a positive de nite n n matrix A such that the eigenvalues of
+fD +D
+T
+g, where D =A
+@f
+@X
+, are all negative for all values of t and X.
+(ii) f(t; 0) satis es either
+kf(t; 0)k m<1 for all t2R
+or
+Z
+1
+ 1
+kf(t; 0)k
+p
+dt<1; 1 p< 2:
+Electronic Journal. http://diffjournal.spbu.ru 65Differential Equations and Control Processes, N 4, 2018
+(iii) g(t; 0)  0 and
+kg(t;X) g(t;Y )k (t)kX Yk
+for all X; Y; t, with (t) satisfying
+Z
+1
+ 1
+
+q
+(t)dt<1; 1 q  2:
+Then, there exists a unique solution X
+ 
+(t) of equation (2.2) such that
+kX
+ 
+(t)k m; for t2R; (2:3)
+and every solution X(t) of equation (2.2) converges to X
+ 
+(t) as t! +1:
+Theorem 2.2 [16]
+Suppose conditions (i) and (ii) of Theorem 2.1 hold, and if in addition the
+following conditions hold
+(i) iff(t;X) andg(t;X) are uniformly almost periodic int forkXk m, then
+the unique solution X
+ 
+(t) of equation (2.2) is uniformly almost periodic
+(u.a.p) in t;
+(ii) if f(t;X) and g(t;X) are both periodic functions of t, forkXk  m and
+have the same period !, then X
+ 
+(t) is periodic in t, with a least period !.
+De nition 2.3 [8,12,15]
+We say that a solution X
+ 
+(t) of equation (2.1) is a limiting regime in the sense
+of Demidovic, if there exists a constant m, 0 < m <1 such thatkX
+ 
+(t)k 
+m; 1<t<1 and if every other solution of equation(2.1)converges toX
+ 
+(t)
+as t!1:
+De nition 2.4 [24]
+A continuous function f : R! x is called almost periodic if for each   > 0
+there exists %( ) > 0 such that every interval of length %( ) contains a number
+  with property that
+jf(t + ) f(t)j<  for each t2R:
+Lemma 2.5 Let A be an n n real symmetric positive de nite matrix. Then,
+for X2R
+n
+ 
+a
+kXk
+2
+ hAX;Xi   
+a
+kXk
+2
+; (2:4)
+where  
+a
+and  
+a
+are, respectively, the least and greatest eigenvalues of the ma-
+trix A:
+Proof. See [6,7,13, 14] .
+Lemma 2.6 [6,7,13,14]
+Electronic Journal. http://diffjournal.spbu.ru 66Differential Equations and Control Processes, N 4, 2018
+Following the conditions earlier de ned on H(X) with H(0) = 0 and let J
+H
+(X)
+denotes the Jacobian matrix
+@h
+i
+@x
+j
+of H(X), then,
+ 
+h
+kXk
+2
+ 
+Z
+1
+0
+hH(sX);Xids   
+h
+kXk
+2
+;
+where  
+h
+and  
+h
+are the least and greatest eigenvalues of matrix J
+H
+(X) respec-
+tively.
+Lemma 2.7 LetQ andD be any two realn n commuting symmetric matrices.
+Then,
+(i) the eigenvalues  
+i
+(QD); (i = 1; 2;:::;n) of the product matrix QD are
+real and satisfy:
+max
+1 j; k n
+ 
+j
+(Q) 
+k
+(D)  
+i
+(QD)  max
+1 j; k n
+ 
+j
+(Q) 
+k
+(D) (2:5)
+(ii) the eigenvalues 
+i
+(Q+D); (i = 1; 2;:::;n) of the sum of matricesQ andD
+are real and satisfy:
+f max
+1 j n
+ 
+j
+(Q) + max
+1 k n
+ 
+k
+(D)g  
+i
+(Q +D) f min
+1 j n
+ 
+j
+(Q) + min
+1 k n
+ 
+k
+(D)g
+(2:6)
+where  
+j
+(Q) and  
+k
+(D) are, respectively, the eigenvalues of matrices Q and D.
+Proof. See [6,7,13, 14].
+Hence forth, it shall be assumed that vector functionP (t;X;
+_
+X) is separable in
+the form
+P (t;X;
+_
+X) =r(t) +Q(t;X;
+_
+X)
+with r(t) = r(t) +Q(t; 0; 0) so that Q(t; 0; 0)  0: We shall write (1.1) in the
+equivalent form as
+_
+X =Y +R(t);
+_
+Y = AY H(X) +Q(t;X;Y +R(t)) AR (2:7)
+withkR(t)k =k
+R
+t
+0
+r( )kd  D; D> 0:
+3. Main result
+The followings are the main theorems of this paper.
+Theorem 3.1
+Suppose that H(0) = 0 such that:
+Electronic Journal. http://diffjournal.spbu.ru 67Differential Equations and Control Processes, N 4, 2018
+(i) the Jacobian matrix J
+H
+(X) of H(X) and matrix A are symmetric and
+commute with each other and their eigenvalues  
+i
+(J
+H
+(X)) and  
+i
+(A),
+(i = 1; 2; 3;:::;n) respectively satisfy:
+0< 
+h
+  
+i
+(J
+H
+(X))   
+h
+and
+0< 
+a
+  
+i
+(A)   
+a
+where  
+h
+and  
+h
+are the least and greatest eigenvalues of matrix J
+H
+(X)
+and 
+a
+and  
+a
+are the least and greatest eigenvalues of matrixA, such that
+ 
+h
+;  
+h
+;  
+a
+and  
+a
+are all  nites.
+(ii)
+kQ(t;X
+2
+;Y
+2
++R) Q(t;X
+1
+;Y
+1
++R)k 
+0
+fkX
+2
+ X
+1
+k +kY
+2
+ Y
+1
+kg (3:1)
+for all t and X
+i
+;Y
+i
+2R
+n
+; (i = 1; 2) and 
+0
+< ;  > 0:
+Then, there exists a unique solution X
+ 
+(t) of (1.1) or (2.7) satisfying
+kX
+ 
+(t)k
+2
++k
+_
+X
+ 
+(t)k
+2
+ D
+0
+;
+for t2 R
++
+, where D
+0
+is a positive constant. Moreover, every other solution
+X(t) of equation (1.1) converges to X
+ 
+(t) as t!1:
+Theorem 3.2
+Suppose thatH(0) = 0 and conditions (i) and (ii) of Theorem 3.1 hold. Further,
+suppose that there exists a solution X(t) of equation (1.1) such that
+kX(t)k
+2
++k
+_
+X(t)k
+2
+ D
+0
+:
+Then,
+(i) if Q(t;X;Y ) and R(t) are almost periodic in t, for
+kX(t)k
+2
++k
+_
+X(t)k
+2
+ D
+0
+;
+then X
+ 
+(t) is almost periodic in t.
+(ii) if Q(t;X;Y ) and R(t) are periodic in t, with period   for
+kX(t)k
+2
++k
+_
+X(t)k
+2
+ D
+0
+;
+then X
+ 
+(t) is periodic in t, with period  .
+Note, X
+ 
+(t) is a limiting regime.
+The main tool in proving the two theorems stated above is the scalar func-
+tion known as Lyapunov functional de ned by:
+2V (X(t);Y (t)) = 2
+Z
+1
+0
+hfA+B
+2
+gH(sX);Xids+hB
+2
+Y;Yi+hA
+3
+X;Xi+hAY;Yi
+Electronic Journal. http://diffjournal.spbu.ru 68Differential Equations and Control Processes, N 4, 2018
++2hAX;AYi (3:2)
+where both A and B are n n constant symmetric matrices which commute
+with each other. It is obvious that V(0,0) = 0.
+Lemma 3.3
+Assuming that all the conditions of Theorem 1 hold. Then we can  nd some
+positive constants  
+1
+and  
+1
+such that
+ 
+1
+fkXk
+2
++kYk
+2
+g V (X;Y )   
+1
+fkXk
+2
++kYk
+2
+g (3:3)
+for any X;Y belonging toR
+n
+:
+Proof of Lemma 3.3
+On rearranging the function V de ned above in equation (3.2), we obtain:
+2V (X(t);Y (t)) = 2
+Z
+1
+0
+hfA +B
+2
+gH(sX);Xids +hBY;BYi
++ kA
+3
+2
+X +A
+1
+2
+Yk
+2
+  2
+Z
+1
+0
+Z
+1
+0
+hfA +B
+2
+gJ
+H
+(s
+1
+s
+2
+X)X;Xids
+1
+ds
+2
++hBY;BYi:
+By applying the hypothesis (i) of the Theorem 3.1, Lemma 2.5 - 2.7, we have:
+V f 
+a
++ 
+2
+b
+g 
+h
+kXk
+2
++
+1
+2
+ 
+2
+b
+kYk
+2
+If we let 
+1
+=
+1
+2
+minf2 
+h
+( 
+a
++ 
+2
+b
+);  
+2
+b
+g, then we obtain the lower bound forV as:
+V (X;Y )  
+1
+fkXk
+2
++kYk
+2
+g: (3:4)
+The upper bound of V can also be obtained as follows.
+2V (X(t);Y (t)) = 2
+Z
+1
+0
+hfA +B
+2
+gH(sX);Xids +hBY;BYi
++ kA
+3
+2
+X +A
+1
+2
+Yk
+2
+= 2
+Z
+1
+0
+Z
+1
+0
+hfA +B
+2
+gJ
+H
+(s
+1
+s
+2
+X)X;Xids
+1
+ds
+2
++hBY;BYi
++ hA
+3
+X;Xi +hAY;Yi + 2hAX;AYi:
+Using Lemmas 2.5 - 2.7 and the fact that 2jhAY;AXij hAX;AXi+hAY;AYi;
+we obtain
+2V (X(t);Y (t))   2f 
+h
+( 
+a
++  
+2
+b
+)gkXk
+2
++f 
+2
+a
++  
+a
++  
+2
+b
+gkYk
+2
++ f 
+3
+a
++  
+2
+a
+gkXk
+2
+= f2 
+h
+( 
+a
++  
+2
+b
+) +  
+3
+a
++  
+2
+a
+gkXk
+2
++f 
+2
+a
++  
+a
++  
+2
+b
+gkYk
+2
+:
+Electronic Journal. http://diffjournal.spbu.ru 69Differential Equations and Control Processes, N 4, 2018
+Letting  
+1
+=
+1
+2
+maxf2 
+h
+( 
+a
++  
+2
+b
+) +  
+3
+a
++  
+2
+a
+;  
+2
+a
++  
+a
++  
+2
+b
+g, we obtain the
+upper bound of V as:
+V   
+1
+fkXk
+2
++kYk
+2
+g: (3:5)
+Thus, inequality (3.3) follows on combining the estimates (3.4) and (3.5) to-
+gether. This completes the proof of the Lemma 3.3.
+Next, we  nd the derivative of V (X;Y ) with respect to t along the system
+(2.7) for all solutions (X(t), Y(t)). This gives:
+_
+V =  hA
+2
+X;H(X)i hB
+2
+Y;AYi +hfA +B
+2
+gH(X) AB
+2
+Y;R(t)i
++ hfB
+2
++AgY +A
+2
+X;Qi
+=  
+Z
+1
+0
+hA
+2
+X;J
+H
+(sX)Xids hB
+2
+Y;AYi +hfB
+2
++AgY +A
+2
+X;Qi
++
+Z
+1
+0
+hfA +B
+2
+gJ
+H
+(sX)X AB
+2
+Y;R(t)ids
+in view of the assumption (i) of the Theorem 3.1 and Lemmas 2.5 - 2.7 we have
+_
+V     
+2
+a
+ 
+h
+kXk
+2
+  
+2
+b
+ 
+a
+kYk
+2
++f( 
+a
++  
+2
+b
+) 
+h
+kXk  
+a
+ 
+2
+b
+kYkgD
++ f( 
+2
+b
++  
+a
+)kYk +  
+2
+a
+kXkgkQ(t;X;Y +R)k
+=  K
+3
+fkXk
+2
++kYk
+2
+g +K
+4
+fkXk +kYkg
++ K
+5
+fkXk +kYkg kQ(t;X;Y +R(t))k (3:6)
+where K
+3
+= minf 
+2
+a
+ 
+h
+;  
+2
+b
+ 
+a
+g , K
+4
+= maxf( 
+a
++  
+2
+b
+) 
+h
+;  
+a
+ 
+2
+b
+gD and
+K
+5
+= maxf 
+2
+b
++  
+a
+;  
+2
+a
+g:
+Now, by applying the condition (ii) of Theorem 3.1, we obtain
+_
+V    K
+3
+fkXk
+2
++kYk
+2
+g +K
+6
+fkXk
+2
++kYk
+2
+g
+1
+2
++ K
+7
+fkXk
+2
++kYk
+2
+g
+1
+2
+ 
+0
+fkXk
+2
++kYk
+2
+g
+1
+2
+   K
+3
+fkXk
+2
++kYk
+2
+g +K
+6
+fkXk
+2
++kYk
+2
+g
+1
+2
++K
+7
+
+0
+fkXk
+2
++kYk
+2
+g
+   fK
+3
+ K
+7
+
+0
+gfkXk
+2
++kYk
+2
+g +K
+6
+fkXk
+2
++kYk
+2
+g
+1
+2
+The last inequality implies
+_
+V  fK
+3
+ K
+7
+
+0
+gV (t) +K
+6
+V
+1
+2
+(t) (3:7)
+whereK
+6
+=K
+4
+p
+2 andK
+7
+=K
+5
+p
+2: Thus,  can be taken to be  =K
+ 1
+7
+K
+3
+> 0.
+Hence, 
+0
+<  as indicated in Theorem 3.1.
+According to Ezeilo[7], the following Lemma will be quite useful.
+Lemma 3.4
+Electronic Journal. http://diffjournal.spbu.ru 70Differential Equations and Control Processes, N 4, 2018
+Assuming that the conditions (i) and (ii) of Theorem 3.1 hold. Then, for arbi-
+trary t
+0
+, there exists positive constants K
+8
+; K
+9
+depending on A; H(X); Q and
+R such that for t t
+0
+;
+V (X(t);Y (t)) K
+8
+V (X(t
+0
+);Y (t
+0
+)) +K
+9
+: (3:8)
+Moreover, there are  nite constants   and K
+10
+, also depending only on
+A; H(X); Q and R such that if V (X(t
+0
+);Y (t
+0
+)) K
+10
+; then
+V (X(t
+0
++ );Y (t
+0
++ )) K
+10
+(3:9)
+for every  
+0
+  <1:
+Proof
+Let us set W (t) =V (X(t);Y (t))
+1
+2
+, then we have from inequality (3.7) that
+d
+dt
+fW (t) expf
+1
+2
+[K
+3
+ K
+7
+
+0
+]tgg 
+1
+2
+K
+6
+expf
+1
+2
+[K
+3
+ K
+7
+
+0
+]tg: (3:10)
+Integrating (3.10) from t
+0
+to t
+0
++S, S  0; we have
+W (t
+0
++S) expf
+1
+2
+[K
+3
+ K
+7
+
+0
+](t
+0
++S)g
+ W (t
+0
+) expf
+1
+2
+[K
+3
+ K
+7
+
+0
+]t
+0
+g +
+1
+2
+K
+6
+Z
+t
+0
++S
+t
+0
+expf
+1
+2
+[K
+3
+ K
+7
+
+0
+]tgdt (3:11)
+It is obvious from the condition (ii) of Theorem 3.1 that the second term in the
+inequality (3.11) above is a constant and also  nite since 
+0
+is a constant. On
+some arrangements of terms in (3.11), we obtain
+W (t
+0
++S) K
+11
+W (t
+0
+) expf 
+1
+2
+K
+3
+Sg +K
+12
+; S  0 (3:12)
+where K
+12
+is a positive constant depending on K
+3
+; K
+6
+and K
+7
+.
+Now, if K
+11
+W (t
+0
+) K
+12
+, we have that
+W (t
+0
++S)  2K
+12
+; for S  0: (3:13)
+This means
+V (t
+0
++S) f2K
+12
+g
+2
+; provided that S  0:
+Also, if K
+11
+W (t
+0
+)>K
+12
+, we have from (3.12) that
+W (t
+0
++S)< 2K
+11
+W (t
+0
+); for S  0:
+This means
+V (t
+0
++S)<f2K
+11
+g
+2
+V (t
+0
+); provided that S  0:
+Electronic Journal. http://diffjournal.spbu.ru 71Differential Equations and Control Processes, N 4, 2018
+Hence, in all cases, we have
+V (t
+0
++S) f2K
+11
+g
+2
+V (t
+0
+) +f2K
+12
+g
+2
+; provided that S  0;
+which is equivalent to (3.8) with K
+8
+=f2K
+11
+g
+2
+and K
+9
+=f2K
+12
+g
+2
+:
+The concluding part of the proof of the Lemma is now to show that for some
+number, say  
+0
+(whose value will be determined later),
+V (t
+0
++ ) K
+10
+for every  
+0
+  <1 and K
+10
+such that V (t
+0
+) K
+10
+:
+Let's de ne K
+13
+=K
+9
+=f2K
+12
+g
+2
+:
+First, if V (t
+0
+) K
+13
+, we have that K
+12
+<
+1
+2
+W (t
+0
+):
+Therefore, from (3.12), we have
+W (t
+0
++S)<K
+11
+W (t
+0
+) expf 
+1
+2
+K
+3
+Sg +
+1
+2
+W (t
+0
+)
+ W (t
+0
+) provided S 
+2 log 2K
+11
+K
+3
+>
+log 2K
+11
+K
+3
+: (3:14)
+That is,
+V (t
+0
++S) V (t
+0
+);
+each time V (t
+0
+) K
+13
+: Now, if V (t
+0
+)<K
+13
+, we have that W (t
+0
+) K
+1
+2
+13
+: Thus,
+from (3.12), we have that
+W (t
+0
++S)<K
+11
+expf 
+1
+2
+K
+3
+SgK
+1
+2
+13
++K
+1
+2
+13
+  2K
+1
+2
+13
+; provided that S 
+2 logK
+11
+K
+3
+>
+log
+2
+3
+K
+11
+K
+3
+:
+That is,
+V (t
+0
++S)< 2K
+13
+; provided that S 
+log 2K
+11
+K
+3
+:
+Thus, on choosing 
+0
+=
+log 2K
+11
+K
+3
+andK
+10
+= 2K
+13
+in the above inequality, inequal-
+ity (3.9) of Lemma 3.4 is veri ed and this completes the proof of Lemma 3.4.
+To prove Theorem 3.1 completely, we need to prove that any two solutions
+of (2.7) converge. This will be shown in the lemma below.
+Lemma 3.5
+Suppose that conditions (i) and (ii) of Theorem 3.1 hold. Suppose that in
+addition that there exists constants d
+3
+; d
+4
+; d
+5
+whose magnitude depend on
+A; H(X);Q; and R, then if (X
+1
+;Y
+1
+); (X
+2
+;Y
+2
+) are any two solutions of (2.7),
+then
+U(t) d
+3
+U(t
+0
+) expf (d
+4
+ d
+5
+
+0
+)(t t
+0
+)g; (3:15)
+Electronic Journal. http://diffjournal.spbu.ru 72Differential Equations and Control Processes, N 4, 2018
+where
+U(t) =fkX
+1
+(t) X
+2
+(t)k
+2
++kY
+1
+(t) Y
+2
+(t)k
+2
+g:
+Proof
+Given thatX
+1
+(t) andX
+2
+(t) are any two solutions of (2.7), we de ne a function
+W =W (t) by
+W (t) =V ((X
+1
+(t) X
+2
+(t); (Y
+1
+(t) Y
+2
+(t)))
+where V is the function earlier de ned in (3.2) but with X; Y replaced by
+(X
+1
+(t) X
+2
+(t)) and (Y
+1
+(t) Y
+2
+(t)) respectively. Then, by inequality (3.3),
+there exists positive constants say K
+14
+; K
+15
+such that
+K
+14
+U(t) W (t) K
+15
+U(t): (3:16)
+Also by the inequality (3.16), it su ces to show that
+W (t) d
+3
+W (t
+0
+) expf (d
+4
+ d
+5
+
+0
+)(t t
+0
+)g; (t t
+0
+): (3:17)
+By the earlier calculation of
+_
+V in (3.6), we have
+_
+W (t)  K
+16
+fkX
+1
+ X
+2
+k
+2
++kY
+1
+ Y
+2
+k
+2
+g +K
+ 
+17
+fkX
+1
+ X
+2
+k +kY
+1
+ Y
+2
+kgk k;
+where   =Q(t;X
+2
+;Y
+2
++R) Q(t;X
+1
+;Y
+1
++R): and K
+17
+=K
+ 
+17
+p
+2
+Let us set U(t) =fkX
+1
+ X
+2
+k
+2
++kY
+1
+ Y
+2
+k
+2
+g then, we have
+_
+W (t)  K
+16
+U(t) +K
+17
+U
+1
+2
+(t)k k: (3:18)
+Let   be any constant such that 1      2 and set 2ff = 2   , so that
+0  2ff  1.
+We write inequality (3.18) in the form
+_
+W +K
+16
+U(t) K
+17
+U
+ff
+W
+ 
+;
+where
+W
+ 
+= (k k K
+16
+K
+ 1
+17
+U
+1
+2
+)S
+(
+1
+2
+ ff)
+:
+We will consider separately two possible cases as follow.
+(i)k k K
+16
+K
+ 1
+17
+U
+1
+2
+and
+(ii)k k>K
+16
+K
+ 1
+17
+U
+1
+2
+:
+We  nd out that in either case, there exists some constants K
+18
+such that
+W
+ 
+(t) K
+18
+k k
+2(1 ff)
+: Thus, we can rewrite the inequality (3.18) as
+_
+W +K
+16
+U(t) K
+19
+U
+ff
+
+0
+U
+(1 ff)
+where K
+19
+  2K
+17
+K
+18
+: This immediately yields
+_
+W + (K
+20
+ K
+21
+
+0
+)W (t)  0 (3:19)
+Electronic Journal. http://diffjournal.spbu.ru 73Differential Equations and Control Processes, N 4, 2018
+by (3.16), with positive constants K
+20
+and K
+21
+. On integrating (3.19) from t
+0
+to t
+1
+, (t
+1
+ t
+0
+), we obtain
+W (t
+1
+) W (t
+0
+) expf (K
+20
+ K
+21
+
+0
+)(t
+1
+ t
+0
+)g:
+Again, by using (3.16), we obtain (3.17). Thus, inequality (3.15) implies that
+for all t
+1
+ t
+0
+  0 and 
+0
+< d
+4
+d
+ 1
+5
+, (d
+4
+ d
+5
+
+0
+)(t t
+0
+) is negative and so, as
+t = (t
+1
+ t
+0
+)!1, we have U(t)! 0: Which implies
+kX
+1
+(t) X
+2
+(t)k! 0;kY
+1
+(t) Y
+2
+(t)k! 0 as t!1:
+So that, for the unique solution X
+ 
+(t) of the equation (1), we have
+kX(t) X
+ 
+(t)k = 0;k
+_
+X(t) 
+_
+X(t)k = 0;
+which implies that
+X(t) =X
+ 
+(t);
+_
+X(t) =
+_
+X(t):
+This completes the proof of Lemma 3.5.
+Proof of Theorem 3.1
+Having proved Lemma 3.4 and Lemma 3.5, the proof of Theorem 3.1 then fol-
+lows exactly as in Theorem 1 of [7] with the obvious modi cations as required.
+Proof of Theorem 3.2
+The method to be used in proving Theorem 3.2 is as outlined in Ezeilo [7] but
+with some modi cations as a result of Q(t;X;Y +R) which is almost periodic
+in t.
+Let us consider the function de ned as
+ (t) =V (X(t + ) X(t);Y (t + ) Y (t))
+where V is the function de ned in equation (3.2) with X; Y replaced by
+X(t + ) X(t);Y (t + ) Y (t)); respectively. Then, we easily have by the
+inequality (3.3) that there exists positive constants c
+1
+; c
+2
+both positive such
+that
+c
+1
+S(t)  (t) c
+2
+S(t) (3:20)
+with
+S(t) =fkX(t + ) X(t)k
+2
++kY (t + ) Y (t)k
+2
+g:
+Following the approach used in proving Lemma 3.5, we have for some positive
+constants c
+3
+; c
+4
+that
+_
+    c
+3
+fkX(t + ) X(t)k
+2
++kY (t + ) Y (t)k
+2
+g
++ c
+4
+fkX(t + ) X(t)k +kY (t + ) Y (t)kgk k (3:21)
+with   =Q(t + ;X(t + );Y (t + ) +R(t + )) Q(t;X(t);Y (t) +R(t)):
+Electronic Journal. http://diffjournal.spbu.ru 74Differential Equations and Control Processes, N 4, 2018
+Now, we can rewrite (3.21) as
+_
+    c
+3
+fkX(t + ) X(t)k
+2
++kY (t + ) Y (t)k
+2
+g
++ fkX(t + ) X(t)k +kY (t + ) Y (t)kg
+1
+2
+ 
+kQ(t + ;X(t + );Y (t + ) +R(t + )) Q(t;X(t));Y (t) +R(t))k
++ c
+4
+fkX(t + ) X(t)k +kY (t + ) Y (t)kgk k: (3:22)
+Assuming now that the function Q is uniformly almost periodic in t. Then for
+arbitrary number  > 0, we can  nd  > 0 such that
+kQ(t+ ;X(t+ );Y (t+ )+R(t+ )) Q(t;X(t));Y (t)+R(t))k   
+2
+(3:23)
+where  is a constant whose value will be determined later to our credit. Thus,
+from (3.22), we obtain
+_
+   c
+3
+S(t) +c
+5
+S
+1
+2
+(t)k k +c
+6
+S
+1
+2
+(t)  
+2
+(3:24)
+where c
+5
+=c
+4
+p
+2 and c
+6
+=
+p
+2. By condition (ii) of Theorem 3.1, we have
+fkX(t + ) X(t)k
+2
++kY (t + ) Y (t)k
+2
+g
+1
+2
+ D
+1
+(3:25)
+then
+_
+ +c
+3
+S(t) c
+5
+S
+1
+2
+(t)k k +c
+6
+D
+1
+  
+2
+: (3:26)
+Let   be any constant such that 1       2 and set ff = 1 
+1
+2
+ , so that
+0 ff  1. Inequality (3.26) thus becomes,
+d 
+dt
+ c
+5
+S
+ff
+U
+ 
++c
+6
+D
+1
+  
+2
+(3:27)
+where U
+ 
+=S
+(
+1
+2
+ ff)
+ 
+k k c
+ 1
+5
+c
+3
+S
+1
+2
+(t)
+ 
+:
+Now, ifk k c
+ 1
+5
+c
+3
+S
+1
+2
+(t), we obtain
+U
+ 
+  0;
+again, suppose thatk k>c
+ 1
+5
+c
+3
+S
+1
+2
+(t), that is,
+S < (c
+5
+c
+ 1
+3
+k k)
+2
+; we get
+U
+ 
+<c
+7
+k k
+2(1 ff)
+;
+where c
+7
+= (c
+5
+c
+ 1
+3
+)
+(2ff 1)
+:
+Thus in the two cases, U
+ 
+< c
+7
+k k
+2(1 ff)
+: Therefore, on using the fact that
+k k 
+0
+S
+1
+2
+from inequality (3.1), inequality (3.27) becomes,
+d 
+dt
+ c
+7
+c
+5
+
+2(1 ff)
+0
+S(t) +c
+6
+D
+1
+  
+2
+:
+Electronic Journal. http://diffjournal.spbu.ru 75Differential Equations and Control Processes, N 4, 2018
+On using inequality (3.20), we have
+d 
+dt
++c
+8
+
+ 
+0
+  c
+6
+D
+1
+  
+2
+(3:28)
+where c
+8
+= c
+7
+c
+5
+
+ 
+:
+Integrating inequality 3.28 from t
+0
+to t with t t
+0
+and letting
+c
+11
+=
+Z
+t
+t
+0
+e
+c
+8
+s
+ds;
+we obtain
+ (t)  (t
+0
+) expfc
+8
+(t
+0
+ t)g +c
+11
+expf c
+8
+tgD
+1
+  
+2
+  (t
+0
+) expfc
+8
+(t
+0
+ t)g +c
+12
+  
+2
+(3:29)
+where c
+12
+= c
+11
+expf c
+8
+tgD
+1
+: By letting t
+0
+! 1 in inequality (3.29) and
+noting that (t
+0
+) is  nite from (3.25), we then obtain
+W (t) c
+12
+  
+2
+for arbitraryt. Now, by inequality (3.20) and the de nition ofW (t), we obtain
+kX(t + ) X(t)k
+2
++kY (t + ) Y (t)k
+2
+ c
+12
+  
+2
+c
+ 1
+1
+: (3:30)
+Taking   =c
+1
+c
+ 1
+12
+, inequality (3.30) thus becomes
+kX(t + ) X(t)k
+2
++kY (t + ) Y (t)k
+2
+  
+2
+: (3:31)
+Multiplying inequality (3.31) by
+p
+2, we obtain
+p
+2fkX(t + ) X(t)k
+2
++kY (t + ) Y (t)k
+2
+g 
+p
+2 
+2
+;
+it then follows that
+kX(t + ) X(t)k +kY (t + ) Y (t)k   (3:32)
+The proof of the  rst part of Theorem 3.2 is completes once we choose   to
+satisfy (3.23) and   =c
+1
+c
+ 1
+12
+:
+The proof of the second part of Theorem 3.2 is as follows. Assuming that
+Q(t;X;Y +R) is periodic int with period  and we  x the  in the de nition of
+ (t). Then, the terms on the left hand side of (3.23) is identically zero, and if
+we proceed just as we did above, we shall obtain the following in place of (3.30)
+kX(t + ) X(t)k
+2
++kY (t + ) Y (t)k
+2
+  0:
+But the above cannot be less than zero. Therefore,
+kX(t + ) X(t)k
+2
++kY (t + ) Y (t)k
+2
+= 0:
+Electronic Journal. http://diffjournal.spbu.ru 76Differential Equations and Control Processes, N 4, 2018
+This obviously implies that
+X(t + ) =X(t) and Y (t + ) =Y (t)
+this therefore shows the periodicity as required and the proof of Theorem 3.2
+is completed.
+References
+[1] A.T. Ademola, Boundedness and stability of solutions to certain second
+order differential equations. Differential Equations and Control Processes
+no.3, Volume 2015.
+[2] A.T. Ademola, P.O. Arawomo, and A.S. Idowu, Stability, Boundedness and
+Periodic Solutions to Certain Second Order Delay Differential Equations.
+Proyecciones Journal of Mathematics vol. 36, No. 2, pp. 257-282, June
+2017. Universidad Catolica del Norte Antofagasta - Chile.
+[3] A.T. Ademola, B.S. Ogundare, M.O. Ogundiran, and O.A. Adesina, Pe-
+riodicity, stability and boundedness of solutions to a certain second order
+delay differential equations. International Journal of Differential Equa-
+tions, vol. 2016, Article ID 2843709, 10 pages, 2016.
+[4] O.A. Adesina and A.S.Ukpera, On the existence of a limiting regime in the
+sense of Demidovic for a certain  fth order nonlinear differential equation.
+Mathematical Analysis. 16 (2009), 193-207.
+[5] O.A. Adesina, Demidovic's limiting regime to a certain fourth order non-
+linear differential equation Another Results. Journal of the Nigerian Math-
+ematical Society, Vol. 31 (2012), 35-48.
+[6] A.U. Afuwape, Ultimate boundedness results for a certain system of third-
+order nonlinear differential equations. J. Math. Anal. Appl., 97 (1983),
+140-150.
+[7] A.U. Afuwape and M.O. Omeike, Further ultimate boundedness of solu-
+tions of some system of third order nonlinear ordinary differential equa-
+tions. Acta Univ. Palacki. Olumuc., Fac. rer. nat., Mathematica, 43
+(2004), 7-20.
+[8] A.U. Afuwape and M.O. Omeike, On the Existence of a limiting regime
+in the sense of Demidovic for a certain Third-order nonlinear differential
+equation. Differentia Equations and Control Processes, Electronic Journal,
+no.2 (2010), 40-55.
+Electronic Journal. http://diffjournal.spbu.ru 77Differential Equations and Control Processes, N 4, 2018
+[9] A.U. Afuwape, On the Existence of a limiting regime in the sense of
+Demidovic for a certain Fourth-order Nonlinear Differential Equation. J.
+of Mathematical Analysis and Applications, 129 (1988), 389-393.
+[10] J.G. Alaba and B.S. Ogundare, On stability and boundedness properties of
+solutions of certain second order non-autonomous nonlinear ordinary dif-
+ferential equations. Kragujevac Journal of Mathematics, 39, 2 (2015),255-
+266.
+[11] M.L.Cartwright and J.E. Littlewood, On nonlinear differential equations
+of the second order. Annali of Math., 48(1947), 472-494.
+[12] B.P. Demidovic, On the existence of a limiting regime of a certain non-
+linear system of ordinary differential equations. Amer. Math. Soc. Transl.
+ser.,18(2), 151-161. 1961.
+[13] J.O.C. Ezeilo and H.O.Tejumola, Boundedness and periodicity of solutions
+of a certain system of third-order non-linear differential equations. Ann.
+Mat. Pura Appl. 66(1964) 283-316.
+[14] J.O.C. Ezeilo, Stability results for the solutions of some third and fourth
+order differential equations. Ann. Mat. Pura Appl. 66(1964) 233-249.
+[15] J.O.C. Ezeilo, New properties of the equation x
+000
++ax
+00
++bx
+0
++h(x) =
+p(t;x;x
+0
+;x
+00
+) for certain special values of the incrementary ratioy
+ 1
+fh(x +
+y) h(x)g. Equations differentielles et fonctionnelles non linires ( Actes
+Conference internat " Equa-Diff 73", Brussels / Louvain-la-Neuve), Her-
+mann, Paris, 447-462, 1973. MR0430413 (55#3418).
+[16] J.O.C. Ezeilo, A generalization of a result of Demidovic on the existence
+of a limiting regime of a system of differential equations. Portugaliae Math.
+25 (1965), 65-82.
+[17] J.O.C. Ezeilo, On the convergence of solutions of certain systems of second
+order equations. Ann. Mat. Pura. Appl 72 (1966), 239-252.
+[18] G.A. Grigoryan, Boundedness and stability criteria for linear ordinary
+differential equations of the second order. Russian Mathematics, 57, 12
+(2013), 8-15.
+[19] A.J. Kroopnick, Bounded solutions to x
+00
++q(t)b(x) = f(t). Interna-
+tional Journal of Mathematical Education in Science and Technology, 41,
+6 (2010), 829-836.
+[20] A.J. Kroopnick, Two new proofs for the boundedness of solutions to
+x
+00
++a(t)x = 0. Missouri. J. Math. Sci. 25, 1(2013), 103-105.
+[21] A.J. Kroopnick, On the integration of L
+2
+-solutions of non-oscillatory
+solutions to x
+00
++a(t)x
+0
++k
+2
+x = 0. Int. Math Forum 9, 10 (2014), 475-481.
+Electronic Journal. http://diffjournal.spbu.ru 78Differential Equations and Control Processes, N 4, 2018
+[22] W.S.Loud, Boundedness and convergence of solutions of  x +c _ x +g(x) =
+e(t). Duke Math., J. 24 (1957),63-72.
+[23] B.S. Ogundare, A.T. Ademola, M.O. Ogundiran and O.A. Adesina,
+On the qualitative behaviour of solutions to certain second order nonlinear
+differential equation with delay. Annali dell' Universita' di Ferrara, 2016.
+[24] A.L. Olutimo, Existence of a limiting regime in the sense of Demidovic for
+a certain nonlinear differential equations of third order. MAYFEB Journal
+of Mathematics- ISSN 2371-6193, vol. 4 (2017), 53-66.
+[25] M.O. Omeike, O.O. Oyetunde and A.L. Olutimo, Boundedness of so-
+lutions of certain system of second-order ordinary differential equations.
+Acta Univ. Palacki. Olomuc., Fac. rer. nat., Math., 53 (2014), 107-115.
+[26] H.O. Tejumola, Boundedness theorems for some systems of two differential
+equations. Atti. Accad. Naz. Lincei Rend. Cl. Sci. Fis. Mat. Natur. 51,
+6 (1971), 472-476.
+[27] H.O. Tejumola, Boundedness criteria for solutions of some second-order
+differential equations. Atti Della Accademia Nazionale Dei Lincei Serie
+VII, 60, 2 (1976), 100-107.
+[28] C. Tun  c and E. Tun  c, On the asymptotic behaviour of solutions of certain
+second order differential equations. J. Franklin Inst., 344(2007), 391-398.
+[29] C. Tun  c and E. Tun  c, On the boundedness of solutions of non-autonomous
+differential equations of second order. Sarajevo Journal of Mathematics,
+17(2011), 19-29.
+[30] C. Tun  c and 0. Tun  c, A note on certain qualitative properties of a
+second order linear differential system. Appl. Math. Int. Sci. 9 (2),
+(2015), 953-956.
+[31] C. Tun  c and O. Tun  c, A note on the stability and boundedness of solutions
+to non-linear differential systems of second order. J. Assoc. Arab Univ.
+Basic Appl. Sci., 24(2017), 169-175.
+Electronic Journal. http://diffjournal.spbu.ru 79
