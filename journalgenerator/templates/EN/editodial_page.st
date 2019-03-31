@@ -7,7 +7,7 @@ $about_content()$
   <li><strong>Nikolay Kuznetsov</strong><br />professor, Doctor of Science</li>
 </ul>
 
-<h3>Editor</h3>
+<h3>Deputy Editor</h3>
 <ul>
   <li><strong>Natalia Ampilova</strong><br />Assoc.prof., PhD</li>
 </ul>
