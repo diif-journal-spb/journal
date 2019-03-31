@@ -1,0 +1,2270 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 1, 2019
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Nonlinear Integral Equations
+On Erd  elyi-Kober cubic fractional integral equation of
+Urysohn-Volterra type
+Hamed Kamal Awad and Mohamed Abdalla Darwish
+Department of Mathematics, Faculty of Sciences, Damanhour University,
+Egypt
+e-mails: hamedk66@sci.dmu.edu.eg; dr.madarwish@gmail.com
+Abstract
+Cubic integral equations is the general form of the quadratic integral equa-
+tions which have several applications in the theory of radiative transfer, in the
+tra c theory, in the theory of particle transport and in the kinetic theory of
+gases. In this paper, we present a result on the existence of solutions of the
+perturbed Erd  elyi-Kober fractional cubic integral equation of Uryshon-Volterra
+type in the Banach space of real functions de ned, continuous and bounded on
+an unbounded interval. We use the Darbo  xed point theorem and a measure
+of noncompactness in order to prove our main result.
+Keywords: Cubic integral equation, measure of noncompactness, Erd  elyi-
+Kober fractional integral, Darbo  xed point theorem, Urysohn-Volterra integral
+equation
+1 Introduction
+In this paper, we establish the existence and the asymptotic behaviour of so-
+lutions to the perturbed cubic Uryshon-Volterra integral equation involvingDifferential Equations and Control Processes, N. 1, 2019
+Erd  elyi-Kober fractional integral, namely
+x(t) =f(t;x(t)) +
+ x
+2
+(t)
+ (ff)
+Z
+t
+0
+s
+  1
+u(t;s;x(s))
+(t
+ 
+ s
+ 
+)
+1 ff
+ds; t2R
++
+= [0; +1); (1)
+where 0 < ff < 1,   > 0. Letkxk = supfjx(t)j : t2 R
++
+g be the norm for
+x2BC(R
++
+), where BC(R
++
+) is the Banach space of all real functions de ned,
+continuous and bounded onR
++
+. There,f :R
++
+ R
++
+!R andu :R
++
+ R
++
+ R!
+R are functions which satisfy special assumptions that will be stated in detail
+in Section 3.
+Cubic integral equations is the general form of the quadratic integral equa-
+tions which have several applications in the theory of radiative transfer, in the
+tra c theory, in the theory of particle transport and in the kinetic theory of
+gases, specially the quadratic integral equation of Chandrasekhar type is ap-
+plicable in many problems in mechanics, physics and other  elds [3, 4, 8, 23].
+On the other hand, Erd  elyi-Kober fractional integrals are very often used to
+describe the medium with non-integer mass dimension and also, one can  nd
+more applications of fractional integrals of Erd  elyi-Kober type in porous media,
+viscoelasticity and electrochemistry ([10]-[18], [21], [22]).
+For a continuous functionf, the Erd  elyi-Kober fractional integral is de ned
+as [1, 19]
+I
+
+ 
+f( ) =
+ 
+ ()
+Z
+ 
+0
+s
+  1
+f(s)
+( 
+ 
+ s
+ 
+)
+1 
+ds;   > 0; 0< < 1:
+Eq.(1) considered as Erd  elyi-Kober fractional quadratic integral equation with
+perturbation, see [20].
+The aim of this paper is to prove the existence of solutions to Eq.(1) in
+the space of real functions which are de ned, continuous and bounded on an
+unbounded interval. We use a suitable combination of the technique of measures
+of noncompactness and the Darbo  xed point principle to obtain our results.
+2 Preliminaries
+Firstly, we present the concept of a measure of noncompactness [5].
+Let the symbol (E;k:k) stands for a real Banach space with a zero element 0
+andB(x;r) stands for the closed ball of radiusr and centerx. Also, we denote
+by B
+r
+the closed ball B(0;r). Next, let;6= X   E and denote by X and
+Electronic Journal. http://diffjournal.spbu.ru 71Differential Equations and Control Processes, N. 1, 2019
+ConvX the closure and convex closure of the set X, respectively. Let X +Y
+and  X,  2 R, denote the usual algebraic operations on the sets X and Y .
+Moreover, we denote byM
+E
+the family of all nonempty and bounded subsets of
+E and byN
+E
+the subfamily ofM
+E
+consisting of all relatively compact subsets
+of E.
+De nition 1 A function   :M
+E
+!R
++
+is called a measure of noncompactness
+in E if it veri es the following conditions:
+1) ker 6=; and ker  N
+E
+, where ker  stands for the familyfX2M
+E
+:
+ (X) = 0g.
+2) X Y) (X)  (Y ).
+3)  (X) = (ConvX) = (X).
+4)  ( X + (1  )Y )   (X) + (1  ) (Y ) for 0    1.
+5) If X
+n
+2M
+E
+, X
+n
+=X
+n
+, X
+n+1
+ X
+n
+for n = 1; 2; 3; ::: and lim
+n!1
+ (X
+n
+) =
+0, then\
+1
+n=1
+X
+n
+6=;.
+The family ker  described above is called the kernel of the measure of non-
+compactness . Let us observe that the intersection set X
+1
+from 5) belongs to
+ker . In fact, since (X
+1
+)  (X
+n
+) for everyn, then we have that (X
+1
+) = 0.
+Secondly, we present the construction of the measure of noncompactness in
+BC(R
++
+) which will be used in the next section (see [6, 7]).
+Let;6=X BC(R
++
+) be bounded set and  x numbers"> 0 andT > 0. For
+arbitrary function x2 X, we de ne the modulus of continuity of the function
+x on the interval [0;T ] by
+!
+T
+(x;") = supfjx(t) x(s)j :t; s2 [0;T ];jt sj "g:
+Further, we put
+!
+T
+(X;") = supf!
+T
+(x;") :x2Xg;
+!
+T
+0
+(X) = lim
+"!0
+!
+T
+(X;");
+and
+!
+1
+0
+(X) = lim
+T!1
+!
+T
+0
+(X;"):
+For a  xed number t2R
++
+, let us de ne
+X(t) =fx(t) :x2Xg
+Electronic Journal. http://diffjournal.spbu.ru 72Differential Equations and Control Processes, N. 1, 2019
+and
+diamX(t) = supfjx(t) y(t)j :x;y2Xg:
+Next, we de ne the function   on the familyM
+BC(R
++
+)
+by
+ (X) =!
+1
+0
+(X) +c(X); (2)
+where c(X) = lim sup
+t!1
+diamX(t). The function   is a measure of noncompact-
+ness in the space BC(R
++
+), see [6].
+Finally, we present a  xed point theorem due to Darbo [9]. Before giving
+this theorem, we need the following de nition.
+De nition 2 Let M be a nonempty subset of a Banach space E and letP :
+M!E be a continuous operator which transforms bounded sets onto bounded
+ones. We say thatP satis es the Darbo condition (with a constant k  0) with
+respect to a measure of noncompactness  , if for any bounded subset X of M,
+we have
+ (PX) k (X):
+IfP veri es the Darbo condition withk< 1, thenP is said to be a contraction
+operator with respect to  .
+Theorem 1 Let Q6=; be a bounded, closed and convex subset of the space E
+and let
+P :Q!Q
+be a contraction with respect to the measure of noncompactness  . ThenP has
+at least one  xed point in the set Q.
+3 Main result
+In this section, we will study Eq.(1) under the following assumptions:
+(a
+1
+) The functions f :R
++
+ R!R is continuous and the function t!f(t; 0)
+is bounded onR
++
+. Put f
+ 
+= supfjf(t; 0)j :t2R
++
+g.
+(a
+2
+) There exist continuous functions m :R
++
+!R
++
+such that
+jf(t;x) f(t;y)j m( )jx yj;
+for any t 2 R
++
+and x;y 2 R. Moreover, m is bounded. Put m
+ 
+=
+supfjm(t)j :t2R
++
+g.
+Electronic Journal. http://diffjournal.spbu.ru 73Differential Equations and Control Processes, N. 1, 2019
+(a
+3
+) The function u : R
++
+ R
++
+ R! R is continuous and there exist func-
+tions 	 : R
++
+! R
++
+and q(t) = q : R
++
+! R
++
+, being 	 continuous and
+nondecreasing, with 	(0) = 0 and q continuous satisfying
+ju(t;s;x
+1
+) u(t;s;x
+2
+)j q(t)	(jx
+1
+ x
+2
+j)
+for any t;s2R
++
+with s t and for all x
+i
+2R (i = 1; 2).
+(a
+4
+) The functions  ; : R
++
+! R
++
+de ned by  (t) = q(t)t
+ff 
+and (t) =
+u
+ 
+(t)t
+ff 
+are bounded on R
++
+, where u
+ 
+: R
++
+! R
++
+is de ned by u
+ 
+(t) =
+maxfju(t;s; 0)j : 0  s  tg, whose existence is guaranteed by virtue of
+the continuity of u (assumption (a
+3
+)). Moreover, the function   vanishes
+at in nity, i.e., lim
+t!1
+ (t) = 0.
+(a
+5
+) There exists a positive solution r
+0
+of the inequality
+(m
+ 
+r +f
+ 
+) (ff + 1) +r
+2
+[ 
+ 
+	(r) + 
+ 
+] r (ff + 1) (3)
+satisfying
+m
+ 
+ (ff + 1) + 2r
+0
+[ 
+ 
+	(r
+0
+) + 
+ 
+]<  (ff + 1); (4)
+where  
+ 
+= supf (t) :t2R
++
+g and 
+ 
+= supf (t) :t2R
++
+g.
+Before we state and prove our main result, let us denote byT the operator
+associated with the right-hand side of Equation (1), i.e., Eq.(1) becomes
+x =Tx;
+where
+(Tx)(t) = (Fx)(t) +x
+2
+(t)  (Ux)(t); (5)
+(Ux)(t) =
+ 
+ (ff)
+Z
+t
+0
+s
+  1
+u(t;s;x(s))
+(t
+ 
+ s
+ 
+)
+1 ff
+ds (6)
+and F is the superposition operator generated by the function f =f(t;x) and
+de ned by
+(Fx)(t) =f(t;x(t));
+where x =x(t) is an arbitrary function de ned onR
++
+, see [2].
+Theorem 2 Under assumptions (a
+1
+)  (a
+5
+), Eq.(1) has at least one solution
+x =x(t) in the space BC(R
++
+).
+Electronic Journal. http://diffjournal.spbu.ru 74Differential Equations and Control Processes, N. 1, 2019
+Proof: For better readability, we will divide the proof into several steps.
+Step 1: For x2BC(R
++
+) thenTx is continuous onR
++
+.
+To do this, it is su cient to prove that, ifx2BC(R
++
+) thenUx is continuous
+onR
++
+. In fact, we take x2 BC(R
++
+) and  x " > 0 and T > 0. Suppose that
+ 
+1
+; 
+2
+2 R
++
+withj 
+2
+  
+1
+j  " and, without loss of generality, we can assume
+that  
+1
+< 
+2
+, then we have
+j(Ux)(t
+2
+)  (Ux)(t
+1
+)j
+=
+ 
+ (ff)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Z
+t
+2
+0
+s
+  1
+u(t
+2
+;s;x(s))
+ 
+t
+ 
+2
+ s
+ 
+ 
+1 ff
+ds 
+Z
+t
+1
+0
+s
+  1
+u(t
+1
+;s;x(s))
+ 
+t
+ 
+1
+ s
+ 
+ 
+1 ff
+ds
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ (ff)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Z
+t
+2
+0
+s
+  1
+u(t
+2
+;s;x(s))
+ 
+t
+ 
+2
+ s
+ 
+ 
+1 ff
+ds 
+Z
+t
+1
+0
+s
+  1
+u(t
+2
+;s;x(s))
+ 
+t
+ 
+2
+ s
+ 
+ 
+1 ff
+ds
+ 
+ 
+ 
+ 
+ 
+ 
+ 
++
+ 
+ (ff)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Z
+t
+1
+0
+s
+  1
+u(t
+2
+;s;x(s))
+ 
+t
+ 
+2
+ s
+ 
+ 
+1 ff
+ds 
+Z
+t
+1
+0
+s
+  1
+u(t
+1
+;s;x(s))
+ 
+t
+ 
+2
+ s
+ 
+ 
+1 ff
+ds
+ 
+ 
+ 
+ 
+ 
+ 
+ 
++
+ 
+ (ff)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Z
+t
+1
+0
+s
+  1
+u(t
+1
+;s;x(s))
+ 
+t
+ 
+2
+ s
+ 
+ 
+1 ff
+ds 
+Z
+t
+1
+0
+s
+  1
+u(t
+1
+;s;x(s))
+ 
+t
+ 
+1
+ s
+ 
+ 
+1 ff
+ds
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ (ff)
+Z
+t
+2
+t
+1
+s
+  1
+ju(t
+2
+;s;x(s))j
+ 
+t
+ 
+2
+ s
+ 
+ 
+1 ff
+ds
++
+ 
+ (ff)
+Z
+t
+1
+0
+s
+  1
+ju(t
+2
+;s;x(s)) u(t
+1
+;s;x(s))j
+ 
+t
+ 
+2
+ s
+ 
+ 
+1 ff
+ds
++
+ 
+ (ff)
+Z
+t
+1
+0
+s
+  1
+ju(t
+1
+;s;x(s))j
+ 
+ 
+t
+ 
+1
+ s
+ 
+ 
+ff 1
+ 
+ 
+t
+ 
+2
+ s
+ 
+ 
+ff 1
+ 
+ds
+ 
+ 
+ (ff)
+Z
+t
+2
+t
+1
+s
+  1
+[ju(t
+2
+;s;x(s)) u(t
+2
+;s; 0)j +ju(t
+2
+;s; 0)j]
+ 
+t
+ 
+2
+ s
+ 
+ 
+1 ff
+ds
++
+ 
+ (ff)
+Z
+t
+1
+0
+s
+  1
+!
+T
+kxk
+(u;")
+ 
+t
+ 
+2
+ s
+ 
+ 
+1 ff
+ds
+Electronic Journal. http://diffjournal.spbu.ru 75Differential Equations and Control Processes, N. 1, 2019
++
+ 
+ (ff)
+Z
+t
+1
+0
+s
+  1
+[ju(t
+1
+;s;x(s)) u(t
+1
+;s; 0)j +ju(t
+1
+;s; 0)j]
+ 
+ 
+ 
+t
+ 
+1
+ s
+ 
+ 
+ff 1
+ 
+ 
+t
+ 
+2
+ s
+ 
+ 
+ff 1
+ 
+ds
+ 
+ 
+ (ff)
+Z
+t
+2
+t
+1
+s
+  1
+[q(t
+2
+)	(jx(s)j) +u
+ 
+(t
+2
+)]
+ 
+t
+ 
+2
+ s
+ 
+ 
+1 ff
+ds +
+!
+T
+kxk
+(u;")
+ (ff + 1)
+h
+t
+ff 
+2
+ 
+ 
+t
+ 
+2
+ t
+ 
+1
+ 
+ff
+i
++
+ 
+ (ff)
+Z
+t
+1
+0
+s
+  1
+[q(t
+1
+)	(jx(s)j) +u
+ 
+(t
+1
+)]
+ 
+ 
+t
+ 
+1
+ s
+ 
+ 
+ff 1
+ 
+ 
+t
+ 
+2
+ s
+ 
+ 
+ff 1
+ 
+ds
+ 
+q(t
+2
+)	(kxk) +u
+ 
+(t
+2
+)
+ (ff + 1)
+ 
+t
+ 
+2
+ t
+ 
+1
+ 
+ff
++
+!
+T
+kxk
+(u;")
+ (ff + 1)
+t
+ff 
+2
++
+q(t
+1
+)	(kxk) +u
+ 
+(t
+1
+)
+ (ff + 1)
+h
+t
+ff 
+1
+ t
+ff 
+2
++
+ 
+t
+ 
+2
+ t
+ 
+1
+ 
+ff
+i
+;
+where
+!
+T
+d
+(u;") = supfju(t
+2
+;s;x) u(t
+1
+;s;x)j :s;t
+1
+;t
+2
+2 [0;T ]; t
+1
+ s; t
+2
+ s;
+jt
+2
+ t
+1
+j "; x2 [ d;d]]g:
+From the above estimates, we infer
+!
+T
+(Ux;") 
+2"
+ff 
+[^ q(T )	(kxk) + ^ u(T )] +T
+ff 
+!
+T
+kxk
+(u;")
+ (ff + 1)
+; (7)
+where
+^ q(T ) = maxfq(t) :t2 [0;T ]g
+and
+^ u(T ) = maxfu
+ 
+(t) :t2 [0;T ]g:
+Since the functionu(t;s;x) is uniformly continuous on the compact set [0;T ] 
+[0;T ]  [ kxk;kxk], we deduce that !
+T
+kxk
+(u;")! 0 as "! 0.
+Therefore, lim
+"!0
+!
+T
+kxk
+(U;") = 0 and this proves thatU is continuous on the interval
+[0;T ] for any T > 0. This gives us the continuity ofUx onR
++
+.
+Step 2: For x2R
++
+,Tx is a bounded function onR
++
+.
+In fact, taking into account our assumptions, for x2BC(R
++
+) and t2R
++
+,
+we have
+j(Tx)(t)j =
+ 
+ 
+ 
+ 
+ 
+f(t;x(t)) +
+ x
+2
+(t)
+ (ff)
+Z
+t
+0
+s
+  1
+u(t;s;x(s))
+(t
+ 
+ s
+ 
+)
+1 ff
+ds
+ 
+ 
+ 
+ 
+ 
+Electronic Journal. http://diffjournal.spbu.ru 76Differential Equations and Control Processes, N. 1, 2019
+  jf(t;x(t)) f(t; 0)j +jf(t; 0)j
++
+ jx
+2
+(t)j
+ (ff)
+Z
+ 
+0
+s
+  1
+ju(t;s;x(s)) u( ;s; 0)j +ju(t;s; 0)j
+(t
+ 
+ s
+ 
+)
+1 ff
+ds
+  m(t)kxk +jf(t; 0)j
++
+ kxk
+2
+ (ff)
+Z
+t
+0
+s
+  1
+[q(t)	(jx(s)j) +u
+ 
+(t)]
+(t
+ 
+ s
+ 
+)
+1 ff
+ds
+  m(t)kxk +jf(t; 0)j +
+kxk
+2
+ (ff + 1)
+[q(t)	(kxk) +u
+ 
+(t)]t
+ff 
+  m
+ 
+kxk +f
+ 
++
+kxk
+2
+ (ff + 1)
+[ (t)	(kxk) + (t)]:
+Taking into account (a
+2
+) and (a
+4
+), the last chain of inequalities gives us that
+Tx is bounded onR
++
+.
+Step 3:T applies the ball B
+r
+0
+into itself.
+Taking into account that 	 is a nondecreasing function, from the estimate
+obtained in Step 2, it follows that
+kTxk m
+ 
+kxk +f
+ 
++
+kxk
+2
+ ( + 1)
+[ 
+ 
+	(kxk) + 
+ 
+]:
+Taking into account (a
+5
+), we infer thatT applies the ball B
+r
+0
+into itself.
+Step 4:T is continuous on the ball B
+r
+0
+.
+Since (Tx)(t) = (Fx)(t) +x
+2
+(t)  (Ux)(t) fort2R
++
+, it is su cient to prove
+that F is continuous on B
+r
+0
+and
+(Ux)(t) =
+ 
+ (ff)
+Z
+ 
+0
+s
+  1
+u(t;s;x(s))
+(t
+ 
+ s
+ 
+)
+1 ff
+ds
+is continuous on B
+r
+0
+.
+Let (x
+n
+) B
+r
+0
+be a sequence such that x
+n
+!x with x2B
+r
+0
+.
+Firstly, we will prove that Fx
+n
+!Fx. In fact, for t2R
++
+and, taking into
+account (a
+2
+), we have
+j(Fx
+n
+)(t)  (Fx)(t)j = jf(t;x
+n
+(t)) f(t;x(t))j
+  m(t)jx
+n
+(t) x(t)j
+  m(t)kx
+n
+ xk:
+Since m is a bounded function, we infer
+kFx
+n
+ Fxk Lkx
+n
+ xk;
+Electronic Journal. http://diffjournal.spbu.ru 77Differential Equations and Control Processes, N. 1, 2019
+where L = supfm(t) :t2R
++
+g, and this proves that F is continuous on B
+r
+0
+.
+Next, we will prove thatUx
+n
+!Ux. In fact, for t2R
++
+, and, taking into
+account our assumptions, it follows
+j(Ux
+n
+)(t)  (Ux)(t)j =
+ 
+ 
+ 
+ 
+ 
+ 
+ (ff)
+Z
+t
+0
+s
+  1
+u(t;s;x
+n
+(s))
+(t
+ 
+ s
+ 
+)
+1 ff
+ds
+ 
+ 
+ (ff)
+Z
+t
+0
+s
+  1
+u(t;s;x(s))
+(t
+ 
+ s
+ 
+)
+1 ff
+ds
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ (ff)
+Z
+t
+0
+s
+  1
+ju(t;s;x
+n
+(s)) u(t;s;x(s))j
+(t
+ 
+ s
+ 
+)
+1 ff
+ds
+ 
+ 
+ (ff)
+Z
+t
+0
+s
+  1
+q(t)	(jx
+n
+(s) x(s)j)
+(t
+ 
+ s
+ 
+)
+1 ff
+ds
+ 
+q(t)	(kx
+n
+ xk)t
+ff 
+ (ff + 1)
+ 
+ (t)	(kx
+n
+ xk)
+ (ff + 1)
+ 
+ 
+ 
+	(kx
+n
+ xk)
+ (ff + 1)
+:
+From the above estimation we deduce thatkUx
+n
+ Uxk! 0 when n!1.
+This proves thatT is continuous on the ball B
+r
+0
+.
+Step 5: An estimate ofT with respect to the quantity c.
+We take;6= X  B
+r
+0
+and x;y2 X. Then, for t2 R
++
+and, taking into
+account our assumptions, we get
+j(Tx)(t)  (Ty)(t)j
+ jf(t;x(t)) f(t;y(t))j
++
+ 
+ (ff)
+ 
+ 
+ 
+ 
+ 
+x
+2
+(t)
+Z
+t
+0
+s
+  1
+u(t;s;x(s))
+(t
+ 
+ s
+ 
+)
+1 ff
+ds y
+2
+(t)
+Z
+t
+0
+s
+  1
+u(t;s;y(s))
+(t
+ 
+ s
+ 
+)
+1 ff
+ds
+ 
+ 
+ 
+ 
+ 
+ m(t)jx(t) y(t)j +
+ jx
+2
+(t) y
+2
+(t)j
+ (ff)
+Z
+t
+0
+s
+  1
+ju(t;s;x(s))j
+(t
+ 
+ s
+ 
+)
+1 ff
+ds
++
+ jy
+2
+(t)j
+ (ff)
+Z
+t
+0
+s
+  1
+ju(t;s;x(s)) u(t;s;y(s))j
+(t
+ 
+ s
+ 
+)
+1 ff
+ds
+ m(t)diamX(t) +
+ jx(t) y(t)jjx(t) +y(t)j
+ (ff)
+Electronic Journal. http://diffjournal.spbu.ru 78Differential Equations and Control Processes, N. 1, 2019
+ 
+Z
+t
+0
+s
+  1
+[ju(t;s;x(s)) u(t;s; 0)j +ju(t;s; 0)j]
+(t
+ 
+ s
+ 
+)
+1 ff
+ds
++
+ kyk
+2
+ (ff)
+Z
+t
+0
+s
+  1
+q(t)	(jx(s) y(s)j)
+(t
+ 
+ s
+ 
+)
+1 ff
+ds
+ m(t)diamX(t) +
+2 kxkdiamX(t)
+ (ff)
+Z
+t
+0
+s
+  1
+[q(t)	(jx(s)j) +u
+ 
+(t)]
+(t
+ 
+ s
+ 
+)
+1 ff
+ds
++
+ kyk
+2
+ (ff)
+Z
+t
+0
+s
+  1
+q(t)	(kx yk)
+(t
+ 
+ s
+ 
+)
+1 ff
+ds
+ m(t)diamX(t) +
+2 kxkq(t)	(kxk)diamX(t)
+ (ff)
+Z
+t
+0
+s
+  1
+(t
+ 
+ s
+ 
+)
+1 ff
+ds
++
+2 kxku
+ 
+(t)diamX(t)
+ (ff)
+Z
+t
+0
+s
+  1
+(t
+ 
+ s
+ 
+)
+1 ff
+ds
++
+ kyk
+2
+q(t)	(kx yk)
+ ()
+Z
+t
+0
+s
+  1
+( 
+ 
+ s
+ 
+)
+1 
+ds
+ m(t)diamX(t) +
+2r
+0
+ (t)	(r
+0
+)diamX(t)
+ (ff + 1)
++
+2r
+0
+ (t)diamX(t)
+ (ff + 1)
++
+r
+2
+0
+ (t)	(2r
+0
+)
+ (ff + 1)
+Therefore, we get
+diam(TX)( )   m(t)diamX(t) +
+2r
+0
+ (t)	(r
+0
+)diamX(t)
+ (ff + 1)
++
+2r
+0
+ (t)diamX(t)
+ (ff + 1)
++
+r
+2
+0
+ (t)	(2r
+0
+)
+ (ff + 1)
+:
+Finally, by assumption (a
+5
+), it follows
+c(TX) 
+ 
+m
+ 
++
+2r
+0
+ 
+ 
+ (ff + 1)
+ 
+c(X): (8)
+Step 6: An estimate ofT with respect to the quantity !
+1
+0
+.
+We take;6=X B
+r
+0
+, "> 0 and T > 0. For x2X, we take t
+1
+;t
+2
+2 [0;T ]
+withjt
+2
+ t
+1
+j " and we can assume that t
+1
+<t
+2
+. Then, we have
+j(Tx)(t
+2
+)  (Tx)(t
+1
+)j
+ jf(t
+2
+;x(t
+2
+)) f(t
+1
+;x(t
+1
+))j +
+ 
+ 
+x
+2
+(t
+2
+)(Ux)(t
+2
+) x
+2
+(t
+1
+)(Ux)(t
+1
+)
+ 
+ 
+Electronic Journal. http://diffjournal.spbu.ru 79Differential Equations and Control Processes, N. 1, 2019
+ jf(t
+2
+;x(t
+2
+)) f(t
+2
+;x(t
+1
+))j +jf(t
+2
+;x(t
+1
+)) f(t
+1
+;x(t
+1
+))j
++
+ 
+ 
+x
+2
+(t
+2
+)(Ux)(t
+2
+) x
+2
+(t
+1
+)(Ux)(t
+2
+)
+ 
+ 
++
+ 
+ 
+x
+2
+(t
+1
+)(Ux)(t
+2
+) x
+2
+(t
+1
+)(Ux)(t
+1
+)
+ 
+ 
+ m(t
+2
+)jx(t
+2
+) x(t
+1
+)j +!
+T
+f
+(") +
+ 
+ 
+x
+2
+(t
+2
+) x
+2
+(t
+1
+)
+ 
+ 
+j(Ux)(t
+2
+)j
++
+ 
+ 
+x
+2
+(t
+1
+)
+ 
+ 
+j(Ux)(t
+2
+)  (Ux)(t
+1
+)j
+ m(t
+2
+)!
+T
+(x;") +!
+T
+f
+(") +kxk
+2
+!
+T
+(Ux;")
++
+ jx(t
+2
+) x(t
+1
+)jjx(t
+2
+) +x(t
+1
+)j
+ (ff)
+Z
+t
+2
+0
+s
+  1
+ju(t
+2
+;s;x(s))j
+ 
+t
+ 
+2
+ s
+ 
+ 
+1 ff
+ds
+ m(t)!
+T
+(x;") +!
+T
+f
+(") +kxk
+2
+!
+T
+(Ux;")
++
+2 kxk!
+T
+(x;")
+ (ff)
+Z
+t
+2
+0
+s
+  1
+[ju(t
+2
+;s;x(s)) u(t
+2
+;s; 0)j +ju(t
+2
+;s; 0)j]
+ 
+t
+ 
+2
+ s
+ 
+ 
+1 ff
+ds:
+Taking into account step 1, we had obtained that
+!
+T
+(UX;") 
+2"
+ff 
+[^ q(T )	(kxk) + ^ u(T )] +T
+ff 
+!
+T
+kxk
+(u;")
+ (ff + 1)
+;
+and, therefore, from the chain of inequalities obtained above, we deduce
+!
+T
+(TX;")   m(t
+2
+)!
+T
+(x;") +!
+T
+f
+(")
++
+2kxk
+2
+"
+ff 
+[^ q(T )	(kxk) + ^ u(T )] +T
+ff 
+!
+T
+kxk
+(u;")
+ (ff + 1)
++
+2 kxk!
+T
+(x;")
+ (ff)
+Z
+t
+2
+0
+s
+  1
+[q(t
+2
+)	(jx(s)j) +u
+ 
+(t
+2
+)]
+ 
+t
+ 
+2
+ s
+ 
+ 
+1 ff
+ds
+  m
+ 
+!
+T
+(x;") +!
+T
+f
+(") +
+2r
+2
+0
+"
+ff 
+[^ q(T )	(r
+0
+) + ^ u(T )] +T
+ff 
+!
+T
+r
+0
+(u;")
+ (ff + 1)
++
+2r
+0
+!
+T
+(x;")[q(t
+2
+)	(r
+0
+) +u
+ 
+(t
+2
+)]
+ (ff + 1)
+t
+ff 
+2
+  m
+ 
+!
+T
+(x;") +!
+T
+f
+(") +
+2r
+2
+0
+"
+ff 
+[^ q(T )	(r
+0
+) + ^ u(T )] +T
+ff 
+!
+T
+r
+0
+(u;")
+ (ff + 1)
++
+2r
+0
+!
+T
+(x;")[ (t
+2
+)	(r
+0
+) + (t
+2
+)]
+ (ff + 1)
+;
+where
+!
+T
+f
+(") = supfjf(t
+2
+;x) f(t
+1
+;x)j :t
+1
+;t
+2
+2 [0;T ];jt
+2
+ t
+1
+j "; x2 [ r
+0
+;r
+0
+]g:
+Electronic Journal. http://diffjournal.spbu.ru 80Differential Equations and Control Processes, N. 1, 2019
+Therefore,
+!
+T
+(TX;")   m
+ 
+!
+T
+(x;") +!
+T
+f
+(") +
+2r
+2
+0
+"
+ff 
+[^ q(T )	(r
+0
+) + ^ u(T )] +T
+ff 
+!
+T
+r
+0
+(u;")
+ (ff + 1)
++
+2r
+0
+[ 
+ 
+	(r
+0
+) + 
+ 
+]
+ (ff + 1)
+!
+T
+(x;"):
+Since the functions f =f( ;x) and u =u( ;s;x) are uniformly continuous on
+the sets [0;T ]  [ r
+0
+;r
+0
+] and [0;T ]  [0;T ]  [ r
+0
+;r
+0
+], respectively, !
+T
+f
+(")! 0
+and !
+T
+r
+0
+(u;")! 0 as "! 0, and, therefore, from the last estimate, it follows
+!
+T
+0
+(TX) 
+ 
+m
+ 
++
+2r
+0
+[ 
+ 
+	(r
+0
+) + 
+ 
+]
+ (ff + 1)
+ 
+!
+T
+0
+(X)
+and, consequently,
+!
+1
+0
+(TX) 
+ 
+m
+ 
++
+2r
+0
+[ 
+ 
+	(r
+0
+) + 
+ 
+]
+ (ff + 1)
+ 
+!
+1
+0
+(X):
+Step 7: T is contraction with respect to the measure of noncompactness
+ .
+In fact, linking the results obtained in steps 5 and 6, we deduce
+ (TX) = !
+1
+0
+(TX) +c(TX)
+ 
+ 
+m
+ 
++
+2r
+0
+ 
+ 
+	(r
+0
+) + 2r
+0
+ 
+ 
+ (ff + 1)
+ 
+!
+1
+0
+(X) +
+ 
+m
+ 
++
+2r
+0
+ 
+ 
+ (ff + 1)
+ 
+c(X)
+ 
+ 
+m
+ 
++
+2r
+0
+ 
+ 
+	(r
+0
+) + 2r
+0
+ 
+ 
+ (ff + 1)
+ 
+(!
+1
+0
+(X) +c(X))
+ 
+ 
+m
+ 
++
+2r
+0
+ 
+ 
+	(r
+0
+) + 2r
+0
+ 
+ 
+ (ff + 1)
+ 
+ (X):
+Taking into account (a
+5
+), since m
+ 
++
+2r
+0
+ 
+ 
+	(r
+0
+)+2r
+0
+ 
+ 
+ (ff+1)
+< 1 this proves thatTX is
+a contraction with respect to the measure of noncompactness  .
+Finally, by Darbo's  xed point theorem, Eq.(1) has at least one solution
+x2BC(R
++
+) withkxk r
+0
+.
+References
+[1] Alamo, J.A., Rodr   guez, J.; Operational calculus for modi ed Erd  elyi-Kober
+operators. Serdica 20, 351-363 (1994)
+Electronic Journal. http://diffjournal.spbu.ru 81Differential Equations and Control Processes, N. 1, 2019
+[2] Appell, J., Zabrejko, P.P.; Nonlinear Superposition Operators. Cambridge
+Tracts in Mathematics 95, Cambridge University Press. (1990)
+[3] Awad, H.K., Darwish, M.A.; On monotonic solutions of a cubic Urysohn
+Integral equation with linear modi cation of the argument. Adv. Dyn. Syst.
+Appl. 13, 91-99 (2018)
+[4] Awad, H.K., Darwish, M.A., Metwali, M.M.A.; On a cubic integral equa-
+tion of Urysohn type with linear perturbation of second kind. Journal of
+Mathematics and Applications 41, 29-38 (2018)
+[5] Bana  s J., Goebel, K. Measures of Noncompactness in Banach Spaces. Lec-
+ture Notes in Pure and Applied Mathematics, 60, Marcel Dekker, New
+York, (1980)
+[6] Bana  s, J.; Measures of noncompactness in the space of continuous tempered
+functions. Demonstratio Math. 14, 127-133 (1981)
+[7] Bana  s, J., Olszowy, L.; Measures of noncompactness related to monotonic-
+ity. Comment. Math. 41, 13-23 (2001)
+[8] Caballero, J., O'Regan, D., Sadarangani, K.; On nondecreasing solutions
+of cubic integral equations of Urysohn type. Comment. Math. (Prace Mat.)
+44, 39-53 (2004)
+[9] Darbo, G.; Punti uniti in trasformazioni a codominio non compatto. Rend.
+Sem. Mat. Univ. Padova 24, 84-92 (1955)
+[10] Darwish, M.A.; On quadratic integral equation of fractional orders. J.
+Math. Anal. Appl. 311, 112-119 (2005)
+[11] Darwish, M.A., Rzepka, B.; Asymptotically stable solutions of a generalized
+fractional quadratic functional-integral equation of Erd  elyi-Kober type. J.
+Funct. Spaces, Art. ID 192542, 9 pp (2014)
+[12] Darwish, M.A., Sadarangani, K.; On Erd  elyi-Kober type quadratic integral
+equation with linear modi cation of the argument. Appl. Math. Comput.
+238, 30-42 (2014)
+[13] Darwish, M.A., Sadarangani, K.; On a quadratic integral equation with
+supremum involving Erd  elyi-Kober fractional order. Math. Nachr. 228, 566-
+576 (2015)
+Electronic Journal. http://diffjournal.spbu.ru 82Differential Equations and Control Processes, N. 1, 2019
+[14] Darwish, M.A.; On Erd  elyi-Kober fractional Urysohn-Volterra quadratic
+integral equations. Appl. Math. Comput. 273, 562-569 (2016)
+[15] Darwish, M.A., Samet, B.; On Erd  elyi-Kober quadratic functional-integral
+equation in Banach algebra. Numer. Funct. Anal. Optim. 39, 276-294 (2018)
+[16] Garra, R., Giusti, A., Mainardi, F., Pagnini, G.; Fractional relaxation with
+time-varying coe cient. Fract. Calc. Appl. Anal. 17, 424-439 (2014)
+[17] Herrmann, R.; Reection symmetric Erd  elyi-Kober type operators-a quasi-
+particle interpretation. Fract. Calc. Appl. Anal. 17, 1215-1228 (2014)
+[18] Kiryakova, V.; Convolutions of Erd  elyi-Kober fractional integration opera-
+tors. Complex analysis and applications '87 (Varna, 1987), 273-283, Publ.
+House Bulgar. Acad. Sci., So a. (1989)
+[19] Kiryakova, V.; Generalized Fractional Calculus and Applications. Longman
+Sci. & Techn., Harlow and J. Wiley & Sons, N. York. (1994).
+[20] Kiryakova, V.S., Al-Saqabi, B.N.; Transmutation method for solving
+Erd  elyi-Kober fractional differintegral equations. J. Math. Anal. Appl. 211,
+347-364 (1997)
+[21] Pagnini, G.; Erd  elyi-Kober fractional diffusion. Fract. Calc. Appl. Anal.
+15, 117-127 (2012)
+[22] Sneddon, I.N.; Mixed Boundary Value Problems in Potential Theory,
+North-Holland Publ., Amsterdam. (1966)
+[23] Stuart, C.A.; Existence theorems for a class of nonlinear integral equations.
+Math. Z. 137, 49-66 (1974)
+Electronic Journal. http://diffjournal.spbu.ru 83
