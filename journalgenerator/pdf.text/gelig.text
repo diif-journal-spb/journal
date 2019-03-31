@@ -1,0 +1,1247 @@
+﻿dx
+dt
+6
+ 
+-
+?
+˜¨  ¯—¯˝ ¨ ¸ ˝ ¯  —  ´˝¯˝¨ 
+¨
+ˇ—˛ ¯     ˇ—  ´¸¯˝¨ 
+N. 1, 2019
+ º Œ     ßØ      º,
+  ª.  º. N   77-39410    15.04.2010
+ISSN 1817-2172
+http://di journal.spbu.ru/
+e-mail: jo di @mail.ru
+      º  Ł      ºŁ  Ø ßı æŁæ    ı
+  æ  Ø Ł  æ   Ł æ  ÆŁºŁ   Ł    ºŁ  Ø ßı       ß  ßı Ł
+ ŁæŒ    ßı         º…  ßı æŁæ    æ     ø       º   ª 
+   ı   
+˙ Æ   ¨.¯., ˆ  ºŁª  . .
+   Œ -ˇ    Æ  ªæŒŁØ ª æ     æ     ßØ   Ł   æŁ   
+e-mail: Zuber.Y anikum@gmail.com
+agelig@yandex.ru
+       Ł 
+— ææ    Ł    æ  æŁæ      Ł       Ł º  ßı        ŁØ,  º     ß    -
+ Ł ß Œ     Ø   º   æ     Œ Ł  Ł    æ æ    Ł  æŁæ   ß Ł       Ł,      -
+ø   ß Ł         º   ß Ł    Œ Ł   º  Ł.
+      ø   æ  Œ   º   ª     º    Ł      Ł ß æŁæ   ß Ł Œ      Ł -
+  Ø    Œ ŁŁ ¸        æ   Ł Ł   Ø     Ł  Ø   º    ß   æ      ß   æº -
+ Ł  ªº Æ º   Ø  Œæ      Ł º   Ø  æ  Ø Ł  æ Ł.    Œ      æŁæ       ææ   -
+ Ł    æ    Ł   ºŁ ŁŁ æŒ º    ª       º  Ł ,         º    ŁŁ,       Œ   
+  æ     º  Ł       º  Ł     ŁæŁ     æ æ    Ł  æŁæ   ß.
+ˇ Ł  æº  ŁŁ           Ø      º    æ Ł æ     ø       º   ª     ı   
+æŁ    Ł            º  Ł ,   Ł Œ          Œ      æŁæ     æ     Ł æ  ªº -
+Æ º     Œæ      Ł º     æ  Ø Ł  Ø.    º ªŁ  ß       º    ß   º    ß  º 
+ ŁæŒ     Ø   ºŁ  Ø  Ø         º    Ø æŁæ   ß   Œ Ø    æ   Œ   ß.
+˚º    ß  æº   :       ß  ß    ºŁ  Ø ß          º…  ß   Ł   -
+    Ł º  ß  æŁæ   ß, ªº Æ º      Œæ      Ł º      æ  Ø Ł  æ  , æ  ÆŁºŁ-
+   Ł ,  ŁæŒ    ß    ºŁ  Ø ß          º…  ß  æŁæ   ß˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 1, 2019
+Abstract
+In this paper we consider the system of di erential equations for which the
+elements of ob ject matrix are functions of the system state and time. These
+functions are perturbed by uncertain functionals.
+Using the spectral decomposition of the ob ject matrix and the Lyapunov
+quadratic function with unit matrix we obtain the su cient conditions of global
+exponential stability of the system considered.
+The similar system is studied in the case of scalar control, on the assumption
+that the distribution vector depends on the state. Using the modal approach in
+the condition of the uniform controllability we perform the synthesis of scalar
+control which provides the global exponential stability of closed loop system.
+Analogous results are obtained for discrete nonlinear uncertain systems with
+the same structure.
+Keywords: continuous nonlinear di erential uncertain systems, global
+exponential stability , stabilization, discrete nonlinear uncertain systems
+1 ´     Ł 
+˜º  Łææº      Ł   æ  Ø Ł  æ Ł Ł æ  ÆŁºŁ   ŁŁ   ºŁ  Ø ßı æŁæ    Ł   æ   
+  æŒ º Œ     ı    . ˇ   ßØ [1, 2]   Ł   Ł  Œ   æ        ªº  ŒŁ  æŁæ     
+Ł  æ           æ     ŁŁ   ºŁ  Ø  ª      Æ       Ł ,   Ł    ø ª  æŁæ    
+Œ   Œ        Œ    Ł  æŒ     Ł   . ´    Ø [3],  æ      ßØ               -
+   ¸        Ł   æ     Ø         ´. . Œ Æ  Ł  ,       Æ    ªº  Œ æ Ł Ł
+  Ł   Ł  Œ æŁæ      æ     ß  ß Ł   ºŁ  Ø  æ   Ł. ´      Ø æ       º 
+Łææº      Ł   æ  Ø Ł  æ Ł Ł æ  ÆŁºŁ   ŁŁ   ºŁ  Ø ßı         º…  ßı æŁ-
+æ        º         º  ßØ    ı  ,  æ      ßØ    æ  Œ   º        º    ŁŁ
+[4]   ºŁ  Ø  Ø     Ł ß æŁæ   ß.
+2 ˝     ß  ß  æŁæ   ß
+2.1   æ  Ø Ł  æ     ºŁ  Ø ßı         º…  ßı       ß  ßı æŁ-
+æ   
+— ææ    Ł  æŁæ    
+_ x = (A(x)+F( ))x;t t
+0
+; (1)
+ º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 24˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 1, 2019
+ª  x2R
+n
+,A(x)2R
+n n
+       ß         Ł        Œ Ł . ˇ     º ª   æ ,
+    æ Ææ     ß   Łæº  
+i
+(x)     Ł ß A(x)      º          æº  Ł  
+ 
+i
+(x)6= 
+j
+(x)   Ł i6=j; 
+i
+(x) = 
+1
+(x)+ 
+i
+(x)(i2 2;n)
+ 
+2
+(x)< 2(1+ 
+1
+(x));
+(2)
+ª   (x) = max
+i22;n
+j 
+i
+(x)j.
+´ æŁæ     (1)F( )2R
+n n
+          º…         Ł  ,  º     ß Œ     Ø
+  º   æ            øŁ Ł    Œ Ł   º  Ł    Ł   º   Ø   Ł   ß,     Ł-
+   ,    Œ Ł  Ł    x(t  ),
+t
+R
+0
+jx( )j
+2
+d . ˇ     º ª   æ ,      º  æŁæ   ß (1)
+æ      ºŁ           æ ø æ      Ł    ł  Ł  Ł      º Ł  æ Ł   (t
+0
+;+1)
+º Æ ª    ł  Ł ,  æ   ø ª æ     ª   Ł     Ø  Æº æ Ł. ˚       ª ,       -
+º ª   æ  æ ø æ      Ł    º  Ł  º   ª ',   Ł Œ        ß  º            -
+æ   
+F( )+F
+T
+( ) 'I; (3)
+ª  I     Ł Ł         Ł  .
+˜º  Łææº      Ł   æ  Ø Ł  æ Ł æŁæ   ß (1)   ææ    Ł  æ  Œ   º    
+   º    Ł      Ł ß A(x;t)
+A(x) =
+n
+X
+i=1
+ 
+i
+(x)d
+i
+(x)g
+T
+i
+(x); (4)
+ª  d
+i
+(x) æ Ææ     ß    Œ   ß     Ł ßA(x),   g
+i
+(x) æ Ææ     ß    Œ   ß
+    Ł ß A
+T
+(x). ˇ Ł     
+(d
+i
+(x);g
+j
+(x)) =
+(
+1;i =j
+0;i6=j:
+(5)
+´    …     Œ Ł  ¸       
+V(x) =x
+T
+Ix: (6)
+˛   Ł   ,      …    Ł          æŁº  æŁæ   ß (1) Ł     æº    øŁØ  Ł 
+_
+V =x
+T
+L(x)x+x
+T
+(F( )+F
+T
+( ))x; (7)
+ª  L(x) =A
+T
+(x)+A(x). — ææ    Ł      Ł  
+Q(x) =P(x)L(x)P(x); (8)
+ º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 25˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 1, 2019
+ª  
+P(x) =
+n
+X
+i=1
+d
+i
+(x)d
+T
+i
+(x): (9)
+    Ł   P(x)    æ Æ     Ł   ºŁ  Ø  Ø      ŁæŁ  æ Ł   Œ      d
+i
+(x). ˜ Ø-
+æ  Ł  º   ,  æºŁ Æß æ ø æ     º   Œ Ø   Œ    m(x)6= 0,    P(x)m(x) = 0,
+  P(x)m(x) =
+n
+P
+i=1
+d
+i
+(x)
+i
+(x), ª  
+i
+(x) =d
+T
+i
+(x)m(x),         Ł     Ł  ºŁ  Ø-
+  Ø      ŁæŁ  æ Ł   Œ     d
+i
+(x). ´ æŁº  (8),(9) Ł       æ       æ   º  Ł 
+Q(x) =
+n
+P
+i=1
+d
+i
+(x)d
+T
+i
+(x)
+h
+n
+P
+j=1
+ 
+j
+(x)g
+j
+(x)d
+T
+j
+(x)+
+n
+P
+k=1
+ 
+k
+(x)d
+k
+(x)g
+T
+k
+(x)
+i
+n
+P
+r=1
+d
+r
+(x)d
+T
+r
+(x):
+´ Ł   æ  Øæ    (5) æ      ºŁ        æ   
+Q(x) =M(x)P(x)+P(x)M(x); (10)
+ª  M(x) =
+n
+P
+i=1
+ 
+i
+(x)d
+i
+(x)d
+T
+i
+(x). ´ Ł    æº  Ł  (2)
+M(x) = 
+1
+(x)d
+1
+(x)d
+T
+1
+(x)+
+n
+X
+i=2
+( 
+1
+(x)+ 
+i
+(x))d
+i
+(x)d
+T
+i
+(x):
+ˇ      
+M(x) = 
+1
+(x)P(x)+
+n
+X
+i=2
+ 
+i
+(x)d
+i
+(x)d
+T
+i
+(x);
+Ł   Ł   (10)Q(x)   Ł Ł     æº    øŁØ  Ł 
+Q(x) = 2 
+1
+(x)P
+2
+(x)+
+n
+X
+i=2
+ 
+i
+(x)d
+i
+(x)d
+T
+i
+(x)P(x)+P(x)
+n
+X
+i=2
+ 
+i
+(x)d
+i
+(x)d
+T
+i
+(x):
+ˇ æŒ º Œ   º  º Æßı     Ł  S
+1
+, S
+2
+æ      æ    øŁı         æ  Ø æ   -
+   ºŁ          æ   
+S
+T
+1
+S
+2
++S
+T
+2
+S
+1
+ S
+T
+1
+S
+1
++S
+T
+2
+S
+2
+;
+    º Q(x)   º          Œ 
+Q(x)  2 
+1
+(x)P
+2
+(x)+(
+n
+X
+i=2
+ 
+i
+(x)d
+i
+(x)d
+T
+i
+(x))
+2
++P
+2
+(x):
+ º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 26˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 1, 2019
+˛ æ    æº      æ     ł  Ł 
+Q(x)  (2 
+1
+(x)+ 
+2
+(x)+1)P
+2
+(x):
+     Ł             æ    æº    Ł æ        P
+ 1
+(x),   º          Œ 
+L(x)  (2 
+1
+(x)+ 
+2
+(x)+1)I;
+Ł  Œ     Ø   Ł   (3), (7) æº             æ   
+_
+V  (2 
+1
+(x)+ 
+2
+(x)+')I:
+ˇ º  Ł 
+ 
+1
+(x)< 0:5( 
+2
+(x)+1+'); (11)
+  Łı  Ł  Œ     Œ 
+_
+V < V , Ł  Œ     Ø æº      ªº Æ º      Œæ      Ł º -
+     æ  Ø Ł  æ  .        ºŁ          º     .
+         1 ¯æºŁ  ß  º   ß  æº  Ł  (2), (3), (11),    æŁæ     (1) ªº Æ  º   
+ Œæ      Ł º     æ  Ø Ł  .
+2.2    ÆŁºŁ   Ł    ºŁ  Ø ßı       ß  ßı         º…  ßı æŁ-
+æ   
+— ææ    Ł  æŁæ    
+_ x = (A(x)+F( ))x+b(x)u;t t
+0
+; (12)
+ª  b(x)2 R
+n 1
+        ß  ßØ   Œ   ,A(x) Ł F( )   ŒŁ     Œ Œ   æŁæ    
+(1),        º  Ł u Ł      Ł 
+u =s
+T
+(x)x: (13)
+    Ł æ               º  Ł    Œ    s(x) 2 R
+n
+,   Ł Œ          Œ     
+æŁæ     (12),(13) æ     Ł æ  ªº Æ º     Œæ      Ł º     æ  Ø Ł  Ø. ˇ   -
+  º ª   æ ,         (A(x);b(x))                 º    ,   . . æ      ºŁ  
+æ     ł  Ł 
+det(b(x);A(x)b(x);:::;A
+n 1
+(x)b(x))6= 0 (14)
+  Ł  æ ıx2 R
+n
+. ˇ     º ª   æ ,     æ ø æ         ºŁ  ß       Ł   º -
+  øŁ  æ  Œ        Ł ß A(x)    Ł    º  ß   Łæº  
+1
+;:::; 
+n
+,      º      -
+ øŁ         æ   
+ 
+1
+< 0:5( 
+2
++1+'); (15)
+ º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 27˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 1, 2019
+ª    = max
+i22;n
+j 
+1
+  
+i
+j. ˛     ºŁ  s(x) Ł  æŁæ   ß  ºª Æ  Ł  æŒŁı        ŁØ
+s
+T
+(x)(A(x)  
+k
+I)
+ 1
+b(x) = 1;k2 1;n (16)
+—    łŁ  æ      Ø æŁæ   ß  Æ æ   Ł    æ        º    Ł   (15) [3].  Æ -
+ Ł æ ,      
+k
+  º   æ  æ Ææ     ß   Łæº       Ł ß A(x) +b(x)s
+T
+(x),   
+ æ   Ł       æ        æ   
+det(A(x)+b(x)s
+T
+(x)  
+k
+I) = 0: (17)
+— ææ    Ł       æ   
+A(x)  
+k
+I +b(x)s
+T
+(x) =M(x)(A(x)  
+k
+I);
+ª   M(x) = b(x)s
+T
+(x)(A(x)   
+k
+I)
+ 1
++ I . ˇ æŒ º Œ           º    Ł 
+det(A(x)  
+k
+I)6= 0,      æ         Æ  Ł  æ    æ      ºŁ  æ Ł      æ   
+detM(x) = 0. ˇ æŒ º Œ  M(x)b(x) = 0,    detM(x) = 0 Ł      æ    (17)
+  Œ     . ˝   æ     ŁŁ       ß 1    Œ      æŁæ     (12), (13) ªº Æ º   
+ Œæ      Ł º     æ  Ø Ł  .        ºŁ          º     .
+         2 ˇ æ    ß  º   ß  æº  Ł  (4),(14), Ł æ  Œ       Ł ß A(x)   -
+  ºŁ      Łæ º  
+1
+;:::; 
+n
+,     º       øŁı         æ    (15). ¯æºŁ   Œ   
+s(x)       º…  Ł  æŁæ   ß (16),       Œ      æŁæ     (12),(13) ªº Æ  º   
+ Œæ      Ł º     æ  Ø Ł  .
+3 ˜ŁæŒ    ß  æŁæ   ß
+3.1   æ  Ø Ł  æ     ºŁ  Ø ßı  ŁæŒ    ßı         º…  ßı æŁ-
+æ   
+— ææ    Ł  æŁæ    
+x
+k+1
+= (A(x
+k
+)x
+k
++F
+k
+);k k
+0
+; (18)
+ª  A(x
+k
+)2R
+n n
+, F
+k
+2R
+n n
+          º…          ø  Ł .
+ˇ     º ª   æ ,     æ Ææ     ß   Łæº  
+j
+(x
+k
+)     Ł ß A(x
+k
+)   Ł  æ ıx
+k
+2
+R
+n
+ Æº      æ  Øæ    
+ 
+i
+(x
+k
+) = 
+1
+(x
+k
+)+ 
+i
+(x
+k
+);i2 2;n; j 
+i
+(x
+k
+)j
+i21;n
+< 1
+ 
+j
+(x
+k
+)6= 
+i
+(x
+k
+)   Ł i6=j; sup
+x
+k
+j 
+i
+(x
+k
+)j = :
+(19)
+ º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 28˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 1, 2019
+˛     º  Ł  1  Łæ     (18) ªº Æ  º     Œæ      Ł º     æ  Ø Ł  ,  æºŁ
+ …   ł  Ł    Ł  æ ık> 0     º             Œ 
+jx
+k
+j
+2
+<q
+k
+jx
+0
+j
+2
+; ª  0<q< 1: (20)
+˜º  Łææº      Ł   æ  Ø Ł  æ Ł æŁæ   ß (18)   ææ    Ł     Œ Ł  ¸     -
+  
+V
+k
+=x
+T
+k
+Ix
+k
+:
+˛   Ł   ,       æŁº  æŁæ   ß (18)
+V
+k+1
+ V
+k
+=x
+T
+k
+(A
+T
+k
+A
+k
+ I +F
+T
+k
+A
+k
++A
+T
+k
+F
+k
++F
+T
+k
+F
+k
+)x
+k
+;
+ª  A
+k
+=A(x
+k
+). ˇ æŒ º Œ 
+F
+T
+k
+A
+k
++A
+T
+k
+F
+k
+ A
+T
+k
+A
+k
++F
+T
+k
+F
+k
+;
+  
+V
+k+1
+ V
+k
+ x
+T
+k
+M
+k
+x
+k
+; (21)
+ª  
+M
+k
+=L
+k
++2F
+T
+k
+F
+k
+; L
+k
+= 2A
+T
+k
+A
+k
+ I: (22)
+ˇ     º  Ł ,          ø  Ł  F
+k
+     º             Œ 
+2F
+k
+F
+T
+k
+<{I;{ > 0: (23)
+   ª   Ł  (21),(22),(23) æº             æ   
+V
+k+1
+ x
+T
+k
+(L
+k
++({+1)I)x
+k
+:
+ˇ      V
+k+1
+<qV
+k
+,  æºŁ
+L
+k
+<  I; (24)
+ª    ={ +1 q .    Œ   º        º    Ł      Ł ß A
+k
+Ł     æº    øŁØ
+ Ł 
+A(x
+k
+) =
+n
+X
+j=1
+ 
+j
+(x
+k
+)d
+j
+(x
+k
+)g
+ 
+j
+(x
+k
+); (25)
+ª  
+d
+ 
+i
+(x
+k
+)g
+j
+(x
+k
+) =
+(
+1;i =j
+0;i6=j:
+(26)
+´   º   Øł    º  Œ   Œ æ Ł   ª     x
+k
+Æ         æŒ   . ´ Ł   (19),(25)
+æ      ºŁ        æ   
+A
+k
+= 
+1
+n
+X
+i=1
+d
+i
+g
+ 
+i
++
+n
+X
+i=1
+ 
+i
+d
+i
+g
+ 
+i
+; ª   
+1
+= 0:
+ º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 29˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 1, 2019
+ˇ       æ ªº æ   (22) Ł       æ       æ   º  Ł 
+L
+k
+= 2( 
+1
+n
+X
+i=1
+g
+i
+d
+ 
+i
++
+n
+X
+i=1
+ 
+i
+g
+i
+d
+ 
+i
+)( 
+1
+n
+X
+i=1
+d
+i
+g
+ 
+i
++
+n
+X
+i=1
+ 
+i
+d
+i
+g
+ 
+i
+) I: (27)
+— ææ    Ł      Ł ß P
+k
+=
+n
+P
+i=1
+d
+i
+(x
+k
+)d
+ 
+i
+(x
+k
+) Ł Q
+k
+= P
+ 
+k
+L
+k
+P
+k
+. ´ Ł   (27)    -
+ Ł   Q
+k
+Ł     æº    øŁØ  Ł 
+Q
+k
+= 2
+n
+X
+l=1
+d
+l
+d
+ 
+l
+[ 
+1
+n
+X
+i=1
+g
+i
+d
+ 
+i
++
+n
+X
+i=1
+ 
+i
+g
+i
+d
+ 
+i
+][ 
+1
+n
+X
+j=1
+d
+j
+g
+ 
+j
++
+n
+X
+j=1
+ 
+j
+d
+j
+g
+ 
+j
+]
+n
+X
+r=1
+d
+r
+d
+ 
+r
+ P
+2
+k
+:
+  ªº æ   æ  Øæ    (26)
+Q
+k
+= 2[j 
+1
+j
+2
+P
+2
+k
++ 
+1
+n
+X
+l=1
+ 
+l
+d
+l
+d
+ 
+l
+P
+k
++ 
+1
+P
+k
+n
+X
+j=1
+ 
+j
+d
+j
+d
+ 
+j
++
+n
+X
+l=1
+ 
+l
+d
+l
+d
+ 
+l
+n
+X
+j=1
+ 
+j
+d
+j
+d
+ 
+j
+] P
+2
+k
+:
+˛ æ    æº          æ   º  Ł 
+L
+k
+= 2[j 
+1
+j
+2
+I +Z
+1
++Z
+2
++Z
+3
+] I; (28)
+ª  
+Z
+1
+=  
+1
+P
+ 1
+k
+n
+P
+l=1
+ 
+l
+d
+l
+d
+ 
+l
+, Z
+2
+=  
+1
+n
+P
+j=1
+ 
+j
+d
+j
+d
+ 
+j
+P
+ 1
+k
+, Z
+3
+= P
+ 1
+k
+n
+P
+l=1
+ 
+l
+d
+l
+d
+ 
+l
+n
+P
+j=1
+ 
+j
+d
+j
+d
+ 
+j
+P
+ 1
+k
+.
+˛Æ     Ł       jjMjj æ  Œ   º               Ł ß M .    ª     æŁº  (19)
+æ      ºŁ ß     ŒŁjjZ
+1
+jj j 
+1
+j  ,jjZ
+2
+jj j 
+1
+j  ,jjZ
+3
+jj  
+2
+Ł, æº       º   ,
+  Ł   (28)
+L
+k
+  2(j 
+1
+j
+2
++2j 
+1
+j + 
+2
+ 1)I:
+ˇ           Œ  (24) Æ       ß  º       Ł  æº  ŁŁ
+2(j 
+1
+j
+2
++2j 
+1
+j + 
+2
+)<q {+1: (29)
+¯æºŁ{ < 1+q ,           æ    (29)  ß  º    æ    Ł   æ          ºßıj 
+1
+j
+Ł   .        ºŁ          º     .
+         3 ¯æºŁ æ  Œ       Ł ß A(x
+k
+)  Æº      æ  Øæ    Ł (19),(29),
+     ø  Ł F
+k
+    º             Œ  (23), ª  { < 1+q ,    æŁæ     (18)
+ªº Æ  º     Œæ      Ł º     æ  Ø Ł  .
+ º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 30˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 1, 2019
+3.2    ÆŁºŁ   Ł    ºŁ  Ø ßı  ŁæŒ    ßı         º…  ßı æŁ-
+æ   
+— ææ    Ł  æŁæ    
+x
+k+1
+= (A(x
+k
+)x
+k
++F
+k
+)+b(x
+k
+)u
+k
+(30)
+u
+k
+=s
+T
+(x
+k
+)x
+k
+; (31)
+ª   A(x
+k
+)2 R
+n n
+, b(x
+k
+)2 R
+n 1
+, s(x
+k
+)2 R
+n 1
+,           º…         Ł  
+F
+k
+     º          æº  Ł  (23).     Ł ß A(x
+k
+) Ł b(x
+k
+) Ł   æ  ß.    Æ   æ 
+  æ   Ł     Œ   s(x
+k
+),   Ł Œ          Œ      æŁæ     (30),(31) ªº Æ º   
+ Œæ      Ł º     æ  Ø Ł  . ˇ     º ª   æ ,     æ  Œ       Ł A(x
+k
+)   Ł
+ æ ıx
+k
+       æ Œ   æ  æ      Œ  [ 1;1], Ł      (A(x
+k
+);b(x
+k
+))           
+     º    ,     æ  
+det(b(x
+k
+);A(x
+k
+)b(x
+k
+);:::;A
+n 1
+(x
+k
+)b(x
+k
+))6= 0:
+  Ł  æ ıx
+k
+. ´ßÆ       ø æ     ß  
+i
+(i2 1;n),      º       øŁ   æº  Ł  
+(19) Ł       ºŁ s(x
+k
+) Ł  æŁæ   ß
+s
+T
+(x
+k
+)(A(x
+k
+)  
+i
+I)
+ 1
+b(x
+k
+) = 1;i2 1;n: (32)
+   ª   æ ªº æ     Œ                º  3.1  Łæº  
+i
+Æ      æ Ææ     ß Ł  Łæº -
+ Ł     Ł ß A(x
+k
+)+b(x
+k
+)s
+T
+(x
+k
+), Ł   æŁº        ß 3   Łı  Ł  Œ æº    ø   
+     º      .
+         4 ˇ     º  Ł ,     æ  Œ       Ł ß A(x
+k
+)        æ Œ   æ  æ
+     Œ   [ 1;1],      (A(x
+k
+);b(x
+k
+))                   º    , Ł   Œ   s(x
+k
+)
+      º…  æŁæ    Ø (32).    ª   æŁæ     (30),(31) ªº Æ  º     Œæ      Ł º -
+    æ  Ø Ł  .
+4 ˙ Œº    Ł 
+¨ º     ß    æ           º    ß æ          æ      ß      º  ß   æº  Ł 
+ªº Æ º   Ø  Œæ      Ł º   Ø  æ  Ø Ł  æ Ł   ºŁ  Ø ßı       ß  ßı Ł  Łæ-
+Œ    ßı         º…  ßı æŁæ    Ł    ßØ  Ł  æ  ÆŁºŁ Ł   ø ª       º  Ł 
+ º    Łı æŁæ   .
+— Æ     ß  º       Ł  Ł   æ   Ø        Œ  —  ¨(ª     17.01.00102 ).
+ º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 31˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 1, 2019
+  Łæ Œ ºŁ       ß
+[1] Isidori A. Nonlinear Control Systems // London : Springer. 1993.
+[2] Zak S.H. Systems and Control // Oxford Univ. Press. 2002.
+[3] Y akub ovich V.A., L e onov G.A., Gelig A.Kh. Stability of Stationary Sets
+in Control Systems with discontinuous Nonlinearities // W orld Scienti c.
+London. 2004.
+[4] Y akub ovich V.A., Starzhinski V.M. Linear Di erential Equations with Periodic
+Coe cients // V ol 1., V ol 2., 839 pp. 1975. New Y ork-T oronto. Jerusalem-
+London.
+ º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 32
