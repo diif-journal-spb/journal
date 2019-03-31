@@ -3,5 +3,125 @@
 
 <!-- русский -->
 
+<article>
+  <articleInfo lang="EN" FirstPage="1" LastPage="22">
+    <pdf>orel2.pdf</pdf>
+    <abstract>We consider a direct method of dynamic optimization for an approximation
+of global extremum. It is based 
+on splitting the state space into classes (cells) and the construction
+of piecewise constant functions on the partition.
+
+Such an approach leads to a generalization of the Euler polygonal 
+method and using shortest path algorithms on graphs. 
+
+In the proposed algorithm for each class (cell) a path  from 
+an initial point to this class is formed.
+In addition, the program remembers only the terminal point of the path, 
+functional value along the path
+and the number of the previous class.
+If another path with the same boundary conditions but lesser functional
+value (for the minimization problem) is found, this path becomes 
+the current approximation.
+
+It is proved that if the partition 
+is sufficiently small, then we obtain the optimal polygon. 
+The suggested approach is applied to problems of dynamic optimization  
+with incomplete information
+(differential games, control of systems with unknown dynamics). 
+In addition, some results of numerical
+solutions of optimal control problems and differential games are given.</abstract>
+    <title>Dynamic Optimization and Piecewise Constant Functions on the State Set</title>
+    <keywords>
+      <word>differential games</word>
+      <word>Euler's polygonal method</word>
+      <word>global extremum</word>
+      <word>optimal control</word>
+      <word>piecewise constant functions</word>
+      <word>splitting into classes</word>
+      <word>systems with unknown dynamics</word>
+    </keywords>
+    <references>
+      <reference>Orel E. N. [Approximation of Bellman's function by piecewise constant functions. ] USSR Computational Mathematics and Mathematical Physics. Volume 18, Issue 4, 1978, P. 95-107 (In Russ. )</reference>
+      <reference>Orel E. N. [Method for solving of Optimal Control Problems. ] Original Russian Text © E. N. Orel, 1989, published in Doklady Akademii Nauk, 1989, 1; 6, p. 1301-1304 (In Russ. )</reference>
+      <reference>Orel E. N. [Algorithms for Searching of Quasi-Optimal Control Using a Partition of State Space. ] USSR Computational Mathematics and Mathematical Physics. Issue 9, 1990, P. 1283-1294 (In Russ. )</reference>
+      <reference>Orel E. N., Orel O. E. [Optimality Conditions for Central Fields of Trajectories] Differential Equations and Control Processes, 2017, &amp;sup1; 1, P. 53-77 (In Russ. ) &lt;a href="http://diffjournal.spbu.ru/pdf/orel.pdf"&gt;http://diffjournal.spbu.ru/pdf/orel.pdf&lt;/a&gt; </reference>
+      <reference>Moiseev N. N. [Elements of the Theory of Optimas Systems] Moscow, Science, 1975, 528 p. (In Russ. )</reference>
+      <reference>Elsgolts L. E. [Differential Equations and Calculus of Variations], Moscow, Science, 1965, 424 p. (In Russ. )</reference>
+      <reference>Orel E. N. [Construction of Shortest Path on a Graph Using a minorant of the Bellman Function] Automatics ans Telemechanics, 1977, &amp;sup1; 2, P. 88-91 (In Russ. )</reference>
+      <reference>Orel E. N. [Correction of a heuristic function during the process of decision making] Published in Doklady Akademii Nauk, 1991, &amp;sup1; 4, p. 853-855 (In Russ. )</reference>
+      <reference>Orel E. N. [Heuristic of teaching in search problems] Engineering Cybernetics, 1992, 1; 5, p. 69-81 (In Russ. )</reference>
+      <reference>Orel E. N., Orel O. E. [Central fields of optimal trajectories] Doklady Mathematics, 2014, Vol. 90, No 2, P. 651-653. Original Russian Text © E. N. Orel, O. E. Orel, 2014, published in Doklady Akademii Nauk, 2014, Vol. 458, No. 4, P. 402-405. (In Russ. )</reference>
+      <reference>Orel E. N., Orel O. E. [Central field of trajectories in Problems of Optimal Control and Calculus of Variations. ] Accounting. Analysis. Audit, 2015, &amp;sup1; 3, P. 35-42 (In Russ. )</reference>
+      <reference>Orel E. N., Orel O. E. [Optimal Control Process of Manufacturing During Execution of Order to given deadline. ] Economics and Mathematical Methods, 2016, &amp;sup1; 2, P 65-77 (In Russ. )</reference>
+      <reference>Pontryagin L. S., Boltyanskii V. G., Gamkrelidze R. V., Mischenko E. F. Mathematical Theory of Optimal Processes. New York, Wiley, 1962</reference>
+      <reference>Zelikin M. I. [Optimal Control Theory and Calculus of Varianions. ] Moscow, Editorial URSS, 2004, 391 p. (In Russ. )</reference>
+      <reference>Isaacs R. [Differential Games]. New York, John Wiley and Sons, 1967, 480 p</reference>
+      <reference>Breakwell J. V., Speyer J. L., Bryson A. E. [Optimization and control of nonlinear systems using the second variations]. SIAM J. Control 1963, &amp;sup1; 1, P. 193-223</reference>
+      <reference>Neimark U. I., Kogan N. Ya., Savelyev V. P. [Dynamics Models of Control Theory] Moscow, Science, 1985, 400 P. (In Russ. )</reference>
+      <reference>Michie D., Johnston R. [The Creative Computer. Machine intelligence and human knowledge] Viking, 1984</reference>
+      <reference>Orel E. N. [Discrete Boundary Problems and Optimization Processes on graphs. ] Artificial Intelligence in Engineering Systems. - Moscow, RAN, GosIFTP, P. 3-33 (In Russ. )</reference>
+    </references>
+  </articleInfo>
+  <articleInfo lang="RU" FirstPage="1" LastPage="22">
+    <pdf>orel2.pdf</pdf>
+    <abstract>Рассмотрен прямой метод динамической оптимизации для построения приближений
+к глобальному экстремуму. Метод основан на 
+разбиении множества состояний на классы (ячейки) и 
+построении кусочно-постоянных функций на заданном разбиении.
+Такой подход приводит к обобщению метода ломаных Эйлера и использованию
+алгоритмов поиска кратчайшего пути на графе.
+
+В предложенном алгоритме для каждого класса формируется маршрут, 
+ведущий из начальной точки в этот класс.
+При этом запоминаются только конечная точка маршрута, 
+функционал на маршруте и номер предыдущего класса. Если находится 
+другой маршрут с теми же граничными условиями, но с меньшим 
+(для задачи на минимум) значением функционала, то он становится 
+текущим приближением. 
+
+Доказывается, что если разбиение достаточно мелкое, 
+то метод находит оптимальную ломаную. Предложенный подход может быть применен
+к задачам динамической оптимизации с неполной информацией 
+(диффференциальные игры, управление при неизвестной динамике). 
+ 
+Приводятся результаты численного решения некоторых задач 
+оптимального управления и дифференциальных игр.</abstract>
+    <title>Динамическая оптимизация и кусочно постоянные функции на множестве состояний</title>
+    <keywords>
+      <word>глобальный экстремум</word>
+      <word>дифференциальные игры</word>
+      <word>кусочно-постоянные функции</word>
+      <word>ломаные Эйлера</word>
+      <word>неизвестная динамика</word>
+      <word>оптимальное управление</word>
+      <word>разбиение на классы</word>
+    </keywords>
+    <references>
+      <reference>Орёл Е. Н. Аппроксимация функции Беллмана кусочно-постоянными функциями, Ж. вычисл. матем. и матем. физ., 1978, т. 18, № 4, с. 916-927</reference>
+      <reference>Орёл Е. Н. Метод решения задач оптимального управления, ДАН СССР, 1989, № 6, с. 1301-1304</reference>
+      <reference>Орёл Е. Н. Алгоритмы поиска квазиоптимального управления, использующие разбиение проcтранства состояний, Ж. вычисл. матем. и матем. физ., 1990, № 9, с. 1283-1294</reference>
+      <reference>Орёл Е. Н., Орёл О. Е. Условия оптимальности центральных полей траекторий, Дифференциальные уравнения и процессы управления, 2017, № 1, с. 53-77, diffjournal. spbu. ru/pdf/orel. pdf</reference>
+      <reference>Моисеев Н. Н. Элементы теории оптимальных систем, М., Наука, 1975, 528 с</reference>
+      <reference>Эльсгольц Л. Э. Дифференциальные уравнения и вариационное исчисление, М., Наука, 1965, 424 с</reference>
+      <reference>Орёл Е. Н. Построение кратчайшего пути на графе по миноранте функции Беллмана, Автоматика и телемеханика, 1977, № 2, с. 88-91</reference>
+      <reference>Орёл Е. Н. Коррекция эвристической функции в процессе поиска и принятия решений, ДАН СССР, 1991, № 4, с. 853-855</reference>
+      <reference>Орёл Е. Н. Эвристика обучения в задачах поиска, Техническая кибернетика, 1992, № 5, с. 69-81</reference>
+      <reference>Орёл Е. Н., Орёл О. Е. Центральные поля оптимальных траекторий, Доклады Академии Наук, 2014, № 4, с. 402-405</reference>
+      <reference>Орёл Е. Н., Орёл О. Е. Центральное поле траекторий в задачах оптимального управления и вариационного исчисления. Учёт. Анализ. Аудит, 2015, № 3, с. 35-42</reference>
+      <reference>Орёл Е. Н., Орёл О. Е. Оптимальное управление процессом производства при выполнении заказа к заданному сроку, Экономика и математические методы, 2016, № 2, с. 65-77</reference>
+      <reference>Понтрягин Л. С., Болтянский В. Г., Гамкрелидзе Р. В., Мищенко Е. Ф. Математическая теория оптимальных процессов, М., Наука, 1969, 391 с</reference>
+      <reference>Зеликин М. И. Оптимальное управление и вариационное исчисление, М., Едиториал УРСС, 2004, 160 с</reference>
+      <reference>Айзекс Р. Дифференциальные игры, М., Мир 1967, 480 с</reference>
+      <reference>Breakwell J. V., Speyer J. L., Bryson A. E. Optimization and control of nonlinear systems using the second variations, SIAM J. Control 1963, № 1, с. 193-223</reference>
+      <reference>Неймарк Ю. И., Коган Н. Я., Савельев В. П. Динамические модели теории управления, М, Наука, 1985, 400 с</reference>
+      <reference>Мичи Д., Чемберс Р. Компьютер-творец, М., Мир, 1987, 225 с</reference>
+      <reference>Орёл Е. Н. Дискретные краевые задачи и процессы оптимизации на графах, Искусственный интеллект в технических системах, М. РАН, ГосИФТП, 1998, с. 3-33</reference>
+    </references>
+  </articleInfo>
+  <authors>
+    <author ref="n_2019_3_orel1" sort-key="1" />
+    <author ref="n_2019_3_orel2" sort-key="2" />
+  </authors>
+</article>
 
 </number>
