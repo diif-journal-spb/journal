@@ -1,0 +1,3623 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 1, 2019
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Functional differential equations
+On Stability and Boundedness of Solutions of a Certain
+non-Autonomous Third-Order Functional Differential Equation with
+Multiple Deviating Arguments
+Mohamed A. Abdel-Razek
+1
+, Ayman M. Mahmoud
+2
+, Doaa A. M. Bakhit
+2
+1
+Department of Mathematics, Faculty of Science, Assiut University,
+Assiut 71516, Egypt
+e-mail: abdel razek555@yahoo.com
+2
+Department of Mathematics, Faculty of Science, New Valley University,
+El-Khargah 72511, Egypt
+e-mail: math ayman27@yahoo.com & doaa math90@yahoo.com
+Abstract
+This paper investigates the explicit criteria of the stability of the zero solu-
+tion and the boundedness of all solutions for a certain non-autonomous third-
+order functional differential equation with multiple deviating arguments. To
+study the stability of the zero solution we construct the Lyapunov functional.
+The Gronwall-Reid-Bellman inequality is employed to establish the bounded-
+ness of all solutions of the addressing model. This study includes and improves
+some related results existing in the relevant literature. For illustration, two
+examples are given.
+Keywords: Functional differential equations, stability, boundedness, third-
+order differential equation, Lyapunov functional, multiple deviating arguments.Differential Equations and Control Processes, N. 1, 2019
+1 Introduction
+It is well-known that functional differential equations (FDEs), in particular,
+delay differential equations (DDEs) are very important in many areas of engi-
+neering and science. These equations are frequently encountered as mathemat-
+ical models of most dynamical processes in mechanics, control theory, physics,
+chemistry, etc. (see [6, 12, 13, 14, 31, 39] and the references therein). One of the
+most attractive areas of the qualitative theory of FDEs is the stability and the
+boundedness of solutions. In the study of stability and boundedness problems
+for FDEs, it is well-known that Lyapunov's second method is very important
+and effective. This technique is also called the direct method because it can
+be applied to a differential equation directly, without any knowledge of solu-
+tions. Today, this method is widely recognized as an excellent tool not only
+in the study of differential equations but also in the theory of control systems,
+dynamical systems, systems with time-lag, power system analysis, time varying
+non-linear feedback system and so on. It worth mentioning that there are nu-
+merous books studied the stability and the boundedness by Lyapunov's direct
+method (see for example [8, 10, 11, 13, 17, 18, 40]), etc. In the last few decades,
+the theory of FDEs has attracted much attention and numerous of papers have
+been published, we can mention the works in [1-3, 5, 9, 19-25, 27-30, 32-35, 37,
+41], and the references therein. In the particular, many results on the stability
+and the boundedness of solutions of non-autonomous third-order FDEs have
+been studied. It can briey be summarized as the following:
+Sadek [30] investigated the asymptotic stability of the zero solution of the
+delay differential equation
+...
+x +a(t) x +b(t) _ x +c(t)f(x(t r)) = 0;
+where a(t);b(t) and c(t) are positive and continuously differentiable functions
+on [0;1); where r is a positive constant; f(x) is a continuous function and
+f(0) = 0.
+Omeike [20] studied the stability and the boundedness of solutions of the
+third-order non-autonomous nonlinear differential equation with delays of the
+form
+...
+x +a(t) x +b(t)g( _ x) +c(t)h(x(t r)) =p(t);
+where r is a positive constant, a(t); b(t); c(t); g( _ x) and h(x) are real-valued
+functions continuous in their respective arguments; g(0) =h(0) = 0.
+Mahmoud [19] established su cient conditions for the asymptotic stability
+Electronic Journal. http://diffjournal.spbu.ru/ 85Differential Equations and Control Processes, N. 1, 2019
+of the zero solution for a certain nonlinear non-autonomous third-order delay
+differential equation
+...
+x +a(t) x +b(t)g( _ x(t r(t))) +c(t)h(x(t r(t))) = 0;
+where 0  r(t)  ,  > 0, a(t); b(t); c(t); g( _ x) and h(x) are real-valued
+functions continuous in their respective arguments; g(0) =h(0) = 0.
+Besides it is worth-mentioning that according to our observation, there are
+few papers studied the behaviour of solutions of certain differential equations
+of third and fourth-order with multiple delays, (see, [4, 15, 16, 26, 36, 38]).
+Tun  c and G ozen [38] investigated the stability and the boundedness of so-
+lutions of the third-order FDE with multidelay of the form
+...
+x(t) +a(t) x(t) +nb(t)g( _ x(t)) +c(t)
+n
+X
+i=1
+h
+i
+(x(t r
+i
+)) =p(t);
+where r
+i
+are certain positive constants, a(t); b(t); c(t); g( _ x); h(x) and p(t)
+are real-valued and continuous functions in their respective arguments with
+g(0) =h(0) = 0:
+Tun  c [36] discussed the asymptotic stability of the zero solution and the
+boundedness of all solutions of the third-order nonlinear differential equation
+with multiple deviating arguments as
+...
+x(t)+F ( _ x(t)) x(t) +H( _ x(t)) _ x(t) +
+n
+X
+i=1
+G
+i
+( _ x(t g
+i
+(t))) + 	(x(t))
+=P (t;x(t);:::;x(t g
+n
+(t)); _ x(t);:::; _ x(t g
+n
+(t));  x(t));
+whereF;H;G
+i
+; 	 andP are continuous functions in their respective arguments,
+with G
+i
+(0) = 	(0) = 0.
+Ademola et al. [4] established the stability and the boundedness to a certain
+third-order delay differential equation with multiple deviating arguments as the
+following
+...
+x +
+n
+X
+i=1
+f
+i
+(t;x;x(t  
+i
+(t)); _ x; _ x(t  
+i
+(t));  x;  x(t  
+i
+(t))) +
+n
+X
+i=1
+g
+i
+( _ x(t  
+i
+(t)))
++
+n
+X
+i=1
+h
+i
+(x(t  
+i
+(t))) =
+n
+X
+i=1
+p
+i
+(t;x;x(t  
+i
+(t)); _ x; _ x(t  
+i
+(t));  x;  x(t  
+i
+(t)));
+where f
+i
+; g
+i
+; h
+i
+and p
+i
+are continuous functions in their respective arguments.
+Electronic Journal. http://diffjournal.spbu.ru/ 86Differential Equations and Control Processes, N. 1, 2019
+Motivated by the above discussion, the present paper investigates the stabil-
+ity of the zero solution and the boundedness of all solutions of non-autonomous
+third-order FDE with multiple deviating arguments as follows
+...
+x+a(t)f( _ x) x +b(t)
+n
+X
+i=1
+g
+i
+(x(t r
+i
+(t)); _ x(t r
+i
+(t))) +c(t)
+n
+X
+i=1
+h
+i
+(x(t r
+i
+(t)))
+=p(t;x; _ x;  x;x(t r(t)));
+(1.1)
+where a(t);b(t) and c(t) are positive and continuously differentiable functions
+on [0;1); f; g
+i
+and p
+i
+are continuous functions for all values of respective
+arguments, with h
+i
+(0) =g
+i
+(x; 0) = 0:
+All of the functions which appear and the solutions considered are supposed
+to be real. The dots indicate differentiation with respect to the independent
+variablet. Also the derivatives
+@
+@x
+g
+i
+(x; _ x);
+@
+@y
+g
+i
+(x; _ x);h
+0
+i
+(x);a
+0
+(t);b
+0
+(t);c
+0
+(t) and
+r
+0
+(t) exist and are continuous moreover, the existence and uniqueness of the
+solutions of (1.1) will be assumed.
+However, to the best of our knowledge, there is no previous literature on
+stability and boundedness of solutions to non-autonomous third-order FDE
+with multiple deviating arguments (1.1).
+2 Preliminary Results
+We consider the following general non-autonomous  nite delay differential
+system:
+_ x =f(t;x
+t
+); x
+t
+=x(t + );  r    0; (2.1)
+where f : [0;1) C
+H
+! R
+n
+is a continuous mapping, f(t; 0) = 0, and we
+suppose thatf takes closed bounded sets into bounded sets ofR
+n
+. Here (C;k:k)
+is the Banach space of continuous function' : [ r; 0]!R
+n
+with the supremum
+norm, C
+H
+is the open H ball in C, r > 0 for H > 0;C
+H
+=f 2 C :k k <
+Hg, C = C([ r; 0];R
+n
+). We will give some important de nitions (see Burton
+[9]).
+De nition 2.1 A continuous function V : [0;1) C
+H
+! [0;1); which is
+locally Lipschitz in   and the derivative of this function is de ned as
+_
+V (t;x
+t
+) = lim sup
+h!0
+V (t +h;x
+t+h
+(t
+0
+; )) V (t;x
+t
+(t
+0
+; ))
+h
+;
+Electronic Journal. http://diffjournal.spbu.ru/ 87Differential Equations and Control Processes, N. 1, 2019
+is called a Lyapunov functional for (2.1), if there is a wedge W satis es the
+following conditions
+(i) W (j (0)j) V (t; ), V (t; 0) = 0 and
+(ii)
+_
+V
+(2.1)
+(t;x
+t
+)  0:
+De nition 2.2 The zero solution of (2.1) is said to be stable at t  t
+0
+, if for
+each "> 0 and t
+0
+2R there exists a positive constant   = (";t
+0
+) such that, if
+k k<  thenjx(t;t
+0
+; )j<" for t t
+0
+.
+De nition 2.3 The zero solution of (2.1) is said to be uniformly stable, if it
+is stable for t t
+0
+and the positive constant   is independent of t
+0
+.
+Theorem 2.1 [7, 41] Let V ( ) :C
+H
+!R be a continuous functional satisfying
+a local Lipschitz condition, V (0) = 0 and functions W
+i
+(r); (i = 1; 2) are wedges
+such that
+(i) W
+1
+(j (0)j) V ( ) W
+2
+(k k) and
+(ii)
+_
+V
+(2.1)
+( )  0; for  2C
+H
+.
+Then the zero solution of (2.1) is uniformly stable.
+Assumptions:
+In addition to the basic assumptions on f,g
+i
+andh
+i
+of equation (1.1), suppose
+that there are positive constants a
+0
+; a
+1
+; a
+2
+; a
+3
+; a
+4
+; a
+5
+; a
+i
+; b
+0
+; b
+1
+; b
+i
+; l
+i
+; with
+a
+1
+a
+0
+b
+0
+a
+i
+ c
+0
+l
+i
+> 0,L
+i
+; N
+i
+; for alli (i = 1; 2; 3;:::;n), and , which satisfy the
+following assumptions:
+(i)
+g
+i
+(x;y)
+y
+ a
+i
+;
+h
+i
+(x)
+x
+ b
+i
+; for all x6= 0 and y6= 0.
+(ii) a
+0
+ f(y) a
+3
+; supfh
+0
+i
+(x)g =l
+i
+, y
+@g
+i
+(x;y)
+@x
+  0, for all x and y.
+(iii) a
+1
+ a(t) a
+2
+; c
+1
+ b
+0
+ b(t) b
+1
+; c
+1
+ c(t) c
+0
+such that c
+0
+> 2c
+1
+; for
+t  0.
+(iv)
+l
+i
+a
+i
+< ; b
+0
+(t) c
+0
+(t)  0; a
+5
+ a
+0
+(t) a
+4
+; for t  0, a
+i
+6= 0.
+(v) r
+i
+(t) ; r
+0
+i
+(t)  ; 0<  < 1, for t  0.
+(vi)jh
+0
+i
+(x)j L
+i
+;j
+@g
+i
+(x;y)
+@y
+j N
+i
+, for all x and y.
+Electronic Journal. http://diffjournal.spbu.ru/ 88Differential Equations and Control Processes, N. 1, 2019
+3 Main Results
+Theorem 3.1 By assuming that the assumptions (i)  (vi) hold true with
+h
+i
+(0) =g
+i
+(x; 0) = 0, suppose that the positive constant  is also satis ed
+ <min
+ 
+(1  )(a
+0
+a
+1
+b
+0
+P
+n
+i=1
+a
+i
+ c
+0
+P
+n
+i=1
+l
+i
+  a
+3
+a
+4
+)
+2
+ 
+ (1  )(b
+1
+P
+n
+i=1
+N
+i
++c
+0
+P
+n
+i=1
+L
+i
+) +c
+0
+(  + 1)
+P
+n
+i=1
+L
+i
+ 
+;
+(1  )(a
+0
+a
+1
+b
+0
+P
+n
+i=1
+a
+i
+ c
+0
+P
+n
+i=1
+l
+i
+)
+2b
+0
+P
+n
+i=1
+a
+i
+ 
+(1  )c
+0
+P
+n
+i=1
+L
+i
++ (    + 1 +b
+1
+)
+P
+n
+i=1
+N
+i
+ 
+ 
+;
+where
+  =
+a
+0
+a
+1
+b
+0
+P
+n
+i=1
+a
+i
++c
+0
+P
+n
+i=1
+l
+i
+2b
+0
+P
+n
+i=1
+a
+i
+:
+Then the zero solution of (1.1) with p = 0 is uniformly stable.
+Proof.
+By considering p = 0, equation (1.1) is equivalent to the following system
+_ x =y;
+_ y =z;
+_ z = a(t)f(y)z b(t)
+n
+X
+i=1
+g
+i
+(x;y) +b(t)
+n
+X
+i=1
+Z
+t
+t r
+i
+(t)
+@g
+i
+(x(s);y(s))
+@x
+y(s)ds
++b(t)
+n
+X
+i=1
+Z
+t
+t r
+i
+(t)
+@g
+i
+(x(s);y(s))
+@y
+z(s)ds
+ c(t)
+n
+X
+i=1
+h
+i
+(x) +c(t)
+n
+X
+i=1
+Z
+t
+t r
+i
+(t)
+h
+0
+i
+(x(s))y(s)ds:
+(3.1)
+The proof of the theorem depends entirely on some fundamental properties of a
+certain differentiable Lyapunov functional V =V (x
+t
+;y
+t
+;z
+t
+) of the system (3.1)
+de ned by
+V (x
+t
+;y
+t
+;z
+t
+) = c(t)
+n
+X
+i=1
+Z
+x
+0
+h
+i
+( )d  +c(t)y
+n
+X
+i=1
+h
+i
+(x)
++ a(t)
+Z
+y
+0
+f( ) d  +b(t)
+n
+X
+i=1
+Z
+y
+0
+g
+i
+(x; )d  + yz +
+1
+2
+z
+2
++
+n
+X
+i=1
+ 
+i
+Z
+0
+ r
+i
+(t)
+Z
+t
+t+s
+y
+2
+( )d  +
+n
+X
+i=1
+ 
+i
+Z
+0
+ r
+i
+(t)
+Z
+t
+t+s
+z
+2
+( )d :
+(3.2)
+Electronic Journal. http://diffjournal.spbu.ru/ 89Differential Equations and Control Processes, N. 1, 2019
+By differentiating (3.2) in terms of t, we get
+dV
+dt
+= c
+0
+(t)
+n
+X
+i=1
+Z
+x
+0
+h
+i
+( )d  +c
+0
+(t)y
+n
+X
+i=1
+h
+i
+(x) +b
+0
+(t)
+n
+X
+i=1
+Z
+y
+0
+g
+i
+(x; )d 
++ a
+0
+(t)
+Z
+y
+0
+f( ) d  +c(t)y
+2
+n
+X
+i=1
+h
+0
+i
+(x) +b(t)
+n
+X
+i=1
+Z
+y
+0
+y
+@g
+i
+(x; )
+@x
+d 
+ a(t)f(y)z
+2
++ z
+2
++b(t)( y +z)
+n
+X
+i=1
+Z
+t
+t r
+i
+(t)
+@g
+i
+(x(s);y(s))
+@x
+y(s)ds
+  yb(t)
+n
+X
+i=1
+g
+i
+(x;y) +b(t)( y +z)
+n
+X
+i=1
+Z
+t
+t r
+i
+(t)
+@g
+i
+(x(s);y(s))
+@y
+z(s)ds
++c(t)( y +z)
+n
+X
+i=1
+Z
+t
+t r
+i
+(t)
+h
+0
+i
+(x(s))y(s)ds +y
+2
+n
+X
+i=1
+ 
+i
+r
+i
+(t) +z
+2
+n
+X
+i=1
+ 
+i
+r
+i
+(t)
+ 
+n
+X
+i=1
+ 
+i
+(1 r
+0
+i
+(t))
+Z
+t
+t r
+i
+(t)
+y
+2
+( )d ds 
+n
+X
+i=1
+ 
+i
+(1 r
+0
+i
+(t))
+Z
+t
+t r
+i
+(t)
+z
+2
+( )d ds:
+From the assumptions (ii), (vi) and by using the inequality xy 
+1
+2
+(x
+2
++y
+2
+),
+we have
+dV
+dt
+  c
+0
+(t)
+n
+X
+i=1
+Z
+x
+0
+h
+i
+( )d  +c
+0
+(t)y
+n
+X
+i=1
+h
+i
+(x) + a
+0
+(t)
+Z
+y
+0
+f( ) d 
++b
+0
+(t)
+n
+X
+i=1
+Z
+y
+0
+g
+i
+(x; )d  +c(t)y
+2
+n
+X
+i=1
+l
+i
+ a(t)f(y)z
+2
++ z
+2
+  yb(t)
+n
+X
+i=1
+g
+i
+(x;y) +
+ 
+2
+b(t)y
+2
+n
+X
+i=1
+N
+i
+r
+i
+(t) +
+b(t)
+2
+z
+2
+n
+X
+i=1
+N
+i
+r
+i
+(t)
++
+ 
+2
+c(t)y
+2
+n
+X
+i=1
+L
+i
+r
+i
+(t) +
+c(t)
+2
+z
+2
+n
+X
+i=1
+L
+i
+r
+i
+(t) +y
+2
+n
+X
+i=1
+ 
+i
+r
+i
+(t) +z
+2
+n
+X
+i=1
+ 
+i
+r
+i
+(t)
++
+ 
+ 
+2
+c(t)
+n
+X
+i=1
+L
+i
++
+c(t)
+2
+n
+X
+i=1
+L
+i
+ 
+n
+X
+i=1
+ 
+i
+(1 r
+0
+i
+(t))
+ Z
+t
+t r
+i
+(t)
+y
+2
+( )d ds
++
+ 
+ 
+2
+b(t)
+n
+X
+i=1
+N
+i
++
+b(t)
+2
+n
+X
+i=1
+N
+i
+ 
+n
+X
+i=1
+ 
+i
+(1 r
+0
+i
+(t))
+ Z
+t
+t r
+i
+(t)
+z
+2
+( )d ds:
+Electronic Journal. http://diffjournal.spbu.ru/ 90Differential Equations and Control Processes, N. 1, 2019
+Therefore by using the assumptions (i)  (v), we obtain
+dV
+dt
+  c
+0
+(t)
+n
+X
+i=1
+Z
+x
+0
+h
+i
+( )d  +c
+0
+(t)y
+n
+X
+i=1
+h
+i
+(x) + a
+0
+(t)
+Z
+y
+0
+f( ) d 
++
+ 
+c
+0
+n
+X
+i=1
+l
+i
+  b
+0
+n
+X
+i=1
+a
+i
++
+ 
+2
+b
+1
+
+n
+X
+i=1
+N
+i
++
+ 
+2
+c
+0
+
+n
+X
+i=1
+L
+i
++
+n
+X
+i=1
+ 
+i
+ 
+y
+2
++b
+0
+(t)
+n
+X
+i=1
+Z
+y
+0
+g
+i
+(x; )d  +
+ 
+  a
+0
+a
+1
++
+b
+1
+2
+
+n
+X
+i=1
+N
+i
++
+c
+0
+2
+
+n
+X
+i=1
+L
+i
++
+n
+X
+i=1
+ 
+i
+ 
+z
+2
++
+ 
+c
+0
+(  + 1)
+P
+n
+i=1
+L
+i
+2
+  (1  )
+n
+X
+i=1
+ 
+i
+ Z
+t
+t r
+i
+(t)
+y
+2
+(s)ds
++
+ 
+b
+1
+(  + 1)
+P
+n
+i=1
+N
+i
+2
+  (1  )
+n
+X
+i=1
+ 
+i
+ Z
+t
+t r
+i
+(t)
+z
+2
+(s)ds:
+If we take
+n
+X
+i=1
+ 
+i
+=
+(  + 1)c
+0
+P
+n
+i=1
+L
+i
+2(1  )
+and
+n
+X
+i=1
+ 
+i
+=
+b
+1
+(  + 1)
+P
+n
+i=1
+N
+i
+2(1  )
+;
+and from assumptions (ii) and (iv), we can obtain
+ a
+0
+(t)
+Z
+y
+0
+f( ) d   
+a
+3
+a
+4
+2
+y
+2
+:
+Then we  nd
+dV
+dt
+ G 
+ 
+ b
+0
+n
+X
+i=1
+a
+i
+ c
+0
+n
+X
+i=1
+l
+i
+ 
+ 
+2
+a
+3
+a
+4
+ 
+ 
+2
+b
+1
+
+n
+X
+i=1
+N
+i
+ 
+ 
+2
+c
+0
+
+n
+X
+i=1
+L
+i
+ 
+n
+X
+i=1
+ 
+i
+ 
+y
+2
+ 
+ 
+a
+0
+a
+1
+   
+b
+1
+2
+
+n
+X
+i=1
+N
+i
+ 
+c
+0
+2
+
+n
+X
+i=1
+L
+i
+ 
+n
+X
+i=1
+ 
+i
+ 
+z
+2
+;
+(3.3)
+where
+G = c
+0
+(t)
+n
+X
+i=1
+Z
+x
+0
+h
+i
+( )d  +c
+0
+(t)y
+n
+X
+i=1
+h
+i
+(x) +b
+0
+(t)
+n
+X
+i=1
+Z
+y
+0
+g
+i
+(x; )d :
+Since b
+0
+(t) c
+0
+(t)  0 and
+R
+y
+0
+g
+i
+(x; )d   0, we  nd the following two cases:
+Case (1): if c
+0
+(t) = 0, it follows that
+G =b
+0
+(t)
+n
+X
+i=1
+Z
+y
+0
+g
+i
+(x; )d   0:
+Electronic Journal. http://diffjournal.spbu.ru/ 91Differential Equations and Control Processes, N. 1, 2019
+Case (2): if c
+0
+(t)6= 0 and since
+b
+0
+(t)
+c
+0
+(t)
+< 1, then we have
+G c
+0
+(t)
+ 
+ 
+n
+X
+i=1
+Z
+x
+0
+h
+i
+( )d  +y
+n
+X
+i=1
+h
+i
+(x) +
+n
+X
+i=1
+Z
+y
+0
+g
+i
+(x; )d 
+ 
+:
+Since supfh
+0
+i
+(x)g =
+P
+n
+i=1
+l
+i
+; by (ii) and
+P
+n
+i=1
+g
+i
+(x;y)
+y
+ 
+P
+n
+i=1
+a
+i
+; by (i), it follows
+that
+G c
+0
+(t)
+ 
+1
+2
+P
+n
+i=1
+a
+i
+ 
+y
+n
+X
+i=1
+a
+i
++
+n
+X
+i=1
+h
+i
+(x)
+ 
+2
++
+Z
+x
+0
+ 
+  
+P
+n
+i=1
+h
+0
+i
+( )
+P
+n
+i=1
+a
+i
+ 
+n
+X
+i=1
+h
+i
+( )d 
+ 
+:
+ c
+0
+(t)
+Z
+x
+0
+ 
+  
+P
+n
+i=1
+l
+i
+P
+n
+i=1
+a
+i
+ 
+n
+X
+i=1
+h
+i
+( )d :
+Then we obtain
+G c
+0
+(t) 
+1
+Z
+x
+0
+n
+X
+i=1
+h
+i
+( )d   0:
+By using the assumption (iv), and considering  
+1
+=  
+P
+n
+i=1
+l
+i
+P
+n
+i=1
+a
+i
+> 0, so that we
+can write (3.3) as the following
+dV
+dt
+  
+ 
+a
+0
+a
+1
+b
+0
+P
+n
+i=1
+a
+i
+ c
+0
+P
+n
+i=1
+l
+i
+2
+ 
+ 
+2
+a
+3
+a
+4
+ 
+ (1  )(b
+1
+P
+n
+i=1
+N
+i
++c
+0
+P
+n
+i=1
+L
+i
+) +c
+0
+(  + 1)
+P
+n
+i=1
+L
+i
+2(1  )
+
+ 
+y
+2
+ 
+ 
+a
+0
+a
+1
+b
+0
+P
+n
+i=1
+a
+i
+ c
+0
+P
+n
+i=1
+L
+i
+2b
+0
+P
+n
+i=1
+a
+i
+ 
+c
+0
+(1  )
+P
+n
+i=1
+L
+i
++ (    + 1 +b
+1
+)
+P
+n
+i=1
+N
+i
+2(1  )
+
+ 
+z
+2
+:
+Therefore, if
+ <min
+ 
+(1  )(a
+0
+a
+1
+b
+0
+P
+n
+i=1
+a
+i
+ c
+0
+P
+n
+i=1
+l
+i
+  a
+3
+a
+4
+)
+2
+ 
+ (1  )(b
+1
+P
+n
+i=1
+N
+i
++c
+0
+P
+n
+i=1
+L
+i
+) +c
+0
+(  + 1)
+P
+n
+i=1
+L
+i
+ 
+;
+(1  )(a
+0
+a
+1
+b
+0
+P
+n
+i=1
+a
+i
+ c
+0
+P
+n
+i=1
+l
+i
+)
+2b
+0
+P
+n
+i=1
+a
+i
+ 
+(1  )c
+0
+P
+n
+i=1
+L
+i
++ (    + 1 +b
+1
+)
+P
+n
+i=1
+N
+i
+ 
+ 
+:
+Thus for the positive constant D
+1
+, we obtain
+dV
+dt
+  D
+1
+(y
+2
++z
+2
+): (3.4)
+Electronic Journal. http://diffjournal.spbu.ru/ 92Differential Equations and Control Processes, N. 1, 2019
+Because of
+R
+0
+ r
+i
+(t)
+R
+t
+t+s
+y
+2
+( )d ds and
+R
+0
+ r
+i
+(t)
+R
+t
+t+s
+z
+2
+( )d ds are non-negative, then
+from equation (3.2), we have
+V (x
+t
+;y
+t
+;z
+t
+)  c(t)
+n
+X
+i=1
+Z
+x
+0
+h
+i
+( )d  +c(t)y
+n
+X
+i=1
+h
+i
+(x) + a(t)
+Z
+y
+0
+f( ) d 
++b(t)
+n
+X
+i=1
+Z
+y
+0
+g
+i
+(x; )d  + yz +
+1
+2
+z
+2
+:
+From the assumptions (i)  (v), we get
+V (x
+t
+;y
+t
+;z
+t
+)  c
+1
+n
+X
+i=1
+Z
+x
+0
+h
+i
+( )d  +c
+1
+y
+n
+X
+i=1
+h
+i
+(x) +
+ a
+1
+a
+0
+2
+y
+2
++
+b
+0
+2
+n
+X
+i=1
+a
+i
+y
+2
++ yz +
+1
+2
+z
+2
+:
+Now we can write the previous inequality as the following form
+V (x
+t
+;y
+t
+;z
+t
+) 
+1
+2b
+0
+P
+n
+i=1
+a
+i
+ 
+b
+0
+y
+n
+X
+i=1
+a
+i
++c
+1
+n
+X
+i=1
+h
+i
+(x)
+ 
+2
++
+1
+2
+( y +z)
+2
++
+Z
+x
+0
+ 
+c
+1
+  
+c
+2
+1
+P
+n
+i=1
+h
+0
+i
+( )
+b
+0
+P
+n
+i=1
+a
+i
+ 
+n
+X
+i=1
+h
+i
+( )d  +
+ 
+2
+(a
+1
+a
+0
+  )y
+2
+:
+By using the assumptions (i) (iii) and sincea
+0
+a
+1
+   =
+a
+0
+a
+1
+b
+0
+P
+n
+i=1
+a
+i
+ c
+0
+P
+n
+i=1
+l
+i
+2b
+0
+P
+n
+i=1
+a
+i
+> 0,
+then we obtain
+V (x
+t
+;y
+t
+;z
+t
+) 
+Z
+x
+0
+ 
+c
+1
+  
+c
+2
+1
+P
+n
+i=1
+l
+i
+b
+0
+P
+n
+i=1
+a
+i
+ 
+n
+X
+i=1
+h
+i
+( )d  +
+ 
+2
+2
+(y
+2
++z
+2
+):
+Suppose that 
+3
+=c
+1
+  
+c
+2
+1
+P
+n
+i=1
+l
+i
+b
+0
+P
+n
+i=1
+a
+i
+> 0, by the assumptionsb
+0
+>c
+1
+andc
+0
+> 2c
+1
+,
+with the assumption (i), we have
+V (x
+t
+;y
+t
+;z
+t
+) 
+ 
+3
+2
+x
+2
+n
+X
+i=1
+b
+i
++
+ 
+2
+2
+(y
+2
++z
+2
+):
+So we can write Lyapunov functional V (x
+t
+;y
+t
+;z
+t
+) as
+V (x
+t
+;y
+t
+;z
+t
+) D
+2
+(x
+2
++y
+2
++z
+2
+); (3.5)
+where D
+2
+= minf
+ 
+3
+2
+P
+n
+i=1
+b
+i
+;
+ 
+2
+2
+g; D
+2
+is a positive constant.
+Sincej
+P
+n
+i=1
+h
+0
+i
+(x)j 
+P
+n
+i=1
+L
+i
+,j
+P
+n
+i=1
+@g
+i
+(x;y)
+@y
+j 
+P
+n
+i=1
+N
+i
+and h
+i
+(0) =g
+i
+(x; 0) =
+Electronic Journal. http://diffjournal.spbu.ru/ 93Differential Equations and Control Processes, N. 1, 2019
+0, then by using the mean-value theorem we can write equation (3.2) as the
+following
+V (x
+t
+;y
+t
+;z
+t
+)  c(t)
+n
+X
+i=1
+Z
+x
+0
+L
+i
+ d  +c(t)
+n
+X
+i=1
+L
+i
+xy + yz + a(t)
+Z
+y
+0
+f( ) d 
++b(t)
+n
+X
+i=1
+N
+i
+Z
+y
+0
+ d  +
+1
+2
+z
+2
++
+n
+X
+i=1
+ 
+i
+Z
+t
+t r
+i
+(t)
+ 
+  t +r
+i
+(t)
+ 
+y
+2
+( )d 
++
+n
+X
+i=1
+ 
+i
+Z
+t
+t r
+i
+(t)
+ 
+  t +r
+i
+(t)
+ 
+z
+2
+( )d :
+From the assumptions (i)  (v) and by using the inequalityuv 
+1
+2
+(u
+2
++v
+2
+), we
+have
+V (x
+t
+;y
+t
+;z
+t
+) 
+ c
+0
+2
+x
+2
+n
+X
+i=1
+L
+i
++
+c
+0
+2
+x
+2
+n
+X
+i=1
+L
+i
++
+c
+0
+2
+y
+2
+n
+X
+i=1
+L
+i
++
+ a
+2
+a
+3
+2
+y
+2
++
+b
+1
+2
+y
+2
+n
+X
+i=1
+N
+i
++
+ 
+2
+y
+2
++
+ 
+2
+z
+2
++
+1
+2
+z
+2
++
+
+2
+2
+kyk
+2
+n
+X
+i=1
+ 
+i
++
+
+2
+2
+kzk
+2
+n
+X
+i=1
+ 
+i
+:
+So that the above inequality becomes as
+V (x
+t
+;y
+t
+;z
+t
+) 
+1
+2
+ 
+c
+0
+(  + 1)
+n
+X
+i=1
+L
+i
+ 
+kxk
+2
++
+1
+2
+ 
+c
+0
+n
+X
+i=1
+L
+i
++b
+1
+n
+X
+i=1
+N
+i
++ (a
+2
+a
+3
++ 1) +
+2
+n
+X
+i=1
+ 
+i
+ 
+kyk
+2
++
+1
+2
+ 
+(  + 1) +
+2
+n
+X
+i=1
+ 
+i
+ 
+kzk
+2
+:
+Then we obtain
+V (x
+t
+;y
+t
+;z
+t
+) D
+3
+(x
+2
++y
+2
++z
+2
+); D
+3
+> 0: (3.6)
+Then, from inequalities (3.4), (3.5) and (3.6), we conclude that all the assump-
+tions of Theorem 2.1 are satis ed, so that the zero solution of equation (1.1) is
+uniformly stable. Hence, the proof of Theorem 3.1 is now complete.
+Remark 3.1 If we consider equation (1.1) is a differential equation with a
+deviating arguments, and if we let f( _ x) = 1 and g(x(t r(t)); _ x(t r(t))) =
+g(x(t r(t))), we  nd that the results of the equation discussed by Mahmoud
+[19].
+Electronic Journal. http://diffjournal.spbu.ru/ 94Differential Equations and Control Processes, N. 1, 2019
+Example 3.1. Consider the non-autonomous third-order nonlinear functional
+differential equation with multiple deviating arguments as:
+...
+x + (4 + sint)( _ x)
+2
+ x +
+ 
+1
+4
++
+1
+t
+3
++ 2
+ 
+n
+X
+i=1
+ 
+3x(t r
+i
+(t)) +
+x(t r
+i
+(t))
+2 + sint
+ 
++
+ 
+2 +
+1
+t
+3
++ 1
+ 
+n
+X
+i=1
+ 
+4 _ x(t r
+i
+(t)) +
+_ x(t r
+i
+(t))
+2 +jx(t r
+i
+(t))j +j _ x(t r
+i
+(t))j
+ 
+= 0:
+(3.7)
+The previous equation is equivalent to the system
+_ x =y;
+_ y =z;
+_ z = (4 + sint)y
+2
+z 
+ 
+2 +
+1
+t
+3
++ 1
+  
+4y +
+y
+2 +jxj +jyj
+ 
++
+ 
+2 +
+1
+t
+3
++ 1
+ 
+n
+X
+i=1
+Z
+t
+t r
+i
+(t)
+ 
+ y
+(2 +jxj +jyj)
+2
+ 
+y(s)ds
++
+ 
+2 +
+1
+t
+3
++ 1
+ 
+n
+X
+i=1
+Z
+t
+t r
+i
+(t)
+ 
+4 +
+2 +x
+(2 +jxj +jyj)
+2
+ 
+z(s)ds
+ 
+ 
+1
+4
++
+1
+t
+3
++ 2
+  
+3x +
+x
+2 + sint
+ 
++
+ 
+1
+4
++
+1
+t
+3
++ 2
+ 
+n
+X
+i=1
+Z
+t
+t r
+i
+(t)
+ 
+3 +
+1
+2 + sins
+ 
+y(s)ds:
+Then, we can write the function
+a(t) = 4 + sint; a
+1
+= 3 a(t)  4 =a
+2
+;a
+0
+(t) = cost;  1 a
+0
+(t)  1:
+Also the function
+f(y) =y
+2
+;a
+0
+= 2 y
+2
+  4 =a
+3
+;
+and
+b(t) = (2 +
+1
+t
+3
++ 1
+); b
+0
+= 2 b(t)  2:5 =b
+1
+;
+therefore we have
+b
+0
+(t) =
+ 3t
+2
+(t
+3
++ 1)
+2
+  0:
+Also
+c(t) = (
+1
+4
++
+1
+t
+3
++ 2
+); c
+1
+=
+1
+4
+  c(t) 
+3
+4
+=c
+0
+;
+Electronic Journal. http://diffjournal.spbu.ru/ 95Differential Equations and Control Processes, N. 1, 2019
+therefore we have
+c
+0
+(t) =
+ 3t
+2
+(t
+3
++ 2)
+2
+  0;
+it is clear that
+b
+0
+(t) c
+0
+(t)  0:
+Therefore from the assumption (ii); we have b
+0
+= 2>c
+1
+=
+1
+4
+and
+c
+0
+=
+3
+4
+> 2c
+1
+=
+1
+2
+.
+Now, let the function
+n
+X
+i=1
+g
+i
+(x;y) =
+n
+X
+i=1
+ 
+4y +
+y
+(2 +jxj +jyj)
+ 
+;
+then, we have
+n
+X
+i=1
+g
+i
+(x;y)
+y
+=
+n
+X
+i=1
+ 
+4 +
+1
+(2 +jxj +jyj)
+ 
+  4 =
+n
+X
+i=1
+a
+i
+:
+It follows that the derivative of this function in terms of x is
+n
+X
+i=1
+@g
+i
+(x;y)
+@x
+=
+n
+X
+i=1
+ 
+ y
+(2 +jxj +jyj)
+2
+ 
+  0;
+and in terms of y is
+n
+X
+i=1
+@g
+i
+(x;y)
+@y
+=
+n
+X
+i=1
+ 
+4 +
+2 +x
+(2 +jxj +jyj)
+2
+ 
+  4:5 =
+n
+X
+i=1
+N
+i
+:
+Finally, the function
+n
+X
+i=1
+h
+i
+(x) =
+n
+X
+i=1
+ 
+3x +
+x
+2 + sint
+ 
+;
+and
+n
+X
+i=1
+h
+i
+(x)
+x
+=
+n
+X
+i=1
+ 
+3 +
+1
+2 + sint
+ 
+  3 =
+n
+X
+i=1
+b
+i
+:
+Therefore the derivative in terms of x becomes
+n
+X
+i=1
+@h
+i
+(x)
+@x
+=
+n
+X
+i=1
+ 
+3 +
+1
+2 + sint
+ 
+  4 =
+n
+X
+i=1
+L
+i
+:
+Electronic Journal. http://diffjournal.spbu.ru/ 96Differential Equations and Control Processes, N. 1, 2019
+Then supfh
+0
+i
+(x)g = 4 =
+P
+n
+i=1
+l
+i
+.
+Then we have
+a
+0
+a
+1
+b
+0
+n
+X
+i=1
+a
+i
+ c
+0
+n
+X
+i=1
+l
+i
+= 48  3 = 45> 0:
+Thus all the assumptions (i)  (vi) of Theorem 3.1 are satis ed.
+The following is the second main result of boundedness of solutions for (1.1)
+for p6= 0.
+Theorem 3.2 In addition to the assumptions imposed on the functions that
+appeared in equation (1.1), we have the assumption
+jp(t;x; _ x;  x;x(t r(t)))j q(t);
+where maxfq(t)g < 1 and q 2 L
+1
+(0;1); L
+1
+(0;1) is space of integrable
+Lebesgue functions. Then, there exists a  nite positive constant k such that
+the solution x(t) of equation (1.1) de ned by initial functions
+x(t) = (t); _ x(t) =
+_
+ (t);  x(t) =
+
+ (t)
+satis es the inequalities
+jx(t)j k; j _ x(t)j k;j x(t)j k;
+for all t t
+0
+, where  2C
+2
+([t
+0
+ r;t
+0
+];R).
+Proof.
+Now, if p6= 0, then the equation (1.1) is equivalent to the following system
+_ x =y;
+_ y =z;
+_ z = a(t)f(y)z b(t)
+n
+X
+i=1
+g
+i
+(x;y) +b(t)
+n
+X
+i=1
+Z
+t
+t r
+i
+(t)
+@g
+i
+(x(s);y(s))
+@x
+y(s)ds
++b(t)
+n
+X
+i=1
+Z
+t
+t r
+i
+(t)
+@g
+i
+(x(s);y(s))
+@y
+z(s)ds c(t)
+n
+X
+i=1
+h
+i
+(x)
++c(t)
+n
+X
+i=1
+Z
+t
+t r
+i
+(t)
+h
+0
+i
+(x(s))y(s)ds +p(t;x;y;z;x(t r(t))):
+(3.8)
+From the assumptions (i)  (vi) of Theorem 3.1 and the equation (3.2), we get
+dV (x
+t
+;y
+t
+;z
+t
+)
+dt
+  D
+1
+(y
+2
++z
+2
+) + ( y +z)p(t;x;y;z;x(t r(t)))
+  ( jyj +jzj)jpj
+ D
+3
+(jyj +jzj)q(t);
+Electronic Journal. http://diffjournal.spbu.ru/ 97Differential Equations and Control Processes, N. 1, 2019
+where D
+3
+= min ( ; 1):
+Therefore, we obtain
+dV (x
+t
+;y
+t
+;z
+t
+)
+dt
+ D
+3
+(jyj +jzj)q(t):
+Since by the inequalitiesjyj< 1 +y
+2
+, jzj< 1 +z
+2
+, then we get
+dV (x
+t
+;y
+t
+;z
+t
+)
+dt
+ D
+3
+(2 +y
+2
++z
+2
+)q(t): (3.9)
+From the inequality (3.5), we have y
+2
++z
+2
+ D
+ 1
+2
+V .
+Then the inequality (3.9) becomes
+dV (x
+t
+;y
+t
+;z
+t
+)
+dt
+ D
+3
+(2 +D
+ 1
+2
+V )q(t);
+and by integrating the last inequality from 0 to t, therefore we get
+V (x
+t
+;y
+t
+;z
+t
+) V (x
+0
+;y
+0
+;z
+0
+) + 2D
+3
+Z
+t
+0
+q(s)ds +D
+3
+D
+ 1
+2
+Z
+t
+0
+Vq(s)ds;
+since q(t)2 L
+1
+(0;1) and by using the Gronwall-Reid-Bellman inequality, we
+obtain
+V (x
+t
+;y
+t
+;z
+t
+) 
+ 
+V (x
+0
+;y
+0
+;z
+0
+) + 2D
+3
+Z
+1
+0
+q(s)ds
+ 
+exp
+ 
+D
+3
+D
+ 1
+2
+Z
+1
+0
+q(s)ds
+ 
+=k
+1
+<1;
+for k
+1
+> 0.
+Again, since V (x
+t
+;y
+t
+;z
+t
+) D
+2
+(x
+2
++y
+2
++z
+2
+); by (3.5), then we have
+x
+2
++y
+2
++z
+2
+ D
+ 1
+2
+V D
+ 1
+2
+k
+1
+=K:
+Thus we conclude
+jx(t)j K; j _ x(t)j K; j x(t)j K; for all t t
+0
+:
+Therefore the proof of Theorem 3.2 is now complete.
+Example 3.2. Consider the third-order nonlinear functional differential equa-
+tion as
+...
+x + (4 + sint)( _ x)
+2
+ x +
+ 
+1
+4
++
+1
+t
+3
++ 2
+ 
+n
+X
+i=1
+ 
+3x(t r
+i
+(t)) +
+x(t r
+i
+(t))
+2 + sint
+ 
++
+ 
+2 +
+1
+t
+3
++ 1
+ 
+n
+X
+i=1
+ 
+4 _ x(t r
+i
+(t)) +
+_ x(t r
+i
+(t))
+2 +jx(t r
+i
+(t))j +j _ x(t r
+i
+(t))j
+ 
+=
+1
+4 +t
+2
++x
+2
+(t) +y
+2
+(t) +z
+2
+(t) +x
+2
+(t r(t))
+:
+(3.10)
+Electronic Journal. http://diffjournal.spbu.ru/ 98Differential Equations and Control Processes, N. 1, 2019
+Then, the function
+p =
+1
+4 +t
+2
++x
+2
+(t) +y
+2
+(t) +z
+2
+(t) +x
+2
+(t r(t))
+ 
+1
+4 +t
+2
+=q(t);
+for all t2R
++
+.
+It follows that
+Z
+1
+0
+q(s)ds =
+Z
+1
+0
+1
+4 +s
+2
+ds =
+ 
+4
+<1;
+then q(t)2L
+1
+(0;1).
+Since
+  =
+a
+0
+a
+1
+b
+0
+P
+n
+i=1
+a
+i
++c
+0
+P
+n
+i=1
+l
+i
+2b
+0
+P
+n
+i=1
+a
+i
+=
+51
+16
+;
+then, we obtain
+dV (x
+t
+;y
+t
+;z
+t
+)
+dt
+ D
+3
+(jyj +jzj)
+1
+4 +t
+2
+;
+where D
+3
+= min(
+51
+16
+; 1) = 1.
+Therefore, we get
+dV (x
+t
+;y
+t
+;z
+t
+)
+dt
+ 
+2 +y
+2
++z
+2
+4 +t
+2
+ 
+2
+4 +t
+2
++
+D
+ 1
+2
+V
+4 +t
+2
+:
+By integrating the previous inequality from 0 to t, using the fact that
+1
+4+t
+2
+2L
+1
+(0;1), we have
+V (x
+t
+;y
+t
+;z
+t
+)  (V
+0
++
+ 
+2
+) exp (D
+ 1
+2
+ 
+4
+)<1:
+So, we can conclude the boundrdness of all solutions of the equation (3.10).
+4 Conclusion
+We know that the differential equations of third-order play extremely im-
+portant and useful roles in many scienti c areas such as atomic energy, biology,
+chemistry, control theory, economy, engineering, information theory, mechan-
+ics, medicine, physics, etc. Su cient conditions for stability and boundedness
+of solutions of third-order functional differential equation with multiple delays
+were established. The appropriate Lyapunov functional is used to obtain the
+results. The results of this paper improve and complement existing results in
+the literature.
+Electronic Journal. http://diffjournal.spbu.ru/ 99Differential Equations and Control Processes, N. 1, 2019
+Acknowledgments
+The author is grateful to the anonymous referee(s) and the handling editor
+for their valuable comments and useful suggestions that have improved the
+quality of this work.
+References
+[1] Abou-El-Ela, A. M. A., Sadek, A. I. and Mahmoud, A. M., Stability and
+boundedness of solutions of certain third-order nonlinear delay differential
+equation, ICGST International Journal on Automatic Control and System
+Engineering, 9(1), 9-15, 2009.
+[2] Ademola, A. T. and Arawomo, P. O., Uniform stability and boundedness
+of solutions of nonlinear delay differential equations of third-order, Math.
+J. Okayama Univ., 55, 157-166, 2013.
+[3] Ademola, A. T., Arawomo, P. O., Ogunlaran, O. M. and Oyekan, E. A.,
+Uniform stability, boundedness and asymptotic behaviour of solutions of
+some third-order nonlinear delay differential equations, Differential Equa-
+tions and Control Processes, 4, 43-66, 2013.
+[4] Ademola, A. T., Ogundare, B. S. and Adesina, O. A., Stability, bounded-
+ness, and existence of periodic solutions to certain third-order delay differ-
+ential equations with multiple deviating arguments, International Journal
+of Differential Equations, 2015,1-12.
+[5] Afuwape, A. U. and Omeike, M. O., On the stability and boundedness of
+solutions of a kind of third-order delay differential equations, Appl. Math.
+Comput., 200(1), 444-451, 2008.
+[6] Arino, O., Hbid, M. L. and Dads, E. A., Delay Differential Equations and
+Applications, Springer, P.O. Box 17, 3300 AA Dordrecht, The Netherlands,
+2006.
+[7] Burton, T. A., Voltera Integral and Differential Equations, Academic Press,
+1983.
+[8] Burton, T. A., Stabitity and Periodic Solutions of Ordinary and Functional
+Differential Equations, Academic Press, 1985.
+Electronic Journal. http://diffjournal.spbu.ru/ 100Differential Equations and Control Processes, N. 1, 2019
+[9] Burton, T. A., Asymptotic stability for functional differential equations,
+Acta Math. Hungar, 65, 243-251, 1994.
+[10] Burton, T. A. and Hering, R. H., Lyapunov theory for functional differen-
+tial equations, Rocky Mountain J. Math., 24, 3-17, 1994.
+[11] Deo, S. G. and Raghavendra, V., Ordinary Differential Equations and Sta-
+bility Theory, Tata Mc Graw-Hill Publishing Company Limited New Delhi,
+1980.
+[12] Green, K. and Wagenknechtn, T., Spectra and pseudospectra of neutral
+delay differential equations with application to real-time substructuring,
+Meccanica, Springer Science and Business Media B.V., 45, 249-263, 2010.
+[13] Hale, J. K., Theory of Functional Differential Equations, Springer-Verlag,
+New York, 1977.
+[14] Iannelli, M., Mathematics of Biology, Springer-Verlag Berlin Heidelberg,
+2010.
+[15] Korkmaz, E. and Tun  c, C., Stability and boundedness to certain differen-
+tial equations of fourth-order with multiple delays, Faculty of Science and
+Mathematics of Nis, Serbia, 5(2014), 1049-1058, 2014.
+[16] Korkmaz, E and Tun  c, C., On some qualitative behaviour of certain dif-
+ferential equations of fourth-order with multiple retardations, Journal of
+Applied Analysis and Computation, 6(2), 336-349, 2016.
+[17] Krasovskii, N. N., Stability of Motion, Stanford University Press, 1963.
+[18] Lyapunov, A. M., Stability of Motion, Academic Press, New York, NY,
+USA, 1966.
+[19] Mahmoud, A. M., On the asymptotic stability of solutions for a certain
+non-autonomous third-order delay differential equation, British Journal of
+Mathematics and Computer Science, 16(3), 1-12, 2016.
+[20] Omeike, M. O., Stability and boundedness of solutions of some non-
+autonomous delay differential equations of the third-order, An. Stiint.
+Univ. Al. I. Cuza Iasi. Mat. (N.S), 55(1), 49-58, 2009.
+[21] Omeike, M. O., New results on the stability of solutions of some non-
+autonomous delay differential equations of the third-order, Differential
+Equations and Control Processes, 1, 18-29, 2010.
+Electronic Journal. http://diffjournal.spbu.ru/ 101Differential Equations and Control Processes, N. 1, 2019
+[22] Omeike, M. O., Stability and boundedness of solutions of a certain system
+of third-order nonlinear delay differential equations, Acta Univ. Palacki.
+Olomuc., Fac. rer. nat., Mathematica, 54(1), 109-119, 2015.
+[23] Remili, M. and Beldjerd, D., On the asymptotic behavior of the solutions of
+third-order delay differential equations, Rend. Circ. Mat. Palermo, 63(3),
+447-455, 2014.
+[24] Remili, M. and Oudjedi, L. D., Stability and boundedness of the solutions
+of non autonomous third-order differential equations with delay, Agta Univ.
+Palacki. Olomuc., Fac. rer. nat., Mathematica, 53(2), 139-147, 2014.
+[25] Remili, M. and Oudjedi, L. D., Uniform ultimate boundedness and asymp-
+totic behaviour of third-order nonlinear delay differential equation, African
+Mathematical, Springer-Verlag, Berlin, Heidelberg, 27, 1227-1237, 2016.
+[26] Remili, M. and Oudjedi, L. D., Boundedness and stability in third-
+order nonlinear differential equations with multiple deviating arguments,
+Archivum Mathematicum (BRNO), 52(2), 79-90, 2016.
+[27] Remili, M., Oudjedi, L. D. and Beldjerd, D., Stability and ultimate bound-
+edness of solutions of some third-order differential equation with delay,
+Journal of the Association of Arab Universities for Basic and Applied Sci-
+ences, 23, 90-95, 2017.
+[28] Sadek, A. I., Stability and boundedness of kind of third-order delay differ-
+ential equations, Appl. Math. Lett., 16(5), 657-662, 2003.
+[29] Sadek, A. I., On the stability of solutions of certain fourth-order delay
+differential equations, Appl. Math. comput., 148, 587-597, 2004.
+[30] Sadek, A. I., On the stability of solutions of some non-autonomous delay
+differential equations of the third-order, Asymptotic Anal., 43, 1-7, 2005.
+[31] Smith, H., An Introduction to Delay Differential Equations with Sciences
+Applications to the Life Sciences, Springer Science and Business Media,
+LLC., 2011.
+[32] Tun  c, C., New results about stability and boundedness of solutions of cer-
+tain nonlinear third-order delay differential equations, Arab. J. Sci. Eng.,
+31(2), 185-196, 2006.
+Electronic Journal. http://diffjournal.spbu.ru/ 102Differential Equations and Control Processes, N. 1, 2019
+[33] Tun  c, C., Stability and boundedness of solutions of nonlinear differential
+equations of third-order with delay, Differential Equations and Control Pro-
+cesses, 3, 1-13, 2007.
+[34] Tun  c, C., On the stability and boundedness of solutions to third-order
+nonlinear differential equations with retarded argument, J. Nonlinear Dyn.,
+57, 97-106, 2009.
+[35] Tun  c, C., Some stability and boundedness conditions for non-autonomous
+differential equations with deviating arguments, Elect. J. Qual. Theory
+Diff. Eqs., 1, 1-12, 2010.
+[36] Tun  c, C., Stability and boundedness of the nonlinear differential equations
+with multiple deviating arguments, African Mathematical, 24, 381-390,
+2013.
+[37] Tun  c, C., Stability and boundedness in differential systems of third-order
+with variable delay, Proyecciones Journal of Mathematics, 35(3), 317-338,
+2016.
+[38] Tun  c, C. and G ozen, M., Stability and uniform boundedness in multidelay
+functional differential equations of third-order, Abstr. Appl. Anal., 2013,
+1-7.
+[39] Yang, K., Delay Differential Equations with Applications in Population
+Dynamics, Academic Press, 1993.
+[40] Yoshizawa, T., Stability Theory by Liapunov's Second Method, The Math-
+ematical Society of Japan, 1966.
+[41] Zhu, Y., On stability, boundedness and existence of periodic solutions of a
+kind of third-order nonlinear delay differential system, Ann. of Diff. Eqs.,
+8(2), 249-259, 1992.
+Electronic Journal. http://diffjournal.spbu.ru/ 103
