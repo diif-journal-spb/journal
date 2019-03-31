@@ -1,0 +1,6044 @@
+﻿dx
+dt
+✻
+✛
+✲
+❄
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 1, 2019
+Electronic Journal,
+reg. N ΦC77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Delay differential equations
+New Conditions on the Solutions of a Certain Third Order Delay
+Differential Equations with Multiple Deviating Arguments
+Ademola, A. T.
+1
+, Moyo, S.
+2
+, Ogundare, B. S.
+1
+, Ogundiran, M. O.
+1
+, Adesina,
+O. A.
+1
+1
+Research Group in Differential Equations and Applications (RGDEA)
+Department of Mathematics, Obafemi Awolowo University
+Post Code 220005 Ile-Ife, Nigeria
+2
+Institute for Systems Science &Research and Postgraduate Support
+Directorate
+Durban University of Technology, Durban 4000, South Africa.
+e-mail:
+1
+atademola@oauife.edu.ng,
+2
+moyos@dut.ac.za,
+1
+bogunda@oauife.edu.ng,
+1
+mogundiran@oauife.edu.ng,
+1
+oadesina@oauife.edu.ng
+Abstract
+In this work a class of third order delay differential equations (where the non-
+linear functions, especially the ﬁrst two restoring terms, are sum of multiple
+deviating arguments and the forcing term simultaneously depend explicitly on
+the independent variable t for all i, the last restoring term has variable coeﬃ-
+cient and deviating arguments τ
+i
+(t) vary for all i) is considered.
+By employing the direct technique of Lyapunov, where a complete Lya-
+punov functional is constructed and used, we obtain suﬃcient conditions that
+guarantee the existence of solutions which are periodic, uniformly asymptot-
+ically stable, uniformly ultimately bounded. The behaviour of solutions as t
+tends to inﬁnity is studied. The obtained results are new and include manyDifferential Equations and Control Processes, N. 1, 2019
+recent results in the literature. Finally, two examples are given to show the
+feasibility of our results.
+Keywords: Thirdorder,nonlineardifferentialequation,uniformstability,uni-
+form ultimate boundedness, periodic solutions
+1 Introduction
+Functional or delay differential equation is one of the major branches of differ-
+ential equations because it generalizes most of the classical equations such as
+ordinary differential equations, difference differential equations, integral equa-
+tions and integro-differential equations. Accordingly, much attention has been
+devoted to the study of delay differential equations. See for instance Bur-
+ton [16, 17], Driver [18], Hale [20], Lakshmikantham et al. [21], Yoshizawa
+[41, 42, 43] which contain basic background to the study. In a wide variety of
+problems involving non linear delay differential equations of higher order, it is
+essential to establish conditions on the solutions that are periodic, stable and
+bounded. Third order nonlinear differential equations with and without delay
+have attractedand still attractingthe attentionof many researchers because of
+their importance in real world situations. We can mention for instance the pa-
+persofAdemolaet al. [1]-[13],Adesina[14],AfuwapeandOmeike[15],Olutimo
+and Adams [22], Graef and Tun¸ c [19],Omeike [23, 24], Remili et al. [25, 26],
+Tun¸ c [28]-[36], Tun¸ c and Erg¨ oren [37], Tun¸ c and G¨ ozen [38], Tun¸ c and Mo-
+hammed [39], Yao and Wang [40], Zhu [44]. In this regard, these cited papers
+and their references contain outstandingresults on the qualitativebehaviour of
+solutions of considered differential equations.
+In an interesting contribution, Tun¸ c [33] discussed the asymptotic stability
+and boundedness of solutions to a kind of nonlinear third order differential
+equations with retarded arguments:
+x
+′′′
+(t)+h(x(t),x
+′
+(t),x
+′′
+(t),x(t−τ(t)),x
+′
+(t−τ(t)),x
+′′
+(t−τ(t)))x
+′′
++g(x(t−τ(t)),x
+′
+(t−τ(t)))+f(x(t−τ(t)))
+=p(t,x(t),x
+′
+(t),x(t−τ(t)),x
+′
+(t−τ(t)),x
+′′
+(t))).
+Tun¸ c and Erg¨ oren [37] studied the third order delay equations with multiple
+deviating arguments
+x
+′′′
+(t)+f
+1
+(t,x(t))x
+′′
+(t)+f
+2
+(t,x(t))x
+′
++g
+0
+(t,x(t))+
+n
+X
+i=1
+g
+i
+(t,x(t−τ
+i
+(t)))=p(t)
+Electronic Journal. http://diffjournal.spbu.ru/ 34Differential Equations and Control Processes, N. 1, 2019
+and obtained conditions that guarantee the existence of solutions that are uni-
+formly bounded.
+Another contribution worthy of mentioning is the work of Remili and Oud-
+jedi [25] which dwells on the stability and boundedness of the solutions of non
+autonomous third order delay differential equation of form
+[g(x(t))x
+′
+(t)]
+′′
++a(t)x
+′′
+(t)+b(t)x
+′
++c(t)f(x(t−τ)) =p(t),
+where τ is a constant. Recently, Ademola et al. [12] established criteria for
+stability, boundedness and existence of periodic solutions to third order delay
+differential equations with multiple deviating arguments:
+x
+′′′
+(t)+
+n
+X
+i=1
+f
+i
+(t,x(t),x(t−τ
+i
+(t)),x
+′
+(t),x
+′
+(t−τ
+i
+(t)),x
+′′
+(t),x
+′′
+(t−τ
+i
+(t)))
++
+n
+X
+i=1
+g
+i
+(x
+′
+(t−τ
+i
+(t)))+
+n
+X
+i=1
+h
+i
+(x(t−τ
+i
+(t)))
+=
+n
+X
+i=1
+p
+i
+(t,x(t),x(t−τ
+i
+(t)),x
+′
+(t),x
+′
+(t−τ
+i
+(t)),x
+′′
+(t),x
+′′
+(t−τ
+i
+(t))).
+However,theproblemofuniformasymptoticstability,uniformultimatebound-
+ednessandexistenceofauniqueperiodicsolutionforthenonautonomousthird
+order delay differential equation (1.1) (where the nonlinear functions are sum
+of multiple deviating arguments, the functions f
+i
+, g
+i
+, p
+i
+simultaneously depend
+explicitly on the independent variable t for all i, h
+i
+has variable coeﬃcient and
+τ
+i
+(t) varies for all i) is yet to be explored. Regardless of the diﬃculties asso-
+ciated with the construction of a suitable complete Lyapunov functional, the
+aim of this paper therefore is to ﬁll these vacuums. In effect,we will discuss the
+equation
+x
+′′′
+(t)+
+n
+X
+i=1
+f
+i
+(·)+
+n
+X
+i=1
+g
+i
+(t,x(t),x(t−τ
+i
+(t)),x
+′
+(t),x
+′
+(t−τ
+i
+(t)))
++φ(t)
+n
+X
+i=1
+h
+i
+(x(t−τ
+i
+(t)))=
+n
+X
+i=1
+p
+i
+(·),
+(1.1)
+where
+f
+i
+(·) =f
+i
+(t,x(t),x(t−τ
+i
+(t)),x
+′
+(t),x
+′
+(t−τ
+i
+(t)),x
+′′
+(t),x
+′′
+(t−τ
+i
+(t)))
+and
+p
+i
+(·) =p
+i
+(t,x(t),x(t−τ
+i
+(t)),x
+′
+(t),x
+′
+(t−τ
+i
+(t)),x
+′′
+(t),x
+′′
+(t−τ
+i
+(t)))
+Electronic Journal. http://diffjournal.spbu.ru/ 35Differential Equations and Control Processes, N. 1, 2019
+with the equivalent system
+x
+′
+(t) = y(t),
+y
+′
+(t) = z(t)
+z
+′
+(t) =
+n
+X
+i=1
+p
+i
+(t,x(t),x(t−τ
+i
+(t)),y(t),y(t−τ
+i
+(t)),z(t),z(t−τ
+i
+(t)))
+−
+n
+X
+i=1
+f
+i
+(t,x(t),x(t−τ
+i
+(t)),y(t),y(t−τ
+i
+(t)),z(t),z(t−τ
+i
+(t)))
+−
+n
+X
+i=1
+g
+i
+(t,x(t),x(t−τ
+i
+(t)),y(t),y(t−τ
+i
+(t)))−φ(t)
+n
+X
+i=1
+h
+i
+(x(t))
++φ(t)
+Z
+t
+t−τ
+i
+(t)
+n
+X
+i=1
+h
+′
+i
+(x(s))y(s)ds,
+(1.2)
+where the functions f
+i
+,g
+i
+,h
+i
+,φ and p
+i
+in their respective arguments on R
++
+×
+R
+3n+3
+, R
++
+×R
+2n+2
+, R
+n
+, R
++
+and R
++
+×R
+3n+3
+respectively with R
++
+= [0,∞),
+R = (−∞,∞), n ∈N ﬁnite and 0 ≤ τ
+i
+(t) ≤ γ, γ > 0 being a constant whose
+value willbe establishedlater. Continuityof these functions is suﬃcientfor the
+existenceofthesolutionsofequation(1.1). Furthermore,itisassumedthatthe
+functions f, g and p in the equation (1.1) satisfy a Lipschitz condition in their
+respective arguments. The primes stand for differentiation with respect to the
+independent variable t and the derivatives h
+′
+i
+and φ
+′
+exist and continuous for
+all t≥ 0,x with h
+i
+(0)= 0.
+This work is motivated by the recent works in [7, 12, 13, 22, 25, 26] and
+[38]. The obtained results are new and include many existing results in the
+literature. Despitetheattentionthathasbeengiventothethirdordernonlinear
+differential equation with deviating arguments, we are yet to come across a
+situation where the unknown functions f
+i
+, g
+i
+and p
+i
+depend explicitly on the
+independent variable t, the function h
+i
+has variable coeﬃcient and τ
+i
+(t) varies
+foralli,(i = 1,2,··· ,n).Thisisourprincipalcontribution. Inthenextsection,
+we give basic preliminary results used in this work. The main results of the
+paper are stated and proved in Section 3. Examples and discussions are given
+in Section 4 while Section 5 is dedicated to conclusion of this work.
+Electronic Journal. http://diffjournal.spbu.ru/ 36Differential Equations and Control Processes, N. 1, 2019
+2 Preliminary Results
+Consider the following general nonlinear non-autonomous delay differential
+equation
+˙
+X =
+dX
+dt
+=F(t,X
+t
+), X
+t
+=X(t+θ), −r≤θ < 0, t≥ 0, (2.1)
+whereF :R
++
+×C
+H
+→R
+n
+is a continuousmapping,F(t+ω,φ) =F(t,φ) for all
+φ∈C andforsomepositiveconstantω.WeassumethatF takesclosedbounded
+setsintoboundedsetsinR
+n
+.(C,k·k)istheBanachspaceofcontinuousfunction
+ϕ : [−r,0]→R
+n
+with supremum norm, r > 0; for H > 0, we deﬁne C
+H
+⊂C by
+C
+H
+={ϕ∈C :kϕk<H,} C
+H
+is the open H−ball in C, C =C([−r,0],R
+n
+).
+Deﬁnition2.1. (See[20]). SupposethatF(t,0)= 0forallt∈ R.Thesolution
+X
+t
+= 0 is said to be stable for any t
+0
+∈ R, ǫ > 0, there is a δ = δ(ǫ,t
+0
+) such
+that ||φ||
+r
+< δ implies ||X
+t
+(t;t
+0
+,φ)|| < ǫ for t ≥ t
+0
+−r. The solution X
+t
+= 0 of
+(2.1) is uniformly stable on (t
+0
+,∞) if it is stable at each t
+0
+and the number δ is
+independent of t
+0
+(i.e δ(ǫ) depends only on ǫ).
+Deﬁnition 2.2. (See [20]). The solution X
+t
+= 0 of (2.1) is said to be asymp-
+totically stable at t
+0
+if it is stable at t
+0
+then there exists number δ
+1
+=δ
+1
+(t
+0
+)> 0
+such that whenever ||φ||
+r
+<δ
+1
+,
+lim
+t→∞
+X
+t
+(t;t
+0
+,φ)= 0.
+The solutionX
+t
+= 0 of (2.1)is uniformly asymptotically stable if it is uniformly
+stable and furthermore, there exits δ
+1
+> 0 (independent of t
+0
+) such that for
+each t
+0
+and ||φ||
+r
+<δ
+1
+,
+X
+t
+(t;t
+0
+,φ)→ 0
+as t→∞.
+Deﬁnition 2.3. (See [21]). A solution of (2.1) is bounded if there is an M =
+M(t
+0
+,φ)> 0 such that
+kX
+t
+(t;t
+0
+,φ)k<M
+for all t≥t
+0
+−r.
+Deﬁnition 2.4. (See [21]). The solutions of (2.1) are uniformly bounded if the
+M in Deﬁnition 2.3 is independent of t
+0
+.
+Electronic Journal. http://diffjournal.spbu.ru/ 37Differential Equations and Control Processes, N. 1, 2019
+Deﬁnition 2.5. (See [21]). The solutions of (2.1) are ultimately bounded for
+bound M, if there exist an M > 0 and a T = T(t
+0
+,φ) > 0 such that for every
+solution X
+t
+(t
+0
+,φ) of (2.1)
+kX
+t
+(t;t
+0
+,φ)k<M
+for all t≥t
+0
++T.
+Deﬁnition 2.6. (See [21]). The solutions of (2.1) are uniformly ultimately
+bounded for bound M, if the T in Deﬁnition 2.5 is independent of t
+0
+.
+Deﬁnition 2.7. (See [17]). A continuous functionW :R
++
+→R
++
+withW(0)=
+0, W(s)> 0 if s6= 0, and W strictly increasing is a wedge. (We denote wedges
+by W or W
+i
+, where i is an integer).
+Lemma 2.1. (See [42]). Suppose that F(t,φ) ∈ C
+0
+(φ) and F(t,φ) is periodic
+int ofperiodω,ω ≥r and consequentlyforanyα> 0 there exists anL(α)> 0
+suchthatφ∈C
+α
+implies|F(t,φ)|≤L(α).SupposethatacontinuousLyapunov
+functionalV(t,φ) exists, deﬁned on t∈R
++
+, φ∈S
+∗
+, S
+∗
+is the set of φ∈C such
+that with |φ(0)|≥H (H may be large) and that V(t,φ) satisﬁes the following
+conditions:
+(i) a(|φ(0)|)≤ V(t,φ)≤b(kφk), where a(r) and b(r) are continuous, increas-
+ing and positive for r≥H and a(r)→∞ as r→∞;
+(ii)
+˙
+V
+(2.1)
+(t,φ)≤−c(|φ(0)|), where c(r) is continuous and positive for r≥H.
+Suppose that there exists an H
+1
+> 0, H
+1
+>H, such that
+hL(γ
+∗
+)<H
+1
+−H, (2.2)
+where γ
+∗
+> 0 is a constant which is determined in the following way: By the
+conditiononV(t,φ)thereexistα> 0,β > 0andγ > 0suchthatb(H
+1
+)≤a(α),
+b(α) ≤ a(β) and b(β) ≤ a(γ). γ
+∗
+is deﬁned by b(γ) ≤ a(γ
+∗
+). Under the above
+conditions, there exists a periodic solution of (2.1) of period ω. In particular,
+the relation (2.2) can always be satisﬁed if h is suﬃciently small.
+Lemma 2.2. (See [42]). Suppose that F(t,φ) is deﬁned and continuous on
+0 ≤ t ≤ c, φ ∈ C
+H
+and that there exists a continuous Lyapunov functional
+V(t,φ,ϕ)deﬁnedon0≤t≤c,φ,ϕ∈C
+H
+whichsatisfythefollowingconditions:
+(i) V(t,φ,ϕ)= 0 if φ =ϕ;
+(ii) V(t,φ,ϕ)> 0 if φ6=ϕ;
+Electronic Journal. http://diffjournal.spbu.ru/ 38Differential Equations and Control Processes, N. 1, 2019
+(iii) for the associated system
+˙ x(t) =F(t,x
+t
+), ˙ y(t)=F(t,y
+t
+) (2.3)
+we have V
+′
+(2.3)
+(t,φ,ϕ)≤ 0, where for kφk =H or kϕk =H, we understand
+that the condition V
+′
+(2.3)
+(t,φ,ϕ) ≤ 0 is satisﬁed in the case V
+′
+can be
+deﬁned.
+Then, for given initial value φ∈C
+H
+1
+, H
+1
+<H, there exists a unique solution of
+(2.1).
+Lemma2.3. (See[42]). SupposethatacontinuousLyapunovfunctionalV(t,φ)
+exists, deﬁned on t ∈R
++
+, kφk < H, 0 < H
+1
+< H which satisﬁes the following
+conditions:
+(i) a(kφk)≤V(t,φ)≤b(kφk), where a(r) and b(r) are continuous, increasing
+and positive,
+(ii)
+˙
+V
+(2.1)
+(t,φ)≤−c(kφk), where c(r) is continuous and positive for r≥ 0,
+then the zero solution of (2.1) is uniformly asymptotically stable.
+Lemma 2.4. (See [16]). Let V : R
++
+× C → R be continuous and locally
+Lipschitz in φ. If
+(i) W
+0
+(|X
+t
+|)≤V(t,X
+t
+)≤W
+1
+(|X
+t
+|)+W
+2
+ 
+t
+R
+t−r(t)
+W
+3
+(X
+t
+(s))ds
+ 
+and
+(ii)
+˙
+V
+(2.1)
+(t,X
+t
+)≤−W
+4
+(|X
+t
+|)+N,forsomeN > 0whereW
+i
+(i= 0,1,2,3,4)
+are wedges.
+Then X
+t
+of (2.1) is uniformly bounded and uniformly ultimately bounded for
+bound M.
+3 Main Results
+We shall give the following notations before we state our main results. Let
+x(t)=x,y(t) =y, z(t) =z,
+n
+P
+i=1
+f
+i
+(t,x(t),x(t−τ
+i
+(t)),y(t),y(t−τ
+i
+(t)),z(t),z(t−
+τ
+i
+(t))) =
+n
+P
+i=1
+f
+i
+(·),
+n
+P
+i=1
+g
+i
+(t,x(t),x(t− τ
+i
+(t)),x
+′
+(t),x
+′
+(t− τ
+i
+(t))) =
+n
+P
+i=1
+g
+i
+(·) and
+n
+P
+i=1
+p
+i
+(t,x(t),x(t − τ
+i
+(t)),y(t),y(t − τ
+i
+(t)),z(t),z(t − τ
+i
+(t))) =
+n
+P
+i=1
+p
+i
+(·). Let
+Electronic Journal. http://diffjournal.spbu.ru/ 39Differential Equations and Control Processes, N. 1, 2019
+(x
+t
+,y
+t
+,z
+t
+) be any solution of system (1.2), the continuously differentiable func-
+tional employed in the proof of our results is V = V(t,x
+t
+,y
+t
+,z
+t
+) deﬁned as
+follows
+2V = 2φ(t)
+ 
+α+
+n
+X
+i=1
+a
+i
+ Z
+x
+0
+n
+X
+i=1
+h
+i
+(ξ)dξ+4φ(t)y
+n
+X
+i=1
+h
+i
+(x)+2
+ 
+α+
+n
+X
+i=1
+a
+i
+ 
+yz
++2z
+2
++
+ 
+α
+2
++β +
+n
+X
+i=1
+a
+2
+i
++2
+n
+X
+i=1
+b
+i
+ 
+y
+2
++β
+n
+X
+i=1
+b
+i
+x
+2
++2β
+n
+X
+i=1
+a
+i
+xy+2βxz
++
+Z
+0
+−τ
+i
+(t)
+Z
+t
+t+s
+ 
+λ
+1
+y
+2
+(θ)+λ
+2
+z
+2
+(θ)
+ 
+dθds,
+(3.1)
+where α and β are positive constants satisfying the following inequalities
+φ
+1
+ 
+n
+X
+i=1
+b
+i
+ 
+−1
+n
+X
+i=1
+c
+i
+≤α≤
+n
+X
+i=1
+a
+i
+; (3.2)
+0<β < min
+ 
+n
+X
+i=1
+b
+i
+,
+ 
+α
+n
+X
+i=1
+b
+i
+−φ
+1
+n
+X
+i=1
+c
+i
+ 
+A
+−1
+1
+,
+ 
+n
+X
+i=1
+a
+i
+−α
+ 
+A
+−1
+2
+ 
+; (3.3)
+with
+A
+1
+:=2
+ 
+1+
+n
+X
+i=1
+a
+i
++φ
+−1
+0
+ 
+n
+X
+i=1
+δ
+i
+ 
+−1
+ 
+n
+X
+i=1
+g
+i
+(·)
+y
+−
+n
+X
+i=1
+b
+i
+ 
+2
+ 
+;
+A
+2
+:=4
+ 
+1+φ
+−1
+0
+ 
+n
+X
+i=1
+δ
+i
+ 
+−1
+ 
+n
+X
+i=1
+f
+i
+(·)
+z
+−
+n
+X
+i=1
+a
+i
+ 
+2
+ 
+and λ
+1
+and λ
+2
+are nonnegative constants which will be determined later.
+Remark 3.1. The following remarks hold for the continuously differentiable
+functional (3.1):
+(i) if φ(t)h
+i
+(x) = h
+i
+(x) and g
+i
+(·) = g
+i
+(y) then the functional (3.1) reduces to
+that used in [12];
+(ii) whenever α
+2
+=α,
+n
+P
+i=1
+a
+i
+=a, the functional V in equation (3.1) specializes
+to the functional V deﬁned in [7]; and
+(iii) when α
+2
+= α,
+n
+P
+i=1
+a
+i
+= a,
+n
+P
+i=1
+b
+i
+= b,
+n
+P
+i=1
+c
+i
+= c and
+n
+P
+i=1
+δ
+i
+= δ, the functional
+V in equation (3.1) specializes to that used in [2] and [3].
+Electronic Journal. http://diffjournal.spbu.ru/ 40Differential Equations and Control Processes, N. 1, 2019
+Thus the functional V deﬁned in equation (3.1) is an improvement on the one
+used in [2, 3, 7] and [12].
+In what follows we state the main results and give their proofs.
+Theorem3.1. In addition to the basic assumptions on the functionsf
+i
+,g
+i
+,h
+i
+,φ
+and p
+i
+i = 1,2,··· ,n, suppose that a
+i
+,b
+i
+,c
+i
+,δ
+i
+,ǫ,β
+0
+,M
+i
+,φ
+0
+,φ
+1
+and γ are positive con-
+stants such that
+(i) φ
+0
+≤φ(t)≤φ
+1
+and |φ
+′
+(t)|<ǫ for all t≥ 0;
+(ii) a
+i
+≤f
+i
+(·)/z for allt≥ 0,x,y,z6= 0, x(t−τ
+i
+(t)),y(t−τ
+i
+(t)) and z(t−τ
+i
+(t));
+(iii) b
+i
+≤g
+i
+(·)/y for all t≥ 0,x,y6= 0, x(t−τ
+i
+(t)) and y(t−τ
+i
+(t));
+(iv) h
+i
+(0)= 0, δ
+i
+≤h
+i
+(x)/x≤c
+i
+for all t≥ 0 and x6= 0, and φ
+1
+c
+i
+≤a
+i
+b
+i
+;
+(v) τ
+i
+(t)≤γ, τ
+′
+i
+(t)≤β
+0
+β
+0
+∈ (0,1) where
+γ < min
+(
+ 
+φ
+1
+n
+X
+i=1
+c
+i
+ 
+−1
+A
+3
+, A
+4
+·A
+5
+, A
+6
+)
+(3.4)
+where
+A
+3
+=βφ
+0
+n
+X
+i=1
+δ
+i
+−2ǫ
+n
+X
+i=1
+c
+i
+ 
+1+α+
+n
+X
+i=1
+a
+i
+ 
+A
+4
+=
+ 
+n
+X
+i=1
+a
+i
+n
+X
+i=1
+b
+i
+−φ
+1
+n
+X
+i=1
+c
+i
+−2ǫ
+n
+X
+i=1
+c
+i
+(1+α+
+n
+X
+i=1
+a
+i
+)
+ 
+A
+5
+=
+(
+ 
+α+
+n
+X
+i=1
+a
+i
++(1−β
+0
+)
+−1
+(2+α+β +
+n
+X
+i=1
+a
+i
+)
+ 
+φ
+1
+n
+X
+i=1
+c
+i
+)
+−1
+,
+A
+6
+=
+ 
+n
+X
+i=1
+a
+i
+−α
+  
+4φ
+1
+n
+X
+i=1
+c
+i
+ 
+−1
+; and
+(vi) |p
+i
+(·)|≤M
+i
+, for all t≥ 0,x,y,z, x(t−τ
+i
+(t)),y(t−τ
+i
+(t)) and z(t−τ
+i
+(t)).
+Then the solution (x
+t
+,y
+t
+,z
+t
+) of system (1.2) is uniformly bounded and uniformly
+ultimately bounded.
+Remark 3.2. We observed the following:
+Electronic Journal. http://diffjournal.spbu.ru/ 41Differential Equations and Control Processes, N. 1, 2019
+(i) If f
+i
+(·) = a¨ x, g
+i
+(·) = b˙ x, φ(t)h
+i
+(x(t−τ
+i
+(t))) = cx and p
+i
+(·) = 0, then the
+equation (1.1) reduces to a linear constant coeﬃcients third order differen-
+tial equation
+x
+′′′
++ax
+′′
++bx
+′
++cx = 0,
+and hypotheses (i) to (vi) of Theorem 3.1 reduce to Routh Hurwitz criteria
+a > 0,b > 0,ab > c and c > 0 for asymptotic stability for third order
+differential equation.
+(ii) When i = 1, we have f
+1
+(·) = h(·), g
+1
+(·) = g(·) and φ(t)h
+1
+(x(t−τ
+1
+(t))) =
+f(x(t−τ(t))) where h(·), g(·) and h(·) are independent of t, then the equa-
+tion (1.1) becomes the case discussed in [31].
+(iii) Whenever i = 1, we have f
+1
+(·) = ϕ(x,x
+′
+)x
+′′
+, g
+1
+(·) = g(x
+′
+(t − τ(t))),
+φ(t)h
+1
+(x(t − τ
+1
+(t))) = f(x(t − τ(t))) and p
+i
+(·) = p(t,x,x
+′
+,x
+′′
+) with
+0≤τ
+1
+≤γ, then (1.1) is a special case discussed in [24].
+(iv) If i = 1, we have f
+1
+(·) = a(t)x
+′′
+, g
+1
+(·) = b(t)g
+1
+(x
+′
+(t − τ)) + g
+2
+(x
+′
+),
+φ(t)h
+1
+(x(t−τ
+1
+(t))) = h(x(t−τ)) and p
+i
+(·) = p(t,x,x((t−τ)),x
+′
+,x
+′
+((t−
+τ)),x
+′′
+) then the equation (1.1) is a special case considered in [33].
+(v) whenever i = 1, so that τ
+1
+(t) = τ(t), f
+1
+(·) = a(t)h(x(t),x
+′
+(t))x
+′′
+,
+g
+1
+(·) = g(x
+′
+(t − τ(t))), φ(t)h
+1
+(x(t − τ
+1
+(t))) = c(t)f(x(t − τ(t))) and
+p
+i
+(·) = p(t,x,x((t− τ)),x
+′
+,x
+′
+((t− τ)),x
+′′
+) then the equation (1.1) is a
+special case of the recent work discussed in [22].
+(vi) When the nonlinear functions g and h are independent of the independent
+variable t, then the equation (1.1) is a case discussed in [12].
+Hence, Theorem 3.1 includes and extends the results in [2]-[15], [22]-[40] and
+the references cited therein.
+Next, we will state and prove a result that would be useful in the proof of
+Theorem 3.1 and the succeeding ones.
+Lemma3.1. UndertheassumptionsofTheorem3.1, thereexistconstantsD
+0
+=
+D
+0
+(α,β,a
+i
+,b
+i
+,c
+i
+,
+δ
+i
+,φ
+0
+,φ
+1
+) > 0, D
+1
+= D
+1
+(α,β,φ
+1
+,a
+i
+,b
+i
+,c
+i
+) > 0 and D
+2
+= D
+2
+(λ
+1
+,λ
+2
+) > 0 such
+that
+D
+0
+(x
+2
+(t)+y
+2
+(t)+z
+2
+(t))≤V(t,x
+t
+,y
+t
+,z
+t
+)≤D
+1
+(x
+2
+(t)+y
+2
+(t)+z
+2
+(t))
++D
+2
+Z
+0
+τ
+i
+(t)
+Z
+t
+t+s
+(y
+2
+(θ)+z
+2
+(θ))dθds
+(3.5)
+Electronic Journal. http://diffjournal.spbu.ru/ 42Differential Equations and Control Processes, N. 1, 2019
+for all t ≥ 0, x, y and z. In addition, there exist constants D
+3
+=
+D
+3
+(α,β,β
+0
+,γ,δ
+i
+,ǫ,γ,a
+i
+,b
+i
+,c
+i
+,φ
+0
+,
+φ
+1
+,M
+i
+)> 0 and D
+4
+=D
+4
+(2,α,β,a
+i
+,M
+1
+)> 0 such that
+V
+′
+(1.2)
+≤−D
+3
+(x
+2
+(t)+y
+2
+(t)+z
+2
+(t))+D
+4
+, (3.6)
+for all t≥ 0, x, y and z.
+Proof. Let (x
+t
+,y
+t
+,z
+t
+) be any solution of system (1.2). Setting x
+t
+=y
+t
+=z
+t
+= 0
+in equation (3.1), we ﬁnd that
+V(t,0,0,0)= 0
+for all t ≥ 0. Also, from hypothesis (iv) of Theorem 3.1, h
+i
+(0) = 0, it follows
+that the functional V deﬁned in the equation (3.1) can be written in the form
+V =φ(t)
+ 
+n
+X
+i=1
+b
+i
+ 
+−1
+Z
+x
+0
+  
+α
+n
+X
+i=1
+b
+i
++
+n
+X
+i=1
+a
+i
+n
+X
+i=1
+b
+i
+ 
+−2φ(t)
+n
+X
+i=1
+h
+′
+i
+(ξ)
+ 
+n
+X
+i=1
+h
+i
+(ξ)dξ+
+ 
+n
+X
+i=1
+b
+i
+ 
+−1
+ 
+φ(t)
+n
+X
+i=1
+h
+i
+(x)+
+n
+X
+i=1
+b
+i
+y
+ 
+2
++
+1
+2
+ 
+βx+
+n
+X
+i=1
+a
+i
+y+z
+ 
+2
++
+1
+2
+(αy+z)
+2
++
+1
+2
+βy
+2
++
+1
+2
+β
+ 
+n
+X
+i=1
+b
+i
+−β
+ 
+x
+2
++
+1
+2
+Z
+0
+−τ
+i
+(t)
+Z
+t
+t+s
+ 
+λ
+1
+y
+2
+(θ)+λ
+2
+z
+2
+(θ)
+ 
+dθds.
+(3.7)
+Applying assumptions (i), (iv), the inequalities (3.2), (3.3) and the positivity
+of the double integrals in equation (3.7), there exists a positive constant K
+0
+=
+K
+0
+(α,β,δ,φ
+0
+,φ
+1
+,δ
+i
+,a
+i
+,b
+i
+,c
+i
+) such that
+V ≥K
+0
+(x
+2
++y
+2
++z
+2
+) (3.8)
+for all t ≥ 0, x, y and z. We have the following conclusions emanating from
+inequality (3.8):
+(i) Inequality(3.8)establishesthelowerinequalityin(3.5)withK
+0
+equivalent
+to D
+0
+;
+(ii) It is clear from the inequality (3.8) that
+V(t,x
+t
+,y
+t
+,z
+t
+) = 0 if and only if x
+2
++y
+2
++z
+2
+= 0; (3.9)
+V(t,x
+t
+,y
+t
+,z
+t
+)> 0 if and only if x
+2
++y
+2
++z
+2
+6= 0; and (3.10)
+V(t,x
+t
+,y
+t
+,z
+t
+)→ +∞ as x
+2
++y
+2
++z
+2
+→∞. (3.11)
+Electronic Journal. http://diffjournal.spbu.ru/ 43Differential Equations and Control Processes, N. 1, 2019
+Furthermore, φ(t) ≤ φ
+1
+for all t ≥ 0, h
+i
+(x)/x ≤ c
+i
+for all x 6= 0, and from the
+inequality 2mn≤ m
+2
++n
+2
+for all m,n∈R, it follows from (3.1), the existence
+of positive constants K
+1
+and K
+2
+such that
+V ≤K
+1
+(x
+2
++y
+2
++z
+2
+)+K
+2
+Z
+0
+−τ
+i
+(t)
+Z
+t
+t+s
+(y
+2
+(θ)+z
+2
+(θ))dθds (3.12)
+for all t≥ 0,x,y and z, where
+K
+1
+:=
+1
+2
+max
+(
+2
+ 
+1+α+
+n
+X
+i=1
+a
+i
+ 
+φ
+1
+n
+X
+i=1
+c
+i
++β
+ 
+1+
+n
+X
+i=1
+a
+i
++
+n
+X
+i=1
+b
+i
+ 
+,
+2
+ 
+n
+X
+i=1
+b
+i
++φ
+1
+n
+X
+i=1
+c
+i
+ 
++α(1+α)+
+ 
+1+
+n
+X
+i=1
+a
+i
+  
+β +
+n
+X
+i=1
+a
+i
+ 
+,
+2+α+β +
+n
+X
+i=1
+a
+i
+)
+and
+K
+2
+:= max{λ
+1
+,λ
+2
+}.
+Inequality(3.12)satisﬁestheupperestimatein(3.5)withK
+1
+andK
+2
+equivalent
+to D
+1
+and D
+2
+respectively. Combining estimates (3.8) and (3.12), inequality
+(3.5) hold.
+Next, the derivative of the functional V deﬁned in the equation (3.1), with
+respect to the independent variable t along the solution path of system (1.2)
+and simplify to give
+V
+′
+(1.2)
+= −
+5
+X
+j=1
+W
+j
+−[1−τ
+′
+i
+(t)]
+Z
+t
+t−τ
+i
+(t)
+ 
+λ
+1
+y
+2
+(θ)+λ
+2
+z
+2
+(θ)
+ 
+dθds
++(λ
+1
+y
+2
++λ
+2
+z
+2
+)τ
+i
+(t)+
+7
+X
+j=6
+W
+j
++
+ 
+βx+
+ 
+α+
+n
+X
+i=1
+a
+i
+ 
+y
++2z
+ 
+n
+X
+i=1
+p
+i
+(·)+β
+ 
+n
+X
+i=1
+a
+i
+y
+2
++2yz
+ 
+,
+(3.13)
+where
+W
+1
+:=
+1
+2
+βφ(t)
+n
+X
+i=1
+h
+i
+(x)
+x
+x
+2
++
+1
+2
+  
+α+
+n
+X
+i=1
+a
+i
+ 
+n
+X
+i=1
+g
+i
+(·)
+y
+−2φ(t)
+n
+X
+i=1
+h
+′
+i
+(x)
+ 
+y
+2
+Electronic Journal. http://diffjournal.spbu.ru/ 44Differential Equations and Control Processes, N. 1, 2019
++
+1
+2
+ 
+2
+n
+X
+i=1
+f
+i
+(·)
+z
+−
+ 
+α+
+n
+X
+i=1
+a
+i
+  
+z
+2
+;
+W
+2
+:=
+1
+4
+βφ(t)
+n
+X
+i=1
+h
+i
+(x)
+x
+x
+2
++β
+ 
+n
+X
+i=1
+g
+i
+(·)
+y
+−
+n
+X
+i=1
+b
+i
+ 
+xy
+W
+3
+:=
+1
+4
+βφ(t)
+n
+X
+i=1
+h
+i
+(x)
+x
+x
+2
++β
+ 
+n
+X
+i=1
+f
+i
+(·)
+z
+−
+n
+X
+i=1
+a
+i
+ 
+xz;
+W
+4
+:=
+1
+4
+(
+  
+α+
+n
+X
+i=1
+a
+i
+ 
+n
+X
+i=1
+g
+i
+(·)
+y
+−2φ(t)
+n
+X
+i=1
+h
+′
+i
+(x)
+ 
+y
+2
++8
+ 
+n
+X
+i=1
+g
+i
+(·)
+y
+−
+n
+X
+i=1
+b
+i
+ 
+yz +
+ 
+2
+n
+X
+i=1
+f
+i
+(·)
+z
+−
+ 
+α+
+n
+X
+i=1
+a
+i
+  
+z
+2
+)
+W
+5
+:=
+1
+4
+(
+  
+α+
+n
+X
+i=1
+a
+i
+ 
+n
+X
+i=1
+g
+i
+(·)
+y
+−2φ(t)
+n
+X
+i=1
+h
+′
+i
+(x)
+ 
+y
+2
++4
+  
+α+
+n
+X
+i=1
+a
+i
+ 
+×
+n
+X
+i=1
+f
+i
+(·)
+z
+−
+ 
+α
+2
++
+n
+X
+i=1
+a
+2
+i
+  
+yz+
+ 
+2
+n
+X
+i=1
+f
+i
+(·)
+z
+−
+ 
+α+
+n
+X
+i=1
+a
+i
+  
+z
+2
+)
+W
+6
+:=
+  
+α+
+n
+X
+i=1
+a
+i
+ Z
+x
+0
+n
+X
+i=1
+h
+i
+(ξ)dξ+2y
+n
+X
+i=1
+h
+i
+(x)
+ 
+φ
+′
+(t); and
+W
+7
+:=
+ 
+βx+
+ 
+α+
+n
+X
+i=1
+a
+i
+ 
+y+2z
+ 
+φ(t)
+Z
+t
+t−τ
+i
+(t)
+n
+X
+i=1
+h
+′
+i
+(x(s))y(s)ds.
+Applying the assumptions (i) to (iv) of the Theorem 3.1 in W
+1
+, we obtain the
+following estimates
+W
+1
+≥
+1
+2
+βφ
+0
+n
+X
+i=1
+δ
+i
+x
+2
++
+1
+2
+  
+α
+n
+X
+i=1
+b
+i
++
+n
+X
+i=1
+a
+i
+n
+X
+i=1
+b
+i
+ 
+−2φ
+1
+n
+X
+i=1
+c
+i
+ 
+y
+2
++
+1
+2
+ 
+n
+X
+i=1
+a
+i
+−α
+ 
+z
+2
+,
+for all t≥ 0, x, y and z. In view of assumptions (i) and (iv) of the Theorem 3.1
+and noting that β,φ
+0
+,δ
+i
+are positive constants, with the view that
+ 
+x+2φ
+−1
+0
+ 
+n
+X
+i=1
+δ
+i
+ 
+−1
+ 
+n
+X
+i=1
+g
+i
+(·)
+y
+−
+n
+X
+i=1
+b
+i
+ 
+y
+ 
+2
+≥ 0
+and
+ 
+x+2φ
+−1
+0
+ 
+n
+X
+i=1
+δ
+i
+ 
+−1
+ 
+n
+X
+i=1
+f
+i
+(·)
+z
+−
+n
+X
+i=1
+a
+i
+ 
+z
+ 
+2
+≥ 0
+Electronic Journal. http://diffjournal.spbu.ru/ 45Differential Equations and Control Processes, N. 1, 2019
+for all t≥ 0, x, y and z, it follows that
+W
+2
+≥−βφ
+−1
+0
+ 
+n
+X
+i=1
+δ
+i
+ 
+−1
+ 
+n
+X
+i=1
+g
+i
+(·)
+y
+−
+n
+X
+i=1
+b
+i
+ 
+2
+y
+2
+and
+W
+3
+≥−βφ
+−1
+0
+ 
+n
+X
+i=1
+δ
+i
+ 
+−1
+ 
+n
+X
+i=1
+f
+i
+(·)
+z
+−
+n
+X
+i=1
+a
+i
+ 
+2
+z
+2
+for all t≥ 0, x, y and z. Next, we employ the inequalities
+64
+ 
+n
+X
+i=1
+g
+i
+(·)
+y
+−
+n
+X
+i=1
+b
+i
+ 
+2
+<
+  
+α+
+n
+X
+i=1
+a
+i
+ 
+n
+X
+i=1
+g
+i
+(·)
+y
+−2φ(t)
+n
+X
+i=1
+h
+′
+i
+(x)
+ 
+×
+ 
+2
+n
+X
+i=1
+f
+i
+(·)
+z
+−
+ 
+α+
+n
+X
+i=1
+a
+i
+  
+and
+16
+  
+α+
+n
+X
+i=1
+a
+i
+ 
+n
+X
+i=1
+f
+i
+(·)
+z
+−
+ 
+α
+2
++
+n
+X
+i=1
+a
+2
+i
+  
+2
+<
+ 
+2
+n
+X
+i=1
+f
+i
+(·)
+z
+−
+ 
+α+
+n
+X
+i=1
+a
+i
+  
+×
+  
+α+
+n
+X
+i=1
+a
+i
+ 
+n
+X
+i=1
+g
+i
+(·)
+y
+−2φ(t)
+n
+X
+i=1
+h
+′
+i
+(x)
+ 
+in W
+4
+and W
+5
+respectively, to arrive at
+W
+4
+=W
+5
+≥
+1
+4
+"
+v
+u
+u
+t
+  
+α+
+n
+X
+i=1
+a
+i
+ 
+n
+X
+i=1
+g
+i
+(·)
+y
+−2φ(t)
+n
+X
+i=1
+h
+′
+i
+(x)
+ 
+y
+−
+v
+u
+u
+t
+ 
+2
+n
+X
+i=1
+f
+i
+(·)
+z
+−
+ 
+α+
+n
+X
+i=1
+a
+i
+  
+z
+#
+2
+≥ 0,
+for all t ≥ 0, x, y and z. In addition, since |φ
+′
+(t)| < ǫ for all t ≥ 0, ǫ > 0 is
+chosen suﬃciently small, h
+i
+(x)/x≤ c
+i
+for all x6= 0, x≤|x| and the inequality
+2x
+1
+x
+2
+≤x
+2
+1
++x
+2
+2
+for all x
+1
+,x
+2
+∈R, we ﬁnd that
+W
+6
+≤ǫ
+ 
+1+α+
+n
+X
+i=1
+a
+i
+ 
+n
+X
+i=1
+c
+i
+ 
+x
+2
++y
+2
+ 
+Electronic Journal. http://diffjournal.spbu.ru/ 46Differential Equations and Control Processes, N. 1, 2019
+for all t≥ 0, x, y and z. Finally, since φ(t)≤ φ
+1
+for all t≥ 0 and h
+i
+(x)/x≤ c
+i
+for all x6= 0, we obtain
+W
+7
+≤
+1
+2
+φ
+1
+n
+X
+i=1
+c
+i
+"
+ 
+βx
+2
++
+ 
+α+
+n
+X
+i=1
+a
+i
+ 
+y
+2
++2z
+2
+ 
+τ
+i
+(t)
++
+ 
+2+α+β +
+n
+X
+i=1
+a
+i
+ Z
+t
+t−τ
+i
+(t)
+y
+2
+(s)ds
+#
+forallt≥ 0,xandy.SubstitutingestimatesW
+j
+(j = 1,2,··· ,7)intheequation
+(3.13), we obtain
+V
+′
+(1.2)
+≤−
+1
+2
+βφ
+0
+n
+X
+i=1
+δ
+i
+x
+2
+−
+1
+2
+ 
+n
+X
+i=1
+a
+i
+n
+X
+i=1
+b
+i
+−φ
+1
+n
+X
+i=1
+c
+i
+ 
+y
+2
+−
+1
+4
+ 
+n
+X
+i=1
+a
+i
+−α
+ 
+z
+2
+−(1−τ
+′
+i
+(t))λ
+2
+Z
+t
+t−τ
+i
+(t)
+z
+2
+(θ)dθ
+−
+(
+1
+2
+ 
+α
+n
+X
+i=1
+b
+i
+−φ
+1
+n
+X
+i=1
+c
+i
+ 
+−β
+ 
+1+
+n
+X
+i=1
+a
+i
++φ
+−1
+0
+ 
+n
+X
+i=1
+δ
+i
+ 
+−1
+×
+ 
+n
+X
+i=1
+g
+i
+(·)
+y
+−
+n
+X
+i=1
+b
+i
+ 
+2
+ 
+)
+y
+2
+−
+(
+1
+4
+ 
+n
+X
+i=1
+a
+i
+−α
+ 
+−β
+ 
+1+φ
+−1
+0
+ 
+n
+X
+i=1
+δ
+i
+ 
+−1
+ 
+n
+X
+i=1
+f
+i
+(·)
+z
+−
+n
+X
+i=1
+a
+i
+ 
+2
+ 
+)
+z
+2
+−
+ 
+(1−τ
+′
+i
+(t))λ
+1
+−
+1
+2
+ 
+2+α+β +
+n
+X
+i=1
+a
+i
+ 
+φ
+1
+n
+X
+i=1
+c
+i
+ 
+×
+Z
+t
+t−τ
+i
+(t)
+y
+2
+(θ)dθ+ǫ
+ 
+1+α+
+n
+X
+i=1
+a
+i
+ 
+n
+X
+i=1
+c
+i
+ 
+x
+2
++y
+2
+ 
++
+ 
+β|x|+
+ 
+α+
+n
+X
+i=1
+a
+i
+ 
+|y|+2|z|
+ 
+n
+X
+i=1
+|p
+i
+(·)|,+
+1
+2
+τ
+i
+(t)
+ 
+βx
+2
++
+ 
+α+
+n
+X
+i=1
+a
+i
+ 
+y
+2
++2z
+2
+ 
+φ
+1
+n
+X
+i=1
+c
+i
++
+ 
+λ
+1
+y
+2
++λ
+2
+z
+2
+ 
+τ
+i
+(t)
+(3.14)
+for all t ≥ 0, x, y and z. Noting that τ
+i
+(t) ≤ γ and τ
+′
+i
+(t) ≤ β
+0
+, 0 < β
+0
+< 1 for
+all t≥ 0, choose
+λ
+1
+= 2
+−1
+(1−β
+0
+)
+ 
+2+α+β +
+n
+X
+i=1
+a
+i
+ 
+φ
+1
+n
+X
+i=1
+c
+i
+> 0, λ
+2
+= 0 (3.15)
+Electronic Journal. http://diffjournal.spbu.ru/ 47Differential Equations and Control Processes, N. 1, 2019
+ǫ> 0 suﬃciently small such that
+βφ
+0
+n
+X
+i=1
+δ
+i
+> 2ǫ
+ 
+1+α+
+n
+X
+i=1
+a
+i
+ 
+n
+X
+i=1
+c
+i
+,
+n
+X
+i=1
+a
+i
+n
+X
+i=1
+b
+i
+−φ
+1
+n
+X
+i=1
+c
+i
+> 2ǫ
+ 
+1+α+
+n
+X
+i=1
+a
+i
+ 
+n
+X
+i=1
+c
+i
+and use inequalities (3.2) (3.3) and (3.15) in estimate (3.14), we obtain
+V
+′
+(1.2)
+≤ −
+1
+2
+ 
+βφ
+0
+n
+X
+i=1
+δ
+i
+−2ǫ
+ 
+1+α+
+n
+X
+i=1
+a
+i
+ 
+n
+X
+i=1
+c
+i
+−βφ
+1
+n
+X
+i=1
+c
+i
+γ
+ 
+x
+2
+−
+1
+2
+ 
+α
+n
+X
+i=1
+b
+i
+−φ
+1
+n
+X
+i=1
+c
+i
+−2ǫ
+ 
+1+α+
+n
+X
+i=1
+a
+i
+ 
+n
+X
+i=1
+c
+i
+−
+ 
+2ǫ
+ 
+1+α+
+n
+X
+i=1
+a
+i
+ 
+n
+X
+i=1
+c
+i
+ 
+φ
+1
+n
+X
+i=1
+c
+i
+γ
+ 
+y
+2
+−
+1
+4
+ 
+n
+X
+i=1
+a
+i
+−α−4φ
+1
+n
+X
+i=1
+c
+i
+γ
+ 
+z
+2
++
+ 
+β|x|+
+ 
+α+
+n
+X
+i=1
+a
+i
+ 
+|y|+2|z|
+ 
+n
+X
+i=1
+|p
+i
+(·)|,
+(3.16)
+forallt≥ 0,x,y andz. Inviewofestimate(3.14)thereexistpositiveconstants
+K
+3
+and K
+4
+such that inequality (3.16) becomes
+V
+′
+(1.2)
+≤−K
+3
+(x
+2
++y
+2
++z
+2
+)+K
+4
+(|x|+|y|+|z|)
+n
+X
+i=1
+|p
+i
+(·)| (3.17)
+for all t≥ 0, x, y and z, where
+K
+3
+:=
+1
+2
+min
+(
+βφ
+0
+n
+X
+i=1
+δ
+i
+−2ǫ
+ 
+1+α+
+n
+X
+i=1
+a
+i
+ 
+n
+X
+i=1
+c
+i
+−βφ
+1
+n
+X
+i=1
+c
+i
+γ,
+n
+X
+i=1
+a
+i
+n
+X
+i=1
+b
+i
+−φ
+1
+n
+X
+i=1
+c
+i
+−2ǫ
+ 
+1+α+
+n
+X
+i=1
+a
+i
+ 
+n
+X
+i=1
+c
+i
+−
+ 
+2ǫ
+ 
+1+α+
+n
+X
+i=1
+a
+i
+ 
+n
+X
+i=1
+c
+i
+ 
+φ
+1
+n
+X
+i=1
+c
+i
+γ,
+n
+X
+i=1
+a
+i
+−α−4φ
+1
+n
+X
+i=1
+c
+i
+γ
+)
+Electronic Journal. http://diffjournal.spbu.ru/ 48Differential Equations and Control Processes, N. 1, 2019
+and
+K
+4
+:=max
+ 
+β,α+
+n
+X
+i=1
+a
+i
+,2
+ 
+.
+In view of the inequality|x|< 1+x
+2
+and hypothesis (vi) of Theorem 3.1, there
+exist positive constants K
+5
+and K
+6
+such that
+V
+′
+(1.2)
+≤−K
+5
+(x
+2
++y
+2
++z
+2
+)+K
+6
+(3.18)
+for all t≥ 0,x,y and z, where
+K
+5
+=K
+3
+−K
+4
+n
+X
+i=1
+M
+i
+and K
+6
+= 3K
+4
+n
+X
+i=1
+M
+i
+.
+The inequality (3.18) satisﬁes estimate (3.6) of Lemma 3.1 with K
+5
+and K
+6
+equivalent to D
+3
+and D
+4
+respectively. This completes the proof of Lemma
+3.1.
+Proof of Theorem 3.1. Let (x
+t
+,y
+t
+,z
+t
+) be any solution of the system (1.2).
+Fromtheinequalities(3.8),(3.12)and(3.18),assumptions(i)and(ii)ofLemma
+2.4 are satisﬁed. Thus by Lemma 2.4, solution (x
+t
+,y
+t
+,z
+t
+) of (1.2) is uniformly
+bounded and uniformly ultimately bounded. This completes the proof of the
+Theorem 3.1.
+Next,wewillstateandproofexistenceanduniquenessresultsforthesystem
+(1.2).
+Theorem 3.2. If all conditions of the Theorem 3.1 are satisﬁed, then there
+exists a periodic solution of the system (1.2) of period ω.
+Proof. Let (x
+t
+,y
+t
+,z
+t
+) be any solution of the system (1.2), the proof of the
+Theorem 3.2 will depend upon the same scalar valued functional deﬁned in
+(3.1), as used in the proof of Lemma 3.1. In view of estimates (3.8), (3.11) and
+(3.12) hypothesis (i) of Lemma 2.1 hold. Furthermore, using condition (vi) of
+theTheorem3.1andtheinequality(|x|+|y|+|z|)
+2
+≤ 3(x
+2
++y
+2
++z
+2
+)inestimate
+(3.17) there exist positive constants K
+7
+and K
+8
+such that
+V
+′
+(1.2)
+≤−K
+7
+(x
+2
++y
+2
++z
+2
+) (3.19)
+for all t≥ 0,x,y and z provided that
+(x
+2
++y
+2
++z
+2
+)
+1/2
+≥K
+8
+(3.20)
+Electronic Journal. http://diffjournal.spbu.ru/ 49Differential Equations and Control Processes, N. 1, 2019
+whereK
+7
+:=
+1
+2
+K
+3
+andK
+8
+:= 2×3
+1/2
+K
+−1
+3
+K
+4
+n
+P
+i=1
+M
+i
+.In viewofinequalities(3.19)
+and (3.20) condition (ii) of Lemma 2.1 follows. Thus by Lemma 2.1 a periodic
+solution of system (1.2) of period ω is assured. This completes the proof of the
+Theorem 3.2.
+Theorem 3.3. If all assumptions of the Theorem 3.1 hold, then for any given
+initial value inR
+3
+there exists a unique solution of the system (1.2).
+Proof. Let (x
+t
+,y
+t
+,z
+t
+) be any solution of the system (1.2), the proof of the
+Theorem 3.3 also depends on the continuously differentiable functional (3.1).
+From inequalities (3.8), (3.9) and (3.10) conditions (i) and (ii) of Lemma 2.2
+hold. Furthermore, from inequalities (3.19) and (3.20), we obtain
+V
+′
+(1.2)
+≤ 0, (3.21)
+for all t≥ 0,x,y and z. Inequality (3.21) satisﬁes condition (iii) of Lemma 2.2,
+hence by Lemma 2.2, the existing solution of the system (1.2) is unique. This
+completes the proof of the Theorem 3.3.
+Next, we will establish the bound on the solution (x
+t
+,y
+t
+,z
+t
+) for the system
+(1.2).
+Theorem 3.4. If conditions (i) to (v) of Theorem 3.1 hold and condition (vi)
+is replaced by
+Z
+t
+t
+0
+n
+X
+i=1
+|p
+i
+(·)|ds≤
+n
+X
+i=1
+N
+i
+, 0<N
+i
+<∞, (3.22)
+then for any given ﬁnite x
+t
+0
+,y
+t
+0
+,z
+t
+0
+, there exists a positive constant M =
+M(x
+t
+0
+,y
+t
+0
+,z
+t
+0
+,α,β,β
+0
+,δ
+i
+,
+ǫ,φ
+0
+,φ
+1
+,a
+i
+,b
+i
+,c
+i
+,t
+0
+) such that the unique solution (x
+t
+,y
+t
+,z
+t
+) of the system (1.2)
+which satisﬁes the initial condition
+x
+t
+(t
+0
+)=x
+t
+0
+, y
+t
+(t
+0
+) =y
+t
+0
+, z
+t
+(t
+0
+) =z
+t
+0
+, (3.23)
+satisﬁes
+|x
+t
+|≤M, |y
+t
+|≤M, |z
+t
+|≤M, (3.24)
+for all t≥t
+0
+.
+Proof. Let (x
+t
+,y
+t
+,z
+t
+) be any solution of the system (1.2), the proof of the
+Theorem 3.4 is also based on the continuously differentiable functional (3.1).
+Electronic Journal. http://diffjournal.spbu.ru/ 50Differential Equations and Control Processes, N. 1, 2019
+Since K
+3
+(x
+2
++y
+2
++z
+2
+)≥ 0 for all x,y and z, inequality (3.17) becomes
+V
+′
+(1.2)
+≤ 3K
+4
+n
+X
+i=1
+|p
+i
+(·)|+K
+3
+(x
+2
++y
+2
++z
+2
+)
+n
+X
+i=1
+|p
+i
+(·)| (3.25)
+for all t ≥ 0,x,y and z. Applying inequality (3.8) in (3.25), there exists a
+positive constant K
+9
+such that
+V
+′
+(1.2)
+−K
+9
+n
+X
+i=1
+|p
+i
+(·)|V ≤K
+9
+n
+X
+i=1
+|p
+i
+(·)| (3.26)
+for all t ≥ 0,x,y and z, where K
+9
+:= max{K
+−1
+0
+K
+3
+, 3K
+4
+}. Solving the ﬁrst
+order differential inequality (3.26) using integrating factor
+exp
+ 
+−K
+9
+Z
+t
+t
+0
+n
+X
+i=1
+|p
+i
+(·)|ds
+ 
+,
+we ﬁnd that
+V(t)≤ V(t
+0
+)exp
+ 
+K
+9
+Z
+t
+t
+0
+n
+X
+i=1
+|p
+i
+(·)|ds
+ 
++k
+9
+ 
+exp
+ 
+K
+9
+Z
+t
+t
+0
+n
+X
+i=1
+|p
+i
+(·)|ds
+ 
+−1
+ 
+,
+(3.27)
+where V(t) = V(t,x
+t
+,y
+t
+,z
+t
+). Using inequality (3.22) and (3.23) in estimate
+(3.27), there exists a positive constant K
+10
+such that
+V(t)≤K
+10
+(3.28)
+for all t≥ 0,x,y and z, where
+K
+10
+:=V(t
+0
+,x
+t
+0
+,y
+t
+0
+,z
+t
+0
+)exp
+ 
+K
+9
+n
+X
+i=1
+N
+i
+ 
++k
+9
+ 
+exp
+ 
+K
+9
+n
+X
+i=1
+N
+i
+ 
+−1
+ 
+.
+Finally, using inequality (3.8) in (3.28), there exists a positive constant K
+11
+such that
+|x
+t
+|≤K
+11
+, |y
+t
+|≤K
+11
+, |z
+t
+|≤K
+11
+, (3.29)
+for all t≥ t
+0
+, where K
+11
+:= (K
+−1
+0
+K
+10
+)
+1/2
+. Inequalities (3.29) establish inequali-
+ties (3.24) with K
+11
+equivalent to M. This completes the proof of the Theorem
+3.4.
+Electronic Journal. http://diffjournal.spbu.ru/ 51Differential Equations and Control Processes, N. 1, 2019
+Next,wewilldiscussthebehaviourofsolution(x
+t
+,y
+t
+,z
+t
+)ofthesystem(1.2)
+as t→∞.
+Theorem 3.5. If all conditions of the Theorem 3.1 hold and in addition, for
+all i, (i= 1,2,··· ,n)
+(i)
+′
+f
+i
+(t,0,x(t− τ
+i
+(t)),0,y(t− τ
+i
+(t)),0,z(t− τ
+i
+(t))) = 0 for all t ≥ 0,x(t−
+τ
+i
+(t)),y(t−τ
+i
+(t)) and z(t−τ
+i
+(t)),
+(ii)
+′
+g
+i
+(t,0,x(t−τ
+i
+(t)),0,y(t−τ
+i
+(t)))= 0forallt≥ 0,x(t−τ
+i
+(t))andy(t−τ
+i
+(t)).
+Then every solution (x
+t
+,y
+t
+,z
+t
+) of the system (1.2) is uniformly bounded and
+x
+t
+→ 0, y
+t
+→ 0, z
+t
+→ 0, (3.30)
+as t→∞.
+Proof. Let(x
+t
+,y
+t
+,z
+t
+)beanysolutionofthesystem(1.2). TheproofoftheThe-
+orem 3.5 depends on the functional V deﬁned in the equation (3.1). Theorem
+3.1 established uniform boundedness of solution (x
+t
+,y
+t
+,z
+t
+) of the system (1.2).
+From the inequality (3.19), we deﬁne a positive deﬁnite function (or wedge) as
+W
+1
+(X
+t
+):=K
+7
+(x
+2
++y
+2
++z
+2
+), X
+t
+= (x
+t
+,y
+t
+,z
+t
+)∈R
+3
+with respect to a closed set
+Ω
+1
+:=
+ 
+(x
+t
+,y
+t
+,z
+t
+) :x
+t
+= 0, y
+t
+= 0, z
+t
+= 0
+ 
+and
+V
+′
+(1.2)
+≤−W
+1
+(X
+t
+).
+Since φ(t)≤φ
+1
+for all t≥ 0, it follows from the system (1.2) that
+F(t,X
+t
+)=
+
+
+
+
+
+y
+z
+−φ(t)
+n
+P
+i=1
+h
+i
+(x)−
+n
+P
+i=1
+g
+i
+(·)−
+n
+P
+i=1
+f
+i
+(·)+A
+7
+
+
+
+
+
+where
+A
+7
+:=φ(t)
+t
+Z
+t−τ
+i
+(t)
+n
+X
+i=1
+h
+′
+i
+(x(s))y(s)ds
+Electronic Journal. http://diffjournal.spbu.ru/ 52Differential Equations and Control Processes, N. 1, 2019
+and
+G(t,X
+t
+)=
+
+
+
+
+
+0
+0
+n
+P
+i=1
+p
+i
+(·)
+
+
+
+
+
+.
+Since f
+i
+, g
+i
+and h
+i
+are continuous functions in their respective arguments it
+follows that F(t,X
+t
+) is bounded for all t when X
+t
+belongs to any compact
+subset ofR
+3
+. From conditions(i)
+′
+and (ii)
+′
+of the Theorem3.5 and the fact that
+x
+t
+=y
+t
+=z
+t
+= 0 for all t on Ω
+1
+, we have
+X
+′
+=F(t,X
+t
+) =
+
+
+
+0
+0
+0
+
+
+
+=F(X
+t
+) (3.31)
+so that every solution(x
+t
+,y
+t
+,z
+t
+) of the system (1.2)approachesthe largestsemi
+invariant set of
+X
+′
+=F(X
+t
+) (3.32)
+contained in Ω
+1
+, as t→∞. From the systems (3.31) and (3.32), we ﬁnd that
+
+
+
+x
+′
+t
+y
+′
+t
+z
+′
+t
+
+
+
+=
+
+
+
+0
+0
+0
+
+
+
+which has solution
+
+
+
+x
+t
+y
+t
+z
+t
+
+
+
+=
+
+
+
+C
+1
+C
+2
+C
+3
+
+
+
+,
+where C
+i
+(i = 1,2,3) is a constant. To remain in Ω
+1
+, we must have C
+1
+=
+C
+2
+= C
+3
+= 0. Therefore the only solution of (3.32) which remains in Ω
+1
+is
+X
+t
+= (0,0,0)
+T
+, that is the largest invariant set of the system (3.32) contained
+in Ω
+1
+is the set {(0,0,0)}. Thus the relation (3.30) holds as t → ∞. This
+completes the proof of Theorem 3.5.
+Next, if p
+i
+(·) = 0 in (1.1), we have
+x
+′′′
++
+n
+X
+i=1
+f
+i
+(·)+
+n
+X
+i=1
+g
+i
+(·)+φ(t)
+n
+X
+i=1
+h
+i
+(x(t−τ
+i
+(t)))= 0 (3.33)
+Electronic Journal. http://diffjournal.spbu.ru/ 53Differential Equations and Control Processes, N. 1, 2019
+or its equivalent system
+x
+′
+= y,
+y
+′
+= z,
+z
+′
+= −φ(t)
+n
+X
+i=1
+h
+i
+(x)−
+n
+X
+i=1
+f
+i
+(·)−
+n
+X
+i=1
+g
+i
+(·)
++φ(t)
+Z
+t
+t−τ
+i
+(t)
+n
+X
+i=1
+h
+i
+(x(s))y(s)ds
+(3.34)
+Theorem 3.6. If conditions (i) to (v) of the Theorem 3.1 hold, then the zero
+solution of the system (3.34) is uniformly asymptotically stable.
+Proof. Let (x
+t
+,y
+t
+,z
+t
+) be any solution of the system (3.34). The main tool in
+theproofoftheTheorem3.6isthefunctionalV oftheequation(3.1). Fromthe
+inequalities (3.8) and (3.12), condition (i) of Lemma 2.3 hold. Setting p
+i
+(·) = 0
+in the inequality (3.17), we have
+V
+′
+(3.34)
+≤−K
+3
+(x
+2
++y
+2
++z
+2
+) (3.35)
+for all t ≥ 0,x,y and z. Inequality (3.35) satisﬁes hypothesis (ii) of Lemma
+2.3, hence by Lemma 2.3 the zero solution of the system (3.34) is uniformly
+asymptotically stable. This completes the proof of Theorem 3.6.
+If the function p
+i
+(·) of the system (1.2) is replaced by p(t) and p(t,x,y,z)
+deﬁned onR
++
+andR
++
+×R
+3
+respectively. We have the following equations
+x
+′
+= y,
+y
+′
+= z,
+z
+′
+= p(t)−φ(t)
+n
+X
+i=1
+h
+i
+(x)−
+n
+X
+i=1
+f
+i
+(·)−
+n
+X
+i=1
+g
+i
+(·)
++φ(t)
+Z
+t
+t−τ
+i
+(t)
+n
+X
+i=1
+h
+i
+(x(s))y(s)ds
+(3.36)
+Electronic Journal. http://diffjournal.spbu.ru/ 54Differential Equations and Control Processes, N. 1, 2019
+and
+x
+′
+= y,
+y
+′
+= z,
+z
+′
+= p(t,x,y,z)−φ(t)
+n
+X
+i=1
+h
+i
+(x)−
+n
+X
+i=1
+f
+i
+(·)−
+n
+X
+i=1
+g
+i
+(·)
++φ(t)
+Z
+t
+t−τ
+i
+(t)
+n
+X
+i=1
+h
+i
+(x(s))y(s)ds,
+(3.37)
+with the following results:
+Corollary 3.1. If conditions (i) to (v) of the Theorem 3.1 hold, and condition
+(vi) is replaced by boundedness of the function p(t), then the solution (x
+t
+,y
+t
+,z
+t
+)
+of the system (3.36) is uniformly bounded and uniformly ultimately bounded.
+Corollary 3.2. If conditions (i) to (v) of the Theorem 3.1 are satisﬁed and in
+addition the function p(t,x,y,z) is bounded, then the solution (x
+t
+,y
+t
+,z
+t
+) of the
+system (3.37) is uniformly bounded and uniformly ultimately bounded.
+Proof. The Proofs of Corollaries 3.1 and 3.2 are similar to the proof of the
+Theorem 3.1, hence they are omitted.
+In what follows, we give two examples to justify our obtained results.
+4 Examples and Discussions
+Example 4.1. Consider a third order delay differential equation with multiple
+deviating arguments for all n∈N ﬁnite
+x
+′′′
++A
+8
+x
+′′
++A
+9
+x
+′
++(2+sin(0.001t))×
+ 
+2+
+n
+X
+i=1
+x
+′
+(t−τ
+i
+(t))
+  
+1+
+n
+X
+i=1
+x
+′
+(t−τ
+i
+(t))
+ 
+−1
+= 1+sin
+ 
+π/2+txx
+′
+x
+′′
+n
+X
+i=1
+x
+′
+(t−τ
+i
+(t))x
+′′
+(t−τ
+i
+(t))
+  
+.
+(4.1)
+where
+A
+8
+:=
+5+4[t
+2
++|xx
+′
+x
+′′
+|+
+n
+P
+i=1
+[x
+2
+(t−τ
+i
+(t))+x
+′2
+(t−τ
+i
+(t))+x
+′′2
+(t−τ
+i
+(t))]]
+1+t
+2
++|xx
+′
+x
+′′
+|+
+n
+P
+i=1
+[(t−τ
+i
+(t))+x
+′2
+(t−τ
+i
+(t))+x
+′′2
+(t−τ
+i
+(t))]
+,
+Electronic Journal. http://diffjournal.spbu.ru/ 55Differential Equations and Control Processes, N. 1, 2019
+A
+9
+:=
+ 4+3(t+|xx
+′
+|+
+n
+P
+i=1
+[|x(t−τ
+i
+(t))|+|x
+′
+(t−τ
+i
+(t))|)]
+1+t+|xx
+′
+|+
+n
+P
+i=1
+[|x(t−τ
+i
+(t))|+|x
+′
+(t−τ
+i
+(t))|]
+Its equivalent form is
+x
+′
+= y
+y
+′
+= z
+z
+′
+= 1+sin
+ 
+π/2+txyz
+n
+X
+i=1
+[y(t−τ
+i
+(t))z(t−τ
+i
+(t))]
+ 
+−
+ 
+2+x
+2
+1+x
+2
+ 
+(2+sin(0.001t))−A
+10
+z−A
+11
+y
++(2+sin(0.001t))
+Z
+t
+t−τ
+i
+(t)
+ 
+(1+x
+2
+(s))
+2
++1−x
+2
+(s)
+(1+x
+2
+(s))
+2
+ 
+ds.
+(4.2)
+where
+A
+10
+:=
+5+4[t
+2
++|xyz|+
+n
+P
+i=1
+[x
+2
+(t−τ
+i
+(t))+y
+2
+(t−τ
+i
+(t))+z
+2
+(t−τ
+i
+(t))]]
+1+t
+2
++|xyz|+
+n
+P
+i=1
+[x
+2
+(t−τ
+i
+(t))+y
+2
+(t−τ
+i
+(t))+z
+2
+(t−τ
+i
+(t))]
+and
+A
+11
+:=
+4+3[t+|xy|+
+n
+P
+i=1
+[|x(t−τ
+i
+(t))|+|y(t−τ
+i
+(t))|]]
+1+t+|xy|+
+n
+P
+i=1
+[|x(t−τ
+i
+(t))|+|y(t−τ
+i
+(t))|]
+From the systems (1.2) and (4.2), we observed the following.
+(i) Set the function
+φ(t) :=2+D(t),
+where
+D(t) :=sin(0.001t).
+Since
+−1≤D(t)≤ 1
+for all t, it follows that
+1 =φ
+0
+≤φ(t)≤φ
+1
+= 3
+Electronic Journal. http://diffjournal.spbu.ru/ 56Differential Equations and Control Processes, N. 1, 2019
+for all t≥ 0. See Figure 1 for the bounds on the function D(t) and φ(t).
+Moreover,
+φ
+′
+(t):= 0.001cos(0.001t)
+so that
+|φ
+′
+(t)|≤ǫ = 0.001,
+for all t≥ 0. See Figure 2 for a bound on |φ
+′
+(t)|.
+Figure 1: Bounds on the functions φ(t) and D(t)
+(ii) Let the function
+n
+X
+i=1
+f
+i
+(·):=
+5+4[t
+2
++|xyz|+
+n
+P
+i=1
+[x
+2
+(t−τ
+i
+(t))+y
+2
+(t−τ
+i
+(t))+z
+2
+(t−τ
+i
+(t))]]
+1+t
+2
++|xyz|+
+n
+P
+i=1
+[x
+2
+(t−τ
+i
+(t))+y
+2
+(t−τ
+i
+(t))+z
+2
+(t−τ
+i
+(t))]
+ 
+z
+or
+n
+X
+i=1
+f
+i
+(·)
+z
+= 4+
+1
+1+t
+2
++|xyz|+
+n
+P
+i=1
+[x
+2
+(t−τ
+i
+(t))+y
+2
+(t−τ
+i
+(t))+z
+2
+(t−τ
+i
+(t))]
+.
+Since
+1
+1+t
+2
++|xyz|+
+n
+P
+i=1
+[x
+2
+(t−τ
+i
+(t))+y
+2
+(t−τ
+i
+(t))+z
+2
+(t−τ
+i
+(t))]
+> 0
+for all t,x,y,z,x(t−τ
+i
+(t)),y(t−τ
+i
+(t)) and z(t−τ
+i
+(t)). It follows that
+n
+X
+i=1
+f
+i
+(·)
+z
+≥
+n
+X
+i=1
+a
+i
+= 4
+for all t,x,y,z6= 0,x(t−τ
+i
+(t)),y(t−τ
+i
+(t)) and z(t−τ
+i
+(t)).
+Electronic Journal. http://diffjournal.spbu.ru/ 57Differential Equations and Control Processes, N. 1, 2019
+Figure 2: A Bound on |φ
+′
+(t)|
+(iii) Let the function
+n
+X
+i=1
+g
+i
+(·) :=
+ 4+3[t+|xy|+
+n
+P
+i=1
+[|x(t−τ
+i
+(t))|+|y(t−τ
+i
+(t))|]]
+1+t+|xy|+
+n
+P
+i=1
+[|x(t−τ
+i
+(t))|+|y(t−τ
+i
+(t))|]
+ 
+y
+or
+n
+X
+i=1
+g
+i
+(·)
+y
+:=3+
+1
+1+t+|xy|+
+n
+P
+i=1
+[|x(t−τ
+i
+(t))|+|y(t−τ
+i
+(t))|]
+.
+It is not diﬃcult to show that
+n
+X
+i=1
+g
+i
+(·)
+y
+≥
+n
+X
+i=1
+b
+i
+= 3
+for all t,x,y6= 0,x(t−τ
+i
+(t)) and y(t−τ
+i
+(t)).
+(iv) Let the function
+n
+X
+i=1
+h
+i
+(x):=
+x(2+x
+2
+)
+1+x
+2
+or
+n
+X
+i=1
+h
+i
+(x)
+x
+= 1+H(x),
+where
+H(x):=
+1
+1+x
+2
+.
+Since
+0<H(x)≤ 1
+Electronic Journal. http://diffjournal.spbu.ru/ 58Differential Equations and Control Processes, N. 1, 2019
+for all x, we conclude from the inequality that
+1 =
+n
+X
+i=1
+δ
+i
+≤
+n
+X
+i=1
+h
+i
+(x)
+x
+≤
+n
+X
+i=1
+c
+i
+= 2,
+for all x6= 0. Moreover,
+n
+X
+i=1
+h
+i
+(0)= 0
+and
+n
+X
+i=1
+|h
+′
+i
+(x)|≤
+n
+X
+i=1
+c
+i
+= 2
+for all x. See the behaviour of h(x)/x,H(x) and |h
+′
+(x)| in Figure 3 for
+n = 1.
+Figure 3: The behaviour of h(x)/x,H(x) and |h
+′
+(x)|.
+(v) We note, from items (i) to (iv) of Example 4.1, the following relations
+(a) inequality (3.2) becomes
+2<α < 4
+and we choose α = 3;
+(b) inequality (3.3) yields
+β < min
+ 
+3,
+3
+10
+,
+1
+4
+ 
+=
+1
+4
+and we choose β =
+1
+5
+; and
+Electronic Journal. http://diffjournal.spbu.ru/ 59Differential Equations and Control Processes, N. 1, 2019
+(c) inequality (3.4) yields
+γ < min
+ 
+28
+1000
+,
+39
+1000
+,
+42
+1000
+ 
+=
+28
+1000
+.
+(vi) Finally, for the function
+n
+X
+i=1
+p
+i
+(·):= 1+sin
+ 
+π/2+txyz
+n
+X
+i=1
+[y(t−τ
+i
+(t))z(t−τ
+i
+(t))]
+ 
+,
+it is not diﬃcult to show that
+n
+X
+i=1
+p
+i
+(·)≤
+n
+X
+i=1
+M
+i
+= 2
+for all t,x,y,z,x(t−τ
+i
+(t)),y(t−τ
+i
+(t)) and z(t−τ
+i
+(t)).
+From items (i) to (vi) of Example 4.1, all assumptions of the Theorems 3.1 to
+3.5 hold. Thus their respective conclusion follows for the system (4.2). Also,
+from items (i) to (v) of Example 4.1, conditions of the Theorem 3.6 hold. Thus
+by the Theorem 3.6, the trivial solution of the system (4.2) is uniformly asymp-
+totically stable.
+Example4.2. Consider the third order delay differential equationwith multiple
+deviating arguments
+x
+′′′
++B
+1
+x
+′′
++B
+2
+x
+′
++(3+exp(0.01t))(1+exp(0.01t))
+−1
+×
+ 1+
+n
+P
+i=1
+[x
+2
+(t−τ
+i
+(t))+sin(x(t−τ
+i
+(t)))]
+1+
+n
+P
+i=1
+x
+2
+(t−τ
+i
+(t))
+ 
+n
+X
+i=1
+x(t−τ
+i
+(t))=B
+3
+,
+(4.3)
+B
+1
+:=
+3+2(|sint|+
+n
+P
+i=1
+[|xx
+′
+(t−τ
+i
+(t))|+|x(t−τ
+i
+(t))x
+′
+|+|x
+′′
+x
+′′
+(t−τ
+i
+(t))|)]
+1+|sint|+
+n
+P
+i=1
+[|xx
+′
+(t−τ
+i
+(t))|+|x(t−τ
+i
+(t))x
+′
+|+|x
+′′
+x
+′′
+(t−τ
+i
+(t))|]
+,
+B
+2
+:=
+4+3(2t+cos(xx
+′
+)+2
+n
+P
+i=1
+|x
+′
+(t−τ
+i
+(t))|)
+1+2t+cos(xx
+′
+)+2
+n
+P
+i=1
+|x
+′
+(t−τ
+i
+(t))|
+Electronic Journal. http://diffjournal.spbu.ru/ 60Differential Equations and Control Processes, N. 1, 2019
+and
+B
+3
+:=
+2+2t
+2
+|xx
+′
+x
+′′
+|+
+n
+P
+i=1
+[|x(t−τ
+i
+(t))|+x
+′2
+(t−τ
+i
+(t))+|x
+′′
+(t−τ
+i
+(t))|]
+1+2t
+2
+|xx
+′
+x
+′′
+|+
+n
+P
+i=1
+[|x(t−τ
+i
+(t))|+x
+′2
+(t−τ
+i
+(t))+|x
+′′]
+(t−τ
+i
+(t))|
+,
+Its equivalent system of ﬁrst order is given by
+x
+′
+= y
+y
+′
+= z
+z
+′
+= −
+ 
+3+exp(0.01t)
+1+exp(0.01t)
+  
+1+x
+2
++sinx
+1+x
+2
+ 
+x
+−
+ 4+3(2t+cos(xy)+2
+n
+P
+i=1
+|y(t−τ
+i
+(t))|)
+1+2t+cos(xy)+2
+n
+P
+i=1
+|y(t−τ
+i
+(t))|
+ 
+y−B
+5
+z
++
+ 
+3+exp(0.01t)
+1+exp(0.01t)
+ Z
+t
+t−τ
+i
+(t)
+B
+6
+(s)ds+B
+4
+,
+(4.4)
+where
+B
+4
+=
+2+2t
+2
+|xyz|+
+n
+P
+i=1
+[|x(t−τ
+i
+(t))|+y
+2
+(t−τ
+i
+(t))+|z(t−τ
+i
+(t))|]
+1+2t
+2
+|xyz|+
+n
+P
+i=1
+[|x(t−τ
+i
+(t))|+y
+2
+(t−τ
+i
+(t))+|z(t−τ
+i
+(t))|]
+,
+B
+5
+:=
+3+2(|sint|+
+n
+P
+i=1
+[|xy(t−τ
+i
+(t))|+|x(t−τ
+i
+(t))y|+|zz(t−τ
+i
+(t))|)]
+1+|sint|+
+n
+P
+i=1
+[|xy(t−τ
+i
+(t))|+|x(t−τ
+i
+(t))y|+|zz(t−τ
+i
+(t))|]
+and
+B
+6
+:=
+1+x
+2
++(1−x
+2
+)sinx+x(1+x
+2
+)cosx
+(1+x
+2
+)
+2
+.
+Now, let us compare the system (1.2) with the system (4.4).
+(i) Set the function
+φ(t) :=
+3+exp(0.01t)
+1+exp(0.01t)
+=
+1
+2
++D(t),
+where
+D(t) :=
+1
+1+exp(0.01t)
+.
+Electronic Journal. http://diffjournal.spbu.ru/ 61Differential Equations and Control Processes, N. 1, 2019
+Figure 4: Bounds on φ(t) and D(t) for Example 4.2
+Since
+0<D(t)≤ 1
+for all t, it follows that
+1
+2
+=φ
+0
+≤φ(t)≤φ
+1
+=
+3
+2
+for all t≥ 0. Furthermore,
+φ
+′
+(t) =−
+exp(0.01t)
+100(1+exp(0.01t))
+2
+.
+It is not diﬃcult to show that
+|φ
+′
+(t)|<ǫ = 0.0025
+for all t≥ 0. (See Figure 5).
+Figure 5: Bound on |φ
+′
+(t)| for Example 4.2
+(ii) Let the function
+n
+X
+i=1
+f
+i
+(·):=
+ 3+2(|sint|+
+n
+P
+i=1
+[|xy(t−τ
+i
+(t))|+|x(t−τ
+i
+(t))y|+|zz(t−τ
+i
+(t))|)]
+1+|sint|+
+n
+P
+i=1
+[|xy(t−τ
+i
+(t))|+|x(t−τ
+i
+(t))y|+|zz(t−τ
+i
+(t))|]
+ 
+z
+Electronic Journal. http://diffjournal.spbu.ru/ 62Differential Equations and Control Processes, N. 1, 2019
+or
+n
+X
+i=1
+f
+i
+(·)
+z
+:= 2+
+1
+1+|sint|+
+n
+P
+i=1
+[|xy(t−τ
+i
+(t))|+|x(t−τ
+i
+(t))y|+|zz(t−τ
+i
+(t))|]
+.
+It is clear from the above equation that
+n
+X
+i=1
+f
+i
+(·)
+z
+≥
+n
+X
+i=1
+a
+i
+= 2
+for all t≥ 0,x,y,z6= 0,x(t−τ
+i
+(t)) and z(t−τ
+i
+(t)).
+(iii) Let the function
+n
+X
+i=1
+g
+i
+(·) :=
+ 4+3(2t+cos(xy)+2
+n
+P
+i=1
+|y(t−τ
+i
+(t))|)
+1+2t+cos(xy)+2
+n
+P
+i=1
+|y(t−τ
+i
+(t))|
+ 
+y
+or
+n
+X
+i=1
+g
+i
+(·)
+y
+= 3+
+1
+1+2t+cos(xy)+2
+n
+P
+i=1
+|y(t−τ
+i
+(t))|
+.
+Obviously,
+n
+X
+i=1
+g
+i
+(·)
+y
+≥
+n
+X
+i=1
+b
+i
+= 3
+for all t≥ 0,x,y6= 0,x(t−τ
+i
+(t)) and y(t−τ
+i
+(t)).
+(iv) Let the function
+n
+X
+i=1
+h
+i
+(x):=
+ 
+1+x
+2
++sinx
+1+x
+2
+ 
+x
+or
+n
+X
+i=1
+h
+i
+(x)
+x
+:= 1+H(x)
+where
+H(x):=
+sinx
+1+x
+2
+.
+Since
+−0.44≤H(x)≤ 0.44
+for all x, it follows that
+Electronic Journal. http://diffjournal.spbu.ru/ 63Differential Equations and Control Processes, N. 1, 2019
+Figure 6: The Behaviour of H(x), h(x)/x and |h
+′
+(x)| for Example 4.2
+0.6≤
+n
+X
+i=1
+δ
+i
+≤
+n
+X
+i=1
+h
+i
+(x)
+x
+≤
+n
+X
+i=1
+c
+i
+= 1.44
+for all x6= 0 and
+n
+X
+i=1
+h
+i
+(0)= 0.
+Furthermore,
+n
+X
+i=1
+h
+′
+i
+(x):=
+1+x
+2
++(1−x
+2
+)sinx+x(1+x
+2
+)cosx
+(1+x
+2
+)
+2
+and the estimate
+n
+X
+i=1
+|h
+′
+i
+(x)|≤
+n
+X
+i=1
+c
+i
+= 1.58
+is obtained for all x. Thus we choose
+n
+X
+i=1
+c
+i
+= max{1.44,1.58}= 1.58.
+See the behaviour of functions H(x), h(x)/x and |h
+′
+(x)| in Figure 6;
+(v) From items (i) to (iv) of the Example 4.2, we have the following relations
+(a) inequality (3.2) yields
+0.79<α< 2
+and we choose α = 1;
+(b) inequality (3.3) becomes
+β < min{3,0.11,0.25}= 0.11
+we choose β = 0.1
+Electronic Journal. http://diffjournal.spbu.ru/ 64Differential Equations and Control Processes, N. 1, 2019
+(c) inequality (3.4) yields
+γ < min{0.003,0.115,0.105}= 0.003.
+and ﬁnally
+(vi) the function
+n
+X
+i=1
+|p
+i
+(·)| :=
+2+2t
+2
++|xyz|+
+n
+P
+i=1
+[|x(t−τ
+i
+(t))|+y
+2
+(t−τ
+i
+(t))+|z(t−τ
+i
+(t))|]
+1+2t
+2
++|xyz|+
+n
+P
+i=1
+[|x(t−τ
+i
+(t))|+y
+2
+(t−τ
+i
+(t))+|z(t−τ
+i
+(t))|]
+or
+n
+X
+i=1
+|p
+i
+(·)| = 1+
+1
+1+2t
+2
++|xyz|+
+n
+P
+i=1
+[|x(t−τ
+i
+(t))|+y
+2
+(t−τ
+i
+(t))+|z(t−τ
+i
+(t))|]
+.
+It is not very diﬃcult to show that
+n
+X
+i=1
+|p
+i
+(·)|≤
+n
+X
+i=1
+M
+i
+= 2.
+From items (i) to (vi) of the Example 4.2 all assumptions of the Theorems
+3.1 to 3.5 hold. Thus their respective conclusion follows for the system (4.4).
+Also, from items (i) to (v) of the Example 4.2, conditions of the Theorem 3.6
+hold. Thus by Theorem 3.6 the trivial solution of the system (4.4) is uniformly
+asymptotically stable.
+5 Conclusion
+In this paper, we study the behaviour of solutions for a certain third order
+nonlinear differential equations with multiple deviating arguments. Suﬃcient
+conditions for the existence of a unique solution that is periodic, uniformly
+asymptotically stable, uniformly ultimately bounded are established by virtue
+ofacompleteLyapunovfunctional. Asapplications,twoexamplesarepresented
+to illustrate the main results.
+References
+[1] Ademola,A.T.,Arawomo,P.O.; Asymptoticbehaviourof solutionsof third
+ordernonlineardifferentialequations.ActaUniv.Sapientiae,Mathematica,
+3(2), 197 - 211 (2011)
+Electronic Journal. http://diffjournal.spbu.ru/ 65Differential Equations and Control Processes, N. 1, 2019
+[2] Ademola, A. T., Arawomo, P.O.; Uniform stability and boundedness of
+solutions of nonlinear delay differential equations of the third order. Math.
+J. Okayama Univ. 55, 157 - 166 (2013)
+[3] Ademola, A. T., Arawomo, P.O., Ogunlaran, M.O., Oyekan, E.A.; Uni-
+form stability, boundedness and asymptotic behaviour of solutions of some
+third order nonlinear delay differential equations. Differential Equations
+and Control Processes. (4), 43 - 66 (2013)
+[4] Ademola, A. T., Arawomo, P.O.; Boundedness and asymptotic behaviour
+of solutions of a nonlinear differential equation of the third order.Afr.Mat.
+23:DOI 10.1007/s13370-011-0034-x 261 271 (2012)
+[5] Ademola, A. T., Arawomo,P.O.; On the asymptotic behaviour of solutions
+of certain differential equations of the third order. Proyecciones Journal of
+Mathematics. 33(1), 111 - 132 (2014)
+[6] Ademola, A. T., Arawomo, P.O.; Stability, boundedness and asymptotic
+behaviourof solutionsof certain nonlineardifferentialequationsof the third
+order. Kragujevac Journal of Mathematics. 35(3), 431 - 445 (2011)
+[7] Ademola, A. T.; Existence and uniqueness of a periodic solution to certain
+third order nonlinear delay differential equation with multiple deviating ar-
+guments. Acta Univ. Sapientiae Mathematica. 5(2), 113 - 131 (2013)
+[8] Ademola, A. T.; Stability, boundedness and uniqueness of solutions to cer-
+tain third order stochastic delay differential equations Differential Equa-
+tions and Control Processes. (2), 25 - 50 (2017)
+[9] Ademola, A. T., Mahmoud, A. M.; On some qualitative properties of so-
+lutions to certain third order vector differential equations with multiple
+constant deviating arguments. International Journal of Nonlinear Science,
+26(3), 180 - 192 (2018)
+[10] Ademola,T.A.,Ogundiran,M.O.; On the existence and uniqueness of so-
+lutionsofa generalizedLipschitzordinary differentialequations.IfeJournal
+of Science, 9(2), 241 - 246 (2007)
+[11] Ademola,T.A.,Ogundiran,M.O.,Arawomo,P.O.,Adesina,O.A.;Bound-
+edness results for a certain third order nonlinear differential equation. Ap-
+plied Mathematics and Computation 216 3044 - 3049 (2010)
+Electronic Journal. http://diffjournal.spbu.ru/ 66Differential Equations and Control Processes, N. 1, 2019
+[12] Ademola, A. T., Ogundare, B. S., Ogundiran, M. O., Adesina, O.A.; Sta-
+bility, boundedness and existence of periodic solutions to certain third order
+delaydifferentialequationswithmultipledeviatingarguments.International
+JournalofDifferentialEquations.Volume2015,ArticleID213935,12pages
+(2015)
+[13] Ademola,A.T.,Ogundiran,M.O.,Arawomo,P.O.; Stability, boundedness
+and existence of periodic solutions to certain third order nonlinear differen-
+tial equations. Acta Univ. Palacki. Olomuc., Fac. rer. nat., Mathematica.
+54(1) 5 - 18, (2015)
+[14] Adesina, O. A.; Results on the qualitative behaviour of solutions for a class
+ofthirdordernonlineardifferentialequations.AIPConferenceProceedings.
+1637(1), 5 - 12 (2014)
+[15] Afuwape,A.U.,Omeike,M.O.; Stability and boundedness of solutions of a
+kind of third order delay differential equations. Comp. Appl. Math. 29(3),
+329 - 342 (2010)
+[16] Burton, T. A.; Stability and periodic solutions of ordinary and functional
+differential equations. Mathematics in Science and Engineering. 178 Aca-
+demic Press. Inc., Orlando, FL, (1985)
+[17] Burton,T.A.; Volterra integral and differential equations.NewYork: Aca-
+demic Press. (1983)
+[18] Driver, R. D.; Ordinary and delay differential equations. Springer-Verlag
+New York Heidelberg Berlin. (1977)
+[19] Graef, J. R. Tun¸ c, C.; Global asymptotic stability and boundedness of
+certain multi-delay functional differential equations of third order. Math.
+Methods Appl. Sci. 38(17), 3747 - 3752 (2015)
+[20] Hale, J. K.; Theory of functional differential equations. Springer-Verlag
+New York. (1977)
+[21] Lakshmikantham, V., Wen, L., Zhang, B.; Theory of differential equations
+with unbounded delay.SpringerScience+BusinessMediaDordrecht.(1994)
+[22] Olutimo, A. L., Adams, D. O.; On the stability and boundedness of solu-
+tions of certain non-autonomous delay differential equation of third order.
+Applied Mathematics. 7, 457 - 467 (2016)
+Electronic Journal. http://diffjournal.spbu.ru/ 67Differential Equations and Control Processes, N. 1, 2019
+[23] Omeike, M. O.; New results on the stability of solution of some non-
+autonomous delay differential equations of the third order. Differential
+Equations and Control Processes. (1), 18 - 29 (2010)
+[24] Omeike, M. O.; Uniform ultimate boundedness of solutions of third order
+nonlinear delay differential equations. An. Stiint. Univ. Al. I. Cuza Iasi,
+Ser. Noua, Mat., Tomul LVI. f.2 DOI: 10.2478/v10157-010-0026-4. 363 -
+372 (2010)
+[25] Remili, M., Beldjerd, D.; A boundedness and stability results for a kind of
+third order delay differential equations. Appl. Appl. Math. 10(2), 772 - 782
+(2015)
+[26] Remili, M., Oudjedi L. D.; Stability and boundedness of the solutions of
+non autonomous third order differential equations with delay. Acta Univ.
+Palacki. Olomuc., Fac. rer. nat., Mathematica. 53(2), 139 - 147 (2014)
+[27] Tun¸ c, C.; Global stability and boundedness of solutions to differential equa-
+tions of third order with multiple delays. Dynam. Systems Appl. 24(4),467
+- 478 (2015)
+[28] Tun¸ c; On the qualitative behaviors of solutions of some differential equa-
+tions of higher order with multiple deviating arguments. J. Franklin Inst.
+351(2), 643 - 655 (2014)
+[29] Tun¸ c, C.; Stability and boundedness for a kind of non-autonomous differ-
+ential equations with constant delay. Appl. Math. Inf. Sci. 7(1), 355-361
+(2013)
+[30] Tun¸ c, C.; Stability and boundedness in differential systems of third order
+withvariable delay Stabilityandboundednessin differentialsystemsof third
+order with variable delay. Proyecciones 35(3), 317-338 (2016)
+[31] Tun¸ c, C.; Qualitative behaviors of functional differential equations of third
+order with multiple deviating arguments. Abstract and Applied Analysis.
+Volume 2012 Article ID 392386, http://dx.doi.org/10.1155/2012/392386,
+12 pages (2012)
+[32] Tun¸ c, C; Existence of periodic solutions to nonlinear differential equa-
+tions of third order with multiple deviating arguments. International
+Journal of Differential Equations. Volume 2012, Article ID 406835,
+doi:10.1155/2012/406835, 13 pages (2012)
+Electronic Journal. http://diffjournal.spbu.ru/ 68Differential Equations and Control Processes, N. 1, 2019
+[33] Tun¸ c, C.; On the qualitative behaviors of solutions to a kind of nonlinear
+third order differential equations with retarded argument. ItalianJournalof
+Pure and Applied Mathematics. 28, 273 - 284 (2011)
+[34] Tun¸ c, C.; On the stability and boundedness of solutions of nonlinear third
+order differential equations with delay. Filomat. 24(3), 1 - 10 (2010)
+[35] Tun¸ c, C.; On the qualitative behaviors of nonlinear functional differential
+systems of third order. Advances in nonlinear analysis via the concept of
+measure of noncompactness, 421 - 439, Springer, Singapore, (2017)
+[36] Tun¸ c, C.; Some stability and boundedness conditions for non-autonomous
+differential equations with deviating arguments.ElectronicJournalofQual-
+itative Theory of Differential Equations. 2010(1), 1 - 12 (2010)
+[37] Tun¸ c, C., Erg¨ oren, H.; Uniformly boundedness of a class of non linear dif-
+ferential equations of third order with multiple deviating arguments. Cubo
+14(3) , 63 - 69 (2012)
+[38] Tun¸ c, C ., G¨ ozen, M.; Stability and uniform boundedness in multi delay
+functional differential equations of third order.AbstractandAppliedAnal-
+ysis. Volume 2013, Article ID 248717, 7, (2013)
+[39] Tun¸ c, C., Mohammed, S. A.; On the qualitative properties of differential
+equations of third order with retarded argument. Proyecciones. 33(3), 325 -
+347 (2014)
+[40] Yao, H., Wang, J.; Globally asymptotic stability of a kind of third order
+delay differential system.InternationalJournalofNonlinearScience.10(1),
+82 - 87 (2010)
+[41] Yoshizawa, T.; Liapunov’s function and boundedness of solutions. Funk-
+cialaj Ekvacioj. 2, 71 - 103 (1958)
+[42] Yoshizawa, T.; Stability theory and existence of periodic solutions and al-
+most periodic solutions. Springer-Verlag, New York. Heidelberg. Berlin.
+(1975)
+[43] Yoshizawa, T.; Stability theory by Liapunov’s second method. The Mathe-
+matical Society of Japan. (1966)
+[44] Zhu, Y.F.; On stability, boundedness and existence of periodic solution of
+a kind of third order nonlinear delay differential system. Annals of Diff.
+Equations. 8(2), 249 - 259 (1992)
+Electronic Journal. http://diffjournal.spbu.ru/ 69
