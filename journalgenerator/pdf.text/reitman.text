@@ -1,1015 +1,3718 @@
-﻿\documentclass[12pt,a4paper]{article}
-%\documentclass[12pt,a4paper]{revtex4}
-\usepackage{t1enc}
-\usepackage[cp1251]{inputenc}
-\usepackage[english,russian]{babel}
-%\usepackage{graphicx}
-\usepackage{diff_rus}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\topmargin -1cm
-\oddsidemargin 0cm
-
-\textwidth  16cm
-\textheight 24cm
-
-\newtheorem{theor}{Теорема}
-\newtheorem{defin}{Определение}
-\newtheorem{corol}{Следствие}
-\newtheorem{remark}{Примечание}
-\newtheorem{propos}{Предложение}
-\newtheorem{lemma}{Лемма}
-
-%\begin{document}
-% 9 июля
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Выставите номер страницы
-\setcounter{page}{113}                   % номер первой страницы
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{document}
-
-\input{diff_rus.tex}
-
-\centerline{\bf Определяющие моды и почти периодические интегралы для коциклов }
-\centerline{И. В. Ермаков, Ю. Н. Калинин, Ф. Райтманн}
-\footnote{Работа выполнена при поддержке Немецко-российского междисциплинарного научного центра (G-RISC) и 
-Германской службы академических обменов (DAAD).}
-\centerline{Математико-механический факультет,}
-\centerline{Санкт-Петербургский государственный университет,}
-\centerline{Санкт-Петербург, Россия} 
-
-
-
-%\title{Определяющие моды и почти периодические интегралы для коциклов }
-%\author{И. В. Ермаков$^*$, Ю. Н. Калинин$^*$, Ф. Райтманн\thanks{Работа выполнена при поддержке Немецко-российского междисциплинарного научного центра (G-RISC) и Германской службы академических обменов (DAAD).}
-%\\ \small\textit{{Математико-механический факультет,}}
-%\\ \small{\textit{Санкт-Петербургский государственный университет,}}
-%\\ \small{\textit{Санкт-Петербург, Россия}} }
-
-%\date{}
-%\maketitle
-
-\begin{abstract}
-Рассматриваются коциклы общего вида на произвольном метрическом пространстве. Вводится понятие определяющих мод для коциклов на гильбертовом пространстве и доказывается теорема о существовании конечного числа определяющих мод для таких коциклов. Приводится доказательство существования B-pullback аттрактора в задаче микроволнового нагрева материала. Вводится понятие почти периодического интеграла для коцикла и доказывается существование такого интеграла для одного класса коциклов.
-\end{abstract}
-
-%\footnote{Работа выполнена при финансовой поддержке Германской службы академических обменов (DAAD).}
-%\textbf{Введение}
-\section*{Введение}
-
-Настоящая работа посвящена некоторым вопросам развития теории коциклов, в частности, порожденных системами уравнений в частных производных. Одна из таких систем уравнений описывает задачу микроволнового нагрева. Исходя из известных результатов для процессов, строятся элементы теории определяющих функционалов и почти периодических интегралов для коциклов.
-
-Приведем краткий обзор содержания работы. В \S 1 дается краткое введение в теорию коциклов, включая понятие глобального B-pullback аттрактора. \S 2 рассматривается система микроволнового нагрева, состоящая из уравнений Максвелла и уравнения теплопроводности. Строится соответствующий коцикл, доказывается его диссипативность и существование B-pullback аттрактора. В \S 3 вводится класс определяющих функционалов для коциклов. Приводится теорема о существовании определяющих мод как частного случая определяющих функционалов для коциклов. В \S 4 вводится понятие почти периодического интеграла для коцикла, обобщающее соответствующее понятие для процесса. В \S 5 изучается существование такого интеграла для одного класса коциклов.
-
-%\textbf{1.Элементы теории коциклов}
-\section{Элементы теории коциклов}
-\sloppy
-Понятие коцикла является обобщением понятия динамической системы. Введем основные понятия теории коциклов, которые будут использоваться далее (\cite{kloeden}).
-
-Пусть $(Q,d)$ - метрическое пространство, называемое базисным пространством.
-Пара $(\left\{ \tau^t \right\}_{t \in \mathbb{R}},(Q,d))$, где $\tau^t : Q \rightarrow Q$, для любого $t \in \mathbb{R}$, называется \emph{базисным потоком}, если
-
-\begin{equation}
-\label{baseflow}
-\begin{array}{ll}
-\tau^0=id_Q, \\
-\tau^t \circ \tau^s = \tau^{t+s} \ \forall t,s \in \mathbb{R}.
-\end{array}
-\end{equation}
-
-Пусть $(M,\rho)$ - другое метрическое пространство, которое назовем фазовым пространством.
-\begin{defin}
-Пара $( \left\{ \varphi^t (q,\cdot)\right\}_{t \in \mathbb{R}_{+}, q \in Q},(M,\rho) )$, где $\varphi^t (q,\cdot) : M \rightarrow M$ для любых $t \in \mathbb{R}_{+}, q \in Q$, называется коциклом над базисным потоком $(\left\{ \tau^t \right\}_{t \in \mathbb{R}},(Q,d))$, если
-\begin{equation}
-\label{cocycle}
-\begin{array}{ll}
-\varphi^0 (q,\cdot) = id_M \ \forall q \in Q, \\
-\varphi^{t+s}(q,\cdot)=\varphi^t ( \tau^s(q) , \varphi^s(q,\cdot)) \ \forall q \in Q, \ \forall t,s \in \mathbb{R}_+.
-\end{array}
-\end{equation}
-\end{defin}
-
-Для краткости коцикл $( \left\{ \varphi^t (q,\cdot)\right\}_{t \in \mathbb{R}_{+}, q \in Q}, (M,\rho) )$ над базисным потоком $(\left\{ \tau^t \right\}_{t \in \mathbb{R}}, (Q,d))$ будем обозначать $(\varphi, \tau)$.
-
-
-Определим пространство $W = Q \times M$ и семейство отображений $S^t : W \rightarrow W$, $t \in \mathbb{R}_+$, действующих по правилу $S^t(q,u)=(\tau^t(q),\varphi^t(q,u))$. Динамическая система $( \left\{ S^t \right\}_{t \in \mathbb{R}_+},W)$ называется \emph{косым произведением}.
-
-
-
-\emph{Неавтономным множеством} будем называть $\hat{Z} = \left\{ Z(q) \right\}_{q \in Q}$- отображение $Q \rightarrow 2^M$. Неавтономное множество называется \emph{ограниченным (замкнутым, компактным)}, если для любого $q \in Q$ множество $Z(q)$ ограничено (замкнуто, компактно) в $M$.
-
-Ограниченное неавтономное множество $\hat{Z}$ называется \emph{глобально B-pullback поглощающим} множеством для коцикла $(\varphi,\tau)$, если для любого $q \in M$ и любого ограниченного множества $B \subset M$ существует $T=T(q,B)$ такое, что $\varphi^t(\tau^{-t}(q,B)) \subset Z(q)$ для $t \geq T.$
-
-Неавтономное множество $\hat{Z}$ называется \emph{глобально B-pullback притягивающим}, если для любого ограниченного множества $B \subset M$, любого $q \in Q$
-$$\lim_{t \rightarrow +\infty}  \mathrm{dist}(\varphi^t(\tau^{-t}(q),B), Z(q))=0,$$
-где $\mathrm{dist}$ -полурасстояние по Хаусдорфу в $(M,\rho)$.
-
-Неавтономное множество $\hat{Z}$ называется \emph{инвариантным}, если для любых $q \in Q$ и $t \geq 0$ выполняется равенство
-$ \varphi^t(q, Z(q) ) = Z (\tau^t(q))$.
-
-
-\begin{defin}
-Неавтономное множество называется глобальным B-pullback аттрактором для коцикла $(\varphi, \tau)$, если оно компактно, инвариантно и является глобальным B-pullback притягивающим.
-\end{defin}
-
-Для доказательства существования B-pullback аттрактора мы будем использовать следующий результат (теорему Клоедена-Шмальфуза).
-\begin{theor} [\cite{kloeden}]
-\label{kloed}
-Пусть коцикл $(\varphi, \tau)$ имеет компактное глобальное B-pullback поглощающе множество $\hat{Z} = \left\{ Z(q) \right\}_{q \in Q}$.
-Тогда $(\varphi, \tau)$ имеет единственный глобальный B-pullback аттрактор  $\hat{A} = \left\{ A(q) \right\}_{q \in Q}$, где для любого ${q \in Q}$
-$$ A(q)= \cap_{t \in \mathbb{R}_+} \cup_{s \geq t, s \in \mathbb{R}_+} \overline{\varphi^s (\tau^{-s}(q),Z(\tau^{-s}(q))}.$$
-\end{theor}
-
-
-%\textbf{2. Существование B-pullback аттрактора для задачи нагрева}
-\section{Существование B-pullback аттрактора для задачи нагрева}
-
-Процесс микроволнового нагрева материала включает в себя механизм нагрева материала джоулевым теплом под действием микроволн.
-Он описывается с помощью парной системы из уравнений Максвелла и уравнения теплопроводности. Мы приводим задачу сразу для одномерного случая. Вывод одномерного случая приведен в \cite{yin2006}. Задача интенсивно изучалась в работах \cite{yin98}, \cite{yin98-2}, \cite{yin2006}, \cite{yin2001}.
-
-Пусть задана начально-краевая задача
-\begin{equation}
-\label{mh}
-\begin{array}{lll}
-w_{tt}-w_{xx}+ \sigma \left( \theta \right) w_t =0, & 0<x<1, & t>0 \\
-\theta_t -  \theta_{xx} = \sigma \left( \theta \right) w_t^2, & 0<x<1, & t>0
-\end{array}
-\end{equation}
-
-с граничными условиями
-\begin{equation}
-\label{mhbound}
-\begin{array}{ll}
-w\left( 0,t \right) = f_1(t), w\left( 1,t \right)=f_2(t), & t>0 \\
-\theta \left( 0,t \right) = \theta \left( 1,t \right) =0, & t>0
-\end{array}
-\end{equation}
-
-и начальными условиями
-\begin{equation}
-\label{mhinit}
- w\left( x,0 \right) = w_0 \left( x \right),
- w_t\left( x,0 \right) = w_1 \left( x \right),
- \theta \left( x,0 \right) = \theta_0 \left( x \right), \quad 0<x<1
-\end{equation}
-
-Физический смысл величин такой: $\theta$ - температура, $w$ - интеграл по времени от ненулевой компоненты электрического поля, $\sigma$ - электропроводность, $f_1, f_2$ - внешние возмущения электромагнитного поля.
-
-Предполагаем, что
-\begin{enumerate}
-\item [\textbf{(A1.1)}] $\sigma$ локально липшицева на $(0,+\infty)$;
-\item [\textbf{(A1.2)}] Существуют константы $0<\sigma_0 \leq \sigma_1$ такие, что $\sigma_0 \leq \sigma(z) \leq \sigma_1$ для любого $z>0$;
-\item [\textbf{(A1.3)}] $\sigma$ монотонно убывает.
-\item [\textbf{(A2)}] $w_0 \in L^2(0,1), w_1 \in L^2(0,1), \theta_0 \in L^2(0,1), \theta_0 \geq 0$ почти везде на $(0,1)$.
-\item [\textbf{(A3)}] $f_1,f_2$ принадлежат классу $C^2 (\mathbb{R})$ и существует константа $C$ такая, что функции $ \left| f_1' \right|, \left| f_2' \right|, \left| f_1'' \right|, \left| f_2'' \right| $ ограничены на $\mathbb{R}$ константой $C$.
-\end{enumerate}
-
-Мы будем использовать слабые решения, то есть решения, удовлетворяющими уравнению в смысле интегрального тождества. Определение слабых решений дано в \cite{yin2006}. Здесь мы приводим теорему существования слабого решения, модифицированную для одномерного случая.
-
-
-\begin{theor}[\cite{yin2006}]
-Существует глобальное слабое решение $(w(x,t), \theta(x,t))$ задачи (\ref{mh})-(\ref{mhinit}), причем $w \in C([0,T];L^2(0,1))$, $\theta \in L^2(0,T;H^1(0,1)) \cap C([0,T];L^2(0,1))$ для любого $T>0$.
-\end{theor}
-Предполагаем, что слабое решение единственно.
-
-Сведем задачу к задаче с однородными краевыми условиями. Обозначим
-$f(x,t)=f_1(t)(1-x)+f_2(t)x$ и введем замену $W(x,t)=w(x,t)-f(x,t)$.
-Получим систему
-\begin{equation}
-\label{mhhom}
-\begin{array}{lll}
-W_{tt}-W_{xx}+\sigma(\theta)W_t=f_{tt}-\sigma(\theta)f_t, & 0<x<1, & t>0 \\
-\theta_t - \theta_{xx} = \sigma(\theta)(W_t + f_t)^2 , & 0<x<1, & t>0
-\end{array}
-\end{equation}
-
-c начальными и граничными условиями
-\begin{equation} \label{hombound}
-W(0,t)=W(1,t)=0, \quad \theta \left( 0,t \right) = \theta \left( 1,t \right) =0, \quad t>0
-\end{equation}
-\begin{equation} \label{hominit}
-\begin{array}{ll}
-W(x,0)=W_0(x) = w_0(x)-f(x,0),  & 0<x<1\\
-W_t(x,0)=W_1(x) = w_1(x)-f_t(x,0), & 0<x<1\\
-\theta \left( x,0 \right) = \theta_0 \left( x \right), & 0<x<1.
-\end{array}
-\end{equation}
-Вместо предположения (A2) делаем предположение (A2'):
-\begin{itemize}
-\item [\textbf{(A2')}] $ W_0 \in H_0^1(0,1), W_1 \in L^2(0,1), \theta_0 \in L^2(0,1), \theta_0 \geq 0$ почти везде на $(0,1)$.
-\end{itemize}
-
-Введем коцикл, соответствующий задаче (\ref{mhhom})-(\ref{hominit}).
-Определим пространство ${M=H_0^1(0,1) \times L^2(0,1) \times (L^2(0,1) \cap \left\{ \theta: \theta \geq 0 \right\})}$ с нормой
-$$ {\left\| \left( w,v,\theta \right) \right\|}_M^2 = {\left\| w_x \right\|}_{L^2(0,1)}^2 + {\left\| v \right\|}_{L^2(0,1)}^2 + {\left\| \theta \right\|}_{L^1(0,1)}^2.$$
-В нашей ситуации $Q=\mathbb{R}$,\ $\tau^t(s)=t+s$,\ $\varphi^t(s,u_0)=u(t+s,s,u_0)$, где $u(t,s,u_0)=(W(\cdot,t), V(\cdot,t), \theta(\cdot,t))$- решение (\ref{mhhom})-(\ref{hominit}) такое, что $u(s,s,u_0)=u_0=(W_0, V_0, \theta_0)$.
-Существование и единственность слабого решения задачи позволяют нам сделать следующее утверждение.
-
-\begin{theor}
-Система (\ref{mhhom})-(\ref{hominit}) порождает коцикл $( \left\{ \varphi^t (s,\cdot)\right\}_{t \in \mathbb{R}_{+}, s \in \mathbb{R}},(M, {\left\| \cdot \right\|}_M) )$ над базисным потоком $(\left\{ \tau^t \right\}_{t \in \mathbb{R}},\mathbb{R}).$
-\end{theor}
-
-
-Ограниченность решения доказывалась в \cite{aims} с помощью функции Ляпунова
-$$
-\Phi\left( W, V, \theta \right) = \int_0^1 \left( W_x^2+ 2\lambda W V + V^2 + a \theta^2 \right) dx,
-$$
-для которой получена оценка
-$$
-\frac{d}{dt} \Phi \left(t \right) \leq -C_1 \Phi\left(t \right) + C_2,
-$$ где $\Phi (t) = \Phi \left( W(\cdot,t), V(\cdot,t), \theta(\cdot,t) \right)$.
-
-Но предположения, сделанные там, фактически требуют априорной оценки $\left\| u \right\|_{L^\infty}<C$. Мы докажем ограниченность решения другим методом. Для волнового уравнения с возмущением оставим метод функции Ляпунова, для уравнения типа теплопроводности применим теорию из \cite{pankov}.
-
-Рассмотрим отдельно волновое уравнение
-\begin{equation}
-\label{wave}
-W_{tt}-W_{xx}+\sigma(x,t)W_t=f_{tt}-\sigma(x,t)f_t, \quad 0<x<1, \quad t>s
-\end{equation}
-с граничными условиями
-\begin{equation}  \label{wavebound}
- W(0,t)=W(1,t)=0, \quad t>s
-\end{equation}
-и начальными условиями
-\begin{equation} \label{waveinit}
- W(x,s)=W_0, W_t(x,s)=W_1, \quad 0<x<1
-\end{equation}
-где $s \in \mathbb{R}$ произвольное.
-Сделаем предположения, следующие из предположений (A1)-(A3):
-
-\begin{enumerate}
-\item [\textbf{(A1.2*)}] существуют константы $0<\sigma_0 \leq \sigma_1$ такие, что $\sigma_0 \leq \sigma(x,t) \leq \sigma_1$ для любых $x \in (0,1), t \geq 0$.
-\item [\textbf{(A2*)}] $ W_0 \in H_0^1(0,1), W_1 \in L^2(0,1)$.
-\item [\textbf{(A3*)}] Функция $f$ $C^1$ - гладкая по $x$, $C^2$ - гладкая по $t$ и существует константа $C>0$ такая, что $\left| f_t \right| < C$, $\left| f_{xt} \right| < C$, $\left| f_{tt} \right| < C$ для любых $x \in (0,1), t \in \mathbb{R}$.
-\end{enumerate}
-При сделанных предположениях задача (\ref{wave}) имеет единственное решение $(W(\cdot,t),V(\cdot,t)) \in M_1 = H_0^1(0,1) \times L^2(0,1)$ (\cite{temam}).
-
-Запишем уравнение (\ref{wave}) в виде системы
-\begin{equation}
-\label{wavesys}
-\begin{array}{ll}
-W_t = V-f_t, \\
-V_t = W_{xx} - \sigma (x,t) V
-\end{array}
-\end{equation}
-и запишем начальные и граничные условия
-\begin{equation}  \label{wavesbound}
- W(0,t)=W(1,t)=0, \quad t>s
-\end{equation}
-\begin{equation} \label{wavesinit}
- W(x,s)=W_0, V(x,s)=V_0, \quad 0<x<1
-\end{equation}
-
-Рассмотрим функционал на $M_1$
-$$
-\Psi( W, V) = \left\| W_x \right\|^2 + 2 \lambda (W,V) + \left\| V \right\|^2,
-$$
-где $\lambda > 0$ -параметр, который будет выбран позднее.
-Норма и скалярное произведение здесь и далее рассматриваются в $L^2(0,1)$.
-
-Обозначим для краткости $\Psi (t) = \Psi \left( W(\cdot,t), V(\cdot,t) \right)$.
-Найдем производную  $\Psi(t)$ в силу системы (\ref{wavesys}). При этом все тождества и оценки, куда входит $\Psi(t)$, справедливы для почти всех $t \geq s$:
-$$\frac{d}{dt} \Psi \left(t \right) = -2 (\lambda \left\| W_x \right\|^2 + \lambda \sigma (W,V) + (\sigma - \lambda) \left\| V \right\|^2 + (f_{xt},W_x)+ \lambda (f_t,W))$$
-Для любых $\varepsilon_1 > 0, \varepsilon_2 > 0$, используя неравенство Коши, получаем соотношения
-\begin{equation}
-\label{cauchy1}
-(W_x, f_{xt}) \geq -\frac{\varepsilon_1}{2} \left\| W_x \right\|^2 - \frac{1}{2 \varepsilon_1} \left\| f_{xt} \right\|^2,
-\end{equation}
-
-\begin{equation}
-\label{cauchy2}
-(f_t, V) \geq - \frac{\varepsilon_2}{2} \left\| V \right\|^2 - \frac{1}{2 \varepsilon_2} \left\| f_t \right\|^2.
-\end{equation}
-Отсюда получаем неравенство
-$$\frac{d}{dt} \Psi \left(t \right) \leq -2 ((\lambda - \frac{\varepsilon_1}{2})\left\| W_x \right\|^2 + \lambda \sigma (W,V) + (\sigma - \lambda - \frac{\varepsilon_2}{2}) \left\| V \right\|^2).$$
-
-Возьмем $\lambda = \frac{\sigma_0}{2}$. При подходящих $\varepsilon_1, \varepsilon_2$ в оценках (\ref{cauchy1}), (\ref{cauchy2}) существует $\delta>0$ такое, что
-
-$$
-\frac{d}{dt} \Psi \left(t \right) \leq -\delta \Psi\left(t \right) + C_1,
-$$
-где $C_1 = \frac{1}{2 \varepsilon_1} \left\| f_{xt} \right\|^2 + \frac{1}{2 \varepsilon_2} \left\| f_t \right\|^2 >0$.
-Получаем оценку
-
-$$ \Psi (t) \leq e^{-\delta(t-s)} \Psi (s) + C_2,$$
-где $\delta>0$ и $C_2>0$, для любых $t,s$ таких, что $t \geq s$.
-
-Интерпретируем этот результат так. Пусть $(W(x,t;s), V(x,t;s))$ - решение начально-краевой задачи (\ref{wavesys}), (\ref{wavesbound}), (\ref{wavesinit}) c начальным временем $s$. Тогда для любого $t>0$ существуют $T>0$, $C>0$ такие, что $\Psi \left( W(\cdot,t;s), V(\cdot,t;s) \right) < C $ для любого $s \leq t-T$.
-Такая интерпретация будет использоваться для доказательства B-pullback поглощающего множества коцикла, порожденного задачей (\ref{mhhom})-(\ref{hominit}).
-
-Перейдем теперь к второму уравнению (\ref{mhhom}) типа теплопроводности.
-Приведем сначала некоторые результаты из \cite{pankov}. В указанной работе исследуются ограниченность и почти-периодичность по времени решений вариационных неравенств. Приведенное ниже эволюционное уравнение (\ref{evol}) является частным случаем вариационного неравенства.
-
-Пусть имеется тройка пространств $E \subset H \subset E'$, где $(E,\left\| \right\|_E)$ - рефлексивное банахово пространство, $H$ - гильбертово пространство, $E'$- пространство, сопряженное к $E$, $E$ непрерывно и плотно вложено в $H$. Далее, пусть $A(t):$ $E \rightarrow E'$ - семейство монотонных операторов и $F:$ $\mathbb{R}\rightarrow E'$ -измеримое отображение .
-Напомним, что оператор $A(t): E \rightarrow E'$ называется монотонным, если выполняется неравенство
-$$ (A(t)u-A(t)v, u-v) \geq 0, \ \forall u,v \in E.$$
-Здесь $(\cdot,\cdot)$ - скобка двойственности на $E \times E'$, совпадающая на $E \times E$ с ограничением на это пространство скалярного произведения из $H$.
-Рассматриваем эволюционное уравнение
-\begin{equation}
-\label{evol}
-\dot{y} + A(t)y=F(t).
-\end{equation}
-
-Нам также понадобится более сильное свойство, чем свойство монотонности. Допустим, что существует $\alpha>0$ такое, что
-\begin{equation}
-\label{strongmonot}
-(A(t)u- A(t)v, u-v) \geq \alpha \left\| u-v \right\|^2 \ \forall u,v \in E.
-\end{equation}
-
-Определим пространства функций
-$C_b (\mathbb{R}, E)$ - множество непрерывных функций $\xi: \mathbb{R} \rightarrow E$, для которых конечна величина $\sup_{t \in \mathbb{R}} \left\| \xi(t) \right\|_E$ и
-$BS^p (\mathbb{R}, E), 1 \leq p < \infty$ - подпространство в $L^p_{loc}(\mathbb{R}, E)$, состоящее из функций с конечной нормой
-$$ \left\| \xi \right\|_{S^p} = \sup_{t \in \mathbb{R}} \left(\int_t^{t+1} \left\| \xi(s) \right\|_E^p ds \right).$$
-
-Рассмотрим теперь уравнение типа теплопроводности в виде
-$$ \theta_t - \theta_{xx} = \sigma(\theta)g(x,t).$$
-Предполагаем, что $g(x,t) \geq 0$, измерима и равномерно ограничено по $t$. В частности, у нас $g(x,t)= (W_t(x,t) + f_t(x,t))^2$. Для $\sigma$ действуют предположения (A1.1)-(A1.3). Представим $\sigma$ в виде $\sigma(\theta) = \sigma_0 + \tilde{\sigma}(\theta)$, где $\sigma_0$ из предположения (A1.2). Мы имеем краевую задачу
-\begin{equation}
-\label{heat}
-\theta_t - \theta_{xx} - \tilde{\sigma}(\theta) g(x,t) = \sigma_0 g(x,t), \quad 0<x<1, \quad t>s
-\end{equation}
-\begin{equation}
-\label{heatbound}
-\theta \left( 0,t \right) = \theta \left( 1,t \right) =0, \quad t>s
-\end{equation}
-\begin{equation}
-\label{heatinit}
-\theta \left( x,s \right) = \theta_0 \left( x \right), \quad 0<x<1.
-\end{equation}
-
-Начально-краевая задача (\ref{heat})-(\ref{heatinit}) порождает эволюционное уравнение (\ref{evol}), где $ A(t)y = -y_{xx}-g(x,t)\tilde{\sigma}(y) $ для $y \in E$ и $F(t) = \sigma_0 g (\cdot,t)$.
-
-В нашей ситуации $E=H_0^1(0,1)$ и $H=L^2(0,1)$.
-Проверим условие (\ref{strongmonot}). Пусть $\eta ,\vartheta \in H_0^1(0,1)$, $\zeta = \eta - \vartheta$. Тогда имеем
-$$ (A(t)\eta - A(t)\vartheta , \eta - \vartheta) = (-\zeta_{xx},\zeta) + ( g (\cdot,t) ( \tilde{\sigma}(\vartheta) - \tilde{\sigma}(\eta)), \zeta)=$$
-$$ =(\zeta_x, \zeta_x) + ( g (\cdot,t) ( \tilde{\sigma}(\vartheta) - \tilde{\sigma}(\eta)), \zeta) \geq \left\| \zeta \right\|^2.$$
-Используется неравенство Пуанкаре и предположение о монотонном убывании $\sigma$.
-
-Применяя теорему 2.2 (\cite{pankov}) (учитывая другие условия, которые мы здесь не приводим), заключаем, что уравнение (\ref{evol}) имеет единственное решение $y \in BS^2(\mathbb{R},H_0^1(0,1)) \cap C_b(\mathbb{R},L^2(0,1))$. В терминах уравнения (\ref{heat}) это означает, что существует константа С такая, что $\left\| \theta (\cdot,t;s) \right\| \leq C$ для любых $t, s \in \mathbb{R}$ таких, что $s \leq t$.
-
-Кроме того, по предложению 2.2 (\cite{pankov}) мы имеем оценку
-\begin{equation}
-\label{stab}
-\left\| \theta_1(\cdot,t;s) - \theta_2(\cdot,t;s) \right\| \leq e^{-c(t-s)} \left\| \theta_{01} - \theta_{02} \right\|,
-\end{equation}
-где $\theta_i (x,t;s)$ - решение (\ref{heat}) с начальными данными $\theta_{0i}$ и начальным временем $s$.
-
-Покажем теперь, что константа $C$ не зависит от начальных данных. Действительно, имеется представление
-$$ \theta(x,t;s) = \int_0^1 G(x,y;t,0) \theta_0 (y)dy + \int_s^t \int_0^1 G(x,y;t,r) g(y,r) dr dy,$$
-где $G(x,y;t,r)$ - функция Грина уравнения теплопроводности с граничными условиями Дирихле. От начальной температуры зависит только первый член, для него имеется оценка с некоторой константой $C$ $$ \left\| G(x,y;t,0) \right\| \leq \frac{C}{\sqrt {t-s}},$$ то есть вклад начальных данных стремится к нулю.
-
-Мы можем устремлять начальное время к $-\infty$, что соответствует сдвигу времени в члене $g(x,t)$.
-\begin{propos}
-Пусть $\theta(\cdot,t;s)$ - решение задачи (\ref{heat})-(\ref{heatinit}). Существует константа $C$ такая, что для любого $t$ и любого $s \leq t$ справедливо неравенство ${\left\| \theta(\cdot,t;s) \right\| \leq C}$, где $C$  не зависит от $\theta_0$.
-\end{propos}
-
-Из полученных выше равномерной ограниченности по $t$ решений волнового уравнения и уравнения теплопроводности очевидно следует существование глобально B-pullback поглощающего множества коцикла $(\varphi, \tau)$.
-\begin{theor}
-Коцикл $(\varphi, \tau)$, порожденный задачей $(\ref{mhhom})-(\ref{hominit})$, имеет глобально B-pullback поглощающее множество.
-\end{theor}
-
-Применяя Теорему \ref{kloed}, получаем следующее утверждение.
-\begin{theor}
-\label{theorattr}
-Коцикл $(\varphi, \tau)$, порожденный задачей $(\ref{mhhom})-(\ref{hominit})$, имеет глобальный B-pullback аттрактор.
-\end{theor}
-
-
-%\textbf{3. Определяющие функционалы для коциклов}
-\section{Определяющие функционалы для коциклов}
-
-В изучении асимптотических свойств бесконечномерных динамических систем важным является вопрос нахождения функционалов от решений, однозначно определяющих асимптотику системы.
-Для динамических систем эта теория хорошо развита (\cite{chueshov}). Первые важные результаты были получены для уравнений Навье-Стокса (\cite{foias}).
-Существование конечной системы определяющих функционалов для бесконечномерной системы означает физически, что динамика системы асимптотически конечномерна.
-Если система имеет глобальный аттрактор, то нахождение определяющих функционалов можно рассматривать как апроксимацию аттрактора. Вообще говоря, существование конечной системы определяющих функционалов является результатом, независимым от конечномерности аттрактора.
-Есть несколько различающиеся варианты определений понятия определяющих функционалов (\cite{kantz}). Сначала мы приведем одно из них для случая динамических систем. В \cite{chueshov} оно формулируется для эволюционных систем, порожденных автономными уравнениями с частными производными.
-
-
-Пусть $(\left\{\phi^t \right\}_{t \in \mathbb{R}_{+}},(E,\left\| \cdot \right\|) )$ -динамическая система на банаховом пространстве $(E,\left\| \cdot \right\|)$.
-
-\begin{defin}[\cite{chueshov}]
-Множество $\left\{ l_j \right\}_{j=1}^N$ линейных непрерывных функционалов на $E$ называется множеством асимптотически определяющих функционалов для динамической системы $(\left\{\phi^t \right\}_{t \in \mathbb{R}_{+}},(E,\left\| \cdot \right\|) )$, если для любых $u_1, u_2 \in E$ из условия
-$$ \lim_{t \rightarrow +\infty} \left| l_j(\phi^t(u_1))- l_j(\phi^t(u_2))\right|=0,  \  j=1,...,N$$
-следует, что
-$$ \lim_{t \rightarrow +\infty}  \left\| \phi^t(u_1) - \phi^t(u_2) \right\|=0. $$
-\end{defin}
-
-Введем определяющие моды, являющиеся важным частным случаем определяющих функционалов.
-
-\begin{defin}
-Определяющими модами для динамической системы $(\left\{\phi^t \right\}_{t \in \mathbb{R}_{+}},(H,(\cdot,\cdot)) )$ на гильбертовом пространстве $(H,(\cdot,\cdot))$ называются определяющие функционалы $l_j(\cdot)=(\cdot,e_j)$ , где $\left\{e_j\right\}_1^N$ - некоторые элементы $H$.
-\end{defin}
-Существование конечного числа определяющих мод означает, что асимптотика системы однозначно определяется проекцией на некоторое конечномерное подпространство.
-Другими распространенными примерами определяющих функционалов являются определяющие узлы и определяющие элементы объема (\cite{titi}).
-
-Перейдем теперь к введению определяющих функционалов для коциклов. В работе \cite{langa} рассматриваются определяющие функционалы для процессов, то есть для частного случая коциклов. Мы обобщим это понятие на коциклы. Пусть имеется коцикл $( \left\{ \varphi^t (q,\cdot)\right\}_{q \in Q, t \in \mathbb{R}_{+}}, (M, \left\| \cdot \right\|))$ над базисным потоком $(\left\{ \tau^t \right\}_{t \in \mathbb{R}},(Q,d))$.
-
-\begin{defin}
-Множество $\left\{ l_j \right\}_{j=1}^N$ линейных непрерывных функционалов на банаховом пространстве $(M, \left\| \cdot \right\|)$ называется множеством pullback- асимптотически определяющих функционалов для коцикла $( \left\{ \varphi^t (q,\cdot)\right\}_{q \in Q, t \in \mathbb{R}_{+}}, (M, \left\| \cdot \right\|))$ над базисным потоком $(\left\{ \tau^t \right\}_{t \in \mathbb{R}},(Q,d))$,  если из условия
-$$ \lim_{t \rightarrow +\infty} \left| l_j(\varphi^t(\tau^{-t}(q),u_1))- l_j(\varphi^t(\tau^{-t}(q),u_2))\right|=0  $$
-для любых $q \in Q$, $u_1, u_2 \in M$, $j=1,..,N$
-следует
-$$ \lim_{t \rightarrow +\infty}  \left\| \varphi^t(\tau^{-t}(q),u_1) - \varphi^t(\tau^{-t}(q),u_2) \right\|=0. $$
-
-\end{defin}
-Пусть $(\varphi, \tau)$ - коцикл с гильбертовым фазовым пространством $H$, $P$ - проектор из $H$ на некоторое конечномерное подпространство в $H$, $I-P$ -проектор на его ортогональное дополнение.
-Предположим, что
-\begin{itemize}
-\item [\textbf{(H1)}] Неавтономное множество $\left\{ Z(q)\right\}_{q \in Q}$ положительно инвариантно для $(\varphi, \tau)$, то есть для любых $s \geq 0, q \in Q$ справедливо включение $\varphi^s(q,Z(q)) \subset Z(\tau^s)(q)$.
-\item [\textbf{(H2)}] Для любого $q \in Q$ существует $\delta=\delta(q) \in (0,1)$ такое, что для любых $s \geq 1, {u,v \in Z(\tau^{-s}(q))}$
-$$ \left\| (I-P)(\varphi^1(\tau^{-s}(q),u) - \varphi^1(\tau^{-s}(q),v)) \right\| \leq \delta(q) \left\| u-v \right\|.$$
-\end{itemize}
-Далее, пусть $a_1, a_2: Q \rightarrow H$ - отображения такие, что $a_i(q) \in Z(q)$ для любого $q \in Q$. Сделаем предположение
-\begin{itemize}
-\item [\textbf{(H3)}] Для любых $\varepsilon >0$, $t \geq 0$ существует натуральное $L=L(\varepsilon)$ такое, что для любого $q \in Q$
-$$ \delta(q)^{2L} \left\| \varphi^{t-L}(q,a_1(q)) - \varphi^{t-L}(q,a_2(q)) \right\|^2 < \varepsilon ,$$
-где $\delta(q)$ берется из предположения (H2), причем $L(\varepsilon) \rightarrow \infty$ при $\varepsilon \rightarrow 0$.
-\end{itemize}
-
-Заметим, что если коцикл $(\varphi, \tau)$ имеет глобальный B-pullback аттрактор $\left\{ A(q) \right\}_{q \in Q}$, то $A(q) \subset Z(q)$ для любого $q \in Q$.
-
-Следующая теорема является обобщением теоремы 14 из \cite{langa} на случай коцикла.
-\begin{theor}
-\label{detmodes}
-Пусть выполнены предположения (H1)-(H3) и существует $\beta>0$ такое, что для любого $q \in Q$
-$$ \lim_{t \rightarrow +\infty} \left\| P(\varphi^t(\tau^{-t}(q),a_1(q))- \varphi^t(\tau^{-t}(q),a_2(q)))\right\| \leq \beta.$$
-Тогда
-\begin{equation} \label{modesconclus}
-\lim_{t \rightarrow +\infty} \left\| \varphi^t(\tau^{-t}(q),a_1(q))- \varphi^t(\tau^{-t}(q),a_2(q))\right\| \leq \beta.
-\end{equation}
-\end{theor}
-\textbf{Доказательство.}
-Очевидно, что для любых $t \geq 0$, $q \in Q$
-$$ \left\| \varphi^t(\tau^{-t}(q),a_1(q))- \varphi^t(\tau^{-t}(q),a_2(q))\right\|^2 = $$ $$
- \left\| P(\varphi^t(\tau^{-t}(q),a_1(q))- \varphi^t(\tau^{-t}(q),a_2(q)))\right\|^2 +$$
-\begin{equation}
-\label{modes1}
-+\left\| (I-P)(\varphi^t(\tau^{-t}(q),a_1(q))- \varphi^t(\tau^{-t}(q),a_2(q)))\right\|^2.
-\end{equation}
-Используя предположение(H2) и представляя отображение коцикла как композицию двух отображений, с учетом (\ref{modes1}) получим
-$$\left\| P(\varphi^t(\tau^{-t}(q),a_1(q))- \varphi^t(\tau^{-t}(q),a_2(q)))\right\|^2 +$$ $$+\left\| (I-P)(\varphi^t(\tau^{-t}(q),a_1(q))- \varphi^t(\tau^{-t}(q),a_2(q)))\right\|^2 \leq$$
-$$\left\| P(\varphi^t(\tau^{-t}(q),a_1(q))- \varphi^t(\tau^{-t}(q),a_2(q)))\right\|^2 +$$ $$\delta^2(q) \left\| P( \varphi^{t-1}(q, a_1(q)) - \varphi^{t-1}(q, a_1(q))) \right\|^2 +$$
-\begin{equation}
-\label{modes2}
-+\delta^2(q) \left\| (I-P)( \varphi^{t-1}(q, a_1(q)) - \varphi^{t-1}(q, a_1(q))) \right\|^2 .
-\end{equation}
-Через конечное число $L$ таких шагов, используя (H2) и (\ref{modes2}), мы получим
-
-$$ \left\| \varphi^t(\tau^{-t}(q),a_1(q))- \varphi^t(\tau^{-t}(q),a_2(q))\right\|^2 \leq$$
-$$ \sum_{i=0}^L \delta(q)^{2i} \left\| P(\varphi^{t-i}( \tau^{-t}(q),a_1(q)) - \varphi^{t-i}( \tau^{-t}(q), a_2(q)) ) \right\|^2+$$
-\begin{equation}
-\label{modes3} \delta(q)^{2L} \left\| \varphi^{t-L}(q,a_1(q)) - \varphi^{t-L}(q,a_2(q)) \right\|^2
-\end{equation}
-Для $\varepsilon>0$ выберем $L$ по предположению (H3). Кроме того, существует $t_0(L)$ такое, что для $t \geq t_0(L)$
-$$ \sum_{i=0}^L \delta(q)^{2i} \left\| P(\varphi^{t-i}( \tau^{-t}(q),a_1(q)) - \varphi^{t-i}( \tau^{-t}(q), a_2(q)) ) \right\|^2+$$
-\begin{equation}
-\label{modes4}
-+\delta(q)^{2L} \left\| \varphi^{t-L}(q,a_1(q)) - \varphi^{t-L}(q,a_2(q)) \right\|^2 \leq \beta +2 \varepsilon.
-\end{equation}
-Объединяя (\ref{modes3}) и (\ref{modes4}), получаем оценку
-$$ \left\| \varphi^t(\tau^{-t}(q),a_1(q))- \varphi^t(\tau^{-t}(q),a_2(q))\right\|^2 \leq \beta +2 \varepsilon.$$
-При $t \rightarrow \infty$  число $L$ может быть выбрано сколь угодно большим и по предположению (H3) $\varepsilon$ при этом можно сделать сколь угодно малым. Отсюда получаем заключение теоремы.$\square$
-
-
-Приведенное ниже следствие Теоремы \ref{detmodes} дает условие существования конечного числа определяющих мод для коцикла $(\varphi, \tau)$.
-\begin{corol}
-Пусть существует $\beta>0$ такое, что для любых $q \in Q, u,v \in H $
-$$ \lim_{t \rightarrow +\infty} \left\| P(\varphi^t(\tau^{-t}(q),u)- \varphi^t(\tau^{-t}(q),v) )\right\| \leq \beta.$$
-Тогда $$ \lim_{t \rightarrow +\infty} \left\| \varphi^t(\tau^{-t}(q),u)- \varphi^t(\tau^{-t}(q),v) \right\| \leq \beta.$$
-\end{corol}
-\textbf{Доказательство}.
-Для некоторого $L>0$ существует $q=q(u,v,L) \in Q$ такое, что $\varphi^{t-L}(q,u), \varphi^{t-L}(q,v) \in Z(\tau^{-L}(q))$. Применим Теорему \ref{detmodes} для $a_1(q)=\varphi^{t-L}(q,u), a_2(q)=\varphi^{t-L}(q,v)$. $\square$
-
-Мы приводим другую версию этой теоремы, приспособленную для задачи нагрева.
-Пусть имеется коцикл $(\varphi, \tau)$ с фазовым пространством $M=M_1 \times M_2$, где $M_1$ гильбертово, а $M_2$ - банахово пространство, вообще говоря, не обязательно гильбертово. Отображение $\varphi$ имеет вид $\varphi = (\varphi_1,\varphi_2)$, то есть $\varphi_1: \mathbb{R}_+ \times Q \times M_1 \times M_2 \rightarrow M_1$, $\varphi_2: \mathbb{R}_+ \times Q \times M_1 \times M_2 \rightarrow M_2$.
-\begin{theor}
-\label{theormodes}
-Пусть выполнены предположения (H1) для коцикла $(\varphi, \tau)$, где $\varphi = (\varphi_1,\varphi_2)$, и предположения (H2) и (H3) для семейства отображений $\left\{ \varphi_1^t (q,\cdot)\right\}_{t \in \mathbb{R}_{+}, q \in Q}$.
-Пусть также выполняется оценка
-$$\left\| \varphi_2^t (\tau^{-t}(q), v_1, u_1) - \varphi_2^t (\tau^{-t}(q), v_2, u_2) \right\|_{M_2} \leq e^{-ct} \left\| u_1 - u_2 \right\|_{M_2} $$
-с некоторой константой $c>0$ для любых $t>0$, $u_2, u_1 \in M_2$, $v_2, v_1 \in M_1$.
-Тогда результат Теоремы \ref{detmodes} справедлив для коцикла $(\varphi, \tau)$.
-\end{theor}
-\textbf{Доказательство}
-аналогично доказательству Теоремы \ref{detmodes} для компоненты $\varphi_1$ отображения $\varphi$, при этом для компоненты $\varphi_2$ аналог свойства (\ref{modesconclus}) выполнен автоматически.$\square$
-
-
-\section{Устойчивые интегралы для коцикла}
-
-В последних двух параграфах мы изучим условия существования почти-периодического интеграла для коцикла.
-Мы используем подход, который подробно был описан в \cite{hm1} для процессов. В ходе доказательства мы обобщим основные
- понятия на язык коциклов и приведём аналог теоремы, которая гарантирует существование почти-периодического интеграла.
-
-
-Здесь и далее предполагаем, что $(M, \|\cdot\|)$ - линейное, полное метрическое пространство.
-Напомним, что $(\varphi, \tau)$ обозначает, в зависимости от контекста, коцикл
-$(\{\varphi^t(q,\cdot) \}_{t\in \mathbb{R}_+, q\in Q}, (M, \|\cdot\|))$ над базисным потоком
- $(\{\tau^t\}_{t\in \mathbb{R}_+}, (Q,d))$. Предполагаем следующее свойство:
-
-\begin{enumerate}
-\item [\textbf{(C)}] Коцикл $(\varphi, \tau)$ непрерывен в области определения.
-\end{enumerate}
-
-Обозначим через $Co$ множество всех коциклов на $M$ над базисным потоком $(\{\tau^t\}_{t\in \mathbb{R}_+}, (Q,d))$.
-Для $q\in Q$ и $\varphi \in Co$ определим сдвиг $\sigma^s\varphi$ коцикла $(\varphi, \tau)$ как
-\[
-\sigma^s\varphi(t, q, u):= \varphi^t(\tau^s(q),u), ~t,s \in \mathbb{R}_+, u\in M, q\in Q,
-\]
-и множество
-\[
-\gamma_\sigma(\varphi)= \bigcup_{s\in \mathbb{R}_+} \sigma^s \varphi.
-\]
-Очевидно, что $\gamma_{\sigma}(\varphi) \subset Co$.
-
-
-Обозначим через $H_{\sigma}(\varphi)$ все функции $\psi : \mathbb{R}_+\times Q\times M \rightarrow M$ такие, что для некоторой последовательности $\{k_n\}\subset R$, $\{\sigma^{k_n}\varphi\}$ сходится к $\psi$ поточечно на $\mathbb{R}_+\times Q\times M$ так что $\lim_{n \rightarrow \infty}(\sigma^{k_n}\varphi)(t, q, u)=\psi^t(q, u), ~(t,q,u)\in \mathbb{R}_+\times Q\times M$.
-
-
-Множество $H_{\sigma}(\varphi)$ рассматривается как топологическое пространство и называется оболочкой коцикла
-$(\varphi, \tau)$.
-
-
-Рассмотрим коцикл $(\varphi, \tau)$ с фазовым пространством $M$ удовлетворяющий условию
-\[
-H_{\sigma}(\varphi)\subset Co.
-\]
-
-
-Не трудно видеть, что множество $H_{\sigma}(\varphi)$ инвариантно относительно сдвига $\sigma^s$, $s\in \mathbb{R}_+$.
-Предположим, что $H_{\sigma}(\varphi)$ секвенциально компактно. Пусть $\omega_{\sigma}(\varphi)$ обозначает
-$\omega-$предельное множество коцикла $(\varphi, \tau)$ относительно сдвига $\sigma^s$.
-
-\begin{defin}
- Неавтономное множество $\hat{Z}=\{Z(q)\}_{q \in Q}$ называется интегралом для коцикла $(\varphi, \tau)$, если оно инвариантно для
- $(\varphi, \tau)$ и является непрерывным отображением  $Z: Q \rightarrow M$.
-\end{defin}
-
-Далее предполагаем что существует интеграл $Z$ на $Q$ коцикла $(\varphi, \tau)$ такой,
-что множество $\hat{Z}=\{Z(q): q\in Q\}$ относительно компактно в $M$.
-
-
-Из свойства непрерывности косого произведения (C) вытекает, что
-\[
-S^{t}(\tau^{s}(q), Z(\tau^s(q))) = (\tau^t(\tau^s(q)), \varphi^t(\tau^s(q), Z(\tau^s(q)))) = (\tau^{s+t}(q), Z(\tau^{s+t}(q)))
-\]
-стремится к
-$(\tau^s(q), Z(\tau^{s}(q)))$ при $t \rightarrow 0+$ равномерно относительно $s\in \mathbb{R}_+, q\in Q$;
-следовательно интеграл $Z$ на $Q$ должен быть равномерно непрерывен.
-Используя теорему Арцела-Асколи и секвенциальную компактность $H_{\sigma}(\varphi)$, получим, что для любой последовательности $\{k^{'}_n\}\subset \mathbb{R}_+$, существуют подпоследовательность $\{k_n\}\subset \mathbb{R}_+$, $\psi\in H_{\sigma}(\varphi)$ и функция $Y :Q \rightarrow M$ такая, что
-\[
-\lim_{n \rightarrow \infty}\sigma^{k_n}\varphi = \psi
-\]
- и
-\[
-\lim_{n \rightarrow \infty} Z(\tau^{(\cdot)+k_n}(q))=Y(\tau^{(\cdot)}(q))
-\]
-равномерно на любом компакте в $Q$. В этом случае будем писать $(Z^{k_n}, \sigma^{k_n}\varphi) \rightarrow (Y, \psi)$ компактно на $Q$.
-
-
-Обозначим через $\Omega(Z, \varphi)$ множество всех $(Y, \psi)$ таких, что $(Z^{k_n}, \sigma^{k_n}\varphi) \rightarrow (Y, \psi)$ компактно на $Q$ для некоторой последовательности $\{k_n\}\subset \mathbb{R}_+$ такой что $k_n \rightarrow \infty$ при $n \rightarrow \infty$.
-
-Включение $(Y, \psi) \in \Omega(Z, \varphi)$ мы будем записывать также в виде $Y\in \omega_{\psi}(Z)$.
-
-В этом случае, $Y$ - интеграл для коцикла $\psi$, то есть удовлетворяет условию
-\[
-\psi^t(q, Y(q))=Y(\tau^t(q)),~ t\in \mathbb{R}_+, q\in Q.
-\]
-
-Введём множество $\mathcal{O}_{\varepsilon}(u_0)=\{u\in M : \|u - u_0\|<\varepsilon\}$,
-для любых $u_0\in M$ и $\varepsilon >0$.
-
-\begin{defin}
- Интеграл $Z: Q \rightarrow M$ коцикла $(\varphi, \tau)$ называется
-\begin{enumerate}
-\item равномерно устойчивым относительно $q \in Q$, если для любого $\varepsilon >0$ существует $\delta:=\delta(\varepsilon)>0$ такое, что
-    \[
-    \varphi^t(q, \mathcal{O}_{\delta}(Z(q)))\subset \mathcal{O}_{\varepsilon}(Z(\tau^t(q))),~ t\in \mathbb{R}_+, q\in Q.
-    \]
-\item равномерно асимптотически устойчивым относительно $q \in Q$, если оно равномерно устойчиво и существует $\delta_0>0$
-такое, что для любого $\varepsilon >0$ существует $t_0>0$ такое что
-    \[
-    \varphi^t(q, \mathcal{O}_{\delta_0}(Z(q)))\subset \mathcal{O}_{\varepsilon}(Z(\tau^t(q))),~ t\geq t_0, q\in Q.
-    \]
-\end{enumerate}
-\end{defin}
-
-
-\section{Почти-периодические интегралы для \\ почти-периодических коциклов}
-
-\begin{defin}
-Коцикл $\varphi: \mathbb{R}_+ \times Q \times M \rightarrow M$, будем называть почти-периодическим, если $\varphi^t(q, u)$ почти-периодический по $q$, где $(t,u)$ из произвольного ограниченного множества.
-\end{defin}
-
-Пусть $(\varphi, \tau)$ почти-периодический коцикл с фазовым пространством $M$.
-
-По обобщённой теореме Бохнера $\omega_\sigma(\varphi) = H_\sigma(\varphi)$ - минимальное множество.
-
-Кроме того, для любого $\psi\in H_\sigma(\varphi)$ существует последовательность $\{k_n\}\subset \mathbb{R}_+$ такая, что $\varphi^t(\tau^{k_n}(q), u) \rightarrow \psi^t(q, u)$ при $n \rightarrow \infty$ равномерно по $q\in Q$, $(t,u)$ из произвольного ограниченного множества в $\mathbb{R}_+ \times M$.
-
-Рассмотрим метрику $\varrho$ на $H_\sigma(\varphi)$ определённую формулой
-\[
-\varrho(\psi, \tilde{\psi})=\sum_{n=0}^{\infty}\frac{1}{2^n}\frac{\varrho_n(\psi, \tilde{\psi})}{1+\varrho_n(\psi, \tilde{\psi})},
-\]
-где $\varrho_n(\psi, \tilde{\psi})=\sup\{\|\psi^t(q, u) - \tilde{\psi}^t(q, u)\|:0\leq t\leq n, q\in Q, \|u - u_0\| \leq n\}$, и $u_0$ - фиксированный элемент из $M$. Тогда ${\psi}\in H_\sigma(\varphi)$ означает, что $\rho(\sigma^{k_n}\varphi, {\psi})\rightarrow 0$ при $n \rightarrow \infty$, для некоторой последовательности $\{k_n\}\subset \mathbb{R}_+$.
-
-\begin{defin}
-Интеграл $Z$ на $Q$ называется асимптотически почти-периодическим если он является суммой непрерывной почти-периодической функции $Z_1(q)$ и непрерывной функции $Z_2(q)$ определённой на $Q$ которая стремится к нулю
-\[
-Z(q)=Z_1(q) + Z_2(q).
-\]
-\end{defin}
-
-
-Пусть $Z$ - интеграл на $Q$ такой, что множество $\hat{Z}=\{Z(q): q\in Q\}$ относительно компактно в $M$.
-Для случая $Q=\mathbb{R}$ известно (\cite{hmy1}), что интеграл $Z$ является асимптотически почти-периодическим тогда и только тогда,
-когда выполнено следующее свойство:
-
-\begin{enumerate}
-\item [\textbf{(L)}] Для любой последовательности $\{k^{'}_n\}$ такой, что $k^{'}_n \rightarrow \infty$, существует подпоследовательность $\{k_n\}$, для которой $Z(\tau^{k_n}(q))$ сходится равномерно на $Q$.
-\end{enumerate} 
-
-Сейчас для интеграла $Z$ на $Q$ почти-периодического коцикла $(\varphi, \tau)$ рассмотрим следующее свойство:
-
-\begin{enumerate}
-\item [\textbf{(A)}] Для любого $\varepsilon >0$ существует $\delta(\varepsilon)>0$ такое, что для некоторого $q_0 \in Q$, верно $Y(\tau^{t}(q_0))\in \mathcal{O}_{\varepsilon}(Z(\tau^{h + t}(q_0)))$ для всех $t \geq 0$ при условии, что
- $(Y, \psi) \in \Omega(Z, \varphi)$, $Y(q_0)\in \mathcal{O}_{\delta(\varepsilon)}(Z(\tau^{h}(q_0)))$ и
- $\varrho(\sigma^{h}\varphi, \psi) < \delta(\varepsilon)$, для некоторого $h \geq 0$.
-\end{enumerate} 
-%====================================
-\begin{theor}
-Предположим, что $Z$ - интеграл на $Q$ почти-периодического коцикла $(\varphi, \tau)$ такой, что множество $\hat{Z}=\{Z(q): q\in Q\}$ относительно компактно в $M$. Тогда $Z$ асимптотически почти-периодической тогда и только тогда, когда выполнено Свойство (A).
-\end{theor}
-
-\textbf{Доказательство}. Предположим, что для $Z(q)$ выполнено Свойство (A) и пусть $\{t^{'}_n\}$ последовательность, такая что $t^{'}_n\rightarrow \infty$ при $n\rightarrow \infty$.
-
-Тогда существует подпоследовательность $\{t_n\}$ и пара $(Y, \psi)\in\Omega(Z, \varphi)$ такие, что $(Z^{t_n}, \sigma^{t_n}\varphi)\rightarrow (Y, \psi)$ компактно на $Q$.
-
-Для любого $\varepsilon > 0$ выберем $n_0(\varepsilon) > 0$ такое, что если $n>n_0(\varepsilon)$, $q_0 \in Q$
-тогда $Y(q_0)\in \mathcal{O}_{\delta(\varepsilon)}(Z(\tau^{t_n}(q_0)))$ и $\varrho(\sigma^{t_n}\varphi, \psi) < \delta(\varepsilon)$, где $\delta(\varepsilon)$ из Свойства (A).
-
-Откуда следует, что
-\[
-Y(\tau^{t}(q_0))\in \mathcal{O}_{\varepsilon}(Z(\tau^{t + t_n}(q_0))), ~t \geq 0.
-\]
-
-Таким образом $Z$ удовлетворяет Свойству (L) и значит асимптотически почти-периодический.
-
-Предположим сейчас, что $Z$ - интеграл, но Cвойство $(A)$ не выполняется. Тогда существуют $\varepsilon > 0$ и последовательности $(Y^n, \psi^n)\in \Omega(Z, \varphi)$, $h_n\geq 0$ и $t_n\geq 0$ такие, что для некоторого $q_0 \in Q$
-выполнено следующее
-\begin{equation} \label{eq1}
-Y^n(\tau^{t_n}(q_0))\in \partial \mathcal{O}_\varepsilon(Z(\tau^{t_n + h_n}(q_0))),
-\end{equation}
-\begin{equation} \label{eq2}
-Y^n(q_0)\in \mathcal{O}_{\frac{1}{n}}(Z(\tau^{h_n}(q_0))),
-\end{equation}
-\begin{equation} \label{eq3}
-\varrho(\psi^n, \sigma^{h_n}\varphi)<\frac{1}{n},
-\end{equation}
-
-где $\partial \mathcal{O}_\varepsilon$ граница $\mathcal{O}_\varepsilon$.
-
-Мы можем предположить, что для функции $Y(q)$
-\begin{equation} \label{eq4}
-\|Y^n(q_0) - Y(q_0)\|\rightarrow 0
-\end{equation}
-равномерно на $Q$ при $n\rightarrow \infty$, потому что $Y^n \in \Omega(Z)$ и  $Z(q)$ асимптотически почти-периодические.
-
-Покажем, что $h_n \rightarrow \infty$. Пусть это не так. Тогда можно предположить, что существует $h\geq 0, h_n\rightarrow h$ при $n\rightarrow \infty$. Тогда из неравенства треугольника получим, что
-\[
-\varrho(\sigma^{h}\varphi, \psi^n) \leq \varrho(\sigma^{h}\varphi, \sigma^{h_n}\varphi) + \varrho(\sigma^{h_n}\varphi, \psi^n),
-\]
-и из (\ref{eq3}) имеем $\varrho(\sigma^{h}\varphi, \psi^n)\rightarrow 0$, при $n\rightarrow \infty$.
-
-
-Здесь заметим, что $\varphi^t(\tau^{s+h}(q_0), Y(\tau^{s}(q_0))) = Y(\tau^{t+s}(q_0))$, потому что \[
-\varphi^t(\tau^{s+h}(q_0), Y(\tau^{s}(q_0)))=(\sigma^{h}\varphi)(t, \tau^{s}(q_0), Y(\tau^{s}(q_0)))
-\]
-\[ =\lim_{n\rightarrow \infty}{(\psi^n)}^t(\tau^{s}(q_0), Y^n(\tau^{s}(q_0)))=\lim_{n\rightarrow \infty}Y^n(\tau^{t+s}(q_0)).
-\]
-
-Поскольку
-\[
-\|Z(\tau^{h}(q_0)) - Y(q_0)\| \leq
-\]
-\[
-\| Z(\tau^{h}(q_0)) - Z(\tau^{h_n}(q_0))\| + \|Z(\tau^{h_n}(q_0)) - Y^n(q_0)\| + \| Y^n(q_0) - Y(q_0)\|
-\]
-и
-\[
-\| Z(\tau^{h}(q_0)) - Z(\tau^{h_n}(q_0))\| \rightarrow 0
-\]
-при $n\rightarrow \infty$, то опираясь на (\ref{eq2}) и (\ref{eq4}) получим, что $\| Z(\tau^{h}(q_0)) - Y(q_0)\| =0$.
-
-Тогда
-\[
-Z(\tau^{t + h}(q_0)) = \varphi^t(\tau^{h}(q_0), Z(\tau^{h}(q_0)))= \varphi^t(\tau^{h}(q_0),Y(q_0))=Y(\tau^{t}(q_0))
-\]
-для $t\in \mathbb{R}_+$. В частности,
-\begin{equation} \label{eq5}
-\| Z(\tau^{t_n + h}(q_0)) - Y(\tau^{t_n}(q_0))\| = 0
-\end{equation}
-для любого натурального $n$.
-
-С другой стороны для достаточно больших $n$ мы воспользуемся (\ref{eq1}), (\ref{eq4}) и равномерной
-непрерывностью $Z(p)$ на $Q$, чтобы показать
-$$
-\| Z(\tau^{t_n + h}(q_0)) - Y(\tau^{t_n}(q_0))\|  \geq
-$$
-$$
-\| Z(\tau^{t_n + h_n}(q_0)) - Y^n(\tau^{t_n}(q_0))\|
-$$$$
-- \| Z(\tau^{t_n + h_n}(q_0)) - Z(\tau^{t_n + h}(q_0))\|
-$$$$
-- \| Y^n(\tau^{t_n}(q_0)) - Y(\tau^{t_n}(q_0))\|
-$$
-$$
-\geq \varepsilon - \frac{\varepsilon}{4} - \frac{\varepsilon}{4} = \frac{\varepsilon}{2} > 0.
-$$
-
-Получили противоречие (\ref{eq5}).
-
-Исходя из свойств секвенциальной компактности оболочки $H_\sigma(\varphi)$ и асимптотической почти-периодичности
-функции $Z(q)$ мы можем предположить, что
-\begin{equation} \label{eq6}
-(Z^{h_n}, \sigma^{h_n}\varphi)\rightarrow (\tilde{Y}, \psi)
-\end{equation}
-компактно на $Q$ для некоторых $(\tilde{Y}, \psi)\in \Omega(Z, \varphi)$. Поскольку для некоторого $q_0 \in Q$
-$$
-\| \tilde{Y}(q_0) - Y(q_0)\|  \leq 
-$$
-$$ 
-\| \tilde{Y}(q_0) - Z(\tau^{h_n}(q_0))\| + \| Z(\tau^{h_n}(q_0)) - Y^n(q_0)\| +  \| Y^n(q_0) - Y(q_0) \|,
-$$
-то из (\ref{eq2}), (\ref{eq4}) и (\ref{eq6}) следует, что $\tilde{Y}(q_0)=Y(q_0)$. Следовательно, используя
-(\ref{eq3}),(\ref{eq4}) и (\ref{eq6}), имеем для любых $t \in \mathbb{R}_+$
-\[
-\tilde{Y}(\tau^{t}(q_0))=\psi^t(q_0, \tilde{Y}(q_0))=\psi^t(q_0, Y(q_0))=
-\]
-$$
-\lim_{n\rightarrow \infty}(\sigma^{t_n}\varphi)(t, q_0, Y^n(q_0))=\lim_{n\rightarrow \infty}\psi^n(q_0, Y^n(q_0))=
-$$
-$$
-\lim_{n\rightarrow \infty}Y^n(\tau^{t}(q_0))=Y(\tau^{t}(q_0)).
-$$
-Таким образом, для любых $t \in \mathbb{R}_+$ мы имеем неравенство
-\[
-\| Z(\tau^{h_n + t}(q_0)) - Y^n(\tau^{t}(q_0))\| \leq
-\]
-\[
-\| Z(\tau^{h_n + t}(q_0)) - \tilde{Y}(\tau^{t}(q_0))\| + \| Y^n(\tau^{t}(q_0) - Y(\tau^{t}(q_0)) \| < \varepsilon
-\]
-при достаточно больших $n$, что противоречит (\ref{eq1}). Теорема доказана. $\square$
-%====================================
-
-
-\begin{theor}
-Если интеграл $Z$ на $Q$ почти-периодического коцикла $(\varphi, \tau)$ асимптотически почти-периодический, то существует почти-периодический интеграл коцикла $(\varphi, \tau)$.
-\end{theor}
-
-\textbf{Доказательство}.
-Так как $(\varphi, \tau)$ почти-периодический коцикл, то существует последовательность $\{t_n\}, t_n \rightarrow \infty$ при $n \rightarrow \infty$ такая, что $(\sigma^{t_n}\varphi)(t, q, u) \rightarrow \varphi^t(q, u)$  равномерно относительно $q \in Q$ и $(t,u)$ из произвольного ограниченного множества. Интеграл $Z(q) = Z_1(q) + Z_2(q)$, где $Z_1(q)$ - почти-периодический и $Z_2(\tau^{t}(q_0)) \rightarrow 0$ при $t \rightarrow \infty$. Следовательно, мы можем предположить, что $Z_1(\tau^{t + t_n}(q_0)) \rightarrow Z^{*}_1(\tau^{t}(q_0))$ при $n \rightarrow \infty$ равномерно по $q \in Q$, где $Z^{*}_1$ почти-периодическая. Поэтому $(Z^{*}_1, \varphi) \in \Omega(Z, \varphi)$, $Z^{*}_1$ - почти-периодический интеграл коцикла $(\varphi, \tau)$. $\square$
-%====================================
-
-
-\begin{lemma}  Пусть $T > 0$. Тогда для любого $\varepsilon > 0$, существует $\delta(\varepsilon) > 0$ такое, что из $\| Z(\tau^{s}(q_0)) - Z_1(q_0)\| < \delta(\varepsilon)$ и $\varrho(\sigma^s\varphi, \psi) < \delta(\varepsilon)$ вытекает, что выполняется $Z_1(\tau^{t}(q_0)) \in \mathcal{O}_\varepsilon (Z(\tau^{s + t}(q_0)))$ для $t \in [0, T]$, $q_0 \in Q, s \in \mathbb{R}_+$ и $(Z_1, \psi) \in \Omega(Z, \varphi)$.
-\end{lemma}
-
-
-\textbf{Доказательство}.
-Предположим обратное.
-Тогда, для некоторого $\varepsilon > 0$ существует последовательность $\{s_n\}$, $s_n \in \mathbb{R}_+$, $\{h_n\}$, $0 < h_n < T$, и $(Z_1^n, v^n) \in \Omega(Z, \varphi)$ такие, что
-\[
-\varrho(\sigma^{s_n}\varphi, \psi^n) < \frac{1}{n}
-\]
-\[
-Z^n_1(q_0) \in \mathcal{O}_{\frac{1}{n}} (Z(\tau^{s_n}(q_0)))
-\]
-\[
-Z_1^n(\tau^{t}(q_0)) \in \mathcal{O}_\varepsilon (Z(\tau^{s_n + t}(q_0))), ~ t \in [0, h_n)
-\]
-и
-\[
-Z_1^n(\tau^{h_n}(q_0)) \in \partial \mathcal{O}_\varepsilon (Z(\tau^{s_n + h_n}(q_0))).
-\]
-
-Так как $h_n \in [0, T]$, мы также можем предположить, что $h_n \rightarrow h \in [0, T]$ при $n \rightarrow \infty$.
-В силу того, что $\Omega(Z, \varphi)$ компактно, мы можем предположить, что
-\[
-(Z^n_1, \psi^n) \rightarrow (Z_1, \psi) \in \Omega(Z, \varphi)
-\]
-и
-\[
-(Z^{s_n}, \sigma^{s_n}\varphi) \rightarrow (\tilde{Y}, \psi) \in \Omega(Z, \varphi)
-\]
-при $n \rightarrow \infty$, соответственно.
-Тогда $Z_1(\tau^{h}(q_0))\in \partial \mathcal{O}_\varepsilon (\tilde{Y}(\tau^{h}(q_0)))$.
-
-С другой стороны, так как $Z_1(q_0) = \tilde{Y}(q_0)$, мы имеем $Z_1(\tau^{t}(q_0)) = \tilde{Y}(\tau^{t}(q_0))$ на $Q$ (\ref{cocycle}).
-Получим противоречие. $\square$
-
-%====================================
-
-\begin{lemma}
-Предположим, что $(\varphi, \tau)$ почти-периодический коцикл на $M$. Если интеграл $Z$
-на $Q$ равномерно асимптотически устойчивый, тогда он равномерно асимптотически устойчивый в $\omega_\sigma(\varphi)$.
-\end{lemma}
-
-\textbf{Доказательство}.
-Пусть $h_k \rightarrow \infty$ при $k \rightarrow \infty$ и $(Z^{h_k}, \sigma^{t_k}\varphi) \rightarrow (Y, \psi)\in \Omega(Z, \varphi)$ компактно на $Q$.
-
-Пусть $m \in \mathbb{R}_+$ фиксировано.
-
-Если $k$ достаточно большое, то для некоторого $q_0 \in Q$ выполняется
-\[
-Y(\tau^{m}(q_0)) \in \mathcal{O}_{\delta(\varepsilon/2)/2}(Z(\tau^{h_k + m}(q_0))).
-\]
-
-Пусть $Z' \in \mathcal{O}_{\delta(\varepsilon/2)/2}(Y(\tau^{m}(q_0)))$. Тогда верно
-\[ (\sigma^{\tau_k}\varphi)(t, \tau^{m}(q_0), Z')=\varphi^t(\tau^{h_k + m}(q_0), Z')
-\in \mathcal{O}_{\varepsilon/2}(Z(\tau^{t + h_k + m}(q_0)))
-\]
- для любого $t > m$, $q_0 \in Q$ вследствие того, что $Z'\in \mathcal{O}_{\delta(\varepsilon/2)}(Z(\tau^{h_k + m}(q_0)))$.
-
- Так как
- \[
- (\sigma^{h_k}\varphi)(t, \tau^{m}(q_0),  Z') \rightarrow \psi^t(\tau^{m}(q_0), Z')
- \] и
-\[
-Z(\tau^{t+ h_k + m}(q_0)) \rightarrow Y(\tau^{t + m}(q_0)),
-\]
-мы получим, что
-\[
-\psi^t(\tau^{m}(q_0), Z') \in \overline{\mathcal{O}_{\varepsilon/2}(Z'(\tau^{t + m}(q_0)))}
-\]
-для любого $t \geq m$.  Следовательно $Y(q)$ равномерно устойчивый.
-
-Сейчас мы покажем, что $Y(\tau^{m}(q_0))$ асимптотически равномерно устойчивый.
-
-Пусть
-\[Z' \in \mathcal{O}_{\delta_0/2}(Y(\tau^{m}(q_0)))\] и
-\[Y(\tau^{m}(q_0)) \in \mathcal{O}_{\delta_0/2}(Z(\tau^{h_k + m}(q_0))).\]
-
-Так как $Z(q)$ - асимптотически равномерно устойчивый, мы имеем
-\[
-\varphi^t (\tau^{h_k + m}(q_0), Z') \in \mathcal{O}_{\varepsilon/2}(Z(\tau^{t + h_k + m}(q_0))
-\]
-для $t \geq t_0(\varepsilon/2)$, в силу того, что $Z' \in \mathcal{O}_{\delta_0}(Z(\tau^{h_k + m}(q_0))$.
-Следовательно,
-\[
-\psi^t(\tau^{m}(q_0), Z') \in \mathcal{O}_{\varepsilon/2}(Y(\tau^{t + m}(q_0))
-\]
-для $t \geq t_0(\varepsilon/2)$.$\square$
-
-
-%====================================
-
-\begin{theor}
-Предположим, что $(\varphi, \tau)$ почти-периодический коцикл на $M$, и пусть $Z$ интеграл на $Q$, такой что множество $\hat{Z}=\{Z(q)\}_{q \in Q}$ относительно компактно в $M$. Если интеграл $Z$ равномерно асимптотически устойчивый, тогда выполнено Свойство (A). Следовательно он асимптотически почти-периодический.
-\end{theor}
-
-
-\textbf{Доказательство}.
-Предположим, что для $Z(q)$ не выполняется Cвойство (A). Тогда существуют последовательности $\{t_n\}, t_n \geq 0, \{r_n\}, r_n > 0, (Z^n_1, \psi^n) \in \Omega(Z, \varphi)$ и константы $\delta_1, 0< \delta_1 < \delta_0/2$ такие, что
-\begin{equation} \label{eq7}
-Z^n_1(q_0) \in \mathcal{O}_{\frac{1}{n}}(Z(\tau^{t_n}(q_0))), ~
-\varrho(\psi^n, \sigma^{t_n}\varphi) < \frac{1}{n}
-\end{equation}
-и
-\begin{equation*}
-Z^n_1(\tau^{r_n}(q_0)) \in \partial \mathcal{O}_{\delta_1}(Z(\tau^{t_n + r_n}(q_0))),
-\end{equation*}
-\begin{equation} \label{eq8}
-Z^n_1(\tau^{t}(q_0)) \in \mathcal{O}_{\delta_1}(Z(\tau^{t + t_n}(q_0))),
-\end{equation}
-на  $[0, r_n)$, где $\delta_0$ из определения асимптотически равномерно устойчивого интеграла $Z$. Из Леммы 2 следует, что $Z$ асимптотически равномерно устойчивый в $\omega_\sigma(\varphi)$. Пусть $\delta(\cdot)$ из определения равномерно устойчивого интеграла $Z$ в $\omega_\sigma(\varphi)$.
-
-Существует последовательность $\{\xi_n\}, 0 < \xi_n < r_n$ такая, что
-\begin{equation} \label{eq9}
-Z^n_1 (\tau^{\xi_n}(q_0)) \in \partial \mathcal{O}_{ \delta(\delta_1/2)/2 }(Z(\tau^{t_n + \xi_n}(q_0)))
-\end{equation}
-и
-\begin{equation} \label{eq10}
-Z^n_1(\tau^{t}(q_0)) \in \overline{\mathcal{O}_{\delta_1}Z(\tau^{t + t_n}(q_0))} \setminus \mathcal{O}_{\delta(\delta_1/2)/2}(Z(\tau^{t + t_n}(q_0))),
-\end{equation}
-на $[\xi_n, r_n]$, для достаточно больших $n$, если выполнены (\ref{eq7}) и (\ref{eq8}).
-
-Предположим, что существует подпоследовательность $\{\xi_n\}$, которую мы так же обозначим через $\{\xi_n\}$, такая,
-что $\xi_n$ сходится к некоторому $\xi \in \mathbb{R}_+$. Из (\ref{eq7}) следует, что существует $n_0 > 0$ такое,
-что $n \geq n_0$, $\xi+1 \geq \xi_n \geq 0$ и
-\[
-Z^n_1(\tau^{t}(q_0)) \in \mathcal{O}_{\delta(\delta_1/2)/4}(Z(\tau^{t + t_n}(q_0)))
-\]
-для $t \in [0, \xi+1]$ в силу Леммы 1. Получим противоречие с (\ref{eq9}). Следовательно, $\xi_n \rightarrow \infty$ при $n \rightarrow \infty$.
-
-Пусть $\zeta_n = r_n - \xi_n$ и пусть $\zeta_n \rightarrow \infty$. Обозначим $s_n = \xi_n + (\zeta_n / 2)$. Из (\ref{eq7}) и компактности $\Omega(Z, \varphi)$ мы можем предположить, что $((Z^n_1)^{s_n}, \sigma^{s_n}\psi^n)$ и $(Z^{t_n + s_n}, \sigma^{t_n + s_n}\varphi)$ стремятся к некоторым $(Z^n_1, \psi)$, $(\tilde{Y}, \psi) \in \Omega(Z, \varphi)$ компактно на $Q$ при $n \rightarrow \infty$, соответственно.
-
-Для любого фиксированного $t > 0$ можно выбрать $n_1 > 0$ такое, что для произвольного $n \geq n_1, r_n -s_n = \zeta_n / 2 > t$
-в силу того, что $\zeta_n \rightarrow \infty$ при $n \rightarrow \infty$. Поэтому для $n \geq n_1$ мы имеем $\xi_n < t + s_n < r_n$ и, используя (\ref{eq10}), получим
-
-\begin{equation} \label{eq11}
-Z^n_1(\tau^{t + s_n}(q_0)) \notin \mathcal{O}_{\delta(\delta_1/2)/2}(Z(\tau^{t + t_n + s_n}(q_0))).
-\end{equation}
-Существует $n_2 \geq n_1$ такое, что для каждого $n \geq n_2$
-\begin{equation*}
-Z^n_1(\tau^{t + s_n}(q_0)) \in \overline{\mathcal{O}_{ \delta(\delta_1/2)/8 }(Z(\tau^{t + t_n}(q_0)))},
-\end{equation*}
-\begin{equation} \label{eq12}
-\tilde{Y}(\tau^{t}(q_0)) \in \overline{\mathcal{O}_{\delta(\delta_1/2)/8}(Z(\tau^{t + t_n + s_n}(q_0)))}.
-\end{equation}
-Далее из (\ref{eq11}) и (\ref{eq12}) следует, что для каждого $n \geq n_2$,
-
-\begin{equation*}
-\| Z_1(\tau^{t}(q_0)) - \tilde{Y}(\tau^{t}(q_0))\|
-\geq \| \phi^n_1(\tau^{t + s_n}(q_0)) - Z(\tau^{t + t_n + s_n}(q_0)) \|
-\end{equation*}
-\begin{equation} \label{eq13}
-- \| Z(\tau^{t + t_n + s_n}(q_0)) - \tilde{Y}(\tau^{t}(q_0)) \|
-- \| \phi^n_1(\tau^{t + s_n}(q_0)) - Z_1(\tau^{t}(q_0)) \|
-\geq \delta (\delta_1/2)/4.
-\end{equation}
-Однако, в силу того, что $\tilde{Y}(q_0) \in \mathcal{O}_{\delta_0/2}(Z_1(q_0))$, и равномерной асимптотической устойчивости $Z(q)$ следует, что $\| Z_1(\tau^{t}(q_0)) - \tilde{Y}(\tau^{t}(q_0)) \| \rightarrow 0$ при $t \rightarrow \infty$ что противоречит (\ref{eq13}).
-
-
-Cейчас мы можем предположить, что $\zeta_n$ сходится к некоторому $\zeta \in \mathbb{R}_+$ при $n \rightarrow \infty$, и что $0 \leq \zeta_n \leq \zeta+1$ для всех $n$. Более того, мы можем предположить, что
-$((\phi^n_1)^{\xi_n}, \sigma^{\xi_n}\psi^n)$ и $(Z^{t_n + \xi_n}, \sigma^{t_n + \xi_n}\varphi)$
-стремятся к некоторым
-$(Y, \tilde{\psi})$, $(\tilde{Z}, \tilde{\psi}) \in \Omega(Z, \varphi)$
-при $n \rightarrow \infty$, соответственно.
-
-В силу того, что $\| Y(q_0) - \tilde{Z}(q_0) \| = \delta(\delta_1 / 2) / 2$ (следует из (\ref{eq9})),
-мы имеем $Y(\tau^{\zeta}(q_0))\in \mathcal{O}_{\delta_1/2}(\tilde{Z}(\tau^{\zeta}(q_0)))$.
-
-Однако, мы получим противоречие (\ref{eq8}), потому что
-
-\[
-\| Y(\tau^{t}(q_0)) - \tilde{Z}(\tau^{t}(q_0)) \| \geq
-\]
-\[
-\| Z(\tau^{t_n + r_n}(q_0)) - \phi^n_1(\tau^{r_n}(q_0))\| - \| Y(\tau^{t}(q_0)) - \phi^n_1(\tau^{\xi_n + p}(q_0))\|
-\]
-\[- \| \phi^n_1(\tau^{\xi_n + \zeta_n}(q_0)) - \phi^n_1(\tau^{\xi_n + p}(q_0)) \| -
-\| \phi^n_1(\tau^{\xi_n + \zeta_n}(q_0) - \phi^n_1(\tau^{r_n}(q_0)) \|
-\]
-\[
-- \| Z(\tau^{t_n + r_n}(q_0)) - \tilde{Z}(\tau^{\zeta_n}(q_0)) \| - \| \tilde{Z}(\tau^{\zeta_n}(q_0)) - \tilde{Z}(\tau^{t}(q_0))\|
-\]
-\[
-\geq \delta_1 /2
-\]
-для всех достаточно больших $n$. Таким образом, для интеграла $Z$ должно выполняется Свойство (A).$\square$
-
-
-\begin{thebibliography}{99}
-
-\bibitem{pankov}  Панков, А.А., Ограниченность и почти-периодичность по времени решений эволюционных вариационных неравенств,
-    \emph{Известия АН СССР. Серия Математическая}, 1982, том 46, выпуск 2, стр. 314–346.
-
-\bibitem{chueshov} Чуешов, И.Д., Теория  функционалов, однозначно определяющих асимптотическую динамику бесконечномерных диссипативных систем, \emph{УМН}, 1998, том 53, выпуск 4(322), стр. 77–124.
-
-\bibitem{chueshov2} Chueshov, I., Order-Preserving Skew-Product Flows and Nonautonomous Parabolic Systems,
-    \emph{Acta Applicandae Mathematicae}, 2001, vol. 65, pp. 185-205.
-
-\bibitem{foias} Foias, C., Temam, R., Determination of the Solutions of the Navier-Stokes Equations by a Set of Nodal Values,
-    \emph{Mathematics of Computation}, 1984, vol. 43, pp. 117-133.
-
-\bibitem{yin98-2} Glassey, R., Yin, H.-M., On Maxwell’s Equations with a Temperature Effect, II,
-    \emph{Communications in Mathematical Physics}, 1998, vol. 194, pp. 343-358.
-
-\bibitem{hm1} Hino, Y. and Murakami, S., Almost Periodic Processes and the Existence of Almost Periodic Solutions,
-    \emph{Electronic Journal of Qualitative Theory of Differential Equations}, 1998, no. 3, pp. 1-19.
-
-\bibitem{hmy1} Hino, Y., Murakami, S. and Yoshizawa, T., Stability and Existence of Almost
-    Periodic Solutions for Abstract Functional Differential Equations with Infinite
-    Delay, \emph{Tohoku Mathematical J.}, 1997, vol. 49, pp. 133-147.
-
-\bibitem{titi} Jones, D. and Titi, E., Upper Bounds on the Number of Determining Modes, Nodes, and Volume Elements for the Navier- Stokes Equations,
-    \emph{Indiana University Mathematics Journal}, 1993, vol. 42, no. 3, pp. 875-887.
-
-\bibitem{aims} Kalinin, Y., Reitmann, V., Yumaguzin, N., Asymptotic Behaviour of Maxwell’s Equation in One-Space Dimension With Thermal Effect,
-    \emph{Discrete and Continuous Dynamical Systems Series B}, 2011, vol. 16, no. 2, pp. 343-353.
-
-\bibitem{kantz} Kantz, H., Reitmann, V., Determining Functionals for Bifurcations on a Finite-Time Interval in Variational Inequalities,
-    \emph{In: Proceedings of the International Conference on Differential Equations, EQUADIFF, Hasselt-Belgium, 2003, Preprint Series DFG-SPP 1114}, 2003, pp. 1-16.
-
-\bibitem{kloeden} Kloeden, P., Schmalfuss, B., Nonautonomous Systems, Cocycle Attractors and Variable Time-Step Discretization,
-    \emph{Numerical Algorithms}, 1997, vol. 14, pp. 141-152.
-
-\bibitem{langa} Langa, J.A., Asymptotically Finite Dimensional Pullback Behaviour of Non-autonomous PDEs,
-    \emph{Archiv der Mathematik}, 2003, vol. 80, pp. 525-535.
-
-\bibitem{yin2006} Manoranjan, V.S., Yin, H.-M., Showalter,  R., On Two-Phase Stefan Problem Arising from a Microwave Heating Process,
-    \emph{Discrete and Continuous Dynamical Systems Series B}, 2006, vol. 15, no. 4, pp. 1155-1168.
-
-\bibitem{yin2001} Morgan, J., Yin, H.-M., On Maxwell's System with a Thermal Effect,
-    \emph{ Discrete and Dynamical Systems Series B}, 2001, vol. 1, no. 4, pp. 485-494.
-
-\bibitem{temam} Temam, R., \emph{Infinite-Dimensional Dynamical Systems},
-    New York, 1993.
-
-\bibitem{yin98} Yin, H.-M., On Maxwell’s Equations in an Electromagnetic Field with the Temperature Effect,
-    \emph{SIAM J. on Mathematical Analysis}, 1998, vol. 29, pp. 637-651.
-
-\end{thebibliography}
-
-\end{document} 
+﻿dx
+dt
+6
+ 
+-
+?
+˜¨  ¯—¯˝ ¨ ¸ ˝ ¯  —  ´˝¯˝¨ 
+¨
+ˇ—˛ ¯     ˇ—  ´¸¯˝¨ 
+N 4, 2011
+ º Œ     ßØ      º,
+  ª.  º. N   77-39410    15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/di journal
+e-mail: jo di @mail.ru
+˛     º  øŁ     ß Ł     Ł    Ł  Ł  æŒŁ  Ł   ª  ºß  º  Œ  ŁŒº  
+¨. ´. ¯   Œ  ,  . ˝. ˚ ºŁ Ł ,  . — Ø     
+1
+       ŁŒ -  ı  Ł  æŒŁØ   Œ  º     ,
+   Œ -ˇ    Æ  ªæŒŁØ ª æ     æ     ßØ   Ł   æŁ    ,
+   Œ -ˇ    Æ  ª , — ææŁ 
+        Ł 
+—  ææ    Ł    æ   Œ   ŁŒºß  Æø ª   Ł         Ł   º         Ł  æŒ       -
+æ    æ   . ´    Ł æ        Ł        º  øŁı       º  Œ   ŁŒº      ªŁº Æ       
+   æ    æ    Ł   Œ   ß    æ             æ ø æ      ŁŁ Œ       ª   Łæº      -
+  º  øŁı       º     ŒŁı Œ   ŁŒº  . ˇ Ł    Ł æ     Œ      º æ    æ ø æ      Ł 
+B-pullbac k      Œ                ŁŒ    º    ª    ª          Ł º . ´    Ł æ  
+     Ł      Ł    Ł   Ł  æŒ  ª  Ł   ª  º   º  Œ   ŁŒº  Ł   Œ   ß    æ   æ ø -
+æ      Ł     Œ  ª  Ł   ª  º   º       ª  Œº ææ  Œ   ŁŒº  .
+´     Ł 
+˝ æ   ø     Æ      æ  ø      Œ    ß       æ       Ł Ł      ŁŁ Œ -
+ ŁŒº  ,     æ   æ Ł,          ßı æŁæ     Ł        ŁØ     æ  ßı    -
+Ł     ßı. ˛    Ł    ŒŁı æŁæ           ŁØ   Łæß             ŁŒ    º-
+    ª    ª    . ¨æı    Ł  Ł   æ  ßı      º        º       ææ  , æ   -
+  æ   º     ß     ŁŁ       º  øŁı    Œ Ł   º   Ł     Ł    Ł  Ł  -
+æŒŁı Ł   ª  º    º  Œ  ŁŒº  .
+ˇ Ł      Œ   ŒŁØ  Æ    æ       Ł    Æ  ß. ´  1     æ  Œ   Œ  
+      Ł        Ł  Œ  ŁŒº  ,  Œº          Ł  ªº Æ º   ª  B-pullback
+     Œ    .  2   ææ    Ł    æ  æŁæ      ŁŒ    º    ª    ª    , æ æ  -
+ ø   Ł         ŁØ   Œæ  ºº  Ł        Ł     º         æ Ł.     Ł æ 
+1
+—  Æ      ß  º       Ł          Œ   ˝    Œ  -  ææŁØæŒ  ª      Łæ Ł ºŁ     ª         ª         (G-RISC) Ł ˆ      æŒ  Ø æº  Æß  Œ     Ł  æŒŁı  Æ      (D AAD).˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 4, 2011
+æ      æ    øŁØ Œ  ŁŒº,   Œ  ß    æ   ª   ŁææŁ   Ł   æ   Ł æ ø æ   -
+   Ł  B-pullback      Œ    . ´  3     Ł æ  Œº ææ       º  øŁı    Œ-
+ Ł   º    º  Œ  ŁŒº  . ˇ Ł   Ł æ            æ ø æ      ŁŁ       º -
+ øŁı     Œ Œ   æ   ª  æº           º  øŁı    Œ Ł   º    º  Œ  ŁŒ-
+º  . ´  4     Ł æ       Ł      Ł    Ł  Ł  æŒ ª  Ł   ª  º   º  Œ  ŁŒ-
+º ,  Æ Æø  ø   æ      æ    ø        Ł   º       ææ . ´  5 Ł      æ 
+æ ø æ      Ł    Œ ª  Ł   ª  º   º      ª  Œº ææ  Œ  ŁŒº  .
+1  º     ß     ŁŁ Œ  ŁŒº  
+ˇ    Ł  Œ  ŁŒº    º   æ   Æ Æø  Ł        Ł   Ł   Ł  æŒ Ø æŁæ   ß.
+´       æ    ß       Ł      ŁŁ Œ  ŁŒº  , Œ    ß  Æ      Łæ  º       -
+æ    º   ([11]).
+ˇ æ   (Q;d) -     Ł  æŒ      æ    æ   ,    ß       Æ  Łæ ß     -
+æ    æ    . ˇ    (f 
+t
+g
+t2R
+; (Q;d)), ª    
+t
+: Q! Q,  º  º Æ ª  t2 R,
+   ß    æ  Æ   Łæ ß      Œ   ,  æºŁ
+ 
+0
+=id
+Q
+;
+ 
+t
+  
+s
+= 
+t+s
+8t;s2R:
+(1)
+ˇ æ   (M; ) -    ª       Ł  æŒ      æ    æ   , Œ                 -
+   ß     æ    æ    .
+˛     º  Ł  1 ˇ     (f'
+t
+(q; )g
+t2R
++
+;q2Q
+; (M; )), ª  '
+t
+(q; ) : M! M
+ º  º Æßı t2R
++
+;q2Q,    ß    æ  Œ  ŁŒº       Æ   Łæ ß      Œ  
+(f 
+t
+g
+t2R
+; (Q;d)),  æºŁ
+'
+0
+(q; ) =id
+M
+8q2Q;
+'
+t+s
+(q; ) ='
+t
+( 
+s
+(q);'
+s
+(q; ))8q2Q; 8t;s2R
++
+:
+(2)
+˜º  Œ   Œ æ Ł Œ  ŁŒº (f'
+t
+(q; )g
+t2R
++
+;q2Q
+; (M; ))     Æ  Łæ ß      -
+Œ   (f 
+t
+g
+t2R
+; (Q;d)) Æ       Æ        ('; ).
+˛     ºŁ     æ    æ   W = Q M Ł æ   Øæ       Æ     ŁØ S
+t
+:
+W ! W , t2 R
++
+,   Øæ    øŁı        Łº  S
+t
+(q;u) = ( 
+t
+(q);'
+t
+(q;u)).
+˜Ł   Ł  æŒ   æŁæ     (fS
+t
+g
+t2R
++
+;W )    ß    æ Œ æß     Ł      Ł   .
+˝          ß       æ     Æ         ß    
+^
+Z =fZ(q)g
+q2Q
+-    Æ-
+     Ł  Q! 2
+M
+. ˝                 æ       ß    æ   ª    Ł    ß 
+(   Œ   ß , Œ    Œ  ß ) ,  æºŁ  º  º Æ ª  q 2 Q      æ    Z(q)
+ ª   Ł     (   Œ    , Œ    Œ   )  M .
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 114˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 4, 2011
+˛ª   Ł                         æ   
+^
+Z    ß    æ  ªº Æ  º    B-
+pul lb ack   ªº ø  øŁ       æ      º  Œ  ŁŒº  ('; ),  æºŁ  º  º Æ ª 
+q 2 M Ł º Æ ª   ª   Ł     ª       æ    B   M æ ø æ     T =
+T (q;B)   Œ  ,    '
+t
+( 
+ t
+(q;B)) Z(q)  º  t T:
+˝                 æ   
+^
+Z    ß    æ  ªº Æ  º    B-pul lb ack   Ł  -
+ªŁ   øŁ  ,  æºŁ  º  º Æ ª   ª   Ł     ª       æ    B  M , º Æ ª 
+q2Q
+lim
+t!+1
+dist('
+t
+( 
+ t
+(q);B);Z(q)) = 0;
+ª   dist -  º   ææ    Ł        æ        (M; ).
+˝                 æ   
+^
+Z    ß    æ Ł    Ł    ß  ,  æºŁ  º  º -
+Æßı q2Q Ł t  0  ß  º    æ       æ   '
+t
+(q;Z(q)) =Z( 
+t
+(q)).
+˛     º  Ł  2 ˝                  æ       ß    æ  ªº Æ  º  ß 
+B-pul lb ack       Œ       º  Œ  ŁŒº  ('; ),  æºŁ     Œ    Œ   , Ł -
+   Ł      Ł   º   æ  ªº Æ  º  ß  B-pul lb ack   Ł  ªŁ   øŁ .
+˜º    Œ     º æ    æ ø æ      Ł  B-pullback      Œ      ß Æ     
+Łæ  º        æº    øŁØ      º     (        ˚º      -   º     ).
+         1 ([11]) ˇ æ   Œ  ŁŒº ('; ) Ł     Œ    Œ     ªº Æ  º    
+B-pul lb ack   ªº ø  ø       æ   
+^
+Z =fZ(q)g
+q2Q
+.    ª   ('; ) Ł    
+  Ł æ     ßØ ªº Æ  º  ßØ B-pul lb ack       Œ   
+^
+A = fA(q)g
+q2Q
+, ª  
+ º  º Æ ª  q2Q
+A(q) =\
+t2R
++
+[
+s t;s2R
++
+'
+s
+( 
+ s
+(q);Z( 
+ s
+(q)):
+2   ø æ      Ł  B-pullback      Œ      º       Ł
+  ª    
+ˇ    ææ  ŁŒ    º    ª    ª          Ł º   Œº        æ Æ    ı  Ł  
+  ª          Ł º       º  ß     º         Øæ  Ł    ŁŒ    º . ˛ 
+  Łæß    æ  æ     ø        Ø æŁæ   ß Ł         ŁØ   Œæ  ºº  Ł     -
+   Ł     º         æ Ł.  ß   Ł   Ł         æ      º           ª 
+æº    . ´ß             ª  æº       Ł        [13]. ˙      Ł    æŁ   
+Ł    º æ      Æ   ı [16], [5], [13], [14].
+ˇ æ              º   -Œ             
+w
+tt
+ w
+xx
++  ( )w
+t
+= 0; 0<x< 1; t> 0
+ 
+t
+  
+xx
+=  ( )w
+2
+t
+; 0<x< 1; t> 0
+(3)
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 115˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 4, 2011
+æ ª   Ł  ß Ł  æº  Ł  Ł
+w (0;t) =f
+1
+(t);w (1;t) =f
+2
+(t); t> 0
+  (0;t) =  (1;t) = 0; t> 0
+(4)
+Ł     º  ß Ł  æº  Ł  Ł
+w (x; 0) =w
+0
+(x);w
+t
+(x; 0) =w
+1
+(x);  (x; 0) = 
+0
+(x); 0<x< 1 (5)
+ Ł Ł  æŒŁØ æ ßæº   ºŁ Ł    Œ Ø:   -            ,w - Ł   ª  º   
+      Ł         º   Ø Œ        ß  º Œ  Ł  æŒ ª    º ,   -  º Œ      -
+     æ  ,f
+1
+;f
+2
+-    ł Ł       ø  Ł   º Œ     ª Ł   ª    º .
+ˇ     º ª   ,    
+(A1.1)   º Œ º    ºŁ łŁ       (0; +1);
+(A1.2)   ø æ      Œ  æ    ß 0 <  
+0
+   
+1
+  ŒŁ ,     
+0
+   (z)   
+1
+ º 
+º Æ ª  z > 0;
+(A1.3)              Æß     .
+(A2) w
+0
+2L
+2
+(0; 1);w
+1
+2L
+2
+(0; 1); 
+0
+2L
+2
+(0; 1); 
+0
+  0     Ł         (0; 1).
+(A3) f
+1
+;f
+2
+  Ł   º     Œº ææ  C
+2
+(R) Ł æ ø æ      Œ  æ     C   Œ  ,
+       Œ ŁŁ jf
+0
+1
+j;jf
+0
+2
+j;jf
+00
+1
+j;jf
+00
+2
+j  ª   Ł   ß   R Œ  æ     ØC .
+ ß Æ      Łæ  º        æº Æß    ł  Ł ,     æ     ł  Ł ,      º    -
+   øŁ Ł        Ł    æ ßæº  Ł   ª  º   ª       æ   . ˛     º  Ł 
+æº Æßı   ł  ŁØ        [13]. ˙  æ   ß   Ł   Ł          æ ø æ      Ł 
+æº Æ ª    ł  Ł ,    Ł Ł Ł          º           ª  æº    .
+         2 ([13])   ø æ      ªº Æ  º     æº Æ     ł  Ł 
+(w(x;t); (x;t))      Ł (3)-(5),   Ł    w 2 C([0;T ];L
+2
+(0; 1)),
+ 2L
+2
+(0;T ;H
+1
+(0; 1))\C([0;T ];L
+2
+(0; 1))  º  º Æ ª  T > 0.
+ˇ     º ª   ,     æº Æ     ł  Ł    Ł æ      .
+              Œ        æ         ß Ł Œ    ß Ł  æº  Ł  Ł. ˛Æ    -
+ Ł  f(x;t) = f
+1
+(t)(1 x) +f
+2
+(t)x Ł              W (x;t) = w(x;t) 
+f(x;t). ˇ º  Ł  æŁæ    
+W
+tt
+ W
+xx
++ ( )W
+t
+=f
+tt
+  ( )f
+t
+; 0<x< 1; t> 0
+ 
+t
+  
+xx
+= ( )(W
+t
++f
+t
+)
+2
+; 0<x< 1; t> 0
+(6)
+c     º  ß Ł Ł ª   Ł  ß Ł  æº  Ł  Ł
+W (0;t) =W (1;t) = 0;   (0;t) =  (1;t) = 0; t> 0 (7)
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 116˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 4, 2011
+W (x; 0) =W
+0
+(x) =w
+0
+(x) f(x; 0); 0<x< 1
+W
+t
+(x; 0) =W
+1
+(x) =w
+1
+(x) f
+t
+(x; 0); 0<x< 1
+  (x; 0) = 
+0
+(x); 0<x< 1:
+(8)
+´  æ         º    Ł  (A2)   º          º    Ł  (A2’):
+(A2’) W
+0
+2 H
+1
+0
+(0; 1);W
+1
+2 L
+2
+(0; 1); 
+0
+2 L
+2
+(0; 1); 
+0
+  0     Ł         
+(0; 1).
+´      Œ  ŁŒº, æ      æ    øŁØ        (6)-(8). ˛     ºŁ     -
+æ    æ   M =H
+1
+0
+(0; 1) L
+2
+(0; 1)  (L
+2
+(0; 1)\f  :   0g) æ      Ø
+k(w;v; )k
+2
+M
+=kw
+x
+k
+2
+L
+2
+(0;1)
++kvk
+2
+L
+2
+(0;1)
++k k
+2
+L
+1
+(0;1)
+:
+´   ł Ø æŁ    ŁŁ Q = R,  
+t
+(s) = t + s, '
+t
+(s;u
+0
+) = u(t + s;s;u
+0
+),
+ª   u(t;s;u
+0
+) = (W ( ;t);V ( ;t); ( ;t))-   ł  Ł  (6)-(8)   Œ  ,    
+u(s;s;u
+0
+) = u
+0
+= (W
+0
+;V
+0
+; 
+0
+).   ø æ      Ł  Ł   Ł æ      æ   æº Æ -
+ª    ł  Ł       Ł      º        æ  º    æº    ø            Ł .
+         3  Łæ     (6)-(8)           Œ  ŁŒº
+(f'
+t
+(s; )g
+t2R
++
+;s2R
+; (M;k k
+M
+))     Æ   Łæ ß      Œ   (f 
+t
+g
+t2R
+;R):
+˛ª   Ł     æ     ł  Ł    Œ  ß  º æ    [9] æ     ø      Œ ŁŁ ¸ -
+      
+  (W;V; ) =
+Z
+1
+0
+ 
+W
+2
+x
++ 2 WV +V
+2
++a 
+2
+ 
+dx;
+ º  Œ     Ø   º          Œ 
+d
+dt
+  (t)  C
+1
+  (t) +C
+2
+;
+ª    (t) =   (W ( ;t);V ( ;t); ( ;t)).
+˝        º    Ł , æ  º   ß     ,   Œ Ł  æŒŁ    Æ       Ł    Ø
+    ŒŁkuk
+L
+1
+<C .  ß   Œ      ª   Ł     æ     ł  Ł     ªŁ      -
+   . ˜º    º    ª         Ł  æ      ø  Ł    æ   Ł           Œ ŁŁ
+¸       ,  º         Ł   Ł      º         æ Ł   Ł   Ł      Ł  Ł 
+[1].
+— ææ    Ł      º      º             Ł 
+W
+tt
+ W
+xx
++ (x;t)W
+t
+=f
+tt
+  (x;t)f
+t
+; 0<x< 1; t>s (9)
+æ ª   Ł  ß Ł  æº  Ł  Ł
+W (0;t) =W (1;t) = 0; t>s (10)
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 117˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 4, 2011
+Ł     º  ß Ł  æº  Ł  Ł
+W (x;s) =W
+0
+;W
+t
+(x;s) =W
+1
+; 0<x< 1 (11)
+ª  s2 R    Ł   º    .    º          º    Ł , æº    øŁ  Ł      -
+  º    ŁØ (A1)-(A3):
+(A1.2*) æ ø æ      Œ  æ    ß 0< 
+0
+  
+1
+  ŒŁ ,     
+0
+  (x;t)  
+1
+ º 
+º Æßı x2 (0; 1);t  0.
+(A2*) W
+0
+2H
+1
+0
+(0; 1);W
+1
+2L
+2
+(0; 1).
+(A3*)    Œ Ł  f C
+1
+- ªº  Œ     x, C
+2
+- ªº  Œ     t Ł æ ø æ      Œ  -
+æ     C > 0   Œ  ,    jf
+t
+j < C ,jf
+xt
+j < C ,jf
+tt
+j < C  º  º Æßı
+x2 (0; 1);t2R.
+ˇ Ł æ  º   ßı       º    Ł ı        (9) Ł       Ł æ          ł  Ł 
+(W ( ;t);V ( ;t))2M
+1
+=H
+1
+0
+(0; 1) L
+2
+(0; 1) ([15]).
+˙  Łł          Ł  (9)    Ł   æŁæ   ß
+W
+t
+=V f
+t
+;
+V
+t
+=W
+xx
+  (x;t)V
+(12)
+Ł    Łł       º  ß  Ł ª   Ł  ß   æº  Ł 
+W (0;t) =W (1;t) = 0; t>s (13)
+W (x;s) =W
+0
+;V (x;s) =V
+0
+; 0<x< 1 (14)
+— ææ    Ł     Œ Ł   º    M
+1
+	(W;V ) =kW
+x
+k
+2
++ 2 (W;V ) +kVk
+2
+;
+ª   > 0 -        , Œ    ßØ Æ       ßÆ           . ˝     Ł æŒ º     
+   Ł      Ł     æ  Ł   º     ææ    Ł    æ   L
+2
+(0; 1).
+˛Æ     Ł   º  Œ   Œ æ Ł 	(t) = 	 (W ( ;t);V ( ;t)). ˝ Ø       Ł -
+       	(t)   æŁº  æŁæ   ß (12). ˇ Ł       æ       æ    Ł     ŒŁ,
+Œ      ı  Ł  	(t), æ      ºŁ ß  º      Ł  æ ıt s:
+d
+dt
+	 (t) = 2( kW
+x
+k
+2
++  (W;V ) + (   )kVk
+2
++ (f
+xt
+;W
+x
+) + (f
+t
+;W ))
+˜º  º Æßı "
+1
+> 0;"
+2
+> 0, Łæ  º            æ    ˚ łŁ,   º      æ   -
+  ł  Ł 
+(W
+x
+;f
+xt
+)  
+"
+1
+2
+kW
+x
+k
+2
+ 
+1
+2"
+1
+kf
+xt
+k
+2
+; (15)
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 118˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 4, 2011
+(f
+t
+;V )  
+"
+2
+2
+kVk
+2
+ 
+1
+2"
+2
+kf
+t
+k
+2
+: (16)
+˛ æ      º             æ   
+d
+dt
+	 (t)  2((  
+"
+1
+2
+)kW
+x
+k
+2
++  (W;V ) + (    
+"
+2
+2
+)kVk
+2
+):
+´        =
+ 
+0
+2
+. ˇ Ł    ı   øŁı"
+1
+;"
+2
+      Œ ı (15), (16) æ ø æ     
+ > 0   Œ  ,    
+d
+dt
+	 (t)   	 (t) +C
+1
+;
+ª  C
+1
+=
+1
+2"
+1
+kf
+xt
+k
+2
++
+1
+2"
+2
+kf
+t
+k
+2
+> 0. ˇ º          Œ 
+	(t) e
+  (t s)
+	(s) +C
+2
+;
+ª   > 0 Ł C
+2
+> 0,  º  º Æßı t;s   ŒŁı,    t s.
+¨        Ł               º       Œ. ˇ æ   (W (x;t;s);V (x;t;s)) -   -
+ł  Ł      º   -Œ     Ø      Ł (12), (13), (14) c     º  ß          
+s.    ª    º  º Æ ª  t > 0 æ ø æ      T > 0, C > 0   ŒŁ ,    
+	 (W ( ;t;s);V ( ;t;s)) < C  º  º Æ ª  s  t T .    Œ   Ł         -
+ Ł  Æ      Łæ  º       æ   º    Œ     º æ    B-pullback   ªº ø  ø ª 
+     æ    Œ  ŁŒº ,           ª        Ø (6)-(8).
+ˇ   Ø           Œ                Ł  (6)  Ł      º         æ Ł.
+ˇ Ł      æ    º    Œ    ß       º    ß Ł  [1]. ´  Œ      Ø   Æ    Łæ-
+æº     æ   ª   Ł     æ   Ł     Ł-   Ł  Ł   æ            Ł   ł  ŁØ
+   Ł  Ł   ßı        æ  . ˇ Ł          Ł      º  Ł             Ł 
+(17)   º   æ    æ  ß  æº         Ł  Ł    ª         æ   .
+ˇ æ   Ł    æ     ØŒ     æ    æ  E   H   E
+0
+, ª   (E;kk
+E
+) -
+   º ŒæŁ     Æ   ı       æ    æ   ,H - ªŁº Æ          æ    æ   ,
+E
+0
+-    æ    æ   , æ           Œ E , E       ß    Ł  º      º     
+  H . ˜ º  ,   æ  A(t) : E ! E
+0
+- æ   Øæ            ßı        -
+    Ł F : R! E
+0
+-Ł    Ł       Æ     Ł  . ˝     Ł ,             
+A(t) :E!E
+0
+   ß    æ          ß ,  æºŁ  ß  º    æ         æ   
+(A(t)u A(t)v;u v)  0;8u;v2E:
+˙  æ  ( ; ) - æŒ ÆŒ     Øæ      æ Ł   E  E
+0
+, æ       ø      E 
+E æ  ª   Ł   Ł             æ    æ    æŒ º    ª     Ł      Ł  Ł  H .
+— ææ    Ł        º  Ł             Ł 
+_ y +A(t)y =F (t): (17)
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 119˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 4, 2011
+˝     Œ         ÆŁ æ  Æ º   æŁº     æ  Øæ   ,     æ  Øæ        -
+     æ Ł. ˜   æ Ł ,     æ ø æ     ff> 0   Œ  ,    
+(A(t)u A(t)v;u v) ffku vk
+2
+8u;v2E: (18)
+˛     ºŁ     æ    æ       Œ ŁØ C
+b
+(R;E) -      æ          ß -
+ ßı    Œ ŁØ   :R! E ,  º  Œ    ßı Œ         ºŁ Ł  sup
+t2R
+k (t)k
+E
+Ł BS
+p
+(R;E); 1  p <1 -       æ    æ     L
+p
+loc
+(R;E), æ æ   ø   Ł 
+   Œ ŁØ æ Œ      Ø      Ø
+k k
+S
+p
+= sup
+t2R
+ Z
+t+1
+t
+k (s)k
+p
+E
+ds
+ 
+:
+— ææ    Ł                Ł   Ł      º         æ Ł    Ł  
+ 
+t
+  
+xx
+= ( )g(x;t):
+ˇ     º ª   ,    g(x;t)  0, Ł    Ł   Ł             ª   Ł       
+t. ´   æ   æ Ł,     æ g(x;t) = (W
+t
+(x;t) +f
+t
+(x;t))
+2
+. ˜º      Øæ     
+      º    Ł  (A1.1)-(A1.3). ˇ   æ   Ł       Ł   ( ) = 
+0
++ ~  ( ), ª  
+ 
+0
+Ł        º    Ł  (A1.2).  ß Ł     Œ             
+ 
+t
+  
+xx
+  ~  ( )g(x;t) = 
+0
+g(x;t); 0<x< 1; t>s (19)
+  (0;t) =  (1;t) = 0; t>s (20)
+  (x;s) = 
+0
+(x); 0<x< 1: (21)
+˝   º   -Œ              (19)-(21)              º  Ł            -
+ Ł  (17), ª  A(t)y = y
+xx
+ g(x;t)~  (y)  º  y2E Ł F (t) = 
+0
+g( ;t).
+´   ł Ø æŁ    ŁŁE = H
+1
+0
+(0; 1) Ł H = L
+2
+(0; 1). ˇ     Ł   æº  Ł 
+(18). ˇ æ   ;#2H
+1
+0
+(0; 1),   =  #.    ª   Ł    
+(A(t)  A(t)#;  #) = (  
+xx
+; ) + (g( ;t)(~  (#)  ~  ( )); ) =
+= ( 
+x
+; 
+x
+) + (g( ;t)(~  (#)  ~  ( )); ) k k
+2
+:
+¨æ  º     æ         æ    ˇ   Œ    Ł       º    Ł              
+ Æß   ŁŁ  .
+ˇ Ł              2.2 ([1]) (  Ł ß       ªŁ   æº  Ł , Œ    ß   ß
+   æ       Ł   Ł ),   Œº     ,            Ł  (17) Ł       Ł æ       
+  ł  Ł y2 BS
+2
+(R;H
+1
+0
+(0; 1))\C
+b
+(R;L
+2
+(0; 1)). ´     Ł  ı        Ł 
+(19)              ,     æ ø æ      Œ  æ          Œ  ,     k ( ;t;s)k C
+ º  º Æßı t;s2R   ŒŁı,    s t.
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 120˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 4, 2011
+˚       ª ,        º    Ł  2.2 ([1])  ß Ł         Œ 
+k 
+1
+( ;t;s)  
+2
+( ;t;s)k e
+ c(t s)
+k 
+01
+  
+02
+k; (22)
+ª    
+i
+(x;t;s) -   ł  Ł  (19) æ     º  ß Ł     ß Ł  
+0i
+Ł     º  ß 
+        s.
+ˇ Œ           ,     Œ  æ     C       ŁæŁ         º  ßı     ßı.
+˜ Øæ  Ł  º   , Ł    æ      æ   º  Ł 
+ (x;t;s) =
+Z
+1
+0
+G(x;y;t; 0) 
+0
+(y)dy +
+Z
+t
+s
+Z
+1
+0
+G(x;y;t;r)g(y;r)drdy;
+ª  G(x;y;t;r) -    Œ Ł  ˆ Ł          Ł     º         æ Ł æ ª   Ł -
+ ß Ł  æº  Ł  Ł ˜Ł Łıº . ˛      º   Ø           ß    ŁæŁ    º Œ 
+    ßØ  º  ,  º    ª  Ł    æ      Œ  æ   Œ     Ø Œ  æ     Ø C
+kG(x;y;t; 0)k 
+C
+p
+t s
+;
+    æ    Œº       º  ßı     ßı æ    Ł æ  Œ    º .
+ ß        æ    º        º           Œ  1,     æ      æ     
+æ  Łª        Ł    º   g(x;t).
+ˇ   º    Ł  1 ˇ æ    ( ;t;s) -   ł  Ł       Ł (19)-(21).   ø -
+æ      Œ  æ      C   Œ  ,      º  º Æ ª  t Ł º Æ ª  s  t æ    -
+   ºŁ           æ   k ( ;t;s)k C , ª  C       ŁæŁ      
+0
+.
+¨    º     ßı  ßł            Ø  ª   Ł     æ Ł   t   ł  ŁØ   º-
+    ª         Ł  Ł        Ł     º         æ Ł     Ł    æº      æ -
+ø æ      Ł  ªº Æ º    B-pullback   ªº ø  ø ª       æ    Œ  ŁŒº 
+('; ).
+         4 ˚  ŁŒº ('; ),          ßØ       Ø (6)  (8), Ł     ªº -
+Æ  º    B-pul lb ack   ªº ø  ø        æ   .
+ˇ Ł               1,   º      æº    ø            Ł .
+         5 ˚  ŁŒº ('; ),          ßØ       Ø (6)  (8), Ł     ªº -
+Æ  º  ßØ B-pul lb ack       Œ   .
+3 ˛     º  øŁ     Œ Ł   ºß  º  Œ  ŁŒº  
+´ Ł     ŁŁ  æŁ     Ł  æŒŁı æ  Øæ   Æ æŒ          ßı  Ł   Ł  æŒŁı
+æŁæ        ß    º   æ       æ   ı     Ł     Œ Ł   º        ł  ŁØ,
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 121˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 4, 2011
+                 º  øŁı  æŁ     ŁŒ  æŁæ   ß. ˜º   Ł   Ł  æŒŁı æŁ-
+æ            Ł  ı   ł      Ł   ([2]). ˇ   ß      ß       º    ß ÆßºŁ
+  º    ß  º         ŁØ ˝    -   Œæ  ([4]).   ø æ      Ł  Œ      Ø
+æŁæ   ß       º  øŁı    Œ Ł   º    º  Æ æŒ           Ø æŁæ   ß
+          Ł Ł  æŒŁ,      Ł   ŁŒ  æŁæ   ß  æŁ     Ł  æŒŁ Œ         -
+  . ¯æºŁ æŁæ     Ł     ªº Æ º  ßØ      Œ   ,      ı     Ł        º -
+ øŁı    Œ Ł   º           ææ    Ł     Œ Œ     ŒæŁ   Ł       Œ-
+    . ´  Æø  ª     , æ ø æ      Ł  Œ      Ø æŁæ   ß       º  øŁı
+   Œ Ł   º     º   æ       º      ,      ŁæŁ ß     Œ           æ Ł
+     Œ    . ¯æ     æŒ º Œ     ºŁ   øŁ æ     Ł   ß       º  ŁØ   -
+   Ł        º  øŁı    Œ Ł   º   ([10]).      º   ß   Ł          
+Ł   Łı  º  æº      Ł   Ł  æŒŁı æŁæ   . ´ [2]           ºŁ    æ   º 
+   º  Ł   ßı æŁæ   ,          ßı         ß Ł        Ł  Ł æ   æ -
+ ß Ł    Ł     ß Ł.
+ˇ æ   (f 
+t
+g
+t2R
++
+; (E;k k)) - Ł   Ł  æŒ   æŁæ        Æ   ı        -
+æ    æ    (E;k k).
+˛     º  Ł  3 ([2])      æ    fl
+j
+g
+N
+j=1
+ºŁ  Ø ßı       ß  ßı
+   Œ Ł   º      E    ß    æ       æ      æŁ     Ł  æŒŁ       -
+º  øŁı    Œ Ł   º    º   Ł   Ł  æŒ Ø æŁæ   ß (f 
+t
+g
+t2R
++
+; (E;k k)),
+ æºŁ  º  º Æßı u
+1
+;u
+2
+2E Ł   æº  Ł 
+lim
+t!+1
+ 
+ 
+l
+j
+( 
+t
+(u
+1
+)) l
+j
+( 
+t
+(u
+2
+))
+ 
+ 
+= 0; j = 1;:::;N
+æº     ,    
+lim
+t!+1
+
+
+ 
+t
+(u
+1
+)  
+t
+(u
+2
+)
+
+
+= 0:
+´            º  øŁ     ß,   º  øŁ æ      ß    æ  ß  æº     
+      º  øŁı    Œ Ł   º  .
+˛     º  Ł  4 ˛     º  øŁ Ł      Ł  º   Ł   Ł  æŒ Ø æŁæ   ß
+(f 
+t
+g
+t2R
++
+; (H; ( ; )))    ªŁº Æ           æ     æ    (H; ( ; ))    ß  -
+  æ        º  øŁ     Œ Ł   ºß l
+j
+( ) = ( ;e
+j
+) , ª  fe
+j
+g
+N
+1
+-   Œ    ß 
+ º     ß H .
+  ø æ      Ł  Œ      ª   Łæº        º  øŁı              ,      æŁ  -
+   ŁŒ  æŁæ   ß                  º   æ      Œ Ł Ø      Œ       Œ -
+                  æ    æ   . ˜  ªŁ Ł   æ   æ       ß Ł   Ł     Ł
+      º  øŁı    Œ Ł   º     º   æ        º  øŁ    ºß Ł       -
+º  øŁ   º     ß  Æœ    ([8]).
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 122˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 4, 2011
+ˇ   Ø           Œ       Ł        º  øŁı    Œ Ł   º    º  Œ -
+ ŁŒº  . ´   Æ    [12]   ææ    Ł    æ        º  øŁ     Œ Ł   ºß  º 
+     ææ  ,     æ    º    æ   ª  æº     Œ  ŁŒº  .  ß  Æ ÆøŁ          -
+ Ł     Œ  ŁŒºß. ˇ æ   Ł    æ  Œ  ŁŒº(f'
+t
+(q; )g
+q2Q;t2R
++
+; (M;k k))    
+Æ  Łæ ß      Œ   (f 
+t
+g
+t2R
+; (Q;d)).
+˛     º  Ł  5      æ    fl
+j
+g
+N
+j=1
+ºŁ  Ø ßı       ß  ßı    Œ Ł -
+  º      Æ    ı        æ     æ    (M;k k)    ß    æ       æ    
+pul lb ack-  æŁ     Ł  æŒŁ       º  øŁı    Œ Ł   º    º  Œ  ŁŒº 
+(f'
+t
+(q; )g
+q2Q;t2R
++
+; (M;k k))     Æ   Łæ ß      Œ   (f 
+t
+g
+t2R
+; (Q;d)),  æ-
+ºŁ Ł   æº  Ł 
+lim
+t!+1
+ 
+ 
+l
+j
+('
+t
+( 
+ t
+(q);u
+1
+)) l
+j
+('
+t
+( 
+ t
+(q);u
+2
+))
+ 
+ 
+= 0
+ º  º Æßı q2Q, u
+1
+;u
+2
+2M , j = 1;::;N æº     
+lim
+t!+1
+
+
+'
+t
+( 
+ t
+(q);u
+1
+) '
+t
+( 
+ t
+(q);u
+2
+)
+
+
+= 0:
+ˇ æ   ('; ) - Œ  ŁŒº æ ªŁº Æ     ß       ß     æ    æ     H , P -
+    Œ    Ł H      Œ       Œ                   æ    æ     H ,I P
+-    Œ        ª      ª   º         º   Ł . ˇ     º  Ł ,    
+(H1) ˝                 æ   fZ(q)g
+q2Q
+  º  Ł  º    Ł    Ł       º 
+('; ),     æ    º  º Æßı s   0;q 2 Q æ      ºŁ    Œº    Ł 
+'
+s
+(q;Z(q)) Z( 
+s
+)(q).
+(H2) ˜º  º Æ ª  q2Q æ ø æ       = (q)2 (0; 1)   Œ  ,      º  º Æßı
+s  1;u;v2Z( 
+ s
+(q))
+
+
+(I P )('
+1
+( 
+ s
+(q);u) '
+1
+( 
+ s
+(q);v))
+
+
+  (q)ku vk:
+˜ º  ,   æ  a
+1
+;a
+2
+: Q! H -    Æ     Ł    ŒŁ ,    a
+i
+(q)2 Z(q)  º 
+º Æ ª  q2Q.    º          º    Ł 
+(H3) ˜º  º Æßı " > 0, t  0 æ ø æ            º    L = L(")   Œ  ,
+     º  º Æ ª  q2Q
+ (q)
+2L
+
+
+'
+t L
+(q;a
+1
+(q)) '
+t L
+(q;a
+2
+(q))
+
+
+2
+<";
+ª    (q) Æ    æ  Ł        º    Ł  (H2),   Ł    L(") ! 1   Ł
+"! 0.
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 123˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 4, 2011
+˙    Ł ,      æºŁ Œ  ŁŒº ('; ) Ł     ªº Æ º  ßØ B-pullback      Œ-
+   fA(q)g
+q2Q
+,   A(q) Z(q)  º  º Æ ª  q2Q.
+ º    ø             º   æ   Æ Æø  Ł         ß 14 Ł  [12]    æº -
+  Ø Œ  ŁŒº .
+         6 ˇ æ    ß  º   ß       º    Ł  (H1)-(H3) Ł æ ø æ     
+  > 0   Œ  ,      º  º Æ ª  q2Q
+lim
+t!+1
+
+
+P ('
+t
+( 
+ t
+(q);a
+1
+(q)) '
+t
+( 
+ t
+(q);a
+2
+(q)))
+
+
+  :
+   ª  
+lim
+t!+1
+
+
+'
+t
+( 
+ t
+(q);a
+1
+(q)) '
+t
+( 
+ t
+(q);a
+2
+(q))
+
+
+  : (23)
+˜ Œ     º æ   . ˛   Ł   ,      º  º Æßı t  0, q2Q
+
+
+'
+t
+( 
+ t
+(q);a
+1
+(q)) '
+t
+( 
+ t
+(q);a
+2
+(q))
+
+
+2
+=
+
+
+P ('
+t
+( 
+ t
+(q);a
+1
+(q)) '
+t
+( 
+ t
+(q);a
+2
+(q)))
+
+
+2
++
++
+
+
+(I P )('
+t
+( 
+ t
+(q);a
+1
+(q)) '
+t
+( 
+ t
+(q);a
+2
+(q)))
+
+
+2
+: (24)
+¨æ  º           º    Ł (H2) Ł     æ   º      Æ     Ł  Œ  ŁŒº  Œ Œ
+Œ     Ł Ł     ı    Æ     ŁØ, æ        (24)   º  Ł 
+
+
+P ('
+t
+( 
+ t
+(q);a
+1
+(q)) '
+t
+( 
+ t
+(q);a
+2
+(q)))
+
+
+2
++
++
+
+
+(I P )('
+t
+( 
+ t
+(q);a
+1
+(q)) '
+t
+( 
+ t
+(q);a
+2
+(q)))
+
+
+2
+ 
+
+
+P ('
+t
+( 
+ t
+(q);a
+1
+(q)) '
+t
+( 
+ t
+(q);a
+2
+(q)))
+
+
+2
++
+ 
+2
+(q)
+
+
+P ('
+t 1
+(q;a
+1
+(q)) '
+t 1
+(q;a
+1
+(q)))
+
+
+2
++
++ 
+2
+(q)
+
+
+(I P )('
+t 1
+(q;a
+1
+(q)) '
+t 1
+(q;a
+1
+(q)))
+
+
+2
+: (25)
+      Œ         Łæº L   ŒŁı ł ª  , Łæ  º     (H2) Ł (25),  ß   º  Ł 
+
+
+'
+t
+( 
+ t
+(q);a
+1
+(q)) '
+t
+( 
+ t
+(q);a
+2
+(q))
+
+
+2
+ 
+L
+X
+i=0
+ (q)
+2i
+
+
+P ('
+t i
+( 
+ t
+(q);a
+1
+(q)) '
+t i
+( 
+ t
+(q);a
+2
+(q)))
+
+
+2
++
+ (q)
+2L
+
+
+'
+t L
+(q;a
+1
+(q)) '
+t L
+(q;a
+2
+(q))
+
+
+2
+(26)
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 124˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 4, 2011
+˜º  " > 0  ßÆ    L          º    Ł  (H3). ˚       ª , æ ø æ     
+t
+0
+(L)   Œ  ,      º t t
+0
+(L)
+L
+X
+i=0
+ (q)
+2i
+
+
+P ('
+t i
+( 
+ t
+(q);a
+1
+(q)) '
+t i
+( 
+ t
+(q);a
+2
+(q)))
+
+
+2
++
++ (q)
+2L
+
+
+'
+t L
+(q;a
+1
+(q)) '
+t L
+(q;a
+2
+(q))
+
+
+2
+   + 2": (27)
+˛Æœ  Ł    (26) Ł (27),   º          Œ 
+
+
+'
+t
+( 
+ t
+(q);a
+1
+(q)) '
+t
+( 
+ t
+(q);a
+2
+(q))
+
+
+2
+   + 2":
+ˇ Ł t!1  Łæº  L       Æß    ßÆ     æŒ º   ª     Æ º łŁ  Ł   
+      º    Ł  (H3) "   Ł            æ  º    æŒ º   ª       ºß .
+˛ æ      º        Œº    Ł        ß. 
+ˇ Ł          Ł   æº  æ  Ł         ß 6       æº  Ł  æ ø æ      Ł 
+Œ      ª   Łæº        º  øŁı      º  Œ  ŁŒº  ('; ).
+ º  æ  Ł  1 ˇ æ   æ ø æ        > 0   Œ  ,      º  º Æßı q 2
+Q;u;v2H
+lim
+t!+1
+
+
+P ('
+t
+( 
+ t
+(q);u) '
+t
+( 
+ t
+(q);v))
+
+
+  :
+   ª  
+lim
+t!+1
+
+
+'
+t
+( 
+ t
+(q);u) '
+t
+( 
+ t
+(q);v)
+
+
+  :
+˜ Œ     º æ    . ˜º    Œ     ª L > 0 æ ø æ     q = q(u;v;L)2 Q
+  Œ  ,    '
+t L
+(q;u);'
+t L
+(q;v)2 Z( 
+ L
+(q)). ˇ Ł   Ł           6  º 
+a
+1
+(q) ='
+t L
+(q;u);a
+2
+(q) ='
+t L
+(q;v). 
+ ß   Ł   Ł     ª      æŁ     Ø       ß,   Łæ  æ Æº       º 
+     Ł   ª    . ˇ æ   Ł    æ  Œ  ŁŒº('; ) æ      ß     æ    æ    
+M =M
+1
+ M
+2
+, ª  M
+1
+ªŁº Æ      ,  M
+2
+- Æ   ı       æ    æ   ,    Æ-
+ø  ª     ,     Æ     º    ªŁº Æ      . ˛  Æ     Ł  ' Ł      Ł ' =
+('
+1
+;'
+2
+),     æ  '
+1
+:R
++
+ Q M
+1
+ M
+2
+!M
+1
+,'
+2
+:R
++
+ Q M
+1
+ M
+2
+!M
+2
+.
+         7 ˇ æ    ß  º   ß       º    Ł  (H1)  º  Œ  ŁŒº  ('; ),
+ª  ' = ('
+1
+;'
+2
+), Ł       º    Ł  (H2) Ł (H3)  º  æ   Øæ       Æ   -
+   ŁØ f'
+t
+1
+(q; )g
+t2R
++
+;q2Q
+. ˇ æ     Œ    ß  º    æ      Œ 
+
+
+'
+t
+2
+( 
+ t
+(q);v
+1
+;u
+1
+) '
+t
+2
+( 
+ t
+(q);v
+2
+;u
+2
+)
+
+
+M
+2
+ e
+ ct
+ku
+1
+ u
+2
+k
+M
+2
+æ   Œ     Ø Œ  æ     Ø c> 0  º  º Æßı t> 0,u
+2
+;u
+1
+2M
+2
+,v
+2
+;v
+1
+2M
+1
+.
+   ª       º            ß 6 æ       ºŁ   º  Œ  ŁŒº  ('; ).
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 125˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 4, 2011
+˜ Œ     º æ       º ªŁ      Œ     º æ           ß 6  º  Œ       -
+ ß'
+1
+   Æ     Ł  ',   Ł       º  Œ        ß'
+2
+   º ª æ  Øæ    (23)
+ ß  º           Ł  æŒŁ. 
+4   æ  Ø Ł ß  Ł   ª  ºß  º  Œ  ŁŒº 
+´   æº   Łı    ı     ª    ı  ß Ł   Ł   æº  Ł  æ ø æ      Ł      Ł-
+   Ł  Ł  æŒ ª  Ł   ª  º   º  Œ  ŁŒº .  ß Łæ  º         ı  , Œ    ßØ
+     Æ   Æßº   Łæ     [6]  º       ææ  . ´ ı      Œ     º æ     ß  Æ Æ-
+øŁ   æ    ß       Ł       ßŒ Œ  ŁŒº   Ł   Ł   …     º ª       ß,
+Œ       ª     Ł     æ ø æ      Ł      Ł-   Ł  Ł  æŒ ª  Ł   ª  º .
+˙  æ  Ł   º         º ª   ,    (M;k k) - ºŁ  Ø   ,   º       -
+ Ł  æŒ      æ    æ   . ˝     Ł ,     ('; )  Æ         ,      ŁæŁ  æ Ł
+   Œ    Œæ  , Œ  ŁŒº(f'
+t
+(q; )g
+t2R
++
+;q2Q
+; (M;k k))     Æ  Łæ ß      Œ  
+(f 
+t
+g
+t2R
++
+; (Q;d)). ˇ     º ª    æº    ø   æ  Øæ   :
+(C) ˚  ŁŒº ('; )       ß       Æº æ Ł       º  Ł .
+˛Æ     Ł       Co      æ     æ ı Œ  ŁŒº      M     Æ  Łæ ß 
+    Œ   (f 
+t
+g
+t2R
++
+; (Q;d)). ˜º  q2 Q Ł '2 Co       ºŁ  æ  Łª  
+s
+'
+Œ  ŁŒº  ('; ) Œ Œ
+ 
+s
+'(t;q;u) :='
+t
+( 
+s
+(q);u); t;s2R
++
+;u2M;q2Q;
+Ł      æ   
+
+ 
+(') =
+[
+s2R
++
+ 
+s
+':
+˛   Ł   ,    
+ 
+(') Co.
+˛Æ     Ł       H
+ 
+(')  æ     Œ ŁŁ :R
++
+ Q M!M   ŒŁ ,    
+ º    Œ     Ø   æº       º   æ Łfk
+n
+g R,f 
+k
+n
+'g æı  Ł æ  Œ     -
+        R
++
+ Q M   Œ     lim
+n!1
+( 
+k
+n
+')(t;q;u) = 
+t
+(q;u); (t;q;u)2
+R
++
+ Q M .
+     æ    H
+ 
+(')   ææ    Ł    æ  Œ Œ     º ªŁ  æŒ      æ    æ   
+Ł    ß    æ   Æ º  Œ Ø Œ  ŁŒº ('; ).
+— ææ    Ł  Œ  ŁŒº ('; ) æ      ß     æ    æ     M      º      -
+ øŁØ  æº  Ł 
+H
+ 
+(') Co:
+˝           Ł    ,          æ   H
+ 
+(') Ł    Ł          æŁ  º   
+æ  Łª  
+s
+, s2R
++
+. ˇ     º  Ł ,     H
+ 
+(') æ Œ    Ł º    Œ    Œ   .
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 126˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 4, 2011
+ˇ æ  !
+ 
+(')  Æ        !      º          æ    Œ  ŁŒº  ('; )     -
+æŁ  º    æ  Łª  
+s
+.
+˛     º  Ł  6 ˝                  æ   
+^
+Z =fZ(q)g
+q2Q
+   ß    -
+æ  Ł   ª   º    º  Œ  ŁŒº  ('; ),  æºŁ     Ł    Ł       º  ('; ) Ł
+  º   æ        ß  ß     Æ      Ł   Z :Q!M .
+˜ º         º ª        æ ø æ      Ł   ª  º Z    Q Œ  ŁŒº  ('; )
+  Œ Ø,          æ   
+^
+Z =fZ(q) :q2Qg     æŁ  º    Œ    Œ     M .
+¨  æ  Øæ          ß   æ Ł Œ æ ª     Ł      Ł  (C)  ß  Œ    ,    
+S
+t
+( 
+s
+(q);Z( 
+s
+(q))) = ( 
+t
+( 
+s
+(q));'
+t
+( 
+s
+(q);Z( 
+s
+(q)))) = ( 
+s+t
+(q);Z( 
+s+t
+(q)))
+æ    Ł æ  Œ ( 
+s
+(q);Z( 
+s
+(q)))   Ł t ! 0+                æŁ  º   
+s 2 R
++
+;q 2 Q; æº       º    Ł   ª  ºZ    Q   º    Æß        -
+            ß   . ¨æ  º                 º - æŒ ºŁ Ł æ Œ    Ł º -
+    Œ    Œ   æ   H
+ 
+('),   º  Ł ,      º  º Æ Ø   æº       º   æ Ł
+fk
+0
+n
+g R
++
+, æ ø æ           æº       º   æ  fk
+n
+g R
++
+, 2H
+ 
+(') Ł
+   Œ Ł  Y :Q!M   Œ  ,    
+lim
+n!1
+ 
+k
+n
+' = 
+Ł
+lim
+n!1
+Z( 
+( )+k
+n
+(q)) =Y ( 
+( )
+(q))
+              º Æ   Œ    Œ     Q. ´      æº     Æ       Łæ   
+(Z
+k
+n
+; 
+k
+n
+')! (Y; ) Œ    Œ       Q.
+˛Æ     Ł        
+(Z;')      æ     æ ı (Y; )   ŒŁı,    
+(Z
+k
+n
+; 
+k
+n
+')! (Y; ) Œ    Œ       Q  º    Œ     Ø   æº       º   -
+æ Łfk
+n
+g R
++
+  Œ Ø    k
+n
+!1   Ł n!1.
+´Œº    Ł  (Y; )2 
+(Z;')  ß Æ         Łæß       Œ      Ł  Y 2
+!
+ 
+(Z).
+´      æº    ,Y - Ł   ª  º  º  Œ  ŁŒº  ,     æ        º        
+ æº  Ł 
+ 
+t
+(q;Y (q)) =Y ( 
+t
+(q)); t2R
++
+;q2Q:
+´   …       æ    O
+"
+(u
+0
+) =fu2 M :ku u
+0
+k < "g,  º  º Æßı
+u
+0
+2M Ł "> 0.
+˛     º  Ł  7 ¨   ª   º Z :Q!M Œ  ŁŒº  ('; )    ß    æ 
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 127˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 4, 2011
+1.              æ  Ø Ł ß      æŁ  º    q2Q,  æºŁ  º  º Æ ª ">
+0 æ ø æ        := (")> 0   Œ  ,    
+'
+t
+(q;O
+ 
+(Z(q))) O
+"
+(Z( 
+t
+(q))); t2R
++
+;q2Q:
+2.              æŁ     Ł  æŒŁ  æ  Ø Ł ß      æŁ  º    q 2 Q,
+ æºŁ                  æ  Ø Ł   Ł æ ø æ       
+0
+> 0   Œ  ,    
+ º  º Æ ª  "> 0 æ ø æ      t
+0
+> 0   Œ      
+'
+t
+(q;O
+ 
+0
+(Z(q))) O
+"
+(Z( 
+t
+(q))); t t
+0
+;q2Q:
+5 ˇ   Ł-   Ł  Ł  æŒŁ  Ł   ª  ºß  º 
+    Ł-   Ł  Ł  æŒŁı Œ  ŁŒº  
+˛     º  Ł  8 ˚  ŁŒº' :R
++
+ Q M!M , Æ        ß         Ł-
+   Ł  Ł  æŒŁ ,  æºŁ'
+t
+(q;u)     Ł-   Ł  Ł  æŒŁØ   q , ª  (t;u) Ł     -
+Ł   º   ª   ª    Ł     ª       æ   .
+ˇ æ   ('; )     Ł-   Ł  Ł  æŒŁØ Œ  ŁŒº æ      ß     æ    æ    
+M .
+ˇ   Æ Æø…   Ø         ` ı    !
+ 
+(') = H
+ 
+(') -  Ł Ł  º        -
+  æ   .
+˚       ª ,  º  º Æ ª  2 H
+ 
+(') æ ø æ        æº       º   æ  
+fk
+n
+g R
++
+  Œ  ,    '
+t
+( 
+k
+n
+(q);u)! 
+t
+(q;u)   Ł n!1              
+q2Q, (t;u) Ł     Ł   º   ª   ª   Ł     ª       æ     R
++
+ M .
+— ææ    Ł      ŁŒ  %   H
+ 
+(')       º…           º Ø
+%( ;
+~
+ ) =
+1
+X
+n=0
+1
+2
+n
+%
+n
+( ;
+~
+ )
+1 +%
+n
+( ;
+~
+ )
+;
+ª  %
+n
+( ;
+~
+ ) = supfk 
+t
+(q;u) 
+~
+ 
+t
+(q;u)k : 0 t n;q2Q;ku u
+0
+k ng,
+Ł u
+0
+-  ŁŒæŁ      ßØ  º      Ł  M .    ª   2 H
+ 
+(')          ,    
+ ( 
+k
+n
+'; )! 0   Ł n!1,  º    Œ     Ø   æº       º   æ Łfk
+n
+g 
+R
++
+.
+˛     º  Ł  9 ¨   ª   º Z    Q    ß    æ   æŁ     Ł  æŒŁ
+    Ł-   Ł  Ł  æŒŁ   æºŁ      º   æ  æ    Ø       ß   Ø     Ł-
+   Ł  Ł  æŒ Ø    Œ ŁŁZ
+1
+(q) Ł       ß   Ø    Œ ŁŁ Z
+2
+(q)       º… -
+  Ø   Q Œ        æ    Ł æ  Œ   º 
+Z(q) =Z
+1
+(q) +Z
+2
+(q):
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 128˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 4, 2011
+ˇ æ   Z - Ł   ª  º    Q   Œ Ø,          æ   
+^
+Z = fZ(q) : q 2
+Qg     æŁ  º    Œ    Œ     M . ˜º  æº     Q = R Ł   æ    ([7]),
+    Ł   ª  ºZ   º   æ   æŁ     Ł  æŒŁ     Ł-   Ł  Ł  æŒŁ    ª   Ł
+  º Œ    ª  , Œ ª    ß  º     æº    ø   æ  Øæ   :
+(L) ˜º  º Æ Ø   æº       º   æ Łfk
+0
+n
+g   Œ Ø,    k
+0
+n
+!1, æ ø æ     
+     æº       º   æ  fk
+n
+g,  º  Œ     ØZ( 
+k
+n
+(q)) æı  Ł æ       -
+         Q.
+  Ø  æ  º  Ł   ª  º  Z    Q     Ł-   Ł  Ł  æŒ ª  Œ  ŁŒº  ('; )
+  ææ    Ł  æº    ø   æ  Øæ   :
+(A) ˜º  º Æ ª  " > 0 æ ø æ      (") > 0   Œ  ,      º    Œ   -
+  ª  q
+0
+2 Q,       Y ( 
+t
+(q
+0
+)) 2 O
+"
+(Z( 
+h+t
+(q
+0
+)))  º   æ ı t   0
+  Ł  æº  ŁŁ,     (Y; ) 2 
+(Z;'), Y (q
+0
+) 2 O
+ (")
+(Z( 
+h
+(q
+0
+))) Ł
+%( 
+h
+'; )< ("),  º    Œ     ª h  0.
+         8 ˇ     º  Ł ,     Z - Ł   ª   º    Q     Ł-
+   Ł  Ł  æŒ ª  Œ  ŁŒº ('; )   Œ Ø,          æ   
+^
+Z =fZ(q) :q2
+Qg     æŁ  º    Œ    Œ      M .    ª   Z  æŁ     Ł  æŒŁ     Ł-
+   Ł  Ł  æŒ Ø   ª   Ł   º Œ    ª  , Œ ª    ß  º        Øæ   
+(A).
+˜ Œ     º æ    . ˇ     º  Ł ,      º  Z(q)  ß  º        Øæ   
+(A) Ł   æ  ft
+0
+n
+g   æº       º   æ  ,   Œ      t
+0
+n
+!1   Ł n!1.
+   ª   æ ø æ           æº       º   æ  ft
+n
+g Ł      (Y; )2 
+(Z;')
+  ŒŁ ,    (Z
+t
+n
+; 
+t
+n
+')! (Y; ) Œ    Œ       Q.
+˜º  º Æ ª  "> 0  ßÆ    n
+0
+(")> 0   Œ  ,      æºŁn>n
+0
+("),q
+0
+2Q
+  ª  Y (q
+0
+)2O
+ (")
+(Z( 
+t
+n
+(q
+0
+))) Ł %( 
+t
+n
+'; )< ("), ª   (") Ł     Øæ   
+(A).
+˛ Œ     æº      ,    
+Y ( 
+t
+(q
+0
+))2O
+"
+(Z( 
+t+t
+n
+(q
+0
+))); t  0:
+   ŒŁ   Æ      Z      º            Øæ    (L) Ł     Ł   æŁ     Ł  -
+æŒŁ     Ł-   Ł  Ł  æŒŁØ.
+ˇ     º  Ł  æ Ø  æ,     Z - Ł   ª  º,    C  Øæ   (A)     ß  º  -
+  æ .    ª   æ ø æ      "> 0 Ł   æº       º   æ Ł(Y
+n
+; 
+n
+)2 
+(Z;'),
+h
+n
+  0 Ł t
+n
+  0   ŒŁ ,      º    Œ     ª q
+0
+2Q  ß  º     æº    ø  
+Y
+n
+( 
+t
+n
+(q
+0
+))2@O
+"
+(Z( 
+t
+n
++h
+n
+(q
+0
+))); (28)
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 129˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 4, 2011
+Y
+n
+(q
+0
+)2O1
+n
+(Z( 
+h
+n
+(q
+0
+))); (29)
+%( 
+n
+; 
+h
+n
+')<
+1
+n
+; (30)
+ª  @O
+"
+ª   Ł  O
+"
+.
+ ß             º  Ł  ,      º     Œ ŁŁ Y (q)
+kY
+n
+(q
+0
+) Y (q
+0
+)k! 0 (31)
+             Q   Ł n!1,           Y
+n
+2 
+(Z) ŁZ(q)  æŁ     Ł-
+  æŒŁ     Ł-   Ł  Ł  æŒŁ .
+ˇ Œ    ,     h
+n
+! 1. ˇ æ            Œ.    ª               º -
+ Ł  ,     æ ø æ     h  0;h
+n
+! h   Ł n!1.    ª   Ł         æ   
+    ª º  ŁŒ    º  Ł ,    
+%( 
+h
+'; 
+n
+) %( 
+h
+'; 
+h
+n
+') +%( 
+h
+n
+'; 
+n
+);
+Ł Ł  (30) Ł     %( 
+h
+'; 
+n
+)! 0,   Ł n!1.
+˙  æ       Ł ,    '
+t
+( 
+s+h
+(q
+0
+);Y ( 
+s
+(q
+0
+))) =Y ( 
+t+s
+(q
+0
+)),           
+'
+t
+( 
+s+h
+(q
+0
+);Y ( 
+s
+(q
+0
+))) = ( 
+h
+')(t; 
+s
+(q
+0
+);Y ( 
+s
+(q
+0
+)))
+= lim
+n!1
+( 
+n
+)
+t
+( 
+s
+(q
+0
+);Y
+n
+( 
+s
+(q
+0
+))) = lim
+n!1
+Y
+n
+( 
+t+s
+(q
+0
+)):
+ˇ æŒ º Œ 
+kZ( 
+h
+(q
+0
+)) Y (q
+0
+)k 
+kZ( 
+h
+(q
+0
+)) Z( 
+h
+n
+(q
+0
+))k +kZ( 
+h
+n
+(q
+0
+)) Y
+n
+(q
+0
+)k +kY
+n
+(q
+0
+) Y (q
+0
+)k
+Ł
+kZ( 
+h
+(q
+0
+)) Z( 
+h
+n
+(q
+0
+))k! 0
+  Ł n ! 1,      Ł   æ     (29) Ł (31)   º  Ł ,    kZ( 
+h
+(q
+0
+)) 
+Y (q
+0
+)k = 0.
+   ª  
+Z( 
+t+h
+(q
+0
+)) ='
+t
+( 
+h
+(q
+0
+);Z( 
+h
+(q
+0
+))) ='
+t
+( 
+h
+(q
+0
+);Y (q
+0
+)) =Y ( 
+t
+(q
+0
+))
+ º  t2R
++
+. ´   æ   æ Ł,
+kZ( 
+t
+n
++h
+(q
+0
+)) Y ( 
+t
+n
+(q
+0
+))k = 0 (32)
+ º  º Æ ª        º   ª  n.
+     ª Ø æ     ß  º    æ        Æ º łŁın  ß   æ  º     æ  (28),
+(31) Ł           Ø       ß   æ   Z(p)   Q,    Æß   Œ     
+kZ( 
+t
+n
++h
+(q
+0
+)) Y ( 
+t
+n
+(q
+0
+))k 
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 130˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 4, 2011
+kZ( 
+t
+n
++h
+n
+(q
+0
+)) Y
+n
+( 
+t
+n
+(q
+0
+))k
+ kZ( 
+t
+n
++h
+n
+(q
+0
+)) Z( 
+t
+n
++h
+(q
+0
+))k
+ kY
+n
+( 
+t
+n
+(q
+0
+)) Y ( 
+t
+n
+(q
+0
+))k
+ " 
+"
+4
+ 
+"
+4
+=
+"
+2
+> 0:
+ˇ º  ŁºŁ     Ł     Ł  (32).
+¨æı    Ł  æ  Øæ   æ Œ    Ł º   Ø Œ    Œ   æ Ł  Æ º  ŒŁH
+ 
+(') Ł
+ æŁ     Ł  æŒ Ø     Ł-   Ł  Ł   æ Ł    Œ ŁŁ Z(q)  ß           -
+  º  Ł  ,    
+(Z
+h
+n
+; 
+h
+n
+')! (
+~
+Y; ) (33)
+Œ    Œ       Q  º    Œ    ßı (
+~
+Y; )2 
+(Z;'). ˇ æŒ º Œ   º    Œ -
+    ª q
+0
+2Q
+k
+~
+Y (q
+0
+) Y (q
+0
+)k 
+k
+~
+Y (q
+0
+) Z( 
+h
+n
+(q
+0
+))k +kZ( 
+h
+n
+(q
+0
+)) Y
+n
+(q
+0
+)k +kY
+n
+(q
+0
+) Y (q
+0
+)k;
+   Ł  (29), (31) Ł (33) æº      ,    
+~
+Y (q
+0
+) =Y (q
+0
+).  º       º   , Łæ  º -
+    (30),(31) Ł (33), Ł      º  º Æßı t2R
++
+~
+Y ( 
+t
+(q
+0
+)) = 
+t
+(q
+0
+;
+~
+Y (q
+0
+)) = 
+t
+(q
+0
+;Y (q
+0
+)) =
+lim
+n!1
+( 
+t
+n
+')(t;q
+0
+;Y
+n
+(q
+0
+)) = lim
+n!1
+ 
+n
+(q
+0
+;Y
+n
+(q
+0
+)) =
+lim
+n!1
+Y
+n
+( 
+t
+(q
+0
+)) =Y ( 
+t
+(q
+0
+)):
+   ŒŁ   Æ     ,  º  º Æßı t2R
++
+ ß Ł            æ   
+kZ( 
+h
+n
++t
+(q
+0
+)) Y
+n
+( 
+t
+(q
+0
+))k 
+kZ( 
+h
+n
++t
+(q
+0
+)) 
+~
+Y ( 
+t
+(q
+0
+))k +kY
+n
+( 
+t
+(q
+0
+) Y ( 
+t
+(q
+0
+))k<"
+  Ł   æ        Æ º łŁın,         Ł     Ł  (28).            Œ     . 
+         9 ¯æºŁ Ł   ª   º Z    Q     Ł-   Ł  Ł  æŒ ª  Œ  ŁŒº 
+('; )  æŁ     Ł  æŒŁ     Ł-   Ł  Ł  æŒŁØ,    æ ø æ          Ł-
+   Ł  Ł  æŒŁØ Ł   ª   º Œ  ŁŒº  ('; ).
+˜ Œ     º æ    .    Œ Œ Œ ('; )     Ł-   Ł  Ł  æŒŁØ Œ  ŁŒº,   
+æ ø æ        æº       º   æ  ft
+n
+g;t
+n
+! 1   Ł n ! 1   Œ  ,    
+( 
+t
+n
+')(t;q;u)!'
+t
+(q;u)                æŁ  º   q2Q Ł (t;u) Ł     -
+Ł   º   ª   ª   Ł     ª       æ   . ¨   ª  ºZ(q) = Z
+1
+(q) +Z
+2
+(q),
+ª   Z
+1
+(q) -     Ł-   Ł  Ł  æŒŁØ ŁZ
+2
+( 
+t
+(q
+0
+))! 0   Ł t!1.  º   -
+    º   ,  ß             º  Ł  ,     Z
+1
+( 
+t+t
+n
+(q
+0
+))! Z
+ 
+1
+( 
+t
+(q
+0
+))   Ł
+n!1               q 2 Q, ª   Z
+ 
+1
+    Ł-   Ł  Ł  æŒ  . ˇ      
+(Z
+ 
+1
+;')2 
+(Z;'), Z
+ 
+1
+-     Ł-   Ł  Ł  æŒŁØ Ł   ª  º Œ  ŁŒº ('; ). 
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 131˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 4, 2011
+¸     1 ˇ æ   T > 0.    ª    º  º Æ ª  "> 0, æ ø æ       (") > 0
+  Œ  ,     Ł  kZ( 
+s
+(q
+0
+)) Z
+1
+(q
+0
+)k< (") Ł %( 
+s
+'; )< (")  ß  Œ   ,
+     ß  º    æ  Z
+1
+( 
+t
+(q
+0
+))2O
+"
+(Z( 
+s+t
+(q
+0
+)))  º t2 [0;T ], q
+0
+2Q;s2
+R
++
+Ł (Z
+1
+; )2 
+(Z;').
+˜ Œ     º æ    . ˇ     º  Ł   Æ      .    ª  ,  º    Œ     ª  ">
+0 æ ø æ        æº       º   æ  fs
+n
+g, s
+n
+2 R
++
+,fh
+n
+g, 0 < h
+n
+< T , Ł
+(Z
+n
+1
+;v
+n
+)2 
+(Z;')   ŒŁ ,    
+%( 
+s
+n
+'; 
+n
+)<
+1
+n
+Z
+n
+1
+(q
+0
+)2O1
+n
+(Z( 
+s
+n
+(q
+0
+)))
+Z
+n
+1
+( 
+t
+(q
+0
+))2O
+"
+(Z( 
+s
+n
++t
+(q
+0
+))); t2 [0;h
+n
+)
+Ł
+Z
+n
+1
+( 
+h
+n
+(q
+0
+))2@O
+"
+(Z( 
+s
+n
++h
+n
+(q
+0
+))):
+   Œ Œ Œ h
+n
+2 [0;T ],  ß   Œ               º  Ł  ,     h
+n
+! h2
+[0;T ]   Ł n!1. ´ æŁº    ª ,     
+(Z;') Œ    Œ   ,  ß           -
+  º  Ł  ,    
+(Z
+n
+1
+; 
+n
+)! (Z
+1
+; )2 
+(Z;')
+Ł
+(Z
+s
+n
+; 
+s
+n
+')! (
+~
+Y; )2 
+(Z;')
+  Ł n!1, æ      æ      .    ª  Z
+1
+( 
+h
+(q
+0
+))2@O
+"
+(
+~
+Y ( 
+h
+(q
+0
+))).
+     ª Ø æ     ß,   Œ Œ Œ Z
+1
+(q
+0
+) =
+~
+Y (q
+0
+),  ß Ł     Z
+1
+( 
+t
+(q
+0
+)) =
+~
+Y ( 
+t
+(q
+0
+))   Q (2). ˇ º  Ł      Ł     Ł . 
+¸     2 ˇ     º  Ł ,     ('; )     Ł-   Ł  Ł  æŒŁØ Œ  ŁŒº   
+M . ¯æºŁ Ł   ª   º Z    Q              æŁ     Ł  æŒŁ  æ  Ø Ł ßØ,
+  ª                   æŁ     Ł  æŒŁ  æ  Ø Ł ßØ   !
+ 
+(').
+˜ Œ     º æ    . ˇ æ  h
+k
+!1   Łk!1 Ł (Z
+h
+k
+; 
+t
+k
+')! (Y; )2
+
+(Z;') Œ    Œ       Q.
+ˇ æ  m2R
++
+ ŁŒæŁ      .
+¯æºŁ k   æ        Æ º ł  ,     º    Œ     ª q
+0
+2Q  ß  º    æ 
+Y ( 
+m
+(q
+0
+))2O
+ ("=2)=2
+(Z( 
+h
+k
++m
+(q
+0
+))):
+ˇ æ  Z
+0
+2O
+ ("=2)=2
+(Y ( 
+m
+(q
+0
+))).    ª        
+( 
+ 
+k
+')(t; 
+m
+(q
+0
+);Z
+0
+) ='
+t
+( 
+h
+k
++m
+(q
+0
+);Z
+0
+)2O
+"=2
+(Z( 
+t+h
+k
++m
+(q
+0
+)))
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 132˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 4, 2011
+ º  º Æ ª  t>m,q
+0
+2Q  æº  æ  Ł    ª ,    Z
+0
+2O
+ ("=2)
+(Z( 
+h
+k
++m
+(q
+0
+))).
+   Œ Œ Œ
+( 
+h
+k
+')(t; 
+m
+(q
+0
+);Z
+0
+)! 
+t
+( 
+m
+(q
+0
+);Z
+0
+)
+Ł
+Z( 
+t+h
+k
++m
+(q
+0
+))!Y ( 
+t+m
+(q
+0
+));
+ ß   º  Ł ,    
+ 
+t
+( 
+m
+(q
+0
+);Z
+0
+)2O
+"=2
+(Z
+0
+( 
+t+m
+(q
+0
+)))
+ º  º Æ ª  t m.  º       º   Y (q)             æ  Ø Ł ßØ.
+  Ø  æ  ß   Œ    ,     Y ( 
+m
+(q
+0
+))  æŁ     Ł  æŒŁ           
+ æ  Ø Ł ßØ.
+ˇ æ  
+Z
+0
+2O
+ 
+0
+=2
+(Y ( 
+m
+(q
+0
+)))
+Ł
+Y ( 
+m
+(q
+0
+))2O
+ 
+0
+=2
+(Z( 
+h
+k
++m
+(q
+0
+))):
+   Œ Œ Œ Z(q) -  æŁ     Ł  æŒŁ             æ  Ø Ł ßØ,  ß Ł    
+'
+t
+( 
+h
+k
++m
+(q
+0
+);Z
+0
+)2O
+"=2
+(Z( 
+t+h
+k
++m
+(q
+0
+))
+ º  t t
+0
+("=2),   æŁº    ª ,    Z
+0
+2O
+ 
+0
+(Z( 
+h
+k
++m
+(q
+0
+)).  º       º   ,
+ 
+t
+( 
+m
+(q
+0
+);Z
+0
+)2O
+"=2
+(Y ( 
+t+m
+(q
+0
+))
+ º  t t
+0
+("=2). 
+         10 ˇ     º  Ł ,     ('; )     Ł-   Ł  Ł  æŒŁØ Œ  ŁŒº   
+M , Ł   æ   Z Ł   ª   º    Q,   Œ Ø          æ   
+^
+Z =fZ(q)g
+q2Q
+    æŁ  º    Œ    Œ      M . ¯æºŁ Ł   ª   º Z              æŁ    -
+ Ł  æŒŁ  æ  Ø Ł ßØ,   ª    ß  º        Øæ    (A).  º       º   
+    æŁ     Ł  æŒŁ     Ł-   Ł  Ł  æŒŁØ.
+˜ Œ     º æ    . ˇ     º  Ł ,      º  Z(q)     ß  º    æ  C  Ø-
+æ    (A).    ª   æ ø æ        æº       º   æ Łft
+n
+g;t
+n
+  0;fr
+n
+g;r
+n
+>
+0; (Z
+n
+1
+; 
+n
+)2 
+(Z;') Ł Œ  æ    ß 
+1
+; 0< 
+1
+< 
+0
+=2   ŒŁ ,    
+Z
+n
+1
+(q
+0
+)2O1
+n
+(Z( 
+t
+n
+(q
+0
+))); %( 
+n
+; 
+t
+n
+')<
+1
+n
+(34)
+Ł
+Z
+n
+1
+( 
+r
+n
+(q
+0
+))2@O
+ 
+1
+(Z( 
+t
+n
++r
+n
+(q
+0
+)));
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 133˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 4, 2011
+Z
+n
+1
+( 
+t
+(q
+0
+))2O
+ 
+1
+(Z( 
+t+t
+n
+(q
+0
+))); (35)
+   [0;r
+n
+), ª   
+0
+Ł        º  Ł   æŁ     Ł  æŒŁ             æ  Ø Ł  ª 
+Ł   ª  º Z . ¨  ¸   ß 2 æº      ,    Z  æŁ     Ł  æŒŁ           
+ æ  Ø Ł ßØ  !
+ 
+('). ˇ æ   ( ) Ł        º  Ł              æ  Ø Ł  ª 
+Ł   ª  º Z  !
+ 
+(').
+  ø æ        æº       º   æ  f 
+n
+g; 0< 
+n
+<r
+n
+  Œ  ,    
+Z
+n
+1
+( 
+ 
+n
+(q
+0
+))2@O
+ ( 
+1
+=2)=2
+(Z( 
+t
+n
++ 
+n
+(q
+0
+))) (36)
+Ł
+Z
+n
+1
+( 
+t
+(q
+0
+))2O
+ 
+1
+Z( 
+t+t
+n
+(q
+0
+))nO
+ ( 
+1
+=2)=2
+(Z( 
+t+t
+n
+(q
+0
+))); (37)
+   [ 
+n
+;r
+n
+],  º    æ        Æ º łŁın,  æºŁ  ß  º   ß (34) Ł (35).
+ˇ     º  Ł ,     æ ø æ           æº       º   æ  f 
+n
+g, Œ      
+ ß   Œ     Æ     Ł       f 
+n
+g,   Œ  ,     
+n
+æı  Ł æ  Œ   Œ       
+  2 R
++
+. ¨  (34) æº      ,     æ ø æ     n
+0
+> 0   Œ  ,    n   n
+0
+,
+  + 1  
+n
+  0 Ł
+Z
+n
+1
+( 
+t
+(q
+0
+))2O
+ ( 
+1
+=2)=4
+(Z( 
+t+t
+n
+(q
+0
+)))
+ º  t2 [0;  + 1]   æŁº  ¸   ß 1. ˇ º  Ł      Ł     Ł  æ (36).  º   -
+    º   , 
+n
+!1   Ł n!1.
+ˇ æ   
+n
+=r
+n
+  
+n
+Ł   æ   
+n
+!1. ˛Æ     Ł s
+n
+= 
+n
++( 
+n
+=2). ¨  (34)
+Ł Œ    Œ   æ Ł 
+(Z;')  ß             º  Ł  ,     ((Z
+n
+1
+)
+s
+n
+; 
+s
+n
+ 
+n
+) Ł
+(Z
+t
+n
++s
+n
+; 
+t
+n
++s
+n
+') æ      æ  Œ   Œ    ß  (Z
+n
+1
+; ), (
+~
+Y; )2 
+(Z;') Œ  -
+  Œ      Q   Ł n!1, æ      æ      .
+˜º  º Æ ª   ŁŒæŁ       ª  t > 0        ßÆ     n
+1
+> 0   Œ  ,    
+ º     Ł   º   ª n  n
+1
+;r
+n
+ s
+n
+=  
+n
+=2 > t   æŁº    ª ,     
+n
+!1
+  Ł n!1. ˇ        º n n
+1
+ ß Ł      
+n
+<t +s
+n
+<r
+n
+Ł, Łæ  º    
+(37),   º  Ł 
+Z
+n
+1
+( 
+t+s
+n
+(q
+0
+)) = 2O
+ ( 
+1
+=2)=2
+(Z( 
+t+t
+n
++s
+n
+(q
+0
+))): (38)
+  ø æ     n
+2
+ n
+1
+  Œ  ,      º  Œ    ª  n n
+2
+Z
+n
+1
+( 
+t+s
+n
+(q
+0
+))2O
+ ( 
+1
+=2)=8
+(Z( 
+t+t
+n
+(q
+0
+)));
+~
+Y ( 
+t
+(q
+0
+))2O
+ ( 
+1
+=2)=8
+(Z( 
+t+t
+n
++s
+n
+(q
+0
+))): (39)
+˜ º   Ł  (38) Ł (39) æº      ,      º  Œ    ª n n
+2
+,
+kZ
+1
+( 
+t
+(q
+0
+)) 
+~
+Y ( 
+t
+(q
+0
+))k k 
+n
+1
+( 
+t+s
+n
+(q
+0
+)) Z( 
+t+t
+n
++s
+n
+(q
+0
+))k
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 134˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 4, 2011
+ kZ( 
+t+t
+n
++s
+n
+(q
+0
+)) 
+~
+Y ( 
+t
+(q
+0
+))k k 
+n
+1
+( 
+t+s
+n
+(q
+0
+)) Z
+1
+( 
+t
+(q
+0
+))k  ( 
+1
+=2)=4:
+(40)
+˛   Œ ,   æŁº    ª ,    
+~
+Y (q
+0
+)2O
+ 
+0
+=2
+(Z
+1
+(q
+0
+)), Ł           Ø  æŁ  -
+   Ł  æŒ Ø  æ  Ø Ł  æ ŁZ(q) æº      ,    kZ
+1
+( 
+t
+(q
+0
+)) 
+~
+Y ( 
+t
+(q
+0
+))k! 0
+  Ł t!1         Ł     Ł  (40).
+C Ø  æ  ß             º  Ł  ,      
+n
+æı  Ł æ  Œ   Œ        2
+R
++
+  Ł n ! 1, Ł     0    
+n
+    + 1  º   æ ı n. ` º     ª ,  ß
+            º  Ł  ,     (( 
+n
+1
+)
+ 
+n
+; 
+ 
+n
+ 
+n
+) Ł (Z
+t
+n
++ 
+n
+; 
+t
+n
++ 
+n
+') æ      æ  Œ
+  Œ    ß  (Y;
+~
+ ), (
+~
+Z;
+~
+ )2 
+(Z;')   Ł n!1, æ      æ      .
+´ æŁº    ª ,    kY (q
+0
+) 
+~
+Z(q
+0
+)k =  ( 
+1
+=2)=2 (æº      Ł  (36)),  ß
+Ł     Y ( 
+ 
+(q
+0
+))2O
+ 
+1
+=2
+(
+~
+Z( 
+ 
+(q
+0
+))).
+˛   Œ ,  ß   º  Ł      Ł     Ł  (35),           
+kY ( 
+t
+(q
+0
+)) 
+~
+Z( 
+t
+(q
+0
+))k 
+kZ( 
+t
+n
++r
+n
+(q
+0
+))  
+n
+1
+( 
+r
+n
+(q
+0
+))k kY ( 
+t
+(q
+0
+))  
+n
+1
+( 
+ 
+n
++p
+(q
+0
+))k
+ k 
+n
+1
+( 
+ 
+n
++ 
+n
+(q
+0
+))  
+n
+1
+( 
+ 
+n
++p
+(q
+0
+))k k 
+n
+1
+( 
+ 
+n
++ 
+n
+(q
+0
+)  
+n
+1
+( 
+r
+n
+(q
+0
+))k
+ kZ( 
+t
+n
++r
+n
+(q
+0
+)) 
+~
+Z( 
+ 
+n
+(q
+0
+))k k
+~
+Z( 
+ 
+n
+(q
+0
+)) 
+~
+Z( 
+t
+(q
+0
+))k
+  
+1
+=2
+ º   æ ı   æ        Æ º łŁın.    ŒŁ   Æ     ,  º  Ł   ª  º  Z   º   
+ ß  º    æ     Øæ    (A). 
+  Łæ Œ ºŁ       ß
+[1] ˇ  Œ  ,  . ., ˛ª   Ł     æ   Ł     Ł-   Ł  Ł   æ           -
+ Ł   ł  ŁØ    º  Ł   ßı    Ł  Ł   ßı        æ  , ¨   æ Ł 
+ ˝    — .    Ł         Ł  æŒ   , 1982,     46,  ß  æŒ 2, æ  .
+314 346.
+[2]    ł  , ¨.˜.,      Ł     Œ Ł   º  ,                  º  øŁı
+ æŁ     Ł  æŒ    Ł   ŁŒ  Æ æŒ          ßı  ŁææŁ   Ł  ßı æŁ-
+æ   ,   ˝ , 1998,     53,  ß  æŒ 4(322), æ  . 77 124.
+[3] Chueshov, I., Order-Preserving Skew-Product Flows and
+Nonautonomous Parabolic Systems, A cta Applic andae Mathematic ae ,
+2001, vol. 65, pp. 185-205.
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 135˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 4, 2011
+[4] F oias, C., T emam, R., Determination of the Solutions of the
+Navier-Stokes Equations by a Set of Nodal V alues, Mathematics of
+Computation , 1984, vol. 43, pp. 117-133.
+[5] Glassey , R., Yin, H.-M., On Maxwell’s Equations with a T emperature
+E ect, II, Communic ations in Mathematic al Physics , 1998, vol. 194, pp.
+343-358.
+[6] Hino, Y. and Murak ami, S., Almost Periodic Processes and the Existence
+of Almost Periodic Solutions, Ele ctr onic Journal of Qualitative The ory
+of Di er ential Equations , 1998, no. 3, pp. 1-19.
+[7] Hino, Y., Murak ami, S. and Y oshizawa, T., Stability and Existence of
+Almost Periodic Solutions for Abstract F unctional Di erential Equations
+with In nite Delay , T ohoku Mathematic al J. , 1997, vol. 49, pp. 133-147.
+[8] Jones, D. and Titi, E., Upper Bounds on the Number of Determining
+Modes, Nodes, and V olume Elements for the Navier- Stokes Equations,
+Indiana University Mathematics Journal , 1993, vol. 42, no. 3, pp. 875-
+887.
+[9] Kalinin, Y., Reitmann, V., Y umaguzin, N., Asymptotic Behaviour of
+Maxwell’s Equation in One-Space Dimension With Thermal E ect,
+Discr ete and Continuous Dynamic al Systems Series B , 2011, vol. 16,
+no. 2, pp. 343-353.
+[10] Kantz, H., Reitmann, V., Determining F unctionals for Bifurcations on
+a Finite-Time Interv al in V ariational Inequalities, In: Pr o c e e dings of
+the International Confer enc e on Di er ential Equations, EQUADIFF,
+Hasselt-Belgium, 2003, Pr eprint Series DFG-SPP 1114 , 2003, pp. 1-16.
+[11] Kloeden, P ., Schmalfuss, B., Nonautonomous Systems, Cocycle
+Attractors and V ariable Time-Step Discretization, Numeric al
+Algorithms, 1997, vol. 14, pp. 141-152.
+[12] Langa, J.A., Asymptotically Finite Dimensional Pullback Behaviour of
+Non-autonomous PDEs, Ar chiv der Mathematik , 2003, vol. 80, pp. 525-
+535.
+[13] Manoranjan, V.S., Yin, H.-M., Showalter, R., On T wo-Phase Stefan
+Problem Arising from a Microwave Heating Process, Discr ete and
+Continuous Dynamic al Systems Series B , 2006, vol. 15, no. 4, pp. 1155-
+1168.
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 136˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 4, 2011
+[14] Morgan, J., Yin, H.-M., On Maxwell’s System with a Thermal E ect,
+Discr ete and Dynamic al Systems Series B , 2001, vol. 1, no. 4, pp. 485-
+494.
+[15] T emam, R., In nite-Dimensional Dynamic al Systems , New Y ork, 1993.
+[16] Yin, H.-M., On Maxwell’s Equations in an Electromagnetic Field with
+the T emperature E ect, SIAM J. on Mathematic al Analysis , 1998, vol.
+29, pp. 637-651.
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 137

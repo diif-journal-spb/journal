@@ -1,947 +1,1591 @@
-﻿%\begin{document}
-
-%\Large{
- \begin{center}{\bf Леонов Г.А., Бурова И.Г., Александров К.Д.}
-\end{center}
-\vskip0.3cm
-
- \begin{center}
-{\bf Визуализация четырех предельных циклов
-}
-
-{\bf  двумерных квадратичных систем  }
-
-{\bf  в пространстве параметров
-$\footnote{Работа выполнена при поддержке Министерства образования и науки РФ, Санкт-Петербургского государственного университета и Российского фонда фундаментальных исследований.}$}
-\end{center}
-   \vskip0.3cm
-   \begin{center}
-
-   {\it Математико-механический факультет
-   Санкт-Петербургского государственного университета}\\
-{\it Университетский проспект, 28, 198504, Петергоф, Старый Петергоф, Россия }
-   \end{center}
-
-
-В 1900 году Д. Гильберт поставил задачу исследования предельных циклов
-в двумерных квадратичных системах (см.\cite{Hilbert_problems_rus,Bautin_O_chisle_pred_cyklov,
-Dokl_AN_CCCP_Petrovskiy_O_chisle_pred_cyclov,Dokl_AN_CCCP_Landis_O_chisle_pred_cyclov,
-Popravki_Petrovskiy_O_chisle_pred_cyclov}).
-В пятидесятых годах А.~Н.~Колмогоров, говоря современным языком,
-поставил задачу визуализации этих циклов.
-В своей книге \cite{Arnold_Experimental_Math} В.~И.~Арнольд пишет:
-"Чтобы оценить число предельных циклов квадратичных векторных полей на плоскости, А.~Н.~Колмогоров раздал несколько сотен таких полей (со случайно выбранными коэффициентами многочленов второй степени) нескольким сотням студентов механико-математического факультета МГУ в качестве математического практикума.
-Каждый студент должен был найти число предельных циклов своего поля.
-Результат этого эксперимента был совершенно неожиданным: ни у одного поля не оказалось ни одного предельного цикла!
-При малом изменении коэффициентов поля предельный цикл сохраняется.
-Поэтому системы с одним, двумя, тремя (и даже, как стало известно позже, четырьмя) предельными циклами образуют в пространстве коэффициентов открытые множества, так что вероятности попасть в них при случайном выборе коэффициентов многочленов положительны.
-Тот факт, что этого не случилось, подсказывает, что упомянутые вероятности,
-по-видимому, малы".
-
-Во второй половине двадцатого века появилось большое число работ \cite{Bautin_O_chisle_pred_cyklov, Ye_YQ_Theory_of_limit_cycles, Shi,
-Andronov_Kachestvennaya_Teoriya_Din_System_Vtorogo_Poryadka, Andronov_Teoriya_kolebaniy, Llibre_Artes, Llibre_Bernat, Cherkas_Gilevich,
-Dokl_AN_CCCP_Landis_O_chisle_pred_cyclov, Chengji_Non_existence_of_limit_cycle_around_weak_focus_of_order_three}, где использовались методы теории возмущений для доказательства
-существования предельных циклов в двумерных квадратичных системах.
-Однако эти методы не позволяли решить проблему визуализации: полученные таким образом циклы были очень малых размеров и не могли быть вычислены с помощью численных методов и современной компьютерной технологии \cite{Lynch_Dyn_systems,
- LeonovK-2007-IFAC, Leonov_Kuznetsov_Kudryashova_ProcSIM}.
-
-%Математические основы решения проблемы визуализации циклов были заложены в работах
-%\cite{Leonov_Effectivnye_metody_poiska_periodich_kolebaniy_v_dinamich_systemah}.
-
-
-Результаты в \cite{Leonov_Criteria_for_existence_of_cycles_in_lienard_sys,
-Leonov_Two_dim_quadratic_system_as_a_Lienard_eq,
-Leonov_Localization_of_the_Lienard_equatiion_attractors_and_cycles,
-Leonov_DM_FourLimCycles, KuznetsovL-2008-JVE, Leonov_Criteria_of_four_cycles_existence_in_quadratic_systems,Leonov_DM_LimitCyclesInDynSysFirstOrderFocus,Leonov_DM_SynthesisOfQuadSystems,Leonov_Kuznetsov_Kudryashova } позволили решить проблему визуализации четырех предельных циклов.
-Дальнейшее развитие этого направления имеется в \cite{Kuznetsova_Lyap_quantities_and_limit_cycles_in_two_dimensional_dyn_systems,
-LeonovK-2010-DAN, LeonovKS-2011-RRSS, LeonovKKSV-2011-WTSC, KuznetsovKL-2013-DEDS, LeonovK-2013-IJBC}.
-
-  {\bf 1. Аналитические результаты.} В настоящей работе продолжено решение проблемы визуализации четырех предельных циклов и
- построены области в пространстве параметров, которые соответствуют существованию четырех предельных циклов.
-
-
-Рассмотрим систему
-\begin{equation}
-\begin{array}{l}
-\dot{x}  = a_{1}x^{2}+b_{1}xy+c_{1}y^{2}+\alpha_{1}x+\beta_{1}y \\
-\dot{y}  = a_{2}x^{2}+b_{2}xy+c_{2}y^{2}+\alpha_{2}x+\beta_{2}y,
-\end{array}
-\label{eq:xdef}
-\end{equation}
-где $a_{i}$, $ b_{i}$, $c_{i}$, $\alpha_{i}$, $\beta_{i}$ --- вещественные числа, $i = 1, 2$.
-
-
-%\newpage
-
-
-В работах \cite{Leonov_Two_dim_quadratic_system_as_a_Lienard_eq,Leonov_Criteria_of_four_cycles_existence_in_quadratic_systems} показано, что
-не умаляя общности, можно принять, что коэффициенты системы (1) имеют  вид
-\begin{equation}
-c_{1} = \alpha_{1} = 0, \  a_{1} = b_{1} = \beta_{1} = 1
-\end{equation}
-и, таким образом, можно ограничиться рассмотрением систем вида
-\begin{equation}
-\begin{array}{l}
-\dot{x}  = x^{2}+xy+y \\
-\dot{y}  = ax^{2}+bxy+cy^{2}+{\alpha}x+{\beta}y.
-\end{array}
-\label{eq:xdef}
-\end{equation}
-
-С помощью применения метода асимптотического интегрирования,
-описанного в работах
-\cite{Leonov_Effectivnye_metody_poiska_periodich_kolebaniy_v_dinamich_systemah,Doclady_RAN_Leonov_Predelnye_cycli_uravneniya_Lienarda_s_razrivnymi_koeff,Leonov_Localization_of_the_Lienard_equatiion_attractors_and_cycles},
- к системе Льенара, полученной из квадратичной системы, был сформулирован и доказан
- следующий критерий существования предельных циклов в квадратичных системах
-    (см. \cite{Leonov_Criteria_of_four_cycles_existence_in_quadratic_systems}).
-
-{\bf Теорема 1.}
-{\it
-Система (3) имеет три предельных цикла, если выполнены следующие условия:
-
-$\beta=0$, $c \in (\frac{1}{3}, 1)$, $b<3$,
-$2c\leq b + 1$, $4a(c-1) > (b-1)^2$, и
-а) если $bc < 1$, то $\alpha = -\varepsilon^{-1}$, где
-$1 \gg \varepsilon > 0$;
-б) если $bc > 1$, то $\frac{a(2 + b)}{bc - 1} < \alpha < 0$.
-
-Кроме того, один \  "малый"  \ предельный цикл может быть получен вокруг начала координат, путем возмущения параметра $\beta$.
-}
-
-С помощью данного критерия в работах \cite{KuznetsovKL-2013-DEDS, LeonovK-2013-IJBC} впервые была произведена визуализация четырех предельных циклов.
-Исследования, проведенные в данной работе  отталкивались от теоремы 1.
-
-
-В данной статье для квадратичной системы (3)  построены
-области,  содержащие четыре предельных цикла, в трехмерном и двумерном
-пространстве параметров, удовлетворяющих условию а) теоремы 1.
-%%}
-
-Алгоритм построения областей в пространстве параметров $a, b, c$,
-которые соответствуют существованию четырех предельных циклов
-"нормальных размеров" \ у системы (3), заключается в следующем.
-Сначала с помощью условия а)
-теоремы 1
- находим точку $a_0, b_0, c_0, \alpha_0, \beta_0$ ($|\alpha_0|$ --- достаточно
-  большое, $\beta_0$ --- достаточно малое) в пространстве параметров, соответствующую
- системе с четырьмя
-  предельными циклами. Далее вокруг полученной точки, путем варьирования
-  параметров $a, b, c$, выделяем область, соответствующую
-  четырем предельным циклам. Отметим, что теорема 1 носит асимптотический
-  характер, поэтому полученная область может охватывать более
-  широкое  множество параметров, чем указано в теореме 1.
-Более подробно процесс определения границы области описан в п.3.
-
-Нетрудно видеть, что система (3) имеет две точки равновесия: одну в начале
-координат,
-а другую --- в левой полуплоскости. Так как вокруг второй точки равновесия
-в условиях теоремы 1 всегда существует предельный цикл, то
-  рассмотрим, как организовать вычисления для поиска трех
-  предельных циклов,
-  окружающих нулевую точку равновесия.
-
-
-   Выберем и зафиксируем набор коэффициентов $a_0, b_0, c_0$,
-   $\alpha_0$, $\beta_0$
-   квадратичной системы, удовлетворяющих критерию теоремы 1.
-
-
-
-  Будем решать задачу Коши
- $$
-  \begin{array}{l}
-  \dot{x}  = x^{2}+xy+y \\
-\dot{y}  = a_{0}x^{2}+b_{0}xy+c_{0}y^{2}+{\alpha_0}x+{\beta_0}y,
-\end{array}
-\label{eq:xdef1}
-  $$
- $t_0=0$, $t\in[0, T]$, $x(t_0)=x_0\in(0, \tilde{X}]$, $y(t_0)=0$, $T<+\infty$, $\tilde{X}<+\infty$.
-
- Вычисления будем проводить в системе MATLAB и MAPLE. Как известно,
- для проверки достоверности результатов, полученных численными методами,
- следует рассмотреть линеаризованную систему (3) и вычислять
- собственные числа матрицы Якоби в начальной точке задачи Коши и в точках построенной
- траектории фазового пространства.
- Траектория решения в фазовом пространстве  выходит из точки $(X_0, 0)$,  $X_0>0$ (см.рис.1) и
- окружает нулевую точку равновесия.
- Как показывают вычисления, при  значениях параметров системы,
- удовлетворяющих критерию а) теоремы 1,   вещественные части
- собственных чисел оказываются отрицательными на траектории фазового
- пространства
- в левой полуплоскости и
-  положительными на траектории в правой полуплоскости, при этом модули собственных чисел в ряде случаев
-  часто оказываются очень велики. В этом случае, как будет отмечено в п.6,
-  обычно применяют методы, пригодные для решения "жестких" \ систем,
-  либо вычисления проводят разными  численными методами с увеличенным
-  количеством знаков
-  в мантиссе. Будем  проводить вычисления с помощью команд пакета, встроенного
-   в систему MATLAB~2012 и предоставляющим возможность решать задачу Коши методом
-  Гира и, для сравнения, проводим повторные вычисления методом Рунге-Кутта
-  четвертого порядка с постоянным и автоматическим выбором шага в
-  среде MAPLE~13  меняя количество знаков в мантиссе.
-
-
- Далее для поиска предельных циклов будем строить амплитудную кривую.
-
-
-
- {\bf 2. Построение амплитудной кривой.} Рассмотрим поведение траектории решения задачи Коши в фазовом пространстве
-переменных $x, y$. Нетрудно видеть, что траектория, выпущенная из точки
-$(X_0, 0)$, пересекает ось $x$ сначала в некоторой точке $(X_1, 0)$, а затем
-в точке $(X_2, 0)$.
-
- \begin{figure}[h!]
-\center{\includegraphics[width=0.4\linewidth,clip,angle=0,origin=c]{Pics/zak_e.eps}}
-%\hfill
-\vspace*{-0.5cm}
-\end{figure}
-\begin{center}
-{Рис. 1.  Виток закручивающейся спирали}
-\end{center}
-
-
-
-Обозначим через $\rho=X_2-X_0$.  Очевидно $\rho>0$ соответствует
- траектории в виде раскручивающейся спирали, а $\rho<0$ --- закручивающейся спирали.
- Случай $\rho=0$ означает наличие цикла
-(см. рис. 1).
-
-
-
-Введем функцию
-${\cal A}(\rho)$, которую будем называть амплитудной функцией.
-Построим на $(0, \tilde{X}]$ достаточно мелкую сетку узлов
-$\{x_k\}$.
-Выпускаем траекторию из точки $(x_k, 0)$. Находим $X_2=x_{k0}$. Строим график ${\cal A}(\rho_k)$, $\rho_k=x_k-x_{k0}$ и находим промежутки на оси $x$, на которых
- эта функция положительна и отрицательна. Точки перемены знака, очевидно,
- соответствуют наличию цикла.
-
- На рис. 2а показан один цикл, на рис. 2б ---
- возникновение двух дополнительных циклов при изменении коэффициентов.
- %\vskip3cm
-
-\begin{figure}[h!]
-\begin{minipage}[h]{0.5\linewidth}
-\center{\includegraphics[width=0.8\linewidth,clip,angle=0,origin=c]{Pics/r1ne.eps}}
-\end{minipage}
-\hfill
-\begin{minipage}[h]{0.5\linewidth}
-\center{\includegraphics[width=0.8\linewidth,clip,angle=0,origin=c]{Pics/r2ne.eps}}
-\end{minipage}
-\begin{minipage}[h]{1\linewidth}
-\begin{tabular}{p{0.33\linewidth}p{0.32\linewidth}}
-\centering  а) & \hskip5cm  б) \\
-\end{tabular}
-\end{minipage}
-%\vspace*{-1cm}
-\label{ris:correlationsignals}
-{\small } %}
-\vspace*{-0.8cm}
-\end{figure}
-\begin{center}
-{Рис. 2.  Визуализация циклов методом Рунге-Кутта\\
- при значениях коэффициентов\\
-а) один цикл, $b=1.925, a=-10.5, c=0.4, \alpha=-2012, \beta=0.2$;\\
-б) три цикла, $b=1.927, a=-10.5, c=0.4, \alpha=-2012, \beta=0.2$;}
-\end{center}
-
-\begin{figure}[h!]
-\begin{minipage}[h]{0.5\linewidth}
-\center{\includegraphics[width=0.8\linewidth,clip,angle=0,origin=c]{Pics/LimitCycle1}}
-\end{minipage}
-\hfill
-\begin{minipage}[h]{0.5\linewidth}
-\center{\includegraphics[width=0.6\linewidth,clip,angle=0,origin=c]{Pics/LimitCycle2}}
-\end{minipage}
-\begin{minipage}[h]{1\linewidth}
-\begin{tabular}{p{0.33\linewidth}p{0.32\linewidth}}
-\centering  а) & \hskip7cm  б) \\
-\end{tabular}
-\end{minipage}
-%\vspace*{-1cm}
-\label{ris:correlationsignals}
-{\small } %}
-\vspace*{-0.5cm}
-\end{figure}
-\begin{center}
-{Рис. 3.  Визуализация циклов методом Гира при значениях коэффициентов\\
-а) один цикл, $b=1.925, a=-10.5, c=0.4, \alpha=-2012, \beta=0.2$;\\
-б) три цикла, $b=1.927, a=-10.5, c=0.4, \alpha=-2012, \beta=0.2$;}
-\end{center}
-
- Ранее было отмечено, что с вычислительной стороны решение рассматриваемой задачи Коши при положительных
- вещественных частях собственных чисел матрицы Якоби системы (3) является
- неустойчивым. На рис. 4а показано
- катастрофическое нарастание погрешностей при решении задачи Коши методом
- Рунге-Кутта с постоянным шагом и вполне удовлетворительное решение,
- полученное методом Гира в среде MATLAB.
- (см.рис. 4б). Нарастание погрешностей связано с положительной
- вещественной частью и очень большой  мнимой частью (несколько тысяч)
- собственных чисел
- матрицы Якоби линеаризованной системы.
-
-\begin{figure}[h!]
-\begin{minipage}[h]{0.5\linewidth}
-\center{\includegraphics[width=0.8\linewidth,clip,angle=0,origin=c]{Pics/G.eps}}
-\end{minipage}
-\hfill
-\begin{minipage}[h]{0.5\linewidth}
-\center{\includegraphics[width=0.6\linewidth,clip,angle=0,origin=c]{Pics/Neust}}
-\end{minipage}
-\begin{minipage}[h]{1\linewidth}
-\begin{tabular}{p{0.33\linewidth}p{0.32\linewidth}}
-\centering  а) & \hskip5cm  б) \\
-\end{tabular}
-\end{minipage}
-%\vspace*{-1cm}
-\label{ris:correlationsignals}
-{\small } %}
-\vspace*{-0.5cm}
-\end{figure}
-\begin{center}
-{Рис. 4. a) Катастрофическое накопление погрешностей в процессе решения
-методом Рунге-Кутта с постоянным шагом, б) решение, полученное методом Гира
-с автоматическим выбором шага}
-\end{center}
-
- Для иллюстрации неустойчивости вычислений  приведем вид амплитудной кривой, полученной
-  методом Рунге-Кутта
- четвертого порядка квадратичной системы (3) с коэффициентами
-              $b = 1.4$,
-$a= -8.0$,
-$c = 0.4$,
-$ \alpha = -1150000$,
-$\beta = 0.59$ в среде Maple 13 с 35 знаками в мантиссе (рис.~4).
-
- Неустойчивость вычислений обусловлена положительными вещественными
- частями собственных чисел матрицы Якоби для линеаризованной системы
- (см. табл. 1, 2 в разделе 6).
- Поэтому уместно вести вычисления в системе MAPLE с большим количеством знаков в мантиссе.
- В ряде случаев достаточно использовать  библиотечные функции из MATLAB.
- Во всех случаях предпочтение отдается неявным численным методам решения задачи Коши, хорошо зарекомендовавшим себя при решении жестких задач, например, методу Гира.
-
-
-
-
-  {\bf 3. Алгоритм определения области, соответствующей четырем предельным циклам.} Возьмем набор коэффициентов $a_0, b_0, c_0, \alpha_0, \beta_0$ для системы (3), удовлетворяющий теореме 1.
-  Проверяем, с помощью вычислений, что амплитудная кривая три раза пересекает
-  ось $x$, что равносильно наличию трех циклов в фазовом пространстве.
-  Рассматриваемый набор $a_0, b_0, c_0$ образует точку
-   в трехмерном пространстве параметров $a, b, c$.
-  Для удобства вычислений построим равномерную сетку узлов
- с шагом $h_a$, $h_b$, $h_c$ по соответствующему направлению
- $a, b, c$.
- Варьируя значения коэффициентов, т.е. вычисляя при
-  разных целых значениях $i, j, k = 0, \pm1, \pm2, \ldots$, коэффициенты $a_i = a_0+h_a i$, $b_k = b_0+h_b k,$
-   $c_j = c_0+h_c j$ при фиксированных
- $\alpha, \beta$ и проверяя, что соответствующие амплитудные кривые
- три раза пересекают ось $x$, получим множество коэффициентов квадратичной системы,
- при которых существуют три цикла в фазовом пространстве.
-Рассматривая коэффициенты $a_i$, $b_k$, $c_j$, как координаты
- точки
- в трехмерном пространстве параметров $a, b, c$, получаем
- геометрическое множество точек, формирующих область существования
-   трех циклов в фазовом
- пространстве вокруг нулевой точки равновесия.
-Продолжая процесс решения задачи Коши для каждой системы уравнений, задаваемых коэффициентами $a_i$, $b_k$, $c_j$,
-  построим в трехмерном пространстве параметров $a, b, c$ на крупной сетке
-  множество точек,
-  представляющую область, содержащую три цикла. Далее   на более мелкой
-  сетке узлов вдоль
-   границы области уточним очертания области.
-
-В плоскости $(c, a)$ рассмотрим сечения искомой области. По переменным $c$, $a$ построим равномерные сетки узлов с шагами $h_{с}$ и $h_{a}$ соответственно.
-%==============================================================================
-%\section{Алгоритм уточнения границ области}
-Для краткости границу $K$ сечения $D$ в дальнейшем будем именовать контуром. Точки на контуре упорядочим,
- нумеруя их слева направо.
-
-
-1) Возьмем произвольную точку  $B_0$ контура $K$, предыдущую ей точку $A$ (слева на контуре, отличную от
-$B_0$) и следующую за ней точку $C$ (справа от $B_0$, отличную от нее), см. рис. 5.1.
-
-\begin{figure}[h!]
-\center{\includegraphics[width=0.5\linewidth]{AlgorithmPics/Algorithm1.jpg}}
-\vspace*{-0.5cm}
-\end{figure}
-  \hskip7cm{Рис. 5.1.}
-
-2) Преобразуем координаты точек $A$, $B_0$, $C$ так, что $B_0 = (c_{B_0}, a_{B_0})$ перейдет в точку $B_{0}' = (\frac{c_{B_0}}{h_{c}}, \frac{a_{B_0}}{h_{a}})$, точка $A$ в $A'$,  точка $C$ в $C'$ соответственно (см.~рис.~5.2).
-
-%\newpage
-
-\begin{figure}[h!]
-\center{\includegraphics[width=0.5\linewidth]{AlgorithmPics/Algorithm2.jpg}}
-\vspace*{-0.5cm}
-\end{figure}
-  \hskip7cm{Рис. 5.2.}
-
-3) Далее выберем точку $D_{0}'$ (см. рис. 5.3) по следующему правилу:
-
-если $\overrightarrow{B_{0}'A'} \nparallel \vec{B_{0}'C'}$, то
-\begin{equation}
-\vec{B_{0}'D_{0}'} = (\overrightarrow{B_{0}'A'} + \overrightarrow{A'C'} \cdot \frac{|\overrightarrow{A'B_{0}'}|}{|\overrightarrow{B_{0}'C'}| + |\overrightarrow{A'B_{0}'}|}) \cdot sign(\overrightarrow{e} \cdot (\overrightarrow{B_{0}'A'} \times \overrightarrow{B_{0}'C'}))
-\label{eq:xdef}
-\end{equation}
-где $\overrightarrow{e} = \{1, 0, 0\}$;
-\begin{equation}
- \mbox {если      } \overrightarrow{B_{0}'A' \parallel \overrightarrow{B_{0}'C'}},
-\mbox{   то    }
-\vec{B_{0}'D_{0}'} = \frac{\overrightarrow{B_{0}'A'} \times \overrightarrow{e}}{|\overrightarrow{B_{0}'A'}|}.
-\label{eq:xdef}
-\end{equation}
-
-\begin{figure}[h!]
-\center{\includegraphics[width=0.5\linewidth]{AlgorithmPics/Algorithm3.jpg}}
-\vspace*{-0.5cm}
-\end{figure}
-  \hskip7cm{Рис. 5.3.}
-
-4) Преобразуем координаты точек $A$, $B_0$, $C$, $D_0$ в исходное состояние так, чтобы точка $D_{0}'$ перешла в $D_{0}$.
-
-5) Для полученного отрезка $B_{0}D_{0}$, находящегося в пространстве параметров $(b, c, a)$, произведем вычисление числа предельных циклов для динамической системы (3) с коэффициентами $(b, \frac{c_{B_0}+c_{D_0}}{2}, \frac{a_{B_0}+a_{D_0}}{2}, \alpha, \beta)$ (соответствующими середине отрезка --- точке $E_0$).
-
-6) Если вычисления указывают, что полученная на шаге 5 система имеет три предельных цикла, то переобозначим точки следующим образом:
-\begin{equation}
-D_{1} = D_{0},\hspace{5 mm} B_{1} = E_{0}.
-\label{eq:xdef}
-\end{equation}
-
-Если же система имеет меньшее число предельных циклов, то переобозначим точки другим способом:
-\begin{equation}
-D_{1} = E_{0},\hspace{5 mm} B_{1} = B_{0}.
-\label{eq:xdef}
-\end{equation}
-
-\begin{figure}[h!]
-\begin{minipage}[h!]{0.5\linewidth}
-\center{\includegraphics[width=0.8\linewidth,clip,angle=0,origin=c]{AlgorithmPics/Algorithm4.jpg}}
-\end{minipage}
-\hfill
-\begin{minipage}[h!]{0.5\linewidth}
-\center{\includegraphics[width=0.8\linewidth,clip,angle=0,origin=c]{AlgorithmPics/Algorithm5.jpg}}
-\end{minipage}
-\begin{minipage}[h!]{1\linewidth}
-\begin{tabular}{p{0.33\linewidth}p{0.32\linewidth}}
-\centering  а) & \centering  б) \\
-\end{tabular}
-\end{minipage}
-%\vspace*{-1cm}
-\label{ris:correlationsignals}
-{\small } %}
-\vspace*{-0.5cm}
-\end{figure}
- \hskip7cm{Рис. 5.4.}
-
- \hskip4cm а) три предельных цикла
-
- \hskip4cm б) менее трех предельных циклов
-
-На этом вычисление границы контура в точке $B_{0}$ завершена.
-
-Повторяя вышеописанную процедуру для отрезка $B_{1}D_{1}$ $k$ раз, получаем последовательность точек $B_{i},\hspace{5 mm} i = 1, \ldots, k+1$.
-Эта последовательность сходится к точке границы контура $K$.
-Стоит отметить, что вектор $\overrightarrow{B_{0}'D_{0}'}$, заданный в п.3, получен из вектора, соединяющего точку $B_{0}'$ и точку пересечения биссектрисы $\triangle A'B_{0}'C'$, выпущенной из точки $B_{0}'$, со стороной $A'C'$.
-Вектор $\overrightarrow{B_{0}'D_{0}'}$ получен растяжением в два раза и
- выбором знака \ "плюс" \ или "минус" \ так, чтобы точка $D_{0}'$ находилась вне контура сечения.
-
-Согласно критериям, сформулированным в работе \cite{Leonov_Criteria_of_four_cycles_existence_in_quadratic_systems}, вокруг ненулевой точки равновесия существует предельный цикл при выполнении условий теоремы 1.
-Таким образом, полученная область в трехмерном пространстве соответствует множеству коэффициентов, при котором квадратичная система имеет четыре предельных цикла.
-
-%==============================================================================
-
-  {\bf 4. Алгоритм вычисления $(X_2 , 0)$.} Пусть $t_j=j\tau$, $\tau>0$, $j=0,1,\ldots$
-   Вычисления проводим методом Рунге-Кутта четвертого порядка. Для ускорения вычисления точки пересечения
-  траектории с осью $x$ можно использовать алгоритм приближенного построения
-  (с точностью $O(\tau^4)$) траектории при переходе от первого ко  второму витку.
-Если вычислены значения функции $y$ в точках $x_{m-2}=x(t_{m-2})$, $x_{m-1}=x(t_{m-1})$,
-$x_{m}=x(t_{m})$, $x_{m+1}=x(t_{m+1})$, причем
-$y_m=y(x_{m})>0$, $y_{m+1}=y(x_{m+1})<0$, то на промежутке $[t_{m}, t_{m+1}]$ можно построить кубический
-многочлен
-$$y(t)=y(t_{m-2})W_{m-2}(t)+y(t_{m-1})W_{m-1}(t)+y(t_{m})W_{m}(t)+y(t_{m+1})W_{m+1}(t),$$ где
-$$W_{m+1}(t)=\frac{(t-t_{m-2})(t-t_{m-1})
-(t-t_{m})}{(t_{m+1}-t_{m-2})(t_{m+1}-t_{m-1})(t_{m+1}-t_{m})},$$
- $$W_{m}(t)=\frac{(t-t_{m-2})(t-t_{m-1})(t-t_{m+1})}{
- (t_{m}-t_{m-2})(t_{m}-t_{m-1})(t_{m}-t_{m+1})},$$
-$$ W_{m-1}(t)=\frac{(t-t_{m-2})(t-t_{m})(t-t_{m+1})}{
-      (t_{m-1}-t_{m-2})(t_{m-1}-t_{m})(t_{m-1}-t_{m+1})}, $$
-$$ W_{m-2}(t)=\frac{(t-t_{m-1})(t-t_{m})(t-t_{m+1})}{
- (t_{m-2}-t_{m-1})(t_{m-2}-t_{m})(t_{m-2}-t_{m+1})}.
-$$
- Определяем момент времени $\tilde{t}\in [t_{m}, t_{m+1}]$ в котором $y(\tilde{t})=0$,
- $y(\tilde{t})\in [y_{m}, y_{m+1}]$,
- далее находим значение
-$$ X_2 = x(\tilde{t})=x_{m-2}W_{m-2}(\tilde{t})+x_{m-1}W_{m-1}(\tilde{t})+
-x_{m}W_{m}(\tilde{t})+x_{m+1}W_{m+1}(\tilde{t}).
-$$
-
-
-Более медленным, но и более точным будет вычисление $y(x_k)$ с помощью численных
-методов решения задачи Коши для системы дифференциальных уравнения, последовательно
-(методом, аналогичным двоичному поиску)
-подбирая момент времени $\tilde{t}$, при котором $y(\tilde{t})=0$, $y(\tilde{t})\in [y_{m}, y_{m+1}]$.
-
-При вычислениях в среде MATLAB с помощью библиотечной функции решения
-задачи Коши методом Гира для поиска точки  $(X_2, 0)$  используем 
-интерполяционный 
-многочлен первой степени.
-
-{\bf 5. Области, содержащие четыре предельных цикла.}
-Для наглядности представления результата,
-  на рисунках (6.1 ---6.17, 7.1---7.16)  представлены сечения области и
-  область в целом. Точками обозначены узлы основной двумерной сетки, в которой
-  проводились вычисления. Вдоль отрезков прямых проводились
-  вычисления, рассмотренные в п.3.
-%\newpage
-%\end{document}
-\input{Sections/Pictures1}
-
-\newpage
-
-\input{Sections/Pictures2}
-
-\newpage
-
-{\bf 6. Обсуждение достоверности полученных результатов.}
-Проблемам, связанным с построением и устойчивостью различных численных методов
-решения задачи Коши для обыкновенных дифференциальных уравнений и систем
-посвящено множество книг. Наиболее известные из них \cite{xairer2_r, xairer1_r, fedor_r, berezin_r, bachvalov_r,  ortega_r, choll,skv}.
-Оценки погрешностей методов Адамса для уравнений и систем уравнений
-даны в \cite{berezin_r, loz, mis}. Оценка погрешностей для одношаговых методов
-приведена в \cite{bachvalov_r}. При выполнении условий, сформулированных
-в этих работах, показано что, в частности, при достаточно малом шаге интегрирования и
-достаточно малых ошибках, связанных с округлением чисел при проведении вычислений, приближенное решение сходится к точному решению задачи Коши.
-
-В работе \cite{xolod} отмечено, что в случае, если собственные числа линеаризованной правой части системы обыкновенных дифференциальных уравнений
-первого порядка положительны, то \ "$\ldots$ нет ничего, что могло бы $\ldots$ облегчить жизнь вычислителю. Надо интегрировать $[$ систему $]$ с шагом по времени, обеспечивающим необходимую точность до тех пор, пока это возможно". \
-Обычно для интегрирования неустойчивых систем применяют методы, пригодные
-для решения жестких систем, например метод Гира.
-
-Как было отмечено в п. 2., вычисления циклов методом, предложенным в данной работе, является неустойчивым.
-Ситуацию облегчает тот факт, что время, затрачиваемое на один виток траектории вокруг нулевого состояния равновесия, является очень небольшим.
-
-\rightline {Таблица 1}
-Результаты вычислений, интервалов, содержащих циклы, времени витка и собственных
- чисел матрицы Якоби в $(x_0, y_0)$  для системы (3) с
-коэффициентами $b=0.8, a=-10.0, c=0.7$, $\alpha=-1050, \beta=0.13$
- методом Гира в среде MATLAB и Рунге-Кутта в среде MAPLE c 35 знаками в мантиссе.
-\bigskip
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-Метод         &     Метод      & время       & $(x_0, y_0)$ & собственные \\
- Гира         &Рунге- Кутта    & витка       &              & числа матрицы   \\
-              &                &       $T$   &              & Якоби  \\
-\hline
-$(4.5,5.5)$,  &$(5.0,5.98)$,   &  $0.19$     & $(5,0)$      &$7.065\pm83.014i$        \\
-$(76.5, 77.5)$,&$(77.0, 78.0)$,&$0.19$      & $(76,0)$      & $106.464\pm442.511i$  \\
- $(16250, 16750)$&  $(16400, 16700)$   & 0.13  & $(16000,0)$             &  $22400.065\pm71027.898i$, \\
-\hline
-\end{tabular}
-\end{center}
-\newpage
-
-В таблицах 1 и 2 приведены значения для некоторых точек границы области времени, затраченного на один виток и соответствующие собственные значения матрицы Якоби.
-
-
-%\vskip1cm
-\rightline {Таблица 2}
-Результаты вычислений, интервалов, содержащих циклы, времени витка и собственных
- чисел матрицы Якоби в $(x_0, y_0)$  для системы (3) с
-коэффициентами $b=1.855, a=-4.0, c=0.4$, $\alpha=-1050, \beta=0.2$
-%bb:=evalf(1.85);aa:=evalf(-4.0);cc:=evalf(0.4);al:=-1050;be:=0.2;
- методом Гира в среде MATLAB и Рунге-Кутта в среде MAPLE c 35 знаками в мантиссе при шаге $h=0.0001$.
-\bigskip
-
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-Метод         &     Метод      & время       & $(x_0, y_0)$ & собственные \\
- Гира         &Рунге- Кутта    & витка       &              & числа матрицы   \\
-              &                &       $T$   &              & Якоби  \\
-\hline
-$(11.1, 12.1)$  &$(11.0,12.0)$   &     0.18       &  (11.0, 0)             & $21.275\pm116.856i$       \\
-$(57.3, 58.3)$ &$(68.0, 69.0)$  &$0.17$          & (66.0, 0)             & $127.150\pm 325.119i$,  \\
-$(136.0, 137.0)$&  $(121.0, 122.0)$   & 0.17           &  (121.0,0)            &  $233.025\pm 496.10i$, \\
-\hline
-\end{tabular}
-\end{center}
-\bigskip
-
-{\it Замечание}.  В таблицах
-даны интервалы, где находятся предельные циклы. Авторы решали задачу определения 
-областей, содержащих четыре предельные цикла
-в пространстве параметров и не ставили целью вычисление
-расположения циклов
- с заданной точностью. На рис. 8, рис. 9 представлены графики амплитудных кривых,
-построенных по коэффициентам системы (3), поясняющие результаты, приведенные в табл. 1 и табл.2.
-
-
-\begin{figure}[h!]
-\begin{minipage}[h]{0.48\linewidth}
-\center{\includegraphics[width=0.48\linewidth,clip,angle=-90,origin=c]{Pics/tab1.eps}}
-\end{minipage}
-\hfill
-\begin{minipage}[h]{0.48\linewidth}
-\center{\includegraphics[width=0.48\linewidth,clip,angle=-90,origin=c]{Pics/tab2.eps}}
-\end{minipage}
-\begin{minipage}[h]{1\linewidth}
-\begin{tabular}{p{0.33\linewidth}p{0.32\linewidth}}
-\centering  а) & \hskip7cm  б) \\
-\end{tabular}
-\end{minipage}
-{\small }
-\vspace*{-1cm}
-\end{figure}
-\begin{center}{Рис. 8.  Визуализация трех циклов, полученных\\ методом Рунге-Кутта
- при значениях коэффициентов
-
- а) $b=0.8, a=-10.0, c=0.7$, $\alpha=-1050, \beta=0.13$ (фрагмент графика),
-
- б)  $b=1.855, a=-4.0, c=0.4$, $\alpha=-1050, \beta=0.2$.}
-\end{center}
-
-\newpage
-
-\begin{figure}[h!]
-\begin{minipage}[h]{0.5\linewidth}
-\center{\includegraphics[width=0.8\linewidth,clip,angle=0,origin=c]{Pics/LimitCycle3}}
-\end{minipage}
-\hfill
-\begin{minipage}[h]{0.5\linewidth}
-\center{\includegraphics[width=0.8\linewidth,clip,angle=0,origin=c]{Pics/LimitCycle4}}
-\end{minipage}
-\begin{minipage}[h]{1\linewidth}
-\begin{tabular}{p{0.33\linewidth}p{0.32\linewidth}}
-\centering  а) & \hskip7cm  б) \\
-\end{tabular}
-\end{minipage}
-{\small }
-\vspace*{-1cm}
-\end{figure}
-\begin{center}{Рис. 9.  Визуализация трех циклов, полученных\\ методом Гира
- при значениях коэффициентов
-
- а) $b=0.8, a=-10.0, c=0.7$, $\alpha=-1050, \beta=0.13$ (фрагмент графика),
-
- б)  $b=1.855, a=-4.0, c=0.4$, $\alpha=-1050, \beta=0.2$.}
- \end{center}
-Для значений коэффициентов системы (3)  проводились повторные вычисления в среде Maple с удвоенным и учетверённым количеством знаков в мантиссе методами Рунге-Кутта четвертого порядка, Гира.
-Полученные сравнения позволяют с достаточной долей вероятности предполагать достоверность полученных областей.
-
-
-Для полноты изложения в таблице 3 приведем  собственные числа
-матрицы Якоби при значениях коэффициентов в системе (3)
-$a=-0.18$, $b=0.8$, $c=0.663$,
-$\alpha=-15$, $\beta=0.13$ в момент времени $t=0$.
-
-\rightline {Таблица 3}
- Собственные числа
-матрицы Якоби при значениях коэффициентов $a=-0.18$, $b=0.8$, $c=0.663$,
-$\alpha=-15$, $\beta=0.13$ и разных начальных условиях.
-\bigskip
-
-\begin{center}
-\begin{tabular}{|c|c|}
-\hline
- $(X_0, 0)$ & собственные \\
-              & числа матрицы   \\
-              & Якоби  \\
-\hline
-        $ (1.25, 0) $             & $1.815\pm5.856 i$       \\
-        $ (6.25, 0) $             & $8.815\pm10.559 i$       \\
-        $ (31.25, 0) $             & $43.815\pm22.303 i$       \\
-        $ (156.25, 0) $             & $218.815\pm49.266 i$       \\
-\hline
-\end{tabular}
-\end{center}
-
-В таблицах 4 и 5 приведем  собственные числа
-матрицы Якоби при значениях коэффициентов в системе (3)
-$a=-0.18$, $b=0.8$, $c=0.663$,
-$\alpha=-15$, $\beta=0.13$ в разные моменты времени при  начальных условиях
-$(0.05,0)$, $(156.25,0)$.
-
-
-\rightline {Таблица 4}
- Собственные числа
-матрицы Якоби при значениях коэффициентов $a=-0.18$, $b=0.8$, $c=0.663$,
-$\alpha=-15$, $\beta=0.13$  в моменты времени $t_n$
-при  начальном условии
-$(X_0, 0)=(0.05,0)$.
-
-\begin{center}
-\begin{tabular}{|c|c|c|}
-\hline
-$t_n$ & $(x_n, y_n)$ & собственные \\
-       &       & числа матрицы   \\
-       &       & Якоби  \\
-\hline
-  $t_0=0$         & (0.050, 0)            & $0.135\pm3.971 i$       \\
-   $t_1=0.202$      & (0.035, -0.138)             & $-0.047\pm3.956 i$       \\
-   $t_2=0.609$      & (-0.035, -0.134)             & $-0.141\pm3.815 i$       \\
-   $t_3=0.812$      & (-0.049, 0.000)             & $-0.003\pm3.773 i$       \\
-   $t_4=1.014$      & (-0.035, 0.136)             & $0.174\pm3.788 i$       \\
-   $t_5=1.420$      & (0.039, 0.142)             & $0.291\pm3.933 i$       \\
-   $t_6=1.622$      & (0.056, 0.000)             & $0.143\pm3.982 i$       \\
-\hline
-\end{tabular}
-\end{center}
-
-\rightline {Таблица 5}
- Собственные числа
-матрицы Якоби при значениях коэффициентов $a=-0.18$, $b=0.8$, $c=0.663$,
-$\alpha=-15$, $\beta=0.13$  в моменты времени $t_n$
-при  начальном условии
- $(X_0,0)=(156.25,0)$.
-
-\begin{center}
-\begin{tabular}{|c|c|c|}
-\hline
-$t_n$ & $(x_n, y_n)$ & собственные \\
-       &       & числа матрицы   \\
-       &       & Якоби  \\
-\hline
-  $t_0=0$         & (156.25, 0.000)            & $218.815\pm49.266 i$       \\
-   $t_1=0.135$      & (0.697, -11.956)             & $-14.820\pm2.282 i$       \\
-   $t_2=0.272$      & (-0.830, -4.484)             & $-6.313\pm1.757 i$       \\
-   $t_3=0.547$     & (-0.748, 0.000)             & $-0.982\pm1.857 i$       \\
-   $t_4=0.723$      & (-0.608, 1.875)             & $1.395\pm2.159 i$       \\
-   $t_5=1.077$      & (0.975, 7.806)             & $10.512\pm4.173 i$       \\
-   $t_6=1.254$      & (159.394, 0.000)             & $223.216\pm49.757 i$       \\
-\hline
-\end{tabular}
-\end{center}
-
-
-\newpage
-
-\begin{thebibliography}{99}
-
-\bibitem{Hilbert_problems_rus}
-{\it Александров П.~С.}
- Проблемы Гильберта.
-М.:Наука, 1969. 240~с.%1
-
-\bibitem{Andronov_Kachestvennaya_Teoriya_Din_System_Vtorogo_Poryadka}
-{\it Андронов А.~А., Леонтович Е.~А., Гордон А.~А.,  Майер А.~Г.}
- Качественная теория динамических систем второго порядка.
- М.:Наука, 1966. 568~с.%2
-
-\bibitem{Andronov_Teoriya_kolebaniy}
-{\it Андронов А.~А., Витт А.~А.,  Хайкин С.~Э.}
-Теория колебаний.
- М.:Физматгиз, 1959. 916~с.%3
-
-\bibitem{Arnold_Experimental_Math}
-{\it Арнольд В.~И.}
- Экспериментальная математика.
- М.:Фазис, 2005. 64~с.%4
-
-\bibitem{Bautin_O_chisle_pred_cyklov}
-{\it Баутин Н.~Н.}
- О числе предельных циклов, появляющихся при изменении коэффициентов
-  из состояния равновесия типа фокуса или центра. //
-  Математический сборник. Т.~30(72). \No 1, 1952. С.~181--196. %5
-
-\bibitem{bachvalov_r}  {\it Бахвалов Н.С.} Численные методы. М.:Наука, 1975. 632~c. %6
-
-\bibitem{berezin_r}   {\it Березин И.С., Жидков Н.П.} Методы вычислений, т.~2.
-М.:Наука, 1962. 640~с.%7
-
-\bibitem{KuznetsovKL-2013-DEDS}
-{\it Kuznetsov N.~V., Kuznetsova O.~A.,  Leonov G.~A.}
- Visualization of four normal size limit cycles in two-dimensional
-  polynomial quadratic system. //
-Differential equations and dynamical systems. V.~21. Nos. 1--2, 2013. P.~29--34. %8
-
-\bibitem{KuznetsovL-2008-JVE}
-{\it
-Kuznetsov N.~V., Leonov G.~A.}
- Lyapunov quantities, limit cycles and strange behavior of
-  trajectories in two-dimensional quadratic systems. //
-  Journal of Vibroengineering. V.~10. N. 4, 2008. P.~460--467. %9
-
-\bibitem{Dokl_AN_CCCP_Petrovskiy_O_chisle_pred_cyclov}
-{\it Ландис Е.~М., Петровский И.~Г.}
- О числе предельных циклов уравнения $dy/dx = {P}(x,y)/{Q}(x,y)$, где
-  ${P}$ и ${Q}$--полиномы.//
-Математический сборник. Т.~43(85). \No 2, 1957. С.~149--168. %35
-
-\bibitem{Llibre_Artes}
-{\it Llibre J., Artes J.~C.}
- Quadratic vector fields with a weak focus of third order. //
- Publicacions Matematiques. V.~41. N. 1, 1997. P.~7--39. %11
-
-\bibitem{Llibre_Bernat}
-{\it Llibre J., Bernat J.}
- Counterexample to Kalman and Markus–Yamabe conjectures in dimension
-  larger than 3. //
- Dynamics of Continuous, Discrete \& Impulsive Systems. V.~2. N. 3, 1996. P.~377--379. %12
-
-\bibitem{Leonov_DM_FourLimCycles} {\it  Leonov G.~A.} Four limit cycles in quadratic two-dimensional systems with a perturbed first-order weak focus. //
-Doklady Mathematics. V.~81. N. 2, 2010. P.~248--250.
-%13
-
-\bibitem{Leonov_DM_LimitCyclesInDynSysFirstOrderFocus} {\it   Leonov G.~A.} Limit cycles in quadratic systems with a first-order weak focus. //
-Doklady Mathematics. V.~82. N. 3, 2010. P.~923--926. %14
-
-
-\bibitem{Leonov_DM_SynthesisOfQuadSystems} {\it   Leonov G.~A.} Synthesis of two-dimensional quadratic systems with a limit cycle satisfying prescribed initial conditions. //
-Doklady Mathematics. V.~81. N. 2, 2010. P.~236--237. %15
-
-\bibitem{Leonov_Two_dim_quadratic_system_as_a_Lienard_eq}
-{\it  Leonov G.~A.}
- Two-dimensional quadratic systems as a lienard equation. //
- Differential Equations and Dynamical Systems. V.~5, 1997. P.~289--297.%16
-
-\bibitem{Doclady_RAN_Leonov_Predelnye_cycli_uravneniya_Lienarda_s_razrivnymi_koeff}
-{\it Leonov G.~A.}
- Limit cycles of the Lienard equation with discontinuous coefficients. //
- Doklady Physics. V.~54. N. 5, 2009. P.~238--241.%17
-
-\bibitem{Leonov_Localization_of_the_Lienard_equatiion_attractors_and_cycles}
-{\it Leonov G.~A., Sundkvist E.}
- Localization of the Lienard equation's attractors and cycles. //
- Differential Equations and Dynamical Systems. V.~13. Nos. 3--4, July~\&~October~2005. P.~275--294. %18
-
-\bibitem{Leonov_Criteria_for_existence_of_cycles_in_lienard_sys}
-{\it Leonov G.~A.}
- Existence criteria for cycles in two-dimensional quadratic systems. //
- {\em Vestnik St.Petersburg University. Mathematics}  V.~40. N. 3, pp.~172--181, 2007. %19
-
-\bibitem{Leonov_Criteria_of_four_cycles_existence_in_quadratic_systems}
-{\it Leonov G.~A.}
-A criterion for the existence of four limit cycles in quadratic systems. //
-Journal of Applied Mathematics and Mechanics. V.~74. N. 2, 2010. P.~135--143. %20
-
-\bibitem{Leonov_Effectivnye_metody_poiska_periodich_kolebaniy_v_dinamich_systemah}
-{\it  Leonov G.~A.}
- Efficient methods in the search for periodic oscillations in dynamical
-  systems. //
- Journal of Applied Mathematics and Mechanics. V.~74. N. 1, 2010. P.~24--50. %21
-
-\bibitem{LeonovK-2007-IFAC}
-{\it Leonov G.~A., Kuznetsov N.~V.}
- Computation of the first lyapunov quantity for the second-order
-  dynamical system. //
- IFAC Proceedings Volumes (IFAC-PapersOnline). V.~3. N. 1, 2007. P.~87--89. %22
-
-\bibitem{LeonovK-2013-IJBC}
-{\it  Leonov G.~A.,  Kuznetsov N.~V.}
- Hidden attractors in dynamical systems. From hidden oscillations in
-  Hilbert-Kolmogorov, Aizerman,  Kalman problems to hidden chaotic
-  attractors in Chua circuits. //
-International Journal of Bifurcation and Chaos. V.~23. N. 1, 2013, art. no. 1330002.
-%23
-
-\bibitem{Leonov_Kuznetsov_Kudryashova_ProcSIM}
-{\it Leonov G.~A., Kuznetsov N.~V.,  Kudryashova E.~V.}
- A direct method for calculating lyapunov quantities of
-  two-dimensional dynamical systems. //
- Proceedings of the Steklov Institute of Mathematics. V.~272. Suppl. 1, 2011. P.~119--127. %24
-
-\bibitem{Leonov_Kuznetsov_Kudryashova}
-{\it Leonov G.~A., Kuznetsov N.~V.,  Kudryashova E.~V.}
- Cycles of two-dimensional systems. calculations, proofs,
-  experiments. //
- Vestnik St.Petersburg University. Mathematics. V.~41. N. 3, 2008. P.~216--250. %25
-
-\bibitem{Kuznetsova_Lyap_quantities_and_limit_cycles_in_two_dimensional_dyn_systems}
-{\it  Leonov G.A.,  Kuznetsova O.~A.}
-Lyapunov quantities and limit cycles of two-dimensional dynamical
-  systems: Analytical methods and symbolic computation. //
- Regular and Chaotic Dynamics. V.~15. N. 2, 2010. P.~354--377. %26
-
-\bibitem{LeonovK-2010-DAN}
-{\it Leonov G.~A., Kuznetsov N.~V.}
- Limit cycles of quadratic systems with a perturbed weak focus of
-  order 3 and a saddle equilibrium at infinity. //
- Doklady Mathematics. V.~82. N. 2, 2010. P.~693--696. %27
-
-\bibitem{LeonovKS-2011-RRSS}
-{\it Leonov G.~A., Kuznetsov N.~V.,  Seledzhi S.~M.}
- Hidden oscillations in dynamical systems. //
- Recent researches in System Science. WSEAS Press, 2011. P.~292--297. %28
-
-\bibitem{LeonovKKSV-2011-WTSC}
-{\it  Leonov G.~A., Kuznetsov N.~V., Kuznetsova O.~A., Seledzhi S.~M.,  Vagaitsev
-  V.~I.}
- Hidden oscillations in dynamical systems. //
- Transaction on Systems and Control. V.~6. N. 2, 2011. P.~54--67.
- %29
-
-\bibitem{Chengji_Non_existence_of_limit_cycle_around_weak_focus_of_order_three}
-{\it  Li C.}
- Non-existence of limit cycle around a weak focus of order three for
-  any quadratic system. //
- Chinese Annals of Mathematics. V.~7B. N. 2, 1986. P.~174--190. %30
-
-\bibitem{Lynch_Dyn_systems}
-{\it Lynch S.}
- Dynamical systems with applications using maple. //
- Birkhauser, Springer, Boston, 2010. 474~p. %31
-
-\bibitem{loz} {\it Лозинский С.~М.}
-Оценка погрешности численного интегрирования обыкновенных дифференциальных уравнений. // Известия вузов. Математика.  
-Т.~5. \No 6, 1958.  С.~52--90. %32
-
-\bibitem{mis} {\it Мысовских И.П.} Лекции по методам вычислений. СПб. 1998. 472~с.~%33
-
-\bibitem{ortega_r}  {\it Ортега Дж., Пул У.}  Введение в численные методы
-решения дифференциальных уравнений. М.:Наука, 1986. 288~с.~%34
-
-\bibitem{Dokl_AN_CCCP_Landis_O_chisle_pred_cyclov}
-{\it Петровский И.~Г., Ландис Е.~М.}
- О числе предельных циклов уравнения $dy/dx = {P}(x,y)/{Q}(x,y)$, где
-  ${P}$ и ${Q}$--многочлены степени $n$. //
- Математический сборник Т.~37(79). \No 2, 1955. С.~209--250. %10
-
-\bibitem{Popravki_Petrovskiy_O_chisle_pred_cyclov}
-{\it Петровский И.~Г. Ландис Е.~М.}
- Поправки к статьям "О числе предельных циклов уравнения $dy/dx =
-  {P}(x,y)/{Q}(x,y)$, где ${P}$ и ${Q}$--многочлены второй степени" \ и  \ "О числе
-  предельных циклов уравнения $dy/dx = {P}(x,y)/{Q}(x,y)$, где ${P}$ и ${Q}$
- --полиномы". //
- Математический сборник. Т.~48(90). \No 2, 1959. С.~253--255. %36
-
-\bibitem{skv} {\it Скворцов Л. М.} Точность методов Рунге Кутты при решении 
-жестких задач. // Журнал вычислительной математики и математической физики. Т.~43. \No 9, 2003. С.~1374--1384. %37
-
-\bibitem{Shi} {\it Shi S.~L.} A concrete example of the existence of four limit cycles for plane quadratic systems. //
-Scientia Sinica. V.~23. N. 2, 1980. P.~153--158. %38
-
-\bibitem{fedor_r} {\it  Федоренко Р.П.}  Введение в вычислительную физику. М.:МФТИ, 1994. 528~с.
-%39
-
-\bibitem{xairer2_r} {\it Хайрер Э., Ваннер Г.} Решение обыкновенных дифференциальных уравнений.
- Жесткие
-и дифференциально-алгебраические задачи. М.:Мир. 1999. 685~с.
-%40
-
-\bibitem{xairer1_r}  {\it Хайрер Э., Нёрсетт C., Ваннер Г.} Решение обыкновенных дифференциальных уравнений. Нежесткие задачи. М.:Мир. 1990. 512~с.
-    %41
-
-\bibitem{choll} {\it Холл Дж., Уатт Дж.} Современные численные методы
-решения обыкновенных дифференциальных уравнений. М.:Мир, 1979. 312~с.
-%42
-
-\bibitem{xolod} {\it  Холодов А.С.,  Лобанов А.И.,  Евдокимов А.В.}
-Разностные схемы для решения жестких обыкновенных дифференциальных уравнений
-в пространстве неопределенных коэффициентов.
-М.:МФТИ, 1985. 49~с.
-%43
-
-\bibitem{Cherkas_Gilevich}
-{\it Черкас Л.~А., Жилевич Л.~И.}
- Некоторые признаки отсутствия единственности предельных циклов. // Дифференциальные уравнения. Т.~6. \No 3, 1970. С.~891--897.
- %44
-
-\bibitem{Ye_YQ_Theory_of_limit_cycles}
-{\it Ye~Yan-Qian.}
-\newblock {\em Theory of Limit cycles.}
-\newblock Translations of Math. Monographs, Amer. Math. Soc., Providence, V.~66, 1986. 436~p.
-
-\end{thebibliography}
-
-
+﻿dx
+dt
+6
+ 
+-
+?
+˜¨  ¯—¯˝ ¨ ¸ ˝ ¯  —  ´˝¯˝¨ 
+¨
+ˇ—˛ ¯     ˇ—  ´¸¯˝¨ 
+N 3, 2013
+ º Œ     ßØ      º,
+  ª.  º. N   77-39410    15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/di journal
+e-mail: jo di @mail.ru
+    ºŁ     Ł   Ł   Ł  æŒŁı æŁæ   
+¸      ˆ . ., `      ¨.ˆ .,  º Œæ       ˚.˜.
+´Ł   ºŁ   Ł     ß  ı      º  ßı  ŁŒº  
+       ßı Œ      Ł  ßı æŁæ   
+     æ    æ              
+1
+       ŁŒ -  ı  Ł  æŒŁØ    Œ º        Œ -ˇ    Æ  ªæŒ ª 
+ª æ    æ      ª    Ł   æŁ    
+  Ł   æŁ   æŒŁØ    æ  Œ , 28, 198504, ˇ    ª   ,     ßØ ˇ    ª   ,
+— ææŁ 
+´ 1900 ª    ˜. ˆŁº Æ      æ   Łº        Łææº      Ł       º  ßı  ŁŒ-
+º            ßı Œ      Ł  ßı æŁæ    ı (æ . [1, 5, 10, 35, 36]). ´    Ł  æ  ßı
+ª   ı  . ˝. ˚ º  ª    , ª      æ        ß    ßŒ  ,   æ   Łº         Ł-
+   ºŁ   ŁŁ   Łı  ŁŒº  . ´ æ   Ø Œ Łª  [4] ´. ¨.     º    Łł  : "   Æß
+    Ł    Łæº       º  ßı  ŁŒº   Œ      Ł  ßı   Œ    ßı   º Ø     º æ-
+Œ æ Ł,  . ˝. ˚ º  ª          º   æŒ º Œ  æ       ŒŁı   º Ø (æ  æº   Ø    ß-
+Æ    ß Ł Œ    Ł Ł     Ł    ª  º          Ø æ     Ł)   æŒ º ŒŁ  æ     
+æ            ı  ŁŒ -       Ł  æŒ ª    Œ  º       ˆ    Œ   æ           Ł-
+  æŒ ª     Œ ŁŒ   . ˚   ßØ æ          º    Æßº   Ø Ł  Łæº       º  ßı
+ ŁŒº   æ   ª    º . —    º        ª   Œæ   Ł      Æßº æ    ł         Ł   -
+ ß :  Ł       ª    º      Œ   º æ   Ł     ª       º   ª   ŁŒº ! ˇ Ł   º  
+Ł      ŁŁ Œ    Ł Ł        º       º  ßØ  ŁŒº æ ı      æ . ˇ       æŁ-
+æ   ß æ    Ł ,      ,       (Ł     , Œ Œ æ  º  Ł   æ         ,    ß    )
+1
+—  Æ      ß  º       Ł          Œ    Ł Łæ   æ     Æ       Ł  Ł     ŒŁ — ,    Œ -ˇ    Æ  ªæŒ  ª  ª -
+æ     æ      ª    Ł   æŁ      Ł —  ææŁØæŒ  ª                   º  ßı Łææº      ŁØ.˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+     º  ß Ł  ŁŒº  Ł  Æ            æ    æ    Œ    Ł Ł        Œ ß ß 
+     æ   ,   Œ             æ Ł     æ      Łı   Ł æº   Ø     ßÆ    Œ   -
+ Ł Ł         ª  º       º  Ł  º  ß.        Œ  ,        ª     æº  Łº æ ,
+   æŒ  ß     ,             ß          æ Ł,   - Ł Ł     ,   ºß".
+´       Ø   º  Ł           ª    Œ      Łº æ  Æ º ł    Łæº    Æ  
+[2, 3, 5, 11, 12, 30, 35, 38, 44, 45], ª   Łæ  º     ºŁæ       ß     ŁŁ      ø  ŁØ
+ º    Œ     º æ    æ ø æ      Ł       º  ßı  ŁŒº            ßı Œ   -
+   Ł  ßı æŁæ    ı. ˛   Œ    Ł      ß         º ºŁ   łŁ      Æº     Ł-
+   ºŁ   ŁŁ:   º     ß    ŒŁ   Æ       ŁŒºß ÆßºŁ         ºßı         
+Ł      ªºŁ Æß    ß Łæº  ß æ     ø    Łæº   ßı         Ł æ         Ø
+Œ          Ø   ı  º ªŁŁ [22, 24, 31].
+—    º    ß   [9, 13 16, 18 20, 25]      ºŁºŁ   łŁ      Æº     Ł   ºŁ  -
+ ŁŁ    ß  ı      º  ßı  ŁŒº  . ˜ º   Øł       Ł Ł     ª        º  Ł 
+Ł    æ    [8, 23, 26 29].
+1.    ºŁ Ł  æŒŁ       º    ß. ´   æ   ø Ø   Æ         º       -
+ł  Ł     Æº  ß  Ł   ºŁ   ŁŁ    ß  ı      º  ßı  ŁŒº   Ł   æ     ß  Æ-
+º æ Ł      æ    æ              , Œ    ß  æ      æ      æ ø æ      Ł    -
+ ß  ı      º  ßı  ŁŒº  .
+— ææ    Ł  æŁæ    
+_ x =a
+1
+x
+2
++b
+1
+xy+c
+1
+y
+2
++ff
+1
+x+ 
+1
+y
+_ y =a
+2
+x
+2
++b
+2
+xy+c
+2
+y
+2
++ff
+2
+x+ 
+2
+y;
+(1)
+ª  a
+i
+, b
+i
+, c
+i
+, ff
+i
+,  
+i
+    ø æ     ß   Łæº ,i = 1;2.
+´   Æ   ı [16, 20]   Œ     ,           º    Æø  æ Ł,         Ł    ,    
+Œ    Ł Ł   ß æŁæ   ß (1) Ł      Ł 
+c
+1
+=ff
+1
+= 0; a
+1
+=b
+1
+= 
+1
+= 1 (2)
+Ł,   ŒŁ   Æ     ,        ª   Ł Ł  æ    ææ      Ł   æŁæ     Ł  
+_ x =x
+2
++xy+y
+_ y =ax
+2
++bxy+cy
+2
++ffx+ y:
+(3)
+      ø     Ł     Ł          æŁ     Ł  æŒ ª  Ł   ª Ł     Ł ,   Ł-
+æ    ª      Æ   ı [17, 18, 21], Œ æŁæ     ¸      ,   º      Ø Ł  Œ      Ł   Ø
+æŁæ   ß, Æßº æ      ºŁ      Ł   Œ     æº    øŁØ Œ Ł   ŁØ æ ø æ      Ł 
+     º  ßı  ŁŒº     Œ      Ł  ßı æŁæ    ı (æ . [20]).
+         1.  Łæ     (3) Ł       Ł      º  ßı  ŁŒº ,  æºŁ  ß  º   ß
+æº    øŁ   æº  Ł :
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 2˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+  = 0, c2 (
+1
+3
+;1), b< 3, 2c b+1, 4a(c 1)> (b 1)
+2
+, Ł  )  æºŁbc< 1,
+   ff = "
+ 1
+, ª  1 "> 0; Æ)  æºŁbc> 1,   
+a(2+b)
+bc 1
+<ff< 0.
+˚       ª ,   Ł  "  ºßØ"      º  ßØ  ŁŒº       Æß     º       -
+Œ  ª     º  Œ    Ł   ,            ø  Ł                .
+      ø        ª  Œ Ł   Ł      Æ   ı [8, 23]      ß  Æßº     Ł     -
+    Ł   ºŁ   Ł     ß  ı      º  ßı  ŁŒº  . ¨ææº      Ł ,          ß   
+     Ø   Æ        ºŒŁ  ºŁæ           ß 1.
+´      Ø æ       º  Œ      Ł   Ø æŁæ   ß (3)   æ     ß  Æº æ Ł, æ    -
+  øŁ     ß        º  ßı  ŁŒº ,      ı       Ł              æ    æ   
+          ,      º       øŁı  æº  Ł   )       ß 1.
+ ºª  Ł     æ     Ł   Æº æ  Ø      æ    æ              a;b;c, Œ   -
+ ß  æ      æ      æ ø æ      Ł     ß  ı      º  ßı  ŁŒº   "     º -
+ ßı         "   æŁæ   ß (3),   Œº     æ    æº    ø  .      º  æ     ø  
+ æº  Ł   )       ß 1   ı  Ł     Œ a
+0
+;b
+0
+;c
+0
+;ff
+0
+; 
+0
+(jff
+0
+j     æ        Æ º -
+ł  , 
+0
+    æ          º  )      æ    æ              , æ      æ    ø  
+æŁæ     æ    ß          º  ß Ł  ŁŒº  Ł. ˜ º     Œ  ª   º      Ø    ŒŁ,
+          Ł     Ł            a;b;c,  ß  º     Æº æ  , æ      æ    ø  
+   ß         º  ß   ŁŒº  . ˛    Ł ,             1   æŁ   æŁ     Ł  -
+æŒŁØ ı   Œ   ,           º         Æº æ          ı   ß     Æ º   łŁ  -
+Œ        æ              ,      Œ                1. ` º        Æ        ææ
+      º  Ł  ª   Ł ß  Æº æ Ł   Łæ      .3.
+˝          Ł    ,     æŁæ     (3) Ł            ŒŁ        æŁ :       
+    º  Œ    Ł    ,      ª       º   Ø   º  º æŒ æ Ł.    Œ Œ Œ   Œ  ª      Ø
+   ŒŁ        æŁ     æº  Ł ı       ß 1  æ ª   æ ø æ           º  ßØ  ŁŒº,
+     ææ    Ł , Œ Œ   ª  Ł        ß Łæº  Ł   º    ŁæŒ     ı      º  ßı
+ ŁŒº  ,  Œ     øŁı    º        Œ         æŁ .
+´ßÆ     Ł    ŁŒæŁ       Æ   Œ    Ł Ł      a
+0
+;b
+0
+;c
+0
+, ff
+0
+,  
+0
+Œ     -
+ Ł   Ø æŁæ   ß,      º       øŁı Œ Ł   Ł        ß 1.
+`        ł           ˚ łŁ
+_ x =x
+2
++xy+y
+_ y =a
+0
+x
+2
++b
+0
+xy+c
+0
+y
+2
++ff
+0
+x+ 
+0
+y;
+t
+0
+= 0, t2 [0;T], x(t
+0
+) =x
+0
+2 (0;
+~
+X], y(t
+0
+) = 0, T < +1,
+~
+X < +1.
+´ß Łæº  Ł  Æ            Ł     æŁæ     MA TLAB Ł MAPLE. ˚ Œ Ł   æ -
+  ,  º        ŒŁ   æ       æ Ł      º      ,   º     ßı  Łæº   ß Ł     -
+   Ł, æº        ææ        ºŁ    Ł         æŁæ     (3) Ł  ß Łæº    æ Æ-
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 3˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+æ     ß   Łæº      Ł ß  Œ ÆŁ       º   Ø    Œ       Ł ˚ łŁ Ł      Œ ı
+  æ       Ø     Œ   ŁŁ       ª     æ    æ   .     Œ   Ł    ł  Ł      -
+         æ    æ     ßı  Ł  Ł     ŒŁ(X
+0
+;0), X
+0
+> 0 (æ . Łæ.1) Ł  Œ      
+   º        Œ         æŁ . ˚ Œ   Œ  ß      ß Łæº  Ł ,   Ł       Ł ı   -
+         æŁæ   ß,      º       øŁı Œ Ł   Ł   )       ß 1,   ø æ     ß 
+  æ Ł æ Ææ     ßı  Łæ º  Œ  ß    æ     Ł    º  ß Ł        Œ   ŁŁ     -
+  ª     æ    æ      º   Ø   º  º æŒ æ Ł Ł   º  Ł  º  ß Ł        Œ   ŁŁ
+       Ø   º  º æŒ æ Ł,   Ł           ºŁ æ Ææ     ßı  Łæ º        æº   -
+     æ    Œ  ß    æ          ºŁŒŁ. ´      æº    , Œ Œ Æ                
+ .6,  Æß      Ł            ß,   Łª   ß   º    ł  Ł  "  æ ŒŁı" æŁæ   ,
+ºŁÆ   ß Łæº  Ł               ß Ł  Łæº   ß Ł        Ł æ    ºŁ    ß 
+Œ ºŁ  æ        Œ         Łææ . `            Ł    ß Łæº  Ł  æ     ø  
+Œ        Œ   ,  æ       ª    æŁæ     MA TLAB 2012 Ł      æ   º  øŁ 
+        æ     ł           ˚ łŁ         ˆŁ   Ł,  º  æ      Ł ,       Ł 
+       ß   ß Łæº  Ł          —  ª -˚             ª       Œ  æ   æ    -
+ ß  Ł        Ł  æŒŁ   ßÆ     ł ª    æ     MAPLE 13       Œ ºŁ  æ   
+   Œ         Łææ .
+˜ º    º    ŁæŒ       º  ßı  ŁŒº   Æ      æ   Ł      ºŁ        Œ Ł-
+   .
+2. ˇ æ     Ł     ºŁ      Ø Œ Ł  Ø. — ææ    Ł         Ł      Œ  -
+ ŁŁ   ł  Ł       Ł ˚ łŁ              æ    æ            ßıx;y . ˝      -
+    Ł    ,         Œ   Ł ,  ß  ø      Ł     ŒŁ(X
+0
+;0),     æ Œ     æ x
+æ    º      Œ     Ø    Œ (X
+1
+;0),              Œ (X
+2
+;0).
+—Łæ. 1. ´Ł  Œ   Œ   Ł   ø Øæ  æ Ł  ºŁ
+˛Æ     Ł         =X
+2
+ X
+0
+. ˛   Ł    > 0 æ      æ          Œ   ŁŁ
+   Ł     æŒ   Ł   ø Øæ  æ Ł  ºŁ,     < 0     Œ   Ł   ø Øæ  æ Ł  ºŁ.
+ º   Ø   = 0            ºŁ Ł   ŁŒº  (æ .  Łæ. 1).
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 4˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+´         Œ Ł  A( ), Œ       Æ         ß        ºŁ      Ø    Œ Ł Ø.
+ˇ æ   Ł     (0;
+~
+X]   æ          ºŒ   æ  Œ    º  fx
+k
+g. ´ß  æŒ        Œ  -
+ Ł  Ł     ŒŁ (x
+k
+;0). ˝ ı  Ł  X
+2
+=x
+k0
+.     Ł  ª   ŁŒ A( 
+k
+), 
+k
+=x
+k
+ x
+k0
+Ł   ı  Ł          ŒŁ     æŁ x,    Œ    ßı        Œ Ł    º  Ł  º   
+Ł    Ł    º   .     ŒŁ        ß    Œ ,     Ł   , æ      æ        ºŁ Ł 
+ ŁŒº .
+˝   Łæ. 2    Œ       Ł   ŁŒº,     Łæ. 2Æ       ŁŒ     Ł     ı     º Ł-
+  º  ßı  ŁŒº     Ł Ł      ŁŁ Œ    Ł Ł     .
+ ) Æ)
+—Łæ. 2. ´Ł   ºŁ   Ł   ŁŒº           —  ª -˚    
+  Ł       Ł ı Œ    Ł Ł     
+ )   Ł   ŁŒº, b = 1:925;a = 10:5;c = 0:4;ff = 2012;  = 0:2;
+Æ)   Ł  ŁŒº ,b = 1:927;a = 10:5;c = 0:4;ff = 2012;  = 0:2;
+ ) Æ)
+—Łæ. 3. ´Ł   ºŁ   Ł   ŁŒº           ˆŁ     Ł       Ł ı Œ    Ł Ł     
+ )   Ł   ŁŒº, b = 1:925;a = 10:5;c = 0:4;ff = 2012;  = 0:2;
+Æ)   Ł  ŁŒº ,b = 1:927;a = 10:5;c = 0:4;ff = 2012;  = 0:2;
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 5˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+—     Æßº          ,     æ  ß ŁæºŁ  º   Ø æ     ß   ł  Ł    ææ    Ł-
+     Ø      Ł ˚ łŁ   Ł   º  Ł  º  ßı   ø æ     ßı   æ  ı æ Ææ     ßı
+ Łæ º     Ł ß  Œ ÆŁ æŁæ   ß (3)   º   æ     æ  Ø Ł ß . ˝   Łæ. 4    Œ -
+     Œ   æ    Ł  æŒ       æ   Ł    ª  ł  æ  Ø   Ł   ł  ŁŁ      Ł ˚ łŁ
+        —  ª -˚     æ   æ     ß  ł ª   Ł    º        º     Ł  º       -
+ł  Ł ,   º                ˆŁ     æ     MA TLAB. (æ . Łæ. 4Æ). ˝   æ   Ł 
+  ª  ł  æ  Ø æ       æ   º  Ł  º   Ø   ø æ      Ø   æ    Ł       Æ º -
+ł Ø   Ł  Ø   æ    (  æŒ º Œ   ßæ  ) æ Ææ     ßı  Łæ º     Ł ß  Œ ÆŁ
+ºŁ    Ł       Ø æŁæ   ß.
+ ) Æ)
+—Łæ. 4. a) ˚   æ    Ł  æŒ     Œ  º  Ł    ª  ł  æ  Ø        ææ    ł  Ł 
+        —  ª -˚     æ   æ     ß  ł ª  , Æ)   ł  Ł ,   º               
+ˆŁ   æ        Ł  æŒŁ   ßÆ     ł ª 
+˜º  Łºº æ    ŁŁ    æ  Ø Ł  æ Ł  ß Łæº  ŁØ   Ł       Ł     ºŁ    -
+  Ø Œ Ł  Ø,   º      Ø         —  ª -˚             ª       Œ  Œ     -
+ Ł   Ø æŁæ   ß (3) æ Œ    Ł Ł     Ł b = 1:4, a =  8:0, c = 0:4, ff =
+ 1150000,   = 0:59   æ     Maple 13 æ 35    Œ  Ł       Łææ  ( Łæ. 4).
+˝  æ  Ø Ł  æ    ß Łæº  ŁØ  Æ æº  º      º  Ł  º  ß Ł   ø æ     ß-
+ Ł   æ   Ł æ Ææ     ßı  Łæ º     Ł ß  Œ ÆŁ  º  ºŁ    Ł       Ø æŁæ  -
+ ß (æ .   Æº. 1, 2        º  6). ˇ          æ      æ Ł  ß Łæº  Ł    æŁæ    
+MAPLE æ Æ º łŁ  Œ ºŁ  æ        Œ         Łææ . ´      æº        æ  -
+      Łæ  º        ÆŁÆºŁ     ß     Œ ŁŁ Ł  MA TLAB. ´   æ ı æº    ı
+          Ł        æ       ß   Łæº   ß            ł  Ł       Ł ˚ łŁ,
+ı   ł      Œ         łŁ  æ Æ    Ł   ł  ŁŁ   æ ŒŁı      ,     Ł   ,   -
+     ˆŁ  .
+3.  ºª  Ł         º  Ł   Æº æ Ł, æ      æ    ø Ø    ß   
+     º  ß   ŁŒº  . ´         Æ   Œ    Ł Ł      a
+0
+;b
+0
+;c
+0
+;ff
+0
+; 
+0
+ º 
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 6˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+æŁæ   ß (3),      º       øŁØ         1. ˇ        , æ     ø    ß Łæº -
+ ŁØ,        ºŁ        Œ Ł      Ł          æ Œ     æ x,          æŁº      -
+ºŁ Ł     ı  ŁŒº                æ    æ   . — ææ    Ł    ßØ   Æ  a
+0
+;b
+0
+;c
+0
+ Æ          Œ       ı          æ    æ              a;b;c. ˜º      Ææ   
+ ß Łæº  ŁØ   æ   Ł              æ  Œ    º   æ ł ª   h
+a
+, h
+b
+, h
+c
+   æ   -
+   æ    ø          º  Ł  a;b;c. ´   Ł          Ł  Œ    Ł Ł     ,   . .
+ ß Łæº     Ł     ßı   ºßı       Ł ıi;j;k = 0; 1; 2;:::, Œ    Ł Ł   ß
+a
+i
+= a
+0
++h
+a
+i, b
+k
+= b
+0
++h
+b
+k; c
+j
+= c
+0
++h
+c
+j   Ł  ŁŒæŁ      ßı ff;  Ł      -
+   ,     æ      æ    øŁ     ºŁ     ß  Œ Ł ß    Ł          æ Œ     æ x,
+  º  Ł       æ    Œ    Ł Ł      Œ      Ł   Ø æŁæ   ß,   Ł Œ    ßı æ -
+ø æ        Ł  ŁŒº               æ    æ   . — ææ    Ł    Œ    Ł Ł   ß
+a
+i
+,b
+k
+,c
+j
+, Œ Œ Œ    Ł   ß    ŒŁ      ı          æ    æ              a;b;c,
+  º      ª      Ł  æŒ        æ        Œ,     Ł   øŁı  Æº æ   æ ø æ   -
+   Ł     ı  ŁŒº                æ    æ      Œ  ª    º   Ø    ŒŁ        æŁ .
+ˇ    º         ææ   ł  Ł       Ł ˚ łŁ  º  Œ    Ø æŁæ   ß        ŁØ,
+        ßı Œ    Ł Ł     Ł a
+i
+, b
+k
+, c
+j
+,   æ   Ł       ı          æ    -
+æ              a;b;c    Œ     Ø æ  Œ       æ        Œ,     æ   º  ø  
+ Æº æ  , æ      ø     Ł  ŁŒº . ˜ º      Æ º     ºŒ Ø æ  Œ    º      º 
+ª   Ł ß  Æº æ Ł      Ł         Ł   Æº æ Ł.
+´  º æŒ æ Ł(c;a)   ææ    Ł  æ    Ł  ŁæŒ   Ø  Æº æ Ł. ˇ          ß 
+c,a   æ   Ł           ß  æ  ŒŁ   º   æ ł ª  Łh Łh
+a
+æ      æ      . ˜º 
+Œ   Œ æ Ł ª   Ł  K æ    Ł D     º   Øł   Æ      Ł         Œ       .
+    ŒŁ    Œ               Ł ,         Łı æº           .
+1) ´          Ł   º        Œ B
+0
+Œ      K ,     ß  ø    Ø    Œ  A
+(æº       Œ      ,   ºŁ       B
+0
+) Ł æº    ø        Ø    Œ  C (æ        
+B
+0
+,   ºŁ           ), æ .  Łæ. 5.1.
+—Łæ. 5.1.
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 7˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+2) ˇ   Æ       Œ    Ł   ß     ŒA, B
+0
+, C   Œ,    B
+0
+= (c
+B
+0
+;a
+B
+0
+)   -
+  Ø         Œ B
+0
+0
+= (
+c
+B
+0
+h
+c
+;
+a
+B
+0
+h
+a
+),    Œ  A   A
+0
+,    Œ  C   C
+0
+æ      æ      
+(æ .  Łæ. 5.2).
+—Łæ. 5.2.
+3) ˜ º    ßÆ        Œ D
+0
+0
+(æ .  Łæ. 5.3)    æº    ø        Łº :
+ æºŁ
+  !
+B
+0
+0
+A
+0
+,
+~
+B
+0
+0
+C
+0
+,   
+~
+B
+0
+0
+D
+0
+0
+= (
+  !
+B
+0
+0
+A
+0
++
+  !
+A
+0
+C
+0
+ 
+j
+  !
+A
+0
+B
+0
+0
+j
+j
+   !
+B
+0
+0
+C
+0
+j+j
+  !
+A
+0
+B
+0
+0
+j
+) sign(
+  !
+e (
+  !
+B
+0
+0
+A
+0
+ 
+   !
+B
+0
+0
+C
+0
+)) (4)
+ª  
+  !
+e =f1;0;0g;
+ æºŁ
+        !
+B
+0
+0
+A
+0
+k
+   !
+B
+0
+0
+C
+0
+;   
+~
+B
+0
+0
+D
+0
+0
+=
+  !
+B
+0
+0
+A
+0
+ 
+  !
+e
+j
+  !
+B
+0
+0
+A
+0
+j
+: (5)
+—Łæ. 5.3.
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 8˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+4) ˇ   Æ       Œ    Ł   ß     ŒA,B
+0
+,C ,D
+0
+  Łæı      æ æ    Ł    Œ,
+   Æß    Œ D
+0
+0
+    łº   D
+0
+.
+5) ˜º    º      ª       Œ B
+0
+D
+0
+,   ı   ø ª æ       æ    æ           -
+    (b;c;a),    Ł        ß Łæº  Ł   Łæº       º  ßı  ŁŒº    º   Ł   Ł-
+  æŒ Ø æŁæ   ß (3) æ Œ    Ł Ł     Ł (b;
+c
+B
+0
++c
+D
+0
+2
+;
+a
+B
+0
++a
+D
+0
+2
+;ff; ) (æ      æ   -
+ øŁ Ł æ    Ł        Œ       Œ  E
+0
+).
+6) ¯æºŁ  ß Łæº  Ł   Œ  ß     ,       º           ł ª  5 æŁæ     Ł    
+  Ł      º  ßı  ŁŒº ,         Æ     Ł     ŒŁ æº    øŁ   Æ     :
+D
+1
+=D
+0
+; B
+1
+=E
+0
+: (6)
+¯æºŁ    æŁæ     Ł         ł    Łæº       º  ßı  ŁŒº  ,         Æ -
+    Ł     ŒŁ    ªŁ  æ  æ Æ  :
+D
+1
+=E
+0
+; B
+1
+=B
+0
+: (7)
+ ) Æ)
+—Łæ. 5.4.
+ )   Ł      º  ßı  ŁŒº 
+Æ)          ı      º  ßı  ŁŒº  
+˝        ß Łæº  Ł  ª   Ł ß Œ            Œ B
+0
+     ł   .
+ˇ         ßł   Łæ                 º       Œ B
+1
+D
+1
+k    ,   º     
+  æº       º   æ       ŒB
+i
+; i = 1;:::;k+1.       æº       º   æ   æı -
+ Ł æ  Œ    Œ  ª   Ł ß Œ      K .    Ł       Ł  ,       Œ   
+   !
+B
+0
+0
+D
+0
+0
+,      -
+ ßØ    .3,   º     Ł    Œ    , æ   Ł   ø ª     Œ B
+0
+0
+Ł    Œ      æ    Ł 
+ÆŁææ Œ  Łæß4A
+0
+B
+0
+0
+C
+0
+,  ß  ø    Ø Ł     ŒŁB
+0
+0
+, æ  æ      ØA
+0
+C
+0
+. ´ Œ   
+   !
+B
+0
+0
+D
+0
+0
+  º       æ     Ł              Ł  ßÆ        Œ  " º æ" ŁºŁ " Ł  æ"
+  Œ,    Æß    Œ D
+0
+0
+  ı  Łº æ      Œ       æ    Ł .
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 9˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+  ªº æ   Œ Ł   Ł  , æ      ºŁ      ß      Æ    [20],   Œ  ª      º -
+  Ø    ŒŁ        æŁ  æ ø æ           º  ßØ  ŁŒº   Ł  ß  º   ŁŁ  æº  ŁØ
+      ß 1.    ŒŁ   Æ     ,   º         Æº æ        ı          æ    æ   
+æ      æ           æ    Œ    Ł Ł     ,   Ł Œ       Œ      Ł     æŁæ  -
+   Ł        ß        º  ßı  ŁŒº .
+4.  ºª  Ł    ß Łæº  Ł  (X
+2
+;0). ˇ æ   t
+j
+= j  ,   > 0, j = 0;1;:::
+´ß Łæº  Ł        Ł          —  ª -˚             ª       Œ . ˜º   æŒ   -
+ Ł   ß Łæº  Ł     ŒŁ     æ    Ł      Œ   ŁŁ æ  æ  x       Łæ  º       
+ ºª  Ł     ŁÆºŁ     ª    æ     Ł  (æ      æ    O( 
+4
+))     Œ   ŁŁ   Ł   -
+  ı            ª  Œ           Ł Œ  . ¯æºŁ  ß Łæº  ß       Ł     Œ ŁŁy  
+   Œ ıx
+m 2
+=x(t
+m 2
+), x
+m 1
+=x(t
+m 1
+), x
+m
+=x(t
+m
+), x
+m+1
+=x(t
+m+1
+),   Ł   
+y
+m
+= y(x
+m
+) > 0, y
+m+1
+= y(x
+m+1
+) < 0,               Œ  [t
+m
+;t
+m+1
+]      
+  æ   Ł   Œ ÆŁ  æŒŁØ    ª  º  
+y(t) =y(t
+m 2
+)W
+m 2
+(t)+y(t
+m 1
+)W
+m 1
+(t)+y(t
+m
+)W
+m
+(t)+y(t
+m+1
+)W
+m+1
+(t);
+ª  
+W
+m+1
+(t) =
+(t t
+m 2
+)(t t
+m 1
+)(t t
+m
+)
+(t
+m+1
+ t
+m 2
+)(t
+m+1
+ t
+m 1
+)(t
+m+1
+ t
+m
+)
+;
+W
+m
+(t) =
+(t t
+m 2
+)(t t
+m 1
+)(t t
+m+1
+)
+(t
+m
+ t
+m 2
+)(t
+m
+ t
+m 1
+)(t
+m
+ t
+m+1
+)
+;
+W
+m 1
+(t) =
+(t t
+m 2
+)(t t
+m
+)(t t
+m+1
+)
+(t
+m 1
+ t
+m 2
+)(t
+m 1
+ t
+m
+)(t
+m 1
+ t
+m+1
+)
+;
+W
+m 2
+(t) =
+(t t
+m 1
+)(t t
+m
+)(t t
+m+1
+)
+(t
+m 2
+ t
+m 1
+)(t
+m 2
+ t
+m
+)(t
+m 2
+ t
+m+1
+)
+:
+˛     º                 Ł
+~
+t 2 [t
+m
+;t
+m+1
+]   Œ       y(
+~
+t) = 0, y(
+~
+t) 2
+[y
+m
+;y
+m+1
+],   º     ı  Ł        Ł 
+X
+2
+=x(
+~
+t) =x
+m 2
+W
+m 2
+(
+~
+t)+x
+m 1
+W
+m 1
+(
+~
+t)+x
+m
+W
+m
+(
+~
+t)+x
+m+1
+W
+m+1
+(
+~
+t):
+` º      º   ß ,    Ł Æ º       ß  Æ       ß Łæº  Ł y(x
+k
+) æ     ø  
+ Łæº   ßı           ł  Ł       Ł ˚ łŁ  º  æŁæ   ß  Ł       Ł º  ßı
+       Ł ,   æº       º    (       ,    º ªŁ  ß     Ł        ŁæŒ )    -
+ÆŁ                 Ł
+~
+t,   Ł Œ       y(
+~
+t) = 0, y(
+~
+t)2 [y
+m
+;y
+m+1
+].
+ˇ Ł  ß Łæº  Ł ı   æ     MA TLAB æ     ø   ÆŁÆºŁ      Ø    Œ ŁŁ
+  ł  Ł       Ł ˚ łŁ         ˆŁ    º    ŁæŒ     ŒŁ(X
+2
+;0) Łæ  º     
+Ł      º  Ł   ßØ    ª  º        Ø æ     Ł.
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 10˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+5. ˛Æº æ Ł, æ      øŁ     ß        º  ßı  ŁŒº . ˜º    ªº  -
+  æ Ł     æ   º  Ł       º     ,     Łæ  Œ ı (6.1  6.17, 7.1 7.16)     æ   -
+º  ß æ    Ł   Æº æ Ł Ł  Æº æ       º  .     Œ  Ł  Æ       ß   ºß  æ     Ø
+        Ø æ  ŒŁ,   Œ     Ø       ŁºŁæ   ß Łæº  Ł . ´  º       Œ      -
+ ßı       ŁºŁæ   ß Łæº  Ł ,   ææ       ß     .3.
+—Łæ. 6.1.      Ł   Æº æ Ł      æ    æ              
+a2 ( 0:4;0), b2 (0:4;1:6), c2 (0:3;0:9),
+ff = 15,   = 0:13   Ł h
+a
+= 0:02;h
+b
+=
+1
+30
+;h
+c
+=
+4
+30
+—Łæ. 6.2. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 0:4;0), b =
+16
+30
+, c2 (0:3;0:9),
+ff = 15,   = 0:13   Ł h
+a
+= 0:02;h
+c
+=
+4
+30
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 11˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+—Łæ. 6.3. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 0:4;0), b =
+17
+30
+, c2 (0:3;0:9),
+ff = 15,   = 0:13   Ł h
+a
+= 0:02;h
+c
+=
+4
+30
+—Łæ. 6.4. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 0:4;0), b =
+18
+30
+, c2 (0:3;0:9),
+ff = 15,   = 0:13   Ł h
+a
+= 0:02;h
+c
+=
+4
+30
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 12˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+—Łæ. 6.5. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 0:4;0), b =
+19
+30
+, c2 (0:3;0:9),
+ff = 15,   = 0:13   Ł h
+a
+= 0:02;h
+c
+=
+4
+30
+—Łæ. 6.6. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 0:4;0), b =
+20
+30
+, c2 (0:3;0:9),
+ff = 15,   = 0:13   Ł h
+a
+= 0:02;h
+c
+=
+4
+30
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 13˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+—Łæ. 6.7. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 0:4;0), b =
+21
+30
+, c2 (0:3;0:9),
+ff = 15,   = 0:13   Ł h
+a
+= 0:02;h
+c
+=
+4
+30
+—Łæ. 6.8. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 0:4;0), b =
+22
+30
+, c2 (0:3;0:9),
+ff = 15,   = 0:13   Ł h
+a
+= 0:02;h
+c
+=
+4
+30
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 14˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+—Łæ. 6.9. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 0:4;0), b =
+23
+30
+, c2 (0:3;0:9),
+ff = 15,   = 0:13   Ł h
+a
+= 0:02;h
+c
+=
+4
+30
+—Łæ. 6.10. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 0:4;0), b =
+24
+30
+, c2 (0:3;0:9),
+ff = 15,   = 0:13   Ł h
+a
+= 0:02;h
+c
+=
+4
+30
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 15˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+—Łæ. 6.11. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 0:4;0), b =
+26
+30
+, c2 (0:3;0:9),
+ff = 15,   = 0:13   Ł h
+a
+= 0:02;h
+c
+=
+4
+30
+—Łæ. 6.12. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 0:4;0), b =
+27
+30
+, c2 (0:3;0:9),
+ff = 15,   = 0:13   Ł h
+a
+= 0:02;h
+c
+=
+4
+30
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 16˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+—Łæ. 6.13. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 0:4;0), b =
+28
+30
+, c2 (0:3;0:9),
+ff = 15,   = 0:13   Ł h
+a
+= 0:02;h
+c
+=
+4
+30
+—Łæ. 6.14. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 0:4;0), b =
+29
+30
+, c2 (0:3;0:9),
+ff = 15,   = 0:13   Ł h
+a
+= 0:02;h
+c
+=
+4
+30
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 17˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+—Łæ. 6.15. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 0:4;0), b = 1, c2 (0:3;0:9),
+ff = 15,   = 0:13   Ł h
+a
+= 0:02;h
+c
+=
+4
+30
+—Łæ. 6.16. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 0:4;0), b = 1
+1
+30
+, c2 (0:3;0:9),
+ff = 15,   = 0:13   Ł h
+a
+= 0:02;h
+c
+=
+4
+30
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 18˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+—Łæ. 6.17. ´Ł   ºŁ   Ł   Æº æ Ł      æ    æ               æ     ø  
+  Ł  ª  º  ŁŁa2 ( 0:4;0), b2 (0:4;1:6), c2 (0:3;0:9),
+ff = 15,   = 0:13   Ł h
+a
+= 0:02;h
+b
+=
+1
+30
+;h
+c
+=
+4
+30
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 19˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+—Łæ. 7.1.      Ł   Æº æ Ł      æ    æ              
+a2 ( 30;5), b2 (0:4;2:0), c2 (0:3;0:9),
+ff = 1050,   = 0:13   Ł h
+a
+= 0:5;h
+b
+= 0:05;h
+c
+= 0:02
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 20˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+—Łæ. 7.2. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 30;5), b = 0:55, c2 (0:3;0:9),
+ff = 1050,   = 0:13   Ł h
+a
+= 0:5;h
+c
+= 0:02
+—Łæ. 7.3. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 30;5), b = 0:6, c2 (0:3;0:9),
+ff = 1050,   = 0:13   Ł h
+a
+= 0:5;h
+c
+= 0:02
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 21˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+—Łæ. 7.4. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 30;5), b = 0:65, c2 (0:3;0:9),
+ff = 1050,   = 0:13   Ł h
+a
+= 0:5;h
+c
+= 0:02
+—Łæ. 7.5. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 30;5), b = 0:7, c2 (0:3;0:9),
+ff = 1050,   = 0:13   Ł h
+a
+= 0:5;h
+c
+= 0:02
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 22˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+—Łæ. 7.6. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 30;5), b = 0:75, c2 (0:3;0:9),
+ff = 1050,   = 0:13   Ł h
+a
+= 0:5;h
+c
+= 0:02
+—Łæ. 7.7. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 30;5), b = 0:8, c2 (0:3;0:9),
+ff = 1050,   = 0:13   Ł h
+a
+= 0:5;h
+c
+= 0:02
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 23˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+—Łæ. 7.8. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 30;5), b = 0:85, c2 (0:3;0:9),
+ff = 1050,   = 0:13   Ł h
+a
+= 0:5;h
+c
+= 0:02
+—Łæ. 7.9. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 30;5), b = 0:9, c2 (0:3;0:9),
+ff = 1050,   = 0:13   Ł h
+a
+= 0:5;h
+c
+= 0:02
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 24˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+—Łæ. 7.10. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 30;5), b = 0:95, c2 (0:3;0:9),
+ff = 1050,   = 0:13   Ł h
+a
+= 0:5;h
+c
+= 0:02
+—Łæ. 7.11. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 30;5), b = 1:0, c2 (0:3;0:9),
+ff = 1050,   = 0:13   Ł h
+a
+= 0:5;h
+c
+= 0:02
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 25˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+—Łæ. 7.12. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 30;5), b = 1:05, c2 (0:3;0:9),
+ff = 1050,   = 0:13   Ł h
+a
+= 0:5;h
+c
+= 0:02
+—Łæ. 7.13. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 30;5), b = 1:1, c2 (0:3;0:9),
+ff = 1050,   = 0:13   Ł h
+a
+= 0:5;h
+c
+= 0:02
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 26˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+—Łæ. 7.14. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 30;5), b = 1:15, c2 (0:3;0:9),
+ff = 1050,   = 0:13   Ł h
+a
+= 0:5;h
+c
+= 0:02
+—Łæ. 7.15. —    º    ß  ß Łæº  Ł          ˆŁ     Ł       ŁŁ
+Œ    Ł Ł        æŁæ     (3): a2 ( 30;5), b = 1:2, c2 (0:3;0:9),
+ff = 1050,   = 0:13   Ł h
+a
+= 0:5;h
+c
+= 0:02
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 27˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+—Łæ. 7.16. ´Ł   ºŁ   Ł   Æº æ Ł      æ    æ               æ     ø  
+  Ł  ª  º  ŁŁa2 ( 30;5), b2 (0:4;1:8), c2 (0:3;0:9),
+ff = 1050,   = 0:13   Ł h
+a
+= 0:5;h
+b
+= 0:05;h
+c
+= 0:02
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 28˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+6. ˛Ææ     Ł    æ       æ Ł   º     ßı      º      . ˇ  Æº -
+   , æ      ß  æ   æ     Ł   Ł  æ  Ø Ł  æ       ºŁ  ßı  Łæº   ßı   -
+        ł  Ł       Ł ˚ łŁ  º   ÆßŒ      ßı  Ł       Ł º  ßı     -
+   ŁØ Ł æŁæ      æ  ø         æ    Œ Łª . ˝ ŁÆ º   Ł   æ  ß  Ł   Łı
+[6, 7, 34, 37, 39 42]. ˛   ŒŁ   ª  ł  æ  Ø             æ   º         ŁØ Ł
+æŁæ           ŁØ    ß   [7, 32, 33]. ˛   Œ    ª  ł  æ  Ø  º      ł ª  ßı
+          Ł         [6]. ˇ Ł  ß  º   ŁŁ  æº  ŁØ, æ      ºŁ      ßı     Łı
+  Æ   ı,   Œ         ,     æ   æ Ł,   Ł   æ          º   ł ª  Ł   ª Ł    -
+ Ł  Ł   æ          ºßı  łŁÆŒ ı, æ      ßı æ  Œ  ªº  Ł    Łæ º   Ł    -
+     ŁŁ  ß Łæº  ŁØ,   ŁÆºŁ         ł  Ł  æı  Ł æ  Œ           ł  Ł 
+     Ł ˚ łŁ.
+´   Æ    [43]         ,       æº    ,  æºŁ æ Ææ     ß   Łæº  ºŁ    Ł  -
+     Ø      Ø   æ Ł æŁæ   ß  ÆßŒ      ßı  Ł       Ł º  ßı        ŁØ
+     ª       Œ    º  Ł  º  ß,    ":::      Ł  ª ,       ªº  Æß:::  Æº ª-
+ Ł    Ł     ß ŁæºŁ  º . ˝    Ł   ª Ł      [ æŁæ     ] æ ł ª           -
+ Ł,  Æ æ   Ł   øŁ     Æı  Ł         æ        ı    ,   Œ              ".
+˛Æß     º  Ł   ª Ł     Ł     æ  Ø Ł ßı æŁæ      Ł            ß,   Ł-
+ª   ß   º    ł  Ł    æ ŒŁı æŁæ   ,     Ł          ˆŁ  .
+˚ Œ Æßº              . 2.,  ß Łæº  Ł   ŁŒº          ,     º     ß 
+       Ø   Æ   ,   º   æ     æ  Ø Ł ß .  Ł    Ł   Æº ª           Œ  ,    
+     ,       Ł            Ł   Ł  Œ     Œ   ŁŁ   Œ  ª    º   ª  æ æ    Ł 
+       æŁ ,   º   æ          Æ º łŁ .
+   ÆºŁ   1
+—    º    ß  ß Łæº  ŁØ, Ł      º  , æ      øŁı  ŁŒºß,       Ł  Ł Œ 
+Ł æ Ææ     ßı  Łæ º     Ł ß  Œ ÆŁ   (x
+0
+;y
+0
+)  º  æŁæ   ß (3) æ Œ    Ł Ł-
+     Łb = 0:8;a = 10:0;c = 0:7,ff = 1050;  = 0:13         ˆŁ     æ    
+MA TLAB Ł —  ª -˚       æ     MAPLE c 35    Œ  Ł       Łææ .
+                  (x
+0
+;y
+0
+) æ Ææ     ß 
+ˆŁ   —  ª - ˚      Ł Œ   Łæº      Ł ß
+T  Œ ÆŁ
+(4:5;5:5), (5:0;5:98), 0:19 (5;0) 7:065 83:014i
+(76:5;77:5), (77:0;78:0), 0:19 (76;0) 106:464 442:511i
+(16250;16750) (16400;16700) 0.13 (16000;0) 22400:065 71027:898i,
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 29˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+´   ÆºŁ  ı 1 Ł 2   Ł     ß       Ł   º    Œ    ßı     Œ ª   Ł ß  Æ-
+º æ Ł       Ł,           ª       Ł   Ł  Œ Ł æ      æ    øŁ  æ Ææ     ß 
+      Ł      Ł ß  Œ ÆŁ.
+   ÆºŁ   2
+—    º    ß  ß Łæº  ŁØ, Ł      º  , æ      øŁı  ŁŒºß,       Ł  Ł Œ 
+Ł æ Ææ     ßı  Łæ º     Ł ß  Œ ÆŁ   (x
+0
+;y
+0
+)  º  æŁæ   ß (3) æ Œ    Ł Ł-
+     Łb = 1:855;a = 4:0;c = 0:4,ff = 1050;  = 0:2         ˆŁ     æ    
+MA TLAB Ł —  ª -˚       æ     MAPLE c 35    Œ  Ł       Łææ    Ł ł ª 
+h = 0:0001.
+                  (x
+0
+;y
+0
+) æ Ææ     ß 
+ˆŁ   —  ª - ˚      Ł Œ   Łæº      Ł ß
+T  Œ ÆŁ
+(11:1;12:1) (11:0;12:0) 0.18 (11.0, 0) 21:275 116:856i
+(57:3;58:3) (68:0;69:0) 0:17 (66.0, 0) 127:150 325:119i,
+(136:0;137:0) (121:0;122:0) 0.17 (121.0,0) 233:025 496:10i,
+˙      Ł . ´   ÆºŁ  ı    ß Ł      ºß, ª     ı    æ       º  ß   ŁŒ-
+ºß.      ß   ł ºŁ              º  Ł   Æº æ  Ø, æ      øŁı    ß      -
+  º  ß   ŁŒº       æ    æ               Ł    æ   ŁºŁ   º    ß Łæº  Ł 
+  æ  º    Ł   ŁŒº   æ        Ø      æ   . ˝   Łæ. 8,  Łæ. 9     æ   º  ß
+ª   ŁŒŁ    ºŁ     ßı Œ Ł ßı,   æ      ßı    Œ    Ł Ł      æŁæ   ß (3),
+   æ   øŁ       º    ß,   Ł      ß      Æº. 1 Ł   Æº.2.
+–18
+–16
+–14
+–12
+–10
+–8
+–6
+–4
+–2
+0
+50 100 150 200
+0
+2
+4
+6
+50 100 150 200
+ ) Æ)
+—Łæ. 8. ´Ł   ºŁ   Ł     ı  ŁŒº  ,   º     ßı
+        —  ª -˚       Ł       Ł ı Œ    Ł Ł     
+ )b = 0:8;a = 10:0;c = 0:7, ff = 1050;  = 0:13 (   ª     ª   ŁŒ ),
+Æ) b = 1:855;a = 4:0;c = 0:4, ff = 1050;  = 0:2.
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 30˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+ ) Æ)
+—Łæ. 9. ´Ł   ºŁ   Ł     ı  ŁŒº  ,   º     ßı
+        ˆŁ     Ł       Ł ı Œ    Ł Ł     
+ )b = 0:8;a = 10:0;c = 0:7, ff = 1050;  = 0:13 (   ª     ª   ŁŒ ),
+Æ) b = 1:855;a = 4:0;c = 0:4, ff = 1050;  = 0:2.
+˜º        ŁØ Œ    Ł Ł      æŁæ   ß (3)       ŁºŁæ         ß   ß Łæº -
+ Ł    æ     Maple æ         ß  Ł        …  ß  Œ ºŁ  æ        Œ         Łæ-
+æ         Ł —  ª -˚             ª       Œ , ˆŁ  . ˇ º     ß  æ      Ł 
+     º    æ   æ       Ø   º Ø         æ Ł       º ª      æ       æ     -
+º     ßı  Æº æ  Ø.
+˜º    º   ß Ł º    Ł      ÆºŁ   3   Ł      æ Ææ     ß   Łæº      Ł-
+ ß  Œ ÆŁ   Ł       Ł ı Œ    Ł Ł        æŁæ     (3) a = 0:18, b = 0:8,
+c = 0:663, ff = 15,   = 0:13                Ł t = 0.
+   ÆºŁ   3
+  Ææ     ß   Łæº      Ł ß  Œ ÆŁ   Ł       Ł ı Œ    Ł Ł      a =
+ 0:18, b = 0:8, c = 0:663, ff = 15,   = 0:13 Ł     ßı     º  ßı  æº  Ł ı.
+(X
+0
+;0) æ Ææ     ß 
+ Łæº      Ł ß
+ Œ ÆŁ
+(1:25;0) 1:815 5:856i
+(6:25;0) 8:815 10:559i
+(31:25;0) 43:815 22:303i
+(156:25;0) 218:815 49:266i
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 31˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+´   ÆºŁ  ı 4 Ł 5   Ł      æ Ææ     ß   Łæº      Ł ß  Œ ÆŁ   Ł    -
+   Ł ı Œ    Ł Ł        æŁæ     (3) a = 0:18, b = 0:8, c = 0:663, ff = 15,
+  = 0:13       ß        ß       Ł   Ł     º  ßı  æº  Ł ı (0:05;0),
+(156:25;0).
+   ÆºŁ   4
+  Ææ     ß   Łæº      Ł ß  Œ ÆŁ   Ł       Ł ı Œ    Ł Ł      a =
+ 0:18, b = 0:8, c = 0:663, ff = 15,   = 0:13         ß       Ł t
+n
+  Ł
+    º      æº  ŁŁ (X
+0
+;0) = (0:05;0).
+t
+n
+(x
+n
+;y
+n
+) æ Ææ     ß 
+ Łæº      Ł ß
+ Œ ÆŁ
+t
+0
+= 0 (0.050, 0) 0:135 3:971i
+t
+1
+= 0:202 (0.035, -0.138)  0:047 3:956i
+t
+2
+= 0:609 (-0.035, -0.134)  0:141 3:815i
+t
+3
+= 0:812 (-0.049, 0.000)  0:003 3:773i
+t
+4
+= 1:014 (-0.035, 0.136) 0:174 3:788i
+t
+5
+= 1:420 (0.039, 0.142) 0:291 3:933i
+t
+6
+= 1:622 (0.056, 0.000) 0:143 3:982i
+   ÆºŁ   5
+  Ææ     ß   Łæº      Ł ß  Œ ÆŁ   Ł       Ł ı Œ    Ł Ł      a =
+ 0:18, b = 0:8, c = 0:663, ff = 15,   = 0:13         ß       Ł t
+n
+  Ł
+    º      æº  ŁŁ (X
+0
+;0) = (156:25;0).
+t
+n
+(x
+n
+;y
+n
+) æ Ææ     ß 
+ Łæº      Ł ß
+ Œ ÆŁ
+t
+0
+= 0 (156.25, 0.000) 218:815 49:266i
+t
+1
+= 0:135 (0.697, -11.956)  14:820 2:282i
+t
+2
+= 0:272 (-0.830, -4.484)  6:313 1:757i
+t
+3
+= 0:547 (-0.748, 0.000)  0:982 1:857i
+t
+4
+= 0:723 (-0.608, 1.875) 1:395 2:159i
+t
+5
+= 1:077 (0.975, 7.806) 10:512 4:173i
+t
+6
+= 1:254 (159.394, 0.000) 223:216 49:757i
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 32˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+  Łæ Œ ºŁ       ß
+[1]  º Œæ        ˇ.  . ˇ  Æº  ß ˆŁº Æ    .  .:˝  Œ , 1969. 240 æ.
+[2]           .  ., ¸      Ł  ¯.  ., ˆ        .  .,   Ø    . ˆ . ˚   æ    -
+        Ł   Ł   Ł  æŒŁı æŁæ         ª       Œ .  .:˝  Œ , 1966. 568 æ.
+[3]           .  ., ´Ł    .  .,   ØŒŁ   .  .      Ł  Œ º Æ  ŁØ.
+ .: Ł    ªŁ , 1959. 916 æ.
+[4]     º   ´. ¨.  Œæ   Ł     º            ŁŒ .  .:   Łæ, 2005. 64 æ.
+[5] `   Ł  ˝. ˝. ˛  Łæº       º  ßı  ŁŒº  ,     º  øŁıæ    Ł Ł     -
+ ŁŁ Œ    Ł Ł      Ł  æ æ    Ł         æŁ   Ł     Œ æ  ŁºŁ       .
+//        Ł  æŒŁØ æÆ   ŁŒ.   . 30(72).  1, 1952.  . 181 196.
+[6] ` ı  º   ˝. .  Łæº   ß       ß.  .:˝  Œ , 1975. 632 c.
+[7] `    Ł  ¨. ., ˘Ł Œ   ˝.ˇ.      ß  ß Łæº  ŁØ,   . 2.  .:˝  Œ , 1962.
+640 æ.
+[8] Kuznetsov N. V., Kuznetsova O. A., L e onov G. A. Visualization of four
+normal size limit cycles in two-dimensional polynomial quadratic system. //
+Di erential equations and dynamical systems. V. 21. Nos. 1 2, 2013. P . 29 34.
+[9] Kuznetsov N. V., L e onov G. A. Lyapunov quantities, limit cycles and strange
+behavior of tra jectories in two-dimensional quadratic systems. // Journal of
+Vibroengineering. V. 10. N. 4, 2008. P . 460 467.
+[10] ¸   Łæ ¯.  ., ˇ     æŒŁØ ¨. ˆ . ˛  Łæº       º  ßı  ŁŒº         -
+ Ł  dy=dx = P(x;y)=Q(x;y), ª   P Ł Q   ºŁ   ß.//        Ł  æŒŁØ
+æÆ   ŁŒ.   . 43(85).  2, 1957.  . 149 168.
+[11] Llibr e J., Artes J. C. Quadratic vector  elds with a weak focus of third order.
+// Publicacions Matematiques. V. 41. N. 1, 1997. P . 7 39.
+[12] Llibr e J., Bernat J. Counterexample to Kalman and Markus Y amabe
+conjectures in dimension larger than 3. // Dynamics of Continuous, Discrete
+& Impulsive Systems. V. 2. N. 3, 1996. P . 377 379.
+[13] L e onov G. A. F our limit cycles in quadratic two-dimensional systems with a
+perturbed  rst-order weak focus. // Doklady Mathematics. V. 81. N. 2, 2010.
+P . 248 250.
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 33˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+[14] L e onov G. A. Limit cycles in quadratic systems with a  rst-order weak focus.
+// Doklady Mathematics. V. 82. N. 3, 2010. P . 923 926.
+[15] L e onov G. A. Synthesis of two-dimensional quadratic systems with a limit
+cycle satisfying prescribed initial conditions. // Doklady Mathematics. V. 81.
+N. 2, 2010. P . 236 237.
+[16] L e onov G. A. T wo-dimensional quadratic systems as a lienard equation. //
+Di erential Equations and Dynamical Systems. V. 5, 1997. P . 289 297.
+[17] L e onov G. A. Limit cycles of the Lienard equation with discontinuous
+coe cients. // Doklady Physics. V. 54. N. 5, 2009. P . 238 241.
+[18] L e onov G. A., Sundkvist E. Localization of the Lienard equation’s attractors
+and cycles. // Di erential Equations and Dynamical Systems. V. 13. Nos.
+3 4, July & October 2005. P . 275 294.
+[19] L e onov G. A. Existence criteria for cycles in two-dimensional quadratic
+systems. // V estnik St.Petersbur g University. Mathematics V. 40. N. 3,
+pp. 172 181, 2007.
+[20] L e onov G. A. A criterion for the existence of four limit cycles in quadratic
+systems. // Journal of Applied Mathematics and Mechanics. V. 74. N. 2,
+2010. P . 135 143.
+[21] L e onov G. A. E cient methods in the search for periodic oscillations in
+dynamical systems. // Journal of Applied Mathematics and Mechanics. V. 74.
+N. 1, 2010. P . 24 50.
+[22] L e onov G. A., Kuznetsov N. V. Computation of the  rst lyapunov quantity
+for the second-order dynamical system. // IF AC Proceedings V olumes (IF AC-
+PapersOnline). V. 3. N. 1, 2007. P . 87 89.
+[23] L e onov G. A., Kuznetsov N. V. Hidden attractors in dynamical systems.
+F rom hidden oscillations in Hilbert-Kolmogorov, Aizerman, Kalman problems
+to hidden chaotic attractors in Chua circuits. // International Journal of
+Bifurcation and Chaos. V. 23. N. 1, 2013, art. no. 1330002.
+[24] L e onov G. A., Kuznetsov N. V., Kudryashova E. V. A direct method for
+calculating lyapunov quantities of two-dimensional dynamical systems. //
+Proceedings of the Steklov Institute of Mathematics. V. 272. Suppl. 1, 2011.
+P . 119 127.
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 34˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+[25] L e onov G. A., Kuznetsov N. V., Kudryashova E. V. Cycles of
+two-dimensional systems. calculations, proofs, experiments. // V estnik
+St.Petersburg University . Mathematics. V. 41. N. 3, 2008. P . 216 250.
+[26] L e onov G.A., Kuznetsova O. A. Lyapunov quantities and limit cycles
+of two-dimensional dynamical systems: Analytical methods and symbolic
+computation. // Regular and Chaotic Dynamics. V. 15. N. 2, 2010. P . 354 
+377.
+[27] L e onov G. A., Kuznetsov N. V. Limit cycles of quadratic systems with a
+perturbed weak focus of order 3 and a saddle equilibrium at in nity . //
+Doklady Mathematics. V. 82. N. 2, 2010. P . 693 696.
+[28] L e onov G. A., Kuznetsov N. V., Sele dzhi S. M. Hidden oscillations in
+dynamical systems. // Recent researches in System Science. WSEAS Press,
+2011. P . 292 297.
+[29] L e onov G. A., Kuznetsov N. V., Kuznetsova O. A., Sele dzhi S. M., V agaitsev
+V. I. Hidden oscillations in dynamical systems. // T ransaction on Systems
+and Control. V. 6. N. 2, 2011. P . 54 67.
+[30] Li C. Non-existence of limit cycle around a weak focus of order three for
+any quadratic system. // Chinese Annals of Mathematics. V. 7B. N. 2, 1986.
+P . 174 190.
+[31] Lynch S. Dynamical systems with applications using maple. // Birkhauser,
+Springer, Boston, 2010. 474 p.
+[32] ¸  Ł æŒŁØ  .  . ˛   Œ    ª  ł  æ Ł  Łæº    ª  Ł   ª Ł     Ł   ÆßŒ-
+      ßı  Ł       Ł º  ßı        ŁØ. // ¨   æ Ł       .        Ł-
+Œ .   . 5.  6, 1958.  . 52 90.
+[33]  ßæ  æŒŁı ¨.ˇ. ¸ Œ ŁŁ             ß Łæº  ŁØ.  ˇÆ. 1998. 472 æ.
+[34] ˛   ª  ˜ ., ˇ º   . ´     Ł     Łæº   ß       ß   ł  Ł   Ł      -
+ Ł º  ßı        ŁØ.  .:˝  Œ , 1986. 288 æ.
+[35] ˇ     æŒŁØ ¨. ˆ ., ¸   Łæ ¯.  . ˛  Łæº       º  ßı  ŁŒº          Ł 
+dy=dx = P(x;y)=Q(x;y), ª  P Ł Q    ª  º  ß æ     Łn. //       -
+ Ł  æŒŁØ æÆ   ŁŒ   . 37(79).  2, 1955.  . 209 250.
+[36] ˇ     æŒŁØ ¨. ˆ . ¸   Łæ ¯.  . ˇ     ŒŁ Œ æ       "˛  Łæº       º -
+ ßı  ŁŒº          Ł dy=dx = P(x;y)=Q(x;y), ª  P Ł Q    ª  º  ß
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 35˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 3, 2013
+     Ø æ     Ł" Ł "˛  Łæº       º  ßı  ŁŒº          Ł dy=dx =
+P(x;y)=Q(x;y), ª   P Ł Q    ºŁ   ß". //        Ł  æŒŁØ æÆ   ŁŒ.
+  . 48(90).  2, 1959.  . 253 255.
+[37]  Œ       ¸.  .       æ           —  ª  ˚   ß   Ł   ł  ŁŁ   æ ŒŁı   -
+   . // ˘    º  ß ŁæºŁ  º   Ø        ŁŒŁ Ł        Ł  æŒ Ø  Ł ŁŒŁ.
+  . 43.  9, 2003.  . 1374 1384.
+[38] Shi S. L. A concrete example of the existence of four limit cycles for plane
+quadratic systems. // Scientia Sinica. V. 23. N. 2, 1980. P . 153 158.
+[39]        Œ  — .ˇ. ´     Ł     ß ŁæºŁ  º      Ł ŁŒ  .  .:   ¨, 1994.
+528 æ.
+[40]   Ø     ., ´      ˆ . — ł  Ł   ÆßŒ      ßı  Ł       Ł º  ßı     -
+   ŁØ. ˘ æ ŒŁ  Ł  Ł       Ł º   - ºª Æ  Ł  æŒŁ       Ł.  .: Ł .
+1999. 685 æ.
+[41]   Ø     ., ˝… æ    C., ´      ˆ . — ł  Ł   ÆßŒ      ßı  Ł      -
+ Ł º  ßı        ŁØ. ˝   æ ŒŁ       Ł.  .: Ł . 1990. 512 æ.
+[42]   ºº ˜ .,       ˜ .          ß   Łæº   ß       ß   ł  Ł   ÆßŒ-
+      ßı  Ł       Ł º  ßı        ŁØ.  .: Ł , 1979. 312 æ.
+[43]   º      . ., ¸ Æ       .¨., ¯   ŒŁ     .´. —    æ  ß  æı  ß  º 
+  ł  Ł    æ ŒŁı  ÆßŒ      ßı  Ł       Ł º  ßı        ŁØ      -
+æ    æ            º   ßı Œ    Ł Ł     .  .:   ¨, 1985. 49 æ.
+[44]    Œ æ ¸.  ., ˘Łº  Ł  ¸. ¨. ˝ Œ    ß    Ł   ŒŁ   æ  æ  Ł    Ł -
+æ      æ Ł      º  ßı  ŁŒº  . // ˜Ł       Ł º  ß         Ł .   . 6.
+ 3, 1970.  . 891 897.
+[45] Y e Y an-Qian. The ory of Limit cycles. T ranslations of Math. Monographs,
+Amer. Math. Soc., Providence, V. 66, 1986. 436 p.
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 36

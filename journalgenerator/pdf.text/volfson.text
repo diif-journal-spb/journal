@@ -1,732 +1,1500 @@
-﻿\begin{center}
-
-    \textbf{Н.А. Бодунов, Г.И. Вольфсон}
-
-\end{center}
-
-\begin{center}
-
-    \textbf{ЛОКАЛЬНАЯ ИДЕНТИФИЦИРУЕМОСТЬ СИСТЕМ С ПЕРЕМЕННЫМ ПАРАМЕТРОМ}
-
-\end{center}
-
-    Рассмотрим модель, описываемую системой обыкновенных дифференциальных уравнений:
-
-    \begin{equation}
-    \label{first_eq}
-    \dot x = f(t, x, p),
-    \end{equation}
-    где $x\in \mathbb{R}^n$, $p\in \mathbb{R}^m$.
-
-    \medskip
-    Мы предполагаем, что вектор-функция $f$, стоящая в правой части системы (\ref{first_eq}), непрерывна по совокупности переменных $(t,x,p)$ и непрерывно дифференцируема по переменным $(x,p)$ в области $D$ пространства $\mathbb{R}^{1+n+m}$.
-
-    \medskip
-    В изучаемой постановке задачи параметр $p$ является непрерывной функцией от $t$, принадлежащей некоторому классу функций $\EuScript P$, определенных на фиксированном промежутке $[0,T]$. Введем обозначение $\{p\}=\{p(t):t\in[0;T]\}$.
-
-    \medskip
-    Фиксируем вектор $x_0 \in \mathbb{R}^n$ и обозначим через $x(t, \{p\})$ решение задачи Коши с начальными данными $(0, x_0)$ для системы (\ref{first_eq}), в которой зафиксирован параметр-функция $p \in \EuScript P$.
-
-    \medskip
-    Мы учитываем, что значение $x(t_0, \{p\})$ при $t_0 \in [0,T]$ зависит лишь от значений $p(t)$ при $t \in [0,t_0]$.
-
-    \medskip
-    Наше основное предположение о классе $\EuScript P$ таково: для любой функции $p \in \EuScript P$ решение $x(t,\{p\})$ единственно и определено на всем промежутке $[0,T]$.
-
-    \medskip
-    Для любой функции $q(t)$, $t \in [0,T]$, мы обозначаем
-
-    $$
-        \|q\| = \sup\limits_{t \in [0,T]} |q(t)|.
-    $$
-
-    \medskip
-    \textbf{Определение 1.} Пусть $p_1$, $p_2 \in \EuScript P$. Будем говорить, что пара $(p_1, p_2)$ различима по наблюдению решения $x(t, \{p\})$ в точке $T$, если
-
-    $$
-    x(T, \{p_1\}) \ne x(T, \{p_2\}).
-    $$
-
-    \medskip
-    В дальнейшем, для краткости будем говорить просто "пара $(p_1, p_2)$ различима". Отметим, что вектор $x_0$ предполагается фиксированным для всех рассматриваемых решений $x(t, \{p\})$.
-
-    \medskip
-    \textbf{Определение 2.} Система (\ref{first_eq}) называется локально идентифицируемой при $p_0 \in \EuScript P$, если существует такое $\epsilon > 0$, что если $p \in \EuScript P$ и $0<\|p_0-p\|<\epsilon$, то пара $(p_0, p)$  различима.
-
-    \medskip
-    Постановка вопроса о локальной идентифицируемости в задаче об идентифицируемости решения по наблюдениям на концах промежутка была исследована в монографии [1]. Исследование проводилось в том случае, когда параметр-функция $p$ -- постоянная или кусочно-постоянная на отрезке $[0, T]$. Основным отличием данной постановки задачи от постановки задачи в [1] является то, что мы не предполагаем постоянство или кусочное постоянство параметр-функции $p$.
-
-    \medskip
-    Пусть $\EuScript K$ - некоторый класс функций, заданных на $[0,T]$.
-
-    \medskip
-    \textbf{Определение 3.} Фиксируем $p_0 \in \EuScript P$. Будем говорить, что семейство $\EuScript P$ нормированно отделено от $\EuScript K$ в $p_0$, если из любой последовательности элементов $p_k \in \EuScript P$, обладающей свойствами $\|p_k - p_0 \| > 0$ и $\|p_k - p_0 \| \rightarrow 0, k\rightarrow\infty$, можно выбрать такую подпоследовательность $p_{k_l}$, что последовательность $\frac{p_{k_l} - p_0}{\|p_{k_l} - p_0\|}$ равномерно сходится на $[0,T]$ к некоторой функции, не принадлежащей классу $\EuScript K$.
-
-    \medskip
-    Фиксируем $p_0 \in \EuScript P$.
-
-    Предположим, что
-    \begin{equation}
-    \label{first_equ}
-    \{(t,x(t,\{p_0\}),p_0(t)):t\in [0,T]\} \subset D.
-    \end{equation}
-
-    Пусть $Y(t)$ - фундаментальная матрица линейной системы
-
-    \begin{equation}
-    \label{second_eq}
-    \dot y = \frac{\partial f(t,x(t,\{p_0\}),p_0)}{\partial x} y,
-    \end{equation}
-    удовлетворяющая начальному условию
-
-    $$
-    Y(0) = E,
-    $$
-    где $E$ - единичная матрица размера $n \times n$.
-
-    \medskip
-
-    Рассмотрим линейный функционал
-    $$
-    \Psi:\EuScript P\rightarrow \mathbb{R}^n,
-    $$
-    заданный формулой
-
-    \begin{equation}
-    \label{third_eq}
-    \Psi(p) = \int\limits_0^T Y^{-1} (s) \cdot \frac{\partial f}{\partial p} (s, x(s, \{p_0\}), p_0(s))p(s)ds,
-    \end{equation}
-    и обозначим через $\EuScript K$ ядро функционала $\Psi$.
-
-    \medskip
-    Основной результат статьи таков.
-
-    \medskip
-    \textbf{Теорема.} Если семейство $\EuScript P$ нормированно отделено от $\EuScript K$ в $p_0$, то система (\ref{first_eq}) локально идентифицируема при параметр-функции $p_0$.
-
-    \medskip
-    \textbf{Доказательство.}
-
-    \medskip
-    Обозначим малое изменение параметра $p_0$ через $\Delta p$:
-
-    $$
-    p(t) = p_0(t) + \Delta p(t).
-    $$
-
-
-    \medskip
-    Также введем обозначение:
-
-    $$
-    \Delta x(t) = x(t,\{p\}) - x(t,\{p_0\}).
-    $$
-
-    Докажем, что для $\Delta x(T)$ имеет место следующее представление:
-
-
-    \begin{equation}
-    \label{fourth_eq}
-    \Delta x(T) = Y(T) \cdot \Psi(\Delta p) + G(\Delta p),
-    \end{equation}
-    где
-    \begin{equation}
-    \label{fourth_equ}
-    \frac{|G(\Delta p)|}{\|\Delta p\|} \rightarrow 0 \mbox{ при } \|\Delta p\| \rightarrow 0.
-    \end{equation}
-
-    \medskip
-    Подставим $x(t,\{p_0\})$ в (\ref{first_eq}) и проинтегрируем результат на промежутке $[0,t]$:
-
-    \begin{equation}
-    \label{fifth_eq}
-    x(t, \{p_0\}) = x_0 + \int\limits_0^t f(s, x(s, \{p_0\}), p_0(s))ds.
-    \end{equation}
-
-    Аналогично, верно равенство
-    $$
-    x(t, \{p\}) = x_0 + \int\limits_0^t f(s, x(s, \{p\}), p(s))ds.
-    $$
-
-
-    Перепишем это равенство, подставив $p_0(t) + \Delta p(t)$ вместо $p(t)$:
-    \begin{equation}
-    \label{sixth_eq}
-    x(t, \{p_0 + \Delta p\}) = x_0 + \int\limits_0^t f(s, x(s, \{p_0 + \Delta p\}), (p_0 + \Delta p)(s))ds.
-    \end{equation}
-
-    Вычитая из равенства (\ref{sixth_eq}) равенство (\ref{fifth_eq}), получаем равенство
-
-    \begin{equation}
-    \label{seventh_eq}
-    \Delta x(t) = \int\limits_0^t [f(s, x(s, \{p_0 + \Delta p\}), (p_0 + \Delta p)(s)) - f(s, x(s,\{p_0\}),p_0(s))] ds.
-    \end{equation}
-
-
-    Покажем, что для $\Delta x(t)$ имеет место представление
-
-    $$
-    \Delta x(t) = \int\limits_0^t \frac{\partial f}{\partial x}(s, x(s, \{p_0\}),p_0(s)) \cdot \Delta x(s)ds +
-    $$
-    \begin{equation}
-    \label{eighth_eq}
-    +\int\limits_0^t \frac{\partial f}{\partial p}(s, x(s, \{p_0\}),p_0(s)) \cdot \Delta p(s)ds + \Gamma(t)
-    \end{equation}
-    для любого $t \in [0, T]$, причем
-
-    \begin{equation}
-    \label{eighth_equ}
-    \frac{1}{\|\Delta p\|} \cdot \left|\frac{d\Gamma}{dt}(t)\right| \rightrightarrows 0 \mbox{ при } \|\Delta p\| \rightarrow 0, \mbox{ }t \in [0,T].
-    \end{equation}
-
-
-    Распишем подынтегральную функцию из правой части равенства (\ref{seventh_eq}) в первом приближении:
-
-
-    $$
-    f(s, x(s, \{p_0\}) + \Delta x(s), (p_0 + \Delta p)(s)) - f(s, x(s, \{p_0\}), p_0(s)) =
-    $$
-    $$
-    = \frac{\partial f}{\partial x} (s, x(s, \{p_0\}), p_0(s))\cdot\Delta x(s) +
-    $$
-    \begin{equation}
-    \label{ninth_eq}
-    +\frac{\partial f}{\partial p} (s, x(s, \{p_0\}), p_0(s))\cdot\Delta p(s) + \alpha(s, \Delta x(s),\Delta p(s)).
-    \end{equation}
-
-    Из формулы (\ref{ninth_eq}) следует, что
-    $$
-    \alpha(s, \Delta x(s),\Delta p(s))= f(s, x(s, \{p_0\}) + \Delta x(s), (p_0 + \Delta p)(s)) -
-    $$
-    $$
-    - f(s, x(s, \{p_0\}), p_0(s)) -\frac{\partial f}{\partial x} (s, x(s, \{p_0\}), p_0(s))\cdot\Delta x(s) -
-    $$
-    $$
-    - \frac{\partial f}{\partial p} (s, x(s, \{p_0\}), p_0(s))\cdot\Delta p(s).
-    $$
-
-    Подставим результат (\ref{ninth_eq}) в равенство (\ref{seventh_eq}):
-
-    $$
-    \Delta x(t) = \int\limits_0^t \frac{\partial f}{\partial x}(s, x(s, \{p_0\}),p_0(s)) \cdot \Delta x(s)ds +
-    $$
-    \begin{equation}
-    \label{tenth_eq}
-    + \int\limits_0^t \frac{\partial f}{\partial p}(s, x(s, \{p_0\}),p_0(s)) \cdot \Delta p(s)ds + \int\limits_0^t \alpha(s, \Delta x(s),\Delta p(s)) ds.
-    \end{equation}
-
-
-
-
-    Оценим $\alpha(s, \Delta x(s),\Delta p(s))$:
-
-    $$
-    |\alpha(s, \Delta x(s),\Delta p(s))| = |f(s, x(s, \{p_0\}) + \Delta x(s), (p_0 + \Delta p)(s)) -
-    $$
-    $$
-    - f(s, x(s, \{p_0\}), p_0(s)) - \frac{\partial f}{\partial x} (s, x(s, \{p_0\}), p_0(s))\cdot\Delta x(s) -
-    $$
-    $$
-    - \frac{\partial f}{\partial p} (s, x(s, \{p_0\}), p_0(s))\cdot\Delta p(s)| \leq
-    $$
-    $$
-    \leq |f(s, x(s, \{p_0\}) + \Delta x(s), (p_0 + \Delta p)(s)) - f(s, x(s, \{p_0\}), (p_0 + \Delta p)(s)) -
-    $$
-    $$
-    - \frac{\partial f}{\partial x} (s, x(s, \{p_0\}), (p_0 + \Delta p)(s))\cdot\Delta x(s)| +
-    $$
-    $$
-    + \left| \left[ \frac{\partial f}{\partial x} (s, x(s, \{p_0\}), (p_0 + \Delta p)(s)) - \frac{\partial f}{\partial x} (s, x(s, \{p_0\}), p_0(s))\right] \cdot \Delta x(s) \right| +
-    $$
-    $$
-    + |f(s, x(s, \{p_0\}), (p_0 + \Delta p)(s)) - f(s,x(s, \{p_0\}),p_0(s))-
-    $$
-    \begin{equation}
-    \label{eleventh_eq}
-    - \frac{\partial f}{\partial p} (s, x(s, \{p_0\}), p_0(s))\cdot\Delta p(s)|.
-    \end{equation}
-
-    Введем обозначение:
-    $$
-    g(\theta) = f(s, x(s, \{p_0\}) + \theta\cdot\Delta x(s), (p_0 + \Delta p)(s)),\; \theta \in [0,1].
-    $$
-
-    С учетом введенного обозначения преобразуем первое выражение в правой части формулы (\ref{eleventh_eq}).
-
-    Верно равенство
-
-    $$
-    f(s, x(s, \{p_0\}) + \Delta x(s), (p_0 + \Delta p)(s)) - f(s, x(s, \{p_0\}), (p_0 + \Delta p)(s)) =
-    $$
-    $$
-    = g(1) - g(0) = \int_0^1\frac{\partial g}{\partial \theta} d \theta = \int_0^1 \frac{\partial f}{\partial x}(s, x(s,\{p_0\})+\theta \Delta x(s),(p_0+\Delta p)(s)) \times
-    $$
-    $$
-    \times \Delta x(s) d \theta.
-    $$
-
-    Заметим также, что
-    $$
-    \frac{\partial f}{\partial x} (s, x(s, \{p_0\}), (p_0 + \Delta p)(s))\cdot\Delta x(s) =
-    $$
-    $$
-    = \int_0^1 \left [\frac{\partial f}{\partial x} (s, x(s, \{p_0\}), (p_0 + \Delta p)(s))\cdot \Delta x(s)\right ] d \theta.
-    $$
-
-    Таким образом,
-    $$
-    f(s, x(s, \{p_0\}) + \Delta x(s), (p_0 + \Delta p)(s)) - f(s, x(s, \{p_0\}), (p_0 + \Delta p)(s)) -
-    $$
-    $$
-    - \frac{\partial f}{\partial x} (s, x(s, \{p_0\}), (p_0 + \Delta p)(s))\cdot\Delta x(s) =
-    $$
-    $$
-    = \int_0^1 [\frac{\partial f}{\partial x}(s, x(s,\{p_0\}) + \theta \Delta x(s),(p_0+\Delta p)(s)) -
-    $$
-    $$
-    - \frac{\partial f}{\partial x}(s, x(s,\{p_0\}), (p_0+\Delta p)(s))] \cdot \Delta x(s) d \theta.
-    $$
-
-
-    Рассмотрим компактное подмножество $M_a$ пространства $\mathbb R \times \mathbb R^n \times \mathbb R^m$, заданное так:
-    $$
-    M_a = \{(t,x,p): t \in [0,T], |x - x(t,\{p_0\})| \leq a, |p-p_0(t)| \leq a\},
-    $$
-    где $a > 0$. Из (\ref{first_equ}) следует, что $a$ можно выбрать столь малым, чтобы выполнялось включение $M_a \in D$.
-
-    \medskip
-    Так как $f$ непрерывно дифференцируема по $x$, то $\frac{\partial f}{\partial x}$ равномерно непрерывна на компакте $M_a$. Тогда для любого $\epsilon > 0$ существует такое $\delta \in (0,a)$, что если $|\Delta x(s)|,|\Delta p(s)| \leq \delta$, то
-    $$
-    |\frac{\partial f}{\partial x}(s, x(s,\{p_0\})+\theta \Delta x(s),(p_0+\Delta p)(s)) - \frac{\partial f}{\partial x}(s, x(s,\{p_0\}), (p_0+\Delta p)(s))| < \epsilon
-    $$
-    для любых $\theta \in [0,1]$ и $s \in [0,T]$.
-
-    \medskip
-    Так как $p$ равномерно стремится к $p_0$ при $\|\Delta p\| \rightarrow 0$, то по теореме о непрерывной зависимости решений от начальных данных и параметров решение $x(t,\{p_0 + \Delta p\})$ равномерно стремится к $x(t,\{p_0\})$ на $[0, T]$.
-
-    \medskip
-    Поэтому существует такое $\delta_1 > 0$, что если $\|\Delta p\| < \delta_1$, то выполняются неравенства
-    $$
-    |x(t, \{p_0 + \Delta p\}) - x(t, \{p_0\})| \leq \delta \mbox{ при } t\in [0,T],
-    $$
-    то есть точки $(t, x(t, \{p_0 + \Delta p\}), (p_0 + \Delta p)(t))$ и $(t, x(t, p_0), (p_0 + \Delta p)(t))$ лежат в множестве $M_a$ и $|\Delta x(s)| \leq \delta,$ $s\in[0,T] $.
-
-    Тогда
-
-    $$
-    \left\|\frac{\partial f}{\partial x}(s, x(s,\{p_0\})+\theta \Delta x(s),(p_0+\Delta p)(s)) - \frac{\partial f}{\partial x}(s, x(s,\{p_0\}), (p_0+\Delta p)(s))\right\| \times
-    $$
-    $$
-    \times |\Delta x (s)| < \epsilon \cdot |\Delta x (s)|.
-    $$
-
-    Из этого следует, что если $\|\Delta p\| \leq \delta_1$, то
-    $$
-    |f(s, x(s, \{p_0\}) + \Delta x(s), (p_0 + \Delta p)(s)) - f(s, x(s, \{p_0\}), (p_0 + \Delta p)(s)) -
-    $$
-    \begin{equation}
-    \label{twelveth_eq}
-    - \frac{\partial f}{\partial x} (s, x(s, \{p_0\}), (p_0 + \Delta p)(s))\cdot\Delta x(s)| \leq \epsilon \cdot \|\Delta x\|.
-    \end{equation}
-
-    Теперь аналогично оценим второе выражение в правой части выражения (\ref{eleventh_eq}). Так как $\frac{\partial f}{\partial x}$ равномерно непрерывна на компакте $M_a$, то для любого $\epsilon > 0$ существует такое $\delta \in (0,a)$, что если $\|\Delta p\| \leq \delta$, то
-    $$
-    \left\|\frac{\partial f}{\partial x} (s, x(s, \{p_0\}), (p_0 + \Delta p)(s)) - \frac{\partial f}{\partial x} (s, x(s, \{p_0\}), p_0(s))\right\| < \epsilon.
-    $$
-    Из этого следует, что если $\|\Delta p\| \leq \delta$, то верна оценка:
-
-    \begin{equation}
-    \label{thirteenth_eq}
-    \left|\left[\frac{\partial f}{\partial x} (s, x(s, \{p_0\}), (p_0 + \Delta p)(s)) - \frac{\partial f}{\partial x} (s, x(s, \{p_0\}), p_0(s))\right] \cdot \Delta x(s)\right| \leq \epsilon \cdot \|\Delta x\|.
-    \end{equation}
-
-    Аналогичным образом оценим и третье слагаемое в правой части выражения (\ref{eleventh_eq}).
-
-    Введем обозначение:
-    $$
-    h(\theta) = f(s, x(s, \{p_0\}), (p_0 + \theta\cdot\Delta p)(s)),\; \theta \in [0,1].
-    $$
-
-    С учетом введенного обозначения преобразуем третье выражение в правой части формулы (\ref{eleventh_eq}).
-
-    Верно равенство
-
-    $$
-    f(s, x(s, \{p_0\}), (p_0 + \Delta p)(s)) - f(s, x(s, \{p_0\}), p_0(s)) =
-    $$
-    $$
-    = h(1) - h(0) = \int_0^1\frac{\partial h}{\partial \theta} d \theta = \int_0^1 \frac{\partial f}{\partial p}(s, x(s,\{p_0\}), (p_0 + \theta \cdot \Delta p)(s)) \times
-    $$
-    $$
-    \times \Delta p(s) d \theta.
-    $$
-
-    Заметим также, что
-
-    $$
-    \frac{\partial f}{\partial p} (s, x(s, \{p_0\}), p_0(s))\cdot\Delta p(s) = \int_0^1 \frac{\partial f}{\partial p} (s, x(s,\{p_0\}),p_0(s)) \cdot \Delta p(s) d \theta.
-    $$
-
-    Таким образом,
-    $$
-    f(s, x(s, \{p_0\}), (p_0 + \Delta p)(s)) - f(s,x(s, \{p_0\}),p_0(s))-
-    $$
-    $$
-    -\frac{\partial f}{\partial p} (s, x(s, \{p_0\}), p_0(s))\cdot\Delta p(s) =
-    $$
-    $$
-    = \int_0^1 \frac{\partial f}{\partial p} (s, x(s,\{p_0\}),(p_0 + \theta\cdot\Delta p)(s)) \cdot \Delta p(s) d \theta -
-    $$
-    $$
-    - \int_0^1 \frac{\partial f}{\partial p} (s, x(s,\{p_0\}),p_0(s)) \cdot \Delta p(s) d \theta =
-    $$
-    $$
-    = \int_0^1 \left \{ \left [\frac{\partial f}{\partial p} (s, x(s,\{p_0\}),(p_0 + \theta\cdot\Delta p)(s)) - \frac{\partial f}{\partial p} (s, x(s,\{p_0\}),p_0(s)) \right ] \cdot \Delta p(s) \right \} ds.
-    $$
-
-    Так как $f$ непрерывно дифференцируема, то $\frac{\partial f}{\partial p}$ равномерно непрерывна на компакте $M_a$. Тогда для любого $\epsilon > 0$ существует такое $\delta  \in (0,a)$, что если $|\Delta p(s)| \leq \delta$, то
-
-    $$
-    \left|\frac{\partial f}{\partial p} (s, x(s,\{p_0\}),(p_0 + \theta\cdot\Delta p)(s)) - \frac{\partial f}{\partial p} (s, x(s,\{p_0\}),p_0(s))\right| < \epsilon.
-    $$
-
-    Из этого следует, что если $\|\Delta p\| \leq \delta$, то верна оценка:
-
-    \begin{equation}
-    \label{fourteenth_eq}
-    \left|\left [\frac{\partial f}{\partial p} (s, x(s,\{p_0\}),p_0 + \theta\cdot\Delta p) - \frac{\partial f}{\partial p} (s, x(s,\{p_0\}),p_0) \right ]\right| \cdot \|\Delta p\| \leq \epsilon \cdot \|\Delta p\|.
-    \end{equation}
-
-    Таким образом, из соотношений (\ref{twelveth_eq}) - (\ref{fourteenth_eq}) следует, что для любого $\epsilon > 0$ существует такое $\delta > 0$, что если $\|\Delta p\| < \delta$, то
-
-    $$
-    |\alpha(s, \Delta x(s),\Delta p(s))| \leq \epsilon \cdot \|\Delta x\| + \epsilon \cdot \|\Delta x\| + \epsilon \cdot \|\Delta p\|;
-    $$
-    это означает, что
-
-    $$
-    \frac{|\alpha(s, \Delta x(s),\Delta p(s))|}{\|\Delta p\| + \|\Delta x\|} \rightrightarrows 0 \mbox{ при } \|\Delta p\| + \|\Delta x\| \rightarrow 0 \mbox{ }, s \in [0,T].
-    $$
-
-
-    \medskip
-    \medskip
-    \medskip
-    \medskip
-
-    \textbf{Лемма 1.} Верно соотношение
-    \begin{equation}
-    \label{fourteenth_equ}
-    \frac{|\alpha(s, \Delta x(s),\Delta p(s))|}{\|\Delta p\|} \rightrightarrows 0 \mbox{ при } \|\Delta p\| \rightarrow 0 \mbox{ }, s \in [0,T].
-    \end{equation}
-
-    \medskip
-    \textbf{Доказательство.}
-
-    Оценим сверху функцию, стоящую в левой части равенства (\ref{seventh_eq}):
-    $$
-    |\Delta x(t)| \leq \int\limits_0^t |f(s, x(s, \{p_0 + \Delta p\}), (p_0 + \Delta p)(s)) -
-    $$
-    $$
-    - f(s, x(s, \{p_0\}), p_0(s))|ds =
-    $$
-    $$
-    = \int\limits_0^t |f(s, x(s, \{p_0 + \Delta p\}), (p_0 + \Delta p)(s)) - f(s, x(s, \{p_0\}), (p_0 + \Delta p)(s)) +
-    $$
-    $$
-    + f(s, x(s, \{p_0\}), (p_0 + \Delta p)(s)) - f(s, x(s, \{p_0\}), p_0(s))|ds \leq
-    $$
-    $$
-    \leq \int\limits_0^t |f(s, x(s, \{p_0 + \Delta p\}), (p_0 + \Delta p)(s)) - f(s, x(s, \{p_0\}), (p_0 + \Delta p)(s))|ds +
-    $$
-    \begin{equation}
-    \label{fifteenth_eq}
-    + \int\limits_0^t |f(s, x(s, \{p_0\}), (p_0 + \Delta p)(s)) - f(s, x(s, \{p_0\}), p_0(s))|ds.
-    \end{equation}
-
-    \medskip
-    \medskip
-    Так как $f$ непрерывно дифференцируема по $x$ и $p$, то она липшицева по этим аргументам на множестве $M_a$. Обозначим соответствующую константу Липшица через $L$.
-
-    Будем считать, как и выше, что величина $\|\Delta p\|$ столь мала, что все аргументы рассматриваемых функций лежат в $M_a$.
-
-    Тогда
-
-    $$
-    |f(s, x(s, \{p_0 + \Delta p\}), (p_0 + \Delta p)(s)) - f(s, x(s, \{p_0\}), (p_0 + \Delta p)(s))| \leq
-    $$
-    \begin{equation}
-    \label{sixteenth_eq}
-    \leq L \cdot \|\Delta x\|.
-    \end{equation}
-
-    Из того, что $f$ липшицева и по третьему аргументу на множестве $M_a$, следует, что выполняется неравенство
-    $$
-    |f(s, x(s, \{p_0\}), (p_0 + \Delta p)(s)) - f(s, x(s, \{p_0\}), p_0(s))| \leq L \cdot \|\Delta p \|.
-    $$
-
-    \medskip
-    Из этого следует, что
-    $$
-    \int\limits_0^t \|f(s, x(s, \{p_0\}), (p_0 + \Delta p)(s)) - f(s, x(s, \{p_0\}), p_0(s))\|ds \leq t \cdot L \cdot \|\Delta p\| \leq
-    $$
-    \begin{equation}
-    \label{seventeenth_eq}
-    \leq T \cdot L \cdot \|\Delta p\|, \mbox{ } t \in [0,T].
-    \end{equation}
-
-    \medskip
-    Подставим оценки (\ref{sixteenth_eq}) и (\ref{seventeenth_eq}) в (\ref{fifteenth_eq}):
-
-    $$
-    |\Delta x(t)| \leq L \cdot \int\limits_0^t |\Delta x(s)|ds + T \cdot L \cdot \|\Delta p\|.
-    $$
-
-    Применяя к данному неравенству лемму Гронуолла, получаем следующую оценку:
-    \begin{equation}
-    \label{eighteenth_eq}
-    |\Delta x(t)| \leq L \cdot \|\Delta p\| \cdot T \cdot e^{Lt}.
-    \end{equation}
-
-    \medskip
-    Заметим, что $e^{Lt} \leq e^{LT}$.
-    Обозначим $c_1 = L \cdot T \cdot e^{LT}$ и подставим $c_1$ в (\ref{eighteenth_eq}):
-    $$
-    |\Delta x(t) | \leq c_1 \cdot \|\Delta p\|.
-    $$
-
-    \medskip
-    Отсюда следует, что существует такое $\delta > 0$, что $\|\Delta x\| \leq c_1 \cdot \|\Delta p\|$ при $\|\Delta p\| < \delta$.
-
-    \medskip
-    \medskip
-    \medskip
-    \medskip
-
-    Таким образом, если величина $\|\Delta p\|$ достаточно мала, то
-    $$
-    \Delta x(t) = \int\limits_0^t \frac{\partial f}{\partial x}(s, x(s, \{p_0\}),p_0(s)) \cdot \Delta x(s)ds +
-    $$
-    \begin{equation}
-    \label{nineteenth_eq}
-    + \int\limits_0^t \frac{\partial f}{\partial p}(s, x(s, \{p_0\}),p_0(s)) \cdot \Delta p(s)ds + \int\limits_0^t \alpha(s, \Delta x(s),\Delta p(s)) ds,
-    \end{equation}
-
-    и выполнено соотношение (\ref{fourteenth_equ}).
-
-    Лемма 1 доказана.
-
-    Введем обозначение:
-
-    $$
-    \Gamma (t) = \int\limits_0^t \alpha(s, \Delta x(s),\Delta p(s))ds.
-    $$
-
-    Из Леммы 1 следует, что $\Delta x(t)$ может быть представлено в виде (\ref{eighth_eq}), и при этом выполнено соотношение (\ref{eighth_equ}).
-    \medskip
-
-    Фиксируем вектор $\xi_0 \in \mathbb{R}^n$ и обозначим через $C_{\xi_0}^1[0,T]$ множество таких функций $\xi(t) \in C^1[0,T]$, что $\xi(0) = \xi_0$.
-
-    Рассмотрим оператор
-    $$
-    \Phi : C_{\xi_0}^1[0,T] \rightarrow C_{\xi_0}^1[0,T],
-    $$
-    заданный формулой
-
-    \begin{equation}
-    \label{twentyfirst_eq}
-    \Phi(\xi) = \xi(t) - \int\limits_0^t \frac{\partial f}{\partial x} (s, x(s, \{p_0\}), p_0(s)) \xi(s)ds,
-    \end{equation}
-    где $t \in [0, T]$.
-
-    В нашем случае роль функции $\xi(t)$ будет играть $\Delta x(t)$; эта функция принадлежит классу $C^1[0,T]$ как разность решений.
-
-    \medskip
-    \textbf{Лемма 2.} При любом $\xi_0$ оператор $\Phi$ обратим.
-
-    \medskip
-    \textbf{Доказательство.} Рассмотрим уравнение
-
-    \begin{equation}
-    \label{twentysecond_eq}
-    \Phi(\xi) = \eta,
-    \end{equation}
-    где $\eta$ -- произвольная функция, принадлежащая классу $C_{\xi_0}^1[0,T]$.
-
-    Покажем, что такое уравнение единственным образом разрешимо относительно $\xi$ для любого $\eta$. Это и докажет существование оператора $\Phi^{-1}$.
-
-    Продифференцируем равенство (\ref{twentysecond_eq}) по $t$:
-
-    $$
-    \dot \xi - X(t) \cdot \xi = \dot \eta,
-    $$
-    где
-    $$
-    X(t) = \frac{\partial f}{\partial x} (t, x(t, \{p_0\}), p_0(t)).
-    $$
-
-    Таким образом,
-    \begin{equation}
-    \label{twentysecond_equ}
-    \dot \xi = X(t) \cdot \xi + \dot \eta.
-    \end{equation}
-
-    Полученная система является линейной неоднородной системой дифференциальных уравнений.
-    Соответствующая ей однородная система дифференциальных уравнений имеет вид:
-
-    $$
-    \dot \xi = X(t) \cdot \xi.
-    $$
-
-    По формуле Лагранжа, учитывая введенное в начале обозначение, решение данной системы с начальными данными $(0, \xi_0)$ имеет вид:
-
-    $$
-    \xi(t) = Y(t) \cdot (\xi_0 + \int_0^t Y^{-1} (s) \dot \eta (s) ds).
-    $$
-
-    Так как функция $\dot \eta$ непрерывна, то из теоремы о единственности решения для линейных дифференциальных уравнений следует единственность функции $\xi(t)$, для которой выполнено равенство (\ref{twentysecond_equ}), а тем самым и единственность элемента $\xi \in C_{\xi_0}^1[0,1]$, удовлетворяющего равенству (\ref{twentysecond_eq}).
-
-    Таким образом,
-
-    $$
-    \Phi^{-1}(\eta) = Y(t) \cdot (\xi_0 + \int_0^t Y^{-1} (s) \dot \eta (s) ds).
-    $$
-
-    В дальнейшем мы будем применять обратный функционал $\Phi^{-1}$ при $\xi_0 = 0$. Он задается формулой
-
-    \begin{equation}
-    \label{twentythird_eq}
-    \Phi^{-1}(\eta) = Y(t) \cdot \int_0^t Y^{-1} (s) \dot \eta (s) ds.
-    \end{equation}
-
-    Из формулы (\ref{twentythird_eq}) следует, что существует такое $N>0$, что
-    \begin{equation}
-    \label{twentyfourth_eq}
-    \|\Phi^{-1}(\eta)\| \leq N \cdot \left\|\frac{d\eta}{dt}\right\|.
-    \end{equation}
-
-    Рассмотрим $\xi(t) = \Delta x(t)$ и запишем формулу (\ref{eighth_eq}) в виде
-
-    $$
-    \Phi(\xi) = \xi(t) - \int\limits_0^t \frac{\partial f}{\partial x} (s, x(s, \{p_0\}), p_0(s)) \xi(s)ds =
-    $$
-    \begin{equation}
-    \label{twentyfifth_eq}
-    = \int_0^t \frac{\partial f}{\partial p}(s, x(s, \{p_0\}),(p_0)(s)) \cdot \Delta p(s)ds + \Gamma(t).
-    \end{equation}
-
-    Применим к равенству (\ref{twentyfifth_eq}) оператор $\Phi^{-1}$ (напомним, что мы рассматриваем $\xi_0 = 0$):
-
-    \begin{equation}
-    \label{twentysixth_eq}
-    \xi(t) = Y(t)\cdot \int\limits_0^t Y^{-1} (s) \cdot \frac{\partial f}{\partial p} (s, x(s, \{p_0\}), p_0(s))\Delta p(s)ds + \Phi^{-1}(\Gamma)(t).
-    \end{equation}
-
-    Подставим в (\ref{twentysixth_eq}) $t=T$ (учитывая вид функционала $\Psi$, введенного в (\ref{third_eq})):
-
-    \begin{equation}
-    \label{twentyseventh_eq}
-    \xi(T) = Y(T)\cdot \Psi(\Delta p) + G(\Delta p),
-    \end{equation}
-    где
-    $$
-    G(\Delta p) = \Phi^{-1}(\Gamma)(T).
-    $$
-
-    Из соотношения (\ref{eighth_equ}) и оценки (\ref{twentyfourth_eq}) следует, что
-
-    \begin{equation}
-    \label{twentyeighth_eq}
-    \frac{|G(\Delta p)|}{\|\Delta p\|} \rightarrow 0 \mbox{ при } \|\Delta p\| \rightarrow 0.
-    \end{equation}
-
-    Перейдем к доказательству основной теоремы.
-
-    Предположим противное: пусть существует такая последовательность $p_k \in \EuScript P$, что $p_k \not\equiv p_0$, $\|p_k - p_0\|\rightarrow 0$ при $k \rightarrow \infty$ и $x(T, \{p_0\}) = x(T, \{p_k\})$.
-
-    Так как $\|p_k - p_0\| \rightarrow 0$, то приведенные выше рассуждения применимы к функциям
-
-    $$
-    \Delta_k x(t) = x(t, \{p_k\}) - x(t, \{p_0\})
-    $$
-    при достаточно больших $k$.
-
-    Тогда при достаточно больших $k$ выполняются равенства:
-
-    \begin{equation}
-    \label{twentyninth_eq}
-    0 = Y(T)\cdot \Psi(\Delta p_k) + G(\Delta p_k),
-    \end{equation}
-    где $\Delta p_k = p_k(t) - p_0(t)$.
-
-    Разделим равенство (\ref{twentyninth_eq}) на $\|\Delta p_k\|$:
-
-    \begin{equation}
-    \label{thirtyth_eq}
-    0 = Y(T)\cdot \Psi\left(\frac{\Delta p_k}{\|\Delta p_k\|}\right) + \frac{G(\Delta p_k)}{\|\Delta p_k\|}
-    \end{equation}
-
-    По предположению, семейство $\EuScript P$ нормированно отделено от $\EuScript K$ в $p_0$, поэтому существует такая подпоследовательность $p_{k_l}$ последовательности $p_k$, что
-
-    \begin{equation}
-    \label{thirtyfirst_eq}
-    \frac{\Delta p_{k_l}(t)}{\|\Delta p_{k_l}\|}\rightrightarrows r \mbox{ при } k_l\rightarrow \infty, t \in [0,T],
-    \end{equation}
-    и $r \not\in \EuScript K$.
-
-    Так как функционал $\Psi$ непрерывен, из (\ref{thirtyfirst_eq}) следует, что
-    \begin{equation}
-    \label{thirtysecond_eq}
-    \Psi\left(\frac{\Delta p_{k_l}(t)}{\|\Delta p_{k_l}\|}\right)\rightarrow\Psi(r) \neq 0 \mbox{ при } k_l\rightarrow \infty, t \in [0,T].
-    \end{equation}
-
-    Матрица $Y(T)$ невырождена (как фундаментальная матрица), поэтому
-
-    \begin{equation}
-    \label{thirtythird_eq}
-    Y(T) \cdot \Psi(r) \neq 0.
-    \end{equation}
-
-    С другой стороны, из оценки (\ref{twentyeighth_eq}) следует, что
-    \begin{equation}
-    \label{thirtyfourth_eq}
-    \frac{|G(\Delta p_{k_l})|}{\|\Delta p_{k_l}\|} \rightarrow 0 \mbox{ при } k_l \rightarrow \infty.
-    \end{equation}
-
-    Из (\ref{thirtyth_eq}) и (\ref{thirtyfourth_eq}) следует соотношение
-    $$
-    0 = Y(T)\cdot\Psi(r) + 0,
-    $$
-    противоречащее соотношению (\ref{thirtythird_eq}).
-
-    Теорема доказана.
-\medskip
-
-\medskip
-\medskip
-\medskip
-\medskip
-\medskip
-\medskip
-\medskip
-\medskip
-\medskip
-\medskip
-\medskip
-\medskip
-\medskip
-\medskip
-\medskip
-\medskip
-\medskip
-
-
-
-    \medskip
-    \medskip
-    \medskip
-    \medskip
-    \medskip
-    Список литературы:
-
-    1. \emph{Бодунов Н.А.} Введение в теорию локальной параметрической идентифицируемости // Изд-во С-Петерб. ун-та, 2006
+﻿dx
+dt
+6
+.
+. . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . .
+. . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . .
+. . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . .
+.
+. . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . . . .  
+- . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . .
+. . . . . . . . . . . . . .
+. . . . . . . . . . . . .
+. . . . . . . . . . . . .
+. . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . .
+.
+. . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . .
+.
+. . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . .
+. . . . . . . . . . .
+. . . . . . . . . . .
+. . . . . . . . . . . . .
+. . . . . . . . . . . . . .
+?
+˜¨  ¯—¯˝ ¨ ¸ ˝ ¯  —  ´˝¯˝¨ 
+¨
+ˇ—˛ ¯     ˇ—  ´¸¯˝¨ 
+N 2, 2009
+ º Œ     ßØ      º,
+  ª. N ˇ2375    07.03.97
+ISSN 1817-2172
+
+http://www.math.spbu.ru/di journal/
+e-mail: jo di @mail.ru
+˝. . `      , ˆ .¨. ´ º  æ  
+¸˛˚ ¸ ˝   ¨˜¯˝ ¨ ¨ ¨— ¯ ˛     ¨  ¯    ˇ¯—¯ ¯˝˝   ˇ —   ¯ —˛ 
+— ææ    Ł      º ,   Łæß       æŁæ    Ø  ÆßŒ      ßı  Ł       Ł-
+ º  ßı        ŁØ:
+_ x =f(t;x;p); (1)
+ª  x2R
+n
+, p2R
+m
+.
+ ß       º ª   ,       Œ   -   Œ Ł  f , æ   ø          Ø   æ Ł æŁ-
+æ   ß (1),       ß       æ   Œ    æ Ł         ßı(t;x;p) Ł       ß   
+ Ł       Ł                 ß  (x;p)    Æº æ ŁD    æ    æ   R
+1+n+m
+.
+´ Ł       Ø   æ     Œ       Ł         p   º   æ        ß   Ø    Œ-
+ Ł Ø   t,   Ł   º   ø Ø   Œ        Œº ææ     Œ ŁØ P,       º   ßı   
+ ŁŒæŁ                 Œ  [0;T ]. ´       Æ       Ł fpg = fp(t) : t 2
+[0;T ]g.
+ ŁŒæŁ       Œ    x
+0
+2 R
+n
+Ł  Æ     Ł       x(t;fpg)   ł  Ł       Ł
+˚ łŁ æ     º  ß Ł     ß Ł (0;x
+0
+)  º  æŁæ   ß (1),   Œ     Ø    ŁŒæŁ  -
+            -   Œ Ł  p2P.
+ ß   Ł ß    ,           Ł  x(t
+0
+;fpg)   Ł t
+0
+2 [0;T ]    ŁæŁ  ºŁł    
+      ŁØp(t)   Ł t2 [0;t
+0
+].
+˝ ł   æ             º    Ł    Œº ææ P   Œ   :  º  º Æ Ø    Œ ŁŁ
+p2P   ł  Ł x(t;fpg)   Ł æ       Ł       º        æ           Œ [0;T ].˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 2, 2009
+˜º  º Æ Ø    Œ ŁŁ q(t), t2 [0;T ],  ß  Æ        
+kqk = sup
+t2[0;T]
+jq(t)j:
+˛     º  Ł  1. ˇ æ   p
+1
+, p
+2
+2 P. `      ª    Ł  ,          (p
+1
+;p
+2
+)
+   ºŁ Ł        Æº    Ł    ł  Ł  x(t;fpg)      Œ T ,  æºŁ
+x(T;fp
+1
+g)6=x(T;fp
+2
+g):
+´   º   Øł  ,  º  Œ   Œ æ Ł Æ      ª    Ł      æ   "    (p
+1
+;p
+2
+)    -
+ºŁ Ł  ". ˛    Ł ,       Œ    x
+0
+      º ª   æ   ŁŒæŁ      ß   º   æ ı
+  ææ    Ł    ßı   ł  ŁØx(t;fpg).
+˛     º  Ł  2.  Łæ     (1)    ß    æ  º Œ º    Ł    Ł Ł Ł     Ø
+  Ł p
+0
+2P,  æºŁ æ ø æ        Œ   > 0,      æºŁp2P Ł 0<kp
+0
+ pk< ,
+        (p
+0
+;p)    ºŁ Ł  .
+ˇ æ     Œ       æ    º Œ º   Ø Ł    Ł Ł Ł     æ Ł           Æ Ł   -
+ Ł Ł Ł     æ Ł   ł  Ł       Æº    Ł      Œ    ı         Œ  Æßº  Łæ-
+æº              ª   ŁŁ [1]. ¨ææº      Ł        Łº æ        æº    , Œ ª  
+        -   Œ Ł  p     æ        ŁºŁ Œ æ    -  æ                Œ  [0;T ].
+˛æ    ß    ºŁ Ł        Ø   æ     ŒŁ      Ł      æ     ŒŁ      Ł   [1]
+  º   æ    ,      ß          º ª      æ    æ    ŁºŁ Œ æ        æ    æ   
+        -   Œ ŁŁ p.
+ˇ æ  K -   Œ    ßØ Œº ææ    Œ ŁØ,       ßı    [0;T ].
+˛     º  Ł  3.  ŁŒæŁ     p
+0
+2 P. `      ª    Ł  ,     æ   Øæ   P
+    Ł            º      K  p
+0
+,  æºŁ Ł  º Æ Ø   æº       º   æ Ł  º    -
+   p
+k
+2P,  Æº    ø Ø æ  Øæ    Łkp
+k
+ p
+0
+k > 0 Łkp
+k
+ p
+0
+k! 0;k!1,
+       ßÆ       Œ        æº       º   æ   p
+k
+l
+,       æº       º   æ  
+p
+k
+l
+ p
+0
+kp
+k
+l
+ p
+0
+k
+           æı  Ł æ     [0;T ] Œ   Œ     Ø    Œ ŁŁ,      Ł   º   -
+ø Ø Œº ææ K.
+ ŁŒæŁ     p
+0
+2P.
+ˇ     º  Ł ,    
+f(t;x(t;fp
+0
+g);p
+0
+(t)) :t2 [0;T ]g D: (2)
+ˇ æ  Y (t) -           º         Ł   ºŁ  Ø  Ø æŁæ   ß
+ º Œ     ßØ      º. h ttp://www.nev a.ru/journal, h ttp://www.math.spbu.ru/di journal/ 18˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 2, 2009
+_ y =
+@f(t;x(t;fp
+0
+g);p
+0
+)
+@x
+y; (3)
+     º       ø       º       æº  Ł 
+Y (0) =E;
+ª  E -   Ł Ł         Ł          n n.
+— ææ    Ł  ºŁ  Ø ßØ    Œ Ł   º
+	 :P!R
+n
+;
+      ßØ       º Ø
+	(p) =
+T
+Z
+0
+Y
+ 1
+(s) 
+@f
+@p
+(s;x(s;fp
+0
+g);p
+0
+(s))p(s)ds; (4)
+Ł  Æ     Ł       K         Œ Ł   º  	.
+˛æ     Ø      º     æ    Ł   Œ  .
+        . ¯æºŁ æ   Øæ   P     Ł            º      K  p
+0
+,    æŁæ    
+(1) º Œ º    Ł    Ł Ł Ł        Ł         -   Œ ŁŁ p
+0
+.
+˜ Œ     º æ   .
+˛Æ     Ł    º   Ł      Ł           p
+0
+      p:
+p(t) =p
+0
+(t) +  p(t):
+   Œ           Æ       Ł :
+ x(t) =x(t;fpg) x(t;fp
+0
+g):
+˜ Œ    ,      º   x(T ) Ł       æ   æº    ø       æ   º  Ł :
+ x(T ) =Y (T )  	( p) +G( p); (5)
+ª  
+jG( p)j
+k pk
+! 0   Łk pk! 0: (6)
+ º Œ     ßØ      º. h ttp://www.nev a.ru/journal, h ttp://www.math.spbu.ru/di journal/ 19˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 2, 2009
+ˇ  æ   Ł  x(t;fp
+0
+g)   (1) Ł    Ł   ª Ł          º                Œ 
+[0;t]:
+x(t;fp
+0
+g) =x
+0
++
+t
+Z
+0
+f(s;x(s;fp
+0
+g);p
+0
+(s))ds: (7)
+   º ªŁ   ,            æ   
+x(t;fpg) =x
+0
++
+t
+Z
+0
+f(s;x(s;fpg);p(s))ds:
+ˇ    Łł            æ   ,    æ   Ł p
+0
+(t) +  p(t)    æ  p(t):
+x(t;fp
+0
++  pg) =x
+0
++
+t
+Z
+0
+f(s;x(s;fp
+0
++  pg); (p
+0
++  p)(s))ds: (8)
+´ß Ł    Ł       æ    (8)      æ    (7),   º           æ   
+ x(t) =
+t
+Z
+0
+[f(s;x(s;fp
+0
++  pg); (p
+0
++  p)(s)) f(s;x(s;fp
+0
+g);p
+0
+(s))]ds: (9)
+ˇ Œ    ,      º   x(t) Ł       æ       æ   º  Ł 
+ x(t) =
+t
+Z
+0
+@f
+@x
+(s;x(s;fp
+0
+g);p
+0
+(s))   x(s)ds+
++
+t
+Z
+0
+@f
+@p
+(s;x(s;fp
+0
+g);p
+0
+(s))   p(s)ds +  (t) (10)
+ º  º Æ ª  t2 [0;T ],   Ł   
+1
+k pk
+ 
+ 
+ 
+ 
+ 
+d 
+dt
+(t)
+ 
+ 
+ 
+ 
+  0   Łk pk! 0; t2 [0;T ]: (11)
+— æ Łł      ß   ª  º        Œ Ł  Ł       Ø   æ Ł      æ    (9)  
+         ŁÆºŁ   ŁŁ:
+ º Œ     ßØ      º. h ttp://www.nev a.ru/journal, h ttp://www.math.spbu.ru/di journal/ 20˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 2, 2009
+f(s;x(s;fp
+0
+g) +  x(s); (p
+0
++  p)(s)) f(s;x(s;fp
+0
+g);p
+0
+(s)) =
+=
+@f
+@x
+(s;x(s;fp
+0
+g);p
+0
+(s))   x(s)+
++
+@f
+@p
+(s;x(s;fp
+0
+g);p
+0
+(s))   p(s) +ff(s;  x(s);  p(s)): (12)
+¨        ºß (12) æº      ,    
+ff(s;  x(s);  p(s)) =f(s;x(s;fp
+0
+g) +  x(s); (p
+0
++  p)(s)) 
+ f(s;x(s;fp
+0
+g);p
+0
+(s)) 
+@f
+@x
+(s;x(s;fp
+0
+g);p
+0
+(s))   x(s) 
+ 
+@f
+@p
+(s;x(s;fp
+0
+g);p
+0
+(s))   p(s):
+ˇ  æ   Ł       º     (12)        æ    (9):
+ x(t) =
+t
+Z
+0
+@f
+@x
+(s;x(s;fp
+0
+g);p
+0
+(s))   x(s)ds+
++
+t
+Z
+0
+@f
+@p
+(s;x(s;fp
+0
+g);p
+0
+(s))   p(s)ds +
+t
+Z
+0
+ff(s;  x(s);  p(s))ds: (13)
+˛   Ł  ff(s;  x(s);  p(s)):
+jff(s;  x(s);  p(s))j =jf(s;x(s;fp
+0
+g) +  x(s); (p
+0
++  p)(s)) 
+ f(s;x(s;fp
+0
+g);p
+0
+(s)) 
+@f
+@x
+(s;x(s;fp
+0
+g);p
+0
+(s))   x(s) 
+ 
+@f
+@p
+(s;x(s;fp
+0
+g);p
+0
+(s))   p(s)j 
+ jf(s;x(s;fp
+0
+g) +  x(s); (p
+0
++  p)(s)) f(s;x(s;fp
+0
+g); (p
+0
++  p)(s)) 
+ 
+@f
+@x
+(s;x(s;fp
+0
+g); (p
+0
++  p)(s))   x(s)j+
++
+ 
+ 
+ 
+ 
+ 
+@f
+@x
+(s;x(s;fp
+0
+g); (p
+0
++  p)(s)) 
+@f
+@x
+(s;x(s;fp
+0
+g);p
+0
+(s))
+ 
+   x(s)
+ 
+ 
+ 
+ 
++
+ º Œ     ßØ      º. h ttp://www.nev a.ru/journal, h ttp://www.math.spbu.ru/di journal/ 21˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 2, 2009
++jf(s;x(s;fp
+0
+g); (p
+0
++  p)(s)) f(s;x(s;fp
+0
+g);p
+0
+(s)) 
+ 
+@f
+@p
+(s;x(s;fp
+0
+g);p
+0
+(s))   p(s)j: (14)
+´       Æ       Ł :
+g( ) =f(s;x(s;fp
+0
+g) +    x(s); (p
+0
++  p)(s));  2 [0; 1]:
+                 ª   Æ       Ł      Æ               ß     Ł       -
+  Ø   æ Ł       ºß (14).
+´          æ   
+f(s;x(s;fp
+0
+g) +  x(s); (p
+0
++  p)(s)) f(s;x(s;fp
+0
+g); (p
+0
++  p)(s)) =
+=g(1) g(0) =
+Z
+1
+0
+@g
+@ 
+d  =
+Z
+1
+0
+@f
+@x
+(s;x(s;fp
+0
+g) +  x(s); (p
+0
++  p)(s)) 
+  x(s)d :
+˙    Ł    Œ  ,    
+@f
+@x
+(s;x(s;fp
+0
+g); (p
+0
++  p)(s))   x(s) =
+=
+Z
+1
+0
+ 
+@f
+@x
+(s;x(s;fp
+0
+g); (p
+0
++  p)(s))   x(s)
+ 
+d :
+   ŒŁ   Æ     ,
+f(s;x(s;fp
+0
+g) +  x(s); (p
+0
++  p)(s)) f(s;x(s;fp
+0
+g); (p
+0
++  p)(s)) 
+ 
+@f
+@x
+(s;x(s;fp
+0
+g); (p
+0
++  p)(s))   x(s) =
+=
+Z
+1
+0
+[
+@f
+@x
+(s;x(s;fp
+0
+g) +  x(s); (p
+0
++  p)(s)) 
+ 
+@f
+@x
+(s;x(s;fp
+0
+g); (p
+0
++  p)(s))]   x(s)d :
+— ææ    Ł  Œ    Œ             æ    M
+a
+   æ    æ   R R
+n
+ R
+m
+,
+           Œ:
+M
+a
+=f(t;x;p) :t2 [0;T ];jx x(t;fp
+0
+g)j a;jp p
+0
+(t)j ag;
+ º Œ     ßØ      º. h ttp://www.nev a.ru/journal, h ttp://www.math.spbu.ru/di journal/ 22˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 2, 2009
+ª  a> 0. ¨  (2) æº      ,    a        ßÆ     æ  º    ºß ,    Æß  ß  º-
+  º æ   Œº    Ł  M
+a
+2D.
+   Œ Œ Œ f       ß     Ł       Ł         x,   
+@f
+@x
+                -
+ ß       Œ    Œ  M
+a
+.    ª    º  º Æ ª   > 0 æ ø æ        Œ   2 (0;a),
+     æºŁj x(s)j;j p(s)j   ,   
+j
+@f
+@x
+(s;x(s;fp
+0
+g) +  x(s); (p
+0
++  p)(s)) 
+@f
+@x
+(s;x(s;fp
+0
+g); (p
+0
++  p)(s))j< 
+ º  º Æßı  2 [0; 1] Ł s2 [0;T ].
+   Œ Œ Œ p            æ    Ł æ  Œ p
+0
+  Łk pk! 0,                
+      ß   Ø    ŁæŁ  æ Ł   ł  ŁØ        º  ßı     ßı Ł              -
+ł  Ł x(t;fp
+0
++  pg)            æ    Ł æ  Œx(t;fp
+0
+g)    [0;T ].
+ˇ       æ ø æ        Œ   
+1
+> 0,      æºŁk pk <  
+1
+,     ß  º    æ 
+       æ   
+jx(t;fp
+0
++  pg) x(t;fp
+0
+g)j     Ł t2 [0;T ];
+    æ      ŒŁ(t;x(t;fp
+0
++ pg); (p
+0
++ p)(t)) Ł (t;x(t;p
+0
+); (p
+0
++ p)(t)) º    
+       æ    M
+a
+Łj x(s)j  ;s2 [0;T ].
+   ª  
+
+
+
+
+@f
+@x
+(s;x(s;fp
+0
+g) +  x(s); (p
+0
++  p)(s)) 
+@f
+@x
+(s;x(s;fp
+0
+g); (p
+0
++  p)(s))
+
+
+
+
+ 
+ j x(s)j<  j x(s)j:
+¨     ª  æº      ,      æºŁk pk  
+1
+,   
+jf(s;x(s;fp
+0
+g) +  x(s); (p
+0
++  p)(s)) f(s;x(s;fp
+0
+g); (p
+0
++  p)(s)) 
+ 
+@f
+@x
+(s;x(s;fp
+0
+g); (p
+0
++  p)(s))   x(s)j   k xk: (15)
+           º ªŁ        Ł          ß     Ł         Ø   æ Ł  ß     Ł 
+(14).    Œ Œ Œ
+@f
+@x
+                 ß       Œ    Œ  M
+a
+,     º  º Æ ª   > 0
+æ ø æ        Œ   2 (0;a),      æºŁk pk   ,   
+
+
+
+
+@f
+@x
+(s;x(s;fp
+0
+g); (p
+0
++  p)(s)) 
+@f
+@x
+(s;x(s;fp
+0
+g);p
+0
+(s))
+
+
+
+
+< :
+ º Œ     ßØ      º. h ttp://www.nev a.ru/journal, h ttp://www.math.spbu.ru/di journal/ 23˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 2, 2009
+¨     ª  æº      ,      æºŁk pk   ,              Œ :
+ 
+ 
+ 
+ 
+ 
+@f
+@x
+(s;x(s;fp
+0
+g); (p
+0
++  p)(s)) 
+@f
+@x
+(s;x(s;fp
+0
+g);p
+0
+(s))
+ 
+   x(s)
+ 
+ 
+ 
+ 
+   k xk:
+(16)
+   º ªŁ  ß   Æ          Ł  Ł        æº ª             Ø   æ Ł  ß  -
+   Ł  (14).
+´       Æ       Ł :
+h( ) =f(s;x(s;fp
+0
+g); (p
+0
++    p)(s));  2 [0; 1]:
+                 ª   Æ       Ł      Æ               ß     Ł       -
+  Ø   æ Ł       ºß (14).
+´          æ   
+f(s;x(s;fp
+0
+g); (p
+0
++  p)(s)) f(s;x(s;fp
+0
+g);p
+0
+(s)) =
+=h(1) h(0) =
+Z
+1
+0
+@h
+@ 
+d  =
+Z
+1
+0
+@f
+@p
+(s;x(s;fp
+0
+g); (p
+0
++    p)(s)) 
+  p(s)d :
+˙    Ł    Œ  ,    
+@f
+@p
+(s;x(s;fp
+0
+g);p
+0
+(s))   p(s) =
+Z
+1
+0
+@f
+@p
+(s;x(s;fp
+0
+g);p
+0
+(s))   p(s)d :
+   ŒŁ   Æ     ,
+f(s;x(s;fp
+0
+g); (p
+0
++  p)(s)) f(s;x(s;fp
+0
+g);p
+0
+(s)) 
+ 
+@f
+@p
+(s;x(s;fp
+0
+g);p
+0
+(s))   p(s) =
+=
+Z
+1
+0
+@f
+@p
+(s;x(s;fp
+0
+g); (p
+0
++    p)(s))   p(s)d  
+ 
+Z
+1
+0
+@f
+@p
+(s;x(s;fp
+0
+g);p
+0
+(s))   p(s)d  =
+=
+Z
+1
+0
+  
+@f
+@p
+(s;x(s;fp
+0
+g); (p
+0
++    p)(s)) 
+@f
+@p
+(s;x(s;fp
+0
+g);p
+0
+(s))
+ 
+   p(s)
+ 
+ds:
+ º Œ     ßØ      º. h ttp://www.nev a.ru/journal, h ttp://www.math.spbu.ru/di journal/ 24˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 2, 2009
+   Œ Œ Œ f       ß     Ł       Ł     ,   
+@f
+@p
+                 ß   
+   Œ    Œ  M
+a
+.    ª    º  º Æ ª   > 0 æ ø æ        Œ   2 (0;a),      æºŁ
+j p(s)j   ,   
+ 
+ 
+ 
+ 
+@f
+@p
+(s;x(s;fp
+0
+g); (p
+0
++    p)(s)) 
+@f
+@p
+(s;x(s;fp
+0
+g);p
+0
+(s))
+ 
+ 
+ 
+ 
+< :
+¨     ª  æº      ,      æºŁk pk   ,              Œ :
+ 
+ 
+ 
+ 
+ 
+@f
+@p
+(s;x(s;fp
+0
+g);p
+0
++    p) 
+@f
+@p
+(s;x(s;fp
+0
+g);p
+0
+)
+  
+ 
+ 
+ 
+ k pk   k pk: (17)
+   ŒŁ   Æ     , Ł  æ     ł  ŁØ (15) - (17) æº      ,      º  º Æ ª  > 0
+æ ø æ        Œ   > 0,      æºŁk pk<  ,   
+jff(s;  x(s);  p(s))j   k xk +  k xk +  k pk;
+             ,    
+jff(s;  x(s);  p(s))j
+k pk +k xk
+  0   Łk pk +k xk! 0;s2 [0;T ]:
+¸     1. ´     æ     ł  Ł 
+jff(s;  x(s);  p(s))j
+k pk
+  0   Łk pk! 0;s2 [0;T ]: (18)
+˜ Œ     º æ   .
+˛   Ł  æ   ı     Œ Ł , æ   ø     º   Ø   æ Ł      æ    (9):
+j x(t)j 
+t
+Z
+0
+jf(s;x(s;fp
+0
++  pg); (p
+0
++  p)(s)) 
+ f(s;x(s;fp
+0
+g);p
+0
+(s))jds =
+=
+t
+Z
+0
+jf(s;x(s;fp
+0
++  pg); (p
+0
++  p)(s)) f(s;x(s;fp
+0
+g); (p
+0
++  p)(s))+
+ º Œ     ßØ      º. h ttp://www.nev a.ru/journal, h ttp://www.math.spbu.ru/di journal/ 25˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 2, 2009
++f(s;x(s;fp
+0
+g); (p
+0
++  p)(s)) f(s;x(s;fp
+0
+g);p
+0
+(s))jds 
+ 
+t
+Z
+0
+jf(s;x(s;fp
+0
++  pg); (p
+0
++  p)(s)) f(s;x(s;fp
+0
+g); (p
+0
++  p)(s))jds+
++
+t
+Z
+0
+jf(s;x(s;fp
+0
+g); (p
+0
++  p)(s)) f(s;x(s;fp
+0
+g);p
+0
+(s))jds: (19)
+   Œ Œ Œ f       ß     Ł       Ł         x Ł p,        ºŁ łŁ       
+  Ł    ª                æ    M
+a
+. ˛Æ     Ł  æ      æ    ø   Œ  æ     
+¸Ł łŁ        L.
+`      æ Ł    , Œ Œ Ł  ßł ,       ºŁ Ł  k pk æ  º    º ,      æ    -
+ª     ß   ææ    Ł    ßı    Œ ŁØ º       M
+a
+.
+   ª  
+jf(s;x(s;fp
+0
++  pg); (p
+0
++  p)(s)) f(s;x(s;fp
+0
+g); (p
+0
++  p)(s))j 
+ L k xk: (20)
+¨    ª ,    f ºŁ łŁ     Ł               ª               æ   M
+a
+,
+æº      ,      ß  º    æ         æ   
+jf(s;x(s;fp
+0
+g); (p
+0
++  p)(s)) f(s;x(s;fp
+0
+g);p
+0
+(s))j L k pk:
+¨     ª  æº      ,    
+t
+Z
+0
+kf(s;x(s;fp
+0
+g); (p
+0
++  p)(s)) f(s;x(s;fp
+0
+g);p
+0
+(s))kds t L k pk 
+ T L k pk; t2 [0;T ]: (21)
+ˇ  æ   Ł      ŒŁ (20) Ł (21)   (19):
+j x(t)j L 
+t
+Z
+0
+j x(s)jds +T L k pk:
+ º Œ     ßØ      º. h ttp://www.nev a.ru/journal, h ttp://www.math.spbu.ru/di journal/ 26˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 2, 2009
+ˇ Ł      Œ                æ    º     ˆ     ºº ,   º      æº    -
+ø       Œ :
+j x(t)j L k pk T e
+Lt
+: (22)
+˙    Ł ,     e
+Lt
+ e
+LT
+. ˛Æ     Ł  c
+1
+=L T e
+LT
+Ł    æ   Ł  c
+1
+  (22):
+j x(t)j c
+1
+ k pk:
+˛ æ    æº      ,     æ ø æ        Œ    > 0,    k xk  c
+1
+ k pk   Ł
+k pk<  .
+   ŒŁ   Æ     ,  æºŁ   ºŁ Ł  k pk   æ          º ,   
+ x(t) =
+t
+Z
+0
+@f
+@x
+(s;x(s;fp
+0
+g);p
+0
+(s))   x(s)ds+
++
+t
+Z
+0
+@f
+@p
+(s;x(s;fp
+0
+g);p
+0
+(s))   p(s)ds +
+t
+Z
+0
+ff(s;  x(s);  p(s))ds; (23)
+Ł  ß  º     æ     ł  Ł  (18).
+¸     1   Œ     .
+´       Æ       Ł :
+ (t) =
+t
+Z
+0
+ff(s;  x(s);  p(s))ds:
+¨  ¸   ß 1 æº      ,      x(t)       Æß       æ   º       Ł   (10), Ł
+  Ł       ß  º     æ     ł  Ł  (11).
+ ŁŒæŁ       Œ     
+0
+2R
+n
+Ł  Æ     Ł       C
+1
+ 
+0
+[0;T ]      æ      ŒŁı
+   Œ ŁØ  (t)2C
+1
+[0;T ],     (0) = 
+0
+.
+— ææ    Ł          
+  :C
+1
+ 
+0
+[0;T ]!C
+1
+ 
+0
+[0;T ];
+      ßØ       º Ø
+ º Œ     ßØ      º. h ttp://www.nev a.ru/journal, h ttp://www.math.spbu.ru/di journal/ 27˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 2, 2009
+ ( ) = (t) 
+t
+Z
+0
+@f
+@x
+(s;x(s;fp
+0
+g);p
+0
+(s)) (s)ds; (24)
+ª  t2 [0;T ].
+´   ł   æº       º     Œ ŁŁ  (t) Æ      Łª     x(t);        Œ Ł    Ł-
+   º  Ł  Œº ææ  C
+1
+[0;T ] Œ Œ      æ     ł  ŁØ.
+¸     2. ˇ Ł º Æ    
+0
+            Æ   Ł .
+˜ Œ     º æ   . — ææ    Ł         Ł 
+ ( ) = ; (25)
+ª         Ł   º        Œ Ł ,   Ł   º   ø   Œº ææ  C
+1
+ 
+0
+[0;T ].
+ˇ Œ    ,       Œ          Ł    Ł æ     ß   Æ           łŁ       -
+æŁ  º      º  º Æ ª    .     Ł   Œ     æ ø æ      Ł            
+ 1
+.
+ˇ   Ł       Ł          æ    (25)    t:
+_
+  X(t)   = _  ;
+ª  
+X(t) =
+@f
+@x
+(t;x(t;fp
+0
+g);p
+0
+(t)):
+   ŒŁ   Æ     ,
+_
+  =X(t)   + _  : (26)
+ˇ º        æŁæ       º   æ  ºŁ  Ø  Ø            Ø æŁæ    Ø  Ł   -
+    Ł º  ßı        ŁØ.        æ    ø    Ø            æŁæ      Ł   -
+    Ł º  ßı        ŁØ Ł      Ł :
+_
+  =X(t)  :
+ˇ        º  ¸ ª     ,   Ł ß                    º   Æ       Ł ,   ł -
+ Ł       Ø æŁæ   ß æ     º  ß Ł     ß Ł (0; 
+0
+) Ł      Ł :
+ (t) =Y (t)  ( 
+0
++
+Z
+t
+0
+Y
+ 1
+(s) _  (s)ds):
+ º Œ     ßØ      º. h ttp://www.nev a.ru/journal, h ttp://www.math.spbu.ru/di journal/ 28˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 2, 2009
+   Œ Œ Œ    Œ Ł  _         ß   ,    Ł        ß     Ł æ      æ Ł   ł  Ł 
+ º  ºŁ  Ø ßı  Ł       Ł º  ßı        ŁØ æº        Ł æ      æ      Œ-
+ ŁŁ  (t),  º  Œ     Ø  ß  º          æ    (26),       æ  ß  Ł   Ł æ    -
+  æ    º       2C
+1
+ 
+0
+[0; 1],      º       ø ª       æ    (25).
+   ŒŁ   Æ     ,
+ 
+ 1
+( ) =Y (t)  ( 
+0
++
+Z
+t
+0
+Y
+ 1
+(s) _  (s)ds):
+´   º   Øł    ß Æ        Ł        Æ    ßØ    Œ Ł   º  
+ 1
+  Ł  
+0
+=
+0. ˛        æ        º Ø
+ 
+ 1
+( ) =Y (t) 
+Z
+t
+0
+Y
+ 1
+(s) _  (s)ds: (27)
+¨        ºß (27) æº      ,     æ ø æ        Œ  N > 0,    
+k 
+ 1
+( )k N 
+
+
+
+
+d 
+dt
+
+
+
+
+: (28)
+— ææ    Ł   (t) =  x(t) Ł    Łł         º  (10)    Ł  
+ ( ) = (t) 
+t
+Z
+0
+@f
+@x
+(s;x(s;fp
+0
+g);p
+0
+(s)) (s)ds =
+=
+Z
+t
+0
+@f
+@p
+(s;x(s;fp
+0
+g); (p
+0
+)(s))   p(s)ds +  (t): (29)
+ˇ Ł   Ł  Œ      æ    (29)           
+ 1
+(      Ł ,      ß   ææ    Ł-
+     
+0
+= 0):
+ (t) =Y (t) 
+t
+Z
+0
+Y
+ 1
+(s) 
+@f
+@p
+(s;x(s;fp
+0
+g);p
+0
+(s)) p(s)ds +  
+ 1
+( )(t): (30)
+ˇ  æ   Ł    (30)t =T (  Ł ß     Ł     Œ Ł   º  	,         ª    (4)):
+ (T ) =Y (T )  	( p) +G( p); (31)
+ª  
+G( p) =  
+ 1
+( )(T ):
+ º Œ     ßØ      º. h ttp://www.nev a.ru/journal, h ttp://www.math.spbu.ru/di journal/ 29˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 2, 2009
+¨  æ     ł  Ł  (11) Ł     ŒŁ (28) æº      ,    
+jG( p)j
+k pk
+! 0   Łk pk! 0: (32)
+ˇ   Ø    Œ   Œ     º æ     æ     Ø       ß.
+ˇ     º  Ł      Ł    :   æ   æ ø æ        Œ     æº       º   æ  
+p
+k
+2P,    p
+k
+6 p
+0
+,kp
+k
+ p
+0
+k! 0   Ł k!1 Ł x(T;fp
+0
+g) =x(T;fp
+k
+g).
+   Œ Œ Œkp
+k
+ p
+0
+k! 0,      Ł      ß   ßł    ææ     Ł    Ł   Ł ß Œ
+   Œ Ł  
+ 
+k
+x(t) =x(t;fp
+k
+g) x(t;fp
+0
+g)
+  Ł   æ        Æ º łŁık .
+   ª     Ł   æ        Æ º łŁık  ß  º    æ       æ   :
+0 =Y (T )  	( p
+k
+) +G( p
+k
+); (33)
+ª    p
+k
+=p
+k
+(t) p
+0
+(t).
+—    ºŁ       æ    (33)   k p
+k
+k:
+0 =Y (T )  	
+ 
+ p
+k
+k p
+k
+k
+ 
++
+G( p
+k
+)
+k p
+k
+k
+(34)
+ˇ        º    Ł , æ   Øæ    P     Ł            º      K   p
+0
+,   -
+      æ ø æ        Œ        æº       º   æ   p
+k
+l
+  æº       º   æ Łp
+k
+,
+   
+ p
+k
+l
+(t)
+k p
+k
+l
+k
+ r   Ł k
+l
+!1;t2 [0;T ]; (35)
+Ł r62K.
+   Œ Œ Œ    Œ Ł   º 	       ß   , Ł  (35) æº      ,    
+	
+ 
+ p
+k
+l
+(t)
+k p
+k
+l
+k
+ 
+! 	(r)6= 0   Ł k
+l
+!1;t2 [0;T ]: (36)
+    Ł   Y (T )    ß        (Œ Œ           º         Ł  ),        
+Y (T )  	(r)6= 0: (37)
+ º Œ     ßØ      º. h ttp://www.nev a.ru/journal, h ttp://www.math.spbu.ru/di journal/ 30˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 2, 2009
+     ª Ø æ     ß, Ł      ŒŁ (32) æº      ,    
+jG( p
+k
+l
+)j
+k p
+k
+l
+k
+! 0   Ł k
+l
+!1: (38)
+¨  (34) Ł (38) æº      æ     ł  Ł 
+0 =Y (T )  	(r) + 0;
+    Ł      ø   æ     ł  Ł  (37).
+           Œ     .
+  Łæ Œ ºŁ       ß:
+1. `       ˝. . ´     Ł        Ł  º Œ º   Ø         Ł  æŒ Ø Ł    Ł-
+ Ł Ł     æ Ł // ¨  -    -ˇ    Æ.   -  , 2006
+ º Œ     ßØ      º. h ttp://www.nev a.ru/journal, h ttp://www.math.spbu.ru/di journal/ 31

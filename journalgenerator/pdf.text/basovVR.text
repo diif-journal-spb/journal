@@ -1,1241 +1,4048 @@
-﻿\begin{center}
-\textbf{\large НОРМАЛЬНЫЕ ФОРМЫ ГАМИЛЬТОНОВЫХ СИСТЕМ}
-\footnote{Работа выполнена при финансовой поддержке РФФИ (грант № 09--01--00734-a)}
-\end{center}
-
-\medskip		
-\begin{center}
-{\large \it В.\,В. БАСОВ,\quad А.\,С. ВАГАНЯН}
-
-\medskip
-198504, Россия, Санкт-Петербург, Петродворец, Университетский пр., д.\,28,\\
-Санкт-Петербургский Государственный университет,\\
-математико-механический факультет, кафедра дифференциальных уравнений,\\
-e-mail: \ vlvlbasov@rambler.ru, \ armay@yandex.ru
-\end{center}
-		
-\medskip
-\begin{abstract}
-Рассмотрена эквивалентность гамильтоновых систем в окрестности точки покоя
-относительно группы формальных канонических преобразований.
-
-Предложены определения метанормальной и нормальной формы гамильтониана и метод их нахождения,
-не требующие ограничений на степень невозмущенной части гамильтониана.
-
-Исследована связь введенных гамильтоновых нормальных форм с уже имеющимися
-нормальными формами гамильтоновых систем А.Д. Брюно и К.Р. Мейера.
-
-Получены гамильтоновы нормальные формы вещественных гамильтоновых систем с одной степенью свободы в случае, когда невозмущенная часть гамильтониана мономиальна,
-а также в случае, когда невозмущенная часть гамильтониана
-является неприводимым двучленом со взаимно-простыми показателями.
-\end{abstract}
-\newpage		 		
-
-\part{Системы Гамильтона}
-\section{Системы Гамильтона и канонические преобразования}
-\subsection{Формальные системы Гамильтона}
-
-В этом разделе приводятся необходимые сведения из теории гамильтоновых систем.
-Их подробное изложение можно найти, например, в \cite{meyer}.
-
-Пусть $f$ --- формальный степенной ряд от переменных $u=(u_1,\dots,u_n),$ $v=(v_1,\dots,v_n)$
-с коэффициентами из поля $\mathbb{K},$ где $\mathbb{K}$ --- это $\mathbb{R}$ или $\mathbb{C}.$
-
-Слова "формальный степенной"\ в дальнейшем будем опускать.
-
-Под записью \ $f(u,v)=\sum_{k=0}^\infty f_k(u,v)$ \ будем понимать разложение ряда $f$
-в сумму однородных многочленов $f_k$ степени $k.$
-
-\begin{definition}\ \
-Порядком ряда $f$ называется наименьшее натуральное число $r\geq0,$ для которого $f_r\not\equiv0.$
-Порядок будем обозначать через ${\rm ord}\,f.$ Если $f\equiv0,$ то ${\rm ord}\,f=+\infty$.
-\end{definition}
-
-\begin{definition}\ \
-Для произвольных рядов $f=f(u,v),$ $\varphi=\varphi(u,v)$ скобкой Пуассона ряда $f$ с $\varphi$ называется ряд
-$$\widehat{f}(\varphi)=\{f,\varphi\}=
-  \sum_{j=1}^n \frac{\partial f}{\partial u_j}\frac{\partial \varphi}{\partial v_j}-
-  \frac{\partial f}{\partial v_j}\frac{\partial \varphi}{\partial u_j}. \eqno(1)$$
-\end{definition}
-
-В частности, для самих переменных $u_j,v_k$ выполняются тождества:
-$$\{u_j,v_k\}\equiv\delta_k^j,\ \{u_j,u_k\}\equiv0,\
-  \{v_j,v_k\}\equiv0\quad(j,k=\overline{1,n}\,),$$
-где $\delta_k^j$ --- символ Кронекера.
-
-Скобка Пуассона обладает следующими свойствами:
-
-\begin{tabular}{ll}
-$1)\ \widehat{f}(\varphi)=-\widehat{\varphi}(f)$& \quad$\hbox{(кососимметричность)};$\\
-
-\smallskip
-$2)\ \widehat{f}(\alpha\,\varphi+\beta\,\psi)=\alpha\,\widehat{f}(\varphi)+\beta\,\widehat{f}(\psi)
-\quad\forall\alpha,\beta\in\mathbb{K}$& \quad$\hbox{(линейность)};$\\
-
-\smallskip
-$3)\ \widehat{f}\,(\varphi\,\psi)=\widehat{f}(\varphi)\,\psi+\varphi\,\widehat{f}\,(\psi)$& \quad$\hbox{(правило Лейбница)};$\\
-
-\smallskip
-$4)\ \widehat{f}(\{\varphi,\psi\})=\{\widehat{f}\,(\varphi),\psi\}+\{\varphi,\widehat{f}\,(\psi)\}$& \quad$\hbox{(тождество Якоби)}.$\\
-\end{tabular}
-
-\smallskip
-Рассмотрим гамильтониан, представленный рядом
-$$H(u,v)=H_r(u,v)+\sum_{k=r+1}^\infty H_k(u,v)\quad(r\geq2).\eqno(2)$$
-
-Однородный многочлен наименьшей степени $H_r$ в разложении $(2)$ будем называть невозмущенным гамильтонианом,
-а ряд \,$H-H_r$ --- возмущением.
-
-Система уравнений Гамильтона для гамильтониана $H$ имеет вид
-$$\dot{u}_j=\frac{\partial H}{\partial v_j},\quad \dot{v}_j=
-  -\frac{\partial H}{\partial u_j}\qquad (j=\overline{1,n}\,).\eqno(3)$$
-
-Точка $O$ --- начало координат --- является точкой покоя системы $(3),$ так как ${\rm ord}\,H\geq2.$
-
-\begin{definition}\ \
-Ряд $\varphi=\varphi(u,v)$ называется интегралом невозмущенного гамильтониана $H_r,$ если
-$$\widehat{H}_r(\varphi)=\{H_r,\varphi\}=0.$$
-\end{definition}
-
-Пусть $\varphi=\sum_{k=0}^\infty\varphi_k,$ тогда $\{H_r,\varphi\}=\sum_{k=0}^\infty\{H_r,\varphi_k\}$ ---
-разложение $\{H_r,\varphi\}$ в сумму однородных слагаемых $\{H_r,\varphi_k\}$ степени $k+r-2.$
-
-Следовательно, если $\varphi$ --- интеграл невозмущенного гамильтониана $H_r,$
-то однородные многочлены $\varphi_k$ также являются интегралами гамильтониана $H_r.$
-
-\subsection{Формальные канонические преобразования}
-Рассмотрим произвольные ряды \,$u_j(x,y),$ $v_k(x,y),$ где $x=(x_1,\ldots,x_n),$ $y=(y_1,\ldots,y_n)$
-и \,${\rm ord}\,u_j,\,{\rm ord}\,v_k\ge 1$ \ $(j,k=\overline{1,n}\,).$
-
-Для произвольного ряда $f(u,v)$ положим
-$$\widetilde{f}(x,y)=f(u(x,y),v(x,y)).$$
-Очевидно, что порядок ряда $\widetilde{f}$ не меньше порядка ряда $f.$
-
-\begin{definition}\ \
-Ряды \,$u_j=\widetilde u_j(x,y),$ $v_k=\widetilde v_k(x,y)$\,
-с ${\rm ord}\,\widetilde u_j,\,{\rm ord}\,\widetilde v_k=1$
-определяют формальное каноническое преобразование, если
-$$\{\widetilde{u}_j,\widetilde{v}_k\}\equiv\delta_k^j,\quad
-  \{\widetilde{u}_j,\widetilde{u}_k\}\equiv0,\quad \{\widetilde{v}_j,\widetilde{v}_k\}\equiv0
-  \quad(j,k=\overline{1,n}\,).\eqno(4)$$
-\end{definition}
-
-Данное определение эквивалентно матричному равенству
-$$\left(D(\widetilde{u},\widetilde{v})/{D(x,y)}\right)I
-  \left(D(\widetilde{u},\widetilde{v})/{D(x,y)}\right)^{T}=I,\eqno(5)$$
-где $I=\begin{pmatrix}0&E_n\\-E_n&0\end{pmatrix}.$ \
-Следовательно, $\det\left(D(\widetilde{u},\widetilde{v})/{D(x,y)}\right)=\pm1.$
-
-\begin{proposition}\ \
-Скобка Пуассона инвариантна относительно формальных канонических преобразований
-\,$u_j=\widetilde u_j(x,y),$ $v_k=\widetilde v_k(x,y)$, т.\,е.
-$$\{f,\varphi\}=\{\widetilde{f},\widetilde{\varphi}\}.\eqno(6)$$
-\end{proposition}
-\textit{Доказательство}\ \ \
-Согласно определению 2,
-$$\{\widetilde{f},\widetilde{\varphi}\}=\sum\limits_{j=1}^n
-  \frac{\partial\widetilde{f}}{\partial x_j}\frac{\partial\widetilde{\varphi}}{\partial y_j}-
-  \frac{\partial\widetilde{f}}{\partial y_j}\frac{\partial\widetilde{\varphi}}{\partial x_j}. \eqno(7)$$
-
-    Положим в $(7)$ \ $\cfrac{\partial}{\partial x_j}=\sum\limits_{k=1}^n
-    \cfrac{\partial\widetilde{u}_k}{\partial x_j}\cfrac{\partial}{\partial u_k}+
-    \cfrac{\partial\widetilde{v}_k}{\partial x_j}\cfrac{\partial}{\partial v_k}\,,$ \
-    $\cfrac{\partial}{\partial y_j}=\sum\limits_{k=1}^n
-    \cfrac{\partial\widetilde{u}_k}{\partial y_j}\cfrac{\partial}{\partial u_k}+
-    \cfrac{\partial\widetilde{v}_k}{\partial y_j}\cfrac{\partial}{\partial v_k}\,.$
-
-\smallskip
-С учетом $(4)$ вычислим скобку Пуассона $(7)$ в старых переменных. Для краткости
-будем опускать аргументы и подразумевать суммирование по повторяющимся индексам.
-
-Имеем: \ $\{\widetilde{f},\widetilde{\varphi}\}=$
-    $$\begin{matrix}
-    =\left(\cfrac{\partial\widetilde{u}_k}{\partial x_j}\cfrac{\partial f}{\partial u_k}+
-    \cfrac{\partial\widetilde{v}_k}{\partial x_j}\cfrac{\partial f}{\partial v_k}\right)
-    \left(\cfrac{\partial\widetilde{u}_l}{\partial y_j}\cfrac{\partial\varphi}{\partial u_l}+
-    \cfrac{\partial\widetilde{v}_l}{\partial y_j}\cfrac{\partial\varphi}{\partial v_l}\right)-
-    \left(\cfrac{\partial\widetilde{u}_k}{\partial y_j}\cfrac{\partial f}{\partial u_k}+
-    \cfrac{\partial\widetilde{v}_k}{\partial y_j}\cfrac{\partial f}{\partial v_k}\right)
-    \left(\cfrac{\partial\widetilde{u}_l}{\partial x_j}\cfrac{\partial\varphi}{\partial u_l}+
-    \cfrac{\partial\widetilde{v}_l}{\partial x_j}\cfrac{\partial\varphi}{\partial v_l}\right)=\\\\
- %   =\cfrac{\partial\widetilde{u}_k}{\partial x_j}\cfrac{\partial f}{\partial u_k}
- %   \cfrac{\partial\widetilde{u}_l}{\partial y_j}\cfrac{\partial\varphi}{\partial u_l}
- %   +
- %   \cfrac{\partial\widetilde{u}_k}{\partial x_j}\cfrac{\partial f}{\partial u_k}
- %   \cfrac{\partial\widetilde{v}_l}{\partial y_j}\cfrac{\partial\varphi}{\partial v_l}
- %   +
- %   \cfrac{\partial\widetilde{v}_k}{\partial x_j}\cfrac{\partial f}{\partial v_k}
- %   \cfrac{\partial\widetilde{u}_l}{\partial y_j}\cfrac{\partial\varphi}{\partial u_l}
- %   +
- %   \cfrac{\partial\widetilde{v}_k}{\partial x_j}\cfrac{\partial f}{\partial v_k}
- %   \cfrac{\partial\widetilde{v}_l}{\partial y_j}\cfrac{\partial\varphi}{\partial v_l}
- %   -\\\\
- %   -\cfrac{\partial\widetilde{u}_k}{\partial y_j}\cfrac{\partial f}{\partial u_k}
- %   \cfrac{\partial\widetilde{u}_l}{\partial x_j}\cfrac{\partial\varphi}{\partial u_l}
- %   -
- %   \cfrac{\partial\widetilde{u}_k}{\partial y_j}\cfrac{\partial f}{\partial u_k}
- %   \cfrac{\partial\widetilde{v}_l}{\partial x_j}\cfrac{\partial\varphi}{\partial v_l}
- %   -
- %   \cfrac{\partial\widetilde{v}_k}{\partial y_j}\cfrac{\partial f}{\partial v_k}
- %   \cfrac{\partial\widetilde{u}_l}{\partial x_j}\cfrac{\partial\varphi}{\partial u_l}
- %   -
- %   \cfrac{\partial\widetilde{v}_k}{\partial y_j}\cfrac{\partial f}{\partial v_k}
- %   \cfrac{\partial\widetilde{v}_l}{\partial x_j}\cfrac{\partial\varphi}{\partial v_l}
- %   =\\\\
-=\cfrac{\partial f}{\partial u_k}\cfrac{\partial\varphi}{\partial u_l}\,\{\widetilde{u}_k,\widetilde{u}_l\}+
- \cfrac{\partial f}{\partial u_k}\cfrac{\partial\varphi}{\partial v_l}\,\{\widetilde{u}_k,\widetilde{v}_l\}+
- \cfrac{\partial f}{\partial v_k}\cfrac{\partial\varphi}{\partial u_l}\,\{\widetilde{v}_k,\widetilde{u}_l\}+
- \cfrac{\partial f}{\partial v_k}\cfrac{\partial\varphi}{\partial v_l}\,\{\widetilde{v}_k,\widetilde{v}_l\}\stackrel{(4)}{=}\\\\
-=\cfrac{\partial f}{\partial u_j}\cfrac{\partial\varphi}{\partial v_j}-
- \cfrac{\partial f}{\partial v_j}\cfrac{\partial\varphi}{\partial u_j}=\{f,\varphi\}.\ \ \square\\
-  \end{matrix}$$
-
-\begin{proposition}\ \
-Формальное каноническое преобразование $u_j=\widetilde u_j(x,y),$ $v_k=\widetilde v_k(x,y)$ переводит систему $(3)$ в систему
-$$\dot{x}_j=\cfrac{\partial \widetilde{H}}{\partial y_j}\,,\quad
-  \dot{y}_j=-\cfrac{\partial \widetilde{H}}{\partial x_j}\quad(j=\overline{1,n}\,),\eqno(8)$$
-где согласно введенным обозначениям \,$\widetilde{H}(x,y)=H(\widetilde{u},\widetilde{v}).$
-\end{proposition}
-\textit{Доказательство}\ \ \
-Дифференцируя ряды $u_j,v_k$ по времени в силу системы (3), получаем
-$$\dot{u}_j=\{u_j,H\}\stackrel{(6)}{=}\{\widetilde{u}_j,\widetilde{H}\},\quad
-  \dot{v}_k=\{v_k,H\}\stackrel{(6)}{=}\{\widetilde{v}_k,\widetilde{H}\}.$$
-С другой стороны
-$$\dot{u}_j=\cfrac{\partial\widetilde{u}_j}{\partial x_l}\,\dot{x}_l+
-  \cfrac{\partial\widetilde{u}_j}{\partial y_l}\,\dot{y}_l,\quad
-  \dot{v}_k=\cfrac{\partial\widetilde{v}_j}{\partial x_l}\,\dot{x}_l+
-  \cfrac{\partial\widetilde{v}_j}{\partial y_l}\,\dot{y}_l.$$
-Таким образом, получаем равенства:
-$$\cfrac{\partial\widetilde{u}_j}{\partial x_l}
-\left(\dot{x}_l-\cfrac{\partial\widetilde{H}}{\partial y_l}\right)+
-\cfrac{\partial\widetilde{u}_j}{\partial y_l}
-\left(\dot{y}_l+\cfrac{\partial\widetilde{H}}{\partial x_l}\right)=0,\quad%\\\\
-\cfrac{\partial\widetilde{v}_k}{\partial x_l}
-\left(\dot{x}_l-\cfrac{\partial\widetilde{H}}{\partial y_l}\right)+
-\cfrac{\partial\widetilde{v}_k}{\partial y_l}
-\left(\dot{y}_l+\cfrac{\partial\widetilde{H}}{\partial x_l}\right)=0.$$
-
-Якобиан формального канонического преобразования отличен от нуля,
-поэтому из этих равенств вытекает система $(8).$ \ $\square$
-
-\subsection{Преобразования Ли}
-
-Для каждого ряда $f=f(x,y)$ с ${\rm ord}\,f\geq3$ определим оператор $exp(\widehat{f}\,)\!:$
-$$exp(\widehat{f}\,)(\varphi)=\sum_{k=0}^\infty\frac{\left.\widehat{f}\:\right.^k\!(\varphi)}{k!},$$
-где $\varphi=\varphi(x,y)$ --- ряд, а $\left.\widehat{f}\:\right.^k\!=\widehat{f}\cdots\widehat{f}$ ---
-$k$-кратная композиция $\widehat{f}$ из (1), $\left.\widehat{f}\:\right.^0\!(\varphi)=\varphi.$ \linebreak
-При этом ${\rm ord}\left.\widehat{f}\:\right.^k\!(\varphi)={\rm ord}\,\varphi+k({\rm ord}\,f-2)\ge k,$
-если $\left.\widehat{f}\:\right.^k\!(\varphi)\not\equiv0,$
-иначе ${\rm ord}\left.\widehat{f}\:\right.^k\!(\varphi)=+\infty.$
-
-\begin{proposition}\ \ Оператор $exp(\widehat{f}\,)$ обладает следующими свойствами:
-
-$1)\ exp(\widehat{f}\,)(\alpha\varphi+\beta\psi)=\alpha\,exp(\widehat{f}\,)(\varphi)+\beta\,exp(\widehat{f}\,)(\psi)
-\quad\forall\alpha,\beta\in\mathbb{K};$
-
-\smallskip
-    $2)\ exp(\widehat{f}\,)(\varphi\,\psi)=exp(\widehat{f}\,)(\varphi)\,exp(\widehat{f}\,)(\psi);$
-
-\smallskip
-$3)\ exp(\widehat{f}\,)(\{\varphi,\psi\})=\{exp(\widehat{f}\,)(\varphi),exp(\widehat{f}\,)(\psi)\};$
-
-\smallskip
-$4)\ exp(-\widehat{f}\,)(exp(\widehat{f}\,)(\varphi))=\varphi,$
-
-\noindent т.е. $exp(\widehat{f}\,)$ является автоморфизмом алгебры рядов, снабженной операцией $\{\,.\,,\,.\,\}.$
-    \end{proposition}
- \textit{Доказательство}\ \ \ 1) следует из линейности $\widehat{f};$
-
- 2) доказывается при помощи правила Лейбница:
- $$\begin{matrix}\displaystyle{exp(\widehat{f}\,)(\varphi\,\psi)=
- \sum\limits_{k=0}^\infty\cfrac{\left.\widehat{f}\:\right.^k\!(\varphi\,\psi)}{k!}=
- \sum\limits_{k=0}^\infty\sum\limits_{l=0}^k
- \cfrac{C_k^l\left.\widehat{f}\:\right.^l\!(\varphi)\left.\widehat{f}\:\right.^{k-l}\!(\psi)}{k!}=}\\\\
- \displaystyle{=\sum\limits_{k=0}^\infty\sum\limits_{l=0}^k
- \cfrac{\left.\widehat{f}\:\right.^l\!(\varphi)\left.\widehat{f}\:\right.^{k-l}\!(\psi)}{l!\,(k-l)!}=
- exp(\widehat{f}\,)(\varphi)\,exp(\widehat{f}\,)(\psi);}
- \\\end{matrix}$$
-
- 3) доказывается аналогично с применением тождества Якоби;
-
- 4) следует из цепочки равенств
- $$\begin{matrix}\displaystyle{exp(-\widehat{f}\,)(exp(\widehat{f}\,)(\varphi))=
- \sum\limits_{k=0}^\infty
-    \cfrac{1}{k!}\left.(-\widehat{f}\,)\right.^k\!\left(
-    \sum\limits_{l=0}^\infty
-    \cfrac{1}{l!}\left.\widehat{f}\:\right.^l\!(\varphi)\right)=
- \sum\limits_{k,l=0}^\infty
- \cfrac{\left.(-\widehat{f}\,)\right.^k\!(\left.\widehat{f}\:\right.^l\!(\varphi))}{k!\,l!}=}\\\\\displaystyle{
- =\sum\limits_{k,l=0}^\infty
- \cfrac{\left.(-1)\right.^k\!\left.\widehat{f}\:\right.^{k+l}\!(\varphi)}{k!\,l!}
- =\sum\limits_{m=0}^\infty
- \cfrac{\left.\widehat{f}\:\right.^{m}\!(\varphi)}{m!}
- \sum\limits_{k=0}^m
- \cfrac{\left.(-1)\right.^k\!m!}{k!\,(m-k)!}=\left.\widehat{f}\:\right.^{0}\!(\varphi)=\varphi;}\ \square
- \\\end{matrix}$$
-
-\begin{proposition}\ \
-Ряды
-$$u_j=exp(\widehat{f}\,)(x_j),\quad v_k=exp(\widehat{f}\,)(y_k)\qquad
-  ({\rm ord}\,f\geq3,\ j,k=\overline{1,n}\,)\eqno(9)$$
-определяют формальное каноническое преобразование.
-\end{proposition}
-\textit{Доказательство}\ \ \
-Согласно свойству 3 оператора $exp(\widehat{f}\,),$ для преобразования вида (9)
-имеем следующую цепочку равенств:
-$$\{\widetilde{u}_j,\widetilde{v}_k\}=\{exp(\widehat{f}\,)(x_j),exp(\widehat{f}\,)(y_k)\}=
-  exp(\widehat{f}\,)(\{x_j,y_k\})=exp(\widehat{f}\,)(\delta_k^j)=\delta_k^j.$$
-Аналогично получаем $\{\widetilde{u}_j,\widetilde{u}_k\}\equiv0,\ \{\widetilde{v}_j,\widetilde{v}_k\}\equiv0.$
-
-Следовательно, $(9)$ --- формальное каноническое преобразование по определению 4. $\square$
-
-Следуя \cite{deprit,hori,meyer,meyerbook}, введем следующее определение.
-
-\begin{definition}\ \ Формальное каноническое преобразование вида $(9)$ будем называть преобразованием Ли.
-\end{definition}
-
-    \begin{proposition}\ \
-    Преобразования Ли образуют группу.
-    \end{proposition}
-    \textit{Доказательство}\ \ \
-    По определению
-    $$exp(\widehat{f}\,)\,exp(\,\widehat{g}\,)=\sum\limits_{k=0}^\infty
-    \cfrac{1}{k!}\left.\widehat{f}\:\right.^k\!\left(
-    \sum\limits_{l=0}^\infty
-    \cfrac{1}{l!}\left.\widehat{g}\:\right.^l\right)=
-    \sum\limits_{k,l=0}^\infty
- \cfrac{\left.\widehat{f}\:\right.^k\!\left.\widehat{g}\:\right.^l}{k!\,l!}.$$
-
- Подстановка этого операторного ряда в логарифмический ряд (см. \cite[Лекция 4]{postnikov})
- $$\ln Z=(Z-E)-\cfrac{1}{2}\,(Z-E)^2+\ldots=\sum\limits_{k=1}^\infty\cfrac{(-1)^{k-1}}{k}\,(Z-E)^k,$$
- где $E$ --- тождественный оператор, дает операторный ряд
-  $$\ln(exp(\widehat{f}\,)\,exp(\,\widehat{g}\,))=\sum\limits_{k=1}^\infty\cfrac{(-1)^{k-1}}{k}
-  \sum\cfrac{\left.\widehat{f}\:\right.^{p_1}\!\left.\widehat{g}\:\right.^{q_1}\cdots
-  \left.\widehat{f}\:\right.^{p_k}\!\left.\widehat{g}\:\right.^{q_k}}{p_1!q_1!\ldots p_k!q_k!},$$
-  где во внутренней сумме суммирование распространено на всевозможные наборы $(p_1,\ldots,p_k,q_1,\ldots,q_k)$
-  целых неотрицательных чисел, подчиненных условиям:
-  $$p_1+q_1\ge1,\,\ldots,\,p_k+q_k\ge1.$$
-
-  Этот ряд называется рядом Кемпбелла--Хаусдорфа. Согласно \cite[Лекция 4,\,Утв.\,B]{postnikov},
-  каждое однородное слагаемое ряда Кемпбелла--Хаусдорфа как ряда от, вообще говоря,
-  некоммутирующих переменных $\widehat{f},\widehat{g}$ представляется в виде лиевого многочлена, т.\,е. линейной комбинации скобок Ли
-  этих переменных.
-
-  Поскольку, согласно тождеству Якоби, для скобки Ли операторов $\widehat{f}$ и $\widehat{g},$ имеем:
-  \linebreak
-  $[\widehat{f},\widehat{g}\,]=\widehat{f}\,\widehat{g}-\widehat{g}\,\widehat{f}=\widehat{\{f,g\}}$
-  и ${\rm ord}\,\{f,g\}\ge4,$ то существует такой ряд $h$ с ${\rm ord}\,h\ge3,$ что
-  $$exp(\widehat{f}\,)\,exp(\,\widehat{g}\,)=exp(\widehat{h}).$$
-
-  Этим доказано, что композиция преобразований Ли есть преобразование Ли.
-
-    Ассоциативность композиции очевидна.
-
-    Единицей служит тождественное преобразование $exp(\,\widehat{0}\,).$
-
-    Обратное к преобразованию Ли существует и по свойству 4 оператора $exp(\widehat{f}\,)$
-    также является преобразованием Ли. \ $\square$
-
-    Как было показано в утверждении 2, при формальных канонических преобразованиях гамильтониан
-    преобразуется по закону $\widetilde{H}(x,y)=H(\widetilde u,\widetilde v).$ В случае преобразований вида $(9),$
-    согласно свойствам 1 и 2 оператора $exp(\widehat{f}\,),$ последнее эквивалентно равенству
-    $$\widetilde{H}(x,y)=exp(\widehat{f}\,)(H(x,y)).\eqno(10)$$
-
-    Выпишем первые члены ряда в правой части (10):
-    $$\widetilde{H}=H+\{f,\ H\}+\frac{1}{2}\{f,\ \{f,\ H\}\}+\hdots.\eqno(11)$$
-
-    Поскольку предполагается, что ${\rm ord}(f)\geq3,$ преобразования Ли
-    не меняют невозмущенный гамильтониан, т.\,е. в (10) $\widetilde{H}_r=H_r.$
-
-\section{Формальная эквивалентность гамильтоновых систем}
-\subsection{Резонансное уравнение}
-
-Обозначим пространство полиномов от переменных $x,y$ над $\mathbb{K}$ через $\mathfrak{P}.$
-
-Положим $z=(x_1,\ldots,x_n,y_1,\ldots,y_n),$ \
-$D=\left(\partial/\partial x_1,\ldots,\partial/\partial x_n,\partial/\partial y_1,\ldots,\partial/\partial y_n\right).$
-
-Формула
-$$\langle\langle P,Q\rangle\rangle=P(D)\overline{Q}(z)|_{z=0}\quad P,Q\in\mathfrak{P},$$
-в которой $\overline{Q}$ --- полином, полученный из $Q$ комплексным сопряжением коэффициентов,
-определяет на $\mathfrak{P}$ скалярное произведение со свойствами (см. напр. \cite[Гл. 0, \S5]{zhelobenko}):
-
-$1)\ \langle\langle x^p y^q,x^{\left.p\right.'}y^{q'}\rangle\rangle=p!q!\delta^p_{\!\left.p\right.'}\delta^q_{q'},$
-
-$2)\ \langle\langle PQ,R\rangle\rangle=\langle\langle P,Q^*R\rangle\rangle\quad(P,Q,R\in\mathfrak{P}),$
-
-\noindent где $\delta^p_{\!\left.p\right.'}=\prod_{j=1}^n\delta^{p_j}_{\!\left.p\right.'_{\!j}},\ \ \delta^q_{q'}=
-\prod_{j=1}^n\delta^{q_j}_{\!\left.q\right.'_{\!j}}$ --- произведения символов Кронекера, а
-$Q^*=\overline{Q}(D)$ --- дифференциальный оператор, сопряженный к $Q$ относительно скалярного произведения.
-
-Из свойства 1 вытекает, что пространство $\mathfrak{P}$ разбивается в прямую сумму
-ортогональных подпространств $\mathfrak{P}^k$ однородных полиномов степени $k.$
-
-Рассмотрим гамильтониан
-$$H(x,y)=H_r(x,y)+\sum_{|p+q|\geq r+1}h^{(p,q)}x^p y^q\qquad(r\geq2).\eqno(12_r)$$
-
-По свойству 2 скалярного произведения $\langle\langle\,.\,,\,.\,\rangle\rangle$
-оператор $\widehat{H}_r^*,$ сопряженный к $\widehat{H}_r,$ имеет вид
-$$\widehat{H}_r^*=\sum\limits_{j=1}^n y_j(\partial H_r/\partial x_j)^*-x_j(\partial H_r/\partial y_j)^*\
-  \hbox{ или }\
-  \widehat{H}_r^*=\sum\limits_{j=1}^n (\partial H_r/\partial x_j)^*y_j-(\partial H_r/\partial y_j)^*x_j.
-  \eqno(13)$$
-Здесь равенство $(13_2)$ получено из $(13_1)$ по формуле Лейбница.
-
-\begin{definition}
-Резонансным уравнением для $H_r$ будем называть уравнение
-$$\widehat{H}_r^*P=0,\quad P\in\mathfrak{P}.\eqno(14)$$
-Его решения будем называть резонансными многочленами.
-\end{definition}
-
-Обозначим пространство резонансных многочленов через $\mathfrak{J}.$
-
-Поскольку невозмущенный гамильтониан $H_r$ --- однородный полином, пространство $\mathfrak{J}$
-разбивается в прямую сумму ортогональных подпространств $\mathfrak{J}^k$
-однородных резонансных многочленов степени $k.$
-
-\subsection{Эквивалентность гамильтоновых систем относительно \newline группы преобразований Ли}
-
-\begin{definition}\ \
-Будем говорить, что два гамильтониана $H$ и $H'$ с ${\rm ord}\,H,{\rm ord}\,H'=r$ и $H_r=H_r'$
-эквивалентны в порядке $r+m$ $(m\ge1),$ если существует такое преобразование Ли,
-что для преобразованного гамильтониана $\widetilde{H}$ выполняются равенства
-$$\widetilde{H}_k=H'_k\qquad(k=\overline{r,r+m}\,).$$
-\end{definition}
-\goodbreak
-
-Обозначим пространство рядов от переменных $x,y$ над $\mathbb{K}$ через $\Phi.$
-		
-    Рассмотрим пространства
-    $$J_s=\{\psi\in\Phi:\ {\rm ord}\,\psi\ge3,\ \{\psi,H_{r+l}\}=0\ \
-    (l=\overline{0,s}\,)\}\qquad(s=\overline{0,m-2}\,).$$
-    Обозначим через $J_s^k$ подпространство однородных элементов в $J_s$ степени $k.$
-
-    \begin{lemma}\ \
-    Пусть $f=\sum_{k=3}^{m+1}f_k+\varphi,$ где $m\geq1,$ $f_{k}\in J_{m-k+1}^k,$
-    а $\varphi\in\Phi,$ ${\rm ord}\,\varphi\ge m+2.$\linebreak Тогда
-    преобразование $(9)$ сохраняет $H_r,\ldots,H_{r+m-1},$ а
-    преобразование возмущения в порядке $r+m$ задается равенством
-    $$\widetilde{H}_{r+m}=H_{r+m}+\sum_{k=3}^{m+1}\{f_k,H_{r+m-k+2}\}+\{\varphi_{m+2},H_r\}.\eqno(15)$$
-    \end{lemma}
-    \textit{Доказательство}\ \ \
-Пусть $\psi^1,\ldots,\psi^s$ $(s\geq0)$ --- набор рядов (при $s=0$ пустой)
-такой, что ${\rm ord}\,\psi^\nu\geq 3$ $(\nu=\overline{1,s}\,),$
-и пусть $\psi\in J_{m-k+1},\ {\rm ord}\,\psi=k\ \ (k\in\{3,\ldots,m+1\}).$ Тогда
-$${\rm ord}\,\{\psi^1,\{\psi^2,\ldots\{\psi^s,\{\psi,H_{r+l}\}\}\}\}\geq r+m+s\quad (\forall\,l\geq0),$$
-где при $s=0$ по соглашению в аргументе ${\rm ord}$ стоит $\{\psi,H_{r+l}\}.$
-
-Действительно, поскольку ${\rm ord}\,0=+\infty,$ достаточно рассмотреть случай
-$$\{\psi^1,\{\psi^2,\ldots\{\psi^s,\{\psi,H_{r+l}\}\}\}\}\not\equiv0.$$
-При этом $l\geq m-k+2,$ так как $\psi\in J_{m-k+1},$ и $\{\psi,H_{r+l}\}=0$ для $l=\overline{0,m-k+1}.$
-Отсюда
-$$\begin{matrix}{\rm ord}\,\{\psi^1,\{\psi^2,\ldots\{\psi^s,\{\psi,H_{r+l}\}\}\}\}=
-  \sum\limits_{\nu=1}^s {\rm ord}\,\psi^\nu+{\rm ord}\,\psi-2s-2+r+l\geq\\\geq 3s+k-2s-2+r+m-k+2=r+m+s.
-  \end{matrix}$$
-
-Из полученной оценки вытекает, что все скобки Пуассона в формуле $(11)$ имеют порядки не меньшие чем $r+m,$
-поэтому $H_r,\ldots,H_{r+m-1}$ инвариантны относительно рассматриваемого преобразования.
-Кроме того, скобки Пуассона кратностей выше первой имеют порядки строго большие чем $r+m,$
-что и доказывает формулу (15). \ $\square$
-
-\begin{theorem}\ \
-Пусть $H,H'\in\Phi,$ ${\rm ord}\,H,{\rm ord}\,H'=r$ и $H_k=H'_k$ $(k=\overline{r,r+m-1}\,),$
-и пусть существуют $f_{k}\in J_{m-k+1}^k$ $(k=\overline{3,m+1}\,)$ такие,
-что для всякого резонансного многочлена $P\in\mathfrak{J}^{r+m}$ выполняется равенство
-$$\langle\langle P,H'_{r+m}\rangle\rangle=
-  \langle\langle P,H_{r+m}\rangle\rangle+\langle\langle P,
-  \sum\limits_{k=3}^{m+1}\{f_k,H_{r+m-k+2}\}\rangle\rangle.\eqno(16)$$
-Тогда $H$ и $H'$ эквивалентны в порядке $r+m.$
-\end{theorem}
-\textit{Доказательство}\ \ \
-Пусть $m=1$ и $\langle\langle P,H_{r+1}-H'_{r+1}\rangle\rangle=0$ для всех $P\in\mathfrak{J}^{r+1}.$
-
-Найдем преобразование Ли, сохраняющее $H_r$ и переводящее $H_{r+1}$ в $H'_{r+1}.$
-
-Подпространство $\mathfrak{J}^{r+1}\subset\mathfrak{P}^{r+1}$ есть ортогональное дополнение
-образа линейного оператора $\widehat{H}_r$ из $\mathfrak{P}^3$ в $\mathfrak{P}^{r+1}.$
-Поскольку $\mathfrak{P}^{r+1}$ конечномерно, $Im(\widehat{H}_r|_{\mathfrak{P}^{3}})=
-(Im(\widehat{H}_r|_{\mathfrak{P}^{3}}))^{\bot\bot}=(\mathfrak{J}^{r+1})^\bot.$
-Поэтому существует полином $\varphi\in\mathfrak{P}^{3}$ такой, что $\{H_r,\varphi\}=H_{r+1}-H'_{r+1}.$
-Отсюда и из формулы $(15)$ получаем, что искомое преобразование имеет вид $exp(\widehat{\varphi}).$
-
-При $m\ge2$ доказательство аналогично. \ $\square$
-\goodbreak
-
-\part{Гамильтоновы нормальные формы}
-\section{Гамильтонова метанормальная форма}
-
-\begin{definition}\ \
-Элемент $h^{(p,q)}x^p y^q$ в возмущении гамильтониана $(12_r)$ назовем нерезонансным,
-если для каждого $P\in\mathfrak{J}$ выполнено $\langle\langle P,x^p y^q\rangle\rangle=0.$
-В противном случае будем называть элемент $h^{(p,q)}x^py^q$ резонансным.
-\end{definition}
-
-Тем самым, возмущение $H-H_r$ однозначно разбивается на две части: резонансную и нерезонансную,
-в них входят резонансные и нерезонансные слагаемые соответственно.
-
-\begin{definition}\ \
-Ряд $H$ вида $(12_r)$ или порожденную им систему уравнений Гамильтона $(3)$ будем называть гамильтоновой
-метанормальной формой {\rm (ГМНФ)}, если возмущение $H-H_r$ содержит только резонансные элементы.
-\end{definition}
-
-\begin{theorem}\ \
-Существует формальное каноническое преобразование, приводящее гамильтониан $(12_r)$ к гамильтоновой
-метанормальной форме.
-\end{theorem}
-\textit{Доказательство}\ \ \
-будет проведено индукцией по $m.$
-
-Обозначим резонансную часть $H_{r+1}$ через $H'_{r+1}.$
-
-Из определения 8 следует, что $\langle\langle P,H_{r+1}-H'_{r+1}\rangle\rangle=0$
-для всякого $P\in\mathfrak{J}^{r+1}.$
-
-Последнее равенство совпадает с формулой (16) для $m=1.$
-Поэтому по теореме 1 гамильтониан $H$ эквивалентен своей ГМНФ в порядке $r+1.$
-
-Предположим, что $H$ эквивалентен своей ГМНФ в порядке $r+m-1.$
-Без потери общности можем считать, что $H$ совпадает со своей ГМНФ в порядках $r+k\ (k=\overline{1,m-1}\,).$
-
-Обозначим резонансную часть $H_{r+m}$ через $H'_{r+m}.$
-
-Из определения 7 следует, что $\langle\langle P,H_{r+m}-H'_{r+m}\rangle\rangle=0$
-для всякого $P\in\mathfrak{J}^{r+m}.$
-
-Последнее равенство есть частный случай формулы $(16)$ с $f_3,\ldots,f_{m+1}=0.$
-
-Поэтому из теоремы 1 вытекает эквивалентность $H$ своей ГМНФ в порядке $r+m.$
-
-При этом по лемме 1 соответствующее преобразование имеет вид (9) с ${\rm ord}\,f\ge m+2.$
-
-Уничтожая последовательно нерезонансные члены степени $r+1,r+2,\ldots,$ мы строим последовательность
-преобразований Ли $exp(\widehat{f^m}\,)$ с $f^m\in\Phi$ и ${\rm ord}\,f^m\ge m+2.$
-
-Произведение этих преобразований сходится в $\Phi,$ т.\,е. члены любой фиксированной степени, начиная
-с некоторого шага, не меняются.
-Поэтому из утверждений 4 и 5 вытекает, что предельное преобразование
-$\ldots exp(\widehat{f^m}\,)\ldots exp(\widehat{f^2}\,) exp(\widehat{f^1}\,)$
-является формальным каноническим преобразованием. \ $\square$
-
-\bigskip
-\noindent\textbf{Замечание 1}\ \
-ГМНФ --- это некая промежуточная нормальная форма (мета- от греч. $\mu\varepsilon\tau\acute{\alpha}$
---- между, через). Как будет показано ниже, при помощи формальных канонических преобразований
-помимо нерезонансных элементов в возмущении гамильтониана $(12_r)$ можно уничтожить
-и часть резонансных элементов.
-
-\bigskip
-\noindent\textbf{Замечание 2}\ \
-Достоинством введенной в рассмотрение ГМНФ является то, что невозмущенная часть
-гамильтониана $H_r$ имеет произвольную степень $r\ge 2.$ В следующих двух разделах будут приведены два других
-определения гамильтоновых нормальных форм (ГНФ): ГНФ Брюно и ГНФ Мейера, в которых степень невозмущенного гамильтониана
-предполагается равной двум.
-
-\section{Гамильтонова НФ Брюно, связь с ГМНФ}
-
-В работе \cite{bruno} доказано, что при помощи комплексных линейных канонических преобразований
-квадратичная часть гамильтониана $(12_2)$ может быть приведена к виду
-$$H_2=(1/2)\,z^TGz,$$
-где $z=(x,y),$ а $G=\begin{pmatrix}0& C^T\\ C& D\end{pmatrix}$ --- блочная матрица, в которой
-$C=\{C^{(1)},\ldots,C^{(s)}\}$ --- жорданова матрица порядка $n$ с жордановыми клетками $C^{(k)}$
-порядка $l^{(k)}$ \ $(k=\overline{1,s}\,),$\, \linebreak
-а \,$D=\{D^{(1)},\ldots,D^{(s)}\}$ --- блочно\,-диагональная матрица с клетками
-$D^{(k)}=\sigma^{(k)}\Delta^{(k)}$ порядка~$l^{(k)}.$\,
-Здесь $\Delta^{(k)}={\rm diag}\{1,0,\ldots,0\}$ и $\sigma^{(k)}=0,$
-если соответствующее блоку $C^{(k)}$ собственное число $\lambda^{(k)}\ne 0.$\, Или в иной записи
-$$H_2=\sum_{j=1}^n \lambda_j x_jy_j+\sum_{j=1}^{n-1} \varepsilon_j
-  x_jy_{j+1}+\frac{1}{2}\sum_{j=1}^n \sigma_j y_j^2,\eqno(17)$$
-где $\lambda_1,\ldots,\lambda_n$ --- собственные числа матрицы $C,$ и
-$$\varepsilon_j=\begin{cases} 0,&\text{если }\lambda_j\neq\lambda_{j+1};\\
-  0\text{ или } 1,&\text{если }\lambda_j=\lambda_{j+1},\end{cases}\
-  \sigma_j=\begin{cases}
-  0,&\text{если }\lambda_j\neq0\text{ или }\varepsilon_{j-1}\neq0;\\
-  0\text{ или } 1,&\text{если }\lambda_j=0\text{ и }\varepsilon_{j-1}=0\end{cases}\ (\varepsilon_0=0). \eqno(18)$$
-
-\begin{definition}\ \
-Гамильтониан $(12_2)$ или порожденную им систему уравнений Гамильтона $(3)$ будем называть
-гамильтоновой нормальной формой Брюно {\rm(ГНФБ)}, если невозмущенный гамильтониан $H_2$ имеет вид $(17),$
-а в возмущении $H-H_2$ коэффициенты $h^{(p,q)}=0,$ если $\langle p-q,\lambda\rangle\neq0,$\,
-где $\lambda=(\lambda_1,\ldots,\lambda_n),$ а $\langle\xi,\eta\rangle=\xi_1\eta_1+\ldots+\xi_{n}\eta_{n}.$
-\end{definition}
-
-В работе \cite{bruno} также доказано, что любой гамильтониан может быть приведен к ГНФБ
-при помощи комплексных формальных канонических преобразований.
-
-    \begin{theorem}\ \
-    {\rm ГМНФ} с невозмущенным гамильтонианом $(17)$ является {\rm ГНФБ}. \end{theorem}
-    \textit{Доказательство}\ \ \
-    Из (13) и (17) получаем, что оператор $\widehat{H}_2^*$ имеет вид
-    $$\widehat{H}_2^*=\sum\limits_{j=1}^n\overline{\lambda}_j\left(
-    y_j\cfrac{\partial}{\partial y_j}-
-    x_j\cfrac{\partial}{\partial x_j}\right)+
-    \sum\limits_{j=1}^{n-1}\varepsilon_j\left(y_j\cfrac{\partial}{\partial y_{j+1}}-
-    x_{j+1}\cfrac{\partial}{\partial x_j}\right)-
-    \sum\limits_{j=1}^n\sigma_jx_j\cfrac{\partial}{\partial y_j}.$$
-
-    Рассмотрим действие $\widehat{H}_2^*$ на $x^py^q.$
-    $$\widehat{H}_2^*x^py^q=
-    \langle q-p,\overline{\lambda}\rangle
-    x^py^q+\sum\limits_{j=1}^{n-1}
-    \varepsilon_j(q_{j+1}x^py^{q+e_j-e_{j+1}}-p_jx^{p-e_j+e_{j+1}}y^q)
-    +\sum\limits_{j=1}^n\sigma_j q_jx^{p+e_j}y^{q-e_j}.\eqno(19)$$
-
-    Как следует из равенств $(18)$ и $(19),$ оператор $\widehat{H}_2^*$ сохраняет степень
-    $|p+q|$ и величину $\langle q-p,\overline{\lambda}\rangle,$ т.\,е. оператор $\widehat{H}_2^*$
-    действует на подпространстве
-    $$\mathfrak{P}^k_a=
-    Lin\{x^py^q:
-    |p+q|=k, \langle q-p,\overline{\lambda}\rangle=a\}\subset\mathfrak{P}^k.$$
-
-    Введем на множестве мультииндексов $\mathfrak{A}=\{(p,q):|p+q|=k\}$ следующий
-    порядок: $(p',q')\prec(p'',q''),$ если $|p'|<|p''|,$ или $|p'|=|p''|,$ и $p''$
-    предшествует $p'$ в лексикографическом порядке, или $p'=p'',$ и
-    $q'$ предшествует $q''$ в лексикографическом порядке.
-
-    Выберем в $\mathfrak{P}^k_a$ базис из элементов вида
-    $x^py^q,$ расположенных по возрастанию показателей в смысле введенного порядка.
-
-    В формуле $(19)$ $q$ предшествует $q+e_j-e_{j+1}$ в
-    лексикографическом порядке, поэтому $(p,q)\prec(p,q+e_j-e_{j+1}),$
-    $p-e_j+e_{j+1}$ предшествует $p$ в лексикографическом порядке,
-    поэтому $(p,q)\prec(p-e_j+e_{j+1},q),$ а
-    $|p|<|p+e_j|,$ поэтому $(p,q)\prec(p+e_j,q-e_j).$
-
-Таким образом, $\widehat{H}_2^*$ переводит каждый элемент рассматриваемого базиса в подпространство
-пространства $\mathfrak{P}^k_a,$ натянутое на элементы базиса с неменьшими в смысле введенного порядка
-индексами. Следовательно, в данном базисе оператор $\widehat{H}_2^*$ представляется
-верхнетреугольной матрицей с числами $a$ на главной диагонали.
-
-Для существования решения резонансного уравнения в подпространстве $\mathfrak{P}^k_a$
-необходимо и достаточно равенство нулю детерминанта этой матрицы, что равносильно условию $a=0,$
-что, в свою очередь, эквивалентно равенству $\langle p-q,\lambda\rangle=0.$
-Отсюда согласно определению 8  резонансными могут быть только элементы
-$h^{(p,q)}x^p y^q$ с $\langle p-q,\lambda\rangle=0.$ \ $\square$
-
-\medskip
-Покажем теперь, что ГМНФ может иметь более простой вид, нежели чем ГНФБ.
-
-Рассмотрим любой гамильтониан $(12_2)$ и квадратичной невозмущенной частью
-$$H_2=x_1 y_2+y_1^2/2\quad(n=2).\eqno(20)$$
-По определению он является ГНФБ, так как в нем $\lambda_1,\lambda_2=0.$
-
-\begin{proposition}\ \
-{\rm ГМНФ} гамильтониана $(12_2)$ с $H_2$ из $(20)$ имеет вид
-$$H=H_2+
-  \sum\limits_{\scriptsize \begin{matrix}p_2\geq q_1+2q_2\\(p_1,q_1)\neq(1,0)\\\end{matrix}}h^{(p,q)}x^p y^q.
-  \eqno(21)$$
-\end{proposition}
-\textit{Доказательство}\ \ \
-Резонансное уравнение в этом случае принимает вид
-$$\widehat{H}_2^*P=y_1\cfrac{\partial P}{\partial y_2}-x_1\cfrac{\partial P}{\partial y_1}
-  -x_2\cfrac{\partial P}{\partial x_1}=0,\quad P\in\mathfrak{P}.$$
-
-Последнее уравнение имеет три независимых решения:\ $P_1=x_2,$ $P_2=x_2y_1-x_1^2/2,$\linebreak
-$P_3=x_2^2y_2+x_1x_2y_1-x_1^3/3,$\, т.\,е. всякий резонансный многочлен $P\in\mathfrak{P}$
-является полиномом от $P_1,P_2,P_3.$
-Поэтому каждый резонансный элемент $H-H_2$ есть произведение целых неотрицательных степеней слагаемых
-из $P_1,P_2,P_3,$\, а значит, с точностью до постоянного множителя имеет вид
-$$x_2^{i_1}(x_2y_1)^{i_2}x_1^{2i_3}(x_2^2y_2)^{i_4}(x_1x_2y_1)^{i_5}x_1^{3i_6}=
-  x_1^{p_1}x_2^{p_2}y_1^{q_1}y_2^{q_2},$$
-где $p_1=2i_3+i_5+3i_6,$ $p_2=i_1+i_2+2i_4+i_5,$ $q_1=i_2+i_5,$ $q_2=i_4.$
-
-Эти показатели удовлетворяют условию $p_2\geq q_1+2q_2.$ Кроме того, $q_1\neq0$ при $p_1=1.$
-В результате получаем ГМНФ $(21).$ \ $\square$
-
-\section{Гамильтонова НФ Мейера, связь с ГМНФ}
-
-Рассмотрим вещественный гамильтониан $(12_2),$ невозмущенная часть которого записана в виде
-$$H_2=(1/2)\,z^TGz\quad \hbox{($G$ --- симметрическая матрица)},\eqno(22)$$
-Рассмотрим также линейную гамильтонову систему с гамильтонианом $H_2$ из (22):
-$$\dot{z}=Az,\quad A=IG\quad (I\ \hbox{ из (5)}).\eqno(23)$$
-
-В работе \cite{meyer} доказано, что если матрица $A$ --- симметрическая, то
-гамильтониан $(12_2)$ с невозмущенной частью (22) при помощи вещественного почти тождественного
-формального канонического преобразования $z=w+W(w)$ с ${\rm ord\,}W\ge2$
-может быть приведен к гамильтониану $H'$ такому, что
-$$H'_2=H_2;\quad \forall k\ge3,\ \forall t\in\mathbb{R},\ \forall z\in\mathbb{R}^{2n}:\
-H'_k(e^{At}z)\equiv H'_k(z).$$
-
-Позже в \cite{meyerbook} этот результат был обобщен на случай произвольной матрицы $A=IG.$
-
-\begin{definition}\ \
-Вещественный гамильтониан $(12_2)$ с невозмущенной частью $(22)$ или порожденную им гамильтонову систему $(3)$
-будем называть гамильтоновой нормальной формой Мейера {\rm (ГНФМ)},
-если
-$$\forall k\ge3,\ \forall t\in\mathbb{R},\ \forall z\in\mathbb{R}^{2n}:\
-H_k(e^{A^Tt}z)\equiv H_k(z)\quad(A=IG).\eqno(24)$$
-\end{definition}
-
-Согласно \cite[Theorem 10.4.2]{meyerbook}, произвольный вещественный гамильтониан $(12_2)$ может
-быть приведен к ГНФМ при помощи вещественного почти тождественного формального канонического преобразования
-$z=w+W(w)$ с ${\rm ord\,}W\ge2.$
-
-\begin{theorem}\ \
-{\rm ГНФМ} является {\rm ГМНФ} с возмущением из резонансных многочленов.
-\end{theorem}
-\textit{Доказательство}\ \
-Пусть гамильтониан $(12_2)$ с невозмущенной частью $(22)$ --- это ГНФМ.
-
-Сопряженная к (23) линейная система имеет вид
-$$\dot{z}=A^Tz\eqno(25)$$
-и также является гамильтоновой с гамильтонианом $H_2^T(z)=(1/2)\,z^TG'z,$ где $G'=IGI.$
-
-Равенство (24) означает, что однородные слагаемые возмущения ГНФМ являются интегралами линейной системы (25).
-Поскольку система (25) гамильтонова с гамильтонианом $H_2^T,$ последнее равносильно равенствам
-$$\{H_2^T,H_k\}=0\quad(k\ge3).\eqno(26)$$
-
-Согласно \cite[Lemma 10.4.2]{meyerbook} оператор $\widehat{H}_2^T$ является сопряженным к $\widehat{H}_2$
-относительно скалярного произведения $\langle\langle \,.\,,\,.\,\rangle\rangle,$
-т.\,е. $\widehat{H}_2^T=\widehat{H}_2^*.$
-Теперь из (26) следует, что однородные слагаемые $H_k$ $(k\ge3)$ возмущения в ГНФМ --- это решения
-резонансного уравнения для $H_2.$ Значит, по определению 9 и по свойству 1 скалярного произведения
-%$\langle\langle \,.\,,\,.\,\rangle\rangle$
-рассматриваемая ГНФМ является ГМНФ, а ее возмущение $H-H_2$ состоит из резонансных многочленов.  $\square$
-
-В ГНФМ коэффициенты при резонансных элементах определяются решениями резонансного уравнения,
-в ГМНФ же на коэффициенты при резонансных элементах не налагается никаких дополнительных требований.
-
-Например, возмущение ГНФМ гамильтониана $(12_2)$ с $H_2$ из $(20)$ в отличие от (21) представляет собой ряд от резонансных
-многочленов $P_1,P_2,P_3$ из утверждения 6.
-\goodbreak
-
-\section{Гамильтонова нормальная форма}
-\subsection{НФ гамильтониана с однородной невозмущенной частью}
-
-Пусть $\{P_i\}_{i=1}^k$ --- базис подпространства $\mathfrak{J}^{r+m}$ $(m\geq1)$ однородных решений резонансного уравнения (14)
-пространства $\mathfrak{J}.$
-\begin{definition}\ \
-Множество мономов $\mathfrak{R}^m=\{R_i=x^{p^i}y^{q^i}:\ |p^i+q^i|=r+m\}_{i=1}^k,$
-где $p^i,\ q^i$ --- мультииндексы, назовем минимальным резонансным набором в порядке $r+m,$
-если определитель матрицы скалярных произведений $A=\{a_{ij}=\langle\langle P_i,R_j\rangle\rangle\}_{i,j=1}^k$
-отличен от нуля. Множество $\mathfrak{R}=\cup_{m\geq1}\mathfrak{R}^m$ назовем минимальным резонансным набором.
-\end{definition}
-
-\begin{definition}\ \
-Гамильтониан $(12_r)$ или порожденную им систему уравнений \linebreak
-Гамильтона $(3)$ будем называть гамильтоновой нормальной формой {\rm(ГНФ)}, если в возмущении $H-H_r$
-содержатся лишь резонансные члены из некоторого минимального \linebreak резонансного набора $\mathfrak{R},$
-т.\,е. $h^{(p,q)}=0,$ если $x^py^q\not\in\mathfrak{R}.$
-\end{definition}
-
-\noindent\textbf{Замечание 3} \ \ В случае $r=2$ и невозмущенного гамильтониана вида (17) с $\lambda\neq0$
-ГНФ по аналогии с негамильтоновыми нормальными формами можно называть резонансной (РГНФ),
-а в случае $r\ge3$ или $r=2$ и невозмущенного гамильтониана вида (17) с $\lambda=0$ --- обобщенной ГНФ (ОГНФ).
-
-\begin{theorem}\ \
-Пусть $\mathfrak{R}=\cup_{m\geq1}\mathfrak{R}^m$ --- минимальный резонансный набор.
-Тогда существует формальное каноническое преобразование, приводящее гамильтониан $(12_r)$ к {\rm ГНФ}, \linebreak
-в которой $h^{(p,q)}=0,$ если $x^py^q\not\in\mathfrak{R}.$
-\end{theorem}
-\textit{Доказательство}\ \ \
-Обозначим
-$c=\{c_i=\langle\langle H_{r+m},P_i\rangle\rangle\}_{i=1}^{k_m},$ $H'_{r+m}=\sum_{i=1}^{k_m} b_i R_i^m,$
-где $R_i^m\in\mathfrak{R}^m,$ $b=A^{-1}c,$ а $A$ --- матрица из определения 12.
-
-Тогда $\langle\langle H'_{r+m}-H_{r+m},P_i\rangle\rangle=\sum_{j=1}^{k_m}a_{ij}b_j-c_i=0$
-для всех $i=\overline{1,k_m}.$
-
-Дальнейшее доказательство проводится аналогично доказательству теоремы 2. \ $\square$
-
-\smallskip
-Приведем пример ГНФ, имеющей более простой вид, чем ГМНФ.
-
-\begin{proposition}
-Гамильтониан $(12_2)$ с невозмущенной частью $(20)$ при помощи формального канонического
-преобразования можно привести к {\rm ГНФ}
-$$H=H_2+\sum\limits_{p_1=0,\ p_2\ge q_1+2q_2}h^{(p,q)}x^p y^q.\eqno(27)$$
-\end{proposition}
-\textit{Доказательство}\ \ \
-Действительно, при доказательстве утверждения 6 было показано, что многочлены $P_1^{i_1}P_2^{i_2}P_3^{i_3},$ где
-$P_1=x_2,$ $P_2=x_2y_1-x_1^2/2,$ $P_3=x_2^2y_2+x_1x_2y_1-x_1^3/3,$ образуют базис в пространстве $\mathfrak{J}.$
-В качестве минимального резонансного набора можно выбрать множество мономов
-$$x_2^{i_1}(x_2y_1)^{i_2}(x_2^2y_2)^{i_3}=x_1^{p_1}x_2^{p_2}y_1^{q_1}y_2^{q_2},$$
-где $p_1=0,$ $p_2=i_1+i_2+2i_3,$ $q_1=i_2,$ $q_2=i_3,$
-так как каждый такой моном имеет отличное от нуля скалярное произведение с единственным базисным элементом $P_1^{i_1}P_2^{i_2}P_3^{i_3}.$
-Для завершения доказательства остается воспользоваться теоремой 5.
-$\square$
-
-\bigskip
-\noindent\textbf{Замечание 4} \ \
-В отличие от ГМНФ (21) также как и от ГНФМ, возмущение которой зависит от резонансных многочленов $P_1,P_2,P_3,$ возмущение ГНФ (27) не зависит от $x_1.$
-
-\subsection{НФ гамильтониана с квазиоднородной невозмущенной частью}
-
-До сих пор в качестве невозмущенной части любого гамильтониана выбирался однородный
-многочлен $H_r$ степени $r\ge 2.$ Однако, чем меньше он содержит переменных,
-или, что то же самое, чем больше компонент в невозмущенной части гамильтоновой системы тождественно
-равны нулю, тем меньше имеется возможностей для аннулирования членов в каждом порядке возмущения.
-
-Этот факт хорошо известен и проиллюстрирован в теории обобщенных (негамильтоновых) нормальных форм и
-будет подтвержден ниже в разделе 7.4.
-
-Идеальной выглядит ситуация, когда при помощи линейной канонической замены многочлен $H_r$ максимально упрощен,
-но при этом зависит от всех переменных. Такой невозмущенный гамильтониан естественно называть невырожденным.
-
-Для получения невырожденного гамильтониана можно использовать прием, широко применяемый в теории обобщенных
-нормальных форм. А именно, можно искусственно дополнить $H_r$ некоторыми слагаемыми
-из возмущения гамильтониана $(12_r),$ а часть слагаемых из $H_r$ отнести к возмущению, но только так,
-чтобы после введения новых, обобщенных, степеней, новый невозмущенный гамильтониан стал бы
-в известном смысле однородным и имел бы меньшую, чем новое возмущение обобщенную степень.
-
-Приведем несколько общих определений из \cite{basov03,basov} с соответствующими поправками,
-связанными с гамильтоновостью рассматриваемых систем.
-
-\begin{definition}\ \
-Вектор $\gamma=(\alpha,\beta),$ где $\alpha=(\alpha_1,\ldots,\alpha_n),$ $\beta=(\beta_1,\ldots,\beta_n),$
-назовем весом переменной $z=(x_1,\ldots,x_n,y_1,\ldots,y_n),$ если все компоненты $\gamma$ --- натуральные
-взаимно простые в совокупности такие, что $\alpha_i+\beta_i=\delta\ (\delta\ge 2,\ i=\overline{1,n}).$
-\end{definition}
-
-\begin{definition}\ \
-Обобщенной степенью монома $Z^{(p,q)}x^py^q,$ назовем скалярное произведение $\langle p,\alpha\rangle+\langle q,\beta\rangle.$
-\end{definition}
-\begin{definition}\ \
-Многочлен $Q(z)$ будем называть квазиоднородным многочленом {\rm (КОМ)} степени $\chi$ с весом $\gamma$
-и обозначать $Q^{[\chi]}_\gamma(z),$ если он содержит только мономы обобщенной степени $\chi.$
-\end{definition}
-
-Все определения предыдущих пунктов переносятся на случай
-квазиоднородного невозмущенного гамильтониана следующим образом: вместо обычных степеней следует рассматривать
-обобщенные с весом $\gamma,$ а вместо разложений в сумму однородных слагаемых рассматривать
-разложения в сумму квазиоднородных слагаемых. В частности, под порядком ряда $f$ следует понимать наименьшее $r$ такое, что
-$f^{[r]}_\gamma\not\equiv0.$
-
-Скобка Пуассона двух КОМ обобщенных степеней $k,l$ также является КОМ обобщенной степени $k+l-\delta.$
-Следовательно, для каждого ряда $f$ порядка не меньше, чем $\delta+1$ на пространстве рядов определен оператор $exp(\widehat{f}\,),$
-задающий преобразование Ли.
-
-Из приведенных определений и из свойств скалярного произведения $\langle\langle \,.\,,\,.\,\rangle\rangle$
-вытекает, что пространство $\mathfrak{P}$ разбивается в прямую сумму ортогональных подпространств
-$\mathfrak{P}_\gamma^{[k]}$ КОМ обобщенной степени $k$ с весом $\gamma.$
-
-Резонансное уравнение для квазиоднородного невозмущенного гамильтониана $H_\gamma^{[\chi]}$
-принимает вид
-$$\left(\widehat{H}_\gamma^{[\chi]}\right)^*P=0,\quad P\in\mathfrak{P},$$
-а пространство его решений $\mathfrak{J}$ раскладывается в прямую сумму ортогональных подпространств
-$\mathfrak{J}_\gamma^{[k]}$ квазиоднородных решений обобщенной степени $k$ с весом $\gamma.$
-
-Везде вместо пространств $\mathfrak{P}^k$ и $\mathfrak{J}^{k}$ следует
-рассматривать пространства $\mathfrak{P}_\gamma^{[k]}$ и $\mathfrak{J}_\gamma^{[k]}.$
-
-В определениях ГМНФ и ГНФ следует заменить $H_r$ на $H_\gamma^{[\chi]},$
-а в определении минимального резонансного набора $\mathfrak{R}^m$ следует заменить на
-$\mathfrak{R}_\gamma^{[m]}=\{R_i=x^{p^i}y^{q^i}:\ \langle\alpha,p^i\rangle+\langle\beta,q^i\rangle=r+m\}_{i=1}^k.$
-
-Гамильтониан $(12_r),$ переразложенный по обобщенным степеням, будем обозначать через $H_\gamma,$ а вместо ГНФ и ГМНФ
-будем писать $\hbox{\rm ГНФ}_\gamma$ и $\hbox{\rm ГМНФ}_\gamma.$
-
-С учетом вышеизложенного теоремы 2 и 5 также переносятся на случай
-квазиоднородного невозмущенного гамильтониана.
-
-\section{ГНФ некоторых систем с одной степенью свободы}
-
-Будем рассматривать случай $n=1$ и $\mathbb{K}=\mathbb{R}.$ По-прежнему, $H_r$ --- невозмущенная часть
-гамильтониана  $(12_r):$ $H(x,y)=H_r(x,y)+\sum_{|p+q|\geq r+1}h^{(p,q)}x^p y^q\quad(r\geq2).$
-
-Для краткости в формулах для ГНФ и ГМНФ, приведенных далее, будем считать, что слагаемые возмущения
-имеют степень, большую степени невозмущенного гамильтониана, опуская при этом соответствующие неравенства
-в пределах суммирования.
-
-\subsection{Невозмущенный гамильтониан --- моном от одной переменной}
-
-Пусть $H_r$ не зависит от одной из переменных, скажем, от $x.$
-    \begin{theorem}\ \
-    {\rm ГНФ} с вырожденным невозмущенным гамильтонианом $H_r=h y^r$\linebreak
-    $(h\in\mathbb{R}\backslash\{0\})$ совпадает с {\rm ГМНФ} и имеет вид
-    $$H=hy^r+\sum\limits_{q\leq r-2}h^{(p,q)}x^py^q.\eqno(28)$$
-    \end{theorem}
-    \textit{Доказательство}\ \ \
-    Действительно, согласно $(13)$ \
-    $\widehat{H}_r^*=-x(\partial H_r/\partial y)^*=-hrx\partial^{r-1}/\partial y^{r-1}$ и
-    уравнение $(14)$ эквивалентно $\partial^{r-1} P/\partial y^{r-1}=0.$
-    Его решения --- полиномы степени не выше $r-2$ по $y.$ Отсюда по определению 9 получаем ГМНФ $(28).$
-
-Одночлены $\{P_i=x^{p_i}y^{q_i}|\ p_i=r+m+1-i,\ q_i=i-1\}_{i=1}^{r-1}$ составляют базис пространства
-полиномиальных решений $(14)$ степени $r+m,$ и согласно определению 11 они же образуют
-минимальный резонансный набор в порядке $r+m.$
-Поэтому полученная ГМНФ по определению 13 является ГНФ. \ $\square$
-
-Гамильтониан (28) можно записать стандартно в виде суммы однородных слагаемых:
-$$H=hy^r+\sum\limits_{k=r+1}^\infty\sum\limits_{q=0}^{r-2}h^{(k-q,q)}x^{k-q}y^q.$$
-
-Рассмотрим два важных частных случая ГНФ (28), а именно, $r=2$ и $r=3.$
-
-1) При $r=2$ возмущение в (28), очевидно, не зависит от $y,$
-а сама ГНФ (28) совпадает с соответствующей ГНФМ (см. \cite[с. 263]{meyerbook}) и имеет вид
-$$H=hy^2+\sum\limits_{k=3}^\infty h^{(k,0)}x^k.\eqno(28_2)$$
-
-2) Пусть теперь $r=3$ и $h=1/3.$ Тогда ГНФ (28) имеет вид
-$$H=y^3/3+\sum\limits_{k=4}^\infty (h^{(k,0)}x^k+h^{(k-1,1)}x^{k-1}y).\eqno(28_3)$$
-Гамильтонова система, порожденная ГНФ $(28_3),$ имеет вид
-$$\dot{x}=y^2+\sum_{k=3}^\infty h^{(k,1)}x^k,\quad
-    \dot{y}=-\sum_{k=3}^\infty((k+1)h^{(k+1,0)}x^k+k h^{(k,1)}x^{k-1}y).\eqno(28^\texttt{s}_3)$$
-
-Согласно \cite[Т. 11]{fed}, произвольная (негамильтонова) двумерная система дифференциальных уравнений с невозмущенной частью
-$(y^2,0)$ формально эквивалентна одной из двух возможных обобщенных нормальных форм (ОНФ):
-$$\dot x=y^2+\sum_{p=2}^\infty(X^{(p+1,0)}x^{p+1}+X^{(p,1)}x^py),\ \
-\dot y=\sum_{p=2}^\infty(Y^{(p,1)}x^py+Y^{(p+1,0)}x^{p+1});\eqno(28^{\texttt{onf}}_{3.1})$$
-$$\dot x=y^2+\sum_{p=2}^\infty X^{(p+1,0)}x^{p+1},\ \
-\dot y=\sum_{p=2}^\infty
-  (Y^{(p-1,2)}x^{p-1}y^2+Y^{(p,1)}x^py+Y^{(p+1,0)}x^{p+1}).\eqno(28^{\texttt{onf}}_{3.2})$$
-
-Первая компонента возмущения в $(28^\texttt{s}_3)$ совпадает с первой компонентой возмущения
-в ОНФ $(28^{\texttt{onf}}_{3.2}),$ а вторая --- со второй компонентой возмущения из $(28^{\texttt{onf}}_{3.1}).$
-
-Таким образом, приходим к выводу, что за счет условия гамильтоновости исходной системы
-с невозмущенной частью $(y^2,0)$ становится возможным
-прийти к ОНФ с меньшим числом отличных от нуля резонансных слагаемых в каждом порядке возмущения.
-
-Отметим тот факт, что при определении ГНФ мы рассматриваем эквивалентность относительно
-группы формальных канонических преобразований,
-в то время как в определении ОНФ (см. \cite{basov03}) рассматривается эквивалентность
-относительно более широкой группы обратимых формальных преобразований.
-
-\subsection{Невозмущенный гамильтониан --- моном от двух переменных}
-
-\begin{theorem}\ \
-{\rm ГНФ} с невырожденным
-невозмущенным гамильтонианом $H_r=hx^my^l$ с $m+l=r,$ $d=\hbox{\rm НОД\,}(m,l)$ $(m,l\ge1,\ h\in\mathbb{R}\backslash \{0\})$
-совпадает с {\rm ГМНФ} и имеет вид
-$$H=hx^my^l+\sum\limits_{p\leq m-2}h^{(p,q)}x^py^q+
-    \sum\limits_{\scriptsize\begin{matrix}p\geq m-1\\ q\leq l-2\\\end{matrix}}h^{(p,q)}x^py^q+
-    \sum\limits_{j=d}^\infty h^{(jm/d-1,jl/d-1)}x^{jm/d-1}y^{jl/d-1}.\eqno(29)$$
-%    а соответствующая система уравнений
-%    $$\begin{matrix}
-%    \dot{x}=lhx^ky^{l-1}+\sum\limits_{p\leq k-2}(q+1)h^{(p,q+1)}x^py^q+
-%    \sum\limits_{\scriptsize\begin{matrix}p\geq k-1\\ q\leq l-3\\\end{matrix}}(q+1)h^{(p,q+1)}x^py^q+\\
-%    +\sum\limits_{j=d}^\infty (jl/d-1)h^{(jk/d-1,jl/d-1)}x^{jk/d-1}y^{jl/d-2},\\
-%    \dot{y}=-khx^{k-1}y^l-\sum\limits_{p\leq k-3}(p+1)h^{(p+1,q)}x^py^q-
-%    \sum\limits_{\scriptsize\begin{matrix}p\geq k-2\\ q\leq l-2\\\end{matrix}}(p+1)h^{(p+1,q)}x^py^q-\\
-%    -\sum\limits_{j=d}^\infty (jk/d-1)h^{(jk/d-1,jl/d-1)}x^{jk/d-2}y^{jl/d-1},\\
-%    \end{matrix}$$
-%    где под знаками суммирования $p+q\geq r,\ j\geq d(r+3)/r.$
-    \end{theorem}
-    \textit{Доказательство}\ \ \
-    Согласно $(13)$ \
-    $\widehat{H}_r^*=(\partial H_r/\partial x)^*y-(\partial H_r/\partial y)^*x=
-    hm\partial^{m-1}_x\partial^{l}_y y-hl\partial^{m}_x\partial^{l-1}_y x,$
-поэтому уравнение $(14)$ эквивалентно уравнению
-    $$\partial_x^{m-1}\partial_y^{l-1}(m\partial_yyP-l\partial_xxP)=0\quad
-    (\partial_x=\partial/\partial x,\ \partial_y=\partial/\partial y).$$
-
-Ищем решения этого уравнения в виде $P=x^py^q.$ Имеем:
-$$\partial_x^{m-1}\partial_y^{l-1}(m(q+1)-l(p+1))x^py^q=0.$$
-
-Полученное равенство выполняется в одном из трех взаимоисключающих случаев:
-
-1) $p\leq m-2;$ \ 2) $p\geq m-1,$ $q\leq l-2;$ \ 3) $p=jm/d-1,$ $q=jl/d-1,$ где $j\geq d.$
-
-Решения с указанными показателями образуют базис в пространстве $\mathfrak{J},$
-а значит, по определению 9 гамильтониан (29) является ГМНФ.
-
-Как и в предыдущем примере, минимальный резонансный набор в каждом порядке определяется единственным
-образом и состоит из найденных мономиальных решений. Поэтому полученная ГМНФ является ГНФ. $\square$
-
-Перепишем гамильтониан (29) в виде суммы однородных слагаемых:
-$$H=hx^my^l+\sum\limits_{k=r+1}^\infty\left(\sum\limits_{p=0}^{m-2}h^{(p,k-p)}x^py^{k-p}+
-x^{m-1}\sum\limits_{q=0}^{l-2}h^{(k+m-1-q,q)}x^{k-q}y^q+\eta_k(x,y)\right),$$
-где $\eta_{k-2}(x,y)=\begin{cases}h^{(km/r-1,kl/r-1)}x^{km/r-1}y^{kl/r-1}, &\text{если }k\,\vdots\,(r/d);\\
-0, &\text{если }k\!\not\vdots\,(r/d).\end{cases}$
-
-Рассмотрим два важных частных случая.
-
-1) Пусть $r=2.$
-Тогда в ГНФ (29) индексы $l,\,m=1,$ поэтому $H_2=hxy,$ первые две суммы в правой части исчезают,
-а третья сумма состоит из степеней произведения $xy.$
-Следовательно, ГНФ (29) имеет вид
-$$H=hxy+\sum\limits_{j=2}^\infty h^{(j,j)}x^jy^j.\eqno (29_2)$$
-
-Полученный результат согласуется с \cite[Corollary 10.4.1]{meyerbook}.
-В этом случае ГНФ $(29_2)$ совпадает с ГНФМ и ГНФБ.
-
-2) Пусть $r=3,\ l=1,\ m=2,\ h=-1/2.$
-Тогда $H_3=-x^2y/2$ и ГНФ (29) имеет вид
-$$H=-\frac12\,x^2y+\sum_{k=4}^\infty h^{(0,k)}y^k+\sum_{j=1}^\infty h^{(2j+1,j)}x^{2j+1}y^j,\eqno (29_3)$$
-%$$H=(-1/2)x^2y+\sum_{k=4}^\infty(h^{(0,k)}y^k+\eta_k(x,y)),$$
-%где $\eta_{k-2}=\begin{cases}h^{(2k/3-1,k/3-1)}x^{2k/3-1}y^{k/3-1}, &\text{если }k\,\vdots\,3;\\
-%0, &\text{если }k\!\not\vdots\,3.\end{cases}$
-а нормальная форма гамильтоновой системы, порожденная ГНФ $(29_3),$ имеет вид
-$$\dot{x}=-\frac12\,x^2+\sum_{k=3}^\infty (k+1)h^{(0,k+1)}y^k+
-  \sum_{j=1}^\infty jh^{(2j+1,j)}x^{2j+1}y^{j-1},\
-  \dot{y}=xy-\sum_{j=1}^\infty (2j+1)h^{(2j+1,j)}x^{2j}y^j.\eqno (29_3^\texttt{s})$$
-%где $\cfrac{\partial\eta_{k-2}}{\partial x}=\begin{cases}(2k/3-1)h^{(2k/3-1,k/3-1)}x^{2k/3-2}y^{k/3-1}, &\text{если }k\,\vdots\,3;\\
-%0, &\text{если }k\!\not\vdots\,3,\end{cases}$ и\\
-%$\cfrac{\partial\eta_{k-2}}{\partial y}=\begin{cases}(k/3-1)h^{(2k/3-1,k/3-1)}x^{2k/3-1}y^{k/3-2}, &\text{если }k\,\vdots\,3;\\
-%0, &\text{если }k\!\not\vdots\,3.\end{cases}$
-
-Интересно сравнить систему $(29_3^\texttt{s})$ с ОНФ системы, имеющей ту же гамильтонову невозмущенную часть
-%, что и $(29_3^\texttt{s}),$
-и произвольное (не обязательно гамильтоново) возмущение.
-
-Дело в том, что невозмущенная часть системы $(29_3^\texttt{s})$ --- векторный многочлен $(-x^2/2,xy)$
-является одной из девятнадцати линейно неэквивалентных канонических форм,
-к которым линейной неособой заменой сводится невозмущенная часть двумерной системы,
-представленная произвольным невырожденным векторным квадратичным многочленом
-(см. \cite[разд.\,5.2]{skit}, \cite[\S\,2]{fed}).
-А именно, согласно введенной в \cite{fed} классификации  $(-x^2/2,xy)=\hbox{КФ}_1^1$ с $u=-1/2.$
-В \cite[\S\,5]{skit} в явном виде указаны все ОНФ, формально эквивалентные произвольной системе
-с невозмущенной частью $(\alpha x^2,xy).$
-
-\subsection{Невозмущенный гамильтониан --- неприводимый двучлен \newline со взаимно-простыми показателями}
-Рассмотрим неприводимый двучлен $(h_1/\beta) x^\beta-(h_2/\alpha) y^\alpha,$ в котором $h_1 h_2\neq0$ и $\hbox{НОД\,}(\alpha,\beta)=1.$
-По определению 16 --- это КОМ обобщенной степени $\alpha\beta$ с весом $(\alpha,\beta).$
-
-Рассмотрим гамильтониан $H_{\gamma}$ с квазиоднородной невозмущенной частью
-    $$H^{[\chi]}_{\gamma}=(h_1/\beta) x^\beta-(h_2/\alpha) y^\alpha,\eqno(30)$$ где $\hbox{НОД\,}(\alpha,\beta)=1,$
-    $h_1 h_2\neq0,$  $\chi=\alpha\beta$ с весом $\gamma=(\alpha,\beta).$
-
-    Квазиоднородный невозмущенный гамильтониан (30) является невырожденным.
-    Можно считать, что он получен из невозмущенного гамильтониана $H_r=hy^r$ (если $\alpha<\beta$) добавлением слагаемого возмущения
-    гамильтониана (28), содержащего $x.$
-
-    Резонансное уравнение для квазиоднородного невозмущенного гамильтониана $H^{[\chi]}_{(\alpha,\beta)}$ имеет вид
-    $$h_1y\partial_x^{\beta-1}P+h_2x\partial_y^{\alpha-1}P=0,\quad P\in\mathfrak{P}.\eqno(31)$$
-
-В обозначениях, принятых в пункте 6.2, $\mathfrak{J}_{(\alpha,\beta)}^{[k]}$ ---
-это пространство квазиоднородных решений уравнения (31) обобщенной степени $k$ с весом $(\alpha,\beta).$
-
-\begin{lemma}\ \
-$x^py^q\in\mathfrak{J}_{(\alpha,\beta)}^{[k]}$ тогда
-и только тогда, когда $k=\alpha p+\beta q,$ $p\le\beta-2$ и $q\le\alpha-2.$
-\end{lemma}
-
-    \noindent\textit{Доказательство}\ \ \
-    Проверяется непосредственной подстановкой $x^py^q$ в (31). $\square$
-
-\begin{lemma}\ \
-Пусть $x^py^q\in\mathfrak{J}_{(\alpha,\beta)}^{[k]},$ а $x^{p'}y^{q'}\in\mathfrak{J}_{(\alpha,\beta)}^{[k']}.$
-Тогда либо $(p,q)=(p',q'),$ либо\linebreak $k\not\equiv k'\!\!\mod\chi.$
-\end{lemma}
-
-\noindent\textit{Доказательство}\ \ \
-Пусть $\alpha p+\beta q\equiv\alpha p'+\beta q'\mod\chi.$
-    Тогда $\alpha p\equiv\alpha p' \mod\beta$ и \linebreak $\beta q\equiv\beta q'\mod\alpha.$ Поскольку $\alpha$ и $\beta$ взаимно просты, последние равенства эквивалентны следующим $$p\equiv p'\mod\beta,\quad q\equiv q'\mod\alpha.\eqno(32)$$
-
-Пусть теперь $x^py^q\in\mathfrak{J}_{(\alpha,\beta)}^{[k]},$
-$x^{p'}y^{q'}\in\mathfrak{J}_{(\alpha,\beta)}^{[k']}$ и
-$k\equiv k'\mod\chi.$
-По лемме 2 $p,p'\le\beta-2,$ $q,q'\le\alpha-2.$ Отсюда и из $(32)$
-следует, что $(p,q)=(p',q').$ $\square$
-
-\begin{lemma}\ \
-Пусть $P\in\mathfrak{J}_{(\alpha,\beta)}^{[k]}$ и $P\not\equiv0.$
-Тогда существует единственное $Q\in\mathfrak{J}_{(\alpha,\beta)}^{[k+\chi]}$ такое, что
-$$xP=h_1\partial_x^{\beta-1}Q,\quad yP=-h_2\partial_y^{\alpha-1}Q.\eqno(33)$$
-
-Более того, если $\mathfrak{J}_{(\alpha,\beta)}^{[k]}\ne\{0\},$ то существует такое $k'\ge0,$ что
-$k\equiv k'\mod\chi$ и пространство $\mathfrak{J}_{(\alpha,\beta)}^{[k']}$
-содержит мономиальное решение уравнения $(31).$  При этом имеет место
-изоморфизм пространств $\mathfrak{J}_{(\alpha,\beta)}^{[k]}$ и $\mathfrak{J}_{(\alpha,\beta)}^{[k']}.$
-\end{lemma}
-
-    \noindent\textit{Доказательство}\ \ \
-    Существование Q.\ \
-    Положим
-    $$Q=\cfrac{1}{h_1}\underbrace{\int\cdots\int}_{\beta-1\text{ раз }}xPdx^{\beta-1}+
-    \sum\limits_{j=0}^{\beta-2}R_j(y)x^j,$$
-    где $R_j$ --- произвольные полиномы. Тогда первое из равенств $(33)$ выполняется тождественно, а после подстановки
-    $Q$ во второе равенство, в силу уравнения $(31),$ получим
-    $$h_2\partial_y^{\alpha-1}Q=-y\underbrace{\int\cdots\int}_{\beta-1\text{ раз }}\partial_x^{\beta-1}Pdx^{\beta-1}+
-    \sum\limits_{j=0}^{\beta-2}h_2x^j\partial_y^{\alpha-1}R_j(y).$$
-    Для каждой первообразной в первом слагаемом можно выбрать такие полиномы $R_j$, чтобы выполнялось
-    второе равенство в $(33),$ что доказывает существование полинома $Q,$ удовлетворяющего (33). В свою очередь из (33)
-    и из квазиоднородности $P$ следует, что $Q$ может быть выбран квазиоднородным.
-
-    Умножая первое равенство из $(33)$ на $y$ и
-    вычитая второе, умноженное на $x,$ получаем, что $Q$ удовлетворяет уравнению (31).
-
-    Единственность $Q.$\ \
-    Пусть для $Q,Q'\in\mathfrak{J}_{(\alpha,\beta)}^{[k+\chi]}$
-    выполняются соотношения (33) с одинаковым $P\in\mathfrak{J}_{(\alpha,\beta)}^{[k]},$ $P\not\equiv0.$
-    Тогда $\partial_x^{\beta-1}(Q-Q')=0$ и $\partial_y^{\alpha-1}(Q-Q')=0.$
-    Отсюда по лемме 2 решения $Q$ и $Q'$ могут отличаться только на
-    мономиальные решения резонансного уравнения (31), а из квазиоднородности $Q-Q'$
-    и леммы 3 следует, что $$Q-Q'=Cx^py^q,\eqno(34)$$ где $k+\chi=\alpha p+\beta q,$
-    $p\le\beta-2$ и $q\le\alpha-2.$
-
-    Обозначим $P_1=P.$ Построим последовательность  $P_j\in\mathfrak{J}_{(\alpha,\beta)}^{[k-(j-1)\chi]},$
-    последовательно применяя соотношения (33):
-    $$xP_{j+1}=h_1\partial_x^{\beta-1}P_j,\quad yP_{j+1}=-h_2\partial_y^{\alpha-1}P_j.$$
-
-В силу резонансного уравнения (31) все $P_j$ определяются однозначно.
-
-Существует такой номер $m\in\{1,\ldots,[k/\chi]+1\},$ что
-$P_m\not\equiv0,$ а $P_{m+1}\equiv0.$
-
-Из соотношений (33) вытекает,
-что $P_m$ --- мономиальное решение обобщенной степени $k-(m-1)\chi<k+\chi.$
-Поэтому согласно леммы 3 в (34) \,$C=0,$ что равносильно $Q=Q'.$
-
-Попутно мы нашли для каждого немономиального КОМ $Q\in\mathfrak{J}_{(\alpha,\beta)}$ (немономиальность $Q$
-следует из $P\not\equiv0$ и леммы 2) единственное мономиальное
-решение $P_m,$ из
-которого $Q$ получается $m$-кратным применением соотношений (33), что задает взаимно-однозначное соответствие
-между решениями $Q\in\mathfrak{J}_{(\alpha,\beta)}^{[k+\chi]}$ и мономиальными решениями обобщенной степени $k-(m-1)\chi$ уравнения (31).
-Поскольку соотношения (33) линейны по $P$ и $Q,$ это соответствие является изоморфизмом пространств.
-     $\square$
-
-\begin{theorem}\ \
-{\rm ГМНФ} для квазиоднородного невозмущенного гамильтониана $(30)$
-имеет вид
-    $$H=(h_1/\beta) x^\beta-(h_2/\alpha) y^\alpha+\sum\limits_{\scriptsize\begin{matrix}
-    p\not\equiv-1\ {\rm mod}\,\beta\\ q\not\equiv-1\ {\rm mod}\,\alpha\\\end{matrix}}h^{(p,q)}x^py^q\quad(\alpha p+\beta q\ge\chi+1),\eqno(35)$$
-    а любая {\rm ГНФ} представляется в виде
-    $$H=H^{[\chi]}_{(\alpha,\beta)}+\sum\limits_{k=\chi+1}^\infty H^{[k]}_{(\alpha,\beta)},\eqno(36)$$
-    где $H^{[k]}_{(\alpha,\beta)}=h^{(p,q)}x^py^q$ с $k=\alpha p+\beta q\ge\chi+1$ и $p\not\equiv-1\!\!\mod\beta,$
-    $q\not\equiv-1\!\!\mod\alpha.$
-\end{theorem}
-\noindent\textit{Доказательство}\ \ \
-    Пусть моном $x^py^q$ входит в $P\in\mathfrak{J}_{(\alpha,\beta)}^{[k]}$
-    $(k=\alpha p+\beta q\ge0)$ с отличным от нуля коэффициентом.
-    Значит, $\langle\langle P,x^py^q\rangle\rangle\neq0.$
-
-По лемме 4 существует единственное $Q\in\mathfrak{J}_{(\alpha,\beta)}^{[k+\chi]}$ такое, что выполнены
-равенства (33). Поэтому
-    $$\langle\langle xP,x^{p+1}y^q\rangle\rangle\stackrel{(33)}{=}
-    \langle\langle h_1\partial_x^{\beta-1}Q,x^{p+1}y^q\rangle\rangle\neq0,\quad
-   \langle\langle
-     yP,x^py^{q+1}\rangle\rangle\stackrel{(33)}{=}
-     \langle\langle-h_2\partial_y^{\alpha-1}Q,x^py^{q+1}\rangle\rangle\neq0.$$
-
-    Пользуясь свойством 2 скалярного произведения
-    $\langle\langle\,.\,,\,.\,\rangle\rangle,$ получаем
-    $$\langle\langle Q,x^{p+\beta}y^q\rangle\rangle\neq0,\quad
-    \langle\langle Q,x^py^{q+\alpha}\rangle\rangle\neq0.\eqno(37)$$
-
-    Пусть моном $x^{p+\beta}y^q$ входит в немономиальный КОМ $Q\in\mathfrak{J}_{(\alpha,\beta)}^{[k+\chi]}$
-    с отличным от нуля коэффициентом,
-    т.\,е. $\langle\langle Q,x^{p+\beta}y^q\rangle\rangle\neq0.$
-    Тогда по лемме 4
-    существует $P\in\mathfrak{J}_{(\alpha,\beta)}^{[k]},$ $P\not\equiv0,$
-    удовлетворяющее (33). Пользуясь соотношениями (33) и свойством 2 скалярного произведения
-    $\langle\langle\,.\,,\,.\,\rangle\rangle,$ получаем
-    $\langle\langle h_1\partial_x^{\beta-1}Q,x^{p+1}y^q\rangle\rangle\stackrel{(33)}{=}
-    \langle\langle xP,x^{p+1}y^q\rangle\rangle\neq0,$ откуда
-    $\langle\langle P,x^py^q\rangle\rangle\neq0.$ А значит, и
-    $\langle\langle Q,x^py^{q+\alpha}\rangle\rangle\neq0$ согласно (37).
-
-    Аналогично доказывается, что из $\langle\langle Q,x^py^{q+\alpha}\rangle\rangle\neq0$ следует $\langle\langle P,x^py^q\rangle\rangle\neq0$ и $\langle\langle Q,x^{p+\beta}y^q\rangle\rangle\neq0.$
-
-
-    Следовательно, для каждых $p$ и $q$ таких,
-    что $\alpha p+\beta q\geq \chi+1,$
-    мономы $x^py^q,$ $x^{p+\beta}y^q,$ $x^py^{q+\alpha}$ либо все резонансные, либо все нерезонансные.
-
-    Отсюда, с учетом леммы 4, получаем, что резонансные элементы
-    должны иметь вид $x^{p+j\beta}y^{q+k\alpha},$ где
-     $x^py^q\in\mathfrak{J}_{(\alpha,\beta)}.$
-
-    Следовательно, по лемме 2 \,ГМНФ с невозмущенной частью (30) имеет вид (35).
-
-    Из лемм 3 и 4 вытекает, что для каждого $k\ge0$ справедливо неравенство $\dim\mathfrak{J}_{(\alpha,\beta)}^{[k]}\le1.$
-
-    Следовательно, всякий минимальный резонансный набор получается выбором
-    одного резонансного элемента в каждой обобщенной степени возмущения ГМНФ (35).
-    Отсюда приходим к ГНФ (36). $\square$
-
-\begin{corollary}
-    Множество
-    $\mathfrak{R}=\{x^{p+k\beta}y^{q}|\ p\leq\beta-2,\ q\leq\alpha-2,\ k\geq0\}$ представляет собой минимальный резонансный набор
-    для невозмущенного гамильтониана $(30)$ согласно определению $12$, а по определению $13$ ряд
-    $$H=(h_1/\beta) x^\beta-(h_2/\alpha) y^\alpha+\sum\limits_{\scriptsize\begin{matrix}
-    p\not\equiv-1\ {\rm mod}\,\beta\\ q\leq\alpha-2\\\end{matrix}}h^{(p,q)}x^py^q\eqno(38)$$
-    является ГНФ, соответствующей выбранному минимальному резонансному набору $\mathfrak{R}.$
-\end{corollary}
-
-\subsection{Сравнение ГНФ с вырожденным и невырожденным \newline невозмущенными гамильтонианами}
-    Рассмотрим частный случай гамильтонианов из разделов 7.1,\,7.3, а именно, гамильтониан
-    $$H=y^2/2-x^3/3+h^{(2,1)}x^2y+h^{(1,2)}xy^2+h^{(0,3)}y^3+\sum_{p+q\geq4}h^{(p,q)}x^py^q.$$
-
-    Однородный невозмущенный гамильтониан
-    имеет вид $H_2=y^2/2.$ Он не зависит от $x,$ и по теореме 6 \ ГНФ совпадает с ГМНФ и имеет вид
-    $$H=y^2/2+\sum\nolimits_{k=3}^\infty h^{(k,0)}x^k.\eqno(39)$$
-
-    С другой стороны, в качестве невозмущенной части гамильтониана $H$ можно выбрать невырожденный КОМ
-    $H^{[6]}_{(2,3)}=y^2/2-x^3/3$ (см. определение 16).
-
-    Тогда по теореме 8 \ с $\chi=6,$ $(\alpha,\beta)=(2,3)$
-    получаем следующую ГМНФ:
-    $$H=y^2/2-x^3/3+\sum\limits_{\scriptsize\begin{matrix}
-    p\not\equiv2\!\!\!\mod{3}\\ q\equiv0\!\!\!\mod{2}\\\end{matrix}}h^{(p,q)}x^py^q\qquad(2p+3q\geq7).$$
-%    Соответствующая гамильтонова система имеет вид
-%    $$\dot{x}=y+\sum\limits_{\scriptsize\begin{matrix}
-%    p\not\equiv2\!\!\!\mod{3}\\ q\equiv1\!\!\!\mod{2}\\\end{matrix}}(q+1)h^{(p,q+1)}x^py^q,
-%    \quad \dot{y}=x^2-\sum\limits_{\scriptsize\begin{matrix}
-%    p\not\equiv1\!\!\!\mod{3}\\ q\equiv0\!\!\!\mod{2}\\\end{matrix}}(p+1)h^{(p+1,q)}x^py^q.$$
-    А ГНФ (36), соответствующая выбранному в следствии 1 минимальному резонансному набору $\mathfrak{R}$ с
-    $\chi=6,\ (\alpha,\beta)=(2,3),$ согласно $(38)$ имеет вид
-%    $$H=y^2/2-x^3/3+\sum\limits_{p\not\equiv2\ {\rm mod}3}h^{(p,0)}x^p.\eqno(40)$$
-%    $$H=y^2/2-x^3/3+\sum_{p\not\equiv2\!\!\!\mod{3}}h^{(p,0)}x^p.\eqno(40)$$
-$$H=y^2/2-x^3/3+\sum_{j=1}^\infty (h^{(3j+1,0)}x^{3j+1}+h^{(3j+3,0)}x^{3j+3})\eqno(40)$$
-и порождает гамильтонову систему
-%    $$\dot{x}=y,\quad \dot{y}=x^2-\sum_{p\not\equiv1\ {\rm mod}3}(p+1)h^{(p+1,0)}x^p.\eqno(41)$$
-$$\dot{x}=y,\quad
-  \dot{y}=x^2-\sum_{j=1}^\infty\left((3j+1)h^{(3j+1,0)}x^{3j}+(3j+3)h^{(3j+3,0)}x^{3j+2}\right).\eqno(41)$$
-
-Сравнивая выражения $(39)$ и $(40),$ видим, что появление в невозмущенном гамильтониане слагаемого $(-x^3/3)$
-вместе с подходящим выбором минимального резонансного набора позволяет усилить гамильтонову нормальную форму.
-
-В работе \cite{basov} двумерная система с линейно-квадратичной невозмущенной частью $(y,x^2)$ рассмотрена
-относительно группы общих (не канонических) формальных преобразований.
-Согласно \cite[\S 5, т.\,4]{basov},
-такая система может быть преобразована в ОНФ с той же невозмущенной частью, но в которой для любого
-$k\geq1$ все коэффициенты форм $Y^{[6k-2]},$ $Y^{[6k-1]},$
-\goodbreak
-
-\noindent $Y^{[6k+1]}$ равны нулю,
-а среди коэффициентов форм $Y^{[6k-4]},$ $Y^{[6k-3]},$ $Y^{[6k]}$ равны нулю все,
-кроме, возможно, одного коэффициента в каждой из форм.
-Такая ОНФ отличается от ГНФ $(41),$ в которой после переразложения по обобщенным степеням в обозначениях
-работы \cite{basov} могут быть отличны от нуля векторы $Y^{[6k-3]}$ и $Y^{[6k+1]},$
-а остальные равны нулю.
-
-Различие нормальных форм объясняется тем, что в первом случае условиями на нормальную форму
-являются гамильтоновость исходной системы с одной стороны и эквивалентность относительно
-группы формальных канонических преобразований с другой.
-Во втором случае условие гамильтоновости системы снимается, вместе с тем рассматривается
-эквивалентность относительно более широкой группы формальных преобразований.
-
-\begin{thebibliography}{99}
-
-\bibitem{basov03}
-В.\,В.\,Басов.
-Обобщенная нормальная форма и формальная эквивалентность систем дифференциальных уравнений
-с нулевыми характеристическими числами.\; //\;Дифференциальные уравнения. --- 2003.--- Т. 39,
-\textnumero\;2.--- С. 154--170.
-
-\bibitem{skit} В.\,В.\,Басов,\ А.\,В.\,Скитович. \ Обобщенная нормальная форма и формальная
-эквивалентность двумерных систем с нулевым квадратичным приближением, I //
-Дифференциальные\,уравнения.--- 2003.--- Т. 39, \textnumero\;8.--- С.\,1016--1029.
-
-\bibitem{fed} В.\,В.\,Басов,\ Е.\,В.\,Федорова. \ Двумерные вещественные системы ОДУ
-с квадратичной невозмущенной частью: классификация и вырожденные обобщенные нормальные формы//
-Дифференциальные\,уравнения и процессы управления (Эл. журнал http://www.math.spbu.ru/diffjournal).---
-2010.--- \textnumero\;4.--- С.\,49--85.
-
-\bibitem{basov}
-В.\,В.\,Басов,\ А.\,А.\,Федотов. \ Обобщенная нормальная форма двумерных систем ОДУ
-с линейно-квадратичной невозмущенной частью\; //\;Вестник СПбГУ. Сер.\;1.--- 2007.--- вып.\;1.--- С.\,25--30.
-
-\bibitem{bruno} А.\,Д.\,Брюно. \ Нормальная форма системы Гамильтона\;//\;Успехи мат.\,наук.--- 1988.---
-Т.\,43, \textnumero\;1.--- С.\,23--56.
-
-\bibitem{zhelobenko} Д.\,П.\,Желобенко. Представления редуктивных алгебр Ли.--- М.: Физматлит,
-1994.--- 352 с.
-
-\bibitem{postnikov} М.\,М.\,Постников. Лекции по геометрии. Семестр V. Группы и алгебры Ли.--- М.: \linebreak
-Наука, 1982.--- 448 с. 
-
-\bibitem{deprit} A.\,Deprit. Canonical transformations depending on a small parameter\;//\;Celestial Mechanics.---
-1969.--- V. 1, \textnumero\;1.--- P. 12--30.
-
-\bibitem{hori} G.\,I.\,Hori. Theory of general perturbations with unspecified canonical variables\;//\;Astron
-Soc. Japan.--- 1966.--- V. 18, \textnumero\;4.--- P. 287--296.
-
-\bibitem{meyer} K.\,R.\,Meyer. Normal forms for Hamiltonian systems\;//\;Celestial Mechanics.---
-1974.---\linebreak V. 9, \textnumero\;4.--- P. 517--522.
-
-\bibitem{meyerbook} K.\,R.\,Meyer, G.\,R.\,Hall, D.\,Offin. Introduction to Hamiltonian Dynamical Systems
-and the N-Body Problem, 2nd Edition.--- Springer, 2009.--- xiii+399 p.
-\goodbreak
-\end{thebibliography}
+﻿dx
+dt
+6
+ 
+-
+?
+˜¨  ¯—¯˝ ¨ ¸ ˝ ¯  —  ´˝¯˝¨ 
+¨
+ˇ—˛ ¯     ˇ—  ´¸¯˝¨ 
+N 4, 2010
+ º Œ     ßØ      º,
+  ª.  º. N   77-39410    15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/di journal
+e-mail: jo di @mail.ru
+     Ł   ÆßŒ      ßı  Ł        Ł º  ßı         ŁØ
+˝˛—  ¸ ˝ ¯  ˛—   ˆ   ¨¸   ˛˝˛´    ¨  ¯ 
+1
+´. ´. `  ˛´,  .  . ´ ˆ  ˝ ˝
+198504, — ææŁ ,    Œ -ˇ    Æ  ª , ˇ          ,   Ł   æŁ   æŒŁØ   .,  . 28,
+   Œ -ˇ    Æ  ªæŒŁØ ˆ  æ     æ     ßØ   Ł   æŁ    ,
+       ŁŒ -  ı  Ł  æŒŁØ   Œ  º     , Œ        Ł       Ł º  ßı        ŁØ,
+e-mail: vlvlbasov@rambler.ru, armay@yandex.ru
+        Ł 
+—  ææ         Œ Ł  º     æ   ª   Łº       ßı æŁæ       Œ  æ   æ Ł    ŒŁ   Œ    
+    æŁ  º    ª    ß      º  ßı Œ     Ł  æŒŁı     Æ       ŁØ.
+ˇ   º      ß       º  Ł            º   Ø Ł      º   Ø     ß ª   Łº     Ł   
+Ł        Łı   ı       Ł ,       Æ  øŁ   ª   Ł   ŁØ    æ              ø    Ø   æ Ł
+ª   Łº     Ł   .
+¨ææº        æ            ßı ª   Łº       ßı      º  ßı      æ      Ł   øŁ-
+ Łæ        º  ß Ł       Ł ª   Łº       ßı æŁæ     .˜. `     Ł ˚.— .   Ø   .
+ˇ º    ß ª   Łº       ß      º  ß      ß   ø æ     ßı ª   Łº       ßı æŁ-
+æ    æ      Ø æ        æ  Æ   ß   æº    , Œ  ª           ø        æ   ª   Łº     Ł   
+     Ł º   ,      Œ      æº    , Œ  ª           ø        æ   ª   Łº     Ł      º   æ  
+    Ł    Ł ß      º     æ     Ł   -   æ ß Ł   Œ      º  Ł.
+1
+—  Æ      ß  º       Ł  Ł   æ   Ø          Œ   —  ¨ (ª       09 01 00734-a)˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,  4, 2010
+  æ   I
+ Łæ   ß ˆ   Łº      1  Łæ   ß ˆ   Łº      Ł Œ    Ł  æŒŁ      Æ       Ł 
+1.1      º  ß  æŁæ   ß ˆ   Łº     
+´           º    Ł     æ     Æı  Ł ß  æ     Ł  Ł      ŁŁ ª  Łº      ßı æŁæ   . ¨ı
+     Æ    Ł º    Ł          Ø Ł,     Ł   ,   [10].
+ˇ æ  f        º  ßØ æ       Ø                ßı u = (u
+1
+;:::;u
+n
+);v = (v
+1
+;:::;v
+n
+)
+æ Œ    Ł Ł     Ł Ł    º  K; ª  K       R ŁºŁC:
+ º    "     º  ßØ æ       Ø"     º   Øł   Æ         æŒ   .
+ˇ      Łæ   f(u;v) =
+P
+1
+k=0
+f
+k
+(u;v) Æ         Ł        º    Ł       f   æ    
+        ßı    ª  º     f
+k
+æ     Łk:
+˛     º  Ł  1 ˇ    Œ       f    ß    æ    Ł    ł          º      Łæº  r  0;
+ º  Œ     ª  f
+r
+6  0: ˇ     Œ Æ      Æ              ordf: ¯æºŁ f  0;    ordf = +1.
+˛     º  Ł  2 ˜º     Ł   º  ßı      f = f(u;v); ' = '(u;v) æŒ ÆŒ Ø ˇ  ææ   
+    f æ '    ß    æ     
+b
+f(') =ff;'g =
+n
+X
+j=1
+@f
+@u
+j
+@'
+@v
+j
+ 
+@f
+@v
+j
+@'
+@u
+j
+: (1)
+´   æ   æ Ł,  º  æ  Łı         ßı u
+j
+;v
+k
+ ß  º    æ       æ   :
+fu
+j
+;v
+k
+g  
+j
+k
+;fu
+j
+;u
+k
+g  0;fv
+j
+;v
+k
+g  0 (j;k = 1;n );
+ª   
+j
+k
+  æŁ   º ˚    Œ   .
+ Œ ÆŒ  ˇ  ææ     Æº      æº    øŁ Ł æ  Øæ    Ł:
+1)
+b
+f(') = b '(f) (Œ æ æŁ     Ł   æ  );
+2)
+b
+f(ff' +  ) =ff
+b
+f(') + 
+b
+f( ) 8ff; 2K (ºŁ  Ø  æ  );
+3)
+b
+f (' ) =
+b
+f(') +'
+b
+f ( ) (    Łº  ¸ ØÆ Ł  );
+4)
+b
+f(f'; g) =f
+b
+f ('); g +f';
+b
+f ( )g (     æ     Œ ÆŁ):
+— ææ    Ł  ª  Łº    Ł  ,     æ   º   ßØ      
+H(u;v) =H
+r
+(u;v) +
+1
+X
+k=r+1
+H
+k
+(u;v) (r  2): (2)
+˛       ßØ    ª  º     Ł    ł Ø æ     Ł H
+r
+     º    ŁŁ (2) Æ         ß    
+       ø   ß  ª  Łº    Ł    ,       H H
+r
+       ø  Ł  .
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 87˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,  4, 2010
+ Łæ            ŁØ ˆ   Łº       º  ª  Łº    Ł    H Ł      Ł 
+_ u
+j
+=
+@H
+@v
+j
+; _ v
+j
+= 
+@H
+@u
+j
+(j = 1;n ): (3)
+    Œ  O       º  Œ    Ł        º   æ     Œ Ø   Œ   æŁæ   ß (3);   Œ Œ Œ ordH  2:
+˛     º  Ł  3 —   ' = '(u;v)    ß    æ  Ł   ª   º          ø    ª  ª  Łº   -
+ Ł    H
+r
+;  æºŁ
+b
+H
+r
+(') =fH
+r
+;'g = 0:
+ˇ æ   ' =
+P
+1
+k=0
+'
+k
+;   ª  fH
+r
+;'g =
+P
+1
+k=0
+fH
+r
+;'
+k
+g      º    Ł  fH
+r
+;'g   æ    
+        ßı æº ª   ßıfH
+r
+;'
+k
+g æ     Łk +r  2:
+ º       º   ,  æºŁ'   Ł   ª  º        ø    ª  ª  Łº    Ł   H
+r
+;            ß 
+   ª  º  ß '
+k
+  Œ     º   æ  Ł   ª  º  Ł ª  Łº    Ł    H
+r
+:
+1.2      º  ß  Œ    Ł  æŒŁ      Æ       Ł 
+— ææ    Ł     Ł   º  ß     ß u
+j
+(x;y); v
+k
+(x;y); ª   x = (x
+1
+;:::;x
+n
+); y = (y
+1
+;:::;y
+n
+) Ł
+ordu
+j
+; ordv
+k
+  1 (j;k = 1;n ):
+˜º     Ł   º   ª      f(u;v)   º  Ł 
+e
+f(x;y) =f(u(x;y);v(x;y)):
+˛   Ł   ,           Œ     
+e
+f        ł       Œ      f:
+˛     º  Ł  4 —  ß u
+j
+=e u
+j
+(x;y); v
+k
+=e v
+k
+(x;y) æ orde u
+j
+; orde v
+k
+= 1       º       -
+  º     Œ    Ł  æŒ       Æ        Ł ,  æºŁ
+fe u
+j
+;e v
+k
+g  
+j
+k
+; fe u
+j
+;e u
+k
+g  0; fe v
+j
+;e v
+k
+g  0 (j;k = 1;n ): (4)
+˜            º  Ł   Œ Ł  º          Ł           æ   
+(D(e u;e v)=D(x;y))I (D(e u;e v)=D(x;y))
+T
+=I; (5)
+ª  I =
+ 
+0 E
+n
+ E
+n
+0
+!
+:  º       º   , det (D(e u;e v)=D(x;y)) = 1:
+         Ł  1  Œ ÆŒ  ˇ  ææ    Ł    Ł          æŁ  º         º  ßı Œ    Ł  -
+æŒŁı     Æ        ŁØu
+j
+=e u
+j
+(x;y); v
+k
+=e v
+k
+(x;y),  .  .
+ff;'g =f
+e
+f;e 'g: (6)
+˜ Œ     º æ      ªº æ         º  Ł  2,
+f
+e
+f;e 'g =
+n
+X
+j=1
+@
+e
+f
+@x
+j
+@e '
+@y
+j
+ 
+@
+e
+f
+@y
+j
+@e '
+@x
+j
+: (7)
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 88˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,  4, 2010
+ˇ º  Ł    (7)
+@
+@x
+j
+=
+n
+P
+k=1
+@e u
+k
+@x
+j
+@
+@u
+k
++
+@e v
+k
+@x
+j
+@
+@v
+k
+;
+@
+@y
+j
+=
+n
+P
+k=1
+@e u
+k
+@y
+j
+@
+@u
+k
++
+@e v
+k
+@y
+j
+@
+@v
+k
+:
+         (4)  ß ŁæºŁ  æŒ ÆŒ  ˇ  ææ    (7)   æ   ßı         ßı. ˜º  Œ   Œ æ Ł
+Æ         æŒ      ª     ß Ł               æ   Ł     Ł             øŁ æ  Ł   Œæ  .
+¨    : f
+e
+f;e 'g =
+=
+ 
+@e u
+k
+@x
+j
+@f
+@u
+k
++
+@e v
+k
+@x
+j
+@f
+@v
+k
+! 
+@e u
+l
+@y
+j
+@'
+@u
+l
++
+@e v
+l
+@y
+j
+@'
+@v
+l
+!
+ 
+ 
+@e u
+k
+@y
+j
+@f
+@u
+k
++
+@e v
+k
+@y
+j
+@f
+@v
+k
+! 
+@e u
+l
+@x
+j
+@'
+@u
+l
++
+@e v
+l
+@x
+j
+@'
+@v
+l
+!
+=
+=
+@f
+@u
+k
+@'
+@u
+l
+fe u
+k
+;e u
+l
+g +
+@f
+@u
+k
+@'
+@v
+l
+fe u
+k
+;e v
+l
+g +
+@f
+@v
+k
+@'
+@u
+l
+fe v
+k
+;e u
+l
+g +
+@f
+@v
+k
+@'
+@v
+l
+fe v
+k
+;e v
+l
+g
+(4)
+=
+=
+@f
+@u
+j
+@'
+@v
+j
+ 
+@f
+@v
+j
+@'
+@u
+j
+=ff;'g:  
+         Ł  2      º     Œ    Ł  æŒ       Æ        Ł u
+j
+= e u
+j
+(x;y); v
+k
+=e v
+k
+(x;y)
+       Ł  æŁæ     (3)   æŁæ    
+_ x
+j
+=
+@
+e
+H
+@y
+j
+; _ y
+j
+= 
+@
+e
+H
+@x
+j
+(j = 1;n ); (8)
+ª   æ ªº æ          ß   Æ       Ł  
+e
+H(x;y) =H(e u;e v):
+˜ Œ     º æ    ˜Ł       Ł       ß u
+j
+;v
+k
+         Ł   æŁº  æŁæ   ß (3),   º     
+_ u
+j
+=fu
+j
+;Hg
+(6)
+=fe u
+j
+;
+e
+Hg; _ v
+k
+=fv
+k
+;Hg
+(6)
+=fe v
+k
+;
+e
+Hg:
+     ª Ø æ     ß
+_ u
+j
+=
+@e u
+j
+@x
+l
+_ x
+l
++
+@e u
+j
+@y
+l
+_ y
+l
+; _ v
+k
+=
+@e v
+j
+@x
+l
+_ x
+l
++
+@e v
+j
+@y
+l
+_ y
+l
+:
+   ŒŁ   Æ     ,   º           æ   :
+@e u
+j
+@x
+l
+ 
+_ x
+l
+ 
+@
+e
+H
+@y
+l
+!
++
+@e u
+j
+@y
+l
+ 
+_ y
+l
++
+@
+e
+H
+@x
+l
+!
+= 0;
+@e v
+k
+@x
+l
+ 
+_ x
+l
+ 
+@
+e
+H
+@y
+l
+!
++
+@e v
+k
+@y
+l
+ 
+_ y
+l
++
+@
+e
+H
+@x
+l
+!
+= 0:
+ Œ ÆŁ        º   ª  Œ    Ł  æŒ ª      Æ       Ł    ºŁ          º ,         Ł 
+  Łı      æ    ß  Œ    æŁæ     (8):  
+1.3 ˇ   Æ       Ł  ¸Ł
+˜º  Œ    ª       f =f(x;y) æ ordf  3       ºŁ          exp(
+b
+f ):
+exp(
+b
+f )(') =
+1
+X
+k=0
+b
+f
+k
+(')
+k!
+;
+ª   ' = '(x;y)      ,  
+b
+f
+k
+=
+b
+f   
+b
+f   k -Œ       Œ     Ł Ł 
+b
+f Ł  (1),
+b
+f
+0
+(') = ':
+ˇ Ł      ord
+b
+f
+k
+(') = ord' +k(ordf  2) k;  æºŁ
+b
+f
+k
+(')6  0; Ł     ord
+b
+f
+k
+(') = +1:
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 89˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,  4, 2010
+         Ł  3 ˛         exp(
+b
+f )  Æº      æº    øŁ Ł æ  Øæ    Ł:
+1) exp(
+b
+f )(ff' +  ) =ffexp(
+b
+f )(') + exp(
+b
+f )( ) 8ff; 2K;
+2) exp(
+b
+f )(' ) =exp(
+b
+f )(')exp(
+b
+f )( );
+3) exp(
+b
+f )(f'; g) =fexp(
+b
+f )(');exp(
+b
+f )( )g;
+4) exp( 
+b
+f )(exp(
+b
+f )(')) =';
+ . . exp(
+b
+f )   º   æ           Ł      ºª Æ ß      , æ  Æ     Ø        Ł Ø f:; :g:
+˜ Œ     º æ    1) æº      Ł  ºŁ  Ø  æ Ł
+b
+f;
+2)   Œ  ß    æ    Ł     øŁ     Łº  ¸ ØÆ Ł  :
+exp(
+b
+f )(' ) =
+1
+X
+k=0
+b
+f
+k
+(' )
+k!
+=
+1
+X
+k=0
+k
+X
+l=0
+C
+l
+k
+b
+f
+l
+(')
+b
+f
+k l
+( )
+k!
+=
+=
+1
+X
+k=0
+k
+X
+l=0
+b
+f
+l
+(')
+b
+f
+k l
+( )
+l! (k l)!
+=exp(
+b
+f )(')exp(
+b
+f )( );
+3)   Œ  ß    æ     º ªŁ    æ   Ł     Ł        æ     Œ ÆŁ;
+4) æº      Ł       ŒŁ      æ  
+exp( 
+b
+f )(exp(
+b
+f )(')) =
+1
+X
+k=0
+1
+k!
+( 
+b
+f )
+k
+ 
+1
+X
+l=0
+1
+l!
+b
+f
+l
+(')
+!
+=
+1
+X
+k;l=0
+( 
+b
+f )
+k
+(
+b
+f
+l
+('))
+k!l!
+=
+=
+1
+X
+k;l=0
+( 1)
+k
+b
+f
+k+l
+(')
+k!l!
+=
+1
+X
+m=0
+b
+f
+m
+(')
+m!
+m
+X
+k=0
+( 1)
+k
+m!
+k! (m k)!
+=
+b
+f
+0
+(') ='; 
+         Ł  4 —  ß
+u
+j
+=exp(
+b
+f )(x
+j
+); v
+k
+=exp(
+b
+f )(y
+k
+) (ordf  3; j;k = 1;n ) (9)
+      º         º     Œ    Ł  æŒ       Æ        Ł .
+˜ Œ     º æ      ªº æ   æ  Øæ    3          exp(
+b
+f );  º      Æ       Ł   Ł   (9)
+Ł     æº    ø        Œ       æ  :
+fe u
+j
+;e v
+k
+g =fexp(
+b
+f )(x
+j
+);exp(
+b
+f )(y
+k
+)g =exp(
+b
+f )(fx
+j
+;y
+k
+g) =exp(
+b
+f )( 
+j
+k
+) = 
+j
+k
+:
+   º ªŁ      º      fe u
+j
+;e u
+k
+g  0;fe v
+j
+;e v
+k
+g  0:
+ º       º   , (9)        º     Œ    Ł  æŒ       Æ       Ł           º  Ł  4. 
+ º     [8, 9, 10, 11],        æº    ø         º  Ł .
+˛     º  Ł  5      º     Œ    Ł  æŒ       Æ        Ł   Ł  (9) Æ        ß    
+    Æ        Ł   ¸Ł.
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 90˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,  4, 2010
+         Ł  5 ˇ   Æ        Ł  ¸Ł  Æ        ª     .
+˜ Œ     º æ    ˇ        º  Ł 
+exp(
+b
+f )exp(b g ) =
+1
+X
+k=0
+1
+k!
+b
+f
+k
+ 
+1
+X
+l=0
+1
+l!
+b g
+l
+!
+=
+1
+X
+k;l=0
+b
+f
+k
+b g
+l
+k!l!
+:
+ˇ  æ     Œ     ª            ª         º ª  Ł  Ł  æŒŁØ     (æ . [7, ¸ Œ Ł  4])
+lnZ = (Z E) 
+1
+2
+(Z E)
+2
++::: =
+1
+X
+k=1
+( 1)
+k 1
+k
+(Z E)
+k
+;
+ª  E        æ     ßØ         ,               ßØ    
+ln(exp(
+b
+f )exp(b g )) =
+1
+X
+k=1
+( 1)
+k 1
+k
+X b
+f
+p
+1
+b g
+q
+1
+   
+b
+f
+p
+k
+b g
+q
+k
+p
+1
+!q
+1
+!:::p
+k
+!q
+k
+!
+;
+ª               Ø æ     æ   Ł     Ł    æ   æ            æ        ß    Æ  ß
+(p
+1
+;:::;p
+k
+;q
+1
+;:::;q
+k
+)   ºßı      Ł    º  ßı  Łæ º,     Ł    ßı  æº  Ł  :
+p
+1
++q
+1
+  1; :::; p
+k
++q
+k
+  1:
+            ß    æ        ˚   Æ ºº     æ     .   ªº æ   [7, ¸ Œ Ł  4,    . B],
+Œ                 æº ª           ˚   Æ ºº     æ      Œ Œ         ,    Æø  ª     ,
+  Œ     Ł   øŁı         ßı
+b
+f;b g     æ   º   æ     Ł   ºŁ   ª     ª  º   ,   .  . ºŁ-
+  Ø  Ø Œ  ÆŁ   ŁŁ æŒ Æ Œ ¸Ł   Łı         ßı.
+ˇ æŒ º Œ  , æ ªº æ        æ     Œ ÆŁ,  º  æŒ ÆŒŁ ¸Ł           
+b
+f Ł b g; Ł    :
+[
+b
+f;b g ] =
+b
+fb g b g
+b
+f =
+\
+ff;gg Ł ordff;gg  4;    æ ø æ        Œ Ø    h æ ordh  3;    
+exp(
+b
+f )exp(b g ) =exp(
+b
+h):
+  Ł    Œ     ,     Œ     Ł Ł      Æ       ŁØ ¸Ł  æ       Æ       Ł  ¸Ł.
+ ææ  Ł  Ł   æ   Œ     Ł ŁŁ     Ł   .
+¯ Ł Ł  Ø æº  Ł       æ            Æ       Ł exp(
+b
+0 ):
+˛Æ       Œ     Æ       Ł  ¸Ł æ ø æ      Ł    æ  Øæ    4           exp(
+b
+f )   Œ  
+  º   æ      Æ       Ł   ¸Ł. 
+˚ Œ Æßº    Œ                 ŁŁ 2,   Ł      º  ßı Œ    Ł  æŒŁı     Æ       Ł ı
+ª  Łº    Ł       Æ      æ       Œ   
+e
+H(x;y) = H(e u;e v): ´ æº         Æ       ŁØ  Ł  
+(9); æ ªº æ   æ  Øæ     1 Ł 2          exp(
+b
+f );   æº       Œ Ł  º           æ   
+e
+H(x;y) =exp(
+b
+f )(H(x;y)): (10)
+´ß Łł       ß   º  ß             Ø   æ Ł (10):
+e
+H =H +ff; Hg +
+1
+2
+ff;ff; Hgg +:::: (11)
+ˇ æŒ º Œ        º ª   æ ,    ord(f)  3;     Æ       Ł  ¸Ł                  -
+ø   ßØ ª  Łº    Ł  ,   .  .   (10)
+e
+H
+r
+=H
+r
+:
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 91˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,  4, 2010
+2      º      Œ Ł  º     æ   ª  Łº      ßı æŁæ   
+2.1 —      æ           Ł 
+˛Æ     Ł     æ    æ      ºŁ                 ßıx;y    K      P:
+ˇ º  Ł  z = (x
+1
+;:::;x
+n
+;y
+1
+;:::;y
+n
+); D = (@=@x
+1
+;:::;@=@x
+n
+;@=@y
+1
+;:::;@=@y
+n
+):
+      º 
+hhP;Qii =P (D)Q(z)j
+z=0
+P;Q2P;
+  Œ     ØQ     ºŁ   ,   º     ßØ Ł  Q Œ   º Œæ ß  æ       Ł   Œ    Ł Ł     ,
+      º      P æŒ º         Ł      Ł  æ  æ  Øæ    Ł (æ .     . [6, ˆ º. 0,  5]):
+1)hhx
+p
+y
+q
+;x
+p
+0
+y
+q
+0
+ii =p!q! 
+p
+p
+0
+ 
+q
+q
+0
+;
+2)hhPQ;Rii =hhP;Q
+ 
+Rii (P;Q;R2P);
+ª    
+p
+p
+0
+=
+Q
+n
+j=1
+ 
+p
+j
+p
+0
+j
+;  
+q
+q
+0
+=
+Q
+n
+j=1
+ 
+q
+j
+q
+0
+j
+     Ł      Ł  æŁ   º   ˚    Œ   ,  Q
+ 
+= Q(D)  
+ Ł       Ł º  ßØ         , æ        ßØ Œ Q     æŁ  º    æŒ º    ª     Ł      Ł .
+¨  æ  Øæ    1  ß  Œ    ,        æ    æ    P    ÆŁ    æ           æ         ª   º -
+ ßı       æ    æ  P
+k
+        ßı   ºŁ      æ     Łk:
+— ææ    Ł  ª  Łº    Ł  
+H(x;y) =H
+r
+(x;y) +
+X
+jp+qj r+1
+h
+(p;q)
+x
+p
+y
+q
+(r  2): (12
+r
+)
+ˇ  æ  Øæ    2 æŒ º    ª     Ł      Ł hh:; :ii         
+b
+H
+ 
+r
+; æ        ßØ Œ
+b
+H
+r
+;
+Ł      Ł 
+b
+H
+ 
+r
+=
+n
+X
+j=1
+y
+j
+(@H
+r
+=@x
+j
+)
+ 
+ x
+j
+(@H
+r
+=@y
+j
+)
+ 
+ŁºŁ
+b
+H
+ 
+r
+=
+n
+X
+j=1
+(@H
+r
+=@x
+j
+)
+ 
+y
+j
+  (@H
+r
+=@y
+j
+)
+ 
+x
+j
+: (13)
+˙  æ       æ   (13
+2
+)   º      Ł  (13
+1
+)          º  ¸ ØÆ Ł  .
+˛     º  Ł  6 —      æ ß          Ł    º H
+r
+Æ        ß             Ł 
+b
+H
+ 
+r
+P = 0; P2P: (14)
+¯ª    ł  Ł  Æ        ß            æ ß Ł    ª  º    Ł.
+˛Æ     Ł     æ    æ           æ ßı    ª  º          J:
+ˇ æŒ º Œ         ø   ßØ ª  Łº    Ł  H
+r
+          ßØ   ºŁ   ,    æ    æ    J
+   ÆŁ    æ           æ         ª   º  ßı       æ    æ   J
+k
+        ßı        æ ßı
+   ª  º     æ     Łk:
+2.2  Œ Ł  º     æ   ª  Łº      ßı æŁæ        æŁ  º   
+ª    ß     Æ       ŁØ ¸Ł
+˛     º  Ł  7 `     ª    Ł  ,         ª  Łº    Ł    H Ł H
+0
+æ ordH; ordH
+0
+=r Ł
+H
+r
+=H
+0
+r
+ Œ Ł  º    ß        Œ r +m (m  1);  æºŁ æ ø æ        Œ       Æ        Ł 
+¸Ł,      º      Æ          ª  ª  Łº    Ł   
+e
+H  ß  º    æ        æ   
+e
+H
+k
+=H
+0
+k
+(k =r;r +m ):
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 92˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,  4, 2010
+˛Æ     Ł     æ    æ                     ßıx;y    K       :
+— ææ    Ł     æ    æ   
+J
+s
+=f 2   : ord   3;f ;H
+r+l
+g = 0 (l = 0;s )g (s = 0;m  2 ):
+˛Æ     Ł       J
+k
+s
+      æ    æ            ßı  º         J
+s
+æ     Łk:
+¸     1 ˇ æ   f =
+P
+m+1
+k=3
+f
+k
++'; ª  m  1; f
+k
+2 J
+k
+m k+1
+;   '2  ; ord'  m + 2:
+   ª       Æ        Ł (9) æ ı        H
+r
+;:::;H
+r+m 1
+;       Æ        Ł       ø  Ł      -
+   Œ r +m       æ        æ    
+e
+H
+r+m
+=H
+r+m
++
+m+1
+X
+k=3
+ff
+k
+;H
+r+m k+2
+g +f'
+m+2
+;H
+r
+g: (15)
+˜ Œ     º æ    ˇ æ   
+1
+;:::; 
+s
+(s  0)     Æ         (  Ł s = 0   æ  Ø)   Œ Ø,    
+ord 
+ 
+  3 (  = 1;s ); Ł   æ   2J
+m k+1
+; ord =k (k2f3;:::;m + 1g):    ª  
+ordf 
+1
+;f 
+2
+;:::f 
+s
+;f ;H
+r+l
+gggg r +m +s (8l  0);
+ª     Łs = 0    æ ªº ł  Ł      ª       ord æ  Ł f ;H
+r+l
+g:
+˜ Øæ  Ł  º   ,   æŒ º Œ ord 0 = +1;   æ          ææ        æº   Ø
+f 
+1
+;f 
+2
+;:::f 
+s
+;f ;H
+r+l
+gggg6  0:
+ˇ Ł      l m k + 2;   Œ Œ Œ 2J
+m k+1
+; Łf ;H
+r+l
+g = 0  º  l = 0;m k + 1: ˛ æ   
+ordf 
+1
+;f 
+2
+;:::f 
+s
+;f ;H
+r+l
+gggg =
+s
+P
+ =1
+ord 
+ 
++ ord   2s  2 +r +l 
+  3s +k  2s  2 +r +m k + 2 =r +m +s:
+¨    º      Ø     ŒŁ  ß  Œ    ,      æ  æŒ ÆŒŁ ˇ  ææ            º  (11) Ł       -
+   ŒŁ        łŁ     r +m;        H
+r
+;:::;H
+r+m 1
+Ł    Ł    ß     æŁ  º      ææ   -
+ Ł     ª      Æ       Ł . ˚       ª , æŒ ÆŒŁ ˇ  ææ    Œ     æ  Ø  ßł       Ø Ł    
+     ŒŁ æ   ª  Æ º łŁ     r +m;     Ł   Œ  ß           º  (15).  
+         1 ˇ æ   H;H
+0
+2  ; ordH; ordH
+0
+= r Ł H
+k
+= H
+0
+k
+(k = r;r +m  1 ); Ł   æ  
+æ ø æ      f
+k
+2J
+k
+m k+1
+(k = 3;m + 1 )   ŒŁ ,      º   æ Œ ª         æ  ª     ª  º   
+P2J
+r+m
+ ß  º    æ        æ   
+hhP;H
+0
+r+m
+ii =hhP;H
+r+m
+ii +hhP;
+m+1
+X
+k=3
+ff
+k
+;H
+r+m k+2
+gii: (16)
+   ª   H Ł H
+0
+ Œ Ł  º    ß        Œ r +m:
+˜ Œ     º æ    ˇ æ  m = 1 ŁhhP;H
+r+1
+ H
+0
+r+1
+ii = 0  º   æ ıP2J
+r+1
+:
+˝ Ø        Æ       Ł  ¸Ł, æ ı     ø  H
+r
+Ł         ø  H
+r+1
+ H
+0
+r+1
+:
+ˇ     æ    æ   J
+r+1
+ P
+r+1
+ æ       ª   º         º   Ł   Æ     ºŁ  Ø  ª     -
+      
+b
+H
+r
+Ł P
+3
+  P
+r+1
+: ˇ æŒ º Œ P
+r+1
+Œ           , Im(
+b
+H
+r
+j
+P
+3) = (Im(
+b
+H
+r
+j
+P
+3))
+??
+=
+(J
+r+1
+)
+?
+: ˇ       æ ø æ        ºŁ   '2P
+3
+  Œ Ø,    fH
+r
+;'g = H
+r+1
+ H
+0
+r+1
+: ˛ æ   
+Ł Ł        ºß (15)   º     ,     ŁæŒ         Æ       Ł  Ł      Ł exp(b '):
+ˇ Ł m  2   Œ     º æ       º ªŁ   . 
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 93˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,  4, 2010
+  æ   II
+ˆ   Łº      ß      º  ß      ß
+3 ˆ   Łº                 º          
+˛     º  Ł  8  º      h
+(p;q)
+x
+p
+y
+q
+       ø  ŁŁ ª  Łº    Ł    (12
+r
+)             -
+     æ ß ,  æºŁ  º  Œ    ª  P2J  ß  º    hhP;x
+p
+y
+q
+ii = 0: ´     Ł     æº     Æ    
+   ß      º      h
+(p;q)
+x
+p
+y
+q
+       æ ß .
+     æ  ß ,      ø  Ł  H H
+r
+              ÆŁ    æ           æ Ł:        æ    Ł
+         æ   ,    Łı  ı            æ ß  Ł          æ ß  æº ª   ß  æ      æ      .
+˛     º  Ł  9 —   H  Ł   (12
+r
+) ŁºŁ             Ł  æŁæ             ŁØ ˆ   Łº -
+     (3) Æ        ß     ª  Łº       Ø          º   Ø      Ø (ˆ ˝ ) ,  æºŁ      -
+ø  Ł H H
+r
+æ     Ł    º Œ         æ ß   º     ß.
+         2   ø æ           º     Œ    Ł  æŒ       Æ        Ł ,   Ł    ø   ª  Łº -
+   Ł   (12
+r
+) Œ ª  Łº       Ø          º   Ø      .
+˜ Œ     º æ    Æ                Ł   Œ Ł Ø   m:
+˛Æ     Ł         æ      æ   H
+r+1
+     H
+0
+r+1
+:
+¨        º  Ł  8 æº      ,    hhP;H
+r+1
+ H
+0
+r+1
+ii = 0  º   æ Œ ª P2J
+r+1
+:
+ˇ æº           æ    æ         æ       º Ø (16)  º m = 1: ˇ                  1
+ª  Łº    Ł   H  Œ Ł  º      æ   Ø ˆ ˝         Œ  r + 1:
+ˇ     º  Ł ,     H  Œ Ł  º      æ   Ø ˆ ˝         Œ  r +m  1: `        Ł
+ Æø  æ Ł       æ Ł    ,     H æ         æ  æ   Ø ˆ ˝         Œ ı r+k (k = 1;m  1 ):
+˛Æ     Ł         æ      æ   H
+r+m
+     H
+0
+r+m
+:
+¨        º  Ł  7 æº      ,    hhP;H
+r+m
+ H
+0
+r+m
+ii = 0  º   æ Œ ª P2J
+r+m
+:
+ˇ æº           æ     æ     æ  ßØ æº   Ø       ºß(16) æ f
+3
+;:::;f
+m+1
+= 0:
+ˇ       Ł        ß 1  ß  Œ     Œ Ł  º     æ   H æ   Ø ˆ ˝         Œ  r +m:
+ˇ Ł         º     1 æ      æ    ø       Æ       Ł  Ł      Ł  (9) æ ordf m + 2:
+  Ł         æº       º             æ ß   º  ß æ     Łr + 1;r + 2;:::;  ß æ   Ł 
+  æº       º   æ       Æ       ŁØ ¸Łexp(
+c
+f
+m
+) æ f
+m
+2   Ł ordf
+m
+ m + 2:
+ˇ  Ł      Ł    Łı     Æ       ŁØ æı  Ł æ     ;   .  .  º  ß º Æ Ø  ŁŒæŁ       Ø
+æ     Ł,    Ł    æ   Œ     ª  ł ª ,          æ . ˇ       Ł           ŁØ 4 Ł 5  ß  Œ -
+   ,          º         Æ       Ł :::exp(
+c
+f
+m
+):::exp(
+b
+f
+2
+)exp(
+b
+f
+1
+)   º   æ       º  ß 
+Œ    Ł  æŒŁ      Æ       Ł  .  
+˙      Ł  1 ˆ ˝          Œ                      º           (    -    ª   .  "    ff
+        ,      ). ˚ Œ Æ        Œ       Ł  ,   Ł     øŁ      º  ßı Œ    Ł  æŒŁı    -
+ Æ       ŁØ    Ł            æ ßı  º               ø  ŁŁ ª  Łº    Ł    (12
+r
+)      
+  Ł    Ł   Ł   æ          æ ßı  º       .
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 94˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,  4, 2010
+˙      Ł  2 ˜ æ  Ł æ             Ø     ææ      Ł  ˆ ˝    º   æ    ,            -
+ø        æ   ª  Łº    Ł   H
+r
+Ł        Ł   º     æ      r  2: ´ æº    øŁı    ı
+     º ı Æ        Ł     ß        ªŁı       º  Ł  ª  Łº      ßı      º  ßı     
+(ˆ˝ ): ˆ˝  `     Ł ˆ˝    Ø   ,   Œ    ßı æ              ø    ª  ª  Łº    Ł   
+      º ª   æ       Ø     .
+4 ˆ   Łº        ˝  `    , æ     æ ˆ ˝ 
+´   Æ    [5]   Œ     ,       Ł     øŁ Œ   º Œæ ßı ºŁ  Ø ßı Œ    Ł  æŒŁı     Æ    -
+   ŁØ Œ      Ł       æ   ª  Łº    Ł   (12
+2
+)       Æß     Ł       Œ  Ł  
+H
+2
+= (1=2)z
+T
+Gz;
+ª   z = (x;y);   G =
+ 
+0 C
+T
+C D
+!
+  Æº          Ł  ,   Œ     Ø C =fC
+(1)
+;:::;C
+(s)
+g  
+              Ł        Œ  n æ         ß Ł Œº  Œ  Ł C
+(k)
+     Œ  l
+(k)
+(k = 1;s );
+  D =fD
+(1)
+;:::;D
+(s)
+g   Æº     - Ł ª   º         Ł   æ Œº  Œ  Ł D
+(k)
+=  
+(k)
+ 
+(k)
+  -
+   Œ  l
+(k)
+: ˙  æ   
+(k)
+= diagf1; 0;:::; 0g Ł  
+(k)
+= 0;  æºŁ æ      æ    ø   Æº Œ C
+(k)
+æ Ææ         Łæº  
+(k)
+6= 0: ¨ºŁ   Ł  Ø    ŁæŁ
+H
+2
+=
+n
+X
+j=1
+ 
+j
+x
+j
+y
+j
++
+n 1
+X
+j=1
+"
+j
+x
+j
+y
+j+1
++
+1
+2
+n
+X
+j=1
+ 
+j
+y
+2
+j
+; (17)
+ª   
+1
+;:::; 
+n
+  æ Ææ     ß   Łæº      Ł ß C; Ł
+"
+j
+=
+(
+0;  æºŁ 
+j
+6= 
+j+1
+;
+0 ŁºŁ 1;  æºŁ 
+j
+= 
+j+1
+;
+ 
+j
+=
+(
+0;  æºŁ 
+j
+6= 0 ŁºŁ "
+j 1
+6= 0;
+0 ŁºŁ 1;  æºŁ 
+j
+= 0 Ł "
+j 1
+= 0
+("
+0
+= 0): (18)
+˛     º  Ł  10 ˆ   Łº    Ł   (12
+2
+) ŁºŁ             Ł  æŁæ             ŁØ ˆ  -
+ Łº      (3) Æ        ß     ª  Łº       Ø      º   Ø      Ø `     (ˆ˝ `) ,  æºŁ
+       ø   ßØ ª  Łº    Ł   H
+2
+Ł      Ł  (17);          ø  ŁŁH H
+2
+Œ      Ł Ł   ß
+h
+(p;q)
+= 0;  æºŁhp q; i6= 0; ª    = ( 
+1
+;:::; 
+n
+);  h ; i = 
+1
+ 
+1
++::: + 
+n
+ 
+n
+:
+´   Æ    [5]   Œ     Œ     ,     º Æ Ø ª  Łº    Ł         Æß     Ł      Œ ˆ˝ `
+  Ł     øŁ Œ   º Œæ ßı      º  ßı Œ    Ł  æŒŁı     Æ       ŁØ.
+         3 ˆ ˝  æ        ø   ß  ª  Łº    Ł     (17)   º   æ  ˆ˝ ` .
+˜ Œ     º æ    ¨  (13) Ł (17)   º     ,             
+b
+H
+ 
+2
+Ł      Ł 
+b
+H
+ 
+2
+=
+n
+X
+j=1
+ 
+j
+ 
+y
+j
+@
+@y
+j
+ x
+j
+@
+@x
+j
+!
++
+n 1
+X
+j=1
+"
+j
+ 
+y
+j
+@
+@y
+j+1
+ x
+j+1
+@
+@x
+j
+!
+ 
+n
+X
+j=1
+ 
+j
+x
+j
+@
+@y
+j
+:
+— ææ    Ł    Øæ  Ł 
+b
+H
+ 
+2
+  x
+p
+y
+q
+:
+b
+H
+ 
+2
+x
+p
+y
+q
+=hq p; ix
+p
+y
+q
++
+n 1
+X
+j=1
+"
+j
+(q
+j+1
+x
+p
+y
+q+e
+j
+ e
+j+1
+ p
+j
+x
+p e
+j
++e
+j+1
+y
+q
+) +
+n
+X
+j=1
+ 
+j
+q
+j
+x
+p+e
+j
+y
+q e
+j
+: (19)
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 95˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,  4, 2010
+˚ Œ æº      Ł       æ   (18) Ł (19);         
+b
+H
+ 
+2
+æ ı       æ      jp+qj Ł   ºŁ Ł  
+hq p; i;   .  .         
+b
+H
+ 
+2
+  Øæ               æ    æ   
+P
+k
+a
+=Linfx
+p
+y
+q
+:jp +qj =k;hq p; i =ag P
+k
+:
+´              æ       º  ŁŁ   Œæ   A =f(p;q) :jp +qj = kg æº    øŁØ       Œ:
+(p
+0
+;q
+0
+)  (p
+00
+;q
+00
+);  æºŁjp
+0
+j<jp
+00
+j; ŁºŁjp
+0
+j =jp
+00
+j; Łp
+00
+    ł æ     p
+0
+  º ŒæŁŒ ª   Ł  æŒ  
+     Œ , ŁºŁp
+0
+=p
+00
+; Ł q
+0
+    ł æ     q
+00
+  º ŒæŁŒ ª   Ł  æŒ        Œ .
+´ßÆ      P
+k
+a
+Æ  Łæ Ł   º         Ł  x
+p
+y
+q
+;   æ  º     ßı         æ   Ł    Œ   -
+  º Ø   æ ßæº          ª       Œ .
+´       º  (19)q     ł æ     q +e
+j
+ e
+j+1
+  º ŒæŁŒ ª   Ł  æŒ        Œ ,        
+(p;q)  (p;q +e
+j
+ e
+j+1
+); p e
+j
++e
+j+1
+    ł æ     p   º ŒæŁŒ ª   Ł  æŒ        Œ ,
+        (p;q)  (p e
+j
++e
+j+1
+;q);  jpj<jp +e
+j
+j;         (p;q)  (p +e
+j
+;q e
+j
+):
+   ŒŁ   Æ     ,
+b
+H
+ 
+2
+       Ł  Œ   ßØ  º        ææ    Ł     ª  Æ  Łæ          -
+æ    æ       æ    æ   P
+k
+a
+;               º     ß Æ  Łæ  æ       łŁ Ł   æ ßæº     -
+     ª       Œ  Ł   Œæ  Ł.  º       º   ,          Æ  Łæ          
+b
+H
+ 
+2
+    æ   º   æ 
+   ı      ª º   Ø     Ł  Ø æ  Łæº  Ła    ªº    Ø  Ł ª   ºŁ.
+˜º  æ ø æ      Ł    ł  Ł         æ  ª         Ł          æ    æ    P
+k
+a
+   Æı -
+ Ł   Ł   æ             æ       º        Ł         Ø     Ł ß,          æŁº     æº  Ł 
+a = 0;    ,   æ           ,  Œ Ł  º           æ   hp q; i = 0: ˛ æ    æ ªº æ       -
+  º  Ł  8        æ ß Ł   ª   Æß     º Œ   º     ßh
+(p;q)
+x
+p
+y
+q
+æhp q; i = 0:  
+ˇ Œ           ,     ˆ ˝        Ł     Æ º      æ  Ø  Ł ,     ºŁ     ˆ˝ `.
+— ææ    Ł  º Æ Ø ª  Łº    Ł   (12
+2
+) Ł Œ      Ł   Ø        ø    Ø   æ   
+H
+2
+=x
+1
+y
+2
++y
+2
+1
+=2 (n = 2): (20)
+ˇ        º  Ł       º   æ  ˆ˝ `,   Œ Œ Œ        
+1
+; 
+2
+= 0:
+         Ł  6 ˆ ˝  ª  Łº    Ł    (12
+2
+) æ H
+2
+Ł  (20) Ł      Ł 
+H =H
+2
++
+X
+p
+2
+ q
+1
++2q
+2
+(p
+1
+;q
+1
+)6= (1;0)
+h
+(p;q)
+x
+p
+y
+q
+: (21)
+˜ Œ     º æ    —      æ           Ł         æº       Ł Ł      Ł 
+b
+H
+ 
+2
+P =y
+1
+@P
+@y
+2
+ x
+1
+@P
+@y
+1
+ x
+2
+@P
+@x
+1
+= 0; P2P:
+ˇ æº             Ł  Ł       Ł      ŁæŁ ßı   ł  Ł :P
+1
+= x
+2
+; P
+2
+= x
+2
+y
+1
+ x
+2
+1
+=2;
+P
+3
+=x
+2
+2
+y
+2
++x
+1
+x
+2
+y
+1
+ x
+3
+1
+=3;   .  .  æ ŒŁØ        æ ßØ    ª  º  P2P   º   æ    ºŁ     
+   P
+1
+;P
+2
+;P
+3
+: ˇ       Œ   ßØ        æ ßØ  º      H  H
+2
+ æ      Ł      Ł    ºßı
+     Ł    º  ßı æ      Ø æº ª   ßı Ł P
+1
+;P
+2
+;P
+3
+;       Ł  , æ      æ         æ      ª 
+    Ł  º  Ł      Ł 
+x
+i
+1
+2
+(x
+2
+y
+1
+)
+i
+2
+x
+2i
+3
+1
+(x
+2
+2
+y
+2
+)
+i
+4
+(x
+1
+x
+2
+y
+1
+)
+i
+5
+x
+3i
+6
+1
+=x
+p
+1
+1
+x
+p
+2
+2
+y
+q
+1
+1
+y
+q
+2
+2
+;
+ª  p
+1
+= 2i
+3
++i
+5
++ 3i
+6
+; p
+2
+=i
+1
++i
+2
++ 2i
+4
++i
+5
+; q
+1
+=i
+2
++i
+5
+; q
+2
+=i
+4
+:
+  Ł   Œ     ºŁ      º          æº  Ł  p
+2
+ q
+1
++ 2q
+2
+: ˚       ª ,q
+1
+6= 0   Ł p
+1
+= 1:
+´      º        º      ˆ ˝  (21):  
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 96˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,  4, 2010
+5 ˆ   Łº        ˝    Ø   , æ     æ ˆ ˝ 
+— ææ    Ł    ø æ     ßØ ª  Łº    Ł   (12
+2
+);        ø        æ   Œ     ª     Łæ   
+   Ł  
+H
+2
+= (1=2)z
+T
+Gz (G   æŁ     Ł  æŒ       Ł  ) ; (22)
+— ææ    Ł    Œ   ºŁ  Ø    ª  Łº        æŁæ     æ ª  Łº    Ł     H
+2
+Ł  (22):
+_ z =Az; A =IG (I Ł  (5)): (23)
+´   Æ    [10]   Œ     ,      æºŁ     Ł  A   æŁ     Ł  æŒ  ,    ª  Łº    Ł   (12
+2
+)
+æ        ø    Ø   æ    (22)   Ł     øŁ   ø æ      ª      Ł      æ      ª       º -
+  ª  Œ    Ł  æŒ ª      Æ       Ł z = w +W (w) æ ordW   2       Æß     Ł      Œ
+ª  Łº    Ł    H
+0
+  Œ    ,    
+H
+0
+2
+=H
+2
+; 8k  3;8t2R;8z2R
+2n
+: H
+0
+k
+(e
+At
+z) H
+0
+k
+(z):
+ˇ       [11]           º     Æßº  Æ Æø      æº   Ø    Ł   º   Ø     Ł ßA =IG:
+˛     º  Ł  11 ´ ø æ     ßØ ª  Łº    Ł   (12
+2
+) æ        ø    Ø   æ    (22)
+ŁºŁ             Ł  ª  Łº        æŁæ     (3) Æ        ß     ª  Łº       Ø    -
+  º   Ø      Ø   Ø     (ˆ˝  ) ,  æºŁ
+8k  3; 8t2R; 8z2R
+2n
+: H
+k
+(e
+A
+T
+t
+z) H
+k
+(z) (A =IG): (24)
+  ªº æ   [11, Theorem 10.4.2],    Ł   º  ßØ   ø æ     ßØ ª  Łº    Ł  (12
+2
+)      
+Æß     Ł      Œ ˆ˝     Ł     øŁ   ø æ      ª      Ł      æ      ª       º   ª 
+Œ    Ł  æŒ ª      Æ       Ł z =w +W (w) æ ordW  2:
+         4 ˆ˝     º   æ  ˆ ˝  æ      ø  Ł   Ł         æ ßı    ª  º    .
+˜ Œ     º æ    ˇ æ   ª  Łº    Ł   (12
+2
+) æ        ø    Ø   æ    (22)       ˆ˝  .
+            Œ (23) ºŁ  Ø    æŁæ     Ł      Ł 
+_ z =A
+T
+z (25)
+Ł   Œ     º   æ  ª  Łº       Ø æ ª  Łº    Ł     H
+T
+2
+(z) = (1=2)z
+T
+G
+0
+z; ª  G
+0
+=IGI:
+—    æ    (24)          ,             ß  æº ª   ß       ø  Ł  ˆ˝     º   æ 
+Ł   ª  º  Ł ºŁ  Ø  Ø æŁæ   ß (25). ˇ æŒ º Œ  æŁæ     (25) ª  Łº        æ ª  Łº    Ł-
+     H
+T
+2
+;   æº           æŁº         æ    
+fH
+T
+2
+;H
+k
+g = 0 (k  3): (26)
+  ªº æ   [11, Lemma 10.4.2]         
+b
+H
+T
+2
+  º   æ  æ        ß  Œ
+b
+H
+2
+    æŁ  º   
+æŒ º    ª     Ł      Ł hh:; :ii;   .  .
+b
+H
+T
+2
+=
+b
+H
+ 
+2
+:         Ł  (26) æº      ,             ß 
+æº ª   ß H
+k
+(k  3)      ø  Ł    ˆ˝           ł  Ł         æ  ª         Ł   º 
+H
+2
+: ˙   Ł  ,          º  Ł  9 Ł    æ  Øæ    1 æŒ º    ª     Ł      Ł    ææ    Ł      
+ˆ˝     º   æ  ˆ ˝ ,           ø  Ł  H H
+2
+æ æ  Ł  Ł         æ ßı    ª  º    . 
+´ ˆ˝   Œ    Ł Ł   ß   Ł        æ ßı  º      ı       º   æ    ł  Ł  Ł     -
+   æ  ª         Ł ,   ˆ ˝        Œ    Ł Ł   ß   Ł        æ ßı  º      ı      º -
+ª   æ   ŁŒ ŒŁı     º Ł  º  ßı    Æ    ŁØ.
+˝   Ł   ,      ø  Ł  ˆ˝   ª  Łº    Ł    (12
+2
+) æ H
+2
+Ł  (20)     ºŁ Ł     (21)
+    æ   º    æ Æ Ø               æ ßı    ª  º    P
+1
+;P
+2
+;P
+3
+Ł           Ł  6.
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 97˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,  4, 2010
+6 ˆ   Łº             º          
+6.1 ˝  ª  Łº    Ł    æ          Ø        ø    Ø   æ   
+ˇ æ  fP
+i
+g
+k
+i=1
+  Æ  Łæ       æ    æ    J
+r+m
+(m  1)         ßı   ł  ŁØ        æ  ª 
+       Ł  (14)    æ    æ   J:
+˛     º  Ł  12      æ            R
+m
+=fR
+i
+= x
+p
+i
+y
+q
+i
+: jp
+i
++q
+i
+j = r +mg
+k
+i=1
+; ª  
+p
+i
+; q
+i
+    º  ŁŁ   Œæß,          Ł Ł  º  ß         æ ß    Æ            Œ  r +m;
+ æºŁ       ºŁ  º      Ł ß æŒ º   ßı    Ł      ŁØA =fa
+ij
+=hhP
+i
+;R
+j
+iig
+k
+i;j=1
+  ºŁ   
+     º .      æ    R =[
+m 1
+R
+m
+         Ł Ł  º  ß         æ ß    Æ    .
+˛     º  Ł  13 ˆ   Łº    Ł   (12
+r
+) ŁºŁ             Ł  æŁæ             ŁØ
+ˆ   Łº      (3) Æ        ß     ª  Łº       Ø      º   Ø      Ø (ˆ˝ ) ,  æºŁ      -
+  ø  ŁŁ H  H
+r
+æ       æ  ºŁł         æ ß   º  ß Ł    Œ     ª   Ł Ł  º   ª 
+       æ  ª    Æ    R;  .  . h
+(p;q)
+= 0;  æºŁx
+p
+y
+q
+62R:
+˙      Ł  3 ´ æº    r = 2 Ł        ø    ª  ª  Łº    Ł     Ł   (17) æ 6= 0 ˆ˝ 
+      º ªŁŁ æ   ª  Łº      ß Ł      º  ß Ł       Ł          ß            æ  Ø
+(—ˆ˝ ),     æº     r  3 ŁºŁr = 2 Ł        ø    ª  ª  Łº    Ł     Ł   (17) æ  = 0  
+ Æ Æø    Ø ˆ˝  (˛ˆ˝ ).
+         5 ˇ æ   R =[
+m 1
+R
+m
+   Ł Ł  º  ßØ        æ ßØ   Æ  .    ª   æ ø æ   -
+        º     Œ    Ł  æŒ       Æ        Ł ,   Ł    ø   ª  Łº    Ł  (12
+r
+) Œ ˆ˝  ,
+  Œ     Ø h
+(p;q)
+= 0;  æºŁx
+p
+y
+q
+62R:
+˜ Œ     º æ    ˛Æ     Ł  c =fc
+i
+=hhH
+r+m
+;P
+i
+iig
+km
+i=1
+;H
+0
+r+m
+=
+P
+km
+i=1
+b
+i
+R
+m
+i
+; ª  R
+m
+i
+2R
+m
+;
+b =A
+ 1
+c;  A       Ł   Ł        º  Ł  12.
+   ª  hhH
+0
+r+m
+ H
+r+m
+;P
+i
+ii =
+P
+km
+j=1
+a
+ij
+b
+j
+ c
+i
+= 0  º   æ ıi = 1;k
+m
+:
+˜ º   Øł     Œ     º æ          Ł æ     º ªŁ      Œ     º æ          ß 2.  
+ˇ Ł        Ł    ˆ˝ , Ł   ø Ø Æ º      æ  Ø  Ł ,     ˆ ˝ .
+         Ł  7 ˆ   Łº    Ł   (12
+2
+) æ        ø    Ø   æ    (20)   Ł     øŁ    -
+  º   ª  Œ    Ł  æŒ ª      Æ        Ł          Ł  æ Ł Œ ˆ˝ 
+H =H
+2
++
+X
+p
+1
+=0; p
+2
+ q
+1
++2q
+2
+h
+(p;q)
+x
+p
+y
+q
+: (27)
+˜ Œ     º æ    ˜ Øæ  Ł  º   ,   Ł   Œ     º æ             Ł  6 Æßº    Œ     ,    
+   ª  º  ß P
+i
+1
+1
+P
+i
+2
+2
+P
+i
+3
+3
+; ª  P
+1
+=x
+2
+; P
+2
+=x
+2
+y
+1
+ x
+2
+1
+=2; P
+3
+=x
+2
+2
+y
+2
++x
+1
+x
+2
+y
+1
+ x
+3
+1
+=3;  Æ      
+Æ  Łæ      æ    æ   J: ´ Œ   æ     Ł Ł  º   ª         æ  ª    Æ           ßÆ    
+     æ           
+x
+i
+1
+2
+(x
+2
+y
+1
+)
+i
+2
+(x
+2
+2
+y
+2
+)
+i
+3
+=x
+p
+1
+1
+x
+p
+2
+2
+y
+q
+1
+1
+y
+q
+2
+2
+;
+ª   p
+1
+= 0; p
+2
+= i
+1
++ i
+2
++ 2i
+3
+; q
+1
+= i
+2
+; q
+2
+= i
+3
+;   Œ Œ Œ Œ   ßØ   Œ Ø       Ł    
+  ºŁ           º  æŒ º         Ł      Ł  æ   Ł æ     ß  Æ  Łæ ß   º        P
+i
+1
+1
+P
+i
+2
+2
+P
+i
+3
+3
+:
+˜º       ł  Ł    Œ     º æ     æ    æ    æ  º       æ         Ø 5.  
+˙      Ł  4 ´   ºŁ Ł     ˆ ˝  (21)   Œ   Œ Œ Ł    ˆ˝  ,      ø  Ł  Œ     Ø
+   ŁæŁ            æ ßı    ª  º    P
+1
+;P
+2
+;P
+3
+;      ø  Ł  ˆ˝  (27)       ŁæŁ    x
+1
+:
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 98˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,  4, 2010
+6.2 ˝  ª  Łº    Ł    æ Œ   Ł         Ø        ø    Ø   æ   
+˜  æŁı       Œ   æ           ø    Ø   æ Ł º Æ ª  ª  Łº    Ł     ßÆŁ  ºæ         -
+ ßØ    ª  º   H
+r
+æ     Łr   2: ˛   Œ ,         ł     æ     Ł          ßı, ŁºŁ,
+          æ    ,     Æ º ł  Œ                  ø    Ø   æ Ł ª  Łº       Ø æŁæ   ß
+     æ           ß    º ,         ł  Ł    æ          æ  Ø  º       ºŁ     Ł   º    
+  Œ           Œ       ø  Ł .
+       Œ  ı   ł  Ł   æ    Ł    Łºº æ  Ł            ŁŁ  Æ Æø   ßı (  ª  Łº   -
+   ßı)      º  ßı      Ł Æ                   Ł          º  7.4.
+¨   º   Ø  ßªº  Ł  æŁ    Ł , Œ ª     Ł     øŁ ºŁ  Ø  Ø Œ    Ł  æŒ Ø      ß
+   ª  º   H
+r
+  ŒæŁ  º        ø  ,      Ł         ŁæŁ      æ ı         ßı.    Œ Ø
+       ø   ßØ ª  Łº    Ł    æ  æ          ß        ß       ß .
+˜º    º    Ł     ß        ª  ª  Łº    Ł          Łæ  º          Ł  , łŁ  -
+Œ    Ł      ßØ       ŁŁ  Æ Æø   ßı      º  ßı     .   Ł     ,       ŁæŒ ææ    -
+       º Ł   H
+r
+  Œ    ß Ł æº ª   ß Ł Ł       ø  Ł  ª  Łº    Ł    (12
+r
+);     æ  
+æº ª   ßı Ł  H
+r
+    æ Ł Œ      ø  Ł ,      º Œ    Œ,    Æß   æº        Ł     ßı,
+ Æ Æø   ßı, æ      Ø,    ßØ        ø   ßØ ª  Łº    Ł   æ  º Æß   Ł   æ     æ ßæº 
+        ß  Ł Ł  º Æß     ł  ,                ø  Ł   Æ Æø      æ      .
+ˇ Ł        æŒ º Œ   ÆøŁı       º  ŁØ Ł  [1, 4] æ æ      æ    øŁ Ł       Œ  Ł,
+æ      ß Ł æ ª  Łº       æ      ææ    Ł    ßı æŁæ   .
+˛     º  Ł  14 ´ Œ     = (ff; ); ª  ff = (ff
+1
+;:::;ff
+n
+);   = ( 
+1
+;:::; 
+n
+);        
+  æ            Øz = (x
+1
+;:::;x
+n
+;y
+1
+;:::;y
+n
+);  æºŁ  æ  Œ        ß           º  ß     -
+Ł       æ ß    æ   Œ    æ Ł   ŒŁ ,     ff
+i
++ 
+i
+=  (   2; i = 1;n):
+˛     º  Ł  15 ˛Æ Æø    Ø æ               Z
+(p;q)
+x
+p
+y
+q
+;         æŒ º         Ł -
+     Ł hp;ffi +hq; i:
+˛     º  Ł  16    ª  º   Q(z) Æ        ß     Œ   Ł        ß     ª  º    
+(˚˛ ) æ     Ł   æ   æ    Ł  Æ         Q
+[ ]
+
+(z);  æºŁ    æ     Ł    º Œ       ß
+ Æ Æø    Ø æ     Ł  :
+´æ        º  Ł      ß  øŁı    Œ          æ  æ     æº   Ø Œ   Ł         ª 
+       ø    ª  ª  Łº    Ł    æº    øŁ   Æ     :    æ    Æß  ßı æ      Ø æº     
+  ææ    Ł      Æ Æø   ß  æ   æ  ;      æ      º    ŁØ   æ             ßı æº ª  -
+ ßı   ææ    Ł        º    Ł    æ     Œ   Ł        ßı æº ª   ßı. ´   æ   æ Ł,    
+     Œ        f æº         Ł       Ł    ł  r   Œ  ,    f
+[r]
+
+6  0:
+ Œ ÆŒ  ˇ  ææ       ı ˚˛   Æ Æø   ßı æ      Ø k;l   Œ     º   æ  ˚˛   Æ Æø  -
+  Ø æ     Łk +l  :  º       º   ,  º  Œ    ª       f      Œ         ł ,      + 1
+      æ    æ                º           exp(
+b
+f );      øŁØ     Æ       Ł  ¸Ł.
+¨    Ł      ßı       º  ŁØ Ł Ł  æ  Øæ   æŒ º    ª     Ł      Ł hh:; :ii  ß  Œ -
+   ,        æ    æ   P    ÆŁ    æ           æ         ª   º  ßı       æ    æ   P
+[k]
+
+˚˛   Æ Æø    Ø æ     Ł k æ   æ  :
+—      æ           Ł   º  Œ   Ł         ª         ø    ª  ª  Łº    Ł    H
+[ ]
+
+  Ł Ł      Ł 
+ 
+b
+H
+[ ]
+
+ 
+ 
+P = 0; P2P;
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 99˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,  4, 2010
+     æ    æ     ª    ł  ŁØJ   æŒº  ß    æ           æ         ª   º  ßı       -
+æ    æ  J
+[k]
+
+Œ   Ł        ßı   ł  ŁØ  Æ Æø    Ø æ     Łk æ   æ  :
+´        æ      æ    æ  P
+k
+ŁJ
+k
+æº        ææ    Ł        æ    æ   P
+[k]
+
+ŁJ
+[k]
+
+:
+´       º  Ł ı ˆ ˝  Ł ˆ˝  æº           Ł   H
+r
+   H
+[ ]
+
+;           º  ŁŁ  Ł Ł-
+  º   ª         æ  ª    Æ   R
+m
+æº           Ł     R
+[m]
+
+=fR
+i
+= x
+p
+i
+y
+q
+i
+: hff;p
+i
+i +
+h ;q
+i
+i =r +mg
+k
+i=1
+:
+ˆ   Łº    Ł   (12
+r
+);        º     ßØ     Æ Æø   ß  æ       , Æ       Æ        
+     H
+
+;      æ   ˆ˝  Ł ˆ ˝  Æ       Łæ    ˆ˝ 
+
+Ł ˆ ˝ 
+
+:
+          ßł Ł º      ª        ß 2 Ł 5   Œ         æ  æ     æº   Ø Œ   Ł    -
+     ª         ø    ª  ª  Łº    Ł   .
+7 ˆ˝    Œ    ßı æŁæ    æ     Ø æ        æ  Æ  ß
+`        ææ    Ł     æº   Ø n = 1 ŁK =R: ˇ -         , H
+r
+         ø        æ  
+ª  Łº    Ł    (12
+r
+) : H(x;y) =H
+r
+(x;y) +
+P
+jp+qj r+1
+h
+(p;q)
+x
+p
+y
+q
+(r  2):
+˜º  Œ   Œ æ Ł         º ı  º  ˆ˝  Ł ˆ ˝ ,   Ł      ßı   º  , Æ      æ Ł    ,    
+æº ª   ß       ø  Ł  Ł     æ      , Æ º ł   æ     Ł        ø    ª  ª  Łº    Ł   ,
+   æŒ     Ł      æ      æ    øŁ         æ           º ı æ   Ł     Ł .
+7.1 ˝      ø   ßØ ª  Łº    Ł                  Ø          Ø
+ˇ æ  H
+r
+      ŁæŁ         Ø Ł          ßı, æŒ    ,   x:
+         6 ˆ˝  æ  ß       ß         ø   ß  ª  Łº    Ł     H
+r
+= hy
+r
+(h2Rnf0g) æ         æ ˆ ˝  Ł Ł      Ł 
+H =hy
+r
++
+X
+q r 2
+h
+(p;q)
+x
+p
+y
+q
+: (28)
+˜ Œ     º æ    ˜ Øæ  Ł  º   , æ ªº æ  (13)
+b
+H
+ 
+r
+= x(@H
+r
+=@y)
+ 
+= hrx@
+r 1
+=@y
+r 1
+Ł
+       Ł (14)  Œ Ł  º     @
+r 1
+P=@y
+r 1
+= 0: ¯ª    ł  Ł      ºŁ   ß æ     Ł     ßł 
+r  2   y: ˛ æ             º  Ł  9   º      ˆ ˝  (28):
+˛    º  ßfP
+i
+=x
+p
+i
+y
+q
+i
+j p
+i
+=r +m + 1 i; q
+i
+=i  1g
+r 1
+i=1
+æ æ   º    Æ  Łæ    æ    -
+æ      ºŁ   Ł º  ßı   ł  ŁØ (14) æ     Łr +m; Ł æ ªº æ         º  Ł  11   Ł   
+ Æ        Ł Ł  º  ßØ        æ ßØ   Æ          Œ  r +m: ˇ         º        ˆ ˝ 
+         º  Ł  13   º   æ  ˆ˝ .  
+ˆ   Łº    Ł   (28)          Łæ    æ             Ł   æ   ß         ßı æº ª   ßı:
+H =hy
+r
++
+1
+X
+k=r+1
+r 2
+X
+q=0
+h
+(k q;q)
+x
+k q
+y
+q
+:
+— ææ    Ł          ßı   æ  ßı æº     ˆ˝  (28),   Ł     , r = 2 Ł r = 3:
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 100˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,  4, 2010
+1) ˇ Ł r = 2      ø  Ł    (28),     Ł   ,       ŁæŁ     y;   æ    ˆ˝  (28) æ        
+æ æ      æ    ø Ø ˆ˝   (æ . [11, æ. 263]) Ł Ł      Ł 
+H =hy
+2
++
+1
+X
+k=3
+h
+(k;0)
+x
+k
+: (28
+2
+)
+2) ˇ æ         r = 3 Ł h = 1=3:    ª   ˆ˝  (28) Ł      Ł 
+H =y
+3
+=3 +
+1
+X
+k=4
+(h
+(k;0)
+x
+k
++h
+(k 1;1)
+x
+k 1
+y): (28
+3
+)
+ˆ   Łº        æŁæ    ,             ˆ˝  (28
+3
+); Ł      Ł 
+_ x =y
+2
++
+1
+X
+k=3
+h
+(k;1)
+x
+k
+; _ y = 
+1
+X
+k=3
+((k + 1)h
+(k+1;0)
+x
+k
++kh
+(k;1)
+x
+k 1
+y): (28
+s
+3
+)
+  ªº æ   [3,   . 11],    Ł   º     (  ª  Łº       )           æŁæ      Ł       Ł-
+ º  ßı        ŁØ æ        ø    Ø   æ   (y
+2
+; 0)      º     Œ Ł  º          Ø Ł     ı
+       ßı  Æ Æø   ßı      º  ßı      (˛˝ ):
+_ x =y
+2
++
+1
+X
+p=2
+(X
+(p+1;0)
+x
+p+1
++X
+(p;1)
+x
+p
+y); _ y =
+1
+X
+p=2
+(Y
+(p;1)
+x
+p
+y +Y
+(p+1;0)
+x
+p+1
+); (28
+onf
+3:1
+)
+_ x =y
+2
++
+1
+X
+p=2
+X
+(p+1;0)
+x
+p+1
+; _ y =
+1
+X
+p=2
+(Y
+(p 1;2)
+x
+p 1
+y
+2
++Y
+(p;1)
+x
+p
+y +Y
+(p+1;0)
+x
+p+1
+): (28
+onf
+3:2
+)
+ˇ      Œ               ø  Ł   (28
+s
+3
+) æ         æ      Ø Œ         Ø      ø  Ł 
+  ˛˝  (28
+onf
+3:2
+);            æ       Ø Œ         Ø      ø  Ł  Ł  (28
+onf
+3:1
+):
+   ŒŁ   Æ     ,   Łı  Ł  Œ  ß     ,        æ     æº  Ł  ª  Łº       æ Ł Łæı    Ø
+æŁæ   ß æ        ø    Ø   æ    (y
+2
+; 0) æ     Ł æ         ß    ŁØ Ł Œ ˛˝  æ     łŁ 
+ Łæº     ºŁ  ßı       º         æ ßı æº ª   ßı   Œ           Œ       ø  Ł .
+˛    Ł        Œ  ,       Ł       º  ŁŁ ˆ˝   ß   ææ    Ł      Œ Ł  º     æ     -
+  æŁ  º    ª    ß      º  ßı Œ    Ł  æŒŁı     Æ       ŁØ,            Œ Œ         º -
+ ŁŁ ˛˝  (æ . [1])   ææ    Ł    æ   Œ Ł  º     æ       æŁ  º    Æ º   łŁ  Œ Ø ª    ß
+ Æ   Ł ßı      º  ßı     Æ       ŁØ.
+7.2 ˝      ø   ßØ ª  Łº    Ł                 ı         ßı
+         7 ˆ˝  æ    ß       ß         ø   ß  ª  Łº    Ł     H
+r
+= hx
+m
+y
+l
+æ
+m +l =r; d = ˝˛˜ (m;l) (m;l  1; h2Rnf0g) æ         æ ˆ ˝  Ł Ł      Ł 
+H =hx
+m
+y
+l
++
+X
+p m 2
+h
+(p;q)
+x
+p
+y
+q
++
+X
+p m 1
+q l 2
+h
+(p;q)
+x
+p
+y
+q
++
+1
+X
+j=d
+h
+(jm=d 1;jl=d 1)
+x
+jm=d 1
+y
+jl=d 1
+: (29)
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 101˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,  4, 2010
+˜ Œ     º æ      ªº æ   (13)
+b
+H
+ 
+r
+= (@H
+r
+=@x)
+ 
+y (@H
+r
+=@y)
+ 
+x =hm@
+m 1
+x
+@
+l
+y
+y hl@
+m
+x
+@
+l 1
+y
+x;
+               Ł (14)  Œ Ł  º             Ł 
+@
+m 1
+x
+@
+l 1
+y
+(m@
+y
+yP l@
+x
+xP ) = 0 (@
+x
+=@=@x; @
+y
+=@=@y):
+¨ø     ł  Ł     ª         Ł     Ł  P =x
+p
+y
+q
+: ¨    :
+@
+m 1
+x
+@
+l 1
+y
+(m(q + 1) l(p + 1))x
+p
+y
+q
+= 0:
+ˇ º             æ     ß  º    æ          Ł     ı    Ł  ŁæŒº    øŁı æº     :
+1) p m  2; 2) p m  1; q l  2; 3) p =jm=d  1; q =jl=d  1; ª  j d:
+— ł  Ł  æ  Œ     ß Ł   Œ     º  Ł  Æ       Æ  Łæ      æ    æ   J;       Ł  ,   
+      º  Ł  9 ª  Łº    Ł   (29)   º   æ  ˆ ˝ .
+˚ Œ Ł       ß  ø     Ł    ,  Ł Ł  º  ßØ        æ ßØ   Æ     Œ           Œ 
+      º   æ    Ł æ     ß   Æ      Ł æ æ  Ł  Ł    Ø    ßı      Ł º  ßı   ł  ŁØ.
+ˇ         º        ˆ ˝    º   æ  ˆ˝ .  
+ˇ    Łł   ª  Łº    Ł   (29)    Ł   æ   ß         ßı æº ª   ßı:
+H =hx
+m
+y
+l
++
+1
+X
+k=r+1
+ 
+m 2
+X
+p=0
+h
+(p;k p)
+x
+p
+y
+k p
++x
+m 1
+l 2
+X
+q=0
+h
+(k+m 1 q;q)
+x
+k q
+y
+q
++ 
+k
+(x;y)
+!
+;
+ª   
+k 2
+(x;y) =
+8
+<
+:
+h
+(km=r 1;kl=r 1)
+x
+km=r 1
+y
+kl=r 1
+;  æºŁk
+.
+.
+. (r=d);
+0;  æºŁk6 .
+.
+. (r=d):
+— ææ    Ł          ßı   æ  ßı æº    .
+1) ˇ æ   r = 2:    ª     ˆ˝  (29) Ł   Œæß l; m = 1;         H
+2
+= hxy;     ß     
+æ   ß        Ø   æ Ł Łæ       ,          æ     æ æ  Ł  Ł  æ      Ø    Ł      Ł xy:
+ º       º   , ˆ˝  (29) Ł      Ł 
+H =hxy +
+1
+X
+j=2
+h
+(j;j)
+x
+j
+y
+j
+: (29
+2
+)
+ˇ º     ßØ      º     æ ªº æ   æ  æ [11, Corollary 10.4.1]. ´      æº     ˆ˝  (29
+2
+)
+æ         æ ˆ˝   Ł ˆ˝ `.
+2) ˇ æ  r = 3; l = 1; m = 2; h = 1=2:    ª   H
+3
+= x
+2
+y=2 Ł ˆ˝  (29) Ł      Ł 
+H = 
+1
+2
+x
+2
+y +
+1
+X
+k=4
+h
+(0;k)
+y
+k
++
+1
+X
+j=1
+h
+(2j+1;j)
+x
+2j+1
+y
+j
+; (29
+3
+)
+       º           ª  Łº       Ø æŁæ   ß,             ˆ˝  (29
+3
+); Ł      Ł 
+_ x = 
+1
+2
+x
+2
++
+1
+X
+k=3
+(k + 1)h
+(0;k+1)
+y
+k
++
+1
+X
+j=1
+jh
+(2j+1;j)
+x
+2j+1
+y
+j 1
+; _ y =xy 
+1
+X
+j=1
+(2j + 1)h
+(2j+1;j)
+x
+2j
+y
+j
+:
+(29
+s
+3
+)
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 102˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,  4, 2010
+¨     æ   æ    Ł   æŁæ     (29
+s
+3
+) æ ˛˝  æŁæ   ß, Ł   ø Ø       ª  Łº       
+       ø        æ   Ł    Ł   º     (    Æ     º    ª  Łº       )      ø  Ł .
+˜ º       ,            ø        æ   æŁæ   ß (29
+s
+3
+)     Œ    ßØ    ª  º  
+( x
+2
+=2;xy)   º   æ      Ø Ł             Ł ºŁ  Ø      Œ Ł  º    ßı Œ    Ł  æŒŁı
+    , Œ Œ    ß  ºŁ  Ø  Ø    æ Æ Ø       Ø æ   Ł æ         ø        æ           Ø
+æŁæ   ß,     æ   º         Ł   º  ß     ß       ß    Œ    ß  Œ      Ł  ß     -
+ª  º     (æ . [2,     . 5.2], [3,   2]).   Ł     , æ ªº æ           Ø   [3] Œº ææŁ ŁŒ  ŁŁ
+( x
+2
+=2;xy) = ˚ 
+1
+1
+æ u = 1=2: ´ [2,   5]          Ł    Œ    ß  æ  ˛˝ ,      º   
+ Œ Ł  º    ß     Ł   º   Ø æŁæ     æ        ø    Ø   æ    (ffx
+2
+;xy):
+7.3 ˝      ø   ßØ ª  Łº    Ł         Ł   Ł ßØ     º  
+æ     Ł   -   æ ß Ł   Œ     º  Ł
+— ææ    Ł      Ł   Ł ßØ     º   (h
+1
+= )x
+ 
+  (h
+2
+=ff)y
+ff
+;   Œ       h
+1
+h
+2
+6= 0 Ł
+˝˛˜ (ff; ) = 1: ˇ        º  Ł  16       ˚˛   Æ Æø    Ø æ     Ł ff  æ   æ   (ff; ):
+— ææ    Ł  ª  Łº    Ł   H
+
+æ Œ   Ł         Ø        ø    Ø   æ   
+H
+[ ]
+
+= (h
+1
+= )x
+ 
+  (h
+2
+=ff)y
+ff
+; (30)
+ª   ˝˛˜(ff; ) = 1; h
+1
+h
+2
+6= 0;   =ff  æ   æ   = (ff; ):
+˚   Ł        ßØ        ø   ßØ ª  Łº    Ł   (30)   º   æ     ß       ß .
+      æ Ł    ,          º     Ł         ø    ª  ª  Łº    Ł    H
+r
+=hy
+r
+( æºŁff<  )
+  Æ  º  Ł   æº ª    ª       ø  Ł  ª  Łº    Ł    (28), æ      ø ª x:
+—      æ           Ł   º  Œ   Ł         ª         ø    ª  ª  Łº    Ł    H
+[ ]
+(ff; )
+Ł      Ł 
+h
+1
+y@
+  1
+x
+P +h
+2
+x@
+ff 1
+y
+P = 0; P2P: (31)
+´  Æ       Ł ı,   Ł   ßı      Œ   6.2,J
+[k]
+(ff; )
+         æ    æ    Œ   Ł        ßı
+  ł  ŁØ        Ł  (31)  Æ Æø    Ø æ     Łk æ   æ   (ff; ):
+¸     2 x
+p
+y
+q
+2J
+[k]
+(ff; )
+  ª   Ł   º Œ    ª  , Œ ª   k =ffp + q; p    2 Ł q ff  2:
+˜ Œ     º æ    ˇ        æ      æ   æ      Ø    æ     Œ Øx
+p
+y
+q
+  (31). 
+¸     3 ˇ æ   x
+p
+y
+q
+2 J
+[k]
+(ff; )
+;   x
+p
+0
+y
+q
+0
+2 J
+[k
+0
+]
+(ff; )
+:    ª   ºŁÆ  (p;q) = (p
+0
+;q
+0
+); ºŁÆ 
+k6 k
+0
+mod  :
+˜ Œ     º æ    ˇ æ   ffp +  q   ffp
+0
++  q
+0
+mod  :    ª   ffp   ffp
+0
+mod   Ł
+ q   q
+0
+mod ff: ˇ æŒ º Œ  ff Ł      Ł       æ ß,   æº   Ł       æ     Œ Ł  º    ß
+æº    øŁ 
+p p
+0
+mod  ; q q
+0
+mod ff: (32)
+ˇ æ         x
+p
+y
+q
+2 J
+[k]
+(ff; )
+; x
+p
+0
+y
+q
+0
+2 J
+[k
+0
+]
+(ff; )
+Ł k  k
+0
+mod  : ˇ  º     2 p;p
+0
+     2;
+q;q
+0
+ ff  2: ˛ æ    Ł Ł  (32) æº      ,    (p;q) = (p
+0
+;q
+0
+): 
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 103˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,  4, 2010
+¸     4 ˇ æ   P2J
+[k]
+(ff; )
+Ł P6  0:    ª   æ ø æ        Ł æ        Q2J
+[k+ ]
+(ff; )
+  Œ  ,
+   
+xP =h
+1
+@
+  1
+x
+Q; yP = h
+2
+@
+ff 1
+y
+Q: (33)
+` º     ª ,  æºŁJ
+[k]
+(ff; )
+6=f0g;    æ ø æ        Œ   k
+0
+  0;     k  k
+0
+mod   Ł
+   æ     æ    J
+[k
+0
+]
+(ff; )
+æ     Ł       Ł º       ł  Ł          Ł  (31): ˇ Ł      Ł    
+  æ   Ł       Ł      æ     æ   J
+[k]
+(ff; )
+ŁJ
+[k
+0
+]
+(ff; )
+:
+˜ Œ     º æ      ø æ      Ł  Q. ˇ º  Ł 
+Q =
+1
+h
+1
+Z
+   
+Z
+| {z }
+  1     xPdx
+  1
++
+  2
+X
+j=0
+R
+j
+(y)x
+j
+;
+ª  R
+j
+     Ł   º  ß    ºŁ   ß.    ª          Ł       æ  (33)  ß  º    æ       æ    -
+  ,     æº     æ     ŒŁQ                æ   ,   æŁº         Ł  (31);   º  Ł 
+h
+2
+@
+ff 1
+y
+Q = y
+Z
+   
+Z
+| {z }
+  1     @
+  1
+x
+Pdx
+  1
++
+  2
+X
+j=0
+h
+2
+x
+j
+@
+ff 1
+y
+R
+j
+(y):
+˜º  Œ    Ø       Æ     Ø          æº ª             ßÆ       ŒŁ    ºŁ   ß R
+j
+,    Æß
+ ß  º  º æ              æ      (33);       Œ  ß     æ ø æ      Ł    ºŁ    Q;      º -
+      ø ª  (33). ´ æ            Ł  (33) Ł Ł  Œ   Ł         æ ŁP æº      ,    Q      
+Æß    ßÆ    Œ   Ł        ß .
+                    æ    Ł  (33)   y Ł  ß Ł          ,              x;   º     ,
+   Q      º                Ł  (31).
+¯ Ł æ      æ  Q: ˇ æ    º Q;Q
+0
+2J
+[k+ ]
+(ff; )
+ ß  º    æ  æ     ł  Ł  (33) æ   Ł  -
+Œ  ß  P2J
+[k]
+(ff; )
+; P6  0:    ª   @
+  1
+x
+(Q Q
+0
+) = 0 Ł @
+ff 1
+y
+(Q Q
+0
+) = 0: ˛ æ       º     2
+  ł  Ł Q Ł Q
+0
+  ª     ºŁ    æ    º Œ          Ł º  ß    ł  Ł         æ  ª      -
+   Ł  (31),   Ł  Œ   Ł         æ ŁQ Q
+0
+Ł º   ß 3 æº      ,    
+Q Q
+0
+=Cx
+p
+y
+q
+; (34)
+ª  k +  =ffp + q; p    2 Ł q ff  2:
+˛Æ     Ł  P
+1
+= P: ˇ æ   Ł    æº       º   æ  P
+j
+2 J
+[k (j 1) ]
+(ff; )
+;   æº       º   
+  Ł      æ     ł  Ł  (33):
+xP
+j+1
+=h
+1
+@
+  1
+x
+P
+j
+; yP
+j+1
+= h
+2
+@
+ff 1
+y
+P
+j
+:
+´ æŁº         æ  ª         Ł  (31)  æ P
+j
+      º   æ            .
+  ø æ        Œ Ø      m2f1;:::; [k= ] + 1g;    P
+m
+6  0;  P
+m+1
+  0:
+¨  æ     ł  ŁØ (33)  ß  Œ    ,    P
+m
+       Ł º       ł  Ł   Æ Æø    Ø æ     Ł
+k  (m  1) <k + : ˇ       æ ªº æ   º   ß 3   (34) C = 0;          æŁº   Q =Q
+0
+:
+ˇ        ß   łºŁ  º  Œ    ª         Ł º   ª  ˚˛  Q2 J
+(ff; )
+(       Ł º -
+  æ  Q æº      Ł P6  0 Ł º   ß 2)   Ł æ             Ł º       ł  Ł P
+m
+; Ł  Œ     ª 
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 104˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,  4, 2010
+Q   º     æ m-Œ    ß    Ł     Ł   æ     ł  ŁØ (33),               Ł   -           
+æ      æ  Ł          ł  Ł  ŁQ2J
+[k+ ]
+(ff; )
+Ł      Ł º  ß Ł   ł  Ł  Ł  Æ Æø    Ø æ  -
+   Ł k  (m  1)         Ł  (31). ˇ æŒ º Œ  æ     ł  Ł  (33) ºŁ  Ø ß   P Ł Q;    
+æ      æ  Ł    º   æ  Ł      Ł        æ    æ  . 
+         8 ˆ ˝   º  Œ   Ł         ª         ø    ª  ª  Łº    Ł   (30) Ł    
+ Ł 
+H = (h
+1
+= )x
+ 
+  (h
+2
+=ff)y
+ff
++
+X
+p6  1 mod 
+q6  1 modff
+h
+(p;q)
+x
+p
+y
+q
+(ffp + q   + 1); (35)
+  º Æ    ˆ˝      æ   º   æ     Ł  
+H =H
+[ ]
+(ff; )
++
+1
+X
+k= +1
+H
+[k]
+(ff; )
+; (36)
+ª  H
+[k]
+(ff; )
+=h
+(p;q)
+x
+p
+y
+q
+æ k =ffp + q   + 1 Ł p6  1 mod  ; q6  1 mod ff:
+˜ Œ     º æ    ˇ æ         x
+p
+y
+q
+ ı  Ł   P2J
+[k]
+(ff; )
+(k =ffp + q  0) æ   ºŁ  ß    
+   º  Œ    Ł Ł     . ˙   Ł  , hhP;x
+p
+y
+q
+ii6= 0:
+ˇ  º     4 æ ø æ        Ł æ       Q2J
+[k+ ]
+(ff; )
+  Œ  ,      ß  º   ß      æ    (33).
+ˇ      
+hhxP;x
+p+1
+y
+q
+ii
+(33)
+= hhh
+1
+@
+  1
+x
+Q;x
+p+1
+y
+q
+ii6= 0; hhyP;x
+p
+y
+q+1
+ii
+(33)
+= hh h
+2
+@
+ff 1
+y
+Q;x
+p
+y
+q+1
+ii6= 0:
+ˇ º    æ  æ  Øæ     2 æŒ º    ª     Ł      Ł hh:; :ii;   º     
+hhQ;x
+p+ 
+y
+q
+ii6= 0; hhQ;x
+p
+y
+q+ff
+ii6= 0: (37)
+ˇ æ         x
+p+ 
+y
+q
+ ı  Ł           Ł º  ßØ ˚˛  Q2J
+[k+ ]
+(ff; )
+æ   ºŁ  ß        º 
+Œ    Ł Ł     ,   .  . hhQ;x
+p+ 
+y
+q
+ii6= 0:    ª      º     4 æ ø æ      P 2 J
+[k]
+(ff; )
+; P 6  0;
+     º       ø   (33). ˇ º    æ  æ     ł  Ł  Ł (33) Ł æ  Øæ     2 æŒ º    ª     Ł   -
+   Ł hh:; :ii;   º     hhh
+1
+@
+  1
+x
+Q;x
+p+1
+y
+q
+ii
+(33)
+= hhxP;x
+p+1
+y
+q
+ii6= 0;   Œ    hhP;x
+p
+y
+q
+ii6= 0:
+      Ł  , ŁhhQ;x
+p
+y
+q+ff
+ii6= 0 æ ªº æ   (37).
+   º ªŁ      Œ  ß    æ ,     Ł hhQ;x
+p
+y
+q+ff
+ii 6= 0 æº     hhP;x
+p
+y
+q
+ii 6= 0 Ł
+hhQ;x
+p+ 
+y
+q
+ii6= 0:
+ º       º   ,  º  Œ   ßı p Ł q   ŒŁı,    ffp + q    + 1;      ß x
+p
+y
+q
+; x
+p+ 
+y
+q
+;
+x
+p
+y
+q+ff
+ºŁÆ   æ         æ ß , ºŁÆ   æ           æ ß .
+˛ æ   , æ        º   ß 4,   º     ,            æ ß   º     ß   º  ß Ł      Ł 
+x
+p+j 
+y
+q+kff
+; ª  x
+p
+y
+q
+2J
+(ff; )
+:
+ º       º   ,    º     2 ˆ ˝  æ        ø    Ø   æ    (30) Ł      Ł  (35).
+¨  º    3 Ł 4  ß  Œ    ,      º  Œ    ª k  0 æ      ºŁ          æ    dimJ
+[k]
+(ff; )
+  1:
+ º       º   ,  æ ŒŁØ  Ł Ł  º  ßØ        æ ßØ   Æ     º     æ   ßÆ         ª 
+       æ  ª   º         Œ    Ø  Æ Æø    Ø æ     Ł      ø  Ł  ˆ ˝  (35). ˛ æ   
+  Łı  Ł  Œ ˆ˝  (36).  
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 105˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,  4, 2010
+ º  æ  Ł  1      æ    R =fx
+p+k 
+y
+q
+j p     2; q  ff  2; k  0g     æ   º   
+æ Æ Ø  Ł Ł  º  ßØ        æ ßØ   Æ    º         ø    ª  ª  Łº    Ł    (30) æ ªº æ  
+      º  Ł  12,            º  Ł 13    
+H = (h
+1
+= )x
+ 
+  (h
+2
+=ff)y
+ff
++
+X
+p6  1 mod 
+q ff 2
+h
+(p;q)
+x
+p
+y
+q
+(38)
+  º   æ  ˆ˝ , æ      æ    ø Ø  ßÆ          Ł Ł  º             æ       Æ    R:
+7.4        Ł  ˆ˝  æ  ß       ß  Ł    ß       ß 
+       ø   ß Ł ª  Łº    Ł    Ł
+— ææ    Ł    æ  ßØ æº   Ø ª  Łº    Ł     Ł       º   7.1, 7.3,   Ł     , ª  Łº    Ł  
+H =y
+2
+=2 x
+3
+=3 +h
+(2;1)
+x
+2
+y +h
+(1;2)
+xy
+2
++h
+(0;3)
+y
+3
++
+X
+p+q 4
+h
+(p;q)
+x
+p
+y
+q
+:
+˛       ßØ        ø   ßØ ª  Łº    Ł   Ł      Ł H
+2
+=y
+2
+=2: ˛        ŁæŁ    x;
+Ł            6 ˆ˝  æ         æ ˆ ˝  Ł Ł      Ł 
+H =y
+2
+=2 +
+X
+1
+k=3
+h
+(k;0)
+x
+k
+: (39)
+     ª Ø æ     ß,   Œ   æ           ø    Ø   æ Ł ª  Łº    Ł   H        ßÆ    
+   ß       ßØ ˚˛  H
+[6]
+(2;3)
+=y
+2
+=2 x
+3
+=3 (æ .       º  Ł  16).
+   ª              8 æ  = 6; (ff; ) = (2; 3)   º      æº    ø   ˆ ˝ :
+H =y
+2
+=2 x
+3
+=3 +
+X
+p6  2 mod 3
+q  0 mod 2
+h
+(p;q)
+x
+p
+y
+q
+(2p + 3q  7):
+  ˆ˝  (36), æ      æ    ø    ßÆ          æº  æ  ŁŁ 1  Ł Ł  º             æ    
+  Æ   R æ   = 6; (ff; ) = (2; 3); æ ªº æ   (38) Ł      Ł 
+H =y
+2
+=2 x
+3
+=3 +
+1
+X
+j=1
+(h
+(3j+1;0)
+x
+3j+1
++h
+(3j+3;0)
+x
+3j+3
+) (40)
+Ł           ª  Łº        æŁæ    
+_ x =y; _ y =x
+2
+ 
+1
+X
+j=1
+ 
+(3j + 1)h
+(3j+1;0)
+x
+3j
++ (3j + 3)h
+(3j+3;0)
+x
+3j+2
+ 
+: (41)
+     Ł     ß     Ł  (39) Ł (40);  Ł Ł ,         º  Ł           ø      ª  Łº -
+   Ł    æº ª    ª  ( x
+3
+=3)    æ   æ    ı   øŁ   ßÆ      Ł Ł  º   ª         æ  ª 
+  Æ         º     æŁºŁ   ª  Łº             º           .
+´   Æ    [4]           æŁæ     æ ºŁ  Ø  -Œ      Ł   Ø        ø    Ø   æ   (y;x
+2
+)
+  ææ            æŁ  º    ª    ß  ÆøŁı (   Œ    Ł  æŒŁı)      º  ßı     Æ       ŁØ.
+  ªº æ   [4,  5,   . 4],   Œ   æŁæ           Æß       Æ           ˛˝  æ   Ø           -
+ø    Ø   æ   ,      Œ     Ø  º  º Æ ª  k  1  æ  Œ    Ł Ł   ß      Y
+[6k 2]
+; Y
+[6k 1]
+;
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 106˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,  4, 2010
+Y
+[6k+1]
+    ß    º ,   æ   Ł Œ    Ł Ł           Y
+[6k 4]
+; Y
+[6k 3]
+; Y
+[6k]
+    ß    º   æ ,
+Œ    ,         ,     ª  Œ    Ł Ł       Œ    Ø Ł      .    Œ   ˛˝    ºŁ    æ    
+ˆ˝  (41);   Œ     Ø   æº         º    Ł      Æ Æø   ß  æ           Æ       Ł ı   -
+Æ  ß [4]   ª   Æß     ºŁ  ß       º    Œ   ßY
+[6k 3]
+Ł Y
+[6k+1]
+;    æ  º  ß      ß    º .
+—  ºŁ Ł       º  ßı       Æœ æ    æ     ,              æº      æº  Ł  Ł       -
+  º             º   æ  ª  Łº       æ   Łæı    Ø æŁæ   ß æ     Ø æ     ß Ł  Œ Ł  -
+º     æ       æŁ  º    ª    ß      º  ßı Œ    Ł  æŒŁı     Æ       ŁØ æ    ª Ø. ´ 
+       æº      æº  Ł  ª  Łº       æ Ł æŁæ   ß æ Ł    æ ,    æ   æ       ææ    Ł    æ 
+ Œ Ł  º     æ       æŁ  º    Æ º   łŁ  Œ Ø ª    ß      º  ßı     Æ       ŁØ.
+  Łæ Œ ºŁ       ß
+[1] ´. ´. ` æ  . ˛Æ Æø           º           Ł      º      Œ Ł  º     æ   æŁ-
+æ     Ł       Ł º  ßı        ŁØ æ    º  ß Ł ı   Œ   Łæ Ł  æŒŁ Ł  Łæº  Ł.
+// ˜Ł       Ł º  ß         Ł .   2003.    . 39,   2.   . 154 170.
+[2] ´. ´. ` æ  ,  . ´.  ŒŁ   Ł . ˛Æ Æø           º           Ł      º      Œ Ł  -
+º     æ          ßı æŁæ    æ    º  ß  Œ      Ł  ß    ŁÆºŁ   Ł  , I // ˜Ł   -
+    Ł º  ß         Ł .  2003.    . 39,   8.   . 1016 1029.
+[3] ´. ´. ` æ  , ¯. ´.         . ˜      ß    ø æ     ß  æŁæ   ß ˛˜  æ Œ      Ł -
+  Ø        ø    Ø   æ   : Œº ææŁ ŁŒ  Ł  Ł  ß       ß   Æ Æø   ß       º -
+ ß      ß// ˜Ł       Ł º  ß         Ł  Ł      ææß      º  Ł  ( º.      º
+http://www.math.spbu.ru/di journal).  2010.    4.   . 49 85.
+[4] ´. ´. ` æ  ,  .  .        . ˛Æ Æø           º                  ßı æŁæ    ˛˜ 
+æ ºŁ  Ø  -Œ      Ł   Ø        ø    Ø   æ    // ´ æ  ŁŒ  ˇÆˆ  .    . 1.  2007. 
+ ß . 1.   . 25 30.
+[5]  . ˜. `    . ˝    º           æŁæ   ß ˆ   Łº      //   æ  ıŁ     .    Œ.  1988. 
+  . 43,   1.   . 23 56.
+[6] ˜. ˇ. ˘ º Æ  Œ . ˇ   æ   º  Ł      Œ Ł  ßı  ºª Æ  ¸Ł.   .:  Ł    ºŁ  , 1994. 
+352 æ.
+[7]  .  . ˇ æ  ŁŒ  . ¸ Œ ŁŁ    ª      ŁŁ.     æ   V. ˆ    ß Ł  ºª Æ ß ¸Ł.   .:
+˝  Œ , 1982.  448 æ.
+[8] A. Deprit. Canonical transformations depending on a small parameter // Celestial
+Mechanics.  1969.  V. 1,   1.  P . 12 30.
+[9] G. I. Hori. Theory of general perturbations with unspeci ed canonical v ariables // Astron
+Soc. Japan.  1966.  V. 18,   4.  P . 287 296.
+[10] K. R. Meyer. Normal forms for Hamiltonian systems // Celestial Mechanics.  1974. 
+V. 9,   4.  P . 517 522.
+[11] K. R. Meyer, G. R. Hall, D. O n. Introduction to Hamiltonian Dynamical Systems and the
+N-Body Problem, 2nd Edition.  Springer, 2009.  xiii+399 p.
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 107

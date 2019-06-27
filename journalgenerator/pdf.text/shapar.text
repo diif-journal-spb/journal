@@ -1,373 +1,2130 @@
-﻿
-
-\newcommand{\bn}{\in]0,\infty[}
-\begin{center}
-{\Large \bf УСТОЙЧИВОСТЬ ПО МАКСИМИНУ ОДНОЙ ЗАДАЧИ ПРОГРАММНОГО УПРАВЛЕНИЯ МАТЕРИАЛЬНЫМИ ТОЧКАМИ}
-\footnote{Работа выполнена при поддержке РФФИ (грант №09-01-00436-а) и программы Президиума 
-РАН ``Математическая теория управления''.}
-
-\bigskip
-
-Ю.В. ШАПАРЬ
-
-Россия, 620990, Екатеринбург, С. Ковалевской, 16,\\
-Институт математики и механики УрО РАН,\\
+﻿dx
+dt
+6
+ 
+-
+?
+˜¨  ¯—¯˝ ¨ ¸ ˝ ¯  —  ´˝¯˝¨ 
+¨
+ˇ—˛ ¯     ˇ—  ´¸¯˝¨ 
+N 1, 2011
+ º Œ     ßØ      º,
+  ª.  º. N   77-39410    15.04.2010
+ISSN 1817-2172
+http://www.math.spbu.ru/di journal
+e-mail: jo di @mail.ru
+˛  Ł  º           º  Ł 
+   ˛  ¨´˛    ˇ˛   ˚ ¨ ¨˝  ˛˜˝˛ 
+˙ ˜   ¨ ˇ—˛ˆ—    ˝˛ˆ˛  ˇ—  ´¸¯˝¨ 
+    ¯—¨ ¸ ˝  ¨  ˛ ˚  ¨
+1
+ .´.   ˇ — 
+— ææŁ , 620990, ¯Œ    Ł Æ  ª ,  . ˚   º  æŒ Ø, 16,
+¨ æ Ł           ŁŒŁ Ł   ı  ŁŒŁ   ˛ —  ˝,
 e-mail: shaparuv@mail.ru
-\medskip
-
-\end{center}
-\bigskip
-
-{\bf{Аннотация}}
-
- Рассматривая задачу управления при ослаблении системы ограничений, 
-мы часто сталкиваемся со скачкообразным изменением достигаемого качества. 
-Данное качество может определяться в виде экстремума, области достижимости или некоторого 
-аналога данной области. В работе рассматривается игровой вариант конкретной задачи 
-с ограничениями асимптотического характера, возникающими при ослаблении стандартных 
-моментных ограничений. Исследуется асимптотика значений максимина 
-при ослаблении моментных ограничений и вопросы устойчивости по результату. 
-
-\section{Содержательная постановка задачи}%\setcounter{equation}{0}\setcounter{proposition}{0}
-
-\hspace{5mm} Рассмотрим один конкретный пример постановки задачи \cite{chen12},\cite{chen13}: ниже исследуем задачу об игровом взаимодействии двух материальных точек с ограничениями, включающими импульсную и моментную составляющие. Ограничения последнего типа допускают (см. общий случай в  \cite{chen12},\cite{chen13}) ослабление, что потенциально может приводить к скачкообразному изменению качества. В  \cite{chen12},\cite{chen13} и в настоящей работе используется подход, последовательно развиваемый в  \cite{chen6},\cite{chen7},\cite{chen8} и связанный с построением множеств притяжения. В  \cite{chen12},\cite{chen13} получены достаточные условия устойчивости по максимину. В рассматриваемом примере эти условия нарушены, а требуемая устойчивость имеет место при заданном наборе параметров. Изменяя этот набор, мы можем, однако, получить задачу, в которой нет упомянутой устойчивости.
-
-Итак, рассмотрим материальные точки
- \begin{equation}\label{1}
-\dot{y}_1=y_2,\ \ \dot{y}_2=a(t)u(t),\ \ \dot{z}_1=z_2,\ \ \dot{z}_2=b(t)v(t)
-\end{equation}
-на  единичном промежутке времени  $[0,1];$ полагаем, что $y_1(0)=y_2(0)=z_1(0)=z_2(0)=~0;$ $y_1(1)=y^0,\ \ z_1(1)=z^0 .$ Здесь $y^0,\ z^0$\,--- фиксированные константы. Программные управления $u=u(\cdot)$ и $v=v(\cdot)$ полагаем определенными на <<стрелке>> $[0,1[\,,$  кусочно-постоянными, непрерывными справа вещественнозначными функциями.  Ограничения на $u$ и $v$ включают моментную и импульсную компоненты:
-\begin{equation}\label{2}
-\int_0^1(1-t)a(t)u(t)\,dt=y^0,\ \  \int_0^1(1-t)b(t)v(t)\,dt= z^0;
-\end{equation}
-кроме того,
-$$
-\int_0^1|u(t)|\,dt\leqslant c_U,\ \  \int_0^1|v(t)|\,dt\leqslant c_V,
-$$
-где $c_U$ и $c_V$ --- фиксированные положительные  константы. Таким образом, речь идет об управлениях с  ограничениями  на энергоресурс.
- Функции $a(\cdot), \ b(\cdot)$ допускают равномерное приближение кусочно-постоянными и непрерывными справа. Рассмотрим области достижимости  $G_\partial^{(1)}, \ G_\partial^{(2)}$ системы (\ref{1}) по скоростной координате (то есть по $y_2$ и $z_2$) в последний момент времени $t=1$ при ослаблении ограничений: $$y_1(1)\approx y^0,\ \ z_1(1)\approx z^0.$$ Интересен  вопрос о том, как будет меняться область достижимости по отношению к  $G_\partial^{(1)}$ и $G_\partial^{(2)}$  при <<малых>> возмущениях комплекса условий и  будут ли соответствующие изменения области достижимости также <<малыми>>? В последнем случае можно говорить об устойчивости.\\
-
- {\bf К вопросу об устойчивости.}\\
-
- Введем в рассмотрение функционал
-$$
-\Phi(u,v)=f_0\left(\int_0^1a(t)u(t)\,dt,\ \int_0^1b(t)v(t)\,dt\right)\rightarrow\sup\limits_{v\in\mathcal{V}}\inf\limits_{u\in\mathcal{U}},
-$$
-где $\mathcal{U}$ и $\mathcal{V}$--- множества допустимых управлений, определяемых ограничениями задачи.
-Здесь полагаем, что функция $f_0$ определена и непрерывна на $\mathbb{R}\times\mathbb{R}.$
-Пусть $\mathbb{F}$\,--- множество всех кусочно-постоянных, непрерывных справа вещественнозначных функций на промежутке $[0,1[$. Полагаем далее, что $y^0=z^0=0.$ Положим при этом, что
-$$
-\mathbb{F}_\partial^{(1)}\triangleq\left\{u\in\mathbb{F}\mid\left(\int_0^1|u(t)|\,dt\leqslant c_U\right)\ \& \left(\int_0^1(1-t)a(t)u(t)\,dt=0\right)\right\},
-$$
-$$
-\mathbb{F}_\partial^{(2)}\triangleq\left\{v\in\mathbb{F}\mid\left(\int_0^1|v(t)|\,dt\leqslant c_V\right)\ \& \left(\int_0^1(1-t)b(t)v(t)\,dt=0\right)\right\}
-$$
-суть непустые (так как содержат нулевые управления)  множества допустимых управлений в задаче с нулевым краевым условием. Тогда
-%\begin{equation}\label{3'}
-$$G_\partial^{(1)}\triangleq\left\{\int_0^1a(t)u(t)\,dt:u\in\mathbb{F}_\partial^{(1)}\right\},$$
-%\end{equation}
-%\begin{equation}\label{3''}
-$$G_\partial^{(2)}\triangleq\left\{\int_0^1b(t)v(t)\,dt:v\in\mathbb{F}_\partial^{(2)}\right\}$$
-%\end{equation}
---- области достижимости (по скорости) в момент времени $t=1.$
-  Введем  при  $\varepsilon\in]0,\infty[$ и $\delta\in]0,\infty[$ следующие множества:
-\begin{equation}\label{9}
-\mathbb{F}_{\partial,1}^{(\varepsilon)}\triangleq\left\{u\in\mathbb{F}:\left|\int_0^1(1-t)a(t)u(t)\,dt\right|<\varepsilon\right\},
-\end{equation}
-\begin{equation}\label{10}
-\mathbb{F}_{\partial,2}^{(\delta)}\triangleq\left\{v\in\mathbb{F}:\left|\int_0^1(1-t)b(t)v(t)\,dt\right|<\delta\right\};
-\end{equation}
-далее будем рассматривать области достижимости (по скорости) при ослаблении краевого  условия на координату (для обобщенной задачи).
-%\begin{equation}\label{3'}
-$$G_{\partial,1}^{(\varepsilon)}\triangleq\left\{\int_0^1a(t)u(t)\,dt:u\in\mathbb{F}_{\partial,1}^{(\varepsilon)}\right\},$$
-%\end{equation}
-%\begin{equation}\label{4'}
-$$G_{\partial,2}^{(\delta)}\triangleq\left\{\int_0^1b(t)v(t)\,dt:v\in\mathbb{F}_{\partial,2}^{(\delta)}\right\}.$$
-%\end{equation}
-
-Пусть (согласно построениям \cite[c.42]{chen7})
-%\begin{equation}\label{10'}
- $$AS_1\triangleq\bigcap\limits_{\varepsilon\in]0,\infty[}\overline{G_{\partial,1}^{(\varepsilon)}},\ \ AS_2\triangleq\bigcap\limits_{\delta\in]0,\infty[}\overline{G_{\partial,2}^{(\delta)}}$$
-%\end{equation}
-  суть множества притяжения, играющие каждое роль асимптотического аналога соответствующих областей достижимости  (в силу ограниченности и замкнутости данные множества являются компактами).
-       Отметим, что  множества (\ref{9}), (\ref{10}) непусты  при всяких  $\varepsilon>0$ и $\delta>0.$
- Поэтому определены следующие реализуемые значения максимина \cite{16}:
-    $$\mathfrak{V}(\varepsilon,\delta)=\sup\limits_{z\in G_{\partial,2}^{(\delta)}}\inf\limits_{y\in G_{\partial,1}^{(\varepsilon)}}f_0(y,z)\in\mathbb{R}\ \forall\,\varepsilon\in]0,\infty[\ \forall\,\delta\in]0,\infty[.$$
-
-    В \cite{chen12},\cite{chen13}, \cite{chen14}  установлено существование числа $\mathbb{V}\in\mathbb{R},$ для которого справедливо следующее свойство:
-\begin{equation}\label{1*}
-\forall\,\mbox{\ae}\in]0,\infty[ \ \exists\,\zeta\in]0,\infty[:\\ |\mathfrak{V}(\varepsilon,\delta)-\mathbb{V}|<\mbox{\ae}\ \forall\,\varepsilon\in]0,\zeta[\ \forall\,\delta\in]0,\zeta[;
-\end{equation}
-более того, как показано в  \cite{chen12}, \cite{chen13}, $\mathbb{V}$ является максимином в игровой задаче на произведении пространств обобщенных элементов, формализуемых в подходящем классе конечно-аддитивных мер, удовлетворяющих <<точным>> моментным ограничениям. Кроме того (см.~\cite{chen12}, \cite{chen13}),  $AS_1\neq\varnothing,$  $AS_2\neq\varnothing,$ и при этом \cite{16}
-$$
-\mathbb{V}\triangleq\max\limits_{z\in AS_2}\min\limits_{y\in AS_1}f_0(y,z)
-$$
- (напомним, что  в обозначениях \cite{chen12} $AS_1=\mathbb{G}_{U}^{(1)}$ и $AS_2=\mathbb{G}_{V}^{(2)}$).
-
-  Пусть далее  $a(t)\equiv 1,\ b(t)\equiv 1.$ Тогда (см. \cite[(56)]{kojan11}) имеем равенства
- \begin{equation}\label{12'}
- \left(AS_1=\overline{G_\partial^{(1)}}\,\right)\ \& \left(AS_2=\overline{G_\partial^{(2)}}\,\right).
- \end{equation}
-  Поскольку  множества $AS_1$ и  $AS_2$\ непусты, то, как уже отмечалось,  $G_\partial^{(1)}\neq\varnothing, G_\partial^{(2)}\neq\varnothing$ и  $\mathbb{F}_\partial^{(1)}\neq\varnothing,\ \mathbb{F}_\partial^{(2)}\neq\varnothing.$ Определяем с учетом этого <<обычный>>  максимин
-$$
-\mathbf{val}\triangleq\sup\limits_{v\in\mathbb{F}_\partial^{(2)}}\inf\limits_{u\in\mathbb{F}_\partial^{(1)}}f_0
-\left(\int_0^1u(t)\,dt,\int_0^1v(t)\,dt\right)=\sup\limits_{z\in G_\partial^{(2)}}\inf\limits_{y\in G_\partial^{(1)}}f_0(y,z)\in\mathbb{R}.
-$$
-%\end{document}
-\begin{proposition}
-Справедливо равенство $\mathbf{val}=\mathbb{V},$  то есть максимин в классе обобщенных управлений \cite{chen12}, \cite{chen13} равен  максимину в классе обычных управлений:
- \begin{equation}\label{15}
-\mathbb{V}=\max\limits_{z\in AS_2}\min\limits_{y\in AS_1}f_0(y,z)=\sup\limits_{z\in G_\partial^{(2)}}\inf\limits_{y\in G_\partial^{(1)}}f_0(y,z).
-\end{equation}
-\end{proposition}
-Справедливость равенства (\ref{15}) следует из (\ref{12'})
- и свойства непрерывности функции $f_0.$ C учетом Утверждения 1 имеем устойчивость по максимину и, таким образом, справедливо
- \begin{proposition}
- Имеет место устойчивость по максимину:
- \begin{equation}
- \forall{\mbox{\ae}}\in]0,\infty[\ \exists\,\zeta\in]0,\infty[:\\
-  |\mathfrak{V}(\varepsilon,\delta)-\mathbf{val}|<\mbox{\ae}\ \forall\varepsilon\in]0,\zeta[\ \forall\delta\in]0,\zeta[.
- \end{equation}
- \end{proposition}
- Доказательство получаем комбинацией (\ref{1*}) и Утверждения 1. %Предложения 1.1.
-  Заметим, что в  \cite{chen12},\cite{chen13} факты, сформулированные в Утверждениях 1 и 2, были установлены при дополнительном условии ступенчатости функций, роль которых в рассматриваемой задаче играет функция: $$t\mapsto 1-t: [0,1[\rightarrow\mathbb{R}.$$  Здесь, как видно из последних двух соотношений, упомянутое условие ступенчатости нарушено, а факт, подобный теореме 1 и следствию 1 работы \cite{chen12}, справедлив (см. Утверждения 1, 2). Заметим, однако, что полученное здесь свойство (аналог устойчивости) справедливо при краевом (по смыслу) условии (\ref{2}) c нулевыми правыми частями. Если же заменить (\ref{2}) условиями
-\begin{equation}\label{1***}
-\int_0^1(1-t)u(t)\,dt=c_U,\ \int_0^1(1-t)v(t)\,dt=c_V
-\end{equation}
-(достаточно заменить в (\ref{2}) одно из условий на соответствующее ему в (\ref{1***})), то упомянутые положения об устойчивости не будут справедливы (при этом, кстати, будет нарушено условие совместности системы ограничений одного из игроков). Таким образом, комбинируя конструкции \cite{chen12},\cite{chen13},\cite{kojan11}, удается построить пример устойчивой по максимину игровой задачи импульсного программного управления с краевыми условиями, в которой не выполняется общее достаточное условие устойчивости \cite{chen12},\cite{chen13}, хотя вариация краевых условий может привести к <<неустойчивости>> ситуации.
-\section{Вопрос об устойчивости в классе неотрицательных управлений.}%\setcounter{equation}{0}\setcounter{proposition}{0}
-\hspace{5mm} В настоящем разделе приводятся построения \cite[Раздел 2]{kojan11}, адаптированные для целей последующего применения расширения игровой задачи на максимин.  Ниже будем считать, что   $a(t)\equiv 1$ и  $b(t)\equiv 1.$
-Аналогично рассуждениям, приведенным в предыдущем разделе, введем в рассмотрение следующие множества.
-Множества допустимых управлений:
- \begin{equation}\label{3.1}
-\mathbb{F}^{(1)}\triangleq\left\{u\in\mathbb{F}_+\mid\int_0^1u(t)dt\leqslant c_U\right\};\ \ \mathbb{F}^{(2)}\triangleq\left\{v\in \mathbb{F}_+\mid\int_0^1v(t)dt\leqslant c_V\right\},
-\end{equation}
- где  $\mathbb{F}_+$\,--- множество всех кусочно-постоянных, непрерывных справа неотрицательных вещественнозначных функций на промежутке $[0,1[.$ Пусть $0<c_U\leqslant c_V.$ Имеем тогда очевидное вложение $\mathbb{F}^{(1)}\subset \mathbb{F}^{(2)}.$ Рассмотрим также  множества допустимых управлений с моментными ограничениями, положив при этом  $y^0=z^0=a,$ где  $a\geqslant 0$. Наличие здесь общего краевого условия можно интерпретировать как обязательное условие встречи материальных точек (по координате), причем точка встречи задается, а вопрос о соотношении скоростей в момент встречи будет рассмотрен далее. Упомянутая точка встречи назначается директивно, что позволяет игрокам раздельно решать вопрос о допустимости соответствующих программных управлений (если бы точка встречи не была заданной, то пришлось бы обсуждать вопрос о соблюдении краевого условия в игровой задаче с зависимыми программными стратегиями). Полагаем
- % \begin{equation}\label{3.2}
-$$\mathbb{F}_\partial^{(1)}[a]\triangleq\left\{u\in \mathbb{F}^{(1)}\mid\int_0^1(1-t)u(t)dt=a\right\};$$ $$\mathbb{F}_\partial^{(2)}[a]\triangleq\left\{v\in \mathbb{F}^{(2)}\mid\int_0^1(1-t)v(t)dt=a\right\}.$$
-%\end{equation}
-Для данных множеств справедливо включение
- \begin{equation}\label{3.1'}
-\mathbb{F}_\partial^{(1)}[a]\subset \mathbb{F}_\partial^{(2)}[a],
-\end{equation}
-так как $\mathbb{F}^{(1)}\subset \mathbb{F}^{(2)}$.
-Также при $\varepsilon>0$ и $\delta>0$ будем рассматривать  множества допустимых управлений с ослабленными ограничениями
-  \begin{equation}\label{3.2'}\begin{array}{c}
-\mathbb{F}_{\partial,\,1}^{(\varepsilon)}[a]\triangleq\left\{u\in \mathbb{F}^{(1)}\mid\left|\int_0^1(1-t)u(t)dt-a\right|<\varepsilon\right\};\\ \ \ \ \mathbb{F}_{\partial,\,2}^{(\delta)}[a]\triangleq\left\{v\in\mathbb{F}^{(2)}\mid\left|\int_0^1(1-t)v(t)dt-a\right|<\delta\right\}.
-\end{array}\end{equation}
-Тогда, в частности,
- %\begin{equation}\label{3.2*}
-$$ \mathbb{F}_{\partial,\,1}^{(\xi)}[a]\subset \mathbb{F}_{\partial,\,2}^{(\xi)}[a]\ \ \forall\,\xi\in]0,\infty[.$$
-% \end{equation}
- Области достижимости по скорости при точном соблюдении ограничений имеют вид:
-% \begin{equation}\label{3.3}
-$$G_\partial^{(1)}[a]\triangleq\left\{\int_0^1u(t)dt:u\in \mathbb{F}_\partial^{(1)}[a]\right\};\ \
-G_\partial^{(2)}[a]\triangleq\left\{\int_0^1v(t)dt:v\in \mathbb{F}_\partial^{(2)}[a]\right\}.$$
-%\end{equation}
- Области достижимости по скорости при ослаблении краевого условия на координату определяются (при $\varepsilon>0$ и $\delta>0$) выражениями:
- \begin{equation}\label{3.3'}
-G_{\partial,1}^{(\varepsilon)}[a]\triangleq\left\{\int_0^1u(t)dt:u\in \mathbb{F}_{\partial,1}^{(\varepsilon)}[a]\right\};\ \
-G_{\partial,\,2}^{(\delta)}[a]\triangleq\left\{\int_0^1v(t)dt:v\in \mathbb{F}_{\partial,2}^{(\delta)}[a]\right\}.
-\end{equation}
-Согласно построениям \cite[c.42]{chen7},  введем множества притяжения и полагаем в дальнейшем
-%\begin{equation}\label{3.3''}
-$$ AS_1\triangleq\bigcap\limits_{\varepsilon\in]0,\infty[}\overline{G_{\partial,1}^{(\varepsilon)}[a]},\ \ AS_2\triangleq\bigcap\limits_{\delta\in]0,\infty[}\overline{G_{\partial,2}^{(\delta)}[a]}.$$
-%\end{equation}
-
-Если  $a=0$, то $AS_1\neq G_\partial^{(1)}[a]$ и $AS_2\neq G_\partial^{(2)}[a].$ Действительно, $G_\partial^{(1)}[0]=G_\partial^{(2)}[0]=\{0\},$ в то время как \cite[(33)]{kojan11}  $c_U\in AS_1$ и $c_V\in AS_2.$  Легко видеть, что задача о построении области достижимости не обладает здесь (при $a=0$) устойчивостью при ослаблении ограничений на координату. Заметим, что (см. \cite{chen13}, \cite{chen14}, \cite{kojan11}) при $a=c_U$ выполнены условия $\mathbb{F}_\partial^{(1)}[a]=\varnothing$ и $G_\partial^{(1)}[a]=\varnothing,$ в то время как  $a=c_U\in AS_1$ (см. \cite[(15)]{kojan11}). Аналогичным образом имеем при $a=c_V$ свойства: $G_\partial^{(2)}[a]=\varnothing$ и $a\in AS_2.$  В упомянутых  случаях нужная  устойчивость отсутствует.
-
-         Проанализируем вопрос об устойчивости исходной задачи при ненулевых значениях  $y^0=z^0=a$ в классе неотрицательных управлений. Напомним, что  $u(t)\geqslant 0$ и $v(t)\geqslant 0$ при $t\in[0,1[$. Полагаем в дальнейшем, что $0<a<c_U.$
-Отметим справедливость   включения $G_\partial^{(1)}[a]\subset G_\partial^{(2)}[a]$ (см.  \cite[(5)]{kojan11} и уже упомянутое включение (\ref{3.1'})). %$\mathbb{F}_\partial^{(1)}[a]\subset\mathbb{F}_\partial^{(2)}[a]$).
- Заметим, что $$\left(G_\partial^{(1)}[a]\subset[0,c_U]\right)\ \& \ \left(G_\partial^{(2)}[a]\subset[0,c_V]\right).$$
-
-Если $a>c_U,$ то $\mathbb{F}_\partial^{(1)}[a]=\varnothing.$ В последнем случае обе задачи о построении области достижимости для первого игрока (при точном соблюдении ограничений и при ослабленных ограничениях) несовместны. Также $G_\partial^{(1)}[a]=\varnothing$ и, кроме того, в этом случае $AS_1=\varnothing$ (см. \cite[(34)]{kojan11}).
-
- Если же $a>c_V,$ то $G_\partial^{(2)}[a]=\varnothing$ и, соответственно, $AS_2=\varnothing.$
-Для дальнейших рассуждений отметим очевидные вложения:
-%\begin{equation}\label{***}
-$$G_\partial^{(1)}[a]\subset\overline{G_\partial^{(1)}[a]}\subset[0,c_U];\ \ G_\partial^{(2)}[a]\subset\overline{G_\partial^{(2)}[a]}\subset[0,c_V].$$
-%\end{equation}
-Напомним, что \cite[(16)]{kojan11} $c_U\in\overline{G_\partial^{(1)}}$ и $c_V\in\overline{G_\partial^{(2)}}.$ В этой связи рассмотрим, в целях полноты изложения, конструкцию   специальных  двухимпульсных управлений в $\mathbb{F}_\partial^{(1)}[a], \ \ \mathbb{F}_\partial^{(2)}[a],$ следуя построению   \cite{kojan11}. Берем $\varepsilon\in]0,c_U[.$ Тогда $c_U-\varepsilon\in\,]0,\infty[$ и $\frac{\varepsilon}{2}\in]0,\infty[.$ Выберем любое число $k_0\in\left]0,\inf\left(\left\{\frac{\varepsilon}{2};\frac{c_U-\varepsilon}{2}\right\}\right)\right].$ Очевидно, что $k_0>0$ и при этом
- \begin{equation}\label{2.14}
- \left(k_0<\frac{\varepsilon}{2}\right)\ \& \ \left(k_0\leqslant\frac{c_U-\varepsilon}{2}\right).
- \end{equation}
-Введем в рассмотрение число
-\begin{equation}\label{2.15}
-\mbox{\ae}_1=2-\frac{2(\varepsilon-k_0)}{\varepsilon}=\frac{2k_0}{\varepsilon}.
-\end{equation}
-Из (\ref{2.14}) и (\ref{2.15}) следует, что $\mbox{\ae}_1\leqslant 1.$ С другой стороны, $0<k_0\leqslant\frac{\varepsilon}{2},$ так как $\varepsilon\in]0,c_U[.$ Поэтому $\varepsilon-k_0<\varepsilon$ и, следовательно, $$\frac{2(\varepsilon-k_0)}{2}<2=\frac{2}{\varepsilon}\cdot\varepsilon.$$ В итоге (см. (\ref{2.15})) $$\mbox{\ae}_1=2-\frac{2(\varepsilon-k_0)}{\varepsilon}>2-2=0.$$ Поскольку   $\mbox{\ae}_1\leqslant 1,$ получаем, что
-\begin{equation}\label{2.17}
-\mbox{\ae}_1\in]0,1].
-\end{equation}
-
-Кроме того, рассмотрим число
-\begin{equation}\label{2.18}
-\mbox{\ae}_2=\frac{2k_0}{c_U-\varepsilon}.
-\end{equation}
-Очевидно, что $\mbox{\ae}_2>0.$ Из (\ref{2.14}) и  (\ref{2.18}) получаем, что $$\mbox{\ae}_2\leqslant\frac{2}{c_U-\varepsilon}\cdot\frac{c_U-\varepsilon}{2}=1.$$ Поэтому $\mbox{\ae}_2\in]0,1].$ С учетом (\ref{2.17}) имеем теперь
-\begin{equation}\label{2.19}
-(\mbox{\ae}_1\in]0,1])\ \& \ (\mbox{\ae}_2\in]0,1]).
-\end{equation}
-Определим  функцию $u^{(1)}:I\rightarrow[0,\infty)$ правилом:
-%\begin{equation}\label{2.20}
-$$ u^{(1)}(t)=\begin{cases}\frac{\varepsilon}{\mbox{\ae}_1},&\text{если $t\in[0,\mbox{\ae}_1[$;} \\ 0,&\text{если $t\in[\mbox{\ae}_1,1[.$}\end{cases}$$
-%\end{equation}
-   Кроме того, (см. (\ref{2.19})) определим функцию $u^{(2)}:I\rightarrow]0,\infty]$ правилом:
-\begin{equation}\label{2.21}
-u^{(2)}(t)=\begin{cases}0,&\text{если $t\in[0,1-\mbox{\ae}_2[$;} \\ \frac{c_U-\varepsilon}{\mbox{\ae}_2},&\text{если $t\in[1-\mbox{\ae}_2,1[.$}\end{cases}
- \end{equation}
-
-Функции $u^{(1)}(t)$ и $u^{(2)}(t)$ кусочно-постоянные и непрерывные справа. Поэтому  $$u^{(1)}(t)+u^{(2)}(t):I\rightarrow[0,\infty[$$ (операция сложения определяется поточечно) также кусочно-постоянная и непрерывная справа функция, причем
-\begin{multline}%\label{2.22}
-\int_0^1\left(u^{(1)}+u^{(2)}\right)(t)\,dt=\int_0^1u^{(1)}(t)\,dt+\int_0^1u^{(2)}(t)\,dt=
-\int_0^{\mbox{\ae}_1}u^{(1)}(t)\,dt+\\+\int_{1-\mbox{\ae}_2}^1u^{(2)}(t)\,dt
-=\frac{\varepsilon}{\mbox{\ae}_1}\cdot{\mbox{\ae}}_1+\frac{c_U-\varepsilon}{\mbox{\ae}_2}\cdot{\mbox{\ae}}_2=c_U.
-\end{multline}
-
- Таким образом, $u^{(1)}(t)+u^{(2)}(t)\in\mathbb{F}_\partial^{(1)}.$
- Далее в силу (\ref{2.19}) и (\ref{2.21}) имеем
- \begin{multline}\label{2.26}
- \int_0^1(1-t)\left(u^{(1)}+u^{(2)}\right)(t)\,dt=\int_0^1(1-t)u^{(1)}(t)\,dt+\int_0^1(1-t)u^{(2)}(t)\,dt=\\
-=\frac{\varepsilon}{\mbox{\ae}_1}\int_0^{\mbox{\ae}_1}(1-t)\,dt+\frac{c_U-\varepsilon}{\mbox{\ae}_2}\int_{1-\mbox{\ae}_2}^{1}(1-t)dt=
-\left.\frac{\varepsilon}{\mbox{\ae}_1}\left(t-\frac{t^2}{2}\right)\right|_0^{\mbox{\ae}_1}+\\
- + \left.\frac{c_U-\varepsilon}{\mbox{\ae}_2}\left(t-\frac{t^2}{2}
-\right)\right|_{1-\mbox{\ae}_2}^1=\\
-=\frac{\varepsilon}{\mbox{\ae}_1}\left(\frac{2\mbox{\ae}_1-\mbox{\ae}_1^2}{2}\right)+\frac{c_U-\varepsilon}{\mbox{\ae}_2}\left(\frac12-\frac{2(1-\mbox{\ae}_2)-
-(1-\mbox{\ae}_2)^2}{2}\right)=\frac{\varepsilon}{2}(2-\mbox{\ae}_1)+ \\ +\frac{c_U-\varepsilon}{2\mbox{\ae}_2}(1-(1-\mbox{\ae}_2)(2-1+\mbox{\ae}_2))=\frac{\varepsilon}{2}(2-\mbox{\ae}_1)+\frac{c_U-\varepsilon}{2\mbox{\ae}_2}(\mbox{\ae}_2^2)=\\
-=\frac{\varepsilon}{2}\left(2-\frac{2k_0}{\varepsilon}\right)+
-\frac{c_U-\varepsilon}{2}\cdot\frac{2k_0}{c_U-\varepsilon}=\varepsilon-k_0+k_0=\varepsilon.
- \end{multline}
- Следовательно,
-%\begin{equation}\label{2.27}
-$$u^{(1)}(t)+u^{(2)}(t)\in \mathbb{F}_{\partial,1}^{(\varepsilon)}.$$
- %\end{equation}
-
- Из (\ref{2.26}) и определения $G_{\partial,1}^{(\varepsilon)}[a]$ (см. (\ref{3.3'})) вытекает, что $\int_0^1\left(u^{(1)}+u^{(2)}\right)(t)\,dt\in G_{\partial,1}^{(\varepsilon)}[a].$ Поэтому $c_U\in G_{\partial,1}^{(\varepsilon)}[a]$ и легко заметить, что $$G_\partial^{(1)}[a]\subset G_{\partial,1}^{(\varepsilon)}[a]\ \ \forall\varepsilon\in]0,\infty[.$$ Учитывая вложение $\mathbb{F}_\partial^{(1)}[a]\subset\mathbb{F}_{\partial,1}^{(\varepsilon)}[a]\ \forall\varepsilon\in]0,\infty[,$ получаем, что  $G_{\partial}^{(1)}[a]\subset AS_1.$ Таким образом \cite[(33)]{kojan11},
-\begin{equation}\label{2.30}
- c_U\in AS_1.
-\end{equation}
-На содержательном уровне (\ref{2.30}) означает тот факт, что значение $c_U$ реализуемо в классе (обычных) управлений с любой наперед выбранной точностью (при последовательном ужесточении ослабленных моментных ограничений).
-
-В самом деле, для $u\in\mathbb{F}_\partial^{(1)}[a]$
-\begin{equation}\label{*}
-\int_0^1u(t)\,dt\leqslant c_U.
-\end{equation}
-Согласно определению множества $\mathbb{F}_{\partial,1}^{(\varepsilon)}[a],$ где  $\varepsilon\in]0,\infty[$ для $u\in\mathbb{F}_{\partial,1}^{(\varepsilon)}[a]$
-(\ref{*}) также будет справедливо. С учетом  (\ref{3.3'}) получаем таким образом, что $G_{\partial,1}^{(\varepsilon)}[a]\subset[0,c_U]$ и, как следствие,
-$\overline{G_{\partial,1}^{(\varepsilon)}[a]}\subset[0,c_U].$ Следовательно (см. \cite[(34)]{kojan11}),
-\begin{equation}\label{2.31}
-  AS_1\subset[0,c_U].
-\end{equation}
-Аналогичным образом устанавливается, что $$(c_V\in AS_2)\ \& \ (AS_2\subset [0,c_V]).$$
-Из (\ref{2.30}) и (\ref{2.31}) (см. также \cite[(35)]{kojan11}) вытекает справедливость утверждения:
-
-\textit{если $a\in]0,c_U[,$ то число $c_U$ является наибольшей точкой каждого из следующих двух множеств: $(1)\ G_{\partial}^{(1)}[a]$ и $(2)\ AS_1.$}
-
-Иными словами, при $a \in]0,c_U[$ имеем равенство:
-%\begin{equation}\label{2.32}
-$$\max\limits_{\nu\in G_{\partial}^{(1)}[a]}\nu=\max\limits_{\nu\in AS_1}\nu.$$
-%\end{equation}
-Более того, согласно предложению 2 работы \cite{kojan11} справедливо свойство:
-\begin{equation}\label{2.33}
-c_U=\max\limits_{\nu\in\, G_{\partial}^{(1)}[a]}\nu=\max\limits_{\nu\in AS_1}\nu.
-\end{equation}
-Свойство  (\ref{2.33}) можно интерпретировать как некоторую устойчивость по результату при ослаблении краевого условия. Это утверждение верно для $a\in]0,c_U[.$
-
-Рассуждая аналогичным образом, можно получить следующее свойство:
-
-  \textit{если $a\in]0,c_V[,$ то число $c_V$ является наибольшей точкой каждого из следующих двух множеств: $(1)\ G_{\partial}^{(2)}[a]$ и $(2)\ AS_2.$}
-
-\section{Асимптотика максимина}%\setcounter{equation}{0}\setcounter{proposition}{0}
-
-\hspace{5mm} Напомним, что $a\in]0,c_U[$ и при этом $c_U\leqslant c_V.$
-Рассматриваем далее ресурсные ограничения на выбор $u\in~\mathbb{F}_+,$ $v\in~\mathbb{F}_+.$ $$\int_0^1u(t)dt\leqslant c_U; \ \ \int_0^1v(t)dt\leqslant c_V.$$  В этих терминах конструируются (см. (\ref{3.1})) множества $\mathbb{F}^{(1)}$ и $\mathbb{F}^{(2)}.$ Краевые условия для первого и второго игроков таковы, что  $$\int_0^1(1-t)u(t)dt=a; \ \ \int_0^1(1-t)v(t)dt=a;$$ здесь $u\in\mathbb{F}^{(1)}, \ v\in\mathbb{F}^{(2)}.$ Первый игрок стремится выровнять скорости в момент встречи, а цель второго игрока противоположна. Механический смысл упомянутых условий состоит в осуществлении встречи материальных точек по координате в заданный момент времени (точка встречи также задана).
- В качестве  $f_0$ (см. Раздел 1) возьмем функцию $f_0(x,y)=|x-y|.$ Определим значение $$\sup\limits_{y\in G_\partial^{(2)}[a]}\inf\limits_{x\in G_\partial^{(1)}[a]}f_0(x,y)$$ (напомним, что в Разделе 2 указано, что ограничения каждого из объектов образуют совместную систему).
-\begin{proposition}%{\bf Утверждение 1.}
-Справедливо равенство:
-$$\sup\limits_{y\in G_\partial^{(2)}[a]}\inf\limits_{x\in G_\partial^{(1)}[a]}f_0(x,y)=c_V-c_U.$$
-\end{proposition}
-{\bf Доказательство.}\ \
-Пусть $y\in G_\partial^{(2)}[a].$ Рассмотрим значение $\inf\limits_{x\in G_\partial^{(1)}[a]}f_0(x,y).$ Положим к рассмотрению следующие случаи: $y\geqslant c_U$ и $y< c_U.$ \\ $1)$ Если  $y\geqslant c_U,$ то для всех   $ x \in G_\partial^{(1)}[a]$ справедливо   $f_0(x,y)=y-x,$ так как  $y-x\geqslant c_U-x\geqslant 0.$ Следовательно $$\inf\limits_{x\in G_\partial^{(1)}[a]} f_0(x,y)=y-c_U\leqslant c_V-c_U.$$
-$2)$ Допустим теперь, что $y<c_U,$ то есть $0\leqslant y<c_U.$ При этом $y=\int_0^1v(t)\,dt,$ где   $v\in \mathbb{F}_\partial^{(2)}[a]$, а значит (см. \cite[(4)]{kojan11}) $$\int_0^1v(t)\,dt<c_U$$ и $y\in G_\partial^{(1)}[a].$ Поскольку $v\in \mathbb{F}^{(1)}$ и $v$ является допустимым управлением по ограничениям  $$\int_0^1(1-t)v(t)\,dt=a,$$ то $v\in \mathbb{F}_\partial^{(1)}[a],$ откуда следует, что $y\in G_\partial^{(1)}[a].$ Так как  можно выбрать $x\in G_\partial^{(1)}[a]$ таким, что $x=y,$ имеем $$\inf\limits_{x\in G_\partial^{(1)}[a]}f_0(x,y)=0\leqslant c_V-c_U.$$
-%$3)$ При $y=c_V$ $\min\limits_{x\in G_\partial^{(1)}[a]}f_0(x,y)=c_V-c_U.$\\
-Сравнивая $1)$ и $2),$ получаем,  что последнее неравенство имеет место во всех возможных случаях. Поскольку выбор $y$ был произвольным, имеем, что  $$\sup\limits_{y\in G_\partial^{(2)}[a]}\inf\limits_{x\in G_\partial^{(1)}[a]}f_0(x,y)\leqslant c_V-c_U.$$
-
-С другой стороны, $c_V\in G_\partial^{(2)}[a],$ а потому  $$\sup\limits_{y\in G_\partial^{(2)}[a]}\inf\limits_{x\in G_\partial^{(1)}[a]}f_0(x,y)\geqslant\inf\limits_{x\in G_\partial^{(1)}[a]}f_0(x,c_V)=\inf\limits_{x\in G_\partial^{(1)}[a]}|\,c_V-x|=\inf\limits_{x\in G_\partial^{(1)}[a]}(c_V-x)=$$ $$=c_V-c_U.$$
-Следовательно,  верно  неравенство $$\sup\limits_{y\in G_\partial^{(2)}[a]}\inf\limits_{x\in G_\partial^{(1)}[a]}f_0(x,y)\geqslant c_V-c_U,$$ из чего можно сделать вывод о справедливости требуемого равенства. $\hfill\square$
-
-Отметим вложение
-% \begin{equation}\label{3.4}
-$$ AS_1\subset AS_2.$$
-% \end{equation}
- Действительно, пусть    $y\in AS_1,$ тогда существует последовательность управлений \cite[c.38]{chen6} $(u_k(\cdot))_{k\in\mathcal{N}}$  (здесь и ниже $\mathcal{N}$ --- множество натуральных чисел), такая, что\\
- $1)\ \forall\,\varepsilon>0\ \exists\,k_\varepsilon\in\mathcal{N}:\left|\int_0^1(1-t)u_k(t)dt-a\right|<\varepsilon\ \forall\,k\geqslant k_\varepsilon$\ \ (см. (\ref{3.2'}), \cite[c.38]{chen6}) и \\  $2)\ \left(\int_0^1u_k(t)\,dt\right)_{k=1}^{\infty}\rightarrow y.$
-
-  Из $1)$ следует, что при $\varepsilon>0$ $u_k(\cdot)\in \mathbb{F}_{\partial,1}^{(\varepsilon)}[a]$ с некоторого момента. Тогда, в частности, при $\delta>0$ \ \ $u_k(\cdot)\in \mathbb{F}_{\partial,2}^{(\delta)}[a]$ с некоторого момента. С учетом $2)$ получаем \cite[c.38]{chen6},  что    $y\in AS_2.$
-\begin{proposition} Справедливо равенство:
- $$\max\limits_{y\in AS_2}\min\limits_{x\in AS_1}f_0(x,y)=c_V-c_U.$$\end{proposition}
- {\bf Доказательство.}\ \
-Пусть $y\in AS_2$. Имеет смысл выделить следующие два случая: $y\geqslant c_U$ и $y< c_U.$ \\ $1)$ Если  $y\geqslant c_U,$ то для всех   $ x \in AS_1$ имеем $|x-y|=y-x$ (поскольку $AS_1\subset[0,c_U]$). Cправедлива цепочка рассуждений:  $$\min\limits_{x\in AS_1} f_0(x,y)=\min\limits_{x\in AS_1}|x-y|=\min\limits_{x\in AS_1}(y-x)\leqslant y-c_U\leqslant c_V-c_U.$$ Здесь используется также свойство (\ref{2.30}).\\
-$2)$ Пусть теперь $y\in AS_2$ и $y<c_U.$ Согласно  предложению 3.3.1 работы \cite{chen6} существует последовательность  $(v_k(\cdot))_{k=1}^{\infty}$ в  $\mathbb{F}^{(2)},$ для которой  выполнены условия \\
-$a) \ \forall\,\delta>0\ \exists\,m_\delta\in\mathcal{N}:\ \left|\int_0^1(1-t)v_k(t)dt-a\right|<\delta  \ \forall\,k\geqslant m_\delta;$\\
-$b) \ \ \left(\int_0^1v_k(t)dt\right)_{k=1}^\infty\rightarrow y.$\\ Поскольку $y<c_U,$ то с некоторого момента $$\int_0^1v_k(t)\,dt<c_U.$$ Поэтому (см. (\ref{3.1})) справедливо свойство:
-$c)$ существует $n_*\in\mathcal{N}:  v_k(\cdot)\in \mathbb{F}^{(1)}\ \ \forall\,k\geqslant n_*.$ \\
-Зафиксируем $u_0(\cdot)\in\mathbb{F}^{(1)}$
-и построим  последовательность управлений $(\widetilde{u}_k(\cdot))_{k=1}^\infty$ следующим образом:
-%\end{document}
-\begin{equation}\label{3.5}
-\widetilde{u}_k(\cdot)=\begin{cases}u_0(\cdot),&\text{если $k\leqslant n_*$} \\ v_k(\cdot),&\text{если $k>n_*.$}\end{cases}
-\end{equation}
-%\end{document}
-Объединяя условия $a)$, $c)$ и (\ref{3.5}), имеем $$\forall\,\varepsilon>0 \ \exists\,s\in\mathcal{N} \ \forall k\geqslant s \ \ \left|\int_0^1(1-t)\widetilde{u}_k(t)dt-a\right|<\varepsilon,$$ и, кроме того, согласно $b)$ выполняется условие $$\left(\int_0^1\widetilde{u}_k(t)\,dt\right)_{k=1}^\infty\rightarrow y.$$
-%\end{document}
-Мы показали, таким образом,  что существует последовательность $(\widetilde{u}_k(\cdot))_{k=1}^\infty$ из $\mathbb{F}^{(1)},$ такая, что \\
-$a')\ \ \forall\varepsilon>0\ \exists\,n_\varepsilon\in\mathcal{N}:\ \left|\int_0^1(1-t)u_k(t)dt-a\right|<\varepsilon\ \forall k\geqslant n_\varepsilon;$\\
-$b')\ \left(\int_0^1u_k(t)dt\right)_{k=1}^\infty\rightarrow y.$
-
-Это означает, что $y\in AS_1$ (см. \cite[c.38]{chen6}).
-   Тогда справедливы оценки $$0\leqslant\min\limits_{x\in AS_1}|\,x-y|\leqslant|y-y|=0\leqslant c_V-c_U.$$ Итак, для всякого $y\in AS_2$ имеет место $\min\limits_{x\in AS_1}f_0(x,y)\leqslant c_V-c_U.$ Поэтому  $$\max\limits_{y\in AS_2}\min\limits_{x\in AS_1} f_0(x,y)\leqslant c_V-c_U.$$ С другой стороны (напомним, что $AS_1\subset[0,c_U]\subset[0,c_V]$), поскольку $c_V\in AS_2,$ $$\max\limits_{y\in AS_2}\min\limits_{x\in AS_1} f_0(x,y)\geqslant\min\limits_{x\in AS_1}|\,c_V-x|=\min\limits_{x\in AS_1}(c_V-x)\geqslant c_V-c_U.$$ Из двух последних неравенств вытекает требуемое равенство. $\hfill\square$
-
-\begin{proposition} Справедливо равенство:
- $$\max\limits_{y\in AS_2}\min\limits_{x\in AS_1}f_0(x,y)=\sup\limits_{y\in G_\partial^{(2)}[a]}\inf\limits_{x\in G_\partial^{(1)}[a]}f_0(x,y).$$\end{proposition}
-
- Доказательство следует из Утверждений 3 и 4. На содержательном уровне Утверждение 5 говорит об устойчивости по максимину задачи (\ref{1}), (\ref{2}).
-
-В задачах управления зачастую отсутствует свойство устойчивости при возмущении системы ограничений. Ввиду соображений практического характера,  обусловленных такими ситуациями,  вопросу  неустойчивости при ослаблении ограничений посвящены многие исследования (см., например,\cite{chen6},\cite{chen7}, \cite{1},\cite{2}). Важную роль в исследованиях такого характера играют расширения исходной задачи, реализуемые в том или ином классе мер, играющих роль обобщенных управлений.  Отметим оригинальный  подход  Н.\,Н.\,~Красовского \cite{3} к построению обобщенных задач импульсного управления, связанный с применением аппарата обобщенных функций, который послужил основой многих работ по теории импульсных систем \cite{7},\cite{8}. Обобщенные элементы, формализуемые как управления-меры, использовались в теории дифференциальных игр \cite{chen7},\cite{chen8},\cite{kojan11}. Элементы теории расширений находят применение  в игровых задачах программного управления \cite{1},\cite{4}. Отметим, что явления, имеющие объективно смысл неустойчивости при ослаблении ограничений, возникают и в других разделах математики; в частности, это имеет место в задачах математического программирования \cite{5},\cite{6}.
-
-
-
-
-
-\begin{thebibliography}{20}
- \bibitem{chen12}{\it Ченцов~А.\,Г., Шапарь Ю.В.}  Об одной игровой задаче с приближенным соблюдением ограничений. / Доклады Академии Наук. Серия <<Математика>>. С. 170-175.-- Т.427.~-- М., 2009
-\bibitem{chen13}{\it Ченцов~А.\,Г., Шапарь Ю.В.}  К вопросу о расширении некоторых игровых задач в классе конечно-аддитивных мер. / Вестник Тамбовского университета. ~--- вып.4.~--- с.830-832,  2009.
-\bibitem{chen6}{\it Chentsov~A.\,G.} Asymptotic attainability.~--- Dordrecht-Boston-London: Kluwer Academic Publishers, 1997.- 322~p.
-\bibitem{chen7}{\it Chentsov~A.\,G.} Finitely additive measures and relaxations of extremal problems.~--- New York, London and Moscow:
- Plenum Publishing Corporation, 1996. - 244~p.
-\bibitem{chen8}{\it Chentsov~A.\,G., Morina~S.\,I.} Extensions and Relaxation.~--- Dordrecht-Boston-London: Kluwer Academic Publishers, 2002.~- 408p.
-\bibitem{16}{\it Ченцов~А.\,Г.}  О представлении максимина в игровой задаче с ограничениями асимптотического характера. / Вестник Удмуртского  университета. Математика. Механика. Компьютерные науки. ~--- \No~1.~--- с.104-119, 2010.
-\bibitem{chen14}{\it Ченцов~А.\,Г., Шапарь Ю.В.}  Конечно-аддитивные меры и расширения игровых задач с ограничениями асимптотического характера. / Вестник Удмуртского  университета. Математика. Механика. Компьютерные науки.~--- \No~3.~--- с.89-111, 2010.
-\bibitem{kojan11}{\it Кожан~М.\,М., Ченцов~А.\,Г.} К вопросу о корректности некоторых задач управления материальной точкой. / Проблемы управления и  информатики. -- \No~1.~-- с.~5-15, 2007.
- \bibitem{1}{\it Варга Дж.} Оптимальное управление дифференциальными и функциональными уравнениями.  М.: Наука, 1977. - 624с
-  \bibitem{2}{\it Гамкрелидзе Р.В.} Основы оптимального управления. Тбилиси: Изд-во Тбилисского университета, 1977. - 253с.
- \bibitem{3}{\it Красовский Н.Н.} Теория управления движением. М.: Наука, 1968. - 475с.
-
-  \bibitem{7}{\it Завалищин Д.С, Сесекин А.Н.} Импульсные процессы. Модели и приложения. М.: Наука, 1991. - 256с.
- \bibitem{8}{\it Халанай А., Векслер Д.} Качественная теория импульсных систем. М.: Мир, 1971. - 30с.
-\bibitem{4}{\it Красовский Н.Н., Субботин А.И.} Позиционные дифференциальные игры. М.: Наука, 1974. - 456с.
- \bibitem{5}{\it Даффин Р.Дж.} Бесконечные программы. / Линейные неравенства и смежные вопросы. М. 1959.- с.263-267.
- \bibitem{6}{\it Гольштейн Е.Г.}  Теория двойственности в математическом  программировании и ее приложения. М.: Наука, 1971.
-\end{thebibliography}
-%\input{art_name.tex}
-\end{document}
-
-
-
-
-
-
-
-
-
-
-
+       Ł 
+— ææ    Ł                º  Ł    Ł  æº Æº  ŁŁ æŁæ   ß  ª   Ł   ŁØ,
+ ß   æ   æ  ºŒŁ    æ  æ  æŒ  Œ  Æ    ß  Ł      Ł     æ Łª    ª  Œ   -
+æ   . ˜      Œ   æ                º   æ     Ł    Œæ       ,  Æº æ Ł   -
+æ Ł Ł  æ Ł ŁºŁ   Œ     ª     º ª       Ø  Æº æ Ł. ´   Æ      ææ    Ł  -
+  æ  Łª    Ø    Ł    Œ  Œ     Ø      Ł æ  ª   Ł   Ł  Ł  æŁ     Ł  æŒ ª 
+ı   Œ    ,     ŁŒ  øŁ Ł   Ł  æº Æº  ŁŁ æ        ßı        ßı  ª   Ł-
+   ŁØ. ¨ææº     æ   æŁ     ŁŒ        ŁØ   ŒæŁ Ł     Ł  æº Æº  ŁŁ   -
+     ßı  ª   Ł   ŁØ Ł      æß  æ  Ø Ł  æ Ł         º      .
+1          º       æ     Œ       Ł
+— ææ    Ł    Ł  Œ  Œ    ßØ   Ł      æ     ŒŁ      Ł [1],[2]:  Ł   Łæ-
+æº              Æ Łª         Ł    Øæ  ŁŁ    ı      Ł º  ßı     Œ æ  ª  -
+1
+—  Æ      ß  º       Ł          Œ   —  ¨ (ª      09-01-00436- ) Ł    ª    ß ˇ   Ł Ł    —  ˝    -
+     Ł  æŒ        Ł       º  Ł  .˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 1, 2011
+ Ł   Ł  Ł,  Œº    øŁ Ł Ł    º æ    Ł           æ æ   º  øŁ . ˛ª  -
+ Ł   Ł    æº    ª   Ł       æŒ    (æ .  ÆøŁØ æº   Ø   [1],[2])  æº Æº  Ł ,
+          Ł º            Ł   Ł   Œ æŒ  Œ  Æ        Ł      Ł  Œ   æ   .
+´ [1],[2] Ł     æ   ø Ø   Æ    Łæ  º     æ     ı  ,   æº       º        Ł-
+    ßØ   [3],[4],[5] Ł æ      ßØ æ   æ     Ł        æ     Ł     Ł . ´ [1],[2]
+  º    ß   æ      ß   æº  Ł   æ  Ø Ł  æ Ł      ŒæŁ Ł   . ´   ææ    Ł  -
+       Ł       Ł  æº  Ł      ł  ß,      Æ       æ  Ø Ł  æ   Ł       æ  
+  Ł            Æ              . ¨              Æ  ,  ß      ,     Œ ,
+  º  Ł          ,   Œ     Ø              Ø  æ  Ø Ł  æ Ł.
+¨  Œ,   ææ    Ł       Ł º  ß     ŒŁ
+_ y
+1
+=y
+2
+; _ y
+2
+=a(t)u(t); _ z
+1
+=z
+2
+; _ z
+2
+=b(t)v(t) (1)
+     Ł Ł             Œ        Ł [0; 1];   º ª   ,     y
+1
+(0) = y
+2
+(0) =
+z
+1
+(0) = z
+2
+(0) = 0; y
+1
+(1) = y
+0
+; z
+1
+(1) = z
+0
+: ˙  æ y
+0
+; z
+0
+   ŁŒæŁ      ß 
+Œ  æ    ß. ˇ  ª     ß       º  Ł  u = u( ) Ł v = v( )   º ª        -
+  º   ß Ł     æ   ºŒ ¿ [0; 1[; Œ æ    -  æ     ß Ł,       ß  ß Ł æ     
+  ø æ           ß Ł    Œ Ł  Ł. ˛ª   Ł   Ł     u Łv  Œº            -
+    Ł Ł    º æ    Œ        ß:
+Z
+1
+0
+(1 t)a(t)u(t)dt =y
+0
+;
+Z
+1
+0
+(1 t)b(t)v(t)dt =z
+0
+; (2)
+Œ       ª ,
+Z
+1
+0
+ju(t)jdt6c
+U
+;
+Z
+1
+0
+jv(t)jdt6c
+V
+;
+ª   c
+U
+Ł c
+V
+   ŁŒæŁ      ß    º  Ł  º  ß  Œ  æ    ß.    ŒŁ   Æ  -
+   ,      Ł     Æ      º  Ł ı æ  ª   Ł   Ł  Ł        ª   æ  æ.    Œ-
+ ŁŁ a( ); b( )     æŒ                  ŁÆºŁ   Ł  Œ æ    -  æ     ß Ł Ł
+      ß  ß Ł æ     . — ææ    Ł   Æº æ Ł   æ Ł Ł  æ Ł G
+(1)
+@
+; G
+(2)
+@
+æŁæ  -
+ ß (1)    æŒ   æ   Ø Œ    Ł     (    æ     y
+2
+Ł z
+2
+)     æº   ŁØ       
+      Łt = 1   Ł  æº Æº  ŁŁ  ª   Ł   ŁØ:
+y
+1
+(1) y
+0
+; z
+1
+(1) z
+0
+:
+¨     æ        æ      , Œ Œ Æ            æ   Æº æ     æ Ł Ł  æ Ł        -
+ł  Ł  Œ G
+(1)
+@
+Ł G
+(2)
+@
+  Ł    ºßı¿      ø  Ł ı Œ   º Œæ   æº  ŁØ Ł Æ     
+ºŁ æ      æ    øŁ  Ł      Ł   Æº æ Ł   æ Ł Ł  æ Ł   Œ      ºß Ł¿? ´
+  æº      æº           ª    Ł    Æ  æ  Ø Ł  æ Ł.
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 2˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 1, 2011
+˚      æ   Æ  æ  Ø Ł  æ Ł.
+´          ææ      Ł     Œ Ł   º
+ (u;v) =f
+0
+ Z
+1
+0
+a(t)u(t)dt;
+Z
+1
+0
+b(t)v(t)dt
+ 
+! sup
+v2V
+inf
+u2U
+;
+ª  U ŁV        æ        æ Ł ßı      º  ŁØ,       º   ßı  ª   Ł   Ł-
+  Ł      Ł. ˙  æ    º ª   ,        Œ Ł  f
+0
+      º    Ł       ß      
+R R: ˇ æ  F        æ     æ ı Œ æ    -  æ     ßı,       ß  ßı æ   -
+     ø æ           ßı    Œ ŁØ            Œ  [0; 1[. ˇ º ª      º  ,    
+y
+0
+=z
+0
+= 0: ˇ º  Ł    Ł     ,    
+F
+(1)
+@
+,
+ 
+u2Fj
+ Z
+1
+0
+ju(t)jdt6c
+U
+ 
+&
+ Z
+1
+0
+(1 t)a(t)u(t)dt = 0
+  
+;
+F
+(2)
+@
+,
+ 
+v2Fj
+ Z
+1
+0
+jv(t)jdt6c
+V
+ 
+&
+ Z
+1
+0
+(1 t)b(t)v(t)dt = 0
+  
+æ        æ ß  (  Œ Œ Œ æ           º  ß       º  Ł )      æ        æ Ł-
+ ßı      º  ŁØ          æ    º  ß  Œ    ß   æº  Ł  .    ª  
+G
+(1)
+@
+,
+ Z
+1
+0
+a(t)u(t)dt :u2F
+(1)
+@
+ 
+;
+G
+(2)
+@
+,
+ Z
+1
+0
+b(t)v(t)dt :v2F
+(2)
+@
+ 
+   Æº æ Ł   æ Ł Ł  æ Ł (   æŒ   æ Ł)                Ł t = 1: ´        Ł
+"2]0;1[ Ł  2]0;1[ æº    øŁ       æ   :
+F
+(")
+@;1
+,
+ 
+u2F :
+ 
+ 
+ 
+ 
+Z
+1
+0
+(1 t)a(t)u(t)dt
+ 
+ 
+ 
+ 
+<"
+ 
+; (3)
+F
+( )
+@;2
+,
+ 
+v2F :
+ 
+ 
+ 
+ 
+Z
+1
+0
+(1 t)b(t)v(t)dt
+ 
+ 
+ 
+ 
+< 
+ 
+; (4)
+  º   Æ        ææ    Ł      Æº æ Ł   æ Ł Ł  æ Ł (   æŒ   æ Ł)   Ł  æº Æ-
+º  ŁŁ Œ     ª   æº  Ł     Œ    Ł     ( º   Æ Æø    Ø      Ł).
+G
+(")
+@;1
+,
+ Z
+1
+0
+a(t)u(t)dt :u2F
+(")
+@;1
+ 
+;
+G
+( )
+@;2
+,
+ Z
+1
+0
+b(t)v(t)dt :v2F
+( )
+@;2
+ 
+:
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 3˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 1, 2011
+ˇ æ   (æ ªº æ     æ     Ł   [4, c.42])
+AS
+1
+,
+\
+"2]0;1[
+G
+(")
+@;1
+; AS
+2
+,
+\
+ 2]0;1[
+G
+( )
+@;2
+æ         æ      Ł     Ł , Łª   øŁ  Œ        º   æŁ     Ł  æŒ ª     -
+º ª  æ      æ    øŁı  Æº æ  Ø   æ Ł Ł  æ Ł (  æŁº   ª   Ł     æ Ł Ł   -
+ Œ    æ Ł     ß       æ      º   æ  Œ    Œ   Ł). ˛    Ł ,          -
+æ    (3), (4)     æ ß   Ł  æ ŒŁı"> 0 Ł > 0: ˇ             º  ß æº    -
+øŁ     ºŁ    ß        Ł    ŒæŁ Ł   [6]:
+V("; ) = sup
+z2G
+( )
+@;2
+inf
+y2G
+(")
+@;1
+f
+0
+(y;z)2R8"2]0;1[8 2]0;1[:
+´ [1],[2], [7]  æ     º    æ ø æ      Ł   Łæº V2R;  º  Œ     ª  æ   -
+   ºŁ   æº    ø   æ  Øæ   :
+8  2]0;1[9 2]0;1[:jV("; ) Vj<  8"2]0; [8 2]0; [; (5)
+Æ º     ª , Œ Œ   Œ        [1], [2],V   º   æ    ŒæŁ Ł      Łª    Ø   -
+           Ł      ŁŁ    æ    æ    Æ Æø   ßı  º       ,      ºŁ    ßı
+     ı   ø   Œº ææ  Œ      -   Ł Ł  ßı    ,      º       øŁı      ß ¿
+       ß   ª   Ł   Ł  . ˚       ª  (æ . [1], [2]), AS
+1
+6=?;AS
+2
+6=?; Ł   Ł
+     [6]
+V, max
+z2AS
+2
+min
+y2AS
+1
+f
+0
+(y;z)
+(      Ł ,        Æ       Ł ı [1]AS
+1
+=G
+(1)
+U
+Ł AS
+2
+=G
+(2)
+V
+).
+ˇ æ     º  a(t)  1; b(t)  1:    ª   (æ . [8, (56)]) Ł          æ   
+ 
+AS
+1
+=G
+(1)
+@
+ 
+&
+ 
+AS
+2
+=G
+(2)
+@
+ 
+: (6)
+ˇ æŒ º Œ       æ    AS
+1
+Ł AS
+2
+    æ ß,   , Œ Œ           º æ , G
+(1)
+@
+6=
+?;G
+(2)
+@
+6= ? Ł F
+(1)
+@
+6= ?; F
+(2)
+@
+6= ?: ˛     º    æ           ª    Æß  ßØ¿
+  ŒæŁ Ł 
+val, sup
+v2F
+(2)
+@
+inf
+u2F
+(1)
+@
+f
+0
+ Z
+1
+0
+u(t)dt;
+Z
+1
+0
+v(t)dt
+ 
+= sup
+z2G
+(2)
+@
+inf
+y2G
+(1)
+@
+f
+0
+(y;z)2R:
+         Ł  1         ºŁ         æ    val = V;     æ     ŒæŁ Ł   
+Œº ææ   Æ Æø   ßı       º  ŁØ [1], [2]          ŒæŁ Ł     Œº ææ   Æß  ßı
+      º  ŁØ:
+V = max
+z2AS
+2
+min
+y2AS
+1
+f
+0
+(y;z) = sup
+z2G
+(2)
+@
+inf
+y2G
+(1)
+@
+f
+0
+(y;z): (7)
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 4˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 1, 2011
+       ºŁ  æ        æ    (7) æº      Ł  (6) Ł æ  Øæ          ß   æ Ł    Œ-
+ ŁŁf
+0
+: C                 Ł  1 Ł      æ  Ø Ł  æ        ŒæŁ Ł   Ł,   ŒŁ 
+ Æ     , æ      ºŁ  
+         Ł  2 ¨       æ    æ  Ø Ł  æ        ŒæŁ Ł  :
+8 2]0;1[9 2]0;1[:jV("; ) valj< 8"2]0; [8 2]0; [: (8)
+˜ Œ     º æ      º      Œ  ÆŁ   Ł Ø (5) Ł          Ł  1. ˙    Ł ,      
+[1],[2]   Œ ß, æ      ºŁ      ß             Ł ı 1 Ł 2, ÆßºŁ  æ     º  ß
+  Ł     º Ł  º      æº  ŁŁ æ         æ Ł    Œ ŁØ,   º  Œ    ßı     æ-
+æ    Ł     Ø        Łª        Œ Ł :
+t7! 1 t : [0; 1[!R:
+˙  æ , Œ Œ  Ł    Ł    æº   Łı    ı æ     ł  ŁØ,             æº  Ł  æ  -
+       æ Ł     ł   ,     Œ  ,     Æ ßØ         1 Ł æº  æ  Ł  1   Æ  ß [1],
+æ      ºŁ  (æ .          Ł  1, 2). ˙    Ł ,     Œ ,       º           æ 
+æ  Øæ    (   º ª  æ  Ø Ł  æ Ł) æ      ºŁ     Ł Œ       (   æ ßæº )  æº -
+ ŁŁ (2) c    º  ß Ł     ß Ł   æ   Ł. ¯æºŁ         Ł   (2)  æº  Ł  Ł
+Z
+1
+0
+(1 t)u(t)dt =c
+U
+;
+Z
+1
+0
+(1 t)v(t)dt =c
+V
+(9)
+(  æ             Ł     (2)      Ł   æº  ŁØ    æ      æ    ø         (9)),
+           ß    º    Ł   Æ  æ  Ø Ł  æ Ł    Æ      æ      ºŁ ß (  Ł     ,
+Œæ   Ł, Æ          ł     æº  Ł  æ    æ   æ Ł æŁæ   ß  ª   Ł   ŁØ     ª 
+Ł  Łª  Œ  ).    ŒŁ   Æ     , Œ  ÆŁ Ł    Œ  æ   Œ ŁŁ [1],[2],[8],       æ    -
+æ   Ł     Ł     æ  Ø Ł  Ø      ŒæŁ Ł   Łª    Ø      Ł Ł    º æ  ª     -
+ª      ª       º  Ł  æ Œ    ß Ł  æº  Ł  Ł,   Œ     Ø     ß  º    æ   Æ-
+ø     æ          æº  Ł   æ  Ø Ł  æ Ł [1],[2], ı       Ł  Ł  Œ    ßı  æº  ŁØ
+        Ł  æ Ł Œ     æ  Ø Ł  æ Ł¿ æŁ    ŁŁ.
+2 ´    æ  Æ  æ  Ø Ł  æ Ł   Œº ææ       Ł    º  ßı
+     º  ŁØ.
+´   æ   ø        º    Ł     æ    æ     Ł  [8, —    º 2],      Ł      ß 
+ º    º Ø   æº    ø ª    Ł     Ł    æłŁ   Ł  Łª    Ø      Ł      ŒæŁ-
+ Ł . ˝Ł   Æ      æ Ł    ,     a(t)  1 Łb(t)  1:    º ªŁ      ææ     Ł  ,
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 5˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 1, 2011
+  Ł      ß        ß  ø        º ,            ææ      Ł  æº    øŁ     -
+  æ   .      æ        æ Ł ßı      º  ŁØ:
+F
+(1)
+,
+ 
+u2F
++
+j
+Z
+1
+0
+u(t)dt6c
+U
+ 
+; F
+(2)
+,
+ 
+v2F
++
+j
+Z
+1
+0
+v(t)dt6c
+V
+ 
+; (10)
+ª  F
++
+       æ     æ ı Œ æ    -  æ     ßı,       ß  ßı æ           Ł-
+    º  ßı   ø æ           ßı    Œ ŁØ            Œ  [0; 1[: ˇ æ   0 <
+c
+U
+6 c
+V
+: ¨       ª       Ł      º    Ł F
+(1)
+  F
+(2)
+: — ææ    Ł    Œ  
+     æ        æ Ł ßı      º  ŁØ æ        ß Ł  ª   Ł   Ł  Ł,   º  Ł 
+  Ł      y
+0
+= z
+0
+= a; ª   a> 0. ˝ ºŁ Ł     æ   Æø ª  Œ     ª   æº  Ł 
+      Ł        Ł       Œ Œ  Æ     º      æº  Ł   æ    Ł      Ł º  ßı
+    Œ (   Œ    Ł    ),   Ł       Œ   æ    Ł       æ ,        æ   æ     ł -
+ ŁŁ æŒ   æ  Ø           æ    Ł Æ        ææ         º  .               Œ 
+ æ    Ł          æ   Ł  Œ Ł   ,          º    Łª  Œ        º      ł   
+     æ       æ Ł  æ Ł æ      æ    øŁı    ª     ßı      º  ŁØ ( æºŁ Æß
+   Œ   æ    Ł    Æßº         Ø,      Łłº æ  Æß  Ææ            æ   æ -
+Æº    ŁŁ Œ     ª   æº  Ł    Łª    Ø        æ    ŁæŁ ß Ł    ª     ß Ł
+æ     ªŁ  Ł). ˇ º ª   
+F
+(1)
+@
+[a],
+ 
+u2F
+(1)
+j
+Z
+1
+0
+(1 t)u(t)dt =a
+ 
+;
+F
+(2)
+@
+[a],
+ 
+v2F
+(2)
+j
+Z
+1
+0
+(1 t)v(t)dt =a
+ 
+:
+˜º      ßı      æ   æ      ºŁ    Œº    Ł 
+F
+(1)
+@
+[a] F
+(2)
+@
+[a]; (11)
+  Œ Œ ŒF
+(1)
+ F
+(2)
+.    Œ     Ł "> 0 Ł > 0 Æ        ææ    Ł          æ   
+    æ Ł ßı      º  ŁØ æ  æº Æº   ß Ł  ª   Ł   Ł  Ł
+F
+(")
+@;1
+[a],
+n
+u2F
+(1)
+j
+ 
+ 
+ 
+R
+1
+0
+(1 t)u(t)dt a
+ 
+ 
+ <"
+o
+;
+F
+( )
+@;2
+[a],
+n
+v2F
+(2)
+j
+ 
+ 
+ 
+R
+1
+0
+(1 t)v(t)dt a
+ 
+ 
+ < 
+o
+:
+(12)
+   ª  ,     æ   æ Ł,
+F
+( )
+@;1
+[a] F
+( )
+@;2
+[a] 8 2]0;1[:
+˛Æº æ Ł   æ Ł Ł  æ Ł    æŒ   æ Ł   Ł        æ Æº    ŁŁ  ª   Ł   ŁØ
+Ł      Ł :
+G
+(1)
+@
+[a],
+ Z
+1
+0
+u(t)dt :u2F
+(1)
+@
+[a]
+ 
+; G
+(2)
+@
+[a],
+ Z
+1
+0
+v(t)dt :v2F
+(2)
+@
+[a]
+ 
+:
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 6˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 1, 2011
+˛Æº æ Ł   æ Ł Ł  æ Ł    æŒ   æ Ł   Ł  æº Æº  ŁŁ Œ     ª   æº  Ł     Œ -
+   Ł           º   æ  (  Ł "> 0 Ł  > 0)  ß     Ł  Ł:
+G
+(")
+@;1
+[a],
+ Z
+1
+0
+u(t)dt :u2F
+(")
+@;1
+[a]
+ 
+; G
+( )
+@;2
+[a],
+ Z
+1
+0
+v(t)dt :v2F
+( )
+@;2
+[a]
+ 
+:
+(13)
+  ªº æ     æ     Ł   [4, c.42],             æ      Ł     Ł  Ł   º ª     
+  º   Øł  
+AS
+1
+,
+\
+"2]0;1[
+G
+(")
+@;1
+[a]; AS
+2
+,
+\
+ 2]0;1[
+G
+( )
+@;2
+[a]:
+¯æºŁ a = 0,   AS
+1
+6= G
+(1)
+@
+[a] Ł AS
+2
+6= G
+(2)
+@
+[a]: ˜ Øæ  Ł  º   ,G
+(1)
+@
+[0] =
+G
+(2)
+@
+[0] =f0g;            Œ Œ [8, (33)] c
+U
+2 AS
+1
+Ł c
+V
+2 AS
+2
+: ¸ ªŒ   Ł    ,
+               æ     ŁŁ  Æº æ Ł   æ Ł Ł  æ Ł     Æº         æ  (  Ła = 0)
+ æ  Ø Ł  æ      Ł  æº Æº  ŁŁ  ª   Ł   ŁØ    Œ    Ł     . ˙    Ł ,     (æ .
+[2], [7], [8])   Ł a =c
+U
+ ß  º   ß  æº  Ł F
+(1)
+@
+[a] =? ŁG
+(1)
+@
+[a] =?;           
+Œ Œ a = c
+U
+2 AS
+1
+(æ . [8, (15)]).    º ªŁ  ß   Æ      Ł       Ł a = c
+V
+æ  Øæ   :G
+(2)
+@
+[a] =? Ła2AS
+2
+: ´         ßı æº    ı         æ  Ø Ł  æ  
+  æ  æ      .
+ˇ     ºŁ Ł          æ  Æ  æ  Ø Ł  æ Ł Łæı    Ø      Ł   Ł      º  ßı
+      Ł ıy
+0
+= z
+0
+= a   Œº ææ       Ł    º  ßı      º  ŁØ. ˝     Ł ,
+   u(t)> 0 Ł v(t)> 0   Ł t2 [0; 1[. ˇ º ª        º   Øł  ,     0 < a <
+c
+U
+: ˛    Ł  æ      ºŁ  æ    Œº    Ł  G
+(1)
+@
+[a]  G
+(2)
+@
+[a] (æ . [8, (5)] Ł    
+            Œº    Ł  (11)). ˙    Ł ,    
+ 
+G
+(1)
+@
+[a]  [0;c
+U
+]
+ 
+&
+ 
+G
+(2)
+@
+[a]  [0;c
+V
+]
+ 
+:
+¯æºŁ a>c
+U
+;   F
+(1)
+@
+[a] =?: ´   æº      æº      Æ       Ł     æ     ŁŁ
+ Æº æ Ł   æ Ł Ł  æ Ł  º       ª  Łª  Œ  (  Ł        æ Æº    ŁŁ  ª   Ł-
+   ŁØ Ł   Ł  æº Æº   ßı  ª   Ł   Ł ı)   æ    æ  ß.    Œ   G
+(1)
+@
+[a] =? Ł,
+Œ       ª ,        æº    AS
+1
+=? (æ . [8, (34)]).
+¯æºŁ    a > c
+V
+;   G
+(2)
+@
+[a] = ? Ł, æ      æ      ,AS
+2
+= ?: ˜º    º -
+  ØłŁı   ææ     ŁØ      Ł      Ł  ß   º    Ł :
+G
+(1)
+@
+[a] G
+(1)
+@
+[a]  [0;c
+U
+]; G
+(2)
+@
+[a] G
+(2)
+@
+[a]  [0;c
+V
+]:
+˝     Ł ,     [8, (16)] c
+U
+2 G
+(1)
+@
+Ł c
+V
+2 G
+(2)
+@
+: ´    Ø æ   Ł   ææ    Ł ,
+    º ı   º   ß Ł º    Ł , Œ  æ   Œ Ł  æ   Ł º  ßı    ıŁ    º æ ßı
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 7˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 1, 2011
+     º  ŁØ  F
+(1)
+@
+[a]; F
+(2)
+@
+[a]; æº       æ     Ł  [8]. `     " 2]0;c
+U
+[:    -
+ª  c
+U
+ "2 ]0;1[ Ł
+"
+2
+2]0;1[: ´ßÆ     º Æ    Łæº  k
+0
+2
+ 
+0; inf
+  
+"
+2
+;
+c
+U
+ "
+2
+	  
+:
+˛   Ł   ,    k
+0
+> 0 Ł   Ł     
+ 
+k
+0
+<
+"
+2
+ 
+&
+ 
+k
+0
+6
+c
+U
+ "
+2
+ 
+: (14)
+´          ææ      Ł   Łæº 
+ 
+1
+= 2 
+2(" k
+0
+)
+"
+=
+2k
+0
+"
+: (15)
+¨  (14) Ł (15) æº      ,     
+1
+6 1:      ª Ø æ     ß, 0 < k
+0
+6
+"
+2
+;   Œ Œ Œ
+"2]0;c
+U
+[: ˇ      " k
+0
+<" Ł, æº       º   ,
+2(" k
+0
+)
+2
+< 2 =
+2
+"
+ ":
+´ Ł  ª  (æ . (15))
+ 
+1
+= 2 
+2(" k
+0
+)
+"
+> 2  2 = 0:
+ˇ æŒ º Œ   
+1
+6 1;   º     ,    
+ 
+1
+2]0; 1]: (16)
+˚       ª ,   ææ    Ł   Łæº 
+ 
+2
+=
+2k
+0
+c
+U
+ "
+: (17)
+˛   Ł   ,      
+2
+> 0: ¨  (14) Ł (17)   º     ,    
+ 
+2
+6
+2
+c
+U
+ "
+ 
+c
+U
+ "
+2
+= 1:
+ˇ        
+2
+2]0; 1]:          (16) Ł           
+( 
+1
+2]0; 1]) & ( 
+2
+2]0; 1]): (18)
+˛     ºŁ     Œ Ł  u
+(1)
+:I! [0;1)     Łº  :
+u
+(1)
+(t) =
+(
+"
+ 
+1
+;  æºŁt2 [0;  
+1
+[;
+0;  æºŁt2 [ 
+1
+; 1[:
+˚       ª , (æ . (18))       ºŁ     Œ Ł  u
+(2)
+:I!]0;1]     Łº  :
+u
+(2)
+(t) =
+(
+0;  æºŁt2 [0; 1   
+2
+[;
+c
+U
+ "
+ 
+2
+;  æºŁt2 [1   
+2
+; 1[:
+(19)
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 8˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 1, 2011
+   Œ ŁŁ u
+(1)
+(t) Łu
+(2)
+(t) Œ æ    -  æ     ß  Ł       ß  ß  æ     . ˇ -
+     
+u
+(1)
+(t) +u
+(2)
+(t) :I! [0;1[
+(      Ł  æº    Ł        º   æ           )   Œ   Œ æ    -  æ        Ł
+      ß     æ         Œ Ł ,   Ł   
+Z
+1
+0
+ 
+u
+(1)
++u
+(2)
+ 
+(t)dt =
+Z
+1
+0
+u
+(1)
+(t)dt +
+Z
+1
+0
+u
+(2)
+(t)dt =
+Z
+ 
+1
+0
+u
+(1)
+(t)dt+
++
+Z
+1
+1  
+2
+u
+(2)
+(t)dt =
+"
+ 
+1
+   
+1
++
+c
+U
+ "
+ 
+2
+   
+2
+=c
+U
+: (20)
+   ŒŁ   Æ     , u
+(1)
+(t) +u
+(2)
+(t)2F
+(1)
+@
+: ˜ º     æŁº  (18) Ł (19) Ł    
+Z
+1
+0
+(1 t)
+ 
+u
+(1)
++u
+(2)
+ 
+(t)dt =
+Z
+1
+0
+(1 t)u
+(1)
+(t)dt +
+Z
+1
+0
+(1 t)u
+(2)
+(t)dt =
+=
+"
+ 
+1
+Z
+ 
+1
+0
+(1 t)dt +
+c
+U
+ "
+ 
+2
+Z
+1
+1  
+2
+(1 t)dt =
+"
+ 
+1
+ 
+t 
+t
+2
+2
+  
+ 
+ 
+ 
+ 
+1
+0
++
++
+c
+U
+ "
+ 
+2
+ 
+t 
+t
+2
+2
+  
+ 
+ 
+ 
+1
+1  
+2
+=
+=
+"
+ 
+1
+ 
+2 
+1
+   
+2
+1
+2
+ 
++
+c
+U
+ "
+ 
+2
+ 
+1
+2
+ 
+2(1   
+2
+)  (1   
+2
+)
+2
+2
+ 
+=
+"
+2
+(2   
+1
+)+
++
+c
+U
+ "
+2 
+2
+(1  (1   
+2
+)(2  1 +  
+2
+)) =
+"
+2
+(2   
+1
+) +
+c
+U
+ "
+2 
+2
+( 
+2
+2
+) =
+=
+"
+2
+ 
+2 
+2k
+0
+"
+ 
++
+c
+U
+ "
+2
+ 
+2k
+0
+c
+U
+ "
+=" k
+0
++k
+0
+=": (21)
+ º       º   ,
+u
+(1)
+(t) +u
+(2)
+(t)2F
+(")
+@;1
+:
+¨  (21) Ł       º  Ł  G
+(")
+@;1
+[a] (æ . (13))  ß  Œ    ,
+   
+R
+1
+0
+ 
+u
+(1)
++u
+(2)
+ 
+(t)dt2 G
+(")
+@;1
+[a]: ˇ       c
+U
+2 G
+(")
+@;1
+[a] Ł º ªŒ       Ł  ,
+   
+G
+(1)
+@
+[a] G
+(")
+@;1
+[a] 8"2]0;1[:
+  Ł ß     º    Ł  F
+(1)
+@
+[a] F
+(")
+@;1
+[a]8"2]0;1[;   º     ,    G
+(1)
+@
+[a] AS
+1
+:
+   ŒŁ   Æ      [8, (33)],
+c
+U
+2AS
+1
+: (22)
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 9˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 1, 2011
+˝  æ        º            (22)                Œ  ,           Ł c
+U
+   ºŁ  -
+      Œº ææ  ( Æß  ßı)      º  ŁØ æ º Æ Ø          ßÆ     Ø      æ   
+(  Ł   æº       º        æ     ŁŁ  æº Æº   ßı        ßı  ª   Ł   ŁØ).
+´ æ       º ,  º  u2F
+(1)
+@
+[a]
+Z
+1
+0
+u(t)dt6c
+U
+: (23)
+  ªº æ         º  Ł       æ    F
+(")
+@;1
+[a]; ª   " 2]0;1[  º  u 2 F
+(")
+@;1
+[a]
+(23)   Œ   Æ      æ      ºŁ  .          (13)   º        ŒŁ   Æ     ,    
+G
+(")
+@;1
+[a]   [0;c
+U
+] Ł, Œ Œ æº  æ  Ł ,G
+(")
+@;1
+[a]   [0;c
+U
+]:  º       º    (æ . [8,
+(34)]),
+AS
+1
+  [0;c
+U
+]: (24)
+   º ªŁ  ß   Æ       æ     ºŁ    æ ,    
+(c
+V
+2AS
+2
+) & (AS
+2
+  [0;c
+V
+]):
+¨  (22) Ł (24) (æ .   Œ   [8, (35)])  ß  Œ    æ      ºŁ  æ            Ł :
+ æºŁ a2]0;c
+U
+[;     Łæº  c
+U
+  º   æ    ŁÆ º ł Ø    Œ Ø Œ    ª  Ł 
+æº    øŁı    ı      æ  : (1) G
+(1)
+@
+[a] Ł (2) AS
+1
+:
+¨ ß Ł æº    Ł,   Ł a2]0;c
+U
+[ Ł          æ   :
+max
+ 2G
+(1)
+@
+[a]
+  = max
+ 2AS
+1
+ :
+` º     ª , æ ªº æ       º    Ł  2   Æ  ß [8] æ      ºŁ   æ  Øæ   :
+c
+U
+= max
+ 2G
+(1)
+@
+[a]
+  = max
+ 2AS
+1
+ : (25)
+   Øæ    (25)       Ł        Ł       Œ Œ   Œ        æ  Ø Ł  æ        -
+   º        Ł  æº Æº  ŁŁ Œ     ª   æº  Ł .              Ł         º 
+a2]0;c
+U
+[:
+— ææ         º ªŁ  ß   Æ     ,         º  Ł   æº    ø   æ  Øæ   :
+ æºŁ a2]0;c
+V
+[;     Łæº  c
+V
+  º   æ    ŁÆ º ł Ø    Œ Ø Œ    ª  Ł 
+æº    øŁı    ı      æ  : (1) G
+(2)
+@
+[a] Ł (2) AS
+2
+:
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 10˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 1, 2011
+3  æŁ     ŁŒ    ŒæŁ Ł  
+˝     Ł ,     a2]0;c
+U
+[ Ł   Ł      c
+U
+6 c
+V
+: — ææ    Ł       º     -
+æ  æ ß   ª   Ł   Ł      ßÆ  u2 F
++
+;v2 F
++
+:
+Z
+1
+0
+u(t)dt6c
+U
+;
+Z
+1
+0
+v(t)dt6c
+V
+:
+´   Łı     Ł  ı Œ  æ   Ł    æ  (æ . (10))      æ    F
+(1)
+Ł F
+(2)
+: ˚    ß 
+ æº  Ł   º       ª  Ł      ª  Łª  Œ     Œ  ß,    
+Z
+1
+0
+(1 t)u(t)dt =a;
+Z
+1
+0
+(1 t)v(t)dt =a;
+   æ u2F
+(1)
+; v2F
+(2)
+: ˇ   ßØ Łª  Œ æ    Ł æ   ß        æŒ   æ Ł     -
+      æ    Ł,     º       ª  Łª  Œ      Ł    º    .   ı  Ł  æŒŁØ æ ßæº
+        ßı  æº  ŁØ æ æ  Ł     æ ø æ  º  ŁŁ  æ    Ł      Ł º  ßı     Œ
+   Œ    Ł             ßØ              Ł (   Œ   æ    Ł   Œ         ). ´
+Œ   æ   f
+0
+(æ . —    º 1)            Œ Ł  f
+0
+(x;y) =jx yj: ˛     ºŁ 
+      Ł 
+sup
+y2G
+(2)
+@
+[a]
+inf
+x2G
+(1)
+@
+[a]
+f
+0
+(x;y)
+(      Ł ,       —    º  2  Œ     ,      ª   Ł   Ł  Œ    ª  Ł   Æœ Œ   
+ Æ       æ    æ     æŁæ    ).
+         Ł  3         ºŁ         æ   :
+sup
+y2G
+(2)
+@
+[a]
+inf
+x2G
+(1)
+@
+[a]
+f
+0
+(x;y) =c
+V
+ c
+U
+:
+˜ Œ     º æ   . ˇ æ  y2 G
+(2)
+@
+[a]: — ææ    Ł        Ł  inf
+x2G
+(1)
+@
+[a]
+f
+0
+(x;y):
+ˇ º  Ł  Œ   ææ      Ł  æº    øŁ  æº   Ł: y>c
+U
+Ł y<c
+U
+:
+1) ¯æºŁ y>c
+U
+;     º   æ ıx2G
+(1)
+@
+[a] æ      ºŁ  f
+0
+(x;y) =y x;   Œ Œ Œ
+y x>c
+U
+ x> 0:  º       º   
+inf
+x2G
+(1)
+@
+[a]
+f
+0
+(x;y) =y c
+U
+6c
+V
+ c
+U
+:
+2) ˜   æ Ł        ,    y <c
+U
+;     æ  06y <c
+U
+: ˇ Ł     y =
+R
+1
+0
+v(t)dt;
+ª  v2F
+(2)
+@
+[a],       Ł  (æ . [8, (4)])
+Z
+1
+0
+v(t)dt<c
+U
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 11˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 1, 2011
+Ł y2 G
+(1)
+@
+[a]: ˇ æŒ º Œ v2 F
+(1)
+Ł v   º   æ      æ Ł ß       º  Ł     
+ ª   Ł   Ł  
+Z
+1
+0
+(1 t)v(t)dt =a;
+  v2 F
+(1)
+@
+[a];   Œ     æº      ,    y2 G
+(1)
+@
+[a]:    Œ Œ Œ        ßÆ     x2
+G
+(1)
+@
+[a]   ŒŁ ,     x =y; Ł    
+inf
+x2G
+(1)
+@
+[a]
+f
+0
+(x;y) = 06c
+V
+ c
+U
+:
+     Ł    1) Ł 2);   º     ,       æº             æ    Ł       æ       æ ı
+       ßı æº    ı. ˇ æŒ º Œ   ßÆ   y Æßº    Ł   º  ß , Ł    ,    
+sup
+y2G
+(2)
+@
+[a]
+inf
+x2G
+(1)
+@
+[a]
+f
+0
+(x;y)6c
+V
+ c
+U
+:
+     ª Ø æ     ß, c
+V
+2G
+(2)
+@
+[a];         
+sup
+y2G
+(2)
+@
+[a]
+inf
+x2G
+(1)
+@
+[a]
+f
+0
+(x;y)> inf
+x2G
+(1)
+@
+[a]
+f
+0
+(x;c
+V
+) = inf
+x2G
+(1)
+@
+[a]
+jc
+V
+ xj = inf
+x2G
+(1)
+@
+[a]
+(c
+V
+ x) =
+=c
+V
+ c
+U
+:
+ º       º   ,              æ   
+sup
+y2G
+(2)
+@
+[a]
+inf
+x2G
+(1)
+@
+[a]
+f
+0
+(x;y)>c
+V
+ c
+U
+;
+Ł    ª        æ  º     ß      æ      ºŁ  æ Ł    Æ    ª       æ   .  
+˛    Ł   º    Ł 
+AS
+1
+ AS
+2
+:
+˜ Øæ  Ł  º   ,   æ  y2AS
+1
+;   ª   æ ø æ        æº       º   æ        -
+º  ŁØ [3, c.38] (u
+k
+( ))
+k2N
+(   æ  Ł  Ł  N        æ          º  ßı  Łæ º),
+  Œ  ,    
+1)8"> 09k
+"
+2N :
+ 
+ 
+ 
+R
+1
+0
+(1 t)u
+k
+(t)dt a
+ 
+ 
+ <"8k>k
+"
+(æ . (12), [3, c.38]) Ł
+2)
+ 
+R
+1
+0
+u
+k
+(t)dt
+ 
+1
+k=1
+!y:
+¨  1) æº      ,       Ł"> 0 u
+k
+( )2F
+(")
+@;1
+[a] æ   Œ     ª         .    ª  ,
+    æ   æ Ł,   Ł  > 0 u
+k
+( )2 F
+( )
+@;2
+[a] æ   Œ     ª         .          2)
+  º      [3, c.38],     y2AS
+2
+:
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 12˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 1, 2011
+         Ł  4         ºŁ         æ   :
+max
+y2AS
+2
+min
+x2AS
+1
+f
+0
+(x;y) =c
+V
+ c
+U
+:
+˜ Œ     º æ   . ˇ æ  y2 AS
+2
+. ¨     æ ßæº  ß  ºŁ   æº    øŁ     
+æº    :y>c
+U
+Ł y<c
+U
+:
+1) ¯æºŁ y > c
+U
+;     º   æ ıx 2 AS
+1
+Ł     jx yj = y x (  æŒ º Œ 
+AS
+1
+  [0;c
+U
+]). C      ºŁ        Œ    ææ     ŁØ:
+min
+x2AS
+1
+f
+0
+(x;y) = min
+x2AS
+1
+jx yj = min
+x2AS
+1
+(y x)6y c
+U
+6c
+V
+ c
+U
+:
+˙  æ  Łæ  º     æ    Œ   æ  Øæ    (22).
+2) ˇ æ         y 2 AS
+2
+Ł y < c
+U
+:   ªº æ       º    Ł  3.3.1   Æ  ß
+[3] æ ø æ        æº       º   æ   (v
+k
+( ))
+1
+k=1
+ F
+(2)
+;  º  Œ     Ø  ß  º   ß
+ æº  Ł 
+a)8 > 09m
+ 
+2N :
+ 
+ 
+ 
+R
+1
+0
+(1 t)v
+k
+(t)dt a
+ 
+ 
+ < 8k>m
+ 
+;
+b)
+ 
+R
+1
+0
+v
+k
+(t)dt
+ 
+1
+k=1
+!y:
+ˇ æŒ º Œ y<c
+U
+;    æ   Œ     ª         
+Z
+1
+0
+v
+k
+(t)dt<c
+U
+:
+ˇ       (æ . (10)) æ      ºŁ   æ  Øæ   :c) æ ø æ     n
+ 
+2N : v
+k
+( )2
+F
+(1)
+8k>n
+ 
+:
+˙  ŁŒæŁ     u
+0
+( ) 2 F
+(1)
+Ł   æ   Ł    æº       º   æ        º  ŁØ
+(e u
+k
+( ))
+1
+k=1
+æº    øŁ   Æ     :
+e u
+k
+( ) =
+(
+u
+0
+( );  æºŁk6n
+ 
+v
+k
+( );  æºŁk>n
+ 
+:
+(26)
+˛Æœ  Ł     æº  Ł a), c) Ł (26), Ł    
+8"> 09s2N8k>s
+ 
+ 
+ 
+ 
+Z
+1
+0
+(1 t)e u
+k
+(t)dt a
+ 
+ 
+ 
+ 
+<";
+Ł, Œ       ª , æ ªº æ  b)  ß  º    æ   æº  Ł 
+ Z
+1
+0
+e u
+k
+(t)dt
+ 
+1
+k=1
+!y:
+ ß   Œ   ºŁ,   ŒŁ   Æ     ,     æ ø æ        æº       º   æ   (e u
+k
+( ))
+1
+k=1
+Ł F
+(1)
+;   Œ  ,    
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 13˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 1, 2011
+a
+0
+) 8"> 09n
+"
+2N :
+ 
+ 
+ 
+R
+1
+0
+(1 t)u
+k
+(t)dt a
+ 
+ 
+ <"8k>n
+"
+;
+b
+0
+)
+ 
+R
+1
+0
+u
+k
+(t)dt
+ 
+1
+k=1
+!y:
+             ,    y2AS
+1
+(æ . [3, c.38]).    ª   æ      ºŁ ß     ŒŁ
+06 min
+x2AS
+1
+jx yj6jy yj = 06c
+V
+ c
+U
+:
+¨  Œ,  º   æ Œ ª y2AS
+2
+Ł       æ   min
+x2AS
+1
+f
+0
+(x;y)6c
+V
+ c
+U
+: ˇ      
+max
+y2AS
+2
+min
+x2AS
+1
+f
+0
+(x;y)6c
+V
+ c
+U
+:
+     ª Ø æ     ß (      Ł ,     AS
+1
+  [0;c
+U
+]  [0;c
+V
+]),   æŒ º Œ  c
+V
+2
+AS
+2
+;
+max
+y2AS
+2
+min
+x2AS
+1
+f
+0
+(x;y)> min
+x2AS
+1
+jc
+V
+ xj = min
+x2AS
+1
+(c
+V
+ x)>c
+V
+ c
+U
+:
+¨     ı   æº   Łı        æ    ß  Œ       Æ           æ   .  
+         Ł  5         ºŁ         æ   :
+max
+y2AS
+2
+min
+x2AS
+1
+f
+0
+(x;y) = sup
+y2G
+(2)
+@
+[a]
+inf
+x2G
+(1)
+@
+[a]
+f
+0
+(x;y):
+˜ Œ     º æ    æº      Ł           ŁØ 3 Ł 4. ˝  æ        º           
+         Ł  5 ª    Ł   Æ  æ  Ø Ł  æ Ł      ŒæŁ Ł        Ł (1), (2).
+´       ı      º  Ł      æ      æ  æ      æ  Øæ     æ  Ø Ł  æ Ł   Ł
+     ø  ŁŁ æŁæ   ß  ª   Ł   ŁØ. ´ Ł   æ  Æ     ŁØ    Œ Ł  æŒ ª  ı   Œ-
+    ,  Æ æº  º   ßı   ŒŁ Ł æŁ    Ł  Ł,      æ     æ  Ø Ł  æ Ł   Ł  æº Æ-
+º  ŁŁ  ª   Ł   ŁØ   æ  ø  ß    ªŁ  Łææº      Ł  (æ .,     Ł   ,[3],[4],
+[9],[10]). ´        º    Łææº      Ł ı   Œ ª  ı   Œ     Łª       æłŁ   Ł 
+Łæı    Ø      Ł,    ºŁ    ß        ŁºŁ Ł    Œº ææ     , Łª   øŁı   º 
+ Æ Æø   ßı      º  ŁØ. ˛    Ł    ŁªŁ  º  ßØ    ı   ˝. ˝. ˚  æ  æŒ -
+ª  [11] Œ   æ     Ł   Æ Æø   ßı       Ł    º æ  ª       º  Ł , æ      ßØ
+æ   Ł     Ł             Æ Æø   ßı    Œ ŁØ, Œ    ßØ   æº  Łº  æ    Ø
+   ªŁı   Æ          ŁŁ Ł    º æ ßı æŁæ    [12],[13]. ˛Æ Æø   ß   º     ß,
+     ºŁ    ß  Œ Œ      º  Ł -   ß, Łæ  º     ºŁæ        ŁŁ  Ł      -
+ Ł º  ßı Łª  [4],[5],[8].  º     ß     ŁŁ   æłŁ   ŁØ   ı       Ł     Ł   
+Łª   ßı       ı    ª      ª       º  Ł  [9],[14]. ˛    Ł ,       º  Ł ,
+Ł   øŁ   Æœ Œ Ł    æ ßæº    æ  Ø Ł  æ Ł   Ł  æº Æº  ŁŁ  ª   Ł   ŁØ,
+    ŁŒ    Ł      ªŁı      º ı        ŁŒŁ;     æ   æ Ł,     Ł       æ  
+        ı        Ł  æŒ ª     ª    Ł     Ł  [15],[16].
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 14˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 1, 2011
+  Łæ Œ ºŁ       ß
+[1]         . ˆ .,         .´. ˛Æ     Ø Łª    Ø        æ   ŁÆºŁ    ß 
+æ Æº    Ł    ª   Ł   ŁØ. / ˜ Œº  ß  Œ    ŁŁ ˝  Œ.    Ł         -
+ ŁŒ ¿ .  . 170-175.    .427.    ., 2009
+[2]         . ˆ .,         .´. ˚      æ      æłŁ   ŁŁ   Œ    ßı Łª   ßı
+        Œº ææ  Œ      -   Ł Ł  ßı    . / ´ æ  ŁŒ     Æ  æŒ ª    Ł   -
+æŁ    .    ß .4.   æ.830-832, 2009.
+[3] Chentsov A. G. Asymptotic attainability .   Dordrecht-Boston-London:
+Kluwer Academic Publishers, 1997.- 322 p.
+[4] Chentsov A. G. Finitely additive measures and relaxations of extremal
+problems.   New Y ork, London and Moscow: Plenum Publishing
+Corporation, 1996. - 244 p.
+[5] Chentsov A. G., Morina S. I. Extensions and Relaxation.   Dordrecht-
+Boston-London: Kluwer Academic Publishers, 2002. - 408p.
+[6]         . ˆ . ˛     æ   º  ŁŁ   ŒæŁ Ł     Łª    Ø        æ  ª   Ł   Ł-
+  Ł  æŁ     Ł  æŒ ª  ı   Œ    . / ´ æ  ŁŒ        æŒ ª    Ł   æŁ    .
+       ŁŒ .   ı  ŁŒ . ˚         ß     ŒŁ.     1.   æ.104-119, 2010.
+[7]         . ˆ .,         .´. ˚      -   Ł Ł  ß     ß Ł   æłŁ   Ł 
+Łª   ßı       æ  ª   Ł   Ł  Ł  æŁ     Ł  æŒ ª  ı   Œ    . / ´ æ  ŁŒ
+       æŒ ª    Ł   æŁ    .        ŁŒ .   ı  ŁŒ . ˚         ß     -
+ŒŁ.     3.   æ.89-111, 2010.
+[8] ˚      .  .,         . ˆ . ˚      æ    Œ    Œ   æ Ł   Œ    ßı      
+     º  Ł       Ł º   Ø    Œ Ø. / ˇ  Æº  ß      º  Ł  Ł Ł      -
+ ŁŒŁ.     1.   æ. 5-15, 2007.
+[9] ´  ª  ˜ . ˛  Ł  º          º  Ł   Ł       Ł º  ß Ł Ł    Œ Ł -
+  º  ß Ł        Ł  Ł.  .: ˝  Œ , 1977. - 624æ
+[10] ˆ   Œ  ºŁ    — .´. ˛æ   ß    Ł  º   ª       º  Ł .  ÆŁºŁæŁ: ¨  -  
+ ÆŁºŁææŒ ª    Ł   æŁ    , 1977. - 253æ.
+[11] ˚   æ  æŒŁØ ˝.˝.      Ł       º  Ł    Ł   Ł  .  .: ˝  Œ , 1968. - 475æ.
+[12] ˙   ºŁøŁ  ˜. ,   æ ŒŁ   .˝. ¨    º æ ß       ææß.     ºŁ Ł   Łº -
+   Ł .  .: ˝  Œ , 1991. - 256æ.
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 15˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł , N. 1, 2011
+[13]   º   Ø  ., ´ Œæº   ˜. ˚   æ            Ł  Ł    º æ ßı æŁæ   .  .:
+ Ł , 1971. - 30æ.
+[14] ˚   æ  æŒŁØ ˝.˝.,   ÆÆ  Ł   .¨. ˇ  Ł Ł   ß   Ł       Ł º  ß  Łª-
+ ß.  .: ˝  Œ , 1974. - 456æ.
+[15] ˜    Ł  — .˜ . ` æŒ     ß     ª    ß. / ¸Ł  Ø ß         æ    Ł
+æ    ß       æß.  . 1959.- æ.263-267.
+[16] ˆ  º ł  Ø  ¯.ˆ .      Ł     Øæ      æ Ł          Ł  æŒ      ª    Ł-
+     ŁŁ Ł      Łº    Ł .  .: ˝  Œ , 1971.
+ º Œ     ßØ      º. h ttp://www.math.spbu.ru/di journal 16
