@@ -1,0 +1,5577 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 2, 2019
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Control problems in nonlinear systems
+Upper-semicontinuity of the global attractors for a class of nonlocal
+Cahn-Hilliard equations
+Joseph L. Shomberg
+Department of Mathematics and Computer Science
+Providence College
+Email: jshomber@providence.edu
+Abstract
+The aim of this work is to examine the upper-semicontinuity properties of
+the family of global attractors admitted by a non-isothermal viscous relaxation
+of some nonlocal Cahn-Hilliard equations. We prove that the family of global
+attractors is upper-semicontinuous as the perturbation parameters vanish. Ad-
+ditionally, under suitable assumptions, we prove that the family of global at-
+tractors satis es a further upper-semicontinuity type estimate whereby the dif-
+ference between trajectories of the relaxation problem and the limit isothermal
+non-viscous problem is explicitly controlled, in the topology of the relaxation
+problem, in terms of the relaxation parameters.
+Keywords: Nonlocal Cahn-Hilliard equations, global attractors, upper-
+semicontinuity
+1 Introduction
+Inside a bounded domain (container) 
+ R
+3
+; we consider a phase separation
+model for a binary solution (e.g. a cooling alloy),
+ 
+t
+=r  [ ( )r ];Differential Equations and Control Processes, N 2, 2019
+where   is the order-parameter (the relative difference of the two phases),   is
+the mobility function (which we set   1 throughout this article), and  is the
+chemical potential (the  rst variation of the free-energy E with respect to  ).
+In the classical model,
+  =    +F
+0
+( ) and E( ) =
+Z
+
+
+ 
+1
+2
+jr j
+2
++F ( )
+ 
+dx;
+where F describes the density of potential energy in 
+ (e.g. the double-well
+potential F (s) =
+1
+4
+(1 s
+2
+)
+2
+).
+Recently the nonlocal free-energy functional appears in the literature [21],
+E( ) =
+Z
+
+
+Z
+
+
+1
+4
+J(x y)( (x)  (y))
+2
+dxdy +
+Z
+
+
+F ( )dx;
+hence, the chemical potential is,   =a  J   +F
+0
+( ); where
+a(x) =
+Z
+
+
+J(x y)dy and (J  )(x) =
+Z
+
+
+J(x y) (y)dy:
+In this article we consider the following problems: for ff > 0,   > 0, and
+"> 0 the relaxation Problem P
+ff;"
+is, given T > 0 and ( 
+0
+; 
+0
+)
+tr
+;  nd ( 
++
+; 
++
+)
+tr
+satisfying
+ 
++
+t
+=   
++
+in 
+  (0;T ) (1)
+ 
++
+=a 
++
+ J  
++
++F
+0
+( 
++
+) +ff 
++
+t
+   
++
+in 
+  (0;T ) (2)
+" 
++
+t
+    
++
+=   
++
+t
+in 
+  (0;T ) (3)
+@
+n
+ 
++
+= 0 on    (0;T ) (4)
+@
+n
+ 
++
+= 0 on    (0;T ) (5)
+ 
++
+(x; 0) = 
+0
+(x) at 
+ f0g (6)
+ 
++
+(x; 0) = 
+0
+(x) at 
+ f0g: (7)
+Formally setting ff = 0 and " = 0 in the above equations we obtain the limit
+Problem P
+0;0
+: given T > 0 and  
+0
+;  nd  
+0
+satisfying
+(1 + 
+2
+) 
+0
+t
+=   
+0
+in 
+  (0;T ) (8)
+ 
+0
+=a 
+0
+ J  
+0
++F
+0
+( 
+0
+) in 
+  (0;T ) (9)
+@
+n
+ 
+0
+= 0 on    (0;T ) (10)
+ 
+0
+(x; 0) = 
+0
+(x) at 
+ f0g: (11)
+The main focus of this article is to examine the stability of the asymptotic
+behavior, via global attractors, when we allow both ff! 0
++
+and "! 0
++
+. For
+Electronic Journal. http://diffjournal.spbu.ru 127Differential Equations and Control Processes, N 2, 2019
+ease of presentation, throughout we assume there is  
+0
+> 0 so that  2 (0; 
+0
+],
+and also (ff;")2 (0; 1]  (0; 1]:
+Let us now give some preliminary words on the motivation for using nonlocal
+diffusion. First, in [2, Equation (0.2)] the nonlocal diffusion terms a  J  
+appear as,
+Z
+
+
+J(x y) ( (x;t)  (y;t))dy;
+i.e. a(x) = J  1: Heuristically, this integral term \takes into account the
+individuals arriving at or leaving positionx from other places." In this setting,
+the term a(x)  0 is a factor of how many individuals arrive at position x.
+Since the integration only takes place over 
+; individuals are not entering nor
+exiting the domain. Hence, this representation is faithful to the desired mass
+conservation law we typically associate with Neumann boundary conditions.
+Although Neumann boundary conditions for the chemical potential   make
+sense from the physical point of view of mass conservation, it is not necessarily
+true that the interface between the two phases is always orthogonal to the
+boundary, which is implied by the boundary condition@
+n
+  = 0 which commonly
+appears in the literature. This is partially alleviated by using nonlocal diffusion
+on  :
+There is obvious motivation already in the literature to investigate Problem
+P
+ff;"
+from the point of view of a singular limit of a Caginalp type phase- eld
+system (cf. [12, Equations (1.1)-(1.3)], [13, Equations (1.1)-(1.3)] and [33]). Of
+the non-isothermal, nonlocal Allen-Cahn system,
+(
+ff 
+t
++a  J   +F
+0
+( ) =  
+"
+1
+ 
+t
+     =   
+t
+;
+(12)
+withff> 0, > 0, and"
+1
+> 0; the singular limit"
+1
+! 0
++
+formally recovers the
+following isothermal, viscous, nonlocal Cahn-Hilliard equation,
+ 
+t
+   (a  J   +F
+0
+( ) +ff 
+t
+) = 0: (13)
+Equation (13) in the case where F is a singular (logarithmic) potential was
+studied in [14]. We should also notice that when we iterate this procedure to
+an appropriate non-isothermal version of (13), the resulting system is equivalent
+to (13). Indeed, when we consider the system,
+8
+>
+<
+>
+:
+ 
+t
+=   
+  =a  J   +F
+0
+( ) +ff 
+t
+   
+"
+2
+ 
+t
+     =   
+t
+;
+Electronic Journal. http://diffjournal.spbu.ru 128Differential Equations and Control Processes, N 2, 2019
+the formal limit"
+2
+! 0
++
+yields the isothermal, viscous, nonlocal Cahn-Hilliard
+equation,
+'
+t
+=  (a  J   +F
+0
+( ) + '
+t
+);
+where
+  =
+ff
+1 + 
+2
+and '(t) = ((1 + 
+2
+)t):
+A full treatment of well-posedness and global attractors and their regularity
+already appears in the literature. In particular, for Problem P
+0;0
+see [14] and
+for Problem P
+ff;"
+see [36]. Our main goal is to determine in what sense Problem
+P
+ff;"
+might converge to Problem P
+0;0
+. Such convergence results may have begun
+with the hyperbolic relaxation of a Chaffee{Infante reaction diffusion equa-
+tion in [25]. The motivation for hyperbolic relaxation is that it alleviates the
+parabolic problems from the sometimes unwanted property of \in nite speed
+of propagation". Hale and Raugel proved in [25] the existence of a family of
+global attractors that is upper-semicontinuous in the phase space. A global at-
+tractor is a unique compact invariant subset of the phase space that attracts all
+trajectories of the associated dynamical system, even at arbitrarily slow rates
+(cf. [30] and [35, Theorem 14.6]). In a sense which will become clearer in Sec-
+tion 4, upper-semicontinuity guarantees the attractors to not \blow-up" as the
+perturbation parameter vanishes; i.e.,
+sup
+x2A
+"
+inf
+y2A
+0
+kx yk
+X
+" ! 0 as "! 0
++
+:
+A complete treatment of the upper-semicontinuity of the global attractors ad-
+mitted by the semiow for the corresponding local problem appears in [16]. In
+many respects, the present work aims to emulate the continuity result found
+there.
+Unlike global attractors, exponential attractors (sometimes called inertial
+sets) are compact positively invariant sets possessing  nite fractal dimension
+that attract bounded subsets of the phase space exponentially fast (cf. [7]). It
+can readily be seen that when both a global attractorA and an exponential
+attractorI exist, thenA I provided that the basin of attraction ofI is the
+entire phase-space, and so the global attractor is also  nite dimensional. In
+this article we do not turn our attention to proving the existence of exponential
+attractors, however, we will be interested in certain convergence properties that
+may be possessed by families of exponential attractors.
+Robust families of exponential attractors (that is, both upper- and lower-
+semicontinuous with explicit control over semidistances in terms of the per-
+turbation parameter) of the type reported in [19] have appeared in numerous
+Electronic Journal. http://diffjournal.spbu.ru 129Differential Equations and Control Processes, N 2, 2019
+applications, of which we will limit ourselves to here mention only a few of
+those applications to Cahn-Hilliard equations and phase- eld equations. Most
+similar to our Problem P
+ff;"
+(a non-isothermal viscous relaxation), Gal and Mi-
+ranville show in [15] the existence of a family of exponential attractors that is
+robust (at zero) with respect to   and " for any ff > 0  xed. They also estab-
+lish robustness for ff,   and " at 0: The global well-posedness for their model
+is detailed in [11]. Robust exponential attractors for an isothermal nonviscous
+Cahn-Hilliard equation with singularly perturbed boundary conditions appears
+in [10]. The works [6] and [20] which contains some applications of memory
+relaxation of reaction diffusion equations: Cahn{Hilliard equations, phase- eld
+equations, wave equations, beam equations, and numerous others. The novelty
+here being the presence of an exponentially fading \memory" term appearing
+with a singularly perturbed kernel which converges to the Dirac delta func-
+tion as the perturbation parameter vanishes. These works ([6, 20]) are also
+focused on proving the existence of a robust family of exponential attractors.
+The hyperbolic relaxation of the 3D Cahn-Hilliard equation, i.e.
+" 
+tt
++ 
+t
+   (    +F
+0
+( ) +ff ) = 0;
+is discussed in [17] where it is shown that the problem admits a family of
+exponential attractors, robust at ff = " = 0. For the interested reader, an
+analysis the 1D counterpart appears in [18]. Finally, we recall from the above
+discussion that the viscous Cahn-Hilliard equations appears as a singular limit of
+a Caginalp type phase- eld system. Relaxation problems of this type were also
+shown to possess robust exponential attractors. Indeed, we refer to [33] and [13],
+the latter being subject to physically relevant dynamic boundary conditions.
+Our interest in robustness is due to the fact that it typically relies on an
+estimate of the form,
+kS
+"
+(t)x LS
+0
+(t) xk
+X
+" C"
+p
+; (14)
+for all t in some interval, where x2X
+"
+, S
+"
+(t) :X
+"
+!X
+"
+and S
+0
+(t) :X
+0
+!X
+0
+are semigroups generated by the solutions of the perturbed problem and the
+limit problem, respectively,   denotes a projection from X
+"
+onto X
+0
+andL is
+a \lift" from X
+0
+into X
+"
+, and  nally C;p > 0 are constants. In obtaining our
+(direct) upper-semicontinuity type result (appearing in Section 4), controlling a
+difference of this type in a suitable norm is crucial. The estimate (14) means we
+can approximate the limit problem with the perturbation with control explicitly
+written in terms of the perturbation parameter. Usually such control is only ex-
+hibited on compact time intervals. For the model problems under consideration
+Electronic Journal. http://diffjournal.spbu.ru 130Differential Equations and Control Processes, N 2, 2019
+here, the right-hand side of the corresponding difference will be controlled in
+terms of the perturbation parameters ff and ", and on compact time intervals,
+but at a cost of restricting the size of two other structural parameters.
+In the next section we provide the functional framework behind Problem
+P
+0;0
+and Problem P
+ff;"
+. Section 3 is devoted to recalling several important as-
+pects of Problem P
+0;0
+and Problem P
+ff;"
+such as (global) well-posedness, dissi-
+pation, and the existence of global attractors. The upper-semicontinuity results
+appear in Section 4. The main points of this article are as follows:
+  We prove the family of global attractors admitted by Problem P
+ff;"
+and
+Problem P
+0;0
+is upper-semicontinuous as the perturbation parametersff,"
+vanish. Here we rely on the classical proof in [25].
+  Under an additional assumption relating the interaction kernel and the po-
+tential, we also show that the difference of trajectories of Problem P
+ff;"
+and
+Problem P
+0;0
+emanating from the same initial data, is explicitly controlled,
+in the topology of the perturbation problem, in terms of the perturbation
+parameters ff and " on compact time intervals [0;T ].
+It seems that such results for nonlocal Cahn-Hilliard equations do not yet
+appear in the literature. These results show that the perturbation Problem P
+ff;"
+may be viewed as a \relaxation" of the limit Problem P
+0;0
+in the sense that, for
+any Problem P
+0;0
+, there is a Problem P
+ff;"
+that is close (made more precise in
+Section 4).
+2 Preliminaries
+Now we detail some preliminaries that will be applied to both problems. To
+begin, de ne the spaces H := L
+2
+(
+) and V := H
+1
+(
+) with norms denoted by,
+k k andk k
+V
+, respectively. Otherwise, we write the norm of the Banach space
+X withk k
+X
+. The inner-product in H is denoted by ( ; ). Denote the dual
+space of V by V
+0
+, and the dual paring in V
+0
+ V is denoted byh ; i: For every
+ 2V
+0
+, we denote byh i the average of over 
+, that is,
+h i :=
+1
+j
+j
+h ; 1i;
+wherej
+j is the Lebesgue measure of 
+: Throughout, we denote by
+^
+ :=  h i
+and for future reference, observeh
+^
+ i =h  h ii = 0: We will refer to the
+Electronic Journal. http://diffjournal.spbu.ru 131Differential Equations and Control Processes, N 2, 2019
+following norm in V
+0
+, which is equivalent to the usual one,
+k k
+2
+V
+0 =
+
+
+A
+ 1=2
+N
+(  h i)
+
+
+
+2
++h i
+2
+:
+De ne the space L
+2
+0
+(
+) := f  2 L
+2
+(
+) : h i = 0g: Let A
+N
+=    :
+L
+2
+0
+(
+)! L
+2
+0
+(
+) with domain D(A
+N
+) =f 2 H
+2
+(
+) : @
+n
+ = 0 on  g de-
+note the \Neumann-Laplace" operator. Of course the operator A
+N
+generates
+a bounded analytic semigroup, denotede
+ A
+N
+t
+, and the operator is nonnegative
+and self-adjoint on L
+2
+(
+): Recall, the domain D(A
+N
+) is dense in H
+2
+(
+): Fur-
+ther, de ne V
+0
+:=f 2 V :h i = 0g, and V
+0
+0
+:=f 2 V
+0
+:h i = 0g. Then
+A
+N
+:V!V
+0
+, A
+N
+2L(V;V
+0
+), is de ned by, for all u;v2V ,
+hA
+N
+u;vi =
+Z
+
+
+ru rvdx:
+It is well known that the restriction A
+NjV
+0
+maps V
+0
+to V
+0
+0
+isomorphically, and
+the inverse mapN =A
+ 1
+N
+:V
+0
+0
+!V
+0
+; is de ned by, for all 2V
+0
+0
+and f2V
+0
+A
+N
+N = ; NA
+N
+f =f:
+Additionally, these maps satisfy the relations, for all u2V
+0
+and v;w2V
+0
+0
+;
+hA
+N
+u;Nvi =hu;vi; (15)
+hv;Nwi =hw;Nvi:
+The Sobolev space V is endowed with the norm,
+k k
+2
+V
+:=kr k
+2
++h i
+2
+: (16)
+Denote by  
+
+
+> 0 the constant in the Poincar  e-Wirtinger inequality,
+k  h ik 
+p
+ 
+
+
+kr k: (17)
+Whence, for c
+
+
+:= maxf 
+
+
+; 1g, there holds, for all 2V;
+k k
+2
+  
+
+
+kr k
+2
++h i
+2
+(18)
+ c
+
+
+k k
+2
+V
+:
+For each m  0, ff> 0, and "> 0 de ne the following energy phase-space
+for Problem P
+ff;"
+,
+H
+ff;"
+m
+:=f  = ( ; )
+tr
+2H H :jh ij;jh ij mg;
+Electronic Journal. http://diffjournal.spbu.ru 132Differential Equations and Control Processes, N 2, 2019
+which is Hilbert when endowed with the ff;"-dependent norm whose square is
+given by,
+k k
+2
+H
+ff;"
+m
+:=k k
+2
+V
+0 +ffk k
+2
++"k k
+2
+:
+When we are concerned with the dynamical system associated with Problem
+P
+ff;"
+, we will utilize the following metric space
+X
+ff;"
+m
+:=
+ 
+  = ( ; )
+tr
+2H
+ff;"
+m
+:F ( )2L
+1
+(
+)
+	
+;
+endowed with the metric
+d
+X
+ff;"
+m
+( 
+1
+; 
+2
+) :=k 
+1
+  
+2
+k
+H
+ff;"
+m
++
+ 
+ 
+ 
+ 
+Z
+
+
+F ( 
+1
+)dx 
+Z
+
+
+F ( 
+2
+)dx
+ 
+ 
+ 
+ 
+1=2
+:
+We also de ne the more regular phase-space for Problem P
+ff;"
+,
+V
+ff;"
+m
+:=f  = ( ; )
+tr
+2V V :jh ij;jh ij mg;
+with the norm whose square is given by,k k
+2
+V
+ff;"
+m
+:=k k
+2
++ffk k
+2
+V
++"k k
+2
+V
+:
+Naturally, for Problem P
+0;0
+we setH
+0;0
+m
+:=f 2H :jh ij mg withk k
+H
+0;0
+m
+:=
+k k
+V
+0: Also,V
+0;0
+m
+:=f 2V :jh ij mg withk k
+V
+0;0
+m
+:=k k:
+The following assumptions on J and F are based on [8, 14]:
+(H1) J2W
+1;1
+(R
+3
+), J( x) =J(x), and a(x) :=
+R
+
+
+J(x y)dy> 0 a.e. in 
+.
+(H2) F2C
+2;1
+loc
+(R) and there exists c
+0
+> 0 such that, for all s2R;
+F
+00
+(s) + inf
+x2
+
+a(x) c
+0
+:
+(H3) There exists c
+1
+>
+1
+2
+kJk
+L
+1
+(R
+3
+)
+and c
+2
+2R such that, for all s2R;
+F (s) c
+1
+s
+2
+ c
+2
+:
+(H4) There exists c
+3
+> 0, c
+4
+  0; and p2 (1; 2] such that, for all s2R;
+jF
+0
+(s)j
+p
+ c
+3
+jF (s)j +c
+4
+:
+(H5) There exist c
+5
+;c
+6
+> 0; and q> 0 such that, for all s2R;
+F
+00
+(s) + inf
+x2
+
+a(x) c
+5
+jsj
+2q
+ c
+6
+:
+Electronic Journal. http://diffjournal.spbu.ru 133Differential Equations and Control Processes, N 2, 2019
+Let us make some remarks and report some important consequences of these
+assumptions. From [5, Remark 2]: assumption (H2) implies that the potential
+F is a quadratic perturbation of a (strictly) convex function. Indeed, if we set
+a
+ 
+:=kak
+L
+1
+(
+)
+, then F can be represented as
+F (s) =G(s) 
+a
+ 
+2
+s
+2
+; (19)
+with G2 C
+2
+(R) being strictly convex, since G
+00
+  c
+0
+. With (H3), for each
+m  0 there are constantsc
+7
+;c
+8
+;c
+9
+;c
+10
+> 0 (withc
+8
+andc
+9
+depending onm and
+F ) such that,
+F (s) c
+7
+ c
+8
+(s m)
+2
++F
+0
+(s)(s m); (20)
+1
+2
+jF
+0
+(s)j(1 +jsj) F
+0
+(s)(s m) +c
+9
+; (21)
+and
+jF (s)j c
+10
+ jF
+0
+(s)j(1 +jsj): (22)
+The last inequality appears in [16, page 8]. With the positivity condition (H3),
+it follows that, for all s2R;
+jF
+0
+(s)j c
+3
+jF (s)j +c
+4
+: (23)
+A word of notation: In many calculations, functional notation indicating
+dependence on the variable t is dropped; for example, we will write in place
+of (t). Throughout the article,C > 0 will denote a generic constant, whileQ :
+R
+d
++
+!R
++
+will denote a generic increasing function in each of thed components.
+Unless explicitly stated, all of these generic terms will be independent of the
+parameters ff;  ; ", T; and m. Constants due to the embeddings V
+0
+ - H,
+or H - V , are denoted by C
+
+
+: Finally, throughout we will use the following
+abbreviations
+c
+J
+:=kJk
+L
+1
+(
+)
+and d
+J
+:=krJk
+L
+1
+(
+)
+:
+We now review Problem P
+0;0
+.
+3 The model problems
+First we recall several results for Problem P
+0;0
+:
+Electronic Journal. http://diffjournal.spbu.ru 134Differential Equations and Control Processes, N 2, 2019
+3.1 The limit Problem P
+0;0
+When we examine the limit Problem P
+0;0
+, observe that through the time rescal-
+ing s7! (1 + 
+2
+)t,
+ 
+s
+(s) = (1 + 
+2
+) 
+t
+((1 + 
+2
+)t) =@
+t
+[ ((1 + 
+2
+)t)];
+we subsequently do not need to include the term   appearing in (8) in this
+preliminary discussion. The term  will need to appear later when we compare
+both Problem P
+0;0
+and Problem P
+ff;"
+on the same (compact) time interval. All
+of the following results for Problem P
+0;0
+are namely due to [5, 8] and can be
+found in [14, Section 2.1].
+De nition 1 For T > 0 and  
+0
+2 H with F ( 
+0
+)2 L
+1
+(
+), we say that   is a
+weak solution of Problem P
+0;0
+on [0;T ] if   satis es
+ 2C([0;T ];H)\L
+2
+(0;T ;V );
+ 
+t
+2L
+2
+(0;T ;V
+0
+);
+  =a(x)  J   +F
+0
+( )2L
+2
+(0;T ;V ):
+In addition, upon setting,
+  = (x; ) :=a(x)  +F
+0
+( );
+for every '2V; there holds, for almost all t2 (0;T );
+h 
+t
+;'i + (r ;r')  (rJ  ;r') = 0:
+Also, there holds,
+ (0) = 
+0
+: (24)
+We say that   is a global weak solution of Problem P
+0;0
+if it is a weak
+solution on [0;T ], for any T > 0: The initial condition (24) holds in the L
+2
+-
+sense; i.e., for every '2V;
+( (0);') = ( 
+0
+;'): (25)
+It is well-known that the average value of   is conserved (cf. e.g. [38,
+Section III.4.2]). Indeed, taking ' = 1 in (37) yields,
+@
+@t
+R
+
+
+ (x;t)dx = 0 and
+we naturally recover the conservation of mass
+h (t)i =h 
+0
+i and @
+t
+h (t)i = 0: (26)
+Electronic Journal. http://diffjournal.spbu.ru 135Differential Equations and Control Processes, N 2, 2019
+Theorem 1 Assume (H1)-(H5) hold withp2 (
+6
+5
+; 2] andq 
+1
+2
+. For any 
+0
+2H
+withF ( 
+0
+)2L
+1
+(
+), there exists a unique global weak solution  to Problem P
+0;0
+in the sense of De nition 1 satisfying the additional regularity, for any T > 0,
+  2 L
+1
+(0;T ;L
+2+2q
+(
+));
+F ( ) 2 L
+1
+(0;T ;L
+1
+(
+)):
+Furthermore, setting
+E
+0
+(t) :=
+1
+4
+Z
+
+
+Z
+
+
+J(x y) ( (x;t)  (y;t))
+2
+dxdy +
+Z
+
+
+F ( (x;t))dx; (27)
+the following energy equality holds, for all  
+0
+2 H with F ( 
+0
+)2 L
+1
+(
+), and
+t2 [0;T ];
+E
+0
+(t) +
+Z
+t
+0
+kr (s)k
+2
+ds =E
+0
+(0): (28)
+Proof: See [14, Theorem 2.2], which follows [8, Corollary 1 and Proposition 5]
+and [5, Theorem 1].  
+At this point in the discussion we can formalize the semi-dynamical system
+generated by Problem P
+0;0
+.
+Corollary 1 Let the assumptions of Theorem 1 be satis ed. We can de ne a
+strongly continuous semigroup (of solution operators) S
+0;0
+= (S
+0;0
+(t))
+t 0
+,
+S
+0;0
+(t) :X
+0;0
+m
+!X
+0;0
+m
+by setting, for all t  0;
+S
+0;0
+(t) 
+0
+:= (t)
+where  (t) is the unique global weak solution to Problem P
+0;0
+.
+We now cite the result showing that Problem P
+0;0
+admits a global attractor.
+The result is due to [8, Theorem 4] (see also [14, Theorem 2.7]).
+Theorem 2 The semigroup S
+0;0
+= (S
+0;0
+(t))
+t 0
+admits a global attractorA
+0;0
+in
+H
+0;0
+m
+. The global attractor is invariant under the semiow S
+0;0
+(both positively
+and negatively) and attracts all nonempty bounded subsets ofH
+0;0
+m
+; precisely,
+1 for each t  0, S
+0;0
+(t)A
+0;0
+=A
+0;0
+, and
+Electronic Journal. http://diffjournal.spbu.ru 136Differential Equations and Control Processes, N 2, 2019
+2 for every nonempty bounded subset B ofH
+0;0
+m
+,
+lim
+t!1
+dist
+H
+0;0
+m
+(S
+0;0
+(t)B;A
+0;0
+) := lim
+t!1
+sup
+ 2B
+inf
+ 2A
+0;0
+kS
+0;0
+(t)   k
+H
+0;0
+m
+= 0:
+Additionally,
+3 the global attractor is the unique maximal compact invariant subset in H
+0;0
+m
+given by
+A
+0;0
+:=!(B
+0;0
+0
+) :=
+\
+s 0
+[
+t s
+S
+0;0
+(t)B
+0;0
+0
+H
+0;0
+m
+:
+Furthermore,
+4 the global attractor is connected,
+5 the global attractor is bounded inV
+0;0
+m
+, and
+6 the fractal dimension ofA
+0;0
+is  nite; i.e.,
+dim
+F
+(A
+0;0
+;H
+0;0
+m
+) := lim sup
+r!0
+ln m
+H
+0;0
+m
+(A
+0;0
+;r)
+  lnr
+<1;
+where m
+H
+0;0
+m
+(A
+0;0
+;r) denotes the minimum number of balls of radiusr from
+H
+0;0
+m
+required to coverA
+0;0
+.
+Proof: The  rst three claims are a direct result of the existence of an absorbing
+set and the compactness of S
+0;0
+on H
+0;0
+m
+. The fourth claim follows because
+Knesser's property is satis ed (cf. [4, Section 5]). The  fth claim is due to
+[14, Corollary 2.9]. Finally, the last claim follows due to the existence of an
+exponential attractor whose basin of attraction is the whole phase space (cf.
+[14, Theorem 2.8]).  
+The following result will be useful in Section 4. This follows from [14,
+Lemma 2.12].
+Lemma 1 Let the assumptions of Theorem 1 be satis ed and assume   is a
+weak solution to Problem P
+0;0
+. There exists a positive monotonically increasing
+function Q(m) such that for all t2 [0;T ];
+Z
+t
+0
+k 
+t
+(s)k
+2
+ds Q(m)T: (29)
+Electronic Journal. http://diffjournal.spbu.ru 137Differential Equations and Control Processes, N 2, 2019
+3.2 The relaxation Problem P
+ff;"
+Now we recall some important results for Problem P
+ff;"
+: The omitted proofs
+may be found in [36]; otherwise, as certain details in the next section rely on
+the proofs of some results stated here, we report, for the reader's convenience,
+those more important proofs in the appendix.
+De nition 2 For T > 0,  
+0
+> 0,   2 (0; 
+0
+], (ff;") 2 (0; 1]  (0; 1], and
+ 
+0
+= ( 
+0
+; 
+0
+)
+tr
+2H H withF ( 
+0
+)2L
+1
+(
+), we say that  = ( ; )
+tr
+is a weak
+solution of Problem P
+ff;"
+on [0;T ] if   = ( ; )
+tr
+satis es
+ 2C([0;T ];H)\L
+2
+(0;T ;V ); (30)
+ 
+t
+2L
+2
+(0;T ;V
+0
+); (31)
+p
+ff 
+t
+2L
+2
+(0;T ;V ); (32)
+  =a(x)  J   +F
+0
+( ) +ff 
+t
+   2L
+2
+(0;T ;V ); (33)
+ 2C([0;T ];H)\L
+2
+(0;T ;V ); (34)
+ 
+t
+2L
+2
+(0;T ;V
+0
+): (35)
+In addition, upon setting,
+  = (x; ) :=a(x)  +F
+0
+( ); (36)
+for every ';#2V; there holds, for almost all t2 (0;T );
+h 
+t
+;'i + (r ;r')  (r(J  );r') +ff(r 
+t
+;r') = (r ;r') (37)
+h 
+t
+;#i + (r ;r#) =  h 
+t
+;#i: (38)
+Also, there holds,
+ (0) = 
+0
+and  (0) = 
+0
+: (39)
+We say that   = ( ; )
+tr
+is a global weak solution of Problem P
+ff;"
+if it is
+a weak solution on [0;T ], for any T > 0: The initial conditions (39) hold in the
+L
+2
+-sense; i.e., for every #2V; (25) and
+( (0);#) = ( 
+0
+;#) (40)
+hold.
+In addition to (26) and (26), taking# = 1 in (38) yields,
+@
+@t
+R
+
+
+ (x;t)dx = 0
+and we also establish
+h (t)i =h 
+0
+i as well as @
+t
+h (t)i =@
+t
+h (t)i = 0: (41)
+Together, (26) and (41) constitute conservation of enthalpy.
+Electronic Journal. http://diffjournal.spbu.ru 138Differential Equations and Control Processes, N 2, 2019
+Theorem 3 Assume (H1)-(H5) hold with p2 (
+6
+5
+; 2] and q 
+1
+2
+. For any  
+0
+=
+( 
+0
+; 
+0
+)
+tr
+2 H H with F ( 
+0
+)2 L
+1
+(
+), there exists a global weak solution
+  = ( ; )
+tr
+to Problem P
+ff;"
+in the sense of De nition 2 satisfying the additional
+regularity, for any T > 0,
+  2 L
+1
+(0;T ;L
+2+2q
+(
+)); (42)
+p
+ff  2 L
+1
+(0;T ;V ); (43)
+F ( ) 2 L
+1
+(0;T ;L
+1
+(
+)); (44)
+ 
+t
+2 L
+2
+(0;T ;H): (45)
+Furthermore, setting
+E
+"
+(t) :=
+1
+4
+Z
+
+
+Z
+
+
+J(x y) ( (x;t)  (y;t))
+2
+dxdy+
++
+Z
+
+
+F ( (x;t))dx +
+"
+2
+Z
+
+
+ (t)
+2
+dx; (46)
+the following energy equality holds, for all  
+0
+= ( 
+0
+; 
+0
+)
+tr
+2H
+ff;"
+m
+with F ( 
+0
+)2
+L
+1
+(
+), and t2 [0;T ];
+E
+"
+(t) +
+Z
+t
+0
+ 
+kr (s)k
+2
++ffk 
+t
+(s)k
+2
++kr (s)k
+2
+ 
+ds =E
+"
+(0): (47)
+The following proposition establishes the uniqueness of weak solutions to
+Problem P
+ff;"
+. Furthermore, it shows that the semigroup S
+ff;"
+(de ned below)
+is strongly continuous with respect to the metricX
+ff;"
+m
+.
+Proposition 1 Assume (H1)-(H4) hold. LetT > 0, m  0,  
+0
+> 0,  2 (0; 
+0
+],
+(ff;")2 (0; 1]  (0; 1], and  
+01
+= ( 
+01
+; 
+01
+)
+tr
+,  
+02
+= ( 
+02
+; 
+02
+)
+tr
+2 H
+ff;"
+m
+be such
+that F ( 
+01
+);F ( 
+02
+)2L
+1
+(
+). Let  
+1
+(t) = ( 
+1
+(t); 
+1
+(t)) and  
+2
+(t) = ( 
+2
+(t); 
+2
+(t))
+denote the weak solution to Problem P
+ff;"
+corresponding to the data  
+01
+and
+ 
+02
+, respectively. Then there are positive constants    
+1
+=    
+1
+(c
+0
+;J;ff;"; 
+0
+)  
+fff
+ 2
+;"
+ 1
+g and    
+2
+=    
+2
+(F;J; 
+; 
+0
+), independent of T ,  
+01
+, and  
+02
+, such that,
+for all t2 [0;T ];
+k 
+1
+(t)  
+2
+(t)k
+2
+H
+ff;"
+m
++
++
+Z
+t
+0
+ 
+2k@
+t
+ 
+1
+(s) @
+t
+ 
+2
+(s)k
+2
+V
+0 +ffk@
+t
+ 
+1
+(s) @
+t
+ 
+2
+(s)k
+2
++ 2k 
+1
+(s)  
+2
+(s)k
+2
+V
+ 
+ds
+ e
+   
+1
+t
+ 
+k 
+1
+(0)  
+2
+(0)k
+2
+H
+ff;"
+m
++
+2   
+2
+   
+1
+(jM
+1
+ M
+2
+j +jN
+1
+ N
+2
+j)
+2
+ 
+(48)
+where M
+i
+:=h 
+i
+(0)i, N
+i
+:=h 
+i
+(0)i, i = 1; 2.
+Electronic Journal. http://diffjournal.spbu.ru 139Differential Equations and Control Processes, N 2, 2019
+As before, we can now formalize the semi-dynamical system generated by
+Problem P
+ff;"
+.
+Corollary 2 Let the assumptions of Theorem 3 be satis ed. We can de ne a
+strongly continuous semigroup (of solution operators) S
+ff;"
+= (S
+ff;"
+(t))
+t 0
+, for
+each ff> 0 and "> 0,
+S
+ff;"
+(t) :X
+ff;"
+m
+!X
+ff;"
+m
+by setting, for all t  0;
+S
+ff;"
+(t) 
+0
+:= (t)
+where  (t) = ( (t); (t)) is the unique global weak solution to Problem P
+ff;"
+.
+Furthermore, as a consequence of (48), if we assume
+M
+1
+=M
+2
+and N
+1
+=N
+2
+;
+the semigroup S
+ff;"
+(t) :X
+ff;"
+m
+!X
+ff;"
+m
+is Lipschitz continuous onX
+ff;"
+m
+, uniformly
+in t on compact intervals.
+We now give a dissipation estimate for Problem P
+ff;"
+from which we de-
+duce the existence of an absorbing set. The idea of the estimate follows [16,
+Proposition 2]. It is here where we require the slight modi cation of hypothesis
+(H1).
+Lemma 2 Assume (H1)-(H4) hold. Let m  0,  
+0
+> 0,  2 (0; 
+0
+], (ff;")2
+(0; 1]  (0; 1],  
+0
+= ( 
+0
+; 
+0
+)
+tr
+2H
+ff;"
+m
+with F ( 
+0
+)2L
+1
+(
+): Assume   = ( ; )
+tr
+is
+a weak solution to Problem P
+ff;"
+. There is a positive constant  
+3
+= 
+3
+( 
+0
+;J; 
+),
+but independent of ff, ", and  
+0
+, such that, for all t  0, the following holds,
+k
+^
+ (t)k
+2
+V
+0 +ffk
+^
+ (t)k
+2
++k
+p
+a (t)k
+2
++k
+^
+ (t)k
+2
++ (F ( (t)); 1)  (J  (t);
+^
+ (t))
++
+Z
+t+1
+t
+ 
+k 
+t
+(s)k
+2
+V
+0 +ffk 
+t
+(s)k
+2
++k (s)k
+2
+V
+ 
+ds
+ Q(k 
+0
+k
+H
+ff;"
+m
+)e
+  
+3
+t
++
+1
+ 
+3
+Q(m); (49)
+for some monotonically increasing functions Q.
+Consequently, the set given by
+B
+ff;"
+0
+:=
+ 
+ 2H
+ff;"
+m
+:k k
+2
+H
+ff;"
+m
+ 
+1
+ 
+3
+Q(m) + 1
+ 
+; (50)
+where Q( ; ) is the function from (49), is a closed, bounded absorbing set in
+H
+ff;"
+m
+, positively invariant under the semigroup S
+ff;"
+.
+Electronic Journal. http://diffjournal.spbu.ru 140Differential Equations and Control Processes, N 2, 2019
+Remark 1 According to the proof (see Appendix A),  
+3
+is a function of  
+0
+and
+the relation is  
+3
+  1 c 
+2
+0
+> 0 for a su ciently small constant c> 0:
+Remark 2 The following global uniform bound follows immediately from esti-
+mate (49) and (112). Under the assumptions of Lemma 2, there holds
+lim sup
+t!+1
+k (t)k
+H
+ff;"
+m
+ E(0) +
+1
+ 
+3
+Q(m) =:Q(k 
+0
+k
+H
+ff;"
+m
+;m) (51)
+for a monotonically increasing function Q, independent of ff and "
+With the existence of a bounded absorbing set set B
+ff;"
+0
+(in Lemma 2),
+the existence of a global attractor now depends on the precompactness of the
+semigroup of solution operatorsS
+ff;"
+. To this end, we know that there is at
+ 
+> 0
+such that the map S
+ff;"
+(t
+ 
+) is a strict contraction on H
+ff;"
+m
+, up to a precompact
+pseudometric M
+ 
+(the proof is based on the proof of Proposition 1). Such a
+contraction is commonly used in connection with phase- eld type equations as
+an alternative to establish the precompactness of a semigroup; for particular
+recent results, also see, for example, [22, 24, 40].) The existence of a global
+attractor in H
+ff;"
+m
+now follows by well-known arguments and can be found in
+[37, 3] for example. Additional characteristics of the attractor follow thanks to
+the gradient structure of Problem P
+ff;"
+. Indeed, from (47) we see that if there
+is a t
+0
+> 0 in which
+E
+"
+(t
+0
+) =E
+"
+(0);
+then, for all t2 (0;t
+0
+);
+Z
+t
+0
+ 
+kr (s)k
+2
++ffk 
+t
+(s)k
+2
++kr (s)k
+2
+ 
+ds = 0: (52)
+Hence, we deduce  
+t
+(t) = 0 and  
+t
+(t) = 0 for all t 2 (0;t
+0
+). Therefore,
+  = ( ; )
+tr
+is a  xed point of the trajectory  (t) = S
+ff;"
+(t) 
+0
+. Since the semi-
+groupS
+ff;"
+(t) is precompact, the system (X
+ff;"
+m
+;S
+ff;"
+;E
+"
+) is gradient/conservative
+for each ff 2 (0; 1] and " 2 (0; 1]. In particular, the  rst three claims in
+the statement of the following theorem are a direct result of the existence of
+the an absorbing set, a Lyapunov functionalE
+"
+, and the fact that the system
+(X
+ff;"
+m
+;S
+ff;"
+(t);E
+"
+) is gradient. The fourth property is a direct result [37, Theorem
+VII.4.1], and the  fth follows from [39, Theorem 6.3.2].
+Theorem 4 For eachff2 (0; 1] and"2 (0; 1] the semigroupS
+ff;"
+= (S
+ff;"
+(t))
+t 0
+admits a global attractorA
+ff;"
+inH
+ff;"
+m
+. The global attractor is invariant under the
+semiowS
+ff;"
+(both positively and negatively) and attracts all nonempty bounded
+subsets ofH
+ff;"
+m
+; precisely,
+Electronic Journal. http://diffjournal.spbu.ru 141Differential Equations and Control Processes, N 2, 2019
+1 for each t  0, S
+ff;"
+(t)A
+ff;"
+=A
+ff;"
+, and
+2 for every nonempty bounded subset B ofH
+ff;"
+m
+,
+lim
+t!1
+dist
+H
+ff;"
+m
+(S
+ff;"
+(t)B;A
+ff;"
+) := lim
+t!1
+sup
+ 2B
+inf
+ 2A
+ff;"
+kS
+ff;"
+(t)   k
+H
+ff;"
+m
+= 0:
+Additionally,
+3 the global attractor is unique maximal compact invariant subset inH
+ff;"
+m
+given
+by
+A
+ff;"
+:=!(B
+ff;"
+0
+) :=
+\
+s 0
+[
+t s
+S
+ff;"
+(t)B
+ff;"
+0
+H
+ff;"
+m
+:
+Furthermore,
+4 the global attractorA
+ff;"
+is connected and given by the union of the unstable
+manifolds connecting the equilibria of S
+ff;"
+(t), and
+5 for each  
+0
+= ( 
+0
+; 
+0
+)
+tr
+2H
+ff;"
+m
+, the set !( 
+0
+) is a connected compact invariant
+set, consisting of the  xed points of S
+ff;"
+(t):
+The next result shows the global attractor is bounded in a more regular
+space. Further regularity results can be found in [36, Section 4.4].
+Lemma 3 Under the assumptions of Lemma 2, the set given by
+B
+ff;"
+1
+:=
+ 
+ 2V
+ff;"
+m
+:k k
+2
+V
+ff;"
+m
+ 
+ 
+1
+"
++ 1
+  
+E(0) +
+ 
+2
+ 
+3
++ 1
+ 
+Q
+ff
+(m) + 1
+  
+;
+(53)
+for some positive monotonically increasing function Q
+ff
+  ff
+ 1
+, is a closed,
+bounded absorbing set inV
+ff;"
+m
+, positively invariant under the semigroup S
+ff;"
+.
+Furthermore, each global attractorA
+ff;"
+is bounded inV
+ff;"
+m
+, i.e.,A
+ff;"
+ B
+ff;"
+1
+;
+and compact inH
+ff;"
+m
+.
+Remark 3 The \radius" of the setB
+ff;"
+1
+depends on ff and " like, respectively,
+ff
+ 1
+and "
+ 1
+.
+The  nal result is this section concerns bounding the global attractorA
+ff;"
+in a more regular subspace of V
+ff;"
+m
+. For each m  0, ff2 (0; 1] and "2 (0; 1],
+we now de ne the regularized phase-space
+W
+ff;"
+m
+:=f  = ( ; )
+tr
+2V
+ff;"
+m
+:
+p
+ff 2H
+2
+(
+);jh ij;jh ij mg;
+Electronic Journal. http://diffjournal.spbu.ru 142Differential Equations and Control Processes, N 2, 2019
+with the norm inherited fromV
+ff;"
+m
+. Also, we de ne the following metric space
+Y
+ff;"
+m
+:=
+ 
+  = ( ; )
+tr
+2W
+ff;"
+m
+:F ( )2L
+1
+(
+)
+	
+;
+endowed with the metric
+d
+Y
+ff;"
+m
+( 
+1
+; 
+2
+) :=k 
+1
+  
+2
+k
+V
+ff;"
+m
++
+ 
+ 
+ 
+ 
+Z
+
+
+F ( 
+1
+)dx 
+Z
+
+
+F ( 
+2
+)dx
+ 
+ 
+ 
+ 
+1=2
+:
+Theorem 5 For each ff2 (0; 1], "2 (0; 1] and for any t  t
+ 
+, the semigroup
+S
+ff;"
+satis es S
+ff;"
+(t) :X
+ff;"
+m
+!Y
+ff
+m
+: Moreover, the global attractorA
+ff;"
+admitted
+by the semigroup S
+ff;"
+is bounded inW
+ff;"
+m
+and compact inH
+ff;"
+m
+:
+4 Upper-semicontinuity of the global attractors
+The following semicontinuity results are not possible until we provide a natural
+embedding for the attractor of Problem P
+0;0
+(here called a lift) into the phase-
+space of Problem P
+ff;"
+. To add motivation for the de nition of the lift map, it
+is  rst worthwhile to notice that the equations (8)-(11) are equivalent to the
+system
+ 
+0
+t
+=   
+0
+in 
+  (0;T ) (54)
+ 
+0
+=a 
+0
+ J  
+0
++F
+0
+( 
+0
+)   
+0
+in 
+  (0;T ) (55)
+   
+0
+=   
+0
+t
+in 
+  (0;T ) (56)
+@
+n
+ 
+0
+= 0 on    (0;T ) (57)
+ 
+0
+(x; 0) = 
+0
+(x) at 
+ f0g: (58)
+Hence, in our setting, a lift is a mappingL :H
+0;0
+m
+!H
+ff;"
+m
+de ned by
+L( 
+0
+) := ( 
+0
+; 
+0
+=M( 
+0
+));
+whereM :H!H is a so-called canonical extension operator, given by
+M( 
+0
+) :=  
+0
+: (59)
+It should be noted that the chemical potential  
+0
+, and henceM, regularizes
+into V for any t> 0; more precisely, we cite [14, Proof of Lemma 2.17], where,
+for any   > 0
+sup
+t  
+k 
+0
+(t)k
+V
+ Q(m; ):
+Electronic Journal. http://diffjournal.spbu.ru 143Differential Equations and Control Processes, N 2, 2019
+The lifted limit Problem P
+0;0
+can then be described by
+ 
+0
+t
+=   
+0
+in 
+  (0;T ) (60)
+ 
+0
+=a 
+0
+ J  
+0
++F
+0
+( 
+0
+)   
+0
+in 
+  (0;T ) (61)
+   
+0
+=   
+0
+t
+in 
+  (0;T ) (62)
+@
+n
+ 
+0
+= 0 on    (0;T ) (63)
+@
+n
+ 
+0
+= 0 on    (0;T ) (64)
+ 
+0
+(x; 0) = 
+0
+(x) at 
+ f0g (65)
+ 
+0
+(x; 0) =M( 
+0
+(x)) at 
+ f0g: (66)
+We emphasize that the lift of the initial data  
+0
+2 H
+0;0
+m
+from Problem P
+0;0
+is
+given byL( 
+0
+) = ( 
+0
+;M( 
+0
+)).
+Remark 4 Notice that in the original formulation of the limit problem (see
+(8)-(11)) we need the term 1 +  
+2
+in equation (8) because later (below) we
+want to compare the difference between the perturbation problem and the lifted
+limit problem on the same compact time interval. This observation is important
+because we will later rescale the time variable in order to obtain a suitable control
+of the problems in the weak energy phase space.
+For each (ff;")2 [0; 1]  [0; 1], de ne the family of sets inH
+ff;"
+m
+;
+A
+ff;"
+:=
+(
+A
+ff;"
+for (ff;")2 (0; 1]  (0; 1]
+LA
+0;0
+when ff = 0 and " = 0:
+(67)
+4.1 A \classical" upper-semicontinuity result
+The main result of this section immediately follows.
+Theorem 6 The familyfA
+ff;"
+g
+ff;"2(0;1]
+; de ned by (67), is upper-semicontinuous
+at ff = 0 and " = 0 in the metric spaceX
+1;1
+m
+. More precisely, there holds
+lim
+ff;"!0
+dist
+X
+1;1
+m
+(A
+ff;"
+;A
+0;0
+) := lim
+ff;"!0
+sup
+a2A
+ff;"
+inf
+b2LA
+0;0
+ka bk
+X
+1;1
+m
+= 0: (68)
+Proof: The proof essentially follows the classical argument in [25, 26] and also
+[40]. Of course several modi cations are required to account for the precise
+model problems considered here. Let   = ( ; )2A
+ff;"
+and
+ 
+  = (
+ 
+ ;
+ 
+ )2LA
+0;0
+.
+We need to show that, as ff;"! 0,
+sup
+( ; )2A
+ff;"
+inf
+(
+ 
+ ;
+ 
+ )2LA
+0;0
+ 
+k  
+ 
+ k
+2
+V
+0 +k  
+ 
+ k
+2
++k  
+ 
+ k
+2
++
+ 
+ 
+ 
+ 
+Z
+
+
+F ( )dx 
+Z
+
+
+F (
+ 
+ )dx
+ 
+ 
+ 
+ 
+ 
+1=2
+! 0: (69)
+Electronic Journal. http://diffjournal.spbu.ru 144Differential Equations and Control Processes, N 2, 2019
+Assuming to the contrary that (69) did not hold, then there exist  
+0
+> 0 and
+sequences (ff
+n
+)
+n2N
+  (0; 1], ("
+n
+)
+n2N
+  (0; 1], ( 
+n
+)
+n2N
+= (( 
+n
+; 
+n
+))
+n2N
+ A
+ff
+n
+;"
+n
+,
+such that ff
+n
+! 0, "
+n
+! 0, and for all n2N,
+inf
+(
+ 
+ ;
+ 
+ )2LA
+0;0
+ 
+k 
+n
+ 
+ 
+ k
+2
+V
+0 +k 
+n
+ 
+ 
+ k
+2
++k 
+n
+ 
+ 
+ k
+2
++
+ 
+ 
+ 
+ 
+Z
+
+
+F ( 
+n
+)dx 
+Z
+
+
+F (
+ 
+ )dx
+ 
+ 
+ 
+ 
+ 
+  
+2
+0
+: (70)
+By Theorem 5, the compact setsA
+ff
+n
+;"
+n
+are bounded in the spaceW
+1;1
+m
+and we
+have the following uniform bound, for some positive constant C > 0 indepen-
+dent of n,
+k 
+n
+k
+2
+V
+0 +k 
+n
+k
+2
++k 
+n
+k
+2
+ C:
+This means that there is a weakly converging subsequence of ( 
+n
+)
+n2N
+(not re-
+labelled) that converges to some ( 
+ 
+; 
+ 
+) weakly in W
+1;1
+m
+. By the compactness
+of the embedding W
+1;1
+m
+,!H
+1;1
+m
+, the subsequence converges strongly in H
+1;1
+m
+: It
+now su ces to show that ( 
+ 
+; 
+ 
+)2LA
+0;0
+; since this is a contradiction to (70).
+With each  
+n
+= ( 
+n
+; 
+n
+)2A
+ff
+n
+;"
+n
+, for n2N, there is a complete orbit
+( 
+n
+(t); 
+n
+(t))
+t2R
+= (S
+ff
+n
+;"
+n
+(t)( 
+n
+; 
+n
+))
+t2R
+contained inA
+ff
+n
+;"
+n
+and passing through ( 
+n
+; 
+n
+) where
+( 
+n
+(0); 
+n
+(0)) = ( 
+n
+; 
+n
+)
+(cf., e.g., [32, Proposition 2.39]). In view of the regularityA
+ff
+n
+;"
+n
+  (B
+1;1
+1
+\W
+1;1
+m
+),
+we obtain the uniform bounds,
+k 
+n
+(t)k
+2
+V
++k 
+n
+(t)k
+2
+V
++ff
+n
+k 
+n
+(t)k
+2
+H
+2
+(
+)
+ C; (71)
+where the constant C > 0 is independent of t, ff
+n
+, and "
+n
+. Additionally, from
+[36, inequality (3.170)] we also have the uniform bounds
+k 
+n
+t
+(t)k
+2
+V
+0 C: (72)
+Now, for all T > 0, the functions  
+n
+,  
+n
+,
+p
+ff
+n
+ 
+n
+t
+=
+p
+ff
+n
+  
+n
+, and  
+n
+t
+are, respectively, bounded in L
+1
+( T;T ;V ),L
+1
+( T;T ;V ),L
+1
+( T;T ;H) and
+L
+1
+( T;T ;V
+0
+). Thus, there is a function   = ( ; ) and a subsequence (not
+relabelled), in which,
+ 
+n
+*  weakly-* in L
+1
+( T;T ;V ); (73)
+ 
+n
+*  weakly-* in L
+1
+( T;T ;V ); (74)
+Electronic Journal. http://diffjournal.spbu.ru 145Differential Equations and Control Processes, N 2, 2019
+p
+ff
+n
+ 
+n
+t
+* 0 weakly-* in L
+1
+( T;T ;H); (75)
+ 
+n
+t
+* 
+t
+weakly-* in L
+1
+( T;T ;V
+0
+): (76)
+By virtue of the compact embedding
+f 2L
+1
+( T;T ;V ) : 
+t
+2L
+1
+( T;T ;V
+0
+)g,!C([ T;T ];H) (77)
+(see, e.g., [31]) the above convergence properties yield
+ 
+n
+!  strongly in C([ T;T ];H): (78)
+Thus, directly from (H2),
+sup
+t2[ T;T ]
+kF
+0
+( 
+n
+(t)) F
+0
+( (t))k
+2
+  sup
+t2[ T;T ]
+Ck 
+n
+(t)  (t)k
+2
+;
+for some positive constant C independent ofn,ff
+n
+, and"
+n
+: By virtue of (78) it
+is then easy to see that
+F
+0
+( 
+n
+)!F
+0
+( ) strongly in C([ T;T ];H):
+It follows that ( ; ) is a weak solution of the limit problem P
+0;0
+onR (see (60)-
+(66)). In particular, ( 
+n
+; 
+n
+) = ( 
+n
+(0); 
+n
+(0))! ( (0); (0)) inV
+0;0
+m
+. Therefore,
+we have that ( (0); (0)) = ( 
+ 
+; 
+ 
+) and ( (0); (0)) 2 V
+0;0
+m
+. As ( ; ) is a
+complete orbit through ( 
+ 
+; 
+ 
+), it follows that ( 
+ 
+; 
+ 
+)2LA
+0;0
+, in contradiction
+to (70). This completes the proof.  
+Remark 5 It is important to note that the above convergence result appears in
+the metric induced by the topology of H
+1;1
+m
+; i.e., ff and " are  xed in the norm.
+This is contrary to the result that follows in the next section.
+4.2 An upper-semicontinuity type result; explicit control over
+semidistances
+This section is devoted to an upper-semicontinuity type result for the family
+of global attractors admitted by Problem P
+ff;"
+and Problem P
+0;0
+. A major step
+toward establishing this result is demonstrating the difference between trajecto-
+ries of each problem, corresponding to the same initial data 
+0
+can be controlled,
+in the topology ofH
+ff;"
+m
+, explicitly in terms of the relaxation parameters ff and
+". The result given here will depend on an important assumption that allows
+for needed control between the kernel J and the potential F:
+Electronic Journal. http://diffjournal.spbu.ru 146Differential Equations and Control Processes, N 2, 2019
+(H6) The constants c
+J
+=kJk
+L
+1
+(
+)
+and c
+0
+> 0 of (H2) satisfy c
+0
+>c
+J
+:
+Remark 6 By (19), for all s2R;
+F
+00
+(s) c
+0
+ a
+ 
+:
+Hence, the condition in (H6) is satis ed for any J in (H1) in which
+inf
+x2
+
+Z
+
+
+(J(y x) J(y))dy> (c
+0
+ a
+ 
+):
+This means the double-well potential is admissible for suitable (\quasiconvex")
+kernels J.
+The following results will lead us to the upper-semicontinuity type result.
+In large part, this is possible since the radius of the absorbing setB
+ff;"
+0
+(and
+hence the bound onA
+ff;"
+) is independent of ff, " (see Remark 1).
+Lemma 4 Assume (H1)-(H4) hold. Let m  0, R > 0, T > 0,  
+0
+> 0, and
+ 2 (0; 
+0
+]. For all  
+0
+2 V
+0;0
+m
+with F ( 
+0
+)2 L
+1
+(
+) andk 
+0
+k
+V
+0;0
+m
+  R. Assume
+ 
+0
+is a weak solution to Problem P
+0;0
+. There exists a positive monotonically
+increasing functionQ, depending onR andm, such that for allt2 [0;T ], there
+hold
+(1 + 
+2
+)
+Z
+t
+0
+k 
+0
+tt
+(s)k
+2
+V
+0ds Q(R;m)T and hence,
+Z
+t
+0
+k 
+0
+t
+(s)k
+2
+V
+ds Q(R;m)T:
+(79)
+Proof: Differentiate (8) and (9) with respect to t and setu
+0
+= 
+0
+t
+andm
+0
+= 
+0
+t
+:
+The differentiated system is
+(1 + 
+2
+)u
+0
+t
+=  m
+0
+in 
+  (0;T ) (80)
+m
+0
+=au
+0
+ J u
+0
++F
+00
+( 
+0
+)u
+0
+in 
+  (0;T ) (81)
+@
+n
+m
+0
+= 0 on    (0;T ) (82)
+u
+0
+(x; 0) = (1 + 
+2
+)
+ 1
+  
+0
+(0) at 
+ f0g: (83)
+Multiply (80) by A
+ 1
+N
+u
+0
+t
+in L
+2
+(
+) and multiply (81) by u
+0
+t
+in L
+2
+(
+), and sum
+the results to obtain
+1
+4
+d
+dt
+ Z
+
+
+Z
+
+
+J(x y)(u
+0
+(x) u
+0
+(y))
+2
+dxdy
+ 
++
++ (F
+00
+( 
+0
+)u
+0
+;u
+0
+t
+) + (1 + 
+2
+)ku
+0
+t
+k
+2
+V
+0 = 0: (84)
+Electronic Journal. http://diffjournal.spbu.ru 147Differential Equations and Control Processes, N 2, 2019
+By (19),
+(F
+00
+( 
+0
+)u
+0
+;u
+0
+t
+)  (c
+0
+ a
+ 
+)(u
+0
+;u
+0
+t
+) = (c
+0
+ a
+ 
+)
+1
+2
+d
+dt
+ku
+0
+k
+2
+;
+and we  nd
+d
+dt
+ Z
+
+
+Z
+
+
+J(x y)(u
+0
+(x) u
+0
+(y))
+2
+dxdy + 2(c
+0
+ a
+ 
+)ku
+0
+k
+2
+ 
++
++ 4(1 + 
+2
+)ku
+0
+t
+k
+2
+V
+0 = 0: (85)
+Thus, integrating (85) over (0;t) immediately shows (79). This  nishes the
+proof.  
+For the following we de ne the projection   :H
+ff;"
+m
+!H
+0;0
+m
+given by  ( ; ) =
+ : Also, we remind the reader that the constant due to the embeddingH ,!V
+0
+is denoted by C
+
+
+> 0.
+Lemma 5 Assume (H1)-(H4) and (H6) hold. Let m  0, R > 0, T > 0,
+ 
+0
+> 0,  2 (0; 
+0
+]. There exists a positive monotonically increasing function Q,
+depending on R, m and T , such that for all t2 [0;T ], (ff;")2 (0; 1]  (0; 1],
+and for all  
+0
+= ( 
+0
+; 
+0
+)
+tr
+2V
+ff;"
+m
+withk 
+0
+k
+V
+ff;"
+m
+ R, there holds
+k
+~
+ (t)k
+2
+V
+0 +ffk
+~
+ (t)k
+2
++"k
+~
+ (t)k
+2
++
+Z
+t
+0
+ 
+k
+~
+ 
+t
+(s)k
+2
+V
+0 +ffk
+~
+ 
+t
+(s)k
+2
++"k
+~
+ (s)k
+2
+V
+ 
+ds
+  (ff +")
+1=2
+Q(R;m;T ): (86)
+Proof: Then the difference
+~
+  = (
+~
+ ;
+~
+ ) = ( 
++
+; 
++
+)  ( 
+0
+; 
+0
+), representing the
+difference between Problem P
+ff;"
+and the lifted Problem P
+0;0
+(60)-(66), satis es
+the equations
+~
+ 
+t
+=  ~   in 
+  (0;T ) (87)
+~   =a
+~
+  J 
+~
+  +F
+0
+( 
++
+) F
+0
+( 
+0
+) +ff
+~
+ 
+t
+  
+~
+  +ff 
+0
+t
+in 
+  (0;T ) (88)
+"
+~
+ 
+t
+   
+~
+  =  
+~
+ 
+t
+ " 
+0
+t
+in 
+  (0;T ) (89)
+@
+n
+~   = 0 on    (0;T ) (90)
+@
+n
+~
+  = 0 on    (0;T ) (91)
+~
+ (x; 0) = 0 at 
+ f0g (92)
+~
+ (x; 0) = 
+0
+(x) M( 
+0
+(x)) at 
+ f0g: (93)
+Observe,
+h
+~
+ i = 0 and h
+~
+ i =h 
+0
+i hM( 
+0
+)i: (94)
+Electronic Journal. http://diffjournal.spbu.ru 148Differential Equations and Control Processes, N 2, 2019
+Multiply (87)-(89) in L
+2
+(
+) by A
+ 1
+N
+~
+ 
+t
+,
+~
+ 
+t
+, and
+~
+ , respectively, and sum the
+resulting identities to  nd, for all t2 [0;T ];
+d
+dt
+n
+"k
+~
+ k
+2
+o
++ 2k
+~
+ 
+t
+k
+2
+V
+0 + 2ffk
+~
+ 
+t
+k
+2
++ 2kA
+1=2
+N
+~
+ k
+2
++ 2(a
+~
+  +F
+0
+( 
+1
+) F
+0
+( 
+2
+);
+~
+ 
+t
+)  2(J 
+~
+ ;
+~
+ 
+t
+)
+= 2j
+jh
+~
+ ih~  i ff( 
+0
+t
+;
+~
+ 
+t
+) "( 
+0
+t
+;
+~
+ ): (95)
+Estimating the resulting products using assumption (H2) yields, for any  > 0;
+2(a
+~
+  +F
+0
+( 
+1
+) F
+0
+( 
+2
+);
+~
+ 
+t
+)  2c
+0
+(
+~
+ ;
+~
+ 
+t
+) =c
+0
+d
+dt
+k
+~
+ k
+2
+; (96)
+and
+ 2(J 
+~
+ ;
+~
+ 
+t
+) = 
+d
+dt
+(J 
+~
+ ;
+~
+ ): (97)
+Let us now estimate the auxiliary terms
+ffj( 
+0
+t
+;
+~
+ 
+t
+)j 
+ff
+4
+k 
+0
+t
+k
+2
++ffk
+~
+ 
+t
+k
+2
+(98)
+and
+"j( 
+0
+t
+;
+~
+ )j "kA
+ 1=2
+N
+ 
+0
+t
+k
+2
++kA
+1=2
+N
+~
+ k
+2
+: (99)
+Combining (95)-(99) and recalling "2 (0; 1] and (16), we have, for almost all
+t2 [0;T ];
+d
+dt
+n
+"k
+~
+ k
+2
++c
+0
+k
+~
+ k
+2
+  (J 
+~
+ ;
+~
+ )
+o
++ 2k
+~
+ 
+t
+k
+2
+V
+0 +ffk
+~
+ 
+t
+k
+2
++"k
+~
+ k
+2
+V
+ Cj
+jjh
+~
+ ijjh~  ij +"h
+~
+ i
+2
++
+ff
+4
+k 
+0
+t
+k
+2
++"kA
+ 1=2
+N
+ 
+0
+t
+k
+2
+: (100)
+Using the local Lipschitz assumption (H2), it is easy to show that,
+jh~  ij C
+F
+jh
+~
+ ij + 
+0
+jh
+~
+ ij
+=: ~  
+ 
+; (101)
+for some positive constantC
+F
+depending onc
+J
+and the Lipschitz bound onF
+0
+.
+Thanks to (29) we have
+Z
+t
+0
+ffk 
+0
+t
+(s)k
+2
+ds ffQ(m)T; (102)
+Electronic Journal. http://diffjournal.spbu.ru 149Differential Equations and Control Processes, N 2, 2019
+and we also have the following thanks to (79)
+1
+(recall  
+0
+t
+= 
+0
+tt
+),
+Z
+t
+0
+"kA
+ 1=2
+N
+ 
+0
+t
+(s)k
+2
+ds "Q(R;m): (103)
+Then integrating (100) over (0;t), we obtain, for all t2 [0;T ];
+"k
+~
+ (t)k
+2
++c
+0
+k
+~
+ (t)k
+2
+  (J 
+~
+ (t);
+~
+ (t))+
++
+Z
+t
+0
+ 
+2k
+~
+ 
+t
+(s)k
+2
+V
+0 +ffk
+~
+ 
+t
+(s)k
+2
++"k
+~
+ (s)k
+2
+V
+ 
+ds
+ "k
+~
+ (0)k
+2
++Cj
+jjh
+~
+ ij~  
+ 
++"h
+~
+ i
+2
++ (ff +")Q(R;m;T ): (104)
+Here we apply (92)-(94) and (59) to reduce (104) into
+"k
+~
+ (t)k
+2
++c
+0
+k
+~
+ (t)k
+2
+  (J 
+~
+ (t);
+~
+ (t))+
++
+Z
+t
+0
+ 
+2k
+~
+ 
+t
+(s)k
+2
+V
+0 +ffk
+~
+ 
+t
+(s)k
+2
++"k
+~
+ (s)k
+2
+V
+ 
+ds
+  (ff +")Q(R;m;T ):
+It is here where we employ the assumption (H6), then there holds
+"k
+~
+ (t)k
+2
++ (c
+0
+ c
+J
+)k
+~
+ (t)k
+2
++
+Z
+t
+0
+ 
+2k
+~
+ 
+t
+(s)k
+2
+V
+0 +ffk
+~
+ 
+t
+(s)k
+2
++"k
+~
+ (s)k
+2
+V
+ 
+ds
+  (ff +")Q(R;m;T ):
+By applying the embeddingV
+0
+ -H and using the fact thatff2 (0; 1], we  nd
+(c
+0
+ c
+J
+)k
+~
+ k
+2
+ 
+c
+0
+ c
+J
+2
+k
+~
+ k
+2
++
+c
+0
+ c
+J
+2
+ffk
+~
+ k
+2
+ 
+c
+0
+ c
+J
+2
+C
+ 2
+
+
+k
+~
+ k
+2
+V
+0 +
+c
+0
+ c
+J
+2
+ffk
+~
+ k
+2
+ c
+ 
+k
+~
+ k
+2
+V
+0 +ffk
+~
+ k
+2
+ 
+;
+for some suitably small constant c > 0 independent of ff and ". With this we
+arrive at the estimate (86) as claimed. This completes the proof.  
+The following is the main result of this section.
+Theorem 7 Under the hypotheses of Lemma 5, the family of sets (A
+ff;"
+)
+ff;"2[0;1]
+satis es the following upper-semicontinuity estimate in the topology ofH
+ff;"
+m
+,
+dist
+H
+ff;"
+m
+(A
+ff;"
+;A
+0;0
+)  (ff +")
+1=2
+Q(R;m;T ); (105)
+for some positive increasing function Q and where R> 0 is the uniform bound
+onA
+ff;"
+inH
+ff;"
+m
+(this bound is given by the radius ofB
+ff;"
+0
+, also recall Remark 1).
+Electronic Journal. http://diffjournal.spbu.ru 150Differential Equations and Control Processes, N 2, 2019
+Proof: To begin,
+dist
+H
+ff;"
+m
+(A
+ff;"
+;A
+0;0
+) = sup
+a2A
+ff;"
+inf
+b2LA
+0;0
+ka bk
+H
+ff;"
+m
+:
+Fix t2 [0;T ] and  2A
+ff;"
+so that a =S
+ff;"
+(t) 2A
+ff;"
+. Then
+inf
+b2LA
+0;0
+ka bk
+H
+0;0
+m
+= inf
+ 2[0;T ]
+ 2A
+0;0
+kS
+ff;"
+(t)  LS
+0;0
+( ) k
+H
+ff;"
+m
+  inf
+ 2A
+0;0
+kS
+ff;"
+(t)  LS
+0;0
+(t) k
+H
+ff;"
+m
+:
+Since S
+ff;"
+(t)  =a,
+sup
+ 2A
+ff;"
+inf
+b2LA
+0;0
+kS
+ff;"
+(t)  bk
+H
+ff;"
+m
+  sup
+ 2A
+ff;"
+inf
+ 2A
+0;0
+kS
+ff;"
+(t)  LS
+0;0
+(t) k
+H
+ff;"
+m
+= dist
+H
+ff;"
+m
+(S
+ff;"
+(t)A
+ff;"
+;LS
+0;0
+(t)A
+0;0
+)
+  max
+t2[0;T ]
+dist
+H
+ff;"
+m
+(S
+ff;"
+(t)A
+ff;"
+;LS
+0;0
+(t)A
+0;0
+):
+Thus,
+sup
+t2[0;T ]
+sup
+ 2A
+ff;"
+inf
+b2LA
+0;0
+kS
+ff;"
+(t)  bk
+H
+ff;"
+m
+  max
+t2[0;T ]
+dist
+H
+ff;"
+m
+(S
+ff;"
+(t)A
+ff;"
+;LS
+0;0
+(t)A
+0;0
+);
+and
+sup
+a2H
+ff;"
+m
+inf
+b2LA
+0;0
+ka bk
+H
+ff;"
+m
+  sup
+t2[0;T ]
+sup
+ 2A
+ff;"
+inf
+b2LA
+0;0
+kS
+ff;"
+(t)  bk
+H
+ff;"
+m
+  max
+t2[0;T ]
+dist
+H
+ff;"
+m
+(S
+ff;"
+(t)A
+ff;"
+;LS
+0;0
+(t)A
+0;0
+)
+  max
+t2[0;T ]
+sup
+ 2A
+ff;"
+inf
+ 2A
+0;0
+kS
+ff;"
+(t)  LS
+0;0
+(t) k
+H
+ff;"
+m
+:
+The norm is then expanded
+kS
+ff;"
+(t)  LS
+0;0
+(t) k
+H
+ff;"
+m
+ kS
+ff;"
+(t)  LS
+0;0
+(t)  k
+H
+ff;"
+m
++kLS
+0;0
+(t)   LS
+0;0
+(t) k
+H
+ff;"
+m
+(106)
+so that by (86) we know
+kS
+ff;"
+(t)  LS
+0;0
+(t)  k
+H
+ff;"
+m
+  (ff +")
+1=2
+Q(R;m;T ):
+Expand the square of the norm on the right-hand side of (106) to obtain, for
+   =  ( 
+1
+; 
+2
+) = 
+1
+2H
+0;0
+m
+ H and  2H
+0;0
+m
+ H,
+kLS
+0;0
+(t)   LS
+0;0
+(t) k
+2
+H
+ff;"
+m
+=kS
+0;0
+(t)   S
+0;0
+(t) k
+2
+V
+0 +ffkS
+0;0
+(t)   S
+0;0
+(t) k
+2
++
++"kM(S
+0;0
+(t)  ) M(S
+0;0
+(t) )k
+2
+: (107)
+Electronic Journal. http://diffjournal.spbu.ru 151Differential Equations and Control Processes, N 2, 2019
+Recall from (59), the termsMS
+0;0
+(t)   andMS
+0;0
+(t)  can be expressed in
+terms of the chemical potential  
+0
+. By the continuous embedding H ,! V
+0
+,
+and by the local Lipschitz continuity of the mapsM (this is possible thanks to
+(H2)) andS
+0;0
+onH
+0;0
+m
+(cf. [14, Proposition 2.13]), then (107) can be estimated
+by
+kLS
+0;0
+(t)   LS
+0;0
+(t) k
+2
+H
+ff;"
+m
+ Q(R;m;T )(1 +ff +")k    k
+2
+H
+0;0
+m
+:
+Hence, (106) becomes
+kS
+ff;"
+(t)  LS
+0;0
+(t) k
+H
+ff;"
+m
+ Q(R;m;T )
+ 
+(ff +")
+1=2
++ (1 +ff +")
+1=2
+k    k
+H
+0;0
+m
+ 
+;
+and
+inf
+ 2A
+0;0
+kS
+ff;"
+(t)  LS
+0;0
+(t) k
+H
+ff;"
+m
+ Q(R;m;T )
+ 
+(ff +")
+1=2
++ (1 +ff +")
+1=2
+k    k
+H
+0;0
+m
+ 
+:
+Since   2  A
+ff;"
+=A
+0;0
+, then it is possible to choose  2A
+0;0
+to be   =   .
+Therefore,
+dist
+H
+ff;"
+m
+(A
+ff;"
+;A
+0;0
+) = sup
+ff2A
+ff;"
+inf
+ 2A
+0;0
+kS
+ff;"
+(t)  LS
+0;0
+(t) k
+H
+ff;"
+m
+ Q(R;m;T )(ff +")
+1=2
+: (108)
+This establishes the estimate (105) and  nishes the proof.  
+5 Conclusions and further remarks
+In this article we have shown that the family of global attractors generated by a
+relaxation of Problem P
+0;0
+, given by Problem P
+ff;"
+, is upper-semicontinuous as
+the perturbation parameters vanish. With this we verify a rather classical result
+going back to [25]. We also establish explicit control over the semidistances
+in explicit terms of the parameters despite the many di culties due to the
+presence of the nonlocal diffusion term on the order parameter . Two essential
+results that lead to this type of continuity result are the continuous dependence
+estimate in Proposition 1 (because it is instrumental in obtaining Lemma 5) and
+Lemma 4, whereby the di culty of controlling 
+tt
+in the nonviscous isothermal
+Problem P
+0;0
+becomes apparent. It seems that this type of upper-semicontinuity
+result for nonlocal Cahn-Hilliard equations is the  rst of its kind.
+Electronic Journal. http://diffjournal.spbu.ru 152Differential Equations and Control Processes, N 2, 2019
+Also concerning the global attractors, some interesting future work would
+include determining whether the (fractal) dimension of the global attractors
+found here is  nite and independent offf and". Hence, we should also examine
+the existence of an exponential attractor for Problem P
+ff;"
+, and naturally, its
+basin of attraction. With that result, we could seek a robustness result for the
+family of exponential attractors (that is, the upper- and lower-semicontinuity
+of the attractors with respect to ff and "). Examining problems related to
+stability (and hence the approximation of the longterm behavior of a relaxation
+problem to the associated limit problem) may prove to be an important source
+of further work on nonlocal Cahn-Hilliard and nonlocal phase  eld models.
+Concerning another perturbation/relaxation problem, it might be interesting
+to see if comparable results appear in the model problems described by (12).
+Of course, some future work may examine several variants to the current
+model. Such variants may include a convection term that accounts for the effects
+of an averaged (uid) velocity  eld, which naturally couples with a nonisother-
+mal Navier-Stokes equation (on the former, see for example [34]). Indeed, one
+may include nonconstant mobility in the nonlocal Cahn-Hilliard equation (cf.
+e.g. [9]). It may be interesting to generalize the coupled heat equation to a
+Coleman-Gurtin type equation. Also, one may examine the associated nonlocal
+phase- eld model (12), and the effects of generalizing the heat equation along
+the lines of [27, 28, 29, 23] where Fourier's law is replaced with a Maxwell-
+Cattaneo law because in this more realistic setting, \disturbances" travel at a
+ nite speed.
+It would also be interesting to study the nonlocal variant of the Cahn-
+Hilliard and phase- eld equations by introducing relevant dynamic boundary
+conditions (again, see [16]). In this case, several interesting di culties may arise
+concerning the regularity of solutions because, typically in applications, H
+1
+(
+)
+regularity (or better) is sought in order to de ne the trace of the solution; recall,
+trace : H
+s
+(
+)! H
+s 1=2
+( ): Additionally, we should study the case when the
+potential is singular (see hypotheses in [14, Section 3], for example).
+A
+Proof of Lemma 2: We give a formal calculation that can be justi ed by a
+suitable Faedo-Galerkin approximation based on the proof of Theorem 3 above.
+LetM
+0
+:=h 
+0
+i andN
+0
+:=h 
+0
+i. Multiply (1)-(3) by,A
+ 1
+N
+ 
+t
+, 
+t
+, and
+^
+  :=  N
+0
+,
+respectively, then integrate over 
+, applying (15) (since  
+t
+= 
+t
+ h 
+t
+i belongs
+Electronic Journal. http://diffjournal.spbu.ru 153Differential Equations and Control Processes, N 2, 2019
+to V
+0
+0
+; recall (26)), and sum the resulting identities to arrive at the differential
+identity, which holds for almost all t  0,
+d
+dt
+n
+k
+p
+a k
+2
++"k
+^
+ k
+2
++ 2(F ( ); 1)  (J  ; )
+o
++
++ 2k 
+t
+k
+2
+V
+0 + 2ffk 
+t
+k
+2
++ 2kr k
+2
+= 0: (109)
+Let
+^
+  :=  M
+0
+. We further multiply (1)-(2) by, 2 A
+ 1
+N
+^
+  and 2 
+^
+ , respectively,
+in H, where   > 0 is to be determined below. Observeh
+^
+ i = 0 andk
+^
+ k
+2
+=
+k k
+2
+ M
+2
+0
+j
+j: This yields, for almost all t  0;
+d
+dt
+n
+ k
+^
+ k
+2
+V
+0 + ffk
+^
+ k
+2
+o
++ 2 k
+p
+a
+^
+ k
+2
++ 2 (F
+0
+( );
+^
+ )
+= 2 (J  ;
+^
+ ) + 2  ( ;
+^
+ )  2 M
+0
+(a;
+^
+ ): (110)
+Together, (109) and (110) make the differential identity,
+d
+dt
+n
+ k
+^
+ k
+2
+V
+0 + ffk
+^
+ k
+2
++k
+p
+a k
+2
++"k
+^
+ k
+2
++ 2(F ( ); 1)  (J  ;
+^
+ )
+o
++ 2k 
+t
+k
+2
+V
+0 + 2ffk 
+t
+k
+2
++ 2 k
+p
+a
+^
+ k
+2
++ 2kr k
+2
++ 2 (F
+0
+( );
+^
+ )
+= 2 (J  ;
+^
+ ) + 2  ( ;
+^
+ )  2 M
+0
+(a;
+^
+ ): (111)
+Introduce the functional de ned by, for all t  0 and   > 0,
+E(t) := k
+^
+ (t)k
+2
+V
+0+ ffk
+^
+ (t)k
+2
++k
+p
+a (t)k
+2
++"k
+^
+ (t)k
+2
++2(F ( (t)); 1) (J  ;
+^
+ )+C
+F
+:
+(112)
+(Observe,E(t) = 2E
+"
+(t) + k
+^
+ (t)k
+2
+V
+0
++ ffk
+^
+ (t)k
+2
++C
+F
+.) Because of assumption
+(H3) and the assumption that F ( 
+0
+)2L
+1
+(
+), we know
+2(F ( ); 1)  (J  ;
+^
+ )  (2c
+1
+  2c
+1
+)k
+^
+ k
+2
++ 2c
+1
+M
+2
+0
+j
+j  2c
+2
+j
+j; (113)
+thus the constant C
+F
+may be chosen su ciently large to insure E(t) is non-
+negative for all t  0, ff2 (0; 1], "2 (0; 1], and   > 0: Then we rewrite (111)
+as,
+d
+dt
+E + E =H; (114)
+for some 0<  < ; and where
+H(t) :=  k
+^
+ (t)k
+2
+V
+0 +  ffk
+^
+ (t)k
+2
++ k
+p
+a (t)k
+2
++ "k
+^
+ (t)k
+2
++
++ 2 (F ( (t)); 1)  (J  ;
+^
+ ) + C
+F
+  2k 
+t
+(t)k
+2
+V
+0  2ffk 
+t
+(t)k
+2
+  2 k
+p
+a
+^
+ (t)k
+2
+  2kr (t)k
+2
+  2 (F
+0
+( (t));
+^
+ (t))
++ 2 (J  (t);
+^
+ (t)) + 2  ( (t);
+^
+ (t))  2 M
+0
+(a;
+^
+ (t)): (115)
+Electronic Journal. http://diffjournal.spbu.ru 154Differential Equations and Control Processes, N 2, 2019
+Estimating the products on the right-hand side using the assumptions (H1)-
+(H3) as well as Young's inequality for convolutions (cf. e.g. [1, Corollary 2.25]),
+and the Poincar  e-type inequality (18) yields (and recall  2 (0; 
+0
+]),
+2 (J  ;
+^
+ )  2 kJ  kk
+^
+ k
+  2 c
+J
+k
+^
+ k
+2
++M
+2
+0
+kak
+2
+1
++ 
+2
+k
+^
+ k
+2
+; (116)
+2  ( ;
+^
+ )  2  
+0
+k kk
+^
+ k
+   
+2
+0
+k k
+2
++ k
+^
+ k
+2
+  2  
+2
+0
+ 
+
+
+kr k
+2
++ 2  
+2
+0
+j
+jN
+2
+0
++ k
+^
+ k
+2
+; (117)
+and
+ 2 M
+0
+(a;
+^
+ )  2 M
+0
+kakk
+^
+ k
+= 2 M
+0
+kJ  1kk
+^
+ k
+  2 M
+0
+c
+J
+j
+j
+1=2
+k
+^
+ k
+ M
+2
+0
+c
+2
+J
+j
+j + 
+2
+k
+^
+ k
+2
+: (118)
+With assumption (H3) we now consider, with the aid of (20)-(22) (settingm =
+M
+0
+),
+2 (F ( ); 1)  2 (F
+0
+( );
+^
+ ) = 2 
+ 
+(F
+0
+( );
+^
+ )  (F ( ); 1)
+ 
+  2(   )(F
+0
+( );
+^
+ )
+= 2 (F
+0
+( )
+^
+  F ( ); 1)  2(   )(F
+0
+( );
+^
+ )
+  2 c
+9
+j
+j + 2 c
+10
+k
+^
+ k
+2
+  (   )(jF ( )j; 1) + 2(   )c
+11
++ (   )c
+12
+: (119)
+By (H1) again, we  nd that for a  xed 0<a
+0
+< essinf
+
+
+a(x) (this is where we
+need the slightly stricter version of (H1)), there holds
+a
+0
+k
+^
+ k
+2
+ k
+p
+a
+^
+ k
+2
+:
+Moreover, due to the continuous embeddingH ,!V
+0
+; there is a constant, which
+we denote C
+
+
+> 0, so that C
+ 2
+
+
+k
+^
+ k
+2
+V
+0
+ k
+^
+ k
+2
+(cf. e.g. [32, p. 243, Equation
+(6.7)]), and, now with 0<  < 1;
+ 2 k
+p
+a
+^
+ k
+2
+  
+a
+0
+2
+C
+ 2
+
+
+k
+^
+ k
+2
+V
+0 
+a
+0
+2
+k
+^
+ k
+2
+  k
+p
+a
+^
+ k
+2
+: (120)
+Also observe that, using the Poincar  e-type inequality (17) again, we have
+ 
+ 
+2  2  
+2
+0
+ 
+
+
+ 
+kr k
+2
+  
+ 
+1  2  
+2
+0
+ 
+
+
+ 
+kr k
+2
+ 
+1
+ 
+
+
+k
+^
+ k
+2
+: (121)
+Electronic Journal. http://diffjournal.spbu.ru 155Differential Equations and Control Processes, N 2, 2019
+Combining (115)-(121) yields,
+H 
+ 
+   
+a
+0
+2
+C
+ 2
+
+
+ 
+k
+^
+ k
+2
+V
+0 +
+ 
+  ff + 2 c
+J
++  + 2 
+2
++ 2 c
+10
+ 
+a
+0
+2
+ 
+k
+^
+ k
+2
++
+ 
+  
+ 
+2
+ 
+k
+p
+a k
+2
++
+ 
+ " 
+1
+ 
+
+
+ 
+k
+^
+ k
+2
+  (   )(jF ( )j; 1)
+  2k 
+t
+k
+2
+V
+0  2ffk 
+t
+k
+2
+ 
+ 
+1  2  
+2
+0
+ 
+
+
+ 
+kr k
+2
++ C
+F
++M
+2
+0
+c
+2
+J
+j
+j + 2  
+2
+0
+j
+jN
+2
+0
++ 2 c
+9
+j
+j
++ 2(   )c
+11
++ (   )c
+12
++ M
+2
+0
+j
+j(hai a
+0
+) +M
+2
+0
+kak
+2
+1
+: (122)
+We should note that the additional constants in a on the right-hand side of
+(122) is due to the fact that
+  k
+p
+a
+^
+ k
+2
+   k
+p
+a k
+2
+  M
+2
+0
+j
+j(hai a
+0
+):
+Inserting (122) into (114) produces the differential inequality (this is where we
+use the condition that 0<ff  1 and 0<"  1),
+d
+dt
+E + 2k 
+t
+k
+2
+V
+0 + 2ffk 
+t
+k
+2
++
+ 
+1  2  
+2
+0
+ 
+
+
+ 
+k k
+2
+V
++
+a
+0
+4
+C
+ 2
+
+
+k
+^
+ k
+2
+V
+0 +
+ 
+a
+0
+2
+  2 c
+J
+    2 
+2
+  2 c
+10
+ 
+ffk
+^
+ k
+2
++ k
+p
+a k
+2
++
+1
+ 
+
+
+"k
+^
+ k
+2
++ (   )(F ( ); 1) + C
+F
+  C
+F
++M
+2
+0
+c
+2
+J
+j
+j + 2  
+2
+0
+j
+jN
+2
+0
++
+ 
+1  2  
+2
+0
+ 
+
+
+ 
+N
+2
+0
++ 2 c
+9
+j
+j + 2(   )c
+11
++ (   )c
+12
++ M
+2
+0
+j
+j(hai a
+0
+) +M
+2
+0
+kak
+2
+1
+:
+The extra term with N
+0
+now appearing on the right-hand side is used to make
+the V norm in  . Now we easily see that there are 0<  <  < 1 so that
+ 
+3
+= 
+3
+( 
+0
+;J; 
+) := min
+n
+1  2  
+2
+0
+ 
+
+
+;
+a
+0
+2
+  2 c
+J
+    2 
+2
+  2 c
+10
+o
+> 0:
+Now there holds, for almost all t  0;
+d
+dt
+E + 
+3
+E +k 
+t
+k
+2
+V
+0 + 2ffk 
+t
+k
+2
++ 
+3
+k k
+2
+V
+ Q(m): (123)
+Neglecting the normed termsk 
+t
+k
+2
+V
+0
++ 2ffk 
+t
+k
+2
++  
+3
+k k
+2
+V
+, then employing a
+Gr onwall inequality yields, for all t  0;
+E(t) e
+  
+3
+t
+E(0) +
+1
+ 
+3
+Q(m): (124)
+Electronic Journal. http://diffjournal.spbu.ru 156Differential Equations and Control Processes, N 2, 2019
+Recall that F ( 
+0
+)2L
+1
+(
+) by assumption, so now we easily arrive at
+k
+^
+ (t)k
+2
+V
+0 +ffk
+^
+ (t)k
+2
++k
+p
+a (t)k
+2
++k
+^
+ (t)k
+2
++ (F ( (t)); 1)  (J  (t);
+^
+ (t))
+ E(0)e
+  
+3
+t
++
+1
+ 
+3
+Q(m): (125)
+Also, by neglecting the positive term  
+3
+E in (123) and integrating this time
+over (t;t + 1), we  nd, with (124), for all t  0,
+Z
+t+1
+t
+ 
+k 
+t
+(s)k
+2
+V
+0 +ffk 
+t
+(s)k
+2
++k (s)k
+2
+V
+ 
+ds E(0)e
+  
+3
+t
++
+ 
+1
+ 
+3
++ 1
+ 
+Q(m):
+(126)
+Together, (125) and (126) establish (49).
+The existence of the setB
+ff;"
+0
+described in (50) follows directly from the
+dissipation estimate (49); indeed, (cf. e.g. [3]). To see whyB
+ff;"
+0
+is absorbing,
+consider any nonempty bounded subset B in H
+ff;"
+m
+nB
+ff;"
+0
+. Then we have that
+S
+ff;"
+(t)B B
+ff;"
+0
+, inH
+ff;"
+m
+, for all t t
+0
+, where
+t
+0
+:= max
+ 
+1
+ 
+3
+ln(E(0)); 0
+ 
+: (127)
+This completes the proof.  
+References
+[1] Robert A. Adams and John J. F. Fournier. Sobolev Spaces. Pure and
+Applied Mathematics - Volume 140. Academic Press / Elsevier Science,
+Oxford, second edition, 2003.
+[2] Fuensanta Andreu-Vaillo, Jos  e M. Maz  on, Julio D. Rossi, and J. Juli  an
+Toledo-Melero. Nonlocal diffusion problems, volume 165 of Mathematical
+Surveys and Monographs. American Mathematical Society, Real Sociedad
+Matem  atica Espa~ nola, 2010.
+[3] A. V. Babin and M. I. Vishik. Attractors of Evolution Equations. North-
+Holland, Amsterdam, 1992.
+[4] J. M. Ball. Global attractors for damped semilinear wave equations. Dis-
+crete Contin. Dyn. Syst., 10(2):31{52, 2004.
+Electronic Journal. http://diffjournal.spbu.ru 157Differential Equations and Control Processes, N 2, 2019
+[5] Pierluigi Colli, Sergio Frigeri, and Maurizio Grasselli. Global existence
+of weak solutions to a nonlocal Cahn{Hilliard{Navier{Stokes system. J.
+Math. Anal. Appl., 386(1):428{444, 2012.
+[6] Monica Conti and Gianluca Mola. 3-D viscous Cahn{Hilliard equation with
+memory. Math. Models Methods Appl. Sci., 32(11):1370{1395, 2008.
+[7] A. Eden, C. Foias, B. Nicolaenko, and R. Temam. Exponential Attractors
+for Dissipative Evolution Equations. Research in Applied Mathematics.
+John Wiley and Sons Inc., 1995.
+[8] Sergio Frigeri and Maurizio Grasselli. Global and trajectory attractors for
+a nonlocal Cahn{Hilliard{Navier{Stokes system. J. Dynam. Differential
+Equations, 24(4):827{856, 2012.
+[9] Sergio Frigeri, Maurizio Grasselli, and Elisabetta Rocca. A diffuse interface
+model for two-phase incompressible ows with non-local interactions and
+non-constant mobility. Nonlinearity, 28(5):1257{1293, 2015.
+[10] Ciprian G. Gal. Robust family of exponential attractors for a conserved
+Cahn{Hilliard model with singularly perturbed boundary conditions. Com-
+mun. Pure Appl. Anal., 7(4):819{836, 2008.
+[11] Ciprian G. Gal. Well-posedness and long time behavior of the non-
+isothermal viscous Cahn{Hilliard equation with dynamic boundary con-
+ditions. Dyn. Partial Differ. Equ., 5(1):39{67, 2008.
+[12] Ciprian G. Gal and Maurizio Grasselli. The non-isothermal Allen{Cahn
+equation with dynamic boundary conditions. Discrete Contin. Dyn. Syst.,
+22(4):1009{1040, 2008.
+[13] Ciprian G. Gal, Maurizio Grasselli, and Alain Miranville. Robust ex-
+ponential attractors for singularly perturbed phase- eld equations with
+dynamic boundary conditions. NoDEA Nonlinear Differential Equations
+Appl., 15(4{5):535{556, 2008.
+[14] Ciprian G. Gal and Murizio Grasselli. Longtime behavior of nonlocal Cahn{
+Hilliard equations. Discrete Contin. Dyn. Syst., 34(1):145{179, 2014.
+[15] Ciprian G. Gal and Alain Miranville. Robust exponential attractors
+and convergence to equilibria for non-isothermal Cahn{Hilliard equations
+with dynamic boundary conditions. Discrete Contin. Dyn. Syst. Ser. S,
+2(1):113{147, 2009.
+Electronic Journal. http://diffjournal.spbu.ru 158Differential Equations and Control Processes, N 2, 2019
+[16] Ciprian G. Gal and Alain Miranville. Uniform global attractors for non-
+isothermal viscous and non-viscous Cahn{Hilliard equations with dynamic
+boundary conditions. Nonlinear Anal. Real World Appl., 10(3):1738{1766,
+2009.
+[17] S. Gatti, M. Grasselli, A. Miranville, and V. Pata. Hyperbolic relaxation
+of the viscous Cahn{Hilliard equation in 3D. Math. Models Methods Appl.
+Sci., 15(2):165{198, 2005.
+[18] S. Gatti, M. Grasselli, A. Miranville, and V. Pata. On the hyperbolic
+relaxation of the one-dimensional Cahn{Hilliard equation. J. Math. Anal.
+Appl., 312:230{247, 2005.
+[19] S. Gatti, M. Grasselli, A. Miranville, and V. Pata. A construction of a ro-
+bust family of exponential attractors. Proc. Amer. Math. Soc., 134(1):117{
+127, 2006.
+[20] S. Gatti, A. Miranville, V. Pata, and S. Zelik. Continuous families of
+exponential attractors for singularly perturbed equations with memory.
+Proc. Roy. Soc. Edinburgh Sect. A, 140:329{366, 2010.
+[21] Giambattista Giacomin and Joel L. Lebowitz. Phase segregation dynamics
+in particle systems with long range interactions. i. macroscopic limits. J.
+Statist. Phys., 87(1{2):37{61, 1997.
+[22] Maurizio Grasselli. Finite-dimensional global attractor for a nonlocal
+phase- eld system. Istituto Lombardo (Rend. Scienze) Mathematica,
+146:113{132, 2012.
+[23] Maurizio Grasselli, Hana Petzeltov  a, and Giulio Schimperna. Asymptotic
+behavior of a nonisothermal viscous cahn-hilliard equation with inertial
+term. J. Differential Equations, 239(1):38{60, 2007.
+[24] Murizio Grasselli and Giulio Schimperna. Nonlocal phase- eld systems
+with general potentials. Discrete Contin. Dyn. Syst., 33(11{12):5089{5106,
+2013.
+[25] J. Hale and G. Raugel. Upper semicontinuity of the attractor for a singu-
+larly perturbed hyperbolic equation. J. Differential Equations, 73(2):197{
+214, 1988.
+Electronic Journal. http://diffjournal.spbu.ru 159Differential Equations and Control Processes, N 2, 2019
+[26] Jack K. Hale. Asymptotic Behavior of Dissipative Systems. Mathemat-
+ical Surveys and Monographs - No. 25. American Mathematical Society,
+Providence, 1988.
+[27] L. Herrera and D. Pav  on. Hyperbolic theories of dissipation: Why and
+when do we need them? Phys. A, 307:121{130, 2002.
+[28] D. D. Joseph and Luigi Preziosi. Heat waves. Rev. Modern Phys., 61(1):41{
+73, 1989.
+[29] D. D. Joseph and Luigi Preziosi. Addendum to the paper: \heat waves".
+Rev. Modern Phys., 62(2):375{391, 1990.
+[30] I. N. Kostin. Rate of attraction to a non-hyperbolic attractor. Asymptotic
+Anal., 16(3):203{222, 1998.
+[31] J. L. Lions. Quelques m  ethodes de r  esolution des probl  emes aux limites non
+lin  eaires. Dunod, Paris, 1969.
+[32] Albert J. Milani and Norbert J. Koksch. An Introduction to Semiows.
+Monographs and Surveys in Pure and Applied Mathematics - Volume 134.
+Chapman & Hall/CRC, Boca Raton, 2005.
+[33] Alain Miranville and Sergey Zelik. Robust exponential attractors for singu-
+larly perturbed phase- eld type equations. Electron. J. Differential Equa-
+tions, 2002(63):1{28, 2002.
+[34] Francesco Della Porta and Maurizio Grasselli. Convective nonlocal cahn-
+hilliard equations with reaction terms. Discrete Contin. Dyn. Syst. Ser. B,
+20(5):1529{1553, 2015.
+[35] James C. Robinson. In nite{Dimensional Dynamical Systems. Cambridge
+Texts in Applied Mathematics. Cambridge University Press, Cambridge,
+2001.
+[36] Joseph L. Shomberg. Well-posedness and global attractors for a non-
+isothermal viscous relaxation of nonlocal Cahn{Hilliard equations. AIMS
+Mathematics: Nonlinear Evolution PDEs, Interfaces and Applications,
+1(2):102{136, 2016.
+[37] Roger Temam. In nite-Dimensional Dynamical Systems in Mechanics and
+Physics. Applied Mathematical Sciences - Volume 68. Springer-Verlag, New
+York, 1988.
+Electronic Journal. http://diffjournal.spbu.ru 160Differential Equations and Control Processes, N 2, 2019
+[38] Roger Temam. Navier-Stokes Equations - Theory and Numerical Analysis.
+AMS Chelsea Publishing, Providence, reprint edition, 2001.
+[39] Songmu Zheng. Nonlinear Evolution Equations. Monographs and Surveys
+in Pure and Applied Mathematics - Volume 133. Chapman & Hall/CRC,
+Boca Raton, 2004.
+[40] Songmu Zheng and Albert Milani. Global attractors for singular perturba-
+tions of the Cahn{Hilliard equations. J. Differential Equations, 209(1):101{
+139, 2005.
+Electronic Journal. http://diffjournal.spbu.ru 161
