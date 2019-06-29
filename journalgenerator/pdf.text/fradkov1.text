@@ -1,0 +1,1927 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 2, 2019
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Adaptive and robust control
+Passi cation with respect to given input and output
+for linear SISO systems
+1
+Alexander Fradkov, Mikhail Lipkovich
+Institute of Problems in Mechanical Engineering, Russian Academy of
+Sciences, Saint Petersburg, Russia
+Department of Theoretical Cybernetics, Saint Petersburg State University,
+Saint Petersburg, Russia
+Email: fradkov@mail.ru, lipkovich.mikhail@gmail.com
+Abstract
+New version of passi cation with respect to given input and output is pro-
+posed. It can be considered as an extension of passi cation introduced in (Frad-
+kov, IEEE CDC 2008). Necessary and su cient conditions for the proposed
+version of passi cation are obtained for linear SISO systems. Solution is based
+on KYP lemma and Meerov's results concerning high gain stabilization.
+Keywords: Passi cation, absolute stability, KYP lemma, linear systems
+1 Introduction
+Absolute stability theory plays an important role in the history of control. Ac-
+cording to the pioneer paper [11] a nonlinear system with a right hand side
+consisting of a linear part and a nonlinearity is absolutely stable if it is glob-
+ally asymptotically stable for all nonlinearities from certain class. A gallery of
+1
+The work was supported by RFBR Grant 19-08-00865Differential Equations and Control Processes, N. 2, 2019
+seminal works on absolute stability [10], [13], [14], [16], [9], [15], [1], [8] among
+others belong to a golden heritage of control. Absolute stability criteria impose
+restrictions on the system linear part which may be either valid or not. What
+to do if those restrictions are not valid? In such a case it was proposed by [2]
+to design a feedback rendering system absolutely stable. The designs proposed
+in [2] are based on circle and Popov criteria.
+However an approach of [2] requires knowledge of the linear part parameters.
+If the uncertainty is strong, i.e. the system parameters may vary in a broad
+range then the circle and Popov criteria may be violated for some values of
+system parameters. In the case of a strong uncertainty a reasonable solution
+may be based on adaptive control. An adaptive control loop may tune the
+feedback controller in order to achieve the desired properties of the closed loop
+system. The system may be called adaptively absolutely stable if there exists
+an adaptive feedback rendering the system globally asymptotically stable for
+all uncertainties of its linear part and all nonlinearities from certain class. The
+adaptive absolute stabilization problem was  rst formulated and solved for a
+special case of the circle criterion in [3]. It was assumed that the nonlinearities
+are bounded by so-called in nite sector, which means that their graphs are
+located in the  rst and third quadrants in the plane.
+Recall that the circle criterion for in nite sector is equivalent to SPR or
+passivity of the linear part. It is shown in [3] that condition of passi ability
+(hyperminimum-phaseness) is su cient for existence of adaptive algorithm ren-
+dering the system absolutely stable. Moreover it is shown that hyperminimum-
+phaseness is equivalent to existence of quadratic Lyapunov function depending
+on the system state and adaptation parameters.
+The main limitation of [3] was consideration of the systems with matched
+nonlinearities: control input and nonlinearities were located in the same equa-
+tions. This limitation arises from the corresponding passi cation conditions.
+In order to deal with nonmatched nonlinearities a new version of passi cation
+problem extending the result of [7] is introduced in this paper. Necessary and
+su cient conditions for a new passi cation problem are given for SISO sys-
+tems. They are obtained using version of KYP lemma [17] and Meerov's results
+concerning high gain stabilization [12]. In the further research these passi -
+cation results will be applied for adaptive absolute stabilization problem with
+nonmatched nonlinearities.
+Electronic Journal. http://diffjournal.spbu.ru/ 185Differential Equations and Control Processes, N. 2, 2019
+2 Problem statement
+In this section a new version of passi cation problem will be introduced. Let
+us start with conventional passi cation de nition. Consider linear system
+2
+:
+_ x =Ax +Bu; y =C
+ 
+x; (1)
+where x2R
+n
+, u2R
+m
+, y2R
+l
+, A;B;C are matrices of appropriate size.
+Let system (1) be closed with a feedback
+u = Ky +v; (2)
+where v is a new input.
+System (1) is calledG-passi able from inputu to outputy if there exists a
+feedback (2) such that closed system (1), (2) is passive from input v to output
+y. This is equivalent to the validity of the following matrix relations for certain
+matrix K with matrix H =H
+ 
+> 0:
+HA(K) +A
+ 
+(K)H < 0; HB =CG; (3)
+A(K) =A +BK
+ 
+C
+ 
+: (4)
+Let  (s) = det(sI A). Let the rank of the matrix B be equal to m. It
+can be shown [5, 6] that system (1) is G-passi able if and only if it is hyper-
+minimum-phase (HMP) i.e. polynomial'(s) = (s) detG
+ 
+W (s) is Hurwitz and
+G
+ 
+C
+ 
+B = (G
+ 
+C
+ 
+B)
+ 
+> 0.
+Consider now linear system with two vector inputs and two vector outputs:
+_ x =Ax +Bu +B
+1
+v;
+y =C
+ 
+x; y
+1
+=C
+ 
+1
+x;
+(5)
+To check conventionalG-passi ability one needs to  nd a feedbacku = Ky
+for system (5) with B = B
+1
+and C = C
+1
+such that (3) holds. Now introduce
+a new passi ability problem for the case of different B;B
+1
+and C;C
+1
+. We will
+seek feedback u = Ky for system (5) such that besides (3) an additional
+conditionHB
+1
+=C
+1
+G
+1
+holds for certain matrixG
+1
+. It can be considered as the
+passi ability for (5) from input [u;u
+1
+] to output [y;y
+1
+] using feedbacku = Ky.
+We will call it as passi cation with respect to given input and output.
+2
+The following notations will be used:
+C
+n
+andR
+n
+are complex and real n-dimensional Euclidean spaces correspondingly;
+colfa
+1
+;:::;a
+n
+g is a column vector with components a
+1
+;:::;a
+n
+;
+diagfa
+1
+;:::;a
+n
+g is a diagonal matrix with elements a
+1
+;:::;a
+n
+;
+Asterisk is a transposition for real matrices and Hermitian conjugate for complex matrices;
+T > 0 for Hermitian matrix T means its positive de niteness;
+ReT = (T +T
+ 
+)=2
+Electronic Journal. http://diffjournal.spbu.ru/ 186Differential Equations and Control Processes, N. 2, 2019
+3 Main result
+Further we will be dealing with passi ability with respect to given input and
+output of SISO linear systems
+_ x =Ax +bu +b
+1
+u
+1
+; y =c
+ 
+x; y
+1
+=c
+ 
+1
+x; (6)
+where x2R
+n
+is a state vector, u;u
+1
+2R
+1
+are two scalar inputs and y;y
+1
+2R
+1
+- are two scalar outputs.
+Let (6) be closed with the following feedback
+u = ky: (7)
+We need to  nd conditions for existence of feedback (7) such that system (6),
+(7) is passive from vector input [u;u
+1
+] to vector output [y;y
+1
+]. Passi ability
+is equivalent to the validity of the following matrix relations for certain k and
+H =H
+ 
+> 0:
+HA(k) +A(k)
+ 
+H < 0; A(k) =A kbc
+ 
+;
+HB =C;
+(8)
+where B = [b;b
+1
+], C = [c;c
+1
+].
+Introduce notation:  (s) = det(sI A),  (s;k) = det(sI A(k)) are char-
+acteristic polynomials of open and closed loop system (6), transfer functions
+W
+bc
+(s) =c
+ 
+(sI A)
+ 1
+b, W
+b
+1
+c
+1
+(s) =c
+ 
+1
+(sI A)
+ 1
+b
+1
+, W
+b
+1
+c
+(s) =c
+ 
+(sI A)
+ 1
+b
+1
+,
+W
+bc
+1
+(s) =c
+ 
+1
+(sI A)
+ 1
+b. Analogously one can de ne transfer functions of closed
+system W
+bc
+(s;k) = c
+ 
+(sI A(k))
+ 1
+b, W
+b
+1
+c
+1
+(s;k), W
+b
+1
+c
+(s;k), W
+bc
+1
+(s;k). The
+numerator of transfer function W
+bc
+(s) is'
+bc
+(s) = (s)W
+bc
+(s). Analogously one
+can de ne numerators of other transfer functions.
+Using matrix determinant lemma one can show that the following identity
+holds:
+ (s;k) = (s) +k'
+bc
+(s): (9)
+Using identities
+(sI A(k))
+ 1
+= (sI A +kbc
+ 
+)
+ 1
+= (sI A)
+ 1
+ 
+I 
+kbc
+ 
+(sI A)
+ 1
+1 +kc
+ 
+(sI A)
+ 1
+b
+ 
+= [(sI A)
+ 1
++k(sI A)
+ 1
+W
+bc
+(s)
+ k(sI A)
+ 1
+bc
+ 
+(sI A)
+ 1
+][1 +kW
+bc
+(s)]
+ 1
+Electronic Journal. http://diffjournal.spbu.ru/ 187Differential Equations and Control Processes, N. 2, 2019
+one can express partial transfer functions:
+W
+bc
+(s;k) =W
+bc
+(s)[1 +kW
+bc
+(s)]
+ 1
+='
+bc
+(s)[ (s) +k'
+bc
+(s)]
+ 1
+W
+b
+1
+c
+(s;k) =W
+b
+1
+c
+(s)[1 +kW
+bc
+(s)]
+ 1
+='
+b
+1
+c
+(s)[ (s) +k'
+bc
+(s)]
+ 1
+W
+bc
+1
+(s;k) =W
+bc
+1
+(s)[1 +kW
+bc
+(s)]
+ 1
+='
+bc
+1
+(s)[ (s) +k'
+bc
+(s)]
+ 1
+W
+b
+1
+c
+1
+(s;k) = [W
+b
+1
+c
+1
+(s) +kW
+bc
+W
+b
+1
+c
+1
+ kW
+b
+1
+c
+W
+bc
+1
+][1 +kW
+bc
+(s)]
+ 1
+='
+b
+1
+c
+1
+(s)[ (s)]
+ 1
+ k'
+b
+1
+c
+'
+bc
+1
+[ (s)( (s) +k'
+bc
+(s))]
+ 1
+(10)
+Let W (s;k) = C
+ 
+(sI A(k))
+ 1
+B. Then according to KYP lemma [17] in
+its semisingular form the existence of matrix H = H
+ 
+> 0, satisfying (8) is
+equivalent to the following conditions:
+i) det(sI A(k)) is a Hurwitz polynomial;
+ii) ReW (i!;k)> 0 for all !2R
+1
+;
+iii)lim
+!!1
+!
+2
+ReW (i!;k)> 0.
+The results of this paper are based on the following passi ability conditions.
+Theorem 1 Consider system (6). Conditions (8) of passi ability with respect
+to given input and output hold for all su ciently large k if and only if the
+following conditions hold:
+a) polynomial '
+bc
+(s) is Hurwitz with positive coe cients and has degree n  1
+b) polynomials '
+b
+1
+c
+and '
+bc
+1
+have degrees not exceeding n  2
+c) polynomial '
+b
+1
+c
+1
+has either degree n  1 or n  2
+d) '
+bc
+(i!)'
+b
+1
+c
+1
+(i!) '
+b
+1
+c
+(i!)'
+bc
+1
+(i!)6= 0 8!
+e) Re (i!)   '
+b
+1
+c
+1
+(i!)> 0 for all !.
+Proof of this theorem is given below.
+3.1 Su ciency
+Assume that (a)-(e) hold and check ful llment of conditions i), ii), iii) for all
+big enough k:
+i) From representation (9) and from results from [12] it follows that  (s;k)
+is Hurwitz for all big enough k if and only if '
+bc
+(s) is a Hurwitz polynomial
+Electronic Journal. http://diffjournal.spbu.ru/ 188Differential Equations and Control Processes, N. 2, 2019
+with positive coe cients and either it has degree n  1 or it has degree n  2
+and  
+n 1
+> 0, where  
+n 1
+is the coe cient of  (s) of degree n  1. Therefore
+from condition (a) it follows that  (s;k) is Hurwitz for all big enough k.
+ii) First, let us show that det ReW (i!;k)6= 0. Indeed,
+det ReW (i!;k) =W
+bc
+W
+b
+1
+c
+1
+(1 +kW
+bc
+)
+ 1
+ kW
+bc
+W
+b
+1
+c
+W
+bc
+1
+(1 +kW
+bc
+)
+ 2
+ 
+W
+b
+1
+c
+W
+bc
+1
+(1 +kW
+bc
+)
+ 2
+=W
+bc
+W
+b
+1
+c
+1
+(1 +kW
+bc
+)
+ 1
+  (1 +kW
+bc
+)W
+b
+1
+c
+W
+bc
+1
+(1 +kW
+bc
+)
+ 2
+= (W
+bc
+W
+b
+1
+c
+1
+ W
+b
+1
+c
+W
+bc
+1
+)(1 +kW
+bc
+)
+ 1
+=
+'
+bc
+(i!)'
+b
+1
+c
+1
+(i!) '
+b
+1
+c
+(i!)'
+bc
+1
+(i!)
+ (i!)( (i!) +k'
+bc
+(i!))
+6= 0
+(11)
+by assumptions (d). It has no poles by assumptions (a) and (d) which impliy
+that  (i!)6= 0 and  (i!) +k'
+bc
+(i!)) is Hurwitz for big enough k.
+Relation (11) implies invertibility of ReW (i!;k) and one can get:
+ReW (i!;k) =W (i!;k) +W
+ 
+(i!;k) =W (I +W
+ 1
+W
+ 
+)
+=W (W
+  
++W
+ 1
+)W
+ 
+=W ReW
+ 1
+W
+ 
+:
+Thus condition ReW (i!;k) > 0 is equivalent to ReW
+ 1
+(i!;k) > 0. Denote
+ (i!) ='
+bc
+(i!)'
+b
+1
+c
+1
+(i!) '
+b
+1
+c
+(i!)'
+bc
+1
+(i!). CalculateW
+ 1
+(i!;k). Dependency
+on i! is omitted:
+W
+ 1
+(i!;k) =
+1 +kW
+bc
+W
+bc
+W
+b
+1
+c
+1
+ W
+b
+1
+c
+W
+bc
+1
+2
+4
+W
+b
+1
+c
+1
+ k
+W
+b
+1
+c
+W
+bc
+1
+1+kW
+bc
+;  W
+b
+1
+c
+(1 +kW
+bc
+)
+ 1
+ W
+bc
+1
+(1 +kW
+bc
+)
+ 1
+; W
+bc
+(1 +kW
+bc
+)
+ 1
+3
+5
+=
+1
+W
+bc
+W
+b
+1
+c
+1
+ W
+b
+1
+c
+W
+bc
+1
+2
+4
+W
+b
+1
+c
+1
+(1 +kW
+bc
+) kW
+b
+1
+c
+W
+bc
+1
+;  W
+b
+1
+c
+ W
+bc
+1
+; W
+bc
+3
+5
+=
+ 
+2
+ 
+2
+4
+'
+b
+1
+c
+1
+( +k'
+bc
+) k'
+b
+1
+c
+'
+bc
+1
+ 
+2
+;  
+'
+b
+1
+c
+ 
+ 
+'
+bc
+1
+ 
+;
+'
+bc
+ 
+3
+5
+=
+1
+ 
+2
+4
+'
+b
+1
+c
+1
+(  +k'
+bc
+) k'
+b
+1
+c
+'
+bc
+1
+;  '
+b
+1
+c
+ 
+ '
+bc
+1
+ ; '
+bc
+ 
+3
+5
+=
+2
+4
+k +'
+b
+1
+c
+1
+  
+ 1
+;  '
+b
+1
+c
+  
+ 1
+ '
+bc
+1
+  
+ 1
+; '
+bc
+  
+ 1
+3
+5
+Electronic Journal. http://diffjournal.spbu.ru/ 189Differential Equations and Control Processes, N. 2, 2019
+Apparently
+ReW
+ 1
+(i!;k) =
+2
+4
+k + Ref'
+b
+1
+c
+1
+  
+ 1
+g;  ('
+b
+1
+c
+  
+ 1
++   '
+bc
+1 
+ 
+ 
+ 
+ 1
+)
+ ('
+bc
+1
+  
+ 1
++   '
+b
+1
+c
+ 
+ 
+ 
+ 
+ 1
+); Ref'
+bc
+  
+ 1
+g
+3
+5
+=
+1
+j j
+2
+2
+4
+kj j
+2
++ Ref'
+b
+1
+c
+1
+ 
+ 
+ g;  ('
+b
+1
+c
+ 
+ 
+  +   '
+bc
+1 
+  )
+ ('
+bc
+1
+ 
+ 
+  +   '
+b
+1
+c
+ 
+  ); Ref'
+bc
+ 
+ 
+ g
+3
+5
+(12)
+Let us show that ReW
+ 1
+(i!;k) is positive de nite using Sylvester criterion.
+We should check that its top left corner element and its determinant are positive.
+The top left corner element is following:
+kj j
+2
++ Ref'
+b
+1
+c
+1
+ 
+ 
+ g: (13)
+Termj j is positive and separated from zero on imaginary axis since it tends
+to in nity for large ! and reaches maximal and minimal value for bounded !
+as a continuous function on compact. Degree ofj j
+2
+is either 4n  4 or 4n  6
+dependent on degree of '
+b
+1
+c
+1
+. Degree of Ref'
+b
+1
+c
+1
+ 
+ 
+ g is the same. Therefore
+(13) is positive for all big enough k.
+Determinant of ReW
+ 1
+(i!;k) is as follows:
+Ref'
+bc
+ 
+ 
+ g(kj j
+2
++ Ref'
+b
+1
+c
+1
+ 
+ 
+ g) j'
+bc
+1
+ 
+ 
+  +   '
+b
+1
+c
+ 
+  j
+2
+=kj j
+2
+j'
+bc
+j
+2
+Ref    '
+b
+1
+c
+1
+g kj j
+2
+Ref'
+bc
+    '
+b
+1
+c
+  '
+bc
+1
+g
++ Ref'
+bc
+ 
+ 
+ gRef'
+b
+1
+c
+1
+ 
+ 
+ g j'
+bc
+1
+ 
+ 
+  +   '
+b
+1
+c
+ 
+  j
+2
+(14)
+The  rst term is positive and separated from zero on imaginary axis.
+Straightforward calculation can show that under assumptions (b) and (c) the
+ rst term has the largest degree. Therefore determinant will be positive for all
+! and large enough k.
+iii) Calculate the limit of each element of matrix !
+2
+ReW (i!;k). Let us
+Electronic Journal. http://diffjournal.spbu.ru/ 190Differential Equations and Control Processes, N. 2, 2019
+start with the top left corner element. For large ! we have:
+!
+2
+ReW
+bc
+(i!;k) =!
+2
+Re
+'
+bc
+(i!)
+ (i!) +k'
+bc
+(i!)
+=!
+2
+Re
+(i!)
+n 1
+'
+bc
+n 1
++ (i!)
+n 2
+'
+bc
+n 2
++O(!
+n 3
+)
+(i!)
+n
++ (i!)
+n 1
+ 
+n 1
++k(i!)
+n 1
+'
+bc
+n 1
++O(!
+n 2
+)
+= Re
+!
+2
+'
+bc
+n 1
+ i!'
+bc
+n 2
++O(1)
+i! + 
+n 1
++k'
+bc
+n 1
++O(!
+ 1
+)
+= Re
+(!
+2
+'
+bc
+n 1
+ i!'
+bc
+n 2
+)( 
+n 1
++k'
+bc
+n 1
+ i!) +O(!)
+!
+2
++ ( 
+n 1
++k'
+bc
+n 1
++O(!
+ 1
+))
+2
+=
+!
+2
+'
+bc
+n 1
+ 
+n 1
++k!
+2
+('
+bc
+n 1
+)
+2
+ !
+2
+'
+bc
+n 2
++O(!)
+!
+2
++ ( 
+n 1
++k'
+bc
+n 1
++O(!
+ 1
+))
+2
+:
+(15)
+Therefore
+lim
+!!1
+!
+2
+ReW
+bc
+(i!;k) ='
+bc
+n 1
+( 
+n 1
++k'
+bc
+n 1
+) '
+bc
+n 2
+(16)
+Analogously one can show that
+lim
+!!1
+!
+2
+ReW
+b
+1
+c
+(i!;k) ='
+b
+1
+c
+n 1
+( 
+n 1
++k'
+bc
+n 1
+) '
+b
+1
+c
+n 2
+(17)
+lim
+!!1
+!
+2
+ReW
+bc
+1
+(i!;k) ='
+bc
+1
+n 1
+( 
+n 1
++k'
+bc
+n 1
+) '
+bc
+1
+n 2
+(18)
+Finally calculate limit of the bottom right-corner element ReW
+b
+1
+c
+1
+(i!;k). It is
+can be expressed in the following form
+ReW
+b
+1
+c
+1
+(i!;k) = ReW
+b
+1
+c
+1
+(i!) kW
+b
+1
+c
+(i!)W
+bc
+1
+(i!)[1 +kW (i!)]
+ 1
+(19)
+Consider the  rst term for large !:
+!
+2
+ReW
+b
+1
+c
+1
+(i!) =!
+2
+Re
+(i!)
+n 1
+'
+b
+1
+c
+1
+n 1
++ (i!)
+n 2
+'
+b
+1
+c
+1
+n 2
++O(!
+n 3
+)
+(i!)
+n
++ (i!)
+n 1
+ 
+n 1
++O(!
+n 2
+)
+= Re
+!
+2
+'
+b
+1
+c
+1
+n 1
+ i!'
+b
+1
+c
+1
+n 2
++O(1)
+i! + 
+n 1
++O(!
+ 1
+)
+= Re
+(!
+2
+'
+b
+1
+c
+1
+n 1
+ i!'
+b
+1
+c
+1
+n 2
+)( 
+n 1
+ i!) +O(!)
+!
+2
++ 
+2
+n 1
+=
+(!
+2
+'
+b
+1
+c
+1
+n 1
+ i!'
+b
+1
+c
+1
+n 2
+)( 
+n 1
+ i!) +O(!)
+!
+2
++ 
+2
+n 1
+=
+!
+2
+'
+b
+1
+c
+1
+n 1
+ 
+n 1
+ !
+2
+'
+b
+1
+c
+1
+n 2
++O(!)
+!
+2
++ 
+2
+n 1
+Electronic Journal. http://diffjournal.spbu.ru/ 191Differential Equations and Control Processes, N. 2, 2019
+Thus limit of!
+2
+ReW
+b
+1
+c
+1
+(i!) is'
+b
+1
+c
+1
+n 1
+ 
+n 1
+ '
+b
+1
+c
+1
+n 2
+. Now consider the second term
+for large !. Straightforward calculation yields
+lim
+!!1
+!
+2
+ReW
+b
+1
+c
+(i!)W
+bc
+1
+(i!)[1 +kW
+bc
+(i!)]
+ 1
+= '
+b
+1
+c
+n 1
+'
+bc
+1
+n 1
+(20)
+Since both limits in (19) exist, the limit of their difference also exists. It
+equals to:
+lim
+!!1
+!
+2
+ReW
+b
+1
+c
+1
+(i!;k) ='
+b
+1
+c
+1
+n 1
+ 
+n 1
++k'
+b
+1
+c
+n 1
+'
+bc
+1
+n 1
+ '
+b
+1
+c
+1
+n 2
+(21)
+We will apply Sylvester criterion for checking positive de niteness of
+lim
+!!1
+!
+2
+ReW (i!;k). Top left corner element is positive for '
+bc
+n 1
+6= 0 and
+large enough k:
+'
+bc
+n 1
+( 
+n 1
++k'
+bc
+n 1
+) '
+bc
+n 2
+> 0: (22)
+Let us calculate its determinant:
+det lim
+!!1
+!
+2
+ReW (i!;k)
+= ('
+bc
+n 1
+( 
+n 1
++k'
+bc
+n 1
+) '
+bc
+n 2
+)('
+b
+1
+c
+1
+n 1
+ 
+n 1
++k'
+b
+1
+c
+n 1
+'
+bc
+1
+n 1
+ '
+b
+1
+c
+1
+n 2
+)
+  ('
+bc
+1
+n 1
+( 
+n 1
++k'
+bc
+n 1
+) '
+bc
+1
+n 2
+)('
+b
+1
+c
+n 1
+( 
+n 1
++k'
+bc
+n 1
+) '
+b
+1
+c
+n 2
+)
+=k
+2
+(('
+bc
+n 1
+)
+2
+'
+b
+1
+c
+n 1
+'
+bc
+1
+n 1
+  ('
+bc
+n 1
+)
+2
+'
+b
+1
+c
+n 1
+'
+bc
+1
+n 1
+)
++k(('
+bc
+n 1
+)
+2
+('
+b
+1
+c
+1
+n 1
+ 
+n 1
+ '
+b
+1
+c
+1
+n 2
+)'
+bc
+1
+n 1
+'
+bc
+n 1
+('
+b
+1
+c
+n 1
+ 
+n 1
+ '
+b
+1
+c
+n 2
+))
++ ('
+bc
+n 1
+ 
+n 1
+ '
+bc
+n 2
+)('
+b
+1
+c
+1
+n 1
+ 
+n 1
+ '
+b
+1
+c
+1
+n 2
+)
+  ('
+bc
+1
+n 1
+ 
+n 1
+ '
+bc
+1
+n 2
+)('
+b
+1
+c
+n 1
+ 
+n 1
+ '
+b
+1
+c
+n 2
+) (23)
+Since '
+b
+1
+c
+n 1
+='
+bc
+1
+n 1
+= 0 the previous chain of inequalities can be continued:
+det lim
+!!1
+!
+2
+ReW (i!;k) =k('
+bc
+n 1
+)
+2
+('
+b
+1
+c
+1
+n 1
+ 
+n 1
+ '
+b
+1
+c
+1
+n 2
+)
++ ('
+bc
+n 1
+ 
+n 1
+ '
+bc
+n 2
+)('
+b
+1
+c
+1
+n 1
+ 
+n 1
+ '
+b
+1
+c
+1
+n 2
+): (24)
+Assumptions (c) and (d) implies that either '
+b
+1
+c
+1
+n 1
+ 
+n 1
+ '
+b
+1
+c
+1
+n 2
+or '
+b
+1
+c
+1
+n 1
+= 0
+and '
+b
+1
+c
+1
+n 2
+< 0. Therefore (24) is positive.
+3.2 Necessity
+Assume that i), ii), iii) hold for all large enoughk and prove conditions (a)-(e).
+Electronic Journal. http://diffjournal.spbu.ru/ 192Differential Equations and Control Processes, N. 2, 2019
+From point i) of the su ciency part polynomial'(s) is Hurwitz polynomial
+with positive coe cients and either it has degree n  1 or it has degree n  2
+and  
+n 1
+> 0.
+From point iii) of the su ciency part limit of top left corner element
+ReW (i!;k) should be positive that is (22) should be hold. Since'
+bc
+n 2
+is positive
+inequality (22) is hold only if '
+bc
+n 1
+6= 0 which implies (a).
+Since ReW (i!;k) satis es i), ii), iii) it is SPR and its numerator is Hurwitz.
+Therefore det ReW (i!;k)6= 0 for all !. Using expression (11) we see that
+(W
+bc
+W
+b
+1
+c
+1
+ W
+b
+1
+c
+W
+bc
+1
+)6= 0 which implies (d).
+Similarly to su ciency part invertibility of ReW (i!;k) implies positive
+de niteness of ReW
+ 1
+(i!;k). Evaluating its determinant (14) we get that it
+should be positive by Sylvester criterion. If '
+bc
+1
+or '
+b
+1
+c
+has degree n  1 then
+positiveness of (14) will be violated since in this case negative term j'
+bc
+1
+ 
+ 
+  +
+  '
+b
+1
+c
+ 
+  j
+2
+has degree 8n  6, while other terms have degrees 8n  8. Also it will
+be violated if degree of '
+b
+1
+c
+1
+is less than n  2. Moreover positiveness of (14)
+implies (e).
+4 Conclusion
+In the paper a new version of passi cation with respect to given input and out-
+put is proposed. The necessary and su cient conditions for a new passi cation
+problem for SISO systems are given.
+In the future these results will be applied for adaptive absolute stabilization
+based on circle and Popov criteria for the case when inputs and nonlinearities
+belong to different equations. Besides that these results might be extended to
+a general MIMO case and to more general quadratic constraints, different from
+in nite sectors.
+References
+[1] Ajzerman, M.A. and Gantmacher, F.R. (1964). Absolute Stability of Regu-
+lator Systems. Holden-Day, San Francisco.
+[2] Arcak, M., Larsen, M. and Kokotovic, P. (2003). Circle and Popov criteria
+as tools for nonlinear feedback design. Automatica, vol. 39, no. 4, pp. 643-
+650.
+Electronic Journal. http://diffjournal.spbu.ru/ 193Differential Equations and Control Processes, N. 2, 2019
+[3] Fradkov, A., Lipkovich, M. (2015). Adaptive absolute stability. IFAC-
+PapersOnLine, vol. 48, no. 11, pp. 258263.
+[4] Fradkov, A., Lipkovich, M. (2016). Passi cation of MIMO linear systems
+with respect to given output. in Proc. of 2016 American Control Confer-
+ence (ACC), pp. 7037 - 7041.
+[5] Fradkov, A.L. (1976). Quadratic Lyapunov functions in the adaptive sta-
+bilization problem of a linear dynamic plant. Siberian Math. J., no. 2, pp.
+341-348.
+[6] Fradkov, A.L. (2003). Passi cation of nonsquare linear systems and feed-
+back Yakubovich-Kalman-Popov Lemma. Europ. J. Contr., vol. 9, no. 6,
+pp. 573-582.
+[7] Fradkov, A.L. (2008). Passi cation of Linear Systems with Respect to
+Given Output. in Proc. of 47th IEEE CDC, pp. 646-651.
+[8] Jury, E.I. and Lee, B.W. (1964). On the absolute stability of a certain class
+of nonlinear sampled-data systems. IEEE Trans. Automatic Control, vol.
+9, no. 1, pp. 51-61.
+[9] Kalman, R.E. (1963). Lyapunov functions for the problem of Lur'e in Au-
+tomatic Control. Proc. Nation. Acad. Sci. USA, vol. 49, no. 2, pp. 201-205.
+[10] Lurie, A.I. (1951). Some nonlinear problems in the theory of automatic con-
+trol. Gostekhizdat, Moscow. (in Russian).
+[11] Lurie, A.I., Postnikov, V.N. (1944). On the theory of stability of control
+systems. Prikl. Matem. i Mekh., vol. 8, no. 3, (in Russian).
+[12] Meerov, M.V. (1991), On the Routh-Hurwitz problem for equations con-
+taining small parameters. Automation and Remote Control. vol. 52, no.7,
+pp. 934-940, 1991.
+[13] Popov, V.M. (1959). Criterii de stabilitate pentru sistemele neliniare de
+reglare automata bazate pe utilizarea transformatei laplace. Stud. Cerc.
+Energetica, vol. 9, no. 1, pp. 119-135.
+[14] Rozenvasser, E.N. (1963). The absolute stability of nonlinear systems. Au-
+tom. Remote Control, vol. 24, no. 3, pp. 283-291.
+[15] Tsypkin, Y.Z. (1964). Frequency criteria for absolute stability of nonlinear
+sampled-data systems. Autom. Remote Control, vol. 25, no. 3, pp. 261-267.
+Electronic Journal. http://diffjournal.spbu.ru/ 194Differential Equations and Control Processes, N. 2, 2019
+[16] Yakubovich, V.A. (1962). The solution of certain matrix inequalities in au-
+tomatic control theory. Soviet mathematics, vol. 3, no. 2, pp. 620-623.
+[17] Yakubovich, V.A., Leonov, G.A. and Gelig, A.Kh. (2004). Stability of Sta-
+tionary Sets in Control Systems with Discontinuous Nonlinearities. World
+Scienti c, Singapore.
+Electronic Journal. http://diffjournal.spbu.ru/ 195
