@@ -18,9 +18,18 @@ e-mail: <a href="mailto:n.ampilova@spbu.ru">n.ampilova@spbu.ru</a>
 
 <h4>Technical Support</h4>
 <p>
-Eugene I. Petrenko<br />
-Dept. of Comp. Sci, St.Petersburg State University<br />
-St. Petersburg, Russia<br />
-tel: +7 921 957 5331<br />
-e-mail: <a href="mailto:jodiff@mail.ru">jodiff@mail.ru</a>
+    Eugene I. Petrenko<br />
+    Dept. of Comp. Sci, St.Petersburg State University<br />
+    St. Petersburg, Russia<br />
+    e-mail: <a href="mailto:jodiff@mail.ru">jodiff@mail.ru</a>
+</p>
+<p>
+    Ruslan Mokaev<br />
+    St.Petersburg State University<br />
+    e-mail: <a href="mailto:jodiff@mail.ru">jodiff@mail.ru</a>
+</p>
+<p>
+    Elena Kudryashova<br />
+    St.Petersburg State University<br />
+    e-mail: <a href="mailto:jodiff@mail.ru">jodiff@mail.ru</a>
 </p>
