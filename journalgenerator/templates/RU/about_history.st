@@ -16,12 +16,11 @@
 </p><p>2012 - <a target="_blank" href="http://link.springer.com/journal/10625/48/13/page/1">http://link.springer.com/journal/10625/48/13/page/1</a>
 </p><p>2013 - <a target="_blank" href="http://link.springer.com/journal/10625/49/13/page/1">http://link.springer.com/journal/10625/49/13/page/1</a>
 </p><p>2014 - <a target="_blank" href="http://link.springer.com/journal/10625/50/13/page/1">http://link.springer.com/journal/10625/50/13/page/1</a>
-</p><p>2015 - <a target="_blank" href="http://link.springer.com/journal/10625/51/13/page/1">http://link.springer.com/journal/10625/51/13/page/1.</a>
-</p><p>2016 - <a target="_blank" href="http://link.springer.com/journal/10625/52/13/page/1">http://link.springer.com/journal/10625/52/13/page/1.</a>
-</p><p>2017 - <a target="_blank" href="http://link.springer.com/journal/10625/53/13/page/1">http://link.springer.com/journal/10625/53/13/page/1.</a>
-</p>
-<p>В 2017 договор с издательством МАИК завершается.</p>
-<p>В 2018 в связи с кончиной Г.А. Леонова главным редактором журнала становится Николай Владимирович Кузнецов.</p>
-<p>Журнал индексируется в базах РИНЦ, EBSCO, SCOPUS.</p>
+</p><p>2015 - <a target="_blank" href="http://link.springer.com/journal/10625/51/13/page/1">http://link.springer.com/journal/10625/51/13/page/1</a>
+</p><p>2016 - <a target="_blank" href="http://link.springer.com/journal/10625/52/13/page/1">http://link.springer.com/journal/10625/52/13/page/1</a>
+</p><p>2017 - <a target="_blank" href="http://link.springer.com/journal/10625/53/13/page/1">http://link.springer.com/journal/10625/53/13/page/1</a>
+</p><p>В 2017 договор с издательством МАИК завершается.
+</p><p>В 2018 в связи с кончиной Г.А. Леонова главным редактором журнала становится Николай Владимирович Кузнецов.
+</p><p>Журнал индексируется в базах РИНЦ, EBSCO, SCOPUS.</p>
 
 </div>

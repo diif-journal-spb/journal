@@ -1,6 +1,6 @@
 
 <h3>Главный редактор</h3>
-<h4>Кузнецов Николай Владимирович</h4>
+<h4><a href="http://apcyb.spbu.ru/nk">Кузнецов Николай Владимирович</a></h4>
 <p>
 дфмн, профессор<br />
 Санкт-Петербургский Государственный Университет <br />
@@ -25,9 +25,16 @@ e-mail: <a href="mailto:jodiff@mail.ru">jodiff@mail.ru</a>
 </p>
 <h4>Мокаев Руслан Назирович</h4>
 <p>
-кфмн<br />
-Санкт-Петербургский Государственный Университет<br />
-e-mail: <a href="mailto:JournalDECP@gmail.com">JournalDECP@gmail.com</a>
+    кфмн<br />
+    Санкт-Петербургский Государственный Университет<br />
+    e-mail: <a href="mailto:JournalDECP@gmail.com">JournalDECP@gmail.com</a>
+</p>
+
+<h4>Кудряшова Елена Владимировна</h4>
+<p>
+    кфмн<br />
+    Санкт-Петербургский Государственный Университет<br />
+    e-mail: <a href="mailto:JournalDECP@gmail.com">JournalDECP@gmail.com</a>
 </p>
 
 
