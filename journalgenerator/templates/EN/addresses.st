@@ -19,7 +19,7 @@ e-mail: <a href="mailto:n.ampilova@spbu.ru">n.ampilova@spbu.ru</a>
 <h4>Technical Support</h4>
 <p>
     Eugene I. Petrenko<br />
-    Dept. of Comp. Sci, St.Petersburg State University<br />
+    St.Petersburg State University<br />
     St. Petersburg, Russia<br />
     e-mail: <a href="mailto:jodiff@mail.ru">jodiff@mail.ru</a>
 </p>
