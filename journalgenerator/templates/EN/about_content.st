@@ -12,9 +12,8 @@
 </p>
 
 <p class="jounal-index">
-  The journal is in 
-  Higher Attestation Commission of the Ministry of Education and Science of Russian Federation 
-  (<a href="http://vak.ed.gov.ru">ВАК</a>) 
+  The journal is in
+  <a href="http://vak.ed.gov.ru">Higher Attestation Commission of the Ministry of Education and Science of Russian Federation</a>
   list
 </p>
 

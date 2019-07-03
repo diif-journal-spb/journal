@@ -31,12 +31,12 @@
 <div class="editor">
 <span class="name">Фрадков А. Л.</span>
 <span class="title">профессор, дфмн</span>
-<span class="work">Институт проблем машиностроения РАН (Россия)</span>
+<span class="work">Институт проблем машиноведения РАН (Россия)</span>
 <span class="email">fradkov@mail.ru</span>
 </div>
 
 <div class="editor">
-<span class="name">Нейтанмяки П.</span>
+<span class="name">Нейтаанмяки П.</span>
 <span class="title">профессор</span>
 <span class="work">Университет Ювяскюля (Финляндия)</span>
 <span class="email">pekka.neittaanmaki@jyu.fi</span>
@@ -64,7 +64,7 @@
 </div>
 
 <div class="editor">
-<span class="name">Рейтман Ф.</span>
+<span class="name">Райтманн Ф.</span>
 <span class="title">профессор, дфмн</span>
 <span class="work">DAAD (Германия)</span>
 <span class="email">vreitmann@aol.com</span>
@@ -85,7 +85,7 @@
 </div>
 
 <div class="editor">
-<span class="name">Зелинка Иван</span>
+<span class="name">Зелинка И.</span>
 <span class="title">профессор</span>
 <span class="work">Технический Университет Остравы (Чешская Республика)</span>
 <span class="email">ivan.zelinka@vsb.cz</span>
