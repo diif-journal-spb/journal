@@ -8,7 +8,7 @@
 
 <a name="fromLogo"></a>
 <p class="jounal-index">
-  The journal is indexed in Russian Science Citation Index and EBSCO
+  The journal is indexed in Russian Science Citation Index, EBSCO, SCOPUS
 </p>
 
 <p class="jounal-index">

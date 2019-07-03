@@ -21,8 +21,13 @@
 </p><p>2014 - <a target="_blank" href="http://link.springer.com/journal/10625/50/13/page/1">http://link.springer.com/journal/10625/50/13/page/1</a>
 </p>
 
-    <p>The journal is indexed in Russian Science Citation Index system.
-</p>
+<p>2015 - <a target="_blank" href="http://link.springer.com/journal/10625/51/13/page/1">http://link.springer.com/journal/10625/51/13/page/1.</a></p>
+<p>2016 - <a target="_blank" href="http://link.springer.com/journal/10625/52/13/page/1">http://link.springer.com/journal/10625/52/13/page/1.</a></p>
+<p>2017 - <a target="_blank" href="http://link.springer.com/journal/10625/53/13/page/1">http://link.springer.com/journal/10625/53/13/page/1.</a></p>
+<p>In 2017 the contract with MAIK was completed.</p>
+<p>In 2018 on the passing away G.A. Leonov Nikolay Kuznetzov is Editor-in-Chief.</p>
+<p>The journal is indexed in Russian Science Citation Index system, EBSCO, SCOPUS.</p>
+
 
 </div>
 

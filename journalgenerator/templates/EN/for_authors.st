@@ -52,6 +52,11 @@ The paper size is not limited.
    <a href="mailto:n.ampilova@spbu.ru">n.ampilova@spbu.ru</a>.
 </p>
 
+<h3>Copyright form</h3>
+
+<p>The author(s) of papers accepted to publication should fill in <a href="$ResourceLink$/DECP_copyright_form_en.docx">Copyright Form</a>, 
+    sign it and send the scan to the editor.</p>
+
 
 <h2>Electronic publication</h2>
 <p>

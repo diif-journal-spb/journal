@@ -8,7 +8,7 @@
 
 <a name="fromLogo"></a>
 <p class="jounal-index">
-  Журнал индексируется в РИНЦ и EBSCO
+  Журнал индексируется в РИНЦ, EBSCO, SCOPUS
 </p>
 
 <p class="jounal-index">
