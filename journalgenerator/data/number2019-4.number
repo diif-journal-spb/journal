@@ -1,0 +1,791 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<number year="2019" number="4">
+
+    <!-- русский -->
+    <article>
+        <articleInfo lang="EN" FirstPage="1" LastPage="31">
+            <pdf>rybakov9.pdf</pdf>
+            <abstract>The article describes some aspects for applying the spectral form of mathematical description,
+                which is used for the control systems analysis and synthesis, for the representation of iterated
+                stochastic second multiplicity integrals with respect to the numerical solution of stochastic
+                differential equations. It is proposed to use the spectral characteristics of the integration
+                operator (two-dimensional nonstationary transfer functions of the integrator) defined by different
+                orthonormal function systems: Legendre polynomials, cosines, Walsh and Haar functions,
+                as well as the trigonometric Fourier basis.</abstract>
+            <title>Applying spectral form of mathematical description for representation of iterated stochastic integrals</title>
+            <keywords>
+                <word>iterated stochastic integrals</word>
+                <word>Levi area</word>
+                <word>Milstein method</word>
+                <word>orthonormal functions</word>
+                <word>orthogonal expansion</word>
+                <word>spectral form of mathematical description</word>
+                <word>spectral method</word>
+                <word>stochastic differential equation</word>                
+            </keywords>
+            <references>
+                <reference>Gardiner, C.W. Handbook of Stochastic Methods for Physics, Chemistry and the Natural Sciences. Springer-Verlag, 1997</reference>
+                <reference>Artemiev, S.S., Averina, T.A. Numerical Analysis of Systems of Ordinary and Stochastic Differential Equations. VSP, 1997</reference>
+                <reference>Shiryaev, A.N. Essentials of Stochastic Finance: Facts, Models, Theory. World Scientific, 1999</reference>
+                <reference>Oksendal, B. Stochastic Differential Equations. An Introduction with Applications. Springer-Verlag, 2000</reference>
+                <reference>Artemiev, S.S., Marchenko, M.A., Korneev, V.D., Yakunin, M.A., Ivanov, A.A., Smirnov, D.D. Analiz stokhasticheskikh kolebanii metodom Monte-Karlo na superkomp'yuterakh [Monte Carlo Stochastic Oscillations Analysis on Supercomputers]. Novosibirsk, Siberian Branch of the Russian Academy of Sciences Publ., 2016</reference>
+                <reference>Kuznetsov, D.F. [Stochastic Differential Equations: Theory and Practic of Numerical Solution. With MATLAB Programs]. Differencialnie Uravnenia i Protsesy Upravlenia, 2018, no. 4. (In Russ.)</reference>
+                <reference>Rybakov, K.A. Solving the nonlinear problems of estimation for navigation data processing using continuous particle filter. Gyroscopy and Navigation, 2019, vol. 10, no. 1, pp. 27-34</reference>
+                <reference>Mil'shtein, G.N. Chislennoe integrirovanie stokhasticheskikh differentsial'nykh uravnenii [Numerical Integration of Stochastic Differential Equations]. Sverdlovsk, Ural State University Publ., 1988</reference>
+                <reference>Kloeden, P.E., Platen, E. Numerical Solution of Stochastic Differential Equations. Springer-Verlag, 1995</reference>
+                <reference>Schurz, H. Numerical analysis of stochastic differential equations without tears. Handbook of Stochastic Analysis and Applications (ed. by Lakshmikantham V., Kannan D.), pp. 237-359. Marcel Dekker, 2002</reference>
+                <reference>Mil'stein, G.N., Tretyakov, M.V. Stochastic Numerics for Mathematical Physics. Springer-Verlag, 2004</reference>
+                <reference>Graham, C., Talay, D. Stochastic Simulation and Monte Carlo Methods. Springer-Verlag, 2013</reference>
+                <reference>Averina, T.A. Statisticheskoe modelirovanie reshenii stokhasticheskikh differentsial'nykh uravnenii i sistem so sluchainoi strukturoi [Statistical Modeling of Solutions of Stochastic Differential Equations and Systems with a Random Structure]. Novosibirsk, Siberian Branch of the Russian Academy of Sciences Publ., 2019</reference>
+                <reference>Averina, T.A., Rybakov, K.A. A modification of numerical methods for stochastic differential equations with first integrals. Numer. Anal. Appl., 2019, vol. 12, no. 3, pp. 203-218</reference>
+                <reference>Kuznetsov, D.F. [A method of expansion and approximation of repeated stochastic Stratonovich integrals based on multiple Fourier series on full ortonormal systems]. Differencialnie Uravnenia i Protsesy Upravlenia, 1997, no. 1, pp. 18-77. (In Russ.)</reference>
+                <reference>Kuznetsov, D.F. Multiple Ito and Stratonovich Stochastic Integrals: Fourier-Legendre and Trigonometric Expansions, Approximations, Formulas. Differencialnie Uravnenia i Protsesy Upravlenia, 2017, no. 1</reference>
+                <reference>Mil'shtein, G.N. Approximate Integration of Stochastic Differential Equations. Theory Probab. Appl., 1975, vol. 19, no. 3, pp. 557-562</reference>
+                <reference>Kuznetsov, D.F. New simple method for obtainment an expansion of double stochastic Ito integrals, which is based on the expansion of Brownian motion using Legendre polynomials and trigonometric functions. arXiv:1807.00409v3 [math.PR], 2019</reference>
+                <reference>Prigarin, S.M., Belov, S.M. [One application of series expansions of Wiener process], Preprint 1107. Novosibirsk, ICM &amp;amp; MG Publ., 1998</reference>
+                <reference>Solodovnikov, V.V., Semenov, V.V. Spektral'naya teoriya nestatsionarnykh sistem upravleniya [Spectral theory of nonstationary control systems]. Moscow, Nauka Publ., 1974</reference>
+                <reference>Solodovnikov, V.V., Semenov, V.V., Peshel' M., Nedo D. Raschet sistem upravleniya na TsVM: spektral'nyi i interpolyatsionnyi metody [Design of control systems on digital computers: spectral and interpolational methods]. Moscow, Mashinostroyeniye Publ., 1979</reference>
+                <reference>Semenov, V.V. (ed.) Tablitsy i matematicheskoe obespechenie spektral'nogo metoda teorii avtomaticheskogo upravleniya [Tables and Mathware for the Spectral Method of Control Theory], Moscow, BMSTU Publ., 1973</reference>
+                <reference>Semenov, V.V., Rybin, V.V. Algoritmicheskoe i programmnoe obespechenie rascheta nestatsionarnykh nepreryvno-diskretnykh sistem upravleniya LA spektral'nym metodom [Algorithms and software for nonstationary discrete-continuous aircraft control systems by the spectral method]. Moscow, MAI Publ., 1984</reference>
+                <reference>Lapin, S.V., Egupov, N.D. Teoriya matrichnykh operatorov i ee prilozhenie k zadacham avtomaticheskogo upravleniya [Theory of Matrix Operators and its Application to Problems of Automatic Control. Moscow, BMSTU Publ., 1997</reference>
+                <reference>Rybin, V.V. Modelirovanie nestatsionarnykh nepreryvno-diskretnykh sistem upravleniya spektral'nym metodom v sistemakh komp'yuternoi matematiki [Modeling of nonstationary continuous-discrete control systems by spectral method on computers]. Moscow, MAI Publ., 2011</reference>
+                <reference>Panteleev, A.V., Rybakov, K.A., Sotskova, I.L. Spektral'nyi metod analiza nelineinykh stokhasticheskikh sistem upravleniya [Spectral Method of Nonlinear Stochastic Control System Analysis]. Moscow, Vuzovskaya kniga, 2015</reference>
+                <reference>Rybakov, K.A., Rybin, V.V. [Algorithms and software for calculating automated control systems in the spectral form of a mathematical description]. Sovremennaya nauka: teoreticheskie, prakticheskie i innovacionnye aspekty razvitiya [Modern science: Theoretical, practical and innovative aspects of development], vol. 2, pp. 171-199. Rostov-on-Don: Scientific Cooperation Publ., 2018. (in Russ.)</reference>
+                <reference>Rybin, V.V. [The description and analysis of non-stationary continuous control systems in the spectral range in non-orthogonal functions. Orthorecursive approach]. Differencialnie Uravnenia i Protsesy Upravlenia, 2018, no. 4, pp. 18-40. (In Russ.)</reference>
+                <reference>Rybakov, K.A., Rybin, V.V. [Spectral characteristics of differentiation and integration operators with respect to orthogonal finite functions. I. Symmetric splines]. Aktual'nye problemy vychislitel'noi i prikladnoi matematiki [Advanced Mathematics, Computations and Applications 2019], Novosibirsk, 2019. (In Russ.)</reference>
+                <reference>Rybakov, K.A., Rybin, V.V. [Spectral characteristics of differentiation and integration operators with respect to orthogonal finite functions. II. Nonsymmetric splines]. Aktual'nye problemy vychislitel'noi i prikladnoi matematiki [Advanced Mathematics, Computations and Applications 2019], Novosibirsk, 2019. (In Russ.)</reference>
+                <reference>Balakrishnan, A.V. Applied Functional Analysis. Springer-Verlag, 1981</reference>
+                <reference>Sotskova, I.L. [Application of generalized characteristic functions to analysis of stochastic control systems for aircrafts]. Zadachi stokhasticheskogo upravleniya [Stochastic control problems], pp. 71-78. Moscow, MAI Publ., 1986. (In Russ.)</reference>
+                <reference>Ito, K., McKean, H.P. Diffusion Processes and their Sample Paths. Springer-Verlag, 1996</reference>
+                <reference>Zhang, Z., Karniadakis, G.E. Numerical Methods for Stochastic Partial Differential Equations with White Noise. Springer, 2017</reference>
+                <reference>Alexits, G. Convergence problems of orthogonal series. Budapest, Akademiai Kiado, 1961</reference>
+                <reference>Liptser, R., Shiryaev, A.N. Statistics of Random Processes. Springer, 2001</reference>
+                <reference>Clark, J.M.C., Cameron, R.J. The maximum rate of convergence of discrete approximations for stochastic differential equations. Stochastic Differential Systems. Filtering and Control (ed. by Grigelionis B.), pp. 162-171. Springer-Verlag, 1980</reference>
+                <reference>Levi, P. Processus Stochastiques et Mouvement Brownien, Paris, Gauthier-Villars, 1965</reference>
+                <reference>Malham, S.J.A., Wiese, A. An introduction to SDE simulation. arXiv:1004.0646 [math.NA], 2010</reference>
+                <reference>Kuznetsov, D.F. A comparative analysis of efficiency of using the Legendre polynomials and trigonometric functions for the numerical solution of Ito stochastic differential equations. Comput. Math. Math. Phys., 2019, vol. 59, no. 8, pp. 1236-1250</reference>
+                <reference>Averina, T.A., Karachanskaya, E.V., Rybakov, K.A. Statistical modeling of random processes with invariants. Proc. International Multi-Conference on Engineering, Computer and Information Sciences (SIBIRCON), Novosibirsk Akademgorodok, Russia, 2017, pp. 34-37</reference>
+                <reference>Averina, T.A., Rybakov, K.A. Systems with regime switching on manifolds. Proc. 14th International Conference "Stability and Oscillations of Nonlinear Control Systems" (Pyatnitskiy's Conference) (STAB). Moscow, Russia, 2018, pp. 1-3</reference>
+            </references>
+        </articleInfo>
+        <articleInfo lang="RU" FirstPage="1" LastPage="31">
+            <pdf>rybakov9.pdf</pdf>
+            <abstract>В статье изложены некоторые аспекты применения спектральной формы математического описания
+                систем управления для представления повторных стохастических интегралов второй кратности
+                и площади Леви в приложении к численному решению стохастических дифференциальных уравнений.
+                Предложено использовать спектральные характеристики оператора интегрирования (двумерные
+                нестационарные передаточные функции интегрирующего звена), определенные относительно
+                различных базисных систем: полиномов Лежандра, косинусоид, функций Уолша и Хаара,
+                а также тригонометрического базиса Фурье.</abstract>
+            <title>Применение спектральной формы математического описания для представления повторных стохастических интегралов</title>
+            <keywords>
+                <word>метод Мильштейна</word>
+                <word>ортонормированные функции</word>
+                <word>площадь Леви</word>
+                <word>повторный стохастический интеграл, ортогональное разложение</word>
+                <word>спектральная форма математического описания</word>
+                <word>спектральный метод</word>
+                <word>стохастические дифференциальные уравнения</word>
+            </keywords>
+            <references>
+                <reference>Gardiner, C.W. Handbook of Stochastic Methods for Physics, Chemistry and the Natural Sciences. Springer-Verlag, 1997</reference>
+                <reference>Artemiev, S.S., Averina, T.A. Numerical Analysis of Systems of Ordinary and Stochastic Differential Equations. VSP, 1997</reference>
+                <reference>Ширяев, А.Н. Основы стохастической финансовой математики. - М.: ФАЗИС, 1998</reference>
+                <reference>Oksendal, B. Stochastic Differential Equations. An Introduction with Applications. Springer-Verlag, 2000</reference>
+                <reference>Артемьев, С.С., Марченко, М.А., Корнеев, В.Д., Якунин, М.А., Иванов, А.А., Смирнов, Д.Д. Анализ стохастических колебаний методом Монте-Карло на суперкомпьютерах. - Новосибирск: Изд-во СО РАН, 2016</reference>
+                <reference>Кузнецов, Д.Ф. Стохастические дифференциальные уравнения: теория и практика численного решения. С программами в среде MATLAB // Дифференциальные уравнения и процессы управления. - 2018. &amp;#8470; 4</reference>
+                <reference>Рыбаков, К.А. Решение нелинейных задач оценивания при обработке навигационных данных с использованием непрерывного фильтра частиц // Гироскопия и навигация. - 2018. Т. 26. &amp;#8470; 4 (103). - С. 82-95</reference>
+                <reference>Мильштейн, Г.Н. Численное интегрирование стохастических дифференциальных уравнений. - Свердловск: Изд-во Уральского ун-та, 1988</reference>
+                <reference>Kloeden, P.E., Platen, E. Numerical Solution of Stochastic Differential Equations. Springer-Verlag, 1995</reference>
+                <reference>Schurz, H. Numerical analysis of stochastic differential equations without tears. Handbook of Stochastic Analysis and Applications (ed. by Lakshmikantham V., Kannan D.), pp. 237-359. Marcel Dekker, 2002</reference>
+                <reference>Mil'stein, G.N., Tretyakov, M.V. Stochastic Numerics for Mathematical Physics. Springer-Verlag, 2004</reference>
+                <reference>Graham, C., Talay, D. Stochastic Simulation and Monte Carlo Methods. Springer-Verlag, 2013</reference>
+                <reference>Аверина, Т.А. Статистическое моделирование решений стохастических дифференциальных уравнений и систем со случайной структурой. - Новосибирск: Изд-во СО РАН, 2019</reference>
+                <reference>Аверина, Т.А., Рыбаков, К.А. Модификация численных методов решения стохастических дифференциальных уравнений с первым интегралом // Сибирский журнал вычислительной математики. - 2019. Т. 22. &amp;#8470; 3. - С. 243-259</reference>
+                <reference>Кузнецов, Д.Ф. Метод разложения и аппроксимации повторных стохастических интегралов Стратоновича, основанный на кратных рядах Фурье по полным ортонормированным системам функций // Дифференциальные уравнения и процессы управления. - 1997. &amp;#8470; 1. - С. 18-77</reference>
+                <reference>Кузнецов, Д.Ф. Повторные стохастические интегралы Ито и Стратоновича: разложения Фурье-Лежандра и тригонометрические разложения, аппроксимации, формулы // Дифференциальные уравнения и процессы управления. - 2017. &amp;#8470; 1</reference>
+                <reference>Мильштейн, Г.Н. Приближенное интегрирование стохастических дифференциальных уравнений // Теория вероятностей и ее применения. - 1974. Т. 19. &amp;#8470; 3. - С. 583-588</reference>
+                <reference>Kuznetsov, D.F. New simple method for obtainment an expansion of double stochastic Ito integrals, which is based on the expansion of Brownian motion using Legendre polynomials and trigonometric functions. arXiv:1807.00409v3 [math.PR], 2019</reference>
+                <reference>Пригарин, С.М., Белов, С.М. Об одном применении разложений винеровского процесса в ряды // Препринт 1107. - Новосибирск: ИВМиМГ СО РАН, 1998</reference>
+                <reference>Солодовников, В.В., Семенов, В.В. Спектральная теория нестационарных систем управления. - М.: Наука, 1974</reference>
+                <reference>Солодовников, В.В., Семенов, В.В., Пешель, М., Недо, Д. Расчет систем управления на ЦВМ: спектральный и интерполяционный методы. - М.: Машиностроение, 1979</reference>
+                <reference>Таблицы и математическое обеспечение спектрального метода теории автоматического управления / Под ред. В.В. Семенова. - М.: МВТУ им. Н.Э. Баумана, 1973</reference>
+                <reference>Семенов, В.В., Рыбин, В.В. Алгоритмическое и программное обеспечение расчета нестационарных непрерывно-дискретных систем управления ЛА спектральным методом. - М.: МАИ, 1984</reference>
+                <reference>Лапин, С.В., Егупов, Н.Д. Теория матричных операторов и ее приложение к задачам автоматического управления. - М.: Изд-во МГТУ им. Н.Э. Баумана, 1997</reference>
+                <reference>Рыбин, В.В. Моделирование нестационарных непрерывно-дискретных систем управления спектральным методом в системах компьютерной математики. - М.: Изд-во МАИ, 2011</reference>
+                <reference>Пантелеев, А.В., Рыбаков, К.А., Сотскова, И.Л. Спектральный метод анализа нелинейных стохастических систем управления. - М.: Вузовская книга, 2015</reference>
+                <reference>Рыбаков, К.А., Рыбин, В.В. Алгоритмическое и программное обеспечение расчета систем автоматического управления в спектральной форме математического описания / В кн. Современная наука: теоретические, практические и инновационные аспекты развития. Т. 2. Ростов-на-Дону: Изд-во Международного исследовательского центра «Научное сотрудничество», 2018. - С. 171-199</reference>
+                <reference>Рыбин, В.В. Описание и анализ линейных нестационарных непрерывных систем управления в спектральной области в неортогональных базисах. Орторекурсивный подход // Дифференциальные уравнения и процессы управления. - 2018. &amp;#8470; 4. - С. 18-40</reference>
+                <reference>Рыбаков, К.А., Рыбин, В.В. Спектральные характеристики операторов дифференцирования и интегрирования относительно ортогональных финитных функций. I. Симметричные сплайны // Актуальные проблемы вычислительной и прикладной математики (АПВПМ-2019). Международная конференция в рамках Марчуковских научных чтений - 2019, Новосибирск, 1-5 июля 2019 г.: Материалы конф. - Новосибирск: Изд-во ИВМиМГ СО РАН, 2019</reference>
+                <reference>Рыбаков, К.А., Рыбин, В.В. Спектральные характеристики операторов дифференцирования и интегрирования относительно ортогональных финитных функций. II. Несимметричные сплайны // Актуальные проблемы вычислительной и прикладной математики (АПВПМ-2019). Международная конференция в рамках Марчуковских научных чтений - 2019, Новосибирск, 1-5 июля 2019 г.: Материалы конф. - Новосибирск: Изд-во ИВМиМГ СО РАН, 2019</reference>
+                <reference>Балакришнан, А.В. Прикладной функциональный анализ. - М.: Наука, 1980</reference>
+                <reference>Сотскова, И.Л. Применение аппарата обобщенной характеристической функции к анализу стохастических систем управления ЛА // Задачи стохастического управления: Тем. сб. науч. тр. - М.: МАИ, 1986. - С. 71-78</reference>
+                <reference>Ито, К., Маккин, Г. Диффузионные процессы и их траектории. - М.: Мир, 196</reference>
+                <reference>Zhang, Z., Karniadakis, G.E. Numerical Methods for Stochastic Partial Differential Equations with White Noise. - Springer, 2017</reference>
+                <reference>Алексич, Г. Проблемы сходимости ортогональных рядов. - М.: Изд-во иностранной литературы, 1963</reference>
+                <reference>Липцер, Р.Ш., Ширяев, А.Н. Статистика случайных процессов (нелинейная фильтрация и смежные вопросы). - М.: Наука, 1974</reference>
+                <reference>Clark, J.M.C., Cameron, R.J. The maximum rate of convergence of discrete approximations for stochastic differential equations // Stochastic Differential Systems. Filtering and Control (ed. by Grigelionis B.). - Springer-Verlag, 1980. - P. 162-171</reference>
+                <reference>Леви, П. Стохастические процессы и броуновское движение. - М.: Наука, 1972</reference>
+                <reference>Malham, S.J.A., Wiese, A. An introduction to SDE simulation. arXiv:1004.0646 [math.NA], 2010</reference>
+                <reference>Кузнецов, Д.Ф. Сравнительный анализ эффективности применения полиномов Лежандра и тригонометрических функций к численному интегрированию стохастических дифференциальных уравнений Ито // Журнал вычислительной математики и математической физики. - 2019. Т. 59. &amp;#8470; 8. - С. 1299-1313</reference>
+                <reference>Averina, T.A., Karachanskaya, E.V., Rybakov, K.A. Statistical modeling of random processes with invariants // Proceedings of the 2017 International Multi-Conference on Engineering, Computer and Information Sciences (SIBIRCON). Novosibirsk Akademgorodok, Russia, September 18-22, 2017. - IEEE, 2017. - P. 34-37</reference>
+                <reference>Averina, T.A., Rybakov, K.A. Systems with regime switching on manifolds // Proceedings of the 2018 14th International Conference "Stability and Oscillations of Nonlinear Control Systems" (Pyatnitskiy's Conference) (STAB). Moscow, Russia, 30 May - 1 June, 2018. - IEEE, 2018. - P. 1-3</reference>
+            </references>
+        </articleInfo>
+        <authors>
+            <author ref="n_2019_12_rybakov" sort-key="1" />
+        </authors>
+    </article>
+
+    <article>
+        <articleInfo lang="EN" FirstPage="32" LastPage="52">
+            <pdf>kuznetsovdf2019_4.pdf</pdf>
+            <abstract>The article is devoted to the mean-square approximation of
+                iterated Ito stochastic integrals of the second multiplicity
+                based on the Wiener process expansion
+                using complete orthonormal systems of functions.
+                The approximations of these stochastic integrals
+                using Legendre polynomials and trigonometric functions are considered.
+                In contrast to the method of expansion of iterated Ito stochastic integrals
+                based on the Karhunen-Loeve expansion for the Wiener process,
+                this method allows the use of different systems of basis functions,
+                not only the trigonometric system of functions.
+                The proposed method
+                makes it possible to obtain expansions of stochastic integrals much
+                easier than the methods based on generalized multiple Fourier series.
+                The latter involve the calculation of coefficients
+                of multiple Fourier series, which is a time-consuming task.
+                The results of the article can be applied to the implementation
+                of the Milstein method for the numerical integration of Ito
+                stochastic differential equations and semilinear parabolic
+                stochastic partial differential equations.</abstract>
+            <title>Approximation of Iterated Ito Stochastic Integrals of the Second
+                Multiplicity Based on the Wiener Process Expansion
+                Using Legendre Polynomials and Trigonometric Functions</title>
+            <keywords>
+                <word>iterated Ito stochastic integral</word>
+                <word>Ito stochastic differential equation</word>
+                <word>mean-square approximation</word>
+                <word>Milstein method</word>
+                <word>complete orthonormal system of functions</word>
+                <word>Legendre polynomial</word>
+                <word>expansion</word>
+            </keywords>
+            <references>
+                <reference>Gihman, I. I., Scorokhod, A. V. Stokhasticheskie differencial'nyje uravnenia i ih prilozhenia [Stochastic differential equations and its applications]. Kiev, Naukova Dumka Publ., 1982. 612 p.</reference>
+                <reference>Kloeden, P. E., Platen, E. Numerical solution of stochastic differential equations. Berlin, Springer-Verlag Publ., 1992. 632 p.</reference>
+                <reference>Shirjaev, A. N. Osnovy stokhasticheskoi finansovoi matematiki. T. 2 [Foundations of the stochastic financial mathematics. V. 2]. Moscow, Fazis Publ., 1998. 544 p.</reference>
+                <reference>Kloeden, P.E., Platen, E., Schurz, H. Numerical solution of SDE through computer experiments. Berlin, Springer Publ., 1994. 292 p.</reference>
+                <reference>Milstein, G. N., Tretyakov, M. V. Stochastic numerics for mathematical physics. Berlin, Springer-Verlag Publ., 2004. 596 p.</reference>
+                <reference>Kuznetsov, D. F. Chislennoye integrirovanie stokhasticheskih differencial'nyh uravnenii. 2. [Numerical integration of stochastic differential equations. 2.]. St. -Petersburg, Polytechn. Univ. Publ., 2006. 764 p. DOI: http://doi.org/10.18720/SPBPU/2/s17-227</reference>
+                <reference>Platen, E., Bruti-Liberati, N. Numerical solution of stochastic differential equations with jumps in finance. Berlin, Heidelberg, Springer-Verlag Publ., 2010. 868 p.</reference>
+                <reference>Averina, T.A. Statisticheskoje modelirovanie reshenii stokhasticheskih differencial'nyh uravnenii i system so sluchainoi strukturoi [Statistical modeling of solutions of stochastic differential equations and systems with random structure]. Novosibirsk, Siberian Branch of the Russian Academy of Sciences Publ., 2019. 350 p.</reference>
+                <reference>Liptser, R.Sh., Shirjaev, A.N. Statistika sluchainyh processov: nelineinaya fil'tracia i smezhnye voprosy [Statistics of stochastic processes: nonlinear filtering and related problems]. Moscow, Nauka Publ., 1974. 696 p.</reference>
+                <reference>Nasyrov, F.S. Lokal'nye vremena, simmetrichnyje integraly i stochasticheskiy analiz [Local times, symmetric integrals and stochastic analysis]. Moscow, Fizmatlit Publ., 2011. 212 p.</reference>
+                <reference>Rybakov, K.A. Statisticheskie metody analiza i fil'tracii  v nepreryvnykh stokhasticheskih systemah [Statistical methods of analysis and filtration in continuous stochastic systems]. Moscow, MAI Publ., 2017. 176 p.</reference>
+                <reference>Milstein, G. N. Chislennoye integrirovanie stokhasticheskih differencial'nyh uravnenii [Numerical integration of stochastic differential equations]. Sverdlovsk, Ural. Univ. Publ., 1988. 225 с.</reference>
+                <reference>Jentzen, A., Rockner, M. A Milstein scheme for SPDEs. Found. Comp. Math. 15: 2 (2015), 313-362.</reference>
+                <reference>Leonhard C., Roessler A. Iterated stochastic integrals in infinite dimensions: approximation and error estimates. Stoch. PDE: Anal. Comput. 7: 2 (2019), 209-239.</reference>
+                <reference>Kloeden, P. E., Platen, E., Wright, I. W. The approximation of multiple stochastic integrals. Stoch. Anal. Appl. 10: 4 (1992), 431-441.</reference>
+                <reference>Kuznetsov, D. F. Stokhasticheskie differencial'nye uravneniya: teoriya i practika chislennogo resheniya. S programmami v srede MATLAB. Izd. 6-e. [Stochastic differential equations: theory and practice of numerical solution. With MATLAB programs. 6-th Ed.]. Differencial'nie uravnenia i processy upravlenia. 2018, no. 4, A.1-A.1073 (In Russ.) Available at: http://diffjournal.spbu.ru/RU/numbers/2018.4/article.2.1.html</reference>
+                <reference>Kuznetsov, D.F. Development and application of the Fourier method for the numerical solution of Ito stochastic differential equations. Zh. Vychisl. Mat. i Mat. Phiz. 58: 7 (2018), 1108-1120. (In Russ.)</reference>
+                <reference>Kuznetsov, D.F. On numerical modeling of the multidimensional dynamic systems under random perturbations with the 1.5 and 2.0 orders of strong convergence. Avtomat. i Telemekh. 7 (2018), 80-98. (In Russ.)</reference>
+                <reference>Kuznetsov, D.F. On numerical modeling of the multidimentional dynamic systems under random perturbations with the 2.5 order of strong convergence. Avtomat. i Telemekh.  5 (2019), 99-117. (In Russ.)</reference>
+                <reference>Kuznetsov, D.F. A Comparative Analysis of Efficiency of Using the Legendre Polynomials and Trigonometric Functions for the Numerical Solution of Ito Stochastic Differential Equations. Zh. Vychisl. Mat. i Mat. Phiz. 59: 8 (2019), 1299-1313. (In Russ.)</reference>
+                <reference>Kuznetsov, D.F. Metody chislennogo modelirovanija reshenii system stokhasticheskih differencial'nyh uravnenii Ito v zadachah mekhaniki. Kand. Diss. [Methods of numerical simulation of stochastic differential Ito equations solutions in problems of mechanics. Ph. D.], St.-Petersburg, 1996. 260 p.</reference>
+                <reference>Kuznetsov, D. F. [A method of expansion and approximation of repeated stochastic Stratonovich integrals based on multiple Fourier series on full orthonormal systems]. Differencial'nie uravnenia i processy upravlenia, 1997, no. 1, 18-77 (In Russ.) Available at: http://diffjournal.spbu.ru/RU/numbers/1997.1/article.1.2.html</reference>
+                <reference>Kuznetsov, D.F. [Expansion of Multiple Stratonovich Stochastic Integrals of Second Multiplicity, Based on Double Fourier-Legendre Series Summarized by Prinsheim Method]. Differencial'nie uravnenia i processy upravlenia, 2018, no. 1, 1-34 (In Russ.) Available at: http://diffjournal.spbu.ru/RU/numbers/2018.1/article.1.1.html</reference>
+                <reference>Prigarin, S.M., Belov, S.M. On one application of the Wiener process decomposition into series. Preprint 1107. Novosibirsk, Siberian Branch of the Russian Academy of Sciences Publ., 1998, 16 p. (In Russ.)</reference>
+                <reference>Kuznetsov, D.F. New simple method for obtainment an expansion of double stochastic Ito integrals, based on the expansion of Brownian motion using Legendre polynomials and trigonometric functions (In English). arXiv:1807.00409v3 [math.PR], 2019, 19 p. Available at: https://arxiv.org/abs/1807.00409</reference>
+                <reference>Wiener, N. Un problème de probabilités  dénombrables. Bull. Soc. Math. France. 52 (1924), 569-578.</reference>
+                <reference>Lévy, P. Wiener's random function and other Laplacian random functions. Proc. 2nd Berkeley Symp. Math. Stat. Prob. 1951, 171-187.</reference>
+                <reference>Ito, K., McKean, H. Diffusion processes and their sample paths. Berlin, Heidelberg, New York, Springer-Verlag Publ., 1965. 395 p.</reference>
+                <reference>Luo, W. Wiener chaos expansion and numerical solutions of stochastic partial differential equations. Ph. D., California Institute of Technology, 2006. 225 p.</reference>
+                <reference>Dynkin, E.B. Markovskie processy  [Markov processes] Moscow, Nauka Publ., 1963. 860 p.</reference>
+                <reference>Suetin, P.K. Klassicheskije ortogonal'nye mnogochleny. Izd 3-e. [Classical orthogonal polynomials. 3rd Ed.]. Moskow, Fizmatlit, 2005. 480 p.</reference>
+                <reference>Kuznetsov, D.F. Application of the method of approximation of iterated stochastic Ito integrals based on generalized multiple Fourier series to the high-order strong numerical methods for non-commutative semilinear stochastic partial differential equations. Differencial'nie uravnenia i processy upravlenia, 2019, no. 3, 18-62. Available at: http://diffjournal.spbu.ru/EN/numbers/2019.3/article.1.2.html</reference>
+            </references>
+        </articleInfo>
+        <articleInfo lang="RU" FirstPage="32" LastPage="52">
+            <pdf>kuznetsovdf2019_4.pdf</pdf>
+            <abstract>Статья посвящена среднеквадратической
+                аппроксимации повторных стохастических интегралов Ито второй
+                кратности, основанной на разложении винеровского
+                процесса с помощью полных ортонормированных систем функций.
+                Рассмотрены аппроксимации указанных стохастических
+                интегралов с помощью полиномов Лежандра
+                и тригонометрических функций. В отличие от метода аппроксимации
+                повторных стохастических интегралов Ито, основанного на
+                разложении Карунена-Лоэва для винеровского процесса,
+                рассматриваемый метод позволяет использовать различные системы
+                базисных функций, а не только тригонометрическую систему функций.
+                Предложенный метод позволяет получать
+                аппроксимации стохастических интегралов существенно проще,
+                чем методы, основанные на обобщенных кратных рядах Фурье.
+                Последние предполагают вычисление коэффициентов кратных рядов
+                Фурье, что является трудоемкой задачей. Полученные результаты
+                могут быть применены к реализации метода Мильштейна для
+                численного интегрирования стохастических дифференциальных
+                уранений Ито и полулинейных параболических стохастических
+                дифференциальных уравнений с частными производными.</abstract>
+            <title>Аппроксимация повторных стохастических
+                интегралов Ито второй кратности, основанная на разложении
+                винеровского процесса с помощью полиномов Лежандра и
+                тригонометрических функций</title>
+            <keywords>
+                <word>повторный стохастический интеграл Ито</word>
+                <word>стохастическое дифференциальное уравнение Ито</word>
+                <word>среднеквадратическая аппроксимация</word>
+                <word>метод Мильштейна</word>
+                <word>полная ортонормированная система функций</word>
+                <word>полином Лежандра</word>
+                <word>разложение</word>
+            </keywords>
+            <references>
+                <reference>Гихман, И. И., Скороход, А. В. Стохастические дифференциальные уравнения и их приложения. Киев, Наукова думка, 1982. 612 с.</reference>
+                <reference>Kloeden, P. E., Platen, E. Numerical solution of stochastic differential equations. Berlin, Springer-Verlag Publ., 1992. 632 p.</reference>
+                <reference>Ширяев А. Н. Основы стохастической финансовой математики. Т. 2. Москва, Фазис, 1998. 544 с.</reference>
+                <reference>Kloeden, P.E., Platen, E., Schurz, H. Numerical solution of SDE through computer experiments. Berlin, Springer Publ., 1994. 292 p.</reference>
+                <reference>Milstein, G. N., Tretyakov, M. V. Stochastic numerics for mathematical physics. Berlin, Springer-Verlag Publ., 2004. 596 p.</reference>
+                <reference>Кузнецов Д. Ф. Численное интегрирование стохастических дифференциальных уравнений. 2. С. -Петербург, Изд-во Политехнического ун-та, 2006. 764 с. DOI: http://doi.org/10.18720/SPBPU/2/s17-227</reference>
+                <reference>Platen, E., Bruti-Liberati, N. Numerical solution of stochastic differential equations with jumps in finance. Berlin, Heidelberg, Springer-Verlag Publ., 2010. 868 p.</reference>
+                <reference>Аверина, Т. А. Статистическое моделирование решений стохастических дифференциальных уравнений и систем со случайной структурой. Новосибирск, Изд-во СО РАН, 2019. 350 с.</reference>
+                <reference>Липцер, Р. Ш., Ширяев, А. Н. Статистика случайных процессов: Нелинейная фильтрация и смежные вопросы. Москва, Наука, 1974. 696 с.</reference>
+                <reference>Насыров, Ф. С. Локальные времена, симметричные интегралы и стохастический анализ. Москва, Физматлит, 2011. 212 с.</reference>
+                <reference>Рыбаков, К. А. Статистические методы анализа и фильтрации в непрерывных стохастических системах. Москва, Изд-во МАИ, 2017. 176 с</reference>
+                <reference>Мильштейн, Г. Н. Численное интегрирование стохастических дифференциальных уравнений. Свердловск, Изд-во Уральск. ун-та, 1988. 225 с.</reference>
+                <reference>Jentzen, A., Rockner, M. A Milstein scheme for SPDEs. Found. Comp. Math. 15: 2 (2015), 313-362.</reference>
+                <reference>Leonhard C., Roessler A. Iterated stochastic integrals in infinite dimensions: approximation and error estimates. Stoch. PDE: Anal. Comput. 7: 2 (2019), 209-239.</reference>
+                <reference>Kloeden, P. E., Platen, E., Wright, I. W. The approximation of multiple stochastic integrals. Stoch. Anal. Appl. 10: 4 (1992), 431-441.</reference>
+                <reference>Кузнецов, Д. Ф. Стохастические дифференциальные уравнения: теория и практика численного решения. С программами в среде MATLAB. Изд. 6-е. Дифференциальные уравнения и процессы управления. 4 (2018), A.1-A.1073. Доступно по ссылке: http://diffjournal.spbu.ru/RU/numbers/2018.4/article.2.1.html</reference>
+                <reference>Кузнецов, Д. Ф. Разработка и применение метода Фурье к численному интегрированию стохастических дифференциальных уравнений Ито. Журнал вычислительной математики и математической физики. 58: 7 (2018), 1108–1120.</reference>
+                <reference>Кузнецов, Д. Ф. К Численному моделированию многомерных динамических систем при случайных возмущениях с порядками сильной сходимости 1.5 и 2.0. Автоматика и телемеханика. 7 (2018), 80-98.</reference>
+                <reference>Кузнецов, Д. Ф. К численному моделированию многомерных динамических систем при случайных возмущениях с порядком сильной сходимости 2.5. Автоматика и телемеханика. 5 (2019), 99–117.</reference>
+                <reference>Кузнецов, Д. Ф. Сравнительный анализ эффективности применения полиномов Лежандра и тригонометрических функций к численному интегрированию стохастических дифференциальных уравнений Ито. Журнал вычислительной математики и математической физики. 59: 8 (2019), 1299–1313.</reference>
+                <reference>Кузнецов, Д. Ф. Методы численного моделирования решений систем стохастических дифференциальных уравнений Ито в задачах механики. Канд. дисс., С. -Петербург, 1996. 260 с.</reference>
+                <reference>Кузнецов, Д. Ф. Метод разложения и аппроксимации повторных стохастических интегралов Стратоновича, основанный на кратных рядах Фурье по полным ортонормированным системам функций. Дифференциальные уравнения и процессы управления. 1 (1997), 18-77. Доступно по ссылке: http://diffjournal.spbu.ru/RU/numbers/1997.1/article.1.2.html</reference>
+                <reference>Кузнецов, Д. Ф. Разложение повторных стохастических интегралов Стратоновича второй кратности, основанное на двойных рядах Фурье-Лежандра, суммируемых по Принсхейму. Дифференциальные уравнения и процессы управления. 1 (2018), 1-34. Доступно по ссылке: http://diffjournal.spbu.ru/RU/numbers/2018.1/article.1.1.html</reference>
+                <reference>Пригарин, С. М., Белов, С. М. Об одном применении разложений винеровского процесса в ряды. Препринт 1107. Новосибирск,  Изд-во СО РАН, 1998, 16 с.</reference>
+                <reference>Kuznetsov, D.F. New simple method for obtainment an expansion of double stochastic Ito integrals, based on the expansion of Brownian motion using Legendre polynomials and trigonometric functions (In English). arXiv:1807.00409v4 [math.PR], 2019, 19 p. Available at: https://arxiv.org/abs/1807.00409</reference>
+                <reference>Wiener, N. Un problème de probabilités  dénombrables. Bull. Soc. Math. France. 52 (1924), 569-578.</reference>
+                <reference>Lévy, P. Wiener's random function and other Laplacian random functions. Proc. 2nd Berkeley Symp. Math. Stat. Prob. 1951, 171-187.</reference>
+                <reference>Ito, K., McKean, H. Diffusion processes and their sample paths. Berlin, Heidelberg, New York, Springer-Verlag Publ., 1965. 395 p.</reference>
+                <reference>Luo, W. Wiener chaos expansion and numerical solutions of stochastic partial differential equations. Ph. D., California Institute of Technology, 2006. 225 p.</reference>
+                <reference>Дынкин, Е. Б. Марковские процессы. Москва, Наука, 1963. 860 с.</reference>
+                <reference>Суетин, П. К. Классические ортогональные многочлены. Изд. 3-е. Москва, Физматлит, 2005. 480 с.</reference>
+                <reference>Kuznetsov, D.F. Application of the method of approximation of iterated stochastic Ito integrals based on generalized multiple Fourier series to the high-order strong numerical methods for non-commutative semilinear stochastic partial differential equations. Differencial'nie uravnenia i processy upravlenia, 2019, no. 3, 18-62. Available at: http://diffjournal.spbu.ru/EN/numbers/2019.3/article.1.2.html</reference>
+            </references>
+        </articleInfo>
+        <authors>
+            <author ref="n_2019_12_kuznetsov" sort-key="1" />
+        </authors>
+    </article>
+
+    <article>
+        <articleInfo lang="EN" FirstPage="53" LastPage="72">
+            <pdf>haidar1.pdf</pdf>
+            <abstract>The boundary value approach to dynamic optimization is still an active area
+                of research in many domains of process engineering. The particular domain of
+                interest in the present work is a certain nonlinear optimization problem,
+                constrained by a 3D neutron diffusion partial differential equation (PDE)
+                and controlled, in time, by the boundary conditions. An analytical solution
+                to the associated linear boundary value problem (BVP), which is a principal
+                activity of this optimization, has been reached in 2019 by this author,
+                based on application of an additive separation of variables (ASOV)
+                principle, and was published in the International Journal of Dynamical
+                Systems and Differential Equations.
+                The sole objective of this paper is to examine and verify the consistency of
+                the ASOV method in solving the BVP of this optimization process. The
+                justification of this method is based on reversibility of a pertaining
+                generalized Euclidean transformation, and on asserting this reversibility in
+                the context of  an exterior differential framework for the BVP.</abstract>
+            <title>Exterior calculus note on the additive separation
+                of variables 3D solution to a dynamical neutron diffusion BVP</title>
+            <keywords>
+                <word>additive separation of variables</word>
+                <word>dynamical neutron diffusion</word>
+                <word>cancer therapy, boundary value problem</word>
+                <word>Euclidean transformation</word>
+                <word>exterior analysis</word>
+            </keywords>
+            <references>
+                <reference>Bluman, R. W., Kumei, S. Symmetries and Differential Equations. Springer, New York, 1989. </reference>
+                <reference>Bluman, G. W. Application of the general similarity solution of the heat equation to boundary value problems. Quarterly of Applied Mathematics, 31: 403-415, 1974.</reference>
+                <reference>Bryant, R. L., Chem, S. S., Gardner, R. B., Goldschmidt, H. L., Griffiths, P. A. Exterior Differential Systems, Springer, New York, 1991.</reference>
+                <reference>Cherniha, R. Conditional symmetries for BVP : New definition and its applications for nonlinear problems with Neumann conditions. Miskolc Mathematical Notes, 14(2) 637-646, 2013.</reference>
+                <reference>Edelen, D. G. B. Applied Exterior Calculus. Courier Corporation, 2005.</reference>
+                <reference>Gragert, P. K. H., Kresten, P. H. M., Martini, R. Symbolic computations in applied differential geometry. Acta Applicandae Mathematicae, 1: 43-77, 1983.</reference>
+                <reference>Haidar, N. H. S. Eigenfunctions for a class of parametric Sturm-Liouville problems with an eigenvalue continuum. Journal of Mathematical Analysis and Applications, 161(1): 20-27, 1991.</reference>
+                <reference>Haidar, N. H. S. On dynamical (B/Gd ) neutron cancer therapy: an accelerator-based single neutron beam. Pacific Journal of Applied Mathematics, 9(1): 9-26, 2018.</reference>
+                <reference>Haidar, N. H. S. An additive separation of variables 3D solution to the dynamical BVP of neutron cancer therapy. International Journal of Dynamical Systems and Differential Equations, 9(2):140-163, 2019.</reference>
+                <reference>Haidar, N. H. S. Optimization of two opposing neutron beams parameters in dynamical (B/Gd)neutron cancer therapy. Nuclear Energy and Technology, 5(1):1-7, 2019.</reference>
+                <reference>Haidar, N. H. S. On the why of dynamical, and not stationary, (B/Gd) neutron beam cancer therapy. Nuclear Physics and Atomic Energy, Accepted for publication, 2019.</reference>
+                <reference>Haidar, N. H. S. A resonated and synchrophased three beams neutron cancer therapy installation. ASME Journal of Nuclear Radiation Science, N. 4, 2019 Accepted for publication, 2019.</reference>
+                <reference>Harrison, B. K., Estabrook, F. B. Geometric approach to invariance groups and solution of partial differential systems. Journal of Mathematical Physics, 12(4): 653-666, 1971.</reference>
+                <reference>Helmbe, U., Moore, J. B. Optimization and Dynamical Systems. Springer-Verlag, Berlin, 1994.</reference>
+                <reference>Henry, A. F. Nuclear-Reactor Analysis. The MIT Press, Cambridge, Massachusetts, 1975. </reference>
+                <reference>Herzog, R., Kunisch, K. Algorithms for PDE-constrained optimization. GAMM-Mitteilungen, 31: 3-16, 2014.</reference>
+                <reference>Holton, P. A. Affine-Invariant Symmetry Sets. PhD thesis, University of Liverpool, Liverpool, UK, 2000.</reference>
+                <reference>Hydon, P. E. Symmetry Methods for Differential Equations: A Beginner's Guide, Vol. 22. Cambridge University Press, 2000. </reference>
+                <reference>Khesin, B. A., Tabachnikov, S. L. Arnold : Swimming Against the Tide. AMS, Providence, 2014. </reference>
+                <reference>Logsdon, J. S. Efficient Determination of Optimal Control Profiles for Differential Algebraic Systems. PhD Thesis, CMU, Pittsburgh, 1990.</reference>
+                <reference>Makai, M. Group Theory Applied to Boundary Value Problems With Applications to Reactor Physics. Nova Science Publishers, New York, 2011. </reference>
+                <reference>Miller, Jr, W. Mechanism for variable separation in partial differential equations and their relationship to group theory. In Symmetries and Nonlinear Phenomena, World Scientific, Singapore, 1988. </reference>
+                <reference>Ovsiannikov, L.V. Group Analysis of Differential Equations. Academic Press, New York, 2014. </reference>
+                <reference>Pontryagin, L. S., Boltyanski, V., Gamkrelidze, R., Mischenko, E. The Theory of Optimal Processes. Interscience Publishers, New York, 1962. </reference>
+                <reference>Ramsey, S. D., Tellez, J. A., Riewski, E. J., Temple, B. A. Symmetry and separability of the neutron diffusion equation. Journal of Physics Communications 2(10): No.105009, 2018. </reference>
+                <reference>Stackel, P. Uber Die Integration Der Hamilton-Jacobischen Differen- ¨ tialgeichung Mittels Separation Der Variabeln. Habilitationschrift, Halle, 1891. </reference>
+                <reference>Stoll, M., Watten, A. All-At-Once Solution of Time-Dependent PDE-Constrained Optimization Problems. Tech. Rep. University of Oxford, Oxford, 2010. </reference>
+                <reference>Suhubi, E. Exterior Analysis: Using Applications of Differential Forms. Academic Press, New York, 2013. </reference>
+                <reference>Tanartbit, P. Boundary Value Approach for Dynamic Optimization. EDRC06-170-94, CMU, Pittsburgh, 1994. </reference>
+                <reference>Wheeler, N. W. Electrodynamical Applications of Exterior Calculus. Lecture Notes, Department of Physics, Reed College, Oregon, 1996.</reference>
+            </references>
+        </articleInfo>
+        <authors>
+            <author ref="n_2019_12_haidar" sort-key="1" />
+        </authors>
+    </article>
+
+    <article>
+        <articleInfo lang="EN" FirstPage="73" LastPage="85">
+            <pdf>tedeev3.pdf</pdf>
+            <abstract>In this paper we consider a mixed Dirichlet
+                problem for a linear  homogeneous fractional diffusion equation. The
+                existence and uniqueness of the solution of the problem using the
+                harmonic continuation of the solution is proved. As a result, the
+                solution of the differential equation is defined as a trace of a
+                harmonic function. This approach  allows us
+                to introduce an integral identity whose solutions are pairs of functions such that
+                the first coordinate of this pair is the desired solution, and the second one
+                is its harmonic continuation. The continuity of the first
+                coordinate in the integral norm is proved as well.</abstract>
+            <title>EXISTENCE AND UNIQUENESS OF THE SOLUTION  OF A  DIFFERENTIAL EQUATION
+                OF FRACTIONAL DIFFUSION</title>
+            <keywords>
+                <word>weak solution</word>
+                <word>fractional diffusion</word>
+                <word>mixed Dirichlet problem</word>
+                <word>a pair of functions</word>
+            </keywords>
+            <references>
+                <reference>Lions, ZH. L. Nekotorye metody resheniya  nelinejnykh kraevykh zadach. Moscow. 1972. 586 p. (in Russ.)</reference>
+                <reference>Tedeev, Al. F. On an inequality for solving the differential diffusion equation. Differencial'nye uravnenija i processy upravlenija. 2017. Vol. 4. P. 1-13. (in Russ.)</reference>
+                <reference>Tedeev, Al. F. [Properties of solutions of the Cauchy problem for a second-order nonlinear parabolic equation with degeneration in an independent variable] Vestnik VGU. Seriya: Fizika. Matematika. 2018. Vol. 3. P. 185-196. (in Russ.)</reference>
+                <reference>Tedeev, Al. F. [Finiteness of the support of the solution of the Dirichlet problem of the diffusion equation with an inhomogeneous source in regions of the octant type] VGU. Seriya: Fizika. Matematika. 2014. Vol. 4. P. 180-192</reference>
+                <reference>Andreu, F., Mazon, J. M., Toledo, J., Igbida, N. A degenerate elliptic-parabolic problem with nonlinear dinamical boundary conditions. Interfaces Free Bound. 2006. &amp;#8470; 8 (4). P. 447-479.</reference>
+                <reference>Athanasopoulos, J., Caffarelli, L. A. Continuity of the temperature in boundary heat control problems.  Adv. Math. 2010. &amp;#8470; 224 (1). P. 293-315.</reference>
+            </references>
+        </articleInfo>
+        <articleInfo lang="RU" FirstPage="73" LastPage="85">
+            <pdf>tedeev3.pdf</pdf>
+            <abstract>В данной работе рассматривается смешанная
+                задача Дирихле для линейного однородного уравнения дробной диффузии.
+                Cуществование и единственность решения задачи доказывается с
+                использованием гармонического продолжения решения. В результате решение
+                дифференциального уравнения определяется как след некоторой
+                гармонической функции. Такой подход позволяет ввести
+                интегральное тождество, решениями которого являются пары функций, такие что
+                первая компонента пары есть искомое решение задачи, а вторая компонента является
+                его гармоническим продолжением. В работе также
+                доказывается непрерывность первой компоненты в интегральной норме.</abstract>
+            <title>СУЩЕСТВОВАНИЕ И ЕДИНСТВЕННОСТЬ РЕШЕНИЯ ДИФФЕРЕНЦИАЛЬНОГО УРАВНЕНИЯ ДРОБНОЙ ДИФФУЗИИ</title>
+            <keywords>
+                <word>слабое решение</word>
+                <word>дробная диффузия</word>
+                <word>смешанная задача Дирихле</word>
+                <word>пара функций</word>
+            </keywords>
+            <references>
+                <reference>Lions, ZH. L. Nekotorye metody resheniya  nelinejnykh kraevykh zadach. Moscow. 1972. 586 p. (in Russ.)</reference>
+                <reference>Tedeev, Al. F. On an inequality for solving the differential diffusion equation. Differencial'nye uravnenija i processy upravlenija. 2017. Vol. 4. P. 1-13. (in Russ.)</reference>
+                <reference>Tedeev, Al. F. [Properties of solutions of the Cauchy problem for a second-order nonlinear parabolic equation with degeneration in an independent variable] Vestnik VGU. Seriya: Fizika. Matematika. 2018. Vol. 3. P. 185-196. (in Russ.)</reference>
+                <reference>Tedeev, Al. F. [Finiteness of the support of the solution of the Dirichlet problem of the diffusion equation with an inhomogeneous source in regions of the octant type] VGU. Seriya: Fizika. Matematika. 2014. Vol. 4. P. 180-192</reference>
+                <reference>Andreu, F., Mazon, J. M., Toledo, J., Igbida, N. A degenerate elliptic-parabolic problem with nonlinear dinamical boundary conditions. Interfaces Free Bound. 2006. &amp;#8470; 8 (4). P. 447-479.</reference>
+                <reference>Athanasopoulos, J., Caffarelli, L. A. Continuity of the temperature in boundary heat control problems.  Adv. Math. 2010. &amp;#8470; 224 (1). P. 293-315.</reference>
+            </references>
+        </articleInfo>
+        <authors>
+            <author ref="n_2019_12_tedeev" sort-key="1" />
+        </authors>
+    </article>
+
+    <article>
+        <articleInfo lang="EN" FirstPage="86" LastPage="103">
+            <pdf>zavyalova1.pdf</pdf>
+            <abstract>The paper considers a linear-quadratic optimal control problem
+                for a system with a random structure. System parameters are exposed
+                to a purely discontinuous Markov process with given transition probabilities.
+                It is assumed that at a random time, structural state of the system changes
+                and its phase vector changes abruptly. Earlier, the conditions
+                for finding the optimal control in the form of integral matrix equations
+                were obtained by V.Buhalev. But these equations are cumbersome for practical use.
+                In this paper we consider the construction of optimal control using the small
+                parameter method, which allows us to construct tyhe control in the form of
+                a convergent series in powers of a small parameter. </abstract>
+            <title>The small parameter method for solving the problem of optimal stabilization
+                of systems with random structure and random jumps of the phase vector</title>
+            <keywords>
+                <word>random structure systems</word>
+                <word>optimal control</word>
+                <word>Markov random process</word>
+                <word>jumps of the phase vector</word>
+            </keywords>
+            <references>
+                <reference>Krasovsky, N.N. On a property of a linear stable system, quite manageable by accidental exposure. Differentialnie uravneniya. 1965, T.1. &amp;#8470; 2 (In Russ.)</reference>
+                <reference>Katz, I. Ya. Metod funkciy Lyapunova v zadachah ustoychivosty i stabilizacii sistem sluchaynoy strukturi [Method of Lyapunov functions in problems of stability and stabilization random structure systems]. Yekaterinburg, 1998, p. 221 (In Russ.)</reference>
+                <reference>Hasminsky, R.Z. Ustoychivost system  Differentialnih uravneniy pri sluchaynih vozmusheniyah ih parametrov. [The stability of systems of differential equations with random perturbations of their parameters]. M .: Science, p. 370 (In Russ.)</reference>
+                <reference>Artemyev, V.M. The theory of dynamical systems with random changes in structure. Minsk: Minsk: Higher school. 1979.- 246 p. (In Russ.)</reference>
+                <reference>Borisov, A.V., Stefanovich, A.I. Optimal State Filtering of Controllable Systems with Random Structure.// Journal of Computer and Systems Sciences International, 2007, Vol. 46, No. 3, pp. 348–358.</reference>
+                <reference>Buhalev, V.A. Raspoznovanie, oceninivanie i upravlenie v sistemah so sluchainoy skachkoobraznoy strukturoy [Recognition, evaluation and control in systems with random hopping structure]. M .: Science, 1996, p.287. (In Russ.)</reference>
+                <reference>Zavyalova, T.V. The optimal stabilization problem for rotation angle velocity of the robot-manipulator //Mathematical Modeling and Information Technologies. Proceedings of 3rd Russian Conference "Mathematical Modeling and Information Technologies", Vol-1825, 2016. р. 123-128.</reference>
+                <reference>Zavyalova, T.V. [Conditions of stabilization of linear stochastic systems with structural changes and random discontinuities of phase trajectories]. Trudy 3-ey  Meshdunarodnoy   nauchno-tehnicheskoy konf. «Kibernetika I technologii 21 veka», [Collection of papers of the 3rd International Scientific and Technical Conference "Cybernetics and technology of the 21st century"]. Voronezh, 2002, p.11–21. (In Russian.)</reference>
+                <reference>Zavyalova, T.V., Katz, I.Ya., Timofeevа, G.A. About motion stability stochastic systems with a random jump condition of the phase trajectory. Automation and remote control, 2002; (7): 33-43.</reference>
+                <reference>Katz, I.Ya. Optymal stability of the stochastic system with discontinuous trajectories // IMACS Annals on Computing and Applied Mathimatics. Volume 8. The Lyapunov functions method and applications. 1990. P. 219-223. </reference>
+                <reference>Pugachev, V.S., Sinitsyn, I.N. Stochastic differential systems. Analysis and filtering. M.: Nauka, 2nd ed., 1990. -632 p. (In Russ.)</reference>
+                <reference>Oksendal, B. Stochastic differential equations. Introduction to theory and applications. M.: World; AST, 2003 .- 408 p. (In Russ.)</reference>
+                <reference>Miller, B.M., Punk, A.R. The theory of random processes in examples and tasks. - M.: FIZMATLIT, 2002.- 320 p. (In Russ.)</reference>
+                <reference>Kuznetsov, D.F. Numerical modeling of stochastic differential equations and stochastic integrals. - St. Petersburg: Nauka, 1999.- 459 p. (In Russ.)</reference>
+                <reference>Pakshin, P.V. Stabilization of nonlinear Ito diffusion processes with Markov switching. // Automation and Remote Control, 2011, No. 2, p. 159–166.</reference>
+            </references>
+        </articleInfo>
+        <articleInfo lang="RU" FirstPage="86" LastPage="103">
+            <pdf>zavyalova1.pdf</pdf>
+            <abstract>В работе рассматривается линейно-квадратическая задача оптимального
+                управления для системы со случайной структурой. Параметры системы
+                подвержены воздействию чисто разрывного марковского процесса с заданными
+                переходными вероятностями. Предполагается, что в случайный момент
+                времени изменяется структурное состояние системы и скачком изменяется
+                его фазовый вектор. Ранее, В.Бухалевым были получены условия для
+                нахождения оптимального управления в виде интегральных матричных уравнений.
+                Эти уравнения являются громоздкими для практического применения.
+                В данной работе рассматривается построение оптимального управления
+                с помощью метода малого параметра, что позволяет получить управление
+                в виде сходящегося ряда по степеням малого параметра. </abstract>
+            <title>Метод малого параметра для решения задачи об оптимальной стабилизации
+                систем со случайной структурой и случайными скачками фазового вектора</title>
+            <keywords>
+                <word>системы со случайной структурой</word>
+                <word>оптимальное управление</word>
+                <word>марковский случайный процесс</word>
+                <word>скачки фазового вектора</word>
+            </keywords>
+            <references>
+                <reference>Красовский, Н.Н. Об одном свойстве линейной устойчивой системы, вполне управляемой по случайному воздействию. Дифференциальные уравнения. 1965, Т.1. &amp;#8470; 2</reference>
+                <reference>Кац, И.Я. Метод функций Ляпунова в задачах устойчивости и стабилизации систем случайной структуры. Екатеринбург, 1998 </reference>
+                <reference>Хасьминский, Р.З. Устойчивость систем дифференциальных уравнений при случайных возмущениях их параметров. M.: Наука, 1969. -370 с. </reference>
+                <reference>Артемьев, В.М. Теория динамических систем со случайными изменениями структуры.¬¬ ¬– Минск: Вышэйшая школа. 1979. – 246 с.</reference>
+                <reference>Borisov, A.V., Stefanovich, A.I. Optimal State Filtering of Controllable Systems with Random Structure.// Journal of Computer and Systems Sciences International, 2007, Vol. 46, No. 3, pp. 348–358.</reference>
+                <reference>Бухалёв, В.А. Распознавание, оценивание и управление в системах со случайной скачкообразной структурой. М.: Наука, 1996. 287 с.</reference>
+                <reference>Zavyalova, T.V. The optimal stabilization problem for rotation angle velocity of the robot-manipulator //Mathematical Modeling and Information Technologies. Proceedings of 3rd Russian Conference "Mathematical Modeling and Information Technologies", Vol-1825, 2016. р. 123-128.</reference>
+                <reference>Завьялова, Т.В. Условия стабилизации линейных стохастических систем со структурными изменениями и случайными разрывами фазовых траекторий. //Сборник трудов 3-ей Международной научно-технической конференции "Кибернетика и технологии 21 века". Воронеж. – 2002.– С.11–21. </reference>
+                <reference>Завьялова, Т.В., Кац, И.Я., Тимофеева, Г.А. Об устойчивости движения стохастических систем со случайным условием скачка фазовой траектории. //Автоматика и телемеханика.– M. –2002.– &amp;#8470;7 С.33-43</reference>
+                <reference>Katz, I.Ya. Optymal stability of the stochastic system with discontinuous trajectories // IMACS Annals on Computing and Applied Mathimatics. Volume 8. The Lyapunov functions method and applications. 1990. P. 219-223. </reference>
+                <reference>Пугачев, В.С., Синицын, И.Н. Стохастические дифференциальные системы. Анализ и фильтрация. M.: Наука, 2-е изд., 1990. -632 с.</reference>
+                <reference>Оксендаль, Б. Стохастические дифференциальные уравнения. Введение в теорию и приложения. М.: Мир; АСТ, 2003. — 408 с. </reference>
+                <reference>Миллер, Б.М., Панков, А.Р. Теория случайных процессов в примерах и задачах. – М.:ФИЗМАТЛИТ, 2002. – 320 с.</reference>
+                <reference>Кузнецов, Д.Ф. Численное моделирование стохастических дифференциальных уравнений и стохастических интегралов.¬ – СПб: Наука, 1999.-459 с.</reference>
+                <reference>Пакшин, П.В. Стабилизация нелинейных диффузионных процессов Ито с марковскими переключениями. //Автоматика и телемеханика, 2011, &amp;#8470; 2, с. 159–166.</reference>
+            </references>
+        </articleInfo>
+        <authors>
+            <author ref="n_2019_12_zavyalova" sort-key="1" />
+        </authors>
+    </article>
+
+    <article>
+        <articleInfo lang="EN" FirstPage="104" LastPage="158">
+            <pdf>ivanovBF1.pdf</pdf>
+            <abstract>We consider a linear nonhomogeneous system of differential equations.
+                In this system, the matrix-coefficient in the linear part is the sum of
+                an absolutely summable matrix and a matrix summable with the degree which greater
+                one but not exceeding two. It is also assumed that there exists
+                a neighborhood of zero in which the Fourier transform of each element
+                of the second matrix equals zero. The nonhomogeneity is assumed
+                to be summable with any degree which greater than one or essentially bounded,
+                has a bounded integral, and the sum of the reciprocal of the summability of
+                the second matrix and the nonhomogeneity is less than one.
+
+                In previous works we introduced the concepts of the set of resonant points,
+                resonant and non-resonant  conditions for functions summable with some degree
+                or essentially bounded.
+
+                This paper proposes a criterion of boundedness of solutions in the
+                form of conditions on the resonant points of the coefficients of the system.
+                It was proved that if for a number of coefficients of the system
+                non-resonant conditions (which for finite resonance points have
+                the form of arithmetic relations between their coordinates,
+                i.e resonant frequencies) are fulfilled,
+                then each solution is bounded.
+                In addition, it has been established that in the resonance case
+                it is always possible to choose such an arbitrarily small perturbations
+                of the coefficients of the system (in the sense of the norms of the
+                corresponding spaces) that the resonance sets of the system coefficients
+                will not increase, the resonance condition will be satisfied but
+                the perturbed system will have unbounded solutions.</abstract>
+            <title>Boundedness of solutions of some class of linear systems</title>
+            <keywords>
+                <word>boundedness of solutions of linear systems</word>
+                <word>resonance</word>
+            </keywords>
+            <references>
+                <reference>Chezari, L. Asimptoticheskoe povedenie i ustoychivost' resheniy obyknovennykh differentsial'nykh uravneniy [Asymptotic Behavior and Stability Problems in Ordinary solutions of Differential Equations]. Moscow, Mir Publ., 1964. 477 p. (In Russ.)</reference>
+                <reference>Coppel, W. A. Stability and Asymptotic Behavior of Differential Equations. Published by D. C. Heath, Boston, Mass., 1965. 166 p.</reference>
+                <reference>Conti, R. On the boundedness of solutions of ordinary differential equations. Funkcialaj Ekvacioj 1966. Vol. 9 &amp;#8470; 1. P. 23-26.</reference>
+                <reference>Massera, Kh., Sheffer, Kh. Lineynye differentsial'nye uravneniya i funktsional'nye prostranstva [Linear differential equations and function spaces]. Moscow, Mir Publ., 1970. 456 p. (In Russ.)</reference>
+                <reference>Korolev, V. V. Ob ogranichennosti resheniy lineynoy sistemy differentsial'nykh uravneniy s peremennymi koeffitsientami. Differents. uravneniya. 1966. V.2, &amp;#8470; 5 pp.609-613. (In Russ.)</reference>
+                <reference>Wallgren, T. Oscillations of solutions of the differential equation y00 + p(y) = f(x). SIAM J. Math. Anal. 1976. V. 7, &amp;#8470; 6. pp. 848-857.</reference>
+                <reference>Pliss, V. A. Ravnomerno ogranichennye resheniya lineynykh sistem differentsial'nykh uravneniy.Differents. uravneniya. 1977. V.13,  &amp;#8470; 5 pp.883- 891. (In Russ.)</reference>
+                <reference>Pliss, V. A. Mnozhestva lineynykh sistem s ravnomerno ogranichennymi resheniyami.Differents. uravneniya. 1980. V.16, &amp;#8470; 9. pp. 1599-1616. (In Russ.)</reference>
+                <reference>Mitropol'skiy, Yu. A., Samoylenko, A. M., Kulik, V. L. Primenenie kvadratichnykh form k issledovaniyu sistem lineynykh differentsial'nykh uravneniy. Differents. uravneniya. 1985. V.21,  &amp;#8470;5. pp.776-788. (In Russ.)</reference>
+                <reference>Kulik, V. L. Ogranichennye resheniya sistem.lineynykh sistem differentsial'nykh uravneniy. Ukr. math. journ. 1987. V.39, &amp;#8470; 6. pp.729-732. (In Russ.)</reference>
+                <reference>Millionshchikov, V. M. Usilenie teoremy o stabil'noy ogranichennosti resheniy.Differents. uravneniya. 1993. V.29, &amp;#8470;11. pp. 2011. (In Russ.)</reference>
+                <reference>Baskakov A. G. Otsenki ogranichennykh resheniy lineynykh differentsial'nykh uravneniy.Differents. uravneniya. 2003. V.39,&amp;#8470; 12. pp. 413-415. (In Russ.)</reference>
+                <reference>Izobov N. A., Prokhorova R. A. Lineynye differentsial'nye sistemy Koppelya-Konti [Koppel-Konti linear differential systems]. Minsk, Belorus. Nauka Publ., 2008. 230 p. (In Russ.)</reference>
+                <reference>Bortnitskaya, L. I., Prokhorova, R. A. Linear systems with Lp - dichotomy on the axis. Materialy mezhdunarodnoy matematicheskoy konferentsii(7– 10 dekabrya 2015.), Minsk, Belorussiya "Shestye Bogdanovskie chteniya po obyknovennym differentsial'nym uravneniyam" [Proc. Int. Conf."Sixth Bogdanov readings on ordinary differential equations"], Minsk, Belarus: Publishing House Minsk Institute of Mathematics of the National Academy of Sciences of Belarus 2015, pp.18-19, v.3. (In Russian)</reference>
+                <reference>Ivanov, B. F. Ob odnom dopolnenii K neravenstvu Gel'dera.I Vestn. S.- Peterb. un-ta. Ser. 1. Matematika. Mekhanika. Astronomiya . 2017 V.4(62),  &amp;#8470;3 pp. 436–447.(In Russ.)</reference>
+                <reference>Ivanov, B. F. Ob odnom dopolnenii K neravenstvu Gel'dera.II Vestn. S.- Peterb. un-ta. Ser. 1. Matematika.Mekhanika.Astronomiya. 2017 V.4(62), &amp;#8470;4 pp. 586–596. (In Russ.)</reference>
+                <reference>Ivanov, B. F. Ob odnom dopolnenii K neravenstvu G¨el'dera. Sluchay rezonansa. I Vestn. S.-Peterb. un-ta. Ser. 1. Matematika. Mekhanika. Astronomiya. 2018 V.5(63) &amp;#8470;1, pp.60–69.</reference>
+                <reference>Ivanov B. F. Ob odnom dopolnenii K neravenstvu G¨el'dera.Sluchay rezonansa.II Vestn. S.-Peterb. un-ta. Ser. 1.Matematika. Mekhanika. Astronomiya. 2018 V.5(63) &amp;#8470; 2, pp.233–243.</reference>
+                <reference>Funktsional'nyy analiz. Seriya: Spravochnaya matematicheskaya biblioteka [Functional analysis. Series: Reference Mathematical Library]. Pod red. S.G.Kreina ; Moscow Nauka Publ., 1972. 544 p. (In Russ.)</reference>
+                <reference>Gel'fand, I. M., Shilov, G. E. Obobshchennye funktsii i deystviya nad nimi [Generalized functions and actions on them] , vyp. 1. Moscow: Fizmatlit Publ., 1959. 470 p. (In Russ.)</reference>
+                <reference>Vladimirov, V. S. Uravneniya matematicheskoy fiziki [Equations of mathematical physics]. Moscow Nauka Publ., 1971. 512 p. (In Russ.)</reference>
+                <reference>Titchmarsh, E. Vvedenie v teoriyu integralov Fur'ye [Introduction to the theory of Fourier integrals]. Moscow, Leningrad, GITTL Publ. 1948. 479 p.</reference>
+                <reference>Ivanov, B. F. Analog of an inequality of Bohr for integrals of functions from Lp(Rn): I.Problemy Analiza, 2014, V. 3 (21), &amp;#8470;2, pp. 32–51.</reference>
+                <reference>Ivanov, B. F. Analog of an inequality of Bohr for integrals of functions from Lp(Rn): I. Problemy Analiza, 2014, V. 3 (21), &amp;#8470;1, pp. 16–34.</reference>
+                <reference>Natanson, I. P. Teoriya funktsiy veshchestvennoy peremennoy [Theory of functions of a real variable]. Moscow Nauka Publ., 1974. 480 p. (In Russ.)</reference>
+                <reference>Hartman, F. Obyknovennye differentsial'nye uravneniya [Ordinary differential equations]: Per. s angl. I. Kh. Sabitova i Yu. V. Egorova. / Pod red. V. M. Alekseeva. Moscow, Mir Publ., 1970. 720 p. (In Russ.)</reference>
+            </references>
+        </articleInfo>
+        <articleInfo lang="RU" FirstPage="104" LastPage="158">
+            <pdf>ivanovBF1.pdf</pdf>
+            <abstract>В работе рассматривается линейная неоднородная система дифференциальных уравнений.
+                Матрица-коэффициент в линейной части представляет собой сумму абсолютно
+                суммируемой матрицы и матрицы суммируемой со степенью большей единицы,
+                но не превосходящей двух. Предполагается, что преобразование Фурье каждой
+                из функций, являющихся элементами  второй матрицы, равно нулю в некоторой
+                окрестности нуля. Кроме того, предполагается, что неоднородность суммируема
+                со степенью большей единицы (или существенно ограничена) и обладает
+                ограниченным интегралом, а сумма величин обратных показателям суммируемости
+                второй матрицы и неоднородности меньше единицы.
+
+                В предыдущих работах автором были введены понятие  множества резонансных точек,
+                а также резонансное и нерезонансное условия для функций суммируемых
+                с какой-либо степенью или существенно ограниченных.
+
+                В данной работе предложен критерий ограниченности решений системы в виде
+                ряда условий на резонансные точки некоторых коэффициентов системы.
+                Доказано, что если для ряда коэффициентов системы  выполнены
+                нерезонансные условия, которые для конечных резонансных точек имеют
+                вид арифметических соотношений между их координатами
+                (т.е. между резонансными частотами), то каждое решение системы ограничено.
+                Кроме того, установлено, что в резонансном случае всегда можно выбрать
+                такие сколь угодно малые (в смысле норм соответствующих пространств)
+                возмущения коэффициентов системы, при которых резонансные множества
+                коэффициентов системы не увеличатся, будет выполняться резонансное условие,
+                но у возмущенной системы возникнут неограниченные решения.</abstract>
+            <title>Ограниченность решений одного класса линейных систем</title>
+            <keywords>
+                <word>ограниченность решений линейных систем</word>
+                <word>резонанс</word>
+            </keywords>
+            <references>
+                <reference>Чезари, Л. Асимптотическое поведение и устойчивость решений обыкновенных дифференциальных уравнений. М.: Мир, 1964. 477 с.</reference>
+                <reference>Coppel, W. A. Stability and Asymptotic Behavior of Differential Equations. Heath, Boston, Mass., 1965.</reference>
+                <reference>Conti, R. On the boundedness of solutions of ordinary differential equations. Funkcialaj Ekvacioj 1966. Vol. 9 &amp;#8470;1. P. 23-26</reference>
+                <reference>Массера, Х., Шеффер, Х. Линейные дифференциальные уравнения и функциональные пространства. М.: Мир, 1970.</reference>
+                <reference>Королев, В. В. Об ограниченности решений линейной системы дифференциальных уравнений с переменными коэффициентами.// Дифференц. уравнения. 1966. Т.2, &amp;#8470;5 С.609-613.</reference>
+                <reference>Wallgren, T. Oscillations of solutions of the differential equation y''+p(y)=f(x). SIAM J. Math. Anal. 1976. Vol. 7, &amp;#8470;6. P. 848-857.</reference>
+                <reference>Плисс, В. А. Равномерно ограниченные решения линейных систем дифференциальных уравнений.// Дифференц. уравнения. 1977. Т.13, &amp;#8470;5 С.883-891.</reference>
+                <reference>Плисс, В. А. Множества линейных систем с равномерно ограниченными решениями. // Дифференц. уравнения. 1980. Т.16, &amp;#8470;9. С.1599-1616.</reference>
+                <reference>Митропольский, Ю. А., Самойленко, А. М., Кулик, В. Л. Применение квадратичных форм к исследованию систем линейных дифференциальных уравнений.// Дифференц. уравнения. 1985. Т.21 &amp;#8470;5. С.776-788.</reference>
+                <reference>Кулик, В. Л. Ограниченные решения систем линейных систем дифференциальных уравнений. // Укр. мат. журн. 1987. Т.39, &amp;#8470;6. С.729-732.</reference>
+                <reference>Миллионщиков, В. М. Усиление теоремы о стабильной ограниченности решений. // Дифференц. уравнения. 1993. Т.29, &amp;#8470;11. С. 2011.</reference>
+                <reference>Баскаков, А. Г. Оценки ограниченных решений линейных дифференциальных уравнений. // Дифференц. уравнения. 2003. Т.39, &amp;#8470;12. С.413-415.</reference>
+                <reference>Изобов, Н. А., Прохорова Р. А. Линейные дифференциальные системы Коппеля-Конти. Мн.: Белорус.наука, 2008. 230 с.</reference>
+                <reference>Бортницкая, Л. И., Прохорова Р. А. Линейные системы с L^p - дихотомией на оси.  // Шестые Богдановские чтения по обыкновенным дифференциальным уравнениям: материалы международной математической конференции (7--10 декабря 2015.), Минск, Белоруссия: Издательство Минск Ин-т математики НАН Беларуси 2015, с.18-19, т.3.</reference>
+                <reference>Иванов, Б. Ф. Об одном дополнении к неравенству Гёльдера. I // Вестн. С.-Петерб. ун-та. Сер. 1. Математика. Механика. Астрономия. 2017  Т.4(62),  &amp;#8470;3 с.436-447.</reference>
+                <reference>Иванов, Б. Ф. Об одном дополнении к неравенству Гёльдера. II // Вестн. С.-Петерб. ун-та. Сер. 1. Математика. Механика. Астрономия. 2017  Т.4(62),  &amp;#8470;4 с.586-596.</reference>
+                <reference>Иванов, Б. Ф. Об одном дополнении к неравенству Гёльдера. Случай резонанса. I // Вестн. С.-Петерб. ун-та. Сер. 1. Математика. Механика. Астрономия. 2018 Т.5(63) &amp;#8470;1, с. 60-69.</reference>
+                <reference>Иванов, Б. Ф. Об одном дополнении к неравенству Гёльдера. Случай резонанса. II // Вестн. С.-Петерб. ун-та. Сер. 1. Математика. Механика. Астрономия. 2018  Т.5(63)&amp;#8470;2, с.233-243.</reference>
+                <reference>Функциональный анализ. Серия: "Справочная математическая библиотека"/ Под ред. С.Г.Креина;М.: Наука, 1972. 544 с.</reference>
+                <reference>Гельфанд, И.М., Шилов, Г.Е. Обобщённые функции и действия над ними, вып.1, М.: Физматлит; 1959.</reference>
+                <reference>Владимиров, В.С. Уравнения математической физики. М.: Наука; 1971.</reference>
+                <reference>Титчмарш, Е. Введение в теорию интегралов Фурье. М.; Л.: ГИТТЛ; 1948.</reference>
+                <reference>Ivanov, B.F. Analog of an inequality of Bohr for integrals of functions from L^p(R^n). I.Проблемыанализа, 2014, т.3(21), &amp;#8470;2, с.32-51.</reference>
+                <reference>Ivanov, B.F. Analog of an inequality of Bohr for integrals of functions from L^p(R^n). I.Проблемыанализа, 2014, т.3(21), &amp;#8470;1, с.16-34.}</reference>
+                <reference>Натансон, И. П. Теория функций вещественной переменной. М.: Наука, 1974.</reference>
+                <reference>Хартман, Ф.Обыкновенные дифференциальные уравнения: Пер. с англ. И. Х. Сабитова и Ю. В. Егорова. / Под ред. В. М. Алексеева. М.: Мир 1970.</reference>
+            </references>
+        </articleInfo>
+        <authors>
+            <author ref="n_2019_12_ivanov" sort-key="1" />
+        </authors>
+    </article>
+
+    <article>
+        <articleInfo lang="EN" FirstPage="159" LastPage="177">
+            <pdf>zaytseva1.pdf</pdf>
+            <abstract>In the paper the oscillatory modes of a non-autonomous flight control
+                system are considered. The phenomenon of pilot induced oscillations
+                in the presence of non-linearities such as " saturation" and backlash
+                in the system is studied under conditions of active control and
+                a significant value of the time delay. The conditions for the occurrence
+                of self-oscillations are established by using the harmonic stationary method,
+                the robustness of forced oscillations in the first harmonic
+                approximation in the class of amplitudes and frequencies of the
+                reference signal is studied.</abstract>
+            <title>Stability of forced oscillations in manned aircraft systems</title>
+            <keywords>
+                <word>nonlinear system</word>
+                <word>stability</word>
+                <word>pilot control</word>
+                <word>aircraft</word>
+                <word>unmanned</word>
+                <word>frequency analysis</word>
+            </keywords>
+            <references>
+                <reference>Anderson M. R., Schmidt D. K. Closed-Loop Pilot Vehicle Analysis of the Approach and Landing Task. J. Guidance, Control, and Dynamics. 1987. Vol. 10, no. 2. P. 187–194.</reference>
+                <reference>Hess R. A. Analysis of aircraft attitude control systems prone to pilot-induced oscillations. J. of Guidance, Control, and Dynamics. 1984. Vol. 7, no. 1. P. 106 – 112.</reference>
+                <reference>Efremov A. V., Ogloblin A. V., Predtechenskij A. N., Rodchenko V. V. Letchik kak dinamicheskaya sistema [Pilot as a dynamic system] М.: Mashinostroenie. 1992. 330 p. (In Russian) </reference>
+                <reference>Efremov A. Analysis of Reasons for Pilot Induced Oscillation Tendency and Development of Criteria for Its Prediction: Tech. Rep. Contract SPC-94-4028. Moscow, Russia: Pilot-Vehicle Laboratory, Moscow Aviation institute, 1995.</reference>
+                <reference>Aerodinamika, ustojchivost' i upravlyaemost' sverhzvukovyh samoletov. Pod red. G.S. Byushgensa [Aerodynamics, stability and controllability of supersonic aircraft. Ed. G.S. Buesgens.] М.: Nauka. Fizmatlit. 1998.  816 p. (In Russian)</reference>
+                <reference>Aviation Safety and Pilot Control: Understanding and Preventing Unfavorable Pilot-Vehicle Interactions / Ed. by D. T. McRuer, J. D. Warner. Washington, DC: Committee on the Effects of Aircraft-Pilot Coupling on Flight Safety Aeronautics and Space Engineering Board Commission on Engineering and Technical Systems National Research Council. National Academy Press, 1997. URL: http://www.nap.edu/catalog/5469.html.</reference>
+                <reference>Duda H. Effects of Rate Limiting Elements in Flight Control Systems – A New PIO Criterion. Effects of Rate Limiting Elements in Flight Control Systems – A New PIO Criterion / in Proc. of the AIAA Guidance, Navigation and Control Conf. Baltimore, Maryland: 1995.—August. P. 288– 298.</reference>
+                <reference>Lindsey S. W. Prediction of longitudinal pilot induced oscillations using the optimal control model. Master's thesis, School of Engineering Air Force Institute of Technology Air University, Ohio, 1989.</reference>
+                <reference>Klyde D., McRuer D., Myers T. Unified Pilot-Induced Oscillation Theory. Vol. I: PIO Analysis with Linear and Nonlinear Effective Vehicle Characteristics, Including Rate Limiting: Tech. Rep. WL-TR 96-3028:Wright-Patterson Air Force Base, Ohio: Wright Laboratory, 1995.</reference>
+                <reference>Katayanagi R. Pilot-Induced Oscillation Analysis with Actuator Rate Limiting and Feedback Control Loop. Trans. Japan Soc. Aero. Space Sci. 2001. Vol. 44, no. 143. P. 48 – 53.</reference>
+                <reference>McRuer D. T., Klyde D. H., Myers T. T. Development of a Comprehensive PIO Theory. AIAA paper 96-3433. 1996. P. 581 – 597.</reference>
+                <reference>McRuer D., Krendel E. Mathematical Models of Human Pilot Behavior. AGARD AG-188, 1974.</reference>
+                <reference>Efremov A.V., Koshelenko A.V., Tyaglik M.S., Tyumencev YU.V., Tyan' V.C. Matematicheskoe modelirovanie harakteristik upravlyayushchih dejstvij letchika pri issledovanii zadach ruchnogo upravleniya [Mathematical modeling of the characteristics of pilot control actions in the study of manual control tasks]. Izvestiya vysshih uchebnyh zavedenij. Aviacionnaya tekhnika. 2015. Vol. 2. pp. 34–40. (In Russian)</reference>
+                <reference>Andrievsky B., Kuznetsov N., Kuznetsova O. et al. [Localization of hidden oscillations in flight control systems]. Trudy SPIIRAN [SPIIRAS Proceedings]. 2016. Vol. 6, no. 49. P. 5–31. (In Russian)</reference>
+                <reference>Andrievsky B., Arseniev D. G., Kuznetsov N. V., Zaitceva I. S. Pilot-Induced Oscillations and Their Prevention. Cyber-Physical Systems and Control. CPS&amp;C 2019 / Ed. by D. Arseniev, L. Overmeyer, H. Kalviainen, B. Katalinic. Springer, Cham, 2013. Vol. 95 of Lecture Notes in Networks and Systems. P. 108–123. URL: https://link.springer.com/chapter/10.1007\%2F978-3-030-34983-7_11.</reference>
+                <reference>Federal Aviation Administration. Pilot Induced Oscillations. URL: https://www.skybrary.aero/index.php/Pilot_Induced_Oscillation (дата обращения: 2017-10-24).</reference>
+                <reference>Mandal T., Gu Y., Chao H., Rhudy M. B. Flight Data Analysis of Pilot-Induced-Oscillations of a Remotely Controlled Aircraft. Proc. AIAA Guidance Navigation and Control Conf. (GNC 2013), Boston, MA. AIAA, 2013.—Aug. P. 1–15.</reference>
+                <reference>Mandal T., Gu Y. Analysis of Pilot-Induced-Oscillation and Pilot Vehicle System Stability Using UAS Flight Experiments. Aerospace. 2016. Vol. 3, no. 42. P. 1–23. URL: https://www.mdpi.com/2226-4310/ 3/4/42.</reference>
+                <reference>McRuer D., Graham D., Krendel E., Reisener, Jr. W. Human pilot dynamics in compensatory systems-theory, models, and experiments with controlled element and forcing function variations: Tech. Rep. AFFDLTR-65-15: Franklin Inst., 1965.—January.</reference>
+                <reference>Derusso P., Roj R.YU, Klouz CH. Prostranstvo sostoyanij v teorii upravleniya (dlya inzhenerov). [State variables for engineers] М.: Gl. red. fiziko-matematicheskoj literatury izd-va .Nauka. publ., 1970. 620 p. </reference>
+                <reference>Metody klassicheskoj i sovremennoj teorii avtomaticheskogo upravleniya. Pod red. Pupkova K. A., Egupova N. D. [Methods of the classical and modern theory of automatic control] М.: MGTU im. N. E. Baumana, 2004.  584 p. (In Russian)</reference>
+                <reference>Popov E.P. Teoriya nelinejnyh sistem avtomaticheskogo regulirovaniya i upravleniya [Theory of nonlinear systems of automatic regulation and control] М.: Nauka publ., 1988. 256 p. (In Russian)</reference>
+                <reference>Popov E.P. Prikladnaya teoriya processov upravleniya v nelinejnyh sistemah [Applied Theory of Control Processes in Nonlinear Systems] М.: Nauka publ., 1973. 584 p. (In Russian)</reference>
+                <reference>Bogolyubov N.N., Mitropol'skij YU.A. Asimptoticheskie metody v teorii nelinejnyh kolebanij. [Asymptotic methods in the theory of nonlinear oscillations].  М.: Gos. izd-vo fiziko-matematicheskoj literatury.1957. 407 p. (In Russian)</reference>
+                <reference>Ajzerman M. A., Gantmaher F.R. Absolyutnaya ustojchivost' reguliruemyh sistem [Absolute stability of regulated systems] М.: Akademiya Nauk SSSR, 1963. 139 p. (In Russian)</reference>
+                <reference>Barkin A.I., Zelencovskij A.L. Absolute stability criterion for nonlinear control systems. Avtomat. i telemekh. 1981. p. 5–10. (In Russian)</reference>
+                <reference>Andronov A. A. Predel'nye cikly Puankare i teoriya avtokolebanij. Sobranie trudov Andronova A. A. [Poincare limit cycles and theory of self-oscillations. Collection of works by Andronov A.A.] Izd. Akademiya Nauk SSSR. 1956.  41 p. (In Russian)</reference>
+                <reference>Yakubovich V. A. Frequency conditions of self-oscillations in nonlinear systems with a single time-invariant nonlinearity. Sibirskij matem. zhurnal. 1973. Vol. 14, № 5. pp. 1100–1129. (In Russian)</reference>
+                <reference>Kuznetsov N. V. [Theory of hidden oscillations and control systems stability].  XII Vserossijskij s"ezd po fundamental'nym problemem teoreticheskoj i prikladnoj mekhaniki. Bashkirskij gosudarstvennyj universitet. [Proc. of XII All-Russian Congress on Fundamental Problems of Theoretical and Applied Mechanics. Bashkir State University].  2019. pp. 46–48. (In Russian)</reference>
+                <reference>Bragin V., Vagaitsev V., Kuznetsov N., Leonov G. Algorithms for Finding Hidden Oscillations in Nonlinear Systems. The Aizerman and Kalman Conjectures and Chua's Circuits  J. Computer and Systems Sciences Intern. Izvestiya Rossijskoj Akademii Nauk. Teoriya i sistemy upravleniya. 2011. Vol. 50, no. 4. P. 511–543. (In Russian)</reference>
+                <reference>Tzypkin Ya. Z. Relejnye avtomaticheskie sistemy [Relay automatic systems]. М.: Nauka publ., 1974. P. 576 (In Russian)</reference>
+                <reference>Khlypalo E. I. Nelinejnye korrektiruyushchie ustrojstva v avtomaticheskih sistemah. L.: Energiya, 1973. 344 p. (In Russian)</reference>
+                <reference>Duda H. Prediction of Pilot-in-the-Loop Oscillations due to Rate Saturation  J. of Guidance, Navigation, and Control. 1997.—May–June. Vol. 20, no. 3.</reference>
+                <reference>Glattfelder A., W.Scaufelberger. Stability analysis of single loop control systems with saturation and antireset-windup circuits  IEEE Trans. Automat. Contr. 1983.—Dec. Vol. 28, no. 12. P. 1074–1081.</reference>
+                <reference>Andrievsky B., Kuznetsov N., Leonov G., Pogromsky A. Hidden Oscillations in Aircraft Flight Control System with Input Saturation. IFAC Proceedings Volumes (IFAC-PapersOnline). Vol. 5(1). IFAC: 2013. P. 75–79.</reference>
+                <reference>Zames G., Falb P. Stability conditions for systems with monotone and slope-restricted nonlinearities.  SIAM J. 1968. Vol. 6, no. 1. P. 89–108.</reference>
+                <reference>Evdokimov S., Klimanov S., Korchagin A. et al. Terminal control algorithm for the downrange motion of a descent module with load factor constraints.  J. Computer and Systems Sciences Intern. 2012. Vol. 51, no. 5. pp. 715–731.</reference>
+                <reference>Evdokimov S.N., Klimanov S.I., Korchagin A.N., Mikrin E.A., Siharulidze Yu.G. Control of longitudinal and lateral movement of the descent vehicle in the corridor of entry angles with overload restriction. Izvestiya Rossijskoj akademii nauk. Teoriya i sistemy upravleniya. 2012. № 6. pp. 63–79. (In Russian)</reference>
+                <reference>Mikrin E.A., Zubov N.E., Negodyaev S.S., Bogachev A.V. [Optimal control of the orbital orientation of a spacecraft based on an algorithm with a predictive model]. Trudy Moskovskogo fiziko-tekhnicheskogo instituta [Proceedings of the Moscow Institute of Physics and Technology]. 2010. Vol. 2, no 3 (7), pp. 189–195. (In Russian)</reference>
+                <reference>Amato F., Iervolino S., Pandit M. et al. Analysis of Pilot-in-the-Loop Oscillations Due to Position and Rate Saturations. In: Proc. 39th IEEE Conf. on Decision and Control (CDC 2000), Sydney, Australia. IEEE, 2000. P. 6.</reference>
+                <reference>Amato F., Iervolino R., Scala S., Verde L. Category II pilot-in-the-loop oscillations analysis from robust stability methods. J. of Guidance, Control and Dynamics. 2001.—May–June. Vol. 24, no. 3.</reference>
+                <reference>Teoriya avtomaticheskogo upravleniya: Nelinejnye sistemy upravleniya pri sluchajnyh vozdejstviyah [Theory of Automatic Control: Nonlinear Control Systems under Stochastic Actions]. Pod redakciej A.V. Netushila. М.: Vysshaya shkola publ., 1983. 432 p. (In Russian)</reference>
+                <reference>Nguen Ch. K. The effect of backlash and dry friction on the stability of the mechatronic drive (analytical study). Nauchno-tekhnicheskij vestnik Universiteta ITMO. 2006. № 28. pp. 157–162. (In Russian)</reference>
+                <reference>Belova L. A., Netushil A. V. On the absolute stability of control systems with multivalued  nonlinearities such as backlash and limiter. Avtomat. i telemekh. 1967. Vol. 12. pp. 58–63.</reference>
+                <reference>Brusin V. A. Absolute stability of a backlash tracking system. Izv. vuzov. Radiofizika. 1964. № 3. pp. 7–16. (In Russian)</reference>
+                <reference>Petrov P. V., Koeva A. A. The study of self-oscillations in hydromechanical drives operating under the  friction. Vestnik UGATU [Bulletin of the Ufim state aviation technical university]. 2014. Vol. 18, no 4 (65), pp. 183–190. (In Russian)</reference>
+                <reference>Tarbourieh S., Queinnec I., Prieur C. Nonstandard use of anti-windup loop for systems with input backlash. IFAC J. of Systems and Control. 2018. Vol. 6. P. 33–42.</reference>
+                <reference>Nadzharov E. M. An approximate determination of periodic modes in automatic control systems containing several nonlinearities. Trudy 2-go Vsesouznogo soveshaniya po TAR. [Proc. of the 2nd All-Union meeting on the theory of automatic control]. 1955. Vol. 1. (In Russian)</reference>
+                <reference>McRuer D. T. Pilot-Induced Oscillations and Human Dynamic Behavior: Tech. rep. Hawthorne, CA, USA: NASA, 1995.—July.</reference>
+                <reference>Gol'dfarb L. S., Baltrushevich A. V., Netushil A. V. Teoriya avtomaticheskogo upravleniya [Theory of Automatic Control]. М.: Vysshaya shkola publ., 1976.  430 p. (In Russian)</reference>
+                <reference>Berko V.S., Zhivov Yu.G., Poedinok A.M. An approximate criterion for the stability of forced oscillations of controlled objects with a nonlinear drive. Uchenye zapiski CAGI. 1984. Vol. ХV, № 4. Pp. 72–80. (In Russian)</reference>
+                <reference>Leonov G.A. Efficient methods for searching for periodic oscillations in dynamical systems. Prikladnaya matematika i mekhanika. 2010. Vol. 74, № 1. pp. 37–73. (In Russian)</reference>
+                <reference>Leonov G. A., Kuznetsov N. V., Vagaitsev V. I. Localization of hidden Chua's attractors.  Physics Letters A. 2011. Vol. 375, no. 23. P. 2230–2233.</reference>
+                <reference>Leonov G. A., Kuznetsov N. V. Analytical-numerical methods for investigation of hidden oscillations in nonlinear control systems. IFAC Proceedings Volumes (IFAC-PapersOnline). 2011. Vol. 18, no. 1. P. 2494–2505.</reference>
+                <reference>Leonov G. A., Kuznetsov N. V. Hidden attractors in dynamical systems. From hidden oscillations in Hilbert-Kolmogorov, Aizerman, and Kalman problems to hidden chaotic attractors in Chua circuits. Int J. Bifurcation and Chaos. 2013. Vol. 23, no. 1. P. 1–69.</reference>
+                <reference>Kuznetsov N., Leonov G. Hidden attractors in dynamical systems: systems with no equilibria, multistability and coexisting attractors. IFAC Proceedings Volumes (IFAC-PapersOnline). 2014. Vol. 47, no. 3. P. 5445–5454. Proc. 19th IFAC World Congress. URL: https://www.sciencedirect.com/science/article/pii/S1474667016424614.</reference>
+                <reference>Dudkowski D., Jafari S., Kapitaniak T. et al. Hidden attractors in dynamical systems.  Physics Reports. 2016. Vol. 637. P. 1 –50. URL: http://www.sciencedirect.com/science/article/pii/S0370157316300928.</reference>
+                <reference>Chechurin S. L. Parametricheskie kolebaniya i ustojchivost' periodicheskogo dvizheniya. [Parametric oscillations and stability of periodic motion]. SPb.: LGU publ., 1983.  220 p. (In Russian)</reference>
+                <reference>Byushgens G. S., Studnev R. V. Aerodinamika samoleta: Dinamika prodol'nogo i bokovogo dvizheniya. М.: Mashinostroenie, 1979.  352 p. (In Russian)</reference>
+                <reference>Chechurin L., Chechurin S. Physical Fundamentals of Oscillations. Frequency Analysis of Periodic Motion Stability. Springer, 2017. 220 P.</reference>
+            </references>
+        </articleInfo>
+        <articleInfo lang="RU" FirstPage="159" LastPage="177">
+            <pdf>zaytseva1.pdf</pdf>
+            <abstract>В статье рассматриваются колебательные режимы неавтономной системы управления полетом. Исследуется явление раскачки самолета летчиком при наличии в системе нелинейностей типа "насыщение" и люфт, в условиях активного управления и существенной величины временн\'ого запаздывания. Устанавливаются условия возникновения автоколебаний,   с помощью метода гармонической стационаризации исследуется  робастность вынужденных колебаний в первом гармоническом приближении на классе  амплитуд и частот задающего воздействия.</abstract>
+            <title>Устойчивость вынужденных колебаний в пилотируемых системах летательных аппаратов</title>
+            <keywords>
+                <word>нелинейная система</word>
+                <word>устойчивость</word>
+                <word>пилотирование</word>
+                <word>самолет</word>
+                <word>беспилотный</word>
+                <word>частотный анализ</word>
+            </keywords>
+            <references>
+                <reference>Anderson M. R., Schmidt D. K. Closed-Loop Pilot Vehicle Analysis of the Approach and Landing Task // J. Guidance, Control, and Dynamics. 1987. Vol. 10, no. 2. P. 187–194. </reference>
+                <reference>Hess R. A. Analysis of aircraft attitude control systems prone to pilot-induced oscillations // J. of Guidance, Control, and Dynamics. 1984. Vol. 7, no. 1. P. 106 – 112. </reference>
+                <reference>Ефремов А. В., Оглоблин А. В., Предтеченский А. Н., Родченко В. В. Летчик как динамическая система. М.: Машиностроение, 1992.</reference>
+                <reference>Efremov A. Analysis of Reasons for Pilot Induced Oscillation Tendency and Development of Criteria for Its Prediction: Tech. Rep. Contract SPC-94-4028. Moscow, Russia: Pilot-Vehicle Laboratory, Moscow Aviation institute, 1995. </reference>
+                <reference>Аэродинамика, устойчивость и управляемость сверхзвуковых самолетов / Под ред. Г.С. Бюшгенса. М.: Наука. Физматлит, 1998. С. 816. </reference>
+                <reference>Aviation Safety and Pilot Control: Understanding and Preventing Unfavorable Pilot- Vehicle Interactions / Ed. by D. T. McRuer, J. D. Warner. Washington, DC: Committee on the Effects of Aircraft-Pilot Coupling on Flight Safety Aeronautics and Space Engineering Board Commission on Engineering and Technical Systems National Research Council. National Academy Press, 1997. URL: http: //www.nap.edu/catalog/5469.html.</reference>
+                <reference>Duda H. Effects of Rate Limiting Elements in Flight Control Systems – A New PIO Criterion // Effects of Rate Limiting Elements in Flight Control Systems – A New PIO Criterion / in Proc. of the AIAA Guidance, Navigation and Control Conf. Baltimore, Maryland: 1995. — August. P. 288 – 298. </reference>
+                <reference>Lindsey S. W. Prediction of longitudinal pilot induced oscillations using the optimal control model. Master's thesis, School of Engineering Air Force Institute of Technology Air University, Ohio, 1989. </reference>
+                <reference>Klyde D., McRuer D., Myers T. Unified Pilot-Induced Oscillation Theory. Vol. I: PIO Analysis with Linear and Nonlinear Effective Vehicle Characteristics, Including Rate Limiting: Tech. Rep. WL-TR 96-3028: Wright-Patterson Air Force Base, Ohio: Wright Laboratory, 1995. </reference>
+                <reference>Katayanagi R. Pilot-Induced Oscillation Analysis with Actuator Rate Limiting and Feedback Control Loop // Trans. Japan Soc. Aero. Space Sci. 2001. Vol. 44, no. 143. P. 48 – 53. </reference>
+                <reference>McRuer D. T., Klyde D. H., Myers T. T. Development of a Comprehensive PIO Theory // AIAA paper 96-3433. 1996. P. 581 – 597. </reference>
+                <reference>McRuer D., Krendel E. Mathematical Models of Human Pilot Behavior. AGARD AG-188, 1974. </reference>
+                <reference>Ефремов А.В., Кошеленко А.В., Тяглик М.С., Тюменцев Ю.В., Тянь В.Ц. Математическое моделирование характеристик управляющих действий летчика при исследовании задач ручного управления // Известия высших учебных заведений. Авиационная техника. 2015. Т. 2. С. 34–40. </reference>
+                <reference>Андриевский Б.Р., Кузнецов Н.В., Кузнецова О.А., Леонов Г.А., Мокаев Т.Н. Локализация скрытых колебаний в системах управления полетом // Труды СПИИРАН. 2016. No 49. С. 5–31. </reference>
+                <reference>Andrievsky B., Arseniev D. G., Kuznetsov N. V., Zaitceva I. S. Pilot-Induced Oscillations and Their Prevention // Cyber-Physical Systems and Control. CPS&amp;C 2019 / Ed. by D. Arseniev, L. Overmeyer, H. Ka ̈lvia ̈inen, B. Katalinic ́. Springer, Cham, 2013. Vol. 95 of Lecture Notes in Networks and Systems. P. 108–123.URL:https:  //link.springer.com/chapter/10.1007\%2F978-3-030-34983-7_11. </reference>
+                <reference>Federal Aviation Administration. Pilot Induced Oscillations. URL: https://www. skybrary.aero/index.php/Pilot_Induced_Oscillation (дата обращения: 2017-10-24). </reference>
+                <reference>Mandal T., Gu Y., Chao H., Rhudy M. B. Flight Data Analysis of Pilot-Induced- Oscillations of a Remotely Controlled Aircraft // Proc. AIAA Guidance Navigation and Control Conf. (GNC 2013), Boston, MA. AIAA, 2013. — Aug. P. 1–15. </reference>
+                <reference>Mandal T., Gu Y. Analysis of Pilot-Induced-Oscillation and Pilot Vehicle System Stability Using UAS Flight Experiments // Aerospace. 2016. Vol. 3, no. 42. P. 1–23. URL: https://www.mdpi.com/2226-4310/3/4/42. </reference>
+                <reference>McRuer D., Graham D., Krendel E., Reisener, Jr. W. Human pilot dynamics in compensatory systems-theory, models, and experiments with controlled element and forcing function variations: Tech. Rep. AFFDL-TR-65-15: Franklin Inst., 1965.— January. </reference>
+                <reference>Деруссо П. Пространство состояний в теории управления (для инженеров). Перев. с англ. М.: МГТУ им. Н. Э. Баумана, 1970. С. 620. </reference>
+                <reference>Методы классической и современной теории автоматического управления / Под ред. Пупкова К. А., Егупова Н. Д. М.: МГТУ им. Н. Э. Баумана, 2004. </reference>
+                <reference>Попов Е.П. Теория нелинейных систем автоматического регулирования и управления. М.: Наука, 1988. С. 256. </reference>
+                <reference>Попов Е.П. Прикладная теория процессов управления в нелинейных системах. М.: Наука, 1973. С. 584. </reference>
+                <reference>Боголюбов Н.Н., Митропольский Ю.А. Асимптотические методы в теории нелинейных колебаний. М.: Гос. изд-во физико-математической литературы, 1957. С. 407. </reference>
+                <reference>Айзерман М. А., Гантмахер Ф.Р. Абсолютная устойчивость регулируемых систем. М.: АН СССР, 1963. </reference>
+                <reference>Баркин А.И., Зеленцовский А.Л. Критерий абсолютной устойчивости нелинейных систем управления // Автомат. и телемех. 1981. С. 5–10. </reference>
+                <reference>Андронов А. А. Предельные циклы Пуанкаре и теория автоколебаний. Собрание трудов Андронова А. А. // Изд. АН СССР. 1956. С. 41. </reference>
+                <reference>Якубович В. А. Частотные условия автоколебаний в нелинейных системах с одной стационарной нелинейностью // Сибирский матем. журнал. 1973. Т. 14, No 5. С. 1100–1129. </reference>
+                <reference>Кузнецов Н. В. Теория скрытых колебаний и устойчивость систем управления // XII Всероссийский съезд по фундаментальным проблемем теоретической и прикладной механики. Башкирский государственный университет, 2019. С. 46–48. </reference>
+                <reference>Брагин В.О., Вагайцев В.И, Кузнецов Н.В., Леонов Г.А. Алгоритмы поиска скрытых колебаний в нелинейных системах. Проблемы Айзермана и Калмана и цепи Чуа // Известия РАН. Теория и Системы Управления. 2011. No 4. С. 3–36. [V.O. Bragin, V.I. Vagaitsev, N.V. Kuznetsov, G.A. Leonov, Algorithms for Finding Hidden Oscillations in Nonlinear Systems. The Aizerman and Kalman Conjectures and Chua's Circuits, J. of Computer and Systems Sciences Intern., 50(4), 2011, pp. 511-543 (doi:10.1134/S106423071104006X)]. </reference>
+                <reference>Цыпкин Я. З. Релейные автоматические системы. М.: Наука, 1974. С. 576. </reference>
+                <reference>Хлыпало Е. И. Нелинейные корректирующие устройства в автоматических системах. Л.: Энергия, 1973. С. 344. </reference>
+                <reference>Duda H. Prediction of Pilot-in-the-Loop Oscillations due to Rate Saturation // J. of Guidance, Navigation, and Control. 1997. — May–June. Vol. 20, no. 3. </reference>
+                <reference>Glattfelder A., W.Scaufelberger. Stability analysis of single loop control systems with saturation and antireset-windup circuits // IEEE Trans. Automat. Contr. 1983. — Dec. Vol. 28, no. 12. P. 1074–1081. </reference>
+                <reference>Andrievsky B., Kuznetsov N., Leonov G., Pogromsky A. Hidden Oscillations in Aircraft Flight Control System with Input Saturation // Proc. 5th IFAC Intern. Workshop on Periodic Control Systems (PSYCO 2013), IFAC Proceedings Volumes (IFAC-PapersOnline). Vol. 5(1). Caen, France: 2013. P. 75–79. </reference>
+                <reference>Zames G., Falb P. Stability conditions for systems with monotone and slope-restricted nonlinearities // SIAM J. 1968. Vol. 6, no. 1. P. 89–108. </reference>
+                <reference>Евдокимов С.Н., Климанов С.И., Корчагин А.Н., Микрин Е.А., Сихарулидзе Ю.Г. Терминальный алгоритм управления продольным движением спускаемого аппарата с ограничением перегрузки // Известия Российской академии наук. Теория и системы управления. 2012. No 5. С. 102. </reference>
+                <reference>Евдокимов С.Н., Климанов С.И., Корчагин А.Н., Микрин Е.А., Сихарулидзе Ю.Г. Управление продольным и боковым движением спускаемого аппарата в коридоре углов входа с ограничением перегрузки // Известия Российской академии наук. Теория и системы управления. 2012. No 6. С. 63. </reference>
+                <reference>Микрин Е.А., Зубов Н.Е., Негодяев С.С., Богачев А.В. Оптимальное управление орбитальной ориентацией космического аппарата на основе алгоритма с прогнозирующей моделью // Труды Московского физико-технического института. 2010. Т. 2, No 3 (7). С. 189–195. </reference>
+                <reference>Amato F., Iervolino S., Pandit M. et al. Analysis of Pilot-in-the-Loop Oscillations Due to Position and Rate Saturations // Proc. 39th IEEE Conf. on Decision and Control (CDC 2000), Sydney, Australia. IEEE, 2000. P. 6. </reference>
+                <reference>Amato F., Iervolino R., Scala S., Verde L. Category II pilot-in-the-loop oscillations analysis from robust stability methods // J. of Guidance, Control and Dynamics. 2001. — May–June. Vol. 24, no. 3. </reference>
+                <reference>Теория автоматического управления: Нелинейные системы управления при случайных воздействиях / Под ред. Под ред. А. В. Нетушила. М.: ВШ, 1983. </reference>
+                <reference>Нгуен Ч. К. Влияние люфта и сухого трения на устойчивость мехатронного привода (аналитическое исследование) // Научно-технический вестник Университета ИТМО. 2006. No 28. С. 157–162. </reference>
+                <reference>Белова Л. А., Нетушил А. В. Об абсолютной устойчивости систем регулирования с неоднозначными нелинейностями типа люфт и упор // Автомат. и телемех. 1967. Т. 12. С. 58–63. </reference>
+                <reference>Брусин В. А. Об абсолютной устойчивости следящей системы с люфтом // Изв. вузов. Радиофизика. 1964. No 3. С. 7–16. </reference>
+                <reference>Петров П. В., Коева А. А. Исследование автоколебаний в гидромеханических приводах, работающих в условиях трения // Вестник УГАТУ. 2014. Т. 18, No 4 (65). С. 183–190. </reference>
+                <reference>Tarbourieh S., Queinnec I., Prieur C. Nonstandard use of anti-windup loop for systems with input backlash // IFAC J. of Systems and Control. 2018. Vol. 6. P. 33–42. </reference>
+                <reference>Наджаров Э. М. Приближенное определение периодических режимов в системах автоматического регулирования, содержащих несколько нелинейностей // В кн.: Труды 2-го Всесоюзного совещания по ТАР. 1955. Т. 1. </reference>
+                <reference>McRuer D. T. Pilot-Induced Oscillations and Human Dynamic Behavior: Tech. rep. Hawthorne, CA, USA: NASA, 1995. — July. </reference>
+                <reference>Гольдфарб Л. С., Балтрушевич А. В., Нетушил А. В. Теория автоматического управления. М.: Высшая школа, 1976. С. 430. </reference>
+                <reference>Берко В.С., Живов Ю.Г., Поединок А.М. Приближенный критерий устойчивости вынужденных колебаний регулируемых объектов с нелинейным приводом // Ученые записки ЦАГИ. 1984. Т. ХV, No 4. С. 72–80. </reference>
+                <reference>Леонов Г.А. Эффективные методы поиска периодических колебаний в динамических системах // Прикладная математика и механика. 2010. Т. 74, No 1. С. 37–73. </reference>
+                <reference>Leonov G. A., Kuznetsov N. V., Vagaitsev V. I. Localization of hidden Chua's attractors // Physics Letters A. 2011. Vol. 375, no. 23. P. 2230–2233. </reference>
+                <reference>Leonov G. A., Kuznetsov N. V. Analytical-numerical methods for investigation of hidden oscillations in nonlinear control systems // IFAC Proceedings Volumes (IFAC- PapersOnline). 2011. Vol. 18, no. 1. P. 2494–2505. </reference>
+                <reference>Leonov G. A., Kuznetsov G. V. Hidden attractors in dynamical systems. From hidden oscillations in Hilbert-Kolmogorov, Aizerman, and Kalman problems to hidden chaotic attractors in Chua circuits // Int J. Bifurcation and Chaos. 2013. Vol. 23, no. 1. P. 1–69. </reference>
+                <reference>Kuznetsov N., Leonov G. Hidden attractors in dynamical systems: systems with no equilibria, multistability and coexisting attractors // IFAC Proceedings Volumes (IFAC-PapersOnline). 2014. Vol. 47, no. 3. P. 5445–5454. Proc. 19th IFAC World Congress. URL: https://www.sciencedirect.com/science/ article/pii/S1474667016424614. </reference>
+                <reference>Dudkowski D., Jafari S., Kapitaniak T. et al. Hidden attractors in dynamical systems // Physics Reports. 2016. Vol. 637. P. 1 – 50. URL: http://www. sciencedirect.com/science/article/pii/S0370157316300928. </reference>
+                <reference>Чечурин С. Л. Параметрические колебания и устойчивость периодического движения. СПб.: ЛГУ, 1983. С. 220. </reference>
+                <reference>Бюшгенс Г. С., Студнев Р. В. Аэродинамика самолета: Динамика продольного и бокового движения. М.: Машиностроение, 1979. С. 352. </reference>
+                <reference>Chechurin L., Chechurin S. Physical Fundamentals of Oscillations. Frequency Analysis of Periodic Motion Stability. Springer, 2017. P. 220. </reference>
+            </references>
+        </articleInfo>
+        <authors>
+            <author ref="n_2019_12_zaytseva" sort-key="1" />
+            <author ref="n_2019_12_chechurin" sort-key="2" />
+        </authors>
+    </article>
+
+
+</number>
