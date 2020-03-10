@@ -14,135 +14,105 @@ ISSN 1817-2172
 http://di journal.spbu.ru/
 e-mail: jo di @mail.ru
 ˇ ŁŒº   ß       Ł
-˛  Ł          ı     Æ      æŒ º  ß   Ł 
+˛  Ł        Æßæ   ª    ı    
  º  æŁæ          Ø æŁ ı   Ł   ŁŁ
 æ Œ æ    -ºŁ  Ø  Ø ı   Œ   Łæ ŁŒ Ø       ª      Œ    
-`º ª    .´.
-1
-, ˚        ˝.´.
+˚        ˝.´.
 1;2
-,  º  ł    .´.
+, `º ª    .´.
+1
+,  º Œæ       ˚.˜.
+1
+,
+ º  ł    .´.
 1
 ,  º  ł   — .´.
 1
 1
    Œ -ˇ    Æ  ªæŒŁØ ˆ  æ     æ     ßØ   Ł   æŁ    ,
-mikhail.blagov@gmail.com, nkuznetsov239@gmail.com
+nkuznetsov239@gmail.com, mikhail.blagov@gmail.com
 2
 ¨ æ Ł    ˇ  Æº     łŁ       Ł  —  ˝,    Œ -ˇ    Æ  ª
        Ł 
  Łæ   ß       Ø æŁ ı   Ł   ŁŁ (   )   º   æ  Œº ææŁ  æŒŁ Ł   ºŁ-
-  Ø ß Ł æŁæ   Ł      º  Ł   º     æ   ØŒŁ   æ   ß Ł    ß    º Œ  Ł-
-  æŒŁı     ı. ´      Ø   Æ      ææ    Ł    æ             ŒŁ  Ł       
-  ı     Æ      æŒ º  ß   Ł   º  Œº ææŁ  æŒ Ø     æ Œ æ    -ºŁ  Ø  Ø ı -
-  Œ   Łæ ŁŒ Ø       ª      Œ    . — ææ    Ł    æ  æŁæ   ß æ  Łº       Ł-
-    Ł   º  ßØ Ł   ª     ¿ Ł        Ł   º   -Ł   ª Ł   øŁ   Łº     .
-ˇ Ł   Ł æ     ºŁ ŁŒ - Łæº   ßØ        º      ŒŁ  Ł          ı     Æ  
-   æŒ º  ß   Ł ,      º    ß æ    Ł    æ  æ       Ł   æ  ß Ł.
+  Ø ß Ł æŁæ     Ł      º  Ł   º     æ   ØŒŁ   æ   ß Ł    ß    º Œ  Ł  -
+æŒŁı     ı. ´      Ø   Æ      ææ    Ł    æ             ŒŁ  Ł        Æßæ -
+  ª    ı      º  Œº ææŁ  æŒ Ø     æ Œ æ    -ºŁ  Ø  Ø ı   Œ   Łæ ŁŒ Ø
+      ª      Œ     Ł  Łº     Ł      ª       Œ . ˛Ææ      æ     ºŁ ŁŒ -
+ Łæº   ßØ        º      ŒŁ  Ł        Æßæ   ª    ı    . —    º    ß,   º -
+    ß  æ  ª      ø  , æ    Ł    æ  æ       Ł   æ  ß Ł.
 ˚º    ß  æº   :    , æŁæ   ß       Ø æŁ ı   Ł   ŁŁ,   ˇ ,     -
            æ   ØŒ    æ   ß,   ºŁ  Ø ßØ    ºŁ ,  Ł         ı     Æ      -
-æŒ º  ß   Ł .
+æŒ º  ß   Ł ,  Ł       Æßæ   ª    ı    .
 Abstract
-PLL (Phase-locked loops) are classical nonlinear control systems that tune
-frequency and phase in electrical circuits. In this article a problem of the
-lock-in range estimation for classical PLL with piecewise-linear phase detector
-characteristic is considered. Systems with PI and Lead-lag  lters are considered.˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,N. 3, 2019
-An analytical-numerical method of the lock-in range estimation is given, results
-are compared with previously known.
-Key words: PLL, Phase-locked looks, nonlinear analysis, lock-in range.
+Phase-locked loops (PLL) are classical nonlinear control systems that are used
+to tune frequency and phase in electrical circuits. In this article a problem of the
+lock-in range estimation for classical PLLs with piecewise-linear phase detector
+characteristic and  rst-order  lters is studied. A new analytical-numerical method˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,N. 3, 2019
+of the lock-in range estimation is discussed. Estimations obtained using this
+method are compared with previously known ones.
+Key words: PLL, Phase-locked loo s, nonlinear analysis, lock-in range.
 1 ´     Ł 
- Łæ   ß       Ø        æ   ØŒŁ (   )   º  ŁºŁ łŁ  Œ     Ł     Ł   
-  º Œ     ŁŒ  Ł ı Ł Œ          Ø   ıŁ  Œ     [1, 2, 3, 4, 5, 6, 7, 8]. ´  -
- ß Ł ı   Œ   Łæ ŁŒ  Ł æŁæ   ß   º   æ   Ł      ß        Ł ,   ı    
-Ł   ı     Æ      æŒ º  ß   Ł  . ˇ    Ł   Ł                Ł  Ł  Ł       
-  ı     łŁ  Œ  Ł   æ  ß Ł ı   ł  Ł     ß (æ .,     Ł    [9]).
-¨          º  Ł   Ł          ı     Æ      æŒ º  ß   Ł  Æßº    ææ   -
-       1966 ª     . ˆ          Ł łŁ  Œ  Łæ  º     æ    æ         Ø Ł   -
-     Ø ºŁ        
+ Łæ   ß       Ø æŁ ı   Ł   ŁŁ (   )   º  ŁºŁ łŁ  Œ     Ł     Ł      -
+º Œ     ŁŒ  Ł ı Ł Œ          Ø   ıŁ  Œ     [1, 2, 3, 4, 5, 6, 7, 8]. ´   ß-
+ Ł ı   Œ   Łæ ŁŒ  Ł æŁæ   ß   º   æ   Ł      ß        Ł ,   ı     Ł
+Æßæ   ª    ı     (  ı     Æ      æŒ º  ß   Ł   ŁŒº  ). ˜º  Œº ææŁ  æŒŁı
+    º Ø     æ    ºŁ  ß Ł  Łº     Ł      ª       Œ   Ł      ß        -
+ Ł  Ł   ı     ı   ł  Ł     ß (æ .,     Ł    [9]).
+´ 1966 ª     . ˆ          Æßº      º      Œ      Ł   Ł        Æßæ -
+  ª    ı     (Œ           æº              º  Łº  łŁ  Œ     æ   æ      Ł 
+  Ł        Ø ºŁ        
 1
-.
-´      Ø æ              æ      ŒŁ  Ł          ı     Æ      æŒ º  ß  -
- Ł ,   º     ß            Æ   ı [24, 9, 25] æ Łæ  º      Ł   Æ º   æ   ª ª 
-      º  Ł   º      æ  Łº       Ł    Ł   º  ßØ Ł   ª     ¿ Ł  Æ Æø… -
-  Ø     ª º   Ø ı   Œ   Łæ ŁŒ Ø       ª      Œ    .    ºŁ Ł  æŒŁ    -
-   º    ß          æ      ºŁ     Ł  .
+) Ł Æßº    æ   º            ª  æ   ª ª        -
+º  Ł .     ªŁØ    ı   Œ   ł  Ł       Ł ˆ         Æßº     º         Æ -
+  ı [24, 25, 26].
+´      Ø æ              æ      ŒŁ  Ł        Æßæ   ª    ı    ,   º -
+    ß            Æ   ı [9, 27, 25]  º  Œº ææŁ  æŒŁı     æ  Łº           -
+ª       Œ  Ł  Æ Æø…   Ø     ª º   Ø ı   Œ   Łæ ŁŒ Ø       ª      Œ    .
+   ºŁ Ł  æŒŁ       º    ß          æ      ºŁ     Ł  .
 2        Ł  æŒ       º     
-— ææ    Ł         Ł  æŒ       º           æ    æ        æŁª  º   [26,
-1, 27, 28], Ł  Æ             Łæ. 1.
+— ææ    Ł         Ł  æŒ       º           æ    æ        æŁª  º  
+[28, 1, 29, 30] ( Łæ. 1). ˙  æ   
+ref
+(t)             ı    ª  æŁª  º  æ   æ  -
+    Ø   æ    Ø
+_
+ 
+ref
+(t)   !
+ref
+.         æ   Ł     ª  ª             
+vco
+(t),
+ ª           æ        æ   Ł     ª  ª           
+_
+ 
+vco
+(t) = !
+vco
+(t).     -
+ ßØ     Œ    ª    Ł     æŁª  ºv
+e
+(t), Œ    ßØ    ß    æ  ı   Œ   Łæ ŁŒ Ø
+      ª      Œ    . ´  Æø   æº           ŁæŁ          æŁª  º   Ł Œ  -
+æ   Œ ŁŁ     [30].      ,   Æ    ø Ø æ Ł    º æ ß Ł æŁª  º  Ł, ı   Œ-
+   Łæ ŁŒ        ª      Œ     Æ          ª º   Ø. ˜  ªŁ    Ł         
+æ     ª º   Ø ı   Œ   Łæ ŁŒ Ø   º   æ     Ł Ł Ł         Œ           
+æı    ˚ æ  æ  [31, 8, 7, 32].
 1
   .   Æ  ß [10, æ  .34-35], [11, æ  .49], [12, æ  .4],[13, æ  .24], [14, æ  .749], [15, æ  .56], [16, æ  .112],
 [17, æ  .138], [18, æ  .576], [19, æ  .809], [20, æ  .258], [21, æ  .417], [22, æ  .92], [23, æ  .387].
  º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 75˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,N. 3, 2019
 +
 +
-1
-s
-K
-vco
-K
-vco 
-v
-f
-(t)
-ω
-vco
-free
-θ
-vco
-(0)
-θ
-vco
-(t)
-θ
-ref
-(t)
 +
-θ
-e
-(t)
-H(s)
-x(0)
-v
-f
-(t)
 ПГ
 ФД
-Филь т р
-—Łæ. 1:      º  Œº ææŁ  æŒ  Ø     æ     ª º   Ø ı    Œ   Łæ ŁŒ  Ø       ª      Œ      
+Филь тр
+—Łæ. 1:     º  Œº ææŁ  æŒ Ø     æ     ª º   Ø ı    Œ   Łæ ŁŒ Ø       ª      Œ      
    æ    æ        æŁª  º  .
-˙  æ  
-ref
-(t)        ı    Ø æŁª  º æ   æ      Ø   æ    Ø
-_
- 
-ref
-(t) =!
-ref
-(t).
-        æ   Ł     ª  ª            
-vco
-(t),  ª           æ        æ   Ł  -
-   ª  ª           
-_
- 
-vco
-(t) = !
-vco
-(t).      ßØ     Œ    ª    Ł     æŁª  º
-v
-e
-(t), Œ    ßØ    ß    æ  ı   Œ   Łæ ŁŒ Ø       ª      Œ    . ´  Æø  
-æº           ŁæŁ          æŁª  º   Ł Œ  æ   Œ ŁŁ     [28].      ,   Æ   -
- ø Ø æ Ł    º æ ß Ł æŁª  º  Ł, ı   Œ   Łæ ŁŒ        ª      Œ     Æ     
-    ª º   Ø. ˜  ªŁ    Ł          æ     ª º   Ø ı   Œ   Łæ ŁŒ Ø   º -
-  æ     Ł Ł Ł         Œ            æı    ˚ æ  æ  [29, 8, 7, 30]. ´      Ø
-  Æ      ææ    Ł    æ   Æ Æø…     Œ æ    -ºŁ  Ø    ı   Œ   Łæ ŁŒ  (1),
-Œ           æ     æº    k =
-2
- 
-  …      ª º     (æ .  Łæ. 2)
-2
-:
+´      Ø   Æ      ææ    Ł    æ   Æ Æø…     Œ æ    -ºŁ  Ø    ı   Œ-
+   Łæ ŁŒ  ( Łæ. 2):
 v
 e
 ( 
@@ -167,16 +137,16 @@ e
 :
 k 
 e
-  2 kn;
+ 2 kn;
 if 
 1
 k
-+ 2 n  
++2 n  
 e
 (t) 
 1
 k
-+ 2 n,
++2 n,
  
 1
   
@@ -189,39 +159,41 @@ e
   
 1
 k
-(  + 2 n);
+( +2 n);
 if
 1
 k
-+ 2 n  
++2 n  
 e
 (t)  
 1
 k
-+ 2 (n + 1);
++2 (n+1);
 (1)
-ª  k2
+ª   k 2
  
 1
  
-; +1
+;+1
  
-;n2Z.
+;n 2 Z. ´   æ     æº     k =
 2
- º   Ø k =
+ 
+  Œ   ı   Œ   Łæ ŁŒ 
+  º   æ      ª º   Ø,     æº    k =
 1
  
-æ      æ        Łº  Æ     Ø ı    Œ   Łæ ŁŒ         ª      Œ    .
+   Łº  Æ     Ø.
+—Łæ. 2: ˚ æ    -ºŁ  Ø    ı   Œ   Łæ ŁŒ        ª      Œ    
  º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 76˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,N. 3, 2019
-—Łæ. 2: ˚  æ    -ºŁ  Ø    ı    Œ   Łæ ŁŒ         ª      Œ    
              ı     v
 e
 ( 
 e
-(t)) Ł  ßı     t v
+(t)) Ł  ßı     v
 f
-(t)  Łº       Łæß    æ 
-æ     ł  Ł  Ł
+(t)  Łº       Łæß    æ  æ -
+    ł  Ł  Ł
 _ x(t) =
 1
  
@@ -233,7 +205,7 @@ e
 (t));
 v
 f
-(t) =x(t) +
+(t) =x(t)+
  
 2
  
@@ -243,20 +215,20 @@ e
 ( 
 e
 (t));
-H(s) =
-1 + 
+(2)
+ª  x(t)   æ æ    Ł   Łº    ,                 Œ Ł  Ł      Ł  H(s) =
+1+ 
 2
 s
  
 1
 s
-;  
+,
+ 
 1
-> 0;  
+> 0,  
 2
-> 0;
-(2)
-ª  x(t)   æ æ    Ł   Łº    , H(s)                   Œ Ł .
+> 0.
  Łª  º      º  Ł  v
 f
 (t) Ł          æ        æ   Ł     ª  ª         :
@@ -273,22 +245,13 @@ vco
 v
 f
 (t); (3)
-ª  !
+ª   !
 free
 vco
-    æ     æ  Æ   ßı Œ º Æ  ŁØ    æ   Ł     ª  ª         K
+    æ     æ  Æ   ßı Œ º Æ  ŁØ    æ   Ł     ª  ª         
+K
 vco
->
-0    æŁº  Ł .
-  æ      ı    ª  æŁª  º    º ª   æ    æ      Ø:
-_
- 
-ref
-(t) =!
-ref
-(t) !
-ref
-: (4)
+> 0   Œ    Ł Ł     æŁº  Ł .
 —    æ           æ    Ø  ı    ª  æŁª  º  Ł   æ    Ø æ  Æ   ßı Œ º -
 Æ  ŁØ    æ   Ł     ª  ª           Æ        æ  Œ Œ !
 free
@@ -297,20 +260,16 @@ e
 !
 free
 e
- !
+=!
 ref
  !
 free
 vco
-: (5)
-˛Æœ  Ł           Ł  (2), Ł (3) (5)   º        ºŁ  Ø           Ł  -
-æŒ       º       æ     æ         æŁª  º   (  . .      æ    æ    æ æ    ŁØ:
- º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 77˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,N. 3, 2019
-æ æ    Ł   Łº    x Ł      æ              Ł æŁª  º    
-e
-):
+: (4)
+˛Æœ  Ł           Ł  (2), (3) Ł (4),   º        ºŁ  Ø           Ł  -
+æŒ       º       æ     æ         æŁª  º   :
 (
-_ x(t) =
+_ x =
 1
  
 1
@@ -318,7 +277,7 @@ v
 e
 ( 
 e
-(t));
+);
 _
  
 e
@@ -328,7 +287,7 @@ e
  K
 vco
  
-x(t) +
+x+
  
 2
  
@@ -337,16 +296,16 @@ v
 e
 ( 
 e
-(t))
+)
  
 :
-(6)
+(5)
 ˝   º     æ æ    Ł  æŁæ   ß       º   æ  
 e
 (0) (    º  ßØ æ  Łª    ß
 æŁª  º     æ   Ł     ª  ª                 ł  Ł  Œ       ı    ª  æŁª  º )
 Ł x(0) (    º     æ æ    Ł   Łº    ).
-˛    Ł ,     æŁæ     (6)          æ    Ł     æ      ŁŁ
+˛    Ł ,     æŁæ     (5)          æ    Ł     Æ       ŁŁ
  
 !
 free
@@ -360,8 +319,8 @@ free
 e
 ; x(t);  
 e
-(t)); (7)
-         º          Ł   Łææº      Ł  (6)   º Œ   º  !
+(t)); (6)
+         º          Ł   Łææº      Ł  (5)   º Œ   º  !
 free
 e
 > 0 Ł    æ Ł   -
@@ -374,9 +333,9 @@ ref
  !
 free
 vco
-j: (8)
+j: (7)
 — ææ    Ł   æº  Ł    º  Ø æŁ ı   Ł   ŁŁ  º    ºŁ  Ø  Ø        Ł-
-  æŒ Ø     ºŁ          æ    æ        æŁª  º   (6),   . .      æ     æ   
+  æŒ Ø     ºŁ          æ    æ        æŁª  º   (5),   . .      æ     æ   
        æ  0 Ł      æ       
 e
 (t)   æ      :
@@ -388,11 +347,11 @@ e
 (t)  
 eq
 :
-˜º       ª         Ł  Ł  (6) æ     ł  Ł ,   Ł   …      ßł           ,    
-æ æ    Ł   Łº       Œ     æ      : x(t)  x
+ º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 77˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,N. 3, 2019
+  æ    Ł   Łº       Œ     æ       x(t)   x
 eq
-,       æ             º  … 
-_ x(t)  0.   æ    Ł         æŁ  ( 
+.   æ    Ł         æŁ 
+( 
 eq
 ;x
 eq
@@ -430,14 +389,14 @@ eq
  
 =
  
-  + 2 n;
+ +2 n;
 !
 free
 e
 K
 vco
  
-;n2Z (9)
+;n2Z (8)
  æ  Ø Ł ß,   æ æ    Ł         æŁ 
  
  
@@ -456,50 +415,36 @@ e
 K
 vco
  
-;n2Z (10)
+;n2Z (9)
   º   æ  æ… º  Ł. ˙  æ  Ł   º      ı ŁØ Ł   Œæ ’
 s
 ’           æ  Ø Ł    æ -
 æ    Ł         æŁ ,      ı ŁØ Ł   Œæ ’
 u
-’   æ  º .
- º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 78˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,N. 3, 2019
-3 ˜Ł         ı     Æ      æŒ º  ß   Ł 
-˛ Œº    Ł    æ   ß,  º  Œ    ßı     º           æ    æ        æŁª  -
-º     æ Łª    æ æ    Ł         æŁ   º  º Æ ª      º   ª  æ æ    Ł  æ -
-     æ       Ł          ı     [0;!
+’      æ  Ø Ł   .
+3 ˜Ł       Æßæ   ª    ı    
+  ŒæŁ  º  ßØ Ł      º   Œº    ŁØ   æ   ßj!
+free
+e
+j2 [0;!
 p
-) (æ .,     Ł   , [31, 25]). ˜º      ºŁ
-(6)       Æß     Œ     ,      Ł         ı        ª   Ł    (æ .,     Ł   ,
-[32, 33]).
+),  º  Œ    ßı
+    º           æ    æ        æŁª  º     æ Łª    æ æ    Ł         æŁ 
+ º  º Æ ª      º   ª  æ æ    Ł     ß    æ   Ł           ı     (æ .,   -
+  Ł   , [24, 25]). ˜º      ºŁ (5)       Æß     Œ     ,      Ł         ı    
+   ª   Ł    (æ .,     Ł   , [33, 34]).
 ˛     º  Ł  1 ¯æºŁ sup
-t!+1
+t>0
 j 
 e
 (0)  
 e
-(t)j  2 ; ª      ,        Łæı  Ł 
+(t)j > 2 ; ª      ,        Łæı  Ł 
    æŒ º  ß   Ł   ŁŒº  .
-˜º  º Æ ª  !
-free
-e
-     ßØ         æŁæ   ß (6) Ł      Æº æ Ł, ª        -
- Œ   ŁØ        æŒ º  ß   Ł   ŁŒº   ( Æº æ     Ł     Ł  Æ      æŒ º  ß-
-   Ł   ŁŒº   D
-lock in
-(
-)). ˛Æº æ     Ł     Ł  Æ      æŒ º  ß   Ł    -
-º   æ   Æœ  Ł   Ł   º Œ º  ßı  Æº æ  Ø   Ł     Ł  Æ      æŒ º  ß   Ł 
-D
-lock in
- 
-!
-free
-e
- 
-, Œ      Ł  Œ    ßı Ł     æ          .
-˛     º  Ł  2 [31, 25, 34] ˜Ł           ı     Æ      æŒ º  ß   Ł    -
- ß    æ    Œ Ø   ŁÆ º łŁØ Ł      º   Œº    Ł    æ   
+˛    Ł ,               º  Ł     æŒ º  ß   Ł   ŁŒº       æŒ           Ł 
+    Œ   ŁŁ æŁæ   ß    æ       Łæ    æ  º     æ æ    Ł         æŁ .
+˛     º  Ł  2 [24, 25, 35] ˜Ł         Æßæ   ª    ı        ß    æ 
+  ŒæŁ  º  ßØ Ł      º   Œº    ŁØ   æ   
  
  
 !
@@ -509,36 +454,41 @@ e
  
 2 [0;!
 l
-),
-           Ł  æŒ       º           æ     æ         æŁª  º     º   -
-æ  ªº Æ  º     æŁ     Ł  æŒŁ  æ  Ø Ł  Ø Ł  æ   … æ æ    Ł          æŁ 
-æ       æ     Æº æ Ł
-D
-lock in
-(( !
-l
-;!
-l
-)) =
-\
-j!
+)      Ł  Ł   -
+       ı    ,   Œ Ø      º      ºŁ          æ     æ         æŁª  º  ,   -
+ı   ø Øæ    æ æ    ŁŁ         æŁ ,   æº     Œ ª  Ł      Ł    æ   ß!
 free
 e
-j<!
-l
+     Ł    ª  Ł      º    æ Łª    æ æ    Ł          æŁ  Æ      æŒ º  ß-
+   Ł   ŁŒº  .
+ º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 78˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,N. 3, 2019
+˜º  º Æ ª  !
+free
+e
+Ł   Ł          ı          ßØ         æŁæ  -
+ ß (5) Ł      Æº æ Ł, ª         Œ   ŁØ        æŒ º  ß   Ł   ŁŒº  
+( Æº æ   Æßæ   ª    Ł     Ł  D
+lo c k-in
+(!
+free
+e
+)). ˛Æº æ   Æßæ   ª    Ł  -
+   Ł    º   æ   Æœ  Ł   Ł   º Œ º  ßı  Æº æ  Ø Æßæ   ª    Ł     Ł 
 D
-lock in
+lo c k-in
  
 !
 free
 e
+; 
+n(s;u)
+eq
+;x
+n(s;u)
+eq
  
-:
-˛     º  Ł  3 ˛ Œº    Ł    æ    !
-l
-   ß    æ    æ    Ø   ı     Æ  
-   æŒ º  ß   Ł .
- º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 79˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,N. 3, 2019
+, n 2 Z Œ      Ł  Œ    ßı Ł     æ       -
+   ( Łæ. 3).
 -4 -3 -2 - 0 2 3
 -1
 -0.5
@@ -547,7 +497,7 @@ l
 1
 A
 B
-—Łæ. 3:      ßØ              ºŁ (6) æ           Ł H(s) =
+—Łæ. 3:      ßØ              ºŁ (5) æ           Ł H(s) =
 1+s 
 2
 s 
@@ -559,84 +509,52 @@ s
 = 0:0225,
 K
 vco
-= 250,!
+= 250, !
 free
 e
-= 0v
-e
-( 
-e
-)       º…   Ø       º Ø (1).     Ø   ºŁ Œ  Ø        ß º Œ  º -
- ß   Æº æ Ł   ı      Æ      æŒ  º  ß   Ł  D
-lock in
-  Œ  ª Œ     ª  æ æ     Ł         æŁ .
-˛Æº æ     ı     Æ      æŒ º  ß   Ł D
-lock in
-(!
-free
-e
-) æ ªº æ         º -
- Ł  1          æ   Ø   ºŁ Œ Ø     Łæ. 3. ˝     Ø Łºº æ    ŁŁ  º      Œ  -
- ŁŁ,    Ł   ø Øæ       Œ A    Łæı        æŒ º  ß   Ł   ŁŒº  ,     ºŁ Ł 
-       Œ   ŁŁ,    Ł   ø Øæ       Œ B .    ŒŁ   Æ     ,       º     º   Ø
-  æ   Ł   ŒŁ  º    Œ    ßı     Œ   ŁØ         Æº         æŒ º  ß  -
+= 0.     Ø   ºŁ Œ Ø        ß º Œ º  ß   Æº æ Ł Æßæ   ª    ı       º 
+ æ  Ø Ł ßı æ æ    ŁØ        æŁ .
+˙  æ   º      Œ   ŁŁ,    Ł   ø Øæ       Œ A    Łæı        æŒ º -
+ ß   Ł   ŁŒº  ,     ºŁ Ł         Œ   ŁŁ,    Ł   ø Øæ       Œ B .    ŒŁ 
+ Æ     ,       º     º   Ø   æ   Ł   ŒŁ         Æº         æŒ º  ß  -
  Ł   ŁŒº  .
-4    ºŁ Ł  æŒ       Œ   Ł          ı     Æ      -
-æŒ º  ß   Ł 
-ˇ º  Ł    Œº    Ł    æ    j~ !j = 0.  Ł     Ł  ß  æ æ    Ł         -
-æŁ  æŁæ   ß (6),
- 
- 
-nu
-eq
-;x
-eq
-(j~ !j)
- 
-Ł
- 
- 
-nu
-eq
-;x
-eq
-( j~ !j)
- 
-, æ         Ł   ı    æ 
-     Ł D
+4    ºŁ Ł  æŒ       Œ   Ł        Æßæ   ª    ı    
+ˇ æº      ı    ª       ææ      æ        Ł  æŒ Ø    ŒŁ     Ł          -
+ı  Ł  æ          Ł  æ æ    ŁØ        æŁ . —  Œ   Ł      Ł    æ   ß æ  Ł-
+ª         ßØ         æŁæ   ß (5)        ŁŒ ºŁ ( Łæ. 4, º        ı    Ł  Æ-
+     Ł ). ˇ Ł      æ  ø   æ  æ æ    Ł         æŁ  Ł    Łæı  Ł     ßØ
+    ı   ßØ      ææ. ˛ Łł   æ  æ Æ       º  Ł    ŒæŁ  º   Ø   æ   ß!
+l
+,
+ º  Œ     Ø         łŁ æ  Æ      æŒ º  ß   Ł   ŁŒº  . ˇ º  Ł    Œº   -
+ Ł    æ   j~ !j = 0.    ª   æ æ    Ł         æŁ  æŁæ   ß (5),   ı    æ      -
+ Ł D
 lo c k-in
-(0). ˜ º      ºŁ Ł    j~ !j,      ı    ,   Œ 
- 
- 
-nu
-eq
-;x
-eq
-(j~ !j)
- 
-Ł
- 
- 
-nu
-eq
-;x
-eq
-( j~ !j)
- 
-     æ Łª    ª   Ł ßD
+(0) Ł    æŒ º  ß   Ł   ŁŒº         Łæı  Ł  . ˜ º      ºŁ Ł    
+j~ !j      ı    ,   Œ  æ æ    Ł         æŁ   º !
+free
+e
+= j~ !j      æ Łª    ª  -
+ Ł      æ    Ł D
 lo c k-in
 ( j~ !j) Ł D
 lo c k-in
-(j~ !j) æ      -
-æ      .      æº   Ø æ      æ        æ       ı     Æ      æŒ º  ß   Ł  !
+(j~ !j) æ      æ       ( Łæ. 4,       
+ º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 79˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,N. 3, 2019
+   ı    Ł  Æ     Ł ).      æº   Ø æ      æ        æ     Æßæ   ª    ı    
+!
 l
-.
-˜ º   Øł      ºŁ   Ł j~ !j    …  Œ    ,     æŁ     Ł  ß  æ æ    Ł       -
-  æŁ  (6)   ŒŁ         æ    Ł   Æº æ  Ø   ı     Æ      æŒ º  ß   Ł .
-   ŒŁ   Æ        æ       ı     Æ      æŒ º  ß   Ł !
+. ˜ º   Øł      ºŁ   Ł j~ !j    …  Œ      ,     æŁ     Ł  ß  æ æ    Ł 
+       æŁ  (5)   ŒŁ         æ    Ł   Æº æ  Ø Æßæ   ª    ı    .
+˛    Ł ,         Æ   ı [27, 9, 25]  Ł         ı     Æ      æŒ º  ß   Ł 
+Æßº       º…  æ Łæ  º      Ł     º Œ   æ  Ø Ł ßı æ æ    ŁØ        æŁ .  
+       Ł  æŒ Ø    ŒŁ     Ł ,   Ł   ŒŁı     Œ ı             æŒ º  ß   Ł 
+ ŁŒº     Ł     Œº    ŁŁ Ł     æ  Ø Ł  ª  æ æ    Ł         æŁ  ( Łæ. 4,
+        Ł     Ł  Æ     Ł ).
+˜º        º  Ł    æ   ß Æßæ   ª    ı     !
 l
-æŁæ   ß (6) æ -
-     æ      æº    
+æŁæ   ß (5)       æ  Ø Ł-
+ ß  æ æ    Ł          æŁ    º  Ł  æ     ł  Ł 
 x
 eq
 ( !
@@ -650,7 +568,7 @@ eq
 ;!
 l
  
-; (11)
+; (10)
 ª  Q
 0
 ( 
@@ -658,29 +576,13 @@ l
 eq
 ;!
 l
-)   æ       Łæ  æ  º  ( 
+)   æ       Łæ  æ  º ( 
 0u
 eq
 ;!
 l
-). ˛ æ     º    æ   ß   ı    
- º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 80˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,N. 3, 2019
--4 -3 -2 - 0 2 3
-(a)         Łæ  Q
-0
-  Œ      Ł     ı ( 
-e
-;x)
--4 -3 -2 - 0 2
-0
- 3
-(b)         Łæ  S
-0
-  Œ      Ł     ı ( 
-e
-;y)
-—Łæ. 4:      ß         ß (14) Ł (17) æ      æ      .
-Æ      æŒ º  ß   Ł !
+). ˛ æ     º    æ   ß Æßæ   ª 
+  ı    !
 l
 Ł    :
  
@@ -697,11 +599,11 @@ vco
 0
  
  
-( 1)u
+ 1u
 eq
-; 0
+;0
  
-; (12)
+; (11)
 !
 l
 = 
@@ -711,17 +613,17 @@ Q
 0
  
  
-( 1)u
+ 1u
 eq
-; 0
+;0
  
 2
-: (13)
+: (12)
 ˜º        º…   Ø ı   Œ   Łæ ŁŒŁ       ª      Œ     ( k   (1)  ŁŒæŁ-
-      )   æ       ı     Æ      æŒ º  ß   Ł        Æß     ææ        Œ Œ
-   Œ Ł                æŁæ   ß (6): !
+      )   æ     Æßæ   ª    ı           Æß     ææ        Œ Œ    Œ Ł    
+           æŁæ   ß (5):!
 l
-= !
+=!
 l
 (K
 vco
@@ -729,28 +631,28 @@ vco
 1
 ; 
 2
-),   . . Œ    Ø    Ø-
-Œ  (K
+),   . . Œ    Ø    ØŒ  (K
 vco
 ; 
 1
 ; 
 2
-) æ      æ      æ  …       Ł  !
+)
+æ      æ      æ  …       Ł !
 l
-. ˜º    ª ,    Æß     æ   Ł  
-   ŁæŁ  æ     æ   ß   ı     Æ      æŒ º  ß   Ł  !
+. ˜º    ª ,    Æß     æ   Ł      ŁæŁ  æ  
+  æ   ß Æßæ   ª    ı    !
 l
-                  -
-ºŁ (6)              ª   ŁŒ ,       …  æº    ø             . — ææ    Ł 
-ºŁ  Ø        Æ       Ł x!
+                  ºŁ (5)              ª   Ł-
+Œ ,       …  æº    ø             . — ææ    Ł  ºŁ  Ø        Æ       Ł 
+x!
  
 2
  
 1
 x, t! 
 2
-t.  Łæ     (6)   Ł     Ł :
+t.  Łæ     (5)   Ł     Ł :
 (
 _ x =v
 e
@@ -773,16 +675,16 @@ vco
 2
  
 1
-(x +v
+(x+v
 e
 ( 
 e
 )):
-(14)
+(13)
    Œ   ºŁ  Ø        Æ       Ł  Ł          æł  Æ       ª           æŁæ  -
- ß (6)             Ø x Ł     ºŁ          æŒ º  ß   Ł   ŁŒº   Ł  Ł      
-  ı     Æ      æŒ º  ß   Ł .
-˜º  æŁæ   ß æ Ł    …  ß    æł  Æ   (14)       Ł   
+ ß (5)             Ø x Ł     ºŁ          æŒ º  ß   Ł   ŁŒº   Ł  Ł      
+Æßæ   ª    ı    .
+˜º  æŁæ   ß æ Ł    …  ß    æł  Æ   (13)       Ł   
 2
 !
 l
@@ -795,9 +697,8 @@ K
 2
  
 1
-. ˛    Ł ,      º  æŁæ   ß (14) æ     ł  Ł  (13)
+. ˛    Ł ,      º  æŁæ   ß (13) æ     ł  Ł  (12)
   Ł Ł      Ł 
-3
 !
 l
 = 
@@ -808,21 +709,105 @@ vco
 Q
 0
 ( 
-( 1)u
+ 1u
 eq
-; 0)
+;0)
 2 
 1
-: (15)
-3
-˙  æ  Ł   º  Q( 
-e
-;!
+: (14)
+ º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 80˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,N. 3, 2019
+-4 -3 -2 - 0 2
+-1
+-0.5
+0
+0.5
+1
+-4 -3 -2 - 0 2
+-1
+-0.5
+0
+0.5
+1
+-4 -3 -2 - 0 2
+-1
+-0.5
+0
+0.5
+1
+-4 -3 -2 - 0 2
+-1
+-0.5
+0
+0.5
+1
+—Łæ. 4:      ß         ß  º      ºŁ (5) æ           Ł: H(s) =
+1+s 
+2
+s 
+1
+,  
+1
+= 0:0633,
+ 
+2
+= 0:0225, K
+vco
+= 250.  …  ß  (   ŒŁ ) ºŁ ŁŁ æ      æ          ºŁ æ   º  Ł  º  ß 
+!
 free
 e
-)  Æ          æ       Łæ  æŁæ   ß æ Ł    …  ß    æł   Æ   (14).
+=je !j. ˚  æ ß  (æ     Ø   ºøŁ ß) ºŁ ŁŁ       ºŁ æ    Ł    º  ß  !
+free
+e
+= je !j.   -
+æ    Ł         æŁ   Æ       ß    Œ  Ł, æ       Łæß  ı       æ… º  Ł  ßı      Ł   Łı,
+ Æº æ Ł Æßæ   ª    ı       ł  Łı    ß (    ß  ª  Ł     º  ß  ºŁ ŁŁ  º  !
+free
+e
+> 0,
+Œ  æ ß      ŁŒ º  ß  ºŁ ŁŁ  º !
+free
+e
+< 0). `     ß  (  ºæ ß ) ºŁ ŁŁ Ł   …   ª  æ æ  -
+  Ł         æŁ    æº     Œ  ª  Ł      Ł !
+free
+e
+= je !j. ¸  ß      ı    Ł  Ł     Łºº -
+æ    ŁŁ Ł  Æ              Ł  æŁæ   ß   Ł !
+free
+e
+<!
+l
+Ł!
+free
+e
+>!
+l
+, æ      æ      . ˇ   ß 
+   ı    Ł  Ł     Œ   Ł ŒŁ Ł  Æ           Œ   Ł        Æßæ   ª    ı       æ      -
+æ  Ł  æ   æ  Ł æ æ     Ł  Ł        æŁ  (!
+l
+  70:77) Ł   º Œ  æ   æ  Ø Ł ß Ł æ æ     Ł  Ł
+       æŁ  (!
+l
+  85:25), æ      æ      .
  º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 81˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,N. 3, 2019
-ˇ    Łł   (14)  Æ       a =
+-4 -3 -2 - 0 2 3
+(a)         Łæ  Q
+0
+  Œ      Ł     ı ( 
+e
+;x)
+-4 -3 -2 - 0 2
+0
+ 3
+(b)         Łæ  S
+0
+  Œ      Ł     ı ( 
+e
+;y)
+—Łæ. 5:      ß         ß (13) Ł (15) æ      æ      .
+ˇ    Łł   (13),  Æ       a =
 q
 K
 vco
@@ -831,37 +816,22 @@ vco
 2
  
 1
-Ł   Ł      ºŁ  Ø        Æ    -
-   Ł t!
+Ł   Ł          Æ       Ł 
+t !
 1
 a
-t:
-(
-_ x =
-1
-a
-v
-e
-( 
-e
-);
-_
- 
-e
-=
+t Ł y =
  
 2
 !
 free
 e
 a
- a (x +v
+ a(x+v
 e
 ( 
 e
 )):
-(16)
-— ææ    Ł  æŁæ    :
 (
 _
  
@@ -876,21 +846,9 @@ e
 e
 ( 
 e
-);
-(17)
-ª   y =
- 
-2
-!
-free
-e
-a
- a (x +v
-e
-( 
-e
-)). ˛    Œ Ł  º      æŁæ     (14) Ł      º   
-ŁæŒº  Ł   !
+):
+(15)
+         º    ŁæŒº  Ł  !
 free
 e
 Ł    º   Øł ª    ææ      Ł .
@@ -898,12 +856,12 @@ e
 eq
 ;y
 eq
-) æŁæ   ß (14) Ł æ      æ   -
- øŁ  æ æ    Ł         æŁ  ( 
+) æŁæ   ß (13) Ł æ      æ   -
+ øŁ  æ æ    Ł         æŁ ( 
 eq
 ;x
 eq
-) æŁæ   ß (17)     ª  Ł   ª      Ł   Ł
+) æŁæ   ß (15)     ª  Ł   ª      Ł   Ł
 æ     ß æ     ł  Ł  
 ( 
 eq
@@ -923,7 +881,7 @@ a
  ax
 eq
  
-: (18)
+: (16)
         Łæ  Q
 0
 ( 
@@ -931,12 +889,12 @@ e
 ;!
 free
 e
-) Ł  (15) æ      æ      æ       Łæ  S
+) Ł  (14) æ      æ      æ       Łæ  S
 0
 ( 
 e
 )      -
-    Ø  º æŒ æ Ł (17) Ł  ß  º     æ     ł  Ł 
+    Ø  º æŒ æ Ł (15) Ł  ß  º     æ     ł  Ł 
 Q
 0
 ( 
@@ -960,8 +918,8 @@ a
 e
 )
  
-: (19)
- º       º   !
+: (17)
+ º       º   ,!
 l
       º   æ        º Ø
 !
@@ -979,7 +937,7 @@ S
 ( 
  1u
 eq
-): (20)
+): (18)
    Æß   º  Ł   S
 0
  
@@ -987,12 +945,16 @@ eq
  1u
 eq
  
-= S
+=S
 0
-(  )     ºŁ                Ł  æŁæ   ß
-(17)          
-4
+(  ),     ºŁ                Ł  æŁæ   ß
+(15)          
+2
 :
+2
+ˇ    Æ ßØ æ  æ Æ   ææ      Ł  Łæ  º      æ       Æ    [36]  º      ŒŁ   æ   ß  ßı      Ł  æŁ ı   Ł   
+ º      æ     ª º   Ø ı    Œ   Łæ ŁŒ  Ø       ª      Œ    .
+ º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 82˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,N. 3, 2019
 dy
 d 
 e
@@ -1008,23 +970,19 @@ e
 e
 )
 y
-(21)
-ˇ æº     ª  æº        ææ            Œ   ŁŁ (21)      …ı      Œ ı     
+: (19)
+ˇ æº     ª  æº        ææ            Œ   ŁŁ (19)      …ı      Œ ı     
 e
-Ł   Ø Ł  º   Łı     Œ   ŁŁ æŁæ   ß          Ø  º æŒ æ Ł (æ .  Łæ. 5).
-4
-ˇ    Æ ßØ æ  æ Æ   ææ      Ł  Łæ  º      æ       Æ    [35]  º      ŒŁ   æ   ß  ßı      Ł  æŁ ı   Ł   
- º      æ     ª º   Ø ı    Œ   Łæ ŁŒ  Ø       ª      Œ    .
- º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 82˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,N. 3, 2019
+Ł   Ø Ł  º   Łı     Œ   ŁŁ æŁæ   ß          Ø  º æŒ æ Ł (æ .  Łæ. 6).
 -
 0
 0
 I II III
 -
-—Łæ. 5:      ßØ         (17), Łºº æ  Ł   øŁØ ł ªŁ      ææ Ł   ª Ł     Ł  æ       Ł-
-æß. ˚  æ    ( Ł     æ º ł   ) ºŁ Ł          Œ   I   æ Ææ     ßØ   Œ    æ  º  ( ; 0).
- Ł    (    ß Łæ    ) ºŁ Ł          Œ   I I Ł   º…    (Ł  Æ           Œ   Ł) ºŁ Ł       -
-   Œ   I I I   Ł   ª  º  ß  Œ Ł ß 
+—Łæ. 6:      ßØ         (15), Łºº æ  Ł   øŁØ ł ªŁ      ææ Ł   ª Ł     Ł  æ       Ł-
+æß. ˚  æ    (  ºæ     æ º ł   ) ºŁ Ł          Œ  I   æ Ææ     ßØ   Œ    æ  º ( ;0).
+ Ł    (   Œ Ł    ) ºŁ Ł          Œ  II Ł   º…    (   Œ Ł    ) ºŁ Ł          Œ   I I I  
+Ł   ª  º  ß  Œ Ł ß .
 ˜º       Œ  
 e
 2 I =
@@ -1040,7 +998,7 @@ y =
 q
 a
 2
-+ 4(  
++4(  
 1
 k
 ) a
@@ -1050,7 +1008,7 @@ k
 1
 k
  
-(  x); (22)
+(  x); (20)
    ª  
 S
  
@@ -1061,12 +1019,13 @@ k
 q
 a
 2
-+ 4(  
++4(  
 1
 k
 ) a
 2
-: (23)
+: (21)
+ º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 83˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,N. 3, 2019
 ˜º   
 e
 2 II =
@@ -1078,7 +1037,7 @@ k
 1
 k
  
-       Ł  (21)   Ł     Ł 
+       Ł  (19)   Ł     Ł 
 dy
 d 
 e
@@ -1086,13 +1045,12 @@ e
 k 
 e
 y
-: (24)
- º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 83˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,N. 3, 2019
+: (22)
 ˇ æº       ßz =
 y
  
 e
-       Ł  (24) æ   Ł æ  Œ        Ł  æ      º…  ß Ł
+       Ł  (22) æ   Ł æ  Œ        Ł  æ      º…  ß Ł
         ß Ł
 zdz
 z
@@ -1103,13 +1061,13 @@ d
 e
  
 e
-: (25)
+: (23)
 ´    Ł   ª  º    º   Ø Ł      Ø   æ  Ø Ł       łŁæ   Æ      Œ Œ    Ł     
 ( 
 e
-;y),   º       Æø     ł  Ł         Ł  (24)    Ł   F ( 
+;y),   º       Æø     ł  Ł         Ł  (22)    Ł   F( 
 e
-;y;a;k) +C
+;y;a;k)+C
 F
 = 0.
    º ªŁ     º   
@@ -1130,19 +1088,19 @@ e
 1
 k
  
-a +
+a+
  
 e
 + 
 y
  
-: (26)
+: (24)
 ˇ æº       ßz =
 y
  
 e
 + 
-  º     
+       Ł    Ł     Ł 
  
   
 1
@@ -1156,20 +1114,20 @@ k
  
 z
 2
- az  1
+ az 1
 = 
 d 
 e
  
 e
 + 
-; (27)
-     Ł   ª  º    º   Ø Ł      Ø   æ  Ø Ł       łŁæ   Æ      Œ Œ    Ł     
+: (25)
+´    Ł   ª  º    º   Ø Ł      Ø   æ  Ø Ł       łŁæ   Æ      Œ Œ    Ł     
 ( 
 e
-;y),   º       Æø     ł  Ł         Ł  (26)    Ł   G( 
+;y),   º       Æø     ł  Ł         Ł  (24)    Ł   G( 
 e
-;y;a;k) +C
+;y;a;k)+C
 G
 = 0.
 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9
@@ -1201,93 +1159,12 @@ G
 0.6
 0.7
 0.8
-—Łæ. 6: ˜Ł ª    ß  Ł          ı      Æ      æŒ  º  ß   Ł   º  Œº ææŁ  æ Ø     æ    -
- ª º   Ø ı    Œ   Łæ ŁŒ  Ø       ª      Œ     Ł  Łº        Ł   "Ł   º  ßØ Ł   ª     ".
-˙  æ   Ł ª    ß    ß  º   ŁŒ æŁ       ª   
-2
-= 0:0225. ˇ   ß Łæ     ºŁ Ł  Ł æ    º  æ -
-      ºŁ Œ   æ      æ          Œ  ,      Ø   [24], æ º ł    ºŁ Ł  Ł  …   -æ       ºŁ Œ  
-      Œ  ,      Ø      Ø   Æ   .
- º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 84˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,N. 3, 2019
--4 -3 -2 - 0 2
--1
--0.5
-0
-0.5
-1
--4 -3 -2 - 0 2
--1
--0.5
-0
-0.5
-1
--4 -3 -2 - 0 2
--1
--0.5
-0
-0.5
-1
--4 -3 -2 - 0 2
--1
--0.5
-0
-0.5
-1
-—Łæ. 7:      ßØ        ß  º       ºŁ (6) æ           Ł: H(s) =
-1+s 
-2
-s 
-1
-,  
-1
-= 0:0633,
+—Łæ. 7: ˜Ł ª    ß  Ł        Æßæ   ª    ı      º  Œº ææŁ  æ Ø     æ     ª º   Ø
+ı   Œ   Łæ ŁŒ Ø       ª      Œ     Ł  Łº       Ł    Ł   º  ßØ Ł   ª     ¿   Ł
  
 2
-= 0:0225, K
-vco
-= 250, v
-e
-( 
-e
-)          º  (1).  …  ß (   ŒŁ ) ºŁ ŁŁ æ      æ     
-     ºŁ æ   º   Ł  º  ß  !
-free
-e
-=je !j. ˚  æ ß  (  ºæ ß ) ºŁ ŁŁ        ºŁ æ    Ł    º -
- ß  !
-free
-e
-= je !j.   æ     Ł         æŁ   Æ        ß    Œ   Ł, æ       Łæß  ı         æ… º 
-Ł  ßı       Ł   Łı,  Æº æ Ł   ı      Æ      æŒ  º  ß   Ł    ł  Łı     ß (    ß  ª  Ł   -
-   º  ß  ºŁ ŁŁ  º !
-free
-e
-> 0, Œ  æ ß      ŁŒ  º  ß  ºŁ ŁŁ  º !
-free
-e
-< 0). `      ß  (æ  ß 
-  ºæ ß ) ºŁ ŁŁ Ł   …   ª  æ æ     Ł         æŁ    æº     Œ  ª  Ł      Ł  !
-free
-e
-! je !j.
-¸  ß      ı    Ł  Ł     Łºº æ    ŁŁ Ł  Æ               Ł  æŁæ   ß   Ł !
-free
-e
-<!
-lo c k-in
-Ł!
-free
-e
->!
-lo c k-in
-, æ      æ      . ˇ   ß      ı    Ł  Ł     Œ    Ł ŒŁ Ł  Æ            Œ 
- Ł          ı      Æ      æŒ  º  ß   Ł    æ      æ  Ł  æ   æ  Ł æ æ     Ł  Ł        -
-æŁ  (!
-lo c k-in
-  70:77) Ł   º Œ   æ   æ  Ø Ł ß Ł æ æ     Ł  Ł        æŁ (!
-lo c k-in
-  85:25),
-æ      æ      .
+= 0:0225. ˇ   ß Łæ    ºŁ Ł  Ł æ   º  æ       ºŁ Œ   æ      æ          Œ ,      Ø  
+[27], æ º ł    ºŁ Ł  Ł  …   -æ       ºŁ Œ        Œ ,      Ø      Ø   Æ   .
 ˚  æ    ß Ł   ª Ł     Ł  æº            ºŁ  ,  æ     Ł   º  Œ    ª 
 Ł          Œ   Œ             : ( 
 e
@@ -1319,42 +1196,101 @@ k
 1
 k
  
-    ł  Ł         Ł  F ( 
+    ł  Ł         Ł  F( 
 e
 ;y;a;k) +C
 F
 = 0
     æŁ  º   y . ¨æŒ    S(  )     ł  Ł         Ł G( 
 e
-;y;a;k) +C
+;y;a;k)+C
 G
-5
 .
-˛    Ł ,       º  Ł         ŁØ Ł   º   Øł     ææ      Ł    ł  ŁØ  
-5
-˜º         Ł   º    Ł   ª Ł   ø ª   Łº      æ            Ø    Œ Ł Ø H(s) =
-1+ 2s
-1+( 1+ 2)s
-      
-     æ Ł    º ªŁ  ß    æ     Ł .
+ º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 84˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,N. 3, 2019
+˜º         Ł   º    Ł   ª Ł   ø ª   Łº     æ            Ø    Œ Ł-
+ ØH(s) =
+1+ 
+2
+s
+1+( 
+1
++ 
+2
+)s
+           æ Ł    º ªŁ  ß    æ     Ł . ´      æº    
+   Æı  Ł     Ł ß     æ   Ł ŁŒ    ºŁ  Ø  ª  Ł      Ł    º    ŁØ æ æ  -
+  ŁØ        æŁ  ( Łæ. 8).
+-4 -3 -2 - 0
+-0.05
+0
+0.05
+(a) !
+free
+e
+= 50.
+-4 -3 -2 - 0
+-0.05
+0
+0.05
+(b) !
+free
+e
+= 73:7320.
+-4 -3 -2 - 0
+-0.05
+0
+0.05
+(c) !
+free
+e
+= 80.
+-4 -3 -2 - 0
+-0.05
+0
+0.05
+(d) !
+free
+e
+= 77:7440.
+—Łæ. 8:      ßØ             æ        Ł   º   -Ł   ª Ł   øŁ   Łº      H(s) =
+1+ 
+2
+s
+1+( 
+1
++ 
+2
+)s
+Ł     ª º   Ø ı   Œ   Łæ ŁŒ Ø       ª      Œ      º             K
+vco
+= 250,
+ 
+1
+= 0:0225,  
+2
+= 0:0633. ˝  Œ      Ł  Æ     ŁŁ     ß  (   ŒŁ ) ºŁ ŁŁ            -
+                       Œº    Ł    æ   ß, Œ  æ ß  (æ     Ø   ºøŁ ß) ºŁ ŁŁ         
+                    æº      Œº    Ł    æ   ß. `      ß  (  ºæ ß ) ºŁ ŁŁ         
+æ æ    Ł   æŁ ı   Ł   ŁŁ æŁæ   ß        Œº    Ł    æ   ß.
  º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 85˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,N. 3, 2019
+˛    Ł ,       º  Ł         ŁØ Ł   º   Øł     ææ      Ł    ł  ŁØ  
  Ł        ßı    Œ ŁØ      º    Ł Æ  Ł  æ           Ł Ł     æŁ    ßŒº  -
-ŒŁ, Łæ  º      łŁ æ   º     ºŁ           Æ    [36].
-˝   Łæ.6  º   
+ŒŁ, Łæ  º      łŁ æ   º     ºŁ           Æ   ı [27, 37]. ` º       º   
+æ      Ł  Æ        Ł         [38].
+˝   Łæ.7  º   
 2
 = 0:0225   Ł     ß  Ł ª    ß,   º     ß  æ     ø  
-  Łæ    ª         Ł Łı æ      Ł  æ      º      Ł Ł    Æ  ß [24], ª         -
+  Łæ    ª         Ł Łı æ      Ł  æ      º      Ł Ł    Æ  ß [27], ª         -
   º  ŁŁ  Ł          Ł ß  º æ    º Œ   æ  Ø Ł    æ æ    Ł         æŁ .
 5 ˙ Œº    Ł 
-´      Ø   Æ     Ææ      æ  æ   ª         º  Ł   Ł          ı     Æ  
-   æŒ º  ß   Ł ,   Ł   Ł æ         º   ß Łæº  Ł   Ł          ı     Æ  
-   æŒ º  ß   Ł   º  Œº ææŁ  æŒ Ø     æ  Æ Æø…   Ø Œ æ    -ºŁ  Ø  Ø ı -
-  Œ   Łæ ŁŒ Ø       ª      Œ    . ˜   ßØ         Ł   Ł  Œ     æ    -
-ºŁ  ß Ł  Łº     Ł,     Ł   ,  Ł   "Ł   º  ßØ Ł   ª     ". —    º    ß,
-  º     ß     ºŁ Ł  æŒŁ         ,             æ   Łæº   ß      ºŁ  -
-   Ł  .
-6 `º ª      æ Ł
-˜        Æ     ß  º       Ł        Œ  ª      —˝  19-41-02002.
+´      Ø   Æ     Ææ      æ  æ   ª         º  Ł   Ł        Æßæ   ª    -
+ı    ,   Ł   Ł æ         º   ß Łæº  Ł   Ł        Æßæ   ª    ı      º 
+Œº ææŁ  æŒ Ø     æ  Æ Æø…   Ø Œ æ    -ºŁ  Ø  Ø ı   Œ   Łæ ŁŒ Ø     -
+  ª      Œ    . —    º    ß,   º     ß     ºŁ Ł  æŒŁ         ,        -
+     æ   Łæº   ß      ºŁ     Ł  .
+`º ª      æ Ł
+˜        Æ     ß  º       Ł        Œ  ª      — ææŁØæŒ ª  ˝     ª     -
+    19-41-02002.
   Łæ Œ ºŁ       ß
 [1] Viterbi A. Principles of coherent communications. New Y ork: McGraw-Hill,
 1966. P . 321.
@@ -1368,15 +1304,15 @@ Moscow, Goryachaya Liniya-T elekom Publ. 2011.
 [5] Best R.E. Phase-Locked Loops: Design, Simulation and Application. 6th
 edition. McGraw-Hill, 2007. P . 490.
  º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 86˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,N. 3, 2019
-[6] Kolumban Geza. Software De ned Electronics: A Revolutionary Change in
-Design and T eaching Paradigm of RF Radio Communications Systems //
-ICT Express. 2015. V ol. 1, no. 1. P . 44   54.
+[6] Kolumban G. Software De ned Electronics: A Revolutionary Change in De-
+sign and T eaching Paradigm of RF Radio Communications Systems // ICT
+Express. 2015. V ol. 1, no. 1. P . 44   54.
 [7] Best R.E. Costas Loops: Theory , Design, and Simulation. Springer Interna-
 tional Publishing, 2018.
-[8] Ladv  anszky J  anos. A COST AS LOOP V ARIANT FOR LARGE NOISE //
-Journal of Asian Scienti c Research. 2018. V ol. 8, no. 3. P . 144 151.
+[8] Ladv  anszky J. A Costas loop v ariant for large noise // Journal of Asian
+Scienti c Research. 2018. V ol. 8, no. 3. P . 144 151.
 [9] Alexandrov K.D., Kuznetsov N.V., Leonov G.A. et al. Pull-in range of the
-classical {PLL} with impulse signals // IF AC-PapersOnLine. 2015. V ol. 48,
+classical PLL with impulse signals // IF AC-PapersOnLine. 2015. V ol. 48,
 no. 1. P . 562 567.
 [10] Best R.E. Phase-locked Loops: Design, Simulation, and Applications. Mc-
 Graw Hill, 1984.
@@ -1406,44 +1342,50 @@ Synthesizers, Mixed Signal, and Digital Signal Processing. Elsevier Science,
 and Symbol Recovery System for Wireless Channel. Springer, 2015.
 [23] Middlestead R.W. Digital Communications with Emphasis on Data Modems:
 Theory , Analysis, Design, Simulation, T esting, and Applications. Wiley , 2017.
-[24] Aleksandrov K.D., Kuznetsov N.V., Leonov G.A. et al. Lock-in range of clas-
-sical PLL with impulse signals and proportionally-integrating  lter // arXiv
-preprint arXiv:1603.09363. 2016.
+[24] Kuznetsov N.V., Leonov G.A., Y uldashev M.V., Y uldashev R.V. Rigorous
+mathematical de nitions of the hold-in and pull-in ranges for phase-locked
+loops // IF AC-PapersOnLine. 2015. V ol. 48, no. 11. P . 710 713.
 [25] Leonov G.A., Kuznetsov N.V., Y uldashev M.V., Y uldashev R.V. Hold-in,
 pull-in, and lock-in ranges of PLL circuits: rigorous mathematical de nitions
 and limitations of classical theory // IEEE T ransactions on Circuits and
 Systems I: Regular Papers. 2015. V ol. 62, no. 10. P . 2454 2464.
-[26] Gardner F.M. Phaselock techniques. New Y ork: John Wiley & Sons, 1966.
+[26] Kuznetsov N. V. Analytical-numerical methods for the study of hidden oscil-
+lations (Habilitation thesis, in Russian). Saint-Petersburg State University ,
+2016.
+[27] Aleksandrov K.D., Kuznetsov N.V., Leonov G.A. et al. Lock-in range of clas-
+sical PLL with impulse signals and proportionally-integrating  lter // arXiv
+preprint arXiv:1603.09363. 2016.
+[28] Gardner F.M. Phaselock techniques. New Y ork: John Wiley & Sons, 1966.
 P . 182.
-[27] Shakhgil’dyan V.V., Lyakhovkin A.A. F azov aya avtopodstroik a chastoty (in
+[29] Shakhgil’dyan V.V., Lyakhovkin A.A. F azov aya avtopodstroik a chastoty (in
 Russian). Moscow: Svyaz’, 1966.
-[28] Leonov G.A., Kuznetsov N.V., Y uldashev M.V., Y uldashev R.V. Analytical
+[30] Leonov G.A., Kuznetsov N.V., Y uldashev M.V., Y uldashev R.V. Analytical
 method for computation of phase-detector characteristic // IEEE T ransac-
 tions on Circuits and Systems - II: Express Briefs. 2012. V ol. 59, no. 10.
 P . 633 647.
-[29] Ladv  anszky Janos. A Costas loop with di erential coding // IJCRR. 2017.
+[31] Ladv  anszky J. A Costas loop with di erential coding // IJCRR. 2017.
 P . 20305 20310.
-[30] Kuznetsov N.V., Kuznetsov a O.A., Leonov G.A. et al. Simulation of nonlinear
+[32] Kuznetsov N.V., Kuznetsov a O.A., Leonov G.A. et al. Simulation of nonlinear
 models of QPSK Costas loop in MatLab Simulink // 2014 6th International
+ º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 88˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,N. 3, 2019
 Congress on Ultra Modern T elecommunications and Control Systems and
 W orkshops (ICUMT). V ol. 2015-January . IEEE, 2014. P . 66 71.
-[31] Kuznetsov N.V., Leonov G.A., Y uldashev M.V., Y uldashev R.V. Rigorous
-mathematical de nitions of the hold-in and pull-in ranges for phase-locked
-loops // IF AC-PapersOnLine. 2015. V ol. 48, no. 11. P . 710 713.
- º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 88˜Ł        Ł º  ß          Ł  Ł      ææß       º  Ł ,N. 3, 2019
-[32] Leonov G.A., Aleksandrov K.D. Frequency-Domain Criteria for the Global
+[33] Leonov G.A., Aleksandrov K.D. Frequency-Domain Criteria for the Global
 Stability of Phase Synchronization Systems // Doklady Mathematics. 2015.
 V ol. 92, no. 3. P . 764 768.
-[33] Alexandrov K.D., Kuznetsov N.V., Leonov G.A. et al. Pull-in range of
+[34] Alexandrov K.D., Kuznetsov N.V., Leonov G.A. et al. Pull-in range of
 the PLL-based circuits with proportionally-integrating  lter // IF AC-
 PapersOnLine. 2015. V ol. 48, no. 11. P . 720 724.
-[34] Best R.E., Kuznetsov N.V., Leonov G.A. et al. T utorial on dynamic analysis
+[35] Best R.E., Kuznetsov N.V., Leonov G.A. et al. T utorial on dynamic analysis
 of the Costas loop // IF AC Annual Reviews in Control. 2016. V ol. 42.
 P . 27 49.
-[35] Huque A.S., Stensby J. An analytical approximation for the pull-out frequen-
-cy of a PLL employing a sinusoidal phase detector // ETRI Journal. 2013.
-V ol. 35, no. 2. P . 218 225.
-[36] Shakhtarin B.I. Study of a piecewise-linear system of phase-locked frequency
+[36] Huque A.S., Stensby J.L. An exact formula for the pull-out frequency of a
+2nd-order type II phase lock loop // IEEE Communications Letters. 2011.
+V ol. 15, no. 12. P . 1384 1387.
+[37] Shakhtarin B.I. Study of a piecewise-linear system of phase-locked frequency
 control // Radiotechnica and electronik a (in Russian). 1969. no. 8. P . 1415 
 1424.
+[38] Blagov M.V. Analytical-numerical methods of lock-in range estimation for
+two-dimensional PLL (thesis) (scienti c supervisor   N.V. Kuznetsov). (in
+preparation), 2019.
  º Œ     ßØ      º. h ttp://di journal.spbu.ru/ 89

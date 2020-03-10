@@ -1,0 +1,1724 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 4, 2019
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Dynamical systems in medicine, biology, ecology, and chemistry
+Exterior calculus note on the additive separation
+of variables 3D solution to a dynamical neutron diffusion BVP
+Haidar N. H. S.
+Center for Research in Applied Mathematics and Statistics
+AUL, Cola Str., Beirut, Lebanon
+Email: nhaidar@suffolk.edu
+Abstract
+The boundary value approach to dynamic optimization is still an active area
+of research in many domains of process engineering. The particular domain of in-
+terest in the present work is a certain nonlinear optimization problem, constrained
+by a 3D neutron diffusion partial differential equation (PDE) and controlled, in
+time, by the boundary conditions. An analytical solution to the associated linear
+boundary value problem (BVP), which is a principal activity of this optimiza-
+tion, has been reached in 2019 by this author, based on application of an additive
+separation of variables (ASOV) principle, and was published in the International
+Journal of Dynamical Systems and Differential Equations.
+The sole objective of this paper is to examine and verify the consistency of the
+ASOV method in solving the BVP of this optimization process. The justiﬁcation
+of this method is based on reversibility of a pertaining generalized Euclidean
+transformation, and on asserting this reversibility in the context of an exterior
+differential framework for the BVP.
+Keywords: additive separation of variables, dynamical neutron diffusion,
+cancer therapy, boundary value problem, Euclidean transformation, exterior anal-
+ysisDifferential Equations and Control Processes, N. 4, 2019
+1 Introduction
+The panoramic picture of the research, addressed in this paper, overlooks a non-
+linear dynamic optimization [10, 12] problem, constrained [9] by (i) a source-free
+3D neutron diffusion PDE and (ii) parametrized time control in some boundary
+equality constraints, [12, 14, 16, 20], of an associated linear BVP. The presented
+research is a contribution to the boundary value approach to dynamic optimiza-
+tion, reported in [12], which distinctively employs explicit parametrization, [10,
+12]. The motivation for it comes from the fact that dynamical neutron ﬂuxes
+happen to penetrate a (B/Gd)-loaded cancerous region better [11] than alterna-
+tive stationary ﬂuxes. A result that brings about a possible improvement in the
+nonlinear therapeutic objectives, to be optimized.
+The present paper focuses, however, only on one detail of this picture, namely
+on the consistency of the analytical solvability of this dynamical BVP by the
+ASOV method, reported in [9]. It is well known that the availability of an analyt-
+ical differentiable solution, [9], to the posing unique BVP is of crucial importance,
+[24, 27]. It happens to allow for an explicit nonlinearly parametrized Pareto op-
+timization, [10, 12], that is employable instead of alternative optimization via
+Pontryagin’s Maximum Principle [24], or Bellman’s Dynamic Programming, with
+their implicit-only parametrization and their other intrinsic diﬃculties [29].
+The 3D dynamical BVP of neutron cancer therapy, reported in [9], models
+the irradiation of a cancerous region R of an R[ ( [ 
+[f) composite in
+a patient by three orthogonal time-modulated beams of thermal neutrons. Its
+dynamical output variable is the neutron ﬂux  (r;t);which satisﬁes the following
+monoenergetic volumetric source-free neutron diffusion PDE
+(1)
+L(t;r; ;  
+(2)
+) =
+1
+v
+@
+@t
+ (x;y;z;t) 5  D5  (x;y;z;t)
++ 
+a
+ (x;y;z;t) = 0;
+on a paralellipepedal region R (with a zero surface U that contains the (0,0,0)
+corner, an extrapolated region R; see e.g. [15], and an extrapolated surface V
+that contains the (a;b;c) corner) with r = (x;y;z)2 R; t2 [0;1); (r;t)2<;
+ 
+a
+as the neutron absorption macroscopic cross section [15], and D as a neutron
+diffusion tensor deﬁned via
+(2) 5  D5 =5 
+h
+D(x)
+@
+@x
+i + D(y)
+@
+@y
+j + D(z)
+@
+@z
+k
+i
+=D
+k
+@
+2
+@x
+2
++D
+`
+@
+2
+@y
+2
++D
+?
+@
+2
+@z
+2
+;
+Electronic Journal. http://diffjournal.spbu.ru/ 54Differential Equations and Control Processes, N. 4, 2019
+in which {i, j;k}is a basis for R:
+The constraints are represented by the three dimensional vector equation
+B(t;r; ;  
+(1)
+) =b (t;r) :
+(3)  (r;t)j
+r2 V
+= 0;
+(4)5 (r;t)j
+r2 U
+=
+8
+>
+<
+>
+:
+ 
+{
+k
+D
+k
+S(t);x = 0 ( y z plane adjacent to  )
+ 
+{`
+D
+`
+¸ S(t);y = 0 ( x z plane adjacent to 
+)
+ 
+{
+?
+D
+?
+ 
+S(t);z = 0 ( x y plane adjacent tof);
+(5)  (r; 0)j
+r2 R
+=
+8
+>
+<
+>
+:
+'(x);y z plane
+;(y);x z plane
+?(z);x y plane;
+In this BVP S(t); ¸ S(t) and
+ 
+S(t) are assumed to be a periodic boundary
+temporal surface source functions of even symmetry, D
+k
+; D
+`
+and D
+?
+are the
+directional diffusion coeﬃcients, with {
+k
+= {
+Rk; 
+=
+%
+ 
+%
+Rk
++ %
+ 
+, {
+`
+= {
+R`;
+
+=
+%
+
+
+%
+R`
++ %
+
+
+; and {
+?
+={
+R?;f
+=
+%
+f
+%
+R?
++ %
+f
+as coupling factors, deﬁned in [9], of the R
+region with the  ; 
+ andf slabs in an R[ ( [ 
+[f) composite. Here %
+ 
+;%
+
+
+;
+and%
+f
+are regional albedos while%
+Rk;
+;%
+R?
+and%
+R`
+are directional albedos, [9], of
+the cancerous region R.
+Throughout this paper, it would be assumed that the neutron ﬂux intensity
+J(x;y;z;t); atx = 0
++
+through the  \R plane;aty = 0
++
+through the\R plane,
+and at z = 0
++
+through thef\R plane; should respectively satisfy
+J(0
++
+;y;z;t) ={
+Rk; 
+S(x;t);
+J(x; 0
++
+;z;t) ={
+R`;
+
+¸ S(y;t);
+J(x;y; 0
++
+;t) ={
+R?;f
+ 
+S(z;t):
+In this BVP, the PDE is homogeneous (source free), and its BC’s are of the
+samekindineachofthetreespatialvariables. Inparticular, thespatialDirichlet’s
+BC(i) is homogeneous while the temporal Dirichlet’s BC(iii) is nonhomogeneous.
+The Neumann BC(ii) is also nonhomogeneous, but periodic in time.
+This problem has analytically been solved in [9] by an additive separation of
+variables(ASOV) method, andourmainconcerninthisworkistheestablishment
+of the consistency of this method for this application.
+It is well known that identiﬁcation of a symmetry group G for a linear non-
+homogeneous boundary value problem (BVP)
+Electronic Journal. http://diffjournal.spbu.ru/ 55Differential Equations and Control Processes, N. 4, 2019
+(6)
+(
+L(x; ;  
+(K)
+) =f(x)
+B(x; ;  
+(K 1)
+) =b(x);
+where the partial differential and boundary vector operators,L and B;are both
+linearonR
+n
+anddepend atmostontheK the partialderivative  
+(K)
+of  ;leads
+to an eﬃcient method for its solution, [1, 2, 18]. Indeed, the symmetry group,
+generally speaking, is a Lie group, [23], and a Lie algebra is always associated with
+a Lie group. Moreover, a Lie algebra, having at least one inﬁnitesimal generator,
+has a given dimension, and whenever the Lie algebra is solvable, the BVP is
+solvable. So the existence of a symmetry group for (6) can possibly be utilized to
+establishtheirreduciblecomponentsforthe  
+(K)
+andx = (x
+1
+;x
+2
+;x
+3
+;::::;x
+n
+)2R
+n
+variables, then to deduce a solution. This happens to lead, [13], to a separated
+variable system BVP
+(7)
+(
+G(x;u;u
+(K)
+) =g(x)
+Q(x;u;u
+(K 1)
+) =q(x);
+by means of a u7!   transformation   = (u);or u = 
+ 1
+( );that deﬁnes an
+accompanying (indexed with ) nonsingular linear operator  
+
+viz
+(8)  
+
+ 
+L  f
+B  b
+!
+=
+ 
+G  g
+Q  q
+!
+:
+Relation (7) indicates that symmetry adapted solutions to partial differential
+equations (PDE’s) from knowledge of their Lie symmetries is an example of or-
+thogonalvariableseparation, seee.g. [22]. Inparticular, W.Millerhashighlighted
+in [22] many points of contact between separation of variables methods and Lie
+symmetries of a PDE, including their possible ties with the mathematics of the
+rather old St¨ ackel form, [26]. It should be noted, however, that symmetry-based
+methods have not been widely used, [4], for solving BVP’s. The reason being that
+the pertaining boundary conditions (BC’s) are usually not invariant under most
+similarity transformations, i.e. they do not admit the symmetries of the governing
+PDE’s. Probably, the ﬁrst rigorous deﬁnition of Lie’s invariance for BVP’s was
+formulated by G. W. Bluman, [4], in 1974. In fact there are still many realistic
+BVP’s that cannot be solved using any deﬁnition, [2], of Lie’s invariance of a BVP.
+Hence deﬁnitions involving more general types of symmetries, like Lie-B¨ acklund
+non-point symmetries, are currently being investigated.
+Despite all the previously stated, solving BVP’s by separation of variables is
+both an art and science, which may seem to be only adhoc in nature. For linear
+Electronic Journal. http://diffjournal.spbu.ru/ 56Differential Equations and Control Processes, N. 4, 2019
+PDE’s, a multivariate solution  (x), in separated variable form, has widely been
+attempted by applying representations of  (x) as products or sums of single
+variable functions P
+(i)
+(x
+i
+) or S
+(i)
+(x
+i
+) viz
+(9)  (x) =
+n
+Q
+i =1
+P
+(i)
+(x
+i
+);
+or
+(10)  (x) =
+n
+X
+i =1
+S
+(i)
+(x
+i
+);
+respectively.
+The form (9) is multiplicative separation of variables, while (10) is additive.
+It is moreover straightforward to verify that each of them can only apply iff
+@ 
+@x
+i
+   or
+@ 
+@x
+i
+ S
+(i)
+depend respectively only on x
+i
+,8i:
+The theoretical basis for this separation of variables procedure happens to be
+constrained three fold. The ﬁrst restriction on this basis comes from the possible
+nonuniqueness of  (x) satisfying (6). The second constraint is tied to whether
+the form (9), (10) or their other variants can satisfy the BVP. In this respect, it is
+well known that the additive separation of variables does not work for the Laplace
+equation  
+xx
++  
+yy
++  
+zz
+= 0 on R
+3
+; as it cannot match the usual notion of a
+potential-it does not die at spatial inﬁnity. In contrast, the multiplicative separa-
+tion of variables works for this singular BVP. Then, the third constraint emerges
+from the approximate nature of representing  (x) in any of the separated vari-
+able forms. Ultimately, the Kolmogorov-Arnold representation theorem, which
+solves a more general form of Hilbert’s thirteenth problem, [19], states that every
+continuous multivariate@(x) can be expressed as a ﬁnite composition of outer,
+F
+q
+; and inner, f
+q;p
+, continuous functions of a single variable x
+p
+; with the binary
+operation of addition, viz
+(11)@(x) =
+2n
+X
+q = 0
+F
+q
+ 
+n
+X
+p =1
+f
+q;p
+(x
+p
+)
+!
+:
+This fundamental theorem which is also applicable to the solution  (x) of (6),
+has however a number of other simpler variants. A further, even simpler situation,
+can occur when x
+1
+, say, and x
+i
+,8i> 1, are subjected in the BVP to differential
+operators of varying orders, like say
+@
+@x
+1
+and
+@
+2
+@x
+2
+i
+(as in diffusional PDE’s) on ﬁnite
+R when there are weak grounds for assuming x
+1
+ x
+i
+separability,8i> 1. Here,
+one can recast (10) into the form
+Electronic Journal. http://diffjournal.spbu.ru/ 57Differential Equations and Control Processes, N. 4, 2019
+(12)  (x) =
+n
+X
+i =2
+S
+(i)
+(x
+1
+;x
+i
+);
+where S
+(i)
+(x
+1
+;x
+i
+) is not necessarily x
+1
+ x
+i
+separable. This has been the ASOV
+principle, demonstrated in [9], to be applicable for a 3D closed form analytical
+solution to the dynamical BVP of neutron cancer therapy (NCT), via utilizing
+Laplace transforms in the x
+1
+= t (time) variable instead of t x
+i
+separability.
+Incidentally, the same Laplace transform approach had earlier been used in [8] for
+solving a 1D version of this BVP. It should be noted, moreover, that this 3D BVP
+is of unique symmetry due to its having the same kind of BC’s in each of the
+three spatial variables, which can be of different spans. Actually, our aim in this
+work is to establish the consistency of this principle for solving this particular 3D
+BVP by exterior calculus arguments, without invoking the heavy machinery of
+Lie group symmetry.
+The exterior analysis of the solvability of dynamical BVP’s addresses vari-
+ations of the BVP solution over differential volume elements dt^ dr; with the
+wedge properties : d ^ d  = d ^ d ; d ^ d  = 0; for any   and  : An
+analysis which is a natural geometric setting, as to be shown in sections 2 and 3,
+from which to initiate a consistency assessment of the ASOV principle, enabling
+a more concise and explicit evaluation than by an alternative symmetry-based
+assessment. A more detailed account on exterior differential analysis is provided
+in Appendix A.
+The paper is organized as follows. After this introduction, section 2 reports
+on the main result of this work on separability and solvability of BVP’s in general.
+In section 3, we review the ASOV solution of the 3D dynamical BVP of NCT,
+reported in [9]. Finally in section 4 we employ an exterior calculus approach to
+establish the consistency of the arguments for the ASOV principle in solving the
+considered BVP.
+2 Solvability and additive separability
+Recently in [25] Ramsey et al. studied the relation of symmetry to the multi-
+plicative separability of the neutron diffusion equation. Using Lie group analysis,
+they found that the traditional space-time multiplicatively separable solution of
+the neutron diffusion BVP corresponds to time translation and ﬂux scaling sym-
+metries. In 1971, using the language of differential forms, Harrison and Estbrook,
+[13], formulated an alternative approach to traditional symmetry analysis meth-
+Electronic Journal. http://diffjournal.spbu.ru/ 58Differential Equations and Control Processes, N. 4, 2019
+ods. In this "isovectors" approach, all differential equations being analyzed are
+recast as exterior differential systems (EDS), and analysis of acting operators
+takes place in a manifold spanned by all independent and dependent variables
+of the associated BVP. An approach that is intended for applications where Lie
+symmetry analysis turns out to be prohibitively complicated or not to produce
+conclusive results.
+The 3D dynamical BVP of neutron cancer therapy, of present interest, acts
+on a neutron diffusional ﬂux
+(13)   =  (r;t) =  (x;y;z; t);
+and may, in general be transformed, via  of (8), by any kind of separation of
+variables. The associated  
+
+nonsingular,  
+
+(0) = 0; operator is symbolic in its
+action of rearranging and redimensioning of the mapped vectors. The ASOV,
+(12), in particular, can be expressed here via
+(14)   = ( ) =
+3
+X
+i =1
+ 
+i
+= 
+1
+(x; t) + 
+2
+(y; t) + 
+3
+(z; t);   = ( 
+1
+; 
+2
+; 
+3
+);
+(r;t)2<:
+This  happens remarkably to be closed under addition (of   and 	) and
+under scalar multiplication (of c by   ), i.e. it is a linear  7!  transformation:
+A linearity that obviously does not hold for multiplicative separation of variables;
+and is a reason for the focus of attention in this paper only on the ASOV trans-
+formation (14).
+As a matter of notation, we shall refer to the BVP’s (6) and (7) by
+BVP(<;L;B) and BVP(<;G;Q);respectively:Now we are able to advance the
+following basic results of this work.
+Lemma 1 Let a solution   to a BVP(<;L;B)of (6) be analyzable,  ! ;
+by means of the ASOV transformation 
+ 1
+of (14), with an accompanying
+nonsingular operator  
+
+transforming (6) to a system BVP(<;G;Q)
+(15)
+(
+G(x; ; 
+(K)
+) =g(x)
+Q(x; ; 
+(K 1)
+) =q(x):
+Then the Lie symmetry solvability of (15) guaranties reversibility of these 
+ 1
+and  
+
+transformations to a solution   =( ) of the original BVP.
+Proof: Consideration of (7)-(8) in the form
+Electronic Journal. http://diffjournal.spbu.ru/ 59Differential Equations and Control Processes, N. 4, 2019
+(16)
+ 
+G  g
+Q  q
+!
+=  
+
+ 
+L  f
+B  b
+!
+;
+allows for rewriting it as a symbolic functional transformation
+ 
+L
+B
+!
+7!
+ 
+G
+Q
+!
+; given by
+(17)
+ 
+G
+Q
+!
+=  
+
+ 
+L
+B
+!
++
+ 
+g
+ 
+q
+ 
+!
+:
+Locally, in the neighborhood of any ﬁxed x
+0
+= (x
+0
+; y
+0
+; z
+0
+; t
+0
+);  
+0
+=  (x
+0
+);
+!
+0
+and  
+
+!  
+
+0
+:Then the previous vector equation becomes
+(18)
+ 
+G
+0
+Q
+0
+!
+=  
+
+0
+ 
+L
+0
+B
+0
+!
++
+ 
+g
+ 
+0
+q
+ 
+0
+!
+;
+a generalized Euclidean transformation of R
+2
+;which is almost always reversible.
+A transformation of the type (18) forms a group ( under the usual compo-
+sition of generalized transformations) called an aﬃne transformation group, [17],
+denoted as=
+2
+. Moreover, one would expect an aﬃne group to consist of geomet-
+rical actions like "translations", "rotations" and "reﬂections" in R
+2
+: Indeed, such
+Euclidean transformations preserve the degree of subjected curves, thus mapping
+a "circle" to a "circle", preserve the ratio of distances, thus mapping centers of
+circles to centers of circles and preserve contact between existing curves. One can,
+therefore, claim that
+ 
+G
+0
+Q
+0
+!
+and
+ 
+L
+0
+B
+0
+!
+belong in generalized aﬃne symmet-
+ric spaces, and that linearity of the ASOV  is an essential instrument for that.
+Extension of these features, however, globally to (17), i.e. claiming that
+ 
+G
+Q
+!
+and
+ 
+L
+B
+!
+of (17) also form an aﬃne group, can only be a rough approximation,
+that calls for a deeper theoretical veriﬁcation.
+Anyhow, and without such a veriﬁcation, if the system BVP (15) is Lie sym-
+metry solvable, i.e. its algebra is solvable, then the system (15) itself, or its
+equivalent (17), are solvable. Moreover, solvability of (17) means solvability of
+(18) ,8x
+0
+; and reversibility of  
+
+0
+to a solution  
+0
+=( 
+0
+) of the original BVP
+is guaranteed for every x
+0
+:Here the proof completes. 
+Electronic Journal. http://diffjournal.spbu.ru/ 60Differential Equations and Control Processes, N. 4, 2019
+The expected complexity of solving a Lie symmetry algebra for the posing
+BVP (6) and its possible nonuniqueness motivates avoiding it by means of the
+simpler substitute result that follows.
+Theorem 1 (Analysis-Synthesis) Let a solution   to a BVP(<;L;B) of
+(6) be analyzable,   !  ; by means of the ASOV transformation 
+ 1
+of
+(14), with an accompanying nonsingular operator  
+
+transforming (6) to a system
+BVP(<;G;Q)of (15). If this system is solvable for   , and can be synthesized
+back to
+ 
+L  f
+B  b
+!
+by means of the transformation
+(19)  
+ 1
+
+ 
+G  g
+Q  q
+!
+=
+ 
+L  f
+B  b
+!
+;
+then  is additionally reversible to a solution   =( ) of the original BVP.
+Proof: According to [21], a linear operator   is said to be symmetric for the
+BVP(<;L;B) if
+1.   :<!<;automorphic,
+2.  L =L  ;commutative,
+3.  B = B  ;commutative.
+Obviously, the operators commuting with a given operator form a group. Let
+ 
+L
+and  
+B
+stand for the group of operators commuting withL and B respec-
+tively, then the group   =  
+<
+\  
+L
+\  
+B
+is the symmetry group, [21], of the
+BVP(<;L;B);where  
+<
+is the automorphism group of<:It is rather straightfor-
+ward to verify that  
+
+in (14), of the ASOV method, satisﬁes the properties of an
+ :
+Moreover if  
+
+is a symmetric operator for BVP(<;L;B) and  
+ 1
+
+is a symmet-
+ric operator for BVP(<;G;Q); then BVP(<;L;B) and BVP(<;G;Q) are sym-
+metries of each other. Consequently, BVP(<;L;B) and BVP(<;G;Q) can have
+the same solution, which is a necessary condition for reversibility of ; deﬁned in
+(14).
+Finally,  
+ 1
+
+cannot exist if  does not exist. So the contrary can not be
+true. 
+It should be noted that  of theorem 1 is not restricted to the ASOV trans-
+formation (14) but applies also to any other variant of it. Distinctively,  
+ 1
+
+could
+e.g. involve some algebra with wedge products on associated manifolds; as to be
+illustrated in section 4.
+Electronic Journal. http://diffjournal.spbu.ru/ 61Differential Equations and Control Processes, N. 4, 2019
+3 The 3D BVP ASOV solution
+Here we brieﬂy review the ASOV solution to the posing BVP when the Neumann
+BC(ii) is periodic in time, with
+(20)
+8
+>
+>
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+>
+>
+:
+S(t) =
+a
+0
+2
++
+1
+X
+m=1
+a
+m
+cosm!t;
+¸ S(t) =
+b
+0
+2
++
+1
+X
+m=1
+b
+m
+cosm$(t +");
+ 
+S(t) =
+c
+0
+2
++
+1
+X
+m=1
+c
+m
+cosm ^ w(t +b "):
+Clearly the unique symmetry of this 3D BVP ( due to its having the same
+kind of BC’s in each of the three spatial variables, which can be of different spans)
+should facilitate the application of the ASOV principle for the solution. Hence in
+the associated manifold, the ASOV principle (11) allows for writing
+(21)  (x;y;z;t) = (x;t) + (y;t) +  (z;t);
+where each of (x;t), (y;t) and  (z;t) can satisfy simpler BCs than  (x;y;z;t):
+Next, let us assume validity of (14) by the solution of (13-17) to rewrite (13)
+as
+(22)
+1
+v
+@
+@t
+(  + +  ) 
+h
+D
+k
+@
+2
+@x
+2
++D
+`
+@
+2
+@y
+2
++D
+?
+@
+2
+@z
+2
+i
+(  + +  ) +
+ 
+a
+(  + +  ) = 0:
+This can readily be reduced to
+(23)
+8
+>
+>
+<
+>
+>
+:
+1
+v
+@
+@t
+ (x;t) D
+k
+@
+2
+@x
+2
+ (x;t) +  
+a
+ (x;t)
+= 
+1
+v
+@
+@t
+[ (y;t) +  (z;t)] +
+h
+D
+`
+@
+2
+@y
+2
+ (y;t) +D
+?
+@
+2
+@z
+2
+ (z;t)
+i
+   
+a
+[ (y;t) +  (z;t)] = (t);
+with  (t) as an unknown functional parameter, in the sense of [7], of the time
+variable.
+For  =
+x
+p
+vD
+k
+  0;the mixed-type BVP becomes
+Electronic Journal. http://diffjournal.spbu.ru/ 62Differential Equations and Control Processes, N. 4, 2019
+(24)
+8
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+:
+@
+@t
+ ( ;t) 
+@
+2
+@ 
+2
+ ( ;t) + v 
+a
+ ( ;t) =v (t);
+(i)  (
+p
+vD
+k
+b a;t) = 0;
+(ii)
+@
+@ 
+ ( ;t)j
+  = 0
+= 
+q
+v
+D
+k
+{
+k
+"
+a
+0
+2
++
+1
+X
+m=1
+a
+m
+cosm!t
+#
+;
+(iii) ( ; 0) ='( );
+while for   y =
+y
+p
+vD
+`
+  0;we have
+(25)
+8
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+:
+@
+@t
+ (  y;t) 
+@
+2
+@  y
+2
+ (y;t) +  
+a
+ (  y;t) =v (t);
+(i) (
+p
+vD
+`
+b
+b;t) = 0;
+(ii)
+@
+@  y
+ (  y;t)j
+  y = 0
+= 
+q
+v
+D
+`
+{
+`
+"
+b
+0
+2
++
+1
+X
+m=1
+b
+m
+cosm$(t +")
+#
+;
+(iii) (  y; 0) =;(  y);
+with  (t) as an unknown functional parameter different from  (t):
+Then for   z =
+z
+p
+vD
+?
+  0;the associated mixed-type BVP must be
+(26)
+8
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+:
+@
+@t
+ (  z;t) 
+@
+2
+@  z
+2
+ (  z;t) + v 
+a
+ (  z;t) = v (t) v (t);
+(i)  (
+p
+vD
+?
+b c;t) = 0;
+(ii)
+@
+@  z
+ (  z;t)j
+  z = 0
+= 
+q
+v
+D
+?
+{
+?
+"
+c
+0
+2
++
+1
+X
+m=1
+c
+m
+cosm ^ w(t +b ")
+#
+;
+(iii)  (  z; 0) =?(  z):
+All these three BVPs , now with nonhomogeneous PDF’s, are structurally
+identical and coupled by means of the unknown  (t) and  (t) functions. They
+contain yet unknown individual initial conditions '(x),;(y) and ?(z) in their
+temporal nonhomogeneous Dirichlet’s BC (iii).
+The existence of a unique solution to the posing BVP, via the ASOV principle
+(9), turns out to require the imposition of an additional "complementarity"-like
+condition that
+(27)  (0;t) = (0;t) =  (0;t):
+This is a physically quite reasonable condition, see [9], equivalent to the con-
+tinuity of the neutron ﬂux (or density) through the (0; 0; 0) corner interface of
+R.
+Electronic Journal. http://diffjournal.spbu.ru/ 63Differential Equations and Control Processes, N. 4, 2019
+Because of the linearity of the nonhomogeneous PDE in (8) and of its asso-
+ciated BC’s, we may determine '( ) by the following boundary decomposition
+principle. Consider ﬁrst a steady state neutron diffusional process generated only
+by the stationary term (m = 0 mode) of the Neumann BC(ii). Since the two
+remaining BCs are time-independent and so are the coeﬃcients  
+a
+,D
+k
+andv of
+the PDE, then
+@
+@t
+  = 0,  (t) becomes a constant   and  ( ;t) becomes '( )
+that satisﬁes the auxiliary ordinary BVP :
+d
+2
+dx
+2
+'( ) v 
+a
+'( ) = v ;
+(i) '(
+p
+vD
+k
+b a) = 0;
+(ii)
+d
+dx
+'( )j
+ =0
+= 
+q
+v
+D
+k
+{
+k
+a
+0
+2
+:
+9
+>
+>
+=
+>
+>
+;
+The solution'( ) of the auxiliary BVP can be derived in detail via formula
+(32) in [9] which contains the unknown coupling factor  : This'( ) can be sub-
+stituted back into BC(iii) of (26) to complete its statement prior to its subsequent
+solution for ( ;t) by means of the Laplace transformation in the t domain. In
+a similar fashion;(  y) can be determined via (49) of [9] and to containF = (0);
+while?(  z) contains (  +F);via (67) of [9]. These   andFcoupling factors are
+shown to be computable by means of the nonlinear process (71) of [9].
+Furthermore, invertible Laplace transforms of the coupling functions  (t)
+and (t) turn out also to be computable by a modal expansion approach via the
+complex nonlinear process (94) of [9]. Both of the nonlinear processes (71) and
+(94) are actually based on (27). Then the entire ASOV solution for this BVP is
+obtained, via repeated inversions of Laplace transforms, in the closed analytical
+form reported in [9].
+4 Exterior analysis
+To simplify notation in this analysis, let us represent the three PDE’s , in the
+posing BVP, that are separated according to the ASOV principle viz
+(28)  
+t
+  
+  
++g
+1
+(t; )  = 0;
+(29) g
+1
+(t;x) =v 
+a
+ v (t) 
+ 1
+( ;t);
+(30) 
+t
+  
+  y  y
++g
+2
+(t;   y) = 0;
+(31) g
+2
+(t;   y) =v 
+a
+ v (t) 
+ 1
+(  y;t);
+(32)  
+t
+   
+  z  z
++g
+3
+(t;   z)   = 0;
+(33) g
+3
+(t;   z) =v 
+a
++v[ (t) + (t)] 
+ 1
+(  z;t):
+Electronic Journal. http://diffjournal.spbu.ru/ 64Differential Equations and Control Processes, N. 4, 2019
+Nowadays, the isovector method is developed in rigorous detail and applied
+to many problems in science and engineering, see e.g. [5, 28]. Inspired by these
+works, let revisit the BVP (24) , of the  - variable, and reduce it to a ﬁrst-order
+differential system BVP, by assuming
+(34)   = ( ;t) =
+@
+@ 
+ ( ;t);
+then multiplying the BVP by the differential volume element dt^d ^d  y^d  z
+, where the operator^ means wedge (or exterior) product, to write
+(35)
+ dt^d ^ d  y^d  z+d ^dt^d  y^d  z = 0;
+d ^d ^ d  y^d  z +d ^dt^d  y^d  z +g
+1
+ dt^d ^ d  y^d  z = 0;
+ ( ; 0) dt^d ^ d  y^d  z  '( )dt^d ^ d  y^d  z = 0;
+ (0;t)dt^d ^ d  y^d  z +
+q
+v
+D
+k
+{
+k
+S(t)dt^d ^ d  y^d  z = 0;
+ (
+p
+vD
+k
+b a;t)dt^d ^ d  y^d  z = 0;
+ (0;t)dt^d ^ d  y^d  z  (0;t)dt^d ^ d  y^d  z = 0;
+9
+>
+>
+>
+>
+>
+>
+>
+>
+>
+=
+>
+>
+>
+>
+>
+>
+>
+>
+>
+;
+with the last equation representing the complementarity corner continuity condi-
+tion,todeﬁnetheunknownASOVparameter  = (t)standinging
+1
+=g
+1
+(t; );of
+(29). Application of similar steps to the BVP’s (25) and (26), while assming,
+(36)   = (  y;t) =
+@
+@  y
+ (  y;t);   = (  z;t) =
+@
+@  z
+ (  z;t);
+results with the following two respective exterior differential systems (EDS
+0
+s)
+(37)
+  dt^d ^ d  y^d  z d ^dt^d ^d  z = 0;
+d ^d ^ d  y^d  z +d ^dt^d ^ d  z +g
+2
+ dt^d ^ d  y^d  z = 0;
+ (  y; 0) dt^d ^ d  y^d  z  ;(  y)dt^d ^ d  y^d  z = 0;
+ (0;t)dt^d ^ d  y^d  z +
+q
+v
+D
+`
+{
+`
+¸ S(t)dt^d ^ d  y^d  z = 0;
+ (
+p
+vD
+`
+b
+b;t)dt^d ^ d  y^d  z = 0;
+ (0;t)dt^d ^ d  y^d  z   (0;t)dt^d ^ d  y^d  z = 0;
+9
+>
+>
+>
+>
+>
+>
+>
+>
+>
+=
+>
+>
+>
+>
+>
+>
+>
+>
+>
+;
+Electronic Journal. http://diffjournal.spbu.ru/ 65Differential Equations and Control Processes, N. 4, 2019
+(38)
+  dt^d ^ d  y^d  z+d ^dt^d ^ d  y = 0;
+d ^d ^ d  y^d  z +d ^dt^d ^d  y +g
+3
+ dt^d ^ d  y^d  z = 0;
+ (  y; 0) dt^d ^ d  y^d  z  ?(  z)dt^d ^ d  y^d  z = 0;
+ (0;t)dt^d ^ d  y^d  z +
+q
+v
+D
+?
+{
+?
+ 
+S(t)dt^d ^ d  y^d  z = 0;
+ (
+p
+vD
+?
+b c;t)dt^d ^ d  y^d  z = 0;
+ (0;t)dt^d ^ d  y^d  z  (0;t)dt^d ^ d  y^d  z = 0:
+9
+>
+>
+>
+>
+>
+>
+>
+>
+>
+=
+>
+>
+>
+>
+>
+>
+>
+>
+>
+;
+The system (35)-(38) is a Grassman algebraic system (whose product is the
+wedge product) and its differential forms are mathematical objects that represent
+inﬁnitesimal volumes of inﬁnitesimal parallelepipeds and so can be integrated
+over volumes and higher order manifolds in a way that generalizes line integrals
+from calculus. They interestingly happen also to be common ingredients with
+inﬁnitesimal Lie group symmetries.
+The last equation in (37) accounts for the ASOV parameter  ; standing in
+g
+2
+= g
+2
+(t;   y);while the last equation in (38) accounts for (  + ) standing in
+g
+3
+= g
+3
+(t;   z):It should not be overlooked, moreover, that S(t) = S(t;!);¸ S(t) =
+¸ S(t;$;") and
+ 
+S(t) =
+ 
+S(t; ^ w;b "):
+4.1 First equations
+The ﬁrst equations in the EDS’s (35), (37) and (38) sum up to
+(  +  + )dt^d ^ d  y^d  z + [d ^dt^d  y^d  z d ^dt^d ^d  z
++d ^dt^d ^d  y] = 0;
+which is the same as
+(  +  + )d ^ d  y^d  z^dt  [d ^d  y^d  z^dt d ^d ^ d  z^dt
++d ^d ^d  y^dt] = 0;
+or
+f(  +  + )d ^ d  y^d  z  [d ^d  y^d  z d ^d ^ d  z +d ^d ^
+d  y]g ^dt = 0:
+This relation is remarkably independent of the temporal differential element
+dt viz
+(39) (  +  + )d ^d  y^d  z  [d ^d  y^d  z d ^d ^d  z +d ^d ^
+d  y] = 0:
+Electronic Journal. http://diffjournal.spbu.ru/ 66Differential Equations and Control Processes, N. 4, 2019
+It should be noted however that the  ;   and   variables are of auxiliary
+nature, and do not appear explicitly in the original PDE.
+4.2 Separated DE’s
+The second equations in the EDS’s (35), (37) and (38) sum up to
+(d  +d +d ) d ^ d  y^d  z + [d ^dt^d  y^d  z +d ^dt^d ^ d  z
++d ^dt^d ^d  y] + [g
+1
+  +g
+2
+ +g
+3
+ ]dt^d ^ d  y^d  z = 0;
+which is the same as
+@
+@t
+(  + +  ) dt^d ^ d  y^d  z 
+h
+@ 
+@ 
++
+@ 
+@  y
++
+@ 
+@  z
+i
+dt^d ^ d  y^d  z
++v 
+a
+(  + +  ) dt^d ^ d  y^d  z = 0;
+i.e.
+(40)
+ 
+@
+@t
+  5
+2
+  +v 
+a
+ 
+ 
+dt^d ^d  y^d  z = 0:
+This proves that satisfaction of the EDS’s, resulting from application of the
+ASOV principle to a PDE, implies, as a must, solvability of this PDF.
+4.3 The boundary conditions
+The third equations in the EDS’s (35), (37) and (38) sum up to
+[ ( ; 0)+ (  y; 0) +  (  y; 0)]dt^d ^ d  y^d  z
+ ['( ) +;(  y) +?(  z)]dt^d ^ d  y^d  z = 0;
+which is the same as
+(41)f (r; 0)j
+r2 R
+ ['( ) +;(  y) +?(  z)]gdt^d ^d  y^d  z = 0:
+As for the fourth equations, their sum is
+[ (0;t) +  (0;t) + (0;t)]dt^d ^ d  y^d  z
++
+ 
+q
+v
+D
+k
+{
+k
+S(t) +
+q
+v
+D
+`
+{
+`
+¸ S(t) +
+q
+v
+D
+?
+{
+?
+ 
+S(t)
+ 
+dt^d ^ d  y^d  z = 0:
+Clearly, this is same as or, in the context of the ASOV, as
+Furthermore, the ﬁfth equations add up to
+h
+ (
+p
+vD
+k
+b a;t) + (
+p
+vD
+`
+b
+b;t) +  (
+p
+vD
+?
+b c;t)
+i
+dt^d ^d  y^d  z = 0 ;
+which is the same as (8) in the form
+Distinctively, the sixth equations in the EDS’s (28),(30) and (31) add up to
+Electronic Journal. http://diffjournal.spbu.ru/ 67Differential Equations and Control Processes, N. 4, 2019
+(45) 0 dt^d ^d  y^d  z = 0;
+a constraint inactive on the original BVP and its solution  .
+These facts, which satisfy the conditions of Theorem 1, establish the correct-
+ness of the ASOV principle in solving the 3D dynamical BVP of neutron cancer
+therapy. At this point, it should be underlined that:
+i) The ASOV solution to the present neutron diffusion BVP is the only
+existing closed form analytical solution to this newly formulated problem.
+ii) The alternative to ASOV hypothetical method of analytical solution could
+be a multiplicative separation of variables. This turned out, however, to be ana-
+lytically intractable.
+iii) Moreover, possible numerical methods are irrelevant since the considered
+ASOV solution is meant for further inclusion in theoretical therapeutic optimiza-
+tion algorithms.
+iv) The reported in this paper consistency analysis of the ASOV solution to
+this dynamical BVP is unique and new. Moreover, the only possible alternative
+symmetry-basedanalysis(whichhassofarneverbeenattempted)wouldcertainly
+be useful, if it happens to be tractable.
+Conclusion
+In this paper, we have studied the consistency question related to the ASOV so-
+lution of the 3D dynamical BVP of NCT. The conclusive lemma 1 of this work
+indicates that any symmetry-based analysis, which is probably too involved ana-
+lytically, is of limited practical value. Distinctively, the reported related isovetor
+analysis, of section 4 in the context of theorem 1, appears to be direct, concise
+and elegant in establishing this consistency.
+5 Appendix A : Exterior differential analysis
+An exterior differential system (EDS) is a system of equations on a manifold
+deﬁned by equating to zero a number of exterior differential forms, see e.g. [3].
+When all the forms are linear, it is called a Pfaﬃan system. The theory of exterior
+differential forms is coordinate (x;y;z;t) free and its related computations have a
+distinctive algebraic character. A system of PDE’s of any number of independent
+Electronic Journal. http://diffjournal.spbu.ru/ 68Differential Equations and Control Processes, N. 4, 2019
+and dependent variables can be written as an EDS ( an isovector system). PDE’s
+and their Pfaﬃan EDS’s are essentially the same, [3], in many respects.
+The solutions of a BVP obtained by using Lie theory of continuous symmetry
+groups are called group-invariant solutions. Furthermore, the relation between
+Lie symmetries and prolongation structures, [1, 2], or EDS’s, of ﬁeld equations is
+widely recognized.
+In exterior differential calculus, the isovectors are elements of a vector space;
+vectors may be added or multiplied by scalars. For the product, however, the
+wedge (Grassmann) product^ is used. This is a generalization of the cross prod-
+uct in 3D vector algebra. A product that introduces the notion of a multivector.
+In actual fact the^ product is the "correct" type of product to use in comput-
+ing a volume element dx in a tensor ﬁeld, see e.g. [6]. The inﬁnitesimal volume
+element dx bounded by dx
+1
+[dx
+2
+[ dx
+3
+     [ dx
+n
+has a volume given by
+dx =dx
+1
+^dx
+2
+^dx
+3
+     ^dx
+n
+, instead of the symmetric productdx
+1
+dx
+2
+dx
+3
+      dx
+n
+. This is a technical reﬁnement, often omitted in vector ﬁelds, though
+quite essential in tensor ﬁelds, encountered e.g. in the BVP (posed in this paper),
+which incorporates a neutron diffusion tensor.
+Exterior differential calculus (isovector calculus) is primarily intended, [30],
+for calculation of invariance groups of EDS’s. Unfortunately, however, the max-
+imum number of determining equations for the isovectors of a given PDE can
+be very large. For typical 2D systems arising in ﬂuid dynamics there may be as
+many as 1710 determining equations, [6, 30],This situation is expected to blow up
+signiﬁcantly for the dynamical BVP posing in this work , in a way prohibiting its
+performance by hand. Moreover, the alternative symbolic computation, see e.g.
+[30], is not amongst our scheduled activities in the work.
+For these reasons we have decided in this paper to abandon the classical
+symmetry-related analysis for the consistency of the ASOV principle. Nonethe-
+less, theexteriordifferentialcalculuscontinuestoprovideaproperabstractframe-
+work for the treatment of geometrical vector (or tensor) operations that extend
+naturally through thet-variable to general 4-dimensions in<: Its concise concepts
+yield elegant and peculiarly coherent constructs (as with lemma1 and theorem 1)
+in contrast with the intricacies of Lie symmetries of the original BVP or its EDS.
+Electronic Journal. http://diffjournal.spbu.ru/ 69Differential Equations and Control Processes, N. 4, 2019
+Acknowledgments
+The author is grateful to an anonymous referee for a number of critical and helpful
+comments.
+References
+[1] Bluman, R.W., Kumei.S.Symmetries and Differential Equations.Springer,
+New York, 1989.
+[2] Bluman, G. W. Application of the general similarity solution of the heat
+equation to boundary value problems. Quarterly of Applied Mathematics,
+31: 403-415, 1974.
+[3] Bryant, R. L., Chem, S. S., Gardner, R. B., Goldschmidt, H. L., and Grif-
+ﬁths, P. A. Exterior Differential Systems, Springer, New York, 1991.
+[4] Cherniha, R. Conditional symmetries for BVP : New deﬁnition and its ap-
+plications for nonlinear problems with Neumann conditions. Miskolc Math-
+ematical Notes, 14(2) 637-646, 2013.
+[5] Edelen, D. G. B. Applied Exterior Calculus. Courier Corporation, 2005.
+[6] Gragert,P.K.H.,Kresten,P.H.M.,andMartini,R.Symboliccomputations
+in applied differential geometry. Acta Applicandae Mathematicae, 1: 43-77,
+1983.
+[7] Haidar, N. H. S. Eigenfunctions for a class of parametric Sturm-Liouville
+problems with an eigenvalue continuum. Journal of Mathematical Analysis
+and Applications, 161(1): 20-27, 1991.
+[8] Haidar, N. H. S. On dynamical (B/Gd) neutron cancer therapy: an
+accelerator-based single neutron beam. Paciﬁc Journal of Applied Math-
+ematics, 9(1): 9-26, 2018.
+[9] Haidar, N. H. S. An additive separation of variables 3D solution to the dy-
+namicalBVPofneutroncancertherapy.International Journal of Dynamical
+Systems and Differential Equations, 9(2):140-163, 2019.
+[10] Haidar, N. H. S. Optimization of two opposing neutron beams parameters in
+dynamical (B/Gd)neutron cancer therapy. Nuclear Energy and Technology,
+5(1):1-7, 2019.
+Electronic Journal. http://diffjournal.spbu.ru/ 70Differential Equations and Control Processes, N. 4, 2019
+[11] Haidar, N. H. S. On the why of dynamical, and not stationary, (B/Gd) neu-
+tron beam cancer therapy. Nuclear Physics and Atomic Energy, Accepted
+for publication, 2019.
+[12] Haidar, N. H. S. A resonated and synchrophased three beams neutron can-
+cer therapy installation. ASME Journal of Nuclear Radiation Science, Ac-
+cepted for publication, 2019.
+[13] Harrison, B. K., Estabrook, F. B. Geometric approach to invariance
+groups and solution of partial differential systems. Journal of Mathemat-
+ical Physics, 12(4): 653-666, 1971.
+[14] Helmbe, U., Moore, J. B. Optimization and Dynamical Systems. Springer-
+Verlag, Berlin, 1994.
+[15] Henry, A. F. Nuclear-Reactor Analysis. The MIT Press, Cambridge, Mas-
+sachusetts, 1975.
+[16] Herzog, R., Kunisch, K. Algorithms for PDE-constrained optimization.
+GAMM-Mitteilungen, 31: 3-16, 2014.
+[17] Holton, P. A. Aﬃne-Invariant Symmetry Sets. PhD thesis, University of
+Liverpool, Liverpool, UK, 2000.
+[18] Hydon, P. E. Symmetry Methods for Differential Equations: A Beginner’s
+Guide, Vol. 22. Cambridge University Press, 2000.
+[19] Khesin, B. A., Tabachnikov, S. L. Arnold : Swimming Against the Tide.
+AMS, Providence, 2014.
+[20] Logsdon, J. S. Eﬃcient Determination of Optimal Control Proﬁles for Dif-
+ferential Algebraic Systems. PhD Thesis, CMU, Pittsburgh, 1990.
+[21] Makai, M. Group Theory Applied to Boundary Value Problems With Appli-
+cations to Reactor Physics. Nova Science Publishers, New York, 2011.
+[22] Miller Jr., W. Mechanism for variable separation in partial differential equa-
+tions and their relationship to group theory. In Symmetries and Nonlinear
+Phenomena, World Scientiﬁc, Singapore, 1988.
+[23] Ovsiannikov, L.V. Group Analysis of Differential Equations. Academic
+Press, New York, 2014.
+Electronic Journal. http://diffjournal.spbu.ru/ 71Differential Equations and Control Processes, N. 4, 2019
+[24] Pontryagin, L. S., Boltyanski, V., Gamkrelidze, R., Mischenko, E. The The-
+ory of Optimal Processes. Interscience Publishers, New York, 1962.
+[25] Ramsey, S. D., Tellez, J. A., Riewski, E. J., Temple, B. A. Symmetry and
+separability of the neutron diffusion equation. Journal of Physics Commu-
+nications 2(10): No.105009, 2018.
+[26] St¨ ackel, P.
+¨
+Uber Die Integration Der Hamilton-Jacobischen Differentialge-
+ichung Mittels Separation Der Variabeln. Habilitationschrift, Halle, 1891.
+[27] Stoll, M., Watten, A. All-At-Once Solution of Time-Dependent PDE-
+Constrained Optimization Problems. Tech. Rep. University of Oxford, Ox-
+ford, 2010.
+[28] Suhubi, E. Exterior Analysis: Using Applications of Differential Forms.
+Academic Press, New York, 2013.
+[29] Tanartbit, P. Boundary Value Approach for Dynamic Optimization.
+EDRC06-170-94, CMU, Pittsburgh, 1994.
+[30] Wheeler, N.W.Electrodynamical Applications of Exterior Calculus. Lecture
+Notes, Department of Physics, Reed College, Oregon, 1996.
+Electronic Journal. http://diffjournal.spbu.ru/ 72
