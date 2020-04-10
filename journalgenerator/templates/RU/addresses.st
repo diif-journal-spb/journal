@@ -18,7 +18,7 @@ e-mail: <a href="mailto:n.ampilova@spbu.ru">n.ampilova@spbu.ru</a>
 <p>
 Петренко Евгений Игоревич<br />
 Санкт-Петербургский Государственный Университет,<br />
-e-mail: <a href="mailto:jodiff@mail.ru">jodiff@mail.ru</a>
+    e-mail: <a href="mailto:JournalDECP@gmail.com">JournalDECP@gmail.com</a>
 </p>
 <p>
     Мокаев Руслан Назирович<br />

@@ -20,15 +20,15 @@ e-mail: <a href="mailto:n.ampilova@spbu.ru">n.ampilova@spbu.ru</a>
 <p>
     Eugene I. Petrenko<br />
     St.Petersburg State University<br />
-    e-mail: <a href="mailto:jodiff@mail.ru">jodiff@mail.ru</a>
+    e-mail: <a href="mailto:JournalDECP@gmail.com">JournalDECP@gmail.com</a>
 </p>
 <p>
     Ruslan Mokaev<br />
     St.Petersburg State University<br />
-    e-mail: <a href="mailto:jodiff@mail.ru">jodiff@mail.ru</a>
+    e-mail: <a href="mailto:JournalDECP@gmail.com">JournalDECP@gmail.com</a>
 </p>
 <p>
     Elena Kudryashova<br />
     St.Petersburg State University<br />
-    e-mail: <a href="mailto:jodiff@mail.ru">jodiff@mail.ru</a>
+    e-mail: <a href="mailto:JournalDECP@gmail.com">JournalDECP@gmail.com</a>
 </p>
