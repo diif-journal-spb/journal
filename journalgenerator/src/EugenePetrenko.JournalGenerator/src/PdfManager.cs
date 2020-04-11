@@ -106,7 +106,7 @@ namespace EugenePetrenko.JournalGenerator
       var sb = new StringBuilder();
       foreach (var c in Path.GetFileNameWithoutExtension(art.Pdf))
       {
-        sb.Append(char.IsLetterOrDigit(c) ? char.ToLower(c) : '_');
+        sb.Append(char.IsLetterOrDigit(c) || c.Equals('-') ? char.ToLower(c) : '_');
       }
       return Path.GetFileNameWithoutExtension(sb.ToString());
     }
