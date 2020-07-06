@@ -19,7 +19,10 @@
         <a href="$ForeignLink$">Русская версия</a>
      </div> 
      <div class="issn"><a href="$TemplateAboutLink$#fromLogo">ISSN 1817-2172, рег. Эл. № ФС77-39410, ВАК</a></div>
-     <h1>Differential Equations<br />and<br />Control Processes</h1>
+     <h1>Differential Equations and Control Processes
+       <br />
+       Differencialnie Uravnenia i Protsesy Upravlenia
+     </h1>
     </div>
     <div class="MainMenu">
       $menu$

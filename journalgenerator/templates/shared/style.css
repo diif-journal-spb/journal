@@ -66,6 +66,24 @@ h1 {
   margin:0;
 }
 
+@media (min-width: 860px) {
+  h1 {
+    font-size: 14pt;
+  }
+}
+
+@media (min-width: 940px) {
+  h1 {
+    font-size: 16pt;
+  }
+}
+
+@media (min-width: 1070px) {
+  h1 {
+    font-size: 18pt;
+  }
+}
+
 div.issn {
   padding: 0;
   margin:0;
@@ -120,7 +138,7 @@ div.MainMenu a {
 }
 
 div.MainMenu a:link {
-  color: (100, 160, 240);
+  color: rgb(100, 160, 240);
 }
 
 div.MainMenu a:visited {
