@@ -17,21 +17,15 @@
   list
 </p>
 
-<h4>Publisher</h4>
+<h4>Founder</h4>
 <p>
-  Mathematics and Mechanics Faculty of Saint-Petersburg State University 
+  Saint-Petersburg State University 
 </p>
 
 <h4>Address:</h4>
 <p>
-  Universitetsky prospekt, 28, 
+  University Embankment, 7/9, 
   <br />
-  198504, Peterhof, 
-  <br />
-  St. Petersburg, Russia. 
-  <br/>
-  Phone: +7 (812) 428-4210,
-  <br/>
-  Fax: +7 (812) 428-6944 
+  199034, St. Petersburg, Russia.  
 </p>
 
