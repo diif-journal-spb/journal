@@ -21,7 +21,7 @@
      <div class="issn"><a href="$TemplateAboutLink$#fromLogo">ISSN 1817-2172, рег. Эл. № ФС77-39410, ВАК</a></div>
      <h1>Differential Equations and Control Processes
        <br />
-       <span class="decrease-size">(Differencialnie Uravnenia i Protsesy Upravlenia)</span>
+       <span class="decrease-size">(Differencial’nye uravnenia i processy upravlenia)</span>
      </h1>
     </div>
     <div class="MainMenu">
