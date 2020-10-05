@@ -1,0 +1,1408 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 3, 2020
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Adaptive and robust control
+Full control of a quadrotor with Simple Adaptive Control
+Tomashevich S.I.
+1
+, Andrievsky B.R.
+2
+1;2
+ITMO University, Saint Petersburg, Russia
+1;2
+Institute of Problems in Mechanical Engineering, the Russian Academy of
+Sciences, Saint Petersburg, Russia
+2
+Saint Petersburg State University, Saint Petersburg, Russia
+2
+Baltic State Technical University (BSTU), Saint Petersburg, Russia
+e-mail: tomashevich. stanislav@gmail.com, boris.andrievsky@gmail.com
+Abstract. In the paper the Simple Adaptive Control approach is employed
+to design the adaptive controllers for controlling both angular and transla-
+tional motion. The adaptive controllers are synthesized based on the Implicit
+Reference Model (IRM) design technique. The \shunting method" (parallel
+feedforward compensation) is used to mitigate the relative degree restriction.
+Parametric feedback is used to prevent the increasing of controller coe cients
+caused by external disturbances or sensor noise. Quality of the closed-loop
+IRM adaptive control system is studied based on the series of simulations for
+ensuring the system stability and tracking cases.
+Keywords: quadrotor, simple adaptive control, passi cation, cyber-physical
+system.
+1 Introduction
+In the last decade, interest in using UAVs (unmanned aerial vehicles) of the
+helicopter type (hexacopters, quadrotors, etc.) has increased signi cantly inDifferential Equations and Control Processes, N. 3, 2020
+various  elds, such as surface, environmental and tra c monitoring, studying
+of atmospheric ows and etc. In many missions, the parameters of the UAV
+are subject to signi cant changes or a priori unknown. This happens, for ex-
+ample, due to a change in load from one ight to another ight or changes may
+occur during a UAV ight depending on external environment properties, i.e.
+windage. The presence of cranes or mobile manipulators, which are mounted
+on the UAV, also leads to a signi cant change in the UAV parameters. As a
+result, in the recent years a signi cant amount of work has been done on the
+use of adaptation methods for designing multirotors mini-UAV control systems.
+Many factors can affect to changing the UAV dynamics and, as a consequence,
+the control quality. Some applications require adding some physical load such
+as video cameras, packages and etc to quadrotors. So it is very important to
+use control system that could be exible and adaptive for plants parameter
+variations.
+Two types of nonlinear controllers for an autonomous quadrotor helicopter
+are presented in [22]: feedback linearization controller and an adaptive sliding
+mode controller using input augmentation to take into account the helicopter
+underactuated property. It has been demonstrated that the sliding mode con-
+troller is e cient in the case of ground effects.
+The approaches above mainly lead to quite complex adaptive control laws.
+In the present work, the Simple Adaptive Control (SAC) method, jointly with
+\shunting" (parallel feedforward compensation) is used for controlling both
+angular and translational motion. We deal with the ultralight quadrotor,
+which is a part of the research complex QuadRoy (Swarm of Quadrotors),
+see [1, 4, 29, 31, 32], which was developed in the IPME RAS. The quadrotors
+are supplied with autopilot Pixhawk, the Inertial Navigation System (including
+gyroscope, accelerometer, magnetometer, barometer) and the GPS receiver.
+The SAC approach is being intensively developed since the 1970s, see [2,5,
+8{10, 26, 30], for mentioning a few. Among the advantages of this method as
+opposed to the conventional Model Reference Adaptive Control (MRAC, [20])
+method are low order and computational simplicity of the control algo-
+rithms and the weakening the restrictions imposed by the so-called matching
+(Erzberger) condition, see [18]. The SAC method has been successfully applied
+to the various adaptive control problems, such as control of power systems [36],
+robotic systems [25,27], spacecrafts [6,21,33], aircraft [15,34], fault tolerant con-
+trol [14,19], etc. SAC method was designed and successfully used for quadrotor
+attitude control [7,31]. Computational simplicity is essential for small quadrotor
+Electronic Journal. http://diffjournal.spbu.ru/ 42Differential Equations and Control Processes, N. 3, 2020
+autopilots because most autopilots are equipped with low powerful microproces-
+sors for computing control signals, processing sensors data, sending telemetry
+over communication channels, etc.
+The rest of the paper is organized as follows. Firstly, the SAC scheme based
+on the passi cation method is briey recalled in Sec. 2. The SAC laws for control
+both angular and translational motion are derived in Sec. 3. The simulation
+results of testing proposed algorithms are presented in Sec. 4. Concluding
+remarks and the future work intentions  nalize the paper.
+2 Adaptive Controllers With Implicit Reference Model
+A simple tool for SAC design is the Passi cation method. Passi cation means
+rendering the closed loop system passive by output feedback, see [2, 10, 13] for
+the details. The main condition following from this method lies in the so-
+called hyper minimum phase (HMP) property, imposed on the plant model:
+_ x(t) = Ax(t) +Bu(t), y(t) = Cx(t), where x(t)2 R
+n
+, u(t)2 R
+m
+, y(t)2 R
+m
+,
+A, B, C are constant real matrices of appropriate dimensions. According to
+this property polynomial '
+0
+(s) = det
+"
+sI
+n
+ A  B
+C 0
+#
+where I
+n
+stands for an
+(n n) identity matrix, must be Hurwitz andCB = (CB)
+T
+>0. For the special
+casem = 1 (SISO systems) considered in this paper the HMP property coincides
+with the standard minimum-phase, relative-degree-one property. Passi cation
+method makes it possible to create SAC with the Implicit Reference Model
+(IRM), of an order that can be signi cantly less than that of the plant model.
+2.1 Adaptive Stabilization of LTI SISO Plants
+Let LTI SISO plant be modeled in the input-output form as
+A(p)y(t) =B(p)u(t); t  0; (1)
+whereu,y are scalar input and output variables,A(p) =p
+n
++a
+n 1
+p
+n 1
++   +a
+0
+,
+B(p) =b
+m
+p
+m
++    +b
+0
+are polynomials on time derivative operator p d=dt.
+De ne k as the relative degree of system (1), k = n  m > 0. Plant (1)
+parameters a
+i
+, b
+j
+(i = 0,:::;n  1, j = 1;:::;m) are assumed to be unknown.
+Desired closed-loop system performance may be expressed in the form of a
+certain \reference" differential equation. In the classical MRAC this equation
+is explicitly implemented in the adaptive controller by the Reference Model,
+Electronic Journal. http://diffjournal.spbu.ru/ 43Differential Equations and Control Processes, N. 3, 2020
+cf. [20]. To describe the IRM adaptive controllers, let us introduce an adaptation
+error signal  (t) as  (t) =G(p)y(t); where G(p) =p
+l
++g
+l 1
+p
+l 1
++    +g
+0
+is a
+given Hurwitz polynomial in operator p  d=dt. Coe cients g
+i
+are the design
+parameters; they are chosen based on the desired dynamics of the closed-loop
+system. Degree l of polynomial G(p) is de ned below. Assuming that the
+adaptation law ensures tendency (t) to zero let us notice that as   0 output
+y(t) satis es the following \reference equation"
+G(p)y(t) = 0; (2)
+describing the reference model. This model is not implemented in the adaptive
+controller in the form of a certain dynamical subsystem, but introduced implic-
+itly via parametersg
+i
+(i = 0; 1;:::;l 1) [35]. Therefore it is called the Implicit
+Reference Model (IRM).
+Let us choose the feedback control law in the following form: u(t) =
+l
+P
+i=0
+k
+i
+(t)
+ 
+p
+i
+y(t)
+ 
+, where k
+i
+(t) i = 0;:::;l are adjustable controller parameters.
+For the considered case the IRM design method leads to the following adapta-
+tion law, see [10,11]:
+_
+k
+i
+(t) =  (t)p
+i
+y(t); k
+i
+(0) =k
+0
+i
+; (3)
+where  > 0 is the adaptation gain, k
+0
+i
+are given initial values of the controller
+gains, i = 0;:::;l. Introducing row vector G = [g
+0
+;g
+1
+;:::; 1]2R
+l+1
+and plant
+(1) transfer function W (s) from input u to output vector [y; _ y;:::y
+(l)
+]
+T
+2R
+l+1
+as W (s) =
+B(s)
+A(s)
+ 
+1;s;:::;s
+l
+ 
+T
+, s2 C in virtue of passi cation theorem [2, 10]
+with respect to transfer function GW (s) one may easily obtain the following
+stability conditions of adaptive controller (3):
+1. polynomial B(s) is Hurwitz and b
+0
+> 0;
+2. l=k 1, where k =n m is a relative degree of plant model (1).
+Algorithm (3) usually ensures vanishing  (t) essentially faster than transients
+in the closed-loop. As a result, changing controller (3) gains is stopped and
+plant (1) output y(t) obeys the IRM (2).
+To avoid unlimited growth of controller (3) gains in the presence of external
+disturbances and measuring errors, the following ff-modi cation of (3) may be
+used, see [2,17]:
+_
+k
+i
+(t) =  (t)p
+i
+y(t) ff
+ 
+k
+i
+(t) k
+0
+i
+ 
+; k
+0
+i
+=k
+i
+(0); (4)
+where parametric feedback gain ff  0 is introduced.
+Electronic Journal. http://diffjournal.spbu.ru/ 44Differential Equations and Control Processes, N. 3, 2020
+2.2 Adaptive Tracking Systems with IRM
+Adaptive control law (4) may be straightforwardly extended to solving the
+tracking problem with the desired closed-loop system dynamics, see [2]. To this
+end let us introduce reference signalr(t) and de ne adaptation error signal (t)
+as
+ (t) =G(p)y(t) D(p)r(t); (5)
+whereG(p) is de ned above, and operator polynomialD(p) has the formD(p) =
+d
+q
+p
+q
++   +d
+1
+p+d
+0
+. Signal (t) may be treated as the discrepancy in the equation
+G(p)y(t) =D(p)r(t); (6)
+considering (6) as the IRM for the case of tracking system.
+By the analogy with (3) let us take the control action in the form
+u(t) =k
+r
+(t)
+ 
+D(p)r(t)
+ 
++
+l
+X
+i=0
+k
+i
+(t)
+ 
+p
+i
+y(t)
+ 
+; (7)
+where k
+r
+(t), k
+i
+(t) (i = 0;:::;l) are tunable parameters, and take the following
+adaptation law
+_
+k
+r
+(t)= (t)D(p)r(t) ff
+ 
+k
+r
+(t) k
+0
+r
+ 
+; k
+0
+r
+=k
+r
+(0);
+_
+k
+i
+(t) =  (t)p
+i
+y(t) ff
+ 
+k
+i
+(t) k
+0
+i
+ 
+; k
+0
+i
+=k
+i
+(0);
+(8)
+where > 0,ff  0 are design parameters;k
+0
+r
+,k
+0
+i
+are \guessed" initial controller
+gains, i = 0;:::;l. It worth mentioning that both degree q of polynomial D(p)
+and its coe cients may be chosen arbitrarily by the designer.
+2.3 Signal-Parametric Adaptive Controllers with IRM
+Let the regulation goal lim
+t!1
+x(t) = 0 for plant
+_ x(t) =Ax(t) +Bu(t); y(t) =Cx(t); (9)
+where x(t)2R
+n
+, u(t)2R
+m
+, y(t)2R
+m
+, A, B, C are constant real matrices of
+appropriate dimensions, be posed. Following [2,16] introduce an auxiliary goal
+as ensuring the sliding mode motion along the prede ned surface (line in the
+scalar control case), which is given by the equality (t)  0, where (t) =Gy(y),
+G is a given (l n)-matrix. Let us use the following control law:
+u = sign ;   =Gy; (10)
+Electronic Journal. http://diffjournal.spbu.ru/ 45Differential Equations and Control Processes, N. 3, 2020
+where  > 0 is a controller parameter. It may be proved that for system (9),
+(10) the posed control goal may be achieved if there exist matrix P =P
+T
+> 0
+and vector K
+ 
+s.t. PA
+ 
++A
+ 
+T
+P < 0, PB = GC, A
+ 
+= A +BK
+ 
+T
+C. As
+follows from the passi cation theorem, the mentioned conditions are ful lled
+iff: transfer functionGW (s) is HMP (whereW (s) =C
+ 
+ I
+n
+ A)
+ 1
+B); the sign
+of GCB is known (we assume that it is positive). Under these conditions the
+goal lim
+t!1
+x(t) = 0 is achieved for su ciently large  (with respect to the initial
+conditions and actual plant parameters).
+To avoid dependence of closed-loop system stability on initial conditions
+and plant parameters, the following \signal-parametric" (\combined") control
+law may be used instead of (10):
+u =K
+T
+(t)y(t)  sign (y);  (y) =Gy(t)
+_
+K(t) =  (y) y(t); (11)
+where   =  
+T
+> 0,  > 0 are the matrix and scalar adaptation gains (design
+parameters).
+For the case of scalar control input the following control law, inspired by [23,
+28], may be used instead of (11):
+u = k(t) (y) 
+ 
+sign( (y))
+q
+ 
+ 
+ (y)
+ 
+ 
+;  (y)=Gy;
+_
+k(t) =
+k
+ (t)
+2
+: (12)
+This law produces more smooth control action than the \relay" one.
+3 Simple Adaptive Control Of Quadrotor
+Let us apply the IRM technique for designing the adaptive attitude control
+algorithms for quadrotor. This technique will be used for translational motion.
+Electronic Journal. http://diffjournal.spbu.ru/ 46Differential Equations and Control Processes, N. 3, 2020
+3.1 Quadrotor Model
+In the present paper the following model of the quadrotor rotational motion
+dynamics is utilized, cf. [30]:
+8
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+:
+m
+_
+V
+x
+= 
+y
+(C
+ 
+S
+#
+C
+
++S
+ 
+S
+
+) V
+x
+A
+x
+;
+m
+_
+V
+y
+= mg + 
+y
+(C
+#
+C
+
+) V
+y
+A
+y
+;
+m
+_
+V
+z
+= 
+y
+(S
+ 
+S
+#
+C
+
+ C
+ 
+S
+
+) V
+z
+A
+z
+;
+_  =!
+x
++S
+
+T
+#
+!
+z
++C
+
+T
+#
+!
+y
+;
+_
+# =C
+
+!
+z
+ S
+
+!
+y
+;
+_
+ =
+S
+
+C
+#
+!
+z
++
+C
+
+C
+#
+!
+y
+;
+I
+x
+_ !
+x
+= (I
+y
+ I
+z
+)!
+y
+!
+z
+ I
+r
+!
+z
+!
+r
++ 
+
+;
+I
+y
+_ !
+y
+= (I
+z
+ I
+x
+)!
+x
+!
+z
++ 
+ 
+;
+I
+z
+_ !
+z
+= (I
+x
+ I
+y
+)!
+x
+!
+y
++I
+r
+!
+x
+!
+r
++ 
+#
+;
+(13)
+where,#, denote the Euler angles (roll, pitch and yaw, respectively);!
+x
+,!
+y
+,
+!
+z
+are angular rates in body-axis frame,S
+ 
+= sin( ),C
+ 
+= cos( ),T
+ 
+= tan( );g
+is the gravity acceleration;I
+x
+,I
+y
+,I
+z
+are rotational moments of inertia. Rotating
+torque with respect to CoG is a vector   =
+ 
+ 
+
+; 
+#
+; 
+ 
+ 
+T
+with components  
+
+=
+l(!
+2
+ !
+4
+); 
+#
+= l(!
+1
+ !
+3
+),  
+ 
+= a
+r
+!
+R
+, where !
+R
+= !
+1
+ !
+2
++!
+3
+ !
+4
+. Motor
+rotation velocity is as _ !
+i
+= k
+l
+(~ !
+i
+ !
+i
+), where k
+l
+is motor parameter, ~ !
+i
+input
+reference value. Rotation velocities are limited by inequalities: 0<!
+min
+ !
+i
+ 
+!
+max
+. Since k
+l
+is large, the engine inertia is omitted in the sequel.
+3.2 Adaptive Control Laws for Quadrotor Attitude
+Assuming that angular velocities !
+x
+, !
+y
+, !
+z
+are small, one may obtain the lin-
+earized model of quadrotor angular motion in the vicinity of zero. In this model
+the yaw motion may be considered separately of the roll and pitch motions and
+modeled by the following equation:
+
+ =I
+ 1
+y
+ 
+ 
+or in the state-space form with
+state vector ~ x
+ 
+=
+ 
+ ;
+_
+ 
+ 
+T
+as
+_
+~ x
+ 
+=
+"
+0 1
+0 0
+#
+~ x
+ 
++
+"
+0
+I
+ 1
+y
+#
+ 
+ 
+; ~ y
+ 
+=
+"
+1 0
+0 1
+#
+~ x
+ 
+: (14)
+Following the aforementioned IRM design technique, let us introduce vectorG
+ 
+asG
+ 
+=
+ 
+1;ff
+ 
+ 
+whereff
+ 
+> 0 is a design parameter. This leads to the following
+Electronic Journal. http://diffjournal.spbu.ru/ 47Differential Equations and Control Processes, N. 3, 2020
+algorithm for yaw control:
+ 
+ 
+(t) = (t)  
+ 
+(t) +ff
+ 
+_
+ (t);
+u
+ 
+(t) = k
+ 
+(t) 
+ 
+(t) 
+ 
+sign( 
+ 
+(t))
+q
+ 
+ 
+ 
+ 
+(t)
+ 
+ 
+;
+_
+k
+ 
+(t) =
+k
+ 
+ 
+(t)
+2
+ ff
+k
+ 
+k
+ 
+(t) k
+0
+ 
+ 
+; k
+ 
+(0) =k
+0
+ 
+(15)
+where 
+ 
+(t) denotes the yaw reference signal. The parametric feedback is used
+to prevent in nitely increasing when measurements are noisy. This modi cation
+is used for all control gains.
+To cope with unmodelled actuator dynamics the shunt (parallel feedforward
+compensator) is added to the control law (15), cf. [3, 5, 12]. This leads to the
+following control law:
+ 
+ 
+(t) = (t)  
+ 
+(t) +ff
+ 
+_
+ (t) v
+ 
+(t);
+u
+ 
+(t) = k
+ 
+(t) 
+ 
+(t) 
+ 
+sign( 
+ 
+(t))
+q
+ 
+ 
+ 
+ 
+(t)
+ 
+ 
+;
+_
+k
+ 
+(t) =
+k
+ 
+ 
+(t)
+2
+ ff
+k
+ 
+k
+ 
+(t) k
+0
+ 
+ 
+; k
+ 
+(0) =k
+0
+ 
+_ v
+ 
+(t) =
+ 
+  
+ 
+(t) v
+ 
+(t)
+ 
+ 
+ 1
+;
+(16)
+where  and  are the auxiliary feedback gains and  is su ciently small, see [12]
+for rigorous statements. The following controllers for other angles and positions
+will be design by analogy with replacing signal (t) and other respective signals.
+Controller parameters are choosing separately to the each controller.
+Linearized pitch (#) and roll () angular motion models may be written as
+follows:   = I
+ 1
+x
+ 
+
+and
+
+# = I
+ 1
+z
+ 
+#
+. Pitch and roll angles can be obtained by
+double integration of angular velocities !
+x
+and !
+z
+respectively:
+_
+~ x
+
+=
+"
+0 1
+0 0
+#
+~ x
+
++
+"
+0
+I
+ 1
+x
+#
+ 
+
+; ~ y
+
+=
+"
+1 0
+0 1
+#
+~ x
+
+;
+_
+~ x
+#
+=
+"
+0 1
+0 0
+#
+~ x
+#
++
+"
+0
+I
+ 1
+z
+#
+ 
+#
+; ~ y
+#
+=
+"
+1 0
+0 1
+#
+~ x
+#
+;
+(17)
+where ~ x
+
+=
+ 
+; _ 
+ 
+T
+and ~ x
+#
+=
+ 
+#;
+_
+#
+ 
+T
+.
+The passi cation method can be used since systems (17) ful ll the nec-
+essary HMP conditions. The following controllers are used for roll and pitch
+stabilization as it was shown above for yaw angle (16).
+Electronic Journal. http://diffjournal.spbu.ru/ 48Differential Equations and Control Processes, N. 3, 2020
+3.3 Adaptive Control Laws for Quadrotor Altitude
+As it could be easily derived from (13), quadrotor altitude dynamic may be
+presented in the following form
+m y = mg + 
+y
+  _ yA
+y
+; (18)
+or, in the state-space form with state vector ~ x
+y
+=
+ 
+y; _ y
+ 
+T
+as
+_
+~ x
+y
+=
+"
+0 1
+0 m
+ 1
+A
+y
+#
+~ x
+y
++
+"
+0
+m
+ 1
+#
+ 
+y
+; ~ y
+y
+=
+"
+1 0
+0 1
+#
+~ x
+y
+: (19)
+System (19) also satis es the HMR condition, so the same controller as (16)
+may be used for altitude stabilization.
+3.4 Adaptive Control Laws for Quadrotor Latitude and Longitude
+Changing roll and pitch angles allows quadrotor to move along the horizontal
+plane. Let us describe quadrotor dynamics along 0X and 0Z as an independent
+motion from (13):
+m x = 
+y
+(C
+ 
+S
+#
+C
+
++S
+ 
+S
+
+) V
+x
+A
+x
+;
+m z = 
+y
+(S
+ 
+S
+#
+C
+
+ C
+ 
+S
+
+) V
+z
+A
+z
+;
+(20)
+Above dynamics equations may be derived taking into account that rotation
+on yaw angle are done before quadrotor moving in X0Z plane so = 0.
+Let us use the following attitude controllers with pre-rotation on angle 
+ 
+and coordinate system change:
+(
+
+ 
+=  arcsin
+k
+
+ 
+ 
+y
+(cos 
+ 
+(x x
+ 
+) + sin 
+ 
+(z z
+ 
+));
+#
+ 
+= arcsin
+k
+#
+ 
+ 
+y
+cos
+(cos 
+ 
+(z z
+ 
+)  sin 
+ 
+(x x
+ 
+));
+(21)
+where x
+ 
+;z
+ 
+are reference quadrotor position and k
+
+ ;k
+#
+  are positive coe -
+cients.
+With control laws (21) and linearized in the origin model (13), equations
+describing quadrotor motion in X0Z plane are as follows
+(
+k
+
+  ^ z
+ 
+(t) = (ms
+2
++A
+z
+s +k
+
+ )^ z(t);
+k
+#
+  ^ x
+ 
+(t) = (ms
+2
++A
+x
+s +k
+#
+ )^ x(t);
+(22)
+Electronic Journal. http://diffjournal.spbu.ru/ 49Differential Equations and Control Processes, N. 3, 2020
+where ^ z; ^ x are stabilization errors in new coordinate system and ^ z
+ 
+; ^ x
+ 
+are the
+reference errors.
+In is obviously that transfer function derived from (22) satis es to HMP
+conditions with G =
+h
+1  
+G
+i
+; 
+G
+> 0. Similarly, we de ne controllers for lati-
+tude and longitude positions.
+4 Simulation Results
+In the simulations, the model parameters was taken from [7] and some experi-
+ments with attitude control based on mentioned above passi cation method was
+described in [31]. Controllers coe cient was set the same for every simulation
+run.
+4.1 Stabilization
+The most common quadrotor purpose is stabilization in the reference point.
+Obviously, the reference point is linear position x;z;y and heading angle .
+Roll and pitch angles are auxiliary to perform transversal motion in 3D space.
+Let us take reference pointfx
+ 
+;z
+ 
+;y
+ 
+; 
+ 
+g asf15; 10; 5; =4g. Figure 1 shows
+time histories of latitude, longitude and altitude in the case of constant reference
+signals. Attitude time histories are shown in Fig. 2.
+Auxiliary signals generated by position controllers (21) are shown at  g. 2.
+Roll and pitch adaptive controllers are performing tracking for generated auxil-
+iary signals. Controller coe cients (including controller (15)) are tuning slightly
+and fast. Altitude, latitude and longitude controllers coe cient are tuning more
+substantially are shown in Fig. 3.
+4.2 Tracking with noisy measurements
+The most common case for quadrotor control is tracking the reference trajectory
+that may be prede ned or manually set by the UAV operator. Let us de ne the
+following reference trajectories: x
+ 
+(t) = 8 sin 0:1t (m), z
+ 
+(t) = 8 cos 0:1t (m),
+y
+ 
+(t) = 0:1t (m), 
+ 
+(t) = 0:5 sint (rad). All the quadrotor sensors are noisy.
+Moreover, global positioning are based on GPS with a su cient inaccuracy.
+As it was mentioned above, supposed simple adaptive controllers are taking
+into account noise measurements by using feedback in (15) and the following
+Electronic Journal. http://diffjournal.spbu.ru/ 50Differential Equations and Control Processes, N. 3, 2020
+Figure 1: Altitude, latitude and longitude time histories with its constant reference signals.
+Figure 2: Attitude time histories with its auxiliary signals with constant reference signals.
+Electronic Journal. http://diffjournal.spbu.ru/ 51Differential Equations and Control Processes, N. 3, 2020
+Figure 3: Altitude, latitude and longitude controller coe cients time histories.
+controllers. Let us repeat tracking situation and simulate Gaussian noise into
+IMU (with variance  
+2
+att
+= 0:001, leads to a noisy attitude position) and into
+GPS (with variance 
+2
+pos
+= 0:1, leads to a noisy altitude, latitude and longitude
+positions). This situation is close to real IMUs measures as it notised in [24].
+Noisy measured signals are shown at  gs. 4 and 5 by grey lines.
+Latitude and longitude reference signals are changing permanently and co-
+e cients in positioning adaptive controllers are also tuning (see  g. 7).
+As it could be seen, proposed simple adaptive controllers may be used for
+quadrotors with noisy sensors and external disturbances.
+5 Conclusion
+Simple adaptive control technique based on the passi cation method and the
+Implicit Reference Model approach is used for design of the adaptive controller
+for every quadrotor position: attitude, altitude, latitude and longitude. The
+simulation study has been preformed basing on previous experimental studies
+and quadrotor mathematical models. The simulations demonstrate good perfor-
+mance quality and high adaptation rate of the SAC system for every controlling
+Electronic Journal. http://diffjournal.spbu.ru/ 52Differential Equations and Control Processes, N. 3, 2020
+Figure 4: Altitude, latitude and longitude time histories with its constant reference signals and
+noisy measurements.
+Figure 5: Attitude time histories with its auxiliary signals with constant reference signals and
+noisy measurements.
+Electronic Journal. http://diffjournal.spbu.ru/ 53Differential Equations and Control Processes, N. 3, 2020
+Figure 6: Quadrotor trajectory while stabilizing in reference point.
+Figure 7: Altitude, latitude and longitude controller coe cients time histories.
+Electronic Journal. http://diffjournal.spbu.ru/ 54Differential Equations and Control Processes, N. 3, 2020
+signals. In the future it is planned to extend in-ight testing and implement
+full control of based on passi cation method for the real quadrotor.
+Acknowledgment
+This work was performed the Institute for Problems in Mechanical Engineering
+of the Russian Academy of Sciences (IPME RAS) under Goscontract A19-
+119120290136-9, and supported in part by the Russian Foundation for Basic
+Research (grant № 18-38-20037) and in part by the Ministry of Science and
+Higher Education of Russian Federation (grant№ FZWF-2020-0015).
+References
+[1] Amelin, K., Tomashevich, S., and Andrievsky, B. Recursive Iden-
+ti cation of Motion Model Parameters for Ultralight UAV. In IFAC Pro-
+ceedings Volumes (IFAC-PapersOnline). IFAC, 2015, pp. 7{12.
+[2] Andrievskii, B. R., and Fradkov, A. L. Method of Passi cation
+in Adaptive Control, Estimation, and Synchronization. Autom. Remote
+Control 67, 11 (2006), 1699{1731.
+[3] Andrievsky, B., Fradkov, A. L., and Stotsky, A. A. Shunt Com-
+pensation for Indirect Sliding-Mode Adaptive Control. IFAC Proceedings
+Volumes 29 (1996), 5132{5137.
+[4] Andrievsky, B., and Tomashevich, S. Passi cation Based Signal-
+Parametric Adaptive Controller for Agents in Formation. IFAC-
+PapersOnLine 48, 11 (2015), 222 { 226.
+[5] Barkana, I. Parallel Feedforward and Simpli ed Adaptive Control. Int
+J. Adaptive Control and Signal Processing 1, 2 (1987), 95{109.
+[6] Barkana, I. Parallel Feedforward and Simple Adaptive Control of Flex-
+ible Structures: First-Order Pole Instead of Collocated Velocity Sensors?
+J. Aerospace Engineering 29, 2 (2016).
+[7] Belyavskii, A.O., andTomashevich, S.I. Passi cation-based Adap-
+tive Control Design for Quadrotor Stabilization. Automation and Remote
+Control 79, 10 (2018), 1886{1902.
+Electronic Journal. http://diffjournal.spbu.ru/ 55Differential Equations and Control Processes, N. 3, 2020
+[8] Bobtsov, A. A., Pyrkin, A. A., and Kolyubin, S. A. Simple Out-
+put Feedback Adaptive Control Based on Passi cation Principle. Int J.
+Adaptive Control and Signal Processing 28, 7{8 (2014), 620{632.
+[9] Borisov, O. I., Bobtsov, A. A., Pyrkin, A. A., and Gromov,
+V.S. Simple Adaptive Control for Quadcopters With Saturated Actuators.
+In AIP Conf. Proc. World Congress: 11th Int. Conf. Mathematical Prob-
+lems in Engineering, Aerospace and Sciences (ICNPAA 2016) (Melville,
+NY, USA, 2017), AIP, pp. 020031{10.
+[10] Fradkov, A. L. Synthesis of Adaptive System of Stabilization of Linear
+Dynamic Plants. Automation and Remote Control 35, 12 (1974), 1960{
+1966.
+[11] Fradkov,A.L. Quadratic Lyapunov Functions in the Adaptive Stability
+Problem of a Linear Dynamic Target. Sib Math J 17, 2 (March 1976), 341{
+348.
+[12] Fradkov, A. L. Adaptive Stabilization of the Minimum Phase Plants
+with Vector Input without Measuring the Output Derivatives. Dokl.
+Rossisk. Akad. Nauk 337, 5 (1994), 592{594.
+[13] Fradkov, A. L. Passi cation of Nonsquare Linear Systems and
+Yakubovich-Kalman-Popov Lemma. Eur. J. Control 6 (2003), 573{582.
+[14] Fradkov, A. L., Andrievsky, B., and Peaucelle, D. Adaptive
+Passi cation-Based Fault-Tolerant Flight Control. IFAC Proceedings Vol-
+umes 40, 7 (2007), 715 { 720.
+[15] Fradkov, A. L., Andrievsky, B., and Peaucelle, D. Adaptive
+Control Design and Experiments for LAAS \Helicopter" Benchmark. Eu-
+ropean Journal of Control 14, 4 (2008), 329{339.
+[16] Hsu, L., and Costa, R. R. Variable Structure Model Reference Adap-
+tive Control Using Only Input and Output Measurements. International
+Journal of Control 49, 2 (feb 1989), 399{416.
+[17] Ioannou, P. A., and Kokotovic, P. V. Instability Analysis and Im-
+provement of Robustness of Adaptive Control. Automatica 20, 5 (1984),
+583{594.
+[18] Khalil, H. K. Nonlinear Systems. Macmillan, New York, 1992.
+Electronic Journal. http://diffjournal.spbu.ru/ 56Differential Equations and Control Processes, N. 3, 2020
+[19] Lam, Q. M., and Barkana, I. Direct Adaptive Control Treatment to
+Loss of Attitude Control Actuators. In Proc. AIAA Guidance, Navigation,
+and Control Conference 2007 (Hilton Head, SC, 2007), vol. 2, pp. 1319{
+1332.
+[20] Landau,Y.D. Adaptive Control: The Model Reference Approach. Marcel
+Dekker, New York, 1979.
+[21] Leduc, H., Peaucelle, D., and Pittet-Mechin, C. LMI-based De-
+sign of a Robust Direct Adaptive Attitude Control for a Satellite With
+Uncertain Parameters. In Proc. 20th IFAC Symposium on Automatic Con-
+trol in Aerospace (ACA 2016) (Sherbrooke, Canada, Aug. 2016), IFAC.
+[22] Lee, D., Kim, H. J., and Sastry, S. Feedback Linearization vs. Adap-
+tive Sliding Mode Control for a Quadrotor Helicopter. Int. J. Control,
+Automation and Systems 7, 3 (2009), 419{428.
+[23] Levant, A., Pridor, A., Gitizadeh, R., Yaesh, I., and Ben-
+Asher, J. Z. Aircraft Pitch Control via Second Order Sliding Technique.
+AIAA Journal of Guidance, Control and Dynamics 23, 4 (2000), 586{594.
+[24] Nirmal, K., Sreejith, A., Mathew, J., Sarpotdar, M., Suresh,
+A., Prakash, A., Safonova, M., and Murthy, J. Noise Modeling
+and Analysis of an IMU-based Attitude Sensor: Improvement of Perfor-
+mance by Filtering and Sensor Fusion. Proc. SPIE. 9912, Advances in
+Optical and Mechanical Technologies for Telescopes and Instrumentation
+II, 99126W, July 22, 2016 9912 (2016), 99126W.
+[25] Park, B. S., Yoo, S. J., Park, J. B., and Choi, Y. H. A Simple
+Adaptive Control Approach for Trajectory Tracking of Electrically Driven
+Nonholonomic Mobile Robots. 1199{1206.
+[26] Peaucelle,D.,andFradkov,A.L. Robust AdaptiveL
+2
+-gain Control
+of Polytopic MIMO LTI Systems { LMI Results. Systems & Control Letters
+57, 11 (2008), 881{887.
+[27] Pyrkin, A.A., Bobtsov, A.A., Kolyubin, S.A., Faronov, M.V.,
+Borisov, O. I., Gromov, V. S., Vlasov, S. M., and Nikolaev,
+N. A. Simple Robust and Adaptive Tracking Control for Mobile Robots.
+IFAC Proceedings Volumes (IFAC-PapersOnline) 48, 11 (2015), 143{149.
+Electronic Journal. http://diffjournal.spbu.ru/ 57Differential Equations and Control Processes, N. 3, 2020
+[28] Shtessel, Y., Edwards, C., Fridman, L., and Levant, A. Sliding
+Mode Control and Observation. Series: Control Engineering. Birkh auser,
+New York, Heidelberg, Dordrecht, London, 2012.
+[29] Tomashevich, S., and Andrievsky, B. Stability and Performance of
+Networked Control of Quadrocopters Formation Flight. In Proc. 6th Int.
+Congress on Ultra Modern Telecommunications and Control Systems and
+Workshops (ICUMT 2014) (St. Petersburg, Russia, October 6{8 2014),
+IEEE Press, pp. 331{336.
+[30] Tomashevich, S., Belyavskyi, A., and Andrievsky, B. Passi ca-
+tion Based Simple Adaptive Control of Quadrotor Attitude: Algorithms
+and Testbed Results. In AIP Conf. Proc. World Congress: 11th Int. Conf.
+Mathematical Problems in Engineering, Aerospace and Sciences (ICNPAA
+2016) (Melville, NY, USA, 2017), AIP, pp. 020161{13.
+[31] Tomashevich, S., Fradkov, A. L., Andrievsky, B., Belyavskyi,
+A. O., and Amelin, K. Simple Adaptive Control of Quadrotor Attitude.
+Algorithms and Experimental Results. 25th Mediterranean Conference on
+Control and Automation, MED 2017 (2017), 933{938.
+[32] Tomashevich,S.I.,Borisov,O.I.,Gromov,V.S.,Pyrkin,A.A.,
+and Bobtsov, A. A. Experimental Study on Robust Output Control for
+Quadcopters. 25th Mediterranean Conference on Control and Automation,
+MED 201717 (2017), 1029{1034.
+[33] Ulrich, S., Sasiadek, J. Z., and Barkana, I. Nonlinear Adaptive
+Output Feedback Control of Flexible-joint Space Manipulators with Joint
+Stiffness Uncertainties. J. Guidance, Control, and Dynamics 37, 6 (2014),
+1961{1975.
+[34] Yaesh, I., and Shaked, U. Simpli ed Adaptive Control Via Improved
+Robust Positive Real Conditions. Systems & Control Letters 55 (2006),
+1033{1040.
+[35] Yakubovich, V. A., Leonov, G. A., and Gelig, A. K. Stability
+of Stationary Sets in Control Systems with Discontinuous Nonlinearities.
+WORLD SCIENTIFIC, 2004.
+[36] Zhang, S., and Luo, F. L. An Improved Simple Adaptive Control Ap-
+plied to Power System Stabilizer. IEEE Transactions on Power Electronics
+24, 2 (2009), 369{375.
+Electronic Journal. http://diffjournal.spbu.ru/ 58
