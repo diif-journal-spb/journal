@@ -1,0 +1,783 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 4, 2020
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Filtration and identi cation
+Numerical Investigation of the Optimal Measurement
+for a Semilinear Descriptor System with the Showalter{Sidorov
+Condition: Algorithm and Computational Experiment
+Manakova N.A.
+1
+, Gavrilova O.V.
+1
+, Perevozchikova K.V.
+1
+South Ural State University, Russia
+e-mail: manakovana@susu.ru, gavrilovaov@susu.ru, vasiuchkovakv@susu.ru
+Abstract. The article deals with the problem of optimal measurement for a
+semilinear descriptor system with a distinguished linear part and a nonlinear
+term unsolved with respect to the derivative of the unknown vector function
+with the Showalter{Sidorov initial condition. Basing on the methods of the
+theory of optimal control we found su cient conditions for the existence of
+solutions of the optimal measurement problem { the problem of recovering a
+dynamically distorted signal from a measuring device. An algorithm for  nding
+a numerical solution uses the methods of decomposition, penalty and the Ritz
+method as well. The algorithm is based on the representation of the measure-
+ment components by polynomials of a given degree, which allows reducing the
+optimal control problem to a computer programming problem with respect to
+the unknown coe cients of the polynomials. As an example of a sensor we
+consider Fitz Hugh { Nagumo oscilloscope described by a nonlinear descrip-
+tor system. Computational experiments for the considered sensor model are
+presented.
+Keywords: descriptor systems, optimal control problem, mathematical model
+of the optimal measurement.Differential Equations and Control Processes, N. 4, 2020
+1 Introduction
+In the theory of dynamic measurements, an urgent problem is the problem of
+reconstructing measurements from observation. The traditional approach [1]
+to solving this problem is a method based on the theory of inverse problems
+[2]. Another approach [3] is a research method based on the automatic control
+theory [4]. In the meantime, the [5] approach has recently appeared, based on
+the theory of optimal control of solutions of linear Sobolev-type equations [6, 7,
+8]. Article [5] initiated a several researches on the study of optimal measurement
+problems for linear deterministic and stochastic descriptor systems, also called
+Leontief-type systems [10, 11]. The problem
+J(y)! min (1)
+will be called the optimal measurement problem if it is based on the search for
+the optimum of the target functional from the norm of the difference between
+real (i.e.,  xed on a measuring device) and virtual (i.e., found by means of a
+computational algorithm) observations. Based on the ideas and approaches of
+the theory of optimal measurement for linear descriptor systems and extend-
+ing the methods of the theory of optimal control for semilinear Sobolev-type
+equations, it will be possible to investigate optimal measurement problems for
+semilinear descriptor systems. This approach allows one to take into account
+nonlinear connections in sensors and expand the range of studied problems.
+The main goal of our research is the numerical solution of the optimal
+measurement problem (1) for semilinear descriptor systems
+L _ x(t) +Mx(t) +N(x(t)) =u(t); detL = 0; (2)
+and
+y(t) =Dx(t) (3)
+with the Showalter{Sidorov initial condition
+L(x(0) x
+0
+) = 0: (4)
+A numerical study of linear problems of optimal dynamic measurement with the
+development of program algorithms was carried out in the works [12, 13, 14]. In
+these works, algorithms of numerical methods for solving optimal control prob-
+lems for linear Sobolev-type equations were adapted to the  nite-dimensional
+case. By modifying the algorithms of numerical methods developed for semilin-
+ear equations of Sobolev type [15] for the case of semilinear descriptor systems,
+Electronic Journal. http://diffjournal.spbu.ru/ 116Differential Equations and Control Processes, N. 4, 2020
+this article will build a numerical method algorithm for the problem (1) { (3).
+The method obtained will be based on the methods of decomposition, penalty
+and Ritz [15].
+The research of the optimal measurement problem for semilinear descriptor
+systems can be divided into three stages, each of which is one of the sections of
+this article. At the  rst stage, a mathematical model of the investigated sen-
+sor is created, the problem of  nding the optimal measurement is set, and the
+conditions are given under which there is a unique solution to this problem. At
+the second stage, algorithms are constructed for approximate solutions to the
+problem of  nding the optimal measurement. And  nally, at the third stage of
+the optimal measurement problem research, on the basis of the algorithms of
+the second stage, programs are created and computational experiments are per-
+formed. In our case, we research the problem of optimal dynamic measurement
+for the mathematical model of the Fitz Hugh { Nagumo oscilloscope [16, 17].
+2 Optimal Measurement Dynamic Problem
+Consider a semilinear descriptor system of the form (2) and (3) with
+the Showalter{Sidorov initial condition (4). Here L;M are matrices of or-
+der n (hLx;xi   0, C
+M
+kxk
+2
+  hMx;xi   C
+M
+kxk
+2
+, k k is the norm in
+R
+n
+) representing the mutual inuence of the state and state velocities of
+the measuring sensor, respectively, and dim kerL = dim coker L; D is a
+square matrix of order n, N is a nonlinear operator de ned by the formula
+hN(x(t));x(t)i = a
+1
+x
+4
+1
++ a
+2
+x
+4
+2
++ ::: + a
+n
+x
+4
+n
+; a
+i
+  0, whereh ; i is the Eu-
+clidean scalar product in R
+n
+;x(t) = (x
+1
+(t);x
+2
+(t);:::;x
+n
+(t)) is vector functions
+of the state; u(t) = (u
+1
+(t);u
+2
+(t);:::;u
+n
+(t)) and y(t) = (y
+1
+(t);y
+2
+(t);:::;y
+n
+(t)) are
+measurement vector functions and observations of the measuring sensor, respec-
+tively.
+Consider
+coimL =fx2X : [x;'] = 0 8'2 kerLnf0gg;
+where [ ; ] is a scalar product in L
+2
+(R
+n
+). LetX =fx2 L
+4
+((0;T );R
+n
+) : _ x2
+coim Lg is the state space,N = D[X ] is the observation space for some  xed
+T2R
++
+,U =fu2L4
+3
+((0;T );R
+n
+g is the measurement space. Let us single out
+inU is a closed, convex subsetU
+ad
+is the set of admissible measurements.
+Electronic Journal. http://diffjournal.spbu.ru/ 117Differential Equations and Control Processes, N. 4, 2020
+The main goal of this work is to minimize the values of the target functional
+J(y) =
+T
+Z
+0
+ky(t) y
+0
+(t)k
+4
+L
+4
+(R
+n
+)
+dt; (5)
+where y
+0
+(t) = (y
+01
+(t);y
+02
+(t);:::;y
+0n
+(t)) is an observation obtained during a full-
+scale experiment. Note that, by virtue of (2), (3), the vector functiony depends
+on the functions x;u; therefore, we can assume that J(y) =J(x;u).
+Consider the set
+M =fx2X : (I Q)(Mx +N(x)) = (I Q)ug: (6)
+By virtue of the properties of the matrix L, there exists a projector Q along
+coker L onto im L. Note that if x =x(t) is a solution to equation (2), then it
+necessarily lies in the setM. The setM will be called the phase manifold of
+equation (2).
+De nition 1 A weak solution to equation (2) is a vector function x2X sat-
+isfying the condition
+T
+Z
+0
+'(t)
+ 
+d
+dt
+L _ x +Mx +N(x);w
+ 
+dt =
+T
+Z
+0
+'(t)[u;w]dt; (7)
+for any w2X and any '2 L
+2
+(0;T ). A solution to equation (2) is called a
+solution to the Showalter{Sidorov problem if it satis es (4).
+It is required to  nd the optimal measurement ~ u2U
+ad
+that satis es system
+(2), (3), the Showalter{Sidorov initial condition (4), and
+J(~ u) = min J(u); u2U
+ad
+: (8)
+De nition 2 A pair (~ x; ~ u)2X U
+ad
+is called a solution to the optimal mea-
+surement problem (1) { (4), if
+J(~ x; ~ u) = min
+(x;u)
+J(x;u);
+where the pairs (x;u)2X U
+ad
+satisfy (2) { (4) in the sense of De nition 1.
+Theorem 1 IfM is a simple Banach C
+1
+-manifold, then for any x
+0
+2X and
+y
+0
+2N there is a unique solution ~ x2U
+ad
+for which (8) holds.
+Electronic Journal. http://diffjournal.spbu.ru/ 118Differential Equations and Control Processes, N. 4, 2020
+Proof. The main ideas of the proof are based on the reduction of the problem
+we are investigating to the general problem of optimal control for semilinear
+Sobolev-type equations. The conceptual proof of this Theorem is similar to the
+proof of Theorem 2 in [15] into account the transition to the  nite-dimensional
+case.
+ 
+The vector-function ~ u = ~ u(t) existing by Theorem 1 will, in what follows, be
+called the exact optimal measurement. Note that the vector functions ~ u = ~ u(t)
+and y = y(t) obtained as a result of applying Theorem 1 are virtual exact
+optimal measurement and virtual exact optimal observation.
+3 Algorithm for Numerical Method
+Based on the theoretical results, an algorithm was developed for the approx-
+imate solution of the optimal control problem (1) { (4), where the objective
+functional has the form (5), based on modi ed decomposition and Ritz meth-
+ods. Applying the decomposition method described in [15], we linearize system
+(2), by introducing the functionv =v(t), and obtain the equivalent Showalter{
+Sidorov problem (2) { (4) for the system of equations:
+L _ x(t) +Mx(t) +N(v(t)) =u(t); detL = 0;
+x(t) =v(t);
+y(t) =Dx(t):
+(9)
+Then the solution (x;u) of problem (1) { (4) reduces to  nding the triple
+(x;v;u): Using the Ritz method, we represent the unknown functions v(t),
+u(t); by the expansion v(t;H) =
+H
+X
+h=0
+a
+h
+t
+h
+;u(t;H) =
+H
+X
+h=0
+b
+h
+t
+h
+: Next, we seek
+an approximate solution of the control problem (1), (4), (9) by the penalty
+method described in [15]. We consider the equivalent control problem, where
+the relation x! v is obtained for an approximate solution by introducing a
+Electronic Journal. http://diffjournal.spbu.ru/ 119Differential Equations and Control Processes, N. 4, 2020
+new functional in the form
+J
+"
+ 
+(x;u) = 
+T
+Z
+0
+ky(t) y
+0
+(t)k
+4
+L
+4
+(R
+n
+)
+dt + (1  )
+T
+Z
+0
+kDv(t) y
+0
+(t)k
+4
+L
+4
+(R
+n
+)
+dt+
++r
+"
+T
+Z
+0
+kx(t) v(t)k
+2
+L
+2
+(R
+n
+)
+dt; 2 (0; 1);
+(10)
+where the penalty parameter r
+"
+=
+1
+"
+! +1 for "! +0:
+The basic ideas of the algorithm were developed for the in nite-dimensional
+case, based on the methods of penalty, Ritz and decomposition. In this arti-
+cle, it is proposed to modify the already constructed algorithms for the  nite-
+dimensional case, for this we represent the space U as U =
+H
+L
+h=1
+U
+h
+; where
+U
+h
+=fu
+h
+2 L
+2
+((0;T );R)g. Denote byf'
+i
+g an orthonormal sequence of ba-
+sis vectors. It is clear that this sequence can be chosen the same in everyU
+h
+.
+We construct a  nite-dimensional linealU
+k
+h
+= spanf'
+i
+:i = 1; 2;:::;kg and the
+subspaceU
+k
+=
+H
+L
+h=1
+U
+k
+h
+: Being thatL
+2
+(R) L4
+3
+(R) densely condtruct the subset
+U
+k
+ad
+=U
+k
+\U
+ad
+. The subsetU
+k
+ad
+ U
+ad
+may turn out to be empty, but in any
+case it is closed and convex. It is clear that all members of the sequencefU
+k
+ad
+g
+cannot be empty sets because of the obvious monotonicity of this sequence and
+the fact that letting k go to in nity we obtain in the limiting case the setU
+ad
+.
+The main stages of the algorithm after the transition to the  nite-dimensional
+case are presented in Fig. 1.
+The program is designed to  nd a solution to the optimal measurement
+problem, written in the Maple language using the Maple 2017 compiler. The
+choice of the programming environment was due to the presence of a built-in
+analytical computing apparatus and built-in tools for solving systems of ordi-
+nary differential equations. The program is based on methods for solving opti-
+mal control problems for semilinear Sobolev type equations by the Showalter{
+Sidorov initial condition.
+Data entry is carried out from the keyboard and is saved in a text  le that
+sets the calculation parameters in the rest of the program. Also, functions and
+calculation coe cients are saved in separate  les, from which the necessary data
+arrays are loaded. The following data is used as input:
+  the type of quality functional that will be accepted for calculation;
+Electronic Journal. http://diffjournal.spbu.ru/ 120Differential Equations and Control Processes, N. 4, 2020
+Fig 1. Generalized scheme of the algorithm for calculating the solution of the optimal
+measurement problem
+  matrices L;M;D, size n n, matrix of coe cients of polynomials u(t);
+  array of observation dataY
+0
+, arrayX
+0
+of initial values of the system state;
+  the right boundary of the segment T on which the problem is considered.
+When creating the program, methods of code optimization and calculations
+were used. To simplify the writing of program code, we used such an oppor-
+tunity of the Maple programming language as built-in and speci ed structures
+for calculating results. Thus, the calculation formulas in the program text are
+always visible to the user, which affects the understanding of the program code
+and the ease of its modi cation. The program was also subjected to optimiza-
+tion of the computation speed. Due to the fact that when calculating many
+program procedures, the values of the function must be obtained not for an in-
+ nite number of values of variables, but mainly only for the integration nodes,
+then, taking into account the maximum of the double integral in the formula
+Electronic Journal. http://diffjournal.spbu.ru/ 121Differential Equations and Control Processes, N. 4, 2020
+of the quality functional, it is su cient to save the number of values for m
+2
+,
+where m + 1 is the number integration nodes.
+4 Computational Experiment
+For illustration, consider the Fitz Hugh{Nagumo oscillator, a simpli ed diagram
+of which is shown in Fig. 2. It represents an oscillatory RLC circuit with
+a nonlinear connected to it (in the classical version is a tunnel diode), the
+sum of the voltages acts on: a constant voltage supply of the circuit V
+c
+and
+an alternating external signal  (t). The current-voltage characteristic of the
+element (3) can be approximated by a cubic polynomial: I =F (U) =aU
+3
+ gU,
+whereg is the negative differential conductivity, which allows \pumping energy"
+in the oscillatory circuit.
+Fig 2. Oscillator circuit Fitz
+Hugh{Nagumo
+If we add Krichter's law, then we
+get the circuit equations:
+L
+dI
+dt
+=V
+c
++"(t) RI U;
+C
+dU
+dt
+=I F (U):
+Let us introduce the dynamic vari-
+ables x
+1
+= U and x
+2
+=
+I
+g
+. For new
+variables, the equations will be writ-
+ten in the following form:
+"
+1
+_ x
+1
+=x
+1
+ ax
+3
+1
+ x
+2
+;
+"
+2
+_ x
+2
+=x
+1
+  x
+2
++  + (t):
+(11)
+The system of equations (11) was in-
+vestigated in various aspects, and in
+many researches, along with the case"
+1
+> 0 or"
+2
+> 0, the case"
+1
+= 0 or"
+2
+= 0
+is also discussed [18, 19]. The need to study cases when one of these parameters
+is equal to zero is associated with the fact that the rate of change of one of the
+components signi cantly exceeds the other.
+It is required to  nd a solution to the problem (11), (3), (4), (8) under the
+following conditions: "
+1
+= 2; "
+2
+= 0; ff = 2;   = 0;   = 1; H = 3; T = 1;   =
+1
+2
+; " =
+1
+100
+; x
+01
+= 0; x
+02
+= 0; y
+01
+(t) =t
+3
++ 3t
+2
++ 4t; y
+02
+(t) = 0; D =I: Let us
+Electronic Journal. http://diffjournal.spbu.ru/ 122Differential Equations and Control Processes, N. 4, 2020
+write the system of equations (11) under the formulated conditions:
+(
+dx
+1
+dt
+=x
+1
+ x
+2
+ x
+3
+1
++u
+1
+;
+0 = 3x
+1
+ x
+2
++u
+2
+:
+(12)
+We linearize system (11) by introducing the function v = v(t) and we obtain
+the equivalent of problem (3), (4), (11), for the system of equations:
+8
+>
+<
+>
+:
+dx
+1
+dt
+=x
+1
+ x
+2
+ v
+3
++u
+1
+;
+0 = 3x
+1
+ x
+2
++u
+2
+;
+x
+1
+=v:
+(13)
+Then the solution of problem (3), (4), (13), (8) reduces to  nding a triple
+(x;v;u); where x = (x
+1
+;x
+2
+); u = (u
+1
+;u
+2
+): Based on the Ritz method, we will
+search v(t);u
+1
+(t);u
+2
+(t) in the form
+~ v(t) =
+H
+X
+h=0
+a
+h
+t
+n
+; ~ u
+1
+(t) =
+H
+X
+h=0
+b
+h
+t
+h
+; ~ u
+2
+(t) =
+H
+X
+h=0
+c
+h
+t
+h
+; (14)
+considering that
+~ v(0) = 0: (15)
+The condition (15) is introduced because v(t) and x
+1
+(t) must coincide at the
+initial moment of time.
+Let us solve problem (3), (4), (13), (8) with respect to unknowns a
+h
+;
+b
+h
+; c
+h
+. Thus, the optimal control problem is reduced to  nding the min-
+imum of a function (10) of several variables with respect to a
+h
+; b
+h
+; c
+h
+.
+As a result of calculations, an approximate solution of problem (3), (4),
+(13), (8) was found (see Figs. 3 { 5), while the value of the functional
+J = 2:20209929769759327. Note that a
+1
+= 0:986982999441828;a
+2
+=
+0:583924671603152;a
+3
+= 0:661978825001881;b
+0
+= 1:40814481467641;b
+1
+=
+1:61882377202430;b
+2
+= 3:59308220022607;b
+3
+= 12:9361477673245;c
+0
+=
+ 0:208877351370390;c
+1
+= 1:25085783597124;c
+2
+= 2:48199342550767;c
+3
+=
+ 1:90233883350030.
+In the problem of optimal measurement, we are not interested in the found
+~ x(t); because the primary task is to restore the signal ~ u(t) (Fig. 3), but since
+we use the decomposition method due to the nonlinearity of the investigated
+descriptor system, it is necessary in computational experiments to control the
+su cient proximity of ~ x(t); ~ v(t); which is guaranteed by the smallness of the
+Electronic Journal. http://diffjournal.spbu.ru/ 123Differential Equations and Control Processes, N. 4, 2020
+Fig 3. Proximity plot of virtual accurate optimal measurement and virtual accurate optimal
+observation at t = 1
+Fig 4. Graph of approaching the input signal Fig 5. Graphs of the approximation
+of the model (virtual measurement) of the virtual exact optimal
+to the input signal of the sensor observation to the incoming sensor signal
+at t = 1 at t = 1
+parameter ", in connection with the fact that in computational experiments
+this parameter can be adjusted. In our problem, for the given parameters, ~ x(t);
+~ v(t) are close enough (Fig. 4), moreover, since D =I; then ~ y(t) should be close
+to ~ v(t) (Fig. 5).
+Acknowledgements. This work was supported by a grant from the Min-
+istry of Education and Science of the Russian Federation no. FENU-2020-0022
+(2020072GZ).
+References
+[1] Granovsky, V.A. Dinamicheskie izmerenija. Osnovy metrologicheskogo
+obespechenija [Dynamic Measurements. Basics of Metrological Support].
+Leningrad, Jenergoatomizdat, 1984.
+Electronic Journal. http://diffjournal.spbu.ru/ 124Differential Equations and Control Processes, N. 4, 2020
+[2] Tihonov, A.N., Arsenin, V.Ja. Metody reshenija nekorrektnyh zadach
+[Methods for Solving Ill-Posed Problems]. Moscow, Nauka, 1979.
+[3] Shestakov, A.L. Modal Synthesis of a Measurement Transducer. Problemy
+upravlenija i informatiki, 1995, no. 4, pp. 67{75.
+[4] Derusso, P., Roj, R., Klouz, H. Prostranstvo sostojanij v teorii upravlenija
+[State space in Control Theory]. Moscow, Nauka, 1970.
+[5] Shestakov, A.L., Sviridyuk G.A. A New Approach to Measuring Dynam-
+ically Distorted. Bulletin of South Ural State University. Series: Mathe-
+matical modelling and programming, 2010, no. 16(192), pp. 116{120.
+[6] Sagadeeva, M.A., Zagrebina, S.A., Manakova, N.A. Optimal Control of So-
+lutions of a Multipoint Initial-Final Problem for Non-Autonomous Evolu-
+tionary Sobolev Type Equation. Evolution Equations and Control Theory,
+2019, vol. 8, no. 3, pp. 473{488.
+[7] Zamyshlyaeva, A.A., Manakova, N.A., Tsyplenkova, O.N. Optimal Control
+in Linear Sobolev Type Mathematical Models. Bulletin of the South Ural
+State University. Series: Mathematical Modelling, Programming and Com-
+puter Software, 2020, vol. 13, no. 1, pp. 5{27. DOI: 10.14529/mmp200101
+[8] Zamyshlyaeva, A.A., Tsyplenkova, O.N. Optimal Control of Solutions of
+the Showalter{Sidorov{Dirichlet Problem for the Boussinesq-Love Equa-
+tion. Differential Equations, 2013, vol. 49, no. 11, pp. 1356{1365.
+[9] Sviridyuk, G.A., Efremov, A.A. An Optimal Control Problem for a Class
+of Linear Equations of Sobolev Type. Russian Mathematics, 1996, vol. 40,
+no. 12, pp. 60{71.
+[10] Shestakov, A.L., Keller, A.V., Zamyshlyaeva, A.A., Manakova, N.A., Za-
+grebina, S.A., Sviridyuk, G.A. The Optimal Measurements Theory as a
+New Paradigm in the Metrology. Journal of Computational and Engineer-
+ing Mathematics, 2020, vol. 7, no. 1, pp. 3{23.
+[11] Keller, A.V. On the Computational E ciency of the Algorithm of the Nu-
+merical Solution of Optimal Control Problems for Models of Leontieff Type.
+Journal of Computational and Engineering Mathematics, 2015, vol. 2, no. 2,
+pp. 39{59.
+Electronic Journal. http://diffjournal.spbu.ru/ 125Differential Equations and Control Processes, N. 4, 2020
+[12] Shestakov, A.L., Keller, A.V., Nazarova, E.I. Numerical Solution of the
+Optimal Measurement Problem. Automation and Remote Control, 2012,
+vol. 73, no. 1, pp. 97{104.
+[13] Sagadeeva, M.A., Bychkov, E.V., Tsyplenkova, O.N. The Pyt'ev {
+Chulichkov Method for Constructing a Measurement in the Shestakov {
+Sviridyuk Model. Bulletin of the South Ural State University. Series: Math-
+ematical Modelling, Programming and Computer Software, 2020, vol. 13,
+no. 4, pp. 68{82. DOI: 10.14529/mmp200407
+[14] Shestakov, A.L., Sviridyuk, G.A., Keller, A.V., Zamyshlyaeva, A.A.,
+Khudyakov, Y.V. Numerical Investigation of Optimal Dynamic Measure-
+ments. Acta IMEKO, 2018, vol. 7, no. 2, pp. 65{72.
+[15] Manakova, N.A. Method of Decomposition in the Optimal Control Prob-
+lem for Semilinear Sobolev Type Models. Bulletin of the South Ural State
+University. Series: Mathematical Modelling, Programming and Computer
+Software, 2015, vol. 8, no. 2, pp.133{137. DOI: 10.14529/mmp150212
+[16] Fitz, Hugh R. Mathematical Models of Threshold Phenomena in the Nerve
+Membrane. Bulletin of Mathematical Biology, 1955, vol. 17, no. 4, pp. 257{
+278.
+[17] Nagumo, J., Arimoto, S., Yoshizawa S. An Active Pulse Transmission Line
+Simulating Nerve Axon. Proceedings of the IRE, 1962, vol. 50, no. 10,
+pp. 2061{2070.
+[18] Borisov, V.G. Parabolic Boundary Value Problems with a Small Parameter
+Multiplying the Derivatives with Respect to t. Mathematics of the USSR-
+Sbornik, 1988, vol. 59, no. 2, pp. 287{302.
+[19] Thompson, J.M.T. Instabilities and Catastrophes in Sciences and Engi-
+neering. Chichester, New York, Brisbane, Toronto, Singapore, John Wiley
+and Sons, 1982.
+Electronic Journal. http://diffjournal.spbu.ru/ 126
