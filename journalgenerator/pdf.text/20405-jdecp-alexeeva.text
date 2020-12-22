@@ -1,0 +1,2680 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUA TIONS
+AND
+CONTR OL PR OCESSES
+N. 4, 2020
+Ele ctr onic Journal,
+r e g. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://di journal.spbu.ru/
+e-mail: jo di @mail.ru
+Contr ol pr oblems in nonline ar systems
+Optimal c ontr ol
+Dynamic e c onomic mo dels
+Dynamics of monetary and  scal policy interaction
+in New Keynesian model in continuous time
+Alexeev a T.A.
+1
+, Mok aev T.N.
+2
+, Polshchikov a I.A.
+3;4
+1
+St. Petersburg School of Physics, Mathematics, and Computer Science,
+HSE University , Saint-Petersburg, Russia
+2
+F aculty of Mathematics and Mechanics, St Petersburg University ,
+Peterhof, Saint-Petersburg, Russia
+3
+Financial Research Institute of the Ministry of Finance of
+the Russian F ederation, Moscow, Russia
+4
+F aculty of Economic Sciences, HSE University , Moscow, Russia
+e-mail: talekseev a@hse.ru; tim.mok aev@gmail.com; polshchikov a@ni .ru
+Abstract. The paper studies monetary and  scal policy rules consistent with
+determinate equilibrium dynamics. W e consider a three-dimensional New Key-
+nesian model in continuous time with Rotemberg price-setting mechanism and
+non-Ricardian consumers, and study dynamics of the model under monetary and
+ scal policies interactions. The key analytical  nding is that the uniqueness of the
+equilibrium solution can be never achieved while both policies are in their active
+regimes. Another combinations of policies’ regimes can lead to a local equilibrium
+determinacy through control of appropriate v alues of T aylor coe cients ( f
+M
+and
+f
+F
+). W e demonstrate that in contrast to economy with Ricardian consumers,
+making government debt a net asset leads to creation of an additional channel forDi er ential Equations and Contr ol Pr o c esses, N. 4, 2020
+ scal and monetary policy interaction and changing the conditions for local equi-
+librium determinacy . In addition, we show that in case of explosive equilibrium
+dynamics, limit cycle or more complicated attracting sets could appear, including
+chaotic attractors of v arious natures.
+Key words: New Keynesian model, local equilibrium determinacy , global in-
+determinacy , chaos, nonlinear dynamics, hidden oscillation,  scal and monetary
+policies’ interaction, T aylor rule.
+1 Introduction
+Mainstream macroeconomic analysis of both monetary and  scal policies relies
+heavily on the New Keynesian model. New Keynesian Dynamic Stochastic Gen-
+eral Equilibrium (DSGE) models are typically set as systems of discrete time
+expectational di erence equations [16, 45 47]. In contrast, typical continuous
+time models in economics are deterministic dynamical systems, which compli-
+cates consideration of the stochastic nature of economic development. Recently ,
+there appeared several papers with DSGE models set in continuous time [12, 19].
+One reason for this is that model in continuous time might be more suitable for
+analytical investigation than the corresponding discrete time v ariant [20].
+T raditionally , economists used discrete-time models for description of events
+taking place at business cycle frequencies (see, e.g. [8, 35, 36]), while continuous
+time modelling was restricted to the growth theory [15, 39, 44]. Still, for certain
+purposes discrete-time and continuous-time models could be used interchangeably
+and lead to similar model predictions. F or example, in [21] it is pointed out that
+considering very short time periods in discrete-time models (for instance, one
+day instead of a quarter) could lead to the same qualitative results as in the
+corresponding continuous time model.
+Recent monetary policy literature presents an example of a traditional (dis-
+crete time)  eld that started to investigate implications of continuous time model-
+ing: a whole sub eld of the Heterogeneous Agents New Keynesian (HANK) model-
+ing depends on deriv ation and aggregation of the individual agents’ decision rules,
+and is facilitated by the usage of continuous time modeling [12, 19, 20, 23]. HANK
+appeared as conjunction of two directions: heterogeneous-agent (HA) and New
+Keynesian (NK). In this framework researchers typically use quantitative models
+(for instance, DSGE) involving heavy machinery for their resolution. However, it
+is important to build simple and tractable models to gain analytical insights into
+their underlying mechanisms and make their policy conclusions sharper and easier
+Electronic Journal. h ttp://di journal.spbu.ru/ 89Di er ential Equations and Contr ol Pr o c esses, N. 4, 2020
+to undestand [9, 10, 37]. Investigation of e ects of monetary and  scal policies in
+liquidity trap (see, e.g., [52]) bene ted from ability to derive closed form results
+in a deterministic continuous time model.
+W e study a continuous-time model similar to [30]. This is a small New Key-
+nesian model in which consumers face a constant probability of death that makes
+government debt a net asset of the agents, introducing non-Ricardian features. In
+contrast to Leith and von Thadden [30], we assume that the  rms set prices ac-
+cording to Rotemberg price-setting mechanism [42] rather than that of Calvo [13].
+Making this assumption allows to derive the exact nonlinear NK Phillips curve
+and avoid linearization of the model.
+The main contribution of the paper is to analyze local equilibrium determi-
+nacy
+1
+of considered model under di erent monetary and  scal policies regimes.
+W e also consider policy regimes combinations leading to explosive equilibrium; as
+we derive the model in the exact nonlinear form, we are able to characterize the
+nature of global indeterminacy that might appear in such a case.
+In modern macroeconomics local equilibrium determinacy is often analyzed
+as being in uenced by the monetary and/or  scal policy in the framework of a
+standard NK model. It is important to empathize that NK models are predom-
+inantly used in studies that analyze the e ects of monetary policy on the local
+equilibrium determinacy . Several papers (see, e.g. [25, 43]) demonstrate that local
+equilibrium determinacy is always ensured under an active monetary policy rule
+(when monetary authority is aimed at stabilizing in ation). Nevertheless, in [22],
+for instance, it is shown that there are some restrictions for monetary authorities
+on policy rules which fail to guarantee the determinacy of local equilibrium. Au-
+thors consider simple interest rate rule as well as other alternative forms of them
+in a standard NK model in continuous time. As a result, they derive a set of pa-
+rameters where the equilibrium is not determinate under active monetary policy .
+Moreover, it is postulated in [22] that monetary policy should not be very active
+in order to guarantee the determinacy of local equilibrium. The paper con rms
+results of [14, 17] and demonstrates that  activeness  of monetary policy rule does
+not necessary mean avoidance of indeterminacy . Moreover, all these papers pro-
+vide results that multiple local equilibria can be achieved in case of combination
+of endogenous capital accumulation and sticky prices.
+However, all these studies do not take into consideration  scal aspects. One
+of the earliest works where local equilibrium determinacy is studied under e ects
+1
+If an equilibrium is determinate, there is unique solution for the mo del’s v ariables. Th us, lo cally determinate
+equilibrium is (lo cally) unique.
+Electronic Journal. h ttp://di journal.spbu.ru/ 90Di er ential Equations and Contr ol Pr o c esses, N. 4, 2020
+of both monetary and  scal policy rules is [32]. Leeper constructs a stochastic
+maximizing model in discrete time and shows that local equilibrium determinacy
+is achieved, when active monetary policy interacts with passive  scal policy and
+vice versa. Later other studies con rmed Leeper’s results. F or instance, analysing
+optimal monetary and  scal rules in NK model in discrete time, Schmitt-Grohe
+and Uribe [48]  nd out that active monetary and passive  scal policies ensure the
+uniqueness of the rational expectations equilibrium. In contrast to [32], they con-
+sider a model with price stickiness, including money and distortionary taxation.
+Kumhof and co-authors [29] study the in uence of policies’ rules on a unique
+equilibrium from the side of  scal dominance: situation when  scal authorities
+do not control tax revenues and spending. They consider model in discrete time
+with transaction cost technologies and price stickiness and conclude that when
+ scal policy is active, monetary policy should also react to public debt in order to
+expand the set of unique equilibrium and improve welfare. The main message of
+this study is that  scal policy does in uence local equilibrium determinacy and it
+is a matter of great importance to maintain  scal discipline before introduction
+of in ation targeting.
+Discussed above papers study the uniqueness of equilibrium and policies’ in-
+teraction using discrete time NK models. The same results are also con rmed in
+studies where NK approach in continuous time models is considered [3, 5, 6, 51].
+F or example, T suzuki [51] develops NK model in continuous time and studies
+in uence of monetary and  scal policies’ lag on local equilibrium determinacy .
+He constructs a delay-di erential equation system that models the economy with
+money-in-the-production function and  nds out e ects from policies’ interaction
+on equilibrium. The main  nding is that policy lags do matter in achieving local
+equilibrium determinacy . Adding policy lag can lead to resolving of indeterminacy
+under the combination of active monetary and passive  scal policies. Moreover,
+it is pointed out that monetary and  scal authorities can act as substitutions. In
+other words, for achieving determinacy in case indeterminacy occurs it is su cient
+to shorten or lengthen a policy lag in only one policy rule.
+Leith and von Thadden [30] consider NK model in continuous time with capi-
+tal accumulation and non-Ricardian consumers. They study simple monetary and
+ scal policy rules that lead to the determinacy of local equilibrium. They  nd
+that the level of government debt in uences the analysis of equilibrium dynamics.
+Moreover, for ensuring a determinate equilibrium it is necessary to determine the
+level of the government debt. Depending on  high  or  low  debt the form of
+monetary and  scal interaction that ensures the equilibrium determinacy is cho-
+Electronic Journal. h ttp://di journal.spbu.ru/ 91Di er ential Equations and Contr ol Pr o c esses, N. 4, 2020
+sen. It is demonstrated in [30] that threshold v alues of steady-state debt associate
+with bifurcation parameters and it leads to qualitative changes in requirements
+for local equilibrium determinacy .
+Locally determinate equilibrium ensures that the solution for the agents’
+choice v ariables is unique, and that their expectations are uniquely determined, as
+well. Therefore, it is highly desired that economic policy delivered a determinate
+equilibrium. Alternatively , investigation of policies that fail to achieve determi-
+nate equilibrium is important for providing guidance to the policymakers. In this
+regard, the analysis could be broadened to further investigation of a set of pa-
+rameters that can lead to periodic, quasiperiodic and chaotic dynamics (including
+hidden oscillations) [1, 2, 18, 26, 27, 34]. It was suggested that business cycles may
+be largely driven by endogenous cyclical forces. In particular, Benhabib et. al. [7]
+found that backward-looking interest rate feedback rules do not guarantee unique-
+ness of equilibrium and present examples in which for plausible parameterizations
+of the economy attracting equilibrium cycles exist. Barnett et. al. [3] provide an
+evidence that in a New Keynesian (NK) model, an active interest rate feedback
+monetary policy , when combined with a Ricardian passive  scal policy , may induce
+occurrence of a Shilnikov chaotic attractor in the region of the parameter space
+where uniqueness of the equilibrium prev ails locally . Beaudry et. al. [4] examine
+the notion of stochastic limit cycles, wherein the system is bu eted by exogenous
+shocks, but where the deterministic part of the system admits a limit cycle. Usage
+of continuous time in models with endogenous cycles might be adv antageous, as
+such models could be analyzed through developed tools of mathematical control
+theory and stochastic di erential equations.
+Our study expands on the literature by considering a model with Rotemberg
+pricing (see, e.g., [31]), which allows to derive exactly a more compact system of
+equations better suited to investigation of dynamic interactions between the  scal
+and monetary policies. In our analysis we consider passive and active regimes for
+both policies as per classi cation introduced by Leeper [32]. The main  ndings
+of the paper are as follows. First, local equilibrium determinacy cannot obtain
+when both policies are active. Second, local equilibrium determinacy in any other
+policies’ combinations depends on ranges of f
+F
+and f
+M
+and can be achieved
+only through appropriate choice of v alues of these parameters. Third, in contrast
+to Ricardian equiv alence, considering government debt as a net asset leads to a
+creation of an additional channel for  scal and monetary policy interaction and
+changing conditions for local equilibrium determinacy .
+The rest of the paper is organized as follows. Section 2 describes the theoret-
+Electronic Journal. h ttp://di journal.spbu.ru/ 92Di er ential Equations and Contr ol Pr o c esses, N. 4, 2020
+ical model with Rotemberg price-setting mechanism and  nitely lived consumers.
+Section 3 provides analysis of the system’s local equilibrium determinacy under
+di erent policies’ regimes, the case for global indeterminacy , calibration of param-
+eters and graphical analysis. Then, Section 4 concludes.
+2 The model
+The basic structure of the economy is considered as in [30]. The model describes
+the economy where there are four main economic agents, namely representative
+consumer, representative producer, the government and Central bank (CB). The
+representative consumer maximizes its intertemporal utility function constrained
+by the budget through choosing the level of consumption and labor. Operating in
+monopolistic market, the representative producer maximizes its pro t. The pro-
+ducer rents labor to manufacture goods and changes prices following Rotemberg
+price-setting mechanism [42]. The government issues bonds, collects lump-sum
+taxes and consumes. CB  xes one-period nominal interest rate. The government
+and CB are responsible for  scal and monetary policies respectively . In what
+follows, we set the problem for every agent and describe agents’ activities.
+2.1 The representative consumer problem
+W e consider the optimization problem:
+max
+C
+j
+t
+;N
+j
+t
+Z
+1
+0
+ 
+lnC
+j
+t
+ 
+(N
+j
+t
+)
+1+'
+1 +'
+!
+e
+ ( + )t
+dt: (1)
+Each period of time t the consumer j faces the following utility function U
+j
+t
+=
+lnC
+j
+t
+ 
+(N
+j
+t
+)
+1+'
+1+'
+, where the v alue of his utility depends on goods he consumes C
+j
+t
+, the
+level of labor he suppliesN
+j
+t
+, and' is the inverse of the labor supply elasticity . The
+utility function is discounted by the probability of death   and time preferences  .
+Simultaneously , the representative consumer faces the following budget constraint:
+_
+b
+j
+t
+= (i
+t
+  
+t
++ )b
+j
+t
++
+W
+t
+P
+t
+N
+j
+t
+  
+j
+t
+ C
+j
+t
++ 
+
+j
+t
+: (2)
+Budget constraint demonstrates that at each time t the consumer j obtains real
+income from his labor activity
+W
+t
+P
+t
+N
+j
+t
+(where W
+t
+is nominal wage, P
+t
+is a price
+level), returns on bonds (i
+t
+  
+t
+)b
+j
+t
+and transfers from  rms 
+
+j
+t
+. At the same
+Electronic Journal. h ttp://di journal.spbu.ru/ 93Di er ential Equations and Contr ol Pr o c esses, N. 4, 2020
+time the consumer uses all his income for consumption C
+j
+t
+, paying taxes to the
+government  
+j
+t
+and increasing or decreasing his bonds
+_
+b
+j
+t
+. Moreover, it is assumed
+that all bonds of deceased consumers are transferred to the currently alive con-
+sumers, including newborn. In such a way the term  b
+j
+t
+refers to the pro t that
+can be gained by alive consumers from deceased consumers.
+Hamiltonian function for considered consumer optimization problem takes the
+form
+H
+t
+(C
+j
+t
+;N
+j
+t
+;
+_
+b
+j
+t
+; 
+t
+) =
+C
+j
+t
+ 
+(N
+j
+t
+)
+1+'
+1 +'
++ 
+t
+ 
+(i
+t
+  
+t
++ )b
+j
+t
++
+W
+t
+P
+t
+N
+j
+t
+  
+j
+t
+ C
+j
+t
++ 
+
+j
+t
+ 
+;
+(3)
+where C
+j
+t
+and N
+j
+t
+are control v ariables,  
+t
+is a co-state v ariable, b
+j
+t
+is a state
+v ariable.
+The  rst-order conditions (FOC) derived through Hamiltonian can be written
+as follows:
+@H
+t
+@C
+j
+t
+=
+1
+C
+j
+t
+  
+t
+= 0; (4)
+@H
+t
+@N
+j
+t
+=
+ 
+N
+j
+t
+ 
+'
+  
+t
+W
+t
+P
+t
+= 0; (5)
+@H
+t
+@b
+j
+t
+= 
+t
+(i
+t
+  
+t
+  ) = 
+t
+(  + ) 
+_
+ 
+t
+: (6)
+The combination of conditions (4) and (5) reveals the relation between consump-
+tion, labor, level of wages and prices:
+C
+j
+t
+(N
+j
+t
+)
+'
+=
+W
+t
+P
+t
+: (7)
+The dynamics of consumption is attained then by di erentiating condition (4)
+and combining it with condition (6):
+_
+C
+j
+t
+C
+j
+t
+=i
+t
++   
+t
+; (8)
+where in ation is de ned as  
+t
+=
+_ p
+t
+p
+t
+.
+T aking the next step, we apply a transversality condition regarding all non-
+human (b
+j
+t
+) and human (h
+j
+t
+) wealth are equal to total consumption of the consumer
+Electronic Journal. h ttp://di journal.spbu.ru/ 94Di er ential Equations and Contr ol Pr o c esses, N. 4, 2020
+j (C
+j
+s
+) discounted at the real interest rate i
+t
+  
+t
+plus the probability of death   :
+Z
+1
+t
+C
+j
+s
+e
+ 
+R
+s
+t
+(i
+ 
+  
+ 
++ )d 
+ds =b
+j
+t
++h
+j
+t
+; (9)
+where h
+j
+t
+=
+R
+1
+t
+ 
+W
+s
+N
+j
+s
+P
+s
+ 
+T
+j
+s
+P
+s
++ 
+
+j
+t
+ 
+e
+ 
+R
+s
+t
+(i
+ 
+  
+ 
++ )d 
+ds: Integrating by parts the
+transversality condition (9) and applying relation of consumption (8) we obtain
+C
+j
+t
+= (  + )
+ 
+b
+j
+t
++h
+j
+t
+ 
+: Aggregating to all consumers the latter relation, we
+obtain the following expression:
+C
+t
+= (  + ) (b
+t
++h
+t
+): (10)
+Moreover, aggregation of human and non-human wealth dynamics gives us:
+_
+h
+t
+= (i
+t
+  
+t
++ )h
+t
+ 
+W
+t
+N
+t
+P
+t
++
+T
+t
+P
+t
+  
+
+t
+; (11)
+_
+b
+t
+= (i
+t
+  
+t
+)b
+t
++
+W
+t
+N
+t
+P
+t
+ C
+t
+ 
+T
+t
+P
+t
++ 
+
+t
+: (12)
+As a result, the dynamics of aggregated consumption is expressed by following
+equation:
+_
+C
+t
+= (i
+t
+  
+t
+  )C
+t
+   (  + )b
+t
+: (13)
+2.2 The representative producer problem
+In the economy we consider the monopolistically competitive producer facing
+Rotemberg [42] costs of price changes in every period. According to this, he has
+to pay quadratic adjustment costs of price changes. These costs are set as follows:
+ 
+ 
+_
+p
+i
+t
+p
+i
+t
+;t
+!
+=
+ 
+2
+ 
+_
+p
+i
+t
+p
+i
+t
+!
+2
+P
+t
+Y
+t
+; (14)
+where   measures the degree of price stickiness.
+In order to eliminate resource costs of in ation we make an assumption that
+adjustment costs of in ation are paid by producer as transfers to consumers (the
+term 
+
+t
+in the consumer’s optimization problem). T aking into consideration
+quadratic adjustment costs, we formulate the producer optimization problem:
+V
+0
+(p
+0
+) = max
+p
+t
+;t 0
+Z
+1
+0
+e
+ 
+R
+t
+0
+i
+s
+(s)ds
+0
+@
+ 
+t
+(p
+t
+) 
+ 
+2
+ 
+_
+p
+i
+t
+p
+i
+t
+!
+2
+P
+t
+Y
+t
+1
+A
+dt; (15)
+Electronic Journal. h ttp://di journal.spbu.ru/ 95Di er ential Equations and Contr ol Pr o c esses, N. 4, 2020
+where  
+t
+(p
+t
+) = p
+i
+t
+ 
+p
+i
+t
+P
+t
+ 
+ "
+Y
+t
+ 
+W
+t
+A
+t
+ 
+p
+i
+t
+P
+t
+ 
+ "
+Y
+t
+re ects pro ts per each period of
+time.
+Demand function every producer i faces at time t takes the form:
+y
+i
+t
+=
+ 
+p
+i
+t
+P
+t
+ 
+ "
+Y
+t
+:
+Moreover, in the considered economy (economy without capital) the production
+function is constructed by labor N
+i
+t
+multiplied by the technology A
+t
+: y
+i
+t
+=A
+t
+N
+i
+t
+.
+F or deriv ation of dynamical equation for in ation (Phillips curve) we formulate
+Hamiltonian function, where state v ariable is p
+t
+, control v ariable is _ p
+t
+and co-state
+v ariable is  
+t
+:
+H (p
+t
+; _ p
+t
+; 
+t
+) =p
+i
+t
+ 
+p
+i
+t
+P
+t
+ 
+ "
+Y
+t
+ 
+W
+t
+A
+t
+ 
+p
+i
+t
+P
+t
+ 
+ "
+ 
+ 
+2
+ 
+_
+p
+i
+t
+p
+i
+t
+!
+2
+P
+t
+Y
+t
++ 
+t
+_ p
+t
+: (16)
+Conditions for optimum derived through optimization are as follows:
+@H
+@ _ p
+t
+=  
+_
+p
+i
+t
+p
+i
+t
+P
+t
+p
+i
+t
+Y
+t
++ 
+t
+= 0; (17)
+@H
+@p
+i
+t
+= (1 ")
+ 
+p
+i
+t
+P
+t
+ 
+ "
+Y
+t
++"
+W
+t
+p
+i
+t
+1
+A
+t
+ 
+p
+i
+t
+P
+t
+ 
+ "
+Y
+t
++ 
+ 
+_
+p
+i
+t
+p
+i
+t
+!
+2
+P
+t
+p
+i
+t
+Y
+t
+=  _  
+t
++i
+t
+ 
+t
+: (18)
+Assuming symmetric equilibrium
+ 
+p
+i
+t
+=P
+t
+ 
+we rearrange terms and rewrite
+conditions, de ning  
+t
+=
+_
+p
+i
+t
+p
+i
+t
+:
+  
+t
+Y
+t
+= 
+t
+; (19)
+_  
+t
+=i 
+t
+ 
+ 
+(1 ")Y
+t
++"
+W
+t
+P
+t
+1
+A
+t
+Y
+t
++  
+2
+t
+Y
+t
+ 
+: (20)
+Di erentiating  
+t
+from (19) with respect to time and substituting it into equation
+(20), we get the relation of optimal price-setting:
+ 
+i
+t
+  
+t
+ 
+_
+Y
+t
+Y
+t
+!
+ 
+t
+=
+"  1
+ 
+ 
+"
+"  1
+W
+t
+A
+t
+P
+t
+  1
+ 
++ _  
+t
+: (21)
+T aking the next step, we consider that in case of  exible prices (supposing
+there are no adjustment costs   = 0) the prices are derived from the following
+Electronic Journal. h ttp://di journal.spbu.ru/ 96Di er ential Equations and Contr ol Pr o c esses, N. 4, 2020
+condition:  
+0
+t
+(p
+t
+) = 0. F rom this we obtain the  natural  level of prices:
+P
+n
+t
+=
+"
+"  1
+W
+n
+t
+A
+t
+; (22)
+where index n means the natural rate. As in a usual model of monopolist price
+setting, the monopolist’s price is higher than the marginal cost (higher than
+W
+t
+A
+t
+in our case). The gross markup is given by
+"
+" 1
+.
+In order to bring the level of output to the socially optimal level, the govern-
+ment could pay a subsidy to either price (thus paying it to the consumers) or to
+the wage (therefore, making the  rms the subsidy’s recipients). In the latter case,
+denoting the gross subsidy R and taking into account (22), the  rm will pay the
+wage equal to W
+t
+=R and the optimality condition are the following
+P
+n
+t
+=
+"
+"  1
+W
+n
+t
+=R
+A
+t
+: (23)
+If the gross subsidy is such that R =
+"
+" 1
+, then the usual competitive condition
+of the price equals to the marginal cost obtains.
+Applying consumer’s FOC (7), market clearing condition Y
+t
+= C
+t
+and the
+production function expressed as A
+t
+=
+Y
+t
+N
+t
+, we obtain the following substitution:
+W
+t
+A
+t
+P
+t
+=Y
+1+'
+t
+A
+ 1 '
+t
+=N
+1+'
+t
+=C
+1+'
+t
+:
+Finally , making the same assumption as in the  exible prices case that the
+government is responsible for gross subsidy to wages R =
+"
+" 1
+, we repeat the
+deriv ation of the  rms’ optimality condition by replacing W
+t
+withW
+t
+=R to obtain
+the Phillips curve derived from the producer’s problem as
+_  
+t
+=
+ 
+r
+t
+ 
+_
+Y
+t
+Y
+t
+!
+ 
+t
+ 
+"  1
+ 
+ 
+"
+"  1
+W
+t
+=R
+A
+t
+P
+t
+  1
+ 
+=
+ 
+r
+t
+ 
+_
+Y
+t
+Y
+t
+!
+ 
+t
+ 
+"  1
+ 
+ 
+C
+1+'
+t
+  1
+ 
+:
+(24)
+Moreover, from market clearing condition and dynamical equation for con-
+sumption
+_
+Y
+t
+Y
+t
+=
+_
+C
+t
+C
+t
+= (r
+t
+  )   (  + )
+b
+t
+C
+t
+:
+As a result, the dynamics of in ation is expressed as follows:
+_  
+t
+=
+ 
+  +  (  + )
+b
+t
+C
+t
+ 
+ 
+t
+ 
+"  1
+ 
+ 
+C
+1+'
+t
+  1
+ 
+: (25)
+Electronic Journal. h ttp://di journal.spbu.ru/ 97Di er ential Equations and Contr ol Pr o c esses, N. 4, 2020
+2.3 The government and  scal policy
+Dynamics of the public sector liabilities are de ned by the following equation:
+_
+b
+t
+=r
+t
+b
+t
++g
+t
+  
+t
+: (26)
+Government expenditures in terms of aggregate  nal output are  xed
+(g
+t
+=g> 0). Moreover, it is assumed that the government expenditures g in-
+clude part of the wages in the economy paid out as a subsidy . With productivity
+equal to one at all times we obtain N = Y = C . Subsidy wage rate equals
+marginal product of labor which equals one. Therefore, the government pays
+subsidy
+ 
+1 
+1
+R
+ 
+=
+1
+"
+per unit of output produced, for a total subsidy of
+C
+"
+. In
+order to make the model economically meaningful, it necessary to set the level of
+government spending g such that g>
+C
+"
+.
+Comparing to the debt dynamics (12) we obtain the GDP by income identity .
+It demonstrates that in the economy priv ate plus government consumption is
+equal to total household resources (wages plus transfers from producers):
+g
+t
++C
+t
+=
+W
+t
+N
+t
+P
+t
++ 
+
+t
+: (27)
+The government in the economy is responsible for  scal policy . Due to as-
+sumption that government expenditures are  xed (g
+t
+=g> 0) the main  scal
+instrument is lump-sum taxes. It is expressed by T aylor rule. This rule de nes
+the level of lump-sum taxes  
+r
+at each period of time depending on the government
+liabilities deviation from their targeted level at this period b
+t
+ b:
+ 
+t
+=  +f
+F
+(b
+t
+ b); (28)
+where  
+t
+re ects the target level of lump-sum taxes, f
+F
+is a T aylor coe cient.
+Choosing the v alue of T aylor coe cient the government can implement active (if
+f
+F
+<r) or passive (if f
+F
+>r)  scal policy . Here r is a target level of real interest
+rate.
+2.4 Central bank and monetary policy
+Central bank in the economy is responsible for monetary policy . It implements
+T aylor rule as well. The monetary policy rule de nes real interest rate r
+t
+depend-
+ing on the deviation of in ation from the target level  
+t
+   :
+r
+t
+=r +f
+M
+( 
+t
+  ); (29)
+Electronic Journal. h ttp://di journal.spbu.ru/ 98Di er ential Equations and Contr ol Pr o c esses, N. 4, 2020
+where r is the target real interest rate, f
+M
+is a T aylor coe cient. Supposing
+target level of in ation equals zero (   = 0), active monetary policy means real
+interest rate rises in the current rate of in ation
+ 
+f
+M
+> 0
+ 
+. Passive monetary
+policy means real interest rate falls in the current rate of in ation
+ 
+f
+M
+< 0
+ 
+.
+2.5 Fiscal and monetary policies’ regimes
+T able 1 summarizes conditions that determine passive and active policies’ regimes.
+They follow the logic presented in [32].
+T able 1: Monetary and  scal p olicies’ regimes
+Moneta ry p olicy Fiscal p olicy ,
+A ctiv e f
+M
+> 0 f
+F
+<r
+P assiv e f
+M
+< 0 f
+F
+>r
+Economically speaking, active monetary policy regime tolerates in ation in-
+crease in case of positive deviation of in ation from its target level. Consequently ,
+passive monetary policy regime sustains in ation rising in case of positive devia-
+tion from the target level.
+F or  scal policy regimes the logic is the opposite. The regime of  scal policy
+is called passive when the government stabilizes debt by generating su cient
+tax revenues. Active  scal policy means that the government disregards budget
+constraint and allows debt rising without collecting more taxes in order to  nance
+increasing debt.
+2.6 Dynamical system representing the model
+As a result of solving consumer’s and producer’s optimization problem and given
+government debt dynamics we obtain the following model:
+8
+>
+>
+<
+>
+>
+:
+_
+C
+t
+= (r
+t
+  )C
+t
+   (  + )b
+t
+;
+_
+b
+t
+=r
+t
+b
+t
++g
+t
+  
+t
+;
+_  
+t
+=
+ 
+  +  (  + )
+b
+t
+C
+t
+ 
+ 
+t
+ 
+" 1
+ 
+ 
+C
+1+'
+t
+  1
+ 
+:
+(30)
+T aking into consideration rules that re ect  scal (28) and monetary (29) poli-
+cies, and   = 0, system (30) takes the following main system of di erential
+Electronic Journal. h ttp://di journal.spbu.ru/ 99Di er ential Equations and Contr ol Pr o c esses, N. 4, 2020
+equations presenting dynamics of consumption, government bonds and in ation:
+8
+>
+>
+<
+>
+>
+:
+_
+C
+t
+= (r  )C
+t
++f
+M
+ 
+t
+C
+t
+   (  + )b
+t
+;
+_
+b
+t
+=
+ 
+r f
+F
+ 
+b
+t
++f
+F
+ 
+t
+b
+t
++g   +f
+F
+b;
+_  
+t
+=
+ 
+  +  (  + )
+b
+t
+C
+t
+ 
+ 
+t
+ 
+" 1
+ 
+ 
+C
+1+'
+t
+  1
+ 
+:
+(31)
+3 Equilibrium dynamics
+In this Section, we analyze system (31) from the side of local equilibrium determi-
+nacy and indeterminacy , including global indeterminacy , with respect to di erent
+monetary and  scal policies regimes.
+3.1 Steady states
+System (31) possesses several steady states depend on v alues of model parameters.
+First of all, we focus on the plausible steady state levels of consumption, bonds
+and in ation as follows:
+C
+ss
+= 1; b
+ss
+=
+  g
+r
+;  
+ss
+= 0: (32)
+However, if the government were to pay a gross subsidy di erent than R =
+"
+" 1
+,
+then the steady state v alue of consumption would depend on both " and R.
+3.2 Analysis of local equilibrium determinacy and indeterminacy
+According to [11], local equilibrium determinacy is ensured in case the number of
+Jacobian matrix eigenv alues with positive real parts equals the number of  jump 
+v ariables. System (31) has two  jump  v ariables, consumption and in ation, and
+one  non-jump  v ariable, bonds. In economics  jumping  behaviour of v ariables
+indicates that these v ariables could be set at the time of the unanticipated shock
+in order to bring the economy back on the stable path. Consumption and in ation
+in system (31) are such v ariables. However, government bonds are predetermined
+and they cannot be changed signi cantly once unanticipated shock occurs.
+F ollowing [5, 30, 50], we investigate the conditions for system (31) local equi-
+librium determinacy with respect to di erent policies regimes.
+F or the Jacobian matrix of system (31) at the steady state point (C
+ss
+;b
+ss
+; 
+ss
+)
+Electronic Journal. h ttp://di journal.spbu.ru/ 100Di er ential Equations and Contr ol Pr o c esses, N. 4, 2020
+J
+ss
+0
+=
+0
+B
+@
+r      (  + ) f
+M
+0 r f
+F
+f
+M
+b
+ss
+ 
+(" 1)(1+')
+ 
+0   +  (  + )b
+ss
+1
+C
+A
+(33)
+the characteristic polynomial det(J
+ss
+0
+  I) has the following form
+  ( ) = 
+3
++p
+ss
+1
+ 
+2
++p
+ss
+2
+  +p
+ss
+3
+; (34)
+where p
+ss
+i
+(i = 1; 2; 3) are the coe cients of characteristic polynomial (34).
+It is known that p
+ss
+3
+=detJ
+ss
+0
+equals the product of the roots. A necessary
+condition for local equilibrium determinacy can be provided with detJ
+ss
+0
+< 0 or
+p
+ss
+3
+> 0 . In this case it means that the signs of the roots of (34) may be  +
++    or        . Knowing that  p
+ss
+1
+= TrJ
+ss
+0
+equals the sum of the roots, for
+ensuring local equilibrium determinacy it is su cient matrix J
+ss
+0
+determinant be
+negative and trace be positive. As a result,  nding areas of parameters that satisfy
+conditions detJ
+ss
+0
+< 0 andTrJ
+ss
+0
+> 0 (orp
+ss
+3
+> 0 andp
+ss
+1
+< 0) we conclude about
+system’s local equilibrium determinacy .
+The coe cients of characteristic polynomial take the following forms:
+p
+ss
+1
+=f
+F
+  2r  (b
+ss
+  (  + ));
+p
+ss
+2
+=
+ 
+r f
+F
+ 
+(r  ) +
+ 
+2r f
+F
+  
+ 
+(b
+ss
+  (  + ) + ) +
+("  1) (1 +')f
+M
+ 
+;
+p
+ss
+3
+= (b
+ss
+  (  + ) + )
+ 
+f
+F
+ r
+ 
+(r  ) 
+("  1) (1 +')f
+M
+ 
+b
+ss
+  (  + ) f
+F
++r
+ 
+ 
+:
+(35)
+Analyzing conditions for p
+ss
+1
+andp
+ss
+3
+with respect to di erent policies regimes,
+we formulate the following Proposition.
+Proposition 1 (Monetary and  sc al dynamics in c ase non-Ric ar dian c onsumers:
+  > 0). Consider the dynamic al system (31). L et q =
+(b
+ss
+ ( + )+ )
+(
+r f
+F
+)
+(r  ) 
+(" 1)(1+')(b
+ss
+ ( + ) f
+F
++r)
+,
+l =   (  + )b
+ss
+;  ; ;'; ;  , and g ar e the p ositive p ar ameters such that r =
+ ; "> 1, and   >g .
+(1) Supp ose that at ste ady state (32), monetary and  sc al p olicies ar e active,
+then dynamics ar e never lo c al ly determinate.
+(2) Supp ose that at ste ady state (32), monetary and  sc al p olicies ar e p assive.
+If f
+F
+2 (r;r +l), then dynamics ar e always lo c al ly determinate. If f
+F
+2 (r +
+l; 2r +l), then dynamics ar e lo c al ly determinate only if f
+M
+> q . If f
+M
+< q
+and f
+F
+> 2r +l, then dynamics ar e lo c al ly indeterminate of de gr e e 1.
+Electronic Journal. h ttp://di journal.spbu.ru/ 101Di er ential Equations and Contr ol Pr o c esses, N. 4, 2020
+(3) Supp ose that at ste ady state (32), monetary p olicy is active and  sc al p ol-
+icy is p assive. Iff
+F
+2 (r+l; 2r+l), then dynamics ar e always lo c al ly determinate.
+If f
+F
+2 (r;r +l), then dynamics ar e lo c al ly determinate only if f
+M
+<jqj.
+(4) Supp ose that at ste ady state (32), monetary p olicy is p assive and  sc al
+p olicy is active. If f
+M
+< q , then dynamics ar e lo c al ly determinate.
+Pr o of. W e investigate conditions on detJ
+ss
+0
+andTrJ
+ss
+0
+by the coe cients of char-
+acteristic polynomial (34): p
+ss
+1
+and p
+ss
+3
+. In case monetary and  scal policies are
+active (f
+M
+> 0;f
+F
+<r) the condition detJ
+ss
+0
+> 0 (orp
+ss
+3
+< 0) holds. That means
+active monetary and  scal policies can never imply one negative and two posi-
+tive eigenv alues of Jacobian matrix (33) and, therefore, ensure local equilibrium
+determinacy .
+When monetary policy is now passive but  scal policy at steady state
+(C
+ss
+;b
+ss
+; 
+ss
+) is still active (f
+M
+< 0;f
+F
+< r), detJ
+ss
+0
+< 0 only if f
+M
+< q .
+Knowing that active  scal policy implies TrJ
+ss
+0
+> 0, local equilibrium determi-
+nacy is achieved while monetary policy is  more passive  ( f
+M
+< q ).
+Let monetary and  scal policies are passive ( f
+M
+< 0;f
+F
+> r). If f
+F
+2
+(r;r +l), then all conditions are satis ed ( detJ
+ss
+0
+< 0 and TrJ
+ss
+0
+> 0), imply-
+ing one negative and two positive roots. That means local dynamics are always
+determinate. When f
+F
+2 (r +l; 2r +l) for obtaining detJ
+ss
+0
+< 0 it is necessary
+f
+M
+> q . In other words, dynamics are locally determinate only if monetary
+policy is not  very passive . Moreover, it is known that dynamics are locally in-
+determinate of degree 1 if Jacobian matrix J
+ss
+o
+of (33) has two negative and one
+positive roots that can be investigated if detJ
+ss
+0
+> 0 and TrJ
+ss
+0
+< 0. If f
+M
+< q
+andf
+F
+> 2r +l, thendetJ
+ss
+0
+> 0 andTrJ
+ss
+0
+< 0 are satis ed and there exist two
+negative and one positive roots, and local indeterminacy of degree 1.
+Assume monetary policy is now active but  scal policy is still passive ( f
+M
+>
+0;f
+F
+> r). If f
+F
+2 (r +l; 2r +l) all conditions are satis ed ( detJ
+ss
+0
+< 0 and
+TrJ
+ss
+0
+> 0), implying one negative and two positive roots. That means local
+dynamics are always determinate. When f
+F
+2 (r;r +l) for obtaining detJ
+ss
+0
+< 0
+it is necessary f
+M
+<jqj. In other words, dynamics are locally determinate only
+if monetary policy is not  very active .
+In special case when both the determinant detJ
+ss
+0
+> 0 and trace TrJ
+ss
+0
+> 0
+of Jacobian matrix (33) are positive (i.e. p
+ss
+1
+< 0 and p
+ss
+3
+< 0) there are three
+positive roots of (34) ( + + +  ). This case must therefore be associated with
+a stable manifold of dimension zero (an unstable steady state) and existence of
+explosive solution. T ra jectories that diverge from the steady state may converge
+Electronic Journal. h ttp://di journal.spbu.ru/ 102Di er ential Equations and Contr ol Pr o c esses, N. 4, 2020
+to a limit cycle or a more complicated attracting set, or diverge to in nity . This
+means that local analysis of the properties of the Jacobian matrix ev aluated at
+the steady state cannot be used to determine the eventual fate of the tra jectories,
+i.e. using linear approximation of system (31). Under those circumstances, we
+might obtain global indeterminacy , if an attracting set appears, for the following
+v alues of policy parameters: f
+F
+< 2r +l and f
+M
+> g .
+3.3 Conditions for equilibrium determinacy in Ricardian economy
+(  = 0)
+One of the key features of the presented model is possibility to consider system
+(31) in the limit of in nitely lived consumers (assuming economy with Ricardian
+consumers). This is achieved by supposing   = 0. In this way , consumption
+dynamics are not in uenced by government debt due to the fact government bonds
+are not considered as net wealth. Moreover, government bond dynamics do not
+a ect in ation dynamics. Supposing economy with in nitely lived consumers, we
+provide analysis of local equilibrium determinacy with respect to di erent policies
+regimes as well.
+Jacobian matrix (33) of model (31) with Ricardian consumers ev aluated at
+the steady state point (C
+ss
+;b
+ss
+; 
+ss
+) is expressed as follows:
+~
+J
+ss
+0
+=
+0
+B
+@
+r   0 f
+M
+0 r f
+F
+f
+M
+b
+ss
+ 
+(" 1)(1+')
+ 
+0  
+1
+C
+A
+(36)
+The characteristic polynomial of system (31) in case Ricardian consumers can
+be written as
+~  
+ 
+~
+ 
+ 
+=j
+~
+J
+ss
+0
+ 
+~
+ Ij =
+ 
+r f
+F
+ 
+~
+ 
+ 
+V
+ 
+~
+ 
+ 
+; (37)
+where
+V
+ 
+~
+ 
+ 
+=
+~
+ 
+2
++v
+1
+~
+  +v
+2
+;
+v
+1
+= r;
+v
+2
+=  (r  ) +
+f
+M
+("  1) (' + 1)
+ 
+:
+(38)
+One of the roots of (37) is r f
+F
+. The other two roots are determined by the
+V
+ 
+~
+ 
+ 
+. Knowing that v
+1
+equals the sum of the roots and v
+2
+equals the product
+of the roots we can de ne the sign of the real parts of the roots.
+Electronic Journal. h ttp://di journal.spbu.ru/ 103Di er ential Equations and Contr ol Pr o c esses, N. 4, 2020
+F urther, as postulated in [30] in Ricardian economy steady state is charac-
+terized by modi ed golden rule that implies r =  . As a result, the relations
+between coe cients of characteristic polynomial (38) and determinate and trace
+of submatrix of Jacobian matrix (36) are following:
+f
+Tr
+~
+J
+ss
+0
+= v
+1
+=r;
+f
+det
+~
+J
+ss
+0
+=v
+2
+=
+f
+M
+("  1) (' + 1)
+ 
+:
+(39)
+Similar to system with non-Ricardian consumers the equilibrium can be locally
+determinate only if the number of positive real parts of eigenv alues equals the
+number of  jump  v ariables. After analyzing conditions with respect to di erent
+policies regimes we formulate the following Proposition.
+Proposition 2 (Monetary and  sc al dynamics in c ase Ric ar dian c onsumers:
+  = 0). Consider the dynamic al system (31) with Jac obian matrix (36). L et
+ ; ;'; ;  , and g ar e the p ositive p ar ameters such that r = ; "> 1, and   >g .
+(1) Supp ose that at ste ady state (32), monetary p olicy is p assive and  sc al
+p olicy is active or, alternatively, monetary p olicy is active and  sc al p olicy is
+p assive. Then, dynamics ar e always lo c al ly determinate.
+(2) Supp ose that at ste ady state (32), monetary and  sc al p olicies ar e active.
+Then, dynamics ar e lo c al ly indeterminate of de gr e e 1 .
+(3) Supp ose that at ste ady state (32), monetary and  sc al p olicies ar e p assive.
+Then, dynamics ar e never lo c al ly determinate.
+Pr o of. W e investigate conditions on det
+~
+J
+ss
+0
+andTr
+~
+J
+ss
+0
+by identifying the sign of the
+root
+~
+ 
+1
+=r f
+F
+and the coe cients of characteristic polynomial (38) v
+1
+andv
+2
+. In
+case  scal policy is passive ( f
+F
+>r) the sign of the root
+~
+ 
+1
+is negative. If monetary
+policy is active (f
+M
+> 0), then
+f
+det
+~
+J
+ss
+0
+> 0, and
+f
+Tr
+~
+J
+ss
+0
+> 0 implies two positive
+roots (
+~
+ 
+2
+;
+~
+ 
+3
+). That means local dynamics are always determinate. If  scal policy
+is now active (f
+F
+<r) and monetary policy is still active (f
+M
+> 0), then the sign
+of the root
+~
+ 
+1
+is positive. Hence, dynamics are never locally determinate because
+the Jacobian matrix
+~
+J
+ss
+0
+has three positive roots.
+If monetary policy is passive (f
+M
+< 0), then
+f
+det
+~
+J
+ss
+0
+< 0, and
+f
+Tr
+~
+J
+ss
+0
+> 0
+implies one positive and one negative roots (
+~
+ 
+2
+;
+~
+ 
+3
+). If  scal policy is active, then
+the sign of the root
+~
+ 
+1
+is positive. And, dynamics are always locally determinate.
+If  scal policy is passive the sign of the root
+~
+ 
+1
+is negative then Jacobian matrix
+~
+J
+ss
+0
+has two negative roots and one positive root. Therefore, dynamics are locally
+indeterminate of degree 1.
+Electronic Journal. h ttp://di journal.spbu.ru/ 104Di er ential Equations and Contr ol Pr o c esses, N. 4, 2020
+Consequently , assuming nonzero probability of death leads to consider a debt
+as a net asset by consumers. This a ects their behavior and creates an additional
+channel for  scal and monetary policy interaction, resulting in changing conditions
+for local equilibrium determinacy as well.
+3.4 Calibration and graphical analysis
+W e calibrate the economy as follows. Let the time be a year. F ollowing [38, 40, 41,
+48] the quarterly discount factor   in discrete time models is set at 0:99. Knowing
+that  = 1   , we  nd out   = 0:01 per quarter and  = 0:04 per year. Assuming
+non-Ricardian consumers are more impatient than Ricardian consumers or r> 
+as in [30], we set target level of real interest rate at 0:0401. The chosen v alue of
+real interest rate is close to real interest rate postulated in [5, 6, 41].
+In [41] the probability of surviv al is set at 0:995 to match an average life
+expectancy of 50 years. It consistent with the average age of the population in
+developed countries. Thereby , we set the v alue of death probability   is equal to
+0.005.
+The parameter of monopoly power " should be set at v alue more than 1 in
+case of re ecting the economy with monopolistic competition. Moreover, assuming
+"!1, markup of price over marginal cost tends to unity ,
+"
+" 1
+! 1 and re ecting
+economy in absence of monopoly power. In the literature (see, e.g. [38, 40, 41, 51]),
+the v alue " v aries from 6 to 21. W e set the following parameter at 10 that makes
+markup of price over marginal cost be equal around 1:11.
+F ollowing [24], we choose the v alue of Rotemberg adjustment costs. It is shown
+in [24] that New Keynesian Phillips curves derived by using Rotemberg and Calvo
+price setting approaches have the same structure. Moreover, the authors provide
+results that the realistic v alue of Rotemberg’s price adjustment costs depends on
+the steady state markup of price over marginal cost (
+"
+" 1
+in our case) and the
+probability of  rms’ price optimization that have to be chosen while considering
+Calvo price-setting mechanism. It is demonstrated in the paper that for steady
+state markup equals to 1:1 the range of Rotemberg’s adjustment costs v aries from
+around 4 to 192, depending on the percent of reoptimizing  rms. W e have chosen
+the v alue   = 100 that indicates Rotemberg adjustment costs consistent with
+approximately 25% of reoptimizing  rms.
+Assuming C
+ss
+= 1, we derive he following condition on parameters:   
+g =
+r(r  )
+ ( + )
+. Choosing r;   , and   as above we  nd out that   g = 0:018 and
+b
+ss
+= 0:444. Then we have chosen the v alue of the government spending that
+Electronic Journal. h ttp://di journal.spbu.ru/ 105Di er ential Equations and Contr ol Pr o c esses, N. 4, 2020
+g >
+C
+ss
+"
+. W e assume government spending equals approximately 15% of output
+or g = 0:15 and de ne   = 0:168.
+V alues of parameter referring to the inverse of the labor supply elasticity '
+in literature v ary greatly . F ollowing [38] or [40] we have chosen this parameter to
+be
+1
+2
+.
+In table 2 all chosen v alues of parameters for model (31) are summarized.
+T able 2: Calibration v alues of the parameter mo del
+P a rameter Description V alue
+f
+M
+T a ylor co e cien t of monetary p olicy rule the parameter of in terest
+f
+F
+T a ylor co e cien t of  scal p olicy rule the parameter of in terest
+r T arget lev el of in terest rate 0:0401
+  T arget lev el of lump-sum tax 0:168
+  Probabilit y of death 0:005
+  A djustmen t costs 100
+  Time preferences 0:04
+" Elasticit y of substitution for the heterogeneous pro ducts 10
+' In v erse of the lab or supply elasticit y
+1
+2
+g Go v ernmen t sp ending 0:15
+Figures 1 and 2 prove Proposition 1 in accordance with chosen v alues of pa-
+rameters of system (31). Areas shaded gray in Figure 1 correspond to areas where
+the necessary condition for local equilibrium determinacy is satis ed ( detJ
+ss
+0
+< 0).
+Combining them with gray area in Figure 2 we obtain su cient condition for local
+determinacy (detJ
+ss
+0
+< 0 and TrJ
+ss
+0
+> 0). It is necessary to point out that gray
+area in 2 intercepts all panels in 1 that allows make conclusion about local deter-
+minacy by analyzing only panels in the Figure 1. F or example, in Figure 1(a) it
+is shown that in case passive monetary policy (f
+M
+< 0) and active  scal policy
+(assuming f
+F
+= 0:2) local equilibrium determinacy is ensured if f
+M
+< q or
+f
+M
+< 0:0000297. That corresponds to point (4) of Proposition 1. Figure 1(b)
+demonstrates that if both policies are passive and f
+F
+2 (r;r +l) (supposing
+f
+F
+= 0:04018), then dynamics are always determinate. That corresponds to
+point (2) of Proposition 1. Figure 1(c) illustrates that if monetary policy is active
+and  scal policy is passive and f
+F
+2 (r +l; 2r +l) (for instance, f
+F
+= 0:0405)
+dynamics are always determinate. That corresponds to point (3) of Proposition 1.
+Figure 3 proves point (2) of Proposition 1 and displays that dynamics are
+indeterminate of degree 1 when f
+M
+< q and f
+F
+> 2r +l. F or example, if
+f
+F
+= 0:1 andf
+M
+= 0:00003, thendetJ
+ss
+0
+> 0,TrJ
+ss
+0
+< 0 and indeterminacy of
+Electronic Journal. h ttp://di journal.spbu.ru/ 106Di er ential Equations and Contr ol Pr o c esses, N. 4, 2020
+(a) f
+F
+<r (b) f
+F
+2 (r;r +l) (c) f
+F
+>r +l
+Figure 1: The satisfaction area of the necessary condition for lo cal equilibrium determinacy:
+detJ
+ss
+0
+< 0 or p
+3
+> 0 (red horizon tal line is an asymptote of function p
+3
+; red v ertical line
+demonstrates v alue of parameter r = 0:0401).
+Figure 2: The satisfaction area of the condition for lo cal equilibrium determinacy: TrJ
+ss
+0
+> 0
+or p
+1
+< 0 (red v ertical line demonstrates v alue of parameter r = 0:0401).
+degree 1 occurs.
+Figure 3: The satisfaction area of the condition for lo cal equilibrium indeterminacy of degree 1:
+detJ
+ss
+0
+> 0, TrJ
+ss
+0
+< 0 (blue v ertical line demonstrates v alue of parameter 2r +l = 0:080302).
+Figure 4 shows that if f
+F
+< 2r+l andf
+M
+> q (in particular,f
+F
+= 0:01 and
+Electronic Journal. h ttp://di journal.spbu.ru/ 107Di er ential Equations and Contr ol Pr o c esses, N. 4, 2020
+Figure 4: Regions in the (f
+F
+; f
+M
+) space where the explosiv e equilibrium obtains: detJ
+ss
+0
+> 0,
+TrJ
+ss
+0
+> 0 (red and blue v ertical lines demonstrate v alues of parameters r = 0:0401 and
+2r +l = 0:080302, resp ectiv ely; red horizon tal line is an asymptote of function p
+ss
+3
+).
+f
+M
+= 0:1, i.e., the both policies are active) then the model demonstrates explosive
+local dynamics and attracting equilibrium cycle exists. Areas shaded gray in
+Figure 4 correspond to regions where the condition for global indeterminacy is
+satis ed: detJ
+ss
+0
+> 0 and TrJ
+ss
+0
+> 0.
+( b ss 1 , C ss 1 , π
+ss 1 ) ( b ss 2 , C ss 2 , π
+ss 2 ) (a) for steady state (C
+ss
+1
+;b
+ss
+1
+; 
+ss
+1
+)
+( b ss 1 , C ss 1 , π
+ss 1 ) ( b ss 2 , C ss 2 , π
+ss 2 ) (b) for steady state (C
+ss
+2
+;b
+ss
+2
+; 
+ss
+2
+)
+Figure 5: The stable limit cycle (green tra jectory) for steady state p oin ts (C
+ss
+1
+;b
+ss
+1
+; 
+ss
+1
+) =
+(1; 0:444; 0) (a) and (C
+ss
+2
+;b
+ss
+2
+; 
+ss
+2
+) = (0:977773;  130:81334;  0:30203) (b), resp ectiv ely .
+Figure 5 shows a stable limit cycle which could be localized from some
+neighbourhoods of the unstable steady state points (C
+ss
+1
+;b
+ss
+1
+; 
+ss
+1
+) = (1; 0:444; 0)
+(Fig. 5(a)) and (C
+ss
+2
+;b
+ss
+2
+; 
+ss
+2
+) = (0:977773;  130:81334;  0:30203) (Fig. 5(b)),
+respectively . In this case, model (31) possesses explosive local dynamics as well as
+globally indeterminate behavior   a stable limit cycle. Along this cycle, all v ari-
+ables perpetually oscillate in an endogenous, deterministic fashion. Hence, unlike
+linear ones, non-linear business cycle models can generate sustained ocsilations
+even in the absence of exogenous shocks (for instance, via limit cycles or chaos).
+Electronic Journal. h ttp://di journal.spbu.ru/ 108Di er ential Equations and Contr ol Pr o c esses, N. 4, 2020
+4 F uture challenges
+The study of business cycles via NK models is a vibrant area of macroeconomic
+research that faces many open challenges. NK models can exhibit undesired
+irregular and cyclical dynamics at plausible settings of parameters policy that
+leads to implications, ranging from long-term unpredictability to global indetermi-
+nacy . The existence of attracting cycles represents a severe case of policy-induced
+macroeconomic instability . The occurrence of global indeterminacy is consistent
+with the fact that economists who provide short term forecasts are rarely willing
+to provide long term forecasts [3]. Nevertheless, discovering and tracking stable,
+unstable, deterministic chaotic and stochastic processes which might observe in
+models, allows to control and forecast their dynamics [1, 2, 4, 20, 26]. An important
+task in both qualitative and quantitative investigation of dynamical systems is the
+study of limiting behavior of a system after a transient process, i.e., the problem of
+revealing and analysis of all possible limiting oscillations caused by local bifurca-
+tions in the vicinity of the stationary set (trivial boundary of the global stability)
+or nonlocal bifurcations (hidden boundary of the global stability), when violating
+the global stability boundary in the space of parameters. In the latter case hid-
+den attractor can be born [28, 33]. Are business cycle  uctuations a response to a
+persistent exogenous shocks or do they re ect of a strong endogenous mechanism
+which produces recurrent boom-bust phenomena? Combining of analytical and
+numerical methods of mathematical control theory and macroeconomic analysis
+by examing the notion of stochastic limit cycles can clarify this matter during the
+next few years.
+5 Conclusion
+This paper derives the continuous time New Keynesian model and provides analy-
+sis of monetary and  scal policies’ interactions impact on local equilibrium deter-
+minacy . The model is constructed by applying structure of the economy presented
+in [30]. There are four main agents in the economy , namely representative con-
+sumer, representative producer, the government and Central bank. In contrast
+to [30], we incorporate Rotemberg price-setting mechanism instead of Calvo. De-
+parting from Ricardian equiv alence, we consider representative consumer faces
+constant probability of death. The model is constructed as a system of three dif-
+ferential equations presenting dynamics of consumption, government bonds and
+in ation. The system incorporates 10 parameters, including f
+F
+and f
+M
+that
+Electronic Journal. h ttp://di journal.spbu.ru/ 109Di er ential Equations and Contr ol Pr o c esses, N. 4, 2020
+indicate T aylor coe cients of  scal and monetary policies’ rules respectively .
+The main  ndings of the paper are formulated in Proposition 1. Our anal-
+ysis proves the following results. First, local equilibrium determinacy cannot be
+ensured in case of active monetary and  scal policies. In other words, if  scal
+authority does not increase taxes collection in response to increasing government
+debt, but monetary policy rule is aimed at stabilizing in ation, then the unique-
+ness of the equilibrium solution is never achieved. Second, local equilibrium de-
+terminacy in any other policies’ combinations depends on ranges of f
+F
+and f
+M
+.
+Local equilibrium determinacy can be achieved only through appropriate choos-
+ing v alues of these parameters. Finding appropriate v alues for f
+M
+depends on a
+critical v alue q that is de ned by system’s parameters and the T aylor coe cient
+f
+F
+. Moreover, the main results are compared with those that are derived for the
+case of Ricardian consumers (  = 0). It is shown that government debt is a net
+asset, there appears an additional channel for  scal and monetary policy inter-
+action which changes conditions for local equilibrium determinacy . In addition
+to determinate and indeterminate equlibria, a larger set of equilibria including
+those in which endogenous v ariables remain bounded but are never expected to
+return to the steady state, such as limit cycles, might appear, leading to global
+indeterminacy .
+Acknowledgements
+The work is supported by the 2020-2021 program Leading Scienti c Schools of
+the Russian F ederation (pro ject NSh-2624.2020.1).
+References
+[1] Alexeev a, T. A., Barnett, W. A., Kuznetsov, N. V., and Mok aev, T. N.
+Dynamics of the Shapov alov mid-size  rm model. Chaos, Solitons & F r actals
+140, 110239 (2020). DOI: https://doi.org/10.1016/j.chaos.2020.110239.
+[2] Alexeev a, T. A., Barnett, W. A., Kuznetsov, N. V., and Mok aev, T. N.
+Time-delay control for stabilization of the Shapov alov mid-size  rm model.
+IF AC-Pap ersOnLine 21th IF AC W orld Congr ess (IF AC-V 2020) , (2020).
+[3] Barnett, W., Bella, G., Ghosh, T., Mattana, P ., and V enturi, B. Shilnikov
+chaos, low interest rates, and New Keynesian macroeconomics. W ork-
+Electronic Journal. h ttp://di journal.spbu.ru/ 110Di er ential Equations and Contr ol Pr o c esses, N. 4, 2020
+ing p ap er series in the or etic al and applie d e c onomics 202001 (2020).
+https://econpapers.repec.org/paper/k anwpaper/202001.htm.
+[4] Beaudry , P ., Galizia, D., and Portier, F. Putting the cycle back into business
+cycle analysis. Americ an Ec onomic R eview 110 1 (2020), 1 47.
+[5] Benhabib, J., Schmitt-GrohØ, S., and Uribe, M. Monetary policy and multiple
+equilibria. Americ an Ec onomic R eview 91 , 1 (2001a), 167 186.
+[6] Benhabib, J., Schmitt-GrohØ, S., and Uribe, M. The perils of Taylor rules.
+Journal of Ec onomic The ory 96 , 1-2 (2001b), 40 69.
+[7] Benhabib, J., Schmitt-GrohØ, S., and Uribe, M. Backward-looking interest-
+rate rules, interest rate smoothing, and macroeconomic instability . Journal
+of Money, Cr e dit and Banking 35 , 6 (2003), 1379 1412.
+[8] Bilbiie, F. Limited asset markets participation, monetary policy and (in-
+verted) aggregate demand logic. Journal of e c onomic the ory, 140 , 1 (2008),
+162 196.
+[9] Bilbiie, F. Monetary Policy and Heterogeneity: An Analytical F ramework.
+So ciety for Ec onomic Dynamics, Me eting Pap ers 178 , (2019).
+[10] Blanchard, O. J. Debt, de cits, and  nite horizons. Journal of p olitic al e c on-
+omy 93, 2 (1985), 223 247.
+[11] Blanchard, O. J., and Kahn, C. M. The solution of linear di erence mod-
+els under rational expectations. Ec onometric a: Journal of the Ec onometric
+So ciety (1980), 1305 1311.
+[12] Brunnermeier, M. K., and Sannikov, Y. A macroeconomic model with a
+ nancial sector. Americ an Ec onomic R eview 104 , 2 (2014), 379 421.
+[13] Calvo, G. A. Staggered prices in a utility-maximizing framework. Journal of
+monetary Ec onomics 12 , 3 (1983), 383 398.
+[14] Carlstrom, C. T., and F uerst, T. S. Investment and interest rate policy: a
+discrete time analysis. Journal of Ec onomic The ory 123 , 1 (2005), 4 20.
+[15] Cass, D. Optimum growth in an aggregative model of capital accumulation.
+The R eview of e c onomic studies 32 , 3 (1965), 233 3240.
+[16] Christiano, L. J., Eichenbaum, M., and Ev ans, C. L. Nominal rigidities and
+the dynamic e ects of a shock to monetary policy . Journal of Politic al Ec on-
+omy 113, 1 (2005), 1 45.
+Electronic Journal. h ttp://di journal.spbu.ru/ 111Di er ential Equations and Contr ol Pr o c esses, N. 4, 2020
+[17] Dupor, B. Investment and interest rate policy . Journal of Ec onomic The ory
+98, 1 (2001), 85 113.
+[18] Dudkowski, D., Jafari, S., Kapitaniak, T., Kuznetsov, N., Leonov, G., and
+Prasad, A. Hidden attractors in dynamical systems. Physics R ep orts 637 ,
+(2016), 1 50. https://doi.org/10.1016/j.physrep.2016.05.002
+[19] F ern ndez-Villaverde, J., Posch, O., and Rubio-Ram rez, J. F. Solving the
+new Keynesian model in continuous time. Unpublishe d Manuscript, F e der al
+R eserve Bank of Atlanta (August) (2012).
+[20] F ern ndez-Villaverde, J., and Guerr n-Quintana, P . A. Estimating DSGE
+models: recent adv ances and future challenges CEPR Discussion Pap ers
+15164 (2020).
+[21] Flaschel, P ., F ranke, R., and Proano, C. R. On equilibrium determinacy
+in New Keynesian models with staggered wage and price setting. The BE
+Journal of Macr o e c onomics 8 , 1 (2008).
+[22] Gerko, E., and Sossounov, K. T rend in ation and monetary policy rules:
+determinacy analysis in New Keynesian model with capital accumulation.
+The BE. Journal of Macr o e c onomics 15 , 1 (2015), 413 441.
+[23] Kaplan, G., Moll, B., and Violante, G. L. Monetary policy according to
+HANK. Americ an Ec onomic R eview 108 , 3 (2018), 697 743.
+[24] Keen, B., and W ang, Y. What is a realistic v alue for price adjustment costs in
+New Keynesian models? Applie d Ec onomics L etters 14 , 11 (2007), 789 793.
+[25] King, R. G., and Kerr, W. Limits on interest rate rules in the IS model. FRB
+Richmond Ec onomic Quarterly 82 , 2 (1996), 47 75.
+[26] Kirillov, A. N., and Sazonov, A. M. The dynamics of the economic evolution
+with the capital depreciation. Di er encialnie Ur avnenia i Pr otsesy Upr avle-
+nia 2 (Di er ential Equations & Contr ol Pr o c esses) , (2020), 118 130.
+[27] Kuznetsov, N. V. Theory of hidden oscillations and stability of control sys-
+tems. Journal of Computer and Systems Scienc es International 59 , 5 (2020),
+647 668. https://doi.org/10.1134/S1064230720050093
+[28] Kuznetsov, N., Mok aev, T., Kuznetsov a, O., and Kudryashov a, E. The Lorenz
+system: hidden boundary of practical stability and the Lyapunov dimension.
+Nonline ar Dynamics 102 , (2020), 713 732. https://doi.org/10.1007/s11071-
+020-05856-4
+Electronic Journal. h ttp://di journal.spbu.ru/ 112Di er ential Equations and Contr ol Pr o c esses, N. 4, 2020
+[29] Kumhof, M., Nunes, R., and Y ak adin, I. Simple monetary rules under  scal
+dominance. Journal of Money, Cr e dit and Banking 42 , 1 (2010), 63 92.
+[30] Leith, C., and V on Thadden, L. Monetary and  scal policy interactions in
+a New Keynesian model with capital accumulation and non-Ricardian con-
+sumers. Journal of Ec onomic The ory 140 , 1 (2008), 279 313.
+[31] Leith, C., and Liu, D. The in ation bias under Calvo and Rotemberg pricing.
+Journal of Ec onomic Dynamics and Contr ol V olume 73 , (2016), 283 297.
+[32] Leeper, E. M. Equilibria under ‘active’ and ‘passive’ monetary and  scal
+policies. Journal of Monetary Ec onomics 27 , 1 (1991), 120 147.
+[33] Leonov, G., and Kuznetsov, N. Hidden attractors in dynamical systems from
+hidden oscillations in Hilbert-Kolmogorov, Aizerman, and Kalman problems
+to hidden chaotic attractors in Chua circuits. International Journal of Bifur-
+c ation and Chaos in Applie d Scienc es and Engine ering 23 , 1 (2013), art. no.
+1330002.
+[34] Leonov, G., Kuznetsov, N., and Mok aev, T. Homoclinic orbits, and self-
+excited and hidden attractors in a Lorenz-like system describing convective
+ uid motion. The Eur op e an Physic al Journal Sp e cial T opics 224 , 8 (2015),
+1421 1458.
+[35] Ljungqvist, L., and Sargent, T. J. W elfare states and unemployment. Ec o-
+nomic The ory 6 , 1 (1995), 143 160.
+[36] Lucas, Jr. R. E., and Stokey , N. L. Optimal  scal and monetary policy in
+an economy without capital. Journal of monetary Ec onomics 12 , 1 (1983),
+55 93.
+[37] Maliar, L. Continuous time versus discrete time in the New Keynesian model:
+closed-form solutions and implications for liquidity trap. CEPR working p ap er
+DP 13384 (2018).
+[38] Miao, J., and Ngo, P . Does Calvo meet Rotemberg at the zero lower bound?
+In 2015 Me eting Pap ers, (So ciety for Ec onomic Dynamics) 602 (2015).
+[39] Ramsey , F. P . A mathematical theory of saving. The e c onomic journal 38 ,
+152 (1928), 543 559.
+[40] Richter, A. W., and Throckmorton, N. A. Is Rotemberg pricing justi ed by
+macro data? Ec onomics L etters 149 (2016), 44 48.
+Electronic Journal. h ttp://di journal.spbu.ru/ 113Di er ential Equations and Contr ol Pr o c esses, N. 4, 2020
+[41] Rigon, M., and Zanetti, F. Optimal monetary policy and  scal policy interac-
+tion in a non-Ricardian economy . International Journal of Centr al Banking
+14, 3 (2018), 390-436.
+[42] Rotemberg, J. J. Monopolistic price adjustment and aggregate output. The
+R eview of Ec onomic Studies 49 , 4 (1982), 517 531.
+[43] Rotemberg, J. J., and W oodford, M. An optimization-based econometric
+framework for the ev aluation of monetary policy . NBER macr o e c onomics
+annual 12 (1997), 1702 1725.
+[44] Slobodyan, S. Indeterminacy and stability in a modi ed Romer model. Jour-
+nal of Macr o e c onomics 29 , 1 (2007), 169 177.
+[45] Slobodyan, S., and W outers, R. Learning in a medium-scale DSGE model
+with expectations based on small forecasting models. Americ an Ec onomic
+Journal: Macr o e c onomics 4 , 2 (2012), 65 101.
+[46] Smets, F., and W outers, R. An estimated dynamic stochastic general equilib-
+rium model of the euro area. Journal of the Eur op e an Ec onomic Asso ciation
+MIT Pr ess 1 , 5 (2003), 1123 1175.
+[47] Smets, F., and W outers, R. Shocks and frictions in US business cycles: a
+bayesian DSGE approach. Americ an Ec onomic R eview 97 , 3 (2007), 586 
+606.
+[48] Schmitt-GrohØ, S., and Uribe, M. Optimal simple and implementable mone-
+tary and  scal rules. Journal of monetary Ec onomics 54 , 6 (2007), 1702 1725.
+[49] T aylor, J. Discretion versus policy rules in practice. Confer enc e Series on
+Public Policy 39 , 1 (1993), 195 214.
+[50] T suzuki, E., Shinagawa, S., and Inoue, T. Numerical analysis of equilibrium
+determinacy in the New Keynesian model with monetary and  scal policy
+lags. Journal of Ec onomy and its Applic ations 6 , 1 (2016), 1 27.
+[51] T suzuki, E. Fiscal policy lag and equilibrium determinacy in a continuous-
+time New Keynesian model. International R eview of Ec onomics 63 , 3 (2016),
+215-232.
+[52] W erning, I. Managing a liquidity trap: monetary and  scal policy . NBER
+W orking Pap ers 17344 , (2011).
+Electronic Journal. h ttp://di journal.spbu.ru/ 114
