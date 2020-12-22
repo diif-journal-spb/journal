@@ -1,0 +1,2096 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 4, 2020
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Numerical methods
+A Numerical-Analytical Method for Constructing Periodic
+Solutions of the Lorenz System
+Alexander N. Pchelintsev
+Tambov State Technical University
+e-mail: pchelintsev.an@yandex.ru
+Abstract. This article describes a method for constructing approximations to
+periodic solutions of dynamic Lorenz system with classical values of the system
+parameters. The author obtained a system of nonlinear algebraic equations in
+general form concerning of the cyclic frequency, constant terms and amplitudes
+of harmonics that make up harmonic approximations to the desired solutions.
+The initial approximation for the Newton method is selected, which converges
+to a solution describing a periodic solution different from the equilibrium posi-
+tion. The results of a computational experiment are presented. The results are
+veri ed using high-precision calculations.
+Keywords: Attractor, Lorenz Attractor, Trigonometric Polynomial, Newton's
+Method.
+1 Introduction
+Let us consider the nonlinear system of differential equations introduced by E.
+Lorenz in [1]
+8
+>
+>
+<
+>
+>
+:
+_ x
+1
+= (x
+2
+ x
+1
+);
+_ x
+2
+=rx
+1
+ x
+2
+ x
+1
+x
+3
+;
+_ x
+3
+=x
+1
+x
+2
+ bx
+3
+;
+(1)Differential Equations and Control Processes, N. 4, 2020
+where   = 10, r = 28 and b = 8=3 are the classical values of the system
+parameters.
+Let us denote by X(t) = [x
+1
+(t) x
+2
+(t) x
+3
+(t)]
+T
+. It is proved in the article
+[1] that there exists a number C > 0 such that for any solution X(t) of the
+system (1), starting at time moment,jX(t)j < C, and the divergence of the
+vector velocity  eld of the system (1) is negative everywhere inR
+3
+for classical
+values of the system parameters. Then [1] there exists a limit set, called the
+Lorenz attractor, to which all trajectories of the dynamical system are attracted
+when time tends to in nity. Thus the attractor determines the behavior of the
+solutions of a dynamical system over large segments of time.
+W. Tucker in his work [2] proved that the attractor is hyperbolic in the
+system (1), that is, the attractor consists of cycles everywhere dense on it along
+which the near trajectories diverge exponentially. This creates their chaotic
+behavior.
+As know [3, 4], the symbolic dynamics is used to track cycles in the Lorenz
+system. The region in the phase space containing the attractor is divided into
+a  nite number of subdomains. Denoting each partition element by a symbol,
+the trajectories on the attractor passing through the corresponding regions are
+encoded by sequences of such symbols. If the sequence has regularity (repeata-
+bility of groups of characters), then we have a cycle. However, the return of
+trajectories in a neighborhood of its part does not mean its closure. A critique
+of the results of such computational experiments can be found, for example, in
+[5].
+In 2004, D. Viswanath published the paper [6], in which he presented the
+initial conditions and periods for three cycles in the Lorenz attractor with a
+high accuracy. The calculation algorithm is based on the Lindstedt-Poincar  e
+(LP) method, which (unlike numerical integration methods) is not affected by
+the stability of the cycle to which approximations are constructed.
+An analysis of the Viswanath's articles [6, 7] showed that the author gives
+a general description of the algorithm without reference to the computer im-
+plementation (in MATLAB as indicated in his works). Moreover, it is not clear
+how the obtained inhomogeneous linear system of differential equations with
+periodic coe cients is symbolically solved by the LP-method. For example,
+this can be done for the Van der Pol equation without any special problems.
+In the article [6] Viswanath showed data that can be veri ed by solving the
+Cauchy problem with high-precision numerical methods (for example, [8]), but
+Electronic Journal. http://diffjournal.spbu.ru/ 60Differential Equations and Control Processes, N. 4, 2020
+the details of the algorithm are not disclosed.
+Therefore, it is important here to obtain the values of the initial conditions
+and the period with a given accuracy, having described in detail the implemen-
+tation of the cycles search algorithm in the system (1).
+The goal of this article is to develop a numerical-analytical method for
+constructing approximations to periodic solutions of the Lorenz system, which
+is simpler to implement than the LP-method. In this case, a system of nonlinear
+algebraic equations concerning of the cyclic frequency, constant terms, and
+amplitudes of harmonics making up the desired solution will be obtained in
+general form.
+2 A Numerical-Analytical Method
+Attempts to construct approximate periodic solutions in the system (1) with
+were made before Viswanath (for example, [9]) by the method of harmonic
+balance, but with low accuracy in representing real numbers, while in the article
+[9] initial conditions and periods of found cycles are not indicated (only drawings
+with cycles are given). Now this method is actively developing in the works of
+[10, 11, 12] A. Luo to  nd periodic solutions of nonlinear systems of differential
+equations.
+Next, we describe a numerical-analytical method for constructing approxi-
+mations to periodic solutions of the system (1). We make for this an approxi-
+mation of the phase coordinates on the period T by trigonometric polynomials
+in general form with an unknown cyclic frequency! (since we do not know the
+value of T ; in the general case, it can be an irrational number):
+x
+1
+(t)  ~ x
+1
+(t) =x
+1;0
++
+h
+X
+i=1
+(c
+1;i
+cos(i!t) +s
+1;i
+sin(i!t));
+x
+2
+(t)  ~ x
+2
+(t) =x
+2;0
++
+h
+X
+i=1
+(c
+2;i
+cos(i!t) +s
+2;i
+sin(i!t));
+x
+3
+(t)  ~ x
+3
+(t) =x
+3;0
++
+h
+X
+i=1
+(c
+3;i
+cos(i!t) +s
+3;i
+sin(i!t));
+where h is given number of harmonics. If i>h, then we assume
+c
+1;i
+=s
+1;i
+=c
+2;i
+=s
+2;i
+=c
+3;i
+=s
+3;i
+= 0: (2)
+Electronic Journal. http://diffjournal.spbu.ru/ 61Differential Equations and Control Processes, N. 4, 2020
+By the right-hand side of the system (1), we compose the residuals
+ 
+1
+(t) = ~ x
+0
+1
+(t)  [~ x
+2
+(t)  ~ x
+1
+(t)];
+ 
+2
+(t) = ~ x
+0
+2
+(t)  [r~ x
+1
+(t)  ~ x
+2
+(t)  ~ x
+1
+(t)~ x
+3
+(t)];
+ 
+3
+(t) = ~ x
+0
+3
+(t)  [~ x
+1
+(t)~ x
+2
+(t) b~ x
+3
+(t)];
+where the prime denotes the time derivative of the function. If we make calcu-
+lations in an analytical form, then for each residual you need the following:
+1. Differentiate by time the corresponding trigonometric polynomial;
+2. Where there are products of phase coordinates, multiply the correspond-
+ing trigonometric polynomials, converting the products of trigonometric
+functions into sums;
+3. Give similar terms for each function cos() and sin() with the corresponding
+argument;
+4. By virtue of the equalities (2), to cut off the higher-order harmonics from
+the resulting residual;
+5. Set the resulting residual to zero, i.e., coe cients at its harmonics.
+If we put together the found algebraic equations for each residual, we obtain
+a still unclosed system of nonlinear equations concerning of unknown amplitudes
+c
+1;i
+, s
+1;i
+, c
+2;i
+, s
+2;i
+, c
+3;i
+and s
+3;i
+(i = 1;h), constant terms x
+1;0
+, x
+2;0
+and x
+3;0
+and
+the cyclic frequency !. The number of unknown variables in the system is
+3(1 + 2h) + 1 = 6h + 4, but the equations are one less.
+An additional equation can be taken from the following considerations. It
+is known (see [4, 6]) that the desired cycles intersect the plane passing through
+the equilibrium positions of the system (1)
+O
+1
+ 
+ 
+p
+b(r  1); 
+p
+b(r  1); r  1
+ 
+; O
+2
+ 
+p
+b(r  1);
+p
+b(r  1); r  1
+ 
+(3)
+and parallel to the planex
+1
+Ox
+2
+(a Poincare section). Then the third coordinate
+in the initial condition for the desired cycles is equal to r  1, whence ~ x
+3
+(0) =
+r  1.
+Therefore the additional equation of the system has the form:
+x
+3;0
++
+h
+X
+i=1
+c
+3;i
+  27 = 0:
+Electronic Journal. http://diffjournal.spbu.ru/ 62Differential Equations and Control Processes, N. 4, 2020
+The author did not  nd in literature of other additional information on the
+periodic solutions in the Lorenz system. Note that for the three cycles found
+by Viswanath, in the initial condition for the third coordinate, the number 27
+was taken.
+Next, we give an example of a system of equations for h = 2:
+8
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+:
+!s
+1;1
+  10c
+2;1
++ 10c
+1;1
+= 0;
+ 10s
+2;1
++ 10s
+1;1
+ c
+1;1
+! = 0;
+2!s
+1;2
+  10c
+2;2
++ 10c
+1;2
+= 0;
+ 10s
+2;2
++ 10s
+1;2
+  2c
+1;2
+! = 0;
+10x
+1;0
+  10x
+2;0
+= 0;
+c
+1;1
+x
+3;0
++c
+3;1
+x
+1;0
++
+s
+1;1
+s
+3;2
+2
++
+s
+1;2
+s
+3;1
+2
++!s
+2;1
++
+c
+1;1
+c
+3;2
+2
++
+c
+1;2
+c
+3;1
+2
++c
+2;1
+  28c
+1;1
+= 0;
+s
+1;1
+x
+3;0
++s
+3;1
+x
+1;0
++
+c
+1;1
+s
+3;2
+2
+ 
+c
+1;2
+s
+3;1
+2
++s
+2;1
++
+c
+3;1
+s
+1;2
+2
+ 
+c
+3;2
+s
+1;1
+2
+  28s
+1;1
+ c
+2;1
+! = 0;
+c
+1;2
+x
+3;0
++c
+3;2
+x
+1;0
+ 
+s
+1;1
+s
+3;1
+2
++ 2!s
+2;2
++
+c
+1;1
+c
+3;1
+2
++c
+2;2
+  28c
+1;2
+= 0;
+s
+1;2
+x
+3;0
++s
+3;2
+x
+1;0
++
+c
+1;1
+s
+3;1
+2
++s
+2;2
+  28s
+1;2
++
+c
+3;1
+s
+1;1
+2
+  2c
+2;2
+! = 0;
+x
+1;0
+x
+3;0
++x
+2;0
+  28x
+1;0
++
+s
+1;2
+s
+3;2
+2
++
+s
+1;1
+s
+3;1
+2
++
+c
+1;2
+c
+3;2
+2
++
+c
+1;1
+c
+3;1
+2
+= 0;
+ c
+1;1
+x
+2;0
+ c
+2;1
+x
+1;0
++!s
+3;1
+ 
+s
+1;1
+s
+2;2
+2
+ 
+s
+1;2
+s
+2;1
+2
++
+8c
+3;1
+3
+ 
+c
+1;1
+c
+2;2
+2
+ 
+c
+1;2
+c
+2;1
+2
+= 0;
+ s
+1;1
+x
+2;0
+ s
+2;1
+x
+1;0
++
+8s
+3;1
+3
+ 
+c
+1;1
+s
+2;2
+2
++
+c
+1;2
+s
+2;1
+2
+ 
+c
+2;1
+s
+1;2
+2
++
+c
+2;2
+s
+1;1
+2
+ c
+3;1
+! = 0;
+ c
+1;2
+x
+2;0
+ c
+2;2
+x
+1;0
++ 2!s
+3;2
++
+s
+1;1
+s
+2;1
+2
++
+8c
+3;2
+3
+ 
+c
+1;1
+c
+2;1
+2
+= 0;
+ s
+1;2
+x
+2;0
+ s
+2;2
+x
+1;0
++
+8s
+3;2
+3
+ 
+c
+1;1
+s
+2;1
+2
+ 
+c
+2;1
+s
+1;1
+2
+  2c
+3;2
+! = 0;
+8x
+3;0
+3
+ x
+1;0
+x
+2;0
+ 
+s
+1;2
+s
+2;2
+2
+ 
+s
+1;1
+s
+2;1
+2
+ 
+c
+1;2
+c
+2;2
+2
+ 
+c
+1;1
+c
+2;1
+2
+= 0;
+x
+3;0
++c
+3;1
++c
+3;2
+  27 = 0:
+Note that for any h a similar system has solutions
+x
+1;0
+=x
+2;0
+= 
+p
+b(r  1); x
+3;0
+=r  1; c
+k;i
+= 0; s
+k;i
+= 0;
+! is any number; k = 1; 3; i = 1;h;
+corresponding to the equilibrium positions (3).
+Therefore the resulting nonlinear system of algebraic equations has a non-
+unique solution. To  nd its approximate solutions, we will use the Newton
+Electronic Journal. http://diffjournal.spbu.ru/ 63Differential Equations and Control Processes, N. 4, 2020
+numerical method, whose a convergence to the desired solution (i.e., describing
+a periodic solution of the system (1) different from its the equilibrium positions)
+depends on the choice of the initial approximation.
+3 The Symbolic Computations to Obtain the System of
+Algebraic Equations
+Thus, to obtain an approximation to the periodic solution, we must obtain
+a nonlinear system concerning of unknown decomposition coe cients and fre-
+quencies. As shown in the previous section, even for two harmonics, the system
+has a bulky form. Therefore, we consider the algorithm for performing symbolic
+calculations to obtain it.
+When developing software [13], the Maxima math package (a computer
+algebra system) was chosen. The program for obtaining the amplitudes and
+constant terms of the residuals for h = 2 is presented below.
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [wxMaxima: input start ] */
+display2d:false$
+x1:x10+c1c1*cos(1*omega*t)+s1c1*sin(1*omega*t)+
+c1c2*cos(2*omega*t)+s1c2*sin(2*omega*t)$
+x2:x20+c2c1*cos(1*omega*t)+s2c1*sin(1*omega*t)+
+c2c2*cos(2*omega*t)+s2c2*sin(2*omega*t)$
+x3:x30+c3c1*cos(1*omega*t)+s3c1*sin(1*omega*t)+
+c3c2*cos(2*omega*t)+s3c2*sin(2*omega*t)$
+assume(omega > 0)$
+delta1:trigreduce(diff(x1,t)-(10*(x2-x1)),t)$
+delta2:trigreduce(diff(x2,t)-(28*x1-x2-x1*x3),t)$
+delta3:trigreduce(diff(x3,t)-(x1*x2-8/3*x3),t)$
+expand(diff(delta1,cos(1*omega*t)));
+expand(diff(delta1,sin(1*omega*t)));
+expand(diff(delta1,cos(2*omega*t)));
+expand(diff(delta1,sin(2*omega*t)));
+expand(integrate(delta1,t,0,2*%pi/omega)*omega/(2*%pi));
+expand(diff(delta2,cos(1*omega*t)));
+expand(diff(delta2,sin(1*omega*t)));
+expand(diff(delta2,cos(2*omega*t)));
+Electronic Journal. http://diffjournal.spbu.ru/ 64Differential Equations and Control Processes, N. 4, 2020
+expand(diff(delta2,sin(2*omega*t)));
+expand(integrate(delta2,t,0,2*%pi/omega)*omega/(2*%pi));
+expand(diff(delta3,cos(1*omega*t)));
+expand(diff(delta3,sin(1*omega*t)));
+expand(diff(delta3,cos(2*omega*t)));
+expand(diff(delta3,sin(2*omega*t)));
+expand(integrate(delta3,t,0,2*%pi/omega)*omega/(2*%pi));
+/* [wxMaxima: input end ] */
+The expression display2d:false$ turns off multi-line drawing of fractions,
+degrees, etc. The sign $ allows to calculate the result of an expression, but
+not display it (instead of ;). The function trigreduce(expression,t) col-
+lapses all products of trigonometric functions concerning of the variable t in
+a combination of sums. Differentiation of residuals according to harmonic
+functions is necessary to obtain the corresponding amplitudes. The function
+expand(expression) expands brackets (performs multiplication, exponentia-
+tion, leads similar terms).
+To  nd the constant terms of the residuals, their integration over the period
+is applied, i.e. the constant term of the k-residual is
+!
+Z 2 
+!
+0
+ 
+k
+(t)dt
+2 
+:
+So that during symbolic integration the package does not ask a question
+about the sign of the frequency, a command is given assume(omega > 0)$.
+A  le with package commands is generated similarly for any number of h
+harmonics by a computer program written in C++ [13]. After executing this
+program, the package will output symbolic expressions to the console for the
+left side of the system of algebraic equations, which will be solved in it by the
+Newton method.
+Note that the most time-consuming operation here is symbolic integration.
+For example, for 120 harmonics, the system formation time is more than 2 days.
+We can here parallelize the computational process on three computers, but this
+will not have a signi cant effect. Therefore, a system of algebraic equations
+must be formed immediately. Next, we get a general form of this system. Note
+that when solving the system of nonlinear equations by the Newton method,
+the Jacobi matrix for the left side of the system does not invert. The Maxima
+Electronic Journal. http://diffjournal.spbu.ru/ 65Differential Equations and Control Processes, N. 4, 2020
+package uses LU decomposition to solve a system of linear equations at each
+iteration of the method.
+4 General Form of the System of Algebraic Equations
+Since the right-hand side of the (1) system contains nonlinearities in the form
+of products of phase coordinates, let us obtain relations expressing the coe -
+cients of trigonometric polynomials obtained by multiplying the approximations
+~ x
+1
+(t)~ x
+3
+(t) and ~ x
+1
+(t)~ x
+2
+(t).
+We consider two functions f(t) and F (t) represented by Fourier series
+f(t) =a
+0
++
+1
+X
+i=1
+(a
+i
+cos(i!t) +b
+i
+sin(i!t));
+F (t) =A
+0
++
+1
+X
+i=1
+(A
+i
+cos(i!t) +B
+i
+sin(i!t)):
+Let
+f(t)F (t) =ff
+0
++
+1
+X
+i=1
+(ff
+i
+cos(i!t) + 
+i
+sin(i!t)):
+Following the book [14, pp. 123-125], we have the relations:
+ff
+0
+=a
+0
+A
+0
++
+1
+2
+1
+X
+m=1
+(a
+m
+A
+m
++b
+m
+B
+m
+);
+ff
+i
+=a
+0
+A
+i
++
+1
+2
+1
+X
+m=1
+(a
+m
+(A
+m+i
++A
+m i
+) +b
+m
+(B
+m+i
++B
+m i
+)); (4)
+ 
+i
+=a
+0
+B
+i
++
+1
+2
+1
+X
+m=1
+(a
+m
+(B
+m+i
+ B
+m i
+) b
+m
+(A
+m+i
+ A
+m i
+)): (5)
+We assume that for i>h
+a
+i
+=b
+i
+=A
+i
+=B
+i
+= 0:
+Since for our problem we  nd for an approximation up to and including the
+h-harmonic, we zero all the amplitudes in the product for i>h, i.e.
+ff
+i
+= 
+i
+= 0:
+Electronic Journal. http://diffjournal.spbu.ru/ 66Differential Equations and Control Processes, N. 4, 2020
+Thus, we pass from the product of series to the product of trigonometric
+polynomials. Also in the relations (4) and (5) we will assume [14, p. 124] that
+A
+m i
+=A
+i m
+; B
+m i
+= B
+i m
+; B
+0
+= 0:
+Then we get
+ff
+0
+=a
+0
+A
+0
++
+1
+2
+h
+X
+m=1
+(a
+m
+A
+m
++b
+m
+B
+m
+);
+ff
+i
+=a
+0
+A
+i
++
+1
+2
+1
+X
+m=1
+a
+m
+A
+m+i
++
+1
+2
+1
+X
+m=1
+a
+m
+A
+m i
++
+1
+2
+1
+X
+m=1
+b
+m
+B
+m+i
++
+1
+2
+1
+X
+m=1
+b
+m
+B
+m i
+=
+=a
+0
+A
+i
++
+1
+2
+h i
+X
+m=1
+a
+m
+A
+m+i
++
+1
+2
+a
+i
+A
+0
++
+1
+2
+i 1
+X
+m=1
+a
+m
+A
+i m
++
+1
+2
+h
+X
+m=i+1
+a
+m
+A
+m i
++
++
+1
+2
+h
+X
+m=1
+b
+m
+B
+m+i
++
+1
+2
+b
+i
+B
+0
+ 
+1
+2
+i 1
+X
+m=1
+b
+m
+B
+i m
++
+1
+2
+h
+X
+m=i+1
+b
+m
+B
+m i
+=
+=a
+0
+A
+i
++a
+i
+A
+0
++
+1
+2
+h i
+X
+m=1
+(a
+m
+A
+m+i
++b
+m
+B
+m+i
+) +
+1
+2
+i 1
+X
+m=1
+(a
+m
+A
+i m
+ b
+m
+B
+i m
+) +
++
+1
+2
+h
+X
+m=i+1
+(a
+m
+A
+m i
++b
+m
+B
+m i
+);
+ 
+i
+=a
+0
+B
+i
++
+1
+2
+1
+X
+m=1
+a
+m
+B
+m+i
+ 
+1
+2
+1
+X
+m=1
+a
+m
+B
+m i
+ 
+1
+2
+1
+X
+m=1
+b
+m
+A
+m+i
++
+1
+2
+1
+X
+m=1
+b
+m
+A
+m i
+=
+=a
+0
+B
+i
++
+1
+2
+h i
+X
+m=1
+a
+m
+B
+m+i
++
+1
+2
+i 1
+X
+m=1
+a
+m
+B
+i m
+ 
+1
+2
+h
+X
+m=i+1
+a
+m
+B
+m i
+ 
+ 
+1
+2
+h i
+X
+m=1
+b
+m
+A
+m+i
++b
+i
+A
+0
++
+1
+2
+i 1
+X
+m=1
+b
+m
+A
+i m
++
+1
+2
+h
+X
+m=i+1
+b
+m
+A
+m i
+=
+=a
+0
+B
+i
++b
+i
+A
+0
++
+1
+2
+h i
+X
+m=1
+(a
+m
+B
+m+i
+ b
+m
+A
+m+i
+) +
+1
+2
+i 1
+X
+m=1
+(a
+m
+B
+i m
++b
+m
+A
+i m
+) +
++
+1
+2
+h
+X
+m=i+1
+( a
+m
+B
+m i
++b
+m
+A
+m i
+):
+Electronic Journal. http://diffjournal.spbu.ru/ 67Differential Equations and Control Processes, N. 4, 2020
+Applying the obtained formulas to calculate the products of trigonometric
+polynomials to the residuals, we can write the equations for thei-th harmonics
+(i = 1;h is the number of harmonics, k = 1; 3 is residual number):
+k = 1:
+i!s
+1;i
+  10c
+2;i
++ 10c
+1;i
+= 0;
+ i!c
+1;i
+  10s
+2;i
++ 10s
+1;i
+= 0;
+the equation corresponding to the constant term for the  rst residual is
+x
+1;0
+ x
+2;0
+= 0;
+k = 2:
+i!s
+2;i
+  28c
+1;i
++c
+2;i
++x
+1;0
+c
+3;i
++c
+1;i
+x
+3;0
++
+1
+2
+h i
+X
+m=1
+(c
+1;m
+c
+3;m+i
++s
+1;m
+s
+3;m+i
+) +
++
+1
+2
+i 1
+X
+m=1
+(c
+1;m
+c
+3;i m
+ s
+1;m
+s
+3;i m
+) +
++
+1
+2
+h
+X
+m=i+1
+(c
+1;m
+c
+3;m i
++s
+1;m
+s
+3;m i
+) = 0;
+ i!c
+2;i
+  28s
+1;i
++s
+2;i
++x
+1;0
+s
+3;i
++s
+1;i
+x
+3;0
++
+1
+2
+h i
+X
+m=1
+(c
+1;m
+s
+3;m+i
+ s
+1;m
+c
+3;m+i
+) +
++
+1
+2
+i 1
+X
+m=1
+(c
+1;m
+s
+3;i m
++s
+1;m
+c
+3;i m
+) +
++
+1
+2
+h
+X
+m=i+1
+( c
+1;m
+s
+3;m i
++s
+1;m
+c
+3;m i
+) = 0;
+the equation corresponding to the constant term for the second residual is
+ 28x
+1;0
++x
+2;0
++x
+1;0
+x
+3;0
++
+1
+2
+h
+X
+m=1
+(c
+1;m
+c
+3;m
++s
+1;m
+s
+3;m
+) = 0;
+Electronic Journal. http://diffjournal.spbu.ru/ 68Differential Equations and Control Processes, N. 4, 2020
+k = 3:
+i!s
+3;i
+ x
+1;0
+c
+2;i
+ c
+1;i
+x
+2;0
+ 
+1
+2
+h i
+X
+m=1
+(c
+1;m
+c
+2;m+i
++s
+1;m
+s
+2;m+i
+) 
+ 
+1
+2
+i 1
+X
+m=1
+(c
+1;m
+c
+2;i m
+ s
+1;m
+s
+2;i m
+) 
+ 
+1
+2
+h
+X
+m=i+1
+(c
+1;m
+c
+2;m i
++s
+1;m
+s
+2;m i
+) +
+8
+3
+c
+3;i
+= 0;
+ i!c
+3;i
+ x
+1;0
+s
+2;i
+ s
+1;i
+x
+2;0
+ 
+1
+2
+h i
+X
+m=1
+(c
+1;m
+s
+2;m+i
+ s
+1;m
+c
+2;m+i
+) 
+ 
+1
+2
+i 1
+X
+m=1
+(c
+1;m
+s
+2;i m
++s
+1;m
+c
+2;i m
+) 
+ 
+1
+2
+h
+X
+m=i+1
+( c
+1;m
+s
+2;m i
++s
+1;m
+c
+2;m i
+) +
+8
+3
+s
+3;i
+= 0;
+the equation corresponding to the constant term for the third residual is
+ x
+1;0
+x
+2;0
+ 
+1
+2
+h
+X
+m=1
+(c
+1;m
+c
+2;m
++s
+1;m
+s
+2;m
+) +
+8
+3
+x
+3;0
+= 0;
+the additional system equation is
+x
+3;0
++
+h
+X
+i=1
+c
+3;i
+  27 = 0:
+5 The Results of the Computational Experiment
+As a result of numerous computational experiments, the initial approximation
+was chosen for the cyclic frequency, constant terms, and amplitudes at h =
+h
+1
+= 5:
+! = 4; x
+1;0
+=x
+2;0
+=x
+3;0
+= 0; c
+1;i
+= 1; i = 1; 5;
+s
+1;j
+= 0; j = 1; 3; 4; 5; s
+1;2
+= 1:
+This result is remarkable in that the Newton method converges to a solution
+different from the equilibrium positions. Therefore, to improve the accuracy of
+Electronic Journal. http://diffjournal.spbu.ru/ 69Differential Equations and Control Processes, N. 4, 2020
+-30
+-20
+-10
+ 0
+ 10
+ 20
+ 30
+-30
+-20
+-10
+ 0
+ 10
+ 20
+ 30
+ 0
+ 5
+ 10
+ 15
+ 20
+ 25
+ 30
+ 35
+ 40
+x3
+x1
+x2
+x3
+Figure 1: The cycle obtained by described method.
+the approximate periodic solution, we consider a system of algebraic equations
+for the value of h equal to some h
+2
+>h
+1
+.
+The obtained numerical solution of the system for h = h
+1
+is taken as the
+initial approximation for amplitudes with indices i   h
+1
+for a system with
+h =h
+2
+, and the values of the initial approximation for amplitudes with indices
+i>h
+1
+are assumed to be zero.
+Tables 1{3 show the result of solving the system for h = 35; the accu-
+racy of the Newton method is 10
+ 8
+. The period value is obtained equal to
+T = 1:558652210, the initial condition for the obtained approximate periodic
+solution is
+~ x
+1
+(0) = 2:147367631; ~ x
+2
+(0) = 2:078048211; ~ x
+3
+(0) = 27: (6)
+The initial values (6) were checked on the period in a computer program that
+implements the numerical integration of the system (1) by the modi ed power
+Electronic Journal. http://diffjournal.spbu.ru/ 70Differential Equations and Control Processes, N. 4, 2020
+Table 1: The amplitudes of harmonics for ~ x
+1
+(t), x
+1;0
+= 0.
+i c
+1;i
+s
+1;i
+1  5:780478259196228 8:56017654325353
+2 0 0
+3 3:160762628380509 2:239212141102876
+4 0 0
+5 0:6958870387616096  0:7979388979225431
+6 0 0
+7  0:1891992374027477  0:1864921358925765
+8 0 0
+9  0:04770429623010056 0:04554044367245914
+10 0 0
+11 0:01112322884679491 0:01209138588669679
+12 0 0
+13 0:003061207095371694  0:002735092350544739
+14 0 0
+15  6:744578887916229  10
+ 4
+ 7:748319471034087  10
+ 4
+16 0 0
+17  1:960718247379475  10
+ 4
+1:665584161919807  10
+ 4
+18 0 0
+19 4:116738805347028  10
+ 5
+4:960493476144467  10
+ 5
+20 0 0
+21 1:254757391175977  10
+ 5
+ 1:018054283421179  10
+ 5
+22 0 0
+23  2:518375902000733  10
+ 6
+ 3:173486439630506  10
+ 6
+24 0 0
+25  8:025338211960923  10
+ 7
+6:230623750431923  10
+ 7
+26 0 0
+27 1:541534734542893  10
+ 7
+2:0292802821633  10
+ 7
+28 0 0
+29 5:130649139299358  10
+ 8
+ 3:813725452268523  10
+ 8
+30 0 0
+31  9:43393531993558  10
+ 9
+ 1:297038481588497  10
+ 8
+32 0 0
+33  3:278552746800046  10
+ 9
+2:333260259021725  10
+ 9
+34 0 0
+35 5:76957885768651  10
+ 10
+8:28626640138045  10
+ 10
+Electronic Journal. http://diffjournal.spbu.ru/ 71Differential Equations and Control Processes, N. 4, 2020
+Table 2: The amplitudes of harmonics for ~ x
+2
+(t), x
+2;0
+= 0.
+i c
+2;i
+s
+2;i
+1  2:32972926505593 10:89038310357172
+2 0 0
+3 5:86875317198698  1:5832552129833
+4 0 0
+5  0:9124249133801483  2:200556873678218
+6 0 0
+7  0:7154457265566421 0:3473932955614448
+8 0 0
+9 0:1175186702136983 0:2186139734768588
+10 0 0
+11 0:06473984670858603  0:03723215039412078
+12 0 0
+13  0:01127208646321726  0:01877739524860192
+14 0 0
+15  0:005359671824365359 0:003303445299126894
+16 0 0
+17 9:453499475830811  10
+ 4
+0:001510235036151227
+18 0 0
+19 4:211022386354685  10
+ 4
+ 2:657049331814368  10
+ 4
+20 0 0
+21  7:363528144366622  10
+ 5
+ 1:164013765469982  10
+ 4
+22 0 0
+23  3:19419300699788  10
+ 5
+2:017609175377016  10
+ 5
+24 0 0
+25 5:47663534401654  10
+ 6
+8:710929378319451  10
+ 6
+26 0 0
+27 2:362852034076972  10
+ 6
+ 1:474901091428546  10
+ 6
+28 0 0
+29  3:94532524722541  10
+ 7
+ 6:379296603810031  10
+ 7
+30 0 0
+31  1:715198229248314  10
+ 7
+1:049218598356554  10
+ 7
+32 0 0
+33 2:776045093375681  10
+ 8
+4:59473450493284  10
+ 8
+34 0 0
+35 1:22681173575872  10
+ 8
+ 7:31171826830086  10
+ 9
+Electronic Journal. http://diffjournal.spbu.ru/ 72Differential Equations and Control Processes, N. 4, 2020
+Table 3: The amplitudes of harmonics for ~ x
+3
+(t), x
+3;0
+= 23:04210397942006.
+i c
+3;i
+s
+3;i
+1 0 0
+2 7:568410271550653  9:50386584559212
+3 0 0
+4  3:555327211552558  1:844710563805469
+5 0 0
+6  0:4741220131932616 1:279043179069961
+7 0 0
+8 0:4227292179138024 0:1274574086305204
+9 0 0
+10 0:03498415351761577  0:1315337800809524
+11 0 0
+12  0:03934013541135439  0:009645786231708874
+13 0 0
+14  0:002660052258813564 0:01145537653603837
+15 0 0
+16 0:003271688724557337 7:33752523103949  10
+ 4
+17 0 0
+18 2:024982256871223  10
+ 4
+ 9:206266886554897  10
+ 4
+19 0 0
+20  2:560063570343799  10
+ 4
+ 5:58964460662525  10
+ 5
+21 0 0
+22  1:542436654918173  10
+ 5
+7:050327849098175  10
+ 5
+23 0 0
+24 1:926014222030195  10
+ 5
+4:25261452471065  10
+ 6
+25 0 0
+26 1:170939944189529  10
+ 6
+ 5:225643926851625  10
+ 6
+27 0 0
+28  1:409525591131397  10
+ 6
+ 3:21879984959824  10
+ 7
+29 0 0
+30  8:83134288999026  10
+ 8
+3:782652721710986  10
+ 7
+31 0 0
+32 1:010610960272394  10
+ 7
+2:418021923473667  10
+ 8
+33 0 0
+34 6:606163280924149  10
+ 9
+ 2:689431432873997  10
+ 8
+35 0 0
+Electronic Journal. http://diffjournal.spbu.ru/ 73Differential Equations and Control Processes, N. 4, 2020
+series method [8] with an accuracy of estimating the common term of the series
+10
+ 25
+, 100 bits for mantissa real number and machine epsilon 1:57772  10
+ 30
+.
+With such parameters of the method, the approximate values of the phase
+coordinates obtained by numerical integration were also veri ed by the same
+numerical method, but in reverse time. The values in the reverse time coincide
+with (6) up to the 9th character inclusive after the point. The resulting values
+of x
+1
+(T ), x
+2
+(T ) and x
+3
+(T ) coincide with (6) up to the 8th character inclusive.
+The cycle corresponding to (6) is shown in Fig. 1. Note that the cycle
+found coincides with the  rst Viswanath cycle in [6], all signs after the point
+for T also coincide with the data from [6].
+6 Acknowledgements
+The reported study was funded by RFBR according to the research project
+20-01-00347.
+References
+[1] Lorenz, E. N. Deterministic Nonperiodic Flow, Journal of the Atmospheric
+Sciences, vol. 20, no. 2 (1963), pp. 130-141.
+[2] Tucker, W. A Rigorous ODE Solver and Smale's 14th Problem, Founda-
+tions of Computational Mathematics, vol. 2, no. 1 (2002), pp. 53-117.
+[3] Rabinovich, M. I. Stochastic Self-Oscillations and Turbulence, Soviet
+Physics Uspekhi, vol. 21, no. 5 (1978), pp. 443-469.
+[4] Galias, Z., Tucker, W. Validated Study of the Existence of Short Cycles
+for Chaotic Systems Using Symbolic Dynamics and Interval Tools, Interna-
+tional Journal of Bifurcation and Chaos, vol. 21, no. 2 (2011), pp. 551-563.
+[5] Lozi, R. Can We Trust in Numerical Computations of Chaotic Solutions
+of Dynamical Systems?, Topology and Dynamics of Chaos. In Celebration
+of Robert Gilmore's 70th Birthday. - World Scienti c Series in Nonlinear
+Science Series A, vol. 84 (2013), pp. 63-98.
+[6] Viswanath, D. The Fractal Property of the Lorenz Attractor, Physica D:
+Nonlinear Phenomena, vol. 190, no. 1-2 (2004), pp. 115-128.
+Electronic Journal. http://diffjournal.spbu.ru/ 74Differential Equations and Control Processes, N. 4, 2020
+[7] Viswanath, D. The Lindstedt-Poincare Technique as an Algorithm for
+Computing Periodic Orbits, SIAM Review, vol. 43, no. 3 (2001), pp. 478-
+495.
+[8] Pchelintsev, A. N. Numerical and Physical Modeling of the Dynamics of
+the Lorenz System, Numerical Analysis and Applications, vol. 7, no. 2
+(2014), pp. 159-167.
+[9] Neymeyr, K., Seelig, F. Determination of Unstable Limit Cycles in Chaotic
+Systems by Method of Unrestricted Harmonic Balance, Zeitschrift f ur
+Naturforschung A, vol. 46, no. 6 (1991), pp. 499-502.
+[10] Luo, A. C. J., Huang, J. Approximate Solutions of Periodic Motions in
+Nonlinear Systems via a Generalized Harmonic Balance, Journal of Vibra-
+tion and Control, vol. 18, no. 11 (2011), pp. 1661-1674.
+[11] Luo, A. C. J. Toward Analytical Chaos in Nonlinear Systems, John Wiley
+& Sons, Chichester, ISBN: 978-1-118-65861-1, 2014, 258 pp.
+[12] Luo, A. C. J., Guo, S. Analytical Solutions of Period-1 to Period-2 Mo-
+tions in a Periodically Diffused Brusselator, Journal of Computational and
+Nonlinear Dynamics, vol. 13, no. 9, 090912 (2018), 8 pp.
+[13] Pchelintsev, A. N. The Programs for Finding of Periodic Solutions in
+the Lorenz Attractor, GitHub, https://github.com/alpchelintsev/
+periodic_sols
+[14] Tolstov, G. P. Fourier Series, Dover Publications, New York (1962), 336
+pp.
+Electronic Journal. http://diffjournal.spbu.ru/ 75
