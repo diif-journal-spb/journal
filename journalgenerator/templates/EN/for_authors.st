@@ -76,6 +76,11 @@ The paper abstract, pdf-file and references are published at the Journal home pa
    <li>Check that your article is compiled by the command "<em>pdflatex english.tex</em>" in MikTex 2.9+</li>
  </ul>
 </p>
+
+<p>Pay your attention that abstract and keywords have the same font size as main text - 12pt. Abstract has the format \noindent{\bf Abstract.} text of abstract. Then  \noindent {\bf  Keywords:} keywords follow.<br>
+    Do not use environments   Title, Author.
+</p>
+
 <p>Information about last versions of TEX you can find on the site <a href="http://www.miktex.org">http://www.miktex.org</a>.
 LaTeX is a module in the MikTEX package</p>
 
