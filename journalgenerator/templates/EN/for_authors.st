@@ -5,9 +5,14 @@
   <li>File of the paper in <a href="http://www.miktex.org">MikTex 2.9+ (LaTeX)</a> 
 		or <a href="http://www.microsoft.com/office">Microsoft Word</a> formats</li>
   <ul>
-    <li><strong>Journal <a href="#template-files">templates</a> must be used</strong></li>
-    <li>It is necessary to add the affiliation (work place, institution, address) after the title</li>
-    <li>After title and affiliation should follow abstract and keywords</li>
+      <li>prepared in accordance with <strong>Journal <a href="#template-files">templates</a></strong>:</li>
+      <li>Title of the paper</li>
+      <li>Authors' surnames</li>
+      <li>affiliation</li>
+      <li>e-mail address</li>
+      <li>abstract</li>
+      <li>keywords</li>
+      <li>text of the paper</li>
   </ul>
   <li>PDF-file of the paper</li>
   <li>Text file in Plain Text or HTML containing:</li>
@@ -18,18 +23,13 @@
       <li>academic status and degree</li>      
       <li>abstract</li>      
       <li>keywords</li>
-      <li>e-mail (to be published in open access)</li>
-      <li>phone, fax</li>
+      <li>e-mail</li>
   </ul>
   <li>The file containing references in HTML or Microsoft Word format</li>
 </ul>
 </p>
 
-<p>
-The abstract is an independent part of the paper relating the most important 
-ideas and results of the research. It should be a short description of the 
-paper and has to contain the problem statement, the author's approach and principal 
-results. 
+<p>The abstract is an independent part of the paper relating the most important ideas and results of the research. It should be a short description of the paper and has to contain the problem statement, the author's approach and principal results.
 </p>
 <p><strong>The abstract should not contain formulas.</strong></p>
 <p>
@@ -60,7 +60,7 @@ The paper size is not limited.
 
 <h2>Electronic publication</h2>
 <p>
-The paper abstract, pdf-file and references are published at the Journal home page in the Internet</li>
+The paper abstract, pdf-file and references are published at the Journal home page on the Internet</li>
 </p>
 
 <h2>Preparation of the article in TEX-format</h2>
@@ -80,15 +80,14 @@ The paper abstract, pdf-file and references are published at the Journal home pa
 LaTeX is a module in the MikTEX package</p>
 
 <h2>Preparation of the article in Microsoft Word</h2>
+<p>Paper should be prepared in version MSWORD 2007 (or higher) with using formula editor.</p>
+
 <p>
  <ul>
-    <li>Download file <a href="$ResourceLink$/auth-for-doc.zip">author-for-doc.zip</a> from the journal site and unpack it</li>
-    <li>Select folder <em>eng</em></li>
-    <li>Open <em>Dif_eng.dotx</em> in the Microsoft Word</li>
-    <li>In obtained file fill in the fields: <b>[number], [year], [Theme], [Title], [AUTHOR NAME], [address]</b></li>
-    <li>Copy the text of your article in to the file. At the top and the bottom of each page (but cover page) running titles appear</li>
-    <li>On the second page double click by mouse left button on the string "Differential Equations and Control Processes, [ number], [year]") and fill in the fields</li>
-    <li>Save the document as <em>YOUR_NAME-art.doc</em></li>
+    <li>Download file <a href="$ResourceLink$/auth-for-doc.zip">author-for-doc.zip</a> from the journal site and unpack it.</li>
+    <li>Select file <em>template-eng.docx</em> and open it in Microsoft Word</li>
+    <li>Insert the text of your article into the template file in accordance with template styles.</li>
+    <li>Save the document as  <em>YOUR_NAME.docx</em>.</li>
  </ul>
 </p>
 

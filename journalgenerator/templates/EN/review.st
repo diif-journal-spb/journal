@@ -10,7 +10,7 @@
 </li><li>If in the review there are remarks and the paper revision proposals, the author should correct the paper and resend it. In this case the day of the paper entry is the day of entry of the revised version.
 </li><li>Papers not recommended for the publication are not considered for the repeated review. 
 </li><li>The reviewed paper publishing decision is made by the editor-in-chief as agreed with editorial board.
-</li><li>The editorial board sends copies of reviews to the Ministery of High Education of Russian Federation providing that the inquiry was made.
+</li><li>The editorial board sends copies of reviews to the Ministry of Higher Education of Russian Federation providing that the inquiry was made.
 </li>
 
 
