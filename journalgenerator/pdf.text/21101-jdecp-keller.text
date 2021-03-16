@@ -1,0 +1,827 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 1, 2021
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Filtration and identi cation
+Optimal dynamic measurement method
+using the Savitsky - Golay digital  lter
+Keller Alevtina Viktorovna
+Voronezh State Technical University, Russia
+alevtinak@inbox.ru
+Abstract. We consider one of the mathematical models of the theory of op-
+timal dynamic measurements to solve the problem of recovering a dynamically
+distorted signal in the presence of noise. The measuring device is simulated by
+a Leontief-type system which is a  nite-dimensional analogue of a Sobolev-type
+equation, and its initial state is given by the Showalter { Sidorov condition.
+In order to  nd the input signal from the known observed signal, an optimal
+control problem, namely the minimization of the penalty functional in which
+the simulated and observed output signals are compared should be solved. The
+solution of this problem is called the optimal dynamic measurement. The the-
+orem on the existence of a unique exact solution of the problem posed and the
+algorithm of the spline method for  nding an approximate solution are given.
+At the same time, the presence of noise at the output of the measuring device
+does not give a possibility to solve the problem of recovering a dynamically
+distorted signal satisfactorily. In the article we propose to use in the numerical
+algorithm the Savitsky-Golay digital  lter for the observed signal. As a result,
+we obtain an observation smoothed by the  lter, which is then used in the
+penalty functional. The choice of parameters for the Savitsky-Golay digital
+ lter is discussed, and the results of computational experiments on the data of
+bench tests are presented.Differential Equations and Control Processes, N. 1, 2021
+Keywords: virtual model, optimal dynamic measurements, Leontief type sys-
+tem, computational experiments.
+1 Introduction
+The main problem of dynamic measurements is recovery of a dynamically dis-
+torted signal (input signal) by the observed one (output signal) with known
+parameters of the mathematical model of the measuring device [1]. Various
+mathematical methods and models [2]{[4] can be used as the basis for the an-
+alytical implementation of the virtual model for recovering a dynamically dis-
+torted signal. In this paper, we use the methods of the recently created [5] and
+actively developing [6],[7] theory of optimal dynamic measurements. This the-
+ory accumulates methods of the theory of optimal control, equations of Sobolev
+and Leontief types, dynamic measurements and automatic control.
+The work [8] proposes to use the differential-algebraic system
+(
+_ x =Ax +Bu;
+y =Cx +D 
+(1)
+as a mathematical model of the measuring device. In addition to (1), the model
+also contains the initial Cauchy condition
+x(0) =x
+0
+; (2)
+which de nes the initial state of the measuring system, x
+0
+2 R
+n
+: In (1), x(t),
+y(t), u(t) are the vector functions of the states of the measuring system, the
+observed signal and the input signal, respectively, A is a square matrix of the
+order n characterizing the measuring device, the matrix B characterizes the
+relationship between the input of the system and its state, the matrices C and D
+characterize the relationship between the state of the system and observations,
+ (t) is a vector function of noise at the output of the measuring system.
+In the general case, when a measuring device is a complex system, for
+example, consisting of several sensors, it is necessary to use the Leontief type
+system, which is a  nite-dimensional analogue of the Sobolev type equation [9]
+(
+L _ x =Ax +Bu +G ;
+y =Cx +D ;
+(3)
+where detL = 0, L is a square matrix of the order n characterizing the measuring
+system,  (t) is a vector function of noise at the input and in the circuits of the
+Electronic Journal. http://diffjournal.spbu.ru/ 2Differential Equations and Control Processes, N. 1, 2021
+measuring system, the matrix G characterizes the relationship between the
+state of the system and the corresponding noise.
+Therefore, the  rst equation of system (3) is a Leontief type system, i.e.
+a degenerate system of ordinary differential equations. At the same time, the
+Leontief type system is a  nite-dimensional analogue of the Sobolev type equa-
+tion, therefore, the Showalter { Sidorov condition
+h
+(ffL A)
+ 1
+L
+i
+p+1
+(x(0) x
+0
+) = 0 (4)
+is taken as the initial one. In problem (3), (4), the matrix A is (L; p)-regular,
+ff 2  
+L
+(M) [10]. The results of the solvability of the Showalter - Sidorov
+problem for the Sobolev type equation give a possibility to develop numerical
+methods for solving initial and optimal control problems, both for the equations
+mentioned above and Leontief type systems [10]. At present, methods and
+models of the theory of optimal dynamic measurements are designed which
+are based on the development of the theory of Sobolev type equations [11, 12]
+and numerical methods [13]. Such methods allow investigating the problem of
+optimal dynamic measurements in the presence of "white noise" and to increase
+the e ciency of numerical methods.
+The article presents a new algorithmic implementation of a virtual model
+of optimal dynamic measurements. We propose to apply the Savitsky - Golay
+digital  lter [14] to the observation data with the subsequent application of
+the spline method of optimal dynamic measurements. Basing on the results
+of computational experiments with various parameters of the digital  lter, we
+give recommendations on the use of the  lter and draw conclusions about the
+effectiveness of the new algorithmic implementation of the virtual model under
+study.
+2 Analytical implementation of the model of optimal dy-
+namic measurements
+Let us consider the spaces of states
+@ =fx2L
+2
+((0; );R
+n
+) : _ x2L
+2
+((0; );R
+n
+)g;
+observations   =C [@] and measurements
+A =
+n
+u2L
+2
+((0; );R
+n
+) :u
+(p+1)
+2L
+2
+((0; );R
+n
+)
+o
+:
+Electronic Journal. http://diffjournal.spbu.ru/ 3Differential Equations and Control Processes, N. 1, 2021
+Suppose that the measuring device is simulated by the system
+(
+L _ x =Ax +Bu;
+y =Cx
+(5)
+and the Showalter - Sidorov initial condition (4). InA consider a closed convex
+set of admissible measurementsA
+@
+ A of the form
+A
+@
+=
+(
+u2A :
+ 
+X
+q=0
+Z
+ 
+0
+
+
+u
+(q)
+(t)
+
+
+
+2
+dt d
+)
+: (6)
+The parameter d is characterized based on the physical properties of the mea-
+sured process. It is required to  nd the optimal dynamic measurementv2A
+@
+at which the minimum value
+J(v) = min
+u2A
+@
+J(u) (7)
+of the functional
+J(u) =
+1
+X
+q=0
+Z
+ 
+0
+
+
+y
+(q)
+(u;t) y
+(q)
+0
+(t)
+
+
+
+2
+dt (8)
+is achieved, where y
+0
+(t); t2 [0; ] is a continuously differentiable function (we
+consider the function as a "real observation") constructed on the basis of the
+values Y
+0i
+observed at the output of the measuring system. The penalty func-
+tional reects the assessment of the proximity of the real observation y
+0
+(t) and
+the observation y(t) obtained on the basis of the mathematical model of the
+measuring device. The presented problem (4) { (8) is called the main prob-
+lem of optimal dynamic measurements. Note that in the absence of noise, the
+distortion of the input signal is due to the inertia of the measuring device.
+In the presence of deterministic noises, for example, resonances, only at
+the output of the measuring device, in order to restore a dynamically distorted
+signal, it is permissible to use the penalty functional of the form (8). In this
+case, problem (1), (4), (6) { (8) is considered. In the presence of deterministic
+noise both at the output and at the input of the measuring device, the quality
+functional has the form
+J(u) = 
+1
+X
+q=0
+Z
+ 
+0
+
+
+y
+(q)
+(u;&; ;t) 
+ 
+y
+(q)
+0
+(u;&; ;t)    y
+(q)
+0
+(&; ;t)
+ 
+
+
+2
+dt+
+Electronic Journal. http://diffjournal.spbu.ru/ 4Differential Equations and Control Processes, N. 1, 2021
++(1  )
+1
+X
+q=0
+Z
+ 
+0
+D
+N
+q
+(u +&)
+(q)
+(t); (u +&)
+(q)
+(t)
+E
+dt; (9)
+where   y
+0
+(&; ;t) are real observations in the absence of measurement,
+y
+0
+(u;&; ;t) are real observations during measurement, y(u;&; ;t) are obser-
+vations obtained in the course of mathematical modelling of dynamic measure-
+ment. Therefore, in this case, we consider problem (3), (4), (6), (7), (9). Note
+that the bracketed expression acts as an observation  lter. This approach is
+acceptable only in the case of determinism of the noise, which is reproduced in
+each experiment. However, this situation should be characterized as a model
+one, since the situation is hardly possible in real experiments. Moreover, with
+noise in the form of "white noise", such a situation is not possible, since each
+observation is one realization of a random process.
+Theorem 1 [5]. Let L and A be square matrices of the order n, the
+matrix A be (L; p)- regular, and detA ? 0. Then for any x
+0
+2 R
+n
+there exists
+a unique solution v2 A
+@
+to problem (4) { (8), which is an optimal dynamic
+measurement, and x (v)2@ satis es system (5) under initial condition (4) and
+has the form
+x (t) = lim
+k!1
+x
+k
+(t) = lim
+k!1
+"
+p
+P
+q=0
+ 
+A
+ 1
+ 
+ 
+kL
+L
+k
+(A)
+ 
+p+1
+ I
+n
+ 
+L
+ 
+ 
+ A
+ 1
+ 
+I
+n
+ 
+ 
+kL
+L
+k
+(A)
+ 
+p+1
+ 
+(Bu)
+(q)
++
+ 
+ 
+L 
+t
+k
+A
+ 
+ 1
+L
+ 
+k
+x
+0
++
+(10)
++
+t
+s
+0
+ 
+ 
+L 
+t s
+k
+A
+ 
+ 1
+L
+ 
+k
+ 
+L 
+t s
+k
+A
+ 
+ 1
+ 
+ 
+kL
+L
+k
+(A)
+ 
+p+1
+Bu (s)ds
+ 
+;
+where lim
+k!1
+ 
+kL
+L
+k
+(A)
+ 
+p+1
+is the projector, L
+L
+(A) is the left resolvent of A .
+The work [15] presents a numerical method, which uses a digital  lter of a
+moving average applied to the observation data and a spline method of optimal
+dynamic measurements.
+3 Algorithmic implementation of the model of optimal
+dynamic measurements
+Let us search for the optimal dynamic measurement in the form
+u
+`
+=col
+ 
+`
+P
+j=1
+a
+1j
+t
+j
+;
+`
+P
+j=1
+a
+2j
+t
+j
+;:::;
+`
+P
+j=1
+a
+nj
+t
+j
+!
+; (11)
+Electronic Journal. http://diffjournal.spbu.ru/ 5Differential Equations and Control Processes, N. 1, 2021
+and taking into account (10), we get
+J
+k
+(v
+`
+k
+) = minJ
+k
+(u
+`
+) = min
+1
+X
+q=1
+Z
+ 
+0
+
+
+!x
+(q)
+k
+(u
+`
+;t) y
+(q)
+0
+(t)
+
+
+
+2
+dt: (12)
+Therefore, the pair (v
+`
+k
+;x
+`
+k
+) = (v
+`
+k
+;x
+k
+(v
+`
+)) denotes an approximate solution
+to the problem of optimal dynamic measurement if, in addition to the optimal
+dynamic measurement, we also search for an approximate state of the system.
+Consider the initial values of the coe cientsa
+ij
+to be zeroes and use the coor-
+dinate descent method with memory to  nd the valuesa
+ij
+, which provide the
+minimum of the penalty functional [5]. At the same time, the convergence of
+the approximate solution to the problem on optimal dynamic measurement to
+the exact one in the norm is proved. The following theorem is true.
+Theorem 2 [16]. Let the matrix A be (L; p)-regular, and detA0, p 2
+f0g[N, functional (5) be a strongly convex function on a compact and convex
+setA
+@
+ A. Then J
+k
+(v
+`
+k
+)!J(v), v
+`
+k
+!v for k Kand `>p and there exists
+T>0 such that the following inequality holds:
+T
+
+
+v
+`
+k
+ v
+
+
+2
+ J
+k
+(v
+`
+k
+) J(v):
+However, the original numerical method required a lot of computing power
+and time. Therefore, a spline method was proposed for  nding the optimal
+dynamic measurements.
+Let us describe the spline method for solving the problem of optimal dy-
+namic measurement (4) { (8).
+Suppose that the following components are given: the matrices included in
+system (5); the initial value x
+0
+2 R
+n
+; the array of observed values Y
+0i
+at the
+nodal points t
+i
+= 0; 1;:::; n of the output signal, and t
+i+1
+ t
+i
+=  , t
+0
+= 0,
+t
+n
+= :
+Step 1. Divide the interval [0; ]into M intervals [ 
+m 1
+; 
+m
+], where m =
+1; 2;:::;M, and t
+0
+= 
+0
+= 0, t
+n
+= 
+M
+.
+Step 2. At each interval [ 
+m 1
+; 
+m
+], construct the interpolation function
+y
+`
+0m
+(t) in the form of a polynomial of the degree `  (n  1)=M.
+Step 3. For m = 1, 2,. . . , M at [ 
+m 1
+; 
+m
+]; consecutively solve the optimal
+dynamic measurement problem (4)-(8) foru2A
+@m
+, whereA
+@m
+ A
+@
+is a closed
+convex subset ofA
+@
+; by the method described in [5]. We  nd the approximate
+value of the optimal measurement v
+`
+km
+(t) in the form of a polynomial of the
+Electronic Journal. http://diffjournal.spbu.ru/ 6Differential Equations and Control Processes, N. 1, 2021
+degree ` imposing the continuity condition
+v
+`
+km
+( 
+m
+) =v
+`
+k;m+1
+( 
+m
+): (13)
+Step 4. As a result, we get a spline function
+~ v
+`
+k
+(t) =
+[
+m
+v
+`
+km
+(t)
+continuous on [0; ].
+Let us consider the result of the implementation of the spline method algo-
+rithm (without using a digital  lter) in the presence of noise at the output of
+the measuring device. Therefore, the spline method solves the following opti-
+mal dynamic measurement problem. The measuring device is simulated by the
+system
+(
+L _ x =Ax +Bu;
+y =Cx +D ;
+(14)
+and condition (4). It is required to  nd an optimal dynamic measurement
+v2 A
+@
+(6) at which the minimum value (7) of the penalty functional (8) is
+achieved.
+At the stand, the Metran-43 sensor with an analog electronic converter was
+tested, a test signal and an output signal of the tested sensor were obtained.
+Fig. 1 shows
+^ u(t
+i
+); i.e. a test signal recorded by the control sensor (black line),
+^ v
+`
+(t
+i
+); i.e. an approximate optimal dynamic measurement or an input signal
+reconstructed by the spline method (red line).
+In order to smooth the output signal, we use the Savitsky - Golay digital
+ lter [14], which is a noise  ltering technique based on the least squares method.
+The idea is to construct an s-th degree approximating polynomial by 2 +1
+sequential equidistant points and use the polynomial value at the +1-th point
+as a smoothed value.
+Hence, we obtain the following algorithm for the numerical solution of the
+optimal dynamic measurement problem (14), (4), (6) { (8) with the combined
+use of the Savitsky - Golay digital  lter and the spline method.
+Step 0. Determine the parameters   and s of the Savitsky - Golay digital
+ lter and apply the  lter to the array of the values Y
+0i
+. As a result, we get the
+smoothed values y
+0i
+, i=0, 1,. . . , n.
+Electronic Journal. http://diffjournal.spbu.ru/ 7Differential Equations and Control Processes, N. 1, 2021
+Fig. 1. Result of application of the spline method without ursing a digital  lter
+Assuming that the effect of noise at the output is eliminated by smoothing
+by the  lter, we proceed to the implementation of the spline method to solution
+of problem (4) { (8) taking the smoothed valuesy
+0i
+as the array of observations.
+Steps 1 { 4 are implemented.
+4 Computational experiments
+In computational experiments, we apply the Savitsky - Golay digital  lter at
+various values of the parameters
+{  =5, s=3;
+{  =5, s=1;
+{  =10, s=3;
+{  =10, s=1;
+{  =15, s=3
+to the array of observations (s-th degree approximating polynomial by 2 +1
+sequential equidistant points and use the polynomial value at the +1-th point
+as a smoothed value).
+Fig. 2 shows the result of a computational experiment with a smoothing
+window containing 11 counts ( =5) and an approximating polynomial of the
+third degree.
+Electronic Journal. http://diffjournal.spbu.ru/ 8Differential Equations and Control Processes, N. 1, 2021
+Fig. 2. The result of applying the spline method and the Savitsky - Golay digital  lter with a
+smoothing window of 11 counts and an approximating polynomial of the third degree
+Fig. 3 shows the result of a computational experiment with a smoothing
+window containing 11 counts ( =5) and an approximating polynomial of the
+ rst degree. An analysis of the results of these two computational experiments
+shows that the use of an approximating polynomial of the  rst degree allows
+to achieve a smaller error in the discrepancy between the test and simulated
+signals.
+Fig. 3. The result of applying the spline method and the Savitsky - Golay digital  lter with a
+smoothing window of 11 counts and an approximating polynomial of the  rst degreee
+Electronic Journal. http://diffjournal.spbu.ru/ 9Differential Equations and Control Processes, N. 1, 2021
+Note that with a smoothing window containing 11 counts, the lag effect is
+completely eliminated. Signi cant deviations at the end and beginning of the
+time interval are due to the failure to apply a digital  lter to the  rst  ve and
+last  ve counts.
+Fig. 4 shows the result of a computational experiment with a smoothing
+window containing 21 counts ( =10) and an approximating polynomial of the
+third degree.
+Fig. 4. The result of applying the spline method and the Savitsky - Golay digital  lter with a
+smoothing window of 21 counts and an approximating polynomial of the third degree
+Fig. 5 shows the result of a computational experiment with a smoothing
+window containing 21 counts ( =10) and an approximating polynomial of the
+ rst degree.
+Analysis of the results of these two computational experiments shows that
+the use of an approximating polynomial of the  rst degree allows to achieve a
+smaller dynamic error in comparison with a polynomial of the third degree. In
+both cases, the shift is required to be insigni cant, namely, to be equal to 7 
+to the left along the time axis t.
+Fig. 6 shows the result of a computational experiment with a smoothing
+window containing 21 counts, an approximating polynomial of the third degree
+and a shift of 7 counts to the left along the axis t.
+Electronic Journal. http://diffjournal.spbu.ru/ 10Differential Equations and Control Processes, N. 1, 2021
+Fig. 5. The result of applying the spline method and the Savitsky - Golay digital  lter with a
+smoothing window of 21 counts and an approximating polynomial of the  rst degree
+Fig. 6. The result of applying the spline method and the Savitsky - Golay digital  lter with a
+smoothing window of 21 counts, an approximating polynomial of the third degree and a shift 7  to
+the left along the time axis t
+Fig. 7 shows the result of a computational experiment with a smoothing
+window containing 21 counts, an approximating polynomial of the  rst degree
+and a shift of 7 counts to the left along the axis t.
+Electronic Journal. http://diffjournal.spbu.ru/ 11Differential Equations and Control Processes, N. 1, 2021
+Fig. 7. The result of applying the spline method and the Savitsky - Golay digital  lter with a
+smoothing window of 21 counts, an approximating polynomial of the  rst degree and a shift 7  to
+the left along the time axis t
+Comparison of the results shows that the implementation of a shift reduces
+the dynamic error, and a visual analysis of the corresponding graphs of ^ v
+`
+(t
+i
+),
+for example, Fig. 4 and Fig. 6, at local extrema ^ u(t
+i
+) shows a more accurate
+restoration of the signal in the presence of a shift (Fig. 6).
+Computational experiments with a larger smoothing window (more than 21
+counts) lead to an increase in the dynamic error. Similar results with respect
+to the size of the smoothing window were obtained using the moving average
+ lter [15].
+In addition, on the basis of the Kotelnikov theorem, the connection between
+the length of the interval of the smoothing window and the value of the max-
+imum frequency f
+c
+, which limits the spectrum of the desired input signal, is
+shown.
+Fig. 8 shows the result of a computational experiment with a smoothing
+window containing 31 counts ( =15) and an approximating polynomial of the
+third degree.
+Despite the fact that the error in this case is smaller compared to the
+smoothing window containing 21 counts, we emphasize that in the neiborhood
+of a number of local extrema, for example, at t=0,0225 s, the values of the opti-
+Electronic Journal. http://diffjournal.spbu.ru/ 12Differential Equations and Control Processes, N. 1, 2021
+mal dynamic measurement are signi cantly less than the test signal (smoothing
+effect). In solving certain applied problems (for example, design), such a situ-
+ation may turn out to be unacceptable.
+Fig. 8. The result of applying the spline method and the Savitsky - Golay digital  lter with a
+smoothing window of 31 counts and an approximating polynomial of the third degree
+Conclusions and recommendations
+The application of the Savitsky - Golay digital  lter to the observed sig-
+nal when recovering a dynamically distorted signal by the method of optimal
+dynamic measurement allows to draw the following conclusions. The counts
+contained in the smoothing window must belong to an interval equal to 2 ,
+where 0<4  1=2f
+c
+, f
+c
+is the maximum frequency that limits the spectrum
+of the desired input signal.
+A smaller error is achieved when using an approximating polynomial of the
+ rst degree. The elimination of the lag effect is proposed by shift of m counts
+to the left such that m   24=3. In the future, with the similar statement of
+the problem, other types of digital  lters will be considered.
+References
+[1] Granovsky V.A. Dynamic measurements: theory and metrological assur-
+ance at yesterday and tomorrow, Datchiki and Systemi (Sensors and Sys-
+Electronic Journal. http://diffjournal.spbu.ru/ 13Differential Equations and Control Processes, N. 1, 2021
+tems) 3(201) (2016) pp. 57{72. (in Russian)
+[2] Tikhonov A.N. and Arsenin V.Ya., Solutions of ill-posed problems, Nauka.
+1979. (in Russian)
+[3] Ruhm K.H. Dynamic and stability: A proposal for related terms in metrol-
+ogy from a mathematical point of view, Measurement 79 (2016) p. 276.
+[4] Eichstadt S., Elster C., Smith I.M. and Esward T.J. Evaluation of dynamic
+measurement uncertainty: an open-source software package to bridge the-
+ory and practice, Journal of Sensors and Sensor Systems 6 (2017) p. 97.
+[5] Shestakov A.L. and Sviridyuk G.A. A new approach to measuring dynam-
+ically distorted signals, Bulletin of the South Ural state university. Series:
+mathematical modelling, programming and computer software 16(192)
+(2010) pp. 116{120.
+[6] Shestakov A.L., Keller A.V. and Nazarova E.I. Numerical solution of the
+optimal measurement problem, Automation and Remote Control 73(1)
+(2012) pp. 97{104, DOI: 10:1134=S0005117912010079
+[7] Shestakov A.L., Keller A.V., Zamyshlyaeva A.A., Manakova N.A., Zagre-
+bina S.A. and Sviridyuk G.A. The optimal measurements theory as a new
+paradigm in the metrology, Journal of Computational and Engineering
+Mathematics 7(1) (2020) pp. 3-23 doi: 10:14529=jcem200101
+[8] Shestakov A.L. Analysis of dynamic error and selection of a measur-
+ing transducer's parameters at stepwise, linear an hierarchic segments,
+Izmeritelnaya tekhnika [Measuring Engineering] 6(13) (1992) pp. 13 (in
+Russian)
+[9] Khudyakov Yu.V. On mathematical modeling of the measurement trans-
+ducers, Journal of Computational and Engineering Mathematics 3(3)
+(2016) pp. 68-73.
+[10] Keller A.V. On the computational e ciency of the algorithm of the nu-
+merical solution of optimal control problems for models of leontieff type,
+Journal of Computational and Engineering Mathematics 2(2) (2015) pp.
+39{59 DOI: 10:14529=jcem150205
+[11] Favini A., Zagrebina S.A. and Sviridyuk G.A. Multipoint initial- nal value
+problems for dynamical Sobolev-type equations in the space of noises, Elec-
+tronic Journal of Differential Equations 2018 (2018) P. 128.
+Electronic Journal. http://diffjournal.spbu.ru/ 14Differential Equations and Control Processes, N. 1, 2021
+[12] Manakova N.A., Gavrilova O.V. and Perevozchikova K.V. Numerical in-
+vestigation of the optimal measurement for a semilinear descriptor sys-
+tem with the Showalter-Sidorov condition: algorithm and computational
+experiment, Differencialnie Uravnenia i Protcesy Upravlenia, 2020 (4) P.
+115{126.
+[13] Shestakov A.L., Sviridyuk G.A., Keller A.V., Khudyakov Yu.V. and Za-
+myshlyaeva A.A. Numerical investigation of optimal dynamic measure-
+ments, Acta IMEKO 7(2) (2018). pp. 65 { 72
+[14] Savitzky A. and Golay M.J.E. Smoothing and Differentiation of Data by
+Simpli ed Least Squares Procedures, Anal. Chem. 1964 vol. 36 pp. 1627{
+1639. doi:10.1021/ac60214a047.
+[15] Shestakov A.L. and Keller A.V. Optimal dynamic measurement method
+using a digital sliding medium  lter, to appear
+[16] Sviridyuk G.A. and Keller A.V. On the numerical solution convergence
+of optimal control problems for leontief type system, Journal of Samara
+State Technical University. Series Physical and Mathematical Sciences
+2(23) (2011) pp. 24{33. (in Russian)
+Electronic Journal. http://diffjournal.spbu.ru/ 15
