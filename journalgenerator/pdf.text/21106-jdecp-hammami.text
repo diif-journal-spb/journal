@@ -1,0 +1,2984 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUA TIONS
+AND
+CONTR OL PR OCESSES
+N. 1, 2021
+Ele ctr onic Journal,
+r e g. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://di journal.spbu.ru/
+e-mail: jo di @mail.ru
+Or dinary di er ential e quations
+Growth conditions for asymptotic behavior of solutions for
+certain time-v arying di erential equations
+H.Damak, M.A.Hammami, A. Kicha
+University of Sfax T unisia, F aculty of Science of Sfax, Department of
+Mathematics
+E-mail: MohamedAli.Hammami@fss.rnu.tn
+Abstract. The question proposed in this paper is related to the study of the
+preserv ation of uniform h-stability and uniform boundedness of time-v arying non-
+linear di erential equations with a perturbation using Gronwall’s inequalities and
+Lyapunov’s theory . Moreover, we show the linearization technique for the uniform
+h-stability of a nonlinear system and give necessary and su cient conditions for
+the global boundedness of perturbed systems. The last part is devoted to the
+study of the problem of h-stabilization for certain classes of nonlinear systems.
+Some examples and simulations are given to illustrate the main results.
+Keywords: Global uniform boundedness, h-stabilization, Linearization system,
+Lyapunov function, uniform h-stability .
+1 Introduction
+The stability theory plays an important role in the area of the  eld of control
+systems and automation in engineering. There are di erent types of stability
+problems that arise in the study of dynamical systems, see [3, 9, 15] and hasDi er ential Equations and Contr ol Pr o c esses, N. 1, 2021
+produced a v ast body of important results. In this work, we will investigate the
+concept of h-stability of time-v arying nonlinear systems. This notion has been
+presented by M. Pinto in [20, 21]. He introduced it for di erential systems under
+some perturbations and extended the study of exponential asymptotic stability to
+a v ariety of reasonable systems called h-systems. This notion is an important de-
+velopment of the exponential asymptotic stability within one common framework.
+The v arious notions of h-stability include several kinds of known stability as uni-
+form stability , uniform Lipschitz stability (see [8]) and polynomial stability whose
+norm can increase not faster than exponentially . The most useful and general
+approach for studying the nonlinear control systems is the theory of Lyapunov.
+The relation between Lyapunov functions and v arious types of stability have been
+discussed by many authors, see [1, 4, 6, 7, 10, 11, 14, 19]. The general problem of
+motion stability includes two methods of stability analysis (the so-called lineariza-
+tion method and direct method) was  rst published in 1892. The linearization
+technique draws conclusions about a nonlinear system’s local stability around an
+equilibrium point from the stability properties of its linear approximation, this
+result is proved in [14, 13] for the exponential stability . The direct method is
+not restricted to local motion, it determines the stability properties of a nonlinear
+system by constructing a scalar energy-like function for the system and examining
+the function’s time v ariation, see [12]. T ogether, the linearization method and the
+direct method constitute the so-called Lyapunov stability theory .
+Nevertheless, there are some systems that may be unstable and yet these sys-
+tems may oscillate su ciently near this state that its performance is acceptable.
+T o deal with this situation, we need a notion of stability that is more suitable
+than Lyapunov stability such a concept is called uniform boundedness. F or the
+boundedness as well as the stability , the Lyapunov theory is very useful and the
+relation between Lyapunov functions and v arious types of boundedness are very
+similar to those between Lyapunov functions and v arious types of stability (see
+[6, 14, 16, 17, 18, 24]). It is concerned with quantitative analysis as opposed to
+Lyapunov analysis which is qualitative in nature.
+The contribution of this paper is to construct a Lyapunov equation and use it to
+show that an equilibrium point of a nonlinear system is uniformly h-stable if the
+linearization of the system about that point has a uniform h-stable equilibrium
+point at the origin. In addition, we use the Lyapunov theory to establish the
+global uniform boundedness of nonlinear perturbed systems of di erential equa-
+tions. The topic of Laypunov stability of control systems described by a system
+of di erential equations was an interesting research area in the past decades (see
+[2, 5]). Under appropriate growth conditions on the nonlinear perturbation, a
+Electronic Journal. h ttp://di journal.spbu.ru/ 424Di er ential Equations and Contr ol Pr o c esses, N. 1, 2021
+state control feedback is established based on the global uniform h-stabilizability
+of the nominal linear system to h-stabilize the perturbed control system using the
+Riccati di erential equation. The remainder of this work is organized as follows.
+In Section 2, some preliminary results are summarized and the system descrip-
+tion is given. The required assumptions and the statement of the main results are
+provided in Section 3. Section 4 is devoted to control applications. Finally , some
+numerical examples are given in Section 5 to demonstrate the e ectiveness of the
+method put forward. Our conclusion is given in Section 6.
+2 General de nitions
+W e will use the following notations throughout this paper: R
++
+= [0;+1) and
+R
+n
+denotes the n-dimensional Euclidean space with appropriate norm k:k:I and
+A
+T
+(t) denote the identity matrix and the transpose of the matrix A(t); respec-
+tively .
+Consider the nonlinear system:
+_ x =f(t;x); x(t
+0
+) =x
+0
+; t t
+0
+  0; (1)
+where t2R
++
+is the time, x2R
+n
+is the state, f :R
++
+ R
+n
+!R
+n
+is continuous
+in (t;x) and locally Lipschitz in x:
+Let x(t;t
+0
+;x
+0
+); or simply by x(t) the unique solution of (1) at time t
+0
+starting
+from the point x
+0
+:
+Firstly , let us introduce some basic de nitions which we need in the sequel.
+De nition 1 Assume that h : R
++
+! R
+ 
++
+is p ositive, c ontinuous and b ounde d
+function. The system (1) is said to b e:
+1. Uniformly h-stable if ther e exist c onstants c  1 and   > 0; indep endent of
+t
+0
+; such that for al l t
+0
+2R
++
+and for al l x
+0
+2R
+n
+withkx
+0
+k  ; the solution
+x(t) satis es the estimation:
+kx(t)k ckx
+0
+kh(t)h(t
+0
+)
+ 1
+; 8 t t
+0
+: (2)
+2. Glob al ly uniformly h-stable if ther e exists c onstant c  1; such that for al l
+t
+0
+2R
++
+and al l x
+0
+2R
+n
+; the solution x(t) satis es the estimation (2).
+Her e, h(t)
+ 1
+=
+1
+h(t)
+ 
+Electronic Journal. h ttp://di journal.spbu.ru/ 425Di er ential Equations and Contr ol Pr o c esses, N. 1, 2021
+Remark 1 F or some sp e cial c ases of h; theh-stability c oincides with known typ es
+of stability:
+i) If h(t) =a for a> 0; then the system (1) is stable.
+ii) If h(t) = e
+  t
+for   > 0; then the system (1) is uniformly exp onential ly
+stable.
+iii) If h(t) =
+1
+(1+t)
+
+for   1; the system (1) is p olynomial ly stable.
+v) If h(t) is a strictly de cr e asing function, such that h(t) tends to 0 when t!
++1; then the origin is uniformly asymptotic al ly stable. Mor e pr e cisely, the
+solutions of system (1) c onver ge to the origin (i.e., limsup
+t!+1
+kx(t)k = 0).
+Consider now the linear time-v arying system:
+_ x =A(t)x; x(t
+0
+) =x
+0
+; t t
+0
+  0; (3)
+whereA( ) isn n matrix whose entries v alues are continuous functions of t2R
++
+:
+The general solution of system (3) is given by:
+x(t) = (t;t
+0
+)x
+0
+; x
+0
+2R
+n
+; t t  0;
+where  (t;t
+0
+) is the state transition matrix associated with A( ): W e de ne the
+norm of matrices by: kAk = max
+kxk 1
+kAxk:
+Lemma 1 (Se e [20]) The system (3) is glob al ly uniformly h-stable if and only if
+ther e exist c  1 and a p ositive c ontinuous b ounde d function h onR
++
+; such that
+k (t;t
+0
+)k ch(t)h(t
+0
+)
+ 1
+; 8 t t
+0
+  0:
+Remark 2 In line ar systems ther e is the notion of an upp er function which is
+r elate d to upp er Lyapunov exp onent (se e [3, 13, 16, 17, 18, 19, 22, 23]).
+De nition 2 (Se e [23]) A b ounde d function  (t) is an upp er function for system
+(3) if ther e exists a c onstant  ; such that
+k (t;s)k  exp
+ 
+Z
+t
+s
+ ( )d 
+ 
+; 8 t s;
+wher e  (t;s) is the fundamental matrix of the system.
+Electronic Journal. h ttp://di journal.spbu.ru/ 426Di er ential Equations and Contr ol Pr o c esses, N. 1, 2021
+Remark 3 In the c ase wher e   is an upp er function and
+h(t)h(t
+0
+)
+ 1
+= exp
+ 
+Z
+t
+t
+0
+ ( )d 
+ 
+the c onsider e d system is h-stable and vic e versa.
+Remark 4 Ther e is no r elationship b etwe en the c onc ept of p olynomial stability
+and exp onential stability as shown in the fol lowing example.
+Example 1 Consider the sc alar e quation:
+_ x = 
+1
+1+t
+x; x2R; t  0: (4)
+The state tr ansition matrix  (t;t
+0
+) is given by
+ (t;t
+0
+) =
+t
+0
++1
+t+1
+; 8 t t
+0
+:
+Then, the system (4) is p olynomial ly stable. On the c ontr ary, if we supp ose that
+(4) is exp onential ly stable, then ther e exists ff> 0; such that
+(t
+0
++1) e
+ ff(t t
+0
+)
+(t+1); 8 t t
+0
+:
+F or t
+0
+= 0 and t !1; we obtain a c ontr adiction and henc e the system (4) is
+not exp onential ly stable.
+W e prove now the following lemma which will be used later.
+Lemma 2 Consider the nonline ar system (1) with f(t;0)  0; for al l t2 R
++
+:
+L et  ( ;t;x) b e a solution of the system that starts at (t;x); and let  
+x
+( ;t;x) =
+@
+@x
+ ( ;t;x) and
+
+
+
+
+@f
+@x
+(t;x)
+
+
+
+
+ L; wher e L is a p ositive c onstant. Then,
+k ( ;t;x)k
+2
+ kxk
+2
+e
+ 2L(  t)
+:
+Proof. Let  
+x
+( ;t;x) be the solution of
+@
+@ 
+ 
+x
+( ;t;x) =
+@f
+@x
+( ; ( ;t;x)) 
+x
+;  
+x
+(t;t;x) =I:
+W e have,
+ 
+ 
+ 
+ 
+@
+@ 
+ 
+T
+( ;t;x) ( ;t;x)
+ 
+ 
+ 
+ 
+=
+ 
+ 
+ 2 
+T
+( ;t;x)f
+ 
+ ; ( ;t;x)
+ 
+ 
+ 
+ 
+  2k ( ;t;x)kkf
+ 
+ ; ( ;t;x)
+ 
+k
+  2Lk ( ;t;x)k
+2
+:
+Electronic Journal. h ttp://di journal.spbu.ru/ 427Di er ential Equations and Contr ol Pr o c esses, N. 1, 2021
+Then,
+@
+@ 
+ 
+T
+( ;t;x) ( ;t;x)  2Lk ( ;t;x)k
+2
+: (5)
+Setting ( ) = k ( ;t;x)k and using (5), we conclude (as in [14], Example 3.9,
+pp. 103-104) that D
++
+ ( ) 
+0
+L ( ); with
+D
++
+ (t) = limsup
+h!0
++
+1
+h
+ 
+ 
+ 
+t+h
+ 
+  (t)
+ 
+:
+By the comparison lemma (see [14], pp. 102-103), we deduce that
+k ( ;t;x)k
+2
+ kxk
+2
+e
+ 2L(  t)
+:
+ 
+In this work, it is worth to notice the origin is not necessarily an equilibrium point
+for system (1). This brings us to the notion of global uniform boundedness.
+De nition 3 A solution of system (1) is said to b e glob al ly uniformly b ounde d
+if for every  > 0 ther e exists   = ( )> 0; such that
+kx
+0
+k   =)kx(t)k  ; 8 t t
+0
+  0:
+In order to solve the problem of such perturbed systems, we introduce the follow-
+ing technical lemma, that will be crucial in studying the global uniform bound-
+edness of solutions.
+Lemma 3 L et $;   :R
++
+!R b e c ontinuous functions and ' :R
++
+!R
++
+is a
+function, such that
+_ '(t) $(t)'(t)+ (t); 8 t t
+0
+: (6)
+Then, for any t t
+0
+  0; we have the fol lowing ine quality
+'(t) '(t
+0
+)exp
+ 
+Z
+t
+t
+0
+$(v)dv
+ 
++
+Z
+t
+t
+0
+exp
+ 
+Z
+t
+s
+$(v)dv
+ 
+ (s)ds:
+3 Basic results
+3.1 Su cient conditions for uniform boundedness
+Lyapunov’s direct method allows us to determine the stability of a system without
+explicitly integrating the di erential equation. This method is a generalization of
+Electronic Journal. h ttp://di journal.spbu.ru/ 428Di er ential Equations and Contr ol Pr o c esses, N. 1, 2021
+the idea that if there is an appropriate function of a system that satis es certain
+conditions, then we can deduce the stability of this system. The following theorem
+discuss su cient conditions on the global uniform boundedness of solutions of
+system (1) by using the Lyapunov’s direct method.
+Theorem 1 Supp ose that h is a p ositive, b ounde d, c ontinuous, de cr e asing on R
++
+withh
+0
+exists and c ontinuous on R
++
+: Mor e over, supp ose that ther e exist c onstants
+a
+1
+; a
+2
+; b> 0; k  0 and a function V(t;x) satisfying the fol lowing pr op erties:
+(i) a
+1
+kxk
+b
+ V(t;x) a
+2
+kxk
+b
+; (t;x)2R
++
+ R
+n
+;
+(ii)
+_
+V(t;x) h
+0
+(t)h(t)
+ 1
+V(t;x) kh
+0
+(t)h(t)
+ 1
+; (t;x)2R
++
+ R
+n
+:
+Then, the system (1) is glob al ly uniformly b ounde d.
+Proof. Let x(t) = x(t;t
+0
+;x
+0
+) be the solution of system (1) through (t
+0
+;x
+0
+)2
+R
++
+ R
+n
+: Then, it follows from condition (ii) that
+_
+V(t;x) h
+0
+(t)h(t)
+ 1
+V(t;x) kh
+0
+(t)h(t)
+ 1
+:
+By using Lemma 3 and the decreasing of h; we get for all t t
+0
+andx
+0
+2R
+n
+the
+following estimation
+V(t;x)   V(t
+0
+;x
+0
+)h(t)h(t
+0
+)
+ 1
+ k
+Z
+t
+t
+0
+exp
+ Z
+t
+s
+h
+0
+( )h( )d 
+ 
+h
+0
+(s)h(s)
+ 1
+ds
+  V(t
+0
+;x
+0
+)h(t)h(t
+0
+)
+ 1
++k:
+W e deduce for all t t
+0
+and all x
+0
+2R
+n
+that
+kx(t)k 
+ 
+a
+2
+a
+1
+kx
+0
+k
+b
+h(t)h(t
+0
+)
+ 1
++
+k
+a
+1
+ 1
+b
+: (7)
+1. If b> 1; by using the fact that ( 
+1
++ 
+2
+)
+"
+  
+"
+1
++ 
+"
+2
+; for all  
+1
+;  
+2
+  0 and
+"2]0;1[; one obtains from the decreasing of h;
+kx(t)k 
+ 
+a
+2
+a
+1
+ 1
+b
+kx
+0
+k+
+ 
+k
+a
+1
+ 1
+b
+: (8)
+2. If b  1: Since ( 
+1
++ 
+2
+)
+p
+  2
+p 1
+( 
+p
+1
++ 
+p
+2
+); for all  
+1
+;  
+2
+  0 andp  1; one
+can get from the decreasing of h;
+kx(t)k  2
+1 b
+b
+ 
+a
+2
+a
+1
+ 1
+b
+kx
+0
+k+2
+1 b
+b
+ 
+k
+a
+1
+ 1
+b
+: (9)
+Electronic Journal. h ttp://di journal.spbu.ru/ 429Di er ential Equations and Contr ol Pr o c esses, N. 1, 2021
+This yields that the solutions of system (1) are globally uniformly bounded.
+Note that, if b> 1; the inequality (8) implies that
+kx(t)k 
+ 
+k
+a
+1
+ 1
+b
+ 
+ 
+a
+2
+a
+1
+ 1
+b
+kx
+0
+k:
+Thus, for all t2R
++
+; if we takekx
+0
+k 
+ 
+k
+a
+1
+ 1
+b
+; such thatkx(t)k 
+ 
+k
+a
+1
+ 1
+b
+; we
+get that the solutions of system (1) approach to a compact set S; when t!1;
+given by
+S =
+(
+x2R
+n
+;kxk 
+ 
+k
+a
+1
+ 1
+b
+)
+:
+Ifb  1 and by using a similar reasoning as above on (9), we can deduce that the
+solutions of system (1) approach to a compact set S
+0
+; when t!1; given by
+S
+0
+=
+(
+x2R
+n
+;kxk  2
+1 b
+b
+ 
+k
+a
+1
+ 1
+b
+)
+:
+This completed the proof.  
+3.2 Converse Theorem
+Although Lemma 1 may not be very helpful as a stability test, we will see that it
+guarantees the existence of a Lyapunov function for the linear system (3). That
+is, if we can  nd a continuously di erentiable, positive, bounded and symmetric
+matrix P(t); which is a solution of a di erential equation for some continuous
+positive de nite symmetric matrix Q(t); then V(t;x) is a Lyapunov function for
+the system. If the matrix Q(t) is chosen to be bounded in addition to being sym-
+metric, continuous, positive de nite and if A(t) is continuous and bounded, then
+it can be shown that when the origin is uniformly h-stable, there is a solution of
+system (3) that possesses the desired properties.
+In this section, we state a converse theorem when the origin is a globally uniformly
+h-stable equilibrium point of the linear system (3), by de ning a Lyapunov func-
+tion that satis es certain properties.
+In what follows, we will denote byH the set of the functions h :R
++
+! [1;+1)
+with the property that:
+H : 9M > 0;
+Z
+1
+t
+h( )
+2
+d  Mh(t); 8t  0:
+Electronic Journal. h ttp://di journal.spbu.ru/ 430Di er ential Equations and Contr ol Pr o c esses, N. 1, 2021
+Theorem 2 L et the origin b e glob al ly uniformly h-stable e quilibrium p oint of sys-
+tem (3). Assume that h2H with h
+0
+exists and c ontinuous on R
++
+: Supp ose that
+A(t) is c ontinuous and b ounde d on R
+n
+: L et Q(t) b e a c ontinuous, b ounde d, p osi-
+tive de nite and symmetric matrix. Then, ther e is a c ontinuously di er entiable,
+b ounde d, p ositive and symmetric matrix P(t); which is the solution of the Ric c ati
+e quation:
+_
+P(t) =h
+0
+(t)h(t)
+ 1
+P(t) A
+T
+(t)P(t) P(t)A(t) Q(t): (10)
+Proof. Assume that the system (3) is globally uniformly h-stable. Let  ( ;t;x)
+be the solution of system (3) that starts at (t;x): Due to linearity ,  ( ;t;x) =
+ ( ;t)x: Let the matrix P(t) de ned by
+P(t) =h(t)
+Z
+1
+t
+ 
+T
+( ;t)Q( ) ( ;t)d : (11)
+Since Q(t) is positive de nite and bounded matrix, then there exist positive con-
+stants k
+1
+and k
+2
+; such that
+k
+1
+I Q(t) k
+2
+I; 8t  0: (12)
+On the one hand, we have
+x
+T
+P(t)x   k
+2
+h(t)
+Z
+1
+t
+k ( ;t;x)k
+2
+d 
+  c
+2
+k
+2
+h(t)
+ 1
+Z
+1
+t
+h( )
+2
+d kxk
+2
+:
+Thus,
+x
+T
+P(t)x c
+2
+k
+2
+M =c
+1
+kxk
+2
+:
+On the other hand, since A(t) is bounded, then there exists a positive constant
+L; such that
+kA(t)k L; 8t2R
++
+:
+F rom Lemma 2, we have
+k ( ;t;x)k
+2
+ kxk
+2
+e
+ 2L(  t)
+:
+x
+T
+P(t)x   k
+1
+h(t)
+Z
+1
+t
+e
+ 2L(  t)
+d kxk
+2
+=
+k
+1
+h(t)
+2L
+kxk
+2
+  0; 8t  0:
+Electronic Journal. h ttp://di journal.spbu.ru/ 431Di er ential Equations and Contr ol Pr o c esses, N. 1, 2021
+Therefore, P(t) is positive and bounded. In addition, the de nition of P(t) shows
+that it is symmetric and continuously di erentiable. T o calculate the di erentiable
+of P(t); we use the following property
+@
+@t
+ ( ;t) =  ( ;t)A(t):
+Hence,
+_
+P(t) = h
+0
+(t)h(t)
+ 1
+P(t)+h(t)
+Z
+1
+t
+ 
+@
+@t
+ 
+T
+( ;t)
+ 
+Q( ) ( ;t)d 
++ h(t)
+Z
+1
+t
+ 
+T
+( ;t)Q( )
+ 
+@
+@t
+ ( ;t)
+ 
+d  Q(t)
+= h
+0
+(t)h(t)
+ 1
+P(t) A
+T
+(t)P(t) P(t)A(t) Q(t):
+ 
+Theorem 3 L et the solutions of system (3) b e glob al ly uniformly h-stable with
+h2H and h
+0
+exists c ontinuous on R
++
+: Supp ose that A(t) is c ontinuous and
+b ounde d onR
+n
+: Thus, ther e exists a function V(t;x) satisfying the fol lowing pr op-
+erties:
+(i)kxk
+2
+ V(t;x)  (c
+1
++1)kxk
+2
+; (t;x)2R
++
+ R
+n
+;
+(ii)
+_
+V(t;x) h
+0
+(t)h(t)
+ 1
+V(t;x); (t;x)2R
++
+ R
+n
+;
+wher e c
+1
+is a p ositive c onstant.
+Proof. W e choose a matrix Q(t) continuous, bounded, positive de nite, symmet-
+ric onR
++
+; and there exists c
+2
+> 0; such that
+x
+T
+ 
+Q(t)+h
+0
+(t)h(t)
+ 1
+I A(t) A
+T
+(t)
+ 
+x c
+2
+kxk
+2
+: (13)
+The linear system is globally uniformly h-stable, then by Theorem 2 we can  nd
+a matrix P(t) which is a solution of the Riccati equation (10). W e de ne the
+Lyapunov function V :R
++
+ R
+n
+!R
++
+by
+V(t;x) =x
+T
+P(t)x+kxk
+2
+:
+It is easy to verify that,
+V(t;x)  (c
+1
++1)kxk
+2
+:
+Electronic Journal. h ttp://di journal.spbu.ru/ 432Di er ential Equations and Contr ol Pr o c esses, N. 1, 2021
+Another,
+V(t;x)   k
+1
+h(t)
+Z
+1
+t
+e
+ 2L(  t)
+d kxk
+2
++kxk
+2
+=
+k
+1
+h(t)
+2L
+kxk
+2
++kxk
+2
+ kxk
+2
+:
+Hence, the  rst inequality of the theorem is hold.
+Now, we shall show (ii): By taking the deriv ative of V(t;x) along the tra jectories
+of the linear system (3), we get
+_
+V(t;x) = _ x
+T
+P(t)x+x
+T
+_
+P(t)x+x
+T
+P(t)_ x+x
+T
+A
+T
+(t)x+x
+T
+A(t)x
+= h
+0
+(t)h(t)
+ 1
+V(t;x) Q(t)kxk
+2
++A(t)kxk
+2
++x
+T
+A
+T
+(t)x
++ x
+T
+A(t)x h
+0
+(t)h(t)
+ 1
+x
+T
+x:
+It follows from (13) that
+_
+V(t;x) h
+0
+(t)h(t)
+ 1
+V(t;x);
+which prove (ii): This ends the proof.  
+Remark 5 The ab ove the or em is an extension of the glob al uniform exp onential
+stability in [14], for h(t) = e
+  t
+with   > 0 and the p olynomial stability, for
+h(t) =
+1
+(1+t)
+
+with   1:
+Corollary 1 L et the origin b e glob al ly uniformly h-stable e quilibrium p oint of
+system (3). Assume that h2H and h
+0
+exists c ontinuous on R
++
+: Supp ose that
+A(t) is c ontinuous and b ounde d on R
+n
+: If Q(t) = C
+T
+(t)C(t); wher e C(t) is a
+c ontinuous matrix in t2R
++
+; then the Ric c ati e quation is given by
+_
+P(t) =h
+0
+(t)h(t)
+ 1
+P(t) A
+T
+(t)P(t) P(t)A(t) C(t)
+T
+C(t):
+3.3 h-Linearized stability of nonlinear systems
+The existence of Lyapunov functions for linear systems per Theorem 2 will now be
+used to prove a linearization result and to determine the uniform h-stability of the
+nonlinear system. In this section, the result of the preceding section is combined
+to obtain one of the most useful results in Lyapunov stability theory namely:
+linearization method . The adv antage of this method lies in the fact that,
+under certain conditions, it enables one to draw conclusions about a nonlinear
+Electronic Journal. h ttp://di journal.spbu.ru/ 433Di er ential Equations and Contr ol Pr o c esses, N. 1, 2021
+system by studying the behavior of a linear system.
+Consider the nonlinear non-autonomous system (1), where f :R
++
+ D!R
+n
+is
+continuously di erentiable and D is a domain that contains the origin. Suppose
+that the origin is an equilibrium point of the system, with f(t;0) = 0 and assume
+that the Jacobian matrix
+ 
+@f
+@x
+ 
+is uniformly bounded and Lipschitz on D; that
+is, there exist positive constants L
+1
+and L
+2
+; such that
+
+
+
+
+@f
+@x
+(t;x)
+
+
+
+
+ L
+1
+; 8x2D; 8t  0;
+
+
+
+
+@f
+@x
+(t;x
+1
+) 
+@f
+@x
+(t;x
+2
+)
+
+
+
+
+ L
+2
+kx
+1
+ x
+2
+k; 8x
+1
+; x
+2
+2D; 8t  0:
+W e can write f(t;x) in the form
+f(t;x) =f(t;0)+
+@f
+@x
+(t;z)x;
+where z2]0;x[: Since f(t;0) = 0; then we have
+f(t;x) =
+@f
+@x
+(t;z)x
+=
+@f
+@x
+(t;0)x+
+ 
+@f
+@x
+(t;z) 
+@f
+@x
+(t;0)
+ 
+x
+= A(t)x+ (t;x);
+where A(t) =
+@f
+@x
+(t;0) and  (t;x) =
+ 
+@f
+@x
+(t;z) 
+@f
+@x
+(t;0)
+ 
+x:
+Therefore, we may approximate the nonlinear system (1) by its linearization in a
+small neighborhood of the origin.
+The next theorem states Lyapunov’s indirect method for showing the uniform h-
+stability of the origin in the non-autonomous case. W e will see that, the uniform
+h-stability of the linearized system re ects the uniform h-stability of the nonlinear
+system.
+Theorem 4 L et the origin b e an e quilibrium p oint for the nonline ar system
+_ x =f(t;x); x(t
+0
+) =x
+0
+; t t
+0
+  0; (14)
+wher e f :R
++
+ D!R
+n
+is c ontinuously di er entiable with D =fx2R
+n
+=kxk<
+%g: Supp ose that the Jac obian matrix
+ 
+@f
+@x
+ 
+is b ounde d and Lipschitz on D; uni-
+formly in t: L et
+A(t) =
+@f
+@x
+(t;x)
+ 
+ 
+ 
+ 
+x=0
+:
+Electronic Journal. h ttp://di journal.spbu.ru/ 434Di er ential Equations and Contr ol Pr o c esses, N. 1, 2021
+Then, the origin is uniformly h
+1
+2
+-stable for system (14) if it is uniformly h-stable
+for the line ar system _ x =A(t)x; with h2H:
+Proof. W e can write the nonlinear system (14) as:
+_ x =A(t)x+ (t;x); (15)
+such that   de ned on R
++
+ D is continuous in (t;x); locally Lipschitz in x and
+veri es the following condition:
+k (t;x)k  kxk
+2
+; 8x2D; 8t  0; (16)
+with   is a positive constant. In addition, we assume that the linear system (3)
+has a uniform h-stable equilibrium point at the origin, h2H with h
+0
+exists and
+continuous onR
++
+; andA(t) is continuous and bounded on R
+n
+: Then, Theorem 2
+ensures the existence of a continuously di erentiable, bounded, positive and sym-
+metric matrixP(t) that satis es (10), where Q(t) is continuous, bounded, positive
+de nite and symmetric matrix that veri es (13). By Theorem 3, there exists a
+Lyapunov function V(t;x) having the properties (i) and (ii): The deriv ative of
+V(t;x) along the tra jectories of system (15) is given by:
+_
+V(t;x) = _ x
+T
+P(t)x+x
+T
+_
+P(t)x+x
+T
+P(t)_ x+ _ x
+T
+x+x
+T
+_ x
+  h
+0
+(t)h(t)
+ 1
+V(t;x) x
+T
+Q(t)x+2
+ 
+kP(t)k+1
+ 
+ (t;x)kxk
++ A
+T
+(t)kxk
+2
++A(t)kxk
+2
+ h
+0
+(t)h(t)
+ 1
+kxk
+2
+:
+By using the inequality (13), we get
+_
+V(t;x) h
+0
+(t)h(t)
+ 1
+V(t;x) c
+2
+kxk
+2
++2
+ 
+kP(t)k+1
+ 
+ (t;x)kxk:
+F rom condition (16) and the property on P(t); we obtain
+_
+V(t;x) h
+0
+(t)h(t)
+ 1
+V(t;x) 
+ 
+c
+2
+ 2  
+ 
+c
+1
++1
+ 
+ 
+kxk
+2
+; 8kxk< :
+By choosing  < min
+(
+%;
+c
+2
+2 
+ 
+c
+1
++1
+ 
+)
+; we obtain
+V(t;x) V(t
+0
+;x
+0
+)h(t)
+1
+2
+h(t)
+ 
+1
+2
+:
+Therefore, for all t  t
+0
+and all x
+0
+2 D the solution x(t) of system (15) is as
+follows:
+kx(t)k 
+p
+(c
+1
++1)kx
+0
+kh(t)
+1
+2
+h(t
+0
+)
+ 
+1
+2
+;
+which ensures that
+_
+V(t;x) is negative de nite in kxk <  : Hence, we conclude
+that the origin of the nonlinear system (14) is uniformly h
+1
+2
+-stable.  
+Electronic Journal. h ttp://di journal.spbu.ru/ 435Di er ential Equations and Contr ol Pr o c esses, N. 1, 2021
+Remark 6
+- The pr evious the or em is a gener alization of uniform exp onential stability,
+that is, the nonline ar system is uniformly exp onential ly stable if the line arize d
+system is uniformly exp onential ly stable (se e [14], The or em 4.13).
+- The line arization r esult is hold for p olynomial stability: h(t) =
+1
+(1+t)
+
+with
+  1:
+Corollary 2 If the nonline ar system is autonomous, that is, _ x = f(x); we c an
+dr aw c onditions ab out the stability of the origin as an e quilibrium p oint for the
+system by investigating the stability for the line arization of the system, wher e
+A =
+@f
+@x
+ 
+ 
+ 
+ 
+x=0
+; such that h(t) =e
+  t
+; for al l t2R
++
+and   > 0:
+3.4 Boundedness of solutions of perturbed systems
+W e can use Lyapunov’s indirect method to show the global uniform boundedness
+of the solutions. W e consider a nonlinear perturbed system and we give su -
+cient conditions on the perturbed term. Our conditions are expressed as relations
+between the Lyapunov function and the interconnection term.
+Theorem 5 Consider the p erturb e d system:
+_ x =A(t)x+ (t;x); x(t
+0
+) =x
+0
+; t t
+0
+  0; (17)
+wher e A(t) is c ontinuous and b ounde d on R
+n
+;   :R
++
+ R
+n
+!R
+n
+is c ontinuous
+in (t;x); lo c al ly Lipschitz in x and satis es the fol lowing assumption:
+k (t;x)k '(t)kxk+ (t); 8 x2R
+n
+; 8 t  0;
+with ' and   ar e non-ne gative c ontinuous inte gr able functions on R
++
+: Assume
+that the system (3) is glob al ly uniformly h-stable with h2H is de cr e asing and h
+0
+exists c ontinuous on R
++
+; then the solutions of system (17) ar e glob al ly uniformly
+b ounde d.
+Proof. W e have the system (3) is globally uniformly h-stable, A(t) is continuous
+and bounded on R
+n
+: Let Q(t) be a continuous, bounded, positive de nite and
+symmetric matrix, such that (13) is hold. Then, Theorem 3 ensures that there
+exists a Lyapunov function candidate
+V(t;x) =x
+T
+P(t)x+kxk
+2
+Electronic Journal. h ttp://di journal.spbu.ru/ 436Di er ential Equations and Contr ol Pr o c esses, N. 1, 2021
+that satis es the certain properties. The deriv ative of V(t;x) along the tra jecto-
+ries of system (17) is as follows:
+_
+V(t;x) = h
+0
+(t)h(t)
+ 1
+V(t;x) x
+T
+Q(t)x+h
+0
+(t)h(t)
+ 1
+x
+T
+x+2x
+T
+ 
+kP(t)k+1
+ 
+ (t;x)
++ x
+T
+A(t)x+x
+T
+A
+T
+(t)x:
+Using the inequality (13), we get
+V(t;x)   h
+0
+(t)h(t)
+ 1
+V(t;x)+2
+ 
+c
+1
++1
+ 
+'(t)kxk
+2
++2
+ 
+c
+1
++1
+ 
+ (t)kxk
+ 
+ 
+h
+0
+(t)h(t)
+ 1
++2
+ 
+c
+1
++1
+ 
+'(t)
+ 
+V(t;x)+2
+ 
+c
+1
++1
+ 
+ (t)
+p
+V(t;x):
+Put, $(t) =
+p
+V(t;x); then
+_ $(t) =
+_
+V(t;x)
+2
+p
+V(t;x)
+ 
+This yields,
+_ $(t) 
+ 
+1
+2
+h
+0
+(t)h(t)
+ 1
++2
+ 
+c
+1
++1
+ 
+'(t)
+ 
+$(t)+2
+ 
+c
+1
++1
+ 
+ (t):
+By Lemma 3 and the decreasing of h; we have for all t t
+0
+$(t) $(t
+0
+)exp
+ 
+2
+ 
+c
+1
++1
+ 
+M
+2
+ 
+h(t)
+1
+2
+h(t
+0
+)
+ 
+1
+2
++2
+ 
+c
+1
++1
+ 
+exp
+ 
+2
+ 
+c
+1
++1
+ 
+M
+2
+ 
+M
+1
+;
+where M
+1
+=
+Z
+1
+0
+ (s)ds and M
+2
+=
+Z
+1
+0
+'(s)ds: Therefore,
+kx(t)k  
+p
+(c
+1
++1)exp
+ 
+2
+ 
+c
+1
++1
+ 
+M
+2
+ 
+kx
+0
+kh(t)
+1
+2
+h(t
+0
+)
+ 
+1
+2
++ 2
+ 
+c
+1
++1
+ 
+exp
+ 
+2
+ 
+c
+1
++1
+ 
+M
+2
+ 
+M
+1
+:
+Consequently , the solutions of system (17) are globally uniformly bounded.
+F rom the decreasing of h; we obtain
+kx(t)k 2
+ 
+c
+1
++1
+ 
+exp
+ 
+2
+ 
+c
+1
++1
+ 
+M
+2
+ 
+M
+1
+ 
+p
+(c
+1
++1)exp
+ 
+2
+ 
+c
+1
++1
+ 
+M
+2
+ 
+kx
+0
+k:
+Hence, for all t2R
++
+; if we takekx
+0
+k  2
+ 
+c
+1
++1
+ 
+exp
+ 
+2
+ 
+c
+1
++1
+ 
+M
+2
+ 
+M
+1
+; such
+thatkx(t)k  2
+ 
+c
+1
++1
+ 
+exp
+ 
+2
+ 
+c
+1
++1
+ 
+M
+2
+ 
+M
+1
+; then the solutions of system (17)
+approach, when t goes to in nity , to the compact set S de ned by
+S =
+n
+x2R
+n
+;kxk  2
+ 
+c
+1
++1
+ 
+exp
+ 
+2
+ 
+c
+1
++1
+ 
+M
+2
+ 
+M
+1
+o
+:
+Electronic Journal. h ttp://di journal.spbu.ru/ 437Di er ential Equations and Contr ol Pr o c esses, N. 1, 2021
+ 
+As a particular case of the forgoing theorem, when '(t) = 0 we obtain the fol-
+lowing corollary .
+Corollary 3 Consider the p erturb e d system (17) wher e A(t) is c ontinuous and
+b ounde d onR
+n
+;  is de ne d on R
++
+ R
+n
+c ontinuous in (t;x) and lo c al ly Lipschitz
+in x: Supp ose that   satis es the fol lowing assumption:
+k (t;x)k  (t); 8 t  0; (18)
+wher e  is a non-ne gative c ontinuous inte gr able function on R
++
+: If the system (3)
+is glob al ly uniformly h-stable with h2H is de cr e asing and h
+0
+exists c ontinuous
+on R
++
+; then the solutions of the p erturb e d system (17) ar e glob al ly uniformly
+b ounde d.
+3.5 h-stabilization
+Let us go to present the h-stabilizability problem of a nonlinear control system of
+the form:
+(
+_ x =A(t)x+B(t)u(t)+F(t;x;u);
+x(t
+0
+) =x
+0
+;
+(19)
+where x 2 R
+n
+is the state vector, u(t) 2 R
+m
+is the control input, A(t) 2
+R
+n n
+; B(t)2R
+n m
+are matrices whose elements are continuous bounded func-
+tions onR
++
+: The function F :R
++
+ R
+n
+ R
+m
+!R
+n
+is continuous in (t;x;u) and
+satisfying the following inequality:
+kF(t;x;u)k  (t)kxk+(t)kuk; 8x2R
+n
+; 8u2R
+m
+; 8t2R
++
+; (20)
+with   and  are non-negative continuous integrable functions on R
++
+: The cor-
+responding system without perturbation called the nominal system is described
+by
+(
+_ x =A(t)x+B(t)u(t);
+x(t
+0
+) =x
+0
+;
+(21)
+De nition 4 we say that the system (19) is stabilizable, if ther e exists at le ast a
+c ontinuous function u(t); such that the origin of the close d lo op system (19) by
+u(t) is asymptotic al ly stable. u(t) is c al le d a fe e db ack.
+De nition 5 L et h : R
++
+! R
+ 
++
+b e a c ontinuous b ounde d function. The line ar
+c ontr ol system (21) is glob al ly uniformly h-stabilizable if ther e exist a fe e db ack
+Electronic Journal. h ttp://di journal.spbu.ru/ 438Di er ential Equations and Contr ol Pr o c esses, N. 1, 2021
+c ontr ol system u(t)2R
+m
+and a c onstant c  1; such that for al l t  t
+0
+and al l
+x
+0
+2R
+n
+the solution x(t) of the close d-lo op system satis es the estimation:
+kx(t)k ckx
+0
+kh(t)h(t
+0
+)
+ 1
+:
+The goal of this section is to found a state feedback controller u(t); such that the
+system (19) is globally uniformly h-stabilizable.
+Theorem 6 Assume that the line ar system _ x(t) =A(t)x(t) is glob al ly uniformly
+h-stable with h2H and h
+0
+exists c ontinuous on R
++
+: W e cho ose Q(t) c ontinu-
+ous, b ounde d, p ositive de nite and symmetric matrix that veri es (13), then the
+Ric c ati di er ential e quation (10) has a solution P(t) b ounde d, p ositive, symmet-
+ric c ontinuously di er entiable matrix, and the nonline ar c ontr ol system (19) is
+h
+1
+2
+-stabilizable by the fe e db ack c ontr ol
+u(t) = B
+T
+(t)P(t)x(t); t t
+0
+: (22)
+Proof. Suppose that the linear system _ x(t) = A(t)x(t) is globally uniformly h-
+stable whereA(t) is continuous and bounded onR
+n
+: Then, Theorem 2 ensures the
+existence of a continuously di erentiable, bounded, positive and symmetric matrix
+P(t) that satis es the Riccati di erential equation (10). Indeed, the deriv ative of
+V(t;x) along the solutions x(t) of system (19) using the chosen feedback control
+(22) is given by
+_
+V(t;x) = _ x
+T
+P(t)x+x
+T
+_
+P(t)x+x
+T
+P(t)_ x+ _ x
+T
+x+x
+T
+_ x
+= h
+0
+(t)h(t)
+ 1
+V(t;x)+2F(t;x;u)x
+T
+P(t)+u
+T
+(t)B
+T
+(t)P(t)x
++ x
+T
+P(t)B(t)u(t) x
+T
+Q(t)x h
+0
+(t)h(t)
+ 1
+x
+T
+x+x
+T
+A
+T
+(t)x+x
+T
+A(t)x
++ u
+T
+(t)B
+T
+(t)x+x
+T
+B(t)u(t)+2F(t;x;u)x
+T
+ 
+ 
+h
+0
+(t)h(t)
+ 1
++2
+ 
+c
+1
++1
+ 
+ 
+ (t)+c
+1
+(t)kBk
+1
+  
+V(t;x);
+wherekBk
+1
+= sup
+t 0
+kB(t)k: Hence,
+V(t;x)   V(t
+0
+;x
+0
+)h(t)h(t
+0
+)
+ 1
+exp
+ 
+2
+ 
+c
+1
++1
+ 
+Z
+t
+t
+0
+ 
+ (s)+c
+1
+(s)kBk
+1
+ 
+ds
+ 
+  V(t
+0
+;x
+0
+)h(t)h(t
+0
+)
+ 1
+exp
+ 
+2
+ 
+c
+1
++1
+ 
+ 
+M
+1
++c
+1
+kBk
+1
+  
+;
+with M
+1
+=
+Z
+1
+0
+ (s)ds and M
+2
+=
+Z
+1
+0
+(s)ds: Therefore,
+kx(t)k ckx
+0
+kh(t)
+1
+2
+h(t
+0
+)
+ 
+1
+2
+;
+Electronic Journal. h ttp://di journal.spbu.ru/ 439Di er ential Equations and Contr ol Pr o c esses, N. 1, 2021
+wherec =
+p
+(c
+1
++1)exp
+ 
+ 
+c
+1
++1
+ 
+ 
+M
+1
++c
+1
+kBk
+1
+  
+: This yields that the system
+(19) is h
+1
+2
+-stabilizable. The proof is completed.  
+Next, we state another su cient condition for the h-stabilizability of system (19)
+in the case when the linear system _ x =A(t)x is not globally uniformly h-stable,
+but the associated linear control system (21) is globally uniformly h-stable.
+Theorem 7 Assume that the line ar c ontr ol system (21) is h-stabilizable with
+h2H and h
+0
+exists c ontinuous on R
++
+: Then the nonline ar system (19) is h
+1
+2
+-
+stabilizable.
+Proof. Assume that the system (21) is h-stabilizable, then there exists K(t)2
+R
+m n
+; such that
+_ x =
+ 
+A(t)+B(t)K(t)
+ 
+x =
+^
+A(t)x; 8t t
+0
+(23)
+is globally uniformly h-stable. W e choose Q(t) a positive, continuous, bounded
+and symmetric matrix that satis es (13), then we consider the Lyapunov function
+V(t;x) = x
+T
+P(t)x+kxk
+2
+from Theorem 3. Hence, by taking the deriv ative of
+V(t;x) along the solutions x(t) of system (19) using the chosen feedback u(t) =
+K(t)x(t); we obtain
+_
+V(t;x) = _ x
+T
+P(t)x+x
+T
+_
+P(t)x+x
+T
+P(t)_ x+ _ x
+T
+x+x
+T
+_ x
+  h
+0
+(t)h(t)
+ 1
+V(t;x)+2F(t;x;u)kP(t)kkxk+2
+^
+A(t)kxk
+2
++2F(t;x;u)kxk
+ 
+ 
+h
+0
+(t)h(t)
+ 1
++2
+ 
+c
+1
++1
+ 
+ 
+ (t)+(t)kKk
+1
+  
+V(t;x);
+withkKk
+1
+= sup
+t 0
+kK(t)k: Thus,
+V(t;x)   V(t
+0
+;x
+0
+)h(t)h(t
+0
+)
+ 1
+exp
+ 
+2
+ 
+c
+1
++1
+ 
+Z
+t
+t
+0
+ 
+ (s)+(s)kKk
+1
+ 
+ds
+ 
+  V(t
+0
+;x
+0
+)h(t)h(t
+0
+)
+ 1
+exp
+ 
+2
+ 
+c
+1
++1
+ 
+ 
+M
+1
++M
+2
+kKk
+1
+  
+with M
+1
+=
+Z
+1
+0
+ (s)ds and M
+2
+=
+Z
+1
+0
+(s)ds: Therefore, for all t t
+0
+and all
+x
+0
+2R
+n
+the solution of system (19) is given by:
+kx(t)k ckx
+0
+kh
+1
+2
+(t)h(t
+0
+)
+ 
+1
+2
+;
+where c =
+p
+(c
+1
++1)exp
+ 
+ 
+c
+1
++1
+ 
+ 
+M
+1
++M
+2
+kKk
+1
+  
+: This ends the proof.  
+Electronic Journal. h ttp://di journal.spbu.ru/ 440Di er ential Equations and Contr ol Pr o c esses, N. 1, 2021
+Example 2 Consider the se c ond or der pr oblem:
+8
+>
+>
+>
+<
+>
+>
+>
+:
+_ x
+1
+=
+ 
+ 1
+1+t
+ 1
+ 
+x
+1
++
+e
+ t
+1+t
+u(t)+
+x
+1
+e
+ t
+(1+t
+2
+)
+p
+1+x
+2
+1
+u(t)
+_ x
+2
+=
+ 
+ 1
+1+t
+ 1
+ 
+x
+2
++
+1
+1+t
+2
+x
+2
++
+x
+1
+e
+ t
+p
+1+x
+2
+1
+u(t); t  0
+(24)
+The ab ove system is exactly the system (19), wher e
+A(t) =
+0
+B
+@
+ 
+1
+1+t
+ 1 0
+0  
+1
+1+t
+ 1
+1
+C
+A
+; B(t) =
+0
+@
+e
+ t
+1+t
+0
+1
+A
+; x(t) =
+ 
+x
+1
+(t)
+x
+2
+(t)
+!
+and
+F(t;x;u) =
+1
+1+t
+2
+ 
+x
+1
+x
+2
+!
++
+x
+1
+p
+1+x
+2
+1
+0
+@
+e
+ t
+1+t
+2
+e
+ t
+1
+A
+u(t):
+The nominal system _ x(t) = A(t)x(t) is glob al ly uniformly h-stable with h(t) =
+1
+1+t
+  Then, for a matrix
+Q(t) =
+0
+B
+@
+1
+2(1+t)
++1 0
+0
+1
+2(1+t)
++1
+1
+C
+A
+;
+which solves the hyp othesis (13), ther e exists a matrix P(t);
+P(t) =
+0
+B
+@
+1
+2
+0
+0
+1
+2
+1
+C
+A
+satis es the Ric c ati e quation (10). Mor e over, the function F satis es the assump-
+tion (20) with  (t) =
+1
+1+t
+2
+and (t) =
+p
+2e
+ t
+:
+W e c onclude that the c onditions of The or em 6 ar e hold. Ther efor e, the system
+(24) is glob al ly uniformly h
+1
+2
+-stabilizable under the close d-lo op line ar fe e db ack
+u(t) = B
+T
+(t)P(t)x(t) = 
+e
+ t
+2(1+t)
+(x
+1
+(t)+x
+2
+(t)):
+F or simulation of system (24) we sele ct the initial state
+ 
+x
+1
+(0);x
+2
+(0)
+ 
+= (1;1):
+The r esult of simulation is depicte d in Figur e 1:
+Electronic Journal. h ttp://di journal.spbu.ru/ 441Di er ential Equations and Contr ol Pr o c esses, N. 1, 2021
+Time (s)
+0 5 10 15 20 25 30 35 40 45 50
+x(t)
+-0.2
+0
+0.2
+0.4
+0.6
+0.8
+1
+x
+1
+(t)
+x
+2
+(t)
+Figure 1: The tr aje ctory of the state x(t) = (x
+1
+(t);x
+2
+(t)) of system (24) .
+3.6 Examples
+In this section, we give some numerical examples and simulations to prove the
+applicability of the theoretical results.
+Example 3 Consider the sc alar e quation:
+_ x = 
+x
+t+sinx
++
+2
+1+t
+; x2R; t2R
++
+: (25)
+Setting, V(t;x) =x
+2
+and h(t) =
+1
+(1+t)
+2
+; which is p ositive, b ounde d, c ontinuous
+and de cr e asing on R
++
+with h
+0
+exists and is c ontinuous on R
++
+: Then, The or em 1
+holds witha
+1
+=a
+2
+= 1 andb =k = 2: This yields the glob al uniform b ounde dness
+of system (25), that is, the solutions of system (25) appr o ach to a c omp act set
+S
+0
+; when t! +1; given by:
+S
+0
+=
+n
+x2R; jxj 
+p
+2
+o
+:
+F or simulation of system (25) we sele ct the initial state x(0) = 1: The r esult is
+depicte d in Figur e 2
+Example 4 W e c onsider the se c ond or der pr oblem:
+8
+<
+:
+_ x
+1
+= x
+3
+1
++x
+2
+1
+x
+2
+2
+ 
+a
+1+t
+x
+1
+_ x
+2
+= x
+3
+2
++x
+1
+sinx
+2
+ 
+a
+1+t
+x
+2
+; a  1;
+(26)
+Electronic Journal. h ttp://di journal.spbu.ru/ 442Di er ential Equations and Contr ol Pr o c esses, N. 1, 2021
+Time (s)
+0 5 10 15 20 25 30 35 40 45 50
+x(t)
+1
+1.1
+1.2
+1.3
+1.4
+1.5
+1.6
+1.7
+1.8
+1.9
+2
+Figure 2: The tr aje ctory of the state x(t) of system (25) .
+wher ex = (x
+1
+;x
+2
+)
+T
+2D R
+2
+andt2R
++
+: The Jac obian matrix of the nonline ar
+system (26) is given by:
+@f
+@x
+(x
+1
+;x
+2
+)
+ 
+ 
+ 
+ 
+(0;0)
+=
+0
+@
+ 
+a
+1+t
+0
+0  
+a
+1+t
+1
+A
+=A(t):
+The line ar system _ x(t) = A(t)x(t) is uniformly h-stable with c = 1 and h(t) =
+1
+(1+t)
+a
+2H: By applying The or em 4, the system (26) is uniformly
+1
+(1+t)
+a
+2
+-stable.
+F or simulation of system (26) we sele ct the initial state
+ 
+x
+1
+(0);x
+2
+(0)
+ 
+= (1;2)
+and a = 3: The r esult of simulation is depicte d in Figur e 3
+Time (s)
+0 0.5 1 1.5 2 2.5 3 3.5 4 4.5 5
+x(t)
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+1.4
+1.6
+1.8
+2
+x
+1
+x
+2
+Figure 3: The tr aje ctory of the state x(t) = (x
+1
+;x
+2
+) of system (26) .
+Electronic Journal. h ttp://di journal.spbu.ru/ 443Di er ential Equations and Contr ol Pr o c esses, N. 1, 2021
+Example 5 W e c onsider the  rst or der pr oblem:
+_ x = 
+ 
+2
+1+t
++1
+ 
+x+
+p
+t
+1+t
+3
+x+
+sint
+1+t
+2
+; x2R; t2R
++
+: (27)
+The pr evious system c an b e written as:
+_ x(t) =A(t)x(t)+ (t;x); t  0:
+The line ar system _ x(t) = A(t)x(t) is glob al ly uniformly h-stable and h(t) =
+1
+(1+t)
+2
+2H is p ositive, b ounde d and de cr e asing wher e h
+0
+exists and is c ontinuous
+onR
++
+: Then, for a function Q(t) =
+1
+1+t
++1 veri es (13), ther e exists P(t) =
+1
+2
+satis es the Ric c ati e quation (10). F urthermor e,
+j (t;x)j 
+p
+t
+1+t
+3
+jxj+
+1
+1+t
+2
+; 8 x2R; 8 t2R
++
+:
+Put, '(t) =
+p
+t
+1+t
+3
+and  (t) =
+1
+1+t
+2
+which ar e non-ne gative c ontinuous and in-
+te gr able functions on R
++
+: F r om The or em 5, we de duc e the glob al uniform b ound-
+e dness of system (27).
+Likewise, solutions of system (27) appr oximate, when t go es to in nity, to the
+c omp act set S given by:
+S =fx2R;jxj 
+3 
+2
+e
+ 
+g:
+F or simulation of system (27) we sele ct the initial state x(0) = 1: The r esult of
+simulation is depicte d in Figur e 4
+4 Conclusion
+W e have introduced some new conditions for global uniform boundedness of non-
+linear systems of di erential equations. A converse theorem has been established
+to guarantee the global uniform h-stability of a nonlinear system when its lin-
+earization has a global uniform h-stability equilibrium point. One of the main
+interests of this paper is that it serves to establish that property for nonlinear
+perturbed systems when global uniform h-stability of the nominal system has
+been showed with Lyapunov theory . W e have illustrated this use in the global
+uniform h-stabilization for control systems. T o guarantee that the closed-loop
+system is globally uniformly h-stable, a continuous linear controller has been pro-
+vided and su cient conditions has been given. The e ectiveness of the conditions
+obtained in this paper has been veri ed in some numerical examples.
+Electronic Journal. h ttp://di journal.spbu.ru/ 444Di er ential Equations and Contr ol Pr o c esses, N. 1, 2021
+Time (s)
+0 1 2 3 4 5 6 7 8 9 10
+x(t)
+-0.05
+0
+0.05
+0.1
+0.15
+0.2
+0.25
+Figure 4: The tr aje ctory of the state x(t) of system (27) .
+Annex
+Proof of Lemma 3. W e write (6) as
+_ '(t) $(t)'(t)  (t); 8t t
+0
+:
+On the other hand,
+d
+ds
+ 
+'(s)exp
+ 
+ 
+Z
+s
+t
+0
+$( )d 
+  
+  (s)exp
+ 
+ 
+Z
+s
+t
+0
+$( )d 
+ 
+; s t
+0
+:
+Thus, for all t
+0
+2R
++
+Z
+t
+t
+0
+d
+ds
+ 
+'(s)exp
+ 
+ 
+Z
+s
+t
+0
+$( )d 
+  
+ 
+Z
+t
+t
+0
+ (s)exp
+ 
+ 
+Z
+s
+t
+0
+$( )d 
+ 
+ds; 8t t
+0
+;
+which implies
+'(t)exp
+ 
+ 
+Z
+t
+t
+0
+$( )d 
+ 
+ '(t
+0
+) 
+Z
+t
+t
+0
+ (s)exp
+ 
+ 
+Z
+s
+t
+0
+$( )d 
+ 
+ds:
+Then,
+'(t) '(t
+0
+)exp
+ Z
+t
+t
+0
+$( )d 
+ 
++
+Z
+t
+t
+0
+ (s)exp
+ Z
+t
+s
+$( )d 
+ 
+ds; 8t t
+0
+:
+References
+[1] A. BenAbdallah, M. Dlala and M.A. Hammami, A new Lyapunov function
+for perturbed nonlinear systems, Systems and Contr ol L etters (2007), 56,
+No. 3, 179-187.
+Electronic Journal. h ttp://di journal.spbu.ru/ 445Di er ential Equations and Contr ol Pr o c esses, N. 1, 2021
+[2] A. BenAbdallah and M.A. Hammami, On the output feedback stability for
+nonlinear uncertain control systems, International Journal of Contr ol 74
+(2001), 547-551.
+[3] P . Bohl,  ber Di erentialgleichungen, Journal f   r die r eine und angewandte
+Mathematik 144 (1913), 284-318.
+[4] M. Corless and L. Glielmo, New converse Lyapunov theorems and related re-
+sults on exponential stability , Mathematics of Contr ol, Signals, and Systems
+11 (1998), 79-100.
+[5] H. Damak, I. Ellouze and M.A. Hammami, A separation principle of time-
+v arying nonlinear dynamical systems, Di er ential Equations and c ontr ol Pr o-
+c esses (2013), No. 1, 35-49.
+[6] H. Damak, M. A. Hammami and A. Kicha. A converse theorem on practical
+h-stability of nonlinear systems. Me diterr ane an Journal of Mathematics 17
+(2020), No. 88, 1-18.
+[7] H. Damak, M. A. Hammami and A. Kicha. A converse theorem for prac-
+tical h-stability of time-v arying nonlinear systems. New Ze aland Journal of
+Mathematics 50 (2020), 109-123.
+[8] F.M. Dannan and S. Elaydi, Lipschitz stability of nonlinear systems of dif-
+ferential equations, Journal of Mathematic al Analysis and Applic ations 113
+(1986), 562-577.
+[9] Z. Hadj Salem, B. Ben Hamed and M.A. Hammami, Stability of nonlinear
+time-v arying perturbed di erntial equations, Nonline ar Dynamics 73 (2013),
+1353-1365.
+[10] S.F. Hafstein, A constructive converse Lyapunov theorem on exponential
+stability , Discr ete and Continuous Dynamic al Systems 10 (2004), 657-678.
+[11] W. Hahn, Stability of motion, Springer (1967).
+[12] A. Hamza and K. Oraby , Stability of abstract dynamic equations on time
+scales by Lyapunov’s second method, T urkish Journal of Mathematics 42
+(2018), 841-861.
+[13] N.A. Izobov, Linear systems of ordinary di erential equations, Journal of
+Soviet mathematics , 5 (1974), No. 1, 46-96 Itogi Nauki i T ekhniki Matem-
+aticheskii Analiz 12, 71-146.
+Electronic Journal. h ttp://di journal.spbu.ru/ 446Di er ential Equations and Contr ol Pr o c esses, N. 1, 2021
+[14] H.K. Khalil, Nonlinear systems, Pr entic e-Hal l, New Y ork (2002).
+[15] R. Medina and M. Pinto, Stability of nonlinear di erence equations, Pr o c e-
+dur e Dynamic al Systems and Applic ations 2 (1996), 397-404.
+[16] V.M. Millionshchikov, Typical properties of conditional exponential stability
+II, Di er ential e quations 19, No. 9, 1126-1132 Di er entsial’nye Ur avneniya
+19 (1983), No. 9, 1503-1510.
+[17] V.M. Millionshchikov, Typical properties of conditional exponential stability
+VI, Di er ential e quations 20, No. 6, 707-715 Di er entsial’nye Ur avneniya
+20 (1984), No. 6.
+[18] V.M. Millionshchikov, Typical properties of conditional exponential stability
+VII, Di er ential e quations 20, No. 8, 1005-1013 Di er entsial’nye Ur avneniya
+20 (1984), No. 8, 1366-1376.
+[19] V.V. Nemytskii and V.V. Stepanov, Qualitative theory of di erential equa-
+tions, Princ eton University Pr ess (1960) (T ranslated from Russian).
+[20] M. Pinto, Stability of nonlinear di erential system, Applic able Analysis 43
+(1992), 1-20.
+[21] M. Pinto, Perturbations of asymptotically stable di erential equations, Anal-
+ysis 4 (1984), 161-175.
+[22] R.E. Vinograd, Estimates of the upper exponents at low perturbations, Dok-
+lady 114 (1957), No. 3, 459-461.
+[23] R.E. Vinograd, Simultaneous attainability of central Lyapunov and Bohl ex-
+ponents for ODE linear systems, Pr o c e e dings of the Americ an Mathematic al
+So ciety 88 (1983), No. 4, 595-601.
+[24] B.T. Y oshizawa, Lyapunov’s function and boundedness of solutions, F unk-
+cialaj Ekvascioj 2 (1958), 71-103.
+Electronic Journal. h ttp://di journal.spbu.ru/ 447
