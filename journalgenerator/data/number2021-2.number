@@ -494,7 +494,7 @@
                 The McKean system is the Boltzmann kinetic equation, and for this model momentum
                 and energy are not conserved.
                 For the first time, new traveling wave solutions are found using the
-                tanh-function method, the extended tanh-function method and the $(G'/G)$-expansion
+                tanh-function method, the extended tanh-function method and the (G'/G)-expansion
                 method.
                 These methods are a powerful, reliable and effective tool for finding exact
                 solutions to nonlinear partial differential equations in mathematical physics
@@ -502,7 +502,7 @@
                 With the help of computerized symbolic computation, we obtain kink waves,
                 singular kink waves, periodic waves and rational solutions.
                 Similarly, it is possible to find exact solutions for other kinetic models.</abstract>
-            <title>The Tanh-function Method and the (g'/g)--expansion Method for the Kinetic Mckean System</title>
+            <title>The Tanh-function Method and the (G'/G)-expansion Method for the Kinetic Mckean System</title>
             <keywords>
                 <word>Knudsen number</word>
                 <word>McKean system</word>
@@ -538,6 +538,179 @@
         </articleInfo>
         <authors>
             <author ref="n_2021_6_dukhnovsky" sort-key="1" />
+        </authors>
+    </article>
+
+    <article>
+        <articleInfo lang="EN" FirstPage="101" LastPage="125">
+            <pdf>21207-jdecp-zaitceva.pdf</pdf>
+            <abstract>It is known from engineering practice that
+                the actuators of the aircraft control surfaces have physical limits of thrust
+                which are manifested in the nonlinear effects of actuator rate and the
+                level saturation. In turn, the influence of nonlinearities causes a negative
+                phase shift between the actual and control pilot signal, which negatively
+                affects the stability of the aircraft. As a result, nonlinear oscillations
+                of the aircraft's angular motion may arise, which endanger flight safety.
+                To prevent fluctuations various methods have been developed, but there is no
+                general approach to modeling. In this paper, the nonlinear correcting
+                device synthesis methods is proposed. It is illustrated by the example of
+                stabilizing the pitch angle in a piloted aircraft control system. The synthesis
+                is implemented on the base of the optimization of system parameters and uses
+                the Matlab/Simulink dynamic modeling software package. As a result of
+                the study, the algorithm for the synthesis of a nonlinear correcting device
+                is presented on the example of a remotely controlled UAV. The parameters of
+                the pilot model, at which pilot-induced oscillations occur, are obtained.
+                The properties of the optimal system are illustrated and evaluated using
+                frequency response, pitch transients, and flight characteristics.</abstract>
+            <title>Design of Nonlinear Correcting Device to Prevent Oscillations of Pilot-vehicle Systems</title>
+            <keywords>
+                <word>airplane</word>
+                <word>frequency method</word>
+                <word>lag</word>
+                <word>nonlinear correction</word>
+                <word>optimization</word>
+                <word>oscillation avoidance</word>
+                <word>phase shift</word>
+                <word>pilot model</word>
+                <word>sensitivity function</word>
+            </keywords>
+            <references>
+                <reference>Tran, A. T., Sakamoto, N., Kikuchi, Y., Mori, K. Pilot induced oscillation suppression controller design via nonlinear optimal output regulation method. &lt;em&gt;Aerospace Science and Technology&lt;/em&gt;, 2017, vol. 68, pp. 278-286</reference>
+                <reference>Zaitceva, I., Chechurin, L. The estimation of aircraft control system stability boundaries by the describing function method. &lt;em&gt;Cybernetics and Physics&lt;/em&gt;, 2020, vol. 9, no. 2, pp. 117- 122. Available at: &lt;a href="http://lib.physcon.ru/doc?id=2eab6a5dddc2"&gt;http://lib.physcon.ru/doc?id=2eab6a5dddc2&lt;/a&gt; </reference>
+                <reference>Zaitseva, I. S., Chechurin, L. S. Stability of forced oscillations in manned aircraft systems. &lt;em&gt;Differencialnie Uravnenia i Protsesy Upravlenia, &lt;/em&gt; 2019, no. 4. (In Russian) Available at: &lt;a href="https://diffjournal.spbu.ru/EN/numbers/2019.4/article.1.7.html"&gt;https://diffjournal.spbu.ru/EN/numbers/2019.4/article.1.7.html&lt;/a&gt; </reference>
+                <reference>Andrievsky, B., Kravchuk, K., Kuznetsov N. et al. Hidden oscillations in the closed- loop aircraft-pilot system and their prevention. &lt;em&gt;IFAC-PapersOnLine&lt;/em&gt;, 2016, vol. 49, pp. 30-35. Available : at &lt;a href="https://www.sciencedirect.com/science/article/pii/S2405896316312587?via%3Dihub"&gt;https://www.sciencedirect.com/science/article/pii/S2405896316312587?via%3Dihub&lt;/a&gt; </reference>
+                <reference>Andrievskij, B. R., Kuznecov, N. V., Leonov, G. A. Methods for suppressing nonlinear oscillations in astatic systems of autopilot control of aircraft. &lt;em&gt;Izv. RAN. Teoriya i Sistemy Upravleniya&lt;/em&gt;, 2017, no. 3, pp. 118-134. (In Russian)</reference>
+                <reference>Andrievskij, B. R., Zajceva, I. S., Kudryashova, E. V., Kuznetsov, N. V., Kuznetsova, O. A. Methods for pilot-induced oscillation prevention. A survey. &lt;em&gt;Differencialnie Uravnenia i Protsesy Upravlenia&lt;/em&gt;, 2020, no. 2. (In Russian) Available at: &lt;a href="https://diffjournal.spbu.ru/EN/numbers/2020.2/article.1.8.html"&gt;https://diffjournal.spbu.ru/EN/numbers/2020.2/article.1.8.html&lt;/a&gt; </reference>
+                <reference>Andrievsky, B., Arseniev, D., Kuznetsov, N., Zaitceva, I. Pilot-Induced Oscillations and Their Prevention. &lt;em&gt;Proc. of Cyber-Physical Systems and Control&lt;/em&gt;, Springer International Publishing, Cham, 2020, pp. 108-123</reference>
+                <reference>Queinnec, I., Tarbouriech, S., Biannic, J. -M., Prieur, C. Anti-Windup algorithms for pilot-induced-oscillation alleviation. &lt;em&gt;AerospaceLab&lt;/em&gt;, 2017, 35 p. Available at: &lt;a href="https://www.researchgate.net/publication/321375206_Anti-Windup_Algorithms_for_Pilot-Induced-Oscillation_Alleviation"&gt;https://www.researchgate.net/publication/321375206_Anti-Windup_Algorithms_for_Pilot-Induced-Oscillation_Alleviation&lt;/a&gt; </reference>
+                <reference>Gatley, S., Postlethwaite, I., Turner, M., Kumar, A. A comparison of rate-limit compensation schemes for PIO avoidance. &lt;em&gt;Aerospace Science and Technology&lt;/em&gt;, 2006, vol. 10, no. 1, pp. 37-47</reference>
+                <reference>Leonov, G. A., Andrievskij, B. R., Kuznetsov, N. V., Pogromskij, A. Y. Control of aircraft with AW-compensation. &lt;em&gt;Differencialnie Uravnenia i Protsesy Upravlenia, &lt;/em&gt; 2012, no. 3. (In Russian) Available at: &lt;a href="https://diffjournal.spbu.ru/EN/numbers/2012.3/article.1.1.html"&gt;https://diffjournal.spbu.ru/EN/numbers/2012.3/article.1.1.html&lt;/a&gt; </reference>
+                <reference>Zel’chenko, V. J, Sharov, S. N. &lt;em&gt;Nelinejnaja korrekcija avtomaticheskih sistem&lt;/em&gt;. [Parametric sensitivity study nonlinear dynamic corrective devices. ] L. : Sudostroenie Publ., 1981, 167 p. (In Russian)</reference>
+                <reference>Andrievskij, B. R., Kuznetsov, N. V., Kuznetsova, O. A., Leonov, G. A., Mokaev, T. N. Localization of hidden oscillations in ight control systems. &lt;em&gt;Trudy SPIIRAN&lt;/em&gt;, 2016, no 49, pp. 5-31. (In Russian)</reference>
+                <reference>Skorospeshkin, M. V., Skorospeshkin, V. N., Avramchuk, V. S. An adaptive correcting device for automatic control systems. &lt;em&gt;Problemy informatiki&lt;/em&gt;, 2011, vol. 2, no. 10, pp. 68- 75. Available at: &lt;a href="http://www.problem-info.sscc.ru/2011-2/10.pdf"&gt;http://www.problem-info.sscc.ru/2011-2/10.pdf&lt;/a&gt; </reference>
+                <reference>Hlypalo, E. I. Taking into account the dynamic nonlinearity of magnetic amplifiers in the design of automatic systems. &lt;em&gt;Avtomatika i Telemekhanika&lt;/em&gt;, 1963, vol. 24, no 11, pp. 1394-1401. (In Russian)</reference>
+                <reference>&lt;em&gt;Nelinejnye korrektiruyushchie ustrojstva v sistemah avtomaticheskogo upravleniya / pod red. Popova E. P. &lt;/em&gt; [Nonlinear correcting devices in automatic control systems / ed. Popova E. P. ] M. : Mashinostroenie Publ., 1971, 466 p. (In Russian)</reference>
+                <reference>Sharov, A. N., Sharov, S. N. Investigation of the parameters of the frequency properties of some nonlinear dynamic correcting devices. &lt;em&gt;Avtomatika i Telemekhanika&lt;/em&gt;, 1974, vol. 35, no 8, pp. 1219-1225. (In Russian)</reference>
+                <reference>Filatov, I. V., Sharov, S. N. Investigation of the parametric sensitivity of nonlinear dynamic correcting devices. &lt;em&gt;Inzhenernaya kibernetika&lt;/em&gt;, 1977, vol. 15, no 2, pp. 166-169. (In Russian)</reference>
+                <reference>Zel’chenko, V. Ya., Sharov, S. N. &lt;em&gt;Raschet i proektirovanie avtomaticheskih sistem s nelinejnymi dinamicheskimi zven’yami&lt;/em&gt;. [Calculation and design of automatic systems with nonlinear dynamic links. ] Mashinostroenie Publ., 1986, 174 p. (In Russian)</reference>
+                <reference>Berzin, B. P., Matyuhina, L. I., Mihalev, A. S. Non-linear correcting device. Certificate of authorship, SU 411430 A1, SSSR, 1974. number: 1680846/18-24, date: 08. 07. 1971, date of publ. : 15. 01. 1974. Applicant: Ryazan Radio Engineering Institute</reference>
+                <reference>Skorospeshkin, M. V., Skorospeshkin, V. N., Avramchuk, V. S. [Pseudo-linear PID controller for second order system. ] &lt;em&gt;Sb. trudov 13-oj mezhdunarodnoj nauchn. -prakt. konf. studentov, aspirantov i molodyh uchenyh&lt;/em&gt; [Proc. of the 13th international scienti c-practical. conf. students, graduate students and young scientists. ], 2016, pp. 181-182. (In Russian)</reference>
+                <reference>Skorospeshkin, M. V., Sukhodoev, M. S., Timoshenko, E. A., Lenskiy, F. V. Adaptive pseudolinear compensators of dynamic characteristics of automatic control systems. &lt;em&gt;IOP Conf. Ser. : Mater. Sci. Eng&lt;/em&gt;, 2016, vol. 124, pp. 012028</reference>
+                <reference>Kryzhanovskij, G. A., Shestakov, I. N. A method of increasing the security of the application of the technology of automatic dependent observation from induced targeted interference. &lt;em&gt;Trudy XXIII Vserossijskoj nauch. -prakt. konf. RARAN&lt;/em&gt; «Aktual’nye problemy zashchity i bezopasnosti», [Proceedings of XXIII All-Russian scientific-practical. conf. RARAN «Actual problems of protection and security», ] 2020, pp. 342-344. (In Russian)</reference>
+                <reference>Andrievsky, B., Kuznetsov, N., Kuznetsova, O. et al. Nonlinear Phase Shift Compensator for Pilot-Induced Oscillation Prevention. &lt;em&gt;Prepr. 9th IEEE Europ. Modeling Symp. on Mathematical Modeling and Computer Simulation (EMS 2015)&lt;/em&gt;, 2015, pp. 225-231</reference>
+                <reference>Zaitceva, I. S. Nonlinear oscillations prevention in unmanned aerial vehicle. &lt;em&gt;Proc. of XI Majorov Int. Conf. on Software Engineering and Computer Systems&lt;/em&gt;, 2019, vol. 2590, 8 p</reference>
+                <reference>Zajceva, I. S. Suppression of oscillations in the control loop « unmanned aerial vehicle-operator ». &lt;em&gt;Trudy XXI konf. molodyh uchenyh «Navigaciya i upravlenie dvizheniem»&lt;/em&gt; [Proceedings of the XXI Conf. young scientists « Navigation and traffic control »], 2019, pp. 222-223. (In Russain)</reference>
+                <reference>Efremov, A. V., Zaharchenko, V. F., Ovcharenko, V. N., Suhanov, V. L. &lt;em&gt;Dinamika poleta: uchebnik dlya studentov vysshih uchebnyh zavedenij/Pod redakciej Byushgensa G. S&lt;/em&gt;. [Flight dynamics: a textbook for university students / Edited by Byushgens G. S. ] М. : Mashinostroenie Publ., 2011, 776 p</reference>
+                <reference>Efremov, A. V., Ogloblin, A. V., Predtechenskij, A. N., Rodchenko, V. V. &lt;em&gt;The pilot as a dynamic system&lt;/em&gt;. [Letchik kak dinamicheskaya sistema. ] М. : Mashinostroenie Publ., 1992, 331 p. (In Russian)</reference>
+                <reference>Mitchell, D., Klyde, D. This Is Pilot Gain. &lt;em&gt;Proceedings AIAA SciTech Forum&lt;/em&gt;, 2019, 17 p</reference>
+                <reference>McRuer, D., Graham, D., Krendel, E., Reisener, W. Human pilot dynamics in compensatory systems: Theory, models, and experiments with controlled element and forcing function variations: Tech. Rep. (AFFDL-TR-65-15), 1965</reference>
+                <reference>McRuer, D., Krendel, E. Mathematical models of human pilot behaviour: Tech. Rep. (AGARD-AG-188), 1974, 67 p</reference>
+                <reference>McRuer, D., Jex, H. A review of quasi-linear pilot models. &lt;em&gt;IEEE Transactions on Human Factors in Electronics&lt;/em&gt;, 1967, vol. HFE-8, no. 3, pp. 231-249</reference>
+                <reference>Byushgens, G. S., Studnev, R. V. &lt;em&gt;Aircraft aerodynamics. The dynamics of the longitudinal and lateral movement&lt;/em&gt;. [Aerodinamika samoleta. Dinamika prodol’nogo i bokovogo dvizheniya. ] М. : Mashinostroenie Publ., 1979, 352 p. (In Russian)</reference>
+                <reference>McRuer, D. T. Pilot-Induced Oscillations and Human Dynamic Behavior: Tech. rep., 1995</reference>
+                <reference>Romanovskij, I. V. &lt;em&gt;Algorithms for solving extreme problems&lt;/em&gt;. [Algoritmy resheniya ekstremal’nyh zadach. ] М. : Nauka Publ., 1977, 352 p. (In Russian)</reference>
+                <reference>Nelder, J., Mead, R. A simplex method for function minimization. &lt;em&gt;Computer J. &lt;/em&gt;, 1965, vol. 7, pp. 308-313</reference>
+                <reference>Zaitceva, I. Parameter setting of pilot behavioral dynamic model in aircraft control loop. &lt;em&gt;Nauchno-tekhnicheskij vestnik informacionnyh tekhnologij, mekhaniki i optiki&lt;/em&gt;, 2020, vol. 20, no. 2, p. 200-205. (In Russian)</reference>
+                <reference>Zaitceva, I. S., Andrievsky, B. R. Optimization of the pitch control of a manned aircraft. &lt;em&gt;Materialy konf. «Matematicheskaya teoriya upravleniya i ee polozheniya». XIII mul’tikonferenciya po problemam upravleniya&lt;/em&gt;. [Proc. of the conference &amp;quot; Mathematical theory of control and its provisions&amp;quot;. XIII multiconference on management problems. Optimization of the pitch control of a manned aircraft. ], 2020, pp. 276-280. (In Russian)</reference>
+                <reference>Bodner, V. A. &lt;em&gt;Sistemy upravleniya letatel’nymi apparatami&lt;/em&gt;. [Aircraft control systems. ] М. : Mashinostroenie Publ., 1973, 698 p. (In Russian)</reference>
+                <reference>Besekerskij, V. A., Popov, E. P. &lt;em&gt;Teoriya sistem avtomaticheskogo regulirovaniya&lt;/em&gt;. [Theory of automatic control systems. ] М. : Nauka Publ., 1975, 768 p. (In Russian)</reference>
+                <reference>Bejker, Dzh., ml., Grejvs-Morris, P. &lt;em&gt;Approksimacii Pade / Pod red. A. A. Gonchara&lt;/em&gt;. [Pade approximants / Ed. A. A. Gonchar. ] М. : «Mir» Publ., 1986. (In Russian)</reference>
+                <reference>Andrievskij, B. R., Fradkov, A. L. &lt;em&gt;Izbrannye glavy teorii avtomaticheskogo upravleniya s primerami na yazyke Matlab&lt;/em&gt;. [Selected chapters of automatic control theory with examples in sc Matlab. ] SPb. : «Nauka» Publ., 1999, 467 p. (In Russian)</reference>
+                <reference>Zaitseva, I. S., Kuznetsov, N. V., Andrievsky, B. R. A program for simulating pilot behavior in a closed loop flight control systems (Imitator-Flight). Certificate of state registration of a computer program No. 2020663322 dated 26. 10. 2020, application no. 2020662371 dated 14. 10. 2020</reference>
+                <reference>Mandal, T., Gu, Y. Analysis of Pilot-Induced-Oscillation and Pilot Vehicle System Stability Using UAS Flight Experiments. &lt;em&gt;Aerospace&lt;/em&gt;, 2016, vol. 3, no. 42, 23 p. Available at: &lt;a href="https://www.mdpi.com/2226-4310/3/4/42"&gt;https://www.mdpi.com/2226-4310/3/4/42&lt;/a&gt; </reference>
+                <reference>Pavlov, A., van de Wouw, N., Pogromsky, A. et al. Frequency domain performance analysis of nonlinearly controlled motion systems. &lt;em&gt;Proc. of 46th IEEE Conf. Decision and Control&lt;/em&gt;, 2007, pp. 1621-1627</reference>
+                <reference>Fradkov, A. &lt;em&gt;Kiberneticheskaya zika: principy i primery&lt;/em&gt;. [Cybernetic physics: principles and examples. ] SPb. : Nauka Publ., 2003, 208 p. (In Russian)</reference>
+                <reference>Andrievsky, B. Computation of the Excitability Index for Linear Oscillators. &lt;em&gt;Proceedings of the 44th IEEE Conference on Decision and Control&lt;/em&gt;. 2005, pp. 3537- 3540</reference>
+                <reference>Andrievsky, B., Kudryashova, E., Kuznetsov, N., Kuznetsova, O. Aircraft wing rock oscillations suppression by simple adaptive control. &lt;em&gt;Aerosp. Sci. Technol&lt;/em&gt;, 2020, vol. 105, 10 p</reference>
+            </references>
+        </articleInfo>
+        <articleInfo lang="RU" FirstPage="101" LastPage="125">
+            <pdf>21207-jdecp-zaitceva.pdf</pdf>
+            <abstract>Из инженерной практики известно, что исполнительные приводы управляющих
+                поверхностей летательных аппаратов имеют физические ограничения тяговых усилий,
+                которые проявляется в нелинейных эффектах насыщения скорости и уровня сигнала
+                привода.  В свою очередь влияние нелинейностей вызывает отрицательный
+                фазовый сдвиг между фактическим и управляющим сигналом пилота, что негативно
+                сказывается на устойчивости  летательного аппарата. В результате этого  могут
+                возникнуть нелинейные колебания углового движения летательного аппарата,
+                ставящие под угрозу безопасность полета. В настоящее время разработаны различные
+                методы предотвращения колебаний, но не существует общего подхода к моделированию.
+                В связи с этим  в данной работе предложена методика синтеза нелинейного
+                корректирующего устройства на примере задачи стабилизации угла тангажа в
+                пилотируемой системе управления летательным аппаратом.
+                Синтез реализуется на основе   оптимизации параметров системы с помощью
+                программного комплекса динамического моделирования Matlab/Simulink.
+                В результате исследования представлен алгоритм синтеза нелинейного корректирующего
+                устройства на примере   летательного аппарата самолетного типа, управляемого
+                дистанционно человеком-оператором.
+                Получены параметры модели пилота, при которых возникают колебания
+                летательного аппарата. Свойства оптимальной системы  проиллюстрированы
+                и оценены с помощью показателей частотных характеристик, переходных
+                процессов по тангажу и пилотажных характеристик.</abstract>
+            <title>Синтез  нелинейных корректирующих звеньев для предотвращения колебаний пилотируемых летательных аппаратов</title>
+            <keywords>
+                <word>самолет</word>
+                <word>частотный метод</word>
+                <word>запаздывание</word>
+                <word>нелинейная коррекция</word>
+                <word>оптимизация</word>
+                <word>предотвращение колебаний</word>
+                <word>фазовый сдвиг</word>
+                <word>модель пилота</word>
+                <word>функция чувствительности</word>
+            </keywords>
+            <references>
+                <reference>Tran A. T., Sakamoto N., Kikuchi Y., Mori K. Pilot induced oscillation suppression controller design via nonlinear optimal output regulation method. &lt;em&gt;Aerospace Science and Technology&lt;/em&gt;, 2017, vol. 68, pp. 278-286</reference>
+                <reference>Zaitceva I., Chechurin L. The estimation of aircraft control system stability boundaries by the describing function method. &lt;em&gt;Cybernetics and Physics&lt;/em&gt;, 2020, vol. 9, no. 2, pp. 117- 122. Available at: &lt;a href="http://lib.physcon.ru/doc?id=2eab6a5dddc2"&gt;http://lib.physcon.ru/doc?id=2eab6a5dddc2&lt;/a&gt; </reference>
+                <reference>Заи&amp;#774; цева Ю. С., Чечурин Л. С. Устои&amp;#774; чивость вынужденных колебании&amp;#774; в пилотируемых системах летательных аппаратов. &lt;em&gt;Дифференциальные уравнения и процессы управления&lt;/em&gt;, 2019, № 4, pp. 159-176</reference>
+                <reference>Andrievsky B., Kravchuk K., Kuznetsov N. et al. Hidden oscillations in the closed- loop aircraft-pilot system and their prevention. &lt;em&gt;IFAC-PapersOnLine&lt;/em&gt;, 2016, vol. 49, pp. 30-35</reference>
+                <reference>Андриевскии&amp;#774; Б. Р., Кузнецов Н. В., Леонов Г. А. Методы подавления нелинеи&amp;#774; ных колебании&amp;#774; в астатических системах автопилотирования летательных аппаратов. Изв. РАН. &lt;em&gt;Теория и Системы Управления&lt;/em&gt;, 2017, No 3, с. 118-134</reference>
+                <reference>Заи&amp;#774; цева, Ю. С., Андриевскии&amp;#774; Б. Р., Кудряшова Е. В., Кузнецов Н. В., Кузнецова О. А. Обзор методов предотвращения раскачки самолета летчиком. &lt;em&gt;Дифференциальные уравнения и процессы управления&lt;/em&gt;, 2020, № 2, с. 131- 172</reference>
+                <reference>Andrievsky B., Arseniev D., Kuznetsov N., Zaitceva I. Pilot-Induced Oscillations and Their Prevention. &lt;em&gt;Proc. of Cyber-Physical Systems and Control&lt;/em&gt;, Springer International Publishing, Cham, 2020, pp. 108-123</reference>
+                <reference>Queinnec I., Tarbouriech S., Biannic J. -M., Prieur C. Anti-Windup algorithms for pilot-induced-oscillation alleviation. &lt;em&gt;AerospaceLab&lt;/em&gt;, 2017, 35 p</reference>
+                <reference>Gatley S., Postlethwaite I., Turner M., Kumar A. A comparison of rate-limit compensation schemes for PIO avoidance. &lt;em&gt;Aerospace Science and Technology&lt;/em&gt;, 2006, vol. 10, no. 1, pp. 37-47</reference>
+                <reference>ЛеоновГ. А., Андриевскии&amp;#774; Б. Р., КузнецовН. В., Погромскии&amp;#774; А. Ю. Управление летательными аппаратами с AW-коррекциеи&amp;#774;. &lt;em&gt;Дифференциальные уравнения и процессы управления&lt;/em&gt;, 2012, № 3, с. 36</reference>
+                <reference>Зельченко В. Я., Шаров С. Н. &lt;em&gt;Нелинеи&amp;#774; ная коррекция автоматических систем&lt;/em&gt;. Л. : Судостроение, 1981, 167 с</reference>
+                <reference>Андриевскии&amp;#774; Б. Р., Кузнецов Н. В., Кузнецова О. А., Леонов Г. А., Мокаев Т. Н. Локализация скрытых колебании&amp;#774; в системах управления полетом. &lt;em&gt;Труды СПИИРАН&lt;/em&gt;, 2016, № 49, с. 5-31</reference>
+                <reference>Скороспешкин М. В., Скороспешкин В. Н., Аврамчук В. С. Адаптивное корректирующее устрои&amp;#774; ство для систем автоматического управления. &lt;em&gt;Проблемы информатики&lt;/em&gt;, 2011, т. 2, №. 10, с. 68-75</reference>
+                <reference>Хлыпало Е. И. Учет динамическои&amp;#774; нелинеи&amp;#774; ности магнитных усилителеи&amp;#774; при про- ектировании автоматических систем. Автоматика и Телемеханика, 1963, т. 24, №11, с. 1394-1401</reference>
+                <reference>&lt;em&gt;Нелинеи&amp;#774; ные корректирующие устрои&amp;#774; ства в системах автоматического управления&lt;/em&gt; / &lt;em&gt;под ред. Попова Е. П&lt;/em&gt;. M. : Машиностроение, 1971, 466 с</reference>
+                <reference>Шаров А. Н., Шаров С. Н. Исследование параметров частотных свои&amp;#774; ств некоторых нелинеи&amp;#774; ных динамических корректирующих устрои&amp;#774; ств. &lt;em&gt;Автоматика и Телемеханика&lt;/em&gt;, 1974, т. 35, № 8, с. 1219-1225</reference>
+                <reference>Филатов И. В., Шаров С. Н. Исследование параметрическои&amp;#774; чувствительности нелинеи&amp;#774; ных динамических корректирующих устрои&amp;#774; ств. &lt;em&gt;Инженерная кибернетика&lt;/em&gt;, 1977, т. 15, № 2, с. 166-169</reference>
+                <reference>Зельченко В. Я., Шаров С. Н. &lt;em&gt;Расчет и проектирование автоматических систем с нелинеи&amp;#774; ными динамическими звеньями&lt;/em&gt;. Машиностроение, 1986, 174 с</reference>
+                <reference>Берзин Б. П., Матюхина Л. И., Михалев А. С. Нелинеи&amp;#774; ное корректирующее устрои&amp;#774; ство. Авторское свидетельство, SU 411430 A1, СССР, 1974. Номер заявки: 1680846/18-24, дата регистрации: 08. 07. 1971, дата публикации: 15. 01. 1974. Заявитель: Рязанскии&amp;#774; радиотехническии&amp;#774; институт</reference>
+                <reference>Скороспешкин М. В., Скороспешкин В. Н., Аврамчук В. С. Псевдолинеи&amp;#774; ныи&amp;#774; ПИД- регулятор для системы второго порядка. &lt;em&gt;Сб. трудов 13-ои&amp;#774; международнои&amp;#774; научн. - практ. конф. студентов, аспирантов и молодых ученых&lt;/em&gt;, (г. Томск, 2015 г. ) Томск: НИТПУ, 2016, с. 181-182</reference>
+                <reference>Skorospeshkin M. V., Sukhodoev M. S., Timoshenko E. A., Lenskiy F. V. Adaptive pseudolinear compensators of dynamic characteristics of automatic control systems. &lt;em&gt;IOP Conf. Ser. : Mater. Sci. Eng. &lt;/em&gt; 2016, vol. 124, pp. 012028</reference>
+                <reference>Крыжановскии&amp;#774; Г. А., Шестаков И. Н. Способ повышения защищенности применения технологии автоматического зависимого наблюдения от наведенных целенаправленных помех. &lt;em&gt;Труды XXIII Всероссии&amp;#774; скои&amp;#774; науч. -практ. конф. РАРАН «Ак- туальные проблемы защиты и безопасности»&lt;/em&gt;, Москва: ФГБУ «РАРАН», 2020, c. 342-344</reference>
+                <reference>Andrievsky B., Kuznetsov N., Kuznetsova O. et al. Nonlinear Phase Shift Compensator for Pilot-Induced Oscillation Prevention. &lt;em&gt;Prepr. 9th IEEE Europ. Modeling Symp. on Mathematical Modeling and Computer Simulation (EMS 2015)&lt;/em&gt;, Madrid, Spain: 2015, pp. 225-231</reference>
+                <reference>Zaitceva I. S. Nonlinear oscillations prevention in unmanned aerial vehicle. &lt;em&gt;Proc. of XI Majorov Int. Conf. on Software Engineering and Computer Systems&lt;/em&gt;, St-Petersburg: CEUR, 2019, vol. 2590, 8 p</reference>
+                <reference>Заи&amp;#774; цева Ю. С. Подавление колебании&amp;#774; в контуре управления «оператор- беспилотныи&amp;#774; летательныи&amp;#774; аппарат». &lt;em&gt;Труды XXI конф. молодых ученых «Навигация и управление движением»&lt;/em&gt;, С-Петербург: 2019, c. 222-223</reference>
+                <reference>Ефремов А. В., Захарченко В. Ф., Овчаренко В. Н., Суханов В. Л. &lt;em&gt;Динамика полета: учебник для студентов высших учебных заведении&amp;#774; /Под редакциеи&amp;#774; Бюшгенса Г. С&lt;/em&gt;. М. : Машиностроение, 2011, 776 c</reference>
+                <reference>Ефремов А. В., Оглоблин А. В., Предтеченскии&amp;#774; А. Н., Родченко В. В. &lt;em&gt;Летчик как динамическая система. &lt;/em&gt; М. : Машиностроение, 1992, 331 c</reference>
+                <reference>Mitchell D., Klyde D. This Is Pilot Gain. &lt;em&gt;Proceedings AIAA SciTech Forum&lt;/em&gt;. American Institute of Aeronautics and Astronautics, Inc., 2019, 17 p</reference>
+                <reference>McRuer D., Graham D., Krendel E., Reisener W. Human pilot dynamics in compensatory systems: Theory, models, and experiments with controlled element and forcing function variations: &lt;em&gt;Tech. Rep. (AFFDL-TR-65-15)&lt;/em&gt;. Ohio: Wright-Patterson AFB, Air force flight dynamics laboratiry, 1965</reference>
+                <reference>McRuer D., Krendel E. Mathematical models of human pilot behaviour: &lt;em&gt;Tech. Rep. (AGARD-AG-188)&lt;/em&gt;, 1974, 67 p</reference>
+                <reference>McRuer D., Jex H. A review of quasi-linear pilot models. &lt;em&gt;IEEE Transactions on Human Factors in Electronics&lt;/em&gt;, 1967, vol. HFE-8, no. 3, pp. 231-249</reference>
+                <reference>Бюшгенс Г. С., Студнев Р. В. &lt;em&gt;Аэродинамика самолета. Динамика продольного и бокового движения&lt;/em&gt;. М. : Машиностроение, 1979, 352 c</reference>
+                <reference>McRuer D. T. Pilot-Induced Oscillations and Human Dynamic Behavior: &lt;em&gt;Tech. rep&lt;/em&gt;. Hawthorne, CA, USA: NASA, 1995</reference>
+                <reference>Романовскии&amp;#774; И. В. &lt;em&gt;Алгоритмы решения экстремальных задач&lt;/em&gt;. М. : Наука, 1977, 352 c</reference>
+                <reference>Nelder J., Mead R. A simplex method for function minimization. &lt;em&gt;Computer J., &lt;/em&gt; 1965, vol. 7, pp. 308-313</reference>
+                <reference>Заи&amp;#774; цева Ю. С. Настрои&amp;#774; ка параметров динамическои&amp;#774; модели поведения пилота в контуре управления летательным аппаратом. &lt;em&gt;Научно-техническии&amp;#774; вестник информационных технологии&amp;#774;, механики и оптики&lt;/em&gt;, 2020, т. 20, № 2, с. 200-205</reference>
+                <reference>Заи&amp;#774; цева Ю. С., Андриевскии&amp;#774; Б. Р. Оптимизация контура управления пилотируемого летательного аппарата по тангажу. &lt;em&gt;Материалы конф. «Математическая теория управления и ее положения». XIII мультиконференция по проблемам управления&lt;/em&gt;. С-Петербург: «Концерн «ЦНИИ «Электроприбор», 2020, c. 276-280</reference>
+                <reference>Боднер В. А. &lt;em&gt;Системы управления летательными аппаратами&lt;/em&gt;. М. : Машиностроение, 1973, 698 c</reference>
+                <reference>Бесекерскии&amp;#774; В. А., Попов Е. П. &lt;em&gt;Теория систем автоматического регулирования&lt;/em&gt;. М. : Наука, 1975, 768 с</reference>
+                <reference>Беи&amp;#774; кер Дж., мл., Греи&amp;#774; вс-Моррис П. &lt;em&gt;Аппроксимации Паде / Под ред. А. А. Гончара&lt;/em&gt;. М. : «Мир», 1986</reference>
+                <reference>Андриевскии&amp;#774; Б. Р., Фрадков А. Л. &lt;em&gt;Избранные главы теории автоматического управления с примерами на языке Matlab&lt;/em&gt;. СПб. : «Наука», 1999, 467 c</reference>
+                <reference>Заи&amp;#774; цева Ю. С., Кузнецов Н. В., Андриевскии&amp;#774; Б. Р. Программа для моделирования поведения пилота в замкнутом контуре системы управления полетом (Imitator- Flight). Свидетельство о гос. регистрации программы для ЭВМ No2020663322 от 26. 10. 2020, заявка No2020662371 от 14. 10. 2020</reference>
+                <reference>Mandal T., Gu Y. Analysis of Pilot-Induced-Oscillation and Pilot Vehicle System Stability Using UAS Flight Experiments. &lt;em&gt;Aerospace&lt;/em&gt;, 2016, vol. 3, no. 42, 23 p</reference>
+                <reference>Pavlov A., van de Wouw N., Pogromsky A. et al. Frequency domain performance analysis of nonlinearly controlled motion systems. &lt;em&gt;Proc. of 46th IEEE Conf. Decision and Control&lt;/em&gt;. New Orleans, LA, USA: IEEE, 2007, pp. 1621-1627</reference>
+                <reference>Фрадков А. &lt;em&gt;Кибернетическая физика: принципы и примеры&lt;/em&gt;. СПб. : Наука, 2003, 208 c</reference>
+                <reference>Andrievsky B. Computation of the Excitability Index for Linear Oscillators. &lt;em&gt;Proceedings of the 44th IEEE Conference on Decision and Contro&lt;/em&gt;l. 2005, pp. 3537- 3540</reference>
+                <reference>Andrievsky B., Kudryashova E., Kuznetsov N., Kuznetsova O. Aircraft wing rock oscillations suppression by simple adaptive control. &lt;em&gt;Aerosp. Sci. Technol&lt;/em&gt;, 2020, vol. 105, 10 p</reference>
+            </references>
+        </articleInfo>
+        <authors>
+            <author ref="n_2021_6_zaitceva" sort-key="1" />
         </authors>
     </article>
 
