@@ -394,4 +394,97 @@
         </authors>
     </article>
 
+
+    <article>
+        <articleInfo lang="EN" FirstPage="80" LastPage="86">
+            <pdf>21205-jdecp-romanenkov.pdf</pdf>
+            <abstract>In this paper, we consider a hybrid difference scheme for constructing
+                an approximate solution of a nonlinear system of differential equations
+                with a discontinuous initial condition. As a model problem, the system
+                of Euler's ordinary differential equations, which is a conservative on real line,
+                is used. To find an approximate solution, we use a combination from
+                the Lax-Friedrichs and Lax-Wendroff methods and switching between them.
+                The switching is necessary, since the higher order accuracy method
+                (the Lax-Wendroff method) leads to the appearance of the Gibbs effect,
+                which is an unwanted non-physical artifact in the numerical solution.
+                Therefore, in the areas where this effect occurs, it is necessary to
+                perform the switching to another method. The authors propose a criterion
+                for the switching. The script describing the hybrid scheme was implemented
+                in Matlab programming system. The proposed algorithm operates with vector
+                quantities and does not use specific expressions for the coordinates of
+                the vectors under consideration. As a sequence, the algorithm is independent of
+                a given system and may be applied to other problems of a similar type
+                without significant changes. The ideas used to obtain these methods
+                are demonstrated and the scope of their applicability is indicated.</abstract>
+            <title>Hybrid Scheme for the Numerical Solution of a Nonlinear Euler's Equation</title>
+            <keywords>
+                <word>Euler's equation</word>
+                <word>hybrid scheme</word>
+                <word>Riemann problem</word>
+            </keywords>
+            <references>
+                <reference>Lojcjanskij L. G. &lt;em&gt;Mehanika zhidkosti i gaza&lt;/em&gt; [Fluid and Gas mechanics]. Moscow - Leningrad, State Publishing House of Technical and Theoretical Literature, 1950</reference>
+                <reference>Bondarev A. E. Application of scientific visualization methods for optimization of computational properties of finite-difference schemes. &lt;em&gt;Preprinty IPM im. M. V. Keldysha&lt;/em&gt;, 2006; (79): 1-17. (In Russ. )</reference>
+                <reference>Bondarev A., Bondarenko A., Galaktionov V., Mihajlova T., Ryzhova I. Development of the BURGERS2 software package for optimization and visualization of computational properties of hybrid difference schemes. &lt;em&gt;Nauchnaja vizualizacija&lt;/em&gt;, 2013; (1): 26-37. (In Russ. )</reference>
+                <reference>Lobanov A. I. Petrov, I. B. &lt;em&gt;Matematicheskoe modelirovanie nelinejnyh processov: uchebnik dlja akademicheskogo bakalavriata&lt;/em&gt; [Mathematical modeling of nonlinear processes: textbook for academic undergraduate studies]. Moscow, Jurajt Publ., 2019</reference>
+                <reference>Dem'janov A. Ju., Chizhikov D. V. Implicit hybrid monotone difference scheme of the second order of accuracy. &lt;em&gt;Issledovano v Rossii&lt;/em&gt;, 2003: 2484-2487. (In Russ. )</reference>
+                <reference>Lobanov A. I., Mirov F. H. A hybrid difference scheme with a generalized approximation condition. Analysis in the space of undefined coefficients. &lt;em&gt;Zhurnal vychislitel'noj metamatematiki i matematicheskoj fiziki&lt;/em&gt;, 2018; (8): 1-10. (In Russ. )</reference>
+                <reference>&lt;em&gt;Semi-implicit Hybrid Discrete H &amp;#119879; &amp;#119873; Approximation of Thermal Radiative Transfer&lt;/em&gt;. Available at: &lt;a href="https://arxiv.org/pdf/2102.13021.pdf"&gt;https://arxiv.org/pdf/2102.13021.pdf&lt;/a&gt; </reference>
+                <reference>Albertini G., Elbanna A., Kammer D. S. &lt;em&gt;A three-dimensional hybrid finite element - spectral boundary 3 integral method for modeling earthquakes in complex unbounded 4 domains&lt;/em&gt;. Available at: &lt;a href="https://arxiv.org/pdf/2102.08756.pdf"&gt;https://arxiv.org/pdf/2102.08756.pdf&lt;/a&gt; </reference>
+                <reference>Laks P. D. &lt;em&gt;Giperbolicheskie differencial'nye uravnenija v chastnyh proizvodnyh&lt;/em&gt; [Hyperbolic partial differential equations]. Moscow - Izhevsk, SIC “Reguljarnaja i haoticheskaja dinamika”, Izhevsk Institute of Computer Research, 2010</reference>
+                <reference>Lax P., Wendroff B. Systems of conservation laws. &lt;em&gt;Communications on Pure and Applied Mathematics&lt;/em&gt;, 1960; (13): 217-237</reference>
+                <reference>LeVeque R. J. &lt;em&gt;Numerical Methods for Conservation Laws&lt;/em&gt;. Basel - Boston - Berlin, Birkhauser, 1992</reference>
+                <reference>Meister A., Struckmeier J. &lt;em&gt;Hyperbolic Partial Differential Equations: Theory, Numerics and Applications&lt;/em&gt;. Braunschweig - Wiesbaden, Vieweg+Teubner Verlag, 2002</reference>
+                <reference>Zhukov A. I. &lt;em&gt;Metod Fur'e v vychislitel'noi&amp;#774; matematike&lt;/em&gt; [The Fourier method in computational mathematics]. Moscow, Nauka Publ., 1992</reference>
+            </references>
+        </articleInfo>
+        <articleInfo lang="RU" FirstPage="80" LastPage="86">
+            <pdf>21205-jdecp-romanenkov.pdf</pdf>
+            <abstract>В работе рассматривается гибридная разностная схема для построения
+                приближенного решения нелинейной системы дифференциальных уравнений с
+                разрывным начальным условием. В качестве модельной задачи использована
+                система обыкновенных дифференциальных уравнений Эйлера, которая является
+                консервативной на вещественной прямой. Для поиска приближенного решения
+                использован комбинированный численный метод, в котором в качестве рабочих
+                алгоритмов, между которыми происходит переключение, выбраны методы Лакса-Фридрихса
+                и Лакса-Вендрофа. Переключения необходимы, так как метод более высокого порядка
+                точности (метод Лакса-Вендрофа) приводит к появлению эффекта Гибса,
+                который является нежелательным не физическим артефактом в численном решении.
+                Поэтому в областях, где этот эффект проявляется, необходимо выполнить
+                переключение метода. Авторами предложен критерий переключения.
+                В системе программирования Matlab разработан скрипт, который реализует
+                гибридную схему. Предлагаемый алгоритм оперирует векторными величинами
+                и не использует конкретных выражений для координат рассматриваемых векторов.
+                Это делает алгоритм независимым от конкретных уравнений системы и позволяет
+                без существенных изменений применять его для других задач похожего вида.
+                Продемонстрированы идеи, с помощью которых получены данные методы и указана
+                область их применимости.</abstract>
+            <title>Гибридная схема для численного решения нелинейного уравнения эйлера</title>
+            <keywords>
+                <word>гибридная схема</word>
+                <word>задача Римана</word>
+                <word>уравнение Эйлера</word>
+            </keywords>
+            <references>
+                <reference>Лойцянский, Л. Г. Механика жидкости и газа. М. - Ленинград: Государственное издательство технико-теоретической литературы, 1950</reference>
+                <reference>Бондарев, А. Е. Применение методов научной визуализации для оптимизации вычислительных свойств конечно-разностных схем // Препринты ИПМ им. М. В. Келдыша, 79 (2006) 1-17</reference>
+                <reference>Бондарев, А., Бондаренко, А., Галактионов, В., Михайлова, Т., Рыжова, И. Разработка программного комплекса BURGERS2 для оптимизации и визуализации вычислительных свойств гибридных разностных схем // Научная визуализация, 1 (2013) 26-37</reference>
+                <reference>Лобанов, А. И., Петров, И. Б. Математическое моделирование нелинейных процессов: учебник для академического бакалавриата. М. : Юрайт, 2019</reference>
+                <reference>Демьянов, А. Ю., Чижиков, Д. В. Неявная гибридная монотонная разностная схема второго порядка точности // Исследовано в России (2003) 2484-2487</reference>
+                <reference>Лобанов, А. И., Миров, Ф. Х. Гибридная разностная схема с обобщенным условием аппроксимации. Анализ в пространстве неопределенных коэффициентов // Журнал вычислительной метаматематики и математической физики, 8 (2018) 1-10</reference>
+                <reference>Semi-implicit Hybrid Discrete H &amp;#119879; &amp;#119873; Approximation of Thermal Radiative Transfer // arxiv. org. Available at: &lt;a href="https://arxiv.org/pdf/2102.13021.pdf"&gt;https://arxiv.org/pdf/2102.13021.pdf&lt;/a&gt; </reference>
+                <reference>Albertini, G., Elbanna, A., Kammer, D. S. A three-dimensional hybrid finite element - spectral boundary 3 integral method for modeling earthquakes in complex unbounded 4 domains // arxiv. org. Available at: &lt;a href="https://arxiv.org/pdf/2102.08756.pdf"&gt;https://arxiv.org/pdf/2102.08756.pdf&lt;/a&gt; </reference>
+                <reference>Лакс, П. Д. Гиперболические дифференциальные уравнения в частных производных. М. - Ижевск: НИЦ «Регулярная и хаотическая динамика», Ижевскии&amp;#774; институт компьютерных исследовании&amp;#774;, 2010</reference>
+                <reference>Lax, P., Wendroff B. Systems of conservation laws // Communications on Pure and Applied Mathematics, 13 (1960) 217-237</reference>
+                <reference>LeVeque, R. J. Numerical Methods for Conservation Laws. Basel; Boston; Berlin: Birkhauser, 1992</reference>
+                <reference>Meister, A., Struckmeier, J. Hyperbolic Partial Differential Equations: Theory, Numerics and Applications. Braunschweig; Wiesbaden: Vieweg+Teubner Verlag, 2002</reference>
+                <reference>Жуков, А. И. Метод Фурье в вычислительнои&amp;#774; математике. M. : Наука, 1992</reference>
+            </references>
+        </articleInfo>
+        <authors>
+            <author ref="n_2021_6_kostikov" sort-key="1" />
+            <author ref="n_2021_6_romanenkov" sort-key="2" />
+        </authors>
+    </article>
+
 </number>
