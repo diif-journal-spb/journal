@@ -1,0 +1,3023 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 2, 2021
+Electronic Journal,
+reg. NFC77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Control problems in nonlinear systems
+Observation stability and convergence for neural-type
+evolutionary variational inequalities
+Stefan Reitmann
+Freiberg University of Mining and Technology
+stefan.reitmann@informatik.tu-freiberg.de
+Bernhard Jung
+Institute of Computer Science , Germany
+jung@informatik.tu-freiberg.de
+Elena V . Kudryashova
+St. Petersburg State University, Department of Mathematics and Mechanics
+e.kudryashova@spbu.ru
+V olker Reitmann
+St. Petersburg State University, Department of Mathematics and Mechanics
+vreitmann@aol.com
+Abstract.We derive absolute observation stability and instability results for con-
+trolled evolutionary inequalities which are based on frequency-domain character-
+istics of the linear part of the inequalities.The uncertainty parts of the inequalities
+(nonlinearities which represent external forces and constitutive laws) are described
+by certain local and integral quadratic constraints. Other terms in the considered
+evolutionary inequalities represent contact-type properties of a mechanical system
+with dry friction. The absolute stability criteria with respect to a class of observation
+operators (or measurement operators) gives the opportunity to prove the weak con-
+vergence of arbitrary solutions of inequalities to their stationary sets. In particular
+the obtained results can be used for the investigation of continuum type memories in
+neural networks. In such a way we can introduce a new type of neurons with hys-
+teretic nonlinearities which are described by evolutionary variational inequalities.Differential Equations and Control Processes,N.2,2021
+Keywords: Absolute observation stability, evolutionary variational inequalities,
+frequency-domain conditions,hysteretic neural networks
+1 Introduction
+In [28] we have presented an approach which brings continuum type memories and
+neural networks together. In particular hysteretic nonlinearities were used to intro-
+duce a boundary control problem for the interaction of acoustic waves or lasers with
+some control processes on the boundary described by an ODE. In the present paper
+we investigate similar questions such as stability or convergence to the stationary set
+for systems given by an evolutionary variational inequality and a distributed control
+which acts inside and not on the boundary. It is assume that the system nonlinearities
+are multivalued functions or hysteresis operators. As an input the variational inequal-
+ity contains a time-dependent function which can be considered as perturbation or
+measurement function. As an output signal we consider not the whole solution but
+some transformation of the solution and the nonlinearity. This approach is typical for
+absolute stability theory and was ﬁrstly discussed by V .A. Yakubovich for different
+classes of systems. With respect to this output stability and optimization problem
+can be considered. In a forthcoming paper we will investigate adaption and learn-
+ing principles in the system based on output functionals. For implementation of the
+proposed methods we consider to resort to both real and synthetic data of acoustic
+wave and laser based depth sensors, which we virtually simulated in [29]. Let us
+note that in the present paper we continue the investigation of control systems which
+are related to [14, 16, 27].
+Our plan for the paper is the following. Some basic notations for evolutionary
+systems in Hilbert spaces is introduced in Section 2. In Section 3 we shortly consider
+the general theory of evolutionary variational inequalities. Some examples of evolu-
+tionary variational inequalities with hysteresis operator and viscoelastic contact part
+are discussed in Section 4. In Section 5 we investigate the dissipativity of variational
+inequalities based on the Kalman-Yakubovich-Popov lemma. The main topic of the
+last Section 6 is the derivation of the efﬁcient observation and frequency-domain
+conditions for the convergence of the trajectories of a variational inequality to the
+stationary set. In particular we consider a stationary set wich consists of a contin-
+uum of points. It is clear that for neurons which are described such an evolutionary
+variational inequality this property is closely connected with the construction of a
+memory by means of the stationary set.
+Electronic Journal. http://diffjournal.spbu.ru/ 127Differential Equations and Control Processes,N.2,2021
+2 Basic notation
+Suppose that Y
+0
+is a real Hilbert space. We denote by ( ; )
+0
+andk k
+0
+the scalar
+product resp. the norm on Y
+0
+. Let A :D(A)! Y
+0
+be the generator of a C
+0
+-semigroup
+on Y
+0
+and deﬁne the set Y
+1
+:=D(A) . HereD(A) is the domain of A, which is dense in
+Y
+0
+since A is a generator. We denote withr(A) the resolvent set of A. The spectrum
+of A, which is the complement of r(A), is denoted by s(A). If we deﬁne with an
+arbitrary but ﬁxedb2r(A)\R for any y;h2 Y
+1
+; the value
+(y;h)
+1
+:=((bI  A)y;(bI  A)h)
+0
+; (2.1)
+then the set Y
+1
+equipped with this scalar product( ; )
+1
+and the corresponding norm
+k k
+1
+becomes a Hilbert space (different numbers b give different but equivalent
+norms). Denote by Y
+ 1
+the Hilbert space which is the completion of Y
+0
+with respect
+to the norm
+kyk
+ 1
+:=k(bI  A)
+ 1
+yk
+0
+and which has the corresponding scalar product
+(y;h)
+ 1
+:=
+ 
+(bI  A)
+ 1
+y; (bI  A)
+ 1
+h
+ 
+0
+; 8y;h2 Y
+ 1
+: (2.2)
+Thus, we get the inclusions Y
+1
+  Y
+0
+  Y
+ 1
+, which are dense with continuous embed-
+ding, i.e., Y
+a
+  Y
+a 1
+;a = 1;0, is dense andkyk
+a 1
+  ckyk
+a
+;8y2 Y
+a
+: Sometimes
+([1, 2])the introduced triple of spaces (Y
+1
+;Y
+0
+;Y
+ 1
+) is called a Gelfand triple . The
+pair (Y
+1
+;Y
+ 1
+) is also called Hilbert rigging of the pivot space Y
+0
+;Y
+1
+is an interpo-
+lation space of Y
+0
+, and Y
+ 1
+is an extrapolation space of Y
+0
+([5, 33]). Since for any
+y2 Y
+0
+andu2 Y
+1
+we have
+j(y;u)
+0
+j=j(bI  A)
+ 1
+y;((bI  A)u)
+0
+j kyk
+ 1
+kuk
+1
+; (2.3)
+we can extend( ;u)
+0
+by continuity onto Y
+ 1
+obtaining the inequality
+j(y;u)
+0
+j kyk
+ 1
+kuk
+1
+; 8y2 Y
+ 1
+;8u2 Y
+1
+:
+Let us denote this extension also by( ; )
+ 1;1
+and call it duality product on Y
+ 1
+ Y
+1
+.
+The operator A has a unique extension to an operator inL(Y
+0
+;Y
+ 1
+) which we denote
+by the same symbol. Suppose now that T > 0 is arbitrary and deﬁne the norm for
+Bochner measurable functions in L
+2
+(0;T ;Y
+j
+) ( j= 1;0; 1) through
+ky( )k
+2; j
+:=
+  T
+Z
+0
+ky(t)k
+2
+j
+dt
+ 
+1=2
+: (2.4)
+Electronic Journal. http://diffjournal.spbu.ru/ 128Differential Equations and Control Processes,N.2,2021
+LetW
+T
+be the space of functions such that y2 L
+2
+(0;T ;Y
+1
+) and ˙ y2 L
+2
+(0;T ;Y
+ 1
+),
+where the time derivative ˙ y is understood in the sense of distributions with values in
+a Hilbert space. The spaceW
+T
+equipped with the norm
+kyk
+W
+T
+:=
+ 
+ky( )k
+2
+2;1
++k ˙ y( )k
+2
+2; 1
+ 
+1=2
+(2.5)
+is a Hilbert space and will be used for the description of solutions to evolutionary
+systems.
+Remark 2.1 a) Let us denote by C
+T
+:= C(0;T ;Y
+0
+) the Banach space of continu-
+ous mappings y :[0;T]! Y
+0
+provided with the norm
+ky( )k
+C
+T
+= sup
+t2[0;T]
+ky(t)k
+0
+:
+It is well known ([5, 24, 33]) thatW
+T
+can be continuously embedded into the
+space C
+T
+, i.e., every function fromW
+T
+; properly altered by some set of measure
+zero, is a continuous function y :[0;T]! Y
+0
+andky( )k
+C
+T
+  const ky( )k
+L
+T
+: This
+embedding property shows that the Cauchy problem (3.1), (3.2) in the next section
+can be considered.
+b) Since the inﬁnite-dimensional evolutionary problems which are investigated
+in this paper with the help of observation operators are assumed to have uncertain
+parts, the choice of physically motivated phase spaces, control spaces, and observa-
+tion spaces (see Sect. 3) is crucial for the measurement process. It is easy to show
+that in some norms the observation operator can be stable, whereas it may be unstable
+in other norms. In many cases the described Gelfand triple of spaces is not sufﬁcient
+for this and we need a Hilbert scalefY
+a
+g
+a2R
+of spaces. For arbitrary a  0 we
+deﬁne (with A and b as in (2.1) and (2.2)) the space Y
+a
+:=D((bI  A)
+a
+) and the
+scalar product in Y
+a
+(y;h)
+a
+:=((bI  A)
+a
+y; (bI  A)
+a
+h)
+0
+; 8y;h2 Y
+a
+: (2.6)
+Whena < 0, the scalar product is also introduced by formula (2.6) and the space Y
+a
+is, as Y
+ 1
+, obtained by the completion of Y
+0
+with respect to their norm. Furthermore,
+for anya;b;g2R witha2(b;g) the pair(Y
+g
+;Y
+b
+) is a Hilbert rigging of Y
+a
+([5]).
+ 
+Electronic Journal. http://diffjournal.spbu.ru/ 129Differential Equations and Control Processes,N.2,2021
+3 Evolutionary variational inequalities
+Suppose that T > 0 is arbitrary and consider for a.a. t2[0;T] the observed and
+controlled evolutionary variational inequality
+( ˙ y  Ay  Bu  f(t);h  y)
+ 1;1
++y(h) y(y)  0; 8h2 Y
+1
+(3.1)
+y(0)= y
+0
+2 Y
+0
+;
+z(t)= Cy(t); u(t)2f(t;z(t)); u(0)= u
+0
+2E(y
+0
+); (3.2)
+u(t)= Dy(t)+ E u(t): (3.3)
+In (3.1)  (3.3) it is supposed that C2L(Y
+ 1
+;Z);D2L(Y
+1
+;¡) and E2L(U;¡)
+are linear operators, U;Z and ¡ are real Hilbert spaces, Y
+1
+  Y
+0
+  Y
+ 1
+is a real
+Gelfand triple and A2L(Y
+0
+;Y
+ 1
+); B2L(U;Y
+ 1
+);f :R
++
+  Z! 2
+U
+is a set-valued
+map, y : Y
+1
+!R
++
+and f :R
++
+! Y
+ 1
+are given nonlinear maps. The calculation of
+u(t) in (3.2) shows that this value in general also depends on certain “initial state” u
+0
+off taken from a setE(y
+0
+)  U: This situation is typical for hysteresis nonlineari-
+ties. We call B control operator, C output operator, D and E observation operators,
+U control space, Z output space,¡ observation space,f (material law) nonlinearity,
+y (contact) functional and f forcing function (see Fig. 1).
+u
+?
+6
+(N)
+( ˙ y  Ay  Bu  f(t);h  y)
+ 1;1
++y(h) y(y)  0
+y(0)= y
+0
+; 8h2 Y
+1
+y
+r -
+(L)
+z(t)= Cy(t)
+z
+?
+(N)
+u(t)2f(t;z(t))
+  r
+?
+? ?
+u y
+(L)
+u(t)= Dy(t)+ Eu(t)
+?
+u
+Figure 1: State / linear output / nonlinear output /
+observation diagram
+Electronic Journal. http://diffjournal.spbu.ru/ 130Differential Equations and Control Processes,N.2,2021
+In the following we denote byk k
+U
+;k k
+Z
+andk k
+¡
+the norm in U;Z resp. ¡:
+Let us now introduce the solution space for the problem (3.1), (3.2).
+Deﬁnition 3.1 Any pair of functionsfy( );u( )g with y2W
+T
+and u2 L
+2
+loc
+(0;¥;U)
+such that Bu2W
+T
+, satisfying (2.1), (2.2) almost everywhere on (0;T); is called
+solutionoftheCauchyproblem y(0)= y
+0
+; u(0)= u
+0
+deﬁned for (2.1), (2.2) .
+In order to have an existence property for (2.1)  (2.3) we state the following as-
+sumption:
+(C1) The Cauchy-problem (2.1), (2.2) has for arbitrary y
+0
+2 Y
+0
+and u
+0
+2E(y
+0
+) 
+U at least one solutionfy( );u( )g:
+Assumption (C1) is fulﬁlled, for example, in the following situation ([26]).
+(C2) a) The nonlinearityf :R
++
+  Z! U is a function having the property that
+A(t) := A  Bf(t;C ) : Y
+1
+! Y
+ 1
+is a family of monotone hemicontinuous opera-
+tors such that the inequality
+kA(t)yk
+ 1
+  c
+1
+kyk
+1
++ c
+2
+; 8y2 Y
+1
+;
+is satisﬁed, where c
+1
+> 0 and c
+2
+2R are constants not depending on t2[0;T]. Fur-
+thermore for any y2 Y
+1
+and for any bounded set U  Y
+1
+the family of functions
+f(A(t)h;y)
+ 1;1
+;h2 Ug is equicontinuous with respect to t on any compact subin-
+terval ofR
++
+.
+b)y is a proper, convex, and semicontinuous from below function on
+D(y)  Y
+1
+:
+(C3) f2 L
+2
+loc
+(R
++
+;Y
+ 1
+):
+Under the assumptions (C2)  (C3) the following theorem of H. Br´ ezis ([3])
+holds:
+Theorem 3.1 Suppose that for the family of operatorsA(t);t2R
++
+, we have
+(A(t)y;y)
+ 1;1
+ akyk
+2
+1
++b ; 8y2 Y
+1
+;
+where a > 0 and b2R do not depend on t. Then for arbitrary f2 L
+2
+loc
+(R
++
+;Y
+ 1
+)
+and arbitrary y
+0
+2D(y)
+Y
+0
+(i.e., the closure in Y
+0
+) there exists a unique weak solution
+Electronic Journal. http://diffjournal.spbu.ru/ 131Differential Equations and Control Processes,N.2,2021
+y2 L
+2
+loc
+(R
++
+;Y
+1
+)\C(R
++
+;Y
+0
+) with y(0)= y
+0
+, satisfying the inequality
+t
+Z
+s
+h
+ 
+˙ h(t) A(t)y(t)  f(t); h(t)  y(t)
+ 
+ 1;1
++y(h(t)) y(y(t))
+i
+dt 
+1
+2
+kh(t)  y(t)k
+2
+1
+ 
+1
+2
+kh(s)  y(s)k
+2
+1
+;
+8s;t : 0  s  t; 8h2
+n
+h2 L
+2
+loc
+(R
++
+;Y
+1
+) : ˙ h2 L
+2
+loc
+(R
++
+;Y
+ 1
+)
+o
+:
+Furthermore, the solution satisﬁes the inequalities
+kyk
+L
+2
+(0;T ;Y
+1
+)
+  c
+1
+ 
+k fk
+L
+2
+(0;T ;Y
+ 1
+)
+;ky
+0
+k
+0
+ 
+;
+kyk
+C(0;T ;Y
+0
+)
+  c
+2
+ 
+k fk
+L
+2
+(0;T ;Y
+ 1
+)
+;ky
+0
+k
+0
+ 
+;
+where c
+i
+:R
++
+ R
++
+!R
++
+, i= 1;2; are continuous and monotonically increasing
+functions.
+(C4) In the sequel we consider only solutions y of (3.1),(3.2) for which ˙ y belongs
+to L
+2
+loc
+(R;Y
+ 1
+).
+4 Examples of evolutionary variational inequalities
+Note that in the special case when y  0 in (3.1) the evolutionary variational in-
+equality is equivalent for a.a. t2[0;T] to the equation
+˙ y= Ay+ Bu+ f(t) in Y
+ 1
+;
+y(0)= Y
+0
+; z(t)= Cy(t); u(t)2f(t;z(t)); u(0)2E(y
+0
+);
+u(t)= Dy(t)+ Eu(t):
+Under the assumption thatf is a single valued function this class was considered in
+[1, 2, 4, 5, 6, 8, 18, 20, 31, 36].
+A typical frictional contact problem is modeled by the following second-order
+evolutionary variational inequality (Duvant, Lions [9], Han, Sofonea [12], Jarucˇ ek,
+Eck [13]): Find a displacement function v such that for a.a. t2[0;T]
+( ¨ v(t);w  ˙ v(t))
+V
+ 1
+;V
+1
++(A ˙ v(t);w  ˙ v(t))
+V
+ 1
+;V
+1
++
+ 
+g
+ 
+v(t)
+ 
+;w  ˙ v(t)
+ 
+V
+ 1
+;V
+1
++ j(w)  j
+ 
+˙ v(t)
+ 
+  0; 8 w2V
+1
+; (4.1)
+Electronic Journal. http://diffjournal.spbu.ru/ 132Differential Equations and Control Processes,N.2,2021
+v(0)= v
+0
+2V
+1
+; ˙ v(0)= w
+0
+2V
+0
+: (4.2)
+HereV
+1
+ V
+0
+ V
+ 1
+is a Hilbert space rigging structure,A :V
+1
+!V
+ 1
+is a linear
+continuous operator which is called viscosity operator.
+The nonlinear map g :V
+1
+!V
+ 1
+is the elasticity operator and j :V
+1
+!R
++
+represents the contact functional.
+Under a solution v of (4.1), (4.2) on (0;T) we understand a function v( )2
+L
+2
+(0;T ;V
+1
+) such that ˙ v( )2 L
+2
+(0;T ;V
+1
+); ¨ v( )2 L
+2
+(0;T ;V
+1
+;
+R
+T
+0
+j( ˙ v(t))dt <¥; and
+(4.1), (4.2) is satisﬁed for a.a. t2(0;T):
+Let us assume that for any(v
+0
+;w
+0
+)2V
+1
+ V
+0
+and any time T > 0 a solution of
+(4.1), (4.2) exists. In order to rewrite (4.1), (4.2) as a ﬁrst-order variational inequality
+(2.1), (2.2) we deﬁne the product Hilbert space rigging structure Y
+1
+  Y
+0
+  Y
+ 1
+with
+Y
+0
+=V
+1
+ V
+0
+; Y
+1
+=V
+1
+ V
+1
+; Y
+ 1
+=V
+0
+ V
+ 1
+:
+Let us introduce the new variables y
+1
+= v; y
+2
+= ˙ v and h
+2
+= w: It follows that
+˙ y
+1
+= y
+2
+and ˙ y
+2
+= ¨ v: In this notation the variational inequality (4.1) can be rewritten
+as
+( ˙ y
+2
+;h
+2
+  y
+2
+)
+V
+ 1
+;V
+1
++(A y
+2
+;h
+2
+  y
+2
+)
+V
+ 1
+;V
+1
++
+ 
+g(y
+1
+);h
+2
+  y
+2
+ 
+V
+ 1
+;V
+1
++ j(h
+2
+)  j(y
+2
+)  0; 8h
+2
+2V
+1
+;
+Using the product topology we get for arbitrary y=(y
+1
+;y
+2
+)2 Y
+ 1
+=V
+0
+ V
+ 1
+andh=(h
+1
+;h
+2
+)2 Y
+1
+=V
+1
+ V
+1
+the representation of the duality pairing on Y
+ 1
+ Y
+1
+as
+(y;h)
+ 1;1
+=(y
+1
+;h
+1
+)
+V
+1
++(y
+2
+;h
+2
+)
+V
+ 1
+;V
+1
+: (4.3)
+It follows from (4.3) that
+( ˙ y
+2
+;h
+2
+  y
+2
+)
+V
+ 1
+;V
+1
+=( ˙ y;h  y)
+ 1;1
+ (y
+2
+;h
+1
+  y
+1
+)
+V
+1
+:
+A linear bounded operator A : Y
+1
+! Y
+ 1
+is deﬁned by
+( Ay;h  y)
+ 1;1
+= (y
+2
+;h
+1
+  y
+1
+)
+V
+1
++(A y
+2
+;h
+2
+  y
+2
+)
+V
+ 1
+;V
+1
+;
+8 y=(y
+1
+;y
+2
+);h =(h
+1
+;h
+2
+)2 Y
+1
+=V
+1
+ V
+1
+: (4.4)
+It is easy to see that A deﬁned by (4.4) has the representation
+A=
+"
+0 I
+0  A
+#
+:
+Electronic Journal. http://diffjournal.spbu.ru/ 133Differential Equations and Control Processes,N.2,2021
+In order to determine the linear operator B : U =V
+1
+! Y
+ 1
+we use the equation
+( Bf(y
+1
+);h  y)
+ 1;1
+=(f(y
+1
+);h
+2
+  y
+2
+)
+V
+ 1
+;V
+1
+;
+8 y=(y
+1
+;y
+2
+);h =(h
+1
+;h
+2
+)2 Y
+1
+=V
+1
+ V
+1
+: (4.5)
+From (4.5) it follows that
+Bf(Cy)=
+"
+0
+ g(y
+1
+)
+#
+;
+where the linear operator C : Y
+1
+! W :=V
+1
+is deﬁned by(y
+1
+;y
+2
+)7! y
+1
+:
+The last remainig element in the inequality (2.1) is the contact functional
+y : Y
+1
+!R
++
+given by
+y(y) := j(y
+2
+); 8(y
+1
+;y
+2
+)2 Y
+1
+=V
+1
+ V
+1
+:
+An important class of uncertainty systems (3.1), (3.2) are connected with hys-
+teresis operators. Let us describe one example of this type which in more details is
+discussed in [35]. Let us assume that g
+e
+and g
+r
+are maximal monotone multivalued
+functionsR! 2
+¯
+R
+; such that infg
+r
+(v)  supg
+e
+(v) 8 v2R, and deﬁne the maximal
+monotone multivalued functionf as in Fig. 2.
+z
+f =R
+ 
+f =R
+v
+f =f0g
+f =R
++
+Figure 2: Generalized play operator
+The functionsg
+e
+andg
+r
+deﬁne a hysteresis which is called generalized play op-
+erator. This operator can be set in the form of a differential inclusion as in system
+Electronic Journal. http://diffjournal.spbu.ru/ 134Differential Equations and Control Processes,N.2,2021
+(3.2) by ˙ z2f(v;z) in[0;T], which is equivalent to the variational inequality ([35])
+(
+v2 J(z) := [infg
+ 1
+e
+(z); supg
+ 1
+r
+(z)];
+˙ z(v  w)   0 8w2 J(z):
+By coupling this operator with a PDE, we get the problem
+8
+>
+>
+>
+>
+>
+>
+<
+>
+>
+>
+>
+>
+>
+:
+¶v
+¶t
++ u Dv = f in W (0;T);
+¶z
+¶t
+  u = 0 in W (0;T);
+u2f(v;z) in W (0;T);
+v( ;0)= v
+0
+; z( ;0) = z
+0
+in W:
+(4.6)
+Here it is assumed thatW R
+n
+is smooth, T > 0;
+f2 L
+2
+(0;T ;H
+ 1
+(W)) and v
+0
+;z
+0
+2 L
+2
+(W):
+By applying standard results of the theory of nonlinear semigroups it is shown in
+[35] that under certain additionally conditions the Cauchy-problem (4.6) has one and
+only one solution in the sense of Benilan. This solution depends continuously and
+monotonically on the data v
+0
+;z
+0
+and f . It is also demonstrated in [35] that the shortly
+characterized approach can be extended to generalized Prandtl-Ishlinskij operators
+of play type which are used for the description of elasto-plastic material laws.
+5 Dissipativity with respect to observations
+Our aim is to investigate the properties of the inequality (3.1), (3.2) using only infor-
+mations (measurements) from the observation operator (3.3). The concrete nonlin-
+earities (contact laws and material laws) are assumed to be unknown. We consider
+them as uncertainties in the system. In order to describe the principal parts of such
+an uncertain dynamic system we use methods from absolute stability theory. The
+main idea is to characterize a priori information about the considered class of non-
+linearities by means of suitably chosen quadratic forms. These quadratic forms,
+together with the description of the linear parts of system (3.1)  (3.3) in form of
+transfer functions “from an input to an output”, give the necessary information for
+the construction of observers which are stable with respect to initial conditions in the
+considered class (3.1)  (3.3). The formal deﬁnition of the uncertainty parts of (3.1),
+(3.2) is the following one (see also [4, 18, 19, 20, 21]).
+Electronic Journal. http://diffjournal.spbu.ru/ 135Differential Equations and Control Processes,N.2,2021
+Deﬁnition 5.1 a) SupposeF andG are quadratic forms on Y
+1
+ U. The class of
+nonlinearitiesN (F;G) deﬁned byF andG consists of all maps f :R
++
+  Z!
+2
+U
+such that for any y( )2 L
+2
+loc
+(0;¥;Y
+1
+) with ˙ y( )2 L
+2
+loc
+(0;¥;Y
+ 1
+) and any u( )2
+L
+2
+loc
+(0;¥;U) with u(t)2f(t;Cy(t)) for a.e. t  0, it follows thatF(y(t);u(t))  0
+for a.e. t  0 and (for any such pairfy;ug) there exists a continuous functional
+F : Z!R such that for any times 0  s< t we have
+t
+Z
+s
+G(y(t);u(t))dt F(Cy(t)) 
+F(Cy(s)):
+b) The class of functionalsM(d) deﬁned by a constant d > 0 consists of all
+maps y : Y
+1
+!R
++
+such that for any y2 L
+2
+loc
+(0;¥;Y
+0
+) with ˙ y2 L
+2
+loc
+(0;¥;Y
+1
+) the
+function t7!y(y(t)) belongs to L
+1
+(0;¥;R) satisfying
+¥
+R
+0
+y(y(t))dt  d and for any
+f2N (F;G) and anyy2M(d) the Cauchy-problem (3.1)  (3.3) has a solution
+fy( );u( )g on any time interval[0;T]:
+Remark 5.1 The functionalF used in the description of the classN (F;G) can be
+considered as generalized potential of f ([21]). Let us assume for a moment that
+Z = U and f : Z! Z is a continuous nonlinear mapping of gradient or potential
+type, i.e., there exists a continuous Fr´ echet-differentiable nonlinear functional F :
+Z!R, whose Fr´ echet derivative F
+0
+(z)2L(Z;R) at any z2 Z can be represented
+in the form F
+0
+(z)h =(f(z);h) for any h2 Z: Then we can write for any function
+z2 Z
+1;2
+loc
+(0;+¥;Z) and any times 0  s< t the path integral formula
+Z
+t
+s
+(˙ z(t);f(z(t))
+Z
+dt =F(z(t)) F(z(s)):
+It follows in this case that the properties described in Deﬁnition 5.1 a) are satisﬁed
+with respect to the quadratic formG if we take (with Z= U) the form
+G(y;u) := (CAy+CBu;u)
+U
+: (5.1)
+ 
+A basic tool for the derivation of sufﬁcient conditions for absolute stability and
+instability of observations to variational inequalities is the following version of the
+Frequency Domain Theorem or Kalman-Yakubovich-Popov lemma (KYP lemma) ([4,
+6, 18, 19, 23, 36]). In the inﬁnite dimensional setting certain regularity assumptions
+are necessary which we formulate at the beginning of this section. In the next part of
+the paper up to theorem 3:1
+0
+it is assumed that all spaces and operators are complex.
+Electronic Journal. http://diffjournal.spbu.ru/ 136Differential Equations and Control Processes,N.2,2021
+(F1) The operator A2L(Y
+1
+;Y
+ 1
+) is regular ([9, 19, 22]), i.e., for any T > 0;y
+0
+2
+Y
+1
+;y
+T
+2 Y
+1
+and f2 L
+2
+(0;T ;Y
+0
+) the solutions of the direct problem
+˙ y= Ay+ f(t); y(0)= y
+0
+; a.a. t2[0;T]
+and of the dual problem
+˙ y = A
+ 
+y+ f(t); y(T)=y
+T
+; a.a. t2[0;T]
+are strongly continuous in t in the norm of Y
+1
+. Here (and in the following) A
+ 
+2
+L(Y
+ 1
+;Y
+0
+) denotes the adjoint to A, i.e.,(Ay;h)
+ 1;1
+=(y;A
+ 
+h)
+ 1;1
+;8y;h2 Y
+1
+:
+Remark 5.2 The assumption (F1) is satisﬁed ([19]) if the embedding Y
+1
+  Y
+0
+is
+completely continuous, i.e., transforms bounded sets from Y
+1
+into compact sets in Y
+0
+.
+ 
+(F2) The pair (A;B) is L
+2
+-controllable, ([4, 18, 19]) i.e., for arbitrary y
+0
+2 Y
+0
+there exists a control u( )2 L
+2
+(0;¥;U) such that the problem
+˙ y= Ay+ Bu; y(0)= y
+0
+is well-posed on the semiaxis [0;+¥) , i.e., there exists a solution y( )2L
+¥
+with
+y(0)= y
+0
+:
+Remark 5.3 It is easy to see that a pair (A;B) is L
+2
+-controllable if this pair is
+exponentially stabilizable, i.e., if an operator K2L(Y
+0
+;U) exists such that the solu-
+tion y( ) of the Cauchy-problem ˙ y=(A+ BK)y; y(0)= y
+0
+; decreases exponentially
+as t!¥; i.e.,
+9 c> 0 9e > 0 :ky(t)k
+0
+  c e
+ et
+ky
+0
+k
+0
+; 8t  0:
+Note that the usual condition of exact controllability (on any ﬁnite time interval) is in
+general not satisﬁed for pairs of operators(A;B) arising from PDE problems ([34]).
+ 
+(F3) LetF(y;u) be a Hermitian form on Y
+1
+ U; i.e.,
+F(y;u)=(F
+1
+y;y)
+ 1;1
++ 2Re(F
+2
+y;u)
+U
++(F
+3
+u;u)
+U
+;
+where
+F
+1
+= F
+ 
+1
+2L(Y
+1
+;Y
+ 1
+); F
+2
+2L(Y
+0
+;U); F
+3
+= F
+ 
+3
+2L(U;U):
+Deﬁne the parameter
+a := sup
+w;y;u
+(kyk
+2
+1
++kuk
+2
+U
+)
+ 1
+F(y;u);
+Electronic Journal. http://diffjournal.spbu.ru/ 137Differential Equations and Control Processes,N.2,2021
+where the supremum is taken over all triples(w;y;u)2R
++
+ Y
+1
+ U such that iwy=
+Ay+ Bu:
+Theorem 5.1 a) (Frequency Theorem for the Nonsingular Case, ([19])
+Assume for the linear operators A2L(Y
+1
+;Y
+ 1
+);B2L (U;Y
+ 1
+) and the Hermitian
+formF on Y
+1
+ U that the assumptions (F1), (F2) are satisﬁed. Then there exist an
+operator P= P
+ 
+2L(Y
+ 1
+;Y
+0
+)\L(Y
+0
+;Y
+1
+) and a numberd > 0 such that
+2Re(Ay+ Bu;Py)
+ 1;1
++F(y;u)  d(kyk
+2
+1
++kuk
+2
+U
+); 8(y;u)2 Y
+1
+ U; (5.2)
+if and only if the frequency-domain conditiona < 0 witha from (F3) is satisﬁed.
+b) (Frequency Theorem for the Singular Case, [19])
+Let the assumptions in Theorem 5.1a) be satisﬁed, and, in addition, let B2L(U;Y
+0
+).
+Then, for the existence of an operator P= P
+ 
+2L(Y
+ 1
+;Y
+0
+)\L(Y
+0
+;Y
+1
+) such that
+Re(Ay+ Bu;Py)
+ 1;1
++F(y;u)  0; 8(y;u)2 Y
+1
+ U;
+it is necessary and sufﬁcient that the following two conditions are fulﬁlled:
+1) a  0; wherea is from (F3);
+2) The functional J(y( );u( )) :=
+¥
+Z
+0
+F(y(t);u(t))dt is bounded from above on
+any set M
+y
+0
+:=fy( );
+u( ) : ˙ y= Ay+ BuonR
++
+;y(0)= y
+0
+; y( )2L
+¥
+; u( )2 L
+2
+(0;¥;U)g:
+Remark 5.4 a) Let, in addition to the assumptions of Theorem 5.1b), A be the
+generator of a C
+0
+-group on Y
+0
+and the pair (A; B) be L
+2
+-controllable. Then the
+condition a  0; where a is from (F3), is sufﬁcient for the assertion of Theorem
+5.1b) ([18, 19, 21]). Note that the existence of C
+0
+-groups is given for conservative
+wave equations, plate problems, and other important PDE classes ([10]).
+b) Under the assumptions of Theorem 5.1 a) there exist operators
+P= P
+ 
+2L(Y
+0
+;Y
+0
+);L2L(U;Y
+0
+) and K= K
+ 
+2L(U;U) such that
+2Re(Ay+ Bu;Py)
+ 1;1
++F(y;u)= kL
+ 
+y  Kuk
+2
+U
+; 8(y;u)2 Y
+1
+ U: (5.3)
+This equality is equivalent to the system of Lur’e or algebraic Riccati equations
+A
+ 
+P+ PA+ F
+1
+= LL
+ 
+; PB+ F
+2
+= LK; F
+3
+= K
+ 
+K: (5.4)
+ 
+Electronic Journal. http://diffjournal.spbu.ru/ 138Differential Equations and Control Processes,N.2,2021
+Let us state the following theorem which is based on the frequency-domain ap-
+proach and which can be considered as generalization of energy-type equalities for
+PDE’s. With the superscript
+c
+we denote the complexiﬁcation of spaces and opera-
+tors and the extension of quadratic forms to Hermitian forms.
+Theorem 5.2 Consider the evolution problem (3.1)  (3.3) withf2N (F;G) and
+y2M(d). Suppose that for the operators A
+c
+;B
+c
+the assumptions (F1) and (F2) are
+satisﬁed. Suppose also that there exist ana > 0 such that with the transfer operator
+c
+(u)
+(s)= D
+c
+(sI
+c
+  A
+c
+)
+ 1
+B
+c
++ E
+c
+(s62s(A
+c
+)) (5.5)
+the frequency-domain condition
+F
+c
+((iwI
+c
+  A
+c
+)
+ 1
+B
+c
+u;u)+G
+c
+((iwI
+c
+  A
+c
+)
+ 1
+B
+c
+u;u)  akc
+(u)
+(iw)uk
+2
+¡
+c
+8w2R : iw62s(A
+c
+); 8u2 U
+c
+(5.6)
+is satisﬁed and the functional
+J(y( );u( )) :=
+¥
+Z
+0
+h
+F
+c
+(y(t);u(t))+G
+c
+(y(t);u(t))+akD
+c
+y(t)+ E
+c
+u(t)k
+2
+¡
+c
+i
+dt
+is bounded from above on any setM
+y
+0
+deﬁned in Theorem 5.1b).
+Then there exist an (real) operator P= P
+ 
+2L(Y
+ 1
+;Y
+0
+)\L(Y
+0
+;Y
+1
+) and a num-
+berd > 0 such that with the Lyapunov-functional V(y) :=(y;Py)
+0
+(y2 Y
+0
+) for an
+arbitrary solutionfy( );u( )g of (3.1), (3.2) with f2N (F;G) and F as general-
+ized potential off, the inequality
+V(y(t)) V(y(s))+F(Cy(t)) F(Cy(s))+
+t
+Z
+s
+F(y(t);u(t))dt
++
+t
+Z
+s
+[y(y(t)) y( Py(t)+ y(t))]dt+d
+t
+Z
+s
+kDy(t)+ Eu(t)k
+2
+¡
+dt
+ 
+R
+t
+s
+( f(t);Py(t))
+ 1;1
+dt
+(5.7)
+is satisﬁed on any time interval 0  s< t:
+Proof For the Hermitian form F
+c
++G
+c
+all assumptions of the Frequency
+Theorem 5.1b) are satisﬁed. It follows ([19]) that there exist a (real) operator
+P= P
+ 
+2L(Y
+ 1
+;Y
+0
+)\L(Y
+0
+;Y
+1
+) and a numberd > 0 such that
+( Ay  Bu;Py)
+ 1;1
+ F(y;u)+G(y;u)+dkDy+ Euk
+2
+; 8(y;u)2 Y
+1
+ U:
+(5.8)
+Electronic Journal. http://diffjournal.spbu.ru/ 139Differential Equations and Control Processes,N.2,2021
+Consider the inequality (3.1) with the given solutionfy( );u( )g. Take the special
+test function Ph to see that on an arbitrary time interval[0;T]
+( ˙ y(t)  Ay(t)  Bu(t)  f(t);Ph  y(t))
+ 1;1
++y(Ph) y(y)  0;
+8h2 Y
+1
+;a.a.t2[0;T]:
+(5.9)
+Substitute now Ph(t)= Py(t)+ y(t): Then (5.9) can be written as
+( ˙ y(t)  Ay(t)  Bu(t)  f(t); Py(t))
+ 1;1
++y( Py(t)+ y(t)) y(y(t))  0;
+a.a. t2[0;T]
+(5.10)
+or ( ˙ y(t);Py(t))
+ 1;1
+ (Ay(t)+ Bu(t);Py(t))
+ 1;1
+ y( Py(t)+ y(t))+y(y(t)) ( f(t);Py(t))
+ 1;1
+; a.a. t2[0;T]:
+(5.11)
+Now we use the inequality (5.8) in order to estimate
+ (Ay(t)+ Bu(t);Pu(t))
+ 1;1
+ F(y(t);u(t))+G(y(t);u(t))+dkDy(t)+ Eu(t)k
+2
+¡
+; a.a.t2[0;T]:
+(5.12)
+We get from (5.11) and (5.12)
+( ˙ y(t);Py(t))
+ 1;1
++F(y(t);u(t))+G(y(t);u(t))
++y(y(t)) y( Py(t)+ y(t))+dkDy(t)+ Eu(t)k
+2
+¡
+ ( f(t);Py(t))
+ 1;1
+; a.a.t2[0;T]:
+(5.13)
+If we take in the inequality (5.13) the integral on an arbitrary time interval 0  s< t
+we receive
+V(y(t)) V(y(s))+
+t
+Z
+s
+F(y(t);u(t))dt+
+t
+Z
+s
+G(y(t);u(t))dt
++
+t
+Z
+s
+[y(y(t)) y( Py(t)+ y(t))]dt +d
+t
+Z
+s
+kDy(t)+ E u(t)k
+2
+¡
+dt
+ 
+Z
+t
+s
+( f(t);Py(t))
+ 1;1
+dt:
+(5.14)
+Now it remains to use the properties ofG with respect to the solutionfy( );u( )g,
+i.e.,
+t
+Z
+s
+G(y(t);u(t))dt F(Cy(t)) F(Cy(s)): (5.15)
+Electronic Journal. http://diffjournal.spbu.ru/ 140Differential Equations and Control Processes,N.2,2021
+From (5.14) and (5.15) the assertion of Theorem 5.2) follows immediately.  
+Remark 5.5 Inequality (5.7) can be considered ([5, 9, 19, 21, 31, 32, 37]) as
+generalized energy balance inequality or dissipation inequality. For a nonnegative
+operator P the term V(y(t)) in (5.7) is the energy stored in the state y(t): The form
+ F which reﬂects the inﬂuence of the constitutive law can be considered as energy
+supply rate and the integral 
+t
+R
+s
+F(y(t);u(t))dt as energy absorbed by the system
+in the time interval[s;t]: A contact energy term ([9, 12, 13, 24, 30]) in (5.7) is char-
+acterized byy.  
+The physical interpretation of inequality (5.7) leads to the following deﬁnition.
+Deﬁnition 5.2 The Cauchy problem (3.1), (3.2) is called dissipative in the sense
+of Willems ([37]) with respect to the observation u from (3.3) and the classes
+N (F;G) andM(d) if there exist a d > 0 and a bounded self-adjoint operator
+P = P
+ 
+2L(Y
+ 1
+;Y
+0
+)\L(Y
+0
+;Y
+1
+) such that for any solutionfy( );u( )g of (3.1),
+(3.2) and any time interval 0  s< t the inequality (5.7) holds.
+In other words we get from Theorem 5.2 the following.
+Corollary 5.1 Under the assumptions of Theorem 5.2 the Cauchy problem (3.1),
+(3.2) is dissipative in the sense of Willems with respect to the observation u from
+(3.3) and the classesN (F;G) andM(d):
+6 Absolute observation - stability and instability of evolutionary
+inequalities
+We continue the investigation of energy like properties for the observation operators
+from the inequality problem (3.1), (3.2) with f  0.
+The next deﬁnition generalizes the concepts which are introduced in [19, 20,
+21, 38] for output operators of evolution equations, namely in extending them to
+the observation operators of a class of evolutionary variational inequalities. In the
+following we denote for a functionu( )2 L
+2
+(R
++
+;¡) their norm by
+ku( )k
+2
+2;¡
+:=
+Z
+¥
+0
+ku(t)k
+2
+¡
+dt:
+Electronic Journal. http://diffjournal.spbu.ru/ 141Differential Equations and Control Processes,N.2,2021
+Deﬁnition 6.1 a) The inequality (3.1), (3.2) is said to beabsolutelydichotomic (i.e.,
+in the classesN (F;G);M(d)) with respect to the observation u from (3.3) if
+for any solutionfy( );u( )g of (3.1), (3.2) with y(0)= y
+0
+; u(0)= u
+0
+2E(y
+0
+) the
+following is true: Either y( ) is unbounded on [0;¥) in the Y
+0
+-norm or y( ) is
+bounded in Y
+0
+in this norm and there exist constants c
+1
+and c
+2
+(which depend only
+on A;B;N (F;G) andM(d)) such that
+kDy( )+ Eu( )k
+2
+2;¡
+  c
+1
+(ky
+0
+k
+2
+0
++ c
+2
+): (6.1)
+b) The inequality (3.1), (3.2) is said to be absolutely stable with respect to the
+observationu from (3.3) if (6.1) holds for any solutionfy( );u( )g of (3.1), (3.2).
+c) The inequality (3.1), (3.2) is said to be absolutely unstable with respect to
+theobservationu from (3.3) if for any constants c
+1
+and c
+2
+in (6.1) there exist initial
+states y
+0
+2 Y
+0
+and u
+0
+2E(y
+0
+) such that solutionsfy( );u( )g of (3.1), (3.2) starting
+in these points do not satisfy (6.1) .
+Our ﬁrst result concerns frequency-domain conditions for absolute observation di-
+chotomy of controlled evolutionary variational inequalities.
+Theorem 6.1 Suppose that the assumptions of Theorem 5.2 are satisﬁed with f  0:
+Assume additionally that any potential F from the class N (F;G) is nonnega-
+tive. Suppose also that for any potential F there exists a constant c> 0 such that
+F(Cy)  ckyk
+2
+0
+; 8y2 Y
+0
+: Then the inequality (3.1), (3.2) is absolutely dichotomic
+with respect to the observationu from (3.3).
+Proof As was shown in the proof of Theorem 5.2 under the assumptions of the
+present theorem there exist an operator P= P
+ 
+2L(Y
+0
+;Y
+0
+) and a number d > 0
+such that for an arbitrary solutionfy( );u( )g of (3.1), (3.2) the inequality (5.7) holds.
+Suppose that y( ) is bounded in Y
+0
+on[0;¥): Deﬁne the function
+Z(t) : = V(y(t))+F(Cy(t))+
+t
+Z
+0
+F(y(t);u(t))dt
++
+Z
+t
+0
+[y(y(t)) y( Py(t)+ y(t))]dt:
+From (5.7) it follows that for arbitrary s;t such that 0  s< t
+Z(t)  Z(s)  d
+t
+Z
+s
+kDy(t)+ Eu(t)k
+2
+¡
+dt  0; (6.2)
+Electronic Journal. http://diffjournal.spbu.ru/ 142Differential Equations and Control Processes,N.2,2021
+i.e., Z is monotonically decreasing. Since y( ) is bounded in Y
+1
+on[0;¥) the function
+Z( ) is bounded from below. It follows that there exists the limit lim
+t!+¥
+Z(t) and that
+for any t > 0 by (6.2) the inequality
+d
+Z
+t
+0
+kDy(t)+ E u(t)k
+2
+¡
+dt  Z(0)  lim
+t!¥
+Z(t)  cky
+0
+k
+2
+0
+is true. From this we get immediately thatu = Dy+ E u2 L
+2
+(0;¥;¡): Suppose now
+that Z(t)! ¥ for t!¥: Then from F(z)  0;
+t
+Z
+0
+F(y(t); u(t))dt  0 and the
+boundedness of
+t
+Z
+0
+[y(y(t)) y( Py(t)+ y(t))]dt it follows that V(y(t))! ¥
+for t!+¥. From this we conclude thatky(t)k
+0
+!¥:  
+In order to get absolute stability properties of (3.1), (3.2) with respect to the ob-
+servationu of (3.3) we need an assumption for (3.1)  (3.3) which is called “minimal
+stability” for the class of evolution equations in [20, 21].
+Deﬁnition 6.2 The inequality (3.1) (3.3) with f  0 is said to be minimally stable
+if the resulting equation for y  0 is minimally stable, i.e., there exists a bounded
+linear operator K : Y
+1
+! U such that the operator A+ BK is stable, i.e.,
+s(A+ BK) fs2C : Res  e < 0g with F(y;Ky)  0; 8y2 Y
+1
+; (6.3)
+and
+t
+Z
+s
+G(y(t); Ky(t))dt  0; 8s;t : 0  s< t; 8y2 L
+2
+loc
+(R
++
+;Y
+1
+): (6.4)
+Theorem 6.2 Suppose that the assumptions of Theorem 6.1 are satisﬁed and the
+inequality (3.1) (3.3) with f  0 is minimally stable, i.e., (6.3) and (6.4) are satisﬁed
+with some operator K2L(Y
+1
+;U): Suppose also that the pair(A+ BK;D+ EK) is
+observable in the sense of Kalman ([4]), i.e., for any solution y( ) of
+˙ y=(A+ BK)y; y(0)= y
+0
+;
+withu(t)=(D+ EK)y(t)= 0 for a.a. t  0 it follows that y(0)= y
+0
+= 0:
+Then inequality (3.1), (3.2) is absolutely stable with respect to the observationu
+from (3.3).
+Proof Under the assumptions of the given theorem there exist by Theorem 5.1b) a
+(real) operator P= P
+ 
+2L (Y
+ 1
+;Y
+0
+)\L(Y
+0
+;Y
+1
+) and a number d > 0 such that the
+Electronic Journal. http://diffjournal.spbu.ru/ 143Differential Equations and Control Processes,N.2,2021
+inequality (5.8) is satisﬁed. Setting in (5.8) u= Ky from (6.3) with arbitrary y2 Y
+1
+we get with (6.4) the inequality
+((A+ BK)y; Py)
+ 1;1
+  dkDy+ EKyk
+2
+¡
+; 8 y2 Y
+1
+: (6.5)
+Using the fact that A+ BK is a stable operator and the pair (A+ BK;D+ EK) is
+observable, it follows ([4, 7, 36]) from (6.5) that P= P
+ 
+  0: Suppose now that
+fy( );u( )g is an arbitrary solution of (3.1), (3.2) with f  0: With the Lyapunov-
+functional
+V(y)=(y;Py)
+0
+  0 it follows from (5.7) that for arbitrary t  0
+ V(y
+0
+) F(Cy
+0
+)+
+t
+Z
+0
+[y(y(t)) y( Py(t)+ y(t))]dt (6.6)
++d
+t
+Z
+0
+kDy(t)+ E u(t)k
+2
+¡
+dt  0:
+Since by assumption
+t
+Z
+0
+[y(y(t) y( Py(t)+ y(t))]dt  c
+2
+> ¥ we get from
+(6.6) for arbitrary t  0 the inequality
+d
+t
+Z
+0
+kDy(t)+ E u(t)k
+2
+¡
+dt  V(y
+0
+)+F(Cy
+0
+)+ c
+2
+  V(y
+0
+)+ cky
+0
+k
+2
+0
++ c
+2
+: (6.7)
+The property (6.7) implies now the estimate (6.1) .  
+In the next theorem we show that under certain assumptions the inequality (3.1)
+ (3.3) is absolutely unstable with respect to the observation.
+Deﬁnition 6.3 The inequality (3.1) (3.3) with f  0 is said to be minimally un-
+stable if the resulting equation for y  0 is minimally unstable, i.e., there exists a
+bounded linear operator K : Y
+1
+! U such that the operator A+ BK is unstable, i.e.,
+s(A+ BK)\fs2C : Res e > 0g6=? with F(y;Ky)  0; 8y2 Y
+1
+; (6.8)
+and
+t
+Z
+s
+G(y(t); Ky(t))dt  0; 8s;t : 0  s< t;8y2 L
+2
+loc
+(R
++
+;Y
+1
+): (6.9)
+Electronic Journal. http://diffjournal.spbu.ru/ 144Differential Equations and Control Processes,N.2,2021
+Theorem 6.3 Suppose that the assumptions of Theorem 6.1 are satisﬁed and the
+inequality (3.1) (3.3) with f  0 is minimally unstable, i.e., (6.8) and (6.9) are
+satisﬁed with some operator K2L (Y
+1
+;U): Suppose also that for the equation
+˙ y=(A+ BK)y; y(0)= y
+0
+;
+in Y
+0
+there exists a splitting Y
+0
+= Y
++
+0
+ Y
+ 
+0
+such that for any y
+0
+2 Y
++
+0
+the solution
+y( ) of this equation satisﬁes lim
+t!¥
+y(t)= 0 and for any y
+0
+2 Y
+ 
+0
+a unique solution y( )
+of the last equation exists on( ¥;0) satisfying lim
+t! ¥
+y(t)= 0: Assume that the pair
+(A+ BK;D) is observable on Y
++
+0
+; i.e., for any solution y( ) with u(t)= Dy(t)= 0
+for a.a. t  0 it follows that y(0)= y
+0
+= 0: Then there exists an operator P= P
+ 
+2
+L(Y
+ 1
+;Y
+0
+)\L(Y
+0
+;Y
+1
+); which is non-negative on Y
++
+0
+and negative on Y
+ 
+0
+: If y
+0
+2 Y
+ 
+0
+is an arbitrary point satisfying
+1
+2
+(y
+0
+;Py
+0
+)
+0
++F(Cy
+0
+)< d; (6.10)
+where d is the parameter from the classN (d), then for any solutionfy( ); u( )g of
+(3.1)  (3.3) with y(0)= y
+0
+the termkDy( )k
+2
+¡;2
+is unbounded on [0;¥) proposed
+that D : Y
+1
+!¡ is invertible. It follows that the inequality (3.1)  (3.3) is absolutely
+unstable with respect to the observationu( )= Dy( ):
+Proof Under the assumptions of the present theorem we get on the basis of
+Theorem 5.1b) the existence of an operator P= P
+ 
+2L(Y
+ 1
+;Y
+0
+)\L(Y
+0
+;Y
+1
+) and a
+numberd > 0 such that inequality (5.8) with E= 0 is satisﬁed. Setting again in (5.8)
+u= Ky from (6.8) with arbitrary y2 Y
+1
+we see that inequality (6.5) with E = 0 is
+true. Using now the fact that A+ BK is an unstable operator, the pair(A+ BK;D) is
+observable and that there exists a splitting Y
+0
+= Y
+ 
+0
+L
+Y
++
+0
+with the above properties,
+we see ([4, 7, 19]) that the Lyapunov-functional V(y) :=(y;Py)
+0
+is non-negative on
+Y
++
+0
+and negative on Y
+ 
+0
+: Consider now an arbitrary solutionfy( );u( )g of (3.1), (3.2)
+with initial state y
+0
+2 Y
+ 
+0
+: It follows that V(y
+0
+)< 0 and, on the basis of (5.7),
+V(y(t)) F(Cy
+0
+)+
+t
+Z
+0
+[y(y(t)) y( Py(t)+ y(t))]dt (6.11)
++d
+t
+Z
+0
+kDy(t)k
+2
+¡
+dt  V(y
+0
+)< 0
+for all t  0 . From (6.11) we conclude that for t!+¥
+Z(t) := V(y(t))+
+Z
+t
+0
+[y(y(t)) y( Py(t)+ y(t))]dt6! 0: (6.12)
+Electronic Journal. http://diffjournal.spbu.ru/ 145Differential Equations and Control Processes,N.2,2021
+Indeed, if we suppose that (6.12) does not hold, we get from (6.11) for large t the
+estimate
+F(Cy
+0
+)+d
+Z
+t
+0
+kDy(t)k
+2
+¡
+dt 
+1
+2
+V(y
+0
+)< 0;
+which is impossible sinceF(Cy
+0
+)  0 andd > 0 .
+Let us now show that
+Z(t)! ¥ for t!+¥: (6.13)
+Suppose that (6.13) is not true. This means that there exists a constant c> 0 such
+that
+Z(t)  c ; 8t  0: (6.14)
+From (6.11) and (6.14) it follows now that for all t  0
+d
+t
+Z
+0
+k Dy(t)k
+2
+¡
+dt  c+F(Cy
+0
+)+V(y
+0
+): (6.15)
+Since D is invertible, the inequality (6.14) shows that y( )2 L
+2
+(0;¥;Y
+1
+) and, conse-
+quently,
+V(y(t))! 0 for t!+¥: (6.16)
+Recall now that for all t  0
+ 
+t
+Z
+0
+[y(y(t)) y( Py(t)+ y(t))] dt  d: (6.17)
+It follows from (6.11), (6.16) and (6.17) that for sufﬁciently large t
+0 F(Cy
+0
+)+ d+
+1
+2
+V(y
+0
+): (6.18)
+It is clear that (6.18) contradicts (6.10) .  
+7 Absolute observation convergence of evolutionary inequalities
+In this section, we consider the observation stability of the difference of two arbi-
+trary solutions of inequality (3.1), (3.2), i.e., convergence properties with respect to
+the observation (3.3) of this inequality, in order to get some information about the
+convergence of arbitrary solutions to the stationary set.
+Let us start with the deﬁnition of a new class of nonlinearities for the case U= Z:
+Electronic Journal. http://diffjournal.spbu.ru/ 146Differential Equations and Control Processes,N.2,2021
+Deﬁnition 7.1 Suppose in (3.1), (3.2) that U = Z and assume that m
+0
+> 0 is an
+arbitrary number. The classN
+c
+(m
+0
+) consists of all mapsf :R
++
+ Z! 2
+Z
+such that
+0 (u
+1
+  u
+2
+; z
+1
+  z
+2
+)
+Z
+ m
+0
+kz
+1
+  z
+2
+k
+2
+Z
+;
+8t  0; 8z
+1
+;z
+2
+2 Z; 8u
+1
+2f(t;z
+1
+); 8u
+2
+2f(t;z
+2
+):
+(7.1)
+Now we are in the position to give a precise interpretation of observation convergence
+(see also [11, 17, 20]).
+Deﬁnition 7.2 The inequality (3.1), (3.2) is said to beabsolutelyconvergent (in the
+classesN
+c
+(m
+0
+) andM(d)) with respect to the observation u from (3.3) if there
+exist two constants c> 0 and c
+2
+> 0, which depend only on A;B;N
+c
+(m
+0
+) andM(d),
+such that for any two solutionsfy( );u( )g andf ¯ y( ); ¯ u( )g of (3.1), (3.2) we have
+kD(y( )  ¯ y( ))+ E(u( )  ¯ u( ))k
+2
+2;¡
+  c
+1
+(ky
+0
+  ¯ y
+0
+k
+2
+0
++ c
+2
+): (7.2)
+Theorem 7.1 Suppose that the operator A from (3.1) generates a C
+0
+-group on
+Y
+0
+;B2L (U;Y
+0
+); the pairs (A
+c
+;B
+c
+) and ( A
+c
+;B
+c
+) are L
+2
+-controllable, and (3.1),
+(3.2) with f  0 and U = Z is minimally stable, i.e., there exists an operator K2
+L (Y
+1
+;Z) such that A+ BK is stable, (Kw;Cw)
+Z
+ 
+1
+m
+0
+kKwk
+2
+Z
+  0; 8w2 Y
+1
+; and
+the pair(A+ BK;D+ EK) is observable. Suppose also thatf2N
+c
+(m
+0
+) and there
+exists ane > 0 such that
+Re(u;c
+(z)
+(iw)u)
+Z
+c
+ 
+1
+m
+0
+kuk
+2
+Z
+c
+  ekc
+(u)
+(iw)uk
+2
+Z
+c
+;
+8w2R : iw62s(A
+c
+);8u2 Z
+c
+:
+(7.3)
+Then inequality (3.1), (3.2) is absolutely convergent in the classesN
+c
+(m
+0
+) and
+M(d) with respect to the observationu.
+Proof Suppose thatfy( );u( )g andf ¯ y( ); ¯ u( )g are two arbitrary solutions of
+(3.1), (3.2). If we consider in (3.1) the solutionfy( );u( )g and take the test function
+h = ¯ y we get
+( ˙ y  Ay  Bu  f(t); ¯ y  y)
+ 1;1
++y( ¯ y) y(y)  0: (7.4)
+Now we consider (3.1) with the solutionf ¯ y( ); ¯ u( )g and take the test functionh = y
+in order to get
+(
+˙
+¯ y  A ¯ y  B ¯ u  f(t);y  ¯ y)
+ 1;1
++y(y) y( ¯ y)  0: (7.5)
+Electronic Journal. http://diffjournal.spbu.ru/ 147Differential Equations and Control Processes,N.2,2021
+Suppose P= P
+ 
+2L(Y
+ 1
+;Y
+0
+)\L(Y
+0
+;Y
+1
+) is an arbitrary linear operator and write
+(7.4) with ¯ y  y= P( ¯ y  y) and (7.5) with y  ¯ y= P(y  ¯ y) , i.e.,
+( ˙ y  Ay  Bu  f(t); P( ¯ y  y))
+ 1;1
++y(y  P( ¯ y  y)) y(y)  0 (7.6)
+and
+(
+˙
+¯ y  A ¯ y  B ¯ u  f(t); P(y  ¯ y))
+ 1;1
++y( ¯ y+ P(y  ¯ y)) y( ¯ y)  0: (7.7)
+If we take the sum of (7.6) and (7.7) we get the inequality
+( ˙ y 
+˙
+¯ y;P(y  ¯ y))
+ 1;1
+ (A(y  ¯ y)+ B(u  ¯ u);P(y  ¯ y))
+ 1;1
+ y(y  P( ¯ y  y))+y(y) y( ¯ y+ P(y  ¯ y))+y( ¯ y)  0:
+(7.8)
+Recall now that the frequency-domain inequality (7.3) together with the other as-
+sumptions of Theorem 7.1 guarantee on the base of Theorem 5.1b) the existence of
+a (real) operator P= P
+ 
+2L(Y
+ 1
+;Y
+0
+)\L(Y
+0
+;Y
+1
+) and a numberd > 0 such that
+(Aw+ Bz;Pw)
+ 1;1
++(z;Cw)
+Z
+ 
+1
+m
+0
+kzk
+2
+Z
+  dkDw+ Ezk
+2
+¡
+;
+8w2 Y
+1
+;8z2 Z:
+(7.9)
+Using the fact that (3.1), (3.2) is minimally stable with some K2L(Y
+1
+;Z) we con-
+clude from (7.9) that ((A+ BK)w;Pw)
+ 1;1
+  dk(D+ KE)wk
+2
+¡
+; 8w2 Y
+1
+: From
+this inequality it follows that P is non-negative.
+For the considered arbitrary solutionsfy( );u( )g andf ¯ y( ); ¯ u( )g of (3.1), (3.2)
+the inequalities (7.8) and (7.9) imply that
+( ˙ y 
+˙
+¯ y;P(y  ¯ y))
+ 1;1
++(u  ¯ u;C(y  ¯ y))
+Z
+ 
+1
+m
+0
+ku  ¯ uk
+2
+Z
++dkD(y  ¯ y)+ E(u  ¯ u)k
+2
+¡
+  0:
+(7.10)
+The integration of (7.10) on an arbitrary time interval [0;t] (t > 0) gives for the
+Lyapunov-functional V(y) :=(y;Py)
+0
+on the base of (7.1) and the fact thaty2M(d)
+the inequality
+V(y(t)  ¯ y(t)) V(y(0)  ¯ y(0))+d
+t
+Z
+0
+kD(y(t)  ¯ y(t))+ E(u(t)  ¯ u(t))k
+2
+¡
+dt  c;
+(7.11)
+where c is a sufﬁciently large constant. Since V(y(t)  ¯ y(t))  0 the inequality (7.11)
+implies
+d
+¥
+Z
+0
+kD(y(t)  ¯ y(t))+ E(u(t)  ¯ u(t))k
+2
+¡
+dt  V(y(0)  ¯ y(0))+ c:
+Electronic Journal. http://diffjournal.spbu.ru/ 148Differential Equations and Control Processes,N.2,2021
+ 
+In the sequel we investigate the special situation of the convergence of an arbi-
+trary solution of (3.1), (3.2) to a stationary solution. In case when such a stationary
+solution is unique we can use Theorem 7.1. In many applications, however, the
+inequality (3.1), (3.2) has a continuum of stationary solutions and the approach of
+Theorem 7.1 is not applicable.
+Let us consider the autonomous inequality (3.1), (3.2) with f(t;z) f(z) and
+f(t)  0, i.e.,
+( ˙ y  Ay  Bu;h  y)
+ 1;1
++y(h) y(y)  0; 8h2 Y
+1
+; (7.12)
+y(0)= y
+0
+2 Y
+0
+;
+z(t)= Cy(t); u(t)2f(z(t)); u(0)= u
+0
+2E(y
+0
+); (7.13)
+u(t)= Dy(t)+ E u(t): (7.14)
+Our aim is to show that under certain observation conditions any solution of (7.12),
+(7.13) converges to the stationary set of the inequality. Let us start with some deﬁni-
+tions ([11, 17, 20]).
+Deﬁnition 7.3 Any constant solutionfy( );u( )g of (7.12), (7.13), i.e., y(t)  const ,
+u(t)  const onR
++
+, is called a stationary solution of (7.12), (7.13) . The set of all
+stationary solutions of (7.12), (7.13) is called thestationaryset of (7.12), (7.13) and
+denoted by L L  Y
+1
+  U: We say that the solutionfy( );u( )g of (7.12), (7.13)
+is weakly quasi-convergent if y(t)! L in the weak sense as t!+¥: The inequal-
+ity (7.12), (7.13) is called weakly quasi-gradient-like if every its solution is weakly
+quasi-convergent.
+It is clear from the deﬁnition that a pairf ¯ y; ¯ ug is a stationary solution of (7.12), (7.13)
+if and only if
+( A ¯ y  B ¯ u;h  ¯ y)
+ 1;1
++y(h) y( ¯ y)  0; 8h2 Y
+1
+; (7.15)
+¯ y2 Y
+0
+;
+¯ z= C ¯ y; ¯ u2f(¯ z)\E( ¯ y): (7.16)
+With respect to the stationary set described by (7.15), (7.16) we make the following
+assumptions.
+(S1) The stationary set L L of (7.15), (7.16) is non-empty and consists of
+isolated points only.
+Electronic Journal. http://diffjournal.spbu.ru/ 149Differential Equations and Control Processes,N.2,2021
+Remark 7.1 Under standard conditions the assumption (S1) is satisﬁed ([9, 22,
+24]). If (7.15) can be written as
+a( ¯ y;h  ¯ y)+ c( ¯ y;h  ¯ y)
+ 1;1
++y(h) y( ¯ y)  0; 8h2 Y
+1
+; (7.17)
+where a(y;h)= a(h;y) is a quadratic form on Y
+1
+ Y
+1
+and c2R is a number,
+the problem (7.15) is equivalent to the minimisation of the functional
+J(h) :=
+1
+2
+h
+a(h;h)+ ckhk
+2
+1
+i
++y(h)
+on Y
+1
+.  
+Let us formulate some simpliﬁcations of system (7.12), (7.13) . Assume that
+(S2) y  0 and U = Z=R:
+It follows that C2L(Y
+ 1
+;R); B2L (R; Y
+ 1
+); D2L (Y
+1
+;R); E2L (R;R);
+andf :R! 2
+R
+. Let us further assume, as in the case of ODE’s with retarded argu-
+ments, ([20]) thatf is piecewise continuous, discontinuous in z= 0 and with the set
+of isolated discontinuity pointsfz
+j
+g. For any discontinuity point z
+j
+the setf(z
+j
+) R
+is assumed as a closed interval such that f(z
+j
+) [liminf
+z!z
+j
+f(z);limsup
+z!z
+j
+f(z)]: Then
+([11, 15])f is an upper-semicontinuous function. The local solution in the sense of
+Sect. 3 is assumed to exist globally. In order to construct a quadratic constraintF
+forf we assume thatf satisﬁes the following property.
+(S3) uz  0; 8z2R; 8u2f(z): (7.18)
+The last condition implies thatf(0)=[f
+1
+;f
+2
+]; withf
+1
+  0 andf
+2
+  0. Assume
+f
+1
+< 0 andf
+2
+> 0:
+In mechanics many systems with dry friction are described by equation (7.12),
+(7.13) with nonlinearities satisfying (S1) - (S3). Typical solutions of such systems are
+sliding solutions. Let us give the formal deﬁnition which goes back to [11, 20, 25].
+Deﬁnition 7.4 A solutionfy( );u( )g of (7.12), (7.13) is called sliding solution on
+the time interval (t
+1
+;t
+2
+) if z(t)= Cy(t)  z
+j
+on (t
+1
+;t
+2
+), where z
+j
+is a discontinuity
+point off.
+Let us investigate observation properties of sliding solutions associated with the
+discontinuity z = 0 of f. Consider for s2 r(A
+c
+) the transfer operator c
+(z)
+(s)=
+C
+c
+(sI
+c
+  A
+c
+)
+ 1
+B
+c
+= C
+c
+c(s) and assume that 02r(A
+c
+) and c
+(z)
+(0)= 0: It follows
+Electronic Journal. http://diffjournal.spbu.ru/ 150Differential Equations and Control Processes,N.2,2021
+from (7.12), (7.13) that the stationary sliding solutions of the system corresponding
+to the discontinuity z= 0 off have the form y(t)  ¯ y;u(t)= ¯ u; where ¯ u2f(0); ¯ y=
+uA
+ 1
+B .
+From Theorem 6.1 we derive now sufﬁcient conditions for absolute observation
+stability. Note, that for the case of ODE’s with retarded arguments similar conditions
+are derived in [20].
+Theorem 7.2 Suppose that for the linear part of (7.12), (7.13) the assumptions of
+Theorem 7.1 are satisﬁed, (7.12), (7.13) is minimally stable, c
+(z)
+(0)= 0 and there
+exist parametersQ
+j
+> 0( j= 1;2) such that the following inequalities hold:
+Re
+h
+(Q
+1
++ iwQ
+2
+)c
+(z)
+(iw)
+i
+< 0; 8w2Rnf0g; (7.19)
+lim
+w!0
+1
+w
+2
+Re
+h
+(Q
+1
++ iwQ
+2
+)c
+(z)
+(iw)
+i
+< 0; (7.20)
+and
+liminf
+jwj!+¥
+Re
+h
+(Q
+1
++ iwQ
+2
+)c
+(z)
+(iw)
+i
+ P< 0: (7.21)
+Then (7.12), (7.13) is absolutely stable with respect to all observationsu
+1
+(t)= Dy(t)
+andu
+2
+(t)= D ˙ y(t)= DAy(t)+ DBu(t); where D2L (Y
+1
+;R) is such that
+DA
+ 1
+B= 0: (7.22)
+Proof We consider the quadratic form
+F+G =Q
+1
+F
+1
++Q
+2
+G
+1
+:=Q
+1
+Cyu+Q
+2
+C[Ay+ Bu]u: (7.23)
+The ﬁrst part Q
+1
+F
+1
+comes from the inequality (7.8), the second part Q
+2
+G
+1
+is
+introduced through (5.1). For u= 0 we haveF(y;0)+G(y;0)= 0 and the system is
+minimally stable. Extend nowF+G to a Hermitian formF
+c
++G
+c
+onC C by
+F
+c
+(y;u)+G
+c
+(y;u)= Re[Q
+1
+Cyu
+ 
++Q
+2
+C(Ay+ Bu)u
+ 
+]: (7.24)
+If we consider the observationsu
+1
+(t)= Dy(t) together with the quadratic form (7.23)
+the frequency-domain condition (5.6) becomes
+9d > 0 :P(iw)  djDc(iw)j
+2
+; 8w2R; (7.25)
+with P(iw) := Re[(Q
+1
++ iwQ
+2
+)c
+(z)
+(iw)]: In [20] it is shown that (7.25) is true if
+(7.19) (7.21) and (7.22) are satisﬁed. Thus the system (7.12), (7.13) is absolutely
+stable with respect to all observationsu
+1
+(t)= Dy(t) with D satisfying (7.22).
+Electronic Journal. http://diffjournal.spbu.ru/ 151Differential Equations and Control Processes,N.2,2021
+If we consider now the observationsu
+2
+(t)= DAy(t)+ DBu(t) together with the
+quadratic form (7.23) the frequency-domain condition (5.6) becomes
+9d > 0 :P(iw)  djiwDc(iw)j
+2
+; 8w2R: (7.26)
+It is easy to check (see [20]) that (7.26) is also satisﬁed provided that (7.19) (7.21)
+and (7.22) are true. This shows that the system (7.12), (7.13) is also absolutely stable
+with respect to the observationu
+2
+ 
+From Theorem 7.2 we get immediately the following.
+Corollary 7.1 Suppose that the assumptions of Theorem 7.1 are satisﬁed. Then ev-
+ery solutionfy( );u( )g of (7.12), (7.13) converges weakly to the set
+L :=fA
+ 1
+Bu; u2Rg;
+and, consequently, the system (7.12), (7.13) is weakly quasi-gradient like with respect
+to the stationary sliding solutions.
+Acknowledgments
+This paper was prepared with the support by a grant from St.Petersburg State
+University Event 3 [Pure ID 75207094] (sections 5-7) and by the Leading Scientiﬁc
+Schools of Russia [Project NSh-2624.2020.1] (sections 1-4).
+References
+[1] Banks, H. T., Gilliam, D. S. and V . Shubov, Global solvability for damped ab-
+stract nonlinear hyperbolic systems. Differential and Integral Equations. 10,
+309 – 332 (1997).
+[2] Banks, H. T. and K. Ito, A uniﬁed framework for approximation in inverse prob-
+lems for distributed parameter systems. Control-Theory and Advanced Tech-
+nology. 4, 73 – 90 (1988).
+[3] Br´ ezis, H., Problemes unilateraux. J. Math. Pures Appl. 51, 1 – 168 (1972).
+[4] Brusin, V . A., The Lur´ e equations in Hilbert space and its solvability.
+Prikl. Math. Mekh. 40 5, 947 – 955 (1976) (in Russian).
+[5] Chueshov, I. D., Introduction to the Theory of Inﬁnite-Dimensional Dissipative
+Systems. ACTA. Kharkov, (1999).
+Electronic Journal. http://diffjournal.spbu.ru/ 152Differential Equations and Control Processes,N.2,2021
+[6] Curtain, R. F., Logemann, H. and O. J. Staffans, Stability results of Popov type
+for inﬁnite-dimensional systems with applications to integral control.
+Mathematics Preprint 01/09, University of Bath, (2001), Proc. London Math.
+Soc. 86, 3, 779 – 816 (2003).
+[7] Datko, R., Extending a theorem of A. M. Liapunov to Hilbert spaces. J. Math.
+Anal. Appl. 32, 610 – 616 (1970).
+[8] Del Rosario, R. C. H. and R. C. Smith, LQR control of thin shell dynamics:
+Formulation and numerical implementation. J. of. Intelligent Material Sys-
+tems and Structures. 9, 301 – 320 (1998).
+[9] Duvant, G. and J.-L. Lions, Inequalities in Mechanics and Physics. Springer-
+Verlag, Berlin (1976).
+[10] Flandoli, F., Lasiecka J. and R. Triggiani, Algebraic Riccati equations with
+nonsmoothing observation arising in hyperbolic and Euler-Bernoulli bound-
+ary control problems. Annali di Matematica Pura Applicata. 153, 307 – 382
+(1988).
+[11] Gelig, A. Kh., Leonov, G. A. and V . A. Yakubovich, Stability of Nonlinear Sys-
+tems with Nonunique Equilibrium States. Nauka, Moscow (1978) (in Russian).
+[12] Han, W. and M. Sofonea, Evolutionary variational inequalities arising in vis-
+coelastic contact problems. SIAM J. Numer. Anal. 38, 2, 556 – 579 (2000).
+[13] Jaruˇ sek, J. and Ch. Eck, Dynamic contact problem with friction in linear vis-
+coelasticity. C. R. Acad. Sci. Paris 322, 497 – 502 (1996).
+[14] Kalinichenko, D. Yu., Skopinov, S. N. and V . Reitmann, Stability and bifurca-
+tions on a ﬁnite time interval in variational inequalities. Electr. J. Diff. Equ.
+and Contr. Processes, 4 (2012) (Russian); English transl. J. Diff. Equ., 48 (13),
+1721 – 1732 Pleiades Publishing, Ltd. (2012).
+[15] Kuttler, K. L. and M. Shillor, Set-valued pseudomonotone maps and degenerate
+evolution inclusions. Comm. Contemp. Math. 1, 1, 87 – 123 (1999).
+[16] Leonov, G. A. and V . Reitmann, Absolute observation stability for evolution-
+ary variational inequalities. Book Series: World Scientiﬁc Series on Nonlinear
+Science Ser. B, 14, 29 – 42, World Scientiﬁc Publishing Co Pte Ltd (2010).
+[17] Leonov, G. A., Reitmann, V . and V . B. Smirnova, Non-Local Methods for
+Pendulum-Like Feedback Systems. Teubner-Texte zur Mathematik, B.G. Teub-
+ner Verlagsgesellschaft, Stuttgart-Leipzig, (1992).
+Electronic Journal. http://diffjournal.spbu.ru/ 153Differential Equations and Control Processes,N.2,2021
+[18] Likhtarnikov, A. L., Absolute stability criterion for nonlinear operator equa-
+tions. Izv. Akad. Nauk SSSR, Ser. Mat. 41 5, 1064 – 1083 (1977).
+[19] Likhtarnikov, A. L. and V . A. Yakubovich, The frequency theorem for equations
+of evolutionary type. Siberian Math. J. 17 5, 790 – 803 (1976).
+[20] Likhtarnikov, A. L. and V . A. Yakubovich, Abstract criteria for absolute stabil-
+ity of nonlinear systems relative to a linear output and their applications. I, II.
+Siberian Math. J. 23 4, 103 – 121; 24 5, 129 – 148 (1983).
+[21] Likhtarnikov, A. L. and V . A. Yakubovich, Dichotomy and stability of uncertain
+nonlinear systems in Hilbert spaces. Algebra and Analysis. 9 6, 132 – 155
+(1997).
+[22] Lions, J.-L., Optimal Control of Systems Governed by Partial Differential
+Equations. Springer-Verlag, New York, (1971).
+[23] Louis, J. and D. Wexler, The Hilbert space regulator problem and operator
+Riccati equation under stabilizability. Annales de la Societe Scientiﬁque de
+Bruxelles. 105 4, 137 – 165 (1991).
+[24] Neˇ cas, J. and I. Hlavaˇ cek, Mathematical Theory of Elastic and Elastoplastic
+Bodies, An Introduction, Elsevier, Amsterdam (1981).
+[25] Orlov, Y . V . and V . I. Utkin, Sliding mode control in inﬁnite-dimensional sys-
+tems. Automatica, 23, 753 – 757 (1987).
+[26] Pankov, A. A., Bounded and Almost Periodic Solutions of Nonlinear Differen-
+tial Operator Equations. Naukova dumka, Kiev (1986) (in Russian).
+[27] Reitmann, V ., Anikushin, M. and S. Romanov, Dimension-like properties
+and almost periodicity for cocycles generated by variational inequalities with
+delay. Proc. of the Int. Conf. Equadiff 2019, Leiden, Netherlands (2019).
+https://www.universiteitleiden.nl/equadiff2019.
+[28] Reitmann, S., Jung, B., Kudryashova, E. V . and Reitmann, V ., Classiﬁcation of
+point clouds with neural networks and continuum-type memories. 627, IFIP Ad-
+vances in Information and Communication Technology series, Springer (2021).
+[29] Reitmann, S., Neumann, L. and B. Jung, BLAINDER—A Blender AI Add-On
+for generation of semantically labeled Depth-Sensing Data. Sensors 2021, 21,
+2144. https://doi.org/10.3390/s21062144 (2021).
+Electronic Journal. http://diffjournal.spbu.ru/ 154Differential Equations and Control Processes,N.2,2021
+[30] Rochdi, M., Shillor, M. and M. Sofonea, Quasistatic nonlinear viscoelastic
+contact with normal compliance and friction. J. Elasticity 51, 105 – 126 (1998).
+[31] Shestakov, A. A., The Generalized Direct Lyapunov Method for Systems with
+distributed parameters. Nauka, Moscow (1990) (in Russian).
+[32] Staffans, O. J., J-energy preserving well-posed linear systems. Int. J. Appl.
+Math. Comp. Sci., 11 1361 – 1378 (2001).
+[33] Triebel, H., Interpolation Theorie, Function Spaces, Differential Operators.
+Amsterdam, North-Holland (1978).
+[34] Triggiani, R., On the lack of exact controllability for mild solutions in Banach
+spaces. J. Math. Anal. and Appl. 50 438 – 446 (1975).
+[35] Visintin, A., Differential Models for Hysteresis. Springer-Verlag, Berlin (1994).
+[36] Wexler, D., On frequency domain stability for evolution equations in Hilbert
+spaces via the algebraic Riccati equation. SIAM J. Math. Analysis. 11, 969 –
+983 (1980).
+[37] Willems, J. L., Stability Theory of Dynamical Systems. Nelson, London (1970).
+[38] Yakubovich, V . A., On the abstract theory of absolute stability in nonlinear
+systems. Vestn. Leningr. Univers,. Ser. Mat., Mekh., Astr., 13, 99 – 118 (1977)
+(in Russian).
+Electronic Journal. http://diffjournal.spbu.ru/ 155
