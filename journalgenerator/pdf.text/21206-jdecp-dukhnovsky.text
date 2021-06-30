@@ -1,0 +1,2214 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 2, 2021
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Nonlinear partial differential equations
+Computer software for the investigation of differential equations
+The tanh-function method and the (G
+0
+=G)-expansion method
+for the kinetic McKean system
+Dukhnovsky S. A.
+Moscow State University of Civil Engineering
+e-mail: sergeidukhnvskijj@rambler.ru
+Abstract. In this paper, we consider the discrete kinetic McKean system. The
+McKean system is the Boltzmann kinetic equation, and for this model momen-
+tum and energy are not conserved. For the  rst time, new traveling wave so-
+lutions are found using the tanh-function method, the extended tanh-function
+method and the (G
+0
+=G)-expansion method. These methods are a powerful,
+reliable and effective tool for  nding exact solutions to nonlinear partial differ-
+ential equations in mathematical physics and engineering  elds. With the help
+of computerized symbolic computation, we obtain kink waves, singular kink
+waves, periodic waves and rational solutions. Similarly, it is possible to  nd
+exact solutions for other kinetic models.
+Keywords: McKean system, tanh-function method, Knudsen number, travel-
+ing wave solutions, symbolic computationDifferential Equations and Control Processes, N. 2, 2021
+1 Introduction
+We consider the one-dimensional McKean system [2, 13]:
+@
+t
+u +@
+x
+u =
+1
+"
+(w
+2
+ uw); x2R; t> 0;
+@
+t
+w @
+x
+w = 
+1
+"
+(w
+2
+ uw):
+(1)
+Here u = u(x;t);w = w(x;t) are the densities of two groups of particles
+with velocities c = 1; 1, " is the Knudsen parameter from the kinetic theory
+of gases. This system describes a monatomic rare ed gas consisting of two
+groups of particles. The McKean system is a non-integrable system, i.e. the
+Painlev  e test is not applicable. The interaction is as follows. The McKean
+system describes particles of two groups, namely, the  rst group of particles
+moves at a unit speed along the axis Ox, and the second group moves at a
+unit speed in the opposite direction. Particles of the  rst and second groups
+colliding cause a reaction that transfers into two particles of the second group.
+In turn, two particles of the second group transfers into particles of the  rst
+and second groups.
+The main kinetic models are the Carleman, Godunov-Sultangazin, Broad-
+well, McKean systems (see [1, 2, 13, 21, 22, 23]). These models arise in the
+kinetic theory of gases, chemical kinetics, in various  elds of science and tech-
+nology [10, 11]. In particular, the Carleman system arises in autocatalysis
+[12]. There are many methods for  nding exact solutions to nonlinear partial
+differential equations such as the homogeneous balance method [14], the Exp-
+function method [15], the Jacobi Elliptic function expansion method [16], the
+tanh-method and extended tanh-method [17, 18], the sine-cosine method [19]
+and many others. For Broadwell-type models in [20], solutions were obtained
+using the truncated Painlev  e expansions. For the Carleman system in [3, 9], so-
+lutions were obtained using the generalized Bernoulli sub-ODE method and the
+(G
+0
+=G)-expansion method. The McKean system has been little studied. The
+McKean system (1) was studied recently in [5, 13]. Here a self-similar solution
+was found, as well as a solution by means of the truncated Painlev  e expansion.
+In [3, 4, 5, 9, 20], traveling wave solutions can take both positive and negative
+values. This is some disadvantage from a physical point of view. Despite this, we
+will obtain new exact solutions for (1) by using the tanh-function method, the
+extended tanh-function method and the (G
+0
+=G)-expansion method. It should
+be noted that the sine-cosine method is not applicable to our system.
+Electronic Journal. http://diffjournal.spbu.ru/ 88Differential Equations and Control Processes, N. 2, 2021
+2 Our methods
+Now we will describe the main steps of two well-known methods that allow us
+to  nd exact solutions.
+2.1 Review of the tanh-method
+Consider a given nonlinear equation
+E(u;u
+t
+;u
+x
+;u
+tt
+;u
+xt
+;u
+xx
+;:::) = 0; (2)
+where u =u(x;t) is an unknown function. To  nd the travelling wave solution
+of Eq. (2), we introduce the wave variable   = x ct;u = U( ). Then (2) is
+reduced to the ordinary differential equation:
+E(U; cU
+0
+;U
+0
+;c
+2
+U
+00
+; cU
+00
+;U
+00
+;:::) = 0: (3)
+We introduce a new independent variable
+Y = tanh(  );
+leads to the change of derivative,
+d
+d 
+= (1 Y
+2
+)
+d
+dY
+;
+where   is a real parameter. We apply the following series expansion
+U( ) =S(Y ) =
+N
+X
+n=0
+a
+n
+Y
+n
+:
+A balance procedure determines the degree N of the power series. The coe -
+cients follow from solving a nonlinear algebraic system. For more details, see
+[6, 17, 18]. The extended tanh-method is de ned in a similar way.
+2.2 Review of the (G
+0
+=G)-expansion method
+We suppose that the solution of (3) can be expressed by a polynomial in the
+form:
+U( ) =
+n
+X
+i=0
+a
+i
+ 
+G
+0
+G
+ 
+i
+; (4)
+Electronic Journal. http://diffjournal.spbu.ru/ 89Differential Equations and Control Processes, N. 2, 2021
+where G =G( ) satis es
+G
+00
++ G
+0
++ G = 0; (5)
+where a
+n
+;a
+n 1
+;:::;a
+0
+;  and   are constants to be determined later; a
+n
+6= 0.
+Balancing between the highest order derivatives and nonlinear terms, we  nd
+the positive integern. Then substituting (4) into (3), collecting the coe cients
+of G
+0
+=G and equating each coe cient to zero, we can  nd a
+n
+;a
+n 1
+;:::;a
+0
+. For
+more details, see [7, 8].
+3 The tanh-method for the McKean system
+We seek the solution in the following transformation
+u =U( );w =W ( );  =x ct:
+In this case we have
+U
+0
+(1 c) =
+1
+"
+(W
+2
+ UW );
+ W
+0
+(1 +c) = 
+1
+"
+(W
+2
+ UW ):
+(6)
+The tanh method admits the use of  nite series
+U( ) =S(Y ) =
+M
+X
+m=0
+a
+m
+Y
+m
+;W ( ) =
+ 
+S(Y ) =
+M
+1
+X
+m=0
+b
+m
+Y
+m
+; (7)
+where Y = tanh(  ), M and M
+1
+are positive integers,   is a parameter. Sub-
+stituting (7) into (6) yields
+ (1 c)(1 Y
+2
+)
+dS
+dY
+=
+1
+"
+(
+ 
+S
+2
+ S
+ 
+S);
+  (1 +c)(1 Y
+2
+)
+d
+ 
+S
+dY
+= 
+1
+"
+(
+ 
+S
+2
+ S
+ 
+S):
+(8)
+After substitution of (7) into (8), we balance the highest powers ofY . Then we
+have
+2 +M  1 = 2M
+1
+=M +M
+1
+;
+2 +M
+1
+  1 = 2M
+1
+=M +M
+1
+;
+Electronic Journal. http://diffjournal.spbu.ru/ 90Differential Equations and Control Processes, N. 2, 2021
+so that M =M
+1
+= 1: We get the truncated expansion
+S(Y ) =a
+0
++a
+1
+Y;
+ 
+S(Y ) =b
+0
++b
+1
+Y:
+(9)
+Substituting (9) into (8) and collecting the coe cients of Y , we have
+  a
+1
++ ca
+1
++
+a
+1
+b
+1
+"
+ 
+b
+2
+1
+"
+= 0;
+a
+1
+b
+0
++a
+0
+b
+1
+  2b
+0
+b
+1
+= 0; (10)
+ a
+1
+  ca
+1
++
+a
+0
+b
+0
+"
+ 
+b
+2
+0
+"
+= 0
+and
+ b
+1
++ cb
+1
+ 
+a
+1
+b
+1
+"
++
+b
+2
+1
+"
+= 0;
+ a
+1
+b
+0
+ a
+0
+b
+1
++ 2b
+0
+b
+1
+= 0; (11)
+  b
+1
+  cb
+1
+ 
+a
+0
+b
+0
+"
++
+b
+2
+0
+"
+= 0:
+Solving algebraic equations system with the aid of the Mathematica Package,
+we have the following solutions:
+Case 1.
+a
+0
+=
+(1  3c)
+q
+(c 1)
+2
+(c+1)
+3
+c
+2
+ "
+2(c  1)
+p
+c + 1
+;b
+0
+= 
+q
+(c 1)
+2
+(c+1)
+3
+c
+2
+ "
+2
+p
+c + 1
+;
+a
+1
+=
+1
+2
+(2 +
+1
+c
++c) ";b
+1
+= 
+(c
+2
+  1) "
+2c
+; 2R:
+Case 2.
+a
+0
+= 
+(1  3c)
+q
+(c 1)
+2
+(c+1)
+3
+c
+2
+ "
+2(c  1)
+p
+c + 1
+;b
+0
+=
+q
+(c 1)
+2
+(c+1)
+3
+c
+2
+ "
+2
+p
+c + 1
+;
+a
+1
+=
+1
+2
+(2 +
+1
+c
++c) ";b
+1
+= 
+(c
+2
+  1) "
+2c
+; 2R:
+For case 1, the kink soliton solution has the form
+u(x;t) =
+(1  3c)
+q
+(c 1)
+2
+(c+1)
+3
+c
+2
+ "
+2(c  1)
+p
+c + 1
++
+1
+2
+(2 +
+1
+c
++c) " tanh
+ 
+ (x ct)
+ 
+;
+w(x;t) = 
+q
+(c 1)
+2
+(c+1)
+3
+c
+2
+ "
+2
+p
+c + 1
+ 
+(c
+2
+  1) "
+2c
+tanh
+ 
+ (x ct)
+ 
+:
+(12)
+Electronic Journal. http://diffjournal.spbu.ru/ 91Differential Equations and Control Processes, N. 2, 2021
+For case 2, we have the solution
+u(x;t) = 
+(1  3c)
+q
+(c 1)
+2
+(c+1)
+3
+c
+2
+ "
+2(c  1)
+p
+c + 1
++
+1
+2
+(2 +
+1
+c
++c) " tanh
+ 
+ (x ct)
+ 
+;
+w(x;t) =
+q
+(c 1)
+2
+(c+1)
+3
+c
+2
+ "
+2
+p
+c + 1
+ 
+(c
+2
+  1) "
+2c
+tanh
+ 
+ (x ct)
+ 
+:
+4 The extended tanh-function method
+The extended tanh method admits the use of  nite series
+U( ) =S(Y ) =
+M
+X
+m=0
+a
+m
+Y
+m
++
+L
+X
+l=1
+b
+l
+Y
+ l
+;
+W ( ) =
+ 
+S(Y ) =
+P
+X
+p=0
+c
+p
+Y
+p
++
+D
+X
+d=1
+f
+d
+Y
+ d
+;
+(13)
+where M;L;N;D are nonnegative integers. Substituting (13) into (8) and bal-
+ancing the highest, lowest powers of Y , we obtain
+2 +M  1 = 2P =M +P;
+2 +P  1 = 2P =M +P
+and
+ L  1 = 2D = L D;
+ D  1 = 2D = L D;
+so that M =P =N =D = 1: Then we seek the solution of (6) in the form
+U( ) =S(Y ) =a
+0
++a
+1
+Y +b
+1
+Y
+ 1
+;
+W ( ) =
+ 
+S(Y ) =c
+0
++c
+1
+Y +f
+1
+Y
+ 1
+:
+(14)
+Substituting (14) into (8) and collecting the coe cients of Y , we have
+  a
+1
++ ca
+1
++
+a
+1
+c
+1
+"
+ 
+c
+2
+1
+"
+= 0;
+a
+1
+c
+0
++a
+0
+c
+1
+  2c
+0
+c
+1
+= 0;
+b
+1
+c
+0
++a
+0
+f
+1
+  2c
+0
+f
+1
+= 0;
+  b
+1
++ cb
+1
++
+b
+1
+f
+1
+"
+ 
+f
+2
+1
+"
+= 0;
+a
+0
+c
+0
+"
+ 
+c
+2
+0
+"
++
+b
+1
+c
+1
+"
++
+a
+1
+f
+1
+"
+ 
+2c
+1
+f
+1
+"
++ a
+1
++ b
+1
+  ca
+1
+  cb
+1
+= 0
+Electronic Journal. http://diffjournal.spbu.ru/ 92Differential Equations and Control Processes, N. 2, 2021
+and
+ c
+1
++ cc
+1
+ 
+a
+1
+c
+1
+"
++
+c
+2
+1
+"
+= 0;
+ a
+1
+c
+0
+ a
+0
+c
+1
++ 2c
+0
+c
+1
+= 0;
+ b
+1
+c
+0
+ a
+0
+f
+1
++ 2c
+0
+f
+1
+= 0;
+ f
+1
++ cf
+1
+ 
+b
+1
+f
+1
+"
++
+f
+2
+1
+"
+= 0;
+ 
+a
+0
+c
+0
+"
++
+c
+2
+0
+"
+ 
+b
+1
+c
+1
+"
+ 
+a
+1
+f
+1
+"
++
+2c
+1
+f
+1
+"
+  c
+1
+  f
+1
+  cc
+1
+  cf
+1
+= 0:
+We obtain solutions:
+Case 1.
+a
+0
+= 
+(1  3c)f
+1
+c  1
+;a
+1
+= 0;b
+1
+= 
+(c + 1)
+c  1
+f
+1
+;
+c
+0
+=f
+1
+;c
+1
+= 0;  =
+2cf
+1
+(1 c
+2
+)"
+:
+Case 2.
+a
+0
+=
+(1  3c)f
+1
+c  1
+;a
+1
+= 0;b
+1
+= 
+(c + 1)
+c  1
+f
+1
+;
+c
+0
+= f
+1
+;c
+1
+= 0;  =
+2cf
+1
+(1 c
+2
+)"
+:
+Case 3.
+a
+0
+=
+2(1  3c)
+p
+(c + 1)f
+2
+1
+(c  1)
+p
+c + 1
+;a
+1
+= 
+(c + 1)f
+1
+c  1
+;b
+1
+= 
+(c + 1)f
+1
+c  1
+;
+c
+0
+= 
+2
+p
+(c + 1)f
+2
+1
+p
+c + 1
+;c
+1
+=f
+1
+;  =
+2cf
+1
+(1 c
+2
+)"
+:
+Case 4.
+a
+0
+= 
+2(1  3c)
+p
+(c + 1)f
+2
+1
+(c  1)
+p
+c + 1
+;a
+1
+= 
+(c + 1)f
+1
+c  1
+;b
+1
+= 
+(c + 1)f
+1
+c  1
+;
+c
+0
+=
+2
+p
+(c + 1)f
+2
+1
+p
+c + 1
+;c
+1
+=f
+1
+;  =
+2cf
+1
+(1 c
+2
+)"
+:
+Here f
+1
+is any real number for cases 1-4. For case 1, we have
+u(x;t) = 
+(1  3c)f
+1
+c  1
+ 
+(c + 1)
+c  1
+f
+1
+coth
+ 
+2cf
+1
+(1 c
+2
+)"
+(x ct)
+ 
+;
+w(x;t) =f
+1
++f
+1
+coth
+ 
+2cf
+1
+(1 c
+2
+)"
+(x ct)
+ 
+:
+(15)
+Electronic Journal. http://diffjournal.spbu.ru/ 93Differential Equations and Control Processes, N. 2, 2021
+For case 3, we have
+u(x;t) =
+2(1  3c)
+p
+(c + 1)f
+2
+1
+(c  1)
+p
+c + 1
+ 
+(c + 1)f
+1
+c  1
+tanh
+ 
+2cf
+1
+(1 c
+2
+)"
+(x ct)
+ 
+ 
+(c + 1)f
+1
+c  1
+coth
+ 
+2cf
+1
+(1 c
+2
+)"
+(x ct)
+ 
+; (16)
+w(x;t) = 
+2
+p
+(c + 1)f
+2
+1
+p
+c + 1
++f
+1
+tanh
+ 
+2cf
+1
+(1 c
+2
+)"
+(x ct)
+ 
++f
+1
+coth
+ 
+2cf
+1
+(1 c
+2
+)"
+(x ct)
+ 
+:
+5 The (G
+0
+=G)-expansion method
+We suppose that
+U( ) =
+n
+X
+i=0
+a
+i
+ 
+G
+0
+G
+ 
+i
+;
+W ( ) =
+m
+X
+i=0
+b
+i
+ 
+G
+0
+G
+ 
+i
+;
+(17)
+where G =G( ) satis es (5). Balancing between U
+0
+and UW yields
+n + 1 =n +m;m = 1:
+Similarly
+m + 1 =n +m;n = 1:
+Then
+U( ) =a
+0
++a
+1
+ 
+G
+0
+G
+ 
+;
+W ( ) =b
+0
++b
+1
+ 
+G
+0
+G
+ 
+:
+(18)
+Note that
+U
+0
+=a
+1
+ 
+  
+ 
+G
+0
+G
+ 
+   
+ 
+G
+0
+G
+ 
+2
+ 
+;
+W
+2
+=b
+2
+0
++ 2b
+0
+b
+1
+ 
+G
+0
+G
+ 
++b
+2
+1
+ 
+G
+0
+G
+ 
+2
+;
+UW =a
+0
+b
+0
++a
+0
+b
+1
+ 
+G
+0
+G
+ 
++b
+0
+a
+1
+ 
+G
+0
+G
+ 
++a
+1
+b
+1
+ 
+G
+0
+G
+ 
+2
+:
+Electronic Journal. http://diffjournal.spbu.ru/ 94Differential Equations and Control Processes, N. 2, 2021
+Substituting (18) into (6) and collecting the coe cients of G
+0
+=G, we have
+a
+0
+b
+0
+"
+ 
+b
+2
+0
+"
+  a
+1
++ ca
+1
+= 0;
+a
+1
+b
+0
+"
++
+a
+0
+b
+1
+"
+ 
+2b
+0
+b
+1
+"
+  a
+1
++ ca
+1
+= 0; (19)
+a
+1
+b
+1
+"
+ 
+b
+2
+1
+"
+ a
+1
++ca
+1
+= 0
+and
+ 
+a
+0
+b
+0
+"
++
+b
+2
+0
+"
++ b
+1
++ cb
+1
+= 0;
+ 
+a
+1
+b
+0
+"
+ 
+a
+0
+b
+1
+"
++
+2b
+0
+b
+1
+"
++ b
+1
++ cb
+1
+= 0; (20)
+ 
+a
+1
+b
+1
+"
++
+b
+2
+1
+"
++b
+1
++cb
+1
+= 0:
+Solving (19) and (20) by the Wolfram Mathematica gives
+Case 1.
+a
+0
+=
+ " (c + 1)
+2
+(c  1)c +
+p
+(c
+3
+ c)
+2
+"
+2
+( 
+2
+  4 )(1  3c)
+4c
+2
+(1 c)
+;
+b
+0
+=
+" c(1 c
+2
+) +
+p
+(c
+3
+ c)
+2
+"
+2
+( 
+2
+  4 )
+4c
+2
+;
+a
+1
+=
+(c + 1)
+2
+"
+2c
+;b
+1
+=
+"(1 c
+2
+)
+2c
+:
+Case 2.
+a
+0
+=
+" (c + 1)
+2
+(c  1)c +
+p
+(c
+3
+ c)
+2
+"
+2
+( 
+2
+  4 )(1  3c)
+4c
+2
+(c  1)
+;
+b
+0
+= 
+" c(c
+2
+  1) +
+p
+(c
+3
+ c)
+2
+"
+2
+( 
+2
+  4 )
+4c
+2
+;
+a
+1
+=
+(c + 1)
+2
+"
+2c
+;b
+1
+=
+"(1 c
+2
+)
+2c
+:
+Solving (5), we have for  
+2
+  4 > 0
+G
+0
+G
+=
+1
+2
+p
+ 
+2
+  4 
+ 
+C
+1
+cosh
+ 
+1
+2
+p
+ 
+2
+  4  
+ 
++C
+2
+sinh
+ 
+1
+2
+p
+ 
+2
+  4  
+ 
+C
+1
+sinh
+ 
+1
+2
+p
+ 
+2
+  4  
+ 
++C
+2
+cosh
+ 
+1
+2
+p
+ 
+2
+  4  
+ 
+!
+ 
+ 
+2
+;
+(21)
+Electronic Journal. http://diffjournal.spbu.ru/ 95Differential Equations and Control Processes, N. 2, 2021
+where C
+1
+;C
+2
+are arbitrary constants. When  
+2
+  4 < 0; we have
+G
+0
+G
+=
+1
+2
+p
+4   
+2
+ 
+C
+1
+cos
+ 
+1
+2
+p
+4   
+2
+ 
+ 
+ C
+2
+sin
+ 
+1
+2
+p
+4   
+2
+ 
+ 
+C
+1
+sin
+ 
+1
+2
+p
+4   
+2
+ 
+ 
++C
+2
+cos
+ 
+1
+2
+p
+4   
+2
+ 
+ 
+!
+ 
+ 
+2
+; (22)
+When  
+2
+  4  = 0; we have
+G
+0
+G
+=
+C
+2
+C
+1
++C
+2
+ 
+ 
+ 
+2
+: (23)
+Case 1. When  
+2
+  4 > 0, we have
+u( ) =
+ " (c + 1)
+2
+(c  1)c +
+p
+(c
+3
+ c)
+2
+"
+2
+( 
+2
+  4 )(1  3c)
+4c
+2
+(1 c)
++
+(c + 1)
+2
+"
+2c
+A;
+(24)
+w( ) =
+" c(1 c
+2
+) +
+p
+(c
+3
+ c)
+2
+"
+2
+( 
+2
+  4 )
+4c
+2
++
+(1 c
+2
+)"
+2c
+A; (25)
+where A =
+G
+0
+G
+is determined by (21),   =x ct:
+When  
+2
+  4 < 0; we have
+u( ) =
+ " (c + 1)
+2
+(c  1)c +
+p
+(c
+3
+ c)
+2
+"
+2
+( 
+2
+  4 )(1  3c)
+4c
+2
+(1 c)
++
+(c + 1)
+2
+"
+2c
+B;
+w( ) =
+" c(1 c
+2
+) +
+p
+(c
+3
+ c)
+2
+"
+2
+( 
+2
+  4 )
+4c
+2
++
+(1 c
+2
+)"
+2c
+B;
+where B =
+G
+0
+G
+is determined by (22),   =x ct:
+When  
+2
+  4  = 0; we have
+u( ) =
+ " (c + 1)
+2
+(c  1)c
+4c
+2
+(1 c)
++
+(c + 1)
+2
+"
+2c
+ 
+C
+2
+C
+1
++C
+2
+ 
+ 
+ 
+2
+ 
+;
+w( ) =
+" c(1 c
+2
+)
+4c
+2
++
+(1 c
+2
+)"
+2c
+ 
+C
+2
+C
+1
++C
+2
+ 
+ 
+ 
+2
+ 
+;
+where   =x ct;C
+1
+;C
+2
+are arbitrary constants.
+Case 2. When  
+2
+  4 > 0, we have
+u( ) =
+" (c + 1)
+2
+(c  1)c +
+p
+(c
+3
+ c)
+2
+"
+2
+( 
+2
+  4 )(1  3c)
+4c
+2
+(c  1)
++
+(c + 1)
+2
+"
+2c
+A;
+Electronic Journal. http://diffjournal.spbu.ru/ 96Differential Equations and Control Processes, N. 2, 2021
+w( ) = 
+" c(c
+2
+  1) +
+p
+(c
+3
+ c)
+2
+"
+2
+( 
+2
+  4 )
+4c
+2
++
+"(1 c
+2
+)
+2c
+A;
+where A =
+G
+0
+G
+is determined by (21),   =x ct:
+When  
+2
+  4 < 0, we have
+u( ) =
+" (c + 1)
+2
+(c  1)c +
+p
+(c
+3
+ c)
+2
+"
+2
+( 
+2
+  4 )(1  3c)
+4c
+2
+(c  1)
++
+(c + 1)
+2
+"
+2c
+B;
+w( ) = 
+" c(c
+2
+  1) +
+p
+(c
+3
+ c)
+2
+"
+2
+( 
+2
+  4 )
+4c
+2
++
+"(1 c
+2
+)
+2c
+B;
+where B =
+G
+0
+G
+is determined by (22),   =x ct:
+When  
+2
+  4  = 0, we have
+u( ) =
+" (c + 1)
+2
+c
+4c
+2
++
+(c + 1)
+2
+"
+2c
+ 
+C
+2
+C
+1
++C
+2
+ 
+ 
+ 
+2
+ 
+;
+w( ) = 
+" c(c
+2
+  1)
+4c
+2
++
+"(1 c
+2
+)
+2c
+ 
+C
+2
+C
+1
++C
+2
+ 
+ 
+ 
+2
+ 
+;
+where   = x ct;C
+1
+;C
+2
+are arbitrary constants. Thus, we obtain three types
+of solutions by the (G
+0
+=G)-expansion method.
+Remark. Note that the solutions are related. Consider c > 1. The solu-
+tions (12), (15) can be written in the form
+u(x;t) =
+(1  3c)(c + 1) "
+2c
++
+(c + 1)
+2
+2c
+ " tanh
+ 
+    
+0
+ 
+;  =x ct;
+w(x;t) = 
+(c  1)(c + 1) "
+2c
+ 
+(c
+2
+  1) "
+2c
+tanh
+ 
+    
+0
+ 
+:
+(26)
+Assuming  
+0
+= 0 in (26), we obtain the solution (12). If  
+0
+=
+i 
+2
+;  =
+2cf
+1
+(1 c
+2
+)"
+;
+we have the solution (15). Similarly, one can show the relationship of the
+formulas (15) and (16) using tanh(k )+coth(k ) = 2 coth(2k ). Also note that
+if C
+1
+= 0;C
+2
+= 1; we can reduce (24) to (12)
+u( ) =
+ " (c + 1)
+2
+(c  1)c +
+p
+(c
+3
+ c)
+2
+"
+2
+( 
+2
+  4 )(1  3c)
+4c
+2
+(1 c)
++
++
+(c + 1)
+2
+"
+2c
+ 
+1
+2
+p
+ 
+2
+  4  tanh(
+1
+2
+p
+ 
+2
+  4  ) 
+ 
+2
+ 
+=
+=b
+0
++b
+1
+tanh( 
+ 
+ );
+Electronic Journal. http://diffjournal.spbu.ru/ 97Differential Equations and Control Processes, N. 2, 2021
+where
+b
+0
+=
+ " (c + 1)
+2
+(c  1)c +
+p
+(c
+3
+ c)
+2
+"
+2
+( 
+2
+  4 )(1  3c)
+4c
+2
+(1 c)
+ 
+(c + 1)
+2
+"
+2c
+ 
+2
+;
+b
+1
+=
+(c + 1)
+2
+"
+2c
+p
+ 
+2
+  4 
+2
+; 
+ 
+=
+1
+2
+p
+ 
+2
+  4 :
+Similarly, we can get for w(x;t).
+Example. Consider the McKean system
+@
+t
+u +@
+x
+u =w
+2
+ uw; x2R; t> 0;
+@
+t
+w @
+x
+w =uw w
+2
+;
+(27)
+with the boundary conditions
+u(+1;t) = 2;w(+1;t) = 0:
+The system (27) has the following analytical solution
+u(x;t) = 
+7
+4
+ 
+1
+4
+tanh (2t +x);
+w(x;t) = 
+3
+4
++
+3
+4
+tanh (2t +x):
+Conclusion
+In this work, we have found the exact travelling wave solutions of the ki-
+netic McKean system by using the tanh{function method, the extended tanh{
+function method and the (G
+0
+=G) method. All of the above solutions have been
+veri ed using the Mathematica package. In the future the solutions of the
+remaining kinetic models will be found.
+References
+[1] Godunov S. K., Sultangazin U. M. On discrete models of the kinetic Boltz-
+mann equation. Russian Mathematical Surveys, 1971; 26(3): 1{56.
+[2] Euler N., Steeb W.-H. Painlev  e test and discrete Boltzmann equations.
+Australian Journal of Physics, 1989; (42): 1{10.
+Electronic Journal. http://diffjournal.spbu.ru/ 98Differential Equations and Control Processes, N. 2, 2021
+[3] Tchier F.,Inc M. and Yusuf A. Symmetry analysis, exact solutions and nu-
+merical approximations for the space-time Carleman equation in nonlinear
+dynamical systems. The European Physical Journal Plus, 2019; 134(250):
+1{18.
+[4] Dukhnovskii S. A. Solutions of the Carleman system via the Painlev  e ex-
+pansion. Vladikavkaz Math. J., 2020; 22(4): 58{67. (In Russ.)
+[5] Dukhnovsky S. On solutions of the kinetic McKean system. Bul. Acad.
+S  tiint  e Repub. Mold. Mat., 2020, 3(94), 3-11.
+[6] Maliet W. The tanh method: a tool for solving certain classes of nonlin-
+ear evolution and wave equations. Journal of Computational and Applied
+Mathematics, 2004; (164-165): 529{541.
+[7] Bekir A. Application of the (G
+0
+=G)-expansion method for nonlinear evolu-
+tion equations. Physics Letters A, 2008; 372(19): 3400{3406.
+[8] Shi Y., Li X., Zhang B-G. Traveling Wave Solutions of Two Nonlinear
+Wave Equations by (G
+0
+=G)-Expansion Method. Advances in Mathematical
+Physics, 2018; (2018): 1{8.
+[9] Akbar M. Ali, Norhashidah Mohd Ali Exact solutions to some nonlin-
+ear partial differential equations in mathematical physics via the (G
+0
+=G)-
+expansion method. Research Journal of Applied Sciences, Engineering and
+Technology, 2013; 6(19): 3527{3535.
+[10] Vedenyapin V., Sinitsyn A., Dulov E. Kinetic Boltzmann, Vlasov and re-
+lated equations. Amsterdam, Elsevier, 2011, xiii+304 pp.
+[11] Aristov V.V., Ilyin O.V. Description of the rapid invasion processes by
+means of the kinetic model. Computer Research and Modeling, 2014; 6(5):
+829{838.(In Russ.)
+[12] Vasil'eva O. A. Computer research of building materials. E3S Web of Con-
+ferences, 2019; (197), 02011: 1{6.
+[13] Dukhnovskii S. A. Painlev  e test and a self-similar solution of the kinetic
+model. Itogi Nauki i Tekhniki. Ser. Sovrem. Mat. Pril. Temat. Obz., 2020;
+(176): 91{94. (In Russ.)
+[14] Fan E., Zhang H. A note on the homogeneous balance method. Physics
+Letters A, 1998; 246(5): 403{406.
+Electronic Journal. http://diffjournal.spbu.ru/ 99Differential Equations and Control Processes, N. 2, 2021
+[15] Biazar J., Ayati Z. Exp and modi ed Exp function methods for nonlinear
+Drinfeld{Sokolov system. Journal of King Saud University { Science, 2012;
+24(4): 315{318.
+[16] Marwan Alquran, Adnan Jarrah Jacobi elliptic function solutions for a
+two-mode KdV equation. Journal of King Saud University { Science, 2019;
+31(4):485{489.
+[17] Zhang W. The Extended Tanh method and the Exp-function method to
+solve a kind of nonlinear heat equation. Mathematical Problems in Engi-
+neering, 2010; (2010): 1{12.
+[18] Wazwaz A. M. The tanh method: exact solutions of the sine-Gordon and
+the sinh-Gordon equations. Applied Mathematics and Computation, 2005;
+(167): 1196{1210.
+[19] Wazwaz A. M. The tanh and the sine-cosine methods for the complex mod-
+i ed KdV and the generalized kdV equations. Computers and Mathematics
+with Applications, 2005; (49): 1101{1112.
+[20] Lindblom O., Euler N. Solutions of discrete-velocity Boltzmann equations
+via Bateman and Riccati equations. Theoretical and Mathematical Physics,
+2002; 131(2): 595{608.
+[21] Radkevich E. V. On the large-time behavior of solutions to the Cauchy
+problem for a 2-dimensional discrete kinetic equation. Journal of Mathe-
+matical Sciences, 2014; 202(5): 735{768.
+[22] Dukhnovkii S. A. On a speed of solutions stabilization of the Cauchy prob-
+lem for the Carleman equation with periodic initial data. J. Samara State
+Tech. Univ., Ser. Phys. Math. Sci., 2017; 21(1): 7{41. (In Russ.)
+[23] Vasil'eva O. A., Dukhnovskii S. A., Radkevich E. V. On the nature of local
+equilibrium in the Carleman and Godunov-Sultangazin equations. Journal
+of Mathematical Sciences, 2018; 235(4): 393{453.
+Electronic Journal. http://diffjournal.spbu.ru/ 100
