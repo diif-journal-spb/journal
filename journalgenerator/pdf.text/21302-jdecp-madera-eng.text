@@ -1,0 +1,2040 @@
+﻿DIFFERENTIAL EQUATIONS 
+AND 
+CONTROL PROCESSES 
+N. 3, 2021 
+Electronic Journal, 
+reg. N ФС77-39410 at 15.04.2010 
+ISSN 1817-2172 
+ 
+http://diffjournal.spbu.ru/ 
+e-mail: jodiff@mail.ru 
+ 
+ 
+ 
+Theory of ordinary differential equations 
+ 
+A method for obtaining an explicit solution of second-order matrix 
+ODE based on diagonalization the matrices and the Kronecker matrix 
+algebra 
+ 
+Madera Alexander G. 
+ 
+Scientific Research Institute for System Analysis  
+ Russian Academy of Sciences 
+ 
+agmprof@mail.ru 
+ 
+Abstract. A method for obtaining an explicit solution of matrix differential equations in second-
+order ordinary derivatives with constant matrices is considered. The method allows one to reduce 
+the initial system of interconnected differential equations to a system of independent differential 
+equations that are easily solved analytically. The method developed in the article is based on the 
+diagonalization of all matrices included in the equation, which is carried out using the spectral 
+decomposition of the matrices and Kronecker matrix algebra. An example of the application of the 
+developed method is given. 
+ 
+Keywords: matrix differential equations in ordinary derivatives, diagonalization of matrices, 
+spectral decomposition of a matrix, Kronecker matrix algebra. 
+ 
+1. Introduction 
+ 
+Mathematical modeling of processes of various physical nature [1, 2, 3, 4], such as, oscillations 
+in mechanical, electrical, electronic and hydraulic systems, dynamics of mechanical systems, wave 
+propagation in thermoelastic media, thermal stresses, aerodynamics of aircraft, control of 
+engineering systems, etc., results in a system of differential equations in second-order ordinary 
+derivatives, which takes the following form in matrix notation: 
+ 
+      2
+   (   )
+      2
++        (   )
+     +     (   )=   (   ), 
+ 
+(1) Differential Equations and Control Processes, N. 3, 2021 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/11 
+ 
+     (0)
+     =   0
+′
+,      (0)=   0
+, 
+ 
+where    ,    ,    – some time-independent     ×   -matrices;    (   )=(   1
+(   ),   2
+(   ),…,      (   ))
+   –    -
+vector of the required functions       (   ) ,    =1,2,…,   ;    (   )=(   1
+(   ),   2
+(   ),…,      (   ))
+   –    -vector 
+of the specified functions;    – time;    0
+=(   01
+,   02
+,…,   0   )
+   and    0
+′
+=(   01
+′
+,   02
+′
+,…,   0   ′
+)
+   –    -
+vectors of the initial conditions of the required functions       (   ) and their first-order derivatives  
+         (   )     ⁄ at the initial moment of time    =0; (∙)
+   – operation of transposition. 
+Despite a fairly large number of methods for solving systems of various-order ordinary 
+differential equations, including numerical ones [4, 5, 6, 7, 8], the importance of developing 
+methods for explicit analytical solutions remains relevant and in demand when carrying out any 
+substantial analysis of the investigated physical phenomena and processes, as well as mathematical 
+models that describe them. 
+To obtain analytical solutions of a system of ordinary differential equations, it is necessary to 
+reduce the system of initially coupled equations to a system of independent decoupled equations or, 
+at least, reduce the degree of interrelationship [9, 10, 11]. Obtaining decoupled equations is 
+achieved by reducing all matrices of the system of ordinary differential equations to a completely 
+diagonal form. At the same time, reducing the matrices of the system of equations to “almost 
+diagonal form”, for instance, to the Jordan canonical form, although reduces the degree of 
+interrelationship of the equations, does not eliminate it completely [11]. This article suggests a 
+method for achieving a complete diagonalization of all matrices included in the system of ordinary 
+differential equations (1). In the existing literature [9, 10], diagonalization of matrices in matrix 
+ordinary differential equations is considered only in relation to the first-order equations, while 
+methods for diagonalizing matrices included in matrix ordinary differential equations of the second 
+and higher orders are not suggested at all. 
+It's also worth noting that to reduce the solution of matrix ordinary differential equations of 
+various orders, including with numerical methods, one strives, first of all, to get rid of the matrix A 
+at the highest-order derivative, for instance, by multiplying both parts of original equation (1) by its 
+inverse matrix    −1
+. However, the matrix A at the highest-order derivative of the equation does not 
+always have an inverse matrix, which can be due to the matrix singularity, semidefiniteness, or the 
+presence of the rank of matrix of the lesser dimension. The method developed in the article allows 
+reducing the original system of coupled equations (1) to a system of uncoupled equations and 
+obtaining their analytical solutions for both singular and semidefinite matrices at the highest 
+derivative. 
+One of the most powerful methods for obtaining analytical solutions of the systems of 
+differential equations is to reduce the matrices included in the system of equations to a diagonal 
+form. In this case, the system of coupled equations of differential equations is decomposed into    
+independent equations for each unknown       (   ) ,    =1,2,…,   , in the vector    (   ) , the solutions of 
+which are easily determined analytically. This approach is used to develop analytical solutions of 
+matrix differential equations with one or two matrices, namely, such matrix equations as    ̇(   )+
+     (   )=0 [9] and       ̈(   )+     (   )=0 [10] (   ̇(   ) , where    ̈(   ) – shorthand notation for       (   )     ⁄ 
+and    2
+      2
+⁄ , respectively. 
+For instance, in the equation    ̇(   )+     (   )=0,    (0)=   0
+ with one matrix, the matrix    is 
+subjected to the spectral decomposition            =Λ
+   with the diagonal matrix 
+Λ
+   =         {λ
+   1
+,λ
+   2
+,…,λ
+    
+}, consisting of the eigenvalues λ
+    
+,    =1,2,…,   , and the orthonormal 
+matrix    , composed of the eigenvectors of the matrix    . The spectral decomposition of the matrix    
+allows reducing the matrix equation    ̇(   )+     (   )=0 to a system of    independent equations  
+   ̇   (   )+λ
+    
+      (   )=0,    0   (0)=   0   ,    =1,2,…,   , with respect to the new transformed vector Differential Equations and Control Processes, N. 3, 2021 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/12 
+   (   )=(   1
+(   ),   2
+(   ),…,      (   ))
+   , the solutions of which are easily found analytically and are 
+      (   )=exp (−λ
+    
+   )   0   [9]. 
+As for the equation       ̈(   )+     (   )=0 with two matrices, the application of the method under 
+consideration is significantly complicated by the fact that in this case it is necessary to 
+simultaneously diagonalize the matrices    and    . This complexity can be overcome using the 
+theorem [9, 10] on the reduction of two real non-singular symmetric matrices    and    (moreover, 
+the matrix    is a positive definite one) with one non-singular transformation of the similarity    , 
+which transforms the matrix    to a diagonal identity matrix, and the matrix    -  to a diagonal 
+matrix, consisting of eigenvalues of some specially defined matrix [9, 10]. As a result of the 
+simultaneous diagonalization of the matrices    and    , the matrix equation    ̈(   )+     (   )=0 is 
+decomposed into a system of    independent equations      ̈(   )+λ
+        (   )=0,    =1,2,…,   , with 
+respect to the transformed vector    (   ) . The solutions of these equations are easily found  
+analytically:       (   )=     cos(λ
+     +     ) , where       and       – constants, determined from the initial 
+conditions [10].  
+At the same time, there are no methods that allow ontaining explicit solutions of matrix 
+differential equations, which include more than two matrices and require simultaneous reduction to 
+the diagonal form of more than two matrices. 
+This article suggests a method that allows reducing matrix differential equations (1) to a system of 
+independent equations, each of which is easily solved analytically. The method is based on the spectral 
+decomposition of matrices included in the equation and the use of Kronecker matrix algebra. Therewith, 
+simultaneous diagonalization is applied to two of the three matrices from the equation, in which one of the 
+matrices is reduced to a diagonal identity matrix, and the other to a diagonal form of some specially 
+constructed matrix. The diagonalization of the third remaining matrix is carried out by moving from the 
+usual matrix space to the Kronecker matrix space, in which the rules of Kronecker matrix algebra are 
+applied. To apply the method, it is sufficient that only one of the matrices in the equation is a positive 
+definite one, while the other two matrices can be nonsymmetric and positive semidefinite. The application 
+of the developed method is considered in a specific context. 
+ 
+2. Diagonalizing the matrix differential equation with three matrices 
+ 
+Let’s consider the matrix differential equation in second-order ordinary derivatives (1) and bring 
+all three matrices of the equation    ,    and    to a diagonal form. It is assumed that    ,    ,    are 
+square, real, time-independent and not necessarily symmetric    ×   matrices. One of the matrices 
+is positive definite, the other two can be positive semidefinite. In equation (1), first, the positive 
+definite matrix that can be reduced with some non-singular similarity transformation to a diagonal 
+identity matrix is diagonalized, and then another matrix of the equation is diagonalized. To 
+diagonalize the third matrix, the entire equation with two previously diagonalized matrices is 
+transformed, whereby the transition is made from the space with ordinary matrix algebra to the 
+Kronecker space, in which Kronecker matrix algebra is applied. 
+For definiteness, let’s further assume that the matrix    at the second derivative in equation (1) is 
+a real positive definite (and symmetric)     ×   -matrix, and the other two      ×   -matrices     ,    
+can be positive and semidefinite. 
+ 
+2.1. Diagonalizing the matrix A in matrix equation (1) 
+ 
+Let the spectral decomposition of the symmetric positive definite matrix    have the form 
+   −1
+     =Λ
+   , where    is the transforming    ×   -similarity matrix [10, 11], consisting of the 
+eigenvectors of the matrix    ; Λ
+   =         {λ
+   1
+,λ
+   2
+,…,λ
+    
+} is the diagonal matrix of the eigenvalues 
+λ
+      ,    =1,2,…,   , of the matrix    , where all its eigenvalues λ
+   1
+,λ
+   2
+,…,λ
+    
+  are positive due to the 
+positive definiteness of the matrix    . 
+ Differential Equations and Control Processes, N. 3, 2021 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/13 
+ 
+Let’s introduce into equation (1) and the initial conditions a new vector variable    ∗
+ according to 
+the equation    =   Λ
+   −
+1
+2
+   ∗
+ and multiply the resulting equation and the initial conditions on the left by 
+the matrix Λ
+   −
+1
+2
+   −1
+. The following will be obtained: 
+ 
+Λ
+   −
+1
+2
+   −1
+      Λ
+   −
+1
+2
+ 
+   2
+   ∗
+(   )
+      2
++Λ
+   −
+1
+2
+   −1
+      Λ
+   −
+1
+2
+ 
+      ∗
+(   )
+     +Λ
+   −
+1
+2
+   −1
+      Λ
+   −
+1
+2
+   ∗
+(   )=Λ
+   −
+1
+2
+   −1
+   (   ), 
+      ∗
+(0)
+     =Λ
+   1
+2
+   −1
+   0
+′
+,      ∗
+(0)=Λ
+   1
+2
+   −1
+   0
+ . 
+ 
+ 
+Taking into account that the matrix at the second-order derivative in the resulting equation is 
+Λ
+   −
+1
+2
+   −1
+      Λ
+   −
+1
+2
+=Λ
+   −
+1
+2
+Λ
+   Λ
+   −
+1
+2
+=   and introducing notation for the matrices    =Λ
+   −
+1
+2
+   −1
+      Λ
+   −
+1
+2
+ and 
+   =Λ
+   −
+1
+2
+   −1
+      Λ
+   −
+1
+2
+, the following will be obtained: 
+ 
+ 
+   2
+   ∗
+(   )
+      2
++         ∗
+(   )
+     +      ∗
+(   )=Λ
+   −
+1
+2
+   −1
+   (   ), 
+      ∗
+(0)
+     =Λ
+   1
+2
+   −1
+   0
+′
+,      ∗
+(0)=Λ
+   1
+2
+   −1
+   0
+ . 
+ 
+(2) 
+ 
+2.2. Diagonalizing the matrix D in transformed equation (2) 
+ 
+Let’s diagonalize the matrix    =Λ
+   −
+1
+2
+   −1
+      Λ
+   −
+1
+2
+  at the first-order derivative in equation (2). If 
+the spectral decomposition of the matrix D has the form    −1
+     =Λ
+   , then    – transforming  
+   ×   −similarity matrix, the columns of which are eigenvectors of the matrix    , and Λ
+   =
+         {λ
+   1
+,λ
+   2
+,…,λ
+      } – diagonal    ×   -matrix of eigenvalues of the matrix    . 
+ 
+Let’s implement a new change of variables in equation (2), namely, introduce       (   ) -vector 
+using equation    ∗
+(   )=      (   ) and multiply the resulting equation on the left by the matrix     −1
+. 
+Then indicating in equation (2)     ×   -matrices    =   −1
+     =   −1
+Λ
+   −
+1
+2
+   −1
+      Λ
+   −
+1
+2
+   ,    =
+   −1
+Λ
+   1
+2
+   −1
+,    =   −1
+Λ
+   −
+1
+2
+   −1
+, the following vector equation will be obtained: 
+ 
+ 
+   2
+   (   )
+      2
++Λ
+         (   )
+     +      (   )=     (   ), 
+     (0)
+     =      0
+′
+,      (0)=      0
+ . 
+(3) 
+ 
+Thus, equation (1) with three matrices is reduced to equation (3) with two diagonal matrices - a 
+diagonal identity matrix at the second derivative and a diagonal matrix Λ
+   at the first-order  
+derivative in the equation. 
+Let’s diagonalize matrix    . Differential Equations and Control Processes, N. 3, 2021 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/14 
+ 
+ 
+3. Diagonalizing the matrix F in transformed equation (3)  
+Let’s diagonalize    ×   -matrix    =   −1
+Λ
+   −
+1
+2
+   −1
+      Λ
+   −
+1
+2
+   in equation (3). For this, it is 
+necessary to make the transition from the matrix space with the usual rules for operations with 
+matrices to the Kronecker matrix space in which Kronecker matrix algebra, which is significantly 
+different from the usual one. Below is the brief information from Kronecker matrix algebra [6, 9, 
+10, 12, 13], which is of interest for the future: 
+ 
+3.1. Some facts from Kronecker matrix algebra 
+ 
+In Kronecker matrix algebra, the Kronecker product of two rectangular matrices    ×      =
+‖       
+‖∈ℱ
+   ×   (   =1,2,…,   ;    =1,2,…,   ) and    ×      =‖       
+‖∈ℱ
+   ×   (   =1,2,…,   ;    =
+1,2,…,   ) is defined as the block matrix    =   ⊗   in the matrix space ℱ
+     ×    
+, which is 
+composed according to the following rule: 
+ 
+   =   ⊗   =(
+   11
+      12
+   …    1        21
+      22
+   …    2     ⋮
+      1
+   ⋮
+      2
+   ⋱
+…
+⋮
+       
+   )∈ℱ
+     ×    
+.  
+ 
+Let’s introduce some useful statements from Kronecker matrix algebra: 
+(1) In the Kronecker space, multiple solutions of the matrix equation        =    with respect to 
+the unknown required matrix X and square real     ×   −matrices     ,   ,   ,   ∈ℱ
+   ×   coincides 
+with multiple solutions of the equation       =   , in which the matrix    ∈ℱ
+   2
+×   2  is    =   ⊗      , 
+and the vectors    ∈ℱ
+   2 and    ∈ℱ
+   2 are defined using the expressions:  
+ 
+ 
+   =(
+   1∗
+      2∗
+   ⋮
+      ∗
+   ),      =(
+   1∗
+      2∗
+   ⋮
+      ∗
+   ), (4) 
+ 
+where       ∗
+,    ∗   и       ∗
+,    ∗   – the    -th row (   =1,2,…,   ) and    -th column  (   =1,2,…,   ) of the 
+matrices     and    , respectively, * – notation of a set of elements in the    -th row       ∗
+ и       ∗
+ and a set 
+of elements in the    -th column     ∗   and    ∗   of the matrices    and    .  
+(2) The general linear matrix equation    1
+      1
++   2
+      2
++⋯+               =   , with respect to the 
+unknown matrix    ∈ℱ
+   ×   , with the matrices       ,   ,      ,   ∈ℱ
+   ×   and vectors    and    defined 
+with expressions (4), is equivalent to the equation    ∈ℱ
+   2
+×   2, in which the matrix    ∈ℱ
+   2
+×   2 
+(2) looks like    =   1
+⊗   1
+   +   2
+⊗   2
+   +⋯+      ⊗         . 
+(3) If    ∈ℱ
+   ×   and    ∈ℱ
+   ×   , with λ
+1
+,λ
+2
+,…,λ
+   ad μ
+1
+,μ
+2
+,…,μ
+   are the eigenvalues of the 
+matrices A and B, respectively, then the eigenvalues of the matrix function in ℱ
+     ×    
+ in the form 
+of    (   ,   )=∑        
+      ,   =0
+(      ⊗      ) , will be      of the values    (λ
+   ,μ
+   ) , where    =1,2,…,   and 
+   =1,2,…,   . 
+ 
+(4) Basic rules of matrix Kronecker algebra: 
+ 
+(a) (     )⊗   =   ⊗(     )=   (   ⊗   ) , where    is an arbitrary number,    ∈ℱ
+   ×   ,    ∈ℱ
+   ×   ; Differential Equations and Control Processes, N. 3, 2021 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/15 
+(b) (   +   )⊗   =   ⊗   +   ⊗   , where    ,   ∈ℱ
+   ×   ,    ∈ℱ
+   ×   ; 
+(c)    ⊗(   +   )=   ⊗   +   ⊗   , where    ∈ℱ
+   ×   ,    ,   ∈ℱ
+   ×   ; 
+(d) (   ⊗   )
+   =      ⊗      , где (∙)
+   – operation of transposition; 
+(e) (   ⊗   )(   ⊗   )=     ⊗     , where    ,   ∈ℱ
+   ×   ,    ,   ∈ℱ
+   ×   , (∙)(∙) – normal matrix 
+multiplication; 
+(f) (   1
+⊗   1
+)(   2
+⊗   2
+)…(      ⊗      )=(   1
+   2
+…      )⊗(   1
+   2
+…      ) , where    1
+,   2
+,…,      ∈ℱ
+   ×   
+and    1
+,   2
+,…,      ∈ℱ
+   ×   . 
+ 
+3.2. Transformation of equations (3) from the matrix space with ordinary matrix 
+algebra to the matrix space with Kronecker matrix algebra 
+ 
+To apply Kronecker matrix algebra, it is necessary to reduce matrix equation (3) with respect to 
+the vector of unknowns to a matrix equation with respect to the matrix of unknowns. For this, let’s 
+apply the following approach. 
+Let’s introduce  the     -vector     (   )=(   1
+(   ),   2
+(   ),…,      (   ))
+   in equation (3)  as the product 
+of    (   )=   (   )ℐ of the diagonal     ×   -matrix of variables    (   ) and the unit    -vector ℐ, namely, 
+ 
+ 
+   (   )=(
+   1
+(   ) 0 … 0
+0    2
+(   ) … 0
+⋮ ⋮ ⋱ ⋮
+0 0 …       (   )
+),   ℐ=(
+1
+1
+⋮
+1
+). 
+ 
+ 
+Similarly, let’s represent the    -vector    (   )=(   1
+(   ),   2
+(   ),…,      (   ))
+   on the right side of 
+equation (3) as the product of    (   )=Φ(   )ℐ of the diagonal    ×   -matrix Φ(   ) and the unit    -
+vector ℐ  
+ 
+Φ(   )=(
+   1
+(   ) 0 … 0
+0    2
+(   ) … 0
+⋮ ⋮ ⋱ ⋮
+0 0 …       (   )
+). 
+ 
+ 
+Similarly, let’s represent the m-vectors in the initial conditions    0
+=(   01
+,   02
+,…,   0   )
+   and 
+   0
+′
+=(   01
+′
+,   02
+′
+,…,   0   ′
+)
+   of equation (3) in the form of products of     0
+=   0
+ℐ and    0
+′
+=   0
+′
+ℐ of 
+diagonal    ×   -matrices    0
+ and    0
+′
+ and the    -vector ℐ=(11…1)
+   : 
+ 
+   0
+=(
+   01
+0 … 0
+0    02
+… 0
+⋮ ⋮ ⋱ ⋮
+0 0 …    0   ),      0
+′
+=(
+   01
+′
+0 … 0
+0    02
+′
+… 0
+⋮ ⋮ ⋱ ⋮
+0 0 …    0   ′
+). 
+ 
+ 
+Equation (3) may be written as follows: 
+ 
+ 
+   2
+   (   )
+      2
+ℐ+Λ
+         (   )
+     ℐ+      (   )ℐ=   Φ(   )ℐ, 
+(5) Differential Equations and Control Processes, N. 3, 2021 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/16 
+     (0)
+     ℐ=      0
+′
+ℐ,      (0)ℐ=      0
+ℐ , 
+ 
+ 
+wherein vector equation (3) with respect to the vector of unknowns    (   ) is reduced to matrix 
+equation (5) with respect to the matrix of unknowns    (   ) . 
+To move to the Kronecker space with Kronecker matrix algebra, let’s transform the matrices 
+   (   ),Φ(   ),   0
+′
+,   0
+∈ℱ
+   ×   in equation (5) into the corresponding Kronecker vectors    ,   ,   0
+,   0
+′
+∈
+ℱ
+   2  according to expressions of the form (4), namely, 
+ 
+ 
+   (   )=
+(
+ 
+   1∗
+   (   )
+   2∗
+   (   )
+⋮
+      ∗
+   (   ))
+ 
+,      (   )=
+(
+ 
+Φ
+1∗
+   (   )
+Φ
+2∗
+   (   )
+⋮
+Φ
+   ∗
+   (   ))
+ 
+,      0
+=
+(
+ 
+   01∗
+      02∗
+   ⋮
+   0   ∗
+   )
+ 
+,      0
+′
+=
+(
+ 
+   01∗
+′      02∗
+′   ⋮
+   0   ∗
+′   )
+ 
+, (6) 
+ 
+where       ∗
+(   ) , Φ
+  ∗
+(   ) ,    0  ∗
+,    0   ∗
+′
+ –    -th rows (   =1,2,…,   ) of the matrices    (   ),Φ(   ),   0
+,    0
+′
+∈
+ℱ
+   ×   , respectively. Therewith, in the vectors    (   ) ,    ,    0
+′
+ (9) the respective columns are equal to  
+Φ
+   ∗
+   (   )=(0,…,0,      (   ),0,…,0)
+   ,    0  ∗
+=(0,…,0,   0  ,0,…,0)
+   ,    0  ∗
+′
+=(0,…,0,   0   ′
+,0,…,0)
+   . 
+Then, in accordance with statement (1) (Section 3.1), the set of solutions of equation (5) with 
+respect to the required matrix    (   )∈ℱ
+   ×   in equation (5) coincides with the set of solutions of the 
+following equation in the Kronecker space with respect to the    2
+-vector     (   ) (see (6)):  
+ 
+(   ⊗ℐ
+   )
+   2
+   (   )
+      2
++(Λ
+   ⊗ℐ
+   )
+     (   )
+     +(   ⊗ℐ
+   )   (   )=(   ⊗ℐ
+   )   (   ), 
+(   ⊗ℐ
+   )
+     (0)
+     =(   ⊗ℐ
+   )   0
+′
+, (   ⊗ℐ
+   )   (0)=(   ⊗ℐ
+   )   0
+ . 
+(7) 
+ 
+By introducing in the last equation a new vector variable    (   )∈ℱ
+   according to the equation 
+   (   )=(   ⊗ℐ)   (   ) and taking into consideration that ℐ
+   ℐ=   , the following equation will be 
+obtained: 
+ 
+ 
+ (   ⊗   )
+   2
+   (   )
+      2
++(Λ
+   ⊗   )
+     (   )
+     +(   ⊗   )   (   )=(   ⊗ℐ
+   )   (   ), 
+(   ⊗   )
+     (0)
+     =(   ⊗ℐ
+   )   0
+′
+, (   ⊗   )   (0)=(   ⊗ℐ
+   )   0
+ . 
+(8) 
+ 
+Note. Let’s consider in more detail the question of the sets of solutions of the matrix vector 
+equation      =   with respect to the unknown vector    and the transformed matrix equation 
+     ℐ=   ℐ  with respect to the unknown diagonal matrix    (   - is the diagonal matrix on the right 
+side), and the matrix equation      =   , to which the equation      ℐ=   ℐ  is reduced in the transition 
+from the ordinary matrix space to the Kronecker space. 
+Let’s show that the set of solutions of the matrix algebraic equation      =   (or      ℐ=   ℐ) with 
+the non-singular matrix    ∈ℱ
+   ×   coincides with the set of solutions of the equation    ∈
+ℱ
+   ×        =     with the matrices     =(   ⊗ℐ
+   )∈ℱ
+   ×   2 and    =(   ⊗ℐ
+   )∈ℱ
+   ×   2 ) and 
+vectors    ∈ℱ
+   2 и    ∈ℱ
+   2 that are defined by equations: 
+ Differential Equations and Control Processes, N. 3, 2021 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/17 
+   =(
+   1∗
+      2∗
+   ⋮
+      ∗
+   ),      =(
+   1∗
+      2∗
+   ⋮
+      ∗
+   ) 
+ 
+ 
+where       ∗
+=(0,…,0,     ,0,…,0)
+   and       ∗
+=(0,…,0,     ,0,…,0)
+   .  
+In other words, the equation      =   (or the same equation, but written as      ℐ=   ℐ) is the 
+equation      =     , that is, the equation (   ⊗ℐ
+   )   =(   ⊗ℐ
+   )   . 
+Let’s express in the original equation      =   the required vector of unknowns    =
+(   1
+,   2
+…,      )
+   ∈ℱ
+    and the vector on the right side    =(   1
+,   2
+…,      )
+   ∈ℱ
+   in terms of the 
+diagonal matrices    ∈ℱ
+   ×   and    ∈ℱ
+   ×   in the form    =   ℐ and    =   ℐ, where the matrices    , 
+   and the vector ℐ∈ℱ
+    are equal 
+ 
+ 
+   =(
+   1
+0 … 0
+0    2
+… 0
+⋮ ⋮ ⋱ ⋮
+0 0 …       ),      =(
+   1
+0 … 0
+0    2
+… 0
+⋮ ⋮ ⋱ ⋮
+0 0 …       ),   ℐ=(
+1
+1
+⋮
+1
+). 
+ 
+ 
+ 
+Then the equation      =    can be represented as      ℐ=   ℐ. Note that the transformation of the 
+equation      =   for the vector of unknowns    to the equation      ℐ=   ℐ  for the matrix of 
+unknowns    , is necessary to move from the usual matrix space to the Kronecker space and apply  
+Kronecker matrix algebra (Section 3.1). 
+When describing in detail the Kronecker multiplication of the  matrices, it is easy to see that 
+ 
+ 
+(   ⊗ℐ
+   )   =(
+   11
+ℐ
+      12
+ℐ
+   …    1   ℐ
+      21
+ℐ
+      22
+ℐ
+   …    2   ℐ
+   ⋮ ⋮ ⋱ ⋮
+      1
+ℐ
+         2
+ℐ
+   ⋯        
+ℐ
+   )(
+   1∗
+      2∗
+   ⋮
+      ∗
+   )=     , 
+ 
+(   ⊗ℐ
+   )   =(
+ℐ
+         …             ℐ
+   …       ⋮ ⋮ ⋱ ⋮
+            ⋯ ℐ
+   )(
+   1∗
+      2∗
+   ⋮
+      ∗
+   )=   , 
+ 
+ 
+where ℐ
+   =(1 1…1)∈ℱ
+   ,       =(0 0…0)∈ℱ
+   . 
+  
+In this way,  the equations      =   и      =     are equivalent, where    =(   ⊗ℐ
+   )∈ℱ
+   ×   2 
+and    =(   ⊗ℐ
+   )∈ℱ
+   ×   2.  
+Let’s consider the equation       =     , or in the expansion the equation (   ⊗ℐ
+   )   =(   ⊗
+ℐ
+   )   , and show that it has the same solutions as      =   .  
+Let’s introduce the change of variables    =(   −1
+⊗ℐ)   in the equation      =     . Then 
+(   ⊗ℐ
+   )(   −1
+⊗ℐ)   =(   ⊗ℐ
+   )   , i.e. (   ⊗   )   =(   ⊗ℐ
+   )   or      =(   ⊗ℐ
+   )   . Whence, 
+taking into account that (   ⊗ℐ
+   )   =   (see above),    =
+1
+   (   −1
+⊗ℐ)(   ⊗ℐ
+   )   =
+1
+   (   −1
+⊗
+ℐ)   . Differential Equations and Control Processes, N. 3, 2021 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/18 
+By multiplying both parts of the last equation on the left by (   ⊗ℐ
+   ) , one can find that (   ⊗
+ℐ
+   )   =
+1
+   (   ⊗ℐ
+   )(   −1
+⊗ℐ)   , and, taking into account that (   ⊗ℐ
+   )   =   , this results in the 
+equation     =
+1
+   (   −1
+⊗   )   =   −1
+   .  
+ 
+From the above, it follows that the set of solutions of the matrix equation      =   in the ordinary 
+matrix space coincides with the set of solutions of the equation      =     , where    =(   ⊗ℐ
+   ) 
+and    =(   ⊗ℐ
+   ) in the Kronecker matrix space. ◄ 
+ 
+3.3. Diagonalizing the matrix F in equation (8) 
+ 
+Let’s represent equation (8) in the following operator form    (   )   (   )=(   ⊗ℐ
+   )   (   ) 
+(   =        ⁄ ,    2
+=   2
+      2
+⁄ [4]) or in the expanded form: 
+ 
+((   ⊗   )   2
++(Λ
+   ⊗   )   +(   ⊗   ))   (   )=(   ⊗ℐ
+   )   (   ) . 
+(9) 
+ 
+Let’s determine the eigenvalues    (   ) and eigenvectors    ∈ℱ
+   of the operator matrix    (   ) that 
+satisfy the equation    (   )   =   (   )   . It’s worth noting that from the below it will become clear that  
+the eigenvectors    are time-independent. 
+Let       ,   and       ,   ,    =1,2,…,   be the eigenvalues and the corresponding eigenvectors of the 
+non-singular     ×   -matrix    that satisfy the equation          ,   =      ,         ,   , and since the elements of 
+the matrix    are time-independent, its eigenvalues and eigenvectors       ,   and       ,   are time-
+independent as well. 
+The eigenvalues       (   )  and the eigenvectors       of the matrix    (   )∈ℱ
+   are obtained in the 
+matrix Kronecker space (Section 3.1) as follows. Assuming       =(      ,   ⊗1)  and taking into 
+account the commutativity of the independent variables and the differential operator    , the 
+following is obtained: 
+ 
+   (   )      =   (   )(      ,   ⊗1)=((   ⊗   )   2
++(Λ
+   ⊗   )   +(   ⊗   ))(      ,   ⊗1)= 
+=(   ⊗   )(      ,   ⊗1)   2
++(Λ
+   ⊗   )(      ,   ⊗1)   +(   ⊗   )(      ,   ⊗1). 
+ 
+ 
+As (   ⊗   )(      ,   ⊗1)=(         ,   ⊗   )=(      ,         ,   ⊗   )=      ,      (      ,   ⊗1) , 
+the following is written:   
+ 
+ 
+   (   )      =(   ⊗   )(      ,   ⊗1)   2
++(Λ
+   ⊗   )(      ,   ⊗1)   +      ,      (      ,   ⊗1)= 
+=((   ⊗   )   2
++(Λ
+   ⊗   )   +      ,   (   ⊗   ))(      ,   ⊗1)) . 
+ 
+ 
+For each value    (   =1,2,…,   ), the eigenvalue      (   ) and the corresponding eigenvector       of 
+the matrix    (   )∈ℱ
+   is       (   )=      2
++      ,        +      ,      and       =(      ,   ⊗1) , respectively.  
+With the found eigenvalues       (   ) and the eigenvectors       =(      ,   ⊗1) of the matrix    (   )∈
+ℱ
+   , the spectral decomposition of the matrix    (   )∈ℱ
+   is done, namely:  
+    (   )=    Λ(   )   −1
+, (10) 
+ 
+where Λ(   )=         {   1
+(   ),   2
+,(   )…,      (   )},       (   )=      2
++      ,        +      ,      ,    =1,2,…,   ; 
+Λ
+   =         {λ
+   1
+,λ
+   2
+,…,λ
+      } – diagonal    ×   -matrix that consists of the eigenvalues       ,   , 
+   =1,2,…,   , of the matrix    ;    – transforming    ×   -similarity matrix that consists of the Differential Equations and Control Processes, N. 3, 2021 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/19 
+eigencolumns of the matrix     (   )∈ℱ
+   and is    =(      ,1
+,      ,2
+,…,      ,   )∈ℱ
+   . In the matrix form, 
+the diagonal    ×   -matrix of eigenvalues of the matrix    (   )∈ℱ
+   is 
+ Λ(   )=         2
++   Λ
+      +   Λ
+   . 
+ 
+ 
+It's worth noting that the eigenvectors of the matrix    (   )  and the transforming similarity matrix 
+   are time-independent, and the eigenvalues       (   )=      2
++      ,        +      ,      , being the sum of 
+time-independent eigenvalues       ,   and       ,   of the matrices    and    ,  depend on time only through 
+the differential operator    . 
+ 
+4. Obtaining a matrix system of equations with diagonal matrices 
+ 
+By substituting the spectral decomposition (10) of the matrix    (   ) into equation (9) and taking 
+into account that the Kronecker product of an arbitrary matrix by one is equal to the matrix itself, 
+the following equation is obtained, in which only diagonal matrices appear, namely: 
+ 
+ 
+ 
+   (         2
++   Λ
+      +   Λ
+   )   −1
+   (   )=(   ⊗ℐ
+   )   (   ), 
+        (0)
+     =(   ⊗ℐ
+   )   0
+′
+,      (0)=(   ⊗ℐ
+   )   0
+ . 
+(11) 
+ 
+By introducing a new vector variable     (   )=   −1
+   (   ) into the last equation and multiplying 
+the resulting equation on the left by the matrix    −1
+, the following system of equations is obtained: 
+ 
+ 
+    
+   2
+   (   )
+      2
++   Λ
+        (   )
+     +   Λ
+      (   )=   −1
+(   ⊗ℐ
+   )   (   ), 
+        (0)
+     =   −1
+(   ⊗ℐ
+   )   0
+′
+,      (0)=   −1
+(   ⊗ℐ
+   )   0
+ , 
+(12) 
+ 
+which is decomposed into    independent equations for each independent variable       (   ) ,    =
+1,2,…,   
+ 
+ 
+   2
+     (   )
+      2
++λ
+    
+        (   )
+     +λ
+    
+      (   )=
+1
+   {   −1
+(   ⊗ℐ
+   )   (   )}
+  , 
+         (0)
+     =
+1
+   {   −1
+(   ⊗ℐ
+   )   0
+′
+}
+  ,       (0)=
+1
+   {   −1
+(   ⊗ℐ
+   )   0
+}
+  , 
+(13) 
+ 
+where {   −1
+(   ⊗ℐ
+   )   (   )}
+   , {   −1
+(   ⊗ℐ
+   )   0
+′
+}
+   , {   −1
+(   ⊗ℐ
+   )   0
+}
+   –    -th elements of vectors 
+   −1
+(   ⊗ℐ
+   )   (   ) ,    −1
+(   ⊗ℐ
+   )   0
+′
+,    −1
+(   ⊗ℐ
+   )   0
+. 
+Each of equations (13) has an analytical solution, which, in most cases, is known and contained 
+in numerous reference literature [14]. The vector    (   ) is determined using the found solution 
+elements       (   ) ,    =1,2,…,   . 
+The required vector of solutions    (   ) of original equation (1) is related to the matrix of 
+unknowns    (   ) by the equation    (   )=   Λ
+   −
+1
+2
+     (   )ℐ. In turn, the matrix    (   ) upon moving from Differential Equations and Control Processes, N. 3, 2021 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/20 
+the ordinary matrix space to the Kronecker matrix space, is transformed into the Kronecker vector 
+   (   ) , which is transformed, first, into the vector    (   ) , and then into the vector    (   ) , determined by  
+equations (13), that is,    (   )⇒   (   )=(   ⊗ℐ)   (   )=(   ⊗ℐ)     (   ) , where the matrices    ,    , 
+   are the transforming m × m-similarity matrices. 
+It’s worth noting that if one of the matrices turns out to be diagonal when diagonalizing matrices 
+in equation (1), then its spectral decomposition is not required 
+ 
+5. The example of application  
+ 
+The application of the developed method is disclosed in this section by the example of a matrix 
+of differential equation in the second-order ordinary derivatives (e.g., the Lagrange equation for 
+generalized coordinates [4]) 
+ 
+ 
+      2
+   (   )
+      2
++        (   )
+     +     (   )=0, 
+     (0)
+     =   0
+′
+,      (0)=   0
+, 
+(14) 
+ 
+where    ,    ,    – non-singular matrices (det   =3, det   =5, det   =10) 
+ 
+   =(
+2 1
+1 2
+) ,      =(
+2 3
+1 4
+) ,      =(
+4 1
+2 3
+) ,  
+   (   )=(
+   1
+(   )
+   2
+(   )
+) ,      0
+=(
+   01
+   02
+) ,      0
+′
+=(
+   01
+′
+   02
+′
+) . 
+ 
+ 
+Using the method suggested in the article, system of matrix equations (14) is reduced to a 
+system of two independent equations with respect to the variables       (   ) ,    =1,2, 
+ 
+ 
+   2
+      (   )
+      2
++λ
+    
+         (   )
+     +λ
+    
+      (   )=0, 
+         (0)
+     =   01
+′
+=
+1
+2
+{   −1
+(   ⊗ℐ
+   )   0
+′
+}
+  ,       (0)=   01
+=
+1
+2
+{   −1
+(   ⊗ℐ
+   )   0
+}
+  . 
+(15) 
+ 
+Let’s find the numerical values of the variables from equations (15), i.e. the eigenvalues (λ
+   1
+, 
+λ
+   2
+), (λ
+   1
+, λ
+   2
+), (λ
+   1
+, λ
+   2
+) of the matrices    ,    ,    , the transforming similarity matrices    ,    ,    , 
+the matrix    in the initial conditions, and also obtain the necessary spectral decompositions of all 
+matrices. 
+ 
+The eigenvalues (λ
+   1
+, λ
+   2
+), (λ
+   1
+, λ
+   2
+), (λ
+   1
+, λ
+   2
+) of matrices    ,    ,    and the transforming 
+similarity matrices     ,    ,    are obtained by spectral decomposition of matrices    ,     =
+Λ
+   −
+1
+2
+   −1
+      Λ
+   −
+1
+2
+ and    =   −1
+Λ
+   −
+1
+2
+   −1
+      Λ
+   −
+1
+2
+   , namely, 
+ 
+   =(
+2 1
+1 2
+)=   Λ
+      −1
+=(
+−1 1
+1 1
+)(
+1 0
+0 3
+)(
+−1
+2
+1
+2
+1
+2
+1
+2
+); 
+  Differential Equations and Control Processes, N. 3, 2021 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/21 
+   =Λ
+   −
+1
+2
+   −1
+      Λ
+   −
+1
+2
+=(
+1 0
+0 3
+)
+−
+1
+2
+(
+−1
+2
+1
+2
+1
+2
+1
+2
+)(
+2 3
+1 4
+)(
+−1 1
+1 1
+)(
+1 0
+0 3
+)
+−
+1
+2
+=(
+1 0
+2√3
+3
+5
+3
+); 
+   =(
+1 0
+2√3
+3
+5
+3
+)=   Λ
+      −1
+=(
+−√3
+3
+0
+1 1
+)(
+1 0
+0
+5
+3
+)(
+−√3 0
+√3 1
+) ; 
+ 
+   =   −1
+Λ
+   −
+1
+2
+   −1
+      Λ
+   −
+1
+2
+   = 
+=(
+−√3 0
+√3 1
+)(
+1 0
+0 3
+)
+−
+1
+2
+(
+−1
+2
+1
+2
+1
+2
+1
+2
+)(
+4 1
+2 3
+)(
+−1 1
+1 1
+)(
+1 0
+0 3
+)
+−
+1
+2
+(
+−√3
+3
+0
+1 1
+)=(
+2 0
+0
+5
+3
+); 
+   =(
+2 0
+0
+5
+3
+)=   Λ
+      −1
+=(
+1 0
+0 1
+)(
+2 0
+0
+5
+3
+)(
+0 1
+1 0
+) , 
+ 
+whence it follows that the eigenvalues of the matrices    ,    and    are (λ
+   1
+,λ
+   2
+)=(1,3) , 
+(λ
+   1
+,λ
+   2
+)=(1,
+5
+3
+) , (λ
+   1
+,λ
+   2
+)=(2,
+5
+3
+) , respectively.  
+The matrices in the initial conditions of equations (15) are  
+ 
+ 
+   =   −1
+Λ
+   1
+2
+   −1
+=(
+−√3 0
+√3 1
+)(
+1 0
+0 3
+)
+1
+2
+(
+−1
+2
+1
+2
+1
+2
+1
+2
+)=(
+√3
+2
+−
+√3
+2
+0 √3
+)  
+ 
+(   ⊗ℐ
+   )=(
+√3
+2
+−
+√3
+2
+0 √3
+)⊗(1 1)=(
+√3
+2
+√3
+2
+−
+√3
+2
+−
+√3
+2
+0 0 √3 √3
+),  
+ 
+ 
+and the initial conditions in equation (15) can be written as follows 
+ 
+ 
+(
+   01
+′
+   02
+′
+)=
+1
+2
+{   −1
+(   ⊗ℐ
+   )   0
+′
+}
+   =
+1
+2
+(
+0 1
+1 0
+)(
+√3
+2
+√3
+2
+−
+√3
+2
+−
+√3
+2
+0 0 √3 √3
+)(
+   01
+′
+   02
+′
+)=(
+√3
+4
+   01
+′
+−
+√3
+4
+   02
+′
+√3
+2
+   02
+′
+), 
+  
+(
+   01
+   02
+)=
+1
+2
+{   −1
+(   ⊗ℐ
+   )   0
+}
+   =
+1
+2
+(
+0 1
+1 0
+)(
+√3
+2
+√3
+2
+−
+√3
+2
+−
+√3
+2
+0 0 √3 √3
+)(
+   01
+   02
+)=(
+√3
+4
+   01
+−
+√3
+4
+   02
+√3
+2
+   02
+). 
+ 
+ 
+Equations (15) define the vector of independent solutions    (   )=(   1
+(   ),   2
+(   ))
+   , the 
+components of which    1
+(   ) and    2
+(   )  are found by solving the following equations:  
+ 
+ 
+ Differential Equations and Control Processes, N. 3, 2021 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/22 
+– component    1
+(   )  
+ 
+ 
+   2
+   1
+(   )
+      2
++
+      1
+(   )
+     +2   1
+(   )=0, 
+ 
+      1
+(0)
+     =   01
+′
+=
+√3
+4
+   01
+′
+−
+√3
+4
+   02
+′
+,       1
+(0)=   01
+=
+√3
+4
+   01
+−
+√3
+4
+   02
+, 
+(16) 
+ 
+– component    2
+(   ) 
+ 
+ 
+ 
+   2
+   2
+(   )
+      2
++
+5
+3
+      2
+(   )
+     +
+5
+3
+   2
+(   )=0 , 
+      2
+(0)
+     =   02
+′
+=
+√3
+2
+   02
+′
+,    2
+(0)=   02
+=
+√3
+2
+   02
+. 
+(17) 
+ 
+The solutions of equations (16) and (17) are known and can be expressed analytically [14]  
+ 
+   1
+(   )=   01
+       
+(cosω   −
+   ω
+ sinω   )+
+1
+ω
+   01
+′
+       
+sinω   , 
+(18) 
+ 
+at    =−0,5, ω=1,322876; 
+ 
+   2
+(   )=   02
+       
+(cosω   −
+   ω
+ sinω   )+
+1
+ω
+   02
+′
+       
+sinω   . 
+(19) 
+ 
+at    =−0,833, ω=0,986. 
+ 
+The required solution    (   ) of original equation (14) is expressed through the independent solutions 
+   1
+(   ) and    2
+(   ) of equations (16) and (17) 
+ 
+ 
+   (   )=(
+   1
+(   )
+   2
+(   )
+)=   Λ
+   −
+1
+2
+     (   )ℐ=(
+−1 1
+1 1
+)(
+1 0
+0 3
+)
+−
+1
+2
+(
+−√3
+3
+0
+1 1
+)(
+   1
+(   )    1
+(   )
+   2
+(   )    2
+(   )
+)(
+1
+1
+)= 
+=(
+4√3
+3
+   1
+(   )+
+2√3
+3
+   2
+(   )
+2√3
+3
+   2
+(   )
+).  
+ 
+ 
+ Differential Equations and Control Processes, N. 3, 2021 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/23 
+ 
+Fig. 1. Solutions    1
+(   ) and    2
+(   ) for the example of the matrix differential equation in the second-
+order ordinary derivatives calculated using the developed method and numerical methods on a 
+computer 
+ 
+ 
+The required solutions    1
+(   ) and    2
+(   )  of original equation (14), obtained using the developed 
+method developed, are shown in Fig. 1. 
+Fig. 1 also presents solutions obtained using a numerical method on a computer. For 
+comparison, solutions are also given calculated with a time step of 0.1 and 0.01. Comparison of the 
+solutions obtained using the developed method with the solutions calculated using the numerical 
+method shows their complete coincidence, which is a consequence of the fact that the developed 
+method presented in the article does not contain approximating conditions and assumptions and is 
+accurate. 
+ 
+ 
+6. Conclusion  
+ 
+The existing methods of reducing matrix systems of coupled differential equations in ordinary 
+derivatives to a system of decoupled differential equations are based on the simultaneous 
+diagonalization of two symmetric matrices of the equation based on the theorem on their 
+simultaneous diagonalization and reduction of one of them to a diagonal identity one. Since the 
+number of simultaneously diagonalized matrices does not exceed two, the initial matrix equations 
+are considered, as a rule, in a truncated form, without any equation term, so that the total number of 
+matrices does not exceed two. At the same time, in many applications, matrix differential equations 
+have three or more matrices, which essentially motivated the development. 
+This article suggests a method that allows one to diagonalize three matrices in a second-order 
+matrix differential equation and thereby obtain a system of independent equations, the solution of 
+each of which are easily found in an explicit analytical form. 
+For this, one of the matrices of the equation (positive definite) is reduced to a diagonal identity 
+form, and the other is subjected to spectral decomposition using a general similarity transformation. 
+In the method proposed in the article, the third matrix in the matrix equation is reduced to a 
+-1.0
+-0.5
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+0.0 0.2 0.4 0.6 0.8 1.0 1.2 1.4 1.6 1.8 2.0 2.2 2.4 2.6 2.8 3.0
+Solutions  x1(t),  x2(t) 
+Time, t 
+x1(t) - developed method x2(t) - developed method
+x2(t) - numerical, step 0,01 x1(t) - numerical, step 0,01Differential Equations and Control Processes, N. 3, 2021 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/24 
+diagonal form using the transition from the usual matrix space with the usual matrix algebra to the 
+Kronecker matrix space in which the rules of the Kronecker matrix algebra are used. 
+The developed method is equally applicable to matrix differential equations of the second order 
+      2
+   (   )
+      2
++        (   )
+    
++     (   )=   (   )  with three matrices    ,    and    , and matrix differential equations 
+of higher orders, but with three matrices in the equation, i.e. 
+ 
+            (   )
+         +            (   )
+         +      (   )=   (   ),      >   ≥1. 
+ 
+ 
+The main requirement for the matrices    ,    ,     is the positive definiteness of one of them, 
+which is to be diagonalized first and reduced to the diagonal identity form. 
+It’s worth noting that the fundamental possibilities inherent in the method proposed herein 
+allow, under certain assumptions and additional studies, to consider matrix differential equations in 
+ordinary derivatives of a higher order (n≥3) and with the number of matrices in the equation greater 
+than three, i.e. equations (         (   )=         (   )/         - differential operator) 
+ 
+               (   )+      −1
+      −1
+   (   )+⋯+   0
+   (   )=   (   ) .  
+ 
+Acknowledgements 
+ 
+The publication is made as a part of national assignment for SRISA RAS (fundamental scientific 
+research 47 GP) on the topic No.0580-2021-0001 (121031300047-6). 
+ 
+ 
+ 
+References 
+ 
+[1] Afanas'ev, V.N., Kolmanovskii, V.B., Nosov, V.R. Matematicheskaya teoriya 
+konstruirovaniya sistem upravleniya [Mathematical Theory of Control Systems Design]. 
+Moscow, Vysshaya shkola, 2003, 615 p. 
+[2] Chua, L.O., Pen-Min Lin Computer-aided analysis оf electronic circuits. New Jersey: 
+Prentice‐Hall, Englewood Cliffs, 1975. 737 p. 
+[3] Landau, L.D., Lifshits, E.M. К у рс те оре тиче с ко й мех ан ики. Mekhanika. Т ом 1 [Course of 
+theoretical physics, Volume 1, Mechanics]. Moscow, FIZMATLIT, 2017, 216 p. 
+[4] Frazer, R.A., Duncan, W.J., Collar, A.R. Elementary matrices and some applications to 
+dynamics and differential equations. New York: Cambridge University Press, 1960. 416 p. 
+[5] Duffin, R.J. A minimax theory for overdamped networks. Journal of Rational Mechanics and 
+Analysis; 1955; Vol. 4: 221-233. 
+[6] MacDuffee, C.C. The theory matrices. N.Y.: Dover Publications, 2004, 128 p. 
+[7] Figotin A., Welters A. Lagrangian Framework for Systems Composed of High-Loss and 
+Lossless Components. Available at: arXiv:1401.0230v2 01.05.2014. (accessed 10.2018). 
+[8] Veselić, K. Modal approximations to damped linear systems. Available at: 
+arXiv:0907.0167v1 01.07.2009. (accessed October 01.07.2009). 
+[9] Bellman, R. Introduction to matrix analysis, New York: McGraw-Hill, 1960, 368 p. 
+[10] Lankaster, P. Theory of matrix. New York – London, Academic Press, 1969. 280 p. 
+[11] Horn R.A., Johnson C.R. Matrix analysis. England, Cambridge: Cambridge University Press, 
+1986. 656 p. 
+[12] Brewer, J.W. Kronecker products and matrix calculus in system theory. IEEE Transactions on 
+Circuits and Systems; 1978; Vol. CAS-25, No. 9, September: 772 – 781. Differential Equations and Control Processes, N. 3, 2021 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/25 
+[13] Marcus, M., Minc, H. A survey of matrix theory and matrix inequalities. USA, Dover 
+Publications, 2010. 
+[14] Kamke, E. Spravochnik po obyknovennym differentsial'nym uravneniyam 
+[Differentialgleichungen Lösungsmethoden und Lösungen]. Moscow, Nauka Publ., 1971. 
+576p. 
+ 
+ 
+ 
