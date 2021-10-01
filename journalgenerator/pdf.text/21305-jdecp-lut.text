@@ -1,0 +1,2203 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 3, 2021
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Ordinary differential equations
+Inverse problem for incomplete Sobolev type
+equation of higher order
+Zamyshlyaeva A. A
+1
+, Lut A. V
+2
+1;2
+South Ural State University, Russia, Chelyabinsk
+E-mail:
+1
+zamyshliaevaaa@susu.ru,
+2
+lutav@susu.ru
+Abstract. The article is devoted to the study of the inverse problem for a
+high-order Sobolev type equation. Mathematical models based on such equa-
+tions describe various problems of hydrodynamics and elasticity theory. The
+main result of the article is to  nd su cient conditions for the existence and
+uniqueness of a solution to the original problem. At  rst using the theory of
+relatively bounded operators, the original problem is reduced to the equivalent
+system of two problems, which are usually called regular and singular. Thus,
+the solution to the original problem is represented as the sum of the solutions
+of these two problems. Further, the regular problem is reduced to a  rst-order
+equation. Then, by the method of successive approximations, the required
+smoothness for the function q is achieved by obtaining su cient conditions for
+the existence and uniqueness of a solution to the regular problem. To  nd a
+solution of the singular problem, the phase space method and the results of the
+study of the regular problem are used. The results obtained can be applied to
+the study of various mathematical models, such as the model of sound waves
+in smectics or the model of oscillation of a rotating viscous uid taking into
+account the viscosity coe cient.
+Keywords: Sobolev type equation, inverse problem, method of successive ap-
+proximations, relative boundedness of operator.Differential Equations and Control Processes, N. 3, 2021
+1 Introduction
+LetU;F;Y be Banach spaces, operators L; M 2 L(U;F); C 2 L(U;Y),
+ker L 6= f0g; given functions   : [0;T ] ! L(Y;F); f : [0;T ] ! F;
+	 : [0;T ]!Y: Consider the following problem
+Lv
+(n)
+(t) =Mv(t) + (t)q(t) +f(t); t2 [0;T ]; (1)
+v(0) =v
+0
+; :::; v
+(n 1)
+(0) =v
+n 1
+; (2)
+Cv(t) = 	(t); (3)
+where (1) is an incomplete, inhomogeneous high-order Sobolev type equation,
+(2) is the Cauchy condition, and (3) is the overdetermination condition. The
+problem of  nding a pair of functions v2 C
+n
+([0;T ];U) and q2 C
+1
+([0;T ];Y)
+from relations (1) { (3) is called the inverse problem.
+A large number of works is an devoted to the study of Sobolev type equa-
+tions [1, 3, 4, 5, 6, 7, 11, 12]. The article [4] gives su cient conditions for the
+existence of positive solutions to both the Showalter { Sidorov problem and the
+Cauchy problem for an abstract linear equation of the  rst order (n = 1). The
+Cauchy problem for a nonlinear Sobolev type differential equation in the space
+of continuous functions was studied in [11]. The paper [12] is devoted to initial-
+boundary value problems for a Sobolev type equation with a Gerasimov-Caputo
+fractional derivative with a memory effect.
+Sobolev type equations  nd their application in mathematical modeling
+[3, 5, 6]. In [6], the su cient conditions for the solvability of a high-order
+semilinear Sobolev type mathematical model were obtained. Consideration
+of optimal equation problems for linear Sobolev type models with the initial
+Cauchy condition is presented in [5].
+Recently, a large number of works [3, 7, 8, 9, 10] are devoted to the study
+of inverse problems in various aspects. The question of well-posedness of the
+inverse problem of determining the source function for a second order quasilinear
+parabolic system in Sobolev spaces was considered in [9]. The article [8] is
+devoted to establishing the uniqueness of the solution to the coe cient inverse
+problem of wave tomography in the non-overdetermined setting. The solvability
+of the inverse problem for  rst-order partial differential equations was studied in
+[10]. In [7] the solvability of several inverse problems belonging to the same class
+of Sobolev type equations is studied. Work [3] establishes the unique solvability
+of the inverse problem for a complete second-order Sobolev type equation.
+Electronic Journal. http://diffjournal.spbu.ru/ 72Differential Equations and Control Processes, N. 3, 2021
+2 Preliminary Information
+To  nd a pair of functions v(t) and q(t) we use the results obtained in the
+research of higher order Sobolev type equations [1].
+De nition 1 The sets
+ 
+L
+(M) =f 2C : ( L M)
+ 1
+2L(F;U)g
+and 
+L
+(M) =
+ 
+Cn 
+L
+(M) will be called theL-resolvent set and theL-spectrum of
+the operator M, respectively.
+De nition 2 The operator-function ( L M)
+ 1
+with domain  
+L
+(M) will be
+called the L-resolvent of the operator M.
+De nition 3 The operator M is called (L; )-bounded if
+9a2R
++
+8 2C (j j>a))
+ 
+( L M)
+ 1
+2L(F;U)
+ 
+:
+Lemma 1 Let the operator M be (L; )-bounded. Then the operators
+P =
+1
+2 i
+Z
+
+( L M)
+ 1
+Ld 2L(U);
+Q =
+1
+2 i
+Z
+
+L( L M)
+ 1
+d 2L(F)
+are projectors. Here  =f 2C :j j =r>ag.
+PutU
+0
+= ker P;F
+0
+= ker Q;U
+1
+= im P;F
+1
+= im Q. From the previous
+Lemma it follows that U =U
+0
+ U
+1
+;F =F
+0
+ F
+1
+. Let L
+k
+(M
+k
+) denote the
+restriction of the operator L(M) ontoU
+k
+; k = 0; 1:
+Theorem 1 [1] Let the operator M be (L; )-bounded. Then the actions of the
+operators split:
+(i) L
+k
+2L(U
+k
+;F
+k
+); k = 0; 1;
+(ii) M
+k
+2L(U
+k
+;F
+k
+); k = 0; 1;
+(iii) there exists an operator (L
+1
+)
+ 1
+2L(F
+1
+;U
+1
+);
+(iv) there exists an operator (M
+0
+)
+ 1
+2L(F
+0
+;U
+0
+):
+Denote H =M
+ 1
+0
+L
+0
+2L(U
+0
+); S =L
+ 1
+1
+M
+1
+2L(U
+1
+):
+Electronic Journal. http://diffjournal.spbu.ru/ 73Differential Equations and Control Processes, N. 3, 2021
+De nition 4 The point1 is called
+(i) a removable singular point of the L-resolvent of operator M, if H O;
+(ii) a pole of order p2 N of the L-resolvent of operator M, if H
+p
+6= O;
+but H
+p+1
+ O;
+(iii) an essentially singular point of the L-resolvent of operator M,
+if H
+k
+6=O for any k2N:
+Remark 1 If the operator M is (L; )-bounded, and1 is a pole of order
+p2f0g[N of the L-resolvent of the operator M, then the operator M is called
+(L;p)-bounded.
+3 Reduction of the Initial Inverse Problem
+Let the operator M be (L;p)-bounded, then v(t) can be represented as
+v(t) = Pv(t) + (I P )v(t). Denote Pv(t) = u(t); (I P )v(t) = !(t). Sup-
+pose thatU
+0
+  ker C. Then, by virtue of Theorem 1 and Lemma 1, problem
+(1) { (3) is equivalent to the problem of  nding the functionsu2C
+n
+([0;T ];U
+1
+);
+!2C
+n
+([0;T ];U
+0
+); q2C
+1
+([0;T ];Y) from the relations
+u
+(n)
+(t) =Su(t) + (L
+1
+)
+ 1
+Q (t)q(t) + (L
+1
+)
+ 1
+Qf(t); (4)
+u(0) =u
+0
+; :::; u
+(n 1)
+(0) =u
+n 1
+; (5)
+Cu(t) = 	(t) Cv(t); (6)
+H!
+(n)
+(t) =!(t) + (M
+0
+)
+ 1
+(I Q) (t)q(t) + (M
+0
+)
+ 1
+(I Q)f(t); (7)
+!(0) =!
+0
+; :::; !
+(n 1)
+(0) =!
+n 1
+; (8)
+where u
+0
+= Pv
+0
+; :::; u
+n 1
+= Pv
+n 1
+; !
+0
+= (I P )v
+0
+; :::; !
+n 1
+= (I P )v
+n 1
+;
+t2 [0;T ]: The inverse problem (4) { (6) is called regular, and problem (7), (8)
+is called singular.
+4 Solution of the Regular Inverse Problem
+Rewrite problem (4) { (6) in the notation [2]. LetX =U
+1
+; operatorsS2L(X );
+C2L(X;Y), operator-function   : [0;T ]!L(Y;X ); functionsh : [0;T ]!X;
+	 : [0;T ]!Y
+u
+(n)
+(t) =Su(t) +  (t)q(t) +h(t); t2 [0;T ]; (9)
+Electronic Journal. http://diffjournal.spbu.ru/ 74Differential Equations and Control Processes, N. 3, 2021
+u(0) =u
+0
+; :::; u
+(n 1)
+(0) =u
+n 1
+; (10)
+Cu(t) = 	(t): (11)
+Theorem 2 Let the operator M be (L;p)-bounded, moreover, C 2L(X ;Y);
+  2 C
+1
+([0;T ];L(Y;X )); h 2 C
+1
+([0;T ];X ); 	 2 C
+n+1
+([0;T ];Y), for any
+t2 [0;T ] the operator C (t) be invertible and (C )
+ 1
+2 C
+1
+([0;T ];L(Y)): If
+the compatibility condition Cu
+n 1
+= 	
+(n 1)
+(0) is satis ed, then there exists a
+unique solution q 2 C
+1
+([0;T ];Y); u 2 C
+n
+([0;T ];X ) to the inverse problem
+(9) { (11).
+Proof. Reduce problem (9) { (11) to the problem for the  rst order equation:
+z
+0
+(t) =Az(t) +Q(t)q(t) +H(t); t2 [0;T ]; (12)
+z(0) =z
+0
+; (13)
+Bz(t) =
+ 
+	(t); (14)
+where z(t) =
+0
+B
+B
+B
+B
+@
+u(t)
+.
+.
+.
+u
+(n 2)
+(t)
+u
+(n 1)
+(t)
+1
+C
+C
+C
+C
+A
+; A =
+0
+B
+B
+B
+B
+@
+0 I ::: 0
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+0 0 ::: I
+S 0 ::: 0
+1
+C
+C
+C
+C
+A
+; Q(t) =
+0
+B
+B
+B
+B
+@
+0
+.
+.
+.
+0
+ (t)
+1
+C
+C
+C
+C
+A
+;
+H(t) =
+0
+B
+B
+B
+B
+@
+0
+.
+.
+.
+0
+h(t)
+1
+C
+C
+C
+C
+A
+; z(0) =
+0
+B
+B
+B
+B
+@
+u(0)
+.
+.
+.
+u
+(n 2)
+(0)
+u
+(n 1)
+(0)
+1
+C
+C
+C
+C
+A
+; z
+0
+=
+0
+B
+B
+B
+B
+@
+u
+0
+.
+.
+.
+u
+n 2
+u
+n 1
+1
+C
+C
+C
+C
+A
+;
+B =
+ 
+0 ::: 0 C
+ 
+;
+ 
+	(t) =
+0
+B
+B
+B
+B
+@
+0
+.
+.
+.
+0
+	
+(n 1)
+(t)
+1
+C
+C
+C
+C
+A
+:
+Put R(t) = (C (t))
+ 1
+: Therefore, all the conditions of Theorem 6.2.3
+from [2], are ful lled, and the function q(t) satis es the integral equation
+q(t) =q
+0
+(t) +R(t)CS
+t
+Z
+0
+V
+1 n
+(t s) (s)q(s)ds; (15)
+where
+q
+0
+(t) = R(t)
+ 
+	
+(n)
+(t) CSV
+1 1
+(t)u
+0
+ CSV
+1 2
+(t)u
+1
+ ::: 
+Electronic Journal. http://diffjournal.spbu.ru/ 75Differential Equations and Control Processes, N. 3, 2021
+ CSV
+1 n
+(t)u
+n 1
+ CS
+t
+Z
+0
+V
+1 n
+(t s)h(s)ds Ch(t)
+ 
+:
+Thus, there exists a unique solution q2 C
+1
+([0;T ];Y); z 2 C
+1
+([0;T ];X
+n
+) to
+the inverse problem (12) { (14). And we obtain that the solution to the regu-
+lar inverse problem (9) { (11) exists and is unique, with q 2 C
+1
+([0;T ];Y);
+u2C
+n
+([0;T ];X ):  
+In order to obtain a solution to the singular problem, we need a greater
+smoothness of the function q from the solution of the regular problem, than
+class C
+1
+([0;T ];Y). Next, we need the following Lemma from [3].
+Lemma 2 Let l2N; V2C
+l 1
+([0;T ];L(X )); g2C
+l
+([0;T ];X ). Then
+ Z
+t
+0
+V (t s)g(s)ds
+ 
+(l)
+=
+l 1
+X
+k=0
+V
+(l k 1)
+(t)g
+(k)
+(0) +
+Z
+t
+0
+V (t s)g
+(l)
+(s)ds:
+The following theorem provides su cient conditions for the existence of
+solution q2C
+n(p+1)
+([0;T ];Y) of the regular problem.
+Theorem 3 Let the operator M be (L;p)-bounded, p 2 N
+0
+; moreover,
+C 2 L(X ;Y);   2 C
+n(p+1)
+([0;T ];L(Y;X )); h 2 C
+n(p+1)
+([0;T ];X );
+	 2 C
+n(p+2)
+([0;T ];Y); for any t 2 [0;T ] operator C (t) be invert-
+ible, with (C )
+ 1
+2 C
+n(p+1)
+([0;T ];L(Y)) and the compatibility condition
+Cu
+n 1
+= 	
+(n 1)
+(0) be satis ed for some u
+n 1
+2U
+1
+: Then there exists a unique
+solution of (9) { (11). Moreover q2C
+n(p+1)
+([0;T ];Y):
+Proof. Write the propagators of the homogeneous equation (9) in a matrix,
+de ning the resolving group of homogeneous equation (12)
+V (t) =
+0
+B
+B
+B
+B
+B
+B
+@
+V
+1 1
+(t) V
+1 2
+(t) ::: V
+1 n 1
+(t) V
+1 n
+(t)
+V
+2 1
+(t) V
+2 2
+(t) ::: V
+2 n 1
+(t) V
+2 n
+(t)
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+V
+n 1 1
+(t) V
+n 1 2
+(t) ::: V
+n 1 n 1
+(t) V
+n 1 n
+(t)
+V
+n 1
+(t) V
+n 2
+(t) ::: V
+n n 1
+(t) V
+n n
+(t)
+1
+C
+C
+C
+C
+C
+C
+A
+=
+Electronic Journal. http://diffjournal.spbu.ru/ 76Differential Equations and Control Processes, N. 3, 2021
+=
+1
+2 i
+Z
+
+( 
+n
+L M)
+ 1
+0
+B
+B
+B
+B
+B
+B
+@
+ 
+n 1
+L  
+n 2
+L :::  L I
+M  
+n 1
+L :::  
+2
+L  I
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+ 
+n 3
+M  
+n 4
+M :::  
+n 1
+L  
+n 2
+I
+ 
+n 2
+M  
+n 3
+M ::: M  
+n 1
+I
+1
+C
+C
+C
+C
+C
+C
+A
+e
+ t
+d ;
+whereI is the identity operator.
+Earlier, in the proof of Theorem 2 it was established that the function q(t)
+satis es integral equation (15). Take the natural numberl n(p+1): Assuming
+that q2C
+l
+([0;T ];Y) by Lemma 2 we obtain the equality
+q
+(l)
+(t) =q
+(l)
+0
+(t) +
+l 1
+X
+k=0
+C
+k
+l
+R
+(k)
+(t)CS
+l k 1
+X
+m=0
+V
+(l k m 1)
+1 n
+(t) ( q)
+(m)
+(0)+
++
+l
+X
+k=0
+l k
+X
+m=0
+C
+k;m
+l
+R
+(k)
+(t)CS
+t
+Z
+0
+V
+1 n
+(t s) 
+(m)
+(s)q
+(l k m)
+(s)ds;
+where C
+k
+l
+=
+l!
+k!(l k)!
+; C
+k;m
+l
+=
+l!
+k!m!(l k m)!
+and
+q
+(l)
+0
+(t) = 
+l
+X
+k=0
+C
+k
+l
+R
+(k)
+(t)
+ 
+	
+(l k+n)
+(t) CSV
+(l k)
+1 1
+(t)u
+0
+ 
+ CSV
+(n k)
+1 2
+(t)u
+1
+ ::: CSV
+(n k)
+1 n
+(t)u
+n 1
+ CS
+t
+Z
+0
+V
+1 n
+(t s)h
+(l k)
+(s)ds 
+ Ch
+(l k)
+(t)
+ 
++
+l 1
+X
+k=0
+C
+k
+l
+R
+(k)
+(t)CS
+l k 1
+X
+m=0
+V
+(l k m 1)
+1 n
+(t)h
+(m)
+(0)
+exists due to the conditions of the theorem for l = 0; 1;:::;n(p + 1):
+Show thatq2C
+n(p+1)
+([0;T ];Y), for this purpose denoter
+0
+=q
+0
+(0); and for
+l = 1; 2;:::;n(p + 1) determine the following values
+r
+l
+=q
+(l)
+0
+(0) +
+l 1
+X
+k=0
+C
+k
+l
+R
+(k)
+(0)CS
+l k 1
+X
+m=0
+V
+(l k m 1)
+1 n
+(0)
+m
+X
+j=0
+C
+j
+m
+ 
+(j)
+(0)r
+m j
+:
+Consider the system of integral equations
+~ q
+0
+(t) =q
+0
+(t) +R(t)CS
+t
+Z
+0
+V
+1 n
+(t s) (s)~ q
+0
+(s)ds;
+Electronic Journal. http://diffjournal.spbu.ru/ 77Differential Equations and Control Processes, N. 3, 2021
+~ q
+l
+(t) =q
+(l)
+0
+(t) +
+l 1
+X
+k=0
+C
+k
+l
+R
+(k)
+(t)CS
+l k 1
+X
+m=0
+V
+(l k m 1)
+1 n
+(t)
+m
+X
+j=0
+C
+j
+m
+ 
+(j)
+(0)r
+m j
++
++
+l
+X
+k=0
+l k
+X
+m=0
+C
+k;m
+l
+R
+(k)
+(t)CS
+t
+Z
+0
+V
+1 n
+(t s) 
+(m)
+(s)~ q
+l k m
+(s)ds;
+l = 1; 2;:::;n(p + 1): (16)
+Reduce (16) to the Volterra equation of the second kind
+g(t) =g
+0
+(t) +
+t
+Z
+0
+K(t;s)g(s)ds
+on the space (C([0;T ];Y))
+n(p+1)+1
+with a matrix operator functionK(t;s) given
+on the triangle   =f(t;s)2 R
+2
+: 0  t  T; 0  s  tg: By virtue of the
+continuity of all data of system (16), it has a unique solution
+(~ q
+0
+; ~ q
+1
+;:::; ~ q
+n(p+1)
+)2 (C([0;T ];Y))
+n(p+1)+1
+:
+This solution will be the limit of the sequence of approximations
+~ q
+0;i
+(t) =q
+0
+(t) +R(t)CS
+t
+Z
+0
+V
+1 n
+(t s) (s)~ q
+0;i 1
+(s)ds;
+~ q
+l;i
+(t) =q
+(l)
+0
+(t) +
+l 1
+X
+k=0
+C
+k
+l
+R
+(k)
+(t)CS
+l k 1
+X
+m=0
+V
+(l k m 1)
+1 n
+(t)
+m
+X
+j=0
+C
+j
+m
+ 
+(j)
+(0)r
+m j
++
++
+l
+X
+k=0
+l k
+X
+m=0
+C
+k;m
+l
+R
+(k)
+(t)CS
+t
+Z
+0
+V
+1 n
+(t s) 
+(m)
+(s)~ q
+l k m;i 1
+(s)ds;
+l = 1; 2;:::;n(p + 1); i2N; (17)
+which for i!1 on the interval [0;T ] converge uniformly to the functions ~ q
+l
+;
+l = 0; 1;:::;n(p + 1): Set the initial approximation ~ q
+l;0
+  0; l = 0; 1;:::;n(p + 1);
+then ~ q
+l+1;0
+= ~ q
+0
+l;0
+;l = 0; 1;:::;n(p + 1)  1: In addition, from (17) it follows that
+~ q
+l;i
+(0) =r
+l
+; l = 0; 1;:::;n(p + 1); i2N: (18)
+Electronic Journal. http://diffjournal.spbu.ru/ 78Differential Equations and Control Processes, N. 3, 2021
+Assume that for all   = 1; 2;:::;i the equalities ~ q
+l+1; 
+(t) = ~ q
+0
+l; 
+(t);
+l = 0; 1;:::;n(p + 1)  1 are true. Then, using Lemma 2 and equalities (18)
+we obtain
+d
+dt
+ 
+l
+X
+k=0
+l k
+X
+m=0
+C
+k;m
+l
+R
+(k)
+(t)CS
+t
+Z
+0
+V
+1 n
+(t s) 
+(m)
+(s)~ q
+l k m;i
+(s)ds
+!
+=
+=
+l
+X
+k=0
+l k
+X
+m=0
+C
+k;m
+l
+R
+(k+1)
+(t)CS
+t
+Z
+0
+V
+1 n
+(t s) 
+(m)
+(s)~ q
+l k m;i
+(s)ds+
++
+l
+X
+k=0
+l k
+X
+m=0
+C
+k;m
+l
+R
+(k)
+(t)CSV
+1 n
+(t) 
+(m)
+(0)~ q
+l k m;i
+(0)+
++
+l
+X
+k=0
+l k
+X
+m=0
+C
+k;m
+l
+R
+(k)
+(t)CS
+t
+Z
+0
+V
+1 n
+(t s) 
+(m+1)
+(s)~ q
+l k m;i
+(s)ds+
++
+l
+X
+k=0
+l k
+X
+m=0
+C
+k;m
+l
+R
+(k)
+(t)CS
+t
+Z
+0
+V
+1 n
+(t s) 
+(m)
+(s)~ q
+l k m+1;i
+(s)ds =
+=
+l+1
+X
+k=1
+l k+1
+X
+m=0
+C
+k 1;m
+l
+R
+(k)
+(t)CS
+t
+Z
+0
+V
+1 n
+(t s) 
+(m)
+(s)~ q
+l k m+1;i
+(s)ds+
++
+l
+X
+k=0
+C
+k
+l
+R
+(k)
+(t)CSV
+1 n
+(t)
+l k
+X
+m=0
+C
+m
+l k
+ 
+(m)
+(0)r
+l k m
++
++
+l
+X
+k=0
+l k+1
+X
+m=1
+C
+k;m 1
+l
+R
+(k)
+(t)CS
+t
+Z
+0
+V
+1 n
+(t s) 
+(m)
+(s)~ q
+l k m+1;i
+(s)ds+
++
+l
+X
+k=0
+l k
+X
+m=0
+C
+k;m
+l
+R
+(k)
+(t)CS
+t
+Z
+0
+V
+1 n
+(t s) 
+(m)
+(s)~ q
+l k m+1;i
+(s)ds: (19)
+Denote
+a
+k;m
+=R
+(k)
+(t)CS
+t
+Z
+0
+V
+1 n
+(t s) 
+(m)
+(s)~ q
+l k m+1;i
+(s)ds; l = 2; 3;:::;n(p + 1):
+Electronic Journal. http://diffjournal.spbu.ru/ 79Differential Equations and Control Processes, N. 3, 2021
+Taking into account the equalities
+C
+k
+l
++C
+k 1
+l
+=C
+k
+l+1
+; C
+k;m
+l
++C
+k 1;m
+l
++C
+k;m 1
+l
+=C
+k;m
+l+1
+;
+we get
+l
+X
+k=0
+l k
+X
+m=0
+C
+k;m
+l
+a
+k;m
++
+l+1
+X
+k=1
+l k+1
+X
+m=0
+C
+k 1;m
+l
+a
+k;m
++
+l
+X
+k=0
+l k+1
+X
+m=1
+C
+k;m 1
+l
+a
+k;m
+=
+=
+ 
+l
+X
+k=1
+l k
+X
+m=1
+C
+k;m
+l
+a
+k;m
++
+l
+X
+k=1
+C
+k;0
+l
+a
+k;0
++
+l
+X
+m=0
+C
+0;m
+l
+a
+0;m
+!
++
+ 
+l
+X
+k=1
+l k
+X
+m=1
+C
+k 1;m
+l
+a
+k;m
++
++
+l
+X
+k=1
+C
+k 1;0
+l
+a
+k;0
++
+l
+X
+k=1
+C
+k 1;l k+1
+l
+a
+k;l k+1
++C
+l;0
+l
+a
+l+1;0
+!
++
++
+ 
+l
+X
+k=1
+l k
+X
+m=1
+C
+k;m 1
+l
+a
+k;m
++
+l+1
+X
+m=1
+C
+0;m 1
+l
+a
+0;m
++
+l
+X
+k=1
+C
+k;l k
+l
+a
+k;l k+1
+!
+=
+=
+l
+X
+k=1
+l k
+X
+m=1
+C
+k;m
+l+1
+a
+k;m
++
+l
+X
+k=1
+C
+k;0
+l+1
+a
+k;0
++
+l
+X
+m=1
+C
+0;m
+l+1
+a
+0;m
++
+l
+X
+k=1
+C
+k;0
+l+1
+a
+k;l k+1
++
++C
+0;0
+l
+a
+0;0
++C
+0;l
+l
+a
+0;l+1
++C
+l;0
+l
+a
+l+1;0
+=
+l+1
+X
+k=0
+l k+1
+X
+m=0
+C
+k;m
+l+1
+a
+k;m
+: (20)
+For l = 0; 1 ful lment of (20) can be checked directly.
+From (19) and (20) it follows that
+d
+dt
+ 
+l
+X
+k=0
+l k
+X
+m=0
+C
+k;m
+l
+R
+(k)
+(t)CS
+t
+Z
+0
+V
+1 n
+(t s) 
+(m)
+(s)~ q
+l k m;i
+(s)ds
+!
+=
+=
+l+1
+X
+k=0
+l k+1
+X
+m=0
+C
+k;m
+l+1
+R
+(k)
+(t)CS
+t
+Z
+0
+V
+1 n
+(t s) 
+(m)
+(s)~ q
+n k m+1;i
+(s)ds+
++
+l
+X
+k=0
+C
+k
+l
+R
+(k)
+(t)CSV
+1 n
+(t)
+l k
+X
+m=0
+C
+m
+l k
+ 
+(m)
+(0)r
+l k m
+: (21)
+Changing the summation indices and re-grading the sums we get
+d
+dt
+ 
+l 1
+X
+k=0
+C
+k
+l
+R
+(k)
+(t)CS
+l k 1
+X
+m=0
+V
+(l k m 1)
+1 n
+(t)
+m
+X
+j=0
+C
+j
+m
+ 
+(j)
+(0)r
+m j
+!
+=
+Electronic Journal. http://diffjournal.spbu.ru/ 80Differential Equations and Control Processes, N. 3, 2021
+=
+l 1
+X
+k=0
+C
+k
+l
+R
+(k)
+(t)CS
+l k 1
+X
+m=0
+V
+(l k m)
+1 n
+(t)
+m
+X
+j=0
+C
+j
+m
+ 
+(j)
+(0)r
+m j
++
++
+l 1
+X
+k=0
+C
+k
+l
+R
+(k+1)
+(t)CS
+l k 1
+X
+m=0
+V
+(l k m 1)
+1 n
+(t)
+m
+X
+j=0
+C
+j
+m
+ 
+(j)
+(0)r
+m j
+=
+=
+l 1
+X
+k=0
+C
+k
+l
+R
+(k)
+(t)CS
+l k 1
+X
+m=0
+V
+(l k m)
+1 n
+(t)
+m
+X
+j=0
+C
+j
+m
+ 
+(j)
+(0)r
+m j
++
++
+l
+X
+k=1
+C
+k 1
+l
+R
+(k)
+(t)CS
+l k
+X
+m=0
+V
+(l k m)
+1 n
+(t)
+m
+X
+j=0
+C
+j
+m
+ 
+(j)
+(0)r
+m j
+=
+=
+ 
+l 1
+X
+k=1
+C
+k
+l
+R
+(k)
+(t)CS
+l k 1
+X
+m=0
+V
+(l k m)
+1 n
+(t)
+m
+X
+j=0
+C
+j
+m
+ 
+(j)
+(0)r
+m j
++
++C
+0
+l
+R(t)CS
+l 1
+X
+m=0
+V
+(l m)
+1 n
+(t)
+m
+X
+j=0
+C
+j
+m
+ 
+(j)
+(0)r
+m j
+!
++
++
+ 
+l 1
+X
+k=1
+C
+k 1
+l
+R
+(k)
+(t)CS
+l k 1
+X
+m=0
+V
+(l k m)
+1 n
+(t)
+m
+X
+j=0
+C
+j
+m
+ 
+(j)
+(0)r
+m j
++
++
+l 1
+X
+k=1
+C
+k 1
+l
+R
+(k)
+(t)CSV
+1 n
+(t)
+l k
+X
+j=0
+C
+j
+l k
+ 
+(j)
+(0)r
+l k j
++
++C
+l 1
+l
+R
+(l)
+(t)CSV
+1 n
+(t)C
+0
+0
+ (0)r
+0
+!
+=
+=
+l
+X
+k=0
+C
+k
+l+1
+R
+(k)
+(t)CS
+l k
+X
+m=0
+V
+(l k m)
+1 n
+(t)
+m
+X
+j=0
+C
+j
+m
+ 
+(j)
+(0)r
+m j
+ 
+ 
+l
+X
+k=0
+C
+k
+l
+R
+(k)
+(t)CSV
+1 n
+(t)
+l k
+X
+m=0
+C
+m
+l k
+ 
+(m)
+(0)r
+l k m
+: (22)
+Differentiating (17), and also using (21) and (22), we obtain the equalities
+~ q
+0
+l;i+1
+= ~ q
+l+1;i+1
+; l = 0; 1;:::;n(p + 1)  1:
+Thus, the sequence ~ q
+0;i
+converges as i!1 to the function ~ q
+0
+uniformly
+on the interval [0;T ]; and the sequence ~ q
+0
+0;i
+= ~ q
+1;i
+converges as i ! 1
+to the function ~ q
+1
+uniformly on the segment [0;T ]: Therefore, the function
+Electronic Journal. http://diffjournal.spbu.ru/ 81Differential Equations and Control Processes, N. 3, 2021
+~ q
+0
+is continuously differentiable and ~ q
+0
+0
+= ~ q
+1
+: The equalities of ~ q
+0
+l
+= ~ q
+l+1
+;
+l = 1; 2;:::;n(p + 1)  1; are proved in the same way, which implies that
+~ q
+0
+ q2C
+n(p+1)
+([0;T ];Y) and, therefore, q
+(l)
+= ~ q
+l
+; l = 1; 2;:::;n(p + 1):  
+5 Solvability of the Original Inverse Problem
+Now we can formulate the solvability conditions for the problem (1) { (3).
+Theorem 4 Let the operator M be (L;p)-bounded, p 2 N
+0
+; operator
+C2L(U;Y);U
+0
+  ker C;  2 C
+n(p+1)
+([0;T ];L(Y;F)); f2 C
+n(p+1)
+([0;T ];F);
+	2C
+n(p+2)
+([0;T ];Y); for anyt2 [0;T ] operatorC(L
+1
+)
+ 1
+Q  be invertible, with
+(C(L
+1
+)
+ 1
+Q )
+ 1
+2C
+n(p+1)
+([0;T ];L(Y)); the conditionCu
+n 1
+= 	
+(n 1)
+(0) be sat-
+is ed at some initial valueu
+n 1
+2U
+1
+; and the initial valuesw
+k
+= (I P )v
+k
+2U
+0
+satisfy
+w
+k
+= 
+p
+X
+j=0
+H
+j
+(M
+0
+)
+ 1
+d
+nj+k
+dt
+nj+k
+h
+(I Q)( (0)q(0) +f(0))
+i
+; k = 0; 1;:::;n  1:
+Then there exists a unique solution (v;q) of inverse problem (1) { (3), where
+q2 C
+n(p+1)
+([0;T ];Y), v = u +w; whence u2 C
+n
+([0;T ];U
+1
+) is the solution of
+(4) { (6), and the function w2C
+n
+([0;T ];U
+0
+) is a solution of (7), (8) given by
+w(t) = 
+p
+X
+j=0
+H
+j
+(M
+0
+)
+ 1
+d
+nj
+dt
+nj
+h
+(I Q)( (t)q(t) +f(t))
+i
+: (23)
+Proof. The conditions of Theorems 2 and 3 are satis ed, and therefore there
+exists a unique solution (q;u) of problem (4) { (6), whereq2C
+n(p+1)
+([0;T ];Y);
+u2C
+n
+([0;T ];U
+1
+):
+Using the result of [1] and the required smoothness of the function q, we
+obtain that there exists a unique solution (7), (8) w2C
+n
+([0;T ];U
+0
+); given by
+(23).  
+Acknowledgements. The reported study was funded by RFBR, project
+number 19-31-90137.
+References
+[1] Zamyshlyaeva A.A. and Sviridyuk G.A. Nonclassical Equations of Math-
+ematical Physics. Linear Sobolev Type Equations of Higher order, Bul-
+Electronic Journal. http://diffjournal.spbu.ru/ 82Differential Equations and Control Processes, N. 3, 2021
+letin of the South Ural State University. Series: Mathematics. Mechanics.
+Physics 8(4) (2016), pp. 5{16.
+[2] Prilepko A.I., Orlovsky D.G. and Vasin I.A. Methods for Solving Inverse
+Problems in Mathematical Physics, New York: Marcel Dekker (2000),
+744 p.
+[3] Zamyshlyaeva A.A. and Lut A.V. Inverse Problem for Sobolev Type Mathe-
+matical Models, Bulletin of the South Ural State University. Series: Math-
+ematical Modelling, Programming and Computer Software 12(2) (2019),
+pp. 25{36.
+[4] Banasiak J., Manakova N.A. and Sviridyuk G.A. Positive Solutions to
+Sobolev Type Equations with Relatively p-Sectorial Operators, Bulletin
+of the South Ural State University. Series: Mathematical Modelling, Pro-
+gramming and Computer Software 13(2) (2020), pp. 17{32.
+[5] Zamyshlyaeva A.A., Manakova N.A. and Tsyplenkova O.N. Optimal Con-
+trol in Linear Sobolev Type Mathematical Models, Bulletin of the South
+Ural State University. Series: Mathematical Modelling, Programming and
+Computer Software 13(1) (2020), pp. 5{27.
+[6] Zamyshlyaeva A.A. and Bychkov E.V. Research of One Semilinear Mathe-
+matical Model of the Sobolev Type of Higher Order, Mathematical Methods
+in Technics and Technologies { MMTT 8 (2020), pp. 3{6. (in Russian)
+[7] Kozhanov A.I. and Namsaraeva G.V. Linear Inverse Problems for a Class of
+Equations of Sobolev Type, Chelyabinsk Physical and Mathematical Jour-
+nal 3(2) (2018), pp. 153{171. (in Russian)
+[8] Kokurin M.Y. Completeness of asymmetric products of solutions of a sec-
+ond order elliptic equation and uniqueness of a solution to an inverse prob-
+lem for a wave equation, Differential Equations 57(2) (2021), pp. 255{264.
+(in Russian)
+[9] Pyatkov S.G., Uvarova M.V. and Pronkina T.V. Inverse Problems for a
+Quasilinear Parabolic System with Integral Overdetermination Conditions,
+Mathematical Notes of NEFU 27(4) (2020), pp. 43{59. (in Russian)
+[10] Sulaimanov B.E., Myrzapayazova Z.K. and Toktogulova A.S. Inverse Prob-
+lem for Differential Equations in Individual Derivatives, Bulletin of the
+Kyrgyz State Technical University named after Razzakov 2(54) (2020),
+pp. 95{102. (in Kyrgyz)
+Electronic Journal. http://diffjournal.spbu.ru/ 83Differential Equations and Control Processes, N. 3, 2021
+[11] Umarov KH. G. The Cauchy Problem for The Nonlinear Long Longitudi-
+nal Waves Equation in a Viscoelastic Rod, Siberian Mathematical Journal
+62(1) (2021), pp. 198{209. (in Russian)
+[12] Beshtokov M.Kh. Numerical study of initial-boundary value problems for
+a Sobolev type equation with a time-fractional derivative, Computational
+Mathematics and Mathematical Physics 59(2) (2019), pp. 185{202. (in Rus-
+sian)
+Electronic Journal. http://diffjournal.spbu.ru/ 84
