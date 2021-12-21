@@ -199,5 +199,151 @@
             <author ref="n_2021_12_polyanin" sort-key="2" />
         </authors>
     </article>
+
+
+    <article>
+        <articleInfo lang="EN" FirstPage="51" LastPage="68">
+            <pdf>21403-jdecp-zelensky.pdf</pdf>
+            <abstract>The paper considers the basic methods of parametric interpolation of
+                tool trajectory during contour machining of products having complex
+                geometric surface shape. The paper applies an approach based on inserting
+                cubic B-splines into the initial piecewise linear trajectory and
+                implementing linear and parametric interpolation algorithms which
+                allow increasing machining productivity. When there is no explicit
+                analytical dependence spline parameters on its length of the corresponding
+                trajectory segment parametric interpolation is performed. Therefore,
+                numerical methods are used for formation of interpolated points along the curve,
+                which have different accuracy of approximation of the spline parameter and have
+                a significant impact on the quality of machining of the product
+                due to the unstable feed rate. A number of numerical experiments have been
+                conducted to select the most effective parametric interpolation algorithm
+                for a trajectory that has a geometric continuity of G2. The best results are shown
+                by the second-order Runge-Kutta algorithm with a compensating approximation scheme,
+                which is the best choice for control systems of machine tools and industrial
+                robots for high-precision and high-speed machining of parts with complex geometries.</abstract>
+            <title>Research of Parametric Interpolation Approaches for Smoothing a Piecewise Linear Toolpath</title>
+            <keywords>
+                <word>high-speed processing</word>
+                <word>motion controller</word>
+                <word>parametric interpolation</word>
+                <word>Runge-Kutta algorithm</word>
+                <word>Taylor series expansion</word>
+                <word>trajectory smoothing</word>
+            </keywords>
+            <references>
+                <reference>Brecher С., Lange S., Merz M., Niehaus F., Wenzel C., Winterschladen M. NURBS based ultra-precision free-form machining. &lt;em&gt;CIRP Annals&lt;/em&gt;. 2006. Vol. 55 (1). P. 547-550</reference>
+                <reference>U. S. Product Data Association. Initial Graphics Exchange Specification. 1996. IGES 5. 3</reference>
+                <reference>Pratt. M. J. Introduction to ISO 10303-the STEP standard for product data exchange. &lt;em&gt;Journal of Computing and Information Science in Engineering&lt;/em&gt;. 2001. Vol. 1. no. 1. P. 102-103</reference>
+                <reference>Zhong W. B., Luo X. C., Chang W. L., Cai Y. K., Ding F., Liu H. T., Sun Y. Z. Toolpath Interpolation and Smoothing for Computer Numerical Control Machining of Freeform Surfaces: A Review. &lt;em&gt;International Journal of Automation and Computing. &lt;/em&gt; February 2020. Vol. 17(1). P. 1-16</reference>
+                <reference>Abdullin T. Kh., Kharkiv M. A. A look-ahead algorithm for a CNC system using trapezoidal acceleration/deceleration laws. &lt;em&gt;“Mashinovedenie i innovacii. Konferenciya molodyh uchyonyh i studentov”. &lt;/em&gt;2017. December 6-8</reference>
+                <reference>Zhong W. B., Luo X., Chang W., Ding F., Cai Y. A real-time interpolator for parametric curves. &lt;em&gt;International Journal of Machine Tools and Manufacture&lt;/em&gt;. 2018. Vol. 125. P. 133-145</reference>
+                <reference>Ernesto C., Farouki R. T. A. High-speed cornering by CNC machines under prescribed bounds on axis accelerations and toolpath contour error. &lt;em&gt;The International Journal of Advanced Manufacturing Technology&lt;/em&gt;. 2012. Vol. 58. P. 327-338</reference>
+                <reference>Yeh S-S., Hsu P-L. Adaptive-feedrate interpolation for parametric curves with a confined chord error. &lt;em&gt;Computer-Aided Design&lt;/em&gt;. 2002. Vol. 34(3). P. 229-237</reference>
+                <reference>Nam S-H., Yang M-Y. A study on a generalized parametric interpolator with real-time jerk-limited acceleration. &lt;em&gt;Computer-Aided Design&lt;/em&gt;. 2004. Vol. 36. P. 27-36</reference>
+                <reference>Zhao H., Zhu LM., Ding H. A real-time look-ahead interpolation methodology with curvature-continuous B-spline transition scheme for CNC machining of short line segments. &lt;em&gt;International Journal of Machine Tools &amp;amp; Manufacture&lt;/em&gt;. 2013. Vol. 65. P. 88-98</reference>
+                <reference>Beudaert X., Lavernhe S., Tournier C. 5-axis local corner rounding of linear tool path discontinuities. &lt;em&gt;International Journal of Machine Tools &amp;amp; Manufacture&lt;/em&gt;. 2013. Vol. 73. P. 9-16</reference>
+                <reference>Zarudnev A. S., Ilyukhin Y. V. Performance improvement of mechatronic laser processing complexes based on the dependence of the contour error on the parameters of motion and actuator systems. &lt;em&gt;Izvestiya Samarskogo nauchnogo centra Rossijskoj akademii nauk&lt;/em&gt;. 2007. Vol. 9. No 3 (21). P. 758 - 764</reference>
+                <reference>Zarudnev A. S., Ilyukhin Yu. V. Improving the performance of laser complexes based on contour error prediction. &lt;em&gt;Izd-vo «Novye tekhnologii», M. : Mekhatronika, avtomatizaciya, upravlenie. &lt;/em&gt; 2010. No. 9. P. 52-56</reference>
+                <reference>Huang J., Du X., Zhu L-M. Real-time local smoothing for five-axis linear toolpath considering smoothing error constraints. &lt;em&gt;International Journal of Machine Tools and Manufacture&lt;/em&gt;. 2018. Vol. 124. P. 67-79</reference>
+                <reference>Bi Q-Z., Wang Y-H., Zhu L-M., Ding H. A Practical Continuous-Curvature Bezier Transition Algorithm for High-Speed Machining of Linear Tool Path. &lt;em&gt;Intelligent Robotics and Applications: 4th International Conference, ICIRA, Aachen, Germany. December 6-8, 2011, Proceedings, Part II&lt;/em&gt;. P. 465-476</reference>
+                <reference>Fan W., Lee C-H., Chen J-H. A real-time curvature-smooth interpolation scheme and motion planning for CNC machining of short line segments. &lt;em&gt;International Journal of Machine Tools and Manufacture&lt;/em&gt;. 2015. Vol. 96. P. 27-46</reference>
+                <reference>Farouki R. T. Construction of G2 rounded corners with Pythagorean-hodograph curves. &lt;em&gt;Computer Aided Geometric Design&lt;/em&gt;. 2014. Vol. 31. P. 127-139</reference>
+                <reference>Wang J. B., Yau H. T. Real-time NURBS interpolator: application to short linear segments. &lt;em&gt;The International Journal of Advanced Manufacturing Technology. &lt;/em&gt; 2009. Vol. 41 P. 1169-1185</reference>
+                <reference>SIEMENS. SINUMERIK 840D sl/828D Basic Functions Function Manual. [Electronic resource]. - Access mode: &lt;a href="https://cache.industry.siemens.com/dl/files/797/109760797/att_962387/v1/840Dsl_828D_basic_fct_man_0818_en-US.pdf"&gt;https://cache.industry.siemens.com/dl/files/797/109760797/att_962387/v1/840Dsl_828D_basic_fct_man_0818_en-US.pdf&lt;/a&gt;  , free. - (accessed 30. 06. 2020)</reference>
+                <reference>FANUC Series 30i/31i/32i/35i-MODEL B. [Electronic resource]. - Access mode: &lt;a href="https://www.fanuc.co.jp/en/product/catalog/pdf/cnc/FS30i-B(E"&gt;https://www.fanuc.co.jp/en/product/catalog/pdf/cnc/FS30i-B(E&lt;/a&gt; )-09a. pdf, free. - (accessed 30. 06. 2020)</reference>
+                <reference>Chen Z. C., Khan M. A. Piecewise B-Spline Tool Paths With the Arc-Length Parameter and Their Application on High Feed, Accurate CNC Milling of Free-Form Profiies. &lt;em&gt;Journal of Manufacturing Science and Engineering&lt;/em&gt;. 2012. Vol. 134 (3)</reference>
+                <reference>A Primer on B&amp;eacute; zier Curves. [Electronic resource]. - Access mode: &lt;a href="https://pomax.github.io/bezierinfo/ru-RU/index.html"&gt;https://pomax.github.io/bezierinfo/ru-RU/index.html&lt;/a&gt; , free. - (accessed 15. 06. 2020)</reference>
+                <reference>Zelensky, A. A., Abdullin T. Kh., Ilyukhin Yu. V., Kharkov M. A. High-performance digital FPGA-based system for motion control of multi-coordinate machines and industrial robots. 2019. &lt;em&gt;&amp;quot; STIN&amp;quot; (STanki INstrument)&lt;/em&gt;. No 8. P. 5-8</reference>
+                <reference>Zelensky, A. A. Kharkov M. A., Ivanovsky S. P., Abdullin T. Kh. High-performance system of numerical program control based on programmable logic integrated circuits. &lt;em&gt;Vestnik Voronezhskogo gosudarstvennogo tekhnicheskogo universiteta&lt;/em&gt;. 2018. Vol. 14. No 5. P. 8-12</reference>
+                <reference>Zelensky, A. A., Shadrin N. G., Abdullin T. Kh., Kharkiv M. A. High-speed industrial real-time network of cyberphysical systems. &lt;em&gt;Vestnik komp'yuternyh i informacionnyh tekhnologij&lt;/em&gt;. 2019. No 11. P. 46-52</reference>
+                <reference>Yuen A. Spline interpolation and contour error pre-compensation for 5-axis machining. Dissertation. [Electronic resource]. - Access mode: &lt;a href="https://open.library.ubc.ca/soa/cIRcle/collections/ubctheses/24/items/1.0073966"&gt;https://open.library.ubc.ca/soa/cIRcle/collections/ubctheses/24/items/1.0073966&lt;/a&gt;  , free. - (accessed 20. 08. 2020)</reference>
+                <reference>Koren Y., Lo C. C., Shpitalni M. CNC interpolators: Algorithms and analysis. Manufacturing Science and Engineering. &lt;em&gt;Manufacturing Science and Engineering&lt;/em&gt;. 1993. Vol. 64. P. 83-92</reference>
+                <reference>Bhattacharjee. B., Azeem A., Ali S., Paul S. Development of a CNC interpolation scheme for CNC controller based on Runge-Kutta method. &lt;em&gt;International Journal Computer Aided Engineering and Technology&lt;/em&gt;. 2012. Vol. 4. No 5. P. 445-464</reference>
+                <reference>Cheng M-Y., Cheng M-Y., Tsai M-C., Kuob J-C. Real-time NURBS command generators for CNC servo controllers. &lt;em&gt;International Journal of Machine Tools and Manufacture&lt;/em&gt;. 2002. Vol. 42. P. 801-813</reference>
+                <reference>Zhao H., Zhu L., Ding H. A parametric interpolator with minimal feed fluctuation for CNC machine tools using arc-length compensation and feedback correction. &lt;em&gt;International Journal of Machine Tools &amp;amp; Manufacture&lt;/em&gt;. 2013. Vol. 75. P. 1-8</reference>
+                <reference>Tsai M. C., Cheng C. W. A real-time predictor-corrector interpolator for CNC machining. &lt;em&gt;Transactions of ASME Journal of Manufacturing Science and Engineering&lt;/em&gt;. 2003. Vol. 125. P. 449-460</reference>
+                <reference>Heng M., Erkorkmaz K. Design of a NURBS interpolator with minimal feed fluctuation and continuous feed modulation capability. &lt;em&gt;International Journal of Machine Tools and Manufacture&lt;/em&gt;. 2011. Vol. 50. P. 281-293</reference>
+                <reference>Zhang L. B., You Y. P., He J., Yang X. F. The transition algorithm based on parametric spline curve for high-speed machining of continuous short line segments. &lt;em&gt;The International Journal of Advanced Manufacturing Technology&lt;/em&gt;. 2011. Vol. 52. P. 245-254</reference>
+                <reference>Zelenski, A. A., Abdullin T. Kh., Alepko A. V. Real-time features of s-shaped acceleration/deceleration curve construction during piecewise linear interpolation of surfaces of complex shape. &lt;em&gt;Robototekhnika i tekhnicheskaya kibernetika&lt;/em&gt;. 2021. Vol. 9. No 3. P. 186-195</reference>
+                <reference>Farouki R. T., Sakkalis T. Real rational curves are not unit speed. &lt;em&gt;Computer Aided Geometric Design&lt;/em&gt;. 1991. Vol. 8. P. 151-157</reference>
+                <reference>Jia Z-Y., Song D-N., Ma J-W., Hu G-Q., Su W-W. A NURBS interpolator with constant speed at feedrate-sensitive regions under drive and contour-error constraints. &lt;em&gt;International Journal of Machine Tools and Manufacture&lt;/em&gt;. 2017. Vol. 116. P. 1-17</reference>
+            </references>
+        </articleInfo>
+        <articleInfo lang="RU" FirstPage="51" LastPage="68">
+            <pdf>21403-jdecp-zelensky.pdf</pdf>
+            <abstract>В статье рассматриваются основные способы параметрической интерполяции
+                траектории движения инструмента при контурной обработке изделий,
+                имеющих сложную геометрическую форму поверхности. В работе применяется подход,
+                основанный на вставке кубических B-сплайнов в исходную кусочно-линейную траекторию
+                и реализации алгоритмов линейной и параметрической интерполяции,
+                позволяющих повысить производительность обработки. Параметрическая интерполяция
+                выполняется при отсутствии явной аналитической зависимости параметров сплайна
+                от его длины соответствующего участка траектории. Поэтому для формирования
+                интерполируемых точек вдоль кривой используются численные методы,
+                которые обладают разной точностью приближения параметра сплайна и
+                оказывают существенное влияние на качество обработки изделия,
+                обусловленное нестабильностью скорости подачи. Проведен ряд численных экспериментов
+                по выбору наиболее эффективного алгоритма параметрической интерполяции для траектории,
+                имеющей геометрическую непрерывность G2, означающую, что первая и вторая производные
+                по параметру соседних сопрягаемых участков будут пропорциональны в точке стыковки.
+                Наилучшие результаты демонстрирует алгоритм Рунге-Кутты второго порядка
+                с компенсационной схемой приближения, оптимальной для систем управления
+                станков и промышленных роботов при высокоточной и высокоскоростной обработке
+                деталей сложной геометрической формы.</abstract>
+            <title>Исследование методов параметрической интерполяции для сглаживания кусочно-линейной траектории движения инструмента</title>
+            <keywords>
+                <word>алгоритм Рунге-Кутты</word>
+                <word>высокоскоростная обработка</word>
+                <word>контроллер движения</word>
+                <word>параметрическая интерполяция</word>
+                <word>разложение в ряд Тейлора</word>
+                <word>сглаживание траектории</word>
+            </keywords>
+            <references>
+                <reference>Brecher С., Lange S., Merz M., Niehaus F., Wenzel C., Winterschladen M. NURBS based ultra-precision free-form machining. &lt;em&gt;CIRP Annals&lt;/em&gt;. 2006. Vol. 55 (1). P. 547-550</reference>
+                <reference>U. S. Product Data Association. Initial Graphics Exchange Specification. 1996. IGES 5. 3</reference>
+                <reference>Pratt. M. J. Introduction to ISO 10303-the STEP standard for product data exchange. &lt;em&gt;Journal of Computing and Information Science in Engineering&lt;/em&gt;. 2001. Vol. 1. no. 1. P. 102-103</reference>
+                <reference>Zhong W. B., Luo X. C., Chang W. L., Cai Y. K., Ding F., Liu H. T., Sun Y. Z. Toolpath Interpolation and Smoothing for Computer Numerical Control Machining of Freeform Surfaces: A Review. &lt;em&gt;International Journal of Automation and Computing. &lt;/em&gt; February 2020. Vol. 17(1). P. 1-16</reference>
+                <reference>Abdullin T. Kh., Kharkiv M. A. Алгоритм опережающего просмотра для системы ЧПУ с применением трапецеидальных законов разгона/торможения. “Машиноведение и инновации. “Конференция молодых учёных и студентов”&lt;em&gt;. &lt;/em&gt;2017. 6-8 декабря</reference>
+                <reference>Zhong W. B., Luo X., Chang W., Ding F., Cai Y. A real-time interpolator for parametric curves. &lt;em&gt;International Journal of Machine Tools and Manufacture&lt;/em&gt;. 2018. Vol. 125. P. 133-145</reference>
+                <reference>Ernesto C., Farouki R. T. A. High-speed cornering by CNC machines under prescribed bounds on axis accelerations and toolpath contour error. &lt;em&gt;The International Journal of Advanced Manufacturing Technology&lt;/em&gt;. 2012. Vol. 58. P. 327-338</reference>
+                <reference>Yeh S-S., Hsu P-L. Adaptive-feedrate interpolation for parametric curves with a confined chord error. &lt;em&gt;Computer-Aided Design&lt;/em&gt;. 2002. Vol. 34(3). P. 229-237</reference>
+                <reference>Nam S-H., Yang M-Y. A study on a generalized parametric interpolator with real-time jerk-limited acceleration. &lt;em&gt;Computer-Aided Design&lt;/em&gt;. 2004. Vol. 36. P. 27-36</reference>
+                <reference>Zhao H., Zhu LM., Ding H. A real-time look-ahead interpolation methodology with curvature-continuous B-spline transition scheme for CNC machining of short line segments. &lt;em&gt;International Journal of Machine Tools &amp;amp; Manufacture&lt;/em&gt;. 2013. Vol. 65. P. 88-98</reference>
+                <reference>Beudaert X., Lavernhe S., Tournier C. 5-axis local corner rounding of linear tool path discontinuities. &lt;em&gt;International Journal of Machine Tools &amp;amp; Manufacture&lt;/em&gt;. 2013. Vol. 73. P. 9-16</reference>
+                <reference>Zarudnev A. S., Ilyukhin Y. V. Повышение производительности мехатронных комплексов лазерной обработки на основе зависимости контурной погрешности от параметров движения и исполнительных систем. Известия Самарского научного центра Российской академии наук. 2007. Том 9. №3 (21). с. 758 - 764</reference>
+                <reference>Zarudnev A. S., Ilyukhin Yu. V. Повышение производительности лазерных комплексов на основе прогноза контурной ошибки. Изд-во «Новые технологии», М. : Мехатроника, автоматизация, управление. 2010. № 9. с. 52-56</reference>
+                <reference>Huang J., Du X., Zhu L-M. Real-time local smoothing for five-axis linear toolpath considering smoothing error constraints. &lt;em&gt;International Journal of Machine Tools and Manufacture&lt;/em&gt;. 2018. Vol. 124. P. 67-79</reference>
+                <reference>Bi Q-Z., Wang Y-H., Zhu L-M., Ding H. A Practical Continuous-Curvature Bezier Transition Algorithm for High-Speed Machining of Linear Tool Path. &lt;em&gt;Intelligent Robotics and Applications: 4th International Conference, ICIRA, Aachen, Germany. December 6-8, 2011, Proceedings, Part II&lt;/em&gt;. P. 465-476</reference>
+                <reference>Fan W., Lee C-H., Chen J-H. A real-time curvature-smooth interpolation scheme and motion planning for CNC machining of short line segments. &lt;em&gt;International Journal of Machine Tools and Manufacture&lt;/em&gt;. 2015. Vol. 96. P. 27-46</reference>
+                <reference>Farouki R. T. Construction of G2 rounded corners with Pythagorean-hodograph curves. &lt;em&gt;Computer Aided Geometric Design&lt;/em&gt;. 2014. Vol. 31. P. 127-139</reference>
+                <reference>Wang J. B., Yau H. T. Real-time NURBS interpolator: application to short linear segments. &lt;em&gt;The International Journal of Advanced Manufacturing Technology. &lt;/em&gt; 2009. Vol. 41 P. 1169-1185</reference>
+                <reference>SIEMENS. SINUMERIK 840D sl/828D Basic Functions Function Manual. [Электронный ресурс]. - Режим доступа: &lt;a href="https://cache.industry.siemens.com/dl/files/797/109760797/att_962387/v1/840Dsl_828D_basic_fct_man_0818_en-US.pdf"&gt;https://cache.industry.siemens.com/dl/files/797/109760797/att_962387/v1/840Dsl_828D_basic_fct_man_0818_en-US.pdf&lt;/a&gt;  , свободный. - (дата обращения: 30. 06. 2020)</reference>
+                <reference>FANUC Series 30i/31i/32i/35i-MODEL B. [Электронный ресурс]. - Режим доступа: &lt;a href="https://www.fanuc.co.jp/en/product/catalog/pdf/cnc/FS30i-B(E"&gt;https://www.fanuc.co.jp/en/product/catalog/pdf/cnc/FS30i-B(E&lt;/a&gt; )-09a. pdf, свободный. - (дата обращения: 30. 06. 2020)</reference>
+                <reference>Chen Z. C., Khan M. A. Piecewise B-Spline Tool Paths With the Arc-Length Parameter and Their Application on High Feed, Accurate CNC Milling of Free-Form Profiies. &lt;em&gt;Journal of Manufacturing Science and Engineering&lt;/em&gt;. 2012. Vol. 134 (3)</reference>
+                <reference>A Primer on B&amp;eacute; zier Curves. [Электронный ресурс]. - Режим доступа: &lt;a href="https://pomax.github.io/bezierinfo/ru-RU/index.html"&gt;https://pomax.github.io/bezierinfo/ru-RU/index.html&lt;/a&gt; , свободный. - (дата обращения: 15. 06. 2020)</reference>
+                <reference>Zelensky, A. A., Abdullin T. Kh., Ilyukhin Yu. V., Kharkov M. A. Высокопроизводительная цифровая система на основе ПЛИС для управления движением многокоординатных станков и промышленных роботов. 2019. &amp;quot; СТИН&amp;quot; (СТанки ИНструмент). №8. c. 5-8</reference>
+                <reference>Zelensky, A. A. Kharkov M. A., Ivanovsky S. P., Abdullin T. Kh. Высокопроизводительная система числового программного управления на базе программируемых логических интегральных схем. Вестник Воронежского государственного технического университета. 2018. Том 14. №5. c. 8-12</reference>
+                <reference>Zelensky, A. A., Shadrin N. G., Abdullin T. Kh., Kharkiv M. A. Высокоскоростная промышленная сеть реального времени киберфизических систем. Вестник компьютерных и информационных технологий. 2019. №11. c. 46-52</reference>
+                <reference>Yuen A. Spline interpolation and contour error pre-compensation for 5-axis machining. Dissertation. [Electronic resource]. - Access mode: &lt;a href="https://open.library.ubc.ca/soa/cIRcle/collections/ubctheses/24/items/1.0073966"&gt;https://open.library.ubc.ca/soa/cIRcle/collections/ubctheses/24/items/1.0073966&lt;/a&gt;  , свободный. - (дата обращения: 20. 08. 2020)</reference>
+                <reference>Koren Y., Lo C. C., Shpitalni M. CNC interpolators: Algorithms and analysis. Manufacturing Science and Engineering. &lt;em&gt;Manufacturing Science and Engineering&lt;/em&gt;. 1993. Vol. 64. P. 83-92</reference>
+                <reference>Bhattacharjee. B., Azeem A., Ali S., Paul S. Development of a CNC interpolation scheme for CNC controller based on Runge-Kutta method. &lt;em&gt;International Journal Computer Aided Engineering and Technology&lt;/em&gt;. 2012. Vol. 4. No 5. P. 445-464</reference>
+                <reference>Cheng M-Y., Cheng M-Y., Tsai M-C., Kuob J-C. Real-time NURBS command generators for CNC servo controllers. &lt;em&gt;International Journal of Machine Tools and Manufacture&lt;/em&gt;. 2002. Vol. 42. P. 801-813</reference>
+                <reference>Zhao H., Zhu L., Ding H. A parametric interpolator with minimal feed fluctuation for CNC machine tools using arc-length compensation and feedback correction. &lt;em&gt;International Journal of Machine Tools &amp;amp; Manufacture&lt;/em&gt;. 2013. Vol. 75. P. 1-8</reference>
+                <reference>Tsai M. C., Cheng C. W. A real-time predictor-corrector interpolator for CNC machining. &lt;em&gt;Transactions of ASME Journal of Manufacturing Science and Engineering&lt;/em&gt;. 2003. Vol. 125. P. 449-460</reference>
+                <reference>Heng M., Erkorkmaz K. Design of a NURBS interpolator with minimal feed fluctuation and continuous feed modulation capability. &lt;em&gt;International Journal of Machine Tools and Manufacture&lt;/em&gt;. 2011. Vol. 50. P. 281-293</reference>
+                <reference>Zhang L. B., You Y. P., He J., Yang X. F. The transition algorithm based on parametric spline curve for high-speed machining of continuous short line segments. &lt;em&gt;The International Journal of Advanced Manufacturing Technology&lt;/em&gt;. 2011. Vol. 52. P. 245-254</reference>
+                <reference>Zelenski, A. A., Abdullin T. Kh., Alepko A. V. Особенности построения в реальном времени s-образной кривой разгона/торможения при кусочно-линейной интерполяции поверхностей сложной формы. Робототехника и техническая кибернетика. 2021. Том 9. № 3. с. 186-195</reference>
+                <reference>Farouki R. T., Sakkalis T. Real rational curves are not unit speed. &lt;em&gt;Computer Aided Geometric Design&lt;/em&gt;. 1991. Vol. 8. P. 151-157</reference>
+                <reference>Jia Z-Y., Song D-N., Ma J-W., Hu G-Q., Su W-W. A NURBS interpolator with constant speed at feedrate-sensitive regions under drive and contour-error constraints. &lt;em&gt;International Journal of Machine Tools and Manufacture&lt;/em&gt;. 2017. Vol. 116. P. 1-17</reference>
+            </references>
+        </articleInfo>
+        <authors>
+            <author ref="n_2021_12_zelensky" sort-key="1" />
+            <author ref="n_2021_12_abdullin" sort-key="2" />
+            <author ref="n_2021_12_dubovskov" sort-key="3" />
+            <author ref="n_2021_12_ilyukhin" sort-key="4" />
+        </authors>
+    </article>
     
 </number>
