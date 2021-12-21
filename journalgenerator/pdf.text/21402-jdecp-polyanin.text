@@ -1,0 +1,2131 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 4, 2021
+Electronic Journal,
+reg. N. 4  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Ordinary differential equations
+Numerical methods
+Singularly perturbed boundary-value problems:
+Sundman-type transformations, test problems,
+exact solutions, and numerical integration
+Inna K. Shingareva
+1; 
+, Andrei D. Polyanin
+2;  
+1
+University of Sonora, Blvd. Luis Encinas y Rosales,
+Hermosillo C.P. 83000, Sonora, M  exico
+2
+Ishlinsky Institute for Problems in Mechanics RAS,
+101 Vernadsky Avenue, bldg 1, 119526 Moscow, Russia
+e-mail:
+ 
+inna.shingareva@unison.mx
+  
+polyanin@ipmnet.ru
+Abstract. Solutions of singularly perturbed boundary-value problems with a
+small parameter are characterized by large gradients in very narrow regions
+(boundary layers). This circumstance sharply limits the use of standard  nite-
+difference methods with a  xed stepsize in such problems due to signi cant
+calculation errors or possible loss of stability. This paper presents an effective
+method for numerical integration of singularly perturbed boundary-value prob-
+lems based on replacing the spatial variable with a new independent variable of
+the Sundman-type, which depends on the derivatives of the unknown function.
+The use of such non-local transformations, which satisfy a simple asymptoticDifferential Equations and Control Processes, N. 4, 2021
+condition, makes it possible to automatically stretch the boundary-layer re-
+gion. The resulting problem turns out to be much simpler than the original one
+in the sense that standard (classical) numerical methods with a  xed stepsize
+can already be applied to solve it. Several new multiparameter nonlinear and
+linear singularly perturbed boundary-value problems for second-order reaction-
+diffusion type ODEs having monotonic and non-monotonic exact or asymp-
+totic solutions, expressed in terms of elementary functions, are constructed. A
+comparison of numerical solutions with exact and asymptotic solutions is pre-
+sented. The numerical results show that the method based on Sundman-type
+transformations for solving boundary-layer problems gives high accuracy. As
+a result of an extensive analysis of the obtained results, recommendations are
+given for the choice of regularizing functions that determine the most effective
+Sundman-type transformations. The difference between regularizing functions
+in boundary-layer problems and blow-up problems is discussed. The test prob-
+lems formulated in this paper can be used to estimate the accuracy of any other
+numerical methods for solving two-point singularly perturbed boundary-value
+problems with a small parameter.
+Keywords: singularly perturbed boundary-value problems, boundary layer,
+Sundman-type transformations, non-local transformations, nonlinear ODEs,
+multiparameter test problems, exact solutions, numerical integration.
+Contents
+1. Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+2. Qualitative features of singularly perturbed boundary-layer
+problems with a small parameter . . . . . . . . . . . . . . . . 19
+2.1. Illustrating a three-parameter linear problem. Exact and asymp-
+totic solutions. Boundary-layer region . . . . . . . . . . . . . . . 19
+2.2. Order relation between the  rst and second derivatives . . . . . 21
+3. Numerical integration of boundary-value
+problems based on Sundman transformations . . . . . . . . 22
+3.1. Description of the solution method . . . . . . . . . . . . . . . . 22
+3.2. Regularizing functions. The asymptotic condition.
+Examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+3.3. Additional explanations and comments . . . . . . . . . . . . . . 25
+Electronic Journal. http://diffjournal.spbu.ru/ 16Differential Equations and Control Processes, N. 4, 2021
+4. Singularly perturbed linear boundary-value problems. Numer-
+ical and analytical solutions . . . . . . . . . . . . . . . . . . . 26
+4.1. Linear simple test problem. Numerical solutions
+obtained by using various regularizing functions . . . . . . . . . 26
+4.2. Multiparameter linear boundary-value problem having solutions
+with several extrema . . . . . . . . . . . . . . . . . . . . . . . . 33
+5. Singularly perturbed nonlinear boundary-value
+problems. Numerical and analytical solutions . . . . . . . . 34
+5.1. Multiparameter boundary-value problem with quadratic
+nonlinearity. Exact and numerical solutions . . . . . . . . . . . 34
+5.2. Multiparameter boundary-value problem with
+exponential nonlinearity. Exact and numerical solutions . . . . . 38
+5.3. Another multiparameter problem with exponential
+nonlinearity. Asymptotic and numerical solutions . . . . . . . . 40
+6. Regularizing functions recommended for
+calculations. Remarks on blow-up problems . . . . . . . . . 42
+6.1. Regularizing functions recommended for calculations . . . . . . 42
+6.2. Difference between the choice of regularizing functions in
+boundary-layer problems and blow-up problems . . . . . . . . . 43
+7. Brief conclusions . . . . . . . . . . . . . . . . . . . . . . . . . 44
+References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 45
+1. Introduction
+Singularly perturbed linear and nonlinear boundary-value problems with its
+highest order derivative multiplied by a small parameter are often used for
+mathematical modeling of various phenomena and processes in natural science
+and engineering (such problems are often encountered, for example, in hydro-
+and aerodynamics [1, 2, 3] and in the theory of convective heat and mass transfer
+[3, 4, 5]). An important qualitative feature of such problems is that for the
+zero value of a small parameter the order of the differential equation under
+consideration decreases and some boundary conditions cannot be satis ed.
+Singularly perturbed boundary-value problems have large gradients of solu-
+tions in narrow regions (boundary layers), which leads to a loss of convergence
+Electronic Journal. http://diffjournal.spbu.ru/ 17Differential Equations and Control Processes, N. 4, 2021
+of standard  nite-difference methods and makes them of little use for solving
+problems of this type (in [6], examples of exotic incorrect numerical solutions
+of singularly perturbed problems obtained by ordinary non-specialized meth-
+ods are given). One of the  rst works, where in full measure it was said on
+the inadmissibility of classical  nite-difference schemes and the need to develop
+special schemes, possessing the property of convergence regardless of the value
+of the small parameter, there were publications [7, 8], in which the foundations
+of two different approaches to the solution of boundary-value problems with a
+boundary layer were laid. In [7], the classical central-difference scheme was pro-
+posed with a grid, thickening near boundary layers and having a uniform error
+in the approximation of nodes (such a grid has uniformly second-order accuracy
+with respect to a small parameter). In [8], an exponential  tting scheme was
+developed, the coe cients of which were chosen in such a way that the scheme
+is asymptotically exact in the boundary-layer region (this approach allows us
+to construct uniformly convergent  nite-difference schemes on a uniform grid).
+Various methods of the numerical integration for linear and nonlinear
+singularly perturbed boundary-value problems are considered, for example,
+in [9, 10, 11, 12, 13, 14, 15, 34, 16, 17, 18, 20, 19, 21, 22, 23, 24, 25, 26, 27,
+28, 29, 30, 31, 32, 33]. For numerical solution of such problems various authors
+apply methods with a piecewise-uniform grid (two-grid methods) characteriz-
+ing by a small stepsize in the boundary layer and a large stepsize outside the
+boundary layer (for example, see [11, 13, 21, 22, 23, 26, 29]). It is important to
+note that in the methods based on the use of a piecewise-uniform grid (as well
+as the methods developed in [7, 8]), a priori information on the structure and
+the rate of damping of asymptotic solutions in the boundary layer is taken into
+account (explicitly or implicitly).
+In [35] (see also [36]), for numerical integration of singularly perturbed
+boundary-value problems with a single boundary layer, it was proposed to
+apply non-local transformations at the initial stage, which allows further in-
+tegration of the reduced problem by standard numerical methods applying a
+uniform grid for the computational domain. This paper is a further deepening
+and development of the approach [35], which is based on the application of
+non-local transformations (generalized Sundman transformations) for the nu-
+merical integration of singularly perturbed boundary-value problems. Extensive
+testing of this method has been carried out on new transformations and new,
+more complex nonlinear multiparameter test problems, the solutions of which
+are expressed in elementary functions. Comparison of numerical, exact, and
+Electronic Journal. http://diffjournal.spbu.ru/ 18Differential Equations and Control Processes, N. 4, 2021
+asymptotic solutions showed the high e ciency of the Sundman transforma-
+tions method for solving singularly perturbed problems with a boundary layer
+(even for problems with degeneracy, when the highest derivative vanishes at the
+boundary).
+Remark 1. Generalized Sundman transformations (non-local transfor-
+mations) were used in [37, 38, 39, 40, 41, 42] for numerical integration of Cauchy
+problems with monotonic and non-monotonic blow-up solutions that have very
+large gradients in a neighborhood of a priori unknown point. Comparison of
+exact and numerical solutions of several test problems for ODEs of the  rst,
+second, third and fourth orders, as well as systems of nonlinear coupled ODEs,
+showed high e ciency of this method for numerical integration of blow-up prob-
+lems. In [42], non-local transformations were used for numerical integration of
+blow-up problems for nonlinear PDEs.
+Remark 2. In [44, 45, 46, 47, 48], generalized Sundman transformations
+of special type were applied to obtain exact solutions,  rst integrals, and also
+to linearize some second-order ODEs.
+Remark 3. In [1, 49, 50, 51, 52, 34, 53, 54, 55], asymptotic methods
+are described that make it possible to  nd approximate analytical solutions to
+boundary-layer problems.
+Note that hypersingular nonlinear boundary-value problems are not con-
+sidered in this paper (in hypersingular boundary-value problems with a small
+parameter", super-thin boundary layers arise, and the derivative at the bound-
+ary layer can have very large values of the order ofe
+1="
+and more [43] (in ordinary
+problems with boundary layers, the derivative at the boundary usually has the
+order of "
+ 1
+or "
+ 1=2
+)).
+2. Qualitative features of singularly perturbed boundary-
+layer problems with a small parameter
+2.1. Illustrating a three-parameter linear problem. Exact and asymp-
+totic solutions. Boundary-layer region
+Let us analyze qualitative features of singularly perturbed boundary-value prob-
+lems with a small parameter at the highest derivative, that have solutions of
+the boundary-layer type, on an example of a speci c problem.
+Test problem 1. We consider the following three-parameter boundary-value
+Electronic Journal. http://diffjournal.spbu.ru/ 19Differential Equations and Control Processes, N. 4, 2021
+problem for the second-order linear equation with constant coe cients [35]:
+"y
+00
+xx
++y
+0
+x
++y = 0 (0<x< 1); y(0) =a; y(1) =b; (1)
+where a, b, and " are free parameters. A boundary layer for this problem
+develops near the point x = 0 as "! 0 ("> 0).
+Depending on the values of the determining parameters, problem (1) can
+have both monotonic and non-monotonic solutions. The exact solution of the
+problem is determined by the formulas
+y =
+a exp( 
+2
+) b
+exp( 
+2
+)  exp( 
+1
+)
+exp( 
+1
+x) +
+b a exp( 
+1
+)
+exp( 
+2
+)  exp( 
+1
+)
+exp( 
+2
+x);
+ 
+1
+=
+ 1  (1  4")
+1=2
+2"
+;  
+2
+=
+ 1 + (1  4")
+1=2
+2"
+:
+(2)
+If " is small, we  nd  
+1
+' "
+ 1
+,  
+2
+' 1, y
+0
+x
+(0)' "
+ 1
+(a eb), and
+y
+00
+xx
+(0)'"
+ 2
+(a eb). From the above relation for the  rst derivative, it follows
+that when using direct numerical methods to solve such singularly perturbed
+boundary-value problems with a small parameter, the shooting numerical pro-
+cedure should begin with large values of the derivative (of order "
+ 1
+), which is
+a complicating factor for numerical methods.
+Let us assume a  0 and b  0. If a > eb, then solution (2) decreases
+monotonically and if a < eb, then solution (2) increases monotonically, and
+very quickly, in a narrow region 0 x<x
+ 
+, where
+x
+ 
+'" ln(1="); y
+ 
+'eb (for case a = 0): (3)
+In the remaining region x
+ 
+ x  1, the solution is a monotonically decreasing
+function that changes slowly enough.
+The exact solutions (2) of problem (1) are shown in Fig. 1 by the solid
+lines for two sets of numerical values of the determining parameters: a) a = 1,
+b = 0, " = 0:005 and b) a = 0, b = 1, " = 0:005. One can see that for
+the second set of values the solution in the region 0  x  x
+ 
+  0:026709653
+increases rapidly (the maximum value y
+ 
+  2:646247631), and in the region
+x
+ 
+  x  1 it decreases slowly. For comparison in Fig. 1, we also present the
+curves obtained by using the exact solution (2) for " = 0:05 and " = 0:5 (the
+dashed and dash-dotted lines, respectively). It is seen that as the parameter "
+decreases near the point x = 0, the curved lines become steeper and steeper,
+approaching the vertical line.
+Electronic Journal. http://diffjournal.spbu.ru/ 20Differential Equations and Control Processes, N. 4, 2021
+Figure 1: Exact solutions (2) of problem (1) (solid lines) and numerical solutions of the trans-
+formed problem (8) (points) with g = 1 +jzj +jfj
+1=2
+for two sets of numerical values of the
+determining parameters: a)a = 1,b = 0," = 0:005 and b)a = 0,b = 1," = 0:005 (the dashed
+and dash-dotted lines are obtained by using formula (2) for" = 0:05 and" = 0:5, respectively).
+When applying direct numerical methods in such problems, to take into
+account the singularities of the solution in the boundary-layer region, it is nec-
+essary to take su ciently many points in a small neighborhood of the left bound-
+ary. Therefore, the use of uniform grids throughout the domain of variation of
+the independent variable x is connected with the necessity of partitioning the
+region 0 x  1 into a large number of intervals of integration.
+2.2. Order relation between the  rst and second derivatives
+Let us assume thatja ebj =O(1). Then, taking into account the estimates of
+the  rst and second derivatives given after solution (2), we obtain the following
+order relation between the derivatives on the left boundary:
+jy
+00
+xx
+j'jy
+0
+x
+j
+2
+: (4)
+Following [35], we will now show that under certain assumptions about the
+local behavior of the solutions, the order relation between derivatives (4) is
+su ciently general and is valid if, inside the boundary layer region, the leading
+term of the asymptotic expansion of the solution as "! 0 has the form y =
+'(x= ), where ' = '(z) is a smooth function, the  rst and second derivatives
+of which are bounded and non-vanishing in some neighborhood of the point
+z = 0, and   =  (") is a function with the property  ! 0 as "! 0. Indeed,
+differentiating twice the function y = '(x= ) with respect to x, we  nd the
+Electronic Journal. http://diffjournal.spbu.ru/ 21Differential Equations and Control Processes, N. 4, 2021
+derivatives y
+0
+x
+=  
+ 1
+'
+0
+z
+(z) and y
+00
+xx
+=  
+ 2
+'
+00
+zz
+(z). Eliminating   from these
+formulas, we obtain the order relation (4), which we will need later.
+3. Numerical integration of boundary-value
+problems based on Sundman transformations
+3.1. Description of the solution method
+Let us consider two-point problems for second-order nonlinear ODEs with
+boundary conditions of the  rst kind (Dirichlet boundary conditions):
+y
+00
+xx
+=f(x;y;y
+0
+x
+) (0<x< 1); (5)
+y(0) =a; y(1) =b; (6)
+where the function f can also depend on the small parameter " > 0. For
+singularly perturbed boundary-value problems we have f = "
+ 1
+F (x;y;y
+0
+x
+;"),
+where F (x;y;z; 0) is a smooth function of three arguments.
+We introduce a new non-local (Sundman-type) independent variable   by
+means of the  rst-order differential equation and the initial condition [35] (see,
+also [37, 38, 39]):
+ 
+0
+x
+=g(x;y;y
+0
+x
+);  (0) = 0; (7)
+where g = g(x;y;y
+0
+x
+) is a regularizing function that must satisfy some simple
+conditions described below.
+We introduce the notation z = y
+0
+x
+. It is not di cult to show that the
+original boundary-value problem (5){(6) after passing to the Sandman-type
+variable (7) is transformed to the following problem for the system of three
+ rst-order coupled ODEs [35]:
+x
+0
+ 
+=
+1
+g(x;y;z)
+; y
+0
+ 
+=
+z
+g(x;y;z)
+; z
+0
+ 
+=
+f(x;y;z)
+g(x;y;z)
+(0<  < 
+1
+);
+x(0) = 0; y(0) =a; y( 
+1
+) =b;
+(8)
+where the value  
+1
+is determined during the solution process when the  nal
+condition x( 
+1
+) = 1 is reached.
+Let us consider the simplest regularizing function: g  1. In this case, the
+ rst ODE of system (8), taking into account the initial condition x(0) = 0,
+gives  =x and numerical integration of the remaining two ODEs is equivalent
+to the integration of the original problem (5){(6).
+Electronic Journal. http://diffjournal.spbu.ru/ 22Differential Equations and Control Processes, N. 4, 2021
+For the general case, the regularizing functiong =g(x;y;z), successfully se-
+lected, itself will determine the position and the density of points of integration
+with respect to the original variablesx andy and allow more accurately to solve
+problem (8) using the shooting method or other standard  xed-step numerical
+methods with respect to the new non-local variable   [56, 57, 58, 59, 60, 61].
+3.2. Regularizing functions. The asymptotic condition.
+Examples
+For numerical solution of singularly perturbe boundary-value problems, as well
+as for solving blow-up Cauchy problems, it is reasonable to use regularizing
+functions of the form [37, 38, 39]:
+g =G(jzj;jfj) G(jy
+0
+x
+j;jy
+00
+xx
+j); (9)
+where f = f(x;y;z) is the right-hand side of equation (5) and z = y
+0
+x
+. We
+impose the following conditions on the function G =G(u;v):
+G> 0; G
+u
+  0; G
+v
+  0; G!1 as u +v!1; G(0; 0) = 1 (10)
+with u  0 and v  0.
+When using regularizing functions of the form (9) for at and rectilinear
+segments of the curve y = y(x), on which y
+0
+x
+= const, a  xed stepsize in  
+gives a  xed stepsize in x. Note that if equation (5) is autonomous (that is,
+the equation does not depend explicitly on x) and the regularizing function is
+chosen in the form (9), then the second and the third equations of system (8)
+form an independent subsystem that is integrated independently of the  rst
+equation.
+If the right-hand side of the singularly perturbed ODE (5) has the form
+f(x;y;y
+0
+x
+) ="
+ 1
+F (x;y;y
+0
+x
+);
+when choosing regularizing functions, besides the simple conditions (9){(10),
+additional considerations should be taken into account.
+If the Sundman transformations are not applied, i.e. g = 1, and"! 0, the
+right-hand sides of the last two ODEs in (8) will tend to in nity (sincejzj!1
+andjfj!1) in the boundary layer. In this region, we also havejfj =O(z
+2
+),
+which follows from the order relation (4). The speci ed qualitative features of
+such problems signi cantly complicate the use of standard numerical methods
+Electronic Journal. http://diffjournal.spbu.ru/ 23Differential Equations and Control Processes, N. 4, 2021
+for their integration and lead to the necessity of proportional re nement of the
+stepsize as " decreases.
+To avoid re ning the grid as"! 0 and to use a  xed stepsize with respect to
+the Sundman-type variable , one should choose suitable regularizing functions
+satisfying the following asymptotic condition [35]:
+jzj=g =O(1) as "! 0: (11)
+Then in the boundary layer the right-hand side of the second ODE in (8) will not
+have singularities as "! 0, and the third ODE in (8) will have a substantially
+smaller singularity than for g = 1. It follows from (10) that it is possible to
+choose regularizing functions which have asymptotics
+g!m
+1
+jzj as jzj!1 or g!m
+2
+jfj
+1=2
+as jfj!1; (12)
+wherem
+1
+andm
+2
+are positive constants of the order of unity. Such asymptotic
+conditions (as well as the normalization condition in (10)) can be satis ed, for
+example, if we take simple regularizing functions of the form
+g = 1 +jzj or g = (1 +jfj)
+1=2
+: (13)
+Let us consider in more detail the  rst regularizing function (13). In this
+case, the inequalityjzj=g < 1 holds. From the second equation of system (8)
+we getjy
+0
+ 
+j  1. In the boundary-layer region, where the derivative z is large
+as"! 0, we havejy
+0
+ 
+j  1, which leads to a linear dependencey    + const.
+The right-hand side of the third equation of system (8), taking into account
+relation (4) (that isjfj  z
+2
+), becomes linear with respect to z in this region.
+Outside the boundary layer, system (8) does not have qualitative features. The
+second regularizing function (13) has similar qualitative features.
+Thus, the use of regularizing functions (13) allows us to completely suppress
+the unbounded growth of the right-hand side of the second equation of system
+(8) in the boundary-layer region as "! 0 and to reduce (in comparison with
+g = 1) the right-hand side of the third equation. Further, by using concrete
+examples, it will be shown that regularizing functions of the form (13) have a
+limited scope.
+It is also advisable to use more complicated regularizing functions of the
+mixed form
+g = (1 +k
+1
+z
+2
++k
+2
+jfj)
+1=2
+; (14)
+g = 1 +k
+1
+jzj +k
+2
+jfj
+1=2
+; (15)
+g = 1 +k max(jzj;jfj
+1=2
+); (16)
+Electronic Journal. http://diffjournal.spbu.ru/ 24Differential Equations and Control Processes, N. 4, 2021
+which satisfy the asymptotic condition (11) as well as the normalization con-
+dition in (10). Formulas (14){(16) include the parameters k
+1
+  0, k
+2
+  0, and
+k > 0 which can vary (with k
+1
++k
+2
+= O(1) and k = O(1)). Note that the
+regularizing function (14) was proposed in [35]. It will be further shown that
+regularizing functions (15){(16) are more universal than functions (13) and (14)
+and lead to much more accurate numerical solutions.
+3.3. Additional explanations and comments
+1
+ 
+. From equation (7) and formula (9), for small increments of the argument
+ x, neglecting terms of the order of o( x), we obtain
+   =G(jzj;jfj) x;
+where z =y
+0
+x
+and f =y
+00
+xx
+.
+It follows that the choice of a  xed stepsize for a new variable    = h
+is equivalent to using a variable stepsize for the original independent variable
+ x =h=G. Suppose that G =G(u)> 0, G(0) = 1, G
+0
+u
+> 0, and u =jzj. Then
+an increase in the derivativez with respect tox leads to a decrease in the stepsize
+ x. Therefore, the application of the generalized Sundman transformations
+corresponds to the automatic choice of the stepsize with respect to x. When
+using formulas (13) and (14) the stepsize  x is small in the boundary-layer
+region.
+2
+ 
+. It is useful to additionally transform problem (8), which was obtained
+after the transition to a new (Sundman-type) independent variable, by intro-
+ducing a normalized derivative by the formula   z = "z. In this case, for the
+regularizing functions (13) and (14), the right-hand sides of the second and
+third equations obtained from (8) (and written in the form resolved with re-
+spect to derivatives) will be bounded in the boundary-layer region.
+3
+ 
+. Methods, based on the use of a piecewise-uniform grid (see, for example,
+[22, 23]) are particular degenerate cases of the method based on generalized
+Sundman transformations with a piecewise-smooth regularizing function of the
+form g =
+(
+c
+1
+if 0 x  ,
+c
+2
+if  <x  1,
+, where c
+1
+and c
+2
+are constants,   =  ("), and
+ ! 0 as "! 0.
+4
+ 
+. For moderately small values of " ("
+min
+<"  1), regularizing functions
+that do not satisfy the asymptotic condition (11) can be used. However, such
+Electronic Journal. http://diffjournal.spbu.ru/ 25Differential Equations and Control Processes, N. 4, 2021
+functions usually lead to signi cant computation errors at su ciently small
+" "
+min
+.
+5
+ 
+. In this paper, we apply a combination of the classical explicit Runge{
+Kutta method of the fourth-order of approximation with a  xed stepsize and
+a speci c shooting procedure with Maple implementation [60]. For this pur-
+pose, an auxiliary Cauchy problem described by the transformed equations (8)
+with the  rst two conditions at the left extreme point and an additional initial
+condition z(0) = s is numerically integrated. The value of the parameter s
+is determined by satisfying the boundary condition at the right extreme point
+x = 1 (see the last boundary condition in (8)). Similarly, after applying a
+generalized Sundman transformation to the original problem in the  rst stage,
+any effective numerical methods with a  xed stepsize (for example, explicit
+and implicit Runge{Kutta methods, explicit Adams{Bashforth and implicit
+Adams{Moulton methods [62, 63, 64]) can be used in the  nal stage.
+The general ow chart showing the main steps needed to implement the
+proposed method is displayed in Fig. 2.
+4. Singularly perturbed linear boundary-value problems.
+Numerical and analytical solutions
+4.1. Linear simple test problem. Numerical solutions
+obtained by using various regularizing functions
+First, we illustrate the characteristic features of the proposed method on simple
+linear problems.
+The results of numerical integration of the transformed problem (8), used
+for solving the original problem (1), for f = "
+ 1
+(z +y) with the regularizing
+functiong = 1 +jzj +jfj
+1=2
+, which are obtained by the shooting method (from
+the point x = 0) with the  xed stepsize h = 0:01 by using Maple [60], are
+shown in Fig. 1 by points for two sets of numerical values of the determining
+parameters. The  rst set is a = 1, b = 0, " = 0:005 (monotonic solution) and
+the second set is a = 0, b = 1, " = 0:005 (non-monotonic solution).
+It can be seen that there is a good coincidence between the numerical solu-
+tions and the corresponding exact solutions, which are determined by formula
+(2) and are represented by solid lines.
+Table 1 shows the maximum absolute errors of numerical solutions of the
+Electronic Journal. http://diffjournal.spbu.ru/ 26Differential Equations and Control Processes, N. 4, 2021
+Set original singularly
+perturbed boundary-value problem
+Introduce generalized Sundman
+transformation with regularizing function
+Obtain reduced singularly
+perturbed boundary-value problem
+Determine the parameters of the
+reduced problem. Apply shooting method
+Apply standard numerical
+method with uniform grid
+Update stepsize or
+regularizing function
+If the
+numerical
+results are
+correct?
+Stop
+No
+Yes
+Figure 2: The ow chart of the proposed method described in Section 3.
+Electronic Journal. http://diffjournal.spbu.ru/ 27Differential Equations and Control Processes, N. 4, 2021
+transformed problem (8) used for numerical integration of the original problem
+(1) with " = 0:005 obtained by the method based on generalized Sundman
+transformations for a = 1, b = 0 and a = 0, b = 1 with three stepsizes h and
+eight different regularizing functions g. For comparison, similar data are also
+indicated for the case g = 1, which corresponds to the direct numerical inte-
+gration (without using Sundman-type transformations) with the same stepsize
+with respect to x.
+The maximum absolute error of the numerical solutions for a = 1, b = 0
+No. Regularizing function Stepsize 0.1 Stepsize 0.05 Stepsize 0.01
+1 g=1 +jzj 0.017119347 0.006702741 0.000137030
+2 g=(1 +jfj)
+1=2
+0.000707586 0.000160259 0.000001602
+3 g = (1 +jzj +jfj)
+1=2
+0.000611528 0.000146118 0.000001741
+4 g = (1 +z
+2
++jfj)
+1=2
+0.000900004 0.000204128 0.000001775
+5 g = (1 +z
+4
++f
+2
+)
+1=4
+0.000886025 0.000193071 0.000002601
+6 g = 1 +jzj +jfj
+1=2
+0.000512010 0.000112509 0.000000410
+7 g = (1 +R
+1
+)
+1=2
+0.000707586 0.000160259 0.000001602
+8 g = 1 +R
+2
+0.000550849 0.000119910 0.000000414
+9 g=1 process diverges process diverges 0.193331173
+The maximum absolute error of the numerical solutions for a = 0, b = 1
+No. Regularizing function Stepsize 0.1 Stepsize 0.05 Stepsize 0.01
+1 g=1 +jzj 0.047029578 0.013710597 0.000713696
+2 g=(1 +jfj)
+1=2
+0.000824707 0.000249922 0.000001663
+3 g = (1 +jzj +jfj)
+1=2
+0.000570299 0.000115649 0.000000554
+4 g = (1 +z
+2
++jfj)
+1=2
+0.000559160 0.000109360 0.000000180
+5 g = (1 +z
+4
++f
+2
+)
+1=4
+0.000630398 0.000136417 0.000000390
+6 g = 1 +jzj +jfj
+1=2
+0.000265927 0.000025385 0.000000017
+7 g = (1 +R
+1
+)
+1=2
+0.000592523 0.000122175 0.000000346
+8 g = 1 +R
+2
+0.000602708 0.000090517 0.000000145
+9 g=1 process diverges process diverges 0.528189578
+Table 1: Comparison of the accuracy of numerical solutions of the transformed problem (8),
+which is used to solve the original problem (1), for various regularizing functions g with " =
+0:005 and three stepsizes h. Here R
+1
+= max(z
+2
+;jfj), R
+2
+= max(jzj;jfj
+1=2
+).
+It can be seen that the seven regularizing functions (Nos. 2{8) make it
+possible to obtain numerical solutions in the entire region with high accuracy
+even with a su ciently large stepsize (with respect to  ) equal to h = 0:1.
+It is important to note that the  rst  ve regularizing functions (Nos. 1{5)
+were used in [35], and the three functions (Nos. 6{8) are new. It can be seen that
+the best results are obtained by using the new regularizing function No. 6: for a
+Electronic Journal. http://diffjournal.spbu.ru/ 28Differential Equations and Control Processes, N. 4, 2021
+nonmonotonic solution and the stepsize 0:01, it provides an order of magnitude
+of the numerical solution more accurate than the other regularizing functions.
+Function No. 8 also provides high accuracy of calculations. Further comparison
+of numerical and exact solutions in more complex nonlinear test boundary layer
+problems will lead to the same conclusions: these two regularizing functions
+lead to very good results in the vast majority of cases. Here and further on, for
+greater clarity, the two best results in each column of all tables are highlighted
+in lilac.
+The maximum absolute error of the numerical solutions for a = 1, b = 0
+No. Regularizing function N=100 N=200 N=500
+1 g=1 +jzj 0.002126935 0.000129392 0.000001946
+2 g=(1 +jfj)
+1=2
+0.000183256 0.000007810 0.000000141
+3 g = (1 +jzj +jfj)
+1=2
+0.000227354 0.000007881 0.000000140
+4 g = (1 +z
+2
++jfj)
+1=2
+0.000216955 0.000012022 0.000000216
+5 g = (1 +z
+4
++f
+2
+)
+1=4
+0.000242947 0.000013334 0.000000289
+6 g = 1 +jzj +jfj
+1=2
+0.000322285 0.000010201 0.000000132
+7 g = (1 +R
+1
+)
+1=2
+0.000188884 0.000007943 0.000000139
+8 g = 1 +R
+2
+0.000152543 0.000002787 0.000000035
+9 g=1 0.193331172 0.006948616 0.000105565
+The maximum absolute error of the numerical solutions for a = 0, b = 1
+No. Regularizing function N=100 N=200 N=500
+1 g=1 +jzj 0.022065809 0.001390730 0.000470727
+2 g=(1 +jfj)
+1=2
+0.000685290 0.000129855 0.000006104
+3 g = (1 +jzj +jfj)
+1=2
+0.000481694 0.000019363 0.000000765
+4 g = (1 +z
+2
++jfj)
+1=2
+0.000762107 0.000039963 0.000000667
+5 g = (1 +z
+4
++f
+2
+)
+1=4
+0.000751407 0.000081003 0.000000685
+6 g = 1 +jzj +jfj
+1=2
+0.001389189 0.000027408 0.000000479
+7 g = (1 +R
+1
+)
+1=2
+0.000729929 0.000060206 0.000000643
+8 g = 1 +R
+2
+0.000617123 0.000016893 0.000000338
+9 g=1 0.528189578 0.018983935 0.000288408
+Table 2: Comparison of the accuracy of numerical solutions of the transformed problem (8),
+which is used to solve the original problem (1), for various regularizing functions g with " =
+0:005 for a different number of grid points N. Here R
+1
+= max(z
+2
+;jfj), R
+2
+= max(jzj;jfj
+1=2
+).
+Table 2 shows the results allowing to compare the e ciency of various regu-
+larizing functions that are used for numerical solution of the transformed prob-
+lem (8) with " = 0:005 fora = 1,b = 0 anda = 0,b = 1 for a different number
+of grid points N =  
+1
+=h (here  
+1
+is the length of the interval of numerical
+integration of the transformed equations).
+Electronic Journal. http://diffjournal.spbu.ru/ 29Differential Equations and Control Processes, N. 4, 2021
+Let us compare, for example, the maximum absolute errors of the numer-
+ical solutions obtained for a given " with the regularizing function No. 8 and
+function No. 9 (the latter solution is obtained without using transformations)
+with the same number of grid points. In this case, for N = 100, the use of
+generalized Sundman transformations makes it possible to increase the accu-
+racy of the numerical solution by more than 1200{3000 times, and forN = 500,
+approximately 850 times (as the number of grid points increases, the error of
+the numerical solution, obtained without using transformations, gradually de-
+creases).
+It can be seen that for all regularizing functions considered in Table 2, the
+accuracy of the numerical integration of problem (1) with a monotone solution
+for a = 1, b = 0 is signi cantly higher than the accuracy of the numerical
+integration of problem (1) with a non-monotonic solution for a = 0, b = 1.
+It can also be seen that function No. 1 is low effective for the non-monotonic
+solution. This is due to the fact that near the boundary layer there is a sharp
+extremum at the point x = x
+ 
+(see Fig. 1b) where the derivative vanishes,
+y
+0
+x
+j
+x=x
+ 
+= zj
+x=x
+ 
+= 0. Using formula (2) with a = 0 and b = 1, we  nd the
+curvature at the extremum point
+k
+ 
+=
+jy
+00
+xx
+j
+(1 +jy
+0
+x
+j
+2
+)
+3=2
+ 
+ 
+ 
+ 
+x=x
+ 
+=
+ 
+ 
+y
+00
+xx
+ 
+ 
+x=x
+ 
+'e
+ 
+1
+"
+  1
+ 
+: (17)
+Thus, the curvature of k
+ 
+tends to in nity as "! 0. Therefore, in the vicinity
+of the point x
+ 
+, where the most dramatic qualitative changes of the solution
+take place, it is necessary to make a small stepsize to obtain high accuracy
+of numerical calculations. When choosing the regularizing function No. 1 in
+Table 2, we have g = 1 +jzj   1 in the vicinity of the extremum, so the
+stepsize in x (for a  xed N) here will be maximal (whereas a small stepsize is
+required for this region with a large curvature). This circumstance leads to a
+large calculation error in the extremum region for the function g = 1 +jzj.
+To explain the above more clearly, let us make a linear-fractional transfor-
+mation of the independent variable
+X =
+(  + 1)x
+x + 
+;   =
+x
+ 
+1  2x
+ 
+; (18)
+which stretches the boundary layer area and translates the point x
+ 
+in thex,y
+plane to the pointX
+ 
+= 1=2 in theX,y plane (and leaves the endpoints of the
+considered interval motionless).
+Electronic Journal. http://diffjournal.spbu.ru/ 30Differential Equations and Control Processes, N. 4, 2021
+In Fig. 3a), the exact solution (2) of problem (1) is shown by the thick
+solid line for a = 0, b = 1, " = 0:005 in the X, y plane. Also in Fig. 3b),
+we present the behavior of the absolute error E of the numerical solution of
+the transformed problem (8) for the regularizing function g = 1 +jzj with the
+stepsize 0.01 and the same values of the parameters. It can be seen that the
+maximum absolute error in this case is located in the transition area between
+the boundary layer and the outer region (near the extremum of the functiony).
+Figure 3: a) Exact solution (2) of problem (1) with a = 0, b = 1, and " = 0:005 in the x,
+y plane (thin solid line) and in the X, y plane (thick solid line); b) absolute error E of the
+numerical solution of the transformed problem (8) with the regularizing function g = 1 +jzj
+and the same values of the parameters in the x,y plane (thin solid line) and in the X,y plane
+(thick solid line).
+The regularizing functions of mixed type Nos. 3{5 in Tables 1 and 2, in
+addition toz =y
+0
+x
+also includingf =y
+00
+xx
+, satisfy the asymptotic condition (11)
+in the boundary-layer region.
+The inclusion of the second derivative in these formulas allows us to take
+into account the large curvature in the vicinity of the extremum point (see (17)),
+and accordingly, reduces the stepsize (with respect tox) in this area. Therefore,
+the accuracy of numerical solutions obtained by using the regularizing functions
+Nos. 3{5 is much higher than by using function No. 1.
+Electronic Journal. http://diffjournal.spbu.ru/ 31Differential Equations and Control Processes, N. 4, 2021
+For the non-monotonic solution (with a = 0, b = 1) the best results are
+given by the regularizing function No. 4.
+In Fig. 4, the numerical integration results of the transformed problem (8),
+used for solving the original problem (1), are shown fora = 0,b = 1," = 0:005,
+h = 0:01, and g = (1 +z
+2
++jfj)
+1=2
+. For clarity, solutions are given using
+the original independent variablex and normalized Sundman-type variable
+ 
+  =
+ = 
+1
+, which stretches the boundary-layer region.
+Precisely such a stretching of the region with large gradients, which oc-
+curs automatically after choosing a suitable regularizing function, reduces the
+stepsize inx and ensures high accuracy of numerical solutions in the boundary
+layer.
+Further, we will consider only boundary-layer type problems that have non-
+monotonic solutions (since such problems present the greatest di culties for
+numerical integration).
+Figure 4: a) Numerical solutions of the transformed problem (8), which is used to solve the
+original problem (1) witha = 0,b = 1, and" = 0:005, forg = (1+z
+2
++jfj)
+1=2
+andh = 0:01: y(x)
+(thin solid line) andy(
+ 
+ ), where
+ 
+  = = 
+1
+(thick solid line); b) absolute errorsE(x) andE(
+ 
+ ) of
+numerical solutions of the transformed problem (8) for the same values of the parameters and
+the regularizing function g.
+Electronic Journal. http://diffjournal.spbu.ru/ 32Differential Equations and Control Processes, N. 4, 2021
+4.2. Multiparameter linear boundary-value problem having solutions
+with several extrema
+Test problem 2. Consider now the more complex  ve-parameter linear
+boundary-value problem
+"y
+00
+xx
++y
+0
+x
++c cos( x) = 0 (0<x< 1); y(0) =a; y(1) =b; (19)
+where a, b, c,  , and " are free parameters. Depending on the values of the
+parameters, this problem can have one, two and more extrema or cannot have
+them at all.
+It is easy to show that the exact solution of problem (19) is determined by
+the formulas
+y =A +Be
+ x="
++S(x); S(x) =
+c["  cos( x)  sin( x)]
+ (1 +"
+2
+ 
+2
+)
+;
+A =
+b S(1) + [S(0) a]e
+ 1="
+1 e
+ 1="
+; B =
+a b +S(1) S(0)
+1 e
+ 1="
+:
+(20)
+The corresponding asymptotic solution as "! 0 has the form
+y =b +c
+sin 
+ 
++
+ 
+a b c
+sin 
+ 
+ 
+e
+ x="
+ 
+c
+ 
+sin( x): (21)
+Let us consider in more detail a special case ofa = 0,b =c = 1, and  = n
+(n = 1; 2; ::: ). Substituting the indicated values of the parameters in (21), we
+obtain
+y = 1 e
+ x="
+ 
+1
+ 
+sin( x);   = n: (22)
+The exact solutions of problem (19), which are described by formulas (20)
+for a = 0, b = c = 1, and " = 0:005, are represented in Fig. 5 by solid lines
+for two values of the parameter  :   =   and   = 2 . For these parameter
+values, the solution has two and three extrema, respectively (for   =   at
+x
+ 
+= 0:0265534145 the solution reaches a maximum value ofy
+ 
+= 0:978476138).
+Results of numerical solutions of the transformed problem (8), used for solving
+problem (19) with the regularizing function g = (1 +z
+2
++jfj)
+1=2
+and the  xed
+stepsizeh = 0:01 for the same values of the determining parameters, are shown
+by points. It can be seen that there is a good coincidence between the numerical
+and exact solutions. The maximum absolute error of the numerical solutions
+for   =  is E = 0:000000926 and   = 2  is E = 0:009993346. The maximum
+absolute error of the asymptotic solutions (22) for   =   is E = 0:009966909
+and   = 2  is E = 0:009992805.
+Electronic Journal. http://diffjournal.spbu.ru/ 33Differential Equations and Control Processes, N. 4, 2021
+Figure 5: Exact solutions (20) of problem (19) witha = 0,b =c = 1, and" = 0:005 (solid lines)
+and numerical solutions of the corresponding transformed problem (8) withg = (1+z
+2
++jfj)
+1=2
+and stepsize h = 0:01 (points) for the two values of  : a)   =  and b)   = 2 .
+5. Singularly perturbed nonlinear boundary-value
+problems. Numerical and analytical solutions
+5.1. Multiparameter boundary-value problem with quadratic
+nonlinearity. Exact and numerical solutions
+Test problem 3. We consider the  ve-parameter boundary-value problem for
+the reaction-diffusion type ODE with quadratic nonlinearity
+"y
+00
+xx
++ (y +px +q)y
+0
+x
++p(y +px +q) = 0 (0<x< 1); (23)
+y(0) =a; y(1) =b; (24)
+where a, b, p, q, and " are free parameters.
+The substitutionu =y+px+q transforms equation (23) to the autonomous
+equation"u
+00
+xx
++uu
+0
+x
+= 0; by introducing the new variablev(u) =u
+0
+x
+it is reduced
+to the  rst-order linear ODE "v
+0
+u
++u = 0.
+As a result, we  nd the general solution of equation (23) in the explicit form
+y =c
+1 Ae
+ cx="
+1 +Ae
+ cx="
+ px q: (25)
+The constants of integration A and c are determined from the transcendental
+Electronic Journal. http://diffjournal.spbu.ru/ 34Differential Equations and Control Processes, N. 4, 2021
+system of equations
+c
+1 A
+1 +A
+=a +q; c
+1 Ae
+ c="
+1 +Ae
+ c="
+=b +p +q; (26)
+obtained by substituting function (25) into the boundary conditions (24). As
+"! 0 and b +p +q > 0, the asymptotic solution of system of ODEs (26) is
+given by the expressions
+A =
+b a +p
+b +a +p + 2q
+; c =b +p +q: (27)
+Remark 4. The asymptotic solution (27) exactly satis es the  rst ODE
+of system (26), and the discrepancy of the second ODE of the same system has
+the exponentially small order e
+ (b+p+q)="
+as "! 0.
+Figure 6: a) Numerical solution of the transformed problem (8), which is used to solve the
+original problem (23){(24), for the regularizing functiong = (1 +z
+2
++jfj)
+1=2
+witha = 1,b = 1,
+p = 1, q = 0, and" = 0:005: x =x( ) (solid line) and y =y( ) (dashed line); b) exact solution
+(25) (solid line) of problem (23){(24) with a = 1, b = 1, p = 1, q = 0, and " = 0:005 and
+numerical solution (circles) of the transformed problem (8) forg = (1 +z
+2
++jfj)
+1=2
+witha = 1,
+b = 1, p = 1, q = 0, and " = 0:005; c) and d) absolute errors E of numerical solutions of
+the transformed problem (8) for g = (1 +z
+2
++jfj)
+1=2
+and the same values of the parameters,
+respectively, with respect to   and x.
+The numerical solution x =x( ), y =y( ) of the transformed problem (8)
+with the regularizing function g = (1 +z
+2
++jfj)
+1=2
+which is used to solve the
+Electronic Journal. http://diffjournal.spbu.ru/ 35Differential Equations and Control Processes, N. 4, 2021
+original problem (23){(24) with a = b = 1, p = 1, q = 0, and " = 0:005 is
+shown in Fig. 6a. The exact solution to the original problem (23){(24), which
+is determined by formula (25) with A = 1=3, c = 2 for the same values of the
+parameters a, b, p, q, and ", is shown by solid line in Fig. 6b (in this case,
+the difference between the exact and the asymptotic solutions is far beyond
+the limits of the accuracy of our calculations). The circles represent the results
+of numerical integration of the corresponding transformed problem (8) with
+g = (1 +z
+2
++jfj)
+1=2
+, which are obtained by the shooting method with initial
+point x = 0 and the stepsize h = 0:01 by using a special Maple procedure.
+The maximum modulus of the difference between the exact and the numerical
+solutions is equal to 0:000003261.
+The maximum absolute error of the numerical solutions of problem (23){(24)
+No. Regularizing function Stepsize 0.1 Stepsize 0.05 Stepsize 0.01
+1 g = 1 +jzj 0.137389203 0.053399823 0.000857913
+2 g = (1 +jfj)
+1=2
+0.000937303 0.000228167 0.000005030
+3 g = (1 +jzj +jfj)
+1=2
+0.000786873 0.000196698 0.000003249
+4 g = (1 +z
+2
++jfj)
+1=2
+0.000607467 0.000154641 0.000003261
+5 g = (1 +z
+4
++f
+2
+)
+1=4
+0.000617535 0.000156509 0.000005624
+6 g = 1 +jzj +jfj
+1=2
+0.000637870 0.000096382 0.000000429
+7 g = (1 +R
+1
+)
+1=2
+0.000630415 0.000172091 0.000004600
+8 g = 1 +R
+2
+0.000621275 0.000164464 0.000001680
+9 g = 1 process diverges process diverges process diverges
+Table 3: Comparison of the accuracy of numerical solutions of the transformed problem (8),
+which is used to solve the original problem (23){(24), for various regularizing functions g with
+a = b = 1, p = 1, q = 0, " = 0:005 and three stepsizes h. Here R
+1
+= max(z
+2
+;jfj), R
+2
+=
+max(jzj;jfj
+1=2
+).
+Table 3 shows the maximum absolute errors of numerical solutions of the
+transformed problem (8) used for numerical solutions of the original problem
+(23){(24) for a = b = 1, p = 1, q = 0, " = 0:005 with three stepsizes h and
+different regularizing functions g. It can be seen that functions Nos. 2{8 allow
+one to obtain numerical solutions in the entire region with high accuracy even
+with a su ciently large stepsize (with respect to the non-local variable ) equal
+to h = 0:1. For stepsize h = 0:05 and h = 0:01, the best results are provided
+by function No. 6.
+Tables 4 and 5 shows the maximum absolute errors of the numerical so-
+lutions of the transformed problem (8), used for the numerical solution of the
+original problem (23){(24) for a =b = 0,p = 1,q = 0, and" = 0:005, for three
+Electronic Journal. http://diffjournal.spbu.ru/ 36Differential Equations and Control Processes, N. 4, 2021
+stepsizes h, different numbers of grid points N, and nine different regularizing
+functions g.
+The maximum absolute error of the numerical solutions of problem (23){(24)
+No. Regularized function Stepsize 0.1 Stepsize 0.05 Stepsize 0.01
+1 g = 1 +jzj 0.177592060 0.035246285 0.000212137
+2 g = (1 +jfj)
+1=2
+process diverges 0.376921099 0.021473151
+3 g = (1 +jzj +jfj)
+1=2
+0.025249660 0.006467125 0.000196032
+4 g = (1 +z
+2
++jfj)
+1=2
+0.000752856 0.000163579 0.000000699
+5 g = (1 +z
+4
++f
+2
+)
+1=4
+0.000627973 0.000154532 0.000002003
+6 g = 1 +jzj +jfj
+1=2
+0.000393742 0.000067536 0.000000061
+7 g = (1 +R
+1
+)
+1=2
+0.000712931 0.000202734 0.000000999
+8 g = 1 +R
+2
+0.000663385 0.000119895 0.000000265
+9 g = 1 process diverges process diverges 0.019513818
+Table 4: Comparison of the accuracy of numerical solutions of the transformed problem (8),
+which is used to solve the original problem (23){(24), for various regularizing functions g with
+a = b = 0, p = 1, q = 0, " = 0:005 for three stepsizes h. Here R
+1
+= max(z
+2
+;jfj), R
+2
+=
+max(jzj;jfj
+1=2
+).
+The special caseg = 1 corresponds to the direct numerical solution (without
+using transformations) with the same stepsize with respect tox. It can be seen
+that functions Nos. 4{8 allow one to obtain numerical solutions in the entire
+region with high accuracy even with a su ciently large stepsize (with respect
+to  ) equal to h = 0:1. For stepsize h = 0:05 and h = 0:01, the best results are
+provided by functions No. 6 and No. 8.
+Unsatisfactory results for function No. 2 can be explained by the fact that
+in this case a degeneracy occurs at the initial point, where the second derivative
+vanishes, y
+00
+xx
+j
+x=0
+=fj
+x=0
+= 0.
+Indeed, when choosing the regularizing function No. 2, in the vicinity of the
+point x = 0 we have g = (1 +jfj)
+1=2
+  1 and the asymptotic condition (11) is
+not satis ed.
+Therefore, the function g = (1 +jfj)
+1=2
+cannot suppress here the growth of
+the right-hand side of the second equation of the transformed problem (8).
+As a result, the stepsize inx (for a  xedN) will be maximum here (whereas
+for this region with a large  rst derivative, y
+0
+x
+j
+x=0
+  2"
+ 1
+, a small stepsize is
+required). This circumstance leads to a large calculation error in the boundary-
+layer region for the function g = (1 +jfj)
+1=2
+.
+From Tables 4 and 5 it can be seen that the use of the regularizing function
+Electronic Journal. http://diffjournal.spbu.ru/ 37Differential Equations and Control Processes, N. 4, 2021
+The maximum absolute error of the numerical solutions of problem (23){(24)
+No. Regularized function N=100 N=200 N=300
+1 g = 1 +jzj 0.000734178 0.000325332 0.000061158
+2 g = (1 +jfj)
+1=2
+process diverges 0.034146715 0.016310528
+3 g = (1 +jzj +jfj)
+1=2
+0.004963520 0.000514743 0.000202650
+4 g = (1 +z
+2
++jfj)
+1=2
+0.000198725 0.000007921 0.000001328
+5 g = (1 +z
+4
++f
+2
+)
+1=4
+0.000222372 0.000010748 0.000002162
+6 g = 1 +jzj +jfj
+1=2
+0.000195161 0.000003566 0.000000433
+7 g = (1 +R
+1
+)
+1=2
+0.000159026 0.000009546 0.000001646
+8 g = 1 +R
+2
+0.000118378 0.000004655 0.000000747
+9 g = 1 0.019513818 0.001179663 0.000182152
+Table 5: Comparison of the accuracy of numerical solutions of the transformed problem (8),
+which is used to solve the original problem (23){(24), for various regularizing functions g with
+a = b = 0, p = 1, q = 0, " = 0:005 for a different number of grid points N. Here R
+1
+=
+max(z
+2
+;jfj), R
+2
+= max(jzj;jfj
+1=2
+).
+No. 3 gives a low accuracy of numerical solutions. This is due to the fact that
+in this case we have g = (1 +jzj +jfj)
+1=2
+j
+x=0
+= O(jzj
+1=2
+), i.e. near the initial
+point x = 0, the asymptotic condition (11) does not hold.
+5.2. Multiparameter boundary-value problem with
+exponential nonlinearity. Exact and numerical solutions
+Test problem 4. We now consider the  ve-parameter boundary-value problem
+for the reaction-diffusion type ODE with exponential nonlinearity
+"y
+00
+xx
++e
+y+px+q
+y
+0
+x
++pe
+y+px+q
+= 0 (0<x< 1); (28)
+y(0) =a; y(1) =b; (29)
+where a, b, p, q, and " are free parameters.
+The substitution u = y +px +q transforms ODE (28) to the autonomous
+equation "u
+00
+xx
++e
+u
+u
+0
+x
+= 0; by introducing the new variable v(u) = u
+0
+x
+it is
+reduced to the  rst-order linear ODE "v
+0
+u
++e
+u
+= 0. As a result, we  nd the
+general solution of equation (28) in the explicit form
+y =  ln
+ 
+ce
+ kx="
++
+1
+k
+ 
+ px q: (30)
+The integration constants c and k are determined from the transcendental
+Electronic Journal. http://diffjournal.spbu.ru/ 38Differential Equations and Control Processes, N. 4, 2021
+system of equations
+c +
+1
+k
+=e
+ a q
+; ce
+ k="
++
+1
+k
+=e
+ b p q
+; (31)
+obtained by substituting expression (30) into the boundary conditions (29) and
+by performing some elementary transformations.
+As "! 0, the asymptotic solution of system (31) is given by the formulas
+c =e
+ a q
+ e
+ b p q
+; k =e
+b+p+q
+: (32)
+The maximum absolute error of the numerical solutions of problem (28){(29)
+No. Regularized function Stepsize 0.1 Stepsize 0.05 Stepsize 0.01
+1 g = 1 +jzj 0.185049898 0.035618317 0.000212182
+2 g = (1 +jfj)
+1=2
+0.000692372 0.000191043 0.000001852
+3 g = (1 +jzj +jfj)
+1=2
+0.000699196 0.000182170 0.000000707
+4 g = (1 +z
+2
++jfj)
+1=2
+0.000706940 0.000139584 0.000000656
+5 g = (1 +z
+4
++f
+2
+)
+1=4
+0.000741403 0.000160845 0.000002135
+6 g = 1 +jzj +jfj
+1=2
+0.000479280 0.000062701 0.000000075
+7 g = (1 +R
+1
+)
+1=2
+0.000790921 0.000199628 0.000001181
+8 g = 1 +R
+2
+0.000492648 0.000109479 0.000000283
+9 g = 1 process diverges process diverges 0.016651291
+Table 6: Comparison of the accuracy of numerical solutions of the transformed problem (8),
+which is used to solve the original problem (28){(29), for various regularizing functions g with
+a = b = 0, p = 1, q =  1, " = 0:005 and three stepsizes h. Here R
+1
+= max(z
+2
+;jfj),
+R
+2
+= max(jzj;jfj
+1=2
+).
+Tables 6 and 7 shows the maximum absolute errors of the numerical so-
+lutions of the transformed problem (8), used for the numerical solution of the
+original problem (28){(29) for a = b = 0, p = 1, q = 1, and " = 0:005, for
+three stepsizesh, different numbers of grid pointsN, and different regularizing
+functionsg. It can be seen that functions Nos. 2{8 allow one to obtain numer-
+ical solutions in the entire region with high accuracy even with a su ciently
+large stepsize (with respect to  ) equal to h = 0:1. For stepsize h = 0:05 and
+h = 0:01, the best results are provided by functions No. 6 and No. 8. Note
+that in this case function No. 1 is low effective; the reason for this is due to the
+non-monotonicity of the solution and is explained at the end of Section 4.1.
+Electronic Journal. http://diffjournal.spbu.ru/ 39Differential Equations and Control Processes, N. 4, 2021
+The maximum absolute error of the numerical solutions of problem (28){(29)
+No. Regularized function N=100 N=200 N=300
+1 g = 1 +jzj 0.008033009 0.000490903 0.000168976
+2 g = (1 +jfj)
+1=2
+0.000174781 0.000006417 0.000001164
+3 g = (1 +jzj +jfj)
+1=2
+0.000146092 0.000005956 0.000000895
+4 g = (1 +z
+2
++jfj)
+1=2
+0.000215039 0.000007804 0.000001386
+5 g = (1 +z
+4
++f
+2
+)
+1=4
+0.000186220 0.000009774 0.000002374
+6 g = 1 +jzj +jfj
+1=2
+0.000254116 0.000003781 0.000000540
+7 g = (1 +R
+1
+)
+1=2
+0.000149504 0.000009551 0.000001620
+8 g = 1 +R
+2
+0.000096813 0.000004651 0.000000799
+9 g = 1 0.016651291 0.000385984 0.000062467
+Table 7: Comparison of the accuracy of numerical solutions of the transformed problem (8),
+which is used to solve the original problem (28){(29), for various regularizing functions g with
+a = b = 0, p = 1, q = 1, " = 0:005 for a different number of grid points N. Here R
+1
+=
+max(z
+2
+;jfj), R
+2
+= max(jzj;jfj
+1=2
+).
+5.3. Another multiparameter problem with exponential
+nonlinearity. Asymptotic and numerical solutions
+Test problem 5. Let us consider the four-parameter boundary-value problem
+with exponential nonlinearity
+"y
+00
+xx
++e
+y
+y
+0
+x
++cxe
+y
+= 0 (0<x< 1); (33)
+y(0) =a; y(1) =b; (34)
+where a, b, c, and " are free parameters.
+The solution of problem (33){(34) cannot be represented in a closed ana-
+lytical form. Therefore, in order to obtain an approximate solution as "! 0,
+we use the method of matched asymptotic expansions [52, 53, 53].
+As "! 0, near the left boundary x = 0, a boundary layer, called the inner
+region, is formed. In this region, the last term of equation (33) can be neglected.
+The leading term of the asymptotic expansion of the solution in the boundary
+layer, satisfying the  rst boundary condition (34), has the form
+y
+i
+=  ln
+ 
+ 
+e
+ a
+ 
+1
+k
+ 
+e
+ k 
++
+1
+k
+ 
+;   =x="; (35)
+where   is the boundary-layer (stretched) variable, k is the constant that is
+determined further in the solution process. In the outer region, O(") x  1,
+the  rst term of equation (33) can be neglected and the leading term of the
+Electronic Journal. http://diffjournal.spbu.ru/ 40Differential Equations and Control Processes, N. 4, 2021
+asymptotic solution of problem (33){(34) is found from the truncated equation
+e
+y
+(y
+0
+x
++cx) = 0. Its solution, satisfying the second boundary condition (34),
+has the form
+y
+e
+=b +
+1
+2
+c 
+1
+2
+cx
+2
+: (36)
+The inner and outer solutions, (35) and (36), must satisfy the matching con-
+dition y
+i
+( !1) = y
+e
+(x! 0), which allows us to determine the constant k
+entering into (35):
+k =e
+(2b+c)=2
+: (37)
+A uniform applicable (in the entire domain 0 x  1) composite expansion of
+the solution of problem (33){(34) is de ned by the formula
+y =y
+i
++y
+e
+ y
+e
+j
+x=0
+=  ln
+ 
+ 
+e
+ a
+ 
+1
+k
+ 
+e
+ kx="
++
+1
+k
+ 
+ 
+1
+2
+cx
+2
+; k =e
+(2b+c)=2
+:
+(38)
+For non-monotonic solutions (if a < b and c > 0), for the maximum value
+of the required function we obtain y
+ 
+'y
+e
+j
+x=0
+=b +
+1
+2
+c.
+Figure 7: Asymptotic solutions (38) of the original problem (33){(34) fora = 0,b = 1," = 0:005
+and c = 0 (solid line), c = 1 (dashed line), and c = 1 (dash-dotted line), and numerical solu-
+tions of the corresponding transformed problem (8) (circles) obtained by generalized Sundman
+transformations with a regularizing function g = (1 +z
+2
++jfj)
+1=2
+.
+Electronic Journal. http://diffjournal.spbu.ru/ 41Differential Equations and Control Processes, N. 4, 2021
+In Fig. 7, the asymptotic solutions (38) of problem (33){(34) are shown for
+a = 0,b = 1," = 0:005 and the three values of the parameterc = 1, 0, 1. The
+circles represent the results of numerical solutions of the corresponding trans-
+formed problem (8) with the regularizing functiong = (1+z
+2
++jfj)
+1=2
+, obtained
+by the shooting method (from the point x = 0) with the stepsize h = 0:01 by
+using Maple. The maximum modulus of the difference between the asymp-
+totic and numerical solutions at c = 1, 0, 1 are, respectively, 0:002612894,
+0:000005160, 0:001691475. The maximum modulus of the difference between
+the numerical solutions forh = 0:01 andh = 0:005 (stepsize is reduced by half)
+for the same values ^ a^ aofc, respectively, are equal to 0:001063206, 0:000004164,
+0:000013097.
+6. Regularizing functions recommended for
+calculations. Remarks on blow-up problems
+6.1. Regularizing functions recommended for calculations
+For all the singularly perturbed linear and nonlinear boundary-value problems
+with a small parameter considered in this paper, which are described by ODEs
+of the form"y
+00
+xx
+=F (x;y;y
+0
+x
+), the best numerical results are given by using the
+composite regularizing functions
+g = 1 +jy
+0
+x
+j +jy
+00
+xx
+j
+1=2
+;
+g = 1 + max(jy
+0
+x
+j;jy
+00
+xx
+j
+1=2
+);
+(39)
+where y
+00
+xx
+can be replaced by f ="
+ 1
+F (x;y;y
+0
+x
+). These formulas are the most
+versatile and work well in all cases.
+Su ciently good results are also provided by the regularizing function
+g = (1 +jy
+0
+x
+j
+2
++jy
+00
+xx
+j)
+1=2
+;
+recommended in [35].
+Recall that earlier, in Sections 4.1 and 5.1, by analyzing the solutions of
+test problems (1) and (23){(24) (for some parameter values), it was shown that
+the regularizing functions (13) (functions Nos. 1 and 2 in the tables) are of
+limited applicability and do not work well for non-monotonic solutions or if the
+original equation degenerates at the border of the boundary layer.
+Electronic Journal. http://diffjournal.spbu.ru/ 42Differential Equations and Control Processes, N. 4, 2021
+6.2. Difference between the choice of regularizing functions in
+boundary-layer problems and blow-up problems
+In Cauchy problems for nonlinear ODEs, the blow-up solutions can be repre-
+sented in a vicinity of the power-law singular point x
+ 
+as
+y'A(x x
+ 
+)
+  
+;   > 0; (40)
+where 0  x < x
+ 
+. Since the position of the singular point x
+ 
+is unknown in
+advance, it is di cult to solve such problems by standard numerical methods
+with a  xed stepsize.
+In [39, 40, 41], to solve blow-up problems, it was proposed to use Sandman-
+type transformations of the form (7), which replaced the unknown interval of
+variation of the independent variable of the original problem 0  x < x
+ 
+by a
+given semi-in nite interval 0   <1 of the resulting problem. By integrating
+Eq. (7), we have
+  =
+Z
+x
+0
+g(x;y;y
+0
+x
+)dx; y =y(x): (41)
+Since the singular point x
+ 
+after transformation must go to the in nite point
+  =1, the condition
+lim
+x!x
+ 
+I =1; I =
+Z
+x
+0
+g(x;y;y
+0
+x
+)dx (42)
+must be satis ed.
+For second-order nonlinear ODEs, taking into account the relations (40)
+and (42), it can be shown that for the simplest regularizing functions of the
+form g =g(z) and g =g(f) with z =y
+0
+x
+and f =y
+00
+xx
+, the following power-law
+asymptotic conditions should be used [40, 41]:
+g(z)!m
+1
+jzj
+1
+ +1
++"
+1
+as jzj!1; (43)
+g(f)!m
+2
+jfj
+1
+ +2
++"
+2
+as jfj!1; (44)
+where m
+1
+> 0, m
+2
+> 0, "
+1
+  0, and "
+2
+  0. To the conditions (43) and (44),
+as in the problems with a boundary layer, one should add a condition of the
+normalization type g(0) = 1. Comparative analysis of exact and numerical
+solutions to blow-up problems showed that in asymptotic relations (43) and
+(44) one should choose the minimum values "
+1
+="
+2
+= 0 [40, 41].
+Electronic Journal. http://diffjournal.spbu.ru/ 43Differential Equations and Control Processes, N. 4, 2021
+It is seen that conditions (11) and (12) imposed on regularizing functions
+in singularly perturbed problems with a small parameter differ signi cantly
+from conditions (42){(44), which must be satis ed by regularizing functions in
+blow-up problems.
+For second-order nonlinear ODEs with monotone and non-monotone blow-
+up solutions, that have a singularity in the form of a pole of any integer order
+(  = 1; 2; ::: ), one can recommend to use the composite regularizing function
+[39, 40, 41]:
+g = (1 +jy
+0
+x
+j +jy
+00
+xx
+j)
+1=3
+; (45)
+where the second derivative y
+00
+xx
+can be replaced with the right-hand side of
+the original equation y
+00
+xx
+= f(x;y;y
+0
+x
+). It can be seen that the regularizing
+function (45) differs signi cantly from functions (39), which give good results
+in boundary-layer problems.
+Note that the composite regularizing functions (39) satisfy the condition
+(42) for any blow-up solutions of the power-law form (40) with   > 0. The
+analysis of the possibility of using these functions for numerical integration of
+blow-up problems is far beyond the scope of this paper. The authors are going
+to investigate this issue in the future.
+7. Brief conclusions
+Singularly perturbed boundary-value problems for second-order ODEs with a
+small parameter at the highest derivative are considered. Such problems are
+characterized by narrow boundary layers with large gradients, which greatly
+limits the applicability of standard  xed-step numerical methods (their use can
+lead to signi cant errors). We offer an effective method of numerical integration
+of singularly perturbed boundary-value problems based on using Sundman-type
+transformations. As a result, we obtain more convenient reduced problems
+that allow one to apply standard numerical methods with a  xed stepsize with
+respect to a new independent variable. An extensive testing of the method
+is carried out on various multiparameter linear and nonlinear problems with
+monotonic and non-monotonic solutions. Comparison of numerical, exact, and
+asymptotic solutions of several singularly perturbed boundary-value problems
+with a small parameter showed the high accuracy of the method based on
+Sundman-type transformations.
+Electronic Journal. http://diffjournal.spbu.ru/ 44Differential Equations and Control Processes, N. 4, 2021
+Acknowledgments
+The study was supported by the Ministry of Education and Science of the
+Russian Federation within the framework of the State Assignment (Registration
+No. AAAA-A20-120011690135-5).
+References
+[1] Van Dyke M. Perturbation Methods in Fluid Mechanics. Academic Press:
+New York, 1964.
+[2] Schlichting H. Boundary Layer Theory. New York: McGraw{Hill, 1981.
+[3] Polyanin, A.D., Kutepov, A.M., Vyazmin, A.V., Kazenin, D.A. Hydro-
+dynamics, Mass and Heat Transfer in Chemical Engineering. Taylor &
+Francis: London, 2002.
+[4] Levich V.G. Physicochemical Hydrodynamics. New Jersey: Prentice Hall,
+1962.
+[5] Schetz J.A. Foundations of Boundary Layer Theory for Momentum, Heat,
+and Mass Transfer. New York: Prentice Hall, 1984.
+[6] Franz S., Roos H.G. The capriciousness of numerical methods for singular
+perturbations. SIAM Review, 2011, 53, 157{173.
+[7] Bakhvalov N.S. On the optimization methods for solving boundary value
+problems with boundary layers. Zh. Vychisl. Math. Fiz., 1969, 24, 841{
+859 (in Russian).
+[8] Il'in A.M. A difference scheme for a differential equation with a small
+parameter affecting the highest derivative. Mat. Zametki, 1969, 6, 237{
+248.
+[9] Vulanovic R. A uniform numerical method for quasilinear singular pertur-
+bation problems without turning points. Computing, 1989, 41, 97{106.
+[10] Jain M.K., Iyengar S.R.K., Subramanyam G.S. Variable mesh methods
+for the numerical solution of two-point singular perturbation problems.
+Comput. Methods in Appl. Mech. Eng., 1984, 42, 273{286.
+Electronic Journal. http://diffjournal.spbu.ru/ 45Differential Equations and Control Processes, N. 4, 2021
+[11] Shishkin G.I. Grid Approximations of Singularly Perturbed Elliptic and
+Parabolic Equations. Ural Branch of RAS: Ekaterinburg, 1992 (in Rus-
+sian).
+[12] Beckett G., Mackenzie J.A. Convergence analysis of  nite difference ap-
+proximations on equidistributed grids to a singularly perturbed boundary
+value problem. Appl. Numer. Math., 2000, 35, 87{109.
+[13] Farrell P., Hegarty A., Miller J.M., O'Riordan E., Shishkin G.I. Robust
+Computational Techniques for Boundary Layers. Chapman & Hall/CRC
+Press: Boca Raton{London, 2000.
+[14] Qiu Y., Sloan D.M., Tang T. Numerical solution of a singularly perturbed
+two-point boundary value problem using equidistribution, analysis of con-
+vergence. J. Comput. Appl. Math., 2000, 116, 121{143.
+[15] Frohner A., Roos H.-G. The "-uniform convergence of a defect correction
+method on a Shishkin mesh. Appl. Numerical Math., 2001, 37, 79{94.
+[16] Miranker W.L. Numerical Methods for Stiff Equations and Singular Per-
+turbation Problems. Reidel Publ.: Dordrecht, 2001.
+[17] Aziz T., Khan A. A spline method for second-order singularly perturbed
+boundary-value problems. J. Comput. Appl. Math., 2002, 147, 445{452.
+[18] Vigo-Aguiar J., Natesan S. An e cient numerical method for singular
+perturbation problems. J. Comput. Appl. Math., 2006, 192, 132{141.
+[19] Kumar M., Kumar Mishra H., Singh P. A boundary value approach for
+a class of linear singularly perturbed boundary value problems. Advances
+Eng. Software, 2009, 40, 298{304.
+[20] Rao S.C.S., Kumar M. Exponential B-spline collocation method for self-
+adjoint singularly perturbed boundary value problems. Appl. Numerical
+Math., 2008, 58, 1572{1581.
+[21] Shishkin G.I., Shishkina L.P. Difference Methods for Singular Perturba-
+tion Problems. Chapman & Hall/CRC Press: Boca Raton, 2009.
+[22] Kopteva N., O'Riordan E. Shishkin meshes in the numerical solution of
+singularly perturbed differential equations. Int. J. Numer. Analysis and
+Modeling, 2010, 7, 393{415.
+Electronic Journal. http://diffjournal.spbu.ru/ 46Differential Equations and Control Processes, N. 4, 2021
+[23] Vulkov L.G., Zadorin A.I. Two-grid algorithms for an ordinary second
+order equation with an exponential boundary layer in the solution. Int.
+J. Numer. Analysis and Modeling, 2010, 7, 580{592.
+[24] Attili B.S. Numerical treatment of singularly perturbed two point bound-
+ary value problems exhibiting boundary layers. Commun. Nonlinear Sci.
+Numer. Simulat., 2011, 16, 3504{3511.
+[25] Liu C.-S. The Lie-group shooting method for solving nonlinear singularly
+perturbed boundary value problems. Commun. Nonlinear Sci. Numer.
+Simulat., 2012, 17, 1506{1521.
+[26] Das P. Comparison of a priori and a posteriori meshes for singularly per-
+turbed nonlinear parameterized problems. J. Comput. Appl. Math., 2015,
+290, 16{25.
+[27] Brdar M., Zarin H. A singularly perturbed problem with two parameters
+on a Bakhvalov-type mesh. J. Comput. Appl. Math., 2016, 292, 307{319.
+[28] Zarin H. Exponentially graded mesh for a singularly perturbed problem
+with two small parameters. Appl. Numer. Math., 2017, 120, 233{242.
+[29] Ahmadinia M., Safari Z. Numerical solution of singularly perturbed
+boundary value problems by improved least squares method. J. Comput.
+Appl. Math., 2018, 331, 156{165.
+[30] Chakravarthya P.P., Shivharea M. Numerical study of a singularly per-
+turbed two parameter problems on a modi ed Bakhvalov mesh. Comput.
+Math. Math. Physics, 2020, 60, 1778{1786.
+[31] Alam M.J., Prasad H.S., Ranjan R. An exponentially  tted integration
+scheme for a class of quasilinear singular perturbation problems. J. Math.
+Comput. Sci., 2021, 11, 3052{3066.
+[32] Cakir M., Amiraliyev G.M. A second order numerical method for sin-
+gularly perturbed problem with non-local boundary condition. J. Appl.
+Math. Comput., 2021, doi:10.1007/s12190-021-01506-z.
+[33] Shivhare M., Chakravarthya P.P., Kumar K. Quadratic B-spline
+collocation method for two-parameter singularly perturbed prob-
+lem on exponentially graded mesh. Int. Comput. Math., 2021,
+doi:10.1080/00207160.2021.1901277.
+Electronic Journal. http://diffjournal.spbu.ru/ 47Differential Equations and Control Processes, N. 4, 2021
+[34] Liseikin V. Layer Resolving Grids and Transformations for Singular Per-
+turbation Problems. VSP BV: Utrecht, 2001 (reprint ed., de Gruyter,
+2018).
+[35] Polyanin A.D., Shingareva I.K. Application of non-local transformations
+for numerical integration of singularly perturbed boundary-value prob-
+lems with a small parameter. Int. J. Non-Linear Mechanics, 2018, 103
+37{54.
+[36] Polyanin A.D., Shingareva I.K. The method of nonlocal transforma-
+tions: Applications to singularly perturbed boundary-value problems. J.
+Physics: IOP Conf. Series, 2019, 1205, 012047.
+[37] Polyanin A.D., Shingareva I.K. The use of differential and non-local trans-
+formations for numerical integration of non-linear blow-up problems. Int.
+J. Non-Linear Mechanics, 2017, 94, 178{184.
+[38] Polyanin A.D., Shingareva I.K. Non-monotonic blow-up problems: Test
+problems with solutions in elementary functions, numerical integration
+based on non-local transformations. Appl. Math. Letters, 2018, 76, 123{
+129.
+[39] Polyanin A.D., Shingareva I.K. Non-linear problems with non-monotonic
+blow-up solutions: Non-local transformations, test problems, exact solu-
+tions, and numerical integration. Int. J. Non-Linear Mechanics, 2018, 99,
+258{272.
+[40] Polyanin A.D., Shingareva I.K. Nonlinear problems with blow-up solu-
+tions: Numerical integration based on differential and nonlocal transfor-
+mations, and differential constraints. Appl. Math. Comput., 2019, 336,
+107{137.
+[41] Polyanin A.D., Shingareva I.K. The method of non-local transformations:
+Applications to blow-up problems. J. Physics: IOP Conf. Series, 2017,
+937, 012042.
+[42] Polyanin A.D., Shingareva I.K. Non-linear blow-up problems for systems
+of ODEs and PDEs: Non-local transformations, numerical and exact so-
+lutions. Int. J. Non-Linear Mechanics, 2019, 111, 28{41.
+[43] Polyanin A.D., Shingareva I.K. Hypersingular nonlinear boundary-value
+problems with a small parameter. Appl. Math. Letters, 2018, 81, 93{98.
+Electronic Journal. http://diffjournal.spbu.ru/ 48Differential Equations and Control Processes, N. 4, 2021
+[44] Kudryashov N.A., Sinelshchikov D.I. On the criteria for integrability of
+the Li  enard equation. Appl. Math. Letters, 2016, 57, 114{120.
+[45] Demina M., Sinelshchikov D. Integrability properties of cubic Li  enard
+oscillators with linear damping. Symmetry, 2019, 11, 1378.
+[46] Muriel C., Romero J.L. Nonlocal transformations and linearization of
+second-order ordinary differential equations. J. Physics A, Math. Theor.,
+2010, 43, 434025.
+[47] Moyo S., Meleshko S.V. Application of the generalised Sundman trans-
+formation to the linearisation of two second-order ordinary differential
+equations. J. Nonlinear Math. Physics, 2011, 18, 213{236.
+[48] Meleshko S.V., Moyo S., Muriel C., Romero J.L., Guha P., Choudhury
+A.G. On  rst integrals of second-order ordinary differential equations. J.
+Eng. Math., 2013, 82, 17{30.
+[49] Kevorkian J., Cole J.D. Perturbation Methods in Applied Mathematics.
+Springer: New York, 1981.
+[50] Lagerstrom P.A. Matched Asymptotic Expansions. Ideas and Techniques.
+Springer: New York, 1988.
+[51] Il'in A.M. Matching of Asymptotic Expansions of Solutions of Boundary
+Value Problems. American Mathematical Society: Providence, 1992.
+[52] Nayfeh A.H. Perturbation Methods. Wiley{Interscience: New York, 2000.
+[53] Polyanin A.D., Zaitsev V.F. Handbook of Exact Solutions for Ordinary
+Differential Equations, 2nd ed. Chapman & Hall/CRC Press: Boca
+Raton{London, 2003.
+[54] Verhulst F. Methods and Applications of Singular Perturbations, Bound-
+ary Layers and Multiple Timescale Dynamics. Springer: New York, 2005.
+[55] Polyanin A.D., Zaitsev V.F. Handbook of Ordinary Differential Equa-
+tions: Exact Solutions, Methods, and Problems. CRC Press: Boca Raton{
+London, 2018.
+[56] Keller H.B. Numerical Solution of Two Point Boundary Value Problems.
+SIAM: Philadelphia, 1974.
+Electronic Journal. http://diffjournal.spbu.ru/ 49Differential Equations and Control Processes, N. 4, 2021
+[57] Butcher J.C. The Numerical Analysis of Ordinary Differential Equations,
+Runge{Kutta and General Linear Methods. Wiley-Interscience: New York,
+1987.
+[58] Fox L., Mayers D.F. Numerical Solution of Ordinary Differential Equa-
+tions for Scientists and Engineers. Chapman & Hall: London, 1987.
+[59] Ascher U.M., Petzold L.R. Computer Methods for Ordinary Differen-
+tial Equations and Differential-Algebraic Equations. SIAM: Philadelphia,
+1998.
+[60] Shingareva I.K., Liz  arraga-Celaya C. Maple and Mathematica. A Problem
+Solving Approach for Mathematics, 2nd ed. Springer: Wien{New York,
+2009.
+[61] Gri ths D., Higham D.J. Numerical Methods for Ordinary Differential
+Equations. Springer: Wien{New York, 2010.
+[62] Hairer E., Norsett S. P., Wanner G. Solving Ordinary Differential Equa-
+tions I: Nonstiff Problems, 2nd ed. Springer: Berlin, 1993.
+[63] Hairer E., Wanner G. Solving Ordinary Differential Equations II. Stiff
+and Differential-Algebraic Problems, 2nd ed. Springer: New York, 1996.
+[64] Lambert J.D. Numerical Methods for Ordinary Differential Systems. Wi-
+ley: New York, 1991.
+Electronic Journal. http://diffjournal.spbu.ru/ 50

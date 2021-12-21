@@ -88,5 +88,116 @@
             <author ref="n_2021_12_lapin" sort-key="3" />
         </authors>
     </article>
+
+
+    <article>
+        <articleInfo lang="EN" FirstPage="15" LastPage="50">
+            <pdf>21402-jdecp-polyanin.pdf</pdf>
+            <abstract>Solutions of singularly perturbed boundary-value problems with a small parameter
+                are characterized by large gradients in very narrow regions (boundary layers).
+                This circumstance sharply limits the use of standard finite-difference methods
+                with a fixed stepsize in such problems due to significant calculation errors or possible loss
+                of stability. This paper presents an effective method for numerical integration of
+                singularly perturbed boundary-value problems based on replacing the spatial variable
+                with a new independent variable of the Sundman-type, which depends on the derivatives of the unknown function.
+                The use of such non-local transformations, which satisfy a simple asymptotic condition,
+                makes it possible to automatically stretch the boundary-layer region.
+                The resulting problem turns out to be much simpler than the original
+                one in the sense that standard (classical) numerical methods with a fixed stepsize
+                can already be applied to solve it. Several new multiparameter nonlinear and
+                linear singularly perturbed boundary-value problems for second-order reaction-diffusion type ODEs
+                having monotonic and non-monotonic exact or asymptotic solutions, expressed in terms of elementary functions,
+                are constructed. A comparison of numerical solutions with exact and asymptotic solutions is presented.
+                The numerical results are shown that the method based on Sundman-type transformations
+                for solving boundary-layer problems gives high accuracy. As a result of an extensive analysis
+                of the obtained results, recommendations are given for the choice of regularizing functions
+                that determine the most effective Sundman-type transformations.
+                The difference between regularizing functions in boundary-layer problems and blow-up problems is discussed.
+                The test problems formulated in this paper can be used to estimate the accuracy of any
+                other numerical methods for solving two-point singularly perturbed boundary-value problems
+                with a small parameter.</abstract>
+            <title>Singularly Perturbed Boundary-value Problems: Sundman-type Transformations, Test Problems, Exact Solutions, and Numerical Integration</title>
+            <keywords>
+                <word>boundary layer</word>
+                <word>exact solutions</word>
+                <word>multiparameter test problems</word>
+                <word>nonlinear ODEs</word>
+                <word>non-local transformations</word>
+                <word>numerical integration</word>
+                <word>singularly perturbed boundary-value problems</word>
+                <word>Sundman-type transformations</word>
+            </keywords>
+            <references>
+                <reference>Van Dyke M. &lt;em&gt;Perturbation Methods in Fluid Mechanics&lt;/em&gt;. Academic Press: New York, 1964.</reference>
+                <reference>Schlichting H. &lt;em&gt;Boundary Layer Theory&lt;/em&gt;. New York: McGraw-Hill, 1981. </reference>
+                <reference>Polyanin, A. D., Kutepov, A. M., Vyazmin, A. V., Kazenin, D. A. &lt;em&gt;Hydrodynamics, Mass and Heat Transfer in Chemical Engineering&lt;/em&gt;. Taylor &amp;amp; Francis: London, 2002. </reference>
+                <reference>Levich V. G. &lt;em&gt;Physicochemical Hydrodynamics&lt;/em&gt;. New Jersey: Prentice Hall, 1962. </reference>
+                <reference>Schetz J. A. &lt;em&gt;Foundations of Boundary Layer Theory for Momentum, Heat, and Mass Transfer&lt;/em&gt;. New York: Prentice Hall, 1984. </reference>
+                <reference>Franz S., Roos H. G. The capriciousness of numerical methods for singular perturbations. &lt;em&gt;SIAM Review, &lt;/em&gt; 2011, &lt;em&gt;53&lt;/em&gt;, 157-173. </reference>
+                <reference>Bakhvalov N. S. On the optimization methods for solving boundary value problems with boundary layers. &lt;em&gt;Zh. Vychisl. Math. Fiz., &lt;/em&gt; 1969, &lt;em&gt;24&lt;/em&gt;, 841-859 (in Russian). </reference>
+                <reference>Il'in A. M. A difference scheme for a differential equation with a small parameter affecting the highest derivative. &lt;em&gt;Mat. Zametki, &lt;/em&gt; 1969, &lt;em&gt;6&lt;/em&gt;, 237-248. </reference>
+                <reference>Vulanovic R. A uniform numerical method for quasilinear singular perturbation problems without turning points. &lt;em&gt;Computing, &lt;/em&gt; 1989, &lt;em&gt;41&lt;/em&gt;, 97-106. </reference>
+                <reference>Jain M. K., Iyengar S. R. K., Subramanyam G. S. Variable mesh methods for the numerical solution of two-point singular perturbation problems. &lt;em&gt;Comput. Methods in Appl. Mech. Eng., &lt;/em&gt; 1984, &lt;em&gt;42&lt;/em&gt;, 273-286. </reference>
+                <reference>Shishkin G. I. &lt;em&gt;Grid Approximations of Singularly Perturbed Elliptic and Parabolic Equations&lt;/em&gt;. Ural Branch of RAS: Ekaterinburg, 1992 (in Russian). </reference>
+                <reference>Beckett G., Mackenzie J. A. Convergence analysis of finite difference approximations on equidistributed grids to a singularly perturbed boundary value problem. &lt;em&gt;Appl. Numer. Math., &lt;/em&gt; 2000, &lt;em&gt;35&lt;/em&gt;, 87-109. </reference>
+                <reference>Farrell P., Hegarty A., Miller J. M., O'Riordan E., Shishkin G. I. &lt;em&gt;Robust Computational Techniques for Boundary Layers&lt;/em&gt;. Chapman &amp;amp; Hall/CRC Press: Boca Raton-London, 2000. </reference>
+                <reference>Qiu Y., Sloan D. M., Tang T. Numerical solution of a singularly perturbed two-point boundary value problem using equidistribution, analysis of convergence. &lt;em&gt;J. Comput. Appl. Math., &lt;/em&gt; 2000, &lt;em&gt;116&lt;/em&gt;, 121-143. </reference>
+                <reference>Frohner A., Roos H. -G. The &amp;#949; -uniform convergence of a defect correction method on a Shishkin mesh. &lt;em&gt;Appl. Numerical Math., &lt;/em&gt; 2001, &lt;em&gt;37&lt;/em&gt;, 79-94. </reference>
+                <reference>Miranker W. L. &lt;em&gt;Numerical Methods for Stiff Equations and Singular Perturbation Problems&lt;/em&gt;. Reidel Publ. : Dordrecht, 2001. </reference>
+                <reference>Aziz T., Khan A. A spline method for second-order singularly perturbed boundary-value problems. &lt;em&gt;J. Comput. Appl. Math., &lt;/em&gt; 2002, &lt;em&gt;147&lt;/em&gt;, 445-452. </reference>
+                <reference>Vigo-Aguiar J., Natesan S. An efficient numerical method for singular perturbation problems. &lt;em&gt;J. Comput. Appl. Math., &lt;/em&gt; 2006, &lt;em&gt;192&lt;/em&gt;, 132-141. </reference>
+                <reference>Kumar M., Kumar Mishra H., Singh P. A boundary value approach for a class of linear singularly perturbed boundary value problems. &lt;em&gt;Advances Eng. Software, &lt;/em&gt; 2009, &lt;em&gt;40&lt;/em&gt;, 298-304. </reference>
+                <reference>Rao S. C. S., Kumar M. Exponential B-spline collocation method for self-adjoint singularly perturbed boundary value problems. &lt;em&gt;Appl. Numerical Math., &lt;/em&gt; 2008, &lt;em&gt;58&lt;/em&gt;, 1572-1581. </reference>
+                <reference>Shishkin G. I., Shishkina L. P. &lt;em&gt;Difference Methods for Singular Perturbation Problems&lt;/em&gt;. Chapman &amp;amp; Hall/CRC Press: Boca Raton, 2009. </reference>
+                <reference>Kopteva N., O'Riordan E. Shishkin meshes in the numerical solution of singularly perturbed differential equations. &lt;em&gt;Int. J. Numer. Analysis and Modeling, &lt;/em&gt; 2010, &lt;em&gt;7&lt;/em&gt;, 393-415. </reference>
+                <reference>Vulkov L. G., Zadorin A. I. Two-grid algorithms for an ordinary second order equation with an exponential boundary layer in the solution. &lt;em&gt;Int. J. Numer. Analysis and Modeling, &lt;/em&gt; 2010, &lt;em&gt;7&lt;/em&gt;, 580-592. </reference>
+                <reference>Attili B. S. Numerical treatment of singularly perturbed two point boundary value problems exhibiting boundary layers. &lt;em&gt;Commun. Nonlinear Sci. Numer. Simulat., &lt;/em&gt; 2011, &lt;em&gt;16&lt;/em&gt;, 3504-3511. </reference>
+                <reference>Liu C. -S. The Lie-group shooting method for solving nonlinear singularly perturbed boundary value problems. &lt;em&gt;Commun. Nonlinear~Sci. Numer. Simulat., &lt;/em&gt; 2012, &lt;em&gt;17&lt;/em&gt;, 1506-1521. </reference>
+                <reference>Das P. Comparison of a priori and a posteriori meshes for singularly perturbed nonlinear parameterized problems. &lt;em&gt;J. Comput. Appl. Math., &lt;/em&gt; 2015, &lt;em&gt;290&lt;/em&gt;, 16-25. </reference>
+                <reference>Brdar M., Zarin H. A singularly perturbed problem with two parameters on a Bakhvalov-type mesh. &lt;em&gt;J. Comput. Appl. Math., &lt;/em&gt; 2016, &lt;em&gt;292&lt;/em&gt;, 307-319. </reference>
+                <reference>Zarin H. Exponentially graded mesh for a singularly perturbed problem with two small parameters. &lt;em&gt;Appl. Numer. Math., &lt;/em&gt; 2017, &lt;em&gt;120&lt;/em&gt;, 233-242. </reference>
+                <reference>Ahmadinia M., Safari Z. Numerical solution of singularly perturbed boundary value problems by improved least squares method. &lt;em&gt;J. Comput. Appl. Math., &lt;/em&gt; 2018, &lt;em&gt;331&lt;/em&gt;, 156-165. </reference>
+                <reference>Chakravarthya P. P., Shivharea M. Numerical study of a singularly perturbed two parameter problems on a modified Bakhvalov mesh. &lt;em&gt;Comput. Math. Math. Physics, &lt;/em&gt; 2020, &lt;em&gt;60&lt;/em&gt;, 1778-1786. </reference>
+                <reference>Alam M. J., Prasad H. S., Ranjan R. An exponentially fitted integration scheme for a class of quasilinear singular perturbation problems. &lt;em&gt;J. Math. Comput. Sci., &lt;/em&gt; 2021, &lt;em&gt;11&lt;/em&gt;, 3052-3066. </reference>
+                <reference>Cakir M., Amiraliyev G. M. A second order numerical method for singularly perturbed problem with non-local boundary condition. &lt;em&gt;J. Appl. Math. Comput., &lt;/em&gt; 2021, doi:10. 1007/s12190-021-01506-z. </reference>
+                <reference>Shivhare M., Chakravarthya P. P., Kumar K. Quadratic &lt;em&gt;B&lt;/em&gt;-spline collocation method for two-parameter singularly perturbed problem on exponentially graded mesh. &lt;em&gt;Int. Comput. Math., &lt;/em&gt; 2021, doi:10. 1080/00207160. 2021. 1901277. </reference>
+                <reference>Liseikin V. &lt;em&gt;Layer Resolving Grids and Transformations for Singular Perturbation Problems&lt;/em&gt;. VSP BV: Utrecht, 2001 (reprint ed., de Gruyter, 2018). </reference>
+                <reference>Polyanin A. D., Shingareva I. K. Application of non-local transformations for numerical integration of singularly perturbed boundary-value problems with a small parameter. &lt;em&gt;Int. J. Non-Linear Mechanics, &lt;/em&gt; 2018, &lt;em&gt;103&lt;/em&gt; 37-54. </reference>
+                <reference>Polyanin A. D., Shingareva I. K. The method of nonlocal transformations: Applications to singularly perturbed boundary-value problems. &lt;em&gt;J. Physics: IOP Conf. Series, &lt;/em&gt; 2019, &lt;em&gt;1205&lt;/em&gt;, 012047. </reference>
+                <reference>Polyanin A. D., Shingareva I. K. The use of differential and non-local transformations for numerical integration of non-linear blow-up problems. &lt;em&gt;Int. J. Non-Linear Mechanics, &lt;/em&gt; 2017, &lt;em&gt;94&lt;/em&gt;, 178-184. </reference>
+                <reference>Polyanin A. D., Shingareva I. K. Non-monotonic blow-up problems: Test problems with solutions in elementary functions, numerical integration based on non-local transformations. &lt;em&gt;Appl. Math. Letters, &lt;/em&gt; 2018, &lt;em&gt;76&lt;/em&gt;, 123-129. </reference>
+                <reference>Polyanin A. D., Shingareva I. K. Non-linear problems with non-monotonic blow-up solutions: Non-local transformations, test problems, exact solutions, and numerical integration. &lt;em&gt;Int. J. Non-Linear Mechanics, &lt;/em&gt; 2018, &lt;em&gt;99&lt;/em&gt;, 258-272. </reference>
+                <reference>Polyanin A. D., Shingareva I. K. Nonlinear problems with blow-up solutions: Numerical integration based on differential and nonlocal transformations, and differential constraints. &lt;em&gt;Appl. Math. Comput., &lt;/em&gt; 2019, &lt;em&gt;336&lt;/em&gt;, 107-137. </reference>
+                <reference>Polyanin A. D., Shingareva I. K. The method of non-local transformations: Applications to blow-up problems. &lt;em&gt;J. Physics: IOP Conf. Series, &lt;/em&gt; 2017, &lt;em&gt;937&lt;/em&gt;, 012042. </reference>
+                <reference>Polyanin A. D., Shingareva I. K. Non-linear blow-up problems for systems of ODEs and PDEs: Non-local transformations, numerical and exact solutions. &lt;em&gt;Int. J. Non-Linear Mechanics, &lt;/em&gt; 2019, &lt;em&gt;111&lt;/em&gt;, 28-41. </reference>
+                <reference>Polyanin A. D., Shingareva I. K. Hypersingular nonlinear boundary-value problems with a small parameter. &lt;em&gt;Appl. Math. Letters, &lt;/em&gt; 2018, &lt;em&gt;81&lt;/em&gt;, 93-98. </reference>
+                <reference>Kudryashov N. A., Sinelshchikov D. I. On the criteria for integrability of the Lienard equation. &lt;em&gt;Appl. Math. Letters, &lt;/em&gt; 2016, &lt;em&gt;57&lt;/em&gt;, 114-120. </reference>
+                <reference>Demina M., Sinelshchikov D. Integrability properties of cubic Li\'enard oscillators with linear damping. &lt;em&gt;Symmetry, &lt;/em&gt; 2019, &lt;em&gt;11&lt;/em&gt;, 1378. </reference>
+                <reference>Muriel C., Romero J. L. Nonlocal transformations and linearization of second-order ordinary differential equations. &lt;em&gt;J. Physics A, Math. Theor., &lt;/em&gt; 2010, &lt;em&gt;43&lt;/em&gt;, 434025. </reference>
+                <reference>Moyo S., Meleshko S. V. Application of the generalised Sundman transformation to the linearisation of two second-order ordinary differential equations. &lt;em&gt;J. Nonlinear Math. Physics, &lt;/em&gt; 2011, &lt;em&gt;18&lt;/em&gt;, 213-236. </reference>
+                <reference>Meleshko S. V., Moyo S., Muriel C., Romero J. L., Guha P., Choudhury A. G. On first integrals of second-order ordinary differential equations. &lt;em&gt;J. Eng. Math., &lt;/em&gt; 2013, &lt;em&gt;82&lt;/em&gt;, 17-30. </reference>
+                <reference>Kevorkian J., Cole J. D. &lt;em&gt;Perturbation Methods in Applied Mathematics&lt;/em&gt;. Springer: New York, 1981. </reference>
+                <reference>Lagerstrom P. A. &lt;em&gt;Matched Asymptotic Expansions. Ideas and Techniques&lt;/em&gt;. Springer: New York, 1988. </reference>
+                <reference>Il'in A. M. &lt;em&gt;Matching of Asymptotic Expansions of Solutions of Boundary Value Problems&lt;/em&gt;. American Mathematical Society: Providence, 1992. </reference>
+                <reference>Nayfeh A. H. &lt;em&gt;Perturbation Methods&lt;/em&gt;. Wiley-Interscience: New York, 2000. </reference>
+                <reference>Polyanin A. D., Zaitsev V. F. &lt;em&gt;Handbook of Exact Solutions for Ordinary Differential Equations, 2nd ed. &lt;/em&gt; Chapman &amp;amp; Hall/CRC Press: Boca Raton-London, 2003. </reference>
+                <reference>Verhulst F. &lt;em&gt;Methods and Applications of Singular Perturbations, Boundary Layers and Multiple Timescale Dynamics&lt;/em&gt;. Springer: New York, 2005. </reference>
+                <reference>Polyanin A. D., Zaitsev V. F. &lt;em&gt;Handbook of Ordinary Differential Equations: Exact Solutions, Methods, and Problems&lt;/em&gt;. CRC Press: Boca Raton-London, 2018. </reference>
+                <reference>Keller H. B. &lt;em&gt;Numerical Solution of Two Point Boundary Value Problems&lt;/em&gt;. SIAM: Philadelphia, 1974. </reference>
+                <reference>Butcher J. C. &lt;em&gt;The Numerical Analysis of Ordinary Differential Equations, Runge-Kutta and General Linear Methods&lt;/em&gt;. Wiley-Interscience: New York, 1987. </reference>
+                <reference>Fox L., Mayers D. F. &lt;em&gt;Numerical Solution of Ordinary Differential Equations for Scientists and Engineers&lt;/em&gt;. Chapman &amp;amp; Hall: London, 1987. </reference>
+                <reference>Ascher U. M., Petzold L. R. &lt;em&gt;Computer Methods for Ordinary Differential Equations and Differential-Algebraic Equations&lt;/em&gt;. SIAM: Philadelphia, 1998. </reference>
+                <reference>Shingareva I. K., Liz&amp;aacute; rraga-Celaya C. &lt;em&gt;Maple and Mathematica. A Problem Solving Approach for Mathematics, 2nd ed. &lt;/em&gt; Springer: Wien-New York, 2009. </reference>
+                <reference>Griffiths D., Higham D. J. &lt;em&gt;Numerical Methods for Ordinary Differential Equations&lt;/em&gt;. Springer: Wien-New York, 2010. </reference>
+                <reference>Hairer E., Norsett S. P., Wanner G. &lt;em&gt;Solving Ordinary Differential Equations I: Nonstiff Problems, 2nd ed. &lt;/em&gt; Springer: Berlin, 1993. </reference>
+                <reference>Hairer E., Wanner G. &lt;em&gt;Solving Ordinary Differential Equations II. Stiff and Differential-Algebraic Problems, 2nd ed. &lt;/em&gt; Springer: New York, 1996. </reference>
+                <reference>Lambert J. D. &lt;em&gt;Numerical Methods for Ordinary Differential Systems&lt;/em&gt;. Wiley: New York, 1991</reference>
+            </references>
+        </articleInfo>
+        <authors>
+            <author ref="n_2021_12_shingareva" sort-key="1" />
+            <author ref="n_2021_12_polyanin" sort-key="2" />
+        </authors>
+    </article>
     
 </number>
