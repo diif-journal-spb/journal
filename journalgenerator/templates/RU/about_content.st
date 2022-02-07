@@ -8,7 +8,7 @@
 
 <a name="fromLogo"></a>
 <p class="jounal-index">
-  Журнал индексируется в РИНЦ, EBSCO, SCOPUS
+  Журнал индексируется в <a href="https://elibrary.ru/title_about.asp?id=7282">РИНЦ</a>, EBSCO, <a href="https://www.scopus.com/sourceid/21100902867">SCOPUS</a>
 </p>
 
 <p class="jounal-index">
