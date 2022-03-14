@@ -16,26 +16,4 @@ e-mail: <a href="mailto:n.v.kuznetsov@spbu.ru">n.v.kuznetsov@spbu.ru</a>
 e-mail: <a href="mailto:n.ampilova@spbu.ru">n.ampilova@spbu.ru</a>
 </p>
 
-<h3>Техническая поддержка</h3>
-<h4>Петренко Евгений Игоревич</h4>
-<p>
-кфмн<br />
-Санкт-Петербургский Государственный Университет<br />
-e-mail: <a href="mailto:jodiff@mail.ru">jodiff@mail.ru</a>
-</p>
-<h4>Мокаев Руслан Назирович</h4>
-<p>
-    кфмн<br />
-    Санкт-Петербургский Государственный Университет<br />
-    e-mail: <a href="mailto:JournalDECP@gmail.com">JournalDECP@gmail.com</a>
-</p>
-
-<h4>Кудряшова Елена Владимировна</h4>
-<p>
-    кфмн<br />
-    Санкт-Петербургский Государственный Университет<br />
-    e-mail: <a href="mailto:JournalDECP@gmail.com">JournalDECP@gmail.com</a>
-</p>
-
-
 $editorial_editorial_board()$
