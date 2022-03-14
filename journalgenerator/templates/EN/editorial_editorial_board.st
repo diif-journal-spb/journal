@@ -84,13 +84,13 @@
 <div class="editor">
     <span class="name">Volker Reitmann</span>
     <span class="title">Professor</span>
-    <span class="work">St. Petersburg State University, Russia<</span>
+    <span class="work">St. Petersburg State University, Russia</span>
     <span class="email">vreitmann@aol.com</span>
 </div>
 
 <div class="editor">
     <span class="name">Alexander V. Flegontov</span>
-    <span class="title">Professor, Doctor of Science</span>
+    <span class="title">Professor</span>
     <span class="work">St.Petersburg Herzen State Pedagogical University of Russia</span>
     <span class="email">flegontoff@yandex.ru</span>
 </div>
