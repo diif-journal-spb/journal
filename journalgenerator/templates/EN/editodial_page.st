@@ -21,7 +21,7 @@
 
 <h4>Publisher</h4>
 <p>
-  Mathematics and Mechanics Faculty of Saint-Petersburg State University
+  Saint-Petersburg State University
 </p>
 
 <h4>Address:</h4>
