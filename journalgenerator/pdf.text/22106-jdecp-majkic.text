@@ -1,0 +1,6975 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 1, 2022
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Applications to physics
+Mathematical IQM Gauge Theory for Interaction Processes
+Zoran Majki  c
+International Society for Research in Science and Technology
+majk.1234@yahoo.com
+Abstract We provide a mathematical development of generalized gauge the-
+ory for interactions of an individual particle represented by a complex energy-
+density wave-packet 	 in the Minkowski time-space. So, we obtained a general
+gauge 4-potential  eld which determinates the acceleration of this particle, by
+using the complex phase transformation of 	, generated during any interaction
+process, with local symmetry of the Lagrangian density: the Euler-Lagrange
+equation derived from this Lagrangian density represents the partial differen-
+tial equation of motion of 	.
+This developed mathematical theory is then applied for the famous example of
+the Aharonov-Bohm effect for the electrons.
+Keywords: Interaction Processes, Mathematical gauge theory, Covariant
+derivative, Local symmetries, Aharonov-Bohm effect.
+1 Basic Equations and Interaction Processes in the IQM
+Theory
+Quantum mechanics, based on the Schr odinger equation is an epistemic statis-
+tical theory, here denominated as Statistical Quantum Mechanics (SQM), to
+differentiate it from the new part of the ontological quantum theory, provided
+in [5, 6] and [7], denominated Individual particles Quantum Mechanics (IQM).Differential Equations and Control Processes, N 1, 2022
+Both of them are necessary components of the quantum theory, as are the Clas-
+sical Mechanics for Individual objects (ICM),based on the Newton equations,
+Hamiltonian-Jacobi equations or the Euler-Lagrange equation of motion of in-
+dividual objects) and the Statistical Classical Mechanics (SCM), based on the
+Liouville equations.
+In the IQM theory there is a deeper speci cation of the state of the particle,
+and in this approach to completion provided in [5], these states are speci ed by
+the energy-density distributions of a given particle in the Minkowski time-space.
+Such an ontic state, also not fully accessible (non fully observable by the mea-
+surements, and/or with non accessible small compacti ed higher-dimensions
+for the electric charge (5th timelike dimension with the coordinate q
+4
+= ct
+4
+)
+and spin (6th spacelike dimension with the coordinate q
+5
+), for example), has
+to represent the complete description of an individual elementary particle, in
+order to be able to compute from it all properties of a particle as its rest-mass,
+position, speed, momentum, total energy, etc...
+It was shown [4, 11, 12, 5, 17] that, generally, any massive particle can be
+de ned in the Minkowski time-space (we will not use the real higherdimensional
+expressions but only its reduced forms to the 4-D representation) with the
+signature (+; ; ; ), by the complex wave-packet
+	 =  (t;
+  !
+r )e
+ i'
+T
+(1)
+where
+  !
+r =q
+1
+e
+1
++q
+2
+e
+2
++q
+3
+e
+3
+(for the 3-D Minkowski space orthonormal basis
+vectors e
+j
+, with e
+j
+ e
+j
+= 1 for 1 j  3 and e
+0
+ e
+0
+= 1 for the time-coordinate
+q
+0
+=ct) composed by two sub components: by the shape  (t;
+  !
+r ) of particle's
+body that is a real function which de nes the real rest-mass energy-density
+ 
+m
+  		 =  
+2
+(t;
+  !
+r )  0, and by the de Broglie 'phase (pilot) wave' with
+phase '
+T
+(t;
+  !
+r
+T
+) = 
+1
+~
+S
+t
+0
+=0
+, where S
+t
+0
+=0
+=
+R
+t;
+  !
+r
+T
+0;
+  !
+r
+0
+L(t
+0
+;
+  !
+r;
+  !
+v )dt
+0
+is the Hamilto-
+nian principal function for the initial particle's position (t
+0
+;
+  !
+r
+0
+) and the current
+position at t  0 (its barycenter) at
+  !
+r
+T
+(t) 
+1
+1
+ 
+R
+  !
+r  
+m
+(t;
+  !
+r )dV , and particle's
+Lagrangian at time t
+0
+, L(t
+0
+;
+  !
+r;
+  !
+v ) = E 
+  !
+v
+  !
+p where E is particle's total
+energy and
+  !
+p its canonical (conjugate) momentum, and 1
+ 
+ 
+R
+ 
+m
+(t;
+  !
+r )dV
+is the particle's invariant energy (equal to rest-mass energy m
+0
+c
+2
+for massive
+particles and energy E
+0
+of a boson, measured in the frame in which massive
+source of this boson is in rest).
+Thus, for a free (non accelerated) particle which propagates with constant
+speedv and momentump, so that
+  !
+v
+  !
+p = vp, with barycenter position
+  !
+r
+T
+(t) =
+Electronic Journal. http://diffjournal.spbu.ru 141Differential Equations and Control Processes, N 1, 2022
+  !
+r
+0
++
+  !
+vt, we obtain that the phase change linearly in time t  0,
+'
+T
+(t) =
+E pv
+~
+t (2)
+When a particle propagates in the vacuum with constant speed
+  !
+v it has
+the time-invariant spherically-symmetric distribution [10],  
+m
+=
+K
+p
+r
+, where
+r = k
+  !
+r  
+  !
+r
+T
+k is the distance from its barycenter
+  !
+r
+T
+, corresponding to
+particle's hydrostatic equilibrium where each in nitesimal amount of parti-
+cle's material body  
+m
+(t;
+  !
+r ) is in rest w.r.t. particle's barycenter. However,
+generally, during an acceleration each in nitesimal amount of energy-density
+ 
+m
+(t;
+  !
+r ) moves with a different speed
+  !
+w(t;
+  !
+r ) w.r.t. the group velocity
+  !
+v (t) =
+d
+dt
+  !
+r
+T
+(t) = v
+1
+e
+1
++ v
+2
+e
+2
++ v
+3
+e
+3
+, with v = k
+  !
+vk =
+p
+v
+2
+1
++v
+2
+2
++v
+2
+3
+, of
+particle's energy-density wave-packet and it is shown [5] that is,satis ed the
+following relationship
+  !
+v (t) =
+1
+1
+ 
+R
+  !
+w(t;
+  !
+r ) 
+m
+(t;
+  !
+r )dV , so we can introduce
+the variation-velocity of the particle's matter ux
+  !
+u (t;
+  !
+r ) =
+  !
+w(t;
+  !
+r ) 
+  !
+v (t)
+at each space-time point (t;
+  !
+r ) inside particle's matter (where  
+m
+(t;
+  !
+r )> 0).
+As shown in [5], during an inertial propagation when the particle is in a hydro-
+static equilibrium, we have that  
+m
+is spherically symmetric around particle's
+barycenter with
+  !
+u (t;
+  !
+r ) = 0 in every point inside particle's matter, so that ev-
+ery in nitesimal amount of  
+m
+propagates with the constant wave-packet group
+velocity
+  !
+v . Only during the particle's accelerations we have that
+  !
+u (t;
+  !
+r )6= 0,
+so that particle's body changes dynamically its shape in time.
+In the assumption [5] of the topology of the matter of an elementary massive
+particle, the wave-packet do not undergo a spreading, also when it changes its
+matter density distribution (i.e., its energy-density  
+m
+), and tends to its stable
+stationary spherically symmetric distribution during inertial propagation in the
+vacuum. That is, the matter has some internal self-gravitational autocohesive
+force analogously to the peace of perfect uid in the vacuum, so that at any
+instance of time, the 3-D space topology of particle's matter distribution, and
+consequently its compressible energy-density  
+m
+is simply connected, closed,
+continuous and differentiable.
+The Lagrangian densityL of a particle [5], is given by
+L =
+~
+1
+ 
+( 
+@'
+T
+@t
+		 +
+i
+2
+(	@
+0
+	  	@
+0
+	  	
+  !
+wr	 + 	
+  !
+wr	)) (3)
+with previously introduced speed of particle's matter/enegy density  
+m
+(t;
+  !
+r )
+  !
+w(t;
+  !
+r ) =
+  !
+v (t) +
+  !
+u (t;
+  !
+r ) (4)
+Electronic Journal. http://diffjournal.spbu.ru 142Differential Equations and Control Processes, N 1, 2022
+Thus, each massive elementary particle satis es the following conservation laws:
+Analogously to the Euler  rst equation of uid dynamics (continuity equation),
+which represents the conservation of mass, here we have the analog equation
+for the conservation of matter (that is of the particle's rest-mass energy),
+@ 
+m
+(t;
+  !
+r )
+@t
++r  ( 
+m
+(t;
+  !
+r )
+  !
+w(t;
+  !
+r )) = 0 (5)
+and hence, from the fact that for the real component  (t;
+  !
+r ) of the wave-packet
+	(t;
+  !
+r ) in (1), we have that  
+m
+=  
+2
+, we obtain its  rst-order differential
+equation
+@ (t;
+  !
+r )
+@t
+=
+  !
+w(t;
+  !
+r )r (t;
+  !
+r ) 
+1
+2
+(r 
+  !
+u (t;
+  !
+r )) (t;
+  !
+r ) (6)
+In what follows, for the Cartesian coordinate system,r = e
+1
+@
+@x
++ e
+2
+@
+@y
++ e
+3
+@
+@z
+is the gradient (for x q
+1
+;y q
+2
+and z q
+3
+) so that the Laplacian is de ned
+by4 = r
+2
+=
+@
+2
+@x
+2
++
+@
+2
+@y
+2
++
+@
+2
+@z
+2
+(we are using positive-time metric signature
+(+,-,-,-))
+It holds also for bosons when they become unstable after an initial 'space ex-
+plosion' and, consequently, assume the massive particle behavior and a  nite
+but non-zero energy-density volume in open 3-D space. We need that the body
+of the particle  
+m
+provides also the physical internal pressureP (t;
+  !
+r ) (which is
+a non-geometrical property) in order to guarantee the hydrostatic equilibrium
+of the massive particles. The hydrostatic equilibrium of an massive elementary
+particle demonstrated that the body of this particle  
+m
+is a material substance
+[10], which is uid and elastic, and which can not be reduced to the time-space
+geometry.
+Hence, in this IQM theory [5] for individual elementary particles based on
+energy-density wave-packets, the point-like particles are only the stable-state
+bosons when they propagate with speed of light in the vacuum, and with their
+energy-density distributed in higher compacti ed dimensions [6]. In Section 2.7
+in [5], dedicated to the 3-D radial expansion of the bosons w.r.t. the direction
+of particle's propagation, to the tunneling and reections, has been considered
+the cylindrical expansion of the massive boson with energy density  
+m
+(that is,
+during the unstable boson's states where the variation-velocity
+  !
+u (t;
+  !
+r ))6= 0.
+The real physical hyperdimensional representation of the massless bosons
+energy-density, for a given instance of time t, for the Euclidean space point
+  !
+r =
+  !
+r
+0
++
+  !
+ct, is given by  
+m
+=  
+2
+(r
+4
+;t
+4
+;q
+5
+) =  (q
+5
+)  (
+  !
+r  
+  !
+r
+0
+ 
+  !
+ct) where,
+ (q
+5
+) =
+1
+ 
+L
+, with the length of the 6th dimension is L = 4 R
+5
+, denotes the
+constant energy-density distributed in 6th dimension with radius R
+5
+.
+Electronic Journal. http://diffjournal.spbu.ru 143Differential Equations and Control Processes, N 1, 2022
+Thus, by integration of this hyperdimensional density over 6th dimension
+with coordinateq
+5
+, from [6] we obtain the common point-like 4-D representation
+of the massless boson's energy-density in the 4-dimensional Minkowski time-
+space by the Dirac function (note that its pilot-wave phase is '
+T
+= 0),
+ 
+m
+(t;
+  !
+r ) = 1
+ 
+ (
+  !
+r 
+  !
+r
+0
+ 
+  !
+ct) (7)
+where 1
+ 
+is a constant (equal to a total energy E = pc of a boson in the
+frame where the source of this boson is in the rest), which is consequently only
+mathematically correct point-like representation of the massless boson. In fact,
+now the total energy, for a given time-instancet, can be obtained by integration
+in the ordinary 3-D space, by E =
+R
+ 
+m
+dV = 1
+ 
+R
+ (
+  !
+r  
+  !
+r
+0
+ 
+  !
+ct)dxdydz =
+1
+ 
+  1 = 1
+ 
+. However, it is not physically correct, because we would have an
+in nity density of energy  
+m
+in the single point of the boson's barycenter
+  !
+r =
+  !
+r
+0
++
+  !
+ct. In such case, the Schwarzschild radius r
+s
+would be greater (or equal)
+than the radius of the point (boson's barycenter) which is zero, so that the
+boson would become a black hole, which does not correspond to physical facts.
+Note that this fact can't happen in the case when we are using the complete
+6-D expression for the wave-packet, where  
+2
+(t;
+  !
+r;q
+5
+) = (q
+5
+) (
+  !
+r 
+  !
+r
+0
+ 
+  !
+ct)
+is also physically composed expression where the energy density is only  (q
+5
+)
+and there exists only in the 6th dimension and not inM
+4
+, and hence the Dirac
+'function'   in the Minkowski time-space M
+4
+de nes only the position of the
+boson and not its energy-density. In effect, by the integration in 6-D time-space
+of boson's energy density, its total energy is E =
+R
+ 
+2
+(t;
+  !
+r;q
+5
+)dq
+1
+dq
+2
+dq
+3
+dq
+5
+=
+R
+ (q
+5
+)( (
+  !
+r 
+  !
+r
+0
+ 
+  !
+ct)dV )dq
+5
+=
+R
+ (q
+5
+)dq
+5
+= 1
+ 
+.
+So, from (7) the volume of the massless boson in the ordinary 3-dimensional
+space is equal to zero. Only in such conditions a particle can travel with the
+maximal possible speed of light. But the matter/energy of the boson exists
+also in such conditions: it is uniformly distributed only in the spacelike sixth
+dimension (used for the spin) where it propagates with a constant speed v
+5
+.
+Consequently, the hidden matter of a boson in the compacti ed higher dimen-
+sions results in zero rest-mass in the ordinary at Minkowski time-space and
+explains why the boson can propagate with maximal possible speed. During
+this massless stable-state, the gravitational anti-black-hole barrier acting in the
+boson's barycenter (in 3-D space) does not permit the leaking of the matter
+from 6th into ordinary 3-dimensional space.
+We consider the vacuum as the perfect 3-dimensional space symmetry where
+each possible direction of the propagation has the same physical conditions.
+Thus, the propagation of the particles in the vacuum is inertial and the par-
+Electronic Journal. http://diffjournal.spbu.ru 144Differential Equations and Control Processes, N 1, 2022
+ticle propagates along GR geodesics with constant speed as a stable particle
+1
+.
+The asymmetry due to the presence of an in nitesimal inertial particle in at
+Minkowski spacetime is purely circumstantial, because the spacetime is consid-
+ered to be unaffected by the presence of this particle. However, according to
+general relativity, the presence of any inertial entity disturbs the symmetry of
+the manifold even more profoundly, because it implies an intrinsic curvature of
+the spacetime manifold, i.e., the manifold takes on an intrinsic shape that dis-
+tinguishes the location and rest frame of the particle. Note that, from the fact
+that the stable bosons have no matter/energy in the ordinary 3-dimensional
+(open) space, the stable bosons do not generate any local time-space curva-
+ture, differently from the fermions. Thus, the local time-space neighborhood
+of a massless boson is always a locally at Minkowski time-space, differently
+from the fermions (and also unstable massive bosons). The fact that the sta-
+ble bosons have no any curved island-metrics in the ordinary 4-dimensional
+time-space, results in missing of any physical resistance of the neighborhood
+time-space to their propagation (differently from the massive particles with
+energy-density present in the 4-dimensional time-space and, generated from it,
+curved micro-island metrics). Consequently, they propagate with maximal pos-
+sible speed in the ordinary 4-dimensional time-space. Thus, the bosons have the
+point-like 4-dimensional structure corresponding to their position (barycenter),
+but physically their total energy-density is  
+m
+(q
+5
+) = (q
+5
+) =
+1
+ 
+4 R
+5
+=const.
+But there are the situations when a stable, stationary, boson becomes ex-
+cited for a short interval of time, as in the situations when the space symmetry
+during its propagation is sharply broken. Thus, the time-space boundary condi-
+tions for the particle's propagation are drastically changed, by considering that
+particle's wave-packet is a time-space perturbation and, if such a perturbation
+meets another perturbation, it changes its form. These events we analyzed in
+details for the phenomena of refraction and 'wave-behaviors' of an individual
+photon [5]. In all these situations a photon may change its momentum, direc-
+tion of propagation and its velocity, without changing its total energy, because
+these 'interactions' are not based on collisions with another particles (as Comp-
+ton effects, or annihilations), but on instantaneous 3-D space expansions of their
+geometric wave-packet scalar  eld   in the presence of a local sharply broken
+space symmetry. These are strong General Relativity effects correlated with
+the particle's 'micro-island' curvature metrics, caused by a dynamical changing
+of the boundary conditions in the local space around this particle.
+1
+Such a 3-D space symmetry during an inertial propagation of a massive particle causes a spherical symmetry
+of its stable energy-density distribution  
+m
+=
+K
+p
+r
+, for r r
+0
+in a sphere with a radius r
+0
+Electronic Journal. http://diffjournal.spbu.ru 145Differential Equations and Control Processes, N 1, 2022
+Example 1 The breaking of 3-D pace-symmetry for massless bosons and their
+transformation into massive bosons (short-range bosons) and derived theory of
+clouds of short-range photons generated by electrically charged particles that
+generate the electromagnetic  eld is provided in [17].
+In order to generate a static electric  eld around a single charged fermion
+(as electron, for example), the short-range massive photons must be constantly
+emitted in all radial directions from this charged fermion, so that the number
+N >> 1 of emitted photons must be very high at each  xed instance of time.
+However, in order to maintain the constant energy-level of the charged fermion,
+it means that practically all of irradiated short-range photons will come back to
+be absorbed by the same fermion. So, the total emitted energy from a charged
+fermion corresponds to the total absorbed energy of the same fermion.
+Moreover, in [17] we explained that such a cloud of emmitted/absorbed short-
+range photons around any charged particle, generates the electromagnetic 4-
+potential (gauge  eld),
+A
+4
+= (A
+0
+;A
+1
+;A
+2
+;A
+3
+) = (
+ (t;
+  !
+r )
+c
+;
+  !
+A(t;
+  !
+r )) (8)
+whereA
+0
+=
+ 
+c
+and  is the scalar Coulomb potential derived from the the density
+  of these short-range massive photons, and
+  !
+A =A
+1
+e
+1
++A
+2
+e
+2
++A
+3
+e
+3
+is a 3-D
+vector potential, such that the electric and magnetic forces are de ned by:
+  !
+E = r  
+@
+  !
+A
+@t
+;
+  !
+B =r 
+  !
+A (9)
+The physical origin of the continuous emission of short-range photons from
+charged particles is explained in [7], Section 5.1.2, based on the Kaluza-Klein
+theory of the small compacti ed time-like 5th dimension (generating electric
+charge of particle by propagation of particle's energy-density in this closed di-
+mension).
+The interactions between any two wave-packets (particles) can be obtained only
+by their local collisions. In dependence on their energy and velocities, they can
+produce a kind of Compton's effects (elastic collisions) in which they survive
+the collisions by changing their momentum and energy (with the conservation
+of total momentum and energy), or they can produce a total fusion with a
+possible creation of the new stable particles (in Feynman's diagrams).
+Thus, for any two massless bosons with the Dirac function energy-
+distributions, it is impossible to have the collisions during their stable states,
+Electronic Journal. http://diffjournal.spbu.ru 146Differential Equations and Control Processes, N 1, 2022
+but only when they are excited and involved in their temporary 3-D "spatial
+explosions". Such 3-D spatial explosions can happen also when two stable
+particles are at a very small mutual distance, during which the ideal spatial
+symmetry for a free particle in the vacuum does not hold more for both of
+them. The bosons have a physical role as the intermediators between the mas-
+sive particles (that have the rest-mass and the 3-D volumeV
+t
+greater than zero),
+that is, they are a quantum-source that generates the  elds (the phenomena
+as electromagnetic  elds are the statistical results of actions of a high number
+of photons). In the case when the bosons are massless (long range interactions
+as for massless photons) then we have no the signi cant interference between
+themselves. This situation can be obtained at the quantum level only if the col-
+lisions between photons, for example, are practically improbable. Consequently,
+a number of photons can coexist in the same small 3-D region of space without
+any signi cant direct interference between them, heaving contemporarily the
+collisions with fermions which have the rest-mass and volume V
+t
+greater than
+zero. Also in such a situation, we can have the rare cases of the interference
+between the photons. In normal situations, these interferences statistically can
+be neglected, while in the cases of very strong  eld interactions (when the local
+density of photons is extremely high) these inter-boson's interactions are sig-
+ni cant. Thus, we have the following assumption:
+Interaction-dynamics Assumption: The interactions between the bosons
+and fermions are realized always between two non-point like particles. That
+is, between a massive fermion and a massive unstable boson with a small but
+ nite energy-density volume V
+t
+.
+2 Introduction to Gauge Invariance: Local Symmetries
+A key innovation of the 20th century was Herman Weyl's invention of gauge
+theory, in which a global physical symmetry is replaced by a local one; the arbi-
+trary phase in Hamiltonian-based quantum wave function becomes a function
+of time-space, a change that requires the existence of the electromagnetic gauge
+ eld. Weyl's gauge method, where the global symmetry is transformed into a lo-
+cal one, applied to the Standard-Model symmetry groupSU(3) SU(2) U(1),
+is enough in the SQM theory to yield the strong, weak and electromagnetic in-
+teractions.
+It is well known the relativistic invariance or Poincare symmetry and the
+internal symmetry based on the Lie group U(1) symmetry of phase transfor-
+Electronic Journal. http://diffjournal.spbu.ru 147Differential Equations and Control Processes, N 1, 2022
+mations (the conservation of matter and, dually, of electric charge for Dirac
+equation). Analogously, we can consider the isospin symmetry SU(2) (used
+for the electroweak force interactions) and the avour symmetry SU(3) of the
+strong force interactions. All of them are continuous global symmetry trans-
+formations (they give rise to conserved currents and charges as described by
+Noether's theorem, that is, they presuppose that, at least in principle, we can
+measure all the components of a  eld 	 at all points
+  !
+r in space at the same
+time.
+However, here we have to consider the theories which are invariant if the
+symmetry operations are performed locally where the transformation parame-
+ters are dependent on local space coordinates (for example, if the rotation angle
+  of Lorentz transformation is not constant for all in nitesimal pieces of matter
+ 
+m
+= 		, but is dependent on its space position
+  !
+r , that is, the rotation angle
+is a function  (
+  !
+r )). A gauge theory is a theory where the action is invariant
+under a continuous group symmetry that depends on time-space and such local
+symmetries introduce these gauge  elds to the theory which mediate a force.
+Let us consider, for instance, the internal phase transformation, when   is not
+a constant phase, but depends on space position
+  !
+r , and when we require that
+the Lagrangian densityL in equation (3) be invariant under such local smooth
+changes of phase:
+	j
+(t;
+  !
+r )
+7! 	
+0
+j
+(t;
+  !
+r )
+= e
+i (
+  !
+r )
+	j
+(t;
+  !
+r )
+(10)
+However, since the Lagrangian densityL is invariant under global internal sym-
+metry when  is constant, it is not invariant under local phase transformations
+given by (10). The problem is that the derivatives of the  eld 	 does not
+transform like the  eld in (10). In fact we have for j = 1; 2; 3 that:
+@
+j
+	j
+(t;
+  !
+r )
+7! @
+j
+	
+0
+j
+(t;
+  !
+r )
+=@
+j
+[e
+i (
+  !
+r )
+	j
+(t;
+  !
+r )
+] = e
+i (
+  !
+r )
+[@
+j
+	 +i	@
+j
+ (
+  !
+r )] (11)
+If we want to consider the phase transformations  (
+  !
+r ) that differ from a point
+to point, we have to de ne a connection that speci es the mode how we suppose
+to transport the phase of 	 from r
+4
+= (t;
+  !
+r ) to r
+0
+4
+as we travel along some path
+. Let us consider the in nitesimal transport r
+0
+4
+= r
+4
++ r
+4
+= r
+4
++
+P
+3
+i=0
+ q
+i
+e
+i
+,
+so that with this in nitesimal transport we have the change of 	:
+ 	j
+r
+4
+= 	j
+(r
+4
++ r
+4
+)
+  	j
+r
+4
+(12)
+This problem is analog to the problem of the derivation of a vector  eld W, with
+a vector at a point p = r
+4
+, w
+p
+= W(p) =
+P
+3
+j=0
+w
+j
+e
+j
+, along a particular curve
+Electronic Journal. http://diffjournal.spbu.ru 148Differential Equations and Control Processes, N 1, 2022
+lying in a given manifold in the differential geometry. In contrast to differential
+geometry, the vector  eld 	 are not vectors in the tangent space (plane) of a
+manifold, but belong to an "internal" vector spaceV (like isospin, avor, etc..)
+and hence the local transformation (10) can be considered as a time-space
+dependent change of the basis in V and hence it is a passive transformation.
+We require that the physics do not depend on the local choice of the basis,
+so that the differentiation has to be de ned based on the change of 	 (or 	)
+relative to the parallel transported 	
+p
+, so we have  	j
+r
+4
+= 	
+p
+j
+r
+0
+4
+  	j
+r
+4
+. In
+this case we have no Christoffel symbols  
+j
+ik
+, but an imaginary term iffA
+k
+(r
+4
+)
+whereA
+k
+(r
+4
+) is a suitably chosen vector  eld (an element of the Lie algebra
+belonging to the gauge group element, for example for the unitary group
+2
+,
+e
+i (r
+4
+)
+2 U(r
+4
+)) and ff is a coupling constant. Thus, analogously to the case
+used for de nition of covariant derivative in General Relativity, we have,
+ 	j
+r
+4
+= (iff
+X
+k
+A
+k
+(r
+4
+)dq
+k
+)	j
+r
+4
+and D	j
+r
+4
+=
+3
+X
+k=0
+(@
+k
+ iffA
+k
+(r
+4
+))	j
+r
+4
+dq
+k
+(13)
+with the gauge covariant derivative at point r
+4
+,
+D
+k
+=@
+k
+ iffA
+k
+(r
+4
+); k = 0; 1; 2; 3 (14)
+(we denote by D
+0
+k
+the covariant derivative at a point p = r
+0
+4
+andA
+0
+k
+the k-th
+component of a 4-vector  eld
+A = (A
+0
+;A
+1
+;A
+2
+;A
+4
+)
+at a point r
+0
+4
+). From the fact that we want that the Lagrangian den-
+sity becomes invariant under the covariant derivatives, i.e., D
+0
+k
+	j
+r
+0
+4
+= (@
+k
+ 
+iffA
+0
+k
+)(e
+i (r
+4
+)
+	j
+r
+4
+) = e
+i (r
+4
+)
+(@
+k
+ iffA
+k
+)	j
+r
+4
+= e
+i (r
+4
+)
+D
+k
+	j
+r
+4
+, we obtain thatA
+k
+should transform like
+A
+k
+(r
+4
+) 7! A
+0
+k
+(r
+0
+4
+) =A
+k
+(r
+4
+) +
+1
+ff
+@
+k
+ (r
+4
+) k = 0; 1; 2; 3 (15)
+Consequently, we conclude that we can promote a global symmetry to local
+(i.e., gauge) symmetry (for example, from U(1) into U(r
+4
+)) by replacing the
+standard derivative operators@
+k
+by the covariant derivative operatorsD
+k
+. The
+standard model of elementary particles, which is based on the concept of local
+2
+Historically, while trying to explain the quantum effects of electrodynamics, it was found that Quantum
+Electrodynamic (QED) could be explained by a U(1) Abelian gauge theory. Yang and Mills then generalized
+this Abelian U(1) gauge theory to the non Abelian gauge theory case (with the self interactions).
+Electronic Journal. http://diffjournal.spbu.ru 149Differential Equations and Control Processes, N 1, 2022
+gauge invariance, has shown to be very successful theory
+3
+. Let us consider a
+parallel transport at  nite distances, for example in the case of the Abelian
+symmetry group U(1), from the initial point r
+4
+into the  nal point r
+0
+4
+, so that
+an in nitesimal parallel transport along a  nite curve (r
+4
+; r
+0
+4
+) is given by (13)
+which formally may be integrated
+	
+p
+j
+r
+0
+4
+= e
+iff
+R
+A
+k
+(z)dz
+k
+	j
+r
+4
+(16)
+In fact, for in nitesimal transport, by taking the Taylor approximation, we
+obtain 	
+p
+j
+r
+0
+4
+= 	
+p
+j
+(r
+4
++ r
+4
+)
+  (1 +iff
+P
+k
+A
+k
+(r
+4
+)dq
+k
+)	j
+r
+4
+= 	j
+r
+4
++ 	j
+r
+4
+.
+Remark: There is a subset of con gurations of material  elds 	 that changes
+only because of the presence of the gauge  eld. They are geodesic con gurations
+which satisfy the equation D
+k
+	 = 0 for k = 0; 1; 2; 3, which is equivalent to
+linear equation @
+k
+	 =iffA
+k
+	.
+ 
+Minimal Coupling. Thus, we can make a system invariant under local gauge
+transformation at the expense of introducing a gauge vector  eld, which de nes
+in a given point p = r
+4
+the 4-vector A(r
+4
+), that plays the role of connection.
+This procedure, that relates the matter  eld (of a particle) and gauge  eld
+(by which this particle interacts) through the covariant derivative is known as
+'minimal coupling'.
+3 Uni ed IQM Gauge Theory for Individual Particles
+Let us consider how such a kind of localization of the internal phase transfor-
+mation is supported by the particle's matter/energy-density wave-packet which
+propagates with an arbitrary acceleration in a given locally at Minkowski ref-
+erence frame; we want to derive a general gauge  eld which is a source of such
+an acceleration of this particle. That is, the gauge theory provided in this
+section represents the uni cation of the three basic forces of the nature: elec-
+tromagnetic, weak and strong forces. This is done by the general complex local
+phase transformation  (t;
+  !
+r ) =  
+R
+(t) +i 
+I
+(t;
+  !
+r ) valid for each of these three
+basic forces.
+3
+In hopes of duplicating the success of the standard model, general relativity (which is non-renormalizable)
+was also formulated as a local gauge theory [24]. A Poincare transformation thet consists of constants and effects
+all of space instantly is called a global transformation: in GR such transformations violates special relativity,
+since such transformation takes us from one inertial reference frame to another, and, in presence of gravity,
+reference frames will be accelerated so that would be possible to have the information transmitted faster than
+the speed of light!
+Electronic Journal. http://diffjournal.spbu.ru 150Differential Equations and Control Processes, N 1, 2022
+Uni ed Local Symmetry. Let us consider the evolution of the parti-
+cle's wave-packet 	    (t;
+  !
+r )e
+ i'
+T
+from initial time-instance t to another
+	
+0
+   (t + t;
+  !
+r )e
+ i'
+T
+j
+(t+ t)
+at a time-instance t + t > t, in a given  eld of
+(combination of) basic forces. We would like to express this evolution as the re-
+sult of the local phase transformation  (t;
+  !
+r ), that is, by 	7! 	
+0
+= e
+i  (t;
+  !
+r )
+	.
+We assume that  t is an in nitesimal amount of time during which a particle
+has the interaction with only one boson of the  eld so that, after this interac-
+tion, this particle changed its velocity momentum and energy and its phase for
+a small amount   . Hence, this local phase transformation  (t;
+  !
+r ) is complex
+(differently from the usual theory for the point-like particles). The fact that this
+complex local phase transformation is a local symmetry for this particle holds
+from the fact that both 	 and 	
+0
+are the solutions of the same LagrangianL
+for the  eld 	 only at two different instances of time.
+Thus, by substitution of 	
+0
+  e
+i (t;
+  !
+r )
+	 intoL we obtain the same La-
+grangian form, that is, we obtain thatL is invariant under this local phase
+transformation. This complex local phase transformation supports any kind
+of basic forces or their combinations and hence mathematically represents the
+uni cation of these basic forces.
+ 
+For a free particle (without any external  eld that inuence its propagation) we
+obtain the case when the external gauge  eld is zero, that is, when A(r
+4
+) = 0.
+In the case when we have some external gauge  eld (i.e., the total  eld which
+can be represented by a sum of different types of the  elds as well) A(r
+4
+)6= 0
+which inuences the propagation of a particle (without annihilation of this
+particle), with Lagrangian density denoted byL
+gauge
+. The total Lagrangian
+densityL =L
+free
++L
+gauge
+is given by equation in (3), where the gauge  eld
+is indirectly represented by the matter-density speed
+  !
+w(r
+4
+) =
+  !
+v (t) +
+  !
+u (r
+4
+),
+where
+  !
+v (t) is the speed of particle's barycenter which changes in time (the
+accelerations and matter-density speed are the direct results of the interaction
+of a particle with this external gauge  eld A(r
+4
+)).
+Consequently, any local phase transformation 	7! 	
+0
+= e
+i (
+  !
+r )
+	 transforms
+the matter-density speed
+  !
+w(r
+4
+) and, consequently, the particle's trajectory,
+accelerations and momentum/energy. This mathematical consequence explains
+that the local phase changing of the phase indeed means that we have some
+gauge  eld which modi es the original (free particle) particle's trajectory, speed
+and momentum/energy. Thus, in what follows, we will use the general local
+phase transformations  (r
+4
+) = (t;
+  !
+r ).
+Electronic Journal. http://diffjournal.spbu.ru 151Differential Equations and Control Processes, N 1, 2022
+Let us represent the free Lagrangian of the free particle (stationary situation
+when
+  !
+u (t;
+  !
+r ) = 0) which propagates with a constant speed
+  !
+v , momentum p
+and energy E, and from (4)
+  !
+w(t;
+  !
+r ) =
+  !
+v , and hence from (3),
+L
+free
+=
+~
+1
+ 
+( 
+@'
+T
+@t
+		 +
+i
+2
+(	
+@	
+@t
+  	
+@	
+@t
+  	
+  !
+vr	 + 	
+  !
+vr	))
+=
+~
+1
+ 
+( 
+E pv
+~
+		 +
+i
+2
+(	@
+0
+	  	@
+0
+	 +
+P
+3
+j=1
+v
+j
+(	@
+j
+	 + 	@
+j
+	)))
+It is not invariant under the local phase transformations 	7! 	
+0
+= e
+i (t;
+  !
+r )
+	.
+In fact, for such a transformations, we obtain
+L
+free
+7! L
+free
++ ( @
+0
+ e
+0
++r )J =L
+free
+ 
+P
+3
+i=0
+J
+i
+@
+i
+ 
+where J =J
+0
+e
+0
++
+  !
+J (with
+  !
+J =
+  !
+v 		 =J
+0
+  !
+v , for the Noether charge density
+J
+0
+= 		 =  
+m
+) is the Neother current of the free particle's Lagrangian, and
+ @
+0
+ e
+0
++r (t;
+  !
+r ) is the time-space function, generally different from zero.
+The physical meaning of this invariance is that the local phase transforma-
+tion necessarily changes the particle's trajectory, so that instead of the constant
+speed
+  !
+v we will have an acceleration and corresponding matter-density speed
+  !
+w(t;
+  !
+r ). That is, we obtain the general normalized Lagrangian densityL in
+(3) used previously for the Ponicare symmetries, valid in all possible cases for
+the accelerated particles:
+L =
+~
+1
+ 
+( 
+@'
+T
+@t
+		 +
+i
+2
+(	@
+0
+	  	@
+0
+	 +
+3
+X
+j=1
+w
+j
+(	@
+j
+	  	@
+j
+	))) (17)
+Thus, we can obtain the invariant free LagrangianL
+I
+free
+by introducing a general
+gauge  eld as explained by (15),
+A
+ 
+= (A
+0
+;A
+1
+;A
+2
+;A
+4
+)
+and by replacing the derivatives @
+j
+by the covariant derivatives D
+j
+, given by
+(14), so that
+L
+I
+free
+(	; 	;A
+j
+) =
+~
+1
+ 
+( 
+@'
+T
+@t
+		+
+i
+2
+(	D
+0
+	 	D
+0
+	+
+3
+X
+j=1
+v
+j
+(	D
+j
+	 	D
+j
+	)))
+=
+~
+1
+ 
+[ 
+E pv
+~
+		+
+i
+2
+(	@
+0
+	 	@
+0
+	+
+3
+X
+j=1
+v
+j
+(	@
+j
+	 	@
+j
+	))+ff(A
+0
++
+3
+X
+j=1
+v
+j
+A
+j
+)		]
+(18)
+where
+  !
+v =v
+1
+e
+1
++v
+2
+e
+2
++v
+3
+e
+3
+,E andp are the velocity, energy and momentum
+of the free particle, respectively. Consequently, the general Lagrangian density,
+Electronic Journal. http://diffjournal.spbu.ru 152Differential Equations and Control Processes, N 1, 2022
+valid for accelerated particles as well, must be equal to the sum of the free
+invariant LagrangianL
+I
+free
+above and the Lagrangian of the introduced gauged
+ eld A
+ 
+, which interacts with the previously free particle and determines its
+ nal trajectory, speed and momentum/energy.
+Let us consider the properties of the general gauge  led A
+ 
+(the resulting
+combination of all forces acting on this moving particle) and its effect on the
+propagation of a given particle which at a given instance of time t has a given
+speed
+  !
+v and a given momentum/energy. If we would eliminate the gauge
+ eld (external force), then this particle would continue to propagate with this
+constant speed as a free particle with the Lagrangian densityL
+free
+. But if we
+do not eliminate this gauge  eld then, after an in nitesimal amount of time
+t
+0
+= t + t, it will change its speed and hence the Lagrangian density will be
+equal to that of accelerated particles in equation (17) where
+  !
+w =
+  !
+v +
+  !
+u (t
+0
+;
+  !
+r ).
+Consequently, the gauge Lagrangian is obtained by
+L
+gauge
+=L L
+I
+free
+(	; 	;A
+j
+) (19)
+that is,L
+gauge
+=
+~
+1
+ 
+[ (
+@'
+T
+@t
+ 
+E pv
+~
+)		 +
+i
+2
+P
+3
+j=1
+(w
+j
+ v
+j
+)(	@
+j
+	  	@
+j
+	) 
+ff(A
+0
++
+P
+3
+j=1
+v
+j
+A
+j
+)		], and from the fact that 	@
+j
+	  	@
+j
+	) = 0 (the Euler-
+Lagrange equation solutions of the LagrangianL are the  elds 	 =  e
+ i'
+T
+), and
+by de nition of the pilot-wave phase changing during this in nitesimal amount
+of time  t, from (2),
+ 
+  
+ t
+ 
+@'
+T
+@t
+j
+t
+0 
+@'
+T
+@t
+j
+t
+=
+E
+0
+ p
+0
+v
+0
+~
+ 
+E pv
+~
+(20)
+we obtain the following gauge Lagrangian
+L
+gauge
+=
+~
+1
+ 
+(
+  
+ t
+ ff(A
+0
++
+3
+X
+j=1
+v
+j
+A
+j
+))		 (21)
+which is invariant for the local phase transformations. Hence, from (19), also
+L =L
+gauge
++L
+I
+free
+must is invariant for the local phase transformations, as
+expected.
+Remark: Note that in this approximative derivation of the gauge Lagrangian,
+we considered only the pilot-wave changing of the particle and not also of its
+density   distribution, that is, the method of derivation ofL
+gauge
+was as for a
+point-like particle, and because of that we obtained from (20) that    is a real
+amount. If we consider also that during  t changes the energy-density  
+2
+as
+well, then we have to assume that   is a complex value in the gauge Lagrangian
+Electronic Journal. http://diffjournal.spbu.ru 153Differential Equations and Control Processes, N 1, 2022
+L
+gauge
+. That is, for the non point-like massive particles the gauge Lagrangian
+L
+gauge
+in (21) is valid only for the complex values   , as it will be shown.
+ 
+Now we have to understand if the componentsA
+j
+of this gauge Lagrangian are
+independent variables, as it is so if we de ne the gauge  eld independently of the
+particle's  eld 	, or not. The answer is no. In fact, in our approach the gauge
+Lagrangian is derived from the particle's Lagrangian densities for two possible
+particle's states: when it is free particle and when it is not. Thus the gauge
+ eld A
+ 
+is derived indirectly from the particle's behavior. Here we have the
+ nal behavior of a particle (its trajectory, velocity, accelerations, momentum-
+energy changes, etc...) and after that we analyze the properties of the gauge
+ eld which caused such a particular particle's behavior (which is a resulting
+effect of a number of different fundamental forces as electromagnetic, weak,
+strong). Hence, the total gauge  eld is derived from this concrete particle's
+behavior, that is, from its  eld 	. Consequently, in this framework, we have
+the gauge Lagrangian dependent only on two variables, so that, from (21), it
+can be expressed byL
+gauge
+(	; 	).
+The second consideration is that the gauge Lagrangian (21) does not cor-
+respond exactly to the real situation because the  elds 	 =  e
+ i'
+T
+(where  
+is a real density distribution function) used inL andL
+I
+free
+in equation (19) are
+different not only in the pilot-wave phases but also in the densities  , and hence
+(21) can be used only for the massive but point-like bosons. In effect, from the
+fact that the interactions of the observed massive particle are always with the
+unstable (massive) bosons, it means that the term in (21) in front of 		 must
+be a real value.
+However, if we want to use (21) for 	 that are not point-like massive par-
+ticles, then we need to use the complex  eldsA
+j
+instead of real, in order to
+obtain that such complex  elds compensate the fact that the observed particle's
+density   inL and inL
+I
+free
+are slightly different also for in nitesimal  t.
+In fact, let us consider an in nitesimal phase transformation for a real
+amount   
+R
+> 0 during an in nitesimal amount of time  t > 0 of the ob-
+served massive particle which, at a time instancet  0, is given by the complex
+ eld (particle's wave-packet) 	j
+(t;
+  !
+r )
+=  (t;
+  !
+r )e
+ i'
+T
+and its changing into the
+complex  eld at the time t + t, 	
+0
+= 	j
+(t+ t;
+  !
+r )
+=  (t + t;
+  !
+r )e
+ i('
+T
+j
+t
+   
+R
+(t))
+.
+Electronic Journal. http://diffjournal.spbu.ru 154Differential Equations and Control Processes, N 1, 2022
+Then, for the changing of the density  , we may always de ne the real function:
+  
+I
+(t;
+  !
+r ) 
+(
+ ln(
+ (t+ t;
+  !
+r )
+ (t;
+  !
+r )
+)  
+ t
+ (t;
+  !
+r )
+@ (t;
+  !
+r )
+@t
+; if  (t + t;
+  !
+r ) (t;
+  !
+r )6= 0
+0 , otherwise
+(22)
+Note that natural logarithm is always well de ned for particle's barycenter,
+where
+  !
+r =
+  !
+r
+T
+(t), for an in nitesimal  t. So, from
+@ 
+@t
+ 
+ (t+ t;
+  !
+r )  (t;
+  !
+r )
+ t
+and
+ t
+ (t;
+  !
+r )
+@ (t;
+  !
+r )
+@t
+<< 1, we have that ln(
+ (t+ t;
+  !
+r )
+ (t;
+  !
+r )
+) =  ln(1 +
+ t
+ (t;
+  !
+r )
+@ (t;
+  !
+r )
+@t
+)  
+ 
+ t
+ (t;
+  !
+r )
+@ (t;
+  !
+r )
+@t
+.
+Consequently, the changing of the particle's wave-packet satis es local
+transformation 	
+0
+= ( (t;
+  !
+r )e
+   
+I
+)e
+ i('
+T
+j
+t
+   
+R
+(t))
+= e
+i(  
+R
++i  
+I
+)
+	 = e
+i  
+	. That
+is, the complex-phase transformation for this observable massive non point-like
+particle is given by:
+	 7! 	
+0
+= e
+i  
+	 where   (t;
+  !
+r ) =  
+R
++i  
+I
+(23)
+So, for the non point-like massive particle expressed by the  eld 	, we need to
+considering an in nitesimal local complex-phase    =  
+R
++i  
+I
+where only real
+component  
+R
+corresponds to the particle's pilot-wave phase transformation,
+i.e.,  	 = e
+i  
+	  	 and for  	 as well. From the fact thatL
+gauge
+in (21) is
+invariant w.r.t. local phase transformation, we must have that
+0 = L
+gauge
+=
+@L
+gauge
+@	
+ 	+
+P
+3
+j=0
+@L
+gauge
+@(@
+j
+	)
+@
+j
+( 	)+
+@L
+gauge
+@	
+ 	+
+P
+3
+j=0
+@L
+gauge
+@(@
+j
+	)
+@
+j
+( 	)
+=
+@L
+gauge
+@	
+ 	 +
+@L
+gauge
+@	
+ 	 =
+~
+1
+ 
+(
+  
+ t
+ ff(A
+0
++
+P
+3
+j=1
+v
+j
+A
+j
+))(	 	 + 	 	), i.e.,
+   =  
+R
++i  
+I
+=ff(A
+0
+ t +
+3
+X
+j=1
+A
+j
+(v
+j
+ t)) =ffA
+j
+ s
+j
+(24)
+where  s
+j
+are the in nitesimal changes of the coordinates of the barycenter
+of the particle, i.e., the time-space changing along particle's trajectory. Note
+that the same result we obtain from the Euler-Lagrange equation of motion
+obtained from the LagrangianL
+gauge
+(	; 	) in (21), because
+@L
+gauge
+@	
+=
+~
+1
+ 
+(
+  
+ t
+ 
+ff(A
+0
++
+P
+3
+j=1
+v
+j
+A
+j
+)	 =
+P
+3
+j=0
+@
+j
+@L
+gauge
+@(@
+j
+	)
+= 0.
+This result shows that in this mathematical framework, the gauge  eld
+properties are not determined in all time-space points, but exclusively in the
+time-space points of the particle's barycenter, that is, on its trajectory
+  !
+r
+T
+(t).
+Let us show that it is indeed so.
+Indeed, let us consider the invariant free LagrangianL
+I
+free
+in (18) and show
+that it corresponds to the general LagrangianL restricted only on the particle's
+Electronic Journal. http://diffjournal.spbu.ru 155Differential Equations and Control Processes, N 1, 2022
+trajectory time-space points. Thus, we have to show that analogously toL = 0,
+L
+I
+free
+= 0. It is enough to verify that from (24) and (21),L
+gauge
+= 0, so that
+from (19),L
+I
+free
+=L L
+gauge
+= 0  0 = 0. Let us show now thatL
+I
+free
+is
+just the reduction ofL to the time-space points on the particle's trajectory.
+In fact, in LagrangianL
+I
+free
+given by (18), in the place of
+  !
+w we have the
+speed of barycenter
+  !
+v , and what we need is only to show that the component
+		,  (E  pv) + ff(A
+0
++
+P
+3
+j=1
+A
+j
+v
+j
+), of the LagrangianL
+I
+free
+, is equal to
+ 
+@'
+T
+@t
+j
+t
+0  
+@'
+T
+@t
+.
+In effect, it holds from (20), so that the LagrangianL
+I
+free
+, for the in nites-
+imal phase transformations, can be equivalently written as follows,
+L
+I
+free
+(	; 	) =
+~
+1
+ 
+( 
+@'
+T
+@t
+		 +
+i
+2
+(	@
+0
+	  	@
+0
+	 +
+3
+X
+j=1
+v
+j
+(	@
+j
+	  	@
+j
+	))) (25)
+which is a reduction of the general Lagrangian for accelerated particlesL in
+(17) only to the time-space points of the particle's trajectory, where w
+j
+= v
+j
+,
+j = 1; 2; 3.
+Note that this is a general result for any possible combination of the external
+forces (electromagnetic, weak and strong), so that the parameter ff do not
+depend on the particular case of the gauge  elds. Let us now determine this
+parameter and, after that, the values that must have the general gauge 4-vector
+ eld A on the trajectory of the particle.
+Let us consider the changing of the  eld 	 on the trajectory points (t;
+  !
+r
+T
+)
+in (20) caused by an in nitesimal local complex-phase transformation    =
+  
+R
++i  
+I
+, so that
+ 	j
+(t;
+  !
+r
+T
+)
+= e
+i  
+	  	
+  (1 +i  )	  	 =i  	 =iff(A
+0
+ t +
+P
+3
+j=1
+A
+j
+(v
+j
+ t))	 from (24)
+=iff
+P
+3
+j=0
+A
+j
+(
+  !
+r
+4
+) l
+j
+	j
+(t;
+  !
+r
+T
+)
+,
+with generally complex componentsA
+j
+. Thus, we obtained a general result
+of the covariant derivatives in equation (13), restricted only to the time-space
+points of the particle's trajectory. With this, we concluded consistently the
+introduction of the gauge  eld. Let us determine its values on the particle's
+trajectory. Thus for  t! 0, we obtain
+d	
+dt
+j
+(t;
+  !
+r
+T
+)
+=lim
+ t!0
+ 	
+ t
+=iff(A
+0
++
+3
+X
+j=1
+v
+j
+A
+j
+)	j
+(t;
+  !
+r
+T
+)
+(26)
+Electronic Journal. http://diffjournal.spbu.ru 156Differential Equations and Control Processes, N 1, 2022
+So, we can use the total derivative of 	 on the particle's barycenter time-
+space points r
+T
+(t) = (t;
+  !
+r
+T
+), that is, r
+T
+(t) = te
+0
++
+  !
+r
+T
+(t), with
+  !
+w(t;
+  !
+r
+T
+) =
+  !
+v (t) +
+  !
+u (t;
+  !
+r
+T
+) and from
+d'
+T
+dt
+=
+E+
+  !
+p
+  !
+v
+~
+and
+d (t;
+  !
+r )
+dt
+=
+@ 
+@t
++
+P
+3
+j=1
+@ 
+@q
+j
+dq
+j
+dt
+=
+@ 
+@t
+ 
+  !
+wr 
+= (
+  !
+wr  
+r 
+  !
+w
+2
+ ) 
+  !
+wr  from (6)
+= 
+r 
+  !
+w
+2
+  = 
+r 
+  !
+u
+2
+ ,
+we obtain
+d	
+dt
+j
+(t;
+  !
+r
+T
+)
+= ( 
+d e
+ i'
+T
+dt
++ e
+ i'
+T
+d 
+dt
+)
+(t;
+  !
+r
+T
+)
+= (i
+E +
+  !
+p
+  !
+v
+~
++
+r 
+  !
+u (t;
+  !
+r
+T
+)
+2
+)	j
+(t;
+  !
+r
+T
+)
+(27)
+Consequently, from (26) and (27), we may determine the gauge  eld (only on
+the points of the particle's trajectory r
+T
+(t) =te
+0
++
+  !
+r
+T
+(t)), i.e., r
+T
+(t) = (t;
+  !
+r
+T
+),
+as follows:
+A
+0
+ 
+  !
+v
+  !
+A
+g
+= 
+1
+ff
+(
+E +
+  !
+p
+  !
+v
+~
+ i
+r 
+  !
+u (r
+T
+)
+2
+) (28)
+where
+  !
+A
+g
+=
+def
+A
+1
+e
+1
++A
+2
+e
+2
++A
+3
+e
+3
+is the vector component of the gauge
+4-potential A
+ 
+=A
+0
+e
+0
++
+  !
+A
+g
+andA
+0
+is its scalar (time) component. So we
+can chose a natural choice (by dividing terms with particle's speed and that
+without)
+A
+0
+= 
+1
+ff
+(
+E
+~
+ i
+r 
+  !
+u (r
+T
+)
+2
+);
+  !
+A
+g
+=
+  !
+p
+ff~
+(29)
+It seems a natural choice that the scalar componentA
+0
+of the gauge 4-potential
+determines particle's total energy (or Hamiltonian), while the vector gauge
+potential
+  !
+A
+g
+determines particle's canonical momentum.
+In fact, the imaginary component of the scalar gauge potential Im(A
+0
+)
+is proportional to the divergence of the rest-mass energy uxr 
+  !
+w(t;
+  !
+r
+T
+) =
+r (
+  !
+u (t;
+  !
+r
+T
+)+
+  !
+v (t)) =r 
+  !
+u (t;
+  !
+r
+T
+) which is responsible for the change of the
+particle's shape   during interaction of the particle with intermediary bosons
+(gauge  eld). It is easy to verify (we can extend its validity from the particle's
+barycenter also for any point
+  !
+r from the fact that
+  !
+u (t;
+  !
+r ) is different from
+zero for the points inside particle's body) that we obtain:
+Im(A
+0
+) =
+r 
+  !
+u (t;
+  !
+r )
+2ff
+= 
+1
+ff
+d ln  (t;
+  !
+r )
+dt
+= 
+1
+2ff
+d ln  
+m
+(t;
+  !
+r )
+dt
+(30)
+That is, the total time derivative of particle's rest-mass energy density  
+m
+is
+determined by the imaginary component of scalar gauge potentialA
+0
+. With
+Electronic Journal. http://diffjournal.spbu.ru 157Differential Equations and Control Processes, N 1, 2022
+this generalization, we can de ne the gauge 4-potential also for the positions
+different from the particle's barycenter (t;
+  !
+r
+T
+), from (29)
+A
+0
+(t;
+  !
+r;
+  !
+p ) = 
+1
+ff
+(
+E(t;
+  !
+r;
+  !
+p )
+~
+ i
+r 
+  !
+u (t;
+  !
+r )
+2
+);
+  !
+A
+g
+(
+  !
+p ) =
+  !
+p
+ff~
+(31)
+from the fact that the canonical momentum
+  !
+p is time-dependent, while the
+total energy E is equal to the Hamiltonian. In the case when 	j
+(t;
+  !
+r
+T
+)
+=
+p
+1
+ 
+ (
+  !
+r 
+  !
+r
+T
+)e
+ i'
+T
+is the  eld of a stable boson, where '
+T
+= 0, we have
+that
+d'
+t
+dt
+= 0 and
+  !
+u = 0 and hencer 
+  !
+u = 0, so that equation (28) is equal to
+zero which is satis ed when all componentsA
+j
+= 0, that is for the zero 4-vector
+potential A
+ 
+= 0, as expected in the at Minkowski time-space (there is no
+any interaction of this massless boson with another bosons during its stable
+Dirac function state when propagates with the speed of light in the vacuum
+along the GR geodesics). Only if this boson becomes unstable massive boson
+(by the presence of another material objects on its trajectory) then it can have
+an interaction with another particles and change its trajectory, as it happens
+for the fermions.
+Now, from (24) and (31), we obtain that   
+I
+=Im(ffA
+0
+) t, that is
+  
+I
+=
+r 
+  !
+u
+2
+ t = 
+d ln  
+dt
+ t (32)
+so that for  t7! 0,   
+I
+= 
+ln  j
+t+ t
+) ln  j
+t
+)
+ t
+ t =  ln
+ j
+t+ t
+ j
+t
+we obtain the result in
+(22). So by substitution of (32) into (24) by using (31), we obtain
+  
+R
+= 
+E +
+  !
+p
+  !
+v
+~
+ t = 
+d'
+T
+dt
+ t (33)
+and  nally, we provide an in nitesimal localy symmetry transformation by
+   =  
+R
++i  
+I
+= 
+E +
+  !
+p
+  !
+v
+~
+ t+i
+r 
+  !
+u
+2
+ t = 
+d'
+T
+dt
+ t i
+d ln  
+dt
+ t = i
+d ln 	
+dt
+ t
+(34)
+Remark: In our working framework, where we determine the (composed) gauge
+ eld only from the particle's behaviour (dominantly from its trajectory), it is
+an expected result, because based only on the observation of the particle's
+trajectory, mathematically we are not able to determine the values of the gauge
+ led in the time-space points different from the particle's trajectory. That is,
+we are able to derive acting forces on the particle only in the time-space points
+of the particle's trajectory, that is in the barycenter of the particle.
+Electronic Journal. http://diffjournal.spbu.ru 158Differential Equations and Control Processes, N 1, 2022
+But this is not a particular side-effect of this completion of the Quantum
+Mechanics, based on the  eld 	 of the matter/energy-density wave-packet of
+an elementary particle, but a fundamental new result: it creates a strong conti-
+nuity between a 'macroscopic' classical mechanics and 'microscopic' Quantum
+Mechanics. This continuity is based on the fact that gauge  elds acts on the
+particle's barycenter with the produced forces which determine and modify the
+original free particle trajectory.
+It is well known that the standard Quantum Mechanics and its gauge theory
+is based on the energy considerations and wavefunctions based on the Hamilto-
+nian energy-levels, as in Schr odinger, Klein-Gordon or Dirac equations, and on
+their Lagrangian densities which de ne the interactions of a free particle with
+external forces by an explicit introduction of the particular gauge  eld.
+The second new result of this dual approach used in this completion of
+QM is that here the general Lagrangian density of the accelerated particle's
+wave-packet contains implicitly the gauge  eld, whose effects on the particle
+are visible in the behavior of the general Lagrangian density, that is, in its
+Euler-Lagrangian equation of motion. This is a similar approach to that used
+by Johannes Kepler, for example, to establish that the orbit of a planet is an
+ellipse with the Sun at one of the two foci, and after that by Newton to explain
+that the 'gauge  eld' that determines such orbits must satisfy his own laws
+of motion and law of universal gravitation (the direction of the acceleration is
+towards the Sun and the magnitude of the acceleration is in inverse proportion
+to the square of the distance from the Sun).
+ 
+Let us show how the parallel transport at  nite distances works, along a par-
+ticle's path (of the particle barycenter) from the initial point r
+T
+= (t;
+  !
+r
+T
+(t)),
+at the time-instance t, into the  nal point r
+0
+T
+= (t
+0
+;
+  !
+r
+T
+(t
+0
+)) at the time instance
+t
+0
+=t +4t, for any  nite time interval4t> 0. From the fact that the parallel
+transport along a  nite particle's trajectory (r
+4
+; r
+0
+4
+) is given by (16), it may be
+integrated and hence, from (24), we have that
+	j
+r
+0
+T
+= e
+i 
+	j
+r
+T
+= e
+iff
+R
+
+A
+k
+(z)dz
+k
+	j
+r
+T
+(35)
+where the local phase transformation   is obtained by the path integral:
+  =ff
+Z
+(r
+T
+;r
+0
+T
+)
+A
+k
+(z)dz
+k
+=ff
+Z
+t
+0
+t
+(A
+0
+( ;
+  !
+r
+T
+( )))+
+3
+X
+j=1
+v
+j
+( )A
+j
+( ;
+  !
+r
+T
+( )))d  (36)
+Consequently, by the path integration of the phase along the particle's trajec-
+tory, we obtain the following result:
+Electronic Journal. http://diffjournal.spbu.ru 159Differential Equations and Control Processes, N 1, 2022
+Proposition 1 The gauge 4-vector potential of the particle's  led 	 =  e
+ i'
+T
+satis es:
+d
+dt
+ln 	j
+(t;
+  !
+r
+T
+(t))
+=iff(A
+0
+(t;
+  !
+r
+T
+(t))) +
+3
+X
+j=1
+v
+j
+(t)A
+j
+(t;
+  !
+r
+T
+(t))) (37)
+A 'parallel transport' (35) of this particle's  led along a  nite curve of its
+barycenter (r
+T
+;r
+0
+T
+), from the initial point r
+T
+= (t;
+  !
+r
+T
+(t)) into the  nal point
+r
+0
+T
+= (t
+0
+;
+  !
+r
+T
+(t
+0
+)), where t
+0
+= t +4t for a  nite time interval4t > 0, produces
+the following local complex-phase transformation (36):
+  = '
+T
+j
+r
+0
+T
+r
+T
+ i ln  j
+r
+0
+T
+r
+T
+= '
+T
+j
+r
+0
+T
++'
+T
+j
+r
+T
+ i ln  (r
+0
+T
+) +i ln  (r
+T
+) = i ln 	j
+r
+0
+T
+r
+T
+(38)
+Proof: From (26) we obtain the equation (37). Then, from (36),
+  =ff
+R
+(r
+T
+;r
+0
+T
+)
+(A
+0
++
+P
+3
+j=1
+v
+j
+A
+j
+)dt =
+R
+(r
+T
+;r
+0
+T
+)
+( i
+d
+dt
+ln 	)dt = i ln 	j
+r
+0
+T
+r
+T
+= i ln
+ (r
+0
+T
+)e
+ i'
+T
+j
+r
+0
+T
+ (r
+T
+)e
+ i'
+T
+j
+(
+r
+T
+)
+= '
+T
+j
+r
+0
+4
++'
+T
+j
+r
+4
+ i(ln( (r
+0
+T
+)  ln  (r
+T
+)).
+In effect, for the in nitesimal4t = t we have that
+  
+ t
+= 
+'
+T
+j
+t+ t
+ '
+T
+j
+t
+ t
+ i
+ln  j
+t+ t
+ ln  
+t
+ t
+= 
+d'
+T
+dt
+ i
+d
+dt
+(ln  )j
+(t;
+  !
+r
+T
+(t))
+= 
+d'
+T
+dt
+ i(
+1
+ 
+d 
+dt
+)j
+(t;
+  !
+r
+T
+(t))
+= 
+E+
+  !
+v
+  !
+p
+~
+ i(
+1
+ 
+( 
+r 
+  !
+u
+2
+ ))
+=ff( 
+1
+ff
+(
+E
+~
+ 
+r 
+  !
+u
+2
+) 
+  !
+v (
+  !
+p
+ff~
+))
+=ff(A
+0
+ 
+  !
+v
+  !
+A
+g
+), in accordance with (24).
+ 
+Notice that this result (38) can be obatiend directly by integration of in nites-
+imal local symmetry transformation (34) in time, iver particle's trajectory 
+from t to t
+0
+=t +4t.
+It is easy to verify that the results of this proposition are in according with the
+gauge theory. In fact from (35) for the 'parallel transformation', we have
+	j
+r
+0
+4
+= e
+i 
+	j
+r
+4
+= e
+iff
+R
+
+A
+k
+(z)dz
+k
+	j
+r
+4
+= e
+i( i ln(
+	jr
+0
+4
+	jr
+4
+))
+	j
+r
+4
+= e
+ln(
+	jr
+0
+4
+	jr
+4
+)
+	j
+r
+4
+= (
+	j
+r
+0
+4
+	j
+r
+4
+)	j
+r
+4
+.
+Moreover, the interaction of a particle with an external  eld boson cnages only
+locally particle's density   mainly in particle's surface, so that the density in
+particle's barycenter (which is maximal possible density  
+1
+does not change
+during the interactions (emission/absorbtion) of bosons, and the speed of this
+invariant particle's denisity in its barucenter is equal to particle's speed
+  !
+w =
+  !
+v .
+Electronic Journal. http://diffjournal.spbu.ru 160Differential Equations and Control Processes, N 1, 2022
+Hence, in particle's barycenter r
+T
+= (t;
+  !
+r
+T
+),
+ln
+ j
+r
+0
+T
+ j
+r
+T
+  0 (39)
+and practically alway just equal to zero. So, we have from (38) that (for @
+0
+=
+@
+@t
+),
+@
+0
+  = (@
+0
+'
+T
+)
+r
+0
+T
++ (@
+0
+'
+T
+)
+r
+T
+ i(
+1
+ 
+@ 
+@t
+)
+r
+0
+T
++i(
+1
+ 
+@ 
+@t
+)
+r
+T
+= 
+E
+~
+j
+r
+0
+T
++
+E
+~
+j
+r
+T
+ i(
+1
+ 
+(
+  !
+wr  
+r 
+  !
+u
+2
+ ))
+r
+0
+T
++i(
+1
+ 
+(
+  !
+wr  
+r 
+  !
+u
+2
+ ))
+r
+T
+= (
+E
+~
+ i
+r 
+  !
+u
+2
+)
+r
+0
+T
++ (
+E
+~
+ i
+r 
+  !
+u
+2
+)
+r
+T
+ i
+  !
+vr(ln
+ j
+r
+0
+T
+ j
+r
+T
+)
+  (
+E
+~
+ i
+r 
+  !
+u
+2
+)
+r
+0
+T
++ (
+E
+~
+ i
+r 
+  !
+u
+2
+)
+r
+T
+, from (39), that is
+@
+0
+  =ffA
+0
+0
+ ffA
+0
+(40)
+Similarly,
+r  = (r'
+T
+)
+r
+0
+T
++(r'
+T
+)
+r
+T
+ ir(ln
+ j
+r
+0
+T
+ j
+r
+T
+) = (r'
+T
+)
+r
+0
+T
++(r'
+T
+)
+r
+0
+T
+, from (39)
+= (
+@'
+T
+@
+  !
+r
+T
+)
+r
+0
+T
++ (
+@'
+T
+@
+  !
+r
+T
+)
+r
+0
+T
+, because on trajectory
+  !
+r =
+  !
+r
+T
+=
+  !
+p
+~
+j
+r
+0
+T
+ 
+  !
+p
+~
+j
+r
+T
+, that is
+r  =ff
+  !
+A
+0
+g
+ ff
+  !
+A
+g
+(41)
+That is, we obtained the satisfaction of the the gauge transformation in (15),
+A
+j
+7! A
+0
+j
+=A
+j
++
+1
+ff
+@
+j
+ , for j = 0; 1; 2; 3.
+So, we obtain that
+A
+ 
+(t;
+  !
+r;
+  !
+p ) = 
+1
+ff
+(
+E(t;
+  !
+r;
+  !
+p )
+~
+ i
+r 
+  !
+u (t;
+  !
+r )
+2
+)e
+0
++
+  !
+p
+ff~
+(42)
+is well de ned gauge. By considering that on the particle's trajectory we have
+that
+  !
+w =
+  !
+v , the equation (36) is the line integral of the gauge  eld A
+ 
+done on
+the trajectory r
+T
+=te
+0
++
+  !
+r
+T
+(t) and hencedr
+T
+=dte
+0
++d
+  !
+r
+T
+(t) = (e
+0
++
+  !
+v (t))dt,
+  =ff
+Z
+
+A
+ 
+dr
+T 
+(43)
+where for dr
+T
+= dr
+ 
+T
+= d(t
+0
+e
+0
++
+  !
+r
+T
+(t)) = dt
+0
+e
+0
++d
+  !
+r
+T
+(t) = (e
+0
++
+  !
+v )dt
+0
+=
+(dt;v
+1
+dt;v
+2
+dt;v
+3
+dt), it corresponding dual 4-vector is dr
+T 
+=d(t
+0
+e
+0
+ 
+  !
+r
+T
+(t)) =
+dt
+0
+e
+0
+ d
+  !
+r
+T
+(t) = (e
+0
+ 
+  !
+v )dt
+0
+= (dt; v
+1
+dt; v
+2
+dt; v
+3
+dt).
+We may consider ~ffA
+ 
+as the force (resulting of all quantum forces) acting on
+Electronic Journal. http://diffjournal.spbu.ru 161Differential Equations and Control Processes, N 1, 2022
+the particle at a given point in space (the particle's barycenter r
+T
+(t)), the line
+integral ~  above is the work done on the particle when it propagates along a
+trajectory-path (r
+T
+; r
+0
+T
+).
+For any gauge  eld's effect   =  
+R
++i 
+I
+in (43) of the initial state of the
+particle 	j
+t
+0
+along its trajectory (path ) up to the time t t
+0
+, we obtain for
+any Minkowski time-space point (t
+0
+;
+  !
+r ) such that  (t
+0
+;
+  !
+r )6= 0:
+e
+i 
+	j
+t
+0
+= e
+iff
+R
+
+A
+ 
+dr
+T 
+	j
+t
+0
+= e
+iff
+R
+
+A
+ 
+dr
+T 
+ (t
+0
+;
+  !
+r )e
+ i'
+T
+j
+t
+0
+= e
+i( 
+R
++iIm(ff
+R
+
+A
+ 
+dr
+T 
+))
+ (t
+0
+;
+  !
+r )e
+ i'
+T
+j
+t
+0
+= e
+ Im(ff
+R
+
+A
+ 
+dr
+T 
+)
+ (t
+0
+;
+  !
+r )e
+ i('
+T
+j
+t
+0
+  
+R
+)
+= e
+ ff
+R
+t
+t
+0
+Im(A
+0
+)dt
+0
+)
+ (t
+0
+;
+  !
+r )e
+ i('
+T
+j
+t
+0
+  
+R
+)
+= e
+ff
+R
+t
+t
+0
+r 
+  !
+u (t
+0
+;
+  !
+r )
+2ff
+dt
+0
+)
+ (t
+0
+;
+  !
+r )e
+ i('
+T
+j
+t
+0
+  
+R
+)
+= e
+ff
+R
+t
+t
+0
+r 
+  !
+u (t
+0
+;
+  !
+r )
+2ff
+dt
+0
+)
+ (t
+0
+;
+  !
+r )e
+ i('
+T
+j
+t
+0
+  
+R
+)
+= e
+R
+t
+t
+0
+d ln  (t
+0
+;
+  !
+r )
+dt
+0
+dt
+0
+)
+ (t
+0
+;
+  !
+r )e
+ i('
+T
+j
+t
+0
+  
+R
+)
+from (30)
+= e
+ln  (t;
+  !
+r ) ln  (t
+0
+;
+  !
+r )
+ (t
+0
+;
+  !
+r )e
+ i('
+T
+j
+t
+0
+  
+R
+)
+= (
+ (t;
+  !
+r )
+ (t
+0
+;
+  !
+r )
+) (t
+0
+;
+  !
+r )e
+ i('
+T
+j
+t
+0
+  
+R
+)
+=  (t;
+  !
+r )e
+ i('
+T
+j
+t
+0
+  
+R
+)
+=  (t;
+  !
+r )e
+ i'
+T
+j
+t
+from (38),  
+R
+= '
+T
+j
+t
++'
+T
+j
+t
+0
+,
+= 	j
+t
+,
+with, for particle's trajectory  from (t
+0
+;
+  !
+r
+t
+0
+) to (t;
+  !
+r
+T
+),
+ 
+R
+((t;
+  !
+r
+T
+); (t
+0
+;
+  !
+r
+t
+0
+)) =Re(ff
+R
+
+A
+ 
+dr
+T 
+) =
+R
+
+(
+E(t
+0
+;
+  !
+r
+T
+;
+  !
+p )
+~
+e
+0
+ 
+  !
+p
+~
+)dr
+T 
+=
+R
+
+(
+E(t
+0
+;
+  !
+r
+T
+;
+  !
+p )
+~
+e
+0
+ 
+  !
+p
+~
+)(e
+0
+ 
+  !
+v )dt
+0
+= 
+R
+t
+t
+0
+E(t
+0
+;
+  !
+r
+T
+;
+  !
+p ) pv
+~
+dt
+0
+, and, from above,
+ 
+I
+((t;
+  !
+r
+T
+); (t
+0
+;
+  !
+r
+t
+0
+)) =Im(ff
+Z
+
+A
+ 
+dr
+T 
+) =  ln(
+ (t;
+  !
+r
+T
+)
+ (t
+0
+;
+  !
+r
+t
+0
+)
+) (44)
+As expected, we obtained the gauge theory result, of the particle's internal lo-
+cal symmetry transformation, 	j
+t
+= e
+i 
+	j
+t
+0
+where   =  
+R
+((t;
+  !
+r
+T
+); (t
+0
+;
+  !
+r
+t
+0
+)) +
+i 
+I
+((t;
+  !
+r
+T
+); (t
+0
+;
+  !
+r
+t
+0
+)).
+Geodesic con gurations. In this particular cases we have that D
+j
+	 = 0.
+Let us consider the cases when j = 1; 2; 3, for which on the trajectory with
+coordinates q
+j
+T
+with j-th momentum component p
+j
+, so indeed is satis ed this
+condition,
+D
+j
+	 = (@
+j
+ iffA
+j
+)	 =@
+j
+	 i
+p
+j
+~
+	 =
+@
+@q
+j
+T
+	 i
+p
+j
+~
+	 =i
+p
+j
+~
+	 i
+p
+j
+ff~
+	 = 0
+on the free particle's trajectory, from 	 =  (t;
+  !
+r )e
+ i'
+T
+(t;
+  !
+r
+T
+)
+, with
+'
+T
+=
+1
+~
+(
+  !
+p (
+  !
+r
+T
+(t) 
+  !
+r
+T
+(0)) +Et) =
+1
+~
+( 
+P
+3
+j=1
+p
+j
+(q
+j
+T
+(t) q
+j
+T
+(0)) +Et).
+By considering thatin geodesic con guration we have a propagation of a free
+Electronic Journal. http://diffjournal.spbu.ru 162Differential Equations and Control Processes, N 1, 2022
+particle, when !
+p
+ 
+@'
+T
+@t
+=
+E+
+  !
+p
+  !
+v
+~
+, we obtain that on particles trajectory
+D
+0
+	 = (@
+0
+ iffA
+0
+)	 = ( i!
+p
+	 +
+  !
+wr	 
+r 
+  !
+u
+2
+	) +i(
+E
+~
+ i
+r 
+  !
+u
+2
+)	
+= i!
+p
+	 +
+  !
+wr	 +i
+E
+~
+	 = i!
+p
+	 +
+  !
+v
+@	
+@
+  !
+r
+T
++i
+E
+~
+	, because in barycenter
+  !
+w =
+  !
+v
+= i!
+p
+	 +
+  !
+v (i
+  !
+p
+~
+) +i
+E
+~
+	 =i( !
+p
++
+E+
+  !
+v
+  !
+p
+~
+)	 = 0  	 = 0, as expected.
+ 
+Conclusions: We have seen that the general Lagrangian density of a particle
+is the addition of a Lagrangian density of this particle in its perfect stationary
+(free particle) state and a total gauge  eld (as a combination of a number
+of existent quantum  elds), which can be observed on the particles barycenter
+(trajectory). That is, like in the standard quantum gauge  eld theory where the
+particles are considered as point-like objects. We are able to use the standard
+gauge  eld theory also in the constructive way (as in the standard quantum
+mechanics) by considering a Lagrangian densityL
+free
+of the free particle (that
+propagates with a constant speed) by adding to it a speci c gauge Lagrangian.
+In both cases, the point-like approximation for the particles is well suited for
+the interactions of a particle with the gauge  elds. Thus, this new theory of QM
+(the IQM theory), based on the non point-like massive particle that propagates
+as wave-packets of a given invariant amount of matter, distributed in a small
+but  nite volume, is a conservative extension of the standard point-like based
+quantum mechanics for the particles. But for the high-energy physics, where the
+annihilation and creation of the new particles are dominant, the interactions
+of the non point-like particles introduce the direct collisions of their matter-
+densities, which produce the forces that are not based only on the bosons (also
+in their unstable states when they have the properties of the 'virtual particles')
+of the gauge  elds.
+A local symmetry can be connected also to indeterminism because of the
+time dependence of its transformation parameter. For example, the time depen-
+dence of a transformation for a local symmetry will ensure that a transforma-
+tion can have the initial and  nal con gurations invariant, while transforming
+the history between those two points. Thus for the local U(1) symmetry with
+ (t;
+  !
+r ), this can be theoretically achieved if the parameter  (t;
+  !
+r ) vanishes at
+the initial and  nal times, t
+i
+and t
+f
+, for every
+  !
+r , while it has non-zero value
+at at least one point
+  !
+r for a time t, for which t
+i
+<t<t
+f
+. Since such a trans-
+formation is a symmetry of the theory, the transformed history will extremize
+the action for the same initial and  nal con gurations and hence a theory with
+Electronic Journal. http://diffjournal.spbu.ru 163Differential Equations and Control Processes, N 1, 2022
+a local symmetry can thus be indeterministic.
+Notice that this is not possible in our case, because from equation (38) for
+a limit4t7! 0 around this time-instance t we always have that lim
+4t7!0
+  = 0.
+That is, we can not have at t the value of  6= 0 if the initial  (r
+4
+) and  nal
+ (r
+0
+4
+) con gurations are the same, so that ln(
+ (r
+0
+4
+)
+ (r
+4
+)
+) = 0. Consequently, in our
+case there is no more than one realizable history for a given initial and  nal
+con guration of the  eld 	, and hence our system is deterministic and these
+local symmetries must be necessarily the gauge symmetries.
+4 Example: Aharonov-Bohm Effect
+The most commonly described case, sometimes called the Aharonov-Bohm
+solenoid effect, takes place when the wave function of a charged particle pass-
+ing around a long solenoid experiences a phase shift as a result of the enclosed
+magnetic  eld, despite the magnetic  eld being negligible in the region through
+which the particle passes and the particle's wavefunction being negligible inside
+the solenoid.
+It is sometimes called the Ehrenberg-Siday-Aharonov-Bohm effect,  rst
+predicted the effect in 1949 by Werner Ehrenberg and Raymond Siday [1].
+Aharonov-Bohm effect was  rst described in 1959 in an article [2], written by
+Yakir Aharonov and his doctoral advisor David Bohm and received various re-
+sponses. The Aharonov-Bohm effect is important conceptually because it bears
+on three issues apparent in the recasting of (Maxwell's) classical electromag-
+netic theory as a gauge theory, which before the advent of quantum mechanics
+could be argued to be a mathematical reformulation with no physical conse-
+quences. In fact, when developing their idea, Aharonov and Bohm consulted
+experimental physicist Robert G.Chambers and in their article, they described
+the experiment which had to be carried out to prove their theory. Only a year
+later [3], in 1960, Chambers performed the proposed experiment and proved
+that effect does exist. In following years, effect was con rmed by more and
+more precise experiments.
+The Aharonov-Bohm effect shows that the local electric
+  !
+E and magnetic
+  !
+B
+forces do not contain full information about the electromagnetic  eld, and the
+electromagnetic 4-potential vector, (
+ (t;
+  !
+r )
+c
+;
+  !
+A(t;
+  !
+r )) in (8) with (9), must be
+used instead. By Stokes' theorem, the magnitude of the Aharonov-Bohm effect
+can be calculated using the electromagnetic  elds alone, or using the 4-potential
+Electronic Journal. http://diffjournal.spbu.ru 164Differential Equations and Control Processes, N 1, 2022
+alone. But when using just the electromagnetic  elds, the effect depends on the
+ eld values in a region from which the test particle is excluded. In contrast,
+when using just the electromagnetic four-potential, the effect only depends on
+the potential in the region where the test particle is allowed. Therefore, one
+must either abandon the principle of locality, which most physicists (and me)
+are reluctant to do, or accept that the electromagnetic 4-potential offers a more
+complete description of electromagnetism than the electric and magnetic forces
+can.
+My opinion [17] is that the electric and magnetic forces are only derived ef-
+fects of the fundamental electromagnetic phenomena based on the 4-potentials
+(which are the statistical results of the interaction produced by high number
+of photons as intermediators between charged massive particles). This vision
+of the electromagnetic phenomena is compatible with the vision of gravitation
+phenomena based on the fundamental concept of the time-space curvature, that
+is, on the gravitational potential (metrics), where the gravitational acceleration
+force
+  !
+g is a derived effect (in the case of the Newton's gravitation approxi-
+mation, this force is just equal to the gradient of the gravitational potential,
+similarly to the electric force which is proportional to the gradient of the scalar
+potential   in (9). So, from the fact that
+  !
+E and
+  !
+B are derived forces, we can
+also have the 3-D regions where we have the photons (thus 4-potential different
+from zero) but with zero electromagnetic  elds
+  !
+E =
+  !
+B = 0, as in the case of
+the scalar Tesla's waves (composed by massive photons) considered in [17].
+Let us now consider a long solenoid, carrying magnetic  eld
+  !
+B . If solenoid
+is ideal (i.e. in nitely long and with a perfectly uniform current distribution),
+the  eld
+  !
+B inside is uniform and the  eld outside is zero. We will use cylindrical
+coordinate system (r; ;z) withz axis in the middle of solenoid and pointing in
+direction of magnetic  eld.
+Thus, we consider the case when outside the solenoid   = 0 while, from
+(9),
+  !
+A satis es condition that
+  !
+E = r  
+@
+  !
+A
+@t
+= 0 
+@
+  !
+A
+@t
+= 0. That is, in
+this cylindrical system
+  !
+A =A
+r
+e
+r
++A
+ 
+e
+ 
++A
+z
+e
+z
+is static and depends only on
+the distance r from the center of the solenoid, such that
+  !
+B =r 
+  !
+A = 0.
+The model for the Aharonov-Bohm effects, with thin solenoid with radiusr
+0
+, in
+order to obtain the constant magnetic force
+  !
+B inside the in nite long solenoid
+and zero outside this solenoid is provided by the potential vector  led
+  !
+A with
+Electronic Journal. http://diffjournal.spbu.ru 165Differential Equations and Control Processes, N 1, 2022
+A
+r
+=A
+z
+= 0 and
+A
+ 
+(r) 
+(
+ 
+B
+2 r
+2
+0
+r , if 0 r r
+0
+ 
+B
+2 r
+, if r>r
+0
+(45)
+where  
+B
+is total magnetic ux through the solenoid. That is, A
+ 
+(r) iz zero in
+the center of the solenoid and grows linearly up to the max value
+ 
+B
+2 r
+0
+and then
+decreases again to zero for r!1. Notice that for
+  !
+A(r; ) = A
+ 
+(r)e
+ 
+, holds
+the Lorenz gauge (also the Coulomb gauge-transverse gauge) condition, when
+r 
+  !
+A +
+1
+c
+2
+@ 
+@t
+=
+1
+r
+@(rA
+r
+)
+@r
++
+1
+r
+@A
+ 
+@ 
++
+@A
+z
+@z
++
+1
+c
+2
+  0 = 0 (46)
+Then, fromr 
+  !
+A = (
+1
+r
+@A
+z
+@ 
+ 
+@A
+ 
+@z
+)e
+r
++ (
+@A
+r
+@z
+ 
+@A
+z
+@r
+)e
+ 
++
+1
+r
+(
+@(rA
+ 
+)
+@r
+ 
+@A
+r
+@ 
+)e
+z
+, we
+obtain for the magnetic force
+  !
+B =r 
+  !
+A =
+(
+ 
+B
+ r
+2
+0
+e
+z
+, if 0 r r
+0
+0 , if r>r
+0
+(47)
+In the case when we send a coherent beam of electrons toward this solenoid,
+these massive bosons around solenoid interact with the electrons of this beam by
+changing their direction of propagation, momentum and energy (Hamiltonian
+is changed by the 4-potential, that is by the interaction with massive bosons).
+This model can be used as the physical explanation of the Aharonov-Bohm
+effect, based on the massive photons (the intermediate bosons of the electro-
+magnetic 4-potential  eld) interacting with the coherent beam of electrons (see
+ gure 1). Thus, the electrons passing near to the solenoid have the interactions
+with these massive photons, so that these interactions change the trajectory,
+momentum vector, and energy (Hamiltonian) of each electron in the beam and
+explain the interference between left and right (around the solenoid) beams of
+electrons. The right beam trajectory is parallel to
+  !
+A (at the point of closest
+approach), while the left beam trajectory is antiparallel. Even in the absence
+of any Lorentz force on the electrons, these interactions produce a phase shift
+between the complex wave-packets 	 of the electrons in the right w.r.t. the left
+beams.
+For any contracted curve around the solenoidC with the surfaceS, from the
+Stokes theorem we have that (consider that we adopted positive-time Minkowski
+time-space signature (+; ; ; ), so that
+P
+3
+i=1
+A
+i
+dq
+i
+= 
+  !
+Ad
+  !
+r ), from (47),
+I
+C
+( 
+  !
+Ad
+  !
+r ) = 
+Z
+S
+(r 
+  !
+A)d
+  !
+S =
+Z
+S
+( 
+  !
+Bd
+  !
+S ) =  
+B
+(48)
+Electronic Journal. http://diffjournal.spbu.ru 166Differential Equations and Control Processes, N 1, 2022
+Figure 1: The Aharonov-Bohm
+where  
+B
+6= 0 is the total magnetic ux inside this solenoid. Electromagnetic
+theory implies that an electron with negative electric charge e travelling along
+some path , composed by particle's trajectory from time 0 to time t > 0, in
+a region with zero magnetic  eld
+  !
+B , but non-zero
+  !
+A, acquires a phase shift
+M 
+A
+, given in SI units by
+M 
+A
+= 
+e
+~
+Z
+
+  !
+Ad
+  !
+r = 
+e
+~
+Z   !
+r
+T
+(t)
+  !
+r
+T
+(0)
+  !
+Ad
+  !
+r = 
+e
+~
+Z
+t
+0
+  !
+A(
+  !
+r
+T
+( ))
+  !
+v ( )d  (49)
+whered
+  !
+r  
+  !
+v ( )d  is an in nitesimal trajectory length of this electron. That
+is, in our new Individual-particle QM (IQM) theory [5, 6, 7], we have that the
+complex wave-packet of a free individual electron (when the solenoid is off)
+	
+off
+=  
+0
+(t;
+  !
+r ) e
+ i'
+0
+T
+j
+t
+e
+ iff
+H
+, where  
+m
+=  
+2
+0
+(t;
+  !
+r ) has a hydrostatic equi-
+librium spherically symmetric energy-density [10], during this non-relativistic
+propagation,
+'
+0
+T
+j
+t
+=
+E
+0
+ p
+0
+v
+0
+~
+t =
+m
+0
+c
+2
++
+1
+2
+m
+0
+  !
+v
+2
+0
+~
+t (50)
+where m
+0
+is electron's rest-mass and v
+0
+(with
+  !
+v
+2
+0
+= v
+2
+0
+) is a constant speed
+of this free electron along the axis x (the direction of the propagation of the
+beam of electrons). In the case when the solenoid is on, this electron is not
+more a free particle, so that it changes its de Broglie pilot phase '
+T
+by the
+amountM 
+A
+in (49). This is expected just because the interactions of massive
+photons emitted by solenoid (by generating scalar waves above with 4-potential
+Electronic Journal. http://diffjournal.spbu.ru 167Differential Equations and Control Processes, N 1, 2022
+components   and
+  !
+A) with an electron, changes its energy, momentum and
+trajectory, by generating the new pilot-wave phase of this electron '
+T
+j
+t
+, such
+that, from (49) and (50),
+ 
+R
+= '
+T
+j
+t
+= '
+0
+T
+j
+t
++M 
+A
+  
+1
+~
+Z
+t
+0
+(m
+0
+c
+2
++
+1
+2
+m
+0
+  !
+v
+2
+( )+e
+  !
+A(
+  !
+r
+T
+( ))
+  !
+v ( ))d 
+(51)
+by considering thatk
+  !
+vk  v
+0
+and d
+  !
+r = d
+  !
+v ( )d . However, we can not use
+the simple method used for the Schr odinger wavefunctions in SQM, where only
+this phase changing of the wavefunction under inuence of
+  !
+A is considered,
+i.e., by
+4
+ 
+0
+= e
+i 
+R
+because, in statistic quantum mechanics, the electron is
+considered as a point-like particle for which only the phase is changed.
+Magnetic Aharonov-Bohm effect: Let us now consider the phase-shift
+Aharonov-Bohm effects on the left and right beams of electrons in Figure 1:
+two electrons (one in left and other in the right beam) traveling together (in
+parallel) with the same velocity
+  !
+v pass by the solenoid on opposite sides.
+At the point of closest approach to the solenoid, one is traveling parallel to
+  !
+A(r; ) =A
+ 
+(r)e
+ 
+on its side, the other antiparallel. So, the pilot-wave of each
+wave-packet (	
+1
+and 	
+2
+, relatively) accumulates a phase shiftM  
+A
+given by
+(49) as it traverses the vector potential at trajectory points
+  !
+r
+T
+(t) = (r; ).
+The scalar product
+  !
+A
+  !
+v in equation (49) implies that the phase changes are
+of opposite sign for electrons passing the solenoid on opposite sides. So, the
+two individual electrons 	
+1
+and 	
+2
+on their different paths (
+1
+and 
+2
+, respec-
+tively) past a long solenoid enclosing the magnetic ux  
+B
+accumulate a phase
+difference
+4' = 
+e
+~
+Z
+
+1
+  !
+Ad
+  !
+r  ( 
+e
+~
+Z
+
+2
+  !
+Ad
+  !
+r )  
+e
+~
+I
+C
+  !
+Ad
+  !
+r =
+e
+~
+ 
+B
+(52)
+known as the magnetic Aharonov-Bohm phase shift. We consider that from
+4
+Note that such a transformation from the Schr odinger wavefunction (a state vector in Hilbert space)
+when the solenoid is off to the state 
+0
+= e
+i 
+R
+when the solenoid is on, from my point of view seems non
+correct, because we know that each state in SQM remains equal if we change only the phase of it. Consequently,
+in the SQM, we have that both and 
+0
+correspond to the same quantum state of the electron. This is in
+contradiction with the fact that the state of the electron, when the solenoid is off, must be different from
+the state 
+0
+when the solenoid is on, and hence they would have different trajectories depending if solenoid
+is off or on. So, also the probability density to  nd this electron (described by these two wavefunctions) at
+a given point, instead to be equal, 
+0
+ 
+0
+= e
+ i 
+R
+ e
+i 
+R
+=  , must be different (consider that (t;
+  !
+r ) and
+ 
+0
+(t;
+  !
+r ) are distributed theoretically in whole space), that is, for the modules of these two complex time-space
+functions has to different (j (t;
+  !
+r )j6=j 
+0
+(t;
+  !
+r )j and not only their phases). Thus, it has to be provided a
+different mathematical elaboration of the Aharonov-Bohm quantum experiments in the statistical quantum
+theory (SQM).
+Electronic Journal. http://diffjournal.spbu.ru 168Differential Equations and Control Processes, N 1, 2022
+t = 0 (when the beam of electrons is split in the left and right-hand side com-
+ponents) to t> 0 (when the left and right beams are recombined, see  gure 1)
+these two considered electrons traveling together de ned two paths 
+1
+and 
+2
+,
+respectively, such that
+1
++
+2
+de nes approximatively the whole closed loop C
+around this solenoid.
+So, if we change magnetic  eld in solenoid, we change phase difference between
+beams and interference pattern will shift. Aharonov and Bohm suggested how
+it could be measured by heaving electron waves traversing the two paths inter-
+fere with each other. Achieving interference patterns requires that the initial
+electron beam be adequately coherent and that its splitting maintain that co-
+herence. The former is accomplished by having a well-collimated beam with
+narrow spreads in angle and particle energy, and later requires something like
+a diffraction grating or an electromagnetic biprism.
+4.1 Uni ed IQM Gauge Theory for Aharonov-Bohm effects
+By considering that IQM theory is classical deterministic part of the quan-
+tum theory, also in classical electrodynamics theory this Aharonov-Bohm effect
+there exists, and not only in the statistical quantum mechanics based on the
+probabilistic wavefunction (with the ensemble interpretation). In our case, in
+IQM theory, an individual electron is not point-like but is composed by its 3-D
+body of rest-mass density  
+m
+(t;
+  !
+r ) =  
+2
+(t;
+  !
+r ). During the interaction with
+the  eld
+  !
+A (that is, with massive photons which are the intermediate bosons
+of this  eld), the rest-mass energy density of the electron is changed as well, so
+that for the modi ed electron's wave-packet 	
+0
+=  
+0
+(t;
+  !
+r ) e
+ i'
+0
+T
+e
+ iff
+H
+6= 	 e
+i 
+R
+,
+because  
+0
+(t;
+  !
+r )6=  (t;
+  !
+r ). In fact, the interaction of an individual massive
+particle (an electron in our case) and external  elds (
+  !
+A in our case) in the IQM
+theory is de ned in the uni ed gauge theory [7], based on the local symmetry
+(a kind of localization of the internal phase transformations for the electrons's
+accelerated complex wave-packet 	).
+So, we will use now this Aharonov-Bohm experiment as an example, to which
+we can apply this new gauge theory, with the following property:
+Let us consider the evolution of the particle's wave-packet 	   (t;
+  !
+r )e
+ i'
+H
+T
+,
+from initial time t to another 	
+0
+   (t + t;
+  !
+r )e
+ i'
+H
+T
+j
+(t+ t)
+at a time-instance
+t + t>t, in a given external  eld (a combination of basic forces). We would
+like to express this evolution as the result of the local phase transformation
+  (t;
+  !
+r ), that is, by 	7! 	
+0
+= e
+i  (t;
+  !
+r )
+	. We assume that t is an in nitesimal
+amount of time during which a particle has the interaction with only one boson
+Electronic Journal. http://diffjournal.spbu.ru 169Differential Equations and Control Processes, N 1, 2022
+of the external  eld. Thus, after this interaction, this particle changed its ve-
+locity, momentum, energy, and hence its phase for a small amount   . So, this
+local phase transformation (t;
+  !
+r ) = 
+R
+(t;
+  !
+r )+i 
+I
+(t;
+  !
+r ) is complex, differently
+from the SQM theory for the point-like particles (where it is a real value).
+In the gauge theory of the IQM presented in Section 3, we derived the gauge La-
+grangian density with intermediators of the 4-potential A
+ 
+= (A
+0
+;A
+1
+;A
+2
+;A
+4
+)
+representing a total external  eld (as a combination of the basic quantum
+forces), by (21), L
+gauge
+=
+~
+1
+ 
+(
+  
+ t
+  ff(A
+0
++
+P
+3
+j=1
+v
+j
+A
+j
+))		, which is invari-
+ant for the local phase transformations, where in our case ff =
+e
+~
+is the cou-
+pling constant. We demonstrated that the total 4-potential on the massive
+particle's trajectory (here the trajectory of an electron), that is, for the points
+r
+T
+(t) =te
+0
++
+  !
+r
+T
+(t)), determines particle's velocity
+  !
+v , canonical momentum
+  !
+p
+and total energy E (i.e., the Hamiltonian), from (29):
+A
+0
+= 
+1
+ff
+(
+E(r
+T
+;
+  !
+p )
+~
+ i
+r 
+  !
+u (r
+T
+)
+2
+);
+  !
+A
+g
+=
+  !
+p
+ff~
+(53)
+Note that the scalar componentA
+0
+is a complex component, while otherA
+j
+are real components of the gauge 4-potential A
+ 
+=A
+0
+e
+0
++
+  !
+A
+g
+).
+Remark: In fact, in our case from (28), we are interested for the real component
+Re(A
+0
+ 
+  !
+v
+  !
+A
+g
+) of the total 4-potential which generates the modi cation   
+R
+of electron's pilot-wave phase (the imaginary components ofA
+0
+, de nes the
+complex phase component   
+I
+) so that, from (24) and (51)
+Re(A
+0
+ 
+  !
+v
+  !
+A
+g
+) =
+1
+ff
+  
+R
+ t
+=
+1
+ff t
+( 
+1
+~
+(m
+0
+c
+2
++
+1
+2
+m
+0
+  !
+v
+2
+(t) + e
+  !
+A(
+  !
+r
+T
+(t))
+  !
+v (t)) t,
+that is,
+Re(A
+0
+ 
+  !
+v
+  !
+A
+g
+) = 
+1
+e
+(m
+0
+c
+2
++
+1
+2
+m
+0
+  !
+v
+2
+(t) + e
+  !
+A(
+  !
+r
+T
+(t))
+  !
+v (t)) (54)
+Note that for v
+4
+= (v
+0
+;v
+1
+;v
+2
+;v
+3
+) = (c;
+  !
+v ), and solenoid's 4-potential (8), A
+4
+=
+(A
+0
+;A
+1
+;A
+2
+;A
+3
+) = (
+ 
+c
+;
+  !
+A), we obtain,
+ A
+4
+v
+4
+=   
+  !
+A
+  !
+v =   +
+3
+X
+i=1
+A
+i
+v
+i
+(55)
+Thus, in our case with A
+0
+=
+ 
+c
+= 0, from general equation (54), we obtain this
+speci c equation
+Re(A
+0
+ 
+  !
+v
+  !
+A
+g
+) = 
+1
+e
+(m
+0
+c
+2
++
+1
+2
+m
+0
+  !
+v
+2
++ eA
+4
+v
+4
+) (56)
+Electronic Journal. http://diffjournal.spbu.ru 170Differential Equations and Control Processes, N 1, 2022
+and from this we see the fundamental physical difference between the general
+IQM gauge 4-potential A
+ 
+and electromagnetic 4-potential A
+4
+: when the elec-
+tromagnetic 4-potential is zero, the gauge 4-potential becomes constant (differ-
+ent from zero) and continues to govern particle's inertial propagation as well.
+That is, the gauge 4-potential always determine particle's pilot-wave phase also
+in the intervals of time when particle is free.
+Thus, from equation (38) in Proposition 1,   
+R
+= '
+T
+j
+t+ t
++'
+T
+j
+t
+, we obtain
+the changing of electron's pilot-wave phase '
+T
+, for an in nitesimal amount of
+time  t,
+'
+T
+j
+t+ t
+='
+T
+j
+t
++
+1
+~
+(m
+0
+c
+2
++
+1
+2
+m
+0
+  !
+v
+2
++ eA
+4
+v
+4
+) t (57)
+caused by the electromagnetic vector  eld
+  !
+A, generated by the solenoid, as
+expected.
+Moreover, we note the fundamental difference from the mathematical total
+gauge complex 4-potential A
+ 
+= (A
+0
+;
+  !
+A
+g
+) and the physical solenoid's real 4-
+potential (8), A
+4
+= (
+ 
+c
+;
+  !
+A).
+ 
+If we consider now the whole process of the interaction of an electron with mas-
+sive photons of the  eld
+  !
+A, along electron's path (on its trajectory) from time
+0 to a time t > 0, then the sum  
+R
+of all in nitesimal changes   
+R
+(t) of the
+phase along electron's trajectory
+  !
+r
+T
+(t) is equal to the integral in (51). Let us
+how that this integral corresponds to the path-integral of the gauge 4-potential
+for computation of the total particle's pilot wave phase  
+R
+. In fact, from (51)
+we have that
+ 
+R
+= '
+0
+T
+j
+t
++M 
+A
+= '
+0
+T
+j
+t
+ 
+e
+~
+R
+
+  !
+Ad
+  !
+r
+  
+1
+~
+R
+t
+0
+(m
+0
+c
+2
++
+1
+2
+m
+0
+  !
+v
+2
+( ) + e
+  !
+A(
+  !
+r
+T
+( ))
+  !
+v ( ))d 
+=
+e
+~
+R
+t
+0
+ 
+1
+e
+(m
+0
+c
+2
++
+1
+2
+m
+0
+  !
+v
+2
+( ) + e
+  !
+A(
+  !
+r
+T
+( ))
+  !
+v ( ))d 
+=ff
+R
+t
+0
+Re(A
+0
+ 
+  !
+v
+  !
+A
+g
+)d  from (54)
+=ff
+R
+t
+0
+Re(A
+0
++
+  !
+A
+g
+)((e
+0
+ 
+  !
+v ))d 
+=ff
+R
+
+Re(A
+ 
+)d
+  !
+r
+T 
+from d
+  !
+r
+T 
+= (e
+0
+ 
+  !
+v )  
+=Re(ff
+R
+
+A
+ 
+d
+  !
+r
+T 
+)
+That is, we obtain the following result of the path integration if we are using
+the electromagnetic vector  eld
+  !
+A or the gauge 4-potential A
+ 
+:
+ 
+R
+= '
+0
+T
+j
+t
+ 
+e
+~
+Z
+
+  !
+Ad
+  !
+r =Re(ff
+Z
+
+A
+ 
+d
+  !
+r
+T 
+) (58)
+Electronic Journal. http://diffjournal.spbu.ru 171Differential Equations and Control Processes, N 1, 2022
+where '
+0
+T
+j
+t
+is the path integration (50) when the solenoid is 'off'. With this
+we concluded the translation from the classical electromagnetic framework into
+the global gauge IQM theory for individual electrons of the Aharonov-Bohm
+effects.
+Consequently, when the solenoid is active (solenoid is 'on'), we have the
+transformation from the wave-packet of an electron 	 =  (t;
+  !
+r ) e
+ i'
+T
+into the
+modi ed (by the potential vector
+  !
+A(t;
+  !
+r )) wave-packet 	
+0
+=  
+0
+(t;
+  !
+r ) e
+ i'
+0
+T
+=
+ 
+0
+(t;
+  !
+r ) e
+ i('
+T
+  
+A
+)
+, which is shifted for the phase  
+A
+given by (49).
+4.2 Quantum Forces in the Aharonov-Bohm Effect
+Based on the results in previous section, we can explain the uni ed gauge
+theory, based on the the total gauge 4-potentialA
+j
+, 0 j  3, in this example
+of Aharonov-Bohm experiments:
+Corollary 1 The velocity-dependent potential energy U of the non-relativistic
+electron in the Aharonov-Bohm experiments is given by
+U = eRe(A
+0
+ 
+  !
+v
+  !
+A
+g
+) 
+m
+0
+  !
+v
+2
+2
+(59)
+whereA
+0
+is the time and
+  !
+A
+g
+vector coponents of the gauge 4-potential.
+Proof: It is enough to demonstrate that the electron's potential energyU, used
+in the Lagrangian L = T U, where T =
+m
+0
+v
+2
+2
+= 
+m
+0
+2
+  !
+v (t)
+  !
+v (t) is electron's
+kinetic energy for the velocity
+  !
+v (t) =
+d
+dt
+  !
+r
+T
+(t), is equal, from from (56) and(55),
+to
+U = e(  +
+  !
+A
+  !
+v ) +m
+0
+c
+2
+= e(  
+3
+X
+i=1
+A
+i
+v
+i
+) +m
+0
+c
+2
+(60)
+In the SI system, the Lorentz force, acting on an electron during Aharonov-
+Bohm experiments, is equal to
+  !
+F = e(
+  !
+E +
+  !
+v 
+  !
+B ) = e( r  
+@
+  !
+A
+@t
++
+  !
+v  (r 
+  !
+A)) (61)
+Let us, for example, compute the  rst component of the force
+  !
+F , with
+(
+  !
+v  (r 
+  !
+A))
+1
+=v
+2
+(
+@A
+2
+@q
+1
+ 
+@A
+1
+@q
+2
+) v
+3
+(
+@A
+1
+@q
+3
+ 
+@A
+3
+@q
+1
+)
+=
+@
+@q
+1
+(
+P
+3
+i=1
+A
+i
+v
+i
+) 
+dA
+1
+dt
++
+@A
+1
+@t
+=
+@
+@q
+1
+( 
+  !
+A
+  !
+v ) 
+dA
+1
+dt
++
+@A
+1
+@t
+since
+Electronic Journal. http://diffjournal.spbu.ru 172Differential Equations and Control Processes, N 1, 2022
+@
+@q
+1
+( 
+  !
+A
+  !
+v ) =v
+1
+@A
+1
+@q
+1
++v
+2
+@A
+2
+@q
+2
++v
+3
+@A
+3
+@q
+3
+,
+and
+dA
+1
+dt
+=
+@A
+1
+@t
++v
+1
+@A
+1
+@q
+1
++v
+2
+@A
+1
+@q
+2
++v
+3
+@A
+1
+@q
+3
+,
+so we obtain,
+F
+1
+= e[ 
+@ 
+@q
+1
+ 
+@A
+1
+@t
++
+@
+@q
+1
+( 
+  !
+A
+  !
+v ) 
+dA
+1
+dt
++
+@A
+1
+@t
+]
+= e[ 
+@
+@q
+1
+(  +
+  !
+A
+  !
+v ) +
+d
+dt
+@
+@v
+1
+(  +
+  !
+A
+  !
+v )] = 
+@U
+@q
+1
++
+d
+dt
+@U
+@v
+1
+and hence:
+  !
+F = rU +
+d
+dt
+(
+@U
+@
+  !
+v
+) (62)
+Let us show that U is electron's potential, which can be used to de ne the
+electron's Lagrangian in classical electrodynamics,
+L =T U = 
+m
+0
+  !
+v
+2
+2
+ e( +
+  !
+A
+  !
+v ) m
+0
+c
+2
+=
+m
+0
+v
+2
+2
+ m
+0
+c
+2
+ e +e
+3
+X
+i=1
+A
+i
+v
+i
+(63)
+which is a non-relativistic case when the external  eld energy-potential L
+e
+=
+ e(  +
+  !
+A
+  !
+v ) depends also on the particle's velocity.
+It can be shown by using the Euler-Lagrange equation of motion
+@L
+@q
+ 
+d
+dt
+@L
+@ _ q
+= 0 (64)
+where, for the space coordinate q, _ q denotes the velocity, and here rewritten in
+the full vectorial form:
+0 =
+d
+dt
+@L
+@
+  !
+v
+ rL =
+d
+dt
+@
+@
+  !
+v
+( 
+m
+0
+  !
+v
+2
+2
+ U) r( 
+m
+0
+  !
+v
+2
+2
+ U)
+=
+d
+dt
+(m
+0
+  !
+v 
+@U
+@
+  !
+v
+) +rU =m
+0
+d
+  !
+v
+dt
+  ( rU +
+d
+dt
+(
+@U
+@
+  !
+v
+)).
+Thus, from the Newton's law
+  !
+F = m
+0
+d
+  !
+v
+dt
+, we obtain the correct Lorentz force
+in (62), so that indeed U is electron's potential. We know the canonical mo-
+mentum from classical mechanics, from (63),
+  !
+p 
+@L
+@
+  !
+v
+=m
+0
+  !
+v + e
+  !
+A (65)
+where m
+0
+  !
+v is the kinetic momentum, that is,
+  !
+v =
+1
+m
+0
+(
+  !
+p  e
+  !
+A) (66)
+so that the Hamiltonian (in our Minkowski time-space signature (+; ; ; ))
+is given by the Legendre transformationH = 
+  !
+p
+  !
+v L = 
+m
+0
+  !
+v
+2
+2
++ e  +m
+0
+c
+2
+and, from (66),
+H = 
+1
+2m
+0
+(
+  !
+p  e
+  !
+A)
+2
++ e  +m
+0
+c
+2
+(67)
+Electronic Journal. http://diffjournal.spbu.ru 173Differential Equations and Control Processes, N 1, 2022
+Hence, the uni ed gauge theory of IQM is in perfect accordance with classical
+electrodynamics. Note that in the de Broglie pilot-wave phase, the total energy
+is equal to the Hamiltonian and the momentum is canonical.
+ 
+In addition, the classical Maxwell equations are derived from QED scatter-
+ing process while both classical electromagnetic  elds and potentials serve as
+mathematical tools that are constructed to approximate the interactions among
+elementary particles described by QED physics, i.e., neither classical  elds nor
+potentials represent any real entities of nature.
+The vector potentials ( ;
+  !
+A) as well as EM  eld are nothing but mathematical
+idealisations that approximate the interactions among electrons which are me-
+diated by the photons, as it has been shown in [17], the EM  eld will come into
+play in classical theory since they comprise major parts of the Lorentz force
+equation. Now it is clear that, in the Aharonov-Bohm effect, it does not matter
+whether the EM  elds are zero or not in the region where the beam of electrons
+can enter, the underlying mechanism is the interactions between this beam of
+electrons and the  eld
+  !
+A, while such interactions are mediated by massive pho-
+tons. Moreover, the Maxwell's EM  elds are not produced directly by electrons
+or any hypothetical magnetic monopoles, they serve as calculation tools and
+emerge in the classical world because of the coupling effect between charged
+particles with photons. We can regard the classical four-potential ( ;
+  !
+A) as
+well as EM  eld as mathematical statistical manifestations of photons. There
+is no any 'nonlocal feature' in an Aharonov-Bohm experiment: its effect can
+be interpreted as the manifestation of massive photons propagating between
+electrons in the framework of the IQM theory.
+As it was shown in [17], the electromagnetic phenomena and forces are achieved
+trough the basic phenomena of emission and absorption of the long/short-range
+photons by the charged particles. So, also Lorentz force is the statistical effect
+of this phenomena of emission and absorption of the long/short-range photons
+by the charged particle.
+Thus, we can have the particular cases when the 4-potential  eld ( ;
+  !
+A) there
+exists, mediated by massive and slow photons, in which the Maxwell's electro-
+magnetic  elds
+  !
+E and
+  !
+B are zero and the Lorentz force consequently is zero,
+but still there is another force that these massive photons generate on an elec-
+tron, based on their mutual collisions in which these massive photons transfer
+their momentum to this electron.
+It is just the case of the Aharonov-Bohm effect, because for  =
+@
+  !
+A
+@t
+=r 
+  !
+A =
+0 we obtain, from (61), that the Lorentz force
+  !
+F is zero. However, in the late
+Electronic Journal. http://diffjournal.spbu.ru 174Differential Equations and Control Processes, N 1, 2022
+1990's, a quantum force was predicted for the Aharonov-Bohm physical system
+by Shelankov [18], and elucidated by Berry [19]. That this (non-Lorentz) force
+is indeed present is demonstrated a number of times [20]. For experiments with
+electron beams, the presence of a longitudinal force along the beam can lead
+to time delays, while a transverse force leads to deections. The absence of a
+longitudinal force, as made apparent by the absence of electron time delays, has
+been investigated more recently. The deection, another indicator of force, is
+accompanied by a characteristic asymmetry in the electron diffraction pattern.
+In order to understand the underlying physical nature of these non-Lorentz
+forces, we have to analyze the consequences of the Maxwell equations in the
+case of the Aharonov-Bohm effects.
+So, if we replace the equations (9) into the ordinary Maxwell equations for the
+electric and magnetic  elds
+  !
+E and
+  !
+B , we obtain the following equations for
+the electromagnetic 4-potential in the region outside the solenoid for r > r
+0
+,
+where   = 0 and current
+  !
+j = 0:
+ r
+2
+  
+@
+@t
+(r 
+  !
+A) = 0; ( r
+2
++
+1
+c
+2
+@
+2
+@t
+2
+)
+  !
+A +r(r 
+  !
+A +
+1
+c
+2
+@ 
+@t
+) = 0 (68)
+From the fact that, in our case, the voltage potential is   = 0, we have no any
+scalar wave for  , differently from the case analyzed in [17] for Tesla's scalar
+waves. So, we need to investigate if we have the vector
+  !
+A (radiation) waves.
+Notice that, in our case, it holds not only Coulomb gauge potential condition
+r 
+  !
+A = 0 but also the Lorentz gauge potential conditionr 
+  !
+A +
+1
+c
+2
+@ 
+@t
+= 0.
+Thus, the system of two equations (68) is reduced only to the vector-potential
+wave equation:
+( r
+2
++
+1
+c
+2
+@
+2
+@t
+2
+)
+  !
+A = 0 (69)
+Hence, if it would be a non trivial identity with zero, then we would have that
+the vector potential  eld
+  !
+A is mediated by the long-range photons which are
+emitted from the accelerated electrons in the solenoid (we recall that also if
+the speed of free electrons in the solenoid's current is constant, from the fact
+that their orbit in the solenoid is a circle, all electrons in the solenoid's current
+have a constant acceleration with direction toward the center of the solenoid)
+and then become massless photons able to propagate by the speed of light as a
+cylindrical wave.
+Let us show that this is not the case here, so that the mediated bosons for
+the  eld
+  !
+A are massive and slow short-range photons [17], which generate the
+electrostatic  eld of each electron (in its rest-frame).
+Electronic Journal. http://diffjournal.spbu.ru 175Differential Equations and Control Processes, N 1, 2022
+So, let us show that (69) is not the wave equation of massless photon's prop-
+agation with the speed of light. Let us control its  rst term with Laplacian
+operator, given in the solenoids cylindrical coordinate system with the center
+in the center of solenoid,
+r
+2
+  !
+A = (r
+2
+A
+r
+ 
+A
+r
+r
+2
+ 
+2
+r
+2
+@A
+ 
+@ 
+)e
+r
++ (r
+2
+A
+ 
+ 
+A
+ 
+r
+2
++
+2
+r
+2
+@A
+r
+@ 
+)e
+ 
++r
+2
+A
+z
+e
+z
+(70)
+so, from (45), we obtain:
+r
+2
+  !
+A = (r
+2
+A
+ 
+ 
+A
+ 
+r
+2
+)e
+ 
+= ((
+1
+r
+@
+@r
+(r
+@A
+ 
+@r
+) +
+1
+r
+2
+@
+2
+A
+ 
+@ 
+2
++
+@
+2
+A
+ 
+@z
+2
+) 
+A
+ 
+r
+2
+)e
+ 
+= (
+1
+r
+@
+@r
+(r
+@A
+ 
+@r
+) 
+A
+ 
+r
+2
+)e
+ 
+= (
+@
+2
+A
+ 
+@r
+2
++
+1
+r
+@A
+ 
+@r
+ 
+A
+ 
+r
+2
+)e
+ 
+= e
+ 
+ 
+B
+2 
+(
+@
+2
+@r
+2
++
+1
+r
+@
+@r
+ 
+1
+r
+2
+)
+1
+r
+= 0.
+Also the second time-derivation component of the wave-equation (69) is equal
+to zero, because the vector
+  !
+A is time-invariant, and hence this wave equation
+does not represent the propagation of the massless photons with the speed of
+light. Thus, the intermediators for the vector-potential  eld
+  !
+A can only be the
+massive and slow short-range photons, irradiated by electrons in the solenoid.
+Let us show that the non-wave vector potential
+  !
+A(r; ) = A
+ 
+(r)e
+ 
+, given in
+this cylindrical coordinate system with the center in the center of the solenoid,
+outside this solenoid (for r > r
+0
+, where r
+0
+is the radius of the solenoid) is
+really the statistical consequence of the short-range photons generated by the
+free electrons inside this solenoid that propagate with a velocity
+  !
+v
+s
+= v
+s
+e
+ 
+,
+with a constant speed v
+s
+. We consider that the natural interference of the free
+electrons inside the solenoid (their mutual repulsion) can be neglected w.r.t.
+the external source- led that generates the electric current inside this solenoid.
+Thus, the density of the free electrons in this solenoid is constant, so that for
+any small angle    =
+ 
+n
+, where n >> 1, the number of free electrons in this
+solenoid's section is N > 1. We denote the electrostatic potential generated
+by a free electron (w.r.t. its rest-frame) in the solenoid's section at the angle
+  +ff by 
++ff
+, while that in the section at the angle  ff (symmetrically to the
+observed angle  ) by  
+ ff
+.
+From the fact that all free electrons in the solenoid's current move with a
+constant speed
+  !
+v
+s
+= v
+s
+e
+ 
+, there is no any electrostatic potential (  = 0)
+generated by them (in our frame with cylindrical coordinate system), but only
+the vector potential
+  !
+A generated by superposition of all moving electrostatic
+potentials of each individual free electron of the current. We consider that
+r r
+0
+>>d, where d is diameter of the wire of the solenoid, so that all N free
+electrons in a given section large the in nitesimal angle   =
+ 
+n
+, forn>> 1, are
+practically at the same distance from the observed point (r; ), and that inside
+Electronic Journal. http://diffjournal.spbu.ru 176Differential Equations and Control Processes, N 1, 2022
+this sector    all N free electrons practically propagate linearly with constant
+speedv
+s
+. Hence, from (72)
+5
+, for the discrete set of angles ff =j  , 0 j  2n,
+so that 0 ff  2  covers the whole solenoid, we obtain:
+  !
+A(r; ) =
+2n
+X
+j=0
+(N 
++ff
+)
+c
+2
+v
+s
+e
++ff
+=
+Nv
+s
+c
+2
+n
+X
+j=0
+( 
++ff
+e
++ff
++ 
+ ff
+e
+ ff
+) (73)
+Consequently, from the fact that the electrons with  
++ff
+and  
+ ff
+are at the
+same distance   =
+p
+(r r
+0
+)
+2
++r
+2
+0
+sin
+2
+ff from the observed point (r; ), both
+of them we will denote by the same Coulomb potential  (r;ff) = k
+e
+e
+ 
+and,
+from the fact that e
++ff
++ e
++ff
+= 2 cosffe
+ 
+, so that for any 0  ff = j     ,
+ 
++ff
+e
++ff
++ 
+ ff
+e
+ ff
+= (r;ff)(e
++ff
++ e
++ff
+) = 2 (r;ff) cosffe
+ 
+, the (73) reduces to
+  !
+A(r; ) = (
+2Nv
+s
+c
+2
+n
+X
+j=0
+ (r;ff) cosff) e
+ 
+=A
+ 
+(r)e
+ 
+(74)
+That is, we demonstrated that the vector potential
+  !
+A has no radial component,
+as expected, andA
+ 
+(r) =
+2Nv
+s
+c
+2
+P
+n
+j=0
+ (r;ff) cosff corresponds to that de ned by
+the magnetic ux in (45) for r>r
+0
+.
+Note that each short-range photon has an angular speed as well caused by the
+angular speed of the free electrons in the solenoid. So, the cloud of short-
+distance photons emitted/absorbed by the free electrons in the solenoid has an
+radial movement from and toward (returning phase) the center of solenoid, but
+also this rotation around the solenoid which generates a vortex of short-range
+photons. The radial movement of the photons of this dense cloud has no effect
+to the electrons in the beams, because they have impact on them from both
+sides (emitted/returned photons) with the same radial momentum quantity.
+But the angular momentum of the vortex of the short-range photons in this
+vortex is only in one direction: so its effects on the left-hand and right-hand
+5
+The vector-potential is obtained [17] as the effect of the movement of the electrostatic scalar  eld   de ned
+in the rest-frame,
+  !
+A
+1
+=
+ 
+c
+2
+  !
+v (71)
+that is, as the ux of the electrostatic scalar  eld (de ned in a rest-frame). So, the direction of
+  !
+A is equal to
+the direction of the velocity
+  !
+v . If we consider a general case, that the current
+  !
+j is composed byn> 1 charged
+particles, each one with its electrostatic potential  
+j
+moving with the speed
+  !
+v
+j
+, by superposition we obtain
+that the resulting 3-D vector potential generated by this current is equal to
+  !
+A =
+n
+X
+j=1
+ 
+j
+c
+2
+  !
+v
+j
+(72)
+that is,
+  !
+A is a result of moving of the electrostatic potentials of the charged particles.
+Electronic Journal. http://diffjournal.spbu.ru 177Differential Equations and Control Processes, N 1, 2022
+sides of the electron-beams around the solenoid are very different, and this ex-
+plains the Aharonov-Bohm effect.
+So, we have the collisions of the two uids: the vortex uid of the massive short-
+range photons emitted from the solenoid (intermediators for the electromagnetic
+vector-potential
+  !
+A) and the uid of the coherent beam of the electrons outside
+the solenoid. In the two-uid hydrodynamics the superuid (Magnus force is
+not the only force on the vortex transverse to its velocity) there is also a trans-
+verse force between the vortex and quasiparticles moving with respect to the
+vortex. The transverse force from rotons was found by Lifshitz and Pitaevskij
+[21] from the quasiclassical scattering theory and also Iordanskij [22] revealed
+the transverse force from phonons. Then it was demonstrated that the Lifshitz-
+Pitaevskij force for rotons and the Iordanskij force for phonons originate from
+interference between quasiparticles which move past the vortex on the left and
+on the right sides with different phase shifts, like in the Aharonov-Bohm effect.
+So, let us consider in details such effects of the collisions between the vortex of
+massive low-speed short-range photons around the solenoid and an individual
+electron passing near to this solenoid vortex.
+When the solenoid is 'on', the speed of the electron is
+  !
+v (t) =v
+x
+(t)e
+1
++v
+y
+(t)e
+2
+,
+where v
+x
+(t)  v
+0
+is electron's longitudinal speed and v
+y
+(t) its time-dependent
+transverse speed when the solenoid is 'on'. Consequently, we have the trans-
+verse force F = m
+0
+dv
+y
+(t)
+dt
+acting on an individual electron (caused by the col-
+lisions with the massive photons generated by the accelerated electrons in the
+solenoid). This transverse is asymmetric (w.r.t. the left/right electron-beam
+components around the solenoid) and experimentally demonstrated [18, 19, 20].
+The word force is a label to describe a transfer of momentum between two ob-
+jects: from the massive photons which creates a vortex around the solenoid and
+an individual electron which passes close to this solenoid.
+In hydrodynamics, such a ow pattern is called a vortex tube, a vortex line,
+or simply a vortex. Thus, as noted in [23], the Aharonov-Bohm effect of the
+transverse force is similar to the classical hydrodynamics Magnus force (The Ior-
+danskij force [22] is related to the acoustic Aharonov-Bohm effect). The analogy
+between wave scattering by vortex and electron scattering by the magnetic-ux
+tube (the Aharonov-Bohm effect) was studied in classical hydrodynamics for
+water surface waves (the acoustic Aharonov-Bohm effect).
+The scattering of the electrons from the vortex of massive photons (quantum
+intermediators of the electromagnetic potential vector
+  !
+A), emitted from the
+solenoid (by generating a kind of a superuid), is analog to the scattering of
+phonons by the vortex in the hydrodynamics [23]. In fact, the formula (56) in
+Electronic Journal. http://diffjournal.spbu.ru 178Differential Equations and Control Processes, N 1, 2022
+[23], representing the quasiclassical solution  of the sound equation, is formally
+similar to the rest-mass energy wave packet 	 of an electron in the IQM, where
+~! corresponds to the electrons total energy and ~
+  !
+k to its momentum; The
+variation of the action  S, due to interaction with the circular velocity from
+the vortex along quasiclassical trajectories, corresponds to the variation of the
+phase ~  
+R
+used here in our IQM theory of Aharonov-Bohm effects:
+"Using this solution in the momentum balance one obtains the equation of
+vortex motion, which contains the Iordanskii force. The momentum transfer re-
+sponsible for the Iordanskii force occurs at small scattering angles where a phe-
+nomenon analogous to the Aharonov-Bohm effect is important: an interference
+between the waves [here: the electron's rest-mass energy density wave-packets]
+on the left and on the right from the vortex with different phase shifts after
+interaction with the vortex."
+From page 3 in [23].
+However, the relationship with Aharonov-Bohm effects presented in [23] (Sec-
+tion 7) is given in the statistical Schr odinger equation SQM framework, while
+here this work is done in the IQM classical deterministic mechanics framework.
+References
+[1] Ehrenberg W. and Siday R., The Refractive Index in Electron Optics and
+the Principles of Dynamics, Proceedings of the Physical Society, Series B,
+62, 1949
+[2] Aharonov Y. and Bohm D, Signi cance of electromagnetic potentials in
+the quantum theory, Physical Revie 115, 485, 1959
+[3] Chamners R.G., Shift of an electron interference pattern by enclosed mag-
+netic ux, Phys. Rev. Lett. 5, 3, 1960
+[4] Majki  c Z., Partial Differential Equations for Wave Pack-
+ets in the Minkowski 4-dimensional Spaces, Differ-
+encialnie uravnenia i protsesy upravlenia, no.1(2011),
+http://www.math.spbu.ru/diffjournal/pdf/madjkic.pdf, 2011
+[5] Majki  c Z., Completion and Uni cation of Quantum Mechanics with
+Einstein'sGRIdeas,PartI:Completion of QM, Nova Science Publishers,
+New York, ISBN:978-1-53611-946-6, July, 2017
+Electronic Journal. http://diffjournal.spbu.ru 179Differential Equations and Control Processes, N 1, 2022
+[6] Majki  c Z., Completion and Uni cation of Quantum Mechanics with
+Einstein's GR Ideas, Part II: Uni cation with GR, Nova Science Pub-
+lishers, New York, ISBN:978-1-53611-947-3, September, 2017
+[7] Majki  c Z., Completion and Uni cation of Quantum Mechanics with
+Einstein'sGRIdeas,PartIII:Advances,Revisions andConclusions, Nova
+Science Publishers, New York, ISBN:978-1-53617-200-3, November, 2019
+[8] Osakabe N., at all. Experimental con rmation of Aharonov-Bohm effect
+using a toroidal magnetic  eld con ned by a superconductor, Physical Re-
+view A. 34 (2), 1986
+[9] Majki  c Z., Double-slit Experiment: a Test for Individual Par-
+ticles Completion of Quantum Mechanics, Differencialnie uravne-
+nia i protsesy upravlenia, no.2(2019), Publisher: Mathematics
+and Mechanics Faculty of Saint-Petersburg State University, Russia,
+http://www.math.spbu.ru/diffjournal/pdf/madjkic.pdf, 2019
+[10] Majki  c Z., Hydrodynamic equilibrium and stability for particle's
+energy-density wave-packets: State and revision, Differencialnie urav-
+nenia i protsesy upravlenia, no.3(2018), Publisher: Mathematics
+and Mechanics Faculty of Saint-Petersburg State University, Russia,
+http://www.math.spbu.ru/diffjournal/pdf/madjkic.pdf, 2018
+[11] Majki  c Z., Schr odinger Equation and Wave Packets for Elemen-
+tary Particles in the Minkowski Spaces, Differencialnie uravne-
+nia i protsesy upravlenia, no.3(2011), Publisher: Mathematics
+and Mechanics Faculty of Saint-Petersburg State University, Russia,
+http://www.math.spbu.ru/diffjournal/pdf/madjkic2.pdf, 2011
+[12] Majki  c Z., Differential Equations for Elementary Particles: Beyond Dual-
+ity, LAP LAMBERT Academic Publishing, Saarbr ucken, Germany, 2013
+[13] Jackson J.D., Classical Electrodynamics, (3rd ed.). Wiley, 1998
+[14] Adelberger E., Dvali G., Gruzinov A., Photon Mass Bound Destroyed by
+Vortices, Phys.Rev.Lett.98:010402, 2007
+[15] Gibs P., Is The Speed of Light Constant?, in Carlip, S.
+Usenet Physics FAQ. University of California, Riverside.
+http://math.ucr.edu/home/baez/physics/Relativity/SpeedOfLight
+/speed of light.html, 1997
+Electronic Journal. http://diffjournal.spbu.ru 180Differential Equations and Control Processes, N 1, 2022
+[16] Sidharth B., The Thermodynamic Universe,
+World Scienti c. p. 134. ISBN 9812812342,
+http://books.google.com/books?id=OUfHR36wSfAC&pg=PA134], 2008
+[17] Majki  c Z., Derivation of Electromagnetism from Quantum Theory of Pho-
+tons: Tesla Scalar Waves, E-Journal Differential Equations and Control
+Processes, N.3, 2020, Publisher: Mathematics and Mechanics Faculty of
+Saint-Petersburg State University, Russia, 2020
+[18] Shelankov A.L., Magnetic force exerted by the Aharonov-Bohm line, Eu-
+rophys. Lett. 43, 623, 1998
+[19] Berry M.V.J., Aharonov-Bohm beam deection: Shelankov's formula, ex-
+act solution, asymptotics and an optical analogue, J.Phys.A: Math.Gen.
+32, 5627, 1999
+[20] Becker M, and Guzzinati G. and Armand B. and Verbeeck J. and Batelaan
+H., Observation of Quantum Forces in the Aharonov-Bohm effect, arXiv:
+1705.07139, May, 2017
+[21] Lifshitz E.M. and Pitaevskij L.P., Zh. Eksp. Teor. Fiz. 33, 535 (1957),
+[Sov. Phys.-JETP 6, 418], 1958
+[22] Iordanskij S.V., Zh.Eksp.Teor.Fiz. 49, 225 (1965), [Sov. Phys.-JETP 22,
+160], 1966
+[23] Sonin E.B., Magnus force and Aharonov-Bohm effect in superuids,
+arXiv:cond-mat 0104221, 2001
+[24] Hehl F.W. and von der Heyde P. and Kerlick G.D. and J.M.Nester J.M.,
+General relativity with spin and torsion: foundations and prospects, Rev.
+Mod. Phys. 48, N0.3, 1976
+Electronic Journal. http://diffjournal.spbu.ru 181
