@@ -16,7 +16,7 @@
      <li>после статьи с новой страницы на английском языке указываются заголовок, данные об авторах, абстракт и ключевые слова в том же порядке, как в русском тексте;</li>
  </ul>
  <li>файл публикации в формате PDF;</li>
- <li>файлы на русском (<a href="$ResourceLink$/info-rus.txt">info-rus.txt</a>) и английском (<a href="$ResourceLink$/info-eng.txt">info-eng.txt</a>) языках в формате Plain Text или HTML), содержащие следующую информацию</li>
+ <li>файлы на русском (<a href="$ResourceLink$/info-rus.txt">info-rus.txt</a>) и английском (<a href="$ResourceLink$/info-eng.txt">info-eng.txt</a>) языках в формате Plain Text, содержащие следующую информацию</li>
    <ul>
     <li>название работы;</li>
     <li>фамилия, имя, отчество;</li>
