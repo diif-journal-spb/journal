@@ -15,15 +15,16 @@
       <li>text of the paper</li>
   </ul>
   <li>PDF-file of the paper</li>
-  <li>Text file in Plain Text or HTML containing:</li>
+    <li>Text file in Plain Text (<a href="$ResourceLink$/info-eng.txt">info-eng.txt</a>) containing:</li>
   <ul>
       <li>paper title</li>
       <li>surname, first name, patronymic</li>
       <li>affiliation (work place, institution, address, position)</li>
-      <li>academic status and degree</li>      
+      <li>academic status and degree</li>
+      <li>e-mail</li>
       <li>abstract</li>      
       <li>keywords</li>
-      <li>e-mail</li>
+      <li>full reference to the paper (without page numbers)</li>
   </ul>
   <li>The file containing references in HTML or Microsoft Word format</li>
 </ul>
