@@ -28,6 +28,7 @@
    <li>dynamical systems in medicine, biology, ecology, and chemistry </li>
    <li>control in social and economical systems</li>
    <li>information systems and processes</li>
+   <li>AI and machine learning in control processes</li>
  </ul>
 
 <h3>The working languages of the Journal are English and Russian.</h3>
