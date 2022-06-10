@@ -1,5 +1,5 @@
 
-<h3>Editor-in-Chief - <a href="http://apcyb.spbu.ru/nk">Nikolay Kuznetsov</a></h3>
+<h3>Editor-in-Chief - <a href="https://en.wikipedia.org/wiki/Nikolay_V._Kuznetsov">Nikolay Kuznetsov</a></h3>
 <!--<h4><a href="https://en.wikipedia.org/wiki/Nikolay_V._Kuznetsov">Nikolay Kuznetsov</a></h4>-->
 <p>Corresponding member of RAS, Dr. of Sci., Professor<br />
 St. Petersburg State University, Russia <br />
