@@ -1,0 +1,4264 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 3, 2022
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Applications to physics
+Beyond Faddeev's interpretation of the Weiberg-Salam interaction
+model
+Zoran Majki  c
+International Society for Research in Science and Technology
+majk.1234@yahoo.com,
+Abstract. We provide a mathematical completion of L.Faddeev's hypothesis
+1
+of the Higgs mechanism without using the Higgs  eld (Higgs bosons) by using
+the IQM theory of individual particles. So, we demonstrate mathematically,
+basing on the IQM gauge theory, that during each interaction of a given mas-
+sive particle with the bosons (during which this particle changes its energy,
+momentum and speed), the Goldstone "Mexican hat" potential obtained from
+particle's Lagrangian density, appears without necessity to introduce the Higgs
+bosons.
+Keywords: Quantum Mechanics, Aharonov-Bohm effect, Massive bosons,
+Electromagnetism.
+1
+Ludwig Faddeev called himself a mathematical physicist whose main interest was in quantum theory. He
+believed that the aim of mathematical physics is making discoveries in fundamental physics while using mathe-
+matical intuition. He saw Mathematical Physics and Theoretical Physics as competitors although he acknowl-
+edged that different methods could be used in either discipline. Faddeev was convinced that physics solved
+all the theoretical problems in chemistry, thus 'closing' that science. He believed that mathematics will create
+the 'uni ed theory of everything' and 'close' physics as well, which can be seen as quite a radical opinion. He
+believed that the more physics uses mathematical methods, the more fundamental this science becomes. He also
+claimed that there is only one most important unsolved problem in physics: the microscopic description of the
+structure of matter. He said that physics will be ' nished' for him when the theories of gravitation, relativity
+and quantum mechanics will be put together into one solid theory.
+(From https://mathshistory.st-andrews.ac.uk/Biographies/Faddeev Ludwig/ ):Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+1 Introduction to the Mass Gap Conjecture in Yang-
+Mills Theory
+In early 1954, Chen Ning Yang and Robert Mills [12] extended the concept of
+gauge theory for abelian groups, e.g. quantum electrodynamics, to nonabelian
+groups to provide an explanation for strong interactions. The idea was set
+aside until 1960, when the concept of particles acquiring mass through symme-
+try breaking in massless theories was put forward, initially by Jeffrey Goldstone,
+Yoichiro Nambu, and Giovanni Jona-Lasinio. The current version of the orig-
+inal Yang-Mills idea is a theory that is known as quantum chromodynamics.
+This is a model of the fundamental interactions (and therefore all energy in the
+universe) which proposes that all matter and energy is composed of quarks and
+their opposites (antiquarks). These interactions are thought to be mediated
+by the exchange of massless energy bosons called gluons. In effect, in physics,
+classical Yang-Mills theory is a generalization of the Maxwell theory of electro-
+magnetism where the chromo-electromagnetic  eld itself carries charges. As a
+classical  eld theory it has solutions which travel at the speed of light so that
+its quantum version should describe massless particles (gluons).
+In order to show these properties of a long-range action of photons, for the
+electromagnetic  eld in the vacuum region (where the 4-electric current vector
+J = 0), expressed by a contravariant 4-potential vector (gauge  eld),
+A
+4
+= (A
+0
+;A
+1
+;A
+2
+;A
+3
+) = (
+ (t;
+  !
+r )
+c
+;
+  !
+A(t;
+  !
+r ))
+whereA
+0
+=
+ 
+c
+and   is a scalar potential and
+  !
+A =A
+1
+e
+1
++A
+2
+e
+2
++A
+3
+e
+3
+is a
+3-dimensional vector potential, such that the electric and magnetic forces in SI
+system are
+  !
+E = r  
+@
+  !
+A
+@t
+and
+  !
+B =r 
+  !
+A, relatively. So, we obtain the
+D'Alembert homogeneous equation for each componentA
+j
+of the electromag-
+netic 4-vector potential gauge  eld A
+j
+ 
+1
+c
+2
+@
+2
+A
+j
+@t
+2
+ 4A
+j
+= 0, whose solution
+is a wave function which propagates with the speed of light, so that this elec-
+tromagnetic gauge  eld is mediated by the massless bosons (photons). In 1935
+Yukawa [13] found a relation between the mass of the intermediate particle (a
+boson) and the range of interaction, based on Yukawa potential (used for the
+strong and weak nuclear forces),U(r) = 
+g
+2
+r
+e
+ 
+r
+L
+, where for the massm
+0
+of this
+particle, L =
+k
+m
+0
+, and g and k are two scaling constants. In the case when
+the mass is equal to zero (of the photons), L7!1, this potential becomes the
+long range Coulomb potential of QED. It is easy to verify that if we change the
+Electronic Journal. http://diffjournal.spbu.ru 91Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+D'Alembert homogeneous equation above, by a new term, that is by
+ A
+j
+ 
+1
+c
+2
+@
+2
+A
+j
+@t
+2
+ 4A
+j
+= 
+1
+L
+2
+A
+j
+(1)
+we obtain the massive, short distance, solution proportional to e
+ 
+r
+L
+. It is easy
+to verify that Klein-Gordon quantum equation corresponds to this extended
+equation (1) with L =
+~
+m
+0
+c
+(so called Compton wave length). This equation
+reduces to D'Alembert homogeneous equation for a massless  eldA
+j
+when
+m
+0
+= 0. In effect, Proca [14] extended the Maxwell equations in QFT to
+massive spin-1 (vector) bosons (massive photons), by extending the Lagrangian
+by the massive term
+P
+j
+1
+2
+1
+L
+2
+A
+j
+A
+j
+, in the following total Lagrangian density,
+L = 
+1
+4
+F
+kj
+F
+kj
+ 
+1
+c
+X
+j
+J
+j
+A
+j
++
+1
+2L
+2
+X
+j
+A
+j
+A
+j
+(2)
+where F
+kj
+= @
+k
+A
+j
+ @
+j
+A
+k
+are the components of covariant (and F
+kj
+of con-
+travariant)  eld-strength tensor, and hence 
+1
+4
+F
+kj
+F
+kj
+represents the Maxwell
+Lagrangian (gauge), so that for the source free case, whenJ
+j
+= 0, we ob-
+tain the Proca equation (the Euler-Lagrange equation obtained from the Proca
+Lagrangian above)
+ A
+j
+ 
+1
+c
+2
+@
+2
+A
+j
+@t
+2
+ 4A
+j
+= 
+1
+L
+2
+A
+j
++@
+j
+P
+k
+@
+k
+A
+k
+,
+which in the case whenm
+0
+= 0 reduces to the massless Maxwell  eld in equation.
+The Proca Lagrangian (2) is not invariant for the gauge transformation because
+of the presence of the massive term, and by taking the divergence of the Proca
+equation we obtain that if m
+0
+6= 0 then
+P
+k
+@
+k
+A
+k
+= 0 (the Lorenz gauge  eld
+conditions), so that the Proca equation (2) reduces to equation (1) with the
+massive, short distance, solution proportional to e
+ 
+r
+L
+, as in the case of the
+Klein-Gordon equation (which is de ned for 0-spin particles and not for 1-spin
+particles as are photons and all other vector bosons).
+However, the postulated phenomenon of color con nement in the current
+Statistical Quantum Mechanics (SQM), where you can only have massive bound
+states of gauge  elds, forming massive particles through their binding energy
+E =mc
+2
+. This is "mass gap". This is especially important because the inter-
+action of the gauge  elds (called gluons in QCD) and quarks prevent any free
+gluons/quarks from ever being seen on their own. The evidence that the mass
+gap in the SQM is real comes from renormalization group calculations of the
+strength of various interactions; simulations in lattice QCD.
+So, Yang-Mills SQM theory proposes the existence of this mass gap in
+relation to the strong interactions of elementary particles. Classical versions
+Electronic Journal. http://diffjournal.spbu.ru 92Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+of this theory describe gauge  elds with no mass that propagate at the speed of
+light (see the D'Alembert homogeneous equation above for the electromagnetic
+gauge  eld), that is, in such a gauge theory the bosons has to be massless as are
+the photons in the gauge theory of electromagnetic force. The SQM describes
+every particle as a certain kind of wave so the mass gap is a major contradiction
+between the two versions of Yang-Mills theory. One of the most important
+results obtained for Yang-Mills theory is asymptotic freedom. The relevance
+of this result is due to the fact that a Yang-Mills theory that describes strong
+interaction and asymptotic freedom permits proper treatment of experimental
+results coming from deep inelastic scattering.
+Yang-Mills theories met with general acceptance in the physics community
+after Gerard 't Hooft, in 1972, worked out their renormalization. Renormaliz-
+ability is obtained even if the gauge bosons described by this theory are mas-
+sive, as in the electroweak theory, provided the mass is only an "acquired" one,
+generated by the Higgs mechanism which we will consider in next in the math-
+ematically simpler case of the electromagnetic quantum  eld theory (QFT).
+In particle physics, elementary particles and forces give rise to the world
+around us. Physicists explain the behaviors of these particles and how they
+interact using the Standard Model. Initially, when these models were being
+developed and tested, it seemed that the mathematics behind those models,
+which were satisfactory in areas already tested, would also forbid elementary
+particles from having any mass, which showed clearly that these initial models
+were incomplete. As explained previously, in 1964 three groups of physicists
+almost simultaneously released papers describing how masses could be given to
+these particles, using approaches known as symmetry breaking. This approach
+allowed the particles to obtain a mass, without breaking other parts of particle
+physics theory that were already believed reasonably correct. This idea became
+known as the Higgs mechanism.
+The simplest theory for how this effect takes place in nature, and the theory
+that became incorporated into the Standard Model, was that if one or more of
+a particular kind of " eld" (known as a "Higgs  eld"
+2
+) happened to permeate
+2
+Higgs published the  rst explanation of his particle in 1964. The "Higgs  eld" is believed to  ll the entire
+known universe and endows all matter with mass. This "explanation" has been proposed by the team of
+Englert and Robert Brout, a deceased colleague, who  rst suggested how elementary particles get their mass by
+interacting with an invisible  eld that  lls up all of space. Particles that interacts strongly with the "Higgs  eld"
+have more mass, and vice versa. But such a hypothesis would generate enormous problems during the creation
+of our universe [22] by having universe-killing potential. In effect, the rapid inationary period immediately
+after the Big Bang nearly 13.7 billion years ago would have thrown our early universe into chaos, the universe
+would have collapsed as the "Big Crunch".
+Electronic Journal. http://diffjournal.spbu.ru 93Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+space, and if it could interact with elementary particles in a particular way, then
+this would give rise to a Higgs mechanism in nature. In the basic Standard
+Model there is one  eld and one related Higgs boson; in some extensions to
+the Standard Model there are multiple  elds and multiple Higgs bosons. This
+theory is not fully proven also after the famous experiments in CERN, 2012,
+and still up to this moment there is no according that these experiments really
+found Higgs bosons instead of other composite particles [34]:
+"Physicists have spotted the Higgs boson performing a new trick, but one that
+brings us no closer to understanding the workings of fundamental particles...
+However, despite the work of thousands of researchers around the world, nobody
+has been able to  gure out exactly how it does that or why some particles are
+more massive than others."
+In the years since the "Higgs  eld" and boson were proposed as a way to
+explain the origins of symmetry breaking, several alternatives have been pro-
+posed that suggest how a symmetry breaking mechanism could occur without
+requiring a Higgs  eld to exist. Models which do not include a Higgs  eld or a
+Higgs boson are known as Higgsless models, as Faddeev model considered and
+completed by the IQM theory in this paper. In these models, strongly inter-
+acting dynamics rather than an additional (Higgs)  eld produce the non-zero
+vacuum expectation value that breaks electroweak symmetry.
+Noted theoretical physicist Stephen Hawking has been convinced that the
+Higgs boson would not be found, as he had hoped that a more "elegant" mech-
+anism would be found that could explain how particles have mass. It seems
+that the negation of necessity for the existence of Higgs boson is unpopular in
+the main stream of physicians.
+A number of problems for the existence of Higgs scalar zero-spin bosons
+and every-present "Higgs  eld" are addressed in, for example [23]. In effect,
+the model of strong and electro-weak interactions supplemented by the gravita-
+tional interaction and the presence of higher compacti ed dimensions (Kaluza-
+Klein, as in my approach), between micro-island particle's metrics, in which
+all dynamic "Higgs  elds" are eliminated, can provide a natural framework for
+description of elementary particle fundamental interactions as it was supposed
+for example in [24, 25, 26, 27, 28, 29, 30, 23, 31, 32] but with different ideas.
+The fact that the compacti ed extra dimensions can be used for producing the
+spontaneous symmetry breaking without Higgs boson has been studied in a
+number of papers (see, for example [33]).
+Electronic Journal. http://diffjournal.spbu.ru 94Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+1.1 Higgs Mechanism and Spontaneous Symmetry Breaking
+The weak interaction is short-ranged (range around 10
+ 15
+cm) and, in the sta-
+tistical quantum mechanics (SQM), it is explained by the mechanism of the
+spontaneous symmetry breaking and hence it predicts the massive bosons (W
+ 
+andZ). In this case, fermions can exchange three distinct types of force carriers
+known as theW
++
+,W
+ 
+, andZ massive bosons. In 1968, Sheldon Glashow, Ab-
+dus Salam and Steven Weinberg uni ed the electromagnetic force and the weak
+interaction by showing them to be two aspects of a single force, now termed the
+electro-weak force. According to the electro-weak theory, at very high energies,
+the universe has four  eld components whose interactions are carried by four
+massless gauge bosons (each similar to the massless photon). However, at low
+energies, this gauge symmetry is spontaneously broken down to the U(1) sym-
+metry of electromagnetism. In the SQM theory, this symmetry-breaking would
+be expected to produce three massless bosons, but instead they become inte-
+grated by the other three  elds and acquire mass through the Higgs mechanism.
+These three boson integrations produce theW
++
+,W
+ 
+, andZ bosons of the weak
+interaction. The fourth gauge boson is the photon of electromagnetism, and
+remains massless.
+The aspects of gauge symmetries are based on the  eld transformations
+' 7! e
+i 
+' where   is a constant in the case of global and a function on
+time-space r
+4
+= (t;
+  !
+r ) of local symmetries. The complex phase of a  eld
+does not appear as a measurable quantities, so that the states described by a
+different complex phase are physically the same and differ only in mathematical
+description, so that the global U(1) symmetry, with e
+i 
+2 U(1), is a gauge
+symmetry. There is a well known theorem related to the global symmetry
+breaking: Goldstone theorem, which tells that every broken generator of a
+global symmetry group has a corresponding massless Goldstone boson (with
+spin zero). Let us consider a thin rod with circular cross section, in Fig.1,
+and apply a force F on the end points of the rod. If the force F is small,
+nothing happens. However, if F exceeds a critical value F
+0
+, the rod bends in a
+plane which it chooses at random as shown in Fig.1. The symmetric (unbent)
+con guration becomes unstable when F > F
+0
+, and the new ground state is
+unsymmetric. Also, there are in nitely many possible new degenerate ground
+states, which are related by a rotational symmetry. The rod can only, of course,
+choose one of them, but the others are all reached by a rotation without causing
+any energy. So we obtained the typical restatement of Goldstone theorem.
+Notice that this is valid also when ' is the 3-D wave-packet  eld 	 =
+Electronic Journal. http://diffjournal.spbu.ru 95Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+Figure 1: Compressed rod
+e
+ i'
+T
+  of an individual particle (in IQM theory for individual particles [2, 3, 4],
+complementary to the SQM theory), because the de Broglie pilot-wave phase
+'
+T
+is derivable from the particle's real positive distribution function  (r
+4
+).
+Let us consider a simple  led theory example: broken U(1) symmetry. A
+general Lagrangian for a single complex scalar  eld ' has the form (in what
+follows we will use Einstein convention for the sum above the indexes, in order
+to make simpler the presentation and explanation of the main concepts),
+L =@
+k
+'@
+k
+' V ('') (3)
+where the  rst term is the kinetic component of the Lagrangian, invariant under
+globalU(1) transformations, andV ('') is the potential invariant under trans-
+formation as well. Let us show thatV is indeed a potential density component
+of the Lagrangian densityL = T V , where T is its "kinetic" component.
+In fact, from the Lagrangian density (3), we obtain the conjugate moments of
+the complex  eld ' and ',   =
+@L
+@(@
+0
+')
+= @
+0
+';   =
+@L
+@(@
+0
+')
+= @
+0
+'. So, we can
+de ne the Hamiltonian density byH =  @
+0
+' +  @
+0
+' L =T +V and hence
+to verify that V ('') is the potential component of this Hamiltonian density.
+Note that the  rst (kinetic) component of Lagrangian is set in the way that
+it generates the Klein-Gordon term ' 
+1
+c
+2
+@
+2
+@t
+2
+ 4' during derivation of the
+Euler-Lagrange equation of motion.
+So, for V ('') = (i )
+2
+'', where   =
+1
+L
+=
+m
+0
+c
+~
+, we obtain that derived
+Euler-Lagrange equation of motion is equal to the Klein-Gordon equation for
+the 0-spin massive particles. Thus, such a kinetic term of the Lagrangian will
+be present in the whole Higgs theory, by modi cation only of the potential term
+V (''), so that the Euler-Lagrange equations will be some kind of modi cations
+of the "massive" component (
+m
+0
+c
+~
+)
+2
+' of the Klein-Gordon equation. Let us now
+Electronic Journal. http://diffjournal.spbu.ru 96Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+Figure 2: Goldstone 'Mexican hat' potential
+consider the potential due to Jeffrey Goldstone [15, 16],
+V ('')  (i )
+2
+'' + ('')
+2
+=  
+2
+'' + ('')
+2
+(4)
+where   and   > 0 are real constants, so that the ground state is degenerate
+as represented by Fig.2, with minimum of V obtained for the ' such that
+'' = V
+2
+0
+ 
+ 
+2
+2 
+. The minima of this system are thus degenerate; there are
+multiple states with the same "vacuum-expectation value" energyh'i
+0
+= V
+0
+.
+The different orientation in the complex plane de ne different states and we have
+right to chose one of them as ground state, say Re(') = V
+0
+and iIm(') = 0,
+that is, the ground state ketj0i =V
+0
++i  0.
+The orientation of these states is comparable to the direction of alignment
+of the spin in the ferromagnet. For the spontaneous symmetry breaking each
+of the ground state orientations in this complex plane has an equal chance
+to be the ground state of the physical system (analogously to the direction
+of the plain de ned by the compressed rod in Fig.1), and the ground states
+are related to each other by the U(1) symmetry of the Lagrangian. For this
+Goldstone potential, the Lagrangian density (3) is invariant under global U(1)
+symmetry, where Q is the conserved charge for the  eld ',
+' 7! e
+iQ 
+' (5)
+In the SQM  eld theory, the oscillations around the ground states or 'vacuum'
+Electronic Journal. http://diffjournal.spbu.ru 97Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+correspond to the real particles. Let us consider now the perturbation,
+' = (V
+0
++ (r
+4
+)) e
+i (r
+4
+)
+=
+1
+p
+2
+(v +
+p
+2 (r
+4
+)) e
+i
+"(r
+4
+)
+v
+(6)
+around the ground state, where   and   are real functions with, for v =
+p
+2V
+0
+,
+"(r
+4
+) = v (r
+4
+) and  (r
+4
+) two uctuation  elds, such thath"i
+0
+=h i
+0
+= 0 (so
+thath'i
+0
+=
+1
+p
+2
+v = V
+0
+). This perturbation above can be de ned as a local
+symmetry U(1) transformation,
+'(r
+4
+) 7! '(r
+4
+) e
+ln[(V
+0
++ (r
+4
+)='(r
+4
+)]+i (r
+4
+)
+(7)
+so by substitution in (3) we obtain:
+L = (@
+k
+ @
+k
+   (4 V
+2
+0
+) 
+2
+  (4 V
+0
+) 
+3
+   
+4
+) + V
+4
+0
++ (V
+0
++ )
+2
+@
+k
+ @
+k
+ 
+There is no mass term for the    eld, so that this  eld represents the massless
+Goldstone boson (by changing  , i.e., angular displacement, we do not change
+the potential V and hence the energy of '). In fact, a perturbation in the '
+2
+direction in Fig.2, i.e., in the angular displacement direction, does not face any
+resistance since the energy in the adjacent state is the same. Note that the
+massive term (a quadratic term) in Lagrangian above, (4 V
+2
+0
+) 
+2
+, demonstrate
+that the  led  (r
+4
+), a perturbation in the '
+1
+direction in Fig.2 which changes
+the potential V and energy of the  eld ', is massive with mass m
+ 
+=
+p
+4 V
+2
+0
+,
+and hence also ' is massive.
+As shown above, in the spontaneous global U(1) symmetry breaking, we
+obtain massless Goldstone bosons. In fact, Goldstone theorem [17] holds only
+for global symmetry framework. From the general global U(1) transformation
+(5), it holds that the charge Q is its generator. Although the Lagrangian is
+invariant under this transformation, the ground state is not invariant under it,
+and an in nitesimal   transforms from (5) like
+j0i 7! e
+iQ 
+j0i  (1 +iQ )j0i6=j0i
+and hence, fromQj0i6= 0,Q is the broken generator in this globalU(1) symme-
+try. Thus, in this simplest globalU(1) case, we have only one broken generator
+Q, and this corresponds to the massless Goldstone boson (the  led  , because
+global transformation (5) is a particular case of the transformation (7) when
+ (r
+4
+) = 0 and  (r
+4
+) =Q .
+Electronic Journal. http://diffjournal.spbu.ru 98Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+1.2 Gauge Invariance and Local Symmetries
+A key innovation of the 20th century was Herman Weyl's invention of gauge
+theory, in which a global physical symmetry is replaced by a local one; the arbi-
+trary phase in Hamiltonian-based quantum wave function becomes a function
+of time-space, a change that requires the existence of the electromagnetic gauge
+ eld. Weyl's gauge method, where the global symmetry is transformed into a lo-
+cal one, applied to the Standard-Model symmetry groupSU(3) SU(2) U(1),
+is enough in the SQM theory to yield the strong, weak and electromagnetic in-
+teractions.
+It is well known the relativistic invariance or Poincare symmetry and the
+internal symmetry based on the Lie group U(1) symmetry of phase transfor-
+mations (the conservation of matter and, dually, of electric charge for Dirac
+equation). Analogously, we can consider the isospin symmetry SU(2) (used
+for the electroweak force interactions) and the avour symmetry SU(3) of the
+strong force interactions. All of them are continuous global symmetry trans-
+formations (they give rise to conserved currents and charges as described by
+Noether's theorem, that is, they presuppose that, at least in principle, we can
+measure all the components of a  eld 	 at all points
+  !
+r in space at the same
+time.
+However, here we have to consider the theories which are invariant if the
+symmetry operations are performed locally where the transformation parame-
+ters are dependent on local space coordinates (for example, if the rotation angle
+  of Lorentz transformation is not constant for all in nitesimal pieces of matter
+ 
+m
+= 		, but is dependent on its space position
+  !
+r , that is, the rotation angle
+is a function  (
+  !
+r )). A gauge theory is a theory where the action is invariant
+under a continuous group symmetry that depends on time-space and such local
+symmetries introduce these gauge  elds to the theory which mediate a force.
+Let us consider, for instance, the internal phase transformation, when   is not
+a constant phase, but depends on space position
+  !
+r , and when we require that
+the Lagrangian densityL in equation (22) be invariant under such local smooth
+changes of phase:
+	j
+(t;
+  !
+r )
+7! 	
+0
+j
+(t;
+  !
+r )
+= e
+i (
+  !
+r )
+	j
+(t;
+  !
+r )
+(8)
+However, since the Lagrangian densityL is invariant under global internal sym-
+metry when  is constant, it is not invariant under local phase transformations
+given by (8). The problem is that the derivatives of the  eld 	 does not trans-
+Electronic Journal. http://diffjournal.spbu.ru 99Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+form like the  eld in (8). In fact we have for j = 1; 2; 3 that:
+@
+j
+	j
+(t;
+  !
+r )
+7! @
+j
+	
+0
+j
+(t;
+  !
+r )
+=@
+j
+[e
+i (
+  !
+r )
+	j
+(t;
+  !
+r )
+] = e
+i (
+  !
+r )
+[@
+j
+	 +i	@
+j
+ (
+  !
+r )] (9)
+If we want to consider the phase transformations  (
+  !
+r ) that differ from a point
+to point, we have to de ne a connection that speci es the mode how we suppose
+to transport the phase of 	 fromr
+4
+= (t;
+  !
+r ) tor
+0
+4
+as we travel along some path
+. Let us consider the in nitesimal transport r
+0
+4
+= r
+4
++ r
+4
+= r
+4
++
+P
+3
+i=0
+ q
+i
+e
+i
+,
+so that with this in nitesimal transport we have the change of 	:
+ 	j
+r
+4
+= 	j
+(r
+4
++ r
+4
+)
+  	j
+r
+4
+(10)
+This problem is analog to the problem of the derivation of a vector  eldW, with
+a vector at a point p = r
+4
+, w
+p
+= W(p) =
+P
+3
+j=0
+w
+j
+e
+j
+, along a particular curve
+lying in a given manifold in the differential geometry. In contrast to differential
+geometry, the vector  eld 	 are not vectors in the tangent space (plane) of
+a manifold, but belong to an "internal" vector space V (like isospin, avor,
+etc..) and hence the local transformation (8) can be considered as a time-space
+dependent change of the basis in V and hence it is a passive transformation.
+We require that the physics do not depend on the local choice of the basis,
+so that the differentiation has to be de ned based on the change of 	 (or 	)
+relative to the parallel transported 	
+p
+, so we have  	j
+r
+4
+= 	
+p
+j
+r
+0
+4
+  	j
+r
+4
+. In
+this case we have no Christoffel symbols  
+j
+ik
+, but an imaginary term iffA
+k
+(r
+4
+)
+whereA
+k
+(r
+4
+) is a suitably chosen vector  eld (an element of the Lie algebra
+belonging to the gauge group element, for example for the unitary group
+3
+,
+e
+i (r
+4
+)
+2 U(r
+4
+)) and ff is a coupling constant. Thus, analogously to the case
+used for de nition of covariant derivative in General Relativity, we have,
+ 	j
+r
+4
+= (iff
+X
+k
+A
+k
+(r
+4
+)dq
+k
+)	j
+r
+4
+and D	j
+r
+4
+=
+3
+X
+k=0
+(@
+k
+ iffA
+k
+(r
+4
+))	j
+r
+4
+dq
+k
+(11)
+with the gauge covariant derivative at point r
+4
+,
+D
+k
+=@
+k
+ iffA
+k
+(r
+4
+); k = 0; 1; 2; 3 (12)
+(we denote by D
+0
+k
+the covariant derivative at a point p = r
+0
+4
+andA
+0
+k
+the k-th
+component of a 4-vector  eld
+A = (A
+0
+;A
+1
+;A
+2
+;A
+3
+)
+3
+Historically, while trying to explain the quantum effects of electrodynamics, it was found that Quantum
+Electrodynamic (QED) could be explained by a U(1) Abelian gauge theory. Yang and Mills then generalized
+this Abelian U(1) gauge theory to the non Abelian gauge theory case (with the self interactions).
+Electronic Journal. http://diffjournal.spbu.ru 100Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+at a point r
+0
+4
+). From the fact that we want that the Lagrangian den-
+sity becomes invariant under the covariant derivatives, i.e., D
+0
+k
+	j
+r
+0
+4
+= (@
+k
+ 
+iffA
+0
+k
+)(e
+i (r
+4
+)
+	j
+r
+4
+) = e
+i (r
+4
+)
+(@
+k
+ iffA
+k
+)	j
+r
+4
+= e
+i (r
+4
+)
+D
+k
+	j
+r
+4
+, we obtain thatA
+k
+should transform like
+A
+k
+(r
+4
+) 7! A
+0
+k
+(r
+0
+4
+) =A
+k
+(r
+4
+) +
+1
+ff
+@
+k
+ (r
+4
+) k = 0; 1; 2; 3 (13)
+Consequently, we conclude that we can promote a global symmetry to local
+(i.e., gauge) symmetry (for example, from U(1) into U(r
+4
+)) by replacing the
+standard derivative operators@
+k
+by the covariant derivative operatorsD
+k
+. The
+standard model of elementary particles, which is based on the concept of local
+gauge invariance, has shown to be very successful theory. Let us consider a
+parallel transport at  nite distances, for example in the case of the Abelian
+symmetry group U(1), from the initial point r
+4
+into the  nal point r
+0
+4
+, so that
+an in nitesimal parallel transport along a  nite curve (r
+4
+;r
+0
+4
+) is given by (11)
+which formally may be integrated
+	
+p
+j
+r
+0
+4
+= e
+iff
+R
+A
+k
+(z)dz
+k
+	j
+r
+4
+(14)
+In fact, for in nitesimal transport, by taking the Taylor approximation, we ob-
+tain 	
+p
+j
+r
+0
+4
+= 	
+p
+j
+(r
+4
++ r
+4
+)
+  (1 +iff
+P
+k
+A
+k
+(r
+4
+)dq
+k
+)	j
+r
+4
+= 	j
+r
+4
++ 	j
+r
+4
+.
+Remark: There is a subset of con gurations of material  elds 	 that changes
+only because of the presence of the gauge  eld. They are geodesic con gura-
+tions which satisfy the equation D
+k
+	 = 0 for k = 0; 1; 2; 3, which is equivalent
+to linear equation @
+k
+	 =iffA
+k
+	.
+ 
+Let as consider now a local symmetry framework forU(1) transformation (which
+introduces the gauge 4-vector potential  eldA
+j
+and covariant derivative D
+k
+in
+the place of partial derivative @
+k
+), which has a parameter  (r
+4
+) that depends
+on time-space, in the gauge theory for the electromagnetism. The gauge boson
+in this model becomes massive through spontaneous symmetry breaking of the
+photon. For the stable massless bosons we have the long range electromagnetic
+force. A situation in which photons are massive is, for example, in a super-
+conductor where U(1) gauge (local) symmetry is spontaneously broken. The
+Higgs mechanism (in the original case of the non-Abelian gauge theories such as
+SU(2) U(1) gauge symmetry that describes the electroweak interaction, this
+mechanism allows the W
+ 
+and Z bosons to be massive) explains how a  eld
+with an (asymmetric) non-zero ground state can be source of massive gauge
+bosons. The Lagrangian for the Higgs  eld 	, in the case of electromagnetism,
+Electronic Journal. http://diffjournal.spbu.ru 101Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+with a U(1) gauge symmetry has the following form [16],
+L = 
+1
+4
+F
+kj
+F
+kj
++D
+k
+	D
+k
+	  (i )
+2
+		  (		)
+2
+(15)
+where the  rst term is that of the electromagnetic gauge theory of photons
+with the gauge 4-potential vectorA
+j
+7!A
+j
++
+1
+ff
+@
+j
+  and covariant derivative
+D
+k
+= @
+k
+ iffA
+k
+, as introduced in (12). This Lagrangian is invariant for the
+local transformation 	j
+r
+4
+7! e
+i (r
+4
+)
+	j
+r
+4
+, i.e., the gauge  eldA
+j
+interacts with
+the  eld 	 in such a way that the Lagrangian is invariant (local symmetry)
+under the gauge transformations of 	 andA
+j
+. By considering now the same
+perturbation of 	 around the ground state, 	 = (V
+0
++ (r
+4
+)) e
+i (r
+4
+)
+, and plugging
+it inL in (15), we obtain:
+L = ( 
+1
+4
+F
+kj
+F
+kj
++ff
+2
+V
+2
+0
+A
+k
+A
+k
+)+(@
+k
+ @
+k
+  4 V
+2
+0
+ 
+2
+)+(V
+2
+0
+@
+k
+ @
+k
+  2ffV
+2
+0
+@
+k
+ A
+k
+)+c:c
+(16)
+wherec:c are the rest of cubic and quartic terms and the  rst two terms in the
+parenthesis compose the Proca Lagrangian (2) of massive photon in the case of
+electromagnetic source-free case (J
+j
+= 0). To see particle's content, only the
+quadratic terms in this Lagrangian are interesting. The termff
+2
+V
+2
+0
+A
+k
+A
+k
+in this
+case when V
+0
+6= 0 shows that the gauge  eldA
+j
+now has become massive, due
+to its interaction with the constant partV
+0
+of the Higgs  eld 	. The component
+ (r
+4
+) of the Higgs  eld 	 is massive due to term 4 V
+2
+0
+6= 0, while  (r
+4
+) seems
+to be massless. However,  (r
+4
+) is not physical particle but a function that has
+results from the freedom to "pick a gauge". This freedom can be used to set
+ (r
+4
+) = 0, so that 	 =V
+0
++ (r
+4
+), and this choice of gauge is called the "unitary
+gauge". We have eliminated Goldstone  eld  by taking advantage of the gauge
+invariance. This is what the current SQM theory means the Goldstone boson is
+"eaten" by the gauge  eld. To verify that indeed 	 =V
+0
++ (r
+4
+) de nes a gauge
+ eld, it must be noted that this can be achieved by a gauge transformation with
+ (r
+4
+)   (r
+4
+), that is:
+	j
+r
+4
+7! e
+ i (r
+4
+)
+	j
+r
+4
+; A
+j
+(r
+4
+)7!A
+j
+(r
+4
+) +
+1
+ff
+@
+j
+ (r
+4
+) (17)
+However, with this "pick a gauge"  xing,  (r
+4
+) = 0, the gauge symmetry is
+removed from the Lagrangian. The  eld 	 no longer have the freedom to
+transform under gauge transformation, because the one representation 	 =
+V
+0
++ (r
+4
+) is  xed.
+For this "unitary gauge", the Lagrangian density (16) becomes equal to:
+L = ( 
+1
+4
+F
+kj
+F
+kj
++ff
+2
+V
+2
+0
+A
+k
+A
+k
+) +@
+k
+ @
+k
+   (4 V
+2
+0
+) 
+2
++c:c (18)
+Electronic Journal. http://diffjournal.spbu.ru 102Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+Thus, by substitution  (r
+4
+) = 	j
+r
+4
+ V
+0
+, we obtain the following Lagrangian
+density:
+L = ( 
+1
+4
+F
+kj
+F
+kj
++ff
+2
+V
+2
+0
+A
+k
+A
+k
+) +@
+k
+	@
+k
+	  (4 V
+2
+0
+)(	 V
+0
+)
+2
++c:c
+This Lagrangian now clearly shows that the "Higgs  eld" 	j
+r
+4
+is a massive
+ eld. There is no massless particles in this theory, because (r
+4
+) has completely
+disappeared from the Lagrangian and the gauge  eld of the 4-vector electro-
+magnetic potential is massive as well (mediated by the massive photons) as
+follows from the quadratic termff
+2
+V
+2
+0
+A
+k
+A
+k
+with massm
+A
+=ffV
+0
+6= 0 whichA
+k
+has acquired.
+This mechanism, by which spontaneous symmetry breaking generates a
+mass for a gauge boson, was explored and generalized to the non-Abelian case
+by Higgs, Kibble, Guralnik, Hagen, Brout and Englert, and is now known as
+the Higgs mechanism.
+The role of the "pick a gauge"  xing in the breakdown of the Goldstone the-
+orem can give insight into the position of gauge (local) symmetry breaking w.r.t.
+global symmetry breaking. In current ensemble interpretation of the statisti-
+cal theory of the Standard Model (SQM), three massless Goldstone bosons are
+generated, which are absorbed to give masses to the W
+ 
+and Z gauge bosons.
+The remaining component of the complex doublet becomes the Higgs boson- a
+new fundamental scalar (0-spin) boson.
+Remark: Such a solution with this "pick a gauge" can not be used if we con-
+sider 	 as the particle's wave-packet of the energy density, where the complex
+component is the particle's pilot-wave which can not be a constant for the mas-
+sive particles (only for the massless bosons it is constant phase). Thus, for the
+massive bosons theory provided in Section 3 we need an alternative approach
+to the Higgs mechanism.
+2 Fadeev's Interepretation of the Higgs Mechanism
+The question of the Higgs  eld's existence has been the last unveri ed part
+of the Standard Model of particle physics and, according to some, "the central
+problem in particle physics". In the Standard Model of SQM, the Higgs particle
+is a boson with no spin, electric charge, or color charge. It is also very unstable,
+decaying into other particles almost immediately. It is a quantum excitation
+of one of the four components of the Higgs  eld. A number of authors [11,
+19, 20, 21] have been suggested, and Higgs himself, that the Higgs mechanism
+can be described without spontaneous symmetry breaking, in a gauge invariant
+Electronic Journal. http://diffjournal.spbu.ru 103Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+independent way, from the fact that the Higgs mechanism relies on the zero
+ground state value of the Higgs  eld.
+The procedure used previously to describe the Higgs mechanism, uses an
+explicit "pick a gauge"  xing, by requiring that 	j
+r
+4
+=V
+0
++ (r
+4
+), thereby set-
+ting the imaginary part of to zero. But this gauge  xing gets rid of the gauge
+symmetry and thus obscures the meaning of gauge symmetry breaking. How-
+ever, Higgs demonstrated in the 3rd paper on the mass of gauge bosons in 1966
+that the Higgs mechanism can be described in an alternative gauge-invariant
+way, that is, in the gauge independent accounts of the Higgs mechanism. This
+procedure forSU(2) U(1), leavingU(1) symmetry in the Lagrangian, is given
+recently in [9, 11, 19], but for the conceptual understanding of the role of gauge
+symmetry the U(1) model (of electrodynamics) is su cient, as follows. The
+starting point is again theU(1) gauge invariant Lagrangian for 	
+4
+theory as in
+equation (15). Here the set of  elds (A
+j
+; 	) is transformed to the set of new
+ elds (B
+j
+;  ; ) by
+	j
+r
+4
+   (r
+4
+) e
+i (r
+4
+)
+; B
+j
+(r
+4
+) A
+j
+(r
+4
+) 
+1
+ff
+@
+j
+ (r
+4
+) (19)
+whereB
+j
+(r
+4
+) is the 4-vector potential  eld and  (r
+4
+) and  (r
+4
+)  0 are real
+scalar  elds. These transformations look similar to the transformations in (17)
+that determined the "pick a gauge"  xing, but are not the same. The difference
+is that now  (r
+4
+) is one of the variable  elds. While in (17) after gauge  xing,
+the gauge transformation can not longer be applied to  elds, now the gauge
+is not  xed and gauge transformation can be applied to the  elds. Thus a
+transformation 	 7! 	
+0
+= e
+i (r
+4
+)
+	 and the gauge transformationA
+j
+7!A
+0
+j
+=
+A
+j
++
+1
+ff
+@
+j
+  is transformed into
+B
+0
+j
+=A
+0
+j
+ 
+1
+ff
+@
+j
+ 
+0
+=A
+j
++
+1
+ff
+@
+j
+  
+1
+ff
+@
+j
+ 
+0
+e
+i 
+	 = 	
+0
+   
+0
+e
+i 
+0
+These transformations imply thatB
+j
+(r
+4
+) and  (r
+4
+) are invariant under U(1),
+while  
+0
+(r
+4
+) = (r
+4
+) + (r
+4
+), that is:
+B
+0
+j
+(r
+4
+) =A
+j
+(r
+4
+) 
+1
+ff
+@
+j
+( 
+0
+(r
+4
+)  (r
+4
+)) =A
+j
+ 
+1
+ff
+@
+j
+  =B
+j
+(r
+4
+)
+ 
+0
+(r
+4
+) = e
+i 
+	e
+ i 
+0
+= e
+ i 
+	 = e
+ i 
+ (r
+4
+) e
+i 
+=  (r
+4
+)
+From the transformation  
+0
+(r
+4
+) =  (r
+4
+) + (r
+4
+) it follows that the  eld   is a
+pure gauge variable. It is only one in the set of new  elds that is not gauge
+invariant. Thus, the Lagrangian in (15) can be rewritten in terms of the new
+ elds
+L = 
+1
+4
+B
+kj
+B
+kj
++ (@
+k
+  +iffB
+k
+ )(@
+k
+  iffB
+k
+ )  (i )
+2
+ 
+2
+   
+4
+whereB
+kj
+=@
+k
+B
+j
+ @
+j
+B
+k
+. The  eld (r
+4
+) does not appear in this description; it
+Electronic Journal. http://diffjournal.spbu.ru 104Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+was factored out. So, all  elds in this theory are now invariant under the U(1)
+transformation, the U(1) symmetry has no grip now and the ground state of
+the system is no longer degenerate. To describe now the perturbation around
+the ground state  
+0
+= V
+0
+, the  eld  (r
+4
+) is rewritten as  (r
+4
+) = V
+0
++ (r
+4
+),
+with  (r
+4
+) a variable  eld, so thatL reduces to
+L = ( 
+1
+4
+B
+kj
+B
+kj
++ff
+2
+V
+2
+0
+B
+k
+B
+k
+) + (@
+k
+ @
+k
+   4 V
+2
+0
+ 
+2
+) +c:c
+which is equal to that of the "unary gauge" Lagrangian in (18), obtained for
+the Higgs mechanism with spontaneous symmetry breaking. The Lagrangian
+contains the massive photonB
+j
+(r
+4
+) and the massive component  (r
+4
+) of the
+"Higgs  eld"  (r
+4
+) = V
+0
++ (r
+4
+) (we will show in in Section 4 that this real
+scalar  eld can be substituted by the real positive density   =
+p
+ 
+m
+of the
+particle's rest-mass energy-density  
+m
+). The model is renormalizable from the
+gauge invariance of the LagrangianL (a proof for this is established by 't Hooft
+at 1970).
+Thus, this approach where spontaneous gauge symmetry breaking has no
+role, is more general and guarantee the renormalization, but also well suited for
+the IQM  eld theory of the particles developed in [2, 3, 4]. Both approaches,
+that earlier, based on the spontaneous symmetry breaking, and this new one
+based on the gauge invariant Higgs mechanism, have one crucial element in
+common: the non-zero vacuum expectation value of the  eld  (r
+4
+). The fun-
+damental question that previous work for the Higgs mechanism did not answer
+is why and how the "Higgs  eld" has a non-zero vacuum expectation (average)
+value
+R
+		dV =
+R
+ 
+2
+dV =h 
+2
+i. In Faddeev paper [11], he writes:
+"Thus, one way or another we see, that the nonzero expectation value for
+the  
+2
+can be invoked without the Higgs potential. The fundamental question
+remains, is the origin of the excitations for the  eld  . In both interpretations
+the most natural answer is massless scalar - analogy of dilation in the  rst
+interpretation or kind of Goldstone model in the second. I hope, that more
+experienced phenomenologist can consider seriously this hypothesis."
+My answer is that   is the excitation  eld with  
+2
+=  
+m
+, where  
+m
+(r
+4
+) =
+	(r
+4
+)	(r
+4
+) is the rest-mass energy-density of an observed massive particle with
+the complex wave-packet  eld 	(r
+4
+), for which the potential term of the La-
+grangian density, (only) during the interaction with a boson, explained in Sec-
+tion 4, obtains the form of the Goldstone "Mexican hat" potential.
+Electronic Journal. http://diffjournal.spbu.ru 105Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+3 BasicEquationsandInteractionProcessesintheIQM
+Theory
+Quantum mechanics, based on the Schr odinger equation is an epistemic statis-
+tical theory, here denominated as Statistical Quantum Mechanics (SQM), to
+differentiate it from the new part of the ontological quantum theory, provided
+in [2, 3] and [4], denominated Individual particles Quantum Mechanics (IQM).
+Both of them are necessary components of the quantum theory, as are the Clas-
+sical Mechanics for Individual objects (ICM),based on the Newton equations,
+Hamiltonian-Jacobi equations or the Euler-Lagrange equation of motion of in-
+dividual objects) and the Statistical Classical Mechanics (SCM), based on the
+Liouville equations.
+In the IQM theory there is a deeper speci cation of the state of the particle,
+and in this approach to completion provided in [2], these states are speci ed by
+the energy-density distributions of a given particle in the Minkowski time-space.
+Such an ontic state, also not fully accessible (non fully observable by the mea-
+surements, and/or with non accessible small compacti ed higher-dimensions
+for the electric charge (5th timelike dimension with the coordinate q
+4
+= ct
+4
+)
+and spin (6th spacelike dimension with the coordinate q
+5
+), for example), has
+to represent the complete description of an individual elementary particle, in
+order to be able to compute from it all properties of a particle as its rest-mass,
+position, speed, momentum, total energy, etc...
+It was shown [1, 7, 8, 2, 10] that, generally, any massive particle can be
+de ned in the Minkowski time-space (we will not use the real higherdimensional
+expressions but only its reduced forms to the 4-D representation) with the
+signature (+; ; ; ), by the complex wave-packet
+	 =  (t;
+  !
+r )e
+ i'
+T
+(20)
+where
+  !
+r =q
+1
+e
+1
++q
+2
+e
+2
++q
+3
+e
+3
+(for the 3-D Minkowski space orthonormal basis
+vectorse
+j
+, withe
+j
+ e
+j
+= 1 for 1 j  3 ande
+0
+ e
+0
+= 1 for the time-coordinate
+q
+0
+=ct) composed by two sub components: by the shape  (t;
+  !
+r ) of particle's
+body that is a real function which de nes the real rest-mass energy-density
+ 
+m
+  		 =  
+2
+(t;
+  !
+r )  0, and by the de Broglie 'phase (pilot) wave' with
+phase '
+T
+(t;
+  !
+r
+T
+) = 
+1
+~
+S
+t
+0
+=0
+, where S
+t
+0
+=0
+=
+R
+t;
+  !
+r
+T
+0;
+  !
+r
+0
+L(t
+0
+;
+  !
+r;
+  !
+v )dt
+0
+is the Hamilto-
+nian principal function for the initial particle's position (t
+0
+;
+  !
+r
+0
+) and the current
+position at t  0 (its barycenter) at
+  !
+r
+T
+(t) 
+1
+1
+ 
+R
+  !
+r  
+m
+(t;
+  !
+r )dV , and particle's
+Lagrangian at time t
+0
+, L(t
+0
+;
+  !
+r;
+  !
+v ) = E 
+  !
+v
+  !
+p where E is particle's total
+Electronic Journal. http://diffjournal.spbu.ru 106Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+energy and
+  !
+p its canonical (conjugate) momentum, and 1
+ 
+ 
+R
+ 
+m
+(t;
+  !
+r )dV
+is the particle's invariant energy (equal to rest-mass energy m
+0
+c
+2
+for massive
+particles and energy E
+0
+of a boson, measured in the frame in which massive
+source of this boson is in rest).
+Thus, for a free (non accelerated) particle which propagates with constant
+speedv and momentump, so that
+  !
+v
+  !
+p = vp, with barycenter position
+  !
+r
+T
+(t) =
+  !
+r
+0
++
+  !
+vt, we obtain that the phase change linearly in time t  0,
+'
+T
+(t) =
+E pv
+~
+t (21)
+When a particle propagates in the vacuum with constant speed
+  !
+v it has
+the time-invariant spherically-symmetric distribution [6],  
+m
+=
+K
+p
+r
+, where
+r = k
+  !
+r  
+  !
+r
+T
+k is the distance from its barycenter
+  !
+r
+T
+, corresponding to
+particle's hydrostatic equilibrium where each in nitesimal amount of parti-
+cle's material body  
+m
+(t;
+  !
+r ) is in rest w.r.t. particle's barycenter. However,
+generally, during an acceleration each in nitesimal amount of energy-density
+ 
+m
+(t;
+  !
+r ) moves with a different speed
+  !
+w(t;
+  !
+r ) w.r.t. the group velocity
+  !
+v (t) =
+d
+dt
+  !
+r
+T
+(t) = v
+1
+e
+1
++ v
+2
+e
+2
++ v
+3
+e
+3
+, with v = k
+  !
+vk =
+p
+v
+2
+1
++v
+2
+2
++v
+2
+3
+, of
+particle's energy-density wave-packet and it is shown [2] that is,satis ed the
+following relationship
+  !
+v (t) =
+1
+1
+ 
+R
+  !
+w(t;
+  !
+r ) 
+m
+(t;
+  !
+r )dV , so we can introduce
+the variation-velocity of the particle's matter ux
+  !
+u (t;
+  !
+r ) =
+  !
+w(t;
+  !
+r ) 
+  !
+v (t)
+at each space-time point (t;
+  !
+r ) inside particle's matter (where  
+m
+(t;
+  !
+r )> 0).
+As shown in [2], during an inertial propagation when the particle is in a hydro-
+static equilibrium, we have that  
+m
+is spherically symmetric around particle's
+barycenter with
+  !
+u (t;
+  !
+r ) = 0 in every point inside particle's matter, so that ev-
+ery in nitesimal amount of  
+m
+propagates with the constant wave-packet group
+velocity
+  !
+v . Only during the particle's accelerations we have that
+  !
+u (t;
+  !
+r )6= 0,
+so that particle's body changes dynamically its shape in time.
+In the assumption [2] of the topology of the matter of an elementary massive
+particle, the wave-packet do not undergo a spreading, also when it changes its
+matter density distribution (i.e., its energy-density  
+m
+), and tends to its stable
+stationary spherically symmetric distribution during inertial propagation in the
+vacuum. That is, the matter has some internal self-gravitational autocohesive
+force analogously to the peace of perfect uid in the vacuum, so that at any
+instance of time, the 3-D space topology of particle's matter distribution, and
+consequently its compressible energy-density  
+m
+is simply connected, closed,
+continuous and differentiable.
+In what follows, for the Cartesian coordinate system,r =e
+1
+@
+@x
++e
+2
+@
+@y
++e
+3
+@
+@z
+Electronic Journal. http://diffjournal.spbu.ru 107Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+is the gradient (for x q
+1
+;y q
+2
+and z q
+3
+) so that the Laplacian is de ned
+by4 = r
+2
+=
+@
+2
+@x
+2
++
+@
+2
+@y
+2
++
+@
+2
+@z
+2
+(we are using positive-time metric signature
+(+,-,-,-)).
+The Lagrangian densityL of a particle [2], is given by
+L =
+~
+1
+ 
+( 
+@'
+T
+@t
+		 +
+i
+2
+(	@
+0
+	  	@
+0
+	  	
+  !
+wr	 + 	
+  !
+wr	)) (22)
+with previously introduced speed of particle's matter/enegy density  
+m
+(t;
+  !
+r )
+  !
+w(t;
+  !
+r ) =
+  !
+v (t) +
+  !
+u (t;
+  !
+r ) (23)
+and with derived Euler-Lagrange equation of motion
+@	(t;
+  !
+r )
+@t
+= !
+p
+	(t;
+  !
+r ) +
+  !
+w(t;
+  !
+r )r	(t;
+  !
+r ) 
+1
+2
+(r 
+  !
+u (t;
+  !
+r ))	(t;
+  !
+r ) (24)
+where !
+p
+=
+@
+@t
+'
+T
+.
+Thus, each massive elementary particle satis es the following Noether's conser-
+vation laws:
+Analogously to the Euler  rst equation of uid dynamics (continuity equation),
+which represents the conservation of mass, here we have the analog equation
+for the conservation of matter (that is of the particle's rest-mass energy),
+@ 
+m
+(t;
+  !
+r )
+@t
++r  ( 
+m
+(t;
+  !
+r )
+  !
+w(t;
+  !
+r )) = 0 (25)
+It holds also for bosons when they become unstable after an initial 'space ex-
+plosion' and, consequently, assume the massive particle behavior and a  nite
+but non-zero energy-density volume in open 3-D space. We need that the body
+of the particle  
+m
+provides also the physical internal pressureP (t;
+  !
+r ) (which is
+a non-geometrical property) in order to guarantee the hydrostatic equilibrium
+of the massive particles. The hydrostatic equilibrium of an massive elementary
+particle demonstrated that the body of this particle  
+m
+is a material substance
+[6], which is uid and elastic, and which can not be reduced to the time-space
+geometry.
+Hence, in this IQM theory [2] for individual elementary particles based on
+energy-density wave-packets, the point-like particles are only the stable-state
+bosons when they propagate with speed of light in the vacuum, and with their
+energy-density distributed in higher compacti ed dimensions [3]. In Section 2.7
+in [2], dedicated to the 3-D radial expansion of the bosons w.r.t. the direction
+of particle's propagation, to the tunneling and reections, has been considered
+Electronic Journal. http://diffjournal.spbu.ru 108Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+the cylindrical expansion of the massive boson with energy density  
+m
+(that is,
+during the unstable boson's states where the variation-velocity
+  !
+u (t;
+  !
+r ))6= 0.
+The real physical hyperdimensional representation of the massless bosons
+energy-density, for a given instance of time t, for the Euclidean space point
+  !
+r =
+  !
+r
+0
++
+  !
+ct, is given by  
+m
+=  
+2
+(r
+4
+;t
+4
+;q
+5
+) =  (q
+5
+)  (
+  !
+r  
+  !
+r
+0
+ 
+  !
+ct) where,
+ (q
+5
+) =
+1
+ 
+L
+, with the length of the 6th dimension is L = 4 R
+5
+, denotes the
+constant energy-density distributed in 6th dimension with radius R
+5
+.
+Thus, by integration of this hyperdimensional density over 6th dimension
+with coordinateq
+5
+, from [3] we obtain the common point-like 4-D representation
+of the massless boson's energy-density in the 4-dimensional Minkowski time-
+space by the Dirac function (note that its pilot-wave phase is '
+T
+= 0),
+ 
+m
+(t;
+  !
+r ) =1
+ 
+ (
+  !
+r 
+  !
+r
+0
+ 
+  !
+ct) (26)
+where 1
+ 
+is a constant (equal to a total energy E = pc of a boson in the
+frame where the source of this boson is in the rest), which is consequently only
+mathematically correct point-like representation of the massless boson. In fact,
+now the total energy, for a given time-instancet, can be obtained by integration
+in the ordinary 3-D space, by E =
+R
+ 
+m
+dV = 1
+ 
+R
+ (
+  !
+r  
+  !
+r
+0
+ 
+  !
+ct)dxdydz =
+1
+ 
+  1 = 1
+ 
+. However, it is not physically correct, because we would have an
+in nity density of energy  
+m
+in the single point of the boson's barycenter
+  !
+r =
+  !
+r
+0
++
+  !
+ct. In such case, the Schwarzschild radius r
+s
+would be greater (or equal)
+than the radius of the point (boson's barycenter) which is zero, so that the
+boson would become a black hole, which does not correspond to physical facts.
+Note that this fact can't happen in the case when we are using the complete
+6-D expression for the wave-packet, where  
+2
+(t;
+  !
+r;q
+5
+) = (q
+5
+) (
+  !
+r 
+  !
+r
+0
+ 
+  !
+ct)
+is also physically composed expression where the energy density is only  (q
+5
+)
+and there exists only in the 6th dimension and not inM
+4
+, and hence the Dirac
+'function'   in the Minkowski time-space M
+4
+de nes only the position of the
+boson and not its energy-density. In effect, by the integration in 6-D time-space
+of boson's energy density, its total energy is E =
+R
+ 
+2
+(t;
+  !
+r;q
+5
+)dq
+1
+dq
+2
+dq
+3
+dq
+5
+=
+R
+ (q
+5
+)( (
+  !
+r 
+  !
+r
+0
+ 
+  !
+ct)dV )dq
+5
+=
+R
+ (q
+5
+)dq
+5
+=1
+ 
+.
+So, from (26) the volume of the massless boson in the ordinary 3-dimensional
+space is equal to zero. Only in such conditions a particle can travel with the
+maximal possible speed of light. But the matter/energy of the boson exists
+also in such conditions: it is uniformly distributed only in the spacelike sixth
+dimension (used for the spin) where it propagates with a constant speed v
+5
+.
+Consequently, the hidden matter of a boson in the compacti ed higher dimen-
+sions results in zero rest-mass in the ordinary at Minkowski time-space and
+Electronic Journal. http://diffjournal.spbu.ru 109Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+explains why the boson can propagate with maximal possible speed. During
+this massless stable-state, the gravitational anti-black-hole barrier acting in the
+boson's barycenter (in 3-D space) does not permit the leaking of the matter
+from 6th into ordinary 3-dimensional space.
+We consider the vacuum as the perfect 3-dimensional space symmetry where
+each possible direction of the propagation has the same physical conditions.
+Thus, the propagation of the particles in the vacuum is inertial and the par-
+ticle propagates along GR geodesics with constant speed as a stable particle
+4
+.
+The asymmetry due to the presence of an in nitesimal inertial particle in at
+Minkowski spacetime is purely circumstantial, because the spacetime is consid-
+ered to be unaffected by the presence of this particle. However, according to
+general relativity, the presence of any inertial entity disturbs the symmetry of
+the manifold even more profoundly, because it implies an intrinsic curvature of
+the spacetime manifold, i.e., the manifold takes on an intrinsic shape that dis-
+tinguishes the location and rest frame of the particle. Note that, from the fact
+that the stable bosons have no matter/energy in the ordinary 3-dimensional
+(open) space, the stable bosons do not generate any local time-space curva-
+ture, differently from the fermions. Thus, the local time-space neighborhood
+of a massless boson is always a locally at Minkowski time-space, differently
+from the fermions (and also unstable massive bosons). The fact that the sta-
+ble bosons have no any curved island-metrics in the ordinary 4-dimensional
+time-space, results in missing of any physical resistance of the neighborhood
+time-space to their propagation (differently from the massive particles with
+energy-density present in the 4-dimensional time-space and, generated from it,
+curved micro-island metrics). Consequently, they propagate with maximal pos-
+sible speed in the ordinary 4-dimensional time-space. Thus, the bosons have the
+point-like 4-dimensional structure corresponding to their position (barycenter),
+but physically their total energy-density is  
+m
+(q
+5
+) = (q
+5
+) =
+1
+ 
+4 R
+5
+=const.
+But there are the situations when a stable, stationary, boson becomes ex-
+cited for a short interval of time, as in the situations when the space symmetry
+during its propagation is sharply broken. Thus, the time-space boundary condi-
+tions for the particle's propagation are drastically changed, by considering that
+particle's wave-packet is a time-space perturbation and, if such a perturbation
+meets another perturbation, it changes its form. These events we analyzed in
+details for the phenomena of refraction and 'wave-behaviors' of an individual
+4
+Such a 3-D space symmetry during an inertial propagation of a massive particle causes a spherical symmetry
+of its stable energy-density distribution  
+m
+=
+K
+p
+r
+, for r r
+0
+in a sphere with a radius r
+0
+Electronic Journal. http://diffjournal.spbu.ru 110Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+photon [2]. In all these situations a photon may change its momentum, direc-
+tion of propagation and its velocity, without changing its total energy, because
+these 'interactions' are not based on collisions with another particles (as Comp-
+ton effects, or annihilations), but on instantaneous 3-D space expansions of their
+geometric wave-packet scalar  eld   in the presence of a local sharply broken
+space symmetry. These are strong General Relativity effects correlated with
+the particle's 'micro-island' curvature metrics, caused by a dynamical changing
+of the boundary conditions in the local space around this particle.
+The interactions between any two wave-packets (particles) can be obtained
+only by their local collisions. In dependence on their energy and velocities, they
+can produce a kind of Compton's effects (elastic collisions) in which they survive
+the collisions by changing their momentum and energy (with the conservation
+of total momentum and energy), or they can produce a total fusion with a
+possible creation of the new stable particles (in Feynman's diagrams).
+Thus, for any two massless bosons with the Dirac function energy-
+distributions, it is impossible to have the collisions during their stable states,
+but only when they are excited and involved in their temporary 3-D "spatial
+explosions". Such 3-D spatial explosions can happen also when two stable
+particles are at a very small mutual distance, during which the ideal spatial
+symmetry for a free particle in the vacuum does not hold more for both of
+them. The bosons have a physical role as the intermediators between the mas-
+sive particles (that have the rest-mass and the 3-D volumeV
+t
+greater than zero),
+that is, they are a quantum-source that generates the  elds (the phenomena
+as electromagnetic  elds are the statistical results of actions of a high number
+of photons). In the case when the bosons are massless (long range interactions
+as for massless photons) then we have no the signi cant interference between
+themselves. This situation can be obtained at the quantum level only if the col-
+lisions between photons, for example, are practically improbable. Consequently,
+a number of photons can coexist in the same small 3-D region of space without
+any signi cant direct interference between them, heaving contemporarily the
+collisions with fermions which have the rest-mass and volume V
+t
+greater than
+zero. Also in such a situation, we can have the rare cases of the interference
+between the photons. In normal situations, these interferences statistically can
+be neglected, while in the cases of very strong  eld interactions (when the local
+density of photons is extremely high) these inter-boson's interactions are sig-
+ni cant. Thus, we have the following assumption:
+Interaction-dynamics Assumption: The interactions between the bosons
+Electronic Journal. http://diffjournal.spbu.ru 111Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+and fermions are realized always between two non-point like particles. That
+is, between a massive fermion and a massive unstable boson with a small but
+ nite energy-density volume V
+t
+.
+ 
+It is demonstrated in [18] that in the IQM theory for a given individual par-
+ticle, the total gauge 4-potential A
+ 
+= (A
+0
+;A
+1
+;A
+2
+;A
+3
+), in the 4-vector form
+A
+ 
+=A
+0
+e
+0
++
+  !
+A
+g
+, where
+  !
+A
+g
+=A
+1
+e
+1
++A
+2
+e
+2
++A
+3
+e
+3
+, for particle's wave-packet
+	 =  e
+ i'
+T
+with the time-dependent canonical momentum
+  !
+p and total energy
+E(t;
+  !
+r;
+  !
+p ) (equal to the Hamiltonian), is given on particle's barycenter (i.e.,
+the trajectory) by
+A
+0
+(t;
+  !
+r
+T
+;
+  !
+p ) = 
+1
+ff
+(
+E(t;
+  !
+r
+T
+;
+  !
+p )
+~
+ i
+r 
+  !
+u (t;
+  !
+r
+T
+)
+2
+);
+  !
+A
+g
+(
+  !
+p ) =
+  !
+p
+ff~
+(27)
+(where the time-componentA
+0
+is a complex value) and hence we can consider
+how the parallel transport at  nite distances works, along a particle's path
+(of the particle barycenter) from the initial point r
+T
+= (t;
+  !
+r
+T
+(t)), at the time-
+instancet, into the  nal point r
+0
+T
+= (t
+0
+;
+  !
+r
+T
+(t
+0
+)) at the time instancet
+0
+=t +4t,
+for any  nite time interval4t > 0. From the fact that the parallel transport
+along a  nite particle's trajectory (r
+4
+;r
+0
+4
+) is given by (14), we have that
+	j
+r
+0
+T
+= e
+i 
+	j
+r
+T
+= e
+iff
+R
+
+A
+k
+(z)dz
+k
+	j
+r
+T
+(28)
+where the local phase transformation  , which from (27) is a complex value, is
+obtained by the path integral:
+  =ff
+Z
+(r
+T
+;r
+0
+T
+)
+A
+k
+(z)dz
+k
+=ff
+Z
+t
+0
+t
+(A
+0
+( ;
+  !
+r
+T
+( )))+
+3
+X
+j=1
+v
+j
+( )A
+j
+( ;
+  !
+r
+T
+( )))d  (29)
+Consequently, by the path integration of the phase along the particle's trajec-
+tory, we obtained the following result [18]:
+Proposition 1 The gauge 4-vector potential of the particle's  led 	 =  e
+ i'
+T
+satis es:
+d
+dt
+ln 	j
+(t;
+  !
+r
+T
+(t))
+=iff(A
+0
+(t;
+  !
+r
+T
+(t))) +
+3
+X
+j=1
+v
+j
+(t)A
+j
+(t;
+  !
+r
+T
+(t))) (30)
+A 'parallel transport' (28) of this particle's  led along a  nite curve of its
+barycenter (r
+T
+;r
+0
+T
+), from the initial point r
+T
+= (t;
+  !
+r
+T
+(t)) into the  nal point
+Electronic Journal. http://diffjournal.spbu.ru 112Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+r
+0
+T
+= (t
+0
+;
+  !
+r
+T
+(t
+0
+)), where t
+0
+= t +4t for a  nite time interval4t > 0, produces
+the following local complex-phase transformation (29):
+  = '
+T
+j
+r
+0
+T
+r
+T
+ i ln  j
+r
+0
+T
+r
+T
+= '
+T
+j
+r
+0
+T
++'
+T
+j
+r
+T
+ i ln  (r
+0
+T
+) +i ln  (r
+T
+) = i ln 	j
+r
+0
+T
+r
+T
+(31)
+In next section we will apply these results of the IQM theory of an indinvidual
+particle to Higgs mechanism.
+4 Gauge Invariant Higgs Mechanism without Higgs
+Field in the IQM theory
+The Higgs mechanism describes how the (general) gauge  eld A
+ 
+=
+(A
+0
+;A
+1
+;A
+2
+;A
+3
+) can be massive. First of all, from this equation, the gauge
+ eld on the particle's trajectory (a world line in the Minkowski time-space),
+that is, in the points (t;
+  !
+r
+T
+(t))2M
+4
+is expressed by the observed massive par-
+ticle complex  eld 	, so that this gauge  eld at least at the particle's barycenter
+is always massive  eld. Hence, the bosons of this gauge  eld when become very
+near to the moment of the collision with this observed massive particle (that
+is, to the particle's barycenter) must be in an unstable massive-boson's state.
+In this way, the interaction-dynamics assumption in previous Section (that the
+interactions between the bosons and fermions are achieved only by massive
+states of these bosons) is con rmed. The second important fact is that the
+Higgs mechanism is always presented during such interactions of fermions and
+bosons (i.e., the emission/absorbption of bosons). So, the Goldstone potential
+V (		) must be implicitly contained in the gauge theory of interactions for the
+particle's  eld 	 and its Lagrangian.
+Let us show that it is indeed so, and that the interaction of any massive
+particle  eld 	 with any gauge- eld boson (their collision), which modi es par-
+ticle's pilot-wave phase'
+T
+(i.e., its total energy and momentum) and hence its
+path (trajectory), is a manifestation of the Goldstone "Mexican hat" potential.
+Here we will demonstrate that in this new IQM theory for an individual massive
+particle, we have the following facts:
+1. The mathematical concept of the "spontaneous symmetry breaking" here
+is replaced by the physical concept of the 3-D symmetry breaking of a
+massless (Goldstone) boson into a massive boson, when this boson col-
+lides (interacts) with this massive particle represented by the rest-mass
+Electronic Journal. http://diffjournal.spbu.ru 113Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+energy density wave-packet 	. Physically, the interactions between a bo-
+son (an intermediate particle of a given quantum  eld) with a massive
+particle happen always with the previous 3-D symmetry breaking for the
+boson's propagation (just before the collision with this massive particle).
+The perfect 3-D symmetry for a boson's propagation we have only in the
+conditions when it is enough far from the other massive particles, so that
+in the vacuum it has a stable form of a massless boson which propagates
+with the speed of light.
+2. Thus, we do not need any kind of the "Higgs  eld", as supposed in the
+SQM theory in order to provide the mass to the Goldston massless bosons.
+In the IQM theory, it is exactly the rest-mass energy wave-packet 	 of a
+given fermion, which interacts with the bosons of the gauge  elds, and the
+rest-mass of such fermion is equal to m
+0
+=
+1
+c
+2
+R
+		dV . The short-range
+bosons are massive bosons. However, also the ordinary massless bosons,
+before the impact with a massive particle, become massive (caused by the
+3-D symmetry breaking on their trajectory), and hence any interaction
+between a fermion and boson happens always in the condition when this
+boson is in massive unstable state (thus with 3-D volume of their energy
+density).
+3. The Goldstone "Mexican hat" potential V =  
+2
+		  (		)
+2
+is dynam-
+ically generated always inside particle's Lagrangian density (22), L =
+~
+1
+ 
+( 
+@'
+T
+@t
+		 +
+i
+2
+(	@
+0
+	  	@
+0
+	  	
+  !
+wr	 + 	
+  !
+wr	)) when we have an
+interaction of this massive particle with a boson of a given  eld, with
+ 
+2
+  ~!
+p
+> 0 where !
+p
+=
+@
+@t
+'
+T
+. Such an interaction on particle's tra-
+jectory generates a positive parameter   = j
+1
+d
+d 
+R
+ t
+j > 0, where d is the
+rest-mass energy of the fermion in its barycenter (trajectory) and  
+R
+is
+the phase shift of the gauge symmetry transformation (the phase changing
+of the fermion's complex wave-packet 	, caused by the collision of this
+fermion with a massive boson of a given external  eld. The Lagrangian
+density of free massive particle does not have Goldstone "Mexican hat" po-
+tential component, because in this case of constant particle's speed   = 0,
+and this potential component is reduced to V = 
+2
+		.
+4. The global symmetry of an individual massive particle corresponds to
+the free particle, when it propagates with a constant speed, so that the
+transformation under global U(1) symmetry (5) is 	 7! e
+iQ 
+	, cor-
+responding to the time translation t 7! t +4t, with   =  4t and
+Electronic Journal. http://diffjournal.spbu.ru 114Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+Q =
+E pv
+~
+. In fact, for a free particle, the rest-mass energy density does
+not change w.r.t. its barycenter
+  !
+r
+T
+(t), i.e.,  
+m
+(t;
+  !
+r ) =  
+m
+(
+  !
+r 
+  !
+r
+T
+(t)) =
+ 
+2
+(
+  !
+r 
+  !
+r
+T
+(t)) =
+K
+p
+k
+  !
+r 
+  !
+r
+T
+(t)k
+, with 	 =  (4
+  !
+r ) e
+ i'
+T
+=  (4
+  !
+r ) e
+ i
+E pv
+~
+t
+,
+where4
+  !
+r =
+  !
+r  
+  !
+r
+T
+(t). So, for the same point inside particle's body,
+we have that in the translated time t7!t +4t =t  ,
+	j
+t
+=  (4
+  !
+r ) e
+ i
+E pv
+~
+t
+7! 	j
+t+4t
+=  (4
+  !
+r ) e
+ i
+E pv
+~
+(t  )
+= 	j
+t
+e
+iQ 
+.
+So, each local symmetry transformation corresponds necessarily to a par-
+ticle's acceleration, caused by the interaction of this massive particle with
+a boson of a given external  eld. Thus, for an individual particle in the
+IQM theory, the global and local symmetry transformations have a clear
+distinct physical meaning.
+With this new IQM theory, we obtain a simpli cation of the Standard Model
+with a diminution of number of basic elementary particles: we do not need the
+Higgs bosons in our quantum theory, but each massless boson can be trans-
+formed into a massive boson, in particular during the emission of the bosons
+from a massive particle and during the absorption of the bosons, presented
+in details in the case of electrically charged particles in [10]. Now, with the
+dimensionally correct version of the Lagrangian density (22), we may rewrite
+particle's Lagrangian density for the normalized  elds
+ =
+	
+p
+1
+ 
+(in order to have the direct relationship with the theory SQM and hence
+R
+  dV = 1 as for the wavefunctions in the SQM) and hence from (22) and
+!
+p
+=
+@
+@t
+'
+T
+,
+L = ~[
+i
+2
+( 
+@ 
+@t
+  
+@ 
+@t
+  @
+  !
+w
+ + @
+  !
+w
+ ) !
+p
+  ].
+So, from the fact that the Lagrangian densityL = 0 (easy to verify), we multiply
+it with 1 to be used in the following form in next
+L =K
+T
++
+~!
+p
+2
+  (32)
+where the  rst component K
+T
+= ~
+i
+2
+( 
+@ 
+@t
+  
+@ 
+@t
+  @
+  !
+w
+ + @
+  !
+w
+ ) is kinetic
+part. The second part in (32) is the potential V (  ) =
+~!
+p
+2
+  and it will be
+considered for the generation of the Goldstone "Mexican hat" phenomena in
+the form (4).
+Let us consider a massive particle with normalized wave-packet in an
+inertial propagation up to the time instance t
+0
+(with constant total energy E
+0
+,
+Electronic Journal. http://diffjournal.spbu.ru 115Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+momentump
+0
+and speedv
+0
+). Then, in a small interval t, it has an interaction
+with an external  eld boson. So, during the open interval (t
+0
+;t
+0
++ t) it is an
+accelerated particle, while after time t
+0
++ t it becomes again a free particle
+with new constant total energy E
+0
+, momentum p
+0
+and velocity v. Thus, its
+Lagrangian at t t
+0
+and t t
+0
++ t is that of a free particle
+L
+free
+=K
+T
++ 
+2
+0
+(  ); fort t
+0
+, and L
+free
+=K
+T
++ 
+2
+1
+(  ) fort t
+0
++ t
+where  
+2
+0
+=
+~
+2
+!
+p
+j
+t
+0
+=
+~
+2
+@'
+T
+@t
+j
+t
+0
+=
+~
+2
+d'
+T
+dt
+j
+t
+0
+=
+E
+0
+ p
+0
+v
+0
+2
+> 0 and
+ 
+2
+1
+=
+~
+2
+!
+p
+j
+t
+0
++ t
+=
+~
+2
+@'
+T
+@t
+j
+t
+0
++ t
+=
+~
+2
+d'
+T
+dt
+j
+t
+0
++ t
+=
+E
+0
+ p
+0
+v
+0
+2
+> 0.
+From the fact that the rest-mass energy density of a free particle is that of its
+hydrostatic equilibrium [6], we have that
+ =  
+0
+(
+  !
+r 
+  !
+r
+T
+(t)) e
+ i'
+T
+=  
+0
+(
+  !
+r 
+  !
+r
+T
+(t)) e
+ i
+E
+0
+ p
+0
+v
+0
+~
+t
+; for t t
+0
+ =  
+0
+(
+  !
+r 
+  !
+r
+T
+(t)) e
+ i'
+T
+=  
+0
+(
+  !
+r 
+  !
+r
+T
+(t)) e
+ i
+E
+0
+ p
+0
+v
+0
+~
+t
+for t t
+0
+=t
+0
++ t
+where  
+0
+(
+  !
+r  
+  !
+r
+T
+(t)) = (
+K
+1
+ 
+p
+k
+  !
+r 
+  !
+r
+T
+(t)k
+)
+1=2
+is that of the hydrostatic equilib-
+rium. Thus, for a free particle we have no the "Mexican hat" form of the
+potential.
+However, during the impact of the boson with this massive particle, in
+the open interval of time (t
+0
+;t
+0
++  t), we have no more a free propagating
+particle but two possible scenarios: acceleration or deceleration of this massive
+particle during the collision with this massive boson. So, from Proposition
+1 Section 3, we have that during this  nite interval  t of time, the particle's
+wave-packet 	 (thus also its normalization ) undergoes a local symmetry
+transformation 7! e
+i 
+along its trajectory, such that the equation (31)
+reduces to,   =  
+R
++ i0 =  '
+T
+j
+t
+0
++ t
++ '
+T
+j
+t
+0
+, from the fact that at t
+0
+and
+t
+0
++  t, the particle's shape is equal to that of the hydrostatic equilibrium
+ 
+0
+(
+  !
+r  
+  !
+r
+T
+(t)) = (
+K
+1
+ 
+p
+k
+  !
+r 
+  !
+r
+T
+(t)k
+)
+1=2
+, and hence, because of the free-particle
+property at t
+0
+and t
+0
++ t:
+d 
+R
+dt
+= 
+d'
+T
+dt
+j
+t
+0
++ t
++
+d'
+T
+dt
+j
+t
+0
+(33)
+By considering that on the particle's trajectory (that is, in the particle's
+barycenter), we have invariant rest-mass energy density (see the limit com-
+pressibility assumption in [6]), we de ne the positive constant:
+d 
+ 
+m
+(t;
+  !
+r
+T
+(t))
+1
+ 
+= (  )
+(t;
+  !
+r
+T
+(t))
+> 0 (34)
+During this extremely short interval of interaction  t, we have two possible
+cases, for particle's acceleration or deceleration:
+Electronic Journal. http://diffjournal.spbu.ru 116Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+  Case 1, when
+d 
+R
+dt
+< 0, we de ne   = 
+~
+2d
+d 
+R
+dt
+,   =  
+1
+and, from (33),
+!
+0
+p
+ 
+@'
+T
+@t
+j
+t
+0
+=
+@'
+T
+@t
+j
+t
+0
++
+d 
+R
+dt
+, so that
+~!
+0
+p
+2
+= 
+2
+ 
+ 
+d
+;
+  Case 2, when
+d 
+R
+dt
+> 0, we de ne   =
+~
+2d
+d 
+R
+dt
+,   =  
+0
+and, from (33),
+!
+0
+p
+ 
+@'
+T
+@t
+j
+t
+0
++ t
+=
+@'
+T
+@t
+j
+t
+0
+ 
+d 
+R
+dt
+, so that
+~!
+0
+p
+2
+= 
+2
+ 
+ 
+d
+.
+Hence, for the time-interval of the interaction with the (massive) boson, the
+non-free particle's Lagrangian density, at particle's trajectory r
+4
+= (t;
+  !
+r
+T
+(t)),
+becomes equal to
+L
+mh
+  Lj
+r
+4
+=K
+T
++
+~!
+0
+p
+2
+(  )
+r
+4
+=K
+T
++ 
+2
+(  )
+r
+4
+  (  )
+2
+r
+4
+(35)
+with the Goldstone "Mexican hat" potential with V
+0
+   
+ 
+2
+2 
+=
+8
+<
+:
+ 
+d
+1 (
+ 
+0
+ 
+1
+)
+; in Case 1
+ 
+d
+1 (
+ 
+1
+ 
+0
+)
+; in Case 2
+that is, with V
+0
+< d, where d is normalized rest-mass energy density at par-
+ticle's barycenter. So, we can assume as particle's ground state its initial hy-
+drostatic equilibrium at t
+0
+, before its perturbation caused by an impact with a
+boson, that is,
+j0i =  
+0
+(
+  !
+r 
+  !
+r
+T
+(t)) e
+ i'
+T
+j
+t
+0
+= (
+K
+1
+ 
+p
+k
+  !
+r 
+  !
+r
+T
+(t)k
+)
+1=2
+e
+iQt
+, whereQ = 
+E
+0
+ p
+0
+v
+0
+~
+.
+From the general global U(1) transformation (5), it holds that the charge Q is
+its generator. Although the Lagrangian is invariant under this transformation,
+the ground state is not, and an in nitesimal   =  t (which is a translation of
+the time for a  nite interval t of a free particle, when particle does not change
+its energy, momentum and speed, but only its pilot-wave phase '
+T
+which is
+periodic with a period 2 , that is, represents the circular change of the angle
+in direction '
+2
+in the Fig.2) transforms from (5) like
+j0i 7! e
+iQ 
+j0i  (1 +iQ )j0i6=j0i (36)
+and hence, fromQj0i6= 0,Q is the broken generator in this globalU(1) symme-
+try. In fact, after this global symmetry transformation forQ  = 
+E
+0
+ p
+0
+v
+0
+~
+ t, we
+obtain the new state of the free particle in the time instance t + t. Note that
+this ground statej0i corresponds to the zero external potential in the vacuum,
+where particle has an inertial propagation as a free particle. So, this state can
+be called as "vacuum state" of a given individual massive particle (as it is called
+in the SQM) as well.
+Electronic Journal. http://diffjournal.spbu.ru 117Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+Thus, in this simplest global U(1) case, we have only one broken generator
+Q, but this does not correspond to the massless Goldstone boson. Instead, here
+in IQM, it corresponds to the absence of any interaction of this particle with a
+boson.
+As in the SQM  eld theory, the oscillations around the ground state, or "vac-
+uum" (corresponding to the hydrostatic equilibrium of a free particle), corre-
+spond to the real massive particle during its accelerations (with particle's 3-D
+expansion/compression around its spherically symmetric hydrostatic equilib-
+rium). Let us consider now the perturbation
+ 
+0
+= (V
+0
++ (r
+4
+)) e
+i (t;
+  !
+r
+T
+(t))
+(37)
+around the ground state, where   and   (de ned on the particle's trajectory
+  !
+r
+T
+(t)) are real functions. Thus, it corresponds to accelerated particle's (nor-
+malized) wave packet 
+0
+= (V
+0
++ (r
+4
+)) e
+ i'
+T
+j
+t
+, so that
+ (t;
+  !
+r
+T
+(t)) = '
+T
+j
+t
+(38)
+where the momentum, velocity and total energy of this particle change in the
+interval t
+0
+< t < t
+0
++ t. It is easy to verify that, if we substitute 
+0
+in the
+Lagrangian density (35) on the particle's trajectory, we obtain that  (r
+4
+) is
+massive  eld (as expected from the fact that (V
+0
++ (r
+4
+) is the square root of
+the particle's rest-mass energy density), without a necessity to introduce the
+new "Higgs  eld". The  eld  (t;
+  !
+r
+T
+(t)) results massless, but not because it
+represents a massless Goldston boson. It is a massless  eld, because physically
+it does not correspond to another particle, and its negative value corresponds
+to the de Broglie pilot-wave phase of the observed massive particle 
+0
+in the
+IQM theory.
+This perturbation above can be de ned as a local symmetry U(1) transfor-
+mation, for any time-space point r
+4
+such that the ground state j
+r
+4
+=j0i6= 0
+(of the free particle in its hydrostatic equilibrium),
+ j
+r
+4
+7! 
+0
+j
+r
+4
+= j
+r
+4
+e
+i 
+(39)
+where   = 
+R
++i 
+I
+= (r
+4
+) i ln[(V
+0
++ (r
+4
+)= (r
+4
+)]
+= (r
+4
+) +'
+T
+j
+t
+0
+ i ln[(V
+0
++ (r
+4
+))= 
+0
+(
+  !
+r 
+  !
+r
+T
+(t))],
+and hence 
+R
+= (r
+4
+)+'
+T
+j
+t
+0
+, so that from (38), we obtain 
+R
+= '
+T
+j
+t
++'
+T
+j
+t
+0
+as
+expected from Proposition 1, equation (31), from t
+0
+to t.So, this perturbation
+corresponds physically to the perturbation of the particle's rest-mass energy
+density from its hydrostatic equilibrium during the interval of interaction time
+t
+0
+<t<t
+0
++ t.
+Electronic Journal. http://diffjournal.spbu.ru 118Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+The freedom to "pick up" the  (t;
+  !
+r
+T
+(t)) by (38) is based on the fact
+that particle's de Broglie phase '
+T
+represents the universal property of the
+nature that the propagation of an object is governed by minimal action of its
+Lagrangian L, and such principle remains invariant is we add to L any real
+constant energy E
+0
+. Hence, we can use  (t;
+  !
+r
+T
+(t)) = '
+T
+j
+t
++
+E
+0
+~
+t, so that this
+"pick up" means that we selected the value E
+0
+= 0 to obtain (38).
+Hence, any local symmetry breaking, which happens only during the col-
+lision of a massive particle with a boson of an external  eld (this boson, if it
+was previously massless, long-range, before the impact with this massive par-
+ticles experiments a 3-D symmetry breaking on its trajectory during which it
+becomes a massive boson, without requiring any "Higgs  eld") generates the
+Goldons "Mexican hat" potential on the particle's trajectory. Moreover, we
+have no any appearance of the Goldon massless boson, and hence we have no
+physically any mysterious phenomena that it is "eaten" by the gauge  eld to
+become the massive boson. In the IQM, theW
+ 
+andZ are ordinary short-range
+massive bosons. They obtain their mass by the process of expansion of their
+energy-density from the higher compacti ed dimensions into the ordinary open
+3-D dimensions, and hence, from the massless boson with the zero 3-D volume
+of their energy-density, they become massive (and so inertial) particles with a
+small 3-D volume of their energy-density. Thus, we demonstrated the following
+property for an interaction of a massive particle with some external  eld boson:
+Corollary 1 During the interaction of a massive particle with a gauge vector
+boson (its emission or absorption), in an extremely small time interval [t  t;t],
+the Lagrangian densityL on the trajectory of this accelerated particle corre-
+sponds to the Goldstone "Mexican hat" LagrangianL
+mh
+, without introducing
+any new auxiliary "Higgs  eld".
+Proof: The previous derivation of the Goldstone "Mexican hat" Lagrangian
+in (35) from the particle's Lagrangian density (32) during interaction with a
+single boson during in nitesimal interval of time [t;t + t].
+ 
+Let us see now how these results are correlated with the previously described
+gauge invariant Higgs Mechanism which used the transformation of the original
+ elds (A
+j
+; 	) into the set of Faddeev's  elds (B
+j
+;  ; ) in (19). From the fact
+that our gauge theory is de ned only for the time-space points of the barycenter
+of the observed massive particle which interacts with bosons, we have to reduce
+also the equations used in the gauge invariant Higgs mechanism theory to the
+points lying on the particle's trajectory only. So, in the equations in (19), the
+Electronic Journal. http://diffjournal.spbu.ru 119Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+phase  (r
+4
+)   (t;
+  !
+r ) reduces to  (t;
+  !
+r
+T
+(t)) which is only a function of time
+t, and hence we can set    '
+T
+j
+t
+to the massive particle pilot-wave phase.
+Thus, the "Higgs  eld" 	 in equation (19) reduces to the massive particle's
+ eld (wave-packet) 	j
+r
+4
+=  (r
+4
+) e
+i (r
+4
+)
+=  (r
+4
+) e
+ i'
+T
+.
+From the fact that in our gauge theory introduced shortly in Section 3, the
+gauge  eldA
+j
+is a massive  eld (of massive bosons), also this new gauge  eldB
+j
+must be massive as required by the gauge invariant Higgs mechanism. But we
+also obtained that the "Higgs  eld" 	 is not any new particular  eld, but only
+the  eld of the observed massive particle's wave-packet during its interaction
+with the gauge- eld bosons. In effect, we do not need any new particular "Higgs
+ eld" and hence we do not need the so called Higgs bosons.
+In the IQM theory we obtained that the "mass constant"   is entirely
+determined by the observed massive particle, while the positive constant  
+appears only during the collision of this massive particle (with its energy density
+ 
+m
+) with a massive gauge- eld boson which produces a modi cation of massive-
+particle pilot-wave phase by the real component of    and the modi cation of
+the energy-density distribution of observed particle by the imaginary component
+of    (directly expressed by the componentsA
+j
+of the gauge  eld). Thus,   is
+a coupling constant of the mutual interaction of this observed massive particle
+and the bosons of the gauge  eld, and only in such an interaction we obtain the
+famous Jeffrey Goldstone potential V (		). So, the concept of "spontaneous
+symmetry breaking" can be substituted by a physical effect of the real 3-D space
+symmetry breaking during the propagation of a boson, when the presence of a
+massive particle on the boson's trajectory breaks the perfect vacuum 3-D space
+symmetry, and causes the 3-D space explosion of this boson during which the
+boson's energy-density is expanded from the extra compacti ed dimensions into
+the ordinary 3-D space by causing the mass- xation of this boson.
+This is the explanation of the Mass gap conjecture in Yang-Mills theory. So,
+the massive bosonsW
+ 
+andZ are the unstable states of the Goldstone massless
+weak-force gauge bosons. From the fact that these bosons are massive when
+they are emitted from the massive elementary particles and that in a very short
+time are absorbed by them, in such a short interval of time of their propagation
+they remain unstable short-range and hence massive during all their life-time.
+In this new completed picture, the framework is different than in SQM:
+the LagrangianL in (22) is the sum ofL
+free
+(of the free particle) andL
+gauge
+,
+and express the interaction of an individual massive particle with any individual
+boson (of these four bosons de ned by Lagrangian componentL
+gauge
+) at a given
+Electronic Journal. http://diffjournal.spbu.ru 120Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+interval of time [t;t + t], just during the emission/absorbtion of this boson.
+Thus, the masses of the three bosons W
++
+, W
+ 
+and Z, computed by the SQM
+Pauli-matrices based Lagrangian are that of this new framework, from the fact
+that each rest-mass of these three bosons is invariant and remains equal also
+in the moment of direct collision with the observed massive particle (source or
+target object for these bosons). Thus, during this interval of time these massive
+bosons do not reach a perfect 3-D symmetry of the propagation in the vacuum.
+In the case of the photon there is a fundamental difference instead. In the SQM
+Pauli-matrices Lagrange framework, the state of this photon is its de nite state
+after the electroweak interaction. That is, when the photon is relatively far from
+its source (massive particle) and hence it is already transformed from its massive
+unstable state into the ordinary stable massless photon (after an acceleration
+to the speed of light) which propagates in the vacuum (far from other massive
+particles) and hence in the conditions of the 3-D spatial symmetry. In the
+new IQM framework, this photon is considered just in the moment when it is
+emitted or absorbed, thus in its massive unstable state described by theL
+gauge
+component.
+5 Conclusions
+An individual massive particle which interacts with a given gauge massive bo-
+son (during its emission or absorbtion), changes its pilot-wave phase '
+T
+by the
+real component  
+R
+(t) of phase transformation   (t;
+  !
+r ) caused by this boson's
+gauge  eld (in a local gauge symmetry of the Lagrangian), during this boson's
+emission/absorbtion, thus on the particle's trajectory. The imaginary compo-
+nent   
+I
+(t;
+  !
+r ) represents the modi cation of the distribution of the particle's
+energy-density during interaction with a boson.
+This process is equal for any kind of interactions of the massive particles and
+the gauge bosons. Thus, it is a general process where the Goldstone "Mexican
+hat" appears in the Lagrangian density which describes the interaction of the
+massive particle's  eld 	 (so that there is no any new "Higgs  eld") with any
+kind of vector bosons.
+The Standard model in this completed theory is modi ed only by this fact
+that this theory do not need the Higgs boson, and by the fact that also QM
+for the particles, de ned as the complex scalar  elds 	 =  (t;
+  !
+r )e
+ '
+T
+(wave-
+packets with the pilot-wave phase '
+T
+, where  
+m
+=  
+2
+is the rest-mass energy
+density in the 3-D space) is a deterministic theory as the classical mechanics.
+Electronic Journal. http://diffjournal.spbu.ru 121Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+This physical process explains the Mass gap conjecture in Yang-Mills theory.
+Acknowledgment: I am so glad that my work in quantum  eld IQM the-
+ory has a direct connection with the work of Ludwig Faddeev. I will cite the
+interview of Faddeev in 9 July 2015, when he was 81 years old, published by
+YouTube (Delta Insitute for Theoretical Physics), "The gosts of Ludvig Fad-
+deev",
+"I think that the sting theory, for instance, did not show that it has future.
+Unfortunately, well, the new generation of young people in America, they where
+pressed very much by there own censors that they have to do only string theory...
+Do what you want, if it is possible. As much as you want, as is possible. And
+read lots."
+In fact, all my published papers and last three books by Nova Science,
+cited here, are dedicated to this unsolved problem in physics, by developing the
+complementary part of statistical QM for individual particles (the IQM theory),
+that is, the microscopic description of the structure of matter.
+References
+[1] Majki  c Z., Partial Differential Equations for Wave Pack-
+ets in the Minkowski 4-dimensional Spaces, Differ-
+encialnie uravnenia i protsesy upravlenia, no.1(2011),
+http://www.math.spbu.ru/diffjournal/pdf/madjkic.pdf, 2011
+[2] Majki  c Z., Completion and Uni cation of Quantum Mechanics with
+Einstein'sGRIdeas,PartI:Completion of QM, Nova Science Publishers,
+New York, ISBN:978-1-53611-946-6, July, 2017
+[3] Majki  c Z., Completion and Uni cation of Quantum Mechanics with
+Einstein's GR Ideas, Part II: Uni cation with GR, Nova Science Pub-
+lishers, New York, ISBN:978-1-53611-947-3, September, 2017
+[4] Majki  c Z., Completion and Uni cation of Quantum Mechanics with
+Einstein'sGRIdeas,PartIII:Advances,Revisions andConclusions, Nova
+Science Publishers, New York, ISBN:978-1-53617-200-3, November, 2019
+[5] Majki  c Z., Double-slit Experiment: a Test for Individual Par-
+ticles Completion of Quantum Mechanics, Differencialnie uravne-
+nia i protsesy upravlenia, no.2(2019), Publisher: Mathematics
+Electronic Journal. http://diffjournal.spbu.ru 122Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+and Mechanics Faculty of Saint-Petersburg State University, Russia,
+http://www.math.spbu.ru/diffjournal/pdf/madjkic.pdf, 2019
+[6] Majki  c Z., Hydrodynamic equilibrium and stability for particle's
+energy-density wave-packets: State and revision, Differencialnie urav-
+nenia i protsesy upravlenia, no.3(2018), Publisher: Mathematics
+and Mechanics Faculty of Saint-Petersburg State University, Russia,
+http://www.math.spbu.ru/diffjournal/pdf/madjkic.pdf, 2018
+[7] Majki  c Z., Schr odinger Equation and Wave Packets for Elemen-
+tary Particles in the Minkowski Spaces, Differencialnie uravne-
+nia i protsesy upravlenia, no.3(2011), Publisher: Mathematics
+and Mechanics Faculty of Saint-Petersburg State University, Russia,
+http://www.math.spbu.ru/diffjournal/pdf/madjkic2.pdf, 2011
+[8] Majki  c Z., Differential Equations for Elementary Particles: Beyond Dual-
+ity, LAP LAMBERT Academic Publishing, Saarbr ucken, Germany, 2013
+[9] Chernodub M.N. and Faddeev L, and Niemi A.J., Non-Abelian supercur-
+rents and de sitter ground state in electroweak theory, arXiv:0804.1544v2
+[hep-th], 2008
+[10] Majki  c Z., Derivation of Electromagnetism from Quantum Theory of Pho-
+tons: Tesla Scalar Waves, E-Journal Differential Equations and Control
+Processes, N.3, 2020, Publisher: Mathematics and Mechanics Faculty of
+Saint-Petersburg State University, Russia, 2020
+[11] Faddeev L., An alternative interpretation of the Weiberg-Salam model,
+arXiv:0811.3311v2 [hep-th], 2008
+[12] Yang C.N. and Mills R., Conservation of Isotopic Spin and Isotopic Gauge
+Invariance, Physical Review 96 (1), pp.191{195, 1954
+[13] Yukawa H., On the interaction of elementary particles, Proc. Phys.-Math.
+Soc., 17, pp.48{57, 1935
+[14] Proca A., Sur la theorie ondulatorie des electrons positifs et negatifs,
+J.Phys. Radium 7, 347 (1936); Sur la theorie du position, C.R.Acad. Sci.
+Paris 202, 1366, 1936
+[15] Goldstone J., Field theories with superconductor solutions, Nuovo Cimento
+19, pp.154{164, 1961
+Electronic Journal. http://diffjournal.spbu.ru 123Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+[16] Englert F., Broken symmetry and Yang-Mills theory, arXiv:hep-
+th/0406162v2, Contribution to 'Fifty years of Yang Mills theory', editor
+G.'t Hooft, World Scienti c, 2004
+[17] Goldstone J. and Salam A. and Weinberg S., Broken symmetries, Phys.
+Rev., 127, pp.965{970, 1962
+[18] Majki  c Z., Mathematical IQM Gauge Theory for Interaction Processes, E-
+Journal Differential Equations and Control Processes, N.1, 2022, Publisher:
+Saint-Petersburg State University, Russia, 2022
+[19] Masson T. and Wallet J.C., A remark on the spontaneous symmetry break-
+ing mechanism in the standard model, arXiv:1001.1176v1 [hep-th], 2010
+[20] Ilderton A. and Lavelle M. and McMullan D., Symmetry breaking, confor-
+mal geometry and gauge invariance, Journal of Physics A: Mathematical
+and Theoretical, 43(31):312002, 2010
+[21] Struyve W., Gauge invariant accounts of the Higgs mechanism, Studies in
+History and Philosophy of Science, Part B 42(4), pp.226{236, 2011
+[22] Fairbairn M. and Hogan R., Elecrtoweak vacuum stability in light of
+BICEP-2, Phys. Rev. Lett. 112, and arXiv:hep-ph/1403.6786v3, 2014
+[23] Zloshchastiev K.G., Spontaneous symmetry breaking and mass generation
+as built-in phenomena in logaritmic nonlinear quantum theory, arXiv:hep-
+ph/0912.4139v5, 2011
+[24] Csaki C. and Graesser M.L. and Kribs G.D., Radion dynamics and elec-
+troweak physics, Physical Review D,63,6, 2001
+[25] Pawlowski M. and Raczka R., A uni ed conformal model for fundamental
+interactions without dynamical Higgs  eld, arXiv:hep-th/9407137v1, 1994
+[26] Csaki C. and Grojean C. and Pilo L, and Terning J., Towards a realistic
+model of Higgsless elektroweak symmetry breaking, Phys. Rev. Letters,
+92,10, 2004
+[27] Barbieri R. and Pomarol A. and Rattazzi R., Weakly coupled Higgsless
+theories and precision electroweak tests, arXiv:hep-ph/0310285, 2003
+[28] Davoudiasl H. and Hewett J.L. and Lillie B. and Rizzo T.G., Warped
+Higgsles models with IR-brane kinetic terms, arXiv:hep-ph/0403300, 2004
+Electronic Journal. http://diffjournal.spbu.ru 124Differencialnie uravnenia i protsesy upravlenia, N 3, 2022
+[29] Csaki C. and Grojean C. and Murayama H. and Pilo L. and Terning J.,
+Gauge theories on an interval: unitarity without a Higgs boson, Physical
+Review D,69,5, 2004
+[30] Bilson-Thompson S. and Markopoulou F. and Smolin L., Quantum gravity
+and the standard model, arXiv:hep-th/0603022v2, 2007
+[31] Grzadkowski B. and Gunion J.F. and Toharia M., Higgs-radion interpre-
+tation of the LHC data?, arXiv:hep-ph/1202.5017v2, 2012
+[32] Bellazzini B. and Csaki C. and Serra J., Composite Higgses, arXiv:hep-
+ph/1401.2457, 2014
+[33] Rizzo T.G., Introduction to extra dimensions, arXiv:hep-ph/1003.1698,
+2010
+[34] Crane L. Physicists have a massive problem as Higgs boson
+refuses to misbehave, NewScientist, Physics, 7 August 2020,
+https://www.newscientist.com/article/2251285-physicists-have-a-massive-
+problem-as-higgs-boson-refuses-to-misbehave/
+Electronic Journal. http://diffjournal.spbu.ru 125
