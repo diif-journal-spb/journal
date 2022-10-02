@@ -1,0 +1,2076 @@
+﻿DIFFERENTIAL EQUATIONS 
+AND 
+CONTROL PROCESSES 
+N. 3, 2022 
+Electronic Journal, 
+reg. № ФС77-39410 at 15.04.2010 
+ISSN 1817-2172 
+ 
+http://diffjournal.spbu.ru/ 
+e-mail: jodiff@mail.ru 
+ 
+ 
+ 
+Control in non-linear systems 
+ 
+Synthesis of Controller for Vector Plant, Based on Integral Adaptation Method for Disturbance 
+Suppression 
+ 
+Kolesnikova S.I. 
+ 
+St.Petersburg State University of Aerospaсe Instrumentation 
+ 
+skolesnikova@yandex.ru 
+ 
+Abstract. The problem of control over a nonlinear plant on the target manifold with two types of 
+uncertainties in the description is discussed: deterministic disturbances in the right-hand side of the 
+system of differential/difference equations as the unknown functions of time and stochastic 
+disturbances with a zero mean and limited dispersion in the right-hand side of the system of 
+difference equations. The method of integral adaptation is used, which relies on an analytical 
+description of the target attractors – invariant manifolds and introduction of the integrators into the 
+control channels, which make it possible to synthesize adaptive systems without acquiring the 
+current data on the changes of the plant and environment parameters. A search for control in the 
+case of stochastic disturbances is performed from among the strategies minimizing the dispersion of 
+the output macrovariable. The examples and results of the numerical testing of the proposed 
+algorithms are presented for an applied problem of control over the motion of an plant with an 
+immobile center of mass. The presented results can be relevant in all control systems of robotic 
+arms, functioning under the conditions of uncertainty, and in designing the decision-making support 
+systems in controlling compound plants. 
+ 
+Keywords: principle of least action, analytical design of aggregated regulators, nonlinear plant, 
+method of integral adaptation, object with fixed center of mass, random and deterministic 
+disturbances. 
+ 
+ 
+1. Introduction  
+ 
+The method of integral adaptation on invariant manifolds has demonstrated its high performance in 
+solving the problems of controlling the complex (nonlinear, multi-loop) dynamic plants [1]. These 
+problems present essential practical challenges for common methods of adaptive control [2-7], since the Differential equations and control processes, N. 3, 2022 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/28 
+observer dynamics has to be faster compared to that of changes of the coordinates and variation of the 
+external disturbances. 
+A conceptual difference of the method of integral adaptation [1, 8-10] from the well-known classical 
+methods of the adaptive control theory consists in the mechanism of introduction of the attractors – 
+invariant manifolds (chaotic manifolds among them) from the synergetic control theory [1, 8] and 
+“backstepping” [11, 12]. 
+In this study we continue solving the issue of applicability of the method of integral adaptation (see 
+more detailed reviews in [1, 8, 9]) to the models with random and deterministic uncertainties in their 
+description . 
+In Sections 2.1 and 3.1, we discuss the problem of control of a nonlinear vector plant 
+ 
+Т
+T T 3
+12
+, 1,2 ,,
+i
+R i    x x x x using the following description of the dynamics of its coordinates: 
+ 
+ 
+1 1 1 2
+2 2 1 2
+,
+,
+,
+,
+
+ 
+xf
+xf
+xx
+xx ξu
+ 
+(1.1) 
+ 
+where 
+ 
+Т
+T T 3
+12
+2 ,, , 1,
+i
+R i   x x x is the state vector, u R
+3
+ is the control vector, f
+i
+R
+3
+ are the nonlinear 
+vector-functions, i=1,2; 
+3
+R  ξ is the unknown limited continuous deterministic disturbance. Recall that 
+manipulator systems (such as robotic arms [13-15]) obey this description; the importance of controlling 
+them under the conditions of noise hardly requires elaboration (e.g., [16-18]).  
+Sections 2.2 and 3.2 provide the problem statement and describe the controller design for a discrete 
+system obtained from (1.1) relying on the Euler discretization and containing a deterministic uncertainty in 
+its description. 
+Section 4 focuses on the problem of nonlinear discrete-time vector control over a stochastic plant. 
+Sections 5 and 6 present the results of a comparative simulation of two systems of control in the model 
+and off-design conditions for the problem of control over a robotic arm. 
+The design of control systems on the principles of manifolds (see reviews in [9, 19-21]) possesses a 
+number of important properties, for instance: the problem of synthesizing an optimal asymptotic stable 
+control system can be solved without using the Lyapunov functions [8, 9]; a certain correspondence to the 
+physical theory of control over the plant’s properties [10]. 
+Here we also report two algorithms [8, 22-24] for synthesizing control systems for a nonlinear vector 
+plant represented by a system of differential/difference equations, wherein the right-hand sides can contain 
+unknown functions of two types of uncertainties: random or deterministic. 
+The basic tool for constructing all below-presented adaptive controllers, compensating for the bounded 
+disturbances , is the method for Analytical Design of Aggregated discrete Regulators (ADAR) [1, 8] and 
+the method of nonlinear adaptation on a manifold (NAD) (e.g., [1, 22]), whose importance is accounted 
+for not only by the simplicity of the applied mathematical tool, to a great extent borrowed from the 
+theoretical mechanics [25, 26] and its applications [27, 28], but also an account of the physical properties 
+of an plant by including the given dynamic properties of the controlled plant into the target function. The 
+proposed algorithms are derived analytically.  
+ 
+2. Formulation of the control problem with a deterministic disturbance 
+ 
+2.1. Formulation of a continuous-time control problem.  
+ 
+A nonlinear vector plant with description (1.1) is discussed. It is required to determine the law of 
+control        
+12
+, t t t  x U x u in the state space for the sake of transferring the controlled plant (1.1) 
+from a certain initial state        
+TT
+12
+0 0 , 0  x x x to the neighborhood of the manifold 
+       
+12
+: , 0, t t t t     xx ψψ and ensure an asymptotically stable motion of this system in this Differential equations and control processes, N. 3, 2022 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/29 
+neighborhood. The following assumptions are currently available (see comments to the selection of a 
+control quality functional in Appendix A): 
+1) The global minimum of the quality functional, including the least-action principle upon 
+reaching the control target      
+12
+, 0, t t t    xx ψ , is given by the following: 
+ 
+       
+ 
+3
+2 2 2
+1
+0
+T
+1 2 3
+min, 0, , 
+, , ,
+C l l l
+l
+t w t dt t t
+
+
+        
+   
+
+
+ψ
+ψ
+ 
+(
+2.1) 
+ 
+where  
+T
+1 2 3
+,, w w w  w is the synthesized control system parameter regulating the time of motion 
+of the imaging point of the system (2.1) to the neighborhood      
+12
+, 0, ; t t t    xx ψ the 
+subscript in the notation of the functional  
+CD
+ indicates the continuity in time (discreteness in 
+time) of  the description of the controlled plant; 
+2) The boundedness of the right-hand side and the implementability of the system’s behavior 
+in the conditions of all admissible controls; 
+3) The availability of a stable target system for model (2.1), simultaneously responsible for 
+dynamic and/or engineering requirements, not contradicting the physical capacity of the system [3, 
+4]; 
+4) The disturbance, as a function of time, is such that the conditions for applying the ADAR-
+synthesis of plant control (2.1) hold. 
+Earlier [24], a number of statements on the conditions of availability of such a control were proved for 
+a scalar plant.  
+ 
+2.2. Formulation of a discrete-time control problem with a deterministic disturbance  
+ 
+From the engineering viewpoint, it would make more physical sense [29, 30] to consider a discrete 
+system obtained relying on (1.1), for instance, using the Euler scheme with a discretization parameter >0, 
+t
+d
+=d  , d=0,1,2,... 
+ 
+       
+           
+2 1
+2
+11
+2 1 2
+1,
+1.
+,
+,
+d d d
+d d d d d
+
+  
+g
+g
+x x
+ζ
+x
+x x x u
+ (2.2) 
+ 
+Here systems (1.1) and (2.2) are related by the following expression: 
+             
+1 2 1 2
+, , , 1,2.
+i i i
+dd d d d i    g x f x x x x 
+Remark 1. The basic assumption in the classical ADAR is the existence of an asymptotically stable 
+system on a manifold with an attractive property assigned as a control target. From this perspective, it is 
+possible to identify the conditions (in terms of probability) of a uniform proximity of the solutions 
+    0,1,2,... , , , 
+dd
+d d t d t   xx  
+d
+t x to the systems (1.1) and (2.2), which was respectively 
+obtained from (1.1) by the Euler time discretization [31]. However, the latter assumption requires a 
+separate detailed and thorough analysis [31, 32] and is beyond the scope of this work. 
+Remark 2. An advantage of a discrete description is especially obvious for the plants with delayed 
+control (see, e.g., p. 187 in [8]). Differential equations and control processes, N. 3, 2022 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/30 
+The formulation of the problem of discrete control formally differs from the continuous problem by 
+the forms of the quality functional 
+D
+ and the equation, the solutions to which are represented by the 
+stable extremals for functional 
+D
+ (see p. 172 in [8]): 
+ 
+     
+ 
+   
+         
+   
+3
+2
+22
+01
+T
+1 2 3
+2
+22
+min, 
+0, , , , ;
+1 0, 1 ;
+0.5 2 2 4 , 1,2,3.
+D l l l
+dl
+l l l l l l
+l l l
+dd
+dd
+d d d d d
+l
+
+
+       
+      
+            
+
+         
+
+
+
+ψψ
+ (2.3) 
+ 
+The relationship between the parameters 
+l
+ and 
+l
+ in (2.3) immediately follows from the necessary 
+condition of an extremum of the functional 
+D
+ – a discrete analog of the Euler–Lagrange equation.  
+Remark 3. Equations         0, 1 0,
+l l l l l l
+w t t d d           1,2,3; , 0 l t d  are the 
+corollaries of the Euler–Lagrange equations for the respective functionals 
+C
+ and 
+D
+ . 
+ 
+3. Solution of the control problem on a manifold with a deterministic 
+disturbance  
+ 
+There is a certain inconsistency in the ‘adaptive control’ terminology associated with the use of 
+different adaptation principles (methods) (e.g., [9, 33-35]). In this study, integral adaptation on a manifolds 
+understood as the process of variation of the averaged characteristics of a dynamic system with an 
+uncertainty in the description of the operational environment, and an adaptation algorithm is the ability of 
+asymptotically transfer the system’s state into the neighborhood of a given invariant set in such an 
+environment. 
+It is well known [8] that the synthesis of ADAR controls in the general case allows for a hierarchy of 
+the control designing procedure. For instance, in the stabilization problems the control synthesis hierarchy 
+is determined by a necessity to control the variables in the cases where a direct access to them is 
+impossible. In so doing, a complex of partial criteria (target functionals) is used 
+ 
+ 
+1,
+s
+CD
+se 
+ with a certain 
+subordination and consistency principle, each of the criteria represents a certain local requirement to the 
+quality of the respective control sub-system. This approach to a certain extent agrees with the stability 
+theory [36] and the idea of a nonreflexive cybernetic system [37]. 
+ 
+3.1. Principle of nonlinear integral adaptation for deterministic plant disturbance 
+suppression (NAD) 
+ 
+Step 1. Phase space extension by converting the external noise into an additional internal phase 
+variable z: 
+ 
+ 
+ 
+2
+1 1 2
+2 1 2
+1
+,
+,
+( ) ( ), cons
+,
+,
+t 0, tt
+
+
+
+    
+f
+f
+xx
+x x u
+x
+xz
+z ψ
+ (3.1) 
+ 
+where the proportionality coefficient  is the synthesized control system parameter. Differential equations and control processes, N. 3, 2022 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/31 
+Step 2. Derivation of the synthesized controller structure by the classical ADAR synthesis 
+methodology for a closed system (3.1). Note that at the final e-th level of the synthesis hierarchy the 
+following form of the macrovariable is used: 
+()
+, const 0,
+e
+kk     ψ ψ z where  is the target 
+macrovariable from the control problem statement and the respective variational problem is formulated 
+ 
+()
+, 
+ee
+C
+ ψ 
+ 
+   
+ 
+3
+22
+( ) 2 ( ) ( )
+,
+1
+0
+T
+( ) ( ) ( ) ( )
+1 2 3
+min, 0, 
+, , ,
+e e e e
+C l e l l t
+l
+e e e e
+w dt
+
+
+
+
+         
+
+
+   
+
+
+ψ
+ψ
+ (3.2) 
+ 
+with a linear functional control delivering a stable solution to Euler–Lagrange equation for the 
+variation al problem 
+ 
+()
+, 
+ee
+C
+ ψ (see Comment 2 in Appendix A)  
+ 
+   
+( ) ( )
+0, .
+ee
+e
+t t t     wψψ (3.3) 
+ 
+Functional 
+e
+C
+ is the quality criterion of the sought-for control during the motion of the imaging point 
+of the system from the manifold  
+( 1)
+0,
+e
+tt
+
+   ψ to manifold  
+()
+0, .
+e
+tt    ψ The superscript e 
+(for system (3.1) e=1,2 depending on the type of the target macrovariable ) denotes the final hierarchy 
+number during the synthesis of a classical ADAR-regulator; the subscripts e, l used with the parameters 
+, el
+w indicate the hierarchy numbers and the vector coordinates, respectively; the multiplication
+ 
+T
+( ) ( ) ( ) ( )
+,1 1 ,2 2 ,3 3
+,,
+e e e e
+e e e e
+w w w     w ψ in (3.3) is coordinatewise. 
+All possible constants from (3.2), (3.3) , 1, 2
+s
+s  w are the control system parameters proportional to 
+the velocity at which the imaging points reach the s-th subsystem of the neighborhood   0,
+s
+tt    ψ 
+according to the partial criterion , 1, .
+s
+C
+se  
+The synthesis has been completed, and the final control system for model (1.1) represents a set of 
+equations of the controlled plant (1.1) and the controller derived relying on (3.1). 
+Statement 1. Control 
+NAD
+ uu , if any, ensures an asymptotic stability for the controlled plant (1.1) in 
+the neighborhood   0, . tt    ψ
+ 
+The proof of Statement 1 is given in Appendix B. 
+ 
+3.2. Disturbance suppression algorithm based on discrete adaptation on a manifold for 
+plant (2.2)  
+ 
+For the sake of definiteness, let us describe the algorithm for the stabilization problem with the control 
+target 
+ 
+     
+*
+11
+0, , , d d d d      ψ xx ψ (3.4) 
+ 
+where 
+*
+1
+x is the given target value for the variable  
+1
+, 0,1,2,... dd  x , let , 1,2
+s
+s  be scalar 
+quantities. 
+Step 1. Extension of the model for system (2.2) given by 
+ Differential equations and control processes, N. 3, 2022 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/32 
+       
+           
+     
+1 1 2
+2 1 2
+1
+2
+1,
+1,
+1 , const 0.
+,
+,
+d d d
+d d d d d
+d d d
+
+  
+      
+
+g
+g
+x
+x xz
+z
+xx
+u
+z
+x
+ψ
+ (3.5) 
+ 
+Step 2. Formulation and solution of the first variational problem 
+ 
+1 (1)
+,
+D
+ for an plant with the 
+description (3.4), (3.5): 
+ 
+       
+ 
+3
+22
+1 2 (1) (1)
+1,
+01
+min
+D l l l
+dl
+J d d
+
+
+      
+
+ 
+ 
+ 
+with a restriction on        
+(1)
+21
+0, d d d d      ψ xx φ , where    
+1
+d φ x is a further defined 
+function. 
+From the equation, giving rise to stable extremals for
+1
+D
+    
+(1) (1)
+11
+0, 11 dd       ψψ , form 
+the structure of the controller   , 1,2,.. d d  u  
+ 
+           
+     
+(1)
+21
+1
+ 
+ 
+, 0,
+: , 1,2,.. d
+d d d d d d
+dd
+      
+
+u g z φ ψ u
+φ φ g
+ (3.6) 
+ 
+Step 3. Reduction (decomposition) on the manifold  
+(1)
+0, dd    ψ : 
+ 
+                 
+     
+2 1 1 1 1 1 1
+, 1 , ,
+1.
+d d d d d d
+d d d
+   
+   
+xx φ g g φ
+z
+xx
+ψ
+x
+z
+ (3.7) 
+ 
+Step 4. Formulation and solution of the second variational problem 
+ 
+2 (2) (2) *
+11
+, , , , const 0
+D
+kk        ψ ψ ψ xx z ψ for an plant with the description (3.7): 
+ 
+       
+ 
+3
+22
+2 2 (2) (2)
+2,
+01
+min.
+D l l l
+dl
+J d d
+
+
+      
+
+ 
+ 
+ 
+From equation    
+(2) (2)
+22
+0, 11 dd       ψψ , whose solutions are stable extremals for the 
+functional
+2
+D
+ , form the function    
+1
+d φ x (assuming the fulfillment of all conditions for the existence 
+of the ADAR controls): 
+ 
+       
+ 
+         
+*
+1 1 1 1
+2
+,
+0.
+d d k d
+d k d d
+    
+     
+g
+ψ z ψ
+x ψ xx
+ (3.8) 
+ 
+Statement 2. Discrete control u (3.6), (3.8), if any, ensures an asymptotic stability for the controlled 
+plant (2.2) in the neighborhood   0, . dd    ψ
+ 
+The proof of Statement 2 is similar to that of Statement 1, given the discreteness of description 
+(Appendix B). The correctness of the controller structure (3.6), obtained relying on the extended system 
+(3.5), follows from the limit relation 
+(2)
+0, . kd      ψ ψ z Substituting     d k d  ψz into the last Differential equations and control processes, N. 3, 2022 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/33 
+equation in (3.5), we obtain   0
+d
+d
+
+    z , since 
+          1 1 , 1 1, d d d d k k           zz ψz therefore,     0.
+d
+d k d
+
+      ψz 
+A summarizing description of the control system for the controlled plant (2.2) will, in this case, be 
+given by a family of relations (2.2), (3.4), (3.6), and (3.8) with the parameters 
+12
+, , , , k    determining the 
+transient process quality.  
+ 
+4. Formulation of a discrete problem of stochastic control on manifold 
+ 
+For random disturbances, the following representation [38] in the description of a discrete controlled 
+plant will be convenient   0,1,... d  :  
+ 
+       
+             
+1 1 2
+2 2 12
+1
+1,
+1 1 .
+,
+,
+d d d
+d d d d c d d
+
+     
+g
+g
+x
+x x ξ
+xx
+xu ξ
+ (4.1) 
+ 
+It is assumed that the disturbances are implemented as a sequence of independent equally distributed 
+random quantities (functions of d)              
+12
+0
+3
+, , ,
+d
+d d d d d
+
+    ξξ with the following 
+properties:  
+ 
+         
+   
+2
+0 0 
+, , 1,2,3, .
+,,
+j i j
+jj
+d d d
+d i j i j
+    
+    
+ΕΕ
+D
+ (4.2) 
+ 
+In (4.1), the constant 01 с  is interpreted as the noise decay factor (the level of uncertainty in the 
+subsequent point of time, d+1,  is no smaller than in the current point of time d); in (4.2),     , ED are 
+the operators of mathematical expectation and dispersion, respectively. It is required to determine the law 
+of control   d u , ensuring the fulfillment of the following requirements:  
+ 
+     
+     
+         
+ 
+3
+22
+2
+01
+1 0,
+1 min, , ;
+min.
+1,2,3
+j j j
+j j j
+D j j j
+dj
+dd
+d d j d
+dd
+
+
+     
+       
+
+       
+
+
+
+ 
+E
+D
+EE
+ 
+(4.3) 
+ 
+The Nonlinear Adaptation on a manifold algorithm for a Stochastic plant (NAS) is an extension of the 
+discrete version of the ADAR method including a stochastic plant, which was discussed in the earlier 
+studies [23-24] for the 1-st–6-th order nonlinear descriptions as applied to biological (immunological) and 
+economic systems. Let us briefly describe the main limitations and statements: 
+1) control strategies are selected from the class of discrete ADAR controls according to (2.3) 
+and Section 3.2; 
+2) consider the strategies, for which the value of the control variable   d u is a function of the 
+current and previous states and controls 
+               
+, 1 ,..., 0 ; 1 , 2 ,..., 0 , 0,1,...; d d d d d d      u u x x x u u u 
+3) select the strategies minimizing dispersion of the random variables – coordinates of the 
+function for a fixed d -     1 , 1, 1,2,3
+j
+d d j      Ψ ω Ψ , where   d Ψ is the macrovariable in Differential equations and control processes, N. 3, 2022 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/34 
+the stage of determination of the controller structure   d u (external control according to the 
+terminology of the classical ADAR method [8]). 
+The main statements of the design of a discrete system of control over a nonlinear system (4.1) in the 
+class of ADAR strategies minimizing dispersion of the coordinates of the target variable given by 
+     
+1
+, 0 d dd   ψ ψ x will be made up in the form of the NAS algorithm NAS [23].  
+NAS algorithm 
+Step 1. Searching for the structure of control     , 0,1,...
+A
+dd  u relying on the discrete version of 
+ADAR under the conditions of fixed random disturbances.  
+Step 2. Taking the conditional expectation 
+   
+ 
+ ,
+d
+dd 
+A
+u E u ξ where
+                 
+TT
+1 2 3
+0 , 1 ... , , , , 1,
+d
+d k k k k k d       ξ ξ ξ ξ ξ . 
+Step 3. Decomposing the description (4.1), taking into account the achieved limit relations
+ 
+(1)
+0 , d d   ψ .  
+Step 4. Searching for the relationship        
+, d d d  ξ x ψ as a function of the observation of an 
+system whose behavior obeys the decomposed description (Step 3) in order to rule out the variable   d ξ 
+from the expression
+   
+ 
+ ˆ
+d
+dd 
+A
+u E u ξ . The synthesis of a stochastic discrete controller has been 
+completed (see Appendix B). 
+Statement 3. Control 
+NAS
+ uu , if any, ensures a fulfillment of the requirements (4.3) and an 
+asymptotic stability for the controlled plant (4.1), on average, in the neighborhood
+       
+*
+11
+0, , d d d d      E ψ ψ x x , where 
+*
+1
+x is the given target value of the variable  
+1
+d x . 
+The proof of Statement 3 is constructive and follows immediately from the NAS algorithms [18], the 
+properties of the ADAR algorithm [8] and the selection of strategies minimizing dispersion of the output 
+variable [38, 39]. By condition, a search for a stochastic control is performed from among the ADAR 
+strategies based on the limit equalities given by    
+( ) ( )
+,
+1,2,3, 1 0,  1,2
+ss
+j s j j
+d d j s         at 
+d  ; note that the controller structure for system (4.1) is determined on the first hierarchy level. For 
+any control, from the condition of independence of random functions (see Appendix B) 
+    , 1 , 0,1,... d d d  ξξ one has an inequality (in a scalar notation) 
+ 
+             
+ 
+           
+ 
+   
+(1) (1) (1)
+1 2 1 1
+(1)
+2 1 1
+2
+1 1 1
+1 , 1,2,3.
+j j j j j j
+j j j j j j
+jj
+d d x d x d d
+g d u d g d d c d
+dj
+             
+         
+     
+DD
+D
+D
+ (4.4) 
+ 
+From which follows that if a system is randomly disturbed, there is no control providing an error of the 
+random function in the left-hand side of the functional equation with a dispersion smaller than the 
+disturbance dispersion in the model (4.1) [23, 38]. A substitution of the found control into the system (4.1) 
+would yield the limit equality 
+ 
+     
+(1) (1)
+1
+1 1 , , 1,2,3.
+j j j
+d d d d j          ψψ (4.5) 
+ 
+From relations (4.4) and (4.5) follows that the resulting control ensures the minimal dispersion 
+     
+(1) (1) 2
+1
+1 , 1,2,3
+j j j
+d d j         D at d  , which makes Statement 3 correct. 
+ Differential equations and control processes, N. 3, 2022 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/35 
+5. Application of NAD and NAS algorithms in the problem of control over the 
+center-of-mass motion of a disturbed moving plant  
+ 
+Use the plant’s description from [15]: 
+ 
+ 
+( ) ( ), ( ) ( ), 0. t t t t t    Mb q b b u 
+(5.1) 
+ 
+Here 
+         
+T
+3
+1 2 3
+, , , R t b t b t b t  bb is the state vector with the coordinates; 
+ 
+3
+,qR  q b b 
+are the generalized forces acting on the controlled plant; 
+33
+ij
+m
+
+ M is the kinetic energy matrix; 
+     
+3
+, , R t t  u u u b b is the control vector.  
+It is required to design a control stabilizing the system’s trajectories (1.1)   t b in the neighborhood of 
+the given values of  
+*
+t b from an arbitrary point of the state space 
+0
+b [10]. 
+In order to implement the above-described NAD algorithm for synthesizing control, it is reasonable to 
+transform system (5.1) to (1.1) substituting the variables
+12
+( ) ( ), ( ) ( ) t t t t  x b x b : 
+ 
+12
+1
+2
+( ) ( ),
+( ) ( ) ( ) ( ), .
+tt
+t t t t
+
+
+  
+xx
+x Aq Au ξ A = M
+ 
+(5.2) 
+ 
+Here we additionally introduce an uncertainty in the form of a limited continuous disturbance () t ξ . 
+Thus, a nonlinear multidimensional system with a poorly formulated right-hand side in its description has 
+been discussed. 
+ 
+5.1. Solution of the problem of nonlinear adaptation on a manifold for a plant (5.2) 
+with a deterministic disturbance  
+ 
+In this case a problem is posed for finding control ( ) ( ( )) tt  u u x , 
+ 
+Т
+ТТ
+12
+() , t   x x x x over an plant 
+that would ensure its transfer from an arbitrary initial state x
+0
+ in a certain region of the space state into a 
+given state x
+*
+ and its stabilization in a certain neighborhood of the target manifold 
+ 
+ 
+*
+1
+,  ψ x x x (5.3) 
+ 
+where   ψx is the target macrovariable. 
+Remark 4. Derivation of the control system with variable x
+*
+(t) is also quite straightforward but 
+cumbersome, therefore, here for the sake of readability we take x
+*
+(t)=x
+*
+=const, and parameters 
+12
+, ww are 
+also taken to be scalar. 
+Implementation of the NAD algorithm 
+Step 1. Extension of the system: 
+ 
+12
+2
+( ) ( ),
+( ) ( ) ( ) ( ),
+( ) ( ), const 0.
+tt
+t t t t
+tt
+
+  
+    
+xx
+x Aq Au z
+z ψ
+ (5.4) 
+ 
+Step 2. Derivation of the controller structure.  Differential equations and control processes, N. 3, 2022 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/36 
+2.1. Introduce the macrovariable  
+(1)
+21
+,,  ψ x φ x z in designing which a further defined function is 
+used  
+1
+, φ x z . 
+2.2. Formulate the variational problem
+ 
+1 (1)
+, ,
+C
+ ψ where
+   
+3
+22
+1 (1) 2 (1)
+1
+1
+0
+min,
+C l l
+l
+w dt
+
+
+
+     
+
+
+
+
+ and the macrovariable 
+ 
+T
+(1) (1) (1) (1)
+1 2 3
+,,     ψ determines 
+the limit given by  
+(1)
+0, tt    ψ . The problem solution 
+ 
+1 (1)
+, 
+C
+ ψ relies on the equation 
+   
+(1) (1)
+11
+0, const 0. w t t w     ψψ 
+2.3. Control u is determined by the following relations: 
+ 
+ 
+ 
+1 (1) T
+1
+T
+3 12
+11 1 21 1
+11 12 13
+12 2 22 2
+3 12
+13 3 23 3
+1 2 3
+( ),
+, .
+wt
+x z x
+x x x
+x z x
+x z x
+z z z
+
+    
+     
+    
+
+  
+   
+
+   
+   
+     
+    
+    
+  
+
+Au ψ A q J φ Y z
+YJ φ
+ (5.5) 
+ 
+2.4. System (5.4) is reduced on the attained manifold 
+(1)
+0,  ψ where one has the relation
+ 
+21
+,,t    x φ x z : 
+ 
+ 
+ 
+11
+*
+1
+( ) , ,
+( ) ( ) .
+t
+tt
+
+    
+x φ φ x z
+z ψ x x
+ (5.6) 
+ 
+System (5.6) describes the law of behavior of (5.4) on the manifold  
+21
+,.  x φ x z 
+2.5. In order to define the function  
+1
+, φ x z introduce a macrovariable 
+(2)
+, const 0 kk     ψ ψ z 
+and pose a variational problem
+ 
+2 (2)
+, 
+C
+ ψ : 
+   
+3
+22
+2 (2) 2 (2)
+2
+1
+0
+min
+C l l
+l
+w dt
+
+
+
+     
+
+
+
+
+ in accordance 
+with which the control  
+1
+, φ x z for the plant (5.6) is determined from the equation 
+   
+(2) (2)
+2
+0 w t t  ψψ : 
+ 
+   
+1 (2) 1
+1 2 2
+,. w k w k k
+
+         φ x z ψ ψ ψ z ψ (5.7) 
+ 
+Here 
+2
+C
+ is the quality functional of the sought-for control during the motion of the imaging point 
+from the manifold 
+(1)
+0  ψ to the manifold 
+(2)
+0.  ψ 
+The synthesis is over, and the final control system for the model (5.2) represents a family of equations 
+of the controlled plant (5.2) and the controller (5.5), (5.7) with the parameters
+12
+, , , w w k  in the scalar 
+notation given by the following: 
+ Differential equations and control processes, N. 3, 2022 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/37 
+   
+   
+   
+1 (1)
+12
+1
+*
+1
+1 1 1
+2 2 2
+1
+(1) (2)
+21
+,
+( ) , ( ) , 0,
+( ) , , ,
+, , , 0, 1,2,3.
+ii
+i i i i
+ii
+ii
+i i i i i
+ii
+i i i i
+ii
+i i i i i i i i
+w x z
+xz
+z t x t x
+w kz t k w k w k
+xz
+x x z x kz k i
+
+  
+   
+        
+
+       
+   
+             
+
+         
+Au Aq
+ 
+ 
+(5.8) 
+ 
+The control system (5.2), (5.8) suppresses the external disturbances without any preliminary estimation 
+of the system’s coordinates (Figs. 1 and 2) and provides the asymptotically stable target properties for the 
+controlled plant (5.2). 
+The following are the main positive properties of the above-described NAD algorithm for designing 
+control for the plant (5.2): 
+1) no information is required on the character of the uncertainty  but its boundedness and the 
+fulfillment of natural conditions of implementability of the ADAR algorithm; 
+2) control is continuous; 
+3) all positive control properties are inherited from the ADAR methods and from the sliding-
+mode control: asymptotically stable attainment of the target manifold; control robustness in the 
+sliding mode with respect to the uncertainties; 
+4) least-action principle with a given Lagrangian is implemented, which ensures that the 
+control target is reached by the plant with a given velocity due to the given controller parameters 
+12
+,0 ww  – the coefficients at the derivatives 
+(1) (2)
+, ψψ .  
+A troublesome feature of this approach is the assumption of a disturbance in terms of the controllable 
+variables only. 
+ 
+5.2. Results of numerical simulation of the NAD control 
+ 
+The designed algorithm has been implemented for the model technological task [15, 40]: testing to 
+which extent the designed implement can execute  precise positioning into a given point of the working 
+space (Fig. 1) under the conditions of continuous disturbances  
+T
+0.2; 0.2; 0.3 ;  
+   
+T
+1
+0 8; 0; 0  x , parameter values 0.4, 1,2
+i
+wi  and (Fig. 2) – under the conditions of 
+harmonic disturbances     0.3sin / , 1,2,3, 0,1,...;
+i
+t t n i t     
+   
+T
+1
+0 1.2; 1; 0  x , parameter 
+values 
+12
+0.9; 0.09; 0.1 w w k      . 
+ 
+ 
+ 
+ 
+a) б) в) 
+Fig. 1. a) - behavior of target macrovariable, b) - phase vector coordinates, and c) - controls of 
+system (5.8) under the conditions of continuous disturbances 
+ Differential equations and control processes, N. 3, 2022 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/38 
+ 
+ 
+ 
+a) б) в) 
+Fig. 2. а) - target macrovariable, b) - phase vector coordinates and с) - controls of system (5.8) 
+under the conditions of harmonic disturbances. 
+ 
+Modeling of a control system as a collection of equations (5.2), (5.3), (5.8) was carried out for the 
+following input data values: 
+Initial state – vector    
+T
+1
+0 8; 0; 0  x (rad.). Target values 
+   
+T
+*7
+0 1.571 ; 8.308 10 ; 1.571
+
+   x . 
+Control system parameters 0, 1,2
+i
+wi  are the quantities directly proportional to the duration of 
+transient processes. 
+The control variables (hinge moments) acquire the values from the intervals: 
+66
+11
+64 10 , 64 10 u М     
+
+, 
+66
+32 10 , 32 10 , 2,3
+ii
+uМi       
+
+ (N/m) [40]. 
+ 
+5.3. Application of the NAS algorithm 
+ 
+According to NAS, the final description [41] of the discrete stochastic control system with the 
+parameters 
+12
+,,    is made up by the following collection of equations: 
+ 
+         
+         
+         
+             
+           
+           
+1 1 1 1 2
+22
+2 2 1 2
+* (1)
+1 1 2 1
+(1) (1)
+2 1 1 2 2
+1
+1 2 1
+1 , ,
+1 1 , 
+,,
+, ,
+1 1 ,
+1 , 0,1,... .
+d d d d d
+d d d d c d
+d d x d d
+d d d d d
+d d c d c d d
+d d d
+
+    
+      
+  
+   
+           
+     
+x g g x x
+x g Au ξξ
+g x Aq x
+ψ x x x ψ x φ x
+Au g ψ ψ x
+φ x ψ x
+ (5.9) 
+ 
+Statement 4. The estimates of disturbances as a function of the observed variables, obtained via the 
+NAD (NAS) algorithms, delivering to the control systems an asymptotic stability in the neighborhood of 
+the target manifold (on average) are respectively given by the following: 
+ 
+     
+(1) (1)
+11
+( ) ( ), 0;
+ˆ
+1 , 1.
+tt
+d d d
+   
+     
+z ψ
+ξ ψ ψ
+ (5.10) 
+ 
+The proof of Statement 4 is constructive and follows immediately from the NAD and NAS algorithms. 
+The validation of the first equation from (5.10) lies in the proof of Statement 1, and the correctness of the 
+second equation follows from the proof of Statement 3. Differential equations and control processes, N. 3, 2022 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/39 
+From (5.10) follows that the model for estimating deterministic disturbances (the last equation in the 
+system (5.4)), delivering an asymptotic stability to the control system in the neighborhood of the target 
+manifold, has a well-defined validation. 
+ 
+6. Comparison of the deterministic and stochastic controls in the design and off-
+design conditions 
+ 
+Consider the results of modeling the control system (5.9) (Fig. 4) for the above-enumerated parameter 
+values, initial conditions with the target vector 
+ 
+T
+*7
+1
+1.571 ; 8 10 ; 1.571
+
+   x and the discretization step 
+of 
+5
+10
+
+ arbitrary units. 
+ 
+ 
+ 
+ 
+a) б) в) 
+ 
+ 
+d) e) 
+Fig. 3. а), b), с)  – comparative graphs of the controlled variables and d), e) – controls of the 
+systems (5.8) and (5.9) under the conditions of random disturbances   0;1
+i
+N  . 
+ 
+As it follows from Figs. 3 d), e), the NAD control (for the sake of simulation we discretized the 
+systems (5.2), (5.8) using the Euler scheme) is even more efficient in terms of energy in the off-design 
+conditions, but Figs. 3 а), b), с) suggest a higher precision and stability of the NAS control in the cases 
+where the target values are attained. A more careful numerical study should be carried out by selecting the 
+set of values of 
+12
+, , , , w w k   
+12
+,,    substantially affecting the transient process quality. It is also 
+clear that there is an overshoot problem in the discrete NAS algorithm, which is still an open issue.  
+Summing up, the method of nonlinear adaptation on the manifold is applicable both to continuous and 
+discrete systems both under the conditions of random and deterministic disturbances. However, a 
+limitation of the algorithm of nonlinear adaptation on a manifold proposed here is the presence of 
+disturbances only in the equations containing the control variable, while in the stochastic algorithm this 
+limitation is eliminated.  
+ 
+7. Conclusions  
+ Differential equations and control processes, N. 3, 2022 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/40 
+The two reported algorithms for the solution of the problem of control over the center of mass motion 
+of a moving plant [13-15] with an incomplete description represent a continuation of the previous research 
+[22-24]. 
+It should be noted that both algorithms admit a control system design with a restriction of the values of 
+the variables and control, but the design of a control meeting such additional requirements is yet the focus 
+of future research. 
+We have presented the results of numerical simulations validating the performance of the designed 
+controllers in the class of the ADAR controls for the plants with random and deterministic uncertainties in 
+the description. 
+These results can be relevant in, e.g., all control systems of robotic arms, functioning under the 
+conditions of uncertainty, and in designing the decision-making support systems in controlling compound 
+plants. 
+ 
+Acknowledgements 
+ 
+The reported study was funded by RFBR according to the research project № 20-08-00747. 
+ 
+References 
+ 
+[1] Kolesnikov, A.A. Synergistic methods of control complex systems: the theory of system 
+synthesis, M.: Librokom, 2012. (in Russian). 
+[2] Khalil, H.K. Nonlinear systems, New York: Prentice Hall, 2002. 
+[3] Methods of classical and modern theory of automatic control. V.5: Methods of modern theory 
+of automatic control / edited by Pupkov K.A. and Yegupov N.D., M .: Publishing house of 
+Bauman MSTU, 2004. (in Russian). 
+[4] Miroshnik, I.V., Nikiforov, V.O., and Fradkov, A.L. Nonlinear and adaptive control of 
+complex dynamic systems, SPb: Nauka, 2000. (in Russian). 
+[5] Isidori, A. Lectures in Feedback Design for Multivariable Systems, in: Advanced Textbooks 
+in Control and Signal Processing, Springer, Cham, 2017. https://doi.org/10.1007/978-3-319-
+42031-8. 
+[6] Annaswamy, A.M. and Fradkov, A.L. A historical perspective of adaptive control and 
+learning, Annual Reviews in Control 52 (2021) pp. 18-41. 
+https://doi.org/10.1016/j.arcontrol.2021.10.014. 
+[7] Sastry, S., Bodson, M. Adaptive Control: Stability, Convergence and Robustness, Courier 
+Dover Publications, 2011.  
+[8] Kolesnikov, А.А. Synergetics and problems of control theory: Collected articles / edited by 
+А.А. Kolesnikov, М.:Fizmatlit, 2004. (in Russian). 
+[9] Tyukin, I.Yu., Terekhov, V.A. Adaptation in nonlinear dynamical systems, SPb: LKI, 2008. 
+(in Russian). 
+[10] Krasovsky, A.A. Mathematical and applied theory. Selected works, М: Nauka, 2002. (in 
+Russian). 
+[11] Kokotović, P.V., and Arcak M. Constructive Nonlinear Control: progress in the 90'S. Prepr. 
+14th IFAC World Congress, Beijing, China, 1999. 
+[12] Krstić, M., Kanellakopoulos, I., and Kokotović, P.V. Nonlinear and adaptive control design, 
+New York: John Wiley & Sons, 1995. 
+[13] Pyatnitsky, E.S. The principle of decomposition in the control of mechanical systems, Dokl. 
+AN SSSR- Dokl. USSR Academy of Sciences 300(2) (1988) pp. 300–303. (in Russian). 
+[14] Yu H., Liu Y. and Hasan, M.S. Review of modelling and No. remote control for excavators, 
+International Journal of Advanced Mechatronic Systems 2(1) (2009) pp. 68-80. 
+[15] Matyukhin, V.I. Stability of the manifolds of controlled motions of a manipulator, 
+Automation and Remote Control 59(4) (1998) pp. 494–501. Differential equations and control processes, N. 3, 2022 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/41 
+[16] Li, W. and Krstic, M. Prescribed-Time Control of Stochastic Nonlinear Systems with 
+Reduced Control Effort, Journal of Systems Science and Complexity 34 (2021) pp. 1782-
+1800. https://doi.org/10.1007/s11424-021-1217-7. 
+[17] Fareh, R., Khadraoui, S., Abdallah M.Y., Baziyad M. and Bettayeb M. Active disturbance 
+rejection control for robotic systems: A review, Mechatronics 80 (2021). 
+https://doi.org/10.1016/j.mechatronics.2021.102671. 
+[18] Wang, S., Zhang, K. and Herrmann, G. An Adaptive Controller for Robotic Manipulators 
+with Unknown Kinematics and Dynamics, IFAC-PapersOnLine 53(2) (2020) pp. 8796-8801. 
+https://doi.org/10.1016/j.ifacol.2020.12.1385. 
+[19] Astolfi, A., Karagiannis, D. and Ortega, R. Nonlinear and Adaptive Control with 
+Applications, London: Springer-Verlag London Limited, 2008. 
+[20] Kokotovic P. and Arcak M. Constructive nonlinear control: a historic perspective, Automatica 
+37 (2001) pp. 637-662. 
+[21] Utkin, V.I. Sliding modes in control and optimization, Springer, 2012. 
+[22] Kolesnikov, A.A. New nonlinear methods of flight control, М.: Fizmatlit, 2013. (in Russian). 
+[23] Kolesnikova, S.I. A multiple-control system for nonlinear discrete object under uncertainty, 
+Optimization Methods and Software 34(3) (2019) pp. 578–585.  
+[24] Kolesnikova, S.I. Synthesis of the control system for a second order non-linear object with an 
+incomplete description, Automation and Remote Control 79(9) (2018) pp. 1556–1566. 
+[25] Galiullin, A.S. Inverse problems of dynamics and control problems of motions of material 
+systems, Differential equations 8 (1972) pp. 1535–1541. (in Russian). 
+[26] Levi-Civita, T. and Amaldi, U. Course of Theoretical Mechanics, М.: Izd. inostrannoy 
+literatury, 1951. (in Russian). 
+[27] Krutko, P.D. Statistical dynamics of impulse systems, М: Sov. Radio, 1963. (in Russian). 
+[28] Johnson, S. Theory of Regulators Adapting to Disturbances / Filtering and stochastic control 
+in dynamical systems. Ed. K.T. Leondes, М: Мir, 1980. (in Russian). 
+[29] Kolmogorov, A.N. Combinatorial foundations of information theory and the calculus of 
+probabilities, Uspekhi matematicheskikh nauk 38(4) (1983) pp. 29–40. (in Russian). 
+[30] Bellman, R. Regulatory processes with adaptation, M: Nauka, 1964. (in Russian). 
+[31] Derevitsky, D.P., and. Fradkov, A.L. Two models for analyzing dynamics of adaptation 
+algorithms, Autom. Remote Control 35(1) (1974) pp. 59–67. 
+[32] Ljung, L. Analysis of recursive stochastic algorithms, IEEE Trans. Automat. Contr. 22(4) 
+(1977) pp. 551–575. 
+[33] Bellman, R., and Kalaba, R. Dynamic programming and adaptive control processes: 
+Mathematical foundations, IRE Trans. on Automatic Control AC-5 (1960) pp. 5–10.  
+[34] Saridis, J. Self-organizing stochastic control systems, М.: Nauka, 1980. (in Russian). 
+[35] Afanas'ev, V.N. Guaranteed control concept for uncertain objects, Journal of Computer and 
+Systems Sciences International 49(1) (2010) pp. 22–29. 
+[36] Chetaev, N.G. Traffic Sustainability: a training guide, М: Nauka, 1990. (in Russian). 
+[37] Moiseev, N.N. Mathematical problems of system analysis, М: URSS, 2016. (in Russian). 
+[38] Astroem, K.J. Introduction to Stochastic Control Theory, New York and London: Academic 
+Press, 1970.  
+[39] Åström, K.J., and Wittenmark, B. Adaptive Control. 2nd ed., New York: Dover Publications, 
+2008. 
+[40] Pobegailo, P.A. The working equipment of a single-bucket hydraulic excavator: on the 
+accuracy of bucket movement, Gornyy informatsionno-analiticheskiy byulleten-Mining 
+Information and Analytical Bulletin 11 (2017) pp. 113-117. (In Russ.). 
+[41] Kolesnikov, A.A., Kolesnikovа, and S.I., Tsvetnitskaya S.A. Discrete Stochastic Regulator on 
+a Manifold, Minimizing Dispersion of the Output Macrovariable, Mekhatronika, 
+Avtomatizatsiya, Upravlenie 20(12) (2019) pp. 707-713. 
+[42] Kulebakin, B.S. On the behavior of continuously perturbed automated linear systems, Dokl. 
+AN SSSR- Dokl. USSR Academy of Sciences 68(5) (1949) pp. 73–79. (In Russ.). Differential equations and control processes, N. 3, 2022 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/42 
+[43] Smirnov, V.I. Course of higher mathematics. V. 5, М: Nauka, 1976. (in Russian). 
+ 
+ 
+APPENDIX  
+А. Commentary to the variational problem 
+ 
+, 
+C
+ .  
+Comment 1. The results of theoretical mechanics (see e.g., [26], and [8], pp. 77-82) imply the validity 
+of the following statement: for the relation  
+12
+,0 xx     (here for simplicity the dimensionality of 
+the plant n=2 and the control is scalar) to be an invariant manifold of the system  
+12
+, , 1,2
+ii
+x R x x i  , 
+it is necessary and sufficient that the following condition be fulfilled:   
+ 
+ 
+   
+   
+2
+12
+1 2 1 2
+1
+1 2 1 2 1(2)
+,
+, , , , 
+, , ,
+i
+i
+i
+ii
+xx
+d
+R x x x x
+dt x
+R x x f x x u
+
+
+
+   
+
+
+
+ 
+ 
+ 
+where 
+1(2)
+u enters the first or the second equation;  
+12
+,, xx  is a certain single-valued (with 
+respect to  ) continuous differentiable function of its arguments, which would turn to zero at 
+ 
+12
+0 : 0, , 0 xx     , specifically    
+1 2 1 2
+, , , , x x w x x     const, >0 ww  . 
+Comment 2. If the variational problem 
+ 
+, 
+C
+ is given by  
+ 
+   
+   
+2 2 2
+0
+min, 0, , 
+0, 0, 0 0,
+C
+w dt t
+
+          
+        
+
+ 
+ 
+ 
+then the solutions of the functional equation   0 w      would determine the stable extremals 
+delivering a minimum to the functional
+С
+ .  
+Indeed, the Euler–Lagrange equation for 
+С
+ with the subintegral function 
+   
+2 2 2
+,, F t w        will be given by:  
+2
+2 2 0
+F d F
+w
+dt
+   
+      
+     
+. Multiplying the 
+latter equation by  and integrating with respect to t, obtain  
+     
+2 2 2 2 2
+0 0 , w d w d w C
+
+                    
+
+
+ 
+wherefrom, considering the conditions   0, 0, 0 0, t         , constant 0 С  . Rewriting 
+the resulting expression in the form of        
+0 ww          , we observe that the solutions 
+to the equation   0 w      possess the properties of the asymptotic stability. 
+B. Proof of Statement 1. By condition, disturbance (t) in the description (1.1) is a limited, 
+continuous function of time, and its behavior does not involve any violation of the conditions of the 
+existence and performance of the ADAR control (Section 2.1).  
+It is well known that a) continuous functions (here disturbances) may be described as the solutions to 
+certain differential equations [42]; b) continuous disturbances  may be represented by a superposition of 
+piecewise-continuous (piecewise-constant, in particular) basis functions with the coefficients changing in a 
+stepwise manner within comparatively short time periods (wave representation [28]); c) any measurable 
+bounded function may be represented as a uniform limit of piecewise-constant functions (see e.g., [43]). In 
+view of the above, it is suffice to demonstrate the attainability of the given target manifold and the Differential equations and control processes, N. 3, 2022 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/43 
+system’s stabilization in its neighborhood for such disturbances as piecewise-constant functions of time 
+[11]. 
+Under the conditions of implementability of the NAD algorithm (and ADAR method, respectively 
+(Items 1) - 4) in Section 2.1), the initial system for the regulator synthesis is given by (2.1) (Step 1 of the 
+NAD algorithm, Section 3.1). Now consider possible versions of the form of the target macrovariable  
+for the plant (1.1):    
+1 2 1
+,,  ψ ψ x x ψ ψ x . Case  
+2
+ ψ ψ x is trivial and represents a special case of 
+the former, since the control is contained in the second equation.  
+1. Consider a problem of control over the plant (1.1) with the macrovariable  
+12
+,.  ψ ψ x x In the 
+description of  
+12
+,  ψ ψ x x , there are both state variables in place of arguments, therefore the invariant 
+ 
+12
+,0  ψ x x is attainable within a single step of the NAD algorithm, according to which we take 
+(1)
+, 0 kk    ψ ψ z and, given the closed system (2.1), obtain 
+ 
+   
+(1) (1)
+11
+T
+3 12
+11 21 1 1
+11 12 13
+12 22 2 2
+3 12
+13 23 3 3
+21 22 23
+0, ,
+, , ,
+T
+w w k k t
+f f z u
+x x x
+f f z u
+f f z u
+x x x
+        
+     
+ 
+
+  
+
+
+     
+
+     
+ 
+
+  
+
+ψ ψ ψ ψ ψ z
+ψ J ψ F J ψ F
+ 
+wherefrom there follows the law of control  
+T
+1 2 3
+,, u u u  u , providing 
+(1)
+0, kt      ψ ψ z : 
+ 
+ 
+1
+1
+1 1 2
+21
+2
+, 
+0, , 1,2,3.
+ii
+i i i i i i i
+ii
+i
+ii
+i
+u w kz k f f z
+xx
+z dt i
+x
+
+
+       
+        
+   
+
+   
+
+    
+
+
+ (A.1) 
+ 
+The final control system represents a collection of the plant’s (1.1) and regulator’s (A.1) equations, 
+whose structure has an integrator providing a suppression of the piecewise-constant disturbance additively 
+entering the equation with control (a system with the 1-st order astaticism with respect to the master 
+control) in the steady-state mode of the system operation. 
+It is easy to show that after having taken the Lyapunov’s function in the form of 
+ 
+3
+2
+(1)
+1
+0.5
+i
+i
+V
+
+
+
+, its 
+derivative V will be negative 
+ 
+3
+2
+1 (1)
+1
+1
+0
+i
+i
+Vw
+
+
+   
+
+ upon substitution of (A.1) taking into account 
+equations (2.1). Substituting the control (A.1) into the description (1.1), obtain 
+ 
+ 
+T
+(1) 1 (1) 3 12
+1
+21 22 23
+diag , , , w
+x x x
+
+     
+  
+
+  
+
+ξ ψ ψ z 
+(A.2) 
+or, in the scalar description,  
+(1) (1)
+11
+2
+, 1,2,3.
+i
+i i i i
+i
+w w z i
+x
+
+
+
+
+   
+2. Consider now the problem of control over the plant (1.1) with the macrovariable  
+1
+ ψ ψ x . 
+Attaining the invariant  
+1
+0  ψx is provided by the NAD algorithm in two steps. First, from the solution 
+of the functional equation    
+(1) (1)
+1
+0, w t t t     ψψ for the problem 
+   
+1 (1) (1)
+21
+, , ,
+C
+   ψ ψ x φ x z 
+we obtain, considering the equations of the extended system,  
+ Differential equations and control processes, N. 3, 2022 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/44 
+   
+)
+2
+1 (1
+11 12
+,, , w dt
+
+      
+
+f u ψ φ x z z z ψ xx 
+(A.3) 
+ 
+Decomposition of the system (2.1) on the manifold  
+21
+,,t    x φ x z will yield the next system, 
+which would be an input for the second stage of synthesis 
+ 
+   
+1 1 1 1
+,,
+, 0.
+, 
+   
+f x φ x z
+z ψ
+x
+ (A.4) 
+ 
+Find the expressions in order to define  
+1
+, φ x z from the solution of the functional equation 
+   
+(2) (2)
+2
+0, w t t t     ψψ for the problem 
+ 
+2 (2) (2)
+, , , 0
+C
+kk     ψ ψ ψ z 
+ 
+ 
+     
+2
+T
+3 12
+11 12 13
+11 12 13
+T
+11 12 13 1 1 1 1 1
+, , ,
+0,
+,
+, , ,
+w k k
+d dd
+f f f
+dx dx dx
+f f f
+    
+  
+
+
+
+ f f f
+ψ ψ ψ
+x
+z
+ψ
+φ x z
+ 
+(A.5) 
+ 
+so further we can also define its total derivative. The regulator for the plant (1.1) with the control 
+target      
+1
+0, t t t     ψ ψ x is determined by a collection of equations (A.3)-(A.5). 
+Substituting the resulting control (A.3) into the description (1.1), obtain 
+ 
+     
+   
+1 (1)
+11
+1 (1) (1) (1)
+11
+2 2 2 1 2 1 2
+2 11
+,
+ˆ,.
+,, w
+w w w
+
+
+
+
+    
+    
+ x f f
+x
+xxξx ψ φ x z z
+ψ φ x z z ψ ψ ξ z
+x
+ξ
+ (A.6) 
+ 
+The designed controls (A.1), (A.3) have been obtained from the condition 
+   
+(1) (1)
+1
+0, w t t t     ψψ in the space of the plant’s states (1.1), ensures that for >0 ( ) ( ) tt    z ξ
+, starting from a certain value of t
+
+ considering (A.2) and (A.6). Statement 1 has been proved. 
+В. Commentary to the NAS algorithm. Step 1 of the NAS algorithm, based on the classical ADAR, 
+would yield an intermediate relation (given the functions     ,1 dd    are fixed) 
+ 
+             
+     
+(1)
+21
+1
+ 
+ 
+1,
+: , 1,2,..
+A
+d d d c d d d
+d d d
+         
+
+ug φψ
+φ φ g
+  
+ 
+The fulfillment of the operation of conventional mathematical expectation 
+   
+ 
+ ˆ
+d
+dd 
+A
+u E u ξ in 
+Step 2 of the NAS algorithm would yield the following form: 
+ 
+         
+(1)
+21
+ ˆ , 1,2,.. d d c d d d d         ug φψ (A.7) 
+ 
+By decomposing (Step 3) the description (3.1) including (A.7) we obtain the relation  
+ 
+         
+             
+(1) (1) (1)
+1 2 1
+(1)
+21
+11
+1 1 ,
+d d d d d
+d d d d c d d d
+        
+         
+ψ ψ x φ ψ
+gu φ ψ ξ ξ ξ
+ (A.8) Differential equations and control processes, N. 3, 2022 
+ 
+Electronic Journal. http://diffjournal.spbu.ru/45 
+ 
+where from follows that an estimation of the disturbance as a function of state, delivering the 
+minimal dispersion to the random function coordinates    
+(1) (1)
+1
+1dd    ψψ , will be given by 
+ 
+     
+(I) (I)
+1
+ˆ
+1. d d d     ξ ψ ψ (A.9) 
+ 
+Substituting (A.9) into (A.7), we obtain the final expression for control 
+ 
+             
+(I) (I) (1)
+2 1 1
+ 1 , 1,2,.. d d c d d d d d           ug ψ ψ φ ψ 
+ 
+ 
