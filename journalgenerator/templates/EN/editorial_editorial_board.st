@@ -58,6 +58,13 @@
 </div>
 
 <div class="editor">
+    <span class="name">Igor Soloviev</span>
+    <span class="title">Assoc. Prof.</span>
+    <span class="work">St. Petersburg State University, Russia</span>
+    <span class="email">i.soloviev@spbu.ru</span>
+</div>    
+
+<div class="editor">
     <span class="name">George S. Osipenko</span>
     <span class="title">Professor</span>
     <span class="work">Lomonosov Moscow State University, Sevastopol branch, Russia</span>

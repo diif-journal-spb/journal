@@ -14,12 +14,5 @@ e-mail: <a href="mailto:n.v.kuznetsov@spbu.ru">n.v.kuznetsov@spbu.ru</a>
 тел.: +7 921 415 7762<br />
 e-mail: <a href="mailto:n.ampilova@spbu.ru">n.ampilova@spbu.ru</a>
 </p>
-
-
-<h3>Редактор - Соловьев Игорь Павлович</h3>
-<p>доцент, кфмн<br />
-    Санкт-Петербургский Государственный Университет<br />
-    e-mail: <a href="mailto:i.soloviev@spbu.ru">i.soloviev@spbu.ru</a>
-</p>
     
 $editorial_editorial_board()$

@@ -1,7 +1,6 @@
 <h4>Licensing Authority</h4>
 <p>
-  State Publishing Committee of the Russian Federation,<br />
-  North-western Regional Department, Saint-Petersburg,<br />
+  The Journal is registered by The Federal Service for Supervision of Communications, Information Technology and Mass Media (Roskomnadzor)<br />
   Registration number: <strong><a href="../license.jpg">Эл. № ФС77-39410</a> at 15 April 2010</strong><br />
   ISSN: 1817-2172
 </p>
@@ -33,3 +32,12 @@
   199034, St. Petersburg, Russia.  
 </p>
 
+<h4>E-mail:</h4>
+<p>
+  JournalDECP@gmail.com
+</p>
+
+<h4>Tel:</h4>
+<p>
+  +7 921 415 7762
+</p>

@@ -1,0 +1,5987 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUA TIONS
+AND
+CONTR OL PR OCESSES
+N. ?, 2022
+Ele ctr onic Journal,
+r e g. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://di journal.spbu.ru/
+e-mail: jo di @mail.ru
+Delay di er ential e quations
+Nonlinear semigroups for delay equations in
+Hilbert spaces, inertial manifolds and dimension
+estimates
+Mikhail Anikushin
+Saint Petersburg State University
+demolishk a@yandex.ru.
+Abstract. W e study the well-posedness of nonautonomous nonlinear delay equa-
+tions in R
+n
+as evolutionary equations in a proper Hilbert space. W e present a
+construction of solving operators (nonautonomous case) or nonlinear semigroups
+(autonomous case) for a large class of such equations. The main idea can be
+easily extended for certain PDEs with delay . Our approach has lesser limitations
+and much more elementary than some previously known constructions of such
+semigroups and solving operators based on the theory of accretive operators. In
+the autonomous case we also study di erentiability properties of these semigroups
+in order to apply v arious dimension estimates using the Hilbert space geometry .
+However, obtaining e ective dimension estimates for delay equations is a nontriv-
+ial problem and we explain it by means of a scalar delay equation. W e also discuss
+our adjacent results concerned with inertial manifolds and their construction for
+delay equations.
+Keywords: Delay equations, Nonlinear semigroups, Inertial manifolds, Dimen-
+sion estimates.Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+1 Introduction
+In this paper we consider the following class of nonlinear nonautonomous delay
+di erential equations in R
+n
+:
+_ x(t) =
+e
+Ax
+t
++
+e
+BF (t;
+e
+Cx
+t
+); (1.1)
+where x
+t
+( ) := x(t + ),  2 [  ; 0], denotes the history segment;   > 0 is a
+constant;
+e
+A: C([  ; 0];R
+n
+)!R
+n
+,
+e
+B :R
+m
+!R
+n
+and
+e
+C : C([  ; 0];R
+n
+)!R
+r
+are bounded linear operators and F :R R
+r
+! R
+m
+is a nonlinear continuous
+function such that for some constant   =  (t) > 0, which is bounded in t from
+compact interv als, we have
+jF (t;y
+1
+) F (t;y
+2
+)j   (t)jy
+1
+ y
+2
+j for all y
+1
+;y
+2
+2R
+r
+;t2R: (1.2)
+Here and below byj j we denote the Euclidean norm in R
+j
+for any j > 0. F or
+t s we put  
+t
+s
+:= sup
+s   t
+ ( ).
+F rom the classical theory (that is the application of the Banach  xed point
+theorem), it follows that for any  
+0
+2 C([  ; 0];R
+n
+) and t
+0
+2R there exists a
+unique classical solution x( ) = x( ;t
+0
+; 
+0
+): [t
+0
+  ; +1)!R
+n
+, i. e. such that
+x
+t
+0
+  
+0
+,x( )2C
+1
+([t
+0
+; +1);R
+n
+) andx( ) satis es (1.1) for t t
+0
+. W e de ne the
+family of solving operators
+e
+U(t;s): C([  ; 0];R
+n
+)!C([  ; 0];R
+n
+), wheret s,
+by
+e
+U(t;s) 
+0
+:=x
+t
+( ;s; 
+0
+), where x
+t
+( ;s; 
+0
+) =x(t + ;s; 
+0
+) for  2 [  ; 0].
+Consider the Hilbert space H :=R
+n
+ L
+2
+(  ; 0;R
+n
+) with the usual product
+norm, which we denote byj j
+H
+, i. e. for (x; )2H we have
+j(x; )j
+2
+H
+=jxj
+2
++
+Z
+0
+  
+j ( )j
+2
+d : (1.3)
+Consider the operator A:D(A) H!H given by
+(x; )
+A
+7!
+ 
+e
+A ;
+d
+d 
+ 
+ 
+; (1.4)
+where (x; )2D(A) :=f(x; )2 Hj  (0) = x; 2 W
+1;2
+(  ; 0;R
+n
+)g. F rom
+the monograph of A. B  atk ai and S. Piazzera [10] we have that A is a generator
+of a C
+0
+-semigroup in H (see Lemma 2.2 below). The bounded linear operator
+B :R
+m
+! H is de ned as B  := (
+e
+B ; 0) and we de ne the unbounded linear
+operator C :H!R
+r
+as C(x; ) :=
+e
+C  for  2C([  ; 0];R
+n
+). Now (1.1) can be
+written as an abstract evolution equation in H:
+_ v(t) =Av(t) +BF (t;Cv(t)); (1.5)
+Electronic Journal. h ttp://di journal.spbu.ru/ 2Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+for which we will study the question of well-posedness. In our Theorem 1 be-
+low we precisely state in what sense solutions to this evolution equation can be
+understood.
+W e put E := C([  ; 0];R
+n
+) and consider the embedding E  H given by
+ 7! ( (0); ). W e identify the elements of E andH under such an embedding.
+F or anyT > 0 letH
+T
+be the set of all continuous functions v : [0;T ]!H for which
+there exists a continuous function x: [  ;T ]!R
+n
+such thatv(t) = (x(t);x
+t
+) for
+all t  0. W e will also make the use of the following property , which is, in fact,
+the main ingredient of our proofs in the  rst part.
+(MES) There is a constant M
+C
+> 0 such that for all T > 0 the inequality
+Z
+T
+0
+jCv(t)jdt M
+C
+ 
+jv(0)j
+H
++kv( )k
+L
+1
+(0;T ;H)
+ 
+: (1.6)
+is satis ed for all v( )2H
+T
+.
+T o explain it, consider, for example, the case of n = 1 and r = 1. Let v(t) =
+(x(t);x
+t
+) and
+e
+C  := (  ). Then we have (for convenience, let T   )
+Z
+T
+0
+jCv(t)jdt =
+Z
+T
+0
+jx(t  )jdt =
+Z
+0
+  
+jx(t)jdt +
+Z
+T  
+0
+jx(t)jdt 
+  (1 +
+p
+ )
+ 
+jv(0)j
+H
++kv( )k
+L
+1
+(0;T ;H)
+ 
+:
+(1.7)
+In fact, we can use the density of   -functionals in the weak-* topology of
+C([  ; 0];R) and approximations by such functionals given by the Riesz rep-
+resentation theorem to show that (MES) holds for any operator
+e
+C (with similar
+arguments in the case n  1, r  1, see Lemma 2.1 below). This simple obser-
+v ation besides the results contained in the present paper also led to a version of
+the F requency Theorem for delay equations [2]. The L
+2
+-version of (MES) helps
+to prove di erentiability properties of constructed semigroups (see Section 3).
+One of our main results is the following.
+Theorem 1. Supp ose for (1.1) that F satis es (1.2). Then for any t
+0
+2R and
+v
+0
+2H ther e is a unique gener alize d solution v(t) = v(t;t
+0
+;v
+0
+) to (1.5), which
+is a c ontinuous function [t
+0
+; +1)!H. This solution is uniquely determine d by
+the pr op erty that the family of solving op er ators U(t;s)v
+0
+:= v(t;s;v
+0
+), t  s,
+inH agr e es with the family
+e
+U(t;s) onE. Mor e over, the fol lowing pr op erties ar e
+satis e d
+Electronic Journal. h ttp://di journal.spbu.ru/ 3Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+(ULIP) F or any T > 0 and s2R ther e is a c onstant M
+1
+= M
+1
+(T;  
+s+T
+s
+) > 0
+such that for al l t2 [s;s +T ] and v
+1
+;v
+2
+2H we have
+jU(t;s)v
+1
+ U(t;s)v
+2
+j
+H
+ M
+1
+jv
+1
+ v
+2
+j
+H
+: (1.8)
+Mor e over, for al l t s +  we have U(t;s)H E and for any T   , s2R
+and t2 [s + ;s +T ] we have
+kU(t;s)v
+1
+ U(t;s)v
+2
+k
+E
+ M
+1
+jv
+1
+ v
+2
+j
+H
+: (1.9)
+(COM) The map U(t;s):E ! E is c omp act for t   s +   and the map
+U(t;s):H!H is c omp act for t s + 2  .
+(REG) F or v
+0
+2 D(A) the gener alize d solution v(t) = v(t;t
+0
+;v
+0
+), t   t
+0
+,
+is a classic al solution to (1.5), i. e. we have v( ) 2 C
+1
+([t
+0
+; +1);H)\
+C([t
+0
+; +1);E), v(t)2D(A) and v(t) satis es (1.5) for al l t t
+0
+.
+(V AR) F or al l v
+0
+2E and t
+0
+2R we have the variation of c onstants formula
+satis e d for v(t) =v(t;t
+0
+;v
+0
+) and t t
+0
+as
+v(t) =G(t t
+0
+)v
+0
++
+Z
+t
+t
+0
+G(t s)BF (s;Cv(s))ds; (1.10)
+wher e G(t) is the C
+0
+-semigr oup gener ate d by A inH.
+R emark 1. One can interpret the v ariation of constants formula from (1.10) for
+any v
+0
+2H. See Remark 4 for this.
+The proof of Theorem 1 is given in the next section. Note that L
+p
+-versions
+of (MES) (see Lemma 2.1 below) can be used to show the well-posedness in
+R
+n
+ L
+p
+(  ; 0;R
+n
+).
+R emark 2. F or our further investigations it is important that if the constant  (t)
+from (1.2) can be chosen independently of t, then the constants from (ULIP)
+depend only on T (or t s), but not on s.
+Our approach for Theorem 1 is very simple and it is based on three steps. The
+ rst one is the well-posedness of the linear problem in H, including exponential
+estimates and the v ariation of constants formula. Such results for (partial) delay
+equations are given in [10]. The second step is the existence of classical solutions
+(in the space of continuous functionsE) for the nonlinear problem, which give rise
+to classical solutions of the non-linear problem in H. The existence of solutions in
+E is well-known for delay equations inR
+n
+(see, for example, J.K. Hale [21]) as well
+Electronic Journal. h ttp://di journal.spbu.ru/ 4Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+as for some partial delay equations (see, for example, I. Chueshov [17]). The third
+step is the deriv ation of elementary a priori estimates for the norm of classical
+solutions inH with the use of the v ariation of constants formula, estimates for the
+linear problem, (1.2) and (MES). This allows us to obtain generalized solutions
+by continuity . Thus, the conclusion of Theorem 1 can be easily extended to some
+partial di erential equations with delay .
+The well-posedness of nonlinear autonomous and nonautonomous (partial)
+delay equations in Banach spaces was studied in several papers, for example, [19,
+43, 42]. The main approach in these papers is based on applications of the theory
+of accretive operators. Besides the fact that the theory itself is nonelementary and
+its applications require pages and pages of v arious estimates, in applications to
+delay equations one faces with several restrictions. F or example, to apply results
+of G. F. W ebb [43] and G.F. W ebb and M. Badii [42] to ODEs in R
+n
+with delay ,
+the number of  independent  discrete delays, roughly speaking, cannot exceed n
+that is unnatural. In [42] there is also assumed some smoothness of the right-
+hand side in t, which is linked with the construction of a family of equiv alent
+norms to obtain the accretiveness condition. In the paper of M. F aheem and
+M.R.M. Rao [19] only the case of nonautonomous delay di erential equations in
+R
+n
+is considered. Their main restriction is posed on the nonlinear part that must
+be everywhere de ned in H (i. e. no discrete delays can appear in the nonlinear
+term) and some smoothness in t is also assumed. However, the authors of [19]
+considered a nonautonomous linear part and showed the well-posedness for the
+linear problem, but their assumptions on the linear part in our context allow to
+consider it as a nonlinear part of (1.1), i. e. (1.2) and (MES) are satis ed. Thus,
+our Theorem 1 covers in most and largely extends the  nal result of [19] as well as
+results from [43, 42]. Moreover, if we put
+e
+A = 0 in (1.1), then the generation of a
+C
+0
+-semigroup for the operator A is easier to obtain. Now, if we make F (t;
+e
+Cx
+t
+)
+to be a linear function of x
+t
+for each t, then Theorem 1 can be considered as a
+well-posedness theorem for linear nonautonomous delay equations in H. There
+are other papers on the question of well-posedness for delay equations, which use
+more concrete approaches (see D. Breda [12] and links therein), but none of them
+entirely covers the result of Theorem 1 and cannot compete with the simplicity
+of its proof.
+W e also note that the studying of delay equations in the Hilbert space setting
+is rarely seen in works on dynamical systems. F or example, recent monographs
+on in nite-dimensional dynamical systems (see A.N. Carv alho, J.A. Langa and
+J.C. Robinson [13]; I. Chueshov [17]) treat delay equations in the space of contin-
+Electronic Journal. h ttp://di journal.spbu.ru/ 5Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+uous functions. Below we will justify adv antages of the Hilbert space geometry
+for understanding of the dynamics of such equations.
+Namely , the obtained v ariation of constants formula (V AR) is useful for
+applications of the F requency Theorem [2, 28] (a theorem that allows to construct
+quadratic Lyapunov functionals, which we use to construct inertial manifolds)
+since it allows to pass from the nonlinear equation to a linear inhomogeneous
+system, which is studied in the context of the theorem
+*
+. It is also convenient
+for studying of almost periodic in time equations, where, as it is well-known, one
+should compactify the equation by considering the so-called limiting equations and
+check the continuous dependence with respect to perturbations of the right-hand
+side. W e refer to our works [1, 5] for applications to such and other equations in the
+in nite-dimensional context. In  nite-dimensions the F requency Theorem (also
+known as the Kalman-Y akubovich-Popov lemma) has already proved to be useful
+for studying of dimensional-like properties of autonomous and almost periodic
+ODEs (see, for example, M.M. Anikushin [9, 7]; M.M. Anikushin, V. Reitmann
+and A.O. Romanov [8]; N.V. Kuznetsov and V. Reitmann [24] and references
+therein for a range of applications).
+Theorem 1 is also convenient for studying of di erentiability properties of
+semigroups (see Section 3) and inertial manifolds (see Section 5). W e do not ex-
+plicitly state these results in this introduction because strict formulations require
+long preparations. Along with Theorem 1 these results form a basis for parts of
+our adjacent works [1, 5, 3] concerned with delay equations.
+A part of the present work is motiv ated by our previous paper [6] on the
+existence of inv ariant topological manifolds for cocycles in Hilbert spaces and es-
+pecially Problem 2 posed therein, which asks for extensions of the theory for delay
+equations with discrete delays. At Appendix A we present such an extension of
+the theory , which also gives a solution to Problem 1 from [6] asking for conditions
+to provide continuous dependence of the inertial manifold  bres. In fact, under
+some natural additional assumptions these manifolds possess classical properties
+such as exponential tracking and normal hyperbolicity , which are proved and dis-
+cussed within a more general context in our adjacent work [1]. In the present
+paper we discuss these extensions for delay equations in Section 5.
+Concerning inertial manifolds for delay equations, here we should mention
+the paper of C. Chicone [15], which extends classical results of Y u.A. Ryabov
+and R.D. Driver, devoted to inertial manifolds for delay equations. The theory
+*
+See [4, 2] for discussions on dev elopmen ts of the F requency Theorem starting from the  rst in nite-
+dimensional v ersion pro v ed b y V.A. Y akub o vic h and A.L. Likh tarnik o v [28].
+Electronic Journal. h ttp://di journal.spbu.ru/ 6Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+considered in [15] allows to construct n-dimensional inertial manifolds for delay
+equations inR
+n
+with small delays. F or comparison, our approach has some deli-
+cateness in applications, where the F requency Theorem for delay equations [2] is
+used. In particular, it allows to construct inertial manifolds with the dimension
+that is not limited to n as in [15]. Moreover, it is shown in [2] that results from
+[15] can be deduced (with relaxed in some cases conditions) in most from the F re-
+quency Theorem and our general theory from [1] (which, as we have mentioned,
+uses results of the present paper) after simple computations.
+Our results from [1, 4, 2] allow to consider v arious inertial manifolds theo-
+ries within a general geometric context based on the use of quadratic Lyapunov
+functionals. In particular, it is shown by the author in [4] that the Spectral Gap
+Condition, used by C. F oias, G.R. Sell and R. T emam [40] (see also the survey of
+S. Zelik [44]) is a particular case of some frequency inequality arising in v arious
+versions of the F requency Theorem, which provides the existence of quadratic
+functionals. This frequency inequality was also used by R.A. Smith [35, 34] for
+his developments of the Poincar  e-Bendixson theory for delay equations in R
+n
+and
+certain reaction-di usion equations
+  . Moreover, in the surveys of A. Kostianko et
+al. [23] or S. Zelik [44] it is shown that the Spatial A veraging Principle, which was
+proposed by J. Mallet-Paret and G. R. Sell to relax the Spectral Gap Condition in
+some cases, also lead to the existence of certain quadratic functionals. F or more
+discussions in this direction see [1, 4, 2]. Note also that our geometric approach
+can be also applied to construct stable/unstable and local center manifolds along
+inv ariant sets.
+Besides the above mentioned construction of quadratic Lyapunov function-
+als, an adv antage may be given by possible applications of dimension estimates,
+which use the Hilbert space geometry , and approximation of dimension-like char-
+acteristics and spectra (see D. Breda and E. V an Vleck [11]). In this direction
+we prove in Section 3 the C
+1
+-di erentiability property for semigroups in H gen-
+erated by (1.1) with F 2 C
+1
+and F
+0
+globally bounded. This allows to apply
+well-known dimension estimates for the fractal dimension (see V.V. Chepyzhov
+and A.A. Ilyin [14]), the Hausdor  dimension (see R. T emam [40], J. Mallet-Paret
+[31]) and the topological entropy (see N.V. Kuznetsov and V. Reitmann [24]) of
+compact inv ariant sets. However, obtaining e ective dimension estimates for delay
+equations seems to be a nontrivial problem and we try to discuss its nontriviality
+in Section 3. This can be seen also from rare papers on the topic, where the
+  Note that R.A. Smith did not use quadratic Ly apuno v functionals in the in nite-dimensional case, probably
+due to his inabilit y to sho w their existence. Our extensions of the F requency Theorem presen ted in [2, 4] sho w
+that under Smith’s frequency inequalit y suc h functionals do exist.
+Electronic Journal. h ttp://di journal.spbu.ru/ 7Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+pioneering paper of J. Mallet-Paret [31] and a paper of J.W-H. So and J. W u [38]
+should be mentioned. Both of the papers represent an approach, which somehow
+utilizes compactness of the di erentials to show  nite-dimensionality (as well as
+in the mentioned monographs [13, 17, 21]) and does not provide any e ective
+estimates. It seems that the authors of [38] were the  rst to mention some non-
+triviality of the problem, but they did not provide any discussions on it (referring
+to subsequent works that never appeared). Moreover, in [29] J. Mallet-Paret and
+R.D. Nussbaum studied compound processes arising from linear nonhomogeneous
+scalar delay equations with monotone feedback (such equations may appear after
+linearization). Their nontrivial results show that such compound processes for
+certain powers (corresponding either to odd or even-dimensional volumes growth)
+preserves a convex reproducing normal cone of rank 1. This allows us to treat the
+problem in the general context of spectral theory . Here the v ariational principle
+for subadditive functions proved by P . Thieullen [41], which allows to describe
+the largest uniform Lyapunov exponent of the compound cocycle as a Lyapunov
+exponent over some ergodic measure, is crucial for understanding of the problem.
+In Section 4, by means of the Suarez-Schopf model for ENSO [39], we use this
+approach to obtain e ective conditions for the nonexistence of periodic orbits and
+homoclinics. T o the best of our knowledge, this is the  rst time when the criterion
+of R.A. Smith [33] and its developments by M.Y. Li and J.S. Muldowney [27] are
+e ectively applied for equations with delay .
+This paper is organized as follows. In Section 2 we prove Theorem 1. In
+Section 3 we prove a theorem on C
+1
+-di erentiability of the semigroup given by
+(1.5) in the autonomous case (Theorems 2 and 3). Here we also consider the
+problem of obtaining e ective dimension estimates (see Problem 1) and discuss
+its nontriviality . In Section 4 we consider the Suarez-Schopf model for El Ni  no
+given by a scalar delay equation, pose a problem linked with dimension estimates
+and give a partial solution. In Section 5 we discuss inertial manifolds and their
+properties, including C
+1
+-di erentiability (see Theorem 11), normal hyperbolic-
+ity and exponential tracking. Moreover, we obtain dimension estimates using
+some Riemannian metric, which naturally arises from the construction of inertial
+manifolds (see Theorem 12). In Section 6 we continue our investigation of the
+Suarez-Schopf model and obtain conditions for the existence of one-dimensional
+and two-dimensional inertial manifolds (see Theorems 13 and 14). At Appendix
+A we present a generalization of our main result from [6], which is, in particular,
+convenient for delay equations.
+Electronic Journal. h ttp://di journal.spbu.ru/ 8Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+2 Construction of delay semigroups
+At  rst we state here a lemma from [2], which in particular shows that (MES)
+is satis ed for any operator
+e
+C . Let T > 0 and consider the subspace S
+T
+ 
+C([0;T ];C([  ; 0];R
+n
+) of all continuous functions  : [0;T ] ! C([  ; 0];R
+n
+)
+such that there exists a continuous function x: [  ;T ]!R
+n
+with the property
+ (t) =x
+t
+for all t  0. The following lemma is Lemma 8 from [2].
+Lemma 2.1. L et
+e
+C : C([  ; 0];R
+n
+)!R
+r
+b e a b ounde d line ar op er ator. Then
+ther e exists a c onstant M = M(
+e
+C) > 0 such that for al l T > 0, p  1 and any
+ 2S
+T
+we have
+ Z
+T
+0
+j
+e
+C (t)j
+p
+dt
+ 
+1=p
+ M
+e
+C
+ 
+ 
+k (0)k
+p
+L
+p
+(  ;0;R
+n
+)
++kx( )k
+p
+L
+p
+(0;T ;R
+n
+)
+ 
+1=p
+: (2.1)
+Using Lemma 2.1 with p = 1, we get that (MES) with M
+C
+:=M
+e
+C
+(1 +
+p
+ )
+is satis ed for the operator C corresponding to
+e
+C from (1.1).
+R emark 3. F rom the Riesz representation theorem, there exists a r n-matrix-
+v alued function of bounded v ariation ( ), where  2 [  ; 0], such that
+e
+C  =
+Z
+0
+  
+d( ) ( ) for any  2C([  ; 0];R
+n
+): (2.2)
+It can be shown that M
+e
+C
+  Var , where Var is the total v ariation on [  ; 0] (see
+[2]).
+R emark 4. Let us consider the space H
+p
+T
+of all functions  ( ) 2
+C([0;T ];L
+p
+(  ; 0);R
+n
+) such that for somex( )2L
+p
+(  ; 0;R
+n
+) we have (t) =x
+t
+for all t  0. It is convenient to endowH
+p
+T
+with the norm
+k ( )k
+H
+p
+T
+:=
+ 
+k (0)k
+p
+L
+p
+(  ;0;R
+n
+)
++kx( )k
+p
+L
+p
+(0;T ;R
+n
+)
+ 
+1=p
+: (2.3)
+Now Lemma 2.1 shows that the operatorH
+p
+T
+3  ( )7!I
+C
+( ( ))2 L
+p
+(0;T ;R
+r
+),
+where
+I
+C
+( ( ))(s) =
+e
+C (s) for  2S
+T
+and s2 [0;T ] (2.4)
+is well-de ned. Moreover, its norm is independent of T and p. This is the sense
+in which the v ariation of constants formula from (1.10) can be understood for any
+v
+0
+2H.
+The following lemma is Theorem 3.23 from [10].
+Electronic Journal. h ttp://di journal.spbu.ru/ 9Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+Lemma 2.2. The op er ator A given by (1.4) is the gener ator of a C
+0
+-semigr oup
+G(t), t  0, inH. In p articular, ther e ar e c onstants M
+A
+;{
+0
+> 0 such that
+jG(t)v
+0
+j
+H
+ M
+A
+e
+{
+0
+t
+jv
+0
+j
+H
+for al l t  0 and v
+0
+2H: (2.5)
+The following lemma is a particular case of Lemma 3.6 from [10].
+Lemma 2.3. L et x: [  ;1) ! R
+n
+b e a function such that x 2
+W
+1;2
+loc
+([  ;1);R
+n
+). De ne the history function
+   (t) := x
+t
+for t  0. Then
+ 2C
+1
+([0; +1);L
+2
+(  ; 0;R
+n
+)) and for al l t  0 we have  (t)2W
+1;2
+(  ; 0;R
+n
+)
+and
+_
+ (t) =
+d
+d 
+ (t) in L
+2
+(  ; 0;R
+n
+): (2.6)
+An immediate consequence of Lemma 2.3 is the following.
+Cor ol lary 1. Let x(t) = x(t;t
+0
+; 
+0
+) be the classical solution to (1.1) such that
+ 
+0
+2 W
+1;2
+(  ; 0;R
+n
+). Then the function v(t) = (x(t);x
+t
+), t  t
+0
+, is a classical
+solution to (1.5) with v
+0
+:= v(t
+0
+) =  
+0
+(or, more precisely , v(t
+0
+) = ( 
+0
+(0); 
+0
+)).
+Moreover, if we put  (t) :=F (Cv(t)), then v( ) also satis es the inhomogeneous
+equation
+_ v(t) =Av(t) +B (t) (2.7)
+and, in particular, the v ariation of constants formula for t t
+0
+v(t) =G(t t
+0
+)v
+0
++
+Z
+t
+t
+0
+G(t s)BF (Cv(s))ds (2.8)
+is v alid.
+R emark 5. An analog of Lemma 2.2 for parabolic or hyperbolic equations can
+also be proved (see, for example, Theorem 3.29 in [10]). T o proceed from Lemma
+2.3 to Corollary 1 we have to establish the well-posedness (=existence of classical
+solutions) in the space of continuous functions. This is also well-studied for partial
+di erential equations with delay . See, for example, [17].
+Now we can give a proof of Theorem 1.
+Pr o of. Let x
+j
+(t) = x
+j
+(t;t
+0
+; 
+0;j
+), where t   t
+0
+and j = 1; 2, be two classi-
+cal solutions to (1.1) and put v
+j
+(t) := (x(t);x
+t
+). If we suppose that  
+0;j
+2
+W
+1;2
+(  ; 0;R
+n
+), then v
+j
+( ) satis es (2.8) due to Corollary 1. F rom this, (2.5),
+  Here, as in the previous section, x
+t
+( ) :=x(t + ) for  2 [  ; 0].
+Electronic Journal. h ttp://di journal.spbu.ru/ 10Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+(1.2) and (MES) we get
+jv
+1
+(t) v
+2
+(t)j
+H
+ 
+ M
+A
+e
+{
+0
+(t t
+0
+)
+jv
+1
+(t
+0
+) v
+2
+(t
+0
+)j
+H
++M
+A
+ 
+t
+0
++T
+t
+0
+kBk
+Z
+t
+t
+0
+e
+{
+0
+(t s)
+jC(v
+1
+(s) v
+2
+(s))jds 
+  (M
+A
++M
+A
+M
+C
+ 
+t
+0
++T
+t
+0
+kBk)e
+{
+0
+(t t
+0
+)
+jv
+1
+(t
+0
+) v
+2
+(t
+0
+)j
+H
++
++M
+A
+M
+C
+ 
+t
+0
++T
+t
+0
+kBke
+{
+0
+(t t
+0
+)
+Z
+t
+t
+0
+jv
+1
+(s) v
+2
+(s)j
+H
+ds:
+(2.9)
+F rom this, by applying the Gronwall lemma, for some constant M
+1
+=
+M
+1
+(T;  
+t
+0
++T
+t
+0
+) we get
+jv
+1
+(t) v
+2
+(t)j
+H
+ M
+1
+jv
+1
+(t
+0
+) v
+2
+(t
+0
+)j
+H
+for all t2 [t
+0
+;t
+0
++T ]: (2.10)
+F rom (2.10) for any t
+0
+2R,v
+0
+2H we can de ne a generalized solution v(t;t
+0
+;v
+0
+),
+t t
+0
+, by the continuity and density of W
+1;2
+(  ; 0;R
+n
+) inE andH. Indeed, let a
+sequencev
+0;k
+2W
+1;2
+(  ; 0;R
+n
+), wherek = 1; 2;:::, tend tov
+0
+inH ask! +1.
+Then (2.10) shows that the sequence v
+k
+(t) = v
+k
+(t;t
+0
+;v
+0;k
+), t2 [t
+0
+;t
+0
++T ], is
+fundamental inH for any T > 0. Its limit is the generalized solution v(t;t
+0
+;v
+0
+),
+t t
+0
+, which is independent on the choice of v
+0;k
+. This proves the initial statement
+of Theorem 1 and (ULIP). Moreover for T t t
+0
++  we have
+kv
+1
+(t) v
+2
+(t)k
+E
+  sup
+ 2[  ;0]
+jv
+1
+(t + ) v
+2
+(t + )j
+H
+ M
+1
+jv
+1
+(t
+0
+) v
+2
+(t
+0
+)j
+H
+: (2.11)
+This proves that, in fact, the sequence v
+k
+(t), t2 [t
+0
+;t
+0
++T ], de ned above is
+fundamental in E for t  t
+0
++  and, consequently , v(t;t
+0
+;v
+0
+)2E. This proves
+the smoothing property stated in (ULIP). In particular, the map U(t;s) for
+t s +  takes bounded sets inH into bounded sets inE, whereU(t;s) coincides
+with
+e
+U(t;s). F rom the Arzel  a-Ascoli theorem, the map
+e
+U(t;s) fort s+  takes
+bounded sets in E into precompact sets in E. Consequently , U(t;s):H!E is
+compact for t s + 2  . This shows (COM). Summarizing the above, it is clear
+that (REG) is also satis ed. F rom Corollary 1 and continuity arguments we get
+(V AR). The proof is  nished.
+3 Di erentiability of delay semigroups
+In this section we suppose that (1.1) is autonomous, i. e. F is independent of
+t. W e suppose also that F 2 C
+1
+(R
+r
+;R
+m
+). Note that from (1.2) it immediately
+Electronic Journal. h ttp://di journal.spbu.ru/ 11Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+follows that F
+0
+is bounded. Let the assumptions of Theorem 1 hold. Then there
+is a semi ow '
+t
+:H!H given by equation (1.5), i. e. it is de ned as '
+t
+(v
+0
+) :=
+v(t; 0;v
+0
+) for all t  0 and v
+0
+2H. F or v
+0
+2E one can formally write from (1.5)
+the linearized along the tra jectory '
+t
+(v
+0
+) equation
+_
+V (t) = [A +BF
+0
+(C'
+t
+(v
+0
+))C]V (t) (3.1)
+Putting
+e
+F (t;y) :=F
+0
+(C'
+t
+(u
+0
+))y , we see that (3.1) is of the form (1.5) with F
+changed to
+e
+F . Thus, we have the following well-posedness result for (3.1), which
+follows
+  from Theorem 1.
+Lemma 3.1. F or any v
+0
+2 H and  
+0
+2 H e quation (3.1) has a unique gen-
+er alize d solution V (t) = V (t; 
+0
+;v
+0
+) such that V (0) =  
+0
+. F or  
+0
+2D(A) the
+solution V (t) =V (t; 
+0
+;v
+0
+) is a classic al solution, i. e. V ( )2C
+1
+([0; +1);H)\
+C([0; +1);E), V (t)2D(A) and V (t) satis es (3.1) for al l t  0.
+There is, in fact, continuous dependence of solutions to (3.1) on v
+0
+2E that
+can be seen from the v ariation of constants formula (V AR) (see Lemma 5.1).
+LetK  H be an inv ariant compact set, i. e. '
+t
+(K) =K for all t  0.
+F rom the smoothing property in (ULIP) and the fact that a compact inv ariant
+set consists of complete tra jectories we have the inclusion K D(A). Let us
+formulate the following property .
+(MES*) There is a constant M
+ 
+C
+> 0 such that for all T > 0
+Z
+T
+0
+jCv(t)j
+2
+dt M
+ 
+C
+ 
+jv(0)j
+2
+H
++kv( )k
+2
+L
+2
+(0;T ;H)
+ 
+: (3.2)
+for all v( )2H
+T
+.
+F rom Lemma 2.1 with p = 2 we get that (MES*) withM
+ 
+C
+:= (M
+e
+C
+)
+2
+is satis ed
+for any C corresponding to
+e
+C from (1.1).
+F or the proof of di erentiability properties below we need a simple observ ation
+given by the following lemma.
+Lemma 3.2. L et Q:R
+r
+! R
+m
+b e a glob al ly b ounde d c ontinuous function and
+ x some T > 0. Then the op er ator  ( )7! Q( ( )) is a c ontinuous map fr om
+L
+2
+(0;T ;R
+r
+) to L
+2
+(0;T ;R
+m
+)
+  Although formally Theorem 1 is pro v ed for nonlinearities F (t;y), whic h are de ned for t2R, it clearly
+remains true (with ob vious mo di cations) when w e ha v e t2 [0; +1) only .
+Electronic Journal. h ttp://di journal.spbu.ru/ 12Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+Pr o of. One can prove the continuity at every point by contradiction, combining
+the facts that any convergent L
+2
+sequence contains a subsequence, which converges
+almost everywhere, and the Dominated Convergence Theorem.
+Theorem 2. Supp ose that F2C
+1
+(R
+r
+;R
+m
+) and F
+0
+is glob al ly b ounde d. Then for
+any v
+0
+2H, any T > 0 and any b ounde d inH subsetB we have
+lim
+h!0
+j'
+t
+(v
+0
++h ) '
+t
+(v
+0
+) hV (t;v
+0
+; )j
+H
+h
+! 0; (3.3)
+wher e the limit is uniform in t2 [0;T ] and  2B .
+Pr o of. Put  (t) ='
+t
+(v
+0
++h ) '
+t
+(v
+0
+) V (t;v
+0
+;h ). W e apply the v ariation of
+constants formulas (see Remark 4) to get the representations
+'
+t
+(v
+0
++h ) =G(t)(v
+0
++h ) +
+Z
+t
+0
+G(t s)BF (C'
+s
+(v
+0
++h ))ds (3.4)
+and for V (t) =V (t;v
+0
+;h )
+V (t) =hG(t)  +
+Z
+t
+0
+G(t s)BF
+0
+(C'
+s
+(v
+0
+))CV (s)ds: (3.5)
+Putting  (s) :='
+s
+(v
+0
++h ) '
+s
+(v
+0
+) and using the Newton-Liebniz formula, we
+get
+F (C'
+s
+(v
+0
++h )) F (C'
+s
+v
+0
+) =
+=
+ Z
+1
+0
+F
+0
+[C(ff'
+s
+(v
+0
++h ) + (1 ff)'
+s
+(v
+0
+))]dff
+ 
+C (s):
+(3.6)
+Putting  (s) = (s;v
+0
+;ff;h; ) :=C(ff'
+s
+(v
+0
++h ) + (1 ff)'
+s
+(v
+0
+)) and  
+0
+(s) =
+ 
+0
+(s;v
+0
+) =C'
+s
+(v
+0
+), we may write  (t) as
+ (t) =
+Z
+t
+0
+G(t s)B
+ Z
+1
+0
+F
+0
+( (s))dffC (s) F
+0
+(C'
+s
+(v
+0
+))CV (s)
+ 
+ds: (3.7)
+Since V (s) =  (s)  (s), we have
+ (t) =
+Z
+t
+0
+G(t s)B
+ Z
+1
+0
+(F
+0
+( (s)) F
+0
+( 
+0
+(s)))dff
+ 
+C (s)ds+
++
+Z
+t
+0
+G(t s)BF
+0
+(C'
+s
+(v
+0
+))C (s)ds
+(3.8)
+Electronic Journal. h ttp://di journal.spbu.ru/ 13Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+F or the  rst integral using Lemma 2.2 and the H  oelder inequality , for any t2 [0;T ]
+we have
+ 
+ 
+ 
+ 
+Z
+t
+0
+G(t s)B
+ Z
+1
+0
+(F
+0
+( (s)) F
+0
+( 
+0
+(s)))dff
+ 
+C (s)
+ 
+ 
+ 
+ 
+ 
+ M
+A
+e
+{
+0
+T
+ kBk 
+ Z
+T
+0
+Z
+1
+0
+jF
+0
+( (s)) F
+0
+( 
+0
+(s)j
+2
+dffds
+ 
+1=2
+ 
+ 
+ Z
+T
+0
+jC (s)j
+2
+ds
+ 
+1=2
+:
+(3.9)
+F rom Lemma 2.1 we have that  ( )! 
+0
+(s) inL
+2
+(0;T ;R
+r
+) ash! 0+ uniformly
+in  2B . Now using the T onelli theorem, we may apply Lemma 3.2 to conclude
+that the limit
+R(h; ;v
+0
+) :=
+ Z
+T
+0
+Z
+1
+0
+jF
+0
+( (s)) F
+0
+( 
+0
+(s)j
+2
+dffds
+ 
+1=2
+! 0 as h! 0 (3.10)
+is uniform in  2B .
+Since  ( ) 2 H
+T
+2
+(see Remark 4), from (MES*) and (ULIP) we get a
+constant M
+0
+=M
+0
+(T )> 0 such that
+ Z
+T
+0
+jC (s)j
+2
+ds
+ 
+ M
+0
+jh j
+H
+: (3.11)
+F or the second integral in (3.8) we have
+ 
+ 
+ 
+ 
+Z
+t
+0
+G(t s)BF
+0
+(C'
+s
+(v
+0
+))C (s)ds
+ 
+ 
+ 
+ 
+ M
+A
+e
+{
+0
+T
+ kBk 
+Z
+t
+0
+C (s)ds: (3.12)
+Since  (0) = 0, from (MES) we get that
+R
+t
+0
+jC (s)jds   M
+e
+C
+R
+t
+0
+j (s)j
+H
+ds.
+Combining this and (3.9), (3.11), (3.12) with (3.8), we get for some constant
+M
+00
+=M
+00
+(B;T;v
+0
+)> 0 that
+j (t)j
+H
+ M
+00
+ R(h; ;v
+0
+) jh j
+H
++M
+00
+ 
+Z
+t
+0
+j (s)j
+H
+ds: (3.13)
+Now applying the Gronwall inequality , we  nish the proof.
+LetK be a compact inv ariant set. As in [40, 14], we say that the family '
+t
+is
+quasi-di er entiable onK w. r. t. the family of quasi-di erentials L(t;v)2L(H),
+where t  0 and v2K, if for all t  0
+sup
+v
+1
+;v
+2
+2K
+jv
+1
+ v
+2
+j
+H
+ "
+j'
+t
+(v
+2
+) '
+t
+(v
+1
+) L(t;v
+1
+)(v
+2
+ v
+1
+)j
+H
+jv
+1
+ v
+2
+j
+H
+! 0 as "! 0+ (3.14)
+Electronic Journal. h ttp://di journal.spbu.ru/ 14Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+and the following properties are satis ed
+(QD1) sup
+t2[0;1]
+v2K
+kL(t;v)k<1;
+(QD2) L(t +s;v) =L(t;'
+s
+(v))L(s;v) for all t;s  0 and v2K.
+Theorem 3. Supp ose that F is indep endent of t, F 2 C
+1
+(R
+r
+;R
+m
+) and F
+0
+is
+glob al ly b ounde d. Consider a c omp act set K  H, which is invariant w. r. t.
+the semi ow '
+t
+, t  0, given by e quation (1.5). Then the family '
+t
+is quasi-
+di er entiable w. r. t. the family of quasi-di er entials L(t;v) given by
+L(t;v)  :=V (t;v; ); (3.15)
+wher e V (t) = V (t;v
+0
+; ) is the solution to (3.1) with V (0) =   . Mor e over, the
+map v
+0
+7!L(t;v
+0
+) is c ontinuous as a map fr omH toL(H) for al l t  0.
+Pr o of. If the linear operator L(t;v):H!H is de ned as in (3.15), Theorem 2
+guarantees that (3.14) is satis ed for all t  0 since it shows that L(t;v
+0
+) is the
+F r  echet di erential of '
+t
+atv
+0
+. F rom (ULIP) of Theorem 1 it follows that L(t;v)
+is a bounded linear operator and (QD1) is satis ed. The property in (QD2) is
+equiv alent to
+V (t +s;v; ) =V (t;'
+s
+(v);V (s;v; )) for all t;s  0;v2K; 2H; (3.16)
+but this is just the uniqueness of solutions to (3.1) given by Lemma 3.1. T o show
+that the mapH3v
+0
+7!L(t;v
+0
+)2L(H) is continuous for every t  0 we de ne
+ (t) := L(t;v)  L(t;v
+0
+)  = V (t;v; ) V (t;v
+0
+; ) for some  xed v
+0
+2H and
+arbitrary v2H. Let also  2H be such thatj j
+H
+  1. Then  ( ) satis es the
+equation
+ (t) =
+Z
+t
+0
+G(t s)B(F
+0
+(C'
+s
+(v))CV (t;v; ) F
+0
+(C'
+s
+(v
+0
+))CV (t;v
+0
+; ))ds =
+=
+Z
+t
+0
+G(t s)B(F
+0
+(C'
+s
+(v)) F
+0
+(C'
+s
+(v
+0
+)))CV (t;v
+0
+; ))ds+
++
+Z
+t
+0
+G(t s)BF
+0
+(C'
+s
+(v))C (s)ds:
+(3.17)
+Using the Gronwall lemma argument as in Theorem 2, one can show that v!v
+0
+implies that  (t)! 0 uniformly in   withj j
+H
+  1. But this gives the desired
+continuity . The proof is  nished.
+Electronic Journal. h ttp://di journal.spbu.ru/ 15Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+The continuity of the map v
+0
+!L(t;v
+0
+) plays an important role in dimension
+estimates. It is shown by V.V. Chepyzhov and A.A. Ilyin [14] that this property is
+the only missing ingredient that makes the Hausdor  dimension estimate obtained
+by P . Constantin, C. F oias and R. T emam [40] hold for the fractal dimension also.
+This property is also essential for Theorem 4 below.
+Note that any inv ariant compact K, thanks to (ULIP), must lie in E and
+the topologies of E andH onK coincide. Moreover, from (ULIP) we get that
+K is an image of itself under the Lipschitz map '
+2 
+. Therefore, the Hausdor 
+and fractal dimensions ofK w. r. t. the metrics of H andE coincide. Applying
+a theorem of J. Mallet-Paret [31] (see also Section 4.6 in [24]) to the compact
+F r  echet di erentiable map '
+2 
+we get the following theorem.
+Theorem 4. Under the hyp otheses of The or em 3 the Hausdor  dimension of K
+is  nite.
+Moreover, from [14] we can show  niteness of the fractal dimension that is
+not less than the Hausdor  dimension (see Remark 3.6 in [24]). F or this we need
+some preparations.
+F or a compact linear operator L:H! H let ff
+1
+  ff
+2
+  ff
+3
+  ::: be its
+singular v alues. F or d =k +s, where k is a non-negative integer and s2 (0; 1],
+we consider the singular v alue function of L de ned as
+!
+d
+(L) :=ff
+1
+ ::: ff
+k
+ ff
+s
+k+1
+=!
+1 s
+k
+!
+s
+k+1
+: (3.18)
+F rom Theorem 2.1 in [14] applied to the map '
+t
+for some  xed t  2  we get
+the following theorem.
+Theorem 5. Under the hyp otheses of The or em 3 supp ose that for some t  2 
+and d> 0 we have
+sup
+v2K
+!
+d
+(L(t;v))< 1: (3.19)
+Then for the fr actal dimension ofK inH we have dim
+F
+K<d.
+The main result of [14] and the above de nitions can be also formulated for
+the case of a non-compact operator L [40]. In our situation, the compactness of
+L(t;v) for t  2  allows us to stay in the compact context, which is simpler.
+Since L(t;v) is a compact operator for t  2  , its singular v alues tend to zero
+and therefore !
+d
+(L(t;v))< 1 is satis ed for all su ciently large d> 0. Using the
+compactness ofK and the continuity of L(t;v) (and, consequently , !
+d
+(L(t;v)))
+w. r. t. v 2K, one can show that for every t  2  the inequality in (3.19)
+Electronic Journal. h ttp://di journal.spbu.ru/ 16Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+is satis ed for some su ciently large d > 0. Thus, we immediately have the
+following theorem which strengthens Theorem 4.
+Theorem 6. Under the hyp otheses of The or em 3 the fr actal dimension of K is
+ nite.
+In particular, from Theorem 6 and the Lipschitz property of the semi ow we
+immediately have  niteness of the topological entropy of '
+t
+restricted toK (see,
+for example, [24]).
+It is interesting to obtain e ective dimension estimates and this seems to be a
+nontrivial problem. Let us start a discussion by formulating the following analog
+of the Liouville trace formula for (3.1).
+Lemma 3.3. Under the hyp otheses of The or em 3 let k > 0 b e an inte ger and
+v
+0
+2H b e  xe d. Then for any  
+j
+2D(A) and V
+j
+(t) = V (t;v
+0
+; 
+j
+), wher e j =
+1;:::;k and t  0, we have
+jV
+1
+(t)^:::^V
+k
+(t)j
+V
+k
+H
+=
+=j 
+1
+^:::^ 
+k
+j
+V
+k
+H
+exp
+ Z
+t
+0
+Tr((A +BF
+0
+(C'
+s
+(v
+0
+))C)   (s))ds
+ 
+;
+(3.20)
+wher e  (s) is the ortho gonal pr oje ctor onto Span(V
+1
+(s);:::;V
+k
+(s)).
+Here
+V
+k
+H denotes the k -th exterior power ofH endowed with the inner product
+j j
+V
+k
+H
+, which is given for  
+1
+^:::^ 
+k
+2
+V
+k
+H by the k -dimensional volume
+of the parallelepiped with edges  
+1
+;:::; 
+k
+(for a more precise treatment see, for
+example, [40]). Since  
+j
+2D(A), we have that V
+j
+( ) is a classical solution of
+(3.1) and, in particular, V
+j
+(t)2D(A) for all t  0. Thus, the operator under
+Tr is bounded, has  nite-dimensional range and continuously depend on s. In
+particular, its trace is well-de ned. After these explanations Lemma 3.3 can be
+proved in a standard way (see, for example, Subsection 2.3 of Chapter V from
+[40]).
+As above, let L:H!H be a compact operator. It is well-known (see Propo-
+sition 1.4 from Subsection 1.3 of Chapter V in [40]) that for any integer k> 0 we
+have
+!
+k
+(L) = sup
+ 
+1
+;:::; 
+k
+2H
+j 
+j
+j
+H
+ 18j
+jL 
+1
+^:::^L 
+k
+j
+V
+k
+H
+= sup
+ 
+1
+;:::; 
+k
+2D(A)
+j 
+j
+j
+H
+ 18j
+jL 
+1
+^:::^L 
+k
+j
+V
+k
+H
+;
+(3.21)
+where the last inequality is due to the density ofD(A) inH.
+Electronic Journal. h ttp://di journal.spbu.ru/ 17Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+Using (3.21) and Lemma 3.3, one usually provides some estimates for the
+trace of the operator in (3.20), which makes it possible to apply Theorem 5.
+In the case of parabolic problems there is a general estimate for the trace of a
+positive self-adjoint operator (see Chapter VI in [40] or Lemma 4.21 in [13]), which
+in some cases (for example, for reaction-di usion equations) overrides the e ect
+of the nonlineary (that is F in our case) and makes it possible to obtain e ective
+dimension estimates. Linear operators corresponding to delay equations are not
+self-adjoint and thus it is not obvious how one may derive e ective dimension
+estimates with the use of Theorem 5 in the general case. As we will see below, a
+naive approach concerned with the study of the symmetrized operator (A+A
+ 
+)=2
+does not work here, although it has proved to be e ective for ODEs (see [24]). W e
+are familiar only with the paper of J.W-H. So and J. W u [38], where dimension
+estimates for delay equations through the trace estimates are considered (in [38]
+a class of parabolic equations with delay is studied). However, [38] ends with
+an abstract application of the Constantin-F oias-T emam estimate (in the same
+way we did in Theorem 6) and, as it is said in the introduction, its concrete
+realizations are left for forthcoming papers, but none of such papers seems to
+be appeared. Another example is the monograph of A.N. Carv alho, J.A. Langa
+and J.C. Robinson [13], which in particular treats dimension estimates, contains
+a chapter devoted to delay equations, but there are no discussions concerned with
+e ective dimension estimates for such equations. Thus, we consider it important
+to draw attention to the following problem.
+Problem 1. How to obtain e ective dimension estimates for delay equations?
+A partial solution to the above problem can be given by construction of inertial
+manifolds [1, 6, 15, 40]. However, the existence of an inertial manifold only gives
+an integer estimate given by its dimension and such an estimate is too rough
+to apply , for example, some criteria of non-existence of periodic orbits based on
+dimension estimates (see R.A. Smith [33]; M.Y. Li and J.S. Muldowney [27]). Such
+criteria can be mixed with v arious developments of the Poincar  e-Bendixson theory
+for in nite-dimensional dynamical systems (see [1, 30]) to obtain convergence
+properties. On the other hand, the existence of smooth inertial manifolds at
+least theoretically leads to a certain ODE given by a smooth vector  eld (the so-
+called inertial form), which describes dynamics on the manifold. The linearized
+vector  eld can be symmetrized to obtain e ective dimension estimates. T o the
+best of our knowledge, the only case, to which this approach can be e ciently
+applied, is given by delay equations with small delays, for which C. Chicone in
+[15] obtained an expansion for the vector  eld by the delay v alue considered as a
+Electronic Journal. h ttp://di journal.spbu.ru/ 18Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+small parameter.
+Note that in the case of ODEs there is an e ective approach called the Leonov
+method (see N.V. Kuznetsov [25]; G.A. Leonov et al. [26]; N.V. Kuznetsov
+and V. Reitmann [24]) concerned with changes of the metric tensor via special
+Lyapunov-like functions. Sometimes it allows to obtain sharp (or even exact [26])
+estimates for the Lyapunov dimension (and, consequently , for the Hausdor  and
+fractal dimensions) on the global attractor. T o the best of our knowledge, there
+is still no e cient applications of the Leonov method for in nite-dimensional sys-
+tems. Its development with the synthesis of the above mentioned criteria for the
+nonexistence of periodic orbits [33, 27] has particular interest.
+Let A:D(A)  H! H be a closed linear operator. Let L D(A) be a
+ nite dimensional subspace and  
+L
+be the orthogonal (in H) pro jector onto L.
+The tr ac e of A onL is the v alue Tr(A   
+L
+). Let us de ne the tr ac e numb ers
+ 
+1
+(A); 
+2
+(A);::: by induction from the relations
+ 
+1
+(A) +::: + 
+k
+(A) = sup
+L D(A)
+dimL=k
+Tr(A   
+L
+); (3.22)
+where k = 1; 2;:::. In Theorem 7 below the trace numbers are related to the
+eigenv alues of a self-adjoint extension S of the symmetrized operator S
+0
+:= (A +
+A
+ 
+)=2. In the case of delay equations such operators as S are de ned everywhere
+inH and have null spaces of  nite codimension. By considering some simplest
+cases, one can see that the trace numbers do not depend on the delay v alue and
+their sum can never be negative that makes them inappropriate for studying delay
+equations.
+Let us illustrate the problem by means of the following example. W e consider
+for ff2 (0; 1) and   > 0 the operator A inH =R L
+2
+(  ; 0;R) given by
+(x; )7!
+ 
+ (0) ff (  );
+@
+@ 
+ 
+ 
+: (3.23)
+Its domainD(A) consists of all (x; )2 H such that  2 W
+1;2
+(  ; 0;R) and
+ (0) =x. Such an operator arises in the example from Section 4.
+Lemma 3.4. F or the op er ator A given by (3.23) we have  
+1
+(A) =
+3+ff
+2
+2
+and
+ 
+k
+(A) = 0 for al l k  2.
+Pr o of. LetL D(A) be any k -dimensional subspace. Let e
+i
+= ( 
+i
+(0); 
+i
+( ))2
+Electronic Journal. h ttp://di journal.spbu.ru/ 19Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+D(A), where i = 1; 2;:::;k , be an orthonormal basis for L. Then we have
+Tr(A   
+L
+) =
+k
+X
+i=1
+(Ae
+i
+;e
+i
+)
+H
+=
+k
+X
+i=1
+ 
+3
+2
+ 
+i
+(0)
+2
+ ff 
+i
+(  ) 
+i
+(0) 
+1
+2
+ 
+i
+(  )
+2
+ 
+:
+(3.24)
+Let us consider the case k = 1. F rom (3.24) we have
+ 
+1
+(A) = sup
+ 
+3
+2
+ (0)
+2
+ ff (  ) (0) 
+1
+2
+ (  )
+2
+ 
+=
+= sup (0)
+2
+ 
+ 
+3
+2
+ ff
+ (  )
+ (0)
+ 
+1
+2
+ 
+ 
+ (  )
+ (0)
+ 
+2
+!
+;
+(3.25)
+where the  rst supremum is taken over all   2 W
+1;2
+(  ; 0;R) such that
+j (0); ( )j
+H
+= 1 and the second has the additional constraint  (0)6= 0. Since
+ (0)
+2
+  1 and the maximum v alue of the quadratic polynomial 1=2x
+2
+ ffx+3=2
+is (3 +ff
+2
+)=2, we have 
+1
+(A)  (3 +ff
+2
+)=2. But it is easy to construct a sequence
+of functions  ( ) showing that (3 +ff
+2
+)=2 is indeed the v alue of  
+1
+(A).
+In the case k = 2 let us observe that the orthonormal basis e
+1
+;e
+2
+forL can
+always be chosen such that  
+1
+(0) = 0. Then from (3.24) we have
+ 
+1
+(A) + 
+2
+(A) = sup
+ 
+ 
+1
+2
+ 
+1
+(  )
+2
++
+3
+2
+ 
+2
+(0)
+2
+ ff 
+2
+(  ) 
+2
+(0) 
+1
+2
+ 
+2
+(  )
+2
+ 
+;
+(3.26)
+where the supremum is taken over all  
+1
+; 
+2
+2W
+1;2
+(  ; 0;R) such that 
+1
+(0) = 0,
+j 
+i
+(0); 
+i
+( )j
+H
+= 1 and
+R
+0
+  
+ 
+1
+( ) 
+2
+( )d  = 0. It is clear that the supremum do
+not exceed (3 +ff
+2
+)=2. But it is not hard to construct a sequence of functions
+(assuming also that  
+1
+(  ) = 0), which shows that it is, in fact, equal to (3 +
+ff
+2
+)=2. Thus,  
+2
+(A) = 0.
+If k  2 then we can choose the orthonormal basis e
+1
+;:::;e
+k
+in such a way
+that  
+i
+(0) = 0 for i = 1;:::;k  1. F rom similar as above arguments we have
+that  
+k
+(A) = 0 for k  2.
+Although forA being self-adjoint, the supremum in (3.22) is achieved on some
+eigenspace, it can be seen from the proof of Lemma 3.4 that for the operators
+corresponding to delay equations the supremum in (3.22) is not achieved on any
+nice subspace and the limiting subspace consists of discontinuous functions.
+R emark 6. Below, we prove Theorem 7, which shows that  the limiting subspace 
+is an eigenspace for a self-adjoint extension of the symmetrized operator S
+0
+:=
+Electronic Journal. h ttp://di journal.spbu.ru/ 20Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+(A +A
+ 
+)=2. Let us illustrate this for A from Lemma 3.4. In this case S
+0
+can be
+extended to a bounded self-adjoint operator S inH given by
+(x; )7!
+ 
+3 +ff
+2
+2
+x; 0
+ 
+for all (x; )2H: (3.27)
+It is clear that the trace numbers  
+k
+(A) calculated in Lemma 3.4 coincide with
+the eigenv alues of S ordered by non-increasing.
+Note also that there are two leading real eigenv alues  
+1
+> 0 and 
+2
+< 0 of the
+operatorA given by (3.23) (see Section 4). F rom the dichotomy of linear problems
+for delay equations we have that the inequality  
+1
++ 
+2
+< 0 determines a region in
+the space of parameters ( ;ff) where two-dimensional volumes are squeezed. But
+it seems impossible to reveal this region from the trace formula (3.20) without
+directly referring to the spectral decomposition.
+Thus, it seems that the trace numbers  
+k
+(A), which are useful for studying
+parabolic problems and ODEs, are not appropriate for delay equations.
+W e  nish this section by proving the following theorem.
+Theorem 7. L et a close d op er ator A b e such thatD(A)\D(A
+ 
+) is dense inH.
+Supp ose the op er ator S
+0
+= (A+A
+ 
+)=2, which is de ne d at le ast on D(A)\D(A
+ 
+),
+c an b e extende d to a self-adjoint line ar op er ator S having a c omp act r esolvent,
+D(S)   D(A) and such that its eigenvalues ff
+k
+(S) c an b e or der e d by non-
+incr e asing. Then for any k = 1; 2;::: we have  
+k
+(A) =ff
+k
+(S).
+Pr o of. F or breviety , let ( ; ) denote the inner product in H. Let us  rstly prove
+that we have the equality
+(Ae;e) = (Se;e) for all e2D(A): (3.28)
+Indeed, the equality in (3.28) holds for any e2D(A)\D(A
+ 
+). But then we have
+an analogous identity for the corresponding bilinear forms as
+(Av;w) + (v;Aw) = 2(Sv;w) for all v;w2D(A)\D(A
+ 
+): (3.29)
+Now take instead of v a sequence v
+m
+2D(A)\D(A
+ 
+) converging to some v2
+D(A) inH asm! +1. Using the equalities (Av
+m
+;w) = (v
+m
+;A
+ 
+w), (Sv
+m
+;w) =
+(v
+m
+;Sw) andD(S) D(A), one can show that (3.29) holds with v2D(A) and,
+as a consequence of the symmetry , w2D(A). Now taking v =w =e2D(A) in
+(3.29) yields (3.28).
+Electronic Journal. h ttp://di journal.spbu.ru/ 21Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+By de nition,  
+1
+(A) +::: + 
+k
+(A) is given by the supremum over all linear
+k -dimensional subspaces L D(A) of the v alue Tr(A   
+L
+). LetL be  xed and
+let e
+1
+;:::;e
+k
+be its orthonormal basis. In virtue of (3.28) we have
+Tr(A   
+L
+) =
+k
+X
+i=1
+(Ae
+i
+;e
+i
+) =
+k
+X
+i=1
+(Se
+i
+;e
+i
+) 
+k
+X
+i=1
+ff
+i
+(S); (3.30)
+where the last inequality is due to the v ariational principle for self-adjoint opera-
+tors as in Lemma 2.1, Chapter VI from [40]. This inequality becomes an equality if
+L is the eigenspace corresponding to ff
+1
+(S);:::;ff
+k
+(S). The proof is  nished.
+It is, however, interesting, whether the sum from (3.22) can be negative for
+some k in some nontrivial cases arising from delay equations. W e do not know of
+any such example.
+4 Example
+W e consider the Suarez-Schopf model [39] for El Ni  no Southern Oscillation
+(ENSO), which is given by the following scalar delay equation:
+_ x(t) =x(t) ffx(t  ) x
+3
+(t); (4.1)
+where ff2 (0; 1) and   > 0 are parameters. Let us put  :=
+p
+1 +ff and de ne
+the setsC
+R
+:=f 2 C([  ; 0];R)jk k
+1
+   +Rg for R > 0. W e also use
+ 
+C
+R
+to denote the interior ofC
+R
+. If a semi ow in C([  ; 0];R) is given, by !( 
+0
+) we
+denote the ! -limit set of  
+0
+2C([  ; 0];R) w. r. t. this semi ow.
+Let us show that (4.1) is dissipative and generates a semi ow in C([  ; 0];R).
+This is contained in the following lemma.
+Lemma 4.1. The setC
+R
+is p ositively invariant w. r. t. solutions of (4.1). In
+p articular, (4.1) gener ates a semi ow '
+t
+, t  0, in C([  ; 0];R). Mor e over,
+!( 
+0
+) C
+0
+for al l  
+0
+2C([  ; 0];R).
+Pr o of. Since the closure of a positively inv ariant set is positively inv ariant and the
+intersection of positively inv ariants sets is also positively inv ariant, it is su cient
+to show that
+ 
+C
+R
+is positively inv ariant for all R > 0. Suppose the opposite, i. e.
+there exist an initial condition  
+0
+2
+ 
+C
+R
+and a timet> 0 such that for the classical
+solution x( ; 0; 
+0
+) we have'
+s
+( 
+0
+) =x
+s
+2
+ 
+C
+R
+for all s2 [0;t) andjx(t)j = +R.
+Electronic Journal. h ttp://di journal.spbu.ru/ 22Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+F rom (4.1) we have
+(
+_ x(t)   +R +ff( +R)  ( +R)
+3
+< 0; if x(t) =R +;
+_ x(t)   ( +R) ff( +R) + ( +R)
+3
+> 0; if x(t) = (R +):
+(4.2)
+that leads to a contradiction.
+Since any solution does not leaveC
+R
+for some R  0, it remains bounded and
+therefore can be extended for times up to +1 (see Theorem 3.1, Section 2.3 in
+[21]). Thus, (4.1) generates a semi ow in C([  ; 0];R).
+Now suppose there is  
+0
+2C([  ; 0];R) such that !( 
+0
+)6 C
+0
+. Then there is
+R > 0 such that !( 
+0
+) C
+R
+and !( 
+0
+)6 C
+R "
+for all 0 < " < R. Since !( 
+0
+)
+cannot entirely lie on the boundary ofC
+R
+(due to similar as in (4.2) arguments),
+we can  nd 0 < "
+1
+< R and  
+1
+; 
+2
+2 !( 
+0
+) such that  
+1
+2C
+R "
+1
+and  
+2
+2C
+R
+withk 
+2
+k = +R. Then there is a time moment t
+0
+> 0 for which'
+t
+0
+( 
+0
+) is close
+to  
+1
+, namely , '
+t
+0
+( 
+0
+)2C
+R "
+0
+for some "
+0
+< "
+1
+. But sinceC
+R "
+0
+is positively
+inv ariant we have that '
+t
+( 
+0
+) is separated from  
+2
+for all t t
+0
+that contradicts
+to  
+2
+2!( 
+0
+). Thus, !( 
+0
+) C
+0
+and the proof is  nished.
+It should be noted that from a theorem of J. Mallet-Paret and G.R. Sell [30]
+it follows that for (4.1) the ! -limit set of any point  
+0
+satis es the Poincar  e-
+Bendixson trichotomy , i. e. it can be either a stationary point, either a periodic
+orbit or a union of a set of stationary points and homoclinic and heteroclinic orbits
+connecting them. However, numerical experiments in [39, 3] show that there is a
+region, for which there are no periodic orbits (see below).
+An elementary analysis shows that there are three stationary states  
++
+ 
+p
+1 ff,  
+0
+  0 and  
+ 
+  
+p
+1 ff. There is also a one-dimensional unsta-
+ble manifold for  
+0
+for any parameters ff2 (0; 1) and   > 0. When ff and  
+are relatively small, the stationary states  
++
+and  
+ 
+are asymptotically stable.
+These parameters correspond to the region of linear stability in [39], for which no
+periodic orbits were observed. However, in our paper [3] we numerically found
+hidden and unstable periodic orbits in (4.1), arising after homoclinic bifurcations,
+for parameters from the region of linear stability which are close to its boundary
+(called the neutr al curve in [39]). Moreover, in [3] we justi ed that these parame-
+ters (unlike the parameters from the region of linear instability) are related to the
+irregular nature of ENSO since the discovered multistability is sensible to exterior
+periodic forces or noise.
+Since the semi ow generated by (4.1) is dissipative, there is a global attractor
+K C
+0
+. T o make the developed theory applicable, let g :R!R be a function
+Electronic Journal. h ttp://di journal.spbu.ru/ 23Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+which coincides with x
+3
+on [ ( +R); +R] for some R> 0 and it is smoothly
+extended outside of [ ( +R); +R] in such a way that g2 C
+1
+(R;R) and g
+0
+is globally bounded. Clearly , the set K will be also inv ariant for the semi ow
+'
+t
+generated by (4.1) with x
+3
+changed to g(x). As before, we considerK as a
+subset ofH =R L
+2
+(  ; 0;R) andK is also inv ariant w. r. t. the corresponding
+semi ow in H given by Theorem 1 which we also denote by '.
+Let v
+0
+2 K, where v
+0
+= (y
+0
+; 
+0
+). Let y(t) = x(t; 0;x
+0
+) be the classical
+solution of (4.1) with y(0) = y
+0
+. F or  2D(A), where   = (z
+0
+; 
+0
+) such that
+ 
+0
+2 W
+1;2
+(  ; 0;R) and  
+0
+(0) = z
+0
+, we consider the solution V (t) = V (t;v
+0
+; )
+of (3.1), which in our case can be described as a solution to
+_ z(t) =z(t) ffz(t  )  3y
+2
+(t)z(t);
+_
+ (t) =
+@
+@ 
+ (t):
+(4.3)
+Here V (t) = (z(t); (t)) and V (0) = (z
+0
+; 
+0
+).
+Let L(t;v), where t   0 and v 2 K, be the quasi-di erentials given by
+Theorem 3 for '
+t
+. It is clear that the zero stationary point  
+0
+belongs toK.
+F rom a naive look at (4.3) one may suggest that (due to the presence of the term
+ 3y
+2
+(t)z(t)) the squeezing of d-dimensional volumes at  
+0
+(where y(t)  0) is
+the worst possible comparing with other points on the attractor K. However, the
+presence of delay makes it not so obvious and we can only conjecture this (see
+below).
+The roots of the linear part of (4.1) are given by
+1 ffe
+  p
+ p = 0: (4.4)
+It can be veri ed that if ff2 (0; 1) and   > 0 then there are always one positive
+real root  
+1
+, one negative real root  
+2
+and the others roots are located to the
+left from  
+2
+. F rom the dichotomy of autonomous linear systems (see Theorem
+4.1, Chapter 7 in [21]) it follows that  
+1
++ 
+2
+< 0 indicates the squeezing of 2-
+dimensional volumes at the zero stationary state  
+0
+. F rom the above observ ations
+we pose the following problem.
+Problem 2. Let  
+1
+=  
+1
+(ff; ) and  
+2
+=  
+2
+(ff; ), where ff2 (0; 1) and   > 0,
+be the positive and the negative real roots of (4.4). Is it true that the condition
+ 
+1
++ 
+2
+< 0 excludes the presence of periodic orbits and homoclinics in (4.1)?
+R emark 7. It can be shown that  
+1
++ 
+2
+< 0 is equiv alent to
+  <
+log(
+1+
+p
+1 ff
+2
+ff
+)
+p
+1 ff
+2
+: (4.5)
+Electronic Journal. h ttp://di journal.spbu.ru/ 24Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+The inequality  
+1
++ 
+2
+< 0 indicates a large region in the space of parameters
+(ff; ), which is included (but strictly smaller) in the region of linear stability
+from [39] (see Fig. 1). When  
+1
++ 
+2
+> 0, there may exist periodic orbits and
+homoclinics as it is indicated in [3]. However, the region  
+1
++ 
+2
+< 0 is contained
+(but strictly smaller) in the region of true stability (with a gradient-like behavior)
+numerically obtained in [3]. Thus, [3] provides numerical evidence that the answer
+to Problem 2 should be positive.
+At the end of Section 3 we justi ed that straightforward applications of the
+Liouville trace formula (3.20) are not appropriate to study delay equations.
+Let us present another viewpoint onto the above problem. F or this we consider
+the 2nd compound cocycle, say  
+(2)
+=f 
+t
+(2)
+(q; )g, where t  0 and q 2K,
+associated with (4.3). This cocycle  
+(2)
+acts in the 2-nd exterior power
+V
+2
+E
+of E = C([  ; 0];R) and it is determined by the formula
+V
+2
+E3  
+1
+^ 
+2
+7!
+ 
+t
+(2)
+(q; 
+1
+^ 
+2
+) := L(t;q) 
+1
+^L(t;q) 
+2
+2
+V
+2
+E for  
+1
+; 
+2
+2 E. Note that  
+2
+E
+can be identi ed with the anti-symmetric functions in C([  ; 0]
+2
+) (see [29] for
+details). Let us consider the largest uniform Lyapunov exponent of  
+(2)
+overK
+given by
+b
+1
+:= lim sup
+t!+1
+ln sup
+q2K
+k 
+t
+(2)
+(q; )k
+t
+: (4.6)
+Then for every "> 0 there exists a constant M > 0 such that
+sup
+q2K
+k 
+t
+(2)
+(q; )k Me
+(b
+1
++")t
+for t  0: (4.7)
+Clearly , b
+1
+< 0 indicates the uniform squeezing of two-dimensional volumes over
+K. Thus, one may ask how to estimate b
+1
+. This can be done via the v ariational
+principle for subadditive functions as in the following theorem.
+Theorem 8. In the ab ove intr o duc e d notation, the lar gest uniform Lyapunov
+exp onent b
+1
+of the c o cycle  
+(2)
+over the glob al attr actorK c an b e r e alize d as
+b
+1
+=
+lnj 
+1
+ 
+2
+j
+ 
+; (4.8)
+wher e  
+1
+and  
+2
+ar e the  rst two Flo quet multipliers over a c ertain   -p erio dic
+orbit or a stationary p oint (tr e ate d as a p erio d 1 orbit).
+Pr o of. Below, when referring to certain results for discrete-time systems, we con-
+sider the discrete cocycle A(q;n) :=  
+ n
+(2)
+(q; ) in
+V
+2
+C([  ; 0];R) over the home-
+omorphism
+¶
+f( ) :='
+ 
+( ) onK. Note that the operators A(q;n) are compact.
+¶
+F or the uniqueness of bac kw ard extensions of solutions (whic h giv es the homeomorphism prop ert y of '
+t
+restricted to the global attractor) see Theorem 4.1, Section 3.4 in [21].
+Electronic Journal. h ttp://di journal.spbu.ru/ 25Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+Let   be an ergodic Borel measure for f onK. Since recurrent points lying
+in the support of any Borel inv ariant measure are typical (see item 1, Proposition
+4.1.18 in [22]), the support of   must contain stationary or periodic points of the
+semi ow ' due to the Poincar  e-Bendixson trichotomy (Theorem 2.1 in [30]).
+By Lemma 2.3.5 in [41], one can take   such thatb
+1
+is realized as a Lyapunov
+exponent for  . Letq
+0
+= 
+0
+be any stationary or periodic point in the support at
+which the Lyapunov exponent exists. Without loss of generality , we may assume
+that q
+0
+is   -periodic for some   > 0. If  
+1
+and  
+2
+are the  rst two Floquet
+multipliers (their existence is guaranteed by Theorem 5.1 in [29]), then  b
+1
+ 
+lnj 
+1
+ 
+2
+j. But it is clear that   lnj 
+1
+ 
+2
+j b
+1
+. This  nishes the proof.
+Thus, Theorem 8 reduces Problem 2 to that any periodic orbit must be asymp-
+totically stable (in the sensej 
+1
+ 
+2
+j< 1) in the considered region.
+F or a real number r we consider the roots  
+(r)
+1
+= 
+(r)
+1
+(ff; ),  
+(r)
+2
+= 
+(r)
+2
+(ff; ),
+::: enumerated in decreasing (by the real part) order according to their multiplic-
+ity of the equation
+1  3r
+2
+ ffe
+  p
+ p = 0: (4.9)
+The following theorem provides an estimate for j 
+1
+ 
+2
+j. It highly relates on
+the monotonicity results for  
+(2)
+from [29].
+Theorem 9. L et y
+0
+( ) b e a   -p erio dic solution of (4.1) and let  
+1
+and  
+2
+b e the
+ rst two Flo quet multipliers. L et r
+0
+:= max
+t2[0; ]
+jy
+0
+(t)j. Then for any r r
+0
+we
+have
+lnj 
+1
+ 
+2
+j  
+ 
+6 
+1
+ 
+Z
+ 
+0
+ 
+r
+2
+ y
+2
+0
+(s)
+ 
+ds + Re 
+(r)
+1
++ Re 
+(r)
+2
+ 
+; (4.10)
+wher e  
+(r)
+1
+and  
+(r)
+2
+ar e the  rst two of r o ots of (4.9).
+Pr o of. Let q
+0
+2K be the   -periodic point corresponding to y
+0
+( ). Let M
+q
+0
+:=
+ 
+ 
+(2)
+(q
+0
+; ) be the monodromy operator over q
+0
+for the 2nd compound cocycle  
+(2)
+.
+Note that the linearization along the orbit is given by
+_ z(t) = (1  3y
+2
+0
+(t))z(t) ffz(t  ): (4.11)
+W e will compare M
+q
+0
+with the time-  map for the 2nd compound process, say
+M
+r
+, generated by
+_ z(t) = (1  3r
+2
+)z(t) ffz(t  ): (4.12)
+Electronic Journal. h ttp://di journal.spbu.ru/ 26Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+After the changes of v ariables given by w(t) = exp
+ 
+R
+t
+0
+(3y
+2
+0
+(s)  1)ds
+ 
+z(t) and
+w(t) = exp
+ 
+R
+t
+0
+(3r  1)ds
+ 
+z(t) equations (4.11) and (4.12) transfer respectively
+into
+_ w(t) = b
+1
+(t)w(t  );
+_ w(t) = b
+2
+(t)w(t  ):
+(4.13)
+Note that b
+1
+(t) =ff
+0
+R
+t
+t  
+(3y
+2
+0
+(s)  1)ds and b
+2
+(t) =ff
+0
+R
+t
+t  
+(3r
+2
+  1)ds. Let
+f
+M
+q
+0
+and
+f
+M
+r
+denote the time-  maps of the corresponding 2nd compound processes
+in
+V
+2
+C([  ; 0];R). Since b
+1
+  b
+2
+, by repeating arguments from the proof of
+Proposition 5.3 in [29], we have that 0 
+f
+M
+q
+0
+ 
+f
+M
+r
+in the sense of the partial
+ordering given by a closed convex reproducing normal cone (the cone K
+2
+from
+formula (4.7) in [29]). By Proposition 5.7 in [29] we have that  (
+f
+M
+q
+0
+)   (
+f
+M
+r
+),
+where  ( ) denotes the spectral radius.
+Now note that  (
+f
+M
+q
+0
+) = exp
+ 
+2
+R
+ 
+0
+(3y
+2
+(s)  1)ds
+ 
+ (M
+q
+0
+) and  (
+f
+M
+r
+) =
+exp
+ 
+2
+R
+ 
+0
+(3r
+2
+  1)ds
+ 
+ (M
+r
+). Since  (M
+q
+0
+) =j 
+1
+ 
+2
+j and
+ (M
+r
+) =e
+ (Re 
+(r)
+1
++Re 
+(r)
+2
+)
+; (4.14)
+we obtain the desired conclusion.
+R emark 8. One can also obtain an estimate similar to (4.10) for any even number
+m of the Floquet multipliers  
+1
+; 
+2
+;:::; 
+m
+as
+lnj 
+1
+ 
+2
+ :::  
+m
+j  
+"
+3m
+1
+ 
+Z
+ 
+0
+(r
+2
+ y
+2
+0
+(s))ds +
+m
+X
+k=1
+Re 
+(r)
+k
+#
+: (4.15)
+F rom the point of view given by Lemma 4.10, it is required to provide a bound
+for periodic orbits. It turns out that the bound
+p
+1 +ff given by Lemma 4.1 is not
+appropriate due to its roughness. The following lemma provides sharper estimates
+for the region containing the global attractor K for certain parameters.
+Lemma 4.2. Supp ose that ff  < 1=2 and put
+C(ff; ) :=
+ff 
+1 ff 
+ 
+4
+3
+  (1 ff) 
+r
+1 ff
+3
+: (4.16)
+L et R
+1
+b e the unique p ositive r o ot of p
+3
++ (1 ff)p +C(ff; ) = 0 and put
+R
+2
+:=C(ff; )  maxf(1 ff )
+ 1
+; (ff )
+ 1
+g: (4.17)
+Then the glob al attr actorK lies in the setC(R
+1
+;R
+2
+) de ne d by
+C(R
+1
+;R
+2
+) :=f 2C
+1
+([  ; 0];R)jk k
+1
+ R
+1
+;k 
+0
+k
+1
+ R
+2
+g: (4.18)
+Electronic Journal. h ttp://di journal.spbu.ru/ 27Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+R emark 9. Note that for the radius R
+1
+from Lemma 4.2 we always have R
+1
+>
+p
+1 ff. Moreover, in the region ff  < 1=2 the estimate for the radius of dis-
+sipativity given by the lemma signi cantly improves the estimate
+p
+1 +ff from
+Lemma 4.1, especially for larger ff since R
+1
+!
+p
+1 ff as ff! 1 .
+Pr o of. The proof is similar to Lemma 4.1, although contains more calculations.
+Let us consider the setC(R
+1
+;R
+2
+) as in (4.18) for certain R
+1
+andR
+2
+(not necessarily
+the ones speci ed in the statement of the lemma). Let
+ 
+C(R
+1
+;R
+2
+) be the set
+determined by strict inequalities and let us check its  positive inv ariance  for
+certain initial conditions and v alues R
+1
+and R
+2
+. Suppose that  
+0
+2
+ 
+C(R
+1
+;R
+2
+).
+W e suppose that the solution x(t) = x(t; 
+0
+) satis es _ x(0) =  
+0
+0
+(0) and there
+exists t
+0
+> 0 such that x
+t
+2
+ 
+C(R
+1
+;R
+2
+) for all t2 [0;t
+0
+) and x
+t
+0
+2C(R
+1
+;R
+2
+).
+There are only two possible cases (when one of the strict inequalities is violated).
+Case 1:jx(t
+0
+)j =R
+1
+. It is su cient to assume that x(t
+0
+) =R
+1
+andjx
+0
+(t)j 
+R
+2
+for t2 [0;t
+0
+]. F rom (4.1) we have
+_ x(t
+0
+) =R
+1
+ R
+3
+1
+ ffx(t
+0
+  ): (4.19)
+Note that x(t
+0
+  ) R
+1
+  R
+2
+. Thus, to get the impossibility of our situation
+it is su cient to require that
+(1 ff)R
+1
+ R
+3
+1
++ff R
+2
+< 0: (4.20)
+Case 2:jx
+0
+(t
+0
+)j =R
+2
+. It is su cient to assume that x
+0
+(t
+0
+) =R
+2
+andjx(t)j 
+R
+1
+for t2 [0;t
+0
+]. F rom (4.1) we have
+R
+2
+=x(t
+0
+) ffx(t
+0
+  ) x
+3
+(t
+0
+) = (1 ff)x(t
+0
+)+ff
+Z
+t
+0
+t
+0
+  
+_ x(s)ds x
+3
+(t
+0
+): (4.21)
+In particular, we have R
+2
+  (1 ff)x(t
+0
+) x
+3
+(t
+0
+) +ff R
+2
+. F orx(t
+0
+)  0 we have
+that
+(1 ff)x(t
+0
+) x
+3
+(t
+0
+)  (1 ff) 
+r
+1 ff
+3
+ 
+4
+3
+(4.22)
+and, consequently , it is su cient to require
+R
+2
+> (ff )
+ 1
+ C(ff; ) (4.23)
+to get the desired impossibility . On the other hand, if x(t
+0
+)< 0, it is su cient to
+require that
+R
+2
+> (1 ff )
+ 1
+  ( (1 ff)R
+1
++R
+3
+1
+): (4.24)
+Electronic Journal. h ttp://di journal.spbu.ru/ 28Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+Let us take R
+0
+> 0 and R
+2
+:= (ff )
+ 1
+ C(ff; ) +R
+0
+. Then (4.20) takes the form
+(1 ff)R
+1
+ R
+3
+1
++C(ff; ) +ff R
+0
+< 0: (4.25)
+Moreover, for R
+2
+:= (1 ff )
+ 1
+( (1 ff)R
+1
++R
+3
+1
+) +R
+0
+(4.20) takes the form
+(1 ff)R
+1
+ R
+3
+1
++
+ff 
+1 ff 
+ 
+ 
+ (1 ff)R
+1
++R
+3
+1
+ 
++ff R
+0
+< 0 (4.26)
+Note that ff  < (1 ff ) is equiv alent to ff  < 1=2. Thus, for any R
+0
+> 0
+there exists R
+1
+= R
+1
+(R
+0
+) such that both (4.25) and (4.26) are satis ed and the
+corresponding region
+ 
+C(R
+1
+;R
+2
+) will be positively inv ariant in the above given
+sense if we take R
+2
+= maxf(ff )
+ 1
+ C(ff; ); (1 ff )
+ 1
+( (1 ff)R
+1
++R
+3
+1
+)g +R
+0
+.
+Note that as R
+0
+! 0+ the v alue R
+1
+(R
+0
+) can be taken such that it tends to the
+v alue de ned in the statement of the lemma.
+Now the  nal statement about the global attractor can be shown analogously
+to the corresponding part of Lemma 4.1.
+Now we use the obtained in Theorem 4.2 sharper bounds for the global at-
+tractorK to get the nonexistence of periodic orbits and homoclincs for certain
+parameters.
+Theorem 10. Supp ose that ff  < 1=2 and for the r adius R
+1
+fr om L emma 4.2 we
+have
+6 R
+2
+1
++ Re 
+(R
+1
+)
+1
++ Re 
+(R
+1
+)
+2
+< 0: (4.27)
+Then b
+1
+< 0 and ther e ar e no p erio dic orbits and homo clinics in (4.1). Mor e over,
+any p oint tends to one of the stationary states  
+0
+, 
++
+, 
+ 
+.
+Pr o of. Indeed, (4.27) and (4.10) imply that for any periodic orbit the  rst two
+Floquet multipliers satisfyj 
+1
+ 
+2
+j< 1. Note thatff  < 1=2 implies that 
+1
++ 
+2
+<
+0 for the roots of (4.4) and that  
++
+and  
+ 
+are asymptotically stable. Thus,
+Theorem 8 implies that b
+1
+< 0 and we have the uniform decay for two-dimensional
+volumes over the global attractorK in the sense of (4.7).
+Due to the smoothing estimate in (ULIP) from Theorem 1, one can show
+that an analog of (4.7) holds also in the norm of H and from (3.21) we get that
+(3.19) is satis ed for d = 2 and su ciently large t> 0. F rom Theorem 5 it follows
+that dim
+F
+K < 2. Then Corollary 2 from [27] implies that there are no periodic
+orbits or homoclinics inK. Now the Poincar  e-Bendixson trichotomy (Theorem
+2.1 in [30]) guarantees that the ! -limit set of any point must be a single stationary
+point. The proof is  nished.
+Fig. 1 shows the region determined by (4.27), however it is much smaller than
+the expected region considered in Problem 2.
+Electronic Journal. h ttp://di journal.spbu.ru/ 29Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+Figure 1: A n umerically obtained region in the space of parameters ( ;ff) of system (4.1), where
+(4.27) is satis ed (orange) and (4.5) is satis ed (orange and blue).
+5 Inertial manifolds
+F orv2E andt  0 let us de ne 
+t
+(v; ) :=L(t;v)  , whereL(t;v)  , as in Section
+3, is a solution to the linearized equation (3.1). F rom Theorem 2.2, Chapter 2 in
+[21], we immediately have the following lemma.
+Lemma 5.1. L et F 2 C
+1
+(R
+r
+;R
+m
+) and F
+0
+b e glob al ly b ounde d. Then the map
+(t;v; )7! 
+t
+(v; ) is c ontinuous as a map fr om R
++
+ E E toE.
+Now letA E be an inv ariant w. r. t. the semi ow ' from Section 3  nite-
+dimensional topological manifold such that the semi ow is invertible on A and,
+consequently , in virtue of the Brouwer theorem on inv ariance of domain, it de nes
+a  ow on A. W e also put #
+t
+(v) := '
+t
+ 
+ 
+A
+(v) for t2R, v2A andQ :=A. Then
+(Q;#) is a  ow. It is obvious that we have the cocycle property satis ed as
+ 
+t+s
+(v; ) = 
+t
+(#
+s
+(v); 
+s
+(v; )); for all t;s  0;v2A; 2E: (5.1)
+F rom this and Lemma 5.1 it follows that is a cocycle in E over the base  ow
+# =' inQ =A. This allows us to apply results from Appendix A.
+Now we suppose that F 2 C
+1
+with F
+0
+globally bounded and the semi-
+ ow ' (the same as in Section 3) satis es conditions (H1),(H2) and (H3)
+from Appendix A, i. e. there exists an operator P 2 L(E;E
+ 
+) such that for
+Electronic Journal. h ttp://di journal.spbu.ru/ 30Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+V (v) :=hv;Pvi and some   > 0;  > 0 we have for all v
+1
+;v
+2
+2E and r  0 (in
+terms of (H3) here we also put  
+V
+= 0 for convenience) that
+e
+2 r
+V ('
+r
+(v
+1
+) '
+r
+(v
+2
+)) V (v
+1
+ v
+2
+)   
+Z
+r
+0
+e
+2 s
+j'
+s
+(v
+1
+) '
+r
+(v
+2
+)j
+2
+H
+ds (5.2)
+and there exists a splitting E =E
++
+ E
+ 
+with dimE
+ 
+= j and such that P is
+positive on E
++
+and negative on E
+ 
+. Moreover, E
++
+andE
+ 
+can be assumed to
+be V -orthogonal in the sense that V (v) = V (v
++
+) +V (v
+ 
+) for all v2E, where
+v = v
++
++v
+ 
+is the unique decomposition with v
++
+2 E
++
+and v
+ 
+2 E
+ 
+(see
+Appendix A). Such an operator P can be obtained with the aid of the F requency
+Theorem (see [2] for a proof and detailed discussions which especially concern
+delay equations).
+R emark 10. In this section we discuss inertial manifolds in the classical phase
+space E (of course, we can work directly in H). However, it seems crucial (at
+least from the point of view given by the F requency Theorem [2]) to consider the
+weaker normj j
+H
+in the right-hand side of (5.2).
+W e will use the V -orthogonal pro jector  :E! E
+ 
+de ned by Pv := v
+ 
+.
+F rom Theorem 1 we have properties (ULIP) and (COM) satis ed for ' and
+thus we may apply Theorem A.1 to get an inv ariant j -dimensional topological
+manifold A E, on which the semi ow is invertible
+  . Our aim is to show that
+we may pass to the limit in (5.2) to get the corresponding inequality for the
+cocycle ( ;#) given by the linearization of ' onA. Below we always assume that
+F2C
+1
+(R
+r
+;R
+m
+) and F
+0
+is globally bounded.
+Lemma 5.2. L et the semi ow ' satisfy (H1),(H2) and (H3) as in (5.2). Then
+for every  2E, v2A and r   we have
+e
+2 r
+V (L(r;v) ) V ( )   
+Z
+r
+0
+e
+2 s
+jL(s;v) j
+2
+H
+ds: (5.3)
+Pr o of. Let  2 E and v2 A be  xed. Consider (5.2) with v
+1
+:= v +h  and
+v
+2
+:= v , divide both sides by h
+2
+and take it to the limit as h! 0 to get (5.3).
+Such a passage is justi ed by Theorem 2.
+R emark 11. In fact, the restriction r   for (5.3) is unnecessary if we use di er-
+entiability results for '
+t
+inE (see Theorem 4.1, Section 2.4 in [21]).
+  This follo ws from the fact that an amenable tra jectory passing through a giv en p oin t on A is unique [6, 1].
+Note that the con tin uit y of the in v erse to '
+t
+can b e also sho wn without an y app ealing to the Brou w er theorem
+on in v ariance of domain. Ho w ev er, our construction of A highly relies on this theorem.
+Electronic Journal. h ttp://di journal.spbu.ru/ 31Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+Thus, the cocycle , which is obtained through the linearization of ' on A,
+also satis es the hypotheses of Theorem A.1, which gives us a family of amenable
+sets for v 2 A, which we denote by A
+0
+(v). Clearly , A
+0
+(v) is a j -dimensional
+subspace ofE. Let us consider the maps  :E
+ 
+!E and
+e
+ :A E
+ 
+!E, where
+ ( v) =v for all v2A and
+e
+ (v;   ) =  for all v2A and  2A
+0
+(v). Clearly ,
+e
+ (v; ) is linear in  so we will usually write
+e
+ (v)  instead of
+e
+ (v; ). One should
+think of A
+0
+(v) as a tangent space to A at v and think of
+e
+ (v) as the di erential
+of   at   =  v . W e shall not give a proof of this, referring the interested reader
+to [1]. F rom this one can obtain the following theorem.
+Theorem 11. L et the semi ow ' satisfy (H1),(H2) and (H3) as in (5.2). Then
+ :E
+ 
+!E is C
+1
+-di er entiable and  
+0
+( ) =
+e
+ ( ( )) for al l  2E
+ 
+. Mor e over,
+A is a C
+1
+-di er entiable submanifold in E; its tangent sp ac e at any p oint v2A is
+given by A
+0
+(v); the  ow ' onA is C
+1
+-smo oth and the di er ential of '
+t
+at v2A
+is given by the map L(t;v):A
+0
+(v)!A
+0
+('
+t
+(v)) for al l t2R.
+It is known thatC
+1
+-di erentiability of A is the maximum that one may achieve
+under the classical Spectral Gap Condition (which is included in our theory as it
+is shown in [4]) for semilinear parabolic equations and to obtain the di erentia-
+bility of higher orders one needs a more restrictive condition (see S.-N. Chow and
+G.R. Sell [16]; R. Rosa and R. T emam [32]). Results in the theory of normally
+hyperbolic manifolds (see, for example, N. F enichel [20]) suggests that A will be
+C
+k
+-smooth if (H3) is satis ed for two parameters  
+2
+>  
+1
+(with possibly di er-
+ent constants, operators and spaces, but with the same j ) such that  
+2
+= 
+1
+> k .
+However, such large spectral gaps are rarely seen in nonlocal applications of the
+theory .
+F or the normal hyperbolicity of A it is necessary to require the following
+property .
+(HYP) There exists 0 <  
+0
+<   such that the semi ow ' satis es (H1) with
+a possibly di erent operator P , (H2) with the same j and (H3) with  
+changed to  
+0
+and possibly di erent constants   and  
+V
+.
+This property is satis ed in applications, where conditions for the existence of P
+are given by strict inequalities so we can always v ary   a bit (see Section 6).
+In [1] it is shown that the submanifold A has the so-called exponential tracking
+property (and the exponent of attraction is nothing more than   from (H3))
+and it is normally hyperbolic under (HYP). This, in particular, answers the
+questions of R.A. Smith [34] on the di erentiability and normal hyperbolicity
+Electronic Journal. h ttp://di journal.spbu.ru/ 32Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+posed for reaction-di usion equations (the geometric context is also applicable for
+such problems [4]). Let us give brief details of the constructions. Namely , for each
+v
+0
+2A there is the stable  br e over v
+0
+given by
+A
+st
+(v
+0
+) :=fv2Ej
+Z
++1
+0
+e
+2 s
+j'
+s
+(v) '
+s
+(v
+0
+)j
+2
+H
+< +1g: (5.4)
+Let  
++
+:= Id   be the complementary pro jector. Then one can show that
+ 
++
+: A
+st
+(v
+0
+)! E
++
+is a homeomorphism and A
+st
+(v
+0
+) is a C
+1
+-di erentiable E
++
+-
+submanifold inE. These stable  bres foliate E and, consequently , for every v2E
+there exists a unique  
+c
+(v)2A such that v2A
+st
+( 
+c
+(v)). The continuous non-
+linear map  
+c
+( ):E!A is called the c entr al pr oje ctor and the triple (E;A;  
+c
+)
+is a  ber bundle. Analogously , for the linearization cocycle one can de ne the
+stable space at v
+0
+2A as
+A
+st
+ 
+(v
+0
+) :=f 2Ej
+Z
++1
+0
+e
+2 s
+jL(s;v
+0
+) j
+2
+H
+< +1g: (5.5)
+It can be veri ed that E = A
+st
+ 
+(v) A
+0
+(v) for any v2 A. Such a decomposi-
+tion de nes a normally hyperbolic structure for A with the corresponding c entr al
+pr oje ctors  
+c
+v
+, where Ran  
+c
+v
+=A
+0
+(v) and Ker  
+c
+v
+=A
+st
+ 
+(v). These constructions
+does not depend on the exponents from (HYP) and it can be shown that for
+some constant M > 0 we have for all t  0,  2E the inequalities
+kL(t;v)(Id  
+c
+v
+) k
+E
+ Me
+  t
+k k
+E
+;
+kL( t;v) 
+c
+v
+ k
+E
+ Me
+ 
+0
+t
+k k
+E
+:
+(5.6)
+F or j = 2 these properties allow to extend results of R.A. Smith concerned
+with the Poincar  e-Bendixson theory [35, 34], isolated periodic orbits [36] and
+the Poincar  e index theorem [37].
+F rom the V -orthogonal pro jector   we obtain a chart on A. However, to
+study coordinate representation of the vector  eld on A (i.e. inertial forms) it
+is convenient to use other charts on A. Namely , under (H3) we call a bounded
+pro jector  
+a
+inE admissible if for any nonzero v2 Ran  
+a
+we have V (v) < 0
+and for any nonzero v2 Ker  
+a
+we have V (v) > 0. Under the conditions of
+Theorem 11 it turns out that  
+a
+: A! Ran  
+a
+is also a homeomorphism and
+ 
+a
+: A
+0
+(v)! Ran  
+a
+is an isomorphism for any v2 A. Consequently , due to
+the C
+1
+-di erentiability of A and linearity of  
+a
+, the inverse map  
+a
+is also C
+1
+-
+di erentiable and globally Lipschitz. Moreover, transition maps between such
+admissible charts are globally Lipschitz and C
+1
+-di erentiable (see [1]).
+Electronic Journal. h ttp://di journal.spbu.ru/ 33Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+The following lemma describes the dynamics of ' onA and its linearization
+L(t;v) onA
+0
+(v) by ordinary di erential equations in E
+ 
+. Equation (5.7) is called
+the inertial form of ' on A. W e give a sketch of its proof based on the above
+introduced arguments.
+Lemma 5.3. L et the semi ow ' satisfy (H1),(H2) and (H3) as in (5.2). Sup-
+p ose ther e exists a sp e ctr al pr oje ctor for A which is admissible. Then
+1. Ther e is a one-to-one c orr esp ondenc e b etwe en the tr aje ctories of the  ow
+' onA and solutions of the fol lowing ODE in E
+ 
+:
+_
+ (t) =   [A ( (t)) +BF (C ( (t)))] =:f( (t)); (5.7)
+wher e the ve ctor  eld f :E
+ 
+!E
+ 
+is C
+1
+-di er entiable. This c orr esp ondenc e is
+given by the identities  ( (t; 
+0
+)) = '
+t
+( ( 
+0
+)) and  '
+t
+( ( 
+0
+)) =  (t; 
+0
+) for al l
+t2R and  
+0
+2E
+ 
+.
+2. Ther e is a one-to-one c orr esp ondenc e b etwe en the tr aje ctories of the c o cycle
+ and solutions of the fol lowing ODE in E
+ 
+:
+_  (t) =  [A +BF
+0
+(C'
+t
+(v))C]
+e
+ ('
+t
+(v)) (t) =:A
+L
+('
+t
+(v)) (t); (5.8)
+wher e the line ar op er ator A
+L
+(v):E
+ 
+!E
+ 
+dep end c ontinuously on v2 A and
+norms of A
+L
+(v) ar e uniformly b ounde d in v2A. This c orr esp ondenc e is given by
+the identities
+e
+ ('
+t
+(v)) (t; 
+0
+;v) =L(t;v)
+e
+ (v) 
+0
+and  L(t;v)
+e
+ (v) 
+0
+= (t; 
+0
+;v)
+for al l t2R, v2A and  
+0
+2E
+ 
+.
+Pr o of. The main obstacle to study the vector  eld f in (5.7) is due to fact that
+theV -orthogonal pro jector   has nothing to do with the operators A andB and,
+consequently , the di erentiability properties of f are not obvious in the chart
+given by  . Due to this, it is convenient to use di erent charts on A given by
+other pro jectors.
+By the hypothesis, there exists a spectral pro jector  
+a
+for A which is ad-
+missible. Note that such a pro jector can be de ned everywhere in H (since A
+is an operator in H) and commutes with A. Thus,  
+a
+A = A 
+a
+and  
+a
+B are
+bounded linear maps and in the chart given by  
+a
+the conclusions of Lemma 5.3
+are obvious. Then the arguments before lemma show that the same holds in any
+admissible chart and, in particular, the one given by the V -orthogonal pro jector
+ .
+The following theorem is a generalization of Corollary 2.2 from [33], where
+the case of ODEs in R
+n
+with j = n is considered. The main idea is to use the
+Electronic Journal. h ttp://di journal.spbu.ru/ 34Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+quadratic form V ( ) restricted to each tangent space A
+0
+(v) as a Riemannian
+metric on A. Condition (5.3) gives a lower bound for the singular v alues of
+L(t;v): A
+0
+(v) ! A
+0
+('
+t
+(v)) in this metric. This lower bound can be used to
+estimate the product of the  rst l < j singular v alues through the product of
+all j singular v alues, which, in turn, can be estimated through the trace that is
+independent of metric changes.
+Theorem 12. Under the c onditions of L emma 5.3 supp ose thatK is an invariant
+c omp act and for some d2 [0;j] we have
+(j d)  + Tr(A
+L
+(v))< 0 for al l v2K; (5.9)
+wher e A
+L
+( ) is de ne d in (5.8). Then dim
+F
+K<d.
+Pr o of. It is su cient to estimate the fractal dimension of  K, which is an inv ariant
+compact w. r. t. the  ow given by (5.7) in E
+ 
+. F rom Theorem 11 and Lemma
+5.3 it follows that the vector  eld f :E
+ 
+! E
+ 
+from (5.7) is C
+1
+-smooth and
+its deriv ative at  2E
+ 
+is given by A
+L
+( ( )). F or any t  0 and  
+0
+2E
+ 
+put
+e
+L(t; 
+0
+) :=  L(t;  ( 
+0
+)) 
+0
+( 
+0
+). Clearly ,
+e
+L(t; 
+0
+):E
+ 
+!E
+ 
+is the di erential at  
+0
+of the mapE
+ 
+3 
+0
+7! (t; 
+0
+)2E
+ 
+. Let us endow the spaceE
+ 
+with any scalar
+product. Let  
+1
+(t; 
+0
+)  :::   
+j
+(t; 
+0
+) denote the singular v alues of
+e
+L(t; 
+0
+)
+w. r. t. this scalar product. F rom the Liouville trace formula for (5.8), we have
+ 
+1
+(t; 
+0
+) :::  
+j
+(t; 
+0
+)  exp
+ Z
+t
+0
+TrA
+L
+('
+s
+( ( 
+0
+)))ds
+ 
+: (5.10)
+Now for a  xed t   0 and  
+0
+2 E
+ 
+let us consider the scalar products in
+E
+ 
+de ned trough the quadratic forms ( ; )
+1
+:= V ( 
+0
+( 
+0
+) ) and ( ; )
+2
+:=
+ V ( 
+0
+( (t; 
+0
+)) ) for all  2E
+ 
+. LetE
+1
+andE
+2
+be the spaceE
+ 
+endowed with
+scalar products ( ; )
+1
+and ( ; )
+2
+respectively . Let 
+0
+1
+(t; 
+0
+) :::  
+0
+j
+(t; 
+0
+) denote
+the singular v alues of
+e
+L(t; 
+0
+):E
+1
+!E
+2
+. By the Courant Fischer W eyl min-max
+principle, we have for k = 1;:::;j that
+( 
+0
+k
+(t; 
+0
+))
+2
+= sup
+W
+k
+ E
+ 
+inf
+ 2W
+k
+; 6=0
+(
+e
+L(t; 
+0
+) ;
+e
+L(t; 
+0
+) )
+2
+( ; )
+1
+; (5.11)
+where the supremum is taken over all k -dimensional subspaces W
+k
+ofE
+ 
+. F rom
+(5.3) with   :=  
+0
+( 
+0
+)  , r :=t and v :=  ( 
+0
+) we have
+(
+e
+L(t; 
+0
+) ;
+e
+L(t; 
+0
+) )
+2
+( ; )
+1
+ e
+ 2 t
+: (5.12)
+Electronic Journal. h ttp://di journal.spbu.ru/ 35Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+F rom this and (5.11) we have  
+0
+k
+(t; 
+0
+) e
+  t
+. Moreover, from (5.11) and the min-
+max principle for  
+k
+it is also clear that there exists a constant C =C(t; 
+0
+)> 0
+such that 
+k
+(t; 
+0
+) C(t; 
+0
+) 
+0
+(t; 
+0
+) for allt  0 and 
+0
+2E
+ 
+. Moreover, sinceK
+is compact and  
+0
+( 
+0
+) depend continuously on  
+0
+, there exists a constant C
+K
+> 0
+such that  
+k
+(t; 
+0
+) C
+K
+ 
+0
+k
+(t; 
+0
+) C
+K
+e
+  t
+for all t  0 and  
+0
+2  K. F rom this
+and (5.10) for any k = 1;:::;j we have
+ 
+1
+(t; 
+0
+) ::: 
+k
+(t; 
+0
+) =
+ 
+1
+(t; 
+0
+) :::  
+j
+(t; 
+0
+)
+ 
+k+1
+(t; 
+0
+) :::  
+j
+(t; 
+0
+)
+ 
+ C
+ (j k)
+K
+exp
+ Z
+t
+0
+[(j k)  + Tr(A
+L
+('
+s
+( ( 
+0
+))))]ds
+ 
+:
+(5.13)
+Now let d =k +  , where k is a nonnegative integer and  2 (0; 1]. Since
+ 
+1
+(t; 
+0
+) :::  
+k
+(t; 
+0
+)  
+ 
+k+1
+=
+= ( 
+1
+(t; 
+0
+) :::  
+k
+(t; 
+0
+))
+1  
+  ( 
+1
+(t; 
+0
+) :::  
+k+1
+(t; 
+0
+))
+ 
+;
+(5.14)
+from (5.13) we have
+ 
+1
+(t; 
+0
+) :::  
+k
+(t; 
+0
+)  ( 
+k+1
+(t; 
+0
+))
+ 
+ 
+ C
+ (j d)
+K
+exp
+ Z
+t
+0
+[(j d)  + Tr(A
+L
+('
+s
+( ( 
+0
+))))]ds
+ 
+:
+(5.15)
+If (5.9) is satis ed then the right-hand side of (5.15) tends to 0 ast! +1. But
+this implies that dim
+F
+ K<d (see Theorem 2.1 from [14]) and sinceK =  ( K)
+and   is a Lipschitz map, we get dim
+F
+K<d.
+6 Example (continued)
+Let us consider again the Suarez-Schopf model (4.1). Here we will provide con-
+ditions for the existence of one-dimensional and two-dimensional inertial mani-
+folds in the model. These manifolds are actually perturbations of the eigenspaces
+corresponding to the leading characteristic roots  
+1
+and  
+2
+at the zero equilib-
+rium  
+0
+. Conditions for persistence of such eigenspaces are given in terms of
+the so-called transfer function of the linear part (see [2]) and take the form of
+an inequality (called frequency inequality), which generalizes the Spectral Gap
+Condition [4]. In the case of (4.1) written in the form (1.5) the transfer function
+W (p) =C(A pI)
+ 1
+B is given by
+W (p) =
+ 1
+1 ffe
+  p
+ p
+: (6.1)
+Electronic Journal. h ttp://di journal.spbu.ru/ 36Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+Here we assumed that
+e
+A  = (0) ff (  ),
+e
+B = 1,
+e
+C  = (0) andF (y) =y
+3
+.
+Let   be the Lipschitz constant of x
+3
+on [ R
+1
+;R
+1
+], where R
+1
+is de ned in
+Lemma 4.2, that is   = 3R
+2
+1
+.
+Theorem 13. Supp ose that ff  < 1=2 and for some  2 (0;  
+2
+) the fr e quency
+ine quality
+ReW (   +i!) +  
+ 1
+> 0 for al l !2R (6.2)
+is satis e d. Then the glob al attr actor K of (4.1) is c ontaine d in a one-dimensional
+C
+1
+-di er entiable inertial manifold.
+The proof is standard: we truncate
+**
+the nonlinearity x
+3
+outside a small
+neighborhood ofK and study the modi ed equation. F rom (6.2) we can apply
+   the F requency Theorem from [2] to get a proper operator P as in Section 5. Then
+we can construct an inertial manifold for the modi ed system, which contains K
+by de nition (since   > 0, see Appendix (A)) by methods of [1]. Restricting the
+manifold to the small neighborhood ofK gives the desired manifold.
+Thus, under the conditions of Theorem 13, K is just the union of equilibria
+and the unstable manifold of  
+0
+.
+Numerical simulations in [3] show that the global attractor K for a wide range
+of parameters of interest lies in the ball of radius 1. Let  
+3
+and  
+4
+be the  rst
+pair of complex-conjugate roots of (4.4).
+Theorem 14. Supp ose for some  2 (  
+2
+;  Re 
+3
+) the fr e quency ine quality
+ReW (   +i!) + 1=3> 0 for al l !2R (6.3)
+is satis e d. Then any invariant set of (4.1), lying in the b al l of r adius 1, is
+c ontaine d in a two-dimensional C
+1
+-di er entiable inertial manifold.
+Fig. 2 shows a region where the conditions of Theorem 13 or Theorem 14 are
+satis ed. Note that a part of the blue region can be obtained also using the rough
+estimate
+p
+1 +ff from Lemma 4.1 to bound the global attractorK. This allows to
+rigorously justify the existence of two-dimensional inertial manifolds containing
+K. However, this part does not contain interesting parameters from [3], for which
+periodic orbits can be observed. W e expect that the relative simplicity of the
+Suarez-Schopf model may allow to construct sharper regions and, consequently ,
+rigorously justify the existence of inertial manifolds for the interesting parameters.
+**
+Note that it is imp ortan t to preserv e the condition g
+0
+(x)  0.
+   F or this w e consider the quadratic form (in terms of [2]) giv en b y F(v; ) =  ( Cv  ), where 2   :=R,
+v = ( (0); ) and Cv = (0).
+Electronic Journal. h ttp://di journal.spbu.ru/ 37Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+Figure 2: A n umerically obtained region in the space of parameters ( ;ff) of system (4.1) for
+whic h the conditions of Theorem 13 (orange) or Theorem 14 (blue) are satis ed.
+F unding
+The reported study was funded by the Russian Science F oundation (Pro ject 22-
+11-00172).
+A An addition to the reduction principle
+LetQ be a metric space and #
+t
+:Q!Q, where t2R, be a  ow on Q. LetE
+be a real Banach space. W e say that the family of maps 
+t
+(q; ):E!E, where
+q2Q and t  0, is a c o cycle inE over the driving system (Q;#) if
+1. 
+0
+(q;v) =v and 
+t+s
+(q;v) = 
+t
+(#
+s
+(q); 
+s
+(q;v)) for all t;s  0, v2E and
+q2Q.
+2. The map (t;q;v)7! 
+t
+(q;v) is continuous as a map R
++
+ Q E!E.
+Now suppose that E is continuously embedded into some real normed space
+H, which is assumed to be Hilbert for convenience W e identify elements of E and
+H under such an embedding. Lethv;fi denote the dual pairing between v2E
+and f2E
+ 
+.
+Let P :E!E
+ 
+be a bounded linear operator, i. e. P 2L(E;E
+ 
+). W e say
+that P is symmetric ifhv
+1
+;Pv
+2
+i =hv
+2
+;Pv
+1
+i for all v
+1
+;v
+2
+2E. F or a subspace
+Electronic Journal. h ttp://di journal.spbu.ru/ 38Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+L  E we say that P is p ositive (respectively , ne gative ) on L ifhv;Pvi > 0
+(respectively ,hv;Pvi< 0) for all v2L with v6= 0.
+(H1) There is P2L(E;E
+ 
+), which is symmetric and such that E splits into the
+direct sum of some subspaces E
++
+andE
+ 
+, i. e. E =E
++
+ E
+ 
+, such that P is
+positive onE
++
+and negative onE
+ 
+.
+(H2) F or some integer j  0 we have dimE
+ 
+=j .
+(H3) F or V (v) :=hv;Pvi and some numbers  > 0,   > 0,  
+V
+  0 we have
+e
+2 r
+V ( 
+r
+(q;v
+1
+)  
+r
+(q;v
+2
+)) e
+2 l
+V ( 
+l
+(q;v
+1
+)  
+l
+(q;v
+2
+)) 
+   
+Z
+r
+l
+e
+2 s
+j 
+s
+(q;v
+1
+)  
+s
+(q;v
+2
+)j
+2
+H
+ds (A.1)
+satis ed for every v
+1
+;v
+2
+2E, q2Q and 0 l r such that r l  
+V
+.
+Note that due to the cocycle property it is su cient to require that (H3)
+holds for l = 0 and any r  
+V
+. A more general case when P and   depends on
+q2Q is considered in [1].
+R emark 12. Let the assumptions (H1) and (H2) be satis ed. Since E
+ 
+is  nite-
+dimensional and V ( ) is of constant sign on it, one can  nd the V -orthogonal
+complement of E
+ 
+in E, which is de ned as follows. The symmetric bilinear
+formhv
+1
+; Pv
+2
+i de nes an inner product in E
+ 
+. Every v 2 E gives rise to
+a continuous linear functional on E
+ 
+ash ;Pvi. By the Riesz representation
+theorem, there exists a unique element  v2E
+ 
+such thathw;Pvi =hw;P  vi
+for all w2 E
+ 
+. Clearly ,  2L(E;E). Put E
+?;V
+:= Ker(I   ). It is easy
+to verify that E =E
+?;V
+ E
+ 
+and P is positive on E
+?;V
+. Thus, we can always
+assume that the subspaces E
++
+andE
+ 
+from (H1) are V -orthogonal in the sense
+that V (v) = V (v
++
+) +V (v
+ 
+), where v = v
++
++v
+ 
+is the unique decomposition
+with v
++
+2E
++
+and v
+ 
+2E
+ 
+. W e say that   is the V -ortho gonal pr oje ctor onto
+E
+ 
+. F orE =H this construction of V -orthogonal pro jectors also allows to avoid
+the use of the continuous functional calculus for bounded self-adjoint operators
+considered in [6].
+Let v( ):R!E be a continuous function. W e say that v( ) is a c omplete
+tr aje ctory of the cocycle if there exists q2Q such that v(t +s) = 
+t
+(#
+s
+(q);v(s))
+for all t  0 ands2R. In this case we say that v( ) is passing through v(0) atq
+(or simple, v( ) is a complete tra jectory at q ). Under (H3) a complete tra jectory
+Electronic Journal. h ttp://di journal.spbu.ru/ 39Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+v( ) is called amenable if
+Z
+0
+ 1
+e
+2 s
+jv(s)j
+2
+H
+ds< +1: (A.2)
+Let us consider the following assumption.
+(S) There is a number t
+S
+  0 and there is a constant C
+S
+> 0 such that
+k 
+t
+emb
+(q;v
+1
+)  
+t
+emb
+(q;v
+2
+)k
+E
+ C
+S
+jv
+1
+ v
+2
+j
+H
+for all q2Q and v
+1
+;v
+2
+2E:
+(A.3)
+Note that in the caseE =H considered in [6] we have (S) automatically satis ed
+with t
+S
+= 0 and C
+S
+= 1.
+In the construction of inv ariant manifolds by the methods of [6] a compactness
+assumption is required as follows.
+(COM) There exists t
+com
+> 0 such that the map 
+t
+com
+(q; ):E!E is compact
+for all q2Q.
+Let A(q) be the set of all amenable tra jectories at q . A generalization of
+Theorem 1 from [6] can be given as follows.
+Theorem A.1. L et the c o cycle in E satisfy (H1),(H2), (H3), (S) and
+(COM). L et   b e the V -ortho gonal pr oje ctor onto E
+ 
+(se e R emark 12). Then
+for any q2Q either A(q) is empty or the map  
+q
+:=  
+ 
+ 
+A(q)
+:A(q)!E
+ 
+is a
+home omorphism.
+A proof can be given following the same arguments as in [6] and using the
+above given remarks. A proof for the more general case, where P and   depends
+on q2Q, is presented in our adjacent work [1]. Note that we also considered
+a number  
+V
+  0 in (H1) (in [6] there was no such a number), which may be
+convenient sometimes. Convergence theorems for periodic cocycles given in [6] can
+be also generalized to this setting (see [1]). Along with the F requency Theorem
+from [2], which covers delay equations and allows to construct operators as in
+(H3), this satisfactorily solves Problem 2 from [6].
+Let the conditions of Theorem A.1 be satis ed and the sets A(q) be not
+empty for all q2Q. Then we can consider the map  :Q E
+ 
+!A(q) de ned
+as  (q; ) :=  
+q
+( ), where  
+q
+:E
+ 
+!A(q) is the inverse to  
+q
+=  
+ 
+ 
+A(q)
+:A(q)!
+E
+ 
+. F or every  xed q the map  (q; ) is a homeomorphism between E
+ 
+and
+Electronic Journal. h ttp://di journal.spbu.ru/ 40Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+A(q) due to Theorem A.1. In [6] it was posed a problem (see Problem 1 therein),
+whether the map  :Q E
+ 
+!E is continuous. Here we present an answer, which
+extends the case of semi ows and periodic cocycles studied in [6] and covers many
+interesting cases arising in practice (see Remark 13 below).
+(BA) F or any q2Q there is a bounded in the past complete tra jectory w
+ 
+q
+( ) at
+q and there exists a constant M
+b
+> 0 such that sup
+t 0
+kw
+ 
+q
+(t)k
+E
+ M
+b
+for all
+q2Q.
+W e say that  :Q E
+ 
+!E is uniformly compact if  (C;B) is precompact
+inE for any precompact setC Q and bounded setB E
+ 
+.
+Theorem A.2. Under the hyp otheses of The or em A.1 supp ose in addition that
+(BA) holds and the map   is uniformly c omp act. Then  :Q E
+ 
+! E is
+c ontinuous.
+Pr o of. Let q
+k
+;q2Q and  
+k
+; 2E
+ 
+, where k = 1; 2;:::, and q
+k
+!q ,  
+k
+!  as
+k! +1. Let v
+k
+( );v( ) be amenable tra jectories at q
+k
+and q respectively and
+such that  (q
+k
+; 
+k
+) =v
+k
+(0) and  (q; ) =v(0). Then from (H3) for l   
+V
+we
+have
+V (v
+k
+(0) w
+q
+k
+(0)) e
+2 l
+V (v
+k
+(l) w
+q
+k
+(l))   
+Z
+0
+l
+e
+2 s
+jv
+k
+(s) w
+q
+k
+(s)j
+2
+H
+ds: (A.4)
+If k is  xed, a subsequence l
+m
+, m = 1; 2;:::, l
+m
+! 1 as m! +1 can be
+chosen
+   such that e
+2 l
+m
+V (v
+k
+(l
+m
+) w
+q
+k
+(l
+m
+))! 0 asm! +1. Putting l =l
+m
+in
+(A.4) and taking it to the limit as m! +1, we get
+  
+ 1
+V (v
+k
+(0) w
+q
+k
+(0)) 
+Z
+0
+ 1
+e
+2 s
+jv
+k
+(s) w
+q
+k
+(s)j
+2
+H
+ds (A.5)
+SinceE
++
+andE
+ 
+are V -orthogonal, we have V (v
+k
+(0) w
+q
+k
+(0)) k k k 
+k
+ 
+ w
+q
+k
+(0)k
+2
+E
+. Using the uniform boundedness of w
+q
+k
+we have
+ Z
+0
+ 1
+e
+2 s
+jv
+k
+(s) w
+q
+k
+(s)j
+2
+H
+ds
+ 
+1=2
+ 
+ Z
+0
+ 1
+e
+2 s
+jv
+k
+(s)j
+2
+H
+ds
+ 
+1=2
+ 
+ 
+ Z
+0
+ 1
+e
+2 s
+jw
+q
+k
+(s)j
+2
+H
+ds
+ 
+1=2
+ 
+ Z
+0
+ 1
+e
+2 s
+jv
+k
+(s)j
+2
+H
+ds
+ 
+1=2
+ 
+M
+2 
+:
+(A.6)
+   Since v
+k
+( ) and w
+q
+k
+( ) are amenable, w e ha v e
+R
+0
+ 1
+e
+2 s
+kv
+k
+(s) w
+q
+k
+(s)k
+2
+E
+ds < +1. T o get l
+m
+one ma y
+apply the mean v alue form ula to the previous in tegral on [l  1;l] for l = 1; 2;:::.
+Electronic Journal. h ttp://di journal.spbu.ru/ 41Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+F rom this, (A.5) and (S) there exists a constant
+f
+M (independent of k ) such that
+f
+M 
+Z
+0
+ 1
+e
+2 s
+kv
+k
+(s)k
+2
+E
+ds: (A.7)
+Now suppose that  (q
+k
+; 
+k
+) = v
+k
+(0) does not converge in E to v(0) =  (q; ).
+Then for a subsequence (we keep the same index) we have that jv
+k
+(0) v(0)j
+E
+is
+separated from zero. Let us for every k consider the integral in (A.7) on segments
+[l 1;l], wherel = 1; 2;:::. Using the mean v alue theorem, we get a family of
+numbers t
+(l)
+k
+2 [l  1;l] such that vectors v
+k
+(t
+(l)
+k
+) are bounded inE uniformly in k
+and the bound depends on l. T aking a subsequence, if necessary , we may assume
+that t
+(l)
+k
+! t
+l
+as k! +1 for some t
+l
+2 [l  1;l]. F or a  xed l let us consider
+C :=f#
+t
+(l)
+k
+(q
+k
+)j k = 1; 2;:::g andB :=f v
+k
+(t
+(l)
+k
+)j k = 1; 2;:::g. Clearly ,C
+is precompact and B is bounded. Then v
+k
+(t
+(l)
+k
+) lies in the precompact (in E)
+set  (C;B). Thus, there exist a converging subsequence. Using Cantor’s diagonal
+argument, we may assume that v
+k
+(t
+(l)
+k
+) converges inE to somev
+l
+2E ask! +1
+for all l = 1; 2;:::. Let us de ne v
+l
+(t) := 
+t t
+l
+(#
+t
+l
+(q);v
+l
+) for t  t
+l
+. F rom
+the continuity of the cocycle we have that v
+k
+(t)! v
+l
+(t) as k! +1 for t > t
+l
+.
+This implies that v
+l 1
+(t) = v
+l
+(t) for all l and all t > t
+l
+. F or any t2R de ne
+v
+ 
+(t) :=v
+l
+(t), where l such that t>t
+l
+. Then v
+ 
+( ) is a complete tra jectory at q
+andv
+k
+(t)!v
+ 
+(t) inE for allt2R. F rom (A.7) it follows that v
+ 
+( ) is amenable.
+Since  v
+k
+(0) =  
+k
+!  v
+ 
+(0) and  
+k
+!   , we must have  v
+ 
+(0) =   . But since
+v( ) and v
+ 
+( ) are both amenable at q and  :A(q)!E
+ 
+is a homeomorphism,
+we must have v( ) v
+ 
+( ) and, consequently , v
+k
+(0)!v(0) inE. This leads to a
+contradiction.
+R emark 13. Let us discuss the conditions of Theorem A.2. Assumption (BA)
+is natural in the following two cases. The  rst one is when (Q;#) is a minimal
+almost periodic (in the sense of Bohr)  ow. In this case this condition will be
+satis ed if there is a bounded in the future semitra jectory at some q , i. e. when
+the limit dynamics is nontrivial. The second case is when the cocycle is linear (as
+in Section 5). Here the zero tra jectory at each q satis es the required property .
+The assumption of uniform compactness for   is also natural. It will be satis ed
+if we assume that assumptions (UCOM) and (ULIP) below hold. Thus, this
+condition is also natural.
+(UCOM) There exists  
+ucom
+> 0 such that for any precompact setC Q and
+any bounded setB E the set 
+ 
+ucom
+(C;B) is precompact inE.
+Electronic Journal. h ttp://di journal.spbu.ru/ 42Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+(ULIP) There exists t
+S
+  0 such that for any T > 0 there is a constant L
+T
+> 0
+such that for all v
+1
+;v
+2
+2E and q2Q we have
+k 
+t
+(q;v
+1
+)  
+t
+(q;v
+2
+)k
+E
+ L
+T
+jv
+1
+ v
+2
+j
+H
+for t2 [t
+S
+;t
+S
++T ] (A.8)
+and also
+k 
+t
+(q;v
+1
+)  
+t
+(q;v
+2
+)k
+E
+ C
+00
+T
+kv
+1
+ v
+2
+k
+E
+for t2 [0;T ]: (A.9)
+Lemma A.1. Under the hyp otheses of The or em A.1 supp ose in addition that A(q)
+is nonempty for al l q2Q and let (BA), (UCOM) and (ULIP) b e satis e d.
+Then   is uniformly c omp act.
+Pr o of. Consider a precompact setC Q and a bounded setB E. Consider
+any sequence v
+0;k
+2  (C B), where k = 1; 2;:::, for which we shall  nd a
+converging subsequence. Then v
+0;k
+=  (q
+k
+; 
+k
+) for some q
+k
+2C , 
+k
+2B and there
+are amenable tra jectories v
+ 
+k
+( ) atq
+k
+such that v
+ 
+k
+(0) =v
+0;k
+. W e may assume that
+q
+k
+converges to some q as k! +1. Similarly to (A.5) from (ULIP) for some
+constant
+f
+M > 0 we get
+f
+M 
+Z
+0
+ 1
+e
+2 s
+jv
+ 
+k
+(s) w
+ 
+q
+k
+(s)j
+2
+H
+ds 
+Z
+  
+   1
+e
+2 s
+jv
+ 
+k
+(s) w
+ 
+q
+k
+(s)j
+2
+H
+ds =
+=e
+2 s
+k
+jv
+ 
+k
+(s
+k
+) w
+ 
+q
+k
+(s
+k
+)j
+2
+H
+ e
+ 2 ( +1)
+(C
+0
+ +1
+)
+ 2
+kv
+ 
+k
+(  
+ucom
+) w
+ 
+q
+k
+(  
+ucom
+)k
+2
+E
+;
+(A.10)
+where   = maxf 
+S
+; 
+ucom
+g and s
+k
+2 [    1;  ] are some numbers. F rom this
+and (BA) we get that v
+ 
+k
+(  
+ucom
+) lies in some bounded setB
+0
+and, consequently ,
+v
+ 
+k
+(0)2 
+ 
+ucom
+(C
+0
+;B
+0
+), whereC
+0
+=f#
+  
+ucom
+(q
+k
+)jk = 1; 2;:::g. Then by (UCOM)
+one can  nd a converging subsequence of v
+ 
+k
+(0) =v
+0;k
+. The lemma is proved.
+Lemma A.2. Under the hyp otheses of The or em A.1 supp ose in addition that
+(ULIP) is satis e d. L et A(q) b e nonempty for some q2Q. Then  
+q
+:E
+ 
+!E
+is Lipschitz and the Lipschitz c onstants ar e b ounde d uniformly in q 2Q. In
+p articular, A(q) is a Lipschitz submanifold in E.
+Pr o of. Similarly to (A.5) for any two amenable tra jectories v
+ 
+1
+( ) and v
+ 
+2
+( ) at q
+we have
+ 
+ 1
+kPk k v
+ 
+1
+(0)   v
+ 
+2
+(0)k
+2
+E
+ 
+Z
+0
+ 1
+e
+2 s
+jv
+ 
+1
+(s) v
+ 
+2
+(s)j
+2
+H
+ds 
+ 
+Z
+  
+S
+  
+S
+ 1
+e
+2 s
+jv
+ 
+1
+(s) v
+ 
+2
+(s)j
+2
+H
+=e
+2 s
+0
+jv
+ 
+1
+(s
+0
+) v
+ 
+2
+(s
+0
+)j
+2
+H
+(A.11)
+Electronic Journal. h ttp://di journal.spbu.ru/ 43Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+for some s
+0
+2 [  
+S
+  1;  
+S
+]. F rom (ULIP) we have
+kv
+ 
+1
+(0) v
+ 
+2
+(0)k
+E
+ C
+0
+ 
+S
++1
+jv
+ 
+1
+(s
+0
+) v
+ 
+2
+(s
+0
+)j
+H
+: (A.12)
+Now if  v
+ 
+i
+(0) = 
+i
+for i = 1; 2, we get
+k 
+q
+( 
+1
+)   
+q
+( 
+2
+)k
+E
+=kv
+ 
+1
+(0) v
+ 
+2
+(0)k
+E
+ C
+0
+ 
+S
++1
+e
+ ( 
+S
++1)
+p
+ 
+ 1
+kPk k 
+1
+  
+2
+k
+E
+:
+(A.13)
+Thus, we may put C
+ 
+:= C
+0
+ 
+S
++1
+e
+ ( 
+S
++1)
+p
+ 
+ 1
+kPk and this shows the required
+statement.
+References
+[1] Anikushin M.M. Inertial manifolds and foliations for asymptotically compact
+cocycles in Banach spaces. arXiv pr eprint , arXiv:2012.03821v3 (2022).
+[2] Anikushin M.M. F requency theorem and inertial manifolds for neutral delay
+equations, arXiv pr eprint , arXiv:2003.12499v5 (2022).
+[3] Anikushin M.M., Romanov A.O. Hidden and unstable periodic orbits as a
+result of homoclinic bifurcations in the Suarez-Schopf delayed oscillator and
+the irregularity of ENSO. arXiv pr eprint , arXiv:2102.11711v3 (2022).
+[4] Anikushin M.M. F requency theorem for parabolic equations and its relation
+to inertial manifolds theory . J. Math. Anal. Appl. , 505(1), 125454 (2021).
+[5] Anikushin M.M. Almost automorphic dynamics in almost periodic cocycles
+with one-dimensional inertial manifold. Di er. Ur avn. Pr otsessy Upr. , 2, 13 
+48 (2021), in Russian.
+[6] Anikushin M.M. A non-local reduction principle for cocycles in Hilbert
+spaces. J. Di er. Equations , 269(9), 6699 6731 (2020).
+[7] Anikushin M.M. On the Liouville phenomenon in estimates of fractal dimen-
+sions of forced quasi-periodic oscillations, V estnik St. Petersb. Univ. Math. ,
+52(3), 234 243 (2019).
+[8] Anikushin M.M., Reitmann V., Romanov A. O. Analytical and numerical es-
+timates of the fractal dimension of forced quasiperiodic oscillations in control
+systems. Di er. Ur avn. Pr otsessy Upr avl. , 2 (2019), in Russian.
+Electronic Journal. h ttp://di journal.spbu.ru/ 44Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+[9] Anikushin M.M. On the Smith reduction theorem for almost periodic ODEs
+satisfying the squeezing property . Rus. J. Nonlin. Dyn. , 15(1), 97 108 (2019).
+[10] B  atk ai A., Piazzera S. Semigr oups for Delay Equations . A K Peters, W ellesley
+(2005).
+[11] Breda D., V an Vleck E. Approximating Lyapunov exponents and Sacker Sell
+spectrum for retarded functional di erential equations. Numer. Math. ,
+126(2), 225 257 (2014).
+[12] Breda D. Nonautonomous delay di erential equations in Hilbert spaces and
+Lyapunov exponents. Di er. Inte gr al Equ. , 23(9/10), 935 956 (2010).
+[13] Carv alho A.N., Langa J.A., Robinson J.C. Attr actors for In nite-
+Dimensional Non-Autonomous Dynamic al Systems . Springer Science & Busi-
+ness Media (2012).
+[14] Chepyzhov V.V., Ilyin A.A. On the fractal dimension of inv ariant sets; ap-
+plications to Navier-Stokes equations. Discr ete Contin. Dyn. Syst. , 10(1&2),
+117 136 (2004).
+[15] Chicone C. Inertial and slow manifolds for delay equations with small delays.
+J. Di er. Equations , 190(2), 364 406 (2003).
+[16] Chow S.-N., Lu K., Sell G.R. Smoothness of inertial manifolds. J. Math.
+Anal. Appl., 169, 283 312 (1992).
+[17] Chueshov I. Dynamics of Quasi-stable Dissip ative Systems . Berlin: Springer
+(2015).
+[18] Eden A., Zelik S.V., Kalantarov V.K. Counterexamples to regularity of Man  e
+pro jections in the theory of attractors. Russian Math. Surveys , 68(2), 199 
+226 (2013).
+[19] F aheem M., Rao M.R.M. F unctional di erential equations of delay type
+and nonlinear evolution in L
+p
+-spaces. J. Math. Anal. Appl. , 123(1), 73 103
+(1987).
+[20] F enichel N. Persistence and smoothness of inv ariant manifolds for  ows. In-
+diana Univ. Math. J. , 21(3), 193 226 (1971).
+[21] Hale J.K. The ory of F unctional Di er ential Equations . Springer-V erlag, New
+Y ork (1977).
+Electronic Journal. h ttp://di journal.spbu.ru/ 45Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+[22] Katok A., Hasselblatt B. Intr o duction to the Mo dern The ory of Dynamic al
+Systems . Cambridge University Press (1997).
+[23] Kostianko A., Li X., Sun C., Zelik S. Inertial manifolds via spatial averaging
+revisited. SIAM J. Math. Anal. , 54(1) (2022).
+[24] Kuznetsov N.V., Reitmann V. Attr actor Dimension Estimates for Dynami-
+c al Systems: The ory and Computation . Switzerland: Springer International
+Publishing AG (2021).
+[25] Kuznetsov N.V. The Lyapunov dimension and its estimation via the Leonov
+method. Phys. L ett. A , 380(25-26), 2142 2149 (2016).
+[26] Leonov G.A., Kuznetsov N.V., Korzhemanov a N.A., Kusakin D.V. Lyapunov
+dimension formula for the global attractor of the Lorenz system. Commun.
+Nonline ar Sci. Numer. Simul. , 41, 84 103 (2016).
+[27] Li M.Y., Muldowney J.S. Lower bounds for the Hausdor  dimension of at-
+tractors. J. Dyn. Di er. Equ. , 7(3), 457 469 (1995).
+[28] Likhtarnikov A.L., Y akubovich V.A. The frequency theorem for continuous
+one-parameter semigroups. Math. USSR-Izv. 41(4), 895 911 (1977), in Rus-
+sian.
+[29] Mallet-Paret J., Nussbaum R.D. T ensor products, positive linear operators,
+and delay-di erential equations. J. Dyn. Di . Equat. , 25, 843 905 (2013).
+[30] Mallet-Paret J., Sell G.R. The Poincar  e-Bendixson theorem for monotone
+cyclic feedback systems with delay . J. Di er. Equations , 125, 441 489 (1996).
+[31] Mallet-Paret J. Negatively inv ariant sets of compact maps and an extension
+of a theorem of Cartwright. J. Di er. Equations , 22(2), 331 348 (1976).
+[32] Rosa R., T emam R. Inertial manifolds and normal hyperbolicity . A cta Appl.
+Math., 45(1), 1 50 (1996).
+[33] Smith R.A. Some applications of Hausdor  dimension inequalities for ordi-
+nary di erential equations. P. R oy. So c. Edinb. A , 104(3-4), 235 259 (1986).
+[34] Smith R.A. Orbital stability and inertial manifolds for certain reaction di u-
+sion systems. Pr o c. L ond. Math. So c. , 3(1), 91 120 (1994).
+[35] Smith R.A. Poincar  e-Bendixson theory for certain retarded functional-
+di erential equations. Di er. Inte gr al Equ. , 5(1), 213 240 (1992).
+Electronic Journal. h ttp://di journal.spbu.ru/ 46Di er ential Equations and Contr ol Pr o c esses, N. ?, 2021
+[36] Smith R.A. Certain di erential equations have only isolated periodic orbits.
+Ann. Mat. Pur a Appl. , 137(1), 217 244 (1984).
+[37] Smith R.A. Poincar  e index theorem concerning periodic orbits of di erential
+equations. Pr o c. L ond. Math. So c. , 3(2), 341 362 (1984).
+[38] So J. W-H., W u J. T opological dimensions of global attractors for semilinear
+PDE’s with delays. Bul l. Aust. Math. So c. , 43(3), 407 422 (1991).
+[39] Suarez M.J., Schopf P .S. A delayed action oscillator for ENSO. J. Atmos.
+Sci., 45(21), 3283 3287 (1988).
+[40] T emam R. In nite-Dimensional Dynamic al Systems in Me chanics and
+Physics . Springer (1997).
+[41] Thieullen P . Entropy and the Hausdor  dimension for in nite-dimensional
+dynamical systems. J. Dyn. Di er. Equ. , 4(1), 127 159 (1992).
+[42] W ebb G.F., Badii M. Nonlinear nonautonomous functional di erential equa-
+tions in L
+p
+spaces. Nonline ar Anal-The or. , 5(2), 203 223 (1981).
+[43] W ebb G.F. F unctional di erential equations and nonlinear semigroups in L
+p
+-
+spaces. J. Di er. Equations , 20(1), 71 89 (1976).
+[44] Zelik S. Inertial manifolds and  nite-dimensional reduction for dissipative
+PDEs. P. R oy. So c. Edinb. A , 144(6), 1245 1327 (2014).
+Electronic Journal. h ttp://di journal.spbu.ru/ 47

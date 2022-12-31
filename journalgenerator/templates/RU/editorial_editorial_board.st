@@ -59,6 +59,13 @@
 </div>
 
 <div class="editor">
+    <span class="name">Соловьев И.П.</span>
+    <span class="title">доцент, кфмн</span>
+    <span class="work">Санкт-Петербургский Государственный Университет</span>
+    <span class="email">i.soloviev@spbu.ru</span>
+</div>
+
+<div class="editor">
     <span class="name">Осипенко Г.С.</span>
     <span class="title">Профессор</span>
     <span class="work">Филиал Московского государственного университета имени М.В. Ломоносова в городе Севастополе, Россия</span>
