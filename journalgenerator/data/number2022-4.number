@@ -357,6 +357,94 @@
         </authors>
     </article>
 
+    <article>
+        <articleInfo lang="EN" FirstPage="95" LastPage="104">
+            <pdf>22405-jdecp-furtat.pdf</pdf>
+            <abstract>The article proposes a method for synthesizing the control of linear plants with a guarantee
+                of finding the controlled variable in a given set under the condition that only the system
+                output is measurable. In the work, the output control is not used because of its complexity
+                of synthesis, but the observer-based control using the classical Luenberger observer is used.
+                The control algorithm is based on a special change of coordinates in order to transfer the
+                original problem with a constraint on the output to the problem of
+                control by an auxiliary variable without constraints. The adjustable parameter of the controller
+                is selected from the solution of linear matrix inequalities, which expands the applicability
+                of the obtained method in practice.
+                Numerical simulation in MATLAB/Simulink illustrated the effectiveness of the proposed
+                method and show the presence of controlled signals in the given set and the boundness
+                of all signals in the control system.</abstract>
+            <title>Observer-based Control of Linear Plants with the Guarantee for the Controlled Signal to Stay in a Given Set</title>
+            <keywords>
+                <word>coordinate transformation</word>
+                <word>given set</word>
+                <word>linear matrix inequalities</word>
+                <word>linear systems</word>
+                <word>Luenberger observer</word>
+                <word>stability</word>
+                <word>unknown bounded disturbance</word>
+            </keywords>
+            <references>
+                <reference>Grigoriev V. V., Zhuravleva N. V., Lukyanova G. V., Sergeev K. A. &lt;em&gt;Sintez sistem metodom modal'nogo upravleniya &lt;/em&gt;[Synthesis of systems by the method of modal control]. St. Petersburg, SPb GU ITMO, 2007. 108 p</reference>
+                <reference>Furtat I., Nekhoroshikh A., Gushchin P. Synchronization of multi&amp;#8208; machine power systems under disturbances and measurement errors. International Journal of Adaptive Control and Signal Processing. 2022. DOI: 10. 1002/acs. 3372</reference>
+                <reference>Pavlov G. M., Merkuriev G. V. &lt;em&gt;Avtomatika ehnergosistem&lt;/em&gt; [Automation of power systems]. St. Petersburg, Publication of the Training Center of RAO UES of Russia, 2001. 388 p</reference>
+                <reference>Verevkin A. P., Kiryushin O. V. [Management of the reservoir pressure maintenance system using finite-automatic models]. &lt;em&gt;Territoriya Neftegaz, &lt;/em&gt; 2008; (10):14-19. (In Russ. )</reference>
+                <reference>K. Buyakhiyauy, L. I. Grigoriev, F. Laauad, A. Hellasy. [Optimal fuzzy control for reducing energy consumption in distillation columns]. &lt;em&gt;Avtomatika i telemekhanika&lt;/em&gt;, 2005; (2):36-45. (In Russ. )</reference>
+                <reference>Furtat I. B., Gushchin P. A. [Control of dynamic objects with a guarantee of finding the controlled signal in a given set]. &lt;em&gt;Avtomatika i telemekhanika&lt;/em&gt;. 2021; (4):121-139. (In Russ. )</reference>
+                <reference>Furtat I., Gushchin P. Nonlinear feedback control providing plant output in given set. International Journal of Control, 2021.  &lt;a href="https://doi.org/10.1080/00207179.2020.1861336"&gt;https://doi.org/10.1080/00207179.2020.1861336&lt;/a&gt; </reference>
+                <reference>Furtat I., Gushchin P. Control of Dynamical Systems with Given Restrictions on Output Signal with Application to Linear Systems. IFAC-PapersOnLine, 2020, Vol. 53, no. 2. pp. 6384-6389</reference>
+                <reference>Polyak B. T Convexity of quadratic transformations and its use in control and optimization . J. Optim. Theory Appl. 1998. V 99. P. 553-583</reference>
+                <reference>Nguyen B. H., Furtat I. B. [Control of MIMO linear plants with a guarantee for the controlled signals to stay in a given set]. &lt;em&gt;Nauchno-tekhnicheskiy vestnik informatsionnykh tekhnologiy, mekhaniki i optiki&lt;/em&gt;, 2022; (2):232-238. (In Russ. )</reference>
+                <reference>Davis J. H. Luenberger Observers. In: Foundations of Deterministic and Stochastic Control. Systems &amp;amp; Control: Foundations &amp;amp; Applications. Birkh&amp;auml; user, Boston, MA. 2002.  &lt;a href="https://doi.org/10.1007/978-1-4612-0071-0_8"&gt;https://doi.org/10.1007/978-1-4612-0071-0_8&lt;/a&gt; </reference>
+                <reference>Polyak B. T., Khlebnikov M. V., Shcherbakov P. S. &lt;em&gt;Upravlenie linejnymi sistemami pri vneshnikh vozmushcheniyakh: tekhnika linejnykh matrichnykh neravenstv&lt;/em&gt; [Control of linear systems under external disturbances: technique of linear matrix inequalities]. Moscow, Lenand, 2014. 560 p</reference>
+                <reference>Lofberg J. YALMIP: a toolbox for modeling and optimization in MATLAB. &lt;em&gt;2004 IEEE International Conference on Robotics and Automation (IEEE Cat. No. 04CH37508)&lt;/em&gt;, 2004, pp. 284-289, doi: 10. 1109/CACSD. 2004. 1393890</reference>
+                <reference>Sturm JF. Using SeDuMi 1. 02, a MATLAB toolbox for optimization over symmetric cones. Optimization methods and software. 1999, Vol. 11. P. 625-653</reference>
+            </references>
+        </articleInfo>
+        <articleInfo lang="RU" FirstPage="95" LastPage="104">
+            <pdf>22405-jdecp-furtat.pdf</pdf>
+            <abstract>В статье предложен метод синтеза закона управления линейными объектами с гарантией
+                нахождения регулируемой переменной в заданном множестве при измерении только
+                выходного сигнала объекта. Для восстановления информации о векторе состояния
+                используется классический наблюдатель Люенбергера. Дополнительно используется
+                специальная замена координат для преобразования исходной задачи с ограничением
+                по выходу на задачу управления по новой переменной без ограничения.
+                Настраиваемые параметры регулятора выбирается из решения линейных матричных
+                неравенств, что расширяет применимость полученного метода на практике.
+                Численное моделирование в MATLAB/Simulink проиллюстрировало эффективность
+                работы предлагаемого метода и подтвердило теоретические результаты.</abstract>
+            <title>Управление линейными объектами на базе наблюдателей с гарантией нахождения регулируемой переменной в заданном множестве</title>
+            <keywords>
+                <word>заданное множество</word>
+                <word>линейные матричные неравенства</word>
+                <word>Линейные системы</word>
+                <word>наблюдатель Люенбергера</word>
+                <word>ограниченное возмущение</word>
+                <word>преобразование координат</word>
+                <word>устойчивость</word>
+            </keywords>
+            <references>
+                <reference>В. В. Григорьев, Н. В. Журавлева, Г. В. Лукьянова, К. А. Сергеев. Синтез систем методом модального управления. СПб. : СПб ГУ ИТМО, 2007. 108 с</reference>
+                <reference>Furtat I., Nekhoroshikh A., Gushchin P. Synchronization of multi&amp;#8208; machine power systems under disturbances and measurement errors // International Journal of Adaptive Control and Signal Processing. 2022. DOI: 10. 1002/acs. 3372</reference>
+                <reference>Павлов Г. М., Меркурьев Г. В. Автоматика энергосистем. СПб. : Издание Центра подготовки кадров РАО “ЕЭС России”, 2001. 388 с</reference>
+                <reference>Веревкин А. П., Кирюшин О. В. Управление системой поддержания пластового давления с использованием моделей конечно-автоматного вида // Территория Нефтегаз 2008, № 10. С. 14-19</reference>
+                <reference>Буяхияуй К., Григорьев Л. И., Лаауад Ф., Хелласи А. Оптимальное нечеткое управление для снижения энергопотребления в дистилляционных колоннах // Автоматика и телемеханика. 2005. № 2. С. 36-45</reference>
+                <reference>Фуртат И. Б., Гущин П. А. Управление динамическими объектами с гарантией нахождения регулируемого сигнала в заданном множестве // Автоматика и телемеханика. 2021. № 4. С. 121-139</reference>
+                <reference>Furtat I., Gushchin P. Nonlinear feedback control providing plant output in given set // International Journal of Control. 2021.  &lt;a href="https://doi.org/10.1080/00207179.2020.1861336"&gt;https://doi.org/10.1080/00207179.2020.1861336&lt;/a&gt; </reference>
+                <reference>Furtat I., Gushchin P. Control of Dynamical Systems with Given Restrictions on Output Signal with Application to Linear Systems // IFAC-PapersOnLine. 2020. Vol. 53, no. 2. P. 6384-6389</reference>
+                <reference>Polyak B. T Convexity of quadratic transformations and its use in control and optimization // J. Optim. Theory Appl. 1998. V 99. P. 553-583</reference>
+                <reference>Нгуен Б. Х., Фуртат И. Б. Управление многоканальными линейными объектами с гарантией нахождения регулируемых переменных в заданных множествах // Научно-технический вестник информационных технологий, механики и оптики. 2022. Т. 22, № 2. С. 232-238. doi: 10. 17586/2226-1494-2022-22-2-232-238</reference>
+                <reference>Davis J. H. Luenberger Observers. In: Foundations of Deterministic and Stochastic Control. Systems &amp;amp; Control: Foundations &amp;amp; Applications. Birkh&amp;auml; user, Boston, MA. 2002.  &lt;a href="https://doi.org/10.1007/978-1-4612-0071-0_8"&gt;https://doi.org/10.1007/978-1-4612-0071-0_8&lt;/a&gt; </reference>
+                <reference>Поляк Б. &amp;#8201; Т., Хлебников М. &amp;#8201; В., Щербаков П. &amp;#8201; С. Управление линейными системами при внешних возмущениях: техника линейных матричных неравенств М. : Ленанд, 2014, 560 с</reference>
+                <reference>Lofberg J. YALMIP: a toolbox for modeling and optimization in MATLAB // &lt;em&gt;2004 IEEE International Conference on Robotics and Automation (IEEE Cat. No. 04CH37508)&lt;/em&gt;. 2004. P. 284-289, doi: 10. 1109/CACSD. 2004. 1393890</reference>
+                <reference>Sturm JF. Using SeDuMi 1. 02, a MATLAB toolbox for optimization over symmetric cones // Optimization methods and software. 1999, Vol. 11. P. 625-653</reference>
+            </references>
+        </articleInfo>
+        <authors>
+            <author ref="n_2023_1_nguyen" sort-key="1" />
+            <author ref="n_2023_1_furtat" sort-key="2" />
+            <author ref="n_2023_1_nguyen_cuong" sort-key="3" />
+        </authors>
+    </article>
+
 
 
 
