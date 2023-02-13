@@ -16,28 +16,46 @@
   list
 </p>
 
+<p class="jounal-index">
+  All the articles are assigned with DOI
+</p>
+
+
 <p>
   <a href="https://www.scimagojr.com/journalsearch.php?q=21100902867&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank"><img border="0" src="https://www.scimagojr.com/journal_img.php?id=21100902867" alt="SCImago Journal &amp; Country Rank"  /></a>
 </p>
 
-<h4>Founder</h4>
+<h4>Founder and publisher</h4>
 <p>
   Saint-Petersburg State University 
 </p>
 
-<h4>Address:</h4>
+<h4>Address</h4>
 <p>
   University Embankment, 7/9, 
   <br />
   199034, St. Petersburg, Russia.  
 </p>
 
-<h4>E-mail:</h4>
+<h4>Editorial address</h4>
+<p>
+  Universitetsky prospekt, 28,
+  <br />
+  198504, Peterhof,
+  <br />
+  St. Petersburg, Russia.
+  <br/>
+  Phone: +7 (812) 428-4210,
+  <br/>
+  Fax: +7 (812) 428-6944
+</p>
+
+<h4>E-mail</h4>
 <p>
   JournalDECP@gmail.com
 </p>
 
-<h4>Tel:</h4>
+<h4>Tel</h4>
 <p>
   +7 921 415 7762
 </p>
