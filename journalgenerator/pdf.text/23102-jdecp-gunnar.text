@@ -1,0 +1,1273 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N 1, 2023
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Ordinary differential equations
+Model map and multistability for a two predator{one prey system
+G. J. S oderbacka
+ 
+Abo Akademi,
+E-mail: gsoderba@abo. 
+Abstract. This work contains a review of some important results on a known
+two predators - one prey system. We also add essential new numerical results
+on multiple attractors. We consider the case when the predators coexist. We
+distinguish two possibilities. The  rst is when the dynamics is well described by
+the dynamics of a one dimensional map. We discuss the main behaviour of this
+map. For small parameter regions the map can have two attractors but no more
+than two. We give a numerical example, when these two attractors exist in the
+original three-dimensional model. The second case is when this model map is
+not working and something like spiral chaos often occurs. We give numerical
+results showing that in this case there can be at least four different attractors
+and discuss the behaviour of these.
+Keywords: Bifurcations, chaos, multiple attractors, predator-prey.
+1 Introduction
+We consider a known system ofn predators and one prey originally represented
+in [3, 4, 5] and generalized in [9]. In [11] it is shown how to rewrite it into the
+formDifferential Equations and Control Processes, N. 1, 2023
+x
+0
+i
+=  
+i
+(s)x
+i
+;  
+i
+(s) =m
+i
+s  
+i
+s +a
+i
+; (1a)
+s
+0
+=
+ 
+h(s) 
+n
+X
+i=1
+	
+i
+(s)x
+i
+!
+s; h(s) = 1 s; 	
+i
+(s) =
+1
+s +a
+i
+; (1b)
+wherei = 1;:::;n. The system is considered only for non-negative variables and
+all parameters are positive.
+We consider the case when n = 2, and we use the notations x = x
+1
+and
+y =x
+2
+.
+It is proved ([9, 2]), that in this case the set de ned by V < 1, where
+V =
+x
+q
+1
++
+y
+q
+2
++s; q
+i
+= 1 +m
+i
++a
+i
+ m
+i
+ 
+i
+, is positively invariant and absorbes
+all solutions, where the system is de ned.
+Conditions for extinction of one predator and coexistence of both can be
+found in [9, 11]. A numerical overview of the behaviour of the system for
+different parameters can be found in [11].
+In some case the dynamics of the system is qualitatively well modelled by
+a one dimensional map originally introduced in [2] and considered in [1, 10].
+When this is not possible we often observe spiral-like attractors, even if up
+to now there is no proof how they are related to the known spiral chaos by
+Shilnikov.
+If the one dimensional map works then there will be cyclic behaviour be-
+tween the sum of predators x +y and the prey s. If not the behaviour is more
+complicated.
+We claim the one dimensional model is a good model, because all properties
+in the system and the dynamics of the map are observed in both and there is
+some correspondence in the sense that to any such system there are some maps
+modelling it and to any map there are some systems exposing similar behaviour.
+One of our aims here is to explain the main ideas of earlier works without going
+into technical details, in order to make it easier to understand for the reader.
+The other is to present new numerical results on multiple attrators.
+https://doi.org/10.21638/11701/spbu35.2023.102 Electronic Journal: http://diffjournal.spbu.ru/ 13Differential Equations and Control Processes, N. 1, 2023
+2 The model map
+Assuming  
+i
+; a
+i
+small (for example  
+i
+; a
+i
+  0:1),
+ 
+2
+ 
+1
+< 1 but not too small
+and m
+i
+not too small, the dynamics can be qualitatively well described by the
+dynamics of iterates of a map f in the Kryzhewicz form de ned as
+f(x) =b +x 
+k
+1 +e
+x
+: (2)
+The map has been studied in [7]. Here we shortly present some results
+known about this map refering to the same source for details.
+We consider the map in the parameter regionf(b;k)jk < b < k=2; k <
+ 4g for other parameters either the behaviour of iterates is simple or there
+is an equivalent map to it in this parameter region. Here the map has two
+critical points and the Schwarzian is negative so there are no more than two
+attractors. Letb
+1
+= 2x
+c
+  1 e
+x
+c
+, wherex
+c
+is the positive critical point, which
+is a minimum. We restrict ourselves even more to parameters in the region
+P
+0
+=f(b;k)jb
+1
+< b  k=2g; because outside this region there is a globally
+attracting interval, where the map behaves like a known unimodal map with
+only one critical point. In this region there are two attractors, but only for
+narrow parameter regions. But it is known that they cannot be periodic both
+with periods less than four. Also there cannot be more than one two periodic
+orbit and three periodic orbits only appear in pairs, either one stable and the
+other unstable or both unstable.
+It is natural to de ne standard three intervals for symbolic dynamics, where
+the map is monotonic. We denote by I
+m
+the interval ( 1; x
+c
+], by I
+0
+the
+interval [ x
+c
+; x
+c
+] and by I
+p
+the interval [x
+c
+;1). Further intervals I
+j
+0
+j
+1
+j
+2
+;:::j
+p
+consist of points such that x2I
+j
+0
+, f(x)2I
+j
+1
+and f
+i
+(x)2I
+j
+i
+; i = 0; 1;:::.
+We say that a p-periodic orbit is of type j
+1
+j
+1
+j
+2
+; :::j
+p
+, where each j
+i
+is one
+of m, 0, or p, and j
+i
+= m, if x
+i
+  x
+c
+, j
+i
+=0, if x
+c
+  x
+i
+< x
+c
+, and j
+i
+= p, if
+x
+i
+ x
+c
+.
+After symbolp we can get only the symbolm, and the number of consequtive
+m is limited by n, the smallest number such that f
+n
+( x
+c
+) > x
+c
+. The fact
+that 0 < f
+0
+< 1 on intervals I
+m
+and I
+p
+implies that there are long intervals
+for iterates f
+n
+of the function, where f
+0
+< 1 thus making restrictions on the
+number of periodic orbits of a given period n.
+An example, where the model map works for the original system and the
+original system has a three periodic and a four periodic attractor we  nd for
+https://doi.org/10.21638/11701/spbu35.2023.102 Electronic Journal: http://diffjournal.spbu.ru/ 14Differential Equations and Control Processes, N. 1, 2023
+a
+1
+= 0:08798; a2 = 0:001038;  
+1
+= 0:1;  
+2
+= 0:0014532; m
+1
+=m
+2
+= 1.
+3 Estimates used for construction of the model map
+In the case the model map is working, we can prove the existence of a positively
+invariant set of the type 
+ = 
+
+1
+[ 
+
+2
+[ 
+
+3
+[ 
+
+4
+, where
+
+
+1
+is de ned by the inequality s " 
+2
+; V < 1 and "< 1,
+
+
+2
+is de ned by the inequality x<"
+x
+; y<"
+y
+; " 
+2
+ s  1 "
+s
+,
+
+
+3
+is de ned by the inequality s  1 "
+s
+; V < 1, and
+
+
+4
+is de ned by the inequality s
+0
+< 0;x +y>d(y=x;s); V < 1.
+The function d is usually complicated, chosen so that s
+0
+< 0; V < 1 at the
+point (x;y;s) for whichx+y =d(y=x;s). It is supposed that"
+x
+; "
+y
+; "
+s
+are small
+enough. Small "
+x
+and "
+y
+implies that s
+0
+> 0 in 
+
+2
+. We also suppose that d is
+chosen so that the dynamics is described in the following way. Any trajectory
+starting on the surfaceS de ned byx+y>d(y=x;s); s =" 
+2
+; V < 1, enters 
+
+1
+(where x; y decrease), from which it enters 
+
+2
+(where s increases), from which
+it enters 
+
+3
+(where x; y increase), from which it enters 
+
+4
+(where s decreases)
+until it again hitsS. Thus there is a well de ned Poincar  e map onS. This map
+is essentially one dimensional because of strong contraction in one direction and
+we try here to explain (without heavy technical exact and mathematically strict
+estimates) why the map de ned in (2) is a good approximation to the Poincar  e
+map. We look at approximations of the trajectory in each of the sets 
+
+i
+. We
+suppose the map is de ned on a line ax +by = u
+0
+in S, where a; b  1. We
+know this is very realistic. We wish to explain as simple as possible the main
+technical details given in the original work [2] and the modi cation of it in [1].
+We use the following notations for points on the trajectories, where it enters
+the next region. The initial point is given by coordinates (x
+0
+; y
+0
+; " 
+2
+). The
+point of leaving 
+
+1
+and entering 
+
+2
+is denoted by (x
+1
+; y
+1
+; " 
+2
+), the point of
+leaving 
+
+2
+and entering 
+
+3
+is denoted by (x
+2
+; y
+2
+; 1 "
+s
+), the point of leaving
+
+
+3
+and entering 
+
+4
+is denoted by (x
+3
+; y
+3
+; 1 "
+s
+). The  nal point on S again
+is denoted by (x
+4
+; y
+4
+; " 
+2
+). The variable for the model map will be v = ln(
+y
+x
+)
+and we use the notations v
+i
+= ln(
+y
+i
+x
+i
+).
+Outside region 
+ there is only simple dynamics or trajectories entering 
+.
+Similar estimates in the corresponding two dimensional predator-prey system
+are obtained in [6, 8]
+https://doi.org/10.21638/11701/spbu35.2023.102 Electronic Journal: http://diffjournal.spbu.ru/ 15Differential Equations and Control Processes, N. 1, 2023
+The idea of the estimates in the four regions is simple, just calculate elemen-
+tary integrals under assumption that some coordinates are zero in some terms.
+To get strict estimates is much more harder, even not possible in some parts and
+there is a need for additional assumptions or the results get only asymptotic
+values. Anyhow here we only discuss the main ideas. Using approximations in
+each of the four regions we get estimates for next v
+i
+in terms of the previous
+one and the parameters. At the end we combine all these estimates in order
+to get the  nal model map in the variable v
+0
+. Here  rst the main ideas shortly
+and after that more details.
+In region 
+
+1
+we assume s = 0 in x
+0
+; y
+0
+and
+s
+0
+s
+.
+In region 
+
+2
+we assume x =y = 0 in s
+0
+.
+In region 
+
+3
+we assume s = 1 in x
+0
+; y
+0
+.
+Region 4 is more complicated. We give some details of the integrations here.
+Behaviour in 
+
+1
+. To explain the estimate in 
+
+1
+we use the integration
+techniques introduced in [2]. We use
+ds
+dx
+=
+h(s) 	
+1
+(s)x 	
+2
+(s)y
+ 
+1
+(s)
+s
+x
+.
+Integration along the trajectory from (x
+0
+;y
+0
+;s
+0
+) to (x
+1
+;y
+1
+;s
+1
+), wheres
+0
+=s
+1
+gives 0 =
+R
+s
+1
+s
+0
+ 
+1
+(s)
+sh(s)
+ds =
+R
+x
+1
+x
+0
+ 
+1
+x
+ 
+	
+1
+(s)
+h(s)
+ 
+	
+2
+(s)
+h(s)
+y
+x
+ 
+dx. From
+y
+x
+=
+ 
+1
+(s)
+ 
+2
+(s)
+dy
+dx
+follows
+R
+x
+1
+x
+0
+dx
+x
+=
+R
+x
+1
+x
+0
+	
+1
+(s)
+h(s)
+dx +
+R
+x
+1
+x
+0
+	
+2
+(s)  
+1
+(s)
+ 
+2
+(s)h(s)
+dy.
+For s  0 we get 	
+i
+(s) 
+1
+a
+i
+;  
+i
+(s)  
+ 
+i
+m
+i
+a
+i
+; h(s)  1 from which follows
+ln(
+x
+1
+x
+0
+) 
+x
+1
+ x
+0
+a
+1
++
+ 
+1
+m
+1
+ 
+2
+a
+1
+m
+2
+(y
+1
+ y
+0
+)
+Further because x
+1
+; y
+1
+  0 we obtain
+ln(
+x
+1
+x
+0
+)  
+x
+0
+a
+1
+ 
+ 
+1
+m
+1
+ 
+2
+a
+1
+m
+2
+y
+0
+Further from
+x
+1
+x
+0
+  e
+ 
+ 
+1
+m
+1
+t
+a
+1
+and
+y
+1
+y
+0
+  e
+ 
+ 
+2
+m
+2
+t
+a
+2
+follows
+y
+1
+y
+0
+ 
+ 
+x
+1
+x
+0
+ 
+
+and
+y
+1
+x
+1
+ 
+y
+0
+x
+0
+ 
+x
+1
+x
+0
+ 
+ 1
+, where  =
+m
+2
+ 
+2
+a
+1
+m
+1
+ 
+1
+a
+2
+. With notations v
+i
+= ln
+ 
+y
+i
+x
+i
+ 
+we get v
+1
+  v
+0
++
+(  1)( 
+x
+0
+a
+1
+ 
+ 
+1
+m
+1
+ 
+2
+a
+1
+m
+2
+y
+0
+).
+If we choose x
+0
+and y
+0
+from the straight line x
+0
++y
+0
+= u
+0
+and observe
+y
+0
+x
+0
+=e
+v
+0
+we obtain x
+0
+=
+u
+0
+1+e
+v
+0
+and y
+0
+=
+u
+0
+e
+v
+0
+1+e
+v
+0
+and
+v
+1
+ v
+0
++
+(1 )u
+0
+a
+1
+(1 +e
+v
+0
+)
+ 
+1 +
+ 
+1
+m
+1
+ 
+2
+m
+2
+e
+v
+0
+ 
+.
+https://doi.org/10.21638/11701/spbu35.2023.102 Electronic Journal: http://diffjournal.spbu.ru/ 16Differential Equations and Control Processes, N. 1, 2023
+Behaviour in 
+
+2
+. Next we look at estimates in 
+
+2
+. The main idea here is
+to neglect the terms
+x
+s+a
+1
+and
+y
+s+a
+2
+in the expression fors
+0
+. We use the notations
+A
+1
+=
+ 
+1
++a
+1
+a
+1
++a
+2
+1
+; A
+2
+=
+ 
+1
+a
+1
+; A
+3
+=
+1  
+1
+1+a
+1
+B
+1
+=
+ 
+2
++a
+2
+a
+2
++a
+2
+2
+; B
+2
+=
+ 
+2
+a
+2
+; B
+3
+=
+1  
+2
+1+a
+2
+K
+x
+(s) =m
+1
++A
+1
+ln(s +a
+1
+) A
+2
+ln(s) A
+3
+ln(1 s)
+K
+y
+(s) =m
+2
++B
+1
+ln(s +a
+2
+) B
+2
+ln(s) B
+3
+ln(1 s):
+In these notations we get ln
+ 
+x
+2
+x
+1
+ 
+ K
+x
+(s
+2
+) K
+x
+(s
+1
+) and ln
+ 
+y
+2
+y
+1
+ 
+ K
+y
+(s
+2
+) 
+K
+y
+(s
+1
+) and as  nal estimate in v
+v
+2
+ v
+1
++K; K =K
+y
+(s
+2
+) K
+y
+(s
+1
+) K
+x
+(s
+2
+) +K
+x
+(s
+1
+)
+.
+Behaviour in 
+
+3
+. For estimates in 
+
+3
+we use s   1 we get  
+i
+(s)  
+ 
+(1  
+i
+)m
+i
+1+a
+i
+implying
+v
+3
+ v
+2
++ (ff  1) ln(
+x
+3
+x
+2
+); ff =
+m
+2
+m
+1
+(1  
+2
+)(1 +a
+1
+)
+(1  
+1
+)(1 +a
+2
+)
+.
+Behaviour in 
+
+4
+. The estimates in 
+
+4
+are more di cult to explain in an
+easy way and we just use adding a constant K
+4
+so that v
+4
+ v
+3
++K
+4
+Adding all estimates for v
+i
+and supposing
+x
+3
+x
+2
+ 
+x
+0
+x
+1
+we get the form (2) for
+the estimating model map, where
+b =K +K
+4
++ ( ff)u
+0
+ 
+1
+m
+1
+ 
+2
+a
+1
+m
+2
+; k = ( ff)
+u
+0
+a
+1
+ 
+1 
+ 
+1
+m
+1
+ 
+2
+m
+2
+ 
+:
+One example of graphs showing some similarity is shown in  gure 1. We
+conjecture that for any such map there are some systems with the same be-
+haviour, with parameters not differing much from those used to get the model.
+Finally we observe that b<k (b> 0) leads to extinction of predator y (x),
+thus giving better extinction conditions than in [9, 2]
+4 Multistability when the model map not working
+The map (2) can have no more than two attractors. But when the model map is
+not working there can be even more. In  gure 2 we  nd detected periodicities of
+https://doi.org/10.21638/11701/spbu35.2023.102 Electronic Journal: http://diffjournal.spbu.ru/ 17Differential Equations and Control Processes, N. 1, 2023
+Figure 1: Graph of model map and comparison with behaviour in the original system for
+ 
+1
+= 0:1;  
+2
+= 0:016; a
+1
+= 0:1; a
+2
+= 0:012; m
+1
+= m
+2
+= 1 and " = 1; u
+0
+= 1:2. Blue for real
+original map and red for model map. We have chosen K
+4
+  1:77.
+intersections of attractors withs = 
+2
+; s
+0
+< 0. We see that regions overlap. For
+example when a
+1
+= 1; a
+2
+= 0:0155, four regions overlap, two different for four
+periodicities and one for three periodicity and the general for simple periodic
+attractor. In  gure 4 we see parameter regions for the existence of three of
+the attractors and how these regions overlap. Except for these three a simple
+one-periodic is present in large parameter regions.
+Intersections of the basins of the attractors withs
+0
+= 0 are shown in  gures
+5 and 6.
+Action of Poincar  e map on the points of the periodic attractors is shown
+in  gure 7. We observe that for the Poincar  e map on s
+0
+= 0 one four periodic
+attractor of s = 
+2
+; s
+0
+< 0 for the Poincar  e map becomes  ve-periodic.
+We have also found unstable periodic orbits of periods three, four and  ve.
+We give some estimates of the eigenvalues of the Jacobian matrix of the Poincar  e
+map at the period orbits (u = ln(s)):
+  stable  xed point at v = 3:302; u = 2:727, eigenvalues of Jacobian
+matrix are about 0:56  0:35i
+  stable 3-periodic point at v = 2:523; u = 2:47, eigenvalues of Jacobian
+matrix are about 0:22 + 0:28i
+  three periodic, unstable node atv = 3:517; u = 2:07916, eigenvalues of
+Jacobian matrix are about 0.05 and 2.25
+  stable 4 -periodic at v = 1:9788; u = 2:54457 eigenvalues of Jacobian
+https://doi.org/10.21638/11701/spbu35.2023.102 Electronic Journal: http://diffjournal.spbu.ru/ 18Differential Equations and Control Processes, N. 1, 2023
+Figure 2: Detected periodicities of attractors in the case  
+1
+= 0:3;  
+2
+= 0:2; m
+1
+= m
+2
+= 1.
+Horiontal axis corresponds to a
+1
+and vertical to a
+2
+. Yellow { 3 periodic, red - 4 periodic, blue
+- 6 periodic, magenta { 8 periodic. Everywhere one periodic.
+matrix are about 0:2  0:2i
+  unstable 4 -periodic atv = 2:1; u = 2:69 eigenvalues of Jacobian matrix
+are about 2.4 and 0.025
+  stable 5-periodic at v =  4:266; u =  1:4125 eigenvalues of Jacobian
+matrix are about -0.76 and -0.08
+  unstable 5-periodic at v = 3:524; u = 4:138 eigenvalues of Jacobian
+matrix are about -0.005 and 7.2
+In  gure 8 we show a bifurcation diagram of the behaviour of the ratio of the
+predators chosinga
+1
+as bifurcation parameter and keeping all other parameters
+constant. The four periodic jumps to the 3-periodic to the left and to the 1-
+periodic to the right. The  ve periodic jumps to the 4-periodic to the left and
+to the 1-periodic to the right. We observe that the  ve-periodic has period four
+when chosing the Poincar  e map on s = 
+2
+instead of on s
+0
+= 0.
+https://doi.org/10.21638/11701/spbu35.2023.102 Electronic Journal: http://diffjournal.spbu.ru/ 19Differential Equations and Control Processes, N. 1, 2023
+Figure 3: Four attractors in the case  
+1
+= 0:3;  
+2
+= 0:2; a
+1
+= 1; a
+2
+= 0:0155; m
+1
+= m
+2
+= 1.
+Green for four periodic, yellow for  ve periodic, red for three periodic, blue for simple one
+periodic. We used the following logaritmic coordinates for the initial values on the attractors:
+(-0.0595, -1.91, -1.61) for simple period,
+(0.0945, -3.707, -1.609), for three periodic,
+(0.0886, -8.9188, -1.609) for the  ve periodic and
+(-0.1716, -2.8988, -1.609) for the four periodic one.
+Figure 4: Some parameter regions for some periodic attractors of periods 3,4,5 and 6. Notice
+that there are many other such regions we do not see here.
+https://doi.org/10.21638/11701/spbu35.2023.102 Electronic Journal: http://diffjournal.spbu.ru/ 20Differential Equations and Control Processes, N. 1, 2023
+Figure 5: Basins of attractions of the four attactors in  gure 3 with correponding colours.
+Used intersection with part of surface s
+0
+= 0 <s". Black points corresponds to points on the
+attractors themselves.
+Figure 6: Magni cations of the basins of attractions of the four attactors in  gure 5
+References
+[1] Eirola T., Osipov A. V., S oderbacka G. Chaotic regimes in a dynamical sys-
+tem of the type many predators one prey. Research reports A 386, Helsinki
+University of Technology, (1996).
+https://doi.org/10.21638/11701/spbu35.2023.102 Electronic Journal: http://diffjournal.spbu.ru/ 21Differential Equations and Control Processes, N. 1, 2023
+Figure 7: The order of mapping one periodic point to another for the Poincar  e map, they seem
+to rotate around the  xed point corresponding to the simple periodic orbit.
+Figure 8: Bifurcation diagram, bifurcation parameter a
+1
+, vertical axis ln
+ 
+x
+2
+x
+1
+ 
+, intersection
+with s =  
+2
+. One periodic in black, 3-periodic in blue, 4-periodic in green, 5-periodic in red
+(4-periodic in this place).
+[2] Eirola T., Osipov A. V., S oderbacka G. On the appearance of chaotic
+regimes in one dynamical system of type two perdators | one prey, Actual
+Problems of Modern Mathematics, Boxitogorsk, 1, 39-70 (1996).
+[3] Hsu B., Hubell S. P., Waltman P. Competing predators, SIAM J. Appl.
+Math. 35, No.4, 617-625 (1978).
+[4] Hsu S. B. Limiting behaviour for competing species, SIAM J. Appl. Math.
+34, No.4, 760-763 (1978).
+[5] Hsu B., Hubell S. P., Waltman P. A contribution to the theory of competing
+predators, Ecological Monographs 48, No.3, 337-349 (1978).
+https://doi.org/10.21638/11701/spbu35.2023.102 Electronic Journal: http://diffjournal.spbu.ru/ 22Differential Equations and Control Processes, N. 1, 2023
+[6] Hsu S.-B., Shi J. Relaxation oscillation pro le of limit cycle in predator-
+prey system, Discrete and Continuous Dynamical Systems Series B 11,
+No.4, 893-911 (2009).
+[7] Kryzhewich S., Avrutin V., S oderbacka G. Bistability in a one-
+dimensional model of a two-predators-one-prey population dynamics sys-
+tem, https://arxiv.org/abs/2108.06739, and Lobachevskii Journal of Math-
+ematics, 2021, Vol. 42, No. 14, pp. 3486{3496.
+[8] Lundstr om N. L. P., S oderbacka G. Estimates of size of cycle in a predator-
+prey system, Differential Equations and Dynamical Systems, DOI:
+10.1007/s12591-018-0422-x (2018).
+[9] A V Osipov, G S oderbacka. Extinction and coexistence of predators. Di-
+namicheskie sistemy, 6, 1, (2016), 55{64. http://dynsys.cfuv.ru/
+[10] Osipov A V, S oderbacka G, Poincar  e map construction for some classic two
+predators - one prey systems, Internat. J. Bifur. Chaos Appl. Sci. Engrg,
+27, (2017), no 8, 1750116, 9 pp.
+[11] G J S oderbacka, A S Petrov. Review on the behaviour of a many predator
+- one prey system. Dinamicheskie sistemy. 2019, 9(37), No3, pp 273-288.
+https://doi.org/10.21638/11701/spbu35.2023.102 Electronic Journal: http://diffjournal.spbu.ru/ 23
