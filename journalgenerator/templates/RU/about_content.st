@@ -53,8 +53,3 @@
 <p>
   JournalDECP@gmail.com
 </p>
-
-<h4>Телефон</h4>
-<p>
-  +7 921 415 7762
-</p>
