@@ -1,0 +1,2965 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 1, 2023
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Nonlinear partial differential equations
+Ordinary differential equations
+Secular terms for the kinetic McKean model
+Dukhnovsky S. A.
+Moscow State University of Civil Engineering, Moscow, Russian Federation
+e-mail: sergeidukhnvskijj@rambler.ru
+Abstract. In this article, we investigate the kinetic McKean model. The
+perturbed solution of the Cauchy problem is sought in the form of Fourier
+series. The Fourier coe cients for the zero and nonzero modes are written out,
+respectively. The original system is reduced to an in nite system of differential
+equations. An approximation for the systems is constructed. Under certain
+assumptions, we  nd secular terms (non-integrable part). This, in turn, will
+allow us to prove for the  rst time the exponential stabilization of the solution
+in the future.
+Keywords: kinetic model, Fourier series, Knudsen parameter, secular terms
+1 Introduction
+We consider the well-known kinetic McKean model [2, 5, 9]:
+@
+t
+u +@
+x
+u =
+1
+"
+(w
+2
+ uw); x2R; t> 0; (1)
+@
+t
+w @
+x
+w = 
+1
+"
+(w
+2
+ uw); (2)
+u(x; 0) =u
+0
+;w(x; 0) =w
+0
+; (3)Differential Equations and Control Processes, N. 1, 2023
+whereu
+0
+(x) =u
+0
+(x+2 );w
+0
+(x) =w
+0
+(x+2 ) is periodic functions. This system
+describes a monatomic gas with two groups of particles with corresponding
+densitiesu =u(x;t);w =w(x;t) . The  rst group moves with the speed c = 1,
+the other c = 1, the parameter " corresponds to the Knudsen number in the
+kinetic theory of gases. The McKean system is a non-integrable system, i.e.
+the Painlev  e test is inapplicable.
+The physical description of the Boltzmann equation is described in a funda-
+mental article [1, 8]. The asymptotic stability of kinetic systems of Carleman,
+Godunov{Sultangazin and Broadwell for periodic initial data were studied in
+the works [7, 11, 12, 13, 14]. The proofs of the theoretical results were con-
+ rmed numerically in the works [17, 18]. The exact solutions of the systems are
+presented in [2, 3, 4, 5, 9, 10, 15, 16]. The secularity condition for the kinetic
+Carleman system was found in [6]. In this work, approaches and methods (see
+[6, 11, 13]) will be applied for our system as well as for the above systems.
+The McKean system has been largely unexplored. We will single out the non-
+dissipative part of the solution and reduce the problem of the existence of a
+global solution to a nonlinear equation in the Hilbert space. This will later
+allow us to prove for the  rst time the exponential stabilization of the solution.
+2 Fourier solution for the McKean system
+We study the Cauchy problem for small perturbations of the equilibrium state
+w
+2
+e
+=u
+e
+w
+e
+; u
+e
+;w
+e
+> 0 of the system (1)-(3). Let be
+u =u
+e
++w
+1=2
+e
+"
+2
+b u; w =w
+e
++w
+1=2
+e
+"
+2
+b w: (4)
+Then
+@
+t
+b u +@
+x
+b u w
+e
+1
+"
+(b w b u) ="w
+1=2
+e
+(b w
+2
+ b ub w); x2R; t> 0; (5)
+@
+t
+b w @
+x
+b w +w
+e
+1
+"
+(b w b u) = "w
+1=2
+e
+(b w
+2
+ b ub w); (6)
+b uj
+t=0
+=b u
+0
+; b wj
+t=0
+= b w
+0
+: (7)
+For periodic solutions with zero means
+b u(t;x) =u
+0
+(t) +
+X
+k2Z
+0
+u
+k
+(t)e
+ikx
+; b w(t;x) =w
+0
+(t) +
+X
+k2Z
+0
+w
+k
+(t)e
+ikx
+;
+Z
+0
+=fk2Z;k6= 0g;
+https://doi.org/10.21638/11701/spbu35.2023.108 Electronic Journal: http://diffjournal.spbu.ru/ 126Differential Equations and Control Processes, N. 1, 2023
+we introduce weight spaces L
+2;
+(R
++
+;H
+ 
+);H
+ 
+with norms:
+kb uk
+2
+L
+2;
+(R
++
+;H
+ 
+)
+=
+Z
+1
+0
+e
+2t
+ju
+0
+(t)j
+2
+dt+
++
+Z
+1
+0
+e
+2t
+X
+k2Z
+0
+jkj
+2 
+ju
+k
+(t)j
+2
+dt; jjjb uj
+t=0
+jjj
+2
+H
+ 
+=ju
+0
+0
+j
+2
++
+X
+k2Z
+0
+jkj
+2 
+ju
+0
+k
+j
+2
+:
+Here  > 0;  =const:
+Theorem 1 For any   > 2 and w
+2
+e
+= u
+e
+w
+e
+> 0 there exist  
+0
+;q2 (0; 1) such
+that for periodic initial data (b u
+0
+;b w
+0
+) with zero averages satisfying the inequality
+jjjb u
+0
+jjj
+H
+ 
++jjjb w
+0
+jjj
+H
+ 
+ "
+2
+q;
+there exists a global solution (b u;b w)2L
+2;
+(R
++
+;H
+ 
+) to Cauchy problem (5)-(7),
+where  =" 
+0
+> 0.
+Hence, the local equilibrium principle with an exponential stabilization to the
+equilibrium state holds.
+Theorem 2 Let   > 2 and let the condition of Theorem 1 be ful lled. Then
+a positive equilibrium state (u
+e
+= const > 0;w
+e
+= const > 0;w
+2
+e
+= u
+e
+w
+e
+) is
+exponentially stable:
+jjju(x;t) u
+e
+jjj
+H
+ 
+ c
+1
+ 
+jjjb u
+0
+jjj
+H
+ 
++jjjb w
+0
+jjj
+H
+ 
+ 
+e
+ 2
+1
+t
+;
+jjjw(x;t) w
+e
+jjj
+H
+ 
+ c
+2
+ 
+jjjb u
+0
+jjj
+H
+ 
++jjjb w
+0
+jjj
+H
+ 
+ 
+e
+ 2
+1
+t
+;
+where c
+1
+;c
+2
+> 0;
+1
+> > 0:
+These theorems will be proven in a future publication for the  rst time.
+We assume that the average
+u
+0
+0
+=
+1
+2 
+Z
+2 
+0
+b u
+0
+(x)dx =w
+0
+0
+=
+1
+2 
+Z
+2 
+0
+b w
+0
+(x)dx = 0:
+Let us rewrite the system (5)-(7) in terms of Fourier coe cients for k6= 0
+d
+dt
+u
+k
++iku
+k
+= (
+d
+dt
+w
+k
+ ikw
+k
+); (8)
+d
+dt
+w
+k
+ ikw
+k
++
+1
+"
+w
+e
+(w
+k
+ u
+k
+) = "w
+1=2
+e
+X
+k
+1
++k
+2
+=k;k;k
+1
+;k
+2
+2Z
+(w
+k
+1
+w
+k
+2
+ u
+k
+1
+w
+k
+1
+); (9)
+u
+k
+j
+t=0
+=u
+0
+k
+;w
+k
+j
+t=0
+=w
+0
+k
+: (10)
+https://doi.org/10.21638/11701/spbu35.2023.108 Electronic Journal: http://diffjournal.spbu.ru/ 127Differential Equations and Control Processes, N. 1, 2023
+and the zero mode k = 0
+d
+dt
+u
+0
+= 
+d
+dt
+w
+0
+; (11)
+d
+dt
+w
+0
++
+1
+"
+w
+e
+(w
+0
+ u
+0
+) = "w
+1=2
+e
+X
+k
+1
++k
+2
+=0;k
+1
+2Z;k
+2
+2Z
+(w
+k
+1
+w
+k
+2
+ u
+k
+1
+w
+k
+1
+); (12)
+u
+0
+j
+t=0
+= 0;w
+0
+j
+t=0
+= 0: (13)
+Solving the equation (8), we  nd its solution
+u
+k
+= w
+k
++ (u
+0
+k
++w
+0
+k
+)e
+ ikt
++ 2ik
+Z
+t
+0
+e
+ik(s t)
+w
+k
+ds: (14)
+For k = 0 we have
+u
+0
+= w
+0
+:
+We rewrite out the sum for k6= 0
+X
+k
+1
++k
+2
+=k;k
+1
+2Z;k
+2
+2Z
+(w
+k
+1
+w
+k
+2
+ u
+k
+1
+w
+k
+1
+) =
+=w
+0
+w
+k
+ u
+0
+w
+k
++w
+k
+w
+0
+ u
+k
+w
+0
++
+X
+k
+1
++k
+2
+=k;k2Z
+0
+;k
+1
+2Z
+0
+;k
+2
+2Z
+0
+(w
+k
+1
+w
+k
+2
+ u
+k
+1
+w
+k
+1
+) =
+= 4w
+0
+w
+k
+ w
+0
+ 
+(u
+0
+k
++w
+0
+k
+)e
+ ikt
++ 2ik
+Z
+t
+0
+e
+ik(s t)
+w
+k
+ds
+ 
++
++
+X
+k
+1
++k
+2
+=k;k2Z
+0
+;k
+1
+2Z
+0
+;k
+2
+2Z
+0
+ 
+2w
+k
+1
+w
+k
+2
+ w
+k
+2
+ 
+(u
+0
+k
+1
++w
+0
+k
+1
+)e
+ ik
+1
+t
++
++2ik
+1
+Z
+t
+0
+e
+ik
+1
+(s t)
+w
+k
+1
+ds
+  
+: (15)
+Substituting (14), (15) to (9), we have an in nite system of ordinary differ-
+ential equations (ODEs)
+d
+dt
+w
+k
+ ikw
+k
++ 2w
+e
+1
+"
+w
+k
+  2ikw
+e
+1
+"
+Z
+t
+0
+e
+ik(s t)
+w
+k
+ds = (16)
+=w
+1=2
+e
+1
+"
+d
+k
+e
+ ikt
++
++"w
+1=2
+e
+ 
+l
+k
+(w)  2B
+k
+(w;w)
+ 
+ "w
+1=2
+e
+T
+add
+k
+(w);
+w
+k
+j
+t=0
+=w
+0
+k
+; k2Z
+0
+=fk2Z;k6= 0g:
+https://doi.org/10.21638/11701/spbu35.2023.108 Electronic Journal: http://diffjournal.spbu.ru/ 128Differential Equations and Control Processes, N. 1, 2023
+Here T
+add
+k
+(w) is the perturbation operator of the base system
+d
+dt
+w
+k
+ ikw
+k
++ 2w
+e
+1
+"
+w
+k
+  2ikw
+e
+1
+"
+Z
+t
+0
+e
+ik(s t)
+w
+k
+ds = (17)
+=w
+1=2
+e
+1
+"
+d
+k
+e
+ ikt
++"w
+1=2
+e
+ 
+l
+k
+(w)  2B
+k
+(w;w)
+ 
+;
+w
+k
+j
+t=0
+=w
+0
+k
+; k2Z
+0
+=fk2Z;k6= 0g;
+where
+d
+k
+=w
+1=2
+e
+(u
+0
+k
++w
+0
+k
+);T
+add
+k
+(w) =w
+0
+ 
+4w
+k
+  (u
+0
+k
++w
+0
+k
+)e
+ ikt
+  2ik
+Z
+t
+0
+e
+ik(s t)
+w
+k
+ds
+ 
+;
+l
+k
+(w) =
+X
+k
+1
++k
+2
+=k;k2Z
+0
+;k
+1
+2Z
+0
+;k
+2
+2Z
+0
+(u
+0
+k
+1
++w
+0
+k
+1
+)e
+ ik
+1
+t
+w
+k
+2
+;
+B
+k
+(w;w) =
+X
+k
+1
++k
+2
+=k;k2Z
+0
+;k
+1
+2Z
+0
+;k
+2
+2Z
+0
+w
+k
+2
+ 
+w
+k
+1
+ ik
+1
+Z
+t
+0
+e
+ik
+1
+(s t)
+w
+k
+1
+ds
+ 
+:
+Let's make a replacement for the transition to zero initial data
+w
+k
+=w
+0
+k
+e
+(ik 2w
+e
+1
+"
+)t
++y
+k
+;y
+k
+2L
+2;
+(R;H
+ 
+): (18)
+In what follows, we will consider the system (16) without the perturbation
+operator. Substituting (18) to (17) and taking into account that
+ik
+Z
+t
+0
+e
+ik(s t)
+ 
+w
+0
+k
+e
+(ik 2w
+e
+1
+"
+)t
++y
+k
+ 
+ds =
+w
+0
+k
+ik
+2(ik w
+e
+1
+"
+)
+ 
+e
+(ik 2w
+e
+1
+"
+)t
+ e
+ ikt
+ 
+;
+then we have fory
+k
+an in nite system of ordinary differential equations (ODEs)
+T
+k
+(y
+k
+) 
+d
+dt
+y
+k
+ iky
+k
++ 2w
+e
+1
+"
+y
+k
+  2ikw
+e
+1
+"
+Z
+t
+0
+e
+ik(s t)
+y
+k
+ds = (19)
+=w
+1=2
+e
+1
+"
+D
+k
+e
+ ikt
++f
+k
+(t)e
+ 2w
+e
+1
+"
+t
++"w
+1=2
+e
+ 
+L
+k
+(y)  2B
+k
+(y;y)
+ 
+;
+y
+k
+j
+t=0
+= 0; k2Z
+0
+=fk2Z;k6= 0g;
+where
+D
+k
+=w
+1=2
+e
+(u
+0
+k
++w
+0
+k
+) 
+ikw
+1=2
+e
+ik w
+e
+1
+"
+w
+0
+k
+;
+B
+k
+(y;y) =
+X
+k
+1
++k
+2
+=k;k2Z
+0
+;k
+1
+2Z
+0
+;k
+2
+2Z
+0
+y
+k
+2
+ 
+y
+k
+1
+ ik
+1
+Z
+t
+0
+e
+ik
+1
+(s t)
+y
+k
+1
+ds
+ 
+;
+https://doi.org/10.21638/11701/spbu35.2023.108 Electronic Journal: http://diffjournal.spbu.ru/ 129Differential Equations and Control Processes, N. 1, 2023
+f
+k
+(t) =
+ikw
+e
+ik w
+e
+1
+"
+1
+"
+w
+0
+k
+e
+ikt
++"w
+1=2
+e
+ 
+f
+L
+k
+(t)  2f
+B
+k
+(t)
+ 
+;
+f
+L
+k
+(t) =
+X
+k
+1
++k
+2
+=k;k2Z
+0
+;k
+1
+2Z
+0
+;k
+2
+2Z
+0
+(u
+0
+k
+1
++w
+0
+k
+1
+)e
+ ik
+1
+t
+w
+0
+k
+2
+e
+ik
+2
+t
+;
+f
+B
+k
+(t) =
+X
+k
+1
++k
+2
+=k;k2Z
+0
+;k
+1
+2Z
+0
+;k
+2
+2Z
+0
+w
+0
+k
+2
+e
+ik
+2
+t
+ 
+w
+0
+k
+1
+e
+(ik
+1
+ 2w
+e
+1
+"
+)t
+ 
+ik
+1
+w
+0
+k
+1
+2(ik
+1
+ w
+e
+1
+"
+)
+ 
+ 
+ 
+e
+(ik
+1
+ 2w
+e
+1
+"
+)t
+ e
+ ik
+1
+t
+  
+;
+L
+k
+(y) =
+X
+k
+1
++k
+2
+=k;k2Z
+0
+;k
+1
+2Z
+0
+;k
+2
+2Z
+0
+(u
+0
+k
+1
++w
+0
+k
+1
+)e
+ ik
+1
+t
+y
+k
+2
++
++
+X
+k
+1
++k
+2
+=k;k2Z
+0
+;k
+1
+2Z
+0
+;k
+2
+2Z
+0
+ 
+w
+0
+k
+2
+e
+(ik
+2
+ 2w
+e
+1
+"
+)t
+ 
+y
+k
+1
+ ik
+1
+Z
+t
+0
+e
+ik
+1
+(s t)
+y
+k
+1
+ds
+ 
++
++y
+k
+2
+ 
+w
+0
+k
+1
+e
+(ik
+1
+ 2w
+e
+1
+"
+)t
+ 
+ik
+1
+w
+0
+k
+1
+2(ik
+1
+ w
+e
+1
+"
+)
+ 
+e
+(ik
+1
+ 2w
+e
+1
+"
+)t
+ e
+ ik
+1
+t
+   
+:
+3 Equation for zero mode
+From the system (12) for the zero mode, we obtain
+d
+dt
+w
+0
++ 2
+1
+"
+w
+e
+w
+0
+= "w
+1=2
+e
+ 
+2w
+0
+w
+0
++
+X
+k
+1
++k
+2
+=0;k
+1
+2Z
+0
+;k
+2
+2Z
+0
+(w
+k
+1
+w
+k
+2
+ u
+k
+1
+w
+k
+2
+)
+ 
+; (20)
+w
+0
+j
+t=0
+= 0: (21)
+Rewrite (20) as the Riccati equation
+d
+dt
+w
+0
++ 2
+1
+"
+w
+e
+w
+0
+= "w
+1=2
+e
+ 
+2w
+0
+w
+0
+ l
+0
+(w) + 2B
+0
+(w;w)
+ 
+; (22)
+w
+0
+j
+t=0
+= 0; (23)
+where
+l
+0
+(w) =
+X
+k
+1
++k
+2
+=0;k
+1
+2Z
+0
+;k
+2
+2Z
+0
+(u
+0
+k
+1
++w
+0
+k
+1
+)e
+ ik
+1
+t
+w
+k
+2
+;
+B
+0
+(w;w) =
+X
+k
+1
++k
+2
+=0;k
+1
+2Z
+0
+;k
+2
+2Z
+0
+w
+k
+2
+ 
+w
+k
+1
+ ik
+1
+Z
+t
+0
+e
+ik
+1
+(s t)
+w
+k
+1
+ds
+ 
+:
+Let be
+w
+k
+=w
+0
+k
+e
+(ik 2w
+e
+1
+"
+)t
++y
+k
+;y
+k
+2L
+2;
+(R):
+https://doi.org/10.21638/11701/spbu35.2023.108 Electronic Journal: http://diffjournal.spbu.ru/ 130Differential Equations and Control Processes, N. 1, 2023
+Here
+kyk
+2
+L
+2;
+(R
++
+)
+=
+Z
+1
+0
+e
+2t
+jyj
+2
+dt:
+Then we have
+d
+dt
+y
+0
++ 2
+1
+"
+w
+e
+y
+0
+= "w
+1=2
+e
+ 
+2y
+0
+y
+0
+ f
+0
+(t)e
+ 2w
+e
+1
+"
+t
+ l
+0
+(y) + 2B
+0
+(y;y)
+ 
+;
+y
+0
+j
+t=0
+= 0;
+where
+B
+0
+(y;y) =
+X
+k
+1
++k
+2
+=0;k
+1
+2Z
+0
+;k
+2
+2Z
+0
+y
+k
+2
+ 
+y
+k
+1
+ ik
+1
+Z
+t
+0
+e
+ik
+1
+(s t)
+y
+k
+1
+ds
+ 
+;
+f
+0
+(t) =f
+L
+0
+(t)  2f
+B
+0
+(t);
+f
+L
+0
+(t) =
+X
+k
+1
++k
+2
+=0;k
+1
+2Z
+0
+;k
+2
+2Z
+0
+(u
+0
+k
+1
++w
+0
+k
+1
+)e
+ ik
+1
+t
+w
+0
+k
+2
+e
+ik
+2
+t
+;
+f
+B
+0
+(t) =
+X
+k
+1
++k
+2
+=0;k
+1
+2Z
+0
+;k
+2
+2Z
+0
+w
+0
+k
+2
+e
+ik
+2
+t
+ 
+w
+0
+k
+1
+e
+(ik
+1
+ 2w
+e
+1
+"
+)t
+ 
+ik
+1
+w
+0
+k
+1
+2(ik
+1
+ w
+e
+1
+"
+)
+ 
+ 
+ 
+e
+(ik
+1
+ 2w
+e
+1
+"
+)t
+ e
+ ik
+1
+t
+  
+;
+L
+0
+(y) =
+X
+k
+1
++k
+2
+=0;k
+1
+2Z
+0
+;k
+2
+2Z
+0
+(u
+0
+k
+1
++w
+0
+k
+1
+)e
+ ik
+1
+t
+y
+k
+2
++
++
+X
+k
+1
++k
+2
+=0;k
+1
+2Z
+0
+;k
+2
+2Z
+0
+ 
+w
+0
+k
+2
+e
+(ik
+2
+ 2w
+e
+1
+"
+)t
+ 
+y
+k
+1
+ ik
+1
+Z
+t
+0
+e
+ik
+1
+(s t)
+y
+k
+1
+ds
+ 
++
++y
+k
+2
+ 
+w
+0
+k
+1
+e
+(ik
+1
+ 2w
+e
+1
+"
+)t
+ 
+ik
+1
+w
+0
+k
+1
+2(ik
+1
+ w
+e
+1
+"
+)
+ 
+e
+(ik
+1
+ 2w
+e
+1
+"
+)t
+ e
+ ik
+1
+t
+   
+:
+4 Finite approximation
+To construct an approximation solution of the Cauchy problem (5)-(7), a  nite
+approximation of the in nite system (19) is introduced for m2N:
+T
+k
+(y
+(m)
+k
+) 
+d
+dt
+y
+(m)
+k
+ iky
+(m)
+k
++ 2w
+e
+1
+"
+y
+(m)
+k
+  2ikw
+e
+1
+"
+Z
+t
+0
+e
+ik(s t)
+y
+(m)
+k
+ds = (24)
+=w
+1=2
+e
+1
+"
+D
+(m)
+k
+e
+ ikt
++f
+(m)
+k
+(t)e
+ 2w
+e
+1
+"
+t
++"w
+1=2
+e
+ 
+L
+(m)
+k
+(y
+(m)
+)  2B
+(m)
+k
+(y
+(m)
+;y
+(m)
+)
+ 
+;
+y
+(m)
+k
+j
+t=0
+= 0; k2Z
+0
+;jkj m;
+https://doi.org/10.21638/11701/spbu35.2023.108 Electronic Journal: http://diffjournal.spbu.ru/ 131Differential Equations and Control Processes, N. 1, 2023
+Here
+D
+(m)
+k
+=w
+1=2
+e
+(u
+0
+k
++w
+0
+k
+) 
+ikw
+1=2
+e
+ik w
+e
+1
+"
+w
+0
+k
+;
+B
+(m)
+k
+(y
+(m)
+;y
+(m)
+) =
+X
+k
+1
++k
+2
+=k;jk
+1
+j m;jk
+2
+j m
+y
+k
+2
+ 
+y
+k
+1
+ ik
+1
+Z
+t
+0
+e
+ik
+1
+(s t)
+y
+k
+1
+ds
+ 
+;
+f
+(m)
+k
+(t) =
+ikw
+e
+ik w
+e
+1
+"
+1
+"
+w
+0
+k
+e
+ikt
++"w
+1=2
+e
+ 
+f
+L
+k;m
+(t)  2f
+B
+k;m
+(t)
+ 
+;
+f
+L
+k;m
+(t) =
+X
+k
+1
++k
+2
+=k;jk
+1
+j m;jk
+2
+j m
+(u
+0
+k
+1
++w
+0
+k
+1
+)e
+ ik
+1
+t
+w
+0
+k
+2
+e
+ik
+2
+t
+;
+f
+B
+k;m
+(t) =
+X
+k
+1
++k
+2
+=k;jk
+1
+j m;jk
+2
+j m
+w
+0
+k
+2
+e
+ik
+2
+t
+ 
+w
+0
+k
+1
+e
+(ik
+1
+ 2w
+e
+1
+"
+)t
+ 
+ik
+1
+w
+0
+k
+1
+2(ik
+1
+ w
+e
+1
+"
+)
+ 
+ 
+ 
+e
+(ik
+1
+ 2w
+e
+1
+"
+)t
+ e
+ ik
+1
+t
+  
+;
+L
+(m)
+k
+(y
+(m)
+) =
+X
+k
+1
++k
+2
+=k;jk
+1
+j m;jk
+2
+j m
+(u
+0
+k
+1
++w
+0
+k
+1
+)e
+ ik
+1
+t
+y
+k
+2
++
++
+X
+k
+1
++k
+2
+=k;jk
+1
+j m;jk
+2
+j m
+ 
+w
+0
+k
+2
+e
+(ik
+2
+ 2w
+e
+1
+"
+)t
+ 
+y
+k
+1
+ ik
+1
+Z
+t
+0
+e
+ik
+1
+(s t)
+y
+k
+1
+ds
+ 
++
++y
+k
+2
+ 
+w
+0
+k
+1
+e
+(ik
+1
+ 2w
+e
+1
+"
+)t
+ 
+ik
+1
+w
+0
+k
+1
+2(ik
+1
+ w
+e
+1
+"
+)
+ 
+e
+(ik
+1
+ 2w
+e
+1
+"
+)t
+ e
+ ik
+1
+t
+   
+:
+The solution of the system (24) will be sought in the form
+y
+(m)
+k
+=Q
+(m)
+k
+T
+ 1
+k
+(e
+ ikt
+) +T
+ 1
+k
+(z
+(m)
+k
+); z
+(m)
+k
+j
+t=0
+= 0;
+Q
+(m)
+2H
+(m)
+ 
+; z
+(m)
+2L
+2;
+(R
++
+;H
+(m)
+ 
+);
+where z
+(m)
+= (z
+(m)
+k
+;jkj m;k6= 0): Then
+z
+(m)
+k
+=
+ 
+w
+1=2
+e
+1
+"
+D
+(m)
+k
+ Q
+(m)
+k
+ 
+e
+ ikt
++f
+(m)
+k
+(t)e
+ 2w
+e
+1
+"
+t
++ (25)
++"w
+1=2
+e
+ 
+L
+(m)
+k
+ 
+Q
+(m)
+k
+T
+ 1
+k
+(e
+ ikt
+) +T
+ 1
+k
+(z
+(m)
+k
+)
+ 
+ 
+ 2B
+(m)
+k
+ 
+Q
+(m)
+k
+T
+ 1
+k
+(e
+ ikt
+) +T
+ 1
+k
+(z
+(m)
+k
+);Q
+(m)
+k
+T
+ 1
+k
+(e
+ ikt
+) +T
+ 1
+k
+(z
+(m)
+k
+)
+  
+:
+In the variables (z
+(m)
+k
+;Q
+(m)
+k
+); the system (25) under the secularity condition
+w
+1=2
+e
+1
+"
+D
+(m)
+k
+ Q
+(m)
+k
+= 0;jkj= 1;:::;m; (26)
+https://doi.org/10.21638/11701/spbu35.2023.108 Electronic Journal: http://diffjournal.spbu.ru/ 132Differential Equations and Control Processes, N. 1, 2023
+will be written as:
+z
+(m)
+k
+=f
+(m)
+k
+(t)e
+ 2w
+e
+1
+"
+t
++"w
+1=2
+e
+ 
+L
+(m)
+k
+ 
+Q
+(m)
+k
+T
+ 1
+k
+(e
+ ikt
+) +T
+ 1
+k
+(z
+(m)
+k
+)
+ 
+ 
+ 2B
+(m)
+k
+ 
+Q
+(m)
+k
+T
+ 1
+k
+(e
+ ikt
+) +T
+ 1
+k
+(z
+(m)
+k
+);Q
+(m)
+k
+T
+ 1
+k
+(e
+ ikt
+) +T
+ 1
+k
+(z
+(m)
+k
+)
+  
+:
+We get the system in the Hilbert space L
+2;
+(R
++
+;H
+(m)
+ 
+). For zero mode we set
+y
+0
+=z
+0
+: In this case
+z
+0
+= "w
+1=2
+e
+Z
+t
+0
+e
+2w
+e
+1
+"
+(s t)
+ 
+2z
+0
+z
+0
+ f
+0
+(t)e
+ 2w
+e
+1
+"
+t
+ l
+0
+(y) + 2B
+0
+(y;y)
+ 
+ds: (27)
+Here is no secularity condition for the zero mode.
+5 Local equilibrium
+We will  nd a solution to the secularity condition from the principle of local
+equilibrium. Taking into account (14) and (18), we have
+u
+(m)
+k
+= y
+(m)
+k
+ w
+0
+k
+e
+(ik 2w
+e
+1
+"
+)t
++ (u
+0
+k
++w
+0
+k
+)e
+ ikt
++ 2ik
+Z
+t
+0
+e
+ik(s t)
+y
+k
+ds+
++
+ik
+ik w
+e
+1
+"
+ 
+w
+0
+k
+e
+(ik 2w
+e
+1
+"
+)t
+ e
+ ikt
+ 
+=
+= y
+(m)
+k
++e
+(ik 2w
+e
+1
+"
+)t
+w
+e
+1
+"
+w
+0
+k
+ik w
+e
+1
+"
++
++2ik
+Z
+t
+0
+e
+ik(s t)
+y
+k
+ds + (u
+0
+k
+ 
+w
+e
+1
+"
+ik w
+e
+1
+"
+w
+0
+k
+)e
+ ikt
+; (28)
+We separate the non-integrable part using (24)
+ik
+Z
+t
+0
+e
+ik(s t)
+Q
+(m)
+k
+T
+ 1
+k
+(e
+ iks
+)ds = 
+"
+2w
+e
+Q
+(m)
+k
+e
+ ikt
++R
+k
+; (29)
+R
+k
+=
+"
+2w
+e
+ 
+d
+dt
+T
+ 1
+k
+(e
+ ikt
+) ikT
+ 1
+k
+(e
+ ikt
+) + 2w
+e
+1
+"
+T
+ 1
+k
+(e
+ ikt
+)
+ 
+2L
+2;
+(R;H
+(m)
+ 
+):
+Applying the formula (29), we get
+u
+(m)
+k
+= Q
+(m)
+k
+T
+ 1
+k
+(e
+ ikt
+) T
+ 1
+k
+(z
+(m)
+k
+) + 2ik
+Z
+t
+0
+e
+ik(s t)
+T
+ 1
+k
+(z
+(m)
+k
+)ds+ (30)
++(u
+0
+k
+ 
+w
+e
+1
+"
+ik w
+e
+1
+"
+w
+0
+k
+ 
+"
+w
+e
+Q
+(m)
+k
+)e
+ ikt
++e
+(ik 2w
+e
+1
+"
+)t
+w
+e
+1
+"
+w
+0
+k
+ik w
+e
+1
+"
++
++
+"
+w
+e
+ 
+d
+dt
+T
+ 1
+k
+(e
+ ikt
+) ikT
+ 1
+k
+(e
+ ikt
+) + 2w
+e
+1
+"
+T
+ 1
+k
+(e
+ ikt
+)
+ 
+:
+https://doi.org/10.21638/11701/spbu35.2023.108 Electronic Journal: http://diffjournal.spbu.ru/ 133Differential Equations and Control Processes, N. 1, 2023
+If
+Q
+(m)
+k
+=
+w
+e
+"
+ 
+u
+0
+k
+ 
+w
+e
+1
+"
+w
+0
+k
+ik w
+e
+1
+"
+ 
+;jkj m; (31)
+then we have u
+(m)
+k
+! 0; when t!1: For the second component inH
+(m)
+ 
+, we
+have
+w
+(m)
+k
+=Q
+(m)
+k
+T
+ 1
+k
+(e
+ ikt
+) +T
+ 1
+k
+(z
+(m)
+k
+) +w
+0
+k
+e
+(ik 2w
+e
+1
+"
+)t
+! 0;t!1:
+Thus, under the condition (31), we have the local equilibrium.
+6 Conclusion
+The one-dimensional McKean system was investigated. Secular terms were
+found that do not belong to our space L
+2;
+. As a result, we obtain a nonlinear
+equation in the Hilbert space. In what follows, we obtain priori estimates for
+one, an existence theorem for a solution using the  xed point theorem. We
+will also prove the weak convergence of the approximative solution to the weak
+solution and just the classical solution. From here, the exponential stabilization
+of the solution to a positive equilibrium state will follow (see theorems 1, 2).
+References
+[1] Godunov S. K., Sultangazin U. M. On discrete models of the kinetic Boltz-
+mann equation. Russian Mathematical Surveys, 1971; 26(3): 1{56.
+[2] Euler N., Steeb W.-H. Painlev  e test and discrete Boltzmann equations.
+Australian Journal of Physics, 1989; (42): 1{10.
+[3] Tchier F., Inc M. and Yusuf A. Symmetry analysis, exact solutions and nu-
+merical approximations for the space-time Carleman equation in nonlinear
+dynamical systems. The European Physical Journal Plus, 2019; 134(250):
+1{18.
+[4] Dukhnovskii S. A. Solutions of the Carleman system via the Painlev  e ex-
+pansion. Vladikavkaz Math. J., 2020; 22(4): 58{67. (In Russ.)
+[5] Dukhnovsky S. On solutions of the kinetic McKean system. Bul. Acad.
+S  tiint  e Repub. Mold. Mat., 2020; 94(3): 3{11.
+https://doi.org/10.21638/11701/spbu35.2023.108 Electronic Journal: http://diffjournal.spbu.ru/ 134Differential Equations and Control Processes, N. 1, 2023
+[6] Vasil'eva O. A., Dukhnovskiy S. A. Secularity condition for the kinetic
+Carleman system. Vestnik MGSU, 2015; No. 7, 33{40.
+[7] Dukhnovskii S. A. Asymptotic stability of equilibrium states for Carleman
+and Godunov{Sultangazin systems of equation. Moscow University Math-
+ematics Bulletin, 2019; 74(6): 246{248.
+[8] Vedenyapin V., Sinitsyn A., Dulov E. Kinetic Boltzmann, Vlasov and re-
+lated equations. Amsterdam, Elsevier, 2011, xiii+304 pp.
+[9] Dukhnovsky S. A. The tanh-function method and the (G
+0
+=G)-expansion
+method for the kinetic McKean system. Differential equations and control
+processes, 2021; No.2, 87{100.
+[10] Lindblom O., Euler N. Solutions of discrete-velocity Boltzmann equations
+via Bateman and Riccati equations. Theoretical and Mathematical Physics,
+2002; 131(2): 595{608.
+[11] Radkevich E. V. On the large-time behavior of solutions to the Cauchy
+problem for a 2-dimensional discrete kinetic equation. Journal of Mathe-
+matical Sciences, 2014; 202(5): 735{768.
+[12] Dukhnovskii S. A. On the rate of stabilization of solutions to the Cauchy
+problem for the Godunov{Sultangazin system with periodic initial data. J.
+Math. Sci., 2021; (259): 349{375.
+[13] Vasil'eva O. A., Dukhnovskii S. A., Radkevich E. V. On the nature of local
+equilibrium in the Carleman and Godunov-Sultangazin equations. Journal
+of Mathematical Sciences, 2018; 235(4): 392{454.
+[14] Radkevich, E. V. On discrete kinetic equations. Doklady mathematics,
+2012; 86(3): 809{813.
+[15] Ilyin, O. V. Symmetries, the current function, and exact solutions for
+Broadwell's two-dimensional stationary kinetic model. Theoretical and
+Mathematical Physics, 2014; 179(3): 679{688.
+[16] Ilyin, O. V. Existence and stability analysis for the Carleman kinetic sys-
+tem. Computational Mathematics and Mathematical Physics, 2007; 47(12):
+1990{2001.
+[17] Vasil'eva O. The investigation of evolution of the harmonic perturbation
+the stationary solution of the boundary value problem for a system of the
+Carleman equations. Matec web of conferences, 2017; (117), 00174.
+https://doi.org/10.21638/11701/spbu35.2023.108 Electronic Journal: http://diffjournal.spbu.ru/ 135Differential Equations and Control Processes, N. 1, 2023
+[18] Vasil'eva O.A. Numerical solution of the Godunov{Sultangazin system of
+equations. Periodic Case. Vestnik MGSU, 2016; No. 4: 27-35. (In Russ.)
+https://doi.org/10.21638/11701/spbu35.2023.108 Electronic Journal: http://diffjournal.spbu.ru/ 136
