@@ -12,6 +12,7 @@ dept. of Computer Science<br />
 Natalya B. Ampilova<br />
 Assoc.Prof., Dept. of Comp. Sci, St.Petersburg State University,<br />
 St. Petersburg, Russia<br />
+tel: +7 921 415 7762<br />
 e-mail: <a href="mailto:n.ampilova@spbu.ru">n.ampilova@spbu.ru</a>
 </p>
 
