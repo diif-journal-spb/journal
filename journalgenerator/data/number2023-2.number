@@ -250,13 +250,10 @@
             <pdf>23204-jdecp-galyaev.pdf</pdf>
             <abstract>В работе рассмотрена задача быстродействия по успокоению
                 двузвенного маятника на подвижном подвесе. Данная нелинейная система с
-                недостатком и ограничением на ресурс управления линеаризована в окрестно-
-                сти устойчивого положения равновесия. Для линеаризованной системы при-
-                менен принцип максимума Понтрягина и получен закон оптимального управ-
-                ления. Для определения параметров которого на основе нахождения орто-
-                гонального подпространства разработан алгоритм построения оптимального
-                по быстродействию управления системой. В среде Matlab разработан про-
-                граммный модуль, при помощи которого произведено сравнение динамики
+                недостатком и ограничением на ресурс управления линеаризована в окрестности устойчивого положения равновесия. Для линеаризованной системы 
+                применен принцип максимума Понтрягина и получен закон оптимального управления. Для определения параметров которого на основе нахождения ортогонального подпространства разработан алгоритм построения оптимального
+                по быстродействию управления системой. 
+                В среде Matlab разработан программный модуль, при помощи которого произведено сравнение динамики
                 линейной и нелинейной систем при полученном законе управления.</abstract>
             <title>Задача быстродейсвтия по остановке двузвенного физического маятника на подвижном подвесе</title>
             <keywords>
@@ -288,6 +285,65 @@
         <authors>
             <author ref="n_2023_7_potapov" sort-key="1" />
             <author ref="n_2023_7_galyaev" sort-key="2" />
+        </authors>
+    </article>
+
+    <article>
+        <articleInfo lang="EN" FirstPage="86" LastPage="96">
+            <pdf>23205-jdecp-bagresyan.pdf</pdf>
+            <abstract>The mathematical model of spatial flight of an unmanned airplane-type vehicle is considered. For a linearized mathematical model of an unmanned aerial vehicle the problem of synthesis of control laws with given initial, finite values of the phase vector and intermediate values of different parts of coordinates at different moments of time is solved. A necessary and sufficient condition for the existence of program control and the corresponding motion is formulated. The control functions and corresponding phase trajectories of motion are constructed. As an application of the proposed approach, explicit expressions of the program control function and program motion are constructed for specific numerical values.</abstract>
+            <title>On One Problem of Controlling an Airplane-type Unmanned Aerial Vehicle with Given Intermediate Values of Different Parts of Coordinates</title>
+            <keywords>
+                <word>flight control</word>
+                <word>intermediate conditions</word>
+                <word>phase trajectories</word>
+                <word>unmanned aerial vehicle</word>
+            </keywords>
+            <references>
+                <reference>Lebedev A. A., &lt;em&gt;Chernobrovkin L. S. Dinamika poleta bespilotnykh letatel'nykh apparatov&lt;/em&gt;[Flight dynamics of unmanned aerial vehicles. ]. M. : Mashinostroyeniye, 1973. 615 p. (in Russ. )</reference>
+                <reference>Dmitriyevskiy A. A., Lysenko L. N. &lt;em&gt;Prikladnyye zadachi teorii optimal'nogo upravleniya dvizheniyem bespilotnykh letatel'nykh apparatov&lt;/em&gt;[Applied problems of the theory of optimal control of the movement of unmanned aerial vehicles. ]. M. : Mashinostroyeniye, 1978. 328 p. (in Russ. )</reference>
+                <reference>Telukhin S. V., Matveyev V. V. Bespilotnyy letatel'nyy apparat kak ob&amp;quot; yekt upravleniya[Unmanned aerial vehicle as an object of control. ]. &lt;em&gt;Mekhatronika, avtomatizatsiya, upravleniye&lt;/em&gt;. 2008. № 10. 7-10. (in Russ. )</reference>
+                <reference>Bogoslovskiy S. V., Dorofeyev A. D. Dinamika polota letatel'nykh apparatov[Aircraft flight dynamics. ]. &lt;em&gt;SPb. : SPBGUAP&lt;/em&gt;, 2002. S. 34—41. (in Russ. )</reference>
+                <reference>Kolesnikov A. A. &lt;em&gt;Novyye nelineynyye metody upravleniya poletom&lt;/em&gt;[New non-linear flight control methods. ]. M. : Fizmatlit, 2013. 194 p. (in Russ. )</reference>
+                <reference>Ashchepkov L. T. Optimal'noye upravleniye sistemoy s promezhutochnymi usloviyami. [ Optimal control of a system with intermediate conditions] &lt;em&gt;PMM&lt;/em&gt;, 1981, t. 45, vyp. 2, p. 215-222. (in Russ. )</reference>
+                <reference>Dykhta V. A., Samsonyuk O. N. Printsip maksimuma dlya gladkikh zadach optimal'nogo impul'snogo upravleniya s mnogotochechnymi fazoogranicheniyami[The maximum principle for smooth problems of optimal impulse control with multipoint phase constraints]. &lt;em&gt;Zhurnal vychislitel'noy matematiki i matematicheskoy fiziki&lt;/em&gt;. 2009, t. 49, № 6, s. 981-997. (in Russ. )</reference>
+                <reference>Barsegyan V. R. Upravleniye lineynymi dinamicheskimi sistemami s ogranicheniyami na znacheniya chastey koordinat fazovogo vektora v promezhutochnyye momenty vremeni[Control of linear dynamic systems with restrictions on the values of parts of the coordinates of the phase vector at intermediate times]. &lt;em&gt;Dokl. NAN Armenii&lt;/em&gt;. 2010. T. 110. № 3. p. 251-260. (in Russ. )</reference>
+                <reference>Barseghyan V. R. and Barseghyan T. V. On an Approach to the Problems of Control of Dynamic System with Nonseparated Multipoint Intermediate Conditions. Automation and Remote Control, 2015, Vol. 76, № 4, pp. 549-559</reference>
+                <reference>Barseghyan, V. R. Upravlenie sostavnyh dinamicheskih sistem i sistem s mnogotochechnymi promezhutochnymi usloviyami. [Control of Compound Dynamic Systems and of Systems with Multipoint Intermediate Conditions]&lt;em&gt;. &lt;/em&gt;M. : Nauka, 2016. (in Russ. )</reference>
+                <reference>Barseghyan, V. and Solodusha, S. On One Problem in Optimal Boundary Control for String Vibrations with a Given Velocity of Points at an Intermediate Moment of Time. &lt;em&gt;Conference Paper. Publisher: IEEE. 2021 International Russian Automation Conference&lt;/em&gt; (RusAutoCon), pp. 343-349, 2021. Doi: 10. 1109/RusAutoCon52004. 2021. 9537514</reference>
+                <reference>Krasovsky N. N. &lt;em&gt;Teoriya upravleniya dvizheniem&lt;/em&gt; [The Theory of Motion Control]. M. : Nauka, 1968. (in Russ. )</reference>
+                <reference>Zubov V. I. &lt;em&gt;Lektsii po teorii upravleniya&lt;/em&gt;[Lectures on control theory]. M. : Nauka, 1975, 496 p. (in Russ. )</reference>
+            </references>
+        </articleInfo>
+        <articleInfo lang="RU" FirstPage="86" LastPage="96">
+            <pdf>23205-jdecp-bagresyan.pdf</pdf>
+            <abstract>Рассмотрена математическая модель пространственного полета беспилотного летательного аппарата самолетного типа. Для линеаризованной математической модели беспилотного летательного аппарата решена задача синтеза законов управления с заданными начальными, конечными значениями фазового вектора и промежуточными значениями разных частей координат в разные моменты времени. Сформулировано необходимое и достаточное условие существования программного управления и соответствующего движения. Построены функции управления и соответствующие фазовые траектории движения. В качестве приложения предложенного подхода для конкретных численных значений построены явные выражения функции программного управления и программного движения.</abstract>
+            <title>Об одной задаче управления беспилотным летательным аппаратом самолетного типа с заданными промежуточными значениями разных частей координат</title>
+            <keywords>
+                <word>беспилотный летательный аппарат</word>
+                <word>промежуточные условия</word>
+                <word>управление полетом</word>
+                <word>фазовые траектории</word>
+            </keywords>
+            <references>
+                <reference>Лебедев, А. А., Чернобровкин Л. С. Динамика полета беспилотных летательных аппаратов. M. : Машиностроение, 1973. 615 с</reference>
+                <reference>Дмитриевский А. А., Лысенко Л. Н. Прикладные задачи теории оптимального управления движением беспилотных летательных аппаратов. M. : Машиностроение, 1978. 328 с</reference>
+                <reference>Телухин С. В., Матвеев В. В. Беспилотный летательный аппарат как объект управления. Мехатроника, автоматизация, управление. 2008. № 10. С. 7-10</reference>
+                <reference>Богословский С. В., Дорофеев А. Д. Динамика полёта летательных аппаратов. СПб. : СПБГУАП, 2002. С. 34—41</reference>
+                <reference>Колесников А. А. Новые нелинейные методы управления полетом. М. : Физматлит, 2013. с</reference>
+                <reference>Ащепков Л. Т. Оптимальное управление системой с промежуточными условиями. ПММ, 1981, т. 45, вып. 2, с. 215-222</reference>
+                <reference>Дыхта В. А., Самсонюк О. Н. Принцип максимума для гладких задач оптимального импульсного управления с многоточечными фазоограничениями. Журнал вычислительной математики и математической физики. 2009, т. 49, № 6, с. 981-997</reference>
+                <reference>Барсегян В. Р. Управление линейными динамическими системами с ограничениями на значения частей координат фазового вектора в промежуточные моменты времени. Докл. НАН Армении. 2010. Т. 110. № 3. С. 251-260</reference>
+                <reference>Barseghyan V. R. and Barseghyan T. V. On an Approach to the Problems of Control of Dynamic System with Nonseparated Multipoint Intermediate Conditions. Automation and Remote Control, 2015, Vol. 76, № 4, pp. 549-559</reference>
+                <reference>Барсегян В. Р. Управление составных динамических систем и систем с многоточечными промежуточными условиями. М. : Наука, 2016. 230 с</reference>
+                <reference>Barseghyan, V. and Solodusha, S. On One Problem in Optimal Boundary Control for String Vibrations with a Given Velocity of Points at an Intermediate Moment of Time. Conference Paper. Publisher: IEEE. 2021 International Russian Automation Conference (RusAutoCon), pp. 343-349, 2021. Doi: 10. 1109/RusAutoCon52004. 2021. 9537514</reference>
+                <reference>Красовский Н. Н. Теория управления движением. М. : Наука, 1968. 476 с</reference>
+                <reference>Зубов В. И. Лекции по теории управления. М. : Наука, 1975, 496 с</reference>
+            </references>
+        </articleInfo>
+        <authors>
+            <author ref="n_2023_7_barseghyan" sort-key="1" />
+            <author ref="n_2023_7_matevosyan" sort-key="2" />
         </authors>
     </article>
 
