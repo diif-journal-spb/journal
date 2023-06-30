@@ -1,0 +1,2923 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 2, 2023
+Electronic Journal,
+reg. N Φ C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Dynamic economic models
+Dynamics of technological development: innovation, imitation,
+depreciation
+Kirillov A.N., Sazonov A.M.
+Institute of Applied Mathematical Research, Karelian Research Centre,
+Russian Academy of Sciences
+e-mail: sazon-tb@mail.ru
+Abstract. The nonlinear dynamical system, describing the dynamics of sector
+capital distribution over two levels of technological development, low and high,
+proposed. The dynamics is determined by the interaction of innovation and
+imitation process with the process of depreciation taking into account. The
+qualitative behavior of the system trajectories depending on the relationship
+of parameters determining the rates of innovation, imitation and depreciation
+processes is studied. The invariant set which all trajectories enter in a finite
+time is found. In the case of nonzero rate of innovation process, the uniqueness
+of equilibrium is proved. On the basis of proposed constructive geometrical
+method the sufficient conditions of its global stability are obtained. In order
+to study the behavior of isoclines the special curve parametrization, connected
+with the invariant set geometry, is proposed. It is shown that in the absence
+of innovation process the existence of two equilibria, stable and unstable, is
+possible. Inaddition, thetransitiontoahightechnologicallevel, corresponding
+toastableequilibrium,maynotoccurevenundersufficientlysmalldepreciation
+process rate. The bifurcation value of the imitation rate parameter is found.
+Keywords: nonlinear dynamical system, global stability, Schumpeterian dy-
+namics, bifurcation.Differential Equations and Control Processes, N. 2, 2023
+1 Introduction
+In [1],[2] K.Iwai proposed a model describing the evolution of economical sys-
+temthroughinnovationandimitation. Itwasoneofthefirstattemptstocreate
+the mathematical interpretation of well-known Schumpeterian concept of en-
+dogenous economic growth, caused by interacting processes of innovation and
+imitation [3].
+It is worth to note that Schumpeterian concept of economic development
+through innovation and imitation attracts considerable attention because there
+exists a large number of empirical confirmations of its main principles. Subse-
+quently,differentapproachestomathematicalmodelingofofitsmainprinciples
+are proposed [4, 5, 6, 7, 8, 9].
+V.M.PolterovichandG.M.Henkin,invokingtheIwai’smodel,proposedthe
+economic growth model [10, 11], based on Burgers type difference-differential
+equations used to study the fluid processes [12].
+Extending these results (see also [13]), in [14, 15] the authors introduced
+the notion of economic niche volume in order to take into account the bound-
+edness of economic growth, and under this condition, the dynamics of capital
+distribution over efficiency levels was studied. In addition, in [16] was consid-
+ered the influence of depreciation process on the capital distribution dynamics
+taking into account the innovation process only. It is worth to note that the
+result presented in [16] is the partial solution of the problem of the influence of
+depreciation on Schumpeterian dynamics, which was formulated in [10]. In this
+paper, the study of the dynamics of capital distribution over efficiency levels in
+presence of depreciation is presented. Unlike [16], in the proposed model not
+only the innovation process is taken into account but the imitation process as
+well. The latter circumstance considerably complicates the study of dynamics
+of corresponding two-dimensional dynamic system with sufficiently large num-
+ber of parameters, namely six. The main difficulty is due to the right hand
+sides which may be reduced to the polynomials of third degree, depending in
+two variables. It is worth to note that the qualitative theory of the differential
+equations used in this paper is widely applied for the mathematical modeling
+of the economic processes (for example, see [17, 18, 19, 20]).
+The paper is organized as follows. Section 2 describes the model of the
+capital distribution dynamics with innovation, imitation and depreciation pro-
+cesses.
+InSection2theconstructionofinvariantsetΩisgiven,and,itisprovedthat
+https://doi.org/10.21638/11701/spbu35.2023.201 Electronic Journal: http://diffjournal.spbu.ru/ 2Differential Equations and Control Processes, N. 2, 2023
+all positive half-trajectories enter and do not leave Ω. Besides, the existence of
+an unique equilibrium C
+∗ of the presented two-dimensional dynamic system is
+proved.
+Sections 3, 4 provide the analysis of isoclines. The sufficient condition on
+economic niche volume V, under which the arcs of isoclines, belonging to Ω,
+presentthegraphsofmonotonicallydecreasingfunctions,isobtained. Themain
+tool to prove these result is the special parametrization of the arcs of isoclines,
+which is due to the geometric structure of Ω.
+In Section 5 the main result is proved: the equilibrium of the system is
+globally stable for sufficiently large economic niche volume V. The proof is
+constructive and is based on the parameterized set of nested polygons P(d)
+shrinking to the equilibrium C
+∗ = (C
+∗ 1
+,C
+∗ 2
+) as d→d
+∗ , where d
+∗ =C
+∗ 1
++C
+∗ 2
+− V.
+In addition, all trajectories enter and do not leave each polygon.
+Section 6 deals with the analysis of capital distribution dynamics without
+an innovation process, i.e. only an imitation is taken into account. It is shown
+thatinthiscasethereappearsthesecondequilibrium(V,0),whichisnotstable,
+if along with (V,0) there exists the first equilibrium C
+∗ . It is shown that the
+technological development, i.e. the transition to a higher technological level,
+via an imitation only, without an innovation, may be impossible.
+2 The model
+LetC
+i
+=C
+i
+(t)betheintegratedcapitalofthesectorfirmsatthe i-thtechnolog-
+ical level (one firm can have the capital at different levels) at a time t, i = 1,2.
+Consider the following system of ordinary differential equations, describing the
+dynamics of capital distribution over the technological, low (i = 1) and high
+(i = 2), levels
+˙
+C
+1
+=
+1
+λ 1
+(1− φ(C
+1
+,C
+2
+))C
+1
+(V − C
+1
+− C
+2
+)+µC
+2
+, (1)
+˙
+C
+2
+=
+1
+λ 2
+C
+2
+(V − C
+1
+− C
+2
+)− µC
+2
++φ(C
+1
+,C
+2
+)C
+1
+, (2)
+where
+φ(C
+1
+,C
+2
+) =α +β C
+2
+C
+1
++C
+2
+. (3)
+Here,φ(C
+1
+,C
+2
+)istheshareofcapitalofthefirmsatthefirst,low,levelintended
+tothedevelopingoftheproductionatthesecond,high,level. Thestructureofφ
+https://doi.org/10.21638/11701/spbu35.2023.201 Electronic Journal: http://diffjournal.spbu.ru/ 3Differential Equations and Control Processes, N. 2, 2023
+isasfollows: α isthecapitalshareduetoinnovationfirms’sactivityand β C
+2
+C
+1
++C
+2
+is the share due to imitation activity. The latter, as one can see, depends on
+theshareofthefirms’scapitalengaginginthedevelopmentofthesecond, high,
+technological level. The term µC
+2
+describes the depreciation process. 0 < V
+is the economic niche volume. The presence of the multiplier V − C
+1
+− C
+2
+in the right-hand sides permits to take into account the boundedness of the
+economicgrowth[14],[15]. Further,0 <λ i
+istheunitprimecostatthei-thlevel
+(i.e. the unit goods production cost per unit time), i = 1,2. All parameters,
+α, β, µ > 0, V,λ i
+, i = 1,2, are constants. Denote C = (C
+1
+,C
+2
+)∈R
+2
++
+\{O},
+where{O} = (0,0).
+In [16] the system (1)-(2) without imitation process was considered, i.e. it
+was supposed β = 0. The global stability of a unique equilibrium inR
+2
++
+\{O}
+was proved. Here we suppose that
+β > 0, α ⩾ 0, (4)
+whichmeansthatthemodelinvolvestheimitationprocess,whiletheinnovation
+process will be absent in some cases considered below. Besides, suppose that
+λ 1
+>λ 2
+, α +β < 1, µ> 0. (5)
+Thefirstconditionmeansthattheunitprimecostatthelowtechnologicallevel
+is greater than at the high one.
+The inequality α +β < 1 implies that
+φ(C
+1
+,C
+2
+)∈ (0,1). (6)
+Remark 1 It easy to show that R
+2
++
+\{O} is invariant set. Thus, further, the
+phase space is this invariant setR
+2
++
+\{O}.
+3 Invariant sets, equilibria (α> 0, β > 0)
+Denote by v· w the scalar (inner) product of vectors v = (v
+1
+,v
+2
+) and w =
+(w
+1
+,w
+2
+). Then v· w =v
+1
+w
+1
++v
+2
+w
+2
+.
+Definition 1 Let γ (t,x
+0
+),γ (0,x
+0
+) =x
+0
+be the solution of the differential equa-
+tion ˙ x = F(x). The positive half-trajectory corresponding to γ (t,x
+0
+) is the set
+{γ (t,x
+0
+),t⩾ 0}.
+https://doi.org/10.21638/11701/spbu35.2023.201 Electronic Journal: http://diffjournal.spbu.ru/ 4Differential Equations and Control Processes, N. 2, 2023
+Denote
+d
+1
+=
+λ 1
+(α +β )
+1− α − β .
+Lemma 1 All positive half-trajectories of the system (1)-(2), with initial points
+inR
+2
++
+\{O}, enter and do not leave the set Ω = {(C
+1
+,C
+2
+)∈R
+2
++
+\{O} :C
+1
++C
+2
+∈
+[V,V +d
+1
+]}.
+Proof
+Let n = (1,1) be the normal vector of the straight line C
+1
++C
+2
+= V +d,
+wheredisanynonnegativeconstant,f = (f
+1
+,f
+2
+),wheref
+1
+,f
+2
+aretherighthand
+sides of (1), (2), respectively. Then
+f· n = (a
+1
+C
+1
++a
+2
+C
+2
+)(V − C
+1
+− C
+2
+)+φ(C
+1
+,C
+2
+)C
+1
+,
+where a
+1
+=
+1− φ(C
+1
+,C
+2
+)
+λ 1
+, a
+2
+=
+1
+λ 2
+. Hence,
+f· n|
+C
+1
++C
+2
+=V
+=φ(C
+1
+,V − C
+1
+)C
+1
+> 0, (7)
+where the left-hand side is the value of inner product on the straight line. Next
+f·n|
+C
+1
++C
+2
+=V+d
+=− d
+λ 1
+ 
+1− φ(C
+1
+,V+d− C
+1
+)
+ 
+C
+1
++a
+2
+(V+d− C
+1
+)+φ(C
+1
+,V+d− C
+1
+)C
+1
+,
+and after obvious transformations we obtain for d⩾d
+1
+f· n|
+C
+1
++C
+2
+=V+d
+=
+ 
+− d
+λ 1
+(1− α − β )+α +β  
+C
+1
+− (d+1)
+βC
+2
+1
+V +d
+− da
+2
+C
+2
+< 0. (8)
+The conclusion of lemma follows from (7), (8). □ Remark 2 The set Ω is a quadrangle, namely, a trapezoid.
+Lemma 2 Assume α > 0. The system (1)-(2) has the unique equilibrium C
+∗ ∈
+R
+2
++
+\{O}.
+Proof
+To determine an equilibrium consider the system
+f
+i
+(C
+1
+,C
+2
+) = 0, i = 1,2. (9)
+If C
+1
+= 0 then (1) implies that C
+2
+= 0 but (0,0) does not belong toR
+2
++
+\{O}.
+Thus, suppose C
+1
+̸= 0. Dividing the equations (9) by C
+1
+and denoting x =
+C
+2
+C
+1
+, y =V − C
+1
+− C
+2
+, we obtain the system of equations
+1
+λ 1
+ 
+1− α − β x
+1+x
+ 
+y+µx = 0, (10)
+https://doi.org/10.21638/11701/spbu35.2023.201 Electronic Journal: http://diffjournal.spbu.ru/ 5Differential Equations and Control Processes, N. 2, 2023
+1
+λ 2
+xy− µx +α +β x
+1+x
+= 0. (11)
+From (10), (11) we obtain the functions g
+1
+(x), g
+2
+(x)
+y =− λ 1
+µx
+1− α − β x
+1+x
+=g
+1
+(x), y =λ 2
+(µ − α x
+− β 1+x
+) =g
+2
+(x).
+Let us prove that the curves y =g
+1
+(x) and y =g
+2
+(x) have the unique common
+point if x> 0. The following properties of g
+1
+,g
+2
+are valid for x> 0
+g
+1
+(x)< 0, g
+1
+(0) = 0, g
+′
+1
+(x) =− λ 1
+µ (1− α − β x
+2
+(1+x)
+2
+)(1− α − βx
+1+x
+)
+− 2
+< 0;
+lim
+x→+0
+g
+2
+(x) =−∞ , lim
+x→+∞
+g
+2
+(x) =µλ 2
+> 0, g
+′
+2
+(x) =λ 2
+(
+α x
+2
++
+β (1+x)
+2
+)> 0.
+Denoting G(x) =g
+1
+(x)− g
+2
+(x) we have for x> 0 : G
+′
+(x)< 0, lim
+x→+0
+G(x) =
++∞, lim
+x→+∞
+G(x) = −∞ , that implies the existence of the unique point
+x
+∗ > 0 such that G(x
+∗ ) = 0, i.e. the unique point (x
+∗ ,y
+∗ ) of intersection of the
+curves y = g
+1
+(x), y = g
+2
+(x), for x > 0. Therefore, the system (1)-(2) has a
+unique equilibrium C
+∗ ∈R
+2
++
+\{0,0}, where C
+∗ 1
+=
+V− y
+∗ 1+x
+∗ , C
+∗ 2
+=C
+∗ 1
+x
+∗ . □ Remark 3 It follows from Lemma 1 that C
+∗ ∈ Ω .
+4 Isoclines (α> 0, β > 0)
+Inthissection,weprovethatforsufficientlylargevalueof V thearcsofisoclines,
+belongingtotheinvariantsetΩ, arethegraphsofthemonotonicallydecreasing
+functions.
+It is worth to note that after multiplying the equations (9) by C
+1
++C
+2
+̸=
+0 we obtain that isoclines are the cubic curves, which equations contain six
+parameters: α, β, µ, λ 1
+, λ 2
+, V. The latter fact produces supplementary
+difficulties while proving the global stability.
+Consider the isocline f
+1
+(C
+1
+,C
+2
+) = 0
+1
+λ 1
+(1− α − β C
+2
+C
+1
++C
+2
+)C
+1
+(V − C
+1
+− C
+2
+)+µC
+2
+= 0.
+This isocline has no common points with C
+2
+-coordinate axis if C
+2
+> 0, and
+(V,0) is its unique point with C
+1
+-coordinate axis. Next, prove some properties
+of the isocline f
+1
+(C
+1
+,C
+2
+) = 0.
+https://doi.org/10.21638/11701/spbu35.2023.201 Electronic Journal: http://diffjournal.spbu.ru/ 6Differential Equations and Control Processes, N. 2, 2023
+Lemma 3 The isocline f
+1
+(C
+1
+,C
+2
+) = 0 has one and only one common point
+C(d) = (C
+1
+(d),C
+2
+(d)) with the straight line C
+1
++C
+2
+= V +d, where d⩾ 0. If
+d∈ [0,d
+1
+] then C(d)∈ Ω .
+Proof
+Consider the equation f
+1
+(C
+1
+,V +d− C
+1
+) = 0, or
+1
+λ 1
+ 
+1− α − β (1− C
+1
+V +d
+)C
+1
+(− d)
+ 
++µ (V +d− C
+1
+) = 0.
+Dividing it by V +d and denoting z =
+C
+1
+V+d
+we obtain the equation
+βdz
+2
++(λ 1
+µ +d(1− α − β ))z− λ 1
+µ = 0
+with the unique positive solution z(d)> 0, if d⩾ 0, and, therefore, the isocline
+f
+1
+(C
+1
+,C
+2
+) = 0 has one and only one common point C(d) = (C
+1
+(d),C
+2
+(d)) with
+the straight line C
+1
++C
+2
+=V +d, if d⩾ 0, such that C
+1
+(d) =z(d)(V +d)> 0.
+It is clear from the above equation that z(0) = 1. Next, if d > 0, then
+z(d)< 1, or
+z(d) =
+1
+2β  
+−  
+1− α − β +
+λ 1
+µ d
+ 
++
+r
+ 
+1− α − β +
+λ 1
+µ d
+ 
+2
++
+4λ 1
+µβ d
+ 
+< 1 (12)
+Really, it is easy to show, that this inequality is equivalent to the obvious
+one βd + d(1− α − β ) > 0. Therefore, C
+1
+(d) = z(d)(V + d) < V + d and
+0<C
+2
+(d) =V +d− C
+1
+(d) = (V +d)(1− z(d))<V +d. If d = 0, then C
+1
+=V,
+and C(0) = (V,0)∈ Ω. Thus, C(d)∈ Ω, if d∈ [0,d
+1
+]. □ Denote by M and R the common points of the isocline f
+1
+= 0 and the
+straight line C
+1
++C
+2
+=V +d
+1
+and the C
+1
+-coordinate axis, respectively, i.e.
+M ={C :f
+1
+(C) = 0}∩{C :C
+1
++C
+2
+=V +d
+1
+}, R = (V,0).
+We shall write M = (C
+1
+(M),C
+2
+(M)) = (C
+1
+(d
+1
+),C
+2
+(d
+1
+)) =C(d
+1
+).
+LetRM bethearkoftheisoclinef
+1
+= 0, withendpointsR andM. Lemma
+3 implies the existence of the unique arc of isocline f
+1
+= 0 belonging to Ω.
+Corollary 1 RM ∈ Ω .
+Lemma 4 The isocline f
+1
+(C
+1
+,C
+2
+) = 0 and the straight line C
+2
+= q, where
+q∈ [0,V +d
+1
+], have no more than one common point in Ω .
+https://doi.org/10.21638/11701/spbu35.2023.201 Electronic Journal: http://diffjournal.spbu.ru/ 7Differential Equations and Control Processes, N. 2, 2023
+Proof
+Consider the equation f
+1
+(C
+1
+,q) = 0, or
+s
+1
+(C
+1
+) =a
+1
+ 
+1− α − βq
+C
+1
++q
+ 
+=− µq
+C
+1
+(V − C
+1
+− q)
+=s
+2
+(C
+1
+).
+Using standard methods of analysis we can easily prove that the graphs of
+functions s
+1
+, s
+2
+have an unique common point if q > 0. This point may belong
+or not to Ω if q∈ [0,V +d
+1
+] which implies the conclusion of Lemma. □ Lemma 5 If d> 0 then
+(1) C
+′
+2
+(d)> 0;
+(2) there exists
+b
+d> 0 such that for d∈ (0,
+b
+d) :
+C
+′
+1
+(d)> 0 if V <
+λ 1
+µ 1− α , C
+′
+1
+(d)< 0 if V >
+λ 1
+µ 1− α .
+Proof
+From the proof of Lemma 3: C
+1
+(d) = (V +d)z(d), C
+′
+1
+(d) = z(d)+(V +
+d)z
+′
+(d). Differentiating z(d), given by (12), we obtain
+z
+′
+(d) =
+1
+2β  
+− λ 1
+µ d
+2
+  
+− 1+
+λ 1
+µ d
++(1− α − β )+2β √
+D
+ 
+,
+where D = (a+
+b
+d
+)
+2
++
+4βb
+d
+, a = 1− α − β , b =λ 1
+µ . It easy to show that
+z
+′
+(d) =
+λ 1
+µ d
+2
+√
+D
+ 
+z(d)− 1
+ 
+,
+and, therefore, taking into account (12) we have: z
+′
+(d)< 0. Further,
+C
+′
+1
+(d) =z(d)+
+b(z(d)− 1)
+d
+2
+√
+D
+(V +d),
+C
+′
+2
+(d) = 1− C
+′
+1
+(d) = (1− z(d))
+ 
+1+
+b
+d
+2
+√
+D
+ 
+> 0.
+Let us find lim
+d→+0
+C
+′
+1
+(d). As a result of simple transformations of z
+′
+(d) we
+have
+2βz
+′
+(d)(V +d) =− 4e(ab+e)
+b
+· 1
+q
+(ad+b)
+2
++4ed· (ad+b+
+2ed
+b
++
+q
+(ad+b)
+2
++4ed)
+· (V +d),
+https://doi.org/10.21638/11701/spbu35.2023.201 Electronic Journal: http://diffjournal.spbu.ru/ 8Differential Equations and Control Processes, N. 2, 2023
+where a = 1− α − β , b =λ 1
+µ , e =λ 1
+µβ . Hence,
+lim
+d→+0
+z
+′
+(d)(V +d) =− e(ab+e)V
+βb
+3
+.
+Further, from (12)
+2βz (d) =− (a+
+b
+d
+)+
+√
+D =
+D− (a+
+b
+d
+)
+2
+D+(a+
+b
+d
+)
+2
+we obtain
+2β lim
+d→+0
+z(d) = lim
+d→+0
+4e
+d
+√
+D+ad+b
+=
+2e
+b
+.
+Taking into account that C
+′
+1
+(d) =z(d)+z
+′
+(d)(V +d), we have
+lim
+d→+0
+C
+′
+1
+(d) =
+e
+βb
+ 
+1− V(ab+e)
+b
+2
+ 
+.
+Thus, C
+′
+1
+(d) > 0 if V <
+b
+2
+ab+e
+, C
+′
+1
+(d) < 0 if V >
+b
+2
+ab+e
+. Taking into account the
+continuity of C
+′
+1
+(d) and that
+b
+2
+ab+e
+=
+λ 1
+µ 1− α , we obtain the conclusion of Lemma.
+□ Lemma 6 Assume V >
+λ 1
+µ (1− α )
+(1− α − β )
+2
+. Then the equation f
+1
+(C
+1
+,C
+2
+) = 0 deter-
+mines the unique monotonically decreasing function C
+2
+=h(C
+1
+) on the segment
+[C
+1
+(M),V].
+Proof
+Let us show, that each straight line C
+1
+=p, wherep∈ (0,V +d
+1
+], intersects
+the isocline, or the arc RM, at a unique point, if V >
+λ 1
+µ (1− α )
+(1− α − β )
+2
+. Substituting
+C
+1
+=p in f
+1
+(C
+1
+,C
+2
+) = 0 we obtain
+1
+λ 1
+ 
+1− α − β C
+2
+p+C
+2
+ 
+p(V − p− C
+2
+)+µC
+2
+= 0,
+and denoting r = p+C
+2
+it is easy to obtain the following equation from the
+above one
+ 
+µλ 1
+p
++α +β − 1
+ 
+r
+2
++(V(1− α − β )− βp − µλ 1
+)r+βpV = 0, (13)
+where r∈ [V,V +d
+1
+]. Let us study the conditions under which (13) has 0, 1 or
+2 positive solutions.
+https://doi.org/10.21638/11701/spbu35.2023.201 Electronic Journal: http://diffjournal.spbu.ru/ 9Differential Equations and Control Processes, N. 2, 2023
+Consider the case
+µλ 1
+p
++α +β − 1> 0, or
+p<
+λ 1
+µ 1− α − β . (14)
+Suppose, the discriminant of (13) is nonnegative. Then this equation has two
+solutions, both positive or negative. Let us show, that (13) cannot have two
+positive solutions. Two positive solutions exist if and only if V(1− α − β )− βp − µλ 1
+< 0, or p >
+1
+β (V(1− α − β )− λ 1
+µ ). Taking into account (14), we
+obtain
+1
+β (V(1− α − β )− λ 1
+µ )<p<
+λ 1
+µ 1− α − β ,
+which implies
+1
+β (V(1− α − β )− λ 1
+µ )<
+λ 1
+µ 1− α − β or V <
+λ 1
+µ (1− α )
+(1− α − β )
+2
+that contradicts
+to the assumption of Lemma.
+Consider the case
+µλ 1
+p
++α +β − 1 = 0, or p =
+λ 1
+µ 1− α − β . Then from (13)
+r =− βpV
+V(1− α − β )− βp − λ 1
+µ ,
+and, as r > 0, it is necessary that V(1− α − β )− βp − λ 1
+µ< 0, or
+λ 1
+µ 1− α − β =p>
+1
+β (V(1− α − β )− λ 1
+µ ), which contradicts to the assumption of Lemma as well.
+Consider the case
+µλ 1
+p
++α +β − 1 < 0, or p >
+λ 1
+µ 1− α − β . Then, the inequality
+βpV > 0 implies that (13) has one positive solution.
+Further, taking into account Corollary 1, we obtain, that under condition
+V >
+λ 1
+µ (1− α )
+(1− α − β )
+2
+, the isoclinef
+1
+= 0 and the straight line C
+1
+=p have one common
+point. Thus, the equation f
+1
+= 0 determines the unique function C
+2
+= h(C
+1
+)
+with the graph RM. The monotonicity of h follows from Lemma 4.
+Taking into account that
+V >
+λ 1
+µ (1− α )
+(1− α − β )
+2
+=
+λ 1
+µ 1− α − β · (1+
+β 1− α − β )>
+λ 1
+µ 1− α − β >
+µλ 1
+1− α ,
+we obtain from Lemma 5 that C
+′
+1
+(d)< 0 for sufficiently small d> 0. Therefore,
+C
+′
+2
+(d) = 1− C
+′
+1
+(d)> 0 and for sufficiently small d> 0 we have
+h
+′
+(C
+1
+) =
+C
+′
+2
+(d)
+C
+′
+1
+(d)
+< 0.
+The monotonicity of h permits to assert the validity of the latter inequality for
+d∈ [0,d
+1
+]. □ Next, consider the isocline f
+2
+(C
+1
+,C
+2
+) = 0.
+https://doi.org/10.21638/11701/spbu35.2023.201 Electronic Journal: http://diffjournal.spbu.ru/ 10Differential Equations and Control Processes, N. 2, 2023
+Lemma 7 The isocline f
+2
+(C
+1
+,C
+2
+) = 0 has one and only one common point
+b
+C(d) = (
+b
+C
+1
+(d),
+b
+C
+2
+(d)) with the straight line C
+1
++C
+2
+= V +d, where d⩾ 0. If
+d∈ [0,d
+1
+] then
+b
+C(d)∈ Ω .
+Proof
+Consider the equation f
+2
+(V +d− C
+2
+,C
+2
+) = 0:
+− da
+2
+C
+2
+− µC
+2
++(α +β C
+2
+V +d
+)(V +d− C
+2
+) = 0,
+where a
+2
+=
+1
+λ 2
+. Dividing the latter equation by V +d and substitutingb z =
+C
+2
+V+d
+we obtain the equation
+β b z
+2
++(a
+2
+d+µ +α − β )b z− α = 0
+with one positive solutionb z(d):
+b z(d) =
+1
+2β  
+− (a
+2
+d+µ +α − β )+
+q
+b
+D(d)
+ 
+< 1, (15)
+where
+b
+D(d) = (a
+2
+d + µ + α − β )
+2
++ 4αβ . The inequality b z(d) < 1 is valid
+because it is equivalent to the obvious one 0 <a
+2
+d+µ . Therefore, 0<
+b
+C
+2
+(d) =
+b z(d)(V +d) < V +d, and
+b
+C
+1
+(d) = V +d− b
+C
+2
+(d) = (V +d)(1− b z(d)), i.e.
+b
+C
+1
+(d)∈ (0,V +d). Thus,
+b
+C(d) = (
+b
+C
+1
+(d),
+b
+C
+2
+(d))∈ Ω if d∈ [0,d
+1
+]. □ Denote by K and N the common points of the isocline f
+2
+= 0 and the
+straight lines C
+1
++C
+2
+=V and C
+1
++C
+2
+=V +d
+1
+, respectively
+K ={C :f
+2
+(C) = 0}∩{C :C
+1
++C
+2
+=V}, N ={C :f
+2
+(C) = 0}∩{C :C
+1
++C
+2
+=V+d
+1
+}.
+We shall writeK =
+b
+C(0), N =
+b
+C(d
+1
+).
+Let KN be the arc of the isocline f
+2
+= 0, with the endpoints K and N.
+Corollary 2 KN ∈ Ω .
+Lemma 8 C
+′
+1
+(d)> 0.
+Proof
+Differentiating (15), we obtain
+z
+′
+(d) =
+1
+2β  
+− a
+2
++
+(a
+2
+d+µ +α − β )a
+2
+p
+D(d)
+ 
+=− a
+2
+b z(d)
+p
+b
+D
+.
+From
+b
+C
+2
+(d) = (V +d)b z(d) we obtain
+b
+C
+′
+2
+(d) =b z(d)+b z
+′
+(d)(V +d) =b z(d)
+ 
+1− a
+2
+(V+d)
+√
+b
+D
+ 
+. Hence
+b
+C
+′
+1
+(d) = 1− b
+C
+′
+2
+(d) = (1− b z(d))+
+a
+2
+(V+d)
+√
+b
+D
+> 0. □ https://doi.org/10.21638/11701/spbu35.2023.201 Electronic Journal: http://diffjournal.spbu.ru/ 11Differential Equations and Control Processes, N. 2, 2023
+Corollary 3 C
+1
+(K)<C
+1
+(N).
+Lemma 9 Assume V >λ 2
+b z(0)
+q
+b
+D(0). Then
+b
+C
+′
+2
+(d)< 0.
+Proof
+Using the expression for
+b
+C
+′
+1
+(d) from Lemma 8, we obtain
+b
+C
+′
+2
+(d) = 1− b
+C
+′
+1
+(d) =b z(d)− a
+2
+(V +d)
+q
+b
+D(d)
+.
+Therefore,theinequality
+b
+C
+′
+2
+(d)< 0isequivalenttoV >
+b z(d)
+√
+b
+D(d)
+a
+2
+− d =G(d)− d,
+where G(d) =
+b z(d)
+√
+b
+D(d)
+a
+2
+. If we show that G
+′
+(d) < 0, then G(0)− 0 > G(d)− d
+for d > 0, and we will obtain the conclusion of Lemma. Using the expression
+forb z from (15), we obtain
+G(d) =
+λ 2
+2β  
+− (a
+2
+d+µ +α − β )+
+q
+b
+D(d)
+ 
+q
+b
+D(d).
+Denote x =x(d) =a
+2
+d+µ +α − β and consider the following function H(x):
+H(x) =
+λ 2
+2β  
+− x+
+p
+x
+2
++4αβ  
+p
+x
+2
++4αβ.
+After simple transformations we get: H
+′
+(x) =
+− 3x
+2
+− 4αβ +2x
+√
+x
+2
++4αβ √
+x
+2
++4αβ .
+Let us show that the numerator of the above fraction is negative, or
+2x
+p
+x
+2
++4αβ < 3x
+2
++4αβ . If x< 0, this inequality is obvious. If x≥ 0, then,
+after squaring, it is equivalent to the obvious one 0 < 5x
+4
++8x
+2
+αβ +16(αβ )
+2
+.
+Hence, H
+′
+(x)< 0. Noting that H(x(d)) =G(d), we obtain G
+′
+(d) =H
+′
+(x(d)) =
+H
+′
+(x)x
+′
+(d) =H
+′
+(x)a
+2
+< 0. □ Lemma 10 If V > λ 2
+b z(0)
+q
+b
+D(0), then the equation f
+2
+(C
+1
+,C
+2
+) = 0 deter-
+mines the unique monotonically decreasing function C
+2
+= g(C
+1
+) for C
+1
+∈
+[C
+1
+(K),C
+1
+(N)].
+Proof
+The proof follows from Lemmas 8, 9 and the following equality g
+′
+(C
+1
+) =
+b
+C
+′
+2
+(d)
+b
+C
+′
+1
+(d)
+< 0. □ Denote
+V
+max
+= max
+ 
+λ 1
+µ (1− α )
+(1− α − β )
+2
+, λ 2
+b z(0)
+q
+b
+D(0)
+ 
+.
+https://doi.org/10.21638/11701/spbu35.2023.201 Electronic Journal: http://diffjournal.spbu.ru/ 12Differential Equations and Control Processes, N. 2, 2023
+Corollary 4 If V >V
+max
+, then C
+1
+(M)<C
+1
+(N).
+Proof
+The proof follows from Lemmas 2, 6, 10. □ 5 Global stability
+In this section we consider the system (1)-(2), where α > 0, that is a pro-
+cess of technological development involves an innovation process (along with
+imitation).
+DenotebyC(t,C
+0
+)asolutionofthesystem(1)-(2)suchthatC(0,C
+0
+) =C
+0
+.
+Definition 2 The equilibrium C
+∗ of the system (1)-(2) is called globally stable
+if lim
+t→+∞
+C(t,C
+0
+) =C
+∗ for each C
+0
+∈R
+2
++
+\{O}.
+Denote
+d
+∗ =C
+∗ 1
++C
+∗ 2
+− V,
+i.e. thevalueoftheparameterd =d
+∗ correspondstothestraightlineC
+1
++C
+2
+=
+C
+∗ 1
++C
+∗ 2
+, or C
+1
++C
+2
+=V +d
+∗ , containing the equilibrium C
+∗ .
+The main result is the following.
+Theorem 1 (about global stability) IfV >V
+max
+thenC
+∗ isagloballystable
+equilibrium of (1)-(2).
+Remark 4 The establishment of global stability for nonlinear dynamical sys-
+tems is rather difficult procedure. The method of Lyapunov functions does not
+give any constructive receipt for its application. Here, we present a geometrical
+approach to prove the global stability based on the construction of parameterized
+nested polygons, shrinking toC
+∗ , and such that each positive half-trajectory with
+initial point in R
+2
++
+\{O} enters each polygon. The difficulties of implement-
+ing the proposed method are due to the impossibility of obtaining the explicit
+expression for C
+∗ and sufficiently large number of parameters.
+Proof
+The method of proof is based on the results of Section 4 (see Lemmas 3,
+6 7, 10) which implies that the arcs of isoclines, RM, KN, belonging to Ω,
+have no more than one common point with the straight lines C
+1
+= p, C
+2
+=
+https://doi.org/10.21638/11701/spbu35.2023.201 Electronic Journal: http://diffjournal.spbu.ru/ 13Differential Equations and Control Processes, N. 2, 2023
+q, C
+1
++C
+2
+=V +d, where p,q∈ [0,V +d
+1
+], d∈ [0,d
+1
+]. Taking the latter into
+view, we construct the continuous parameterized set of convex polygons P(d)
+which sides are parallel to the straight lines C
+1
+=p, C
+2
+=q, C
+1
++C
+2
+=V +d.
+In addition, the polygons P(d) compose the nested set, i.e. P(
+e
+d
+1
+)⊃ P(
+e
+d
+2
+),
+if
+e
+d
+1
+<
+e
+d
+2
+, and C
+∗ ∈ P(d) for any d ∈ [0,d
+∗ ). As a result, P(d) → C
+∗ as
+d→d
+∗ -0, i.e. P(d) shrinks to C
+∗ , which means that all vertexes of P(d) tends
+to C
+∗ . Then, we will show that all trajectories enter each polygon P(d) and do
+not leave it, which means the global stability of C
+∗ .
+The partition of Ω. Denote by R,R
+′
+,E,E
+′
+the vertexes of the quadrangle
+Ω = RR
+′
+EE
+′
+R = (V,0), R
+′
+= (V +d
+1
+,0), E = (0,V), E
+′
+= (0,V +d
+1
+).
+Let l
+0
+l
+1
+be the following straight lines
+l
+0
+={C :C
+1
++C
+2
+=V}, l
+1
+={C :C
+1
++C
+2
+=V +d
+1
+}.
+The invariant set Ω is divided by the arcs RM, KN of the isoclines into four
+simply connected subsets Ω i
+, Ω = ∪
+4
+i=1
+Ω i
+. The boundaries ∂Ω i
+of Ω i
+are as
+follows
+∂Ω 1
+=KR∪RC
+∗ ∪C
+∗ K; ∂Ω 3
+=C
+∗ N∪NM∪MC
+∗ ;
+∂Ω 2
+=VR
+′
+∪R
+′
+N∪NC
+∗ ∪C
+∗ R; ∂Ω 4
+=KC
+∗ ∪C
+∗ M∪ME
+′
+∪E
+′
+E∪EK,
+where EK, KR are the segments of the straight line l
+0
+, R
+′
+N, NM, ME
+′
+are
+the segments of the straight line l
+1
+, C
+∗ R, MC
+∗ are the arcs of the isocline
+f
+1
+= 0, KC
+∗ ,NC
+∗ are the arcs of the isocline f
+2
+= 0. Here, we consider the
+non-oriented arcs: KC
+∗ =C
+∗ K, etc.
+Note, that ∂Ω i
+∩∂Ω j
+is the boundary component of Ω i
+and Ω j
+if i̸=j.
+Analyzing the signs of the righthand sides of (1), (2) it is easy to obtain
+the following
+f
+1
+> 0, f
+2
+> 0 if C∈ intΩ 1
+; f
+1
+< 0, f
+2
+< 0 if C∈ intΩ 3
+;
+f
+1
+< 0, f
+2
+> 0 in C∈ intΩ 2
+; f
+1
+> 0, f
+2
+< 0 in C∈ intΩ 4
+,
+where intΩ j
+is the interior of Ω j
+.
+The construction of polygon P(d). Consider the relative position of the
+points R, N, M, K. For points A,B∈R
+2
++
+we write A<B if C
+1
+(A)<C
+1
+(B).
+From the above study we have K < R, K < N, M < N, M < R. Below, we
+consider four possible cases:
+https://doi.org/10.21638/11701/spbu35.2023.201 Electronic Journal: http://diffjournal.spbu.ru/ 14Differential Equations and Control Processes, N. 2, 2023
+1) K <M <R <N; 2) M <K <R <N;
+3) K <M <N <R; 4) M <K <N <R.
+In what follows, the boundary components of polygons P(d) are the seg-
+ments of straight lines with normal vectors
+u = (1,0), v = (0,1), w = (1,1).
+Below, we represent the detailed proof in the first case. In the other cases, the
+character of arguments is analogous to the first one.
+1)Assume K <M <R <N.
+All trajectories enter and do not leave the parallelogram M
+1
+RR
+1
+M, where
+M
+1
+={C :C
+1
+=C
+1
+(M)}∩l
+0
+, R
+1
+={C :C
+1
+=C
+1
+(R) =V}∩l
+1
+.
+Indeed,considerthesegmentSeg(p) ={C :C
+1
+=p}∩Ω. If p∈ [0,C
+1
+(M)],then
+f· u = f
+1
+> 0 on Seg(p)⊂ Ω 1
+∪Ω 4
+, except for the point M: f
+1
+(M) = 0. But
+Lemma 1 implies that M is the ingress point for M
+1
+RR
+1
+M. If p∈ [V,V +d
+1
+]
+then f · u = f
+1
+< 0 on Seg(p)⊂ Ω 2
+∪Ω 3
+, except for the point R: f
+1
+(R) = 0,
+but as it was noted above, R is the ingress point for M
+1
+RR
+1
+M as well.
+Let us construct the parameterized set of polygons P(d)⊂ M
+1
+RR
+1
+M, d∈
+[0,d
+∗ ). Below, we represent the sequence of steps providing the vertexes and
+sides of P(d) (fig. 1).
+a. Vertex R(d). Let us begin with the point R(d) ∈ C
+∗ R, which will be
+called the generating vertex. It means that R(d) initialize P(d). Namely, we
+will obtain P(d), constructing its boundary, moving from R(d) clockwise and
+counterclockwise, determining the sequence of segments, sides of P(d), till they
+meet at some final point.
+b. Vertex Q(d). Denote Q(d) = {C : C
+1
++C
+2
+= C
+1
+(R(d))+C
+2
+(R(d))}∩
+M
+1
+C
+∗ , where M
+1
+C
+∗ is the segment with endpoints M
+1
+, C
+∗ . Note that M
+1
+C
+∗ ⊂ e
+KC
+∗ e
+C, where
+e
+KC
+∗ e
+C is a triangle with vertexes
+e
+K ={C : C
+2
+= C
+2
+(C
+∗ )}∩l
+0
+,
+e
+C ={C :C
+1
+=C
+1
+(C
+∗ )}∩l
+0
+andC
+∗ . Moreover, duetothemonotonedecreasing
+of the functions C
+2
+=h(C
+1
+), C
+2
+=g(C
+1
+), the arcs KC
+∗ and C
+∗ R do not belong
+to
+e
+KC
+∗ e
+C,exceptforC
+∗ . Hence,M
+1
+C
+∗ hasnocommonpointswiththeisoclines,
+except for C
+∗ .
+Let the segment R(d)Q(d) be the side of P(d), parallel to l
+0
+.
+c. Vertex N(d). Denote N(d) ={C :C
+1
+=C
+1
+(R(d))}∩C
+∗ N.
+Let the segment R(d)N(d) be the side of P(d), parallel to C
+1
+= 0.
+d. Vertexes L(d), M(d): ”L-procedure”.
+https://doi.org/10.21638/11701/spbu35.2023.201 Electronic Journal: http://diffjournal.spbu.ru/ 15Differential Equations and Control Processes, N. 2, 2023
+Figure 1: K <M <R <N.
+Denote by Ray(A,e) the ray with initial point A and directing vector e.
+Consider the point
+e
+L(d) =Ray(Q(d),v)∩Ray(N(d),w
+1
+), where w
+1
+= (− 1,1).
+Obviously,
+e
+L(d)∈M
+1
+RR
+1
+M.
+We have three cases of
+e
+L(d) position:
+e
+L(d)∈ Ω 3
+,
+e
+L(d)∈ Ω 4
+,
+e
+L(d)∈ MC
+∗ (fig. 2).
+Figure 2: Position of
+e
+L(d).
+d1.
+e
+L(d)∈ Ω 3
+.
+https://doi.org/10.21638/11701/spbu35.2023.201 Electronic Journal: http://diffjournal.spbu.ru/ 16Differential Equations and Control Processes, N. 2, 2023
+Consider the point M(d) = Ray(Q(d),v)∩MC
+∗ . Note, that C
+1
+(M(d)) =
+C
+1
+(
+e
+L(d)) and C
+2
+(M(d)) < C
+2
+(
+e
+L(d)). Then, obtain the point L(d) = {C :
+C
+2
+= C
+2
+(M(d))}∩Ray(N(d),w
+1
+)∈ Ω 3
+. Thus, we obtain the polygon P(d) =
+R(d)Q(d)M(d)L(d)N(d).
+d2.
+e
+L(d)∈ Ω 4
+.
+Consider the point M(d) =Ray(N(d),w
+1
+)∩MC
+∗ . Then, obtain the point
+L(d) = {C : C
+2
+= C
+2
+(M(d))}∩ Ray(Q(d),v) ∈ Ω 4
+. Thus, we obtain the
+polygon P(d) =R(d)Q(d)L(d)M(d)N(d).
+d3.
+e
+L(d)∈MC
+∗ .
+Now, M(d) = L(d) =
+e
+L. Thus, we obtain the polygon P(d) =
+R(d)Q(d)M(d)N(d).
+The procedure of obtaining of the vertexes M(d) =L(d), comprising items
+d1, d2, d3, will be used below. Let us call it, for brevity, the ”L-procedure”.
+According to the construction, in all cases, P(
+e
+d
+2
+)⊂ P(
+e
+d
+1
+) if
+e
+d
+1
+,
+e
+d
+2
+∈ [0,d
+∗ )
+and
+e
+d
+1
+<
+e
+d
+2
+. Moreover, C
+∗ ∈ P(d) for any d∈ [0,d
+∗ ). Thus, P(d) shrinks to
+the equilibrium C
+∗ , as d→d
+∗ , which means that all its vertexes tends to C
+∗ .
+Let us show that all trajectories enter P(d) and do not leave it. We have
+f· w =f
+1
++f
+2
+> 0 on R(d)Q(d)⊂ Ω 1
+,
+f· u =f
+1
+> 0 on Q(d)M(d)⊂ Ω 4
+, if
+e
+L(d)∈ Ω 3
+,
+f· u =f
+1
+> 0 on Q(d)L(d)⊂ Ω 4
+, if
+e
+L(d)∈ Ω 4
+,
+f· v =f
+2
+< 0 on M(d)L(d)⊂ Ω 3
+, if
+e
+L(d)∈ Ω 3
+,
+f· v =f
+2
+< 0 on L(d)M(d)⊂ Ω 4
+, if
+e
+L(d)∈ Ω 4
+,
+f· w =f
+1
++f
+2
+< 0 on M(d)L(d)⊂ Ω 3
+, if
+e
+L(d)∈ Ω 3
+,
+f· w =f
+1
++f
+2
+< 0 on L(d)M(d)⊂ Ω 4
+, if
+e
+L(d)∈ Ω 4
+.
+Thus, C
+∗ is globally stable.
+2)Assume M <K <R <N.
+Similarly to the previous case 1, it is easy to show that all positive half-
+trajectories enter and do not leave the polygon (pentagon) KRR
+1
+e
+D
+f
+M, where
+f
+M ={C :C
+1
+=C
+1
+(K)}∩MC
+∗ ,
+e
+D ={C :C
+2
+=C
+2
+(
+f
+M)∩l
+1
+.
+The procedure of constructing of polygons P(d)⊂ KRR
+1
+e
+D
+f
+M, d∈ [0,d
+∗ ),
+is absolutely similar to the one described in the previous case 1 (fig. 3).
+3) K <M <N <R.
+Let us introduce the following points:
+e
+R = {C : C
+1
+= C
+1
+(N)}∩ C
+∗ R,
+https://doi.org/10.21638/11701/spbu35.2023.201 Electronic Journal: http://diffjournal.spbu.ru/ 17Differential Equations and Control Processes, N. 2, 2023
+Figure 3: M <K <R <N.
+e
+E ={C :C
+2
+=C
+2
+(
+e
+R)}∩l
+0
+.
+ConsiderthreepossiblecasesoftherelativepositionofthepointsM
+1
+,
+e
+C,
+e
+E
+belonging to l
+0
+: M
+1
+<
+e
+C <
+e
+E (3
+1
+), M
+1
+<
+e
+E <
+e
+C (3
+2
+),
+˜
+E <M
+1
+<
+˜
+C (3
+3
+).
+3
+1
+. M
+1
+<
+e
+C <
+e
+E (fig. 4).
+Similarly to the case 1, it is easy to show, that all trajectories enter and do
+not leave the polygon M
+1
+e
+E
+e
+RNM.
+Denote
+b
+R ={C : C
+1
+= C
+1
+(
+e
+E)}∩C
+∗ e
+R, where C
+∗ e
+R is the arc: C
+∗ e
+R⊂ C
+∗ R.
+Considertwosegments:
+e
+E
+b
+RandM
+1
+C
+∗ ,whichwillcontainthevertexesofP(d).
+As it was shown in the case 1, M
+1
+C
+∗ has no common points with the isoclines,
+except for C
+∗ . Obviously,
+e
+E
+b
+R also has no common points with the isoclines.
+Let R(d)∈C
+∗ e
+R be the generating point.
+We have two cases: R(d)∈
+b
+R
+e
+R, R(d)∈C
+∗ b
+R.
+If R(d) ∈
+b
+R
+e
+R then E(d) = {C : C
+2
+= C
+2
+(R(d))}∩
+e
+E
+b
+R, Q(d) = {C :
+C
+1
++C
+2
+=C
+1
+(E(d))+C
+2
+(E(d))}∩M
+1
+C
+∗ .
+If R(d)∈ C
+∗ b
+R\C
+∗ then Q(d) ={C : C
+1
++C
+2
+= C
+1
+(R(d))+C
+2
+(R(d))}∩
+M
+1
+M.
+Next, after Q(d), in both cases, we obtain N(d) ={C : C
+2
+= C
+2
+(R(d))}∩
+https://doi.org/10.21638/11701/spbu35.2023.201 Electronic Journal: http://diffjournal.spbu.ru/ 18Differential Equations and Control Processes, N. 2, 2023
+Figure 4: K <M <N <R, M
+1
+<
+e
+C <
+e
+E.
+C
+∗ N.
+Then, as in the case 1, we have three cases of
+e
+L(d) position:
+e
+L(d) ∈ Ω 3
+,
+e
+L(d) ∈ Ω 4
+,
+e
+L(d) ∈ MC
+∗ . Using the L-procedure, we finish the polygons con-
+structing:
+P(d) =R(d)E(d)Q(d)L(d)(orM(d))M(d)(orL(d))N(d), if R(d)∈
+ˆ
+R
+e
+R,
+P(d) =R(d)Q(d)L(d)(orM(d))M(d)(orL(d))N(d), if R(d)∈C
+∗ b
+R;
+3
+2
+. M
+1
+<
+e
+E <
+e
+C (fig. 5).
+Consider the segment
+e
+EC
+∗ ⊂ e
+KC
+∗ e
+C. Similarly to M
+1
+C
+∗ ,
+e
+EC
+∗ has no
+common points with the isoclines, except for C
+∗ .
+Let R(d)∈C
+∗ e
+R be the generating point.
+E(d) ={C :C
+2
+=C
+2
+(R(d)))∩
+e
+EC
+∗ .
+Q(d) ={C :C
+1
++C
+2
+=C
+1
+(E(d))+C
+2
+(E(d))}∩M
+1
+C
+∗ .
+Then, to obtain N(d), M(d),L(d) we use the same construction as in case
+3
+1
+.
+Thus, we obtain the polygon
+P(d) =R(d)N(d)M(d)(orL(d))L(d)(orM(d))Q(d).
+https://doi.org/10.21638/11701/spbu35.2023.201 Electronic Journal: http://diffjournal.spbu.ru/ 19Differential Equations and Control Processes, N. 2, 2023
+Figure 5: K <M <N <R, M
+1
+<
+e
+E <
+e
+C.
+3
+3
+.
+e
+E <M
+1
+<
+e
+C (fig. 6).
+Denote
+b
+E = {C : C
+2
+= C
+2
+(
+e
+R)}∩{C : C
+1
+= C
+1
+(M)}. Similarly to the
+previous arguments, it is easy to show, that all trajectories enter the polygon
+b
+E
+e
+RNM.
+Considerthesegment
+b
+EC
+∗ ⊂ e
+KC
+∗ e
+C,hence,havingnocommonpointswith
+the isoclines, except for C
+∗ .
+Let R(d)∈C
+∗ e
+R be the generating point.
+Next, obtainthepointE(d) ={C :C
+1
++C
+2
+=C
+1
+(R(d))+C
+2
+(R(d))}∩
+b
+EC
+∗ .
+Then, to obtain N(d), M(d),L(d) we use the same construction as in the
+case 3
+1
+.
+Thus, we obtain the polygon
+P(d) =R(d)N(d)M(d)(orL(d))L(d)(orM(d))E(d).
+4) M <K <N <R.
+Using the same arguments as in the previous cases, it can be shown that
+trajectories enter and do not leave the polygon K
+e
+E
+e
+RN
+e
+N
+f
+M, where
+e
+N ={C :
+C
+2
+=C
+2
+(
+f
+M)}∩l
+1
+,
+f
+M,
+e
+E,
+e
+R are determined in the previous cases 1 and 3.
+Consider two cases: C
+∗ <
+e
+E,
+e
+E <C
+∗ .
+https://doi.org/10.21638/11701/spbu35.2023.201 Electronic Journal: http://diffjournal.spbu.ru/ 20Differential Equations and Control Processes, N. 2, 2023
+Figure 6: K <M <N <R,
+e
+E <M
+1
+<
+e
+C.
+Assume C
+∗ <
+e
+E (fig. 9).
+Let R(d)∈C
+∗ e
+R be the generating point.
+If R(d) ∈
+e
+R
+b
+R, then E(d) = {C : C
+2
+= C
+2
+(R(d))}∩
+e
+E
+b
+R, where
+b
+R is
+determined in the previous case 3.
+K(d) ={C :C
+1
++C
+2
+=C
+1
+(E(d))+C
+2
+(E(d))}∩KC
+∗ .
+N(d) ={C :C
+1
+=C
+1
+(R(d))}∩C
+∗ N.
+e
+L, L(d) M(d) are determined by the L-procedure (see the case 1).
+Thus we obtain the polygon
+P(d) =R(d)N(d)L(d)M(d)(orM(d)L(d))K(d)E(d).
+If R(d) ∈
+b
+RC
+∗ , then we obtain K(d) = {C : C
+1
++ C
+2
+= C
+1
+(R(d)) +
+C
+2
+(R(d))}∩KC
+∗ .
+N(d) ={C :C
+1
+=C
+1
+(R(d))}∩C
+∗ N.
+e
+L, L(d) M(d) are determined by the L-procedure (see the case 1).
+Thus, we obtain the polygon
+P(d) =R(d)N(d)L(d)M(d)(orM(d)L(d))K(d).
+Assume
+e
+E <C
+∗ (fig. 10). Let R(d)∈C
+∗ e
+R be the generating point.
+https://doi.org/10.21638/11701/spbu35.2023.201 Electronic Journal: http://diffjournal.spbu.ru/ 21Differential Equations and Control Processes, N. 2, 2023
+Figure 7: M <K <N <R, C
+∗ <
+e
+E. Figure 8: M <K <N <R,
+e
+E <C
+∗ .
+Figure 9: M <K <N <R, C
+∗ <
+e
+E.
+E(d) ={C :C
+2
+=C
+2
+(R(d))}∩
+e
+EC
+∗ (see the case 3).
+K(d) ={{C :C
+1
++C
+2
+=C
+1
+(E(d))+C
+2
+(E(d))}}∩KC
+∗ .
+N(d) ={C :C
+1
+=C
+1
+(R(d))}∩C
+∗ N.
+e
+L, L(d) M(d) are determined by the L-procedure (see the case 1).
+Thus, we obtain the polygon
+P(d) =R(d)N(d)L(d)M(d)(orM(d)L(d))K(d)E(d).
+https://doi.org/10.21638/11701/spbu35.2023.201 Electronic Journal: http://diffjournal.spbu.ru/ 22Differential Equations and Control Processes, N. 2, 2023
+Figure 10: M <K <N <R,
+e
+E <C
+∗ .
+Thus, Theorem is proved. □ 6 Global stability, bifurcation (α = 0)
+Suppose, α = 0, which means that the system (1)-(2) describes the dynamics
+of capital distribution over the technological levels without innovation process.
+The simple analysis of the system (10)-(11) shows that we have two equilibria,
+C
+∗ and R = (V,0) if β >µ , or one equilibrium R if β ≤ µ .
+Let us formulate results describing the long run dynamics of capital distri-
+bution over efficiency levels in the case α = 0, β > 0.
+Theorem 2 Ifα = 0, β >µ then the system (1)-(2) has two equilibria, namely
+C
+∗ and R. In addition, if V >V
+max
+then C
+∗ is globally stable inR
+2
++
+\{C :C
+2
+=
+0} and R is unstable.
+Proof
+The proof of global stability is analogous to the proof of Theorem 1. The
+remaining part of the statement is obvious. □ https://doi.org/10.21638/11701/spbu35.2023.201 Electronic Journal: http://diffjournal.spbu.ru/ 23Differential Equations and Control Processes, N. 2, 2023
+Theorem 3 Ifα = 0, β ⩽µ thenthesystem (1)-(2)hastheuniqueequilibrium
+R, which is globally stable inR
+2
++
+\{O}.
+Proof
+The uniqueness of equilibrium (V,0) may be obtained by the use of argu-
+ments of Lemma 2.
+To prove the global stability of (V,0) in R
+2
++
+\{O} it is sufficient to note
+that (V,0)∈ Ω and for C∈R
+2
++
+\{C :C
+2
+= 0}
+˙
+C
+2
+=C
+2
+(a
+2
+(V − C
+1
+− C
+2
+)− µ +
+βC
+1
+c
+1
++C
+2
+)<C
+2
+ 
+a
+2
+(V − C
+1
+− C
+2
+)− µ +β  
+< 0.
+Besides,therearetwotrajectories,namely,{C(t,(C
+1
+(0),0) :C
+1
+(0)∈ (0,V), t∈
+R} and{C(t,(C
+1
+(0),0) : C
+1
+(0) > V, t∈R}, such that C(t,(C
+1
+(0),0)→ (V,0)
+as t→∞. □ Suppose µ is fixed, and let us decrease β . If β >µ then the system (1)-(2)
+hastwoequilibria, C
+∗ andR, globallystableinR
+2
++
+\{C :C
+2
+= 0}andunstable,
+respectively. If β = µ then C
+∗ = R, which is globally stable in R
+2
++
+\{O}. If
+β < µ then R is the unique, globally stable, equilibrium in R
+2
++
+\{O}, and C
+∗ goes into a set {C : C
+2
+< 0}, which has no economic sense in the considered
+problem. Thus, we may say that µ is the bifurcation value of β .
+Let us formulate the economic sense of the obtained results. If α = 0 the
+appearanceoftheequilibriumR = (V,0)impliesthesituationwhenthesecond,
+morehigh,leveloftechnologyefficiencymaynotemergeinafinitetime. Really,
+if the rate of depreciation is sufficiently large, i.e. β ⩽ µ , then R = (V,0) is
+globally stable. If β > µ , then R = (V,0) is the saddle and, as it is easy to
+show, has two stable separatrices, belonging to the set {C : C
+2
+= 0}. Hence,
+thetheoremofintegralcontinuityimpliesthatforanysmallε> 0andanylarge
+T > 0 there exists δ > 0 such that C
+2
+(t,C
+0
+)<ε if C
+2
+(0)<δ and t∈ [0,T].
+The latter means that under the condition α = 0, which means the absence
+of innovation process in the economical system, the imitation process only can-
+not initialize the emergence of the second, high, technological level within a
+reasonable time. The proposed model permits to obtain the estimations of
+parameters for which the imitation efforts do not lead to an economic system
+modernization.
+https://doi.org/10.21638/11701/spbu35.2023.201 Electronic Journal: http://diffjournal.spbu.ru/ 24Differential Equations and Control Processes, N. 2, 2023
+Conclusions
+The process of technological development, based on Schumpeterian classical
+approach, is modeled by the two-dimensional nonlinear dynamical system. The
+influenceofinnovation,imitationanddepreciationprocessesinteractionisstud-
+ied. The results concerning the existence and stability of equilibria which de-
+pends on the parameters’s relationships are proved. The bifurcation value of
+the imitation rate parameter, in the absence of innovation process, is found.
+The future investigations will be dedicated to the weakening of the global
+stability condition. Also, it is interesting to consider the system with three
+technological levels.
+References
+[1] Iwai K. Schumpeterian dynamics. Part I: an evolutionary model of innova-
+tion and imitation. Journal of Economic Behavior and Organization, 1984;
+5(2):159–190.
+[2] Iwai K. Schumpeterian dynamics. Part II: technological progress, firm
+growth and “economic selection”. Journal of Economic Behavior and Or-
+ganization, 1984; 5(3-4):321–351.
+[3] Schumpeter J. The theory of economic development (English translation of
+Theorie der wirtschaftlichen Entwicklung, 1912). Oxford University Press,
+1961.
+[4] LukasR.E., MollM.B.Knowledgegrowthandtheallocationoftime. Jour-
+nal of Political Economy, 2014; 122(1):1–51.
+[5] Gallay O., Hashemi F., Hongler M.-O. Imitation, proximity, and growth: a
+collective swarm dynamics approach. Advances in complex systems, 2019;
+22(5):1–43.
+[6] Acemoglu D., Cao D. Innovation by entrants and incumbents. Journal of
+Economic Theory, 2015; 157:255–294.
+[7] Thurner S., Klimek P., Hanel R. Schumpeterian economic dynamics as a
+quantifiable minimum model of evolution. New Journal of Physics, 2010;
+12:1–21.
+https://doi.org/10.21638/11701/spbu35.2023.201 Electronic Journal: http://diffjournal.spbu.ru/ 25Differential Equations and Control Processes, N. 2, 2023
+[8] JuddK.L.Closedloopequilibriuminamulti-stageinnovationrace.Journal
+of Economic Theory, 2003; 25(1):21–41.
+[9] Reinganum J. Dynamic games of innovation. Economic Theory, 1981;
+21(2/3):673–695.
+[10] Polterovich V.M., Henkin G.M. An evolutionary model with interaction of
+the processes of development and adoption of technologies. Economics and
+Mathematical Methods, 1988; 24:1071–1083. (In Russ.)
+[11] PolterovichV.M.,HenkinG.M.Anevolutionarymodelofeconomicgrowth.
+Economics and Mathematical Methods, 1989; 25(3):518–531. (In Russ.)
+[12] Henkin G.M., Polterovich V.M. A Difference-Differential Analogue of the
+Burgers Equation: Stability of the Two-Wave Behavior. Journal of Non-
+linear Science, 1994; 4:497–517.
+[13] Henkin G.M., Shananin A.A. Mathematical Modeling of the Schumpete-
+rian Dynamics of Innovation. Matemetical Modeling, 2014; 26(8):3–19.
+(In Russ.)
+[14] Kirillov A.N., Sazonov A.M. Global schumpeterian dynamics with struc-
+tural variations. Bulletin of the South Ural State University. Ser. Math-
+ematical Modelling, Programming & Computer Software (Bulletin SUSU
+MMCS), 2019; 12(3):17-27.
+[15] Kirillov A.N., Sazonov A.M. The global stability of the Schumpeterian
+dynamical system. Vestnik of Saint Petersburg University. Applied Mathe-
+matics. Computer Science. Control Processes, 2020; 16(4):348-356.
+[16] Kirillov A.N., Sazonov A.M. The dynamics of the economic evolution
+withthecapitaldepreciation.DifferentialEquationsandControlProcesses,
+2020; 2:118–130.
+[17] Zhang W.-B. Differential equations, bifurcations, and chaos in economics.
+World Scientific Publishing Co. Pte. Ltd., 2005. — 489 p.
+[18] AlexeevaT.A.,MokaevT.N.,PolshchikovaI.A.DynamicsofMonetaryand
+Fiscal Policy in a New Keynesian Model in Continuous Time. Differential
+Equations and Control Processes, 2020; 4:88–114.
+[19] Sportelli M., De Cesare L. Fiscal policy delays and the classical growth
+cycle. Applied Mathematics and Computation, 2019; 354:9–31.
+https://doi.org/10.21638/11701/spbu35.2023.201 Electronic Journal: http://diffjournal.spbu.ru/ 26Differential Equations and Control Processes, N. 2, 2023
+[20] Silva. C.M., Rosa S., Alves H., Carvalho P.G. A mathematical model for
+the customer dynamics based on marketing policy. Applied Mathematics
+and Computation, 2016; 273:42–53.
+https://doi.org/10.21638/11701/spbu35.2023.201 Electronic Journal: http://diffjournal.spbu.ru/ 27
