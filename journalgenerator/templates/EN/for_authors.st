@@ -26,7 +26,10 @@
       <li>keywords</li>
       <li>full reference to the paper (without page numbers)</li>
   </ul>
-  <li>The file containing references in HTML or Microsoft Word format</li>
+  <li>The file containing references in HTML or Microsoft Word format
+  <br>
+   <strong>The list of references should not contain doi and hyperlinks!</strong>   
+  </li>
 </ul>
 </p>
 
