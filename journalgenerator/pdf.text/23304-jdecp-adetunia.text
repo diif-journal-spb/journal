@@ -1,0 +1,1152 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 3, 2023
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Ordinary differential equations
+On the stability and boundedness of solutions to certain second
+order differential equation
+Adetunji A. Adeyanju
+1
+, Daniel O. Adams
+2
+1;2
+Department of Mathematics,
+Federal University of Agriculture,
+Abeokuta, Nigeria.
+e-mail:
+1
+adeyanjuaa@funaab.edu.ng/tjyanju2000@yahoo.com
+e-mail:
+2
+adamsdo@funaab.edu.ng/danielogic2008@yahoo.com
+Abstract. In this paper, we investigate by means of second method of Lya-
+punov, su cient conditions that guarantee uniform-asymptotic stability of the
+trivial solution and ultimate boundedness of all solutions to a certain second
+order differential equation. We construct a complete Lyapunov function in or-
+der to discuss the qualitative properties mentioned earlier. The boundedness
+result in this paper is new and also complement some boundedness results in
+literature obtained by using an incomplete Lyapunov function together with a
+signum function. Finally, we demonstrate the correctness of our results with two
+numerical examples and graphical representation of the trajectories of solutions
+to the examples using Maple software.
+Keywords: Second order, Stability, Boundedness, Lyapunov function.
+1 Introduction
+Our concern in this paper is to investigate su cient conditions for the stability
+and boundedness of solutions to the second order differential equation of theDifferential Equations and Control Processes, N. 3, 2023
+form:
+_
+X =H(Y );
+_
+Y = F (X;Y )Y G(X) +P (t;X;Y ); (1)
+whereX;Y :R
++
+!R
+n
+; G;H :R
+n
+!R
+n
+; P :R
++
+ R
+n
+ R
+n
+!R
+n
+,F is ann n
+continuous symmetric positive de nite matrix function depending on the argu-
+ments displayed explicitly,R = ( 1;1) represents the real line,R
++
+= [0;1),
+R
+n
+represent the real n-dimensional Euclidean space equipped with the usual
+normk k and the dots which appear in (1) indicate differentiation with respect
+to the independent variable t: The conditions for the existence and uniqueness
+of solutions of (1) with any predetermined initial conditions will be assumed
+(see, Rao [16]). We shall denote the scalar producthX;Yi of any vectorsX;Y in
+R
+n
+with respective components (x
+1
+;x
+2
+;:::;x
+n
+) and (y
+1
+;y
+2
+;:::;y
+n
+) by
+P
+n
+i=1
+x
+i
+y
+i
+:
+Particularly,hX;Xi =kXk
+2
+:
+A. M. Lyapunov (1892) in his Ph.D. Thesis titled " The general problems of
+the stability of motion", studied su cient conditions for the stability of solu-
+tions of non-linear system of differential equations by two distinct methods: the
+ rst(or indirect) and second(or direct) methods of Lyapunov (Lyapunov [12]).
+Since these two methods were introduced, the second method has gained wider
+acceptance and has been employed in all the listed papers in our reference to
+study qualitative behaviour of solutions of differential equations(see, [1]-[23]).
+This method (i.e. the second method) enables us to determine the qualitative
+properties of solutions of differential equations without necessarily  nding the
+solutions themselves.
+However, to use the second method of Lyapunov, one needs to construct
+a positive de nite function, whose derivative with respect to variable t along
+the solution path of the equation being considered is negative semi-de nite.
+This positive de nite function is called Lyapunov function. Unfortunately, the
+method is not without any di culty or challenge. One major challenge of the
+method has to do with, how to construct a suitable Lyapunov function espe-
+cially for non-linear differential equations.
+In [19], Tejumola gave necessary conditions for the boundedness of solutions
+https://doi.org/10.21638/11701/spbu35.2023.304 Electronic Journal: http://diffjournal.spbu.ru/ 60Differential Equations and Control Processes, N. 3, 2023
+to the following scalar differential equations:
+_ x =h(y);
+_ y = f(x;y)y g(x) +p(t;x;y): (2)
+We note that system (2) is the scalar form of system (1). Later Omeike et.
+al. [14] with the aid of an incomplete Lyapunov function supplemented with
+signum function, extended the boundedness results obtained by Tejumola[19]
+to the corresponding n-dimensional system of equations given in (1).
+Very recent, Adeyanju([2],[3]) examined some conditions for the stability of
+the zero solution, boundedness and uniform-ultimate boundedness of solutions
+of the second order non-linear differential equation:
+
+X +F (X;
+_
+X)
+_
+X +G(X) =P (t;X;
+_
+X); (3)
+where X : R
++
+! R
+n
+; G : R
+n
+! R
+n
+; P : R
++
+ R
+n
+ R
+n
+! R
+n
+and F is an
+n n continuous symmetric positive de nite matrix function that depends on
+the arguments displayed explicitly. The boundedness property of solutions to
+(3) has also been studied by Omeike et. al.[15].
+Motivated by the works of Tejumola [19] and Omeike et.al. [14], we will with
+the aid of a complete Lyapunov function, examine conditions that ensure the
+boundedness of solutions of (1) with less restricted assumptions. Furthermore,
+we will also prove a theorem on the stability of the trivial solution to the system
+(1) which was not discussed in [14] or elsewhere to the best of our knowledge
+in literature.
+2 Preliminary Results
+The following established algebraic results are required to prove our main re-
+sults.
+lemma 1 ([10],[20]). LetA be a realn n symmetric positive de nite matrix.
+Then for X2R
+n
+ 
+a
+kXk
+2
+ hAX;Xi   
+a
+kXk
+2
+;
+where  
+a
+and  
+a
+are, respectively, the least and greatest eigenvalues of the ma-
+trix A:
+https://doi.org/10.21638/11701/spbu35.2023.304 Electronic Journal: http://diffjournal.spbu.ru/ 61Differential Equations and Control Processes, N. 3, 2023
+lemma 2 ([9],[20]). Let G(0) = 0 = H(0) and assume that the matrices
+A; J
+g
+(X) and J
+h
+(Y ) are symmetric and positive de nite such that A commutes
+pairwise with each of J
+g
+(X) and J
+h
+(Y ) for all X;Y2R
+n
+: Then,
+hG(X);AXi =
+Z
+1
+0
+X
+T
+AJ
+g
+( X)Xd ;
+hH(Y );AYi =
+Z
+1
+0
+Y
+T
+AJ
+h
+( Y )Yd ;
+where J
+g
+(X) and J
+h
+(Y ) are respectively the Jacobian matrices
+@g
+i
+@x
+j
+and
+@h
+i
+@y
+j
+of
+G(X) and H(Y ) (j = 1; 2;:::;n).
+lemma 3 [9]. Let G(0) = 0 and assume that J
+g
+(X) is symmetric for all
+arbitrary X2R
+n
+: Then
+d
+dt
+Z
+1
+0
+hG( X);Xid  =hG(X);
+_
+Xi:
+Lemma 4 [11]. Suppose f(0) = 0. Let V be a continuous functional de-
+ ned on C
+H
+= C with V (0) = 0 and let u(s) be a function, non-negative and
+continuous for 0   s < 1, u(s) ! 1 as s ! 1 with u(0) = 0. If for
+all '2 C; u(j (0)j)  V ('); V (')  0;
+_
+V (')  0, then the zero solution of
+_ x =f(x
+t
+)(t  0); is stable.
+If we de ne Z =f'2 C
+H
+:
+_
+V (') = 0g, then the zero solution of _ x =
+f(x
+t
+)(t  0); is asymptotically stable, provided that the largest invariant set in
+Z is Q =f0g:
+3 Main Results
+First, we introduce some basic assumptions to be used in proving our results.
+Basic Assumptions:
+Suppose that  
+f
+,  
+g
+,  
+h
+,  
+f
+,  
+g
+,  
+h
+are some positive constants and let all the
+basic assumptions imposed on functions F (X;Y ), G(X), and H(Y ) hold such
+https://doi.org/10.21638/11701/spbu35.2023.304 Electronic Journal: http://diffjournal.spbu.ru/ 62Differential Equations and Control Processes, N. 3, 2023
+that G(0) = 0 and H(0) = 0. In addition, let the following assumptions hold
+for all X;Y2R
+n
+:
+(i) the matricesJ
+g
+(X);J
+h
+(Y ) andF (X;Y ) are symmetric and positive de nite
+such that their eigenvalues satisfy:
+ 
+g
+  
+i
+(J
+g
+(X))   
+g
+;
+ 
+h
+  
+i
+(J
+h
+(Y ))   
+h
+;
+ 
+f
+  
+i
+(F (X;Y ))   
+f
+;
+(i = 1; 2;:::;n);
+(ii) there exists a functiona(t)2C
+1
+[0;1) such that 0<a
+0
+<a(t)<a
+1
+;   
+a
+0
+(t)  0; where
+  > max
+ 
+a
+1
+ 
+h
+;
+a
+1
+ 
+h
+ 
+h
+ 
+f
+ 
+:
+Now to the main results of the paper.
+Theorem 1 Suppose all the assumptions listed under the basic assumptions
+hold. Then the trivial solution of (1) is uniformly stable and uniformly-
+asymptotically stable when P (t;X;Y )  0.
+Proof
+To prove this theorem, we depend on the continuously-differentiable scalar func-
+tion V =V (t;X;Y ) de ne as
+V =a(t)hX;Xi + 
+Z
+1
+0
+hG( X);Xid  + 
+Z
+1
+0
+hH( Y );Yid ; (4)
+where a(t) and   are as de ned under the basic assumptions.
+Obviously, the Lyapunov function de ned in (4) becomes zero when X = 0
+and Y = 0. On applying Lemma 1, Lemma 2 and assumptions listed in (i) of
+https://doi.org/10.21638/11701/spbu35.2023.304 Electronic Journal: http://diffjournal.spbu.ru/ 63Differential Equations and Control Processes, N. 3, 2023
+basic assumptions to (4), we have for some positive constants D
+0
+and D
+1
+V =a(t)hX;Xi + 
+Z
+1
+0
+hG( X);Xid  + 
+Z
+1
+0
+hH( Y );Yid 
+=a(t)hX;Xi + 
+Z
+1
+0
+Z
+1
+0
+hJ
+G
+( 
+1
+ 
+2
+X)X;Xi 
+1
+d 
+1
+d 
+2
++ 
+Z
+1
+0
+Z
+1
+0
+hJ
+H
+( 
+1
+ 
+2
+Y )Y;Yi 
+1
+d 
+1
+d 
+2
+ a
+0
+kXk
+2
++
+1
+2
+  
+g
+kXk
+2
++
+1
+2
+  
+h
+kYk
+2
+ D
+0
+(kXk
+2
++kYk
+2
+);
+where, D
+0
+=
+1
+2
+minf2a
+0
++  
+g
+;  
+h
+g:
+Similarly, we have
+V =a(t)hX;Xi + 
+Z
+1
+0
+Z
+1
+0
+hJ
+G
+( 
+1
+ 
+2
+X)X;Xi 
+1
+d 
+1
+d 
+2
++ 
+Z
+1
+0
+Z
+1
+0
+hJ
+H
+( 
+1
+ 
+2
+Y )Y;Yi 
+1
+d 
+1
+d 
+2
+ a
+1
+kXk
+2
++
+1
+2
+  
+g
+kXk
+2
++
+1
+2
+  
+h
+kYk
+2
+ D
+1
+(kXk
+2
++kYk
+2
+);
+where, D
+1
+=
+1
+2
+minf2a
+1
++  
+g
+;  
+h
+g:
+Hence,
+D
+0
+(kXk
+2
++kYk
+2
+) V D
+1
+(kXk
+2
++kYk
+2
+): (5)
+Thus, the function V de ned by (4) satis es
+V (X;Y )!1 askXk
+2
++kYk
+2
+!1: (6)
+Inequalities (5) and (6) show that the scalar function V is non-negative for all
+X;Y2R
+n
+and V = 0 if and only if X = 0 and Y = 0.
+Next, we show that the derivative
+_
+V of the function V in (4) exists, and that
+there are  nite constants D
+2
+;D
+3
+such that
+_
+V  D
+2
+< 0 ifkXk
+2
++kYk
+2
+ D
+2
+3
+: (7)
+https://doi.org/10.21638/11701/spbu35.2023.304 Electronic Journal: http://diffjournal.spbu.ru/ 64Differential Equations and Control Processes, N. 3, 2023
+Using Lemma 3, we obtain the time derivative of the scalar function de ned in
+(4) along the system (1) as
+_
+V =a
+0
+(t)hX;Xi + 2a(t)hX;H(Y )i + hH(Y ); F (X;Y )Yi: (8)
+By Schwartz's inequality and (i) of Theorem 1, we have
+2jhX;H(Y )ij   
+h
+fkXk
+2
++kYk
+2
+g:
+Again, we apply Lemma 1, Lemma 2 and the above inequality in (8) to obtain
+_
+V  (  a
+1
+ 
+h
+)kXk
+2
+ (  
+h
+ 
+f
+ a
+1
+ 
+h
+)kYk
+2
+: (9)
+From the de nition of  ; it is possible to get a positive constant D
+4
+, such that
+_
+V  D
+4
+fkXk
+2
++kYk
+2
+g< 0; whenever kXk
+2
++kYk
+2
+>D
+2
+3
+; (10)
+where D
+4
+= minf  a
+1
+ 
+h
+;  
+h
+ 
+f
+ a
+1
+ 
+h
+g:
+The two inequalities (5) and (10) guarantee uniform stability of the trivial so-
+lution of (1).
+To prove the asymptotic stability of the trivial solution, we consider a set de nes
+by
+S f(X;Y ) :
+_
+V (X;Y ) = 0g:
+Applying the famous LaSalle's invariance principle to this set, we note that
+(X;Y )2 S implies that X = Y = 0. This shows that the largest invariant
+set contained in S is (0; 0). Hence, we conclude by Lemma 4 that the trivial
+solution of (1) is uniformly-asymptotically stable when P (t;X;Y )  0. This
+completes the proof of the theorem.
+Theorem 2 Further to the assumptions of Theorem 1, let P (t;X;Y ) in (1)
+satis es
+(iii)
+kP (t;X;Y )k kYk;
+uniformly in t  0 and 0 <  <
+ 
+h
+ 
+f
+ 
+h
+: Then there exists a  nite constant K
+whose magnitude depends only on the constants  
+f
+,  
+g
+,  
+h
+,  
+f
+,  
+g
+,  
+h
+such
+that every solution (X(t);Y (t)) of (1) ultimately satis es
+kX(t)k K; kY (t)k K: (11)
+https://doi.org/10.21638/11701/spbu35.2023.304 Electronic Journal: http://diffjournal.spbu.ru/ 65Differential Equations and Control Processes, N. 3, 2023
+proof
+The prove of this theorem still rests on the Lyapunov function de ned in (4).
+In the proof of Theorem 1, we have demonstrated that the Lyaounov function
+satis es (5) which is also correct when P (t;X;Y )6= 0: However, the derivative
+of V when P (t;X;Y )6= 0 is
+_
+V =a
+0
+(t)hX;Xi+a(t)hX;H(Y )i+ hH(Y ); F (X;Y )Yi+ hH(Y );P(t;X;Y )i:
+From the proof of Theorem 1 and (iii) of Theorem 2, we have
+_
+V   (  a
+1
+ 
+h
+)kXk
+2
+ (  
+h
+ 
+f
+ a
+1
+ 
+h
+)kYk
+2
++  
+h
+kYk
+2
+   (  a
+1
+ 
+h
+)kXk
+2
+ 
+ 
+ ( 
+h
+ 
+f
+   
+h
+) a
+1
+ 
+h
+ 
+kYk
+2
+  D
+5
+fkXk
+2
++kYk
+2
+g; (12)
+whereD
+5
+= minf  a
+1
+ 
+h
+; ( 
+h
+ 
+f
+  
+h
+) a
+1
+ 
+h
+g. Then, there exists a positive
+constant D
+6
+such that
+_
+V  1 provided kXk
+2
++kYk
+2
+ D
+6
+: (13)
+By following the Yoshizawa-type technique used in [[13], [23] ], it can be shown
+from inequalities (5) and (12) that we can always  nd a positive constant D
+7
+such that every solution (X(t);Y (t)) of (1) satis es
+kXk
+2
++kYk
+2
+ D
+7
+: (14)
+On setting K =
+p
+D
+7
+in (14), we obtain (11) with little simpli cation. This
+completes the proof of the theorem.
+4 Examples
+The following examples are given as special cases of (1) when n = 2.
+Example 1
+Our  rst example is when P (t;X;Y )  0: Suppose in (1) we have
+_
+X =
+"
+_ x
+1
+_ x
+2
+#
+=H(Y ) =
+"
+3y
+1
++ cosy
+1
+  1
+3y
+2
++ cosy
+2
+  1
+#
+; Y =
+"
+y
+1
+y
+2
+#
+; G(X) =
+"
+5x
+1
++ sinx
+1
+5x
+2
++ sinx
+2
+#
+;
+F (X;Y ) =
+"
+2 +
+1
+x
+2
+1
+sin
+2
+y
+1
++1
+1
+1 2 +
+1
+x
+2
+2
+sin
+2
+y
+2
++1
+#
+and a(t) = 1 + exp
+ 8:5t
+:
+https://doi.org/10.21638/11701/spbu35.2023.304 Electronic Journal: http://diffjournal.spbu.ru/ 66Differential Equations and Control Processes, N. 3, 2023
+We obtain the following Jacobian matricesJ
+h
+(Y ) andJ
+g
+(X) ofH(Y ) andG(X)
+respectively as,
+J
+h
+(Y ) =
+"
+3  siny
+1
+0
+0 3  siny
+2
+#
+; J
+g
+(X) =
+"
+5 + cosx
+1
+0
+0 5 + cosx
+2
+#
+:
+It is evident from the above that matrices F (X;Y );J
+h
+(Y ) and J
+g
+(X) are sym-
+metric and positive de nite with the following as eigenvalues.
+ 
+1
+(F (X;Y )) = 3 +
+1
+x
+2
+1
+sin
+2
+y
+1
++ 1
+;  
+2
+(F (X;Y )) = 1 +
+1
+x
+2
+2
+sin
+2
+y
+2
++ 1
+;
+ 
+1
+(J
+h
+(Y )) = 3  siny
+1
+;  
+2
+(J
+h
+(Y )) = 3  siny
+2
+;
+ 
+1
+(J
+g
+(X)) = 5 + cosx
+1
+;  
+2
+(J
+g
+(X)) = 5 + cosx
+2
+:
+Thus, with some elementary calculations, we obtain for i = 1; 2;
+ 
+f
+= 1  
+i
+(F (X;Y ))  4 =  
+f
+ 
+h
+= 2  
+i
+(J
+h
+(Y ))  4 =  
+h
+;
+ 
+g
+= 4  
+i
+(J
+g
+(X))  6 =  
+g
+:
+Also, 0 < a
+0
+= 1 < a(t) = 1 + exp
+ 8:5t
+< a
+1
+= 2 and 8:5   a
+0
+(t) =
+ 8:5 exp
+ 8:5t
+  0: Thus,
+  = 8:5> max
+ 
+a
+1
+ 
+h
+;
+a
+1
+ 
+h
+ 
+h
+ 
+f
+ 
+= maxf8; 4g = 8:
+Hence, all the assumptions of Theorem 1 hold and, the trivial solution of this
+example is uniform-asymptotically stable.
+The next example is when P (t;X;Y )6= 0:
+Example 2
+Suppose in addition to Example 1, we have
+P (t;X;Y ) =
+1
+4 + sint
+"
+jy
+1
+j 1
+1+x
+2
+1
+jy
+2
+j 1
+1+x
+2
+2
+#
+:
+Hence,
+kP (t;X;Y )k=j
+1
+4 + sint
+jk
+"
+jy
+1
+j 1
+1+x
+2
+1
+jy
+2
+j 1
+1+x
+2
+2
+#
+k
+ 
+1
+p
+5
+kYk:
+https://doi.org/10.21638/11701/spbu35.2023.304 Electronic Journal: http://diffjournal.spbu.ru/ 67Differential Equations and Control Processes, N. 3, 2023
+Therefore,
+0< =
+1
+p
+5
+<
+ 
+h
+ 
+f
+ 
+h
+=
+1
+2
+:
+Again, all the assumptions of Theorem 2 hold. Hence, solutions of equation in
+Example 2 are uniform-ultimately bounded.
+Graphically, with the aid of Maple software, we illustrate the stability and
+boundedness of solutions to the Example 2 as shown below.
+5 Conclusion
+By constructing a new and complete Lyapunov function, we have been able to
+prove some results on the uniform-asymptotic stability of the trivial solution
+and uniform-ultimate boundedness of all solutions to certain systems of second
+order differential equations studied in this paper. With these new results, we
+have improved on some of the existing results in the literature.
+Statements and Declarations
+There is no competing interests as regard this paper.
+ORCID
+Adeyanju, Adetunji Adedotun: https://orcid.org/0000-0002-9013-6002.
+Adams, Daniel Oluwasegun: https://orcid.org/0000-0002-4137-1858.
+References
+[1] T. A. Ademola, M. O. Ogundiran, P. O. Arawomo and O. A. Adesina,
+Boundedness results for a certain third order nonlinear differential equa-
+tions, Appl. Math. Comput. 216 (2010), 3044{3049.
+[2] A. A. Adeyanju, On uniform-ultimate boundedness and periodicity results
+of solutions to certain second order non-linear vector differential equa-
+tions, Proyecciones Journal of Mathematics, 42(3)(2023), 757-773. doi.
+10.22199/issn.0717-6279-5421
+https://doi.org/10.21638/11701/spbu35.2023.304 Electronic Journal: http://diffjournal.spbu.ru/ 68Differential Equations and Control Processes, N. 3, 2023
+[3] A. A. Adeyanju, Stability and Boundedness Criteria of Solutions of
+a Certain System of Second Order Differential Equations, ANNALI
+DELL'UNIVERSITA' DI FERRARA. 68(1)(2022),1-13.
+[4] A. A. Adeyanju and D. O. Adams, Some new results on the stability and
+boundedness of solutions of certain class of second order vector differential
+equations, International Journal of Mathematical Analysis and Optimiza-
+tion: Theory and Applications. 7 (2021), 108{115.
+[5] A. A. Adeyanju, Existence of a limiting regime in the sense of demidovic
+for a certain class of second order nonlinear vector differential equations,
+Journal of the Differential equations and control processes, no. 4 (2018),
+63-79.
+[6] A. U. Afuwape, Ultimate boundedness results for a certain system of third-
+order non-linear differential equations, J. Math. Anal. Appl. 97 (1983),
+140{150.
+[7] A. U. Afuwape and M. O. Omeike, Further ultimate boundedness of solu-
+tions of some system of third order nonlinear ordinary differential equa-
+tions, Acta Univ. Palack. Olomuc. Fac. Rerum Natur Math. 43 (2004),
+7{20.
+[8] E. N. Chukwu, On the boundedness of solutions of third-order differential
+equations, Ann. Mat. Pura Appl. 4 (1975), 123{149.
+[9] J. O. C. Ezeilo and H. O. Tejumola, Boundedness and periodicity of so-
+lutions of a certain system of third-order non-linear differential equations,
+Ann. Mat. Pura Appl. 66 (1964), 283{316.
+[10] J. O. C. Ezeilo and H. O. Tejumola, Further results for a system of third
+order ordinary differential equations, Atti Accad. Naz. Lincei Rend. Cl. Sci.
+Fis. Mat. Natur. 58 (1975) 143{151.
+[11] Ezeilo, J.O.C.: On the existence of almost periodic solutions of some dis-
+sipative second order differential equations. Ann. Mat. Pura Appl. 65(4),
+(1964) 389-406, .
+[12] A. M. Lyapunov, Problem  e g  en  eral de la stabilit  e du movement. Reprinted
+in Annals of Mathematical Studies no. 17, Princeton University Press
+Princeton, N.J. (Russian Edition 1892) (1949).
+https://doi.org/10.21638/11701/spbu35.2023.304 Electronic Journal: http://diffjournal.spbu.ru/ 69Differential Equations and Control Processes, N. 3, 2023
+[13] F. W. Meng, Ultimate boundedness results for a certain system of third
+order nonlinear differential equations, J. Math. Anal. Appl. 177 (1993),
+496{509.
+[14] M. O. Omeike, A. A. Adeyanju, D. O. Adams and A. L. Olutimo, Bound-
+edness of certain system of second order differential equations, Kragujevac
+Journal of Mathematics. 45 (2021), 787{796.
+[15] M. O. Omeike, O. O. Oyetunde and A. L. Olutimo, Boundedness of solu-
+tions of certain system of second-order ordinary differential equations, Acta
+Univ. Palack. Olomuc. Fac. Rerum. Natur. Math. 53 (2014), 107{115.
+[16] M. R. Rao, Ordinary Differential Equations, A liated East-West Private
+Limited, London, 1980.
+[17] R. Reissig, G. Sansone and R. Conti, Nonlinear Differential Equations of
+Higher Order, Noordhoff, Groninge, 1974.
+[18] H. O. Tejumola, Boundedness criteria for solutions of some second-order
+differential equations, Accademia Nazionale Dei Lincei Serie VII 50(4)
+(1971), 204{209.
+[19] H. O. Tejumola, Boundedness theorems for some systems of two differential
+equations, Atti. Accad. Naz. Lincei Rend. Cl. Sci. Fis. Mat. Natur. 51(6)
+(1971), 472{476.
+[20] C. Tunc, On the stability and boundedness of solutions of nonlinear vector
+differential equations of third-order, Nonlinear Anal. 70(6) (2009), 2232{
+2236.
+[21] C. Tunc, Boundedness of solutions of certain third-order nonlinear differ-
+ential equations, J. Inequal. Appl. Math. 6(1) (2005), 1{6.
+[22] C. Tunc and M. Ates, Stability and boundedness results for solutions of
+certain third-order nonlinear vector differential equations, Nonlinear Dyn.
+45(3-4) (2006), 273{281.
+[23] T. Yoshizawa, Stability Theory by Lyapunov's Second Method, Publications
+of the Mathematical Society of Japan, Tokyo, 1966.
+https://doi.org/10.21638/11701/spbu35.2023.304 Electronic Journal: http://diffjournal.spbu.ru/ 70
