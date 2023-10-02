@@ -200,6 +200,146 @@
             <author ref="n_2023_10_adams" sort-key="2" />
         </authors>
     </article>
-    
+
+    <article>
+        <articleInfo lang="EN" FirstPage="71" LastPage="98">
+            <pdf>23305-jdecp-krivovichev.pdf</pdf>
+            <abstract>The paper is devoted to the construction and analysis of implicit finite-difference schemes
+                for a system of one-dimensional equations of hemodynamics. The schemes are based on
+                the use of finite differences, which approximate spatial derivative with the fourth order.
+                The schemes are based on the splitting on physical processes. According to this approach,
+                at one time step, two mechanical processes are considered: the deformation of the vessel
+                filled with fluid and the fluid flow in the deformed vessel. This approach makes it possible
+                to separately consider finite-difference schemes, which approximate governing equations.
+                In the practical implementation of the proposed schemes, they are reduced to systems of
+                linear algebraic equations with pentadiagonal matrices.
+                The stability analysis of constructed schemes is based on the von Neumann method and
+                the principle of frozen coefficients. In the numerical solution of problems with known
+                analytical solutions, it is demonstrated that the schemes lead to numerical solutions with a
+                fourth-order convergence rate. In the computational experiments on simulation of blood flow
+                in model vascular systems, it is demonstrated that the developed schemes make it possible
+                to perform calculations in much less time than well-known explicit finite-difference and
+                finite-volume schemes.</abstract>
+            <title>Implicit Finite-difference Schemes for Equations of One-dimensional Hemodynamics</title>
+            <keywords>
+                <word>finite-difference schemes</word>
+                <word>hemodynamics</word>
+                <word>one-dimensional models</word>
+                <word>splitting method</word>
+                <word>stability</word>
+            </keywords>
+            <references>
+                <reference>Quarteroni A., Manzoni A., Vergara C. The cardiovascular system: mathematical modelling, numerical algorithms and clinical applications. &lt;em&gt;Acta Numerica&lt;/em&gt;, 2017; (26): 365-590</reference>
+                <reference>Audebert C., Bucur C., Bekheit M., Vibert E., Vignon-Clementel I., Gerbeau J. Kinetic scheme for arterial and venous blood flow, and application to partial hepatectomy modeling. &lt;em&gt;Computer Methods in Applied Mechanics and Engineering&lt;/em&gt;, 2017; (314): 102-125</reference>
+                <reference>Marchandise E., Willemet M., Lacroix V. A numerical hemodynamic tool for predictive vascular surgery. &lt;em&gt;Medical Engineering and Physics&lt;/em&gt;, 2009; (31): 131-144</reference>
+                <reference>Toro E. F. Brain venous haemodynamics, neurological diseases and mathematical modelling: a review. &lt;em&gt;Applied Mathematics and Computation&lt;/em&gt;, 2015; (272): 542-579</reference>
+                <reference>Dobroserdova T., Liang F., Panasenko G., Vassilevski Y. Multiscale models of blood flow in the compliant aortic bifurcation. &lt;em&gt;Applied Mathematics Letters&lt;/em&gt;, 2019: (93): 98-104</reference>
+                <reference>Xiao N., Alastruey J., Figueroa C. A systematic comparison between 1-D and 3-D hemodynamics in compliant arterial models. &lt;em&gt;International Journal for Numerical Methods in Biomedical Engineering&lt;/em&gt;, 2014; (30): 203-231</reference>
+                <reference>Delestre O., Lagree P. -Y. A 'well-balanced' finite volume scheme for blood flow simulation. &lt;em&gt;International Journal for Numerical Methods in Fluids&lt;/em&gt;, 2013; (72): 177-205</reference>
+                <reference>Delestre O., Ghigo A. R., Fullana J. -M., Lagree P. -Y. A shallow water with variable pressure model for blood flow simulation. &lt;em&gt;Networks and Heterogeneous Media&lt;/em&gt;, 2016; (11), no. 1: 69-87</reference>
+                <reference>Ghigo A. R., Delestre O., Fullana J. -M., Lagree P. -Y. Low-Shapiro hydrostatic reconstruction technique for blood flow simulation in large arteries with varying geometrical and mechanical properties. &lt;em&gt;Journal of Computational Physics&lt;/em&gt;, 2017; (331): 108-136</reference>
+                <reference>Cavallini N., Caleffi V., Coscia V. Finite volume and WENO scheme in one-dimensional vascular system modelling. &lt;em&gt;Computers and Mathematics with Applications&lt;/em&gt;, 2008; (56), no. 9: 2382-2397</reference>
+                <reference>Huang P. G., Muller L. O. Simulation of one-dimensional blood flow in networks of human vessels using a novel {TVD} scheme. &lt;em&gt;International Journal for Numerical Methods in Biomedical Engineering&lt;/em&gt;, 2015; (31), no. 1: e02701</reference>
+                <reference>Wang X., Fullana J. -M., Lagree P. -Y. Verification and comparison of four numerical schemes for a {1D} viscoelastic blood flow model. &lt;em&gt;Computer Methods in Biomechanics and Biomedical Engineering&lt;/em&gt;, 2015; (18): 1704-1725</reference>
+                <reference>Bessems D., Rutten M., van de Vosse F. A wave propagation model of blood flow in large vessels using an approximate velocity profile function. &lt;em&gt;Journal of Fluid Mechanics&lt;/em&gt;, 2007; (580): 145-168</reference>
+                <reference>Malossi A. C. I., Blanco P. J., Deparis S. A two-level time step technique for the partitioned solution of one-dimensional arterial networks. &lt;em&gt;Computer Methods in Applied Mechanics and Engineering&lt;/em&gt;, 2012; (237-240): 212-226</reference>
+                <reference>Melicher V., Gajdosik V. A numerical solution of a one-dimensional blood flow model - moving grid approach. &lt;em&gt;Journal of Computational and Applied Mathematics&lt;/em&gt;, 2008; (215), no. 2: 512-520</reference>
+                <reference>Sherwin S. J., Formaggia L., Peiro J., Franke V. Computational modelling of {1D} blood flow with variable mechanical properties and its application to the simulation of wave propagation in the human arterial system. &lt;em&gt;International Journal for Numerical Methods in Fluids&lt;/em&gt;, 2003; (43): 673-700</reference>
+                <reference>Elad D., Katz D., Kimmel E., Einav S. Numerical schemes for unsteady fluid flow through collapsible tubes. &lt;em&gt;Journal of Biomedical Engineering&lt;/em&gt;, 1991; (13), no. 1: 10-18</reference>
+                <reference>Smith N. P., Pullan A. J., Hunter P. J. An anatomically based model of transient coronary blood flow in the heart. &lt;em&gt;SIAM Journal on Applied Mathematics&lt;/em&gt;, 2002; (62): 990-1018</reference>
+                <reference>Duanmu Z., Chen W., Gao H., Yang X., Luo X., Hill N. A. A one-dimensional hemodynamic model of the coronary arterial tree. &lt;em&gt;Frontiers in Physiology&lt;/em&gt;, 2019; (10): 853</reference>
+                <reference>Olufsen M. S., Peskin C. S., Kim W. Y., Pedersen E. M., Nadim A., Larsen J. Numerical simulation and experimental validation of blood flow in arteries with structured-tree outflow conditions. &lt;em&gt;Annals of Biomedical Engineering&lt;/em&gt;, 2000; (28): 1281-1299</reference>
+                <reference>Saito M., Ikenaga Y., Matsukawa M., Watanabe Y., Asada T., Lagree P. -Y. One-dimensional model for propagation of a pressure wave in a model of the human arterial network: comparison of theoretical and experimental results. &lt;em&gt;Journal of Biomechanical Engineering&lt;/em&gt;, 2011; (133): 121005</reference>
+                <reference>Azer K., Peskin C. S. A one-dimensional model of blood flow in arteries with friction and convection based on the Womersley velocity profile. &lt;em&gt;Cardiovascular Engineering&lt;/em&gt;, 2007; (7): 51-73</reference>
+                <reference>Diem A. K., Bressloff N. M. VaMpy: A Python package to solve 1D blood flow problems. &lt;em&gt;Journal of Open Research Software&lt;/em&gt;, 2017; (5): 17</reference>
+                <reference>Huo Y., Kassab G. S. A hybrid one-dimensional/Womersley model of pulsatile blood flow in the entire coronary arterial tree. &lt;em&gt;American Journal of Physiology-Heart and Circulatory Physiology&lt;/em&gt;, 2007; (292), no. 6: H2623-H2633</reference>
+                <reference>Watanabe S. M., Blanco P. J., Feijoo R. A. Mathematical model of blood flow in an anatomically detailed arterial network of the arm. &lt;em&gt;ESAIM: M2AN&lt;/em&gt;, 2013; (47), no. 4: 961-985</reference>
+                <reference>Carson J., van Loon R. An implicit solver for {1D} arterial network models. &lt;em&gt;International Journal for Numerical Methods in Biomedical Engineering&lt;/em&gt;, 2017; (33), no. 7: e2837</reference>
+                <reference>Caro C. J., Pedley T. J., Schroter R. C., Seed W. A. The mechanics of the circulation. Cambridge: Cambridge University press, 2012. 527 p</reference>
+                <reference>Formaggia L., Lamponi D., Quarteroni A. One-dimensional models for blood flow in arteries. &lt;em&gt;Journal of Engineering Mathematics&lt;/em&gt;, 2003; (47): 251-276</reference>
+                <reference>Ghigo A. R., Lagree P. -Y., Fullana J. -M. A time-dependent non-{Newtonian} extension of a 1D blood flow model. &lt;em&gt;Journal of Non-Newtonian Fluid Mechanics&lt;/em&gt;, 2018; (253): 36-49</reference>
+                <reference>Puelz C., Canic S., Riviere B., Rusin C. G. Comparison of reduced models for blood flow using Runge-Kutta discontinuous Galerkin methods. &lt;em&gt;Applied Numerical Mathematics&lt;/em&gt;, 2017; (115): 114-141</reference>
+                <reference>Krivovichev G. V. Computational analysis of one-dimensional models for simulation of blood flow in vascular networks. &lt;em&gt;Journal of Computational Science&lt;/em&gt;, 2022; (62): 101705</reference>
+                <reference>Britton J., Xing Y. Well-balanced discontinuous Galerkin methods for the one-dimensional blood flow through arteries model with man-at-eternal-rest and living-man equilibria. &lt;em&gt;Computers and Fluids&lt;/em&gt;, 2020; (203): 104493</reference>
+                <reference>Sheng W., Zheng Q., Zheng Y. The Riemann problem for a blood flow model in arteries. &lt;em&gt;Communications in Computational Physics&lt;/em&gt;, 2020; (27): 227-250</reference>
+                <reference>Toro E. F., Siviglia A. Flow in collapsible tubes with discontinuous mechanical properties: Mathematical model and exact solutions. &lt;em&gt;Communications in Computational Physics&lt;/em&gt;, 2013; (13): 361-385</reference>
+                <reference>Spiller C., Toro E. F., Vazquez-Cendon M. E., Contarino C. On the exact solution of the Riemann problem for blood flow in human veins, including collapse. &lt;em&gt;Applied Mathematics and Computation&lt;/em&gt;, 2017; (303): 178-189</reference>
+                <reference>Yanenko N. N. &lt;em&gt;Metod drobnyh shagov resheniia mnogomernyh zadach matematicheskoi fiziki &lt;/em&gt;[Method of fractional steps for solution of multidimensional problems of mathematical physics]. Novosibirsk, Nauka Publ., 1967. 196 p</reference>
+                <reference>Samarskii A. A., Nikolaev E. S. &lt;em&gt;Metody resheniia setochnyh uravnenii &lt;/em&gt;[Methods of solution of grid equations]. Moscow, Nauka Publ., 1978. 595 p</reference>
+                <reference>Richtmyer R. D., Morton K. W. Difference Methods for Initial-Value Problems. Florida, Krieger Publishing, 1967. 420 p</reference>
+                <reference>Samarskii A. A., Gulin A. V. &lt;em&gt;Ustoichivost’ raznostnyh shem &lt;/em&gt;[Stability of difference schemes]. Moscow, Nauka Publ., 1973. 415 p</reference>
+                <reference>Bakhvalov N. S., Zhidkov N. P., Kobel’kov G. M. &lt;em&gt;Chislennye metody &lt;/em&gt;[Numerical methods]. Moscow, Laboratoriia znanii Publ., 2020. 636 p</reference>
+                <reference>Boileau E., Nithiarasu P., Blanco P. J., Muller L. O., Fossan F. E., Hellevik L. R., Donders W. ~P., Huberts W., Willemet M., Alastruey J. A benchmark study of numerical schemes for one-dimensional arterial blood flow modeling. &lt;em&gt;International Journal for Numerical Methods in Biomedical Engineering&lt;/em&gt;, 2015; (31): 1-33</reference>
+                <reference>Magomedov K. M., Kholodov A. S. &lt;em&gt;Setochno-harakteristicheskie metody &lt;/em&gt;[Grid-characteristic methods]. Moscow, Urait Publ., 2018. 314 p</reference>
+                <reference>Hedstrom G. W. Nonreflecting boundary conditions for nonlinear hyperbolic systems. &lt;em&gt;Journal of Computational Physics&lt;/em&gt;, 1979; (30), no. 2: 222-237</reference>
+                <reference>Xiu D., Sherwin S. J. Parametric uncertainty analysis of pulse wave propagation in a model of a human arterial network. &lt;em&gt;Journal of Computational Physics&lt;/em&gt;, 2007; (226), no. 2: 1385-1407</reference>
+                <reference>Razavi M. S., Shirani E. Development of a general methods for designing microvascular networks using distribution of wall shear stress. &lt;em&gt;Journal of Biomechanics&lt;/em&gt;, 2013; (46): 2303-2309</reference>
+            </references>
+        </articleInfo>
+        <articleInfo lang="RU" FirstPage="71" LastPage="98">
+            <pdf>23305-jdecp-krivovichev.pdf</pdf>
+            <abstract>Работа посвящена построению и анализу неявных конечно-разностных схем для системы одномерных уравнений гемодинамики. Схемы строятся на основе конечных разностей, аппроксимирующих с четвертым порядком производную по пространственной переменной. Схемы основаны на методе расщепления по физическим процессам, в рамках которого на одном шаге по времени рассматривается процесс деформации сосуда, заполненного жидкостью, а затем вычисляется скорость потока в деформированном сосуде. Такой подход позволяет раздельно применять разностные схемы, аппроксимирующие уравнения системы. При практической реализации разностных схем они сводятся к решению систем линейных алгебраических уравнений с пятидиагональными матрицами. 
+                Анализ устойчивости построенных схем производится с помощью метода фон Неймана и принципа замороженных коэффициентов. При численном решении задач с известными аналитическими решениями показано, что схемы позволяют получать численные решения, сходящиеся с четвертым порядком по пространству. При проведении вычислительных экспериментов по моделированию кровотока в модельных сосудистых системах показано, что разработанные схемы позволяют производить расчеты за меньшее время, чем известные из литературы явные конечно-разностные и конечно-объемные схемы.</abstract>
+            <title>Неявные разностные схемы для одномерных уравнений гемодинамики</title>
+            <keywords>
+                <word>гемодинамика</word>
+                <word>метод расщепления</word>
+                <word>одномерные модели</word>
+                <word>разностные схемы</word>
+                <word>устойчивость</word>
+            </keywords>
+            <references>
+                <reference>Quarteroni A., Manzoni A., Vergara C. The cardiovascular system: mathematical modelling, numerical algorithms and clinical applications. &lt;em&gt;Acta Numerica&lt;/em&gt;, 2017; (26): 365-590</reference>
+                <reference>Audebert C., Bucur C., Bekheit M., Vibert E., Vignon-Clementel I., Gerbeau J. Kinetic scheme for arterial and venous blood flow, and application to partial hepatectomy modeling. &lt;em&gt;Computer Methods in Applied Mechanics and Engineering&lt;/em&gt;, 2017; (314): 102-125</reference>
+                <reference>Marchandise E., Willemet M., Lacroix V. A numerical hemodynamic tool for predictive vascular surgery. &lt;em&gt;Medical Engineering and Physics&lt;/em&gt;, 2009; (31): 131-144</reference>
+                <reference>Toro E. F. Brain venous haemodynamics, neurological diseases and mathematical modelling: a review. &lt;em&gt;Applied Mathematics and Computation&lt;/em&gt;, 2015; (272): 542-579</reference>
+                <reference>Dobroserdova T., Liang F., Panasenko G., Vassilevski Y. Multiscale models of blood flow in the compliant aortic bifurcation. &lt;em&gt;Applied Mathematics Letters&lt;/em&gt;, 2019: (93): 98-104</reference>
+                <reference>Xiao N., Alastruey J., Figueroa C. A systematic comparison between 1-D and 3-D hemodynamics in compliant arterial models. &lt;em&gt;International Journal for Numerical Methods in Biomedical Engineering&lt;/em&gt;, 2014; (30): 203-231</reference>
+                <reference>Delestre O., Lagree P. -Y. A 'well-balanced' finite volume scheme for blood flow simulation. &lt;em&gt;International Journal for Numerical Methods in Fluids&lt;/em&gt;, 2013; (72): 177-205</reference>
+                <reference>Delestre O., Ghigo A. R., Fullana J. -M., Lagree P. -Y. A shallow water with variable pressure model for blood flow simulation. &lt;em&gt;Networks and Heterogeneous Media&lt;/em&gt;, 2016; (11), no. 1: 69-87</reference>
+                <reference>Ghigo A. R., Delestre O., Fullana J. -M., Lagree P. -Y. Low-Shapiro hydrostatic reconstruction technique for blood flow simulation in large arteries with varying geometrical and mechanical properties. &lt;em&gt;Journal of Computational Physics&lt;/em&gt;, 2017; (331): 108-136</reference>
+                <reference>Cavallini N., Caleffi V., Coscia V. Finite volume and WENO scheme in one-dimensional vascular system modelling. &lt;em&gt;Computers and Mathematics with Applications&lt;/em&gt;, 2008; (56), no. 9: 2382-2397</reference>
+                <reference>Huang P. G., Muller L. O. Simulation of one-dimensional blood flow in networks of human vessels using a novel {TVD} scheme. &lt;em&gt;International Journal for Numerical Methods in Biomedical Engineering&lt;/em&gt;, 2015; (31), no. 1: e02701</reference>
+                <reference>Wang X., Fullana J. -M., Lagree P. -Y. Verification and comparison of four numerical schemes for a {1D} viscoelastic blood flow model. &lt;em&gt;Computer Methods in Biomechanics and Biomedical Engineering&lt;/em&gt;, 2015; (18): 1704-1725</reference>
+                <reference>Bessems D., Rutten M., van de Vosse F. A wave propagation model of blood flow in large vessels using an approximate velocity profile function. &lt;em&gt;Journal of Fluid Mechanics&lt;/em&gt;, 2007; (580): 145-168</reference>
+                <reference>Malossi A. C. I., Blanco P. J., Deparis S. A two-level time step technique for the partitioned solution of one-dimensional arterial networks. &lt;em&gt;Computer Methods in Applied Mechanics and Engineering&lt;/em&gt;, 2012; (237-240): 212-226</reference>
+                <reference>Melicher V., Gajdosik V. A numerical solution of a one-dimensional blood flow model - moving grid approach. &lt;em&gt;Journal of Computational and Applied Mathematics&lt;/em&gt;, 2008; (215), no. 2: 512-520</reference>
+                <reference>Sherwin S. J., Formaggia L., Peiro J., Franke V. Computational modelling of {1D} blood flow with variable mechanical properties and its application to the simulation of wave propagation in the human arterial system. &lt;em&gt;International Journal for Numerical Methods in Fluids&lt;/em&gt;, 2003; (43): 673-700</reference>
+                <reference>Elad D., Katz D., Kimmel E., Einav S. Numerical schemes for unsteady fluid flow through collapsible tubes. &lt;em&gt;Journal of Biomedical Engineering&lt;/em&gt;, 1991; (13), no. 1: 10-18</reference>
+                <reference>Smith N. P., Pullan A. J., Hunter P. J. An anatomically based model of transient coronary blood flow in the heart. &lt;em&gt;SIAM Journal on Applied Mathematics&lt;/em&gt;, 2002; (62): 990-1018</reference>
+                <reference>Duanmu Z., Chen W., Gao H., Yang X., Luo X., Hill N. A. A one-dimensional hemodynamic model of the coronary arterial tree. &lt;em&gt;Frontiers in Physiology&lt;/em&gt;, 2019; (10): 853</reference>
+                <reference>Olufsen M. S., Peskin C. S., Kim W. Y., Pedersen E. M., Nadim A., Larsen J. Numerical simulation and experimental validation of blood flow in arteries with structured-tree outflow conditions. &lt;em&gt;Annals of Biomedical Engineering&lt;/em&gt;, 2000; (28): 1281-1299</reference>
+                <reference>Saito M., Ikenaga Y., Matsukawa M., Watanabe Y., Asada T., Lagree P. -Y. One-dimensional model for propagation of a pressure wave in a model of the human arterial network: comparison of theoretical and experimental results. &lt;em&gt;Journal of Biomechanical Engineering&lt;/em&gt;, 2011; (133): 121005</reference>
+                <reference>Azer K., Peskin C. S. A one-dimensional model of blood flow in arteries with friction and convection based on the Womersley velocity profile. &lt;em&gt;Cardiovascular Engineering&lt;/em&gt;, 2007; (7): 51-73</reference>
+                <reference>Diem A. K., Bressloff N. M. VaMpy: A Python package to solve 1D blood flow problems. &lt;em&gt;Journal of Open Research Software&lt;/em&gt;, 2017; (5): 17</reference>
+                <reference>Huo Y., Kassab G. S. A hybrid one-dimensional/Womersley model of pulsatile blood flow in the entire coronary arterial tree. &lt;em&gt;American Journal of Physiology-Heart and Circulatory Physiology&lt;/em&gt;, 2007; (292), no. 6: H2623-H2633</reference>
+                <reference>Watanabe S. M., Blanco P. J., Feijoo R. A. Mathematical model of blood flow in an anatomically detailed arterial network of the arm. &lt;em&gt;ESAIM: M2AN&lt;/em&gt;, 2013; (47), no. 4: 961-985</reference>
+                <reference>Carson J., van Loon R. An implicit solver for {1D} arterial network models. &lt;em&gt;International Journal for Numerical Methods in Biomedical Engineering&lt;/em&gt;, 2017; (33), no. 7: e2837</reference>
+                <reference>Каро К., Педли Т., Шротер Р., Сид У. Механика кровообращения. М. : Мир, 1981. 624 с</reference>
+                <reference>Formaggia L., Lamponi D., Quarteroni A. One-dimensional models for blood flow in arteries. &lt;em&gt;Journal of Engineering Mathematics&lt;/em&gt;, 2003; (47): 251-276</reference>
+                <reference>Ghigo A. R., Lagree P. -Y., Fullana J. -M. A time-dependent non-{Newtonian} extension of a 1D blood flow model. &lt;em&gt;Journal of Non-Newtonian Fluid Mechanics&lt;/em&gt;, 2018; (253): 36-49</reference>
+                <reference>Puelz C., Canic S., Riviere B., Rusin C. G. Comparison of reduced models for blood flow using Runge-Kutta discontinuous Galerkin methods. &lt;em&gt;Applied Numerical Mathematics&lt;/em&gt;, 2017; (115): 114-141</reference>
+                <reference>Krivovichev G. V. Computational analysis of one-dimensional models for simulation of blood flow in vascular networks. &lt;em&gt;Journal of Computational Science&lt;/em&gt;, 2022; (62): 101705</reference>
+                <reference>Britton J., Xing Y. Well-balanced discontinuous Galerkin methods for the one-dimensional blood flow through arteries model with man-at-eternal-rest and living-man equilibria. &lt;em&gt;Computers and Fluids&lt;/em&gt;, 2020; (203): 104493</reference>
+                <reference>Sheng W., Zheng Q., Zheng Y. The Riemann problem for a blood flow model in arteries. &lt;em&gt;Communications in Computational Physics&lt;/em&gt;, 2020; (27): 227-250</reference>
+                <reference>Toro E. F., Siviglia A. Flow in collapsible tubes with discontinuous mechanical properties: Mathematical model and exact solutions. &lt;em&gt;Communications in Computational Physics&lt;/em&gt;, 2013; (13): 361-385</reference>
+                <reference>Spiller C., Toro E. F., Vazquez-Cendon M. E., Contarino C. On the exact solution of the Riemann problem for blood flow in human veins, including collapse. &lt;em&gt;Applied Mathematics and Computation&lt;/em&gt;, 2017; (303): 178-189</reference>
+                <reference>Яненко Н. Н. Метод дробных шагов решения многомерных задач математической физики. Новосибирск: Наука, 1967. 196 с</reference>
+                <reference>Самарский А. А., Николаев Е. С. Методы решения сеточных уравнений. М. : Наука, 1978. 592 с</reference>
+                <reference>Richtmyer R. D., Morton K. W. Difference Methods for Initial-Value Problems. Florida, Krieger Publishing, 1967. 420 p</reference>
+                <reference>Самарский А. А., Гулин А. В. Устойчивость разностных схем. М. : Наука, 1973. 415 с</reference>
+                <reference>Бахвалов Н. С., Жидков Н. П.. Кобельков Г. М. Численные методы. М. : Лаборатория знаний, 2020. 636 с</reference>
+                <reference>Boileau E., Nithiarasu P., Blanco P. J., Muller L. O., Fossan F. E., Hellevik L. R., Donders W. ~P., Huberts W., Willemet M., Alastruey J. A benchmark study of numerical schemes for one-dimensional arterial blood flow modeling. &lt;em&gt;International Journal for Numerical Methods in Biomedical Engineering&lt;/em&gt;, 2015; (31): 1-33</reference>
+                <reference>Магомедов К. М., Холодов А. С. Сеточно-характеристические численные методы. М. : Юрайт, 2018. 314 с</reference>
+                <reference>Hedstrom G. W. Nonreflecting boundary conditions for nonlinear hyperbolic systems. &lt;em&gt;Journal of Computational Physics&lt;/em&gt;, 1979; (30), no. 2: 222-237</reference>
+                <reference>Xiu D., Sherwin S. J. Parametric uncertainty analysis of pulse wave propagation in a model of a human arterial network. &lt;em&gt;Journal of Computational Physics&lt;/em&gt;, 2007; (226), no. 2: 1385-1407</reference>
+                <reference>Razavi M. S., Shirani E. Development of a general methods for designing microvascular networks using distribution of wall shear stress. &lt;em&gt;Journal of Biomechanics&lt;/em&gt;, 2013; (46): 2303-2309</reference>
+            </references>
+        </articleInfo>
+        <authors>
+            <author ref="n_2023_10_krivovichev" sort-key="1" />
+            <author ref="n_2023_10_egorov" sort-key="2" />
+        </authors>
+    </article>
     
 </number>
