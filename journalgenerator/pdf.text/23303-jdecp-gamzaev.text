@@ -1,0 +1,1226 @@
+﻿DIFFERENTIAL EQUATIONS 
+AND 
+CONTROL PROCESSES 
+N. 3, 2023 
+Electronic Journal, 
+reg. № ФС77-39410 at 15.04.2010 
+ISSN 1817-2172 
+ 
+http://diffjournal.spbu.ru/ 
+e-mail: jodiff@mail.ru 
+ 
+ 
+ 
+Numerical methods 
+ 
+Numerical identification of the dependence of the right side of the 
+wave equation on the spatial variable   
+ 
+Gamzaev Kh. M. 
+ 
+Azerbaijan   State Oil and Industry University 
+ 
+xan.h@rambler.ru 
+ 
+Abstract. The problem of identifying the multiplier of the right side of a one-dimensional wave 
+equation depending on a spatial variable is considered. As additional information, the condition of 
+the final redefinition is set. A discrete analogue of the inverse problem is constructed using the 
+finite difference method. To solve the resulting difference problem, a special representation is 
+proposed, with the help of which the difference problem splits into two independent difference 
+problems. As a result, an explicit formula is obtained for determining the approximate value of the 
+desired function for each discrete value of a spatial variable. The presented results of numerical 
+experiments conducted for model problems demonstrate the effectiveness of the proposed 
+computational algorithm. 
+ 
+ 
+Keywords: wave equation, identification of the right side of the wave equation, inverse problem, 
+final redefinition, difference problem. 
+ 
+ 
+ 
+1. Introduction 
+ 
+   It is known that inverse problems of determining the right-hand sides of wave equations arise in the 
+mathematical modeling of many physical processes in geophysics, seismics, electrodynamics, 
+thermophysics, medicine and many other fields of science and technology [1-4]. In these inverse 
+problems, in addition to solving the wave equation, it is necessary to determine the dependence of the right 
+parts on time or on spatial coordinates. Usually, when considering the problems of identifying the right-
+hand sides of partial differential equations, two independent tasks are distinguished: identification of 
+dependence on time and identification of dependence on a spatial variable. Most publications devoted to Differential equations and control processes, N. 3, 2023 
+ 
+https://doi.org/10.21638/11701/spbu35.2023.303        Electronic Journal: http://diffjournal.spbu.ru      52 
+the problems of identifying the right-hand sides of wave equations mainly consider the case when the 
+right-hand side depends on time and investigate the issues of correctness, existence, unambiguous 
+solvability of problems, etc. [5-11]. 
+    In this paper, we propose a numerical method for solving problems of identifying the right-hand 
+sides of wave equations, in cases where the dependence of the right-hand side on a spatial variable is 
+unknown. 
+ 
+2.  Problem statement and solution method  
+Let a one- dimensional wave equation be considered 
+ 
+) , ( ) ( )
+) , (
+) ( (
+) , (
+2
+2
+t x f x p
+x
+t x u
+x k
+x t
+t x u
+
+
+
+
+
+
+
+
+,          T t x     0 , 1 0 ,   
+  (1) 
+ 
+with the following initial 
+ 
+) ( ) 0 , ( x x u   ,    (2) 
+) (
+) 0 , (
+x
+t
+x u
+ 
+
+
+,  
+ 
+(3)
+ 
+and boundary conditions 
+ 
+) ( ) , 0 ( t q t u  ,         (4) 
+) ( ) , 1 ( t v t u  .      (5) 
+  It is known that the direct problem for equation (1) consists in determining a function ) , ( t x u
+ 
+from 
+equation (1) with a given coefficient ) (x k , the right side ) , ( ) ( t x f x p
+  
+and conditions (2)–(5). 
+   Suppose that in addition  to the function  ) , ( t x u ,  the function ) (x p
+ 
+is also unknown and it is 
+required to restore this function according to the following condition of the final redefinition 
+  
+) ( ) , ( x r T x u  ,     (6) 
+where ) (x r is the given function.  
+   Thus, the task  is to determine the functions ) , ( t x u and ) (x p satisfying equation  (1) and conditions 
+(2) – (6). It should be noted that the mathematical description of the action of external forces in wave 
+processes can always be reduced to a representation ) , ( ) ( t x f x p (in particular cases it may be 
+const t x f  ) , ( ). At the same time, the separation of the function ) , ( t x f in time and space is not 
+considered necessary. 
+    The problem belongs to the class of inverse problems associated with the restoration of the right 
+parts of partial differential equations. We assume that the formulated inverse problem (1)–(6) is uniquely 
+solvable. Note that the unique solvability of this class of problems was studied in detail in [12–14]. 
+   To solve the problem (1)–(6), we first construct its discrete analogue using the finite difference 
+method. We introduce a uniform difference grid  
+  m j n i t j t x i x t x
+j i j i
+... , 2 , 1 , 0 , ,... 2 , 1 , 0 , , : ) , (        
+ 
+in the  rectangular area      T t x     0 , 1 0  with  the increment n x / 1  
+ 
+of  the variable x
+ 
+and  
+the increment  m T t /  
+ 
+of the time t . To equation (1) in the inner nodes of the grid   , we will match 
+an implicit difference scheme Differential equations and control processes, N. 3, 2023 
+ 
+https://doi.org/10.21638/11701/spbu35.2023.303        Electronic Journal: http://diffjournal.spbu.ru      53 
+,
+1 2
+1
+1
+1
+1
+2 / 1
+1 1
+1
+2 / 1
+2
+1 1
+
+
+
+
+
+ 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+j
+i i
+j
+i
+j
+i
+i
+j
+i
+j
+i
+i
+j
+i
+j
+i
+j
+i
+f p
+x
+u u
+k
+x
+u u
+k
+x
+t
+u u u
+   
+  (7) 
+1 , 1   n i ,   1 , 1   m j . 
+ 
+ 
+The difference analogs of the initial conditions (2), (3) and boundary conditions (4), (5) are written as   
+ 
+i i
+u  
+0
+,     
+ 
+(8)
+ 
+i
+i i
+t
+u u
+ 
+
+
+0 1
+, 
+(9) 
+1 1
+0
+ 
+
+j j
+q u ,      
+(10) 
+ 
+1 1  
+
+j j
+n
+v u ,     
+(11) 
+ 
+where   ), ( ), ( ), ( ), ( ), , (
+1
+1
+1
+1
+i i j
+j
+j
+j
+i j i
+j
+i
+x t v v t q q x p p t x u u
+i
+      
+
+
+
+
+ 
+) (
+i i
+x    ,
+) 2 / ( ), , (
+2 / 1 1
+1
+x x k k t x f f
+i i j i
+j
+i
+   
+ 
+
+. 
+ 
+The difference analogue of the final redefinition condition (6) is represented as 
+ 
+,
+i
+m
+i
+r u 
+      
+, ., . . , 2 , 1 , 0 n i 
+ 
+ 
+(12) 
+where   ) (
+i i
+x r r  . 
+  The constructed difference problem  (7)–(12)  is a system of  linear algebraic equations in which the 
+approximate values of the desired functions ) , ( t x u and  ) (x p
+ 
+in the nodes of the difference grid  
+ 
+act as 
+unknowns, i.e. 
+i
+j
+i
+p u , , n i ., . . , 2 , 1 , 0  ,   m j ., . . . , 2 , 1 , 0  .     
+    To split the system of difference equations (6)-(12) into mutually independent subsystems, each of 
+which can be solved independently, the solution of this system for each fixed value m j ., . . . , 2 , 1 , 0 
+  
+is 
+represented as [15–17] 
+ 
+,
+j
+i i
+j
+i
+j
+i
+p w u   
+          
+, ., . . , 2 , 1 , 0 n i 
+                         
+ 
+(13) 
+where  
+j
+i
+j
+i
+w  ,
+ 
+are unknown variables. Substituting the expression  
+j
+i
+u into equation (7), we obtain 
+ 
+
+
+    
+   
+2
+1 1 1 1
+2 2
+t
+p w p w p w
+j
+i i
+j
+i
+j
+i i
+j
+i
+j
+i i
+j
+i
+  
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+ 
+
+
+ 
+
+  
+ 
+
+
+
+x
+p w p w
+k
+x
+p w p w
+k
+x
+j
+i i
+j
+i
+j
+i i
+j
+i
+i
+j
+i i
+j
+i
+j
+i i
+j
+i
+i
+1
+1 1
+1
+1
+1 1
+2 / 1
+1 1 1
+1 1
+1
+1
+2 / 1
+1
+   
+ 
+ 
+ 
+.
+1 
+
+j
+i i
+f p 
+ 
+ Differential equations and control processes, N. 3, 2023 
+ 
+https://doi.org/10.21638/11701/spbu35.2023.303        Electronic Journal: http://diffjournal.spbu.ru      54 
+Accepting    
+i i i
+p p p  
+  1 1
+  
+the last ratio is written as   
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+ 
+x
+w w
+k
+x
+w w
+k
+x t
+w w w
+j
+i
+j
+i
+i
+j
+i
+j
+i
+i
+j
+i
+j
+i
+j
+i
+1
+1
+1
+2 / 1
+1 1
+1
+2 / 1
+2
+1 1
+1 2
+ 
+ 
+. 0
+1 2
+1
+1
+1
+1
+2 / 1
+1 1
+1
+2 / 1
+2
+1 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+ 
+j
+i
+j
+i
+j
+i
+i
+j
+i
+j
+i
+i
+j
+i
+j
+i
+j
+i
+i
+f
+x
+k
+x
+k
+x
+t
+p
+      
+ 
+ 
+ 
+ 
+     
+ 
+ 
+(14) 
+ 
+ 
+Substituting  representation  (13) into  (8)–(11),  give 
+ 
+,
+0 0
+i i i i
+p w     
+      (15) 
+i
+i i i i i i
+t
+p w p w
+
+ 
+
+
+  
+0 0 1 1
+, 
+(16) 
+1 1
+0 0
+1
+0
+  
+ 
+j j j
+q p w  , 
+(17) 
+1 1 1   
+ 
+j j
+n n
+j
+n
+v p w  .
+ 
+(18) 
+ 
+Assume that the auxiliary variables 
+j
+i
+w and  
+j
+i
+ , m j , . . . , 2 , 1 , 0  ,  n i ., . . , 2 , 1 , 0 
+ 
+ are solutions to 
+the following two independent difference problems: 
+ 
+, 0
+1 2
+1
+1
+1
+2 / 1
+1 1
+1
+2 / 1
+2
+1 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+ 
+x
+w w
+k
+x
+w w
+k
+x t
+w w w
+j
+i
+j
+i
+i
+j
+i
+j
+i
+i
+j
+i
+j
+i
+j
+i
+  
+(19) 
+ 
+1 , 1   n i ,   , 1 , 1   m j 
+ 
+ 
+,
+0
+i i
+w   
+(20) 
+ 
+i
+i i
+t
+w w
+ 
+
+
+0 1
+,
+ 
+(21) 
+ 
+1 1
+0
+ 
+
+j j
+q w , 
+(22) 
+ 
+1 1  
+
+j j
+n
+v w .
+ 
+(23) 
+ 
+, 0
+1 2
+1 1
+1
+1
+1
+2 / 1
+1 1
+1
+2 / 1
+2
+1 1
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+ 
+
+
+ 
+j
+i
+j
+i i
+j
+i
+j
+i
+i
+j
+i
+j
+i
+i
+j
+i
+j
+i
+j
+i
+f
+x
+k
+x
+k
+x t
+ 
+      
+ 
+ 
+(24) 
+ 
+1 , 1   n i ,   , 1 , 1   m j 
+ 
+ Differential equations and control processes, N. 3, 2023 
+ 
+https://doi.org/10.21638/11701/spbu35.2023.303        Electronic Journal: http://diffjournal.spbu.ru      55 
+, 0
+0
+
+i
+ 
+(25)
+ 
+0
+0 1
+
+
+
+t
+i i
+ 
+,
+ 
+(26) 
+ 
+0
+1
+0
+
+ j
+ , 
+(27)
+ 
+0
+1
+
+ j
+n
+ . 
+(28) 
+ 
+It is obvious that in this case equation (14) and conditions (15)–(18) are fulfilled automatically. The 
+difference problems (19)–(23) and (24)–(28) for each fixed value    1 , . . . , 2 , 1   m j
+ 
+are systems of 
+linear algebraic equations with a tridiagonal matrix, the solutions of which, regardless of 
+i
+p , can be found 
+by the Thomas method [15]. Having determined the values of the variables  
+j
+i
+j
+i
+w  , ,  , 1 ., . . , 2 , 1   n i
+    
+m j , . . . 2 . , 1  and substituting the  representation  (13) into (12), we have  
+ 
+,
+i
+m
+i i
+m
+i
+r p w   
+     
+1 ., . . , 2 , 1   n i .   
+(29) 
+ 
+From condition (29) follows the calculation formula for determining the value of the desired function 
+) (x p for each fixed value  
+i
+x x 
+  
+ 
+,
+m
+i
+m
+i i
+i
+w r
+p
+
+
+
+         
+1 ., . . , 2 , 1   n i
+ 
+ (30) 
+   Thus, the computational algorithm for solving the difference problem (7)–(12)  by definition  
+i
+j
+i
+p u , , 
+    
+, ., . . , 2 , 1 , 0 n i    1 ., . . . , 3 , 2 , 1   m j , consists of the following stages:  
+solutions of two independent difference problems (19)–(23) and (24)–(28) with respect to auxiliary 
+variables 
+j
+i
+j
+i
+w  , , n i , . . . , 2 , 1  ,
+  
+m j , . . . 2 . , 1 
+ 
+are determined; 
+according to formula (30), approximate values of the desired function ) (x p are determined for 
+i
+x x  , i.e. 
+i
+p ,  1 , . 2 , 1   n i ;   
+the values of the variables 
+j
+i
+u ,  n i , . . . , 2 , 1 , 0  ,   1 ., . . . , 3 , 2 , 1   m j , are calculated by the formula 
+(13).     
+   It should be noted that the approximate values of the desired  function  ) (x p at the boundary points 
+0
+0
+ x and  1 
+n
+x
+ 
+cannot be determined by formula (30) due to the fulfillment of the conditions  
+, 0
+1
+0
+
+ j
+
+    
+0
+1
+
+ j
+n
+ .  Therefore, the values of the desired function ) (x p at the boundary points can 
+be determined by interpolation. 
+ 
+3.  Numerical examples 
+ 
+To find out the effectiveness of the proposed computational algorithm, numerical experiments were 
+carried out for model problems. Calculations were carried out on a space-time difference grid with steps 
+0001 . 0 , 05 . 0     t x . In order to identify the influence of the final moment of time T on the solution 
+of the inverse problem, numerical calculations were carried out at T = 0.05 and T = 0.1. 
+Task A.   Find the functions ) , ( t x u  and    ) (x p , satisfying the following conditions 
+ Differential equations and control processes, N. 3, 2023 
+ 
+https://doi.org/10.21638/11701/spbu35.2023.303        Electronic Journal: http://diffjournal.spbu.ru      56 
+t x p
+x
+t x u
+t
+t x u
+sin ) (
+) , ( ) , (
+2
+2
+2
+2
+
+
+
+
+
+
+,          T t x     0 , 1 0 ,   
+ 
+0 ) 0 , (  x u ,      
+x
+e
+t
+x u
+2
+5
+) 0 , (
+
+
+
+
+,     t t u sin 5 ) , 0 (  ,     , sin 5 ) , 1 (
+2
+t e t u
+
+
+   
+T e T x u
+x
+sin 5 ) , (
+2 
+ . 
+ 
+This problem has an exact solution 
+ 
+t e t x u
+x
+sin 5 ) , (
+2 
+ ,   . 25 ) (
+2x
+e x p
+
+ 
+ 
+ 
+The results of the numerical solution of problem A are shown in Table 1; in it x
+i
+– the
+ 
+ spatial 
+coordinate
+, 
+i
+p and 
+i
+p
+~
+–respectively, the exact and calculated values of the function ) (x p . 
+ 
+                                          Table 1.  Numerical results for problem A 
+ 
+ 
+i
+x
+ 
+                  ) (x p 
+i
+p
+               
+i
+p
+~
+ 
+T=0.05 T=0.1 
+0.05 22.621 22.586 22.582 
+0.10 20.468 20.463 20.440 
+0.15 18.520 18.520 18.554 
+0.20 16.758 16.758 16.793 
+0.25 15.163 15.163 15.195 
+0.30 13.720 13.720 13.749 
+0.35 12.415 12.415 12.441 
+0.40 11.233 11.233 11.257 
+0.45 10.164 10.164 10.186 
+0.50 9.197 9.197 9.216 
+0.55 8.322 8.322 8.339 
+0.60 7.530 7.530 7.546 
+0.65 6.813 6.813 6.828 
+0.70 6.165 6.165 6.178 
+0.75 5.578 5.578 5.590 
+0.80 5.047 5.047 5.058 
+0.85 4.567 4.567 4.578 
+0.90 4.132 4.133 4.153 
+0.95 3.739 3.750 3.732 
+ 
+         Task B. Find the functions ) , ( t x u  and  ) (x p , satisfying the following conditions 
+ 
+t x p
+x
+t x u
+t
+t x u
+cos ) (
+) , (
+2
+) , (
+2
+2
+2
+2
+
+
+
+
+
+
+,          T t x     0 , 1 0 ,   
+ 
+x x u sin 10 ) 0 , (  ,   0
+) 0 , (
+
+
+
+t
+x u
+,     0 ) , 0 (  t u ,   , cos 1 sin 10 ) , 1 ( t t u 
+   
+T x T x u cos sin 10 ) , (  . 
+ 
+The exact solution to this problem has the form 
+ Differential equations and control processes, N. 3, 2023 
+ 
+https://doi.org/10.21638/11701/spbu35.2023.303        Electronic Journal: http://diffjournal.spbu.ru      57 
+t x t x u cos sin 10 ) , (  ,   . sin 10 ) ( x x p   
+ 
+The results of the numerical solution  of  problem B are shown in Table 2. 
+ 
+                                               Table 2. Numerical results for problem B  
+     
+ 
+i
+x
+ 
+) (x p 
+i
+p
+                
+i
+p
+~
+ 
+ T=0.05  T=0.1 
+0.05 0.500 0.499 0.501 
+0.10 0.998 1.003 1.002 
+0.15 1.494 1.491 1.501 
+0.20 1.987 1.981 1.983 
+0.25 2.474 2.467 2.467 
+0.30 2.955 2.947 2.946 
+0.35 3.429 3.419 3.418 
+0.40 3.894 3.883 3.882 
+0.45 4.350 4.337 4.336 
+0.50 4.794 4.781 4.779 
+0.55 5.227 5.212 5.211 
+0.60 5.646 5.630 5.629 
+0.65 6.052 6.035 6.033 
+0.70 6.442 6.424 6.422 
+0.75 6.816 6.797 6.795 
+0.80 7.174 7.153 7.150 
+0.85 7.513 7.491 7.476 
+0.90 7.833 7.826 7.828 
+0.95 8.134 8.099 8.120 
+ 
+  The results of numerical experiments show that the values of the desired functions ) , ( t x u  and  ) (x p
+are determined with a sufficiently high accuracy. Moreover, the maximum relative error in determining 
+the desired function ) (x p in both problems does not exceed  0.5%.  Numerical results obtained for two 
+different values of T indicate the stability of the solution with respect to T. 
+Analysis of the results of numerical experimentation indicates that it is sufficient to use small steps of 
+the difference grid to increase the accuracy of solutions. 
+ 
+4.  Conclusion 
+ 
+ The problem of identifying the right-hand side of a one-dimensional wave equation depending on a 
+spatial variable according to an additional condition of final redefinition is considered. The proposed 
+computational algorithm, based on the discretization of the problem and the use of a special representation 
+for solving the difference problem, allows us to find by an explicit formula the approximate value of the 
+desired function for each discrete value of the spatial variable.  
+ 
+ 
+References 
+ Differential equations and control processes, N. 3, 2023 
+ 
+https://doi.org/10.21638/11701/spbu35.2023.303        Electronic Journal: http://diffjournal.spbu.ru      58 
+[1] Kabanikhin S.I. Inverse and ill-posed problems. Berlin: Walter de Gruyter  (2011), 475 p. 
+[2]  Isakov V. Inverse Problems for Partial Differential Equations. Berlin: Springer ( 2017),345 p. 
+[3]  Alifanov  O.M., Artioukhine  E. A., Rumyantsev S. V. Extreme Methods for Solving Ill-
+Posed Problems with Applications to Inverse Heat Transfer Problems. Begell  House (1995), 
+306 p.   
+[4] Hasanov Hasanoğlu A., Vladimir G. R. Introduction to Inverse Problems for Differential 
+Equations. Springer (2021), 516 p. 
+[5] Borukhov V.T.,   Zayats  G.M. Identification of a time-dependent source term in nonlinear 
+hyperbolic or parabolic heat equation. International Journal of Heat and Mass Transfer  91 
+(2015), pp. 1106-1113. DOI: https://doi.org/10.1016/j.ijheatmasstransfer.2015.07.066. 
+[6] Vabishchevich  P. N.  Computational identification of the time dependence of the right-hand 
+side of a hyperbolic equation. Computational Mathematics and Mathematical Physics  59(9) 
+(2019), pp. 1475–1483. DOI: 10.1134/S096554251909015X. 
+[7] Denisov A. M.  Problems of determining the unknown source in parabolic and hyperbolic 
+equations.  Computational Mathematics and Mathematical Physics  55(5) (2015), pp. 829–
+833. DOI: https://doi.org/10.1134/S0965542515050085. 
+[8] Yibin Ding, Xiang Xu. On convexity of the functional for inverse problems of hyperbolic 
+equations. Applied Mathematics Letters  94 (2019), pp. 174-180. DOI: 
+https://doi.org/10.1016/j.aml.2019.02.018. 
+[9] Safiullova  R. R.  Inverse Problems for the Second Order Hyperbolic Equation with Unknown 
+Time Depended Coefficient. Bulletin of the South Ural State University. Series Mathematical 
+Modelling, Programming & Computer Software  6(4) (2013), pp. 73–86 (in Russian). 
+[10] Jiang  D., Liu  Y., Yamamoto  M.  Inverse source problem for the hyperbolic equation with a 
+time-dependent principal part. Journal of Differential Equations  262(1)  (2017), pp. 653–681. 
+DOI: 10.1016/j.jde.2016.09.036.  
+[11] Giuseppe Floridia,  Hiroshi Takase.  Inverse problems for first-order hyperbolic equations 
+with time-dependent coefficients.  Journal of Differential Equations  305 (2021),  pp. 45-71. 
+DOI:https://doi.org/10.1016/j.jde.2021.10.007. 
+[12] Safiullova  R. R. On solvability of the linear inverse problem with unknown composite right-
+hand side in hyperbolic equation. Bulletin of the South Ural State University. Series 
+Mathematical Modelling, Programming & Computer Software 37 (170) (2009), pp. 93-105 
+(in Russian).  
+[13] Prilepko A.I., Orlovsky D.G. and Vasin I.A. Methods for Solving Inverse Problems in 
+Mathematical Physics. New York: Marcel Dekker (2000), 744 p.  
+[14] Denisov A. M. Integro-functional equations in the inverse source problem for the wave 
+equation. Differential Equations 42(9)  (2006), pp.1221–1232. DOI: 
+https://doi.org/10.1134/S0012266106090011. 
+[15] Samarskii A.A., Vabishchevich P.N. Numerical Methods for Solving Inverse Problems of 
+Mathematical  Physics. Berlin: Walter de Gruyter  (2008), 438 p.  
+[16] Gamzaev Kh.M., Huseynzade S.O., Gasimov G. G. A numerical method for solving 
+identification problem for the lower coefficient and the source in the equation convection–
+reaction. Cybernetics and Systems Analysis  54(6)  (2018), pp. 971-976. DOI: 
+https://doi.org/10.1007/s10559-018-0100-6. 
+[17]  Gamzaev Kh.M. The problem of identifying the trajectory of a mobile point source in the         
+convective transport equation. Bulletin of the South Ural State University. Series         
+Mathematical Modelling, Programming & Computer Software  14(2)   (2021), pp. 78–84.          
+DOI: https://doi.org/10.14529/mmp210208. 
+ 
+ 
