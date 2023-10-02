@@ -1,0 +1,2457 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 3, 2023
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Dynamical systems
+Methods of nonhyperbolic shadowing
+Sergei Yu. Pilyugin
+Saint Petersburg State University
+sergeipil47@mail.ru
+Abstract. This paper is a survey of some recent results giving su cient con-
+ditions of shadowing for dynamical systems in the absence of hyperbolicity.
+The main topics of the survey are as follows: method of pairs of Lyapunov type
+functions, shadowing in a neighborhood of a nonisolated  xed point, conditional
+multiscale shadowing for sequences of mappings of a Banach space, conditional
+shadowing for dynamical systems on so-called simple time scales. The paper
+contains a new result on conditional multiscale shadowing in the case of an
+in nite family of projections of the phase space.
+Keywords: Dynamical system, pseudotrajectory, shadowing, hyperbolicity
+1 Introduction
+The theory of shadowing of approximate trajectories (pseudotrajectories) is
+now an intensively developing branch of the global theory of dynamical systems.
+One can  nd basic information concerning shadowing in the monographs [1-3];
+the survey [4] is devoted to some recent results of the theory.
+The main property of dynamical systems studied by the shadowing theory
+can be stated as follows. Consider a homeomorphism f of a metric space
+(X; dist). Let d > 0. A sequencefy
+n
+2 Xg is called a d-pseudotrajectory
+of f if the inequalities
+dist(f(y
+n
+);y
+n+1
+)<d (1)Differential Equations and Control Processes, N. 3, 2023
+hold.
+One says that f has the (standard) shadowing property if for any " > 0
+there is ad> 0 such that for any d-pseudotrajectoryfy
+n
+g off there is a point
+x2X for which
+dist(f
+n
+(x);y
+n
+)<":
+In this case, we say that the exact trajectoryff
+n
+(x)g -shadows the pseudo-
+trajectoryfy
+n
+g.
+The  rst su cient conditions under which a dynamical system has the shad-
+owing property were obtained by D.V. Anosov [5] and R. Bowen [6]. Applying
+principally different approaches, they showed that, for a diffeomorphism, shad-
+owing is a corollary of hyperbolicity (and, as easilly seen from the proofs in [5]
+and [6], in a neighborhood of a hyperbolic set, a diffeomorphism has the Lip-
+schitz shadowing property, i.e., there exists a constant L such that, for small
+enough d, any d-pseudotrajectory is Ld-shadowed by an exact trajectory).
+At present, relations between shadowing and hyperbolicity are well studied
+(see the book [3] for details).
+In the present paper, we give a survey of some recent results giving su -
+cient conditions of shadowing in the absence of hyperbolicity. This survey is
+motivated by the talk given by the author at the Joint PDMI { MIRAN Session
+\Differential Equations and Dynamical Systems" (St. Petersburg, May 12 { 14,
+2023).
+The paper also contains a new result { we generalize the main theorem
+of the author's paper [7] to the case of an in nite family of projections (see
+Section 4 below). This generalization is not straightforward; in fact, we have
+to work with different Banach spaces etc.
+The structure of the paper is as follows. In Section 2, we describe the
+method of pairs of Lyapunov type functions developed by A.A. Petrov and
+the author in the paper [8]. This method is applied to a perturbation of the
+hyperbolic automorphism of the 2-torus studied by J. Lewowicz in [9]. It is
+noted that, using the described method, one can obtain su cient conditions of
+shadowing for nonsmooth systems.
+In Section 3, it is shown that the method described in Section 2 can be
+applied to study shadowing in a neighborhood of a  xed point belonging to a
+\critical" manifold consisting of  xed points. In this case, not every pseudotra-
+jectory in such a neighborhood can be shadowed, but it is possible to shadow
+pseudotrajectories for which \one step errors" are small enough compared to
+https://doi.org/10.21638/11701/spbu35.2023.301 Electronic Journal: http://diffjournal.spbu.ru/ 2Differential Equations and Control Processes, N. 3, 2023
+the distances of points of the pseudotrajectory to the critical manifold.
+In Section 4, we study conditional shadowing for sequences of mappings of
+a Banach spaceX. It is assumed that there exists a countable family of projec-
+tions that commute with linear terms of the considered mappings. Conditions
+of shadowing are obtained in terms of the norms of projections of one step er-
+rors of pseudotrajectories and of estimates of Lipschitz constants of projections
+of the \small nonlinear" terms. As mentioned above, the main theorem of this
+section generalizes the result of the author's paper [7] in which the case of a
+ nite family of projections has been studied.
+Finally, in Section 5, we describe conditions of conditional shadowing for
+dynamical systems on so-called simple time scales consisting of a family of iso-
+lated segments of the positive ray of ; these results are obtained in the author's
+paper [10].
+2 Method of a pair of Lyapunov type functions
+Let f be a homeomorphism of a compact metric space (X; ).
+We assume that there exist two continuous nonnegative functionsV andW
+de ned in a closed neighborhood of the diagonal of X X such that
+V (p;p) =W (p;p) = 0 for any p2X
+and conditions (C1)-(C9) below are satis ed. In what follows, arguments of the
+functions V and W are assumed to be close enough, so that the functions are
+de ned.
+Our conditions are formulated not directly in terms of the functions V and
+W but in terms of some geometric objects de ned via these functions. Our
+main reasoning for the choice of these form of conditions is as follows.
+(1) Precisely these conditions are used in the proofs.
+(2) It is relatively easy to check conditions of that kind for particular func-
+tions V and W .
+Let us introduce the main objects which we work with.
+Fix positive numbers a and b and a point p2X. Set
+P (a;b;p) =fq2X : V (q;p) a;W (q;p) bg;
+Q(a;b;p) =fq2P (a;b;p) : V (q;p) =ag;
+T (a;b;p) =fq2P (a;b;p) : V (q;p) = 0g:
+https://doi.org/10.21638/11701/spbu35.2023.301 Electronic Journal: http://diffjournal.spbu.ru/ 3Differential Equations and Control Processes, N. 3, 2023
+Denote by B(;p) the open -ball centered at p and set
+Int
+0
+P (a;b;p) =fq2P (a;b;p) : V (q;p)<a;W (q;p)<bg;
+@
+0
+P (a;b;p) =Q(a;b;p)[fq2P (a;b;p) : W (q;p) =bg;
+Int
+0
+Q(a;b;p) =fq2P (a;b;p) : V (q;p) =a;W (q;p)<bg:
+Conditions (C1)-(C4) contain our assumptions on the geometry of the sets
+introduced above.
+(C1) For any > 0 there exists a
+0
+=
+0
+()> 0 such that
+P (
+0
+;
+0
+;p) B(;p) for p2X:
+There exists a
+1
+> 0 such that if p2 X,
+1
+;
+2
+;<
+1
+and
+2
+<, then there exists
+a number ff =ff(
+1
+;
+2
+; )> 0 such that
+(C2) Q(
+1
+;
+2
+;p) is not a retract of P (
+1
+;
+2
+;p);
+(C3) Q(
+1
+;
+2
+;p) is a retract of P (
+1
+;
+2
+;p)nT (
+1
+;
+2
+;p);
+(C4) there exists a retraction   : P (
+1
+;;p)!P (
+1
+;
+2
+;p) such that
+V ( (q);p) ffV (q;p) for q2P (
+1
+;;p):
+In the next group of conditions, we state our assumptions on the behavior
+of the introduced objects and their images under the homeomorphism f.
+We assume that for any<
+1
+there exist positive numbers
+1
+;
+2
+< such that the
+following relations hold for any p2X:
+(C5)
+f(P (
+1
+;
+2
+;p))2 Int
+0
+P (;;f(p)); f
+ 1
+(P (
+1
+;
+2
+;f(p)))2 Int
+0
+P (;;p);
+(C6) f(T (
+1
+;
+2
+;p))  Int
+0
+P (
+1
+;
+2
+;f(p));
+(C7) f(T (
+1
+;;p))\Q(
+1
+;
+2
+;f(p)) =;;
+(C8) f(P (
+1
+;
+2
+;p))\@
+0
+P (
+1
+;
+2
+;f(p))  Int
+0
+Q(
+1
+;
+2
+;f(p));
+(C9) f(S(
+1
+;;p))\P (
+1
+;
+2
+;f(p)) =;, where
+S(
+1
+;;p) =fq2P (;;p) : V (q;p) 
+1
+g:
+Theorem 1 [8]. Under conditions (C1)-(C9), f has the  nite shadowing
+property (and hence, the standard shadowing property ) on the space X.
+https://doi.org/10.21638/11701/spbu35.2023.301 Electronic Journal: http://diffjournal.spbu.ru/ 4Differential Equations and Control Processes, N. 3, 2023
+Let us give an example of application of Theorem 1 to a diffeomorphism
+with nonhyperbolic behavior.
+Example 1. Consider a diffeomorphism studied by Lewowicz in [9]. This
+diffeomorphism is a perturbation of a hyperbolic automorphism of the 2-torus
+T
+2
+.
+Fix numbers 0<ff< 1<  and a small r > 0 and de ne a map F :
+2
+!
+2
+by
+F (x;y) = (ffx + (x) (y); y);
+where
+ (x) =
+Z
+x
+0
+((1 ff) h(s))ds;
+h :! is a C
+1
+function such that h(0) = 0, 0  h(x) < 1, and  (x) = 0 for
+jxj r, and   :! is a C
+1
+function such that  (0) = 1,  (y) = ( y),   is not
+increasing for y  0, and  (y) = 0 forjyj r.
+LetA be an integer hyperbolic 2 2 matrix with detA = 1. If 0<ff< 1< 
+are the eigenvalues ofA andu
+1
+andu
+2
+are the corresponding eigenvectors, then
+A(x;y) = (ffx; y)
+in coordinates whose axes are parallel to u
+1
+and u
+2
+.
+The lattice   with vertices
+f(n + 1=2)u
+1
+; (m + 1=2)u
+2
+: m;n2g
+is invariant with respect to the action of the map v7!Av. Let  :
+2
+!
+2
+=  be
+the corresponding projection of the plane to the 2-torus.
+De ne f : T
+2
+! T
+2
+by f( ( ; )) =   F (x;y) (of course, we extend F
+periodically with repect to the above-mentioned lattice).
+It is shown in [9] that if r is small enough, then f is an expansive diffeo-
+morphism of the 2-torus (see the de nition below).
+Note that the de ned diffeomorphism f is not structurally stable since the
+eigenvalues of Df at the zero  xed point are 1 and  .
+At the same time, it is shown in [8] that conditions (C1)-(C9) are satis ed
+for functions V and W de ned as follows: If p = (p
+x
+;p
+y
+) and q = (q
+x
+;q
+y
+), then
+V (p;q) =jp
+y
+ q
+y
+j andW (p;q) =jp
+x
+ q
+x
+j (such functions are properly de ned
+if p and q are close enough). Hence, Theorem 1 is applicable to f, and f has
+the shadowing property.
+https://doi.org/10.21638/11701/spbu35.2023.301 Electronic Journal: http://diffjournal.spbu.ru/ 5Differential Equations and Control Processes, N. 3, 2023
+Let us relate the obtained result to two classical properties of dynamical
+systems, namely, to topological stability and expansivity.
+Recall the standard de nitions.
+Denote by H(X) the space of homeomorphisms of a compact metric space
+(X; ) endowed with the metric
+ (f;g) = max
+p2X
+max((f(p);g(p)); (f
+ 1
+(p);g
+ 1
+(p))):
+A homeomorphismf is called topologically stable if for any> 0 there exists a
+neighborhoodY off inH(X) such that ifg2Y , then there exists a continuous
+map h : X!X such that f h =h g and
+(h(p);p)<; p2X:
+A homeomorphism f is called expansive if there exists a positive ff such
+that if
+(f
+k
+(p);f
+k
+(q)) ff; k2;
+then p =q.
+Walters in [11] proved that if a homeomorphismf is expansive and has the
+shadowing property, then f is topologically stable.
+Thus, we can apply Theorem 1 to establish the topological stability of the
+diffeomorphism f in Example 1.
+In his proof of topological stability of f, Lewowicz reduced the problem to
+the study of suspension ows, which does not seem natural.
+In its turn, Theorem 1 can be applied to nonsmooth homeomorphisms, for
+example, to perturbations f of a hyperbolic automorphism of the 2-torus T
+2
+corresponding to the map
+F (x;y) = ( 
+1
+(x); 
+2
+(y));
+where 
+1
+and 
+2
+are increasing continuous functions for which there exist num-
+bers r; 2 (0; 1) such that
+(1)j 
+1
+(x + )  
+1
+(x)j  j j and  
+ 1
+j j j 
+2
+(y + )  
+2
+(y)j forj j<r;
+(2)  
+1
+(x) =ffx; jxj r;
+(3)  
+2
+(y) = y; jyj r.
+In this case, one can apply the same Lyapunov type functions V andW as
+in Example 1.
+https://doi.org/10.21638/11701/spbu35.2023.301 Electronic Journal: http://diffjournal.spbu.ru/ 6Differential Equations and Control Processes, N. 3, 2023
+3 Shadowing near a nonisolated  xed point
+The method of Lyapunov type functions can be applied in the case of non-
+isolated  xed points. Of course, if a  xed pointp of a homeomorphismf belongs
+to a submanifold M consisting of  xed points (as in the case studied below),
+thenf does not have the standard shadowing property in any neighborhood of
+p. Nevertheless, sometimes it is possible to establish a \conditional" shadowing
+property for pseudotrajectoriesfx
+k
+g whose points do not belong toM assuming
+that the size of \one step errors"
+(x
+k+1
+;f(x
+k
+))
+is small compared to the distances from the points x
+k
+to the manifold M.
+Such an approach (in the case of a nontransverse homoclinic point) had been
+suggested by S. Tikhomirov.
+Let us restrict our consideration to a simple (but nontrivial) example of the
+2-dimensional diffeomorphism
+f(x;y) =
+ 
+x
+2
+;y(1 +x
+2
+)
+ 
+: (2)
+The origin is a nonisolated  xed point of f (every point of the line M =
+f(0;y) : y2g is a  xed point).
+Represent p2
+2
+in the form p = (p
+x
+;p
+y
+) and consider a  nite pseudotrajec-
+tory p
+0
+;:::;p
+n
+of f such that (p
+k
+)
+x
+6= 0 and
+jf(p
+k
+) p
+k+1
+j d(p
+k
+)
+2
+x
+; k = 0;:::;n  1; (3)
+for some d> 0. Set
+K
+0
+=f(x;y) : 0<jxj< 1g:
+In [12], the following result is proved.
+Theorem 2. There exists a neighborhood K of the origin and a number
+c > 0 such that, for any > 0 and for any pseudotrajectory p
+0
+;:::;p
+n
+of f in
+K\K
+0
+that satis es conditions (??) withd =c, there exists a pointp satisfying
+the inequalities
+jf
+k
+(p) p
+k
+j ; 0 k n:
+In the proof of this result, the method of the previous section is applied;
+the corresponding Lyapunov type functions are
+V (q;p) =jp
+y
+ q
+y
+j and W (q;p) =
+jp
+x
+ q
+x
+j
+jp
+x
+((1 jp
+x
+j)
+:
+https://doi.org/10.21638/11701/spbu35.2023.301 Electronic Journal: http://diffjournal.spbu.ru/ 7Differential Equations and Control Processes, N. 3, 2023
+Analyzing the proof, one can see that the method is applicable not only to
+diffeomorphism (??) but in more general situations as well.
+4 Multiscale conditional shadowing
+Let X be a Banach space with normj:j. Consider a sequence f
+n
+; n  0; of
+mappings of the space X having the form
+f
+n
+(x) =A
+n
+x +g
+n
+(x); (4)
+where A
+n
+are linear mappings.
+A sequence x
+n
+2X; n  0; is called a trajectory of (??) if
+x
+n+1
+=f
+n
+(x
+n
+); n  0:
+Let n m  0; set
+ (n;n) = Id
+and
+ (n;m) =A
+n 1
+   A
+m
+if n>m:
+We  x a family of projectionsP
+k;n
+of the spaceX, wherek2K andn  0;
+here K is a countable index set having the form K =KS[KU.
+It is assumed that the projections P
+k;n
+have the following properties:
+P
+i;n
+P
+j;n
+= 0 if i6=j;
+X
+k2K
+P
+k;n
+= Id for n  0;
+and
+A
+n
+P
+k;n
+=P
+k;n+1
+A
+n
+for k2K and n  0: (5)
+Of course, property (??) implies that
+ (n;m)P
+k;m
+=P
+k;n
+ (n;m) for k2K and n m: (6)
+Let k2K and n  0; denote by X
+k;n
+the image P
+k;n
+X.
+We assume, in addition, that the restrictions of A
+n
+to X
+k;n
+are invertible
+for k2KU; this allows us to de ne for k2KU the operators
+	(n;m) =A
+ 1
+n
+   A
+ 1
+m 1
+j
+X
+k;m
+https://doi.org/10.21638/11701/spbu35.2023.301 Electronic Journal: http://diffjournal.spbu.ru/ 8Differential Equations and Control Processes, N. 3, 2023
+acting from X
+k;m
+to X
+k;n
+with n<m. We agree that
+	(n;n + 1) =A
+ 1
+n
+j
+X
+k;n+1
+:
+Formally, we have to write 	
+k
+(n;m) instead of 	(n;m), but the present
+short form will lead to no misunderstanding.
+Of course, an analog of property (??) is valid; if k2KU and n<m, then
+	(n;m)P
+k;m
+=P
+k;n
+	(n;m):
+We make the following
+Main assumption. There exists a number M > 0 and two sequences of
+positive numbers ff
+k;n
+and  
+k;n
+with the following properties.
+The inequalities
+X
+k2KS
+n
+X
+l=1
+k (n;l)P
+k;l
+kff
+k;l
+ M; n  0; (7)
+and
+X
+k2KS
+n
+X
+l=1
+k (n;l)P
+k;l
+k 
+k;l
+ 
+1
+4
+; n  0; (8)
+hold.
+The inequalities
+X
+k2KU
+1
+X
+l=n+1
+k	(n;l)P
+k;l
+kff
+k;l
+ M; n  0; (9)
+and
+X
+k2KU
+1
+X
+l=n+1
+k	(n;l)P
+k;l
+k 
+k;l
+ 
+1
+4
+; n  0; (10)
+hold.
+Of course, the choice of sequencesff
+k;n
+and 
+k;n
+is arbitrary to a large extent;
+our future estimates essentially depend on this choice.
+Fix a sequence
+V =fv
+n
+2X : n  0g;
+set w
+k;n
+=P
+k;n
+v
+n
+for k2K,
+kv
+n
+k =
+X
+k2K
+jw
+k;n
+j; n  0;
+https://doi.org/10.21638/11701/spbu35.2023.301 Electronic Journal: http://diffjournal.spbu.ru/ 9Differential Equations and Control Processes, N. 3, 2023
+and
+kVk
+1
+= sup
+n 0
+kv
+n
+k:
+(Of course, we work with sequences V for which the above values are  nite).
+We emphasize that the valuekv
+n
+k depends on the index n.
+Let y
+n
+be a sequence of points of X with known \errors"
+ 
+n+1
+=f
+n
+(y
+n
+) y
+n+1
+; n  0:
+Introduce functions
+
+n
+(v) =g
+n
+(y
+n
++v) g
+n
+(y
+n
+):
+Note that 
+n
+(0) = 0.
+Our goal is to  nd a trajectory x
+n
+of (??) for which we can estimate the
+values
+jx
+n
+ y
+n
+j; n  0;
+in terms of the values  
+n
+(to be exact, in terms of the valuesjP
+k;n
+ 
+n
+j and of
+Lipschitz constants of the functions P
+k;n
+
+n 1
+).
+Represent x
+n
+in the form
+x
+n
+=y
+n
++v
+n
+;
+then it follows from the equalities
+x
+n+1
+=f
+n
+(x
+n
+) =A
+n
+x
+n
++g
+n
+(x
+n
+)
+that the sequence v
+n
+must satisfy the nonlinear difference equation
+v
+n+1
+=A
+n
+v
+n
++ 
+n+1
++
+n
+(v
+n
+): (11)
+Our main result in this section is the following statement.
+Theorem 3. Let conditions (??){(??) be satis ed. Fix a positive d and
+assume that
+jP
+k;l
+ 
+l
+j ff
+k;l
+d; k2K; l  0: (12)
+Assume, in addition, that Lipschitz constants of the projections P
+k;l
+
+l 1
+(v)
+satisfy the estimates
+LipP
+k;l
+
+l 1
+(v)  
+k;l
+; k2K; l  0: (13)
+https://doi.org/10.21638/11701/spbu35.2023.301 Electronic Journal: http://diffjournal.spbu.ru/ 10Differential Equations and Control Processes, N. 3, 2023
+Then there exists a solution V of Eq. (??) such that
+kVk
+1
+  4Md:
+Proof. The set
+V =fV : kVk
+1
+  4Mdg
+is a subset of the Banach space of sequences V with normkVk
+1
+.
+De ne onV the operator T which takes a sequence
+V =fv
+0
+;:::;v
+n
+;:::g2V (14)
+to a sequence
+Z =T (V ) =fz
+n
+2X : n  0g;
+where z
+n
+are determined by their projections
+ 
+k;n
+=P
+k;n
+z
+n
+; k2K; n  0:
+If k2KS, set  
+k;0
+= 0 and
+ 
+k;n
+=
+n
+X
+l=1
+ (n;l)P
+k;l
+( 
+l
++
+l 1
+(v
+l 1
+)); n> 0:
+If k2KU, set
+ 
+k;n
+= 
+1
+X
+l=n+1
+	(n;l)P
+k;l
+( 
+l
++
+l 1
+(v
+l 1
+)); n  0:
+Recall that w
+k;l
+= P
+k;l
+v
+l
+and note that the inclusion v 2V implies the
+estimates
+jv
+l
+j =
+ 
+ 
+ 
+ 
+ 
+X
+k2K
+P
+k;l
+v
+l
+ 
+ 
+ 
+ 
+ 
+=
+ 
+ 
+ 
+ 
+ 
+X
+k2K
+w
+k;l
+ 
+ 
+ 
+ 
+ 
+ kv
+l
+k  4Md; l  0: (15)
+Fix an index k2KS and represent
+ 
+k;n
+=P
+k;n
+n
+X
+l=1
+ (n;l)( 
+l
++
+l 1
+(v
+l 1
+)) =
+=
+n
+X
+l=1
+P
+k;n
+ (n;l)( 
+l
++
+l 1
+(v
+l 1
+)) =
+n
+X
+l=1
+ (n;l)P
+k;l
+( 
+l
++
+l 1
+(v
+l 1
+)); n> 0:
+https://doi.org/10.21638/11701/spbu35.2023.301 Electronic Journal: http://diffjournal.spbu.ru/ 11Differential Equations and Control Processes, N. 3, 2023
+Here we refer to property (??) of the projections.
+Conditions (??) and (??) imply that
+X
+k2KS
+ 
+ 
+ 
+ 
+ 
+n
+X
+l=1
+ (n;l)P
+k;l
+ 
+l
+ 
+ 
+ 
+ 
+ 
+=
+X
+k2KS
+ 
+ 
+ 
+ 
+ 
+n
+X
+l=1
+ (n;l)P
+k;l
+P
+k;l
+ 
+l
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+X
+k2KS
+n
+X
+l=1
+k (n;l)P
+k;l
+kff
+k;l
+d Md: (16)
+Condition (??) combined with inequalities (??) implies that
+jP
+k;l
+
+l 1
+(v
+l 1
+)j  
+k;l
+jv
+l 1
+j  4 
+k;l
+Md; l n:
+Hence, it follows from (??) that
+X
+k2KS
+ 
+ 
+ 
+ 
+ 
+n
+X
+l=1
+ (n;l)P
+k;l
+
+l 1
+(v
+l 1
+)
+ 
+ 
+ 
+ 
+ 
+ Md;
+which, combined with (??), gives us the estimates
+X
+k2KS
+j 
+k;n
+j  2Md; n  0: (17)
+Similar reasoning based on inequalities (??) and (??) shows that analogs of
+estimates (??) are valid for k2KU as well. Thus, T mapsV into itself.
+Now we note that the same reasoning as in the proof of estimate (??) shows
+that if V;V
+0
+2V, then
+jv
+l 1
+ v
+0
+l 1
+j kv
+l 1
+ v
+0
+l 1
+k kV V
+0
+k
+1
+;
+and it follows from condition (??) that
+jP
+k;l
+(
+l 1
+(v
+l 1
+) 
+l 1
+(v
+0
+l 1
+))j 
+  
+k;l
+jv
+l 1
+ v
+0
+l 1
+j  
+k;l
+kV V
+0
+k
+1
+:
+Thus,
+j 
+k;n
+  
+0
+k;n
+j =
+ 
+ 
+ 
+ 
+ 
+n
+X
+l=1
+ (n;l)P
+k;l
+(
+l 1
+(v
+l 1
+) 
+l 1
+(v
+0
+l 1
+))
+ 
+ 
+ 
+ 
+ 
+ 
+https://doi.org/10.21638/11701/spbu35.2023.301 Electronic Journal: http://diffjournal.spbu.ru/ 12Differential Equations and Control Processes, N. 3, 2023
+ 
+n
+X
+l=1
+k (n;l)P
+k;l
+k 
+k;l
+kV V
+0
+k
+1
+for k2KS and a similar estimate is valid for k2KU.
+Hence, conditions (??) and (??) imply the estimate
+kT (V ) T (V
+0
+)k
+1
+ 
+1
+2
+kV V
+0
+k
+1
+for V;V
+0
+2V.
+Thus, T is a contraction onV; hence, T has a unique  xed point V inV.
+Projections of coordinates of this point satisfy the equalities w
+k;0
+= 0 and
+w
+k;n
+=
+n
+X
+l=1
+ (n;l)P
+k;l
+( 
+l
++
+l 1
+(v
+l 1
+)); n> 0;
+for k2KS and
+w
+k;n
+= 
+1
+X
+l=n+1
+	(n;l)P
+k;l
+( 
+l
++
+l 1
+(v
+l 1
+)); n  0;
+for k2KU.
+Standard calculations from the theory of Perron series show that the se-
+quence (??) with
+v
+n
+=
+X
+k2K
+w
+k;n
+is a solution of Eq. (??).  
+Example 2. To avoid unnecessary complications, we give an example of
+application of Theorem 3 with a  nite index set K; the reasoning used in this
+example can be easily extended to the general case.
+Let X =
+4
+and K =f1;:::; 4g;  x the projections P
+k;1
+x = (x
+1
+; 0; 0; 0), ::: ,
+P
+k;4
+x = (0; 0; 0;x
+4
+).
+Assume that the matrices A
+n
+in mappings (??) are constant diagonal ma-
+trices
+A
+n
+= diag (0; 1=2; 1; 2):
+Take KS =f1;:::; 3g and KU =f4g. Fix arbitrary positive numbers
+m
+1
+;:::;m
+4
+.
+https://doi.org/10.21638/11701/spbu35.2023.301 Electronic Journal: http://diffjournal.spbu.ru/ 13Differential Equations and Control Processes, N. 3, 2023
+Let k = 1; thenk (n;n)P
+1;n
+k = 1 andk (n;l)P
+1;l
+k = 0 for n6=l. Thus, if
+we take ff
+1;n
+=m
+1
+for all n, then
+n
+X
+l=1
+k (n;l)P
+1;l
+kff
+1;l
+ m
+1
+; n  0:
+Let k = 2; thenk (n;l)P
+2;l
+k = 2
+l n
+. Thus, if we take ff
+2;n
+= m
+2
+=2 for all
+n, then
+n
+X
+l=1
+k (n;l)P
+2;l
+kff
+2;l
+ m
+2
+; n  0:
+If k = 3, thenk (n;l)P
+3;l
+k = 1, and if we take a sequence ff
+3;n
+for which
+n
+X
+l=1
+ff
+3;l
+ m
+3
+; n  1;
+then
+n
+X
+l=1
+k (n;l)P
+3;l
+kff
+3;l
+ m
+3
+:
+Thus, we get estimate (??) in the form
+X
+k2KS
+n
+X
+l=1
+k (n;l)P
+k;l
+kff
+k;l
+ M =m
+1
++m
+2
++m
+3
+; n  0;
+and one can repeat a similar procedure in the general case of in nite set KS
+with an arbitrary series m
+k
+; k2KS.
+Finally, if k = 4, thenk	(n;l)P
+4;l
+k = 2
+n l
+for n<l, and, as for k = 2, we
+may take the constant sequence ff
+4;n
+=M to get estimate (??).
+After that, we can similarly select the sequences  
+k;n
+(we leave details to
+the reader).
+5 Perturbations of dynamical systems on simple time scales
+Let us consider a simple variant of a time scaleT that is a subset of [0;1)
+and consists of isolated segments T
+n
+, where n = 1; 2;::: , T
+n
+= [l
+n
+;r
+n
+], and
+0 l
+1
+<r
+1
+<l
+2
+<::::
+The phase space is a Banach space X with normj j. We denote byk k
+the operator norm of a linear operator.
+https://doi.org/10.21638/11701/spbu35.2023.301 Electronic Journal: http://diffjournal.spbu.ru/ 14Differential Equations and Control Processes, N. 3, 2023
+The system on T
+n
+is generated by a differential equation
+_ x =A
+n
+(t)x +a
+n
+(t;x); t2T
+n
+: (18)
+We assume that the operators A
+n
+(t) are continuous and bounded on T
+n
+. The
+functions a
+n
+(t;x) are assumed to be continuous and Lipschitz continuous in x
+on T
+n
+ X (with small Lipschitz constants).
+Denote by 
+n
+(t;t
+0
+;x
+0
+) the solution of the Cauchy problem (t
+0
+;x
+0
+) for system
+(??).
+Thus, for anyt
+0
+2T
+n
+and for anyx
+0
+2X there exists a solution 
+n
+(t;t
+0
+;x
+0
+)
+de ned on the whole segmentT
+n
+(in what follows, we work with such solutions).
+Let  
+n
+(t) and 	
+n
+(t) be the fundamental matrices of the system
+_ x =A
+n
+(t)x
+such that  
+n
+(l
+n
+) = E and 	
+n
+(r
+n
+) = E, respectively, where E is the identity
+map of X.
+For any indexn = 1; 2;::: we  x a map ofX taking a pointx toB
+n
+x+b
+n
+(x),
+where B
+n
+is a linear operator and b
+n
+(x) is a continuous function (it is not
+assumed, in general, that any operator B
+n
+is an isomorphism of the space X).
+The trajectory x(t), t2T , of the appearing system starting at a point
+x
+0
+2X at the time moment l
+1
+(the left-hand end of the segment T
+1
+) is de ned
+as follows:
+  x(t) = 
+1
+(t;l
+1
+;x
+0
+); t2T
+1
+,
+  x(l
+2
+) =B
+1
+x(r
+1
+) +b
+1
+(x(r
+1
+)),
+  x(t) = 
+2
+(t;l
+2
+;x(l
+2
+)); t2T
+2
+,
+  x(l
+3
+) =B
+2
+x(r
+2
+) +b
+2
+(x(r
+2
+)), and so on.
+We  x countable sets of indices KS and KU and assume that there exist
+families of continuous projections P
+k
+(t), t 2T , of the space X indexed by
+k2K =KS
+S
+KU and having the following properties (??){(??).
+Let
+P
++
+(t) =
+X
+k2KS
+P
+k
+(t) and P
+ 
+(t) =
+X
+k2KU
+P
+k
+(t):
+We assume that
+P
+ 
+(t) +P
++
+(t) =E; t2T ; (19)
+P
+ 
+(t)P
++
+(t) = 0; t2T ; (20)
+https://doi.org/10.21638/11701/spbu35.2023.301 Electronic Journal: http://diffjournal.spbu.ru/ 15Differential Equations and Control Processes, N. 3, 2023
+ 
+n
+(t)P
+k
+(l
+n
+) =P
+k
+(t) 
+n
+(t) and  
+ 1
+n
+(t)P
+k
+(t) =P
+k
+(l
+n
+) 
+ 1
+n
+(t);
+t2T
+n
+; k2KS; (21)
+	
+n
+(t)P
+k
+(r
+n
+) =P
+k
+(t)	
+n
+(t) and 	
+ 1
+n
+(t)P
+k
+(t) =P
+k
+(r
+n
+)	
+ 1
+n
+(t);
+t2T
+n
+; k2KU; (22)
+B
+n
+P
+k
+(r
+n
+) =P
+k
+(l
+n+1
+)B
+n
+; n  1; k2K: (23)
+Concerning the projections P
+k
+, k2 KU, we assume, in addition, that the
+following property holds: the restriction of any mapB
+n
+,n  1, to the subspace
+P
+k
+(r
+n
+)X, k2 KU, is an isomorphism of the subspace P
+k
+(r
+n
+)X to the space
+P
+k
+(l
+n+1
+)X.
+For a trajectory x(t), we denote y
+k
+(t) = P
+k
+(t)x(t), k2 KS, and z
+k
+(t) =
+P
+k
+(t)x(t), k2KU.
+Let us write down the analog of the Perron operator for the functions y
+k
+(t)
+and z
+k
+(t) on an interval T
+n
+.
+First we write the term of the \direct" operator which is the  nite sum of
+summands including a
+1
+;:::;a
+n
+and b
+1
+;:::;b
+n 1
+:
+  including a
+1
+:
+ 
+n
+(t)
+ 
+B
+n 1
+ 
+n 1
+(r
+n 1
+)   B
+2
+ 
+2
+(r
+2
+)B
+1
+Z
+r
+1
+l
+1
+ 
+1
+(r
+1
+) 
+ 1
+1
+(s)P
+k
+(s)a
+1
+(s;x(s))ds
+ 
+;
+  including a
+2
+:
+ 
+n
+(t)
+ 
+B
+n 1
+ 
+n 1
+(r
+n 1
+)     
+3
+(r
+3
+)B
+2
+Z
+r
+2
+l
+2
+ 
+2
+(r
+2
+) 
+ 1
+2
+(s)P
+k
+(s)a
+2
+(s;x(s))ds
+ 
+;
+  ::: ;
+  including a
+n
+:
+ 
+n
+(t)
+ Z
+t
+l
+n
+ 
+ 1
+n
+(s)P
+k
+(s)a
+n
+(s;x(s))ds
+ 
+;
+  including b
+1
+:
+ 
+n
+(t)B
+n 1
+ 
+n 1
+(r
+n 1
+)   B
+2
+ 
+2
+(r
+2
+))P
+k
+(l
+2
+)b
+1
+(x(r
+1
+));
+https://doi.org/10.21638/11701/spbu35.2023.301 Electronic Journal: http://diffjournal.spbu.ru/ 16Differential Equations and Control Processes, N. 3, 2023
+  ::: ;
+  including b
+n 1
+:
+ 
+n
+(t)P
+k
+(l
+n
+)b
+n 1
+(x(r
+n 1
+)):
+The corresponding term of the \inverse " operator representing z
+k
+(t) for
+t2T
+n
+is the in nite sum of summands including a
+n
+;a
+n+1
+;::: and b
+n
+;b
+n+1
+;::: :
+  including a
+n
+:
+	
+n
+(t)
+Z
+t
+r
+n
+	
+ 1
+n
+(s)P
+k
+(s)a
+n
+(s;x(s))ds;
+  including a
+n+1
+:
+	
+n
+(t)B
+ 1
+n
+	
+n+1
+(l
+n+1
+)
+Z
+l
+n+1
+r
+n+1
+	
+ 1
+n+1
+(s)P
+k
+(s)a
+n+1
+(s;x(s))ds;
+  including a
+n+2
+:
+	
+n
+(t)B
+ 1
+n
+	
+n+1
+(l
+n+1
+)B
+ 1
+n+1
+	
+n+2
+(l
+n+2
+)
+Z
+l
+n+2
+r
+n+2
+	
+ 1
+n+2
+(s)P
+k
+(s)a
+n+2
+(s;x(s))ds;
+  ::: ;
+  including b
+n
+:
+ 	
+n
+(t)B
+ 1
+n
+P
+k
+(l
+n+1
+)b
+n
+(x(r
+n
+));
+  including b
+n+1
+:
+ 	
+n
+(t)B
+ 1
+n
+	
+n+1
+(l
+n+1
+)B
+ 1
+n+1
+P
+k
+(l
+n+2
+)b
+n+1
+(x(r
+n+1
+));
+  ::: .
+Perturbations. The natural statement of the perturbation problem is as
+follows.
+We replace systems (??) on the segments T
+n
+by systems
+_ x =C
+n
+(t)x +c
+n
+(t;x)
+(assuming that the operators C
+n
+(t) and the functions c
+n
+(t;x) have properties
+similar to those of A
+n
+(t) and a
+n
+(t;x)) and the maps B
+n
+x +b
+n
+(x) by similar
+mapsD
+n
+x +d
+n
+(x), take a trajectory (t) of the new system and look for a close
+trajectory x(t) of the original system.
+https://doi.org/10.21638/11701/spbu35.2023.301 Electronic Journal: http://diffjournal.spbu.ru/ 17Differential Equations and Control Processes, N. 3, 2023
+As usual, we are looking for functionsv(t) onT
+n
+with values inX such that
+x(t) = (t) +v(t); t2T
+n
+:
+From the relations
+_ x =A
+n
+(t)x+a
+n
+(t;x) =A
+n
+(t)(  +v)+a
+n
+(t;  +v) =
+_
+  + _ v =C
+n
+(t)  +c
+n
+(t; )+ _ v
+we deduce the equations for v:
+_ v =A
+n
+(t)v +a
+ 
+n
+(t; ;v); t2T
+n
+; (24)
+where
+a
+ 
+n
+(t; ;v) =A
+n
+(t)  +a
+n
+(t;  +v) C
+n
+(t)  c
+n
+(t; );
+which we represent in the form
+a
+ 
+n
+(t; ;v) =A
+n
+(t)  +a
+n
+(t;  +v) a
+n
+(t; ) C
+n
+(t)  +a
+n
+(t; ) c
+n
+(t; );
+and the summands of the right-hand side of the above formula have the fol-
+lowing properties: a
+n
+(t;  + v)  a
+n
+(t; ) vanishes for v = 0 and has small
+Lipschitz constant inv for smalljvj (of course, if we impose a similar condition
+on a
+k
+(t;x)) and a
+n
+(t; ) c
+n
+(t; ) is small (if the perturbed system is close to
+the nonperturbed one).
+Now we look at the \transition rule." From the equalities
+x(l
+n+1
+) =B
+n
+x(r
+n
+) +b
+n
+(x(r
+n
+)) =B
+n
+ (r
+n
+) +B
+n
+v(r
+n
+) +b
+n
+( (r
+n
+) +v(r
+n
+))
+= (l
+n+1
+) +v(l
+n+1
+) =D
+n
+ (r
+n
+) +d
+n
+( (r
+n
+)) +v(l
+n+1
+)
+we deduce the relations
+v(l
+n+1
+) =B
+n
+v(r
+n
+) +b
+ 
+n
+( (r
+n
+);v(r
+n
+)); n  1; (25)
+where
+b
+ 
+n
+( (r
+n
+);v) = (B
+n
+ D
+n
+) (r
+n
+)+b
+n
+( (r
+n
+)+v(r
+n
+)) b
+n
+( (r
+n
+))+b
+n
+( (r
+n
+)) d
+n
+( (r
+n
+)):
+Thus, forv(t) we get system (??){(??) similar to the original one (with the
+same A
+n
+(t) and B
+n
+but, of course, with different \small" nonlinear terms).
+We solve this system in a standard way.
+LetV be the space of continuous functions onT with values inX and with
+the norm
+kvk = sup
+n 1
+max
+t2T
+n
+jv(t)j:
+https://doi.org/10.21638/11701/spbu35.2023.301 Electronic Journal: http://diffjournal.spbu.ru/ 18Differential Equations and Control Processes, N. 3, 2023
+Clearly,V is a complete metric space with the metric  (v;w) =kv wk.
+Our goal is to indicate conditions under which the \Perron operator" cor-
+responding to system (??) and (??) has a  xed point inV whose norm we can
+control.
+Main assumption. We make the following main assumption.
+There exist sequences of positive numbers ff
+n;k
+; 
+n;k
+and a number M > 0
+such that
+k 
+n
+(t)k
+ 
+ff
+1;k
+kB
+n 1
+ 
+n 1
+(r
+n 1
+)   B
+2
+ 
+2
+(r
+2
+)B
+1
+Z
+r
+1
+l
+1
+ 
+1
+(r
+1
+) 
+ 1
+1
+(s)P
+k
+(s)dsk+
++ff
+2;k
+kB
+n 1
+ 
+n 1
+(r
+n 1
+)     
+3
+(r
+3
+)B
+2
+Z
+r
+2
+l
+2
+ 
+2
+(r
+2
+) 
+ 1
+2
+(s)P
+k
+(s)dsk+
++    +ff
+n;k
+k
+Z
+t
+l
+n
+ 
+ 1
+n
+(s)P
+k
+(s)dsk + 
+1;k
+kB
+n 1
+ 
+n 1
+(r
+n 1
+)   B
+2
+ 
+2
+(r
+2
+))P
+k
+(l
+2
+)k+
++    + 
+n;k
+kP
+k
+(l
+n+1
+)k
+ 
+ M; t2T
+n
+; n  1; k2KS; (26)
+and
+k	
+n
+(t)k
+ 
+ff
+n;k
+k
+Z
+t
+r
+n
+	
+ 1
+n
+(s)P
+k
+(s)dsk+
++ff
+n+1;k
+kB
+ 1
+n
+	
+n+1
+(l
+n+1
+)
+Z
+l
+n+1
+r
+n+1
+	
+ 1
+n+1
+(s)P
+k
+(s)dsk+
++ff
+n+2;k
+kB
+ 1
+n
+	
+n+1
+(l
+n+1
+)B
+ 1
+n+1
+	
+n+2
+(l
+n+2
+)
+Z
+l
+n+2
+r
+n+2
+	
+ 1
+n+2
+(s)P
+k
+(s)dsk +    +
++ 
+n;k
+kB
+ 1
+n
+P
+k
+(l
+n+1
+))k + 
+n+1;k
+kB
+ 1
+n
+	
+n+1
+(l
+n+1
+)B
+ 1
+n+1
+P
+k
+(l
+n+2
+))k+
++:::
+ 
+ M; t2T
+n
+; n  1; k2KU: (27)
+Theorem 4 [10]. Let conditions (??) and (??) be satis ed. Fix a positive
+d and assume that ifjvj  2Md, then the following estimates hold for t2 T
+n
+,
+n  1, and k2K, where Lip
+v
+is a Lipschitz constant in variable v:
+jP
+k
+(t)a
+ 
+n
+(t; (t);v)j ff
+n;k
+d;
+jP
+k
+(l
+n+1
+)b
+ 
+n
+( (r
+n
+);v)j  
+n;k
+d;
+https://doi.org/10.21638/11701/spbu35.2023.301 Electronic Journal: http://diffjournal.spbu.ru/ 19Differential Equations and Control Processes, N. 3, 2023
+Lip
+v
+(P
+k
+(t)a
+ 
+n
+(t; (t);v)) 
+ff
+n;k
+4M
+;
+Lip
+v
+(P
+k
+(l
+n+1
+)b
+ 
+n
+( (r
+n
+);v)) 
+ 
+n;k
+4M
+:
+Then for the trajectory  (t) of the perturbed system there exists a trajectory
+x(t) of the unperturbed system such that
+jx(t)  (t)j  2Md; t2T:
+Acknowledgements
+The research of the author was supported by the Russian Science Founda-
+tion, grant no. 23-21-00025, https://rscf.ru/project/23-21-00025/
+References
+[1] Pilyugin S.Yu. Shadowing in Dynamical Systems. Lect. Notes Math.,
+1706, Springer (1999).
+[2] Palmer K. Shadowing in Dynamical Systems. Theory and Applications,
+Kluwer (2000).
+[3] Pilyugin S.Yu., Sakai K. Shadowing and Hyperbolicity. Lect. Notes
+Math., 2193, Springer (2017).
+[4] Pilyugin S.Yu. Theory of pseudo-orbit shadowing in dynamical systems.
+Differ. Equ., 20, 1929{1938 (2011).
+[5] Anosov D.V. On a class of invariant sets of smooth dynamical systems.
+In: Proc. 5th Int. Conf. Nonl. Oscill., 2, Kiev, 39{45 (1970).
+[6] Bowen R. Equilibrium States and the Ergodic Theory of Anosov Diffeo-
+morphisms. Lect. Notes Math., 470, Springer (1975).
+[7] Pilyugin S.Yu. Multiscale conditional shadowing. J. Dynamics Diff.
+Equat. (2021).
+[8] Petrov A.A., Pilyugin S.Yu. Lyapunov functions, shadowing and topo-
+logical stability. Topol. Methods Nonlin. Anal., 43, 231{240 (2014).
+[9] Lewowicz J., Lyapunov functions and topological stability. J. Differ.
+Equat., 38, 192{209 (1980).
+[10] Pilyugin S.Yu. Perturbations of dynamical systems on simple time
+scales. Lobachevskii J. Math., 44, 1215{1222 (2023).
+https://doi.org/10.21638/11701/spbu35.2023.301 Electronic Journal: http://diffjournal.spbu.ru/ 20Differential Equations and Control Processes, N. 3, 2023
+[11] Walters P. On the pseudo orbit tracing property and its relationship to
+stability. In: Lect. Notes Math., 668, Springer, 231{244 (1978).
+[12] Petrov A.A., Pilyugin S.Yu. Shadowing near nonhyperbolic  xed
+points. Discrete Contin. Dyn. Syst., 34, 3761{3772 (2014).
+https://doi.org/10.21638/11701/spbu35.2023.301 Electronic Journal: http://diffjournal.spbu.ru/ 21
