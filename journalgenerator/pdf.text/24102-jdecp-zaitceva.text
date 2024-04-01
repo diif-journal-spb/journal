@@ -1,0 +1,574 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 1, 2024
+Electronic Journal,
+reg. N  C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Nonlinear oscillations
+Synthesis Algorithm for Control System with Saturated Actuator
+Zaitceva I.S.
+1;2;3; 
+, Andrievsky B.R.
+1;2;  
+, Kuznetsov N.V.
+1;2;   
+1
+St. Petersburg State University
+2
+Institute for Problems in Mechanical Engineering of RAS
+3
+St. Petersburg Electrotechnical University "LETI"
+ 
+julia.zaytsev@gmail.com
+  
+boris.andrievsky@gmail.com
+   
+nkuznetsov239@mail.ru
+Absract. The paper presents a generalized algorithm for designing closed op-
+timal systems with a dynamic controller and a nonlinear actuator. The purpose
+of the proposed algorithm is to identify the area of system performance degra-
+dation, manifested as unintentional oscillations, due to the inuence of actuator
+nonlinearity and reduce this area. The algorithm is implemented using a heuris-
+tic search algorithm and the method of sequential nonlinear correction. The
+results of the algorithm operation are shown on the PI control system of the
+angular plant motion with a saturated actuator. Simulation of the system with
+various input parameters showed the possibility of uctuations in the system
+output. The numerical analysis results of the nonlinear system are presented in
+the form of exponential diagrams of the performance error, covering all input
+parameters.
+Key words: heuristic search algorithm; controller tuning; optimization; non-
+linearity compensation; numerical analysis; generalized sensitivity functionDifferential Equations and Control Processes, N. 1, 2024
+1 Introduction
+Actuators are usually designed without large reserves of traction forces due to
+restrictions on the mass and size of the engineering object. During operation,
+the actuator is close to the limit of its traction, which can lead the system to the
+verge of stability. The system stability can be affected by external disturbances,
+large amplitudes of the input signal, and sharp manoeuvring. Therefore, the
+controller synthesis based on ensuring global asymptotic stability provides the
+desired result only in a limited range of system parameters [1].
+Studies show that nonlinearities such as saturation in terms of speed and
+level of the control signal have a valuable negative impact on the operation of
+systems [2{4]. In the literature, the so-called integrator excitation phenomenon
+in a feedback system, or windup, is known, when the control signal is lim-
+ited, the integrator accumulates an error, leading to undesirable output oscil-
+lations [1{3]. The increasing amplitude of the output oscillations can lead to
+the destruction of the equipment. Hence, an additional saturation compen-
+sation block is introduced for the nominal regulator. The static anti-windup
+compensator is implemented as part of the standard controller in the form of
+an ampli ed mismatch between the input and output of the saturation. That
+is, its structure involves measuring the saturation level. However, such an ap-
+proach is unrealizable if a human operator acts as a regulator. Another way
+to compensate for saturation is to introduce a phase-advancing nonlinear  lter
+into the rive control loop, which increases the phase stability margin [5{7]. The
+phase compensation method has found application in aircraft control systems
+to avoid oscillations about the axes of inertia. Also, a promising approach can
+be nonlinearity compensation using neural networks, as shown in [8], where the
+dependence of the material size on temperature has the form of hysteresis and
+negatively affects the positioning accuracy of the drive. It is necessary to focus
+on the safety of nonlinear electric drive systems, intensive research on stabil-
+ity and the development of safe controls due to the spread of various robotic
+technology in human life. An illustrative example of this fact is the existence
+of hidden attractors in the system, the identi cation of which is possible only
+with the help of specially developed computational procedures [9,10].
+The authors have investigated the ability of oscillation prevention in the
+manual control system of an aircraft and a robotic arm [6, 11]. These works
+show the effective use of a serial nonlinear corrective device to stabilize the
+controlled parameter. It seems that for all systems, there is a range of oper-
+https://doi.org/10.21638/11701/spbu35.2024.102 Electronic Journal: http://diffjournal.spbu.ru/ 13Differential Equations and Control Processes, N. 1, 2024
+Figure 1: Control loop structure
+ating parameters and a saturation level that limits this range. It has led to
+an assumption that it is possible to select numerically the area of acceptable
+operating parameters for a particular system. This paper aims to develop a
+technique that allows any control system to mistakenly identify the  eld of
+input signal parameters in which stability loss is possible.
+2 Optimal Control System with Saturated Actuator
+2.1 Brief description of the synthesis algorithm
+Some works show that it is possible to design a controller in a system with a
+constraint by optimal control methods. However, such solutions lead to relay
+control, signi cant computational di culties, and, ultimately, failures in imple-
+mentation in digital systems [1, 12]. The approach proposed in this paper is
+also based on the principle of system optimality. The algorithm contains ad-
+ditional steps associated with a nonlinear correction method described below.
+Let us assume that the block diagram of the system control corresponds to
+that shown in Fig. 1, where a nonlinear correction device (or nonlinear  lter)
+is already embedded into the actuator speed control loop.
+Algorithm 1 My algorithm
+1: Find the parameters of the nonlinear  lter corresponding to the maximum phase margin of
+the system.
+2: Find the parameters of the controller.
+3: Conduct a numerical system analysis for various input system parameters.
+https://doi.org/10.21638/11701/spbu35.2024.102 Electronic Journal: http://diffjournal.spbu.ru/ 14Differential Equations and Control Processes, N. 1, 2024
+2.2 Explanations of Algorithm 1
+The nonlinear  lter proposed for use is described by the following equations
+[6,7,13]:
+y(t) =jx(t)jsign( (t)); (1)
+ (t) =W
+ph
+(j!)x(t); (2)
+W
+ph
+(j!T ) =
+T
+1
+T
+(Ts + 1)
+(T
+1
+s + 1)
+; (3)
+Created advance by (3) is calculated as:
+ff(!) = arctan
+!T (1  )
+1 +!
+2
+T
+2
+ 
+; (4)
+where   =T
+1
+=T .
+The harmonic linearization coe cients of the nonlinear  lter are determined
+by the well-known formulas [14,15], and (1), (2), and (3) have the expressions:
+a(!) =
+1
+ 
+[   2ff(!) + sin(2ff(!)]; (5)
+b(!) =
+1
+ 
+[1  cos(2ff(!))]: (6)
+Fig. 2 shows the amplitude and phase response of (1)-(3) under variousnu.
+10
+-1
+10
+0
+10
+1
+10
+2
+0
+2
+4
+6
+Amplitude
+1
+=0.01
+2
+=0.1
+3
+=0.25
+4
+=0.5
+10
+-1
+10
+0
+10
+1
+10
+2
+Frequency, rad/s
+-80
+-60
+-40
+-20
+0
+Phase
+Figure 2: Frequency response of the nonlinear  lter (1)-(3)
+Fig. 2 shows the main used property of the nonlinear correction, which
+consists of the ability to control the phase response regardless of the magnitude
+of the input signal amplitude, which is important for nonlinear systems excited
+by signals with various amplitudes and frequencies.
+https://doi.org/10.21638/11701/spbu35.2024.102 Electronic Journal: http://diffjournal.spbu.ru/ 15Differential Equations and Control Processes, N. 1, 2024
+In the second point of Algorithm 1, it is required to solve the optimization
+problem, which can be formulated as:
+maxJ(K) =!
+c
+; subject to g(K)<b; (7)
+where!
+c
+is the crossover frequency,K is the vector of controller gains, andg is
+the function limited by the parameterb. It is convenient to impose restrictions
+on the frequency indicators of the system quality, for example, the oscillation
+index. Since the cutoff frequency is approximately inversely proportional to the
+transient time, then (7) can be written as minJ(K) =t
+t
+.
+Solution (7) reduces to a standard linear programming problem, which in
+the general case can be solved by a gradientless search method. Many different
+e ciency search algorithms can be used in the best way for problems in consid-
+eration [16]. In this paper, the standard Nelder-Mead algorithm in MATLAB is
+used for simplicity. The result of solving the problem (7) is a set of coe cients
+of the controller.
+In the last step of Algorithm 1, it is proposed to determine the area of
+acceptable input signals r
+ 
+for the system under consideration and the found
+controller parameters. In this paper, it is proposed to construct the generalized
+sensitivity function as a function of input signal parameters. To calculate it,
+the assumption is introduced that the considered nonlinear system is uniformly
+convergent for the class of signalsr
+ 
+(t) =A sin(!t) and for eachr
+ 
+(t) there is a
+unique steady-state periodic solution y(t) such that e(t) =r
+ 
+(t) y(t) [17,18].
+By de nition, the generalized sensitivity function for a nonlinear system is
+calculated as follows [18,19]:
+S(A;!) =
+jje(t)jj
+2
+jjr
+ 
+(t)jj
+2
+; (8)
+where A and ! are the amplitude and frequency of the reference signal.
+Equation (8) is the function of two arguments, which makes it possible to
+construct a three-dimensional diagram for greater clarity.
+3 Illustrative Example
+3.1 System Description
+Let's execute the modelling of the feedback control system shown in Fig. 1 with
+a nominal controller, a nonlinear actuator, and a plant described below. The
+https://doi.org/10.21638/11701/spbu35.2024.102 Electronic Journal: http://diffjournal.spbu.ru/ 16Differential Equations and Control Processes, N. 1, 2024
+control law is described by a standard proportional-integral (PI) form aimed
+at eliminating the performance error e(t) =r
+ 
+(t) r(t). The transfer function
+of PI controller from performance error e(t) to control signal u
+c
+(t) is written
+as [20]:
+W
+c
+(s) =K
+p
++
+K
+i
+s
+; (9)
+where K
+p
+and K
+i
+are the unknown gains to be found.
+Let us assume that the control is performed by one variable - a coordinate
+or an angle. So, the transfer function of the plant together with the actuator
+from the control signal u
+c
+(t) to the system output r(t) can be written as:
+W
+p
+(s) =
+k
+1
+(k
+2
+s + 1)
+(T
+a
+s + 1)(T
+ 
+s
+2
++ 2 !
+ 
++!
+2
+ 
+)s
+; (10)
+where T
+a
+is the actuator time constant, and the rest of the parameters refer to
+the plant: k
+ 
+is the gain,T
+ 
+is the time constant,  is the damping gain, and!
+ 
+is the natural frequency.
+The appearance of saturation is possible both in terms of the level and
+the speed of the signal. Consider speed saturation as the most problematic,
+which can be described by the function: sat
+u
+a
+: F ! [ u
+a
+;u
+a
+], where sat
+u
+a
+=
+sign(u
+a
+) minfju
+a
+j;u
+a
+g, u
+a
+> 0.
+3.2 Numerical Results
+Numerical simulation is carried out with the following system parameters:
+• initial parameters of the controller: K
+0
+P
+= 1 and K
+0
+i
+= 1;
+• plant parameters: T
+a
+= 0:07 s, u
+a
+= 6 deg/s, K
+1
+= 128, k
+2
+= 0:23, !
+ 
+= 5,
+  = 0:7;
+• input is harmonic with amplitudes A = [5:::50] deg, and the frequencies
+! = [0:::20] rad/s.
+To improve the stability and performance quality of the system, we use
+a nonlinear  lter (1)-(4) and determine its time constants for a given control
+object and saturation level: T = 0:01 s and T
+1
+= 50 s.
+Fig. 3 shows the time response of the nonlinear system under different
+input parameters. It can be seen that the amplitude and frequency of the input
+https://doi.org/10.21638/11701/spbu35.2024.102 Electronic Journal: http://diffjournal.spbu.ru/ 17Differential Equations and Control Processes, N. 1, 2024
+affect the performance error ( gures on the left), and there are a several inputs
+at which the performance error tends to zero ( gure on the top right). The
+introduction of a nonlinear  lter stabilizes the output (bottom right  gure).
+0 10 20 30 40 50 60 70 80 90 100
+-10
+-5
+0
+5
+10
+r*
+1
+(t), r
+1
+(t), deg
+r*
+1
+(t)=7sin(0.2t)
+r
+1
+(t)
+0 10 20 30 40 50 60 70 80 90 100
+Time, s
+-50
+0
+50
+r*
+2
+(t), r
+2
+(t), deg
+r*
+2
+(t)=25sin(0.2t)
+r
+2
+(t)
+0 10 20 30 40 50 60 70 80 90 100
+Time, s
+-10
+-5
+0
+5
+10
+15
+r*
+3
+(t), r
+cor
+(t), deg
+r*
+3
+(t)
+r
+cor
+(t)
+0 10 20 30 40 50 60 70 80 90 100
+-10
+-5
+0
+5
+10
+r*
+3
+(t), r
+3
+(t), deg
+r*
+3
+(t)=7sin(0.7t)
+r
+3
+(t)
+Figure 3: Time response of a nonlinear system for various input parameters; Time response of
+a system with nonlinear  lter and without it
+The search for PI controller parameters is presented in Fig. 4, which shows
+the controller coe cients K
+P
+, K
+i
+, the cutoff frequency !
+c
+, and the achieved
+conditions imposed on the oscillation index M < 1:25 (7). As a result, the
+following coe cients K
+P
+= 128, K
+i
+= 325 are obtained.
+20 40 60 80 100 120 140 160 180
+Iterations
+0.28
+0.3
+0.32
+0.34
+0.36
+0.38
+K
+P
+PI controller gains
+20 40 60 80 100 120 140 160 180
+Iterations
+0
+0.02
+0.04
+0.06
+0.08
+0.1
+K
+I
+20 40 60 80 100 120 140 160 180
+1.14
+1.16
+1.18
+1.2
+1.22
+1.24
+Oscillation index (M)
+20 40 60 80 100 120 140 160 180
+Iterations
+1.5
+1.6
+1.7
+1.8
+1.9
+2
+Crossover frequency (
+c
+)
+Figure 4: Illustration of the search algorithm
+Fig. 5 shows diagrams of the generalized sensitivity function (8), reecting
+the performance error in a nonlinear system without a nonlinear  lter (a) and
+with a nonlinear  lter (b). From these diagrams, you can determine at what
+input parameters the non-linearity has the greatest negative impact. It can also
+be seen that after the introduction of the nonlinear  lter, the input parameter
+https://doi.org/10.21638/11701/spbu35.2024.102 Electronic Journal: http://diffjournal.spbu.ru/ 18Differential Equations and Control Processes, N. 1, 2024
+area expanded, that is, the performance error decreased by about a factor of
+two.
+a)
+b)
+Figure 5: Performance error diagram based on generalized sensitivity function
+4 Conclusion
+The paper shows the dependence of nonlinear system performance on the in-
+put signals parameters and the effect of actuator saturation. An algorithm is
+proposed for synthesizing a control system with the nonlinear actuator. This
+algorithm consists of automatic tuning of the controller parameters, embedding
+a nonlinear corrective  lter, as well as constructing the area of acceptable pa-
+rameters of the system inputs that provide the required quality of control. The
+proposed algorithm can be applied in engineering control systems operating
+based on performance errors at the simulation stage and in real-time control.
+The results can be used in the design of systems and numerical analysis to
+identify the area of prohibited parameters for security purposes.
+Acknowledgements
+This work is supported in part by St. Petersburg State University grant Pure
+ID 75207094 and by the Leading Scienti c Schools of the Russian Federation,
+project NSh-4196.2022.1.1.
+https://doi.org/10.21638/11701/spbu35.2024.102 Electronic Journal: http://diffjournal.spbu.ru/ 19Differential Equations and Control Processes, N. 1, 2024
+References
+[1] Leonov G., Andrievsky B., Kuznetsov N., Pogromskii A. Aircraft control
+with anti-windup compensation // Differential Equations. 2012. Vol. 48,
+no. 13. P. 1700{1720.
+[2] Hu T., Lin Z. Control Systems with Actuator Saturation: Analysis and
+Design. USA: Birkhauser Boston, Inc., 2001. P. 392.
+[3] Teel A. R. Windup in Control: Its Effects and Their Prevention (by Hippe,
+P.; 2006) // IEEE Transactions on Automatic Control. 2008. Vol. 53, no. 8.
+P. 1976{1977.
+[4] Nguyen A.-T., Marquez R., Dequidt A. An augmented system approach for
+LMI-based control design of constrained Takagi-Sugeno fuzzy systems //
+Engineering Applications of Arti cial Intelligence. 2017. Vol. 61. P. 96{102.
+[5] Rundqwist L., Stahl-Gunnarsson K. Phase compensation of rate limiters in
+unstable aircraft // Proceeding of the 1996 IEEE International Conference
+on Control Applications. 1996. P. 19{24.
+[6] Zaitceva I. S., Kuznetsov N. V., Andrievsky B. R. Serial Nonlinear Correc-
+tion Method in the Flight Vehicle Systems // Cyber-Physical Systems and
+Control II / Ed. by D. G. Arseniev, N. Aouf. Cham: Springer International
+Publishing, 2023. P. 315{324.
+[7] Andrievsky B., Zaitceva I., Kuznetsov N. V. Application of Nonlinear
+Correction Method for Attitude Control and Landing Oscillations Preven-
+tion // IFAC-PapersOnLine. 2022. Vol. 55, no. 29. P. 37{42.
+[8] Asua E., Etxebarria V., Garcia-Arribas A. Neural network-based microp-
+ositioning control of smart shape memory alloy actuators // Engineering
+Applications of Arti cial Intelligence. 2008. Vol. 21, no. 5. P. 796{804.
+[9] Kiseleva M., Kuznetsov N., Leonov G., Neittaanmaki P. Hidden oscillations
+in drilling system actuated by induction motor // IFAC-PapersOnline.
+2013. Vol. 5, no. 1. P. 86{89.
+[10] Leonov G., Kuznetsov N. Hidden attractors in dynamical systems. From
+hidden oscillations in Hilbert-Kolmogorov, Aizerman, and Kalman prob-
+lems to hidden chaotic attractor in Chua circuits // Int. J. of Bifurcation
+and Chaos. 2013. Vol. 23, no. 1. P. 1{69.
+https://doi.org/10.21638/11701/spbu35.2024.102 Electronic Journal: http://diffjournal.spbu.ru/ 20Differential Equations and Control Processes, N. 1, 2024
+[11] Zaitceva I., Andrievsky B., Kuznetsov N. V., Popov A. M. Simulation of
+Remote Manipulator Control System with Saturated Actuator // IFAC-
+PapersOnLine. 2022. Vol. 55, no. 10. P. 2980{2985.
+[12] Athans M., Falb P. Optimal Control. New York: McGraw-Hill, 2006.
+P. 894.
+[13] Zel'chenko V., Sharov S. Nonlinear Correction of Automatic Control Sys-
+tems (Nelinejnaja korrekcija avtomaticheskih sistem.). Leningrad: Su-
+dostroenie, 1981. (in Russian).
+[14] Bell D. Harmonic linearization in optimal control // Int. J. of Control.
+1993. Vol. 57, no. 2. P. 495{500.
+[15] Chechurin L., Chechurin S. Physical Fundamentals of Oscillations. Springer
+Cham, 2018.
+[16] Alorf A. A survey of recently developed metaheuristics and their compar-
+ative analysis // Engineering Applications of Arti cial Intelligence. 2023.
+Vol. 117. P. 105622.
+[17] van den Berg R., Pogromsky A., Leonov G., Rooda J. Design of Convergent
+Switched Systems // Group Coordination and Cooperative Control, Ed. by
+K. Y. Pettersen, J. T. Gravdahl, H. Nijmeijer. Berlin, Heidelberg: Springer
+Berlin Heidelberg, 2006. P. 291{311.
+[18] Pavlov A., van de Wouw N., Pogromsky A. et al. Frequency domain per-
+formance analysis of nonlinearly controlled motion systems // 2007 46th
+IEEE Conference on Decision and Control. 2007. P. 1621{1627.
+[19] Pavlov A., van de Wouw N., Nijmeijer H. Convergent Systems: Analysis
+and Synthesis // Control and Observer Design for Nonlinear Finite and
+In nite Dimensional Systems, Ed. by T. Meurer, K. Graichen, E. D. Gilles.
+Berlin, Heidelberg: Springer Berlin Heidelberg, 2005. P. 131{146.
+[20] Astrom K., Hagglund T. Advanced PID Control. Res. Triangle Park, North
+Carolina: ISA, 2006.
+https://doi.org/10.21638/11701/spbu35.2024.102 Electronic Journal: http://diffjournal.spbu.ru/ 21
