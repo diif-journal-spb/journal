@@ -1,0 +1,1336 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 2, 2024
+Electronic Journal,
+reg. N ΦC77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Nonlinear partial differential equations
+Group analysis of differential equations
+Solution of the Carleman system using group analysis
+Dukhnovsky S. A.
+Moscow State University of Civil Engineering
+sergeidukhnvskijj@rambler.ru
+Abstract. In this paper, we consider the discrete kinetic Carleman system.
+The Carleman system is the Boltzmann kinetic equation, and for this model
+momentum and energy are not conserved. Using group analysis methods, we
+obtainasolutionrepresentingthedensityofgasparticlesinacertainarea. This
+limitation is due to the non-negativity of solution. Similarly, it is possible to
+ﬁnd exact solutions for other kinetic models.
+Keywords: Carleman system, group analysis, invariant solution
+1 Introduction
+We consider the one-dimensional Carleman system [9, 15]:
+∂
+t
+u+∂
+x
+u =
+1
+ε
+(v
+2
+−u
+2
+), x ∈R, t > 0,
+∂
+t
+v −∂
+x
+v = −
+1
+ε
+(v
+2
+−u
+2
+).
+(1)
+Here u = u(x,t),v = v(x,t) are the densities of two groups of particles with
+velocities c = 1,−1, ε is the Knudsen parameter from the kinetic theory of
+gases. This system describes a monatomic rareﬁed gas consisting of two groups
+of particles. The Carleman system is a non-integrable system, i.e. the Painlev´ eDifferential Equations and Control Processes, N. 2, 2024
+test is not applicable. The interaction is as follows. The Carleman system
+describes particles of two groups, namely, the ﬁrst group of particles moves at
+a unit speed along the axis Ox, and the second group moves at a unit speed in
+the opposite direction. It is worth noting that only particles within one group
+interact, that is, only with themselves, changing the direction of motion.
+The method of group analysis is a well-known method for ﬁnding solu-
+tions, in particular invariant solutions of equations of mathematical physics.
+This method is described in detail in [1, 2, 3, 5]. A general description of the
+Boltzmann equation is described in the article [4]. In this works [6, 7], Ilyin
+O. V. obtained an optimal system of one-dimensional subalgebras and classes
+of invariant solutions for the stationary kinetic Broadwell model and the one-
+dimensional Boltzmann integro-differential equation for Maxwellian particles
+with inelastic collisions. In [8] the results of group analysis of the multidimen-
+sionalBoltzmannandVlasovequationsarepresented. Also, solutionsofkinetic
+systems using Painlev´ e series were found in [9, 10, 11, 15, 16]. Asymptotic sta-
+bility for Boltzmann models as well as the numerical study are presented in
+[14, 17, 18, 19]. The analysis described in this paper provides solutions of the
+Carleman system that have not yet been found in the literature.
+2 Method of group analysis
+We consider a system of two second order partial differential equations
+F
+1
+(u,u
+t
+,u
+x
+,u
+tt
+,u
+xt
+,u
+xx
+,...) = 0, (2)
+F
+2
+(v,v
+t
+,v
+x
+,v
+tt
+,v
+xt
+,v
+xx
+,...) = 0, (3)
+where u = u(x,t),v = v(x,t) are unknown functions. According to the group
+analysis methods, we will look for the prolonged operator in the form
+X
+1
+= ξ
+∂
+∂x
++η
+∂
+∂t
++ζ
+∂
+∂u
++χ
+∂
+∂v
++ζ
+1
+∂
+∂u
+x
++ζ
+2
+∂
+∂u
+t
++χ
+1
+∂
+∂v
+x
++χ
+2
+∂
+∂v
+t
+,
+where ξ = ξ(x,t,u,v), η = ξ(x,t,u,v), ζ = ζ(x,t,u,v), χ = χ(x,t,u,v). Here
+X = ξ
+∂
+∂x
++η
+∂
+∂t
++ζ
+∂
+∂u
++χ
+∂
+∂v
+. (4)
+is called the inﬁnitesimal operator of the group. A universal invariant of the
+group and the operator (4) is a function I(x,t,u,v)
+XI = ξ
+∂I
+∂x
++η
+∂I
+∂t
++ζ
+∂I
+∂u
++χ
+∂I
+∂v
+= 0. (5)
+https://doi.org/10.21638/11701/spbu35.2024.208 Electronic Journal: http://diffjournal.spbu.ru/ 184Differential Equations and Control Processes, N. 2, 2024
+The coordinates of the ﬁrst prolongation are given by
+ζ
+1
+= D
+x
+(ζ)−u
+x
+D
+x
+(ξ)−u
+t
+D
+x
+(η).
+ζ
+2
+= D
+t
+(ζ)−u
+x
+D
+t
+(ξ)−u
+t
+D
+t
+(η)
+and
+χ
+1
+= D
+x
+(χ)−v
+x
+D
+x
+(ξ)−v
+t
+D
+x
+(η),
+χ
+2
+= D
+t
+(χ)−v
+x
+D
+t
+(ξ)−v
+t
+D
+t
+(η),
+where D
+x
+,D
+t
+are the operators of total differentiation with respect to x and t:
+D
+x
+=
+∂
+∂x
++u
+x
+∂
+∂u
++v
+x
+∂
+∂v
++u
+xx
+∂
+∂u
+x
++u
+xt
+∂
+∂u
+t
++v
+xx
+∂
+∂v
+x
++v
+xt
+∂
+∂v
+t
++···,
+D
+t
+=
+∂
+∂t
++u
+t
+∂
+∂u
++v
+t
+∂
+∂v
++u
+xt
+∂
+∂u
+x
++u
+tt
+∂
+∂u
+t
++v
+xt
+∂
+∂v
+x
++v
+tt
+∂
+∂v
+t
++···.
+After calculations, we have
+ζ
+1
+= ζ
+x
++ζ
+u
+u
+x
++ζ
+v
+v
+x
+−u
+x
+(ξ
+x
++ξ
+u
+u
+x
++ξ
+v
+v
+x
+)−u
+t
+(η
+x
++η
+u
+u
+x
++η
+v
+v
+x
+), (6)
+ζ
+2
+= ζ
+t
++ζ
+u
+u
+t
++ζ
+v
+v
+t
+−u
+x
+(ξ
+t
++ξ
+u
+u
+t
++ξ
+v
+v
+t
+)−u
+t
+(η
+x
++η
+u
+u
+t
++η
+v
+v
+t
+) (7)
+and
+χ
+1
+= χ
+x
++u
+x
+χ
+u
++v
+x
+χ
+v
+−v
+x
+(ξ
+x
++u
+x
+ξ
+u
++v
+x
+ξ
+v
+)−v
+t
+(η
+x
++u
+x
+η
+u
++v
+x
+η
+v
+), (8)
+χ
+2
+= ξ
+t
++ξ
+u
+u
+t
++ξ
+v
+v
+t
+−v
+x
+(ξ
+t
++ξ
+u
+u
+t
++ξ
+v
+v
+t
+)−v
+t
+(η
+t
++η
+u
+u
+t
++η
+v
+v
+t
+). (9)
+We require that
+X
+1
+F
+1
+|
+F
+1
+=F
+2
+=0
+= 0,X
+1
+F
+2
+|
+F
+1
+=F
+2
+=0
+= 0. (10)
+Relations (10) is called the invariance conditions.
+We illustrate the above procedure for the Carleman system.
+3 Application of the method
+Let us insert
+F
+1
+= u
+t
++u
+x
+−
+1
+ε
+(v
+2
+−u
+2
+),
+https://doi.org/10.21638/11701/spbu35.2024.208 Electronic Journal: http://diffjournal.spbu.ru/ 185Differential Equations and Control Processes, N. 2, 2024
+F
+2
+= v
+t
+−v
+x
++
+1
+ε
+(v
+2
+−u
+2
+),
+into the invariance conditions (10)
+X
+1
+F
+1
+|
+F
+1
+=0,F
+2
+=0
+= (ζ
+2
++ζ
+1
+−
+1
+ε
+2vχ+
+1
+ε
+2uζ)|
+F
+1
+=0,F
+2
+=0
+, (11)
+X
+1
+F
+2
+|
+F
+1
+=0,F
+2
+=0
+= (χ
+2
+−χ
+1
++
+1
+ε
+2vχ−
+1
+ε
+2uζ)|
+F
+1
+=0,F
+2
+=0
+. (12)
+Now, replacing u
+t
+,v
+t
+by −u
+x
++
+1
+ε
+(v
+2
+−u
+2
+),v
+x
+−
+1
+ε
+(v
+2
+−u
+2
+)andtakingintoaccount
+the expressions (6)-(7) and (8)-(9) for the coordinates of the ﬁrst prolongation
+from the ﬁrst equation (11), we have:
+u
+x
+: −ξ
+t
+−
+1
+ε
+(v
+2
+−u
+2
+)ξ
+u
++ξ
+v
+1
+ε
+(v
+2
+−u
+2
+)+η
+t
++η
+u
+1
+ε
+(v
+2
+−u
+2
+)−
+−
+1
+ε
+η
+v
+(v
+2
+−u
+2
+)−ξ
+x
++η
+x
+= 0,
+u
+2
+x
+: ξ
+u
+−η
+u
+−ξ
+u
++η
+u
+= 0,
+v
+x
+: ζ
+v
+−
+1
+ε
+(v
+2
+−u
+2
+)η
+v
++ζ
+v
+−
+1
+ε
+(v
+2
+−u
+2
+)η
+v
+= 0,
+u
+x
+v
+x
+: −ξ
+v
++η
+v
+−ξ
+v
++η
+v
+= 0,
+1 : ζ
+t
++ζ
+u
+1
+ε
+(v
+2
+−u
+2
+)−ζ
+v
+1
+ε
+(v
+2
+−u
+2
+)−
+1
+ε
+(v
+2
+−u
+2
+)η
+t
+−
+−
+1
+ε
+(v
+2
+−u
+2
+)η
+u
+1
+ε
+(v
+2
+−u
+2
+)+
+1
+ε
+(v
+2
+−u
+2
+)η
+v
+1
+ε
+(v
+2
+−u
+2
+)+ζ
+x
+−
+−
+1
+ε
+(v
+2
+−u
+2
+)η
+x
+−
+2
+ε
+χv+
+2
+ε
+uζ = 0.
+From the second equation (12):
+u
+x
+: χ
+u
+−
+1
+ε
+(v
+2
+−u
+2
+)η
+u
+−χ
+u
+−
+1
+ε
+(v
+2
+−u
+2
+)η
+u
+= 0,
+u
+x
+v
+x
+: ξ
+u
++η
+u
++ξ
+u
++η −u = 0,
+v
+x
+: χ
+v
+−ξ
+t
+−
+1
+ε
+(v
+2
+−u
+2
+)ξ
+u
++ξ
+v
+1
+ε
+(v
+2
+−u
+2
+)−η
+t
+−
+−η
+u
+1
+ε
+(v
+2
+−u
+2
+)+η
+v
+1
+ε
+(v
+2
+−u
+2
+)+
+1
+ε
+(v
+2
+−u
+2
+)η
+v
+−χ
+v
++ξ
+x
++
++η
+x
+−
+1
+ε
+(v
+2
+−u
+2
+)η
+v
+= 0,
+https://doi.org/10.21638/11701/spbu35.2024.208 Electronic Journal: http://diffjournal.spbu.ru/ 186Differential Equations and Control Processes, N. 2, 2024
+v
+2
+x
+: −ξ
+v
+−η
+v
++ξ
+v
++η
+v
+= 0,
+1 : χ
+t
++χ
+u
+1
+ε
+(v
+2
+−u
+2
+)−χ
+v
+1
+ε
+(v
+2
+−u
+2
+)+
+1
+ε
+(v
+2
+−u
+2
+)η
+t
++
++
+1
+ε
+(v
+2
+−u
+2
+)η
+u
+1
+ε
+(v
+2
+−u
+2
+)−
+1
+ε
+(v
+2
+−u
+2
+)η
+v
+1
+ε
+(v
+2
+−u
+2
+)−χ
+x
+−
+−
+1
+ε
+(v
+2
+−u
+2
+)η
+x
++
+2
+ε
+χv −
+2
+ε
+ζu = 0.
+Rewrite the system in a more compact form
+η
+v
+= ξ
+v
+,
+2
+1
+ε
+(v
+2
+−u
+2
+)η
+u
+−ξ
+t
++η
+t
+−η
+x
+−ξ
+x
+= 0,
+ζ
+v
+−
+1
+ε
+(v
+2
+−u
+2
+)η
+v
+= 0,
+1
+ε
+(v
+2
+−u
+2
+)(ζ
+u
+−ζ
+v
+−η
+t
+−η
+u
+1
+ε
+(v
+2
+−u
+2
+)+η
+v
+1
+ε
+(v
+2
+−u
+2
+)−η
+x
+)+
++ζ
+x
++ζ
+t
+−
+2
+ε
+χv+
+2
+ε
+uζ = 0
+and
+η
+u
+= −ξ
+u
+,
+χ
+u
++
+1
+ε
+(v
+2
+−u
+2
+)η
+u
+= 0,
+2
+1
+ε
+(v
+2
+−u
+2
+)η
+v
+−η
+t
+−ξ
+t
++η
+x
++ξ
+x
+= 0,
+1
+ε
+(v
+2
+−u
+2
+)(χ
+u
+−χ
+v
++η
+t
++
+1
+ε
+(v
+2
+−u
+2
+)η
+u
+−
+1
+ε
+(v
+2
+−u
+2
+)η
+v
+−η
+x
+)+
++χ
+t
+−χ
+x
++
+2
+ε
+χv −
+2
+ε
+ζu = 0.
+Integrating the system, we get
+η(t) = αt+β,ξ(x) = αx+γ,ζ(u) = −αu,χ(v) = −αv,
+where α,β,γ are arbitrary constants. The corresponding characteristic system
+of ordinary differential equations for (5)
+dt
+η
+=
+dx
+ξ
+=
+du
+ζ
+=
+dv
+χ
+or
+dt
+αt+β
+=
+dx
+αx+γ
+=
+du
+−αu
+=
+dv
+−αv
+.
+https://doi.org/10.21638/11701/spbu35.2024.208 Electronic Journal: http://diffjournal.spbu.ru/ 187Differential Equations and Control Processes, N. 2, 2024
+We obtain
+ω =
+αx+γ
+αt+β
+,
+where α,γ,β is an integration constants. Invariant solution are sought in the
+form
+u =
+Φ(ω)
+α(αt+β)
+,v =
+Ψ(ω)
+α(αt+β)
+,
+where Φ,Ψ unknown functions of similarity variable that must be deﬁned.
+−(αt+β)Φ+(αt−αx+β −γ)Φ
+′
+(αt+β)
+3
+=
+Ψ
+2
+−Φ
+2
+α
+2
+(αt+β)
+2
+ε
+, (13)
+−(αt+β)Ψ−(αt+αx+β +γ)Ψ
+′
+(αt+β)
+3
+=
+Φ
+2
+−Ψ
+2
+α
+2
+(αt+β)
+2
+ε
+(14)
+or we rewrite
+α
+2
+ε(Φ(1−ω))
+′
+= −Φ
+2
++Ψ
+2
+,
+α
+2
+ε(Ψ(1+ω))
+′
+= −Φ
+2
++Ψ
+2
+. (15)
+Φ(ω) =
+1+ω
+1−ω
+Ψ(ω)+(1−ω)C,
+where C is an arbitrary constant of integration.
+For ﬁnding function Ψ, we have the Riccati equation
+Ψ
+′
+=
+−4ω
+εα
+2
+(1−ω)
+2
+(1+ω)
+Ψ
+2
++
+(
+−2C −εα
+2
++2(εα
+2
+−C)ω −εα
+2
+ω
+2
+εα
+2
+(1−ω)
+2
+(1+ω)
+)
+Ψ−
+−
+C
+2
+εα
+2
+(1−ω)
+2
+(1+ω)
+.
+We can write the particular solution at C = 0
+u =
+−εα(εα(t+x)+β +γ)
+−2(εαt+β)
+2
++C
+1
+((εαt+β)
+2
+−(εαt+γ)
+2
+)
+,
+v =
+−εα(εα(t−x)+β −γ)
+−2(εαt+β)
+2
++C
+1
+((εαt+β)
+2
+−(εαt+γ)
+2
+)
+, (16)
+where C
+1
+is an arbitrary constant of integration. The non-negativity of the
+solution can be chosen by choosing a constant C
+1
+in the region of the plane x,t.
+https://doi.org/10.21638/11701/spbu35.2024.208 Electronic Journal: http://diffjournal.spbu.ru/ 188Differential Equations and Control Processes, N. 2, 2024
+4 Conclusion
+In this article, the solution was found using group analysis methods. We de-
+termined three different inﬁnitesimal groups of transformations leaving the in-
+variant condition. A well-known and very important special class of invariant
+solutions was represented by self similar solution which was constructed on the
+basis of invariants of extension groups. Future work will present solutions to
+the remaining kinetic systems.
+References
+[1] Polyanin A. D., Zaitsev V. F., and Zhurov A. I. Methods of Solution of
+Nonlinear Equations of Mathematical Physics and Mechanics [in Russian],
+Fizmatlit, Moscow (2005).
+[2] Ovsiannikov L. V. Group Analysis of Differential Equations, Academic
+Press, New York, 1982.
+[3] Olver P. Applications of Lie Groups to Differential Equations, Springer,
+New York, 1993.
+[4] Godunov S. K., Sultangazin U. M. On discrete models of the kinetic Boltz-
+mann equation. Russian Mathematical Surveys, 1971; 26(3): 1–56.
+[5] IbragimovN.Kh.Groupanalysisofordinarydifferentialequationsandthe
+invariance principle in mathematical physics (for the 150th anniversary of
+Sophus Lie). Russian Math. Surveys, 1992; 47(4): 89–156.
+[6] Ilyin O. V. Symmetries and invariant solutions of the one-dimensional
+Boltzmannequationforinelasticcollisions.Theoret.andMath.Phys.,2016;
+186(2): 183–191.
+[7] IlyinO.V.Symmetries,thecurrentfunction,andexactsolutionsforBroad-
+well’s two-dimensional stationary kinetic model. Theoret. and Math, 2014;
+179(3): 679–688.
+[8] Platonova K. S., Borovskikh A. V. Group analysis of the Boltzmann and
+Vlasov equations. Theoret. and Math. Phys., 2020; 203(3): 794–823.
+[9] Euler N., Steeb W.-H. Painlev´ e test and discrete Boltzmann equations.
+Australian Journal of Physics, 1989; (42): 1–10.
+https://doi.org/10.21638/11701/spbu35.2024.208 Electronic Journal: http://diffjournal.spbu.ru/ 189Differential Equations and Control Processes, N. 2, 2024
+[10] Dukhnovskii S. A. Solutions of the Carleman system via the Painlev´ e ex-
+pansion. Vladikavkaz Math. J., 2020; 22(4): 58–67. (In Russ.)
+[11] Dukhnovsky S. On solutions of the kinetic McKean system. Bul. Acad.
+S ¸tiint ¸e Repub. Mold. Mat., 2020; 3(94): 3–11.
+[12] Vedenyapin V., Sinitsyn A., Dulov E. Kinetic Boltzmann, Vlasov and re-
+lated equations. Amsterdam, Elsevier, 2011, xiii+304 pp.
+[13] Aristov V.V., Ilyin O.V. Description of the rapid invasion processes by
+means of the kinetic model. Computer Research and Modeling, 2014; 6(5):
+829–838.(In Russ.)
+[14] Vasil’eva O. A. Computer research of building materials. E3S Web of Con-
+ferences, 2019; (197), 02011: 1–6.
+[15] Dukhnovskii S. A. Painlev´ e test and a self-similar solution of the kinetic
+model. Itogi Nauki i Tekhniki. Ser. Sovrem. Mat. Pril. Temat. Obz., 2020;
+(176): 91–94. (In Russ.)
+[16] Lindblom O., Euler N. Solutions of discrete-velocity Boltzmann equations
+viaBatemanandRiccatiequations. Theoretical and Mathematical Physics,
+2002; 131(2): 595–608.
+[17] Radkevich E. V. On the large-time behavior of solutions to the Cauchy
+problem for a 2-dimensional discrete kinetic equation. Journal of Mathe-
+matical Sciences, 2014; 202(5): 735–768.
+[18] Dukhnovkii S. A. On a speed of solutions stabilization of the Cauchy prob-
+lem for the Carleman equation with periodic initial data. J. Samara State
+Tech. Univ., Ser. Phys. Math. Sci., 2017; 21(1): 7–41. (In Russ.)
+[19] Vasil’eva O. A., Dukhnovskii S. A., Radkevich E. V. On the nature of local
+equilibrium in the Carleman and Godunov-Sultangazin equations. Journal
+of Mathematical Sciences, 2018; 235(4): 392–454.
+https://doi.org/10.21638/11701/spbu35.2024.208 Electronic Journal: http://diffjournal.spbu.ru/ 190
