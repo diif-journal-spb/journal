@@ -191,7 +191,7 @@
 
 
     <article>
-        <articleInfo lang="EN" FirstPage="46" LastPage="45">
+        <articleInfo lang="EN" FirstPage="46" LastPage="58">
             <pdf>24204-jdecp-naimov.pdf</pdf>
             <abstract>In this paper we study the periodic problem with a period equal to 1
                 for a two-dimensional system of second-order ordinary differential equations,
@@ -236,7 +236,7 @@
                 <reference>Naimov A. N., Khakimov R. I. &lt;em&gt;Otsenka proizvodnykh periodicheskikh resheniy odnogo klassa sistem nelineynykh obyknovennykh differentsial'nykh uravneniy vtorogo poryadka&lt;/em&gt; [Estimation of derivatives of periodic solutions of one class of systems of nonlinear ordinary differential equations of the second order]. &lt;em&gt;Bulletin of the Tajik National University&lt;/em&gt;, 2017; No. 1/5: 12-16. (In Russ. )</reference>
             </references>
         </articleInfo>
-        <articleInfo lang="RU" FirstPage="46" LastPage="45">
+        <articleInfo lang="RU" FirstPage="46" LastPage="58">
             <pdf>24204-jdecp-naimov.pdf</pdf>
             <abstract>Исследована периодическая задача c периодом равным $1$ для двумерной
                 системы обыкновенных дифференциальных уравнений второго порядка,
@@ -277,6 +277,98 @@
         <authors>
             <author ref="n_2024_6_mukhamadiev" sort-key="1" />
             <author ref="n_2024_6_naimov" sort-key="2" />
+        </authors>
+    </article>
+
+
+    <article>
+        <articleInfo lang="EN" FirstPage="59" LastPage="72">
+            <pdf>24205-jdecp-barseghyan.pdf</pdf>
+            <abstract>Taking into account the growing use of quadcopters for various purposes, this work is devoted to considering the issues of mathematical modeling of their spatial motion and constructing a program optimal control law that ensures flight with a given intermediate value of part of the coordinates of the phase vector at some point in time. Based on the laws of theoretical mechanics, a system of differential equations describing the spatial motion of the quadcopter is given. For a linearized mathematical model of the motion of a quadcopter and a quadratic functional, the problem of constructing an optimal control law with given initial and final values of the phase vector and the value of a part of the coordinates at an intermediate point in time solved by the method of problems of moments. Optimal control functions and corresponding phase trajectories of optimal motion are constructed, taking into account the value of a part of the coordinates at some intermediate point in time. To illustrate the proposed approach, explicit expressions for the program optimal control function, phase coordinates of motion and corresponding graphs are constructed for specific numerical values.</abstract>
+            <title>On One Problem of Optimal Control of a Quadcopter with a Given Intermediate Value of Part of the Coordinates of the Phase Vector</title>
+            <keywords>
+                <word>intermediate condition</word>
+                <word>mathematical model</word>
+                <word>optimal control</word>
+                <word>phase trajectories</word>
+                <word>quadcopter</word>
+            </keywords>
+            <references>
+                <reference>Sitnikov D. V., Burian Y. A., Russkih G. S. Avtopilot mul'tikoptera [Motion Control System of Multicopter]. Proceedings Of the Tula States University. Technical sciences. 2012. № 7. P. 213-221(in Russ. )</reference>
+                <reference>D. Т Rubin., V. N. Konev, А. V. Starikovsky, А. А. Sheptunov. Razrabotka kvadrokopterov so spetsial'nymi svoystvami dlya provedeniya razvedyvatel'nykh operatsiy [Development of special quadrocopters for survey works]. Spetstekhnika i svyaz - Special machinery and communications, 2012, No. 1(in Russ. )</reference>
+                <reference>Epov M. I., Zlygostev I. N., Primeneniye bespilotnykh letatel'nykh apparatov v aerogeofizicheskoy razvedke [Application of unmanned aerial vehicles in airborne geophysical reconnaissance]. Sbornik materialov Interekspo GEO-Sibir, 2:3 (2012), 22-27 (In Russ)</reference>
+                <reference>Telukhin S. V., Matveyev V. V. Bespilotnyy letatel'nyy apparat kak ob&amp;quot; yekt upravleniya [Unmanned aerial vehicle as an object of control. ]. &lt;em&gt;Mekhatronika, avtomatizatsiya, upravleniye&lt;/em&gt;. 2008. № 10. 7-10. (in Russ. )</reference>
+                <reference>Chettibi T., Haddad M. Dynamic modelling of a quadrotor aerial robot // Journees D’etudes Nationales de Mecanique. Batna, Algerie, 2007. P. 22-27</reference>
+                <reference>Mokhtari A., Benallegue A. Dynamic feedback controller of Euler angles and wind parameters estimation for a quadrotor unmanned aerial vehicle // Proceedings - IEEE International Conference on Robotics and Automation. 2004. V. 2004. N 3. P. 2359-2366</reference>
+                <reference>Derafa L., Madani T., Benallegue A. Dynamic modelling and experimental identification of four rotors helicopter parameters // Proceedings of the IEEE International Conference on Industrial Technology. 2006. Art. 4237837. P. 1834-1839</reference>
+                <reference>Margun A. A., Zimenko K. A., Bazylev D. N., Bobtsov A. A., Kremlev A. S., Ibraev D. D. Sistema upravleniya bespilotnym letatel'nym apparatom, osnashchennym robototekhnicheskim manipulyatorom [Control System For Unmanned Aircraft Equipped With Robotics Arm]. Scientific and Technical Journal of Information Technologies, Mechanics and Optics&amp;quot; &lt;b&gt;. &lt;/b&gt;2014. №6 (94). P 54-62 (In Russ)</reference>
+                <reference>Luukkonen T. Modelling and control of quadcopter. 2011.  &lt;a href="http://sal.aalto.fi/publications/pdf-files/eluu11_public.pdf"&gt;http://sal.aalto.fi/publications/pdf-files/eluu11_public.pdf&lt;/a&gt; </reference>
+                <reference>Puls T., Hein A. 3D trajectory control for quadrocopter // Intelligent Robots and System (IROS), IEEE/RSJ International Conference. 2010. P. 640-645</reference>
+                <reference>Beni&amp;#263; Z., Piljek P. and Kotarski D. Mathematical modelling of unmanned aerial vehicles with four rotors. Interdisciplinary Description of Complex Systems. 2016. 14(1), pp. 88-100</reference>
+                <reference>Ashchepkov, L. T., Optimal'noye upravleniye sistemoy s promezhutochnymi usloviyami [Optimal Control of a System with Intermediate Conditions], &lt;em&gt;J. Appl. Math. Mech. &lt;/em&gt;, 1981, vol. 45, no. 2, pp. 153-158</reference>
+                <reference>Dykhta V. A., Samsonyuk O. N. Printsip maksimuma dlya gladkikh zadach optimal'nogo impul'snogo upravleniya s mnogotochechnymi fazoogranicheniyami[The maximum principle for smooth problems of optimal impulse control with multipoint phase constraints]. &lt;em&gt;Zhurnal vychislitel'noy matematiki i matematicheskoy fiziki&lt;/em&gt;. 2009, t. 49, № 6, s. 981-997. (in Russ. )</reference>
+                <reference>Barseghyan, V. R. Upravlenie sostavnyh dinamicheskih sistem i sistem s mnogotochechnymi promezhutochnymi usloviyami. [Control of Compound Dynamic Systems and of Systems with Multipoint Intermediate Conditions]&lt;em&gt;. &lt;/em&gt;M. : Nauka, 2016. (in Russ. )</reference>
+                <reference>Barseghyan V. R. Control of stage by stage changing linear dynamic systems // Yugoslav Journal of Operations Resarch. 2012. Vol. 22. № 1. P. 31-39</reference>
+                <reference>Barseghyan V. R. and Barseghyan T. V. On an Approach to the Problems of Control of Dynamic System with Nonseparated Multipoint Intermediate Conditions. Automation and Remote Control, 2015, Vol. 76, № 4, pp. 549-559</reference>
+                <reference>Barseghyan V. R, Matevosyan A. G. On One Problem of Controlling an Airplane-type Unmanned Aerial Vehicle with Given Intermediate Values of Different Parts of Coordinates. Differential Equations and Control Processes, 2023, Issue 2, P. 86-96. St Petersburg State University</reference>
+                <reference>Barseghyan V. R. Control Problem of String Vibrations with Inseparable Multipoint Conditions at Intermediate Points in Time. Mechanics of Solids. 2019. Vol. 54, Issue 8, pp. 1216-1226</reference>
+                <reference>Barseghyan V., Solodusha S. On One Problem in Optimal Boundary Control for String Vibrations with a Given Velocity of Points at an Intermediate Moment of Time // IEEE International Russian Automation Conference (RusAutoCon). 2021. P. 343-349</reference>
+                <reference>Krasovsky N. N. &lt;em&gt;Teoriya upravleniya dvizheniem&lt;/em&gt; [The Theory of Motion Control]. M. : Nauka, 1968. (in Russ. )</reference>
+            </references>
+        </articleInfo>
+        <articleInfo lang="RU" FirstPage="59" LastPage="72">
+            <pdf>24205-jdecp-barseghyan.pdf</pdf>
+            <abstract>Учитывая растущее применение квадрокоптеров в различных целях,
+                данная работа посвящена рассмотрению вопросов математического моделирования
+                их пространственного движения и построению закона оптимального управления,
+                обеспечивающего полет с заданным промежуточным значением части координат
+                фазового вектора в некоторый момент времени. На основе законов теоретической
+                механики приведена система дифференциальных уравнений, описывающих
+                пространственное движение квадрокоптера. Для линеаризованной математической
+                модели движения квадрокоптера и квадратичного функционала методом проблем
+                моментов решена задача построения закона оптимального управления с заданными
+                начальными, конечными значениями фазового вектора и значением части координат
+                в промежуточный момент времени. Сформулированы условия вполне управляемости.
+                Построены функции оптимального управления и соответствующие фазовые траектории
+                оптимального движения, учитывающие значение части координат в некоторый
+                промежуточный момент времени. В качестве иллюстрации предложенного подхода
+                для конкретных численных значений построены явные выражения функции оптимального
+                управления, фазовых координат движения и соответствующие графики.</abstract>
+            <title>Об одной задаче оптимального управления квадрокоптером с заданным промежуточным значением части координат фазового вектора</title>
+            <keywords>
+                <word>квадрокоптер</word>
+                <word>математическая модель</word>
+                <word>оптимальное управление</word>
+                <word>промежуточное условие</word>
+                <word>фазовые траектории</word>
+            </keywords>
+            <references>
+                <reference>Ситников Д. В., Бурьян Ю. А., Русских Г. С. Автопилот мультикоптера // Известия Тульского государственного университета. Технические науки. 2012. № 7. С. 213-221</reference>
+                <reference>Рубин Д. Т., Конев В. Н., Стариковский А. В., Шептунов А. А., Смирнов А. С., Толстая А. М. Разработка квадрокоптеров со специальными свойствами для проведения разведывательных операций // Спецтехника и связь. 2012. № 1. С. 28-30</reference>
+                <reference>Эпов М. И., Злыгостев И. Н. Применение беспилотных летательных аппаратов в аэрогеофизической разведке // Интерэкспо Гео-Сибирь. 2012. Т. 2. № 3. С. 22-27</reference>
+                <reference>Телухин С. В., Матвеев В. В. Беспилотный летательный аппарат как объект управления. Мехатроника, автоматизация, управление. 2008. № 10. С. 7-10</reference>
+                <reference>Chettibi T., Haddad M. Dynamic modelling of a quadrotor aerial robot // Journees D’etudes Nationales de Mecanique. Batna, Algerie, 2007. P. 22-27</reference>
+                <reference>Mokhtari A., Benallegue A. Dynamic feedback controller of Euler angles and wind parameters estimation for a quadrotor unmanned aerial vehicle // Proceedings - IEEE International Conference on Robotics and Automation. 2004. V. 2004. N 3. P. 2359-2366</reference>
+                <reference>Derafa L., Madani T., Benallegue A. Dynamic modelling and experimental identification of four rotors helicopter parameters // Proceedings of the IEEE International Conference on Industrial Technology. 2006. Art. 4237837. P. 1834-1839</reference>
+                <reference>Маргун А. А., Зименко К. А., Базылев Д. Н. и др. Система управления беспилотным летательным аппаратом, оснащенным робототехническим манипулятором // Научно-технический вестник информационных технологий, механики и оптики. 2014. №6 (94)</reference>
+                <reference>Luukkonen T. Modelling and control of quadcopter. 2011. http://sal. aalto. fi/publications/pdf-files/eluu11_public. pdf</reference>
+                <reference>Puls T., Hein A. 3D trajectory control for quadrocopter // Intelligent Robots and System (IROS), IEEE/RSJ International Conference. 2010. P. 640-645</reference>
+                <reference>Beni&amp;#263; Z., Piljek P. and Kotarski D. Mathematical modelling of unmanned aerial vehicles with four rotors. Interdisciplinary Description of Complex Systems. 2016. 14(1), pp. 88-100</reference>
+                <reference>Ащепков Л. Т. Оптимальное управление системой с промежуточными условиями. ПММ, 1981, т. 45, вып. 2, с. 215-222</reference>
+                <reference>Дыхта В. А., Самсонюк О. Н. Принцип максимума для гладких задач оптимального импульсного управления с многоточечными фазоограничениями. Журнал вычислительной математики и математической физики. 2009, т. 49, № 6, с. 981-997</reference>
+                <reference>Барсегян В. Р. Управление составных динамических систем и систем с многоточечными промежуточными условиями. М. : Наука, 2016. 230 с</reference>
+                <reference>Barseghyan V. R. Control of stage by stage changing linear dynamic systems // Yugoslav Journal of Operations Resarch. 2012. Vol. 22. № 1. P. 31-39</reference>
+                <reference>Barseghyan V. R. and Barseghyan T. V. On an Approach to the Problems of Control of Dynamic System with Nonseparated Multipoint Intermediate Conditions. Automation and Remote Control, 2015, Vol. 76, № 4, pp. 549-559</reference>
+                <reference>Барсегян В. Р., Матевосян А. Г. Об одной задаче управления беспилотным летательным аппаратом самолетного типа с заданными промежуточными значениями разных частей координат. Дифференциальные уравнения и процессы управления. 2023, № 2. С. 86-96</reference>
+                <reference>Barseghyan V. R. Control Problem of String Vibrations with Inseparable Multipoint Conditions at Intermediate Points in Time. Mechanics of Solids. 2019. Vol. 54, Issue 8, pp. 1216-1226</reference>
+                <reference>Barseghyan V., Solodusha S. On One Problem in Optimal Boundary Control for String Vibrations with a Given Velocity of Points at an Intermediate Moment of Time // IEEE International Russian Automation Conference (RusAutoCon). 2021. P. 343-349</reference>
+                <reference>Красовский Н. Н. Теория управления движением. М. : Наука, 1968. 476 с</reference>
+            </references>
+        </articleInfo>
+        <authors>
+            <author ref="n_2024_6_barseghyan" sort-key="1" />
+            <author ref="n_2024_6_simonyan" sort-key="2" />
+            <author ref="n_2024_6_matevosyan" sort-key="3" />
         </authors>
     </article>
 </number>
