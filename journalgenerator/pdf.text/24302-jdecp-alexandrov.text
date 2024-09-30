@@ -1,0 +1,2279 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 3, 2024
+Electronic Journal,
+reg. N ΦC77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Dynamical systems in medicine, biology, ecology, and chemistry
+Permanence analysis for continuous and discrete-time generalized
+Lotka–Volterra models with delay and switching of parameters
+A.Yu. Aleksandrov
+Saint Petersburg State University
+a.u.aleksandrov@spbu.ru
+Abstract. The paper is addressed to the permanence problem for a gener-
+alized Lotka–Volterra system modeling interaction of species in a biological
+community. The impact of a constant delay and switching of parameters on
+the dynamics of the system is taken into account. Our analysis is based on the
+Lyapunov direct method. An original construction of a Lyapunov–Krasovskii
+functional is proposed. The conditions for the existence of such a functional
+are formulated in terms of feasibility of special systems of linear algebraic in-
+equalities. It is proven that, under these conditions, the investigated system
+is permanent for any constant positive delay and any admissible switching sig-
+nal. In addition, a discrete-time counterpart of the considered model is studied
+for which the permanence analysis is fulﬁlled, as well. A comparison of the ob-
+tainedpermanenceconditionswithknownonesisprovided. Itisshownthatthe
+constraintsonthesystemparametersderivedinthispaperarelessconservative.
+Keywords: population dynamics, ultimate boundedness, permanence, delay,
+switching, Lyapunov–Krasovskii functional.
+1 Introduction
+Continuous and discrete-time generalized Lotka–Volterra systems are widely
+used for modeling species interactions in biological communities [?,?,?,?]. AnDifferential Equations and Control Processes, N. 3, 2024
+actual problem that arises when analyzing the dynamics of such systems is to
+ﬁnd the conditions ensuring sustainable coexistence of species. A sustainable
+biological system should possess the following two important properties: ulti-
+mate boundedness and persistence (see [?]). The ﬁrst one means the existence
+of a compact domain in the state space of the system such that each motion
+enters into it in a ﬁnite time and remains in this domain thereafter. The prop-
+ertyofpersistencemeansthatintheprocessofevolutionspeciesdonotdieout,
+and, moreover, no matter how small their initial quantities are, starting from
+a certain time instant, the quantities of species will exceed some ﬁxed positive
+values. If a system admits both of these properties, then it is called permanent
+[?].
+Permanence conditions are well investigated for biological models described
+by ordinary differential or difference equations with constant parameters (see,
+e.g., [?,?,?,?,?,?]) and the references therein). However, it is worth noticing
+that numerous realistic models should take into account such factors as delay
+and switching of operation modes [?, ?, ?, ?]. For instance, the presence of a
+delay may be due to the dependence of the growth rates of some species on
+the prehistory of others, different rates of reproduction and death processes
+for different age groups, etc. On the other hand, switching can be a result
+of the impact of such natural and artiﬁcial factors as droughts, rainy seasons,
+deforestation, ﬁres, radiation, that cause sudden changes in the internal con-
+nections in the biological community and the characteristics of the habitat of
+populations.
+The presence of delays and switching signiﬁcantly complicates the perma-
+nence analysis. Some suﬃcient conditions of permanence for time-delay Lotka–
+Volterra type systems were obtained in [?, ?, ?, ?], whereas, in [?, ?, ?, ?], per-
+manence of biological models with switching of parameters was studied. How-
+ever,therearefewresultsonpermanenceforsystemscontainingbothswitching
+and delays (see, e.g., [?, ?, ?, ?]).
+In particular, in [?], certain classes of continuous and discrete-time general-
+izedLotka–Volterrasystemswithdelaysandswitchingwereinvestigated. Using
+special constructions of Lyapunov–Krasovskii functionals, conditions were de-
+rived providing that the considered systems are permanent for any constant
+delay and any admissible switching law. These conditions were formulated in
+terms of feasibility of auxiliary linear inequalities.
+In the present paper the same classes of systems are studied. New con-
+structions of Lyapunov–Krasovskii functionals will be proposed. Our objective
+https://doi.org/10.21638/11701/spbu35.2024.302 Electronic Journal: http://diffjournal.spbu.ru/ 14Differential Equations and Control Processes, N. 3, 2024
+is to prove that, with the aid of these functionals, less conservative permanence
+conditions can be obtained than those presented in [?].
+2 Statement of the problem
+In what follows,R denotes the ﬁeld of real numbers andR
+n
+is the vector space
+of n-tuples of real numbers with the Euclidean norm k k. Let R
+n
++
+be the
+nonnegative cone of R
+n
+: R
+n
++
+:= fx 2 R
+n
+j x   0g and intR
+n
++
+be the interior
+ofR
+n
++
+. A matrix is said to be nonnegative if all its entries are nonnegative. A
+squarematrixiscalledMetzlerifallitsoff-diagonalentriesarenonnegative. For
+a given number τ > 0, C([ τ,0],intR
+n
++
+) is the space of continuous functions
+φ(ξ) : [ τ,0]7! intR
+n
++
+with the uniform norm kφk
+τ
+= max
+ξ2[ τ,0]
+kφ(ξ)k.
+Let the switched system
+˙ x
+i
+(t) = x
+i
+(t)
+ 
+n
+X
+j=1
+a
+(σ)
+ij
+f
+j
+(x
+j
+(t))+
+n
+X
+j=1
+b
+(σ)
+ij
+f
+j
+(x
+j
+(t τ))+c
+(σ)
+i
+!
+, i = 1,...,n,
+(1)
+and the associated family of subsystems
+˙ x
+i
+(t) = x
+i
+(t)
+ 
+n
+X
+j=1
+a
+(s)
+ij
+f
+j
+(x
+j
+(t))+
+n
+X
+j=1
+b
+(s)
+ij
+f
+j
+(x
+j
+(t τ))+c
+(s)
+i
+!
+, (2)
+i = 1,...,n, s = 1,...,N,
+be given. Here t   0, x
+i
+(t) 2 R, the functions f
+j
+(x
+j
+) are deﬁned for
+x
+j
+2 [0,+1), a
+(s)
+ij
+, b
+(s)
+ij
+, c
+(s)
+i
+are constant coeﬃcients, τ is a constant positive
+delay, σ = σ(t) is a piece-wise constant function deﬁning the switching law,
+σ(t) : [0,+1) 7! f1,...,Ng. Let the function σ(t) admit only ﬁnitely many
+discontinuities on every bounded interval. Such switching laws will be called
+admissible.
+Thesystem(1)isageneralizedLotka–Volterramodelwithdelayandswitch-
+ingofparametersdescribingtheinteractionofspeciesinabiologicalcommunity
+[?, ?, ?]. In this model, x
+i
+(t) is the population density of the i-th species, the
+coeﬃcients c
+(σ)
+i
+characterise the intrinsic growth rate of the i-th population, the
+termsa
+(σ)
+ii
+x
+i
+(t)f
+i
+(x
+i
+(t))andb
+(σ)
+ii
+x
+i
+(t)f
+i
+(x
+i
+(t τ))reﬂecttheself-interactioninthe
+i-th population, whereas the terms a
+(σ)
+ij
+x
+i
+(t)f
+j
+(x
+j
+(t)) and b
+(σ)
+ij
+x
+i
+(t)f
+j
+(x
+j
+(t τ))
+for j6= i describe the inﬂuence of population j on population i.
+https://doi.org/10.21638/11701/spbu35.2024.302 Electronic Journal: http://diffjournal.spbu.ru/ 15Differential Equations and Control Processes, N. 3, 2024
+Taking into account the biological meaning of the model, we will consider
+thesystem(1)inintR
+n
++
+. Letinitialfunctionsφ(ξ)forsolutionsx(t) = x(t,t
+0
+,φ)
+of (1) belong to the space C([ τ,0],intR
+n
++
+) and, for a solution x(t), x
+t
+be the
+restriction of the solution to the segment [t τ,t], i.e., x
+t
+: ξ 7! x(t+ξ) for
+ξ2 [ τ,0].
+According to the standard assumptions (see [?, ?]), we consider the case
+where functions f
+i
+(x
+i
+) possess the following properties:
+1) f
+i
+(x
+i
+) are continuous and locally Lipschitz for x
+i
+  0;
+2) f
+i
+(x
+i
+)  0 for x
+i
+  0, and f
+i
+(0) = 0;
+3) f
+i
+(x
+i
+)! +1 as x
+i
+! +1.
+Remark 1. From these properties it follows that intR
+n
++
+is an invariant set
+for (1) [?].
+Deﬁnition 1[?]. Thesystem(1)iscalledpermanentifthereexistnumbers
+δ
+1
+andδ
+2
+satisfyingtheinequalities0 < δ
+1
+< δ
+2
+and,foranysolutionx(t,t
+0
+,φ) =
+(x
+1
+(t,t
+0
+,φ),...,x
+n
+(t,t
+0
+,φ))
+>
+with t
+0
+  0, φ(ξ) 2 C([ τ,0],intR
+n
++
+), one can
+choose T   t
+0
+such that δ
+1
+  x
+i
+(t,t
+0
+,φ)  δ
+2
+, i = 1,...,n, for t  T.
+Our objective is to determine the conditions ensuring permanence of (1) for
+any constant positive delay and any admissible switching law. In addition, we
+will investigate the permanence problem for a discrete-time counterpart of the
+model (1).
+3 Permanence conditions for the continuous model
+Considerthecasewherethefollowingrestrictionsareimposedonthecoeﬃcients
+in the system (1).
+Assumption 1. Let c
+(s)
+i
+> 0, i = 1,...,n, the matrices A
+(s)
+= fa
+(s)
+ij
+g
+n
+i,j=1
+be Metzler and the matrices B =fb
+(s)
+ij
+g
+n
+i,j=1
+be nonnegative, s = 1,...,N.
+Remark 2. Asumption 1 means that, for each species, birth rate is greater
+thanmortalityrate,andbetweenanytwospeciesinthecommunitytherearein-
+teractionsof thefollowingtypes: “symbiosis”, “compensalism”or “neutralism”
+[?].
+Under Assumption 1, conditions of permanence for (1) were obtained in [?]
+on the basis of the Lyapunov direct method. A common Lyapunov–Krasovskii
+https://doi.org/10.21638/11701/spbu35.2024.302 Electronic Journal: http://diffjournal.spbu.ru/ 16Differential Equations and Control Processes, N. 3, 2024
+functional for the family (2) was constructed in the form
+V(x
+t
+) =
+n
+X
+i=1
+λ
+i
+lnx
+i
+(t)+
+n
+X
+i=1
+µ
+i
+Z
+t
+t τ
+f
+i
+(x
+i
+(ξ))dξ
++ω
+n
+X
+i=1
+Z
+t
+t τ
+(ξ t+τ)f
+i
+(x
+i
+(ξ))dξ,
+where λ
+i
+,µ
+i
+,ω are positive coeﬃcients. With the aid of this functional, it was
+proven that, if there exists a vector θ > 0 such that
+ 
+A
+(s)
++B
+(r)
+ 
+>
+θ < 0, s,r = 1,...,N, (3)
+then the system (1) is permanent for any positive delay and any admissible
+switching law. Here and in what follows vector inequalities are understood
+componentwise.
+Inthispaper, wewillproposeanotherconstructionofLyapunov–Krasovskii
+functional. To do this, we will use the approach that was ﬁrst suggested in [?]
+for the stability analysis of delay-free switched linear systems and was later
+extended in [?, ?] to some classes of linear and nonlinear time-delay switched
+systems. We will show that, using the new functional, less conservative perma-
+nence conditions can be derived than those found in [?].
+Theorem 1 Let Assumption 1 be fulﬁlled. If there exist numbers ν,h
+1
+,h
+2
+and
+vectors η > 0, ζ > 0 such that ν > 0, νh
+1
++h
+2
+< 0,
+(A
+(s)
++B
+(s)
+)η  h
+1
+η, s = 1,...,N, (4)
+(A
+(s)
++B
+(r)
+)
+>
+ζ   h
+2
+ζ, s,r = 1,...,N, (5)
+then the system (1) is permanent for any constant positive delay and any
+admissible switching law.
+Proof. Choose a Lyapunov–Krasovskii functional candidate in the form
+e
+V(x
+t
+) =
+n
+X
+i=1
+ζ
+i
+η
+ν
+i
+Z
+x
+i
+(t)
+1
+f
+ν
+i
+(u)
+u
+du+
+n
+X
+i=1
+ρ
+i
+Z
+t
+t τ
+f
+ν+1
+i
+(x
+i
+(ξ))dξ
++ω
+n
+X
+i=1
+Z
+t
+t τ
+(ξ t+τ)f
+ν+1
+i
+(x
+i
+(ξ))dξ, (6)
+https://doi.org/10.21638/11701/spbu35.2024.302 Electronic Journal: http://diffjournal.spbu.ru/ 17Differential Equations and Control Processes, N. 3, 2024
+where ω,ρ
+i
+are positive coeﬃcients, η
+i
+,ζ
+i
+are components of the vectors η,ζ,
+respectively.
+Differentiating the functional (6) along the solutions of (1), we obtain
+˙
+e
+V =
+n
+X
+i=1
+ζ
+i
+η
+ν
+i
+f
+ν
+i
+(x
+i
+(t))
+ 
+n
+X
+j=1
+a
+(σ)
+ij
+f
+j
+(x
+j
+(t))+
+n
+X
+j=1
+b
+(σ)
+ij
+f
+j
+(x
+j
+(t τ))+c
+(σ)
+i
+!
++
+n
+X
+i=1
+ρ
+i
+ 
+f
+ν+1
+i
+(x
+i
+(t)) f
+ν+1
+i
+(x
+i
+(t τ))
+ 
++ωτ
+n
+X
+i=1
+f
+ν+1
+i
+(x
+i
+(t)) ω
+n
+X
+i=1
+Z
+t
+t τ
+f
+ν+1
+i
+(x
+i
+(ξ))dξ.
+Let z
+i
+(t) = f
+i
+(x
+i
+(t))/η
+i
+, i = 1,...,n. Then
+˙
+e
+V =
+n
+X
+i=1
+ζ
+i
+z
+ν
+i
+(t)
+ 
+n
+X
+j=1
+a
+(σ)
+ij
+η
+j
+z
+j
+(t)+
+n
+X
+j=1
+b
+(σ)
+ij
+η
+j
+z
+j
+(t τ)+c
+(σ)
+i
+!
++
+n
+X
+i=1
+ρ
+i
+η
+ν+1
+i
+ 
+z
+ν+1
+i
+(t) z
+ν+1
+i
+(t τ)
+ 
++ωτ
+n
+X
+i=1
+η
+ν+1
+i
+z
+ν+1
+i
+(t) ω
+n
+X
+i=1
+η
+ν+1
+i
+Z
+t
+t τ
+z
+ν+1
+i
+(ξ)dξ.
+Applying the Young inequality, we arrive at the estimates
+˙
+e
+V  
+ν
+ν +1
+n
+X
+i=1
+ζ
+i
+z
+ν+1
+i
+(t)
+n
+X
+j=1
+ 
+a
+(σ)
+ij
++b
+(σ)
+ij
+ 
+η
+j
++
+n
+X
+i=1
+η
+i
+z
+ν+1
+i
+(t)
+ 
+ρ
+i
+η
+ν
+i
++ωτη
+ν
+i
++
+1
+ν +1
+n
+X
+j=1
+a
+(σ)
+ji
+ζ
+j
+!
++
+n
+X
+i=1
+η
+i
+z
+ν+1
+i
+(t τ)
+ 
+1
+ν +1
+n
+X
+j=1
+b
+(σ)
+ji
+ζ
+j
+ ρ
+i
+η
+ν
+i
+!
+ ω
+n
+X
+i=1
+η
+ν+1
+i
+Z
+t
+t τ
+z
+ν+1
+i
+(ξ)dξ+D
+n
+X
+i=1
+z
+ν
+i
+(t)
+ 
+ν
+ν +1
+h
+1
+n
+X
+i=1
+η
+i
+ζ
+i
+z
+ν+1
+i
+(t) ω
+n
+X
+i=1
+η
+ν+1
+i
+Z
+t
+t τ
+z
+ν+1
+i
+(ξ)dξ
+https://doi.org/10.21638/11701/spbu35.2024.302 Electronic Journal: http://diffjournal.spbu.ru/ 18Differential Equations and Control Processes, N. 3, 2024
++
+n
+X
+i=1
+η
+i
+z
+ν+1
+i
+(t)
+ 
+ρ
+i
+η
+ν
+i
++ωτη
+ν
+i
++
+1
+ν +1
+n
+X
+j=1
+a
+(σ)
+ji
+ζ
+j
+!
++
+n
+X
+i=1
+η
+i
+z
+ν+1
+i
+(t τ)
+ 
+1
+ν +1
+n
+X
+j=1
+b
+(σ)
+ji
+ζ
+j
+ ρ
+i
+η
+ν
+i
+!
++
+nD
+ν+1
+(ν +1)ε
+ν+1
++
+ν
+ν +1
+ε
+ν+1
+ν
+n
+X
+i=1
+z
+ν+1
+i
+(t),
+where D is a positive constant and ε is a positive tuning parameter.
+Let
+ρ
+i
+=
+1
+(ν +1)η
+ν
+i
+max
+s=1,...,N
+n
+X
+j=1
+b
+(s)
+ji
+ζ
+j
++δ, i = 1,...,n. (7)
+Here δ = const > 0. Then
+˙
+e
+V  
+ν
+ν +1
+h
+1
+n
+X
+i=1
+η
+i
+ζ
+i
+z
+ν+1
+i
+(t) ω
+n
+X
+i=1
+η
+ν+1
+i
+Z
+t
+t τ
+z
+ν+1
+i
+(ξ)dξ
++
+1
+ν +1
+n
+X
+i=1
+η
+i
+z
+ν+1
+i
+(t)
+ 
+n
+X
+j=1
+a
+(σ)
+ji
+ζ
+j
++ max
+s=1,...,N
+n
+X
+j=1
+b
+(s)
+ji
+ζ
+j
+!
++
+n
+X
+i=1
+η
+ν+1
+i
+z
+ν+1
+i
+(t)(δ+ωτ) δ
+n
+X
+i=1
+η
+ν+1
+i
+z
+ν+1
+i
+(t τ)
++
+nD
+ν+1
+(ν +1)ε
+ν+1
++
+ν
+ν +1
+ε
+ν+1
+ν
+n
+X
+i=1
+z
+ν+1
+i
+(t)
+ 
+1
+ν +1
+(νh
+1
++h
+2
+)
+n
+X
+i=1
+η
+i
+ζ
+i
+z
+ν+1
+i
+(t) ω
+n
+X
+i=1
+η
+ν+1
+i
+Z
+t
+t τ
+z
+ν+1
+i
+(ξ)dξ
++
+n
+X
+i=1
+η
+ν+1
+i
+z
+ν+1
+i
+(t)(δ+ωτ) δ
+n
+X
+i=1
+η
+ν+1
+i
+z
+ν+1
+i
+(t τ)
++
+nD
+ν+1
+(ν +1)ε
+ν+1
++
+ν
+ν +1
+ε
+ν+1
+ν
+n
+X
+i=1
+z
+ν+1
+i
+(t).
+Hence, if values of ω,ε,δ are suﬃciently small, then
+˙
+e
+V   α
+1
+n
+X
+i=1
+z
+ν+1
+i
+(t) ω
+n
+X
+i=1
+η
+ν+1
+i
+Z
+t
+t τ
+z
+ν+1
+i
+(ξ)dξ δ
+n
+X
+i=1
+η
+ν+1
+i
+z
+ν+1
+i
+(t τ)+
+˜
+D
+https://doi.org/10.21638/11701/spbu35.2024.302 Electronic Journal: http://diffjournal.spbu.ru/ 19Differential Equations and Control Processes, N. 3, 2024
+  α
+2
+n
+X
+i=1
+ 
+f
+ν+1
+i
+(x
+i
+(t))+
+Z
+t
+t τ
+f
+ν+1
+i
+(x
+i
+(ξ))dξ
+ 
++
+˜
+D,
+where α
+1
+,α
+2
+are positive constants and
+˜
+D = nD
+ν+1
+/((ν +1)ε
+ν+1
+).
+Denote
+Q =
+(
+x
+t
+2 C([ τ,0],intR
+n
++
+) :
+n
+X
+i=1
+ 
+f
+ν+1
+i
+(x
+i
+(t))+
+Z
+t
+t τ
+f
+ν+1
+i
+(x
+i
+(ξ))dξ
+ 
+>
+˜
+D
+α
+2
+)
+.
+If x
+t
+2 Q, then
+˙
+e
+V < 0.
+From Assumption 1 it follows that
+˙ x
+i
+(t)  x
+i
+(t)
+ 
+a
+(σ)
+ii
+f
+i
+(x
+i
+(t))+c
+(σ)
+i
+ 
+, i = 1,...,n.
+Therefore,onecanchooseanumberδ
+1
+> 0suchthat ˙ x
+i
+(t) > 0forx
+i
+(t)2 (0,δ
+1
+),
+i = 1,...,n. Let
+G =
+(
+x
+t
+2 C([ τ,0],intR
+n
++
+) :
+n
+X
+i=1
+ 
+f
+ν+1
+i
+(x
+i
+(t))+
+Z
+t
+t τ
+f
+ν+1
+i
+(x
+i
+(ξ))dξ
+ 
+ 
+2
+˜
+D
+α
+2
+,
+x
+i
+(t)  δ
+1
+, i = 1,...,n
+)
+, W = sup
+x
+t
+2G
+e
+V(x
+t
+),
+Ω =
+n
+x
+t
+2 C([ τ,0],intR
+n
++
+) :
+e
+V(x
+t
+)  W, x
+i
+(t)  δ
+1
+, i = 1,...,n
+o
+.
+We obtain 0 < W < +1, G   Ω. Moreover, there exists δ
+2
+> 0 such that
+x
+i
+(t)  δ
+2
+, i = 1,...,n, for x
+t
+2 Ω.
+Consider a solution ¯ x(t) = x(t,t
+0
+,φ) of (1) with t
+0
+  0, φ(ξ) 2
+C([ τ,0],intR
+n
++
+). First, one can ﬁnd T
+1
+  t
+0
+such that ¯ x
+i
+(t)  δ
+1
+, i = 1,...,n,
+for t  T
+1
+. Next, there exists a time instant T
+2
+such that T
+2
+  T
+1
+and ¯ x
+T
+2
+2 G.
+Hence, ¯ x
+t
+2 Ω and ¯ x
+i
+(t)   δ
+2
+, i = 1,...,n, for t   T
+2
+. This completes the
+proof.
+Remark 3. It is worth noticing that, under Assumption 1, the conditions
+of Theorem 1 are valid if and only if one of the following conditions is satisﬁed:
+(a) there exists a vector η > 0 such that
+(A
+(s)
++B
+(s)
+)η < 0, s = 1,...,N,
+(b) there exists a vector ζ > 0 such that
+(A
+(s)
++B
+(r)
+)
+>
+ζ < 0, s,r = 1,...,N.
+https://doi.org/10.21638/11701/spbu35.2024.302 Electronic Journal: http://diffjournal.spbu.ru/ 20Differential Equations and Control Processes, N. 3, 2024
+Really, in the case (a) the conditions of Theorem 1 are fulﬁlled for suﬃciently
+large values of ν, whereas in the case (b), the conditions of Theorem 1 are
+fulﬁlled for suﬃciently small values of ν. However, in some problems, e.g.,
+estimation of ultimate boundedness domain, estimation of convergence rate of
+solutions, analysis of the impact of external disturbances, etc., to derive less
+conservative results, it is useful to have opportunity for an appropriate choice
+oftheparameter ν (see, forinstance, [?]). ThepresentedstatementofTheorem
+1 permits us to determine admissible domain for this parameter.
+4 Permanence conditions for a discrete-time model
+Inthissection, weconsiderthefollowingdiscrete-timecounterpartofthemodel
+(1):
+y
+i
+(k+1) = y
+i
+(k)exp
+ 
+h
+ 
+n
+X
+j=1
+a
+(σ)
+ij
+f
+j
+(y
+j
+(k))+
+n
+X
+j=1
+b
+(σ)
+ij
+f
+j
+(y
+j
+(k m))+c
+(σ)
+i
+!!
+,
+(8)
+i = 1,...,n.
+Here y
+i
+(k) 2R is the density of population i at the kth generation; functions
+f
+i
+(x
+i
+)possessthesamepropertiesasfor(1), σ = σ(k), k = 0,1,...,withσ(k)2
+f1,...,Ng deﬁnes a switching law, c
+(s)
+i
+,a
+(s)
+ij
+,b
+(s)
+ij
+, s = 1,...,N, i,j = 1,...,n,
+areconstantcoeﬃcients, misapositiveintegerdelay, hisapositiveparameter.
+It is worth noticing that, in numerous cases, discrete-time models are more
+appropriate than continuous ones [?, ?, ?]. In addition, the system (8) can be
+used for the numerical simulation of the model (1).
+Lety
+(k)
+= (y
+>
+(k),y
+>
+(k 1),...,y
+>
+(k m))
+>
+betheaugmentedstatevector
+and y(k,k
+0
+,y
+(k
+0
+)
+) be a solution of (8) with initial conditions k
+0
+  0, y
+(k
+0
+)
+> 0.
+Deﬁnition 2 [?, ?]. The system (8) is called permanent if there exist
+numbers δ
+1
+and δ
+2
+satisfying the inequalities 0 < δ
+1
+< δ
+2
+and, for any solution
+y(k,k
+0
+,y
+(k
+0
+)
+) = (y
+1
+(k,k
+0
+,y
+(k
+0
+)
+),...,y
+n
+(k,k
+0
+,y
+(k
+0
+)
+))
+>
+with k
+0
+  0, y
+(k
+0
+)
+> 0, one
+can choose K   k
+0
+such that δ
+1
+  y
+i
+(k,k
+0
+,y
+(k
+0
+)
+)  δ
+2
+, i = 1,...,n, for k  K.
+Comparedwiththecontinuouscase,wewillimposeanadditionalconstraint
+on the functions f
+i
+(x
+i
+).
+Assumption 2. The functions g
+i
+(z
+i
+) = f
+i
+(exp(z
+i
+)) are globally Lipschitz
+for z
+i
+2 ( 1,+1) with a constant L > 0, i = 1,...,n.
+https://doi.org/10.21638/11701/spbu35.2024.302 Electronic Journal: http://diffjournal.spbu.ru/ 21Differential Equations and Control Processes, N. 3, 2024
+In [?], it has been proven that if Assumptions 1, 2 are satisﬁed, the system
+(3) admits a positive solution and the value of h is suﬃciently small, then (8)
+is permanent for any positive delay and any switching law. Our objective is to
+show that, with the aid of a discrete-time counterpart of the functional (6), the
+permanence can be guaranteed under less conservative conditions imposed on
+the coeﬃcients a
+(s)
+ij
+and b
+(s)
+ij
+.
+Theorem 2 Let the conditions of Theorem 1 and Assumption 2 be fulﬁlled.
+Then there exists h
+0
+> 0 such that the system (8) is permanent for any h 2
+(0,h
+0
+), any constant positive delay and any switching law.
+Proof. Construct a Lyapunov–Krasovskii functional candidate as follows:
+e
+V(y
+(k)
+) =
+n
+X
+i=1
+ζ
+i
+η
+ν
+i
+Z
+y
+i
+(k)
+1
+f
+ν
+i
+(u)
+u
+du+h
+n
+X
+i=1
+m
+X
+l=1
+ρ
+i
+f
+ν+1
+i
+(y
+i
+(k l))
++h
+n
+X
+i=1
+m
+X
+l=1
+ω
+l
+f
+ν+1
+i
+(y
+i
+(k l)), (9)
+where ω
+l
+,ρ
+i
+are positive coeﬃcients, η
+i
+,ζ
+i
+are components of the vectors η,ζ
+satisfying the inequalities (4), (5), respectively.
+The difference of the functional (9) along the solutions of the system (8)
+takes the form
+∆
+e
+V =
+e
+V(y
+(k+1)
+) 
+e
+V(y
+(k)
+) =
+n
+X
+i=1
+ζ
+i
+η
+ν
+i
+Z
+y
+i
+(k+1)
+y
+i
+(k)
+f
+ν
+i
+(u)
+u
+du
++h
+n
+X
+i=1
+ρ
+i
+ 
+f
+ν+1
+i
+(y
+i
+(k)) f
+ν+1
+i
+(y
+i
+(k m))
+ 
++hω
+1
+Ψ(k) hω
+m
+Ψ(k m)
++h
+m 1
+X
+l=1
+(ω
+l+1
+ ω
+l
+)Ψ(k l),
+where Ψ(k) =
+P
+n
+i=1
+f
+ν+1
+i
+(y
+i
+(k)).
+With the aid of the mean value theorem and the Lipschitz condition, we
+obtain
+Z
+y
+i
+(k+1)
+y
+i
+(k)
+f
+ν
+i
+(u)
+u
+du =
+Z
+lny
+i
+(k+1)
+lny
+i
+(k)
+f
+ν
+i
+(e
+β
+)dβ = f
+ν
+i
+(y
+i
+(k))ln
+y
+i
+(k+1)
+y
+i
+(k)
+https://doi.org/10.21638/11701/spbu35.2024.302 Electronic Journal: http://diffjournal.spbu.ru/ 22Differential Equations and Control Processes, N. 3, 2024
++
+ 
+g
+ν
+i
+ 
+lny
+i
+(k)+θ
+ik
+ln
+y
+i
+(k+1)
+y
+i
+(k)
+ 
+ g
+ν
+i
+(lny
+i
+(k))
+ 
+ln
+y
+i
+(k+1)
+y
+i
+(k)
+= f
+ν
+i
+(y
+i
+(k))ln
+y
+i
+(k+1)
+y
+i
+(k)
++ν
+ 
+f
+i
+(y
+i
+(k))
++
+¯
+θ
+ik
+ 
+g
+i
+ 
+lny
+i
+(k)+θ
+ik
+ln
+y
+i
+(k+1)
+y
+i
+(k)
+ 
+ g
+i
+(lny
+i
+(k))
+  
+ν 1
+ 
+g
+i
+ 
+lny
+i
+(k)
++θ
+ik
+ln
+y
+i
+(k+1)
+y
+i
+(k)
+ 
+ g
+i
+(lny
+i
+(k))
+ 
+ln
+y
+i
+(k+1)
+y
+i
+(k)
+  hf
+ν
+i
+(y
+i
+(k))
+ 
+n
+X
+j=1
+a
+(σ)
+ij
+f
+j
+(y
+j
+(k))+
+n
+X
+j=1
+b
+(σ)
+ij
+f
+j
+(y
+j
+(k m))+c
+(σ)
+i
+!
++νL
+ 
+f
+i
+(y
+i
+(k))+L
+ 
+ 
+ 
+ 
+ln
+y
+i
+(k+1)
+y
+i
+(k)
+ 
+ 
+ 
+ 
+ 
+ν 1
+ 
+ln
+y
+i
+(k+1)
+y
+i
+(k)
+ 
+2
+  hf
+ν
+i
+(y
+i
+(k))
+ 
+n
+X
+j=1
+a
+(σ)
+ij
+f
+j
+(y
+j
+(k))+
+n
+X
+j=1
+b
+(σ)
+ij
+f
+j
+(y
+j
+(k m))+c
+(σ)
+i
+!
++h
+2
+(1+h
+ν 1
+)
+˜
+L
+i
+ 
+n
+X
+j=1
+f
+ν+1
+j
+(y
+j
+(k))+
+n
+X
+j=1
+f
+ν+1
+j
+(y
+j
+(k m))+˜ c
+!
+,
+where ˜ c > 0, θ
+ik
+,
+¯
+θ
+ik
+2 (0,1),
+˜
+L
+i
+> 0, i = 1,...,n.
+Hence,
+∆
+e
+V   h
+n
+X
+i=1
+ζ
+i
+η
+ν
+i
+f
+ν
+i
+(y
+i
+(k))
+ 
+n
+X
+j=1
+a
+(σ)
+ij
+f
+j
+(y
+j
+(k))+
+n
+X
+j=1
+b
+(σ)
+ij
+f
+j
+(y
+j
+(k m))+c
+(σ)
+i
+!
++h
+n
+X
+i=1
+ρ
+i
+ 
+f
+ν+1
+i
+(y
+i
+(k)) f
+ν+1
+i
+(y
+i
+(k m))
+ 
++hω
+1
+Ψ(k) hω
+m
+Ψ(k m)
++h
+m 1
+X
+l=1
+(ω
+l+1
+ ω
+l
+)Ψ(k l)+h
+2
+(1+h
+ν 1
+)
+˜
+L(Ψ(k)+Ψ(k m)+˜ c),
+where
+˜
+L = const > 0.
+Let the coeﬃcients ρ
+i
+be deﬁned by the formula (7). In addition, assume
+that ω
+l+1
+< ω
+l
+, l = 1,...,m 1. Then (see the proof of Theorem 1), under
+https://doi.org/10.21638/11701/spbu35.2024.302 Electronic Journal: http://diffjournal.spbu.ru/ 23Differential Equations and Control Processes, N. 3, 2024
+suﬃciently small values of δ,ω
+1
+,h, the estimate
+∆
+e
+V   α
+1
+m
+X
+l=0
+Ψ(k l)+α
+2
+holds, where α
+1
+,α
+2
+are positive constants. The remaining part of the proof is
+a similar to that of Theorem 1.
+5 Discussion
+In this paper, using a special construction of Lyapunov–Krasovskii functional
+anditsdiscrete-timecounterpart,newpermanenceconditionsforsomecontinu-
+ousanddiscrete-timebiologicalmodelswithdelaysandswitchingareobtained.
+Let us show that these conditions are less conservative than those found in [?].
+Really, if the system (3) admits a positive solution, then there exist vectors
+η > 0, ζ > 0 and numbers h
+1
+,h
+2
+such that h
+2
+< 0 and inequalities (4), (5)
+are satisﬁed. Thus, the condition νh
+1
++h
+2
+< 0 is fulﬁlled for suﬃciently small
+values of ν.
+On the other hand, consider the case where n = N = 2,
+A
+(1)
+=
+ 
+ 2 0
+1  2
+!
+, A
+(2)
+=
+ 
+ 5 0
+0  10
+!
+,
+B
+(1)
+=
+ 
+0 0
+1 0
+!
+, B
+(2)
+=
+ 
+1 2
+0 4
+!
+.
+We obtain
+A
+(1)
++B
+(2)
+=
+ 
+ 1 2
+1 2
+!
+.
+Hence, the system (3) does not admit positive solutions.
+It can be easily veriﬁed that the inequalities h
+1
+ 
+p
+5 3, h
+2
+  2
+p
+2 are
+necessary and suﬃcient conditions for the existence of positive vectors η and ζ
+satisfyingthesystems(4)and(5), respectively. Thus, if h
+1
+=
+p
+5 3, h
+2
+= 2
+p
+2
+and ν > 2
+p
+2//(3 
+p
+5), then νh
+1
++h
+2
+< 0.
+As a result, we obtain that theorems from the paper [?] are not applicable
+to systems of the forms (1) and (8) with the considered matrices, whereas
+Theorems 1 and 2 from the present work guarantee that these systems are
+permanent.
+https://doi.org/10.21638/11701/spbu35.2024.302 Electronic Journal: http://diffjournal.spbu.ru/ 24Differential Equations and Control Processes, N. 3, 2024
+An interesting direction for further research is an extension of the obtained
+results to switched generalized Lotka–Volterra models with variable delays.
+Acknowledgements
+The research was supported by the grant of Russian Science Foundation, N 24-
+21-00091, https://rscf.ru/en/project/24-21-00091/.
+References
+[1] Hofbauer J., Sigmund K. Evolutionary Games and Population Dynamics,
+Cambridge University Press, Cambridge (1998).
+[2] Pykh Yu.A. Equilibrium and Stability in Models of Population Dynamics,
+Nauka Publ., Moscow (1983) (in Russian).
+[3] Britton N.F. Essential Mathematical Biology, Springer, London, Berlin,
+Heidelberg (2003).
+[4] Kuang Y. Delay Differential Equations with Applications in Population
+Dynamics. Mathematics in Science and Engineering, vol. 191, Academic
+Press Inc., Boston (1993).
+[5] Chen F.D. Permanence and global attractivity of a discrete multispecies
+Lotka–Volterra competition predator-prey systems. Appl. Math. Comput.,
+182 (1), 3–12 (2006).
+[6] Chen F., Wu L., Li Z. Permanence and global attractivity of the discrete
+Gilpin–Ayala type population model. Computers and Mathematics with
+Applications, 53, 1214–1227 (2007).
+[7] Lu Z., Wang W. Permanence and global attractivity for Lotka–Volterra
+difference systems. J. Math. Biol., 39, 269–282 (1999).
+[8] Zhu C., Yin G. On hybrid competitive Lotka–Volterra ecosystems. Non-
+linear Analysis. Theory, Methods & Applications, 71 (12), e1370–e1379
+(2009).
+[9] Buscarino A., Belhamel L., Bucolo M., Palumbo P., Manes C. Modeling a
+population of switches via chaotic dynamics. IFAC-PapersOnLine, 53 (2),
+16791–16795 (2020).
+https://doi.org/10.21638/11701/spbu35.2024.302 Electronic Journal: http://diffjournal.spbu.ru/ 25Differential Equations and Control Processes, N. 3, 2024
+[10] Xu R., Chaplain M.A.J., Davidson F.A. Permanence and periodicity of
+a delayed ratio-dependent predator-prey model with stage structure. J.
+Math. Anal. Appl., 303, 602–621 (2005).
+[11] Lenhart S.M., Travis C.C. Global stability of a biological model with time
+delay. Proc. Am. Math. Soc., 96 (1), 75–78 (1986).
+[12] Ruan S.G. On nonlinear dynamics of predator-prey models with discrete
+delay. Math. Model. Nat. Phenom., 4 (2), 140–188 (2009).
+[13] Lu G., Lu Z., Lian X. Delay effect on the permanence for Lotka–Volterra
+cooperative system. Nonlinear Analysis, 11, 2810–2816 (2010).
+[14] Wu Zh., Huang H., Wang L. Stochastic delay population dynamics under
+regime switching: Permanence and asymptotic estimation. Abstract and
+Applied Analysis, 2013, Article ID 129072 (2013).
+[15] Aleksandrov A.Yu., Aleksandrova E.B., Platonov A.V. Ultimate bound-
+edness conditions for a hybrid model of population dynamics. Proc. 21st
+Mediterranean conference on Control and Automation, June 25–28, 2013.
+Platanias-Chania, Crite, Greece, 2013, pp. 622–627.
+[16] Aleksandrov A.Yu., Chen Y., Platonov A.V. Permanence and ultimate
+boundedness for discrete-time switched models of population dynamics.
+Nonlinear Dynamics and Systems Theory, 14 (1), 1–10 (2014).
+[17] Li X., Yin G. Logistic models with regime switching: Permanence and
+ergodicity. J. Math. Anal. Appl., 441 (2), 593–611 (2016).
+[18] Hu H., Wang K., Wu D. Permanence and global stability for nonau-
+tonomous N-species Lotka–Volterra competitive system with impulses and
+inﬁnite delays. J. Math. Anal. Appl., 377, 145–160 (2011).
+[19] Nakata Y., Muroya Y. Permanence for nonautonomous Lotka–Volterra co-
+operative systems with delays. Nonlinear Analysis, 11, 528–534 (2010).
+[20] Aleksandrov A.Yu. Permanence conditions for models of population dy-
+namics with switches and delay. Vestnik of Saint Petersburg University.
+Applied Mathematics. Computer Science. Control Processes, 16 (2), 88–99
+(2020) (in Russian).
+[21] Pastravanu O.C., Matcovschi M.-H.. Max-type copositive Lyapunov func-
+tionsforswitchingpositivelinearsystems.Automatica, 50(12), 3323–3327
+(2014).
+https://doi.org/10.21638/11701/spbu35.2024.302 Electronic Journal: http://diffjournal.spbu.ru/ 26Differential Equations and Control Processes, N. 3, 2024
+[22] AleksandrovA.Y.ConstructionoftheLyapunov–Krasovskiifunctionalsfor
+some classes of positive delay systems. Siberian Math. J., 59 (5), 753–762
+(2018).
+[23] AleksandrovA.Y.,MasonO.Ondiagonalstabilityofpositivesystemswith
+switches and delays. Automation and Remote Control, 79 (12), 2114–2127
+(2018).
+[24] Aleksandrov A. On the existence of diagonal Lyapunov–Krasovskii func-
+tionals for a class of nonlinear positive time-delay systems. Automatica,
+160, Art. no. 111449. (2024).
+https://doi.org/10.21638/11701/spbu35.2024.302 Electronic Journal: http://diffjournal.spbu.ru/ 27
