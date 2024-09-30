@@ -1,0 +1,1314 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 3, 2024
+Electronic Journal,
+reg. N Φ C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Computer software for the investigation of
+differential equations, dynamical systems, and control processes
+Light and fast renderings of
+limit sets for Fuchsian and Kleinian groups
+Alessandro Rosa
+Software developer
+alessandro.a.rosa@gmail.com
+Abstract. AfterreviewingsomebasictheoryongroupsofM¨ obiustransforma-
+tions inC
+1
+, we will discuss features and drawbacks of the classic approach for
+the digital rendering of their limit sets. We will then introduce the technical
+details of a new easier and faster algorithm, simply based upon numerical base
+conversion. Finally, we will draw the guidelines for the implementation and
+examine the benefits. Readers are just assumed to know complex arithmetics
+and how to program graphic plots.
+Keywords: Limit set, dynamical systems, Kleinian group, linear fractional
+transformation, circle inversion.
+1 The framework
+Let M be the collection of automorphisms g
+n
+of the complex plane C in the
+form of the linear fractional transformation
+z
+1
+=g
+n
+(z)=
+a
+n
+z
+0
++b
+n
+c
+n
+z
+0
++d
+n
+, a
+n
+,b
+n
+,c
+n
+,d
+n
+,z
+0
+∈C, ad− bc̸=0, n∈Z (1)
+also termed M¨ obius transformation (or map) after the in-depth studies carried
+outbyAugustFerdinandM¨ obius(1790–1868)duringthebeginningsoftheXIXDifferential Equations and Control Processes, N. 3, 2024
+century. This map is conformal because angles and orientation are preserved.
+Simple computations show that both inversion, g
+− 1
+n
+(z)=
+d
+n
+z− b
+n
+− c
+n
+z+a
+n
+, and com-
+position, g
+1
+◦ g
+2
+= g
+1
+(g
+2
+) = g
+3
+, are closed in M. The composition of M¨ obius
+maps enjoys the same properties as of 2× 2 matrix, namely
+ 
+a
+1
+b
+1
+c
+1
+d
+1
+!
+◦ 
+a
+2
+b
+2
+c
+2
+d
+2
+!
+=
+ 
+a
+1
+a
+2
++b
+1
+c
+2
+a
+1
+b
+2
++b
+1
+d
+2
+a
+2
+c
+1
++c
+2
+d
+1
+b
+2
+c
+1
++d
+1
+d
+2
+!
+,
+and the associative property: (g
+1
+◦ g
+2
+)◦ g
+3
+=g
+1
+◦ (g
+2
+◦ g
+3
+). This relation can be
+extended to arbitrarily many elements in the chain
+g
+1
+◦ g
+1
+◦ g
+2
+◦ g
+− 1
+1
+◦ g
+− 2
+1
+◦ g
+2
+◦ ... . (2)
+Conversely, every element in M cannot be regarded as primitive, being the
+composition of arbitrarily many transformations g
+n
+. The identity I(z) = z =
+g◦ g
+− 1
+is a special M¨ obius map with coefficients a=d =1, b=c=0,
+ 
+1 0
+0 1
+!
+,
+and it is the neutral element in M: g
+n
+◦ I = I ◦ g
+n
+= g
+n
+. The inverse g
+− 1
+commutes with g, i.e., g◦ g
+− 1
+= g
+− 1
+◦ g = I; M¨ obius maps composition is
+not in general commutative anyway. We have collected sufficient information
+to classify M as an algebraic group, known as function or M¨ obius group and
+including subgroupsG ⊂M that enjoy special properties. Subgroups are cha-
+racterized by their generators, M¨ obius maps assumed to give rise to all other
+elements inG. The term generator may sound fictitious because, according to
+(2), this map cannot be prime and indecomposable; it just refers to the role
+played in the subgroup and to special properties enjoyed by its coefficients.
+From the combination of (2) with (1), we obtain a ordered sequence of val-
+ues,z
+1
+,z
+2
+,...,z
+n
+,defined orbit inthetheoryofdynamicalsystems. (Iterationis
+aspecialcaseofchains(2)includingoneonlytransformation: g
+1
+◦ g
+1
+...g
+1
+◦ ....)
+We say that the action of G is freely discontinuous when g(U)∩U =∅ holds,
+for z∈ U ⊂ C [13, p. 16]. It is proven that orbits of M¨ obius maps are asymp-
+totically stable [13, p. 17], thus (1
+◦ ) it makes sense to question about their
+final destination, the limit value, and the collection of such values, the limit
+set Λ; we also understand that computing Λ is not algorithmically feasible, be-
+causeoftheinfinitelymanycombinations(2)involvedbyasymptoticity. Orbits
+shall be necessarily halted at some finite step d < ∞: we can only deal with
+approximations Λ d
+of Λ ≡ Λ ∞
+, where lim
+d→∞
+Λ d
+=Λ ∞
+≡ Λ.
+The studies on subgroups G ⊂M arose between the late 1870s and 1890s
+and represented a branch of geometric groups theory, aiming at inspecting the
+https://doi.org/10.21638/11701/spbu35.2024.305 Electronic Journal: http://diffjournal.spbu.ru/ 68Differential Equations and Control Processes, N. 3, 2024
+(a) Fuchsian (b) Quasi-Fuchsian
+Figure 1: Simple examples of limit sets. (a) Generators are the four and bigger inversion
+circles, tangent to each other: the limit set is a circle and the subgroup is defined Fuchsian;
+(b) the isometric circles of the generators are shown in the little picture on the far right.
+fateof(2)andatclassifyingthelimitsetsincludingmorethantwopoints. Along
+the development of this new theory, the classification rules of the subgroups G
+involved:
+(a) the shape and topology of limit sets: it could be a circle, a general curve
+andadustofpointsforthecategoriesofFuchsian,quasi-Fuchsian andSchottky
+groups respectively (fig. 1);
+(b)thenumerical nature ofthefourcoefficientsin(1); forexample,theyare
+real values in modular groups and Gaussian integers in the Picard, after
+´Emile
+Picard (1856-1941) groups;
+(c) special algebraic relations between coefficients: for example, the trace
+operator tr
+2
+(g) = (a + d)
+2
+gathers M¨ obius maps into the elliptic, parabolic,
+hyperbolicorloxodromiccategory,whether0≤ tr
+2
+(g)<4,tr
+2
+(g)=4,tr
+2
+(g)>
+4 and tr
+2
+∈C\[0,4] respectively.
+All these are the basic notions we need about groups of M¨ obius transfor-
+mations in this work. For in-depth information, see [2, 13, 15].
+Circle inversions. Circles are special shapes in the theory of M¨ obius transfor-
+mations. The simplest subgroup of M that enjoy special properties features
+formulas in the form
+T(z)=a
+C
++
+r
+2
+C
+z− a
+C
+. (3)
+They are called circle inversions (or reflections ) and map particular circles C
+to themselves, while their interior and exterior are swapped (fig. 2/a). C is
+centered at a
+C
+= x
+C
++iy
+C
+and with radius r
+C
+. Conversely, we can determine
+a
+C
+and r
+C
+in (3) from C. T maps every object outside (resp. inside) C inside
+https://doi.org/10.21638/11701/spbu35.2024.305 Electronic Journal: http://diffjournal.spbu.ru/ 69Differential Equations and Control Processes, N. 3, 2024
+(resp. outside) it (fig. 2); then, T ◦ T =I, or T
+2
+(z)=I.
+Figure 2: Circle inversions.
+The top diagram illustrates how
+circle inversion works. At the
+bottom, the disc images un-
+der the action of a subgroup
+whose generators have no self-
+intersectinginversioncirclesand
+known as of Schottky type.
+C is the inverse of itself and thus invariant un-
+der T; it is defined inversion circle. From now
+on, let it be C
+INV
+. The inversion kind belongs to
+the general class of invariant circles for (1) – given
+c ̸= 0, said isometric (coming from the union of
+the two Greek terms iso and metric = same size).
+LetthembeC
+ISO
+;theysatisfytheequalityrelation
+g(C
+ISO
+)=C
+ISO
+=g
+− 1
+(C
+ISO
+).
+Isometric circles belong to the toolkit for the
+exploration of M¨ obius maps and groups: invari-
+ant objects prevent ambiguities, so they are essen-
+tial for grounding mathematical theories. See [7,
+pp. 23 et ff.]. These circles, or specifically those
+of inversion for maps in the form (3), are also of
+help for getting a graphical representation of sub-
+group generators (fig. 1/a and 2). We will mainly
+dealwithsubgroupsofself-inverse andofnon-self-
+inverse M¨ obius maps, whether the form is (3) or
+not respectively.
+1.1 No fuzzy pictures
+The renderings inside these pages are joined by the same goal: displaying the
+limit sets for subgroups of M. We notice that they show up in two forms.
+The choice is by no means accidental however: if discs are painted, colors are
+picked out from palettes that are sorted through a gradient, in order to obtain
+a chromatic analogy of the shrinking discs sequence; otherwise, if discs are not
+plot, weonlydrawtheendpoints(byanycolorofchoice)oftheorbits, inorder
+togettheapproximationΛ d
+. Insomesense, thesetwoapproacheshighlightthe
+behavior and fate of the orbits respectively.
+The choice between disc images and the pointwise representation is mainly
+subjected to styling reasons. The subgroup action could induce the disc images
+to overlap each other; therefore displaying isometric circles is no longer useful
+because renderings look quite messy and confusing (fig. 3/b). Circles are
+dropped in favor of points/pixels (the composite neologism from picture, or
+pix, and element) and orbits are not rendered step by step: only their last
+https://doi.org/10.21638/11701/spbu35.2024.305 Electronic Journal: http://diffjournal.spbu.ru/ 70Differential Equations and Control Processes, N. 3, 2024
+(a) Generators (b) Disc images (c) Limit set
+isometric circles isometric circles points
+Figure 3: Renderings of a same subgroup. Let a 2-generators subgroup in the Riley slice
+(roughly, subgroups ofM where the coefficients of generators satisfy particular relations). (a)
+Generators are parabolic. The subgroup action has been rendered through (b) circles and (c)
+points/pixels. Colors in (c) are associated to the starting generator of each orbit.
+element will be processed (fig. 3/c).
+Disc images boils down to the representation via two-dimensional objects,
+here the circle, and therefore the visual quality is, in turn, affected by the cov-
+ering action of such objects. The shapes of the limit set come to eye during the
+disc images, as a consequence from the decreasing size of the images, under the
+subgroup action, of the isometric circles associated to the subgroup generators.
+The shapes of limits set K for subgroups of M are generally ruled by
+fractal patterns, like it happens to Julia sets J, the limits for the iteration
+Figure 4: Circle packing. Shapes of limit sets showing ways of packing surfaces.
+https://doi.org/10.21638/11701/spbu35.2024.305 Electronic Journal: http://diffjournal.spbu.ru/ 71Differential Equations and Control Processes, N. 3, 2024
+of non-linear functions in one complex variable (fig. 5/b). (These are two well-
+known kindred theories, based on orbits built according to the criteria of the
+algebraic structures which functions belong to: groups or singletons.) There
+exist exceptional groups, called degenerate, cracking such circle-like and fractal
+patterns (fig. 14 at p. 87). There exist limit sets K spreading in ways that
+their complement (the set of discontinuity Ω) consist of circles that are said
+to tessellate a given portion of C (i.e., they cover, or fill , the space by a well-
+orderedgeometricdistribution). Tessellationbelongstoamuchmoreintriguing
+topic, knownas circle packing andfocusingonoptimal(i.e., aimingatreducing
+the gap between the original area and the packing to 0) patterns for filling in
+areas by means of circles (fig. 4, 5/a); then packing can be assumed as an
+approximation algorithm.
+(a) (b) (c)
+Figure 5: Resemblances. (a) A limit set for a subgroup of M and belonging to the Riley
+slice (see fig. 3); (b) the Julia set for the iteration of sin( z). On the left, each color binds
+to the initial generator; on the right, to the final value taken on by the iterated orbit. (c)
+Apollonian-like Julia set similar to the limit set in fig. 4 [5].
+2 Introduction to the lexicographic approach
+A clever strategy for optimizing the computation of the chains (2) is required
+because they could include contiguous pairs g
+k
+◦ g
+− 1
+k
+of inverse generators: such
+pair resolves into the identity map I(z) which can be safely skipped because
+redundant.
+The earliest renderings, via disc images or limit sets, were already available
+on paper at the end of the XIX century, in the masterpiece by Fricke and
+Klein [8]. In the era of digital computing, this problem was tackled through
+a lexicographic approach based upon a finite state automata (see [6].) that
+generates all the permutations of chains (2) whose length is l =d<∞ for the
+limit set or l≤ d <∞ for disc images representation. This approach was not
+originallydevised for computational goals asit datesback toa time whenthere
+https://doi.org/10.21638/11701/spbu35.2024.305 Electronic Journal: http://diffjournal.spbu.ru/ 72Differential Equations and Control Processes, N. 3, 2024
+Figure 6: Disc images renderings in 1897. See [8, vol. I, p. 429, 437].
+was no enough familiarity and confidence with computers, so that its features
+were not originally geared to optimizing speed, efficiency, and to saving memory
+resources.
+2.1 Trees of words
+Letter-ized Digit-ized
+(abbAABB)
+(2330011)
+Words Numbers
+Abstract strings
+Figure 7: Materializations.
+Thereexistsaprimitiveandabstractconceptbe-
+hind the lexicographic approach and essentially
+relying upon symbolic concatenation, which pro-
+duces objects known as strings (fig. 7). In
+general, the lexicographic approach works on a
+bounded setW
+n
+of n symbols, each associated to
+oneandonlyonegeneratorinthegivensubgroup;
+here symbols were chosen to be letters l
+n
+of the
+Western alphabet (a, b, c, d, ...). The set W
+n
+is defined alphabet, because
+of being the base for encoding the abstract chains (2) into strings of letters,
+analogously defined words. These words are open to be read from left to right
+(LR) or from right to left (RL). In this article, we will read them all in the RL
+order. Stepping once back, we see that the abstract symbolization, intended
+as a one-to-one relation between a grapheme and a generator, has materialized
+into the letterized form (fig. 7). For what follows, it is essential to disengage
+this binding and consider that letters just represent a viable choice.
+On this train of ideas, at a larger scale, the lexicographic approach builds
+the dictionary, the collection of finite length words w. Dictionaries are filled by
+every new word coming by appending single nodes up to some bounded length
+l. Along the next sections, we will consider the generic 2-generators subgroup
+https://doi.org/10.21638/11701/spbu35.2024.305 Electronic Journal: http://diffjournal.spbu.ru/ 73Differential Equations and Control Processes, N. 3, 2024
+g
+1
+=a, g
+2
+=b, g
+− 1
+1
+=A, g
+− 1
+2
+=B, (4)
+where each generator and its inverse binds to small and capital form of the
+samealphabeticletter. (Unlessotherwisespecified,theexpression‘ n-generators
+subgroup’ does not count the inverse maps g
+− 1
+n
+.)
+I
+a
+ba
+ca
+da
+aba
+cba
+dba
+Bba
+Figure 8: Tree growth. Identi-
+ties aA,Aa,bB,Bb stop the tree
+growth.
+In this case, letters concatenation into words
+canbeschemedthrougha(4− 1=3)-branchedtree
+(fig. 8). The writing (4) suggests the composition
+of identity words aA, Aa, bB, Bb, which cancel
+the action of the last two generators (for example,
+in aaA → a) and then prevent the insertion of
+newnodesbecauseofgettingtheformationbackto
+existing words. Identities show that formality and
+action are disjoint, they involve redundant actions
+and are then negligible. These remarks open to the problem of checking when
+and how identities occur.
+I
+a
+b
+c
+d
+ba
+ca
+da
+cd bd ad
+ac
+bc
+dc
+db cb ab
+I
+A
+B
+a
+b
+bA
+BA
+AA
+bb Ab ab
+ba
+Ba
+aa
+BB AB aB
+(a) self-inverse (b) non-self-inverse
+Figure 9: Multi-branched trees up to depth 2.
+2.2 Presentations and multiplication tables
+The phyllotaxis, i.e., how the tree grows, is not wild, because the corresponding
+subgroup action is defined by a concise list of identity recognition rules. The
+following example presents a largely applied form of compact writing that just
+reports generators on the left and identity recognition rules on the right:
+⟨a,b| aa=bb=I⟩ (5)
+We notice that this is a subgroup of self-inverse maps, such as circle inversions
+for instance (3). The letter I, meaning to the identity, can be equivalently
+https://doi.org/10.21638/11701/spbu35.2024.305 Electronic Journal: http://diffjournal.spbu.ru/ 74Differential Equations and Control Processes, N. 3, 2024
+replaced by the unit value 1. In the example below, we picked subgroup (4),
+with identities coming from pairs of mutually inverse generators
+⟨a,b,A,B | aA=Aa=bB =Bb =1⟩, (6)
+ensuring that it is in no way a 2-generators subgroup of non-self-inverse maps.
+The writings (5) and (6) are called group presentations (or defining relations ).
+Each identity recognition rule on the right is defined cancellation, as symbols
+will be deleted when identities occur. Since the goal of presentations just
+amounts to obtaining synthetic writings, they turn obsolete as will not fit the
+action of more complicated groups, being endowed with several composition
+rules and identity recognitions.
+According to the remark at p. 68, there exists no unique and irreducible
+presentation. Cancellations often appear along the chain composition, bringing
+different words but same action. For example, the word aaBb resolves into the
+equivalent aa due to the table (6). Again, let ababBAA: after cancelling bB,
+we get abaAA; aA can be dropped too and we finally have abA.
+Figure 10 shows four partial trees that have been built up according to pre-
+sentations (5) and (6) respectively. The vast casuistry of groups teaches that
+phyllotaxis could be more complicated than the sole cancellation rules. Every
+cancellation, intended as formal composition, could represent one option for
+groupsofM¨ obiustransformations, becausethelatterareclosedundercomposi-
+tion: forexample,itmayhappenthatwemovefromonegeneratortotheother:
+a
+3
+=aaa =b; or fall into a periodic behavior: a
+3
+=aaa =a. Moreover, all the
+previous examples shall not induce to believe that the one-to-one relation from
+I
+A
+bA
+BA
+AA
+abA
+bbA
+AbA
+I
+A
+bA
+BA
+AA
+abA
+bbA
+AbA
+(a) Disc images Not self-inverse (b) Limit set
+I
+a
+ba
+ca
+da
+aba
+cba
+dba
+I
+a
+ba
+ca
+da
+aba
+cba
+dba
+(c) Disc images Self-inverse (d) Limit set
+Figure 10: Partial trees up to depth 3. The entries in bold are those to be rendered.
+https://doi.org/10.21638/11701/spbu35.2024.305 Electronic Journal: http://diffjournal.spbu.ru/ 75Differential Equations and Control Processes, N. 3, 2024
+a b A B
+a a b   B
+b a b A   A   b A B
+B a   A B
+a b c d
+a   b c d
+b a   c d
+c a b   d
+d a b c   (a) abABB (b) cabdc
+Not self-inverse subgroup Self-inverse subgroup
+Table 1: Trasversing the multiplication table. The tree growth in figs. 10 and 9 is driven
+by Cayley tables. The cancellations ‘†’ appear in the presentations (6) and (5). We can follow
+the zig-zag path through the upper bar with the gray shades gradient.
+letters to generators is the sole way to detect identities. Suppose we have the
+rule ab=A, then aab turns into aA=I.
+In this formally variegated scenario, we require the identity recognition
+rules would be structured in a way more versatile than in the presentation:
+this task is fulfilled by the so-called multiplication table, also known as Cayley
+table,namedafterArthurCayley(1821–1895)andrulingeverysinglestepalong
+the formation of each orbit. Every table features the same number of columns
+as of the generators (including the inverse ones), whereas rows list all unique
+combinations allowed in a given group, including the cancellation rules. Every
+row is announced by one combination of generators on the far left column,
+and it is accessed by means of the combination with the cells in the other
+columns, following a sort of zig-zag path that ends at a cancellation rule (table
+1). Presentations are synthetic versions of the analytic multiplication tables
+[10, p. 88], which provide specific composition rules besides cancellations.
+The two examples in table 1 are the simplest ever, since the only directive
+to follow for trasversing this table amounts to replacing the current symbol by
+the next in line, and so, again and again up to some maximal depth or when
+we would stumble into a cancellation. The (RL) reading of the word abA is
+equivalent to the following path A→
+b
+b→
+a
+a, running through three rows, one
+per each symbol. There exist groups whose multiplication tables include rows
+that are announced by words being longer than one symbol (see the example
+at [15, p. 359]), such as the path a →
+b
+ba →
+A
+Aba that running over the table
+rows announced by a, ba, andAba. The formal word Bbba will eventually meet
+the cancellation rule in the row announced by the letter B. This is an excerpt
+of a multiplication table including longer entries than one letter [15, p. 359]:
+https://doi.org/10.21638/11701/spbu35.2024.305 Electronic Journal: http://diffjournal.spbu.ru/ 76Differential Equations and Control Processes, N. 3, 2024
+a b A B
+bAB I I BA B
+Bab ba b I I
+In any version, either as presentations or as tables, the tests for identity
+recognitionareessentialtoensurethecorrectprocessingofthesubgroupaction
+and they cannot be exempted from implementation of visual rendering algo-
+rithms due to the reasons stressed before; otherwise said, missing to perform
+thecancellationtestsbringsinaccurateresults. The lexicographic approach pre-
+processes words: it builds them in progression and checks if the newly appended
+symbol has met an identity rule and then triggered a cancellation.
+(a) Generators (b) Final rendering
+Figure 11: Disc images by circle inversion. (a) A different disposition of four mutually
+tangent circles than fig. 1/a was adopted here to work inversion maps (3). The tangency
+condition is preserved along the construction and it prevents images circles from overlapping
+each other. Coloring visually enhances the convergent dynamics.
+During the early 1990s, digital pictures of limit sets were produced through
+the lexicographic approach in a few works, such as Manna and Vicsek’s [12],
+Bullets and Mantica’s [4], McShane, Parker and Redfern’s [14], and Parker’s
+[16]. None of them hit the technical details of the rendering. This gap in
+the literature was filled in the beginnings of the new millennium, inside the
+book Indra’s pearls by Mumford, Series and Wright [15], which provided a very
+extensive and plain discussion of the lexicographic approach.
+3 Drawbacks of the lexicographic approach
+Given n generators and chains (2) of maximal depth d, disc images or limit
+sets require N
+T
+= 1 +
+d
+X
+i=1
+g· (g− 1)
+i− 1
+(intermediate nodes and leaves) and
+https://doi.org/10.21638/11701/spbu35.2024.305 Electronic Journal: http://diffjournal.spbu.ru/ 77Differential Equations and Control Processes, N. 3, 2024
+N
+L
+= (g− 1)
+d− 1
+words (leaves only) respectively. The lexicographic approach
+features the following additional computation costs:
+(1) a first table for binding letters to the indexes of the generators stored in
+an array;
+(2) a second table for registering the association between the letters of
+generators and of their inverses;
+(3) the implementation of bread-first (equivalently, depth-first) algorithm
+for running through the words tree (i.e., trasversing the tree model) and gener-
+ating the words dictionary up to a finite length;
+(4) the memory space required to store the dictionary;
+(5) the translation of symbols into indexes to pick up the generator.
+The tables below report the memory sizes of dictionaries including words up to
+length17, asufficientvalueforaccomplishingaveragequalityrenderings. Costs
+willdramaticallygrow,becauseevenlongerwordsareneededforhigherquality,
+especially to render close-ups or for those groups whose the orbits convergence
+rate rapidly decreases to 0 near the limit set, as it happens for groups including
+parabolic generators (see the remarks on the trace operator at p. 69).
+Compiling the dictionary turns into a very expensive process, which de-
+mands long computation times and huge memory resources.
+words length 0 1 3 5 7 9 11 13 15 17
+Disc images
+process steps 1 5 53 485 4373 39365 354293 3188645 28697813 258280325
+dictionary size 1B 5B 53B 485B 4.2KB 38KB 346KB 3.04MB 27MB 246.3MB
+Limit set
+process steps 1 4 9 81 729 6561 59049 531441 4782969 43046721
+dictionary size 1B 4B 9B 81B 729B 6.4KB 57.7KB 519KB 4.56MB 41.06MB
+Table 2: Memory size for disc images. This upper and the lower table have been compiled
+for groups of four generators of self-inverse maps and of non-self-inverse maps respectively.
+The need of huge memory loads has been already pointed out at [15, p. 141],
+where three approaches were given for working this problem around: one is
+based upon recursion, the others on the tree model. They all require consid-
+erable resources in terms of function calls stack. The first approach is based
+upon recursion and looks as the most onerous, as it triggers as many calls as
+the dictionary size, i.e. N
+T
+or N
+L
+; whereas the other two approaches look ra-
+https://doi.org/10.21638/11701/spbu35.2024.305 Electronic Journal: http://diffjournal.spbu.ru/ 78Differential Equations and Control Processes, N. 3, 2024
+ther complicate and expensive, because dropping the dictionary would need to
+constantly track down the paths across the tree for trasversing them back and
+forth. In whatever version, the lexicographic approach does not care of saving
+resources and, in long terms, the running speed eventually slows down. A can-
+didate different approach would aim at being lighter and running faster, and
+then at dropping storages in any form and devising alternative ways to the tree
+model and trasversion.
+4 Index generation: the numerical alternative
+In order to get away from the lexicographic environment, we have to step back
+to the primary level of composition, relying upon the abstraction of symbols,
+as discussed in §2 (fig. 7). We recall that letters are just meant as a choice for
+opening to rendering operations.
+A different materialization of abstract symbols consists in developing an
+approach that involves digits and numbers. We start from reviewing the in-
+sertion of tree nodes in fig. 9 under this new perspective. According to the
+Basis Representation Theorem [1, pp. 8–9], any numerical quantity Q can be
+written as a unique string q
+b
+in base b ≥ 2. Q acts like an abstract concept
+that allows travelling through arbitrary representations. Q is invariant under
+base conversion, only the formal appearance change; thus the increasing (or de-
+creasing) trend of sequences of numbers in base 10, say 1
+10
+, 2
+10
+, 3
+10
+, ..., will be
+kept up the same trend in another base. Given q
+2
+and q
+10
+, then q
+10
+→Q→q
+2
+:
+for every integer in base 10, there exists one and only one conversion into a
+different base. Base conversion stands as unambiguous and reliable approach
+to the formalization of orbits. As we already remarked at p. 70, invariance
+represents a nice start for developing mathematical ideas.
+0
+10
+1
+10
+2
+10
+3
+10
+4
+10
+5
+10
+6
+10
+7
+10
+8
+10
+9
+10
+10
+10
+11
+10
+12
+10
+13
+10
+14
+10
+15
+10
+0
+4
+1
+4
+2
+4
+3
+4
+10
+4
+11
+4
+12
+4
+13
+4
+20
+4
+21
+4
+22
+4
+23
+4
+30
+4
+31
+4
+32
+4
+33
+4
+Table 3: Conversion from base 10 to 4.
+We notice that every base n is equipped with a set of exactly n distinct
+digits, which we could, even if improperly, call as alphabet again, because of
+performing homologous tasks.
+We follow the transition between the lexicographic and the indexed ap-
+proach in table 4, by comparing the formal compositions. At this initial stage,
+the difference just regards the adopted symbols. Every new number in base
+https://doi.org/10.21638/11701/spbu35.2024.305 Electronic Journal: http://diffjournal.spbu.ru/ 79Differential Equations and Control Processes, N. 3, 2024
+Generator g
+1
+g
+2
+g
+− 1
+1
+g
+− 1
+2
+Symbol a b A B
+Array index 0 1 2 3
+Cancellations in letters aA bB Aa Bb aa bb AA BB
+Cancellations in digits 02 13 20 31 00 11 22 33
+non-self-inverse generators self-inverse generators
+Table 4: Environmental arrays for 4-generators groups.
+4, for example, shows up as the concatenation of digits, taken from the set [0,
+1, 2, 3] (table 3). In every 4-generators subgroup, the letters a, b, c, d are
+respectively associated to the digits of the 4-base number system: 0, 1, 2, 3.
+The formal expressions of numerical quantities under some given value are per-
+mutations of digits. Let the value 10000, then all smaller numbers from 0000
+to 9999 are permutations of all digits in the 10-base system. Given an alphabet
+of cardinality n=4, the concatenation of letters up to depth d is equivalent to
+writingallnumbersinbasenuptothevaluen
+d
+. The generation of all words in
+the lexicographic approach can be completely replaced by the increasing sequence
+of positive integers in some arbitrary base system. We no longer need to build
+up dictionaries and store massive bulks of data: the n-base representation can
+returnthesameinformationasfromthecombinationsbuiltonpurposethrough
+the step-by-step concatenation of letters. Numbers devolve into sequences of
+digits, i.e. of strings being managed through the symbols concatenation; they
+however keep all we need to render the subgroup action.
+Zero management. This new approach runs faster, but it shall be han-
+dled with care as we are switching from quantities represented by numbers to
+Level 0 I
+Level 1 A B a b
+0
+4
+1
+4
+2
+4
+3
+4
+Level 2 AA AB Ab
+00
+4
+01
+4
+03
+4
+BB BA Ba
+11
+4
+10
+4
+12
+4
+aa aB ab
+22
+4
+21
+4
+23
+4
+bb bA ba
+33
+4
+30
+4
+32
+4
+Level 0 I
+Level 1 a b c d
+0
+4
+=0
+10
+1
+4
+=1
+10
+2
+4
+=2
+10
+3
+4
+=3
+10
+Level 2 ab ac ad
+01
+4
+=1
+10
+02
+4
+=2
+10
+03
+4
+=3
+10
+ba bc bd
+10
+4
+=4
+10
+12
+4
+=6
+10
+13
+4
+=7
+10
+ca cb cd
+20
+4
+=8
+10
+21
+4
+=9
+10
+23
+4
+=11
+10
+da db dc
+30
+4
+=12
+10
+31
+4
+=13
+10
+32
+4
+=14
+10
+self-inverse generators non-self-inverse generators
+Table5: Applicationstosubgroups. Someentrieshavebeenskippedbecauseofcancellation
+rules. Index generation covers all combinations yielded by the lexicographic approach (fig. 9).
+https://doi.org/10.21638/11701/spbu35.2024.305 Electronic Journal: http://diffjournal.spbu.ru/ 80Differential Equations and Control Processes, N. 3, 2024
+Figure 12: These limit sets have been rendered via the index generation algorithm. The dots
+at the outer sides of the picture at the far left prove that accurate renderings would be very
+long time consuming.
+the quality (i.e., the visual appearance) of digits, i.e. of symbols deprived from
+their native quantitative meaning. This transition goes from positional numer-
+ical systems to strings of concatenated symbols and it requires to settle the
+ambiguous role played by the digit 0 (table 4), which is applied to encode the
+action of the M¨ obius map stored in the array at the index 0 (arrays are data
+structured endowed with zero-based indexing). The digit 0, unlike all others
+from 1 to 9, could relate to quantification or not, depending on the position
+within the string of digits: it plays the multiplicative role if appended to the
+far right (ex: 10000), or none if prepended to the far left (ex: 00001); we mean
+to trailing and of leading zeros respectively. For instance, the unit value 1 is
+encoded into the word ‘1’; assuming 5 as maximal length, we get the words ‘1’,
+‘01’, ‘001’, ‘0001’, ‘00001’. In general, there exist infinitely many formal words
+‘0n’, ‘00n’, ..., ‘0n’, being padded by leading zeros and which encode the same
+integer quantity n; they feature a same sub-orbit of iterates of the M¨ obius map
+associated to the index 0. In the formal context of symbols concatenation, the
+digit 0 drops the role played in the positional representation of numbers; being
+no longer a numerical value but just as a symbol, it is an index that refers to a
+generator for the given subgroup; this is another reason why leading zeros are
+as important as trailing ones here. We see that the zeros left padding does not
+occur for groups of self-inversions for instance, where the composition of words
+does not allow contiguous symbols repetition.
+The transformation from numerical values to strings of symbols is one-to-
+many(=multi-valued); conversely,stringswithleadingzeroswouldbeencoded
+back to the same numerical value in the many-to-one fashion (= single-valued).
+Because of the aforementioned reasons, base conversion cannot cover strings
+https://doi.org/10.21638/11701/spbu35.2024.305 Electronic Journal: http://diffjournal.spbu.ru/ 81Differential Equations and Control Processes, N. 3, 2024
+withleadingzeros;hencewehavetoimplementaseparateprocedureformanag-
+ingthesespecialstrings. Resuming,theimplementationoftheindexgeneration
+algorithm consists in
+(1
+◦ ) taking on a number in base 10, say 93
+10
+;
+(2
+◦ ) encoding it into the new base, say 1131
+4
+;
+(3
+◦ ) left padding every string yielded in the step 2 through a sequence of
+leading zeros up to a given finite maximal length. Suppose the latter is 8, the
+4-basenumberobtainedabovewouldincreasinglyleftpaddedinordertoobtain
+the four strings (8− 4=4): 01131
+4
+, 001131
+4
+, 0001131
+4
+, 00001131
+4
+;
+(4) feeding the resulting string in the new base to the rendering engine.
+Allprocessboilsdowntoconvertingnumbersintothenewbaseandprocess-
+ingtheobtainedstrings. Wenolongerneedtostorethem. Theindexgeneration
+algorithm post-processes words: the base conversion yield a new words which is
+checked whether there are subsets triggering cancellations.
+5 The pseudo-code implementation
+We will illustrate the code implementation guidelines for the index generation
+algorithm, either for rendering disc images or limit sets. Code has been split
+into blocks which isolate the services into distinct working compartments; this
+way could be also of help to easily follow how each service is implemented and
+what its task is. Code is presented in the form of pseudo object-oriented lan-
+guage in order to ease the customization into readers’ favorite environment.
+Generators have been embedded into class objects, endowed with members:
+I
+0
+3
+2
+1
+10
+20
+30
+31 21 11
+12
+22
+32
+33 23 13
+00
+03
+02
+01
+0
+10 20 30 00
+100 200 300 000 010 110 210 310
+0010 1010 2010 3010
+(a) (b)
+Figure 13: (a) The tree in fig. 9/b was rebuilt under the index generation principles. Words
+are not filtered by prior multiplication table tests; (b) A branch was picked up from the tree in
+fig. 13 and walked through two nodes deeper.
+https://doi.org/10.21638/11701/spbu35.2024.305 Electronic Journal: http://diffjournal.spbu.ru/ 82Differential Equations and Control Processes, N. 3, 2024
+namely, they consist of methods and of data containers, referred by the mem-
+bership notation to the object: obj.<method id>(parameters) for methods
+and for obj.<variable id> for containers (i.e., for variables) respectively.
+We begin from instantiating the generators listed in table 4 at p. 80: for
+sake of simplicity and with no loss of generalization, we assume to work with 2-
+generators groups ruled by the simplest presentation (5) or (6). Our algorithm
+is scalable and not affected by the cardinality of the generators set.
+Theindex–generatorassociationisautomaticallysetupbytheinstantiation
+ofthelogicalarray(table4atp. 80). Anumberofenvironmentalvariablesand
+containers, related to the sub-services run by the algorithm, are first initialized
+for further needs in the code box below.
+1 var _gens_objs = [ g1, g2, g3, g4 ], _gens_num = _gens_objs.length;
+2 var _max_depth = 10, _max_value = power( _gens_num, _max_depth );
+3 var _proc_str = "", _zero_fill_proc_str = "", _index, _circle;
+4 var _str_length = 1, _rec_start = 0, _rec_end = -1;
+5 var _b_length_change = 0, _b_crash_found = 0;
+Westressagainthatthenumericalnatureofthisalgorithmdisengagesfrom
+the concept of word depth, which is more naturally tied to the transversion of
+the lexicographic approach. We will deal with the number of steps instead, and
+so we have to set up an arbitrary maximal value that stops the main loop. We
+opted to use the for-loop syntax because of being conceptually close to the
+increasing sequences of integers discussed in the previous section; but there are
+no impediments against the while-loop syntax which, as known, generalizes
+and includes the principles of for-loops. For sake of coherence with the initial
+remarks at §1, we will work with inversion circles or with pixels/points, for
+rendering disc images or limit sets respectively.
+1 for( var _i = 0; _i < _max_value; _i++ ){
+2 _proc_str = _i.<convert-to-base>( _gens_num );
+3
+4 //we chose this test to trigger the leading zeros management below
+5 _b_length_change = _str_length != _proc_str.length;
+6
+7 //the test below may involve the multiplication table
+8 //or the subgroup presentation
+9 if ( <call-to-sub-routine-#1.x:cancellation-rule-test_of_proc_str> ) continue;
+10
+11 <call-to-sub-routine-#2.x:process-the-numerical-string-in-base-n>
+12 <call-to-sub-routine-#3:leading-zeros-management>
+13 }
+We are going to render limit sets first: a string of symbols is returned for each
+https://doi.org/10.21638/11701/spbu35.2024.305 Electronic Journal: http://diffjournal.spbu.ru/ 83Differential Equations and Control Processes, N. 3, 2024
+value of the loop counter i and processed by composition of M¨ obius maps.
+Input points. Unlike the rasterized rendering of Julia sets, we do not need to
+check every point/pixel inside the region of interest (the escape time method).
+According to the theory of function groups (which both fuchsian and kleinian
+kinds belong to), it is sufficient to give an arbitrary input value: the definition
+of a limit point depends only on the sequence of elements of the subgroup G,
+and not on the points belonging to the region U where the action of G is freely
+discontinuous [13, p. 22, D.3]. Moreover, since the limit set is transformed into
+itself by any transformation of the group [7, p. 43], we found worth picking
+up input values from the fixed points belonging to one of the generators of the
+subgroup.
+Thegenericlabel #2.xreferstothecodeblock #2.1whichrendersthelimit
+set. After processing the input word from right to left, we will display on the
+screen the last element of every orbit exclusively, as required by the definition
+of limit sets.
+1 //<sub-routine-#2.1:limit set mode>
+2 //right-to-left reading order
+3 _index = <turn-the-symbol-to-integer>( _proc_str[ _proc_str.length-1 ] );
+4 //initialization
+5 _fp = _gens_objs[ _index ].get_one_fixed_point();
+6
+7 //process the rest of the string
+8 for( var _wr = _proc_str.length-2; _wr >= 0; _wr-- ){
+9 _index = <turn-the-symbol-to-integer>( _proc_str[ _wr ] );
+10 _fp = _gens_objs[ _index ].map_point( _fp );
+11 }
+12
+13 <call-a-sub-routine-for-drawing-the-pixel-at-the-fixed-point-coordinates>
+Disc images based renderings need the subroutine #2.x to be replaced by the
+block #2.2, where every new inversion circle is plotted on the screen as each
+new symbol in the word is read, from right to left, and processed:
+1 //<sub-routine-#2.2:disc images mode>
+2 //right-to-left reading order
+3 _index = <turn-the-symbol-to-integer>( _proc_str[ _proc_str.length-1 ] );
+https://doi.org/10.21638/11701/spbu35.2024.305 Electronic Journal: http://diffjournal.spbu.ru/ 84Differential Equations and Control Processes, N. 3, 2024
+4 //initialization
+5 _circle = _gens_objs[ _index ].get_inversion_circle();
+6
+7 <call-a-sub-routine-for-drawing-the-circle>
+8 //process the rest of the string
+9 for( var _wr = _proc_str.length-2; _wr >= 0; _wr-- ){
+10 _index = <turn-the-first-symbol-to-integer>( _proc_str[ _wr ] );
+11 _circle = _gens_objs[ _index ].map_inversion_circle( _circle );
+12 <call-a-sub-routine-for-drawing-the-circle>
+13 }
+The label <sub-routine-#3:leading-zeros-management> refers to the next
+pseudo-code implementing both elaboration and rendering of strings with lead-
+ing zeros, as discussed in the previous section. The strategy boils down to
+generating such strings from the ones returned inside the main for-loop. We
+chose to run this code when the converted string changes in length, e.g. from
+333
+4
+to 1000
+4
+in base 4. According to the remarks at the end of §4, this code
+block mimics the tasks of the main algorithm.
+1 //<sub-routine-#3:leading-zeros-management>
+2 if ( _b_length_change )
+3 {
+4 _rec_end = _n - 1;
+5 for( var _r = _rec_start; _r <= _rec_end; _r++ )
+6 {
+7 _zero_fill_proc_str = _r.toString( _n_gens );
+8 for( var _filler = _zero_fill_proc_str.length; _filler <= _max_depth; _filler++ )
+9 {
+10 _zero_fill_proc_str = "0" + _zero_fill_proc_str;
+11 if ( <call-to-sub-routine-#1.x:cancellation-rule-test_of_proc_str> )
+12 continue;
+13 <call-to-sub-routine-#2.x:process-the-numerical-string-in-base-n>
+14 }
+15 }
+16
+17 _rec_start = _rec_end + 1;
+18 _rec_end = -1;
+19 _b_length_change = 0;
+20 }
+We remark that the pseudo-code
+https://doi.org/10.21638/11701/spbu35.2024.305 Electronic Journal: http://diffjournal.spbu.ru/ 85Differential Equations and Control Processes, N. 3, 2024
+if ( <call-to-sub-routine-#1.x:cancellation-rule-test_of_proc_str> ) continue;
+refers to tests to be performed according to the Cayley table or presentation
+related to the given subgroup. Two examples on how tables 1 at p. 76 are
+coded follow below. The equivalent cancellation rules are (5) and (6) in terms
+of presentations. Implementation is easy: instead of trasversing table rows and
+columns, thesecancellationtestscheckwhethereverynewinputstringofdigits
+includes at least one of the rules on the right of the presentation.
+1 //<sub-routine-#1.1:group-presentation>
+2 function __check__group_presentation__( _digitized_word = "" )
+3 {
+4 <let a boolean flag and set it to 0>
+5
+6 <for each entry inside the group presentation>
+7 <check if the input digitized word includes the current entry>
+8 <if so, set the above flag to 1 and break this loop>
+9 <end-of-for-loop>
+10
+11 <return the boolean flag>
+12 }
+Andnowthepseudo-codeforcancellationtestswithregardtothemultiplication
+table.
+1 //<sub-routine-#1.2:multiplication-table-test>
+2 function __multiplication-table-test__( _digitized_word = "" ) {
+3 <let a boolean flag and set it to 0>
+4
+5 //we assume that the index has been converted into the required base
+6 <split-the-digitized-word-into-an-array-of-single-digits->
+7 <get-the-first-digit-in-the-word>
+8 <get a reference pointer to the related row inside the table>
+9
+10 //we prevent to raise conditional if-statement in the loop
+11 <remove the first digit from the word>
+12
+13 <for each digit in the of rest this array> //sequential read
+14 <get the next-index in the current row at the index espressed by the digit>
+15 <if the next-index is invalid, then (1) set the above flag to 1>
+16 <(2) break the loop and (3) skip this word processing>
+17 <get a reference pointer to the row inside the-table and related to the next-index>
+https://doi.org/10.21638/11701/spbu35.2024.305 Electronic Journal: http://diffjournal.spbu.ru/ 86Differential Equations and Control Processes, N. 3, 2024
+18 <end-of-for-loop>
+19
+20 <return the flag>
+21 }
+6 Comparisons and benefits
+Figure 14: This is a close-up
+of the limit set for a degenerate
+subgroup of 2-generators, whose
+coefficients satisfy special and
+delicate numerical conditions.
+The digital nature of the index generation algo-
+rithm could take away some of the charm tied to
+the theory of word processing performed by the
+lexicographic approach (refer to the algebraic the-
+oryofcommutatorsat[15, p. 168])andemanating
+fromtherelatedliterature([6]¨ uberalles). Anyway,
+for practical purposes, the numerical base conver-
+sion enjoys the benefit of generating every chain
+of generators in just one step and so it runs much
+faster than the lexicographic approach. The trans-
+formational character of the index generation algo-
+rithm relies upon the simpler and quicker genera-
+tion of words, no longer coming from a construc-
+tive progression, like in the lexicographic approach
+whichsetsupatortuoustrackdisseminatedbythetechnicaldrawbacksalready
+discussed in §3, i.e., appending symbols, checking words and storing them into
+(possibly, huge) containers, the dictionaries. The only (and necessary) compu-
+tational costs of the index generation algorithm are the essential multiplication
+table and the correlated testings.
+Onemoredrawbackoflexicographicapproachconcernsthesequentialbuild-
+ingofwordsofnsymbols,whicharededucedfromthoseoflengthn− 1. Atthis
+regard, we observe that the intrinsic tree structure involves nodes dependency,
+which demands to start from the root and walk through the consecutive nodes
+https://doi.org/10.21638/11701/spbu35.2024.305 Electronic Journal: http://diffjournal.spbu.ru/ 87Differential Equations and Control Processes, N. 3, 2024
+in order to get to the given depth. On the contrary, the index generation algo-
+rithm enjoys the benefits of numerical sequences which is based upon, allowing
+to start, stop and resume the generation of strings at any arbitrary element of
+the sequence. If needed, we can jump from end to end here, instead of walking
+through the interval. It is known that d =
+j
+log(i)
+log(n)
+k
+returns the number d of
+digits required to convert i from base 10 to base n; thus, we can explore limit
+sets inside some interval of integer values, which match with words of length l,
+given d≤ l≤ D for instance.
+The author has developed a web application that implements both the lex-
+icographic and the index generation algorithm at http://alessandrorosa.altervista.
+org/circles/; a number of demos can be run for introductory purposes, or groups
+be built either geometrically through inversion circles or algebraically via input
+of arbitrary coefficients into M¨ obius maps. Refer to [17] for related examples.
+References
+[1] Andrews G.E., Number Theory, Saunders, 1971.
+[2] Beardon A., The Geometry of Discrete Groups, Springer, 1983.
+[3] Bessis D., Demka S. Generalized Apollonian packings, Commun. Math.
+Phys., 134, 1990, pp. 293–319.
+[4] Bullets S., Mantica G., Group theory of hyperbolic circle packings, Non-
+linearity, 5, 1992, pp. 1085–1109.
+[5] Devaney R. L., Marotta S. M., Mandelpinski necklaces in the parame-
+ter plane of rational maps, Springer Proceedings in Mathematics and
+Statistics, 2021, pp. 95-119.
+[6] Epstein D.B.A. et alia, Word processing in Groups, Jones and Bartlett
+Publishers, Boston, 1992.
+[7] Ford L., Automorphic functions, McGraw-Hill, New York, 1929.
+[8] FrickeR.,KleinF.,Vorlesungen ¨ uberdieTheoriederautomorphenFunc-
+tionen, Teubner, Leipzig, 1897.
+[9] Krushkal S.L., Apanasov B.N., Gusevski˘ ı N. A., Kleinian Groups and
+UniformizationinExamplesandProblems,TranslationsofMathematical
+Monographs, AMS, 1986.
+https://doi.org/10.21638/11701/spbu35.2024.305 Electronic Journal: http://diffjournal.spbu.ru/ 88Differential Equations and Control Processes, N. 3, 2024
+[10] LyndonR.C.,SchuppP.E.,CombinatorialGroupTheory,Springer,2001.
+[11] Magnus W., Non-Euclidean Tesselations and their Groups, Elsevier,
+1974.
+[12] Manna S.S., Vicsek T., Multifractality of Space-Filling Bearings and
+Apollonian Packings, Journal of Statistical Physics, 64, 3/4, 1991.
+[13] Maskit B., Kleinian Groups, Springer, 1988.
+[14] McShane G., Parker J.R., Redfern I., Drawing limit sets of Kleinian
+groups using finite state automata , Experimental Mathematics, vol. 3, 2
+(1994), pp. 153–170.
+[15] Mumford D., Series C., Wright D., Indra’s pearls: The Vision of Felix
+Klein, Cambridge University Press, 2002 (reprinted in 2015).
+[16] Parker J.R., Kleinian circle packings, Topology, vol. 34, No. 3, 1995, pp.
+489–496.
+[17] Rosa A., The pearls of Heavens: A gallery of Kleinian Groups, 2023,
+https://www.academia.edu/95460195/
+https://doi.org/10.21638/11701/spbu35.2024.305 Electronic Journal: http://diffjournal.spbu.ru/ 89
