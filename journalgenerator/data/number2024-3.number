@@ -85,4 +85,57 @@
     </article>
 
 
+    <article>
+        <articleInfo lang="EN" FirstPage="28" LastPage="46">
+            <pdf>24303-jdecp-kudryavtseva.pdf</pdf>
+            <abstract>The paper addresses the filtering a continuous-time Markov chain states that can be observed through linear measurements perturbed by a Wiener process.
+                There is supposed the presence of uncertainty in the intensity of measurements noises. The problem is worked out under the assumption of unknown intensity
+                but subject to its known upper bound. If there is no uncertainty in measurements the optimal solution is provided by the Wonham filter that doesn't ensure
+                stable numerical implementations. The paper exposes that the Wonham filter shows robustness in the presence of uncertainty if model's parameters don't imply
+                its divergent. It is detected that to cope with divergence tracking and handling trajectories aren't sufficient in the case of uncertainty.
+                The more efficient way is to consider discretized approximations of the Wonham filter implemented for a discrete model that approximates the initial
+                continuous-time measurements system. Such an approach perceptibly advantages if numerical implementations contain divergent trajectories.
+                If there are no divergent trajectories, then the discretized filters give a slightly worse result but acceptable.</abstract>
+            <title>Analysis of Algorithms of Numerical Implementations for the Wonham Filter Under Uncertainty in Measurements Noise Covariance</title>
+            <keywords>
+                <word>filtering problem</word>
+                <word>Markov chain</word>
+                <word>minimax estimation</word>
+                <word>nonlinear filtering</word>
+                <word>Wonham Filter</word>
+            </keywords>
+            <references>
+                <reference>Kalman R. E.; Bucy R. S. New results in linear filtering and prediction theory&lt;em&gt;. Trans. ASME J. Basic Eng. &lt;/em&gt;, &lt;b&gt;83&lt;/b&gt;(1), 95-108 (1961)</reference>
+                <reference>Anderson B. D. O., Moore J. B. &lt;em&gt;Optimal filtering&lt;/em&gt;. Prentice Hall (1989)</reference>
+                <reference>Davis M. H. A., Marcus S. I. An Introduction to Nonlinear Filtering. &lt;em&gt;Stochastic Systems: The Mathematics of Filtering and Identification and Applications. NATO Advanced Study Institutes Series&lt;/em&gt;, &lt;b&gt;78&lt;/b&gt;, 53-75 (1980)</reference>
+                <reference>Bene&amp;#353; V. E. Exact finite-dimensional filters for certain diffusions with nonlinear drift. &lt;em&gt;Stochastics&lt;/em&gt;, &lt;b&gt;5&lt;/b&gt;, 65-92 (1981)</reference>
+                <reference>Daum F. E. Exact finite-dimensional nonlinear filters. &lt;em&gt;IEEE Trans. Autom. Contr. &lt;/em&gt;, &lt;b&gt;31&lt;/b&gt;, 616-622 (1986)</reference>
+                <reference>Yaz E. Linear state estimators for non-linear stochastic systems with noisy non-linear observations. &lt;em&gt;Int. J. Control&lt;/em&gt;, &lt;b&gt;48&lt;/b&gt;, 2465-2475 (1988)</reference>
+                <reference>Bernstein D. S., Haddad W. M. Steady-state Kalman filtering with an H&amp;#8734; error bounded. &lt;em&gt;Syst. Control. Lett. &lt;/em&gt;, &lt;b&gt;12&lt;/b&gt;, 9-16 (1989)</reference>
+                <reference>Li H., Shi Y. Robust H&amp;#8734; filtering for nonlinear stochastic systems with uncertainties and Markov delays. &lt;em&gt;Automatica&lt;/em&gt;, &lt;b&gt;48&lt;/b&gt;, 159-166 (2012)</reference>
+                <reference>Geromel J. C., Bernussou J., Garcia. G., Oliveira M. C. D. H2 and H&amp;#8734; robust filtering for discrete-time linear systems. &lt;em&gt;SIAM J. Control Optim. &lt;/em&gt;, &lt;b&gt;38&lt;/b&gt;, 1353-1368 (2000)</reference>
+                <reference>Rao C. V., Rawlings J. B., Mayne D. Q. Constrained state estimation for nonlinear discrete-time systems: stability and moving horizon approximations. &lt;em&gt;IEEE Trans. Autom. Control&lt;/em&gt;, &lt;b&gt;48&lt;/b&gt;, 246-258 (2003)</reference>
+                <reference>Alessandri A., Baglietto M., Battistelli G. A minimax receding-horizon estimator for uncertain discrete-time linear systems. In Proceedings of the 2004 American Control Conference, Boston, MA, USA, 30 June - 2 July 2004, 205-210</reference>
+                <reference>Geromel J. C. Optimal linear filtering under parameter uncertainty. &lt;em&gt;IEEE Trans. Signal Process, &lt;/em&gt; &lt;b&gt;47&lt;/b&gt;, 168-175 (1999)</reference>
+                <reference>Verdu S., Poor H. Minimax linear observers and regulators for stochastic systems with uncertain second-order statistics. &lt;em&gt;IEEE Trans. Autom. Contr. &lt;/em&gt;, &lt;b&gt;29&lt;/b&gt;, 499-511 (1984)</reference>
+                <reference>Verdu S., Poor H. On minimax robustness: a general approach and applications. &lt;em&gt;IEEE Trans. Inf. Theory&lt;/em&gt;, &lt;b&gt;30&lt;/b&gt;, 328-340 (1984)</reference>
+                <reference>Poor V., Looze D. Minimax state estimation for linear stochastic systems with noise uncertainty. &lt;em&gt;IEEE Trans. Autom. Contr. &lt;/em&gt;, &lt;b&gt;26&lt;/b&gt;, 902-906 (1981)</reference>
+                <reference>Miller G. B., Pankov A. R. Minimax filtering in linear stochastic uncertain discrete-continuous systems. &lt;em&gt;Autom. Remote Control&lt;/em&gt;, &lt;b&gt;67&lt;/b&gt;, 413-427 (2006)</reference>
+                <reference>Miller G. B., Pankov A. R. Minimax control of a process in a linear uncertain-stochastic system with incomplete data. &lt;em&gt;Autom. Remote Control&lt;/em&gt;, &lt;b&gt;68&lt;/b&gt;, 2042-2055 (2007)</reference>
+                <reference>Wonham W. M. Some applications of stochastic differential equations to optimal nonlinear filtering. &lt;em&gt;SIAM J. Control&lt;/em&gt;, &lt;b&gt;2&lt;/b&gt;, 347-369 (1965)</reference>
+                <reference>Elliott R. J., Aggoun L., Moore J. B. &lt;em&gt;Hidden Markov Models: Estimation and Control&lt;/em&gt;. Springer (1995)</reference>
+                <reference>Kloeden P. E., Platen E. &lt;em&gt;Numerical Solution of Stochastic Differential Equations&lt;/em&gt;. Springer (1992)</reference>
+                <reference>Yin G., Zhang Q., Liu, Y. Discrete-time approximation of Wonham filters. &lt;em&gt;J. Contr. Theory Appl. &lt;/em&gt;, &lt;b&gt;2&lt;/b&gt;, 1-10 (2004)</reference>
+                <reference>Borisov A. V. L1-optimal filtering of Markov jump processes. II. Numerical analysis of particular realizations schemes. &lt;em&gt;Autom. Remote Control&lt;/em&gt;, &lt;b&gt;81&lt;/b&gt;, 2160-2180 (2020)</reference>
+                <reference>Borisov A. V., Bosov A. V. Practical implementation of the solution of the stabilization problem for a linear system with discontinuous random drift by indirect observations. &lt;em&gt;Autom. Remote Control&lt;/em&gt;, &lt;b&gt;83&lt;/b&gt;, 1417-1432 (2022)</reference>
+                <reference>Vandelinde V. Robust properties of solutions to linear-quadratic estimation and control problems. &lt;em&gt;IEEE Trans. Autom. Contr. &lt;/em&gt;, &lt;b&gt;22&lt;/b&gt;, 138-139 (1977)</reference>
+                <reference>Morris, J. The Kalman filter: A robust estimator for some classes of linear quadratic problems. &lt;em&gt;IEEE Trans. Inf. Theory&lt;/em&gt;, &lt;b&gt;22&lt;/b&gt;, 526-534 (1976)</reference>
+            </references>
+        </articleInfo>
+        <authors>
+            <author ref="n_2024_10_bosov" sort-key="1" />
+            <author ref="n_2024_10_kudryavtseva" sort-key="2" />
+        </authors>
+    </article>
+
 </number>

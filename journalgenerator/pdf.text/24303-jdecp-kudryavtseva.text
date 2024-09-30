@@ -1,0 +1,1349 @@
+﻿DIFFERENTIAL EQUATIONS 
+AND 
+CONTROL PROCESSES 
+N. 3, 2024 
+Electronic Journal, 
+reg. № ФС77-39410 at 15.04.2010 
+3ISSN 1817-2172 
+ 
+http://diffjournal.spbu.ru/ 
+e-mail: jodiff@mail.ru 
+ 
+ 
+ 
+Differential equations with randomness; 
+filtration and identification; 
+numerical methods 
+ 
+Analysis of algorithms of numerical implementations  
+for the Wonham filter under uncertainty  
+in measurement noise covariance   
+ 
+Bosov A.V.
+1,*
+, Kudryavtseva I.A.
+2,**
+ 
+ 
+1
+Federal Research Center “Computer Science and Control” of the Russian Academy of Sciences; 
+ 
+2
+Moscow Aviation Institute (National Research University); 
+*
+abosov@ipiran.ru 
+**
+kudryavtseva.irina.a@gmail.com 
+ 
+ 
+Abstract. The paper addresses the filtering of a continuous-time Markov chain states that can be 
+observed through linear measurements perturbed by a Wiener process. There is supposed the presence 
+of uncertainty in the intensity of measurement noise. The problem is worked out under the assumption 
+of unknown intensity but subject to its known upper bound. If there is no uncertainty in measurements 
+the optimal solution is provided by the Wonham filter that doesn’t ensure stable numerical 
+implementations. The paper exposes that the Wonham filter shows robustness in the presence of 
+uncertainty if model’s parameters don’t imply its divergent. It is detected that to cope with divergence 
+tracking and handling trajectories aren’t sufficient in the case of uncertainty. The more efficient way 
+is to consider discretized approximations of the Wonham filter implemented for a discrete model that 
+approximates the initial continuous-time measurement system. Such an approach perceptibly 
+advantages if numerical implementations contain divergent trajectories. If there are no divergent 
+trajectories, then the discretized filters give a slightly worse result but acceptable. 
+ 
+Keywords: filtering problem, nonlinear filtering, Wonham filter, minimax estimation, Markov chain. 
+ 
+ 
+ 
+1. Introduction 
+ Differential equations and control processes, N. 3, 2024 
+ 
+https://doi.org/10.21638/11701/spbu35.2024.303        Electronic Journal: http://diffjournal.spbu.ru      29 
+Filtering is one of the crucial problems in studying dynamical systems. Estimating random hidden process’s 
+states from noise-contaminated measurements represents the matter of the stochastic filtering problem. As 
+is well known, in the case of linear models under assumption about Gaussian-distributed underlying 
+processes the optimal solution can be obtained by the Kalman-Bucy filter while the Kushner-Stratonovich 
+filter is employed for the exact same purpose when nonlinear models are considered [1-3].  
+In general, nonlinear filtering is challenging due to the lack of a finitely dimensional system of a 
+sufficient amount of statistics for a posterior distribution. That implies to utilizing various finitely 
+dimensional approximations [3-6]. 
+The other complexity lies in appearing uncertainty in a model. Optimal filtering algorithms are highly 
+sensitive to deviations from nominal settings and their efficient performance might degrade. By virtue of 
+this developing robust state estimation strategies are of notable importance. There can be given several 
+strategies as an illustration: the contemporary    ∞
+ filtering algorithm [7, 8], its combination with classical 
+least square techniques (the mixed    2
+/   ∞
+) [9], receding horizon estimation [10, 11], a robust filter based 
+on a convex quadratic problem expressed in terms of LMI [12], the minimax approaches [13-17]. 
+It is worth mentioning that there is a variety of interpretations for “robustness”. Herein the considered 
+robust algorithms can be treated in terms of stability of estimates with respect to existing uncertainty. 
+In the paper, the system uncertainty related to a lack of a prior information about measurement noise 
+intensities is devoted attention to. The minimax approach is taken for construction a robust filter. The idea 
+behind the minimax approach is that the filtering problem is being solved provided that the worst scenario 
+from some uncertainty set containing values and statistics of undefined parameters is implemented [16, 17]. 
+Nonlinear filtering for a continuous-time Markov chain with  finite state space is considered. In 
+other words, the Wonham filtering problem is being solved [18, 19]. It should be kept in mind that 
+the Wonham filter is essentially nonlinear and its straightforward solution doesn’t seem possible to 
+obtain. However, in practice it is more relevant to focus on robustness of numerical approximations 
+for the Wonham filter. This is the topic of further discussion in the current work. 
+The remainder of this paper is organized as follows. The filtering problem is formulated in  Sect. 1. The 
+optimal solution for the problem with no uncertainty and its robust approximation schemes are given 
+in  Sect. 2.  Sect. 3 reveals a huge amount of numerical experiments for a vast range of parameters values to 
+perform comparative analysis where the discretized filters are involved for the purpose. The paper is 
+summarized in  Sect. 4.  
+ 
+ 
+2. Problem Formulation 
+ 
+Let (    , ℱ,    , ℱ
+   ) ,     ∈ [0,    ], be a probability space equipped with a filtration. Suppose that the stochastic 
+system whose states evolution is described by means of the equation defining a Markov jump process, a 
+Markov chain with the state space produced by a set of unit coordinate vectors {    1
+, … ,       } ,  
+      ∈ ℝ
+      ,     = 1, . . . ,    : 
+ 
+         =       ′
+           +             ,      0
+=    , 
+(1) 
+ 
+is observed through linear measurements satisfying the equation: 
+ 
+         =                  +                  +                ,      0
+=    , (2) 
+ 
+where       ∈ ℝ
+      is the system state vector,       ∈ ℝ
+      is the measurement vector,       is the transition intensity 
+matrix of the Markov chain governed by equation (1),       ′
+ is the transpose of       ,          is the ℱ
+   -martingale, 
+the vector    ∈ ℝ
+      is the initial vector having the known probability distribution    0
+, the vector    ∈ ℝ
+      is 
+a Gaussian random vector with known characteristics ℰ{    } , ℰ{       ′
+} ,       ∈ ℝ
+      is the standard Wiener 
+process independent of          ,    ,    , ℱ
+      is the    -algebra generated by measurements presented by equation Differential equations and control processes, N. 3, 2024 
+ 
+https://doi.org/10.21638/11701/spbu35.2024.303        Electronic Journal: http://diffjournal.spbu.ru      30 
+(2), meanwhile ℱ
+      ⊆ ℱ
+   ⊆ ℱ, the matrix functions        ∈ ℝ
+      ×      ,       ∈ ℝ
+      ×      ,       ∈ ℝ
+      ×      are 
+presumed to be bounded:  
+ 
+|      | + |      | + |      | ≤       ∀   ∈ [0,    ],  
+ 
+that guaranties the existence of a solution of equation (2). Moreover, measurement errors are non-
+degenerative, namely             ′
+> 0. The notation |∙| stands for a matrix norm. The symbols ℰ{ ⋅ | ⋅} , ℰ{ ⋅} mean 
+a conditional and unconditional expectations respectively. 
+The presented problem is considered under assumption of the lack of information about exact values of 
+measurement errors intensity given by             ′
+≤       but under conditions of knowing the upper bound of the 
+noise covariance       > 0. The matrix inequality    ≤    ′ should be interpreted as    −    ′
+=    ′′ ≤ 0 where 
+   ′′  is a positive semidefinite matrix. The goal of the paper is to examine quality of the algorithms to estimate 
+the chain state       through measurements subject to the claimed above restriction.  
+The exact filtering problem solution expressed as 
+ 
+   ̂
+                = arg min
+   ̂
+   max
+      :            ′
+≤       ℰ {|   ̂
+   −       |
+2
+} 
+ 
+ 
+is tough to obtain, however, it can be done if supposing that 
+ 
+   ̂
+                ≈    ̂
+      ( Σ
+   ) ,    ̂
+      (             ′
+)= ℰ{       |ℱ
+      ,       } . 
+ 
+ 
+The latter should be treated as the optimal Wonham filter without uncertainty if the covariance             ′
+ 
+was given but in fact replaced with the upper bound       . In the problem without uncertainty the optimal 
+solution can be defined as [18, 19]: 
+ 
+      ̂
+      =       ′
+   ̂
+           + ( diag(    ̂
+      )−    ̂
+      (    ̂
+      )
+′
+)       ′
+      −1
+(          −          ̂
+           −                  ) . 
+(3) 
+ 
+Unfortunately, such an approach does not permit to obtain the desired estimate of the state       in practice 
+because when switching into numerical implementation of the optimal Wonham filter (3) by using the Euler-
+Maruyama scheme the stability of computational procedure fails (a sequence of approximations is 
+divergent) [20, 21]. Consequently, finding stable algorithms but actually not optimal is more worth.  
+The paper accentuates on the case when the measurement noise intensity is unknown. The Wonham 
+filter and the discretized filters described in detail in [22, 23] are considered as the baseline algorithms. In 
+the paper for each of the filters the unknown intensity is replaced with the upper bound       . It should be 
+underlined that analytical examination for the algorithms accuracy and the comparative study cannot be 
+done. Additionally, it is worth noting that evolution of the filters trajectories is affected by as far as robust 
+the algorithms are. That, in turn, depends on the parameters in the measurement equation.  
+Thus, the goal of the paper is to propose the computational model that has a value in practice and to 
+carry out a series of numerical experiments under various initial conditions varying the parameters of the 
+model, changing values of the upper bound       . A wide range of the model variations can be obtained in 
+such a way. That permits to carry out extensive modelling to identify specificities of behavior of the filters 
+and to assess the accuracy. 
+ 
+3. Discretized Representations of the Wonham Filter 
+ 
+Discretizing equations (1) and (2) over time interval [0,    ] with a given fixed time step    : 
+ Differential equations and control processes, N. 3, 2024 
+ 
+https://doi.org/10.21638/11701/spbu35.2024.303        Electronic Journal: http://diffjournal.spbu.ru      31 
+   0
+= 0,       =    0
++    ∙    ,    = 1, … , [
+      ], 
+ 
+ 
+([. ]  means the floor function) leads to stable approximations of the Wonham filter, that is shown in [22].  
+In addition to that the matrices       ,       ,       are assumed to be constant on subintervals [      −1
+,       ]. This can 
+be accomplished by swapping them for piecewise constant approximations.  
+For further explanation the process       0
+ being the anticipating transformation of       should be introduced 
+[22]: 
+ 
+      0
+= ∫ (          −             )         0
+= ∫ (                  +                ) .
+   0
+ 
+(4) 
+ 
+It holds due to the fact that 
+ 
+   ̂
+   = ℰ{       |ℱ
+      } = ℰ{      |ℱ
+      0
+} 
+ 
+ 
+is met. 
+Consider new measurements             0
+ discretized in time with step    : 
+ 
+            0
+= ∫ (                  +                ) .
+            −1
+ 
+ 
+ 
+The increments             0
+ generate the    -algebra ℱ
+         0
+=    {            0
+,    = 1, . . ,    }. Then, the estimate 
+   ̂
+   = ℰ{      |ℱ
+         0
+} can be defined via the following recurrent formula [23]: 
+ 
+   ̂
+             = (      ̂
+      ′
+   ̂
+      −1
+       )
+−1
+(    ̂
+      ′
+   ̂
+      −1
+       ) , 
+(5) 
+  ̂
+         ,   = ℰ{   (     
+      0
+;          ,         ′
+)             |         −1
+=       }, 
+   ̂
+             =    0
+, 
+ 
+where       = ∫                        −1
+= (       1
+, . . . ,             ) is taken for a random vector whose components are equal to time 
+the Markov chain stays in each possible state on the interval (       −1
+,       ], 
+ 
+   (    ;    ,       ′
+)=
+1
+√det (       ′
+) ( 2   )
+      exp {−
+1
+2
+(    −    ) ′ (       ′
+)
+−1
+(    −    ) } 
+ 
+ 
+is the multivariate Gaussian probability distribution with the mean    and covariance matrix       ′
+,    =
+( 1, . . . ,1)
+′
+∈ ℝ
+      is a vector of ones,       =    = const,       =    = const. The entries   ̂
+         ,   of the matrix 
+  ̂
+      = {  ̂
+         ,   }
+   ,   =1
+      can be calculated by applying numerical approximations in accordance with the different 
+schemes [23]: the left-point rule; the middle point rule; the Gauss quadrature schemes. Differential equations and control processes, N. 3, 2024 
+ 
+https://doi.org/10.21638/11701/spbu35.2024.303        Electronic Journal: http://diffjournal.spbu.ru      32 
+The left-point rule will hereinafter be used as a base formula in calculation since the estimates obtained 
+by the rest two mentioned rules have demonstrated absolutely identical properties that is shown in [23]. The 
+left-point rule provides the estimate    ̆
+         1
+2
+ with an error of order 1/2. 
+It should be additionally noticed that the essence of the transformation (4) lies in treating the matrix 
+coefficient       as 0 in (2). That incidentally holds true for both discretized filters and the Wonham filter. 
+However, this is the coefficient that tremendously affects the stability of numerical process for the Wonham 
+filter. 
+ 
+4. Numerical experiments 
+ 
+4.1. Model description 
+ 
+The claimed analysis has been carrying out by treating the model of a mechanic actuator as an element of 
+an overhead crane system [23]. Suppose, the actuator causes movement of a trolley along a rail. The trolley 
+should be positioned at several fixed locations on the rail (states). Let       and       be an actuator state and its 
+velocity respectively. The velocity is determined by a force linearly depending on the state       and the 
+velocity       and also a vector       serving to describe required positions of the trolley. From the physical point 
+of view the problem lies in stabilizing the actuator at states defined by       =       being states of the Markov 
+chain. The system can be represented in the form [23]: 
+ 
+         =            ,    ∈ ( 0,    ], 
+(6) 
+         =               +               +               + √            , 
+ 
+where the constants    ,    ,    and the vector    are known,       is the standard Wiener process,       is an 
+unobservable process subject to be estimated through (       ,       ) as measurements. The process       is supposed 
+to be a three- or four-state Markov jump process:       = 3 or       = 4. The transition intensity matrix       =
+ =    =            : 
+ 
+   = (
+−0.5 0.5 0
+0.5 −1 0.5
+0 0.5 −0.5
+) or    = (
+−5 5 0
+5 −1 5
+0 5 −5
+) 
+ 
+ 
+for       = 3 and 
+ 
+ 
+   = (
+−0.5
+0.5
+0
+0
+0.5
+  −1
+0.5
+0
+0
+0.5
+  −1
+0.5
+0
+0
+0.5
+  −0.5
+) or    = (
+−5
+5
+0
+0
+5
+  −10
+5
+0
+0
+5
+  −10
+5
+0
+0
+5
+  −5
+) 
+ 
+ 
+for       = 4. 
+The initial state    0
+=    =    1
+ is specified by the probability distribution    0
+= ( 1,0,0)
+′
+ or    0
+=
+( 1,0,0,0)
+′
+ depending on dimensionality.    0
+,    0
+  are supposed to be independent Gaussian variables with 
+the zero mean and the variances       = 1,       = 1.  Moreover, a note should be made regarding       is that       
+is a homogeneous Markov process with the limiting distribution 
+ 
+   ∞
+= (
+1
+3
+,
+1
+3
+,
+1
+3
+)
+′
+ 
+ Differential equations and control processes, N. 3, 2024 
+ 
+https://doi.org/10.21638/11701/spbu35.2024.303        Electronic Journal: http://diffjournal.spbu.ru      33 
+ 
+for       = 3 and 
+ 
+   ∞
+= (
+1
+4
+,
+1
+4
+,
+1
+4
+,
+1
+4
+)
+′
+ 
+ 
+ 
+for       = 4. 
+The coefficients    ,    are varied in calculation while the vector    is set to be 
+ 
+   = (    1
+,    2
+,    3
+)= ( −1, 0, 1) or    = (    1
+,    2
+,    3
+)= ( 1, 2, 4)  
+ 
+if       = 3 and 
+ 
+   = (    1
+,    2
+,    3
+,    4
+)= ( −1.5, −0.5, 0.5, 1.5)  
+ 
+if       = 4.  
+Varying the parameters listed above one can change such qualitative characteristics of system (6) as 
+transition intensities (low/high), state space dimension (lower-dimensional state space / higher-dimensional 
+state space), states of the Markov chain (symmetric with respect to the origin / biased with respect to the 
+origin). Besides that, different values of the coefficients    ,    in (6) are considered to produce stable and 
+unstable systems. 
+It is worth mentioning that system (6) is stable if    < 0 and    2
++ 4   < 0 as 
+   ±√   2
++4   2
+ are eigenvalues 
+of the system matrix 
+ 
+      = (
+0 1
+      ) 
+ 
+ 
+and unstable otherwise. Therefore, the coefficients    ,    are assigned to both negative and positive values in 
+numerical experiments (see Section 4.2). 
+The Euler-Maruyama method is applied to perform integration in all cases for both system (6) and filter 
+models (3) and (5) with step    = 10
+−3
+. A discrete time Markov chain approximating       is being simulated 
+by independent exponentially distributed random variables if taking 100 intervals for each integration 
+interval of length    , namely sampling is produced from    ( 0.00001 )  distribution. The integration step for 
+observation system (6) is similarly divided into 100 intervals of length 
+   100
+. 
+As it is mentioned and perfectly illustrated in [23] the Euler-Maruyama scheme leads to divergence of 
+some trajectories’ estimates because of its instability. According to the presented results in [23] mostly for 
+every trajectory there are points where the nonnegativity property or normalization or even both are not met. 
+To diminish the impact caused by failure of the aforementioned conditions simple adjustments have been 
+done. 
+If the condition |(    ̂
+      )
+   | > 1 is hold for at least one    then there presents the divergence. Two 
+techniques can be offered to avert divergence. According to the first one, in the case of satisfaction of 
+|(    ̂
+      )
+   | > 1 the estimate turns back to the limit state    ̂
+      =    ∞
+ at the moment    when the divergence test 
+gets gratified. The estimate modified in such a way is denoted as    ̂
+          where the superscript indicates the 
+involvement of the limit state    ∞
+. Following the second one, the estimate    ̂
+      at the considered moment 
+gets replaced with the estimate    ̂
+   −      received at the previous step. That gives the estimate    ̂
+          where the 
+superscript underlines its “delay” nature. These are two sorts of estimates that will be examined for 
+robustness later and these are the estimates which attention is paid to as a goal of the paper.  Differential equations and control processes, N. 3, 2024 
+ 
+https://doi.org/10.21638/11701/spbu35.2024.303        Electronic Journal: http://diffjournal.spbu.ru      34 
+To assess the quality of estimation of the aforementioned    ̂
+          ,    ̂
+          ,    ̆
+         1
+2
+the mean square error are 
+calculated from obtained 1000 trajectories and filter estimates: 
+ 
+   ̂
+(    ̂
+          ) ,    ̂
+(    ̂
+          ) ,    ̂
+(    ̆
+         1
+2
+) calculated as    ̂
+(    ̃
+      )= ℰ
+̂
+{
+      ∑ (             −       ̃
+      )
+2
+         =1
+}, 
+ 
+ 
+where ℰ
+̂
+ means averaging over 1000 trajectories. 
+To investigate for robustness with respect to the unknown measurement errors intensity numerical 
+computations are performed for the chosen noise intensity √   = 0.1 but under the assumption of solely 
+known       . Three options for       are considered: 
+       =    (the problem with complete information about parameters of the noise); 
+       = 3   (the upper bound of the intensity is “close” to its true value); 
+       = 10   (the upper bound of the intensity is “far” from its true value). 
+In addition to that calculations are supplemented by considering two more cases when    is known and 
+it is three and ten times the initially chosen value. 
+ 
+4.2. Stable system 
+ 
+In the paper, two scenarios regarding principally distinct behavior of the system (with stable and unstable 
+measurements) are analyzed. The situation when the parameters    = −1,    = −0.5 comes within the 
+stable measurements case and is treated as an illustrative example of that scenario. For the unstable 
+measurements it is supposed that    = 1,    = 0.5. Moreover, as claimed earlier the parameter    can be 
+formally nullified, however, it turns out that the case when    = 0,    = 0 can play a significant role for 
+numerical filter’s implementations. That is the reason to single that case out in particular.  
+Computations are organized as follows. At first the stable measurements are focused on. In Section 4.3 
+the unstable measurements will be paid attention to. Series of computational experiments are separately 
+conducted for each of the cases with different given values of the parameters       ,    ,    . Along with 
+computations executed for    = 0.01 and       =    , 3   , 10    each series of experiments are complemented 
+by the situations for    = 0.01 × 3 = 0.03,    = 0.01 × 10 = 0.1 to compare. The tables below present 
+the results for each considered series of the experiments. The tables are preceded by a list of the 
+corresponding parameters.  
+The first series of computations replicates the scenario in [23] and is given in Tab. 1. 
+ 
+Tab. 1. Experiment results. Stable system 
+   = −1,    = −0.5,       = 3, (    1
+,    2
+,    3
+)= ( −1, 0, 1) , Λ = (
+−0.5 0.5 0
+0.5 −1 0.5
+0 0.5 −0.5
+),  
+   = 0,    = 0 (for elaborate explanation see section 4.3) 
+   ,          ̂
+(    ̂
+          )    ̂
+(    ̂
+          )    ̂
+(    ̆
+      1
+2
+) 
+   = 0.01,       = 0.01 0.0540 0.0495 0.0486 
+   =    .      ,       =    .      0.0612 0.0612 0.0729 
+   =    .      ,       =    .    0.0911 0.0911 0.1225 
+   = 0.03,       = 0.03 0.0987 0.0987 0.0986 
+   = 0.1,       = 0.1 0.1837 0.1837 0.1837 
+ 
+Hereinafter the rows corresponding to computations with uncertainty (for       = 3   ,       = 10   ) are 
+highlighted in bold, the accuracy of the estimates of the discretized filters for the model with uncertainty and 
+for the corresponding model with the intensity 3   are placed in light-grey cells and the accuracy of the Differential equations and control processes, N. 3, 2024 
+ 
+https://doi.org/10.21638/11701/spbu35.2024.303        Electronic Journal: http://diffjournal.spbu.ru      35 
+discretized filters for the model with uncertainty       = 10   and for the corresponding model with the 
+intensity 10   are situated in dark-grey cells. Highlighting cells in the tables makes the comparison of the 
+accuracy for the model with uncertainty and for the worst case easier. The bold values correspond to the 
+results for the models with uncertainty and they are the ones that are used to analyze the robustness. 
+According to Tab. 1, the results agree with earlier ones obtained in [23]. It must be pointed out that when 
+trajectories contain points with violation of the condition (it corresponds to the first row) the discretized 
+filters demonstrate better quality than the heuristic estimates. However, this property breaks for further cases 
+when the filter approximations    ̂
+          ,    ̂
+          get preferable. In two last experiments there are not trajectories 
+with divergence and all the filters show up approximately close results. The discretized filters can be still 
+claimed to provide robustness nevertheless.  
+The tables are accompanied by graphical illustrations. The graphs demonstrate results obtained in one 
+chosen experiment for each model. The figures present distinctive state trajectories, trajectories of the filters 
+estimates and dynamics of    ̂
+      (    ̃
+      )= ℰ
+̂
+{(             −       ̃
+      )
+2
+} involved in obtaining the integral square 
+estimates of the filters’ accuracy    ̂
+(    ̂
+          ) ,    ̂
+(    ̂
+          ) ,    ̂
+(    ̆
+         1
+2
+) . The listed above results for the first case are 
+given in Fig. 1.  
+ 
+ 
+a)           b) 
+Fig. 1. Model 1, scenario 3:    = 0.01,       = 0.1 
+a) 1 –          , 2 –       ̂
+          (       ̂
+          is identical ), 3 –    ̆
+         1
+2
+ 
+b) 4 –    ̂
+   (    ̂
+          ) , 5 –    ̂
+   (    ̂
+          ) , 6 –    ̂
+   (    ̆
+         1
+2
+) 
+ 
+For further analysis let’s make the actuator’s running more complicated by significantly increasing 
+intensities. It can be done by getting entries of the transition intensity matrix       larger. Tab. 2 exposes 
+experiment results. Fig. 2 supplies the case with corresponding graphs. 
+ 
+Tab. 2. Experiment results. Stable system.  
+The case of lager intensities 
+   = −1,    = −0.5,       = 3, (    1
+,    2
+,    3
+)= ( −1, 0, 1) , Λ = (
+−5 5 0
+5 −1 5
+0 5 −5
+),  
+   = 0,    = 0 (for elaborate explanation see section 4.3) 
+   ,          ̂
+(    ̂
+          )    ̂
+(    ̂
+          )    ̂
+(    ̆
+      1
+2
+) 
+   = 0.01,       = 0.01 0.1959 0.1956 0.1948 
+   =    .      ,       =    .      0.2164 0.2164 0.2286 
+   =    .      ,       =    .    0.3247 0.3247 0.3250 
+   = 0.03,       = 0.03 0.3055 0.3055 0.3064 
+   = 0.1,       = 0.1 0.4477 0.4477 0.4485 
+ Differential equations and control processes, N. 3, 2024 
+ 
+https://doi.org/10.21638/11701/spbu35.2024.303        Electronic Journal: http://diffjournal.spbu.ru      36 
+ 
+Fig. 2. Model 2, scenario 3:    = 0.01,       = 0.1 
+a) 1 –          , 2 –       ̂
+          (       ̂
+          is identical ), 3 –    ̆
+         1
+2
+ 
+b) 4 –    ̂
+   (    ̂
+          ) , 5 –    ̂
+   (    ̂
+          ) , 6 –    ̂
+   (    ̆
+         1
+2
+) 
+ 
+The results reveal the same particularity of numerical implementation of the discretized filters. Although 
+more closeness is traced in results. The filter’s approximations faintly leave behind the discretized filters in 
+quality of estimates. Moreover, in spite of increasing transition intensity a number of cases when the 
+divergence test has been satisfied hasn’t grown in comparison with the previous series of experiments. Both 
+the discretized filters and the filter’s approximations showcase robustness with respect to uncertainty. 
+In the next series of experiments higher-dimensional state space is considered that implies the increase 
+in the complexity of the Wonham filter implementations. 
+The results presented in Tab. 3 really exemplify the scenario when the discretized filters have the edge 
+over the Wonham filter approximations. That is clearly seen if focusing on the middle values of the last 
+column in Tab. 3. The results in Tab. 3 are also supplemented with the graphs in Fig. 3. 
+ 
+Tab. 3. Experiment results. Stable system.  
+The higher-dimensional state space case 
+   = −1,    = −0.5,       = 4, = ( −1.5, −0.5,0.5,1.5) , Λ = (
+−0.5 0.5 0 0
+0.5 −1 0.5 0
+0 0.5 −1 0.5
+0 0 0.5 −0.5
+),  
+   = 0,    = 0 (for elaborate explanation see section 4.3) 
+   ,          ̂
+(    ̂
+          )    ̂
+(    ̂
+          )    ̂
+(    ̆
+      1
+2
+) 
+   = 0.01,       = 0.01 0.3615 0.3562 0.0534 
+   =    .      ,       =    .      0.3583 0.3583 0.0811 
+   =    .      ,       =    .    0.3751 0.3751 0.1384 
+   = 0.03,       = 0.03 0.3957 0.3957 0.1086 
+   = 0.1,       = 0.1 0.4767 0.4767 0.2058 
+ 
+ 
+a)                                                             b) Differential equations and control processes, N. 3, 2024 
+ 
+https://doi.org/10.21638/11701/spbu35.2024.303        Electronic Journal: http://diffjournal.spbu.ru      37 
+ 
+c) 
+Fig. 3. Model 3, scenario 1:    = 0.01,       = 0.01 
+a,b) 1 –          , 2 –       ̂
+          (       ̂
+          is identical ), 3 –    ̆
+         1
+2
+ 
+c) 4 –    ̂
+   (    ̂
+          ) , 5 –    ̂
+   (    ̂
+          ) , 6 –    ̂
+   (    ̆
+         1
+2
+) 
+ 
+This is the main difference of the current scenario from the others, the fulfilment of the condition is not 
+one-off and becomes regular that leads to dynamics shown in Fig. 3.  
+The filters approximations show up quit similar behavior that proves the same values of the accuracy. 
+However, it is not an regularity establishing in time that will be seen later. What is more, the uncertainty in 
+the model refines estimation quality in the sense of robustness.  
+All the filters showcase the robustness but advantages of the discretized filters are undoubted. It should 
+be also added that the estimate of the accuracy given in Tab. 3 is increasing over time as the variances 
+   ̂
+   (    ̂
+          ) and    ̂
+   (    ̂
+          ) get larger. Unlike the listed variances the variance    ̂
+   (    ̆
+         1
+2
+) remains constant. For 
+the considered model the accuracy of the trivial estimate ℰ{       }  defined by its second moment in the steady 
+state mode ℰ{|   ∞
+|
+2
+} =
+2
+3
+. So, the estimates of the approximations are still informative. 
+ Keeping values of the parameters unchanged except the intensity that is now 10 times the previous 
+one a new series of experiments is launched. Tab. 4 displays the result while Fig. 4 demonstrates specific 
+behavior. The accuracy of the trivial estimate ℰ{|   ∞
+|
+2
+} = 1.25 that points out informativity of the 
+approximations. 
+ 
+Tab. 4. Experiment results. Stable system.  
+The higher-dimensional state space case with larger intensities 
+   = −1,    = −0.5,       = 4, = ( −1.5, −0.5,0.5,1.5) , Λ = (
+−5 5 0 0
+5 −1 5 0
+0 5 −1 5
+0 0 5 5
+),  
+   = 0,    = 0 (for elaborate explanation see section 4.3) 
+   ,          ̂
+(    ̂
+          )    ̂
+(    ̂
+          )    ̂
+(    ̆
+      1
+2
+) 
+   = 0.01,       = 0.01 0.7073 0.7092 0.2247 
+   =    .      ,       =    .      0.7030 0.7030 0.2665 
+   =    .      ,       =    .    0.7317 0.7317 0.3869 
+   = 0.03,       = 0.03 0.8215 0.8216 0.3668 
+   = 0.1,       = 0.1 0.9820 0.9820 0.5852 
+ Differential equations and control processes, N. 3, 2024 
+ 
+https://doi.org/10.21638/11701/spbu35.2024.303        Electronic Journal: http://diffjournal.spbu.ru      38 
+ 
+a) b) 
+Fig. 4. Model 4, scenario 2:    = 0.01,       = 0.03 
+a) 1 –          , 2 –       ̂
+          (       ̂
+          is identical ), 3 –    ̆
+         1
+2
+ 
+b) 4 –    ̂
+   (    ̂
+          ) , 5 –    ̂
+   (    ̂
+          ) , 6 –    ̂
+   (    ̆
+         1
+2
+) 
+ 
+Increasing the intensity does not contribute to qualitative conclusions made for the previous model. 
+Though the accuracy of all the filters equally reduces the filters are still robust. The discretized filters gain 
+remarkably. The Wonham filter approximations are acceptable. 
+The last left out examination that is required to discuss is to violate symmetry of the chain. The obtained 
+results are given in Tab. 5. Fig. 5 assists the results graphically. This series of experiments is supposed to be 
+carried out under the same conditions as the first one (see Tab. 1) 
+ 
+Tab. 5. Experiment results. Stable system.  
+The asymmetric case 
+   = −1,    = −0.5,       = 3,    = ( 1,2,4) , Λ = (
+−0.5 0.5 0
+0.5 −1 0.5
+0 0.5 −0.5
+),  
+   = 0,    = 0 (for elaborate explanation see section 4.3) 
+   ,          ̂
+(    ̂
+          )    ̂
+(    ̂
+          )    ̂
+(    ̆
+      1
+2
+) 
+   = 0.01,       = 0.01 0.2464 0.1255 0.0574 
+   =    .      ,       =    .      0.0752 0.0753 0.0945 
+   =    .      ,       =    .    0.1153 0.1153 0.1799 
+   = 0.03,       = 0.03 0.1448 0.1262 0.1236 
+   = 0.1,       = 0.1 0.2554 0.2554 0.2548 
+ 
+ 
+a)                                        b) Differential equations and control processes, N. 3, 2024 
+ 
+https://doi.org/10.21638/11701/spbu35.2024.303        Electronic Journal: http://diffjournal.spbu.ru      39 
+ 
+c) 
+Fig. 5. Model 5, scenario 1:    = 0.01,       = 0.01 
+a,b) 1 –          , 2 –       ̂
+          (       ̂
+          ), 3 –    ̆
+         1
+2
+ 
+c) 4 –    ̂
+   (    ̂
+          ) , 5 –    ̂
+   (    ̂
+          ) , 6 –    ̂
+   (    ̆
+         1
+2
+) 
+ 
+The findings seemed absolutely unexpected. First of all, the approximations    ̂
+          and    ̂
+          concede the 
+estimate    ̆
+      1
+2
+. A little benefit from this poor appearance of the approximations is that the utility of the 
+estimates of the approximations is interpreted in such a sense that their accuracy is much better than the 
+trivial estimate because ℰ{|   ∞
+− ℰ{    ∞
+} |
+2
+} =
+14
+9
+. However, the situation changes for the models with 
+uncertainty and higher intensity. Moreover, the robustness of the approximations are more notable if 
+comparing with the discretized filters. The filters get alike in behavior as the noise intensity is increasing. 
+This example reveal that an numerical scheme of the Wonham filter that is initially unstable might be stable 
+in the problem with uncertainty and exceed the discretized filters as a robust algorithm. 
+In summary, it can be stated that to predict behavior of the Wonham filter approximations cannot be 
+done. Losses caused by instability of numerical computations can unexpectedly appear and influence the 
+filtering quality. If parameters of a model are successfully chosen the approximations can take advantages 
+and be more robust in behavior. The discretized filters always perform even under uncertainty as well but 
+do not provide the desired reference solution when it becomes optimal. 
+ 
+4.2. Unstable system 
+ 
+It should be noted that system (6) gets actually unstable even if    = 0,    = 0. The system with values 
+of the parameters leading to such a result can be called the system on the stability boundary. In fact, behavior 
+of such a system turned out quite inert and there cannot be detected trajectories that diverge over    = 10. 
+Repeated runs of the series of experiments given in Tab. 1-5 prove the statement above. In other words, the 
+values    = −1,    = −0.5 can be replaced with    = 0,    = 0 leaving all other parameters unchanged. This 
+gives the same results and permits not to change the content of the tables and the conclusions as 
+consequence. This is the remark that is added in the headings of Tab. 1-5. 
+Switching to the unstable measurements case, suppose that    = 1,    = 0.5. One might assume that the 
+situation will replicate the stability boundary case when    = 0,    = 0. But this is not the case. It is the 
+instability of the measurements system itself that sufficiently influence numerical implementations. This 
+fact is confirmed by the further set of experimental series. The first scenario is the model whose parameters 
+coincide with the parameters from the first model except    ,    (   = 1,    = 0.5). 
+The results are displayed in Tab. 6. The things that deserve special attention are the following. The 
+discretized filters keep demonstrating the same advantage in estimation while the approximations are out of 
+sense. Indeed, in the considered case the steady-state value ℰ{|   ∞
+|
+2
+} =
+2
+3
+. It signifies that the trivial estimate 
+ℰ{       } = 0 gets better in comparison with the approximations. Below Fig. 6 demonstrates specific behavior 
+of the filters. 
+ Differential equations and control processes, N. 3, 2024 
+ 
+https://doi.org/10.21638/11701/spbu35.2024.303        Electronic Journal: http://diffjournal.spbu.ru      40 
+Tab. 6. Experiment results. Unstable system 
+   = 1,    = 0.5,       = 3, (    1
+,    2
+,    3
+)= ( −1, 0, 1) , Λ = (
+−0.5 0.5 0
+0.5 −1 0.5
+0 0.5 −0.5
+)  
+   ,          ̂
+(    ̂
+          )    ̂
+(    ̂
+          )    ̂
+(    ̆
+      1
+2
+) (note *) 
+   = 0.01,       = 0.01 0.4860 0.6432 0.0486 
+   =    .      ,       =    .      0.5491 0.6407 0.0729 
+   =    .      ,       =    .    0.6107 0.6398 0.1225 
+   = 0.03,       = 0.03 0.5660 0.6569 0.0986 
+   = 0.1,       = 0.1 0.6496 0.6796 0.1837 
+*Values coincide with Tab. 1 
+ℰ{|   ∞
+|
+2
+} =
+2
+3
+≈ 0.6667 
+ 
+ 
+a)                                                                      b) 
+ 
+ 
+c) 
+Fig. 6. Model 6, scenario 2:    = 0.01,       = 0.03 
+a,b) 1 –          , 2 –       ̂
+          (       ̂
+          ), 3 –    ̆
+         1
+2
+ 
+c) 4 –    ̂
+   (    ̂
+          ) , 5 –    ̂
+   (    ̂
+          ) , 6 –    ̂
+   (    ̆
+         1
+2
+) 
+ 
+According to Tab. 6 the quality of the approximations    ̂
+          and    ̂
+          should be claimed as inadmissible. 
+It means that there is no robustness in the filters behavior. It can be stated as the main contribution of this 
+series of experiments. In contrast to this the discretized filters preserve the robust properties. The evolution 
+of the graph    ̂
+   (    ̂
+          ) deserves attention because its growth finalizes at some time moment and the accuracy 
+of    ̂
+          slightly improves. In fact, both algorithms stop estimating at some moment. It is visualized as 
+sticking the green trajectory to line 1. It is also seen that the estimate    ̂
+           begins to change while    ̂
+          
+does not. Differential equations and control processes, N. 3, 2024 
+ 
+https://doi.org/10.21638/11701/spbu35.2024.303        Electronic Journal: http://diffjournal.spbu.ru      41 
+By analogy with the stable case, current series of experiments are conducted for the models whose 
+parameters coincide with the claimed ones in Tab. 1-5 except    ,    . The results are given in Tab. 7-10 and 
+complemented by graphs in Fig. 7-10. 
+ 
+Tab. 7. Experiment results. Unstable system.  
+The case of lager intensities 
+   = 1,    = 0.5,       = 3, (    1
+,    2
+,    3
+)= ( −1, 0, 1) , Λ = (
+−5 5 0
+5 −1 5
+0 5 −5
+)  
+   ,          ̂
+(    ̂
+          )    ̂
+(    ̂
+          )    ̂
+(    ̆
+      1
+2
+) (note *) 
+   = 0.01,       = 0.01 0.5674 0.7157 0.1948 
+   =    .      ,       =    .      0.6252 0.7097 0.2286 
+   =    .      ,       =    .    0.7103 0.7348 0.3250 
+   = 0.03,       = 0.03 0.6809 0.7643 0.3064 
+   = 0.1,       = 0.1 0.7880 0.8126 0.4485 
+*Values coincide with Tab. 2 
+ℰ{|   ∞
+|
+2
+} =
+2
+3
+≈ 0.6667 
+ 
+ 
+a)                                         b) 
+ 
+ 
+с) 
+Fig. 7. Model 7, scenario 3:    = 0.01,       = 0.1 
+a,b) 1 –          , 2 –       ̂
+          (       ̂
+          ), 3 –    ̆
+         1
+2
+ 
+c) 4 –    ̂
+   (    ̂
+          ) , 5 –    ̂
+   (    ̂
+          ) , 6 –    ̂
+   (    ̆
+         1
+2
+) 
+ 
+In the higher-dimensional state space the results reinforce conclusions made in the previous example. 
+As it is clearly seen there is no robustness in the approximations evolutions. 
+ 
+ Differential equations and control processes, N. 3, 2024 
+ 
+https://doi.org/10.21638/11701/spbu35.2024.303        Electronic Journal: http://diffjournal.spbu.ru      42 
+Tab. 8. Experiment results. Unstable system.  
+The higher-dimensional state space case 
+   = 1,    = 0.5,       = 4,    = ( −1.5, −0.5,0.5,1.5) , Λ = (
+−0.5 0.5 0 0
+0.5 −1 0.5 0
+0 0.5 −1 0.5
+0 0 0.5 −0.5
+)  
+   ,          ̂
+(    ̂
+          )    ̂
+(    ̂
+          )    ̂
+(    ̆
+      1
+2
+) (note *) 
+   = 0.01,       = 0.01 1.0222 1.3663 0.0534 
+   =    .      ,       =    .      1.1485 1.3604 0.0811 
+   =    .      ,       =    .    1.2706 1.3450 0.1384 
+   = 0.03,       = 0.03 1.1647 1.3711 0.1086 
+   = 0.1,       = 0.1 1.3076 1.3841 0.2058 
+*Values coincide with Tab. 3 
+ℰ{|   ∞
+|
+2
+} = 1.25 
+ 
+ 
+a)                                         b) 
+ 
+ 
+с) 
+Fig. 8. Model 8, scenario 2:    = 0.01,       = 0.03 
+a,b) 1 –          , 2 –       ̂
+          (       ̂
+          ), 3 –    ̆
+         1
+2
+ 
+c) 4 –    ̂
+   (    ̂
+          ) , 5 –    ̂
+   (    ̂
+          ) , 6 –    ̂
+   (    ̆
+         1
+2
+) 
+ 
+Increasing intensity supports the inference made above. 
+ 
+Tab. 9. Experiment results. Unstable system.  
+The higher-dimensional state space case with larger intensities 
+   = 1,    = 0.5,       = 4,    = ( −1.5, −0.5,0.5,1.5) , Λ = (
+5 5 0 0
+5 −1 5 0
+0 5 −1 5
+0 0 5 5
+)  Differential equations and control processes, N. 3, 2024 
+ 
+https://doi.org/10.21638/11701/spbu35.2024.303        Electronic Journal: http://diffjournal.spbu.ru      43 
+   ,          ̂
+(    ̂
+          )    ̂
+(    ̂
+          )    ̂
+(    ̆
+      1
+2
+) (note *) 
+   = 0.01,       = 0.01 1.3522 1.1722 0.2247 
+   =    .      ,       =    .      1.4753 1.6902 0.2665 
+   =    .      ,       =    .    1.5672 1.6442 0.3869 
+   = 0.03,       = 0.03 1.5516 1.76146 0.3668 
+   = 0.1,       = 0.1 1.7296 1.8053 0.5852 
+*Values coincide with Tab. 4 
+ℰ{|   ∞
+|
+2
+} = 1.25 
+ 
+ 
+a)                                        b) 
+ 
+ 
+с) 
+Fig. 9. Model 9, scenario 3:    = 0.01,       = 0.1 
+a,b) 1 –          , 2 –       ̂
+          (       ̂
+          ), 3 –    ̆
+         1
+2
+ 
+c) 4 –    ̂
+   (    ̂
+          ) , 5 –    ̂
+   (    ̂
+          ) , 6 –    ̂
+   (    ̆
+         1
+2
+) 
+ 
+Besides the conclusions discussed above this experimental series brings out the fact that the estimates 
+   ̂
+          ,    ̂
+          lost their informativity conceding to the trivial estimate ℰ{       } in accuracy. 
+ 
+Tab. 10. Experiment results. Unstable system.  
+The asymmetric case 
+   = 1,    = 0.5,       = 3,    = ( 1,2,4) , Λ = (
+−0.5 0.5 0
+0.5 −1 0.5
+0 0.5 −0.5
+)  
+   ,          ̂
+(    ̂
+          )    ̂
+(    ̂
+          )    ̂
+(    ̆
+      1
+2
+) (note *) 
+   = 0.01,       = 0.01 1.3522 1.1722 0.2247 
+   =    .      ,       =    .      1.4753 1.6902 0.2665 
+   =    .      ,       =    .    1.5672 1.6442 0.3869 
+   = 0.03,       = 0.03 1.5516 1.76146 0.3668 Differential equations and control processes, N. 3, 2024 
+ 
+https://doi.org/10.21638/11701/spbu35.2024.303        Electronic Journal: http://diffjournal.spbu.ru      44 
+   = 0.1,       = 0.1 1.7296 1.8053 0.5852 
+*Values coincide with Tab. 5 
+ℰ{|   ∞
+− ℰ{    ∞
+} |
+2
+} =
+14
+9
+≈ 1,5556 
+ 
+ 
+a)                                        b) 
+ 
+c) 
+Fig. 10. Model 10, scenario 2:    = 0.01,       = 0.03 
+a,b) 1 –          , 2 –       ̂
+          (       ̂
+          ), 3 –    ̆
+         1
+2
+ 
+c) 4 –    ̂
+   (    ̂
+          ) , 5 –    ̂
+   (    ̂
+          ) , 6 –    ̂
+   (    ̆
+         1
+2
+) 
+ 
+Thus, the last results demonstrate identical behavior of the approximations    ̂
+          ,    ̂
+          with poor 
+accuracy of the estimates close to or even worse than the trivial estimate ℰ{       } . In contrast, estimates based 
+on the discretized filters don’t depend on whether the measurement system is stable or not. That agrees with 
+theory. In all the cases the discretized filters preserve the robust properties with respect to uncertainty 
+whereas the approximations of the Wonham filter cannot demonstrate these properties. 
+ 
+5. Conclusion 
+ 
+The paper discusses and proposes approaches to forming stable numerical implementations of the Wonham 
+filter with uncertainty in measurement noise covariance. The exact filtering problem is tough to obtain. 
+However, if supposing that there is no uncertainty in the model the optimal solution is provided by the 
+Wonham filter. Unfortunately, such an approach cannot be considered as the way out because the numerical 
+implementations of the Wonham filter suffer from divergence. Consequently, effective numerical 
+implementations that additionally show robustness are of interest. Because of lack of analytical solutions 
+the examination of the filters behavior are conducted with a wide range of series of numerical experiments. 
+The obtained results showcase that all the filters (the discretized filters, the Wonham filter approximations) 
+preserve the robust properties with respect to uncertainty in the stable measurements case. Absolutely 
+opposite behavior can be observed when switching to unstable measurements. The discretized filters take 
+advantages in estimation in comparison with the approximations. With a certain set of the parameters of the 
+model, it is found that approximations even becomes out of sense, and do not preserve the robust property Differential equations and control processes, N. 3, 2024 
+ 
+https://doi.org/10.21638/11701/spbu35.2024.303        Electronic Journal: http://diffjournal.spbu.ru      45 
+at all as a result. Thus, benefits of the discretized filters are absolutely undoubtedly in the problem under 
+uncertainty in the unstable measurements case. 
+ 
+References 
+ 
+[1] Kalman R.E., Bucy R.S. New results in linear filtering and prediction theory. Trans. ASME J. 
+Basic Eng., 83(1), 95–108 (1961) 
+[2] Anderson B.D.O., Moore J.B. Optimal filtering. Prentice Hall (1989) 
+[3] Davis M.H.A., Marcus S.I. An Introduction to Nonlinear Filtering. Stochastic Systems: The 
+Mathematics of Filtering and Identification and Applications. NATO Advanced Study Institutes 
+Series, 78, 53–75 (1980) 
+[4] Beneš V.E. Exact finite-dimensional filters for certain diffusions with nonlinear drift. 
+Stochastics, 5, 65–92 (1981) 
+[5] Daum F.E. Exact finite-dimensional nonlinear filters. IEEE Trans. Autom. Control, 31, 616–
+622 (1986) 
+[6] Yaz E. Linear state estimators for non-linear stochastic systems with noisy non-linear 
+observations. Int. J. Control, 48, 2465–2475 (1988) 
+[7] Bernstein D.S., Haddad W.M. Steady-state Kalman filtering with an H∞ error bounded. Syst. 
+Control. Lett., 12, 9–16 (1989) 
+[8] Li H., Shi Y. Robust H∞ filtering for nonlinear stochastic systems with uncertainties and 
+Markov delays. Automatica, 48, 159–166 (2012) 
+[9] Geromel J.C., Bernussou J., Garcia. G., Oliveira M.C.D. H2 and H∞ robust filtering for 
+discrete-time linear systems. SIAM J. Control Optim., 38, 1353–1368 (2000) 
+[10] Rao C.V., Rawlings J.B., Mayne D.Q. Constrained state estimation for nonlinear discrete-time 
+systems: stability and moving horizon approximations. IEEE Trans. Autom. Control, 48, 246–
+258 (2003) 
+[11] Alessandri A., Baglietto M., Battistelli G. A minimax receding-horizon estimator for uncertain 
+discrete-time linear systems. In Proceedings of the 2004 American Control Conference, Boston, 
+MA, USA, 30 June – 2 July 2004, 205–210. 
+[12] Geromel J.C. Optimal linear filtering under parameter uncertainty. IEEE Trans. Signal Process, 
+47, 168–175 (1999) 
+[13] Verdu S., Poor H. Minimax linear observers and regulators for stochastic systems with 
+uncertain second-order statistics. IEEE Trans. Autom. Contr., 29, 499–511 (1984) 
+[14] Verdu S., Poor H. On minimax robustness: a general approach and applications. IEEE Trans. 
+Inf. Theory, 30, 328–340 (1984) 
+[15] Poor V., Looze D. Minimax state estimation for linear stochastic systems with noise 
+uncertainty. IEEE Trans. Autom. Control, 26, 902–906 (1981) 
+[16] Miller G.B., Pankov A.R. Minimax filtering in linear stochastic uncertain discrete-continuous 
+systems. Autom. Remote Control, 67, 413–427 (2006) 
+[17] Miller G.B., Pankov A.R. Minimax control of a process in a linear uncertain-stochastic system 
+with incomplete data. Autom. Remote Control, 68, 2042–2055 (2007) 
+[18] Wonham W.M. Some applications of stochastic differential equations to optimal nonlinear 
+filtering. SIAM J. Control, 2, 347–369 (1965) 
+[19] Elliott R.J., Aggoun L., Moore J.B. Hidden Markov Models: Estimation and Control. Springer 
+(1995) 
+[20] Kloeden P.E., Platen E. Numerical Solution of Stochastic Differential Equations. Springer 
+(1992) 
+[21] Yin G., Zhang Q., Liu, Y. Discrete-time approximation of Wonham filters. J. Control Theory 
+Appl., 2, 1–10 (2004) 
+[22] Borisov A.V. L1-optimal filtering of Markov jump processes. II. Numerical analysis of 
+particular realizations schemes. Autom. Remote Control, 81, 2160–2180 (2020) Differential equations and control processes, N. 3, 2024 
+ 
+https://doi.org/10.21638/11701/spbu35.2024.303        Electronic Journal: http://diffjournal.spbu.ru      46 
+[23] Borisov A.V., Bosov A.V. Practical implementation of the solution of the stabilization problem 
+for a linear system with discontinuous random drift by indirect observations. Autom. Remote 
+Control, 83, 1417–1432 (2022) 
+[24] Vandelinde V. Robust properties of solutions to linear-quadratic estimation and control 
+problems. IEEE Trans. Autom. Control, 22, 138–139 (1977) 
+[25] Morris, J. The Kalman filter: A robust estimator for some classes of linear quadratic problems. 
+IEEE Trans. Inf. Theory, 22, 526–534 (1976) 
+ 
