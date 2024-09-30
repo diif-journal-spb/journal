@@ -1,0 +1,1102 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 3, 2024
+Electronic Journal,
+reg. N ΦC77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Differential-difference equations
+Nonlinear problem involving the fractional p(x)−Laplacian operator
+by topological degree
+Mustapha AIT HAMMOU
+Laboratory LAMA, Sidi Mohamed Ben Abdellah University, Fez, Morocco
+mustapha.aithammou@usmba.ac.ma
+Abstract.This paper is concerned with the study of a nonlinear problem in-
+volving the fractional p(x)−Laplacian operator. By means of the Berkovits
+degree theory, we prove the existence of nontrivial weak solutions for this prob-
+lem. The appropriate functional framework for this problem is the fractional
+Sobolev spaces with variable exponent.
+Keywords:Nonlinear elliptic problem, fractional p(x)−Laplacian operator,
+fractional Sobolev spaces with variable exponent, Degree theory.
+1 Introduction
+Great attention was paid to the study of elliptic problems including the frac-
+tional operator during the last years. The study of this type of problems is
+motivated by their abilities to model several physical phenomena such as those
+of phase transition, continuum mechanics and dynamics. Fractional operator is
+also present in game theory and probability which he provides a simple model
+to describe stochastic stabilization of L´ evy jump processes (see [?, ?, ?, ?] and
+the references therein).
+Let Ω be a smooth bounded open set inR
+N
+, s∈ (0;1) and let
+p : Ω×Ω→ (1;+∞) be a continuous variable exponent with sp(x;y)<N. WeDifferential Equations and Control Processes, N. 3, 2024
+assume that
+1<p
+−
+= min
+(x,y)∈Ω×Ω
+p(x;y)≤p(x;y)≤p
++
+= max
+(x,y)∈Ω×Ω
+p(x;y)< +∞; (1)
+and p is symmetric i.e.
+p(x;y) =p(y;x); ∀(x;y)∈ Ω×Ω: (2)
+Let us denote
+q(x) =p(x;x); ∀x∈ Ω:
+Let us consider the fractional p(x)−Laplacian operator given by
+(−∆
+p(x)
+)
+s
+u(x) =p:v:
+∫
+Ω
+|u(x)−u(y)|
+p(x,y)−2
+(u(x)−u(y))
+|x−y|
+N+sp(x,y)
+dy; ∀x∈ Ω;
+where p:v: is a commonly used abbreviation in the principal value sense.
+In this paper, we are concerned with the study of the following nonlinear
+elliptic problem,
+{
+(−∆
+p(x)
+)
+s
+u(x)+|u(x)|
+q(x)−2
+u(x) = |u(x)|
+r(x)−2
+u(x) in Ω;
+u = 0 on@Ω:
+(P)
+where r(·)∈C(
+¯
+Ω) and   is a real parameter. We also assume that
+1<r
+−
+≤r(x)≤r
++
+<p
+−
+: (3)
+Note that (−∆
+p(x)
+)
+s
+is the fractional version of well-known p(x)−Laplacian
+operator −∆
+p(x)
+(u) = −div(|∇u|
+p(x)−2
+∇u) for which Alsaedi in [?] establishes
+suﬃcient conditions for the existence of nontrivial weak solutions for a problem
+similar to (??) that is the following problem:
+{
+−∆
+p(x)
+u = |u|
+p(x)−2
+u+|u|
+q(x)−2
+u in Ω;
+u = 0 on @Ω:
+The proofs combine the Ekeland variational principle, the mountain pass theo-
+rem and energy arguments.
+Aﬁrstintroductiontotheoperator(−∆
+p(x)
+)
+s
+canbefoundin[?], wherethe
+authors extended Sobolev spaces with variable exponents to the fractional case
+with a compact embedding theorem, and proved the existence and uniqueness
+of weak solutions for the following fractional p(x)−Laplacian problem
+{
+(−∆
+p(x)
+)
+s
+u(x)+|u|
+q(x)−2
+u(x) =f(x) in Ω;
+u = 0 on @Ω;
+https://doi.org/10.21638/11701/spbu35.2024.301 Electronic Journal: http://diffjournal.spbu.ru/ 2Differential Equations and Control Processes, N. 3, 2024
+where f ∈ L
+a(x)
+(Ω) for some a(x) > 1: Subsequently, Bahrouni and Rˇ adulescu
+in[?]areinterestedinsomequalitativepropertiesonboththevariableexponent
+Sobolev fractional space and the operators (−∆
+p(x)
+)
+s
+: The results presented ab-
+stractly in their paper are used to prove that the problem (??) admits at least
+one nontrivial weak solution by a variational analysis. More recently, Azroul
+et al. [?] study the problem (??) as an eigenvalue problem using adequate
+variational techniques, mainly based on Ekeland’s variational principle. They
+establish the existence of a continuous family of eigenvalues lying in a neigh-
+borhood at the right of the origin.
+Note that the fractional Laplacian considered in this work and in [?,?,?] is
+in fact ”regional” since the integration is over Ω but not overR
+N
+: In the case of
+the”global”fractionalLaplacian,wheretheintegralisdeﬁnedonR
+N
+\B(x;")by
+tending " to 0, similar problems have been studied (see, for instance, [?, ?, ?]).
+Using another technique based on topological degree theory, notably the
+recent Berkovits degree, we prove in this paper the existence of at least one
+nontrivial weak solution the problem (??).
+The paper is divided into four sections. In the second section, we intro-
+duce some preliminary results about Lebesgue and fractional Sobolev spaces
+with variable exponent, some classes of operators and an outline of the recent
+Berkovits degree. The third section is reserved for some technical lemmas.
+Finally, in the fourth section we give our main results concerning the weak
+solutions of the problem (??).
+2 Some preliminary results
+2.1 Lebesgue and fractional Sobolev spaces with variable exponent
+Inthissubsection,weﬁrstrecallsomeusefulpropertiesofthevariableexponent
+Lebesgue spaces L
+p(x)
+(Ω). For more details we refer the reader to [?, ?, ?] for
+more details.
+Denote
+C
++
+(
+¯
+Ω) ={h∈C(
+¯
+Ω)|inf
+x∈
+¯
+Ω
+h(x)> 1}:
+For any h∈C
++
+(
+¯
+Ω), we deﬁne
+h
++
+:=max{h(x);x∈
+¯
+Ω};h
+−
+:=min{h(x);x∈
+¯
+Ω}:
+https://doi.org/10.21638/11701/spbu35.2024.301 Electronic Journal: http://diffjournal.spbu.ru/ 3Differential Equations and Control Processes, N. 3, 2024
+For any p∈C
++
+(
+¯
+Ω) we deﬁne the variable exponent Lebesgue space
+L
+p(x)
+(Ω) ={u; u : Ω→R is measurable and
+∫
+Ω
+|u(x)|
+p(x)
+dx< +∞}:
+Endowed with Luxemburg norm
+∥u∥
+p(x)
+= inf{ > 0= 
+p(·)
+(
+u
+ 
+)≤ 1}:
+where
+ 
+p(·)
+(u) =
+∫
+Ω
+|u(x)|
+p(x)
+dx; ∀u∈L
+p(x)
+(Ω);
+(L
+p(x)
+(Ω);∥·∥
+p(x)
+) is a Banach space, separable and reﬂexive. Its conjugate
+space is L
+p
+′
+(x)
+(Ω) where
+1
+p(x)
++
+1
+p
+′
+(x)
+= 1 for all x∈ Ω:
+We have also the following result
+Proposition 1 For any u∈L
+p(x)
+(Ω) we have
+(i) ∥u∥
+p(x)
+< 1(= 1;> 1) ⇔  
+p(·)
+(u)< 1(= 1;> 1);
+(ii) ∥u∥
+p(x)
+≥ 1 ⇒ ∥u∥
+p
+−
+p(x)
+≤ 
+p(·)
+(u)≤∥u∥
+p
++
+p(x)
+;
+(iii) ∥u∥
+p(x)
+≤ 1 ⇒ ∥u∥
+p
++
+p(x)
+≤ 
+p(·)
+(u)≤∥u∥
+p
+−
+p(x)
+:
+From this proposition, we can deduce the inequalities
+∥u∥
+p(x)
+≤ 
+p(·)
+(u)+1; (4)
+ 
+p(·)
+(u)≤∥u∥
+p
+−
+p(x)
++∥u∥
+p
++
+p(x)
+: (5)
+If p;q ∈ C
++
+(Ω) such that p(x) ≤ q(x) for any x ∈
+¯
+Ω; then there exists the
+continuous embedding L
+q(x)
+(Ω),→L
+p(x)
+(Ω):
+Next,wepresentthedeﬁnitionandsomeresultsonfractionalSobolevspaces
+with variable exponent that was introduced in [?, ?, ?]. Let s be a ﬁxed real
+number such that 0 < s < 1 and lets the assumptions (??) and (??) with
+sp(x;y) < N be satisﬁed, we deﬁne the fractional Sobolev space with variable
+exponent via the Gagliardo approach as follows:
+W = W
+s,p(x,y)
+(Ω)
+= {u∈L
+q(x)
+(Ω) :
+∫
+Ω×Ω
+|u(x)−u(y)|
+p(x,y)
+ 
+p(x,y)
+|x−y|
+N+sp(x,y)
+dxdy < +∞; for some  > 0};
+https://doi.org/10.21638/11701/spbu35.2024.301 Electronic Journal: http://diffjournal.spbu.ru/ 4Differential Equations and Control Processes, N. 3, 2024
+where q(x) =p(x;x). We equip the space W with the norm
+∥u∥
+W
+=∥u∥
+q(x)
++[u]
+s,p(x,y)
+;
+where[·]
+s,p(x,y)
+isaGagliardoseminormwithvariableexponent,whichisdeﬁned
+by
+[u]
+s,p(x,y)
+= inf{ > 0 :
+∫
+Ω×Ω
+|u(x)−u(y)|
+p(x,y)
+ 
+p(x,y)
+|x−y|
+N+sp(x,y)
+dxdy≤ 1}:
+The space (W;∥·∥
+W
+) is a Banach space (see [?]), separable and reﬂexive (see
+[?, Lemma 3.1]).
+We also deﬁne W
+0
+as the subspace of W which is the closure of C
+∞
+0
+(Ω) with
+respect to the norm ∥·∥
+W
+. From [?, Theorem 2.1 and Remark 2.1],
+∥·∥
+W
+0
+:= [·]
+s,p(x,y)
+is a norm on W
+0
+which is equivalent to the norm ∥·∥
+W
+, and we have the
+compact embedding W
+0
+,→,→ L
+q(x)
+(Ω). So the space (W
+0
+;∥·∥
+W
+0
+) is a Banach
+space separable and reﬂexive.
+We deﬁne the modular  
+p(·,·)
+:W
+0
+→R by
+ 
+p(·,·)
+(u) =
+∫
+Ω×Ω
+|u(x)−u(y)|
+p(x,y)
+|x−y|
+N+sp(x,y)
+dxdy:
+The modular  
+p(·,·)
+checks the following results, which is similar to Proposition
+??(see [?, Lemma 2.1])
+Proposition 2 For any u∈W
+0
+we have
+(i) ∥u∥
+W
+0
+≥ 1 ⇒ ∥u∥
+p
+−
+W
+0
+≤ 
+p(·,·)
+(u)≤∥u∥
+p
++
+W
+0
+;
+(ii) ∥u∥
+W
+0
+≤ 1 ⇒ ∥u∥
+p
++
+W
+0
+≤ 
+p(·,·)
+(u)≤∥u∥
+p
+−
+W
+0
+:
+2.2 Some classes of operators and an outline of Berkovits degree
+Let X be a real separable reﬂexive Banach space with dual X
+∗
+and with con-
+tinuous pairing ⟨:; :⟩ and let Ω be a nonempty subset of X.
+Let Y be a real Banach space. We recall that a mapping F : Ω⊂ X → Y
+is bounded, if it takes any bounded set into a bounded set. F is said to be
+demicontinuous, if for any (u
+n
+)⊂ Ω, u
+n
+→ u implies F(u
+n
+) * F(u). F is said
+to be compact if it is continuous and the image of any bounded set is relatively
+compact.
+https://doi.org/10.21638/11701/spbu35.2024.301 Electronic Journal: http://diffjournal.spbu.ru/ 5Differential Equations and Control Processes, N. 3, 2024
+A mapping F : Ω⊂X →X
+∗
+is said to be of class (S
++
+), if for any (u
+n
+)⊂ Ω
+with u
+n
+*u and limsup⟨Fu
+n
+;u
+n
+−u⟩≤ 0, it follows that u
+n
+→u.
+F is said to be quasimonotone , if for any (u
+n
+)⊂ Ω withu
+n
+*u, it follows that
+limsup⟨Fu
+n
+;u
+n
+−u⟩≥ 0.
+For any operator F : Ω⊂X →X and any bounded operator
+T : Ω
+1
+⊂ X → X
+∗
+such that Ω⊂ Ω
+1
+, we say that F satisﬁes condition (S
++
+)
+T
+,
+if for any (u
+n
+)⊂ Ω with u
+n
+*u, y
+n
+:=Tu
+n
+*y and limsup⟨Fu
+n
+;y
+n
+−y⟩≤ 0,
+we have u
+n
+→u.
+Let O be the collection of all bounded open set in X. For any Ω⊂ X, we
+consider the following classes of operators:
+F
+1
+(Ω) := {F : Ω→X
+∗
+|F is bounded, demicontinuous and satisﬁes condition(S
++
+)};
+F
+T,B
+(Ω) := {F : Ω→X |F is bounded, demicontinuous and satisﬁes condition(S
++
+)
+T
+};
+F
+T
+(Ω) := {F : Ω→X |F is demicontinuous and satisﬁes condition (S
++
+)
+T
+};
+F
+B
+(X) := {F ∈F
+T,B
+(
+¯
+G)|G∈O;T∈F
+1
+(
+¯
+G)}:
+Here, T ∈F
+1
+(
+¯
+G) is called an essential inner map to F.
+Lemma 1 [?, Lemma 2.3] Suppose that T ∈F
+1
+(
+¯
+G) is continuous and
+S : D
+S
+⊂ X
+∗
+→ X is demicontinuous such that T(
+¯
+G) ⊂ D
+S
+, where G is
+a bounded open set in a real reﬂexive Banach space X. Then the following
+statements are true:
+(i) If S is quasimonotone, then I+S◦T ∈F
+T
+(
+¯
+G), where I denotes the identity
+operator.
+(ii) If S is of class (S
++
+), then S◦T ∈F
+T
+(
+¯
+G)
+Deﬁnition 1 Let G be a bounded open subset of a real reﬂexive Banach space
+X, T ∈F
+1
+(
+¯
+G) be continuous and let F;S ∈F
+T
+(
+¯
+G). The aﬃne homotopy
+H : [0;1]×
+¯
+G→X deﬁned by
+H(t;u) := (1−t)Fu+tSu for (t;u)∈ [0;1]×
+¯
+G
+is called an admissible aﬃne homotopy with the common continuous essential
+inner map T.
+Remark 1 [?, Lemma 2.5] The above aﬃne homotopy satisﬁes condition
+(S
++
+)
+T
+.
+https://doi.org/10.21638/11701/spbu35.2024.301 Electronic Journal: http://diffjournal.spbu.ru/ 6Differential Equations and Control Processes, N. 3, 2024
+We introduce the topological degree for the class F
+B
+(X) constructed by
+Berkovits in [?].
+Theorem 1 [?, Theorem 3.1] There exists a unique degree function
+d :{(F;G;h)|G∈O;T ∈F
+1
+(
+¯
+G);F ∈F
+T,B
+(
+¯
+G);h = ∈F(@G)}→Z
+that satisﬁes the following properties
+1. (Existence) If d(F;G;h)̸= 0, then the equation Fu = h has a solution in
+G.
+2. (Additivity) Let F ∈F
+T,B
+(
+¯
+G). If G
+1
+and G
+2
+are two disjoint open subsets
+of G such that h̸∈F(
+¯
+G\(G
+1
+∪G
+2
+)), then we have
+d(F;G;h) =d(F;G
+1
+;h)+d(F;G
+2
+;h):
+3. (Homotopy invariance) IfH : [0;1]×
+¯
+G→X is a bounded admissible aﬃne
+homotopy with a common continuous essential inner map and
+h : [0;1]→ X is a continuous path in X such that h(t) = ∈ H(t;@G) for all
+t∈ [0;1] ,then the value of d(H(t;:);G;h(t)) is constant for all t∈ [0;1].
+4. (Normalization) For any h∈G, we have d(I;G;h) = 1:
+3 Technical lemmas
+Let Ω⊂R
+N
+, N ≥ 2; be a smooth bounded open set, s∈ (0;1) and we assume
+that (??), (??) and (??) hold. In this section, we present two technical lemmas
+that we will need to study our problem (??).
+Let us denote by L : W
+0
+→ W
+∗
+0
+the operator associated to the (−∆
+p(x)
+)
+s
+deﬁned by
+⟨Lu;'⟩ =
+∫
+Ω×Ω
+|u(x)−u(y)|
+p(x,y)−2
+(u(x)−u(y))('(x)−'(y))
+|x−y|
+N+sp(x,y)
+dxdy
++
+∫
+Ω
+|u(x)|
+q(x)−2
+u(x)'(x)dx;
+for all u;'∈W
+0
+; where W
+∗
+0
+is the dual space of W
+0
+.
+Lemma 2 [?, Remark 4.3]
+(i) L is bounded and strictly monotone operator,
+https://doi.org/10.21638/11701/spbu35.2024.301 Electronic Journal: http://diffjournal.spbu.ru/ 7Differential Equations and Control Processes, N. 3, 2024
+(ii) L is a mapping of type (S
++
+),
+(iii) L is a homeomorphism.
+Lemma 3 The operator S :W
+0
+→W
+∗
+0
+setting by
+⟨Su;'⟩ =− 
+∫
+Ω
+|u(x)|
+r(x)−2
+u(x)'(x)dx; ∀u;'∈W
+0
+is compact.
+Proof
+Let   :W
+0
+→L
+q
+′
+(x)
+(Ω) be the operator deﬁned by
+ u(x) :=− |u(x)|
+r(x)−2
+u(x) for u∈W
+0
+and x∈ Ω:
+It’s obvious that   is continuous. We prove that   is bounded.
+For each u∈W
+0
+, we have by the inequalities (??) and (??) that
+∥ u∥
+q
+′
+(x)
+≤  
+q
+′
+(·)
+( u)+1
+=
+∫
+Ω
+| |u|
+r(x)−1
+|
+q
+′
+(x)
+dx+1
+≤ const 
+α(·)
+(u)+1
+≤ const(∥u∥
+α
+−
+α(x)
++∥u∥
+α
++
+α(x)
+)+1
+where ff(x) = (r(x)−1)q
+′
+(x) ∈ C
++
+(Ω) with ff(x) ≤ q(x). By the continuous
+embeddingL
+q(x)
+(Ω),→L
+α(x)
+(Ω)andthecompactembeddingW
+0
+,→,→L
+q(x)
+(Ω),
+we obtain
+∥ u∥
+q
+′
+(x)
+≤const((∥u∥
+α
+−
+W
+0
++∥u∥
+α
++
+W
+0
+)+1
+This implies that   is bounded on W
+0
+:
+SincetheembeddingI :W
+0
+→L
+q(x)
+(Ω)iscompact, itisknownthattheadjoint
+operator I
+∗
+: L
+q
+′
+(x)
+(Ω) → W
+∗
+0
+is also compact. Therefore, the composition
+S =I
+∗
+◦  is compact.
+4 Main Result
+In this section, we study the nonlinear problem (??) based on the Berkovits
+degree theory introduced in subsection 2.2, where Ω⊂R
+N
+, N ≥ 2; is a smooth
+bounded open, s∈ (0;1) and under assumptions (??), (??) with sp(x;y) < N
+and (??) .
+Let L and S :W
+0
+→W
+∗
+0
+(Ω) be as in Section 3.
+https://doi.org/10.21638/11701/spbu35.2024.301 Electronic Journal: http://diffjournal.spbu.ru/ 8Differential Equations and Control Processes, N. 3, 2024
+Deﬁnition 2 We say that u∈W
+0
+is a weak solution of (??) if
+⟨Lu;'⟩+⟨Su;'⟩ = 0; ∀'∈W
+0
+:
+Theorem 2 Under assumptions (??), (??) and (??), the problem (??) has a
+weak solution u in W
+0
+:
+Proof u∈W
+0
+is a weak solution of (??) if and only if
+Lu =−Su: (6)
+Thanks to the properties of the operator L seen in Lemma ?? and in view of
+Minty-Browder Theorem [?, Theorem 26A], the inverse operator
+T := L
+−1
+: W
+∗
+0
+→ W
+0
+is bounded, continuous and satisﬁes condition (S
++
+).
+Moreover, note by Lemma ?? that the operator S is bounded, continuous and
+quasimonotone.
+Consequently, equation (??) is equivalent to
+u =Tv and v+S◦Tv = 0: (7)
+To solve (??), we will apply the degree theory introduced in section 2. To do
+this, we ﬁrst claim that the set
+B :={v∈W
+∗
+0
+|v+tS◦Tv = 0 for some t∈ [0;1]}
+is bounded. Indeed, let v∈B. Set u :=Tv, then ∥Tv∥
+W
+0
+=∥u∥
+W
+0
+:
+If ∥u∥
+W
+0
+≤ 1, then ∥Tv∥
+W
+0
+is bounded.
+If ∥u∥
+W
+0
+> 1, then we get by the implication (i) in Proposition ?? and the
+inequality (??) the estimate
+∥Tv∥
+p
+−
+W
+0
+= ∥u∥
+p−
+W
+0
+≤  
+p(·,·)
+(u)
+≤  
+p(·,·)
+(u)+
+∫
+Ω
+|u(x)|
+q(x)
+dx
+= ⟨Lu;u⟩
+= ⟨v;Tv⟩
+= −t⟨S◦Tv;Tv⟩
+≤ t
+∫
+Ω
+| |u(x)|
+r(x)
+|dx
+≤ const(∥u∥
+r
+−
+r(x)
++∥u∥
+r
++
+r(x)
+):
+https://doi.org/10.21638/11701/spbu35.2024.301 Electronic Journal: http://diffjournal.spbu.ru/ 9Differential Equations and Control Processes, N. 3, 2024
+From the continuous embedding L
+q(x)
+(Ω),→L
+r(x)
+(Ω) and the compact embed-
+ding W
+0
+,→,→L
+q(x)
+(Ω), we can deduce the estimate
+∥Tv∥
+p
+−
+W
+0
+≤const∥Tv∥
+r
++
+W
+0
+:
+It follows that {Tv|v∈B} is bounded.
+By writing B = {v ∈ W
+∗
+0
+|v = −tS ◦Tv for some t ∈ [0;1]} and taking into
+account the boundedness of Tv (v∈B), S and t (t∈ [0;1]), we can see that B
+is bounded in W
+∗
+0
+. Consequently, there exists R> 0 such that
+∥v∥
+W
+∗
+0
+<R for all v∈B:
+Therefore, if v = ∈B
+R
+(0), then v = ∈B, that is v+tS◦Tv̸= 0 for all t∈ [0;1]: In
+particular
+v+tS◦Tv̸= 0 for all v∈@B
+R
+(0) and all t∈ [0;1];
+where B
+R
+(0) = {v ∈ W
+∗
+0
+;∥v∥
+W
+∗
+0
+< R} the open ball of W
+∗
+0
+of centre 0 and
+radius R:
+From Lemma ?? it follows that
+I +S◦T ∈F
+T
+(B
+R
+(0)) and I =L◦T ∈F
+T
+(B
+R
+(0)):
+Since the operators I, S and T are bounded, I +S◦T is also bounded. We
+conclude that
+I +S◦T ∈F
+T,B
+(B
+R
+(0)) and I ∈F
+T,B
+(B
+R
+(0)):
+Consider a homotopy H : [0;1]×B
+R
+(0)→W
+∗
+0
+given by
+H(t;v) :=v+tS◦Tv for (t;v)∈ [0;1]×B
+R
+(0):
+Applying the homotopy invariance and normalization property of the degree d
+stated in Theorem ??, we get
+d(I +S◦T;B
+R
+(0);0) =d(I;B
+R
+(0);0) = 1;
+and hence there exists a point v∈B
+R
+(0) such that
+v+S◦Tv = 0:
+We conclude that u =Tv is a weak solution of (??).
+https://doi.org/10.21638/11701/spbu35.2024.301 Electronic Journal: http://diffjournal.spbu.ru/ 10Differential Equations and Control Processes, N. 3, 2024
+References
+[1] Alsaedi R. Perturbed subcritical Dirichlet problems with variable expo-
+nents. Electron. J. Differential Equations, 2016, 295, 1–12.
+[2] Applebaum D. L´ evy processes and stochastic calculus, Second edition.
+Cambridge Studies in Advanced Mathematics, Vol. 116, Cambridge Uni-
+versity Press, Cambridge, 2009.
+[3] Azroul E., Benkirane A., Shimi M. Eigenvalue problems involving
+the fractional p(x)−Laplacian operator. Adv. Oper. Theory, 2019, 4 (2),
+539–555.
+[4] Bahrouni A., Ho K. Y. Remarks on eigenvalue problems for fractional
+p(·)−Laplacian. Asymptot. Anal., 2021, 123 (1-2), 139–156.
+[5] BahrouniA.,R
+ˇ
+adulescuV. On a new fractional Sobolev space and ap-
+plications to nonlocal variational problems with variable exponent. Discrete
+Contin. Dyn. Syst., 2018, 11, 379–389.
+[6] Berkovits J. Extension of the Leray-Schauder degree for abstract Ham-
+merstein type mappings. J. Differential Equations, 2007, 234, 289–310.
+[7] BisciG.M.,R
+ˇ
+adulescuV.,ServadiR.Variational methods for nonlo-
+cal fractional problems, With a foreword by Jean Mawhin. Encyclopedia of
+Mathematics and its Applications, Vol. 162, Cambridge University Press,
+Cambridge, 2016.
+[8] Bucur C., Valdinoci E. Nonlocal diffusion and applications. Lecture
+Notes of the Unione Matematica Italiana, Vol. 20, Springer, [Cham],
+Unione Matematica Italiana, Bologna, 2016.
+[9] Caffarelli L. Nonlocal diffusions, drifts and games. Nonlinear partial
+differential equations, Abel Symp., Vol. 7: 37–52, Springer, Heidelberg,
+2012.
+[10] ChenY., LevineS., RaoM. Variable exponent, linear growth function-
+als in image processing. SIAM J. Appl. Math., 2006, 66, 1383–1406.
+[11] Fan X.L., Zhao D. On the Spaces L
+p(x)
+(Ω) and W
+m,p(x)
+(Ω). J. Math.
+Anal. Appl., 2001, 263, 424–446.
+https://doi.org/10.21638/11701/spbu35.2024.301 Electronic Journal: http://diffjournal.spbu.ru/ 11Differential Equations and Control Processes, N. 3, 2024
+[12] Ho K., Kim Y. H. A-priori bounds and multiplicity of solutions for non-
+linear elliptic problems involving the fractional p(·)−Laplacian. Nonlinear
+Anal., 2019, 188, 179–201.
+[13] Ho K., Kim Y. H. The concentration-compactness principles for
+W
+s,p(·,·)
+(R
+N
+) and application. Adv. Nonlinear Anal., 2021, 10, 816–848.
+[14] Kaufmann U., Rossi J.D., Vidal R. Fractional Sobolev spaces with
+variable exponents and fractional p(x)−Laplacians.Electron.J.Qual.The-
+ory Differ. Equ., 2017, 76, 1–10.
+[15] Kim I. S., Hong, S. J. A topological degree for operators of generalized
+(S
++
+) type. Fixed Point Theory and Appl., 2015, 2015:194.
+[16] Kov
+´
+a
+ˇ
+cik O., R
+´
+akosn
+´
+ık J. On spaces L
+p(x)
+and W
+1,p(x)
+. Czechoslovak
+Math. J., 1991, 41, 592–618.
+[17] Zeidler E. Nonlinear Functional Analysis and its Applications. II/B:
+Nonlinear monotone Operators, Springer, New York, 1990.
+[18] Zhang C., Zhang X. Renormalized solutions for the fractional
+p(x)−Laplacian equation withL
+1
+data.NonlinearAnal.,2020,190,111610.
+[19] Zhao D., Qiang W.J., Fan X.L. On generalized Orlicz spaces L
+p(x)
+(Ω).
+J. Gansu Sci., 1996, 9 (2), 1–7.
+https://doi.org/10.21638/11701/spbu35.2024.301 Electronic Journal: http://diffjournal.spbu.ru/ 12
