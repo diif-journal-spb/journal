@@ -32,7 +32,7 @@ tional operator during the last years. The study of this type of problems is
 motivated by their abilities to model several physical phenomena such as those
 of phase transition, continuum mechanics and dynamics. Fractional operator is
 also present in game theory and probability which he provides a simple model
-to describe stochastic stabilization of L´ evy jump processes (see [?, ?, ?, ?] and
+to describe stochastic stabilization of L´ evy jump processes (see [2, 7, 8, 9] and
 the references therein).
 Let Ω be a smooth bounded open set inR
 N
@@ -100,9 +100,9 @@ operator −∆
 p(x)
 (u) = −div(|∇u|
 p(x)−2
-∇u) for which Alsaedi in [?] establishes
+∇u) for which Alsaedi in [1] establishes
 suﬃcient conditions for the existence of nontrivial weak solutions for a problem
-similar to (??) that is the following problem:
+similar to (P) that is the following problem:
 {
 −∆
 p(x)
@@ -118,7 +118,7 @@ Aﬁrstintroductiontotheoperator(−∆
 p(x)
 )
 s
-canbefoundin[?], wherethe
+canbefoundin[14],wherethe
 authors extended Sobolev spaces with variable exponents to the fractional case
 with a compact embedding theorem, and proved the existence and uniqueness
 of weak solutions for the following fractional p(x)−Laplacian problem
@@ -135,42 +135,42 @@ https://doi.org/10.21638/11701/spbu35.2024.301 Electronic Journal: http://diffjo
 where f ∈ L
 a(x)
 (Ω) for some a(x) > 1: Subsequently, Bahrouni and Rˇ adulescu
-in[?]areinterestedinsomequalitativepropertiesonboththevariableexponent
+in[5]areinterestedinsomequalitativepropertiesonboththevariableexponent
 Sobolev fractional space and the operators (−∆
 p(x)
 )
 s
 : The results presented ab-
-stractly in their paper are used to prove that the problem (??) admits at least
-one nontrivial weak solution by a variational analysis. More recently, Azroul
-et al. [?] study the problem (??) as an eigenvalue problem using adequate
-variational techniques, mainly based on Ekeland’s variational principle. They
-establish the existence of a continuous family of eigenvalues lying in a neigh-
-borhood at the right of the origin.
-Note that the fractional Laplacian considered in this work and in [?,?,?] is
+stractlyintheirpaperareusedtoprovethattheproblem(P)admitsatleastone
+nontrivial weak solution by a variational analysis. More recently, Azroul et al.
+[3] study the problem (P) as an eigenvalue problem using adequate variational
+techniques, mainly based on Ekeland’s variational principle. They establish the
+existence of a continuous family of eigenvalues lying in a neighborhood at the
+right of the origin.
+NotethatthefractionalLaplacianconsideredinthisworkandin[3,5,14]is
 in fact ”regional” since the integration is over Ω but not overR
 N
 : In the case of
 the”global”fractionalLaplacian,wheretheintegralisdeﬁnedonR
 N
 \B(x;")by
-tending " to 0, similar problems have been studied (see, for instance, [?, ?, ?]).
+tending"to0,similarproblemshavebeenstudied(see,forinstance,[4,12,13]).
 Using another technique based on topological degree theory, notably the
 recent Berkovits degree, we prove in this paper the existence of at least one
-nontrivial weak solution the problem (??).
+nontrivial weak solution the problem (P).
 The paper is divided into four sections. In the second section, we intro-
 duce some preliminary results about Lebesgue and fractional Sobolev spaces
 with variable exponent, some classes of operators and an outline of the recent
 Berkovits degree. The third section is reserved for some technical lemmas.
 Finally, in the fourth section we give our main results concerning the weak
-solutions of the problem (??).
+solutions of the problem (P).
 2 Some preliminary results
 2.1 Lebesgue and fractional Sobolev spaces with variable exponent
 Inthissubsection,weﬁrstrecallsomeusefulpropertiesofthevariableexponent
 Lebesgue spaces L
 p(x)
-(Ω). For more details we refer the reader to [?, ?, ?] for
-more details.
+(Ω). For more details we refer the reader to [11, 16, 19]
+for more details.
 Denote
 C
 +
@@ -312,8 +312,8 @@ q(x)
 p(x)
 (Ω):
 Next,wepresentthedeﬁnitionandsomeresultsonfractionalSobolevspaces
-with variable exponent that was introduced in [?, ?, ?]. Let s be a ﬁxed real
-number such that 0 < s < 1 and lets the assumptions (??) and (??) with
+with variable exponent that was introduced in [3, 5, 14]. Let s be a ﬁxed
+real number such that 0 < s < 1 and lets the assumptions (1) and (2) with
 sp(x;y) < N be satisﬁed, we deﬁne the fractional Sobolev space with variable
 exponent via the Gagliardo approach as follows:
 W = W
@@ -358,8 +358,8 @@ N+sp(x,y)
 dxdy≤ 1}:
 The space (W;∥·∥
 W
-) is a Banach space (see [?]), separable and reﬂexive (see
-[?, Lemma 3.1]).
+) is a Banach space (see [10]), separable and reﬂexive (see
+[5, Lemma 3.1]).
 We also deﬁne W
 0
 as the subspace of W which is the closure of C
@@ -368,7 +368,7 @@ as the subspace of W which is the closure of C
 (Ω) with
 respect to the norm ∥·∥
 W
-. From [?, Theorem 2.1 and Remark 2.1],
+. From [3, Theorem 2.1 and Remark 2.1],
 ∥·∥
 W
 0
@@ -408,7 +408,7 @@ dxdy:
 The modular  
 p(·,·)
 checks the following results, which is similar to Proposition
-??(see [?, Lemma 2.1])
+1(see [18, Lemma 2.1])
 Proposition 2 For any u∈W
 0
 we have
@@ -554,7 +554,7 @@ Here, T ∈F
 (
 ¯
 G) is called an essential inner map to F.
-Lemma 1 [?, Lemma 2.3] Suppose that T ∈F
+Lemma 1 [15, Lemma 2.3] Suppose that T ∈F
 1
 (
 ¯
@@ -601,7 +601,7 @@ H(t;u) := (1−t)Fu+tSu for (t;u)∈ [0;1]×
 G
 is called an admissible aﬃne homotopy with the common continuous essential
 inner map T.
-Remark 1 [?, Lemma 2.5] The above aﬃne homotopy satisﬁes condition
+Remark 1 [15, Lemma 2.5] The above aﬃne homotopy satisﬁes condition
 (S
 +
 )
@@ -611,8 +611,8 @@ https://doi.org/10.21638/11701/spbu35.2024.301 Electronic Journal: http://diffjo
 We introduce the topological degree for the class F
 B
 (X) constructed by
-Berkovits in [?].
-Theorem 1 [?, Theorem 3.1] There exists a unique degree function
+Berkovits in [6].
+Theorem 1 [15, Theorem 3.1] There exists a unique degree function
 d :{(F;G;h)|G∈O;T ∈F
 1
 (
@@ -657,8 +657,8 @@ t∈ [0;1] ,then the value of d(H(t;:);G;h(t)) is constant for all t∈ [0;1].
 Let Ω⊂R
 N
 , N ≥ 2; be a smooth bounded open set, s∈ (0;1) and we assume
-that (??), (??) and (??) hold. In this section, we present two technical lemmas
-that we will need to study our problem (??).
+that (1), (2) and (3) hold. In this section, we present two technical lemmas
+that we will need to study our problem (P).
 Let us denote by L : W
 0
 → W
@@ -692,7 +692,7 @@ for all u;'∈W
 is the dual space of W
 0
 .
-Lemma 2 [?, Remark 4.3]
+Lemma 2 [5, Remark 4.3]
 (i) L is bounded and strictly monotone operator,
 https://doi.org/10.21638/11701/spbu35.2024.301 Electronic Journal: http://diffjournal.spbu.ru/ 7Differential Equations and Control Processes, N. 3, 2024
 (ii) L is a mapping of type (S
@@ -729,7 +729,7 @@ and x∈ Ω:
 It’s obvious that   is continuous. We prove that   is bounded.
 For each u∈W
 0
-, we have by the inequalities (??) and (??) that
+, we have by the inequalities (4) and (5) that
 ∥ u∥
 q
 ′
@@ -813,12 +813,12 @@ S =I
 ∗
 ◦  is compact.
 4 Main Result
-In this section, we study the nonlinear problem (??) based on the Berkovits
+In this section, we study the nonlinear problem (P) based on the Berkovits
 degree theory introduced in subsection 2.2, where Ω⊂R
 N
 , N ≥ 2; is a smooth
-bounded open, s∈ (0;1) and under assumptions (??), (??) with sp(x;y) < N
-and (??) .
+bounded open, s∈ (0;1) and under assumptions (1), (2) with sp(x;y)<N and
+(3) .
 Let L and S :W
 0
 →W
@@ -828,20 +828,20 @@ Let L and S :W
 https://doi.org/10.21638/11701/spbu35.2024.301 Electronic Journal: http://diffjournal.spbu.ru/ 8Differential Equations and Control Processes, N. 3, 2024
 Deﬁnition 2 We say that u∈W
 0
-is a weak solution of (??) if
+is a weak solution of (P) if
 ⟨Lu;'⟩+⟨Su;'⟩ = 0; ∀'∈W
 0
 :
-Theorem 2 Under assumptions (??), (??) and (??), the problem (??) has a
-weak solution u in W
+Theorem 2 Under assumptions (1), (2) and (3), the problem (P) has a weak
+solution u in W
 0
 :
 Proof u∈W
 0
-is a weak solution of (??) if and only if
+is a weak solution of (P) if and only if
 Lu =−Su: (6)
-Thanks to the properties of the operator L seen in Lemma ?? and in view of
-Minty-Browder Theorem [?, Theorem 26A], the inverse operator
+Thanks to the properties of the operator L seen in Lemma 2 and in view of
+Minty-Browder Theorem [17, Theorem 26A], the inverse operator
 T := L
 −1
 : W
@@ -852,11 +852,11 @@ T := L
 is bounded, continuous and satisﬁes condition (S
 +
 ).
-Moreover, note by Lemma ?? that the operator S is bounded, continuous and
+Moreover, note by Lemma 3 that the operator S is bounded, continuous and
 quasimonotone.
-Consequently, equation (??) is equivalent to
+Consequently, equation (6) is equivalent to
 u =Tv and v+S◦Tv = 0: (7)
-To solve (??), we will apply the degree theory introduced in section 2. To do
+To solve (7), we will apply the degree theory introduced in section 2. To do
 this, we ﬁrst claim that the set
 B :={v∈W
 ∗
@@ -879,8 +879,8 @@ is bounded.
 If ∥u∥
 W
 0
-> 1, then we get by the implication (i) in Proposition ?? and the
-inequality (??) the estimate
+> 1, then we get by the implication (i) in Proposition 2 and the
+inequality (5) the estimate
 ∥Tv∥
 p
 −
@@ -977,7 +977,7 @@ W
 0
 of centre 0 and
 radius R:
-From Lemma ?? it follows that
+From Lemma 1 it follows that
 I +S◦T ∈F
 T
 (B
@@ -1008,7 +1008,7 @@ H(t;v) :=v+tS◦Tv for (t;v)∈ [0;1]×B
 R
 (0):
 Applying the homotopy invariance and normalization property of the degree d
-stated in Theorem ??, we get
+stated in Theorem 1, we get
 d(I +S◦T;B
 R
 (0);0) =d(I;B
@@ -1018,7 +1018,7 @@ and hence there exists a point v∈B
 R
 (0) such that
 v+S◦Tv = 0:
-We conclude that u =Tv is a weak solution of (??).
+We conclude that u =Tv is a weak solution of (P).
 https://doi.org/10.21638/11701/spbu35.2024.301 Electronic Journal: http://diffjournal.spbu.ru/ 10Differential Equations and Control Processes, N. 3, 2024
 References
 [1] Alsaedi R. Perturbed subcritical Dirichlet problems with variable expo-

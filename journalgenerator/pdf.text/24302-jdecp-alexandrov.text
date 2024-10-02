@@ -36,23 +36,23 @@ Keywords: population dynamics, ultimate boundedness, permanence, delay,
 switching, Lyapunov–Krasovskii functional.
 1 Introduction
 Continuous and discrete-time generalized Lotka–Volterra systems are widely
-used for modeling species interactions in biological communities [?,?,?,?]. AnDifferential Equations and Control Processes, N. 3, 2024
+used for modeling species interactions in biological communities [1, 2, 3, 4]. AnDifferential Equations and Control Processes, N. 3, 2024
 actual problem that arises when analyzing the dynamics of such systems is to
 ﬁnd the conditions ensuring sustainable coexistence of species. A sustainable
 biological system should possess the following two important properties: ulti-
-mate boundedness and persistence (see [?]). The ﬁrst one means the existence
+mate boundedness and persistence (see [1]). The ﬁrst one means the existence
 of a compact domain in the state space of the system such that each motion
 enters into it in a ﬁnite time and remains in this domain thereafter. The prop-
 ertyofpersistencemeansthatintheprocessofevolutionspeciesdonotdieout,
 and, moreover, no matter how small their initial quantities are, starting from
 a certain time instant, the quantities of species will exceed some ﬁxed positive
 values. If a system admits both of these properties, then it is called permanent
-[?].
+[1].
 Permanence conditions are well investigated for biological models described
 by ordinary differential or difference equations with constant parameters (see,
-e.g., [?,?,?,?,?,?]) and the references therein). However, it is worth noticing
+e.g., [1, 2, 3, 5, 6, 7]) and the references therein). However, it is worth noticing
 that numerous realistic models should take into account such factors as delay
-and switching of operation modes [?, ?, ?, ?]. For instance, the presence of a
+and switching of operation modes [3, 4, 8, 9]. For instance, the presence of a
 delay may be due to the dependence of the growth rates of some species on
 the prehistory of others, different rates of reproduction and death processes
 for different age groups, etc. On the other hand, switching can be a result
@@ -60,13 +60,13 @@ of the impact of such natural and artiﬁcial factors as droughts, rainy seasons
 deforestation, ﬁres, radiation, that cause sudden changes in the internal con-
 nections in the biological community and the characteristics of the habitat of
 populations.
-The presence of delays and switching signiﬁcantly complicates the perma-
-nence analysis. Some suﬃcient conditions of permanence for time-delay Lotka–
-Volterra type systems were obtained in [?, ?, ?, ?], whereas, in [?, ?, ?, ?], per-
-manence of biological models with switching of parameters was studied. How-
-ever,therearefewresultsonpermanenceforsystemscontainingbothswitching
-and delays (see, e.g., [?, ?, ?, ?]).
-In particular, in [?], certain classes of continuous and discrete-time general-
+The presence of delays and switching signiﬁcantly complicates the per-
+manence analysis. Some suﬃcient conditions of permanence for time-delay
+Lotka–Volterra type systems were obtained in [10, 11, 12, 13], whereas, in
+[14, 15, 16, 17], permanence of biological models with switching of parame-
+ters was studied. However, there are few results on permanence for systems
+containing both switching and delays (see, e.g., [14, 18, 19, 20]).
+Inparticular,in[20],certainclassesofcontinuousanddiscrete-timegeneral-
 izedLotka–Volterrasystemswithdelaysandswitchingwereinvestigated. Using
 special constructions of Lyapunov–Krasovskii functionals, conditions were de-
 rived providing that the considered systems are permanent for any constant
@@ -76,7 +76,7 @@ In the present paper the same classes of systems are studied. New con-
 structions of Lyapunov–Krasovskii functionals will be proposed. Our objective
 https://doi.org/10.21638/11701/spbu35.2024.302 Electronic Journal: http://diffjournal.spbu.ru/ 14Differential Equations and Control Processes, N. 3, 2024
 is to prove that, with the aid of these functionals, less conservative permanence
-conditions can be obtained than those presented in [?].
+conditions can be obtained than those presented in [20].
 2 Statement of the problem
 In what follows,R denotes the ﬁeld of real numbers andR
 n
@@ -206,7 +206,7 @@ discontinuities on every bounded interval. Such switching laws will be called
 admissible.
 Thesystem(1)isageneralizedLotka–Volterramodelwithdelayandswitch-
 ingofparametersdescribingtheinteractionofspeciesinabiologicalcommunity
-[?, ?, ?]. In this model, x
+[1, 2, 3]. In this model, x
 i
 (t) is the population density of the i-th species, the
 coeﬃcients c
@@ -270,7 +270,7 @@ restriction of the solution to the segment [t τ,t], i.e., x
 t
 : ξ 7! x(t+ξ) for
 ξ2 [ τ,0].
-According to the standard assumptions (see [?, ?]), we consider the case
+According to the standard assumptions (see [2, 3]), we consider the case
 where functions f
 i
 (x
@@ -303,8 +303,8 @@ Remark 1. From these properties it follows that intR
 n
 +
 is an invariant set
-for (1) [?].
-Deﬁnition 1[?]. Thesystem(1)iscalledpermanentifthereexistnumbers
+for (1) [2].
+Deﬁnition 1[1]. Thesystem(1)iscalledpermanentifthereexistnumbers
 δ
 1
 andδ
@@ -371,8 +371,8 @@ be nonnegative, s = 1,...,N.
 Remark 2. Asumption 1 means that, for each species, birth rate is greater
 thanmortalityrate,andbetweenanytwospeciesinthecommunitytherearein-
 teractionsof thefollowingtypes: “symbiosis”, “compensalism”or “neutralism”
-[?].
-Under Assumption 1, conditions of permanence for (1) were obtained in [?]
+[1].
+UnderAssumption1,conditionsofpermanencefor(1)wereobtainedin[20]
 on the basis of the Lyapunov direct method. A common Lyapunov–Krasovskii
 https://doi.org/10.21638/11701/spbu35.2024.302 Electronic Journal: http://diffjournal.spbu.ru/ 16Differential Equations and Control Processes, N. 3, 2024
 functional for the family (2) was constructed in the form
@@ -430,11 +430,11 @@ then the system (1) is permanent for any positive delay and any admissible
 switching law. Here and in what follows vector inequalities are understood
 componentwise.
 Inthispaper, wewillproposeanotherconstructionofLyapunov–Krasovskii
-functional. To do this, we will use the approach that was ﬁrst suggested in [?]
-for the stability analysis of delay-free switched linear systems and was later
-extended in [?, ?] to some classes of linear and nonlinear time-delay switched
-systems. We will show that, using the new functional, less conservative perma-
-nence conditions can be derived than those found in [?].
+functional. To do this, we will use the approach that was ﬁrst suggested in
+[21] for the stability analysis of delay-free switched linear systems and was
+later extended in [22, 23] to some classes of linear and nonlinear time-delay
+switchedsystems. Wewillshowthat,usingthenewfunctional,lessconservative
+permanence conditions can be derived than those found in [20].
 Theorem 1 Let Assumption 1 be fulﬁlled. If there exist numbers ν,h
 1
 ,h
@@ -1388,7 +1388,7 @@ fulﬁlled for suﬃciently small values of ν. However, in some problems, e.g.,
 estimation of ultimate boundedness domain, estimation of convergence rate of
 solutions, analysis of the impact of external disturbances, etc., to derive less
 conservative results, it is useful to have opportunity for an appropriate choice
-oftheparameter ν (see, forinstance, [?]). ThepresentedstatementofTheorem
+oftheparameterν (see,forinstance,[24]). ThepresentedstatementofTheorem
 1 permits us to determine admissible domain for this parameter.
 4 Permanence conditions for a discrete-time model
 Inthissection, weconsiderthefollowingdiscrete-timecounterpartofthemodel
@@ -1449,7 +1449,7 @@ ij
 , s = 1,...,N, i,j = 1,...,n,
 areconstantcoeﬃcients, misapositiveintegerdelay, hisapositiveparameter.
 It is worth noticing that, in numerous cases, discrete-time models are more
-appropriate than continuous ones [?, ?, ?]. In addition, the system (8) can be
+appropriate than continuous ones [3, 5, 7]. In addition, the system (8) can be
 used for the numerical simulation of the model (1).
 Lety
 (k)
@@ -1475,7 +1475,7 @@ and y(k,k
 0
 )
 > 0.
-Deﬁnition 2 [?, ?]. The system (8) is called permanent if there exist
+Deﬁnition 2 [5, 7]. The system (8) is called permanent if there exist
 numbers δ
 1
 and δ
@@ -1550,7 +1550,7 @@ for z
 i
 2 ( 1,+1) with a constant L > 0, i = 1,...,n.
 https://doi.org/10.21638/11701/spbu35.2024.302 Electronic Journal: http://diffjournal.spbu.ru/ 21Differential Equations and Control Processes, N. 3, 2024
-In [?], it has been proven that if Assumptions 1, 2 are satisﬁed, the system
+In [20], it has been proven that if Assumptions 1, 2 are satisﬁed, the system
 (3) admits a positive solution and the value of h is suﬃciently small, then (8)
 is permanent for any positive delay and any switching law. Our objective is to
 show that, with the aid of a discrete-time counterpart of the functional (6), the
@@ -2112,7 +2112,7 @@ a similar to that of Theorem 1.
 In this paper, using a special construction of Lyapunov–Krasovskii functional
 anditsdiscrete-timecounterpart,newpermanenceconditionsforsomecontinu-
 ousanddiscrete-timebiologicalmodelswithdelaysandswitchingareobtained.
-Let us show that these conditions are less conservative than those found in [?].
+Letus showthat these conditions are less conservativethan those found in [20].
 Really, if the system (3) admits a positive solution, then there exist vectors
 η > 0, ζ > 0 and numbers h
 1
@@ -2198,7 +2198,7 @@ p
 +h
 2
 < 0.
-As a result, we obtain that theorems from the paper [?] are not applicable
+As a result, we obtain that theorems from the paper [20] are not applicable
 to systems of the forms (1) and (8) with the considered matrices, whereas
 Theorems 1 and 2 from the present work guarantee that these systems are
 permanent.
