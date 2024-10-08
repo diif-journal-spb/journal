@@ -661,23 +661,23 @@ the literature was filled in the beginnings of the new millennium, inside the
 book Indra’s pearls by Mumford, Series and Wright [15], which provided a very
 extensive and plain discussion of the lexicographic approach.
 3 Drawbacks of the lexicographic approach
-Given n generators and chains (2) of maximal depth d, disc images or limit
+Given n generators and chains (2) of maximal depth d, disc images and limit
 sets require N
 T
-= 1 +
+=
 d
 X
 i=1
-g· (g− 1)
-i− 1
-(intermediate nodes and leaves) and
-https://doi.org/10.21638/11701/spbu35.2024.305 Electronic Journal: http://diffjournal.spbu.ru/ 77Differential Equations and Control Processes, N. 3, 2024
-N
+n
+i
+(intermediate nodes and leaves) and N
 L
-= (g− 1)
-d− 1
-words (leaves only) respectively. The lexicographic approach
-features the following additional computation costs:
+= n
+d
+words
+https://doi.org/10.21638/11701/spbu35.2024.305 Electronic Journal: http://diffjournal.spbu.ru/ 77Differential Equations and Control Processes, N. 3, 2024
+(leaves only, i.e. the number of permutations) respectively. The lexicographic
+approach features the following additional computation costs:
 (1) a first table for binding letters to the indexes of the generators stored in
 an array;
 (2) a second table for registering the association between the letters of
