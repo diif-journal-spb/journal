@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<number year="2024" number="4">
+    <!-- русский -->
+    <article>
+        <articleInfo lang="EN" FirstPage="1" LastPage="32">
+            <pdf>24401-jdecp-krivovichev.pdf</pdf>
+            <abstract>The work is devoted to the construction and analysis of the gradient method based on a modified explicit second-order Runge--Kutta method, constructed using the Lagrange--Burmann expansion. A two-step method with inertia based on the heavy ball method is proposed. Convergence theorems are proven for strongly convex quadratic and perturbed quadratic functions. Analytical expressions for the optimal parameters of the method are obtained. For the quadratic function it is demonstrated, that the proposed method converges faster, than other well-known accelerated methods.
+
+                The results of the application of the method to the numerical solution of linear and nonlinear boundary value problems (Dirichlet problem for a 3D Poisson equation, problems from the calculus of variations, problems for integro-differential equations) are presented. It is demonstrated that, in comparison with well-known methods, the proposed method allows one to obtain a numerical solution with the required accuracy for different grid resolutions in a smaller number of iterations and time.</abstract>
+            <title>Application of the Modified Runge-Kutta Method to the Construction of the Descent Method for Solving Boundary Value Problems</title>
+            <keywords>
+                <word>boundary value problems</word>
+                <word>convex optimization</word>
+                <word>gradient descent</word>
+                <word>Runge-Kutta methods</word>
+            </keywords>
+            <references>
+                <reference>Ascher U. M., van den Doel K., Huang H., Svaiter B. F. Gradient descent and fast artificial time integration. &lt;em&gt;ESAIM: M2AN, &lt;/em&gt; 2009; (43): 689-708</reference>
+                <reference>Porta F., Cornelio A., Ruggiero V. Runge-Kutta-like scaling techniques for first-order methods in convex optimization. &lt;em&gt;Applied Numerical Mathematics, &lt;/em&gt; 2017; (116): 256-272</reference>
+                <reference>Eftekhari A., Vandereycken B., Vilmart G., Zygalakis K. C. Explicit stabilised gradient descent for faster strongly convex optimisation. &lt;em&gt;BIT Numerical Mathematics&lt;/em&gt;, 2021; (61): 119-139</reference>
+                <reference>Stillfjord T., Williamson M. SRKCD: A stabilized Runge-Kutta method for stochastic optimization. &lt;em&gt;Journal of Computational and Applied Mathematics, &lt;/em&gt; 2023; (417): 114575</reference>
+                <reference>Zhang J., Mokhtari A., Sra S., Jadbabaie A. Direct Runge-Kutta discretisation achieves acceleration. NIPS'18: Proceedings of the 32nd International Conference on Neural Information Processing Systems, Montreal, 2018, pp. 3904-3913</reference>
+                <reference>Zhang J., Sra S., Jadbabaie A. Acceleration in first order quasi-strongly convex optimization by ode discretization. 2019 IEEE 58th Conference on Decision and Control (CDC), Nice, 2019, pp. 1501-1506</reference>
+                <reference>Shi B., Du S. S., Jordan M. I., Su W. J. Understanding the acceleration phenomenon via high-resolution differential equations. &lt;em&gt;Mathematical Programming, &lt;/em&gt; 2022; (195): 79-148</reference>
+                <reference>Luo H., Chen L. From differential equation solvers to accelerated first-order methods for convex optimization. &lt;em&gt;Mathematical Programming, &lt;/em&gt; 2022; (195): 735-781</reference>
+                <reference>Duruisseaux V., Leok M. Practical perspectives on symplectic accelerated optimization. &lt;em&gt;Optimization Methods and Software, &lt;/em&gt; 2023; (38): 1230-1268</reference>
+                <reference>Chen R., Li X. Implicit Runge-Kutta methods for accelerated unconstrained convex optimization. &lt;em&gt;IEEE Access, &lt;/em&gt; 2020; (8): 28624-28634</reference>
+                <reference>Areias P., Rabczuk T. An engineering interpretation of Nesterov’s convex minimization algorithm and time integration: application to optimal fiber orientation. &lt;em&gt;Computational Mechanics, &lt;/em&gt; 2021; (68): 211-227</reference>
+                <reference>Al’ber S., Al’ber Y. A method of differential descent for solving non-linear systems. &lt;em&gt;USSR Computational Mathematics and Mathematical Physics, 1967; &lt;/em&gt; (7), no. 1: 15-40</reference>
+                <reference>Abbott J. P., Brent R. P. Fast local convergence with single and multistep methods for nonlinear equations. &lt;em&gt;The Journal of the Australian Mathematical Society. Series B. Applied Mathematics, &lt;/em&gt; 1977; (20): 173-199</reference>
+                <reference>Brown A. A., Bartholomew-Biggs M. C. Some effective methods for unconstrained optimization based on the solution of systems of ordinary differential equations. &lt;em&gt;Journal of Optimization Theory and Applications, &lt;/em&gt; 1989; (62): 211-224</reference>
+                <reference>Khiyabani F. M., Leong W. J. Quasi-Newton methods based on ordinary differential equation approach for unconstrained nonlinear optimization. &lt;em&gt;Applied Mathematics and Computation, &lt;/em&gt; 2014; (233): 272-291</reference>
+                <reference>Su W., Boyd S., Candes E. J. A differential equation for modeling Nesterov's accelerated gradient method: Theory and insights. &lt;em&gt;Journal of Machine Learning Research, &lt;/em&gt; 2016; (17), no. 53: 1-43</reference>
+                <reference>Shi B., Du S. S., Su W., Jordan M. I. Acceleration via symplectic discretization of high-resolution differential equations. NIPS'19: Proceedings of the 33rd International Conference on Neural Information Processing Systems, Vancouver, 2019, pp. 5744-5752</reference>
+                <reference>Chan R. P. K., Tsai A. Y. J. On explicit two-derivative Runge-Kutta methods. &lt;em&gt;Numerical Algorithms, &lt;/em&gt; 2010; (53): 171-194</reference>
+                <reference>Turaci M. O., Ozis T. Derivation of three-derivative Runge-Kutta methods. &lt;em&gt;Numerical Algorithms, &lt;/em&gt; 2016; (74): 247-265</reference>
+                <reference>Qin X., Yu J., Yan C. Derivation of three-derivative two-step Runge-Kutta methods. &lt;em&gt;Mathematics, &lt;/em&gt; 2024; (12): 711</reference>
+                <reference>Dang Q. A., Hoang M. T. Positive and elementary stable explicit nonstandard Runge-Kutta methods for a class of autonomous dynamical systems. &lt;em&gt;International Journal of Computer Mathematics, &lt;/em&gt; 2020; (97): 2036-2054</reference>
+                <reference>Arushanyan O. B., Zaletkin S. F. Approximate solution of the Cauchy problem for ordinary differential equations by the method of Chebyshev series. &lt;em&gt;Vychislitel’nye metody i programmirovanie&lt;/em&gt;, 2016; (17), № 2: 121-131. (In Russ. )</reference>
+                <reference>Vorozhtsov E. V. Derivation of explicit difference schemes for ordinary differential equations with the aid of Lagrange-Burmann expansions. &lt;em&gt;Vychislitel’nye metody i programmirovanie&lt;/em&gt;, 2010; (11), № 2: 198-209. (In Russ. )</reference>
+                <reference>Vorozhtsov E. V. Derivation of explicit difference schemes for ordinary differential equations with the aid of Lagrange-Burmann expansions. &lt;em&gt;Lecture Notes in Computer Science, &lt;/em&gt; 2010; (6244): 250-266</reference>
+                <reference>Vorozhtsov E. V. Application of Lagrange-Burmann expansions for the numerical integration of the inviscid gas equations. &lt;em&gt;Vychislitel’nye metody i programmirovanie&lt;/em&gt;, 2011; (12), № 3: 348-361. (In Russ. )</reference>
+                <reference>Vorozhtsov E. V. Construction of third-order schemes using Lagrange-Burmann expansions for the numerical integration of inviscid gas equations. &lt;em&gt;Vychislitel’nye metody i programmirovanie&lt;/em&gt;, 2016; (17), № 1: 21-43. (In Russ. )</reference>
+                <reference>Jerez S. Non-standard Lagrange-Burman methods for the numerical integration of differential equations. &lt;em&gt;Journal of Difference Equations and Applications, &lt;/em&gt; 2012; (18): 1899-1912</reference>
+                <reference>Polyak B. T. Some methods of speeding up the convergence of iteration methods. &lt;em&gt;USSR Computational Mathematics and Mathematical Physics&lt;/em&gt;, 1964; (4), no. 5: 1-17</reference>
+                <reference>Abramowitz M., Stegun I. A. &lt;em&gt;Handbook of Mathematical Functions&lt;/em&gt;. Martino Fine Books, 2014. 1060 p</reference>
+                <reference>Bakhvalov N. S., Zhidkov N. P., Kobel’kov G. M. &lt;em&gt;Chislennye metody &lt;/em&gt;[Numerical methods]. Moscow, Laboratoriia znanii Publ., 2020. 636 p</reference>
+                <reference>Gantmacher F. F. &lt;em&gt;Teoriya matrits&lt;/em&gt;[Theory of matrices]. Moscow, FIZMATLIT, 2010. 560 p</reference>
+                <reference>Polyak B. T. &lt;em&gt;Introduction to Optimization&lt;/em&gt;. Optimization Software Inc., 1987. 264 p</reference>
+                <reference>Nesterov Y. E. &lt;em&gt;Introductory Lectures on Convex Optimization: a Basic Course&lt;/em&gt;. Springer, 2004. 236 p</reference>
+                <reference>Lessard L., Recht B., Packard A. Analysis and design of optimization algorithms via integral quadratic constraints. &lt;em&gt;SIAM Journal on Optimization, &lt;/em&gt; 2016; (26), 57-95</reference>
+                <reference>Samarskii A. A., Nikolaev E. S. &lt;em&gt;Metody resheniia setochnyh uravnenii &lt;/em&gt;[Methods of solution of grid equations]. Moscow, Nauka Publ., 1978. 595 p</reference>
+                <reference>Nikolaev E. S. &lt;em&gt;Metody resheniia setochnyh uravnenii &lt;/em&gt;[Methods of solution of grid equations]. Moscow, MSU Publ., 2023. 404 p</reference>
+                <reference>Ortega M., Poole W. J. &lt;em&gt;An Introduction to Numerical Methods for Differential Equations&lt;/em&gt;. Pitman Publishing Inc., 1981. 329 p</reference>
+                <reference>Samarskii A. A., Gulin A. V. &lt;em&gt;Ustoichivost’ raznostnyh shem &lt;/em&gt;[Stability of difference schemes]. Moscow, Nauka Publ., 1973. 415 p</reference>
+                <reference>Elsholtz L. E. &lt;em&gt;Variatsionnoe ischislenie&lt;/em&gt;[Calculus of Variations]. Moscow, URSS, 2023. 208 p</reference>
+                <reference>Vasudeva M. A., Verwer J. Solving parabolic integro-differential equations by an explicit integration method. &lt;em&gt;Journal of Computational and Applied Mathematics&lt;/em&gt;, 1992; (39): 121-132</reference>
+            </references>
+        </articleInfo>
+        <articleInfo lang="RU" FirstPage="1" LastPage="32">
+            <pdf>24401-jdecp-krivovichev.pdf</pdf>
+            <abstract>Работа посвящена построению и анализу градиентного метода, основанного на модифицированном явном методе Рунге-Кутты второго порядка, построенном с использованием разложения Лагранжа --- Бюрмана. Предложен двухшаговый метод с инерцией, основанный на методе тяжелого шарика. Доказаны теоремы о сходимости для сильно выпуклой квадратичной и возмущенной квадратичной функции. Получены аналитические выражения для параметров метода, обеспечивающие оптимальную скорость сходимости. В случае квадратичной функции показано, что предложенный метод сходится быстрее, чем другие ускоренные методы.
+
+                Представлены результаты применения метода к численному решению линейных и нелинейных краевых задач: задачи Дирихле для трехмерного уравнения Пуассона, задачи вариационного исчисления, задач для интегро-дифференциальных уравнений. Показано, что по сравнению с известными методами, предложенный метод позволяет получать численное решение с нужной точностью при разных разбиениях сетки за меньшее число итераций и время.</abstract>
+            <title>Применение модифицированного метода Рунге-Кутты к построению метода спуска для решения краевых задач</title>
+            <keywords>
+                <word>выпуклая оптимизация</word>
+                <word>градиентный спуск</word>
+                <word>краевые задачи</word>
+                <word>методы Рунге-Кутты</word>
+            </keywords>
+            <references>
+                <reference>Ascher U. M., van den Doel K., Huang H., Svaiter B. F. Gradient descent and fast artificial time integration. &lt;em&gt;ESAIM: M2AN, &lt;/em&gt; 2009; (43): 689-708</reference>
+                <reference>Porta F., Cornelio A., Ruggiero V. Runge-Kutta-like scaling techniques for first-order methods in convex optimization. &lt;em&gt;Applied Numerical Mathematics, &lt;/em&gt; 2017; (116): 256-272</reference>
+                <reference>Eftekhari A., Vandereycken B., Vilmart G., Zygalakis K. C. Explicit stabilised gradient descent for faster strongly convex optimisation. &lt;em&gt;BIT Numerical Mathematics&lt;/em&gt;, 2021; (61): 119-139</reference>
+                <reference>Stillfjord T., Williamson M. SRKCD: A stabilized Runge-Kutta method for stochastic optimization. &lt;em&gt;Journal of Computational and Applied Mathematics, &lt;/em&gt; 2023; (417): 114575</reference>
+                <reference>Zhang J., Mokhtari A., Sra S., Jadbabaie A. Direct Runge-Kutta discretisation achieves acceleration. NIPS'18: Proceedings of the 32nd International Conference on Neural Information Processing Systems, Montreal, 2018, pp. 3904-3913</reference>
+                <reference>Zhang J., Sra S., Jadbabaie A. Acceleration in first order quasi-strongly convex optimization by ode discretization. 2019 IEEE 58th Conference on Decision and Control (CDC), Nice, 2019, pp. 1501-1506</reference>
+                <reference>Shi B., Du S. S., Jordan M. I., Su W. J. Understanding the acceleration phenomenon via high-resolution differential equations. &lt;em&gt;Mathematical Programming, &lt;/em&gt; 2022; (195): 79-148</reference>
+                <reference>Luo H., Chen L. From differential equation solvers to accelerated first-order methods for convex optimization. &lt;em&gt;Mathematical Programming, &lt;/em&gt; 2022; (195): 735-781</reference>
+                <reference>Duruisseaux V., Leok M. Practical perspectives on symplectic accelerated optimization. &lt;em&gt;Optimization Methods and Software, &lt;/em&gt; 2023; (38): 1230-1268</reference>
+                <reference>Chen R., Li X. Implicit Runge-Kutta methods for accelerated unconstrained convex optimization. &lt;em&gt;IEEE Access, &lt;/em&gt; 2020; (8): 28624-28634</reference>
+                <reference>Areias P., Rabczuk T. An engineering interpretation of Nesterov’s convex minimization algorithm and time integration: application to optimal fiber orientation. &lt;em&gt;Computational Mechanics, &lt;/em&gt; 2021; (68): 211-227</reference>
+                <reference>Альбер С. И., Альбер Я. И. Применение метода дифференциального спуска для решения нелинейных систем. &lt;em&gt;Журнал вычислительной математики и математической физики, &lt;/em&gt; 1967; (68), № 1: 14-32</reference>
+                <reference>Abbott J. P., Brent R. P. Fast local convergence with single and multistep methods for nonlinear equations. &lt;em&gt;The Journal of the Australian Mathematical Society. Series B. Applied Mathematics, &lt;/em&gt; 1977; (20): 173-199</reference>
+                <reference>Brown A. A., Bartholomew-Biggs M. C. Some effective methods for unconstrained optimization based on the solution of systems of ordinary differential equations. &lt;em&gt;Journal of Optimization Theory and Applications, &lt;/em&gt; 1989; (62): 211-224</reference>
+                <reference>Khiyabani F. M., Leong W. J. Quasi-Newton methods based on ordinary differential equation approach for unconstrained nonlinear optimization. &lt;em&gt;Applied Mathematics and Computation, &lt;/em&gt; 2014; (233): 272-291</reference>
+                <reference>Su W., Boyd S., Candes E. J. A differential equation for modeling Nesterov's accelerated gradient method: Theory and insights. &lt;em&gt;Journal of Machine Learning Research, &lt;/em&gt; 2016; (17), no. 53: 1-43</reference>
+                <reference>Shi B., Du S. S., Su W., Jordan M. I. Acceleration via symplectic discretization of high-resolution differential equations. NIPS'19: Proceedings of the 33rd International Conference on Neural Information Processing Systems, Vancouver, 2019, pp. 5744-5752</reference>
+                <reference>Chan R. P. K., Tsai A. Y. J. On explicit two-derivative Runge-Kutta methods. &lt;em&gt;Numerical Algorithms, &lt;/em&gt; 2010; (53): 171-194</reference>
+                <reference>Turaci M. O., Ozis T. Derivation of three-derivative Runge-Kutta methods. &lt;em&gt;Numerical Algorithms, &lt;/em&gt; 2016; (74): 247-265</reference>
+                <reference>Qin X., Yu J., Yan C. Derivation of three-derivative two-step Runge-Kutta methods. &lt;em&gt;Mathematics, &lt;/em&gt; 2024; (12): 711</reference>
+                <reference>Dang Q. A., Hoang M. T. Positive and elementary stable explicit nonstandard Runge-Kutta methods for a class of autonomous dynamical systems. &lt;em&gt;International Journal of Computer Mathematics, &lt;/em&gt; 2020; (97): 2036-2054</reference>
+                <reference>Арушанян О. Б., Залеткин С. Ф. Приближенное решение задачи Коши для обыкновенных дифференциальных уравнений методом рядов Чебышeва. &lt;em&gt;Вычислительные методы и программирование&lt;/em&gt;, 2016; (17), № 2: 121-131. \</reference>
+                <reference>Ворожцов Е. В. Построение явных разностных схем для обыкновенных дифференциальных уравнений с помощью разложений Лагранжа - Бюрмана. &lt;em&gt;Вычислительные методы и программирование, &lt;/em&gt; 2010; (11), № 2: 198-209</reference>
+                <reference>Vorozhtsov E. V. Derivation of explicit difference schemes for ordinary differential equations with the aid of Lagrange-Burmann expansions. &lt;em&gt;Lecture Notes in Computer Science, &lt;/em&gt; 2010; (6244): 250-266</reference>
+                <reference>Ворожцов Е. В. Применение разложений Лагранжа - Бюрмана для численного интегрирования уравнений невязкого газа. &lt;em&gt;Вычислительные методы и программирование, &lt;/em&gt; 2011; (12), № 3: 348-361</reference>
+                <reference>Ворожцов Е. В. Конструирование схем третьего порядка точности с помощью разложений Лагранжа - Бюрмана для численного интегрирование уравнений невязкого газа. &lt;em&gt;Вычислительные методы и программирование, &lt;/em&gt; 2016; (17), № 1: 21-43</reference>
+                <reference>Jerez S. Non-standard Lagrange-Burman methods for the numerical integration of differential equations. &lt;em&gt;Journal of Difference Equations and Applications, &lt;/em&gt; 2012; (18): 1899-1912</reference>
+                <reference>Поляк Б. Т. О некоторых способах ускорения сходимости итерационных методов. &lt;em&gt;Журнал вычислительной математики и математической физики, &lt;/em&gt; 1964; (4), № 5: 791-803</reference>
+                <reference>Абрамовиц М., Стиган И. Справочник по специальным функциям. М. : Наука, 1979. 832 с</reference>
+                <reference>Бахвалов Н. С., Жидков Н. П., Кобельков Г. М. Численные методы. М. : Лаборатория знаний, 2020. 636 с</reference>
+                <reference>Гантмахер Ф. Р. Теория матриц. М. : ФИЗМАТЛИТ, 2010. 560 с</reference>
+                <reference>Поляк Б. Т. Введение в оптимизацию. М. : Наука, 1983. 384 с</reference>
+                <reference>Нестеров Ю. Е. Введение в выпуклую оптимизацию. М. : МЦНМО, 2010. 280 с</reference>
+                <reference>Lessard L., Recht B., Packard A. Analysis and design of optimization algorithms via integral quadratic constraints. &lt;em&gt;SIAM Journal on Optimization, &lt;/em&gt; 2016; (26), 57-95</reference>
+                <reference>Самарский А. А., Николаев Е. С. Методы решения сеточных уравнений. М. : Наука, 1978. 592 с</reference>
+                <reference>Николаев Е. С. Методы решения сеточных уравнений. М. : Изд-во МГУ, 2023. 404 с</reference>
+                <reference>Ортега Д., Пул У. Введение в численные методы решения дифференциальных уравнений. М. : Наука, 1986. 288 с</reference>
+                <reference>Самарский А. А., Гулин А. В. Устойчивость разностных схем. М. : Наука, 1973. 415 с</reference>
+                <reference>Эльсгольц Л. Э. Вариационное исчисление. М. : УРСС, 2023. 208 с</reference>
+                <reference>Vasudeva M. A., Verwer J. Solving parabolic integro-differential equations by an explicit integration method. &lt;em&gt;Journal of Computational and Applied Mathematics&lt;/em&gt;, 1992; (39): 121-132</reference>
+            </references>
+        </articleInfo>
+        <authors>
+            <author ref="n_2024_12_krivovichev" sort-key="1" />
+            <author ref="n_2024_12_egorov" sort-key="2" />
+        </authors>
+    </article>
+    
+</number>
