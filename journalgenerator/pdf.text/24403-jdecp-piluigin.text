@@ -1,0 +1,4161 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 4, 2024
+Electronic Journal,
+reg. N Φ C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+General control problems
+Convergence of trajectories and stability of fixed points in a
+modified Hegselmann – Krause model
+N.D. Knyazev
+Saint Petersburg State University
+e-mail: knyazz03@mail.ru
+S.Yu. Pilyugin
+Saint Petersburg State University
+e-mail: sergeipil47@mail.ru
+Abstract. In this paper, we study a modified Hegselmann – Krause model
+of opinion dynamics based on the bounded confidence principle. This model is
+formulated as a discontinuous and nonlinear dynamical system. At any time
+moment of the process of opinion formation, the operator of forming the next
+opinionofanagentistwo-step; first, onetakestheaverageofopinionsofagents
+sharing similar opinions plus his/her own; in the second step, a regularization
+procedure is performed. A new regularization procedure is applied. We find
+conditions under which every trajectory tends to a fixed point of the system
+and study stability properties of fixed points.
+Keywords: Opinion dynamics, bounded confidence principle, Hegselmann –
+Krause model, convergence of trajectories, stability of fixed points
+1. Introduction. Atpresent,opinionstudiesareawell-developedfieldof
+research (see, for example, the monographs [18, 23] and the recent surveys [2,Differential Equations and Control Processes, N. 4, 2024
+26]). The main goal of opinion dynamics is to analyze evolution of public
+opinion in social systems.
+Various(mostlylinear)modelsofopiniondynamicshavebeenstudiedsince
+1950s ([10, 11]). The linearity of a model allows one to apply more or less
+standard methods of linear dynamical systems.
+Oneofthefirstnonlinearmodelswassuggestedin[13,16],wherethenotion
+of “bounded confidence” had been introduced. This notion formalizes the fact
+that, in the course of formation of public opinion, a member of the society is
+mostly influenced by individuals sharing a similar opinion.
+The first opinion model based on the notion of bounded confidence, intro-
+duced by Hegselmann and Krause, was later called the Hegselmann – Krause
+(HK) model; this model and its generalizations have been intensively studied
+by various authors, see, for example, [9, 20, 17, 5, 19, 8, 7, 14, 24, 25, 12].
+Mostly, the results were based on computer simulations, and it was noted that
+“rigorous analytical results are difficult to obtain [13].
+To introduce the HK model, let us consider the dynamics of opinions in a
+society of voters who have to choose between two options, -1 and 1. Assume
+that the society is formed by N individuals (usually called “agents”), and let
+v
+n
+k
+∈ [− 1,1], k∈{1,...,N}, be the opinion of individual k at time moment n.
+Fix a positive ε < 1 (the level of bounded confidence in the society) and
+consider for k∈{1,...,N} the set of indices
+J(v
+n
+k
+) ={l∈{1,...,N} :|v
+n
+l
+− v
+n
+k
+|≤ ε}.
+This is the set of indices of agents whose opinions influence agent k at time
+moment n. Denote by I(v
+n
+k
+) the cardinality of the set J(v
+n
+k
+) (note that I(v
+n
+k
+)>
+0).
+In the original HK model (see [15]), the dynamics is governed (in our nota-
+tion) by the equalities
+v
+n+1
+k
+=
+1
+I(v
+n
+k
+)
+X
+l∈J(v
+n
+k
+)
+v
+n
+l
+, k∈{1,...,N},n≥ 0. (1)
+In the paper [21], the following modification of the HK model had been
+studied. Fix a number h > 0 and consider the dynamics governed by the
+equalities
+v
+n+1
+k
+=v
+n
+k
++
+h
+I(v
+n
+k
+)
+X
+l∈J(v
+n
+k
+)
+v
+n
+l
+, k∈{1,...,N},n≥ 0. (2)
+https://doi.org/10.21638/11701/spbu35.2024.403 Electronic Journal: http://diffjournal.spbu.ru/ 54Differential Equations and Control Processes, N. 4, 2024
+In the paper [6], it is explained that system (2) appears as an application
+of the one-step Euler method to the differential equation
+d
+dt
+v
+t
+k
+=
+1
+I(v
+t
+k
+)
+X
+l∈J(v
+t
+k
+)
+v
+t
+l
+, k∈{1,...,N},t≥ 0
+whichisnaturallyavariantofthe“boundedconfidence”modelwithcontinuous
+time.
+System (2) is the main object of study in the present paper.
+Let us explain the main differences between systems (2) and (1).
+First,ifJ(v
+n
+k
+) ={k}(i.e.,agentkdoesnothaveagentswithε-closeopinions
+at time n), then v
+n+1
+k
+= v
+n
+k
+in model (1), i.e., his/her opinion does not change.
+Incontrast,v
+n+1
+k
+̸=v
+n
+k
+inmodel(2). Asociologicalmeaningofthisphenomenon
+is explained in [21].
+The second very important difference is that the dynamics of models (2)
+and (1) are essentially different.
+It is easily seen that since |v
+n
+k
+| ≤ 1 in model (1), similar inequalities hold
+for v
+n+1
+k
+, i.e., formulas (1) define a dynamical system on [ − 1,1]
+N
+.
+At the same time, this is not so for model (2); hence, one has to apply
+some regularization procedure to get a properly defined dynamical system on
+[− 1,1]
+N
+.
+Two such regularization procedures have been applied in the papers [21]
+and [1].
+For an array V
+n
+= (v
+n
+1
+,...,v
+n
+N
+), introduce an auxiliary array W(V
+n
+) =
+(w
+n
+1
+,...,w
+n
+N
+) by setting
+w
+n
+k
+=v
+n
+k
++
+h
+I(v
+n
+k
+)
+X
+l∈J(v
+n
+k
+)
+v
+n
+l
+. (3)
+Clearly,|w
+n
+k
+|≤ 1+h.
+In the paper [21], a “cutting” procedure had been applied.
+Set
+u
+n
+k
+=v
+n
+k
+if|w
+n
+k
+|≤ 1,
+u
+n
+k
+= 1 if w
+n
+k
+> 1,
+u
+n
+k
+=− 1 if w
+n
+k
+<− 1,
+and
+Φ( V
+n
+) = (u
+n
+1
+,...,u
+n
+N
+).
+https://doi.org/10.21638/11701/spbu35.2024.403 Electronic Journal: http://diffjournal.spbu.ru/ 55Differential Equations and Control Processes, N. 4, 2024
+Then Φ([0 ,1]
+N
+)⊂ [0,1]
+N
+, and we get a properly defined dynamical system
+on [− 1,1]
+N
+.
+In the paper [1], a different procedure had been applied. Take a nonzero
+array V
+n
+, define an auxiliary array W(V
+n
+) by formulas (3) (clearly, W(V
+n
+) is
+also nonzero), and set
+u
+n
+k
+=
+w
+n
+k
+max
+l=1,...,N
+|w
+n
+l
+|
+and
+Φ( V
+n
+) = (u
+n
+1
+,...,u
+n
+N
+).
+Clearly, the system Φ is also a properly defined dynamical system on
+[− 1,1]
+N
+.
+In this paper, we consider one more natural regularization procedure.
+For a nonzero array V
+n
+= (v
+n
+1
+,...,v
+n
+N
+) and the corresponding array W(V
+n
+)
+given by (3), define
+µ (W(V
+n
+)) = max(1, max
+l=1,...,N
+|w
+n
+l
+|)
+and set
+Φ( V
+n
+) = (u
+n
+1
+,...,u
+n
+N
+), (4)
+where
+u
+n
+k
+=
+w
+n
+k
+µ (W(V
+n
+))
+.
+As in the previous cases, formula (4) defines a dynamical system Φ on
+[− 1,1]
+N
+which we study in this paper.
+Oneofthemainpropertiesofsystemsmodelingopiniondynamicsisthecon-
+vergence of their trajectories as time tends to infinity. For the above dynamical
+systems, knownsufficientconditionsofsuchaconvergenceareessentiallydiffer-
+ent. In the paper [21], this condition has the form ε≤ 1/2, while in the paper
+[1] it has the form ε(N− 1)< 1.
+In this paper, we show that if
+ε< 1, (5)
+then all the trajectories of system Φ defined by formula (4) converge as time
+tends to infinity.
+In addition, we show that any trajectory of Φ tends to a fixed point and
+study stability properties of fixed points.
+https://doi.org/10.21638/11701/spbu35.2024.403 Electronic Journal: http://diffjournal.spbu.ru/ 56Differential Equations and Control Processes, N. 4, 2024
+Everywhere in the paper, it is assumed that condition (5) is satisfied.
+The structure of the paper is as follows. In Section 2, we describe basic
+properties of the system and define two classes of initial points: standard and
+singular. Section 3 is devoted to trajectories of singular points. In Section 4,
+we show that trajectories of standard points converge; in Section 5, it is shown
+that all trajectories tend to fixed points of Φ. In Sections 6, 7, we study
+stability properties of fixed points. It is shown that singular fixed points are
+Lyapunov unstable, the system Φ has two asymptotically stable fixed points
+P
++
+= (1,...,1) and P
+− = (− 1,...,− 1), and, finally, that any standard fixed
+point different from P
++
+and P
+− is Lyapunov stable but not asymptotically
+stable.
+2. Basic properties of the system. Denote by Ψ the set of points
+V = (v
+1
+,...,v
+N
+) such that v
+1
+≤ v
+2
+≤···≤ v
+N
+.
+Proposition 1 If V ∈ Ψ , then Φ( V)∈ Ψ .
+The proof of this Proposition repeats the proof of Proposition 3.1 of [PC].
+SincethesetofelementsofΦ( V)doesnotdependontheorderofthevalues
+v
+1
+,...,v
+N
+, in what follows, we only consider trajectories of points V ∈ Ψ.
+Proposition 2 If|v
+m
+k
+− v
+m
+k+1
+|>ε, then|v
+m+1
+k
+− v
+m+1
+k+1
+|≥| v
+m
+k
+− v
+m
+k+1
+|.
+Proof. Since|v
+m
+k
+− v
+m
+k+1
+|>ε,J(v
+m
+k
+)⊂{ 1,...,k}andJ(v
+m
+k+1
+)⊂{ k+1,...,N}.
+Hence, the following inequalities are valid:
+v
+m
+k
+≥ P
+i∈J(v
+m
+k
+)
+v
+m
+i
+I(v
+m
+k
+)
+and
+v
+m
+k+1
+≤ P
+j∈J(v
+m
+k+1
+)
+v
+m
+j
+I(v
+m
+k+1
+)
+.
+We apply these inequalities to estimate the difference v
+m+1
+k+1
+− v
+m+1
+k
+:
+v
+m+1
+k+1
+− v
+m+1
+k
+=
+1
+µ (W(V
+m
+))
+
+
+
+v
+m
+k+1
++h· P
+j∈J(v
+m
+k+1
+)
+v
+m
+j
+I(v
+m
+k+1
+)
+− v
+m
+k
+− h· P
+i∈J(v
+m
+k
+)
+v
+m
+i
+I(v
+m
+k
+)
+
+
+
+≥ https://doi.org/10.21638/11701/spbu35.2024.403 Electronic Journal: http://diffjournal.spbu.ru/ 57Differential Equations and Control Processes, N. 4, 2024
+≥ 1
+µ (W(V
+m
+))
+(v
+m
+k+1
+(1+h)− v
+m
+k
+(1+h)) =
+1+h
+µ (W(V
+m
+))
+(v
+m
+k+1
+− v
+m
+k
+)≥ v
+m
+k+1
+− v
+m
+k
+,
+as required. □ Corollary 1 If v
+m
+k+1
+− v
+m
+k
+>ε, then
+v
+m
+k+1
+− v
+m
+k
+≤ v
+m+1
+k+1
+− v
+m+1
+k
+≤ v
+m+2
+k+1
+− v
+m+2
+k
+≤ ....
+Definition 1 We call a point (array V
+0
+) standard if the inequalities
+µ (W(V
+k
+)) > 1 hold for all k large enough. The points that do not satisfy
+this condition are called singular.
+In what follows, we prove that all singular points are fixed points of Φ, and
+they are Lyapunov unstable. First we prove the following simple Proposition.
+Proposition 3 If µ (W(V
+k
+0
+))> 1, then µ (W(V
+k
+))> 1 for all k >k
+0
+.
+Proof. We prove the Proposition using induction on k.
+Base. The statement is obviously valid for k =k
+0
+.
+Induction step. Let us show that if µ (W(V
+k
+)) > 1, then µ (W(V
+k+1
+)) > 1
+as well. By definition, the first inequality means that max
+t=1,...,N
+|w
+t
+(V
+k
+)| > 1. As
+was noted above,
+w
+1
+(V
+k
+)≤ w
+2
+(V
+k
+)≤···≤ w
+N
+(V
+k
+).
+Hence,either|w
+1
+(V
+k
+)| =µ (W(V
+k
+))or|w
+N
+(V
+k
+)| =µ (W(V
+k
+)). Thisimplies
+that|v
+k
+j
+| = 1 either for j = 1 or for j =N.
+Consider for definiteness the second case and assume that v
+k
+N
+= 1 (the
+remaining possible cases are considered similarly).
+Note that
+w
+N
+(V
+k+1
+) =v
+k+1
+N
++
+h
+I(v
+k+1
+N
+)
+X
+t∈J(v
+k+1
+N
+)
+v
+k+1
+t
+.
+We claim that the sum S :=
+P
+t∈J(v
+k+1
+N
+)
+v
+k+1
+t
+is nonzero and has the same sign
+as v
+k
+N
+. The statement of our Proposition is a corollary of this claim since in
+this case,
+µ (W(V
+k+1
+))≥ w
+N
+(V
+k+1
+) = 1+
+S
+I(v
+k+1
+N
+)
+> 1.
+https://doi.org/10.21638/11701/spbu35.2024.403 Electronic Journal: http://diffjournal.spbu.ru/ 58Differential Equations and Control Processes, N. 4, 2024
+To prove the claim, note that if t∈J(v
+k+1
+N
+), then v
+k+1
+t
+has the same sign as
+v
+k+1
+N
+since v
+k+1
+N
+− v
+k+1
+t
+≤ ε< 1 and v
+k+1
+N
+= 1. In addition, the sum S is nonzero
+since it contains the nonzero term v
+k+1
+j
+. The claim is proved. □ Remark. In the proof of Proposition 3, the inequality ε < 1 has been
+explicitly applied.
+Corollary 2 If V
+0
+is a singular point, then µ (W(V
+n
+)) = 1 for all n.
+Corollary 3 If V
+0
+is a standard point, then either v
+n
+1
+=− 1 or v
+n
+N
+= 1 for all
+n large enough.
+3. Trajectories of singular points. In this section, we classify all
+singular points and describe their trajectories.
+Proposition 4 If v
+1
+≤ − ε or v
+N
+≥ ε, then the point V = (v
+1
+,...,v
+N
+) is
+standard.
+Proof. Assume that, under our assumption, the equality µ (W(V
+n
+)) = 1 holds
+foralln. Considerthecasewherev
+N
+≥ ε. Inthiscase,v
+l
+≥ 0foranyl∈J(v
+N
+),
+and it follows that
+v
+1
+N
+=v
+N
++
+h
+I(v
+N
+)
+X
+l∈J(v
+N
+)
+v
+l
+≥ v
+N
++
+h
+N
+v
+N
+=v
+N
+(1+
+h
+N
+).
+Now we apply induction to show that v
+k+1
+N
+≥ v
+N
+(1+
+h
+N
+)
+k
+for k > 1. Indeed,
+if this inequality holds for some k, then v
+k+1
+N
+≥ v
+N
+≥ ε and v
+k+1
+l
+≥ 0 for any
+l∈J(v
+k+1
+N
+). Since µ (W(V
+k+1
+)) = 1, we can estimate v
+k+2
+N
+as follows:
+v
+k+2
+N
+=v
+k+1
+N
++
+h
+I(v
+k+1
+N
+)
+X
+l∈J(v
+k+1
+N
+)
+v
+k+1
+l
+≥ v
+k+1
+N
++
+h
+I(v
+k+1
+N
+)
+v
+k+1
+N
+≥ ≥  
+1+
+h
+N
+ 
+v
+k+1
+N
+≥  
+1+
+h
+N
+ 
+k+1
+v
+N
+.
+Hence, v
+k+1
+N
+≥ v
+N
+(1 +
+h
+N
+)
+k
+for all k, which contradicts the inequalities
+v
+k+1
+N
+≤ 1. The case v
+1
+≤− ε is considered similarly.
+Hence, µ (W(V
+n
+)) > 1 for some n. Consequently, point V is standard by
+Corollary 2. □ https://doi.org/10.21638/11701/spbu35.2024.403 Electronic Journal: http://diffjournal.spbu.ru/ 59Differential Equations and Control Processes, N. 4, 2024
+Proposition 5 Ifv
+N
+− v
+1
+≤ ε and, in addition, the sumv
+1
++··· +v
+N
+is nonzero,
+then the point V = (v
+1
+,...,v
+N
+) is standard.
+Proof. To get a contradiction, assume that µ (W(V
+n
+)) = 1 for all n.
+Denote by s the sum
+1
+N
+N
+P
+l=1
+v
+l
+. Assume that s > 0 (the case s < 0 is
+symmetric). We prove by induction that v
+n
+N
+− v
+n
+1
+= v
+N
+− v
+1
+and v
+n
+d
+≥ v
+d
++
+nhs, d = 1,...,N. The base n = 0 is obvious.
+Assuming that for n =k our claim is valid, let us prove it for n =k+1.
+Due to our assumption,
+v
+k+1
+d
+=v
+k
+d
++
+h
+I(v
+k
+d
+)
+X
+l∈J(v
+k
+d
+)
+v
+k
+l
+=v
+k
+d
++
+h
+N
+N
+X
+l=1
+v
+k
+l
+.
+Substitute d = 1 and d = N in the above formula to conclude that v
+k+1
+N
+− v
+k+1
+1
+=v
+k
+N
+− v
+k
+1
+=v
+N
+− v
+1
+.
+In addition, our assumption implies that
+v
+k+1
+d
+=v
+k
+d
++
+h
+N
+N
+X
+l=1
+v
+k
+l
+≥ v
+d
++khs+
+h
+N
+N
+X
+l=1
+(v
+l
++khs)≥ ≥ v
+d
++khs+
+h
+N
+N
+X
+l=1
+v
+l
+=v
+d
++(k+1)hs, d = 1,...,N.
+Hence, our claim is valid for all n. But v
+N
+d
+≤ 1, while v
+d
++nhs> 1 for large
+n which is a contradiction. It follows that µ (W(V
+n
+)) > 1 for some n which
+means (see Corollary 2) that the point V is standard. □ Remark. It is easily seen that if v
+N
+− v
+1
+≤ ε and v
+1
++··· +v
+N
+= 0, then
+(v
+1
+,...,v
+N
+) is a singular fixed point.
+Proposition 6 If ε<v
+N
+− v
+1
+< 2ε, then V = (v
+1
+,...,v
+N
+) is a standard point.
+Proof. To get a contradiction, assume that µ (W(V
+n
+)) = 1 for all n.
+Denote by x the value v
+N
+− v
+1
+− ε. Clearly, x> 0.
+Apply induction to prove that
+v
+n
+N
+− v
+n
+1
+≥ v
+N
+− v
+1
++
+hnx
+N
+, n≥ 0.
+https://doi.org/10.21638/11701/spbu35.2024.403 Electronic Journal: http://diffjournal.spbu.ru/ 60Differential Equations and Control Processes, N. 4, 2024
+The base n = 0 is obvious. Assume that the induction assumptions is valid
+for some n; we prove it for n+1.
+The equalities µ (W(V
+n
+)) = 1 imply that
+v
+n+1
+1
+=v
+n
+1
++h
+v
+n
+1
++··· +v
+n
+m
+m
+and
+v
+n+1
+N
+=v
+n
+N
++h
+v
+n
+N
++v
+n
+N− 1
++··· +v
+n
+N− k+1
+k
+,
+wherek =I(v
+n
+N
+)andm =I(v
+n
+1
+). Itfollowsfromtheinequalitiesv
+n
+N
+− v
+n
+1
+>ε+x
+and v
+n
+m
+− v
+n
+1
+≤ ε that v
+n
+N
+− v
+n
+m
+>x.
+In the case where N− k+1≥ m,
+v
+n+1
+N
+≥ v
+n
+N
++h
+v
+n
+N
++(k− 1)v
+n
+m
+k
+≥ v
+n
+N
++h
+x+kv
+n
+m
+k
+≥ v
+n
+N
++
+hx
+N
++hv
+n
+m
+and
+v
+n+1
+1
+≤ v
+n
+1
++h
+mv
+n
+m
+m
+≤ v
+n
+1
++hv
+n
+m
+.
+The induction assumption implies that
+v
+n+1
+N
+− v
+n+1
+1
+≥ (v
+n
+N
++
+hx
+N
++hv
+n
+m
+)− (v
+n
+1
++hv
+n
+m
+)≥ v
+N
+− v
+1
++
+hnx
+N
++
+hx
+N
+=
+=v
+N
+− v
+1
++
+h(n+1)x
+N
+.
+In the case where N− k+1 < m, denote by y the arithmetic mean of the
+values v
+n
+N− k+1
+,...,v
+n
+m
+. In other words,
+v
+n
+N− k+1
++··· +v
+n
+m
+=y(m+k− N).
+Then
+v
+n
+1
+≤···≤ v
+n
+N− k+1
+≤ y≤ v
+n
+m
+≤···≤ v
+N
+.
+In addition, it follows from the above reasoning that v
+n
+N
+− y≥ v
+n
+N
+− v
+n
+m
+≥ x.
+We apply these two inequalities to estimate v
+n+1
+N
+and v
+n+1
+1
+in terms of y:
+v
+n+1
+N
+=v
+n
+N
++h
+v
+n
+N
++··· +v
+n
+m
++y(m+k− N)
+k
+≥ ≥ v
+n
+N
++h
+v
+n
+N
++y(k− 1)
+k
+≥ v
+n
+N
++h
+x+ky
+k
+≥ v
+n
+N
++hy+
+hx
+N
+https://doi.org/10.21638/11701/spbu35.2024.403 Electronic Journal: http://diffjournal.spbu.ru/ 61Differential Equations and Control Processes, N. 4, 2024
+and
+v
+n+1
+1
+=v
+n
+1
++h
+v
+n
+1
++··· +v
+n
+m
+m
+=v
+n
+1
++h
+v
+n
+1
++··· +v
+n
+N− k
++y(m+k− N)
+m
+≤ ≤ v
+n
+1
++h
+ym
+m
+=v
+n
+1
++hy.
+Now the induction hypothesis implies that
+v
+n+1
+N
+− v
+n+1
+1
+≥ (v
+n
+N
++hy+
+hx
+N
+)− (v
+n
+1
++hy) =v
+n
+N
+− v
+n
+1
++
+hx
+N
+≥ v
+N
+− v
+1
++
+h(n+1)x
+N
+,
+which completes the induction step.
+It follows that
+v
+n
+N
+− v
+n
+1
+≥ v
+N
+− v
+1
++
+hnx
+N
+> 2ε
+for n large enough.
+But if the inequality v
+t
+N
+− v
+t
+1
+≥ 2ε holds for some t, then v
+t
+1
+and v
+t
+N
+cannot
+simultaneouslybelongtotheinterval(− ε,ε);hence,V
+t
+satisfiestheassumptions
+of Proposition 4, which means that V is a standard point. □ Thus, we can characterize all the singular points.
+Corollary 4 If V = (v
+1
+,...,v
+N
+) is a singular point, then V is a fixed point of
+Φ , v
+N
+− v
+1
+≤ ε, and v
+1
++··· +v
+N
+=0.
+4. Converegence of trajectories of standard points. Clearly, we
+have the following representaion for points of trajectories of our dynamical
+system:
+V
+r+1
+=
+E +hA
+r
+µ (W(V
+r
+))
+··· E +hA
+0
+µ (W(V
+0
+))
+V
+0
+,
+where{A
+r
+} is a sequence of stochastic N× N matrices such that the l-th row
+of a matrix A
+r
+contains precisely I =I(v
+r− 1
+l
+) nonzero entries and has the form
+ 
+0,0,..,0,
+1
+I
+,...,
+1
+I
+,0,0,...,0
+ 
+in which the nonzero entries a
+il
+have indices i∈J(v
+r− 1
+l
+).
+Denote
+G
+k
+:=
+E +hA
+k
+1+h
+;
+https://doi.org/10.21638/11701/spbu35.2024.403 Electronic Journal: http://diffjournal.spbu.ru/ 62Differential Equations and Control Processes, N. 4, 2024
+it is easily seen that G
+k
+is a stochastic matrix.
+We can represent the vector V
+r+1
+in terms of these matrices as follows:
+V
+r+1
+=
+(1+h)
+r
+µ (W(V
+0
+))··· µ (W(V
+r
+))
+G
+r
+G
+r− 1
+··· G
+0
+V
+0
+. (6)
+To prove the convergence of such products for standard initial points V
+0
+,
+we refer to the following Theorems 1 and 2.
+Theorem 1 (Lorenz, [3]). Let {G
+k
+} be a sequence of stochastic matrices sat-
+isfying the following conditions:
+(a) the diagonal entries of all he matrices G
+k
+are positive;
+(b) (G
+k
+)
+ij
+= 0 if and only if (G
+k
+)
+ji
+= 0;
+(c) there exists a δ > 0 such that any nonzero entry of any matrix G
+k
+is
+larger than δ .
+Then the infinite product G
+k
+G
+k− 1
+··· G
+0
+converges as k→∞.
+Let us show that the matrices G
+k
+satisfy the assumptions of Theorem 1.
+• The diagonal entries of the matrices E and A
+k
+are positive; hence, as-
+sumption (a) is satisfied;
+• the matrices E and A
+k
+satisfy assumption (b), hence, G
+k
+satisfies this
+assumption as a linear combination of E and A
+k
+.
+• any nonzero entry of a matrix A
+k
+is not less than
+1
+N
+; hence, any nonzero
+entry of the matrix G
+k
+is not less than
+h
+(1+h)N
+. Hence, G
+k
+satisfies condition
+(c).
+Thus, it follows from Theorem 1 that the product G
+r
+G
+r− 1
+··· G
+0
+converges.
+Next, we show that this product does not converge to the zero matrix. First,
+we need the following two definitions.
+Definition 2 A sequence{G
+t
+} of n× n stochastic matrices is called balanced
+if there exists a number α ∈ (0,1) such that for any matrix G in this sequence
+and any subset S⊂{ 1,2,...,n}, the following inequality holds:
+X
+i∈S,j∈S
+G
+ij
+≥ α · X
+i∈S,j∈S
+G
+ji
+,
+where S is the complement to S in{1,...,n}.
+https://doi.org/10.21638/11701/spbu35.2024.403 Electronic Journal: http://diffjournal.spbu.ru/ 63Differential Equations and Control Processes, N. 4, 2024
+Definition 3 We say that a sequence of matrices has feedback property if
+there exists a number γ > 0 such that all diagonal entries of all matrices in the
+sequence are not less than γ .
+The feedback property is introduced in ([4], Section 4.2) for chains of ran-
+dom matrices. Namely, strong feedback property, feedback property, and weak
+feedback property are considered (see [4], page 37). For chains of deterministic
+matrices, the strong feedback property coincides with the feedback property,
+while they differ from the weak feedback property (see [4], Example 5.2, pages
+38-39).
+Definition 4 (see [4], Definition 4.5.) We say that a chain of random matrices
+{W(k)} belongs to the class P
+∗ if there exists a vector-valued random process
+π (k+1) =W(k)π (k) such that π (k)>p
+∗ almost surely for all k≥ 0 and some
+number p
+∗ > 0.
+Remark. As in [4], we write π (k) > p
+∗ if any component of the vector π (k)
+is larger than p
+∗ (see [4], page 8).
+Theorem 2 (Touri, Nedi´ c, [4]). Let {G
+k
+} be a balanced sequence of stochastic
+matrices having the feedback property. Then{G
+k
+} belongs to the classP
+∗ .
+Letuscheckthatthatthesequenceofmatrices{G
+k
+}satisfiestheconditions
+of the above theorem.
+First we show that it is balanced. It was mentioned above that if c
+ij
+are the
+entries of a matrix G
+k
+, then c
+ij
+̸= 0 if and only if c
+ji
+̸= 0. In addition, if c
+ij
+is a
+nonzero entry, then 1≥ c
+ij
+≥ h
+N(1+h)
+. It follows that for any i,j ∈{1,...,N},
+the inequality c
+ij
+≥ h
+N(1+h)
+c
+ji
+holds.
+Thus, if we fix an arbitrary set of indices S ⊂ { 1,2,...,N}, then the
+following inequality is valid:
+X
+i∈S, j∈S
+c
+ij
+≥ h
+N(1+h)
+X
+i∈S, j∈S
+c
+ji
+.
+The feedback property is obvious since the diagonal entries of any of the
+matrices G
+k
+are not less than
+1
+1+h
+.
+https://doi.org/10.21638/11701/spbu35.2024.403 Electronic Journal: http://diffjournal.spbu.ru/ 64Differential Equations and Control Processes, N. 4, 2024
+Thus, the sequence{G
+k
+} belongs to the classP
+∗ , i.e., there exists a vector
+Z
+0
+such that the sequence G
+r
+G
+r− 1
+··· G
+0
+Z
+0
+does not converge to zero. Hence,
+the product G
+r
+G
+r− 1
+··· G
+0
+does not converge to the zero matrix as r→∞.
+Since µ (W(V
+r
+))≤ 1+h, the sequence
+k
+r
+:=
+(1+h)
+r
+µ (W(V
+0
+))··· µ (W(V
+r
+))
+is nondecreasing.
+The left-hand sides of equalities (6) are bounded; the convergence of the
+products G
+r
+G
+r− 1
+··· G
+0
+implies the convergence of the sequence k
+r
+.
+Note that, in addition, if V
+0
+is a standard point, then
+µ (W(V
+r
+))→ 1+h, r→∞. (7)
+Thus, we have shown that the trajectory of any standard point converges;
+below we show that it converges to a fixed point of Φ.
+5. Convergence of trajectories to fixed points. As was shown above,
+any singular point V is a fixed point of Φ; hence, its trajectory obviously con-
+verges to V.
+Let us show that the trajectory of any standard point also converges to a
+fixed point.
+Definition 5 For a sequence v
+k
+n
+, consider the value
+S(v
+n
+k
+) =
+1
+I(v
+n
+k
+)
+· X
+j∈J(v
+n
+k
+)
+v
+n
+j
+.
+Proposition 7 If V is a standard point, then lim
+n→∞
+S(v
+n
+k
+) = lim
+n→∞
+v
+n
+k
+.
+Proof. Fixanarbitraryn∈Nandrepresentthedifference v
+n+1
+k
+− v
+n
+k
+asfollows:
+v
+n+1
+k
+− v
+n
+k
+=
+v
+n
+k
++hS(v
+n
+k
+)
+µ (W(V
+n
+))
+− v
+n
+k
+=
+=
+v
+n
+k
+(1+h)
+µ (W(V
+n
+))
++
+− hv
+n
+k
++h· S(v
+n
+k
+)
+µ (W(V
+n
+))
+− v
+n
+k
+=
+https://doi.org/10.21638/11701/spbu35.2024.403 Electronic Journal: http://diffjournal.spbu.ru/ 65Differential Equations and Control Processes, N. 4, 2024
+=v
+n
+k
+ 
+1+h
+µ (W(V
+n
+))
+− 1
+ 
++
+h
+µ (W(V
+n
+))
+(S(v
+n
+k
+)− v
+n
+k
+).
+As was shown, the trajectory of any standard point converges; hence, the
+limit of the left-hand side as n→∞ in the first line above is 0:
+0 = lim
+n→∞
+ 
+v
+n
+k
+ 
+1+h
+µ (W(V
+n
+))
+− 1
+ 
++
+h
+µ (W(V
+n
+))
+(S(v
+n
+k
+)− v
+n
+k
+)
+ 
+.
+In addition, for a standard point, equality (7) holds; hence,
+lim
+n→∞
+v
+n
+k
+ 
+1+h
+µ (W(V
+n
+))
+− 1
+ 
+= 0,
+and it follows that
+lim
+n→∞
+h
+µ (W(V
+n
+))
+(S(v
+n
+k
+)− v
+n
+k
+) = 0
+and
+lim
+n→∞
+S(v
+n
+k
+) = lim
+n→∞
+v
+n
+k
+.
+□ Proposition 8 If V is a standard point, then there exists a τ ∈ N such that
+J(V
+τ k
+) =J(V
+t
+k
+) for any t>τ and k∈{1,...,N}.
+Proof. Denote lim
+n→∞
+V
+n
+=V
+∗ = (v
+∗ 1
+,...,v
+∗ N
+).
+Find the maximal index k in {1,...,N} for which there exists an l ∈
+{1,...,N} such that the set {t | l ̸∈ J(v
+t
+k
+), l ∈ J(v
+t+1
+k
+)} is infinite. If such
+a pair of indices (k,l) does not exist, then the statement of our Proposition is
+valid.
+The condition l̸∈J(v
+t
+k
+), l∈J(v
+t+1
+k
+) is equivalent to the condition
+|v
+t
+k
+− v
+t
+l
+|>ε≥| v
+t+1
+k
+− v
+t+1
+l
+|.
+Note that l̸∈ J(V
+t
+k
+), l∈ J(v
+t+1
+k
+) if and only if k̸∈ J(V
+t
+l
+), k∈ J(v
+t+1
+l
+). Thus,
+the set {t | k ̸∈ J(v
+t
+l
+), k ∈ J(v
+t+1
+l
+)} is infinite as well. Since we selected the
+maximal such k, k >l.
+Hence, if m∈{k,k+1,...,N}, then the set{t| m̸∈J(v
+t
+k
+), m∈J(v
+t+1
+k
+)}
+is finite. Thus, if a number τ is large enough, then
+J(v
+τ k
+)∩{k,k+1,...,N} =J(v
+τ +1
+k
+)∩{k,k+1,...,N} =
+https://doi.org/10.21638/11701/spbu35.2024.403 Electronic Journal: http://diffjournal.spbu.ru/ 66Differential Equations and Control Processes, N. 4, 2024
+=J(v
+τ +2
+k
+)∩{k,k+1,...,N} =....
+Select an arbitrary t > τ in the set {t | l ̸∈ J(v
+t
+k
+), l ∈ J(v
+t+1
+k
+)}. The sets
+J(v
+t
+k
+) and J(v
+t+1
+k
+) consist of consecutive indices, J(v
+t
+k
+)∩{k,k + 1,...,N} =
+J(v
+t+1
+k
+)∩{k,k+1,...,N}, and l̸∈ J(v
+t
+k
+), l∈ J(v
+t+1
+k
+) for some l < k. Hence,
+J(v
+t
+k
+) ={l
+2
+,...,r} andJ(v
+t+1
+k
+) ={l
+1
+,...,r} for somel
+1
+,l
+2
+,r∈{1,...,N} such
+that l
+1
+≤ l <l
+2
+≤ k≤ r.
+According to our notation,
+S(v
+t
+k
+) =
+v
+t
+l
+2
++··· +v
+t
+r
+r− l
+2
++1
+and
+S(v
+t+1
+k
+) =
+v
+t+1
+l
+1
++··· +v
+t+1
+r
+r− l
+1
++1
+.
+Due to the corresponding convergencies, we may assume that τ is so large
+that |v
+t
+m
+− v
+∗ m
+| < ε/(12N) and |S(v
+t
+m
+)− v
+∗ m
+| < ε/(12N) for all t ≥ τ and
+m = 1,...,N. In particular,
+|v
+t
+m
+− v
+t+1
+m
+|≤| v
+t
+m
+− v
+∗ m
+|+|v
+∗ m
+− v
+t+1
+m
+|<
+ε
+6N
+.
+This inequality implies that
+S(v
+t
+k
+) =
+v
+t
+l
+2
++...+v
+t
+r
+r− l
+2
++1
+≥ (v
+t+1
+l
+2
+− ε
+6N
+)+...+(v
+t+1
+r
+− ε
+6N
+)
+r− l
+2
++1
+=
+=
+v
+t+1
+l
+2
++...+v
+t+1
+r
+r− l
+2
++1
+− ε
+6N
+.
+Hence,
+S(v
+t
+k
+)+
+ε
+6N
+≥ v
+t+1
+l
+2
++··· +v
+t+1
+r
+r− l
+2
++1
+.
+Apply this inequality to estimate S(v
+t+1
+k
+) from above:
+S(v
+t+1
+k
+) =
+v
+t+1
+l
+1
++··· +v
+t+1
+r
+r− l
+1
++1
+=
+v
+t+1
+l
+1
++··· v
+t+1
+l
+2
+− 1
++(v
+t+1
+l
+2
++··· +v
+t+1
+r
+)
+r− l
+2
++1
+=
+=
+v
+t+1
+l
+1
++··· +v
+t+1
+l
+2
+− 1
++(r− l
+2
++1)
+v
+t+1
+l
+2
++··· +v
+t+1
+r
+r− l
+2
++1
+r− l
+1
++1
+=
+=
+v
+t+1
+l
+1
++··· +v
+t+1
+l
+2
+− 1
+r− l
+1
++1
++
+r− l
+2
++1
+r− l
+1
++1
+· v
+t+1
+l
+2
++··· +v
+t+1
+r
+r− l
+2
++1
+≤ https://doi.org/10.21638/11701/spbu35.2024.403 Electronic Journal: http://diffjournal.spbu.ru/ 67Differential Equations and Control Processes, N. 4, 2024
+≤ v
+t+1
+l
+1
++··· +v
+t+1
+l
+2
+− 1
+r− l
+1
++1
++
+r− l
+2
++1
+r− l
+1
++1
+·  
+S(v
+t
+k
+)+
+ε
+6N
+ 
+.
+Let us continue the chain of inequalities taking into account that ε/(6N)≥ |v
+t+1
+m
+− v
+t
+m
+|:
+v
+t+1
+l
+1
++··· +v
+t+1
+l
+2
+− 1
+r− l
+1
++1
++
+r− l
+2
++1
+r− l
+1
++1
+·  
+S(v
+t
+k
+)+
+ε
+6N
+ 
+≤ (v
+t
+l
+1
++
+ε
+6N
+)+··· +(v
+t
+l
+2
+− 1
++
+ε
+6N
+)
+r− l
+1
++1
++
+r− l
+2
++1
+r− l
+1
++1
+·  
+S(v
+t
+k
+)+
+ε
+6N
+ 
+=
+=
+v
+t
+l
+1
++··· +v
+t
+l
+2
+− 1
+r− l
+1
++1
++
+l
+2
+− l
+1
+r− l
+1
++1
+· ε
+6N
++
+r− l
+2
++1
+r− l
+1
++1
+·  
+S(v
+t
+k
+)+
+ε
+6N
+ 
+.
+Since v
+t
+l
+1
+≤ ··· ≤ v
+t
+l
+2
+− 1
+≤ v
+t
+k
+and l
+2
+− 1 ̸∈ J(v
+t
+k
+) (i.e., |v
+t
+l
+2
+− 1
+− v
+t
+k
+| > ε), we
+conclude that v
+t
+l
+1
+≤···≤ v
+t
+l
+2
+− 1
+<v
+k
+− ε.
+Hence,
+S(v
+t+1
+k
+)≤ v
+t
+l
+1
++...+v
+t
+l
+2
+− 1
+r− l
+1
++1
++
+l
+2
+− l
+1
+r− l
+1
++1
+· ε
+6N
++
+r− l
+2
++1
+r− l
+1
++1
+·  
+S(v
+t
+k
+)+
+ε
+6N
+ 
+≤ ≤ (l
+2
+− l
+1
+)(v
+t
+k
+− ε)
+r− l
+1
++1
++
+l
+2
+− l
+1
+r− l
+1
++1
+· ε
+6N
++
+r− l
+2
++1
+r− l
+1
++1
+·  
+S(v
+t
+k
+)+
+ε
+6N
+ 
+≤ ≤ l
+2
+− l
+1
+r− l
+1
++1
+v
+t
+k
+− l
+2
+− l
+1
+r− l
+1
++1
+ε+
+l
+2
+− l
+1
+r− l
+1
++1
+· ε
+6N
++
+r− l
+2
++1
+r− l
+1
++1
+·  
+S(v
+t
+k
+)+
+ε
+6N
+ 
+.
+The corresponding convergencies imply that
+|v
+t
+m
+− S(v
+t
+m
+)|≤| v
+t
+m
+− v
+∗ m
+|+|v
+∗ m
+− S(v
+t
+m
+)|<
+ε
+6N
+for m = 1,...,N;
+hence,v
+t
+k
+≤ S(v
+t
+k
+)+
+ε
+6N
+. ApplythisinequalitytorewritetheestimateofS(v
+t+1
+k
+):
+S(v
+t+1
+k
+)≤ l
+2
+− l
+1
+r− l
+1
++1
+(S(v
+t
+k
+)+
+ε
+6N
+)− l
+2
+− l
+1
+r− l
+1
++1
+ε+
+l
+2
+− l
+1
+r− l
+1
++1
+· ε
+6N
++
++
+r− l
+2
++1
+r− l
+1
++1
+·  
+S(v
+t
+k
+)+
+ε
+6N
+ 
+=S(v
+t
+k
+)
+ 
+l
+2
+− l
+1
+r− l
+1
++1
++
+r− l
+2
++1
+r− l
+1
++1
+ 
++
++ε
+ 
+l
+2
+− l
+1
+r− l
+1
++1
+· 1
+6N
+− l
+2
+− l
+1
+r− l
+1
++1
++
+l
+2
+− l
+1
+r− l
+1
++1
+· 1
+6N
++
+r− l
+2
++1
+r− l
+1
++1
+· 1
+6N
+ 
+=
+=S(v
+t
+k
+)+ε
+ 
+1
+6N
+− l
+2
+− l
+1
+r− l
+1
++1
++
+l
+2
+− l
+1
+r− l
+1
++1
+· 1
+6N
+ 
+=
+https://doi.org/10.21638/11701/spbu35.2024.403 Electronic Journal: http://diffjournal.spbu.ru/ 68Differential Equations and Control Processes, N. 4, 2024
+=S(v
+t
+k
+)+ε
+ 
+1
+6N
+− l
+2
+− l
+1
+r− l
+1
++1
+· 6N− 1
+6N
+ 
+.
+The inequalities 1≤ l
+1
+<l
+2
+≤ r≤ N imply that l
+2
+− l
+1
+≥ 1, r− l
+1
++1≤ N,
+and (l
+2
+− l
+1
+)/(r− l
+1
++1)≥ 1/N. Substitute this into the above inequality:
+S(v
+t+1
+k
+)≤ S(v
+t
+k
+)+ε
+ 
+1
+6N
+− 1
+N
+· 6N− 1
+6N
+ 
+≤ ≤ S(v
+t
+k
+)+ε
+ 
+1
+6N
+− 1
+N
+· 5
+6
+ 
+=S(v
+t
+k
+)− 2
+3N
+ε,
+i.e., |S(v
+t+1
+k
+)− S(v
+t
+k
+)| ≥ 2ε/(3N) for an infinite set of t. But this contradicts
+the relation lim
+t→∞
+S(v
+t
+k
+) =v
+∗ k
+, which completes the proof. □ Now we prove the main result of this section.
+Theorem 3 Trajectory of any standard point tends to a standard fixed point.
+Proof. Let lim
+n→∞
+V
+n
+= V
+∗ = (v
+∗ 1
+,...,v
+∗ N
+). Without loss of generality, we may
+assume that v
+∗ 1
+= − 1 (see Corollary 3). By the previous Proposition, for a
+fixed k∈{1,...,N}, the sets J(v
+t
+k
+) coincide starting from some t. For brevity,
+denote J
+k
+= J(v
+t
+k
+) = J(v
+t+1
+k
+) = ..., and the cardinality of this set will be
+denoted by I
+k
+.
+Let us show that if indices k,l ∈ {1,...,N} satisfy the inequality v
+l
+∈
+[v
+∗ k
+,v
+∗ k
++ε], then v
+∗ k
+=v
+∗ l
+. We prove this using induction on k.
+Base. k = 1. By Proposition 7, lim
+n→∞
+1
+I
+1
+P
+j∈J
+1
+v
+n
+j
+= lim
+n→∞
+S(v
+n
+1
+) =− 1. Passing
+to the limit, we conclude that
+P
+j∈J
+1
+v
+∗ j
+I
+1
+=− 1.
+Since v
+∗ j
+≥− 1 for all j ∈ J
+1
+and the arithmetic mean of these numbers equals
+-1, v
+∗ j
+=− 1 for all j∈J
+1
+.
+The equalities v
+∗ q
+=− 1 hold for all q∈ J
+1
+; thus, a similar reasoning shows
+that P
+j∈J
+q
+v
+∗ j
+I
+q
+=− 1
+https://doi.org/10.21638/11701/spbu35.2024.403 Electronic Journal: http://diffjournal.spbu.ru/ 69Differential Equations and Control Processes, N. 4, 2024
+and v
+∗ j
+=− 1 for all j∈J
+q
+. In particular, this means that
+J
+q
+=J
+1
+={s∈{1,...,N}| v
+∗ s
+=− 1}
+for any q∈J
+1
+. Further we assume that q is the largest index in J
+1
+.
+Sinceq+1̸∈J
+1
+andJ
+1
+=J
+q
+,thereexistsalargeenoughτ ∈Nandanumber
+α> 0 such that|v
+τ q
+− v
+τ q+1
+|>ε+α . By Corollary 1,|v
+t
+q
+− v
+t
+q+1
+|>ε+α for all
+t>τ . Hence,|v
+∗ q
+− v
+∗ q+1
+|≥ ε+α>ε. Sincev
+∗ q
+=− 1,− 1+ε<v
+∗ q+1
+≤···≤ v
+∗ N
+.
+This proves the induction base.
+Induction step. Assume that our statement is proved for k and prove
+it for k + 1. If v
+∗ k+1
+= v
+∗ k
+, then the statement is obviously true. Otherwise,
+v
+∗ k+1
+>v
+∗ k
++ε and k̸∈J
+k+1
+.
+By Proposition 7, lim
+n→∞
+1
+I
+k+1
+P
+j∈J
+k+1
+v
+n
+j
+= lim
+n→∞
+S(v
+n
+k+1
+) = v
+∗ k+1
+. Passing to the
+limit, we get the equality
+P
+j∈J
+k+1
+v
+∗ j
+I
+k+1
+=v
+∗ k+1
+.
+The arithmetic mean of numbers in the set J
+k+1
+equals v
+∗ k+1
+, and v
+∗ j
+≥ v
+∗ k+1
+for
+all j∈J
+k+1
+since k̸∈J
+k+1
+. Hence, v
+∗ j
+=v
+∗ k+1
+for all j∈J
+k+1
+.
+Since v
+∗ q
+=v
+∗ k+1
+for all q∈J
+k+1
+, a similar reasoning shows that
+P
+j∈J
+q
+v
+∗ j
+I
+q
+=v
+∗ k+1
+and v
+∗ j
+= v
+∗ k+1
+for all j ∈ J
+q
+. In particular, this means J
+q
+= J
+k+1
+= {s ∈
+{1,...,N} | v
+∗ s
+= v
+∗ k+1
+} for any q ∈ J
+k+1
+. Further we assume that q is the
+largest index in J
+k+1
+.
+Since q +1 ̸∈ J
+q
+, there exists a large enough τ ∈ N and a number α > 0
+such that|v
+τ q
+− v
+τ q+1
+|>ε+α . By Corollary 1,|v
+t
+q
+− v
+t
+q+1
+|>ε+α for all t>τ .
+Thus, |v
+∗ q
+− v
+∗ q+1
+|≥ ε+α > ε . Since v
+∗ q
+= v
+∗ k+1
+, v
+∗ k+1
++ε < v
+∗ q+1
+≤···≤ v
+∗ N
+,
+which completes the induction step.
+Thus, for any indices i,j ∈ {1,...,N} either v
+∗ i
+= v
+∗ j
+or |v
+∗ i
+− v
+∗ j
+| > ε.
+This precisely means that S(v
+∗ k
+) = v
+∗ k
+for any k ∈ {1,...,N} and w
+k
+(V
+∗ ) =
+v
+∗ k
++hS(v
+∗ k
+) = (1+h)v
+∗ k
+. It is easily seen that µ (W(V
+∗ )) =|w
+1
+(V
+∗ )| = 1+h.
+Hence,
+w
+k
+(v
+∗ )
+µ (W(V
+∗ ))
+=
+(1+h)v
+∗ k
+1+h
+=v
+∗ k
+,
+which means that V
+∗ is a fixed point. □ https://doi.org/10.21638/11701/spbu35.2024.403 Electronic Journal: http://diffjournal.spbu.ru/ 70Differential Equations and Control Processes, N. 4, 2024
+Corollary 5 V = (v
+1
+,...,v
+N
+) is a standard fixed point if and only if for any
+pair of indices i,j∈{1,...,N} either v
+i
+=v
+j
+or|v
+i
+− v
+j
+|>ε.
+Proof. If lim
+n→∞
+V
+n
+=V
+∗ = (v
+∗ 1
+,...,v
+∗ N
+),then,accordingtotheproofofTheorem
+3, for any pair of indices i,j∈{1,...,N} either v
+∗ i
+= v
+∗ j
+or|v
+∗ i
+− v
+∗ j
+| > ε. Now
+suppose V is a standard fixed point, V
+∗ = V. Hence, for any pair of indices
+i,j∈{1,...,N} either v
+i
+=v
+j
+or|v
+i
+− v
+j
+|>ε. □ 6. Stability of fixed points.
+Proposition 9 Singular fixed points are Lyapunov unstable.
+Proof. IfV = (v
+1
+,...,v
+N
+) is a singular fixed point, then |v
+1
+− v
+N
+|≤ ε andv
+1
++
+··· +v
+N
+= 0. Fix a small δ > 0 and consider the point U = (v
+1
++δ,v
+2
+,...,v
+N
+).
+Since v
+1
++··· + v
+N
++ δ > 0, the point U is standard. The trajectory
+of the point U converges to a fixed point P = (p
+1
+,...,p
+N
+), and µ (W(P)) =
+lim
+k→∞
+µ (W(V
+k
+)) = 1+h. This means that P is a standard point. By Corollary
+3, p
+1
+=− 1 or p
+n
+= 1. It follows from the classification of singular points (see
+Corollary 4) that− ε≤ v
+1
+≤···≤ v
+n
+<ε. Since δ is arbitrary, this means that
+the fixed point V is unstable. □ Before classifying the standard points’ stability, let us introduce one more
+object (see [1]).
+Definition 6 We call a subset{k,...,m}⊂{ 1,...,N}, where k≤ m, a band
+for a pointU = (u
+1
+,...,u
+N
+) if|u
+i
+− u
+j
+|<ε fori,j∈{k,...,m},|u
+k
+− u
+k− 1
+|>ε
+(if k > 0), and |u
+m
+− u
+m+1
+| > ε (if m < N). The value |u
+m
+− u
+k
+| is called the
+width of the band{k,...,m}.
+Proposition 10 Standard fixed points are Lyapunov stable.
+Proof. Consider a standard fixed point V = (v
+1
+,...,v
+N
+) and an arbitrary
+ε
+0
+> 0. Without loss of generality, we may assume that ε
+0
+<ε, v
+N
+= 1.
+Find a positive δ <ε
+0
+/(8N) such that for any point U = (u
+1
+,...,u
+N
+) with
+|u
+i
+− v
+i
+| < δ for i = 1,...,N there does not exist a pair of indices p,q such
+https://doi.org/10.21638/11701/spbu35.2024.403 Electronic Journal: http://diffjournal.spbu.ru/ 71Differential Equations and Control Processes, N. 4, 2024
+that ε
+0
+/(4N)≤| u
+p
+− u
+q
+|≤ ε. In other words, for any p,q∈{1,...,N} either
+|u
+p
+− u
+q
+| < ε
+0
+/(4N) or |u
+p
+− u
+q
+| > ε. The existence of such a δ follows from
+Corollary 5.
+Take an arbitrary point U
+0
+such that|u
+0
+i
+− v
+i
+| < δ for all i = 1,...,N. By
+definition, the set of indices {1,...,N} can be represented as a disjoint union
+ofbandswhosewidthsarenotmorethanε
+0
+/(2N). Consideroneofthesebands
+{k,...,m}. It is easily seen that
+|v
+k
+− v
+m
+|≤| v
+k
+− u
+0
+k
+|+|u
+0
+k
+− u
+0
+m
+|+|u
+0
+m
+− v
+m
+|<ε.
+By Corollary 5, v
+k
+=... =v
+m
+. Therefore,
+|u
+0
+k
+− u
+0
+m
+|≤| u
+0
+m
+− v
+m
+|+|v
+m
+− v
+k
+|+|v
+k
+− u
+0
+k
+|< 2δ.
+By Corollary 1,|u
+n
+k
+− u
+n
+k− 1
+| > ε (if k > 0) and|u
+n
+m
+− u
+n
+m+1
+| > ε (if m < N)
+for any natural n. Here, as above, we denote Φ n
+(U
+0
+) by U
+n
+= (u
+n
+1
+,...,u
+n
+N
+).
+Hence, for any integer n ≥ 0 and any index i ∈ {k,...,m}, the inclusion
+J(u
+n
+i
+) ⊂ { k,...,m} holds. In addition, the inequalities u
+n
+k
+≤ ··· ≤ u
+n
+m
+imply
+the estimates
+S(u
+n
+k
+) =
+P
+j∈J(u
+n
+k
+)
+u
+n
+j
+I(u
+n
+k
+)
+≥ u
+n
+k
+and
+S(u
+n
+m
+) =
+P
+j∈J(u
+n
+m
+)
+u
+n
+j
+I(u
+n
+m
+)
+≤ u
+n
+m
+.
+Thus,
+|u
+n+1
+m
+− u
+n+1
+k
+| =
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+u
+n
+m
++h· P
+j∈J(u
+n
+m
+)
+u
+n
+j
+I(u
+n
+m
+)
+µ (W(U
+n
+))
+− u
+n
+k
++h· P
+j∈J(u
+n
+k
+)
+u
+n
+j
+I(u
+n
+k
+)
+µ (W(U
+n
+))
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+≤ ≤  
+ 
+ 
+ 
+u
+n
+m
+(1+h)
+µ (W(U
+n
+))
+− u
+n
+k
+(1+h)
+µ (W(U
+n
+))
+ 
+ 
+ 
+ 
+≤| u
+n
+m
+− u
+n
+k
+|· 1+h
+µ (W(U
+n
+))
+and
+|u
+n+1
+m
+− u
+n+1
+k
+|≤| u
+n
+m
+− u
+n
+k
+|· 1+h
+µ (W(U
+n
+))
+≤| u
+n− 1
+m
+− u
+n− 1
+k
+|· (1+h)
+2
+µ (W(U
+n
+))µ (W(U
+n− 1
+))
+≤ ≤ ...≤ (1+h)
+n+1
+µ (W(U
+n
+))µ (W(U
+n− 1
+))...µ (W(U
+0
+))
+|u
+0
+k
+− u
+0
+m
+|.
+https://doi.org/10.21638/11701/spbu35.2024.403 Electronic Journal: http://diffjournal.spbu.ru/ 72Differential Equations and Control Processes, N. 4, 2024
+Consider the band {L,...,N} for U
+0
+. Applying S(u
+n
+L
+) ≥ u
+n
+L
+, we conclude
+that
+u
+n+1
+L
+=
+u
+n
+L
++hS(u
+n
+L
+)
+µ (W(U
+n
+))
+≥ u
+n
+L
+(1+h)
+µ (W(U
+n
+))
+≥ u
+n
+L
+,
+and
+u
+n+1
+L
+≥ 1+h
+µ (W(U
+n
+))
+u
+n
+L
+≥ 1+h
+µ (W(U
+n
+))
+· 1+h
+µ (W(U
+n− 1
+))
+· u
+n− 1
+L
+≥ ...≥ ≥ (1+h)
+n+1
+µ (W(U
+n
+))µ (W(U
+n− 1
+))...µ (W(U
+0
+))
+u
+0
+L
+.
+As we already know, u
+n+1
+L
+≤ 1, v
+L
+=... =v
+N
+= 1 and|u
+0
+L
+− v
+L
+|<δ . Therefore
+1≥ (1+h)
+n+1
+µ (W(U
+n
+))µ (W(U
+n− 1
+))...µ (W(U
+0
+))
+u
+0
+L
+,
+and
+1
+1− δ ≥ (1+h)
+n+1
+µ (W(U
+n
+))µ (W(U
+n− 1
+))...µ (W(U
+0
+))
+.
+This means that
+|u
+n+1
+m
+− u
+n+1
+k
+|≤ (1+h)
+n+1
+µ (W(U
+n
+))µ (W(U
+n− 1
+))...µ (W(U
+0
+))
+·|u
+0
+k
+− u
+0
+m
+|≤ ≤ 1
+1− δ ·|u
+0
+k
+− u
+0
+m
+|≤ 2δ 1− δ .
+Hence, if δ <ε/ (8N), then{k,...,m} is a band for all U
+n
+, n∈N, and its width
+does not exceed 3δ at any time moment. Consequently, J(u
+n
+i
+) = {k,...,m}
+for any integer n ≥ 0 and any index i ∈ {k,...,m}. Denote T
+n
+:= S(u
+n
+k
+) =
+S(u
+n
+k+1
+) =... =S(u
+n
+m
+). Now let us write a recurrence relation for T
+n
+’s:
+T
+n+1
+=
+u
+n+1
+k
++...+u
+n+1
+m
+m− k+1
+=
+(u
+n
+k
++hT
+n
+)+...+(u
+n
+m
++hT
+n
+)
+µ (W(U
+n
+))· (m− k+1)
+=
+1+h
+µ (W(U
+n
+))
+T
+n
+.
+Therefore,
+T
+n+1
+=
+(1+h)
+n+1
+µ (W(U
+n
+))µ (W(U
+n− 1
+))...µ (W(U
+0
+))
+T
+0
+.
+This implies that
+T
+0
+≤ T
+n+1
+≤ 1
+1− δ · T
+0
+=T
+0
++
+δ 1− δ · T
+0
+.
+https://doi.org/10.21638/11701/spbu35.2024.403 Electronic Journal: http://diffjournal.spbu.ru/ 73Differential Equations and Control Processes, N. 4, 2024
+Since u
+0
+k
+,...,u
+0
+m
+∈ (v
+k
+− δ,v
+k
++δ ), then T
+0
+∈ (v
+k
+− δ,v
+k
++δ ) and
+|T
+n
+− v
+k
+|≤ max(T
+0
+− v
+k
+,T
+0
++
+δ 1− δ T
+0
+− v
+k
+)≤ δ +
+δ 1− δ ·|T
+0
+|<
+2δ 1− δ < 3δ.
+Due to the fact that u
+n
+k
+≤ T
+n
+≤ u
+n
+m
+and|u
+n
+m
+− u
+n
+k
+|< 3δ , we see that
+|u
+n
+j
+− v
+j
+| =|u
+n
+j
+− v
+k
+|≤| u
+n
+j
+− T
+n
+|+|T
+n
+− v
+k
+|< 6δ <ε
+for arbitrary n and j∈{k,...,m}.
+As was said above, the set {1,...,N} decomposes into a disjoint union of
+bands for any point U
+0
+in the δ -neighborhood of V.
+In addition, we have shown that for any time moment n and for any index
+i belonging to any band, the inequality |u
+n
+i
+− v
+i
+| < ε is satisfied. This means
+that the point V is Lyapunov stable. □ 7. Asymptotic stability.
+Proposition 11 The points P
+− = (− 1,...,− 1) and P
++
+= (1,...,1) are
+asymptotically stable.
+Proof. The proof of this fact is based on the same idea as the proof of item 1
+of Theorem 5.1 in [1].
+Let us prove the statement for the point P
++
+. Fix a positive δ <ε . Consider
+an arbitrary point U
+0
+such that u
+0
+i
+∈ [1− δ, 1],i = 1,...,N. Let n be an
+arbitrary time moment.
+Since u
+n
+1
+≤···≤ u
+n
+N
+,
+P
+j∈J(u
+n
+1
+)
+u
+n
+j
+I(u
+n
+1
+)
+≥ u
+n
+1
+and
+u
+n+1
+1
+=
+u
+n
+1
++h· P
+j∈J(u
+n
+1
+)
+u
+n
+j
+I(u
+n
+1
+)
+µ (W(V
+n
+))
+≥ u
+n
+1
++h· P
+j∈J(u
+n
+1
+)
+u
+n
+j
+I(u
+n
+1
+)
+1+h
+≥ u
+n
+1
+.
+The point U
+0
+is standard, and u
+0
+1
+≤ u
+1
+1
+≤ u
+2
+1
+≤··· . The trajectory of the
+pointU
+0
+convergestoastandardfixedpoit P = (p
+1
+,...,p
+N
+). Since lim
+n→∞
+u
+n
+1
+=p
+1
+and the sequence{u
+n
+1
+}
+∞
+n=1
+is monotonically increasing, p
+1
+≥ u
+0
+1
+≥ 1− δ .
+ByCorollary3,p
+N
+= 1. Thismeansthatp
+1
+− p
+N
+≤ δ <ε ,andp
+1
+=··· =p
+N
+by Corollary 5. We have shown that P =P
++
+.
+https://doi.org/10.21638/11701/spbu35.2024.403 Electronic Journal: http://diffjournal.spbu.ru/ 74Differential Equations and Control Processes, N. 4, 2024
+A similar reasoning can be applied in the case of the point P
+− . □ Proposition 12 Standardfixedpointsdifferentfrom P
+− andP
++
+arenotasymp-
+totically stable.
+Proof. The proof of this fact is based on the same idea as the proof of item 2
+of Theorem 5.1 in [1].
+Assumethatthereexistsanasymptoticallystablestandardfixedpoint U =
+(u
+1
+,...,u
+N
+) different from P
+− and P
++
+. By Corollary 3, either u
+1
+= − 1 or
+u
+N
+= 1. Without loss of generality, assume that u
+1
+= − 1. Note that in this
+case u
+N
+̸=− 1 (since U and P
+− are different) and u
+N
+>− 1+ε by Corollary 5.
+For the point U, there exists a decomposition of {1,...,N} into bands,
+and, as shown above, 1 and N belong to different bands. Consider the band
+{k,...,N}. By definition, u
+k
+− u
+k− 1
+>ε. By Corollary 5, u
+k
+=··· =u
+N
+. Take
+an arbitrary positive δ < u
+k
+− u
+k− 1
+− ε and the point U
+′
+= (u
+1
+,...,u
+k− 1
+,u
+k
+− δ,u
+k+1
+− δ, ··· ,u
+N
+− δ ).
+NotethatU
+′
+isafixedpointsince( u
+k
+− δ )− u
+k− 1
+>εandu
+k
+− δ =u
+k+1
+− δ =
+··· = u
+N
+− δ . Thus, any neighborhood of the point U contains a fixed point,
+which means that the point U is not asymptotically stable. □ 8. Acknowledgments. The research of the second author was
+supported by the Russian Science Foundation, grant no. 23-21-00025,
+https://rscf.ru/project/23-21-00025/
+References
+[1] S.Yu.Pilyugin,M.S.Tarasova,A.S.TarasovandG.V.Monakov, Amodel
+of voting dynamics under bounded confidence with nonstandard norming,
+Networks and Heterogeneous Media, 17(6) (2022), 917-931.
+[2] C.Bernardo,C.Altafini,A.ProskurnikovandF.Vasca, Boundedconfidence
+opinion dynamics: A survey, Automatica, 159 (2024), 111302.
+[3] Jan Lorenz A stabilization theorem for dynamics of continuous opinions
+Physica A: Statistical Mechanics and its Applications, 355(1) (2005), 217-
+223.
+https://doi.org/10.21638/11701/spbu35.2024.403 Electronic Journal: http://diffjournal.spbu.ru/ 75Differential Equations and Control Processes, N. 4, 2024
+[4] B. Touri, Product of Random Stochastic Matrices and Distributed Averag-
+ing, in Springer Science & Business Media, 2012.
+[5] M. Bertotti and M. Delitala, Cluster formation in opinion dynamics: A
+qualitative analysis, Z. Angew. Math. Phys., 61 (2010), 583–602.
+[6] N. A. Bodunov and S. Y. Pilyugin, Convergence to fixed points in one
+model of opinion dynamics, J. Dyn. Control. Syst., 27 (2021), 617–623.
+[7] D. Borra and T. Lorenzi, Asymptotic analysis of continuous opinion dy-
+namics models under bounded confidence, Commun. Pure Appl. Anal., 12
+(2013), 1487–1499.
+[8] F.CeragioliandP.Frasca, Continuousanddiscontinuousopiniondynamics
+with bounded confidence, Nonlinear Anal. Real World Appl., 13 (2012),
+1239–1251.
+[9] S. Fortunato, The Krause – Hegselmann consensus model with discrete
+opinions, Internat. J. Modern Phys. C, 15 (2004), 1021–1029.
+[10] J. French, A formal theory of social power, Psychological Review, 63
+(1956), 181–194.
+[11] F. Harary, A criterion for unanimity in French’s theory of social power, in
+Studies in Social Power (ed. D. Cartwright), Institute for Social Research,
+Ann Arbor, 1959.
+[12] P. Hegarty and E. Wedin, The Hegselmann – Krause dynamics for equally
+spaced agents, J. Difference Equ. Appl. , 22 (2016), 1621–1645.
+[13] R.HegselmannandU.Krause, Opiniondynamicsandboundedconfidence:
+Models, analysis and simulation, Journal of Artificial Societies and Social
+Simulation, 5 (2002), 1–33.
+[14] P. Jabin and S. Motsch, Clustering and asymptotic behavior in opinion
+formation, J. Differential Equations , 257 (2014), 4165–4187.
+[15] U. Krause, A discrete nonlinear and non - autonomous model of consensus
+formation, in Communications in Difference Equations (ed. S. E. et al.),
+Gordon and Breach Publ., Amsterdam, 1997.
+[16] U.Krause, Sozialedynamikenmitvieleninterakteuren.eineproblemskizze,
+in Modellierung und Simulation von Dynamiken mit vielen interagierenden
+Akteuren (eds. U. Krause and M. Stockler), Universitat Bremen, 1997.
+https://doi.org/10.21638/11701/spbu35.2024.403 Electronic Journal: http://diffjournal.spbu.ru/ 76Differential Equations and Control Processes, N. 4, 2024
+[17] U. Krause, Compromise, consensus, and the iteration of means, Elem.
+Math., 64 (2009), 1–8.
+[18] U.Krause, Positive Dynamical Systems in Discrete Time. Theory, Models,
+and Applications, De Gruyter, Berlin, 2015.
+[19] S.KurzandJ.Rambau, OntheHegselmann–Krauseconjectureinopinion
+dynamics, Journal of Difference Equations and Applications ,17(2011), 859–
+876.
+[20] J. Lorenz, Continuous opinion dynamics under bounded confidence: A
+survey, International Journal of Modern Physics C, 18 (2007), 1819–1838.
+[21] S. Y. Pilyugin and M. C. Campi, Opinion formation in voting processes
+under bounded confidence, Networks and Heterogeneous Media, 14 (2019),
+617–632.
+[22] S. Y. Pilyugin and D. Z. Sabirova, Dynamics of a continual sociological
+model, Vestnik St. Petersburg University: Mathematics,54 (2021), 196–205.
+[23] W. Ren and Y. Cao, Distributed Coordination of Multi-agent Networks.
+Emergent Problems, Models, and Issues, Springer, 2011.
+[24] E. Wedin and P. Hegarty, The Hegselmann – Krause dynamics for the
+continuous-agent model and a regular opinion function do not always lead to
+consensus, IEEE Trans. Automat. Control, 60 (2015), 2416–2421.
+[25] S. Wongkaew, M. Caponigro and A. Borzi, On the control through lead-
+ership of the Hegselmann – Krause opinion formation model, Mathematical
+Models and Methods in Applied Sciences, 25 (2015), 565–585.
+[26] H. Noorazar, K. R. Vixie, A. Talebanpour and Y. Hu, From classical to
+modern opinion dynamics, International Journal of Modern Physics C, 31
+(2020), 2050101.
+https://doi.org/10.21638/11701/spbu35.2024.403 Electronic Journal: http://diffjournal.spbu.ru/ 77
