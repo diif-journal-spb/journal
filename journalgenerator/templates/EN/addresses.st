@@ -17,11 +17,6 @@ e-mail: <a href="mailto:n.ampilova@spbu.ru">n.ampilova@spbu.ru</a>
 
 <h4>Technical Support</h4>
 <p>
-    Eugene I. Petrenko<br />
-    St.Petersburg State University<br />
-    e-mail: <a href="mailto:JournalDECP@gmail.com">JournalDECP@gmail.com</a>
-</p>
-<p>
     Ruslan Mokaev<br />
     St.Petersburg State University<br />
     e-mail: <a href="mailto:JournalDECP@gmail.com">JournalDECP@gmail.com</a>

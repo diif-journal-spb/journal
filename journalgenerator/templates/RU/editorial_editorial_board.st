@@ -31,14 +31,14 @@
 
 <div class="editor">
     <span class="name">Кудряшова Е.В.</span>
-    <span class="title">Ведущий научный сотрудник</span>
+    <span class="title">Профессор</span>
     <span class="work">Санкт-Петербургский государственный университет, Россия</span>
     <span class="email">e.kudryashova@spbu.ru</span>
 </div>
 
 <div class="editor">
     <span class="name">Мокаев Р.Н.</span>
-    <span class="title">Старший научный сотрудник</span>
+    <span class="title">Профессор</span>
     <span class="work">Санкт-Петербургский государственный университет, Россия</span>
     <span class="email">r.mokaev@spbu.ru</span>
 </div>
@@ -105,13 +105,6 @@
     <span class="title">Профессор</span>
     <span class="work">Университет Гонконга, Китай</span>
     <span class="email">eegchen@cityu.edu.hk</span>
-</div>
-
-<div class="editor">
-    <span class="name">Чечурин Л.</span>
-    <span class="title">Профессор</span>
-    <span class="work">Лаппеeнрантский технологический университет, Финляндия</span>
-    <span class="email">Leonid.Chechurin@lut.fi</span>
 </div>
 
 <div class="editor">

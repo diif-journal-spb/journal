@@ -31,14 +31,14 @@
 
 <div class="editor">
     <span class="name">Elena V. Kudryashova</span>
-    <span class="title">Leading researcher</span>
+    <span class="title">Professor</span>
     <span class="work">St. Petersburg State University, Russia</span>
     <span class="email">e.kudryashova@spbu.ru</span>
 </div>
 
 <div class="editor">
     <span class="name">Ruslan N. Mokaev</span>
-    <span class="title">Senior researcher</span>
+    <span class="title">Professor</span>
     <span class="work">St. Petersburg State University, Russia</span>
     <span class="email">r.mokaev@spbu.ru</span>
 </div>
@@ -107,13 +107,6 @@
     <span class="title">Professor</span>
     <span class="work">City University of Hong Kong (China)</span>
     <span class="email">eegchen@cityu.edu.hk</span>
-</div>
-
-<div class="editor">
-    <span class="name">Leonid Chechurin</span>
-    <span class="title">Professor</span>
-    <span class="work">Lappeenranta University of Technology (LUT), Finland</span>
-    <span class="email">Leonid.Chechurin@lut.fi</span>
 </div>
 
 <div class="editor">
