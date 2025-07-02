@@ -1,0 +1,1490 @@
+﻿DIFFERENTIAL EQUATIONS 
+AND 
+CONTROL PROCESSES 
+N. 2, 2025 
+Electronic Journal, 
+reg. № ФС77-39410 at 15.04.2010 
+ISSN 1817-2172 
+ 
+http://diffjournal.spbu.ru/ 
+e-mail: jodiff@mail.ru 
+ 
+ 
+ 
+Partial differential equations  
+ 
+Control problem for a fourth order pseudo-parabolic equation in a 
+two dimensional domain  
+ 
+Dekhkonov F.N
+1,2,*
+ 
+ 
+1
+Namangan State University 
+2
+National University of Uzbekistan 
+ 
+*
+f.n.dehqonov@mail.ru 
+ 
+Abstract. In this paper, we consider boundary control problem for a fourth order pseudo-parabolic 
+equation with Dirichlet conditions in the quadratic domain. A control function is given at the 
+boundary of the considered domain. To achieve the average temperature in the domain, it is 
+required to find a control function. Using the Fourier method, the control problem is reduced to the 
+Volterra integral equation of the second type. The existence of the control function is proved using 
+the method of successive approximation. 
+ 
+Keywords: initial-boundary problem; fourth order pseudo-parabolic equation; Volterra integral 
+equation; admissible control. 
+ 
+ 
+1. Introduction 
+ 
+It is known that in recent years, due to the increasing interest in physics and mathematics, the boundary 
+problems related to pseudo-parabolic equations were widely studied. For this purpose, various boundary 
+problems for parabolic and pseudo-parabolic equations have been widely studied by many researchers. 
+It is well known that fourth-order pseudo-parabolic equations describe a variety of important physical 
+processes, such as heat conduction in materials, electric signals in a nonlinear telegraph line with nonlinear 
+damping, viscous flow in materials with memory [1], vibration of a nonlinear elastic rod with viscosity [2], 
+nonlinear bidirectional shallow water waves [3], the velocity evolution of ionacoustic waves in a 
+collisionless plasma when an ion viscosity is invoked [4], and so on. 
+The boundary control of a linear pseudo-parabolic equation and compare the results to those of 
+parabolic equations was studied in [5]. The stability, uniqueness, and existence of solutions of some Differential equations and control processes, N. 2, 2025 
+ 
+https://doi.org/10.21638/11701/spbu35.2025.208        Electronic Journal: http://diffjournal.spbu.ru      127 
+classical problems for the considered equation are studied in [6]. In [7], the point control problems for 
+linear pseudo-parabolic and parabolic type equations are considered. 
+The optimal control problem for the parabolic type equations was studied by Fattorini and Friedman 
+[8, 9]. Control problems for the infinite-dimensional case were studied by Egorov [10], who generalized 
+Pontryagin’s maximum principle to a class of equations in Banach space, and the proof of a bang-bang 
+principle was shown in the particular conditions. 
+The boundary control problem for a parabolic equation with a piecewise smooth boundary in an 
+n  dimensional domain was studied in [11] and an estimate for the minimum time required to reach a 
+given average temperature was found. In [12], the considered the heat conduction equation with the Robin 
+boundary condition and developed a mathematical model of the process of heating a cylindrical domain. 
+Boundary control problems for fourth-order parabolic equations were studied in [13,14]. 
+The works [15] examine control problems for parabolic equations in bounded two-dimensional 
+domain. In these articles, an estimate was found for the minimum time required to heat a bounded domain 
+to an estimate average temperature. The existence of control function is proved by Laplace transform 
+method. Similar control problems were examined in the one-dimensional domain in [16-18]. 
+Basic information on optimal control problems is given in detail in monographs by Lions and Fursikov 
+[19, 20]. Boundary control problems for linear pseudo-parabolic type equations were studied in works [21-
+23], and it was proved that there is a control function for heating the domain to the average temperature. 
+For the fourth order nonlinear pseudo-parabolic equation, there are also some results about initial 
+boundary value problem and Cauchy problem, especially on the global existence, nonexistence and 
+asymptotic behavior of the solutions [24-26]. 
+In 1978, Bakiyevich and Shadrin [24] considered the following problem  
+ 
+= ( , ), , >0,
+( ,0)= ( ), ,
+t xx xxt xxxx
+u u u u f x t x R t
+u x x x R
+  
+
+    
+
+
+
+ 
+ 
+ 
+where ,0   , 0   are constants. They showed that the solutions of this problem are expressed 
+through the sum of convolutions of functions () x  and ( , ) f x t with corresponding fundamental 
+solutions of the problem. In 2009, Khudaverdiyev and Farhadova [25] discussed the following 
+fourth order semilinear pseudo-parabolic equation  
+ 
+= ( , , , , , ), 0 1, 0 < ,
+t xxt xxxx x xx xxx
+u u u f x t u u u u x t T          
+ 
+ 
+where >0  is a fixed number. They proved the existence in large theorem for generalized solution 
+by means of Schauder stronger fixed point principle. Zhao and Xuan [26] studied the following 
+ 
+( ) =0, , >0.
+t xx xxt xxxx x
+u u u u f u x R t        
+ 
+ 
+  
+They obtained the existence and convergence behavior of the global smooth solutions. 
+In this work, we considered the problem of boundary control for the fourth-order pseudo-parabolic 
+equation with Dirichlet conditions in the quadratic domain. For this, the control problem was first reduced 
+to the Volterra integral equation of the second kind, and the continuity of the integral in the given domain 
+was shown. As a result, the existence of the control function was proved using the method of successive 
+approximation. 
+ 
+2. Statement of problem 
+ Differential equations and control processes, N. 2, 2025 
+ 
+https://doi.org/10.21638/11701/spbu35.2025.208        Electronic Journal: http://diffjournal.spbu.ru      128 
+In this article, we consider the following fourth order pseudo-parabolic equation in the domain 
+= (0, ) (0, )  
+  
+ 
+2
+=0, ( , , ) : (0, ),
+t t T
+u u u u x y t T            
+(2.1) 
+ 
+with boundary value conditions  
+ 
+(0, , )= ( ) ( ), ( , , ) =0, ( ,0, )= ( , , )=0, u y t y t u y t u x t u x t     (2.2) 
+ 
+and  
+ 
+(0, , )= ( , , )=0, ( ,0, )= ( , , )=0,
+xx xx yy yy
+u y t u y t u x t u x t  
+(2.3) 
+ 
+and initial value condition 
+ 
+( , ,0)=0, 0 , , u x y x y  
+ 
+(2.4) 
+ 
+where ( , , ) ( , , )
+xx yy
+u u x y t u x y t    , 
+2
+( , , ) 2 ( , , ) ( , , )
+xxxx xxyy yyyy
+u u x y t u x y t u x y t     , () y  is a given 
+function and () t  is the control function. It is called that the control function 
+1
+( ) [0, ] t C T   is 
+admissible, if it fulfills the following conditions 
+ 
+(0) =0, | ( )| 1, [0, ]. t t T   (2.5) 
+ 
+Assume, the given function 
+5
+[0, ] C   satisfies the conditions 
+  
+(2) (2)
+(0)= ( )= (0)= ( )=0.       
+(2.6) 
+ 
+Control Problem. Assume that function () t  is a given. Then find the control function () t  from the 
+condition  
+ 
+00
+( , , ) = ( ), 0 , u x y t dxdy t t T
+
+ 
+
+ 
+(2.7) 
+  
+where ( , , ) u x y t is a solution of the problem (2.1)-(2.4) and it depends on the control function () t  . 
+We now offer the primary theorem for demonstrating admissible control’s existence. 
+Theorem 2.1.  There exists a constant 0 M  such that for any function ( ) [0, ] t C T   satisfying the 
+conditions 
+ 
+1
+(0)=0, | ( )| , [0, ], t t T
+M
+ 
+ 
+ 
+the solution () t  of the equation (2.7) exists, unique and satisfies the conditions (2.5).  
+We will consider the proof of Theorem 2.1 step by step in the next sections. Differential equations and control processes, N. 2, 2025 
+ 
+https://doi.org/10.21638/11701/spbu35.2025.208        Electronic Journal: http://diffjournal.spbu.ru      129 
+ 
+3. Main integral equation  
+ 
+In this section, we consider the reduction of the control problem to a Volterra integral equation of the 
+second kind. 
+Definition 3.1. By solution to initial-boundary problem (2.1) - (2.4), we understand the function 
+( , , ) u x y t represented in the form 
+ 
+( , , )= ( ) ( ) ( , , ),
+x
+u x y t t y w x y t
+
+
+
+
+ 
+(3.1) 
+  
+where the function ( , , ) w x y t with the regularity 
+4,4,1
+,,
+( , , ) ( ) ( )
+x y t T T
+w x y t C C     and , ( )
+xx yy
+w w C  is 
+the solution to the problem 
+ 
+2 (4)
+= ( ) ( ) ( ) ( )
+tt
+xx
+w w w w y t y t
+
+   
+
+
+        
+ 
+(2) (2)
+( ) ( ) ( ) ( ),
+xx
+y t y t
+
+   
+
+
+  
+ 
+  
+with boundary value conditions 
+ 
+(0, , )= ( , , )=0, ( ,0, )= ( , , )=0, w y t w y t w x t w x t   
+  
+and  
+ 
+(0, , )= ( , , )=0, ( ,0, )= ( , , )=0,
+xx xx yy yy
+w y t w y t w x t w x t  
+ 
+ 
+and initial value condition 
+ 
+( , ,0) = 0. w x y  
+      
+To find the solution to the above mixed problem, we use the Fourier method. That is, we look for the 
+solution in the following form: 
+ 
+,,
+=1 =1
+( , , ) = ( ) ( , )
+m n m n
+mn
+w x y t T t x y 
+
+
+, 
+ 
+ 
+where 
+,
+( , ) sin sin
+mn
+x y mx ny   are eigenfunctions of the spectral problem 
+ 
+( , ) ( , ) 0, 0. x y x y    
+
+    
+ 
+ 
+Consequently, we obtain (see [27])  
+ Differential equations and control processes, N. 2, 2025 
+ 
+https://doi.org/10.21638/11701/spbu35.2025.208        Electronic Journal: http://diffjournal.spbu.ru      130 
+2
+()
+,
+22
+=1 =1
+0
+(1 ) 2
+( , , ) = ( ) sin sin
+(1 )
+t
+ts
+mn n
+mn
+n
+w x y t e s ds mx ny
+m n m
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+ 
+24
+()
+,
+22
+=1 =1
+0
+() 2
+( ) sin sin ,
+(1 )
+t
+ts
+mn n
+mn
+nn
+e s ds mx ny
+m n m
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+(3.2) 
+ 
+where 
+22
+,
+=
+mn
+mn   . 
+Lemma 3.1.  Let the function 
+5
+( ) [0, ] yC   satisfy the conditions (2.6). Then the following 
+estimate holds 
+ 
+5
+| | , =1,2, ,
+n
+C
+n
+n
+  
+ 
+ 
+where 
+n
+ is the Fourier coefficient of the function () y  and C is a positive constant.  
+Proof. It is known that the Fourier coefficient of the function () y  in the interval (0, )  is defined as 
+follows 
+ 
+0
+2
+= ( )sin , =1,2, .
+n
+y nydy n
+
+
+
+
+ 
+(3.3) 
+ 
+By (3.3) and condition (2.6), we might write 
+ 
+=
+(1)
+=0
+00
+22
+= ( )sin = ( )cos ( )cos
+y
+n
+y
+y nydy y ny y nydy
+n
+
+
+   
+
+
+
+
+
+
+ 
+ 
+ 
+(1) = (2)
+=0 2
+0
+2
+= ( )sin | ( )sin
+y
+y
+y ny y nydy
+n
+
+
+
+
+
+
+
+
+
+ 
+ 
+(2) = (3)
+=0 3
+0
+2
+= ( )cos | ( )cos
+y
+y
+y ny y nydy
+n
+
+
+
+
+
+
+
+
+
+ 
+ 
+(3) = (4)
+=0 4
+0
+2
+= ( )sin | ( )sin
+y
+y
+y ny y nydy
+n
+
+
+
+
+
+
+
+
+
+ 
+ 
+(4) = (5)
+=0 5
+0
+2
+= ( )cos | ( )cos
+y
+y
+y ny y nydy
+n
+
+
+
+
+
+
+
+
+
+ 
+ 
+(4) (4)
+(5)
+55
+0
+2 (0) ( 1) ( ) 2
+= ( )cos .
+n
+y nydy
+nn
+
+  
+
+
+
+
+
+ 
+ 
+ 
+Then we obtain  
+ 
+5
+| | , = >0, =1,2, .
+n
+C
+C const n
+n
+  
+ Differential equations and control processes, N. 2, 2025 
+ 
+https://doi.org/10.21638/11701/spbu35.2025.208        Electronic Journal: http://diffjournal.spbu.ru      131 
+Lemma is proved. 
+Lemma 3.2. Let 
+1
+( ) [0, ] t C T   . Then the solution to problem (2.1)-(2.4) is 
+ 
+( , , )= ( ) ( )
+x
+u x y t y t
+
+
+
+
+ 
+ 
+2
+()
+,
+22
+=1 =1
+0
+(1 ) 2
+( ) sin sin
+(1 )
+t
+ts
+mn n
+mn
+n
+e s ds mx ny
+m n m
+ 
+
+
+
+ 
+
+ 
+
+
+
+
+
+ 
+ 
+24
+()
+,
+22
+=1 =1
+0
+() 2
+( ) sin sin .
+(1 )
+t
+ts
+mn n
+mn
+nn
+e s ds mx ny
+m n m
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+(3.4) 
+ 
+Proof. Let us prove that the Fourier series of the function ( , , ) w x y t belongs to the class 
+4,4,1
+,,
+( ) ( )
+x y t T T
+CC    and , ( )
+xx yy
+w w C  . It is sufficient to prove that the corresponding series converge 
+uniformly. Due to conditions imposed on the expression of the function () t  for ( , , ) w x y t converges 
+uniformly, so ( , , ) ( )
+T
+w x y t C  . It is logically proved that , ( )
+xx yy T
+w w C  , 
+2
+, , , ( )
+t t T
+w w w w C      and ( , , ) w x y t satisfy the equation. Q.E.D.  
+ 
+Lemma is proved. 
+ 
+From (3.4) and the condition (2.7), we can write 
+ 
+0 0 0 0
+( ) = ( , , ) = ( ) ( )
+x
+t u x y t dxdy t y dxdy
+   
+
+  
+
+
+   
+ 
+ 
+2
+()
+,
+2 2 2
+=1 =1
+0
+(1 )(1 ( 1) )(1 ( 1) ) 2
+()
+(1 )
+t mn
+ts
+mn n
+mn
+n
+e s ds
+m n n m
+ 
+
+
+
+     
+ 
+
+
+
+ 
+ 
+24
+()
+,
+2 2 2
+=1 =1
+0
+( )(1 ( 1) )(1 ( 1) ) 2
+( ) .
+(1 )
+t mn
+ts
+mn n
+mn
+nn
+e s ds
+m n n m
+ 
+
+
+
+     
+
+
+
+
+ 
+ 
+  
+According to the condition (0) = 0  , we get  
+ 
+00
+( ) = ( ) ( )
+x
+t t y dxdy
+
+
+  
+
+
+
+ 
+ 
+2
+2 2 2
+=1 =1
+(1 )(1 ( 1) )(1 ( 1) ) 2
+()
+(1 )
+mn
+n
+mn
+n
+t
+m n n m
+
+
+
+
+    
+
+
+
+ 
+ 
+2
+()
+,
+22
+=1 =1
+0
+(1 )(1 ( 1) )(1 ( 1) ) 2
+( ) .
+(1 )
+t mn
+ts
+mn n
+mn
+n
+e s ds
+n n m
+ 
+
+
+
+     
+
+
+
+
+ 
+(3.5) 
+ 
+According to Parseval equality, we get 
+ Differential equations and control processes, N. 2, 2025 
+ 
+https://doi.org/10.21638/11701/spbu35.2025.208        Electronic Journal: http://diffjournal.spbu.ru      132 
+2
+=1 =1
+00
+(1 ( 1) )(1 ( 1) ) 2
+( ) = .
+mn
+n
+mn
+x
+y dxdy
+mn
+
+ 
+
+
+
+    
+
+
+ 
+(3.6) 
+  
+From (3.5) and (3.6), we have  
+ 
+22
+=1 =1
+(1 ( 1) )(1 ( 1) ) 2
+( )= ( )
+(1 )
+mn
+n
+mn
+tt
+n n m
+
+
+
+
+   
+
+
+ 
+ 
+2
+()
+,
+22
+=1 =1
+0
+(1 )(1 ( 1) )(1 ( 1) ) 2
+( ) .
+(1 )
+t mn
+ts
+mn n
+mn
+n
+e s ds
+n n m
+ 
+
+
+
+     
+
+
+
+
+ 
+ 
+ 
+We set  
+ 
+,
+,
+=1 =1
+( ) = , > 0,
+t
+mn
+mn
+mn
+L t e t
+
+
+
+
+
+ 
+(3.7) 
+ 
+and  
+ 
+22
+=1 =1
+(1 ( 1) )(1 ( 1) ) 2
+= , , =1,2, ,
+(1 )
+mn
+n
+mn
+mn
+n n m
+
+
+
+
+   
+
+
+ 
+(3.8) 
+ 
+where  
+ 
+2
+, 22
+(1 )(1 ( 1) )(1 ( 1) ) 2
+=.
+(1 )
+mn
+n
+mn
+n
+n n m
+
+
+    
+
+
+ 
+(3.9) 
+ 
+Then, we get the Volterra integral equation of the second kind 
+ 
+0
+( ) ( ) ( ) = ( ), 0,
+t
+t L t s s ds t t        
+
+ 
+(3.10) 
+ 
+where 
+1
+= 
+
+. 
+ 
+4. Proof of Theorem 2.1  
+ 
+In this section, we consider the existence of a solution to the Volterra integral equation of the second 
+kind. Then we prove the admissibility of the control function. 
+Lemma 4.1.  Let the conditions of Lemma 3.1 hold. Then, the function () Lt is continuous on the half 
+line 0 t  .  
+Proof. Using Lemma 3.1 and equality (3.9), we can write 
+ 
+2
+, 6 2 2
+8 (1 )
+| | .
+(1 )
+mn
+Cn
+n n m 
+
+
+
+ 
+ Differential equations and control processes, N. 2, 2025 
+ 
+https://doi.org/10.21638/11701/spbu35.2025.208        Electronic Journal: http://diffjournal.spbu.ru      133 
+ 
+Then, we have the estimate 
+ 
+2
+,
+, 6 2 2
+=1 =1 =1 =1
+81
+| ( )| = ,
+(1 )
+t
+mn
+mn
+m n m n
+Cn
+L t e A
+n n m
+
+
+   
+ 
+  
+
+   
+ 
+(4.1) 
+ 
+where A is a positive constant. 
+Therefore, the function () Lt is continuous on the half-line 0 t  .  
+Lemma is proved. 
+ 
+Lemma 4.2.  Let () t  be continuous on the half-line 0 t  . Then the equation (3.10) has the solution.  
+Proof. The Lemma 4.1 states that the function () Lt is bounded in [0, ] tT  . Therefore, the integral 
+equation (3.10) can be solved using the method of successive approximation. 
+Set  
+ 
+01
+0
+( ) = ( ), ( ) = ( ) ( ) , =1,2,...
+t
+kk
+t t t L t s s ds k      
+
+
+
+ 
+(4.2) 
+ 
+Then, we have the solution 
+ 
+ 
+=0
+( ) = ( 1) ( ).
+k
+k
+k
+tt 
+
+
+
+ 
+(4.3) 
+ 
+Indeed, we can see that this function satisfies Eq. (3.10)  
+ 
+=0
+00
+( ) ( ) = ( 1) ( ) ( )
+tt
+k
+k
+k
+L t s s ds L t s s ds    
+
+  
+
+
+ 
+ 
+10
+=0 =1 =0
+= ( 1) ( ) = ( 1) ( ) = ( 1) ( ) ( ) = ( ) ( ).
+k k k
+k k k
+k k k
+t t t t t t       
+  
+
+       
+  
+ 
+ 
+ 
+It is known  is finite. According to Lemma 3.1,  is a finite constant number. Indeed, we may 
+write 
+ 
+2 2 6 2 2
+=1 =1 =1 =1
+| |(1 ( 1) )(1 ( 1) ) 2 8 1
+| | < .
+(1 ) (1 )
+mn
+n
+m n m n
+C
+n n m n n m
+
+
+
+   
+   
+   
+   
+   
+ 
+ 
+ 
+Lemma is proved. 
+Set  
+ 
+0
+= max| ( )|.
+T
+tT
+t 
+
+3
+ 
+ 
+ 
+Lemma 4.3.  Let [0, ] CT   . Then, the following estimate is valid: 
+ Differential equations and control processes, N. 2, 2025 
+ 
+https://doi.org/10.21638/11701/spbu35.2025.208        Electronic Journal: http://diffjournal.spbu.ru      134 
+1
+| ( )| | | , [0, ], = 0,1, ,
+!
+k
+kk
+k
+T
+t
+t A t T k
+k
+  
+
+ 
+ 
+ 
+where 
+1
+= 
+
+ and  , A are defined by (3.8), (4.1), respectively.  
+Proof. Now we prove the Lemma using the induction method. 
+I. It is not difficult to see that the inequality holds for =0 k . 
+II. We prove for 1 k  : 
+ 
+2
+1
+00
+| ( )| | | | ( )|| ( )| | | | ( )|
+!
+tt k
+kk
+kk
+T
+s
+t L t s s ds A L t s ds
+k
+    
+
+
+   
+
+ 
+ 
+1
+2 1 2 1
+0
+| | =| | .
+! ( 1)!
+tkk
+k k k k
+TT
+st
+A ds A
+kk
+   
+
+   
+
+
+
+ 
+ 
+ 
+Then, we get the required estimate  
+ 
+1
+| ( )| | | , = 0,1, .
+!
+k
+kk
+k
+T
+t
+t A k
+k
+  
+
+ 
+ 
+ 
+Lemma is proved. 
+Now we present the proof of the main Theorem 2.1. 
+Proof of Theorem 2.1. Using the Lemma 4.3 and (4.2), (4.3), we get 
+ 
+1 | |
+=0 =0
+| ( )| | ( )| | | =| | .
+!
+k
+k k At
+k
+TT
+kk
+t
+t t A e
+k
+
+     
+
+
+
+
+ 
+ 
+ 
+Then using the inequality 
+1
+| ( )| t
+M
+  , we have 
+ 
+||
+| ( )| | | 1, [0, ],
+AT
+T
+t e t T
+
+      
+ 
+ 
+where as M we took  
+ 
+||
+=| | , 0< < .
+AT
+M e T
+
+  
+ 
+ 
+From the integral equation (3.10) and condition (0)=0  , we have (0) = 0  . Thus, we have proved 
+the admissibility of the control function () t  . 
+ 
+5.  Example 
+ 
+Let ( ) sin yy   , [0, ] y   in initial-boundary problem (2.1)-(2.4). Then the expressions defined by 
+the equations (3.8) and (3.9) are defined as follows 
+ Differential equations and control processes, N. 2, 2025 
+ 
+https://doi.org/10.21638/11701/spbu35.2025.208        Electronic Journal: http://diffjournal.spbu.ru      135 
+2
+=1
+4 1 ( 1)
+=,
+2
+m
+m
+m
+
+
+
+
+
+
+ 
+ 
+ 
+and  
+ 
+,1 2
+81 ( 1)
+=.
+2
+m
+m
+m 
+
+
+
+ 
+ 
+ 
+Thus, the function () Lt defined by (3.7), we can write 
+ 
+,1
+,1
+=0
+( ) = , > 0,
+t
+m
+m
+m
+L t e t
+
+
+
+
+
+ 
+ 
+ 
+where 
+2
+,1
+= 1.
+m
+m    
+It is clear that  
+ 
+2 ,1 2 1,1 2
+16 1
+= 0, = , 0,1,2,....
+2 (2 1)
+mm
+m
+m 
+
+  
+
+ 
+ 
+ 
+We consider the following function: 
+ 
+( )= , [0, ].
+t
+t te t T 
+
+ 
+ 
+ 
+The physical meaning of the function () t  is the average temperature in the domain. 
+We can represent the kernel () Lt in the form 
+  
+1,1 2 1,1
+2
+=1
+16 16 1
+( )=
+3 2 (2 1)
+tt
+m
+m
+L t e e
+m
+
+
+
+
+
+
+
+
+ 
+ 
+()
+1,1 3,1 1,1
+1,1
+16
+= (1) , = 2.
+3
+tt
+e O e
+  
+
+
+   
+
+
+
+ 
+ 
+ 
+Consequently, we can write 
+  
+2
+16
+( ) , > 0,
+3
+t
+L t e t
+
+
+; 
+ 
+ 
+and  
+ 
+1
+1
+,
+4
+
+
+
+
+ 
+ 
+ Differential equations and control processes, N. 2, 2025 
+ 
+https://doi.org/10.21638/11701/spbu35.2025.208        Electronic Journal: http://diffjournal.spbu.ru      136 
+where  
+2
+=1
+1 ( 1)
+.
+2
+m
+m
+m
+
+
+
+
+
+
+ As we know, since it is 1  , we can write 
+4
+
+  . 
+In this case, the main integral equation (3.10) can be replaced by the approximation 
+ 
+2( )
+0
+4
+( ) ( ) = , > 0.
+34
+t
+t s t
+t e s ds te t
+
+
+  
+
+
+ 
+(5.1) 
+ 
+By solving the integral equation (5.1) using the method of successive approximation, we obtain the 
+following solution:  
+ 
+10
+3
+3
+( ) = 7 4 4 , 0.
+196
+t
+tt
+t te e e t
+
+
+
+
+
+  
+
+
+ 
+ 
+ 
+6. References 
+ 
+[1] Al’shin, A.B., Korpusov, M.O., Siveshnikov, A.G. Blow up in nonlinear Sobolev type 
+equations, 1 edition, Walter Gruyter, Berlin, 2011. https://doi.org/10.1515/9783110255294. 
+[2]  Kolesov, A. Y.,. Mishchenko, E. F., Rozov, N. K.  Asymptotic Methods of Investigation of 
+Periodic Solutions of Nonlinear Hyperbolic Equations, Trudy Mat. Inst. Steklova, 222, 
+Nauka, MAIK «Nauka», M., 1998, 3–191; Proceedings of the Steklov Institute of 
+Mathematics, vol.  222, pp. 1-189, 1998. 
+[3] Shivamoggi, B. K. A symmetric regularized long wave equation for shallow water waves. 
+Physics of Fluids, vol. 29, pp. 890-891, 1986. https://doi.org/10.1063/1.865895 
+[4] Rosenau, P.  Evolution and breaking of the ion-acoustic waves. The Physics of Fluids, vol. 
+31, pp. 1317-1319, 1988. https://doi.org/10.1063/1.866723 
+[5] White, L. W. Controllability properties of pseudo-parabolic boundary control problems. 
+SIAM Journal on Control and Optimization, vol. 18, pp. 534-539, 1980. 
+https://doi.org/10.1137/031803 
+[6] Coleman, B. D. Instability, uniqueness, and nonexistence theorems for the equation 
+=
+t xx txx
+u u u  on a strip. Archive for Rational Mechanics and Analysis, vol. 19, pp. 100-116, 
+1965. https://doi.org/10.1007/BF00282277 
+[7] White, L. W. Point control of pseudoparabolic problems. Journal of Differential Equations, 
+vol. 42,  pp. 366-374, 1981. https://doi.org/10.1016/0022-0396(81)90110-8 
+[8] Fattorini, H. O.  Time-Optimal control of solutions of operational differential equation. SIAM 
+J. Control, vol. 2,  pp. 49-65, 1964. 
+[9] Friedman, A. Differential equations of parabolic type. New Jersey, XVI, Englewood Cliffs, 
+1964. 
+[10] Egorov, Yu. V. Optimal control in Banach spaces. Dokl. Akad. Nauk SSSR, vol. 150, pp. 
+241-244, 1963. (In Russian) 
+[11] Albeverio, S., Alimov, Sh. A. On one time-optimal control problem associated with the heat 
+exchange process. Applied Mathematics and Optimization, vol. 57, pp. 58-68, 2008. 
+[12] Alimov, Sh. A.,  Komilov, N. M.  Determining the thermal mode setting parameters based on 
+output data. Differential Equations, vol. 58, pp. 21-35, 2022. 
+https://doi.org/10.1134/S0012266122010049 
+[13] Dekhkonov, F.N. On the time-optimal control problem for a fourth order parabolic equation 
+in a two-dimensional domain. Bulletin of the Karaganda University. Mathematics Series, vol. 
+114,  pp. 57-70, 2024. https://doi.org/10.31489/2024m2/57-70 Differential equations and control processes, N. 2, 2025 
+ 
+https://doi.org/10.21638/11701/spbu35.2025.208        Electronic Journal: http://diffjournal.spbu.ru      137 
+[14] Dekhkonov, F., W. Li. On the boundary control problem associated with a fourth order 
+parabolic equation in a two-dimensional domain. Discrete and Continuous Dynamical 
+Systems - Series S, vol. 17, pp. 2478-2488, 2024.  https://doi.org/10.3934/dcdss.2024004 
+[15] Fayazova, Z.K. Boundary control of the heat transfer process in the space. Russian 
+Mathematics, vol. 63, pp. 71-79, 2019. https://doi.org/10.3103/S1066369X19120089  
+[16] Dekhkonov, F.N. Boundary control associated with a parabolic equation. Journal of 
+Mathematics and Computer Science, vol. 33, pp. 146-154, 2024. 
+https://dx.doi.org/10.22436/jmcs.033.02.03 
+[17] Dekhkonov, F.N. On the time-optimal control problem for a heat equation. Bulletin of the 
+Karaganda University. Mathematics Series, vol. 111, pp. 28-38, 2023. 
+https://doi.org/10.31489/2023m3/28-38 
+[18] Dekhkonov, F.N. Boundary control problem for a parabolic equation with involution. 
+Eurasian journal of mathematical and computer applications, vol. 12, pp. 22-34, 2024. 
+[19] Lions, J. L.  Contróle optimal de systèmes gouvernés par des équations aux dérivées 
+partielles. Paris, Dunod Gauthier-Villars, 1968. 
+[20] Fursikov, A. V. Optimal control of distributed systems, Theory and applications, Translations 
+of Math. Monographs, 187, Amer. Math. Soc., Providence, 2000. 
+http://dx.doi.org/10.1090/mmono/18 
+[21] Dekhkonov, F.N. On the control problem associated with a pseudo-parabolic type equation 
+in an one-dimensional domain. International Journal of Applied Mathematics, 37, pp. 109-
+118, 2024. http://dx.doi.org/10.12732/ijam.v37i1.9 
+[22] Dekhkonov, F.N., On one boundary control problem for a pseudo-parabolic equation in a 
+two-dimensional domain, Communications in Analysis and Mechanics, vol. 17, pp. 1-14, 
+2025. http://dx.doi.org/10.3934/cam.2025001 
+[23] Dekhkonov, F.N. Boundary control problem associated with a pseudo-parabolic equation. 
+Stochastic Modelling and Computational Sciences, vol. 3, pp. 117–128, 2023.  
+https://doi.org/10.61485/SMCS.27523829/v3n1P9 
+[24] Bakiyevich, N. I.,  Shadrin, G.A.  Cauchy problem for an equation in filtration theory. Sb. 
+Trudov Mosgospedinstituta, vol. 7, pp. 47-63, 1978. 
+[25] Khudaverdiyev, K. I.,  Farhadova, G.M.  On global existence for generalized solution of one-
+dimensional non-self-adjoint mixed problem for a class of fourth order semilinear pseudo- 
+parabolic equations. Proceedings of the Institute of Mathematics and Mechanics (PIMM), 
+National Academy of Sciences of Azerbaijan, vol. 31,  pp. 119-134, 2009. 
+[26] Zhao,  H. J., Xuan,  B. J. Existence and convergence of solutions for the generalized BBM-
+Burgers equations. Nonlinear Analysis: Theory, Methods and Applications, vol. 28, 1835-
+1849, 1997. https://doi.org/10.1016/S0362-546X(95)00237-P 
+[27] Tikhonov, A. N., Samarsky, A. A. Equations of Mathematical Physics, Nauka, Moscow, 
+1966. 
