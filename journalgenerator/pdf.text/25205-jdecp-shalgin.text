@@ -1,0 +1,1187 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 2, 2025
+Electronic Journal,
+reg. N Φ C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Filtration and identification
+Local parameter identifiability of an infinite-dimensional parameter
+in discrete linear dynamical systems
+V. S. Shalgin
+Saint Petersburg State University
+st086496@student.spbu.ru
+Abstract. In this paper, we study the problem of local parameter identifia-
+bility for discrete linear dynamical systems with discrete infinite-dimensional
+parameter. We establish conditions under which the system is locally parame-
+teridentifiableforanyparameterandinitialdata,i.e.,parametersofthesystem
+can be uniquely determined in a neighborhood of a fixed parameter by observ-
+ing functions of trajectories. Sufficient conditions under which the system is
+not locally parameter identifiable are also obtained. Two cases of a parameter
+are considered: the case where values of parameters are restricted by linear
+subspaces and the case where parameters are arbitrary. For the last case, the
+genericity of the property of local identifiability is proved.
+Keywords: localparameteridentifiability, discretedynamicalsystem, residual
+set, genericity.
+1. Introduction. The problem of parameter identification consists of
+determining parameters of a dynamical system based on observations of trajec-
+toriesorfunctionsoftrajectories. Parameteridentificationisanimportantpart
+oftheappliedtheoryofdynamicalsystems. Withintheframeworkofthisprob-
+lem, one of the key concepts is the property of local parameter identifiability.Differential Equations and Control Processes, N. 2, 2025
+This property means that parameter of the system can be uniquely determined
+by observations of trajectories if the parameter belong to some neighborhood
+of a fixed parameter.
+The property of local parameter identifiability for systems of differential
+equations was studied in detail in the case of a finite-dimensional parameter in
+the monograph [1]. In the studies on the topic, the case of a finite-dimensional
+parameter was mainly studied. In the paper [2], sufficient conditions for local
+parameteridentifiabilityofaparameter-functioninasystemofdifferentialequa-
+tions by observing a solution at the endpoint of a fixed interval were obtained.
+The paper [3] develops the idea of the previous article: a class of systems of
+differential equations has been specified such that the parameter-function can
+be uniquely determined by observing a solution at a finite number of points
+of a fixed interval. The paper [4] discusses several formulations of the local
+parameter identifiability problem for discrete-time dynamical systems. Suffi-
+cient conditions for local parameter identifiability of a parameter-sequence in
+the general formulation are obtained for the case of observing a trajectory at
+all points of the trajectory and at an arbitrary countable set of points; the case
+of a linearly perturbed diffeomorphism in a neighborhood of a hyperbolic set
+was considered.
+We note the paper [5] in which dynamical systems of the type “input–
+output” are considered. The authors proved that the property of local parame-
+ter identifiability for such systems with finite-dimensional parameter is generic,
+i.e., almost all systems of this type are locally parameter identifiable. In the
+paper [3], the genericity of the local parameter identifiability property is estab-
+lished for the case of linear dependence of a system on a parameter-function.
+In this paper, we study the problem of local parameter identifiability for
+the discrete-time linear dynamical system in the spaceR
+n
+,
+x
+k+1
+=A
+k
+x
+k
++B
+k
+p
+k
+,
+dependingonaparameter-sequence(p
+k
+∈R
+l
+)
+k≥ 0
+. Weassumethatobservations
+are linear functions of x
+k
+.
+InSection2, weconsiderparametersp
+k
+belongingtolinearsubspacesofthe
+space R
+l
+and find sufficient conditions for local parameter identifiability and
+find sufficient conditions for the absence of this property.
+In Section 3, we consider the same system but do not restrict parameter
+values to specific subspaces and assume that p
+k
+∈ R
+l
+. We provide sufficient
+conditions for local parameter identifiability and obtain one more sufficient
+https://doi.org/10.21638/11701/spbu35.2025.205 Electronic Journal: http://diffjournal.spbu.ru/ 90Differential Equations and Control Processes, N. 2, 2025
+condition fro which the system is not locally parameter identifiable.
+In Section 4, we prove that for the case where p
+k
+∈ R
+l
+locally parameter
+identifiable systems are generic, i.e., in certain sense almost all systems possess
+this property.
+2. The case of parameter belonging to a linear subspace. Consider
+a discrete-time linear dynamical system depending on parameter:
+x
+k+1
+=A
+k
+x
+k
++B
+k
+p
+k
+, k≥ 0, (1)
+where x
+k
+∈R
+n
+, A
+k
+∈ M
+n× n
+, B
+k
+∈ M
+n× l
+, M
+q× r
+is the normed space of matrices
+ofsizeq× r,andparameterp
+k
+belongstoV
+k
+thatisanonzerolinearsubspaceof
+the spaceR
+l
+. We denote byP =(p
+k
+)
+k≥ 0
+the parameter-sequence in the system.
+ItisassumedthatparameterP belongstothespaceofboundedsequenceswith
+the norm∥P∥=sup
+k≥ 0
+|p
+k
+|.
+We fix an initial vector x
+0
+∈ R
+n
+and observe vectors y
+k
+∈ R
+m
+defined as
+follows:
+y
+k
+=C
+k
+x
+k
+, k≥ 1, (2)
+where C
+k
+∈M
+m× n
+. The corresponding values y
+k
+(P) and x
+k
+(P) depend only on
+the first k components of parameter P.
+Definition 1 System (1)–(2) is called locally parameter identifiable for param-
+eter P
+0
+= (p
+0
+k
+) and initial data x
+0
+∈R
+n
+if there is an ε > 0 such that for any
+parameter P with 0<∥P − P
+0
+∥<ε there exists an index k for which
+y
+k
+(P)̸=y
+k
+(P
+0
+).
+For any k ≥ 0 there is a matrix D
+k
+∈ M
+l× l
+such that an image imD
+k
+of
+the corresponding linear map D
+k
+:R
+l
+→R
+l
+is equal to V
+k
+. We will identify a
+matrix and the corresponding linear operator. Then
+rankD
+k
+=dimV
+k
+.
+Let us introduce the notation
+∆ P =P − P
+0
+=(∆ p
+k
+)=(p
+k
+− p
+0
+k
+),
+∆ x
+k
+(P)=x
+k
+(P)− x
+k
+(P
+0
+),
+∆ y
+k
+(P)=C
+k
+∆ x
+k
+(P).
+https://doi.org/10.21638/11701/spbu35.2025.205 Electronic Journal: http://diffjournal.spbu.ru/ 91Differential Equations and Control Processes, N. 2, 2025
+It is shown in [4] that for any k≥ 0
+∆ x
+k+1
+(P)=A
+k
+··· A
+1
+B
+0
+∆ p
+0
++··· +A
+k
+B
+k− 1
+∆ p
+k− 1
++B
+k
+∆ p
+k
+.
+Hence,
+∆ y
+k+1
+=C
+k+1
+(A
+k
+··· A
+1
+B
+0
+∆ p
+0
++··· +A
+k
+B
+k− 1
+∆ p
+k− 1
++B
+k
+∆ p
+k
+). (3)
+First we establish a sufficient condition for local parameter identifiability.
+Theorem 1 If
+kerC
+k+1
+B
+k
+∩ imD
+k
+={0} (4)
+for any k ≥ 0, then system (1)–(2) is locally parameter identifiable for any
+parameter P
+0
+and any initial data x
+0
+.
+Proof. Suppose that system (1)–(2) is not locally parameter identifiable for
+some parameter P
+0
+and some initial data x
+0
+. Then there is a sequence of
+parameters P
+s
+=(p
+s
+k
+)→P
+0
+, s→∞, and P
+s
+̸=P
+0
+such that
+y
+k
+(P
+s
+)=y
+k
+(P
+0
+)
+for any s,k≥ 1. If k =1, then ∆ y
+1
+(P
+s
+)=C
+1
+B
+0
+∆ p
+s
+0
+=0 by formula (3); this is
+possible only if ∆ p
+s
+0
+=0 for any s due to relation (4).
+Let ∆ p
+s
+k
+=0 for each k =0,1,...,v− 1, v≥ 1, and for all s. Then formula
+(3) implies that
+∆ y
+v+1
+(P)=C
+v+1
+B
+v
+∆ p
+s
+v
+=0.
+Applying the above reasoning, we can conclude that ∆ p
+s
+v
+= 0 for all s. There-
+fore, ∆ p
+s
+k
+=0 for all k,s. This contradicts the fact that P
+s
+̸=P
+0
+. □ Now we establish two sufficient conditions under which the system is not
+locally parameter identifiable.
+Theorem 2 Let one of the following conditions be satisfied:
+1. There is a number k such that
+kerB
+k
+∩ imD
+k
+̸={0};
+2. rankD
+k
+>rankB
+k
+for some k.
+Then system (1)–(2) is not locally parameter identifiable for any parameter P
+0
+and any initial data x
+0
+.
+https://doi.org/10.21638/11701/spbu35.2025.205 Electronic Journal: http://diffjournal.spbu.ru/ 92Differential Equations and Control Processes, N. 2, 2025
+Proof. To get a contradiction, assume that system (1)–(2) is locally parameter
+identifiable for some parameter P
+0
+and some initial data x
+0
+. Hence, there is a
+number ε>0 such that for any P with 0<∥∆ P∥<ε one can find an index j
+for which ∆ y
+j+1
+(P)̸=0.
+Suppose that condition 1 of the theorem is satisfied. If ∆ p
+i
+= 0 for i̸= k,
+0<|∆ p
+k
+|<ε, and ∆ p
+k
+∈kerB
+k
+∩ imD
+k
+, then formula (3) implies that
+∆ y
+i+1
+(P)=0, i<k,
+∆ y
+k+1
+(P)=C
+k+1
+B
+k
+∆ p
+k
+=0,
+∆ y
+i+1
+(P)=C
+i+1
+A
+i
+··· A
+k+1
+B
+k
+∆ p
+k
+=0, i>k.
+Hence, there is a P with 0 < ∥∆ P∥ < ε for which ∆ y
+j+1
+(P) = 0 for any j,
+which is a contradiction.
+Let condition 2 be satisfied. Since rank D
+k
+> rankB
+k
+, we conclude that
+l− rankB
+k
++rankD
+k
+>l. It follows from the rank–nullity theorem that
+dimkerB
+k
++dimimD
+k
+>l.
+Hence, the sum kerB
+k
++imD
+k
+of the linear subspaces coincides withR
+l
+. Then
+dim(kerB
+k
+∩ imD
+k
+) is estimated as follows:
+dimkerB
+k
++dimimD
+k
+− dim(kerB
+k
++imD
+k
+)>l− l =0.
+Hence, kerB
+k
+∩ imD
+k
+̸={0}, and we can refer to the proof of our theorem in
+the case where condition 1 is fulfilled. □ Comment. Let us comment “informal” meaning of conditions of The-
+orem 2. Condition 1 means that the space V
+k
+(the image of D
+k
+) contains
+“inessential” parameters such that some variations of these parameters do not
+influence the values x
+i
+and hence y
+i
+. Condition 2 means that we have “too
+many” parameters to be identified.
+3. A particular case in which V
+k
+= R
+l
+. In this section, we consider
+an important particular case of the dynamical system (1)–(2) studied in the
+previous section; now we assume that x
+k
+∈ R
+n
+, y
+k
+∈ R
+m
+, A
+k
+∈ M
+n× n
+, B
+k
+∈
+M
+n× l
+, C
+k
+∈ M
+m× n
+, and parameters p
+k
+belong toR
+l
+, i.e. dimV
+k
+= rankD
+k
+= l
+for all k (for definiteness, we agree that D
+k
+is the identity matrix for all k).
+Let us reformulate Theorems 1 and 2 for the considered case.
+Theorem 3 If rankC
+k+1
+B
+k
+=l for all k, then system (1)–(2) is locally param-
+eter identifiable for any parameter P
+0
+and any initial data x
+0
+.
+https://doi.org/10.21638/11701/spbu35.2025.205 Electronic Journal: http://diffjournal.spbu.ru/ 93Differential Equations and Control Processes, N. 2, 2025
+Remark. Note that rankC
+k+1
+B
+k
+can be equal to l only if l≤ min(m,n).
+Theorem 4 If there is an index k such that rankB
+k
+< l, then system (1)–(2)
+is not locally parameter identifiable for any parameter P
+0
+and any initial data
+x
+0
+.
+Nowweobtainonemoreconditionunderwhichsystem(1)–(2)isnotlocally
+parameter identifiable for the case where l = n (we study the case where the
+assumption of Theorem 4 is not satisfied but impose additional conditions not
+only on the matrices B
+k
+and C
+k
+but also on the matrices A
+k
+).
+Theorem 5 Let l =n, assume that rankC
+k+1
+<n for some k, rankB
+i
+=l for
+all i, and there exist constants M >0 and µ ∈(0,1) such that
+∥B
+i
+∥,∥B
+− 1
+i
+∥≤ M, i≥ k,
+∥A
+i
+∥≤ µ, i ≥ k,
+µ (1+M
+2
+)<1.
+Then system (1)–(2) is not locally parameter identifiable for any parameter P
+0
+and any initial data x
+0
+.
+Proof. Set ∆ p
+i
+=0 for i<k. Then
+∆ y
+i+1
+(P)=0, i<k. (5)
+Since rankC
+k+1
+< n = l and rankB
+k
+= l = n, for any ε > 0 there exists a
+z
+k
+∈kerC
+k+1
+B
+k
+such that 0<|z
+k
+|<ε. Set ∆ p
+k
+=z
+k
+. Then 0<|∆ p
+k
+|<ε and
+∆ y
+k+1
+(P)=C
+k+1
+B
+k
+∆ p
+k
+=0
+due to formula (3) and equalities (5).
+Set
+∆ p
+k+i
+=− B
+− 1
+k+i
+i− 1
+X
+s=0
+A
+k+i
+··· A
+k+s+1
+B
+k+s
+∆ p
+k+s
+(6)
+for i>0.
+Formula (3) implies that
+∆ y
+k+i+1
+=C
+k+i+1
+ 
+i− 1
+X
+s=0
+A
+k+i
+··· A
+k+s+1
+B
+k+s
+∆ p
+k+s
++B
+k+i
+∆ p
+k+i
+!
+=0
+https://doi.org/10.21638/11701/spbu35.2025.205 Electronic Journal: http://diffjournal.spbu.ru/ 94Differential Equations and Control Processes, N. 2, 2025
+for i>0.
+Let us show that|∆ p
+k+i
+| < ε for i > 0. First we apply induction to prove
+the inequality
+|∆ p
+k+i
+|≤ µM
+2
+(µ i− 1
+(1+M
+2
+)
+i− 1
+)ε, i>0. (7)
+If i=1, then
+|∆ p
+k+1
+|=|B
+− 1
+k+1
+A
+k+1
+B
+k
+∆ p
+k
+|≤ µM
+2
+ε.
+Let inequalities (7) hold for i=1,2,...,ν ; then it follows from (6) and (7) that
+|∆ p
+k+ν +1
+|≤ µM
+2
+ν X
+s=0
+µ ν − s
+|∆ p
+k+s
+|≤ µM
+2
+εµ
+ν 
+1+
+ν X
+s=1
+M
+2
+(1+M
+2
+)
+s− 1
+!
+. (8)
+Note that (1+M
+2
+)
+ν =M
+2
+(1+M
+2
+)
+ν − 1
++(1+M
+2
+)
+ν − 1
+. Iteratively applying this
+equality, we show that
+(1+M
+2
+)
+ν =M
+2
+(1+M
+2
+)
+ν − 1
++...+M
+2
+(1+M
+2
+)+M
+2
++1. (9)
+Therefore, comparing the right-hand side of inequality (8) and equality (9),
+we show that
+|∆ p
+k+ν +1
+|≤ µM
+2
+εµ
+ν (1+M
+2
+)
+ν ,
+which is inequality (7) with i=ν +1.
+Since µ (1+M
+2
+)<1, µM
+2
+<1− µ< 1. Hence, it follows from estimate (7)
+that|∆ p
+k+i
+|<ε, i>0, as required. □ Comment. Conditions of Theorem 5 mean that trajectories of the “ho-
+mogeneous” system
+x
+k+1
+=A
+k
+x
+k
+(10)
+converge to 0 exponentially fast as k grows, while the constant M estimating
+the norms of B
+k
+and B
+− 1
+k
+is not very large compared to the exponential rate of
+convergence of trajectories of system (10).
+We show that in this case, it is possible to find arbitrarily small perturba-
+tions P of parameter-sequence P
+0
+for which the observed values y
+j
+(P) coincide
+with y
+j
+(P
+0
+) for all j.
+4. Genericity of the local parameter identifiability property. In
+this section, we show that, in a certain sense, almost all systems of type (1)–(2)
+are locally parameter identifiable for all parameters and initial data.
+https://doi.org/10.21638/11701/spbu35.2025.205 Electronic Journal: http://diffjournal.spbu.ru/ 95Differential Equations and Control Processes, N. 2, 2025
+Denote byG the linear space of sequences of pairs of matrices
+G ={((C
+1
+,B
+0
+),(C
+2
+,B
+1
+),...) : (C
+k+1
+,B
+k
+)∈M
+m× n
+× M
+n× l
+}
+with the norm∥G∥ = sup
+k≥ 0
+∥G
+k
+∥, where G
+k
+= (C
+k+1
+,B
+k
+), G = (G
+0
+,G
+1
+,...) and
+∥G
+k
+∥=∥(C
+k+1
+,B
+k
+)∥isanarbitrarynorm. SinceM
+m× n
+× M
+n× l
+isaBanachspace
+then the space G as a countable Cartesian product of copies of M
+m× n
+× M
+n× l
+with sup norm is also a Banach space (see [6]).
+A subset of a topological set is called residual (or comeagre) if it is a count-
+ableintersectionofdenseopensubsets. Inliterature, residualsubsetsaresome-
+times called sets of the second Baire category. A property of elements of a
+topological space X for which there exists a residual subset Y of X such that
+any element of Y has this property is called generic.
+Since G is a complete metric space, it is a Baire space (see [7]), i.e., every
+residual subset ofG is dense inG.
+Proposition 1 Let l≤ min(n,m), then the set
+G
+′
+={((C
+1
+,B
+0
+),(C
+2
+,B
+1
+),...) : rankC
+k+1
+B
+k
+=l, k≥ 0}
+is residual inG.
+Proof. Rank estimation of a matrix product gives us the following inequality:
+rankC
+k+1
+B
+k
+≤ min(rankC
+k+1
+,rankB
+k
+)≤ min(min(m,n),min(n,l))=l.
+Hence, the setG
+′
+is not empty since the product of matrices m× n and n× l
+in which all the entries on the main diagonals are equal to 1 and the remaining
+entries are equal to 0 has rank equal to l. Consider the set
+G
+i
+={((C
+1
+,B
+0
+),(C
+2
+,B
+1
+),...) : rankC
+i+1
+B
+i
+=l}
+where i ≥ 0 is fixed. We show that G
+i
+is open and dense in G. Consider the
+mapping
+g :G→R
+≥ 0
+, G=((C
+1
+,B
+0
+),(C
+2
+,B
+1
+),...)7→|κ (C
+i+1
+B
+i
+)|
+2
+,
+whereκ (C
+i+1
+B
+i
+) is a vector composed of all l× l minors of the matrix C
+i+1
+B
+i
+∈
+M
+m× l
+ordered in a fixed way and |·| is the Euclidean norm. The function g
+is continuous since it is a composition of the projection G7→ G
+i
+and the map
+G
+i
+7→|κ (C
+i+1
+B
+i
+)|
+2
+which is a polynomial depending on entries of the matrices
+C
+i+1
+,B
+i
+.
+https://doi.org/10.21638/11701/spbu35.2025.205 Electronic Journal: http://diffjournal.spbu.ru/ 96Differential Equations and Control Processes, N. 2, 2025
+If G∈G
+i
+, then g(G) > 0. There is an open neighborhood U of the point
+g(G) such that 0 / ∈U. Then G∈g
+− 1
+(U)⊂G
+i
+, i.e., the setG
+i
+is open.
+Let us prove the density of the set G
+i
+. Fix an arbitrary pair of matrices
+C
+0
+i+1
+,B
+0
+i
+and fix G
+0
+∈ G
+i
+with G
+0
+i
+= (C
+0
+i+1
+,B
+0
+i
+). If rankC
+0
+i+1
+B
+0
+i
+= l, then any
+neighborhood of G
+0
+has a nonempty intersection withG
+i
+.
+Otherwise, if rankC
+0
+i+1
+B
+0
+i
+< l, consider an arbitrary ε > 0 and matrices
+C
+i+1
+,B
+i
+such that rankC
+i+1
+B
+i
+=l.
+Define a family G
+t
+, t∈[0,1], such that G
+t
+k
+=G
+0
+k
+for all t∈[0,1], k̸=i, and
+G
+t
+i
+=(tC
+i+1
++(1− t)C
+0
+i+1
+,tB
+i
++(1− t)B
+0
+i
+), t∈[0,1].
+Then g(G
+t
+) is a polynomial in variable t which has a finite number of zeros
+since g(G
+1
+)=|κ (C
+i+1
+B
+i
+)|
+2
+>0.
+Since g(G
+0
+)=0, there is a positive t
+0
+such that
+t
+0
+<
+ε
+∥(C
+i+1
+− C
+0
+i+1
+,B
+i
+− B
+0
+i
+)∥
+and g(G
+t
+)>0 for any 0<t<t
+0
+. Then
+∥G
+t
+− G
+0
+∥=t∥(C
+i+1
+− C
+0
+i+1
+,B
+i
+− B
+0
+i
+)∥<ε.
+Hence, in any ε-neighborhood of the element G
+0
+/ ∈ G
+i
+there is an element G
+t
+belonging toG
+i
+for some t.
+Thus,G
+′
+=
+T
+i≥ 0
+G
+i
+is a countable intersection of dense open subsets, hence
+G
+′
+is residual. □ Therefore, we can formulate the following theorem which directly follows
+from Proposition 1 and Theorem 3.
+Theorem 6 If l≤ min(m,n), then there exists a residual subsetG
+′
+of the space
+G ofsequencesofmatrixpairs(C
+k+1
+,B
+k
+),k≥ 0, withthefollowingproperty: for
+any matrices C
+k+1
+,B
+k
+, k ≥ 0, such that the sequence ((C
+k+1
+,B
+k
+))
+k≥ 0
+belongs
+to G
+′
+and for any matrices A
+k
+, k ≥ 0, system (1)–(2) is locally parameter
+identifiable for any parameter P
+0
+and any initial data x
+0
+.
+5. Funding. The work was supported by the Russian Science Foundation,
+grant no. 23-21-00025, https://rscf.ru/project/23-21-00025/.
+https://doi.org/10.21638/11701/spbu35.2025.205 Electronic Journal: http://diffjournal.spbu.ru/ 97Differential Equations and Control Processes, N. 2, 2025
+References
+[1] N.A.Bodunov, An Introduction to the Theory of Local Parameter Identifi-
+ability, St. Petersburg University Press, St. Petersburg, 2006 (in Russian).
+[2] N. A. Bodunov and G. I. Volfson, Local identifiability of systems with a
+variableparameter,Differential Equations and Control Processes ,2(2009),
+17–31 (In Russian).
+[3] S.Yu.PilyuginandV.S.Shalgin, Conditionsforlocalparameteridentifia-
+bility for systems of differential equations with an infinite-dimensional pa-
+rameter, Vestnik St. Petersburg University. Mathematics, 56 (2023), 532–
+441.
+[4] S. Yu. Pilyugin and V. S. Shalgin, Local parameter identifiability: case of
+discrete infinite-dimensional parameter, Journal of Dynamical and Control
+Systems, 30(14) (2024).
+[5] N. A. Bodunov, S. A. Kolbina, and S. Yu. Pilyugin, Locally parameter
+identifiable systems are generic, Vestnik St. Petersburg University. Mathe-
+matics, 45 (2012), 61–64.
+[6] C.D.AliprantisandK.C.Border, Infinite Dimensional Analysis: a Hitch-
+hiker’s Guide, 2nd edition, Springer, Berlin, 1999.
+[7] J. L. Kelley, General Topology, Graduate Texts in Mathematics. Vol. 27,
+Springer Science & Business Media, New York, 1975.
+https://doi.org/10.21638/11701/spbu35.2025.205 Electronic Journal: http://diffjournal.spbu.ru/ 98
