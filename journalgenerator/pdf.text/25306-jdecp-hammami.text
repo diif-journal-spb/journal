@@ -1,0 +1,2384 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 3, 2025
+Electronic Journal,
+reg. N Φ C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Delay differential equations
+Observer-based controller design for delayed T-S fuzzy
+nonlinear systems
+N. HadjTaieb
+a
+M. A. Hammami
+b
+F. Delmotte
+c
+a
+University of Sfax, IPEIS of Sfax
+E.mail: nizar.hadjtaieb@yahoo.fr
+b
+University of Sfax, Faculty of Sciences of Sfax
+E.mail: MohamedAli.Hammami@fss.rnu.tn
+c
+University of Artois, Bethune France
+E.mail: fran¸ cois.delmotte@univ-artois.fr
+Abstract. The issue of stabilization by an estimated state feedback for a fam-
+ily of Takagi-Sugeno fuzzy systems with nonlinear time delays is the focus of
+this research. It is intended that the delay remain constant. The closed-loop
+systems are found to be globally exponentially stable based on the Lyapunov-
+Krasovskii functionals. Even with modeling uncertainty and state delay, it is
+possible to design the controller and observer gains independently. Lastly, a
+numerical example is provided to demonstrate how the primary finding can be
+used.
+Keywords: Time-delay fuzzy systems, controller, stabilization, separation
+principle.Differential Equations and Control Processes, N. 3, 2025
+1 Introduction
+Anonlinearsystem’scontroldesignandstabilityanalysisarechallengingtasks.
+In actuality, the control system’s controlled object is never linear. One of the
+primary areas of study for the control community is the stability and stabiliza-
+tion of systems, with or without delays. The theoretical definitions of asymp-
+totic stability and stability in the sense of Lyapunov used in the majority of
+contributions are too restrictive when taking into account real-world problems:
+a system may be stable or asymptotically stable in theory, but in practice it is
+unstable because the stable domain or the domain of the desired attractor is
+too small; occasionally, a system’s state may be mathematically unstable, but
+the system may oscillate close enough to this state for its performance to be
+acceptable. The state estimation problem is a crucial one for control theory.
+An observer’s goal is to recreate a system’s state using their understanding of
+the both the system’s input and output. The Kalman filter or the Luenberger
+observerarecommonlyusedtoestimatethesystemstateforlinearsystems. Ex-
+tending the linear Kalman filter or the linear Luenberger observer to nonlinear
+systemsisapopularmethodforestimatingthestateofnonlinearsystems. Nev-
+ertheless, there aren’t many state estimate findings for nonlinear systems with
+delayed states in the literature. These systems frequently show up when mod-
+elingsystemsthatrequiredatapropagationandtransit, likebiologicalsystems,
+chemicalreactors,andcommunicationsystems. Complexnonlinearsystemscan
+occasionallybechallengingtocharacterizeusinglinearizationorrecognitionap-
+proaches. Consequently, nonlinearobjectsareapproximatedusingtheso-called
+fuzzy model, which expresses the local linear input-output relationship of non-
+linearsystemsviafuzzyimplication. Sinceitenablesthesystematicapplication
+of linear matrix inequality (LMI) techniques and the parallel distributed com-
+pensation idea to complicated nonlinear systems, Takagi-Sugeno (T-S) fuzzy
+model-based control has drawn a lot of attention recently. The output feed-
+back control problem can also be resolved with T-S fuzzy model-based control.
+The overall fuzzy model of the system is achieved by smoothly blending the
+local linear models together through the membership functions. Then, based
+on this fuzzy model, the control design is worked out by taking full advantage
+of the strength of modern linear control theory. Such models can approximate
+exactly a wide class of nonlinear systems. Hence it is important to study their
+stability ([1]-[5]) or the synthesis of stabilizing controllers in the case of sys-
+tems with delay ([7]-[17], [23], [27], [28]). Since time delays frequently appear
+in many practical systems, such as chemical processes, and telecommunication
+https://doi.org/10.21638/11701/spbu35.2025.306 Electronic Journal: http://diffjournal.spbu.ru/ 77Differential Equations and Control Processes, N. 3, 2025
+systems, the control problem for time-delay systems has received considerable
+attention [14]. While there is an extensive literature on this topic most of the
+reported studies focus on linear time-delay systems [3], due to the difficulty of
+the stability analysis and controller design. The relative existing literature on
+the technique can be roughly divided into three types: static output feedback
+control [18], dynamic control [6], and observer-based control ([21],[26]). There-
+fore, fuzzy observer-based control is the most popular scheme because the state
+variables can be reconstructed by a T-S fuzzy observer. In our recent paper
+([15]), under the fact that both the estimator dynamics and the state feedback
+dynamics are stable we propose a separation principle for Takagi-Sugeno fuzzy
+control systems with Lipschitz nonlinearities. The considered nonlinearities are
+Lipschitz or meets an integrability condition which have no influence on the
+LMI to prove the stability of the associated closed-loop system.
+In this paper, we investigate the problem of global stabilization of a class of
+nonlinear time-delay Takagi-Sugeno fuzzy systems with constant delay. We
+use the parallel distributed compensation concept to propose state and output
+feedback controllers. Consequently, we establish global exponential stability of
+the closed-loop systems using suitable Lyapunov-Krasovskii functionals. After
+that, linear matrix inequality (LMI) issues are solved using the exponential
+stability requirements that have been derived. Even with modeling uncertainty
+and state delay, the controller and observer gains can be independently built
+using the newly discovered LMI methods.
+This is how the remainder of the paper is structured. A summary of some first
+findings and a description of the system are provided in Section 2. Section
+3 presents the main findings. To guarantee the nonlinear time-delay system’s
+global exponential stability, linear state and output feedback controllers are
+first created. Section 4 then provides a simulation result that illustrates the
+efficacy of the suggested strategy.
+2 Takagi-Sugeno fuzzy delayed system
+It is challenging to construct precise mathematical models of the majority of
+physical systems due to their complexity and uncertainties. For small range
+motion, these systems’ dynamics could exhibit either linear or nonlinear char-
+acteristics. Lyapunov’slinearizationtechniqueisfrequentlyusedtocreatelocal
+linearized approximations and addressthe local dynamics ofnonlinear systems.
+In other words, a collection of local mathematical models can be used to par-
+https://doi.org/10.21638/11701/spbu35.2025.306 Electronic Journal: http://diffjournal.spbu.ru/ 78Differential Equations and Control Processes, N. 3, 2025
+tition the complex system. Takagi and Sugeno have suggested a useful method
+for combining these models by building with the fuzzy inferences.
+2.1 Preliminaries
+Consider the following time-delay system:
+(
+˙ x =G(x,x(t− τ ))
+x(θ ) =ϕ (θ ),θ ∈ [− τ, 0]
+(1)
+where τ > 0 denotes the time delay and ϕ ∈ C is the initial function, where
+C denotes the Banach space of continuous functions mapping the interval
+[− τ, 0]−→ R
+n
+equipped with the supremum-norm:
+∥ϕ ∥
+∞
+= max
+θ ∈[− τ, 0]
+∥ϕ (θ )∥
+∥.∥ being the Euclidean-norm. The map G :R
+n
+−→ R
+n
+is smooth and satisfies
+g(0,0) = 0. The function segment x
+t
+is defined by x
+t
+(θ ) =x(t+θ ), θ ∈ [− τ, 0].
+Definition 1 [25] The zero solution of system (1) is said to be globally expo-
+nentially stable with a decay σ > 0, if there exists a positive real β such that,
+for any initial condition ϕ ∈C, the following inequality holds:
+∥x(t)∥≤ β ∥ϕ ∥
+∞
+e
+− σt
+; for all t≥ 0.
+Sufficient conditions for stability of time-delay systems are provided by the
+theory of Lyapunov-Krasovskii functionals [14], a generalization of the classical
+Lyapunov theory of ordinary differential equations [19]. The following theorem
+gives sufficient conditions to ensure that the origin of system (1) is globally
+exponentially stable [25].
+Theorem 1 If there exist positive numbers λ 1
+, λ 2
+ϱ and a continuous differen-
+tiable functional V :C−→ R
++
+such that:
+λ 1
+∥x(t)∥
+2
+≤ V(x
+t
+)≤ λ 2
+∥x
+t
+∥
+∞
+, (2)
+˙
+V(x
+t
+)+ϱV(x
+t
+)≤ 0, (3)
+then, the zero solution of (1) is globally exponentially stable with the decay rate
+ϱ.
+https://doi.org/10.21638/11701/spbu35.2025.306 Electronic Journal: http://diffjournal.spbu.ru/ 79Differential Equations and Control Processes, N. 3, 2025
+2.2 Fuzzy control system
+The T-S fuzzy model is given by:
+Rule i : If z
+1
+(t) is F
+i1
+and z
+2
+(t) is F
+i2
+... and z
+p
+(t) is F
+ip
+, then
+˙ x =A
+i
+x+B
+i
+u+
+˜
+F
+i
+(x,x(t− τ ),u), i = 1,...,r (4)
+where x(t) ∈ R
+n
+is the state vector, u(t) ∈ R
+m
+is the control input vector,
+A
+i
+(n,n) constant matrix, B
+i
+(n,m) matrix control input and the functions
+˜
+F
+i
+represent the delayed perturbations of each fuzzy subsystem for i = 1,...,r. F
+ij
+is the fuzzy set (j = 1,2,...,p), z(t) =
+T
+(z
+1
+(t),...,z
+p
+(t)) is the premise variable
+vector associated with the system states and inputs and r is the number of
+fuzzy rules. Center of gravity defuzzification yields the output of fuzzy system:
+˙ x =
+P
+r
+i=1
+w
+i
+(z)(A
+i
+x(t)+B
+i
+u(t)+
+˜
+F
+i
+(x,x(t− τ ),u))
+P
+r
+i=1
+w
+i
+(z)
+where
+w
+i
+(z) =
+p
+Y
+j=1
+F
+ij
+(z
+j
+)
+and F
+ij
+(z
+j
+) denotes the grade of the number ship function F
+ij
+, corresponding
+to z
+j
+(t). Let µ i
+(z) be defined as:
+ζ i
+(z) =
+w
+i
+(z)
+P
+r
+i=1
+w
+i
+(z)
+.
+Then, the fuzzy system has the state-space form:
+˙ x =
+r
+X
+i=1
+ζ i
+(z)(A
+i
+x(t)+B
+i
+u(t)+
+˜
+F
+i
+(x,x(t− τ ),u))
+Clearly,
+r
+X
+i=1
+ζ i
+(z) = 1
+and
+ζ i
+(z)≥ 0 for i = 1,...,r.
+It is assumed that the T-S fuzzy system is as follows:
+The pairs (A
+i
+,B
+i
+), i = 1,...,r are controllable. That is, the nominal fuzzy
+system is locally controllable.
+https://doi.org/10.21638/11701/spbu35.2025.306 Electronic Journal: http://diffjournal.spbu.ru/ 80Differential Equations and Control Processes, N. 3, 2025
+Based on this assumption, a state feedback control gain K
+i
+can be obtained by
+pole placement design or Ackerman’s formula, such that each local dynamics
+is stably controlled. The representation of the global control input matrix,
+denoted by B, is in the form: B =
+P
+r
+i=1
+ζ i
+B
+i
+. This means that the global
+control input matrix dominates the control performance. The design of the
+fuzzy controller can be taken as a linear state feedback control can defined as:
+Rule i : If z
+1
+(t) is F
+i1
+and z
+2
+(t) is F
+i2
+... and z
+p
+(t) is F
+ip
+, then
+u(t) =− K
+i
+x(t), i = 1,2,...,r,
+where K
+i
+is the local state feedback gain. Consequently, the defuzzified result
+is:
+u(t) =− r
+X
+i=1
+ζ i
+(z)K
+i
+x(t).
+Taking y =
+r
+X
+i=1
+ζ i
+(z)C
+i
+x, y ∈ R
+q
+and C
+i
+has an appropriate dimension and ˆ y
+defined by
+ˆ y =
+r
+X
+i=1
+ζ i
+(z)C
+i
+ˆ x.
+In this case, an observer can be designed which has the form:
+˙
+ˆ x =
+r
+X
+i=1
+ζ i
+(z)
+ 
+A
+i
+ˆ x+B
+i
+u)− L
+i
+(y− ˆ y).
+We wish to find a gain matrix L such that the error e(t) = ˆ x(t)− x(t) converge
+exponentially to zero as t goes to infinity. We assume that the following rules
+are given concerning the observer of each subsystem.
+Rule l : If z
+i
+(t) is F
+i1
+and z
+2
+(t) is F
+i2
+... and z
+p
+(t) is F
+ip
+, then
+˙
+ˆ x =
+ 
+A
+i
+ˆ x+B
+i
+u
+ 
+− L(y− ˆ y), i = 1,2,...,r.
+It suffices to take L =
+r
+X
+i=1
+ζ i
+(z)L
+i
+. So,
+˙
+ˆ x =
+r
+X
+i=1
+ζ i
+(z)
+ 
+A
+i
+ˆ x+B
+i
+u
+ 
+− r
+X
+i=1
+ζ i
+(z)L
+i
+(y− ˆ y).
+Whenwewanttocontrolsystemsusinganestimatedcontrollerthatisavailable
+viaanobserverdesign, theideaofobserversforfuzzysystemsiscrucialbecause
+https://doi.org/10.21638/11701/spbu35.2025.306 Electronic Journal: http://diffjournal.spbu.ru/ 81Differential Equations and Control Processes, N. 3, 2025
+the building of the closed-loop fuzzy system does not guarantee its stability.
+The following assumptions on the matrices (A
+i
+;B
+i
+;C
+i
+), can now be used to
+summarize this fact in order to demonstrate a stabilization result using an
+observer. First, (A
+i
+;B
+i
+) are controllable and second (C
+i
+;A
+i
+) are observable for
+i = 1,2,...,r. The state-feedback gain K
+i
+and the state-observer gain L
+i
+can be
+obtained by formulating a synthesis tool based on some LMIs.
+The aim of this paper is to design an estimated state feedback to stabilize
+the origin of the following time-delay perturbed fuzzy system depending on a
+parameter:
+
+
+
+
+
+
+
+
+
+
+
+˙ x(t) =
+r
+X
+i=1
+ζ i
+(z)
+ 
+A
+i
+x+B
+i
+u+
+˜
+F
+i
+(x,x(t− τ ),u(t))
+ 
+y(t) =
+r
+X
+i=1
+ζ i
+(z)C
+i
+x(t)
+(5)
+where x ∈R
+n
+is the state, u ∈R
+m
+is the control input, y ∈R
+q
+is the output
+and τ is a positive known scalar that denotes the time delay affecting the
+state variables. r ≥ 2 is the number of If-then rules, and F
+ij
+are the fuzzy
+sets (j = 1,...,p). z
+1
+,...,z
+p
+are the premise variables which are supposed to be
+measurable. We set z = [z
+1
+,...,z
+p
+].
+It is assumed that ζ i
+(z)≥ 0, for all i = 1,...,r and
+r
+X
+i=1
+ζ i
+(z) = 1, for all t≥ 0.
+The matrices A
+i
+, B
+i
+, C
+i
+are of appropriate dimension and the perturbed term
+˜
+F
+i
+(x,x(t− τ ),u(t)) = [(
+˜
+F
+i
+1
+(x(t),x(t− τ ),u(t)),...,
+˜
+F
+i
+n
+(x(t),x(t− τ ),u(t))]
+T
+,
+where for all i∈{1,...,r} and j∈{1,...,n} the function
+˜
+F
+i
+j
+:R
+∗ +
+× R
+n
+× R
+n
+× R
+m
+−→ R are smooth such and satisfy the following assumption:
+A
+1
+: There exist constants γ i
+1
+> 0 and γ i
+2
+> 0 such that
+∥
+˜
+F
+i
+(x(t),x(t− τ ),u(t))∥≤ γ i
+1
+∥x(t)∥+γ i
+2
+∥x(t− τ )∥.
+Theparalleldistributedcompensation(PDC)principleservesasthefoundation
+foranumberofpublishedfindingspertainingtofuzzysystemcontrol([20],[22],
+[24]). It is expected that the fuzzy system can be controlled locally. The fuzzy
+controller’s design uses a linear state feedback control in the subsequent section
+and has the same antecedent as the fuzzy system. The controller is defined as:
+u =− r
+X
+i=1
+ζ i
+(z)K
+i
+x (6)
+https://doi.org/10.21638/11701/spbu35.2025.306 Electronic Journal: http://diffjournal.spbu.ru/ 82Differential Equations and Control Processes, N. 3, 2025
+where K
+i
+∈R
+n× m
+is the gain matrix.
+To guarantee global exponential stability of the nonlinear time-delay system
+(5) under AssumptionA
+1
+, we shall provide time-delay independent conditions
+in this work. We shall suggest a state controller and an output feedback con-
+troller using parallel distributed compensation. Thus, we will create conditions
+for linear matrix inequalities (LMIs). It is important to note that when the
+nonlinearities satisfy a linear growth condition or are Lipschitz, several results
+onthestabilizationofthenonlinearsystem(5)proposinglinearmatrixinequal-
+ity conditions were developed ([15], [16]).
+Throughoutthepaper, thetimeargumentisomittedandthedelayedstatevec-
+tor x(t− τ ) is noted by x
+τ . A
+T
+means the transpose of A. λ max
+(A) and λ min
+(A)
+denote the maximal and minimal eigenvalue of a matrix A, respectively and I
+is the matrix identity.
+3 Main results
+We first establish a stabilization result and then take into consideration a fuzzy
+observer based on a fuzzy controller in order to stabilize the fuzzy system via
+a state estimated feedback law. It is commonly known that a stabilizing es-
+timated feedback controller for linear systems is produced when an observer
+and a stabilizing state feedback are combined. The separation principle is the
+name given to this. However, it is unknown if the separation principle holds
+true because the fuzzy system under consideration is nonlinear. Additionally,
+keep in mind that a TS model with uncertainties does not make this separation
+concept any more accessible.
+3.1 Global exponential stabilization
+The state feedback controller is given by (6). Thus, the closed-loop system is
+given by:
+˙ x =
+r
+X
+i=1
+r
+X
+j=1
+ζ i
+(z)ζ j
+(z)
+ 
+(A
+i
+− B
+i
+K
+j
+)x+
+˜
+F
+i
+(x,x
+τ ,u)
+ 
+=
+r
+X
+i=1
+ζ 2
+i
+G
+ii
+x+2
+X
+i<j
+ζ i
+ζ j
+G
+ij
+x+
+r
+X
+i=1
+ζ i
+˜
+F
+i
+(x,x
+τ ,u), (7)
+https://doi.org/10.21638/11701/spbu35.2025.306 Electronic Journal: http://diffjournal.spbu.ru/ 83Differential Equations and Control Processes, N. 3, 2025
+where
+G
+ii
+=A
+i
+− B
+i
+K
+i
+and
+G
+ij
+=
+1
+2
+(A
+i
+− B
+i
+K
+j
++A
+j
+− B
+j
+K
+i
+).
+Theorem 2 Suppose that (A
+1
+) hold and there exist symmetric and positive
+definite matrices P and positive constant ϱ such that the following inequalities
+hold,
+G
+T
+ii
+P +PG
+ii
+≤− I, i = 1,...,r,
+G
+T
+ij
+P +PG
+ij
+≤− I, 1≤ i<j≤ r,
+and
+P <a(ϱ)I,
+where
+a(ϱ) =
+1
+2
+min
+ 
+1
+2ϱ+2γ 1
++γ 2
+,
+e
+− 2ϱτ
+2γ 2
+ 
+,
+γ 1
+=
+P
+r
+i=1
+γ i
+1
+and γ 2
+=
+P
+r
+i=1
+γ i
+2
+, then the fuzzy closed-loop system (7)− (6) is
+globally exponentially stable.
+Proof 1 Let us choose a Lyapunov-Krasovskii functional candidate as follows:
+V(x
+t
+) =x
+T
+Px+
+1
+2
+Z
+0
+− τ e
+2ϱs
+∥x(s+t)∥
+2
+ds. (8)
+First, it is easy to see that
+V(x
+t
+)≤ λ max
+(P)∥x∥
+2
++
+1
+2
+Z
+0
+− τ e
+2ϱs
+∥x
+t
+(s)∥
+2
+ds
+≤ λ max
+(P)∥x
+t
+∥
+2
+∞
++
+1
+2
+Z
+0
+− τ e
+2ϱs
+∥x
+t
+∥
+2
+∞
+ds
+≤  
+λ max
+(P)+
+1
+4ϱ
+ 
+∥x
+t
+∥
+2
+∞
+and
+V(x
+t
+)≥ λ min
+(P)∥x(t)∥
+2
+.
+Thus condition (2) of Theorem (1) is satisfied with
+λ 1
+=λ min
+(P) and λ 2
+=λ max
+(P)+
+1
+4ϱ
+.
+https://doi.org/10.21638/11701/spbu35.2025.306 Electronic Journal: http://diffjournal.spbu.ru/ 84Differential Equations and Control Processes, N. 3, 2025
+One can see that by using the change of variable u =t+s one gets
+Z
+0
+− τ e
+2ϱs
+∥x(s+t)∥
+2
+=
+Z
+t
+t− τ ∥x(u)∥
+2
+du.
+Therefore, the time derivative of V(x
+t
+) along the trajectories of system (7) is
+˙
+V(x
+t
+) =
+r
+X
+i=1
+ζ 2
+i
+x
+T
+(G
+T
+ii
+P +PG
+ii
+)x+2
+r
+X
+i<j
+ζ i
+ζ j
+x
+T
+(G
+T
+ij
+P +PG
+ij
+)x+2x
+T
+P
+r
+X
+i=1
+ζ i
+˜
+F
+i
+(x,x
+τ ,u)
++
+1
+2
+∥x∥
+2
+− e
+− 2ϱτ
+2
+∥x
+τ ∥
+2
+− ϱ
+Z
+0
+− τ e
+2ϱs
+∥x(s+t)∥
+2
+ds.
+On the one hand, we have
+x
+T
+(G
+T
+ii
+P +PG
+ii
+)x≤−∥ x∥
+2
+, i = 1,2,...,r,
+and
+x
+T
+(G
+T
+ij
+P +PG
+ij
+)x≤−∥ x∥
+2
+, 1≤ i<j≤ r.
+It follows that,
+˙
+V(x
+t
+)≤−∥ x∥
+2
+r
+X
+i=1
+r
+X
+i=1
+ζ i
+ζ j
++2x
+T
+P
+r
+X
+i=1
+ζ i
+˜
+F
+i
+(x,x
+τ ,u)
++
+1
+2
+∥x∥
+2
+− e
+− 2ϱτ
+2
+∥x
+τ ∥
+2
+− ϱ
+Z
+0
+− τ e
+2ϱs
+∥x(s+t)∥
+2
+ds.
+Since,
+r
+X
+i=1
+r
+X
+j=1
+ζ i
+ζ j
+= 1,
+then,
+˙
+V(x
+t
+)≤−∥ x∥
+2
++2x
+T
+P
+r
+X
+i=1
+ζ i
+˜
+F
+i
+(x,x
+τ ,u)+
+1
+2
+∥x∥
+2
+− e
+− 2ϱτ
+2
+∥x
+τ ∥
+2
+− ϱ
+Z
+0
+− τ e
+2ϱs
+∥x(s+t)∥
+2
+ds
+≤− 1
+2
+∥x∥
+2
++2∥x∥∥P∥
+r
+X
+i=1
+ζ i
+∥
+˜
+F
+i
+(x,x
+τ ,u)∥− e
+− 2ϱτ
+2
+∥x
+τ ∥
+2
+− ϱ
+Z
+0
+− τ e
+2ϱs
+∥x(s+t)∥
+2
+ds.
+https://doi.org/10.21638/11701/spbu35.2025.306 Electronic Journal: http://diffjournal.spbu.ru/ 85Differential Equations and Control Processes, N. 3, 2025
+On the other hand by assumptionA
+1
+, we obtain
+˙
+V(x
+t
+)≤− 1
+2
+∥x∥
+2
+− e
+− 2ϱτ
+2
+∥x
+τ ∥
+2
++2∥x∥∥P∥
+r
+X
+i=1
+ζ i
+ 
+γ i
+1
+∥x∥+γ i
+2
+∥x
+τ ∥
+ 
+− ϱ
+Z
+0
+− τ e
+2ϱs
+∥x(s+t)∥
+2
+ds
+≤− 1
+2
+∥x∥
+2
+− e
+− 2ϱτ
+2
+∥x
+τ ∥
+2
++2∥x∥∥P∥
+r
+X
+i=1
+ 
+γ i
+1
+∥x∥+γ i
+2
+∥x
+τ ∥
+ 
+− ϱ
+Z
+0
+− τ e
+2ϱs
+∥x(s+t)∥
+2
+ds
+≤− 1
+2
+∥x∥
+2
+− e
+− 2ϱτ
+2
+∥x
+τ ∥
+2
++2∥P∥γ 1
+∥x∥
+2
++2∥P∥γ 2
+∥x∥∥x
+τ ∥
+− ϱ
+Z
+0
+− τ e
+2ϱs
+∥x(s+t)∥
+2
+ds.
+Using the fact that
+2∥x∥∥x
+τ ∥≤∥ x∥
+2
++∥x
+τ ∥
+2
+,
+we deduce that
+˙
+V(x
+t
+)≤− h
+1
+2
+− 2∥P∥γ 1
+−∥ P∥γ 2
+i
+∥x∥
+2
+− h
+e
+− 2ϱτ
+2
+−∥ P∥γ 2
+i
+∥x
+τ ∥
+2
+− ϱ
+Z
+0
+− τ e
+2ϱs
+∥x(s+t)∥
+2
+ds.
+Hence, we obtain
+˙
+V(x
+t
+)+2ϱV(x
+t
+)≤ 2ϱx
+T
+Px− h
+1
+2
+− 2∥P∥γ 1
+−∥ P∥γ 1
+i
+∥x∥
+2
+(9)
+− h
+e
+− 2ϱτ
+2
+−∥ P∥γ 2
+i
+∥x
+τ ∥
+2
+≤− c∥x∥
+2
+− d∥x
+τ ∥
+2
+, (10)
+where
+c =
+1
+2
+− 2ϱ∥P∥− 2∥P∥γ 1
+−∥ P∥γ 2
+and
+d =
+e
+− 2ϱτ
+2
+−∥ P∥γ 2
+.
+https://doi.org/10.21638/11701/spbu35.2025.306 Electronic Journal: http://diffjournal.spbu.ru/ 86Differential Equations and Control Processes, N. 3, 2025
+Since,
+P <a(ϱ)I,
+then c> 0 and d> 0. Consequently,
+˙
+V(x
+t
+)+2ϱV(x
+t
+)≤ 0.
+Thus, condition (3) of theorem (2.1) is satisfied. Therefore, the system (7)− (6)
+is globally exponentially stable.
+Corollary 1 Suppose that (A
+1
+) hold and there exists symmetric and positive
+definite matrices P such that the following inequalities hold,
+G
+T
+ii
+P +PG
+ii
+≤− I, i,j = 1,...,r,
+G
+T
+ij
+P +PG
+ij
+≤− I, 1≤ i<j≤ r,
+and
+P <bI, (11)
+where
+b =
+1
+2
+ 
+2γ 1
++γ 2
+ 
+,
+γ 1
+=
+P
+r
+i=1
+γ i
+1
+and γ 2
+=
+P
+r
+i=1
+γ i
+2
+, then the fuzzy closed-loop system (7)− (6) is
+globally exponentially stable.
+Proof 2 From theorem 2, we have the closed loop system (7) is globally expo-
+nentially stable if
+1
+2
+− 2ϱ∥P∥− 2∥P∥γ 1
+−∥ P∥γ 2
+> 0 and
+e
+− 2ϱτ
+2
+−∥ P∥γ 2
+> 0.
+therefore, the constant ϱ should satisfies
+ϱ<
+α 2∥P∥
+and − 2ϱτ > ln
+ 
+2∥P∥γ 2
+ 
+, (12)
+where α =
+1
+2
+− 2∥P∥γ 1
+−∥ P∥γ 2
+. Since we have
+P <bI,
+then, α> 0. Thus, 1− 2∥P∥γ 2
+> 4∥P∥γ 1
+> 0. It follows that
+ln
+ 
+2∥P∥γ 2
+ 
+< 0.
+Consequently,
+ϱ<
+1
+2τ ln
+ 
+2∥P∥γ 2
+ 
+.
+Just take
+ϱ =
+1
+2
+min
+h
+α 2∥P∥
+,
+1
+2τ ln
+ 
+2∥P∥γ 2
+ i
+> 0.
+https://doi.org/10.21638/11701/spbu35.2025.306 Electronic Journal: http://diffjournal.spbu.ru/ 87Differential Equations and Control Processes, N. 3, 2025
+Since sensing devices cannot access the state variables and transducers are
+either unavailable or prohibitively expensive, the physical state variables of
+systemsareeithercompletelyorpartiallyunavailableformeasurementinmany
+real-world control situations. Control schemes based on observers should be
+developed in these situations in order to estimate the state. Newt, for the
+perturbed fuzzy system, an observer-based controller is suggested to stabilize
+the closed-loop dynamic. by fusing the state fuzzy feedback control rule with a
+Luenberger-like state fuzzy observer.
+3.2 Observer based controller
+ItisdemonstratedthatT-SmodelswithaPDCcontrollawexhibitexponential
+stabilization. This control law’s primary characteristic is that it is based on
+the same assumptions as the T-S model. Conditions of stabilization with a
+fuzzy observer exist if the state cannot be measured, but they assume that the
+premises can be measured. The system that we suggest is as follows:
+˙
+ˆ x =
+r
+X
+i=1
+ζ i
+(z)
+ 
+A
+i
+ˆ x+B
+i
+u− L
+i
+(y− ˆ y)), (13)
+Where ˆ y given by ˆ y =
+r
+X
+i=1
+ζ i
+(z)C
+i
+ˆ x and the estimated feedback controller is
+given by
+u =− r
+X
+i=1
+ζ i
+K
+i
+ˆ x. (14)
+We wish to find L
+i
+, i = 1,...,r such that e = x− ˆ x converges to zero exponen-
+tially as t tends to infinity.
+Subtracting (7) from (13), we have the system error
+˙ e =
+r
+X
+i=1
+r
+X
+j=1
+ζ i
+(z)ζ j
+(z)(A
+i
+− L
+j
+C
+i
+)e+
+r
+X
+i=1
+ζ i
+˜
+F
+i
+(x,x
+τ ,u). (15)
+Thus,
+˙ e =
+r
+X
+i=1
+ζ 2
+i
+Υ ij
+e+2
+X
+i<j
+ζ i
+ζ j
+(z)Υ
+ij
+e+
+r
+X
+i=1
+ζ i
+˜
+F
+i
+(x,x
+τ ,u),
+where
+Υ ii
+=A
+i
+− L
+i
+C
+i
+,
+https://doi.org/10.21638/11701/spbu35.2025.306 Electronic Journal: http://diffjournal.spbu.ru/ 88Differential Equations and Control Processes, N. 3, 2025
+and
+Υ ij
+=
+1
+2
+(A
+i
+− L
+j
+C
+i
++A
+j
+− L
+j
+C
+i
+).
+Then let consider the following theorem.
+Theorem 3 Suppose that (A
+1
+) hold and there exist symmetric and positive
+definite matrices
+˜
+P and
+˜
+Q and positive constant ϱ such that the following in-
+equalities hold,
+Υ T
+ii
+˜
+P +
+˜
+PΥ ii
+≤− I, i = 1,...,r,
+Υ T
+ij
+˜
+P +
+˜
+PΥ ij
+≤− I, 1≤ i<j≤ r,
+and
+˜
+P < ˜ a(ϱ)I,
+where
+˜ a(ϱ) =
+1
+2
+ 
+2ϱ+γ 1
++γ 2
+ 
+,
+γ 1
+=
+P
+r
+i=1
+γ i
+1
+andγ 2
+=
+P
+r
+i=1
+γ i
+2
+, then the closed loop system (7)− (14)is globally
+exponentially stable.
+Proof 3 Let us choose a Lyapunov-Krasovskii functional candidate as follows
+V(e
+t
+) =e
+T
+˜
+Pe+
+1
+2
+Z
+0
+− τ e
+2ϱs
+∥e(s+t)∥
+2
+ds.
+As in the proof of theorem 1, we have
+λ min
+(
+˜
+P)∥e(t)∥≤ W(e
+t
+)≤  
+λ min
+(
+˜
+P)+
+1
+4ϱ
+ 
+∥e
+t
+∥
+∞
+.
+The time derivative of W(e
+t
+) along the trajectories of system (13) is given by
+˙
+W(e) =
+r
+X
+i=1
+ζ 2
+i
+e
+T
+(Υ
+T
+ii
+˜
+P +
+˜
+PΥ ii
+)e+2
+X
+i<j
+ζ i
+ζ j
+e
+T
+(Υ
+T
+ij
+˜
+P +
+˜
+PΥ ij
+)e
++2e
+T
+˜
+P
+r
+X
+i=1
+ζ i
+˜
+F
+i
+(x,x
+τ ,u)+
+1
+2
+∥e∥
+2
+− e
+− 2ϱτ
+2
+∥e
+τ ∥
+2
+− ϱ
+Z
+0
+− τ e
+2ϱs
+∥e(s+t)∥
+2
+ds.
+On the one hand, we have
+e
+T
+(Υ
+T
+ii
+˜
+P +
+˜
+PΥ ii
+)e≤−∥ e∥
+2
+, i = 1,...,r,
+and
+e
+T
+(Υ
+T
+ij
+˜
+P +
+˜
+PΥ ij
+)e≤−∥ e∥
+2
+, 1<i<j <r.
+https://doi.org/10.21638/11701/spbu35.2025.306 Electronic Journal: http://diffjournal.spbu.ru/ 89Differential Equations and Control Processes, N. 3, 2025
+Then, one gets
+˙
+W(e
+t
+)≤−∥ e∥
+2
+r
+X
+i=1
+r
+X
+i=1
+ζ i
+ζ j
++2∥e∥∥
+˜
+P∥
+r
+X
+i=1
+ζ i
+∥
+˜
+F
+i
+(x,x
+τ ,u)∥
++
+1
+2
+∥e∥
+2
+− e
+− 2ϱτ
+2
+∥e
+τ ∥
+2
+− ϱ
+Z
+0
+− τ e
+2ϱs
+∥e(s+t)∥
+2
+ds.
+It follows that
+˙
+W(e
+t
+)≤− 1
+2
+∥e∥
+2
++2γ 1
+∥
+˜
+P∥∥e∥∥x∥+2γ 2
+∥
+˜
+P∥∥e∥∥x
+τ ∥
+− e
+− 2ϱτ
+2
+∥e
+τ ∥
+2
+− ϱ
+Z
+0
+− τ e
+2ϱs
+∥e(s+t)∥
+2
+ds.
+Using the fact that
+2∥e∥∥x∥≤∥ e∥
+2
++∥x∥
+2
+and 2∥e∥∥x
+τ ∥≤∥ e∥
+2
++∥x
+τ ∥
+2
+,
+we deduce that
+˙
+W(e
+t
+)≤− h
+1
+2
+− γ 1
+∥
+˜
+P∥− γ 2
+∥
+˜
+P∥
+i
+∥e∥
+2
+− e
+− 2ϱτ
+2
+∥e
+τ ∥
+2
++γ 1
+∥
+˜
+P∥∥x∥
+2
++γ 2
+∥
+˜
+P∥∥x
+τ ∥
+2
+− ϱ
+Z
+0
+− τ e
+2ϱs
+∥e(s+t)∥
+2
+ds. (16)
+Let
+U(x
+t
+,e
+t
+) =ηW (e
+t
+)+V(x
+t
+),
+where V is given by (8). Using (9) and (16), we get
+˙
+U(x
+t
+,e
+t
+)+2ϱU(x
+t
+,e
+t
+)≤− η h
+1
+2
+− γ 1
+∥
+˜
+P∥− γ 2
+∥
+˜
+P∥
+i
+∥e∥
+2
+− h
+c− ηγ 1
+∥
+˜
+P∥
+i
+∥x∥
+2
+− h
+d− ηγ 2
+∥
+˜
+P∥
+i
+∥x
+τ ∥
+2
+.
+Finally, we select η such that
+η < min
+ 
+c
+γ 1
+∥
+˜
+P∥
+,
+d
+γ 2
+∥
+˜
+P∥
+ 
+.
+to get
+˙
+U(x
+t
+,e
+t
+)+2ϱU(x
+t
+,e
+t
+)≤ 0.
+Therefore, the closed-loop system (7)− (14) is globally exponentially stable.
+https://doi.org/10.21638/11701/spbu35.2025.306 Electronic Journal: http://diffjournal.spbu.ru/ 90Differential Equations and Control Processes, N. 3, 2025
+Corollary 2 Suppose that (A
+1
+) hold and there exist symmetric and positive
+definite matrices
+˜
+P and
+˜
+Q and positive constant ϱ such that the following in-
+equalities hold,
+Υ T
+ii
+˜
+P +
+˜
+PΥ ii
+≤− I, i = 1,...,r,
+Υ T
+ij
+˜
+P +
+˜
+PΥ ij
+≤− I, 1≤ i<j≤ r,
+and
+˜
+P <
+˜
+bI, (17)
+where
+˜
+b =
+1
+2
+ 
+γ 1
++γ 2
+ 
+,
+γ 1
+=
+P
+r
+i=1
+γ i
+1
+and γ 2
+=
+P
+r
+i=1
+γ i
+2
+, then the system error (7)− (14) is guaranteed
+to globally exponentially stable.
+Proof 4 The fact that the LMI inequality
+˜
+P < ˜ a(ϱ)I, implies that
+ϱ<
+˜ c
+2
+.
+where ˜ c =
+1
+2
+− γ 1
+∥
+˜
+P∥− γ 2
+∥
+˜
+P∥. Since,
+˜
+P <
+˜
+bI, then c> 0. Therefore, in view of
+(12), we choose
+ϱ =
+1
+2
+min
+h
+˜ c
+2
+,
+α 2∥P∥
+,
+1
+2τ ln
+ 
+2∥P∥γ 2
+ i
+> 0.
+Remark 1 The conditions (11) and (17) do not depend on the delay τ.
+Wewillthenlookatanexamplethatpresentsanobserver-basedcontrollerfora
+delayfuzzysysteminordertodemonstratethemainresult’sapplication. Based
+on two issues pertaining to the fuzzy controller’s idea and the fuzzy observer’s
+design, closed-loop stability is ensured.
+4 Numerical example
+Consider the following nonlinear fuzzy planar system,
+
+
+
+
+
+
+
+
+
+
+
+˙ x
+1
+=x
+2
++0.2x
+3
+sin(x
+2
+)sin(x
+3
+)+0.2x
+3
+(t− τ )cos(u)
+˙ x
+2
+=x
+3
+˙ x
+3
+=u
+y =x
+1
+(18)
+https://doi.org/10.21638/11701/spbu35.2025.306 Electronic Journal: http://diffjournal.spbu.ru/ 91Differential Equations and Control Processes, N. 3, 2025
+Nowonecanrepresentexactlythesystembythefollowingtwo-rulefuzzymodel:
+Rule 1 : If z is F
+11
+then
+(
+˙ x(t) =A
+1
+x+B
+1
+u+
+˜
+F
+1
+(x,x
+τ ,u)
+y(t) =C
+1
+x,
+Rule 2 : If z is F
+21
+then
+(
+˙ x(t) =A
+2
+x+B
+2
+u+
+˜
+F
+2
+(x,x
+τ ,u)
+y(t) =C
+2
+x,
+where
+z = sin(x
+2
+),
+A
+1
+=
+
+
+
+0 1 0
+0 0 1
+0 0 0
+
+
+
+, B
+1
+=
+
+
+
+0
+0
+1
+
+
+
+, C
+1
+=
+h
+1 0 0
+i
+A
+2
+=
+
+
+
+0 1 0
+0 0 1
+0 0 0
+
+
+
+, B
+2
+=
+
+
+
+0
+0
+1
+
+
+
+, C
+2
+=
+h
+1 0 0
+i
+˜
+F
+1
+(x,x
+τ ,u) = 0.2x
+3
+sin(x
+2
+)sin(x
+3
+)cos(u)+
+1
+0.4
+x
+3
+(t− τ )sin(u),
+˜
+F
+2
+(x,x
+τ ,u) =− 0.2x
+3
+sin(x
+2
+)sin(x
+3
+)cos(u)+
+1
+0.4
+x
+3
+(t− τ )sin(u),
+F
+11
+=
+sin(x
+2
+)+1
+2
+and F
+21
+=
+1− sin(x
+2
+)
+2
+.
+We define the membership functions for rule 1 and 2 as:
+ζ 1
+(t) =
+1− sin(x
+2
+(t))
+2
+and ζ 2
+(t) = 1− ζ 1
+(t).
+Itiseasytocheckthatsystem(18)satisfiesAssumption A
+1
+withγ i
+1
+=γ i
+2
+= 0.2,
+i = 1,2. Using an LMI optimization algorithm, we obtain:
+P =
+
+
+
+1.5145 0.7341 0.0265
+0.7341 1.4339 0.0548
+0.0265 0.0548 0.0446
+
+
+
+,
+https://doi.org/10.21638/11701/spbu35.2025.306 Electronic Journal: http://diffjournal.spbu.ru/ 92Differential Equations and Control Processes, N. 3, 2025
+and the following feedback gains
+K
+1
+=
+h
+17.4927 22.4490 8.5714
+i
+and K
+2
+=
+h
+78.1250 62.500 12.5000
+i
+.
+Now concerning the observer, let’s suppose the following fuzzy observer rules:
+Rule 1: If z is F
+11
+then
+(
+˙
+ˆ x =A
+1
+ˆ x+B
+1
+u− L
+1
+(y− ˆ y)
+ˆ y =C
+1
+ˆ x
+Rule 2: If z is F
+21
+then
+(
+˙
+ˆ x =A
+2
+ˆ x+B
+2
+u− L
+2
+(ˆ y− y)
+ˆ y =C
+2
+ˆ x
+Then, we obtain the following observer gain:
+L
+1
+=
+h
+− 34.9854 − 34.9854 − 34.9854
+i
+T
+and L
+2
+=
+h
+− 34.9854 − 34.9854 − 34.9854
+i
+T
+.
+and the positive symmetric definite matrices:
+˜
+P =
+
+
+
+0.8079 − 0.3374 − 0.4560
+− 0.3374 0.7030 − 0.3425
+− 0.4560 − 0.3425 0.7890
+
+
+
+,
+For the numerical simulation results given in Figure 1, the constant delay τ is
+equal to 1.
+Figure 1: The time evolution of the state x
+1
+(t) and its estimate ˆ x
+1
+(t)
+https://doi.org/10.21638/11701/spbu35.2025.306 Electronic Journal: http://diffjournal.spbu.ru/ 93Differential Equations and Control Processes, N. 3, 2025
+Figure 2: The time evolution of the state x
+2
+(t) and its estimate ˆ x
+2
+(t)
+Figure 3: The time evolution of the state x
+3
+(t) and its estimate ˆ x
+3
+(t)
+5 Conclusion
+We have introduced state and estimated feedback controllers for a certain type
+ofnonlineartime-delayfuzzysystemsinthispaper. Toguaranteetheglobalex-
+ponential stability of the resulting closed-loop systems, we have deduced delay-
+independent requirements. We have demonstrated that both the observer and
+the controller can be created independently using the conventional LMIs con-
+ditions, as there is a separation concept accessible. A computer simulation of
+https://doi.org/10.21638/11701/spbu35.2025.306 Electronic Journal: http://diffjournal.spbu.ru/ 94Differential Equations and Control Processes, N. 3, 2025
+a theoretical case demonstrates the efficacy of the suggested hypothesis.
+Data availability statement Data sharing not applicable to this article
+as no data sets were generated or analyzed during the current study.
+Conflict of Interest: The authors declare that they have no conflict of
+interest.
+References
+[1] Ben Makhlouf, Abdellatif; Hammami, M. A.; Hammi, M. A new approach
+for stabilization of control-affine systems via integral inequalities. IMA J.
+Math. Control Inform. 39 (2022), no. 3, 837-860.
+[2] Hadj Taieb, N.; Hammami, M. A.; Hammi, M. On the global uniform
+stability analysis of non-autonomous dynamical systems: a survey. Math.
+Morav. 26 (2022), no. 2, 1-48.
+[3] B. Cahlon and D. Schmidt, On Asymptotic Stability of Second Order Dif-
+ferentialEquationswithtwoCommensurateDelays, DynamicsofContinu-
+ous, Discrete and Impulsive Systems, Volume31Number4(2024)213-239.
+[4] F Ezzine, MA Hammami, Growth conditions for the stability of a class of
+time-varyingperturbedsingularsystems, Kybernetika,58(1),1-24(2022).
+[5] Francois Delmotte, Mohamed Ali Hammami and Nour El Houda Ret-
+tab, On the state estimation for nonlinear continuous-time fuzzy systems,
+Archives of Control Sciences, Volume 32(LXVIII), No. 1 (2022) 57–72.
+[6] Dong, J. and Yang, G.-H., Dynamic output feedback control synthesis for
+continuous-time T-S fuzzy systems via a switched fuzzy control scheme.
+IEEE Trans. Syst. Man Cybern., Part B: Cybern., 2008, 38(4), 1166-1175.
+[7] T.Caraballo,M.A.HammamiandL.Mchiri,Practicalstabilityofstochas-
+ticdelayevolutionequations, ActaApplicandaeMathematicae,142(2016),
+91-105.
+[8] T. Caraballo, M.A. Hammami and L. Mchiri, Practical exponential stabil-
+ity of impulsive stochastic functional differential equations, Systems and
+Control Letters, 109 (2017) 43-48.
+https://doi.org/10.21638/11701/spbu35.2025.306 Electronic Journal: http://diffjournal.spbu.ru/ 95Differential Equations and Control Processes, N. 3, 2025
+[9] F. Delmotte, M. A. Hammami and A. Jellouli, Exponential stabilization of
+fuzzy systems with perturbations by using state estimation, International
+Journal of General Systems, (2021), VOL. 50, NO. 4, 388-408.
+[10] M. Dlala, M.A. Hammami, Uniform exponential practical stability of im-
+pulsive perturbed systems, Journal of Dynamical and Control Systems, 13
+(3), (2007) 373-386.
+[11] I. Ellouze, M.A.Hammami, A separation principleof time-varying dynam-
+ical systems: A practical stability approach, Mathematical Modelling and
+analysis, 12 (3), (2007) 297-308.
+[12] N. Hadj Taieb M.A Hammami, Some new results on the global uniform
+asymptotic stability of time-varying dynamical systems, IMA Journal of
+Mathematical and Control Information, 32, 1-22, 2017.
+[13] Nizar, Hadj Taieb, Mohamed Ali Hammami and Francois Delmotte, Con-
+vergencecriteriaoffuzzybilinearsystemssubjecttoboundeduncertainties.
+Fuzzy Optim Decis Making, 24, 2, 197 - 222, 2025.
+[14] J.K.Hale,andS.M.Lunel,Introductiontofunctionaldifferentialequations.
+Applied Math Sciences. New York: Springer-Verlag, 1991.
+[15] N. Hadj Taieb, M.A. Hammami and F. Delmotte , A separation princi-
+ple for Takagi-Sugeno control fuzzy systems. Archives of Control Sciences,
+2019, 29(2), 227-245.
+[16] N. Hadj Taieb, M.A. Hammami and F. Delmotte, Stabilization of a cer-
+tain class of fuzzy control systems with uncertainties. Archives of Control
+Sciences, 2017, 27(3), 453-481.
+[17] M. Hammami, M.A. Hammami and M. De La Sen, Exponential Stability
+of Time-Varying Systems Subject to Discrete Time-Varying Delays and
+Nonlinear Delayed Perturbations, Mathematical Problems in Engineering,
+01/2015; 2015(1):Article ID 641268, 12 pages. DOI:10.1155/2015/641268.
+[18] D. Huang, and S.K. Nguang, Robust H
+∞
+static output feedback control of
+fuzzy systems: an ILMI approach. IEEE Trans. Syst. Man Cybern., Part
+B: Cybern., 2006, 36(1), 216-222.
+[19] H.Khalil,Nonlinearsystems.third ed. Prentice-Hall, Englewood Cliffs, NJ ,
+(2002).
+https://doi.org/10.21638/11701/spbu35.2025.306 Electronic Journal: http://diffjournal.spbu.ru/ 96Differential Equations and Control Processes, N. 3, 2025
+[20] H.J.Lee,J.B.ParkandG.Chen,Robustfuzzycontrolofnonlinearsystems
+with parameter uncertainties . IEEE Trans. Fuzzy Syst., 2001, 9, 369-379.
+[21] J.-C.LoandM.L.Lin,Observer-basedrobustH
+∞
+controlforfuzzysystems
+using two-step procedure. IEEE Trans. Fuzzy Syst., 2004, 12(3), 350-359.
+[22] X.J.MaandZ.Q.Sun,Analysisanddesignoffuzzyreduced-dimentionalm
+observer and fuzzy functional observer, Fuzzy S. syst., 2001, 120, 35-63.
+[23] X. Nian and J. Feng, Guaranteed-cost control of a linear uncertain system
+with multiple time-varying delays: an LMI approach. IEE Proc., Part D:
+Control Theory Appl., 2003, 150, 1, 17-22.
+[24] J. Park, J. Kim and D. Park, LMI-based design of stabilizing fuzzy con-
+trollers for nonlinear systems described by Takagi-Sugeno fuzzy model,
+Fuzzy S. Syst., 2003, 122, 73-82.
+[25] P. Pepe and I. Karafyllis, Converse Lyapunov-Krasovskii theorems for sys-
+tems described by neutral functional differential equations in Hale’s form.
+International Journal of Control, (2013), 86(2), 232-243.
+[26] C.S. Tseng, B.S.Chen and H.J. Uang, Fuzzy tracking control design for
+nonlineardynamicssystemsviaT-Sfuzzymodel.IEEE Trans. Fuzzy Syst.,
+2001, 9(3), 381-392.
+[27] S. Narayanamoorthy, S. Mathankumar and D. Kang, An Algorithmic Ap-
+proach for Coupled System of Fuzzy Differential Equations, Dynamics of
+Continuous, Discrete and Impulsive Systems, Volume 30 Number 4 (2023)
+277-292.
+[28] S. Wangrat and P. Niamsup, Exponentially practical stability of discrete
+time singular system with delay and disturbance. Advances in Difference
+Equations (2018), 1-23.
+https://doi.org/10.21638/11701/spbu35.2025.306 Electronic Journal: http://diffjournal.spbu.ru/ 97
