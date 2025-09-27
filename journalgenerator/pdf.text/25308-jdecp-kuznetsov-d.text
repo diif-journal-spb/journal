@@ -1,0 +1,9717 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 3, 2025
+Electronic Journal,
+reg. N ΦC77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Stochastic differential equations
+Numerical methods
+Computer modeling in dynamical and control systems
+A new approach to the series expansion of iterated Stratonovich
+stochastic integrals with respect to components of a
+multidimensional Wiener process. The case of arbitrary complete
+orthonormal systems in Hilbert space. III
+Dmitriy F. Kuznetsov
+Peter the Great Saint-Petersburg Polytechnic University
+e-mail: sde kuznetsov@inbox.ru
+Abstract. The article is Part V of the author’s work about a new approach
+on expansion of iterated Stratonovich stochastic integrals with respect to com-
+ponents of a multidimensional Wiener process. The mentioned approach is
+based on generalized multiple Fourier series in Hilbert space. In Parts I, II of
+the work, multiple Fourier–Legendre series and multiple trigonometric Fourier
+series were used, while in parts III, IV, multiple Fourier series in arbitrary
+complete orthonormal system of functions in Hilbert space were applied. In
+addition, sufficient conditions were obtained under which the expansion of it-
+erated Stratonovich stochastic integrals of arbitrary multiplicity is valid. The
+above conditions were verified for integrals of multiplicities 1–6 (Parts I, II)
+and multiplicities 1–5 (Parts III, IV) under different assumptions on the weight
+functions of the integrals. In this article, we develop the results of Part IV and
+obtain an expansion of iterated Stratonovich stochastic integrals of multiplicity
+6 with unit weight functions for the case of an arbitrary complete orthonormalDifferential Equations and Control Processes, N. 3, 2025
+system of functions in Hilbert space. Moreover, we propose a simpler (com-
+pared to Part IV) proof of the expansion for iterated Stratonovich stochastic
+integrals of multiplicity 5. The iterated Stratonovich stochastic integrals with
+respect to components of a multidimensional Wiener process are part of the
+so-called Taylor–Stratonovich expansion. Therefore, the results of the article
+will be usefull for constructing efficient high-order strong numerical methods
+for non-commutative systems of Itˆ o stochastic differential equations.
+Key words: iterated Stratonovich stochastic integral, iterated Itˆ o stochastic
+integral, Itˆ o stochastic differential equation, multidimensional Wiener process,
+generalized multiple Fourier series, mean-square convergence, expansion.
+Contents
+1 Introduction 120
+2 Preliminary Results 121
+2.1 A Review of Some Old Results on the Expansion of Iterated Stratonovich
+Stochastic Integrals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 121
+2.2 Connection Between Iterated Stratonovich and Itˆ o Stochastic Integrals of Arbi-
+trary Multiplicity k (k∈N) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 122
+2.3 ExpansionofIteratedStratonovichStochasticIntegralsofArbitraryMultiplicity
+k (k ∈ N) Under the Condition (13). The Case of an Arbitrary CONS in
+L
+2
+([t,T]) and ψ 1
+(τ),...,ψ k
+(τ)∈L
+2
+([t,T]) . . . . . . . . . . . . . . . . . . . . . 124
+3 Main Results 127
+3.1 Expansion of Iterated Stratonovich Stochastic Integrals of Multiplicity 6. The
+Case of an Arbitrary CONS in L
+2
+([t,T]) and ψ 1
+(τ),...,ψ 6
+(τ)≡ 1 . . . . . . . . 127
+3.2 Expansion of Iterated Stratonovich Stochastic Integrals of Multiplicity 5. The
+Case of an Arbitrary CONS in L
+2
+([t,T]) and ψ 1
+(τ),...,ψ 5
+(τ)≡ 1. Proof Based
+on Theorem 5 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 139
+3.3 Partial Proof of the Condition (13) . . . . . . . . . . . . . . . . . . . . . . . . . 143
+References 147
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 119Differential Equations and Control Processes, N. 3, 2025
+1 Introduction
+Let (Ω, F,P) be a complete probability space, let {F
+t
+,t∈ [0,T]} be a nonde-
+creasing right-continous family of σ-algebras of F, and letw
+t
+be a standard m-
+dimensional Wiener stochastic process which is F
+t
+-measurable for anyt∈ [0,T]
+and has independent components w
+(i)
+t
+(i = 1,...,m). Consider the system of
+Itˆ o stochastic differential equations (SDE)
+x
+t
+=x
+0
++
+t
+Z
+0
+a(x
+τ ,τ)dτ +
+m
+X
+j=1
+t
+Z
+0
+B
+j
+(x
+τ ,τ)dw
+(j)
+τ , x
+0
+=x(0,ω), ω∈ Ω, (1)
+wherex
+t
+∈R
+n
+is a strong solution of (1) [1], the functionsa,B
+j
+:R
+n
+×[0,T]→
+R
+n
+are such that the conditions for the existence of a strong solution of (1) are
+satisfied [1], the second integral in (1) is the Itˆ o stochastic integral, x
+0
+∈R
+n
+is F
+0
+-measurable andM
+ 
+|x
+0
+|
+2
+	
+<∞ (M denotes the operator of mathematical
+expectation and |·| denotes the Euclidean norm of a vector). In addition, we
+assume that x
+0
+and w
+t
+are independent when t> 0.
+ThesubjectofthestudyinthisarticleisthefollowingiteratedStratonovich
+stochastic integrals
+J
+∗ [ψ (k)
+]
+(i
+1
+...i
+k
+)
+T,t
+=
+∗ Z
+t
+T
+ψ k
+(t
+k
+)...
+∗ Z
+t
+t
+2
+ψ 1
+(t
+1
+)dw
+(i
+1
+)
+t
+1
+...dw
+(i
+k
+)
+t
+k
+, (2)
+where ψ 1
+(τ),...,ψ k
+(τ) : [t,T] → R, i
+1
+,...,i
+k
+= 0, 1, ..., m, w
+(0)
+τ = τ,
+∗R
+denotes the Stratonovich stochastic integral.
+Note that the importance of the problem of numerical integration of Itˆ o
+SDEs is connected with a wide range of their applications [2]-[4]. One of the
+effective approaches to solving the above problem is the approach based on
+the Taylor–Stratonovich expansions [2], [4]–[9]. The stochastic integrals (2) are
+part of the Taylor–Stratonovich expansions that explains the relevance of the
+topic of the article.
+In addition, note that the so-called classical (ψ 1
+(τ),...,ψ k
+(τ)≡ 1, i
+1
+,...,
+i
+k
+= 0,1,...,m in (2)) [2], [4], [5] and unified (ψ l
+(τ)≡ (t−τ)
+q
+l
+, q
+l
+= 0,1,...,
+l = 1,...,k, i
+1
+,...,i
+k
+= 1,...,m in (2)) [7]-[9] Taylor–Stratonovich expansions
+are known.
+The article is Part V of the work devoted to a new approach on expansion
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 120Differential Equations and Control Processes, N. 3, 2025
+of iterated Stratonovich stochastic integrals (2) ([10]–[13] are Parts I–IV of the
+above work, respectlively).
+Throughout this article we will use the definition of the Stratonovich
+stochastic integral from [2] or [9] (Sect. 2.1.1).
+We will also note other approaches to the expansion of iterated stochastic
+integrals [2]–[4], [9], [14]–[54].
+2 Preliminary Results
+2.1 A Review of Some Old Results on the Expansion of Iterated
+Stratonovich Stochastic Integrals
+In this section, we will give a brief review of some old results on the expansion
+of iterated Stratonovich stochastic integrals obtained by the author (the case
+of an arbitrary complete orthonormal system (CONS) in L
+2
+([t,T])).
+Let ψ 1
+(τ),...,ψ k
+(τ)∈ L
+2
+([t,T]). Consider the following factorized Volter-
+ra–type kernel
+K(t
+1
+,...,t
+k
+) =
+
+
+
+
+
+ψ 1
+(t
+1
+)...ψ k
+(t
+k
+), t
+1
+<...<t
+k
+0, otherwise
+(3)
+defined on the hupercube [t,T]
+k
+(k≥ 2). The Fourier coefficient for (3) has the
+form
+C
+j
+k
+...j
+1
+=
+T
+Z
+t
+ψ k
+(t
+k
+)ϕ j
+k
+(t
+k
+)...
+t
+2
+Z
+t
+ψ 1
+(t
+1
+)ϕ j
+1
+(t
+1
+)dt
+1
+...dt
+k
+, (4)
+where{ϕ j
+(x)}
+∞
+j=0
+is an arbitrary CONS in L
+2
+([t,T]).
+Theorem1[9].Suppose that{ϕ j
+(x)}
+∞
+j=0
+is an arbitrary CONS inL
+2
+([t,T]).
+Moreover, ψ 1
+(τ),ψ 2
+(τ) are continuous functions on [t,T]. Then
+J
+∗ [ψ (2)
+]
+(i
+1
+i
+2
+)
+T,t
+= l.i.m.
+p
+1
+,p
+2
+→∞
+p
+1
+X
+j
+1
+=0
+p
+2
+X
+j
+2
+=0
+C
+j
+2
+j
+1
+ζ (i
+1
+)
+j
+1
+ζ (i
+2
+)
+j
+2
+, (5)
+where J
+∗ [ψ (2)
+]
+(i
+1
+i
+2
+)
+T,t
+is defined by (2), i
+1
+,i
+2
+= 0,1,...,m, l.i.m. is a limit in the
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 121Differential Equations and Control Processes, N. 3, 2025
+mean-square sense,
+ζ (i)
+j
+=
+T
+Z
+t
+ϕ j
+(τ)dw
+(i)
+τ are independent standard Gaussian random variables for various i or j (in the
+case when i̸= 0), and w
+(0)
+τ =τ.
+Theorem 2 [9], [13]. Suppose that {ϕ j
+(x)}
+∞
+j=0
+is an arbitrary CONS in
+L
+2
+([t,T]) and ψ i
+(τ) = (τ−t)
+l
+i
+(l
+i
+= 0,1,2,..., i = 1,...,4). Then
+J
+∗ [ψ (3)
+]
+(i
+1
+i
+2
+i
+3
+)
+T,t
+= l.i.m.
+p→∞
+p
+X
+j
+1
+,j
+2
+,j
+3
+=0
+C
+j
+3
+j
+2
+j
+1
+ζ (i
+1
+)
+j
+1
+ζ (i
+2
+)
+j
+2
+ζ (i
+3
+)
+j
+3
+,
+J
+∗ [ψ (4)
+]
+(i
+1
+...i
+4
+)
+T,t
+= l.i.m.
+p→∞
+p
+X
+j
+1
+,...,j
+4
+=0
+C
+j
+4
+...j
+1
+ζ (i
+1
+)
+j
+1
+...ζ (i
+4
+)
+j
+4
+,
+where J
+∗ [ψ (3)
+]
+(i
+1
+i
+2
+i
+3
+)
+T,t
+and J
+∗ [ψ (4)
+]
+(i
+1
+...i
+4
+)
+T,t
+are defined by (2), i
+1
+,...,i
+4
+= 0,1,...,m;
+another notations as in Theorem 1.
+Theorem 3 [9], [13]. Suppose that {ϕ j
+(x)}
+∞
+j=0
+is an arbitrary CONS in
+L
+2
+([t,T]) and ψ 1
+(τ),...,ψ 5
+(τ)≡ 1. Then
+J
+∗ [ψ (5)
+]
+(i
+1
+...i
+5
+)
+T,t
+= l.i.m.
+p→∞
+p
+X
+j
+1
+,...,j
+5
+=0
+C
+j
+5
+...j
+1
+ζ (i
+1
+)
+j
+1
+...ζ (i
+5
+)
+j
+5
+,
+where J
+∗ [ψ (5)
+]
+(i
+1
+...i
+5
+)
+T,t
+is defined by (2), i
+1
+,...,i
+5
+= 0,1,...,m; another notations
+as in Theorem 1.
+2.2 Connection Between Iterated Stratonovich and Itˆ o Stochastic
+Integrals of Arbitrary Multiplicity k (k∈N)
+Let ψ 1
+(τ),...,ψ k
+(τ)∈L
+2
+([t,T]). Introduce the following notations
+J[ψ (k)
+]
+(i
+1
+...i
+k
+)[s
+l
+,...,s
+1
+]
+T,t
+def
+=
+l
+Y
+q=1
+1
+{i
+sq
+=i
+sq+1
+̸=0}
+× × T
+Z
+t
+ψ k
+(t
+k
+)...
+t
+s
+l
++3
+Z
+t
+ψ s
+l
++2
+(t
+s
+l
++2
+)
+t
+s
+l
++2
+Z
+t
+ψ s
+l
+(t
+s
+l
++1
+)ψ s
+l
++1
+(t
+s
+l
++1
+)× https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 122Differential Equations and Control Processes, N. 3, 2025
+× t
+s
+l
++1
+Z
+t
+ψ s
+l
+−1
+(t
+s
+l
+−1
+)...
+t
+s
+1
++3
+Z
+t
+ψ s
+1
++2
+(t
+s
+1
++2
+)
+t
+s
+1
++2
+Z
+t
+ψ s
+1
+(t
+s
+1
++1
+)ψ s
+1
++1
+(t
+s
+1
++1
+)× × t
+s
+1
++1
+Z
+t
+ψ s
+1
+−1
+(t
+s
+1
+−1
+)...
+t
+2
+Z
+t
+ψ 1
+(t
+1
+)dw
+(i
+1
+)
+t
+1
+...dw
+(i
+s
+1
+−1
+)
+t
+s
+1
+−1
+dt
+s
+1
++1
+dw
+(i
+s
+1
++2
+)
+t
+s
+1
++2
+...
+...dw
+(i
+s
+l
+−1
+)
+t
+s
+l
+−1
+dt
+s
+l
++1
+dw
+(i
+s
+l
++2
+)
+t
+s
+l
++2
+...dw
+(i
+k
+)
+t
+k
+, (6)
+where the iterated integral on the right-hand side of (6) is the iterated Itˆ o
+stochastic integral, (s
+l
+,...,s
+1
+)∈ A
+k,l
+,
+A
+k,l
+=
+ 
+(s
+l
+,...,s
+1
+) : s
+l
+>s
+l−1
++1,...,s
+2
+>s
+1
++1; s
+l
+,...,s
+1
+= 1,...,k−1
+	
+,
+(7)
+l = 1,2,...,[k/2],i
+1
+,...,i
+k
+= 0,1,...,m,[x]isanintegerpartofarealnumber
+x, 1
+A
+is the indicator of the set A.
+Forl = 0,weunderstand(6)asthefollowingiteratedItˆ ostochasticintegral
+J[ψ (k)
+]
+(i
+1
+...i
+k
+)
+T,t
+=
+T
+Z
+t
+ψ k
+(t
+k
+)...
+t
+2
+Z
+t
+ψ 1
+(t
+1
+)dw
+(i
+1
+)
+t
+1
+...dw
+(i
+k
+)
+t
+k
+, (8)
+where i
+1
+,...,i
+k
+= 0,1,...,m and w
+(0)
+τ =τ.
+LetusformulatethestatementonconnectionbetweeniteratedStratonovich
+and Itˆ o stochastic integrals (2) and (8) of arbitrary multiplicity k (k∈N).
+Theorem 4 [51] (1997) (also see [9] (Theorem 2.12)). Suppose that ψ 1
+(τ),
+...,ψ k
+(τ) are continuous functions on [t,T]. Then
+J
+∗ [ψ (k)
+]
+(i
+1
+...i
+k
+)
+T,t
+=J[ψ (k)
+]
+(i
+1
+...i
+k
+)
+T,t
++
+[k/2]
+X
+r=1
+1
+2
+r
+X
+(s
+r
+,...,s
+1
+)∈A
+k,r
+J[ψ (k)
+]
+(i
+1
+...i
+k
+)[s
+r
+,...,s
+1
+]
+T,t
+w. p. 1,
+(9)
+where i
+1
+,...,i
+k
+= 0,1,...,m,
+P
+∅
+is supposed to be equal to zero, w. p. 1 (here
+and further) means with probability 1.
+Note that the condition of continuity of the functions ψ 1
+(τ),...,ψ k
+(τ) is
+related to the definition of the Stratonovich stochastic integral that we use (see
+[9], Sect. 2.1.1 for details).
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 123Differential Equations and Control Processes, N. 3, 2025
+2.3 ExpansionofIteratedStratonovichStochasticIntegralsofArbi-
+traryMultiplicityk (k∈N)UndertheCondition(13). TheCase
+of an Arbitrary CONS in L
+2
+([t,T]) and ψ 1
+(τ),...,ψ k
+(τ)∈L
+2
+([t,T])
+Consider the unordered set {1,2,...,k} and separate it into two parts: the
+first part consists of r unordered pairs (sequence order of these pairs is also
+unimportant) and the second one consists of the remainingk−2r numbers. So,
+we have
+({{g
+1
+,g
+2
+},...,{g
+2r−1
+,g
+2r
+}
+| {z }
+part 1
+},{q
+1
+,...,q
+k−2r
+| {z }
+part 2
+}), (10)
+where {g
+1
+,g
+2
+,...,g
+2r−1
+,g
+2r
+,q
+1
+,...,q
+k−2r
+} = {1,2,...,k}, braces mean an un-
+ordered set, and parentheses mean an ordered set.
+We will start this section with an example. Let us assume that h
+1
+(τ),...,
+h
+12
+(τ)∈L
+2
+([t,T]) and consider the following Lebesgue integral
+I
+def
+=
+T
+Z
+t
+h
+12
+(t
+12
+)
+t
+12
+Z
+t
+h
+11
+(t
+11
+)...
+t
+2
+Z
+t
+h
+1
+(t
+1
+)dt
+1
+...dt
+11
+dt
+12
+.
+We want to transform the integral I in such a way that
+I =
+T
+Z
+t
+h
+10
+(t
+10
+)
+t
+10
+Z
+t
+h
+6
+(t
+6
+)
+t
+6
+Z
+t
+h
+4
+(t
+4
+)
+t
+4
+Z
+t
+h
+3
+(t
+3
+)(...)dt
+3
+dt
+4
+dt
+6
+dt
+10
+,
+where (...) is some expression.
+Using Fubini’s Theorem, we obtain (see [13], Sect. 3.4)
+I =
+T
+Z
+t
+h
+12
+(t
+12
+)
+t
+12
+Z
+t
+h
+11
+(t
+11
+)
+t
+11
+Z
+t
+h
+10
+(t
+10
+)
+t
+10
+Z
+t
+h
+9
+(t
+9
+)
+t
+9
+Z
+t
+h
+8
+(t
+8
+)
+t
+8
+Z
+t
+h
+7
+(t
+7
+)
+t
+7
+Z
+t
+h
+6
+(t
+6
+)× × t
+6
+Z
+t
+h
+5
+(t
+5
+)
+t
+5
+Z
+t
+h
+4
+(t
+4
+)
+t
+4
+Z
+t
+h
+3
+(t
+3
+)
+t
+3
+Z
+t
+h
+2
+(t
+2
+)
+t
+2
+Z
+t
+h
+1
+(t
+1
+)dt
+1
+dt
+2
+dt
+3
+dt
+4
+dt
+5
+dt
+6
+dt
+7
+dt
+8
+× ×dt
+9
+dt
+10
+dt
+11
+dt
+12
+=
+=
+T
+Z
+t
+h
+10
+(t
+10
+)
+t
+10
+Z
+t
+h
+6
+(t
+6
+)
+t
+6
+Z
+t
+h
+4
+(t
+4
+)
+t
+4
+Z
+t
+h
+3
+(t
+3
+)
+
+
+t
+3
+Z
+t
+h
+2
+(t
+2
+)
+t
+2
+Z
+t
+h
+1
+(t
+1
+)dt
+1
+dt
+2
+
+
+× https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 124Differential Equations and Control Processes, N. 3, 2025
+× 
+
+t
+6
+Z
+t
+4
+h
+5
+(t
+5
+)dt
+5
+
+
+
+
+t
+10
+Z
+t
+6
+h
+9
+(t
+9
+)
+t
+9
+Z
+t
+6
+h
+8
+(t
+8
+)
+t
+8
+Z
+t
+6
+h
+7
+(t
+7
+)dt
+7
+dt
+8
+dt
+9
+
+
+× × 
+
+T
+Z
+t
+10
+h
+12
+(t
+12
+)
+t
+12
+Z
+t
+10
+h
+11
+(t
+11
+)dt
+11
+dt
+12
+
+
+dt
+3
+dt
+4
+dt
+6
+dt
+10
+. (11)
+Further, letussupposethath
+l
+(τ) =ψ l
+(τ)ϕ j
+l
+(τ)(l = 1,...,12)in(11)(here
+{ϕ j
+(x)}
+∞
+j=0
+is an arbitrary CONS in L
+2
+([t,T]). Thus, we get
+C
+j
+12
+j
+11
+j
+10
+j
+9
+j
+8
+j
+7
+j
+6
+j
+5
+j
+4
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ψ 10
+(t
+10
+)ϕ j
+10
+(t
+10
+)
+t
+10
+Z
+t
+ψ 6
+(t
+6
+)ϕ j
+6
+(t
+6
+)
+t
+6
+Z
+t
+ψ 4
+(t
+4
+)ϕ j
+4
+(t
+4
+)× × t
+4
+Z
+t
+ψ 3
+(t
+3
+)ϕ j
+3
+(t
+3
+)C
+ψ 12
+ψ 11
+j
+12
+j
+11
+(T,t
+10
+)C
+ψ 9
+ψ 8
+ψ 7
+j
+9
+j
+8
+j
+7
+(t
+10
+,t
+6
+)C
+ψ 5
+j
+5
+(t
+6
+,t
+4
+)C
+ψ 2
+ψ 1
+j
+2
+j
+1
+(t
+3
+,t)× ×dt
+3
+dt
+4
+dt
+6
+dt
+10
+, (12)
+where (here and further)
+C
+ψ k
+...ψ
+1
+j
+k
+...j
+1
+(s,τ) =
+s
+Z
+τ ψ k
+(t
+k
+)ϕ j
+k
+(t
+k
+)...
+t
+2
+Z
+τ ψ 1
+(t
+1
+)ϕ j
+1
+(t
+1
+)dt
+1
+...dt
+k
+,
+where t≤τ <s≤T.
+Let g
+1
+,g
+2
+,...,g
+2r−1
+,g
+2r
+as in (10) and k > 2r, r ≥ 1. Consider d
+1
+,e
+1
+,
+...,d
+f
+,e
+f
+,f ∈N such that
+1≤d
+1
+−e
+1
++1<...<d
+1
+−1<d
+1
+<...<d
+f
+−e
+f
++1<...<d
+f
+−1<d
+f
+≤k,
+{g
+1
+,g
+2
+,...,g
+2r−1
+,g
+2r
+} =
+={d
+1
+−e
+1
++1,...,d
+1
+−1,d
+1
+}∪...∪{d
+f
+−e
+f
++1,...,d
+f
+−1,d
+f
+},
+{1,...,k}\{g
+1
+,g
+2
+,...,g
+2r−1
+,g
+2r
+} ={q
+1
+,...,q
+k−2r
+},
+e
+1
++e
+2
++...+e
+f
+= 2r.
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 125Differential Equations and Control Processes, N. 3, 2025
+Suppose that
+ 
+ 
+ 
+ 
+ 
+p
+X
+j
+g
+1
+,j
+g
+3
+,...,j
+g
+2r−1
+=0
+ 
+C
+ψ d
+f
+...ψ
+d
+f
+−e
+f
++1
+j
+d
+f
+...j
+d
+f
+−e
+f
++1
+(t
+d
+f
++1
+,t
+d
+f
+−e
+f
+)...
+...C
+ψ d
+1
+...ψ
+d
+1
+−e
+1
++1
+j
+d
+1
+...j
+d
+1
+−e
+1
++1
+(t
+d
+1
++1
+,t
+d
+1
+−e
+1
+)
+ 
+ 
+ 
+ 
+ 
+j
+g
+1
+=j
+g
+2
+,...,j
+g
+2r−1
+=j
+g
+2r
+ 
+ 
+ 
+ 
+ 
+≤K <∞, (13)
+where constant K does not depend on p and t
+d
+1
++1
+,t
+d
+1
+−e
+1
+,...,t
+d
+f
++1
+,t
+d
+f
+−e
+f
+(here
+d
+1
+−e
+1
+≥ 1 and d
+f
++1≤ k). In (13): t
+k+1
+def
+= T, t
+0
+def
+= t; another notations as
+above in this section.
+Theorem 5 [9], [13]. Suppose that the condition (13) is fulfilled,{ϕ j
+(x)}
+∞
+j=0
+is an arbitrary CONS in L
+2
+([t,T]) and ψ 1
+(τ),...,ψ k
+(τ) are continuous func-
+tions on [t,T]. Then
+J
+∗ [ψ (k)
+]
+(i
+1
+...i
+k
+)
+T,t
+= l.i.m.
+p→∞
+p
+X
+j
+1
+,...,j
+k
+=0
+C
+j
+k
+...j
+1
+k
+Y
+l=1
+ζ (i
+l
+)
+j
+l
+, (14)
+where J
+∗ [ψ (k)
+]
+(i
+1
+...i
+k
+)
+T,t
+is defined by (2), i
+1
+,...,i
+k
+= 0,1,...,m; another notations
+as in Sect 2.1.
+Note that the condition (13) can be weakened. Namely, the constant K
+2
+can be replaced by the function F such that ψ 2
+q
+1
+...ψ 2
+q
+k−2r
+F ∈ L
+1
+([t,T]
+k−2r
+)
+(integrable majorant). More precisely, the condition (13) can be replaced by
+the following condition
+ 
+p
+X
+j
+g
+1
+,j
+g
+3
+,...,j
+g
+2r−1
+=0
+ 
+C
+ψ d
+f
+...ψ
+d
+f
+−e
+f
++1
+j
+d
+f
+...j
+d
+f
+−e
+f
++1
+(t
+d
+f
++1
+,t
+d
+f
+−e
+f
+)...
+...C
+ψ d
+1
+...ψ
+d
+1
+−e
+1
++1
+j
+d
+1
+...j
+d
+1
+−e
+1
++1
+(t
+d
+1
++1
+,t
+d
+1
+−e
+1
+)
+ 
+ 
+ 
+ 
+ 
+j
+g
+1
+=j
+g
+2
+,...,j
+g
+2r−1
+=j
+g
+2r
+!
+2
+≤F(t
+q
+1
+,...,t
+q
+k−2r
+) (15)
+almost everywhere on
+X ={(t
+q
+1
+,...,t
+q
+k−2r
+) :t≤t
+q
+1
+≤...≤t
+q
+k−2r
+≤T}
+with respect to Lebesgue’s measure, where the functionF(t
+q
+1
+,...,t
+q
+k−2r
+) is such
+that
+ψ 2
+q
+1
+(t
+q
+1
+)...ψ 2
+q
+k−2r
+(t
+q
+k−2r
+)F(t
+q
+1
+,...,t
+q
+k−2r
+)∈L
+1
+([t,T]
+k−2r
+),
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 126Differential Equations and Control Processes, N. 3, 2025
+where notations are the same as in (13). In this case, instead of J
+∗ [ψ (k)
+]
+(i
+1
+...i
+k
+)
+T,t
+on the left-hand side of (14) there will be
+J[ψ (k)
+]
+(i
+1
+...i
+k
+)
+T,t
++
+[k/2]
+X
+r=1
+1
+2
+r
+X
+(s
+r
+,...,s
+1
+)∈A
+k,r
+J[ψ (k)
+]
+(i
+1
+...i
+k
+)[s
+r
+,...,s
+1
+]
+T,t
+(see(9))andinadditionψ 1
+(τ),...,ψ k
+(τ)∈L
+2
+([t,T])(seeTheorem2.60[9]and
+the remark at the end of Sect. 2.31 [9]).
+3 Main Results
+3.1 Expansion of Iterated Stratonovich Stochastic Integrals of Mul-
+tiplicity 6. The Case of an Arbitrary CONS in L
+2
+([t,T]) and
+ψ 1
+(τ),...,ψ 6
+(τ)≡ 1
+This section is devoted to the following theorem.
+Theorem6[9].Suppose that{ϕ j
+(x)}
+∞
+j=0
+is an arbitrary CONS inL
+2
+([t,T]).
+Then, for the iterated Stratonovich stochastic integral of sixth multiplicity
+J
+∗ [ψ (6)
+]
+T,t
+=
+∗ Z
+t
+T
+...
+∗ Z
+t
+t
+2
+dw
+(i
+1
+)
+t
+1
+...dw
+(i
+6
+)
+t
+6
+the following expansion
+J
+∗ [ψ (6)
+]
+T,t
+= l.i.m.
+p→∞
+p
+X
+j
+1
+,...,j
+6
+=0
+C
+j
+6
+...j
+1
+ζ (i
+1
+)
+j
+1
+...ζ (i
+6
+)
+j
+6
+that converges in the mean-square sense is valid, where i
+1
+,...,i
+6
+= 0,1,...,m,
+C
+j
+6
+...j
+1
+=
+T
+Z
+t
+ϕ j
+6
+(t
+6
+)...
+t
+2
+Z
+t
+ϕ j
+1
+(t
+1
+)dt
+1
+...dt
+6
+, (16)
+and
+ζ (i)
+j
+=
+T
+Z
+t
+ϕ j
+(τ)dw
+(i)
+τ https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 127Differential Equations and Control Processes, N. 3, 2025
+are independent standard Gaussian random variables for various i or j (in the
+case when i̸= 0), w
+(0)
+τ =τ.
+Proof.OurproofwillbebasedonTheorem5andverificationoftheequality
+(13) under the conditions of Theorem 6 (the case k = 6> 2r, where r = 1,2).
+Remark 1. Recall that the case k = 2r is proved in [13], Sect. 3.2 (also
+see [55], [56]). Therefore, the case k = 2r is not included in the conditions of
+Theorem 5. More precisely, the following equality
+lim
+p→∞
+p
+X
+j
+g
+1
+,j
+g
+3
+,...,j
+g
+2r−1
+=0
+C
+j
+k
+...j
+1
+ 
+ 
+ 
+ 
+j
+g
+1
+=j
+g
+2
+,...,j
+g
+2r−1
+=j
+g
+2r
+=
+=
+1
+2
+r
+r
+Y
+l=1
+1
+{g
+2l
+=g
+2l−1
++1}
+C
+j
+k
+...j
+1
+ 
+ 
+ 
+ 
+(j
+g
+2
+j
+g
+1
+)↷(·)...(j
+g
+2r
+j
+g
+2r−1
+)↷(·),j
+g
+1
+= j
+g
+2
+,...,j
+g
+2r−1
+= j
+g
+2r
+(17)
+holds for all possible g
+1
+,g
+2
+,...,g
+2r−1
+,g
+2r
+(see (10)), where k = 2r (r = 1,2,...),
+C
+j
+k
+...j
+1
+has the form (4), the value
+1
+2
+r
+r
+Y
+l=1
+1
+{g
+2l
+=g
+2l−1
++1}
+C
+j
+k
+...j
+1
+ 
+ 
+ 
+ 
+(j
+g
+2
+j
+g
+1
+)↷(·)...(j
+g
+2r
+j
+g
+2r−1
+)↷(·),j
+g
+1
+= j
+g
+2
+,...,j
+g
+2r−1
+= j
+g
+2r
+is defined iteratively using the equality
+C
+j
+k
+...j
+l+1
+j
+l
+j
+l−1
+j
+l−2
+...j
+1
+ 
+ 
+ 
+ 
+(j
+l
+j
+l−1
+)↷(·)
+def
+=
+def
+=
+T
+Z
+t
+ψ k
+(t
+k
+)ϕ j
+k
+(t
+k
+)...
+t
+l+2
+Z
+t
+ψ l+1
+(t
+l+1
+)ϕ j
+l+1
+(t
+l+1
+)
+t
+l+1
+Z
+t
+ψ l
+(t
+l
+)ψ l−1
+(t
+l
+)× × t
+l
+Z
+t
+ψ l−2
+(t
+l−2
+)ϕ j
+l−2
+(t
+l−2
+)...
+t
+2
+Z
+t
+ψ 1
+(t
+1
+)ϕ j
+1
+(t
+1
+)dt
+1
+...dt
+l−2
+dt
+l
+t
+l+1
+...dt
+k
+, (18)
+where{l,l−1} is one of the pairs{g
+1
+,g
+2
+},...,{g
+2r−1
+,g
+2r
+} (see (10)).
+Under the conditions of Theorem 6, this means that k = 6 = 2r (r = 3) in
+the equality (17).
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 128Differential Equations and Control Processes, N. 3, 2025
+Further, let throughout this proof
+C
+j
+k
+...j
+1
+(s,τ) =
+s
+Z
+τ ϕ j
+k
+(t
+k
+)...
+t
+2
+Z
+τ ϕ j
+1
+(t
+1
+)dt
+1
+...dt
+k
+, (19)
+where k = 1,...,4, t≤τ <s≤T, and C
+j
+6
+...j
+1
+is defined by (16).
+Using Fubini’s Theorem and the technique that leads to the formulas (11),
+(12) (see [13], Sect. 3.4), we obtain (note that we find all possible combinations
+of pairs using the equality (2.682) (see [9]))
+1. r = 1 (15 combinations):
+C
+j
+1
+j
+5
+j
+4
+j
+3
+j
+2
+j
+1
+=
+=
+T
+Z
+t
+ϕ j
+5
+(t
+5
+)
+t
+5
+Z
+t
+ϕ j
+4
+(t
+4
+)
+t
+4
+Z
+t
+ϕ j
+3
+(t
+3
+)
+t
+3
+Z
+t
+ϕ j
+2
+(t
+2
+)C
+j
+1
+(t
+2
+,t)C
+j
+1
+(T,t
+5
+)dt
+2
+dt
+3
+dt
+4
+dt
+5
+,
+C
+j
+2
+j
+5
+j
+4
+j
+3
+j
+2
+j
+1
+=
+=
+T
+Z
+t
+ϕ j
+5
+(t
+5
+)
+t
+5
+Z
+t
+ϕ j
+4
+(t
+4
+)
+t
+4
+Z
+t
+ϕ j
+3
+(t
+3
+)
+t
+3
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+2
+(t
+3
+,t
+1
+)C
+j
+2
+(T,t
+5
+)dt
+1
+dt
+3
+dt
+4
+dt
+5
+,
+C
+j
+3
+j
+5
+j
+4
+j
+3
+j
+2
+j
+1
+=
+=
+T
+Z
+t
+ϕ j
+5
+(t
+5
+)
+t
+5
+Z
+t
+ϕ j
+4
+(t
+4
+)
+t
+4
+Z
+t
+ϕ j
+2
+(t
+2
+)
+t
+2
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+3
+(t
+4
+,t
+2
+)C
+j
+3
+(T,t
+5
+)dt
+1
+dt
+2
+dt
+4
+dt
+5
+,
+C
+j
+4
+j
+5
+j
+4
+j
+3
+j
+2
+j
+1
+=
+=
+T
+Z
+t
+ϕ j
+5
+(t
+5
+)
+t
+5
+Z
+t
+ϕ j
+3
+(t
+3
+)
+t
+3
+Z
+t
+ϕ j
+2
+(t
+2
+)
+t
+2
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+4
+(t
+5
+,t
+3
+)C
+j
+4
+(T,t
+5
+)dt
+1
+dt
+2
+dt
+3
+dt
+5
+,
+C
+j
+5
+j
+5
+j
+4
+j
+3
+j
+2
+j
+1
+=
+=
+T
+Z
+t
+ϕ j
+4
+(t
+4
+)
+t
+4
+Z
+t
+ϕ j
+3
+(t
+3
+)
+t
+3
+Z
+t
+ϕ j
+2
+(t
+2
+)
+t
+2
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+5
+j
+5
+(T,t
+4
+)dt
+1
+dt
+2
+dt
+3
+dt
+4
+,
+C
+j
+6
+j
+5
+j
+4
+j
+3
+j
+1
+j
+1
+=
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 129Differential Equations and Control Processes, N. 3, 2025
+=
+T
+Z
+t
+ϕ j
+6
+(t
+6
+)
+t
+6
+Z
+t
+ϕ j
+5
+(t
+5
+)
+t
+5
+Z
+t
+ϕ j
+4
+(t
+4
+)
+t
+4
+Z
+t
+ϕ j
+3
+(t
+3
+)C
+j
+1
+j
+1
+(t
+3
+,t)dt
+3
+dt
+4
+dt
+5
+dt
+6
+,
+C
+j
+6
+j
+5
+j
+4
+j
+1
+j
+2
+j
+1
+=
+=
+T
+Z
+t
+ϕ j
+6
+(t
+6
+)
+t
+6
+Z
+t
+ϕ j
+5
+(t
+5
+)
+t
+5
+Z
+t
+ϕ j
+4
+(t
+4
+)
+t
+4
+Z
+t
+ϕ j
+2
+(t
+2
+)C
+j
+1
+(t
+2
+,t)C
+j
+1
+(t
+4
+,t
+2
+)dt
+2
+dt
+4
+dt
+5
+dt
+6
+,
+C
+j
+6
+j
+5
+j
+1
+j
+3
+j
+2
+j
+1
+=
+=
+T
+Z
+t
+ϕ j
+6
+(t
+6
+)
+t
+6
+Z
+t
+ϕ j
+5
+(t
+5
+)
+t
+5
+Z
+t
+ϕ j
+3
+(t
+3
+)
+t
+3
+Z
+t
+ϕ j
+2
+(t
+2
+)C
+j
+1
+(t
+2
+,t)C
+j
+1
+(t
+5
+,t
+3
+)dt
+2
+dt
+3
+dt
+5
+dt
+6
+,
+C
+j
+6
+j
+1
+j
+4
+j
+3
+j
+2
+j
+1
+=
+=
+T
+Z
+t
+ϕ j
+6
+(t
+6
+)
+t
+6
+Z
+t
+ϕ j
+4
+(t
+4
+)
+t
+4
+Z
+t
+ϕ j
+3
+(t
+3
+)
+t
+3
+Z
+t
+ϕ j
+2
+(t
+2
+)C
+j
+1
+(t
+2
+,t)C
+j
+1
+(t
+6
+,t
+4
+)dt
+2
+dt
+3
+dt
+4
+dt
+6
+,
+C
+j
+6
+j
+5
+j
+4
+j
+2
+j
+2
+j
+1
+=
+=
+T
+Z
+t
+ϕ j
+6
+(t
+6
+)
+t
+6
+Z
+t
+ϕ j
+5
+(t
+5
+)
+t
+5
+Z
+t
+ϕ j
+4
+(t
+4
+)
+t
+4
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+2
+j
+2
+(t
+4
+,t
+1
+)dt
+1
+dt
+4
+dt
+5
+dt
+6
+,
+C
+j
+6
+j
+5
+j
+2
+j
+3
+j
+2
+j
+1
+=
+=
+T
+Z
+t
+ϕ j
+6
+(t
+6
+)
+t
+6
+Z
+t
+ϕ j
+5
+(t
+5
+)
+t
+5
+Z
+t
+ϕ j
+3
+(t
+3
+)
+t
+3
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+2
+(t
+3
+,t
+1
+)C
+j
+2
+(t
+5
+,t
+3
+)dt
+1
+dt
+3
+dt
+5
+dt
+6
+,
+C
+j
+6
+j
+2
+j
+4
+j
+3
+j
+2
+j
+1
+=
+=
+T
+Z
+t
+ϕ j
+6
+(t
+6
+)
+t
+6
+Z
+t
+ϕ j
+4
+(t
+4
+)
+t
+4
+Z
+t
+ϕ j
+3
+(t
+3
+)
+t
+3
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+2
+(t
+3
+,t
+1
+)C
+j
+2
+(t
+6
+,t
+4
+)dt
+1
+dt
+3
+dt
+4
+dt
+6
+,
+C
+j
+6
+j
+5
+j
+3
+j
+3
+j
+2
+j
+1
+=
+=
+T
+Z
+t
+ϕ j
+6
+(t
+6
+)
+t
+6
+Z
+t
+ϕ j
+5
+(t
+5
+)
+t
+5
+Z
+t
+ϕ j
+2
+(t
+2
+)
+t
+2
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+3
+j
+3
+(t
+5
+,t
+2
+)dt
+1
+dt
+2
+dt
+5
+dt
+6
+,
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 130Differential Equations and Control Processes, N. 3, 2025
+C
+j
+6
+j
+3
+j
+4
+j
+3
+j
+2
+j
+1
+=
+=
+T
+Z
+t
+ϕ j
+6
+(t
+6
+)
+t
+6
+Z
+t
+ϕ j
+4
+(t
+4
+)
+t
+4
+Z
+t
+ϕ j
+2
+(t
+2
+)
+t
+2
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+3
+(t
+4
+,t
+2
+)C
+j
+3
+(t
+6
+,t
+4
+)dt
+1
+dt
+2
+dt
+4
+dt
+6
+,
+C
+j
+6
+j
+4
+j
+4
+j
+3
+j
+2
+j
+1
+=
+=
+T
+Z
+t
+ϕ j
+6
+(t
+6
+)
+t
+6
+Z
+t
+ϕ j
+3
+(t
+3
+)
+t
+3
+Z
+t
+ϕ j
+2
+(t
+2
+)
+t
+2
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+4
+j
+4
+(t
+6
+,t
+3
+)dt
+1
+dt
+2
+dt
+3
+dt
+6
+,
+2. r = 2 (45 combinations):
+C
+j
+6
+j
+5
+j
+3
+j
+3
+j
+1
+j
+1
+=
+T
+Z
+t
+ϕ j
+6
+(t
+6
+)
+t
+6
+Z
+t
+ϕ j
+5
+(t
+5
+)C
+j
+3
+j
+3
+j
+1
+j
+1
+(t
+5
+,t)dt
+5
+dt
+6
+,
+C
+j
+6
+j
+3
+j
+4
+j
+3
+j
+1
+j
+1
+=
+T
+Z
+t
+ϕ j
+6
+(t
+6
+)
+t
+6
+Z
+t
+ϕ j
+4
+(t
+4
+)C
+j
+3
+j
+1
+j
+1
+(t
+4
+,t)C
+j
+3
+(t
+6
+,t
+4
+)dt
+4
+dt
+6
+,
+C
+j
+6
+j
+4
+j
+4
+j
+3
+j
+1
+j
+1
+=
+T
+Z
+t
+ϕ j
+6
+(t
+6
+)
+t
+6
+Z
+t
+ϕ j
+3
+(t
+3
+)C
+j
+1
+j
+1
+(t
+3
+,t)C
+j
+4
+j
+4
+(t
+6
+,t
+3
+)dt
+3
+dt
+6
+,
+C
+j
+6
+j
+5
+j
+2
+j
+1
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+6
+(t
+6
+)
+t
+6
+Z
+t
+ϕ j
+5
+(t
+5
+)C
+j
+2
+j
+1
+j
+2
+j
+1
+(t
+5
+,t)dt
+5
+dt
+6
+,
+C
+j
+6
+j
+2
+j
+4
+j
+1
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+6
+(t
+6
+)
+t
+6
+Z
+t
+ϕ j
+4
+(t
+4
+)C
+j
+1
+j
+2
+j
+1
+(t
+4
+,t)C
+j
+2
+(t
+6
+,t
+4
+)dt
+4
+dt
+6
+,
+C
+j
+6
+j
+4
+j
+4
+j
+1
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+6
+(t
+6
+)
+t
+6
+Z
+t
+ϕ j
+2
+(t
+2
+)C
+j
+1
+(t
+2
+,t)C
+j
+4
+j
+4
+j
+1
+(t
+6
+,t
+2
+)dt
+2
+dt
+6
+,
+C
+j
+6
+j
+5
+j
+1
+j
+2
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+6
+(t
+6
+)
+t
+6
+Z
+t
+ϕ j
+5
+(t
+5
+)C
+j
+1
+j
+2
+j
+2
+j
+1
+(t
+5
+,t)dt
+5
+dt
+6
+,
+C
+j
+6
+j
+2
+j
+1
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+6
+(t
+6
+)
+t
+6
+Z
+t
+ϕ j
+3
+(t
+3
+)C
+j
+2
+j
+1
+(t
+3
+,t)C
+j
+2
+j
+1
+(t
+6
+,t
+3
+)dt
+3
+dt
+6
+,
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 131Differential Equations and Control Processes, N. 3, 2025
+C
+j
+6
+j
+3
+j
+1
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+6
+(t
+6
+)
+t
+6
+Z
+t
+ϕ j
+2
+(t
+2
+)C
+j
+1
+(t
+2
+,t)C
+j
+3
+j
+1
+j
+3
+(t
+6
+,t
+2
+)dt
+2
+dt
+6
+,
+C
+j
+6
+j
+1
+j
+4
+j
+2
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+6
+(t
+6
+)
+t
+6
+Z
+t
+ϕ j
+4
+(t
+4
+)C
+j
+2
+j
+2
+j
+1
+(t
+4
+,t)C
+j
+1
+(t
+6
+,t
+4
+)dt
+4
+dt
+6
+,
+C
+j
+6
+j
+1
+j
+2
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+6
+(t
+6
+)
+t
+6
+Z
+t
+ϕ j
+3
+(t
+3
+)C
+j
+2
+j
+1
+(t
+3
+,t)C
+j
+1
+j
+2
+(t
+6
+,t
+3
+)dt
+3
+dt
+6
+,
+C
+j
+6
+j
+1
+j
+3
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+6
+(t
+6
+)
+t
+6
+Z
+t
+ϕ j
+2
+(t
+2
+)C
+j
+1
+(t
+2
+,t)C
+j
+1
+j
+3
+j
+3
+(t
+6
+,t
+2
+)dt
+2
+dt
+6
+,
+C
+j
+6
+j
+4
+j
+4
+j
+2
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+6
+(t
+6
+)
+t
+6
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+4
+j
+4
+j
+2
+j
+2
+(t
+6
+,t
+1
+)dt
+1
+dt
+6
+,
+C
+j
+6
+j
+3
+j
+2
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+6
+(t
+6
+)
+t
+6
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+3
+j
+2
+j
+3
+j
+2
+(t
+6
+,t
+1
+)dt
+1
+dt
+6
+,
+C
+j
+6
+j
+2
+j
+3
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+6
+(t
+6
+)
+t
+6
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+2
+j
+3
+j
+3
+j
+2
+(t
+6
+,t
+1
+)dt
+1
+dt
+6
+,
+C
+j
+1
+j
+5
+j
+3
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+5
+(t
+5
+)
+t
+5
+Z
+t
+ϕ j
+2
+(t
+2
+)C
+j
+1
+(t
+2
+,t)C
+j
+3
+j
+3
+(t
+5
+,t
+2
+)C
+j
+1
+(T,t
+5
+)dt
+2
+dt
+5
+,
+C
+j
+1
+j
+3
+j
+4
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+4
+(t
+4
+)
+t
+4
+Z
+t
+ϕ j
+2
+(t
+2
+)C
+j
+1
+(t
+2
+,t)C
+j
+3
+(t
+4
+,t
+2
+)C
+j
+1
+j
+3
+(T,t
+4
+)dt
+2
+dt
+4
+,
+C
+j
+1
+j
+2
+j
+4
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+4
+(t
+4
+)
+t
+4
+Z
+t
+ϕ j
+3
+(t
+3
+)C
+j
+2
+j
+1
+(t
+3
+,t)C
+j
+1
+j
+2
+(T,t
+4
+)dt
+3
+dt
+4
+,
+C
+j
+1
+j
+5
+j
+2
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+5
+(t
+5
+)
+t
+5
+Z
+t
+ϕ j
+3
+(t
+3
+)C
+j
+2
+j
+1
+(t
+3
+,t)C
+j
+2
+(t
+5
+,t
+3
+)C
+j
+1
+(T,t
+5
+)dt
+3
+dt
+5
+,
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 132Differential Equations and Control Processes, N. 3, 2025
+C
+j
+1
+j
+4
+j
+4
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+3
+(t
+3
+)
+t
+3
+Z
+t
+ϕ j
+2
+(t
+2
+)C
+j
+1
+(t
+2
+,t)C
+j
+1
+j
+4
+j
+4
+(T,t
+3
+)dt
+2
+dt
+3
+,
+C
+j
+1
+j
+5
+j
+4
+j
+2
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+5
+(t
+5
+)
+t
+5
+Z
+t
+ϕ j
+4
+(t
+4
+)C
+j
+2
+j
+2
+j
+1
+(t
+4
+,t)C
+j
+1
+(T,t
+5
+)dt
+4
+dt
+5
+,
+C
+j
+2
+j
+3
+j
+4
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+4
+(t
+4
+)
+t
+4
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+2
+j
+3
+(t
+4
+,t
+1
+)C
+j
+2
+j
+3
+(T,t
+4
+)dt
+1
+dt
+4
+,
+C
+j
+2
+j
+4
+j
+4
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+3
+(t
+3
+)
+t
+3
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+2
+(t
+3
+,t
+1
+)C
+j
+2
+j
+4
+j
+4
+(T,t
+3
+)dt
+1
+dt
+3
+,
+C
+j
+2
+j
+5
+j
+3
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+5
+(t
+5
+)
+t
+5
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+2
+j
+3
+j
+3
+(t
+5
+,t
+1
+)C
+j
+2
+(T,t
+5
+)dt
+1
+dt
+5
+,
+C
+j
+2
+j
+1
+j
+4
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+4
+(t
+4
+)
+t
+4
+Z
+t
+ϕ j
+3
+(t
+3
+)C
+j
+2
+j
+1
+(t
+3
+,t)C
+j
+2
+j
+1
+(T,t
+4
+)dt
+3
+dt
+4
+,
+C
+j
+2
+j
+5
+j
+1
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+5
+(t
+5
+)
+t
+5
+Z
+t
+ϕ j
+3
+(t
+3
+)C
+j
+2
+j
+1
+(t
+3
+,t)C
+j
+1
+(t
+5
+,t
+3
+)C
+j
+2
+(T,t
+5
+)dt
+3
+dt
+5
+,
+C
+j
+2
+j
+5
+j
+4
+j
+1
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+5
+(t
+5
+)
+t
+5
+Z
+t
+ϕ j
+4
+(t
+4
+)C
+j
+1
+j
+2
+j
+1
+(t
+4
+,t)C
+j
+2
+(T,t
+5
+)dt
+4
+dt
+5
+,
+C
+j
+3
+j
+2
+j
+4
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+4
+(t
+4
+)
+t
+4
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+3
+j
+2
+(t
+4
+,t
+1
+)C
+j
+3
+j
+2
+(T,t
+4
+)dt
+1
+dt
+4
+,
+C
+j
+3
+j
+4
+j
+4
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+2
+(t
+2
+)
+t
+2
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+3
+j
+4
+j
+4
+j
+3
+(T,t
+2
+)dt
+1
+dt
+2
+,
+C
+j
+3
+j
+5
+j
+2
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+5
+(t
+5
+)
+t
+5
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+2
+j
+3
+j
+2
+(t
+5
+,t
+1
+)C
+j
+3
+(T,t
+5
+)dt
+1
+dt
+5
+,
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 133Differential Equations and Control Processes, N. 3, 2025
+C
+j
+3
+j
+1
+j
+4
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+4
+(t
+4
+)
+t
+4
+Z
+t
+ϕ j
+2
+(t
+2
+)C
+j
+1
+(t
+2
+,t)C
+j
+3
+(t
+4
+,t
+2
+)C
+j
+3
+j
+1
+(T,t
+4
+)dt
+2
+dt
+4
+,
+C
+j
+3
+j
+5
+j
+1
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+5
+(t
+5
+)
+t
+5
+Z
+t
+ϕ j
+2
+(t
+2
+)C
+j
+1
+(t
+2
+,t)C
+j
+1
+j
+3
+(t
+5
+,t
+2
+)C
+j
+3
+(T,t
+5
+)dt
+2
+dt
+5
+,
+C
+j
+3
+j
+5
+j
+4
+j
+3
+j
+1
+j
+1
+=
+T
+Z
+t
+ϕ j
+5
+(t
+5
+)
+t
+5
+Z
+t
+ϕ j
+4
+(t
+4
+)C
+j
+3
+j
+1
+j
+1
+(t
+4
+,t)C
+j
+3
+(T,t
+5
+)dt
+4
+dt
+5
+,
+C
+j
+4
+j
+3
+j
+4
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+2
+(t
+2
+)
+t
+2
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+4
+j
+3
+j
+4
+j
+3
+(T,t
+2
+)dt
+1
+dt
+2
+,
+C
+j
+4
+j
+2
+j
+4
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+3
+(t
+3
+)
+t
+3
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+2
+(t
+3
+,t
+1
+)C
+j
+4
+j
+2
+j
+4
+(T,t
+3
+)dt
+1
+dt
+3
+,
+C
+j
+4
+j
+5
+j
+4
+j
+2
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+5
+(t
+5
+)
+t
+5
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+4
+j
+2
+j
+2
+(t
+5
+,t
+1
+)C
+j
+4
+(T,t
+5
+)dt
+1
+dt
+5
+,
+C
+j
+4
+j
+1
+j
+4
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+3
+(t
+3
+)
+t
+3
+Z
+t
+ϕ j
+2
+(t
+2
+)C
+j
+1
+(t
+2
+,t)C
+j
+4
+j
+1
+j
+4
+(T,t
+3
+)dt
+2
+dt
+3
+,
+C
+j
+4
+j
+5
+j
+4
+j
+1
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+5
+(t
+5
+)
+t
+5
+Z
+t
+ϕ j
+2
+(t
+2
+)C
+j
+1
+(t
+2
+,t)C
+j
+4
+j
+1
+(t
+5
+,t
+2
+)C
+j
+4
+(T,t
+5
+)dt
+2
+dt
+5
+,
+C
+j
+4
+j
+5
+j
+4
+j
+3
+j
+1
+j
+1
+=
+T
+Z
+t
+ϕ j
+5
+(t
+5
+)
+t
+5
+Z
+t
+ϕ j
+3
+(t
+3
+)C
+j
+1
+j
+1
+(t
+3
+,t)C
+j
+4
+(t
+5
+,t
+3
+)C
+j
+4
+(T,t
+5
+)dt
+3
+dt
+5
+,
+C
+j
+5
+j
+5
+j
+3
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+2
+(t
+2
+)
+t
+2
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+5
+j
+5
+j
+3
+j
+3
+(T,t
+2
+)dt
+1
+dt
+2
+,
+C
+j
+5
+j
+5
+j
+2
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+3
+(t
+3
+)
+t
+3
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+2
+(t
+3
+,t
+1
+)C
+j
+5
+j
+5
+j
+2
+(T,t
+3
+)dt
+1
+dt
+3
+,
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 134Differential Equations and Control Processes, N. 3, 2025
+C
+j
+5
+j
+5
+j
+4
+j
+2
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+4
+(t
+4
+)
+t
+4
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+2
+j
+2
+(t
+4
+,t
+1
+)C
+j
+5
+j
+5
+(T,t
+4
+)dt
+1
+dt
+4
+,
+C
+j
+5
+j
+5
+j
+1
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+3
+(t
+3
+)
+t
+3
+Z
+t
+ϕ j
+2
+(t
+2
+)C
+j
+1
+(t
+2
+,t)C
+j
+5
+j
+5
+j
+1
+(T,t
+3
+)dt
+2
+dt
+3
+,
+C
+j
+5
+j
+5
+j
+4
+j
+1
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+4
+(t
+4
+)
+t
+4
+Z
+t
+ϕ j
+2
+(t
+2
+)C
+j
+1
+(t
+2
+,t)C
+j
+1
+(t
+4
+,t
+2
+)C
+j
+5
+j
+5
+(T,t
+4
+)dt
+2
+dt
+4
+,
+C
+j
+5
+j
+5
+j
+4
+j
+3
+j
+1
+j
+1
+=
+T
+Z
+t
+ϕ j
+4
+(t
+4
+)
+t
+4
+Z
+t
+ϕ j
+3
+(t
+3
+)C
+j
+1
+j
+1
+(t
+3
+,t)C
+j
+5
+j
+5
+(T,t
+4
+)dt
+3
+dt
+4
+.
+It is not difficult to see (based on the above equalities) that the condition
+(13) will be satisfied under the conditions of Theorem 6 if
+ 
+ 
+ 
+ 
+ 
+p
+X
+j
+1
+=0
+C
+j
+1
+j
+1
+(s,τ)
+ 
+ 
+ 
+ 
+ 
+≤K, (20)
+ 
+ 
+ 
+ 
+ 
+p
+X
+j
+1
+=0
+C
+j
+1
+(s,τ)C
+j
+1
+(θ,u)
+ 
+ 
+ 
+ 
+ 
+≤K, (21)
+ 
+ 
+ 
+ 
+ 
+p
+X
+j
+1
+,j
+2
+=0
+C
+j
+2
+j
+2
+j
+1
+j
+1
+(s,τ)
+ 
+ 
+ 
+ 
+ 
+≤K, (22)
+ 
+ 
+ 
+ 
+ 
+p
+X
+j
+1
+,j
+2
+=0
+C
+j
+2
+j
+1
+j
+2
+j
+1
+(s,τ)
+ 
+ 
+ 
+ 
+ 
+≤K, (23)
+ 
+ 
+ 
+ 
+ 
+p
+X
+j
+1
+,j
+2
+=0
+C
+j
+1
+j
+2
+j
+2
+j
+1
+(s,τ)
+ 
+ 
+ 
+ 
+ 
+≤K, (24)
+ 
+ 
+ 
+ 
+ 
+p
+X
+j
+1
+,j
+2
+=0
+C
+j
+2
+j
+1
+j
+1
+(s,τ)C
+j
+2
+(θ,u)
+ 
+ 
+ 
+ 
+ 
+≤K, (25)
+ 
+ 
+ 
+ 
+ 
+p
+X
+j
+1
+,j
+2
+=0
+C
+j
+1
+j
+2
+j
+1
+(s,τ)C
+j
+2
+(θ,u)
+ 
+ 
+ 
+ 
+ 
+≤K, (26)
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 135Differential Equations and Control Processes, N. 3, 2025
+ 
+ 
+ 
+ 
+ 
+p
+X
+j
+1
+,j
+2
+=0
+C
+j
+2
+j
+2
+j
+1
+(s,τ)C
+j
+1
+(θ,u)
+ 
+ 
+ 
+ 
+ 
+≤K, (27)
+ 
+ 
+ 
+ 
+ 
+p
+X
+j
+1
+,j
+2
+=0
+C
+j
+1
+j
+1
+(s,τ)C
+j
+2
+j
+2
+(θ,u)
+ 
+ 
+ 
+ 
+ 
+≤K, (28)
+ 
+ 
+ 
+ 
+ 
+p
+X
+j
+1
+,j
+2
+=0
+C
+j
+2
+j
+1
+(s,τ)C
+j
+2
+j
+1
+(θ,u)
+ 
+ 
+ 
+ 
+ 
+≤K, (29)
+ 
+ 
+ 
+ 
+ 
+p
+X
+j
+1
+,j
+2
+=0
+C
+j
+2
+j
+1
+(s,τ)C
+j
+1
+j
+2
+(θ,u)
+ 
+ 
+ 
+ 
+ 
+≤K, (30)
+ 
+ 
+ 
+ 
+ 
+p
+X
+j
+1
+,j
+2
+=0
+C
+j
+1
+(s,τ)C
+j
+1
+(ρ,v)C
+j
+2
+j
+2
+(θ,u)
+ 
+ 
+ 
+ 
+ 
+≤K, (31)
+ 
+ 
+ 
+ 
+ 
+p
+X
+j
+1
+,j
+2
+=0
+C
+j
+1
+(s,τ)C
+j
+2
+(ρ,v)C
+j
+1
+j
+2
+(θ,u)
+ 
+ 
+ 
+ 
+ 
+≤K, (32)
+where p∈N, t≤ τ < s≤ T, t≤ u < θ≤ T, t≤ v < ρ≤ T, constant K does
+not depend on p,s,τ,u,θ,v,ρ (but only on t,T).
+Theequalities(22)–(24)havebeenprovedearlier(seetheproofof(55)–(57)
+in [13]). Let us prove (20), (21), (25)–(32).
+Using Fubini’s Theorem and Parseval’s equality, we get
+ 
+ 
+ 
+ 
+ 
+p
+X
+j
+1
+=0
+C
+j
+1
+j
+1
+(s,τ)
+ 
+ 
+ 
+ 
+ 
+=
+1
+2
+p
+X
+j
+1
+=0
+C
+2
+j
+1
+(s,τ)≤ ≤ 1
+2
+∞
+X
+j
+1
+=0
+C
+2
+j
+1
+(s,τ) =
+1
+2
+(s−τ)≤ ≤ 1
+2
+(T −t)≤K.
+The equality (20) is proved. Moreover, (28) follows from (20).
+Using the inequality of Cauchy–Bunyakovsky and Parseval’s equality, we
+obtain
+ 
+p
+X
+j
+1
+=0
+C
+j
+1
+(s,τ)C
+j
+1
+(θ,u)
+!
+2
+≤ https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 136Differential Equations and Control Processes, N. 3, 2025
+≤ p
+X
+j
+1
+=0
+C
+2
+j
+1
+(s,τ)
+p
+X
+j
+1
+=0
+C
+2
+j
+1
+(θ,u)≤ ≤ ∞
+X
+j
+1
+=0
+C
+2
+j
+1
+(s,τ)
+∞
+X
+j
+1
+=0
+C
+2
+j
+1
+(θ,u) =
+= (s−τ)(θ−u)≤ (T −t)
+2
+≤K
+2
+,
+ 
+p
+X
+j
+1
+,j
+2
+=0
+C
+j
+2
+j
+1
+(s,τ)C
+j
+2
+j
+1
+(θ,u)
+!
+2
+≤ p
+X
+j
+1
+,j
+2
+=0
+C
+2
+j
+2
+j
+1
+(s,τ)
+p
+X
+j
+1
+,j
+2
+=0
+C
+2
+j
+2
+j
+1
+(θ,u)≤ ≤ ∞
+X
+j
+1
+,j
+2
+=0
+C
+2
+j
+2
+j
+1
+(s,τ)
+∞
+X
+j
+1
+,j
+2
+=0
+C
+2
+j
+2
+j
+1
+(θ,u) =
+=
+s
+Z
+τ v
+Z
+τ dxdv
+θ Z
+u
+v
+Z
+u
+dxdv≤ 1
+4
+(T −t)
+4
+≤K
+2
+.
+Thus, the inequalities (21), (29) are proved. The inequalities (30), (32) are
+proved similarly to (29). Moreover, (31) follows from (20), (21).
+Further, let us prove the equalities (25)–(27). Applying the Cauchy–Buny-
+akovsky inequality as well as Parseval’s equality and (20), we have
+ 
+p
+X
+j
+1
+,j
+2
+=0
+C
+j
+2
+j
+1
+j
+1
+(s,τ)C
+j
+2
+(θ,u)
+!
+2
+≤ p
+X
+j
+2
+=0
+ 
+p
+X
+j
+1
+=0
+C
+j
+2
+j
+1
+j
+1
+(s,τ)
+!
+2
+p
+X
+j
+2
+=0
+C
+2
+j
+2
+(θ,u)≤ ≤ ∞
+X
+j
+2
+=0
+ 
+p
+X
+j
+1
+=0
+C
+j
+2
+j
+1
+j
+1
+(s,τ)
+!
+2
+∞
+X
+j
+2
+=0
+C
+2
+j
+2
+(θ,u) =
+=
+∞
+X
+j
+2
+=0
+
+
+s
+Z
+τ ϕ j
+2
+(v)
+p
+X
+j
+1
+=0
+C
+j
+1
+j
+1
+(v,τ)dv
+
+
+2
+·(θ−u) =
+= (θ−u)
+s
+Z
+τ 
+p
+X
+j
+1
+=0
+C
+j
+1
+j
+1
+(v,τ)
+!
+2
+dv≤ ≤K
+2
+(θ−u)(s−τ)≤K
+2
+(T −t)
+2
+=K
+1
+.
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 137Differential Equations and Control Processes, N. 3, 2025
+The equality (25) is proved.
+Using the Cauchy–Bunyakovsky inequality as well as Fubini’s Theorem,
+Parseval’s equality and (21), we obtain
+ 
+p
+X
+j
+1
+,j
+2
+=0
+C
+j
+1
+j
+2
+j
+1
+(s,τ)C
+j
+2
+(θ,u)
+!
+2
+≤ p
+X
+j
+2
+=0
+ 
+p
+X
+j
+1
+=0
+C
+j
+1
+j
+2
+j
+1
+(s,τ)
+!
+2
+p
+X
+j
+2
+=0
+C
+2
+j
+2
+(θ,u)≤ ≤ ∞
+X
+j
+2
+=0
+
+
+p
+X
+j
+1
+=0
+s
+Z
+τ ϕ j
+1
+(z)
+z
+Z
+τ ϕ j
+2
+(y)
+y
+Z
+τ ϕ j
+1
+(x)dxdydz
+
+
+2
+∞
+X
+j
+2
+=0
+C
+2
+j
+2
+(θ,u) =
+=
+∞
+X
+j
+2
+=0
+
+
+p
+X
+j
+1
+=0
+s
+Z
+τ ϕ j
+2
+(y)
+y
+Z
+τ ϕ j
+1
+(x)dx
+s
+Z
+y
+ϕ j
+1
+(z)dzdy
+
+
+2
+·(θ−u) =
+= (θ−u)
+∞
+X
+j
+2
+=0
+
+
+s
+Z
+τ ϕ j
+2
+(y)
+p
+X
+j
+1
+=0
+C
+j
+1
+(y,τ)C
+j
+1
+(s,y)dy
+
+
+2
+=
+= (θ−u)
+s
+Z
+τ 
+p
+X
+j
+1
+=0
+C
+j
+1
+(y,τ)C
+j
+1
+(s,y)
+!
+2
+dy≤ ≤K
+2
+(θ−u)(s−τ)≤K
+2
+(T −t)
+2
+=K
+1
+.
+The equality (26) is proved.
+Using the Cauchy–Bunyakovsky inequality as well as Fubini’s Theorem,
+Parseval’s equality and (20), we get
+ 
+p
+X
+j
+1
+,j
+2
+=0
+C
+j
+2
+j
+2
+j
+1
+(s,τ)C
+j
+1
+(θ,u)
+!
+2
+≤ p
+X
+j
+1
+=0
+ 
+p
+X
+j
+2
+=0
+C
+j
+2
+j
+2
+j
+1
+(s,τ)
+!
+2
+p
+X
+j
+1
+=0
+C
+2
+j
+1
+(θ,u)≤ ≤ ∞
+X
+j
+1
+=0
+
+
+p
+X
+j
+2
+=0
+s
+Z
+τ ϕ j
+2
+(z)
+z
+Z
+τ ϕ j
+2
+(y)
+y
+Z
+τ ϕ j
+1
+(x)dxdydz
+
+
+2
+∞
+X
+j
+1
+=0
+C
+2
+j
+1
+(θ,u) =
+=
+∞
+X
+j
+1
+=0
+
+
+p
+X
+j
+2
+=0
+s
+Z
+τ ϕ j
+1
+(x)
+s
+Z
+x
+ϕ j
+2
+(y)
+s
+Z
+y
+ϕ j
+2
+(z)dzdydx
+
+
+2
+·(θ−u) =
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 138Differential Equations and Control Processes, N. 3, 2025
+= (θ−u)
+∞
+X
+j
+1
+=0
+
+
+p
+X
+j
+2
+=0
+s
+Z
+τ ϕ j
+1
+(x)
+s
+Z
+x
+ϕ j
+2
+(z)
+z
+Z
+x
+ϕ j
+2
+(y)dydzdx
+
+
+2
+=
+= (θ−u)
+∞
+X
+j
+1
+=0
+
+
+s
+Z
+τ ϕ j
+1
+(x)
+p
+X
+j
+2
+=0
+C
+j
+2
+j
+2
+(s,x)dx
+
+
+2
+=
+= (θ−u)
+s
+Z
+τ 
+p
+X
+j
+2
+=0
+C
+j
+2
+j
+2
+(s,x)
+!
+2
+dx≤ ≤K
+2
+(θ−u)(s−τ)≤K
+2
+(T −t)
+2
+=K
+1
+.
+The equality (27) is proved. The equalities (20)–(32) are proved.
+Thus, the condition (13) of Theorem 5 is satisfied under the conditions of
+Theorem 6. The assertion of Theorem 6 now follows from Theorem 5. Theo-
+rem 6 is proved.
+3.2 Expansion of Iterated Stratonovich Stochastic Integrals of Mul-
+tiplicity 5. The Case of an Arbitrary CONS in L
+2
+([t,T]) and
+ψ 1
+(τ),...,ψ 5
+(τ)≡ 1. Proof Based on Theorem 5
+In this section, we will prove the following theorem.
+Theorem 7 [9], [52]–[54]. Suppose that {ϕ j
+(x)}
+∞
+j=0
+is an arbitrary CONS
+in L
+2
+([t,T]). Then, for the iterated Stratonovich stochastic integral of fifth mul-
+tiplicity
+J
+∗ [ψ (5)
+]
+(i
+1
+...i
+5
+)
+T,t
+=
+∗ Z
+t
+T
+...
+∗ Z
+t
+t
+2
+dw
+(i
+1
+)
+t
+1
+...dw
+(i
+5
+)
+t
+5
+the following expansion
+J
+∗ [ψ (5)
+]
+(i
+1
+...i
+5
+)
+T,t
+= l.i.m.
+p→∞
+p
+X
+j
+1
+,...,j
+5
+=0
+C
+j
+5
+...j
+1
+ζ (i
+1
+)
+j
+1
+...ζ (i
+5
+)
+j
+5
+that converges in the mean-square sense is valid, where i
+1
+,...,i
+5
+= 0,1,...,m,
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 139Differential Equations and Control Processes, N. 3, 2025
+C
+j
+5
+...j
+1
+=
+T
+Z
+t
+ϕ j
+5
+(t
+5
+)...
+t
+2
+Z
+t
+ϕ j
+1
+(t
+1
+)dt
+1
+...dt
+5
+, (33)
+and
+ζ (i)
+j
+=
+T
+Z
+t
+ϕ j
+(τ)dw
+(i)
+τ are independent standard Gaussian random variables for various i or j (in the
+case when i̸= 0), w
+(0)
+τ =τ.
+Proof. The following proof will be based on Theorem 5 and verification
+of the equality (13) under the conditions of Theorem 7 (the case k = 5 > 2r,
+where r = 1 or r = 2).
+Further, let C
+j
+k
+...j
+1
+(s,τ) (k = 1,...,4, t ≤ τ < s ≤ T) is defined by (19)
+and C
+j
+5
+...j
+1
+has the form (33).
+Applying the technique that leads to (11), (12) (see [13], Sect. 3.4), we
+obtain (note that we find all possible combinations of pairs using the equality
+(2.681) (see [9]))
+C
+j
+5
+j
+4
+j
+3
+j
+1
+j
+1
+=
+T
+Z
+t
+ϕ j
+5
+(t
+5
+)
+t
+5
+Z
+t
+ϕ j
+4
+(t
+4
+)
+t
+4
+Z
+t
+ϕ j
+3
+(t
+3
+)C
+j
+1
+j
+1
+(t
+3
+,t)dt
+3
+dt
+4
+dt
+5
+,
+C
+j
+5
+j
+4
+j
+1
+j
+2
+j
+1
+=
+=
+T
+Z
+t
+ϕ j
+5
+(t
+5
+)
+t
+5
+Z
+t
+ϕ j
+4
+(t
+4
+)
+t
+4
+Z
+t
+ϕ j
+2
+(t
+2
+)C
+j
+1
+(t
+2
+,t)C
+j
+1
+(t
+4
+,t
+2
+)dt
+2
+dt
+4
+dt
+5
+,
+C
+j
+5
+j
+1
+j
+3
+j
+2
+j
+1
+=
+=
+T
+Z
+t
+ϕ j
+5
+(t
+5
+)
+t
+5
+Z
+t
+ϕ j
+3
+(t
+3
+)
+t
+3
+Z
+t
+ϕ j
+2
+(t
+2
+)C
+j
+1
+(t
+2
+,t)C
+j
+1
+(t
+5
+,t
+3
+)dt
+2
+dt
+3
+dt
+5
+,
+C
+j
+1
+j
+4
+j
+3
+j
+2
+j
+1
+=
+=
+T
+Z
+t
+ϕ j
+4
+(t
+4
+)
+t
+4
+Z
+t
+ϕ j
+3
+(t
+3
+)
+t
+3
+Z
+t
+ϕ j
+2
+(t
+2
+)C
+j
+1
+(t
+2
+,t)C
+j
+1
+(T,t
+4
+)dt
+2
+dt
+3
+dt
+4
+,
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 140Differential Equations and Control Processes, N. 3, 2025
+C
+j
+5
+j
+4
+j
+2
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+5
+(t
+5
+)
+t
+5
+Z
+t
+ϕ j
+4
+(t
+4
+)
+t
+4
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+2
+j
+2
+(t
+4
+,t
+1
+)dt
+1
+dt
+4
+dt
+5
+,
+C
+j
+5
+j
+2
+j
+3
+j
+2
+j
+1
+=
+=
+T
+Z
+t
+ϕ j
+5
+(t
+5
+)
+t
+5
+Z
+t
+ϕ j
+3
+(t
+3
+)
+t
+3
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+2
+(t
+3
+,t
+1
+)C
+j
+2
+(t
+5
+,t
+3
+)dt
+1
+dt
+3
+dt
+5
+,
+C
+j
+2
+j
+4
+j
+3
+j
+2
+j
+1
+=
+=
+T
+Z
+t
+ϕ j
+4
+(t
+4
+)
+t
+4
+Z
+t
+ϕ j
+3
+(t
+3
+)
+t
+3
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+2
+(t
+3
+,t
+1
+)C
+j
+2
+(T,t
+4
+)dt
+1
+dt
+3
+dt
+4
+,
+C
+j
+5
+j
+3
+j
+3
+j
+2
+j
+1
+T
+Z
+t
+ϕ j
+5
+(t
+5
+)
+t
+5
+Z
+t
+ϕ j
+2
+(t
+2
+)
+t
+2
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+3
+j
+3
+(t
+5
+,t
+2
+)dt
+1
+dt
+2
+dt
+5
+,
+C
+j
+3
+j
+4
+j
+3
+j
+2
+j
+1
+=
+=
+T
+Z
+t
+ϕ j
+4
+(t
+4
+)
+t
+4
+Z
+t
+ϕ j
+2
+(t
+2
+)
+t
+2
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+3
+(t
+4
+,t
+2
+)C
+j
+3
+(T,t
+4
+)dt
+1
+dt
+2
+dt
+4
+,
+C
+j
+4
+j
+4
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+3
+(t
+3
+)
+t
+3
+Z
+t
+ϕ j
+2
+(t
+2
+)
+t
+2
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+4
+j
+4
+(T,t
+3
+)dt
+1
+dt
+2
+dt
+3
+,
+C
+j
+5
+j
+3
+j
+3
+j
+1
+j
+1
+=
+T
+Z
+t
+ϕ j
+5
+(t
+5
+)C
+j
+3
+j
+3
+j
+1
+j
+1
+(t
+5
+,t)dt
+5
+,
+C
+j
+5
+j
+2
+j
+1
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+5
+(t
+5
+)C
+j
+2
+j
+1
+j
+2
+j
+1
+(t
+5
+,t)dt
+5
+,
+C
+j
+5
+j
+1
+j
+2
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+5
+(t
+5
+)C
+j
+1
+j
+2
+j
+2
+j
+1
+(t
+5
+,t)dt
+5
+,
+C
+j
+4
+j
+4
+j
+2
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+4
+j
+4
+j
+2
+j
+2
+(T,t
+1
+)dt
+1
+,
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 141Differential Equations and Control Processes, N. 3, 2025
+C
+j
+3
+j
+2
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+3
+j
+2
+j
+3
+j
+2
+(T,t
+1
+)dt
+1
+,
+C
+j
+2
+j
+3
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+1
+(t
+1
+)C
+j
+2
+j
+3
+j
+3
+j
+2
+(T,t
+1
+)dt
+1
+,
+C
+j
+4
+j
+4
+j
+3
+j
+1
+j
+1
+=
+T
+Z
+t
+ϕ j
+3
+(t
+3
+)C
+j
+1
+j
+1
+(t
+3
+,t)C
+j
+4
+j
+4
+(T,t
+3
+)dt
+3
+,
+C
+j
+2
+j
+4
+j
+1
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+4
+(t
+4
+)C
+j
+1
+j
+2
+j
+1
+(t
+4
+,t)C
+j
+2
+(T,t
+4
+)dt
+4
+,
+C
+j
+2
+j
+1
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+3
+(t
+3
+)C
+j
+2
+j
+1
+(t
+3
+,t)C
+j
+2
+j
+1
+(T,t
+3
+)dt
+3
+,
+C
+j
+3
+j
+1
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+2
+(t
+2
+)C
+j
+1
+(t
+2
+,t)C
+j
+3
+j
+1
+j
+3
+(T,t
+2
+)dt
+2
+,
+C
+j
+1
+j
+2
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+3
+(t
+3
+)C
+j
+2
+j
+1
+(t
+3
+,t)C
+j
+1
+j
+2
+(T,t
+3
+)dt
+3
+,
+C
+j
+3
+j
+4
+j
+3
+j
+1
+j
+1
+=
+T
+Z
+t
+ϕ j
+4
+(t
+4
+)C
+j
+3
+j
+1
+j
+1
+(t
+4
+,t)C
+j
+3
+(T,t
+4
+)dt
+4
+,
+C
+j
+4
+j
+4
+j
+1
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+2
+(t
+2
+)C
+j
+1
+(t
+2
+,t)C
+j
+4
+j
+4
+j
+1
+(T,t
+2
+)dt
+2
+,
+C
+j
+1
+j
+4
+j
+2
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+4
+(t
+4
+)C
+j
+2
+j
+2
+j
+1
+(t
+4
+,t)C
+j
+1
+(T,t
+4
+)dt
+4
+,
+C
+j
+1
+j
+3
+j
+3
+j
+2
+j
+1
+=
+T
+Z
+t
+ϕ j
+2
+(t
+2
+)C
+j
+1
+(t
+2
+,t)C
+j
+1
+j
+3
+j
+3
+(T,t
+2
+)dt
+2
+.
+It is easy to see (based on the above relations) that (13) will be satisfied
+(under the conditions of Theorem 7) if (20)–(30) are fulfilled. The equalities
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 142Differential Equations and Control Processes, N. 3, 2025
+(20)–(30) are proved in Sect. 3.1. The assertion of Theorem 7 now follows from
+Theorem 5. Theorem 7 is proved.
+Recall that for the case k = 6, together with (20)–(30), the conditions (31),
+(32), and the equality (17) (k = 2r, k = 6, r = 3) must be satisfied (see the
+proof of Theorem 6).
+3.3 Partial Proof of the Condition (13)
+Let g
+1
+,g
+2
+,...,g
+2r−1
+,g
+2r
+as in the formula (10). Suppose that∀{g
+2l−1
+,g
+2l
+} (l =
+1,...,r)∃ h∈{1,...,f} such that
+{g
+2l−1
+,g
+2l
+}⊂{d
+h
+−e
+h
++1,...,d
+h
+−1,d
+h
+}. (34)
+Moreover,∀h∈{1,...,f}∃{g
+2l−1
+,g
+2l
+}(l = 1,...,r)suchthat(34)isfulfilled.
+Furthermore, assume that g
+2l
+= g
+2l−1
++ 1 ∀ l = 1,...,r. Here d
+h
+,e
+h
+(h =
+1,...,f) are defined in Sect. 2.3.
+Suppose that{ϕ j
+(x)}
+∞
+j=0
+is an arbitrary CONS in L
+2
+([t,T]) and ψ 1
+(τ),...,
+ψ k
+(τ)≡ 1.
+In this section, we will prove (13) under the above conditions. It is easy to
+see that (13) will be proved for this case if we prove that
+ 
+ 
+ 
+ 
+ 
+ 
+p
+X
+j
+r
+,j
+r−2
+,...,j
+2
+=0
+C
+j
+r
+j
+r
+j
+r−2
+j
+r−2
+...j
+2
+j
+2
+(s,τ)
+ 
+ 
+ 
+ 
+ 
+ 
+≤K <∞, (35)
+where p∈ N, r = 2,4,6,..., constant K does not depend on p,s,τ (but only
+on t,T),
+C
+j
+k
+...j
+1
+(s,τ) =
+s
+Z
+τ ϕ j
+k
+(t
+k
+)...
+t
+2
+Z
+τ ϕ j
+1
+(t
+1
+)dt
+1
+...dt
+k
+,
+where k∈N, t≤τ <s≤T.
+Using the equality (139) [12], we obtain
+C
+j
+r
+j
+r
+j
+r−2
+j
+r−2
+...j
+2
+j
+2
+(s,τ)+C
+j
+2
+j
+2
+...j
+r−2
+j
+r−2
+j
+r
+j
+r
+(s,τ) =
+=C
+j
+r
+(s,τ)·C
+j
+r
+j
+r−2
+j
+r−2
+...j
+4
+j
+4
+j
+2
+j
+2
+(s,τ)−C
+j
+r
+j
+r
+(s,τ)·C
+j
+r−2
+j
+r−2
+...j
+4
+j
+4
+j
+2
+j
+2
+(s,τ)+
++C
+j
+r−2
+j
+r
+j
+r
+(s,τ)·C
+j
+r−2
+j
+r−4
+j
+r−4
+...j
+4
+j
+4
+j
+2
+j
+2
+(s,τ)−...
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 143Differential Equations and Control Processes, N. 3, 2025
+−C
+j
+4
+j
+4
+...j
+r−2
+j
+r−2
+j
+r
+j
+r
+(s,τ)·C
+j
+2
+j
+2
+(s,τ)+C
+j
+2
+j
+4
+j
+4
+...j
+r−2
+j
+r−2
+j
+r
+j
+r
+(s,τ)·C
+j
+2
+(s,τ). (36)
+Applying (36), we get
+2
+p
+X
+j
+r
+,j
+r−2
+,...,j
+4
+,j
+2
+=0
+C
+j
+r
+j
+r
+j
+r−2
+j
+r−2
+...j
+4
+j
+4
+j
+2
+j
+2
+(s,τ) =
+=
+p
+X
+j
+r
+=0
+C
+j
+r
+(s,τ)
+p
+X
+j
+r−2
+,...,j
+4
+,j
+2
+=0
+C
+j
+r
+j
+r−2
+j
+r−2
+...j
+4
+j
+4
+j
+2
+j
+2
+(s,τ)− − p
+X
+j
+r
+=0
+C
+j
+r
+j
+r
+(s,τ)
+p
+X
+j
+r−2
+,...,j
+4
+,j
+2
+=0
+C
+j
+r−2
+j
+r−2
+...j
+4
+j
+4
+j
+2
+j
+2
+(s,τ)+
++
+p
+X
+j
+r−2
+=0
+p
+X
+j
+r
+=0
+C
+j
+r−2
+j
+r
+j
+r
+(s,τ)
+p
+X
+j
+r−4
+,...,j
+4
+,j
+2
+=0
+C
+j
+r−2
+j
+r−4
+j
+r−4
+...j
+4
+j
+4
+j
+2
+j
+2
+(s,τ)−...
+− p
+X
+j
+r
+,j
+r−2
+,...,j
+4
+=0
+C
+j
+4
+j
+4
+...j
+r−2
+j
+r−2
+j
+r
+j
+r
+(s,τ)
+p
+X
+j
+2
+=0
+C
+j
+2
+j
+2
+(s,τ)+
++
+p
+X
+j
+2
+=0
+p
+X
+j
+r
+,j
+r−2
+,...,j
+4
+=0
+C
+j
+2
+j
+4
+j
+4
+...j
+r−2
+j
+r−2
+j
+r
+j
+r
+(s,τ)·C
+j
+2
+(s,τ). (37)
+Let us prove (35) by induction. The equality (35) is proved for r = 2,4
+(see the equalities (53), (55) from [13] (recall that C
+j
+1
+j
+1
+(s,τ) =
+1
+2
+(C
+j
+1
+(s,τ))
+2
+)).
+Suppose that
+ 
+ 
+ 
+ 
+ 
+p
+X
+j
+6
+,j
+4
+,j
+2
+=0
+C
+j
+6
+j
+6
+j
+4
+j
+4
+j
+2
+j
+2
+(s,τ)
+ 
+ 
+ 
+ 
+ 
+≤K <∞, (38)
+ 
+ 
+ 
+ 
+ 
+p
+X
+j
+8
+,j
+6
+,j
+4
+,j
+2
+=0
+C
+j
+8
+j
+8
+j
+6
+j
+6
+j
+4
+j
+4
+j
+2
+j
+2
+(s,τ)
+ 
+ 
+ 
+ 
+ 
+≤K <∞, (39)
+...
+ 
+ 
+ 
+ 
+ 
+ 
+p
+X
+j
+r−2
+,j
+r−4
+,...,j
+2
+=0
+C
+j
+r−2
+j
+r−2
+j
+r−4
+j
+r−4
+...j
+2
+j
+2
+(s,τ)
+ 
+ 
+ 
+ 
+ 
+ 
+≤K <∞ (40)
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 144Differential Equations and Control Processes, N. 3, 2025
+and prove (35).
+Using the induction hypothesis (see (38)–(40)), we obtain
+ 
+ 
+ 
+ 
+ 
+ 
+p
+X
+j
+r
+=0
+C
+j
+r
+j
+r
+(s,τ)
+p
+X
+j
+r−2
+,...,j
+4
+,j
+2
+=0
+C
+j
+r−2
+j
+r−2
+...j
+4
+j
+4
+j
+2
+j
+2
+(s,τ)
+ 
+ 
+ 
+ 
+ 
+ 
+≤K
+2
+<∞, (41)
+ 
+ 
+ 
+ 
+ 
+ 
+p
+X
+j
+r
+,j
+r−2
+=0
+C
+j
+r−2
+j
+r−2
+j
+r
+j
+r
+(s,τ)
+p
+X
+j
+r−4
+,...,j
+4
+,j
+2
+=0
+C
+j
+r−4
+j
+r−4
+...j
+4
+j
+4
+j
+2
+j
+2
+(s,τ)
+ 
+ 
+ 
+ 
+ 
+ 
+≤K
+2
+<∞, (42)
+...
+ 
+ 
+ 
+ 
+ 
+ 
+p
+X
+j
+r
+,j
+r−2
+,...,j
+4
+=0
+C
+j
+4
+j
+4
+...j
+r−2
+j
+r−2
+j
+r
+j
+r
+(s,τ)
+p
+X
+j
+2
+=0
+C
+j
+2
+j
+2
+(s,τ)
+ 
+ 
+ 
+ 
+ 
+ 
+≤K
+2
+<∞. (43)
+Applying the inequality of Cauchy–Bunyakovsky, Parseval’s equality and
+the induction hypothesis, we obtain
+
+
+p
+X
+j
+r
+=0
+C
+j
+r
+(s,τ)
+p
+X
+j
+r−2
+,...,j
+4
+,j
+2
+=0
+C
+j
+r
+j
+r−2
+j
+r−2
+...j
+4
+j
+4
+j
+2
+j
+2
+(s,τ)
+
+
+2
+≤ ≤ p
+X
+j
+r
+=0
+(C
+j
+r
+(s,τ))
+2
+p
+X
+j
+r
+=0
+
+
+p
+X
+j
+r−2
+,...,j
+4
+,j
+2
+=0
+C
+j
+r
+j
+r−2
+j
+r−2
+...j
+4
+j
+4
+j
+2
+j
+2
+(s,τ)
+
+
+2
+≤ ≤ ∞
+X
+j
+r
+=0
+(C
+j
+r
+(s,τ))
+2
+∞
+X
+j
+r
+=0
+
+
+p
+X
+j
+r−2
+,...,j
+4
+,j
+2
+=0
+C
+j
+r
+j
+r−2
+j
+r−2
+...j
+4
+j
+4
+j
+2
+j
+2
+(s,τ)
+
+
+2
+≤ ≤K
+1
+∞
+X
+j
+r
+=0
+
+
+p
+X
+j
+r−2
+,...,j
+4
+,j
+2
+=0
+C
+j
+r
+j
+r−2
+j
+r−2
+...j
+4
+j
+4
+j
+2
+j
+2
+(s,τ)
+
+
+2
+=
+=K
+1
+∞
+X
+j
+r
+=0
+
+
+s
+Z
+τ ϕ j
+r
+(u)
+p
+X
+j
+r−2
+,...,j
+4
+,j
+2
+=0
+C
+j
+r−2
+j
+r−2
+...j
+4
+j
+4
+j
+2
+j
+2
+(u,τ)du
+
+
+2
+=
+=K
+1
+s
+Z
+τ 
+
+p
+X
+j
+r−2
+,...,j
+4
+,j
+2
+=0
+C
+j
+r−2
+j
+r−2
+...j
+4
+j
+4
+j
+2
+j
+2
+(u,τ)
+
+
+2
+du≤ https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 145Differential Equations and Control Processes, N. 3, 2025
+≤K
+1
+K
+2
+s
+Z
+τ du≤ (T −t)K
+1
+K
+2
+=K
+2
+<∞, (44)
+
+
+p
+X
+j
+r−2
+=0
+p
+X
+j
+r
+=0
+C
+j
+r−2
+j
+r
+j
+r
+(s,τ)
+p
+X
+j
+r−4
+,...,j
+4
+,j
+2
+=0
+C
+j
+r−2
+j
+r−4
+j
+r−4
+...j
+4
+j
+4
+j
+2
+j
+2
+(s,τ)
+
+
+2
+≤ ≤ p
+X
+j
+r−2
+=0
+ 
+p
+X
+j
+r
+=0
+C
+j
+r−2
+j
+r
+j
+r
+(s,τ)
+!
+2
+p
+X
+j
+r−2
+=0
+
+
+p
+X
+j
+r−4
+,...,j
+4
+,j
+2
+=0
+C
+j
+r−2
+j
+r−4
+j
+r−4
+...j
+4
+j
+4
+j
+2
+j
+2
+(s,τ)
+
+
+2
+≤ ≤ ∞
+X
+j
+r−2
+=0
+ 
+p
+X
+j
+r
+=0
+C
+j
+r−2
+j
+r
+j
+r
+(s,τ)
+!
+2
+∞
+X
+j
+r−2
+=0
+
+
+p
+X
+j
+r−4
+,...,j
+4
+,j
+2
+=0
+C
+j
+r−2
+j
+r−4
+j
+r−4
+...j
+4
+j
+4
+j
+2
+j
+2
+(s,τ)
+
+
+2
+=
+=
+∞
+X
+j
+r−2
+=0
+
+
+s
+Z
+τ ϕ j
+r−2
+(u)
+p
+X
+j
+r
+=0
+C
+j
+r
+j
+r
+(u,τ)du
+
+
+2
+× × ∞
+X
+j
+r−2
+=0
+
+
+s
+Z
+τ ϕ j
+r−2
+(u)
+p
+X
+j
+r−4
+,...,j
+4
+,j
+2
+=0
+C
+j
+r−4
+j
+r−4
+...j
+4
+j
+4
+j
+2
+j
+2
+(u,τ)du
+
+
+2
+=
+=
+s
+Z
+τ 
+p
+X
+j
+r
+=0
+C
+j
+r
+j
+r
+(u,τ)
+!
+2
+du× × s
+Z
+τ 
+
+p
+X
+j
+r−4
+,...,j
+4
+,j
+2
+=0
+C
+j
+r−4
+j
+r−4
+...j
+4
+j
+4
+j
+2
+j
+2
+(u,τ)
+
+
+2
+du≤K
+4
+(T −t)
+2
+=K
+3
+<∞, (45)
+where constants K
+2
+,K
+3
+do not depend on p,s,τ (but only on t,T).
+Similarly, we get
+
+
+p
+X
+j
+r−4
+=0
+p
+X
+j
+r
+,j
+r−2
+=0
+C
+j
+r−4
+j
+r−2
+j
+r−2
+j
+r
+j
+r
+(s,τ)
+p
+X
+j
+r−6
+,...,j
+4
+,j
+2
+=0
+C
+j
+r−4
+j
+r−6
+j
+r−6
+...j
+4
+j
+4
+j
+2
+j
+2
+(s,τ)
+
+
+2
+≤ ≤K
+4
+<∞, (46)
+...
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 146Differential Equations and Control Processes, N. 3, 2025
+
+
+p
+X
+j
+4
+=0
+p
+X
+j
+r
+,j
+r−2
+,...,j
+6
+=0
+C
+j
+4
+j
+6
+j
+6
+...j
+r−2
+j
+r−2
+j
+r
+j
+r
+(s,τ)
+p
+X
+j
+2
+=0
+C
+j
+4
+j
+2
+j
+2
+(s,τ)
+
+
+2
+≤K
+4
+<∞, (47)
+
+
+p
+X
+j
+2
+=0
+p
+X
+j
+r
+,j
+r−2
+,...,j
+4
+=0
+C
+j
+2
+j
+4
+j
+4
+...j
+r−2
+j
+r−2
+j
+r
+j
+r
+(s,τ)·C
+j
+2
+(s,τ)
+
+
+2
+≤K
+4
+<∞, (48)
+where constant K
+4
+does not depend on p,s,τ (but only on t,T).
+Combining(37),(41)–(43),(44),(45),(46)–(48),weobtain(35). Theequal-
+ity (13) is proved under the conditions formulated at the beginning of this
+section.
+Acknowledgement. I would like to thank Dr. Konstantin A. Rybakov
+for useful discussion of some presented results.
+References
+[1] Gihman, I.I., Skorohod, A.V. Stochastic Differential Equations and its
+Applications. Kiev, Naukova Dumka, 1982, 612 pp.
+[2] Kloeden, P.E., Platen, E. Numerical Solution of Stochastic Differential
+Equations. Berlin, Springer, 1992, 632 pp.
+[3] Milstein, G.N., Tretyakov M.V. Stochastic Numerics for Mathematical
+Physics. Berlin, Springer, 2004, 616 pp.
+[4] Kloeden,P.E.,Platen,E.,Schurz,H.NumericalSolutionofSDEThrough
+Computer Experiments. Berlin, Springer, 1994, 292 pp.
+[5] Kloeden, P.E., Platen, E. The Stratonovich and Ito-Taylor expansions.
+Math. Nachr. 151 (1991), 33-50.
+[6] Averina, T.A. Statistical Modeling of Solutions of Stochastic Differential
+Equations and Systems with Random Structure. Siberian Branch of the
+Russian Academy of Sciences, Novosibirsk, 2019, 350 pp.
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 147Differential Equations and Control Processes, N. 3, 2025
+[7] Kuznetsov, D.F. New representations of the Taylor–Stratonovich expan-
+sion. J. Math. Sci. (N. Y.), 118, 6 (2003), 5586-5596.
+DOI: http://doi.org/10.1023/A:1026138522239
+[8] Kuznetsov, D.F. Four new forms of the Taylor–Ito and Taylor–Strato-
+novich expansions and its application to the high-order strong numeri-
+cal methods for Ito stochastic differential equations. arXiv:2001.10192v11
+[math.PR]. 2025, 95 pp. DOI: http://doi.org/10.48550/arXiv.2001.10192
+[9] Kuznetsov D.F. Strong Approximation of Iterated Ito and Stratonovich
+Stochastic Integrals Based on Generalized Multiple Fourier Series. Ap-
+plication to Numerical Solution of Ito SDEs and Semilinear SPDEs.
+arXiv:2003.14184v67 [math.PR], 2025, 1221 pp.
+DOI: http://doi.org/10.48550/arXiv.2003.14184
+[10] Kuznetsov, D.F. A new approach to the series expansion of iterated Stra-
+tonovichstochasticintegralsofarbitrarymultiplicitywithrespecttocom-
+ponents of the multidimensional Wiener process. [In English]. Differen-
+cialnie Uravnenia i Protsesy Upravlenia, 2 (2022), 83-186. Available at:
+http://diffjournal.spbu.ru/EN/numbers/2022.2/article.1.6.html
+[11] Kuznetsov, D.F. A new approach to the series expansion of iterated
+Stratonovich stochastic integrals of arbitrary multiplicity with respect to
+components of the multidimensional Wiener process. II. [In English]. Dif-
+ferencialnieUravneniaiProtsesyUpravlenia, 4(2022), 135-194.Available
+at: http://diffjournal.spbu.ru/EN/numbers/2022.4/article.1.9.html
+[12] Kuznetsov, D.F. A new approach to the series expansion of itera-
+ted Stratonovich stochastic integrals with respect to components of
+the multidimensional Wiener process. The case of arbitrary com-
+plete orthonormal systems in Hilbert space. [In English]. Differencial-
+nie Uravnenia i Protsesy Upravlenia, 2 (2024), 73–170. Available at:
+http://diffjournal.spbu.ru/EN/numbers/2024.2/article.1.6.html
+[13] Kuznetsov, D.F. A new approach to the series expansion of iterated
+Stratonovichstochasticintegralswithrespecttocomponentsofthemulti-
+dimensional Wiener process. The case of arbitrary complete orthonormal
+systems in Hilbert space. II [In English]. Differencialnie Uravnenia i Prot-
+sesy Upravlenia, 4 (2024), 104–190. Available at:
+http://diffjournal.spbu.ru/EN/numbers/2024.4/article.1.6.html
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 148Differential Equations and Control Processes, N. 3, 2025
+[14] Milstein,G.N.NumericalIntegrationofStochasticDifferentialEquations.
+Sverdlovsk, Ural University Press, 1988, 225 pp.
+[15] Kuznetsov, D.F. Numerical Integration of Stochastic Differential Equa-
+tions. 2. [In Russian]. Polytechnical University Publishing House, Saint-
+Petersburg. 2006, 764 pp.
+DOI: http://doi.org/10.18720/SPBPU/2/s17-227
+[16] Kuznetsov, D.F. Stochastic Differential Equations: Theory and Practice
+ofNumericalSolution.WithMatLabPrograms,3rdEdition.[InRussian].
+Polytechnical University Publishing House, Saint-Petersburg. 2009, 768
+pp. DOI: http://doi.org/10.18720/SPBPU/2/s17-230
+[17] Kuznetsov, D.F. Stochastic Differential Equations: Theory and Prac-
+tice of Numerical Solution. With MATLAB Programs, 6th Edition. [In
+Russian]. Differencialnie Uravnenia i Protsesy Upravlenia, 4 (2018), A.1-
+A.1073. Available at:
+http://diffjournal.spbu.ru/EN/numbers/2018.4/article.2.1.html
+[18] Allen, E. Approximation of triple stochastic integrals through region sub-
+division. Commun. Appl. Anal. (Special Tribute Issue to Professor V.
+Lakshmikantham), 17 (2013), 355-366.
+[19] Li, C.W., Liu, X.Q. Approximation of multiple stochastic integrals and
+itsapplicationtostochasticdifferentialequations.NonlinearAnal.Theor.
+Meth. Appl., 30, 2 (1997), 697-708.
+[20] Tang, X., Xiao, A. Asymptotically optimal approximation of some stoch-
+astic integrals and its applications to the strong second-order methods.
+Adv. Comp. Math., 45 (2019), 813-846.
+[21] Gaines, J.G., Lyons, T.J. Random generation of stochastic area integrals.
+SIAM J. Appl. Math., 54 (1994), 1132-1146.
+[22] Wiktorsson, M. Joint characteristic function and simultaneous simulation
+of iterated Ito integrals for multiple independent Brownian motions. Ann.
+Appl. Prob., 11, 2 (2001), 470-487.
+[23] Ryden, T., Wiktorsson, M. On the simulation of iterated Ito integrals.
+Stoch. Proc. and their Appl., 91, 1 (2001), 151-168.
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 149Differential Equations and Control Processes, N. 3, 2025
+[24] Averina,T.A.,Prigarin,S.M.CalculationofstochasticintegralsofWiener
+processes. [In Russian]. Preprint 1048. Novosibirsk, Inst. Comp. Math.
+Math. Geophys. Siberian Branch Russ. Acad. Sci., 1995, 15 pp.
+[25] Prigarin,S.M.,Belov,S.M.OneapplicationofseriesexpansionsofWiener
+process. [In Russian]. Preprint 1107. Novosibirsk, Inst. Comp. Math.
+Math. Geophys. Siberian Branch Russ. Acad. Sci., 1998, 16 pp.
+[26] Kloeden, P.E., Platen, E., Wright, I.W. The approximation of multiple
+stochastic integrals. Stoch. Anal. Appl., 10, 4 (1992), 431-441.
+[27] Rybakov, K. Spectral representations of iterated stochastic integrals and
+their application for modeling nonlinear stochastic dynamics. Mathemat-
+ics, 11, 19 (2023), 4047. DOI: http://doi.org/10.3390/math11194047
+[28] Rybakov, K.A. Using spectral form of mathematical description to repre-
+sentStratonovichiteratedstochasticintegrals.SmartInnovation,Systems
+and Technologies, vol. 217. Springer, 2021, pp. 287-304.
+DOI: http://doi.org/10.1007/978-981-33-4826-4 20
+[29] Rybakov, K.A. Using spectral form of mathematical description to rep-
+resent Ito iterated stochastic integrals. Smart Innovation, Systems and
+Technologies, vol. 274. Springer, 2022, pp. 331-344.
+DOI: http://doi.org/10.1007/978-981-16-8926-0 22
+[30] Kuznetsov, D.F. Approximation of iterated Ito stochastic integrals of the
+second multiplicity based on the Wiener process expansion using Legen-
+dre polynomials and trigonometric functions. [In Russian]. Differencialnie
+Uravnenia i Protsesy Upravlenia, 4 (2019), 32-52. Available at:
+http://diffjournal.spbu.ru/EN/numbers/2019.4/article.1.2.html
+[31] Foster, J., Habermann, K. Brownian bridge expansions for L´ evy area ap-
+proximationsandparticularvaluesoftheRiemannzetafunction.Combin.
+Prob. Comp. (2022), 1-28.
+DOI: http://doi.org/10.1017/S096354832200030X
+[32] Kastner, F., R¨ oßler, A. An analysis of approximation algorithms for iter-
+ated stochastic integrals and a Julia and MATLAB simulation toolbox.
+arXiv:2201.08424v2 [math.NA], 2023, 43 pp.
+DOI: http://doi.org/10.48550/arXiv.2201.08424
+[33] Malham,S.J.A.,WieseA.Efficientalmost-exactL´ evyareasampling.Stat.
+Prob. Letters, 88 (2014), 50-55.
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 150Differential Equations and Control Processes, N. 3, 2025
+[34] Stump, D.M., Hill J.M. On an infinite integral arising in the numerical
+integration of stochastic differential equations. Proc. Royal Soc. Series A.
+Math. Phys. Eng. Sci. 461, 2054 (2005), 397-413.
+[35] Platen, E., Bruti-Liberati, N. Numerical Solution of Stochastic Differen-
+tial Equations with Jumps in Finance. Springer, Berlin, Heidelberg. 2010,
+868 pp.
+[36] Rybakov, K.A. Orthogonal expansion of multiple Itˆ o stochastic integrals.
+Differencialnie Uravnenia i Protsesy Upravlenia, 3 (2021), 109-140. Avail-
+able at: http://diffjournal.spbu.ru/EN/numbers/2021.3/article.1.8.html
+[37] Rybakov, K.A. Orthogonal expansion of multiple Stratonovich stochastic
+integrals. Differencialnie Uravnenia i Protsesy Upravlenia, 4 (2021), 81–
+115. Available at:
+http://diffjournal.spbu.ru/EN/numbers/2021.4/article.1.5.html
+[38] Kuznetsov,D.F.ExpansionofiteratedItostochasticintegralsofarbitrary
+multiplicity based on generalized multiple Fourier series converging in the
+mean. arXiv:1712.09746v31 [math.PR]. 2023, 145 pp.
+DOI: http://doi.org/10.48550/arXiv.1712.09746
+[39] Kuznetsov, D.F. A new proof of the expansion of iterated Itˆ o stochastic
+integrals with respect to the components of a multidimensional Wiener
+process based on generalized multiple Fourier series and Hermite poly-
+nomials. [In English]. Differencialnie Uravnenia i Protsesy Upravlenia, 4
+(2023), 67–124. Available at:
+http://diffjournal.spbu.ru/EN/numbers/2023.4/article.1.5.html
+[40] Kuznetsov, D.F. Multiple Ito and Stratonovich Stochastic Integrals: Ap-
+proximations, Properties, Formulas. Polytechnical University Publishing
+House, Saint-Petersburg. 2013, 382 pp.
+DOI: http://doi.org/10.18720/SPBPU/2/s17-234
+[41] Kuznetsov, D.F. Development and application of the Fourier method
+for the numerical solution of Ito stochastic differential equations. Comp.
+Math. Math. Phys., 58, 7 (2018), 1058-1070.
+DOI: http://doi.org/10.1134/S0965542518070096
+[42] Kuznetsov,D.F.Onnumericalmodelingofthemultidimensionaldynamic
+systemsunderrandomperturbationswiththe1.5and2.0ordersofstrong
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 151Differential Equations and Control Processes, N. 3, 2025
+convergence. Autom. Remote Control, 79, 7 (2018), 1240-1254.
+DOI: http://doi.org/10.1134/S0005117918070056
+[43] Kuznetsov,D.F.Onnumericalmodelingofthemultidimensionaldynamic
+systems under random perturbations with the 2.5 order of strong conver-
+gence. Autom. Remote Control, 80, 5 (2019), 867-881.
+DOI: http://doi.org/10.1134/S0005117919050060
+[44] Kuznetsov,D.F.Explicitone-stepmumericalmethodwiththestrongcon-
+vergence order of 2.5 for Ito stochastic differential equations with a multi-
+dimensional nonadditive noise based on the Taylor–Stratonovich expan-
+sion. Comp. Math. Math. Phys., 60, 3 (2020), 379-389.
+DOI: http://doi.org/10.1134/S0965542520030100
+[45] Kuznetsov,D.F.AcomparativeanalysisofefficiencyofusingtheLegendre
+polynomials and trigonometric functions for the numerical solution of Ito
+stochastic differential equations. [In English]. Comp. Math. Math. Phys.,
+59,8(2019),1236-1250.DOI:http://doi.org/10.1134/S0965542519080116
+[46] Kuznetsov, D.F. Application of the method of approximation of iterated
+stochastic Itˆ o integrals based on generalized multiple Fourier series to
+the high-order strong numerical methods for non-commutative semilinear
+stochasticpartialdifferentialequations.[InEnglish].DifferencialnieUrav-
+nenia i Protsesy Upravlenia, 3 (2019), 18-62. Available at:
+http://diffjournal.spbu.ru/EN/numbers/2019.3/article.1.2.html
+[47] Kuznetsov,D.F.ApplicationofmultipleFourier–Legendreseriestostrong
+exponential Milstein and Wagner–Platen methods for non-commutative
+semilinear stochastic partial differential equations. [In English]. Differen-
+cialnie Uravnenia i Protsesy Upravlenia, 3 (2020), 129-162. Available at:
+http://diffjournal.spbu.ru/EN/numbers/2020.3/article.1.6.html
+[48] Kuznetsov, D.F., Kuznetsov, M.D. Mean-square approximation of iter-
+ated stochastic integrals from strong exponential Milstein and Wagner–
+Platen methods for non-commutative semilinear SPDEs based on multi-
+ple Fourier–Legendre series. Recent Developments in Stochastic Methods
+and Applications. ICSM-5 2020. Springer Proceedings in Mathematics &
+Statistics, vol. 371, Eds. Shiryaev, A.N., Samouylov, K.E., Kozyrev, D.V.
+Springer, Cham, 2021, pp. 17-32.
+DOI: http://doi.org/10.1007/978-3-030-83266-7 2
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 152Differential Equations and Control Processes, N. 3, 2025
+[49] Kuznetsov, D.F. Expansion of iterated Stratonovich stochastic integrals
+based on generalized multiple Fourier series. Ufa Math. J., 11, 4 (2019),
+49-77. DOI: http://doi.org/10.13108/2019-11-4-49
+[50] Kuznetsov, D.F. Mean-Square Approximation of Iterated Itˆ o and
+Stratonovich Stochastic Integrals Based on Generalized Multiple Fourier
+Series. Application to Numerical Integration of Itˆ o SDEs and Semilinear
+SPDEs (Third Edition). [In English]. Differencialnie Uravnenia i Protsesy
+Upravlenia, 1 (2023), A.1-A.947. Available at:
+http://diffjournal.spbu.ru/EN/numbers/2023.1/article.1.10.html
+[51] Kuznetsov, D.F. A method of expansion and approximation of repeated
+stochastic Stratonovich integrals based on multiple Fourier series on full
+orthonormal systems. [In Russian]. Differencialnie Uravnenia i Protsesy
+Upravlenia, 1 (1997), 18-77. Available at:
+http://diffjournal.spbu.ru/EN/numbers/1997.1/article.1.2.html
+[52] Kuznetsov, D.F. The hypotheses on expansions of iterated Stratonovich
+stochastic integrals of arbitrary multiplicity and their partial proof.
+arXiv:1801.03195v40 [math.PR]. 2025, 318 pp.
+DOI: http://doi.org/10.48550/arXiv.1801.03195
+[53] Kuznetsov, D.F. Expansions of iterated Stratonovich stochastic integrals
+based on generalized multiple Fourier series: multiplicities 1 to 8 and
+beyond. arXiv:1712.09516v45 [math.PR]. 2025, 392 pp.
+DOI: http://doi.org/10.48550/arXiv.1712.09516
+[54] Kuznetsov,D.F.ExpansionofiteratedStratonovichstochasticintegralsof
+fifth,sixth,seventhandeighthmultiplicitiesbasedongeneralizedmultiple
+Fourier series. arXiv:1802.00643v35 [math.PR]. 2025, 304 pp.
+DOI: http://doi.org/10.48550/arXiv.1802.00643
+[55] Rybakov, K.A. On the orthogonal expansion of the iterated Stratonovich
+stochasticintegrals.VestnikDSU.Series1.Naturalsciences, 37, 2(2022),
+27-32. DOI: http://doi.org/10.21779/2542-0321-2022-37-2-27-32
+[56] Rybakov, K. On traces of linear operators with symmetrized Volterra–
+type kernels. Symmetry, 15, 1821 (2023), 1-18.
+DOI: http://doi.org/10.3390/sym15101821
+https://doi.org/10.21638/11701/spbu35.2025.308 Electronic Journal: http://diffjournal.spbu.ru/ 153
