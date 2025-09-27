@@ -236,6 +236,127 @@
             <author ref="n_2025_9_kudryashova" sort-key="5" />
         </authors>
     </article>
+
+    <article>
+        <articleInfo lang="EN" FirstPage="41" LastPage="61">
+            <pdf>25304-jdecp-tsykunov.pdf</pdf>
+            <abstract>The problem of determining the physical properties of a porous medium based on filtration experiments is considered. A two-component model of
+                capillary imbibition in a medium with double porosity is used in the form of a system of three differential equations, which contains 10 free
+                parameters. Optimization algorithms are used to automate their determination based on a series of three experiments. The model's compliance
+                with each experiment is an objective function, so the problem of multicriteria optimization is considered. The following metaheuristic algorithms
+                were selected for testing: NSGA-II, NSGA-III, SMPSO, OMOPSO, MOEA/D. For each algorithm, Bayesian meta-optimization of hyperparameters was performed
+                for 5 test functions: DTLZ1, DTLZ2, MW8, WFG1, WFG2. It was determined that the most effective algorithms in terms of accuracy and computational
+                time are SMPSO and NSGA-III. SMPSO is more efficient in problems with greater computational complexity, and NSGA-III is more efficient in simple
+                problems. To obtain an efficient optimization method in all test functions, a hybrid algorithm was created. Various hybridization methods were tested,
+                the best option was processor/postprocessor hybridization, where SMPSO is initiated first, after which the population is transferred to NSGA-III. To
+                improve the hybrid algorithm, the K-means clustering method was used to select the most promising particle clusters from the SMPSO population in order
+                to transfer them to NSGA-III. An adaptive algorithm stopping criterion was also introduced based on tracking the dynamics of changes in the metrics of
+                the obtained solutions - H-value and Spacing. Comparison of the obtained algorithm with swarm and genetic algorithms showed that the proposed algorithm
+                finds a combination of free parameters with a smaller discrepancy between the model and the experiment for the same number of iterations.</abstract>
+            <title>Development of a Hybrid Algorithm for Multi-criteria Optimization for Restoring the Properties of a Porous Medium from Filtration Experiments</title>
+            <keywords>
+                <word>capillary imbibition model</word>
+                <word>genetic algorithm</word>
+                <word>meta-optimization</word>
+                <word>multicriteria optimization</word>
+                <word>NSGA-III</word>
+                <word>particle swarm optimization</word>
+                <word>SMPSO</word>
+            </keywords>
+            <references>
+                <reference>Methodological recommendations for determining the calculation parameters of oil and gas deposits based on the materials of geophysical well surveys using the results of core analysis, sampling and testing of productive formations / edited by B. Yu. Vendelshtein, V. F. Kozyar, G. G. Yatsenko. - Kalinin: NPO Soyuzpromgeofizika, 1990. - 261 p</reference>
+                <reference>Tsykunov O. I. Mathematical model of filtration taking into account capillary forces in a multipore medium / O. I. Tsykunov // International Journal of Open Information Technologies. - 2024. - Т. 12, № 10. - С. 45-55. - EDN NGFAIN</reference>
+                <reference>Cai, J., Perfect, E., Cheng, C. -L., &amp;amp; Hu, X. (2014). Generalized Modeling of Spontaneous Imbibition Based on Hagen-Poiseuille Flow in Tortuous Capillaries with Variably Shaped Apertures. In Langmuir (Vol. 30, Issue 18, pp. 5142-5151). American Chemical Society (ACS)</reference>
+                <reference>Tang, G. -Q., &amp;amp; Firoozabadi, A. (2001). Effect of Pressure Gradient and Initial Water Saturation on Water Injection in Water-Wet and Mixed-Wet Fractured Porous Media. In SPE Reservoir Evaluation &amp;amp; amp; Engineering (Vol. 4, Issue 06, pp. 516-524). Society of Petroleum Engineers (SPE)</reference>
+                <reference>Karpenko A. P. Modern algorithms of search engine optimization. Algorithms inspired by nature / A. P. Karpenko. - Moscow: Bauman Moscow State Technical University, 2017. - 446 p</reference>
+                <reference>O’Mahony, C., &amp;amp; Wilson, N. (2012). Sorted Pareto Dominance: An Extension to Pareto Dominance and Its Application in Soft Constraints. In 2012 IEEE 24th International Conference on Tools with Artificial Intelligence (Vol. 1996, pp. 798-805). 2012 IEEE 24th International Conference on Tools with Artificial Intelligence (ICTAI 2012). IEEE</reference>
+                <reference>McKay, M. D., Beckman, R. J., &amp;amp; Conover, W. J. (1979). Comparison of Three Methods for Selecting Values of Input Variables in the Analysis of Output from a Computer Code. In Technometrics (Vol. 21, Issue 2, pp. 239-245). Informa UK Limited</reference>
+                <reference>Deb, K., Thiele, L., Laumanns, M., &amp;amp; Zitzler, E. (2002). &amp;quot; Scalable multi-objective optimization test problems. &amp;quot; In Proceedings of the 2002 Congress on Evolutionary Computation (CEC'02) (pp. 825-830). IEEE</reference>
+                <reference>Ma, M., &amp;amp; Wang, L. (2018). &amp;quot; A new set of benchmark multi-objective optimization problems with complicated Pareto sets and Pareto fronts of arbitrary shapes. &amp;quot; In Proceedings of the Genetic and Evolutionary Computation Conference (GECCO '18) (pp. 791-798). ACM</reference>
+                <reference>Huband, S., Hingston, P., Barone, L., &amp;amp; While, L. (2006). &amp;quot; A review of multiobjective test problems and a scalable test problem toolkit. &amp;quot; IEEE Transactions on Evolutionary Computation, 10(5), 477-506</reference>
+                <reference>Blank, J., &amp;amp; Deb, K. (2020). Pymoo: Multi-Objective Optimization in Python. In IEEE Access (Vol. 8, pp. 89497-89509). Institute of Electrical and Electronics Engineers (IEEE)</reference>
+                <reference>Deb, K., Pratap, A., Agarwal, S., &amp;amp; Meyarivan, T. (2002). A fast and elitist multiobjective genetic algorithm: NSGA-II. In IEEE Transactions on Evolutionary Computation (Vol. 6, Issue 2, pp. 182-197). Institute of Electrical and Electronics Engineers (IEEE)</reference>
+                <reference>Garagulova Anastasia Kerimovna, Gorbacheva Darya Olegovna, &amp;amp; Chirkov Denis Vladimirovich (2018). Comparison of genetic algorithms MOGA and NSGA-II on the problem of optimizing the shape of a hydroturbine runner wheel. Computational Technologies, 23 (5), 21-36. SBX Deb, K. Multi-objective optimization using evolutionary algorithms. New York: John Wiley &amp;amp; Sons, 2001. 497 p</reference>
+                <reference>Deb, K. Multi-objective optimization using evolutionary algorithms. New York: John Wiley &amp;amp; Sons, 2001. 497 p</reference>
+                <reference>Deb, K., &amp;amp; Jain, H. (2014). An Evolutionary Many-Objective Optimization Algorithm Using Reference-Point-Based Nondominated Sorting Approach, Part I: Solving Problems With Box Constraints. In IEEE Transactions on Evolutionary Computation (Vol. 18, Issue 4, pp. 577-601). Institute of Electrical and Electronics Engineers (IEEE)</reference>
+                <reference>Jain, H., &amp;amp; Deb, K. (2014). An Evolutionary Many-Objective Optimization Algorithm Using Reference-Point Based Nondominated Sorting Approach, Part II: Handling Constraints and Extending to an Adaptive Approach. In IEEE Transactions on Evolutionary Computation (Vol. 18, Issue 4, pp. 602-622). Institute of Electrical and Electronics Engineers (IEEE)</reference>
+                <reference>Indraneel Das and J. E. Dennis. Normal-boundary intersection: a new method for generating the pareto surface in nonlinear multicriteria optimization problems. SIAM J. on Optimization, 8(3):631-657, March 1998. URL:</reference>
+                <reference>Sierra, M. R., &amp;amp; Coello Coello, C. A. (2005). Improving PSO-Based Multi-objective Optimization Using Crowding, Mutation and &amp;#8712; -Dominance. In Lecture Notes in Computer Science (pp. 505-519). Springer Berlin Heidelberg.  &lt;a href="https://doi.org/10.1007/978-3-540-31880-4_35"&gt;https://doi.org/10.1007/978-3-540-31880-4_35&lt;/a&gt; </reference>
+                <reference>Kennedy, J., &amp;amp; Eberhart, R. (n. d. ). Particle swarm optimization. In Proceedings of ICNN’95 - International Conference on Neural Networks (Vol. 4, pp. 1942-1948). ICNN’95 - International Conference on Neural Networks. IEEE</reference>
+                <reference>Nebro, A. J., Durillo, J. J., Garcia-Nieto, J., Coello Coello, C. A., Luna, F., &amp;amp; Alba, E. (2009). SMPSO: A new PSO-based metaheuristic for multi-objective optimization. In 2009 IEEE Symposium on Computational Intelligence in Multi-Criteria Decision-Making(MCDM). 2009 IEEE Symposium on Computational Intelligence in Multi-Criteria Decision-Making (MCDM). IEEE</reference>
+                <reference>Qingfu Zhang, &amp;amp; Hui Li. (2007). MOEA/D: A Multiobjective Evolutionary Algorithm Based on Decomposition. In IEEE Transactions on Evolutionary Computation (Vol. 11, Issue 6, pp. 712-731). Institute of Electrical and Electronics Engineers (IEEE)</reference>
+                <reference>Tr&amp;#432; &amp;#7903; ng, N. H., &amp;amp; Dao, D. -N. (2020). New hybrid between NSGA-III with multi-objective particle swarm optimization to multi-objective robust optimization design for Powertrain mount system of electric vehicles. In Advances in Mechanical Engineering (Vol. 12, Issue 2, p. 168781402090425). SAGE Publications.  &lt;a href="https://doi.org/10.1177/1687814020904253"&gt;https://doi.org/10.1177/1687814020904253&lt;/a&gt; </reference>
+                <reference>Jeong, S., Obayashi, S., &amp;amp; Minemura, Y. (2008). Application of hybrid evolutionary algorithms to low exhaust emission diesel engine design. In Engineering Optimization (Vol. 40, Issue 1, pp. 1-16). Informa UK Limited.  &lt;a href="https://doi.org/10.1080/03052150701561155"&gt;https://doi.org/10.1080/03052150701561155&lt;/a&gt; </reference>
+                <reference>Snoek, J., Larochelle, H., &amp;amp; Adams, R. P. (2012). Practical Bayesian Optimization of Machine Learning Algorithms (Version 2). arXiv</reference>
+                <reference>Cherki, I., Chaker, A., Djidar, Z., Khalfallah, N., &amp;amp; Benzergua, F. (2019). A Sequential Hybridization of Genetic Algorithm and Particle Swarm Optimization for the Optimal Reactive Power Flow. In Sustainability (Vol. 11, Issue 14, p. 3862). MDPI AG</reference>
+                <reference>Aboura, F. (2019). Tuning PID Controller Using Hybrid Genetic Algorithm Particle Swarm Optimization Method for AVR System. In 2019 International Aegean Conference on Electrical Machines and Power Electronics (ACEMP) &amp;amp; amp; 2019 International Conference on Optimization of Electrical and Electronic Equipment (OPTIM)</reference>
+                <reference>Hussain, Md. M., Azar, A. T., Ahmed, R., Umar Amin, S., Qureshi, B., Dinesh Reddy, V., Alam, I., &amp;amp; Khan, Z. I. (2023). SONG: A Multi-Objective Evolutionary Algorithm for Delay and Energy Aware Facility Location in Vehicular Fog Networks. In Sensors (Vol. 23, Issue 2, p. 667). MDPI AG</reference>
+                <reference>Shi, X. H., Lu, Y. H., Zhou, C. G., Lee, H. P., Lin, W. Z., &amp;amp; Liang, Y. C. (n. d. ). Hybrid evolutionary algorithms based on PSO and GA. In The 2003 Congress on Evolutionary Computation, 2003. CEC ’03. (Vol. 4, pp. 2393-2399). The 2003 Congress on Evolutionary Computation, 2003. CEC ’03. IEEE</reference>
+                <reference>Steinley, Douglas. (2006). K&amp;#8208; means clustering: A half&amp;#8208; century synthesis. In British Journal of Mathematical and Statistical Psychology (Vol. 59, Issue 1, pp. 1-34). Wiley</reference>
+                <reference>Liu, Q., Liu, X., Wu, J., &amp;amp; Li, Y. (2019). An Improved NSGA-III Algorithm Using Genetic K-Means Clustering Algorithm. In IEEE Access (Vol. 7, pp. 185239-185249). Institute of Electrical and Electronics Engineers (IEEE)</reference>
+                <reference>Zheng, K., Yang, R., Xu, H., &amp;amp; Hu, J. (2017). A new distribution metric for comparing Pareto optimal solutions. Structural and Multidisciplinary Optimization, 55, 53-62</reference>
+            </references>
+        </articleInfo>
+        <articleInfo lang="RU" FirstPage="41" LastPage="61">
+            <pdf>25304-jdecp-tsykunov.pdf</pdf>
+            <abstract>Рассматривается задача определения физических свойств пористой среды по данным фильтрационных экспериментов. Используется двухкомпонентная модель капиллярной пропитки в
+                среде с двойной пористостью в виде системы трех дифференциальных уравнений, которая содержит 10 свободных параметров. Для автоматизации их определения на основе серии из
+                трех экспериментов используются алгоритмы оптимизации. Соответствие модели каждому эксперименту является целевой функцией, поэтому рассматривается задача многокритериальной
+                оптимизации. Для тестирования выбраны метаэвристические алгоритмы – NSGA-II, NSGA-III, SMPSO, OMOPSO, MOEA/D. Для каждого алгоритма проведена Байесовская мета-оптимизация
+                гиперпараметров для 5 тестовых функций: DTLZ1, DTLZ2, MW8, WFG1, WFG2. Определено, что наиболее эффективными алгоритмами по точности и затраченному вычислительному времени
+                являются SMPSO и NSGA-III. В задачах с большей вычислительной сложностью более эффективен SMPSO, а в простых задачах – NSGA-III. Для получения эффективного во всех тестовых
+                функция метода оптимизации создан гибридный алгоритм. Протестированы различные методы гибридизации, лучшим вариантом стала гибридизация по типу процессор/постпроцессор, где
+                сначала инициируется SMPSO, после чего популяция передается в NSGA-III. Для улучшения гибридного алгоритма применен метод кластеризации К-средних для отбора из популяции SMPSO
+                наиболее перспективных кластеров частиц с целью передачи их в NSGA-III. Также введен адаптивный критерий остановки алгоритмов на основе отслеживания динамики изменения метрик
+                получаемых решений – H-value и Spacing. Сопоставление полученного алгоритма с роевыми и генетическими алгоритмами показало, что предложенный алгоритм за одно и то же количество
+                итераций находит сочетание свободных параметров с меньшей невязкой между моделью и экспериментом.</abstract>
+            <title>Разработка гибридного алгоритма многокритериальной оптимизации для восстановления свойств пористой среды по фильтрационным экспериментам</title>
+            <keywords>
+                <word>NSGA-III</word>
+                <word>SMPSO</word>
+                <word>генетический алгоритм</word>
+                <word>мета-оптимизация алгоритма</word>
+                <word>метод роя частиц</word>
+                <word>многокритериальная оптимизация</word>
+                <word>модель капиллярной пропитки</word>
+            </keywords>
+            <references>
+                <reference>Методические рекомендации по определению подсчетных параметров залежей нефти и газа по материалам геофизических исследований скважин с привлечением результатов анализов керна, опробований и испытаний продуктивных пластов / под редакцией Б. Ю. Вендельштейна, В. Ф. Козяра, Г. Г. Яценко. — Калинин: НПО «Союзпромгеофизика», 1990. — 261 с</reference>
+                <reference>Цыкунов О. И. Математическая модель фильтрации с учетом капиллярных сил в мультипоровой среде / О. И. Цыкунов // International Journal of Open Information Technologies. - 2024. - Т. 12, № 10. - С. 45-55. - EDN NGFAIN</reference>
+                <reference>Cai, J., Perfect, E., Cheng, C. -L., &amp;amp; Hu, X. (2014). Generalized Modeling of Spontaneous Imbibition Based on Hagen-Poiseuille Flow in Tortuous Capillaries with Variably Shaped Apertures. In Langmuir (Vol. 30, Issue 18, pp. 5142-5151). American Chemical Society (ACS)</reference>
+                <reference>Tang, G. -Q., &amp;amp; Firoozabadi, A. (2001). Effect of Pressure Gradient and Initial Water Saturation on Water Injection in Water-Wet and Mixed-Wet Fractured Porous Media. In SPE Reservoir Evaluation &amp;amp; amp; Engineering (Vol. 4, Issue 06, pp. 516-524). Society of Petroleum Engineers (SPE)</reference>
+                <reference>Карпенко А. П. Современные алгоритмы поисковой оптимизации. Алгоритмы, вдохновленные природой / А. П. Карпенко. - Москва : МГТУ им. Н. Э. Баумана, 2017. - 446 с</reference>
+                <reference>O’Mahony, C., &amp;amp; Wilson, N. (2012). Sorted Pareto Dominance: An Extension to Pareto Dominance and Its Application in Soft Constraints. In 2012 IEEE 24th International Conference on Tools with Artificial Intelligence (Vol. 1996, pp. 798-805). 2012 IEEE 24th International Conference on Tools with Artificial Intelligence (ICTAI 2012). IEEE</reference>
+                <reference>McKay, M. D., Beckman, R. J., &amp;amp; Conover, W. J. (1979). Comparison of Three Methods for Selecting Values of Input Variables in the Analysis of Output from a Computer Code. In Technometrics (Vol. 21, Issue 2, pp. 239-245). Informa UK Limited</reference>
+                <reference>Deb, K., Thiele, L., Laumanns, M., &amp;amp; Zitzler, E. (2002). &amp;quot; Scalable multi-objective optimization test problems. &amp;quot; In Proceedings of the 2002 Congress on Evolutionary Computation (CEC'02) (pp. 825-830). IEEE</reference>
+                <reference>Ma, M., &amp;amp; Wang, L. (2018). &amp;quot; A new set of benchmark multi-objective optimization problems with complicated Pareto sets and Pareto fronts of arbitrary shapes. &amp;quot; In Proceedings of the Genetic and Evolutionary Computation Conference (GECCO '18) (pp. 791-798). ACM</reference>
+                <reference>Huband, S., Hingston, P., Barone, L., &amp;amp; While, L. (2006). &amp;quot; A review of multiobjective test problems and a scalable test problem toolkit. &amp;quot; IEEE Transactions on Evolutionary Computation, 10(5), 477-506</reference>
+                <reference>Blank, J., &amp;amp; Deb, K. (2020). Pymoo: Multi-Objective Optimization in Python. In IEEE Access (Vol. 8, pp. 89497-89509). Institute of Electrical and Electronics Engineers (IEEE)</reference>
+                <reference>Deb, K., Pratap, A., Agarwal, S., &amp;amp; Meyarivan, T. (2002). A fast and elitist multiobjective genetic algorithm: NSGA-II. In IEEE Transactions on Evolutionary Computation (Vol. 6, Issue 2, pp. 182-197). Institute of Electrical and Electronics Engineers (IEEE)</reference>
+                <reference>Гарагулова Анастасия Керимовна, Горбачева Дарья Олеговна, &amp;amp; Чирков Денис Владимирович (2018). Сравнение генетических алгоритмов MOGA и NSGA-II на задаче оптимизации формы рабочего колеса гидротурбины. Вычислительные технологии, 23 (5), 21-36</reference>
+                <reference>Deb, K. Multi-objective optimization using evolutionary algorithms. New York: John Wiley &amp;amp; Sons, 2001. 497 p</reference>
+                <reference>Deb, K., &amp;amp; Jain, H. (2014). An Evolutionary Many-Objective Optimization Algorithm Using Reference-Point-Based Nondominated Sorting Approach, Part I: Solving Problems With Box Constraints. In IEEE Transactions on Evolutionary Computation (Vol. 18, Issue 4, pp. 577-601). Institute of Electrical and Electronics Engineers (IEEE)</reference>
+                <reference>Jain, H., &amp;amp; Deb, K. (2014). An Evolutionary Many-Objective Optimization Algorithm Using Reference-Point Based Nondominated Sorting Approach, Part II: Handling Constraints and Extending to an Adaptive Approach. In IEEE Transactions on Evolutionary Computation (Vol. 18, Issue 4, pp. 602-622). Institute of Electrical and Electronics Engineers (IEEE)</reference>
+                <reference>Indraneel Das and J. E. Dennis. Normal-boundary intersection: a new method for generating the pareto surface in nonlinear multicriteria optimization problems. SIAM J. on Optimization, 8(3):631-657, March 1998. URL:</reference>
+                <reference>Sierra, M. R., &amp;amp; Coello Coello, C. A. (2005). Improving PSO-Based Multi-objective Optimization Using Crowding, Mutation and &amp;#8712; -Dominance. In Lecture Notes in Computer Science (pp. 505-519). Springer Berlin Heidelberg</reference>
+                <reference>Kennedy, J., &amp;amp; Eberhart, R. (n. d. ). Particle swarm optimization. In Proceedings of ICNN’95 - International Conference on Neural Networks (Vol. 4, pp. 1942-1948). ICNN’95 - International Conference on Neural Networks. IEEE</reference>
+                <reference>Nebro, A. J., Durillo, J. J., Garcia-Nieto, J., Coello Coello, C. A., Luna, F., &amp;amp; Alba, E. (2009). SMPSO: A new PSO-based metaheuristic for multi-objective optimization. In 2009 IEEE Symposium on Computational Intelligence in Multi-Criteria Decision-Making(MCDM). 2009 IEEE Symposium on Computational Intelligence in Multi-Criteria Decision-Making (MCDM). IEEE</reference>
+                <reference>Qingfu Zhang, &amp;amp; Hui Li. (2007). MOEA/D: A Multiobjective Evolutionary Algorithm Based on Decomposition. In IEEE Transactions on Evolutionary Computation (Vol. 11, Issue 6, pp. 712-731). Institute of Electrical and Electronics Engineers (IEEE)</reference>
+                <reference>Tr&amp;#432; &amp;#7903; ng, N. H., &amp;amp; Dao, D. -N. (2020). New hybrid between NSGA-III with multi-objective particle swarm optimization to multi-objective robust optimization design for Powertrain mount system of electric vehicles. In Advances in Mechanical Engineering (Vol. 12, Issue 2, p. 168781402090425). SAGE Publications</reference>
+                <reference>Jeong, S., Obayashi, S., &amp;amp; Minemura, Y. (2008). Application of hybrid evolutionary algorithms to low exhaust emission diesel engine design. In Engineering Optimization (Vol. 40, Issue 1, pp. 1-16). Informa UK Limited.  &lt;a href="https://doi.org/10.1080/03052150701561155"&gt;https://doi.org/10.1080/03052150701561155&lt;/a&gt; </reference>
+                <reference>Snoek, J., Larochelle, H., &amp;amp; Adams, R. P. (2012). Practical Bayesian Optimization of Machine Learning Algorithms (Version 2). arXiv</reference>
+                <reference>Cherki, I., Chaker, A., Djidar, Z., Khalfallah, N., &amp;amp; Benzergua, F. (2019). A Sequential Hybridization of Genetic Algorithm and Particle Swarm Optimization for the Optimal Reactive Power Flow. In Sustainability (Vol. 11, Issue 14, p. 3862). MDPI AG</reference>
+                <reference>Aboura, F. (2019). Tuning PID Controller Using Hybrid Genetic Algorithm Particle Swarm Optimization Method for AVR System. In 2019 International Aegean Conference on Electrical Machines and Power Electronics (ACEMP) &amp;amp; amp; 2019 International Conference on Optimization of Electrical and Electronic Equipment (OPTIM). Hussain, Md. M., Azar, A. T., Ahmed, R., Umar Amin, S., Qureshi, B., Dinesh Reddy, V., Alam, I., &amp;amp; Khan, Z. I. (2023). SONG: A Multi-Objective Evolutionary Algorithm for Delay and Energy Aware Facility Location in Vehicular Fog Networks. In Sensors (Vol. 23, Issue 2, p. 667). MDPI AG</reference>
+                <reference>Shi, X. H., Lu, Y. H., Zhou, C. G., Lee, H. P., Lin, W. Z., &amp;amp; Liang, Y. C. (n. d. ). Hybrid evolutionary algorithms based on PSO and GA. In The 2003 Congress on Evolutionary Computation, 2003. CEC ’03. (Vol. 4, pp. 2393-2399). The 2003 Congress on Evolutionary Computation, 2003. CEC ’03. IEEE</reference>
+                <reference>Steinley, Douglas. (2006). K&amp;#8208; means clustering: A half&amp;#8208; century synthesis. In British Journal of Mathematical and Statistical Psychology (Vol. 59, Issue 1, pp. 1-34). Wiley</reference>
+                <reference>Liu, Q., Liu, X., Wu, J., &amp;amp; Li, Y. (2019). An Improved NSGA-III Algorithm Using Genetic K-Means Clustering Algorithm. In IEEE Access (Vol. 7, pp. 185239-185249). Institute of Electrical and Electronics Engineers (IEEE)</reference>
+                <reference>Zheng, K., Yang, R., Xu, H., &amp;amp; Hu, J. (2017). A new distribution metric for comparing Pareto optimal solutions. Structural and Multidisciplinary Optimization, 55, 53-62</reference>
+            </references>
+        </articleInfo>
+        <authors>
+            <author ref="n_2025_9_tsykunov" sort-key="1" />
+        </authors>
+    </article>
     
     
 </number>
