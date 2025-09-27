@@ -1,0 +1,4763 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 3, 2025
+Electronic Journal,
+reg. N Φ C77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Nonlinear partial differential equations
+Ordinary differential equations
+Secularity condition of the Broadwell kinetic system
+Dukhnovsky S. A.
+Moscow State University of Civil Engineering, Moscow, Russian Federation
+e-mail: sergeidukhnvskijj@rambler.ru
+Abstract. In this paper we study the kinetic system of Broadwell equations of
+4 groups of particles with periodic initial data in weight space. The solution is
+sought in the vicinity of the equilibrium state. The perturbation is expanded in
+a Fourier series. The conditions of local equilibrium for solutions of the Cauchy
+problem are found.
+Keywords: kinetic model, Fourier series, Knudsen parameter, secular terms.
+1 Introduction
+In this article we will continue the study of stabilization (asymptotic stabil-
+ity) of solutions of nonlinear hyperbolic partial differential equations using the
+example of the so-called discrete models of the kinetic Boltzmann equation.
+Namely, the study of stabilization of solutions of the Cauchy problem for theDifferential Equations and Control Processes, N. 3, 2025
+two-dimensional Broadwell system [1, 7, 13]:
+∂
+t
+n
+1
++∂
+x
+n
+1
+=
+1
+ε
+(n
+3
+n
+4
+− n
+1
+n
+2
+),
+∂
+t
+n
+2
+− ∂
+x
+n
+2
+=
+1
+ε
+(n
+3
+n
+4
+− n
+1
+n
+2
+), (1)
+∂
+t
+n
+3
++∂
+y
+n
+3
+=
+1
+ε
+(n
+1
+n
+2
+− n
+3
+n
+4
+),
+∂
+t
+n
+4
+− ∂
+y
+n
+4
+=
+1
+ε
+(n
+1
+n
+2
+− n
+3
+n
+4
+),
+n
+1
+|
+t=0
+=n
+0
+1
+,n
+2
+|
+t=0
+=n
+0
+2
+,n
+3
+|
+t=0
+=n
+0
+3
+,n
+4
+|
+t=0
+=n
+0
+4
+. (2)
+The system (1)-(2) is the Boltzmann kinetic equation of a model two-
+dimensional gas of particles moving on a two-dimensional plane, the velocities
+of which ((1,0), (− 1,0), (0,1), (0,− 1)) will be assumed to be directed along
+the coordinate axes. Here u = n
+1
+(x,y,t), v = n
+2
+(x,y,t), w = n
+3
+(x,y,t), z =
+n
+4
+(x,y,t)− is the density (number of particles per unit area) of particles of the
+corresponding four groups. All particles are distributed into four groups with
+velocities(1,0), (− 1,0), (0,1), (0,− 1). Thefirstgroupofparticles, interacting
+with the second, passes into the third and fourth, respectively. Similarly, the
+third group, interacting with the fourth, passes into the first and second. We
+assume that the initial data are periodic.
+Many works are devoted to the study of kinetic equations. In recent works,
+solutions of kinetic systems were found using the Painlev´ e expansion [4, 8, 13],
+various analytical methods [3, 14]. Works on the study of solution stabilization
+are given in [6, 9, 10, 11, 12]. A numerical proof of stabilization is presented in
+[15, 16]. In this paper, basing on the technique presented in [2, 5] we found the
+secularity conditions for the system (1).
+1.1 Small perturbations
+We study the Cauchy problem (1) for small perturbations of the equilibrium
+state w
+e
+z
+e
+=u
+e
+v
+e
+. We set
+n
+1
+=u
+e
++ε
+2
+u
+1/2
+e
+b u, n
+2
+=v
+e
++ε
+2
+v
+1/2
+e
+b v, n
+3
+=w
+e
++ε
+2
+w
+1/2
+e
+b w, n
+4
+=z
+e
++ε
+2
+z
+1/2
+e
+b z.
+We consider periodic disturbances of an equilibrium state with limited energy
+b u =
+X
+k,l∈Z
+u
+k,l
+e
+ikx
+e
+ily
+, b v =
+X
+k,l∈Z
+v
+k,l
+e
+ikx
+e
+ily
+,
+https://doi.org/10.21638/11701/spbu35.2025.305 Electronic Journal: http://diffjournal.spbu.ru/ 63Differential Equations and Control Processes, N. 3, 2025
+b w =
+X
+k,l∈Z
+w
+k,l
+e
+ikx
+e
+ily
+, b z =
+X
+k,l∈Z
+z
+k,l
+e
+ikx
+e
+ily
+.
+Let’s introduce into weight spaces L
+2,γ
+(R
++
+;H
+σ ),H
+σ :
+∥b u∥
+2
+L
+2,γ
+(R
++
+;H
+σ )
+=
+Z
+∞
+0
+e
+2γt
+|u
+0
+(t)|
+2
+dt+
++
+Z
+∞
+0
+e
+2γt
+X
+k∈Z
+0
+|k|
+2σ |u
+k
+(t)|
+2
+dt, |||b u|
+t=0
+|||
+2
+H
+σ =|u
+0
+0
+|
+2
++
+X
+k∈Z
+0
+|k|
+2σ |u
+0
+k
+|
+2
+,
+where γ > 0,σ =const. The system will look like this:
+∂
+t
+b u+∂
+x
+b u− 1
+ε
+v
+1/2
+e
+ 
+w
+1/2
+e
+b z+z
+1/2
+e
+b w− u
+1/2
+e
+b v− v
+1/2
+e
+b u
+ 
+=
+=v
+1/2
+e
+ε
+ 
+b wb z− b ub v
+ 
+, (3)
+∂
+t
+b v− ∂
+x
+b v− 1
+ε
+u
+1/2
+e
+ 
+w
+1/2
+e
+b z+z
+1/2
+e
+b w− u
+1/2
+e
+b v− v
+1/2
+e
+b u
+ 
+=
+=u
+1/2
+e
+ε
+ 
+b wb z− b ub v
+ 
+,
+∂
+t
+b w+∂
+y
+b w+
+1
+ε
+z
+1/2
+e
+ 
+w
+1/2
+e
+b z+z
+1/2
+e
+b w− u
+1/2
+e
+b v− v
+1/2
+e
+b u
+ 
+=
+=− z
+1/2
+e
+ε
+ 
+b wb z− b ub v
+ 
+,
+∂
+t
+b z− ∂
+y
+b z+
+1
+ε
+w
+1/2
+e
+ 
+w
+1/2
+e
+b z+z
+1/2
+e
+b w− u
+1/2
+e
+b v− v
+1/2
+e
+b u
+ 
+=
+=− w
+1/2
+e
+ε
+ 
+b wb z− b ub v
+ 
+,
+b u|
+t=0
+=b u
+0
+,b v|
+t=0
+=b v
+0
+,b w|
+t=0
+= b w
+0
+,b z|
+t=0
+=b z
+0
+. (4)
+Hence the conservation laws are
+u
+1/2
+e
+(∂
+t
+b u+∂
+x
+b u) =v
+1/2
+e
+(∂
+t
+b v− ∂
+x
+b v),
+w
+1/2
+e
+(∂
+t
+b w+∂
+y
+b w) =z
+1/2
+e
+(∂
+t
+b z− ∂
+y
+b z).
+In Fourier’s images we have
+u
+k,l
+= (u
+0
+k,l
+− v
+1/2
+e
+u
+1/2
+e
+v
+0
+k,l
+)e
+− ikt
++
+v
+1/2
+e
+u
+1/2
+e
+v
+k,l
+− 2ik
+v
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+ik(s− t)
+v
+k,l
+ds.
+We will also receive
+w
+k,l
+= (w
+0
+k,l
+− z
+1/2
+e
+w
+1/2
+e
+z
+0
+k,l
+)e
+− ilt
++
+z
+1/2
+e
+w
+1/2
+e
+z
+k,l
+− 2il
+z
+1/2
+e
+w
+1/2
+e
+Z
+t
+0
+e
+il(s− t)
+z
+k,l
+ds.
+https://doi.org/10.21638/11701/spbu35.2025.305 Electronic Journal: http://diffjournal.spbu.ru/ 64Differential Equations and Control Processes, N. 3, 2025
+Next we obtain another conservation law from
+d
+dt
+v
+k,l
+− ikv
+k,l
+− 1
+ε
+u
+1/2
+e
+ 
+w
+1/2
+e
+z
+k,l
++z
+1/2
+e
+w
+k,l
+− u
+1/2
+e
+v
+k,l
+− v
+1/2
+e
+u
+k,l
+ 
+=
+=u
+1/2
+e
+ε
+ 
+b wb z− b ub v
+ 
+k,l
+,
+d
+dt
+z
+k,l
+− ilz
+k,l
++
+1
+ε
+w
+1/2
+e
+ 
+w
+1/2
+e
+z
+k,l
++z
+1/2
+e
+w
+k,l
+− u
+1/2
+e
+v
+k,l
+− v
+1/2
+e
+u
+k,l
+ 
+=
+=− w
+1/2
+e
+ε
+ 
+b wb z− b ub v
+ 
+k,l
+.
+Then
+d
+dt
+z
+k,l
+− ilz
+k,l
+=− w
+1/2
+e
+u
+1/2
+e
+(
+d
+dt
+v
+k,l
+− ikv
+k,l
+)
+or
+z
+k,l
+=z
+0
+k,l
+e
+ilt
+− e
+ilt
+Z
+t
+0
+e
+− ils
+w
+1/2
+e
+u
+1/2
+e
+(
+d
+ds
+v
+k,l
+− ikv
+k,l
+)ds =
+= (z
+0
+k,l
++
+w
+1/2
+e
+u
+1/2
+e
+v
+0
+k,l
+)e
+ilt
+− w
+1/2
+e
+u
+1/2
+e
+v
+k,l
++i(k− l)
+w
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+− il(s− t)
+v
+k,l
+ds.
+We have
+w
+k,l
+=− z
+1/2
+e
+u
+1/2
+e
+v
+k,l
++(w
+0
+k,l
++
+z
+1/2
+e
+u
+1/2
+e
+v
+0
+k,l
+)e
+− ilt
++i(k− l)
+z
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+− il(s− t)
+v
+k,l
+ds+
++2il
+z
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+il(s− t)
+v
+k,l
+ds− 2ili(k− l)
+z
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+il(s− t)
+Z
+s
+0
+e
+− il(p− s)
+v
+k,l
+(p)dpds =
+=− z
+1/2
+e
+u
+1/2
+e
+v
+k,l
++(w
+0
+k,l
++
+z
+1/2
+e
+u
+1/2
+e
+v
+0
+k,l
+)e
+− ilt
++i(k+l)
+z
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+il(s− t)
+v
+k,l
+ds.
+1.2 Reduction to one equation
+We have the following substitution of transition to one equation
+u
+k,l
+=
+v
+1/2
+e
+u
+1/2
+e
+v
+k,l
++(u
+0
+k,l
+− v
+1/2
+e
+u
+1/2
+e
+v
+0
+k,l
+)e
+− ikt
+− 2ik
+v
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+ik(s− t)
+v
+k,l
+ds, (5)
+w
+k,l
+=− z
+1/2
+e
+u
+1/2
+e
+v
+k,l
++(w
+0
+k,l
++
+z
+1/2
+e
+u
+1/2
+e
+v
+0
+k,l
+)e
+− ilt
++i(k+l)
+z
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+il(s− t)
+v
+k,l
+ds,
+(6)
+https://doi.org/10.21638/11701/spbu35.2025.305 Electronic Journal: http://diffjournal.spbu.ru/ 65Differential Equations and Control Processes, N. 3, 2025
+z
+k,l
+=− w
+1/2
+e
+u
+1/2
+e
+v
+k,l
++(z
+0
+k,l
++
+w
+1/2
+e
+u
+1/2
+e
+v
+0
+k,l
+)e
+ilt
++i(k− l)
+w
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+− il(s− t)
+v
+k,l
+ds.
+For k = 0,l = 0 we have
+u
+0,0
+=
+v
+1/2
+e
+u
+1/2
+e
+v
+0,0
++(u
+0
+0,0
+− v
+1/2
+e
+u
+1/2
+e
+v
+0
+0,0
+),
+w
+0,0
+=− z
+1/2
+e
+u
+1/2
+e
+v
+0,0
++(w
+0
+0,0
++
+z
+1/2
+e
+u
+1/2
+e
+v
+0
+0,0
+),
+z
+0,0
+=− w
+1/2
+e
+u
+1/2
+e
+v
+0,0
++(z
+0
+0,0
++
+w
+1/2
+e
+u
+1/2
+e
+v
+0
+0,0
+).
+We demand that
+u
+0
+0,0
+=w
+0
+0,0
+=z
+0
+0,0
+= 0.
+Then
+u
+0,0
+=
+v
+1/2
+e
+u
+1/2
+e
+v
+0,0
+,
+w
+0,0
+=− z
+1/2
+e
+u
+1/2
+e
+v
+0,0
+,
+z
+0,0
+=− w
+1/2
+e
+u
+1/2
+e
+v
+0,0
+.
+Now let us note that
+u
+1/2
+e
+(w
+1/2
+e
+z
+k,l
++z
+1/2
+e
+w
+k,l
+− u
+1/2
+e
+v
+k,l
+− v
+1/2
+e
+u
+k,l
+) =
+=−  
+u
+e
++v
+e
++u
+1/2
+e
+z
+1/2
+e
+z
+1/2
+e
+u
+1/2
+e
++u
+1/2
+e
+w
+1/2
+e
+w
+1/2
+e
+u
+1/2
+e
+ 
+v
+k,l
++
++u
+1/2
+e
+w
+1/2
+e
+(z
+0
+k,l
++
+w
+1/2
+e
+u
+1/2
+e
+v
+0
+k,l
+)e
+ilt
++u
+1/2
+e
+z
+1/2
+e
+(w
+0
+k,l
++
+z
+1/2
+e
+u
+1/2
+e
+v
+0
+k,l
+)e
+− ilt
+− − v
+1/2
+e
+(u
+1/2
+e
+u
+0
+k,l
+− v
+1/2
+e
+v
+0
+k,l
+)e
+− ikt
++
++i(k+l)u
+1/2
+e
+z
+1/2
+e
+z
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+il(s− t)
+v
+k,l
+ds+2ikv
+e
+Z
+t
+0
+e
+ik(s− t)
+v
+k,l
+ds
++i(k− l)u
+1/2
+e
+w
+1/2
+e
+w
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+− il(s− t)
+v
+k,l
+ds.
+https://doi.org/10.21638/11701/spbu35.2025.305 Electronic Journal: http://diffjournal.spbu.ru/ 66Differential Equations and Control Processes, N. 3, 2025
+Let be
+L
+e
+=u
+e
++v
+e
++w
+e
++z
+e
+> 0.
+Then
+d
+dt
+v
+k,l
+− ikv
+k,l
++
+1
+ε
+L
+e
+v
+k,l
+− (7)
+− 1
+ε
+ 
+i(k+l)z
+e
+Z
+t
+0
+e
+il(s− t)
+v
+k,l
+ds+2ikv
+e
+Z
+t
+0
+e
+ik(s− t)
+v
+k,l
+ds+
++i(k− l)w
+e
+Z
+t
+0
+e
+− il(s− t)
+v
+k,l
+ds
+ 
+=
+=
+1
+ε
+ 
+u
+1/2
+e
+w
+1/2
+e
+(z
+0
+k,l
++
+w
+1/2
+e
+u
+1/2
+e
+v
+0
+k,l
+)
+ 
+e
+ilt
++
+1
+ε
+ 
+u
+1/2
+e
+z
+1/2
+e
+(w
+0
+k,l
++
+z
+1/2
+e
+u
+1/2
+e
+v
+0
+k,l
+)
+ 
+e
+− ilt
++
++
+1
+ε
+ 
+− v
+1/2
+e
+(u
+1/2
+e
+u
+0
+k,l
+− v
+1/2
+e
+v
+0
+k,l
+)
+ 
+e
+− ikt
++u
+1/2
+e
+ε
+ 
+b wb z− b ub v
+ 
+k,l
+.
+1.3 Complexification
+Let us rewrite the system (7) as
+d
+dt
+v
+k,l
+− ikv
+k,l
++
+1
+ε
+L
+e
+v
+k,l
+− (8)
+− 1
+ε
+ 
+i(k+l)z
+e
+Z
+t
+0
+e
+il(s− t)
+v
+k,l
+ds+2ikv
+e
+Z
+t
+0
+e
+ik(s− t)
+v
+k,l
+ds
++i(k− l)w
+e
+Z
+t
+0
+e
+− il(s− t)
+v
+k,l
+ds
+ 
+=
+=
+1
+ε
+ 
+u
+1/2
+e
+w
+1/2
+e
+(z
+0
+k,l
++
+w
+1/2
+e
+u
+1/2
+e
+v
+0
+k,l
+)
+ 
+e
+ilt
++
+1
+ε
+ 
+u
+1/2
+e
+z
+1/2
+e
+(w
+0
+k,l
++
+z
+1/2
+e
+u
+1/2
+e
+v
+0
+k,l
+)
+ 
+e
+− ilt
++
++
+1
+ε
+ 
+− v
+1/2
+e
+(u
+1/2
+e
+u
+0
+k,l
+− v
+1/2
+e
+v
+0
+k,l
+)
+ 
+e
+− ikt
++u
+1/2
+e
+ε
+1
+2
+ 
+b wb z+b zb w− b ub v− b vb u
+ 
+k,l
+.
+Then
+d
+dt
+v
+k,l
+− ikv
+k,l
++
+1
+ε
+L
+e
+v
+k,l
+− (9)
+− 1
+ε
+ 
+i(k+l)z
+e
+Z
+t
+0
+e
+il(s− t)
+v
+k,l
+ds+2ikv
+e
+Z
+t
+0
+e
+ik(s− t)
+v
+k,l
+ds+
+https://doi.org/10.21638/11701/spbu35.2025.305 Electronic Journal: http://diffjournal.spbu.ru/ 67Differential Equations and Control Processes, N. 3, 2025
++i(k− l)w
+e
+Z
+t
+0
+e
+− il(s− t)
+v
+k,l
+ds
+ 
+=
+=
+1
+ε
+u
+1/2
+e
+D
++
+l
+e
+ilt
++
+1
+ε
+u
+1/2
+e
+D
+− l
+e
+− ilt
++
+1
+ε
+u
+1/2
+e
+D
+− k
+e
+− ikt
++
+1
+2
+εu
+1/2
+e
+T
+add
+k,l
+(v)+
++
+1
+2
+εu
+1/2
+e
+ 
+L
+k,l
+(v)+B
+k,l
+(v,v)
+ 
+,
+v
+k
+|
+t=0
+=v
+0
+k
+, (10)
+where
+D
++
+l
+=w
+1/2
+e
+(z
+0
+k,l
++
+w
+1/2
+e
+u
+1/2
+e
+v
+0
+k,l
+)+
++
+1
+2
+ε
+2
+X
+k
+1
++k
+2
+=k,l
+1
++l
+2
+=l,k
+1
+,k
+2
+,l
+1
+,l
+2
+̸=0
+(z
+0
+k
+2
+,l
+2
++
+w
+1/2
+e
+u
+1/2
+e
+v
+0
+k
+2
+,l
+2
+)(w
+0
+k
+1
+,l
+1
++
+z
+1/2
+e
+u
+1/2
+e
+v
+0
+k
+1
+,l
+1
+),
+D
+− l
+=z
+1/2
+e
+(w
+0
+k,l
++
+z
+1/2
+e
+u
+1/2
+e
+v
+0
+k,l
+)+
++
+1
+2
+ε
+2
+X
+k
+1
++k
+2
+=k,l
+1
++l
+2
+=l,k
+1
+,k
+2
+,l
+1
+,l
+2
+̸=0
+(w
+0
+k
+1
+,l
+1
++
+z
+1/2
+e
+u
+1/2
+e
+v
+0
+k
+1
+,l
+1
+)(z
+0
+k
+2
+,l
+2
++
+w
+1/2
+e
+u
+1/2
+e
+v
+0
+k
+2
+,l
+2
+),
+D
+− k
+=− v
+1/2
+e
+(u
+0
+k,l
+− v
+1/2
+e
+u
+1/2
+e
+v
+0
+k,l
+),
+L
+k,l
+(v) =
+X
+k
+1
++k
+2
+=k,l
+1
++l
+2
+=l,k
+1
+,k
+2
+̸=0
+ 
+− z
+1/2
+e
+u
+1/2
+e
+v
+k
+1
+,l
+1
+(z
+0
+k
+2
+,l
+2
++
+w
+1/2
+e
+u
+1/2
+e
+v
+0
+k
+2
+,l
+2
+)e
+− il
+2
+t
+− − (w
+0
+k
+1
+,l
+1
++
+z
+1/2
+e
+u
+1/2
+e
+v
+0
+k
+1
+,l
+1
+)e
+− il
+1
+t
+w
+1/2
+e
+u
+1/2
+e
+v
+k
+2
+,l
+2
+− (w
+0
+k
+1
+,l
+1
++
+z
+1/2
+e
+u
+1/2
+e
+v
+0
+k
+1
+,l
+1
+)e
+− il
+1
+t
+× × i(k
+2
+− l
+2
+)
+w
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+il
+2
+(s− t)
+v
+k
+2
+,l
+2
+ds− +i(k
+1
++l
+1
+)
+z
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+il
+1
+(s− t)
+v
+k
+1
+,l
+1
+ds(z
+0
+k
+2
+,l
+2
++
+w
+1/2
+e
+u
+1/2
+e
+v
+0
+k
+2
+,l
+2
+)e
+− il
+2
+t
+− − w
+1/2
+e
+u
+1/2
+e
+v
+k
+2
+,l
+2
+(w
+0
+k
+1
+,l
+1
++
+z
+1/2
+e
+u
+1/2
+e
+v
+0
+k
+1
+,l
+1
+)e
+il
+1
+t
+− (z
+0
+k
+2
+,l
+2
++
+w
+1/2
+e
+u
+1/2
+e
+v
+0
+k
+2
+,l
+2
+)e
+il
+2
+t
+z
+1/2
+e
+u
+1/2
+e
+v
+k
+1
+,l
+1
+− − (z
+0
+k
+2
+,l
+2
++
+w
+1/2
+e
+u
+1/2
+e
+v
+0
+k
+2
+,l
+2
+)e
+il
+2
+t
+i(k
+1
++l
+1
+)
+z
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+− il
+1
+(s− t)
+v
+k
+1
+,l
+1
+ds+
+https://doi.org/10.21638/11701/spbu35.2025.305 Electronic Journal: http://diffjournal.spbu.ru/ 68Differential Equations and Control Processes, N. 3, 2025
++i(k
+2
+− l
+2
+)
+w
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+− il
+2
+(s− t)
+v
+k
+2
+,l
+2
+ds(w
+0
+k
+1
+,l
+1
++
+z
+1/2
+e
+u
+1/2
+e
+v
+0
+k
+1
+,l
+1
+)e
+il
+1
+t
+− (u
+0
+k
+1
+,l
+1
+− v
+1/2
+e
+u
+1/2
+e
+v
+0
+k
+1
+,l
+1
+)e
+− ik
+1
+t
+v
+k
+2
+,l
+2
+− v
+k
+2
+,l
+2
+(u
+0
+k
+1
+,l
+1
+− v
+1/2
+e
+u
+1/2
+e
+v
+0
+k
+1
+,l
+1
+)e
+ik
+1
+t
+ 
+,
+B
+k,l
+(v,v) =
+X
+k
+1
++k
+2
+=k,l
+1
++l
+2
+=l,k
+1
+,k
+2
+̸=0
+n
+z
+1/2
+e
+u
+1/2
+e
+v
+k
+1
+,l
+1
+w
+1/2
+e
+u
+1/2
+e
+v
+k
+2
+,l
+2
+− z
+1/2
+e
+u
+1/2
+e
+v
+k
+1
+,l
+1
+× × i(k
+2
+− l
+2
+)
+w
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+− il
+2
+(s− t)
+v
+k
+2
+,l
+2
+ds− i(k
+1
+− l
+1
+)
+z
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+− il
+1
+(s+t)
+v
+k
+1
+,l
+1
+ds
+w
+1/2
+e
+u
+1/2
+e
+v
+k
+2
+,l
+2
+− +i(k
+1
+− l
+1
+)
+z
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+− il
+1
+(s+t)
+v
+k
+1
+,l
+1
+dsi(k
+2
+− l
+2
+)
+w
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+− il
+2
+(s− t)
+v
+k
+2
+,l
+2
+ds+
++
+w
+1/2
+e
+u
+1/2
+e
+v
+k
+2
+,l
+2
+z
+1/2
+e
+u
+1/2
+e
+v
+k
+1
+,l
+1
+− w
+1/2
+e
+u
+1/2
+e
+v
+k
+2
+,l
+2
+i(k
+1
+− l
+1
+)
+z
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+− il
+1
+(s+t)
+v
+k
+1
+,l
+1
+ds− − i(k
+2
+− l
+2
+)
+w
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+− il
+2
+(s− t)
+v
+k
+2
+,l
+2
+ds
+z
+1/2
+e
+u
+1/2
+e
+v
+k
+1
+,l
+1
+− +i(k
+2
+− l
+2
+)
+w
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+− il
+2
+(s− t)
+v
+k
+2
+,l
+2
+dsi(k
+1
+− l
+1
+)
+z
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+− il
+1
+(s+t)
+v
+k
+1
+,l
+1
+ds− −  
+v
+1/2
+e
+u
+1/2
+e
+v
+k
+1
+,l
+1
+− 2ik
+1
+v
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+ik
+1
+(s− t)
+v
+k
+1
+,l
+1
+ds
+ 
+v
+k
+2
+,l
+2
+− − v
+k
+2
+,l
+2
+ 
+v
+1/2
+e
+u
+1/2
+e
+v
+k
+1
+,l
+1
+− 2ik
+1
+v
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+ik
+1
+(s− t)
+v
+k
+1
+,l
+1
+ds
+ o
+,
+T
+add
+k,l
+(v) =− z
+1/2
+e
+u
+1/2
+e
+v
+0,0
+(− w
+1/2
+e
+u
+1/2
+e
+v
+k,l
++(z
+0
+k,l
++
+w
+1/2
+e
+u
+1/2
+e
+v
+0
+k,l
+)e
+− ilt
+− − i(k− l)
+w
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+il(s− t)
+v
+k,l
+ds)+
++(− z
+1/2
+e
+u
+1/2
+e
+v
+k,l
++(w
+0
+k,l
++
+z
+1/2
+e
+u
+1/2
+e
+v
+0
+k,l
+)e
+− ilt
++i(k+l)
+z
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+il(s− t)
+v
+k,l
+ds)(− w
+1/2
+e
+u
+1/2
+e
+v
+0,0
+)− https://doi.org/10.21638/11701/spbu35.2025.305 Electronic Journal: http://diffjournal.spbu.ru/ 69Differential Equations and Control Processes, N. 3, 2025
+− w
+1/2
+e
+u
+1/2
+e
+v
+0,0
+(− z
+1/2
+e
+u
+1/2
+e
+v
+k,l
++(w
+0
+k,l
++
+z
+1/2
+e
+u
+1/2
+e
+v
+0
+k,l
+)e
+ilt
+− i(k+l)
+z
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+− il(s− t)
+v
+k,l
+ds)+
++(− w
+1/2
+e
+u
+1/2
+e
+v
+k,l
++(z
+0
+k,l
++
+w
+1/2
+e
+u
+1/2
+e
+v
+0
+k,l
+)e
+ilt
++i(k− l)
+w
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+− il(s− t)
+v
+k,l
+ds)(− z
+1/2
+e
+u
+1/2
+e
+v
+0,0
+)− − v
+1/2
+e
+u
+1/2
+e
+v
+0,0
+v
+k,l
+− (
+v
+1/2
+e
+u
+1/2
+e
+v
+k,l
++(u
+0
+k,l
+− v
+1/2
+e
+u
+1/2
+e
+v
+0
+k,l
+)e
+− ikct
+− 2ik
+v
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+ikc(s− t)
+v
+k,l
+ds)v
+0,0
+− − v
+0,0
+(
+v
+1/2
+e
+u
+1/2
+e
+v
+k,l
++(u
+0
+k,l
+− v
+1/2
+e
+u
+1/2
+e
+v
+0
+k,l
+)e
+ikt
++2ik
+v
+1/2
+e
+u
+1/2
+e
+Z
+t
+0
+e
+− ik(s− t)
+v
+k,l
+ds)− v
+k,l
+v
+1/2
+e
+u
+1/2
+e
+v
+0,0
+.
+1.4 Reduction to homogeneous data of the Cauchy problem
+We make the following substitution
+v
+k,l
+=v
+0
+k,l
+e
+t(ik− 1
+ε
+L
+e
+)
++y
+k,l
+(t).
+Then
+d
+dt
+y
+k,l
+− iky
+k,l
++
+1
+ε
+L
+e
+y
+k,l
+− (11)
+− 1
+ε
+ 
+i(k+l)z
+e
+Z
+t
+0
+e
+il(s− t)
+y
+k,l
+ds+2ikv
+e
+Z
+t
+0
+e
+ik(s− t)
+y
+k,l
+ds
++i(k− l)w
+e
+Z
+t
+0
+e
+− il(s− t)
+y
+k,l
+ds
+ 
+=
+=
+1
+ε
+u
+1/2
+e
+D
++
+l
+e
+ilt
++
+1
+ε
+u
+1/2
+e
+D
+− l
+e
+− ilt
++
+1
+ε
+u
+1/2
+e
+D
+− k
+e
+− ikt
++
++e
+− 1
+ε
+L
+e
+t
+(
+1
+2
+εu
+1/2
+e
+ 
+f
+L
+k,l
+(t)+f
+B
+k,l
+(t))+f
+int
+k,l
+ 
++
++
+1
+2
+εu
+1/2
+e
+T
+add
+k,l
+(y)+
+1
+2
+εu
+1/2
+e
+ 
+L
+k,l
+(y)+B
+k,l
+(y,y)
+ 
+,
+y
+k,l
+|
+t=0
+= 0. (12)
+Here
+L
+k,l
+(y) =L
+k,l
+(y)+B
+k,l
+(v
+0
+e
+t(ik− 1
+ε
+L
+e
+)
+,y)+B
+k,l
+(y,v
+0
+e
+t(ik− 1
+ε
+L
+e
+)
+),
+f
+int
+k,l
+=
+1
+ε
+ 
+v
+0
+k,l
+z
+e
+i(k+l)
+i(k+l)− 1
+ε
+L
+e
++v
+0
+k,l
+v
+e
+2ik
+2ik− 1
+ε
+L
+e
++
++v
+0
+k,l
+w
+e
+i(k− l)
+i(k− l)− 1
+ε
+L
+e
+ 
+e
+ikt
+,
+https://doi.org/10.21638/11701/spbu35.2025.305 Electronic Journal: http://diffjournal.spbu.ru/ 70Differential Equations and Control Processes, N. 3, 2025
+1
+ε
+u
+1/2
+e
+D
+− l
+=
+1
+ε
+u
+1/2
+e
+z
+1/2
+e
+ 
+w
+0
+k,l
+− z
+1/2
+e
+u
+1/2
+e
+v
+0
+k,l
+1
+ε
+L
+e
+i(k+l)− 1
+ε
+L
+e
+ 
++
++
+1
+2
+εu
+1/2
+e
+X
+k
+1
++k
+2
+=k,l
+1
++l
+2
+=l,k
+1
+,k
+2
+,l
+1
+,l
+2
+̸=0
+ 
+z
+0
+k
+2
+,l
+2
+− w
+1/2
+e
+u
+1/2
+e
+v
+0
+k
+2
+,l
+2
+1
+ε
+L
+e
+i(k
+2
+− l
+2
+)− 1
+ε
+L
+e
+ 
+× ×  
+w
+0
+k
+1
+,l
+1
+− z
+1/2
+e
+u
+1/2
+e
+v
+0
+k
+1
+,l
+1
+1
+ε
+L
+e
+i(k
+1
++l
+1
+)− 1
+ε
+L
+e
+ 
+,
+1
+ε
+u
+1/2
+e
+D
++
+l
+=
+1
+ε
+u
+1/2
+e
+w
+1/2
+e
+ 
+z
+0
+k,l
+− w
+1/2
+e
+u
+1/2
+e
+v
+0
+k,l
+1
+ε
+L
+e
+i(k− l)− 1
+ε
+L
+e
+ 
++
++
+1
+2
+εu
+1/2
+e
+X
+k
+1
++k
+2
+=k,l
+1
++l
+2
+=l,k
+1
+,k
+2
+,l
+1
+,l
+2
+̸=0
+ 
+z
+0
+k
+2
+,l
+2
+− w
+1/2
+e
+u
+1/2
+e
+v
+0
+k
+2
+,l
+2
+1
+ε
+L
+e
+i(k
+2
+− l
+2
+)− 1
+ε
+L
+e
+ 
+× ×  
+w
+0
+k
+1
+,l
+1
+− z
+1/2
+e
+u
+1/2
+e
+v
+0
+k
+1
+,l
+1
+1
+ε
+L
+e
+i(k
+1
++l
+1
+)− 1
+ε
+L
+e
+ 
+,
+1
+ε
+u
+1/2
+e
+D
+− k
+=− 1
+ε
+u
+1/2
+e
+v
+1/2
+e
+ 
+u
+0
+k,l
++
+v
+1/2
+e
+u
+1/2
+e
+v
+0
+k,l
+1
+ε
+L
+e
+2ik− 1
+ε
+L
+e
+ 
+.
+TheFouriersolutionoftheCauchyproblemforthesystem(1)willbecalledthe
+systemofabsolutelycontinuousFouriercoefficients U
+k
+= (u
+k
+,v
+k
+,w
+k
+,z
+k
+), k∈Z,
+satisfying (5), (7) for almost all t∈R
++
+1.5 Elimination of secular members
+Let’s move on to finite-dimensional approximation
+T
+k,l
+(y
+(m)
+) =
+d
+dt
+y
+(m)
+k,l
+− iky
+(m)
+k,l
++
+1
+ε
+L
+e
+y
+(m)
+k,l
+− (13)
+− 1
+ε
+ 
+i(k+l)z
+e
+Z
+t
+0
+e
+il(s− t)
+y
+(m)
+k,l
+ds+2ikv
+e
+Z
+t
+0
+e
+ik(s− t)
+y
+(m)
+k,l
+ds
++i(k− l)w
+e
+Z
+t
+0
+e
+− il(s− t)
+y
+(m)
+k,l
+ds
+ 
+=
+https://doi.org/10.21638/11701/spbu35.2025.305 Electronic Journal: http://diffjournal.spbu.ru/ 71Differential Equations and Control Processes, N. 3, 2025
+=
+1
+ε
+u
+1/2
+e
+D
++
+l,m
+e
+ilt
++
+1
+ε
+u
+1/2
+e
+D
+− l,m
+e
+− ilt
++
+1
+ε
+u
+1/2
+e
+D
+− k,m
+e
+− ikt
++
+e
+− 1
+ε
+L
+e
+t
+ 
+1
+2
+εu
+1/2
+e
+(f
+(m)
+k,l,L
+(t)+f
+(m)
+k,l,B
+(t))+
++f
+(m)
+k,l,int
+ 
++
+1
+2
+εu
+1/2
+e
+T
+add
+k,l
+(y
+(m)
+)+
+1
+2
+εu
+1/2
+e
+ 
+L
+(m)
+k,l
+(y
+(m)
+)+B
+(m)
+k,l
+(y
+(m)
+,y
+(m)
+)
+ 
+,
+y
+(m)
+k,l
+|
+t=0
+= 0. (14)
+We set
+y
+k,l
+=Q
+k,− l
+T
+− 1
+k,l
+(e
+− ilt
+)+Q
+k,l
+T
+− 1
+k,l
+(e
+ilt
+)+Q
+− k,l
+T
+− 1
+k,l
+(e
+− ikt
+)+T
+− 1
+k,l
+(z
+k,l
+), k,l∈Z
+0
+.
+If we substitute y
+k,l
+(t) = Q
+k,− l
+T
+− 1
+k,l
+(e
+− ilt
+) + Q
+k,l
+T
+− 1
+k,l
+(e
+ilt
+) + Q
+− k,l
+T
+− 1
+k,l
+(e
+− ikt
+) +
+T
+− 1
+k,l
+(z
+k,l
+), k,l ∈ Z
+0
+into L
+k,l
+(y),B
+k,l
+(y,y) and make the appropriate transfor-
+mations that isolate the secular terms, then we can find the secular equation.
+We isolate the terms in these integrals that are not integrable in R
++
+using our
+operator
+i(k+l)
+Z
+t
+0
+e
+il(s− t)
+Q
+k,− l
+T
+− 1
+k,l
+(e
+− ils
+)ds =− ε
+z
+e
+Q
+k,− l
+e
+− ilt
++
++
+ε
+z
+e
+ 
+d
+dt
+Q
+k,− l
+T
+− 1
+k,l
+(e
+− ilt
+)− ikQ
+k,− l
+T
+− 1
+k,l
+(e
+− ilt
+)+
+1
+ε
+L
+e
+Q
+k,− l
+T
+− 1
+k,l
+(e
+− ilt
+)
+ 
+− − 1
+z
+e
+ 
+2ikv
+e
+Z
+t
+0
+e
+ik(s− t)
+Q
+k,− l
+T
+− 1
+k,l
+(e
+− ils
+)ds+i(k− l)w
+e
+Z
+t
+0
+e
+− il(s− t)
+Q
+k,− l
+T
+− 1
+k,l
+(e
+− ils
+)ds
+ 
+.
+The same is true for the others. Summing up, we obtain a reduction of the
+Cauchy problem (13)-(14) to an integral equation in the Hilbert space L
+2,γ
+(R
++
+)
+of the form
+z
+(m)
+k,l
++Q
+k,l
+e
+ilt
++Q
+k,− l
+e
+− ilt
++Q
+− k,l
+e
+− ikt
+=
+1
+2
+εu
+1/2
+e
+ 
+S
+k,− l
+(Q
+k,− l
+,Q
+k,l
+)e
+− ilt
++
+(15)
++S
+k,l
+(Q
+k,− l
+,Q
+k,l
+)e
+ilt
+ 
++
+1
+ε
+u
+1/2
+e
+D
++
+l,m
+e
+ilt
++
+1
+ε
+u
+1/2
+e
+D
+− l,m
+e
+− ilt
++
++
+1
+ε
+u
+1/2
+e
+D
+− k,m
+e
+− ikt
++e
+− 1
+ε
+L
+e
+t
+ 
+1
+2
+εu
+1/2
+e
+(F
+(m)
+k,l,L
+(t)+F
+(m)
+k,l,B
+(t))+f
+(m)
+k,l,int
+ 
++
++
+1
+2
+εu
+1/2
+e
+ 
+H
+(m)
+k,l,L
+(t)+H
+(m)
+k,l,B
+(t)+U
+(m)
+k,l
+(T
+− 1
+k,l
+(z
+(m)
+))+B
+(m)
+k,l
+(T
+− 1
+k,l
+(z
+(m)
+),T
+− 1
+k,l
+(z
+(m)
+))+
++B
+k,l
+ 
+Q
+k,− l
+T
+− 1
+k,l
+(e
+− ilt
+)+Q
+k,l
+T
+− 1
+k,l
+(e
+ilt
+)+Q
+− k,l
+T
+− 1
+k,l
+(e
+− ikt
+),T
+− 1
+k,l
+(z
+(m)
+k,l
+)
+ 
++
++B
+k,l
+ 
+T
+− 1
+k,l
+(z
+(m)
+k,l
+),Q
+k,− l
+T
+− 1
+k,l
+(e
+− ilt
+)+Q
+k,l
+T
+− 1
+k,l
+(e
+ilt
+)+Q
+− k,l
+T
+− 1
+k,l
+(e
+− ikt
+))
+  
+.
+https://doi.org/10.21638/11701/spbu35.2025.305 Electronic Journal: http://diffjournal.spbu.ru/ 72Differential Equations and Control Processes, N. 3, 2025
+where
+F
+(m)
+k,l,L
+(t)+F
+(m)
+k,l,B
+(t) =F
+(m)
+k,l,L,2
+(t)+F
+(m)
+k,l,B,2
+(t)+F
+(m)
+k,l,L,1
+(t)+F
+(m)
+k,l,B,1
+(t),
+U
+(m)
+k,l
+(T
+− 1
+k,l
+(z
+(m)
+)) =L
+(m)
+k,l
+(T
+− 1
+k,l
+(z
+(m)
+))+B
+(m)
+k,l
+(v
+0
+e
+t(ik− 1
+ε
+L
+e
+)
+),T
+− 1
+k,l
+(z
+(m)
+))+
++B
+(m)
+k,l
+(T
+− 1
+k,l
+(z
+(m)
+),v
+0
+e
+t(ik− 1
+ε
+L
+e
+)
+)).
+To reduce the Cauchy problem (13) to an integral equation in the Hilbert space
+L
+2,γ
+(R
++
+), we must cancel the secular terms by requiring that
+Q
+k,l
+e
+ilt
++Q
+k,− l
+e
+− ilt
++Q
+− k,l
+e
+− ikt
+=
+1
+2
+εu
+1/2
+e
+ 
+S
+k,− l
+(Q
+k,− l
+,Q
+k,l
+)e
+− ilt
++ (16)
++S
+k,l
+(Q
+k,− l
+,Q
+k,l
+)e
+ilt
+ 
++
+1
+ε
+u
+1/2
+e
+D
++
+l,m
+e
+ilt
++
+1
+ε
+u
+1/2
+e
+D
+− l,m
+e
+− ilt
++
+1
+ε
+u
+1/2
+e
+D
+− k,m
+e
+− ikt
+.
+Then we finally get
+z
+(m)
+k,l
+=e
+− 1
+ε
+L
+e
+t
+ 
+1
+2
+εu
+1/2
+e
+(F
+(m)
+k,l,L
+(t)+F
+(m)
+k,l,B
+(t))+f
+(m)
+k,l,int
+ 
++
++
+1
+2
+εu
+1/2
+e
+ 
+H
+(m)
+k,l,L
+(t)+H
+(m)
+k,l,B
+(t)+
++U
+(m)
+k,l
+(T
+− 1
+k,l
+(z
+(m)
+))+B
+(m)
+k,l
+(T
+− 1
+k,l
+(z
+(m)
+),T
+− 1
+k,l
+(z
+(m)
+))+
++B
+k,l
+ 
+Q
+k,− l
+T
+− 1
+k,l
+(e
+− ilt
+)+Q
+k,l
+T
+− 1
+k,l
+(e
+ilt
+)+Q
+− k,l
+T
+− 1
+k,l
+(e
+− ikt
+),T
+− 1
+k,l
+(z
+(m)
+k,l
+)
+ 
++
++B
+k,l
+ 
+T
+− 1
+k,l
+(z
+(m)
+k,l
+),Q
+k,− l
+T
+− 1
+k,l
+(e
+− ilt
+)+Q
+k,l
+T
+− 1
+k,l
+(e
+ilt
+)+Q
+− k,l
+T
+− 1
+k,l
+(e
+− ikt
+))
+  
+. (17)
+The condition on the secular terms can be rewritten as an algebraic system for
+(Q
+k,l
+,Q
+k,− l
+,Q
+− k,l
+):
+Q
+k,l
+=
+1
+ε
+u
+1/2
+e
+D
++
+l,m
++
+1
+2
+εu
+1/2
+e
+S
+k,l
+(Q
+k,− l
+,Q
+k,l
+), (18)
+Q
+k,− l
+=
+1
+ε
+u
+1/2
+e
+D
+− l,m
++
+1
+2
+εu
+1/2
+e
+S
+k,− l
+(Q
+k,− l
+,Q
+k,l
+),
+Q
+− k,l
+=
+1
+ε
+u
+1/2
+e
+D
+− k,m
+,|k| = 1,...,m,
+where
+S
+k,− l
+(Q
+k,− l
+,Q
+k,l
+)e
+− ilt
++S
+k,l
+(Q
+k,− l
+,Q
+k,l
+)e
+ilt
+=
+X
+k
+1
++k
+2
+=k,l
+1
++l
+2
+=l,|k
+1
+|,|k
+2
+|,|l
+1
+|,|l
+2
+|=1,...,m
+n
+ε
+z
+e
+ε
+w
+e
+z
+1/2
+e
+u
+1/2
+e
+w
+1/2
+e
+u
+1/2
+e
+ 
+Q
+k
+1
+,− l
+1
+Q
+k
+2
+,l
+2
+e
+− ilt
++Q
+k
+2
+,l
+2
+Q
+k
+1
+,− l
+1
+e
+ilt
+ 
++
+https://doi.org/10.21638/11701/spbu35.2025.305 Electronic Journal: http://diffjournal.spbu.ru/ 73Differential Equations and Control Processes, N. 3, 2025
++
+ 
+z
+1/2
+e
+u
+1/2
+e
+v
+0
+k
+1
+,l
+1
+i(k
+1
++l
+1
+)
+i(k
+1
++l
+1
+)− 1
+ε
+L
+e
+w
+1/2
+e
+u
+1/2
+e
+ε
+w
+e
+Q
+k
+2
+,l
+2
++
+z
+1/2
+e
+u
+1/2
+e
+v
+0
+k
+2
+,l
+2
+i(k
+2
+− l
+2
+)
+i(k
+2
+− l
+2
+)+
+1
+ε
+L
+e
+w
+1/2
+e
+u
+1/2
+e
+ε
+z
+e
+Q
+k
+1
+,− l
+1
+ 
+e
+− ilt
++
++
+ 
+z
+1/2
+e
+u
+1/2
+e
+v
+0
+k
+1
+,l
+1
+i(k
+1
++l
+1
+)
+i(k
+1
++l
+1
+)+
+1
+ε
+L
+e
+w
+1/2
+e
+u
+1/2
+e
+ε
+w
+e
+Q
+k
+2
+,l
+2
++
+z
+1/2
+e
+u
+1/2
+e
+v
+0
+k
+2
+,l
+2
+i(k
+2
+− l
+2
+)
+i(k
+2
+− l
+2
+)+
+1
+ε
+L
+e
+w
+1/2
+e
+u
+1/2
+e
+ε
+w
+e
+Q
+k
+1
+,− l
+1
+ 
+e
+ilt
+− −  
+(w
+0
+k
+1
+,l
+1
++
+z
+1/2
+e
+u
+1/2
+e
+v
+0
+k
+1
+,l
+1
+)
+w
+1/2
+e
+u
+1/2
+e
+ε
+w
+e
+Q
+k
+2
+,l
+2
++
+z
+1/2
+e
+u
+1/2
+e
+(z
+0
+k
+2
+,l
+2
++
+w
+1/2
+e
+u
+1/2
+e
+v
+0
+k
+2
+,l
+2
+)
+ε
+z
+e
+Q
+k
+1
+,− l
+1
+ 
+e
+− ilt
+− −  
+(z
+0
+k
+2
+,l
+2
++
+w
+1/2
+e
+u
+1/2
+e
+v
+0
+k
+2
+,l
+2
+)
+ε
+z
+e
+Q
+k
+1
+,− l
+1
+z
+1/2
+e
+u
+1/2
+e
++(w
+0
+k
+1
+,l
+1
++
+z
+1/2
+e
+u
+1/2
+e
+v
+0
+k
+1
+,l
+1
+)
+w
+1/2
+e
+u
+1/2
+e
+ε
+w
+e
+Q
+k
+2
+,l
+2
+ 
+e
+ilt
+o
+.
+1.6 Conclusion
+A two-dimensional discrete kinetic system of Broadwell is considered. This
+system is reduced to a nonlinear equation in weight space, provided that the
+secularity conditions are satisfied. These conditions allow us to study the non-
+linear equation and prove exponential stability to the equilibrium state in the
+future.
+References
+[1] Godunov S. K., Sultangazin U. M. On discrete models of the kinetic Boltz-
+mann equation. Russian Mathematical Surveys, 1971; 26(3): 1–56.
+[2] DukhnovskyS.A.SeculartermsforthekineticMcKeanmodel. Differential
+equations and control processes, 2023; (1): 125–136.
+[3] Dukhnovsky S. A. The tanh-function method and the (G
+′
+/G)-expansion
+method for the kinetic McKean system. Differential equations and control
+processes, 2021; No.2, 87–100.
+[4] Dukhnovsky S. On solutions of the kinetic McKean system. Bul. Acad.
+S ¸tiint ¸e Repub. Mold. Mat. , 2020; 94(3): 3–11.
+[5] Vasil’eva O. A., Dukhnovskiy S. A. Secularity condition for the kinetic
+Carleman system. Vestnik MGSU, 2015; No. 7, 33–40.
+[6] Dukhnovskii S. A. Asymptotic stability of equilibrium states for Carleman
+and Godunov–Sultangazin systems of equation. Moscow University Math-
+ematics Bulletin, 2019; 74(6): 246–248.
+https://doi.org/10.21638/11701/spbu35.2025.305 Electronic Journal: http://diffjournal.spbu.ru/ 74Differential Equations and Control Processes, N. 3, 2025
+[7] Vedenyapin V., Sinitsyn A., Dulov E. Kinetic Boltzmann, Vlasov and re-
+lated equations. Amsterdam, Elsevier, 2011, xiii+304 pp.
+[8] Lindblom O., Euler N. Solutions of discrete-velocity Boltzmann equations
+viaBatemanandRiccatiequations.Theoretical and Mathematical Physics,
+2002; 131(2): 595–608.
+[9] Radkevich E. V. On the large-time behavior of solutions to the Cauchy
+problem for a 2-dimensional discrete kinetic equation. Journal of Mathe-
+matical Sciences, 2014; 202(5): 735–768.
+[10] Dukhnovskii S. A. On the rate of stabilization of solutions to the Cauchy
+problem for the Godunov–Sultangazin system with periodic initial data. J.
+Math. Sci., 2021; (259): 349–375.
+[11] Vasil’eva O. A., Dukhnovskii S. A., Radkevich E. V. On the nature of local
+equilibrium in the Carleman and Godunov-Sultangazin equations. Journal
+of Mathematical Sciences, 2018; 235(4): 392–454.
+[12] Radkevich, E. V. On discrete kinetic equations. Doklady mathematics,
+2012; 86(3): 809–813.
+[13] Ilyin, O. V. Symmetries, the current function, and exact solutions for
+Broadwell’s two-dimensional stationary kinetic model. Theoretical and
+Mathematical Physics, 2014; 179(3): 679–688.
+[14] Ilyin, O. V. Stationary solutions of the kinetic Broadwell model. TMF,
+2012; 170(3): 481–488.
+[15] Vasil’eva O. The investigation of evolution of the harmonic perturbation
+the stationary solution of the boundary value problem for a system of the
+Carleman equations. Matec web of conferences, 2017; (117), 00174.
+[16] Vasil’eva O.A. Numerical solution of the Godunov–Sultangazin system of
+equations. Periodic Case. Vestnik MGSU, 2016; No. 4: 27-35. (In Russ.)
+https://doi.org/10.21638/11701/spbu35.2025.305 Electronic Journal: http://diffjournal.spbu.ru/ 75
