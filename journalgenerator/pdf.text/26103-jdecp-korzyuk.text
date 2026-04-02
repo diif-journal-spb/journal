@@ -1,0 +1,2033 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 1, 2026
+Electronic Journal,
+reg. N ΦC77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Partial differential equations
+Classical Solution of the Cauchy Problem for a Mildly
+Quasilinear Wave Equation with a Variable Coefficient
+V. I. Korzyuk
+1,2*
+, J. V. Rudzko
+1,**
+1
+Institute of Mathematics of the National Academy of Sciences of Belarus,
+Minsk, Belarus
+2
+Belarusian State University, Minsk, Belarus
+e-mail:
+*
+korzyuk@bsu.by,
+**
+janycz@yahoo.com
+Abstract. We consider the Cauchy problem for a mildly quasilinear wave
+equationwithavariablecoefficientintheupperhalf-plane. Weusethemethod
+of characteristics to construct the solution in an implicit analytical form as a
+solution of an integro-differential equation. We study the solvability of this
+equation, as well as the dependence on the initial data and the smoothness
+of its solutions. We prove the uniqueness of the solution for the problem in
+question and establish the conditions under which its classical solution exists.
+Keywords: mildly quasilinear wave equation, Cauchy problem, classical solu-
+tion, apriori estimates, parameter continuation method.
+1 Statement of the problem
+In the domain Q = (0,∞)×R of two independent variables (t,x)∈ Q⊂R
+2
+,
+for the nonlinear equation
+∂
+2
+t
+u(t,x)−a
+2
+(x)∂
+2
+x
+u(t,x)=f(t,x,u(t,x),∂
+t
+u(t,x),∂
+x
+u(t,x)), (t,x)∈Q, (1)
+we consider the following Cauchy problem with the initial conditions
+u(0,x)=φ(x), ∂
+t
+u(0,x)=ψ(x), x∈R, (2)Differential Equations and Control Processes, N. 1, 2026
+where 0 < a
+min
+≤ a(x) ≤ a
+max
+for all x ∈ R, f is a function given on the set
+Q×R
+3
+, and φ and ψ are a real-valued functions defined on the setR.
+Equationsofform(1)arefoundinmechanics(nonlinearvibrationsofstrings
+and rods) [1, 2] and thermodynamics (the Maxwell–Cattaneo model of heat
+conduction) [3].
+Work [4] obtained in an explicit analytical form a classical solution to the
+problem
+(∂
+t
+−a(t,x)∂
+x
+−∂
+t
+(lna(t,x)))(∂
+t
+−a(t,x)∂
+x
+)u(t,x)=
+=a(t,x)∂
+x
+a(t,x)∂
+x
+u(t,x)−∂
+t
+a(t,x)∂
+x
+u(t,x)+∂
+t
+(lna(t,x))× ×(∂
+t
+u(t,x)+a(t,x)∂
+x
+u(t,x))−b(t,x)∂
+t
+u(t,x)−c(t,x)∂
+x
+u(t,x)− −q(t,x)u(t,x), (t,x)∈Q,
+u(0,x)=φ(x), ∂
+t
+u(0,x)=ψ(x), x∈R.
+Paper [5] considered the following general linear case of problem (1)–(2)
+∂
+2
+t
+u(t,x)−a
+2
+(t,x)∂
+2
+x
+u(t,x)+a
+(1)
+(t,x)∂
+t
+u(t,x)+a
+(2)
+(t,x)∂
+x
+u(t,x)+
++a
+(3)
+(t,x)u(t,x)=f(t,x),
+u(s(x),x)=φ(x), ∂
+t
+u(s(x),x)=ψ(x),
+where the coefficient a(t,x) does not vanish at any point. Communication [6]
+studied the problem
+∂
+2
+t
+u(t,x)− n
+X
+i=1
+n
+X
+j=1
+a
+i,j
+∂
+x
+i
+∂
+x
+j
+u(t,x)=0, (t,x)∈(0,∞)×R
+n
+,
+u(0,x)=φ(x), ∂
+t
+u(0,x)=ψ(x), x∈R
+n
+,
+when the initial data φ and ψ belong to the Schwartz spaceS(R
+n
+). Article [7]
+considered problem (1)–(2) with f ≡0 in the Triebel–Lizorkin space.
+Theobservabilityissuesforthelinearequationsofform(1)wereconsidered
+in works [8, 9]. Strichartz type estimates for linear equations of form (1) were
+obtained in paper [10]. Weighted L
+2
+-estimates for solutions of the equation
+∂
+2
+t
+u(t,x)−∆u(t,x)+c(x)∂
+t
+u(t,x)=0
+were derived in [11].
+Communication [12] studied problem (1)–(2) in the case a(x) = const.
+Works [13, 14] investigated problem (1)–(2) with discontinuous initial data in
+the case a(x)=const.
+Electronic Journal: http://diffjournal.spbu.ru/ 81Differential Equations and Control Processes, N. 1, 2026
+Local existence and uniqueness of a weak solution of the Cauchy problem
+for the hyperbolic equation
+ 
+X
+0≤j,k≤n
+g
+(j,k)
+(x)∂
+x
+j
+∂
+x
+k
++
+n
+X
+j=0
+b
+(j)
+(x)∂
+x
+j
+∂
+x
+j
++c(x)
+ 
+u(x)=
+=F(u(x),∂
+x
+0
+u(x),∂
+x
+1
+u(x),...,∂
+x
+n
+u(x))
+was established in [15]. Energy estimates for solutions to mixed problem of the
+nonlinear equations of the form
+∂
+tt
+u(t,x)+div(a(x)∇u(t,x))+···=0
+were derived in [16, 17, 18].
+Note that Eq. (1) can be reduced to a first-order semilinear hyperbolic
+system
+∂
+t
+u(t,x)=q(t,x),
+∂
+t
+p(t,x)−∂
+x
+q(t,x)=0, (3)
+∂
+t
+q(t,x)−a
+2
+(x)∂
+x
+p(t,x)=f(t,x,u(t,x),q(t,x),p(t,x)),
+with respect to the unknown functions u, q =∂
+t
+u, and p=∂
+x
+u. Results on the
+existenceanduniquenessofsolutionsinthebroadsensesolutionstotheCauchy
+problem for system (3) are well known and presented in book [19]. However,
+generally speaking, this book only establishes local solutions. They will be
+global classical provided that they are bounded in any characteristic triangle
+and the given functions f, φ, φ
+′
+, and ψ are continuously differentiable. The
+answer to the question “What conditions must be imposed on these functions
+to obtain global classical solutions?” is not available in [19].
+2 Linear problem
+We begin by considering the following simplest linear case of problem (1)–(2)
+f(t,x,u,u
+t
+,u
+x
+)=g(t,x). (4)
+Following [20, 21], we denote the eikonal
+T(x):=
+x
+Z
+0
+ds
+a(s)
+. (5)
+Electronic Journal: http://diffjournal.spbu.ru/ 82Differential Equations and Control Processes, N. 1, 2026
+Let X be the inverse of the function T. The function X:R 7→ R exists due
+to the condition 0 < a
+min
+≤ a(x)≤ a
+max
+, which implies that the function T is
+strictly increasing and the integrals
+±∞
+Z
+0
+ds
+a(s)
+(6)
+diverge, which means that the function T biectivly maps the setR into itself.
+Eikonal(5)definesthecharacteristicsofEq.(1)asfollows: t±T(x)=const.
+The function X has the representation
+X(x)=
+x
+Z
+0
+a(X(ξ))dξ.
+Direct differentiation yields the following formulas:
+T
+′
+(x)=
+1
+a(x)
+, T
+′′
+(x)=− a
+′
+(x)
+a
+2
+(x)
+, (7)
+X
+′
+(x)=a(X(x)), X
+′′
+(x)=a
+′
+(X(x))a(X(x)). (8)
+Thus, if a∈C
+1
+(R), then T ∈C
+2
+(R) and X ∈C
+2
+(R).
+We will look for a solution u of problem (1), (2), and (4) having the form
+u(t,x)=
+s
+a(x)
+a(0)
+v(t,T(x)), (t,x)∈Q. (9)
+Taking into account (7) and (8), we substitute (9) into Eq. (2) and get
+∂
+2
+t
+v(t,x)−∂
+2
+x
+v(t,x)=
+s
+a(0)
+a(X(x))
+g(t,X(x))− − 1
+4
+v(t,x)
+ 
+a
+′
+(X(x))
+2
+−2a(X(x))a
+′′
+(X(x))
+ 
+=
+s
+a(0)
+a(X(x))
+g(t,X(x))− − 1
+4
+s
+a(0)
+a(X(x))
+u(t,X(x))
+ 
+a
+′
+(X(x))
+2
+−2a(X(x))a
+′′
+(X(x))
+ 
+, (t,x)∈Q. (10)
+The initial conditions for the function v are
+v(0,x)=
+s
+a(0)
+a(X(x))
+φ(X(x)), x∈R, (11)
+∂
+t
+v(0,x)=
+s
+a(0)
+a(X(x))
+ψ(X(x)), x∈R. (12)
+Electronic Journal: http://diffjournal.spbu.ru/ 83Differential Equations and Control Processes, N. 1, 2026
+We apply [12, Lemma 1] to problem (10)–(12) to obtain
+u(t,x)=
+p
+a(x)
+2
+ 
+φ(X(T(x)−t))
+p
+a(X(T(x)−t))
++
+φ(X(T(x)+t))
+p
+a(X(T(x)+t))
+!
++
++
+p
+a(x)
+2
+T(x)+t
+Z
+T(x)−t
+ψ(X(ξ))
+p
+a(X(ξ))
+dξ+
+p
+a(x)
+2
+t
+Z
+0
+dτ
+T(x)+t−τ Z
+T(x)−t+τ "
+g(τ,X(ξ))
+p
+a(X(ξ))
++
++
+u(τ,X(ξ))
+ 
+2a(X(ξ))a
+′′
+(X(ξ))−a
+′
+(X(ξ))
+2
+ 
+4
+p
+a(X(ξ))
+#
+dξ, (t,x)∈ Q. (13)
+Thus, we have proved the following assertion.
+Assertion 1. Let the conditions a ∈ C
+2
+(R), g ∈ C
+1
+(Q), φ ∈ C
+2
+(R), and
+ψ∈C
+1
+(R) be satisfied. Then a solution u∈C
+2
+(Q) to problem (1), (2), and (4)
+satisfies Eq. (13) in Q.
+3 Integro-differential equation
+We consider the integral equation
+u(t,x)=K[u](t,x)=
+p
+a(x)
+2
+× × 
+φ(X(T(x)−t))
+p
+a(X(T(x)−t))
++
+φ(X(T(x)+t))
+p
+a(X(T(x)+t))
+!
++
++
+p
+a(x)
+2
+T(x)+t
+Z
+T(x)−t
+ψ(X(ξ))
+p
+a(X(ξ))
+dξ+
+p
+a(x)
+2
+t
+Z
+0
+dτ
+T(x)+t−τ Z
+T(x)−t+τ Ψ(τ,X(ξ),
+u(τ,X(ξ)),∂
+t
+u(τ,X(ξ)),∂
+x
+u(τ,X(ξ)))dξ, (t,x)∈ Q. (14)
+where
+Ψ(t,x,u,u
+t
+,u
+x
+)=
+f(t,x,u,u
+t
+,u
+x
+)
+p
+a(x)
++
+u
+ 
+2a(x)a
+′′
+(x)−a
+′
+(x)
+2
+ 
+4
+p
+a(x)
+.
+Thefollowingtheoremontheequivalenceofthe“differential”and“integral”
+formulations of problem (1)–(2) holds.
+Electronic Journal: http://diffjournal.spbu.ru/ 84Differential Equations and Control Processes, N. 1, 2026
+Theorem 1. Let the conditions a∈ C
+2
+(R), f ∈ C
+2
+(Q×R), φ∈ C
+2
+(R), and
+ψ∈C
+1
+(R) be satisfied. The function u belongs to the class C
+2
+(Q) and satisfies
+Eq. (1) in Q and conditions (2) on the setR if and only if it is a continuously
+differentiable solution of Eq. (14) in Q.
+Proof. 1. Let the function u belong to the class C
+2
+(Q) and solve Eq. (1) with
+conditions (2). We seek a representation of the solution u of Eq. (1) prob-
+lem (1)–(2) in the form u=v+w, where v is a solution to the problem
+∂
+2
+t
+u(t,x)−a
+2
+(x)∂
+2
+x
+u(t,x)=0, (t,x)∈Q,
+u(0,x)=φ(x), ∂
+t
+u(0,x)=ψ(x), x∈R,
+and w is a solution to the equation
+∂
+2
+t
+w(t,x)−a
+2
+(x)∂
+2
+x
+w(t,x)=
+=f(t,x,(v+w)(t,x),∂
+t
+(v+w)(t,x),∂
+x
+(v+w)(t,x)), (t,x)∈Q,
+with conditions
+w(0,x)=∂
+t
+w(0,x)=0, x∈R.
+Assertion 1 allows us to write Eq. (14).
+2. Assume that representation (14) hold for the function u∈C
+1
+(Q). Then,
+by virtue of the smoothness conditions a∈C
+2
+(R), f ∈C
+2
+(Q×R), φ∈C
+2
+(R),
+andψ∈C
+1
+(R), similar to [5], it follows that the functionu belongs to the class
+C
+2
+(Q). We substitute representation (14) into Eq. (1) and conditions (2) and
+verify that the function u satisfies this equation in Q and these conditions in
+R.
+Before solving Eq. (14), we will study some properties of the operator K.
+By making the nondegenerate change of variables X(ξ)=s, we can rewrite
+K[u](t,x)=
+p
+a(x)
+2
+× × 
+φ(X(T(x)−t))
+p
+a(X(T(x)−t))
++
+φ(X(T(x)+t))
+p
+a(X(T(x)+t))
+!
++
++
+p
+a(x)
+2
+T(x)+t
+Z
+T(x)−t
+ψ(X(ξ))
+p
+a(X(ξ))
+dξ+
+p
+a(x)
+2
+t
+Z
+0
+dτ
+X(T(x)+t−τ)
+Z
+X(T(x)−t+τ)
+Φ(τ,s,
+u(τ,s),∂
+t
+u(τ,s),∂
+x
+u(τ,s))ds, (t,x)∈ Q. (15)
+Electronic Journal: http://diffjournal.spbu.ru/ 85Differential Equations and Control Processes, N. 1, 2026
+where
+Φ(t,x,u,u
+t
+,u
+x
+)=
+Ψ(t,x,u,u
+t
+,u
+x
+)
+a(x)
+.
+Now, we see that the operator K maps the space C
+1
+(Ω
+(t
+0
+,x
+0
+)
+) into the space
+C
+1
+(Ω
+(t
+0
+,x
+0
+)
+), where
+Ω (t
+0
+,x
+0
+)
+={(t,x):0≤t≤t
+0
+∧X(T(x
+0
+)−t
+0
++t)≤x≤X(T(x
+0
+)+t
+0
+−t)}
+Note that the set Ω (t
+0
+,x
+0
+)
+is the characteristic triangle of Eq. (1).
+At the same time Ω (t
+0
+,x
+0
+)
+⊆ Ω (t
+1
+,x
+1
+)
+if (t
+0
+,x
+0
+)∈ Ω (t
+1
+,x
+1
+)
+. It follows from the
+fact that the representation
+Ω (t
+0
+,x
+0
+)
+=
+[
+t∈[0,t
+0
+]
+{(t,x):T(x
+0
+)−t
+0
++t≤T(x)≤T(x
+0
+)+t
+0
+−t}
+holds and T is the strictly increasing function. Thus, since (n,0) ∈ Ω (n+1,0)
+,
+n ∈ N, we have Ω (n,0)
+⊂ Ω (n+1,0)
+. It implies Ω (1,0)
+⊂ Ω (2,0)
+⊂ Ω (3,0)
+⊂ ···.
+Moreover, we have
+∞
+[
+i=1
+Ω (i,0)
+=Q. (16)
+From the definition of the set Ω (t
+0
+,x
+0
+)
+, we deduce
+Ω (t
+0
+,x
+0
+)
+⊂B
+(t
+0
+,x
+0
+)
+:=[0,t
+0
+]×[X(T(x
+0
+)−t
+0
+),X(T(x
+0
+)+t
+0
+)].
+Now, we will solve Eq. (14) using the parameter continuation method [22,
+23] according to the scheme set forth in [24, 25, 26]. To be definite, we use the
+following norm in the space C
+1
+(Θ): where
+∥·∥
+C
+1
+(Θ)
+=∥·∥
+C(Θ)
++∥∂
+t
+·∥
+C(Θ)
++∥∂
+x
+·∥
+C(Θ)
+.
+We rewrite Eq. (14) in the operator form
+u(t,x)=J[u](t,x)+h(t,x), (17)
+where
+h(t,x)=
+p
+a(x)
+2
+ 
+φ(X(T(x)−t))
+p
+a(X(T(x)−t))
++
+φ(X(T(x)+t))
+p
+a(X(T(x)+t))
+!
++
++
+p
+a(x)
+2
+T(x)+t
+Z
+T(x)−t
+ψ(X(ξ))
+p
+a(X(ξ))
+dξ,
+Electronic Journal: http://diffjournal.spbu.ru/ 86Differential Equations and Control Processes, N. 1, 2026
+J[u](t,x)=
+p
+a(x)
+2
+t
+Z
+0
+dτ
+X(T(x)+t−τ)
+Z
+X(T(x)−t+τ)
+Φ(τ,ξ,
+u(τ,ξ),∂
+t
+u(τ,ξ),∂
+x
+u(τ,ξ))dξ, (t,x)∈ Q.
+For Eq. (17), we consider a family of equations with the parameter ε∈[0,1],
+u
+ε
+(t,x)−ε(J[u
+ε
+]−J[0])(t,x)=h(t,x)+J[0](t,x), (t,x)∈ Q. (18)
+It is easy to see that any solution u
+ε
+to Eq. (18) with ε = 1 is a solution to
+Eq. (17) and vice versa. Our goal is to solve Eq. (18) with ε = 1. To do this,
+we will use the parameter continuation method. First, we must show that the
+operator on the left-hand side of Eq. (18) satisfies the Lipschitz condition with
+some constant. Second, we must obtain an a priori estimate of a certain type.
+Assume that the function f satisfies the Lipschitz condition
+|f(t,x,u
+1
+,u
+2
+,u
+3
+)−f(t,x,z
+1
+,z
+2
+,z
+3
+)|≤L(t,x)
+3
+X
+i=1
+|u
+i
+−z
+i
+|, (19)
+where L∈C(Q). Then, the function Φ also satisfies the Lipschitz condition
+|Φ(t,x,u
+1
+,u
+2
+,u
+3
+)−Φ(t,x,z
+1
+,z
+2
+,z
+3
+)|≤L
+Φ (t,x)
+3
+X
+i=1
+|u
+i
+−z
+i
+|, (20)
+where
+L
+Φ (t,x)=
+L(t,x)
+a
+3/2
+(x)
++
+ 
+ 
+ 
+ 
+2a(x)a
+′′
+(x)−a
+′
+(x)
+2
+4a
+3/2
+(x)
+ 
+ 
+ 
+ 
+.
+Now, let’s estimate the difference|J[u
+1
+](t,x)−J[u
+2
+](t,x)|. We have
+|J[u
+1
+](t,x)−J[u
+2
+](t,x)|=
+ 
+ 
+ 
+ 
+ 
+p
+a(x)
+2
+t
+Z
+0
+dτ
+X(T(x)+t−τ)
+Z
+X(T(x)−t+τ)
+Φ(τ,ξ,u
+1
+(τ,ξ),
+∂
+t
+u
+1
+(τ,ξ),∂
+x
+u
+1
+(τ,ξ))dξ− p
+a(x)
+2
+t
+Z
+0
+dτ
+X(T(x)+t−τ)
+Z
+X(T(x)−t+τ)
+Φ(τ,ξ,
+u
+2
+(τ,ξ),∂
+t
+u
+2
+(τ,ξ),∂
+x
+u
+2
+(τ,ξ))dξ
+ 
+ 
+ 
+ 
+ 
+≤ p
+a(x)
+2
+× Electronic Journal: http://diffjournal.spbu.ru/ 87Differential Equations and Control Processes, N. 1, 2026
+× t
+Z
+0
+dτ
+X(T(x)+t−τ)
+Z
+X(T(x)−t+τ)
+ 
+ 
+Φ(τ,ξ,u
+1
+(τ,ξ),∂
+t
+u
+1
+(τ,ξ),∂
+x
+u
+1
+(τ,ξ))− −Φ(τ,ξ,u
+2
+(τ,ξ),∂
+t
+u
+2
+(τ,ξ),∂
+x
+u
+2
+(τ,ξ))
+ 
+ 
+dξ≤ ≤ p
+a(x)
+2
+t
+Z
+0
+dτ
+X(T(x)+t−τ)
+Z
+X(T(x)−t+τ)
+ 
+L
+Φ (τ,ξ)|U(τ,ξ)|+L
+Φ (τ,ξ)× ×|∂
+t
+U(τ,ξ)|+L
+Φ (τ,ξ)|∂
+x
+U(τ,ξ)|
+ 
+dξ, (21)
+where U =u
+1
+−u
+2
+. Estimate (21) imply
+|J[u
+1
+](t,x)−J[u
+2
+](t,x)|≤ p
+∥a∥
+C(Ω
+m
+)
+∥L
+Φ ∥
+C(Ω
+m
+)
+∥u
+1
+−u
+2
+∥
+C
+1
+(Ω
+m
+)
+µ(Ω
+m
+)
+2
+,
+(t,x)∈Ω m
+, m∈N, (22)
+where Ω m
+=Ω (m,0)
+and µ is the standard Lebesgue measure.
+Similarly, we derive the following estimates:
+∥∂
+t
+J[u
+1
+]−∂
+t
+J[u
+2
+]∥
+C(Ω
+m
+)
+≤  
+ 
+ 
+ 
+ 
+p
+a(x)
+2
+t
+Z
+0
+ 
+Φ(τ,X(T(x)+t−τ),
+u
+1
+(τ,X(T(x)+t−τ)),∂
+t
+u
+1
+(τ,X(T(x)+t−τ)),
+∂
+x
+u
+1
+(τ,X(T(x)+t−τ)))X
+′
+(T(x)+t−τ)+Φ(τ,X(T(x)−t+τ),
+u
+1
+(τ,X(T(x)−t+τ)),∂
+t
+u
+1
+(τ,X(T(x)−t+τ)),
+∂
+x
+u
+1
+(τ,X(T(x)−t+τ)))X
+′
+(T(x)−t+τ)
+ 
+dτ− − p
+a(x)
+2
+t
+Z
+0
+ 
+Φ(τ,X(T(x)+t−τ),
+u
+2
+(τ,X(T(x)+t−τ)),∂
+t
+u
+2
+(τ,X(T(x)+t−τ)),
+∂
+x
+u
+2
+(τ,X(T(x)+t−τ)))X
+′
+(T(x)+t−τ)+Φ(τ,X(T(x)−t+τ),
+u
+2
+(τ,X(T(x)−t+τ)),∂
+t
+u
+2
+(τ,X(T(x)−t+τ)),
+∂
+x
+u
+2
+(τ,X(T(x)−t+τ)))X
+′
+(T(x)−t+τ)
+ 
+dτ
+ 
+ 
+ 
+ 
+ 
+≤ p
+∥a∥
+C(Ω
+m
+)
+2
+× × t
+Z
+0
+ 
+ 
+X
+′
+(T(x)+t−τ)(L
+Φ (τ,T(x)+t−τ)|U(τ,T(x)+t−τ)|+
+Electronic Journal: http://diffjournal.spbu.ru/ 88Differential Equations and Control Processes, N. 1, 2026
++L
+Φ (τ,T(x)+t−τ)|∂
+t
+U(τ,T(x)+t−τ)|+L
+Φ (τ,T(x)+t−τ)× ×|∂
+x
+U(τ,T(x)+t−τ)|)
+ 
+ 
+dτ +
+p
+∥a∥
+C(Ω
+m
+)
+2
+× × t
+Z
+0
+ 
+ 
+X
+′
+(T(x)−t+τ)(L
+Φ (τ,T(x)−t+τ)|U(τ,T(x)−t+τ)|+
++L
+Φ (τ,T(x)−t+τ)|∂
+t
+U(τ,T(x)−t+τ)|+L
+Φ (τ,T(x)−t+τ)× ×|∂
+x
+U(τ,T(x)−t+τ)|)
+ 
+ 
+dτ ≤ ≤ q
+∥a∥
+C(Ω
+m
+)
+X
+(1)
+m
+T
+m
+∥L
+Φ ∥
+C(Ω
+m
+)
+∥u
+1
+−u
+2
+∥
+C
+1
+(Ω
+m
+)
+, (23)
+∥∂
+x
+J[u
+1
+]−∂
+x
+J[u
+2
+]∥
+C(Ω
+m
+)
+≤  
+ 
+ 
+ 
+ 
+p
+a(x)
+2
+t
+Z
+0
+ 
+Φ(τ,X(T(x)+t−τ),
+u
+1
+(τ,X(T(x)+t−τ)),∂
+t
+u
+1
+(τ,X(T(x)+t−τ)),
+∂
+x
+u
+1
+(τ,X(T(x)+t−τ)))T
+′
+(x)X
+′
+(T(x)+t−τ)+Φ(τ,X(T(x)−t+τ),
+u
+1
+(τ,X(T(x)−t+τ)),∂
+t
+u
+1
+(τ,X(T(x)−t+τ)),
+∂
+x
+u
+1
+(τ,X(T(x)−t+τ)))T
+′
+(x)X
+′
+(T(x)−t+τ)
+ 
+dτ− − p
+a(x)
+2
+t
+Z
+0
+ 
+Φ(τ,X(T(x)+t−τ),
+u
+2
+(τ,X(T(x)+t−τ)),∂
+t
+u
+2
+(τ,X(T(x)+t−τ)),
+∂
+x
+u
+2
+(τ,X(T(x)+t−τ)))T
+′
+(x)X
+′
+(T(x)+t−τ)+Φ(τ,X(T(x)−t+τ),
+u
+2
+(τ,X(T(x)−t+τ)),∂
+t
+u
+2
+(τ,X(T(x)−t+τ)),
+∂
+x
+u
+2
+(τ,X(T(x)−t+τ)))T
+′
+(x)X
+′
+(T(x)−t+τ)
+ 
+dτ +
+a
+′
+(x)
+4
+p
+a(x)
+× × t
+Z
+0
+dτ
+X(T(x)+t−τ)
+Z
+X(T(x)−t+τ)
+Φ(τ,ξ,u
+1
+(τ,ξ),∂
+t
+u
+1
+(τ,ξ),∂
+x
+u
+1
+(τ,ξ))dξ− a
+′
+(x)
+4
+p
+a(x)
+× × t
+Z
+0
+dτ
+X(T(x)+t−τ)
+Z
+X(T(x)−t+τ)
+Φ(τ,ξ,u
+2
+(τ,ξ),∂
+t
+u
+2
+(τ,ξ),∂
+x
+u
+2
+(τ,ξ))dξ
+ 
+ 
+ 
+ 
+ 
+≤ ≤  q
+∥a∥
+C(Ω m
+)
+X
+(1)
+m
+T
+m
+T
+(1)
+m
++∥A∥
+C(Ω
+m
+)
+µ(Ω
+m
+)
+ 
+∥L
+Φ ∥
+C(Ω
+m
+)
+∥u
+1
+−u
+2
+∥
+C
+1
+(Ω
+m
+)
+,
+(24)
+Electronic Journal: http://diffjournal.spbu.ru/ 89Differential Equations and Control Processes, N. 1, 2026
+where T
+m
+= max
+(t,x)∈Ω m
+t,
+X
+(1)
+m
+= max
+(t,x)∈Ω m
+max
+τ∈[0,t]
+|X
+′
+(T(x)+t−τ)|+ max
+(t,x)∈Ω m
+max
+τ∈[0,t]
+|X
+′
+(T(x)−t+τ)|,
+T
+(1)
+m
+= max
+(t,x)∈Ω m
+T
+′
+(x),A(x)=
+a
+′
+(x)
+4
+p
+a(x)
+. In this case, one has the inequality
+∥J[u
+1
+]−J[u
+2
+]∥
+C
+1
+(Ω
+m
+)
+≤L∥u
+1
+−u
+2
+∥
+C
+1
+(Ω
+m
+)
+where
+L=
+p
+∥a∥
+C(Ω
+m
+)
+∥L
+Φ ∥
+C(Ω
+m
+)
+µ(Ω
+m
+)
+2
++
+q
+∥a∥
+C(Ω
+m
+)
+X
+(1)
+m
+T
+m
+∥L
+Φ ∥
+C(Ω
+m
+)
++
++
+ q
+∥a∥
+C(Ω
+m
+)
+X
+(1)
+m
+T
+m
+T
+(1)
+m
++∥A∥
+C(Ω
+m
+)
+µ(Ω
+m
+)
+ 
+∥L
+Φ ∥
+C(Ω
+m
+)
+.
+It shows that the operator J: C
+1
+(Ω
+m
+)7→ C
+1
+(Ω
+m
+) satisfies the Lipschitz condi-
+tion with the constantL.
+The task now is to obtain an a priori estimate of the following form:
+∥u
+ε
+∥
+C
+1
+(Ω
+m
+)
+≤C∥h+J[0]∥
+C
+1
+(Ω
+m
+)
+(25)
+for all possible solutions u
+ε
+of Eq. (18) for any ε ∈ [0,1], where C is some
+constant independent of h, u
+ε
+, and ε.
+For a fixed m∈N, let us introduce a vector function
+v
+(m)
+:[X(−m),X(m)]∋t7→v
+(m)
+(t)=
+=(x7→(R
+m
+[u](t,x),R
+m
+[∂
+t
+u](t,x),R
+m
+[∂
+x
+u](t,x)))∈
+∈PC([X(−m),X(m)])×PC([X(−m),X(m)])×PC([X(−m),X(m)])
+where R
+m
+[q] is the extension by zero of the restriction q|
+Ω m
+of the function q,
+and PC(Ω) is a space of piecewise continuous functions on Ω.
+Thus, by virtue of Eq. (18), we have
+|u
+ε
+(t,x)|=|h(t,x)+J[0](t,x)+ε(J[u
+ε
+]−J[0])(t,x)|≤∥h+J[0]∥
+C(Ω
+m
+)
++
++|(J[u
+ε
+]−J[0])(t,x)|≤∥h+J[0]∥
+C(Ω
+m
+)
++
+p
+a(x)
+2
+× × t
+Z
+0
+dτ
+X(T(x)+t−τ)
+Z
+X(T(x)−t+τ)
+ 
+ 
+Φ(τ,ξ,u
+ε
+(τ,ξ),∂
+t
+u
+ε
+(τ,ξ),∂
+x
+u
+ε
+(τ,ξ))− Electronic Journal: http://diffjournal.spbu.ru/ 90Differential Equations and Control Processes, N. 1, 2026
+−Φ(τ,ξ,0,0,0)
+ 
+ 
+dξ≤∥h+J[0]∥
+C(Ω
+m
+)
++
+p
+a(x)
+2
+× × t
+Z
+0
+dτ
+X(T(x)+t−τ)
+Z
+X(T(x)−t+τ)
+L
+Φ (τ,ξ)(u
+ε
+(τ,ξ)+∂
+t
+u
+ε
+(τ,ξ)+
++∂
+x
+u
+ε
+(τ,ξ))dξ≤∥h+J[0]∥
+C(Ω
+m
+)
++
+q
+∥a∥
+C(Ω
+m
+)
+∥L
+Φ ∥
+C(Ω
+m
+)
+× × t
+Z
+0
+max
+0≤ξ≤τ ∥v
+(m)
+(ξ)∥dτ, (t,x)∈Ω m
+. (26)
+Estimate (26) yields
+∥v
+(m)
+1
+(t)∥≤∥h+J[0]∥
+C(Ω
+m
+)
++C
+(1,m)
+v
+t
+Z
+0
+max
+0≤ξ≤τ ∥v
+(m)
+(ξ)∥dτ, t∈[0,m]. (27)
+where C
+(1,m)
+v
+=∥L
+Φ ∥
+C(Ω
+m
+)
+p
+∥a∥
+C(Ω
+m
+)
+. In a similar way, we derive the estimates
+∥v
+(m)
+2
+(t)∥≤∥∂
+t
+(h+J[0])∥
+C(Ω
+m
+)
++C
+(2,m)
+v
+t
+Z
+0
+max
+0≤ξ≤τ ∥v
+(m)
+(ξ)∥dτ,
+t∈[0,m], (28)
+∥v
+(m)
+3
+(t)∥≤∥∂
+x
+(h+J[0])∥
+C(Ω
+m
+)
++C
+(3,m)
+v
+t
+Z
+0
+max
+0≤ξ≤τ ∥v
+(m)
+(ξ)∥dτ,
+t∈[0,m], (29)
+Estimates (27)–(29) imply
+∥v
+(m)
+(t)∥≤∥h+J[0]∥
+C
+1
+(Ω
+m
+)
++C
+(m)
+v
+t
+Z
+0
+max
+0≤ξ≤τ ∥v
+(m)
+(ξ)∥dτ, t∈[0,m],
+where C
+(m)
+v
+= C
+(1,m)
+v
++C
+(2,m)
+v
++C
+(3,m)
+v
+. Applying [19, p. 39, Lemma 1] to the
+previous inequality, we obtain
+∥v
+(m)
+(t)∥≤∥h+J[0]∥
+C
+1
+(Ω
+m
+)
+exp
+ 
+C
+(m)
+v
+m
+ 
+, t∈[0,m].
+The last inequality yields estimate (25) with C =exp
+ 
+C
+(m)
+v
+m
+ 
+.
+Electronic Journal: http://diffjournal.spbu.ru/ 91Differential Equations and Control Processes, N. 1, 2026
+Consider the operator A
+ε
+, which acts according to the formula
+A
+ε
+[u]=u(t,x)−ε(J[u]−J[0]).
+Note that the operator A
+ε
+is Lipschitz-continuous (this follows from the fact
+that the operator J is Lipschitz-continuous) and coercive in the sense of the
+paper [22] (the coercivity follows from the apriori estimate (25)). Furthermore,
+the function [0,1] ∋ ε 7→ A
+ε
+is continuous in the seminorm of the space of
+Lipschitz-continuous operators (25). Since the operator A
+ε
+with ε = 0 is con-
+tinuouslyinvertibleinthespaceC
+1
+(Ω
+m
+),thenbyvirtueof[22,Theorem4],itis
+invertibleforallε∈[0,1]inthesamespace. Thus,Eq.(18)issolvableforε=1
+onthesetΩ m
+intheclassofcontinuouslydifferentiablefunctions. Accordingto
+the construction, the solution is unique. It means that the equation (17) also
+has a unique solution in the space C
+1
+(Ω
+m
+) for any h∈C
+1
+(Ω
+m
+).
+Due to (16), a solution u
+(∞)
+to Eq. (17) in the space C
+1
+(Q) can be con-
+structed in the form u
+(∞)
+= lim
+m→∞
+u
+(m)
+, where u
+(m)
+is its solution on the set Ω m
+.
+As in [27], one can verify that the function u
+(∞)
+: Q 7→ R is indeed the only
+solution in the class C
+1
+(Q) to Eq. (17), which continuously depends on the
+right-hand side.
+Thus, we have proven the following theorem.
+Theorem 2. Let the conditions a∈ C
+2
+(R), f ∈ C
+1
+(Q×R), φ∈ C
+1
+(R), and
+ψ∈C(R) be satisfied, and let a function f satisfy the Lipschitz condition (19).
+Then a continuously differentiable solution to Eq. (14) exists, is unique, and
+depends continuously on the initial data.
+4 Global classical solution
+Theorem 3. Let the conditions a∈ C
+2
+(R), f ∈ C
+2
+(Q×R), φ∈ C
+2
+(R), and
+ψ∈C
+1
+(R) be satisfied, and let a function f satisfy the Lipschitz condition (19).
+Problem (1)–(2) has a unique solution defined by Eq. (14) in the class C
+2
+(Q).
+Proof. It follows from Theorems 1 and 2.
+5 Boundedness condition of the variable coefficient
+In the present paper, we have considered Eq. (1) provided
+a(x)≤a
+max
+(30)
+Electronic Journal: http://diffjournal.spbu.ru/ 92Differential Equations and Control Processes, N. 1, 2026
+for all x∈R. However, this condition can be replaced with the following
+±∞
+Z
+0
+ds
+a(s)
+=±∞. (31)
+Let us prove it. We used condition (30) only to show that integrals (6) diverge
+when proving the existence of the function X. Condition (31) means that
+integrals (6) diverge.
+6 Conclusions
+In this paper, we derive the necessary and sufficient conditions under which
+there exists a unique classical solution of the Cauchy problem in the upper
+half-plane for a mildly quasilinear wave equation with a variable coefficient.
+We also established the dependence of the smoothness of the solution on the
+smoothnessoftheinitialdata. Inthefuture,weplantousetheresultsobtained
+in this research to consider mixed problems for Eq. (1).
+Funding
+The authors’ research was supported by the Moscow Center for Fundamental
+and Applied Mathematics of M. V. Lomonosov Moscow State University under
+agreement no. 075-15-2025-345.
+References
+[1] J. Wang, J. Liu, G. Pan, A nonlinear vibration control of a string using
+the method based on its time-varying length, Machines, 10:11 (2022), 981.
+[2] M. Devaud, T. Hocquet, An essay on the vibrating string and its nonlin-
+earities, hal-01532358v2 (2017).
+[3] V.A. Sabelnikov, N.N. Petrova, A.N. Lipatnikov, Analytical and numeri-
+cal study of travelling waves using the Maxwell-Cattaneo relaxation model
+extended to reaction-advection-diffusion systems, Phys. Rev. E,94 (2016),
+042218.
+Electronic Journal: http://diffjournal.spbu.ru/ 93Differential Equations and Control Processes, N. 1, 2026
+[4] S.N. Baranovskaya, On classical solution of a mixed problem for a one-
+dimensional hyperbolic equation, Differ. Uravn., 27:6 (1991), 1071–1073.
+[5] V.I. Korzyuk, I.I. Stolyarchuk, Classical solution of the first mixed problem
+for second-order hyperbolic equation in curvilinear half-strip with variable
+coefficients, Diff. Equat., 53 (2017), 74–85.
+[6] W. Shi, K. Liu, A new analytical formula for the wave equations with
+variable coefficients, Applied Mathematics Letters, 84 (2018), 137–142.
+[7] N. Nakagawa, Y. Shintaro, Well-posedness of wave equation with a vari-
+able coefficient by method of characteristics, Journal of Applied Analysis
+& Computation, 13:5 (2023), 2408–2415.
+[8] P.-F. Yao, On the observability inequalities for exact controllability of wave
+equations with variable coefficients, SIAM Journal on Control and Opti-
+mization, 37:5 (1999), 1568–1599.
+[9] X. Fu, Z. Liao, Observability estimate for the wave equation with Vari-
+able coefficients, SIAM Journal on Control and Optimization,60:4 (2022),
+2344–2372.
+[10] J. Metcalfe, D. Tataru, Global parametrices and dispersive estimates for
+variable coefficient wave equations, Mathematische Annalen,353:4 (2011),
+1183–1237.
+[11] G. Todorova, B. Yordanov, Weighted L
+2
+-estimates for dissipative wave
+equations with variable coefficients, Journal of Differential Equations,
+246:12 (2009), 4497–4518.
+[12] V.I. Korzyuk, J.V. Rudzko, Classical solution of the initial-value problem
+for a one-dimensional quasilinear wave equation, Doklady of the National
+Academy of Sciences of Belarus, 67:1 (2023), 14–19.
+[13] V.I. Korzyuk, J.V. Rudzko, Classical solution of the Cauchy problem for a
+quasi-linear wave equation with discontinuous initial conditions, Doklady
+of the National Academy of Sciences of Belarus, 67:3 (2023), 183–188.
+[14] V.I. Korzyuk, J.V. Rudzko, Classical and mild solutions of the Cauchy
+problem for a mildly quasilinear wave equation with discontinuous and dis-
+tributional initial conditions, J. Math. Sci., 286:3 (2024), 535–559.
+Electronic Journal: http://diffjournal.spbu.ru/ 94Differential Equations and Control Processes, N. 1, 2026
+[15] C.D. Sogge, On local existence for nonlinear wave equations satisfying
+variable coefficient null conditions, Communications in Partial Differential
+Equations, 18:11 (1993), 1795–1821.
+[16] J. Li, S. Chai, Energy decay for a nonlinear wave equation of variable
+coefficients with acoustic boundary conditions and a time-varying delay in
+the boundary feedback, Nonlinear Analysis, 112 (2015), 105–117.
+[17] Y.-X. Liu, Uniform stabilization of a variable coefficient wave equation
+with nonlinear damping and acoustic boundary, ApplicableAnalysis,101:9
+(2020), 3347–3364.
+[18] L. Yan, L. Sun, General stability and exponential growth of nonlinear vari-
+able coefficient wave equation with logarithmic source and memory term,
+Mathematical Methods in the Applied Sciences, 46:1 (2023), 879–894.
+[19] B.L. Roˇ zdestvenski˘ ı, N.N. Janenko, Systems of Quasilinear Equations and
+Their Applications to Gas Dynamics, Am. Math. Soc., Providence, 1983.
+[20] M.I.Belishev,A.L.Pestov,ForwarddynamicalproblemfortheTimoshenko
+beam, J. Math. Sci., 167 (2010), 603–621.
+[21] A.V. Zurov, Effects associated with the coincidence of velocities in a two-
+velocity dynamical system, J. Math. Sci., 127:6 (2005), 2364–2373.
+[22] V.A. Trenogin, Global invertibility of nonlinear operators and the method
+of continuation with respect to a parameter,Dokl.Math.,54:2(1996),730–
+732.
+[23] V.A. Trenogin, Invertibility of nonlinear operators and parameter con-
+tinuation method, In: Ramm A.G. (ed.) Spectral and Scattering Theory,
+Springer, Boston, 1998, 189–197.
+[24] V.I. Korzyuk, J.V. Rudzko, Initial-boundary value problem with Dirichlet
+and Wentzell conditions for a mildly quasilinear biwave equation, Uchenye
+Zapiski Kazanskogo Universiteta. Seriya Fiziko-Matematicheskie Nauki,
+166:3 (2024), 377–394.
+[25] V.I. Korzyuk, J.V. Rudzko, Initial-boundary value problem for a third-
+order semilinear hyperbolic equation with the wave operator, Lobachevskii
+Journal of Mathematics, 45:11 (2024), 5569–5580.
+Electronic Journal: http://diffjournal.spbu.ru/ 95Differential Equations and Control Processes, N. 1, 2026
+[26] V.I. Korzyuk, J.V. Rudzko, Classical solution of a mixed problem with the
+Dirichlet and Neumann conditions for a nonlinear biwave equation, Itogi
+Nauki i Tekhniki. Sovrem. Mat. Pril. Temat. Obz., 235 (2024), 40–56.
+[27] V.I. Korzyuk, J.V. Rudzko, Classical solution to the Cauchy problem for
+a semilinear hyperbolic equation in the case of two independent variables,
+Russian Mathematics, 68:3 (2024), 41–52.
+Electronic Journal: http://diffjournal.spbu.ru/ 96
