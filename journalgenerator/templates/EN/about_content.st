@@ -16,11 +16,6 @@
   list
 </p>
 
-<p class="jounal-index">
-  All the articles are assigned with DOI
-</p>
-
-
 <p>
   <a href="https://www.scimagojr.com/journalsearch.php?q=21100902867&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank"><img border="0" src="https://www.scimagojr.com/journal_img.php?id=21100902867" alt="SCImago Journal &amp; Country Rank"  /></a>
 </p>

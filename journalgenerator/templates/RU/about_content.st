@@ -16,10 +16,6 @@
   (<a href="http://vak.ed.gov.ru">ВАК</a>)
 </p>
 
-<p class="jounal-index">
-  Статьям присваивается doi
-</p>
-
 <p>
   <a href="https://www.scimagojr.com/journalsearch.php?q=21100902867&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank"><img border="0" src="https://www.scimagojr.com/journal_img.php?id=21100902867" alt="SCImago Journal &amp; Country Rank"  /></a>
 </p>
