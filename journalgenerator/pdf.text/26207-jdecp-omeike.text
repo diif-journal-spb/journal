@@ -1,0 +1,829 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 2, 2026
+Electronic Journal,
+reg. N ΦC77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Delay differential equations
+Asymptotic stability of linear differential equations with diagonal
+delay via the Lyapunov-Krasovskii method
+Omeike Mathew Omonigho
+Department of Mathematics
+College of Physical Sciences
+Federal University of Agriculture
+Abeokuta Nigeria.
+e-mail: omeikemo@funaab.edu.ng
+Abstract. This paper investigates the asymptotic stability of the zero solution
+ofsomesystemoflineardelaydifferentialequationswithdiagonaldelay. Bycon-
+structing a Lyapunov functional and using the Lyapunov-Krasovskii method,
+sufficient criteria which ensure the asymptotic stability of the zero solution
+are established. The local asymptotic stability of a positive equilibrium of the
+Lotka-Volterra systems is investigated to demonstrate our results.
+Key words and phrases: Asymptotic stability; Delay differential equations;
+stability criteria; Diagonal delay; Lyapunov-Krasovskii method
+1. Introduction
+For over five decades, the study of stability of the zero solution of delay dif-
+ferential equations with discrete and distributed delays in various forms has
+received tremendous attention in literature. Many researchers have studied lin-
+ear and nonlinear delay differential equations of order one and higher orders,
+systemsoflineardifferentialequationswithdelay,andlinearintegro-differentialDifferential Equations and Control Processes, N. 2, 2026
+equation of Volterra type. Generally, the investigation of asymptotic stability
+of delay differential equations can be categorized into two distinct approaches;
+one approach deals with determining stability criteria or region of stability
+of the zero solution, while the other one is concerned with finding sufficient
+conditions for asymptotic stability of the zero solution. In order to obtain
+these conditions, authors have made use of the Lyapunov-Krasovskii functional
+method, the frequency domain method (see, e.g., [1,2,3,9,15,21,22,25,32] and
+the references cited therein), and the root analysis method (see, e.g. [4-8,10-
+14,16-20,23,24,26-31] and the references cited therein).
+It is important to study delay differential equations since they often appear
+in applications in physics and engineering through mathematical models (e.g.
+populationmodel,prey-predatormodels,neuralnetworkmodels,controltheory
+models, to mention a few, see e.g. [7, 20] and the references cited therein).
+Resently, Matsunaga [18] investigated a system of linear delay differential
+equations of the form:
+x
+′
+(t) = −ax(t−τ)−by(t),
+y
+′
+(t) = −cx(t)−ay(t−τ),
+(1)
+where a,b,c are real constants and τ a positive real constant, for the asymp-
+totic stability of the zero solution. The author [18] obtained the necessary
+and sufficient criteria for the asymptotic stability of the system (1) using the
+root analysis method by completely investigating the roots of the associated
+characteristic equation
+F(λ)≡λ 2
++2aλe
+−λτ +a
+2
+e
+−2λτ −bc = 0. (2)
+The author obtained certain conditions on a,b,c and τ for which the roots
+(λ =α+iβ) of Eq. (2) have a negative real part.
+Equations of the form (1) occur as the linearization of the population models
+of Lotka-Volterra type; for example, delayed prey-predator system in [29] and
+a delayed competitive system in [27]. Zhen and Ma [29] have considered a more
+general class (of system (1)) with distinct coefficients and distinct delays in
+each variable. In their investigation, they make use of the Lyapunov-Krasovskii
+method by constructing Lyapunov functionals to obtain sufficient conditions
+which guarantee the stability of the zero solution. But their results provide
+conditions which do not agree with Matsunaga [18] in application.
+Inthepresentinvestigation, wewillstudysystem(1)forasymptoticstabilityof
+Electronic Journal: http://diffjournal.spbu.ru/ 122Differential Equations and Control Processes, N. 2, 2026
+the zero solution using the Lyapunov-Krasovskii method, thereby constructing
+a more accurate Lyapunov functional (unlike in [29]) to obtain sufficient con-
+ditions which ensure asymptotic stability of the zero solution of system (1). In
+section 3, we will demonstrate how our result compare favorably with [18].
+2. Asymptotic stability
+Consider the system (1) in the form
+ 
+x(t)−a
+Z
+t
+t−τ x(s)ds
+ 
+′
+= −ax(t)−by(t),
+ 
+y(t)−a
+Z
+t
+t−τ y(s)ds
+ 
+′
+= −cx(t)−ay(t),
+(3)
+where a,b,c are real constants and τ is a positive constant.
+Let
+A(t) =x(t)−a
+Z
+t
+t−τ x(s)ds
+and
+B(t) =y(t)−a
+Z
+t
+t−τ y(s)ds.
+Theorem 1. Consider the system (1) (equivalently system (3)), with a,b,c,τ real positive constants. Assume that
+(i) a
+2
+−bc> 0
+(ii) 0<τ <a
+−1
+.
+Then the zero solution of system (1) (equivalently, system (3)) is asymptotically
+stable.
+Proof of Theorem 1. The proof of Theorem 1 depends on the Lyapunov
+functional W(t) =W(U)(t), which is defined for U(t) = (x(t),y(t)) as
+W(t) =W
+1
+(U)(t)+W
+2
+(U)(t) (4)
+Electronic Journal: http://diffjournal.spbu.ru/ 123Differential Equations and Control Processes, N. 2, 2026
+in which
+W
+1
+(U)(t) =
+ 
+2a
+b
+− c
+a
+ 
+A
+2
+(t)−2A(t)B(t)+
+ 
+b
+a
+ 
+B
+2
+(t)
++ λ Z
+t
+t−τ Z
+t
+s
+x
+2
+(θ)dθds+β Z
+t
+t−τ Z
+t
+s
+y
+2
+(θ)dθds
+(5)
+and
+W
+2
+(U)(t) =
+ 
+c
+a
+ 
+A
+2
+(t)−2A(t)B(t)+
+ 
+2a
+c
+− b
+a
+ 
+B
+2
+(t), (6)
+where λ and β are positive real constants that will be fixed to advantage later.
+To establish that (5) and (6) are positive-definite, we re-write W
+1
+(U)(t) and
+W
+2
+(U)(t) respectively, thus:
+W
+1
+(U)(t) =
+ 
+a
+b
+− c
+a
+ 
+A
+2
+(t)+
+ 
+r
+a
+b
+A(t)− r
+b
+a
+B(t)
+!
+2
++ λ Z
+t
+t−τ Z
+t
+s
+x
+2
+(θ)dθds+β Z
+t
+t−τ Z
+t
+s
+y
+2
+(θ)dθds,
+(7)
+and
+W
+2
+(U)(t) =
+ 
+a
+c
+− b
+a
+ 
+B
+2
+(t)+
+ r
+c
+a
+A(t)− r
+a
+c
+B(t)
+ 
+2
+.
+(8)
+Obviously,
+λ Z
+t
+t−τ Z
+t
+s
+x
+2
+(θ)dθds> 0,
+β Z
+t
+t−τ Z
+t
+s
+y
+2
+(θ)dθds> 0,
+hence W
+1
+(U)(t) and W
+2
+(U)(t) now given by (7) and (8) respectively, are
+positive-definite.
+Next,weobtainthederivativeofW(t)(in(4))alongthesolutionpathofsystem
+Electronic Journal: http://diffjournal.spbu.ru/ 124Differential Equations and Control Processes, N. 2, 2026
+(3) as
+W
+′
+(U)(t) = −4a
+ 
+a
+b
+− c
+a
+ 
+x
+2
+(t)−4a
+ 
+a
+c
+− b
+a
+ 
+y
+2
+(t)
++4a
+2
+ 
+a
+b
+− c
+a
+ 
+x(t)
+Z
+t
+t−τ x(s)ds+4a
+2
+ 
+a
+c
+− b
+a
+ 
+y(t)
+Z
+t
+t−τ y(s)ds
++λ  
+τx
+2
+(t)− Z
+t
+t−τ x
+2
+(s)ds
+ 
++β  
+τy
+2
+(t)− Z
+t
+t−τ y
+2
+(s)ds
+ 
+.
+Since
+x(t)
+Z
+t
+t−τ x(s)ds =
+Z
+t
+t−τ x(t)x(s)ds
+≤ 1
+2
+Z
+t
+t−τ x
+2
+(t)ds+
+1
+2
+Z
+t
+t−τ x
+2
+(s)ds
+=
+1
+2
+τx
+2
+(t)+
+1
+2
+Z
+t
+t−τ x
+2
+(s)ds
+and
+y(t)
+Z
+t
+t−τ y(s)ds =
+Z
+t
+t−τ y(t)y(s)ds
+≤ 1
+2
+Z
+t
+t−τ y
+2
+(t)ds+
+1
+2
+Z
+t
+t−τ y
+2
+(s)ds
+=
+1
+2
+τy
+2
+(t)+
+1
+2
+Z
+t
+t−τ y
+2
+(s)ds,
+Electronic Journal: http://diffjournal.spbu.ru/ 125Differential Equations and Control Processes, N. 2, 2026
+we must have that
+W
+′
+(U)(t) ≤ −4a
+ 
+a
+b
+− c
+a
+ 
+x
+2
+(t)−4a
+ 
+a
+c
+− b
+a
+ 
+y
+2
+(t)
++2a
+2
+ 
+a
+b
+− c
+a
+ 
+τx
+2
+(t)+2a
+2
+ 
+a
+c
+− b
+a
+ 
+τy
+2
+(t)
++2a
+2
+ 
+a
+b
+− c
+a
+ 
+Z
+t
+t−τ x
+2
+(s)ds+2a
+2
+ 
+a
+c
+− b
+a
+ Z
+t
+t−τ y
+2
+(s)ds
++λ  
+τx
+2
+(t)− Z
+t
+t−τ x
+2
+(s)ds
+ 
++β  
+τy
+2
+(t)− Z
+t
+t−τ y
+2
+(s)ds
+ 
+.
+Simplifying further, we get
+W
+′
+(t) ≤ −2
+ 
+2
+ 
+a
+2
+−bc
+b
+ 
+−  
+a(a
+2
+−bc)
+b
++
+1
+2
+λ  
+τ  
+x
+2
+(t)
+−2
+ 
+2
+ 
+a
+2
+−bc
+c
+ 
+−  
+a(a
+2
+−bc)
+c
++
+1
+2
+β  
+τ  
+y
+2
+(t)
++
+ 
+2a(a
+2
+−bc)
+b
+−λ  Z
+t
+t−τ x
+2
+(s)ds
++
+ 
+2a(a
+2
+−bc)
+c
+−β  Z
+t
+t−τ y
+2
+(s)ds.
+If we set λ =
+2a(a
+2
+−bc)
+b
+and β =
+2a(a
+2
+−bc)
+c
+in the last inequality, we get
+W
+′
+(t) ≤ −4
+ 
+(a
+2
+−bc)
+b
+− a(a
+2
+−bc)
+b
+τ  
+x
+2
+(t)
+−4
+ 
+(a
+2
+−bc)
+c
+− a(a
+2
+−bc)
+c
+τ  
+y
+2
+(t)
+≤ −γ 1
+x
+2
+(t)−γ 2
+y
+2
+(t), whenever τ <a
+−1
+.
+(9)
+Electronic Journal: http://diffjournal.spbu.ru/ 126Differential Equations and Control Processes, N. 2, 2026
+Denote γ = min{γ 1
+,γ 2
+}, then (9) leads to
+W(t)+γ Z
+t
+T
+[x
+2
+(s)+y
+2
+(s)]ds≤W(T) for t≥T,
+and this implies that x
+2
+(t)+y
+2
+(t)∈L
+1
+[T,∞).
+It is easy to see from (1) and U(t) = (x(t),y(t)) that x
+2
+(t)+y
+2
+(t) is uniformly
+continuous and then, using Babalat’s Lemma (See [9]), we can conclude that
+lim
+t→∞
+{x
+2
+(t)+y
+2
+(t)} = 0.
+Therefore the zero solution of (3) is asymptotically stable and this concludes
+the proof.
+3. Applications
+In this section, we investigate local stability of positive equilibrium of delayed
+Lotka-Volterra systems. The delayed competitive system
+x
+′
+(t) = x(t)[1−x(t−τ)−αy(t)],
+y
+′
+(t) = y(t)[1−αx(t)−y(t−τ)],
+(10)
+where α > 0 and τ > 0 are real constants have been studied for stability(See
+[18,29]). The system (10) has the unique positive equilibrium (x
+∗ ,y
+∗ ), where
+x
+∗ =y
+∗ =
+1
+α+1
+. When (10) is linearized around (x
+∗ ,y
+∗ ), we get
+x
+′
+(t) = − 1
+α+1
+x(t−τ)− α α+1
+y(t),
+y
+′
+(t) = − α α+1
+x(t)− 1
+α+1
+y(t−τ).
+(11)
+Itiswell-knownthatthelocalasymptoticstabilityofthezerosolutionofsystem
+(11) implies that the positive equilibrium (x
+∗ ,y
+∗ ) of (10) is locally asymptoti-
+cally stable [18, Corollary 3.1], with
+0<α< 1 and τ <
+1+α √
+1−α 2
+arccosα. (12)
+Comparing systems (1) and (11), it is clear that a =
+1
+α+1
+,b = c =
+α α+1
+.
+Therefore, applying Theorem 1 to system (11), we get
+Electronic Journal: http://diffjournal.spbu.ru/ 127Differential Equations and Control Processes, N. 2, 2026
+Corollary 1. If
+0<α< 1 and τ <α+1, (13)
+then the positive equilibrium (x
+∗ ,y
+∗ ) of system (10) is locally asymptotically sta-
+ble.
+In the limit α→ 1−, this estimate (i.e. (13)) agrees with (12), and it becomes
+worse asα→ 0+ : the difference tends to−1+
+π 2
+= 0.5707... For the considered
+example of α =
+1
+2
+, we have that τ < 1.5 and τ <
+π √
+3
+= 1.8137, respectively.
+Remark 1. In [29], Zhen and Ma have shown that under α =
+1
+2
+, the positive
+equilibrium (
+2
+3
+,
+2
+3
+) of (10) is locally asymptotically stable if 0 < τ <
+1
+2
+. These
+are much worse conditions in the particular case α = 0.5 in (11) compared to
+Corollary 1 (above) and [18, Corollary 3.1]. However, the authors were able to
+obtain a global stability result if τ < 0.257... in the particular case.
+Future Work. Our next paper will focus on the open problem announced
+by Matsunaga [18]. We shall apply the Lyapunov-Krasovskii method to obtain
+results.
+Acknowledgment. This author wishes to express his gratitude for referee’s
+useful comments.
+References
+[1] Abdurasid A.A., Aduloju K.D., Olutimo A.L., Omeike M. O., Stability of
+solutions of the sunflower equation, Proyecciones Journal of Mathematics 44
+(1) (2025) 134-145.
+[2] Afuwape A.U., Omeike M.O., On the stability and boundedness of solutions
+of a kind of third order delay differential equations, Applied Mathematics and
+Computation 200 (2008) 444-451.
+[3]AfuwapeA.U.,OmeikeM.O.,Stabilityandboundednessofsolutionsofakind
+ofthird-orderdelaydifferentialequations,Computational&AppliedMathemat-
+ics 29 (3) (2010) 329-342.
+[4] Baretta E., Kuang Y., Convergence results in a well-known predator-prey
+systems, J. Math. Anal. Appl. 204 (1996) 840-853.
+[5] Cooke K.L., Grossman Z., Discrete delay, distributed delay and stability
+switches, J. Math. Anal. Appl. 86 (1982) 592-627.
+[6]FreedmanH.I.,RaoV.S.H.,Stability criteria for a system involving two time
+delays, SIAM J. Appl. Math. 46 (1986) 552-560.
+Electronic Journal: http://diffjournal.spbu.ru/ 128Differential Equations and Control Processes, N. 2, 2026
+[7] Fukuda I., Kiri Y., Saito W., Ueda W., Stability criteria for the system of
+delay differential equations and its applications, Osaka J. Math. 59 (2022) 235-
+251.
+[8] Funakubo M., Hara T., Sakata S., On the uniform asymptotic stability for a
+linear integro-differential equation of Volterra type, J. Math. Anal. Appl. 324
+(2006) 1036-1049.
+[9] Gopalsamy K., Stability and Oscillations in Delay Differential Equations of
+Population Dynamics, Kluwer Academic, Dordrecht, The Netherlands, 1992.
+[10]HaraT.,SakataS.,An application of the Hurwitz theorem to the root analy-
+sis of the characteristic equation,AppliedMathematicsLetters24(2011)12-15.
+[11] Hata Y., Matsunaga H., Delay-dependent stability switches in a delaydif-
+ferential system, Discrete and Continuous Dynamical Systems-Series B 28 (9)
+4910-4936.
+[12] He X.-Z., Stability and delays in a predator-prey system, J. Math. Anal.
+Appl. 198 (1996) 355-370.
+[13] He X.-Z., The Lyapunov functionals for delay Lotka-Volterra-type models,
+SIAM J. Appl. Math. 58 (1998) 1222-1226.
+[14] Kiri Y., Ueda Y., Stability criteria for some system of delay differen-
+tial equations, Theory, Numerics and Applications of Hyperbolic Problems II,
+Springer Proceedings in Mathematics and Statistics 237.
+[15] Kuang Y., Delay Differential Equations with Applications in Population
+Dynamics, Academic Press, New York, 1993.
+[16] Liao X., Wang L., Yu L., Stability of Dynamical Systems, Elsevier, Lon-
+don.
+[17] Lu Z., Takeuchi Y., Permanence and global attractivity for competitive
+Lotka-Volterra system with delay, Nonlinear Anal. 22 (1994) 847-856.
+[18]MatsunagaH., Stability switches in a system of linear differential equations
+with diagonal delay, Applied Mathematics and Computation 212 (2009) 145-
+152.
+[19] May R.M., Time delay versus stability in population models with two or
+three tropics level, Ecology 54 (2) (1973) 315-325.
+[20] Qu M., Matsunaga H., Exact stability criteria for linear differential equa-
+tions with discrete and distributed delays, J. Math. Anal. Appl. 539 (2024) 15
+pages.
+[21] Sadek A.I., Stability and boundedness of a kind of third order delay differ-
+ential system, Appl. Math. Lett. 16 (2003) 657-662.
+[22] Smirnova V.B., Proskurnikov A.V., Iurii Zgoda, The sunflower equation:
+novel stability criteria, IFAC PapersOnline 54-17 (2021) 135-140.
+Electronic Journal: http://diffjournal.spbu.ru/ 129Differential Equations and Control Processes, N. 2, 2026
+[23]StepanG.,RetardedDynamicalSystems: StabilityandCharacteristicFunc-
+tions, Longman Sci. & Tech., UK, 1989.
+[24] Suzuki M., Matsunaga H., Stability criteria for a class of linear differential
+equations with off-diagonal delays, Discrete Contin. Dyn. Syst. 24 (4) (2009)
+1381-1391.
+[25] Tunc C., On the boundedness of solutions of third-order delay differential
+equations, Differential Equations, 44 (4) (2008) 464-472.
+[26] Wendi W., Uniform persistence in competition models, J. Biomath. 6 (2)
+(1991) 164-169.
+[27] Yan X., Li W., Hopf bifurcation and global periodic solutions in a delay
+predator-prey system, Appl. Math. Comput. 177 (2006) 427-445.
+[28] Li. Yongkun, Periodic solutions of N-species competition system with time
+delays, J. Math. Biol. 12 (1) (1997) 1-7.
+[29] Zhen J., Ma Z., Stability for a competitive Lotka-Volterra system with de-
+lays, Nonlinear Anal. 51 (2002) 1131-1142.
+[30] Zhien M., Stability of predation models with time delays, Appl. Anal. 22
+(1986) 169-192.
+[31] Zhien M., Mathematical Modeling and Research on the Population Ecology,
+AnHui Educational Press, Hefei, 1996.
+[32] Zhu Y., On stability, boundedness and existence of periodic solution of a
+kind of third-order nonlinear delay differential system, Ann. Diff. Eqs. 8 (2)
+(1992) 249-259.
+Electronic Journal: http://diffjournal.spbu.ru/ 130
