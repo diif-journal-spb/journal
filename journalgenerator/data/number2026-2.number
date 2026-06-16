@@ -62,6 +62,72 @@
             <author ref="n_2026_6_bosov" sort-key="1" />
         </authors>
     </article>
+
+    <article>
+        <articleInfo lang="EN" FirstPage="16" LastPage="27">
+            <pdf>26202-jdecp-duke.pdf</pdf>
+            <abstract>Predicting recurrence of differentiated thyroid cancer remains an important clinical challenge despite the high efficacy of modern treatment methods. Contemporary machine learning models, including ensemble algorithms (Random Forest, AdaBoost, etc.), demonstrate high accuracy; however, their decisions are difficult to interpret, which limits their practical application in clinical practice. This paper proposes an alternative approach based on anchor instances (precedents) and local metrics, enabling the construction of a minimal, fully interpretable model. Using an open dataset of 383 patients (108 recurrences), 40 anchors were first randomly selected (20 from each class), distances to these anchors were computed in the constructed local metrics, and then a compact solution was obtained via the JRip logical rule extraction algorithm: merely three rules based on distances to four anchor instances. The model achieves 97.13% accuracy under 10-fold stratified cross-validation, outperforming Random Forest (96.34% in our experiments and 95.7% reported in the literature), while maintaining complete transparency: each rule allows direct clinical interpretation. The proposed approach combines high accuracy, sparsity, interpretability, and conciseness, offering an effective tool for clinical decision support.</abstract>
+            <title>Interpretable Prediction of Thyroid Cancer Recurrence Based on Anchor Local Metrics and a Minimal Rule Set</title>
+            <keywords>
+                <word>anchor instances</word>
+                <word>ILMR</word>
+                <word>interpretable machine learning</word>
+                <word>local metrics</word>
+                <word>logical rule extraction</word>
+                <word>recurrence</word>
+                <word>thyroid cancer</word>
+            </keywords>
+            <references>
+                <reference>Siegel R. L. et al. Cancer statistics, 2023 //CA: a cancer journal for clinicians. - 2023. - Т. 73. - №. 1</reference>
+                <reference>Filetti S. et al. Thyroid cancer: ESMO Clinical Practice Guidelines for diagnosis, treatment and follow-up //Annals of Oncology. - 2019. - Т. 30. - №. 12. - С. 1856-1883</reference>
+                <reference>Ito Y., Onoda N., Okamoto T. The revised clinical practice guidelines on the management of thyroid tumors by the Japan Associations of Endocrine Surgeons: core questions and recommendations for treatments of thyroid cancer //Endocrine journal. - 2020. - Т. 67. - №. 7. - С. 669-717</reference>
+                <reference>Yasar S. Determination of possible biomarkers for predicting well-differentiated thyroid cancer recurrence by different ensemble machine learning methods. Mid Blac Sea J Health Sci. 2024; 10(3):255-265</reference>
+                <reference>Setiawan KE. Predicting recurrence in differentiated thyroid cancer: a comparative analysis of various machine learning models including ensemble methods with chi-squared feature selection. Commun Math Biol Neurosci 2024; 55: 1-29</reference>
+                <reference>Borzooei S. et al. Machine learning for risk stratification of thyroid cancer patients: a 15-year cohort study. Eur Arch Otorhinolaryngol. 2024; 281:2095-2104</reference>
+                <reference>Aamodt A., Plaza E. Case-based reasoning: Foundational issues, methodological variations, and system approaches //AI communications. - 1994. - Т. 7. - №. 1. - С. 39-59</reference>
+                <reference>Rosch E. Cognitive representations of semantic categories. J Exp Psychol Gen. 1975; 104(3):192-233</reference>
+                <reference>Duke V. A. Computer psychodiagnostics. - St. Petersburg: “Brotherhood”, 1994. - 364 p</reference>
+                <reference>Dyuk V. A. Context-dependent local metrics and a geometrical approach to the problem of knowledge formation // Izvestiya Rossiiskoi Akademii Nauk. Teoriya i Sistemy Upravleniya. - 1996. - № 5. - P. 36-44</reference>
+                <reference>Duke V. A. Data Processing on a PC: Examples. St. Petersburg: Piter, 1997. 240 p</reference>
+                <reference>Duke V. A. Latent knowledge extraction by methods of local geometry: development of expert system for keen appendicitis diagnostics // Proc. Intern. Conf. On Informatics and Control (ICI&amp;amp; C 97). - 1997. - P. 663-668</reference>
+                <reference>Lawson C. L., Hanson R. J. Solving least squares problems. - Society for Industrial and Applied Mathematics, 1995</reference>
+                <reference>Tseng P. Convergence of a block coordinate descent method for nondifferentiable minimization //Journal of optimization theory and applications. - 2001. - Т. 109. - №. 3. - С. 475-494</reference>
+            </references>
+        </articleInfo>
+        <articleInfo lang="RU" FirstPage="16" LastPage="27">
+            <pdf>26202-jdecp-duke.pdf</pdf>
+            <abstract>Прогноз рецидива дифференцированного рака щитовидной железы остаётся важной клинической задачей, несмотря на высокую эффективность современных методов лечения. Современные модели машинного обучения, включая ансамблевые алгоритмы (Random Forest, Adaboost и др.), демонстрируют высокую точность, однако их решения трудно интерпретировать, что ограничивает практическое применение в клинической практике. В работе предложен альтернативный подход, основанный на использовании якорных объектов (прецедентов) и локальных метрик, позволяющий построить минимальную, полностью интерпретируемую модель. На открытой выборке из 383 пациентов (108 рецидивов) сначала были случайным образом отобраны 40 якорей (по 20 из каждого класса), вычислены расстояния до них в построенных локальных метриках, а затем с помощью алгоритма извлечения логических правил JRip получено компактное решение: всего три правила на основе расстояний до четырёх якорных объектов. Модель достигает 97,13 % точности при 10-кратной стратифицированной кросс-валидации, превосходя Random Forest (96,34 % в наших экспериментах и 95,7 % в литературе), при этом сохраняя полную прозрачность: каждое правило допускает прямую клиническую интерпретацию.</abstract>
+            <title>Интерпретируемый прогноз рецидива рака щитовидной железы на основе якорных локальных метрик и минимального набора правил</title>
+            <keywords>
+                <word>ILMR</word>
+                <word>извлечение логических правил</word>
+                <word>интерпретируемое машинное обучение</word>
+                <word>локальные метрики</word>
+                <word>рак щитовидной железы</word>
+                <word>рецидив</word>
+                <word>якорные прецеденты</word>
+            </keywords>
+            <references>
+                <reference>Siegel R. L. et al. Cancer statistics, 2023 //CA: a cancer journal for clinicians. - 2023. - Т. 73. - №. 1</reference>
+                <reference>Filetti S. et al. Thyroid cancer: ESMO Clinical Practice Guidelines for diagnosis, treatment and follow-up //Annals of Oncology. - 2019. - Т. 30. - №. 12. - С. 1856-1883</reference>
+                <reference>Ito Y., Onoda N., Okamoto T. The revised clinical practice guidelines on the management of thyroid tumors by the Japan Associations of Endocrine Surgeons: core questions and recommendations for treatments of thyroid cancer //Endocrine journal. - 2020. - Т. 67. - №. 7. - С. 669-717</reference>
+                <reference>Yasar S. Determination of possible biomarkers for predicting well-differentiated thyroid cancer recurrence by different ensemble machine learning methods. Mid Blac Sea J Health Sci. 2024; 10(3):255-265</reference>
+                <reference>Setiawan KE. Predicting recurrence in differentiated thyroid cancer: a comparative analysis of various machine learning models including ensemble methods with chi-squared feature selection. Commun Math Biol Neurosci 2024; 55: 1-29</reference>
+                <reference>Borzooei S. et al. Machine learning for risk stratification of thyroid cancer patients: a 15-year cohort study. Eur Arch Otorhinolaryngol. 2024; 281:2095-2104</reference>
+                <reference>Aamodt A., Plaza E. Case-based reasoning: Foundational issues, methodological variations, and system approaches //AI communications. - 1994. - Т. 7. - №. 1. - С. 39-59</reference>
+                <reference>Rosch E. Cognitive representations of semantic categories. J Exp Psychol Gen. 1975; 104(3):192-233</reference>
+                <reference>Дюк В. А. Компьютерная психодиагностика. - СПб: Братство. - 1994. - 364 с</reference>
+                <reference>Dyuk V. A. Context-dependent local metrics and a geometrical approach to the problem of knowledge formation // Izvestiya Rossiiskoi Akademii Nauk. Teoriya i Sistemy Upravleniya. - 1996. - № 5. - P. 36-44</reference>
+                <reference>Дюк В. А. Обработка данных на ПК в примерах. - СПб: &amp;quot; Питер&amp;quot;, 1997. - 240 с</reference>
+                <reference>Duke V. A. Latent knowledge extraction by methods of local geometry: development of expert system for keen appendicitis diagnostics // Proc. Intern. Conf. On Informatics and Control (ICI&amp;amp; C 97). - 1997. - P. 663-668</reference>
+                <reference>Lawson C. L., Hanson R. J. Solving least squares problems. - Society for Industrial and Applied Mathematics, 1995</reference>
+                <reference>Tseng P. Convergence of a block coordinate descent method for nondifferentiable minimization //Journal of optimization theory and applications. - 2001. - Т. 109. - №. 3. - С. 475-494</reference>
+            </references>
+        </articleInfo>
+        <authors>
+            <author ref="n_2026_6_diuk" sort-key="1" />
+        </authors>
+    </article>
     
     
     
