@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<number year="2026" number="2">
+    <!-- русский -->
+    <article>
+        <articleInfo lang="EN" FirstPage="1" LastPage="15">
+            <pdf>26201-jdecp-bosov.pdf</pdf>
+            <abstract>For a standard state stabilization problem of a linear stochastic differential system whose drift evolves in a direction determined by an independent Markov chain, a formulation with integer-valued constraints on the admissible control inputs is investigated. The stabilization objective is specified by a general quadratic functional. Cases with full information (the state of the chain is known) and with indirect observations (the system state serves as an indirect observation of the unknown chain state) are considered. In contrast to the solved unconstrained problem, the conditions for the existence of an optimal solution are not satisfied for the вЂњinteger-valuedвЂќ formulation. The task is to find and implement an Оµ-optimal control. It is shown that such a control is obtained by discretizing the optimal solution of the unconstrained problem and applying mixed-integer nonlinear programming. The implementation of Оµ-optimal control, due to the stochastic nature of the problem and the possibility of an unbounded number of switchings, may require excessive computational effort. A practically implementable approximation is obtained by a relaxation method: it is computed as the result of an integer-valued transformation of the optimal control in the unconstrained problem. Three variants of such transformations are proposed. A numerical experiment based on a model of the dynamic evolution of the position of a simple mechanical actuator is carried out. The computational results confirm the applicability of the proposed solutions with respect to the stabilization objective and also allow a comparison of relaxation strategies depending on the ''cost'' of the control input.</abstract>
+            <title>Trajectory Stabilization of Linear Systems with Jump Drift Under Discrete Control Constraints</title>
+            <keywords>
+                <word>dynamic programming</word>
+                <word>feedback control</word>
+                <word>linear system stabilization</word>
+                <word>mechanical drive</word>
+                <word>mixed-integer nonlinear programming</word>
+                <word>quadratic performance functional</word>
+                <word>relaxation method</word>
+                <word>Wonham filter</word>
+            </keywords>
+            <references>
+                <reference>Yong, J., and Zhou, X. Y. Stochastic controls: Hamiltonian systems and HJB equations (Vol. 43). Springer Science &amp; Business Media, 1999. 439 p</reference>
+                <reference>Fleming, W. H., and Soner H. M. Controlled Markov processes and viscosity solutions. New York, NY: Springer New York, 2006. 429 p</reference>
+                <reference>Belotti, P., Kirches, C., Leyffer, S., Linderoth, J., Luedtke, J., and Mahajan, A. Mixed integer nonlinear optimization. Acta Numerica, vol. 22. p. 1-131, 2013. DOI: 10. 1017/S0962492913000032</reference>
+                <reference>Sahinidis, N. V. Mixed-integer nonlinear programming 2018. Optimization and Engineering, vol. 20, p. 301-306, 2019. DOI: 10. 1007/s11081-019-09438-1</reference>
+                <reference>Pontiyagin, L. S., Boltyanski, B., Gamkrelidze, R., and Michtchenko, E. The Mathematical Theory of Optimal Processes. New York: Interscience, 1962 360 p</reference>
+                <reference>Bellman, R. E. Dynamic programming. Princeton: University Press, 1957. 340 p</reference>
+                <reference>Wonham, W. M. Some applications of stochastic differential equations to optimal nonlinear filtering. SIAM Journal on Control, vol. 2, no. 3. p. 347-369, 1965</reference>
+                <reference>Bosov, A. V. Linear output control of Markov chain by square criterion. Informatika i ee primenenijaвЂ”Inform. Appl., vol. 15, no. 2, p. 3-11, 2021. DOI: 10. 14357/19922264210201</reference>
+                <reference>Bosov, A. V. Linear output control of Markov chain by square criterion. РЎomplete information case. Informatika i ee primenenija--Inform. Appl. , vol. 16, no. 2, p. 19-26, 2022. DOI: 10. 14357/19922264220203</reference>
+                <reference>Bosov, A. V. Stabilization and Trajectory Tracking of Linear System with Jumping Drift. Automation and Remote Control, vol. 83, no. 4, p. 520-535, 2022. DOI: 10. 1134/S0005117922040026</reference>
+                <reference>Bregman, L. M. The relaxation method of finding the common point of convex sets and its application to the solution of problems in convex programming. USSR Computational Mathematics and Mathematical Physics, vol. 7, no. 3, p. 200-217, 1967. DOI: 10. 1016/0041-5553(67)90040-7</reference>
+                <reference>Roubicek, T. Relaxation in Optimization Theory and Variational Calculus. De Gruyter Series in Nonlinear Analysis and Applications, vol. 4, 2nd ed. Berlin: Walter de Gruyter GmbH, 2020. 581 p</reference>
+                <reference>Grossmann, I. E., and Sargent, R. W. H. Optimum design of multipurpose chemical plants. Industrial &amp; Engineering Chemistry Process Design and Development, vol. 18, no. 2, p. 343-348, 1979</reference>
+                <reference>Sager, S. Numerical methods for mixed-integer optimal control problems. Tonning: Der Andere Verlag, 2005. 219 p</reference>
+                <reference>Sager, S. A Benchmark Library of Mixed-Integer Optimal Control Problems. In: Lee J., Leyffer S. (eds) Mixed Integer Nonlinear Programming, IMA Volumes in Mathematics and its Applications, New York, NY: Springer, vol. 154, p. 631-651, 2012. DOI: 10. 1007/978-1-4614-1927-3_22</reference>
+                <reference>Burgschweiger, J., Gnadig, B., and Steinbach M. C. Optimization models for operative planning in drinking water networks. Optimization and Engineering, vol. 10, p. 43-73, 2009. DOI: 10. 1007/s11081-008-9040-8</reference>
+                <reference>Bragalli, C., D'Ambrosio, C., Lee, J., Lodi, A., and Toth, P. On the optimal design of water distribution networks: A practical MINLP approach. Optimization and Engineering, vol. 13, p. 219-246, 2012. DOI: 10. 1007/s11081-011-9141-7</reference>
+                <reference>Micocci, D., Bragalli, C., Toth, E., Wechsler, T., and Zappa, M. Hybridization of an Alpine pumped-storage hydropower plant with floating solar photovoltaics: a study from the water resource perspective. Renewable Energy, art. 123530, 2025, DOI: 10. 1016/j. renene. 2025. 123530</reference>
+                <reference>De Wolf, D., and Smeers, Y. The Gas Transmission Problem Solved by an Extension of the Simplex Algorithm. Management Science, vol. 46, no. 11, p. 1454-1465, 2000. DOI: 10. 1287/mnsc. 46. 11. 1454. 12087</reference>
+                <reference>Martin, A., Moller, M., and Moritz, S. Mixed integer models for the stationary case of gas network optimization. Mathematical Programming, vol. 105, no. 2, p. 563-582, 2006. DOI: 10. 1007/s10107-005-0665-5</reference>
+                <reference>Rios-Mercado, R. Z. Metaheuristics for Natural Gas Pipeline Network Optimization. In: Handbook of Heuristics, Springer, Cham, p. 1-25, 2025. DOI: 10. 1007/978-3-319-07153-4_51-2</reference>
+                <reference>Chowdu, A., Nesbitt, P., Brickey, A., and Newman, A. M. Operations research in underground mine planning: A review. INFORMS Journal on Applied Analytics, vol. 52, no. 2., p. 109-132, 2022. DOI: 10. 1287/inte. 2021. 1087</reference>
+                <reference>Sotoudeh, F., Nehring, M., Kizil, M., Knights, P., and Mousavi, A. Production scheduling optimisation for sublevel stoping mines using mathematical programming: A review of literature and future directions. Resources Policy, vol. 68, art. 101809, 2020. DOI: 10. 1016/j. resourpol. 2020. 101809</reference>
+                <reference>Alayande, A. S., Jimoh, A. A., and Yusuff, A. A. Approaches for solving modern power system problemsвЂ”a review. Proc. 2017 IEEE AFRICON, p. 1214-1219, 2017. DOI: 10. 1109/AFRCON. 2017. 8095655</reference>
+                <reference>Payahou, S., Karimi, M., and Pirayesh, A. Robust transmission expansion planning considering uncertainty in generation expansion. Electrical Engineering, p. 1-15, 2025. DOI: 10. 1007/s00202-025-03063-1</reference>
+                <reference>Goldberg, N., Leyffer, S., and Safro, I. Optimal response to epidemics and cyber attacks in networks. Networks, vol. 66, no. 2, p. 145-158, 2015. DOI: 10. 1002/net. 21619</reference>
+                <reference>Altunay, M., Leyffer, S., Linderoth, J. T., and Xie, Z. Optimal response to attacks on the open science grid. Computer Networks, vol. 55, no. 1, P. 61-73, 2011. DOI: 10. 1016/j. comnet. 2010. 07. 012</reference>
+                <reference>Bhatia, R., Segall, A., and Zussman G. Analysis of bandwidth allocation algorithms for wireless personal area networks. Wireless Networks, vol. 12, p. 589-603, 2006. DOI: 10. 1007/s11276-006-6537-y</reference>
+                <reference>Sheikh, W., and Ghafoor, A. An optimal bandwidth allocation and data droppage scheme for differentiated services in a wireless network. Wireless Communications and Mobile Computing, vol. 10, no. 6, p. 733-747, 2010. DOI: 10. 1002/wcm. 779</reference>
+                <reference>Costa-Montenegro, E., Gonzalez-Castano, F. J., RodrГ­guez-HernГЎndez, P. S., and Burguillo-Rial, J. C. Nonlinear Optimization of IEEE 802. 11 Mesh Networks. In: Shi Y. et al. (eds) Computational Science - ICCS 2007, Lecture Notes in Computer Science, Berlin, Heidelberg: Springer, vol. 4490, p. 466-473, 2007. DOI: 10. 1007/978-3-540-72590-9_63</reference>
+                <reference>Burer, S., and Letchford A. N. Non-convex mixed-integer nonlinear programming: A survey. Surveys in Operations Research and Management Science, vol. 17, no. 2, p. 97-106, 2012. DOI: 10. 1016/j. sorms. 2012. 08. 001</reference>
+                <reference>D'Ambrosio, C., and Lodi, A. Mixed integer nonlinear programming tools: an updated practical overview. Annals of Operations Research, vol. 204, no. 1, p. 301-320, 2013 DOI: 10. 1007/s10479-012-1272-5</reference>
+                <reference>Jaber, A., Younes, R., Lafon, P., and Khoder, J. A review on multi-objective mixed-integer non-linear optimization programming methods. Engineering, vol. 5, no. 3, p. 1961-1979, 2024. DOI: 10. 3390/eng5030104</reference>
+                <reference>Fleming, W. H., and Rishel, R. W. Deterministic and Stochastic Optimal Control. New York: Springer-Verlag, 1975. 222 p</reference>
+                <reference>Bortakovsky, A. S. The necessary conditions for optimal hybrid systems of variable dimensions. J. Comput. Syst. Sci. Int., no. 1, p. 28-40, 2021. DOI: 10. 31857/S0002338821060056</reference>
+                <reference>Fuller, A. T. Optimizatsiya releinykh sistem regulirovaniya po razlichnym kriteriyam kachestva. Trudy I kongressa IFAC, 2. Moscow: Izd-vo AN SSSR, p. 584-605, 1961</reference>
+                <reference>Sukhnin, B. V., and Surkov, V. V. Fenomen Fullera v teorii i praktike optimal'nogo upravleniya. J. Advanced in Technical Science, vol. 2, iss. 23, p. 94-99, 2021. DOI: 10. 26160/2474-5901-2021-23-94-99</reference>
+                <reference>Chyba, M., and Haberkorn, T. Autonomous Underwater Vehicles: Singular Extremals and Chattering. Systems, Control, Modeling and Optimization (CSMO 2005), IFIP International Federation for Information Processing ser., Boston, MA, USA: Springer, vol. 202, p. 103-113, 2006. DOI: 10. 1007/0-387-33882-9_10</reference>
+                <reference>Borisov, A. V. Numerical schemes of Markov jump process filtering given discretized observations II: Additive noise case. Informatika i ee primenenijaвЂ”Inform. Appl., vol. 14, no. 1, p. 17-23, 2020. DOI: 10. 14357/19922264200103</reference>
+            </references>
+        </articleInfo>
+        <authors>
+            <author ref="n_2026_6_bosov" sort-key="1" />
+        </authors>
+    </article>
+    
+    
+    
+</number>

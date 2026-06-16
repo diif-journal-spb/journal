@@ -1,0 +1,1103 @@
+﻿DIFFERENTIAL EQUATIONS 
+AND 
+CONTROL PROCESSES 
+N. 2, 2026 
+Electronic Journal, 
+reg. № ФС77-39410 at 15.04.2010 
+ISSN 1817-2172 
+ 
+http://diffjournal.spbu.ru/ 
+e-mail: jodiff@mail.ru 
+ 
+ 
+ 
+Optimal control 
+ 
+ 
+Trajectory Stabilization of Linear Systems with Jump Drift under 
+Discrete Control Constraints 
+ 
+Bosov А.V
+1,*
+ 
+ 
+1
+Federal Research Center «Computer Science and Control» of the Russian Academy of Sciences,  
+ 
+*
+ABosov@frccsc.ru 
+ 
+Abstract. For a standard state stabilization problem of a linear stochastic differential system whose 
+drift evolves in a direction determined by an independent Markov chain, a formulation with integer-
+valued constraints on the admissible control inputs is investigated. The stabilization objective is 
+specified by a general quadratic functional. Cases with full information (the state of the chain is 
+known) and with indirect observations (the system state serves as an indirect observation of the 
+unknown chain state) are considered. In contrast to the solved unconstrained problem, the 
+conditions for the existence of an optimal solution are not satisfied for the “integer-valued” 
+formulation. The task is to find and implement an ε-optimal control. It is shown that such a control 
+is obtained by discretizing the optimal solution of the unconstrained problem and applying mixed-
+integer nonlinear programming. The implementation of ε-optimal control, due to the stochastic 
+nature of the problem and the possibility of an unbounded number of switchings, may require 
+excessive computational effort. A practically implementable approximation is obtained by a 
+relaxation method: it is computed as the result of an integer-valued transformation of the optimal 
+control in the unconstrained problem. Three variants of such transformations are proposed. A 
+numerical experiment based on a model of the dynamic evolution of the position of a simple 
+mechanical actuator is carried out. The computational results confirm the applicability of the 
+proposed solutions with respect to the stabilization objective and also allow a comparison of 
+relaxation strategies depending on the “cost” of the control input. 
+ 
+Keywords: linear system stabilization; quadratic performance functional; dynamic programming; 
+feedback control; Wonham filter; mixed-integer nonlinear programming; relaxation method; 
+mechanical drive. 
+ 
+ Differential equations and control processes, N. 2, 2026 
+ 
+        Electronic Journal: http://diffjournal.spbu.ru      2 
+1. Introduction 
+ 
+A large number of problems in scientific, technical, engineering, financial, and even humanitarian 
+applications can be reduced to formulations of optimal control of the state of a dynamical system. 
+Stochastic models describing uncertainties of a random nature possess certain technical features related to 
+differentiation and the interpretation of boundedness [1,2]. In many formulations, these nuances, when 
+searching for an effective solution method, lead to dynamic programming and the Bellman equation, the 
+practical solution of which, as a rule, is possible only in the absence of constraints on the values of the 
+control input. Constraints on the values of control inputs may include requirements on the finiteness of 
+second moments of random functions, including the control itself; however, formal geometric constraints 
+characteristic of deterministic formulations are usually absent. There exists, however, a small but 
+deserving-of-separate-attention class of problems that has special properties in this respect. These are 
+problems in which there are constraints on the values of the control inputs consisting in requirements of 
+their discreteness, that is, requirements of finiteness or countability of the set of admissible controls [3]. 
+In typical optimization formulations, methods of mixed-integer nonlinear programming [4] (mixed-
+integer nonlinear programming, MINP) are used quite successfully to solve problems with discrete, more 
+precisely, “integer-valued,” constraints. These methods combine intelligent enumeration in spaces with 
+integer constraints, and therefore have combinatorial complexity, with methods of nonlinear optimization. 
+In the control case, these include the maximum principle [5] (traditionally more effective in deterministic 
+formulations) and the already mentioned dynamic programming [6] (more successful in stochastic 
+formulations). In general, problems in which the constraints on the optimal control consist in the fact that 
+the state, measurements, and/or control take integer values become significantly more complex. These are 
+mixed problems that involve both optimal control and integer optimization. 
+It should be noted that, from a formal point of view, the mixed type of problems does not introduce 
+anything fundamentally new. The questions that are usual for optimal control remain in the foreground: 
+whether the problem is convex and whether optimality criteria can be applied; if the problem is 
+nonconvex, by what methods it can be made convex and transformed into a solvable optimization 
+problem. Issues of integer optimization arise in the background; they are not of a fundamental nature, and 
+their complexity is rather computational. Integer optimization is the selection from a finite or countable set 
+of alternatives, that is, enumeration and NP-hard problems. When the number of alternatives is large and 
+complete enumeration is impossible, numerous and highly diverse heuristic approaches are successfully 
+applied, allowing infeasible optimal solutions of complete enumeration to be transformed into the domain 
+of searching for acceptable, practically implementable approximations. General information on this topic 
+is well reflected in the survey [3]. 
+The MINP problem addressed in this paper belongs to the field of stochastic optimal control. The 
+application of integer programming in this area is not very typical. More often, researchers solve 
+deterministic problems in which the optimal control and the optimal trajectory exist and are specified, or at 
+least approximated, by ordinary functions rather than probability distributions. The control problem under 
+consideration consists in stabilizing a linear system about a trajectory generated by a Markov chain, that is, 
+drifting in jumpwise changing directions. In addition, the system state is affected by additive Gaussian 
+noise, so that the target position must also be estimated from an indirect noisy measurement. The solution 
+is provided by 1) a quadratic functional defining the stabilization objective as the mean square deviation of 
+the system state vector from the target Markov trajectory, 2) the Wonham filter [7], which forms an 
+optimal estimate of the chain, and 3) the separation principle, which reduces the problem to a full-
+information formulation and to the solution of the Bellman equation. This solution has been studied in 
+detail in [8–10], and in this paper an additional integer-valued constraint is imposed on the control. We 
+note the logical consistency of such a formulation: the integer-valued nature is dictated by the target 
+trajectory—a piecewise-constant function taking a finite number of values “assigned” by the state index of 
+the discrete Markov chain. Since the solution without integer constraints is available, the questions under 
+study include the fundamental possibility of stabilizing the system with integer-valued control, the 
+existence of a solution, a comparison of its efficiency with control that does not have such constraints, and 
+methods for the practical implementation of the stabilization strategy. Differential equations and control processes, N. 2, 2026 
+ 
+        Electronic Journal: http://diffjournal.spbu.ru      3 
+Due to the stochastic nature of the problem, the use of most MINP methods does not appear to be 
+feasible. The only practically promising approach turns out to be the relaxation method (relaxing 
+integrality). Its idea is to first abandon the integer constraints and solve the optimization problem over a 
+broader class, and then adapt the obtained solution to the integer constraints [11,12]. This approach is also 
+advantageous in that it allows one to very conveniently assess possible losses due to approximation, since 
+a “lower” bound is obtained automatically when solving the optimization problem with removed (relaxed) 
+constraints. 
+Concluding the introductory part, we note that the idea of using integer constraints is not new and is 
+indeed characteristic of a fairly wide range of applications. A large field of linear integer programming 
+should be mentioned separately. This special, very broad class of problems has no direct relation to the 
+subject of the present paper. For nonlinear models, one of the oldest examples of MINP belongs to 
+chemical engineering and models the design of a multiproduct batch plant [13]. The most well-known 
+example involving dynamics is the control of metro operation [14,15]. Its importance lies in the fact that it 
+is a control problem that is dynamic and nonlinear. In this problem there are differential equations and 
+classical optimization by means of the calculus of variations. Similar examples can readily be found in a 
+wide variety of fields, for example, in the design of water supply systems [16–18] and gas supply systems 
+[19–21], in the control of ventilation systems [22,23], and of power grids [24,25]. These examples show 
+that the most obvious application area of MINP models is the control of resource distribution in systems. 
+Indeed, there are also results in the fields of communication technology and computer science, for 
+example, response to cyberattacks [26,27] and wireless network bandwidth allocation [28–30]. In surveys 
+on MINP optimization [31–33], it is easy to find practical examples from such areas as nuclear power 
+engineering, robotics, traffic optimization, nanomaterials and devices, biology, emergency situations, 
+automotive engineering, finance, and many others. 
+ 
+2. Stabilization Problem with Integer-Valued Control Constraints 
+ 
+2.1. Problem Statement 
+ 
+On a canonical probability space (Ω,ℱ,   ,ℱ
+   ),    ∈[0,   ], consider a linear stochastic differential 
+system with state       ∈ℝ
+      : 
+ 
+         =                 +                 +                 +               ,   0
+=   , 
+(1) 
+ 
+where       ∈ℝ
+      is a Markov chain with a finite number of states taking values in the set of unit 
+coordinate vectors {   1
+,…,         } in ℝ
+      ;       ∈ℤ
+      is the control; the disturbance       ∈ℝ
+      is a 
+standard vector-valued Wiener process; the initial condition    ∈ℝ
+      is a Gaussian random vector 
+with known mean and covariance; the time-dependent functions       ∈ℝ
+      ×      ,       ∈ℝ
+      ×      , 
+      ∈ℝ
+      ×      , and       ∈ℝ
+      ×      . The distribution    0
+ of the initial state    0
+=   of the chain       and 
+the transition rate matrix Λ
+   are assumed to be known. By ℝ
+   we denote the space of    -dimensional 
+vectors with real entries, and by ℤ
+   the space of    -dimensional vectors with integer entries. 
+The control       generates trajectories       drifting in variable directions determined by the Markov jump 
+process       . The formal stabilization objective consists in minimizing the cost functional 
+ 
+   (   0
+   )=   {∫ ‖            +            +            ‖
+      2
+     +‖            +            ‖
+      2
+   0
+}, 
+(2) 
+ 
+where    0
+   ={      =      (      ),  0≤   ≤   },       ∈ℝ
+      ×      ,       ∈ℝ
+      ×      ,       ∈ℝ
+      ×      ,       ∈ℝ
+      ×      , 
+      ≥0,       =      ′
+, 0≤   ≤   , are given matrix-valued functions; the weighting function is defined as 
+∥   ∥
+   2
+=   ′
+     for a symmetric positive semidefinite matrix    ; for the identity matrix    =   , the Differential equations and control processes, N. 2, 2026 
+ 
+        Electronic Journal: http://diffjournal.spbu.ru      4 
+Euclidean norm corresponds to ∥   ∥
+   2
+=∣   ∣
+2
+;    ′
+ denotes the transpose of the matrix (vector)    ; 
+   {   } denotes the mathematical expectation of the random vector    . 
+In addition to the fact that the class of admissible controls is defined as the class of state-feedback 
+controls with respect to       [34], it is assumed that the random functions       have finite second moments. 
+The assumptions that       ,      ,   ,   are jointly independent, and that the functions Λ
+   ,      ,      ,      ,      are 
+piecewise continuous, guarantee the existence of a unique strong (pathwise) solution of (1). Finally, the 
+optimality conditions for the control also include the piecewise continuity of the functions       ,      ,      ,      , 
+the nondegeneracy condition       ′
+            >0, and             ′
+>0. 
+ 
+2.2. Optimal Control without Integer-Valued Constraints 
+ 
+Note that the problem is formulated for the case of control based on indirect observations,       =
+      (      ). Such a feedback implies that the state of the chain       is unknown, while the system state       serves 
+as an indirect observation. 
+This problem without integer-valued constraints on the control, i.e., for       ∈ℝ
+      , as well as the 
+complete information case (admissible control with full feedback       =      (      ,      )) and the separation 
+principle, have been studied in [8–10]. It is known that the optimal control loop       ∗
+=      (      ∗
+) includes an 
+estimate   ̂
+   of the chain state based on indirect observations       , which is given by the Wonham filter [7]: 
+ 
+     ̂
+   =      ′
+  ̂
+        +(         (  ̂
+   )−  ̂
+     ̂
+   ′
+)      ′
+(            ′
+)
+−
+1
+2
+× 
+×(            ′
+)
+−1/2
+(         −        ̂
+        −                 −                 ),  ̂
+0
+=   {   }. 
+(3) 
+ 
+The optimal control       ∗
+ itself has the form: 
+ 
+      ∗
+=−
+1
+2
+(      ′
+            )
+−1
+(      ′
+(2            ∗
++        ̂
+   )+2      ′
+      (        ̂
+   +            ∗
+)), 
+(4) 
+              −(               +      ′
+(         )
+′
+)+         −      ′
+      (      ′
+            )
+−1
+      ′
+      =0,      =      ′
+            , 
+              +            ′
++         −               =0,      =2      ′
+            , 
+             
++   ′
+            ′
++            =0,         =   ′
+      ′
+               , 
+              +     {      ′
+            }=0,      =0, 
+(5) 
+ 
+where the following notation is used: 
+ 
+         =      ′
+            (      ′
+            )
+−1
+      ′
+,          =      ′
+(      −            (      ′
+            )
+−1
+      ′
+      )      , 
+         =2((      ′
+−      ′
+            (      ′
+            )
+−1
+      ′
+)      +      ′
+(      −            (      ′
+            )
+−1
+      ′
+      )      ), 
+         =      ′
+            (      ′
+            )
+−1
+      ′
++            (      ′
+            )
+−1
+      ′
+, 
+            =         (   )=   ′
+      ′
+(      −      (      ′
+            )
+−1
+      ′
+            )   + 
++   ′
+      ′
+(      −            (      ′
+            )
+−1
+      ′
+      )         −1/4   ′
+      ′
+      (      ′
+            )
+−1
+      ′
+         . 
+ 
+The solutions       ,      ,      (   ),      of equations (5) are required to determine the Bellman function: 
+ 
+      =      (   )=inf
+            {∫ ‖            +            +            ‖
+      2
+           +‖            +            ‖
+      2
+} Differential equations and control processes, N. 2, 2026 
+ 
+        Electronic Journal: http://diffjournal.spbu.ru      5 
+ 
+in the form       =   ′
+         +   ′
+        ̂
+   +        ̂
+   +      , so that along the optimal trajectory       ∗
+ the control cost 
+is    0
+=   ′
+   0
+   +   ′
+   0
+  ̂
+0
++   0
+  ̂
+0
++   0
+. Thus, the lower bound of the functional (2) for controls 
+      ∈ℝ
+      has the form: 
+ 
+   ((   ∗
+)
+0
+   )=          (   0
+   )=    {   0
+}. 
+(6) 
+ 
+The obtained solution of the unconstrained problem,       ∈ℝ
+      , can now be used to study the solution 
+of the stated problem with discrete constraints,       ∈ℤ
+      . 
+ 
+2.3. Optimal and    -Optimal Solutions of the Integer-Valued Stabilization Problem 
+ 
+For similar integer-valued problems in traditional deterministic control models, the study of MINP 
+applications began with a simplified case [14], in which       takes only two values (binary control), i.e., 
+      ∈{−1,1}, and with a prescribed finite number of “switchings” (a switching naturally refers to a 
+moment when       changes its value). This restriction can be generalized by assuming that each component 
+of the vector (      )
+   ∈{−1,1} ,    =1,…,      , is binary. Such a narrowing of the class of admissible 
+controls, together with a convex quadratic criterion, allows one to assert that an optimal solution exists 
+and, in many typical formulations, to find it using optimal control methods. There are numerous examples 
+of optimal control problems in which the maximum principle is effectively applied, and from the 
+constraint    (   )∈[−1,1] it follows that the optimal control has the form    (   )=sign(   (   )). Thus, the 
+optimal control becomes a sequence of switchings, and the integer constraints are satisfied automatically. 
+The solution is reduced to finding the optimal sequence of switching times. Problems of this kind can be 
+very diverse, up to the control of hybrid systems with variable dimension [35]. In addition, to find an 
+approximate solution, discretization can be applied, reducing the problem to an enumeration of possible 
+switching sequences and the use of heuristic MINP methods. 
+This situation of global optimality changes radically if the restriction on the number of switchings is 
+abandoned. Even without a stochastic component, such an abandonment leads to singularity and to the 
+nonexistence of an optimal solution. Qualitatively, the problem is characterized by the well-known Fuller 
+phenomenon—a situation in which the optimal control switches an infinite number of times over a finite 
+interval. Moreover, in [36] this problem is associated with a quadratic criterion similar to the one 
+considered in (2). This is a well-known problem that continues to be studied and in itself deserves surveys 
+[37]. The study of this phenomenon continues even in very modern applications, for example, in the 
+control of underwater drones [38], but within deterministic models. It is clear that the presence of the 
+Wiener process       in (1) only exacerbates the Fuller phenomenon. Therefore, the first conclusion 
+regarding the stabilization problem under consideration is the absence of an optimal solution. That is, 
+although inf    (   0
+   ) for controls       ∈ℤ
+      exists, since the lower bound of    (   0
+   ) is defined in (6) and the 
+functional (2) is quadratic in       , there generally does not exist a control (   ∗
+)
+0
+   for which the minimum is 
+attained,    ((   ∗
+)
+0
+   )=inf    (   0
+   ), over the class       ∈ℤ
+      , at least within the class of integer-valued 
+piecewise-constant functions. 
+One may then resort to a traditional approach by prescribing the number of switchings in advance. An 
+optimal solution for such a problem does exist, but the original meaning of drifting along the Markov 
+chain will be distorted. Therefore, the subsequent objective is to find an    -optimal solution and to combat 
+excessive switchings (“chattering”), which should lead to practically implementable controls. Such a 
+solution with arbitrary accuracy can be obtained in the form of an approximation of the unconstrained 
+optimal control (4) by simple uniform discretization: 
+ 
+         (   )
+=      ∗
+(      ),   ∈[      ,      +1
+), 
+0=   1
+<⋯.<      <      +1
+<⋯<      =   ,      +1
+−      =   ,   =0,…,   −1. 
+(7) 
+ Differential equations and control processes, N. 2, 2026 
+ 
+        Electronic Journal: http://diffjournal.spbu.ru      6 
+The control          (   )
+ in (7) is a piecewise-constant approximation of the continuous (   ) optimal control 
+      ∗
+ for a uniform partition of the control interval [0,   ] with step    . Since almost all trajectories of the 
+optimal control       ∗
+ (4) are piecewise continuous, because the solutions of the ordinary differential 
+equations (5) are piecewise continuous, by decreasing    one can ensure that the difference between the 
+value (6) achieved by the optimal control       ∗
+ and the value of the cost functional (2) for the control          (   )
+ is 
+smaller than any prescribed    . This is evident for the case of control with full feedback. For control based 
+on indirect observations, it is additionally necessary to represent the cost functional (2) as the result of the 
+separation of the control and filtering problems: 
+ 
+   (   0
+   )=   {
+ 
+ 
+ 
+ 
+∫ ‖        ̂
+   +            +            ‖
+      2
+        0
++‖        ̂
+   +            ‖
+      2
++
++∫ ‖      (      −  ̂
+   )‖
+      2
+        0
++‖      (      −  ̂
+   )‖
+      2
+}
+ 
+ 
+ 
+ 
+. 
+(8) 
+ 
+The continuity of all functions appearing in (8) with respect to    , including those implicitly entering the 
+solution       , and the independence of the estimate   ̂
+   , determined by the Wonham filter (3), from any 
+control, as well as of its accuracy       −  ̂
+   , guarantee that by an appropriate choice of the partition step    
+the inequality ∣   ((   ∗
+)
+0
+   )−   ((      (   )
+)
+0
+   )∣<   can be ensured. 
+Now, in order to prove the existence of an    -optimal integer-valued (   )control          (   )
+, two steps must 
+be taken. First, it suffices to search for controls          (   )
+ among all controls of the form       : 
+ 
+(      )
+   =[(         (   )
+)
+   ],±1,±2,…,±   ,   =1,…,      ,   ∈[      ,      +1
+), 
+(9) 
+ 
+where [   ] denotes the integer part of the number    . If the number    can be arbitrarily large, then the 
+class of controls (9) will not differ from the class originally specified in the problem formulation. 
+Therefore, the second step is to guarantee the finiteness of    . This is ensured by the existence of an 
+“upper” bound—the value of the functional (2) under the zero control       =0. Then, the existence 
+of the sought    -optimal solution follows from the finiteness of the number of variants in (9). 
+Thus, the control          (   )
+is sought among piecewise-constant functions that, at each partition point       , are 
+specified by replacing the control without integer-valued constraints by the nearest integer to the left or to 
+the right for each coordinate, or by integers at a distance of ±1, and so on. At the same time, even if one 
+restricts the optimization to controls that deviate from          (   )
+ by less than 1 in at least one coordinate 
+(which, from the viewpoint of practical expediency, might be sufficient), the number of variants will be 
+significant. Thus, the principal possibility of computing the control          (   )
+ by simple enumeration of all 
+variants does not eliminate the issue of practical implementation. In this respect, some effective 
+approximation by any heuristic MINP method is required. 
+ 
+3. Approximate Algorithms for    -Optimal Stabilization 
+ 
+Since, unlike deterministic models that describe a single trajectory for each admissible control, in the 
+problem under consideration any combinatorial optimization must be performed for each possible 
+realization of the output       , that is, for the trajectory corresponding to its probability distribution (together 
+with the corresponding trajectory of the estimate   ̂
+   and of the chain       ), this severely restricts the choice 
+of applicable MINP methods. In essence, the only workable option is to construct heuristic approximations 
+         (   )
+by transforming          (   )
+into a piecewise integer-valued control. Differential equations and control processes, N. 2, 2026 
+ 
+        Electronic Journal: http://diffjournal.spbu.ru      7 
+This idea of using a solution of a control problem obtained over a broader class of admissible controls 
+has long been known as the relaxation method (relaxed control problem) [11,12]. The simplest variant of 
+this method in the problem under consideration yields the following control          1
+: 
+ 
+(         1
+)
+   =           ((         (   )
+)
+   ),   =1,…,      , 
+(10) 
+ 
+where round(   ) denotes the integer rounding function of the number    . Such a control follows the 
+standard rounding strategy [3]. Its drawback is the lack of suppression of the Fuller effect: each 
+time the unconstrained control crosses the midpoint of a certain integer interval, a switching is 
+performed in the integer-valued control. If, in the full-information formulation, one may assume 
+that switchings (changes of the states of the chain       ) lead to impulsive changes of the output, 
+which automatically eliminate “chattering,” this is not the case in the formulation with indirect 
+observations. The Wonham filter (3), or its approximation, while counteracting observation errors 
+generated by the Wiener process       , and reacting to changes in the state       even under very 
+accurate observations, has a certain period during which the estimate exhibits transient behavior in 
+response to the jumpwise change of       . Following the estimate, the strategy (10) will also oscillate. 
+To address this drawback, two techniques are proposed [3]: sum of rounding and sum of rounding 
+with a different threshold. Adapted to the problem under consideration, these strategies take the 
+form: 
+ 
+(         2
+)
+   =round((         (   )
+)
+   ), если     
+|(      −      (   )
+)
+   −round((         (   )
+)
+   )|+
++∑|(      −      (   )
+)
+   −(      −      2
+)
+   |
+   −2
+   =0
+≥
+   2
+, 
+(         2
+)
+   =(      −1
+   2
+)
+   , иначе;      =1,…,      , 
+(11) 
+ 
+(         3
+)
+   =round((         (   )
+)
+   ), если     
+λ
+   −1
+|(      −      (   )
+)
+   −round((         (   )
+)
+   )|+
++∑λ
+   |(      −      (   )
+)
+   −(      −      3
+)
+   |
+   −2
+   =0
+≥
+1
+2
+, 
+(         3
+)
+   =(      −1
+   3
+)
+   , иначе;       =1,…,      . 
+(12) 
+ 
+Both controls          2
+ in (11) and          3
+ in (12) implement the same strategy, which consists in the following: 
+the integer-valued control at time step    for the    -th coordinate is changed (a switching from the previous 
+value (      −1
+   2/3
+)
+   to the new value (         2/3
+)
+   , obtained by rounding the unconstrained optimal control) only if 
+the necessity of switching has been confirmed over the last    steps (time instants). In the control          2
+ in 
+(11), it is required that the difference between the unconstrained control and the rounded one be greater 
+than 0.5 by a factor of    , including the current step. The control          3
+ in (12) introduces weights in order to 
+assign greater significance to less distant time instants: it is assumed that ∑          −1
+   =0
+=1,       >      −1
+>0. In 
+this way, a less inert control is realized, which should be closer to variant (10). 
+ 
+4. Numerical Experiment 
+ 
+4.1. Mechanical Actuator Model and Baseline Computation Differential equations and control processes, N. 2, 2026 
+ 
+        Electronic Journal: http://diffjournal.spbu.ru      8 
+ 
+To carry out the practical experiment, we use a gantry crane model describing the motion of a trolley 
+for lifting a load along a horizontal rail [8–10]. Giving meaning to integer-valued control and 
+demonstrating its difference from continuous strategies can be achieved through penalties on the 
+magnitude of the control input and through the choice of gain coefficients that scale the control to the 
+range of the output variable. Thus, let the position of the trolley relative to the initial (extreme) position be 
+described by the scalar variable       . The trolley tends to reach this position with velocity       . The 
+magnitude and direction of the velocity are determined by a controlled force that depends linearly on the 
+current position, the current velocity, the uncontrolled jumpwise input       , and the control       . The Markov 
+chain       in this example models a sequence of indices of tracks occupied by arriving transport for loading. 
+Altogether: 
+ 
+         =           ,    ∈(0,   ], 
+         =              +              +              +              +√            . 
+(13) 
+ 
+The chain       has three states, the transition rate matrix Λ
+   =Λ=(
+−0,5 0,5 0
+0,5 −1 0,5
+0 0,5 −0,5
+), and the 
+initial distribution    0
+=(1,0,0)
+′
+. Model (13) can be reduced to the form (1) by introducing the notation 
+      =(      ,      )
+′
+,       =   =(   1
+,   2
+,   3
+),       =(
+0 1
+      ),       =   ,       =(0,      )
+′
+,       =(0,√   ). In this 
+case, the nondegeneracy condition for the noises in the Wonham filter (3) is formally violated. This 
+circumstance can be readily taken into account by using only          to compute the estimate   ̂
+   . This is 
+admissible since          is expressed linearly in terms of          . The initial conditions    0
+ and    0
+ are assumed to 
+be independent standard Gaussian random variables. In the computations, the model parameters are 
+chosen as follows: 
+ 
+   =−0,25;   =−0,5;   =0,01;   1
+=−1,5;   2
+=−0,5;   3
+=0,5;   =100;   =10. 
+ 
+The control objective consists in tracking, by the coordinate       , the position          , where    =
+(−6,−2,2), and is formalized by the cost functional 
+ 
+   (   0
+   )=   {∫ (|         −      |
+2
++   |      |
+2
+)    
+   0
+}. 
+(14) 
+ 
+The discretization was performed with step    =0.001. To estimate the value of the cost functional, 
+1000 trajectories of (13) were simulated, over which averaging was carried out to obtain an estimate of the 
+quantity (14) for different control strategies. For convenience, all control strategies mentioned are listed in 
+Tab. 1, including          (   )
+. Computing these controls, even in such a simple experiment, is not feasible; 
+however, it is clear that the strategies          (   )
+ and          1/2/3
+ provide lower and upper bounds for the value of 
+the cost functional (14) corresponding to          (   )
+. This qualitative assessment is the limit to which we must 
+restrict ourselves. 
+ Differential equations and control processes, N. 2, 2026 
+ 
+        Electronic Journal: http://diffjournal.spbu.ru      9 
+Tab 1. Notation for stabilization strategies 
+Model type 
+ 
+Control strategy 
+ 
+   -optimal 
+continuous 
+   -optimal 
+integer-
+valued 
+Integer-valued heuristic 
+standard 
+rounding,       
+sum of 
+rounding,       
+sum of rounding 
+with a different 
+threshold,       
+Complete 
+information, 
+        ̂
+   
+ 
+            (   )
+             (   )
+             1
+             2
+             3
+ 
+Indirect 
+observations, 
+  ̂
+   
+ 
+     ̂
+      (   )
+      ̂
+      (   )
+      ̂
+      1
+      ̂
+      2
+      ̂
+      3
+ 
+ 
+Finally, we note that in computing the controls for models with indirect observations, instead of the 
+Wonham filter estimate   ̂
+   (3), its stable numerical approximation [39] was used. In the full-information 
+variants,   ̂
+   was not computed and was replaced by the exact value       . Finally, for the “sum of rounding” 
+strategies, the rounding interval was chosen equal to 3, and the weights for the “sum of rounding with a 
+different threshold” strategy were set to 0,5;0,33;0,17. 
+The first computation, referred to as the baseline case, was performed for the value    =0.1. The 
+results are presented in Tab. 2. 
+ 
+Table 2. Control performance in the baseline model with penalty    =0.1 
+   (   0
+   ) 
+   ((            (   )
+)
+0
+   )    ((            1
+)
+0
+   )    ((            2
+)
+0
+   )    ((            3
+)
+0
+   )    ((     ̂
+      (   )
+)
+0
+   )    ((     ̂
+      1
+)
+0
+   )    ((     ̂
+      2
+)
+0
+   )    ((     ̂
+      3
+)
+0
+   ) 
+10,88 11,15 11,30 11,33 17,96 18,21 18,19 18,25 
+ 
+Graphical illustrations for this example are presented in the following section. Here we note that the 
+range of the obtained integer-valued control values spans from −15to 25and, judging by the values of the 
+cost functional in Table 2, there is no significant difference between the continuous and integer-valued 
+control strategies. On the one hand, this computation shows that, under integer-valued constraints, 
+stabilization can be achieved as effectively as with unconstrained strategies. In particular, it confirms the 
+thesis that there is no practical necessity to compute the “exact” strategy       (   (   ))
+. On the other hand, with 
+such a range of control magnitudes, especially taking into account the scaling coefficient    =100, it is 
+not very convenient to analyze the differences between strategies, their quality, and the nature of 
+switchings. Therefore, the purpose of the next section is to present experimental results obtained by 
+achieving a substantial narrowing of the range of integer-valued control magnitudes. 
+ 
+4.2. Analysis of Control Strategies with Increasing Penalty for Integer-Valued Control 
+ 
+In this section, three experiments with    =1,    =2.5, and    =5 are added to the baseline model. 
+All other parameters, including the set of disturbance trajectories       and the initial conditions    0
+ and    0
+, Differential equations and control processes, N. 2, 2026 
+ 
+        Electronic Journal: http://diffjournal.spbu.ru      10 
+are kept unchanged. The results of all computations are summarized in Tab. 3; the result of Tab. 1 is also 
+reproduced. 
+ 
+Table 3. Control performance in models with different penalties 
+   (   0
+   )    ((            (   )
+)
+0
+   )    ((            1
+)
+0
+   )    ((            2
+)
+0
+   )    ((            3
+)
+0
+   )    ((     ̂
+      (   )
+)
+0
+   )    ((     ̂
+      1
+)
+0
+   )    ((     ̂
+      2
+)
+0
+   )    ((     ̂
+      3
+)
+0
+   ) 
+   =0,1 10,88 11,15 11,30 11,33 17,96 18,21 18,19 18,25 
+   =1 18,73 21,85 22,39 21,53 25,29 27,94 27,02 27,81 
+   =2,5 23,18 30,05 32,11 31,21 29,46 35,49 33,66 36,02 
+   =5 27,24 42,32 44,10 42,87 33,26 44,73 41,20 45,96 
+ 
+Ranges of the obtained integer-valued control magnitudes: 
+ 
+   =0,1→−15≤            (   )/1/2/3
+≤25,
+   =1→−6≤            (   )/1/2/3
+≤8,
+   =2,5→−4≤            (   )/1/2/3
+≤5,
+   =5→−3≤            (   )/1/2/3
+≤4.
+ 
+ 
+Moreover, most values lie within the indicated ranges, whereas the “extreme” values are rare and do 
+not appear on all trajectories. Even without this remark, it is evident that the difference is substantial. This 
+fully corresponds to the significantly increased difference between the performance of continuous and 
+integer-valued strategies shown in Table 3. 
+A valuable contribution to the illustration of the computations is provided by examples of the 
+trajectories       in Fig. 1. They clearly show differences in the performance of continuous and integer-
+valued controls. However, it is not possible to visually demonstrate the differences between the integer-
+valued variants    1/2/3
+ in these plots. The nature of the controls             (   )/1/2/3
+ can be compared using the 
+illustrations in Fig. 2. The conclusions drawn from the performed computations are presented in the 
+Conclusion. 
+ 
+5. Conclusion 
+ 
+The main result of the performed experiments is an objective demonstration of the ability to stabilize 
+the considered system using exclusively integer-valued controls. A qualitative assessment of the 
+trajectories in Fig. 1 is unambiguous: the controls       (   1/2/3
+)
+ clearly demonstrate the ability to achieve the 
+same objective as the continuous control          (   )
+. The figures (visually), as well as the numerical data in 
+Tab. 3 (formally), show that the controls are capable of steering the system to drift in changing directions 
+determined by the chain. It is evident that control performance deteriorates in the model with indirect 
+observations, when the chain state is unknown. It is also evident that, as the penalty on the control input 
+increases, the “magnitude” of the control decreases, the integer-valued strategy becomes more constrained 
+(fewer admissible values), and increasingly underperforms the continuous strategy. However, as the 
+penalty increases, the model as a whole becomes overly artificial and less representative of practice. The 
+system becomes more concerned with avoiding control expenditure than with stabilization itself. One may 
+note that, while in the first example with    =0.1 the quality of continuous control in the full-information 
+and indirect-observation models differs by almost a factor of two, in the example with    =5 the 
+difference is only 20%. That is, the system becomes less concerned with the direction of drift than with Differential equations and control processes, N. 2, 2026 
+ 
+        Electronic Journal: http://diffjournal.spbu.ru      11 
+minimizing control effort. Clearly, with further increases in    , one arrives at the situation where it is 
+preferable not to control the system at all. 
+ 
+  
+  
+  
+  
+Fig. 1. Typical actuator trajectories: (left) 1 –      ̂
+      (   )
+, 2 –      ̂
+      1/2/3
+, 
+(right) 1 –             (   )
+, 2 –             1/2/3
+, 3 –          – направление дрейфа 
+ Differential equations and control processes, N. 2, 2026 
+ 
+        Electronic Journal: http://diffjournal.spbu.ru      12 
+ 
+ 
+ 
+ 
+Fig. 2. Control trajectories: 1 –             1
+, 2 –             2
+, 3 –             3
+ 
+ 
+In addition, while continuous control still manages to cope with the task to some extent in the example 
+with    =5, this example appears to be already borderline for integer-valued control. In particular, the 
+quality of control    2
+in the full-information model turns out to be worse than in the indirect-observation 
+model. One may attribute this to the fact that this is a computer simulation with a relatively small sample 
+size. Moreover, the controls    1/2/3
+ are heuristic and are not expected to provide guarantees. Nevertheless, 
+a “deviation from the expected norm” is present, and this is a fact. 
+At the same time, as    increases, it becomes possible to more clearly illustrate the differences in the 
+nature of the controls    1/2/3
+. By sequentially examining Fig. 2, one can observe that initially these controls 
+hardly differ. Subsequently, the simplest variant    1
+ demonstrates a tendency toward excessive 
+“chattering”: the number of switchings increases, while there is no effect on the final performance. Finally, 
+the last example conclusively shows that the most inert control is    2
+, whose switchings are the most 
+“cautious.” However, this has no direct impact on control performance, as expected. 
+Thus, overall, we have several viable strategies capable of replacing the optimal continuous control in 
+the considered stabilization problem when integer-valued constraints are imposed on admissible controls. Differential equations and control processes, N. 2, 2026 
+ 
+        Electronic Journal: http://diffjournal.spbu.ru      13 
+ 
+Acknowledgements 
+ 
+The research was carried out using the infrastructure of the Shared Research Facilities «High-
+Performance Computing and Big Data» (CKP «Informatics») of FRC CSC RAS (Moscow). 
+ 
+ References 
+ 
+[1] Yong, J., and Zhou, X.Y. Stochastic controls: Hamiltonian systems and HJB equations (Vol. 
+43). Springer Science & Business Media, 1999. 439 p. 
+[2] Fleming, W.H., and Soner H.M. Controlled Markov processes and viscosity solutions. New 
+York, NY: Springer New York, 2006. 429 p. 
+[3] Belotti, P., Kirches, C., Leyffer, S., Linderoth, J., Luedtke, J., and Mahajan, A. Mixed integer 
+nonlinear optimization. Acta Numerica, vol. 22. p. 1–131, 2013. DOI: 
+10.1017/S0962492913000032. 
+[4] Sahinidis, N.V. Mixed-integer nonlinear programming 2018. Optimization and Engineering, 
+vol. 20, p. 301–306, 2019. DOI: 10.1007/s11081-019-09438-1. 
+[5] Pontryagin, L.S., Boltyanski, B., Gamkrelidze, R., and Michtchenko, E. The Mathematical 
+Theory of Optimal Processes. New York: Interscience, 1962. 360 p. 
+[6] Bellman, R.E. Dynamic programming. Princeton: University Press, 1957. 340 p. 
+[7] Wonham, W.M. Some applications of stochastic differential equations to optimal nonlinear 
+filtering. SIAM Journal on Control, vol. 2, no. 3. p. 347–369, 1965. 
+[8] Bosov, A.V. Linear output control of Markov chain by square criterion. Informatika i ee 
+primenenija—Inform. Appl., vol. 15, no. 2, p. 3–11, 2021. DOI: 10.14357/19922264210201. 
+[9] Bosov, A.V. Linear output control of Markov chain by square criterion. Сomplete information 
+case. Informatika i ee primenenija—Inform. Appl. , vol. 16, no. 2, p. 19–26, 2022. DOI: 
+10.14357/19922264220203. 
+[10] Bosov, A.V. Stabilization and Trajectory Tracking of Linear System with Jumping Drift. 
+Automation and Remote Control, vol. 83, no. 4, p. 520–535, 2022. DOI: 
+10.1134/S0005117922040026. 
+[11] Bregman, L.M. The relaxation method of finding the common point of convex sets and its 
+application to the solution of problems in convex programming. USSR Computational 
+Mathematics and Mathematical Physics, vol. 7, no. 3, p. 200–217, 1967. DOI: 10.1016/0041-
+5553(67)90040-7. 
+[12] Roubíček, T. Relaxation in Optimization Theory and Variational Calculus. De Gruyter Series 
+in Nonlinear Analysis and Applications, vol. 4, 2nd ed. Berlin: Walter de Gruyter GmbH, 
+2020. 581 p. 
+[13] Grossmann, I. E., and Sargent, R.W.H. Optimum design of multipurpose chemical plants. 
+Industrial & Engineering Chemistry Process Design and Development, vol. 18, no. 2, p. 343–
+348, 1979. 
+[14] Sager, S. Numerical methods for mixed-integer optimal control problems. Tönning: Der 
+Andere Verlag, 2005. 219 p. 
+[15] Sager, S. A Benchmark Library of Mixed-Integer Optimal Control Problems. In: Lee J., 
+Leyffer S. (eds) Mixed Integer Nonlinear Programming, IMA Volumes in Mathematics and 
+its Applications, New York, NY: Springer, vol. 154, p. 631–651, 2012. DOI: 10.1007/978-1-
+4614-1927-3_22. 
+[16] Burgschweiger, J., Gnädig, B., and Steinbach M.C. Optimization models for operative 
+planning in drinking water networks. Optimization and Engineering, vol. 10, p. 43–73, 2009. 
+DOI: 10.1007/s11081-008-9040-8. Differential equations and control processes, N. 2, 2026 
+ 
+        Electronic Journal: http://diffjournal.spbu.ru      14 
+[17] Bragalli, C., D’Ambrosio, C., Lee, J., Lodi, A., and Toth, P. On the optimal design of water 
+distribution networks: A practical MINLP approach. Optimization and Engineering, vol. 13, 
+p. 219–246, 2012. DOI: 10.1007/s11081-011-9141-7. 
+[18] Micocci, D., Bragalli, C., Toth, E., Wechsler, T., and Zappa, M. Hybridization of an Alpine 
+pumped-storage hydropower plant with floating solar photovoltaics: a study from the water 
+resource perspective. Renewable Energy, art. 123530, 2025, DOI: 
+10.1016/j.renene.2025.123530. 
+[19] De Wolf, D., and Smeers, Y. The Gas Transmission Problem Solved by an Extension of the 
+Simplex Algorithm. Management Science, vol. 46, no. 11, p. 1454–1465, 2000. DOI: 
+10.1287/mnsc.46.11.1454.12087. 
+[20] Martin, A., Möller, M., and Moritz, S. Mixed integer models for the stationary case of gas 
+network optimization. Mathematical Programming, vol. 105, no. 2, p. 563–582, 2006. DOI: 
+10.1007/s10107-005-0665-5. 
+[21] Ríos-Mercado, R.Z. Metaheuristics for Natural Gas Pipeline Network Optimization. In: 
+Handbook of Heuristics, Springer, Cham, p. 1–25, 2025. DOI: 10.1007/978-3-319-07153-
+4_51-2. 
+[22] Chowdu, A., Nesbitt, P., Brickey, A., and Newman, A.M. Operations research in underground 
+mine planning: A review. INFORMS Journal on Applied Analytics, vol. 52, no. 2., p. 109–
+132, 2022. DOI: 10.1287/inte.2021.1087. 
+[23] Sotoudeh, F., Nehring, M., Kizil, M., Knights, P., and Mousavi, A. Production scheduling 
+optimisation for sublevel stoping mines using mathematical programming: A review of 
+literature and future directions. Resources Policy, vol. 68, art. 101809, 2020. DOI: 
+10.1016/j.resourpol.2020.101809. 
+[24] Alayande, A.S., Jimoh, A.A., and Yusuff, A.A. Approaches for solving modern power system 
+problems—a review. Proc. 2017 IEEE AFRICON, p. 1214–1219, 2017. DOI: 
+10.1109/AFRCON.2017.8095655. 
+[25] Payahou, S., Karimi, M., and Pirayesh, A. Robust transmission expansion planning 
+considering uncertainty in generation expansion. Electrical Engineering, p. 1–15, 2025. DOI: 
+10.1007/s00202-025-03063-1. 
+[26] Goldberg, N., Leyffer, S., and Safro, I. Optimal response to epidemics and cyber attacks in 
+networks. Networks, vol. 66, no. 2, p. 145–158, 2015. DOI: 10.1002/net.21619. 
+[27] Altunay, M., Leyffer, S., Linderoth, J.T., and Xie, Z. Optimal response to attacks on the open 
+science grid. Computer Networks, vol. 55, no. 1, P. 61–73, 2011. DOI: 
+10.1016/j.comnet.2010.07.012. 
+[28] Bhatia, R., Segall, A., and Zussman G. Analysis of bandwidth allocation algorithms for 
+wireless personal area networks. Wireless Networks, vol. 12, p. 589–603, 2006. DOI: 
+10.1007/s11276-006-6537-y. 
+[29] Sheikh, W., and Ghafoor, A. An optimal bandwidth allocation and data droppage scheme for 
+differentiated services in a wireless network. Wireless Communications and Mobile 
+Computing, vol. 10, no. 6, p. 733–747, 2010. DOI: 10.1002/wcm.779. 
+[30] Costa-Montenegro, E., González-Castaño, F.J., Rodríguez-Hernández, P.S., and Burguillo-
+Rial, J.C. Nonlinear Optimization of IEEE 802.11 Mesh Networks. In: Shi Y. et al. (eds) 
+Computational Science – ICCS 2007, Lecture Notes in Computer Science, Berlin, Heidelberg: 
+Springer, vol. 4490, p. 466–473, 2007. DOI: 10.1007/978-3-540-72590-9_63. 
+[31] Burer, S., and Letchford A.N. Non-convex mixed-integer nonlinear programming: A survey. 
+Surveys in Operations Research and Management Science, vol. 17, no. 2, p. 97–106, 2012. 
+DOI: 10.1016/j.sorms.2012.08.001. 
+[32] D’Ambrosio, C., and Lodi, A. Mixed integer nonlinear programming tools: an updated 
+practical overview. Annals of Operations Research, vol. 204, no. 1, p. 301–320, 2013 DOI: 
+10.1007/s10479-012-1272-5. Differential equations and control processes, N. 2, 2026 
+ 
+        Electronic Journal: http://diffjournal.spbu.ru      15 
+[33] Jaber, A., Younes, R., Lafon, P., and Khoder, J. A review on multi-objective mixed-integer 
+non-linear optimization programming methods. Engineering, vol. 5, no. 3, p. 1961–1979, 
+2024. DOI: 10.3390/eng5030104. 
+[34] Fleming, W.H., and Rishel, R.W. Deterministic and Stochastic Optimal Control. New York: 
+Springer-Verlag, 1975. 222 p. 
+[35] Bortakovsky, A.S. The necessary conditions for optimal hybrid systems of variable 
+dimensions. J. Comput. Syst. Sci. Int., no. 1, p. 28–40, 2021. DOI: 
+10.31857/S0002338821060056. 
+[36] Fuller, A.T. Optimizatsiya releinykh sistem regulirovaniya po razlichnym kriteriyam 
+kachestva. Trudy I kongressa IFAC, 2. Moscow: Izd-vo AN SSSR, p. 584–605, 1961. 
+[37] Sukhnin, B.V., and Surkov, V.V. Fenomen Fullera v teorii i praktike optimal'nogo 
+upravleniya. J. Advanced in Technical Science, vol. 2, iss. 23, p. 94–99, 2021. DOI: 
+10.26160/2474-5901-2021-23-94-99. 
+[38] Chyba, M., and Haberkorn, T. Autonomous Underwater Vehicles: Singular Extremals and 
+Chattering. Systems, Control, Modeling and Optimization (CSMO 2005), IFIP International 
+Federation for Information Processing ser., Boston, MA, USA: Springer, vol. 202, p. 103–
+113, 2006. DOI: 10.1007/0-387-33882-9_10. 
+[39] Borisov, A.V. Numerical schemes of Markov jump process filtering given discretized 
+observations II: Additive noise case. Informatika i ee primenenija—Inform. Appl., vol. 14, 
+no. 1, p. 17–23, 2020. DOI: 10.14357/19922264200103. 
