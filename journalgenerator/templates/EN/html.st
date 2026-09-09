@@ -13,11 +13,12 @@
       <div class="UniversityFounderLogo">
         <a href="https://english.spbu.ru/" title="St. Petersburg State University">
           <img src="$ResourceLink$/SPbSU_Logo.svg" alt="SPbSU"></img>
-          <span>SPbU</span>
         </a>
       </div>
       <div class="Logo">
-        $logo$
+        <a href="$TemplateAboutLink$" title="About the journal">
+          $logo$
+        </a>
       </div>
       <div class="HeadForeignLink">
         <a href="$ForeignLink$">Русская версия</a>

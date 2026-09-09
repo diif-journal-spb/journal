@@ -1,1 +1,1 @@
-<img src="$ResourceLink$/logo.gif" alt="dx/dt"></img>
+<img src="$ResourceLink$/logo.png" alt="dx/dt"></img>

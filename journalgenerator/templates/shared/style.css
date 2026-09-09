@@ -49,9 +49,14 @@ div.Logo {
   height: 160px;
 }
 
+div.Logo img {
+  width: 160px;
+  height: 160px;
+}
+
 div.Content {
   display: block;
-  margin-left: 170pt;
+  margin-left: 245px;
   padding-left: 1em;
   border-left: 2px dotted rgb(220, 230, 240);
 }
@@ -163,18 +168,26 @@ a:active {
 }
 
 div.MainMenu {
-  font-size: 13pt;
+  width: 210px;
+  box-sizing: border-box;
+
+  font-size: 12pt;
   font-weight: bold;
+
   float: left;
   margin: 1em 0 2em 1em;
   padding-right: 1em;
 }
 
 div.MainMenu a {
-  padding-right: 0px;
-  padding-left: 0px;
+  display: block;
+  padding: 0;
   text-decoration: none;
-  display:block;
+
+  white-space: normal;
+  overflow-wrap: break-word;
+  line-height: 1.25;
+  margin-bottom: 0.25em;
 }
 
 div.MainMenu a:link {
@@ -263,15 +276,21 @@ p.jounal-index a:hover {
 /* SPbU compliance additions */
 div.UniversityFounderLogo {
   position: absolute;
-  right: 14px;
-  top: 28px;
+  right: 1em;
+  top: 1.7em;
+
   text-align: center;
-  font-size: 10pt;
-  line-height: 1.1;
+  font-size: 8pt;
 }
+
 div.Head { position: relative; }
 div.UniversityFounderLogo a { text-decoration: none; color: rgb(100,60,40); display: block; }
-div.UniversityFounderLogo img { display: block; max-width: 54px; max-height: 54px; margin: 0 auto 3px auto; }
+div.UniversityFounderLogo img {
+  display: block;
+  max-width: 72px;
+  max-height: 72px;
+  margin: 0 auto 3px auto;
+}
 div.UniversityFounderLogo span { font-weight: bold; }
 
 div.Footer {
@@ -357,4 +376,11 @@ div.FooterLinks a { color: #777; }
   .CookieConsent button { margin-top: .8em; }
 }
 
+div.Logo a {
+  display: block;
+  border: 0;
+}
 
+div.Logo img {
+  border: 0;
+}
