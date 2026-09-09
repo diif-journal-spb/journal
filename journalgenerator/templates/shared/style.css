@@ -278,7 +278,6 @@ div.UniversityFounderLogo {
   position: absolute;
   right: 1em;
   top: 1.7em;
-
   text-align: center;
   font-size: 8pt;
 }
@@ -287,9 +286,10 @@ div.Head { position: relative; }
 div.UniversityFounderLogo a { text-decoration: none; color: rgb(100,60,40); display: block; }
 div.UniversityFounderLogo img {
   display: block;
-  max-width: 72px;
-  max-height: 72px;
-  margin: 0 auto 3px auto;
+  width: 78px;
+  height: 78px;
+  object-fit: contain;
+  margin: 0 auto;
 }
 div.UniversityFounderLogo span { font-weight: bold; }
 
@@ -382,5 +382,10 @@ div.Logo a {
 }
 
 div.Logo img {
+  display: block;
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
   border: 0;
 }
+
