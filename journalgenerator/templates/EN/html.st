@@ -4,13 +4,18 @@
   <head>
     <title>Journal Differential Equations and Control Processes - $caption$</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
-    <!-- Journal generator by Eugene @jonnyzzz Petrenko (eugene[dot]petrenko(at)gmail_com), thanks to Nikita Raba -->
     <link rel="stylesheet" href="$ResourceLink$/style.css" type="text/css"></link>
     <script type="text/javascript" src="$ResourceLink$/jquery.js"></script>
     <script type="text/javascript" src="$ResourceLink$/journal.js"></script>
   </head>
   <body>
     <div class="Head">
+      <div class="UniversityFounderLogo">
+        <a href="https://english.spbu.ru/" title="St. Petersburg State University">
+          <img src="$ResourceLink$/SPbSU_Logo.svg" alt="SPbSU"></img>
+          <span>SPbU</span>
+        </a>
+      </div>
       <div class="Logo">
         $logo$
       </div>
@@ -28,8 +33,33 @@
     </div>
     <div class="Content">
       $content$
-    </div> 
+    </div>
     <div class="Footer">
+      <div class="FooterLinks">
+        <a href="$TemplatePrivacyLink$">
+          Policy on the processing of personal data
+        </a>
+      </div>
+      <div class="FooterCopyright">
+        © St. Petersburg State University, $CurrentYear$
+      </div>
+    </div>
+    <div id="cookieConsentBanner"
+         class="CookieConsent"
+         style="display:none;">
+
+      <div class="CookieConsentText">
+        By using this website, you agree that SPbU uses cookies and web analytics
+        services. By continuing to use the website, you consent to the
+        <a href="$TemplatePrivacyLink$">
+          processing of personal data
+        </a>.
+        You can manage cookie settings in your browser.
+      </div>
+
+      <button id="cookieConsentAccept" type="button">
+        I agree
+      </button>
     </div>
   </body>
 </html>

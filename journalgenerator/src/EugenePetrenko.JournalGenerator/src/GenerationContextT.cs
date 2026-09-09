@@ -25,6 +25,7 @@ namespace EugenePetrenko.JournalGenerator
 
       ctx["ResourceLink"] = myManager.GetRootLink(language, LinkTemplate);
       ctx["LanguageResourceLink"] = myManager.GetRootLinkForLanguage(language, LinkTemplate);
+      ctx["CurrentYear"] = DateTime.Now.Year;
     }
 
     public T LanguageContext(Language language)

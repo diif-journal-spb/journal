@@ -8,6 +8,8 @@
 <!--<a href="$NewsLink$">Новости</a>-->
 <a href="$TemplateFor_AuthorsLink$">Для авторов</a>
 <a href="$TemplateEthicLink$">$ethic_caption()$</a>
+<a href="$TemplateAi_PolicyLink$">Политика использования ИИ </a>
+<a href="$TemplatePrivacyLink$">Обработка персональных данных</a>
 <!--<a href="$BooksLink$">Книги</a>-->
 <a href="$CollectionLink$">Коллекция номеров</a>
 <a href="$ForeignLink$">English version</a>

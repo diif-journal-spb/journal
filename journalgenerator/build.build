@@ -97,7 +97,7 @@
 
   <target name="run-migrate">
     <exec program="${migration.exe}" verbose="true">
-      <arg value="/url=http://www.math.spbu.ru/diffjournal"/>
+      <arg value="/url=https://diffjournal.spbu.ru/"/>
       <arg value="/templates=${path::get-full-path(base + '\templates')}"/>
       <arg value="/data=${path::get-full-path(base + '\data')}" />
       <arg value="/pdf=${path::get-full-path(base + '\pdf')}" />
@@ -138,7 +138,7 @@
 
 
     <exec program="${generator.exe}" verbose="true">
-      <arg value="/url=http://www.math.spbu.ru/diffjournal"/>
+      <arg value="/url=https://diffjournal.spbu.ru/"/>
       <arg value="/dest=${release.path}" />
       <arg value="/templates=${path::get-full-path(base + '\templates')}"/>
       <arg value="/data=${path::get-full-path(base + '\data')}" />

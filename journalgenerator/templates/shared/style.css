@@ -9,7 +9,7 @@ body {
   padding-right: 1em;
 }
 
-div.issn, 
+div.issn,
 div.issn a {
   color: rgb(100, 60, 40);
   font-size: 12pt;
@@ -50,10 +50,10 @@ div.Logo {
 }
 
 div.Content {
- display: block;
- margin-left: 170pt;
- padding-left: 1em;
- border-left: 2px dotted rgb(220, 230, 240);
+  display: block;
+  margin-left: 170pt;
+  padding-left: 1em;
+  border-left: 2px dotted rgb(220, 230, 240);
 }
 
 h1 {
@@ -133,7 +133,7 @@ h2 {
     font-weight: normal;
   }
 }
-                  
+
 h3, li.wide_number {
   font-size: 14pt;
   font-weight: bold;
@@ -171,7 +171,7 @@ div.MainMenu {
 }
 
 div.MainMenu a {
-  padding-right: 0px; 
+  padding-right: 0px;
   padding-left: 0px;
   text-decoration: none;
   display:block;
@@ -197,11 +197,11 @@ div.article {
   border-botton: 1px dotted rgb(220, 230, 240);
   margin-left: 12em;
   text-align:left;
-  
+
 }
 
 div.article h3 {
-  margin-left: -10em; 
+  margin-left: -10em;
 }
 
 div.article h5 {
@@ -212,13 +212,13 @@ div.article h5 {
 
 
 div.collection td {
- width:5em;
- border: 1px solid rgb(220, 230, 240);
+  width:5em;
+  border: 1px solid rgb(220, 230, 240);
 }
-              	
+
 div.collection td.number {
- width:5em;
- font-weight: bold;
+  width:5em;
+  font-weight: bold;
 }
 
 div.board div.editor {
@@ -243,12 +243,12 @@ div.board .editor .email {
 }
 
 div.Footer {
- color: #AAA;
- float: right;
- font-size: 70%;
+  color: #AAA;
+  float: right;
+  font-size: 70%;
 }
 
-p.jounal-index, 
+p.jounal-index,
 p.jounal-index a {
   color: rgb(100, 60, 40);
   font-weight: bold;
@@ -258,3 +258,103 @@ p.jounal-index a {
 p.jounal-index a:hover {
   text-decoration: underline;
 }
+
+
+/* SPbU compliance additions */
+div.UniversityFounderLogo {
+  position: absolute;
+  right: 14px;
+  top: 28px;
+  text-align: center;
+  font-size: 10pt;
+  line-height: 1.1;
+}
+div.Head { position: relative; }
+div.UniversityFounderLogo a { text-decoration: none; color: rgb(100,60,40); display: block; }
+div.UniversityFounderLogo img { display: block; max-width: 54px; max-height: 54px; margin: 0 auto 3px auto; }
+div.UniversityFounderLogo span { font-weight: bold; }
+
+div.Footer {
+  float: none;
+  clear: both;
+  color: #777;
+  font-size: 9pt;
+  margin: 3em 1em 0 170pt;
+  padding: 1em 0 0.5em 1em;
+  border-top: 1px solid rgb(220,230,240);
+}
+div.FooterCopyright { margin-bottom: .35em; }
+div.FooterLinks a { color: #777; }
+
+.policy-page { text-align: justify; max-width: 980px; }
+.policy-page h2 { text-align: left; }
+.policy-page .policy-subtitle { font-weight: bold; }
+.policy-page .policy-note { border-left: 3px solid rgb(180,195,210); padding: .6em 1em; margin: 1em 0; background: rgba(255,255,255,.45); }
+.policy-page .document-link { margin-top: 1.5em; }
+
+.CookieConsent {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+
+  box-sizing: border-box;
+
+  background: #4b4b4b;
+  color: #fff;
+
+  padding: 1.5em 2em;
+
+  text-align: center;
+  font-size: 10pt;
+
+  box-shadow: 0 -2px 8px rgba(0,0,0,.2);
+}
+
+.CookieConsentText {
+  max-width: 1000px;
+  margin: 0 auto 1em auto;
+  line-height: 1.5;
+}
+
+.CookieConsent a,
+.CookieConsent a:link,
+.CookieConsent a:visited {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.CookieConsent a:hover {
+  color: #ddd;
+}
+
+.CookieConsent button {
+  padding: .6em 2.5em;
+
+  border: 0;
+  background: #f4f4f4;
+  color: #111;
+
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 11pt;
+}
+
+.CookieConsent button:hover {
+  background: #fff;
+}
+
+@media (max-width: 760px) {
+  div.UniversityFounderLogo { position: static; float: right; margin: 0 0 .5em .75em; }
+  div.Content { margin-left: 0; border-left: 0; padding: 0 1em; clear: both; }
+  div.MainMenu { float: none; margin: 1em; }
+  div.MainMenu a { display: inline-block; margin-right: .8em; }
+  div.Footer { margin-left: 1em; }
+  .CookieConsent {
+    padding: 1em;
+  }
+  .CookieConsent button { margin-top: .8em; }
+}
+
+
