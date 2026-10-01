@@ -4,9 +4,14 @@
   <head>
     <title>Journal Differential Equations and Control Processes - $caption$</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
-    <link rel="stylesheet" href="$ResourceLink$/style.css" type="text/css"></link>
+    <link rel="stylesheet"
+          href="ResourceLink/style.css?v=20261002"
+          type="text/css"></link>
+
     <script type="text/javascript" src="$ResourceLink$/jquery.js"></script>
-    <script type="text/javascript" src="$ResourceLink$/journal.js"></script>
+    <script src="ResourceLink/journal.js?v=20261002"
+            type="text/javascript"></script>
+
   </head>
   <body>
     <div class="Head">

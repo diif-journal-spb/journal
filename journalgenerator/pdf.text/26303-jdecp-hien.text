@@ -1,0 +1,3248 @@
+﻿dx
+dt
+6
+ 
+-
+?
+DIFFERENTIAL EQUATIONS
+AND
+CONTROL PROCESSES
+N. 3, 2026
+Electronic Journal,
+reg. N ΦC77-39410 at 15.04.2010
+ISSN 1817-2172
+http://diffjournal.spbu.ru/
+e-mail: jodiff@mail.ru
+Control problems in nonlinear systems
+Analysis and control of positive 2-D systems in
+continuous-time Caputo-Roesser model
+N. K. Anh
+1
+, T. T. Anh Duong
+1
+, L. V. Hien
+1,∗ , N. P. Nguyen
+2
+1
+School of Mathematics and Computer Science,
+Hanoi National University of Education, Hanoi, Vietnam
+2
+Ha Long High school for Gifted students,
+∗ Corresponding author: hienlv@hnue.edu.vn
+Abstract. In this paper, the problems of stability and stabilization via static
+output-feedback control are extended for positive continuous-time Roesser
+modeldescribedCaputoderivativeswithincommensurateorders. Ageneralso-
+lution representation to state-space equation of the model is first given. Then,
+using the established solution representation, necessary and sufficient condi-
+tions ensuring the positivity of the system (i.e. all system states initiated from
+nonnegative states are always nonnegative for all times) are derived. By uti-
+lizing the monotonicity induced from the positivity, a necessary and sufficient
+stability condition is formulated in terms of a tractable LP condition. The ob-
+tained stability result is then taken into deriving LP-based conditions for the
+existence of a desired controller that makes the closed-loop system positive and
+stable.
+Keywords: Fractional-order 2-D systems, positivity, Roesser model, linear
+programming.Differential Equations and Control Processes, N. 3, 2026
+1 Introduction
+Two-dimensional(2-D)systemsarewidelyusedtodescribedynamicsofvarious
+practical and physical processes where the information propagation occurs in
+each of the two independent directions [1]. For example, a number of partial
+differential equations (PDEs) with two independent variables appearing in gas
+absorption, heat exchangers or image processing can be converted into 2-D sys-
+tems which are important for realizing control processes [2–4]. Among various
+models of 2-D systems, Roesser model [5] has found practical applications in
+numerous areas such as 2-D control systems [6], digital filter structures [7], lin-
+ear repetitive processes [8,9], or iterative learning control [10–12]. Due to a
+wide range of applications, the theory of 2-D systems has received significant
+research attention in the past few years. In particular, various problems in the
+systems and control theory including stability, performance analysis and con-
+troller/filter synthesis have been extensively studied for 2-D systems described
+by Roesser-type models. To mention a few, we refer the reader to existing
+works [13–19].
+Recently, theproblemsofstabilityanalysisandcontrolof2-Dsystemswith
+or without delays have received remarkable attention and a number of results
+have been reported in the literature. While the theory of 2-D discrete-time
+systems has been well studied and developed, there have been only a few
+results devoted to the study of 2-D systems in the continuous-time domain.
+For example, the problems of H
+∞
+stabilization and reliable H
+∞
+stabilization
+via state-feedback controllers were studied for some classes of 2-D continuous-
+time Roesser systems with time-varying delays in [20,21] and [22], respectively.
+Based on a variant of the Lyapunov–Krasovskii functional (LKF) method, suf-
+ficient conditions ensuring asymptotic stability with H
+∞
+performance of the
+closed-loop systems were derived in a linear matrix inequality (LMI) setting.
+The problem of delay-dependent exponential stability of 2-D continuous-time
+Roessersystemswasalsoinvestigatedin[23]. Morerecently, theproblemofex-
+ponential stabilization of 2-D continuous-time Roesser systems with directional
+input delays was considered in [24] for the first time. Based on a modified re-
+duction method and by utilizing the extended LKF method proposed in [23],
+analysisandsynthesisconditionsofaprediction-basedstate-feedbackcontroller
+were derived in the form of tractable LMIs, which can be effectively solved by
+various computational tools to obtain desired controller gains.
+On the other hand, fractional calculus with a long history as a pure math-
+Electronic Journal: http://diffjournal.spbu.ru/ 85Differential Equations and Control Processes, N. 3, 2026
+ematical field is most suitable to use in description of hereditary properties of
+various materials and processes which are neglected in classical integer models.
+In particular, fractional-order (FrO) differential equations have found applica-
+tions in many areas such as viscoelastic, dielectric polarization, electromag-
+netic waves, heat conduction, robotics or circuit systems [25–27]. In the past
+two decades, the study of FrO dynamical 1-D systems has attracted consid-
+erable attention with various interesting results have been reported [28–30].
+Such studies for FrO 2-D systems have received considerably less research at-
+tention, especially for 2-D continuous-time systems. The notion of FrO 2-D
+discrete systems was introduced and studied in [31]. Continuous 2-D FrO sys-
+tems in the Roesser structure and their extensions were introduced in [26,32]
+and state-space equations involving partial FrO Caputo derivative were pre-
+sented. Recently, the problem of positivity analysis was developed for contin-
+uous 2-D Fornasini-Marchesini fractional model in [33]. A representation of
+general solutions is obtained by using certain type of Laplace transformations.
+By employing the obtained solution formula, positivity of the system is dis-
+cussed. However, due to substantial differences in their structures, the results
+of [33] are generally not applicable for FrO 2-D continuous Roesser systems.
+Extending such studies for 2-D Roesser systems proves to be more challenging
+and evolving, which motivates further investigation.
+Inthispaper, weconsideraclassof2-Dsystemsdescribedbyacontinuous-
+time Roesser model via Caputo derivatives with incommensurate orders. The
+addressed problem consists of the following aspects. First, we employ a 2-
+D Laplace transformation to formulate a general solution representation. We
+then derive conditions that characterize the positivity of the system. Third,
+by utilizing the monotonicity induced from the positivity, we exploit necessary
+and sufficient conditions in terms of tractable linear programing (LP) settings
+to ensure the system stability. Finally, the obtained stability result is utilized
+to address the design problem of static output-feedback controllers (SOFCs)
+that make the corresponding closed-loop system positive and stable.
+2 Preliminaries
+Inthissection,webrieflyintroducesomeconceptsofCaputofractionalintegrals
+and derivatives [25]. Let L
+1
+(0,T;X) be the space of integrable functions on
+[0,T], in the Bochner sense.
+Definition 1. For a given scalar α > 0, the fractional integral of order α of a
+Electronic Journal: http://diffjournal.spbu.ru/ 86Differential Equations and Control Processes, N. 3, 2026
+function f ∈L
+1
+(0,T;X) is defined by
+I
+α t
+f(t)=
+1
+Γ(α)
+Z
+t
+0
+(t−s)
+α−1
+f(s)ds (1)
+provided that the concerned integral is well defined, where Γ(.) is the Euler-
+Gamma function given by Γ(p)=
+R
+∞
+0
+e
+−t
+t
+p−1
+dt.
+Definition 2. Let N be a positive integer. For a function f ∈ C
+N
+([0,T];X),
+the Caputo fractional derivative of order α∈(N−1,N) of f is defined by
+D
+α t
+f(t)=
+1
+Γ(N−α)
+Z
+t
+0
+f
+(N)
+(s)
+(t−s)
+α−N+1
+ds. (2)
+Based on the concept of Caputo fractional derivative, the generalized Ca-
+puto fractional derivative of order α∈(0,1) of a function f is defined as
+D
+α+
+t
+f(t)=
+1
+Γ(1−α)
+D
++
+ Z
+t
+0
+f(s)−f(0)
+(t−s)
+α ds
+ 
+,
+where D
++
+is the upper-right Dini derivative. By a simple calculus, it can be
+verified that
+D
+α+
+t
+f(t)=
+1
+Γ(1−α)
+Z
+t
+0
+D
++
+f(s)
+(t−s)
+α ds.
+For a function f(.) ∈ C
+1
+[0,∞) and a scalar 0 < α < 1, the relation between
+the RL derivative
+RL
+D
+α f(t) and the Caputo derivative D
+α 0
+f(t) is given by [25]
+D
+α t
+f(t)=
+RL
+D
+α f(t)− f(0)
+Γ(1−α)
+t
+−α .
+Definition 3. For a function f of two variables (t
+1
+,t
+2
+) and positive scalar α,
+the Caputo fractional partial derivative of order α of f with respect to t
+1
+is
+defined by
+∂
+α t
+1
+f(t
+1
+,t
+2
+)=
+1
+Γ(N−α)
+Z
+t
+1
+0
+∂
+N
+∂t
+N
+1
+f(s,t
+2
+)
+(t
+1
+−s)
+α−N+1
+ds, (3)
+where N ∈ Z
++
+satisfying N − 1 < α < N. The Caputo fractional partial
+derivative ∂
+α t
+2
+f(t
+1
+,t
+2
+) of function f with respect to t
+2
+is defined similarly.
+Let f(t
+1
+,t
+2
+) be a continuous function of two variables (t
+1
+,t
+2
+). We define
+1-D Laplace transforms F(p,t
+2
+) and F(t
+1
+,s) of f with respect to t
+1
+and t
+2
+as
+F(p,t
+2
+)=L
+t
+1
+[f(t
+1
+,t
+2
+)]=
+Z
+∞
+0
+f(t
+1
+,t
+2
+)e
+−pt
+1
+dt
+1
+,
+Electronic Journal: http://diffjournal.spbu.ru/ 87Differential Equations and Control Processes, N. 3, 2026
+F(t
+1
+,s)=L
+t
+2
+[f(t
+1
+,t
+2
+)]=
+Z
+∞
+0
+f(t
+1
+,t
+2
+)e
+−st
+2
+dt
+2
+,
+and 2-D Laplace transform of f is given by
+F(p,s)=L
+t
+1
+,t
+2
+[f(t
+1
+,t
+2
+)]=L
+t
+1
+{L
+t
+2
+[f(t
+1
+,t
+2
+)]}=L
+t
+2
+{L
+t
+1
+[f(t
+1
+,t
+2
+)]}
+=
+Z
+∞
+0
+Z
+∞
+0
+f(t
+1
+,t
+2
+)e
+−(pt
+1
++st
+2
+)
+dt
+1
+dt
+2
+.
+(4)
+Since
+L
+t
+1
+[t
+α 1
+]=
+Γ(α+1)
+p
+α+1
+and
+L
+t
+1
+ 
+∂
+N
+1
+∂t
+N
+1
+1
+f(t
+1
+,t
+2
+)
+ 
+=p
+N
+1
+F(p,t
+2
+)− N
+1
+X
+k=1
+p
+N
+1
+−k
+∂
+(k−1)
+∂t
+(k−1)
+1
+f(t
+1
+,t
+2
+)
+ 
+ 
+ 
+t
+1
+=0
+,
+it can be shown that the 2-D Laplace transform of partial fractional order
+derivative of f(t
+1
+,t
+2
+) with respect to t
+1
+is given by the following formula [26]
+L
+t
+1
+,t
+2
+[∂
+α t
+2
+f(t
+1
+,t
+2
+)]=p
+α F(p,s)− N
+1
+X
+k=1
+p
+α−k
+F
+(k−1)
+t
+1
+(0,s), (5)
+where
+F
+(k)
+t
+1
+(0,s)=L
+t
+1
+(
+ 
+∂
+k
+∂t
+k
+1
+f(t
+1
+,t
+2
+)
+ 
+t
+1
+=0
+)
+.
+Similarly, the 2-D Laplace transform of partial fractional order derivative
+of f(t
+1
+,t
+2
+) with respect to t
+2
+is given by the following formula
+L
+t
+1
+,t
+2
+[∂
+β t
+2
+f(t
+1
+,t
+2
+)]=s
+β F(p,s)− N
+2
+X
+l=1
+s
+β−l
+F
+(l−1)
+t
+2
+(p,0), (6)
+where
+F
+(l)
+t
+2
+(p,0)=L
+t
+2
+(
+ 
+∂
+l
+∂t
+l
+2
+f(t
+1
+,t
+2
+)
+ 
+t
+2
+=0
+)
+.
+3 Solution representation
+Consider the following FrO 2-D continuous-time Roesser system
+"
+∂
+α t
+1
+x
+h
+(t
+1
+,t
+2
+)
+∂
+β t
+2
+x
+v
+(t
+1
+,t
+2
+)
+#
+=
+"
+A
+11
+A
+12
+A
+21
+A
+22
+#"
+x
+h
+(t
+1
+,t
+2
+)
+x
+v
+(t
+1
+,t
+2
+)
+#
++
+"
+B
+1
+B
+2
+#
+u(t
+1
+,t
+2
+), (7a)
+Electronic Journal: http://diffjournal.spbu.ru/ 88Differential Equations and Control Processes, N. 3, 2026
+y(t
+1
+,t
+2
+)=C
+"
+x
+h
+(t
+1
+,t
+2
+)
+x
+v
+(t
+1
+,t
+2
+)
+#
++Du(t
+1
+,t
+2
+), (7b)
+where x
+h
+∈ R
+n
+h
+and x
+v
+∈ R
+n
+v
+are the horizontal and vertical state vectors,
+respectively, A
+ij
+(i,j = 1,2), B
+k
+(k = 1,2) and C,D are given real matrices
+of appropriate dimensions, u(t
+1
+,t
+2
+) ∈ R
+m
+and y(t
+1
+,t
+2
+) ∈ R
+q
+are the control
+input and measurement output, respectively; 0 < α < 1 and 0 < β < 1 are
+scalarsrepresentingtheorderofpartialderivatives. Initialconditionsof (7)are
+specified as
+x
+h
+(0,t
+2
+)=ϕ(t
+2
+), x
+v
+(t
+1
+,0)=ψ(t
+1
+), t
+1
+, t
+2
+∈R
++
+. (8)
+By applying 2-D Laplace transforms (5) and (6) to (7a), we obtain
+"
+p
+α X
+h
+(p,s)−p
+α−1
+X
+h
+(0,s)
+s
+β X
+v
+(p,s)−s
+β−1
+X
+v
+(p,0)
+#
+=
+"
+A
+11
+A
+12
+A
+21
+A
+22
+#"
+X
+h
+(p,s)
+X
+v
+(p,s)
+#
++
+"
+B
+1
+B
+2
+#
+U(p,s), (9)
+whereX
+h
+(p,s),X
+v
+(p,s)andU(p,s)arethe2-DLaplacetransformsofx
+h
+(t
+1
+,t
+2
+),
+x
+v
+(t
+1
+,t
+2
+) and u(t
+1
+,t
+2
+), respectively, X
+h
+(0,s) =L
+t
+2
+[ϕ(t
+2
+)], X
+v
+(p,0) =L
+t
+1
+[ψ(t
+1
+)].
+By pre-multiplying (9) with diag{p
+−α I
+n
+h
+,s
+−β I
+n
+v
+}, we then obtain
+"
+X
+h
+(p,s)
+X
+v
+(p,s)
+#
+=H
+−1
+(p,s)
+("
+p
+−1
+X
+h
+(0,s)
+s
+−1
+X
+v
+(p,0)
+#
++
+"
+p
+−α B
+1
+s
+−β B
+2
+#
+U(p,s)
+)
+, (10)
+where
+H(p,s)=
+"
+I
+n
+h
+−p
+−α A
+11
+−p
+−α A
+12
+−s
+−β A
+21
+I
+n
+v
+−s
+−β A
+22
+#
+.
+We now decompose
+H
+−1
+(p,s)=
+∞
+X
+i=0
+∞
+X
+j=0
+T
+ij
+p
+−iα
+s
+−jβ (11)
+where T
+ij
+are matrix coefficients which will be determined. By the expression
+of the matrix H(p,s) and the decomposition (11), it follows from the fact
+H
+−1
+(p,s)H(p,s)=H(p,s)H
+−1
+(p,s)=I
+n
+that
+∞
+X
+i=0
+∞
+X
+j=0
+{T
+ij
+−T
+10
+T
+i−1,j
+−T
+01
+T
+i,j−1
+}p
+−iα
+s
+j
+β =I
+n
+, (12)
+Electronic Journal: http://diffjournal.spbu.ru/ 89Differential Equations and Control Processes, N. 3, 2026
+where
+T
+10
+=
+"
+A
+11
+A
+12
+0 0
+#
+, T
+01
+=
+"
+0 0
+A
+21
+A
+22
+#
+.
+By matching the coefficients at the same powers of p and s, we obtain the
+following iteration
+T
+ij
+=
+
+
+
+
+
+I
+n
+for i=j =0,
+T
+10
+T
+i−1,j
++T
+01
+T
+i,j−1
+for i+j >0,
+0 for i<0 or j <0,
+(13)
+Combining (10) and (11) we obtain
+"
+X
+h
+(p,s)
+X
+v
+(p,s)
+#
+=
+∞
+X
+i=0
+∞
+X
+j=0
+T
+ij
+("
+p
+−iα−1
+s
+−jβ X
+h
+(0,s)
+p
+−iα
+s
+−jβ−1
+X
+v
+(p,0)
+#
++
+"
+p
+−(i+1)α s
+−jβ B
+1
+p
+−iα
+s
+−(j+1)β B
+2
+#
+U(p,s)
+)
+,
+(14)
+where T
+ij
+are uniquely determined by (13).
+We now apply the 2-D inverse Laplace transformation to (14). Observe
+that, for α>0, β >0, we have
+L
+−1
+[p
+−α F(p)]=I
+α t
+f(t), L
+−1
+t
+1
+[p
+−α ]=
+t
+α−1
+1
+Γ(α)
+,
+L
+−1
+t
+1
+,t
+2
+ 
+p
+−α F(p,s)
+ 
+=I
+α t
+1
+f(t
+1
+,t
+2
+)=
+1
+Γ(α)
+Z
+t
+1
+0
+f(θ,t
+2
+)
+(t
+1
+−θ)
+1−α dθ,
+L
+−1
+t
+1
+,t
+2
+ 
+s
+−β F(p,s)
+ 
+=I
+β t
+2
+f(t
+1
+,t
+2
+)=
+1
+Γ(β)
+Z
+t
+2
+0
+f(t
+1
+,θ)
+(t
+2
+−θ)
+1−β dθ,
+(15)
+and
+L
+−1
+t
+1
+,t
+2
+ 
+p
+−α s
+−β F(p,s)
+ 
+=
+1
+Γ(α)Γ(β)
+Z
+t
+1
+0
+Z
+t
+2
+0
+f(ξ,θ)
+(t
+1
+−ξ)
+1−α (t
+2
+−θ)
+1−β dξdθ. (16)
+By utilizing the properties (15), (16) of 2-D inverse Laplace transformation,
+from (14), we obtain the following solution representation of the problem gov-
+Electronic Journal: http://diffjournal.spbu.ru/ 90Differential Equations and Control Processes, N. 3, 2026
+erned by (7a) and (8)
+"
+x
+h
+(t
+1
+,t
+2
+)
+x
+v
+(t
+1
+,t
+2
+)
+#
+=
+∞
+X
+i=0
+∞
+X
+j=1
+T
+ij
+(
+t
+iα
+1
+Γ(iα+1)
+I
+jβ t
+2
+"
+ϕ(t
+2
+)
+0
+#
++
+"
+B
+1
+0
+#
+I
+(i+1)α,jβ t
+1
+,t
+2
+u(t
+1
+,t
+2
+)
+)
++
+∞
+X
+i=0
+T
+i0
+(
+t
+iα
+1
+Γ(iα+1)
+"
+ϕ(t
+2
+)
+0
+#
++
+"
+B
+1
+0
+#
+I
+(i+1)α t
+1
+u(t
+1
+,t
+2
+)
+)
++
+∞
+X
+i=1
+∞
+X
+j=0
+T
+ij
+(
+t
+jβ 2
+Γ(jβ+1)
+I
+iα
+t
+1
+"
+0
+ψ(t
+1
+)
+#
++
+"
+0
+B
+2
+#
+I
+iα,(j+1)β t
+1
+,t
+2
+u(t
+1
+,t
+2
+)
+)
++
+∞
+X
+j=0
+T
+0j
+(
+t
+jβ 2
+Γ(jβ+1)
+"
+0
+ψ(t
+1
+)
+#
++
+"
+0
+B
+2
+#
+I
+(j+1)β t
+2
+u(t
+1
+,t
+2
+)
+)
+.
+(17)
+We summarize the above derivation in the following theorem.
+Theorem 1. For given continuous functions ϕ, ψ, real numbers 0 < α < 1,
+0 < β < 1, and for an arbitrary input u(t
+1
+,t
+2
+), the solution of the problem
+governed by system (7a) and (8) is given by (17), where the matrix coefficients
+T
+ij
+, i,j≥0, are determined by (13).
+4 Positivity
+Inthissection, wewillderiveconditionsbywhichafractionalorder2-Dsystem
+in the form of (7) is positive. First, we give the following definition.
+Definition 4. System (7) is said to be internally positive if state and output
+trajectories are always nonnegative for any nonnegative initial conditions and
+control input. In other words, if ϕ(t
+2
+)⪰ 0, ψ(t
+1
+)⪰ 0 and u(t
+1
+,t
+2
+)⪰ 0 for all
+t
+1
+≥ 0,t
+2
+≥ 0, then it holds that x(t
+1
+,t
+2
+) =
+"
+x
+h
+(t
+1
+,t
+2
+)
+x
+v
+(t
+1
+,t
+2
+)
+#
+⪰ 0 and y(t
+1
+,t
+2
+) ⪰ 0
+for all (t
+1
+,t
+2
+)∈R
+2
++
+.
+Before proceeding further, we reformulate the following auxiliary results.
+Proposition 1. The 1-D fractional-order system
+D
+α t
+x(t)=Ax(t)+Bu(t), t>0,
+x(0)=x
+0
+∈R
+n
+,
+(18)
+is internally positive if and only if A is Metzler and B is nonnegative.
+Electronic Journal: http://diffjournal.spbu.ru/ 91Differential Equations and Control Processes, N. 3, 2026
+Proof. We now present a brief proof for the sufficiency. Since A is a Metzler
+matrix, there exists a scalar σ >0 such that A
+σ ≜A+σI
+n
+⪰0. Then, we have
+x(t)=E
+α (−σt
+α )x
+0
++
+Z
+t
+0
+Ψ(t−s)A
+σ x(s)ds
++
+Z
+t
+0
+Ψ(t−s)Bu(s)ds,
+(19)
+where Ψ(t) =
+P
+∞
+k=0
+−σ k
+t
+(k+1)α−1
+Γ(kα+α)
+= t
+α−1
+E
+α,α
+(−σt
+α ). Note that E
+α (−σt
+α ) > 0
+and Ψ(t) > 0 for all t > 0 and α ∈ (0,1) by the complete monotonicity of
+the functions E
+α (−z) and E
+α,α
+(−z) on [0,∞). Thus, for any x
+0
+∈ R
+n
++
+and
+nonnegative input u(t) ∈R
+m
++
+, x(t) ∈R
+n
++
+for small t > 0. Suppose that there
+exists a t
+∗ > 0 such that x(t
+∗ ) ⪰̸ 0 and x(t) ⪰ 0 for all t ∈ [0,t
+∗ ). Then, it
+can be deduced from (19) that x(t) ⪰ E
+α (−σt
+α )x
+0
+, t ∈ [0,t
+∗ ), which yields
+x(t
+∗ )⪰0 by letting t↑t
+∗ . This contradiction shows that x(t)⪰0 for all t≥0.
+The proof is completed.
+Lemma 1. For a given 0 < α < 1, the matrix E
+α (At
+α ) ⪰ 0 for all t > 0 if
+and only if A is Metzler, where E
+α (z) denotes the one-parameter Mittag–Leffler
+function,
+E
+α (z)=
+∞
+X
+k=0
+z
+k
+Γ(αk+1)
+.
+Proof. If A is Metzler then, for zero input (i.e. u(t) = 0) and x(0) =e
+k
+, where
+e
+k
+is the kth column of the identity matrix I
+n
+, we have x
+k
+(t) = E
+α (At
+α )e
+k
+⪰ 0
+according to Proposition 1. Thus,
+E
+α (At
+α )=[x
+1
+(t)x
+2
+(t)···x
+n
+(t)]⪰0,
+which proves the sufficiency.
+For the necessity, assume that E
+α (At
+α )⪰ 0 for all t > 0. If there exists an
+entry a
+ij
+<0, i̸=j, then we have
+0≤e
+⊤
+i
+E
+α (At
+α )e
+j
+=
+a
+ij
+t
+α Γ(α+1)
++o(t
+α ), t→0.
+Since lim
+t↓0
+o(t
+α )/t
+α = 0, for ϵ = −a
+ij
+/(2Γ(α+1)) > 0, there exists a δ > 0
+such that|o(t
+α )|/t
+α <ϵ, t∈(0,δ). Therefore,
+e
+⊤
+i
+E
+α (At
+α )e
+j
+<
+a
+ij
+t
+α 2Γ(α+1)
+<0, t∈(0,δ).
+This contradiction implies that A is a Metzler matrix. The proof is completed.
+Electronic Journal: http://diffjournal.spbu.ru/ 92Differential Equations and Control Processes, N. 3, 2026
+Theorem 2. The 2-D system (7) is internally positive if and only if A =
+"
+A
+11
+A
+12
+A
+21
+A
+22
+#
+is Metzler andB =
+"
+B
+1
+B
+2
+#
+, C, D are nonnegative.
+Proof. Necessity: For zero input (i.e. u=0) andϕ=0, it follows from solution
+formula (17) that
+"
+x
+h
+(t
+1
+,t
+2
+)
+x
+v
+(t
+1
+,t
+2
+)
+#
+=
+∞
+X
+i=1
+∞
+X
+j=0
+T
+ij
+t
+jβ 2
+Γ(jβ+1)
+I
+iα
+t
+1
+"
+0
+ψ(t
+1
+)
+#
++
+∞
+X
+j=0
+T
+0j
+t
+jβ 2
+Γ(jβ+1)
+"
+0
+ψ(t
+1
+)
+#
+.
+(20)
+For sufficiently smallt
+1
+>0, by the continuity of fractional integrals, from (20),
+we have
+"
+x
+h
+(t
+1
+,t
+2
+)
+x
+v
+(t
+1
+,t
+2
+)
+#
+≈ ∞
+X
+j=0
+T
+0j
+t
+jβ 2
+Γ(jβ+1)
+"
+0
+ψ(t
+1
+)
+#
+=
+∞
+X
+j=0
+t
+jβ 2
+T
+j
+01
+Γ(jβ+1)
+"
+0
+ψ(t
+1
+)
+#
+=
+
+
+
+0
+∞
+X
+j=0
+t
+jβ 2
+A
+j
+22
+Γ(jβ+1)
+ψ(t
+1
+)
+
+
+
+=
+"
+0
+E
+β (A
+22
+t
+β 2
+)ψ(t
+1
+)
+#
+. (21)
+Let ψ(t
+1
+) be a continuous function such that ψ(t
+1
+)⪰ 0 for all t
+1
+≥ 0 and
+ψ(t
+1
+)≻0forsufficientlysmallt
+1
+>0. Then, itfollows from
+"
+x
+h
+(t
+1
+,t
+2
+)
+x
+v
+(t
+1
+,t
+2
+)
+#
+⪰0for
+all t
+1
+,t
+2
+≥ 0 that E
+β  
+A
+22
+t
+β 2
+ 
+⪰ 0 for all t
+2
+≥ 0. By Lemma 1, we can conclude
+that the matrix A
+22
+is Metzler. It can be shown by similar arguments that, for
+u=0,ψ =0, and ϕ(t
+2
+)≻0 for t
+2
+>0, A
+11
+is also a Metzler matrix.
+On the other hand, for zero input u=0, similar to (21), we have
+"
+x
+h
+(t
+1
+,t
+2
+)
+x
+v
+(t
+1
+,t
+2
+)
+#
+=
+"
+E
+α (t
+α 1
+A
+11
+)ϕ(t
+2
+)
+E
+β (t
+β 2
+A
+22
+)ψ(t
+1
+)
+#
++
+∞
+X
+i=0
+∞
+X
+j=1
+t
+iα
+1
+Γ(1+iα)
+(T
+10
+T
+i−1,j
++T
+01
+T
+i,j−1
+)
+"
+I
+jβ t
+2
+ϕ(t
+2
+)
+0
+#
++
+∞
+X
+i=1
+∞
+X
+j=0
+t
+jβ 2
+Γ(1+jβ)
+(T
+10
+T
+i−1,j
++T
+01
+T
+i,j−1
+)
+"
+0
+I
+iα
+t
+1
+ψ(t
+1
+)
+#
+. (22)
+Electronic Journal: http://diffjournal.spbu.ru/ 93Differential Equations and Control Processes, N. 3, 2026
+For sufficiency small t
+1
+> 0, t
+2
+> 0, and keep in mind that the matrices
+A
+11
+,A
+22
+are Metzler, we obtain the necessity that the matrices A
+12
+and A
+21
+are
+nonnegative.
+Finally, for zero initial condition and u(t
+1
+,t
+2
+)≻0, it follows from (17) that
+x(t
+1
+,t
+2
+)=
+∞
+X
+i=0
+∞
+X
+j=0
+T
+i−1,j−1
+BI
+iα,jβ t
+1
+,t
+2
+u(t
+1
+,t
+2
+). (23)
+For sufficiently small t
+1
+, t
+2
+, we have
+x(t
+1
+,t
+2
+)≈BI
+α,β
+t
+1
+,t
+2
+u(t
+1
+,t
+2
+).
+In combination with the fact the fractional integral I
+α,β
+t
+1
+,t
+2
+u(t
+1
+,t
+2
+) ⪰ 0 for
+u(t
+1
+,t
+2
+)⪰0, we can conclude that B⪰0. Finally, the condition that C,D⪰0
+is shown by specifying special initial conditions and inputs.
+5 Stability analysis
+In this section, we focus on the stability of positive 2-D systems in the form of
+(7). Assume that the matrix A =
+"
+A
+11
+A
+12
+A
+21
+A
+22
+#
+is Metzler and B =
+"
+B
+1
+B
+2
+#
+, C,
+D are nonnegative. By Theorem 2, system (7) is positive. With u = 0, the
+open-loop system of (7) is given as
+"
+∂
+α t
+1
+x
+h
+(t
+1
+,t
+2
+)
+∂
+β t
+2
+x
+v
+(t
+1
+,t
+2
+)
+#
+=
+"
+A
+11
+A
+12
+A
+21
+A
+22
+#"
+x
+h
+(t
+1
+,t
+2
+)
+x
+v
+(t
+1
+,t
+2
+)
+#
+. (24)
+Let x(t
+1
+,t
+2
+) and ˜ x(t
+1
+,t
+2
+) be solutions of (24) with initial conditions (ϕ,ψ)
+and(
+˜
+ϕ,
+˜
+ψ),respectively. Since ˆ x(t
+1
+,t
+2
+)= ˜ x(t
+1
+,t
+2
+)−x(t
+1
+,t
+2
+)isasolutionof (24),
+if ψ(t
+1
+)⪯ ˜
+ψ(t
+1
+) and ϕ(t
+2
+)⪯ ˜
+ϕ(t
+2
+) for all t
+1
+≥ 0, t
+2
+≥ 0, then ˆ x(t
+1
+,t
+2
+)⪰ 0 for
+all (t
+1
+,t
+2
+)∈R
+2
++
+according to the positivity of (24). This shows that
+|x(t
+1
+,t
+2
+)|⪯x(t
+1
+,t
+2
+,|ϕ|,|ψ|), t
+1
+≥0, t
+2
+≥0,
+where x(t
+1
+,t
+2
+,|ϕ|,|ψ|) is the solution of (24) with initial condition |ϕ|,|ψ|. It
+is clear that |ψ(t
+1
+)| ⪰ 0 and |ϕ(t
+2
+)| ⪰ 0 for all t
+1
+≥ 0, t
+2
+≥ 0. In addition,
+according to the above estimate, it can be verified that x(t
+1
+,t
+2
+)→0 as t
+1
+→∞
+andt
+2
+→∞forallinitialfunctionsϕ,ψifandonlyifitholdsforallnonnegative
+initial functions ψ(t
+1
+)⪰0 and ϕ(t
+2
+)⪰0. Therefore, in the following, it suffices
+Electronic Journal: http://diffjournal.spbu.ru/ 94Differential Equations and Control Processes, N. 3, 2026
+to consider nonnegative initial functions ϕ, ψ. In regard to the positivity of
+system (24), we have x(t
+1
+,t
+2
+)⪰0 for all t
+1
+≥0, t
+2
+≥0.
+We recall here that system (24) is said to be globally asymptotically stable
+(GAS) with respect to an admissible set of initial conditions if for any initial
+conditions ϕ,ψ, it holds that x(t
+1
+,t
+2
+) → 0 as t
+1
+→ ∞ and t
+2
+→ ∞. In this
+paper, an admissible set of initial conditions is defined by
+A
+F
+=
+(
+(ϕ,ψ)∈C(R
++
+,R
+n
+h
+×R
+n
+v
+):sup
+t≥0
+
+
+
+
+
+"
+ϕ(t)
+ψ(t)
+#
+
+
+
+
+<∞
+)
+.
+We now derive necessary stability conditions. Assume that positive system
+(24) is GAS and there exists a vector ξ =
+"
+ξ h
+ξ v
+#
+∈R
+n
+h
++
+×R
+n
+v
++
+, ξ ̸= 0, such that
+Aξ ⪰ 0. Let x
+ξ (t
+1
+,t
+2
+) be the solution of (24) with constant initial conditions
+ϕ(t
+2
+) = ξ h
+, ψ(t
+1
+) = ξ v
+, and define the function x(t
+1
+,t
+2
+) = x
+ξ (t
+1
+,t
+2
+)− ξ. It
+follows from (24) that
+"
+∂
+α t
+1
+x
+h
+(t
+1
+,t
+2
+)
+∂
+β t
+2
+x
+v
+(t
+1
+,t
+2
+)
+#
+=
+"
+A
+11
+A
+12
+A
+21
+A
+22
+#
+| {z }
+A
+"
+x
+h
+ξ (t
+1
+,t
+2
+)
+x
+v
+ξ (t
+1
+,t
+2
+)
+#
+=A[x
+ξ (t
+1
+,t
+2
+)−ξ]+Aξ. (25)
+Since Aξ ⪰ 0 and, according to (24), x(t
+1
+,t
+2
+) is the solution of (7) with zero
+initial condition, it holds that x(t
+1
+,t
+2
+)⪰0 for all (t
+1
+,t
+2
+)∈R
+2
++
+. Therefore,
+0̸=ξ⪯x
+ξ (t
+1
+,t
+2
+)→0, t
+1
+,t
+2
+→∞.
+Thiscontradictionshowsthatforanynonzerovectorξ∈R
+n
+h
++n
+v
++
+,thereexistsat
+least a component of the vectorAξ that is strictly negative (i.e. (Aξ)
+k
+<0 for
+some k = 1,2,...,n). By similar approach utilizing the KKM lemma (see [35]
+for more details), we obtain the following necessary stability condition.
+Proposition 2. Assume that the positive FrO 2-D system (24) is GAS. Then,
+there must exist a vector ξ =
+"
+ξ h
+ξ v
+#
+∈R
+n
+h
+×R
+n
+v
+, ξ≻0, such that
+"
+A
+11
+A
+12
+A
+21
+A
+22
+#"
+ξ h
+ξ v
+#
+≺0. (26)
+Electronic Journal: http://diffjournal.spbu.ru/ 95Differential Equations and Control Processes, N. 3, 2026
+We now in a position to derive necessary and sufficient LP-based stability
+condition for positive fractional-order 2-D continuous systems.
+Theorem 3. The positive FrO 2-D system (24) is GAS if and only if there
+exists a vector ξ∈R
+n
+h
++n
+v
+, ξ≻0, that satisfies the LP-based condition (26).
+Proof. ThenecessityfollowsfromProposition2. Wenowprovethesufficiency.
+Let 0 ≺ ξ =
+"
+ξ h
+ξ v
+#
+∈ R
+n
+h
+×R
+n
+v
+be a vector satisfying (26) and x(t
+1
+,t
+2
+) be a
+solution of positive system (24) with initial functions ϕ, ψ. Then, there exists
+a δ >0 such that
+ϕ(t
+2
+)⪯δξ h
+, ψ(t
+1
+)⪯δξ v
+for all t
+1
+,t
+2
+≥0. Similar to the proof of Proposition 2, we can obtain
+|x(t
+1
+,t
+2
+)|⪯δx
+ξ (t
+1
+,t
+2
+), t
+1
+≥0, t
+2
+≥0.
+For a sufficiently small ϵ > 0 such that A(ξ + ϵ1
+n
+) ≺ 0, where 1
+n
+denotes
+the vector in R
+n
+with all entries equal one, we define the function ˆ x(t
+1
+,t
+2
+) =
+ξ+ϵ1
+n
+−x
+ξ (t
+1
+,t
+2
+). It follows from (23) that
+"
+∂
+α t
+1
+ˆ x
+h
+(t
+1
+,t
+2
+)
+∂
+β t
+2
+ˆ x
+v
+(t
+1
+,t
+2
+)
+#
+=−A
+"
+x
+h
+(t
+1
+,t
+2
+)
+x
+v
+(t
+1
+,t
+2
+)
+#
+=Aˆ x(t
+1
+,t
+2
+)−A(ξ+ϵ1
+n
+). (27)
+System (27) is positive and
+ˆ x
+h
+(0,t
+2
+)=ξ h
++ϵ1
+n
+h
+−x
+h
+ξ (0,t
+2
+)=ϵ1
+n
+h
+≻0,
+ˆ x
+v
+(t
+1
+,0)=ξ v
++ϵ1
+n
+v
+−x
+v
+ξ (t
+1
+,0)=ϵ1
+n
+v
+≻0,
+thus, ˆ x(t
+1
+,t
+2
+)⪰0, which yields x
+ξ (t
+1
+,t
+2
+)⪯ξ+ϵ1
+n
+for all t
+1
+,t
+2
+≥0. This shows
+that there exists a finite value x
+∞
+=limsup
+t
+1
+,t
+2
+→∞
+x
+ξ (t
+1
+,t
+2
+) and, therefore,
+limsup
+t
+1
+,t
+2
+→∞
+D
+α,β
+t
+1
+,t
+2
+x
+ξ (t
+1
+,t
+2
+)=Ax
+∞
+,
+whereD
+α,β
+t
+1
+,t
+2
+x
+ξ (t
+1
+,t
+2
+)=
+"
+∂
+α t
+1
+x
+h
+ξ (t
+1
+,t
+2
+)
+∂
+β t
+2
+x
+v
+ξ (t
+1
+,t
+2
+)
+#
+. Inaddition, bythepropertiesofLaplace
+transformations, we have
+lim
+p,s→0
+I(p,s)X
+ξ (p,s)=x
+∞
+, lim
+p,s→0
+I(p,s)L
+t
+1
+,t
+2
+[D
+α,β
+t
+1
+,t
+2
+x
+ξ (t
+1
+,t
+2
+)]=Ax
+∞
+,
+Electronic Journal: http://diffjournal.spbu.ru/ 96Differential Equations and Control Processes, N. 3, 2026
+whereI(p,s)=diag{pI
+n
+h
+,sI
+n
+v
+}. Note that
+L
+t
+1
+,t
+2
+[D
+α,β
+t
+1
+,t
+2
+x
+ξ (t
+1
+,t
+2
+)]=
+"
+p
+α X
+h
+ξ (p,s)−p
+α−1
+ξ h
+s
+β X
+v
+(p,s)−s
+β−1
+ξ v
+#
+.
+Finally, we get
+Ax
+∞
+= lim
+p,s→0
+"
+p
+α  
+pX
+h
+ξ (p,s)−ξ h
+ 
+s
+β (sX
+v
+(p,s)−ξ v
+)
+#
+=0,
+whichyieldsx
+∞
+=0and,therefore,system(24)isGAS.Theproofiscompleted.
+6 Controller synthesis
+Consider the following control system described by a 2-D FrO Roesser model
+"
+∂
+α t
+1
+x
+h
+(t
+1
+,t
+2
+)
+∂
+β t
+2
+x
+v
+(t
+1
+,t
+2
+)
+#
+=
+"
+A
+11
+A
+12
+A
+21
+A
+22
+#"
+x
+h
+(t
+1
+,t
+2
+)
+x
+v
+(t
+1
+,t
+2
+)
+#
++
+"
+B
+1
+B
+2
+#
+u(t
+1
+,t
+2
+), (28a)
+y(t
+1
+,t
+2
+)=C
+"
+x
+h
+(t
+1
+,t
+2
+)
+x
+v
+(t
+1
+,t
+2
+)
+#
+, (28b)
+where u(t
+1
+,t
+2
+) is the control input and y(t
+1
+,t
+2
+) is the measurement output. By
+Theorem 2, system (28) is positive if and only if the matrixA=
+"
+A
+11
+A
+12
+A
+21
+A
+22
+#
+is
+Metzler and B =
+"
+B
+1
+B
+2
+#
+⪰ 0, C ⪰ 0. In the following, we assume that system
+(28) is positive. An SOFC will be designed in the form
+u(t
+1
+,t
+2
+)=Ky(t
+1
+,t
+2
+)=KCx(t
+1
+,t
+2
+), (29)
+where K ∈R
+m×q
+is the controller gain which will be determined. By incorpo-
+rating (29), the closed-loop system of (28) is obtained as
+"
+∂
+α t
+1
+x
+h
+(t
+1
+,t
+2
+)
+∂
+β t
+2
+x
+v
+(t
+1
+,t
+2
+)
+#
+=(A+BKC)
+| {z }
+A
+c
+"
+x
+h
+(t
+1
+,t
+2
+)
+x
+v
+(t
+1
+,t
+2
+)
+#
+. (30)
+By Theorems 2 and 3, the closed-loop system (30) is positive and GAS if and
+only if the following conditions hold
+A
+c
+=A+BKC is Metzler, (31a)
+Electronic Journal: http://diffjournal.spbu.ru/ 97Differential Equations and Control Processes, N. 3, 2026
+∃η≻0: η ⊤
+(A+BKC)≺0. (31b)
+LetB =
+ 
+b
+1
+b
+2
+··· b
+m
+ 
+, b
+j
+∈R
+n
+, and K
+⊤
+=
+ 
+k
+1
+k
+2
+··· k
+m
+ 
+, k
+j
+∈R
+q
+. Then,
+for any η∈R
+n
+, η≻0, we have
+η ⊤
+BK =
+m
+X
+j=1
+(b
+⊤
+j
+η)k
+⊤
+j
+.
+By using the change of variable k
+⊤
+j
+=
+1
+σ z
+⊤
+j
+, where z
+j
+∈R
+q
+, σ >0 is a constant,
+and under additional condition that z
+j
+⪰z for all j, condition (31b) is reduced
+to
+η ⊤
+A+
+1
+σ m
+X
+j=1
+(b
+⊤
+j
+η)z
+⊤
+C≺0. (32)
+To get decoupling of design parameters η and z in (32), we take σ =
+P
+m
+j=1
+(b
+⊤
+j
+η) = 1
+⊤
+m
+B
+⊤
+η. Then, BK =
+1
+σ P
+m
+j=1
+b
+j
+z
+⊤
+j
+. It is well-known that a
+matrix M ∈R
+n×n
+is Metzler if and only if there exists a constant ς such that
+M +ςI
+n
+⪰ 0. Therefore, with BK =
+1
+σ BZ
+⊤
+, where σ = 1
+⊤
+m
+B
+⊤
+η, the matrix
+A
+c
+=A+BKC in (31a) can be written asA
+c
+=
+1
+σ   
+1
+⊤
+m
+B
+⊤
+η  
+A+BZ
+⊤
+C
+ 
+. By
+changing the variable ˆ σ =ςσ, condition (31a) is satisfied if and only if
+ 
+1
+⊤
+m
+B
+⊤
+η  
+A+BZ
+⊤
+C +ˆ σI
+n
+⪰0.
+In summary, the derived conditions in (31) are guaranteed by the following
+LP-based conditions
+
+
+
+
+
+
+
+
+
+
+
+ 
+1
+⊤
+m
+B
+⊤
+η  
+A+BZ
+⊤
+C +ˆ σI
+n
+⪰0
+η ⊤
+A+z
+⊤
+C≺0
+Z⪰1
+m
+z
+⊤
+η∈R
+n
+,η≻0,ˆ σ∈R
++
+, Z∈R
+m×q
+,z∈R
+q
+.
+(33)
+7 An illustrative example
+Consider the following fractional-order model of control systems which can be
+used in describing various dynamical processes in gas absorption, water stream
+Electronic Journal: http://diffjournal.spbu.ru/ 98Differential Equations and Control Processes, N. 3, 2026
+heating, or air drying [36]
+"
+∂
+α x
+r(x,t)
+∂
+β t
+s(x,t)
+#
+=
+"
+a
+1
+a
+1
+a
+2
++a
+0
+1 a
+2
+#"
+r(x,t)
+s(x,t)
+#
++
+"
+b
+0
+#
+f(x,t),
+y(x,t)=[0 1]
+"
+r(x,t)
+s(x,t)
+#
+,
+(34)
+where a
+0
+, a
+1
+, a
+2
+, and b are real coefficients and f(x,t) is the input function.
+The following parameters are borrowed from [36]
+a
+0
+=0.2, a
+1
+=−3.0, a
+2
+=−1.0, b=0.3.
+Then, we have
+A=
+"
+−3.0 3.2
+1.0 −1.0
+#
+, B =
+"
+0.3
+0
+#
+.
+In system (34), the input function u=f(x,t) can be regarded as control input
+signal. Since A is Metzler and B ⪰ 0, by Theorem 2, system (34) is positive.
+Moreover, it is easy to verify that the LP-based condition (26) does not deliver
+any feasible solution ξ≻0. Thus, the unforced system (i.e. u=0) is unstable.
+Simulation results presented in Figs. 1 and 2 are taken with α = β = 0.5 and
+initial conditions ϕ(t)=1, ψ(x)=1 for t,x∈[0,50]. The obtained simulations
+demonstrate that the open-loop system is unstable.
+50
+30
+x 10
+0 0
+10
+t
+30
+50
+0
+30
+20
+10
+r(x,t)
+Figure1: Open-loopstatetrajectoryr(x,t)
+50
+30
+x 10
+0 0
+10
+t
+30
+0
+10
+20
+30
+50
+s(x,t)
+Figure2: Open-loopstatetrajectorys(x,t)
+We now apply the the design conditions proposed in this paper. By using
+the LinProg tool in Matlab, it can be verified that the LP-based conditions in
+(33) are feasible with η =
+"
+0.8191
+0.6284
+#
+(some other parameters are omitted) and
+Electronic Journal: http://diffjournal.spbu.ru/ 99Differential Equations and Control Processes, N. 3, 2026
+the gain K is obtained as K =−9.5782. It is clear that the closed-loop system
+matrix
+A
+c
+=A+BKC =
+"
+−3.0 0.3265
+1.0 −1.0
+#
+is Metzler and Hurwitz. Thus, the closed-loop system is positive and stable.
+Simulation results with α = β = 0.5 and initial conditions ϕ(t) = 2, ψ(x) = 2
+for t,x ∈ [0,50] are given in Figs. 3 and 4. It can be seen that the closed-
+loop trajectories converge to the origin as revealed by the obtained theoretical
+results. This illustrates the effectiveness of the proposed design conditions.
+50
+30
+x
+10
+0 0
+10
+t
+30
+50
+0
+0.5
+1
+1.5
+2
+r(x,t)
+Figure 3: Closed-loop state trajectory r(x,t)
+0
+10
+30
+t
+50 0
+10 x
+30
+0.5
+1.5
+2
+0
+1
+50
+s(x,t)
+Figure 4: Closed-loop state trajectory s(x,t)
+8 Conclusion
+The problems of positivity, stability analysis and static output-feedback con-
+troller design have been extended for continuous-time Roesser model described
+Caputo fractional-order derivatives. A general solution representation to state-
+space equation of the model has been obtained using 2-D Laplace transforma-
+tions and the positivity of the system has been discussed. It is shown that a
+fractional-order continuous-time 2-D Roesser system is positive if and only if
+the state matrix is Metzler and other system matrices are nonnegative. The
+positivity has been then utilized to derive LP-stability and stabilization condi-
+tions. Numerical simulations have been provided to validate the effectiveness
+of the proposed method in this paper.
+Electronic Journal: http://diffjournal.spbu.ru/ 100Differential Equations and Control Processes, N. 3, 2026
+References
+[1] T. Kaczorek, Two-Dimensional Linear Systems, Berlin, Springer-Verlag,
+1985.
+[2] W. Marsza lek and G.T. Kekkeris, Heat exchangers and linear image pro-
+cessing theory, Int. J. Heat Mass Trans., 32(1989), 2363–2374.
+[3] D. Bors and S. Walczak, Application of 2D systems to investigation of a
+process of gas filtration, Multidim. Syst. Signal Process., 23(2012), 119–
+130.
+[4] A. Alenany, G. Merc´ ere and J.A. Ramos, Subspace identification of 2-D
+CRSD Roesser models with deterministic-stochastic inputs: A state com-
+putation approach, IEEE Trans. Control Syst. Techno., 25(2017), 1108–
+1115.
+[5] R.P. Roesser, A discrete state-space model for linear image processing,
+IEEE Trans. Autom. Control, 20(1975), 1–10.
+[6] E.Rogers,K.Galkowski,W.Paszke,K.L.Moore,P.H.Bauer,L.Hladowski
+andP.Dabkowski,Multidimensionalcontrolsystems: casestudiesindesign
+and evaluation, Multidim. Syst. Signal Process., 26(2015), 895–939.
+[7] L.WuandZ.Wang, Filtering and Control for Classes of Two-Dimensional
+Systems, Switzerland, Springer, 2015.
+[8] L.Zhou,J.She,S.ZhouandC.Li,Compensationforstate-dependentnon-
+linearity in a modified repetitive control system, Int. J. Robust Nonlinear
+Control, 28(2018), 213–226.
+[9] L. Zhou, J. She, S. Zhou, Robust H
+∞
+control of an observer-based
+repetitive-control system, J. Frankl. Inst., 355(2018), 4952–4969.
+[10] J.E. Kurek and M.B. Zaremba, Iterative learning control synthesis based
+on 2-D system theory, IEEE Trans. Autom. Control, 38(1993), 121–125.
+[11] D.H. Owens, N. Amann, E. Rogers and M. French, Analysis of linear it-
+erative learning control schemes – A 2D systems/repetitive processes ap-
+proach, Multidim. Syst. Signal Process., 11(2000), 125–177.
+[12] J. Wallen, S. Gunnarsson and M. Norrlof, Analysis of boundary effects in
+iterative learning control, Int. J. Control, 86(2013), 410–415.
+[13] L.V. Hien and H. Trinh, Switching design for suboptimal guaranteed cost
+control of 2-D nonlinear switched systems in the Roesser model, Nonlinear
+Anal. Hybrid Syst., 24(2017), 45–57.
+[14] Z. Xu, H. Su, R. Lu and Z.G. Wu, Non-fragile dissipative filtering for 2-D
+switched systems, J. Frank. Inst., 354(2017), 6234–6246.
+Electronic Journal: http://diffjournal.spbu.ru/ 101Differential Equations and Control Processes, N. 3, 2026
+[15] H. Trinh and L.V. Hien, On reachable set estimation of two-dimensional
+systems described by the Roesser model with time-varying delays, Int. J.
+Robust Nonlinear Control, 28(2018), 227–246.
+[16] J. Liang, F. Wang, Z. Wang and X. Liu, Robust Kalman filtering for two-
+dimensional systems with multiplicative noises and measurement degrada-
+tions: The finite-horizon case, Automatica, 96(2018), 166–177.
+[17] L.V. Hien and H. Trinh, Stability analysis and control of two-dimensional
+fuzzy systems with directional time-varying delays, IEEE Trans. Fuzzy
+Syst., 26(2018), 1550–1564.
+[18] L.V. Hien and H. Trinh, Observers design for 2-D positive time-delay
+Roesser systems, IEEE Trans. Circuit. Syst.-II: Expr. Brief., 65(2018),
+476–480.
+[19] D. Hua, W. Wang, J. Yao and Y. Ren, Non-weighted H
+∞
+performance for
+2-D FMLSS switched system with maximum and minimum dwell time, J.
+Frank. Inst., 356(2019), 5729–5753.
+[20] I. Ghous and Z. Xiang, Robust state feedback H
+∞
+control for uncertain 2-
+D continuous state delayed systems in the Roesser model, Multidim. Syst.
+Signal Process., 27(2016), 297–319.
+[21] I. Ghous and Z. Xiang, H
+∞
+control of a class of 2-D continuous switched
+delayedsystemsviastate-dependentswitching,Int. J. Syst. Sci.,47(2016),
+300–313.
+[22] I. Ghous and Z. Xiang, Reliable H
+∞
+control of 2-D continuous nonlinear
+systems with time varying delays, J. Frankl. Inst., 352(2015) 5758–5778.
+[23] L.V. Hien and H. Trinh, A novel approach to exponential stability of
+continuous-time Roesser systems with directional time-varying delays, J.
+Frankl. Inst., 354(2017), 1023–1041.
+[24] H. Trinh and L.V. Hien, Prediction-based approach to stabilization of 2-D
+continuous-time Roesser systems with directional input delays, J. Frankl.
+Inst., 357(2017), 4779–4794.
+[25] A. Kilbas, M. Srivastava and J. Trujillo, Theory and Applications of Frac-
+tional Differential Equations, Amsterdam, Elservier, 2006.
+[26] T. Kaczorek and K. Rogowski, Fractional Linear Systems and Electrical
+Circuits, Switzerland, Springer, 2015.
+[27] S. Domek and P. Dworak, Theoretical Developments and Applications of
+Non-Integer Order Systems, Cham, Springer, 2016.
+[28] Y. Ma, J. Lu and W. Chen, Robust stability and stabilization of fractional
+order linear systems with positive real uncertainty, ISA Trans., 53(2014),
+199–209.
+Electronic Journal: http://diffjournal.spbu.ru/ 102Differential Equations and Control Processes, N. 3, 2026
+[29] Z. Wang, D. Yang, T. Ma and N. Sun, Stability analysis for nonlinear
+fractional-order systems based on comparison principle, Nonlinear Dyn.,
+75(2014), 387–402.
+[30] D. Wang and A. Xiao, Dissipativity and contractivity for fractional-order
+systems, Nonlinear Dyn., 80(2015), 287–294.
+[31] T.Kaczorek,Fractional2Dlinearsystems, J. Autom. Mob. Robotics Intell.
+Syst., 2(2008), 5–9.
+[32] K. Rogowski, General response formula for fractional 2D continuous-time
+linear systems described by the Roesser model, Acta Mech. et Autom.,
+5(2011), 112–116.
+[33] K. Rogowski, Positivity Analysis of Continuous 2D Fornasini-Marchesini
+Fractional Model, POSTA 16, Switzerland, Springer, 2016.
+[34] L.V.HienandC.T.Kinh,Decentralisedstabilizationofpositivefractional-
+order interconnected systems, IET Control Theory Appl., 11(2017), 2391–
+2395.
+[35] L.V. Hien and H. Trinh, Exponential stability of two-dimensional homo-
+geneous monotone systems with bounded directional delays, IEEE Trans.
+Autom. Control, 63(2018), 2694–2700.
+[36] A.Alfidi,A.Hmamed,F.TadeoandA.Benzaouia,Controlwithpositivity
+constraint for 2D continuous-time systems in Roesser model, J. Control
+Autom. Elect. Syst., 32(2021), 70–81.
+Electronic Journal: http://diffjournal.spbu.ru/ 103

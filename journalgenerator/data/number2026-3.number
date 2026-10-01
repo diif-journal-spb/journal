@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<number year="2026" number="3">
+    <article>
+        <articleInfo lang="EN" FirstPage="1" LastPage="43">
+            <pdf>26301-jdecp-chernov.pdf</pdf>
+            <abstract>We consider a game problem consisting in neutralization of perturbation of a semilinear evolutionary equation with nonstationary linear operator in a Hilbert space. We suppose that the right-hand side of equation depends linearly on two controls and one of them is treated as some perturbation while another is treated as the neutralizing action of the operating player. It is required to carry over the controlled system to a given state at a given time moment in the presence of perturbation. Both controls are supposed bounded by the norm. As is well known, in such a form one can present also pursuit games. We establish sufficient conditions for solvability of the determined game problem in both cases of linear and nonlinear equation. Here we use the Minty-Browder's theorem and also a chain technology of successive continuation of the solution to a controlled system to intermediate states. As example of reduction to the abstract operator equation under study we consider the semilinear equation of global electric circuit in the Earth atmosphere and a semilinear pseudoparabolic equation.</abstract>
+            <title>On solvability of a game problem consisting in neutralization of perturbation of an evolution equation with a nonstationary operator</title>
+            <keywords>
+                <word>semilinear evolutionary equation in a Hilbert space</word>
+                <word>nonstationary operator</word>
+                <word>conditions for solvability of a game problem</word>
+                <word>neutralization of perturbation</word>
+            </keywords>
+            <references>
+                <reference>Osipov Yu.S. K teorii differentsial’nykh igr v sistemakh s raspredelennymi parametrami [On the theory of differential games in distributed parameter systems], Doklady Akademii Nauk SSSR, 1975; V.223(6): 1314-1317. (In Russ.)</reference>
+                <reference>Vlasenko L.A., Chikrii A.A. Ob odnoy differentsial’noy igre v sisteme s raspredelennymi parametrami [On a differential game in a distributed system], Trudy Instituta Matematiki i Mekhaniki Ural’skogo Otdeleniya RAN, 2014; V.20(4): 71-80. (In Russ.)</reference>
+                <reference>Vlasenko L.A., Rutkas A.G., Chikrii A.A. O differentsial’noy igre v abstraktnoy parabolicheskoy sisteme [On a differential game in an abstract parabolic system], Trudy Instituta Matematiki i Mekhaniki Ural’skogo Otdeleniya RAN, 2015; V.21(2): 26-40. (In Russ.)</reference>
+                <reference>Satimov N.Yu., Tukhtasinov M. Ob uklonenii ot vstrechi v odnom klasse raspredelennykh upravlyaemykh sistem [Evasion in a certain class of distributed control systems], Matematicheskie zametki, 2015; V.97(5): 749-760. (In Russ.)</reference>
+                <reference>Ibragimov G., Alias I.A., Waziri U., Ja’afaru A.B. Differential game of optimal pursuit for an infinite system of differential equations, Bull. Malays. Math. Sci. Soc., 2019; V. 2(42)(1): 391–403.</reference>
+                <reference>Barabanova N.N., Subbotin A.I. O klassakh strategiy v differentsial’nykh igrakh ukloneniya ot vstrechi [On classes of strategies in differential games of evasion of contact], Prikladnaya matematika i mekhanika, 1971; V.35(3): 385-392. (In Russ.)</reference>
+                <reference>Serkov D.A. Garantirovannoe upravlenie pri funktsional’nykh ogranicheniyakh na pomekhu [Guaranteed control under functionally restricted perturbation], Matematicheskaya teoriya igr i ee prilozheniya, 2012; V.4(2): 71-95. (In Russ.)</reference>
+                <reference>Chernov A.V. On solvability of a pursuit game with nonlinear dynamics in Hilbert space, Doklady Mathematics, 2024; V.110(2): S333–S345.</reference>
+                <reference>Kocan M., Soravia P., Swiech A. On Differential Games for Infinite-Dimensional Systems with Nonlinear, Unbounded Operators, Journal of mathematical analysis and applications, 1997; V. 211: 395–423.</reference>
+                <reference>Ghosh M.K., Shaiju A.J. Existence of Value and Saddle Point in Infinite-Dimensional Differential Games, Journal Of Optimization Theory And Applications, 2004; V. 121(2): 301–325.</reference>
+                <reference>Ramaswamy M., Shaiju A.J. Construction of Approximate Saddle-Point Strategies for Differential Games in a Hilbert Space, Journal Of Optimization Theory And Applications, 2009; V.141: 349–370.</reference>
+                <reference>Swiech A. Sub- and super-optimality principles and construction of almost optimal strategies for differential games in Hilbert spaces; In book: Advances in dynamic games. Theory, applications, and numerical methods for differential and stochastic games. Dedicated to the memory of Arik A.Melikyan. Selected papers presented at the 13th international symposium on dynamic games and applications (Wroclaw, Poland, Summer 2008). 2011; 149–163.</reference>
+                <reference>Chernov A.V. Issledovanie usloviy sokhraneniya global’noy razreshimosti operatornykh uravneniy s pomoshch’yu sistem sravneniya v vide funktsional’no-integral’nykh uravneniy v klasse C[0; T] [Investigation of conditions for preserving global solvability of operator equations by means of comparison systems in the form of functional-integral equations in C[0; T]], Vestnik Udmurtskogo Universiteta. Matematika. Mekhanika. Komp’yuternye Nauki, 2024; V. 34(1): 109–136. (In Russ.)</reference>
+                <reference>Chernov A.V. On exact global controllability of a semilinear evolution equation with a time-varying operator, Differential Equations, 2025; V. 61(3): 388–409.</reference>
+                <reference>Zhang X. Exact controllability of semilinear evolution systems and its application, J. Optimization Theory Appl., 2000; V. 107(2): 415–432.</reference>
+                <reference>Liu W., Williams G.H. Exact internal controllability for the semilinear heat equation // J. Math. Anal. Appl. 1997. V. 211. P. 258–272.</reference>
+                <reference>Nunez-Chavez M.R. Controllability under positive constraints for quasilinear parabolic PDEs, Math. Control Relat. Fields, 2022; V. 12(2): 327–341.</reference>
+                <reference>Balachandran K., Dauer J.P. Controllability of nonlinear systems in Banach spaces: a survey, J. of Optim. Theory and Appl., 2002; No. 1: P. 7–28.</reference>
+                <reference>Balachandran K., Dauer J.P., Balasubramaniam P. Controllability of nonlinear integrodifferential systems in Banach space, J. of Optim. Theory and Appl., 1995; V. 84: 83–91.</reference>
+                <reference>Mahmudov N.I. Exact null controllability of semilinear evolution systems, J. Glob. Optim., 2013; V. 56(2): 317–326.</reference>
+                <reference>de Jesus I.P., Oliveira A.M., Clark M.R., Oliveira P.P.A. Controllability for semilinear heat equation with globally Lipschitz nonlinearities and memory term, Nonlinear Anal., Real World Appl., 2021; V. 60, Article ID 103277: 16 p.</reference>
+                <reference>Floridia G. Nonnegative multiplicative controllability for semilinear multidimensional reaction-diffusion equations, Minimax Theory Appl., 2021; V. 6(2): 341–352.</reference>
+                <reference>Bashirov A.E. On exact controllability of semilinear systems // Math. Methods Appl. Sci. 2021. V. 44. No. 9. P. 7455–7462.</reference>
+                <reference>Zuazua E. Exact controllability and stabilization of the wave equation. Cham, Springer, 2024. xviii+133 p.</reference>
+                <reference>Claret S., Lemoine J. Munch A. On the exact boundary controllability of semilinear wave equations, SIAM J. Control Optim., 2024; V. 62(4): 1953–1976.</reference>
+                <reference>Ervedoza S., Lemoine J., Munch A. Exact controllability of semilinear heat equations through a constructive approach, Evol. Equ. Control Theory, 2023; V. 12(2): 567–599.</reference>
+                <reference>Nersesyan V. Approximate controllability of nonlinear parabolic PDEs in arbitrary space dimension, Math. Control Relat. Fields, 2021; V. 11(2): 237–251.</reference>
+                <reference>Panthee M., Vielma Leal F. On the controllability and stabilization of the Benjamin equation on a periodic domain, Ann. Inst. Henri Poincare, Anal. Non Lineaire, 2021; V. 38(5): 1605–1652.</reference>
+                <reference>Phan D. Approximate controllability for Navier-Stokes equations in 3D cylinders under Lions boundary conditions by an explicit saturating set, Evol. Equ. Control Theory, 2021; V. 10(1): 199–227.</reference>
+                <reference>Liang Y., Fan Zh., Li G. Process-controllability of semilinear evolution equations and applications, SIAM J. Control Optim., 2023; V. 61(6): 3664–3694.</reference>
+                <reference>Ravikumar K., Mohan M.T., Anguraj A. Approximate controllability of a non-autonomous evolution equation in Banach spaces, Numer. Algebra Control Optim., 2021; V. 11(3): 461–485.</reference>
+                <reference>Cai Rui-Yang, Zhou Hua-Cheng, Kou Chun-Hai. Kalman rank criterion for the controllability of fractional impulse controlled systems, IET Control Theory Appl., 2020. V. 14(10): 1358–1364.</reference>
+                <reference>Camacho O., Leiva H. Impulsive semilinear heat equation with delay in control and in state, Asian J. Control, 2020; V. 22(3): 1075–1089.</reference>
+                <reference>Gajewski H., Gröger K., Zacharias K. Nelineynye operatornye uravneniya i operatornye differentsial’nye uravneniya [Nonlinear operator equations and operator differential equations]. Moscow, Mir, 1978. 336 p. (In Russ.)</reference>
+                <reference>Dautray R., Lions J.-L. Mathematical analysis and numerical methods for science and technology. Vol.2. Functional and Variational Methods. Berlin, Heidelberg, New York, London, Paris, Tokyo, Springer-Verlag, 1988. xv+561 p.</reference>
+                <reference>Krejn S.G. Lineynye differentsial’nye uravneniya v banakhovom prostranstve [Linear differential equations in a Banach space]. Moscow, Nauka, 1967. 464 p.</reference>
+                <reference>Pazy A. Semigroups of linear operators and applications to partial differential equations. New York etc., Springer-Verlag, 1983. viii+279 p.</reference>
+                <reference>Yosida K. Funktsional’nyi analiz [Functional analysis]. Moscow, LKI Publ., 2007. 624 p. (In Russ.)</reference>
+                <reference>Pugachev V.S. Lektsii po funktsional’nomu analizu [Lectures on functional analysis]. Moscow, Moscow Aviation Institute Publ., 1996. 744 p. (In Russ.)</reference>
+                <reference>Kachurovskij R.I. Nelineynye monotonnye operatory v banakhovykh prostranstvakh [Non-linear monotone operators in Banach spaces], Uspekhi matem. nauk, 1968; V.23(2;140): 121-168. (In Russ.)</reference>
+                <reference>Kantorovich L.V., Akilov G.P. Funktsional’nyi analiz [Functional analysis]. Moscow, Nauka, 1984. 752 p. (In Russ.)</reference>
+                <reference>Krasovskii N.N. Igrovye zadachi o vstreche dvizheniy [Game problems about movements meeting]. Moscow, Nauka, 1970. 420 p. (In Russ.)</reference>
+                <reference>Zhidkov A.A., Kalinin A.V. Nekotorye voprosy matematicheskogo i chislennogo modelirovaniya global’noy elektricheskoy tsepi v atmosfere [Some problems of mathematical and numerical modeling of the global electric circuit in the atmosphere], Vestnik Nizhegorodskogo universiteta im. N.I.Lobachevskogo, 2009; (6;1): 150-158. (In Russ.)</reference>
+                <reference>Kalinin A.V., Slyunyaev N.N. Initial-boundary value problems for the equations of the global atmospheric electric circuit, J. of Mathematical Analysis and Applications, 2017; V.450: 112–136.</reference>
+                <reference>Vulikh B.Z. Kratkiy kurs teorii funktsiy veshchestvennoy peremennoy [Short course of the theory of functions of real variable]. Moscow, Nauka, 1973. 352 p. (In Russ.)</reference>
+                <reference>Chen P.J., Gurtin M.E. On a theory of heat conduction involving two temperatures, Z. Angew. Math. Phys., 1968; V.19: 614–627.</reference>
+                <reference>Barenblatt G.I., Zheltov Yu.P., Kochina I.N. Ob osnovnykh predstavleniyakh teorii fil’tratsii v treshchinovatykh sredakh [Basic concepts in the theory of seepage of homogeneous liquids in fissured rocks (strata)], Prikladnaya matematika i mekhanika, 1960; V.24(5): 852-864. (In Russ.)</reference>
+                <reference>Barenblatt G.I., Garcia-Azorero J., De Pablo A., Vazquez J.L. Mathematical model of the non-equilibrium water-oil displacement in porous strata, Appl. Anal., 1997; V.65(1–2): 19–45.</reference>
+                <reference>Helmig R., Weiss A., Wohlmuth B.I. Dynamic capillary effects in heterogeneous porous media, Comput. Geosciences, 2007; V.11(3): 261–274.</reference>
+                <reference>Benjamin T.B., Bona J.L., Mahony J.J. Model equations for long waves in nonlinear dispersive systems, Philos. Tranc. Royal Soc. London, Ser. A, 1972; V.272: 47–78.</reference>
+                <reference>Sveshnikov A.G., Al’shin A.B., Korpusov M.O., Pletner Yu.D. Lineynye i nelineynye uravneniya sobolevskogo tipa [Linear and nonlinear equations of Sobolev type]. Moscow, Fizmatlit, 2007. 736 p. (In Russ.)</reference>
+                <reference>Chernov A.V. The total preservation of unique global solvability of the first kind operator equation with additional controlled nonlinearity, Russian Mathematics, 2018; V.62(11): 53–66.</reference>
+            </references>
+        </articleInfo>
+        <articleInfo lang="RU" FirstPage="1" LastPage="43">
+            <pdf>26301-jdecp-chernov.pdf</pdf>
+            <abstract>Рассматривается игровая задача о нейтрализации возмущения полулинейного операторного дифференциального уравнения с нестационарным линейным оператором в гильбертовом пространстве. Предполагается, что правая часть уравнения зависит линейно от двух управлений, одно из которых рассматривается как возмущение, а другое --- как нейтрализующее воздействие оперирующей стороны. Требуется к заданному моменту времени перевести управляемую систему в заданное состояние, несмотря на наличие возмущения. Управления предполагаются ограниченными по норме. Как известно, в указанной форме можно представлять также игры преследования. Устанавливаются достаточные условия разрешимости поставленной игровой задачи, как в случае линейного, так и нелинейного уравнения. При этом используются теорема Минти-Браудера, а также цепочечная технология последовательного продолжения решения управляемой системы до промежуточных состояний. В качестве примеров сведения к абстрактному операторному дифференциальному уравнению рассматриваются полулинейное уравнение глобальной электрической цепи в атмосфере Земли и полулинейное псевдопараболическое уравнение.</abstract>
+            <title>О разрешимости игровой задачи о нейтрализации возмущения эволюционного уравнения с нестационарным оператором</title>
+            <keywords>
+                <word>полулинейное эволюционное уравнение в гильбертовом пространстве</word>
+                <word>нестационарный оператор</word>
+                <word>условия разрешимости игровой задачи о нейтрализации возмущения</word>
+            </keywords>
+            <references>
+                <reference>Осипов Ю.С. К теории дифференциальных игр в системах с распределенными параметрами // ДАН СССР. 1975. Т. 223. № 6. С. 1314–1317.</reference>
+                <reference>Власенко Л.А., Чикрий А.А. Об одной дифференциальной игре в системе с распределенными параметрами // Тр. ИММ УрО РАН. 2014. Т. 20. № 4. С. 71–80.</reference>
+                <reference>Власенко Л.А., Руткас А.Г., Чикрий А.А. О дифференциальной игре в абстрактной параболической системе // Тр. ИММ УрО РАН. 2015. Т. 21, № 2. С. 26–40.</reference>
+                <reference>Сатимов Н.Ю., Тухтасинов М. Об уклонении от встречи в одном классе распределенных управляемых систем // Матем. заметки. 2015. Т. 97. Вып. 5. С. 749–760.</reference>
+                <reference>Ibragimov G., Alias I.A., Waziri U., Ja’afaru A.B. Differential game of optimal pursuit for an infinite system of differential equations // Bull. Malays. Math. Sci. Soc. 2019. V. 2(42). №. 1. P. 391–403.</reference>
+                <reference>Барабанова Н.Н., Субботин А.И. О классах стратегий в дифференциальных играх уклонения от встречи // Прикладная математика и механика. 1971. Т. 35. Вып. 3. С. 385–392.</reference>
+                <reference>Серков Д.А. Гарантированное управление при функциональных ограничениях на помеху // Математическая теория игр и ее приложения. 2012. Т. 4. Вып. 2. С. 71–95.</reference>
+                <reference>Chernov A.V. On solvability of a pursuit game with nonlinear dynamics in Hilbert space // Doklady Mathematics. 2024. V. 110. Suppl. 2. P. S333–S345.</reference>
+                <reference>Kocan M., Soravia P., Swiech A. On Differential Games for Infinite-Dimensional Systems with Nonlinear, Unbounded Operators // Journal of mathematical analysis and applications. 1997. V. 211. P. 395–423.</reference>
+                <reference>Ghosh M.K., Shaiju A.J. Existence of Value and Saddle Point in Infinite-Dimensional Differential Games // Journal Of Optimization Theory And Applications. 2004. V. 121. No. 2. P. 301–325.</reference>
+                <reference>Ramaswamy M., Shaiju A.J. Construction of Approximate Saddle-Point Strategies for Differential Games in a Hilbert Space // Journal Of Optimization Theory And Applications. 2009. V. 141. P. 349–370.</reference>
+                <reference>Swiech A. Sub- and super-optimality principles and construction of almost optimal strategies for differential games in Hilbert spaces // In book: Advances in dynamic games. Theory, applications, and numerical methods for differential and stochastic games. Dedicated to the memory of Arik A.Melikyan. Selected papers presented at the 13th international symposium on dynamic games and applications (Wroclaw, Poland, Summer 2008). 2011. P. 149–163.</reference>
+                <reference>Чернов А.В. Исследование условий сохранения глобальной разрешимости операторных уравнений с помощью систем сравнения в виде функционально-интегральных уравнений в классе C[0; T] // Вестник Удмуртского университета. Математика. Механика. Компьютерные науки. 2024. Т.34. Вып.1. С. 109-136.</reference>
+                <reference>Chernov A.V. On exact global controllability of a semilinear evolution equation with a time-varying operator // Differential Equations. 2025. V. 61. No. 3. P. 388–409.</reference>
+                <reference>Zhang X. Exact controllability of semilinear evolution systems and its application // J. Optimization Theory Appl. 2000. V. 107. No. 2. P. 415–432.</reference>
+                <reference>Liu W., Williams G.H. Exact internal controllability for the semilinear heat equation // J. Math. Anal. Appl. 1997. V. 211. P. 258–272.</reference>
+                <reference>Nunez-Chavez M.R. Controllability under positive constraints for quasilinear parabolic PDEs // Math. Control Relat. Fields. 2022. V. 12. No. 2. P. 327–341.</reference>
+                <reference>Balachandran K., Dauer J.P. Controllability of nonlinear systems in Banach spaces: a survey // J. of Optim. Theory and Appl. 2002. No. 1. P. 7–28.</reference>
+                <reference>Balachandran K., Dauer J.P., Balasubramaniam P. Controllability of nonlinear integrodifferential systems in Banach space // J. of Optim. Theory and Appl. 1995. V. 84. P. 83–91.</reference>
+                <reference>Mahmudov N.I. Exact null controllability of semilinear evolution systems // J. Glob. Optim. 2013. V. 56. No. 2. P. 317–326.</reference>
+                <reference>de Jesus I.P., Oliveira A.M., Clark M.R., Oliveira P.P.A. Controllability for semilinear heat equation with globally Lipschitz nonlinearities and memory term // Nonlinear Anal., Real World Appl. 2021. V. 60. Article ID 103277. 16 p.</reference>
+                <reference>Floridia G. Nonnegative multiplicative controllability for semilinear multidimensional reaction-diffusion equations // Minimax Theory Appl. 2021. V. 6. No. 2. P. 341–352.</reference>
+                <reference>Bashirov A.E. On exact controllability of semilinear systems // Math. Methods Appl. Sci. 2021. V. 44. No. 9. P. 7455–7462.</reference>
+                <reference>Zuazua E. Exact controllability and stabilization of the wave equation. Cham: Springer, 2024. xviii+133 p.</reference>
+                <reference>Claret S., Lemoine J. Munch A. On the exact boundary controllability of semilinear wave equations // SIAM J. Control Optim. 2024. V. 62. No. 4. P. 1953–1976.</reference>
+                <reference>Ervedoza S., Lemoine J., Munch A. Exact controllability of semilinear heat equations through a constructive approach // Evol. Equ. Control Theory. 2023. V. 12. No. 2. P. 567–599.</reference>
+                <reference>Nersesyan V. Approximate controllability of nonlinear parabolic PDEs in arbitrary space dimension // Math. Control Relat. Fields. 2021. V. 11. No. 2. P. 237–251.</reference>
+                <reference>Panthee M., Vielma Leal F. On the controllability and stabilization of the Benjamin equation on a periodic domain // Ann. Inst. Henri Poincare, Anal. Non Lineaire. 2021. V. 38. No. 5. P. 1605–1652.</reference>
+                <reference>Phan D. Approximate controllability for Navier-Stokes equations in 3D cylinders under Lions boundary conditions by an explicit saturating set // Evol. Equ. Control Theory. 2021. V. 10. No. 1. P. 199–227.</reference>
+                <reference>Liang Y., Fan Zh., Li G. Process-controllability of semilinear evolution equations and applications // SIAM J. Control Optim. 2023. V. 61. No. 6. P. 3664–3694.</reference>
+                <reference>Ravikumar K., Mohan M.T., Anguraj A. Approximate controllability of a non-autonomous evolution equation in Banach spaces // Numer. Algebra Control Optim. 2021. V. 11. No. 3. P. 461–485.</reference>
+                <reference>Cai Rui-Yang, Zhou Hua-Cheng, Kou Chun-Hai. Kalman rank criterion for the controllability of fractional impulse controlled systems // IET Control Theory Appl. 2020. V. 14. No. 10. P. 1358–1364.</reference>
+                <reference>Camacho O., Leiva H. Impulsive semilinear heat equation with delay in control and in state // Asian J. Control. 2020. V. 22. No. 3. P. 1075–1089.</reference>
+                <reference>Гаевский Х., Грегер К., Захариас К. Нелинейные операторные уравнения и операторные дифференциальные уравнения. М.: Мир, 1978. 336 с.</reference>
+                <reference>Dautray R., Lions J.-L. Mathematical analysis and numerical methods for science and technology. Vol.2. Functional and variational methods. Berlin, Heidelberg, New York, London, Paris, Tokyo: Springer-Verlag, 1988. xv+561 p.</reference>
+                <reference>Крейн С.Г. Линейные дифференциальные уравнения в банаховом пространстве. М.: Наука, 1967. 464 с.</reference>
+                <reference>Pazy A. Semigroups of linear operators and applications to partial differential equations. New York etc.: Springer-Verlag, 1983. viii+279 p.</reference>
+                <reference>Иосида К. Функциональный анализ. М.: ЛКИ, 2007. 624 с.</reference>
+                <reference>Пугачев В.С. Лекции по функциональному анализу. М.: Изд-во МАИ, 1996. 744 с.</reference>
+                <reference>Качуровский Р.И. Нелинейные монотонные операторы в банаховых пространствах // Успехи матем. наук. 1968. Т. 23. Вып. 2(140). С. 121–168.</reference>
+                <reference>Канторович Л.В., Акилов Г.П. Функциональный анализ. М.: Наука, 1984. 752 с.</reference>
+                <reference>Красовский Н.Н. Игровые задачи о встрече движений. М.: Наука, 1970. 420 с.</reference>
+                <reference>Жидков А.А., Калинин А.В. Некоторые вопросы математического и численного моделирования глобальной электрической цепи в атмосфере // Вестник Нижегородского университета им.Н.И.Лобачевского. 2009. № 6(1). С. 150–158.</reference>
+                <reference>Kalinin A.V., Slyunyaev N.N. Initial-boundary value problems for the equations of the global atmospheric electric circuit // J. of Mathematical Analysis and Applications. 2017. Vol. 450. P. 112–136.</reference>
+                <reference>Вулих Б.З. Краткий курс теории функций вещественной переменной. М.: Наука, 1973. 352 с.</reference>
+                <reference>Chen P.J., Gurtin M.E. On a theory of heat conduction involving two temperatures // Z. Angew. Math. Phys. 1968. V. 19. P. 614–627.</reference>
+                <reference>Баренблатт Г. И., Желтов Ю.П., Кочина И. Н. Об основных представлениях теории фильтрации в трещиноватых средах // Прикладная математика и механика. 1960. Т. 24. № 5. С.852–864.</reference>
+                <reference>Barenblatt G.I., Garcia-Azorero J., De Pablo A., Vazquez J.L. Mathematical model of the non-equilibrium water-oil displacement in porous strata // Appl. Anal. 1997. V. 65, no. 1–2 P. 19–45.</reference>
+                <reference>Helmig R., Weiss A., Wohlmuth B.I. Dynamic capillary effects in heterogeneous porous media // Comput. Geosciences. 2007. V. 11, no. 3. P. 261–274.</reference>
+                <reference>Benjamin T.B., Bona J.L., Mahony J.J. Model equations for long waves in nonlinear dispersive systems // Philos. Tranc. Royal Soc. London. Ser. A.1972. V. 272. P. 47–78.</reference>
+                <reference>Свешников А.Г., Альшин А.Б., Корпусов М.О., Плетнер Ю.Д. Линейные и нелинейные уравнения соболевского типа. М.: Физматлит, 2007. 736 с.</reference>
+                <reference>Chernov A.V. The total preservation of unique global solvability of the first kind operator equation with additional controlled nonlinearity // Russian Mathematics. 2018. V. 62, no. 11. P. 53–66.</reference>
+            </references>
+        </articleInfo>
+        <authors>
+            <author ref="n_2026_10_chernov" sort-key="1" />
+        </authors>
+    </article>
+    <article>
+        <articleInfo lang="EN" FirstPage="44" LastPage="83">
+            <pdf>26302-jdecp-pranevich.pdf</pdf>
+            <abstract>In this paper we consider real polynomial systems of partial differential equations of the first order. The method of building real first integrals and last multipliers by known real and complex-valued polynomial partial integrals, taking into account their multiplicity, and conditional partial integrals has been developed. The influence of Jacobian conditions on the possibility of constructing first integrals and last multipliers by partial integrals of partial differential system is shown. Functional relationships between the coordinate functions of cofactors of partial integrals of complete and Jacobian systems of partial differential equations are established. The problems of modifying first integrals and last multipliers of the Darboux type are solved. Sufficient conditions of constructing first integrals for partial differential systems by two known partial integrals are obtained. The possibility of constructing first integrals for normal partial differential systems by a known partial integral is considered. Examples of systems of partial differential equations of the first order are given, which illustrate the theoretical studies carried out in this article. The results can be applied in the analytical theory of differential equations and applied problems of mechanics, optics and hydrodynamics.</abstract>
+            <title>Partial integrals of real polynomial partial differential systems of the first order</title>
+            <keywords>
+                <word>system of partial differential equations</word>
+                <word>complete partial differential system</word>
+                <word>Jacobian partial differential system</word>
+                <word>first integral</word>
+                <word>real partial integral</word>
+                <word>complex-valued partial integral</word>
+                <word>multiplicity</word>
+                <word>conditional partial integral</word>
+                <word>last multiplier</word>
+                <word>last pseudo-multiplier</word>
+            </keywords>
+            <references>
+                <reference>Demidov S.S. [The emergence of the theory of partial differential equations]. Istoriko-matematicheskie issledovaniya [Historical and mathematical research], 1975, vol. 20, pp. 204-220. (In Russ.)</reference>
+                <reference>Euler L. De infinitis curvis ejusdem generis, seu methodus inveniendi aequationes pro infinitis curvis ejusdem generis. Comment. Acad. Sci. Petrop., 1740, vol. VII (1734/1735), pp. 174-183; Opera omnia, Ser. I, Vol. 22, Lipsiae, 1936, pp. 35-56.</reference>
+                <reference>Euler L. Additamentum ad dissertationem de infinitis curvis ejusdem generis. Comment. Acad. Sci. Petrop., 1740, vol. VII (1734/1735), pp. 184-200; Opera omnia, Ser. I, Vol. 22, Lipsiae, 1936, pp. 57-75.</reference>
+                <reference>D'Alembert J. Recherches sur la courbe que forme une corde tendue, mise en vibration. Histoire de lʹAcadémie royale des Sciences de Berlin, 1747 (49), vol. 3, pp. 214-219.</reference>
+                <reference>Günter N.M. Integrirovanie uravnenii pervogo poryadka v chastnykh proizvodnykh [Integration of first-order partial differential equations]. Leningrad-Moscow, ONTI Publ., 1934. 359 p. (In Russ.)</reference>
+                <reference>Kurenskii M.K. Differencial'nye uravneniya: v 2 kn. Kn. 2: Differencial'nye uravneniya s chastnymi proizvodnymi [Differential equations: in 2 books. Book 2: Partial differential equations]. Leningrad, Dzerzhinsky Artillery Academy Publ., 1934. 335 p. (In Russ.)</reference>
+                <reference>Grave D.A. Ob integrirovanii chastnykh differencial'nykh uravnenii pervogo poryadka [On the integration of first-order partial differential equations]. 2nd ed. Moscow, LENAND Publ., 2020. 112 p. (In Russ.)</reference>
+                <reference>Goursat E. Kurs matematicheskogo analiza: v 3 t. T. 2.: Differencial'nye uravneniya [A course in mathematical analysis: in 3 vols. Vol. 2: Differential equations]. Moscow-Leningrad, ONTI Publ., 1936. 564 p. (In Russ.)</reference>
+                <reference>Kamke E. Spravochnik po differencial'nym uravneniyam v chastnykh proizvodnykh pervogo poryadka [Handbook of first-order partial differential equations]. Moscow, Nauka Publ., 1966. 260 p. (In Russ.)</reference>
+                <reference>Zaitsev V.F., Polyanin A.D. Spravochnik po differencial'nym uravneniyam s chastnymi proizvodnymi pervogo poryadka [Handbook of first-order partial differential equations]. Moscow, FIZMATLIT Publ., 2003. 416 p. (In Russ.)</reference>
+                <reference>Darboux G. Mémoire sur les équations differentielles algebriques du premier ordre et du premier degré. Bulletin des Sciences Mathématiques, 1878, vol. 2, pp. 60-96, 123-144, 151-200.</reference>
+                <reference>Gorbuzov V.N. Integrals of differential systems. Grodno, Yanka Kupala State University of Grodno Publ., 2006. 447 p. (In Russ.)</reference>
+                <reference>Goriely A. Integrability and nonintegrability of dynamical systems. World Scientific, Advanced series on nonlinear dynamics, 2001, vol. 19. 436 p.</reference>
+                <reference>Zhang X. Integrability of dynamical systems: algebra and analysis. Singapore, Springer, 2017. 380 p.</reference>
+                <reference>Gorbuzov V.N. [On a second-order differential system and its periodic solutions]. Differencial'nie uravnenia, 1994, vol. 30, no. 9, pp. 1487-1497. (In Russ.)</reference>
+                <reference>Gorbuzov V.N., Tyshchenko V.Yu. [Partial integrals of ordinary differential equations]. Matematicheskii sbornik, 1992, vol. 183, no. 3, pp. 76-94. (In Russ.)</reference>
+                <reference>Gorbuzov V.N. [Partial integrals of ordinary differential systems]. Classical Analysis and ODEs (arXiv: 1809.07105 [math.CA]), 2018, pp. 1-86.</reference>
+                <reference>Gorbuzov V.N. [Construction of first integrals and last multipliers for polynomial autonomous multidimensional differential systems]. Differencial'nie uravnenia, 1998, vol. 34, no. 4, pp. 562-564. (In Russ.)</reference>
+                <reference>Gorbuzov V.N. [Partial integrals of a real autonomous polynomial system of equations in total differentials]. Differencial'nie uravnenia i processy upravlenia, 2000, no. 2, pp. 1-36. (In Russ.) Available at: https://diffjournal.spbu.ru/pdf/j055.pdf</reference>
+                <reference>Gorbuzov V.N., Daranchuk S.N. [Conditional partial integrals of systems of equations in total differentials]. Vesnik Grodzenskaga dziarzhaunaga universiteta іmia Iankі Kupaly. Seryia 2. Matematyka. Fіzіka. Іnfarmatyka, vylіchal'naia tekhnіka і kіravanne, 2010, no. 2(96), pp. 41-48. (In Russ.)</reference>
+                <reference>Gorbuzov V.N., Pronevich A.F., Pavlyuchik P.B. [Multiplicity of polynomial partial integrals of non-autonomous ordinary and multidimensional differential systems]. Vesnik Grodzenskaga dziarzhaunaga universiteta іmia Iankі Kupaly. Seryia 2. Matematyka. Fіzіka. Іnfarmatyka, vylіchal'naia tekhnіka і kіravanne, 2019, vol. 9, no. 1, pp. 15-25. (In Russ.)</reference>
+                <reference>Gorbuzov V.N., Pavlyuchik P.B., Pronevich A.F. [Complex-valued polynomial partial integrals of non-autonomous ordinary and multidimensional differential systems]. Vesnik Grodzenskaga dziarzhaunaga universiteta іmia Iankі Kupaly. Seryia 2. Matematyka. Fіzіka. Іnfarmatyka, vylіchal'naia tekhnіka і kіravanne, 2021, vol. 11, no. 1, pp. 56-66. (In Russ.)</reference>
+                <reference>Gorbuzov V.N., Pavlyuchik P.B., Pronevich A.F. [Multiplicity of complex-valued polynomial partial integrals of non-autonomous ordinary and multidimensional differential systems]. Vesnik Grodzenskaga dziarzhaunaga universiteta іmia Iankі Kupaly. Seryia 2. Matematyka. Fіzіka. Іnfarmatyka, vylіchal'naia tekhnіka і kіravanne, 2023, vol. 13, no. 3, pp. 33-48. (In Russ.)</reference>
+                <reference>Ovsyannikov L.V. Gruppovoi analiz differencial'nykh uravnenii [Group analysis of differential equations]. Moscow, Nauka Publ., 1978. 400 p. (In Russ.)</reference>
+                <reference>Gorbuzov V.N. Matematicheskii analiz: teoriya polya [Mathematical analysis: field theory]. Grodno, Yanka Kupala State University of Grodno Publ., 2000. 627 p. (In Russ.)</reference>
+                <reference>Buslyuk D.V. Integraly i poslednie mnozhiteli differencial'nykh sistem uravnenii v chastnykh proizvodnykh [Integrals and last multipliers of differential systems of partial differential equations]. PhD thesis (Physics and Mathematics), Grodno, 2000. 95 p. (In Russ.)</reference>
+                <reference>Buslyuk D.V. [Integrals and last multipliers of differential systems in partial derivatives]. Differencial'nie uravnenia, 1999, vol. 35, no. 3, pp. 418-419. (In Russ.)</reference>
+                <reference>Buslyuk D.V., Gorbuzov V.N. [Integrals of the Jacobi system in partial derivatives]. Vesnik Grodzenskaga dziarzhaunaga universiteta іmia Iankі Kupaly. Seryia 2. Matematyka. Fіzіka. Іnfarmatyka, vylіchal'naia tekhnіka і kіravanne, 2000, no. 1(3), pp. 4-11. (In Russ.)</reference>
+                <reference>Cartan É. Integral'nye invarianty [Integral invariants]. Moscow-Leningrad, GITTL Publ., 1940. 216 p. (In Russ.)</reference>
+                <reference>Berrone L.R., Giacomini H. Inverse Jacobi multipliers. Rendiconti del Circolo Matematico di Palermo, 2003, vol. 52, no. 1, pp. 77-130.</reference>
+                <reference>García I.A., Grau M. A survey on the inverse integrating factor. Qualitative Theory of Dynamical Systems, 2010, vol. 9, pp. 115-166.</reference>
+                <reference>Cherkas L.A., Grin' A.A., Bulgakov V.I. Konstruktivnye metody issledovaniya predel'nykh tsiklov avtonomnykh sistem vtorogo poryadka (chislenno-algebraicheskii podkhod) [Constructive methods for studying limit cycles of autonomous second-order systems (numerical-algebraic approach)]. Grodno, Yanka Kupala State University of Grodno Publ., 2013. 489 p. (In Russ.)</reference>
+                <reference>Gorbuzov V.N., Pronevich A.F. [Spectral method for constructing an integral basis of a Jacobi system in partial derivatives]. Differencial'nie uravnenia i processy upravlenia, 2001, no. 3, pp. 17-45. (In Russ.) Available at: https://diffjournal.spbu.ru/pdf/j076.pdf</reference>
+                <reference>Gorbuzov V.N., Tyshchenko V.Yu. [Partial integrals of systems in total differentials]. Differentcial'nie uravnenia, 1991, vol. 27, no. 10, pp. 1819-1822. (In Russ.)</reference>
+                <reference>Gorbuzov V.N., Pronevich A.F. [Construction of integrals of a linear differential system]. Vesnik Grodzenskaga dziarzhaunaga universiteta іmia Iankі Kupaly. Seryia 2. Matematyka. Fіzіka. Іnfarmatyka, vylіchal'naia tekhnіka і kіravanne, 2003, no. 2(22), pp. 50-60. (In Russ.)</reference>
+                <reference>Gorbuzov V.N., Pronevich A.F. [Integrals of R-linear systems in total differentials]. Doklady NAN Belarusi, 2004, vol. 48, no. 1, pp. 49-52. (In Russ.)</reference>
+                <reference>Pronevich A.F. R-differenciruemye integraly sistem v polnykh differencialakh [R-differentiable integrals of systems in total differentials]. Saarbruchen, Germany, LAP LAMBERT Academic Publishing, 2011. 104 p. (In Russ.)</reference>
+                <reference>Gorbuzov V.N., Pranevich A.F. First integrals of ordinary linear differential systems. Mathematics.Dynamical Systems (arXiv:1201.4141v1 [math.DS]), 2012, pp. 1-75.</reference>
+                <reference>Gorbuzov V.N. Integraly sistem uravnenii v polnykh differentsialakh [Integrals of systems of equations in total differentials]. Grodno, Yanka Kupala State University of Grodno Publ., 2005. 273 p. (In Russ.)</reference>
+            </references>
+        </articleInfo>
+        <articleInfo lang="RU" FirstPage="44" LastPage="83">
+            <pdf>26302-jdecp-pranevich.pdf</pdf>
+            <abstract>В работе для вещественной полиномиальной системы уравнений с частными производными первого порядка разработан метод построения вещественных первых интегралов и последних множителей по известным вещественным и комплекснозначным полиномиальным частным интегралам с учётом их кратности и условным частным интегралам. Показано влияние условий якобиевости на возможность построения первых интегралов и последних множителей по частным интегралам дифференциальной системы с частными производными. Для полной и якобиевой систем уравнений с частными производными установлены функциональные связи между координатными функциями сомножителей частных интегралов. Решены задачи о модификации первого интеграла и последнего множителя типа Дарбу. Получены достаточные признаки построения первых интегралов для системы с частными производными по двум известным частным интегралам. Для нормальной системы с частными производными рассмотрена возможность построения первых интегралов по одному известному частному интегралу. Приведены примеры систем уравнений с частными производными первого порядка, на которых проиллюстрированы теоретические исследования, выполненные в данной статье. Полученные результаты могут быть применены в аналитической теории дифференциальных уравнений и прикладных задачах механики, оптики и гидродинамики.</abstract>
+            <title>Частные интегралы вещественной полиномиальной системы уравнений с частными производными первого порядка</title>
+            <keywords>
+                <word>система уравнений с частными производными</word>
+                <word>полная система с частными производными</word>
+                <word>якобиева система с частными производными</word>
+                <word>первый интеграл</word>
+                <word>вещественный частный интеграл</word>
+                <word>комплекснозначный частный интеграл</word>
+                <word>кратность</word>
+                <word>условный частный интеграл</word>
+                <word>последний множитель</word>
+                <word>последний псевдомножитель</word>
+            </keywords>
+            <references>
+                <reference>Демидов С.С. Возникновение теории дифференциальных уравнений с частными производными // Историко-математические исследования. 1975. Вып. 20. – С. 204 – 220.</reference>
+                <reference>Euler L. De infinitis curvis ejusdem generis, seu methodus inveniendi aequationes pro infinitis curvis ejusdem generis // Comment. Acad. Sci. Petrop. 1740. Vol. VII (1734/1735). P. 174 – 183; Opera omnia, Ser. I, Vol. 22, Lipsiae, 1936. – P. 35 – 56.</reference>
+                <reference>Euler L. Additamentum ad dissertationem de infinitis curvis ejusdem generis // Comment. Acad. Sci. Petrop. Vol. VII (1734/1735). 1740. P. 184 – 200; Opera omnia, Ser. I, Vol. 22, Lipsiae, 1936. – P. 57 – 75.</reference>
+                <reference>D’Alembert J. Recherches sur la courbe que forme une corde tendue, mise en vibration // Histoire de lʹAcadémie royale des Sciences de Berlin. 1747 (49). Vol. 3. – P. 214 – 219.</reference>
+                <reference>Гюнтер Н.М. Интегрирование уравнений первого порядка в частных производных. – Л. –М. : ОНТИ, 1934. – 359 с.</reference>
+                <reference>Куренский М.К. Дифференциальные уравнения : в 2 кн. Кн. 2: Дифференциальные уравнения с частными производными. – Л. : Издание Артиллерийской академии РККА им. Дзержинского, 1934. – 335 с.</reference>
+                <reference>Граве Д.А. Об интегрировании частных дифференциальных уравнений первого порядка. 2-е изд. – М. : ЛЕНАНД, 2020. – 112 с.</reference>
+                <reference>Гурса Э. Курс математического анализа : в 3 т. Т. 2.: Дифференциальные уравнения. – М.-Л. : ОНТИ, 1936. – 564 с.</reference>
+                <reference>Камке Э. Справочник по дифференциальным уравнениям в частных производных первого порядка. – М. : Наука, 1966. – 260 с.</reference>
+                <reference>Зайцев В.Ф., Полянин А.Д. Справочник по дифференциальным уравнениям с частными производными первого порядка. – М. : ФИЗМАТЛИТ, 2003. – 416 с.</reference>
+                <reference>Darboux G. Mémoire sur les équations differentielles algebriques du premier ordre et du premier degré // Bulletin des Sciences Mathématiques, 1878. – Vol. 2. – P. 60 – 96, 123 – 144, 151 – 200.</reference>
+                <reference>Горбузов В.Н. Интегралы дифференциальных систем. – Гродно: ГрГУ, 2006. – 447 с.</reference>
+                <reference>Goriely A. Integrability and nonintegrability of dynamical systems. – World Scientific : Advanced series on nonlinear dynamics, Vol. 19. – 2001. – 436 p.</reference>
+                <reference>Zhang X. Integrability of dynamical systems: algebra and analysis. – Singapore : Springer, 2017. – 380 p.</reference>
+                <reference>Горбузов В.Н. Об одной дифференциальной системе второго порядка и ее периодических решениях // Дифференциальные уравнения, 1994. – Т. 30, № 9. – С. 1487 – 1497.</reference>
+                <reference>Горбузов В.Н., Тыщенко В. Ю. Частные интегралы обыкновенных дифференциальных уравнений // Математический сборник, 1992. – Т. 183, № 3. – С. 76 – 94.</reference>
+                <reference>Gorbuzov V.N. Partial integrals of ordinary differential systems // Classical Analysis and ODEs (arXiv: 1809.07105 [math.CA]. Cornell Univ., Ithaca, New York), 2018. – P. 1 – 86.</reference>
+                <reference>Горбузов В.Н. Построение первых интегралов и последних множителей полиномиальных автономных многомерных дифференциальных систем // Дифференциальные уравнения, 1998. – T. 34, № 4. – С. 562 – 564.</reference>
+                <reference>Горбузов В.Н. Частные интегралы вещественной автономной полиномиальной системы уравнений в полных дифференциалах // Дифференциальные уравнения и процессы управления, 2000. – № 2. – С. 1 – 36.</reference>
+                <reference>Горбузов В.Н., Даранчук С.Н. Условные частные интегралы систем уравнений в полных дифференциалах // Веснiк Гродзенскага дзяржаÿнага yнiверсiтэта імя Янкі Купалы. Серыя 2. Матэматыка. Фізіка. Інфарматыка, вылічальная тэхніка і кіраванне, 2010. – № 2(96). – С. 41 – 48.</reference>
+                <reference>Горбузов В.Н., Проневич А.Ф., Павлючик П. Б. Кратность полиномиальных частных интегралов неавтономных обыкновенных и многомерных дифференциальных систем // Веснiк Гродзенскага дзяржаÿнага yнiверсiтэта імя Янкі Купалы. Серыя 2. Матэматыка. Фізіка. Інфарматыка, вылічальная тэхніка і кіраванне, 2019. – Т. 9, № 1. – С. 15 – 25.</reference>
+                <reference>Горбузов В.Н., Павлючик П.Б., Проневич А.Ф. Комплекснозначные полиномиальные частные интегралы неавтономных обыкновенных и многомерных дифференциальных систем // Веснiк Гродзенскага дзяржаўнага ўнiверсiтэта імя Янкі Купалы. Серыя 2. Матэматыка. Фізіка. Інфарматыка, вылічальная тэхніка і кіраванне, 2021. – Т. 11, № 1. – С. 56 – 66.</reference>
+                <reference>Горбузов В.Н., Павлючик П.Б., Проневич А.Ф. Кратность комплекснозначных полиномиальных частных интегралов неавтономных обыкновенных и многомерных дифференциальных систем // Веснік Гродзенскага дзяржаўнага ўніверсітэта імя Янкі Купалы. Серыя 2. Матэматыка. Фізіка. Інфарматыка, вылічальная тэхніка і кіраванне, 2023. – Т. 13, № 3. – С. 33 – 48.</reference>
+                <reference>Овсянников Л.В. Групповой анализ дифференциальных уравнений. – М.: Наука, 1978. – 400 с.</reference>
+                <reference>Горбузов В.Н. Математический анализ : теория поля. –Гродно: ГрГУ, 2000. – 627 с.</reference>
+                <reference>Буслюк Д.В. Интегралы и последние множители дифференциальных систем уравнений в частных производных : дис. ... канд. физ.-матем. наук : 01.01.02. – Гродно, 2000. – 95 с.</reference>
+                <reference>Буслюк Д.В. Интегралы и последние множители дифференциальных систем в частных производных // Дифференциальные уравнения, 1999. – T. 35, № 3. – С. 418 – 419.</reference>
+                <reference>Буслюк Д.В. , Горбузов В.Н. Интегралы системы Якоби в частных производных // Веснік Гродзенскага дзяржаўнага ўніверсітэта імя Янкі Купалы. Серыя 2. Матэматыка. Фізіка. Інфарматыка, вылічальная тэхніка і кіраванне, 2000. – № 1(3). – С. 4 – 11.</reference>
+                <reference>Картан Э. Интегральные инварианты. – М. –Л. : ГИТТЛ, 1940. – 216 с.</reference>
+                <reference>Berrone L. R. , Giacomini H. Inverse Jacobi multipliers //Rendiconti del Circolo Matematico di Palermo, 2003. – Vol. 52, № 1. – P. 77–130.</reference>
+                <reference>García I.A., Grau M. A survey on the inverse integrating factor // Qualitative Theory of Dynamical Systems, 2010. – Vol. 9. – P. 115 – 166.</reference>
+                <reference>Черкас Л.А., Гринь А.А., Булгаков В.И. Конструктивные методы исследования предельных циклов автономных систем второго порядка (численно-алгебраический подход). – Гродно : ГрГУ, 2013. – 489 с.</reference>
+                <reference>Горбузов В.Н., Проневич А.Ф. Спектральный метод построения интегрального базиса якобиевой системы в частных производных // Дифференциальные уравнения и процессы управления, 2001. – № 3. – С. 17 – 45.</reference>
+                <reference>Горбузов В.Н., Тыщенко В.Ю. Частные интегралы систем в полных дифференциалах // Дифференциальные уравнения, 1991. – Т. 27, № 10. – С. 1819 – 1822.</reference>
+                <reference>Горбузов В.Н., Проневич А.Ф. Построение интегралов линейной дифференциальной системы // Веснік Гродзенскага дзяржаўнага ўніверсітэта імя Янкі Купалы. Серыя 2. Матэматыка. Фізіка. Інфарматыка, вылічальная тэхніка і кіраванне, 2003. – № 2(22). – С. 50 – 60.</reference>
+                <reference>Горбузов В.Н., Проневич А.Ф. Интегралы R-линейных систем в полных дифференциалах // Доклады НАН Беларуси, 2004. – Т. 48, № 1. – С. 49 – 52.</reference>
+                <reference>Проневич А.Ф. R-дифференцируемые интегралы систем в полных дифференциалах.–Saarbruchen (Germany): LAP LAMBERT Academic Publishing, 2011. – 104 c.</reference>
+                <reference>Gorbuzov V.N. Pranevich A. F. First integrals of ordinary linear differential // Mathematics.Dynamical Systems (1201.4141v1 [math.DS], Cornell Univ., Ithaca, New York), 2012. – P. 1 – 75.</reference>
+                <reference>Горбузов В.Н. Интегралы систем уравнений в полных дифференциалах. –Гродно: ГрГУ, 2005. – 273 с.</reference>
+            </references>
+        </articleInfo>
+        <authors>
+            <author ref="n_2026_10_pranevich" sort-key="1" />
+            <author ref="n_2026_10_belko" sort-key="2" />
+            <author ref="n_2026_10_gnezdovsky" sort-key="3" />
+            <author ref="n_2026_10_pavlyuchik" sort-key="4" />
+        </authors>
+    </article>
+    <article>
+        <articleInfo lang="EN" FirstPage="84" LastPage="103">
+            <pdf>26303-jdecp-hien.pdf</pdf>
+            <abstract>In this paper, the problems of stability and stabilization via static output-feedback control are extended for positive continuous-time Roesser model described Caputo derivatives with incommensurate orders. A general solution representation to state-space equation of the model is first given. Then, using the established solution representation, necessary and sufficient conditions ensuring the positivity of the system (i.e. all system states initiated from nonnegative states are always nonnegative for all times) are derived. By utilizing the monotonicity induced from the positivity, a necessary and sufficient stability condition is formulated in terms of a tractable LP condition. The obtained stability result is then taken into deriving LP-based conditions for the existence of a desired controller that makes the closed-loop system positive and stable.</abstract>
+            <title>Analysis and control of positive 2-D systems in continuous-time Caputo-Roesser model</title>
+            <keywords>
+                <word>Fractional-order 2-D systems</word>
+                <word>positivity</word>
+                <word>Roesser model</word>
+                <word>linear programming</word>
+            </keywords>
+            <references>
+                <reference>T. Kaczorek, Two-Dimensional Linear Systems, Berlin, Springer-Verlag, 1985.</reference>
+                <reference>W. Marszalek and G.T. Kekkeris, Heat exchangers and linear image processing theory, Int. J. Heat Mass Trans., 32(1989), 2363-2374.</reference>
+                <reference>D. Bors and S. Walczak, Application of 2D systems to investigation of a process of gas filtration, Multidim. Syst. Signal Process., 23(2012), 119-130.</reference>
+                <reference>A. Alenany, G. Mercére and J.A. Ramos, Subspace identification of 2-D CRSD Roesser models with deterministic-stochastic inputs: A state computation approach, IEEE Trans. Control Syst. Techno., 25(2017), 1108-1115.</reference>
+                <reference>R.P. Roesser, A discrete state-space model for linear image processing, IEEE Trans. Autom. Control, 20(1975), 1-10.</reference>
+                <reference>E. Rogers, K. Galkowski, W. Paszke, K.L. Moore, P.H. Bauer, L. Hladowski and P. Dabkowski, Multidimensional control systems: case studies in design and evaluation, Multidim. Syst. Signal Process., 26(2015), 895-939.</reference>
+                <reference>L. Wu and Z. Wang, Filtering and Control for Classes of Two-Dimensional Systems, Switzerland, Springer, 2015.</reference>
+                <reference>L. Zhou, J. She, S. Zhou and C. Li, Compensation for state‐dependent nonlinearity in a modified repetitive control system, Int. J. Robust Nonlinear Control, 28(2018), 213-226.</reference>
+                <reference>L. Zhou, J. She, S. Zhou, Robust H-infinity control of an observer-based repetitive-control system, J. Frankl. Inst., 355(2018), 4952-4969.</reference>
+                <reference>J.E. Kurek and M.B. Zaremba, Iterative learning control synthesis based on 2-D system theory, IEEE Trans. Autom. Control, 38(1993), 121-125.</reference>
+                <reference>D.H. Owens, N. Amann, E. Rogers and M. French, Analysis of linear iterative learning control schemes--A 2D systems/repetitive processes approach, Multidim. Syst. Signal Process., 11(2000), 125-177.</reference>
+                <reference>J. Wallen, S. Gunnarsson and M. Norrlof, Analysis of boundary effects in iterative learning control, Int. J. Control, 86(2013), 410-415.</reference>
+                <reference>L.V. Hien and H. Trinh, Switching design for suboptimal guaranteed cost control of 2-D nonlinear switched systems in the Roesser model, Nonlinear Anal. Hybrid Syst., 24(2017), 45-57.</reference>
+                <reference>Z. Xu, H. Su, R. Lu and Z.G. Wu, Non-fragile dissipative filtering for 2-D switched systems, J. Frank. Inst., 354(2017), 6234-6246.</reference>
+                <reference>H. Trinh and L.V. Hien, On reachable set estimation of two-dimensional systems described by the Roesser model with time-varying delays, Int. J. Robust Nonlinear Control, 28(2018), 227-246.</reference>
+                <reference>J. Liang, F. Wang, Z. Wang and X. Liu, Robust Kalman filtering for two-dimensional systems with multiplicative noises and measurement degradations: The finite-horizon case, Automatica, 96(2018), 166-177.</reference>
+                <reference>L.V. Hien and H. Trinh, Stability analysis and control of two-dimensional fuzzy systems with directional time-varying delays, IEEE Trans. Fuzzy Syst., 26(2018), 1550-1564.</reference>
+                <reference>L.V. Hien and H. Trinh, Observers design for 2-D positive time-delay Roesser systems, IEEE Trans. Circuit. Syst.-II: Expr. Brief., 65(2018), 476-480.</reference>
+                <reference>D. Hua, W. Wang, J. Yao and Y. Ren, Non-weighted H-infinity performance for 2-D FMLSS switched system with maximum and minimum dwell time, J. Frank. Inst., 356(2019), 5729-5753.</reference>
+                <reference>Ghous and Z. Xiang, Robust state feedback H-infinity control for uncertain 2-D continuous state delayed systems in the Roesser model, Multidim. Syst. Signal Process., 27(2016), 297-319.</reference>
+                <reference>Ghous and Z. Xiang, H-infinity control of a class of 2-D continuous switched delayed systems via state-dependent switching, Int. J. Syst. Sci., 47(2016), 300-313.</reference>
+                <reference>Ghous and Z. Xiang, Reliable H-infinity control of 2-D continuous nonlinear systems with time varying delays, J. Frankl. Inst., 352(2015) 5758-5778.</reference>
+                <reference>L.V. Hien and H. Trinh, A novel approach to exponential stability of continuous-time Roesser systems with directional time-varying delays, J. Frankl. Inst., 354(2017), 1023-1041.</reference>
+                <reference>H. Trinh and L.V. Hien, Prediction-based approach to stabilization of 2-D continuous-time Roesser systems with directional input delays, J. Frankl. Inst., 357(2017), 4779-4794.</reference>
+                <reference>A. Kilbas, M. Srivastava and J. Trujillo, Theory and Applications of Fractional Differential Equations, Amsterdam, Elservier, 2006.</reference>
+                <reference>T. Kaczorek and K. Rogowski, Fractional Linear Systems and Electrical Circuits, Cham, Springer, 2015.</reference>
+                <reference>S. Domek and P. Dworak, Theoretical Developments and Applications of Non-Integer Order Systems, Cham, Springer, 2016.</reference>
+                <reference>Y. Ma, J. Lu and W. Chen, Robust stability and stabilization of fractional order linear systems with positive real uncertainty, ISA Trans., 53(2014), 199-209.</reference>
+                <reference>Z. Wang, D. Yang, T. Ma and N. Sun, Stability analysis for nonlinear fractional-order systems based on comparison principle, Nonlinear Dyn., 75(2014), 387-402.</reference>
+                <reference>D. Wang and A. Xiao, Dissipativity and contractivity for fractional-order systems, Nonlinear Dyn., 80(2015), 287-294.</reference>
+                <reference>T. Kaczorek, Fractional 2D linear systems, J. Autom. Mob. Robotics Intell. Syst., 2(2008), 5-9.</reference>
+                <reference>K. Rogowski, General response formula for fractional 2D continuous-time linear systems described by the Roesser model, Acta Mech. et Autom., 5(2011), 112-116.</reference>
+                <reference>K. Rogowski, Positivity Analysis of Continuous 2D Fornasini-Marchesini Fractional Model, POSTA 16, Switzerland, Springer, 2016.</reference>
+                <reference>L.V. Hien and C.T. Kinh, Decentralised stabilization of positive fractional-order interconnected systems, IET Control Theory Appl., 11(2017), 2391-2395.</reference>
+                <reference>L.V. Hien and H. Trinh, Exponential stability of two-dimensional homogeneous monotone systems with bounded directional delays, IEEE Trans. Autom. Control, 63(2018), 2694-2700.</reference>
+                <reference>A. Alfidi, A. Hmamed, F. Tadeo and A. Benzaouia, Control with positivity constraint for 2D continuous-time systems in Roesser model, J. Control Autom. Elect. Syst., 32(2021), 70-81.</reference>
+            </references>
+        </articleInfo>
+        <authors>
+            <author ref="n_2026_10_nguyen_ka" sort-key="1" />
+            <author ref="n_2026_10_tran" sort-key="2" />
+            <author ref="n_2026_10_le" sort-key="3" />
+            <author ref="n_2026_10_nguyen_pn" sort-key="4" />
+        </authors>
+    </article>
+    <article>
+        <articleInfo lang="EN" FirstPage="104" LastPage="114">
+            <pdf>26304-jdecp-khakimova.pdf</pdf>
+            <abstract>The article studies the solvability of multiparameter multiplicative classes of 2nd order ordinary differential equations using the method of discrete invariants. Invariants of discrete transformations closed in these classes of equations and their generalizations are considered. Concomitants are found that reduce the studied classes of differential equations to integrable equations of the 1st order. For some concomitants we managed to find inverse transformations. Exact general solutions are obtained for the corresponding subclasses of equations.</abstract>
+            <title>Discrete transformation groups and solvability of multiparameter classes of ordinary differential equations</title>
+            <keywords>
+                <word>ordinary equation of the 2nd order</word>
+                <word>multiplicative classes of differential equations</word>
+                <word>discrete group of transformations</word>
+                <word>concomitant</word>
+                <word>invariant of a discrete transformation</word>
+                <word>exact solution of a differential equation</word>
+            </keywords>
+            <references>
+                <reference>Scheffers G., Lie S. Vorlesungen über continuierliche Gruppen mit geometrischen und anderen Anwendungen. – Leipzig: B. G. Teubner Verlag, 1983. – 842 p.</reference>
+                <reference>Zajcev V. F., Polianin A. D. Spravochnik po nelinejnym differencial'nym uravneniyam. Prilozheniya v mekhanike, tochnye resheniya [Handbook of Nonlinear Differential Equations. Applications in mechanics, exact solutions]. – Moscow, Nauka Publ., 1993. – 464 p. (In Russian)</reference>
+                <reference>Kydryashov N. A. Simplest equation method to look for exact solutions // Chaos, Solitons &amp; Fractals. – 2005. – V. 24. – pp. 1217-1231.</reference>
+                <reference>Zajcev V. F., Hakimova Z. N. O diskretno-gruppovom analize uravnenija [On discrete group analysis of the equation ] // VINITI dep. № 9030-В86. – 1986. – 31 p. (In Russian)</reference>
+                <reference>Arzhannikova I. Ju., Zajcev V. F., Malyh A. A., Popov V. V. etc. Sovremennyj gruppovoj analiz: metody i prilozhenija. Diskretno-gruppovoj analiz [Modern group analysis: methods and applications. Discrete group analysis.]. – Leningrad, Preprint LIIA USSR, № 107. – 1989. – 58 p. (In Russian)</reference>
+                <reference>Hakimova Z. N. Integrirovanie diskretnyh invariantov v klasse polinomial'nyh differencial'nyh uravnenij 2-go porjadka [Integration of discrete invariants in the class of polynomial differential equations of the 2nd order] // Trudy Voenno-kosmicheskoj akademii im. A.F. Mozhaiskogo. – St.Petersburg, Proc. of the Mozhaisky Military Space Academy, 2014. – pp. 8-16. (In Russian)</reference>
+                <reference>Hakimova Z.N. Integrirovanie differencial'nyh uravnenij s pomoshch'yu invariantov diskretnyh preobrazovanij [Integration of differential equations using discrete transformation invariants] / Z.N. Hakimova, A.A. Atoyan // Differencial'nye uravnenija i processy upravlenija. – 2024. – N 3. – pp. 123-133. Electronic journal: https://diffjournal.spbu.ru/RU/numbers/2024.3/article.1.8.html (In Russian)</reference>
+                <reference>Hakimova Z.N. Simmetrii i integrirovanie uravnenij orbity odnogo diskretno-invariantnogo differencial'nogo uravneniya vtorogo poryadka stepennogo vida [Symmetries and integration of the orbital equations of one discrete-invariant second-order differential equation of power form] / Z.N. Hakimova, M.A. Lisicina // Perspektivy nauki. – Tambov: TMBprint, 2024. – № 8 (179). – pp. 51-55. (In Russian)</reference>
+                <reference>Hakimova Z.N. Diskretnye invarianty v klasse obyknovennyh differencial'nyh uravnenij i ih integrirovanie [Discrete invariants in the class of ordinary differential equations and their integration] / Z.N. Hakimova, E.A. SHahova // Sovremennaya nauka: Aktual'nye problemy teorii i praktiki. Seriya Estestvennye i Tekhnicheskie nauki. – Saint-Petersburg: KOPI-PRINT, 2025. – №1-2. – С. 68-71. (In Russian)</reference>
+                <reference>Hakimova Z. N. Integrirovanie mul'tiplikativnyh klassov obyknovennyh differencial'nyh uravnenij s pomoshch'yu diskretnyh invariantov [Integration of multiplicative classes of ordinary differential equations using discrete invariants] // Aktual'nye problemy prikladnoj matematiki, informatiki i mekhaniki. Proceedings of the scientific conference. – Voronezh, 2024. – pp. 146–150. (In Russian)</reference>
+                <reference>Hakimova Z.N. Ob integrirovanii odnogo chetyryohparametricheskogo klassa drobno-polinomial'nyh obyknovennyh differencial'nyh uravnenij [On the integration of one four-parameter class of fractional polynomial ordinary differential equations] // Sovremennaya nauka: Aktual'nye problemy teorii i praktiki. Seriya Estestvennye i Tekhnicheskie nauki. – Saint-Petersburg: KOPI-PRINT, 2026. – №1. – С. 163-166. (In Russian)</reference>
+                <reference>Zajcev V. F. Diskretno-gruppovye metody teorii differencial'nyh uravnenij [Discrete-group methods of the theory of differential equations] // VINITI dep. № 5739-82. – 1982. – 130 p. (In Russian)</reference>
+            </references>
+        </articleInfo>
+        <articleInfo lang="RU" FirstPage="104" LastPage="114">
+            <pdf>26304-jdecp-khakimova.pdf</pdf>
+            <abstract>В статье изучается разрешимость многопараметрических мультипликативных классов обыкновенных дифференциальных уравнений 2-го порядка с помощью метода дискретных инвариантов. Рассматриваются инварианты дискретных преобразований, замкнутых в этих классах уравнений, и их обобщения. Найдены конкомитанты, приводящие исследуемые классы дифференциальных уравнений к интегрируемым уравнениям 1-го порядка. Для части конкомитантов удалось найти обратные преобразования. Для соответствующих подклассов уравнений получены точные общие решения.</abstract>
+            <title>Дискретные группы преобразований и разрешимость многопараметрических классов обыкновенных дифференциальных уравнений</title>
+            <keywords>
+                <word>обыкновенное уравнение 2-го порядка</word>
+                <word>мультипликативные классы дифференциальных уравнений</word>
+                <word>дискретная группа преобразований</word>
+                <word>конкомитант</word>
+                <word>инвариант дискретного преобразования</word>
+                <word>точное решение дифференциального уравнения</word>
+            </keywords>
+            <references>
+                <reference>Scheffers G., Lie S. Vorlesungen über continuierliche Gruppen mit geometrischen und anderen Anwendungen. – Leipzig: B. G. Teubner Verlag, 1983. – 842 p.</reference>
+                <reference>Зайцев В. Ф., Полянин А. Д. Справочник по нелинейным дифференциальным уравнениям. Приложения в механике, точные решения. – М.: Наука, 1993. – 464 с.</reference>
+                <reference>Kydryashov N. A. Simplest equation method to look for exact solutions // Chaos, Solitons &amp; Fractals. – 2005. – V. 24. – 1217-1231 p.</reference>
+                <reference>Зайцев В. Ф., Хакимова З. Н. О дискретно-групповом анализе уравнения // Деп. ВИНИТИ № 9030-В86. – 1986. – 31 с.</reference>
+                <reference>Аржанникова И. Ю., Зайцев В. Ф., Малых А. А., Попов В. В. и др. Современный групповой анализ: методы и приложения. Дискретно-групповой анализ. – Л.: Препринт ЛИИА АН СССР, № 107. – 1989. – 58 с.</reference>
+                <reference>Хакимова З. Н. Интегрирование дискретных инвариантов в классе полиномиальных дифференциальных уравнений 2-го порядка // Труды Военно-космической академии им. А.Ф. Можайского, 2014 – С. 8-16.</reference>
+                <reference>Хакимова З.Н. Интегрирование дифференциальных уравнений с помощью инвариантов дискретных преобразований / З.Н. Хакимова, А.А. Атоян // Дифференциальные уравнения и процессы управления. – 2024. – N 3. – С. 123-133. URL: https://diffjournal.spbu.ru/RU/numbers/2024.3/article.1.8.html</reference>
+                <reference>Хакимова З.Н. Симметрии и интегрирование уравнений орбиты одного дискретно-инвариантного дифференциального уравнения второго порядка степенного вида / З.Н. Хакимова, М.А. Лисицина // Перспективы науки. – Тамбов: ТМБпринт, 2024. – № 8 (179). – С. 51-55.</reference>
+                <reference>Хакимова З.Н. Дискретные инварианты в классе обыкновенных дифференциальных уравнений и их интегрирование / З.Н. Хакимова, Е.А. Шахова // Современная наука: Актуальные проблемы теории и практики. Серия Естественные и Технические науки. – СПб: КОПИ-ПРИНТ, 2025. – №1-2. – С. 68-71.</reference>
+                <reference>Хакимова З. Н. Интегрирование мультипликативных классов обыкновенных дифференциальных уравнений с помощью дискретных инвариантов // Сборник трудов Международной научной конференции «Актуальные проблемы прикладной математики, информатики и механики». – Воронеж, 2024. – С. 146–150.</reference>
+                <reference>Хакимова З.Н. Об интегрировании одного четырёхпараметрического класса дробно-полиномиальных обыкновенных дифференциальных уравнений // Современная наука: Актуальные проблемы теории и практики. Серия Естественные и Технические науки. – СПб: КОПИ-ПРИНТ, 2026. – №1. – С. 163-166.</reference>
+                <reference>Зайцев В. Ф. Дискретно-групповые методы теории дифференциальных уравнений // Деп. ВИНИТИ № 5739-82. – 1982. – 130 с.</reference>
+            </references>
+        </articleInfo>
+        <authors>
+            <author ref="n_2026_10_khakimova" sort-key="1" />
+            <author ref="n_2026_10_shakhova" sort-key="2" />
+            <author ref="n_2026_10_rodionova" sort-key="3" />
+        </authors>
+    </article>
+    <article>
+        <articleInfo lang="EN" FirstPage="115" LastPage="125">
+            <pdf>26305-jdecp-mukhin.pdf</pdf>
+            <abstract>An algorithm for the joint finding matrices of the Lyapunov function and feedback in quadratic stabilization solving problems of linear time-invariant systems with a partially measurable state vector is proposed. The basis for the algorithm is the bilinear matrix inequalities linearization and two mutually inverse matrixes finding. It is proved that the numerical sequence generated by the algorithm is converged. The algorithm testing is performed on completely controlled and completely observed systems, generated randomly. It is additionally shown the algorithm applying for the two-link inverted pendulum stabilization problem solving by the dynamic feedback.</abstract>
+            <title>An algorithm for the joint finding matrices of the Lyapunov function and feedback in linear systems quadratic stabilization problems</title>
+            <keywords>
+                <word>Lyapunov function matrix</word>
+                <word>quadratic stabilization</word>
+                <word>feedback</word>
+                <word>bilinear matrix inequalities</word>
+            </keywords>
+            <references>
+                <reference>Balandin D.V., Kogan M.M. Synthesis of control law regulators based on linear matrix inequalities. M.: FIZMATLIT, 2007.</reference>
+                <reference>Boyd S., El Ghaoui L., Feron E., Balakrishnan V. Linear Matrix Inequalities in System and Control Theory. Philadelphia: SIAM, 1994.</reference>
+                <reference>Nesterov Y. E., Nemirovski A. Interior-Point Polynomial Algorithms in Convex Programming. Philadelphia: SIAM, 1994.</reference>
+                <reference>Toker O., Ozbay H. On the NP hardness of solving bilinear matrix inequalities and simultaneous stabilization with static output feedback. Proc. of the American Control Conference, vol. 4, p. 2525-2526, 1995.</reference>
+                <reference>Hassibi A., How J., Boyd S. A path-following method for solving BMI problems in control. Proc. of American Control Conference, vol. 2, p. 1385-1389, 1999.</reference>
+                <reference>Dinh T.Q., Gumussoy S., Michiels W., Diehl M. Combining convex–concave decompositions and linearization approaches for solving BMIs, with application to static output feedback. IEEE Trans. on Automat. Control, vol. 57, No. 6, p. 1377-1390, 2012.</reference>
+                <reference>Gahinet P., Apkarian P. A linear matrix inequality approach to H∞-control. International Journal of Robust and Nonlinear Control, vol. 4, p. 421-448, 1994.</reference>
+                <reference>El Ghaoui L., Oustry F., Aitrami M. A cone complementarity linearization algorithm for static output-feedback and related problems. IEEE Trans. Automat. Control, vol. 42, No. 8, p. 1171-1176, 1997.</reference>
+                <reference>Balandin D.V., Kogan M.M. Synthesis of controllers on the basis of a solution of linear matrix inequalities and a search algorithm fir reciprocal matrices. Automation and Remote Control, vol. 66, p. 74-91, 2005.</reference>
+                <reference>Sadabadi M.S., Peaucelle D. From static output feedback to structured robust static output feedback: A survey. Annual Reviews in Control, vol. 42, p. 11-26, 2016.</reference>
+                <reference>Shumafov M.M. Stabilization of linear control systems. Pole assignment problem. A survey. Vestnik of Saint Petersburg University. Mathematics. Mechanics. Astronomy, vol. 6 (64), issue 4, p. 564–591, 2019.</reference>
+                <reference>Kimura H. On pole placement by gain output feedback. IEEE Trans. Automat. Control, vol. 20, p. 509-519, 1975.</reference>
+            </references>
+        </articleInfo>
+        <articleInfo lang="RU" FirstPage="115" LastPage="125">
+            <pdf>26305-jdecp-mukhin.pdf</pdf>
+            <abstract>Предложен итерационный алгоритм совместного поиска матриц функции Ляпунова и обратной связи в задачах квадратичной стабилизации линейных стационарных систем при частично измеряемом векторе состояния. В основе алгоритма лежит линеаризация билинейных слагаемых матричного неравенства и поиск двух взаимно обратных матриц. Доказана сходимость числовой последовательности, порождаемой алгоритмом. Испытание алгоритма выполнялось на полностью управляемых и полностью наблюдаемых линейных системах, сгенерированных случайным образом. Дополнительно показано применение алгоритма для решения задачи стабилизации двухзвенного перевернутого маятника с помощью динамической обратной связи.</abstract>
+            <title>Алгоритм совместного поиска матриц функции Ляпунова и обратной связи в задачах квадратичной стабилизации линейных систем</title>
+            <keywords>
+                <word>матрица функции Ляпунова</word>
+                <word>квадратичная стабилизация</word>
+                <word>обратная связь</word>
+                <word>билинейные матричные неравенства</word>
+            </keywords>
+            <references>
+                <reference>Баландин Д.В, Коган М.М. Синтез регуляторов законов управления на основе линейных матричных неравенств. М.: ФИЗМАТЛИТ, 2007.</reference>
+                <reference>Boyd S., El Ghaoui L., Feron E., Balakrishnan V. Linear Matrix Inequalities in System and Control Theory. Philadelphia: SIAM, 1994.</reference>
+                <reference>Nesterov Y. E., Nemirovski A. Interior-Point Polynomial Algorithms in Convex Programming. Philadelphia: SIAM, 1994.</reference>
+                <reference>Toker O., Ozbay H. On the NP hardness of solving bilinear matrix inequalities and simultaneous stabilization with static output feedback. Proc. of the American Control Conference, vol. 4, p. 2525-2526, 1995.</reference>
+                <reference>Hassibi A., How J., Boyd S. A path-following method for solving BMI problems in control. Proc. of American Control Conference, vol. 2, p. 1385-1389, 1999.</reference>
+                <reference>Dinh T.Q., Gumussoy S., Michiels W., Diehl M. Combining convex–concave decompositions and linearization approaches for solving BMIs, with application to static output feedback. IEEE Trans. on Automat. Control, vol. 57, No. 6, p. 1377-1390, 2012.</reference>
+                <reference>Gahinet P., Apkarian P. A linear matrix inequality approach to H∞-control. International Journal of Robust and Nonlinear Control, vol. 4, p. 421-448, 1994.</reference>
+                <reference>El Ghaoui L., Oustry F., Aitrami M. A cone complementarity linearization algorithm for static output-feedback and related problems. IEEE Trans. Automat. Control, vol. 42, No. 8, p. 1171-1176, 1997.</reference>
+                <reference>Баландин Д.В, Коган М.М. Синтез регуляторов на основе решения линейных матричных неравенств и алгоритма поиска взаимно-обратных матриц. Автоматика и телемеханика, №1, с. 82-89, 2005.</reference>
+                <reference>Sadabadi M.S., Peaucelle D. From static output feedback to structured robust static output feedback: A survey. Annual Reviews in Control, vol. 42, p. 11-26, 2016.</reference>
+                <reference>Шумафов М.М. Стабилизация линейных систем управления. Проблема назначения полюсов. Обзор. Вестник СПбГУ. Математика. Механика. Астрономия, том 6(64), вып. 4, с. 564-591, 2019.</reference>
+                <reference>Kimura H. On pole placement by gain output feedback. IEEE Trans. Automat. Control, vol. 20, p. 509-519, 1975.</reference>
+            </references>
+        </articleInfo>
+        <authors>
+            <author ref="n_2026_10_mukhin" sort-key="1" />
+        </authors>
+    </article>
+    <article>
+        <articleInfo lang="EN" FirstPage="126" LastPage="138">
+            <pdf>26306-jdecp-pchelintsev.pdf</pdf>
+            <abstract>The paper considers numerical modeling of a stationary electric field in a rectangular electroplating bath. The original boundary-value problem for the Laplace equation includes insulating boundary conditions on the bath walls, a prescribed potential on the anode, and a nonlinear cathode condition relating the normal derivative of the potential to the cathodic polarization curve. The method of lines is used: finite-difference approximation is introduced only along the coordinate directed along the electrodes, and the two-dimensional problem is reduced to a boundary-value problem for a system of ordinary differential equations. The system is solved by a numerical-analytical power-series method, while unknown initial data are found by a shooting procedure based on minimization of the boundary residual function. Special attention is paid to the numerical experiment for a bath with a flat anode and cathode. The paper presents computational parameters, a stopping criterion for the power series, the calculated distribution of nickel coating thickness, and an estimate explaining why arbitrary-precision arithmetic is required when the size of the computational domain increases.</abstract>
+            <title>High-precision modeling of an electric field in an electroplating bath by the method of lines and power series</title>
+            <keywords>
+                <word>Laplace equation</word>
+                <word>electroplating bath</word>
+                <word>method of lines</word>
+                <word>power series</word>
+                <word>shooting method</word>
+                <word>arbitrary-precision arithmetic</word>
+                <word>numerical experiment</word>
+            </keywords>
+            <references>
+                <reference>Liskovets O. A. Metod pryamykh (obzor rabot) [Method of lines (review of works)] // Differentsialnye Uravneniya, 1965, vol. 1, no. 12, pp. 1662-1678.</reference>
+                <reference>Ivanov V. T. Reshenie kraevykh zadach dlya uravneniya Laplasa metodom konformnykh reshetok [Solving boundary-value problems for the Laplace equation by the method of conformal grids] // Zhurnal Vychislitelnoi Matematiki i Matematicheskoi Fiziki, 1967, vol. 7, no. 4, pp. 895-899.</reference>
+                <reference>Sadiku M. N. O., Obiozor C. N. A simple introduction to the method of lines // International Journal of Electrical Engineering &amp; Education, 2000, vol. 37, iss. 3, pp. 282-296. doi: 10.7227/IJEEE.37.3.8.</reference>
+                <reference>Northrop P. W. C., Ramachandran P. A., Schiesser W. E., Subramanian V. R. A robust false transient method of lines for elliptic partial differential equations // Chemical Engineering Science, 2013, vol. 90, pp. 32-39. doi: 10.1016/j.ces.2012.11.033</reference>
+                <reference>Kudryavtsev N. T. Elektroliticheskie pokrytiya metallami [Electrolytic Coatings with Metals], Khimiya Publ., Moscow, 1979, 352 p.</reference>
+                <reference>Taylor J. L. The mixed problem in lipschitz domains with general decompositions of the boundary / J. L. Taylor, K. A. Ott, R. M. Brown // Transactions of the American Mathematical Society. – 2013. – Vol. 365. Iss. 6 – Pp. 2895–2930. doi: 10.1090/S0002-9947-2012-05711-4</reference>
+                <reference>Samarskiy A. A., Andreev V. B. Raznostnye metody dlya ellipticheskikh uravnenii [Difference Methods for Elliptic Equations], Nauka Publ., Moscow, 1976, 352 p.</reference>
+                <reference>Demidovich B. P. Lektsii po matematicheskoi teorii ustoichivosti [Lectures on the Mathematical Theory of Stability], Nauka Publ., Moscow, 1967, 472 p.</reference>
+                <reference>Polyak B. T. Vvedenie v optimizatsiyu [Introduction to Optimization], Nauka Publ., Moscow, 1983, 384 p.</reference>
+                <reference>Pchelintseva I. Yu., Pchelintsev A. N., Litovka Yu. V. Modeling of metal distribution when coating flat metal plates in electroplating baths // International Journal of Numerical Modelling: Electronic Networks, Devices and Fields, 2021, vol. 34, iss. 2, e2830, 10 pp. doi: 10.1002/jnm.2830</reference>
+                <reference>The high-performance C++ interface for MPFR library [Electronic resource]. Available at: https://github.com/advanpix/mpreal.</reference>
+                <reference>Fousse L., Guillaume H., Lefèvre V., Pélissier P., Zimmermann P. MPFR: A multiple-precision binary floating-point library with correct rounding // ACM Transactions on Mathematical Software (TOMS), 2007, vol. 33, iss. 2, article 13, 15 pp. doi: 10.1145/1236463.1236468</reference>
+                <reference>Isupov K., Knyazkov V. A modular-positional computation technique for multiple-precision floating-point arithmetic // Parallel Computing Technologies. PaCT 2015. Lecture Notes in Computer Science, 2015, vol. 9251, pp. 47-61. doi: 10.1007/978-3-319-21909-7_5</reference>
+                <reference>MPRES-BLAS: Multiple-Precision GPU Accelerated Linear Algebra Routines [Electronic resource]. Available at: https://github.com/kisupov/mpres-blas.</reference>
+                <reference>Isupov K. S., Knyazkov V. S. Arifmetika mnogokratnoi tochnosti na osnove sistem ostatochnykh klassov [Multiple-precision arithmetic based on residue number systems] // Programmnye Sistemy: Teoriya i Prilozheniya, 2016, vol. 7, no. 1, pp. 61-97.</reference>
+            </references>
+        </articleInfo>
+        <articleInfo lang="RU" FirstPage="126" LastPage="138">
+            <pdf>26306-jdecp-pchelintsev.pdf</pdf>
+            <abstract>В статье рассматривается численное моделирование стационарного электрического поля в гальванической ванне прямоугольного сечения. Исходная краевая задача для уравнения Лапласа включает условия непроводимости на изолированных стенках, заданный потенциал на аноде и нелинейное условие на катоде, связывающее нормальную производную потенциала с катодной поляризационной зависимостью. Для решения задачи применяется метод прямых: разностная аппроксимация выполняется только по координате, направленной вдоль электродов, после чего задача сводится к краевой задаче для системы обыкновенных дифференциальных уравнений. Решение системы строится численно-аналитически с помощью степенных рядов, а неизвестные начальные данные определяются методом стрельбы через минимизацию функции невязки граничных условий. Основное внимание уделено вычислительному эксперименту для ванны с плоским анодом и катодом: приведены параметры расчета, критерий останова по степенным рядам, результаты распределения толщины никелевого покрытия и оценка необходимости использования арифметики произвольной точности при увеличении размеров расчетной области.</abstract>
+            <title>Высокоточное моделирование электрического поля в гальванической ванне методом прямых и степенных рядов</title>
+            <keywords>
+                <word>уравнение Лапласа</word>
+                <word>гальваническая ванна</word>
+                <word>метод прямых</word>
+                <word>степенные ряды</word>
+                <word>метод стрельбы</word>
+                <word>арифметика произвольной точности</word>
+                <word>численный эксперимент</word>
+            </keywords>
+            <references>
+                <reference>Лисковец О. А. Метод прямых (обзор работ) / О. А. Лисковец // Дифференциальные уравнения. - 1965. - Т. 1. № 12. - С. 1662-1678.</reference>
+                <reference>Иванов В. Т. Решение краевых задач для уравнения Лапласа методом конформных решеток / В. Т. Иванов // Журнал вычислительной математики и математической физики. - 1967. - Т. 7. № 4. - С. 895-899.</reference>
+                <reference>Sadiku M. N. O., Obiozor C. N. A simple introduction to the method of lines / M. N. O. Sadiku, C. N. Obiozor // International Journal of Electrical Engineering &amp; Education. - 2000. - Vol. 37. Iss. 3. - Pp. 282-296. doi: 10.7227/IJEEE.37.3.8</reference>
+                <reference>Northrop P. W. C. A robust false transient method of lines for elliptic partial differential equations / P. W. C. Northrop, P. A. Ramachandran, W. E. Schiesser, V. R. Subramanian // Chemical Engineering Science. - 2013. - Vol. 90. - Pp. 32-39. doi: 10.1016/j.ces.2012.11.033</reference>
+                <reference>Кудрявцев Н. Т. Электролитические покрытия металлами / Н. Т. Кудрявцев. - М.: Химия, 1979. - 352 с.</reference>
+                <reference>Taylor J. L. The mixed problem in lipschitz domains with general decompositions of the boundary / J. L. Taylor, K. A. Ott, R. M. Brown // Transactions of the American Mathematical Society. – 2013. – Vol. 365. Iss. 6 – Pp. 2895–2930. doi: 10.1090/S0002-9947-2012-05711-4</reference>
+                <reference>Самарский А. А. Разностные методы для эллиптических уравнений / А. А. Самарский, В. Б. Андреев. - М.: Наука, 1976. - 352 с.</reference>
+                <reference>Демидович Б. П. Лекции по математической теории устойчивости / Б. П. Демидович. - М.: Наука, 1967. - 472 с.</reference>
+                <reference>Поляк Б. Т. Введение в оптимизацию / Б. Т. Поляк. - М.: Наука, 1983. - 384 с.</reference>
+                <reference>Pchelintseva I. Yu. Modeling of metal distribution when coating flat metal plates in electroplating baths / I. Yu. Pchelintseva, A. N. Pchelintsev, Yu. V. Litovka // International Journal of Numerical Modelling: Electronic Networks, Devices and Fields. - 2021. - Vol. 34. Iss. 2. - e2830. - 10 pp. doi: 10.1002/jnm.2830</reference>
+                <reference>The high-performance C++ interface for MPFR library [Электронный ресурс]. - Режим доступа: https://github.com/advanpix/mpreal - Загл. с экрана.</reference>
+                <reference>Fousse L. MPFR: A multiple-precision binary floating-point library with correct rounding / L. Fousse, H. Guillaume, V. Lefèvre, P. Pélissier, P. Zimmermann // ACM Transactions on Mathematical Software (TOMS). - 2007. - Vol. 33. Iss. 2. - 13. - 15 pp. doi: 10.1145/1236463.1236468</reference>
+                <reference>Isupov K. A modular-positional computation technique for multiple-precision floating-point arithmetic / K. Isupov, V. Knyazkov // Parallel Computing Technologies. PaCT 2015. Lecture Notes in Computer Science. - 2015. - Vol. 9251. - Pp. 47-61. doi: 10.1007/978-3-319-21909-7_5</reference>
+                <reference>MPRES-BLAS: Multiple-Precision GPU Accelerated Linear Algebra Routines [Электронный ресурс]. - Режим доступа: https://github.com/kisupov/mpres-blas - Загл. с экрана.</reference>
+                <reference>Исупов К. С. Арифметика многократной точности на основе систем остаточных классов / К. С. Исупов, В. С. Князьков // Программные системы: теория и приложения. - 2016. - Т. 7. № 1. - С. 61-97.</reference>
+            </references>
+        </articleInfo>
+        <authors>
+            <author ref="n_2026_10_pchelintsev" sort-key="1" />
+            <author ref="n_2026_10_pchelintseva" sort-key="2" />
+            <author ref="n_2026_10_charykov" sort-key="3" />
+            <author ref="n_2026_10_litovka" sort-key="4" />
+        </authors>
+    </article>
+    <article>
+        <articleInfo lang="EN" FirstPage="139" LastPage="150">
+            <pdf>26307-jdecp-vasilieva.pdf</pdf>
+            <abstract>This paper presents sufficient conditions for the existence of a countable set of infinite uncountable invariant sets in the neighborhood of a non transversal homoclinic point of a diffeomorphism of the plane into itself. The trajectories of points of these sets lie in the extended neighborhood of the homoclinic trajectory.</abstract>
+            <title>On the question of the structure of the neighborhood of a homoclinic point of a diffeomorphism of the plane. I.</title>
+            <keywords>
+                <word>hyperbolic point</word>
+                <word>non-transverse homoclinic point</word>
+                <word>stability</word>
+                <word>stable and unstable manifold</word>
+                <word>order of contact</word>
+            </keywords>
+            <references>
+                <reference>Smale S. Differentiable dynamical systems. Bull. Amer. Math. Soc. 1967. v. 73. 747-817. (In English)</reference>
+                <reference>Newhouse Sh. Diffeomorphisms with infinitely many sinks. Topology. 1973. v. 12. 9-18. (In English)</reference>
+                <reference>Ivanov B. F. [Stability of trajectories that do not leave a neighborhood of a homoclinic curve.] Differential Equations. 1979, v. 15, no. 8, 1411-1419. (In Russ)</reference>
+                <reference>Gonchenko S. V., Shilnikov L. P. [On dynamical systems with structurally unstable homoclinic curves.] Doklady Akademii Nauk SSSR. 1986, v. 286, no. 5, 1049–1053. (In Russ)</reference>
+                <reference>Stenkin O. V., Shilnikov L. P. [On bifurcations of periodic motions near a non-rough homoclinic curve.] Differential Equations. 1997, v. 33, no. 3, 377–384. (In Russ)</reference>
+                <reference>Vasil'eva E. V. [Diffeomorphisms of the plane with stable periodic points.] Differential Equations. 2012, v. 48, no. 3, 307–315. (In Russ)</reference>
+                <reference>Pliss V. A. [A system of differential equations having an infinite number of periodic solutions.] Differential Equations. 1974, v. 10, no 9, 2179-2183. (In Russ)</reference>
+            </references>
+        </articleInfo>
+        <articleInfo lang="RU" FirstPage="139" LastPage="150">
+            <pdf>26307-jdecp-vasilieva.pdf</pdf>
+            <abstract>В статье представлены достаточные условия существования счетного набора бесконечных несчетных инвариантных множеств в окрестности нетрансверсальной гомоклинической точки диффеоморфизма плоскости в себя. Траектории точек этих множеств лежат в расширенной окрестности гомоклинической траектории.</abstract>
+            <title>К вопросу о структуре окрестности гомоклинической точки диффеоморфизма плоскости. I.</title>
+            <keywords>
+                <word>гиперболическая точка</word>
+                <word>нетрансверсальная гомоклиническая точка</word>
+                <word>устойчивость</word>
+                <word>устойчивое и неустойчивое многообразие</word>
+                <word>порядок касания</word>
+            </keywords>
+            <references>
+                <reference>Smale S. Differentiable dynamical systems. Bull. Amer. Math. Soc. 1967. Т.73. P. 747-817.</reference>
+                <reference>Newhouse Sh. Diffeomorphisms with infinitely many sinks. Topology. 1973. Т.12. P. 9-18.</reference>
+                <reference>Иванов Б.Ф. Устойчивость траекторий, не покидающих окрестность гомоклинической кривой. Дифференциальные уравнения. 1979. Т.15. № 8. С. 1411-1419.</reference>
+                <reference>Гонченко С.В., Шильников Л.П. О динамических системах с негрубыми гомоклиническими кривыми. Доклады АН СССР. 1986. Т. 286. № 5. С. 1049-1053.</reference>
+                <reference>Стенькин О.В., Шильников Л.П. О бифуркациях периодических движений вблизи негрубой гомоклинической кривой. Дифференциальные уравнения. 1997. Т.33. № 3. С. 377-384.</reference>
+                <reference>Васильева Е.В. Диффеоморфизмы плоскости с устойчивыми периодическими точками. Дифференциальные уравнения. 2012. Т. 48. №3. С.307-315.</reference>
+                <reference>Плисс В.А. Система дифференциальных уравнений, имеющая бесконечное число периодических решений. Дифференциальные уравнения. 1974. Т. 10. №9. С. 2179-2183.</reference>
+            </references>
+        </articleInfo>
+        <authors>
+            <author ref="n_2026_10_vasilieva" sort-key="1" />
+            <author ref="n_2026_10_martynova" sort-key="2" />
+        </authors>
+    </article>
+    <article>
+        <articleInfo lang="EN" FirstPage="151" LastPage="166">
+            <pdf>26308-jdecp-kayumov.pdf</pdf>
+            <abstract>We consider the control of a two-link pendulum with an elastic joint, which moves in a horizontal plane under the action of a limited external torque applied at the first hinge. The pendulum is modeled by two rigid rods with a helical spring between them, unstressed in the straightened configuration. Kinematic constraints are not imposed on the system (constructively excluded), and friction is absent. The problem being solved is rotation the system through the largest angle in a given time from an initial rest state to a final one. Trajectories satisfying the necessary optimality conditions were numerically constructed. The evolution of the optimal control functions with changing the assigned motion time is demonstrated on a dedicated diagram. The results indicate that the problem of rotation the system by the largest angle in a given time is a mutual variational problem of the time-optimal turning by a given angle.</abstract>
+            <title>Optimal turning of a flat two-link pendulum with an elastic joint</title>
+            <keywords>
+                <word>flat two-link pendulum with an elastic joint</word>
+                <word>optimal control</word>
+            </keywords>
+            <references>
+                <reference>Chernous’ko F.L., Anan’evskii I.M., Reshmin S.A. Metody upravleniya nelineynymi mekhanicheskimi sistemami. [Control Methods for Nonlinear Dynamic]. Moscow, FIZMATLIT Publ., 2006. 328 p.</reference>
+                <reference>Avetisyan V.V., Bolotnik N.N., Chernous’ko F.L. Optimal program movements of a two-link manipulator. Izv. Akad. Nauk SSSR. Techn. kibernetika. 1985. No. 3. P. 123-131.</reference>
+                <reference>Bolotnik N.N., Chernous’ko F.L. Optimization of control of manipulation robots. Izv. Akad. Nauk SSSR. Techn. kibernetika. 1990. No. 1. P. 189-238.</reference>
+                <reference>Pontrjagin L.S., Boltjanskii V.G., Gamkrelidze R.V., Mishchenko E.F. Matematicheskaja teorija optimalnih processov [Mathematical theory of optimal processes]. Moscow, Nauka Publ., 1977. 392 p.</reference>
+                <reference>Osipov S.N., Formal’skii A.M. The problem of the time-optimal turning of a manipulator. J. Appl. Math. Mech. 1988. Vol. 52, No 6. P. 725-731.</reference>
+                <reference>Kayumov O.R. Time-optimal movement of a trolley with a pendulum. Journal of Computer and Systems Sciences International. 2021. Vol. 60, No 1. P. 28-38.</reference>
+                <reference>Wittenburg G. Dinamika sistem tverdykh tel. [Dynamics of solid state systems]. Moscow, Mir Publ., 1980. 292 p.</reference>
+                <reference>Kayumov O.R. Optimal movement of a platform with an inverted pendulum. Journal of Computer and Systems Sciences International. 2025. Vol. 64, No 6. P. 954-971.</reference>
+                <reference>Kalman R.E. The general theory of control systems. Proc. 1st Int. Conf. IFAC, vol. 2. Izd. Acad. Nauk SSSR, Moscow. 1961. pp. 521–546.</reference>
+                <reference>Kayumov O.R. On the global controllability of some lagrangian systems. Izv. Akad. Nauk SSSR. Mekh. Tverd. Tela. 1986. No. 6. P. 16–24.</reference>
+                <reference>Chernous’ko F.L., Akulenko L.D., Sokolov B.N. Upravlenie kolebanijami [Oscillation control]. Moscow, Nauka Publ., 1980. 383 p.</reference>
+                <reference>Kayumov O.R. Diagrams of Optimal Control Functions in the Problem of the Fastest Platform Movement with Two Oscillators. Journal of Computer and Systems Sciences International. 2022. Vol. 61, No 5. P. 776-792.</reference>
+            </references>
+        </articleInfo>
+        <articleInfo lang="RU" FirstPage="151" LastPage="166">
+            <pdf>26308-jdecp-kayumov.pdf</pdf>
+            <abstract>Рассматривается управление двузвенным маятником с упругим сочленением, который движется в горизонтальной плоскости при действии ограниченного внешнего момента, приложенного в первом шарнире. Объект моделируется двумя жесткими стержнями со спиральной пружиной между ними, не напряженной в выпрямленной конфигурации. Кинематические ограничения на систему не наложены (исключены конструктивно), трение отсутствует. Решается задача поворота системы на наибольший угол за отведенное время из начального состояния покоя в конечное. Численно построены траектории, удовлетворяющие необходимым условиям оптимальности. Эволюция функций оптимального управления с изменением назначаемого времени движения демонстрируется на специальной диаграмме. Результаты свидетельствуют о том, что задача поворота системы на наибольший угол за отведенное время является взаимной вариационной к задаче оптимального быстродействия при повороте на заданный угол.</abstract>
+            <title>Оптимальный поворот плоского двузвенного маятника с упругим сочленением</title>
+            <keywords>
+                <word>плоский двузвенный маятник с упругим сочленением</word>
+                <word>оптимальное управление</word>
+            </keywords>
+            <references>
+                <reference>Черноусько Ф.Л., Ананьевский И.М., Решмин С.А. Методы управления нелинейными механическими системами. М.: Физматлит, 2006. 328 с.</reference>
+                <reference>Аветисян В.В., Болотник Н.Н., Черноусько Ф.Л. Оптимальные программные движения двузвенного манипулятора // Изв. АН СССР. Техн. кибернетика. 1985. № 3. С. 123-131.</reference>
+                <reference>Болотник Н.Н., Черноусько Ф.Л. Оптимизация управления манипуляционными роботами // Изв. АН СССР. Техн. кибернетика. 1990. № 1. С. 189-238.</reference>
+                <reference>Понтрягин Л.С., Болтянский В.Г., Гамкрелидзе Р.В., Мищенко Е.Ф. Математическая теория оптимальных процессов. – М.: Наука. 1976. 392 с.</reference>
+                <reference>Осипов С.Н., Формальский А.М. Задача о быстрейшем повороте манипулятора // Прикл. матем. и мех. 1988. Т.52. Вып. 6. С. 929-937.</reference>
+                <reference>Каюмов О.Р. Оптимальное по быстродействию перемещение тележки с маятником // Изв. РАН. ТиСУ. 2021. № 1. С. 30–41.</reference>
+                <reference>Виттенбург Г. Динамика систем твердых тел. М.: Мир, 1980. 292 с.</reference>
+                <reference>Каюмов О.Р. Оптимальное перемещение платформы с перевернутым маятником // Изв. РАН. ТиСУ. 2025. № 6. С. 52-67.</reference>
+                <reference>Калман Р.Е. Об общей теории систем управления // Тр. 1-го Междунар. Конгр. ИФАК. М.: Изд-во АН СССР. Т.2. С. 521-546.</reference>
+                <reference>Каюмов О.Р. О глобальной управляемости некоторых лагранжевых систем // Изв. АН СССР. Механика твердого тела. 1986. № 6. С. 16-23.</reference>
+                <reference>Черноусько Ф.Л., Акуленко Л.Д., Соколов Б.Н. Управление колебаниями. – М.: Наука, 1980. 383 с.</reference>
+                <reference>Каюмов О.Р. Диаграммы функций оптимального управления в задаче наибыстрейшего перемещения платформы с двумя осцилляторами // Изв. РАН. ТиСУ. 2022. № 5. С. 66-83.</reference>
+            </references>
+        </articleInfo>
+        <authors>
+            <author ref="n_2026_10_kayumov" sort-key="1" />
+        </authors>
+    </article>
+</number>
