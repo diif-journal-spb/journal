@@ -5,11 +5,11 @@
     <title>Журнал дифференциальные уравнения и процессы управления - $caption$</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
     <link rel="stylesheet"
-          href="ResourceLink/style.css?v=20261002"
+          href="$ResourceLink$/style.css?v=20261002"
           type="text/css"></link>
 
     <script type="text/javascript" src="$ResourceLink$/jquery.js"></script>
-    <script src="ResourceLink/journal.js?v=20261002"
+    <script src="$ResourceLink$/journal.js?v=20261002"
             type="text/javascript"></script>
 
   </head>
@@ -17,7 +17,7 @@
     <div class="Head">
       <div class="UniversityFounderLogo">
         <a href="https://spbu.ru/" title="Санкт-Петербургский государственный университет">
-          <img src="$ResourceLink$/SPbSU_Logo.svg" alt="СПбГУ"></img>
+          <img src="$ResourceLink$/SPbSU_Logo.svg" width="78" height="78" alt="СПбГУ"></img>
         </a>
       </div>
       <div class="Logo">
